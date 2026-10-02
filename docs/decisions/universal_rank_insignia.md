@@ -70,7 +70,7 @@ Historical uniform styling remains era-specific. Only the **rank-reading languag
 
 ## Special cases
 
-- Cadet is a training status, not part of the commissioned-officer ladder above.
+- Cadet is a training status, not part of the commissioned-officer ladder above. Cadet academic class uses the separate universal silver-pip system defined in `docs/decisions/universal_cadet_insignia.md`.
 - Enlisted / NCO ranks are separate and will receive their own insignia model.
 - Fleet captain is not part of the normal promotion ladder; it is retained as a rare/special historical grade/title for separate treatment.
 - Provisional/Maquis rank bars are a separate system and will be modeled when Voyager-era personnel rules are researched.

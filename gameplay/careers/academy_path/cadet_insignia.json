@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "standard_id": "universal_silver_cadet_pips_v1",
+  "provenance_type": "GAME_ADDITION",
+  "basis": "2360s Starfleet Academy cadet class pip system",
+  "applied_to_eras": [
+    "pike",
+    "kirk",
+    "tng_ds9_voyager"
+  ],
+  "mapping": [
+    {
+      "cadet_class_id": "cadet_fourth_class",
+      "academic_year": 1,
+      "silver_pips": 1,
+      "display_es": "Cadete de 4.ª clase"
+    },
+    {
+      "cadet_class_id": "cadet_third_class",
+      "academic_year": 2,
+      "silver_pips": 2,
+      "display_es": "Cadete de 3.ª clase"
+    },
+    {
+      "cadet_class_id": "cadet_second_class",
+      "academic_year": 3,
+      "silver_pips": 3,
+      "display_es": "Cadete de 2.ª clase"
+    },
+    {
+      "cadet_class_id": "cadet_first_class",
+      "academic_year": 4,
+      "silver_pips": 4,
+      "display_es": "Cadete de 1.ª clase"
+    }
+  ],
+  "visual_distinction": {
+    "cadet_material": "silver",
+    "commissioned_material": "gold_or_black_gold_rim",
+    "flag_material": "boxed_gold"
+  },
+  "source_basis": [
+    {
+      "source_id": "MA_STARFLEET_RANKS_CADETS",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_UNIFORM_2350S_2370S",
+      "confidence": "HIGH"
+    }
+  ]
+}

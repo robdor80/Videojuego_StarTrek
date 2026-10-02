@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "locale": "es-ES",
   "terms": {
     "ensign": "Alférez",
@@ -36,6 +36,12 @@
     "midshipman": "Guardiamarina",
     "academy_admission": "Admisión a la Academia",
     "entrance_exam": "Examen de ingreso",
-    "psych_test": "Evaluación psicológica"
+    "psych_test": "Evaluación psicológica",
+    "academy_campus": "Campus de la Academia",
+    "field_study": "Prácticas de campo",
+    "training_cruise": "Crucero de instrucción",
+    "training_ship": "Nave de instrucción",
+    "graduation": "Graduación",
+    "first_assignment": "Primer destino"
   }
 }

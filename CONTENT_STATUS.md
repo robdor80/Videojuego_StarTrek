@@ -17,8 +17,8 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 1. ✅ Documentary foundation
 2. ✅ Chronology and era model
 3. ✅ Starfleet institutional baseline
-4. 🟨 Starfleet Academy
-5. ⬜ Career bridge: Academy → first assignment → service record
+4. ✅ Starfleet Academy
+5. 🟨 Career bridge: Academy → first assignment → service record
 6. ⬜ Starfleet technology and starships
 7. ⬜ Species, factions, astrography and wider universe
 8. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
@@ -77,7 +77,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 | Area | Status |
 |---|---|
-| History and campus | 🟨 IN_PROGRESS | Playable Earth-campus hub, location graph and first gameplay state established; era-specific campus presentation and exact historical deltas still pending. |
+| History and campus | ✅ COMPLETE | Playable hub, location graph and gameplay-relevant era differences established. |
 | Admissions and cadet life | ✅ COMPLETE | Playable admission flow, soft-failure/retake model, four-year cadet progression and conduct consequences established. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
 | Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
@@ -86,7 +86,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Simulations and field training | ✅ COMPLETE | Simulation, active-unit field study, training cruise and live-world interruption models established. |
 | Training ships | ✅ COMPLETE | Era/date-aware training-asset selection; famous ships are possible but never guaranteed. |
 | Graduation and first assignments | ✅ COMPLETE | Graduation eligibility, ceremony, commission and live-world first-assignment generation established. |
-| Academy era profiles | ⬜ TODO |
+| Academy era profiles | ✅ COMPLETE | Pike, Kirk and TNG/DS9/Voyager technology, presentation and training overrides established without duplicating the Academy. |
 
 ## Major remaining domains
 
@@ -111,6 +111,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Starfleet Academy.**
+**Career bridge: Academy → operational service.**
 
-The Starfleet institutional baseline passed consistency review. Broader Federation government/economy/member-world lore remains intentionally deferred because it is not a blocker for Academy research.
+Starfleet Academy is complete at the current game-design scope. Next work connects graduation, commission, first assignment, service record and later career progression into one continuous playable career.

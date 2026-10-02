@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.1.0",
+  "profiles": [
+    {
+      "era_id": "pike",
+      "display_es": "Pike / Strange New Worlds",
+      "simulation_technology": [
+        "physical_simulator",
+        "electronic_trainer",
+        "training_craft"
+      ],
+      "holodeck_standard": false,
+      "admission_detail_level": "game_normalized",
+      "cadet_class_system": "universal_silver_pips",
+      "field_training_default": [
+        "training_cruise",
+        "training_ship",
+        "specialist_practicum"
+      ],
+      "presentation_tags": [
+        "2259",
+        "early_23c",
+        "pike_uniforms"
+      ],
+      "campaign_state_overrides": true
+    },
+    {
+      "era_id": "kirk",
+      "display_es": "Kirk / TOS + películas",
+      "simulation_technology": [
+        "physical_bridge_simulator",
+        "electronic_trainer",
+        "training_craft"
+      ],
+      "holodeck_standard": false,
+      "admission_detail_level": "game_normalized",
+      "cadet_class_system": "universal_silver_pips",
+      "field_training_default": [
+        "training_cruise",
+        "training_ship",
+        "specialist_practicum"
+      ],
+      "subperiods": [
+        {
+          "id": "tos",
+          "start_year": 2265,
+          "end_year": 2269
+        },
+        {
+          "id": "film_period",
+          "start_year": 2278,
+          "end_year": 2293
+        }
+      ],
+      "dated_content": [
+        {
+          "id": "kobayashi_maru",
+          "available_from": 2285,
+          "availability_requires_live_compatibility": true
+        }
+      ],
+      "presentation_tags": [
+        "tos_or_kirk_film_by_date"
+      ],
+      "campaign_state_overrides": true
+    },
+    {
+      "era_id": "tng_ds9_voyager",
+      "display_es": "TNG + DS9 + Voyager",
+      "simulation_technology": [
+        "holodeck",
+        "computer_simulation",
+        "training_craft",
+        "live_unit"
+      ],
+      "holodeck_standard": true,
+      "admission_detail_level": "canon_detailed",
+      "cadet_class_system": "universal_silver_pips",
+      "field_training_default": [
+        "field_study_active_unit",
+        "station_rotation",
+        "training_ship",
+        "specialist_practicum"
+      ],
+      "curriculum_hooks": [
+        "year_2_field_study",
+        "year_3_eva_training"
+      ],
+      "presentation_tags": [
+        "24c",
+        "lcars",
+        "tng_ds9_voyager_by_date"
+      ],
+      "campaign_state_overrides": true
+    }
+  ],
+  "global_rule": "Era profile changes presentation, technology and available training methods; it does not duplicate the Academy or force canonical story events."
+}
