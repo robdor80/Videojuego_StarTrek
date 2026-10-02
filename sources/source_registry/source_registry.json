@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.1.0",
+  "registry_version": "0.2.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -57,6 +57,78 @@
       "url": "https://memory-alpha.fandom.com/",
       "accessed_at": "2026-10-02",
       "notes": "Specialist secondary source for discovery and cross-checking. Prefer tracing claims to primary/official evidence."
+    },
+    {
+      "source_id": "ST_OFFICIAL_CHRONOLOGICAL_WATCH_GUIDE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek in Order: How to Watch Every Episode of Your Favorite Franchise the Right Way",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/gallery/how-to-watch-every-star-trek-series-and-movie-in-the-right-order",
+      "accessed_at": "2026-10-02",
+      "notes": "Official chronological guide; used as a broad date/ordering cross-check, including Voyager beginning in 2371."
+    },
+    {
+      "source_id": "ST_OFFICIAL_SNW_QUALITY_OF_MERCY_RECAP",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "RECAP | Star Trek: Strange New Worlds 110 - 'A Quality of Mercy'",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/en-un/news/recap-star-trek-strange-new-worlds-quality-of-mercy",
+      "accessed_at": "2026-10-02",
+      "notes": "Official recap explicitly places Pike back in his original timeline in 2259."
+    },
+    {
+      "source_id": "ST_OFFICIAL_VOYAGER_SHIP",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Celebrating the Ships of the Line: USS Voyager NCC-74656",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/celebrating-the-ships-of-the-line-uss-voyager-ncc-74656",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference stating Voyager launched in 2371 and was trapped in the Delta Quadrant from 2371 to 2378."
+    },
+    {
+      "source_id": "MA_FIVE_YEAR_MISSION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Five-year mission",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Five-year_mission",
+      "accessed_at": "2026-10-02",
+      "notes": "Used to cross-check the 2265 Kirk five-year-mission anchor and its screen references."
+    },
+    {
+      "source_id": "MA_TNG_SERIES",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Star Trek: The Next Generation",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Star_Trek%3A_The_Next_Generation",
+      "accessed_at": "2026-10-02",
+      "notes": "Used to cross-check the TNG series reference span."
+    },
+    {
+      "source_id": "MA_DS9_SERIES",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Star Trek: Deep Space Nine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Star_Trek%3A_Deep_Space_Nine",
+      "accessed_at": "2026-10-02",
+      "notes": "Used to cross-check the DS9 series reference span 2369-2375."
+    },
+    {
+      "source_id": "MA_VOY_SERIES",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Star Trek: Voyager",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Star_Trek%3A_Voyager",
+      "accessed_at": "2026-10-02",
+      "notes": "Used to cross-check the Voyager series reference span 2371-2378."
+    },
+    {
+      "source_id": "MA_2293",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "2293",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/2293",
+      "accessed_at": "2026-10-02",
+      "notes": "Used to cross-check the 2293 Kirk-era terminal reference anchor."
     }
   ]
 }

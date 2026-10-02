@@ -7,41 +7,30 @@ Living queue controlled by the project research workflow.
 ### 0 — Documentary foundation
 Status: **COMPLETE**
 
-Canon policy, provenance policy, source registry, research workflow and playable-era decision established.
-
 ### 1 — Chronology and era model
-Status: **IN PROGRESS**
+Status: **COMPLETE (minimal structural scope)**
 
-Approved playable eras:
+Established:
+- three playable era profiles,
+- minimal master timeline,
+- temporal anchors,
+- canonical-start-state vs emergent-campaign-history rule.
 
-1. Pike / Strange New Worlds
-2. Kirk / TOS + films
-3. TNG + DS9 + Voyager
-
-Within the third era:
-- TNG → Jean-Luc Picard
-- DS9 → Benjamin Sisko
-- Voyager → Kathryn Janeway
-
-Explicitly outside playable scope:
-- Picard (series)
-- Discovery
-- Enterprise
-
-Goal:
-- create a minimal master temporal backbone,
-- define temporal anchors,
-- define the era-profile contract,
-- establish campaign windows for the three approved eras,
-- map availability by exact campaign date,
-- avoid mixing technology, ships, assignments and characters from incompatible dates.
-
-This is a structural chronology pass, not an attempt to document every event in Star Trek history.
+Detailed historical events remain intentionally progressive and are added when later content blocks need them.
 
 ### 2 — Federation / Starfleet baseline
-Status: **QUEUED**
+Status: **IN PROGRESS**
 
-Organization, command structure, ranks, departments, positions, assignments, regulations and related institutional fundamentals.
+Goal:
+- Federation / Starfleet relationship,
+- Starfleet mission and institutional role,
+- organisation and command structure,
+- ranks,
+- departments,
+- positions and duty stations,
+- assignments,
+- core regulations/protocol concepts,
+- era-sensitive differences where relevant.
 
 ### 3 — Starfleet Academy
 Status: **QUEUED**
