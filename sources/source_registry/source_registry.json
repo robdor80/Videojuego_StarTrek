@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.16.0",
+  "registry_version": "0.17.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -911,6 +911,69 @@
       "url": "https://memory-alpha.fandom.com/wiki/Engineer",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for common starship systems maintained by engineering: propulsion, computers, transporters, sensors, weapons, deflectors, hull, life support and shields."
+    },
+    {
+      "source_id": "MA_WARP_DRIVE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Warp drive",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Warp_drive",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 23rd/24th-century warp use and scale evolution. Exact performance remains class-specific."
+    },
+    {
+      "source_id": "MA_TRANSPORTER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Transporter",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Transporter",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for widespread 23rd- and 24th-century transporter use."
+    },
+    {
+      "source_id": "MA_FOOD_SYNTHESIZER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Food synthesizer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Food_synthesizer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 23rd-century food synthesizers as predecessors to 24th-century replicators."
+    },
+    {
+      "source_id": "MA_REPLICATOR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Replicator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Replicator",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check that full 24th-century replicator technology was not standard on Starfleet ships in the retained late-23rd-century period."
+    },
+    {
+      "source_id": "MA_HOLODECK",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Holodeck",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Holodeck",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for experimental 23rd-century holographic simulation and standard mid-24th-century holodeck use."
+    },
+    {
+      "source_id": "MA_BIONEURAL_GEL_PACK",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bio-neural gel pack",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bio-neural_gel_pack",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 2370s bio-neural circuitry and Intrepid-class USS Voyager use from launch in 2371."
+    },
+    {
+      "source_id": "MA_QUANTUM_TORPEDO",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Quantum torpedo",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Quantum_torpedo",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Starfleet quantum torpedoes entering the retained late-24th-century arsenal by 2371 on selected vessels."
     }
   ]
 }

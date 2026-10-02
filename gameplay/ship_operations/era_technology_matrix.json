@@ -1,0 +1,180 @@
+{
+  "schema_version": "0.1.0",
+  "states": [
+    "standard",
+    "available",
+    "experimental",
+    "class_specific",
+    "not_standard",
+    "unavailable"
+  ],
+  "profiles": [
+    {
+      "id": "pike_2259_2264",
+      "era_id": "pike",
+      "year_range": [
+        2259,
+        2264
+      ],
+      "capabilities": {
+        "warp_drive": "standard",
+        "impulse_drive": "standard",
+        "personnel_transporter": "standard",
+        "deflector_shields": "standard",
+        "phasers": "standard",
+        "photon_torpedoes": "available",
+        "tractor_beam": "available",
+        "long_range_sensors": "standard",
+        "food_synthesizer": "standard",
+        "full_replicator": "not_standard",
+        "holographic_environment_simulation": "experimental",
+        "ship_holodeck": "not_standard",
+        "bridge_training_simulator": "available",
+        "quantum_torpedoes": "unavailable",
+        "bio_neural_computing": "unavailable"
+      },
+      "notes": [
+        "Exact warp factors and weapons performance are class-specific.",
+        "Holographic simulation may exist experimentally/institutionally but is not treated as standard shipboard holodeck capability."
+      ]
+    },
+    {
+      "id": "kirk_tos_2265_2269",
+      "era_id": "kirk",
+      "subperiod": "tos",
+      "year_range": [
+        2265,
+        2269
+      ],
+      "capabilities": {
+        "warp_drive": "standard",
+        "impulse_drive": "standard",
+        "personnel_transporter": "standard",
+        "deflector_shields": "standard",
+        "phasers": "standard",
+        "photon_torpedoes": "standard",
+        "tractor_beam": "standard",
+        "long_range_sensors": "standard",
+        "food_synthesizer": "standard",
+        "full_replicator": "not_standard",
+        "ship_holodeck": "not_standard",
+        "bridge_training_simulator": "available",
+        "quantum_torpedoes": "unavailable",
+        "bio_neural_computing": "unavailable"
+      }
+    },
+    {
+      "id": "kirk_films_2278_2293",
+      "era_id": "kirk",
+      "subperiod": "films",
+      "year_range": [
+        2278,
+        2293
+      ],
+      "capabilities": {
+        "warp_drive": "standard",
+        "impulse_drive": "standard",
+        "personnel_transporter": "standard",
+        "deflector_shields": "standard",
+        "phasers": "standard",
+        "photon_torpedoes": "standard",
+        "tractor_beam": "standard",
+        "long_range_sensors": "standard",
+        "food_synthesizer": "standard",
+        "full_replicator": "not_standard",
+        "ship_holodeck": "not_standard",
+        "bridge_training_simulator": "standard",
+        "quantum_torpedoes": "unavailable",
+        "bio_neural_computing": "unavailable"
+      },
+      "notes": [
+        "Late-23rd-century ship technology can differ substantially from TOS-era configurations even within the same broad Kirk era."
+      ]
+    },
+    {
+      "id": "tng_2364_2370",
+      "era_id": "tng_ds9_voyager",
+      "subperiod": "tng_overlap",
+      "year_range": [
+        2364,
+        2370
+      ],
+      "capabilities": {
+        "warp_drive": "standard",
+        "impulse_drive": "standard",
+        "personnel_transporter": "standard",
+        "site_to_site_transport": "available",
+        "deflector_shields": "standard",
+        "phaser_arrays": "standard",
+        "photon_torpedoes": "standard",
+        "tractor_beam": "standard",
+        "advanced_sensors": "standard",
+        "replicators": "standard",
+        "holodeck": "available",
+        "isolinear_computing": "standard",
+        "quantum_torpedoes": "unavailable",
+        "bio_neural_computing": "unavailable"
+      }
+    },
+    {
+      "id": "late_24c_2371_2378",
+      "era_id": "tng_ds9_voyager",
+      "subperiod": "ds9_voyager",
+      "year_range": [
+        2371,
+        2378
+      ],
+      "capabilities": {
+        "warp_drive": "standard",
+        "impulse_drive": "standard",
+        "personnel_transporter": "standard",
+        "site_to_site_transport": "available",
+        "deflector_shields": "standard",
+        "phaser_arrays": "standard",
+        "photon_torpedoes": "standard",
+        "quantum_torpedoes": "available",
+        "tractor_beam": "standard",
+        "advanced_sensors": "standard",
+        "replicators": "standard",
+        "holodeck": "available",
+        "isolinear_computing": "standard",
+        "bio_neural_computing": "class_specific"
+      },
+      "notes": [
+        "Quantum torpedoes are available to selected Starfleet units, not universal.",
+        "Bio-neural gel packs are class-specific technology exemplified by Intrepid-class USS Voyager."
+      ]
+    }
+  ],
+  "rule": "Class definitions may narrow availability but may not exceed era availability without explicit experimental/special provenance.",
+  "provenance": [
+    {
+      "source_id": "MA_WARP_DRIVE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_TRANSPORTER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_FOOD_SYNTHESIZER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_REPLICATOR",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_HOLODECK",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_BIONEURAL_GEL_PACK",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_QUANTUM_TORPEDO",
+      "confidence": "HIGH"
+    }
+  ]
+}
