@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "era_id": "kirk",
+  "display_name": "Kirk / TOS + films",
+  "continuity": "prime",
+  "playable": true,
+  "reference_start_year": 2265,
+  "reference_end_year": 2293,
+  "date_precision": "year",
+  "primary_screen_scope": [
+    "Star Trek: The Original Series",
+    "Star Trek films centred on James T. Kirk and the original crew"
+  ],
+  "anchor_characters": [
+    "James T. Kirk"
+  ],
+  "anchor_ships_or_locations": [
+    "USS Enterprise NCC-1701",
+    "USS Enterprise NCC-1701-A when chronologically valid"
+  ],
+  "campaign_rule": "Canon establishes the world up to campaign start. TOS episodes and film plots are not mandatory future events.",
+  "availability_rule": "An entity is available only if its own temporal validity includes the campaign date.",
+  "notes": [
+    "2265 is the Kirk-command / five-year-mission anchor.",
+    "2293 is the terminal reference anchor for the retained Kirk-film period.",
+    "This broad profile contains substantial internal technological, uniform and ship evolution; exact date must always be consulted."
+  ]
+}

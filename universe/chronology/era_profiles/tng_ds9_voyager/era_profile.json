@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "era_id": "tng_ds9_voyager",
+  "display_name": "TNG + DS9 + Voyager",
+  "continuity": "prime",
+  "playable": true,
+  "reference_start_year": 2364,
+  "reference_end_year": 2378,
+  "date_precision": "year",
+  "primary_screen_scope": [
+    "Star Trek: The Next Generation",
+    "Star Trek: Deep Space Nine",
+    "Star Trek: Voyager"
+  ],
+  "anchor_characters": [
+    "Jean-Luc Picard",
+    "Benjamin Sisko",
+    "Kathryn Janeway"
+  ],
+  "anchor_ships_or_locations": [
+    "USS Enterprise NCC-1701-D",
+    "Deep Space 9",
+    "USS Voyager NCC-74656"
+  ],
+  "campaign_rule": "Canon establishes the world up to campaign start. TNG, DS9 and Voyager episode outcomes are not mandatory future events.",
+  "availability_rule": "An entity is available only if its own temporal validity includes the campaign date.",
+  "notes": [
+    "TNG reference span: 2364-2370.",
+    "DS9 reference span: 2369-2375.",
+    "Voyager reference span: 2371-2378.",
+    "Temporal coexistence does not imply spatial proximity.",
+    "A Voyager-based campaign does not have to reproduce the canonical seven-year journey or canonical return."
+  ]
+}

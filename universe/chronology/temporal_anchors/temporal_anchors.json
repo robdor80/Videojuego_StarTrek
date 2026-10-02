@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "last_updated": "2026-10-02",
+  "anchors": [
+    {
+      "id": "pike_snw_reference_start",
+      "year": 2259,
+      "era_id": "pike",
+      "kind": "reference_start",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "kirk_enterprise_command_anchor",
+      "year": 2265,
+      "era_id": "kirk",
+      "kind": "reference_start",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "kirk_reference_end",
+      "year": 2293,
+      "era_id": "kirk",
+      "kind": "reference_end",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "tng_reference_start",
+      "year": 2364,
+      "era_id": "tng_ds9_voyager",
+      "kind": "branch_start",
+      "branch": "tng",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "ds9_reference_start",
+      "year": 2369,
+      "era_id": "tng_ds9_voyager",
+      "kind": "branch_start",
+      "branch": "ds9",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "voyager_reference_start",
+      "year": 2371,
+      "era_id": "tng_ds9_voyager",
+      "kind": "branch_start",
+      "branch": "voyager",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "ds9_reference_end",
+      "year": 2375,
+      "era_id": "tng_ds9_voyager",
+      "kind": "branch_end",
+      "branch": "ds9",
+      "confidence": "HIGH"
+    },
+    {
+      "id": "voyager_reference_end",
+      "year": 2378,
+      "era_id": "tng_ds9_voyager",
+      "kind": "reference_end",
+      "branch": "voyager",
+      "confidence": "HIGH"
+    }
+  ],
+  "runtime_note": "These are reference anchors only. A save's campaign history may diverge after its start date."
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "era_id": "pike",
+  "display_name": "Pike / Strange New Worlds",
+  "continuity": "prime",
+  "playable": true,
+  "reference_start_year": 2259,
+  "reference_end_year": 2265,
+  "date_precision": "year",
+  "primary_screen_scope": [
+    "Star Trek: Strange New Worlds"
+  ],
+  "anchor_characters": [
+    "Christopher Pike"
+  ],
+  "anchor_ships_or_locations": [
+    "USS Enterprise NCC-1701"
+  ],
+  "campaign_rule": "Canon establishes the world up to campaign start. Future episode outcomes are not mandatory.",
+  "availability_rule": "An entity is available only if its own temporal validity includes the campaign date.",
+  "notes": [
+    "2259 is a firm series-era anchor.",
+    "2265 is used as the broad handover boundary into the Kirk reference window.",
+    "Exact dates override broad era boundaries when known."
+  ]
+}
