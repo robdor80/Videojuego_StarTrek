@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1.0",
+  "category": "commissioned_and_flag_officers",
+  "normal_progression": [
+    {
+      "order": 1,
+      "id": "ensign",
+      "name_en": "Ensign",
+      "name_es": "Alférez",
+      "class": "junior_officer"
+    },
+    {
+      "order": 2,
+      "id": "lieutenant_junior_grade",
+      "name_en": "Lieutenant junior grade",
+      "name_es": "Teniente júnior",
+      "class": "junior_officer"
+    },
+    {
+      "order": 3,
+      "id": "lieutenant",
+      "name_en": "Lieutenant",
+      "name_es": "Teniente",
+      "class": "junior_officer"
+    },
+    {
+      "order": 4,
+      "id": "lieutenant_commander",
+      "name_en": "Lieutenant commander",
+      "name_es": "Teniente comandante",
+      "class": "senior_officer"
+    },
+    {
+      "order": 5,
+      "id": "commander",
+      "name_en": "Commander",
+      "name_es": "Comandante",
+      "class": "senior_officer"
+    },
+    {
+      "order": 6,
+      "id": "captain",
+      "name_en": "Captain",
+      "name_es": "Capitán",
+      "class": "senior_officer"
+    },
+    {
+      "order": 7,
+      "id": "commodore",
+      "name_en": "Commodore",
+      "name_es": "Comodoro",
+      "class": "flag_officer"
+    },
+    {
+      "order": 8,
+      "id": "rear_admiral",
+      "name_en": "Rear admiral",
+      "name_es": "Contraalmirante",
+      "class": "flag_officer"
+    },
+    {
+      "order": 9,
+      "id": "vice_admiral",
+      "name_en": "Vice admiral",
+      "name_es": "Vicealmirante",
+      "class": "flag_officer"
+    },
+    {
+      "order": 10,
+      "id": "admiral",
+      "name_en": "Admiral",
+      "name_es": "Almirante",
+      "class": "flag_officer"
+    },
+    {
+      "order": 11,
+      "id": "fleet_admiral",
+      "name_en": "Fleet admiral",
+      "name_es": "Almirante de Flota",
+      "class": "flag_officer"
+    }
+  ],
+  "separate_tracks": [
+    "cadet",
+    "enlisted",
+    "non_commissioned"
+  ],
+  "exceptional_grades": [
+    {
+      "id": "fleet_captain",
+      "name_en": "Fleet captain",
+      "name_es": "Capitán de Flota",
+      "normal_progression": false,
+      "notes": "Rare/special historical grade/title; excluded from standard player promotion ladder."
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_STARFLEET_RANKS",
+      "confidence": "HIGH"
+    }
+  ]
+}

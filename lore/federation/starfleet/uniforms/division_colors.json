@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "profiles": [
+    {
+      "id": "pike_snw",
+      "era_id": "pike",
+      "colors": {
+        "command": "gold",
+        "operations_security": "red",
+        "sciences": "blue",
+        "medical": "light_blue_or_white_variant"
+      },
+      "source_ids": [
+        "MA_UNIFORM_2250S_2270S"
+      ]
+    },
+    {
+      "id": "kirk_tos",
+      "era_id": "kirk",
+      "period": "TOS",
+      "colors": {
+        "command": "gold_greenish_gold",
+        "operations_engineering_security": "red",
+        "sciences_medical": "blue"
+      },
+      "source_ids": [
+        "MA_UNIFORM_2250S_2270S"
+      ]
+    },
+    {
+      "id": "kirk_tmp_mid_2270s",
+      "era_id": "kirk",
+      "period": "The Motion Picture",
+      "colors": {
+        "command": "white",
+        "sciences": "orange",
+        "medical": "light_green",
+        "engineering": "red",
+        "operations": "pale_gold",
+        "security": "silver"
+      },
+      "source_ids": [
+        "MA_UNIFORM_LATE_2270S_2350S"
+      ]
+    },
+    {
+      "id": "kirk_movies_2280s_2293",
+      "era_id": "kirk",
+      "period": "Star Trek II-VI style",
+      "base_uniform": "maroon",
+      "colors": {
+        "command": "white",
+        "operations": "yellow_ochre",
+        "medical": "light_green",
+        "sciences": "grey",
+        "security": "windsor_green",
+        "cadet_trainee": "flame_red",
+        "special_services": "sky_blue",
+        "enlisted_nco": "black"
+      },
+      "source_ids": [
+        "MA_UNIFORM_LATE_2270S_2350S"
+      ]
+    },
+    {
+      "id": "tng_ds9_voyager",
+      "era_id": "tng_ds9_voyager",
+      "colors": {
+        "command": "red",
+        "operations_engineering_security": "gold",
+        "sciences_medical": "blue_teal"
+      },
+      "source_ids": [
+        "ST_OFFICIAL_TNG_PRIMARY_COLORS",
+        "MA_UNIFORM_2350S_2370S"
+      ]
+    }
+  ]
+}

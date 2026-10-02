@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1.0",
+  "standard_id": "universal_tng_pips_v1",
+  "provenance_type": "GAME_ADDITION",
+  "basis": "TNG-era Starfleet pip and boxed-pip visual language",
+  "applied_to_eras": [
+    "pike",
+    "kirk",
+    "tng_ds9_voyager"
+  ],
+  "commissioned": [
+    {
+      "rank_id": "ensign",
+      "pips": [
+        "gold"
+      ],
+      "display": "●"
+    },
+    {
+      "rank_id": "lieutenant_junior_grade",
+      "pips": [
+        "gold",
+        "black_gold_rim"
+      ],
+      "display": "●○"
+    },
+    {
+      "rank_id": "lieutenant",
+      "pips": [
+        "gold",
+        "gold"
+      ],
+      "display": "●●"
+    },
+    {
+      "rank_id": "lieutenant_commander",
+      "pips": [
+        "gold",
+        "gold",
+        "black_gold_rim"
+      ],
+      "display": "●●○"
+    },
+    {
+      "rank_id": "commander",
+      "pips": [
+        "gold",
+        "gold",
+        "gold"
+      ],
+      "display": "●●●"
+    },
+    {
+      "rank_id": "captain",
+      "pips": [
+        "gold",
+        "gold",
+        "gold",
+        "gold"
+      ],
+      "display": "●●●●"
+    }
+  ],
+  "flag_officers": [
+    {
+      "rank_id": "commodore",
+      "boxed_gold_pips": 1,
+      "display": "[●]"
+    },
+    {
+      "rank_id": "rear_admiral",
+      "boxed_gold_pips": 2,
+      "display": "[●●]"
+    },
+    {
+      "rank_id": "vice_admiral",
+      "boxed_gold_pips": 3,
+      "display": "[●●●]"
+    },
+    {
+      "rank_id": "admiral",
+      "boxed_gold_pips": 4,
+      "display": "[●●●●]"
+    },
+    {
+      "rank_id": "fleet_admiral",
+      "boxed_gold_pips": 5,
+      "display": "[●●●●●]"
+    }
+  ],
+  "historical_note": "Actual insignia varied significantly by era. The game intentionally standardises only the rank-recognition layer.",
+  "source_basis": [
+    {
+      "source_id": "MA_UNIFORM_2350S_2370S",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET_RANKS",
+      "confidence": "HIGH"
+    }
+  ]
+}

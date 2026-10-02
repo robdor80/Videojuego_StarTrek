@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.2.0",
+  "registry_version": "0.3.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -129,6 +129,52 @@
       "url": "https://memory-alpha.fandom.com/wiki/2293",
       "accessed_at": "2026-10-02",
       "notes": "Used to cross-check the 2293 Kirk-era terminal reference anchor."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TNG_PRIMARY_COLORS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: 'TNG''s Primary Colors",
+      "publisher": "StarTrek.com",
+      "release_date": "2019-08-24",
+      "url": "https://www.startrek.com/news/star-trek-101-tng-s-primary-colors",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference confirming TNG command red, operations/support gold, sciences blue."
+    },
+    {
+      "source_id": "MA_STARFLEET_RANKS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet ranks",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_ranks",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for commissioned and flag rank hierarchy and period insignia."
+    },
+    {
+      "source_id": "MA_UNIFORM_2350S_2370S",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet uniform (2350s-2370s)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_uniform_%282350s-2370s%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for TNG-era circular pip system and gold/black full vs partial rank pips."
+    },
+    {
+      "source_id": "MA_UNIFORM_2250S_2270S",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet uniform (2250s-early 2270s)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_uniform_%282250s-early_2270s%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Pike/TOS rank and division-color systems."
+    },
+    {
+      "source_id": "MA_UNIFORM_LATE_2270S_2350S",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet uniform (late 2270s-2350s)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_uniform_%28late_2270s-2350s%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Kirk-film-era department colors and flag/officer rank structures."
     }
   ]
 }
