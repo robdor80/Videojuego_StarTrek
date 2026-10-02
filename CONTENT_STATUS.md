@@ -70,7 +70,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom shift model; duty-officer command separated from permanent rank. |
 | Command succession / acting command | ✅ COMPLETE | CO → XO → second officer → qualified designated successor. |
 | Qualifications, regulations, protocols and Prime Directive | ✅ COMPLETE | Command qualification, Prime Directive, medical authority and classified-directive model established for baseline scope. |
-| Assignments, promotions, commendations and discipline | ⬜ TODO | |
+| Assignments, promotions, commendations and discipline | ✅ COMPLETE | Career-event baseline, service record and disciplinary consequences established. |
 
 ## Starfleet Academy
 
@@ -112,4 +112,4 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 **Federation / Starfleet institutional baseline.**
 
-Next: assignments, transfers, promotions, commendations and disciplinary system.
+Next: final Starfleet baseline review, then Starfleet Academy.

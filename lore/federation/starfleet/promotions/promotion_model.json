@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "automatic_on_xp_threshold": false,
+  "factors": [
+    "service_record",
+    "performance",
+    "qualifications",
+    "experience",
+    "recommendations",
+    "vacancy_or_role_need",
+    "promotion_authority",
+    "disciplinary_record",
+    "campaign_state"
+  ],
+  "outcomes": [
+    "approved",
+    "deferred",
+    "denied"
+  ],
+  "can_promote_without_transfer": true,
+  "can_transfer_without_promotion": true,
+  "provenance": [
+    {
+      "source_id": "MA_PROMOTION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET",
+      "confidence": "MEDIUM"
+    }
+  ]
+}

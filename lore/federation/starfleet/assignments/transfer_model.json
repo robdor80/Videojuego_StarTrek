@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "transfer_modes": [
+    "ordered",
+    "requested",
+    "promotion_related",
+    "disciplinary",
+    "operational_need",
+    "temporary_detachment"
+  ],
+  "can_change_assignment_without_rank_change": true,
+  "can_change_position_without_rank_change": true,
+  "can_change_department_with_retraining_or_authorization": true,
+  "evaluation_factors": [
+    "era_and_date",
+    "vacancy",
+    "qualification",
+    "service_record",
+    "operational_need",
+    "disciplinary_status",
+    "campaign_state"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_TRANSFER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_GENERAL_ORDERS",
+      "confidence": "MEDIUM"
+    }
+  ]
+}

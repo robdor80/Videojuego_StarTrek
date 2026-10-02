@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.7.0",
+  "registry_version": "0.8.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -436,6 +436,97 @@
       "url": "https://memory-alpha.fandom.com/wiki/Omega_Directive",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for classified 24th-century Omega Directive known to captains and flag officers, superseding Prime Directive."
+    },
+    {
+      "source_id": "MA_PROMOTION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Promotion",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Promotion",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Starfleet promotions and 24th-century promotion practice."
+    },
+    {
+      "source_id": "MA_TRANSFER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Transfer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Transfer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for transfers/reassignments by order or request."
+    },
+    {
+      "source_id": "MA_COMMENDATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Commendation",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Commendation",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for official commendations and service-record recognition."
+    },
+    {
+      "source_id": "MA_STARFLEET_MEDAL_COMMENDATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Medal of Commendation",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Medal_of_Commendation",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for a named 24th-century Starfleet decoration."
+    },
+    {
+      "source_id": "MA_FORMAL_REPRIMAND",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Formal reprimand",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Formal_reprimand",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for formal reprimand in permanent record and career consequences."
+    },
+    {
+      "source_id": "MA_DEMOTION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Demotion",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Demotion",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for reduction in rank as disciplinary action."
+    },
+    {
+      "source_id": "MA_COURT_MARTIAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Court martial",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Court_martial",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for court-martial proceedings and serious Starfleet offenses."
+    },
+    {
+      "source_id": "MA_UNIFORM_CODE_JUSTICE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Uniform Code of Justice",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Uniform_Code_of_Justice",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for formal Starfleet justice framework referenced in SNW and TNG."
+    },
+    {
+      "source_id": "MA_PERSONNEL_FILE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Personnel file",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Personnel_file",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for personnel/service records holding career information."
+    },
+    {
+      "source_id": "VOY_THIRTY_DAYS_REFERENCE",
+      "source_type": "SCREEN_CANON",
+      "title": "Thirty Days",
+      "work": "Star Trek: Voyager",
+      "season": 5,
+      "episode": 9,
+      "release_date": "1998-12-09",
+      "notes": "Tom Paris is demoted to ensign and confined after disobeying orders; used as disciplinary-model evidence."
     }
   ]
 }

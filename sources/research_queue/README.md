@@ -19,7 +19,7 @@ Established:
 Detailed historical events remain intentionally progressive and are added when later content blocks need them.
 
 ### 2 — Federation / Starfleet baseline
-Status: **IN PROGRESS**
+Status: **IN PROGRESS — FINAL REVIEW**
 
 Goal:
 - Federation / Starfleet relationship,

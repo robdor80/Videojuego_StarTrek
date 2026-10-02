@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0",
+  "measures": [
+    {
+      "id": "warning",
+      "display_es": "Advertencia",
+      "severity": 1
+    },
+    {
+      "id": "negative_note",
+      "display_es": "Anotación negativa",
+      "severity": 2
+    },
+    {
+      "id": "restriction",
+      "display_es": "Restricción de servicio o movimientos",
+      "severity": 2
+    },
+    {
+      "id": "formal_reprimand",
+      "display_es": "Reprimenda formal",
+      "severity": 3,
+      "permanent_record_possible": true
+    },
+    {
+      "id": "remove_from_position",
+      "display_es": "Relevo del puesto",
+      "severity": 3
+    },
+    {
+      "id": "disciplinary_transfer",
+      "display_es": "Traslado disciplinario",
+      "severity": 3
+    },
+    {
+      "id": "demotion",
+      "display_es": "Descenso de rango",
+      "severity": 4
+    },
+    {
+      "id": "brig_confinement",
+      "display_es": "Confinamiento en el calabozo",
+      "severity": 4
+    },
+    {
+      "id": "court_martial",
+      "display_es": "Consejo de guerra",
+      "severity": 5
+    },
+    {
+      "id": "stripped_of_rank_or_commission",
+      "display_es": "Pérdida de rango o comisión",
+      "severity": 5
+    }
+  ],
+  "sentencing_table_is_universal": false,
+  "required_context": [
+    "offense",
+    "intent",
+    "consequences",
+    "orders",
+    "service_record",
+    "authority",
+    "mission_context"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_FORMAL_REPRIMAND",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_DEMOTION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_COURT_MARTIAL",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_UNIFORM_CODE_JUSTICE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "VOY_THIRTY_DAYS_REFERENCE",
+      "confidence": "HIGH"
+    }
+  ]
+}
