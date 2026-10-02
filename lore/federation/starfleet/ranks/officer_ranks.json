@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "category": "commissioned_and_flag_officers",
   "normal_progression": [
     {
@@ -92,7 +92,13 @@
       "name_en": "Fleet captain",
       "name_es": "Capitán de Flota",
       "normal_progression": false,
-      "notes": "Rare/special historical grade/title; excluded from standard player promotion ladder."
+      "notes": "Rare command distinction/title associated with authority over more than one unit or facility; excluded from standard player promotion ladder.",
+      "provenance": [
+        {
+          "source_id": "MA_STARFLEET_RANKS",
+          "confidence": "HIGH"
+        }
+      ]
     }
   ],
   "provenance": [

@@ -18,8 +18,8 @@ Established:
 
 Detailed historical events remain intentionally progressive and are added when later content blocks need them.
 
-### 2 — Federation / Starfleet baseline
-Status: **IN PROGRESS — FINAL REVIEW**
+### 2 — Starfleet institutional baseline
+Status: **COMPLETE**
 
 Goal:
 - Federation / Starfleet relationship,
@@ -35,7 +35,7 @@ Goal:
 - era-sensitive differences where relevant.
 
 ### 3 — Starfleet Academy
-Status: **QUEUED**
+Status: **IN PROGRESS**
 
 History, admissions, campus, curriculum, specializations, evaluations, simulations, training, graduation and first assignments, with era-aware differences.
 

@@ -59,7 +59,7 @@ The project deliberately uses TNG-style pips in every playable era for readabili
 
 ### Fleet captain
 
-Star Trek has used `fleet captain`, but it is not treated as a normal rung in the player's promotion ladder because its exact status and historical use are exceptional and inconsistent.
+Star Trek establishes `fleet captain` as a rare command distinction/title associated with authority over more than one unit or facility. It is **not** treated as a normal rung in the player's promotion ladder.
 
 ### Cadets
 

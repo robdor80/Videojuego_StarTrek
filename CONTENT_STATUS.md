@@ -16,8 +16,8 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 
 1. ✅ Documentary foundation
 2. ✅ Chronology and era model
-3. 🟨 Federation and Starfleet institutional baseline
-4. ⬜ Starfleet Academy
+3. ✅ Starfleet institutional baseline
+4. 🟨 Starfleet Academy
 5. ⬜ Career bridge: Academy → first assignment → service record
 6. ⬜ Starfleet technology and starships
 7. ⬜ Species, factions, astrography and wider universe
@@ -110,6 +110,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Federation / Starfleet institutional baseline.**
+**Starfleet Academy.**
 
-Next: final Starfleet baseline review, then Starfleet Academy.
+The Starfleet institutional baseline passed consistency review. Broader Federation government/economy/member-world lore remains intentionally deferred because it is not a blocker for Academy research.
