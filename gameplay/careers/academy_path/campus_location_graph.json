@@ -1,0 +1,245 @@
+{
+  "schema_version": "0.1.0",
+  "graph_id": "starfleet_academy_earth_base",
+  "player_facing_locale": "es-ES",
+  "model": "location_graph",
+  "notes": [
+    "This graph is a playable authoring foundation, not a claim that every room below is named on screen.",
+    "Nodes explicitly marked game_addition exist to make the Academy playable without contradicting known geography."
+  ],
+  "locations": [
+    {
+      "id": "academy_main_grounds",
+      "display_es": "Campus principal de la Academia",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "ST_OFFICIAL_ACADEMY_OVERVIEW",
+        "MA_STARFLEET_ACADEMY_EARTH"
+      ],
+      "gameplay_roles": [
+        "hub",
+        "navigation",
+        "social",
+        "scheduled_events"
+      ]
+    },
+    {
+      "id": "parade_grounds",
+      "display_es": "Patio de instrucción",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_STARFLEET_ACADEMY_EARTH"
+      ],
+      "gameplay_roles": [
+        "formation",
+        "drills",
+        "ceremonies",
+        "fitness_events"
+      ]
+    },
+    {
+      "id": "command_school",
+      "display_es": "Escuela de Mando",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_STARFLEET_ACADEMY"
+      ],
+      "gameplay_roles": [
+        "command_classes",
+        "leadership_training",
+        "evaluations"
+      ]
+    },
+    {
+      "id": "flight_school",
+      "display_es": "Escuela de Vuelo",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_STARFLEET_ACADEMY"
+      ],
+      "gameplay_roles": [
+        "flight_training",
+        "navigation_training",
+        "simulations"
+      ]
+    },
+    {
+      "id": "tactical_school",
+      "display_es": "Escuela Táctica",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_STARFLEET_ACADEMY"
+      ],
+      "gameplay_roles": [
+        "tactical_training",
+        "security_training",
+        "simulations"
+      ]
+    },
+    {
+      "id": "medical_academy",
+      "display_es": "Academia Médica de la Flota Estelar",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_STARFLEET_ACADEMY"
+      ],
+      "gameplay_roles": [
+        "medical_training",
+        "clinical_practice",
+        "medical_events"
+      ]
+    },
+    {
+      "id": "academic_core",
+      "display_es": "Edificios académicos",
+      "provenance": "GAME_ADDITION",
+      "gameplay_roles": [
+        "classes",
+        "tutorials",
+        "faculty_meetings",
+        "exams"
+      ]
+    },
+    {
+      "id": "cadet_quarters",
+      "display_es": "Alojamiento de cadetes",
+      "provenance": "GAME_ADDITION",
+      "gameplay_roles": [
+        "rest",
+        "personal_events",
+        "roommate_interactions",
+        "planning"
+      ]
+    },
+    {
+      "id": "cadet_mess",
+      "display_es": "Comedor de cadetes",
+      "provenance": "GAME_ADDITION",
+      "gameplay_roles": [
+        "meals",
+        "social",
+        "rumors",
+        "relationship_events"
+      ]
+    },
+    {
+      "id": "simulation_complex",
+      "display_es": "Complejo de simulación",
+      "provenance": "GAME_ADDITION",
+      "gameplay_roles": [
+        "simulations",
+        "exams",
+        "team_training",
+        "scenario_events"
+      ]
+    },
+    {
+      "id": "library_study",
+      "display_es": "Centro de estudio",
+      "provenance": "GAME_ADDITION",
+      "gameplay_roles": [
+        "study",
+        "research",
+        "tutoring",
+        "quiet_social"
+      ]
+    },
+    {
+      "id": "athletics_area",
+      "display_es": "Instalaciones deportivas",
+      "provenance": "OFFICIAL_REFERENCE_DERIVED",
+      "source_ids": [
+        "ST_OFFICIAL_ACADEMY_OVERVIEW"
+      ],
+      "gameplay_roles": [
+        "fitness",
+        "sports",
+        "clubs",
+        "relationship_events"
+      ]
+    },
+    {
+      "id": "golden_gate_grounds",
+      "display_es": "Terrenos del Golden Gate",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_PRESIDIO",
+        "MA_STARFLEET_ACADEMY_EARTH"
+      ],
+      "gameplay_roles": [
+        "outdoor_training",
+        "social",
+        "reflection",
+        "special_events"
+      ]
+    },
+    {
+      "id": "san_francisco_leave",
+      "display_es": "San Francisco",
+      "provenance": "CANON_REFERENCE",
+      "source_ids": [
+        "MA_PRESIDIO"
+      ],
+      "gameplay_roles": [
+        "off_duty",
+        "social",
+        "city_events",
+        "leave"
+      ]
+    }
+  ],
+  "base_connections": [
+    [
+      "academy_main_grounds",
+      "parade_grounds"
+    ],
+    [
+      "academy_main_grounds",
+      "academic_core"
+    ],
+    [
+      "academy_main_grounds",
+      "command_school"
+    ],
+    [
+      "academy_main_grounds",
+      "flight_school"
+    ],
+    [
+      "academy_main_grounds",
+      "tactical_school"
+    ],
+    [
+      "academy_main_grounds",
+      "medical_academy"
+    ],
+    [
+      "academy_main_grounds",
+      "cadet_quarters"
+    ],
+    [
+      "academy_main_grounds",
+      "cadet_mess"
+    ],
+    [
+      "academy_main_grounds",
+      "simulation_complex"
+    ],
+    [
+      "academy_main_grounds",
+      "library_study"
+    ],
+    [
+      "academy_main_grounds",
+      "athletics_area"
+    ],
+    [
+      "academy_main_grounds",
+      "golden_gate_grounds"
+    ],
+    [
+      "golden_gate_grounds",
+      "san_francisco_leave"
+    ]
+  ]
+}

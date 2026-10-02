@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.8.0",
+  "registry_version": "0.9.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -527,6 +527,42 @@
       "episode": 9,
       "release_date": "1998-12-09",
       "notes": "Tom Paris is demoted to ensign and confined after disobeying orders; used as disciplinary-model evidence."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ACADEMY_OVERVIEW",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Starfleet Academy",
+      "publisher": "Star Trek official shop/reference page",
+      "url": "https://shop.startrek.com/pages/starfleet-academy",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference summary used only for durable institutional facts relevant to retained eras: San Francisco/Golden Gate location, four-year officer curriculum, field training, extracurricular life and satellite testing/training concepts. Not treated as screen canon."
+    },
+    {
+      "source_id": "MA_STARFLEET_ACADEMY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Academy locations, schools and screen-source trail in retained eras."
+    },
+    {
+      "source_id": "MA_STARFLEET_ACADEMY_EARTH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy (Earth)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_%28Earth%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Earth Academy history, Golden Gate/Marin grounds and parade grounds."
+    },
+    {
+      "source_id": "MA_PRESIDIO",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Presidio",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Presidio",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Starfleet Command/Academy presence around the Presidio and Golden Gate area."
     }
   ]
 }

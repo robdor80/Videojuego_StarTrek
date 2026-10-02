@@ -77,7 +77,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 | Area | Status |
 |---|---|
-| History and campus | ⬜ TODO |
+| History and campus | 🟨 IN_PROGRESS | Playable Earth-campus hub, location graph and first gameplay state established; era-specific campus presentation and exact historical deltas still pending. |
 | Admissions and cadet life | ⬜ TODO |
 | Departments and specializations | ⬜ TODO |
 | Curriculum and courses | ⬜ TODO |
