@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "system_state": {
+    "system_id": "system_definition_id",
+    "status_values": [
+      "offline",
+      "critical",
+      "degraded",
+      "operational",
+      "enhanced",
+      "destroyed"
+    ],
+    "fields": {
+      "status": "status_value",
+      "integrity": "0_to_1",
+      "efficiency": "0_to_1",
+      "power_requested": "normalized_or_absolute",
+      "power_allocated": "normalized_or_absolute",
+      "heat_or_stress": "optional_state",
+      "faults": "fault_id_list",
+      "damage": "damage_component_list",
+      "repair_jobs": "repair_job_list",
+      "isolated": "boolean",
+      "crew_required": "optional_number",
+      "dependencies": "system_id_list"
+    }
+  },
+  "damage_rules": [
+    "damage_changes_state_not_definition",
+    "repairs_can_restore_state_within_class_and_refit_limits",
+    "destroyed_system_requires_major_repair_or_replacement",
+    "power_shortage_can_reduce_efficiency_without_physical_damage"
+  ],
+  "ai_rule": "AI may describe symptoms and propose actions but cannot alter system state directly."
+}

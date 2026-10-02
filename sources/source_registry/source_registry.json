@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.15.0",
+  "registry_version": "0.16.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -866,6 +866,51 @@
       "url": "https://memory-alpha.fandom.com/wiki/Crew_personnel_report",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Starfleet personnel reports containing medical history, behavior on duty and past performance."
+    },
+    {
+      "source_id": "MA_SHIP_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ship class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ship_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for ship class as a shared construction design."
+    },
+    {
+      "source_id": "MA_STARSHIP_CLASSIFICATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starship classification",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starship_classification",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for classification as functional/role categorization distinct from ship class."
+    },
+    {
+      "source_id": "MA_FEDERATION_REGISTRIES",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Federation starship registries",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Federation_starship_registries",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Federation registry examples. Registry numbers are not treated as a reliable standalone chronology."
+    },
+    {
+      "source_id": "MA_NCC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "NCC",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/NCC",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for NCC as Federation Starfleet registry prefix and letter suffix reuse on legacy vessels."
+    },
+    {
+      "source_id": "MA_ENGINEER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Engineer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Engineer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for common starship systems maintained by engineering: propulsion, computers, transporters, sensors, weapons, deflectors, hull, life support and shields."
     }
   ]
 }

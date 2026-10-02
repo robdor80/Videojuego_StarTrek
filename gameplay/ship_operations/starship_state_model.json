@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "state_id": "starship_runtime_state",
+  "identity_fields": {
+    "ship_definition_id": "individual_ship_definition_id",
+    "class_id": "ship_class_id",
+    "display_name": "localized_or_proper_name",
+    "registry": "registry_string",
+    "operator": "faction_id"
+  },
+  "temporal_fields": {
+    "commissioned_date": "date_or_null",
+    "decommissioned_date": "date_or_null",
+    "destroyed_date": "date_or_null"
+  },
+  "live_fields": {
+    "service_status": "active_repair_reserve_missing_destroyed_retired_or_other",
+    "current_assignment": "assignment_id_or_null",
+    "mission_status": "mission_state",
+    "current_location": "location_ref",
+    "commanding_officer": "character_id_or_null",
+    "executive_officer": "character_id_or_null",
+    "crew_manifest": "crew_manifest_ref",
+    "active_refit": "refit_id_or_null",
+    "power_state": "power_state_ref",
+    "system_states": "system_state_map",
+    "damage_state": "damage_state_ref",
+    "alert_state": "normal_yellow_red_or_custom",
+    "shields_state": "system_state_ref",
+    "hull_state": "structural_state_ref",
+    "inventory_state": "inventory_ref",
+    "small_craft_state": "small_craft_manifest_ref"
+  },
+  "history": {
+    "event_log": "ship_event_log_ref",
+    "canonical_history_cutoff": "campaign_start_date",
+    "campaign_history_append_only": true
+  },
+  "design_note": "Authoring/gameplay contract. Final CoreRPG runtime schema is deferred."
+}

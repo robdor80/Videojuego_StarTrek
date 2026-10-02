@@ -88,6 +88,19 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Graduation and first assignments | ✅ COMPLETE | Graduation eligibility, ceremony, commission and live-world first-assignment generation established. |
 | Academy era profiles | ✅ COMPLETE | Pike, Kirk and TNG/DS9/Voyager technology, presentation and training overrides established without duplicating the Academy. |
 
+## Starfleet starships / technology
+
+| Area | Status | Notes |
+|---|---|---|
+| Ship identity / class / classification model | ✅ COMPLETE | Classification ≠ class ≠ individual ship. |
+| Individual ship live state | ✅ COMPLETE | Service, command, location, damage and campaign history modeled. |
+| Ship-system runtime state | ✅ COMPLETE | Damage, power, degradation, repair and dependencies modeled. |
+| Generated Starfleet ships | ✅ COMPLETE | Game-added ships constrained by era/class and collision validation. |
+| Era technology baseline | ⬜ TODO | Pike, Kirk and TNG/DS9/Voyager capability envelopes. |
+| Core Starfleet class catalogue | ⬜ TODO | Selected playable/relevant classes by era. |
+| Individual canonical ship catalogue | ⬜ TODO | Added progressively after class definitions. |
+| Interiors / bridge stations / crew complements | ⬜ TODO | Gameplay-facing ship environments and staffing. |
+
 ## Major remaining domains
 
 | Domain | Status |
@@ -96,7 +109,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Species / cultures / languages | ⬜ TODO |
 | Factions and organizations | ⬜ TODO |
 | Astrography | ⬜ TODO |
-| Starships and ship systems | ⬜ TODO |
+| Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
 | Stations and facilities | ⬜ TODO |
 | Technology and equipment | ⬜ TODO |
 | Medicine and science | ⬜ TODO |
