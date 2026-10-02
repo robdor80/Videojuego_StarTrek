@@ -8,7 +8,7 @@ Master progress index for the Star Trek universe repository.
 - 🟨 `IN_PROGRESS` — active research or structuring.
 - 🟧 `NEEDS_REVIEW` — substantially researched, pending consistency/provenance review.
 - 🟦 `NEEDS_ROBERTO` — requires a creative/game-design decision that cannot be resolved from sources alone.
-- ✅ `COMPLETE` — researched to the current defined scope, structured, provenance recorded, validated, with no known blocking gaps.
+- ✅ `COMPLETE` — researched to the current defined scope, structured, provenance recorded, validated, translated into game-usable design/data where applicable, with no known blocking gaps.
 
 A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent: new evidence or a detected contradiction can reopen a block.
 
@@ -35,6 +35,7 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 | `docs/decisions/campaign_continuity.md` | ✅ COMPLETE | Canon sets the starting state; campaign future is emergent. |
 | `docs/decisions/universal_rank_insignia.md` | ✅ COMPLETE | TNG-style pips standardised across all playable eras by design. |
 | `docs/decisions/player_facing_language.md` | ✅ COMPLETE | Internal IDs may be English; all normal player-facing text is es-ES. |
+| `docs/decisions/lore_to_game_rule.md` | ✅ COMPLETE | Lore is input; gameplay/data/runtime usability is the required output. |
 
 ## Playable era scope
 

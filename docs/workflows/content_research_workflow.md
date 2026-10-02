@@ -47,11 +47,23 @@ Classify material as:
 - inference,
 - game addition.
 
-## 7. Write human-readable lore first
+## 7. Convert research into game-usable design
 
-Use Markdown for explanation, nuance, sources and unresolved questions.
+Lore is input, not the final deliverable.
 
-Create JSON only when structured data adds real value or a schema is sufficiently understood. Do not prematurely freeze runtime schemas.
+Each research block must produce, as appropriate:
+- player-visible concepts,
+- gameplay rules,
+- structured data,
+- state fields,
+- validations,
+- AI knowledge/authority constraints,
+- progression hooks,
+- content-generation constraints.
+
+Markdown remains useful for explanation, nuance, sources and unresolved questions.
+
+Create JSON when structured data adds real value or a schema is sufficiently understood. Do not prematurely freeze runtime schemas.
 
 ## 8. Validate temporal consistency
 
@@ -76,7 +88,8 @@ A block reaches `COMPLETE` only when:
 - provenance is recorded,
 - known contradictions are resolved or explicitly logged,
 - structure is coherent,
-- relevant validation has passed.
+- relevant validation has passed,
+- the block has been translated into game-usable rules/data/content where applicable.
 
 ## 11. Commit coherently
 

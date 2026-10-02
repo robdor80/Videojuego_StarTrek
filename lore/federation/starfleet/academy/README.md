@@ -20,6 +20,10 @@ Starfleet Academy is the next active research block.
 
 ## Gameplay principle
 
+The Academy is not being documented as lore for its own sake.
+
+Every Academy research sub-block must end in a usable game model.
+
 The Academy is not a character-creation menu.
 
 It is a playable career stage in which the player can:
@@ -37,3 +41,25 @@ It is a playable career stage in which the player can:
 Academy canon provides the institution and starting context.
 
 The player does not replay Academy scenes from television or films.
+
+
+## Required gameplay outputs
+
+Academy research must progressively define:
+
+- `CadetState`
+- admission flow
+- Academy location graph
+- timetable / activity model
+- specialization path
+- course and exam model
+- simulation model
+- evaluation model
+- relationship/reputation hooks
+- disciplinary hooks
+- field-training hooks
+- graduation criteria
+- first-assignment generation
+- era-specific overrides
+
+Lore that does not affect one of these systems remains supporting documentation, not the main deliverable.
