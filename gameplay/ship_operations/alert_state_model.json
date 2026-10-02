@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "states": [
+    {
+      "id": "normal",
+      "display_es": "Condición normal",
+      "readiness": "routine"
+    },
+    {
+      "id": "yellow",
+      "display_es": "Alerta amarilla",
+      "readiness": "elevated",
+      "default_effects": [
+        "crew_heightened_readiness",
+        "defensive_systems_prepare"
+      ],
+      "weapons_default": "offline_or_standby"
+    },
+    {
+      "id": "red",
+      "display_es": "Alerta roja",
+      "readiness": "maximum",
+      "default_effects": [
+        "battle_stations",
+        "critical_systems_readiness",
+        "combat_or_emergency_posture"
+      ]
+    },
+    {
+      "id": "blue",
+      "display_es": "Alerta azul",
+      "readiness": "special_operation",
+      "availability": "class_or_operation_specific",
+      "notes": "Used for operations such as landing/docking/separation where appropriate; not every class uses it identically."
+    }
+  ],
+  "transitions_are_state_changes": true,
+  "automatic_alert_possible": true,
+  "commanding_officer_override_possible_when_rules_allow": true,
+  "provenance": [
+    {
+      "source_id": "MA_YELLOW_ALERT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_RED_ALERT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ALERT_SIGNAL",
+      "confidence": "HIGH"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "damage_types": [
+    "structural",
+    "system",
+    "power",
+    "fire",
+    "decompression",
+    "environmental",
+    "radiation",
+    "control_failure"
+  ],
+  "repair_job_fields": [
+    "job_id",
+    "location_id",
+    "system_id",
+    "damage_id",
+    "priority",
+    "assigned_team",
+    "required_parts",
+    "required_tools",
+    "estimated_work",
+    "progress",
+    "hazards",
+    "status"
+  ],
+  "team_sources": [
+    "engineering",
+    "operations",
+    "command",
+    "sciences_when_qualified"
+  ],
+  "rules": [
+    "repairs_take_time",
+    "crew_and_access_affect_repair_speed",
+    "hazards_can_block_or_slow_repairs",
+    "temporary_fix_may_restore_partial_function",
+    "full_repair_may_require_starbase_or_drydock",
+    "damage_control_does_not_exceed_class_design_limits"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_DAMAGE_CONTROL_TEAM",
+      "confidence": "HIGH"
+    }
+  ]
+}

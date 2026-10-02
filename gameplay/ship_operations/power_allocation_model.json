@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "power_state_fields": [
+    "generation_capacity",
+    "available_power",
+    "reserve_power",
+    "auxiliary_power",
+    "emergency_power",
+    "allocations",
+    "transfer_limits",
+    "faults"
+  ],
+  "allocation_domains": [
+    "propulsion",
+    "shields",
+    "weapons",
+    "sensors",
+    "communications",
+    "life_support",
+    "computers",
+    "transporters",
+    "structural_systems",
+    "mission_systems"
+  ],
+  "rules": [
+    "allocated_power_cannot_exceed_available_power_without_overload_rule",
+    "increased_allocation_may_reduce_other_domains",
+    "damage_can_reduce_generation_or_transfer_capacity",
+    "power_loss_can_degrade_system_without_physical_damage",
+    "priority_orders_must_be_recorded_as_state_changes"
+  ],
+  "ui_requirement": "Player-facing interface must show consequences of meaningful reallocations in Spanish."
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "order_fields": [
+    "order_id",
+    "issuer_character_id",
+    "issuer_position_id",
+    "issuer_authority_context",
+    "target_entity_id",
+    "target_station_id",
+    "action_id",
+    "parameters",
+    "urgency",
+    "issued_at",
+    "constraints"
+  ],
+  "validation_steps": [
+    "issuer_authority",
+    "target_exists",
+    "station_or_executor_available",
+    "capability_available",
+    "system_state_allows_action",
+    "required_resources_available",
+    "safety_and_regulatory_checks",
+    "parameter_completeness"
+  ],
+  "outcome_states": [
+    "accepted",
+    "clarification_required",
+    "queued",
+    "executing",
+    "completed",
+    "failed",
+    "refused",
+    "cancelled"
+  ],
+  "state_mutation_authority": "core_rules",
+  "ai_direct_state_mutation": false
+}

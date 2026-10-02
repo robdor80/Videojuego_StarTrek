@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "feedback_channels": [
+    "npc_verbal_report",
+    "hud",
+    "station_ui",
+    "scene_state",
+    "audio_alarm",
+    "viewscreen",
+    "system_log"
+  ],
+  "report_visibility_depends_on": [
+    "role",
+    "station",
+    "permissions",
+    "sensor_state",
+    "character_knowledge"
+  ],
+  "examples": [
+    {
+      "event": "shields_raised",
+      "possible_feedback": [
+        "tactical_confirmation",
+        "hud_shield_state",
+        "bridge_effect"
+      ]
+    },
+    {
+      "event": "warp_drive_offline",
+      "possible_feedback": [
+        "engineering_alarm",
+        "conn_restriction",
+        "captain_report"
+      ]
+    },
+    {
+      "event": "red_alert",
+      "possible_feedback": [
+        "red_lighting",
+        "alarm",
+        "crew_battle_station_behavior",
+        "ui_alert_state"
+      ]
+    }
+  ],
+  "rule": "Presentation reflects authoritative state and never substitutes for it."
+}

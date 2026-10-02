@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.20.0",
+  "registry_version": "0.21.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -1209,6 +1209,51 @@
       "url": "https://memory-alpha.fandom.com/wiki/Tactical_station",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for tactical control of weapons/shields and era differences."
+    },
+    {
+      "source_id": "MA_YELLOW_ALERT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Yellow alert",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Yellow_alert",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for increased readiness, defensive posture and escalation to red alert."
+    },
+    {
+      "source_id": "MA_RED_ALERT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Red alert",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Red_alert",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for highest standard Starfleet alert during combat/critical failures."
+    },
+    {
+      "source_id": "MA_ALERT_SIGNAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Alert signal",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Alert_signal",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for color-coded Starfleet alert states including normal/yellow/red/blue."
+    },
+    {
+      "source_id": "MA_DAMAGE_CONTROL_TEAM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Damage control team",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Damage_control_team",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for crisis repair/firefighting teams and cross-division participation."
+    },
+    {
+      "source_id": "MA_DEFLECTOR_SHIELD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Deflector shield",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Deflector_shield",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for shield dependence on available power and degradation under sustained damage."
     }
   ]
 }
