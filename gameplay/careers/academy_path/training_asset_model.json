@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "asset_types": [
+    "training_ship",
+    "active_starship",
+    "shuttle",
+    "runabout",
+    "trainer_craft",
+    "bridge_simulator",
+    "holodeck_simulator"
+  ],
+  "selection_filters": [
+    "era_validity",
+    "date_validity",
+    "availability",
+    "campaign_state",
+    "training_role",
+    "specialization_compatibility",
+    "risk_level"
+  ],
+  "famous_asset_guaranteed": false,
+  "canonical_asset_requires_live_world_compatibility": true,
+  "examples": [
+    {
+      "asset": "USS Enterprise NCC-1701",
+      "era_id": "kirk",
+      "date": 2285,
+      "role": "training_ship",
+      "source_id": "STII_WRATH_OF_KHAN"
+    },
+    {
+      "asset": "USS Valiant NCC-74210",
+      "era_id": "tng_ds9_voyager",
+      "date_range": [
+        2372,
+        2374
+      ],
+      "role": "training_ship",
+      "source_id": "DS9_VALIANT"
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_TRAINING_SHIP",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "STII_WRATH_OF_KHAN",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "DS9_VALIANT",
+      "confidence": "HIGH"
+    }
+  ]
+}

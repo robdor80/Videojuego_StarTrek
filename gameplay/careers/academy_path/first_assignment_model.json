@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "candidate_filters": [
+    "campaign_date",
+    "unit_temporal_validity",
+    "unit_live_status",
+    "vacancy",
+    "specialization_match",
+    "qualification_match"
+  ],
+  "ranking_factors": [
+    "starfleet_operational_need",
+    "academic_record",
+    "practical_record",
+    "commendations",
+    "disciplinary_record",
+    "cadet_preferences",
+    "mentor_recommendation",
+    "campaign_relationships"
+  ],
+  "player_choice_model": "preferences_not_guarantees",
+  "famous_assignment_guaranteed": false,
+  "output_fields": [
+    "assignment_id",
+    "position_id",
+    "reporting_officer_id",
+    "report_date",
+    "orders_id"
+  ],
+  "normal_entry_rank": "ensign"
+}

@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "modes": [
+    "field_study_active_unit",
+    "training_cruise",
+    "training_ship",
+    "station_rotation",
+    "base_rotation",
+    "specialist_practicum"
+  ],
+  "fields": [
+    "placement_id",
+    "host_assignment_id",
+    "supervisor_character_id",
+    "start_date",
+    "end_date",
+    "rotation_positions",
+    "objectives",
+    "evaluation_axes",
+    "incident_hooks",
+    "result"
+  ],
+  "world_state_is_live": true,
+  "campaign_events_can_interrupt_training": true,
+  "canonical_story_replay_required": false,
+  "era_guidance": {
+    "pike": [
+      "training_cruise",
+      "training_ship",
+      "specialist_practicum"
+    ],
+    "kirk": [
+      "training_cruise",
+      "training_ship",
+      "specialist_practicum"
+    ],
+    "tng_ds9_voyager": [
+      "field_study_active_unit",
+      "station_rotation",
+      "training_ship",
+      "specialist_practicum"
+    ]
+  },
+  "provenance": [
+    {
+      "source_id": "DS9_THE_ASCENT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "STII_WRATH_OF_KHAN",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_FIELD_STUDY",
+      "confidence": "HIGH"
+    }
+  ]
+}

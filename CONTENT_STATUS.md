@@ -83,9 +83,9 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
 | Instructors | ✅ COMPLETE | Persistent canonical/generated instructor model, temporal validity and AI authority limits established. |
 | Evaluations and examinations | ✅ COMPLETE | Multi-axis evaluation, exam formats, recovery and persistent record model established. |
-| Simulations and field training | 🟨 IN_PROGRESS | Simulation engine model established; field-study/training-cruise integration still pending. |
-| Training ships | ⬜ TODO |
-| Graduation and first assignments | ⬜ TODO |
+| Simulations and field training | ✅ COMPLETE | Simulation, active-unit field study, training cruise and live-world interruption models established. |
+| Training ships | ✅ COMPLETE | Era/date-aware training-asset selection; famous ships are possible but never guaranteed. |
+| Graduation and first assignments | ✅ COMPLETE | Graduation eligibility, ceremony, commission and live-world first-assignment generation established. |
 | Academy era profiles | ⬜ TODO |
 
 ## Major remaining domains

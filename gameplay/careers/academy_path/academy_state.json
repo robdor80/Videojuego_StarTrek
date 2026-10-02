@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.4.0",
+  "schema_version": "0.5.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -45,7 +45,13 @@
     "evaluation_history": "evaluation_event_list",
     "instructor_relationships": "relationship_refs",
     "simulation_history": "simulation_result_list",
-    "mentor_id": "character_id_or_null"
+    "mentor_id": "character_id_or_null",
+    "field_training_history": "field_training_result_list",
+    "training_asset_history": "training_asset_ref_list",
+    "graduation_status": "graduation_state",
+    "assignment_preferences": "assignment_preference_state",
+    "first_assignment_candidate_list": "assignment_candidate_list",
+    "first_assignment": "assignment_id_or_null"
   },
   "design_note": "This is an authoring/gameplay contract, not yet a CoreRPG runtime schema."
 }

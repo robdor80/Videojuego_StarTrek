@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.13.0",
+  "registry_version": "0.14.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -820,6 +820,43 @@
       "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_personnel",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for retained-era Academy administrators, instructors and training-cruise staff."
+    },
+    {
+      "source_id": "DS9_VALIANT",
+      "source_type": "SCREEN_CANON",
+      "title": "Valiant",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 6,
+      "episode": 22,
+      "release_date": "1998-05-06",
+      "notes": "Primary screen source for Red Squad cadets serving aboard USS Valiant on a training mission and cadet command under exceptional circumstances."
+    },
+    {
+      "source_id": "MA_TRAINING_SHIP",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Training ship",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Training_ship",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for retained-era Starfleet training ships including USS Enterprise, class J training vessels and USS Valiant."
+    },
+    {
+      "source_id": "MA_ENSIGN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ensign",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ensign",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for ensign as the usual first commissioned rank after Academy graduation."
+    },
+    {
+      "source_id": "MA_GRADUATION_CEREMONY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Graduation ceremony",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Graduation_ceremony",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Academy commencement ceremony in 2368."
     }
   ]
 }

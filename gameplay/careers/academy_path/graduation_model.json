@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "eligibility_checks": [
+    "required_courses_complete",
+    "specialization_requirements_complete",
+    "practical_requirements_complete",
+    "field_training_complete",
+    "conduct_allows_graduation",
+    "final_evaluation_complete"
+  ],
+  "default_commission_rank": "ensign",
+  "special_professional_routes_deferred": [
+    "medical"
+  ],
+  "possible_outcomes": [
+    "graduate",
+    "graduate_with_distinction",
+    "graduation_delayed",
+    "remediation_required",
+    "dismissed"
+  ],
+  "ceremony_is_playable": true,
+  "academy_state_transition": {
+    "from": "graduation_pending",
+    "to": "graduated"
+  },
+  "provenance": [
+    {
+      "source_id": "TNG_FIRST_DUTY",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ENSIGN",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_GRADUATION_CEREMONY",
+      "confidence": "HIGH"
+    }
+  ]
+}
