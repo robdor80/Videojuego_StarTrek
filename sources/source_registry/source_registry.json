@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.10.0",
+  "registry_version": "0.11.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -668,6 +668,54 @@
       "url": "https://memory-alpha.fandom.com/wiki/Starfleet_ranks",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for 24th-century cadet class mapping: fourth class first-year through first class fourth-year."
+    },
+    {
+      "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
+      "source_type": "SCREEN_CANON",
+      "title": "Encounter at Farpoint",
+      "work": "Star Trek: The Next Generation",
+      "season": 1,
+      "episode": 1,
+      "release_date": "1987-09-28",
+      "notes": "Primary screen source used for Data's Academy academic background and evidence of multiple scientific areas of study."
+    },
+    {
+      "source_id": "DS9_PLAYING_GOD",
+      "source_type": "SCREEN_CANON",
+      "title": "Playing God",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 2,
+      "episode": 17,
+      "release_date": "1994-02-27",
+      "notes": "Primary screen source used for Jadzia Dax's multiple Academy scientific degrees/fields."
+    },
+    {
+      "source_id": "VOY_FUTURES_END",
+      "source_type": "SCREEN_CANON",
+      "title": "Future's End",
+      "work": "Star Trek: Voyager",
+      "season": 3,
+      "episode": 8,
+      "release_date": "1996-11-06",
+      "notes": "Primary screen source used for Tom Paris's astrophysics major."
+    },
+    {
+      "source_id": "MA_ACADEMY_MAJORS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy majors",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_majors",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for documented Academy majors and degrees across retained eras."
+    },
+    {
+      "source_id": "MA_ACADEMY_COURSES",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy courses",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_courses",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for named Academy subjects and training areas in retained-era screen sources."
     }
   ]
 }

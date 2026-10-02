@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -16,8 +16,8 @@
     "academy_status": "lifecycle_state",
     "academic_year": "integer_or_null",
     "semester": "integer_or_null",
-    "division_track": "command_operations_sciences_or_undecided",
-    "specialization": "definition_id_or_null",
+    "division_track": "division_id_or_undecided",
+    "specialization": "specialization_id_or_null",
     "academic_record": "record_ref",
     "disciplinary_record": "record_ref",
     "qualifications": "definition_id_list",
@@ -38,7 +38,9 @@
     "free_time": "time_budget_state",
     "academic_standing": "standing_state",
     "practical_standing": "standing_state",
-    "year_progression_status": "progression_state"
+    "year_progression_status": "progression_state",
+    "secondary_focus": "specialization_id_list",
+    "specialization_change_history": "change_event_list"
   },
   "design_note": "This is an authoring/gameplay contract, not yet a CoreRPG runtime schema."
 }

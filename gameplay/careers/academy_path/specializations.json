@@ -1,0 +1,173 @@
+{
+  "schema_version": "0.1.0",
+  "selection_model": "division_then_specialization",
+  "can_start_undecided": true,
+  "can_change_specialization": true,
+  "change_requires": "academic_review_and_catchup",
+  "specializations": [
+    {
+      "id": "command",
+      "division_id": "command",
+      "display_es": "Mando",
+      "career_examples": [
+        "oficial_de_mando",
+        "primer_oficial",
+        "oficial_al_mando"
+      ],
+      "competency_focus": [
+        "leadership",
+        "command_decision",
+        "diplomacy",
+        "bridge_operations"
+      ]
+    },
+    {
+      "id": "flight_control_navigation",
+      "division_id": "command",
+      "display_es": "Control de vuelo y navegación",
+      "career_examples": [
+        "oficial_de_control_de_vuelo",
+        "navegante",
+        "piloto"
+      ],
+      "competency_focus": [
+        "flight_control",
+        "navigation",
+        "astrogation",
+        "small_craft"
+      ]
+    },
+    {
+      "id": "engineering",
+      "division_id": "operations",
+      "display_es": "Ingeniería",
+      "career_examples": [
+        "oficial_de_ingenieria",
+        "jefe_de_ingenieria"
+      ],
+      "competency_focus": [
+        "starship_systems",
+        "warp_systems",
+        "power",
+        "damage_control"
+      ]
+    },
+    {
+      "id": "operations",
+      "division_id": "operations",
+      "display_es": "Operaciones",
+      "career_examples": [
+        "oficial_de_operaciones"
+      ],
+      "competency_focus": [
+        "resource_management",
+        "ship_operations",
+        "systems_coordination",
+        "logistics"
+      ]
+    },
+    {
+      "id": "security_tactical",
+      "division_id": "operations",
+      "display_es": "Seguridad y Táctica",
+      "career_examples": [
+        "oficial_tactico",
+        "jefe_de_seguridad",
+        "jefe_tactico"
+      ],
+      "competency_focus": [
+        "tactical_analysis",
+        "weapons",
+        "security",
+        "combat",
+        "risk_management"
+      ]
+    },
+    {
+      "id": "science",
+      "division_id": "sciences",
+      "display_es": "Ciencias",
+      "career_examples": [
+        "oficial_cientifico",
+        "jefe_cientifico"
+      ],
+      "competency_focus": [
+        "scientific_method",
+        "sensor_analysis",
+        "research",
+        "field_science"
+      ]
+    },
+    {
+      "id": "astrophysics_cartography",
+      "division_id": "sciences",
+      "display_es": "Astrofísica y cartografía",
+      "career_examples": [
+        "astrofisico",
+        "cartografo_estelar",
+        "oficial_cientifico"
+      ],
+      "competency_focus": [
+        "astrophysics",
+        "stellar_cartography",
+        "subspace",
+        "celestial_analysis"
+      ]
+    },
+    {
+      "id": "exosciences",
+      "division_id": "sciences",
+      "display_es": "Exociencias",
+      "career_examples": [
+        "exobiologo",
+        "xenoantropologo",
+        "oficial_cientifico"
+      ],
+      "competency_focus": [
+        "exobiology",
+        "xenology",
+        "anthropology",
+        "linguistics"
+      ]
+    },
+    {
+      "id": "medical",
+      "division_id": "sciences",
+      "professional_route": "starfleet_medical",
+      "display_es": "Medicina",
+      "career_examples": [
+        "oficial_medico",
+        "jefe_medico"
+      ],
+      "competency_focus": [
+        "medicine",
+        "diagnostics",
+        "emergency_care",
+        "xenomedicine"
+      ]
+    }
+  ],
+  "design_notes": [
+    "The list is deliberately smaller than the full canon list of academic majors.",
+    "Canon majors are represented through course choices, electives and qualifications beneath these playable specializations.",
+    "Medical training is flagged as a distinct professional route."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_ACADEMY_MAJORS",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "DS9_PLAYING_GOD",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "VOY_FUTURES_END",
+      "confidence": "HIGH"
+    }
+  ]
+}
