@@ -81,9 +81,9 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Admissions and cadet life | ✅ COMPLETE | Playable admission flow, soft-failure/retake model, four-year cadet progression and conduct consequences established. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
 | Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
-| Instructors | ⬜ TODO |
-| Evaluations and examinations | ⬜ TODO |
-| Simulations and field training | ⬜ TODO |
+| Instructors | ✅ COMPLETE | Persistent canonical/generated instructor model, temporal validity and AI authority limits established. |
+| Evaluations and examinations | ✅ COMPLETE | Multi-axis evaluation, exam formats, recovery and persistent record model established. |
+| Simulations and field training | 🟨 IN_PROGRESS | Simulation engine model established; field-study/training-cruise integration still pending. |
 | Training ships | ⬜ TODO |
 | Graduation and first assignments | ⬜ TODO |
 | Academy era profiles | ⬜ TODO |

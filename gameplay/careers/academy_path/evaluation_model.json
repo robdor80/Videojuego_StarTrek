@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "internal_score_range": [
+    0,
+    100
+  ],
+  "player_facing_bands": [
+    {
+      "id": "excellent",
+      "display_es": "Excelente",
+      "min": 90
+    },
+    {
+      "id": "good",
+      "display_es": "Notable",
+      "min": 75
+    },
+    {
+      "id": "pass",
+      "display_es": "Apto",
+      "min": 60
+    },
+    {
+      "id": "remediation",
+      "display_es": "En recuperación",
+      "min": 40
+    },
+    {
+      "id": "fail",
+      "display_es": "No apto",
+      "min": 0
+    }
+  ],
+  "dimensions": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "preparation",
+    "discipline",
+    "pressure_control"
+  ],
+  "weights_are_activity_specific": true,
+  "conduct_can_override_academic_score": true,
+  "automatic_game_over_on_failure": false,
+  "record_persistence": true,
+  "design_provenance": "GAME_ADDITION"
+}

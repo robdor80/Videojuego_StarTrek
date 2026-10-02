@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1.0",
+  "scenario_fields": [
+    "scenario_id",
+    "display_name_es",
+    "era_ids",
+    "specialization_tags",
+    "difficulty",
+    "visible_briefing",
+    "hidden_state",
+    "roles",
+    "environment",
+    "objectives",
+    "hidden_assessment_axes",
+    "failure_conditions",
+    "no_win",
+    "time_limit",
+    "event_deck",
+    "debrief_rules"
+  ],
+  "resolution_authority": "core_rules_and_world_state",
+  "ai_roles": [
+    "scene_presentation",
+    "npc_dialogue",
+    "debrief_dialogue",
+    "narrative_variation"
+  ],
+  "ai_forbidden": [
+    "changing_hidden_state_without_action",
+    "declaring_pass_or_fail",
+    "inventing_success_conditions",
+    "revealing_hidden_assessment_axes"
+  ],
+  "canonical_examples": [
+    {
+      "id": "kobayashi_maru",
+      "era_ids": [
+        "kirk"
+      ],
+      "track": [
+        "command"
+      ],
+      "no_win": true,
+      "source_id": "STII_WRATH_OF_KHAN"
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "STII_WRATH_OF_KHAN",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_BRIDGE_SIMULATOR",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_KOBAYASHI_MARU_SCENARIO",
+      "confidence": "HIGH"
+    }
+  ]
+}

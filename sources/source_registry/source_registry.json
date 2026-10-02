@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.12.0",
+  "registry_version": "0.13.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -781,6 +781,45 @@
       "url": "https://memory-alpha.fandom.com/wiki/Kobayashi_Maru_scenario",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for 23rd-century command-track no-win simulation and its assessment purpose."
+    },
+    {
+      "source_id": "TOS_WHERE_NO_MAN_HAS_GONE_BEFORE",
+      "source_type": "SCREEN_CANON",
+      "title": "Where No Man Has Gone Before",
+      "work": "Star Trek: The Original Series",
+      "season": 1,
+      "episode": 3,
+      "release_date": "1966-09-22",
+      "notes": "Primary screen source for James T. Kirk having served as a Starfleet Academy instructor."
+    },
+    {
+      "source_id": "VOY_LEARNING_CURVE",
+      "source_type": "SCREEN_CANON",
+      "title": "Learning Curve",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 16,
+      "release_date": "1995-05-22",
+      "notes": "Primary screen source for Tuvok's instructional experience and retraining Starfleet-inexperienced personnel."
+    },
+    {
+      "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+      "source_type": "SCREEN_CANON",
+      "title": "What You Leave Behind",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 7,
+      "episode": 25,
+      "release_date": "1999-05-31",
+      "notes": "Primary screen source for Miles O'Brien leaving Deep Space 9 to become a professor of engineering at Starfleet Academy."
+    },
+    {
+      "source_id": "MA_ACADEMY_PERSONNEL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy personnel",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_personnel",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for retained-era Academy administrators, instructors and training-cruise staff."
     }
   ]
 }

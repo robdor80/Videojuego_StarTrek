@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "exam_types": [
+    "written",
+    "oral",
+    "practical",
+    "simulation",
+    "psychological",
+    "field_evaluation"
+  ],
+  "player_trivia_required": false,
+  "uses_character_competence": true,
+  "uses_player_decisions": true,
+  "integrity_actions_possible": true,
+  "results": [
+    "excellent",
+    "good",
+    "pass",
+    "remediation",
+    "fail"
+  ],
+  "provenance": [
+    {
+      "source_id": "TNG_MENAGE_A_TROI",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_COMING_OF_AGE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_FIRST_DUTY",
+      "confidence": "HIGH"
+    }
+  ]
+}

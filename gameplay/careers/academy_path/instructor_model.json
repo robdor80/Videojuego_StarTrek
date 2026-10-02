@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "instructor_fields": [
+    "character_id",
+    "display_name",
+    "rank_id",
+    "academy_role",
+    "subject_ids",
+    "era_validity",
+    "assignment",
+    "schedule",
+    "office_location",
+    "teaching_style",
+    "strictness",
+    "mentoring_tendency",
+    "relationship_ref",
+    "knowledge_scope",
+    "authority_scope"
+  ],
+  "source_types": [
+    "canonical_character",
+    "generated_character"
+  ],
+  "canonical_presence_requires": [
+    "temporal_validity",
+    "assignment_compatibility",
+    "campaign_history_compatibility"
+  ],
+  "ai_authority_limits": [
+    "cannot_award_grade_without_rule_result",
+    "cannot_grant_qualification_without_rule_result",
+    "cannot_issue_invalid_discipline",
+    "cannot_know_hidden_world_state"
+  ]
+}
