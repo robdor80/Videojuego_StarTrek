@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.1.0",
+  "flow_id": "starfleet_academy_admission",
+  "player_facing_locale": "es-ES",
+  "purpose": "playable_onboarding",
+  "stages": [
+    {
+      "id": "eligibility",
+      "display_es": "Comprobación de requisitos",
+      "resolution": "rules"
+    },
+    {
+      "id": "candidate_profile",
+      "display_es": "Perfil del candidato",
+      "resolution": "dialogue_and_background"
+    },
+    {
+      "id": "academic_assessment",
+      "display_es": "Evaluación académica",
+      "resolution": "character_stats_plus_scene_choices"
+    },
+    {
+      "id": "interpersonal_assessment",
+      "display_es": "Evaluación interpersonal",
+      "resolution": "scene_choices"
+    },
+    {
+      "id": "psychological_assessment",
+      "display_es": "Evaluación psicológica",
+      "resolution": "adaptive_scenario"
+    },
+    {
+      "id": "practical_assessment",
+      "display_es": "Evaluación práctica",
+      "resolution": "simulation_or_scene"
+    },
+    {
+      "id": "review",
+      "display_es": "Revisión de candidatura",
+      "resolution": "rules_plus_record"
+    },
+    {
+      "id": "decision",
+      "display_es": "Decisión de admisión",
+      "resolution": "authoritative_rules"
+    }
+  ],
+  "player_knowledge_test_required": false,
+  "literal_real_world_science_exam_required": false,
+  "failure_is_automatic_game_over": false,
+  "possible_outcomes": [
+    "admitted",
+    "admitted_with_support",
+    "preparatory_program",
+    "retake_required",
+    "deferred",
+    "rejected_for_current_cycle"
+  ],
+  "era_overrides": {
+    "pike": {
+      "exact_canonical_exam_structure": false,
+      "treatment": "game_addition_consistent_with_era"
+    },
+    "kirk": {
+      "exact_canonical_exam_structure": false,
+      "treatment": "game_addition_consistent_with_era"
+    },
+    "tng_ds9_voyager": {
+      "exact_canonical_exam_structure": true,
+      "non_federation_sponsorship_supported": true,
+      "remote_or_satellite_testing_supported": true,
+      "psych_test_supported": true
+    }
+  },
+  "provenance": [
+    {
+      "source_id": "TNG_COMING_OF_AGE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "DS9_HEART_OF_STONE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "DS9_FACETS",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "VOY_IMPERFECTION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ACADEMY_ENTRANCE_EXAM",
+      "confidence": "HIGH"
+    }
+  ]
+}

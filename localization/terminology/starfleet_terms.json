@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "locale": "es-ES",
   "terms": {
     "ensign": "Alférez",
@@ -27,6 +27,15 @@
     "communications_officer": "Oficial de Comunicaciones",
     "counselor": "Consejero",
     "assignment": "Destino",
-    "duty_station": "Puesto de servicio"
+    "duty_station": "Puesto de servicio",
+    "cadet": "Cadete",
+    "cadet_fourth_class": "Cadete de 4.ª clase",
+    "cadet_third_class": "Cadete de 3.ª clase",
+    "cadet_second_class": "Cadete de 2.ª clase",
+    "cadet_first_class": "Cadete de 1.ª clase",
+    "midshipman": "Guardiamarina",
+    "academy_admission": "Admisión a la Academia",
+    "entrance_exam": "Examen de ingreso",
+    "psych_test": "Evaluación psicológica"
   }
 }

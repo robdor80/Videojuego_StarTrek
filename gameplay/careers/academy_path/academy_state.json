@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -27,7 +27,18 @@
     "current_location": "location_id",
     "current_activity": "activity_id_or_null",
     "field_training": "field_training_state",
-    "graduation_eligibility": "boolean"
+    "graduation_eligibility": "boolean",
+    "cadet_class": "cadet_class_id_or_null",
+    "admission_attempts": "integer",
+    "admission_outcome": "admission_outcome_or_null",
+    "preparatory_status": "preparatory_state_or_null",
+    "conduct_status": "conduct_state",
+    "fatigue": "numeric_state",
+    "stress": "numeric_state",
+    "free_time": "time_budget_state",
+    "academic_standing": "standing_state",
+    "practical_standing": "standing_state",
+    "year_progression_status": "progression_state"
   },
   "design_note": "This is an authoring/gameplay contract, not yet a CoreRPG runtime schema."
 }

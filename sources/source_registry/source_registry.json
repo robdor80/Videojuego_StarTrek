@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.9.0",
+  "registry_version": "0.10.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -563,6 +563,111 @@
       "url": "https://memory-alpha.fandom.com/wiki/Presidio",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Starfleet Command/Academy presence around the Presidio and Golden Gate area."
+    },
+    {
+      "source_id": "TNG_COMING_OF_AGE",
+      "source_type": "SCREEN_CANON",
+      "title": "Coming of Age",
+      "work": "Star Trek: The Next Generation",
+      "season": 1,
+      "episode": 19,
+      "release_date": "1988-03-14",
+      "notes": "Primary screen source for the 2364 Starfleet Academy entrance examination on Relva VII, including candidate testing and psych evaluation."
+    },
+    {
+      "source_id": "TNG_FIRST_DUTY",
+      "source_type": "SCREEN_CANON",
+      "title": "The First Duty",
+      "work": "Star Trek: The Next Generation",
+      "season": 5,
+      "episode": 19,
+      "release_date": "1992-03-30",
+      "notes": "Primary screen source for cadet life, Nova Squadron, Academy discipline and cadet class structure."
+    },
+    {
+      "source_id": "TNG_TAPESTRY",
+      "source_type": "SCREEN_CANON",
+      "title": "Tapestry",
+      "work": "Star Trek: The Next Generation",
+      "season": 6,
+      "episode": 15,
+      "release_date": "1993-02-15",
+      "notes": "Primary screen source for Picard's Academy period and cadet first-class/fourth-year references."
+    },
+    {
+      "source_id": "DS9_HEART_OF_STONE",
+      "source_type": "SCREEN_CANON",
+      "title": "Heart of Stone",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 3,
+      "episode": 14,
+      "release_date": "1995-02-06",
+      "notes": "Primary screen source for Nog seeking command-level sponsorship to enter Starfleet Academy."
+    },
+    {
+      "source_id": "DS9_FACETS",
+      "source_type": "SCREEN_CANON",
+      "title": "Facets",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 3,
+      "episode": 25,
+      "release_date": "1995-06-12",
+      "notes": "Primary screen source for Nog's Academy admission process and preparatory path."
+    },
+    {
+      "source_id": "VOY_IMPERFECTION",
+      "source_type": "SCREEN_CANON",
+      "title": "Imperfection",
+      "work": "Star Trek: Voyager",
+      "season": 7,
+      "episode": 2,
+      "release_date": "2000-10-11",
+      "notes": "Primary screen source for Icheb seeking Academy eligibility and remote examination/support while aboard Voyager."
+    },
+    {
+      "source_id": "ST_OFFICIAL_WESLEY_EVOLUTION",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Evolution of Wesley Crusher",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/en-un/news/the-evolution-of-wesley-crusher",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference confirming Wesley failed his first Academy entrance attempt and later joined the Academy."
+    },
+    {
+      "source_id": "ST_OFFICIAL_FIRST_DUTY_SITO",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Below Deck with Lower Decks: The Legacy of Sito Jaxa",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/below-deck-lower-decks-409-sito-jaxa",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference summarizing Nova Squadron's Academy training accident, cover-up, expulsion and repeated academic year consequences."
+    },
+    {
+      "source_id": "MA_ACADEMY_ENTRANCE_EXAM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Academy entrance exam",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_entrance_exam",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for exam components, retake path and non-Federation sponsorship."
+    },
+    {
+      "source_id": "MA_STARFLEET_CADETS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet cadets",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_cadets",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for usual four-year cadet training and ensign commissioning after graduation."
+    },
+    {
+      "source_id": "MA_STARFLEET_RANKS_CADETS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet ranks — cadet ranks",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_ranks",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 24th-century cadet class mapping: fourth class first-year through first class fourth-year."
     }
   ]
 }

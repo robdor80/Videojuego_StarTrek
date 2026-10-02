@@ -1,0 +1,83 @@
+{
+  "schema_version": "0.1.0",
+  "standard_program_years": 4,
+  "year_progression": [
+    {
+      "academic_year": 1,
+      "cadet_class_id": "cadet_fourth_class",
+      "display_es": "Cadete de 4.ª clase"
+    },
+    {
+      "academic_year": 2,
+      "cadet_class_id": "cadet_third_class",
+      "display_es": "Cadete de 3.ª clase"
+    },
+    {
+      "academic_year": 3,
+      "cadet_class_id": "cadet_second_class",
+      "display_es": "Cadete de 2.ª clase"
+    },
+    {
+      "academic_year": 4,
+      "cadet_class_id": "cadet_first_class",
+      "display_es": "Cadete de 1.ª clase"
+    }
+  ],
+  "normal_graduation_rank": {
+    "rank_id": "ensign",
+    "display_es": "Alférez"
+  },
+  "progression_checks": [
+    "academic_requirements",
+    "practical_requirements",
+    "evaluation_requirements",
+    "conduct_status"
+  ],
+  "possible_year_outcomes": [
+    "advance",
+    "advance_with_remediation",
+    "repeat_selected_modules",
+    "repeat_academic_year",
+    "leave_of_absence",
+    "dismissal"
+  ],
+  "era_treatment": {
+    "pike": {
+      "class_mapping_status": "game_standardization",
+      "period_terms_allowed": [
+        "cadet"
+      ]
+    },
+    "kirk": {
+      "class_mapping_status": "game_standardization",
+      "period_terms_allowed": [
+        "cadet",
+        "midshipman"
+      ]
+    },
+    "tng_ds9_voyager": {
+      "class_mapping_status": "canon_aligned",
+      "period_terms_allowed": [
+        "cadet"
+      ]
+    }
+  },
+  "provenance": [
+    {
+      "source_id": "TNG_FIRST_DUTY",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_TAPESTRY",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET_CADETS",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET_RANKS_CADETS",
+      "confidence": "HIGH"
+    }
+  ]
+}
