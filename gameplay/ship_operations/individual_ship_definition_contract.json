@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "required_fields": [
+    "ship_id",
+    "display_name",
+    "class_id",
+    "operator"
+  ],
+  "identity_fields": [
+    "registry",
+    "registry_history"
+  ],
+  "history_fields": [
+    "historical_events",
+    "retained_era_ids",
+    "post_boundary_policy"
+  ],
+  "optional_fields": [
+    "individual_special_configuration",
+    "known_command_history",
+    "known_assignment_history",
+    "refit_history",
+    "notes"
+  ],
+  "bootstrap_rule": "historical_events_are_input_only_before_campaign_start",
+  "runtime_rule": "individual_ship_definition_bootstraps_entity_but_is_not_live_state"
+}

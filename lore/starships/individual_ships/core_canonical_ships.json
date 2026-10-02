@@ -1,0 +1,289 @@
+{
+  "schema_version": "0.1.0",
+  "bootstrap_rule": "apply_retained_events_up_to_campaign_start_then_stop",
+  "ships": [
+    {
+      "ship_id": "uss_enterprise_ncc_1701",
+      "display_name": "USS Enterprise",
+      "registry": "NCC-1701",
+      "class_id": "constitution",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "pike",
+        "kirk"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2259,
+          "event": "active_under_christopher_pike",
+          "configuration_id": "constitution_pike",
+          "source_ids": [
+            "SNW_STRANGE_NEW_WORLDS_EP",
+            "MA_ENTERPRISE_1701"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2265,
+          "event": "command_transferred_to_james_t_kirk",
+          "configuration_id": "constitution_tos",
+          "source_ids": [
+            "TOS_WHERE_NO_MAN_HAS_GONE_BEFORE",
+            "MA_ENTERPRISE_1701"
+          ]
+        },
+        {
+          "order": 3,
+          "year": 2270,
+          "event": "major_refit_period_begins",
+          "configuration_id": "constitution_major_refit",
+          "date_precision": "approximate",
+          "source_ids": [
+            "MA_CONSTITUTION_CLASS",
+            "MA_ENTERPRISE_1701"
+          ]
+        },
+        {
+          "order": 4,
+          "year": 2285,
+          "event": "destroyed",
+          "source_ids": [
+            "STIII_SEARCH_FOR_SPOCK",
+            "MA_ENTERPRISE_1701"
+          ]
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_enterprise_ncc_1701_a",
+      "display_name": "USS Enterprise",
+      "registry": "NCC-1701-A",
+      "class_id": "constitution",
+      "configuration_id": "constitution_major_refit",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2286,
+          "event": "assigned_to_james_t_kirk_and_command_crew",
+          "source_ids": [
+            "STIV_VOYAGE_HOME",
+            "MA_ENTERPRISE_1701_A"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2293,
+          "event": "retirement_ordered",
+          "source_ids": [
+            "STVI_UNDISCOVERED_COUNTRY",
+            "MA_ENTERPRISE_1701_A"
+          ]
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_reliant_ncc_1864",
+      "display_name": "USS Reliant",
+      "registry": "NCC-1864",
+      "class_id": "miranda",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2285,
+          "event": "active_under_captain_clark_terrell",
+          "source_ids": [
+            "STII_WRATH_OF_KHAN",
+            "MA_RELIANT_1864"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2285,
+          "event": "destroyed_mutara_nebula",
+          "source_ids": [
+            "STII_WRATH_OF_KHAN",
+            "MA_RELIANT_1864"
+          ]
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_excelsior_ncc_2000",
+      "display_name": "USS Excelsior",
+      "registry_history": [
+        "NX-2000",
+        "NCC-2000"
+      ],
+      "class_id": "excelsior",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2285,
+          "event": "prototype_in_service_trials",
+          "source_ids": [
+            "MA_EXCELSIOR_2000"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2293,
+          "event": "active_under_captain_hikaru_sulu",
+          "source_ids": [
+            "STVI_UNDISCOVERED_COUNTRY",
+            "MA_EXCELSIOR_2000"
+          ]
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_grissom_ncc_638",
+      "display_name": "USS Grissom",
+      "registry": "NCC-638",
+      "class_id": "oberth",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "kirk"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2285,
+          "event": "genesis_science_mission_under_captain_esteban",
+          "source_ids": [
+            "STIII_SEARCH_FOR_SPOCK",
+            "MA_GRISSOM_638"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2285,
+          "event": "destroyed",
+          "source_ids": [
+            "STIII_SEARCH_FOR_SPOCK",
+            "MA_GRISSOM_638"
+          ]
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_enterprise_ncc_1701_d",
+      "display_name": "USS Enterprise",
+      "registry": "NCC-1701-D",
+      "class_id": "galaxy",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2364,
+          "event": "active_under_captain_jean_luc_picard",
+          "source_ids": [
+            "TNG_ENCOUNTER_AT_FARPOINT",
+            "MA_ENTERPRISE_1701_D"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2370,
+          "event": "retained_tng_series_reference_boundary",
+          "event_type": "scope_boundary"
+        }
+      ],
+      "post_boundary_policy": "campaign_defined_unless_scope_is_expanded",
+      "notes": [
+        "Events from TNG feature films are not imported here because the currently approved late-24th-century scope is TNG + DS9 + Voyager series."
+      ]
+    },
+    {
+      "ship_id": "uss_defiant_nx_74205",
+      "display_name": "USS Defiant",
+      "registry": "NX-74205",
+      "class_id": "defiant",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2371,
+          "event": "assigned_to_deep_space_9_operations",
+          "source_ids": [
+            "DS9_SEARCH_PART_I",
+            "MA_DEFIANT_74205"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2375,
+          "event": "destroyed",
+          "source_ids": [
+            "DS9_CHANGING_FACE_OF_EVIL",
+            "MA_DEFIANT_74205"
+          ]
+        }
+      ],
+      "individual_special_configuration": [
+        {
+          "capability": "cloaking_device",
+          "class_standard": false,
+          "availability": "date_and_authorization_dependent",
+          "note": "Individual USS Defiant political/technical exception; never generalized to Defiant class."
+        }
+      ]
+    },
+    {
+      "ship_id": "uss_voyager_ncc_74656",
+      "display_name": "USS Voyager",
+      "registry": "NCC-74656",
+      "class_id": "intrepid",
+      "operator": "starfleet",
+      "retained_era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "historical_events": [
+        {
+          "order": 1,
+          "year": 2371,
+          "event": "commissioned_and_commanded_by_kathryn_janeway",
+          "source_ids": [
+            "VOY_CARETAKER",
+            "MA_VOYAGER_74656"
+          ]
+        },
+        {
+          "order": 2,
+          "year": 2371,
+          "event": "caretaker_displacement_to_delta_quadrant",
+          "source_ids": [
+            "VOY_CARETAKER",
+            "MA_VOYAGER_74656"
+          ],
+          "optional_if_campaign_started_before_event": true
+        },
+        {
+          "order": 3,
+          "year": 2378,
+          "event": "retained_series_reference_boundary",
+          "event_type": "scope_boundary"
+        }
+      ],
+      "future_rule": "No post-start canonical Voyager event is forced. Delta Quadrant journey occurs only if already in history at campaign start or produced by campaign events."
+    }
+  ]
+}

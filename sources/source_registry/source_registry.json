@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.18.0",
+  "registry_version": "0.19.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -1046,6 +1046,142 @@
       "url": "https://memory-alpha.fandom.com/wiki/Defiant_class",
       "accessed_at": "2026-10-02",
       "notes": "Core reference for 2370s escort/combat-focused design, prototype history and class armament/defense."
+    },
+    {
+      "source_id": "SNW_STRANGE_NEW_WORLDS_EP",
+      "source_type": "SCREEN_CANON",
+      "title": "Strange New Worlds",
+      "work": "Star Trek: Strange New Worlds",
+      "season": 1,
+      "episode": 1,
+      "release_date": "2022-05-05",
+      "notes": "Primary screen anchor for USS Enterprise under Christopher Pike in 2259."
+    },
+    {
+      "source_id": "STIII_SEARCH_FOR_SPOCK",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek III: The Search for Spock",
+      "work": "Star Trek film",
+      "release_date": "1984-06-01",
+      "notes": "Primary screen source for destruction of NCC-1701 and USS Grissom in 2285."
+    },
+    {
+      "source_id": "STIV_VOYAGE_HOME",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek IV: The Voyage Home",
+      "work": "Star Trek film",
+      "release_date": "1986-11-26",
+      "notes": "Primary screen source for assignment of USS Enterprise NCC-1701-A to Kirk's crew in 2286."
+    },
+    {
+      "source_id": "STVI_UNDISCOVERED_COUNTRY",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek VI: The Undiscovered Country",
+      "work": "Star Trek film",
+      "release_date": "1991-12-06",
+      "notes": "Primary screen source for Enterprise-A retirement context and USS Excelsior under Captain Sulu in 2293."
+    },
+    {
+      "source_id": "DS9_SEARCH_PART_I",
+      "source_type": "SCREEN_CANON",
+      "title": "The Search, Part I",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 3,
+      "episode": 1,
+      "release_date": "1994-09-26",
+      "notes": "Primary screen source for USS Defiant NX-74205 entering DS9 operational service in 2371."
+    },
+    {
+      "source_id": "DS9_CHANGING_FACE_OF_EVIL",
+      "source_type": "SCREEN_CANON",
+      "title": "The Changing Face of Evil",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 7,
+      "episode": 20,
+      "release_date": "1999-04-26",
+      "notes": "Primary screen source for destruction of USS Defiant NX-74205 in 2375."
+    },
+    {
+      "source_id": "VOY_CARETAKER",
+      "source_type": "SCREEN_CANON",
+      "title": "Caretaker",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 1,
+      "release_date": "1995-01-16",
+      "notes": "Primary screen source for USS Voyager NCC-74656 under Kathryn Janeway and its displacement to the Delta Quadrant in 2371."
+    },
+    {
+      "source_id": "MA_ENTERPRISE_1701",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Enterprise (NCC-1701)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Enterprise_%28NCC-1701%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for NCC-1701 command/configuration/service anchors in retained Pike/Kirk scope."
+    },
+    {
+      "source_id": "MA_ENTERPRISE_1701_A",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Enterprise (NCC-1701-A)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Enterprise_%28NCC-1701-A%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Enterprise-A registry, assignment and late-23rd-century service."
+    },
+    {
+      "source_id": "MA_RELIANT_1864",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Reliant (NCC-1864)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Reliant_%28NCC-1864%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Miranda-class Reliant and destruction in 2285."
+    },
+    {
+      "source_id": "MA_EXCELSIOR_2000",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Excelsior (NCC-2000)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Excelsior_%28NCC-2000%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Excelsior prototype and Captain Sulu era."
+    },
+    {
+      "source_id": "MA_GRISSOM_638",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Grissom (NCC-638)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Grissom_%28NCC-638%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Oberth-class Grissom and 2285 destruction."
+    },
+    {
+      "source_id": "MA_ENTERPRISE_1701_D",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Enterprise (NCC-1701-D)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Enterprise_%28NCC-1701-D%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Galaxy-class Enterprise-D under Jean-Luc Picard. Post-TNG-film events are not imported into current retained-series scope."
+    },
+    {
+      "source_id": "MA_DEFIANT_74205",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Defiant (NX-74205)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Defiant_%28NX-74205%29",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Defiant prototype identity and service dates."
+    },
+    {
+      "source_id": "MA_VOYAGER_74656",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "USS Voyager (NCC-74656)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/USS_Voyager",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Intrepid-class Voyager identity and 2371 launch/service context."
     }
   ]
 }
