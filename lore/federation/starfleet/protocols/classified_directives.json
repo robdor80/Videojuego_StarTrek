@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "directives": [
+    {
+      "id": "omega_directive",
+      "display_es": "Directiva Omega",
+      "era_id": "tng_ds9_voyager",
+      "classification": "top_secret",
+      "minimum_knowledge_scope": [
+        "captain",
+        "flag_officer"
+      ],
+      "supersedes": [
+        "prime_directive"
+      ],
+      "player_visibility": "knowledge_gated",
+      "provenance": [
+        {
+          "source_id": "MA_OMEGA_DIRECTIVE",
+          "confidence": "HIGH"
+        },
+        {
+          "source_id": "MA_GENERAL_ORDERS",
+          "confidence": "HIGH"
+        }
+      ]
+    }
+  ]
+}

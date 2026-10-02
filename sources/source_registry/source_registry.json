@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.6.0",
+  "registry_version": "0.7.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -391,6 +391,51 @@
       "url": "https://memory-alpha.fandom.com/wiki/Change_of_Command",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for formal permanent transfer of command versus temporary acting command."
+    },
+    {
+      "source_id": "MA_BRIDGE_OFFICER_TEST",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bridge Officer's Test",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bridge_Officer%27s_Test",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for TNG-era bridge command qualification and test content."
+    },
+    {
+      "source_id": "MA_BRIDGE_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bridge officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bridge_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for bridge officer role and command eligibility."
+    },
+    {
+      "source_id": "MA_COMMAND_SCHOOL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Command School",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Command_School",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for command training referenced in Voyager-era canon."
+    },
+    {
+      "source_id": "MA_PRIME_DIRECTIVE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Prime Directive",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Prime_Directive",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for General Order 1 / Prime Directive and non-interference principle across retained eras."
+    },
+    {
+      "source_id": "MA_OMEGA_DIRECTIVE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Omega Directive",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Omega_Directive",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for classified 24th-century Omega Directive known to captains and flag officers, superseding Prime Directive."
     }
   ]
 }

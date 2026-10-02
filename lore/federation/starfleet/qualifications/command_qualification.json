@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "qualification_id": "command_qualified",
+  "display_es": "Cualificación de mando",
+  "independent_from_rank": true,
+  "eras": {
+    "pike": {
+      "specific_canonical_exam": null,
+      "model": "training_experience_evaluation_authorization",
+      "note": "Do not project the 24th-century Bridge Officer's Test backward without evidence."
+    },
+    "kirk": {
+      "specific_canonical_exam": null,
+      "model": "training_experience_evaluation_authorization",
+      "note": "Command training and service experience may qualify officers; exact universal exam not hardcoded."
+    },
+    "tng_ds9_voyager": {
+      "specific_canonical_exam": "bridge_officer_test",
+      "model": "formal_bridge_command_qualification",
+      "note": "Bridge Officer's Test canonically supports command eligibility for officers outside the normal command track."
+    }
+  },
+  "unlocks": [
+    "duty_officer",
+    "acting_command",
+    "eligible_command_positions"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BRIDGE_OFFICER_TEST",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_BRIDGE_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_COMMAND_SCHOOL",
+      "confidence": "MEDIUM"
+    }
+  ]
+}
