@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "stages": [
+    "not_eligible",
+    "eligible",
+    "recommended",
+    "under_review",
+    "approved",
+    "deferred",
+    "denied"
+  ],
+  "factors": [
+    "service_time_contextual",
+    "performance",
+    "qualifications",
+    "leadership_experience",
+    "command_experience",
+    "disciplinary_record",
+    "commendations",
+    "recommendations",
+    "operational_need",
+    "vacancy",
+    "campaign_state"
+  ],
+  "xp_directly_promotes": false,
+  "promotion_can_occur_without_transfer": true,
+  "transfer_can_occur_without_promotion": true,
+  "ceremony_supported": true,
+  "provenance": [
+    {
+      "source_id": "MA_PROMOTION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET",
+      "confidence": "HIGH"
+    }
+  ]
+}

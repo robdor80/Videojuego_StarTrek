@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "triggers": [
+    "periodic_review",
+    "end_of_assignment",
+    "end_of_mission_cycle",
+    "promotion_review",
+    "command_qualification_review",
+    "disciplinary_followup",
+    "special_request"
+  ],
+  "dimensions": [
+    "professional_competence",
+    "orders_and_procedure",
+    "initiative",
+    "leadership",
+    "teamwork",
+    "judgment",
+    "reliability",
+    "conduct",
+    "adaptability"
+  ],
+  "score_source": "authoritative_game_state",
+  "ai_commentary_allowed": true,
+  "ai_scoring_authority": false,
+  "provenance": [
+    {
+      "source_id": "MA_CREW_PERSONNEL_REPORT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_PERSONNEL_FILE",
+      "confidence": "HIGH"
+    }
+  ]
+}

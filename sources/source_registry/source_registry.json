@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.14.0",
+  "registry_version": "0.15.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -857,6 +857,15 @@
       "url": "https://memory-alpha.fandom.com/wiki/Graduation_ceremony",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Academy commencement ceremony in 2368."
+    },
+    {
+      "source_id": "MA_CREW_PERSONNEL_REPORT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Crew personnel report",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Crew_personnel_report",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Starfleet personnel reports containing medical history, behavior on duty and past performance."
     }
   ]
 }

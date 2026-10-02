@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "state_id": "starfleet_career_state",
+  "fields": {
+    "service_status": "active_leave_resigned_retired_or_other",
+    "current_rank": "rank_id",
+    "rank_date": "date",
+    "current_assignment": "assignment_id_or_null",
+    "current_position": "position_id_or_null",
+    "current_department": "department_id_or_null",
+    "current_division": "division_id_or_null",
+    "current_duty_station": "duty_station_id_or_null",
+    "command_qualified": "boolean",
+    "qualifications": "qualification_id_list",
+    "service_record": "service_record_ref",
+    "commendations": "commendation_refs",
+    "disciplinary_status": "disciplinary_state",
+    "medical_duty_status": "fit_limited_unfit",
+    "reputation": "career_reputation_state",
+    "evaluation_summary": "evaluation_summary_state",
+    "promotion_eligibility": "promotion_eligibility_state",
+    "transfer_requests": "transfer_request_list",
+    "career_preferences": "career_preference_state",
+    "current_supervisor": "character_id_or_null",
+    "current_chain_of_command": "character_id_list"
+  },
+  "derived_from_service_record": true
+}

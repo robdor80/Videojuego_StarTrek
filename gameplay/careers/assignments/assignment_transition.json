@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "start_steps": [
+    "validate_unit_live_state",
+    "validate_vacancy",
+    "validate_rank",
+    "validate_qualification",
+    "issue_orders",
+    "append_assignment_start_event",
+    "update_chain_of_command",
+    "schedule_reporting_scene"
+  ],
+  "end_steps": [
+    "append_assignment_end_event",
+    "close_local_duties",
+    "capture_final_evaluation",
+    "update_service_record"
+  ],
+  "famous_unit_special_case": false
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "model": "append_only_event_log",
+  "event_types": [
+    "academy_admission",
+    "academic_evaluation",
+    "academy_graduation",
+    "commission",
+    "assignment_start",
+    "assignment_end",
+    "position_change",
+    "department_change",
+    "transfer",
+    "qualification_awarded",
+    "qualification_revoked",
+    "commendation",
+    "promotion",
+    "demotion",
+    "formal_reprimand",
+    "disciplinary_action",
+    "acting_command",
+    "medical_duty_status",
+    "leave_of_absence",
+    "resignation",
+    "retirement"
+  ],
+  "event_fields": [
+    "event_id",
+    "date",
+    "event_type",
+    "authority_id",
+    "assignment_id",
+    "position_id",
+    "rank_id",
+    "reason",
+    "source_event_id",
+    "notes_structured"
+  ],
+  "mutable_history": false,
+  "narrative_summary_is_derived": true,
+  "provenance": [
+    {
+      "source_id": "MA_PERSONNEL_FILE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_CREW_PERSONNEL_REPORT",
+      "confidence": "HIGH"
+    }
+  ]
+}

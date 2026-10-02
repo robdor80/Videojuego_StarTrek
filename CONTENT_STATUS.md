@@ -18,8 +18,8 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 2. ✅ Chronology and era model
 3. ✅ Starfleet institutional baseline
 4. ✅ Starfleet Academy
-5. 🟨 Career bridge: Academy → first assignment → service record
-6. ⬜ Starfleet technology and starships
+5. ✅ Career bridge: Academy → first assignment → service record
+6. 🟨 Starfleet technology and starships
 7. ⬜ Species, factions, astrography and wider universe
 8. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
 
@@ -111,6 +111,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Career bridge: Academy → operational service.**
+**Starfleet technology and starships.**
 
-Starfleet Academy is complete at the current game-design scope. Next work connects graduation, commission, first assignment, service record and later career progression into one continuous playable career.
+Academy-to-service continuity is now modeled as one persistent career with append-only service history, evaluations, assignments, transfers and promotion pipeline.
