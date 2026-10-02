@@ -99,7 +99,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Era technology baseline | ✅ COMPLETE | Qualitative availability matrix established, including Kirk subperiod split and class-specific late-24th-century technologies. |
 | Core Starfleet class catalogue | 🟨 IN_PROGRESS | Initial eight-class gameplay catalogue established; expansion remains progressive as campaigns/domains require more classes. |
 | Individual canonical ship catalogue | 🟨 IN_PROGRESS | Eight core retained-era ships seeded with pre-start historical-event bootstrap and campaign-divergence rules. |
-| Interiors / bridge stations / crew complements | ⬜ TODO | Gameplay-facing ship environments and staffing. |
+| Interiors / bridge stations / crew complements | ✅ COMPLETE | Bridge station permissions/POVs, interior location state and live crew/shift manifest models established. |
 
 ## Major remaining domains
 

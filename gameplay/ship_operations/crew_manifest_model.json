@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_fields": {
+    "ship_id": "ship_entity_id",
+    "starfleet_personnel": "crew_assignment_list",
+    "civilians": "civilian_manifest_list",
+    "passengers": "passenger_manifest_list",
+    "vacancies": "vacancy_list",
+    "shift_rosters": "shift_roster_map"
+  },
+  "crew_assignment_fields": [
+    "character_id",
+    "rank_id",
+    "division_id",
+    "department_id",
+    "position_id",
+    "shift_id",
+    "primary_duty_station_id",
+    "secondary_duty_station_ids",
+    "service_status",
+    "supervisor_id"
+  ],
+  "rules": [
+    "class_reference_complement_is_not_live_manifest",
+    "one_character_cannot_occupy_incompatible_simultaneous_duty_posts",
+    "acting_assignments_are_time_scoped",
+    "vacancies_are_world_state",
+    "shift_assignment_controls_expected_presence_not_forced_location"
+  ]
+}

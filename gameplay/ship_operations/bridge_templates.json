@@ -1,0 +1,208 @@
+{
+  "schema_version": "0.1.0",
+  "templates": [
+    {
+      "template_id": "constitution_23c_bridge",
+      "class_ids": [
+        "constitution"
+      ],
+      "configurations": [
+        "constitution_pike",
+        "constitution_tos",
+        "constitution_major_refit"
+      ],
+      "stations": [
+        {
+          "id": "commanding_officer",
+          "type": "command",
+          "display_es": "Mando"
+        },
+        {
+          "id": "helm",
+          "type": "conn",
+          "display_es": "Timón"
+        },
+        {
+          "id": "navigation",
+          "type": "navigation",
+          "display_es": "Navegación"
+        },
+        {
+          "id": "science",
+          "type": "science",
+          "display_es": "Ciencia"
+        },
+        {
+          "id": "communications",
+          "type": "communications",
+          "display_es": "Comunicaciones"
+        },
+        {
+          "id": "engineering_aux",
+          "type": "engineering",
+          "display_es": "Ingeniería"
+        },
+        {
+          "id": "tactical_integrated",
+          "type": "tactical",
+          "display_es": "Control táctico",
+          "integration_note": "Weapon control may overlap helm/navigation depending on dated configuration."
+        }
+      ],
+      "source_ids": [
+        "MA_CONSTITUTION_CLASS",
+        "MA_BRIDGE",
+        "MA_TACTICAL_STATION"
+      ]
+    },
+    {
+      "template_id": "galaxy_24c_bridge",
+      "class_ids": [
+        "galaxy"
+      ],
+      "stations": [
+        {
+          "id": "commanding_officer",
+          "type": "command",
+          "display_es": "Oficial al mando"
+        },
+        {
+          "id": "first_officer",
+          "type": "command",
+          "display_es": "Primer Oficial"
+        },
+        {
+          "id": "conn",
+          "type": "conn",
+          "display_es": "Control de vuelo"
+        },
+        {
+          "id": "ops",
+          "type": "operations",
+          "display_es": "Operaciones"
+        },
+        {
+          "id": "tactical",
+          "type": "tactical",
+          "display_es": "Táctica"
+        },
+        {
+          "id": "science_1",
+          "type": "science",
+          "display_es": "Ciencia I"
+        },
+        {
+          "id": "science_2",
+          "type": "science",
+          "display_es": "Ciencia II"
+        },
+        {
+          "id": "mission_ops",
+          "type": "operations",
+          "display_es": "Operaciones de misión"
+        },
+        {
+          "id": "engineering_aux",
+          "type": "engineering",
+          "display_es": "Ingeniería"
+        }
+      ],
+      "source_ids": [
+        "MA_GALAXY_CLASS",
+        "MA_BRIDGE",
+        "MA_OPERATIONS_STATION",
+        "MA_TACTICAL_STATION"
+      ]
+    },
+    {
+      "template_id": "intrepid_24c_bridge",
+      "class_ids": [
+        "intrepid"
+      ],
+      "stations": [
+        {
+          "id": "commanding_officer",
+          "type": "command",
+          "display_es": "Oficial al mando"
+        },
+        {
+          "id": "first_officer",
+          "type": "command",
+          "display_es": "Primer Oficial"
+        },
+        {
+          "id": "conn",
+          "type": "conn",
+          "display_es": "Control de vuelo"
+        },
+        {
+          "id": "ops",
+          "type": "operations",
+          "display_es": "Operaciones"
+        },
+        {
+          "id": "tactical",
+          "type": "tactical",
+          "display_es": "Táctica"
+        },
+        {
+          "id": "science_aux",
+          "type": "science",
+          "display_es": "Ciencia"
+        },
+        {
+          "id": "engineering_aux",
+          "type": "engineering",
+          "display_es": "Ingeniería"
+        }
+      ],
+      "source_ids": [
+        "MA_INTREPID_CLASS",
+        "MA_OPERATIONS_STATION",
+        "MA_TACTICAL_STATION"
+      ]
+    },
+    {
+      "template_id": "defiant_24c_bridge",
+      "class_ids": [
+        "defiant"
+      ],
+      "stations": [
+        {
+          "id": "commanding_officer",
+          "type": "command",
+          "display_es": "Mando"
+        },
+        {
+          "id": "conn_ops",
+          "type": "conn",
+          "secondary_type": "operations",
+          "display_es": "Control de vuelo y operaciones"
+        },
+        {
+          "id": "tactical_1",
+          "type": "tactical",
+          "display_es": "Táctica I"
+        },
+        {
+          "id": "tactical_2",
+          "type": "tactical",
+          "display_es": "Táctica II"
+        },
+        {
+          "id": "science",
+          "type": "science",
+          "display_es": "Ciencia"
+        },
+        {
+          "id": "engineering",
+          "type": "engineering",
+          "display_es": "Ingeniería"
+        }
+      ],
+      "source_ids": [
+        "MA_DEFIANT_CLASS"
+      ]
+    }
+  ]
+}

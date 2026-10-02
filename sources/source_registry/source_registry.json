@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.19.0",
+  "registry_version": "0.20.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -1182,6 +1182,33 @@
       "url": "https://memory-alpha.fandom.com/wiki/USS_Voyager",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Intrepid-class Voyager identity and 2371 launch/service context."
+    },
+    {
+      "source_id": "MA_BRIDGE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bridge",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bridge",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for evolution of Starfleet bridge positions, including 24th-century conn/ops."
+    },
+    {
+      "source_id": "MA_OPERATIONS_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Operations station",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Operations_station",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 24th-century Ops responsibilities and bridge placement."
+    },
+    {
+      "source_id": "MA_TACTICAL_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tactical station",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tactical_station",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for tactical control of weapons/shields and era differences."
     }
   ]
 }

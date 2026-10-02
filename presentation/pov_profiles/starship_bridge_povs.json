@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.1.0",
+  "profiles": [
+    {
+      "pov_profile_id": "bridge_command",
+      "display_es": "Mando",
+      "camera_semantics": "first_person_from_command_area",
+      "visible_information": [
+        "viewscreen",
+        "bridge_crew",
+        "command_status",
+        "alerts"
+      ],
+      "interaction_focus": [
+        "orders",
+        "communications",
+        "decisions",
+        "crew"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_conn",
+      "display_es": "Control de vuelo",
+      "camera_semantics": "first_person_from_flight_station",
+      "visible_information": [
+        "navigation_display",
+        "viewscreen",
+        "flight_controls",
+        "nearby_bridge_crew"
+      ],
+      "interaction_focus": [
+        "course",
+        "speed",
+        "maneuver",
+        "warp"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_ops",
+      "display_es": "Operaciones",
+      "camera_semantics": "first_person_from_ops_station",
+      "visible_information": [
+        "resource_status",
+        "ship_activity",
+        "communications",
+        "sensor_support"
+      ],
+      "interaction_focus": [
+        "priorities",
+        "resources",
+        "systems",
+        "support"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_tactical",
+      "display_es": "Táctica",
+      "camera_semantics": "first_person_from_tactical_station",
+      "visible_information": [
+        "targets",
+        "weapons",
+        "shields",
+        "tactical_sensors",
+        "viewscreen"
+      ],
+      "interaction_focus": [
+        "targeting",
+        "fire_control",
+        "shields",
+        "threats"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_science",
+      "display_es": "Ciencia",
+      "camera_semantics": "first_person_from_science_station",
+      "visible_information": [
+        "sensor_data",
+        "analysis",
+        "probes",
+        "science_database"
+      ],
+      "interaction_focus": [
+        "scan",
+        "analyze",
+        "hypothesis",
+        "report"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_engineering",
+      "display_es": "Ingeniería",
+      "camera_semantics": "first_person_from_bridge_engineering_station",
+      "visible_information": [
+        "power",
+        "propulsion",
+        "damage",
+        "system_health"
+      ],
+      "interaction_focus": [
+        "power",
+        "diagnostics",
+        "repair_coordination",
+        "status"
+      ]
+    },
+    {
+      "pov_profile_id": "bridge_communications",
+      "display_es": "Comunicaciones",
+      "camera_semantics": "first_person_from_communications_station",
+      "visible_information": [
+        "channels",
+        "signal_data",
+        "translations",
+        "viewscreen"
+      ],
+      "interaction_focus": [
+        "hail",
+        "route_message",
+        "decode",
+        "translate"
+      ]
+    }
+  ],
+  "rule": "POV controls presentation and accessible information; it does not grant authority beyond character role and permissions."
+}

@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "station_definition_fields": [
+    "station_id",
+    "display_es",
+    "station_type",
+    "accessible_systems",
+    "required_qualifications",
+    "allowed_positions",
+    "command_permissions",
+    "information_scope",
+    "pov_profile_id"
+  ],
+  "reusable_station_types": [
+    {
+      "station_type": "command",
+      "display_es": "Mando",
+      "typical_systems": [
+        "ship_status",
+        "communications",
+        "alerts",
+        "orders",
+        "authorization"
+      ]
+    },
+    {
+      "station_type": "conn",
+      "display_es": "Control de vuelo",
+      "typical_systems": [
+        "navigation",
+        "impulse",
+        "warp_navigation",
+        "maneuvering",
+        "course_control"
+      ]
+    },
+    {
+      "station_type": "navigation",
+      "display_es": "Navegación",
+      "typical_systems": [
+        "astrogation",
+        "course_plotting",
+        "sensors_navigation"
+      ]
+    },
+    {
+      "station_type": "operations",
+      "display_es": "Operaciones",
+      "typical_systems": [
+        "resource_allocation",
+        "internal_systems",
+        "communications",
+        "sensors",
+        "mission_support"
+      ]
+    },
+    {
+      "station_type": "tactical",
+      "display_es": "Táctica",
+      "typical_systems": [
+        "weapons",
+        "shields",
+        "targeting",
+        "tactical_sensors",
+        "security_support"
+      ]
+    },
+    {
+      "station_type": "science",
+      "display_es": "Ciencia",
+      "typical_systems": [
+        "sensors",
+        "analysis",
+        "probes",
+        "science_databases"
+      ]
+    },
+    {
+      "station_type": "communications",
+      "display_es": "Comunicaciones",
+      "typical_systems": [
+        "subspace_communications",
+        "linguistic_support",
+        "channels"
+      ]
+    },
+    {
+      "station_type": "engineering",
+      "display_es": "Ingeniería de puente",
+      "typical_systems": [
+        "power",
+        "propulsion_monitoring",
+        "damage_control",
+        "engineering_status"
+      ]
+    }
+  ],
+  "rule": "Station access exposes only systems and information authorized by station, role, ship state and character permissions."
+}

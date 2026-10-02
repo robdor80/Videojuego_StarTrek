@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "location_fields": [
+    "location_id",
+    "display_es",
+    "location_type",
+    "deck_or_section",
+    "connections",
+    "access_level",
+    "capacity",
+    "installed_systems",
+    "duty_positions",
+    "scene_states",
+    "pov_profiles"
+  ],
+  "common_location_types": [
+    "bridge",
+    "ready_room",
+    "briefing_room",
+    "main_engineering",
+    "sickbay",
+    "science_lab",
+    "transporter_room",
+    "shuttlebay",
+    "cargo_bay",
+    "crew_quarters",
+    "mess_or_lounge",
+    "corridor",
+    "security_armory"
+  ],
+  "runtime_fields": [
+    "access_state",
+    "occupants",
+    "hazards",
+    "damage",
+    "environment",
+    "alert_state",
+    "active_events"
+  ],
+  "rule": "Class/configuration defines possible locations; individual ship state defines current condition."
+}
