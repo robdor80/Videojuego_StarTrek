@@ -1,0 +1,62 @@
+{
+  "registry_version": "0.1.0",
+  "last_updated": "2026-10-02",
+  "sources": [
+    {
+      "source_id": "ST_OFFICIAL_SERIES_MOVIES",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Series and Movies",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/series-and-movies",
+      "accessed_at": "2026-10-02",
+      "notes": "Official catalogue used to identify the audiovisual corpus. Individual screen works are registered separately when used as evidence."
+    },
+    {
+      "source_id": "ST_OFFICIAL_CANON_MARTIN_2011",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Michael A. Martin On The Romulan War And More, Part 1",
+      "publisher": "StarTrek.com",
+      "release_date": "2011-10-25",
+      "url": "https://www.startrek.com/en-un/news/michael-a-martin-on-the-romulan-war-and-more-part-1",
+      "accessed_at": "2026-10-02",
+      "notes": "Official-site interview in which a licensed Star Trek novelist describes canon as official on-screen continuity and history shown in movies or television."
+    },
+    {
+      "source_id": "ST_OFFICIAL_NOVELS_ARTICLE_2022",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "5 Star Trek Novels Every Fan Should Read",
+      "publisher": "StarTrek.com",
+      "release_date": "2022-04-27",
+      "url": "https://www.startrek.com/news/5-star-trek-novels-every-fan-should-read",
+      "accessed_at": "2026-10-02",
+      "notes": "Official-site overview of the licensed novel catalogue; useful as a discovery reference."
+    },
+    {
+      "source_id": "SAS_POCKET_STAR_TREK",
+      "source_type": "LICENSED_NOVEL",
+      "title": "Pocket Books / Star Trek catalogue",
+      "publisher": "Simon & Schuster",
+      "url": "https://www.simonandschuster.com/search/books/Imprint-Pocket-Books-Star-Trek/_/N-1z13w3d/Ne-ph4",
+      "accessed_at": "2026-10-02",
+      "notes": "Publisher catalogue for licensed Star Trek prose fiction. Individual books are registered when used."
+    },
+    {
+      "source_id": "IDW_STAR_TREK_LICENSE",
+      "source_type": "LICENSED_COMIC",
+      "title": "IDW Publishing licensing information",
+      "publisher": "IDW Publishing",
+      "url": "https://idwpublishing.com/pages/foreign-licensing",
+      "accessed_at": "2026-10-02",
+      "notes": "IDW identifies Star Trek among its licensed properties. Individual comic series/issues are registered when used."
+    },
+    {
+      "source_id": "MEMORY_ALPHA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Memory Alpha",
+      "publisher": "Fandom community reference",
+      "url": "https://memory-alpha.fandom.com/",
+      "accessed_at": "2026-10-02",
+      "notes": "Specialist secondary source for discovery and cross-checking. Prefer tracing claims to primary/official evidence."
+    }
+  ]
+}
