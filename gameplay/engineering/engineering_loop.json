@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "inputs": [
+    "system_states",
+    "power_state",
+    "damage_state",
+    "crew_availability",
+    "parts_inventory",
+    "tools",
+    "time",
+    "environmental_hazards"
+  ],
+  "actions": [
+    "diagnose",
+    "reroute_power",
+    "isolate_system",
+    "restart_system",
+    "assign_repair_team",
+    "temporary_patch",
+    "replace_component",
+    "modify_configuration",
+    "run_test"
+  ],
+  "outcomes": [
+    "restored",
+    "partially_restored",
+    "stable_degraded",
+    "failed",
+    "worsened",
+    "requires_drydock"
+  ],
+  "creativity_rule": "Improvised solutions are proposals validated against resources, expertise, system constraints and risk.",
+  "provenance": [
+    {
+      "source_id": "MA_ENGINEER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_DAMAGE_CONTROL_TEAM",
+      "confidence": "HIGH"
+    }
+  ]
+}

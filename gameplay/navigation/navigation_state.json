@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "fields": [
+    "current_position",
+    "current_velocity",
+    "current_heading",
+    "movement_mode",
+    "warp_factor",
+    "destination",
+    "route",
+    "navigation_solution",
+    "solution_confidence",
+    "known_hazards",
+    "autopilot_state",
+    "docking_state",
+    "orbit_state"
+  ],
+  "movement_modes": [
+    "stationary",
+    "maneuvering",
+    "impulse",
+    "warp",
+    "docking",
+    "landed_if_supported"
+  ],
+  "order_checks": [
+    "propulsion_available",
+    "power_available",
+    "navigation_available",
+    "class_speed_limit",
+    "damage_limit",
+    "route_solution_valid",
+    "known_hazard_policy"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_WARP_DRIVE",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_FLIGHT_CONTROL_OFFICER",
+      "confidence": "HIGH"
+    }
+  ]
+}

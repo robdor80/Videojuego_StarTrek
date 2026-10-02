@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "fields": {
+    "contacts": "tactical_contact_list",
+    "selected_target": "contact_id_or_null",
+    "threat_assessment": "threat_state",
+    "rules_of_engagement": "roe_state",
+    "shields": "shield_state_ref",
+    "weapons": "weapon_state_map",
+    "ammunition": "ammunition_state",
+    "firing_solutions": "solution_map",
+    "tractor_state": "tractor_state",
+    "defensive_posture": "posture_state"
+  },
+  "contact_fields": [
+    "contact_id",
+    "sensor_track_id",
+    "identity_confidence",
+    "affiliation_estimate",
+    "hostility_state",
+    "range",
+    "relative_motion",
+    "known_capabilities",
+    "targetable_subsystems"
+  ],
+  "fire_validation": [
+    "target_valid",
+    "weapon_operational",
+    "power_or_ammunition_available",
+    "firing_solution",
+    "authorization",
+    "rules_of_engagement"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_TACTICAL_STATION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_DEFLECTOR_SHIELD",
+      "confidence": "HIGH"
+    }
+  ]
+}

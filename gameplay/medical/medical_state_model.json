@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "patient_fields": [
+    "character_id",
+    "conditions",
+    "injuries",
+    "symptoms_observed",
+    "vital_state",
+    "diagnostic_results",
+    "diagnoses_known",
+    "treatments",
+    "prognosis",
+    "duty_fitness",
+    "isolation_status"
+  ],
+  "triage_levels": [
+    "minor",
+    "delayed",
+    "urgent",
+    "immediate",
+    "expectant_or_deceased"
+  ],
+  "facility_fields": [
+    "sickbay_capacity",
+    "medical_staff_available",
+    "beds_available",
+    "critical_care_capacity",
+    "supplies",
+    "isolation_capacity",
+    "overflow_locations"
+  ],
+  "rules": [
+    "world_condition_is_separate_from_known_diagnosis",
+    "tests_reveal_information_not_hidden_truth_directly",
+    "treatment_requires_known_or_reasonable_indication",
+    "mass_casualty_can_expand_to_auxiliary_locations",
+    "duty_fitness_updates_command_availability"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_SICKBAY",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_CHIEF_MEDICAL_OFFICER",
+      "confidence": "HIGH"
+    }
+  ]
+}

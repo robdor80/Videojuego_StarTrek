@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.21.0",
+  "registry_version": "0.22.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -1254,6 +1254,60 @@
       "url": "https://memory-alpha.fandom.com/wiki/Deflector_shield",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for shield dependence on available power and degradation under sustained damage."
+    },
+    {
+      "source_id": "MA_SCIENCE_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Science station",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Science_station",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for science-station monitoring, analysis and library-computer functions."
+    },
+    {
+      "source_id": "MA_LONG_RANGE_SENSOR_SCAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Long range sensor scan",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Long_range_sensor_scan",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for sensor scans as information-gathering operations with range/equipment limits."
+    },
+    {
+      "source_id": "MA_SUBSPACE_COMMUNICATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Subspace communication",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Subspace_communication",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for faster-than-light Federation/Starfleet communications and deep-space orders."
+    },
+    {
+      "source_id": "MA_COMMUNICATIONS_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Communications station",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Communications_station",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for dedicated 23rd-century communications bridge position."
+    },
+    {
+      "source_id": "MA_FLIGHT_CONTROL_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Flight control officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Flight_control_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 24th-century conn combining piloting/navigation duties."
+    },
+    {
+      "source_id": "MA_SICKBAY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Sickbay",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Sickbay",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for shipboard medical center, CMO authority, triage expansion and crisis use of auxiliary spaces."
     }
   ]
 }

@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "scan_fields": [
+    "scan_id",
+    "sensor_system_id",
+    "target_or_region",
+    "scan_mode",
+    "range",
+    "resolution",
+    "duration",
+    "power",
+    "interference",
+    "detectability",
+    "raw_observations",
+    "analysis_results",
+    "confidence",
+    "unknowns"
+  ],
+  "scan_modes": [
+    "passive",
+    "active",
+    "long_range",
+    "focused",
+    "probe_assisted",
+    "continuous_track"
+  ],
+  "result_truth_levels": [
+    "confirmed",
+    "high_confidence",
+    "estimated",
+    "hypothesis",
+    "unknown",
+    "contradictory"
+  ],
+  "rules": [
+    "hidden_world_state_is_not_directly_exposed",
+    "damaged_sensors_reduce_information",
+    "interference_can_create_uncertainty",
+    "analysis_requires_character_knowledge_or_database",
+    "higher_resolution_can_cost_time_power_or_risk"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_SCIENCE_STATION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_LONG_RANGE_SENSOR_SCAN",
+      "confidence": "HIGH"
+    }
+  ]
+}

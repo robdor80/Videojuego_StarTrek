@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "link_fields": [
+    "link_id",
+    "source",
+    "destination",
+    "channel_type",
+    "signal_strength",
+    "latency",
+    "interference",
+    "encryption",
+    "translation_quality",
+    "relay_path",
+    "open_state"
+  ],
+  "channel_types": [
+    "internal",
+    "direct_subspace",
+    "relay_subspace",
+    "tight_beam",
+    "broadcast",
+    "distress"
+  ],
+  "possible_states": [
+    "connecting",
+    "open",
+    "degraded",
+    "blocked",
+    "jammed",
+    "lost",
+    "closed"
+  ],
+  "message_log_is_persistent": true,
+  "ai_receives_only_transmitted_content": true,
+  "provenance": [
+    {
+      "source_id": "MA_SUBSPACE_COMMUNICATION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_COMMUNICATIONS_STATION",
+      "confidence": "HIGH"
+    }
+  ]
+}

@@ -19,8 +19,8 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 3. ✅ Starfleet institutional baseline
 4. ✅ Starfleet Academy
 5. ✅ Career bridge: Academy → first assignment → service record
-6. 🟨 Starfleet technology and starships
-7. ⬜ Species, factions, astrography and wider universe
+6. ✅ Starfleet technology and starships
+7. 🟨 Species, factions, astrography and wider universe
 8. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
 
 ## Documentary foundation
@@ -97,10 +97,11 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Ship-system runtime state | ✅ COMPLETE | Damage, power, degradation, repair and dependencies modeled. |
 | Generated Starfleet ships | ✅ COMPLETE | Game-added ships constrained by era/class and collision validation. |
 | Era technology baseline | ✅ COMPLETE | Qualitative availability matrix established, including Kirk subperiod split and class-specific late-24th-century technologies. |
-| Core Starfleet class catalogue | 🟨 IN_PROGRESS | Initial eight-class gameplay catalogue established; expansion remains progressive as campaigns/domains require more classes. |
-| Individual canonical ship catalogue | 🟨 IN_PROGRESS | Eight core retained-era ships seeded with pre-start historical-event bootstrap and campaign-divergence rules. |
+| Core Starfleet class catalogue | ✅ COMPLETE | Initial eight-class gameplay catalogue complete for current scope; future classes are added progressively when needed. |
+| Individual canonical ship catalogue | ✅ COMPLETE | Eight core retained-era ships seeded for current scope; additional ships are progressive content, not a blocker. |
 | Interiors / bridge stations / crew complements | ✅ COMPLETE | Bridge station permissions/POVs, interior location state and live crew/shift manifest models established. |
 | Orders / alerts / power / damage | ✅ COMPLETE | Natural-language order pipeline, authority validation, alert states, power allocation, localized damage and timed repairs established. |
+| Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
 
 ## Major remaining domains
 
@@ -125,6 +126,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Starfleet technology and starships.**
+**Wider Star Trek universe: species, factions and astrography.**
 
-Academy-to-service continuity is now modeled as one persistent career with append-only service history, evaluations, assignments, transfers and promotion pipeline.
+Starfleet starships are complete at the current structural/gameplay scope: era technology, class/ship identity, live systems, interiors, crews, bridge orders and role-specific duty loops are all modeled. Class/ship catalogues expand progressively as content requires them.
