@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1.0",
+  "positions": [
+    {
+      "id": "commanding_officer",
+      "display_es": "Oficial al mando",
+      "command_priority": 1
+    },
+    {
+      "id": "first_officer",
+      "display_es": "Primer Oficial",
+      "command_priority": 2
+    },
+    {
+      "id": "second_officer",
+      "display_es": "Segundo Oficial",
+      "command_priority": 3
+    },
+    {
+      "id": "operations_officer",
+      "display_es": "Oficial de Operaciones"
+    },
+    {
+      "id": "flight_control_officer",
+      "display_es": "Oficial de Control de Vuelo"
+    },
+    {
+      "id": "chief_tactical_officer",
+      "display_es": "Jefe Táctico"
+    },
+    {
+      "id": "chief_security_officer",
+      "display_es": "Jefe de Seguridad"
+    },
+    {
+      "id": "chief_engineering_officer",
+      "display_es": "Jefe de Ingeniería"
+    },
+    {
+      "id": "chief_science_officer",
+      "display_es": "Jefe Científico"
+    },
+    {
+      "id": "chief_medical_officer",
+      "display_es": "Jefe Médico"
+    },
+    {
+      "id": "communications_officer",
+      "display_es": "Oficial de Comunicaciones"
+    },
+    {
+      "id": "counselor",
+      "display_es": "Consejero"
+    },
+    {
+      "id": "strategic_operations_officer",
+      "display_es": "Oficial de Operaciones Estratégicas"
+    },
+    {
+      "id": "intelligence_officer",
+      "display_es": "Oficial de Inteligencia"
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_FIRST_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_OPERATIONS_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_CHIEF_ENGINEERING_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_CHIEF_TACTICAL_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_SENIOR_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STAFF_OFFICER",
+      "confidence": "HIGH"
+    }
+  ]
+}

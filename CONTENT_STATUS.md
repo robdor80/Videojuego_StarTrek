@@ -34,6 +34,7 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 | `docs/decisions/playable_eras.md` | ✅ COMPLETE | Three playable eras fixed by Roberto. |
 | `docs/decisions/campaign_continuity.md` | ✅ COMPLETE | Canon sets the starting state; campaign future is emergent. |
 | `docs/decisions/universal_rank_insignia.md` | ✅ COMPLETE | TNG-style pips standardised across all playable eras by design. |
+| `docs/decisions/player_facing_language.md` | ✅ COMPLETE | Internal IDs may be English; all normal player-facing text is es-ES. |
 
 ## Playable era scope
 
@@ -61,11 +62,11 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Area | Status | Notes |
 |---|---|---|
 | Federation government, law, diplomacy, economy and member worlds | ⬜ TODO | |
-| Starfleet organization and command structure | 🟨 IN_PROGRESS | Rank/position model established; institutional hierarchy still pending. |
+| Starfleet organization and command structure | 🟨 IN_PROGRESS | Personnel model, operational chain and core positions established; higher Starfleet hierarchy still pending. |
 | Commissioned and flag officer ranks | ✅ COMPLETE | Base ladder fixed. |
 | Universal pip insignia | ✅ COMPLETE | TNG-style project standard across all eras. |
 | Uniform division colors | ✅ COMPLETE | Era-aware baseline fixed. |
-| Departments, positions and duty stations | ⬜ TODO | Next sub-block. |
+| Departments, positions and duty stations | ✅ COMPLETE | Core model and era-aware baseline established. |
 | Qualifications, regulations, protocols and Prime Directive | ⬜ TODO | |
 | Assignments, promotions, commendations and discipline | ⬜ TODO | |
 
@@ -109,4 +110,4 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 **Federation / Starfleet institutional baseline.**
 
-Next: departments, positions, duty stations and detailed chain-of-command/succession rules.
+Next: higher Starfleet organization, Starfleet Command, command succession, duty/watch structure and special command authority.

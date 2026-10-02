@@ -1,75 +1,57 @@
-# Starfleet Command Structure
+# Estructura de mando de la Flota Estelar
 
-## Foundational rule
-
-Starfleet hierarchy must model four independent concepts:
+## Regla fundamental
 
 ```text
-RANK
-DEPARTMENT
-POSITION
-ASSIGNMENT
+RANGO ≠ PUESTO ≠ DEPARTAMENTO ≠ DESTINO
 ```
 
-Example:
+## Cadena operativa básica
 
-```text
-Rank: Lieutenant Commander
-Department: Engineering
-Position: Chief Engineer
-Assignment: USS Example
-```
+En una nave/estación típica:
 
-## Rank authority
+1. **Oficial al mando (CO)**
+2. **Primer Oficial (XO)**
+3. **Segundo Oficial**
+4. siguiente oficial cualificado según la cadena de sucesión del destino
 
-Higher rank normally implies seniority, but operational command also depends on:
-- assigned position,
-- chain of command,
-- watch/duty status,
-- specific orders,
-- acting appointments,
-- emergency succession.
+La cadena exacta puede depender de cualificaciones de mando, puesto, órdenes vigentes, disponibilidad y situación operativa.
 
-Therefore a higher-ranked officer does not automatically take over every technical or departmental decision.
+## Rango frente a autoridad funcional
 
-## Commanding officer
+Un rango superior aporta seniority, pero no concede automáticamente autoridad técnica sobre todos los departamentos.
 
-`Commanding Officer` is a **position**.
+Ejemplo: el Jefe Médico tiene autoridad profesional en cuestiones médicas; el Jefe de Ingeniería dirige las funciones de Ingeniería.
 
-`Captain` is a **rank**.
+## Puestos simultáneos
 
-They often coincide, but they are not the same data field.
+Star Trek muestra puestos acumulados. El modelo los permite.
 
-A ship/station can therefore have:
-- a commanding officer with Captain rank,
-- a commanding officer of another permitted rank,
-- an acting commanding officer temporarily exercising command authority.
+Ejemplos típicos:
+- Primer Oficial + Jefe Científico
+- Segundo Oficial + Oficial de Operaciones
+- Jefe de Seguridad + Jefe Táctico
 
-## First officer / executive officer
+## Diferencias por era
 
-The First Officer / Executive Officer is likewise a position, usually held by a senior commissioned officer. It is not a rank.
+### Pike / Kirk
 
-## Senior staff
+El Primer Oficial puede simultanear más claramente su función con una jefatura de departamento. Timón, navegación y comunicaciones pueden existir como puestos diferenciados.
 
-Senior staff is assembled from positions such as:
-- Commanding Officer
-- First Officer / Executive Officer
-- Operations
-- Helm / Flight Control
-- Tactical / Security
-- Chief Engineer
-- Science Officer
-- Chief Medical Officer
+### Kirk — películas
 
-Exact composition and departmental mapping may vary by era and vessel/station.
+La especialización de estaciones y funciones aumenta respecto a TOS.
 
-## Next research
+### TNG + DS9 + Voyager
 
-This file establishes the data model only. Detailed:
-- command succession,
-- departmental authority,
-- watch structure,
-- Starfleet Command hierarchy,
-- ship vs station differences
+El Primer Oficial suele ser una función dedicada de mando; Conn y Ops son puestos bien definidos; Táctica y Seguridad suelen combinarse, aunque siguen siendo campos diferentes.
 
-will be filled in during the current institutional block.
+## Pendiente dentro del bloque
+
+Todavía deben documentarse con más detalle:
+- Starfleet Command como organización superior,
+- sucesión en casos especiales,
+- autoridad del Oficial Médico Jefe,
+- turnos y guardias,
+- diferencias nave/estación,
+- procedimientos de mando provisional.

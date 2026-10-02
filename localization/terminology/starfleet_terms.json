@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "locale": "es-ES",
+  "terms": {
+    "ensign": "Alférez",
+    "lieutenant_junior_grade": "Teniente júnior",
+    "lieutenant": "Teniente",
+    "lieutenant_commander": "Teniente comandante",
+    "commander": "Comandante",
+    "captain": "Capitán",
+    "commodore": "Comodoro",
+    "rear_admiral": "Contraalmirante",
+    "vice_admiral": "Vicealmirante",
+    "admiral": "Almirante",
+    "fleet_admiral": "Almirante de Flota",
+    "commanding_officer": "Oficial al mando",
+    "first_officer": "Primer Oficial",
+    "executive_officer": "Primer Oficial",
+    "second_officer": "Segundo Oficial",
+    "chief_engineering_officer": "Jefe de Ingeniería",
+    "chief_security_officer": "Jefe de Seguridad",
+    "chief_tactical_officer": "Jefe Táctico",
+    "chief_science_officer": "Jefe Científico",
+    "chief_medical_officer": "Jefe Médico",
+    "operations_officer": "Oficial de Operaciones",
+    "flight_control_officer": "Oficial de Control de Vuelo",
+    "communications_officer": "Oficial de Comunicaciones",
+    "counselor": "Consejero",
+    "assignment": "Destino",
+    "duty_station": "Puesto de servicio"
+  }
+}

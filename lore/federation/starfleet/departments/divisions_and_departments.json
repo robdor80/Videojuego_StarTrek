@@ -1,0 +1,93 @@
+{
+  "schema_version": "0.1.0",
+  "divisions": [
+    {
+      "id": "command",
+      "display_es": "Mando",
+      "common_departments": [
+        "command",
+        "flight_control_navigation"
+      ]
+    },
+    {
+      "id": "operations",
+      "display_es": "Operaciones",
+      "common_departments": [
+        "operations_management",
+        "engineering",
+        "security",
+        "tactical",
+        "communications"
+      ]
+    },
+    {
+      "id": "sciences",
+      "display_es": "Ciencias",
+      "common_departments": [
+        "science",
+        "medical",
+        "counseling"
+      ]
+    }
+  ],
+  "departments": [
+    {
+      "id": "command",
+      "display_es": "Mando"
+    },
+    {
+      "id": "flight_control_navigation",
+      "display_es": "Control de vuelo / Timón / Navegación"
+    },
+    {
+      "id": "operations_management",
+      "display_es": "Gestión de Operaciones"
+    },
+    {
+      "id": "engineering",
+      "display_es": "Ingeniería"
+    },
+    {
+      "id": "security",
+      "display_es": "Seguridad"
+    },
+    {
+      "id": "tactical",
+      "display_es": "Táctica"
+    },
+    {
+      "id": "communications",
+      "display_es": "Comunicaciones"
+    },
+    {
+      "id": "science",
+      "display_es": "Ciencias"
+    },
+    {
+      "id": "medical",
+      "display_es": "Medicina"
+    },
+    {
+      "id": "counseling",
+      "display_es": "Consejería"
+    },
+    {
+      "id": "strategic_operations",
+      "display_es": "Operaciones Estratégicas"
+    },
+    {
+      "id": "intelligence",
+      "display_es": "Inteligencia"
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_OPERATIONS_DIVISION",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "ST_OFFICIAL_TOS_INSIGNIA",
+      "confidence": "HIGH"
+    }
+  ]
+}

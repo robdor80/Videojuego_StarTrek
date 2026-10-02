@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.4.0",
+  "registry_version": "0.5.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -211,6 +211,78 @@
       "url": "https://memory-alpha.fandom.com/wiki/Fleet_admiral",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check: production/reference notes describe five framed pips for fleet admiral; on-screen insignia usage is less clean."
+    },
+    {
+      "source_id": "MA_FIRST_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "First officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/First_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for XO as second-in-command and era differences in first-officer duties."
+    },
+    {
+      "source_id": "MA_OPERATIONS_DIVISION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Operations division",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Operations_division",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Operations division containing engineering, security and tactical personnel."
+    },
+    {
+      "source_id": "MA_OPERATIONS_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Operations officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Operations_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for operations officer as a bridge/department position."
+    },
+    {
+      "source_id": "MA_CHIEF_ENGINEERING_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Chief engineering officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Chief_engineering_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for chief engineer authority and responsibilities."
+    },
+    {
+      "source_id": "MA_CHIEF_TACTICAL_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Chief tactical officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Chief_tactical_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for tactical/security relationship and era differences."
+    },
+    {
+      "source_id": "MA_SENIOR_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Senior officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Senior_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for typical senior-staff positions."
+    },
+    {
+      "source_id": "MA_STAFF_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Staff officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Staff_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for senior-staff position set including CO, XO, chiefs and specialized officers."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TOS_INSIGNIA",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Starfleet Insignia Explained",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/starfleet-insignia-explained",
+      "accessed_at": "2026-10-02",
+      "notes": "Official reference for TOS division symbols and duties."
     }
   ]
 }
