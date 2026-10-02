@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.17.0",
+  "registry_version": "0.18.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -974,6 +974,78 @@
       "url": "https://memory-alpha.fandom.com/wiki/Quantum_torpedo",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Starfleet quantum torpedoes entering the retained late-24th-century arsenal by 2371 on selected vessels."
+    },
+    {
+      "source_id": "MA_CONSTITUTION_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Constitution class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Constitution_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core retained-era class reference for Pike/TOS configurations and long-range exploration role."
+    },
+    {
+      "source_id": "MA_MIRANDA_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Miranda class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Miranda_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for long-lived multi-role Starfleet class across 23rd and 24th centuries."
+    },
+    {
+      "source_id": "MA_EXCELSIOR_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Excelsior class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Excelsior_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for late-23rd-century class with continued 24th-century service."
+    },
+    {
+      "source_id": "MA_OBERTH_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Oberth class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Oberth_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for science/scout class used from late 23rd through 24th century."
+    },
+    {
+      "source_id": "MA_GALAXY_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Galaxy class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Galaxy_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for 2360s explorer/capital Starfleet design."
+    },
+    {
+      "source_id": "MA_NEBULA_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Nebula class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Nebula_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for 2360s Starfleet class."
+    },
+    {
+      "source_id": "MA_INTREPID_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Intrepid class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Intrepid_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for 2370s long-range explorer with bio-neural systems and variable-geometry nacelles."
+    },
+    {
+      "source_id": "MA_DEFIANT_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Defiant class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Defiant_class",
+      "accessed_at": "2026-10-02",
+      "notes": "Core reference for 2370s escort/combat-focused design, prototype history and class armament/defense."
     }
   ]
 }

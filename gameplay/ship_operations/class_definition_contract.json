@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "required_fields": [
+    "class_id",
+    "display_name",
+    "operator",
+    "availability",
+    "classifications",
+    "primary_gameplay_roles",
+    "source_ids"
+  ],
+  "optional_fields": [
+    "dimensions",
+    "deck_count",
+    "crew_reference",
+    "configuration_profiles",
+    "capabilities",
+    "variants",
+    "refits",
+    "small_craft_capacity",
+    "medical_capacity",
+    "science_capacity",
+    "special_constraints"
+  ],
+  "rules": [
+    "class_definition_is_immutable_design_data",
+    "individual_damage_is_not_stored_in_class",
+    "individual_crew_is_not_stored_in_class",
+    "date_specific_configuration_may_override_base_design",
+    "capability_presence_does_not_define_live_operational_status",
+    "runtime_state_must_reference_one_valid_class_definition"
+  ]
+}

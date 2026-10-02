@@ -97,7 +97,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Ship-system runtime state | ✅ COMPLETE | Damage, power, degradation, repair and dependencies modeled. |
 | Generated Starfleet ships | ✅ COMPLETE | Game-added ships constrained by era/class and collision validation. |
 | Era technology baseline | ✅ COMPLETE | Qualitative availability matrix established, including Kirk subperiod split and class-specific late-24th-century technologies. |
-| Core Starfleet class catalogue | ⬜ TODO | Selected playable/relevant classes by era. |
+| Core Starfleet class catalogue | 🟨 IN_PROGRESS | Initial eight-class gameplay catalogue established; expansion remains progressive as campaigns/domains require more classes. |
 | Individual canonical ship catalogue | ⬜ TODO | Added progressively after class definitions. |
 | Interiors / bridge stations / crew complements | ⬜ TODO | Gameplay-facing ship environments and staffing. |
 

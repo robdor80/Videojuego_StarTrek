@@ -1,0 +1,299 @@
+{
+  "schema_version": "0.1.0",
+  "classes": [
+    {
+      "class_id": "constitution",
+      "display_name": "Constitution",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_from_decade": 2240,
+        "retained_playable_profiles": [
+          "pike",
+          "kirk"
+        ]
+      },
+      "classifications": [
+        "heavy_cruiser",
+        "exploration",
+        "patrol"
+      ],
+      "configuration_profiles": [
+        {
+          "id": "constitution_pike",
+          "year_range": [
+            2259,
+            2264
+          ],
+          "era_id": "pike",
+          "crew_reference": 203,
+          "notes": "Pike/SNW-era configuration. Exact crew and fittings belong to dated configuration, not the class forever."
+        },
+        {
+          "id": "constitution_tos",
+          "year_range": [
+            2265,
+            2269
+          ],
+          "era_id": "kirk",
+          "crew_reference": 430,
+          "capabilities": [
+            "warp_drive",
+            "impulse_drive",
+            "phasers",
+            "photon_torpedoes",
+            "deflector_shields",
+            "transporters",
+            "science_labs",
+            "shuttlecraft"
+          ]
+        },
+        {
+          "id": "constitution_major_refit",
+          "year_range": [
+            2270,
+            2293
+          ],
+          "era_id": "kirk",
+          "provenance_type": "SCREEN_CANON_REFIT",
+          "notes": "Major late-23rd-century redesign/refit. The project does not require the retroactive Constitution II label for retained-era gameplay."
+        }
+      ],
+      "primary_gameplay_roles": [
+        "deep_space_exploration",
+        "diplomacy",
+        "patrol",
+        "defense"
+      ],
+      "source_ids": [
+        "MA_CONSTITUTION_CLASS"
+      ]
+    },
+    {
+      "class_id": "miranda",
+      "display_name": "Miranda",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_by_year": 2264,
+        "retained_playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "science",
+        "supply",
+        "escort"
+      ],
+      "configuration_model": "multiple_hull_and_mission_configurations",
+      "primary_gameplay_roles": [
+        "science",
+        "patrol",
+        "escort",
+        "supply",
+        "general_service"
+      ],
+      "source_ids": [
+        "MA_MIRANDA_CLASS"
+      ]
+    },
+    {
+      "class_id": "excelsior",
+      "display_name": "Excelsior",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_from_decade": 2280,
+        "retained_playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "cruiser",
+        "exploration"
+      ],
+      "primary_gameplay_roles": [
+        "exploration",
+        "patrol",
+        "fleet_service",
+        "diplomacy"
+      ],
+      "long_service_life": true,
+      "source_ids": [
+        "MA_EXCELSIOR_CLASS"
+      ]
+    },
+    {
+      "class_id": "oberth",
+      "display_name": "Oberth",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_by_year": 2278,
+        "retained_playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "science",
+        "scout",
+        "transport",
+        "support"
+      ],
+      "primary_gameplay_roles": [
+        "science",
+        "survey",
+        "research",
+        "support"
+      ],
+      "relative_scale": "small",
+      "source_ids": [
+        "MA_OBERTH_CLASS"
+      ]
+    },
+    {
+      "class_id": "galaxy",
+      "display_name": "Galaxy",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_from_decade": 2360,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "explorer",
+        "capital_ship"
+      ],
+      "primary_gameplay_roles": [
+        "deep_space_exploration",
+        "diplomacy",
+        "science",
+        "command",
+        "fleet_operations"
+      ],
+      "capabilities": [
+        "warp_drive",
+        "impulse_drive",
+        "phaser_arrays",
+        "photon_torpedoes",
+        "deflector_shields",
+        "transporters",
+        "replicators",
+        "holodecks",
+        "large_science_capacity",
+        "saucer_separation"
+      ],
+      "crew_reference": "approximately_1000_core_ship_population_depending_on_assignment",
+      "source_ids": [
+        "MA_GALAXY_CLASS"
+      ]
+    },
+    {
+      "class_id": "nebula",
+      "display_name": "Nebula",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_by_year": 2363,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "multi_mission_starship"
+      ],
+      "primary_gameplay_roles": [
+        "science",
+        "exploration",
+        "fleet_operations",
+        "support"
+      ],
+      "capabilities": [
+        "warp_drive",
+        "impulse_drive",
+        "phaser_systems",
+        "photon_torpedoes",
+        "deflector_shields"
+      ],
+      "source_ids": [
+        "MA_NEBULA_CLASS"
+      ]
+    },
+    {
+      "class_id": "intrepid",
+      "display_name": "Intrepid",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_by_year": 2370,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "long_range_explorer"
+      ],
+      "primary_gameplay_roles": [
+        "long_range_exploration",
+        "science",
+        "rapid_response"
+      ],
+      "capabilities": [
+        "warp_drive",
+        "variable_geometry_nacelles",
+        "impulse_drive",
+        "phaser_arrays",
+        "photon_torpedoes",
+        "deflector_shields",
+        "transporters",
+        "replicators",
+        "holodecks",
+        "bio_neural_computing",
+        "emergency_medical_hologram"
+      ],
+      "crew_reference": 150,
+      "source_ids": [
+        "MA_INTREPID_CLASS",
+        "MA_BIONEURAL_GEL_PACK"
+      ]
+    },
+    {
+      "class_id": "defiant",
+      "display_name": "Defiant",
+      "operator": "starfleet",
+      "availability": {
+        "prototype_development_from_year": 2366,
+        "operational_class_from_year": 2371,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "escort"
+      ],
+      "primary_gameplay_roles": [
+        "combat",
+        "escort",
+        "reconnaissance"
+      ],
+      "relative_scale": "small",
+      "crew_reference": 50,
+      "capabilities": [
+        "warp_drive",
+        "impulse_drive",
+        "pulse_phaser_cannons",
+        "phaser_emitters",
+        "photon_torpedoes",
+        "quantum_torpedoes_on_compatible_configuration",
+        "deflector_shields",
+        "ablative_armor"
+      ],
+      "standard_cloaking_device": false,
+      "notes": [
+        "A cloaking device is not a generic Defiant-class capability in this model. It belongs to specific individual-ship configuration and political authorization where valid."
+      ],
+      "source_ids": [
+        "MA_DEFIANT_CLASS",
+        "MA_QUANTUM_TORPEDO"
+      ]
+    }
+  ]
+}
