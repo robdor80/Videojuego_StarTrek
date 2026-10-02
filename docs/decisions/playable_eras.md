@@ -10,7 +10,6 @@ This document fixes the playable-era scope of the project.
 
 Primary screen scope:
 - `Star Trek: Strange New Worlds`
-- related on-screen material only when necessary to understand this era
 
 Anchor:
 - Christopher Pike
@@ -24,19 +23,18 @@ Primary screen scope:
 
 Anchor:
 - James T. Kirk
-- USS Enterprise NCC-1701 and, when chronologically applicable, NCC-1701-A
-
-Transitional/crossover material is placed where chronology requires it; it does not create a fourth playable era.
+- USS Enterprise NCC-1701
+- USS Enterprise NCC-1701-A when chronologically applicable
 
 ### 3. TNG + DS9 + Voyager
 
-One shared broad playable period containing three major contemporary branches:
+One shared late-24th-century playable period with three major branches:
 
 - **TNG** → Jean-Luc Picard
 - **DS9** → Benjamin Sisko
 - **Voyager** → Kathryn Janeway
 
-These are not three separate universes. Their events, characters, ships and institutions are placed on one shared late-24th-century chronology and become available according to exact campaign date.
+These are not separate universes. Characters, ships, stations and events coexist only when the selected campaign date makes them temporally valid.
 
 ## Explicitly outside playable scope
 
@@ -46,9 +44,22 @@ The following television series are excluded by project decision:
 - `Star Trek: Discovery`
 - `Star Trek: Enterprise`
 
-They do not receive playable-era profiles and are not part of the planned content-filling queue.
+Jean-Luc Picard remains fully in scope as the TNG-era character/captain.
 
-Jean-Luc Picard remains fully in scope as the TNG-era character/captain. Excluding the series `Picard` does **not** exclude the character.
+## Critical campaign rule
+
+The screen material defines the **starting historical state**, not a mandatory storyline.
+
+Selecting:
+- Pike does not mean replaying Strange New Worlds episodes;
+- Kirk does not mean replaying TOS or the films;
+- TNG does not mean replaying Picard's television adventures;
+- DS9 does not mean replaying Sisko's television story;
+- Voyager does not mean replaying Voyager season by season or inevitably returning to the Alpha Quadrant in the canonical way.
+
+Once the campaign begins, its own world state and history become authoritative.
+
+See: `docs/decisions/campaign_continuity.md`.
 
 ## Architecture rule
 
