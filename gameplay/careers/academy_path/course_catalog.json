@@ -1,0 +1,339 @@
+{
+  "schema_version": "0.1.0",
+  "courses": [
+    {
+      "id": "starfleet_regulations_ethics",
+      "display_es": "Reglamentos y ética de la Flota Estelar",
+      "type": "core",
+      "provenance": "GAME_ADDITION",
+      "competencies": [
+        "regulations",
+        "ethics",
+        "prime_directive"
+      ]
+    },
+    {
+      "id": "interspecies_protocol",
+      "display_es": "Protocolo interespecies",
+      "type": "core",
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "diplomacy",
+        "culture",
+        "first_contact"
+      ]
+    },
+    {
+      "id": "basic_leadership",
+      "display_es": "Fundamentos de liderazgo",
+      "type": "core",
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "leadership",
+        "team_management"
+      ]
+    },
+    {
+      "id": "survival_strategies",
+      "display_es": "Estrategias de supervivencia",
+      "type": "core",
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "survival",
+        "risk_management"
+      ]
+    },
+    {
+      "id": "physical_readiness",
+      "display_es": "Preparación física",
+      "type": "core",
+      "provenance": "GAME_ADDITION",
+      "competencies": [
+        "fitness",
+        "endurance"
+      ]
+    },
+    {
+      "id": "emergency_response",
+      "display_es": "Respuesta a emergencias",
+      "type": "core",
+      "provenance": "GAME_ADDITION",
+      "competencies": [
+        "emergency_procedure",
+        "triage_basics",
+        "damage_control_basics"
+      ]
+    },
+    {
+      "id": "command_and_control",
+      "display_es": "Mando y control",
+      "type": "specialization",
+      "track": [
+        "command"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "command_decision",
+        "bridge_operations"
+      ]
+    },
+    {
+      "id": "diplomacy",
+      "display_es": "Diplomacia",
+      "type": "specialization",
+      "track": [
+        "command"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "diplomacy",
+        "negotiation"
+      ]
+    },
+    {
+      "id": "advanced_navigation",
+      "display_es": "Navegación avanzada",
+      "type": "specialization",
+      "track": [
+        "flight_control_navigation"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "navigation",
+        "astrogation"
+      ]
+    },
+    {
+      "id": "flight_control",
+      "display_es": "Control de vuelo",
+      "type": "specialization",
+      "track": [
+        "flight_control_navigation"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "flight_control",
+        "small_craft"
+      ]
+    },
+    {
+      "id": "engineering",
+      "display_es": "Ingeniería",
+      "type": "specialization",
+      "track": [
+        "engineering",
+        "operations"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "starship_systems",
+        "maintenance"
+      ]
+    },
+    {
+      "id": "basic_warp_design",
+      "display_es": "Diseño warp básico",
+      "type": "specialization",
+      "track": [
+        "engineering"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "warp_systems",
+        "propulsion"
+      ]
+    },
+    {
+      "id": "warp_theory",
+      "display_es": "Teoría warp",
+      "type": "specialization",
+      "track": [
+        "engineering",
+        "science"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "warp_physics"
+      ]
+    },
+    {
+      "id": "transporter_theory",
+      "display_es": "Teoría de transportadores",
+      "type": "specialization",
+      "track": [
+        "engineering",
+        "operations"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "transporters"
+      ]
+    },
+    {
+      "id": "tactical_analysis",
+      "display_es": "Análisis táctico",
+      "type": "specialization",
+      "track": [
+        "security_tactical"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "tactics",
+        "threat_analysis"
+      ]
+    },
+    {
+      "id": "strategy_tactics",
+      "display_es": "Estrategia y táctica",
+      "type": "specialization",
+      "track": [
+        "security_tactical",
+        "command"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "strategy",
+        "tactics"
+      ]
+    },
+    {
+      "id": "hand_to_hand",
+      "display_es": "Combate cuerpo a cuerpo",
+      "type": "specialization",
+      "track": [
+        "security_tactical"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "combat",
+        "security"
+      ]
+    },
+    {
+      "id": "astrophysics",
+      "display_es": "Astrofísica",
+      "type": "specialization",
+      "track": [
+        "science",
+        "astrophysics_cartography"
+      ],
+      "provenance": "CANON_FIELD",
+      "competencies": [
+        "astrophysics"
+      ]
+    },
+    {
+      "id": "stellar_cartography",
+      "display_es": "Cartografía estelar",
+      "type": "specialization",
+      "track": [
+        "science",
+        "astrophysics_cartography"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "stellar_cartography"
+      ]
+    },
+    {
+      "id": "exobiology",
+      "display_es": "Exobiología",
+      "type": "specialization",
+      "track": [
+        "science",
+        "exosciences",
+        "medical"
+      ],
+      "provenance": "CANON_FIELD",
+      "competencies": [
+        "exobiology"
+      ]
+    },
+    {
+      "id": "xenolinguistics",
+      "display_es": "Xenolingüística",
+      "type": "specialization",
+      "track": [
+        "science",
+        "exosciences",
+        "command"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "linguistics",
+        "culture"
+      ]
+    },
+    {
+      "id": "temporal_mechanics",
+      "display_es": "Mecánica temporal",
+      "type": "elective",
+      "track": [
+        "science",
+        "engineering"
+      ],
+      "provenance": "REFERENCE_NAMED",
+      "competencies": [
+        "temporal_mechanics"
+      ]
+    },
+    {
+      "id": "medical_foundations",
+      "display_es": "Fundamentos médicos",
+      "type": "professional",
+      "track": [
+        "medical"
+      ],
+      "provenance": "GAME_ADDITION",
+      "competencies": [
+        "medicine",
+        "diagnostics"
+      ]
+    },
+    {
+      "id": "xenomedicine",
+      "display_es": "Xenomedicina",
+      "type": "professional",
+      "track": [
+        "medical"
+      ],
+      "provenance": "GAME_ADDITION",
+      "competencies": [
+        "xenomedicine",
+        "exobiology"
+      ]
+    },
+    {
+      "id": "spacewalk_training",
+      "display_es": "Operaciones extravehiculares",
+      "type": "practical",
+      "track": [
+        "all"
+      ],
+      "provenance": "SCREEN_CANON_24C",
+      "era_ids": [
+        "tng_ds9_voyager"
+      ],
+      "recommended_year": 3,
+      "competencies": [
+        "eva",
+        "spacesuit_operations"
+      ]
+    }
+  ],
+  "source_basis": [
+    {
+      "source_id": "MA_ACADEMY_COURSES",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ACADEMY_MAJORS",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "VOY_DAY_OF_HONOR",
+      "confidence": "HIGH"
+    }
+  ],
+  "design_note": "REFERENCE_NAMED means the subject/course name is documented in reference material but may not be equally evidenced for every era."
+}

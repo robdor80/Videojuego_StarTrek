@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "model": "four_year_modular_curriculum",
+  "years": [
+    {
+      "year": 1,
+      "phase": "fundamentals",
+      "required_components": [
+        "common_core",
+        "physical_readiness",
+        "basic_practical",
+        "division_exploration"
+      ],
+      "specialization_load": "low"
+    },
+    {
+      "year": 2,
+      "phase": "professional_orientation",
+      "required_components": [
+        "common_core",
+        "specialization_core",
+        "team_practical"
+      ],
+      "specialization_load": "medium",
+      "era_hooks": [
+        "tng_second_year_field_study"
+      ]
+    },
+    {
+      "year": 3,
+      "phase": "advanced_training",
+      "required_components": [
+        "advanced_specialization",
+        "complex_simulations",
+        "leadership_development"
+      ],
+      "specialization_load": "high",
+      "era_hooks": [
+        "tng_third_year_spacewalk_course"
+      ]
+    },
+    {
+      "year": 4,
+      "phase": "service_preparation",
+      "required_components": [
+        "capstone",
+        "service_readiness",
+        "final_evaluations",
+        "assignment_preparation"
+      ],
+      "specialization_load": "high"
+    }
+  ],
+  "course_slots": {
+    "required_core": true,
+    "specialization_required": true,
+    "electives": true,
+    "remediation": true,
+    "cross_training": true
+  },
+  "provenance_type": "GAME_ADDITION",
+  "canon_constraints": [
+    "standard program is usually four years",
+    "second-year field study exists in 24th-century evidence",
+    "third-year space-walk course exists in 24th-century evidence",
+    "training cruises and simulations are documented"
+  ]
+}

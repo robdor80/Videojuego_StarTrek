@@ -80,7 +80,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | History and campus | 🟨 IN_PROGRESS | Playable Earth-campus hub, location graph and first gameplay state established; era-specific campus presentation and exact historical deltas still pending. |
 | Admissions and cadet life | ✅ COMPLETE | Playable admission flow, soft-failure/retake model, four-year cadet progression and conduct consequences established. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
-| Curriculum and courses | ⬜ TODO |
+| Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
 | Instructors | ⬜ TODO |
 | Evaluations and examinations | ⬜ TODO |
 | Simulations and field training | ⬜ TODO |

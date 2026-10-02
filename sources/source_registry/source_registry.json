@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.11.0",
+  "registry_version": "0.12.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -716,6 +716,71 @@
       "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Academy_courses",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for named Academy subjects and training areas in retained-era screen sources."
+    },
+    {
+      "source_id": "VOY_DAY_OF_HONOR",
+      "source_type": "SCREEN_CANON",
+      "title": "Day of Honor",
+      "work": "Star Trek: Voyager",
+      "season": 4,
+      "episode": 3,
+      "release_date": "1997-09-17",
+      "notes": "Primary screen source for a six-week third-year Academy space-walk course reference."
+    },
+    {
+      "source_id": "STII_WRATH_OF_KHAN",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek II: The Wrath of Khan",
+      "work": "Star Trek film",
+      "release_date": "1982-06-04",
+      "notes": "Primary screen source for Academy bridge simulation, Kobayashi Maru, cadet training and Starfleet Training Command in the Kirk-film era."
+    },
+    {
+      "source_id": "DS9_THE_ASCENT",
+      "source_type": "SCREEN_CANON",
+      "title": "The Ascent",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 5,
+      "episode": 9,
+      "release_date": "1996-11-25",
+      "notes": "Primary screen source for Nog's second-year field study aboard Deep Space 9 and active-duty rotation experience."
+    },
+    {
+      "source_id": "TNG_MENAGE_A_TROI",
+      "source_type": "SCREEN_CANON",
+      "title": "Ménage à Troi",
+      "work": "Star Trek: The Next Generation",
+      "season": 3,
+      "episode": 24,
+      "release_date": "1990-05-28",
+      "notes": "Primary screen source for written and oral Academy entrance examination components."
+    },
+    {
+      "source_id": "MA_FIELD_STUDY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Field study",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Field_study",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for second-year active-duty field study in the 24th century."
+    },
+    {
+      "source_id": "MA_BRIDGE_SIMULATOR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bridge simulator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bridge_simulator",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 23rd-century Academy bridge simulators and later holodeck replacement."
+    },
+    {
+      "source_id": "MA_KOBAYASHI_MARU_SCENARIO",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Kobayashi Maru scenario",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Kobayashi_Maru_scenario",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for 23rd-century command-track no-win simulation and its assessment purpose."
     }
   ]
 }
