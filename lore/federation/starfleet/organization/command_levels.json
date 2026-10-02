@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "levels": [
+    {
+      "id": "civil_authority",
+      "display_es": "Autoridad civil de la Federación",
+      "examples": [
+        "Presidente de la Federación",
+        "Consejo de la Federación"
+      ]
+    },
+    {
+      "id": "starfleet_top_command",
+      "display_es": "Cúpula superior de la Flota Estelar",
+      "notes": "High-level titles vary by era and are not forced into a single speculative org chart."
+    },
+    {
+      "id": "starfleet_command",
+      "display_es": "Mando de la Flota Estelar",
+      "internal_name_en": "Starfleet Command"
+    },
+    {
+      "id": "sector_command",
+      "display_es": "Mando sectorial"
+    },
+    {
+      "id": "unit_command",
+      "display_es": "Mando de unidad",
+      "examples": [
+        "nave",
+        "estación",
+        "base",
+        "instalación"
+      ]
+    }
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_STARFLEET",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_STARFLEET_COMMAND",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_COMMANDER_STARFLEET",
+      "confidence": "MEDIUM"
+    }
+  ]
+}

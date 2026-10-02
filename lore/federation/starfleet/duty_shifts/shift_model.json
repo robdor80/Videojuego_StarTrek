@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "patterns": {
+    "three_shift": {
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "fixed_hours": false
+    },
+    "four_shift": {
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma",
+        "delta"
+      ],
+      "fixed_hours": false
+    },
+    "custom": {
+      "labels": [],
+      "fixed_hours": false
+    }
+  },
+  "era_guidance": [
+    {
+      "era_id": "pike",
+      "default_guidance": "day_night_terminology_observed",
+      "hardcoded_pattern": false
+    },
+    {
+      "era_id": "kirk",
+      "default_guidance": "three_shift_supported",
+      "hardcoded_pattern": false
+    },
+    {
+      "era_id": "tng_ds9_voyager",
+      "default_guidance": "three_shift_common_four_shift_supported",
+      "hardcoded_pattern": false
+    }
+  ],
+  "duty_officer_requires_command_qualification": true,
+  "provenance": [
+    {
+      "source_id": "MA_DUTY_SHIFT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_DUTY_OFFICER",
+      "confidence": "HIGH"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.5.0",
+  "registry_version": "0.6.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -283,6 +283,114 @@
       "url": "https://www.startrek.com/news/starfleet-insignia-explained",
       "accessed_at": "2026-10-02",
       "notes": "Official reference for TOS division symbols and duties."
+    },
+    {
+      "source_id": "MA_STARFLEET",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Federation civil authority, Starfleet Command, sector commands and broad officer hierarchy."
+    },
+    {
+      "source_id": "MA_STARFLEET_COMMAND",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet Command",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_Command",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Starfleet Command as Starfleet's senior operational authority."
+    },
+    {
+      "source_id": "MA_COMMANDER_STARFLEET",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Commander, Starfleet",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Commander%2C_Starfleet",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for high-level Commander, Starfleet position and historical ambiguity of top-level Starfleet offices."
+    },
+    {
+      "source_id": "MA_CHAIN_OF_COMMAND",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Chain of command",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Chain_of_command",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for CO → first officer → second officer succession and medical authority."
+    },
+    {
+      "source_id": "MA_ACTING_CAPTAIN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Acting captain",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Acting_captain",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for temporary command when the regular CO is unavailable."
+    },
+    {
+      "source_id": "MA_COMMANDING_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Commanding officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Commanding_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for CO as a position and captain as title of address aboard starships."
+    },
+    {
+      "source_id": "MA_DUTY_SHIFT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Duty shift",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Duty_shift",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for shift/watch rotations, late-23rd-century three-shift practice, Enterprise-D three/four-shift examples, DS9 four-shift change and Voyager night command."
+    },
+    {
+      "source_id": "MA_DUTY_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Duty officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Duty_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for duty officer / bridge-watch command concept."
+    },
+    {
+      "source_id": "MA_CHIEF_MEDICAL_OFFICER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Chief medical officer",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Chief_medical_officer",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for CMO professional medical authority, including relieving medically unfit personnel."
+    },
+    {
+      "source_id": "MA_FEDERATION_JUDICIAL_CODE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Federation Judicial Code",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Federation_Judicial_Code",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for Order 104 Section C precedent concerning CMO relief of an unfit commander."
+    },
+    {
+      "source_id": "MA_GENERAL_ORDERS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "General Orders and Regulations",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/General_Orders_and_Regulations",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for medical relief authority and varying regulation numbering across productions."
+    },
+    {
+      "source_id": "MA_CHANGE_OF_COMMAND",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Change of Command",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Change_of_Command",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check for formal permanent transfer of command versus temporary acting command."
     }
   ]
 }

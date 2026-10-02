@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "authority_id": "chief_medical_officer_fitness_for_duty",
+  "display_es": "Autoridad médica sobre aptitud para el servicio",
+  "holder_position": "chief_medical_officer",
+  "can_relieve_subordinate": true,
+  "can_relieve_superior": true,
+  "can_relieve_commanding_officer": true,
+  "scope": "medical_fitness_for_duty",
+  "requires_professional_judgment": true,
+  "requires_documentation": true,
+  "transfers_command": false,
+  "consequence": "normal_command_succession_activates",
+  "regulation_numbering_note": "Source material uses more than one regulation/order reference; capability is modeled independently from numbering.",
+  "provenance": [
+    {
+      "source_id": "MA_CHIEF_MEDICAL_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_FEDERATION_JUDICIAL_CODE",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "MA_GENERAL_ORDERS",
+      "confidence": "MEDIUM"
+    }
+  ]
+}

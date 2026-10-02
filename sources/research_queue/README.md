@@ -29,6 +29,8 @@ Goal:
 - departments,
 - positions and duty stations,
 - assignments,
+- duty shifts and acting command,
+- medical command authority,
 - core regulations/protocol concepts,
 - era-sensitive differences where relevant.
 

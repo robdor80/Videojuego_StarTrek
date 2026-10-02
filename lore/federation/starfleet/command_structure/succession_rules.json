@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "default_sequence": [
+    "commanding_officer",
+    "first_officer",
+    "second_officer",
+    "designated_qualified_successor"
+  ],
+  "selection_factors": [
+    "formal_position",
+    "command_qualification",
+    "rank",
+    "seniority",
+    "availability",
+    "medical_fitness",
+    "specific_orders",
+    "local_succession_roster"
+  ],
+  "acting_command": {
+    "changes_permanent_rank": false,
+    "can_be_shift_based": true,
+    "can_be_emergency_based": true,
+    "can_be_mission_based": true
+  },
+  "provenance": [
+    {
+      "source_id": "MA_CHAIN_OF_COMMAND",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ACTING_CAPTAIN",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_COMMANDING_OFFICER",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_DUTY_OFFICER",
+      "confidence": "HIGH"
+    }
+  ]
+}

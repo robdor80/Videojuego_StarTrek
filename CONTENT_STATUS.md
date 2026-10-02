@@ -62,12 +62,14 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Area | Status | Notes |
 |---|---|---|
 | Federation government, law, diplomacy, economy and member worlds | ⬜ TODO | |
-| Starfleet organization and command structure | 🟨 IN_PROGRESS | Personnel model, operational chain and core positions established; higher Starfleet hierarchy still pending. |
+| Starfleet organization and command structure | ✅ COMPLETE | Upper command model, unit succession, acting command and operational chain established without speculative over-detail. |
 | Commissioned and flag officer ranks | ✅ COMPLETE | Base ladder fixed. |
 | Universal pip insignia | ✅ COMPLETE | TNG-style project standard across all eras. |
 | Uniform division colors | ✅ COMPLETE | Era-aware baseline fixed. |
 | Departments, positions and duty stations | ✅ COMPLETE | Core model and era-aware baseline established. |
-| Qualifications, regulations, protocols and Prime Directive | ⬜ TODO | |
+| Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom shift model; duty-officer command separated from permanent rank. |
+| Command succession / acting command | ✅ COMPLETE | CO → XO → second officer → qualified designated successor. |
+| Qualifications, regulations, protocols and Prime Directive | 🟨 IN_PROGRESS | Medical command authority established; command qualifications and broader regulations still pending. |
 | Assignments, promotions, commendations and discipline | ⬜ TODO | |
 
 ## Starfleet Academy
@@ -110,4 +112,4 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 **Federation / Starfleet institutional baseline.**
 
-Next: higher Starfleet organization, Starfleet Command, command succession, duty/watch structure and special command authority.
+Next: command qualifications, core regulations/protocols and Prime Directive.
