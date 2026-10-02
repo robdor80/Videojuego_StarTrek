@@ -10,12 +10,12 @@ Master progress index for the Star Trek universe repository.
 - 🟦 `NEEDS_ROBERTO` — requires a creative/game-design decision that cannot be resolved from sources alone.
 - ✅ `COMPLETE` — researched to the current defined scope, structured, provenance recorded, validated, with no known blocking gaps.
 
-A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent: new canon or a detected contradiction can reopen a block.
+A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent: new evidence or a detected contradiction can reopen a block.
 
 ## Current command priority
 
 1. ✅ Documentary foundation
-2. ⬜ Chronology and era model
+2. 🟨 Chronology and era model
 3. ⬜ Federation and Starfleet institutional baseline
 4. ⬜ Starfleet Academy
 5. ⬜ Career bridge: Academy → first assignment → service record
@@ -29,21 +29,31 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 |---|---|---|
 | `sources/canon_policy.md` | ✅ COMPLETE | Source authority and conflict rules fixed. |
 | `sources/provenance_policy.md` | ✅ COMPLETE | Provenance and confidence model fixed. |
-| `sources/source_registry/` | ✅ COMPLETE | Baseline registry created; it remains a living registry. |
+| `sources/source_registry/` | ✅ COMPLETE | Baseline registry created; living registry. |
 | `docs/workflows/content_research_workflow.md` | ✅ COMPLETE | Standard research-to-commit workflow fixed. |
-| `sources/research_queue/` | 🟨 IN_PROGRESS | Permanent working queue; initial sequence established. |
+| `docs/decisions/playable_eras.md` | ✅ COMPLETE | Three playable eras fixed by Roberto. |
+| `sources/research_queue/` | 🟨 IN_PROGRESS | Permanent working queue. |
+
+## Playable era scope
+
+| Era | Status | Anchor |
+|---|---|---|
+| Pike / Strange New Worlds | ✅ SCOPE FIXED | Christopher Pike / NCC-1701 |
+| Kirk / TOS + films | ✅ SCOPE FIXED | James T. Kirk / NCC-1701 and NCC-1701-A as chronology allows |
+| TNG + DS9 + Voyager | ✅ SCOPE FIXED | Picard / Sisko / Janeway |
+
+Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Universe / chronology
 
 | Area | Status |
 |---|---|
-| `universe/chronology/master_timeline/` | ⬜ TODO |
+| `universe/chronology/master_timeline/` | 🟨 IN_PROGRESS |
 | `universe/chronology/historical_events/` | ⬜ TODO |
-| `universe/chronology/temporal_anchors/` | ⬜ TODO |
-| `universe/chronology/era_profiles/pike/` | ⬜ TODO |
-| `universe/chronology/era_profiles/kirk/` | ⬜ TODO |
-| `universe/chronology/era_profiles/tng_ds9_voyager/` | ⬜ TODO |
-| `universe/chronology/era_profiles/picard/` | ⬜ TODO |
+| `universe/chronology/temporal_anchors/` | 🟨 IN_PROGRESS |
+| `universe/chronology/era_profiles/pike/` | 🟨 IN_PROGRESS |
+| `universe/chronology/era_profiles/kirk/` | 🟨 IN_PROGRESS |
+| `universe/chronology/era_profiles/tng_ds9_voyager/` | 🟨 IN_PROGRESS |
 
 ## Federation / Starfleet
 
@@ -92,8 +102,8 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 | Runtime content / schemas / manifests | ⬜ TODO |
 | Validation suites | ⬜ TODO |
 
-## Next block
+## Active block
 
 **Chronology and era model.**
 
-The next research pass will establish a minimal temporal backbone and the rules that determine what can exist in a campaign started in the Pike, Kirk, TNG/DS9/Voyager or Picard periods.
+Goal: build the minimal temporal backbone required to ensure characters, ships, technology, institutions and political states appear only when historically valid inside the three approved playable eras.

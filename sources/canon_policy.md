@@ -4,13 +4,25 @@
 
 This document defines how information is admitted into the Star Trek knowledge base used by the project.
 
-The project models one historically continuous Star Trek universe while preserving separate continuities/timelines where the screen material itself requires them. Era profiles are temporal filters, not duplicate universes.
+The project models one historically continuous Star Trek universe while preserving separate continuities/timelines where the retained screen material itself requires them. Era profiles are temporal filters, not duplicate universes.
+
+## Project screen scope
+
+Playable-era research is restricted by design to:
+
+1. **Pike / Strange New Worlds**
+2. **Kirk / The Original Series + films centred on Kirk/original crew**
+3. **The Next Generation + Deep Space Nine + Voyager**
+
+The television series `Picard`, `Discovery` and `Enterprise` are outside the planned playable scope.
+
+Excluding the series `Picard` does not exclude Jean-Luc Picard: the character is a central TNG-era figure.
 
 ## Research order
 
 The default research order is:
 
-1. **Released television series and films**
+1. **Retained television series and films**
 2. **Licensed novels and comics**
 3. **Internet research**, prioritising official sources, then reliable specialist secondary sources, then general sources
 
@@ -20,15 +32,13 @@ This is a research order, not an instruction to make all three levels equally au
 
 ### A — SCREEN_CANON
 
-Released Star Trek television episodes, streaming episodes, animated episodes and films.
+Released retained Star Trek television episodes and films inside project scope.
 
 This is the primary authority for factual universe state. When a fact is visible, spoken or otherwise established on screen, it outranks contradictory tie-in material.
 
-The official Star Trek site describes the franchise through its Series & Movies catalogue. An official StarTrek.com interview with novelist Michael A. Martin also explicitly describes canon as official on-screen continuity and the official history shown in movies or television.
-
 ### B — OFFICIAL_REFERENCE
 
-Official Star Trek / Paramount material that describes screen works: official series pages, episode pages, film pages, recaps, production notes, official interviews and comparable reference material.
+Official Star Trek / Paramount material that describes retained screen works: official series pages, episode pages, film pages, recaps, production notes, official interviews and comparable reference material.
 
 Useful for metadata, terminology, production context and locating primary evidence. It must not silently override what is actually shown on screen.
 
@@ -42,7 +52,7 @@ These are valuable for:
 - enriching culture, routine, characterisation and institutional detail,
 - identifying plausible interpretations.
 
-They do **not** override conflicting screen canon. If a detail first appears in licensed print and is later established on screen, the project records the screen source as the canonical basis.
+They do **not** override conflicting retained screen canon.
 
 ### D — RELIABLE_SECONDARY
 
@@ -70,13 +80,13 @@ Inference must:
 
 A project-created fact required to make the RPG coherent or playable where source material is silent.
 
-Game additions must be explicit and must not contradict higher-authority material.
+Game additions must be explicit and must not contradict higher-authority retained material.
 
 ## Conflict resolution
 
-1. Screen canon beats contradictory licensed print.
+1. Retained screen canon beats contradictory licensed print.
 2. Official reference material helps interpret screen canon but does not rewrite it.
-3. A contradiction between two screen sources is **not** resolved by blindly choosing the newer one.
+3. A contradiction between two retained screen sources is **not** resolved by blindly choosing the newer one.
 4. First check whether the conflict is explained by:
    - different timelines/continuities,
    - different dates or eras,
@@ -102,6 +112,6 @@ Examples:
 
 ## Project rule
 
-**Never hide the boundary between canon, licensed expansion, inference and game invention.**
+**Never hide the boundary between retained screen canon, licensed expansion, inference and game invention.**
 
 The game may use all four, but the repository must always know which is which.
