@@ -27,19 +27,37 @@ Legend:
 
 The black pip is **not** a half-painted pip. It represents the intermediate step in the TNG-era visual system.
 
-## Flag officers
+## Flag officers — canon vs project normalisation
 
-Flag officers use a framed/boxed pip bar:
+TNG-era flag officers use **boxed/framed gold pips**.
 
-| Rank | Spanish | Project display |
-|---|---|---|
-| Commodore | Comodoro | [●] |
-| Rear admiral | Contraalmirante | [●●] |
-| Vice admiral | Vicealmirante | [●●●] |
-| Admiral | Almirante | [●●●●] |
-| Fleet admiral | Almirante de Flota | [●●●●●] |
+The retained canon/reference mapping is strongest from two pips upward:
 
-This follows the TNG boxed-pip visual language and production-era progression, standardised across all playable eras for the game.
+| Display | Canon/reference interpretation |
+|---|---|
+| [●] | one-star admiral; exact retained-era title is ambiguous |
+| [●●] | Rear Admiral / two-star admiral |
+| [●●●] | Vice Admiral / three-star admiral |
+| [●●●●] | Admiral / four-star admiral |
+| [●●●●●] | Fleet Admiral / five-star admiral reference pattern |
+
+### Project treatment of Commodore
+
+`Commodore` is a real Starfleet flag rank historically shown in the TOS period, one grade above Captain.
+
+However, **TNG does not cleanly establish that one boxed pip means Commodore** within the retained screen scope.
+
+Therefore the game uses:
+
+| Rank | Spanish | Project display | Status |
+|---|---|---|---|
+| Commodore | Comodoro | [●] | GAME_ADDITION visual mapping |
+| Rear admiral | Contraalmirante | [●●] | canon-aligned |
+| Vice admiral | Vicealmirante | [●●●] | canon-aligned |
+| Admiral | Almirante | [●●●●] | canon-aligned |
+| Fleet admiral | Almirante de Flota | [●●●●●] | reference-aligned |
+
+This gives the player one clean progression while keeping the provenance distinction explicit.
 
 ## Scope
 
@@ -55,6 +73,7 @@ Historical uniform styling remains era-specific. Only the **rank-reading languag
 - Cadet is a training status, not part of the commissioned-officer ladder above.
 - Enlisted / NCO ranks are separate and will receive their own insignia model.
 - Fleet captain is not part of the normal promotion ladder; it is retained as a rare/special historical grade/title for separate treatment.
+- Provisional/Maquis rank bars are a separate system and will be modeled when Voyager-era personnel rules are researched.
 
 ## Design reason
 

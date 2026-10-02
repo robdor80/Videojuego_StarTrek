@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.3.0",
+  "registry_version": "0.4.0",
   "last_updated": "2026-10-02",
   "sources": [
     {
@@ -175,6 +175,42 @@
       "url": "https://memory-alpha.fandom.com/wiki/Starfleet_uniform_%28late_2270s-2350s%29",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for Kirk-film-era department colors and flag/officer rank structures."
+    },
+    {
+      "source_id": "MA_REAR_ADMIRAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Rear admiral",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Rear_admiral",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check: TNG-era rear admiral uses two gold pips in a framed bar; article notes one-star admiral title ambiguity."
+    },
+    {
+      "source_id": "MA_VICE_ADMIRAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vice admiral",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Vice_admiral",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check: TNG-era vice admiral uses three gold framed pips."
+    },
+    {
+      "source_id": "MA_ADMIRAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Admiral",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Admiral",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check: TNG-era full admiral uses four gold framed pips."
+    },
+    {
+      "source_id": "MA_FLEET_ADMIRAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Fleet admiral",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Fleet_admiral",
+      "accessed_at": "2026-10-02",
+      "notes": "Cross-check: production/reference notes describe five framed pips for fleet admiral; on-screen insignia usage is less clean."
     }
   ]
 }

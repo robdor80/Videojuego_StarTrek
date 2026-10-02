@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "standard_id": "universal_tng_pips_v1",
   "provenance_type": "GAME_ADDITION",
   "basis": "TNG-era Starfleet pip and boxed-pip visual language",
@@ -14,7 +14,8 @@
       "pips": [
         "gold"
       ],
-      "display": "●"
+      "display": "●",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "lieutenant_junior_grade",
@@ -22,7 +23,8 @@
         "gold",
         "black_gold_rim"
       ],
-      "display": "●○"
+      "display": "●○",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "lieutenant",
@@ -30,7 +32,8 @@
         "gold",
         "gold"
       ],
-      "display": "●●"
+      "display": "●●",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "lieutenant_commander",
@@ -39,7 +42,8 @@
         "gold",
         "black_gold_rim"
       ],
-      "display": "●●○"
+      "display": "●●○",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "commander",
@@ -48,7 +52,8 @@
         "gold",
         "gold"
       ],
-      "display": "●●●"
+      "display": "●●●",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "captain",
@@ -58,37 +63,45 @@
         "gold",
         "gold"
       ],
-      "display": "●●●●"
+      "display": "●●●●",
+      "mapping_status": "canon_aligned"
     }
   ],
   "flag_officers": [
     {
       "rank_id": "commodore",
       "boxed_gold_pips": 1,
-      "display": "[●]"
+      "display": "[●]",
+      "mapping_status": "game_addition",
+      "canonical_tng_note": "One boxed pip corresponds to a one-star admiral reference grade; retained TNG/DS9/VOY canon does not cleanly identify this as Commodore."
     },
     {
       "rank_id": "rear_admiral",
       "boxed_gold_pips": 2,
-      "display": "[●●]"
+      "display": "[●●]",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "vice_admiral",
       "boxed_gold_pips": 3,
-      "display": "[●●●]"
+      "display": "[●●●]",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "admiral",
       "boxed_gold_pips": 4,
-      "display": "[●●●●]"
+      "display": "[●●●●]",
+      "mapping_status": "canon_aligned"
     },
     {
       "rank_id": "fleet_admiral",
       "boxed_gold_pips": 5,
-      "display": "[●●●●●]"
+      "display": "[●●●●●]",
+      "mapping_status": "reference_aligned",
+      "canonical_tng_note": "Five-star boxed pattern is documented in production/reference material; retained-era on-screen usage is limited/unclear."
     }
   ],
-  "historical_note": "Actual insignia varied significantly by era. The game intentionally standardises only the rank-recognition layer.",
+  "historical_note": "Actual insignia varied significantly by era. The game intentionally standardises the rank-recognition layer.",
   "source_basis": [
     {
       "source_id": "MA_UNIFORM_2350S_2370S",
@@ -97,6 +110,22 @@
     {
       "source_id": "MA_STARFLEET_RANKS",
       "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_REAR_ADMIRAL",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_VICE_ADMIRAL",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_ADMIRAL",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "MA_FLEET_ADMIRAL",
+      "confidence": "MEDIUM"
     }
   ]
 }
