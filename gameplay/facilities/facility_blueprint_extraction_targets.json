@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_blueprint_extraction_targets",
+  "classification": "GAME_ADDITION",
+  "extraction_groups": [
+    {
+      "group_id": "identity",
+      "targets": [
+        "facility_name_or_designation",
+        "facility_type",
+        "design_or_class_name",
+        "operator_markings",
+        "registry_or_number",
+        "era_or_date_clues"
+      ]
+    },
+    {
+      "group_id": "external_geometry",
+      "targets": [
+        "overall_shape",
+        "major_modules",
+        "docking_interfaces",
+        "approach_axes",
+        "external_service_structures",
+        "relative_scale_clues"
+      ]
+    },
+    {
+      "group_id": "internal_topology",
+      "targets": [
+        "decks_or_levels",
+        "sections",
+        "rooms",
+        "corridors",
+        "turbolifts_or_lifts",
+        "maintenance_access",
+        "airlocks",
+        "pressure_boundaries",
+        "docking_connections"
+      ]
+    },
+    {
+      "group_id": "operational_services",
+      "targets": [
+        "traffic_control",
+        "medical",
+        "repair",
+        "cargo",
+        "personnel_transfer",
+        "security",
+        "command",
+        "communications",
+        "science",
+        "smallcraft_support",
+        "resupply"
+      ]
+    },
+    {
+      "group_id": "critical_systems",
+      "targets": [
+        "power",
+        "life_support",
+        "computer",
+        "communications",
+        "defensive_systems",
+        "sensor_systems",
+        "reactor_or_generation_spaces",
+        "environmental_control"
+      ]
+    },
+    {
+      "group_id": "gameplay_connections",
+      "targets": [
+        "location_graph_nodes",
+        "connection_graph_edges",
+        "restricted_zones",
+        "service_nodes",
+        "damage_propagation_zones",
+        "evacuation_routes",
+        "boarding_or_security_chokepoints"
+      ]
+    }
+  ],
+  "claim_handling": [
+    "Spatial arrangement visible in a blueprint may be used as REFERENCE geometry with source/confidence.",
+    "Printed numeric specifications are separate claims and require independent authority classification.",
+    "A fan blueprint does not become class canon because it is internally detailed.",
+    "Individual facility layouts must not be generalized to an entire facility class without support.",
+    "When multiple sheets conflict, record the conflict instead of silently choosing one."
+  ]
+}
