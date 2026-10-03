@@ -1,0 +1,95 @@
+{
+  "id": "constitution_ncc_1700_franz_joseph_blueprints",
+  "subject": {
+    "class_id": "constitution_class",
+    "reference_ship_name": "USS Constitution",
+    "reference_registry": "NCC-1700",
+    "intended_gameplay_profile": "kirk_tos"
+  },
+  "source": {
+    "creator": "Franz Joseph",
+    "set_label": "Booklet of General Plans / remastered reference set",
+    "screen_canon": false,
+    "provenance_status": "PENDING_REGISTRY_CLASSIFICATION",
+    "canon_rule": "Retained screen canon overrides this reference set on conflict."
+  },
+  "usage": {
+    "scope": "class_level_reference",
+    "not_ship_specific_to": [
+      "USS Enterprise NCC-1701-A"
+    ],
+    "derive_with_validation": [
+      "deck_index",
+      "location_graph",
+      "turbolift_network",
+      "critical_system_spaces",
+      "class_interior_baseline"
+    ]
+  },
+  "sheets": [
+    {
+      "file": "sheets/01.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/02.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/03.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/04.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/05.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/06.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/07.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/08.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/09.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/10.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/11.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/12.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/13.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "file": "sheets/14.jpg",
+      "status": "REFERENCE"
+    }
+  ],
+  "supporting_files": [
+    "NCC-1700-USS-Constitution-Remastered2.pdf",
+    "2025-Franz-Joseph-Remastered-Calendar.pdf"
+  ],
+  "notes": [
+    "Do not assume every Constitution-class ship is room-for-room identical.",
+    "Apply date/configuration and individual-ship overrides after class baseline extraction."
+  ]
+}
