@@ -112,11 +112,11 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
-| Stations and facilities | 🟨 IN_PROGRESS | Facility capability/state, service queues, conservative initial K-7/DS9/Starbase 375 support profiles and logistics integration established; wider station catalogue and deeper source validation remain progressive. |
+| Stations and facilities | 🟨 IN_PROGRESS | Facility identity/design separation, topology/live interior state, service nodes, docking/access, logistics support, playable facility assignments and blueprint-ingest workflow are established; wider station catalogue and source-backed interiors remain progressive. |
 | Technology and equipment | ⬜ TODO |
 | Medicine and science | ⬜ TODO |
 | Conflicts and historical events | ⬜ TODO |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, mission tasking, duty watches, debrief consequences, role-aware participation, operational needs, autonomous fleet tasking, logistics/endurance and facility support are connected to World State; broader wider-universe gameplay remains progressive. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility support and playable station-duty loops are connected to World State; broader wider-universe gameplay remains progressive. |
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | ⬜ TODO |
 | Presentation and UI | ⬜ TODO |
