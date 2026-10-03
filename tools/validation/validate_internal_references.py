@@ -1,9 +1,5 @@
 #!/usr/bin/env python3
-"""Validate selected cross-file references in the Star Trek universe pack.
-
-Run from repository root:
-    python tools/validation/validate_internal_references.py
-"""
+"""Validate selected cross-file references in the Star Trek universe pack."""
 
 from __future__ import annotations
 
@@ -18,6 +14,8 @@ REGISTRY = ROOT / "sources/source_registry/source_registry.json"
 DISTANCES = ROOT / "gameplay/navigation/initial_reference_distance_edges.json"
 LOCATIONS = ROOT / "lore/astrography/systems/anchor_locations.json"
 RELATIONS = ROOT / "gameplay/diplomacy/federation_relation_anchors.json"
+WORLD_EVENTS = ROOT / "narrative/events/world_event_state.json"
+OPERATIONAL_NEEDS = ROOT / "gameplay/command/operational_need_model.json"
 
 SCAN_ROOTS = (
     ROOT / "gameplay",
@@ -50,7 +48,7 @@ def json_files() -> Iterable[Path]:
             yield from root.rglob("*.json")
 
 
-def build_indexes() -> tuple[set[str], set[str], set[str], set[str]]:
+def build_indexes():
     registry = load_json(REGISTRY)
     source_ids = {row["source_id"] for row in registry.get("sources", [])}
 
@@ -61,13 +59,26 @@ def build_indexes() -> tuple[set[str], set[str], set[str], set[str]]:
     location_ids = {row["location_id"] for row in locations.get("locations", [])}
 
     relations = load_json(RELATIONS)
-    relation_ids: set[str] = set()
+    relation_ids = set()
     for relation in relations.get("relations", []):
         pair = "__".join(relation.get("pair", []))
         for anchor in relation.get("anchors", []):
             relation_ids.add(f"{pair}__{anchor['year']}")
 
-    return source_ids, edge_ids, location_ids, relation_ids
+    world_events = load_json(WORLD_EVENTS)
+    world_event_types = set(world_events.get("event_types", []))
+
+    operational_needs = load_json(OPERATIONAL_NEEDS)
+    operational_need_types = set(operational_needs.get("need_types", []))
+
+    return (
+        source_ids,
+        edge_ids,
+        location_ids,
+        relation_ids,
+        world_event_types,
+        operational_need_types,
+    )
 
 
 def walk(
@@ -79,6 +90,8 @@ def walk(
     edge_ids: set[str],
     location_ids: set[str],
     relation_ids: set[str],
+    world_event_types: set[str],
+    operational_need_types: set[str],
     errors: list[str],
 ) -> None:
     if isinstance(value, list):
@@ -91,6 +104,8 @@ def walk(
                 edge_ids=edge_ids,
                 location_ids=location_ids,
                 relation_ids=relation_ids,
+                world_event_types=world_event_types,
+                operational_need_types=operational_need_types,
                 errors=errors,
             )
         return
@@ -145,6 +160,27 @@ def walk(
                 f"unknown relation anchor '{item}'"
             )
 
+        if (
+            key == "world_event_type"
+            and isinstance(item, str)
+            and item not in world_event_types
+        ):
+            errors.append(
+                f"{file_path.relative_to(ROOT)} {item_path}: "
+                f"unknown world-event type '{item}'"
+            )
+
+        if key == "possible_needs" and isinstance(item, list):
+            for need_type in item:
+                if (
+                    isinstance(need_type, str)
+                    and need_type not in operational_need_types
+                ):
+                    errors.append(
+                        f"{file_path.relative_to(ROOT)} {item_path}: "
+                        f"unknown operational-need type '{need_type}'"
+                    )
+
         walk(
             item,
             file_path=file_path,
@@ -153,12 +189,22 @@ def walk(
             edge_ids=edge_ids,
             location_ids=location_ids,
             relation_ids=relation_ids,
+            world_event_types=world_event_types,
+            operational_need_types=operational_need_types,
             errors=errors,
         )
 
 
 def main() -> int:
-    source_ids, edge_ids, location_ids, relation_ids = build_indexes()
+    (
+        source_ids,
+        edge_ids,
+        location_ids,
+        relation_ids,
+        world_event_types,
+        operational_need_types,
+    ) = build_indexes()
+
     errors: list[str] = []
     scanned = 0
 
@@ -178,6 +224,8 @@ def main() -> int:
             edge_ids=edge_ids,
             location_ids=location_ids,
             relation_ids=relation_ids,
+            world_event_types=world_event_types,
+            operational_need_types=operational_need_types,
             errors=errors,
         )
 
@@ -187,7 +235,9 @@ def main() -> int:
         f"{len(source_ids)} sources; "
         f"{len(edge_ids)} distance edges; "
         f"{len(location_ids)} anchor locations; "
-        f"{len(relation_ids)} relation anchors."
+        f"{len(relation_ids)} relation anchors; "
+        f"{len(world_event_types)} world-event types; "
+        f"{len(operational_need_types)} operational-need types."
     )
 
     if errors:

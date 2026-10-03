@@ -5,7 +5,7 @@
   "triggers": [
     {
       "condition": "docking_approach_conflict_or_ship_control_problem",
-      "world_event_type": "facility_failure_or_navigation_incident",
+      "world_event_type": "navigation_hazard",
       "affected_loops": [
         "traffic_control",
         "engineering",
@@ -15,8 +15,7 @@
       "possible_needs": [
         "rescue",
         "medical_response",
-        "repair_assistance",
-        "traffic_control_response"
+        "repair_assistance"
       ]
     },
     {
@@ -83,9 +82,9 @@
         "command"
       ],
       "possible_needs": [
-        "reroute_support",
+        "support_reinforcement",
         "deliver_supplies",
-        "temporary_support_unit"
+        "repair_assistance"
       ]
     },
     {
@@ -99,7 +98,7 @@
       ],
       "possible_needs": [
         "diplomatic_contact",
-        "security_response_if_live_state_justifies"
+        "security_response"
       ]
     }
   ],
