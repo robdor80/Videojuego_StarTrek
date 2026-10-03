@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "model_id": "starfleet_mission_tasking_order",
+  "fields": {
+    "tasking_order_id": null,
+    "issuing_authority_id": null,
+    "receiving_unit_id": null,
+    "mission_id": null,
+    "issued_at": null,
+    "effective_at": null,
+    "authority_basis": null,
+    "priority": "routine",
+    "destination_or_area_refs": [],
+    "task_refs": [],
+    "constraints": [],
+    "report_requirements": [],
+    "support_authorizations": [],
+    "secrecy_level": "normal",
+    "supersedes_tasking_order_id": null
+  },
+  "receipt_flow": [
+    "receive_order",
+    "verify_authenticity",
+    "verify_authority",
+    "load_mission_state",
+    "brief_command_team",
+    "prepare_route_and_resources",
+    "acknowledge_or_request_clarification"
+  ],
+  "possible_responses": [
+    "acknowledged",
+    "clarification_requested",
+    "unable_to_comply",
+    "partially_able_to_comply",
+    "contested_by_commanding_officer",
+    "superseded_before_execution"
+  ],
+  "rules": [
+    "A Starfleet order can constrain goals without dictating every tactical decision.",
+    "The commanding officer retains live responsibility for ship and crew unless authority is explicitly overridden by a valid rule.",
+    "Impossible or contradictory orders require clarification or escalation rather than fictional compliance.",
+    "Orders can be amended or superseded; history remains append-only."
+  ]
+}

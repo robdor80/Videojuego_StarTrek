@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_state",
+  "fields": {
+    "mission_id": null,
+    "mission_type": null,
+    "title_es": null,
+    "issuing_authority_id": null,
+    "assigned_unit_id": null,
+    "assigned_commanding_officer_id": null,
+    "player_relevance": "assigned_unit",
+    "issued_at": null,
+    "accepted_at": null,
+    "started_at": null,
+    "completed_at": null,
+    "status": "proposed",
+    "priority": "routine",
+    "operational_area_refs": [],
+    "primary_destination_id": null,
+    "objective_ids": [],
+    "constraints": [],
+    "rules_of_engagement_refs": [],
+    "legal_authority_refs": [],
+    "support_refs": [],
+    "current_phase": null,
+    "failure_conditions": [],
+    "cancellation_reason": null,
+    "source_world_event_ids": [],
+    "live_consequence_refs": []
+  },
+  "statuses": [
+    "proposed",
+    "assigned",
+    "accepted",
+    "preparing",
+    "underway",
+    "on_station",
+    "objectives_active",
+    "returning",
+    "completed",
+    "partially_completed",
+    "failed",
+    "cancelled",
+    "superseded"
+  ],
+  "priorities": [
+    "routine",
+    "important",
+    "urgent",
+    "critical"
+  ],
+  "rules": [
+    "A mission is an operational task backed by World State, not a narrative promise.",
+    "Mission status changes only through authoritative Core events.",
+    "Primary and optional objectives are tracked separately.",
+    "A mission can change while underway when command orders or live events justify it.",
+    "Failure is not automatically a game-over state.",
+    "Mission completion does not imply canonical future events occur."
+  ]
+}

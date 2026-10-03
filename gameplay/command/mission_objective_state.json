@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_objective_state",
+  "fields": {
+    "objective_id": null,
+    "mission_id": null,
+    "display_text_es": null,
+    "objective_type": null,
+    "priority": "primary",
+    "status": "inactive",
+    "target_refs": [],
+    "location_refs": [],
+    "success_conditions": [],
+    "failure_conditions": [],
+    "dependency_objective_ids": [],
+    "optional": false,
+    "hidden_from_player": false,
+    "knowledge_gate_ref": null,
+    "activated_at": null,
+    "resolved_at": null,
+    "resolution_event_ids": []
+  },
+  "statuses": [
+    "inactive",
+    "available",
+    "active",
+    "satisfied",
+    "failed",
+    "waived",
+    "obsolete"
+  ],
+  "objective_types": [
+    "navigate_to",
+    "patrol",
+    "escort",
+    "protect",
+    "survey",
+    "scan",
+    "investigate",
+    "contact",
+    "negotiate",
+    "transport",
+    "deliver",
+    "rescue",
+    "evacuate",
+    "repair_or_assist",
+    "observe",
+    "intercept",
+    "defend",
+    "withdraw",
+    "report"
+  ],
+  "rules": [
+    "Objective text is player-facing Spanish; internal type IDs remain stable.",
+    "Hidden objectives may exist only when justified by mission authority or World State, not to manufacture surprise.",
+    "The player can discover alternative ways to satisfy an objective if Core validates the outcome.",
+    "An optional objective cannot silently become mandatory.",
+    "Obsolete objectives remain in history for debrief."
+  ]
+}
