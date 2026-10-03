@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "navigation_distance_edge",
+  "fields": {
+    "edge_id": null,
+    "origin_location_id": null,
+    "destination_location_id": null,
+    "distance_ly": null,
+    "distance_relation": "exact",
+    "derivation_type": null,
+    "usable_for_pathfinding": true,
+    "directional": false,
+    "valid_from": null,
+    "valid_to": null,
+    "source_refs": [],
+    "confidence": "unknown",
+    "notes": []
+  },
+  "allowed_derivation_types": [
+    "screen_direct",
+    "official_reference_direct",
+    "real_astronomy",
+    "official_map",
+    "secondary_map",
+    "warp_time_calculation",
+    "inferred"
+  ],
+  "distance_relations": [
+    "exact",
+    "approximate",
+    "minimum",
+    "maximum",
+    "range"
+  ],
+  "pathfinding_rules": [
+    "Prefer higher-authority and higher-confidence edges.",
+    "Map-derived and warp-time-calculated distances remain usable but carry uncertainty.",
+    "Political borders do not change physical distance.",
+    "Wormholes, transwarp and corridors are traversal edges, not ordinary Euclidean distance edges."
+  ]
+}

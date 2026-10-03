@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1",
+  "model_id": "astrography_location",
+  "fields": {
+    "location_id": null,
+    "display_name_es": null,
+    "location_type": null,
+    "parent_location_id": null,
+    "quadrant": null,
+    "sector_designation": null,
+    "coordinates": {
+      "frame_id": null,
+      "x_ly": null,
+      "y_ly": null,
+      "z_ly": null,
+      "accuracy": "unknown",
+      "method": "unknown"
+    },
+    "real_astronomy_anchor": null,
+    "political_state_ref": null,
+    "navigation_hazard_ids": [],
+    "facility_ids": [],
+    "known_route_ids": [],
+    "knowledge_state_ref": null,
+    "source_refs": []
+  },
+  "allowed_location_types": [
+    "galaxy",
+    "quadrant",
+    "region",
+    "sector",
+    "star_system",
+    "star",
+    "planet",
+    "moon",
+    "station",
+    "starbase",
+    "outpost",
+    "anomaly",
+    "nebula",
+    "wormhole",
+    "route_anchor"
+  ],
+  "coordinate_accuracy": [
+    "exact_real_astronomy",
+    "screen_established",
+    "official_reference",
+    "map_derived",
+    "calculated",
+    "approximate",
+    "unknown"
+  ],
+  "rules": [
+    "Physical location is independent from political owner.",
+    "A map placement must never silently become SCREEN_CANON.",
+    "Unknown Z coordinates remain null rather than zero unless the source explicitly defines the reference plane.",
+    "A location may have several coordinate hypotheses with source priority handled by validation."
+  ]
+}

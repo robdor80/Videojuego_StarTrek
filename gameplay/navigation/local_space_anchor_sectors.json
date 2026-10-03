@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "local_space_anchor_sectors",
+  "source_ref": "STAR_CHARTS_2002",
+  "source_pages": [
+    18,
+    19
+  ],
+  "authority": "OFFICIAL_REFERENCE",
+  "confidence": "MEDIUM",
+  "entries": [
+    {
+      "sector_designation": "001",
+      "anchor_location_id": "sol_system",
+      "display_name_es": "Sector Sol",
+      "notes": [
+        "Reference sector containing Sol/Earth."
+      ]
+    },
+    {
+      "sector_designation": "002",
+      "anchor_location_id": "alpha_centauri",
+      "display_name_es": "Sector Alpha Centauri"
+    },
+    {
+      "sector_designation": "003",
+      "anchor_location_id": "terra_nova_system",
+      "display_name_es": "Sector Terra Nova"
+    },
+    {
+      "sector_designation": "004",
+      "anchor_location_id": "sigma_draconis",
+      "display_name_es": "Sector Sigma Draconis"
+    },
+    {
+      "sector_designation": "005",
+      "anchor_location_id": "vulcan_system",
+      "display_name_es": "Sector Vulcano"
+    },
+    {
+      "sector_designation": "006",
+      "anchor_location_id": "andoria_system",
+      "display_name_es": "Sector Andoriano"
+    },
+    {
+      "sector_designation": "007",
+      "anchor_location_id": "tellar_system",
+      "display_name_es": "Sector Tellar"
+    },
+    {
+      "sector_designation": "008",
+      "anchor_location_id": "ophiuchus_36",
+      "display_name_es": "Sector Ophiuchus"
+    }
+  ],
+  "rules": [
+    "These assignments are licensed-reference placements, not SCREEN_CANON by themselves.",
+    "Do not derive current political control from the sector name.",
+    "Do not assume all sectors elsewhere are equally well established."
+  ]
+}

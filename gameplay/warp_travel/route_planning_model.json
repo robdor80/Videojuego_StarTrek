@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1",
+  "model_id": "warp_route_planning",
+  "request": {
+    "origin_location_id": null,
+    "destination_location_id": null,
+    "ship_entity_id": null,
+    "departure_time": null,
+    "mission_authority_id": null,
+    "route_preferences": []
+  },
+  "route_preferences": [
+    "fastest",
+    "safest",
+    "avoid_hostile_space",
+    "avoid_restricted_space",
+    "prefer_charted_routes",
+    "prefer_starbase_support",
+    "silent_or_low_contact"
+  ],
+  "candidate_route_outputs": [
+    "path_nodes",
+    "physical_distance_ly",
+    "estimated_travel_time_range",
+    "border_crossings",
+    "jurisdiction_changes",
+    "required_permissions",
+    "known_hazards",
+    "known_hostile_activity",
+    "support_facilities",
+    "sensor_or_chart_uncertainty",
+    "route_confidence"
+  ],
+  "rules": [
+    "ETA is a range unless the propulsion model and subspace conditions justify precision.",
+    "Warp speed is not converted to distance with one universal immutable formula.",
+    "The route planner must use ship capability, current damage, power state and local subspace conditions.",
+    "Crossing a political border can trigger warnings, interception, inspection or diplomatic consequences.",
+    "Unknown or unexplored space may hide route risk from the player while World State retains the truth.",
+    "AI may explain route options but Core chooses and persists actual traversal state."
+  ]
+}
