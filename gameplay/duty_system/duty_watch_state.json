@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1",
+  "model_id": "duty_watch_state",
+  "fields": {
+    "watch_id": null,
+    "unit_id": null,
+    "duty_station_id": null,
+    "starts_at": null,
+    "ends_at": null,
+    "watch_officer_id": null,
+    "active_personnel_assignments": [],
+    "alert_state_ref": null,
+    "mission_id": null,
+    "handoff_state": "pending",
+    "exceptional_orders": [],
+    "unresolved_items": []
+  },
+  "handoff_states": [
+    "pending",
+    "briefing",
+    "accepted",
+    "deferred",
+    "emergency_override"
+  ],
+  "runtime_rules": [
+    "A watch is an operational staffing state, not a fixed universal shift length.",
+    "Ships and eras may use different schedules according to crew, mission and live state.",
+    "A watch officer can hold operational control without changing permanent rank or position.",
+    "Red alert, casualties or emergencies can override normal watch staffing.",
+    "Unresolved contacts, repairs, navigation hazards and orders must survive watch handoff."
+  ]
+}

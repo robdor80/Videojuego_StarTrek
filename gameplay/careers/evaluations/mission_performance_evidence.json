@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_performance_evidence",
+  "evidence_dimensions": [
+    "professional_competence",
+    "orders_and_procedure",
+    "initiative",
+    "leadership",
+    "teamwork",
+    "judgment",
+    "reliability",
+    "conduct",
+    "adaptability"
+  ],
+  "evidence_fields": {
+    "evidence_id": null,
+    "character_id": null,
+    "mission_id": null,
+    "source_event_ids": [],
+    "dimension": null,
+    "direction": "neutral",
+    "magnitude": "contextual",
+    "authority_review_required": true,
+    "notes_structured": []
+  },
+  "directions": [
+    "positive",
+    "neutral",
+    "negative",
+    "mixed"
+  ],
+  "rules": [
+    "Mission evidence feeds later evaluations; it is not a direct stat increase.",
+    "The same event may support different dimensions with different interpretation.",
+    "AI commentary is allowed, but scoring/eligibility remains authoritative game logic.",
+    "Promotion is never granted solely because a mission completed successfully."
+  ]
+}

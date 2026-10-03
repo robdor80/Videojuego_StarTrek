@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "model_id": "duty_assignment",
+  "fields": {
+    "duty_assignment_id": null,
+    "character_id": null,
+    "unit_id": null,
+    "watch_id": null,
+    "station_id": null,
+    "duty_role_id": null,
+    "authority_scope": [],
+    "qualification_requirements": [],
+    "starts_at": null,
+    "ends_at": null,
+    "status": "scheduled",
+    "relief_character_id": null,
+    "source_order_id": null
+  },
+  "statuses": [
+    "scheduled",
+    "reporting",
+    "on_duty",
+    "temporarily_relieved",
+    "relieved",
+    "unable_to_report",
+    "completed"
+  ],
+  "authority_rules": [
+    "Duty assignment grants only the authority required by the assigned role and current chain of command.",
+    "Rank alone does not automatically grant control of a station.",
+    "Qualification and system access can constrain which actions are executable.",
+    "Emergency succession may change authority without rewriting permanent assignment."
+  ]
+}

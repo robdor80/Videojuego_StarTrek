@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_debrief",
+  "inputs": [
+    "mission_state",
+    "objective_states",
+    "authoritative_event_log",
+    "ship_state_changes",
+    "crew_state_changes",
+    "political_state_changes",
+    "resource_use",
+    "orders_history"
+  ],
+  "outputs": {
+    "mission_outcome": null,
+    "objective_results": [],
+    "operational_findings": [],
+    "conduct_findings": [],
+    "commendation_candidates": [],
+    "disciplinary_review_candidates": [],
+    "evaluation_evidence_refs": [],
+    "service_record_event_candidates": [],
+    "unresolved_followups": [],
+    "world_state_consequences": []
+  },
+  "mission_outcomes": [
+    "successful",
+    "successful_with_losses_or_cost",
+    "partial",
+    "failed",
+    "cancelled",
+    "superseded",
+    "indeterminate"
+  ],
+  "rules": [
+    "Debrief derives from authoritative events; AI does not invent performance facts.",
+    "Mission success and officer performance are related but not identical.",
+    "A failed mission can still contain excellent professional conduct.",
+    "A successful mission can still produce disciplinary review.",
+    "No XP is awarded as an automatic promotion mechanism.",
+    "Commendations, reprimands and promotion evidence enter their existing career pipelines."
+  ]
+}

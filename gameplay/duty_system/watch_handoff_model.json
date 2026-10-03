@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "model_id": "watch_handoff",
+  "required_topics": [
+    "current_mission_and_orders",
+    "ship_navigation_state",
+    "known_contacts",
+    "known_hazards",
+    "engineering_limitations",
+    "medical_or_crew_readiness_limits",
+    "security_or_diplomatic_alerts",
+    "pending_communications",
+    "unresolved_tasks"
+  ],
+  "fields": {
+    "handoff_id": null,
+    "outgoing_watch_id": null,
+    "incoming_watch_id": null,
+    "outgoing_officer_id": null,
+    "incoming_officer_id": null,
+    "created_at": null,
+    "accepted_at": null,
+    "topic_refs": [],
+    "omitted_known_critical_items": [],
+    "notes": []
+  },
+  "rules": [
+    "Handoff transfers operational awareness, not World Truth.",
+    "Unknown facts cannot appear in handoff.",
+    "Known critical omissions may become performance or disciplinary evidence if consequences follow.",
+    "Emergency conditions may abbreviate handoff but unresolved state persists."
+  ]
+}

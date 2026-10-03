@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_briefing",
+  "fields": {
+    "briefing_id": null,
+    "mission_id": null,
+    "presenter_id": null,
+    "audience_character_ids": [],
+    "created_at": null,
+    "known_situation_summary": null,
+    "objective_refs": [],
+    "destination_refs": [],
+    "route_context_ref": null,
+    "political_context_refs": [],
+    "known_hazard_refs": [],
+    "rules_of_engagement_refs": [],
+    "legal_or_directive_refs": [],
+    "support_refs": [],
+    "intelligence_confidence": "unknown",
+    "classified_annex_refs": [],
+    "questions_and_clarifications": []
+  },
+  "rules": [
+    "Briefing content is limited to information available to the presenting authority and audience clearance.",
+    "The briefing must distinguish confirmed facts, assessments and unknowns.",
+    "A briefing is a snapshot and may become stale during execution.",
+    "AI can narrate the briefing but cannot add hidden World Truth."
+  ]
+}
