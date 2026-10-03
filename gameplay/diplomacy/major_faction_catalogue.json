@@ -1,0 +1,197 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "major_factions_gameplay_baseline",
+  "factions": {
+    "united_federation_of_planets": {
+      "display_name_es": "Federación Unida de Planetas",
+      "type": "federal_interstellar_polity",
+      "normal_diplomacy": true,
+      "armed_service_ids": [
+        "starfleet"
+      ],
+      "gameplay_hooks": [
+        "civil_authority",
+        "member_world_jurisdiction",
+        "treaties",
+        "starfleet_mission_authority"
+      ],
+      "rules": [
+        "Federation is not Starfleet.",
+        "Member-world citizenship is not inferred from species."
+      ]
+    },
+    "klingon_empire": {
+      "display_name_es": "Imperio Klingon",
+      "type": "interstellar_empire",
+      "normal_diplomacy": true,
+      "authority_structure": [
+        "chancellor",
+        "high_council",
+        "great_houses"
+      ],
+      "gameplay_hooks": [
+        "house_authority",
+        "honor_context",
+        "border_incidents",
+        "war_or_alliance_state",
+        "military_challenge"
+      ],
+      "rules": [
+        "A Klingon character is not automatically an Imperial agent.",
+        "House interests can differ from central policy.",
+        "Honor language influences context but never substitutes for individual personality."
+      ],
+      "provenance": [
+        "TOS_ERRAND_OF_MERCY",
+        "ST6_THE_UNDISCOVERED_COUNTRY",
+        "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+      ]
+    },
+    "romulan_star_empire": {
+      "display_name_es": "Imperio Estelar Romulano",
+      "type": "interstellar_empire",
+      "normal_diplomacy": true,
+      "gameplay_hooks": [
+        "neutral_zone",
+        "cloaked_contact",
+        "intelligence_risk",
+        "border_outposts",
+        "covert_operations",
+        "war_or_alliance_state"
+      ],
+      "rules": [
+        "Romulan species does not imply Tal Shiar membership.",
+        "Cloaking capability is ship/state dependent, not an automatic detection failure.",
+        "Neutral Zone violations are jurisdiction events."
+      ],
+      "provenance": [
+        "TOS_BALANCE_OF_TERROR",
+        "TNG_THE_NEUTRAL_ZONE",
+        "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER"
+      ]
+    },
+    "cardassian_union": {
+      "display_name_es": "Unión Cardassiana",
+      "type": "centralized_interstellar_state",
+      "normal_diplomacy": true,
+      "gameplay_hooks": [
+        "border_tension",
+        "occupation_legacy",
+        "military_authority",
+        "intelligence_risk",
+        "dominion_alignment_state"
+      ],
+      "rules": [
+        "Cardassian species does not imply Union loyalty.",
+        "Occupation history changes Bajoran reactions but does not dictate every individual interaction.",
+        "Government alignment is date-dependent."
+      ],
+      "provenance": [
+        "DS9_EMISSARY",
+        "DS9_THE_WAY_OF_THE_WARRIOR",
+        "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+        "ST_OFFICIAL_DOMINION_101"
+      ]
+    },
+    "bajoran_provisional_government": {
+      "display_name_es": "Gobierno Provisional Bajorano",
+      "type": "planetary_sovereign_government",
+      "normal_diplomacy": true,
+      "armed_service_ids": [
+        "bajoran_militia"
+      ],
+      "gameplay_hooks": [
+        "bajoran_jurisdiction",
+        "deep_space_9_authority",
+        "post_occupation_security",
+        "federation_cooperation",
+        "religious_political_interface"
+      ],
+      "rules": [
+        "Bajor remains sovereign during DS9 baseline.",
+        "Federation presence does not make Bajoran territory Federation territory.",
+        "Religious authority and civil authority are separate systems."
+      ],
+      "provenance": [
+        "DS9_EMISSARY",
+        "DS9_CALL_TO_ARMS"
+      ]
+    },
+    "ferengi_alliance": {
+      "display_name_es": "Alianza Ferengi",
+      "type": "commercial_interstellar_polity",
+      "normal_diplomacy": true,
+      "authority_structure": [
+        "grand_nagus",
+        "ferengi_commerce_authority"
+      ],
+      "gameplay_hooks": [
+        "contracts",
+        "trade",
+        "latinum_exchange",
+        "commercial_law",
+        "bribery_risk",
+        "regulatory_authority"
+      ],
+      "rules": [
+        "Ferengi species does not imply Alliance citizenship or trader profession.",
+        "Profit motive is not a universal personality lock.",
+        "Commercial agreements create enforceable gameplay state where jurisdiction applies."
+      ],
+      "provenance": [
+        "TNG_THE_LAST_OUTPOST",
+        "ST_OFFICIAL_ROM_GRAND_NAGUS"
+      ]
+    },
+    "borg_collective": {
+      "display_name_es": "Colectivo Borg",
+      "type": "collective_assimilation_power",
+      "normal_diplomacy": false,
+      "gameplay_hooks": [
+        "assimilation_threat",
+        "collective_adaptation",
+        "boarding_risk",
+        "sensor_identification",
+        "temporary_tactical_cooperation"
+      ],
+      "rules": [
+        "Default contact is not modeled as ordinary diplomacy.",
+        "Liberated or disconnected Borg are separate character states.",
+        "Temporary operational deals do not establish normal bilateral relations."
+      ],
+      "provenance": [
+        "TNG_Q_WHO",
+        "TNG_BEST_OF_BOTH_WORLDS",
+        "VOY_SCORPION",
+        "ST_OFFICIAL_BORG_101"
+      ]
+    },
+    "dominion": {
+      "display_name_es": "Dominio",
+      "type": "gamma_quadrant_hegemonic_power",
+      "normal_diplomacy": true,
+      "authority_structure": [
+        "founders",
+        "vorta_administration",
+        "jem_hadar_military"
+      ],
+      "gameplay_hooks": [
+        "infiltration_risk",
+        "war_state",
+        "non_aggression_pacts",
+        "wormhole_strategy",
+        "subordinate_member_states"
+      ],
+      "rules": [
+        "Species does not determine Dominion membership except where explicit character state says so.",
+        "Negotiation can be genuine, coercive or strategic; AI cannot decide hidden intent without state.",
+        "Cardassian membership is date-dependent."
+      ],
+      "provenance": [
+        "DS9_THE_JEMHADAR",
+        "DS9_CALL_TO_ARMS",
+        "ST_OFFICIAL_DOMINION_101"
+      ]
+    }
+  }
+}

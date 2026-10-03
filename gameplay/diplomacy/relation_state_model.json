@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "model_id": "bilateral_faction_relation_state",
+  "key": "sorted_pair_of_faction_ids",
+  "fields": {
+    "faction_a_id": null,
+    "faction_b_id": null,
+    "effective_from": null,
+    "effective_to": null,
+    "diplomatic_status": "unknown",
+    "military_status": "peace",
+    "border_status": "normal",
+    "recognition_status": "recognized",
+    "contact_status": "established",
+    "treaty_ids": [],
+    "active_disputes": [],
+    "active_conflicts": [],
+    "sanctions": [],
+    "travel_restrictions": [],
+    "trade_status": "contextual",
+    "intelligence_risk": "normal",
+    "trust_level": "unknown",
+    "escalation_level": 0,
+    "notes": []
+  },
+  "allowed_diplomatic_status": [
+    "unknown",
+    "no_contact",
+    "limited_contact",
+    "hostile",
+    "cold_peace",
+    "neutral",
+    "cooperative",
+    "allied",
+    "temporary_tactical_cooperation"
+  ],
+  "allowed_military_status": [
+    "peace",
+    "armed_standoff",
+    "localized_hostilities",
+    "war",
+    "ceasefire"
+  ],
+  "allowed_border_status": [
+    "unknown",
+    "open",
+    "controlled",
+    "restricted",
+    "neutral_zone",
+    "disputed",
+    "closed",
+    "not_applicable"
+  ],
+  "runtime_rules": [
+    "Resolve state by campaign date before campaign start.",
+    "After campaign start, apply only live World State changes.",
+    "A treaty does not imply friendship between every character.",
+    "A species identity never determines faction relation.",
+    "Temporary tactical cooperation does not convert to alliance automatically.",
+    "Local commanders can escalate incidents but Core alone mutates official relation state."
+  ]
+}

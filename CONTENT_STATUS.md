@@ -109,7 +109,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 |---|---|
 | Characters | ⬜ TODO |
 | Species / cultures / languages | 🟨 IN_PROGRESS | Founding-species gameplay baseline established for Humans, Vulcans, Andorians and Tellarites; broader species, culture and language coverage remains progressive. |
-| Factions and organizations | ⬜ TODO |
+| Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | ⬜ TODO |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
 | Stations and facilities | ⬜ TODO |

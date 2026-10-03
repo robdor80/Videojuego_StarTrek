@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.24.0",
+  "registry_version": "0.25.0",
   "last_updated": "2026-10-03",
   "sources": [
     {
@@ -1461,6 +1461,189 @@
       "title": "Journey to Babel",
       "work": "Star Trek: The Original Series",
       "notes": "Screen evidence for Vulcan, Andorian and Tellarite participation in Federation diplomacy."
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Remain Klingon: The Federation's Relationship with Klingons",
+      "publisher": "StarTrek.com / Paramount",
+      "release_date": "2024-03-18",
+      "url": "https://www.startrek.com/news/remain-klingon-federation-relationship-with-klingons",
+      "accessed_at": "2026-10-03",
+      "notes": "Official overview of the Federation-Klingon relationship changing from adversarial conflict to alliance across retained eras."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Romulans: Federation Foes and Sometimes Their Darkest Mirror",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/star-trek-romulans-federation-primer",
+      "accessed_at": "2026-10-03",
+      "notes": "Official primer for Romulan-Federation hostility, the Neutral Zone and later interactions."
+    },
+    {
+      "source_id": "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Beginner's Guide to Star Trek's Interstellar Politics",
+      "publisher": "StarTrek.com / Paramount",
+      "release_date": "2023-12-04",
+      "url": "https://www.startrek.com/news/beginners-guide-to-interstellar-politics",
+      "accessed_at": "2026-10-03",
+      "notes": "Official overview useful for cross-checking major polity types, including the Cardassian Union."
+    },
+    {
+      "source_id": "ST_OFFICIAL_BORG_101",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: The Borg",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/star-trek-101-the-borg",
+      "accessed_at": "2026-10-03",
+      "notes": "Official overview of the Borg Collective, assimilation behavior, drones and cube operations."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: The Dominion",
+      "publisher": "StarTrek.com / Paramount",
+      "release_date": "2023-02-03",
+      "url": "https://www.startrek.com/news/star-trek-101-the-dominion",
+      "accessed_at": "2026-10-03",
+      "notes": "Official overview of Dominion hierarchy, Alpha/Gamma Quadrant conflict, Cardassian membership and the Federation Alliance."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROM_GRAND_NAGUS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Rom's Most Crucial Deep Space Nine Moments",
+      "publisher": "StarTrek.com / Paramount",
+      "release_date": "2023-11-10",
+      "url": "https://www.startrek.com/news/rom-moments-from-star-trek-deep-space-nine",
+      "accessed_at": "2026-10-03",
+      "notes": "Official overview supporting Grand Nagus leadership and late-DS9 Ferengi social/political change."
+    },
+    {
+      "source_id": "TOS_ERRAND_OF_MERCY",
+      "source_type": "SCREEN_CANON",
+      "title": "Errand of Mercy",
+      "work": "Star Trek: The Original Series",
+      "season": 1,
+      "episode": 26,
+      "notes": "Screen evidence for 23rd-century Federation-Klingon hostility and the Organian Peace Treaty."
+    },
+    {
+      "source_id": "ST6_THE_UNDISCOVERED_COUNTRY",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek VI: The Undiscovered Country",
+      "work": "Star Trek film",
+      "release_date": "1991-12-06",
+      "notes": "Screen evidence for the Praxis crisis, Khitomer peace process and 2293 Federation-Klingon diplomatic transition."
+    },
+    {
+      "source_id": "TOS_BALANCE_OF_TERROR",
+      "source_type": "SCREEN_CANON",
+      "title": "Balance of Terror",
+      "work": "Star Trek: The Original Series",
+      "season": 1,
+      "episode": 14,
+      "notes": "Screen evidence for the Romulan Neutral Zone, Federation border outposts and renewed 23rd-century contact."
+    },
+    {
+      "source_id": "TNG_THE_NEUTRAL_ZONE",
+      "source_type": "SCREEN_CANON",
+      "title": "The Neutral Zone",
+      "work": "Star Trek: The Next Generation",
+      "season": 1,
+      "episode": 26,
+      "notes": "Screen evidence for renewed Federation-Romulan contact after prolonged Romulan isolation."
+    },
+    {
+      "source_id": "TNG_THE_LAST_OUTPOST",
+      "source_type": "SCREEN_CANON",
+      "title": "The Last Outpost",
+      "work": "Star Trek: The Next Generation",
+      "season": 1,
+      "episode": 5,
+      "notes": "Screen evidence for early direct Federation-Ferengi contact."
+    },
+    {
+      "source_id": "TNG_Q_WHO",
+      "source_type": "SCREEN_CANON",
+      "title": "Q Who",
+      "work": "Star Trek: The Next Generation",
+      "season": 2,
+      "episode": 16,
+      "notes": "Screen evidence for direct Federation encounter with the Borg and assimilation threat."
+    },
+    {
+      "source_id": "TNG_BEST_OF_BOTH_WORLDS",
+      "source_type": "SCREEN_CANON",
+      "title": "The Best of Both Worlds",
+      "work": "Star Trek: The Next Generation",
+      "season": 3,
+      "episode": 26,
+      "notes": "Screen evidence for Borg attack on the Federation and Wolf 359 crisis."
+    },
+    {
+      "source_id": "DS9_EMISSARY",
+      "source_type": "SCREEN_CANON",
+      "title": "Emissary",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 1,
+      "episode": 1,
+      "notes": "Screen evidence for post-occupation Bajor, Bajoran sovereignty and Federation/Starfleet presence at Deep Space 9 by Bajoran invitation."
+    },
+    {
+      "source_id": "DS9_THE_JEMHADAR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Jem'Hadar",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 2,
+      "episode": 26,
+      "notes": "Screen evidence for first direct Federation encounter with Dominion power in the Gamma Quadrant."
+    },
+    {
+      "source_id": "DS9_THE_WAY_OF_THE_WARRIOR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Way of the Warrior",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 4,
+      "episode": 1,
+      "notes": "Screen evidence for the Klingon invasion of Cardassian space and breakdown of Federation-Klingon relations."
+    },
+    {
+      "source_id": "DS9_CALL_TO_ARMS",
+      "source_type": "SCREEN_CANON",
+      "title": "Call to Arms",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 5,
+      "episode": 26,
+      "notes": "Screen evidence for restored Federation-Klingon alliance, Bajoran non-aggression strategy and opening phase of Dominion War."
+    },
+    {
+      "source_id": "DS9_IN_THE_PALE_MOONLIGHT",
+      "source_type": "SCREEN_CANON",
+      "title": "In the Pale Moonlight",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 6,
+      "episode": 19,
+      "notes": "Screen evidence for Romulan entry into the Dominion War on the Federation-Klingon side."
+    },
+    {
+      "source_id": "DS9_THE_DOGS_OF_WAR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Dogs of War",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 7,
+      "episode": 24,
+      "notes": "Screen evidence for Rom becoming Grand Nagus and Cardassian resistance against Dominion control."
+    },
+    {
+      "source_id": "VOY_SCORPION",
+      "source_type": "SCREEN_CANON",
+      "title": "Scorpion",
+      "work": "Star Trek: Voyager",
+      "season": 3,
+      "episode": 26,
+      "notes": "Screen evidence for a temporary tactical Voyager-Borg alliance against Species 8472 rather than normal diplomatic relations."
     }
   ]
 }

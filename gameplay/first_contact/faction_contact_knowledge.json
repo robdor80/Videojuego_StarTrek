@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1",
+  "model_id": "faction_contact_knowledge",
+  "layers": [
+    "world_truth",
+    "sensor_classification",
+    "database_knowledge",
+    "character_knowledge",
+    "reported_assessment"
+  ],
+  "rules": [
+    "World truth is never exposed automatically to the player.",
+    "Unknown contacts begin as sensor observations, not faction labels.",
+    "Faction identity requires sufficient sensor, transponder, visual, linguistic or database evidence.",
+    "A known faction does not reveal current orders, hidden alliances or covert intent.",
+    "Historical relations are available only if the observing character or ship database plausibly knows them.",
+    "Classified intelligence requires clearance.",
+    "AI descriptions must use only the highest knowledge layer actually available."
+  ],
+  "contact_states": [
+    "unidentified",
+    "partially_classified",
+    "probable_faction",
+    "identified",
+    "verified_transponder",
+    "deceptive_or_conflicted_identity"
+  ],
+  "identification_inputs": [
+    "transponder",
+    "hull_configuration",
+    "energy_signature",
+    "warp_signature",
+    "weapon_signature",
+    "language",
+    "communications_protocol",
+    "database_match",
+    "visual_confirmation",
+    "intelligence_file"
+  ],
+  "gameplay_outputs": [
+    "available_hail_protocols",
+    "legal_rules_of_engagement",
+    "border_warning_context",
+    "known_treaty_status",
+    "known_threat_profile",
+    "confidence_display"
+  ]
+}

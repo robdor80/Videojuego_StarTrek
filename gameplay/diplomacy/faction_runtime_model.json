@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.1",
+  "model_id": "faction_runtime",
+  "principles": {
+    "faction_is_not_species": true,
+    "faction_is_not_culture": true,
+    "faction_is_not_character_personality": true,
+    "faction_state_is_temporal": true,
+    "live_campaign_state_overrides_future_canon": true
+  },
+  "faction_fields": {
+    "faction_id": null,
+    "display_name_es": null,
+    "polity_type": null,
+    "active_from": null,
+    "active_to": null,
+    "capital_or_primary_seat_id": null,
+    "authority_structure": {},
+    "controlled_region_ids": [],
+    "claimed_region_ids": [],
+    "recognized_border_ids": [],
+    "armed_service_ids": [],
+    "intelligence_service_ids": [],
+    "subordinate_faction_ids": [],
+    "treaty_ids": [],
+    "war_ids": [],
+    "current_leader_character_id": null,
+    "current_policy_flags": [],
+    "contact_protocol_id": null
+  },
+  "operational_interface": {
+    "vessel_identification": [
+      "faction_id",
+      "service_id",
+      "ship_id",
+      "transponder_status"
+    ],
+    "jurisdiction_checks": [
+      "location",
+      "border_status",
+      "treaty_status",
+      "mission_authority"
+    ],
+    "diplomatic_checks": [
+      "relation_state",
+      "contact_protocol",
+      "speaker_authority",
+      "active_crisis"
+    ],
+    "combat_checks": [
+      "rules_of_engagement",
+      "war_state",
+      "self_defense",
+      "civilian_status"
+    ],
+    "boarding_checks": [
+      "jurisdiction",
+      "consent_or_force",
+      "security_state"
+    ],
+    "trade_checks": [
+      "trade_status",
+      "sanctions",
+      "currency_or_exchange_context",
+      "local_law"
+    ]
+  },
+  "ai_authority": {
+    "may_roleplay_faction_representative": true,
+    "may_generate_demands_or_offers": true,
+    "may_mutate_treaty_or_war_state": false,
+    "may_assume_species_implies_faction": false,
+    "may_assume_uniform_implies_unlimited_authority": false
+  }
+}

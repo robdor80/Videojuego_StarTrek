@@ -1,0 +1,313 @@
+{
+  "schema_version": "0.1",
+  "model_id": "federation_major_relation_anchors",
+  "rule": "Anchors initialize pre-campaign history only. Once a campaign starts, later canonical anchors are not auto-applied.",
+  "relations": [
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "klingon_empire"
+      ],
+      "anchors": [
+        {
+          "year": 2267,
+          "diplomatic_status": "hostile",
+          "military_status": "armed_standoff",
+          "border_status": "controlled",
+          "treaty_ids": [
+            "organian_peace_treaty"
+          ],
+          "source_ids": [
+            "TOS_ERRAND_OF_MERCY"
+          ]
+        },
+        {
+          "year": 2293,
+          "diplomatic_status": "cooperative",
+          "military_status": "peace",
+          "border_status": "controlled",
+          "treaty_ids": [
+            "khitomer_accords"
+          ],
+          "source_ids": [
+            "ST6_THE_UNDISCOVERED_COUNTRY"
+          ]
+        },
+        {
+          "year": 2364,
+          "diplomatic_status": "allied",
+          "military_status": "peace",
+          "border_status": "open",
+          "source_ids": [
+            "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+          ]
+        },
+        {
+          "year": 2372,
+          "diplomatic_status": "hostile",
+          "military_status": "war",
+          "border_status": "restricted",
+          "source_ids": [
+            "DS9_THE_WAY_OF_THE_WARRIOR"
+          ]
+        },
+        {
+          "year": 2373,
+          "diplomatic_status": "allied",
+          "military_status": "war",
+          "border_status": "open",
+          "notes": [
+            "Alliance restored against Dominion."
+          ],
+          "source_ids": [
+            "DS9_CALL_TO_ARMS"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "anchors": [
+        {
+          "year": 2266,
+          "diplomatic_status": "cold_peace",
+          "military_status": "armed_standoff",
+          "border_status": "neutral_zone",
+          "source_ids": [
+            "TOS_BALANCE_OF_TERROR"
+          ]
+        },
+        {
+          "year": 2364,
+          "diplomatic_status": "cold_peace",
+          "military_status": "peace",
+          "border_status": "neutral_zone",
+          "notes": [
+            "Renewed direct contact after prolonged isolation."
+          ],
+          "source_ids": [
+            "TNG_THE_NEUTRAL_ZONE"
+          ]
+        },
+        {
+          "year": 2374,
+          "diplomatic_status": "allied",
+          "military_status": "war",
+          "border_status": "controlled",
+          "notes": [
+            "Alliance is against the Dominion; it does not erase other strategic distrust."
+          ],
+          "source_ids": [
+            "DS9_IN_THE_PALE_MOONLIGHT"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "cardassian_union"
+      ],
+      "anchors": [
+        {
+          "year": 2369,
+          "diplomatic_status": "cold_peace",
+          "military_status": "peace",
+          "border_status": "controlled",
+          "notes": [
+            "Post-conflict relationship; Bajoran occupation has ended."
+          ],
+          "source_ids": [
+            "DS9_EMISSARY"
+          ]
+        },
+        {
+          "year": 2373,
+          "diplomatic_status": "hostile",
+          "military_status": "war",
+          "border_status": "restricted",
+          "notes": [
+            "Cardassian Union has joined the Dominion."
+          ],
+          "source_ids": [
+            "ST_OFFICIAL_DOMINION_101",
+            "DS9_CALL_TO_ARMS"
+          ]
+        },
+        {
+          "year": 2375,
+          "diplomatic_status": "temporary_tactical_cooperation",
+          "military_status": "ceasefire",
+          "border_status": "controlled",
+          "notes": [
+            "Cardassian resistance turns against Dominion control near war's end; exact postwar normalization remains live-state content."
+          ],
+          "source_ids": [
+            "DS9_THE_DOGS_OF_WAR"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "bajoran_provisional_government"
+      ],
+      "anchors": [
+        {
+          "year": 2369,
+          "diplomatic_status": "cooperative",
+          "military_status": "peace",
+          "border_status": "open",
+          "notes": [
+            "Bajor is sovereign; Starfleet operates at Deep Space 9 by Bajoran invitation."
+          ],
+          "source_ids": [
+            "DS9_EMISSARY"
+          ]
+        },
+        {
+          "year": 2373,
+          "diplomatic_status": "cooperative",
+          "military_status": "peace",
+          "border_status": "open",
+          "notes": [
+            "Bajor follows a non-aggression strategy toward Dominion while Federation forces withdraw from DS9."
+          ],
+          "source_ids": [
+            "DS9_CALL_TO_ARMS"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "ferengi_alliance"
+      ],
+      "anchors": [
+        {
+          "year": 2364,
+          "diplomatic_status": "limited_contact",
+          "military_status": "peace",
+          "border_status": "controlled",
+          "source_ids": [
+            "TNG_THE_LAST_OUTPOST"
+          ]
+        },
+        {
+          "year": 2369,
+          "diplomatic_status": "neutral",
+          "military_status": "peace",
+          "border_status": "open",
+          "notes": [
+            "Commercial and civilian contact is routine around Deep Space 9; local law and contracts matter."
+          ],
+          "source_ids": [
+            "DS9_EMISSARY"
+          ]
+        },
+        {
+          "year": 2375,
+          "diplomatic_status": "neutral",
+          "military_status": "peace",
+          "border_status": "open",
+          "notes": [
+            "Grand Nagus leadership changes; do not assume all prior Ferengi social rules remain frozen after this anchor."
+          ],
+          "source_ids": [
+            "DS9_THE_DOGS_OF_WAR",
+            "ST_OFFICIAL_ROM_GRAND_NAGUS"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "borg_collective"
+      ],
+      "anchors": [
+        {
+          "year": 2365,
+          "diplomatic_status": "hostile",
+          "military_status": "armed_standoff",
+          "border_status": "not_applicable",
+          "contact_status": "established",
+          "source_ids": [
+            "TNG_Q_WHO"
+          ]
+        },
+        {
+          "year": 2366,
+          "diplomatic_status": "hostile",
+          "military_status": "localized_hostilities",
+          "border_status": "not_applicable",
+          "notes": [
+            "Direct Borg assault makes assimilation an active strategic threat."
+          ],
+          "source_ids": [
+            "TNG_BEST_OF_BOTH_WORLDS"
+          ]
+        },
+        {
+          "year": 2373,
+          "diplomatic_status": "hostile",
+          "military_status": "armed_standoff",
+          "border_status": "not_applicable",
+          "notes": [
+            "Voyager-Borg cooperation is local and temporary; global Federation-Borg relation does not become allied."
+          ],
+          "source_ids": [
+            "VOY_SCORPION"
+          ]
+        }
+      ]
+    },
+    {
+      "pair": [
+        "united_federation_of_planets",
+        "dominion"
+      ],
+      "anchors": [
+        {
+          "year": 2370,
+          "diplomatic_status": "hostile",
+          "military_status": "armed_standoff",
+          "border_status": "controlled",
+          "notes": [
+            "First direct major contact in Gamma Quadrant."
+          ],
+          "source_ids": [
+            "DS9_THE_JEMHADAR"
+          ]
+        },
+        {
+          "year": 2373,
+          "diplomatic_status": "hostile",
+          "military_status": "war",
+          "border_status": "restricted",
+          "source_ids": [
+            "DS9_CALL_TO_ARMS",
+            "ST_OFFICIAL_DOMINION_101"
+          ]
+        },
+        {
+          "year": 2375,
+          "diplomatic_status": "cold_peace",
+          "military_status": "ceasefire",
+          "border_status": "controlled",
+          "notes": [
+            "War ends; subsequent relations are not pre-scripted beyond campaign start."
+          ],
+          "source_ids": [
+            "ST_OFFICIAL_DOMINION_101"
+          ]
+        }
+      ]
+    }
+  ]
+}
