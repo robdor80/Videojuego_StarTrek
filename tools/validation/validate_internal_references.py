@@ -33,6 +33,8 @@ LOCATION_KEYS = {
     "destination_location_id",
     "from_location_id",
     "to_location_id",
+    "homeworld_id",
+    "common_homeworld_id",
 }
 DESCRIPTOR_UNDERLYING_SOURCES = {"real_star", "40_eridani_reference"}
 

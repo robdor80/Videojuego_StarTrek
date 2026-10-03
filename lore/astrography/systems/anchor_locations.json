@@ -270,6 +270,37 @@
         "STAR_CHARTS_2002",
         "ST_OFFICIAL_BORG_101"
       ]
+    },
+    {
+      "location_id": "qonos",
+      "display_name_es": "Qo'noS",
+      "location_type": "planet",
+      "region_id": "klingon_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "MA_KLINGON",
+        "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
+      ]
+    },
+    {
+      "location_id": "romulus",
+      "display_name_es": "Romulus",
+      "location_type": "planet",
+      "region_id": "romulan_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "MA_ROMULAN",
+        "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
+      ]
+    },
+    {
+      "location_id": "betazed",
+      "display_name_es": "Betazed",
+      "location_type": "planet",
+      "region_id": "federation_space",
+      "source_refs": [
+        "MA_BETAZOID"
+      ]
     }
   ],
   "rules": [
