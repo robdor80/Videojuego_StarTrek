@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "model_id": "exploration_progress",
+  "progress_targets": [
+    "location",
+    "route",
+    "hazard",
+    "anomaly",
+    "species_contact",
+    "political_region",
+    "navigation_shortcut"
+  ],
+  "fields": {
+    "subject_id": null,
+    "owner_database_id": null,
+    "status": "unknown",
+    "confidence": "unknown",
+    "first_detected_at": null,
+    "first_visited_at": null,
+    "last_verified_at": null,
+    "survey_completion": 0,
+    "mapped_fields": [],
+    "unresolved_questions": [],
+    "source_event_ids": []
+  },
+  "statuses": [
+    "unknown",
+    "detected",
+    "catalogued",
+    "charted",
+    "survey_in_progress",
+    "surveyed",
+    "verified",
+    "stale"
+  ],
+  "progression_rules": [
+    "Sensor detection can create a low-confidence record.",
+    "Repeated independent observations may raise confidence.",
+    "Close survey can reveal navigation hazards, resources, life signs or spatial properties only when Core exposes them.",
+    "Old political or hazard data may become stale.",
+    "Exploration progress persists even when no mission objective explicitly requested it."
+  ],
+  "gameplay_outputs": [
+    "safer_future_routes",
+    "new_mission_candidates",
+    "improved_sensor_classification",
+    "database_updates",
+    "scientific_credit_or_service_record_hooks",
+    "diplomatic_or_first_contact_followups"
+  ]
+}

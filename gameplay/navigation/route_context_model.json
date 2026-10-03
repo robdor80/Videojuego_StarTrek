@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "model_id": "route_context_snapshot",
+  "inputs": [
+    "route_segments",
+    "campaign_time",
+    "ship_entity_id",
+    "mission_context",
+    "political_overlays",
+    "faction_relation_state",
+    "astrographic_knowledge_state",
+    "sensor_state",
+    "strategic_locations"
+  ],
+  "outputs": {
+    "route_id": null,
+    "known_risk_tags": [],
+    "unknown_risk_budget": null,
+    "border_crossings": [],
+    "support_opportunities": [],
+    "strategic_nodes": [],
+    "science_opportunities": [],
+    "distress_response_context": [],
+    "traffic_density_profile": "unknown",
+    "patrol_density_profile": "unknown",
+    "route_tension_profile": "normal"
+  },
+  "known_risk_tags": [
+    "navigation_hazard",
+    "hostile_patrol",
+    "restricted_border",
+    "sensor_uncertainty",
+    "limited_support",
+    "subspace_instability",
+    "active_conflict",
+    "piracy_or_raider_risk",
+    "intelligence_risk"
+  ],
+  "rules": [
+    "World Truth can contain risks absent from the known-risk list.",
+    "Unknown risk is never exposed as a specific hidden fact.",
+    "Route context is recalculated when political state, sensors, knowledge or mission changes.",
+    "A safe route may still generate ordinary traffic or non-hostile events.",
+    "Strategic importance changes probabilities and response times but does not force an encounter."
+  ]
+}

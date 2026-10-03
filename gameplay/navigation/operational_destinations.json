@@ -1,0 +1,328 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "operational_destinations",
+  "rule": "Destinations are defined by gameplay affordances, not encyclopedia completeness. Tags describe what the location can currently support when live state permits.",
+  "destinations": [
+    {
+      "location_id": "earth",
+      "operational_tags": [
+        "command",
+        "academy",
+        "diplomacy",
+        "personnel",
+        "resupply",
+        "medical",
+        "science"
+      ],
+      "route_value": [
+        "safe_port",
+        "high_support"
+      ],
+      "era_availability": [
+        "pike",
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "vulcan",
+      "operational_tags": [
+        "diplomacy",
+        "science",
+        "medical",
+        "cultural_contact",
+        "personnel"
+      ],
+      "route_value": [
+        "federation_member_world",
+        "safe_port"
+      ],
+      "era_availability": [
+        "pike",
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "ENT_4X22_THESE_ARE_THE_VOYAGES",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "andoria",
+      "operational_tags": [
+        "diplomacy",
+        "cultural_contact",
+        "security",
+        "personnel"
+      ],
+      "route_value": [
+        "federation_member_world",
+        "safe_port"
+      ],
+      "era_availability": [
+        "pike",
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "ENT_4X22_THESE_ARE_THE_VOYAGES",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "tellar_prime",
+      "operational_tags": [
+        "diplomacy",
+        "trade",
+        "cultural_contact",
+        "personnel"
+      ],
+      "route_value": [
+        "federation_member_world",
+        "safe_port"
+      ],
+      "era_availability": [
+        "pike",
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "ENT_4X22_THESE_ARE_THE_VOYAGES",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "deep_space_station_k7",
+      "operational_tags": [
+        "frontier_support",
+        "diplomacy",
+        "trade",
+        "security",
+        "resupply",
+        "inspection"
+      ],
+      "route_value": [
+        "frontier_hub",
+        "border_context"
+      ],
+      "era_availability": [
+        "kirk"
+      ],
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ]
+    },
+    {
+      "location_id": "galorndon_core",
+      "operational_tags": [
+        "survey",
+        "rescue",
+        "border_incident",
+        "science"
+      ],
+      "route_value": [
+        "romulan_frontier",
+        "high_diplomatic_risk"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "TNG_THE_ENEMY"
+      ]
+    },
+    {
+      "location_id": "bajor",
+      "operational_tags": [
+        "diplomacy",
+        "humanitarian",
+        "security",
+        "cultural_contact",
+        "trade"
+      ],
+      "route_value": [
+        "sovereign_world",
+        "wormhole_region"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "deep_space_9",
+      "operational_tags": [
+        "diplomacy",
+        "trade",
+        "resupply",
+        "security",
+        "repair",
+        "personnel",
+        "wormhole_access"
+      ],
+      "route_value": [
+        "strategic_hub",
+        "frontier_hub",
+        "safe_port_contextual"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "cardassia_prime",
+      "operational_tags": [
+        "diplomacy",
+        "intelligence_risk",
+        "political_contact",
+        "military_context"
+      ],
+      "route_value": [
+        "foreign_capital",
+        "access_contextual"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "badlands",
+      "operational_tags": [
+        "navigation_hazard",
+        "survey",
+        "pursuit",
+        "search_and_rescue",
+        "covert_route"
+      ],
+      "route_value": [
+        "hazardous_region",
+        "limited_support"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_DEFIANT",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "ferenginar",
+      "operational_tags": [
+        "trade",
+        "contracts",
+        "diplomacy",
+        "commercial_law"
+      ],
+      "route_value": [
+        "commercial_destination"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "trill",
+      "operational_tags": [
+        "medical",
+        "science",
+        "diplomacy",
+        "personnel"
+      ],
+      "route_value": [
+        "federation_member_world",
+        "safe_port"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EQUILIBRIUM",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "starbase_375",
+      "operational_tags": [
+        "fleet_support",
+        "repair",
+        "resupply",
+        "personnel",
+        "military_staging"
+      ],
+      "route_value": [
+        "strategic_support"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "bajoran_wormhole_alpha",
+      "operational_tags": [
+        "special_traversal",
+        "science",
+        "strategic_control",
+        "exploration"
+      ],
+      "route_value": [
+        "chokepoint",
+        "gamma_quadrant_access"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "bajoran_wormhole_gamma",
+      "operational_tags": [
+        "special_traversal",
+        "science",
+        "exploration",
+        "frontier"
+      ],
+      "route_value": [
+        "gamma_quadrant_entry",
+        "limited_support"
+      ],
+      "era_availability": [
+        "tng_ds9_voyager"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    }
+  ],
+  "runtime_rules": [
+    "Operational tags do not guarantee that a service is currently available.",
+    "Live damage, war, blockade, local law or campaign events may disable an affordance.",
+    "A destination can gain or lose tags during campaign play.",
+    "Era availability means default chart/gameplay eligibility, not physical creation or destruction."
+  ]
+}
