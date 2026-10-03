@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_support_effects",
+  "classification": "GAME_ADDITION",
+  "service_effects": {
+    "resupply_general": [
+      "increase_relevant_resource_inventory",
+      "improve_endurance_state",
+      "clear_matching_supply_shortage_need"
+    ],
+    "resupply_ordnance": [
+      "increase_supported_ordnance_inventory",
+      "improve_tactical_endurance"
+    ],
+    "medical_basic": [
+      "increase_treatment_capacity",
+      "support_patient_stabilization",
+      "support_medical_transfer"
+    ],
+    "repair_field": [
+      "perform_supported_repair_jobs",
+      "restore_system_function_within_facility_limit",
+      "reduce_or_clear_damage_constraints"
+    ],
+    "repair_heavy": [
+      "perform_major_repair_jobs",
+      "restore_structural_or_system_margin_within_facility_limit"
+    ],
+    "drydock": [
+      "enable_repairs_or_overhaul_requiring_external_support"
+    ],
+    "personnel_transfer": [
+      "embark_or_disembark_personnel",
+      "fill_or_create_assignment_changes"
+    ],
+    "cargo_transfer": [
+      "load_or_unload_cargo",
+      "satisfy_logistics_objectives"
+    ]
+  },
+  "rules": [
+    "Service effects occur only after a completed or partially completed service job.",
+    "Services do not restore a ship beyond its class/configuration limits.",
+    "Repair outcome depends on required parts, staff, access, hazards and facility capability.",
+    "Personnel transfer must update assignment/manifests through existing career/personnel systems.",
+    "No service silently resets all ship state to perfect."
+  ]
+}

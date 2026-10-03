@@ -1,0 +1,130 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "initial_facility_profiles",
+  "classification": "GAME_ADDITION",
+  "purpose": "Seed operational support profiles for already-modeled locations. These are conservative gameplay baselines, not claims of exhaustive canonical capacity.",
+  "facilities": [
+    {
+      "facility_id": "deep_space_station_k7",
+      "display_name_es": "Estación Espacial K-7",
+      "facility_type": "space_station",
+      "era_profiles": [
+        "kirk"
+      ],
+      "operational_role_tags": [
+        "frontier_support",
+        "trade",
+        "security",
+        "resupply",
+        "inspection",
+        "diplomacy"
+      ],
+      "baseline_capabilities": [
+        "berth",
+        "resupply_general",
+        "cargo_transfer",
+        "personnel_transfer",
+        "security_support",
+        "diplomatic_services",
+        "trade_services"
+      ],
+      "capability_confidence": "MEDIUM",
+      "exact_capacity_known": false,
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ],
+      "notes": [
+        "No exact berth count, stock level or repair throughput is asserted here.",
+        "Additional capabilities require later source validation."
+      ]
+    },
+    {
+      "facility_id": "deep_space_9",
+      "display_name_es": "Espacio Profundo 9",
+      "facility_type": "space_station",
+      "era_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "operational_role_tags": [
+        "strategic_hub",
+        "frontier_hub",
+        "resupply",
+        "repair",
+        "personnel",
+        "security",
+        "trade",
+        "wormhole_access",
+        "diplomacy"
+      ],
+      "baseline_capabilities": [
+        "dock",
+        "berth",
+        "traffic_control",
+        "resupply_general",
+        "medical_basic",
+        "repair_field",
+        "personnel_transfer",
+        "cargo_transfer",
+        "smallcraft_support",
+        "security_support",
+        "command_and_control",
+        "communications_relay",
+        "diplomatic_services",
+        "trade_services"
+      ],
+      "capability_confidence": "HIGH",
+      "exact_capacity_known": false,
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ],
+      "notes": [
+        "Capability availability remains live and may be degraded by damage, occupation, blockade, shortages or campaign divergence."
+      ]
+    },
+    {
+      "facility_id": "starbase_375",
+      "display_name_es": "Base Estelar 375",
+      "facility_type": "starbase",
+      "era_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "operational_role_tags": [
+        "fleet_support",
+        "repair",
+        "resupply",
+        "personnel",
+        "military_staging"
+      ],
+      "baseline_capabilities": [
+        "dock",
+        "berth",
+        "traffic_control",
+        "resupply_general",
+        "resupply_ordnance",
+        "medical_basic",
+        "repair_field",
+        "personnel_transfer",
+        "cargo_transfer",
+        "security_support",
+        "command_and_control",
+        "communications_relay"
+      ],
+      "capability_confidence": "MEDIUM",
+      "exact_capacity_known": false,
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ],
+      "notes": [
+        "Heavy-repair/drydock capability is not assumed until validated separately.",
+        "This profile models strategic fleet support without inventing exact throughput."
+      ]
+    }
+  ],
+  "rules": [
+    "Baseline capability is not guaranteed current availability.",
+    "All service use checks live facility operational state and queue.",
+    "Exact capacities remain undefined until sourced or deliberately defined as GAME_ADDITION.",
+    "Campaign events may permanently change these profiles through authoritative overrides."
+  ]
+}

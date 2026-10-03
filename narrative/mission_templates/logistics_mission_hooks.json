@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "model_id": "logistics_mission_hooks",
+  "classification": "GAME_ADDITION",
+  "world_state_to_need_rules": [
+    {
+      "condition": "facility_inventory_below_policy_threshold",
+      "generated_need_type": "deliver_supplies",
+      "candidate_mission_types": [
+        "logistics",
+        "escort_if_route_risk_justifies"
+      ]
+    },
+    {
+      "condition": "facility_critical_capability_disabled",
+      "generated_need_type": "repair_assistance",
+      "candidate_mission_types": [
+        "logistics",
+        "relief_or_rescue",
+        "investigation_if_cause_unknown"
+      ]
+    },
+    {
+      "condition": "damaged_ship_requires_unavailable_local_repair",
+      "generated_need_type": "tow_assistance",
+      "candidate_mission_types": [
+        "relief_or_rescue",
+        "logistics"
+      ]
+    },
+    {
+      "condition": "medical_capacity_exceeded",
+      "generated_need_type": "evacuation",
+      "candidate_mission_types": [
+        "relief_or_rescue",
+        "medical_response"
+      ]
+    },
+    {
+      "condition": "personnel_rotation_due",
+      "generated_need_type": "transport_personnel",
+      "candidate_mission_types": [
+        "logistics"
+      ]
+    },
+    {
+      "condition": "support_route_disrupted",
+      "generated_need_type": "convoy_protection",
+      "candidate_mission_types": [
+        "escort",
+        "patrol",
+        "investigation"
+      ]
+    }
+  ],
+  "rules": [
+    "A logistics mission requires a live shortage, scheduled requirement or support dependency.",
+    "Routine replenishment may be handled by NPC traffic and never become a player mission.",
+    "Shortages can be solved through rerouting, alternate facilities, convoy protection, repair or substitution depending on live state.",
+    "The generator must not create shortages merely to produce content."
+  ]
+}

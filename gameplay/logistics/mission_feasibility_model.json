@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_logistics_feasibility",
+  "classification": "GAME_ADDITION",
+  "inputs": [
+    "mission_candidate",
+    "route_plan",
+    "ship_endurance_state",
+    "operational_resource_inventory",
+    "ship_damage_state",
+    "crew_readiness",
+    "reachable_support_facilities",
+    "facility_operational_state",
+    "facility_service_queue",
+    "mission_reserve_policy",
+    "return_or_recovery_plan"
+  ],
+  "feasibility_states": [
+    "feasible",
+    "feasible_with_planned_support",
+    "conditional",
+    "not_feasible",
+    "unknown"
+  ],
+  "checks": [
+    "outbound_travel_endurance",
+    "on_station_endurance",
+    "return_or_recovery_endurance",
+    "required_ordnance_or_expendables",
+    "repair_margin",
+    "medical_support_margin",
+    "smallcraft_requirements",
+    "cargo_or_passenger_requirements",
+    "reachable_resupply",
+    "reachable_repair",
+    "support_queue_delay",
+    "political_access_to_support",
+    "mission_time_window"
+  ],
+  "output": {
+    "state": "unknown",
+    "blocking_reasons": [],
+    "support_plan_refs": [],
+    "reserve_margin_summary": {},
+    "estimated_support_delay": null,
+    "risk_acceptance_required": false
+  },
+  "rules": [
+    "Mission assignment must not assume unlimited supplies or instant repair.",
+    "A mission may be feasible only if specific support stops are planned.",
+    "Known inaccessible or saturated facilities cannot be counted as guaranteed support.",
+    "Command may knowingly accept reduced reserve or higher logistics risk if authority permits; this is recorded as a decision.",
+    "Unknown exact capacity produces uncertainty, not invented precision.",
+    "A failed support stop can trigger rerouting, mission amendment, emergency support or abort decisions."
+  ]
+}
