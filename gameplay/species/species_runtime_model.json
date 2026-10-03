@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1",
+  "model_id": "species_character_runtime",
+  "principles": {
+    "species_is_not_culture": true,
+    "species_is_not_citizenship": true,
+    "species_is_not_personality": true,
+    "contextual_capabilities_not_flat_stat_bonuses": true,
+    "individual_variation_required": true
+  },
+  "character_fields": {
+    "species_id": null,
+    "lineage_ids": [],
+    "culture_ids": [],
+    "culture_affinity": {},
+    "citizenship_ids": [],
+    "faction_ids": [],
+    "physiological_traits": [],
+    "trained_species_capabilities": [],
+    "species_specific_states": [],
+    "medical_flags": [],
+    "cultural_familiarity": {},
+    "rejected_norms": [],
+    "individual_overrides": {}
+  },
+  "action_resolution": {
+    "physiology_can_modify": [
+      "strength_contest",
+      "endurance",
+      "environmental_tolerance",
+      "sensory_task",
+      "medical_treatment",
+      "telepathic_action"
+    ],
+    "culture_can_modify": [
+      "social_interpretation",
+      "etiquette",
+      "negotiation_context",
+      "taboo_detection",
+      "shared_reference"
+    ],
+    "personality_remains_independent": true
+  },
+  "ai_authority": {
+    "may_present_known_traits": true,
+    "may_roleplay_cultural_influence": true,
+    "may_mutate_species_state": false,
+    "may_infer_hidden_medical_state_without_evidence": false
+  }
+}

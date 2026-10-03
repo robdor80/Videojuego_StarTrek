@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1",
+  "model_id": "founding_species_medical_hooks",
+  "rules": {
+    "human_is_reference_baseline_only": true,
+    "treatment_uses_patient_species_profile": true,
+    "hidden_medical_states_are_knowledge_gated": true,
+    "ai_cannot_diagnose_from_lore_without_observed_evidence": true
+  },
+  "hooks": {
+    "human": [],
+    "vulcan": [
+      {
+        "id": "vulcan_pon_farr",
+        "type": "periodic_neurophysiological_state",
+        "privacy": "restricted",
+        "severity": "potentially_critical",
+        "trigger": "character_state"
+      },
+      {
+        "id": "vulcan_telepathic_contact",
+        "type": "neurological_contact",
+        "risk_model": "contextual",
+        "requires_core_resolution": true
+      },
+      {
+        "id": "vulcan_light_protection",
+        "type": "sensory_adaptation",
+        "effect": "inner_eyelid_may_mitigate_extreme_light"
+      }
+    ],
+    "andorian": [
+      {
+        "id": "andorian_antenna_trauma",
+        "type": "sensory_balance_injury",
+        "effect": "temporary_balance_impairment_possible",
+        "recovery": "regrowth_over_months"
+      }
+    ],
+    "tellarite": []
+  }
+}

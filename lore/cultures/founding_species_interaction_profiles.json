@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1",
+  "model_id": "founding_species_cultural_interaction",
+  "rules": {
+    "culture_is_character_state_not_species_lock": true,
+    "social_norms_are_contextual": true,
+    "individual_personality_overrides_cultural_default": true,
+    "cultural_familiarity_changes_interpretation": true
+  },
+  "interaction_profiles": {
+    "human": {
+      "possible_norms": [
+        "extreme cultural diversity"
+      ],
+      "misread_risks": [
+        "Earth norms cannot stand in for every Human colony or upbringing."
+      ],
+      "forbidden_ai_shortcut": "Do not equate Human with Earth-raised or Federation citizen."
+    },
+    "vulcan": {
+      "possible_norms": [
+        "formal restraint",
+        "logic-centered framing",
+        "controlled emotional display"
+      ],
+      "misread_risks": [
+        "Restraint can be misread as indifference."
+      ],
+      "forbidden_ai_shortcut": "Never portray every Vulcan as emotionless or identical."
+    },
+    "andorian": {
+      "possible_norms": [
+        "directness",
+        "challenge-response traditions",
+        "martial or honor-linked practices in some contexts"
+      ],
+      "misread_risks": [
+        "Directness must not automatically become aggression."
+      ],
+      "forbidden_ai_shortcut": "Do not turn all Andorians into warriors."
+    },
+    "tellarite": {
+      "possible_norms": [
+        "argument",
+        "complaint",
+        "verbal challenge",
+        "debate"
+      ],
+      "misread_risks": [
+        "An insult can be conventional engagement rather than escalation."
+      ],
+      "forbidden_ai_shortcut": "Do not treat every Tellarite line as anger."
+    }
+  }
+}

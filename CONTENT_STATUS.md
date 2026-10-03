@@ -108,7 +108,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Domain | Status |
 |---|---|
 | Characters | ⬜ TODO |
-| Species / cultures / languages | ⬜ TODO |
+| Species / cultures / languages | 🟨 IN_PROGRESS | Founding-species gameplay baseline established for Humans, Vulcans, Andorians and Tellarites; broader species, culture and language coverage remains progressive. |
 | Factions and organizations | ⬜ TODO |
 | Astrography | ⬜ TODO |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |

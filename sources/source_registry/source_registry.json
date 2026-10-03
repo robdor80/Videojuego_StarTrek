@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.23.0",
+  "registry_version": "0.24.0",
   "last_updated": "2026-10-03",
   "sources": [
     {
@@ -1355,6 +1355,112 @@
       "work": "Star Trek film",
       "release_date": "1996-11-22",
       "notes": "Screen evidence for the late-24th-century Federation scale: over 150 member worlds spread across roughly 8,000 light-years."
+    },
+    {
+      "source_id": "MA_HUMAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Human",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Human",
+      "accessed_at": "2026-10-03",
+      "notes": "Cross-check for Human physiology/culture distinctions and diversity of Earth and colonial Human cultures."
+    },
+    {
+      "source_id": "MA_VULCAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vulcan",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Vulcan",
+      "accessed_at": "2026-10-03",
+      "notes": "Cross-check for Vulcan physiology, touch-telepathy, arid adaptation, enhanced strength/reflexes and pon farr."
+    },
+    {
+      "source_id": "MA_ANDORIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Andorian",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Andorian",
+      "accessed_at": "2026-10-03",
+      "notes": "Cross-check for Andorian antennae, balance, regeneration, cold-world physiology and founding-member context."
+    },
+    {
+      "source_id": "MA_TELLARITE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tellarite",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tellarite",
+      "accessed_at": "2026-10-03",
+      "notes": "Cross-check for Tellarite debate/argument culture and founding-member context."
+    },
+    {
+      "source_id": "TOS_DAGGER_OF_THE_MIND",
+      "source_type": "SCREEN_CANON",
+      "title": "Dagger of the Mind",
+      "work": "Star Trek: The Original Series",
+      "notes": "Screen evidence for Vulcan mind meld capability."
+    },
+    {
+      "source_id": "TOS_AMOK_TIME",
+      "source_type": "SCREEN_CANON",
+      "title": "Amok Time",
+      "work": "Star Trek: The Original Series",
+      "notes": "Screen evidence for pon farr as a private and potentially life-threatening Vulcan biological state."
+    },
+    {
+      "source_id": "TOS_OPERATION_ANNIHILATE",
+      "source_type": "SCREEN_CANON",
+      "title": "Operation -- Annihilate!",
+      "work": "Star Trek: The Original Series",
+      "notes": "Screen evidence for the Vulcan inner eyelid protecting against intense light."
+    },
+    {
+      "source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
+      "source_type": "SCREEN_CANON",
+      "title": "Take Me Out to the Holosuite",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Screen evidence for Vulcan physical strength being substantially above Human norms."
+    },
+    {
+      "source_id": "VOY_BLOOD_FEVER",
+      "source_type": "SCREEN_CANON",
+      "title": "Blood Fever",
+      "work": "Star Trek: Voyager",
+      "notes": "Screen evidence for Vulcan touch-telepathic bonding and pon farr effects."
+    },
+    {
+      "source_id": "ENT_UNITED",
+      "source_type": "SCREEN_CANON",
+      "title": "United",
+      "work": "Star Trek: Enterprise",
+      "notes": "Screen evidence for Andorian antennae, their role in balance, injury effects/regrowth and Ushaan cultural context."
+    },
+    {
+      "source_id": "ENT_THE_AENAR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Aenar",
+      "work": "Star Trek: Enterprise",
+      "notes": "Screen evidence for Andoria's cold environment and the related Aenar population."
+    },
+    {
+      "source_id": "ENT_BABEL_ONE",
+      "source_type": "SCREEN_CANON",
+      "title": "Babel One",
+      "work": "Star Trek: Enterprise",
+      "notes": "Screen evidence for Tellarite argumentative/complaining interaction style and Andorian-Tellarite diplomatic context."
+    },
+    {
+      "source_id": "ENT_BOUNTY",
+      "source_type": "SCREEN_CANON",
+      "title": "Bounty",
+      "work": "Star Trek: Enterprise",
+      "notes": "Screen evidence for Tellarite debate culture and Vulcan pon farr context."
+    },
+    {
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "source_type": "SCREEN_CANON",
+      "title": "Journey to Babel",
+      "work": "Star Trek: The Original Series",
+      "notes": "Screen evidence for Vulcan, Andorian and Tellarite participation in Federation diplomacy."
     }
   ]
 }

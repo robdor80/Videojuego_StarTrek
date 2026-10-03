@@ -1,0 +1,190 @@
+{
+  "schema_version": "0.1",
+  "profile_scope": "founding_federation_species_gameplay_baseline",
+  "profiles": {
+    "human": {
+      "display_name_es": "Humano",
+      "homeworld_id": "earth",
+      "gameplay_role": "reference_humanoid_baseline",
+      "physiology": {
+        "strength_profile": "baseline_reference",
+        "reflex_profile": "baseline_reference",
+        "environmental_notes": [
+          "No universal non-human physiological advantage is assigned at species level."
+        ]
+      },
+      "cultural_rules": {
+        "earth_culture_is_not_universal_human_culture": true,
+        "colonies_may_diverge_strongly": true,
+        "federation_citizenship_not_implied": true
+      },
+      "character_creation": {
+        "forced_personality_traits": [],
+        "forced_cultural_traits": []
+      },
+      "provenance": [
+        {
+          "source_id": "MA_HUMAN",
+          "confidence": "MEDIUM",
+          "claim_scope": "Human cultural diversity and comparative baseline"
+        },
+        {
+          "source_id": "ST8_FIRST_CONTACT",
+          "confidence": "HIGH",
+          "claim_scope": "late-24th-century Earth social context"
+        }
+      ]
+    },
+    "vulcan": {
+      "display_name_es": "Vulcano",
+      "homeworld_id": "vulcan",
+      "physiology": {
+        "strength_profile": "enhanced_vs_human",
+        "reflex_profile": "enhanced_vs_human",
+        "arid_environment_adaptation": true,
+        "inner_eyelid": true,
+        "touch_telepathy": "species_capability_with_individual_and_training_variation"
+      },
+      "actions": {
+        "mind_meld": {
+          "available_if": [
+            "character_has_capability",
+            "sufficient_training_or_established_ability",
+            "context_allows_attempt"
+          ],
+          "consent_policy": "consent_required_when_reasonably_possible",
+          "core_resolves_scope": true,
+          "not_omniscient": true
+        }
+      },
+      "lifecycle_states": {
+        "pon_farr": {
+          "periodicity": "approximately_seven_year_cycle",
+          "private_medical_state": true,
+          "potentially_critical": true,
+          "always_active": false,
+          "reveal_only_if_known": true
+        }
+      },
+      "cultural_rules": {
+        "logic_and_emotional_control_are_cultural_disciplines": true,
+        "vulcans_do_have_emotions": true,
+        "adherence_varies_by_character": true
+      },
+      "provenance": [
+        {
+          "source_id": "TOS_DAGGER_OF_THE_MIND",
+          "confidence": "HIGH",
+          "claim_scope": "mind meld"
+        },
+        {
+          "source_id": "TOS_AMOK_TIME",
+          "confidence": "HIGH",
+          "claim_scope": "pon farr"
+        },
+        {
+          "source_id": "TOS_OPERATION_ANNIHILATE",
+          "confidence": "HIGH",
+          "claim_scope": "inner eyelid"
+        },
+        {
+          "source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
+          "confidence": "HIGH",
+          "claim_scope": "enhanced physical strength"
+        },
+        {
+          "source_id": "VOY_BLOOD_FEVER",
+          "confidence": "HIGH",
+          "claim_scope": "telepathic bonding and pon farr"
+        },
+        {
+          "source_id": "MA_VULCAN",
+          "confidence": "HIGH",
+          "claim_scope": "cross-check physiology"
+        }
+      ]
+    },
+    "andorian": {
+      "display_name_es": "Andoriano",
+      "homeworld_id": "andoria",
+      "physiology": {
+        "cold_environment_adaptation": true,
+        "antennae": {
+          "count": 2,
+          "contribute_to_balance": true,
+          "injury_can_impair_balance": true,
+          "regrowth_possible": true,
+          "regrowth_timescale": "months_not_instant"
+        }
+      },
+      "cultural_rules": {
+        "martial_traditions_exist": true,
+        "direct_or_confrontational_norms_may_exist": true,
+        "neither_is_mandatory_personality": true,
+        "ushaan_is_contextual_cultural_practice_not_default_combat_rule": true
+      },
+      "related_populations": {
+        "aenar": {
+          "status": "related_population_separate_profile_required",
+          "do_not_collapse_into_andorian": true
+        }
+      },
+      "provenance": [
+        {
+          "source_id": "ENT_UNITED",
+          "confidence": "HIGH",
+          "claim_scope": "antennae, balance, regrowth and Ushaan context"
+        },
+        {
+          "source_id": "ENT_THE_AENAR",
+          "confidence": "HIGH",
+          "claim_scope": "Andoria environment and Aenar distinction"
+        },
+        {
+          "source_id": "MA_ANDORIAN",
+          "confidence": "HIGH",
+          "claim_scope": "cross-check physiology"
+        }
+      ]
+    },
+    "tellarite": {
+      "display_name_es": "Tellarita",
+      "homeworld_id": "tellar_prime",
+      "physiology": {
+        "current_gameplay_specialization": "no_broad_species_bonus_defined"
+      },
+      "cultural_rules": {
+        "argument_and_debate_can_be_socially_positive": true,
+        "complaints_or_insults_can_be_conventional_openers": true,
+        "conventional_argument_is_not_automatic_hostility": true,
+        "individual_adherence_varies": true
+      },
+      "diplomacy_effects": {
+        "interpreter_should_consider_tellarite_norms": true,
+        "tone_classifier_must_not_map_insult_directly_to_hostile": true
+      },
+      "provenance": [
+        {
+          "source_id": "ENT_BABEL_ONE",
+          "confidence": "HIGH",
+          "claim_scope": "complaint/argument interaction style"
+        },
+        {
+          "source_id": "ENT_BOUNTY",
+          "confidence": "HIGH",
+          "claim_scope": "debate culture"
+        },
+        {
+          "source_id": "TOS_JOURNEY_TO_BABEL",
+          "confidence": "HIGH",
+          "claim_scope": "Federation diplomatic participation"
+        },
+        {
+          "source_id": "MA_TELLARITE",
+          "confidence": "HIGH",
+          "claim_scope": "cross-check culture"
+        }
+      ]
+    }
+  }
+}
