@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_capability",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "facility_type": null,
+    "permanent_capabilities": [],
+    "conditional_capabilities": [],
+    "berth_profiles": [],
+    "support_radius_profile": null,
+    "storage_profile": null,
+    "repair_level": "unknown",
+    "medical_level": "unknown",
+    "personnel_support_level": "unknown",
+    "security_level": "unknown",
+    "traffic_control_capability": false,
+    "command_capability": false,
+    "source_refs": []
+  },
+  "facility_types": [
+    "starbase",
+    "space_station",
+    "drydock",
+    "shipyard",
+    "outpost",
+    "depot",
+    "research_station",
+    "medical_station",
+    "communications_station",
+    "mobile_support_unit"
+  ],
+  "capability_ids": [
+    "dock",
+    "berth",
+    "traffic_control",
+    "resupply_general",
+    "resupply_ordnance",
+    "medical_basic",
+    "medical_advanced",
+    "repair_field",
+    "repair_heavy",
+    "drydock",
+    "shipyard",
+    "personnel_transfer",
+    "cargo_transfer",
+    "smallcraft_support",
+    "science_support",
+    "security_support",
+    "command_and_control",
+    "communications_relay",
+    "diplomatic_services",
+    "trade_services"
+  ],
+  "repair_levels": [
+    "none",
+    "minor",
+    "field",
+    "heavy",
+    "drydock",
+    "shipyard",
+    "unknown"
+  ],
+  "rules": [
+    "Capability existence is separate from current availability.",
+    "Exact berth counts, throughput or repair limits remain unknown unless sourced or defined for gameplay.",
+    "A facility type never implies every capability automatically.",
+    "Temporary equipment, damage or campaign upgrades may add or remove capabilities."
+  ]
+}

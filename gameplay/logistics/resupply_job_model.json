@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "resupply_job",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "resupply_job_id": null,
+    "requesting_unit_id": null,
+    "provider_facility_or_unit_id": null,
+    "requested_at": null,
+    "scheduled_start": null,
+    "started_at": null,
+    "completed_at": null,
+    "status": "requested",
+    "requested_resources": [],
+    "approved_resources": [],
+    "transferred_resources": [],
+    "service_dependencies": [],
+    "berth_or_rendezvous_ref": null,
+    "priority": "routine",
+    "interruption_reason": null,
+    "source_mission_id": null
+  },
+  "statuses": [
+    "requested",
+    "approved",
+    "queued",
+    "positioning",
+    "in_progress",
+    "partially_completed",
+    "completed",
+    "blocked",
+    "cancelled"
+  ],
+  "rules": [
+    "Resupply takes operational time unless a specific mechanic justifies otherwise.",
+    "Provider stock and transfer capability constrain what can actually be delivered.",
+    "Critical missions may receive priority but cannot conjure unavailable resources.",
+    "Partial resupply is valid and updates endurance accordingly.",
+    "A mobile support unit can act as provider when its capabilities permit."
+  ]
+}

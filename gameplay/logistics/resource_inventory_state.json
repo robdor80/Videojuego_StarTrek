@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1",
+  "model_id": "operational_resource_inventory",
+  "classification": "GAME_ADDITION",
+  "principle": "Post-scarcity technology reduces some logistics pressures but does not remove energy, reactant, ammunition, spare-part, medical, shuttlecraft, storage or maintenance constraints.",
+  "fields": {
+    "owner_entity_id": null,
+    "observed_at": null,
+    "resource_entries": [],
+    "reserved_for_mission": [],
+    "unavailable_or_contaminated": [],
+    "storage_constraints": [],
+    "resupply_priority": "routine"
+  },
+  "resource_entry_fields": [
+    "resource_id",
+    "resource_category",
+    "quantity_state",
+    "capacity_state",
+    "availability_state",
+    "quality_or_condition",
+    "location_ref",
+    "source_event_refs"
+  ],
+  "resource_categories": [
+    "warp_reactants",
+    "impulse_reactants",
+    "general_energy_reserve",
+    "torpedoes_and_expendable_ordnance",
+    "probes",
+    "repair_parts",
+    "specialized_components",
+    "medical_supplies",
+    "emergency_supplies",
+    "cargo",
+    "replicator_or_synthesizer_feedstock",
+    "shuttlecraft_and_smallcraft",
+    "eva_and_survival_equipment",
+    "mission_specific_material"
+  ],
+  "quantity_modes": [
+    "exact_if_sourced_or_runtime_defined",
+    "percentage",
+    "bands",
+    "available_unavailable"
+  ],
+  "rules": [
+    "Do not invent exact canonical capacities when no validated source exists.",
+    "Replicators or food synthesizers do not erase power, feedstock, specialized-component, ammunition or repair constraints.",
+    "Resource state is owned by Core and changes through use, transfer, damage, loss, fabrication where supported, or resupply.",
+    "Era and ship configuration determine which resource categories and fabrication capabilities exist.",
+    "Mission-specific reservations reduce freely available stock until released."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_FOOD_SYNTHESIZER",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "MA_REPLICATOR",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "MA_QUANTUM_TORPEDO",
+      "confidence": "MEDIUM"
+    }
+  ]
+}

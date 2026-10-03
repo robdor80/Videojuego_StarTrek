@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1",
+  "model_id": "ship_endurance_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "ship_entity_id": null,
+    "assessed_at": null,
+    "propulsion_endurance": "unknown",
+    "life_support_endurance": "unknown",
+    "medical_endurance": "unknown",
+    "ordnance_endurance": "unknown",
+    "repair_endurance": "unknown",
+    "smallcraft_readiness": "unknown",
+    "crew_fatigue_limit": "unknown",
+    "maintenance_margin": "unknown",
+    "limiting_factor_refs": [],
+    "mission_reserve_policy": null
+  },
+  "assessment_bands": [
+    "critical",
+    "low",
+    "reduced",
+    "adequate",
+    "high",
+    "unknown"
+  ],
+  "rules": [
+    "Endurance is multi-dimensional; there is no single universal fuel bar.",
+    "The limiting resource depends on mission, ship class/configuration, damage, crew and era.",
+    "A ship may have propulsion endurance but lack medical, ordnance or repair endurance for a proposed mission.",
+    "Long-range mission feasibility must preserve required return/emergency reserve unless command deliberately accepts the risk.",
+    "Crew fatigue and maintenance backlog can limit practical endurance even when consumables remain."
+  ]
+}

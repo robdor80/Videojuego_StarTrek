@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_operational_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "observed_at": null,
+    "status": "operational",
+    "controlling_faction_id": null,
+    "local_authority_id": null,
+    "damaged_capability_ids": [],
+    "disabled_capability_ids": [],
+    "temporary_capability_ids": [],
+    "inventory_state_ref": null,
+    "service_queue_ref": null,
+    "medical_capacity_state": null,
+    "repair_capacity_state": null,
+    "docking_capacity_state": null,
+    "security_state": null,
+    "alert_state": null,
+    "blockade_or_access_state": null,
+    "personnel_shortage_refs": [],
+    "unresolved_event_refs": []
+  },
+  "statuses": [
+    "operational",
+    "degraded",
+    "emergency_only",
+    "evacuating",
+    "disabled",
+    "abandoned",
+    "destroyed"
+  ],
+  "rules": [
+    "A facility can exist physically while being unable to provide its normal services.",
+    "Political access and physical capability are separate checks.",
+    "Damage, staffing, inventory and queue load can reduce effective capacity.",
+    "Operational state changes persist and can create new logistics missions."
+  ]
+}

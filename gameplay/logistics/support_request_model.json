@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "model_id": "support_request",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "support_request_id": null,
+    "requester_unit_id": null,
+    "request_type": null,
+    "requested_at": null,
+    "urgency": "normal",
+    "current_location_id": null,
+    "desired_location_id": null,
+    "required_capabilities": [],
+    "damage_or_need_refs": [],
+    "mission_id": null,
+    "candidate_provider_refs": [],
+    "selected_provider_id": null,
+    "status": "open",
+    "estimated_wait_time": null
+  },
+  "request_types": [
+    "resupply",
+    "repair",
+    "drydock",
+    "medical_support",
+    "personnel_transfer",
+    "cargo_transfer",
+    "towing",
+    "smallcraft_replacement",
+    "ordnance_replenishment",
+    "specialist_assistance"
+  ],
+  "statuses": [
+    "open",
+    "acknowledged",
+    "provider_selected",
+    "en_route",
+    "queued",
+    "being_serviced",
+    "completed",
+    "partially_completed",
+    "denied",
+    "cancelled"
+  ],
+  "rules": [
+    "A support request does not guarantee a capable provider is available.",
+    "Provider selection uses distance, capacity, queue, jurisdiction, safety and priority.",
+    "Severe damage may require towing or stabilization before transit.",
+    "Foreign or civilian facilities may require permission, payment, treaty rights or political negotiation."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_service_queue",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "observed_at": null,
+    "queue_entries": [],
+    "emergency_reserve_policy": null,
+    "current_load_band": "unknown"
+  },
+  "queue_entry_fields": [
+    "request_id",
+    "unit_id",
+    "service_type",
+    "priority",
+    "estimated_start",
+    "estimated_duration",
+    "status",
+    "dependency_refs"
+  ],
+  "load_bands": [
+    "light",
+    "normal",
+    "heavy",
+    "saturated",
+    "unknown"
+  ],
+  "scheduling_inputs": [
+    "request_priority",
+    "mission_urgency",
+    "medical_emergency",
+    "combat_damage",
+    "facility_capacity",
+    "available_berths",
+    "specialist_availability",
+    "required_parts",
+    "security_or_blockade_state"
+  ],
+  "rules": [
+    "Queue order is not always first-come-first-served.",
+    "Emergency priority can move a request ahead without eliminating resource constraints.",
+    "Estimated service time may change when damage, parts or facility load changes.",
+    "Waiting time is gameplay time and may affect mission feasibility."
+  ]
+}
