@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_candidate_generation",
+  "classification": "GAME_ADDITION",
+  "pipeline": [
+    "read_live_world_events",
+    "derive_operational_needs",
+    "filter_needs_by_authority_and_knowledge",
+    "find_candidate_units",
+    "score_operational_fit",
+    "build_mission_candidate",
+    "authority_review",
+    "issue_tasking_order_or_leave_unassigned"
+  ],
+  "unit_fit_inputs": [
+    "distance_and_eta",
+    "ship_class_and_configuration",
+    "current_ship_state",
+    "crew_readiness",
+    "current_assignment",
+    "current_mission_priority",
+    "required_capabilities",
+    "political_access",
+    "rules_of_engagement",
+    "specialist_personnel",
+    "logistics_endurance",
+    "knowledge_of_operational_area"
+  ],
+  "score_dimensions": [
+    "response_time",
+    "capability_match",
+    "readiness",
+    "mission_conflict_cost",
+    "legal_access",
+    "political_risk",
+    "support_requirements",
+    "crew_specialization"
+  ],
+  "candidate_fields": {
+    "mission_candidate_id": null,
+    "operational_need_id": null,
+    "candidate_unit_id": null,
+    "proposed_mission_type": null,
+    "proposed_destination_refs": [],
+    "proposed_objectives": [],
+    "estimated_response_time": null,
+    "fit_summary": {},
+    "known_risks": [],
+    "known_constraints": [],
+    "authority_required": null,
+    "recommendation_state": "unreviewed"
+  },
+  "recommendation_states": [
+    "unreviewed",
+    "viable",
+    "preferred_by_authority",
+    "rejected",
+    "deferred"
+  ],
+  "rules": [
+    "No score may override hard capability or legal constraints.",
+    "Mission candidate generation is not a random content picker.",
+    "A viable need may produce zero, one or several candidate missions.",
+    "Player proximity alone must not cause every crisis in the galaxy to be assigned to the player.",
+    "NPC units may receive tasking when they are a better operational fit.",
+    "Authority may choose a non-optimal candidate for documented strategic reasons.",
+    "Mission generation cannot create hidden enemies, casualties, disasters or unexplored civilizations."
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "world_state_consequence_event",
+  "classification": "GAME_ADDITION",
+  "purpose": "Record authoritative state changes caused by mission actions, unresolved events or independent world activity.",
+  "fields": {
+    "consequence_event_id": null,
+    "source_event_refs": [],
+    "source_mission_id": null,
+    "caused_by_entity_refs": [],
+    "occurred_at": null,
+    "affected_location_refs": [],
+    "affected_entity_refs": [],
+    "affected_faction_refs": [],
+    "consequence_type": null,
+    "state_patch_refs": [],
+    "visibility": "observer_dependent",
+    "followup_need_tags": [],
+    "service_record_relevance": false
+  },
+  "consequence_types": [
+    "political_change",
+    "relation_change",
+    "border_change",
+    "ship_state_change",
+    "facility_state_change",
+    "crew_state_change",
+    "knowledge_change",
+    "resource_change",
+    "trade_change",
+    "security_change",
+    "strategic_access_change",
+    "new_operational_need",
+    "need_resolved"
+  ],
+  "rules": [
+    "Consequences are state transitions, not narrative summaries.",
+    "A consequence may create a new operational need.",
+    "A mission may resolve one need while creating another.",
+    "Visibility to the player depends on sensors, reports, clearance and knowledge.",
+    "AI narration is derived after the authoritative consequence is committed."
+  ]
+}

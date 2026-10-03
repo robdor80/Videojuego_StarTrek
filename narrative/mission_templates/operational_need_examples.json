@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1",
+  "classification": "GAME_ADDITION",
+  "examples": [
+    {
+      "chain_id": "frontier_patrol_need",
+      "world_state": [
+        "Repeated unidentified contacts reported near a monitored frontier route.",
+        "Reports are known to the responsible Starfleet command."
+      ],
+      "derived_need": {
+        "need_type": "patrol_presence",
+        "required_capabilities": [
+          "warp_travel",
+          "sensors",
+          "communications"
+        ],
+        "preferred_capabilities": [
+          "tactical_deterrence"
+        ]
+      },
+      "possible_tasking": "Assign a suitable available vessel to patrol and verify the reports.",
+      "not_allowed": "Spawn a hostile Klingon or Romulan vessel solely because a patrol mission was desired."
+    },
+    {
+      "chain_id": "damaged_freighter_rescue",
+      "world_state": [
+        "A civilian freighter exists in live state with propulsion failure.",
+        "Its distress signal has been detected and authenticated."
+      ],
+      "derived_need": {
+        "need_type": "rescue",
+        "required_capabilities": [
+          "navigation",
+          "communications",
+          "medical_response"
+        ],
+        "preferred_capabilities": [
+          "engineering_assistance",
+          "tractor_or_tow_support"
+        ]
+      },
+      "possible_tasking": "Divert a capable nearby unit or assign a dedicated responder.",
+      "consequence_paths": [
+        "crew rescued",
+        "freighter repaired",
+        "freighter lost",
+        "response delayed",
+        "secondary medical or salvage-law follow-up"
+      ]
+    },
+    {
+      "chain_id": "charting_gap",
+      "world_state": [
+        "A route segment is low-confidence or stale in the current chart database.",
+        "Starfleet has a reason to improve navigational confidence in that area."
+      ],
+      "derived_need": {
+        "need_type": "chart",
+        "required_capabilities": [
+          "sensors",
+          "science",
+          "navigation"
+        ]
+      },
+      "possible_tasking": "Survey the route, update hazards and submit chart data.",
+      "consequence_paths": [
+        "safer_future_routes",
+        "new_anomaly_followup",
+        "no significant findings"
+      ]
+    },
+    {
+      "chain_id": "diplomatic_transport",
+      "world_state": [
+        "A recognized diplomatic delegation needs transport to a valid destination.",
+        "The transport need is known to the issuing authority."
+      ],
+      "derived_need": {
+        "need_type": "transport_diplomatic",
+        "required_capabilities": [
+          "passenger_capacity",
+          "communications",
+          "navigation"
+        ]
+      },
+      "possible_tasking": "Assign an appropriate vessel without requiring a famous canon ship or character."
+    }
+  ]
+}

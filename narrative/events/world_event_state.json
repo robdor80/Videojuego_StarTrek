@@ -1,0 +1,84 @@
+{
+  "schema_version": "0.1",
+  "model_id": "world_event_state",
+  "classification": "GAME_ADDITION",
+  "purpose": "Authoritative record of a concrete change, incident, condition or unresolved situation in the live campaign world.",
+  "fields": {
+    "world_event_id": null,
+    "event_type": null,
+    "status": "active",
+    "created_at": null,
+    "effective_at": null,
+    "resolved_at": null,
+    "location_refs": [],
+    "entity_refs": [],
+    "faction_refs": [],
+    "cause_event_refs": [],
+    "evidence_refs": [],
+    "observer_knowledge_refs": [],
+    "severity": "routine",
+    "urgency": "normal",
+    "persistence": "temporary",
+    "operational_effects": [],
+    "mission_hook_tags": [],
+    "resolution_conditions": [],
+    "consequence_event_refs": []
+  },
+  "statuses": [
+    "latent",
+    "active",
+    "contained",
+    "resolved",
+    "expired",
+    "superseded"
+  ],
+  "severities": [
+    "routine",
+    "significant",
+    "serious",
+    "critical",
+    "catastrophic"
+  ],
+  "urgencies": [
+    "low",
+    "normal",
+    "high",
+    "immediate"
+  ],
+  "persistence_modes": [
+    "transient",
+    "temporary",
+    "persistent",
+    "structural"
+  ],
+  "event_types": [
+    "distress",
+    "ship_damage",
+    "facility_failure",
+    "medical_incident",
+    "navigation_hazard",
+    "scientific_anomaly",
+    "unidentified_contact",
+    "border_incident",
+    "diplomatic_dispute",
+    "trade_disruption",
+    "convoy_requirement",
+    "supply_shortage",
+    "personnel_transfer_need",
+    "security_incident",
+    "search_and_rescue_case",
+    "exploration_opportunity",
+    "charting_gap",
+    "intelligence_report",
+    "conflict_escalation",
+    "humanitarian_need"
+  ],
+  "rules": [
+    "A world event represents something that actually exists in authoritative campaign state.",
+    "Mission generation may react to an event but may not create the underlying event merely to justify a mission.",
+    "World events can exist without ever becoming player missions.",
+    "Resolution can change political, logistical, scientific, personnel or ship state.",
+    "World events may be known incompletely or not at all by the player's current observers.",
+    "After campaign start, future screen canon does not automatically create world events."
+  ]
+}
