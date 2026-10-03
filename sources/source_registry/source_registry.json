@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.26.0",
+  "registry_version": "0.27.0",
   "last_updated": "2026-10-03",
   "sources": [
     {
@@ -1725,6 +1725,15 @@
       "title": "Star Trek: Deep Space Nine Technical Manual",
       "publisher": "Pocket Books / Paramount",
       "notes": "Licensed technical reference used for selected Bajor-sector distances and maps."
+    },
+    {
+      "source_id": "CYGNUS_X1_RELIANT_BLUEPRINT_SET",
+      "source_type": "GENERAL_WEB",
+      "title": "Miranda-class Starship / USS Reliant NCC-1864 blueprint set",
+      "publisher": "Cygnus-X1.Net Star Trek Blueprint Database",
+      "url": "https://www.cygnus-x1.net/links/lcars/blueprints-main2.php#B2",
+      "accessed_at": "2026-10-03",
+      "notes": "18-sheet unofficial blueprint set used as a technical/spatial reference for USS Reliant and Miranda-class gameplay modeling. Visible sheet credit includes Kennedy Shipyards. Not SCREEN_CANON; higher-authority evidence overrides conflicts."
     }
   ]
 }

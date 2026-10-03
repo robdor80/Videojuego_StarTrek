@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1",
+  "reference_id": "miranda_ncc_1864_reliant_blueprint_set",
+  "subject": {
+    "class_id": "miranda",
+    "ship_name": "USS Reliant",
+    "registry": "NCC-1864",
+    "era_profile": "kirk"
+  },
+  "provenance": {
+    "source_id": "CYGNUS_X1_RELIANT_BLUEPRINT_SET",
+    "source_authority": "GENERAL_WEB",
+    "screen_canon": false,
+    "hosted_by": "Cygnus-X1.Net / Star Trek Blueprint Database",
+    "visible_credit": "Kennedy Shipyards / blueprint authorship as printed on sheets",
+    "use_rule": "Technical/spatial reference only; higher-authority evidence overrides conflicting details."
+  },
+  "usage": {
+    "scope": "ship_specific_reference_with_class_level_derivation",
+    "derive_with_validation": [
+      "deck_index",
+      "location_graph",
+      "corridor_connections",
+      "turbolift_network",
+      "engineering_spaces",
+      "tactical_spaces",
+      "transporter_spaces",
+      "shuttle_support",
+      "escape_systems",
+      "miranda_class_interior_baseline",
+      "reliant_specific_overrides"
+    ]
+  },
+  "sheets": [
+    {
+      "sheet_number": 1,
+      "file": "sheets/01.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-1.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 2,
+      "file": "sheets/02.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-2.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 3,
+      "file": "sheets/03.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-3.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 4,
+      "file": "sheets/04.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-4.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 5,
+      "file": "sheets/05.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-5.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 6,
+      "file": "sheets/06.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-6.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 7,
+      "file": "sheets/07.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-7.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 8,
+      "file": "sheets/08.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-8.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 9,
+      "file": "sheets/09.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-9.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 10,
+      "file": "sheets/10.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-10.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 11,
+      "file": "sheets/11.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-11.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 12,
+      "file": "sheets/12.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-12.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 13,
+      "file": "sheets/13.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-13.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 14,
+      "file": "sheets/14.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-14.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 15,
+      "file": "sheets/15.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-15.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 16,
+      "file": "sheets/16.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-16.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 17,
+      "file": "sheets/17.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-17.jpg",
+      "status": "REFERENCE"
+    },
+    {
+      "sheet_number": 18,
+      "file": "sheets/18.jpg",
+      "original_source_filename": "miranda-class-starship-uss-reliant-ncc-1864-sheet-18.jpg",
+      "status": "REFERENCE"
+    }
+  ],
+  "rules": [
+    "Do not assume every Miranda-class vessel is room-for-room identical.",
+    "Do not promote printed specifications to canon without source validation.",
+    "Class baseline and ship-specific overrides must remain separate.",
+    "Later-era Miranda configurations require separate era/ship evidence."
+  ]
+}
