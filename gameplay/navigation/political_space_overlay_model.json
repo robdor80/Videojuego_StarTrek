@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1",
+  "model_id": "political_space_overlay",
+  "key": "region_or_boundary_id_plus_effective_time",
+  "fields": {
+    "overlay_id": null,
+    "geometry_ref": null,
+    "effective_from": null,
+    "effective_to": null,
+    "controller_faction_id": null,
+    "claimant_faction_ids": [],
+    "jurisdiction_type": null,
+    "access_policy": null,
+    "border_status": null,
+    "treaty_refs": [],
+    "conflict_refs": [],
+    "patrol_profile": null,
+    "inspection_policy": null,
+    "civilian_transit_policy": null,
+    "starfleet_operational_rule": null,
+    "source_refs": [],
+    "confidence": "unknown"
+  },
+  "allowed_jurisdiction_types": [
+    "sovereign_space",
+    "member_world_space",
+    "neutral_zone",
+    "demilitarized_zone",
+    "disputed_space",
+    "occupied_space",
+    "open_space",
+    "unclaimed_or_unknown"
+  ],
+  "allowed_access_policies": [
+    "open",
+    "controlled",
+    "permission_required",
+    "military_restricted",
+    "closed",
+    "unknown"
+  ],
+  "rules": [
+    "Geometry is independent from controller.",
+    "The same region may load a different overlay at different campaign dates.",
+    "Campaign events may supersede the initialized overlay.",
+    "Claims and actual control are separate fields.",
+    "Neutral zones and demilitarized zones are rules-bearing regions, not decorative map colors."
+  ]
+}
