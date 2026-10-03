@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "model_id": "repair_requirement",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "repair_requirement_id": null,
+    "unit_id": null,
+    "damage_refs": [],
+    "affected_system_refs": [],
+    "minimum_repair_level": "field",
+    "required_capability_ids": [],
+    "required_parts": [],
+    "stabilization_required": false,
+    "tow_required": false,
+    "travel_limitations": [],
+    "service_priority": "normal",
+    "candidate_facility_refs": [],
+    "status": "open"
+  },
+  "minimum_repair_levels": [
+    "onboard",
+    "minor",
+    "field",
+    "heavy",
+    "drydock",
+    "shipyard"
+  ],
+  "statuses": [
+    "open",
+    "stabilized",
+    "provider_selected",
+    "queued",
+    "repairing",
+    "partially_repaired",
+    "repaired",
+    "deferred",
+    "unrepairable_here"
+  ],
+  "rules": [
+    "Onboard repair and facility repair are different support modes.",
+    "Temporary stabilization may permit travel without counting as full repair.",
+    "A facility below the required repair level cannot complete the repair merely because it is a starbase.",
+    "Required parts and safe access still matter when capability exists.",
+    "Severe damage can make towing or evacuation necessary before repair."
+  ]
+}

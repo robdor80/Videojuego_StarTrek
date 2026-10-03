@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_docking_service_flow",
+  "classification": "GAME_ADDITION",
+  "stages": [
+    "request_contact",
+    "identify_and_exchange_requirements",
+    "receive_traffic_instructions",
+    "approach",
+    "hold_or_queue_if_required",
+    "berth_or_dock_assignment",
+    "final_approach",
+    "secured",
+    "service_window",
+    "departure_clearance",
+    "undock_or_depart"
+  ],
+  "required_checks": [
+    "access_clearance",
+    "facility_operational_state",
+    "traffic_control_available_if_required",
+    "berth_compatibility",
+    "approach_path_safe",
+    "ship_maneuvering_available",
+    "security_conditions_met",
+    "service_request_matches_capability"
+  ],
+  "interruption_causes": [
+    "alert_state_change",
+    "facility_damage",
+    "ship_damage",
+    "security_incident",
+    "traffic_conflict",
+    "berth_unavailable",
+    "clearance_revoked",
+    "emergency_priority_override"
+  ],
+  "rules": [
+    "Docking is an operational sequence, not an instantaneous teleport into a service menu.",
+    "A ship may be cleared to hold or orbit without receiving a berth.",
+    "Service may begin only after the relevant transfer/repair conditions are satisfied.",
+    "Emergency priority can change queue order while preserving safety checks.",
+    "Failure during approach can create navigation, damage, security or rescue consequences."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "model_id": "maintenance_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "unit_id": null,
+    "assessed_at": null,
+    "maintenance_items": [],
+    "overall_state": "nominal",
+    "maintenance_margin": "adequate",
+    "next_major_service_due": null,
+    "deferred_maintenance_refs": [],
+    "facility_dependency_refs": []
+  },
+  "item_fields": [
+    "maintenance_id",
+    "system_id",
+    "maintenance_type",
+    "due_at_or_usage_threshold",
+    "status",
+    "required_parts",
+    "required_skill_profile",
+    "required_facility_capability",
+    "estimated_work",
+    "deferral_risk",
+    "source_event_refs"
+  ],
+  "item_statuses": [
+    "scheduled",
+    "due",
+    "in_progress",
+    "completed",
+    "deferred",
+    "overdue",
+    "blocked"
+  ],
+  "overall_states": [
+    "nominal",
+    "maintenance_due",
+    "degraded",
+    "maintenance_critical",
+    "unknown"
+  ],
+  "rules": [
+    "Routine maintenance and combat damage are separate but can interact.",
+    "Deferred maintenance increases risk according to the affected system and context; it is not an automatic failure timer.",
+    "Some work can be performed underway, some requires shutdown, and some requires external facility support.",
+    "Completion consumes time, staff and parts as defined by the maintenance job.",
+    "Maintenance does not magically restore unrelated damage."
+  ]
+}

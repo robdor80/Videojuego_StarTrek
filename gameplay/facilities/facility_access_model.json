@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_access_and_clearance",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "requesting_unit_id": null,
+    "request_time": null,
+    "access_context": "normal",
+    "jurisdiction_ref": null,
+    "relation_state_ref": null,
+    "mission_authority_ref": null,
+    "identity_verified": false,
+    "clearance_status": "pending",
+    "inspection_requirement": "unknown",
+    "security_conditions": [],
+    "assigned_approach_ref": null,
+    "assigned_berth_ref": null,
+    "denial_reason": null
+  },
+  "access_contexts": [
+    "normal",
+    "emergency",
+    "medical_emergency",
+    "military_priority",
+    "diplomatic",
+    "commercial",
+    "distress"
+  ],
+  "clearance_states": [
+    "pending",
+    "approved",
+    "approved_with_conditions",
+    "hold_position",
+    "inspection_required",
+    "denied",
+    "revoked"
+  ],
+  "rules": [
+    "Physical ability to dock does not imply legal permission to dock.",
+    "Emergency access can alter priority but does not automatically erase local security or safety constraints.",
+    "Foreign, civilian or contested facilities use current diplomatic/legal state.",
+    "A facility may approve approach while denying particular services.",
+    "Clearance state can change if identity, threat, damage or political state changes."
+  ]
+}

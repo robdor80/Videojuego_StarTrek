@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "model_id": "support_destination_selection",
+  "classification": "GAME_ADDITION",
+  "candidate_inputs": [
+    "current_position",
+    "ship_travel_limitations",
+    "requested_support_type",
+    "required_facility_capabilities",
+    "facility_operational_state",
+    "facility_access_and_clearance",
+    "facility_service_queue",
+    "route_risk",
+    "eta",
+    "political_access",
+    "mission_priority"
+  ],
+  "output_fields": [
+    "candidate_facility_id",
+    "route_ref",
+    "eta_range",
+    "known_route_risk",
+    "access_confidence",
+    "service_capability_confidence",
+    "estimated_queue_delay",
+    "overall_support_confidence",
+    "blocking_reasons"
+  ],
+  "selection_rules": [
+    "Nearest does not always mean fastest-to-service.",
+    "A more distant facility may be preferred if it has required capability, lower queue or safer access.",
+    "A facility with uncertain capability remains uncertain rather than being assumed usable.",
+    "Damaged ships obey live travel limits when evaluating reachable support.",
+    "Player/command can override the recommended destination and accept documented risk."
+  ]
+}
