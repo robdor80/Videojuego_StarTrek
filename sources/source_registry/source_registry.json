@@ -1,6 +1,6 @@
 {
-  "registry_version": "0.22.0",
-  "last_updated": "2026-10-02",
+  "registry_version": "0.23.0",
+  "last_updated": "2026-10-03",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -1308,6 +1308,53 @@
       "url": "https://memory-alpha.fandom.com/wiki/Sickbay",
       "accessed_at": "2026-10-02",
       "notes": "Cross-check for shipboard medical center, CMO authority, triage expansion and crisis use of auxiliary spaces."
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Get To Know — United Federation of Planets / Starfleet",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/get-to-know",
+      "accessed_at": "2026-10-03",
+      "notes": "Official reference for the Federation as an interstellar republic founded in San Francisco in 2161 and for Starfleet serving exploratory, scientific, diplomatic, humanitarian and defensive functions."
+    },
+    {
+      "source_id": "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Galactic Politics: The Federation and the Dominion",
+      "publisher": "StarTrek.com / Paramount",
+      "release_date": "2023-03-07",
+      "url": "https://www.startrek.com/news/galactic-politics-the-federation-and-the-dominion",
+      "accessed_at": "2026-10-03",
+      "notes": "Official reference for Federation governance by an elected president and council and for the late-24th-century scale of more than 150 worlds."
+    },
+    {
+      "source_id": "ENT_4X22_THESE_ARE_THE_VOYAGES",
+      "source_type": "SCREEN_CANON",
+      "title": "These Are the Voyages...",
+      "work": "Star Trek: Enterprise",
+      "season": 4,
+      "episode": 22,
+      "release_date": "2005-05-13",
+      "notes": "Screen evidence for the 2161 founding context and the Earth/Vulcan/Andorian/Tellar political coalition that becomes the Federation."
+    },
+    {
+      "source_id": "TNG_5X17_THE_OUTCAST",
+      "source_type": "SCREEN_CANON",
+      "title": "The Outcast",
+      "work": "Star Trek: The Next Generation",
+      "season": 5,
+      "episode": 17,
+      "release_date": "1992-03-16",
+      "notes": "Screen evidence identifying 2161 as the founding year of the United Federation of Planets."
+    },
+    {
+      "source_id": "ST8_FIRST_CONTACT",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek: First Contact",
+      "work": "Star Trek film",
+      "release_date": "1996-11-22",
+      "notes": "Screen evidence for the late-24th-century Federation scale: over 150 member worlds spread across roughly 8,000 light-years."
     }
   ]
 }

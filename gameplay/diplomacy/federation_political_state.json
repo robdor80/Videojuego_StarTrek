@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "model_id": "federation_political_state",
+  "entity_id": "united_federation_of_planets",
+  "temporal": {
+    "campaign_start_date": null,
+    "initialized_from_retained_history_through_start": true,
+    "live_campaign_history_authoritative_after_start": true
+  },
+  "government_state": {
+    "president_character_id": null,
+    "council_status": "active",
+    "emergency_state": "normal"
+  },
+  "membership_state": {
+    "active_member_world_ids": [],
+    "pending_accessions": [],
+    "suspensions": [],
+    "withdrawals": [],
+    "membership_events": []
+  },
+  "foreign_relations": {},
+  "treaties": [],
+  "border_arrangements": [],
+  "active_conflicts": [],
+  "diplomatic_crises": [],
+  "starfleet_interface": {
+    "civil_authority_orders": [],
+    "mission_authorizations": [],
+    "diplomatic_constraints": [],
+    "emergency_directives": []
+  },
+  "gameplay_rules": [
+    "Never derive diplomacy from species alone.",
+    "Never import future canon events after campaign start as inevitable.",
+    "Relations, treaties and membership are mutable World State.",
+    "AI may present or negotiate but may not mutate political state directly."
+  ],
+  "provenance_class": "GAME_ADDITION_RUNTIME_MODEL"
+}

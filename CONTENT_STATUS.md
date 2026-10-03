@@ -62,7 +62,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 | Area | Status | Notes |
 |---|---|---|
-| Federation government, law, diplomacy, economy and member worlds | ⬜ TODO | |
+| Federation government, law, diplomacy, economy and member worlds | 🟨 IN_PROGRESS | Founding, civil-government and founding-member baseline established; law, economy, wider membership and era-specific diplomacy remain progressive work. |
 | Starfleet organization and command structure | ✅ COMPLETE | Upper command model, unit succession, acting command and operational chain established without speculative over-detail. |
 | Commissioned and flag officer ranks | ✅ COMPLETE | Base ladder fixed. |
 | Universal pip insignia | ✅ COMPLETE | TNG-style project standard across all eras. |

@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "federation_id": "united_federation_of_planets",
+  "display_name_es": "Federación Unida de Planetas",
+  "polity_type": "interstellar_federal_republic",
+  "founded_year": 2161,
+  "founding_location_id": "earth_san_francisco",
+  "civil_government": {
+    "head_of_state_and_government_role": "federation_president",
+    "legislature_id": "federation_council",
+    "member_world_participation": true,
+    "detailed_constitutional_mechanics": "UNSPECIFIED"
+  },
+  "starfleet_relationship": {
+    "starfleet_is_federation_service": true,
+    "subject_to_civil_authority": true,
+    "government_and_starfleet_are_distinct_entities": true
+  },
+  "known_scale_by_era": {
+    "pike": {
+      "member_world_count": null,
+      "territorial_extent_ly": null,
+      "rule": "do_not_backfill_late_24c_scale"
+    },
+    "kirk": {
+      "member_world_count": null,
+      "territorial_extent_ly": null,
+      "rule": "do_not_backfill_late_24c_scale"
+    },
+    "tng_ds9_voyager": {
+      "member_world_count_min": 150,
+      "territorial_extent_ly_approx": 8000,
+      "anchor_year": 2373
+    }
+  },
+  "provenance": [
+    {
+      "source_id": "ENT_4X22_THESE_ARE_THE_VOYAGES",
+      "confidence": "HIGH",
+      "claim_scope": "founding context and founding coalition"
+    },
+    {
+      "source_id": "TNG_5X17_THE_OUTCAST",
+      "confidence": "HIGH",
+      "claim_scope": "2161 founding year"
+    },
+    {
+      "source_id": "ST8_FIRST_CONTACT",
+      "confidence": "HIGH",
+      "claim_scope": "late-24th-century scale"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "confidence": "HIGH",
+      "claim_scope": "interstellar republic and Starfleet relationship"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION",
+      "confidence": "HIGH",
+      "claim_scope": "president, council and broad representation"
+    }
+  ]
+}

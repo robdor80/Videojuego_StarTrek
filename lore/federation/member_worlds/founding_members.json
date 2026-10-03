@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1",
+  "federation_founding_year": 2161,
+  "members": [
+    {
+      "world_id": "earth",
+      "display_name_es": "Tierra",
+      "government_id_at_founding": "united_earth",
+      "primary_species_ids": [
+        "human"
+      ],
+      "founding_member": true
+    },
+    {
+      "world_id": "vulcan",
+      "display_name_es": "Vulcano",
+      "government_id_at_founding": "vulcan_government",
+      "primary_species_ids": [
+        "vulcan"
+      ],
+      "founding_member": true
+    },
+    {
+      "world_id": "andoria",
+      "display_name_es": "Andoria",
+      "government_id_at_founding": "andorian_empire",
+      "primary_species_ids": [
+        "andorian",
+        "aenar"
+      ],
+      "founding_member": true
+    },
+    {
+      "world_id": "tellar_prime",
+      "display_name_es": "Tellar Prime",
+      "government_id_at_founding": "tellar_government",
+      "primary_species_ids": [
+        "tellarite"
+      ],
+      "founding_member": true
+    }
+  ],
+  "modeling_rules": {
+    "species_does_not_imply_citizenship": true,
+    "species_does_not_imply_government_authority": true,
+    "world_and_government_are_separate_entities": true,
+    "membership_is_temporal_state": true
+  },
+  "provenance": [
+    {
+      "source_id": "ENT_4X22_THESE_ARE_THE_VOYAGES",
+      "confidence": "HIGH",
+      "claim_scope": "four founding worlds/political groups"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "confidence": "HIGH",
+      "claim_scope": "Federation founding in 2161"
+    },
+    {
+      "source_id": "TNG_5X17_THE_OUTCAST",
+      "confidence": "HIGH",
+      "claim_scope": "founding year"
+    }
+  ]
+}
