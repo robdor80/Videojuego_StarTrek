@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "model_id": "astrographic_discovery_event",
+  "event_fields": {
+    "event_id": null,
+    "timestamp": null,
+    "observer_entity_id": null,
+    "subject_location_id": null,
+    "discovery_type": null,
+    "evidence_refs": [],
+    "confidence_delta": null,
+    "revealed_fields": [],
+    "classification_level": null,
+    "persistence_target": null
+  },
+  "discovery_types": [
+    "sensor_detection",
+    "visual_confirmation",
+    "probe_survey",
+    "orbital_survey",
+    "away_team_survey",
+    "database_transfer",
+    "diplomatic_disclosure",
+    "intelligence_report",
+    "navigation_hazard_mapping",
+    "first_contact"
+  ],
+  "rules": [
+    "Discovery changes knowledge, not physical World Truth.",
+    "Conflicting observations may reduce confidence instead of replacing data immediately.",
+    "Survey results persist into the campaign database according to permissions and communications availability."
+  ]
+}

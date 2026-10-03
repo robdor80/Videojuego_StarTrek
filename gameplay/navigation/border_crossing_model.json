@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "border_crossing_resolution",
+  "input": {
+    "ship_entity_id": null,
+    "from_overlay_id": null,
+    "to_overlay_id": null,
+    "crossing_time": null,
+    "mission_authority_id": null,
+    "transponder_state": null,
+    "cloak_state": null,
+    "current_relation_state_ref": null
+  },
+  "checks": [
+    "is_boundary_crossed",
+    "is_entry_authorized",
+    "is_transponder_required",
+    "is_cloak_or_emission_state_relevant",
+    "is_inspection_possible",
+    "is_warning_required",
+    "is_interception_possible",
+    "does_treaty_apply",
+    "does_mission_authority_override_normal_access"
+  ],
+  "possible_outcomes": [
+    "no_special_event",
+    "log_crossing",
+    "navigation_warning",
+    "request_clearance",
+    "inspection_hail",
+    "escort_or_intercept",
+    "forced_turnaround",
+    "detention_or_boarding_attempt",
+    "diplomatic_incident",
+    "combat_escalation"
+  ],
+  "rules": [
+    "Crossing a line on a map never auto-starts combat.",
+    "Outcome depends on relation state, local patrol presence, ship behavior, treaty state and campaign context.",
+    "Covert entry may avoid immediate detection without making the crossing legal.",
+    "AI can issue warnings or demands only after Core exposes the relevant event."
+  ]
+}

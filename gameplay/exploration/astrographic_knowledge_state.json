@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "model_id": "astrographic_knowledge_state",
+  "owner_scope": "character_ship_or_faction_database",
+  "fields": {
+    "subject_location_id": null,
+    "knowledge_owner_id": null,
+    "knowledge_level": "unknown",
+    "coordinate_confidence": "unknown",
+    "last_verified_at": null,
+    "known_political_state_age": null,
+    "known_route_ids": [],
+    "known_hazard_ids": [],
+    "known_facility_ids": [],
+    "classified_fields": [],
+    "misinformation_flags": [],
+    "source_event_ids": []
+  },
+  "knowledge_levels": [
+    "unknown",
+    "rumored",
+    "catalogued",
+    "charted",
+    "surveyed",
+    "visited",
+    "currently_observed"
+  ],
+  "rules": [
+    "World Truth and chart knowledge are separate.",
+    "Chart data can become stale when borders, hazards or facilities change.",
+    "A character may know less than the ship database.",
+    "Classified information requires clearance even when the ship database stores it.",
+    "First contact or survey missions can permanently improve knowledge state."
+  ]
+}

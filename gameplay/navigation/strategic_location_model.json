@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1",
+  "model_id": "strategic_location",
+  "fields": {
+    "location_id": null,
+    "strategic_tags": [],
+    "importance_by_faction": {},
+    "support_capabilities": [],
+    "route_control_effects": [],
+    "defense_profile_ref": null,
+    "civilian_importance": null,
+    "current_operational_state": null
+  },
+  "allowed_strategic_tags": [
+    "border_outpost",
+    "starbase",
+    "fleet_anchorage",
+    "repair_hub",
+    "trade_hub",
+    "wormhole_access",
+    "chokepoint",
+    "sensor_node",
+    "communications_relay",
+    "supply_point",
+    "political_capital",
+    "shipyard",
+    "front_line",
+    "safe_port"
+  ],
+  "rules": [
+    "Strategic importance is contextual and may differ by faction.",
+    "A location can lose or gain importance as campaign borders and conflicts change.",
+    "The route planner may prefer or avoid strategic locations according to mission profile."
+  ]
+}
