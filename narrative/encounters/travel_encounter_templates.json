@@ -1,0 +1,255 @@
+{
+  "schema_version": "0.1",
+  "template_scope": "travel_and_exploration_encounters",
+  "templates": [
+    {
+      "template_id": "distress_signal",
+      "display_name_es": "Señal de socorro",
+      "category": "operational_event",
+      "triggers": [
+        "communications_detection",
+        "sensor_detection"
+      ],
+      "required_context": [
+        "reachable_source"
+      ],
+      "possible_gameplay": [
+        "investigate",
+        "render_assistance",
+        "ignore",
+        "relay_to_authority",
+        "alter_course"
+      ],
+      "consequence_hooks": [
+        "service_record",
+        "relationship",
+        "mission_delay",
+        "resource_use"
+      ]
+    },
+    {
+      "template_id": "unidentified_contact",
+      "display_name_es": "Contacto no identificado",
+      "category": "ambient_or_tactical",
+      "triggers": [
+        "sensor_contact"
+      ],
+      "required_context": [
+        "contact_not_fully_identified"
+      ],
+      "possible_gameplay": [
+        "scan",
+        "hail",
+        "shadow",
+        "avoid",
+        "intercept",
+        "report"
+      ],
+      "consequence_hooks": [
+        "contact_knowledge",
+        "faction_relation",
+        "tactical_state"
+      ]
+    },
+    {
+      "template_id": "border_challenge",
+      "display_name_es": "Control fronterizo",
+      "category": "diplomatic_event",
+      "triggers": [
+        "border_crossing",
+        "patrol_contact"
+      ],
+      "required_context": [
+        "border_or_jurisdiction_relevant"
+      ],
+      "possible_gameplay": [
+        "identify",
+        "request_clearance",
+        "comply_with_inspection",
+        "negotiate",
+        "withdraw",
+        "proceed_without_permission"
+      ],
+      "consequence_hooks": [
+        "diplomacy",
+        "legal_state",
+        "delay",
+        "escalation"
+      ]
+    },
+    {
+      "template_id": "spatial_anomaly",
+      "display_name_es": "Anomalía espacial",
+      "category": "scientific_event",
+      "triggers": [
+        "sensor_detection",
+        "route_hazard"
+      ],
+      "required_context": [
+        "science_capability"
+      ],
+      "possible_gameplay": [
+        "avoid",
+        "scan_at_range",
+        "close_survey",
+        "launch_probe",
+        "mark_chart"
+      ],
+      "consequence_hooks": [
+        "exploration_progress",
+        "navigation_database",
+        "ship_risk",
+        "science_record"
+      ]
+    },
+    {
+      "template_id": "navigation_hazard",
+      "display_name_es": "Peligro de navegación",
+      "category": "hazard_event",
+      "triggers": [
+        "known_or_detected_hazard"
+      ],
+      "required_context": [
+        "active_travel"
+      ],
+      "possible_gameplay": [
+        "alter_course",
+        "reduce_speed",
+        "drop_out_of_warp",
+        "attempt_transit"
+      ],
+      "consequence_hooks": [
+        "eta",
+        "damage_risk",
+        "route_knowledge"
+      ]
+    },
+    {
+      "template_id": "engineering_degradation",
+      "display_name_es": "Degradación de sistemas",
+      "category": "crew_or_ship_event",
+      "triggers": [
+        "ship_wear",
+        "damage_state",
+        "high_warp_stress"
+      ],
+      "required_context": [
+        "affected_system_exists"
+      ],
+      "possible_gameplay": [
+        "reduce_speed",
+        "reroute_power",
+        "repair_in_transit",
+        "stop_for_repairs"
+      ],
+      "consequence_hooks": [
+        "ship_state",
+        "eta",
+        "engineering_duty"
+      ]
+    },
+    {
+      "template_id": "medical_emergency",
+      "display_name_es": "Emergencia médica",
+      "category": "crew_or_ship_event",
+      "triggers": [
+        "crew_state",
+        "passenger_state",
+        "rescued_survivor_state"
+      ],
+      "required_context": [
+        "medical_problem_exists_in_world_state"
+      ],
+      "possible_gameplay": [
+        "treat",
+        "divert_to_facility",
+        "request_assistance",
+        "quarantine_if_required"
+      ],
+      "consequence_hooks": [
+        "medical_state",
+        "eta",
+        "crew_readiness",
+        "relationships"
+      ]
+    },
+    {
+      "template_id": "debris_or_derelict",
+      "display_name_es": "Restos o nave a la deriva",
+      "category": "exploration_event",
+      "triggers": [
+        "sensor_detection"
+      ],
+      "required_context": [
+        "physical_object_exists"
+      ],
+      "possible_gameplay": [
+        "scan",
+        "approach",
+        "board",
+        "mark_and_report",
+        "ignore"
+      ],
+      "consequence_hooks": [
+        "investigation",
+        "salvage_law",
+        "knowledge",
+        "hazard"
+      ]
+    },
+    {
+      "template_id": "convoy_or_civilian_traffic",
+      "display_name_es": "Tráfico civil o convoy",
+      "category": "ambient_contact",
+      "triggers": [
+        "traffic_density"
+      ],
+      "required_context": [
+        "route_supports_traffic"
+      ],
+      "possible_gameplay": [
+        "pass",
+        "hail",
+        "escort_if_requested",
+        "inspect_if_authorized",
+        "render_assistance"
+      ],
+      "consequence_hooks": [
+        "relationships",
+        "mission_opportunity",
+        "delay"
+      ]
+    },
+    {
+      "template_id": "patrol_encounter",
+      "display_name_es": "Encuentro con patrulla",
+      "category": "diplomatic_or_tactical",
+      "triggers": [
+        "patrol_density",
+        "political_space"
+      ],
+      "required_context": [
+        "patrol_faction_resolvable"
+      ],
+      "possible_gameplay": [
+        "exchange_identification",
+        "hail",
+        "coordinate",
+        "evade",
+        "comply",
+        "challenge"
+      ],
+      "consequence_hooks": [
+        "faction_relation",
+        "border_state",
+        "mission_state"
+      ]
+    }
+  ],
+  "universal_rules": [
+    "Templates contain possibilities, not prewritten outcomes.",
+    "No template creates evidence, enemies, victims or hidden motives by itself.",
+    "Core must instantiate concrete entities and state before AI presents the encounter.",
+    "Player choices can decline optional encounters unless duty, law, command orders or immediate danger creates consequences."
+  ]
+}

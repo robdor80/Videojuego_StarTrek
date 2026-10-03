@@ -1,0 +1,172 @@
+{
+  "schema_version": "0.1",
+  "model_id": "navigation_mission_generation_hooks",
+  "inputs": [
+    "career_role",
+    "ship_capabilities",
+    "current_assignment",
+    "campaign_date",
+    "operational_destination_tags",
+    "route_context",
+    "faction_relations",
+    "active_conflicts",
+    "strategic_locations",
+    "exploration_progress",
+    "unresolved_world_events"
+  ],
+  "mission_families": [
+    {
+      "mission_type": "patrol",
+      "destination_tags": [
+        "border_context",
+        "frontier_hub",
+        "strategic_support"
+      ],
+      "required_capabilities": [
+        "navigation",
+        "sensors"
+      ],
+      "possible_objectives": [
+        "observe",
+        "show_presence",
+        "respond_to_contact",
+        "verify_border_state"
+      ]
+    },
+    {
+      "mission_type": "survey",
+      "destination_tags": [
+        "science",
+        "survey",
+        "exploration",
+        "navigation_hazard"
+      ],
+      "required_capabilities": [
+        "science",
+        "sensors"
+      ],
+      "possible_objectives": [
+        "map",
+        "classify",
+        "collect_data",
+        "update_charts",
+        "launch_probe"
+      ]
+    },
+    {
+      "mission_type": "escort",
+      "destination_tags": [
+        "trade",
+        "frontier_support",
+        "strategic_hub"
+      ],
+      "required_capabilities": [
+        "navigation",
+        "communications"
+      ],
+      "possible_objectives": [
+        "rendezvous",
+        "protect",
+        "maintain_formation",
+        "deliver_convoy"
+      ]
+    },
+    {
+      "mission_type": "diplomatic_transport",
+      "destination_tags": [
+        "diplomacy",
+        "political_contact",
+        "cultural_contact"
+      ],
+      "required_capabilities": [
+        "transport",
+        "communications"
+      ],
+      "possible_objectives": [
+        "transport_delegation",
+        "deliver_message",
+        "support_negotiation"
+      ]
+    },
+    {
+      "mission_type": "relief_or_rescue",
+      "destination_tags": [
+        "humanitarian",
+        "medical",
+        "search_and_rescue",
+        "limited_support"
+      ],
+      "required_capabilities": [
+        "medical",
+        "transport"
+      ],
+      "possible_objectives": [
+        "locate",
+        "stabilize",
+        "evacuate",
+        "deliver_supplies"
+      ]
+    },
+    {
+      "mission_type": "logistics",
+      "destination_tags": [
+        "resupply",
+        "repair",
+        "fleet_support",
+        "military_staging"
+      ],
+      "required_capabilities": [
+        "cargo_or_transport"
+      ],
+      "possible_objectives": [
+        "deliver_supplies",
+        "transfer_personnel",
+        "tow_or_support",
+        "resupply_unit"
+      ]
+    },
+    {
+      "mission_type": "investigation",
+      "destination_tags": [
+        "intelligence_risk",
+        "border_incident",
+        "navigation_hazard",
+        "covert_route"
+      ],
+      "required_capabilities": [
+        "sensors",
+        "analysis"
+      ],
+      "possible_objectives": [
+        "verify_report",
+        "identify_contact",
+        "reconstruct_event",
+        "gather_evidence"
+      ]
+    },
+    {
+      "mission_type": "first_contact",
+      "destination_tags": [
+        "exploration"
+      ],
+      "required_capabilities": [
+        "communications",
+        "science"
+      ],
+      "possible_objectives": [
+        "observe",
+        "establish_communication",
+        "assess_interference_constraints"
+      ],
+      "strict_gate": "Only eligible when World State contains a genuinely uncontacted civilization/contact and Prime Directive rules allow the scenario."
+    }
+  ],
+  "generation_rules": [
+    "A mission is derived from live World State; the generator must not invent a war, disaster or first-contact civilization merely to fill content.",
+    "Mission objectives must be achievable with the assigned ship or explicitly support requesting help.",
+    "Famous canon ships and characters are never required mission endpoints.",
+    "Mission generation respects player rank, position and command authority.",
+    "Optional mission opportunities can emerge during travel without replacing the current assignment automatically.",
+    "After campaign start, mission generation uses live political state rather than future screen chronology."
+  ]
+}

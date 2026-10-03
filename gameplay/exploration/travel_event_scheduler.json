@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "model_id": "travel_event_scheduler",
+  "inputs": [
+    "active_route_context",
+    "campaign_state",
+    "ship_state",
+    "mission_state",
+    "crew_state",
+    "faction_relation_state",
+    "astrographic_knowledge_state",
+    "recent_event_history"
+  ],
+  "pacing": {
+    "event_budget_per_route": "contextual",
+    "minimum_quiet_segments": 1,
+    "repeat_suppression": true,
+    "major_event_cooldown": true,
+    "no_forced_event_every_segment": true
+  },
+  "candidate_filters": [
+    "era_valid",
+    "location_valid",
+    "route_context_valid",
+    "faction_state_valid",
+    "knowledge_valid",
+    "ship_capability_valid",
+    "mission_compatible",
+    "not_recently_repeated"
+  ],
+  "weighting_inputs": [
+    "route_tension_profile",
+    "known_hazards",
+    "unknown_risk_budget",
+    "traffic_density",
+    "patrol_density",
+    "active_conflict",
+    "ship_damage",
+    "crew_fatigue",
+    "mission_urgency",
+    "player_recent_choices"
+  ],
+  "outcomes": [
+    "no_event",
+    "ambient_contact",
+    "operational_event",
+    "mission_opportunity",
+    "hazard_event",
+    "diplomatic_event",
+    "tactical_event",
+    "scientific_event",
+    "crew_or_ship_event"
+  ],
+  "rules": [
+    "The scheduler proposes candidates; Core instantiates an event only after eligibility validation.",
+    "No hidden World Truth is revealed merely because an event template exists.",
+    "Event frequency must allow uneventful travel.",
+    "Route danger changes probability, not certainty.",
+    "A mission-critical timer may suppress optional detours without suppressing mandatory consequences.",
+    "The same route can play differently in different campaigns because live state is authoritative."
+  ]
+}
