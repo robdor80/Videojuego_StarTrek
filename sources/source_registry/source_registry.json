@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.27.0",
+  "registry_version": "0.28.0",
   "last_updated": "2026-10-03",
   "sources": [
     {
@@ -1734,6 +1734,15 @@
       "url": "https://www.cygnus-x1.net/links/lcars/blueprints-main2.php#B2",
       "accessed_at": "2026-10-03",
       "notes": "18-sheet unofficial blueprint set used as a technical/spatial reference for USS Reliant and Miranda-class gameplay modeling. Visible sheet credit includes Kennedy Shipyards. Not SCREEN_CANON; higher-authority evidence overrides conflicts."
+    },
+    {
+      "source_id": "MA_UNIVERSAL_TRANSLATOR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Universal translator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Universal_translator",
+      "accessed_at": "2026-10-03",
+      "notes": "Cross-check for universal-translator capability, era integration and known failure/ambiguity modes. Translation is not guaranteed for every language or cultural metaphor."
     }
   ]
 }

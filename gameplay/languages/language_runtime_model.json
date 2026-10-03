@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1",
+  "model_id": "language_runtime",
+  "classification": "GAME_ADDITION",
+  "character_fields": {
+    "known_languages": [],
+    "fluency_by_language": {},
+    "literacy_by_language": {},
+    "specialist_linguistics_training": [],
+    "universal_translator_access": true
+  },
+  "fluency_levels": [
+    "none",
+    "basic",
+    "conversational",
+    "fluent",
+    "native_or_equivalent",
+    "specialist"
+  ],
+  "translation_states": [
+    "direct_shared_language",
+    "universal_translator_confident",
+    "universal_translator_partial",
+    "universal_translator_literal_only",
+    "analysis_required",
+    "untranslated"
+  ],
+  "resolution_inputs": [
+    "speaker_language",
+    "listener_language_knowledge",
+    "translator_technology_state",
+    "known_translation_matrix",
+    "language_structure",
+    "cultural_metaphor_load",
+    "signal_quality",
+    "specialist_linguist_support"
+  ],
+  "rules": [
+    "Universal translator access does not guarantee perfect or instant translation.",
+    "Literal translation can preserve words while losing metaphor, pragmatics or intent.",
+    "Unknown languages may require observation and analysis before a usable matrix exists.",
+    "A character who knows the original language can notice translator errors when their knowledge permits.",
+    "Machine translation never grants cultural familiarity automatically.",
+    "AI output may present translated dialogue, partial translation or untranslated content only as Core language state allows."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_UNIVERSAL_TRANSLATOR",
+      "confidence": "MEDIUM"
+    }
+  ]
+}
