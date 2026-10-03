@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1",
+  "model_id": "navigation_order_contract",
+  "natural_language_pipeline": [
+    "player_utterance",
+    "intent_parse",
+    "entity_resolution",
+    "navigation_validation",
+    "route_solution",
+    "command_authority_check",
+    "execution",
+    "world_state_mutation",
+    "player_feedback"
+  ],
+  "supported_intents": {
+    "set_course": {
+      "display_name_es": "Fijar rumbo",
+      "required": [
+        "destination"
+      ],
+      "optional": [
+        "route_preference",
+        "arrival_profile"
+      ]
+    },
+    "set_warp": {
+      "display_name_es": "Seleccionar factor warp",
+      "required": [
+        "warp_factor"
+      ],
+      "optional": [
+        "duration",
+        "until_condition"
+      ]
+    },
+    "engage_warp": {
+      "display_name_es": "Entrar en warp",
+      "required": [],
+      "optional": [
+        "warp_factor",
+        "destination"
+      ]
+    },
+    "drop_out_of_warp": {
+      "display_name_es": "Salir de warp",
+      "required": [],
+      "optional": [
+        "target_position",
+        "reason"
+      ]
+    },
+    "intercept": {
+      "display_name_es": "Interceptar",
+      "required": [
+        "target_contact_id"
+      ],
+      "optional": [
+        "warp_factor",
+        "intercept_profile"
+      ]
+    },
+    "enter_orbit": {
+      "display_name_es": "Entrar en órbita",
+      "required": [
+        "target_body_id"
+      ],
+      "optional": [
+        "orbit_profile"
+      ]
+    },
+    "dock": {
+      "display_name_es": "Atracar",
+      "required": [
+        "target_facility_id"
+      ],
+      "optional": [
+        "assigned_port_id"
+      ]
+    },
+    "evade": {
+      "display_name_es": "Maniobra evasiva",
+      "required": [],
+      "optional": [
+        "evasion_profile"
+      ]
+    }
+  },
+  "validation_checks": [
+    "destination_known_or_resolvable",
+    "navigation_solution_available",
+    "propulsion_available",
+    "power_available",
+    "requested_speed_within_live_limits",
+    "route_legality_known",
+    "command_authority_valid",
+    "collision_or_hazard_constraint",
+    "docking_or_orbit_capability_if_required"
+  ],
+  "outcomes": [
+    "accepted",
+    "clarification_required",
+    "queued",
+    "executing",
+    "completed",
+    "failed",
+    "refused",
+    "cancelled"
+  ],
+  "rules": [
+    "Natural language never mutates navigation state directly.",
+    "If the destination name is ambiguous, the system asks for clarification instead of guessing.",
+    "Known legal or treaty restrictions are surfaced before execution when operationally appropriate.",
+    "Unknown hazards remain unknown until sensors, charts or other knowledge reveal them."
+  ]
+}

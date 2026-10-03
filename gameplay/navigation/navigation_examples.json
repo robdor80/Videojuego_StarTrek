@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "examples": [
+    {
+      "player_input_es": "Rumbo a Vulcano, warp 6.",
+      "parsed_order": {
+        "intent": "set_course",
+        "destination": "vulcan_system",
+        "requested_warp_factor": 6
+      },
+      "required_core_steps": [
+        "resolve_current_ship_position",
+        "resolve_known_destination",
+        "build_candidate_routes",
+        "validate_live_warp_limit",
+        "calculate_eta_window",
+        "surface_known_border_or_hazard_warnings",
+        "execute_if_authorized"
+      ],
+      "note": "No universal warp formula is assumed; effective speed comes from the ship propulsion resolver."
+    },
+    {
+      "player_input_es": "Llévanos a Bajor por la ruta más segura.",
+      "parsed_order": {
+        "intent": "set_course",
+        "destination": "bajor",
+        "route_preference": "safest"
+      },
+      "required_core_steps": [
+        "score_routes_by_known_hazards",
+        "score_routes_by_political_state",
+        "consider_support_facilities",
+        "preserve_unknown_risk_as_uncertainty"
+      ]
+    },
+    {
+      "player_input_es": "Intercepta esa nave y mantén warp 8 mientras sea seguro.",
+      "parsed_order": {
+        "intent": "intercept",
+        "target_contact_id": "CURRENT_TARGET",
+        "requested_warp_factor": 8,
+        "until_condition": "unsafe_or_intercept_solution_reached"
+      },
+      "required_core_steps": [
+        "predict_target_motion",
+        "validate_requested_speed",
+        "build_intercept_solution",
+        "continuously_recalculate",
+        "drop_or_reduce_warp_if_live_limits_change"
+      ]
+    }
+  ]
+}

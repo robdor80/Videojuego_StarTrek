@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "warp_travel_state",
+  "fields": {
+    "ship_entity_id": null,
+    "movement_mode": "stationary",
+    "origin_location_id": null,
+    "destination_location_id": null,
+    "active_route_id": null,
+    "active_segment_index": null,
+    "current_warp_factor": null,
+    "requested_warp_factor": null,
+    "warp_scale_profile_id": null,
+    "propulsion_state_ref": null,
+    "route_progress_ly": 0,
+    "segment_progress_ly": 0,
+    "eta_window": null,
+    "navigation_solution_confidence": "unknown",
+    "local_subspace_condition_id": null,
+    "hazard_response_mode": "normal",
+    "last_solution_timestamp": null
+  },
+  "movement_modes": [
+    "stationary",
+    "impulse",
+    "warp_acceleration",
+    "warp_cruise",
+    "warp_deceleration",
+    "emergency_warp",
+    "route_hold",
+    "forced_drop_out"
+  ],
+  "runtime_rules": [
+    "Warp factor is an order/control value, not a universal distance formula.",
+    "The propulsion resolver supplies the effective velocity for the current ship, era/configuration and conditions.",
+    "Damage, available power, propulsion health and local subspace conditions can reduce sustainable speed.",
+    "Emergency warp may exceed normal sustainable limits only if the ship configuration and live state permit it.",
+    "Travel progress is persisted segment by segment so interruptions, encounters and rerouting are possible.",
+    "Core owns position and elapsed travel time. AI may describe them but cannot advance the ship."
+  ]
+}

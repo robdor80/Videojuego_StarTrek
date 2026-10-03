@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1",
+  "model_id": "navigation_route_cost",
+  "dimensions": {
+    "travel_time": {
+      "weight_profile_key": "time_weight",
+      "lower_is_better": true
+    },
+    "hazard_risk": {
+      "weight_profile_key": "hazard_weight",
+      "lower_is_better": true
+    },
+    "hostile_space_exposure": {
+      "weight_profile_key": "hostile_space_weight",
+      "lower_is_better": true
+    },
+    "restricted_border_crossings": {
+      "weight_profile_key": "border_weight",
+      "lower_is_better": true
+    },
+    "chart_uncertainty": {
+      "weight_profile_key": "uncertainty_weight",
+      "lower_is_better": true
+    },
+    "support_access": {
+      "weight_profile_key": "support_weight",
+      "lower_is_better": false
+    },
+    "stealth_exposure": {
+      "weight_profile_key": "stealth_weight",
+      "lower_is_better": true
+    }
+  },
+  "preference_profiles": {
+    "fastest": {
+      "time_weight": 1,
+      "hazard_weight": 0.2,
+      "hostile_space_weight": 0.2,
+      "border_weight": 0.2,
+      "uncertainty_weight": 0.2,
+      "support_weight": 0.1,
+      "stealth_weight": 0.1
+    },
+    "safest": {
+      "time_weight": 0.3,
+      "hazard_weight": 1,
+      "hostile_space_weight": 0.9,
+      "border_weight": 0.7,
+      "uncertainty_weight": 0.8,
+      "support_weight": 0.7,
+      "stealth_weight": 0.2
+    },
+    "avoid_hostile_space": {
+      "time_weight": 0.4,
+      "hazard_weight": 0.5,
+      "hostile_space_weight": 1,
+      "border_weight": 0.8,
+      "uncertainty_weight": 0.5,
+      "support_weight": 0.4,
+      "stealth_weight": 0.3
+    },
+    "prefer_starbase_support": {
+      "time_weight": 0.4,
+      "hazard_weight": 0.5,
+      "hostile_space_weight": 0.5,
+      "border_weight": 0.5,
+      "uncertainty_weight": 0.4,
+      "support_weight": 1,
+      "stealth_weight": 0.1
+    },
+    "silent_or_low_contact": {
+      "time_weight": 0.3,
+      "hazard_weight": 0.5,
+      "hostile_space_weight": 0.7,
+      "border_weight": 0.8,
+      "uncertainty_weight": 0.5,
+      "support_weight": 0.1,
+      "stealth_weight": 1
+    }
+  },
+  "rules": [
+    "Weights are GAME_ADDITION decision aids and are not presented as canon.",
+    "A route with illegal entry can remain visible as an option if the player has authority to consider or deliberately violate it.",
+    "The planner must not hide political consequences merely because a route is physically shorter.",
+    "Unknown risks are represented through uncertainty, not silently treated as zero risk."
+  ]
+}

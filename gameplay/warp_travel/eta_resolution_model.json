@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1",
+  "model_id": "warp_eta_resolution",
+  "inputs": [
+    "route_segments",
+    "ship_propulsion_capability",
+    "requested_warp_factor",
+    "sustainable_warp_limits",
+    "power_state",
+    "damage_state",
+    "subspace_conditions",
+    "known_hazards",
+    "required_border_or_traffic_delays",
+    "navigation_solution_confidence"
+  ],
+  "segment_resolution": {
+    "distance_source": "navigation_edge_or_geometry",
+    "effective_speed_source": "propulsion_resolver",
+    "effective_speed_unit": "light_years_per_hour",
+    "base_time_formula": "segment_distance_ly / effective_speed_ly_per_hour",
+    "uncertainty_inputs": [
+      "distance_confidence",
+      "speed_confidence",
+      "subspace_variability",
+      "hazard_uncertainty",
+      "navigation_solution_confidence"
+    ]
+  },
+  "outputs": {
+    "nominal_eta": null,
+    "earliest_eta": null,
+    "latest_eta": null,
+    "eta_confidence": "unknown",
+    "delay_reasons": [],
+    "reevaluation_triggers": []
+  },
+  "reevaluation_triggers": [
+    "warp_factor_change",
+    "route_change",
+    "damage_change",
+    "power_change",
+    "subspace_condition_change",
+    "border_hold",
+    "encounter",
+    "hazard_detection",
+    "forced_drop_out"
+  ],
+  "rules": [
+    "Do not use one immutable warp-factor-to-c mapping across all eras and ships.",
+    "ETA is normally a range and is recalculated when travel conditions change.",
+    "A lower-confidence map distance produces a wider ETA window.",
+    "Border clearance and tactical events can add elapsed time without changing physical distance.",
+    "Special traversal systems such as wormholes or corridors use their own traversal resolver."
+  ]
+}
