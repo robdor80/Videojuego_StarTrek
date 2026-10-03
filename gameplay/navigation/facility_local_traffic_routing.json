@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_local_traffic_routing",
+  "classification": "GAME_ADDITION",
+  "inputs": [
+    "facility_traffic_state",
+    "facility_access_and_clearance",
+    "visiting_unit_state",
+    "facility_topology_or_external_approach_geometry",
+    "local_navigation_hazards",
+    "ship_maneuvering_state",
+    "berth_compatibility",
+    "emergency_priorities"
+  ],
+  "outputs": [
+    "assigned_approach_ref",
+    "hold_position_ref",
+    "berth_ref",
+    "approach_clearance_state",
+    "departure_route_ref",
+    "known_conflicts",
+    "traffic_delay_range"
+  ],
+  "rules": [
+    "Local routing never assumes a free berth simply because the facility supports docking.",
+    "Traffic conflicts can cause holding, rerouting or delayed departure.",
+    "Damaged or low-maneuverability ships receive routes compatible with live limitations when possible.",
+    "Traffic routing cannot reveal cloaked or unknown contacts before sensor knowledge permits it.",
+    "Emergency routing may preempt normal traffic but still respects approach safety."
+  ]
+}

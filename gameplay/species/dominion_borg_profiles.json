@@ -1,0 +1,171 @@
+{
+  "schema_version": "0.1",
+  "profile_scope": "dominion_and_borg_gameplay_baseline",
+  "profiles": {
+    "changeling": {
+      "display_name_es": "Cambiante",
+      "dominion_role": "founder_species_contextual",
+      "physiology": {
+        "natural_state": "morphogenic_liquid",
+        "shapeshifting": true,
+        "periodic_regeneration_required": true,
+        "exact_regeneration_interval": "individual_and_source_contextual",
+        "can_mimic_forms": "subject_to_observation_skill_and_core_resolution"
+      },
+      "identity_rules": {
+        "copied_appearance_does_not_copy_memories": true,
+        "copied_appearance_does_not_copy_clearance": true,
+        "copied_appearance_does_not_copy_relationship_state": true,
+        "detection_depends_on_evidence_and_capabilities": true
+      },
+      "cultural_rules": {
+        "founder_identity_not_implied_for_every_changeling_context": true,
+        "great_link_is_culturally_central_for_founder_society": true,
+        "individual_history_and_affiliation_override_species_shortcuts": true
+      },
+      "gameplay_hooks": [
+        "shapechange",
+        "infiltration",
+        "identity_verification",
+        "regeneration",
+        "founder_authority"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_CHANGELING",
+          "confidence": "MEDIUM",
+          "claim_scope": "shapeshifting, natural state and regeneration"
+        },
+        {
+          "source_id": "MA_FOUNDER",
+          "confidence": "MEDIUM",
+          "claim_scope": "Founders and Dominion authority"
+        },
+        {
+          "source_id": "ST_OFFICIAL_DOMINION_101",
+          "confidence": "HIGH",
+          "claim_scope": "Dominion hierarchy"
+        }
+      ]
+    },
+    "vorta": {
+      "display_name_es": "Vorta",
+      "common_faction_associations": [
+        "dominion"
+      ],
+      "physiology": {
+        "genetically_engineered_by_founders": true,
+        "species_specific_medical_profile": true
+      },
+      "cultural_rules": {
+        "founder_reverence_is_engineered_and_institutional": true,
+        "administrative_and_command_roles_are_common": true,
+        "diplomat_or_commander_profession_not_implied_for_every_individual": true
+      },
+      "gameplay_hooks": [
+        "dominion_command",
+        "negotiation",
+        "administration",
+        "jem_hadar_command_context",
+        "founder_authority"
+      ],
+      "character_creation": {
+        "forced_personality_traits": [],
+        "dominion_service_requires_character_state": true
+      },
+      "provenance": [
+        {
+          "source_id": "MA_VORTA",
+          "confidence": "MEDIUM",
+          "claim_scope": "genetic engineering and Dominion administrative/command role"
+        },
+        {
+          "source_id": "ST_OFFICIAL_DOMINION_101",
+          "confidence": "HIGH",
+          "claim_scope": "Dominion hierarchy"
+        }
+      ]
+    },
+    "jem_hadar": {
+      "display_name_es": "Jem'Hadar",
+      "common_faction_associations": [
+        "dominion"
+      ],
+      "physiology": {
+        "genetically_engineered_by_founders": true,
+        "accelerated_maturation": true,
+        "engineered_ketracel_white_dependency": true,
+        "species_specific_medical_profile": true
+      },
+      "dependency_rules": {
+        "ketracel_white_is_core_owned_resource_medical_state": true,
+        "missing_supply_can_become_operational_and_medical_crisis": true,
+        "exact_dose_timing_not_invented": true
+      },
+      "cultural_rules": {
+        "military_service_is_engineered_institutional_context": true,
+        "obedience_and_founder_reverence_are_strong_contextual_drives": true,
+        "individual_live_state_can_include_doubt_or_deviation": true
+      },
+      "gameplay_hooks": [
+        "ketracel_white_logistics",
+        "dominion_military",
+        "unit_cohesion",
+        "founder_vorta_authority",
+        "accelerated_lifecycle"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_JEM_HADAR",
+          "confidence": "MEDIUM",
+          "claim_scope": "engineered soldier species and accelerated maturation"
+        },
+        {
+          "source_id": "MA_KETRACEL_WHITE",
+          "confidence": "MEDIUM",
+          "claim_scope": "engineered dependency"
+        },
+        {
+          "source_id": "ST_OFFICIAL_DOMINION_101",
+          "confidence": "HIGH",
+          "claim_scope": "Dominion military hierarchy"
+        }
+      ]
+    },
+    "borg_drone": {
+      "display_name_es": "Dron Borg",
+      "profile_type": "assimilated_character_state_not_species",
+      "origin_species_required": true,
+      "physiology": {
+        "cybernetic_augmentation": true,
+        "implant_profile_depends_on_function": true,
+        "enhanced_strength_contextual": true,
+        "collective_connection": "state_dependent"
+      },
+      "identity_rules": {
+        "borg_drone_state_does_not_replace_origin_species": true,
+        "designation_and_function_are_runtime_state": true,
+        "liberated_or_disconnected_state_supported": true
+      },
+      "gameplay_hooks": [
+        "collective_connection",
+        "assimilation",
+        "cybernetic_systems",
+        "adaptation",
+        "liberation_or_disconnection"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_BORG_DRONE",
+          "confidence": "MEDIUM",
+          "claim_scope": "assimilated origin species plus cybernetic augmentation"
+        },
+        {
+          "source_id": "ST_OFFICIAL_BORG_101",
+          "confidence": "HIGH",
+          "claim_scope": "Borg collective and drone context"
+        }
+      ]
+    }
+  }
+}

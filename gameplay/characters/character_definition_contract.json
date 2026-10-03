@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_definition_contract",
+  "classification": "GAME_ADDITION",
+  "required_fields": [
+    "character_id",
+    "display_name",
+    "identity_type",
+    "temporal_validity",
+    "source_ids"
+  ],
+  "identity_types": [
+    "canonical",
+    "generated",
+    "campaign_created"
+  ],
+  "optional_fields": [
+    "species_id",
+    "origin",
+    "culture_refs",
+    "citizenship_refs",
+    "historical_affiliations",
+    "historical_assignments",
+    "known_relationship_seeds",
+    "personality_seed",
+    "knowledge_seed",
+    "presentation_refs"
+  ],
+  "temporal_validity_fields": [
+    "known_active_from",
+    "known_active_until",
+    "retained_era_ids"
+  ],
+  "rules": [
+    "Definition bootstraps a character but is not live state.",
+    "Canonical characters are date-gated and never teleported into an era where they do not belong.",
+    "Unknown biographical gaps remain unknown.",
+    "Generated characters must satisfy live-world assignment, species, faction and location constraints.",
+    "Presentation references do not grant gameplay authority or knowledge."
+  ]
+}

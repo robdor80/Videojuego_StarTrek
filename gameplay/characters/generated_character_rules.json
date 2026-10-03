@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "model_id": "generated_character_rules",
+  "classification": "GAME_ADDITION",
+  "generation_inputs": [
+    "campaign_date",
+    "location",
+    "faction_context",
+    "unit_or_facility_staffing_need",
+    "assignment_vacancy",
+    "required_rank_or_role",
+    "required_qualifications",
+    "species_population_context",
+    "culture_context",
+    "language_requirements",
+    "name_generation_profile"
+  ],
+  "required_outputs": [
+    "character_definition",
+    "initial_runtime_state",
+    "personality_seed",
+    "knowledge_seed",
+    "relationship_seed_if_justified"
+  ],
+  "rules": [
+    "Generated characters exist for a live-world reason, not merely because the player asked who is nearby.",
+    "Generation must respect staffing, faction, date, location and qualification constraints.",
+    "Species selection does not generate personality stereotypes.",
+    "No generated NPC receives famous-canon relationships without explicit campaign justification.",
+    "Generated characters persist once introduced unless the campaign explicitly discards them.",
+    "Names and presentation must avoid accidental collisions with canonical characters where validation can detect them."
+  ]
+}

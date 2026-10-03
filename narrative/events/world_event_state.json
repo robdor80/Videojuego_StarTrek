@@ -71,7 +71,9 @@
     "charting_gap",
     "intelligence_report",
     "conflict_escalation",
-    "humanitarian_need"
+    "humanitarian_need",
+    "support_capacity_shortfall",
+    "diplomatic_contact"
   ],
   "rules": [
     "A world event represents something that actually exists in authoritative campaign state.",

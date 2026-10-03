@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_assignment_profile",
+  "classification": "GAME_ADDITION",
+  "principle": "A station/base assignment is a first-class Starfleet career assignment, not merely a menu location between ship missions.",
+  "fields": {
+    "assignment_profile_id": null,
+    "facility_id": null,
+    "operator_faction_id": null,
+    "eligible_departments": [],
+    "eligible_positions": [],
+    "duty_environment_tags": [],
+    "command_chain_ref": null,
+    "watch_structure_ref": null,
+    "local_authority_profile_ref": null,
+    "external_mission_support": true,
+    "transfer_in_rules": [],
+    "transfer_out_rules": []
+  },
+  "duty_environment_tags": [
+    "traffic_control",
+    "docking_operations",
+    "engineering",
+    "maintenance",
+    "security",
+    "medical",
+    "science",
+    "communications",
+    "logistics",
+    "cargo",
+    "personnel",
+    "diplomacy",
+    "command",
+    "administration"
+  ],
+  "rules": [
+    "Facility assignments use the same rank/position/department separation as ship assignments.",
+    "Being assigned to a facility does not automatically grant command authority over visiting ships.",
+    "Facility personnel can receive local, regional and support missions without being part of a starship crew.",
+    "Temporary duty and transfers between ship and facility assignments are supported.",
+    "Career progression may include facility service without treating it as inferior to starship service."
+  ]
+}

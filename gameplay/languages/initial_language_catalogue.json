@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "initial_major_languages",
+  "languages": [
+    {
+      "language_id": "klingonese",
+      "display_name_es": "Klingon",
+      "associated_species_ids": [
+        "klingon"
+      ],
+      "source_refs": [
+        "MA_KLINGON"
+      ]
+    },
+    {
+      "language_id": "romulan",
+      "display_name_es": "Romulano",
+      "associated_species_ids": [
+        "romulan"
+      ],
+      "source_refs": [
+        "MA_ROMULAN"
+      ]
+    },
+    {
+      "language_id": "bajoran",
+      "display_name_es": "Bajorano",
+      "associated_species_ids": [
+        "bajoran"
+      ],
+      "source_refs": [
+        "MA_BAJORAN"
+      ]
+    },
+    {
+      "language_id": "ferengi",
+      "display_name_es": "Ferengi",
+      "associated_species_ids": [
+        "ferengi"
+      ],
+      "source_refs": [
+        "MA_FERENGI"
+      ]
+    },
+    {
+      "language_id": "trill",
+      "display_name_es": "Trill",
+      "associated_species_ids": [
+        "trill"
+      ],
+      "source_refs": [
+        "MA_TRILL"
+      ]
+    }
+  ],
+  "rules": [
+    "Language association does not imply every member of a species speaks it.",
+    "Homeworld language is not equivalent to faction citizenship.",
+    "Additional dialects and languages are added only when gameplay needs them and provenance exists."
+  ]
+}

@@ -1,0 +1,334 @@
+{
+  "schema_version": "0.1",
+  "profile_scope": "major_alpha_beta_quadrant_species_gameplay_baseline",
+  "profiles": {
+    "klingon": {
+      "display_name_es": "Klingon",
+      "common_homeworld_id": "qonos",
+      "common_faction_associations": [
+        "klingon_empire"
+      ],
+      "physiology": {
+        "strength_profile": "enhanced_vs_human_contextual",
+        "environmental_notes": [
+          "Exact performance remains individual and situation dependent."
+        ]
+      },
+      "cultural_rules": {
+        "honor_traditions_are_common": true,
+        "martial_traditions_are_common": true,
+        "house_identity_can_matter": true,
+        "honor_is_not_a_single_universal_code": true,
+        "individual_adherence_varies": true,
+        "warrior_profession_not_implied": true
+      },
+      "gameplay_hooks": [
+        "honor_context",
+        "house_relationships",
+        "challenge_or_duel_context",
+        "military_or_diplomatic_protocol"
+      ],
+      "character_creation": {
+        "forced_personality_traits": [],
+        "forced_faction_loyalty": []
+      },
+      "provenance": [
+        {
+          "source_id": "MA_KLINGON",
+          "confidence": "MEDIUM",
+          "claim_scope": "species origin, language, broad cultural context"
+        },
+        {
+          "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "honor, ritual and martial cultural framing"
+        },
+        {
+          "source_id": "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP",
+          "confidence": "HIGH",
+          "claim_scope": "era-dependent Federation-Klingon political context"
+        }
+      ]
+    },
+    "romulan": {
+      "display_name_es": "Romulano",
+      "common_homeworld_id": "romulus",
+      "common_faction_associations": [
+        "romulan_star_empire"
+      ],
+      "physiology": {
+        "vulcan_related_ancestry": true,
+        "similar_to_vulcan_not_identical": true,
+        "automatic_vulcan_telepathy": false,
+        "medical_treatment_must_not_assume_vulcan_equivalence": true
+      },
+      "cultural_rules": {
+        "secrecy_and_state_security_can_be_strong_norms": true,
+        "strategic_and_political_calculation_can_be_common": true,
+        "loyalty_context_can_be_culturally_salient": true,
+        "tal_shiar_membership_not_implied": true,
+        "individual_adherence_varies": true
+      },
+      "gameplay_hooks": [
+        "neutral_zone_context",
+        "security_clearance",
+        "intelligence_risk",
+        "political_loyalty",
+        "covert_operation_context"
+      ],
+      "character_creation": {
+        "forced_personality_traits": [],
+        "forced_tal_shiar_membership": false
+      },
+      "provenance": [
+        {
+          "source_id": "MA_ROMULAN",
+          "confidence": "MEDIUM",
+          "claim_scope": "shared Vulcan ancestry and distinct physiology"
+        },
+        {
+          "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "broad secrecy, loyalty and political-culture framing"
+        },
+        {
+          "source_id": "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER",
+          "confidence": "HIGH",
+          "claim_scope": "Federation-Romulan political context"
+        }
+      ]
+    },
+    "cardassian": {
+      "display_name_es": "Cardassiano",
+      "common_homeworld_id": "cardassia_prime",
+      "common_faction_associations": [
+        "cardassian_union"
+      ],
+      "physiology": {
+        "preferred_environment": {
+          "darker_than_human_standard": true,
+          "hotter_than_human_standard": true,
+          "more_humid_than_human_standard": true
+        },
+        "medical_profile_requires_species_specific_handling": true
+      },
+      "cultural_rules": {
+        "order_and_control_can_be_strong_social_values": true,
+        "hierarchical_institutions_can_be_culturally_salient": true,
+        "occupation_history_can_shape_reactions": true,
+        "union_loyalty_not_implied": true,
+        "individual_adherence_varies": true
+      },
+      "gameplay_hooks": [
+        "environmental_comfort",
+        "occupation_legacy",
+        "state_or_family_loyalty",
+        "military_and_intelligence_context"
+      ],
+      "character_creation": {
+        "forced_personality_traits": [],
+        "forced_union_loyalty": false
+      },
+      "provenance": [
+        {
+          "source_id": "MA_CARDASSIAN",
+          "confidence": "MEDIUM",
+          "claim_scope": "species origin and environmental preference"
+        },
+        {
+          "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "broad order/control cultural framing"
+        },
+        {
+          "source_id": "DS9_EMISSARY",
+          "confidence": "HIGH",
+          "claim_scope": "post-occupation Bajor/Cardassian context"
+        }
+      ]
+    },
+    "bajoran": {
+      "display_name_es": "Bajorano",
+      "common_homeworld_id": "bajor",
+      "common_faction_associations": [
+        "bajoran_provisional_government"
+      ],
+      "physiology": {
+        "current_gameplay_specialization": "no_broad_species_bonus_defined"
+      },
+      "cultural_rules": {
+        "prophet_centered_religious_traditions_are_important": true,
+        "personal_faith_not_implied": true,
+        "religious_authority_and_civil_authority_are_separate": true,
+        "occupation_and_resistance_history_can_shape_context": true,
+        "trauma_not_implied_for_every_character": true
+      },
+      "gameplay_hooks": [
+        "religious_etiquette",
+        "occupation_legacy",
+        "resistance_history",
+        "bajoran_jurisdiction",
+        "wormhole_prophets_context"
+      ],
+      "character_creation": {
+        "forced_religious_belief": false,
+        "forced_resistance_history": false,
+        "forced_personality_traits": []
+      },
+      "provenance": [
+        {
+          "source_id": "MA_BAJORAN",
+          "confidence": "MEDIUM",
+          "claim_scope": "species and language context"
+        },
+        {
+          "source_id": "MA_BAJORAN_RELIGION",
+          "confidence": "MEDIUM",
+          "claim_scope": "Prophets and Bajoran religious tradition"
+        },
+        {
+          "source_id": "DS9_EMISSARY",
+          "confidence": "HIGH",
+          "claim_scope": "post-occupation society and sovereignty"
+        }
+      ]
+    },
+    "ferengi": {
+      "display_name_es": "Ferengi",
+      "common_homeworld_id": "ferenginar",
+      "common_faction_associations": [
+        "ferengi_alliance"
+      ],
+      "physiology": {
+        "telepathic_reading_resistance": {
+          "betazoid_full_reading": "strong_limitation",
+          "not_universal_psionic_immunity": true
+        },
+        "species_specific_medical_profile": true
+      },
+      "cultural_rules": {
+        "commerce_and_profit_can_be_strong_social_values": true,
+        "rules_of_acquisition_can_be_cultural_reference": true,
+        "trader_profession_not_implied": true,
+        "greed_not_forced_personality": true,
+        "individual_adherence_varies": true
+      },
+      "gameplay_hooks": [
+        "contracts",
+        "negotiation",
+        "commercial_law",
+        "latinum_exchange",
+        "telepathy_interaction"
+      ],
+      "character_creation": {
+        "forced_profession": null,
+        "forced_personality_traits": []
+      },
+      "provenance": [
+        {
+          "source_id": "MA_FERENGI",
+          "confidence": "MEDIUM",
+          "claim_scope": "physiology and telepathic-reading limitation"
+        },
+        {
+          "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "commercial cultural framing"
+        },
+        {
+          "source_id": "TNG_THE_LAST_OUTPOST",
+          "confidence": "HIGH",
+          "claim_scope": "early Federation-Ferengi contact"
+        }
+      ]
+    },
+    "trill": {
+      "display_name_es": "Trill",
+      "common_homeworld_id": "trill",
+      "common_faction_associations": [
+        "united_federation_of_planets"
+      ],
+      "physiology": {
+        "host_population": true,
+        "symbiont_population_separate": true,
+        "joined_state_possible_for_small_population": true
+      },
+      "joined_state": {
+        "identity_is_host_symbiont_synthesis": true,
+        "previous_host_memories_and_skills_available_contextually": true,
+        "recall_is_core_resolved_not_omniscient": true,
+        "joining_medical_state_private_when_not_known": true
+      },
+      "cultural_rules": {
+        "joined_and_unjoined_people_are_not_separate_species": true,
+        "joining_status_must_not_define_entire_personality": true,
+        "previous_host_experience_can_affect_social_context": true
+      },
+      "gameplay_hooks": [
+        "joined_memory",
+        "medical_compatibility",
+        "identity_and_relationship_continuity",
+        "previous_host_knowledge"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_TRILL",
+          "confidence": "MEDIUM",
+          "claim_scope": "joining and previous-host memory/skill access"
+        },
+        {
+          "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "broad Trill cultural framing"
+        },
+        {
+          "source_id": "DS9_EQUILIBRIUM",
+          "confidence": "HIGH",
+          "claim_scope": "Trill medical/cultural context"
+        }
+      ]
+    },
+    "betazoid": {
+      "display_name_es": "Betazoide",
+      "common_homeworld_id": "betazed",
+      "common_faction_associations": [
+        "united_federation_of_planets"
+      ],
+      "physiology": {
+        "telepathy": "natural_species_capability_with_individual_variation",
+        "development_timing": "commonly_develops_by_adolescence_but_varies",
+        "reading_limitations": [
+          "ferengi",
+          "changeling"
+        ],
+        "empathy_and_telepathy_strength_varies": true
+      },
+      "actions": {
+        "telepathic_reading": {
+          "core_resolves_scope": true,
+          "not_automatic_lie_detector": true,
+          "target_species_and_state_can_limit": true,
+          "consent_and_professional_rules_are_contextual": true,
+          "hidden_information_not_revealed_without_resolution": true
+        }
+      },
+      "cultural_rules": {
+        "telepathy_does_not_replace_personality": true,
+        "telepathic_etiquette_requires_context": true
+      },
+      "gameplay_hooks": [
+        "telepathic_contact",
+        "empathic_assessment",
+        "privacy_and_consent",
+        "species_reading_limitations"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_BETAZOID",
+          "confidence": "MEDIUM",
+          "claim_scope": "telepathy, variation and reading limitations"
+        }
+      ]
+    }
+  }
+}

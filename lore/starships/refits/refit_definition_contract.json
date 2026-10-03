@@ -1,0 +1,15 @@
+{
+  "schema_version": "0.1",
+  "model_id": "starship_refit_definition",
+  "classification": "GAME_ADDITION",
+  "principle": "CLASS BASELINE != CONFIGURATION PROFILE != REFIT PACKAGE != INDIVIDUAL SHIP LIVE STATE",
+  "required_fields": ["refit_id","display_name_es","eligible_class_ids","availability","change_set","source_ids"],
+  "rules": [
+    "A refit never modifies the immutable class baseline directly.",
+    "Applied refits are recorded on the individual ship and its current configuration.",
+    "A refit cannot introduce technology beyond the era matrix unless explicit experimental or special provenance allows it.",
+    "A refit may change interior topology; those changes require a configuration/topology override rather than silently editing the class layout.",
+    "A refit package may be historically associated with a class without being applied to every surviving hull.",
+    "Individual-only modifications must not be generalized to the class."
+  ]
+}

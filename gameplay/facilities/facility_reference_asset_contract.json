@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "contract_id": "facility_reference_asset_ingest",
+  "classification": "GAME_ADDITION",
+  "expected_source_bundle": {
+    "required": [
+      "source_page",
+      "page_title",
+      "site_id",
+      "retrieved_at",
+      "detected_sheet_count",
+      "original_sheet_urls",
+      "original_filenames"
+    ],
+    "optional": [
+      "publisher",
+      "creator_credit",
+      "notes",
+      "license_or_copyright_notice"
+    ]
+  },
+  "expected_file_manifest": {
+    "per_file_required": [
+      "normalized_filename",
+      "original_filename",
+      "source_url",
+      "byte_size",
+      "sha256",
+      "download_status"
+    ]
+  },
+  "ingest_output_fields": [
+    "reference_set_id",
+    "subject_type",
+    "subject_candidate_id",
+    "source_registry_id",
+    "asset_paths",
+    "sheet_order",
+    "visible_credits",
+    "authority_classification",
+    "confidence",
+    "scope",
+    "review_status",
+    "derived_gameplay_refs"
+  ],
+  "review_statuses": [
+    "downloaded_unreviewed",
+    "subject_identified",
+    "provenance_classified",
+    "sheet_set_validated",
+    "gameplay_extraction_in_progress",
+    "gameplay_extraction_complete",
+    "rejected_or_duplicate"
+  ],
+  "rules": [
+    "Downloader metadata records origin but does not determine canon authority.",
+    "Every imported reference set receives a project source-registry entry before gameplay extraction.",
+    "Visible credits/copyright/source notes are preserved.",
+    "File hashes are retained to detect duplicates and accidental replacement.",
+    "Reference images may support spatial inference without proving every printed technical claim.",
+    "Subject identification can be class-level, individual-facility-level or unknown pending review."
+  ]
+}

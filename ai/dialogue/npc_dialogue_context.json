@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1",
+  "model_id": "npc_dialogue_context",
+  "classification": "GAME_ADDITION",
+  "required_inputs": [
+    "speaker_character_state",
+    "listener_identity_as_known",
+    "speaker_knowledge_state",
+    "speaker_memory_state",
+    "speaker_personality_state",
+    "speaker_relationship_to_listener",
+    "current_mood_and_stress",
+    "rank_position_and_authority_context",
+    "culture_and_language_context",
+    "current_location_and_duty",
+    "conversation_history_visible_to_speaker"
+  ],
+  "output_constraints": [
+    "do_not_reveal_unknown_world_truth",
+    "do_not_invent_memories",
+    "do_not_invent_relationship_history",
+    "do_not_grant_authority",
+    "do_not_resolve_hidden_motives",
+    "respect_language_resolution",
+    "respect_classification_and_clearance"
+  ],
+  "dialogue_can_express": [
+    "personality",
+    "subtext",
+    "uncertainty",
+    "professional_protocol",
+    "affection_or_tension",
+    "humor",
+    "deception_when_character_state_supports_it",
+    "cultural_style",
+    "memory_of_shared_events"
+  ],
+  "rules": [
+    "A convincing line of dialogue is not authoritative game state.",
+    "AI can lie in-character only when the character has motive/intent state supporting deception.",
+    "A character cannot reference a memory they do not possess.",
+    "Subtext may imply attitude but cannot leak hidden factual state.",
+    "Professional duty can constrain what a character says despite personal feelings."
+  ]
+}

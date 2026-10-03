@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_identity",
+  "classification": "GAME_ADDITION",
+  "principle": "FACILITY TYPE != FACILITY DESIGN/CLASS != INDIVIDUAL FACILITY != CURRENT OWNER != CURRENT OPERATOR",
+  "fields": {
+    "facility_id": null,
+    "display_name_es": null,
+    "facility_type": null,
+    "design_id": null,
+    "design_family_id": null,
+    "individual_name": null,
+    "registry_or_designation": null,
+    "constructed_by_faction_id": null,
+    "current_owner_faction_id": null,
+    "current_operator_faction_id": null,
+    "current_command_authority_id": null,
+    "location_id": null,
+    "era_availability": [],
+    "configuration_id": null,
+    "physical_profile_ref": null,
+    "capability_profile_ref": null,
+    "operational_state_ref": null,
+    "provenance_refs": []
+  },
+  "facility_types": [
+    "starbase",
+    "space_station",
+    "drydock",
+    "shipyard",
+    "outpost",
+    "depot",
+    "research_station",
+    "medical_station",
+    "communications_station",
+    "orbital_facility",
+    "surface_facility",
+    "mobile_support_unit"
+  ],
+  "rules": [
+    "A facility's physical design can outlive changes of ownership or operation.",
+    "A captured, leased or jointly-operated facility does not change physical design identity merely because control changes.",
+    "Individual facilities may diverge from their baseline design through refits, damage, expansion or mission-specific conversion.",
+    "Facility registry/designation is not a universal chronological numbering system.",
+    "Current operator and sovereign territory are separate facts."
+  ]
+}

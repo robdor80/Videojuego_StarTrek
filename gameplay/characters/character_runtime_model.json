@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_runtime_state",
+  "classification": "GAME_ADDITION",
+  "principle": "IDENTITY != SPECIES != CULTURE != CITIZENSHIP != FACTION != RANK != POSITION != PERSONALITY != CURRENT STATE",
+  "identity_fields": {
+    "character_id": null,
+    "display_name": null,
+    "canonical_identity": false,
+    "birth_or_creation_date": null,
+    "origin_location_id": null,
+    "species_state_ref": null,
+    "lineage_refs": [],
+    "culture_refs": [],
+    "citizenship_refs": []
+  },
+  "institutional_fields": {
+    "faction_memberships": [],
+    "service_refs": [],
+    "current_rank_ref": null,
+    "current_assignment_ref": null,
+    "current_position_ref": null,
+    "current_department_ref": null,
+    "current_chain_of_command_refs": [],
+    "clearance_refs": []
+  },
+  "live_fields": {
+    "current_location_ref": null,
+    "duty_state_ref": null,
+    "medical_state_ref": null,
+    "mood_state_ref": null,
+    "fatigue_state_ref": null,
+    "active_goal_refs": [],
+    "current_task_refs": [],
+    "relationship_state_refs": [],
+    "knowledge_state_ref": null,
+    "memory_state_ref": null,
+    "reputation_refs": [],
+    "inventory_refs": []
+  },
+  "history_fields": {
+    "canonical_history_cutoff": "campaign_start_date",
+    "campaign_event_log_ref": null,
+    "append_only_campaign_history": true
+  },
+  "rules": [
+    "Canonical biography initializes only history before campaign start.",
+    "After campaign start, live events override any later screen-canon future.",
+    "Rank and position are separate.",
+    "Faction membership and citizenship are separate.",
+    "Species and culture never define personality automatically.",
+    "A character knows only information present in their knowledge state.",
+    "AI dialogue cannot mutate authoritative character state directly."
+  ]
+}

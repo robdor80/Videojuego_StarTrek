@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "model_id": "starship_refit_job_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "refit_job_id": null,
+    "ship_entity_id": null,
+    "refit_id": null,
+    "provider_facility_id": null,
+    "requested_at": null,
+    "approved_at": null,
+    "started_at": null,
+    "estimated_completion_range": null,
+    "completed_at": null,
+    "status": "proposed",
+    "required_parts": [],
+    "required_resources": [],
+    "required_specialists": [],
+    "facility_capability_refs": [],
+    "blocked_reasons": [],
+    "progress_phases": [],
+    "current_phase": null,
+    "ship_service_status_effect": "under_repair",
+    "temporary_system_unavailability": [],
+    "configuration_before_ref": null,
+    "configuration_after_ref": null,
+    "event_refs": []
+  },
+  "statuses": [
+    "proposed","approved","queued","preparing","in_progress","testing",
+    "completed","partially_completed","blocked","suspended","cancelled","failed"
+  ],
+  "phases": [
+    "inspection",
+    "decommission_affected_systems",
+    "structural_or_system_work",
+    "integration",
+    "safety_checks",
+    "dock_trials",
+    "space_trials",
+    "return_to_service"
+  ],
+  "rules": [
+    "A refit consumes real campaign time and facility capacity.",
+    "A ship may be unavailable for missions during some or all phases.",
+    "Partial completion does not automatically grant the full refit change set.",
+    "Required parts, specialists and facility capability can block progress.",
+    "Testing is part of the job; completion is not assumed immediately after installation.",
+    "Cancellation preserves already-performed changes only when the job state explicitly records them."
+  ]
+}

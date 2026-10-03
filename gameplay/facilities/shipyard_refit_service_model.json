@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1",
+  "model_id": "shipyard_refit_service",
+  "classification": "GAME_ADDITION",
+  "service_levels": [
+    {
+      "service_level": "field_upgrade",
+      "typical_scope": ["replace_component","install_mission_module","control_update"],
+      "minimum_facility_repair_level": "field"
+    },
+    {
+      "service_level": "major_refit",
+      "typical_scope": ["replace_major_system","interior_reconfiguration","structural_modification"],
+      "minimum_facility_repair_level": "drydock"
+    },
+    {
+      "service_level": "reconstruction",
+      "typical_scope": ["major_structural_change","multi_system_rebuild","configuration_rebaseline"],
+      "minimum_facility_repair_level": "shipyard"
+    }
+  ],
+  "scheduling_inputs": [
+    "ship_priority","fleet_operational_need","facility_queue","required_parts",
+    "specialist_availability","dock_compatibility","estimated_duration","campaign_emergency_state"
+  ],
+  "rules": [
+    "Facility type alone does not prove ability to perform a given refit.",
+    "Major refits compete for dock, staff and materials with repairs and other ships.",
+    "Emergency fleet needs can defer noncritical refits.",
+    "A shipyard can support a class only when hull compatibility and required expertise are satisfied.",
+    "The system does not offer a universal upgrade shop."
+  ]
+}

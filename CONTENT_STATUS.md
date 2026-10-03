@@ -107,16 +107,16 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 | Domain | Status |
 |---|---|
-| Characters | ⬜ TODO |
-| Species / cultures / languages | 🟨 IN_PROGRESS | Founding-species gameplay baseline established for Humans, Vulcans, Andorians and Tellarites; broader species, culture and language coverage remains progressive. |
+| Characters | 🟨 IN_PROGRESS | Persistent character identity/runtime, personality, knowledge, memory, relationships, reputation, generated-NPC rules and dialogue context are established; canonical-character catalogues and deeper behavioral content remain progressive. |
+| Species / cultures / languages | 🟨 IN_PROGRESS | Founding species plus Klingon, Romulan, Cardassian, Bajoran, Ferengi, Trill, Betazoid, Dominion-engineered species and Borg/Changeling state models established; language runtime and Universal Translator failure/ambiguity rules added. Wider coverage remains progressive. |
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
-| Stations and facilities | 🟨 IN_PROGRESS | Facility capability/state, service queues, conservative initial K-7/DS9/Starbase 375 support profiles and logistics integration established; wider station catalogue and deeper source validation remain progressive. |
+| Stations and facilities | 🟨 IN_PROGRESS | Facility identity/design separation, topology/live interior state, docking/access, service nodes, traffic/transfer simulation, playable assignments, shipyard/refit support and blueprint-ingest workflow are established; wider catalogue and source-backed interiors remain progressive. |
 | Technology and equipment | ⬜ TODO |
 | Medicine and science | ⬜ TODO |
 | Conflicts and historical events | ⬜ TODO |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, mission tasking, duty watches, debrief consequences, role-aware participation, operational needs, autonomous fleet tasking, logistics/endurance and facility support are connected to World State; broader wider-universe gameplay remains progressive. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State; broader wider-universe gameplay remains progressive. |
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | ⬜ TODO |
 | Presentation and UI | ⬜ TODO |
@@ -126,6 +126,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Wider Star Trek universe: species, factions and astrography.**
+**Wider Star Trek universe + persistent character/NPC runtime.**
 
-Starfleet starships are complete at the current structural/gameplay scope: era technology, class/ship identity, live systems, interiors, crews, bridge orders and role-specific duty loops are all modeled. Class/ship catalogues expand progressively as content requires them.
+Starfleet starships are complete at the current structural/gameplay scope. Species/culture/language coverage now includes the principal playable/adversarial groups needed for the retained eras, while character identity, knowledge, memory, relationships and dialogue constraints have moved into active implementation. Wider catalogues continue to expand when gameplay needs them.

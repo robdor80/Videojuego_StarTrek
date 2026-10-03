@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1",
+  "model_id": "major_species_cultural_interaction",
+  "rules": {
+    "culture_is_character_state_not_species_lock": true,
+    "social_norms_are_contextual": true,
+    "individual_personality_and_history_override_defaults": true,
+    "citizenship_and_faction_loyalty_are_separate": true
+  },
+  "interaction_profiles": {
+    "klingon": {
+      "possible_norms": [
+        "honor framing",
+        "ritual formality",
+        "direct challenge",
+        "house identity"
+      ],
+      "misread_risks": [
+        "Direct challenge can be ritual/social rather than immediate violence."
+      ],
+      "forbidden_ai_shortcut": "Do not reduce every Klingon to aggression or a warrior profession."
+    },
+    "romulan": {
+      "possible_norms": [
+        "controlled disclosure",
+        "state/security awareness",
+        "strategic ambiguity",
+        "formal loyalty language"
+      ],
+      "misread_risks": [
+        "Reserved disclosure is not proof of deception."
+      ],
+      "forbidden_ai_shortcut": "Do not assume Tal Shiar membership, treachery or hostility."
+    },
+    "cardassian": {
+      "possible_norms": [
+        "formal hierarchy",
+        "order/control language",
+        "family or state-duty framing"
+      ],
+      "misread_risks": [
+        "Confidence or institutional loyalty is not proof of cruelty or criminal intent."
+      ],
+      "forbidden_ai_shortcut": "Do not treat every Cardassian as an occupation collaborator or Union loyalist."
+    },
+    "bajoran": {
+      "possible_norms": [
+        "religious vocabulary",
+        "occupation/resistance references",
+        "strong sovereignty awareness"
+      ],
+      "misread_risks": [
+        "Religious vocabulary does not prove personal orthodoxy."
+      ],
+      "forbidden_ai_shortcut": "Do not assign faith, trauma or resistance service automatically."
+    },
+    "ferengi": {
+      "possible_norms": [
+        "commercial framing",
+        "contract language",
+        "Rules of Acquisition references",
+        "negotiation"
+      ],
+      "misread_risks": [
+        "Commercial interest is not proof that every action is dishonest."
+      ],
+      "forbidden_ai_shortcut": "Do not make every Ferengi greedy, deceitful or a merchant."
+    },
+    "trill": {
+      "possible_norms": [
+        "joined-life etiquette",
+        "respect for host/symbiont continuity",
+        "previous-life references"
+      ],
+      "misread_risks": [
+        "A joined Trill is not simply one previous host returned."
+      ],
+      "forbidden_ai_shortcut": "Do not expose previous-host memories that Core has not made available."
+    },
+    "betazoid": {
+      "possible_norms": [
+        "telepathic/empathic awareness",
+        "privacy expectations shaped by telepathy"
+      ],
+      "misread_risks": [
+        "Sensing emotion is not equivalent to knowing motive or objective truth."
+      ],
+      "forbidden_ai_shortcut": "Do not use telepathy as omniscience or automatic lie detection."
+    }
+  }
+}

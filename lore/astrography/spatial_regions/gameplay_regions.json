@@ -144,6 +144,36 @@
         "limited_federation_support",
         "knowledge_gated"
       ]
+    },
+    {
+      "region_id": "klingon_space",
+      "display_name_es": "Espacio klingon",
+      "region_type": "political_space_family",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
+      ],
+      "gameplay_tags": [
+        "klingon_jurisdiction",
+        "imperial_space",
+        "diplomatic_context"
+      ]
+    },
+    {
+      "region_id": "romulan_space",
+      "display_name_es": "Espacio romulano",
+      "region_type": "political_space_family",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER"
+      ],
+      "gameplay_tags": [
+        "romulan_jurisdiction",
+        "imperial_space",
+        "intelligence_risk"
+      ]
     }
   ],
   "rules": [

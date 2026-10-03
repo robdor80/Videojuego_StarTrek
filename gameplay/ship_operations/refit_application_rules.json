@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1",
+  "model_id": "refit_application_rules",
+  "classification": "GAME_ADDITION",
+  "validation_pipeline": [
+    "validate_ship_identity",
+    "validate_class_and_configuration_eligibility",
+    "validate_campaign_year_and_era_technology",
+    "validate_refit_conflicts",
+    "validate_facility_capability",
+    "validate_parts_resources_and_specialists",
+    "validate_operational_priority_and_queue",
+    "create_refit_job",
+    "perform_phased_work",
+    "perform_tests",
+    "commit_individual_configuration_change",
+    "append_ship_history_event",
+    "update_availability_and_maintenance_state"
+  ],
+  "outputs": [
+    "individual_ship_configuration_override",
+    "capability_state_changes",
+    "topology_override_refs",
+    "maintenance_baseline_changes",
+    "inventory_or_logistics_changes",
+    "ship_history_event"
+  ],
+  "failure_modes": [
+    "not_eligible","technology_unavailable","facility_incapable","parts_unavailable",
+    "specialists_unavailable","queue_deferred","work_blocked","test_failure","cancelled_by_authority"
+  ],
+  "rules": [
+    "Refit completion changes the individual vessel, not every vessel of the class.",
+    "Era technology matrix is a hard upper bound unless special provenance explicitly overrides it.",
+    "Historical canonical refits initialize only pre-campaign history; after campaign start refit decisions are live-state outcomes.",
+    "A test failure creates state and follow-up work; it is not silently rerolled away.",
+    "Configuration changes remain traceable to a refit job or event."
+  ]
+}

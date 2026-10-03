@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1",
+  "model_id": "jem_hadar_ketracel_dependency_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "character_id": null,
+    "dependency_active": true,
+    "last_dose_at": null,
+    "next_required_window": null,
+    "supply_source_ref": null,
+    "carried_supply_state": null,
+    "physiological_state": "stable",
+    "known_to_observer_refs": [],
+    "treatment_or_override_refs": []
+  },
+  "physiological_states": [
+    "stable",
+    "dose_due",
+    "deprived",
+    "critical",
+    "stabilized_by_treatment",
+    "dependency_modified_or_removed"
+  ],
+  "rules": [
+    "Dependency timing is authoritative medical state, not improvised dialogue.",
+    "Ketracel-white supply participates in logistics and inventory systems.",
+    "A missing dose does not jump instantly to a predetermined outcome; Core resolves progression.",
+    "AI cannot invent hidden supply, a dose, a cure or dependency removal.",
+    "Medical/dependency information remains knowledge-gated."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_KETRACEL_WHITE",
+      "confidence": "MEDIUM"
+    }
+  ]
+}
