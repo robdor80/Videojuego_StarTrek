@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1",
+  "model_id": "political_space_state_anchors",
+  "rule": "Use the latest anchor at or before campaign start when appropriate, then hand authority to live campaign state. Never auto-apply later anchors after play begins.",
+  "anchors": [
+    {
+      "effective_year": 2266,
+      "region_id": "romulan_neutral_zone",
+      "jurisdiction_type": "neutral_zone",
+      "access_policy": "military_restricted",
+      "border_status": "neutral_zone",
+      "controller_faction_id": null,
+      "claimant_faction_ids": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR"
+      ]
+    },
+    {
+      "effective_year": 2267,
+      "region_id": "klingon_frontier",
+      "jurisdiction_type": "disputed_space",
+      "access_policy": "controlled",
+      "border_status": "controlled",
+      "relation_state_ref": "united_federation_of_planets__klingon_empire__2267",
+      "source_refs": [
+        "TOS_ERRAND_OF_MERCY",
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ]
+    },
+    {
+      "effective_year": 2293,
+      "region_id": "klingon_frontier",
+      "jurisdiction_type": "sovereign_space",
+      "access_policy": "controlled",
+      "border_status": "controlled",
+      "relation_state_ref": "united_federation_of_planets__klingon_empire__2293",
+      "notes": [
+        "Khitomer peace transition changes relation state; controlled borders still remain meaningful."
+      ],
+      "source_refs": [
+        "ST6_THE_UNDISCOVERED_COUNTRY"
+      ]
+    },
+    {
+      "effective_year": 2364,
+      "region_id": "romulan_neutral_zone",
+      "jurisdiction_type": "neutral_zone",
+      "access_policy": "military_restricted",
+      "border_status": "neutral_zone",
+      "controller_faction_id": null,
+      "claimant_faction_ids": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "relation_state_ref": "united_federation_of_planets__romulan_star_empire__2364",
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE"
+      ]
+    },
+    {
+      "effective_year": 2369,
+      "region_id": "bajoran_space",
+      "jurisdiction_type": "sovereign_space",
+      "access_policy": "controlled",
+      "border_status": "open",
+      "controller_faction_id": "bajoran_provisional_government",
+      "notes": [
+        "Starfleet presence at Deep Space 9 operates within Bajoran sovereignty."
+      ],
+      "source_refs": [
+        "DS9_EMISSARY"
+      ]
+    },
+    {
+      "effective_year": 2369,
+      "region_id": "cardassian_space",
+      "jurisdiction_type": "sovereign_space",
+      "access_policy": "controlled",
+      "border_status": "controlled",
+      "controller_faction_id": "cardassian_union",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ]
+    },
+    {
+      "effective_year": 2373,
+      "region_id": "cardassian_space",
+      "jurisdiction_type": "sovereign_space",
+      "access_policy": "military_restricted",
+      "border_status": "restricted",
+      "controller_faction_id": "cardassian_union",
+      "notes": [
+        "Cardassian state is aligned with and subordinated within the Dominion war structure for gameplay relation resolution."
+      ],
+      "relation_state_ref": "united_federation_of_planets__cardassian_union__2373",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS",
+        "ST_OFFICIAL_DOMINION_101"
+      ]
+    },
+    {
+      "effective_year": 2373,
+      "region_id": "bajoran_space",
+      "jurisdiction_type": "sovereign_space",
+      "access_policy": "controlled",
+      "border_status": "controlled",
+      "controller_faction_id": "bajoran_provisional_government",
+      "notes": [
+        "Bajoran non-aggression policy is a diplomatic state and does not erase sovereignty."
+      ],
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ]
+    }
+  ]
+}

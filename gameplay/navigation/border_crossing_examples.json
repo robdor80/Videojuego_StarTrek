@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1",
+  "examples": [
+    {
+      "situation_es": "Una nave de la Flota Estelar se aproxima a la Zona Neutral Romulana en 2364.",
+      "core_checks": [
+        "resolve_current_political_anchor",
+        "confirm_boundary_geometry_or_route_anchor",
+        "check_mission_authority",
+        "check_current_relation_state",
+        "surface_restricted_entry_warning"
+      ],
+      "possible_player_choices": [
+        "mantenerse fuera",
+        "solicitar autorización",
+        "entrar deliberadamente",
+        "buscar una ruta alternativa"
+      ],
+      "rule": "The game presents known consequences but does not remove deliberate player agency."
+    },
+    {
+      "situation_es": "Una nave viaja por espacio bajorano hacia Espacio Profundo 9 en 2369.",
+      "core_checks": [
+        "apply_bajoran_sovereignty",
+        "resolve_station_operational_authority",
+        "use_local_docking_and_security_rules"
+      ],
+      "rule": "Federation operation of the station does not convert the surrounding space into Federation sovereign territory."
+    },
+    {
+      "situation_es": "Una nave cruza una frontera durante una campaña que ya ha divergido del canon.",
+      "core_checks": [
+        "ignore_future_screen_anchor",
+        "load_live_campaign_overlay",
+        "resolve_current_treaties_and_conflicts"
+      ],
+      "rule": "Live campaign state always wins after campaign start."
+    }
+  ]
+}

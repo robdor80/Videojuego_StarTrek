@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "gameplay_spatial_regions",
+  "regions": [
+    {
+      "region_id": "local_space",
+      "display_name_es": "Espacio local",
+      "region_type": "navigation_region",
+      "geometry_status": "reference_only",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "federation_core_context",
+        "dense_charting",
+        "high_support_density"
+      ]
+    },
+    {
+      "region_id": "federation_space",
+      "display_name_es": "Espacio de la Federación",
+      "region_type": "political_space_family",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "federation_jurisdiction",
+        "starfleet_support"
+      ]
+    },
+    {
+      "region_id": "klingon_frontier",
+      "display_name_es": "Frontera klingon",
+      "region_type": "frontier",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "border_crossing",
+        "patrol_risk",
+        "diplomatic_context"
+      ]
+    },
+    {
+      "region_id": "romulan_neutral_zone",
+      "display_name_es": "Zona Neutral Romulana",
+      "region_type": "neutral_zone",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR",
+        "TNG_THE_NEUTRAL_ZONE",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "restricted_entry",
+        "diplomatic_incident_risk",
+        "border_outposts"
+      ]
+    },
+    {
+      "region_id": "romulan_frontier",
+      "display_name_es": "Frontera romulana",
+      "region_type": "frontier",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "border_crossing",
+        "intelligence_risk"
+      ]
+    },
+    {
+      "region_id": "bajoran_space",
+      "display_name_es": "Espacio bajorano",
+      "region_type": "sovereign_space",
+      "geometry_status": "reference_only",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "bajoran_jurisdiction",
+        "deep_space_9",
+        "wormhole_access"
+      ]
+    },
+    {
+      "region_id": "cardassian_space",
+      "display_name_es": "Espacio cardassiano",
+      "region_type": "sovereign_space",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "cardassian_jurisdiction",
+        "military_patrol"
+      ]
+    },
+    {
+      "region_id": "bajor_cardassia_frontier",
+      "display_name_es": "Frontera Bajor-Cardassia",
+      "region_type": "frontier",
+      "geometry_status": "temporal_overlay_required",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "border_crossing",
+        "dmz_context",
+        "badlands_access"
+      ]
+    },
+    {
+      "region_id": "gamma_quadrant_wormhole_region",
+      "display_name_es": "Región Gamma del agujero de gusano bajorano",
+      "region_type": "navigation_region",
+      "geometry_status": "reference_only",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "wormhole_access",
+        "gamma_quadrant_entry"
+      ]
+    },
+    {
+      "region_id": "delta_quadrant",
+      "display_name_es": "Cuadrante Delta",
+      "region_type": "quadrant",
+      "geometry_status": "galactic",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ],
+      "gameplay_tags": [
+        "long_range_exploration",
+        "limited_federation_support",
+        "knowledge_gated"
+      ]
+    }
+  ],
+  "rules": [
+    "These regions support gameplay and indexing; they are not guaranteed exact border polygons.",
+    "Political control is loaded separately from physical region identity.",
+    "If a precise border is later sourced, geometry may be refined without changing region identity."
+  ]
+}
