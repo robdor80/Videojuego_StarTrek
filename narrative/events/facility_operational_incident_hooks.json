@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_operational_incident_hooks",
+  "classification": "GAME_ADDITION",
+  "triggers": [
+    {
+      "condition": "docking_approach_conflict_or_ship_control_problem",
+      "world_event_type": "facility_failure_or_navigation_incident",
+      "affected_loops": [
+        "traffic_control",
+        "engineering",
+        "security",
+        "medical"
+      ],
+      "possible_needs": [
+        "rescue",
+        "medical_response",
+        "repair_assistance",
+        "traffic_control_response"
+      ]
+    },
+    {
+      "condition": "critical_system_degradation",
+      "world_event_type": "facility_failure",
+      "affected_loops": [
+        "engineering",
+        "command",
+        "security"
+      ],
+      "possible_needs": [
+        "repair_assistance",
+        "evacuation",
+        "deliver_supplies"
+      ]
+    },
+    {
+      "condition": "medical_capacity_exceeded",
+      "world_event_type": "medical_incident",
+      "affected_loops": [
+        "medical",
+        "logistics",
+        "command"
+      ],
+      "possible_needs": [
+        "medical_response",
+        "evacuation",
+        "deliver_supplies"
+      ]
+    },
+    {
+      "condition": "security_access_violation",
+      "world_event_type": "security_incident",
+      "affected_loops": [
+        "security",
+        "command",
+        "traffic_control"
+      ],
+      "possible_needs": [
+        "security_response",
+        "investigate"
+      ]
+    },
+    {
+      "condition": "inventory_shortage_blocks_priority_service",
+      "world_event_type": "supply_shortage",
+      "affected_loops": [
+        "logistics",
+        "command",
+        "engineering"
+      ],
+      "possible_needs": [
+        "deliver_supplies",
+        "transport_personnel",
+        "escort"
+      ]
+    },
+    {
+      "condition": "service_queue_saturation",
+      "world_event_type": "support_capacity_shortfall",
+      "affected_loops": [
+        "traffic_control",
+        "logistics",
+        "command"
+      ],
+      "possible_needs": [
+        "reroute_support",
+        "deliver_supplies",
+        "temporary_support_unit"
+      ]
+    },
+    {
+      "condition": "diplomatic_or_foreign_vessel_arrival",
+      "world_event_type": "diplomatic_contact",
+      "affected_loops": [
+        "command",
+        "security",
+        "communications",
+        "diplomacy"
+      ],
+      "possible_needs": [
+        "diplomatic_contact",
+        "security_response_if_live_state_justifies"
+      ]
+    }
+  ],
+  "rules": [
+    "Hooks react to live state; they do not invent an incident simply because a station needs content.",
+    "A facility may remain quiet for long periods.",
+    "Local incidents can be resolved entirely by NPC departments when player involvement is not operationally justified.",
+    "Consequences feed back into facility state, queues, access, inventories and wider operational needs."
+  ]
+}

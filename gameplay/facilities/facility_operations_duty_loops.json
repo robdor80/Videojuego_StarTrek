@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_operations_duty_loops",
+  "classification": "GAME_ADDITION",
+  "loops": [
+    {
+      "duty_area": "traffic_control",
+      "cycle": [
+        "monitor_arrivals",
+        "verify_clearance",
+        "assign_approach_or_hold",
+        "coordinate_berth",
+        "track_departure"
+      ],
+      "state_refs": [
+        "facility_access_and_clearance",
+        "facility_service_queue",
+        "navigation_state"
+      ]
+    },
+    {
+      "duty_area": "engineering",
+      "cycle": [
+        "monitor_systems",
+        "diagnose",
+        "prioritize",
+        "dispatch_team",
+        "repair_or_isolate",
+        "verify_restoration"
+      ],
+      "state_refs": [
+        "facility_interior_live_state",
+        "maintenance_state",
+        "repair_requirement"
+      ]
+    },
+    {
+      "duty_area": "security",
+      "cycle": [
+        "monitor_access",
+        "assess_threat",
+        "control_restricted_zones",
+        "respond",
+        "detain_or_clear_if_authorized",
+        "report"
+      ],
+      "state_refs": [
+        "facility_interior_live_state",
+        "facility_access_and_clearance",
+        "faction_relation_state"
+      ]
+    },
+    {
+      "duty_area": "medical",
+      "cycle": [
+        "receive_patients",
+        "triage",
+        "diagnose",
+        "treat",
+        "isolate_if_required",
+        "return_or_transfer"
+      ],
+      "state_refs": [
+        "medical_state_model",
+        "facility_operational_state"
+      ]
+    },
+    {
+      "duty_area": "logistics",
+      "cycle": [
+        "assess_inventory",
+        "prioritize_requests",
+        "allocate_stock",
+        "coordinate_transfer",
+        "reconcile_inventory",
+        "flag_shortages"
+      ],
+      "state_refs": [
+        "operational_resource_inventory",
+        "resupply_job",
+        "facility_service_queue"
+      ]
+    },
+    {
+      "duty_area": "communications",
+      "cycle": [
+        "receive_traffic",
+        "authenticate",
+        "route_message",
+        "maintain_channels",
+        "report_priority_signal"
+      ],
+      "state_refs": [
+        "communications_state",
+        "mission_state",
+        "world_event_state"
+      ]
+    },
+    {
+      "duty_area": "science",
+      "cycle": [
+        "receive_data",
+        "monitor_local phenomena",
+        "analyze",
+        "validate",
+        "publish_or_report",
+        "request_followup"
+      ],
+      "state_refs": [
+        "exploration_progress",
+        "astrographic_knowledge_state",
+        "world_event_state"
+      ]
+    },
+    {
+      "duty_area": "command",
+      "cycle": [
+        "review_state",
+        "set_priorities",
+        "allocate_resources",
+        "issue_local_orders",
+        "coordinate_external_units",
+        "report_to_higher_authority"
+      ],
+      "state_refs": [
+        "operational_need",
+        "unit_availability_state",
+        "mission_state",
+        "facility_operational_state"
+      ]
+    }
+  ],
+  "rules": [
+    "Facility gameplay remains role-specific rather than collapsing every station function into one command screen.",
+    "Each duty area sees only the information appropriate to its role, authority and clearance.",
+    "Local incidents may affect several duty areas simultaneously.",
+    "NPC departments continue operating when the player is assigned elsewhere."
+  ]
+}
