@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.25.0",
+  "registry_version": "0.26.0",
   "last_updated": "2026-10-03",
   "sources": [
     {
@@ -1644,6 +1644,87 @@
       "season": 3,
       "episode": 26,
       "notes": "Screen evidence for a temporary tactical Voyager-Borg alliance against Species 8472 rather than normal diplomatic relations."
+    },
+    {
+      "source_id": "STAR_CHARTS_2002",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Star Charts",
+      "author": "Geoffrey Mandel",
+      "publisher": "Pocket Books / Paramount Pictures",
+      "release_date": "2002-10",
+      "local_path": "assets/cartography/reference/star_charts_geoffrey_mandel/Star_Trek_Star_Charts_Geoffrey_Mandel.pdf",
+      "notes": "Licensed atlas used as the primary cartographic reference when screen canon does not provide enough geometry. Never promoted to SCREEN_CANON."
+    },
+    {
+      "source_id": "STDIM_CARTOGRAPHY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Star Trek Cartography",
+      "publisher": "Star Trek Dimension",
+      "url": "https://www.stdimension.org/int/Cartography/cartography.htm",
+      "accessed_at": "2026-10-03",
+      "notes": "Secondary cartography project used to identify distance/sector evidence, source conflicts and derivation methods."
+    },
+    {
+      "source_id": "STDIM_DISTANCE_LIST",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Table of Star Trek distances",
+      "publisher": "Star Trek Dimension",
+      "url": "https://www.stdimension.org/int/Cartography/DistanceList.htm",
+      "accessed_at": "2026-10-03",
+      "notes": "Secondary compilation of direct, real-star, map-derived and warp-time-derived distances with underlying sources."
+    },
+    {
+      "source_id": "STDIM_SECTOR_LIST",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "List of Star Trek sectors",
+      "publisher": "Star Trek Dimension",
+      "url": "https://www.stdimension.org/int/Cartography/SectorList.htm",
+      "accessed_at": "2026-10-03",
+      "notes": "Secondary catalogue of numbered sectors and their screen/reference sources."
+    },
+    {
+      "source_id": "STDIM_REAL_STARS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Positions of the real stars",
+      "publisher": "Star Trek Dimension",
+      "url": "https://www.stdimension.org/int/Cartography/RealStars.htm",
+      "accessed_at": "2026-10-03",
+      "notes": "Secondary astronomical table based on HIPPARCOS-era data; useful for reference coordinates and source cross-checks."
+    },
+    {
+      "source_id": "TOS_THE_TROUBLE_WITH_TRIBBLES",
+      "source_type": "SCREEN_CANON",
+      "title": "The Trouble with Tribbles",
+      "work": "Star Trek: The Original Series",
+      "notes": "Screen source for the stated distance between Deep Space Station K-7 and the Klingon border."
+    },
+    {
+      "source_id": "TNG_THE_ENEMY",
+      "source_type": "SCREEN_CANON",
+      "title": "The Enemy",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Screen source for Galorndon Core's proximity to the Romulan Neutral Zone."
+    },
+    {
+      "source_id": "DS9_DEFIANT",
+      "source_type": "SCREEN_CANON",
+      "title": "Defiant",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Screen source used by secondary calculations for Bajor-Badlands travel context."
+    },
+    {
+      "source_id": "DS9_EQUILIBRIUM",
+      "source_type": "SCREEN_CANON",
+      "title": "Equilibrium",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Screen source used by secondary calculations for Bajor-Trill travel context."
+    },
+    {
+      "source_id": "DS9_TECHNICAL_MANUAL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Deep Space Nine Technical Manual",
+      "publisher": "Pocket Books / Paramount",
+      "notes": "Licensed technical reference used for selected Bajor-sector distances and maps."
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "scheme_id": "star_charts_reference_sector_scheme",
+  "display_name": "Star Charts 20 ly sector reference",
+  "authority": "OFFICIAL_REFERENCE",
+  "source_ref": "STAR_CHARTS_2002",
+  "geometry": {
+    "sector_shape": "cube",
+    "nominal_edge_ly": 20,
+    "global_enforcement": false,
+    "may_have_overrides": true
+  },
+  "usage_rules": [
+    "Use as a coherent reference frame for gameplay indexing, not as immutable screen-canon physics.",
+    "If screen evidence conflicts with this scheme, retain the screen evidence and flag the sector placement for review.",
+    "Sector number and political ownership are independent.",
+    "The Core may navigate without a sector ID when a location is known by coordinates or route graph only."
+  ]
+}

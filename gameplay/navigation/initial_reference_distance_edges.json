@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "initial_reference_distance_edges",
+  "sources": [
+    "STDIM_DISTANCE_LIST",
+    "STAR_CHARTS_2002"
+  ],
+  "entries": [
+    {
+      "edge_id": "earth_alpha_centauri",
+      "origin_location_id": "earth",
+      "destination_location_id": "alpha_centauri",
+      "distance_ly": 4.395,
+      "distance_relation": "exact",
+      "derivation_type": "real_astronomy",
+      "underlying_source": "real_star",
+      "confidence": "HIGH"
+    },
+    {
+      "edge_id": "earth_vulcan",
+      "origin_location_id": "earth",
+      "destination_location_id": "vulcan_system",
+      "distance_ly": 16.454,
+      "distance_relation": "exact",
+      "derivation_type": "real_astronomy",
+      "underlying_source": "40_eridani_reference",
+      "confidence": "MEDIUM",
+      "notes": [
+        "The Vulcan=40 Eridani identification is not established on screen; keep provenance visible."
+      ]
+    },
+    {
+      "edge_id": "earth_sigma_draconis",
+      "origin_location_id": "earth",
+      "destination_location_id": "sigma_draconis",
+      "distance_ly": 18.81,
+      "distance_relation": "exact",
+      "derivation_type": "real_astronomy",
+      "underlying_source": "real_star",
+      "confidence": "HIGH"
+    },
+    {
+      "edge_id": "k7_klingon_border",
+      "origin_location_id": "deep_space_station_k7",
+      "destination_location_id": "klingon_border_near_k7",
+      "distance_ly": 3.26,
+      "distance_relation": "exact",
+      "derivation_type": "screen_direct",
+      "underlying_source": "TOS_THE_TROUBLE_WITH_TRIBBLES",
+      "confidence": "HIGH"
+    },
+    {
+      "edge_id": "galorndon_core_romulan_neutral_zone",
+      "origin_location_id": "galorndon_core",
+      "destination_location_id": "romulan_neutral_zone_near_galorndon",
+      "distance_ly": 0.5,
+      "distance_relation": "exact",
+      "derivation_type": "screen_direct",
+      "underlying_source": "TNG_THE_ENEMY",
+      "confidence": "HIGH"
+    },
+    {
+      "edge_id": "bajor_cardassia_prime",
+      "origin_location_id": "bajor",
+      "destination_location_id": "cardassia_prime",
+      "distance_ly": 5.25,
+      "distance_relation": "exact",
+      "derivation_type": "official_reference_direct",
+      "underlying_source": "DS9_TECHNICAL_MANUAL",
+      "confidence": "HIGH"
+    },
+    {
+      "edge_id": "bajor_badlands",
+      "origin_location_id": "bajor",
+      "destination_location_id": "badlands",
+      "distance_ly": 0.449,
+      "distance_relation": "approximate",
+      "derivation_type": "warp_time_calculation",
+      "underlying_source": "DS9_DEFIANT",
+      "confidence": "LOW"
+    },
+    {
+      "edge_id": "bajor_ferenginar",
+      "origin_location_id": "bajor",
+      "destination_location_id": "ferenginar",
+      "distance_ly": 65.5,
+      "distance_relation": "approximate",
+      "derivation_type": "official_map",
+      "underlying_source": "DS9_TECHNICAL_MANUAL",
+      "confidence": "MEDIUM"
+    },
+    {
+      "edge_id": "bajor_trill",
+      "origin_location_id": "bajor",
+      "destination_location_id": "trill",
+      "distance_ly": 30,
+      "distance_relation": "approximate",
+      "derivation_type": "warp_time_calculation",
+      "underlying_source": "DS9_EQUILIBRIUM",
+      "confidence": "LOW"
+    },
+    {
+      "edge_id": "bajor_starbase_375",
+      "origin_location_id": "bajor",
+      "destination_location_id": "starbase_375",
+      "distance_ly": 30.8,
+      "distance_relation": "approximate",
+      "derivation_type": "official_map",
+      "underlying_source": "DS9_TECHNICAL_MANUAL",
+      "confidence": "MEDIUM"
+    }
+  ],
+  "rules": [
+    "Do not treat all edges as equally authoritative.",
+    "Calculated warp distances are lower-confidence because warp travel is not represented by one immutable speed formula.",
+    "The route planner may use a lower-confidence edge when no better geometry exists, but must preserve uncertainty."
+  ]
+}

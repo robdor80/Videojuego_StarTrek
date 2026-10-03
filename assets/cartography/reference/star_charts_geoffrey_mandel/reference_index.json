@@ -1,0 +1,21 @@
+{
+  "reference_id": "star_charts_geoffrey_mandel_2002",
+  "source_id": "STAR_CHARTS_2002",
+  "authority": "OFFICIAL_REFERENCE",
+  "file": "Star_Trek_Star_Charts_Geoffrey_Mandel.pdf",
+  "pages_of_immediate_gameplay_interest": {
+    "galaxy_and_quadrants": "8-19",
+    "local_sector_scheme": "14-19",
+    "alpha_quadrant_and_bajor_cardassia": "30-49",
+    "beta_quadrant_klingon_romulan": "50-67",
+    "gamma_quadrant_dominion": "68-75",
+    "delta_quadrant_and_voyager_route": "76-95",
+    "chart_key_and_federation_maps": "96-104"
+  },
+  "extraction_status": "IN_PROGRESS",
+  "notes": [
+    "Page ranges are book page images in the project PDF.",
+    "Sector geometry is reference material, not an immutable Core rule.",
+    "Political maps require era/date overlays."
+  ]
+}
