@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "model_id": "standing_operational_requirement",
+  "classification": "GAME_ADDITION",
+  "purpose": "Represent recurring or persistent Starfleet/Federation operational responsibilities that can generate tasking without a crisis event.",
+  "fields": {
+    "requirement_id": null,
+    "issuing_authority_id": null,
+    "requirement_type": null,
+    "status": "active",
+    "effective_from": null,
+    "effective_until": null,
+    "operational_area_refs": [],
+    "cadence": null,
+    "minimum_coverage": null,
+    "required_capabilities": [],
+    "preferred_unit_profiles": [],
+    "political_or_legal_constraints": [],
+    "readiness_threshold": null,
+    "generated_need_policy": null,
+    "last_satisfied_at": null,
+    "next_due_at": null
+  },
+  "requirement_types": [
+    "frontier_patrol",
+    "trade_route_patrol",
+    "convoy_escort_cycle",
+    "chart_update_cycle",
+    "scientific_survey_program",
+    "station_resupply_cycle",
+    "personnel_rotation",
+    "diplomatic_courier",
+    "search_and_rescue_coverage",
+    "training_cruise",
+    "border_monitoring",
+    "communications_relay_service"
+  ],
+  "statuses": [
+    "planned",
+    "active",
+    "suspended",
+    "completed",
+    "cancelled",
+    "superseded"
+  ],
+  "rules": [
+    "Standing requirements create routine operational needs only when their cadence, coverage or live state says work is due.",
+    "They do not guarantee that the player receives the resulting mission.",
+    "War, emergency, ship losses, treaty changes or resource shortages can alter or suspend normal requirements.",
+    "Routine duty remains meaningful even when no crisis exists.",
+    "Requirement schedules are campaign state, not a mechanism for replaying future canon."
+  ]
+}

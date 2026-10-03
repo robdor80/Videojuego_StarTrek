@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "standing_operations_generation",
+  "classification": "GAME_ADDITION",
+  "pipeline": [
+    "evaluate_active_standing_requirements",
+    "detect_due_or_uncovered_requirement",
+    "create_or_refresh_operational_need",
+    "query_unit_availability",
+    "generate_candidate_units",
+    "authority_selects_unit",
+    "issue_tasking",
+    "track_coverage_and_completion"
+  ],
+  "examples": [
+    {
+      "requirement_type": "frontier_patrol",
+      "trigger": "coverage_below_minimum_or_patrol_due",
+      "generated_need_type": "patrol_presence"
+    },
+    {
+      "requirement_type": "station_resupply_cycle",
+      "trigger": "scheduled_delivery_due_or_inventory_threshold_reached",
+      "generated_need_type": "deliver_supplies"
+    },
+    {
+      "requirement_type": "chart_update_cycle",
+      "trigger": "chart_age_or_confidence_below_policy_threshold",
+      "generated_need_type": "chart"
+    },
+    {
+      "requirement_type": "personnel_rotation",
+      "trigger": "approved_rotation_due",
+      "generated_need_type": "transport_personnel"
+    }
+  ],
+  "autonomy_rules": [
+    "NPC units may be tasked, travel, complete routine duties and update World State without player presence.",
+    "Player missions are selected from the same operational ecosystem, not a separate protagonist-only mission list.",
+    "Autonomous completion must still generate authoritative event/consequence records when it changes relevant state.",
+    "The simulation may aggregate low-interest NPC routine activity instead of simulating every bridge action."
+  ]
+}

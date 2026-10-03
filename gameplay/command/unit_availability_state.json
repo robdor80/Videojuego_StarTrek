@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "unit_availability_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "unit_id": null,
+    "observed_at": null,
+    "operational_status": "available",
+    "current_location_id": null,
+    "current_mission_id": null,
+    "current_priority": "routine",
+    "readiness_profile_ref": null,
+    "propulsion_limit_ref": null,
+    "crew_readiness_ref": null,
+    "capability_refs": [],
+    "cargo_or_passenger_capacity_state": null,
+    "endurance_state": null,
+    "maintenance_due_refs": [],
+    "legal_access_constraints": [],
+    "earliest_taskable_at": null
+  },
+  "operational_statuses": [
+    "available",
+    "available_with_limits",
+    "committed",
+    "returning",
+    "resupplying",
+    "under_repair",
+    "training",
+    "stand_down",
+    "missing",
+    "destroyed",
+    "otherwise_unavailable"
+  ],
+  "rules": [
+    "Availability is live state and can change while mission candidates are being evaluated.",
+    "A nominally nearby ship may be unsuitable because of damage, current orders, crew state or legal access.",
+    "NPC units use the same capability and readiness principles as player units.",
+    "Destroyed or missing units cannot remain silently available in tasking pools."
+  ]
+}
