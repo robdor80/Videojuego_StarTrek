@@ -116,8 +116,8 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Technology and equipment | ⬜ TODO |
 | Medicine and science | ⬜ TODO |
 | Conflicts and historical events | ⬜ TODO |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounter scheduling, mission tasking/objectives, duty watches, debrief consequences and role-aware mission participation are connected to live World State; broader wider-universe gameplay remains progressive. |
-| Narrative | 🟨 IN_PROGRESS | Travel encounter templates, navigation-derived mission hooks and operational briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounter scheduling, mission tasking/objectives, duty watches, debrief consequences, role-aware participation, live operational needs and autonomous fleet tasking are connected to World State; broader wider-universe gameplay remains progressive. |
+| Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | ⬜ TODO |
 | Presentation and UI | ⬜ TODO |
 | Assets / audio / NAP mappings | ⬜ TODO |
