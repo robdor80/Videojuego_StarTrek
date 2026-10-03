@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1",
+  "model_id": "borg_assimilation_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "character_id": null,
+    "origin_species_id": null,
+    "assimilation_status": "unassimilated",
+    "initiated_at": null,
+    "exposure_refs": [],
+    "nanoprobe_state": null,
+    "collective_link_state": "none",
+    "implant_state": [],
+    "individuality_state": "independent",
+    "treatment_refs": [],
+    "knowledge_visibility_refs": []
+  },
+  "statuses": [
+    "unassimilated",
+    "exposed",
+    "early_assimilation",
+    "collective_link_established",
+    "drone_conversion_in_progress",
+    "drone",
+    "disconnected",
+    "liberated",
+    "recovery_or_residual_state"
+  ],
+  "rules": [
+    "Assimilation is a staged state transition, not an instant species swap.",
+    "Origin species remains part of physiology and medical handling.",
+    "Nanoprobe exposure and full drone conversion are separate states.",
+    "Interruption or liberation outcomes require authoritative medical/technical resolution.",
+    "Collective access does not give the AI unrestricted access to hidden World State.",
+    "AI cannot advance assimilation stages or declare recovery without Core events."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BORG_ASSIMILATION",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "MA_BORG_NANOPROBE",
+      "confidence": "MEDIUM"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BORG_101",
+      "confidence": "HIGH"
+    }
+  ]
+}

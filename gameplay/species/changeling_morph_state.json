@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "model_id": "changeling_morph_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "character_id": null,
+    "current_form_type": "natural",
+    "current_form_ref": null,
+    "assumed_identity_ref": null,
+    "morph_started_at": null,
+    "regeneration_state": "not_due",
+    "last_regeneration_at": null,
+    "next_regeneration_window": null,
+    "observed_evidence_refs": [],
+    "detection_state": "not_suspected"
+  },
+  "form_types": [
+    "natural",
+    "humanoid",
+    "living_creature",
+    "object",
+    "other_supported_form"
+  ],
+  "detection_states": [
+    "not_suspected",
+    "anomaly_noted",
+    "suspected_changeling",
+    "confirmed_changeling",
+    "identity_confirmed"
+  ],
+  "rules": [
+    "Changing appearance does not grant memories, passwords, skills, authority or relationships.",
+    "The copied subject and the Changeling remain distinct entities.",
+    "Detection follows sensor, medical, security and evidence systems.",
+    "Regeneration is a physiological need owned by Core.",
+    "A player or NPC cannot identify a disguised Changeling without sufficient evidence."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_CHANGELING",
+      "confidence": "MEDIUM"
+    }
+  ]
+}
