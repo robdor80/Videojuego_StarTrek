@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_knowledge_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "character_id": null,
+    "known_facts": [],
+    "assessments": [],
+    "rumors": [],
+    "procedural_knowledge_refs": [],
+    "classified_knowledge_refs": [],
+    "personal_secret_refs": [],
+    "known_identity_refs": [],
+    "language_knowledge_ref": null,
+    "last_updated_at": null
+  },
+  "knowledge_entry_fields": [
+    "knowledge_id",
+    "subject_ref",
+    "proposition",
+    "knowledge_type",
+    "confidence",
+    "source_ref",
+    "learned_at",
+    "validity_window",
+    "classification_level",
+    "shareability",
+    "superseded_by_ref"
+  ],
+  "knowledge_types": [
+    "observed",
+    "reported",
+    "inferred",
+    "trained",
+    "remembered",
+    "rumor",
+    "classified_briefing"
+  ],
+  "confidence_levels": [
+    "low",
+    "medium",
+    "high",
+    "confirmed"
+  ],
+  "rules": [
+    "World Truth and character knowledge are separate.",
+    "A fact may be true while unknown to a character.",
+    "A character may sincerely believe false or outdated information.",
+    "New evidence can supersede prior knowledge without erasing history.",
+    "Classification and need-to-know constrain what can be shared.",
+    "AI may reason only from knowledge available to the speaking character."
+  ]
+}

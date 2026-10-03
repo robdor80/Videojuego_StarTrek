@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_relationship_state",
+  "classification": "GAME_ADDITION",
+  "principle": "Relationships are directional and multidimensional.",
+  "fields": {
+    "relationship_id": null,
+    "observer_character_id": null,
+    "target_character_id": null,
+    "familiarity": "unknown",
+    "trust": "neutral",
+    "professional_respect": "neutral",
+    "personal_affection": "neutral",
+    "fear_or_caution": "neutral",
+    "resentment": "neutral",
+    "obligation_refs": [],
+    "authority_context_refs": [],
+    "shared_history_refs": [],
+    "unresolved_conflict_refs": [],
+    "relationship_labels": [],
+    "last_updated_at": null
+  },
+  "scale_values": [
+    "strong_negative",
+    "negative",
+    "neutral",
+    "positive",
+    "strong_positive",
+    "unknown"
+  ],
+  "familiarity_values": [
+    "unknown",
+    "recognized",
+    "acquainted",
+    "familiar",
+    "close"
+  ],
+  "rules": [
+    "A relationship from A to B may differ from B to A.",
+    "Trust, affection and professional respect are separate.",
+    "Rank-based obedience is not the same as trust or affection.",
+    "Relationship changes require events, communication or other represented causes.",
+    "AI cannot reveal the target character's hidden feelings unless known to the observer."
+  ]
+}

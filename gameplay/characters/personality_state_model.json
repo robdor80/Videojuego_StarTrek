@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_personality_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "character_id": null,
+    "stable_values": [],
+    "priorities": [],
+    "temperament_tendencies": [],
+    "communication_tendencies": [],
+    "conflict_tendencies": [],
+    "humor_profile": [],
+    "stress_responses": [],
+    "boundaries": [],
+    "habits": [],
+    "dislikes": [],
+    "aspirations": [],
+    "fears_or_concerns": [],
+    "current_mood_ref": null,
+    "individual_overrides": {}
+  },
+  "rules": [
+    "Personality is character-specific and never generated solely from species, rank or faction.",
+    "Stable tendencies influence choices but do not force identical reactions.",
+    "Current mood, relationship, stakes and professional duty can override normal tendencies.",
+    "AI may express personality but may not invent new stable traits merely to make dialogue dramatic.",
+    "Private fears, goals and values remain hidden unless character knowledge/presentation rules expose them."
+  ]
+}

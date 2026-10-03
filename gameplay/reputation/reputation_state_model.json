@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "model_id": "reputation_state",
+  "classification": "GAME_ADDITION",
+  "principle": "Reputation is observer-group knowledge, not a universal charisma score.",
+  "fields": {
+    "reputation_id": null,
+    "subject_character_id": null,
+    "observer_scope_ref": null,
+    "dimensions": {},
+    "known_event_refs": [],
+    "rumor_refs": [],
+    "confidence": "medium",
+    "last_updated_at": null
+  },
+  "suggested_dimensions": [
+    "professional_competence",
+    "reliability",
+    "leadership",
+    "courage",
+    "diplomatic_skill",
+    "scientific_skill",
+    "engineering_skill",
+    "medical_skill",
+    "combat_reputation",
+    "disciplinary_reputation",
+    "integrity"
+  ],
+  "rules": [
+    "Different crews, factions or communities can hold different reputations for the same person.",
+    "Reputation can be inaccurate when based on incomplete reports or rumor.",
+    "Service-record fact and public reputation are separate.",
+    "A reputation change requires information propagation, not merely an event occurring somewhere.",
+    "AI cannot convert hidden service-record events into public reputation automatically."
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1",
+  "model_id": "character_memory_contract",
+  "classification": "GAME_ADDITION",
+  "memory_types": [
+    "episodic",
+    "social",
+    "professional",
+    "emotional_association",
+    "promise_or_commitment"
+  ],
+  "fields": {
+    "memory_id": null,
+    "character_id": null,
+    "memory_type": null,
+    "event_ref": null,
+    "subject_refs": [],
+    "remembered_summary": null,
+    "formed_at": null,
+    "salience": "normal",
+    "emotional_tag_refs": [],
+    "confidence": "medium",
+    "retrieval_cues": [],
+    "known_to_character": true,
+    "suppressed_or_unavailable": false
+  },
+  "salience_levels": [
+    "low",
+    "normal",
+    "high",
+    "critical"
+  ],
+  "rules": [
+    "Memory stores character-available recollection, not the complete authoritative event.",
+    "Characters can remember an event differently from World Truth.",
+    "Important promises, injuries, betrayals, commendations and shared experiences can persist as social memory.",
+    "AI may recall only memories present and retrievable in state.",
+    "Memory is not silently created retroactively to justify dialogue.",
+    "Forgetting or uncertainty must not be used to erase authoritative service/campaign records."
+  ]
+}
