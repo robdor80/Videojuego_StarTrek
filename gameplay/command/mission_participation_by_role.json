@@ -1,0 +1,120 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_participation_by_role",
+  "principle": "The campaign remains playable at any career stage. The player does not need to be commanding officer to receive meaningful mission gameplay.",
+  "participation_profiles": [
+    {
+      "profile_id": "commanding_officer",
+      "receives": [
+        "mission_tasking_order",
+        "strategic_briefing",
+        "rules_of_engagement",
+        "command_intelligence_as_authorized"
+      ],
+      "can": [
+        "accept_or_query_orders",
+        "set_ship_priorities",
+        "approve_route",
+        "delegate_tasks",
+        "alter_tactics",
+        "report_outcome"
+      ],
+      "cannot": [
+        "ignore_higher_authority_without_consequence",
+        "access_information_above_clearance_without_basis"
+      ]
+    },
+    {
+      "profile_id": "executive_officer",
+      "receives": [
+        "mission_briefing",
+        "command_delegations",
+        "department_status"
+      ],
+      "can": [
+        "coordinate_departments",
+        "assume_command_if_valid",
+        "issue_subordinate_tasks",
+        "manage_readiness"
+      ],
+      "cannot": [
+        "override_commanding_officer_without_valid_authority"
+      ]
+    },
+    {
+      "profile_id": "department_head",
+      "receives": [
+        "mission_relevant_department_briefing",
+        "department_objectives",
+        "resource_constraints"
+      ],
+      "can": [
+        "assign_department_work",
+        "report_readiness",
+        "recommend_options",
+        "execute_authorized_department_actions"
+      ],
+      "cannot": [
+        "bind_the_ship_to_new_mission_without_authority"
+      ]
+    },
+    {
+      "profile_id": "watch_officer",
+      "receives": [
+        "current_orders",
+        "navigation_and_contact_state",
+        "watch_relevant_constraints"
+      ],
+      "can": [
+        "execute_watch_authority",
+        "respond_to_immediate_operational_changes",
+        "escalate_to_command"
+      ],
+      "cannot": [
+        "rewrite_mission_objectives"
+      ]
+    },
+    {
+      "profile_id": "station_or_specialist_officer",
+      "receives": [
+        "task_order",
+        "local_context",
+        "needed_knowledge"
+      ],
+      "can": [
+        "perform_specialist_work",
+        "request_clarification",
+        "report_results",
+        "raise_safety_or_regulatory_concern"
+      ],
+      "cannot": [
+        "access_full_mission_intelligence_by_default",
+        "issue_shipwide_orders_without_authority"
+      ]
+    },
+    {
+      "profile_id": "cadet_or_trainee",
+      "receives": [
+        "training_task",
+        "supervisor_context",
+        "limited_operational_context"
+      ],
+      "can": [
+        "perform_supervised_task",
+        "ask_questions",
+        "report_observations",
+        "fail_or_succeed_with_training_consequences"
+      ],
+      "cannot": [
+        "exercise_unsupervised_authority_beyond_explicit_assignment"
+      ]
+    }
+  ],
+  "rules": [
+    "Mission relevance is derived from current assignment, position, watch and delegated task.",
+    "Lower-rank play must not become spectator mode.",
+    "Restricted intelligence is filtered while preserving enough context to perform the assigned duty.",
+    "A player can influence mission outcome through specialist actions without controlling the whole ship.",
+    "Acting command uses the live command-succession rules, not a separate mission shortcut."
+  ]
+}

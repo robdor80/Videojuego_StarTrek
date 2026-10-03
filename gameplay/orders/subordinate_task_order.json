@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1",
+  "model_id": "subordinate_task_order",
+  "fields": {
+    "task_order_id": null,
+    "mission_id": null,
+    "issuer_character_id": null,
+    "recipient_character_or_team_id": null,
+    "recipient_station_or_department_id": null,
+    "issued_at": null,
+    "task_type": null,
+    "parameters": {},
+    "authority_scope": [],
+    "deadline_or_trigger": null,
+    "priority": "routine",
+    "status": "issued",
+    "reporting_requirement": null,
+    "knowledge_package_ref": null,
+    "parent_objective_id": null
+  },
+  "task_types": [
+    "plot_course",
+    "maintain_watch",
+    "scan_target",
+    "analyze_data",
+    "prepare_transport",
+    "prepare_shuttle",
+    "repair_system",
+    "reroute_power",
+    "establish_communications",
+    "decode_signal",
+    "medical_prepare",
+    "security_prepare",
+    "escort_personnel",
+    "survey_location",
+    "monitor_contact",
+    "prepare_report"
+  ],
+  "statuses": [
+    "issued",
+    "acknowledged",
+    "clarification_required",
+    "in_progress",
+    "completed",
+    "failed",
+    "refused",
+    "cancelled",
+    "superseded"
+  ],
+  "rules": [
+    "A subordinate task cannot grant authority beyond the issuer's own authority.",
+    "Task completion may satisfy part of a mission objective without exposing the entire objective.",
+    "Impossible or unsafe tasks can be questioned through normal chain-of-command gameplay.",
+    "Task history remains available to debrief and evaluation systems."
+  ]
+}

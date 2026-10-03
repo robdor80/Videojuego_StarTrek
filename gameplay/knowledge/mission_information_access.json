@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_information_access",
+  "information_classes": [
+    "public_operational",
+    "shipwide",
+    "departmental",
+    "command",
+    "restricted",
+    "classified"
+  ],
+  "access_inputs": [
+    "character_id",
+    "rank",
+    "position",
+    "assignment",
+    "duty_role",
+    "clearance",
+    "mission_id",
+    "task_order_id",
+    "need_to_know",
+    "live_authority_context"
+  ],
+  "outputs": {
+    "visible_briefing_fields": [],
+    "visible_objective_fields": [],
+    "visible_intelligence_refs": [],
+    "redacted_refs": [],
+    "reason_codes": []
+  },
+  "rules": [
+    "Need-to-know and current duty are evaluated independently from rank.",
+    "A junior specialist may receive a critical technical fact without receiving strategic intelligence.",
+    "Redacted information must not leak through AI paraphrase.",
+    "Emergency authority can expand access only when live rules justify it.",
+    "Knowledge access never changes World Truth."
+  ]
+}

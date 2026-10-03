@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1",
+  "model_id": "mission_duty_task",
+  "fields": {
+    "duty_task_id": null,
+    "mission_id": null,
+    "objective_id": null,
+    "task_order_id": null,
+    "assigned_character_id": null,
+    "assigned_role_id": null,
+    "station_id": null,
+    "status": "pending",
+    "required_capabilities": [],
+    "required_information_refs": [],
+    "available_actions": [],
+    "completion_conditions": [],
+    "failure_conditions": [],
+    "report_to_id": null,
+    "event_refs": []
+  },
+  "statuses": [
+    "pending",
+    "available",
+    "active",
+    "blocked",
+    "completed",
+    "failed",
+    "cancelled"
+  ],
+  "rules": [
+    "A mission objective can fan out into several concurrent duty tasks.",
+    "Different characters may contribute to the same objective through different stations.",
+    "Blocking one task does not automatically fail the whole objective unless its conditions require it.",
+    "Duty tasks are the primary bridge from strategic mission state to moment-to-moment role gameplay."
+  ]
+}
