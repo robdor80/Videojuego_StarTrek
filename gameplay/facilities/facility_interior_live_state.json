@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_interior_live_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "observed_at": null,
+    "location_states": [],
+    "connection_states": [],
+    "pressure_zone_states": [],
+    "hazard_refs": [],
+    "evacuation_state": "normal",
+    "security_lockdown_state": "normal"
+  },
+  "location_state_fields": [
+    "location_id",
+    "operational_status",
+    "occupancy_refs",
+    "damage_refs",
+    "fire_state",
+    "atmosphere_state",
+    "power_state",
+    "security_state",
+    "access_override_state"
+  ],
+  "connection_state_fields": [
+    "connection_id",
+    "status",
+    "blocked_reason",
+    "access_override_state"
+  ],
+  "statuses": [
+    "normal",
+    "degraded",
+    "disabled",
+    "inaccessible",
+    "destroyed"
+  ],
+  "connection_statuses": [
+    "open",
+    "closed",
+    "locked",
+    "blocked",
+    "disabled",
+    "destroyed"
+  ],
+  "rules": [
+    "Baseline topology and live interior state remain separate.",
+    "Damage, decompression, fire, security lockdown and evacuation can alter traversability.",
+    "NPC pathfinding and player movement use the same live connection state.",
+    "Repair can restore a connection only through authoritative damage/repair systems."
+  ]
+}

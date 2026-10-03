@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_topology",
+  "classification": "GAME_ADDITION",
+  "purpose": "Represent navigable internal space derived from validated references, blueprints and campaign state.",
+  "fields": {
+    "facility_id": null,
+    "configuration_id": null,
+    "topology_version": null,
+    "sections": [],
+    "locations": [],
+    "connections": [],
+    "access_zones": [],
+    "evacuation_routes": [],
+    "service_nodes": [],
+    "source_asset_refs": [],
+    "confidence_summary": "unknown"
+  },
+  "section_fields": [
+    "section_id",
+    "display_name_es",
+    "section_type",
+    "deck_or_level_refs",
+    "parent_section_id",
+    "pressure_zone_ref",
+    "structural_zone_ref"
+  ],
+  "location_fields": [
+    "location_id",
+    "display_name_es",
+    "location_type",
+    "section_id",
+    "deck_or_level_id",
+    "access_profile_ref",
+    "service_capability_refs",
+    "critical_system_refs",
+    "occupancy_profile",
+    "source_refs",
+    "confidence"
+  ],
+  "connection_fields": [
+    "connection_id",
+    "from_location_id",
+    "to_location_id",
+    "connection_type",
+    "normal_travel_time_profile",
+    "access_requirements",
+    "pressure_boundary",
+    "can_be_disabled",
+    "live_state_ref"
+  ],
+  "connection_types": [
+    "corridor",
+    "door",
+    "turbolift",
+    "lift",
+    "ladder",
+    "jefferies_tube",
+    "airlock",
+    "docking_port",
+    "gangway",
+    "transporter_link",
+    "maintenance_access",
+    "external_eva_route"
+  ],
+  "rules": [
+    "Blueprint-derived topology is reference evidence, not automatically canon.",
+    "Unknown rooms or connectors remain unknown; do not invent geometry merely to make a graph complete.",
+    "Live damage can block or alter connections without rewriting baseline topology.",
+    "Access restrictions are runtime state separate from physical connectivity.",
+    "Different configurations of the same design may have different topology versions."
+  ]
+}

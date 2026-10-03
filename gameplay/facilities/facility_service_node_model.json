@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_service_node",
+  "classification": "GAME_ADDITION",
+  "purpose": "Bind abstract facility capabilities to concrete places inside a facility when references support them.",
+  "fields": {
+    "service_node_id": null,
+    "facility_id": null,
+    "location_id": null,
+    "service_type": null,
+    "capability_id": null,
+    "provider_department_or_authority_id": null,
+    "supported_unit_profiles": [],
+    "capacity_profile": null,
+    "current_state_ref": null,
+    "access_profile_ref": null,
+    "queue_ref": null,
+    "inventory_ref": null,
+    "source_refs": [],
+    "confidence": "unknown"
+  },
+  "service_types": [
+    "docking",
+    "traffic_control",
+    "cargo_transfer",
+    "personnel_transfer",
+    "medical",
+    "repair",
+    "drydock",
+    "shipyard_work",
+    "resupply",
+    "ordnance_resupply",
+    "smallcraft_support",
+    "science_support",
+    "security",
+    "command_and_control",
+    "communications",
+    "diplomatic",
+    "commercial"
+  ],
+  "rules": [
+    "A facility capability may exist without a known exact service-node location.",
+    "Service-node location is added only when a source/reference supports it.",
+    "Destroyed or inaccessible service nodes can disable a capability even if the facility design normally supports it.",
+    "Multiple nodes may provide the same service with different capacities."
+  ]
+}
