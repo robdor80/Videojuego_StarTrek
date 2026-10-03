@@ -1,0 +1,281 @@
+{
+  "schema_version": "0.1",
+  "catalogue_id": "astrography_anchor_locations",
+  "purpose": "Minimal gameplay anchor set for routing, jurisdiction and campaign initialization. Absence from this file does not imply nonexistence.",
+  "locations": [
+    {
+      "location_id": "sol_system",
+      "display_name_es": "Sistema Sol",
+      "location_type": "star_system",
+      "sector_designation": "001",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "earth",
+      "display_name_es": "Tierra",
+      "location_type": "planet",
+      "parent_location_id": "sol_system",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ST_OFFICIAL_GET_TO_KNOW_FEDERATION"
+      ]
+    },
+    {
+      "location_id": "alpha_centauri",
+      "display_name_es": "Alpha Centauri",
+      "location_type": "star_system",
+      "sector_designation": "002",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "terra_nova_system",
+      "display_name_es": "Sistema Terra Nova",
+      "location_type": "star_system",
+      "sector_designation": "003",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "sigma_draconis",
+      "display_name_es": "Sigma Draconis",
+      "location_type": "star_system",
+      "sector_designation": "004",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "vulcan_system",
+      "display_name_es": "Sistema Vulcano",
+      "location_type": "star_system",
+      "sector_designation": "005",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "vulcan",
+      "display_name_es": "Vulcano",
+      "location_type": "planet",
+      "parent_location_id": "vulcan_system",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ENT_4X22_THESE_ARE_THE_VOYAGES"
+      ]
+    },
+    {
+      "location_id": "andoria_system",
+      "display_name_es": "Sistema Andoria",
+      "location_type": "star_system",
+      "sector_designation": "006",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "andoria",
+      "display_name_es": "Andoria",
+      "location_type": "planet",
+      "parent_location_id": "andoria_system",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ENT_4X22_THESE_ARE_THE_VOYAGES"
+      ]
+    },
+    {
+      "location_id": "tellar_system",
+      "display_name_es": "Sistema Tellar",
+      "location_type": "star_system",
+      "sector_designation": "007",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "tellar_prime",
+      "display_name_es": "Tellar Prime",
+      "location_type": "planet",
+      "parent_location_id": "tellar_system",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ENT_4X22_THESE_ARE_THE_VOYAGES"
+      ]
+    },
+    {
+      "location_id": "ophiuchus_36",
+      "display_name_es": "36 Ophiuchi",
+      "location_type": "star_system",
+      "sector_designation": "008",
+      "region_id": "local_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "deep_space_station_k7",
+      "display_name_es": "Estación Espacial K-7",
+      "location_type": "station",
+      "region_id": "klingon_frontier",
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ]
+    },
+    {
+      "location_id": "klingon_border_near_k7",
+      "display_name_es": "Frontera klingon próxima a K-7",
+      "location_type": "route_anchor",
+      "region_id": "klingon_frontier",
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ]
+    },
+    {
+      "location_id": "galorndon_core",
+      "display_name_es": "Galorndon Core",
+      "location_type": "planet",
+      "region_id": "romulan_frontier",
+      "source_refs": [
+        "TNG_THE_ENEMY"
+      ]
+    },
+    {
+      "location_id": "romulan_neutral_zone_near_galorndon",
+      "display_name_es": "Zona Neutral Romulana próxima a Galorndon Core",
+      "location_type": "route_anchor",
+      "region_id": "romulan_neutral_zone",
+      "source_refs": [
+        "TNG_THE_ENEMY",
+        "TOS_BALANCE_OF_TERROR"
+      ]
+    },
+    {
+      "location_id": "bajor",
+      "display_name_es": "Bajor",
+      "location_type": "planet",
+      "region_id": "bajoran_space",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "deep_space_9",
+      "display_name_es": "Espacio Profundo 9",
+      "location_type": "station",
+      "region_id": "bajoran_space",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "bajoran_wormhole_alpha",
+      "display_name_es": "Boca Alfa del agujero de gusano bajorano",
+      "location_type": "wormhole",
+      "region_id": "bajoran_space",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "bajoran_wormhole_gamma",
+      "display_name_es": "Boca Gamma del agujero de gusano bajorano",
+      "location_type": "wormhole",
+      "region_id": "gamma_quadrant_wormhole_region",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "cardassia_prime",
+      "display_name_es": "Cardassia Prime",
+      "location_type": "planet",
+      "region_id": "cardassian_space",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "badlands",
+      "display_name_es": "Badlands",
+      "location_type": "spatial_region",
+      "region_id": "bajor_cardassia_frontier",
+      "source_refs": [
+        "DS9_DEFIANT",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "ferenginar",
+      "display_name_es": "Ferenginar",
+      "location_type": "planet",
+      "region_id": "ferengi_space",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "trill",
+      "display_name_es": "Trill",
+      "location_type": "planet",
+      "region_id": "federation_space",
+      "source_refs": [
+        "DS9_EQUILIBRIUM",
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "starbase_375",
+      "display_name_es": "Base Estelar 375",
+      "location_type": "starbase",
+      "region_id": "federation_cardassian_front",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "delta_quadrant_caretaker_arrival_region",
+      "display_name_es": "Región de llegada del Guardián",
+      "location_type": "region",
+      "region_id": "delta_quadrant",
+      "source_refs": [
+        "STAR_CHARTS_2002"
+      ]
+    },
+    {
+      "location_id": "borg_transwarp_network_reference",
+      "display_name_es": "Red transwarp Borg",
+      "location_type": "region",
+      "region_id": "delta_quadrant",
+      "source_refs": [
+        "STAR_CHARTS_2002",
+        "ST_OFFICIAL_BORG_101"
+      ]
+    }
+  ],
+  "rules": [
+    "Exact coordinates remain null unless explicitly extracted and validated.",
+    "Region labels are gameplay organization aids and do not imply exact canonical borders.",
+    "Political control is resolved by temporal overlays, not stored permanently on the physical location.",
+    "This catalogue is intentionally sparse and grows when gameplay needs a location."
+  ]
+}

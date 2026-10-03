@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1",
+  "model_id": "campaign_astrography_initialization",
+  "profiles": {
+    "pike": {
+      "retained_time_window": "2259-2264",
+      "load_physical_catalogues": [
+        "astrography_anchor_locations",
+        "initial_anchor_route_graph"
+      ],
+      "default_chart_scope": [
+        "local_space",
+        "known_federation_space",
+        "known_klingon_frontier",
+        "known_romulan_frontier"
+      ],
+      "knowledge_rules": [
+        "Do not expose late-24th-century political borders, Dominion War geography or Voyager Delta Quadrant route data.",
+        "Later-known systems may physically exist in World Truth but remain absent or low-confidence in player charts."
+      ]
+    },
+    "kirk": {
+      "retained_time_window": "2265-2293",
+      "load_physical_catalogues": [
+        "astrography_anchor_locations",
+        "initial_anchor_route_graph"
+      ],
+      "default_chart_scope": [
+        "local_space",
+        "federation_space",
+        "klingon_frontier",
+        "romulan_neutral_zone"
+      ],
+      "knowledge_rules": [
+        "Do not expose DS9-era Bajoran wormhole strategic knowledge before discovery.",
+        "Do not expose Voyager-derived Delta Quadrant route knowledge."
+      ]
+    },
+    "tng_ds9_voyager": {
+      "retained_time_window": "2364-2378",
+      "load_physical_catalogues": [
+        "astrography_anchor_locations",
+        "initial_anchor_route_graph"
+      ],
+      "default_chart_scope": [
+        "federation_space",
+        "klingon_space",
+        "romulan_frontier",
+        "bajor_cardassia_region"
+      ],
+      "knowledge_rules": [
+        "Bajoran wormhole knowledge becomes available only after its discovery date and according to campaign continuity.",
+        "Delta Quadrant knowledge may be ship-local, delayed, incomplete or unavailable to Alpha Quadrant actors depending on date and communications state.",
+        "Dominion War borders and fronts are initialized only if campaign start date reaches the relevant historical state."
+      ]
+    }
+  },
+  "universal_rules": [
+    "Initialize physical World Truth independently from what the player database knows.",
+    "Apply political overlays after physical locations load.",
+    "Apply character/ship chart knowledge after political state loads.",
+    "After campaign start, live discoveries and political changes override future screen chronology."
+  ]
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "0.1",
+  "graph_id": "initial_anchor_route_graph",
+  "nodes": [
+    "earth",
+    "alpha_centauri",
+    "vulcan_system",
+    "sigma_draconis",
+    "deep_space_station_k7",
+    "klingon_border_near_k7",
+    "galorndon_core",
+    "romulan_neutral_zone_near_galorndon",
+    "bajor",
+    "cardassia_prime",
+    "badlands",
+    "ferenginar",
+    "trill",
+    "starbase_375",
+    "deep_space_9",
+    "bajoran_wormhole_alpha",
+    "bajoran_wormhole_gamma"
+  ],
+  "edges": [
+    {
+      "edge_ref": "earth_alpha_centauri",
+      "enabled": true
+    },
+    {
+      "edge_ref": "earth_vulcan",
+      "enabled": true
+    },
+    {
+      "edge_ref": "earth_sigma_draconis",
+      "enabled": true
+    },
+    {
+      "edge_ref": "k7_klingon_border",
+      "enabled": true
+    },
+    {
+      "edge_ref": "galorndon_core_romulan_neutral_zone",
+      "enabled": true
+    },
+    {
+      "edge_ref": "bajor_cardassia_prime",
+      "enabled": true
+    },
+    {
+      "edge_ref": "bajor_badlands",
+      "enabled": true
+    },
+    {
+      "edge_ref": "bajor_ferenginar",
+      "enabled": true
+    },
+    {
+      "edge_ref": "bajor_trill",
+      "enabled": true
+    },
+    {
+      "edge_ref": "bajor_starbase_375",
+      "enabled": true
+    },
+    {
+      "edge_id": "bajor_deep_space_9_local",
+      "origin_location_id": "bajor",
+      "destination_location_id": "deep_space_9",
+      "derivation_type": "local_operational_connection",
+      "distance_ly": null,
+      "usable_for_pathfinding": true,
+      "confidence": "HIGH",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ]
+    },
+    {
+      "edge_id": "deep_space_9_bajoran_wormhole",
+      "origin_location_id": "deep_space_9",
+      "destination_location_id": "bajoran_wormhole_alpha",
+      "derivation_type": "local_operational_connection",
+      "distance_ly": null,
+      "usable_for_pathfinding": true,
+      "confidence": "HIGH",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ]
+    },
+    {
+      "edge_id": "bajoran_wormhole_traversal",
+      "origin_location_id": "bajoran_wormhole_alpha",
+      "destination_location_id": "bajoran_wormhole_gamma",
+      "traversal_type": "stable_wormhole",
+      "ordinary_warp_edge": false,
+      "distance_ly": null,
+      "usable_for_pathfinding": true,
+      "confidence": "HIGH",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "STAR_CHARTS_2002"
+      ]
+    }
+  ],
+  "rules": [
+    "Missing direct edges do not mean two locations cannot be reached; geometry/path expansion may supply routes later.",
+    "Local operational connections may omit light-year distance when gameplay only requires adjacency.",
+    "Wormhole traversal is resolved by a special traversal mechanic, not normal warp speed."
+  ]
+}

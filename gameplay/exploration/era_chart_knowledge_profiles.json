@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1",
+  "model_id": "era_chart_knowledge_profiles",
+  "profiles": {
+    "pike": {
+      "generally_known": [
+        "sol_system",
+        "earth",
+        "vulcan_system",
+        "vulcan",
+        "andoria_system",
+        "andoria",
+        "tellar_system",
+        "tellar_prime"
+      ],
+      "conditionally_known": [
+        "deep_space_station_k7",
+        "klingon_border_near_k7",
+        "romulan_neutral_zone_near_galorndon"
+      ],
+      "normally_unknown_to_player_database": [
+        "bajoran_wormhole_alpha",
+        "bajoran_wormhole_gamma",
+        "delta_quadrant_caretaker_arrival_region",
+        "borg_transwarp_network_reference"
+      ]
+    },
+    "kirk": {
+      "generally_known": [
+        "sol_system",
+        "earth",
+        "vulcan_system",
+        "vulcan",
+        "andoria_system",
+        "andoria",
+        "tellar_system",
+        "tellar_prime",
+        "deep_space_station_k7",
+        "klingon_border_near_k7"
+      ],
+      "conditionally_known": [
+        "galorndon_core",
+        "romulan_neutral_zone_near_galorndon",
+        "bajor",
+        "cardassia_prime"
+      ],
+      "normally_unknown_to_player_database": [
+        "bajoran_wormhole_alpha",
+        "bajoran_wormhole_gamma",
+        "delta_quadrant_caretaker_arrival_region",
+        "borg_transwarp_network_reference"
+      ]
+    },
+    "tng_ds9_voyager": {
+      "generally_known": [
+        "sol_system",
+        "earth",
+        "vulcan_system",
+        "vulcan",
+        "andoria_system",
+        "andoria",
+        "tellar_system",
+        "tellar_prime",
+        "bajor",
+        "cardassia_prime",
+        "ferenginar",
+        "trill",
+        "galorndon_core"
+      ],
+      "campaign_date_gated": [
+        "deep_space_9",
+        "bajoran_wormhole_alpha",
+        "bajoran_wormhole_gamma",
+        "starbase_375",
+        "badlands"
+      ],
+      "ship_or_database_context_gated": [
+        "delta_quadrant_caretaker_arrival_region",
+        "borg_transwarp_network_reference"
+      ]
+    }
+  },
+  "rules": [
+    "These lists are default initialization hints, not omniscience.",
+    "Individual characters can know more or less than the ship database.",
+    "Campaign divergence can reveal locations earlier or prevent canonical discoveries."
+  ]
+}
