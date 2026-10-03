@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_transfer_job",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "transfer_job_id": null,
+    "facility_id": null,
+    "source_entity_id": null,
+    "destination_entity_id": null,
+    "transfer_type": null,
+    "requested_at": null,
+    "started_at": null,
+    "completed_at": null,
+    "status": "requested",
+    "manifest_refs": [],
+    "quantity_or_person_refs": [],
+    "access_requirements": [],
+    "security_requirements": [],
+    "medical_requirements": [],
+    "transport_method": null,
+    "interruption_reason": null,
+    "source_mission_id": null,
+    "event_refs": []
+  },
+  "transfer_types": [
+    "cargo",
+    "personnel",
+    "patient",
+    "secure_personnel",
+    "diplomatic_party",
+    "equipment",
+    "repair_parts",
+    "mission_supplies"
+  ],
+  "transport_methods": [
+    "docking_transfer",
+    "gangway",
+    "transporter",
+    "shuttle",
+    "cargo_transporter",
+    "eva_transfer",
+    "other_supported_method"
+  ],
+  "statuses": [
+    "requested",
+    "approved",
+    "queued",
+    "preparing",
+    "in_progress",
+    "partially_completed",
+    "completed",
+    "blocked",
+    "cancelled"
+  ],
+  "rules": [
+    "Transfer requires a valid source, destination and manifest or explicit transfer set.",
+    "Personnel transfer updates assignment and manifest state through the appropriate existing systems.",
+    "Medical and security requirements can constrain transport method.",
+    "A partially completed transfer persists and is not rolled back automatically.",
+    "Transport capability does not bypass access or legal restrictions."
+  ]
+}

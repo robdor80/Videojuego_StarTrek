@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1",
+  "model_id": "visiting_unit_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "visit_id": null,
+    "unit_id": null,
+    "facility_id": null,
+    "relationship_to_facility": "visitor",
+    "arrival_reason": null,
+    "arrival_time": null,
+    "departure_time": null,
+    "traffic_phase": "inbound",
+    "clearance_ref": null,
+    "berth_ref": null,
+    "requested_service_refs": [],
+    "active_service_refs": [],
+    "passenger_transfer_refs": [],
+    "cargo_transfer_refs": [],
+    "security_condition_refs": [],
+    "diplomatic_status_ref": null,
+    "departure_constraints": [],
+    "event_refs": []
+  },
+  "traffic_phases": [
+    "inbound",
+    "holding",
+    "approach_cleared",
+    "final_approach",
+    "docked",
+    "berthed_external",
+    "orbiting",
+    "service_complete",
+    "departure_requested",
+    "departing",
+    "departed",
+    "diverted"
+  ],
+  "rules": [
+    "A visiting unit remains an independent live entity while using facility services.",
+    "Docking does not transfer command authority to facility personnel.",
+    "Security, diplomatic and service conditions can coexist and change during a visit.",
+    "Departure can be delayed by safety, legal, service or operational constraints.",
+    "The visit record persists as history after departure."
+  ]
+}

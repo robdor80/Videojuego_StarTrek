@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_traffic_event_hooks",
+  "classification": "GAME_ADDITION",
+  "triggers": [
+    {
+      "condition": "traffic_state_saturated",
+      "world_event_type": "support_capacity_shortfall",
+      "possible_needs": ["support_reinforcement"]
+    },
+    {
+      "condition": "approaching_unit_reports_loss_of_control",
+      "world_event_type": "distress",
+      "possible_needs": ["rescue","medical_response","repair_assistance"]
+    },
+    {
+      "condition": "unknown_contact_enters_controlled_approach_zone",
+      "world_event_type": "unidentified_contact",
+      "possible_needs": ["investigate","security_response"]
+    },
+    {
+      "condition": "clearance_violation_detected",
+      "world_event_type": "security_incident",
+      "possible_needs": ["security_response","investigate"]
+    },
+    {
+      "condition": "diplomatic_vessel_arrives_with_valid_mission_context",
+      "world_event_type": "diplomatic_contact",
+      "possible_needs": ["diplomatic_contact","transport_diplomatic"]
+    },
+    {
+      "condition": "approach_lane_becomes_unsafe",
+      "world_event_type": "navigation_hazard",
+      "possible_needs": ["investigate","repair_assistance"]
+    }
+  ],
+  "rules": [
+    "Traffic events are generated only from live traffic and contact state.",
+    "Routine arrivals and departures do not automatically become missions.",
+    "NPC facility staff may resolve low-level traffic events without player involvement.",
+    "Serious events can propagate to security, medical, engineering, logistics or external Starfleet tasking."
+  ]
+}

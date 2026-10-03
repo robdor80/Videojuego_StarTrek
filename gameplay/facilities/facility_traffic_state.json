@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1",
+  "model_id": "facility_traffic_state",
+  "classification": "GAME_ADDITION",
+  "fields": {
+    "facility_id": null,
+    "observed_at": null,
+    "traffic_status": "normal",
+    "active_arrivals": [],
+    "active_departures": [],
+    "holding_units": [],
+    "docked_units": [],
+    "reserved_berths": [],
+    "closed_approach_refs": [],
+    "traffic_control_staffing_state": null,
+    "emergency_priority_refs": [],
+    "local_navigation_hazards": [],
+    "traffic_event_refs": []
+  },
+  "traffic_statuses": ["light","normal","heavy","saturated","restricted","emergency","closed"],
+  "rules": [
+    "Traffic state is live World State and can change independently of facility design.",
+    "Arrival does not imply docking clearance.",
+    "Docked, holding, approaching and departing are distinct operational states.",
+    "Emergency traffic can reprioritize movement without creating physical berth capacity.",
+    "Traffic control uses known sensor and contact data, not omniscient vessel identity.",
+    "NPC traffic continues to arrive, depart or divert when the player is absent."
+  ]
+}
