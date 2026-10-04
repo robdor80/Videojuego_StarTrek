@@ -358,3 +358,28 @@ La ficha conserva:
 - estado actual: activo, perdido, archivado o confirmado.
 
 La ficha puede ser consultada posteriormente desde Sensores y desde Ordenador/Base de datos. Un reencuentro futuro puede compararse contra registros anteriores de la propia nave.
+
+
+## SEGUIMIENTO v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA** con el siguiente comportamiento:
+
+- **Contactos seguidos:** lista de contactos con actualización continua.
+- **Fijar contacto:** inicia seguimiento prioritario de un contacto concreto.
+- **Seguimiento múltiple:** permite mantener varios contactos simultáneamente.
+- **Seguir firma concreta:** mantiene la observación sobre una firma específica del contacto.
+- **Actualizar posición:** obtiene una nueva estimación de posición.
+- **Estimar rumbo:** calcula dirección probable de movimiento.
+- **Estimar velocidad:** calcula velocidad actual con la confianza disponible.
+- **Predecir trayectoria:** proyecta posición futura con incertidumbre creciente.
+- **Recuperar contacto perdido:** usa última posición, trayectoria, velocidad y firmas conocidas para crear un área probable de búsqueda.
+
+### Reglas aprobadas
+
+1. **El seguimiento continuado mejora el conocimiento del movimiento** al acumular observaciones, sin revelar mágicamente la naturaleza del contacto.
+2. **La capacidad de seguimiento de la nave es limitada** y depende de sensores, clase, era, estado, potencia e interferencias.
+3. Existen **seguimiento normal y prioritario**. El prioritario consume más recursos a cambio de mejor actualización/precisión.
+4. **Los contactos pueden perderse y recuperarse**. Una pérdida no borra la ficha; pasa a estado `lost` con última posición, vector, velocidad y firmas conocidas.
+5. **Las predicciones nunca son certezas**. La confianza cae cuanto más lejos se proyecta en el tiempo y puede quedar invalidada por maniobras o cambios de firma.
+6. El seguimiento múltiple reparte capacidad. La saturación puede reducir frecuencia de actualización, precisión o provocar pérdida de contactos secundarios.
+7. Todas las actualizaciones se incorporan a la ficha persistente de contacto de la memoria de la nave.
