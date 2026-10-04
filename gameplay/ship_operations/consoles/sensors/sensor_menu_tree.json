@@ -218,7 +218,10 @@
         "predict_trajectory",
         "reacquire_lost_contact"
       ],
-      "backend_status": "future_extension"
+      "backend_status": "future_extension",
+      "rules_file": "gameplay/ship_operations/consoles/sensors/tracking_rules.json",
+      "persistence": "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
+      "capacity_model": "finite_ship_sensor_capacity"
     },
     {
       "id": "sensor_readout",
@@ -333,7 +336,7 @@
     "scans": "approved_v0.1",
     "search_localize": "approved_v0.1",
     "contacts": "approved_v0.1",
-    "tracking": "pending_review",
+    "tracking": "approved_v0.1",
     "sensor_readout": "pending_review",
     "interference": "pending_review",
     "configuration": "pending_review",
