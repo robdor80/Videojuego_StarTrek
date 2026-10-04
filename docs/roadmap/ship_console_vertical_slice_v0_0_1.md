@@ -52,3 +52,18 @@ Delivered for Sensors v0.1:
 - ✅ visually polished external PDF operator manual.
 
 Control document: `docs/roadmap/sensors_operator_manual_plan.md`.
+
+
+## CoreRPG dependency
+
+The playable implementation of **H. v0.0.1 duty scenario** depends on the separate `robdor80/CoreRPG` engine reaching the minimum runtime capabilities required by this vertical slice.
+
+Current verified CoreRPG state: foundation through phase 4.4 is closed; `WorldState` is still the minimal identity/revision state and the repository is prepared to begin **4.5 — Generic World State**. General live records, DefinitionId→EntityId instantiation, functional rules, general actions/simulation and gameplay persistence are not yet available.
+
+Rules for this project:
+
+- **Do not implement a duplicate game engine inside Videojuego_StarTrek.**
+- Star Trek defines content, gameplay contracts, console behavior and presentation requirements that CoreRPG must later host.
+- E (Operational Event Log) can be specified now as a reusable contract.
+- F/G may be designed and prototyped as UX, but final runtime integration waits for the necessary CoreRPG milestones.
+- H is **runtime-blocked by CoreRPG**, not by missing Star Trek console design.
