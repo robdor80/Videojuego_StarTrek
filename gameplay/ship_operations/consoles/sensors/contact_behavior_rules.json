@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_contact_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "views": [
+    "all",
+    "unidentified",
+    "identified",
+    "marked",
+    "recently_lost"
+  ],
+  "dossier_fields": [
+    "estimated_position",
+    "distance",
+    "vector",
+    "estimated_velocity",
+    "detected_signatures",
+    "confidence",
+    "available_classification",
+    "observation_history",
+    "contact_status"
+  ],
+  "actions": [
+    "focused_scan",
+    "increase_resolution",
+    "start_tracking",
+    "mark_contact",
+    "compare_readings",
+    "send_data"
+  ],
+  "persistent_identity": {
+    "enabled": true,
+    "reuse_contact_id_when_match_is_reasonable": true,
+    "match_inputs": [
+      "position",
+      "trajectory",
+      "signature_profile",
+      "temporal_continuity"
+    ],
+    "temporary_loss_does_not_force_new_identity": true
+  },
+  "shared_knowledge": {
+    "enabled": true,
+    "common_contact_record": true,
+    "preserve_provenance": true,
+    "no_automatic_omniscience": true,
+    "contributors": {
+      "sensors": [
+        "signatures",
+        "position",
+        "movement",
+        "sensor_classification"
+      ],
+      "tactical": [
+        "shields",
+        "weapons",
+        "combat_posture"
+      ],
+      "science": [
+        "scientific_interpretation"
+      ],
+      "communications": [
+        "transponder",
+        "channels",
+        "signal_authentication"
+      ],
+      "computer": [
+        "database_matches",
+        "historical_records"
+      ]
+    }
+  },
+  "ship_memory": {
+    "persist_contact_dossiers": true,
+    "queryable_from": [
+      "sensors",
+      "computer"
+    ],
+    "supports_future_reidentification": true
+  }
+}
