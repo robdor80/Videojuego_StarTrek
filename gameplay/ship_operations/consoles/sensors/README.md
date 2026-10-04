@@ -482,3 +482,75 @@ Ejemplos deliberados:
 - tecnologías de ocultación cuando sean válidas para era/clase.
 
 Sensores puede informar de la degradación y de patrones observables. La atribución causal compleja puede requerir Ciencia, Táctica u otra consola especializada.
+
+
+## CONFIGURACIÓN v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA**.
+
+La configuración define cómo trabaja normalmente la consola de Sensores. No ejecuta por sí misma un barrido, búsqueda o seguimiento.
+
+### Ajustes disponibles
+
+- sensibilidad;
+- resolución predeterminada;
+- potencia utilizable por Sensores;
+- matriz / conjunto sensor;
+- banda / frecuencia;
+- frecuencia de actualización;
+- filtros predeterminados;
+- prioridades predeterminadas;
+- perfiles / preajustes.
+
+### Jerarquía de configuración
+
+```text
+ESTÁNDAR DE LA NAVE
+        ↓
+PERFIL DEL OPERADOR
+        ↓
+CONFIGURACIÓN TEMPORAL DE OPERACIÓN
+```
+
+La capa inferior puede sobrescribir temporalmente a la superior sin modificarla de forma permanente.
+
+### Reglas aprobadas
+
+1. **Configuración establece valores base; no ejecuta operaciones.**
+2. Una operación concreta puede **sobrescribir temporalmente** valores sin modificar los predeterminados.
+3. Ningún ajuste puede superar las capacidades reales de la nave, era, matrices disponibles, potencia autorizada o estado de daños.
+4. Sensores solo administra la potencia que tiene asignada. Si necesita más, debe **solicitar potencia adicional a OPS**.
+5. Sensibilidad, resolución, frecuencia de actualización y potencia tienen costes reales; no pueden maximizarse gratis.
+6. Los perfiles son **conjuntos de ajustes**, no bonificaciones ocultas.
+7. Puede haber perfiles estándar de la Flota y perfiles personalizados del operador.
+8. Los ajustes y perfiles pertinentes pueden persistir en la memoria de la nave.
+9. Los errores humanos siguen siendo posibles: una banda, filtro o prioridad técnicamente válidos pero mal escogidos se aplican igualmente.
+10. Debe existir **RESTAURAR CONFIGURACIÓN ESTÁNDAR** para volver al baseline autorizado de la nave.
+
+### Potencia y frontera con OPS
+
+Sensores puede distribuir y consumir la potencia que ya tiene asignada. No puede apropiarse unilateralmente de energía de otros sistemas. Una necesidad superior genera una solicitud operativa a OPS.
+
+### Matrices sensoras
+
+Las matrices disponibles dependen de la definición real de cada nave. Pueden existir matrices principales, laterales, de largo alcance, auxiliares u otras válidas para la clase y era. El daño puede degradar o inutilizar una matriz.
+
+### Perfiles
+
+Los perfiles pueden incluir valores como sensibilidad, resolución, actualización, filtros, prioridades, matriz y banda. Un perfil solo automatiza la configuración.
+
+Ejemplos de perfiles estándar posibles:
+
+- Estándar;
+- Navegación;
+- Búsqueda y rescate;
+- Ciencia;
+- Seguimiento;
+- Bajo ruido;
+- Largo alcance.
+
+Los operadores pueden guardar perfiles personales siempre que los ajustes sean técnicamente válidos para la nave.
+
+### Academia
+
+Esta rama es materia válida de entrenamiento y examen práctico: el cadete puede recibir una situación y tener que preparar correctamente la consola antes de ejecutar una operación.
