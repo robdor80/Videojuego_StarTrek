@@ -42,13 +42,13 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Produce the required Sensors operator manuals, then begin **E. Operational event log**.
+Begin **E. Operational event log**.
 
 
 ## Required post-D deliverable
 
-After Sensors v0.1 is fully approved, produce both:
-- an in-game Starfleet/PADD study manual; and
-- a visually polished external PDF operator manual.
+Delivered for Sensors v0.1:
+- ✅ in-game Starfleet/PADD study manual;
+- ✅ visually polished external PDF operator manual.
 
 Control document: `docs/roadmap/sensors_operator_manual_plan.md`.
