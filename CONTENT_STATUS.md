@@ -131,4 +131,4 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 **Interactive ship systems vertical slice: Sensors console → operational log/evaluation → Academy/Galaxy UX → playable v0.0.1 duty scenario.**
 
-The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Immediate next work: interactive Sensors console tree, operational event log/evaluation, Academy and Galaxy-class UX skins, then the playable duty scenario. Wider lore continues only when required by this gameplay path.
+The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Sensors functional design is approved through RESULTADOS; DIAGNÓSTICO is the final console branch under review. Then: operational event log/evaluation, Academy and Galaxy-class UX skins, and the playable duty scenario. Wider lore continues only when required by this gameplay path.
