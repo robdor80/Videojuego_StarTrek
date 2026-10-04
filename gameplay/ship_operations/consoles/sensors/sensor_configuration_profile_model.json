@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "sensor_configuration_profile",
+  "required": [
+    "profile_id",
+    "scope",
+    "settings"
+  ],
+  "scope_values": [
+    "ship_standard",
+    "starfleet_standard",
+    "operator_personal"
+  ],
+  "fields": {
+    "profile_id": "stable profile id",
+    "display_name": "human-readable profile name",
+    "scope": "ownership/source scope",
+    "owner_character_id": "required for operator_personal profiles",
+    "ship_id": "optional ship-specific applicability",
+    "compatible_sensor_capability_tags": "optional constraints",
+    "settings": {
+      "sensitivity": "optional default",
+      "resolution": "optional default",
+      "power_usage": "optional fraction of allocated sensor power",
+      "sensor_array": "optional preferred array",
+      "band_frequency": "optional preferred band/frequency",
+      "update_rate": "optional update preference",
+      "filters": "optional default signature filters",
+      "priorities": "optional default priorities"
+    },
+    "created_at": "optional campaign timestamp",
+    "updated_at": "optional campaign timestamp"
+  },
+  "rules": [
+    "A profile never grants capability the ship does not have.",
+    "Invalid settings for the current ship are rejected or marked unavailable rather than silently upgraded.",
+    "Applying a profile changes configuration only; it does not execute an operation.",
+    "Temporary operation overrides do not mutate the saved profile unless explicitly saved."
+  ]
+}
