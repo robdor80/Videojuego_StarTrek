@@ -104,7 +104,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Orders / alerts / power / damage | ✅ COMPLETE | Natural-language order pipeline, authority validation, alert states, power allocation, localized damage and timed repairs established. |
 | Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
 | Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
-| Observable universe core | 🟨 IN_PROGRESS | Authoritative world truth, observable-entity/signature contracts and deterministic seeded v0.0.1 generator are implemented and regression-tested; next step is sensor-detection resolution. |
+| Observable universe core | ✅ COMPLETE | Authoritative world truth, observable-entity/signature contracts, deterministic seeded v0.0.1 generator and deterministic sensor-detection resolution are implemented for the current vertical-slice scope. |
 
 ## Major remaining domains
 
@@ -129,6 +129,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Interactive ship systems vertical slice: procedural observable world → Sensors → result → log/evaluation.**
+**Interactive ship systems vertical slice: Sensors console → operational log/evaluation → Academy/Galaxy UX → playable v0.0.1 duty scenario.**
 
-The immediate implementation order is fixed: (1) authoritative observable-universe core, (2) deterministic minimal procedural generator for v0.0.1, (3) sensor-detection resolution, (4) interactive Sensors console tree, (5) Academy and operational UX skins over the same functional system, and (6) a playable v0.0.1 duty scenario. Wider lore continues only when required by this gameplay path.
+The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Immediate next work: interactive Sensors console tree, operational event log/evaluation, Academy and Galaxy-class UX skins, then the playable duty scenario. Wider lore continues only when required by this gameplay path.
