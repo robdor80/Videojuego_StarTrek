@@ -325,8 +325,12 @@
         "computer_database"
       ],
       "handoff_contracts": {
-        "science": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
-      }
+        "science": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json",
+        "generic": "gameplay/ship_operations/interconsole/interconsole_data_package_contract.json"
+      },
+      "rules_file": "gameplay/ship_operations/consoles/sensors/results_rules.json",
+      "result_record_model": "gameplay/ship_operations/consoles/sensors/sensor_result_record_model.json",
+      "generic_handoff_contract": "gameplay/ship_operations/interconsole/interconsole_data_package_contract.json"
     },
     {
       "id": "diagnostics",
@@ -374,7 +378,7 @@
     "sensor_readout": "approved_v0.1",
     "interference": "approved_v0.1",
     "configuration": "approved_v0.1",
-    "results": "pending_review",
+    "results": "approved_v0.1",
     "diagnostics": "pending_review"
   }
 }
