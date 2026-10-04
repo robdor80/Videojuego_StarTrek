@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_configuration_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "settings": [
+    "sensitivity",
+    "default_resolution",
+    "sensor_power",
+    "sensor_array",
+    "band_frequency",
+    "update_rate",
+    "default_filters",
+    "default_priorities",
+    "profiles_presets"
+  ],
+  "precedence": [
+    "ship_standard",
+    "operator_profile",
+    "temporary_operation_override"
+  ],
+  "rules": {
+    "configuration_does_not_execute_operations": true,
+    "temporary_operation_override_allowed": true,
+    "temporary_override_does_not_mutate_defaults": true,
+    "cannot_exceed_real_ship_capabilities": true,
+    "cannot_ignore_damage_state": true,
+    "human_error_allowed": true,
+    "restore_ship_standard_required": true
+  },
+  "power_boundary": {
+    "sensors_controls_only_allocated_power": true,
+    "additional_power_requires_operations_request": true,
+    "related_system": "operations"
+  },
+  "costs": {
+    "sensitivity": true,
+    "resolution": true,
+    "update_rate": true,
+    "power": true,
+    "free_maximization_forbidden": true
+  },
+  "sensor_arrays": {
+    "ship_definition_is_authoritative": true,
+    "availability_depends_on": [
+      "ship_class",
+      "era",
+      "installed_configuration",
+      "damage_state"
+    ],
+    "operator_may_select_available_array": true
+  },
+  "profiles": {
+    "starfleet_standard_profiles_allowed": true,
+    "personal_operator_profiles_allowed": true,
+    "profiles_are_configuration_only": true,
+    "hidden_bonuses_forbidden": true,
+    "persistence_allowed": true,
+    "examples": [
+      "standard",
+      "navigation",
+      "search_and_rescue",
+      "science",
+      "tracking",
+      "low_noise",
+      "long_range"
+    ]
+  },
+  "academy_use": {
+    "trainable": true,
+    "examinable": true,
+    "practical_setup_tasks": true
+  }
+}
