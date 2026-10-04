@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_to_engineering_support_request",
+  "status": "fixed",
+  "purpose": "Transfer a diagnosed sensor-system problem to Engineering without allowing Sensors to perform physical repairs.",
+  "required": [
+    "request_id",
+    "source_system",
+    "target_system",
+    "created_at",
+    "component",
+    "diagnostic_summary",
+    "severity",
+    "priority"
+  ],
+  "fields": {
+    "request_id": "unique support request id",
+    "source_system": "sensors",
+    "source_station": "optional physical source station",
+    "source_operator_id": "optional operator",
+    "target_system": "engineering",
+    "created_at": "campaign timestamp",
+    "component": "affected sensor array/component",
+    "diagnostic_code": "optional diagnostic identifier",
+    "diagnostic_summary": "observed fault/degradation",
+    "severity": [
+      "minor",
+      "moderate",
+      "major",
+      "critical"
+    ],
+    "priority": [
+      "routine",
+      "normal",
+      "high",
+      "urgent"
+    ],
+    "attached_diagnostics": "references to test/calibration/performance records",
+    "status": [
+      "queued",
+      "accepted",
+      "delayed",
+      "temporarily_rejected",
+      "in_progress",
+      "completed"
+    ]
+  },
+  "rules": [
+    "Sensors may diagnose and recalibrate but may not perform physical repairs through this workflow.",
+    "Engineering scheduling remains subject to shipwide priorities and available personnel.",
+    "Engineering outcomes update sensor-system runtime state through the Engineering domain.",
+    "Original diagnostics remain part of ship operational history."
+  ]
+}
