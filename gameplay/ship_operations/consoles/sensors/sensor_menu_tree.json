@@ -322,5 +322,16 @@
       "scan_duration_s",
       "sensor_profile"
     ]
+  },
+  "review_status": {
+    "scans": "approved_v0.1",
+    "search_localize": "pending_review",
+    "contacts": "pending_review",
+    "tracking": "pending_review",
+    "sensor_readout": "pending_review",
+    "interference": "pending_review",
+    "configuration": "pending_review",
+    "results": "pending_review",
+    "diagnostics": "pending_review"
   }
 }
