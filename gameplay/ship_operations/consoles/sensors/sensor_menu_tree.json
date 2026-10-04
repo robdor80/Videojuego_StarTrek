@@ -261,7 +261,19 @@
         "extend_integration",
         "recover_signal"
       ],
-      "backend_status": "future_extension"
+      "backend_status": "future_extension",
+      "rules_file": "gameplay/ship_operations/consoles/sensors/interference_compensation_rules.json",
+      "tradeoffs": [
+        "power",
+        "time",
+        "resolution",
+        "coverage",
+        "tracking_capacity"
+      ],
+      "interference_classes": [
+        "environmental",
+        "deliberate"
+      ]
     },
     {
       "id": "configuration",
@@ -347,7 +359,7 @@
     "contacts": "approved_v0.1",
     "tracking": "approved_v0.1",
     "sensor_readout": "approved_v0.1",
-    "interference": "pending_review",
+    "interference": "approved_v0.1",
     "configuration": "pending_review",
     "results": "pending_review",
     "diagnostics": "pending_review"
