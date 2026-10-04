@@ -195,7 +195,13 @@
         "mark_contact",
         "compare_readings",
         "send_data"
-      ]
+      ],
+      "persistence": {
+        "dossier_model": "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
+        "persistent_identity": true,
+        "shared_ship_knowledge": true,
+        "preserves_provenance": true
+      }
     },
     {
       "id": "tracking",
@@ -326,7 +332,7 @@
   "review_status": {
     "scans": "approved_v0.1",
     "search_localize": "approved_v0.1",
-    "contacts": "pending_review",
+    "contacts": "approved_v0.1",
     "tracking": "pending_review",
     "sensor_readout": "pending_review",
     "interference": "pending_review",
