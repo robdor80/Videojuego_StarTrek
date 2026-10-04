@@ -30,7 +30,7 @@ Prove the core gameplay loop:
 | B5. v0.0.1 generation profile | ✅ COMPLETE | Minimal test-world scope |
 | B6. Generator implementation | ✅ COMPLETE | Seeded persistent system materialization + regression tests |
 | C. Sensor detection resolution | ✅ COMPLETE | Deterministic scan request → observable result engine + contracts/tests |
-| D. Sensors console functional tree | 🟨 IN_PROGRESS | Menu tree v0.1 defined; BARRIDOS approved and fixed; remaining branches under review |
+| D. Sensors console functional tree | 🟨 IN_PROGRESS | Menu tree v0.1 defined; BARRIDOS and BÚSQUEDA/LOCALIZACIÓN approved and fixed; remaining branches under review |
 | E. Operational event log | ⬜ TODO | Structured record of player console actions |
 | F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
 | G. Galaxy-class Sensors UX | ⬜ TODO | Operational presentation over same operations |
@@ -42,4 +42,4 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Review and close **03. BÚSQUEDA / LOCALIZACIÓN** in the Sensors console tree.
+Review and close **04. CONTACTOS** in the Sensors console tree.
