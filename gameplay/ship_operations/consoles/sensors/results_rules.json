@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_results_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "views": [
+    "current_operation",
+    "last_scan",
+    "recent_results",
+    "saved_readings",
+    "compare_readings",
+    "repeat_operation"
+  ],
+  "rules": {
+    "immutable_historical_snapshot": true,
+    "preserve_timestamp": true,
+    "preserve_configuration": true,
+    "preserve_provenance": true,
+    "preserve_confidence": true,
+    "permanent_save_allowed": true,
+    "comparison_reports_observed_differences_only": true,
+    "repeat_reuses_configuration_but_creates_new_operation": true,
+    "identical_conditions_do_not_magically_improve_result": true,
+    "partial_results_allowed": true,
+    "partial_results_must_be_marked": true,
+    "interconsole_structured_transfer_allowed": true,
+    "sensor_results_distinct_from_operational_event_log": true
+  },
+  "partial_results": {
+    "possible": true,
+    "may_survive_cancelled_operation": true,
+    "cannot_be_promoted_to_complete_without_completion": true
+  },
+  "repeat_operation": {
+    "copies_previous_operation_parameters": true,
+    "resolves_against_current_world_state": true,
+    "may_change_if": [
+      "target_state",
+      "observer_position",
+      "environment",
+      "interference",
+      "power",
+      "sensor_integrity",
+      "elapsed_time"
+    ]
+  },
+  "comparison": {
+    "compatible_readings_required": true,
+    "examples": [
+      "distance",
+      "velocity",
+      "energy_signature",
+      "warp_signature",
+      "transponder_state"
+    ],
+    "interpretation_boundary": "Other consoles/personnel may interpret meaning; Sensors reports measured change."
+  },
+  "send_targets": [
+    "science",
+    "tactical",
+    "operations",
+    "conn_navigation",
+    "command",
+    "computer_database"
+  ]
+}
