@@ -20,8 +20,9 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 4. ✅ Starfleet Academy
 5. ✅ Career bridge: Academy → first assignment → service record
 6. ✅ Starfleet technology and starships
-7. 🟨 Species, factions, astrography and wider universe
-8. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
+7. 🟨 Procedural observable universe + interactive ship consoles
+8. 🟨 Species, factions, astrography and wider universe
+9. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
 
 ## Documentary foundation
 
@@ -102,6 +103,8 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Interiors / bridge stations / crew complements | ✅ COMPLETE | Bridge station permissions/POVs, interior location state and live crew/shift manifest models established. |
 | Orders / alerts / power / damage | ✅ COMPLETE | Natural-language order pipeline, authority validation, alert states, power allocation, localized damage and timed repairs established. |
 | Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
+| Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
+| Observable universe core | 🟨 IN_PROGRESS | Authoritative world truth, observable-entity contract, detectable signatures and deterministic procedural-generation baseline are being established before Sensor console implementation. |
 
 ## Major remaining domains
 
@@ -116,7 +119,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Technology and equipment | ⬜ TODO |
 | Medicine and science | ⬜ TODO |
 | Conflicts and historical events | ⬜ TODO |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State; broader wider-universe gameplay remains progressive. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State. Current vertical slice: procedural observable world → sensor resolution → interactive console → event log/evaluation. |
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | ⬜ TODO |
 | Presentation and UI | ⬜ TODO |
@@ -126,6 +129,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Wider Star Trek universe + persistent character/NPC runtime.**
+**Interactive ship systems vertical slice: procedural observable world → Sensors → result → log/evaluation.**
 
-Starfleet starships are complete at the current structural/gameplay scope. Species/culture/language coverage now includes the principal playable/adversarial groups needed for the retained eras, while character identity, knowledge, memory, relationships and dialogue constraints have moved into active implementation. Wider catalogues continue to expand when gameplay needs them.
+The immediate implementation order is fixed: (1) authoritative observable-universe core, (2) deterministic minimal procedural generator for v0.0.1, (3) sensor-detection resolution, (4) interactive Sensors console tree, (5) Academy and operational UX skins over the same functional system, and (6) a playable v0.0.1 duty scenario. Wider lore continues only when required by this gameplay path.

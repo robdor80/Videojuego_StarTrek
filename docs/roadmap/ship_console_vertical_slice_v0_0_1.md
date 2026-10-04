@@ -1,0 +1,45 @@
+# Ship-console vertical slice — v0.0.1
+
+Owner: project design/runtime architecture
+Status: **IN PROGRESS**
+
+## Goal
+
+Prove the core gameplay loop:
+
+**authoritative procedural world → player receives an order → player operates a console → engine resolves the action → console presents the result → event is logged → superior can evaluate performance**
+
+## Locked design decisions
+
+- Sixteen functional console families are fixed under `gameplay/ship_operations/consoles/`.
+- Functional console and physical station are separate concepts.
+- Academy and operational ships use the same underlying operations with different UX.
+- World truth exists before observation.
+- AI may communicate structured results but does not own or invent world truth.
+- No visible XP bar is required for professional progression; operational events can feed service evaluations.
+
+## Implementation sequence
+
+| Phase | Status | Deliverable |
+|---|---|---|
+| A. Console family catalogue | ✅ COMPLETE | 16 functional families fixed |
+| B1. Authoritative observable-world rule | ✅ COMPLETE | Decision document |
+| B2. Observable entity contract | ✅ COMPLETE | Entity model |
+| B3. Detectable signature contract | ✅ COMPLETE | Signature model |
+| B4. Procedural generation baseline | ✅ COMPLETE | Deterministic generation rules |
+| B5. v0.0.1 generation profile | ✅ COMPLETE | Minimal test-world scope |
+| B6. Generator implementation | ⬜ TODO | Seeded persistent system materialization |
+| C. Sensor detection resolution | ⬜ TODO | Rules that map scan configuration + world truth to observable result |
+| D. Sensors console functional tree | ⬜ TODO | Menus, parameters, actions and errors |
+| E. Operational event log | ⬜ TODO | Structured record of player console actions |
+| F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
+| G. Galaxy-class Sensors UX | ⬜ TODO | Operational presentation over same operations |
+| H. v0.0.1 duty scenario | ⬜ TODO | Order → scan → report → evaluation |
+
+## Management rule
+
+This file is the control sheet for the current vertical slice and must be updated whenever one of the phases changes state. `CONTENT_STATUS.md` mirrors the project-level status.
+
+## Immediate next task
+
+Define and implement **Sensor Detection Resolution v0.1** only after the minimal generator can materialize a deterministic test world.
