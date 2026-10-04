@@ -30,7 +30,7 @@ Prove the core gameplay loop:
 | B5. v0.0.1 generation profile | ✅ COMPLETE | Minimal test-world scope |
 | B6. Generator implementation | ✅ COMPLETE | Seeded persistent system materialization + regression tests |
 | C. Sensor detection resolution | ✅ COMPLETE | Deterministic scan request → observable result engine + contracts/tests |
-| D. Sensors console functional tree | 🟨 IN_PROGRESS | BARRIDOS through RESULTADOS approved; only DIAGNÓSTICO remains under review |
+| D. Sensors console functional tree | ✅ COMPLETE | All ten Sensors branches approved and fixed for v0.1; inter-console handoffs and persistence contracts defined |
 | E. Operational event log | ⬜ TODO | Structured record of player console actions |
 | F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
 | G. Galaxy-class Sensors UX | ⬜ TODO | Operational presentation over same operations |
@@ -42,7 +42,7 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Review and close **10. DIAGNÓSTICO** in the Sensors console tree.
+Produce the required Sensors operator manuals, then begin **E. Operational event log**.
 
 
 ## Required post-D deliverable
