@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "console_id": "sensors",
-  "status": "draft_in_progress",
+  "status": "approved_v0.1",
   "principle": "detect_search_locate_measure_track_observe",
   "boundaries": {
     "owns": [
@@ -344,7 +344,9 @@
         "errors_degradation",
         "request_engineering_support"
       ],
-      "backend_status": "future_extension"
+      "backend_status": "specified_future_extension",
+      "rules_file": "gameplay/ship_operations/consoles/sensors/diagnostics_rules.json",
+      "engineering_handoff_contract": "gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json"
     }
   ],
   "v0_0_1_core_path": {
@@ -379,6 +381,6 @@
     "interference": "approved_v0.1",
     "configuration": "approved_v0.1",
     "results": "approved_v0.1",
-    "diagnostics": "pending_review"
+    "diagnostics": "approved_v0.1"
   }
 }
