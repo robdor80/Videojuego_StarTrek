@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "interconsole_data_package",
+  "status": "fixed",
+  "purpose": "Transfer known ship data between functional consoles while preserving provenance and domain boundaries.",
+  "required": [
+    "package_id",
+    "source_system",
+    "target_system",
+    "created_at",
+    "payload_refs",
+    "provenance"
+  ],
+  "target_system_values": [
+    "science",
+    "tactical",
+    "operations",
+    "conn_navigation",
+    "command",
+    "computer_database",
+    "engineering",
+    "communications",
+    "security",
+    "medical",
+    "mission_ops",
+    "transporter",
+    "environmental",
+    "flight_deck"
+  ],
+  "fields": {
+    "package_id": "unique transfer id",
+    "source_system": "sending functional console",
+    "source_station": "optional physical station",
+    "source_operator_id": "optional character/operator id",
+    "target_system": "receiving functional console",
+    "created_at": "campaign timestamp",
+    "priority": [
+      "routine",
+      "normal",
+      "high",
+      "urgent"
+    ],
+    "payload_refs": "references to known results, observations, contacts or facts",
+    "operator_note": "optional instruction/context",
+    "provenance": "source/confidence/timestamp metadata retained from payload",
+    "requested_action": "optional domain-specific request",
+    "status": [
+      "queued",
+      "delivered",
+      "accepted",
+      "rejected",
+      "completed"
+    ]
+  },
+  "rules": [
+    "Only knowledge already available to the ship may be transferred.",
+    "Transfer does not grant the receiver unrevealed world truth.",
+    "The receiver applies its own domain-specific analysis or action.",
+    "Original source data remain unchanged.",
+    "Derived receiver findings retain receiver provenance."
+  ]
+}
