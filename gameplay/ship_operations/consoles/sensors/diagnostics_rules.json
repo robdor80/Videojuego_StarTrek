@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_diagnostics_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "operations": [
+    "self_test",
+    "array_status",
+    "calibration",
+    "performance",
+    "errors_degradation",
+    "request_engineering_support"
+  ],
+  "states": [
+    "nominal",
+    "degraded",
+    "miscalibrated",
+    "physically_damaged",
+    "offline"
+  ],
+  "rules": {
+    "diagnostics_checks_sensor_system_not_external_world": true,
+    "distinguish_damage_degradation_miscalibration_nominal": true,
+    "sensors_may_recalibrate_within_scope": true,
+    "physical_repairs_delegate_to": "engineering",
+    "recalibration_costs_time": true,
+    "recalibration_can_temporarily_reduce_array_availability": true,
+    "nominal_diagnostics_do_not_validate_external_interpretation": true,
+    "failures_can_be_localized_by_array_band_or_capability": true,
+    "nominal_performance_and_physical_integrity_are_distinct": true,
+    "engineering_support_request_structured": true,
+    "all_actions_later_feed_operational_event_log": true
+  },
+  "support_request": {
+    "fields": [
+      "system",
+      "component",
+      "diagnostic_code",
+      "problem",
+      "severity",
+      "priority",
+      "attached_diagnostics"
+    ],
+    "engineering_responses": [
+      "accepted",
+      "delayed",
+      "temporarily_rejected"
+    ]
+  }
+}
