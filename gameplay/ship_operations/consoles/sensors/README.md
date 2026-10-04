@@ -439,3 +439,46 @@ SENSORES
 - Los hallazgos científicos se incorporan a la misma ficha persistente del contacto con `source_system = science`.
 - La interpretación científica no sustituye ni borra las lecturas originales de Sensores.
 - Este patrón se reutilizará para futuros envíos a otras consolas, respetando siempre el ámbito funcional de cada una.
+
+
+## INTERFERENCIAS / COMPENSACIÓN v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA** con el siguiente comportamiento:
+
+- **Estado de interferencias:** indica si la lectura está limpia, degradada o comprometida y cuánto afecta al rendimiento.
+- **Tipo de interferencia:** intenta clasificar la causa observable del ruido o degradación.
+- **Compensación automática:** aplica ajustes rápidos y seguros con criterios del sistema; no garantiza la mejor solución.
+- **Ajuste manual:** permite al operador seleccionar estrategias de compensación específicas.
+- **Cambiar banda / frecuencia:** desplaza la observación hacia bandas menos afectadas.
+- **Aumentar potencia:** mejora la capacidad de atravesar ruido a cambio de recursos energéticos.
+- **Reducir resolución:** sacrifica detalle para estabilizar o conservar el contacto.
+- **Prolongar integración:** acumula datos durante más tiempo para separar señal y ruido.
+- **Intentar recuperar señal:** usa historial, última posición, trayectoria y firmas conocidas para reacquirir un contacto degradado o perdido.
+
+### Reglas aprobadas
+
+1. **La compensación reduce los efectos de la interferencia; no elimina mágicamente la causa física.**
+2. **Toda compensación tiene un coste o sacrificio** en energía, tiempo, resolución, cobertura o capacidad disponible.
+3. **Automático = cómodo y robusto; manual = potencialmente mejor**, pero exige decisiones correctas del operador.
+4. **Las interferencias afectan de forma distinta a distintas firmas y bandas.**
+5. Se distingue entre **interferencia ambiental** y **contramedidas deliberadas**, pero Sensores no siempre puede conocer inmediatamente cuál es la causa.
+6. **Recuperar señal utiliza el historial persistente del contacto** y no crea una nueva identidad si la reidentificación es suficientemente sólida.
+7. **Las compensaciones dependen del entorno actual**; una solución que funcionaba puede dejar de ser válida si cambian las condiciones.
+
+### Interferencia ambiental vs deliberada
+
+Ejemplos ambientales:
+- ruido subespacial;
+- partículas cargadas;
+- turbulencia gravimétrica;
+- radiación;
+- actividad electromagnética natural.
+
+Ejemplos deliberados:
+- jamming;
+- enmascaramiento de firmas;
+- contramedidas electrónicas;
+- reducción o alteración intencionada de emisiones;
+- tecnologías de ocultación cuando sean válidas para era/clase.
+
+Sensores puede informar de la degradación y de patrones observables. La atribución causal compleja puede requerir Ciencia, Táctica u otra consola especializada.
