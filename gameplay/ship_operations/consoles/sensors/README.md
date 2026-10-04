@@ -1,6 +1,6 @@
 # Consola funcional — Sensores
 
-Estado: **DRAFT v0.1 / IN_PROGRESS**
+Estado: **APPROVED v0.1 / FUNCTIONAL SPEC COMPLETE**
 
 La consola de Sensores permite **detectar, buscar, localizar, medir, seguir y volver a observar** elementos del universo materializado.
 
@@ -638,3 +638,12 @@ Sensores identifica y caracteriza el problema. Ingeniería repara hardware, sust
 
 Contrato de solicitud:
 `gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json`.
+
+
+## Manual de operador
+
+Material de estudio canónico:
+`gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md`.
+
+La experiencia PADD/LCARS se define en:
+`ui/academy/sensors_manual_experience.md`.
