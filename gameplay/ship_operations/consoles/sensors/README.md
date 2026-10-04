@@ -232,3 +232,21 @@ Academia y naves operativas deberán exponer este mismo árbol conceptual, pero 
 - usar etiquetas o agrupaciones diferentes.
 
 La operación subyacente no cambia.
+
+
+## BARRIDOS v0.1 — decisiones aprobadas
+
+Estas reglas quedan **FIJADAS** para la rama de Barridos:
+
+1. **Valores por defecto:** cada barrido parte de una configuración estándar razonable; el operador modifica solo lo necesario.
+2. **Errores humanos permitidos:** una configuración equivocada pero técnicamente válida se ejecuta. Escanear el sector 014 cuando la orden era 041 es un error profesional, no un error de interfaz.
+3. **Solo se bloquea lo físicamente imposible:** por ejemplo, usar una matriz destruida o una función no disponible por daños/capacidad.
+4. **La duración importa:** rápido, estándar y extendido consumen tiempo de juego y afectan la calidad potencial de la lectura.
+5. **El barrido focalizado exige objetivo:** contacto, coordenadas o zona concreta. No existe un focalizado genérico de todo un sector.
+6. **Filtros múltiples permitidos:** pueden combinarse varias firmas; una búsqueda más específica obtiene ventaja frente a una búsqueda amplia.
+7. **Prioridad y filtro son conceptos distintos:** el filtro define qué firmas se buscan; la prioridad indica a cuál prestar atención preferente sin excluir necesariamente las demás.
+8. **Activo/pasivo tiene consecuencias:** el activo mejora la capacidad de detección pero puede hacer perceptible que estamos escaneando.
+9. **Resultados inciertos son válidos:** traza, posible contacto, lectura insuficiente, señal intermitente y estados equivalentes forman parte normal del sistema.
+10. **Repetir lo mismo no revela mágicamente más:** con la misma configuración y condiciones el resultado debe ser esencialmente equivalente. Para mejorar hay que cambiar resolución, duración, filtro, potencia, posición, condiciones o información disponible.
+
+Estas reglas son vinculantes tanto para la futura UX de Academia como para la de naves operativas.
