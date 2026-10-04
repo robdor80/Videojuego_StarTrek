@@ -289,6 +289,19 @@
         "default_filters",
         "default_priorities",
         "profiles_presets"
+      ],
+      "rules_file": "gameplay/ship_operations/consoles/sensors/configuration_rules.json",
+      "profile_model": "gameplay/ship_operations/consoles/sensors/sensor_configuration_profile_model.json",
+      "precedence": [
+        "ship_standard",
+        "operator_profile",
+        "temporary_operation_override"
+      ],
+      "actions": [
+        "restore_ship_standard",
+        "save_profile",
+        "load_profile",
+        "request_additional_power_from_operations"
       ]
     },
     {
@@ -360,7 +373,7 @@
     "tracking": "approved_v0.1",
     "sensor_readout": "approved_v0.1",
     "interference": "approved_v0.1",
-    "configuration": "pending_review",
+    "configuration": "approved_v0.1",
     "results": "pending_review",
     "diagnostics": "pending_review"
   }
