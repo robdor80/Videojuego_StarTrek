@@ -29,7 +29,7 @@ Prove the core gameplay loop:
 | B4. Procedural generation baseline | ✅ COMPLETE | Deterministic generation rules |
 | B5. v0.0.1 generation profile | ✅ COMPLETE | Minimal test-world scope |
 | B6. Generator implementation | ✅ COMPLETE | Seeded persistent system materialization + regression tests |
-| C. Sensor detection resolution | ⬜ TODO | Rules that map scan configuration + world truth to observable result |
+| C. Sensor detection resolution | ✅ COMPLETE | Deterministic scan request → observable result engine + contracts/tests |
 | D. Sensors console functional tree | ⬜ TODO | Menus, parameters, actions and errors |
 | E. Operational event log | ⬜ TODO | Structured record of player console actions |
 | F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
@@ -42,4 +42,4 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Define and implement **Sensor Detection Resolution v0.1** against the deterministic world produced by B6.
+Define the **Sensors console functional tree v0.1** on top of the completed detection-resolution engine.
