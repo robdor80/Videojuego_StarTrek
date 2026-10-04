@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_readout_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "readout_fields": {
+    "signal_strength": "Observed signature strength; not a direct distance measure.",
+    "signature_type": "Detected sensor-signature category.",
+    "band_frequency": "Observed emission band/frequency when resolvable.",
+    "energy_signature": "Observed energy pattern.",
+    "subspace_signature": "Observed subspace-related pattern/activity.",
+    "approximate_mass": "Estimated mass with uncertainty when available.",
+    "approximate_dimensions": "Estimated size/extent with uncertainty.",
+    "vector_velocity": "Observed/derived relative movement data.",
+    "detectable_lifeforms": "Estimated biological presence/count/distribution when capability allows.",
+    "known_pattern_match": "Database comparison against previously known patterns."
+  },
+  "rules": {
+    "measured_not_omniscient": true,
+    "uncertainty_visible": true,
+    "provenance_per_fact": true,
+    "database_comparison_allowed": true,
+    "scientific_deep_interpretation_delegated_to": "science",
+    "unrevealed_ground_truth_forbidden": true
+  },
+  "science_boundary": {
+    "sensors_may_report": [
+      "measured values",
+      "detected signatures",
+      "estimated physical properties",
+      "confidence/uncertainty",
+      "database pattern matches"
+    ],
+    "sensors_may_not_assert_without_supported_database_match": [
+      "deep scientific cause",
+      "complex phenomenon mechanism",
+      "unobserved composition",
+      "causal scientific conclusion"
+    ]
+  }
+}
