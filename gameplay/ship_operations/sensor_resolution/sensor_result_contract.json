@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_scan_result",
+  "required": [
+    "schema_version",
+    "engine",
+    "scan",
+    "summary",
+    "detections"
+  ],
+  "detection_fields": {
+    "contact_id": "stable observer-relative contact identifier",
+    "resolution_state": [
+      "trace_detected",
+      "detected_unclassified",
+      "partially_resolved",
+      "resolved"
+    ],
+    "confidence": "normalized 0..1 confidence derived from detection score",
+    "distance_au": "engine-calculated distance from observer origin",
+    "observed_signatures": "only signatures actually detected",
+    "observed": {
+      "estimated_position": "available from detected_unclassified upward",
+      "entity_type": "available from partially_resolved upward",
+      "properties": "ordinary ground-truth properties available from partially_resolved upward",
+      "classification": "available only when resolved",
+      "resolved_hidden_properties": "only eligible hidden properties; omitted otherwise"
+    }
+  },
+  "forbidden_player_fields": [
+    "authoritative_entity_id",
+    "ground_truth",
+    "unrevealed_hidden_properties"
+  ],
+  "rule": "AI/UI may verbalize this structured result but may not add discoveries not present in it."
+}
