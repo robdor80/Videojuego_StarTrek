@@ -104,7 +104,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Orders / alerts / power / damage | ✅ COMPLETE | Natural-language order pipeline, authority validation, alert states, power allocation, localized damage and timed repairs established. |
 | Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
 | Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
-| Observable universe core | 🟨 IN_PROGRESS | Authoritative world truth, observable-entity contract, detectable signatures and deterministic procedural-generation baseline are being established before Sensor console implementation. |
+| Observable universe core | 🟨 IN_PROGRESS | Authoritative world truth, observable-entity/signature contracts and deterministic seeded v0.0.1 generator are implemented and regression-tested; next step is sensor-detection resolution. |
 
 ## Major remaining domains
 
