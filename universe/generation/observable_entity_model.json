@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "Common authoritative contract for world entities that may be observed by ship or field sensors.",
+  "required_fields": [
+    "entity_id",
+    "entity_type",
+    "origin",
+    "temporal_state",
+    "spatial_state",
+    "ground_truth",
+    "signatures",
+    "persistence"
+  ],
+  "entity_types": [
+    "star",
+    "planet",
+    "moon",
+    "asteroid_field",
+    "nebula",
+    "anomaly",
+    "starship",
+    "shuttle",
+    "probe",
+    "station",
+    "beacon",
+    "debris_field",
+    "artificial_structure"
+  ],
+  "origin_types": [
+    "canon",
+    "authored_game",
+    "procedural",
+    "campaign_event"
+  ],
+  "model": {
+    "entity_id": "stable unique id",
+    "entity_type": "one entity_types value or validated extension",
+    "origin": {
+      "type": "origin type",
+      "source_ids": [],
+      "generator_id": null,
+      "seed": null
+    },
+    "temporal_state": {
+      "valid_from": null,
+      "valid_to": null,
+      "active": true
+    },
+    "spatial_state": {
+      "sector_id": null,
+      "system_id": null,
+      "reference_frame": "galactic",
+      "position": null,
+      "velocity": null
+    },
+    "ground_truth": {
+      "classification": null,
+      "properties": {},
+      "hidden_properties": {}
+    },
+    "signatures": [],
+    "environmental_modifiers": {
+      "masking": [],
+      "local_interference": []
+    },
+    "persistence": {
+      "persistent": true,
+      "materialized": true,
+      "can_be_modified_by_campaign": true
+    }
+  },
+  "rule": "Observation may reveal ground-truth fields but never creates or rewrites them."
+}

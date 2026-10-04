@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_tracking_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "operations": [
+    "list_tracked_contacts",
+    "acquire_contact",
+    "multi_track",
+    "track_signature",
+    "update_position",
+    "estimate_course",
+    "estimate_velocity",
+    "predict_trajectory",
+    "reacquire_lost_contact"
+  ],
+  "continuous_tracking": {
+    "improves_motion_knowledge": true,
+    "does_not_auto_reveal_identity": true,
+    "accumulated_observations": true
+  },
+  "capacity": {
+    "finite": true,
+    "depends_on": [
+      "sensor_capability",
+      "ship_class",
+      "era",
+      "system_integrity",
+      "allocated_power",
+      "interference"
+    ],
+    "overload_effects": [
+      "lower_update_rate",
+      "lower_precision",
+      "secondary_contact_loss"
+    ]
+  },
+  "priority_modes": {
+    "normal": true,
+    "priority": true,
+    "priority_costs_more_resources": true,
+    "priority_improves_update_quality": true
+  },
+  "lost_contact": {
+    "preserves_dossier": true,
+    "status": "lost",
+    "retains": [
+      "last_position",
+      "last_vector",
+      "last_velocity",
+      "known_signatures",
+      "last_seen_time"
+    ],
+    "reacquisition_uses_history": true
+  },
+  "prediction": {
+    "probabilistic": true,
+    "confidence_decreases_with_horizon": true,
+    "invalidated_by": [
+      "course_change",
+      "acceleration",
+      "signature_change",
+      "new_interference"
+    ]
+  },
+  "persistence": {
+    "updates_contact_dossier": true,
+    "dossier_model": "gameplay/ship_operations/ship_memory/contact_dossier_model.json"
+  }
+}

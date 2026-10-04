@@ -1,0 +1,355 @@
+{
+  "schema_version": "0.1.0",
+  "console_id": "sensors",
+  "status": "draft_in_progress",
+  "principle": "detect_search_locate_measure_track_observe",
+  "boundaries": {
+    "owns": [
+      "detection",
+      "search",
+      "localization",
+      "measurement",
+      "tracking",
+      "sensor_filtering",
+      "sensor_readout"
+    ],
+    "delegates": {
+      "scientific_interpretation": "science",
+      "weapons_and_fire_control": "tactical",
+      "ship_course_plotting": "conn_navigation",
+      "physical_repairs": "engineering",
+      "shipwide_resource_priorities": "operations"
+    }
+  },
+  "root": [
+    {
+      "id": "status",
+      "display_es": "Estado de sensores",
+      "kind": "menu",
+      "children": [
+        "general_status",
+        "available_arrays",
+        "effective_range",
+        "available_resolution",
+        "allocated_power",
+        "integrity_damage",
+        "detected_interference",
+        "operation_in_progress"
+      ]
+    },
+    {
+      "id": "scans",
+      "display_es": "Barridos",
+      "kind": "menu",
+      "children": [
+        {
+          "id": "short_range",
+          "display_es": "Corto alcance",
+          "operation": "scan",
+          "defaults": {
+            "range_mode": "short"
+          }
+        },
+        {
+          "id": "long_range",
+          "display_es": "Largo alcance",
+          "operation": "scan",
+          "defaults": {
+            "range_mode": "long"
+          }
+        },
+        {
+          "id": "focused",
+          "display_es": "Focalizado",
+          "operation": "scan",
+          "defaults": {
+            "range_mode": "focused"
+          }
+        }
+      ],
+      "configure": [
+        {
+          "id": "scan_mode",
+          "options": [
+            "passive",
+            "active"
+          ],
+          "maps_to": "scan_mode"
+        },
+        {
+          "id": "target_scope",
+          "options": [
+            "surrounding_space",
+            "sector",
+            "star_system",
+            "coordinates",
+            "vector",
+            "known_contact"
+          ]
+        },
+        {
+          "id": "resolution",
+          "options": [
+            "general",
+            "standard",
+            "high"
+          ],
+          "maps_to": "resolution"
+        },
+        {
+          "id": "filters",
+          "multi_select": true,
+          "options": [
+            "all",
+            "electromagnetic",
+            "subspace",
+            "gravimetric",
+            "thermal",
+            "ionizing_radiation",
+            "particle",
+            "biological",
+            "warp",
+            "artificial_transponder"
+          ],
+          "maps_to": "filters"
+        },
+        {
+          "id": "priority",
+          "optional": true,
+          "source": "selected_signature_type",
+          "maps_to": "priority"
+        },
+        {
+          "id": "duration",
+          "options": [
+            "quick",
+            "standard",
+            "extended",
+            "custom"
+          ],
+          "maps_to": "scan_duration_s"
+        },
+        {
+          "id": "review",
+          "action": "review_configuration"
+        },
+        {
+          "id": "execute",
+          "action": "execute_scan"
+        },
+        {
+          "id": "cancel",
+          "action": "cancel_scan"
+        }
+      ]
+    },
+    {
+      "id": "search_localize",
+      "display_es": "Búsqueda / localización",
+      "kind": "menu",
+      "targets": [
+        "starship",
+        "shuttle",
+        "probe_beacon",
+        "lifeform",
+        "artificial_object",
+        "energy_source",
+        "warp_signature",
+        "subspace_emission",
+        "signal_transponder",
+        "radiation_particle",
+        "custom_signature"
+      ],
+      "parameters": [
+        "search_area",
+        "sensitivity",
+        "resolution",
+        "criteria"
+      ],
+      "action": "start_search"
+    },
+    {
+      "id": "contacts",
+      "display_es": "Contactos",
+      "kind": "menu",
+      "views": [
+        "all",
+        "unidentified",
+        "identified",
+        "marked",
+        "recently_lost"
+      ],
+      "contact_fields": [
+        "estimated_position",
+        "distance",
+        "vector",
+        "estimated_velocity",
+        "detected_signatures",
+        "confidence",
+        "available_classification"
+      ],
+      "actions": [
+        "focused_scan",
+        "increase_resolution",
+        "start_tracking",
+        "mark_contact",
+        "compare_readings",
+        "send_data",
+        "send_to_science"
+      ],
+      "persistence": {
+        "dossier_model": "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
+        "persistent_identity": true,
+        "shared_ship_knowledge": true,
+        "preserves_provenance": true
+      }
+    },
+    {
+      "id": "tracking",
+      "display_es": "Seguimiento",
+      "kind": "menu",
+      "children": [
+        "tracked_contacts",
+        "acquire_contact",
+        "multi_track",
+        "track_signature",
+        "update_position",
+        "estimate_course",
+        "estimate_velocity",
+        "predict_trajectory",
+        "reacquire_lost_contact"
+      ],
+      "backend_status": "future_extension",
+      "rules_file": "gameplay/ship_operations/consoles/sensors/tracking_rules.json",
+      "persistence": "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
+      "capacity_model": "finite_ship_sensor_capacity"
+    },
+    {
+      "id": "sensor_readout",
+      "display_es": "Lectura sensorial",
+      "kind": "menu",
+      "children": [
+        "signal_strength",
+        "signature_type",
+        "band_frequency",
+        "energy_signature",
+        "subspace_signature",
+        "approx_mass",
+        "approx_dimensions",
+        "vector_velocity",
+        "detectable_lifeforms",
+        "known_pattern_match"
+      ],
+      "rules_file": "gameplay/ship_operations/consoles/sensors/sensor_readout_rules.json",
+      "actions": [
+        "send_to_science"
+      ],
+      "science_handoff_contract": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
+    },
+    {
+      "id": "interference",
+      "display_es": "Interferencias / compensación",
+      "kind": "menu",
+      "children": [
+        "interference_status",
+        "interference_type",
+        "automatic_compensation",
+        "manual_adjustment",
+        "change_band_frequency",
+        "increase_power",
+        "reduce_resolution",
+        "extend_integration",
+        "recover_signal"
+      ],
+      "backend_status": "future_extension"
+    },
+    {
+      "id": "configuration",
+      "display_es": "Configuración",
+      "kind": "menu",
+      "children": [
+        "sensitivity",
+        "default_resolution",
+        "sensor_power",
+        "sensor_array",
+        "band_frequency",
+        "update_rate",
+        "default_filters",
+        "default_priorities",
+        "profiles_presets"
+      ]
+    },
+    {
+      "id": "results",
+      "display_es": "Resultados",
+      "kind": "menu",
+      "children": [
+        "current_operation",
+        "last_scan",
+        "recent_results",
+        "saved_readings",
+        "compare_readings",
+        "repeat_operation"
+      ],
+      "send_targets": [
+        "science",
+        "tactical",
+        "operations",
+        "conn_navigation",
+        "command",
+        "computer_database"
+      ],
+      "handoff_contracts": {
+        "science": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
+      }
+    },
+    {
+      "id": "diagnostics",
+      "display_es": "Diagnóstico",
+      "kind": "menu",
+      "children": [
+        "self_test",
+        "array_status",
+        "calibration",
+        "performance",
+        "errors_degradation",
+        "request_engineering_support"
+      ],
+      "backend_status": "future_extension"
+    }
+  ],
+  "v0_0_1_core_path": {
+    "example_order_es": "Barrido de largo alcance del sector 041 con prioridad a emisiones subespaciales.",
+    "menu_path": [
+      "scans",
+      "long_range",
+      "target_scope:sector",
+      "sector_id:041",
+      "priority:subspace",
+      "execute"
+    ],
+    "maps_to_sensor_request": {
+      "range_mode": "long",
+      "sector_id": "041",
+      "priority": "subspace"
+    },
+    "inherited_defaults": [
+      "scan_mode",
+      "resolution",
+      "filters",
+      "scan_duration_s",
+      "sensor_profile"
+    ]
+  },
+  "review_status": {
+    "scans": "approved_v0.1",
+    "search_localize": "approved_v0.1",
+    "contacts": "approved_v0.1",
+    "tracking": "approved_v0.1",
+    "sensor_readout": "approved_v0.1",
+    "interference": "pending_review",
+    "configuration": "pending_review",
+    "results": "pending_review",
+    "diagnostics": "pending_review"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "Describes sensor-observable emissions and physical signatures independently from what an observer currently knows.",
+  "signature_types": [
+    "electromagnetic",
+    "subspace",
+    "gravimetric",
+    "thermal",
+    "ionizing_radiation",
+    "particle",
+    "biological",
+    "warp",
+    "artificial_transponder"
+  ],
+  "signature_fields": [
+    "signature_id",
+    "signature_type",
+    "strength",
+    "variability",
+    "emission_mode",
+    "source_property",
+    "detectability_modifiers"
+  ],
+  "enums": {
+    "strength_scale": [
+      "trace",
+      "weak",
+      "moderate",
+      "strong",
+      "extreme"
+    ],
+    "variability": [
+      "stable",
+      "periodic",
+      "intermittent",
+      "chaotic"
+    ],
+    "emission_mode": [
+      "passive",
+      "active",
+      "event_only"
+    ]
+  },
+  "detectability_inputs": [
+    "distance",
+    "relative_geometry",
+    "sensor_capability",
+    "sensor_power",
+    "scan_mode",
+    "scan_resolution",
+    "selected_filters",
+    "scan_duration",
+    "environmental_interference",
+    "target_masking",
+    "ship_system_damage"
+  ],
+  "possible_resolution_states": [
+    "not_detected",
+    "trace_detected",
+    "detected_unclassified",
+    "partially_resolved",
+    "resolved"
+  ],
+  "rule": "Signal truth is authoritative. Detection quality is resolved later by sensor gameplay; UI text must be derived from the structured result."
+}

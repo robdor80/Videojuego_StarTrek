@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_scan_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "rules": {
+    "defaults": {
+      "enabled": true,
+      "principle": "Each scan starts from sensible defaults; operator changes only required parameters."
+    },
+    "human_error": {
+      "allowed": true,
+      "principle": "Wrong but technically valid configurations execute normally and become professional/gameplay errors."
+    },
+    "impossible_actions": {
+      "blocked": true,
+      "examples": [
+        "destroyed_sensor_array",
+        "unavailable_capability",
+        "invalid_target_for_focused_scan"
+      ]
+    },
+    "duration": {
+      "affects_simulation": true,
+      "consumes_game_time": true,
+      "presets": [
+        "quick",
+        "standard",
+        "extended",
+        "custom"
+      ]
+    },
+    "focused_scan": {
+      "requires_target": true,
+      "allowed_targets": [
+        "known_contact",
+        "coordinates",
+        "defined_zone"
+      ]
+    },
+    "filters": {
+      "multi_select": true,
+      "specific_search_advantage": true,
+      "broad_search_tradeoff": true
+    },
+    "priority": {
+      "distinct_from_filter": true,
+      "principle": "Priority improves attention to one signature without necessarily excluding the rest."
+    },
+    "active_passive": {
+      "active_detection_bonus": true,
+      "active_may_be_detectable_by_others": true,
+      "passive_is_more_discreet": true
+    },
+    "uncertainty": {
+      "allowed": true,
+      "valid_outcomes": [
+        "trace_detected",
+        "possible_contact",
+        "insufficient_reading",
+        "intermittent_signal",
+        "partially_resolved",
+        "resolved"
+      ]
+    },
+    "repeatability": {
+      "identical_conditions_no_magic_progress": true,
+      "improvement_requires_changed_conditions": true,
+      "change_examples": [
+        "resolution",
+        "duration",
+        "filters",
+        "power",
+        "position",
+        "environment",
+        "new_information"
+      ]
+    }
+  },
+  "applies_to": [
+    "academy",
+    "operational_ships",
+    "future_sensor_ux"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "science_analysis_task",
+  "status": "provisional_dependency_for_sensors_v0.1",
+  "required": [
+    "task_id",
+    "source_handoff_id",
+    "contact_id",
+    "analysis_type",
+    "priority",
+    "status",
+    "input_observations"
+  ],
+  "fields": {
+    "task_id": "persistent Science work-item id",
+    "source_handoff_id": "originating inter-console handoff",
+    "contact_id": "shared persistent contact id",
+    "analysis_type": "scientific question/category to investigate",
+    "priority": [
+      "routine",
+      "normal",
+      "high",
+      "urgent"
+    ],
+    "status": [
+      "queued",
+      "accepted",
+      "in_progress",
+      "needs_more_data",
+      "completed",
+      "cancelled"
+    ],
+    "assigned_character_id": "optional Science personnel assignment",
+    "input_observations": "copied/referenced observations with provenance/confidence",
+    "requested_additional_data": "optional request back to Sensors",
+    "findings": "Science-derived facts/hypotheses with confidence and provenance",
+    "completed_at": "campaign timestamp when complete"
+  },
+  "rule": "Science interprets supplied observations; it does not replace the authoritative world or fabricate unobserved inputs."
+}

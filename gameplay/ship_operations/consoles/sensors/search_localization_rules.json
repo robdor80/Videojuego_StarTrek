@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_search_localization_behavior",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "targets": {
+    "starship": "Find contacts compatible with starship-scale artificial signatures.",
+    "shuttle": "Find smaller craft with weaker or more localized artificial signatures.",
+    "probe_beacon": "Find probes, beacons or small artificial emitters.",
+    "lifeform": "Prioritize biological signatures.",
+    "artificial_object": "Find constructed objects even when unidentified.",
+    "energy_source": "Find energy emissions regardless of source classification.",
+    "warp_signature": "Find active or residual warp signatures.",
+    "subspace_emission": "Find detectable subspace activity.",
+    "signal_transponder": "Find transmissions, beacons or transponder codes.",
+    "radiation_particle": "Find radiation or particle sources.",
+    "custom_signature": "Advanced search from operator-defined signature criteria."
+  },
+  "parameters": {
+    "search_area": "Defines spatial scope.",
+    "sensitivity": {
+      "effect": "Higher sensitivity improves weak-signal detection.",
+      "tradeoff": "Higher sensitivity increases noise, doubtful contacts and false positives."
+    },
+    "resolution": "Controls desired detail for candidate observations.",
+    "criteria": "Additional properties used to rank or filter compatible candidates."
+  },
+  "output_rules": {
+    "returns_candidates": true,
+    "guaranteed_identification": false,
+    "can_return_multiple": true,
+    "can_return_none": true,
+    "uncertain_contacts_allowed": true,
+    "match_score_allowed": true,
+    "false_positives_allowed": true
+  },
+  "human_error": {
+    "valid_but_wrong_search_executes": true,
+    "ui_does_not_correct_operator_intent": true
+  },
+  "world_rule": "Search queries authoritative materialized world state and never creates the sought target.",
+  "conceptual_difference": {
+    "scan": "Observe an area to discover what is there.",
+    "search": "Look for something matching known or chosen criteria."
+  }
+}

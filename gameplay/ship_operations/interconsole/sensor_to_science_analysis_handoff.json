@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_to_science_analysis_handoff",
+  "status": "fixed",
+  "purpose": "Transfer observed sensor data into a Science analysis task without leaking unrevealed ground truth.",
+  "required": [
+    "handoff_id",
+    "contact_id",
+    "source_system",
+    "target_system",
+    "created_at",
+    "priority",
+    "included_observation_ids",
+    "requested_analysis"
+  ],
+  "fields": {
+    "handoff_id": "unique transfer/task id",
+    "contact_id": "persistent ship-memory contact id",
+    "source_system": "sensors",
+    "source_station": "optional physical source station",
+    "source_operator_id": "optional character/operator id",
+    "target_system": "science",
+    "target_station": "optional target Science station",
+    "created_at": "campaign timestamp",
+    "priority": [
+      "routine",
+      "normal",
+      "high",
+      "urgent"
+    ],
+    "included_observation_ids": "sensor observations included in the package",
+    "included_fact_keys": "optional subset of known sensor facts",
+    "operator_note": "optional player/operator note",
+    "requested_analysis": "what Science is being asked to determine",
+    "status": [
+      "queued",
+      "accepted",
+      "in_progress",
+      "needs_more_data",
+      "completed",
+      "cancelled"
+    ]
+  },
+  "rules": [
+    "The handoff references only data actually known by the ship.",
+    "Science receives sensor observations plus their confidence and provenance.",
+    "Science does not receive authoritative entity truth unless already legitimately observed.",
+    "Science may request additional sensor work instead of producing a conclusion.",
+    "Completed Science findings are appended to the same persistent contact dossier with source_system=science.",
+    "The original Sensor observations remain preserved and are not replaced by Science interpretation."
+  ]
+}

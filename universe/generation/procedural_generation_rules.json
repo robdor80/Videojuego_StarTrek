@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "generator_id": "star_trek_universe_generator",
+  "principles": {
+    "deterministic_seed": true,
+    "persistent_after_materialization": true,
+    "canon_first": true,
+    "era_aware": true,
+    "territory_aware": true,
+    "technology_aware": true,
+    "no_scan_time_generation_of_truth": true
+  },
+  "generation_pipeline": [
+    "resolve_era_and_campaign_date",
+    "resolve_sector_and_canonical_reservations",
+    "resolve_political_and_astrographic_context",
+    "generate_or_load_star_system",
+    "generate_celestial_bodies",
+    "generate_environmental_phenomena",
+    "generate_local_traffic_and_artificial_objects",
+    "assign_detectable_signatures",
+    "validate_temporal_and_canon_consistency",
+    "materialize_persistent_world_state"
+  ],
+  "constraints": [
+    "Never overwrite a canonical anchor with procedural content.",
+    "Generated factions and technology must be valid for the campaign date and region.",
+    "Generated objects receive stable IDs and deterministic seeds.",
+    "A previously materialized entity is loaded, not regenerated, unless an explicit campaign event changes it.",
+    "Mission generation may select or modify existing world entities through explicit events, but a sensor scan itself never spawns the answer it is expected to find."
+  ],
+  "extensibility": {
+    "future_generators": [
+      "star_systems",
+      "planets",
+      "space_phenomena",
+      "traffic",
+      "stations_and_settlements",
+      "events",
+      "mission_hooks"
+    ]
+  }
+}

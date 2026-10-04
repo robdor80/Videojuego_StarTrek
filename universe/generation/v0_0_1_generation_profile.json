@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "v0_0_1_sensor_vertical_slice",
+  "goal": "Generate the smallest persistent space environment capable of validating real sensor gameplay.",
+  "scope": {
+    "star_systems": {
+      "min": 1,
+      "max": 1
+    },
+    "stars_per_system": {
+      "min": 1,
+      "max": 1
+    },
+    "planets": {
+      "min": 3,
+      "max": 7
+    },
+    "moons": {
+      "min": 0,
+      "max": 6
+    },
+    "anomalies": {
+      "min": 1,
+      "max": 2
+    },
+    "starships": {
+      "min": 0,
+      "max": 1
+    },
+    "probes_or_beacons": {
+      "min": 0,
+      "max": 2
+    },
+    "debris_fields": {
+      "min": 0,
+      "max": 1
+    }
+  },
+  "required_test_features": [
+    "at least one detectable object with multiple signature types",
+    "at least one object or phenomenon affected by interference or masking",
+    "at least one hidden property that requires better sensor resolution than initial detection",
+    "stable deterministic result for the same seed and campaign context",
+    "persistent IDs across reloads"
+  ],
+  "deliberately_out_of_scope": [
+    "full galactic generation",
+    "complete planetary civilizations",
+    "procedural mission campaigns",
+    "complete economy",
+    "complete faction simulation",
+    "final sensor UI"
+  ],
+  "next_dependency": "sensor_detection_resolution_v0.1"
+}

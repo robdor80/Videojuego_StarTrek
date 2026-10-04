@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "ship_contact_dossier",
+  "required": [
+    "contact_id",
+    "status",
+    "first_seen",
+    "last_seen",
+    "observations",
+    "known_facts",
+    "classification_history"
+  ],
+  "status_values": [
+    "active",
+    "lost",
+    "archived",
+    "confirmed"
+  ],
+  "fields": {
+    "contact_id": "observer-relative persistent contact identity",
+    "aliases": "optional operator/system labels",
+    "status": "current operational state",
+    "first_seen": "campaign timestamp of first observation",
+    "last_seen": "campaign timestamp of latest observation",
+    "marked": "operator/system importance marker",
+    "observations": [
+      {
+        "observation_id": "unique observation id",
+        "source_system": "sensors/tactical/science/communications/computer/etc",
+        "source_station": "optional physical station",
+        "operator_id": "optional character id",
+        "campaign_time": "timestamp",
+        "confidence": "0..1",
+        "data": "only facts actually observed or derived by that source"
+      }
+    ],
+    "known_facts": "current merged ship knowledge, with source and confidence per fact",
+    "classification_history": "ordered history of classification changes",
+    "notes": "authorized operational notes",
+    "links": "optional references to mission, incident, vessel or database entries"
+  },
+  "merge_rules": [
+    "Never import unrevealed authoritative ground truth.",
+    "Do not discard contradictory observations; retain provenance and confidence.",
+    "Current known fact may change when newer or stronger evidence supersedes it.",
+    "Re-identification reuses contact_id only when evidence crosses the configured identity threshold."
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "output_id": "generated_observable_system",
+  "required_top_level": [
+    "schema_version",
+    "generator",
+    "generation_context",
+    "system",
+    "entities",
+    "relations",
+    "summary"
+  ],
+  "generator_required": [
+    "generator_id",
+    "generator_version",
+    "algorithm"
+  ],
+  "generation_context_required": [
+    "campaign_seed",
+    "sector_id",
+    "era_id",
+    "campaign_date",
+    "seed_key_hash"
+  ],
+  "system_required": [
+    "system_id",
+    "display_name",
+    "canonical_reserved",
+    "materialized"
+  ],
+  "entity_contract": "universe/generation/observable_entity_model.json",
+  "signature_contract": "universe/generation/detectable_signature_model.json",
+  "invariants": [
+    "system.materialized must be true before gameplay observation",
+    "entity_id values must be unique and stable for identical generation context",
+    "procedural entities must record generator_id and deterministic seed context",
+    "same generator version plus identical context must produce identical structured output",
+    "generated system must satisfy v0_0_1_generation_profile.json when that profile is selected"
+  ]
+}
