@@ -383,3 +383,59 @@ Esta rama queda **FIJADA** con el siguiente comportamiento:
 5. **Las predicciones nunca son certezas**. La confianza cae cuanto más lejos se proyecta en el tiempo y puede quedar invalidada por maniobras o cambios de firma.
 6. El seguimiento múltiple reparte capacidad. La saturación puede reducir frecuencia de actualización, precisión o provocar pérdida de contactos secundarios.
 7. Todas las actualizaciones se incorporan a la ficha persistente de contacto de la memoria de la nave.
+
+
+## LECTURA SENSORIAL v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA**.
+
+La lectura sensorial muestra únicamente datos medidos, estimados o comparados a partir de observaciones reales:
+
+- intensidad de señal;
+- tipo de firma;
+- banda / frecuencia;
+- firma energética;
+- firma subespacial;
+- masa aproximada;
+- dimensiones aproximadas;
+- vector / velocidad;
+- formas de vida detectables;
+- coincidencias con patrones conocidos.
+
+### Reglas aprobadas
+
+1. **Sensores mide; Ciencia interpreta.**
+2. Las lecturas pueden mostrar **incertidumbre explícita**, márgenes de error y confianza.
+3. Cada dato conserva **procedencia**, momento de observación y nivel de confianza.
+4. Sensores puede comparar una lectura con la base de datos de la nave, pero una coincidencia no equivale automáticamente a certeza.
+5. Sensores no formula causas científicas complejas salvo que exista una identificación sustentada por conocimiento previo válido.
+6. La lectura nunca revela propiedades autoritativas del mundo que no hayan sido realmente observadas.
+
+## Pipeline Sensores → Ciencia v0.1 — aprobado
+
+Desde una ficha de contacto, lectura o resultado de Sensores, el operador puede usar **ENVIAR DATOS A → CIENCIA**.
+
+El flujo funcional queda fijado:
+
+```text
+SENSORES
+→ seleccionar contacto/lecturas
+→ ENVIAR DATOS A CIENCIA
+→ elegir prioridad
+→ indicar análisis solicitado
+→ confirmar envío
+→ tarea pendiente en CIENCIA
+→ análisis por personal/sistema científico autorizado
+→ resultado científico
+→ actualización de la ficha común del contacto
+```
+
+### Reglas
+
+- El paquete solo contiene datos que la nave conoce realmente.
+- Incluye observaciones, confianza, procedencia, hora y operador cuando proceda.
+- Ciencia puede aceptar, analizar, devolver **NECESITA MÁS DATOS**, completar o cancelar la tarea.
+- Si Ciencia necesita más datos, puede solicitar a Sensores un nuevo barrido o una configuración concreta.
+- Los hallazgos científicos se incorporan a la misma ficha persistente del contacto con `source_system = science`.
+- La interpretación científica no sustituye ni borra las lecturas originales de Sensores.
+- Este patrón se reutilizará para futuros envíos a otras consolas, respetando siempre el ámbito funcional de cada una.
