@@ -250,3 +250,40 @@ Estas reglas quedan **FIJADAS** para la rama de Barridos:
 10. **Repetir lo mismo no revela mágicamente más:** con la misma configuración y condiciones el resultado debe ser esencialmente equivalente. Para mejorar hay que cambiar resolución, duración, filtro, potencia, posición, condiciones o información disponible.
 
 Estas reglas son vinculantes tanto para la futura UX de Academia como para la de naves operativas.
+
+
+## BÚSQUEDA / LOCALIZACIÓN v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA** con el siguiente comportamiento:
+
+- **Nave:** busca contactos compatibles con una nave por firmas, tamaño, energía, propulsión, warp o transpondedor.
+- **Lanzadera:** búsqueda equivalente, optimizada para objetos más pequeños y señales más débiles.
+- **Sonda / baliza:** busca dispositivos artificiales, transmisores o sondas, incluso con emisiones débiles o intermitentes.
+- **Forma de vida:** prioriza firmas biológicas.
+- **Objeto artificial:** busca estructuras, restos o dispositivos construidos aunque no estén identificados.
+- **Fuente de energía:** localiza emisiones energéticas sin exigir conocer el objeto que las produce.
+- **Firma warp:** busca actividad warp actual o residual.
+- **Emisión subespacial:** busca actividad o fenómenos detectables en subespacio.
+- **Señal / transpondedor:** busca una transmisión, baliza identificativa o código concreto.
+- **Radiación / partículas:** busca fuentes o zonas con emisiones radiativas o de partículas.
+- **Firma definida:** permite construir una búsqueda avanzada combinando criterios específicos.
+
+### Parámetros aprobados
+
+- **Área de búsqueda:** delimita dónde buscar.
+- **Sensibilidad:** aumenta la posibilidad de detectar señales débiles, pero eleva ruido y posibles falsos positivos.
+- **Resolución:** determina cuánto detalle se intenta obtener de los candidatos encontrados.
+- **Criterios:** añade condiciones compatibles con el objetivo buscado.
+- **Iniciar búsqueda:** ejecuta la operación con la configuración elegida.
+
+### Reglas de comportamiento
+
+1. Una búsqueda devuelve **candidatos compatibles**, no una identificación garantizada.
+2. La consola puede mostrar **porcentaje o nivel de coincidencia** cuando haya criterios suficientes para estimarlo.
+3. Es válido obtener varios candidatos, ninguno o contactos dudosos.
+4. Una búsqueda mal configurada pero técnicamente válida se ejecuta igualmente.
+5. La **sensibilidad alta** puede descubrir señales más débiles, pero también aumentar ruido, contactos dudosos y falsos positivos.
+6. La búsqueda utiliza el mismo universo autoritativo y las mismas reglas de detección que Barridos; no genera el objetivo al buscarlo.
+7. Búsqueda y Barrido son conceptos distintos:
+   - **Barrido:** «quiero observar esta zona y ver qué hay».
+   - **Búsqueda:** «sé más o menos qué estoy buscando; intenta encontrarlo».
