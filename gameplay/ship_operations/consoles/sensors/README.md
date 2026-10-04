@@ -554,3 +554,51 @@ Los operadores pueden guardar perfiles personales siempre que los ajustes sean t
 ### Academia
 
 Esta rama es materia válida de entrenamiento y examen práctico: el cadete puede recibir una situación y tener que preparar correctamente la consola antes de ejecutar una operación.
+
+
+## RESULTADOS v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA**.
+
+`RESULTADOS` organiza el producto de las operaciones de Sensores. No ejecuta observaciones nuevas por sí misma salvo cuando el operador usa explícitamente **REPETIR OPERACIÓN**.
+
+### Vistas
+
+- **Operación actual:** operación en curso, configuración, progreso y resultados parciales permitidos.
+- **Último barrido:** acceso directo al último barrido completado.
+- **Resultados recientes:** historial operativo inmediato en orden temporal.
+- **Lecturas guardadas:** resultados conservados de forma persistente en la memoria de la nave.
+- **Comparar lecturas:** compara resultados compatibles y muestra cambios observados.
+- **Repetir operación:** reutiliza la configuración de una operación anterior y crea una nueva ejecución sobre el estado actual del mundo.
+
+### Reglas aprobadas
+
+1. **Cada resultado es una instantánea histórica** y no se modifica retroactivamente.
+2. Todo resultado conserva hora, configuración, procedencia y confianza.
+3. Las lecturas importantes pueden guardarse de forma persistente en la memoria de la nave.
+4. **Comparar** informa de diferencias observadas; no inventa interpretaciones pertenecientes a otras especialidades.
+5. **Repetir operación** copia parámetros anteriores, pero resuelve de nuevo contra el mundo actual.
+6. Las operaciones largas pueden producir **resultados parciales**, siempre marcados como parciales.
+7. Los resultados pueden enviarse a otras consolas mediante paquetes estructurados que preservan procedencia.
+8. **RESULTADOS ≠ REGISTRO OPERACIONAL**: Resultados conserva datos sensoriales; el futuro event log conserva acciones, decisiones y responsabilidad del personal.
+
+### Resultados parciales
+
+Una operación en curso puede generar trazas o lecturas preliminares. Si se cancela, esas lecturas pueden conservarse como parciales, pero nunca se convierten automáticamente en resultados completos.
+
+### Comparación
+
+La comparación puede mostrar cambios en posición, distancia, velocidad, intensidad, firmas, transpondedor u otros datos compatibles. La interpretación táctica, científica o de mando se delega a la consola/personal correspondiente.
+
+### Envío entre consolas
+
+Los destinos iniciales de Sensores son:
+
+- Ciencia;
+- Táctica;
+- Operaciones;
+- CONN / Navegación;
+- Mando;
+- Ordenador / Base de datos.
+
+El contrato genérico de transferencia es `gameplay/ship_operations/interconsole/interconsole_data_package_contract.json`. Ciencia mantiene además su contrato especializado de análisis.
