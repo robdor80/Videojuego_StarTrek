@@ -287,3 +287,74 @@ Esta rama queda **FIJADA** con el siguiente comportamiento:
 7. Búsqueda y Barrido son conceptos distintos:
    - **Barrido:** «quiero observar esta zona y ver qué hay».
    - **Búsqueda:** «sé más o menos qué estoy buscando; intenta encontrarlo».
+
+
+## CONTACTOS v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA** con el siguiente comportamiento:
+
+- **Todos:** muestra todos los contactos actualmente conocidos por la nave.
+- **No identificados:** contactos detectados cuya naturaleza todavía no puede clasificarse con suficiente confianza.
+- **Identificados:** contactos cuya clasificación ha alcanzado el umbral requerido.
+- **Marcados:** contactos señalados manualmente o por procedimiento como relevantes.
+- **Perdidos recientemente:** contactos cuya señal se ha perdido pero cuya identidad todavía puede recuperarse.
+
+### Ficha de contacto
+
+Al abrir un contacto se muestran únicamente los datos realmente descubiertos:
+
+- posición estimada;
+- distancia;
+- vector;
+- velocidad estimada;
+- firmas detectadas;
+- confianza de lectura;
+- clasificación disponible;
+- historial de observaciones;
+- estado del contacto.
+
+La clasificación puede progresar desde una simple traza hasta una identificación concreta, pero cada escalón debe estar sustentado por observaciones reales.
+
+### Acciones aprobadas
+
+- Barrido focalizado.
+- Aumentar resolución.
+- Iniciar seguimiento.
+- Marcar contacto.
+- Comparar lecturas.
+- Enviar datos a otras consolas/sistemas autorizados.
+
+### Identidad persistente
+
+Un contacto conserva su identidad mientras el sistema pueda justificar razonablemente que sigue siendo el mismo objeto. Si se pierde temporalmente y se recupera con posición, trayectoria y firmas compatibles, se reutiliza el mismo `contact_id`.
+
+### Conocimiento compartido sin omnisciencia
+
+Las distintas consolas pueden trabajar sobre el mismo contacto persistente, pero cada una añade conocimiento según sus capacidades:
+
+- Sensores: firmas, posición, movimiento y clasificación sensorial.
+- Táctica: escudos, armamento, postura y datos de combate.
+- Ciencia: interpretación física/científica.
+- Comunicaciones: transpondedores, canales, señales y autenticación.
+- Ordenador/Base de datos: comparación con registros conocidos.
+
+La nave comparte una ficha común, pero cada dato conserva su procedencia y no se mezcla automáticamente como si todas las consolas hubieran sabido siempre lo mismo.
+
+### Memoria de la nave / base de datos
+
+Cada contacto relevante genera o actualiza una **ficha persistente en la memoria de la nave**.
+
+La ficha conserva:
+
+- identidad persistente del contacto;
+- primera y última detección;
+- historial de observaciones;
+- clasificaciones anteriores;
+- firmas conocidas;
+- cambios de posición, vector y velocidad;
+- fuentes de información;
+- niveles de confianza;
+- marcas/notas operativas;
+- estado actual: activo, perdido, archivado o confirmado.
+
+La ficha puede ser consultada posteriormente desde Sensores y desde Ordenador/Base de datos. Un reencuentro futuro puede compararse contra registros anteriores de la propia nave.
