@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "rule_set_id": "sensors_interference_compensation",
+  "status": "fixed",
+  "approved_by": "Roberto",
+  "operations": [
+    "interference_status",
+    "identify_interference_type",
+    "automatic_compensation",
+    "manual_adjustment",
+    "change_band_frequency",
+    "increase_power",
+    "reduce_resolution",
+    "extend_integration",
+    "recover_signal"
+  ],
+  "interference_classes": {
+    "environmental": [
+      "subspace_noise",
+      "charged_particles",
+      "gravimetric_turbulence",
+      "radiation",
+      "natural_electromagnetic_activity"
+    ],
+    "deliberate": [
+      "jamming",
+      "signature_masking",
+      "electronic_countermeasures",
+      "intentional_emission_reduction",
+      "cloaking_when_era_and_class_allow"
+    ]
+  },
+  "rules": {
+    "compensation_reduces_effects_not_source": true,
+    "tradeoffs_required": [
+      "power",
+      "time",
+      "resolution",
+      "coverage",
+      "tracking_capacity"
+    ],
+    "automatic_compensation": {
+      "available": true,
+      "reliable_default": true,
+      "not_always_optimal": true
+    },
+    "manual_compensation": {
+      "available": true,
+      "can_outperform_automatic": true,
+      "operator_error_possible": true
+    },
+    "signature_specific_effects": true,
+    "causal_attribution_may_require_other_console": true,
+    "recovery_uses_contact_history": true,
+    "compensation_validity_depends_on_current_environment": true
+  },
+  "cross_console_dependencies": {
+    "science": "deep physical interpretation of complex interference",
+    "tactical": "hostile countermeasure assessment where combat-relevant",
+    "engineering": "sensor hardware/power faults and physical repair",
+    "operations": "shipwide power/resource redistribution"
+  }
+}
