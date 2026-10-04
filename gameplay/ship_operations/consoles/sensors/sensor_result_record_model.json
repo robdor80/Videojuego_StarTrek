@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "sensor_result_record",
+  "required": [
+    "result_id",
+    "operation_id",
+    "status",
+    "captured_at",
+    "configuration_snapshot",
+    "observations",
+    "provenance"
+  ],
+  "status_values": [
+    "partial",
+    "complete",
+    "cancelled_with_partial",
+    "saved",
+    "archived"
+  ],
+  "fields": {
+    "result_id": "stable reading/result identifier",
+    "operation_id": "originating sensor operation id",
+    "contact_id": "optional related persistent contact",
+    "captured_at": "campaign timestamp",
+    "status": "result completeness/persistence state",
+    "configuration_snapshot": "exact relevant sensor configuration used",
+    "observations": "structured observable outputs only",
+    "confidence": "optional overall confidence plus per-observation confidence",
+    "provenance": "source system/station/operator and contributing observation ids",
+    "saved_label": "optional operator label",
+    "comparison_links": "optional references to results compared with this one"
+  },
+  "rules": [
+    "Existing result records are not retroactively rewritten by later observations.",
+    "Corrections or improved measurements create later observations/results and may supersede current ship knowledge without mutating history.",
+    "Unrevealed authoritative ground truth is forbidden.",
+    "Partial results remain explicitly partial."
+  ]
+}
