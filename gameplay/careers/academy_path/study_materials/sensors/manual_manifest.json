@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "manual_id": "starfleet_sensors_operator_manual_v0_1",
+  "status": "approved_content",
+  "display_es": "Manual de Operador de Sensores",
+  "audiences": [
+    "academy_cadet",
+    "active_duty_crew"
+  ],
+  "surfaces": [
+    "academy_study_padd",
+    "ship_computer_help",
+    "external_pdf"
+  ],
+  "canonical_text": "gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md",
+  "functional_source": "gameplay/ship_operations/consoles/sensors/",
+  "sections": [
+    "mission_philosophy",
+    "sensor_status",
+    "scans",
+    "search_localization",
+    "contacts",
+    "tracking",
+    "sensor_readout",
+    "interference_compensation",
+    "configuration",
+    "results",
+    "diagnostics",
+    "standard_operating_procedures",
+    "reporting_language",
+    "operator_errors",
+    "academy_exercises",
+    "quick_reference"
+  ],
+  "academy": {
+    "study_mode": true,
+    "searchable": true,
+    "bookmarks": true,
+    "cross_links_to_console_operations": true,
+    "practice_exercises": [
+      "E-01",
+      "E-02",
+      "E-03",
+      "E-04",
+      "E-05",
+      "E-06"
+    ],
+    "completion_is_knowledge_aid_not_hidden_bonus": true
+  },
+  "synchronization_rule": "In-game study material and external PDF must stay aligned with the approved Sensors v0.1 functional specification."
+}
