@@ -602,3 +602,39 @@ Los destinos iniciales de Sensores son:
 - Ordenador / Base de datos.
 
 El contrato genérico de transferencia es `gameplay/ship_operations/interconsole/interconsole_data_package_contract.json`. Ciencia mantiene además su contrato especializado de análisis.
+
+
+## DIAGNÓSTICO v0.1 — decisiones aprobadas
+
+Esta rama queda **FIJADA**.
+
+`DIAGNÓSTICO` inspecciona el estado de los propios sistemas sensorales. No interpreta el universo exterior.
+
+### Funciones
+
+- **Autodiagnóstico:** comprueba alimentación, matrices, canales, sincronización, calibración, errores internos y degradación.
+- **Estado por matriz:** muestra integridad, disponibilidad y rendimiento de cada conjunto sensor instalado.
+- **Calibración:** permite detectar y corregir desajustes dentro del ámbito operativo de Sensores.
+- **Rendimiento:** compara la capacidad efectiva actual con el rendimiento nominal disponible.
+- **Errores / degradación:** historial técnico inmediato de fallos, pérdidas intermitentes y degradación.
+- **Solicitar soporte de Ingeniería:** genera una incidencia estructurada cuando el problema requiere intervención física.
+
+### Reglas aprobadas
+
+1. El diagnóstico inspecciona **el sistema sensor**, no interpreta contactos externos.
+2. Debe distinguir entre **daño físico, degradación, descalibración y funcionamiento nominal**.
+3. Sensores puede recalibrar y ajustar dentro de su ámbito; **las reparaciones físicas pertenecen a Ingeniería**.
+4. Una recalibración consume tiempo y puede limitar temporalmente la disponibilidad de la matriz afectada.
+5. Un diagnóstico nominal puede descartar fallos conocidos del equipo, pero **no certifica que una interpretación externa sea correcta**.
+6. Los fallos pueden afectar solo a determinadas matrices, bandas o capacidades.
+7. Rendimiento e integridad física son conceptos distintos: un componente intacto puede estar mal calibrado y uno dañado puede seguir funcionando parcialmente.
+8. **Solicitar soporte de Ingeniería** genera una tarea estructurada con componente, diagnóstico, gravedad y prioridad.
+9. Ingeniería puede aceptar, retrasar o rechazar temporalmente la intervención según prioridades reales de la nave.
+10. Diagnósticos, calibraciones y solicitudes de soporte alimentarán el futuro **Operational Event Log**.
+
+### Frontera con Ingeniería
+
+Sensores identifica y caracteriza el problema. Ingeniería repara hardware, sustituye componentes y ejecuta mantenimiento físico.
+
+Contrato de solicitud:
+`gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json`.
