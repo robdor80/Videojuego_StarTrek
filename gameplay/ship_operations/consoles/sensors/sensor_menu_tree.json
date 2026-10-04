@@ -194,7 +194,8 @@
         "start_tracking",
         "mark_contact",
         "compare_readings",
-        "send_data"
+        "send_data",
+        "send_to_science"
       ],
       "persistence": {
         "dossier_model": "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
@@ -238,7 +239,12 @@
         "vector_velocity",
         "detectable_lifeforms",
         "known_pattern_match"
-      ]
+      ],
+      "rules_file": "gameplay/ship_operations/consoles/sensors/sensor_readout_rules.json",
+      "actions": [
+        "send_to_science"
+      ],
+      "science_handoff_contract": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
     },
     {
       "id": "interference",
@@ -292,7 +298,10 @@
         "conn_navigation",
         "command",
         "computer_database"
-      ]
+      ],
+      "handoff_contracts": {
+        "science": "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
+      }
     },
     {
       "id": "diagnostics",
@@ -337,7 +346,7 @@
     "search_localize": "approved_v0.1",
     "contacts": "approved_v0.1",
     "tracking": "approved_v0.1",
-    "sensor_readout": "pending_review",
+    "sensor_readout": "approved_v0.1",
     "interference": "pending_review",
     "configuration": "pending_review",
     "results": "pending_review",
