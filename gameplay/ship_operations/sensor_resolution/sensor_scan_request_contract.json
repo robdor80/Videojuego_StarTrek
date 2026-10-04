@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_scan_request",
+  "required": [
+    "scan_id",
+    "observer_id",
+    "origin_position_au",
+    "range_mode",
+    "scan_mode",
+    "resolution",
+    "filters",
+    "scan_duration_s",
+    "sensor_profile"
+  ],
+  "fields": {
+    "scan_id": "unique operation id",
+    "observer_id": "ship/station/device whose sensor knowledge is being updated",
+    "operator_id": "optional character id for logging/evaluation",
+    "origin_position_au": "3-element XYZ vector in the materialized system reference frame",
+    "sector_id": "optional scope limiter",
+    "system_id": "optional scope limiter",
+    "range_mode": [
+      "short",
+      "long",
+      "focused"
+    ],
+    "scan_mode": [
+      "passive",
+      "active"
+    ],
+    "resolution": [
+      "general",
+      "standard",
+      "high"
+    ],
+    "filters": "non-empty list of signature types or ['all']",
+    "priority": "optional preferred signature type; improves its detection without excluding other selected filters",
+    "scan_duration_s": "positive duration; longer scans have diminishing returns",
+    "sensor_profile": {
+      "capability": "normalized 0..1 sensor quality/capability",
+      "power": "normalized 0..1 power available",
+      "integrity": "normalized 0..1 hardware/system integrity"
+    }
+  },
+  "signature_types": [
+    "electromagnetic",
+    "subspace",
+    "gravimetric",
+    "thermal",
+    "ionizing_radiation",
+    "particle",
+    "biological",
+    "warp",
+    "artificial_transponder"
+  ],
+  "rule": "The console builds this request. The detection engine resolves it against already-materialized world state."
+}
