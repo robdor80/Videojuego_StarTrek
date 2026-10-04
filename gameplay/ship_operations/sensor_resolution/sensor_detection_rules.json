@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "deterministic_normalized_gameplay_v1",
+  "note": "These normalized values are gameplay abstractions, not canonical Star Trek equations.",
+  "signature_strength_score": {
+    "trace": 0.22,
+    "weak": 0.38,
+    "moderate": 0.58,
+    "strong": 0.78,
+    "extreme": 0.96
+  },
+  "range_profiles": {
+    "short": {
+      "max_range_au": 2,
+      "sensitivity_bonus": 0.1
+    },
+    "long": {
+      "max_range_au": 30,
+      "sensitivity_bonus": 0
+    },
+    "focused": {
+      "max_range_au": 50,
+      "sensitivity_bonus": 0.16
+    }
+  },
+  "resolution_factor": {
+    "general": 0.94,
+    "standard": 1,
+    "high": 1.08
+  },
+  "scan_mode_factor": {
+    "passive": 0.92,
+    "active": 1.08
+  },
+  "thresholds": {
+    "trace_detected": 0.24,
+    "detected_unclassified": 0.38,
+    "partially_resolved": 0.54,
+    "resolved": 0.72
+  },
+  "inputs": [
+    "signature strength",
+    "distance",
+    "range mode",
+    "sensor capability",
+    "sensor power",
+    "sensor integrity",
+    "active/passive mode",
+    "requested resolution",
+    "scan duration",
+    "filter match",
+    "priority match",
+    "environmental interference",
+    "target masking"
+  ],
+  "filter_rules": [
+    "A specific filter excludes signatures of other types.",
+    "The 'all' filter evaluates every signature without a specific-filter bonus.",
+    "A matching specific filter improves detection.",
+    "A matching priority improves detection without excluding other selected filters."
+  ],
+  "hidden_property_rules": [
+    "The contact must reach resolved state.",
+    "Requested resolution must meet minimum_resolution.",
+    "If preferred_filter exists it must be explicitly selected or used as priority.",
+    "Unmet hidden properties are omitted from the observation instead of being returned as null/false."
+  ],
+  "anti_leakage_rules": [
+    "Player observation does not expose authoritative entity_id.",
+    "Unobserved entities are omitted from player detections.",
+    "Unrevealed hidden ground-truth values are never copied into result payloads."
+  ]
+}
