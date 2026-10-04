@@ -30,7 +30,7 @@ Prove the core gameplay loop:
 | B5. v0.0.1 generation profile | ✅ COMPLETE | Minimal test-world scope |
 | B6. Generator implementation | ✅ COMPLETE | Seeded persistent system materialization + regression tests |
 | C. Sensor detection resolution | ✅ COMPLETE | Deterministic scan request → observable result engine + contracts/tests |
-| D. Sensors console functional tree | 🟨 IN_PROGRESS | BARRIDOS, BÚSQUEDA/LOCALIZACIÓN and CONTACTOS approved; persistent ship contact dossiers added; remaining branches under review |
+| D. Sensors console functional tree | 🟨 IN_PROGRESS | BARRIDOS, BÚSQUEDA/LOCALIZACIÓN, CONTACTOS and SEGUIMIENTO approved; remaining branches under review |
 | E. Operational event log | ⬜ TODO | Structured record of player console actions |
 | F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
 | G. Galaxy-class Sensors UX | ⬜ TODO | Operational presentation over same operations |
@@ -42,4 +42,13 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Review and close **05. SEGUIMIENTO** in the Sensors console tree.
+Review and close **06. LECTURA SENSORIAL** in the Sensors console tree.
+
+
+## Required post-D deliverable
+
+After Sensors v0.1 is fully approved, produce both:
+- an in-game Starfleet/PADD study manual; and
+- a visually polished external PDF operator manual.
+
+Control document: `docs/roadmap/sensors_operator_manual_plan.md`.
