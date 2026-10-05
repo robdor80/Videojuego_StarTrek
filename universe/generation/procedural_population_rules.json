@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "procedural_population_generation",
+  "status": "foundation_fixed",
+  "generation_order": [
+    "resolve_entity_operator_and_function",
+    "resolve_required_departments_or_functional_groups",
+    "resolve_positions_and_staffing_ranges",
+    "resolve_shifts_and_availability_requirements",
+    "resolve_rank_or_authority_structure",
+    "resolve_qualification_requirements",
+    "resolve_species_population_context",
+    "generate_persistent_character_identities",
+    "generate_personality_and_knowledge_seeds",
+    "generate_only_justified_initial_relationships",
+    "assign_social_simulation_lod"
+  ],
+  "population_targets": [
+    "starship_crew",
+    "facility_staff",
+    "academy_population",
+    "civilian_residents",
+    "passengers",
+    "temporary_visitors"
+  ],
+  "rules": [
+    "Characters are generated because a live-world staffing/population need exists, not because the player asks for a person.",
+    "Generated characters persist once individually materialized.",
+    "Species does not determine personality.",
+    "Rank, profession and faction constrain role/knowledge/authority but do not fully determine personality.",
+    "Initial relationships require a plausible pre-existing shared context.",
+    "Background populations may use aggregate LOD until an individual becomes relevant.",
+    "LOD promotion preserves pre-existing identity and history.",
+    "Canonical characters are generated only from canonical definitions, never by generic random generation."
+  ]
+}
