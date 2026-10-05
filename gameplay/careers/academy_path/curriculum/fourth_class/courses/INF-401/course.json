@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "course_id": "INF-401",
   "title_es": "Sistemas de información Starfleet",
   "status": "unit_design_complete",
@@ -104,5 +104,14 @@
     "pdf"
   ],
   "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
-  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/academy_era_profiles.json",
+    "gameplay/ship_operations/ship_computer/README.md",
+    "gameplay/ship_operations/ship_computer/access_control_rules.json",
+    "gameplay/ship_operations/ship_computer/computer_query_action_catalog.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references. Course source refs constrain factual content; GAME_ADDITION pedagogy remains explicit."
 }

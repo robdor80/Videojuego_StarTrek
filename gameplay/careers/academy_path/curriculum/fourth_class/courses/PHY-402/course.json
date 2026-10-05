@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "course_id": "PHY-402",
   "title_es": "Preparación física II",
   "status": "unit_design_complete",
@@ -101,5 +101,15 @@
     "pdf"
   ],
   "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
-  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/academy_era_profiles.json",
+    "gameplay/characters/wellbeing/README.md",
+    "gameplay/characters/wellbeing/activity_effect_contract.json",
+    "gameplay/characters/wellbeing/habit_formation_rules.json",
+    "gameplay/characters/development/development_rules.md"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references. Course source refs constrain factual content; GAME_ADDITION pedagogy remains explicit."
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "course_id": "STF-401",
   "title_es": "Organización y protocolo de Starfleet",
   "status": "unit_design_complete",
@@ -101,5 +101,16 @@
     "pdf"
   ],
   "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
-  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/academy_era_profiles.json",
+    "lore/federation/starfleet/ranks/officer_ranks.json",
+    "lore/federation/starfleet/ranks/rank_insignia_standard.json",
+    "lore/federation/starfleet/departments/divisions_and_departments.json",
+    "lore/federation/starfleet/positions/positions.json",
+    "lore/federation/starfleet/command_structure/succession_rules.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references. Course source refs constrain factual content; GAME_ADDITION pedagogy remains explicit."
 }
