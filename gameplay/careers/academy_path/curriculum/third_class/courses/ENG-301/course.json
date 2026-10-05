@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "course_id": "ENG-301",
   "title_es": "Ingeniería y gestión de energía I",
   "status": "unit_design_complete",
@@ -107,5 +107,13 @@
     "pdf"
   ],
   "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
-  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/academy_era_profiles.json",
+    "gameplay/engineering/engineering_loop.json",
+    "gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; pedagogy and scenario packaging may be GAME_ADDITION."
 }
