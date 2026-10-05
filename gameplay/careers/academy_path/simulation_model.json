@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "scenario_fields": [
     "scenario_id",
     "display_name_es",
@@ -35,12 +35,20 @@
     {
       "id": "kobayashi_maru",
       "era_ids": [
-        "kirk"
+        "pike",
+        "kirk",
+        "tng_ds9_voyager"
       ],
       "track": [
-        "command"
+        "all"
       ],
       "no_win": true,
+      "project_scope": "universal_academy_tradition",
+      "provenance_by_era": {
+        "pike": "GAME_ADDITION",
+        "kirk": "CANON_SUPPORTED_TRADITION",
+        "tng_ds9_voyager": "GAME_ADDITION"
+      },
       "source_id": "STII_WRATH_OF_KHAN"
     }
   ],
