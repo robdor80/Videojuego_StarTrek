@@ -1,197 +1,476 @@
 # PHY-401 — Preparación física I
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 1**
 
 ## Finalidad
 
-Establecer una base funcional y una rutina sostenible adaptada a la biología y contexto del cadete.
+Establecer una base funcional y una rutina sostenible adaptada a la biología, estado y contexto del cadete.
 
-## Cómo estudiar esta asignatura
+PHY-401 no es un minijuego de reflejos para el jugador ni una fuente de bonificaciones instantáneas. El personaje entrena dentro del calendario; el sistema registra actividad, regularidad, carga, recuperación y evolución como evidencia longitudinal.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+La meta no es fabricar atletas idénticos. La meta es que cada cadete alcance y mantenga una condición funcional razonable para el servicio según su especie y circunstancias.
 
-## PHY-401-U01 — Evaluación funcional inicial
+---
 
-### Qué debes dominar
+# PHY-401-U01 — Evaluación funcional inicial
 
-- **movilidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **resistencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **fuerza funcional**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **coordinación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Para qué sirve la evaluación inicial
 
-### Aplicación operativa
+La primera evaluación establece una referencia.
 
-Sesión inicial del personaje registrada como evidencia. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No busca responder “¿quién es el cadete más fuerte?”, sino:
 
-### Qué se evalúa
+- cuál es su estado funcional;
+- qué limitaciones o riesgos existen;
+- qué capacidades necesitan trabajo;
+- qué rutina inicial es razonable;
+- con qué punto de partida se comparará el progreso posterior.
 
-Comparación con mínimos funcionales individualizados. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Áreas observadas
 
-### Errores frecuentes
+La evaluación puede observar:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- movilidad;
+- resistencia;
+- fuerza funcional;
+- coordinación.
 
-### Autoevaluación
+Estas áreas no se reducen necesariamente a una cifra visible.
 
-1. Explica con tus palabras qué significa **movilidad** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **movilidad** y **resistencia**?
-3. Resuelve de forma razonada esta práctica: *Sesión inicial del personaje registrada como evidencia.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 3. Comparación individualizada
 
-## PHY-401-U02 — Movilidad y técnica segura
+Una especie más fuerte o más resistente que un humano no recibe automáticamente una nota superior.
 
-### Qué debes dominar
+La Academia evalúa funcionalidad respecto a:
 
-- **movilidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **calentamiento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **técnica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **prevención**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+- biología;
+- estado previo;
+- seguridad;
+- demandas razonables del servicio;
+- progreso esperable.
 
-### Aplicación operativa
+## 4. Evidencia, no “stats gratis”
 
-Rutina supervisada. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+La sesión inicial genera evidencia del estado del personaje.
 
-### Qué se evalúa
+No produce recompensas del tipo:
 
-Evidencia de ejecución segura. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+> +2 Fuerza  
+> +5 Resistencia
 
-### Errores frecuentes
+La capacidad se deriva de vida, práctica y tiempo.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 5. Resultado inicial
 
-### Autoevaluación
+El resultado puede indicar:
 
-1. Explica con tus palabras qué significa **movilidad** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **movilidad** y **calentamiento**?
-3. Resuelve de forma razonada esta práctica: *Rutina supervisada.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
-
-## PHY-401-U03 — Resistencia básica
-
-### Qué debes dominar
-
-- **capacidad aeróbica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ritmo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **progresión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Sesiones programadas por calendario. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Regularidad y progresión razonable. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- base adecuada;
+- área a vigilar;
+- necesidad de adaptación;
+- recomendación de rutina;
+- necesidad de revisión adicional.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **capacidad aeróbica** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **capacidad aeróbica** y **ritmo**?
-3. Resuelve de forma razonada esta práctica: *Sesiones programadas por calendario.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Para qué sirve la evaluación funcional inicial?
+2. ¿Qué cuatro áreas básicas observa PHY-401?
+3. ¿Por qué no se comparan directamente especies distintas?
+4. ¿Qué significa que la sesión produzca evidencia?
+5. ¿Qué diferencia existe entre condición funcional y una puntuación RPG?
 
-## PHY-401-U04 — Fuerza funcional
+---
 
-### Qué debes dominar
+# PHY-401-U02 — Movilidad y técnica segura
 
-- **patrones básicos**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **control corporal**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **carga progresiva contextual**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Antes de cargar, mover bien
 
-### Aplicación operativa
+La movilidad permite realizar movimientos necesarios con control suficiente.
 
-Entrenamiento supervisado del personaje. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No significa alcanzar posiciones extremas. Significa disponer del rango útil para ejecutar una tarea sin compensaciones innecesarias.
 
-### Qué se evalúa
+## 2. Calentamiento
 
-Seguridad y consistencia. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Un calentamiento prepara progresivamente al personaje para la actividad.
 
-### Errores frecuentes
+Puede incluir:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- movimiento general;
+- movilidad específica;
+- incremento gradual de intensidad;
+- ensayo técnico con baja carga.
 
-### Autoevaluación
+No existe una única secuencia universal para todas las especies y actividades.
 
-1. Explica con tus palabras qué significa **patrones básicos** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **patrones básicos** y **control corporal**?
-3. Resuelve de forma razonada esta práctica: *Entrenamiento supervisado del personaje.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 3. Técnica
 
-## PHY-401-U05 — Recuperación
+Una ejecución segura busca:
 
-### Qué debes dominar
+- control;
+- estabilidad;
+- coordinación;
+- carga apropiada;
+- adaptación al equipo;
+- respeto por una limitación conocida.
 
-- **descanso**: Los sensores producen mediciones y contactos; no sustituyen la interpretación científica. La formación separa siempre detección, calidad de la lectura, seguimiento y análisis para que el jugador no trate una lectura como una verdad ya interpretada.
-- **fatiga**: La preparación física se trata como un proceso longitudinal. Carga, descanso, lesiones y recuperación modifican el estado del personaje; no existen bonificaciones instantáneas por completar una sesión.
-- **lesión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **adaptación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+La Academia valora la capacidad de corregir técnica cuando un instructor detecta un problema.
 
-### Aplicación operativa
+## 4. Prevención
 
-Elegir recuperación adecuada tras cargas distintas. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Prevenir no significa eliminar todo riesgo.
 
-### Qué se evalúa
+Significa reducir riesgo evitable mediante:
 
-Decisión contextual. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+- preparación;
+- equipo adecuado;
+- progresión razonable;
+- descanso;
+- comunicación de dolor o lesión;
+- supervisión cuando proceda.
 
-### Errores frecuentes
+## 5. Entrenamiento supervisado
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Una sesión supervisada puede registrar:
 
-### Autoevaluación
+- instrucciones recibidas;
+- calidad de ejecución;
+- correcciones;
+- respuesta a feedback;
+- señales de fatiga o limitación.
 
-1. Explica con tus palabras qué significa **descanso** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **descanso** y **fatiga**?
-3. Resuelve de forma razonada esta práctica: *Elegir recuperación adecuada tras cargas distintas.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+### Práctica
 
-## PHY-401-U06 — Rutina personal
-
-### Qué debes dominar
-
-- **frecuencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **sostenibilidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **hábitos**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **compatibilidad académica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Configurar rutina longitudinal. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Adherencia y ajuste, no puntuación RPG. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Realiza una rutina supervisada centrada en movilidad y técnica. El objetivo es ejecutar correctamente, no terminar antes que otros cadetes.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **frecuencia** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **frecuencia** y **sostenibilidad**?
-3. Resuelve de forma razonada esta práctica: *Configurar rutina longitudinal.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué significa movilidad funcional?
+2. ¿Para qué sirve un calentamiento?
+3. ¿Qué factores definen una técnica segura?
+4. ¿Por qué prevención no significa riesgo cero?
+5. ¿Qué valor tiene responder bien a una corrección del instructor?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# PHY-401-U03 — Resistencia básica
 
-## Tratamiento por era
+## 1. Qué se busca
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+La resistencia básica representa la capacidad de sostener actividad durante un periodo razonable sin deterioro excesivo del rendimiento.
+
+En el servicio puede influir en:
+
+- desplazamientos prolongados;
+- entrenamiento de campo;
+- emergencias;
+- EVA;
+- guardias exigentes;
+- recuperación entre esfuerzos.
+
+## 2. Progresión
+
+La resistencia se desarrolla mediante práctica repetida en el tiempo.
+
+La lógica es:
+
+> carga apropiada + recuperación + repetición → adaptación
+
+Una sesión excepcional no sustituye semanas de regularidad.
+
+## 3. Ritmo
+
+El cadete debe aprender a no tratar cada sesión como una prueba máxima.
+
+Controlar ritmo permite:
+
+- completar el trabajo;
+- acumular práctica;
+- reducir riesgo;
+- recuperarse;
+- progresar de forma sostenible.
+
+## 4. Calendario
+
+Las sesiones se integran en la vida académica.
+
+El sistema puede observar:
+
+- frecuencia;
+- duración;
+- intensidad;
+- continuidad;
+- interferencia con descanso o estudio.
+
+## 5. Progreso razonable
+
+No se exige una mejora lineal cada semana.
+
+Fatiga, enfermedad, lesiones, cambios de horario o carga académica pueden modificar temporalmente el rendimiento.
+
+### Práctica
+
+Completa varias sesiones programadas y revisa si el ritmo elegido permite mantener continuidad sin comprometer recuperación.
+
+### Autoevaluación
+
+1. ¿Qué significa resistencia básica?
+2. ¿Por qué una sola sesión intensa no demuestra adaptación?
+3. ¿Qué relación existe entre ritmo y sostenibilidad?
+4. ¿Qué factores de calendario observa el sistema?
+5. ¿Por qué el progreso no tiene que ser lineal?
+
+---
+
+# PHY-401-U04 — Fuerza funcional
+
+## 1. Fuerza para hacer, no para coleccionar números
+
+La fuerza funcional representa la capacidad de producir y controlar fuerza útil para tareas reales.
+
+No se limita a levantar el mayor peso posible.
+
+Puede ayudar en:
+
+- mover equipo;
+- controlar el propio cuerpo;
+- estabilizarse;
+- superar obstáculos;
+- trabajar con herramientas;
+- responder físicamente a una emergencia.
+
+## 2. Patrones básicos
+
+La formación puede trabajar patrones como:
+
+- empujar;
+- tirar;
+- levantarse;
+- agacharse;
+- transportar;
+- estabilizar;
+- rotar o resistir rotación;
+- desplazarse bajo carga.
+
+La forma concreta depende de biología, equipo y contexto.
+
+## 3. Control corporal
+
+Mover una carga sin control no es automáticamente mejor que mover menos con buena técnica.
+
+La Academia valora:
+
+- estabilidad;
+- coordinación;
+- control;
+- seguridad;
+- capacidad de repetir el esfuerzo.
+
+## 4. Carga progresiva contextual
+
+La dificultad puede aumentar mediante:
+
+- más resistencia;
+- más duración;
+- mayor complejidad;
+- menor ayuda;
+- situación más específica.
+
+La progresión no se reduce a “subir kilos”.
+
+## 5. Transferencia
+
+Mejorar una capacidad general puede ayudar en tareas relacionadas, pero no concede automáticamente una técnica profesional específica.
+
+Ser fuerte no convierte al cadete en especialista de Seguridad, EVA o Ingeniería.
+
+### Práctica
+
+Realiza una sesión supervisada de patrones básicos y explica qué capacidad funcional intenta desarrollar cada ejercicio.
+
+### Autoevaluación
+
+1. ¿Qué diferencia existe entre fuerza máxima y fuerza funcional?
+2. Nombra cuatro patrones básicos.
+3. ¿Por qué el control corporal forma parte de la evaluación?
+4. ¿Cómo puede progresar una tarea sin aumentar únicamente el peso?
+5. ¿Por qué fuerza general no concede una cualificación profesional?
+
+---
+
+# PHY-401-U05 — Recuperación
+
+## 1. El entrenamiento no termina al acabar la sesión
+
+La recuperación forma parte del proceso de adaptación.
+
+El sistema distingue entre estado agudo y patrones longitudinales.
+
+## 2. Fatiga aguda
+
+Puede aparecer después de:
+
+- esfuerzo físico;
+- falta de sueño;
+- actividad prolongada;
+- guardias exigentes;
+- estrés.
+
+Una noche o un día difícil puede alterar temporalmente el estado sin destruir meses de preparación.
+
+## 3. Carga acumulada
+
+Semanas de:
+
+- poco descanso;
+- entrenamiento excesivo;
+- estudio intenso;
+- emergencias;
+- lesión mal gestionada
+
+pueden afectar capacidad de recuperación y rendimiento.
+
+## 4. Descanso
+
+El descanso no es una poción que borra instantáneamente toda fatiga acumulada.
+
+Una buena noche puede mejorar mucho el estado inmediato, pero no elimina necesariamente un mes de sobrecarga.
+
+## 5. Lesión y adaptación
+
+Una lesión puede exigir:
+
+- reducir actividad;
+- cambiar ejercicio;
+- tratamiento;
+- recuperación médica;
+- reintroducción progresiva.
+
+La inactividad breve no debe castigar de forma absurda. Periodos prolongados sí pueden afectar adaptación.
+
+### Práctica
+
+Elige una estrategia de recuperación para tres escenarios: fatiga normal tras entrenamiento, varias noches de poco sueño y recuperación tras lesión.
+
+### Autoevaluación
+
+1. ¿Por qué la recuperación forma parte del entrenamiento?
+2. Diferencia fatiga aguda y carga acumulada.
+3. ¿Una buena noche elimina un mes de sobrecarga?
+4. ¿Por qué una lesión puede exigir cambiar la rutina?
+5. ¿Cómo trata el sistema una interrupción breve frente a meses de inactividad?
+
+---
+
+# PHY-401-U06 — Rutina personal
+
+## 1. La rutina es un patrón, no un botón
+
+Una rutina se forma a partir de comportamiento repetido.
+
+El sistema observa:
+
+- frecuencia;
+- continuidad;
+- horario típico;
+- lugar;
+- actividad;
+- participantes cuando sea relevante.
+
+No se selecciona una ventaja llamada “hábito de gimnasio”.
+
+## 2. Sostenibilidad
+
+Una buena rutina debe convivir con:
+
+- clases;
+- estudio;
+- sueño;
+- relaciones;
+- guardias o prácticas;
+- recuperación.
+
+Una planificación perfecta sobre el papel puede ser mala si obliga al cadete a dormir poco o incumplir obligaciones.
+
+## 3. Preferencias personales
+
+No todas las personas disfrutan ni recuperan igual con las mismas actividades.
+
+Un cadete puede preferir:
+
+- correr;
+- nadar;
+- gimnasio;
+- artes marciales;
+- deporte de equipo;
+- entrenamiento individual.
+
+La preferencia puede ayudar a sostener una rutina, pero no convierte la actividad en una bonificación universal.
+
+## 4. Cambio de rutina
+
+Una rutina puede alterarse por:
+
+- horario académico;
+- lesión;
+- viaje;
+- entrenamiento especial;
+- decisión del jugador;
+- cambio de destino.
+
+La interrupción no borra instantáneamente el hábito.
+
+## 5. El jugador decide prioridades
+
+La Academia fija determinadas obligaciones.
+
+Fuera de ellas, el jugador decide cómo organiza la vida del personaje.
+
+El sistema observa consecuencias y evidencia; no reparte puntos manuales.
+
+### Práctica
+
+Configura una rutina semanal que incluya actividad física, estudio y recuperación y que pueda mantenerse durante varias semanas.
+
+### Autoevaluación
+
+1. ¿Cómo se forma una rutina?
+2. ¿Qué significa sostenibilidad?
+3. ¿Por qué una actividad agradable no funciona como una bonificación universal?
+4. Nombra tres causas de interrupción de rutina.
+5. ¿Qué decide el jugador y qué observa el sistema?
+
+---
+
+# Evaluación del curso
+
+PHY-401 evalúa principalmente:
+
+- participación;
+- seguridad;
+- respuesta a supervisión;
+- regularidad;
+- progreso razonable;
+- capacidad funcional contextual;
+- gestión básica de recuperación.
+
+No exige al jugador realizar físicamente las pruebas.
+
+El personaje realiza la actividad dentro del mundo y genera evidencia.
+
+# Tratamiento por especie y contexto
+
+La Academia adapta mínimos y evaluación a la biología del cadete.
+
+No se comparan de forma directa capacidades físicas brutas de especies diferentes.
+
+El objetivo es preparación funcional para el servicio, no una competición interespecies.
+
+# Referencias internas
+
+- `gameplay/characters/wellbeing/README.md`
+- `gameplay/characters/wellbeing/activity_effect_contract.json`
+- `gameplay/characters/wellbeing/habit_formation_rules.json`
+- `gameplay/characters/development/development_rules.md`
+- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`
+
+Estas referencias definen la relación entre actividad, hábitos, recuperación y desarrollo. La rutina concreta del cadete emerge de su vida y sus decisiones.
