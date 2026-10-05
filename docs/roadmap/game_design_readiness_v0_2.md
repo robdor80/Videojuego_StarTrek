@@ -132,16 +132,28 @@ Design work proceeds independently.
 
 Runtime implementation is deferred where CoreRPG does not yet expose the required generic world-state, action, simulation, persistence or event capabilities.
 
+## Design-depth pass 1 progress
+
+- ✅ Academy master curriculum baseline: year → trimester → subject structure created.
+- ✅ External Academy study/profile interoperability contract created.
+- ✅ Social event transitions and knowledge-propagation rules created.
+- ✅ Wellbeing activity inputs and emergent habit-formation rules created.
+- ✅ Professional evidence and career-progression rules created.
+- ✅ Game-ready contracts created for technology, medicine, science, conflicts and historical events.
+- ✅ Restrained AI narration rules added; deterministic-first orchestration already established.
+- ✅ Procedural celestial/civilization generation requirement contracts added.
+- ✅ Starship Computer query/action catalogue added.
+
 ## Next design-depth priorities
 
-1. Build the **Academy master curriculum** down to year → trimester → subject → unit, before mass-producing Sensors exercises.
-2. Define **social event/state transitions** and knowledge propagation from real events into memories/relationships.
-3. Define **wellbeing activity inputs and habit formation** without exposing optimization bars.
-4. Connect **professional evidence** to formal evaluation, recommendations and career opportunities.
-5. Begin concrete **technology/equipment + medicine/science lore packs** required by Academy and procedural generation.
-6. Define **AI context assembly and privacy filters** for dialogue/computer/log drafting.
-7. Add **procedural generation grammars/profiles** for stars, worlds, civilizations, ship roles/operators, facilities and traffic.
-8. Expand **Starship Computer command/query catalogue**, profiles by era/civilization and integrations.
+1. Expand the **Academy curriculum from subject level to unit/lesson objectives**, starting with common-core material before mass-producing Sensors exercises.
+2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
+3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
+4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
+5. Add **procedural generation grammars and distributions** for ordinary stars/planets, civilizations, ship roles/operators, facilities and traffic.
+6. Define **AI context filtering/assembly implementation requirements** in a form compatible with CoreRPG/Host privacy boundaries.
+7. Expand **Starship Computer integration** with records/logs, crew lookup, ship status, navigation and analysis.
+8. Add validation rules checking cross-pillar contradictions as the content grows.
 
 ## Roberto decision policy
 
