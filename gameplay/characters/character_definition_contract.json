@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "character_definition_contract",
   "classification": "GAME_ADDITION",
   "required_fields": [
@@ -24,18 +24,27 @@
     "known_relationship_seeds",
     "personality_seed",
     "knowledge_seed",
-    "presentation_refs"
+    "presentation_refs",
+    "validated_creation_ref",
+    "initial_background_ref",
+    "initial_objective_ref"
   ],
   "temporal_validity_fields": [
     "known_active_from",
     "known_active_until",
     "retained_era_ids"
   ],
+  "campaign_created_rules": [
+    "Campaign-created player characters require validated_creation_ref before campaign start.",
+    "Initial capability claims are derived from validated biography and evidence rather than selected directly.",
+    "Initial long-term objective may guide trajectory assessment but grants no capability."
+  ],
   "rules": [
     "Definition bootstraps a character but is not live state.",
     "Canonical characters are date-gated and never teleported into an era where they do not belong.",
     "Unknown biographical gaps remain unknown.",
     "Generated characters must satisfy live-world assignment, species, faction and location constraints.",
-    "Presentation references do not grant gameplay authority or knowledge."
+    "Presentation references do not grant gameplay authority or knowledge.",
+    "Species and culture never define personality automatically."
   ]
 }
