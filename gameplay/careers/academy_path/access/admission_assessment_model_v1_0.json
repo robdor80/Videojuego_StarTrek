@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "starfleet_academy_admission_assessment_v1_0",
+  "status": "locked_baseline",
+  "components": [
+    {"id":"access_knowledge","display_es":"Conocimientos generales","source_curriculum":"starfleet_academy_access_v1_0","automatic_rejection_on_errors":false},
+    {"id":"reasoning","display_es":"Razonamiento","single_correct_style_required":false},
+    {"id":"interpersonal","display_es":"Interacción y trabajo con otras personas","single_correct_style_required":false},
+    {"id":"psychological","display_es":"Evaluación psicológica","single_correct_style_required":false},
+    {"id":"practical","display_es":"Prueba práctica general","professional_system_mastery_required":false},
+    {"id":"interview","display_es":"Entrevista","focus":["motivation","responsibility","self_awareness","integrity","response_to_prior_evidence"]}
+  ],
+  "review_principle": "holistic_evidence_review",
+  "forbidden_player_facing_rule": "single_global_percentage_cutoff",
+  "evidence_bands": ["strong","adequate","support_recommended","insufficient_for_current_cycle","serious_concern"],
+  "possible_decisions": ["admitted","admitted_with_support","preparatory_program","targeted_reassessment","deferred","rejected_for_current_cycle"],
+  "retake_rules": [
+    "Previously valid evidence is retained when still relevant.",
+    "A failed component does not force a full-process restart by default.",
+    "Targeted preparation and reassessment are preferred for recoverable gaps.",
+    "Repeated failure may delay admission without ending the campaign.",
+    "Serious integrity or conduct concerns may outweigh otherwise adequate academic evidence."
+  ],
+  "player_knowledge_rules": [
+    "Questions may test only approved access curriculum knowledge.",
+    "Star Trek trivia is forbidden.",
+    "Professional Academy knowledge is forbidden.",
+    "Literal real-world advanced science is forbidden."
+  ]
+}
