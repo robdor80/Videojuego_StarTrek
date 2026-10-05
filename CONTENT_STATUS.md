@@ -22,7 +22,7 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 6. ✅ Starfleet technology and starships
 7. 🟨 Procedural observable universe + interactive ship consoles
 8. 🟨 Species, factions, astrography and wider universe
-9. ⬜ Narrative, AI, presentation and runtime content derived from validated lore
+9. 🟨 Narrative, AI, presentation and runtime content derived from validated lore
 
 ## Documentary foundation
 
@@ -109,6 +109,23 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Records and logs foundation | ✅ COMPLETE | Captain's, personal, department, duty and restricted-log foundations established with privacy/access and AI-assisted drafting boundaries. |
 | Universal stardate / timekeeping | ✅ COMPLETE | All playable eras use one project rule of 1,000 stardate units per campaign year; exact campaign time remains authoritative, with 24-hour ship time and human-readable player reference. |
 
+## Game Design Readiness v0.2
+
+The project is using the CoreRPG lead time to complete eight game-facing design pillars before runtime integration.
+
+| Pillar | Foundation | Content depth |
+|---|---|---|
+| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Gameplay-required lore | ✅ READINESS PLAN | 🟨 IN_PROGRESS |
+| AI and narrative | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Procedural universe and population | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Starship Computer | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+
+Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
+
 ## Major remaining domains
 
 | Domain | Status |
@@ -119,12 +136,12 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
 | Stations and facilities | 🟨 IN_PROGRESS | Facility identity/design separation, topology/live interior state, docking/access, service nodes, traffic/transfer simulation, playable assignments, shipyard/refit support and blueprint-ingest workflow are established; wider catalogue and source-backed interiors remain progressive. |
-| Technology and equipment | ⬜ TODO |
+| Technology and equipment | 🟨 IN_PROGRESS | Game-ready technology framework and readiness plan established; concrete equipment/technology depth remains progressive. |
 | Medicine and science | ⬜ TODO |
 | Conflicts and historical events | ⬜ TODO |
 | Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State. Current vertical slice: procedural observable world → sensor resolution → interactive console → event log/evaluation. |
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
-| AI | ⬜ TODO |
+| AI | 🟨 IN_PROGRESS | AI authority, deterministic-first routing, provider-independent capability routes and NPC interaction foundation established; deeper prompt/context/presentation content remains progressive. |
 | Presentation and UI | ⬜ TODO |
 | Assets / audio / NAP mappings | ⬜ TODO |
 | Runtime content / schemas / manifests | ⬜ TODO |
@@ -132,6 +149,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Interactive ship systems vertical slice: Sensors console → operational log ✅ → Academy/Galaxy UX → playable v0.0.1 duty scenario.**
+**Game-design readiness v0.2: eight-pillar foundation pass complete; content-depth work is now active while CoreRPG runtime catches up.**
 
-The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Sensors functional design v0.1 is fully approved across all ten branches, including persistence and inter-console handoffs. Sensors operator manuals are delivered in in-game study and external PDF forms. Operational event log v0.1 is now complete as a Star Trek-side contract. Immediate next work: Academy Sensors UX, then Galaxy-class console UX and the playable duty scenario; evaluation will consume logged evidence rather than being embedded in the log. Wider lore continues only when required by this gameplay path.
+The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Next work adds content depth without duplicating CoreRPG runtime responsibilities.
