@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "operational_event",
+  "status": "fixed",
+  "purpose": "Append-only structured record of operational facts for later evaluation, memory, debrief, investigation and career systems.",
+  "required": [
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "scope",
+    "actor_refs",
+    "subject_refs",
+    "provenance",
+    "visibility"
+  ],
+  "fields": {
+    "event_id": "globally stable event identifier",
+    "event_type": "value from event_type_catalog.json",
+    "occurred_at": "authoritative campaign timestamp",
+    "recorded_at": "optional timestamp if recording is delayed relative to occurrence",
+    "scope": {
+      "ship_id": "optional ship identity",
+      "mission_id": "optional mission/duty context",
+      "watch_id": "optional duty-watch context",
+      "academy_session_id": "optional Academy class/simulation context",
+      "location_id": "optional physical/logical location",
+      "station_id": "optional physical duty station",
+      "console_family": "optional functional console family"
+    },
+    "actor_refs": "characters/systems that performed, issued, acknowledged or produced the event",
+    "subject_refs": "orders, operations, results, contacts, packages, systems, locations or other entities the event concerns",
+    "causal_refs": "optional prior event/order/action/result references that explain why this event occurred",
+    "payload": "small event-specific structured facts; large domain objects remain referenced, not copied",
+    "outcome": "optional factual outcome such as accepted/rejected/completed/failed/partial/cancelled",
+    "provenance": "system/process/operator source responsible for recording this event",
+    "visibility": "initial access/knowledge projection metadata governed by visibility_projection_rules.json",
+    "correction_of_event_id": "optional reference when this event corrects a prior assertion without rewriting it",
+    "supersedes_event_id": "optional reference when a later operational record supersedes an earlier operational record"
+  },
+  "rules": [
+    "Events are append-only after acceptance into authoritative history.",
+    "The log records facts and references; it does not assign performance grades, relationship changes or moral judgements.",
+    "Domain objects such as sensor results remain authoritative in their own subsystem and are referenced by id.",
+    "Creating an event does not imply that every NPC, department or player-facing interface knows it.",
+    "A correction is a new event referencing the earlier event; historical records are not silently mutated.",
+    "Event payloads must not expose unrevealed authoritative world truth.",
+    "Actor identity and responsibility must remain distinguishable from the subject of an action.",
+    "Issued orders, execution, results and reports should be linkable through stable references."
+  ],
+  "recommended_indexes": [
+    "occurred_at",
+    "event_type",
+    "scope.ship_id",
+    "scope.mission_id",
+    "scope.watch_id",
+    "scope.academy_session_id",
+    "actor_refs",
+    "subject_refs"
+  ]
+}
