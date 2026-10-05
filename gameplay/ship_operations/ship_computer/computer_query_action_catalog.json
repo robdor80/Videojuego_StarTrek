@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "catalog_id": "starship_computer_query_action_catalog",
+  "status": "foundation_fixed",
+  "query_domains": {
+    "time_and_schedule": ["current_ship_time", "current_stardate", "duty_schedule", "appointment_lookup"],
+    "crew": ["authorized_crew_location", "duty_roster", "department_roster", "contact_person"],
+    "ship_status": ["system_status", "damage_status", "power_status", "environmental_status", "maintenance_history"],
+    "navigation": ["course", "position", "eta", "route_history", "navigation_event_search"],
+    "sensors_science": ["sensor_result_search", "contact_history", "authorized_science_result_search", "cross_record_analysis"],
+    "records": ["personal_log_access", "captains_log_search", "department_log_search", "duty_log_search", "authorized_service_record_lookup"],
+    "database": ["starfleet_database_lookup", "technical_reference", "authorized_regulation_lookup"]
+  },
+  "action_domains": {
+    "communications": ["contact_character", "contact_department", "open_intercom_or_channel"],
+    "environment": ["request_local_temperature_change", "request_lighting_change"],
+    "facilities": ["request_holodeck_reservation", "request_room_or_resource_booking"],
+    "data": ["transfer_authorized_data", "create_authorized_draft", "open_or_create_log"],
+    "ship_system": ["request_diagnostic", "request_allowed_configuration_change", "request_authorized_control_action"]
+  },
+  "rules": [
+    "Catalogue entries describe intents, not automatic permissions.",
+    "Every request passes current-state and access validation.",
+    "Simple catalogued intents should prefer deterministic routing.",
+    "New intents are added when concrete gameplay requires them rather than through a giant speculative command list.",
+    "The same request can produce different results depending on ship capability, era, damage and requester authority."
+  ]
+}
