@@ -1,6 +1,6 @@
 # Starfleet Academy Master Curriculum v0.2
 
-Status: **FOUR-YEAR ARCHITECTURE LOCKED — UNIT DEPLOYMENT IN PROGRESS**
+Status: **FOUR-YEAR ARCHITECTURE LOCKED — UNIT DESIGN COMPLETE**
 
 ## Purpose
 
@@ -312,3 +312,24 @@ A student profile may track:
 - optional external-study progress.
 
 The external website must not silently grant in-game qualifications unless the game explicitly imports/validates an approved result.
+
+
+## Unit deployment v1.0
+
+The complete four-year unit design now lives under `curriculum/`.
+
+Deployment summary:
+
+- 60 main course/process definitions;
+- 7 professional branch curricula;
+- 35 branch stages;
+- 501 designed units;
+- single-source rule for game, web, manuals, PDF and assessments.
+
+Control files:
+
+- `curriculum/curriculum_manifest_v1_0.json`
+- `curriculum/CURRICULUM_DEPLOYMENT_v1_0.md`
+- `curriculum/VALIDATION_v1_0.md`
+
+The next content layer is study-material production, not further year-architecture design.
