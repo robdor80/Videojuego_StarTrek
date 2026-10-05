@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "social_knowledge_propagation",
+  "status": "foundation_fixed",
+  "channels": [
+    "direct_participation",
+    "direct_observation",
+    "explicit_disclosure",
+    "formal_report",
+    "authorized_record_access",
+    "rumor",
+    "group_conversation",
+    "public_event"
+  ],
+  "knowledge_record_fields": [
+    "knower_character_id",
+    "subject_refs",
+    "fact_or_claim_ref",
+    "source_channel",
+    "source_character_or_record_ref",
+    "formed_at",
+    "confidence",
+    "privacy_or_confidentiality_context",
+    "distortion_or_uncertainty"
+  ],
+  "rules": [
+    "A relationship does not automatically reveal private facts.",
+    "NPCs cannot read the global relationship graph as knowledge.",
+    "Rumor is a claim channel and may be incomplete or wrong.",
+    "A witness may know that an interaction occurred without knowing private content.",
+    "Formal access to a record may convey only the authorized subset.",
+    "Confidential information may be remembered while remaining intentionally undisclosed.",
+    "The AI dialogue context receives only knowledge actually available to that NPC.",
+    "Campaign truth and character belief remain separate."
+  ]
+}
