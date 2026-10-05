@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "habit_formation_and_disruption",
+  "status": "foundation_fixed",
+  "habit_candidate_fields": [
+    "character_id",
+    "activity_or_pattern",
+    "typical_time_window",
+    "typical_location",
+    "typical_participants",
+    "observed_frequency",
+    "continuity_window",
+    "formed_from_event_refs",
+    "confidence"
+  ],
+  "formation_principles": [
+    "Habits emerge from repeated actual behavior rather than being selected as perks.",
+    "A routine may involve time, place, activity and recurring participants.",
+    "Irregular but meaningful patterns may remain preferences rather than habits.",
+    "A habit becomes more stable through repeated continuity, not one isolated action."
+  ],
+  "disruption_causes": [
+    "duty_schedule_change",
+    "transfer",
+    "mission_crisis",
+    "injury_or_medical_recovery",
+    "relationship_change",
+    "location_change",
+    "training_commitment",
+    "player_deliberate_change"
+  ],
+  "rules": [
+    "Disruption does not instantly delete a habit.",
+    "A broken routine may decay over time or be replaced by a new pattern.",
+    "Recurring participants may make a social routine emotionally meaningful.",
+    "The player is never forced to resume a habit.",
+    "NPC dialogue may recognize established routines only when the NPC plausibly knows them."
+  ]
+}
