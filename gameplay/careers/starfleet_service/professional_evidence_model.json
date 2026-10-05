@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "starfleet_professional_evidence",
+  "status": "foundation_fixed",
+  "evidence_sources": [
+    "operational_event_log",
+    "service_record",
+    "qualification_history",
+    "academy_record",
+    "mission_debrief",
+    "supervisor_observation",
+    "formal_report",
+    "commendation",
+    "disciplinary_action",
+    "medical_duty_status"
+  ],
+  "assessment_dimensions": [
+    "technical_execution",
+    "procedure",
+    "judgment",
+    "communication",
+    "leadership",
+    "teamwork",
+    "integrity",
+    "reliability",
+    "pressure_management",
+    "self_management",
+    "readiness_for_responsibility"
+  ],
+  "rules": [
+    "An assessment must reference evidence or an authorized direct observation.",
+    "The Operational Event Log stores facts, not grades.",
+    "AI can summarize evidence but cannot create missing operational events.",
+    "Professional assessment is separate from personal affinity/friendship.",
+    "A single event should not dominate long-term career assessment unless its severity justifies it.",
+    "Contradictory evidence may coexist and should not be silently averaged into a fictional certainty.",
+    "Relevant uncertainty may be preserved in supervisor recommendations."
+  ]
+}
