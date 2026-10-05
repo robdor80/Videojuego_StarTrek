@@ -162,7 +162,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. ✅ **Four-year unit deployment and study-material v1.0 generation complete.** 67 learner manuals, 67 assessment banks and 67 instructor guides now derive from the authoritative course/branch JSON. Next: editorial/provenance QA and derived PDF/web publication.
+1. ✅ **Four-year unit deployment, study-material v1.0 and provenance pass 1 complete.** 67 learner manuals, 67 assessment banks and 67 instructor guides derive from the authoritative JSON; academiaflota v0.5.0 now publishes all 60 main courses and 7 branch manuals. Next: deeper editorial enrichment, PDF generation and generalized interactive assessment.
 2. ✅ **Seven branch curricula built** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical, including advanced 2nd/1st Class progression and study packs.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
@@ -188,7 +188,7 @@ The following are now **closed to the current defined scope** and should only re
 - Second Class / Year 3 three-trimester specialization architecture;
 - First Class / Year 4 service-readiness and commissioning architecture.
 
-The remaining Pillar 1 work is primarily **editorial/provenance QA of generated study material, PDF/web derivation, Academy-life scheduling/content, richer evaluation outputs and post-Academy career depth**.
+The remaining Pillar 1 work is primarily **deeper bespoke editorial enrichment, PDF generation, generalized interactive assessment, Academy-life scheduling/content, richer evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 

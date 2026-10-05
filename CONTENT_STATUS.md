@@ -165,6 +165,6 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
 ## Active block
 
-**Pillar 1 remains active: the four-year architecture, unit curriculum and study-material v1.0 layer are closed. There are now 67 learner manuals, 67 assessment banks and 67 instructor guides. Next work is editorial/provenance QA plus derived PDF/web publishing, Academy-life scheduling/content and post-Academy depth.**
+**Pillar 1 remains active: four-year architecture, unit curriculum and study-material v1.0 are closed; provenance pass 1 now covers 60/60 main courses and 7/7 branches, and academiaflota v0.5.0 publishes all 60 courses plus 7 branch manuals. Remaining Academy work is deeper bespoke editing, PDF production, richer interactive assessment, Academy-life scheduling/content and post-Academy depth.**
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.

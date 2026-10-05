@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "manifest_id": "academy_study_materials_v1_0",
   "status": "generated",
   "authoritative_source": "gameplay/careers/academy_path/curriculum/",
@@ -23,5 +23,22 @@
     "professional_branches": 7
   },
   "output_rule": "PDF and Academy web must be derived from these materials and the authoritative curriculum; they must not become independent curricula.",
-  "qa_status": "structural_generation_complete_editorial_and_provenance_qa_pending"
+  "qa_status": "provenance_pass_1_complete",
+  "provenance_coverage": {
+    "main_course_definitions": "60/60",
+    "professional_branches": "7/7"
+  },
+  "web_publication": {
+    "repository": "robdor80/academiaflota",
+    "version": "0.5.0",
+    "main_courses": 60,
+    "professional_branches": 7,
+    "status": "published"
+  },
+  "pending": [
+    "deeper_bespoke_editorial_enrichment",
+    "final_question_bank_editing_and_mcq_distractors",
+    "pdf_layout_and_generation",
+    "runtime_instructor_delivery_integration"
+  ]
 }
