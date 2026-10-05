@@ -1,10 +1,12 @@
 {
-  "schema_version": "0.1.0",
-  "model": "four_year_modular_curriculum",
+  "schema_version": "0.2.0",
+  "model": "four_year_three_trimester_modular_curriculum",
   "years": [
     {
-      "year": 1,
-      "phase": "fundamentals",
+      "sequence_year": 1,
+      "cadet_class_id": "cadet_fourth_class",
+      "phase": "fundamentals_and_discovery",
+      "trimesters": 3,
       "required_components": [
         "common_core",
         "physical_readiness",
@@ -14,11 +16,13 @@
       "specialization_load": "low"
     },
     {
-      "year": 2,
-      "phase": "professional_orientation",
+      "sequence_year": 2,
+      "cadet_class_id": "cadet_third_class",
+      "phase": "professional_exploration",
+      "trimesters": 3,
       "required_components": [
         "common_core",
-        "specialization_core",
+        "specialization_exploration",
         "team_practical"
       ],
       "specialization_load": "medium",
@@ -27,10 +31,13 @@
       ]
     },
     {
-      "year": 3,
-      "phase": "advanced_training",
+      "sequence_year": 3,
+      "cadet_class_id": "cadet_second_class",
+      "phase": "specialization_and_integration",
+      "trimesters": 3,
       "required_components": [
-        "advanced_specialization",
+        "specialization_core",
+        "advanced_practical",
         "complex_simulations",
         "leadership_development"
       ],
@@ -40,9 +47,13 @@
       ]
     },
     {
-      "year": 4,
+      "sequence_year": 4,
+      "cadet_class_id": "cadet_first_class",
       "phase": "service_preparation",
+      "trimesters": 3,
       "required_components": [
+        "advanced_specialization",
+        "integrated_ship_operations",
         "capstone",
         "service_readiness",
         "final_evaluations",
@@ -50,6 +61,12 @@
       ],
       "specialization_load": "high"
     }
+  ],
+  "learning_unit_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
   ],
   "course_slots": {
     "required_core": true,
@@ -64,5 +81,11 @@
     "second-year field study exists in 24th-century evidence",
     "third-year space-walk course exists in 24th-century evidence",
     "training cruises and simulations are documented"
+  ],
+  "design_rules": [
+    "the player chooses specialization",
+    "instructors may recommend but do not decide the player's branch",
+    "practical training reuses real gameplay systems",
+    "Kobayashi Maru belongs to the late-Academy capstone window; exact trimester remains configurable"
   ]
 }
