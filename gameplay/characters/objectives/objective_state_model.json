@@ -1,0 +1,57 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "character_objective_state",
+  "status": "locked_baseline",
+  "fields": {
+    "character_id": null,
+    "primary_long_term_goal": null,
+    "active_medium_term_goals": [],
+    "paused_goals": [],
+    "completed_goals": [],
+    "abandoned_goals": [],
+    "goal_history": []
+  },
+  "goal_fields": [
+    "goal_id",
+    "goal_type",
+    "statement",
+    "created_at",
+    "status",
+    "time_horizon",
+    "known_requirements",
+    "evidence_refs",
+    "trajectory_assessment",
+    "relevant_opportunity_refs",
+    "last_reviewed_at"
+  ],
+  "goal_types": [
+    "professional",
+    "academic",
+    "development",
+    "personal",
+    "cultural",
+    "exploration",
+    "relationship",
+    "other"
+  ],
+  "status_values": [
+    "active",
+    "paused",
+    "achieved",
+    "abandoned",
+    "currently_unreachable"
+  ],
+  "recommended_limits": {
+    "primary_long_term_goals": 1,
+    "active_medium_term_goals_min": 2,
+    "active_medium_term_goals_max": 4
+  },
+  "rules": [
+    "Goals do not grant bonuses or XP.",
+    "Goals do not guarantee outcomes.",
+    "Goals may change and their history is retained.",
+    "A goal may be free-form but must be validated for semantic clarity and world plausibility.",
+    "Professional goals are evaluated against real qualifications, experience, service record, opportunities and institutional constraints.",
+    "Personal goals may use the same capability and habit evidence systems without becoming Starfleet records automatically."
+  ]
+}
