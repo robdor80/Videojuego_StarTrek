@@ -1,0 +1,295 @@
+{
+  "schema_version": "1.0.0",
+  "curriculum_id": "academy_fourth_class_v1_0",
+  "status": "architecture_locked",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "mission_es": "Transformar a un civil admitido en un cadete capaz de comprender Starfleet, desenvolverse dentro de una nave y reconocer sus sistemas fundamentales, sin convertirlo todavía en especialista.",
+  "trimesters": [
+    {
+      "trimester": 1,
+      "theme_id": "becoming_a_cadet",
+      "theme_es": "Convertirse en cadete",
+      "goal_es": "Sé dónde estoy, qué es Starfleet, cómo se organiza y qué se espera de mí como cadete.",
+      "subjects": [
+        {
+          "course_id": "STF-401",
+          "title_es": "Organización y protocolo de Starfleet",
+          "scope": [
+            "misión y funciones de Starfleet",
+            "rangos",
+            "divisas",
+            "formas de tratamiento",
+            "cadena de mando",
+            "divisiones",
+            "departamentos",
+            "puestos",
+            "autoridad básica"
+          ],
+          "depth_limit": "No incluye mando avanzado, excepciones complejas de autoridad ni procedimientos de crisis."
+        },
+        {
+          "course_id": "FED-401",
+          "title_es": "Federación: fundamentos políticos y sociales",
+          "scope": [
+            "naturaleza política general de la Federación",
+            "instituciones fundamentales",
+            "mundos miembros",
+            "ciudadanía",
+            "relación Federación-Starfleet",
+            "diversidad cultural",
+            "nociones básicas de derecho y responsabilidad federal"
+          ],
+          "depth_limit": "No es una asignatura enciclopédica de historia, derecho o diplomacia."
+        },
+        {
+          "course_id": "ACA-401",
+          "title_es": "Vida académica, conducta y responsabilidad profesional",
+          "scope": [
+            "normas de Academia",
+            "responsabilidad académica",
+            "integridad",
+            "trabajo en equipo",
+            "disciplina",
+            "uso de instalaciones",
+            "rutinas",
+            "tutorías",
+            "conducta",
+            "evaluación",
+            "expediente"
+          ],
+          "depth_limit": "Introduce vida académica y conducta; no sustituye reglamentos profesionales avanzados."
+        },
+        {
+          "course_id": "INF-401",
+          "title_es": "Sistemas de información Starfleet",
+          "scope": [
+            "computadora",
+            "terminales",
+            "PADD",
+            "consulta de datos",
+            "perfiles personales",
+            "identificación",
+            "niveles básicos de acceso",
+            "registros",
+            "búsqueda de información"
+          ],
+          "depth_limit": "No incluye programación, administración avanzada ni arquitectura informática profunda."
+        },
+        {
+          "course_id": "PHY-401",
+          "title_es": "Preparación física I",
+          "scope": [
+            "evaluación funcional inicial",
+            "movilidad",
+            "resistencia",
+            "fuerza funcional",
+            "coordinación",
+            "salud y recuperación",
+            "inicio de rutina"
+          ],
+          "delivery_ref": "physical_readiness_delivery_v1_0"
+        }
+      ]
+    },
+    {
+      "trimester": 2,
+      "theme_id": "shipboard_life_and_service",
+      "theme_es": "Vida y trabajo a bordo",
+      "goal_es": "Entiendo cómo funciona una nave como organización humana y puedo desenvolverme en ella sin ser todavía operador especializado.",
+      "subjects": [
+        {
+          "course_id": "SHP-402",
+          "title_es": "Organización y vida a bordo",
+          "scope": [
+            "puente",
+            "Ingeniería",
+            "Enfermería",
+            "Seguridad",
+            "Ciencias",
+            "Operaciones",
+            "transportadores",
+            "hangares",
+            "alojamientos",
+            "espacios comunes",
+            "laboratorios",
+            "tripulación",
+            "departamentos",
+            "puestos",
+            "estaciones de trabajo",
+            "introducción a funciones de naves"
+          ],
+          "depth_limit": "No exige memorizar catálogos extensos de clases de nave ni operar departamentos."
+        },
+        {
+          "course_id": "DUT-402",
+          "title_es": "Servicio, guardias y trabajo profesional",
+          "scope": [
+            "guardias",
+            "turnos",
+            "relevo",
+            "puntualidad",
+            "asignación de puesto",
+            "cadena de responsabilidad",
+            "informes básicos",
+            "entrega de información",
+            "trabajo interdepartamental"
+          ],
+          "depth_limit": "No incluye mando avanzado ni doctrina compleja de órdenes."
+        },
+        {
+          "course_id": "SAF-402",
+          "title_es": "Seguridad y respuesta a emergencias I",
+          "scope": [
+            "alertas",
+            "evacuación",
+            "incendios",
+            "pérdida de presión",
+            "fallos ambientales",
+            "heridos",
+            "zonas restringidas",
+            "procedimientos básicos",
+            "control inicial de daños"
+          ],
+          "depth_limit": "Forma a todo cadete para responder de forma segura; no lo convierte en especialista de control de daños o Seguridad."
+        },
+        {
+          "course_id": "COM-402",
+          "title_es": "Comunicaciones y equipo personal",
+          "scope": [
+            "comunicador",
+            "tricorder básico",
+            "equipo personal",
+            "terminales móviles",
+            "comunicaciones internas",
+            "comunicaciones externas básicas",
+            "formatos sencillos de mensaje"
+          ],
+          "depth_limit": "No incluye comunicaciones tácticas, criptografía ni especialización técnica."
+        },
+        {
+          "course_id": "PHY-402",
+          "title_es": "Preparación física II",
+          "scope": [
+            "resistencia",
+            "fuerza funcional",
+            "coordinación",
+            "trabajo en equipo",
+            "natación u otras capacidades equivalentes según contexto",
+            "circuitos",
+            "actividad deportiva",
+            "continuidad de hábitos"
+          ],
+          "delivery_ref": "physical_readiness_delivery_v1_0"
+        }
+      ]
+    },
+    {
+      "trimester": 3,
+      "theme_id": "operational_and_technology_fundamentals",
+      "theme_es": "Fundamentos tecnológicos y operativos",
+      "goal_es": "Reconozco los grandes sistemas de una nave, entiendo sus funciones y puedo realizar prácticas introductorias sin ser todavía especialista.",
+      "subjects": [
+        {
+          "course_id": "SYS-403",
+          "title_es": "Sistemas fundamentales de una nave estelar",
+          "scope": [
+            "propulsión de impulso",
+            "curvatura",
+            "energía",
+            "soporte vital",
+            "transportadores",
+            "replicadores",
+            "escudos",
+            "armamento",
+            "computadora",
+            "holocubierta cuando la era lo permita",
+            "relaciones generales entre sistemas"
+          ],
+          "depth_limit": "Se estudia función, relación y limitaciones generales; no reparación o operación especializada."
+        },
+        {
+          "course_id": "NAV-403",
+          "title_es": "Navegación y astrográfica I",
+          "scope": [
+            "orientación espacial",
+            "mapa estelar",
+            "sectores",
+            "sistemas estelares",
+            "coordenadas",
+            "distancias",
+            "velocidad",
+            "impulso",
+            "warp",
+            "rutas",
+            "riesgos generales de navegación"
+          ],
+          "depth_limit": "No concede cualificación de navegación ni Flight Control."
+        },
+        {
+          "course_id": "SCI-403",
+          "title_es": "Ciencia, sensores y método científico I",
+          "scope": [
+            "observación",
+            "medición",
+            "hipótesis",
+            "evidencia",
+            "incertidumbre",
+            "qué mide un sensor",
+            "medición frente a interpretación científica",
+            "sensores internos y externos",
+            "activo y pasivo",
+            "contacto",
+            "lectura"
+          ],
+          "depth_limit": "No incluye todavía operación avanzada de Sensores ni especialidad científica."
+        },
+        {
+          "course_id": "ROT-403",
+          "title_es": "Rotaciones operativas e integración",
+          "scope": [
+            "Puente",
+            "Sensores",
+            "Ciencia",
+            "Ingeniería",
+            "Navegación",
+            "Operaciones",
+            "Seguridad",
+            "Medicina"
+          ],
+          "practice_rule": "Cada rotación introduce trabajo real de baja complejidad y supervisado usando sistemas auténticos del juego cuando existan.",
+          "specialization_effect": "Explora áreas profesionales; no selecciona especialización."
+        },
+        {
+          "course_id": "PHY-403",
+          "title_es": "Preparación física III",
+          "scope": [
+            "continuidad del programa",
+            "estado funcional",
+            "progreso razonable",
+            "autogestión",
+            "recuperación",
+            "cierre anual y comparación con estado inicial"
+          ],
+          "delivery_ref": "physical_readiness_delivery_v1_0"
+        }
+      ]
+    }
+  ],
+  "longitudinal_lines": [
+    {
+      "line_id": "physical_readiness_year_1",
+      "courses": ["PHY-401","PHY-402","PHY-403"],
+      "purpose": "Mantener y desarrollar condición funcional adecuada al servicio sin minijuego físico repetitivo."
+    }
+  ],
+  "rules": [
+    "Fourth Class remains common-core and non-specialist.",
+    "The three trimesters progress from institution to shipboard life to operational foundations.",
+    "Each trimester contains five courses.",
+    "Physical readiness is longitudinal and uses the shared habit/development systems.",
+    "Personal hobbies remain separate from required physical-readiness coursework but may develop the same underlying character capabilities.",
+    "Course IDs are stable across game, PDF, web, practices, evaluations and records.",
+    "Unit-level content is intentionally deferred to the next design pass."
+  ]
+}
