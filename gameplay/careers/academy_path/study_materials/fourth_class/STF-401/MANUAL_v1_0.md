@@ -1,196 +1,604 @@
 # STF-401 — Organización y protocolo de Starfleet
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 1**
 
 ## Finalidad
 
-Dominar la estructura institucional y el protocolo básico necesarios para funcionar como cadete y futuro oficial.
+Aprender la estructura institucional y el protocolo básico necesarios para funcionar como cadete y futuro oficial: comprender qué es Starfleet, distinguir rango, puesto y autoridad, reconocer la cadena de mando, identificar las grandes divisiones profesionales y desenvolverse correctamente en una situación de servicio sencilla.
 
-## Cómo estudiar esta asignatura
+Este curso no pretende convertir al cadete en oficial de mando. Su objetivo es que pueda entrar en una unidad de Starfleet y entender **quién es quién, quién responde de qué y cómo debe actuar sin inventar autoridad que no posee**.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+## Regla de estudio
 
-## STF-401-U01 — Starfleet como institución
+En esta asignatura no basta memorizar nombres. Debes poder:
 
-### Qué debes dominar
+1. explicar el concepto con tus propias palabras;
+2. reconocerlo en una situación realista;
+3. distinguir lo que sabes de lo que solo estás suponiendo;
+4. actuar dentro de tu puesto y autoridad;
+5. saber cuándo informar, pedir aclaración o escalar.
 
-- **misión general**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **exploración, ciencia, diplomacia, asistencia y defensa**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **relación funcional con la Federación**: La Federación Unida de Planetas es una república federal interestelar con gobierno civil propio. Starfleet es un servicio de la Federación y está sujeto a autoridad civil; Federación y Starfleet no son la misma institución.
+---
 
-### Aplicación operativa
+# STF-401-U01 — Starfleet como institución
 
-Clasificar situaciones por función institucional sin recurrir a trivia. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+## 1. Qué es Starfleet
 
-### Qué se evalúa
+Starfleet es un servicio de la Federación Unida de Planetas. No es la Federación en sí misma y no sustituye al gobierno civil. La Federación dispone de sus propias instituciones civiles, mientras que Starfleet ejerce funciones operativas, científicas, exploratorias, diplomáticas, de asistencia y de defensa dentro de su marco de autoridad.
 
-Preguntas aplicadas y breve caso de misión. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Para un cadete, esta separación es fundamental porque evita un error muy común: pensar que una nave de Starfleet puede decidir por sí sola cualquier cuestión política, jurídica o diplomática.
 
-### Errores frecuentes
+## 2. La misión general de Starfleet
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La misión general de Starfleet puede entenderse como una combinación de cinco grandes funciones:
 
-### Autoevaluación
+### Exploración
 
-1. Explica con tus palabras qué significa **misión general** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **misión general** y **exploración, ciencia, diplomacia, asistencia y defensa**?
-3. Resuelve de forma razonada esta práctica: *Clasificar situaciones por función institucional sin recurrir a trivia.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Explorar significa ampliar el conocimiento disponible: estudiar regiones desconocidas, localizar fenómenos, cartografiar espacio y entrar en contacto con entornos o sociedades nuevas cuando las reglas aplicables lo permitan.
 
-## STF-401-U02 — Rangos y divisas
+Una misión de exploración no convierte automáticamente lo desconocido en una amenaza.
 
-### Qué debes dominar
+### Ciencia
 
-- **jerarquía de oficiales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **divisas del estándar del proyecto**: Las divisas permiten reconocer el rango de forma rápida. El proyecto usa un estándar visual unificado inspirado en los pips de TNG para todas las eras jugables, aunque históricamente las insignias variaron.
-- **diferencia entre rango y puesto**: El rango expresa la posición jerárquica del oficial, pero no debe confundirse con el puesto concreto que ocupa. En el proyecto la progresión comisionada va de Alférez a Almirante de Flota, y la autoridad operativa depende también del puesto, la cualificación y las órdenes vigentes.
+Starfleet investiga el universo. Muchas de sus naves funcionan también como laboratorios móviles capaces de observar, medir y estudiar fenómenos físicos, biológicos, astronómicos o tecnológicos.
 
-### Aplicación operativa
+El trabajo científico no elimina la cadena de mando: una conclusión científica informa una decisión, pero no sustituye automáticamente a la autoridad que debe tomarla.
 
-Identificar rango, puesto y autoridad en ejemplos de tripulación. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+### Diplomacia
 
-### Qué se evalúa
+Las naves y oficiales de Starfleet pueden participar en contacto, representación, mediación y apoyo diplomático.
 
-Reconocimiento y razonamiento de precedencia básica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Eso no significa que cualquier oficial pueda asumir competencias políticas. El alcance de la autoridad depende de misión, puesto, órdenes y contexto.
 
-### Errores frecuentes
+### Asistencia
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Starfleet presta ayuda en emergencias, evacuaciones, rescates, desastres, crisis médicas o situaciones donde su capacidad técnica puede proteger vidas.
 
-### Autoevaluación
+La asistencia puede ser urgente sin dejar de estar condicionada por riesgos, jurisdicción, órdenes y normas aplicables.
 
-1. Explica con tus palabras qué significa **jerarquía de oficiales** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **jerarquía de oficiales** y **divisas del estándar del proyecto**?
-3. Resuelve de forma razonada esta práctica: *Identificar rango, puesto y autoridad en ejemplos de tripulación.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+### Defensa
 
-## STF-401-U03 — Formas de tratamiento
+Starfleet posee capacidad defensiva y puede proteger tripulaciones, instalaciones, población y espacio federado.
 
-### Qué debes dominar
+Defender no equivale a buscar combate. El uso de fuerza forma parte de una misión más amplia de servicio y está sujeto a autoridad y reglas.
 
-- **tratamiento a superiores, iguales y subordinados**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **uso de rango y cargo**: El rango expresa la posición jerárquica del oficial, pero no debe confundirse con el puesto concreto que ocupa. En el proyecto la progresión comisionada va de Alférez a Almirante de Flota, y la autoridad operativa depende también del puesto, la cualificación y las órdenes vigentes.
-- **contexto formal e informal**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 3. Starfleet y la Federación
 
-### Aplicación operativa
+La Federación es la entidad política. Starfleet es uno de sus grandes servicios.
 
-Diálogos de presentación, reporte y petición de permiso. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Esto implica tres ideas básicas:
 
-### Qué se evalúa
+- Starfleet está sujeta a autoridad civil.
+- Una nave no es un gobierno independiente.
+- Una orden operativa puede ser legítima dentro de Starfleet y, aun así, estar limitada por leyes, políticas o decisiones civiles superiores.
 
-Escena breve evaluada por corrección y contexto. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 4. Clasificar una misión
 
-### Errores frecuentes
+Una misma misión puede combinar varias funciones. Por ejemplo:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+> Una nave entra en un sistema desconocido, analiza una anomalía, rescata a una tripulación civil y después transmite un informe a una autoridad diplomática.
 
-### Autoevaluación
+Eso contiene exploración, ciencia, asistencia y posiblemente diplomacia. No hace falta obligar cada situación a una sola categoría.
 
-1. Explica con tus palabras qué significa **tratamiento a superiores, iguales y subordinados** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **tratamiento a superiores, iguales y subordinados** y **uso de rango y cargo**?
-3. Resuelve de forma razonada esta práctica: *Diálogos de presentación, reporte y petición de permiso.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+La clasificación sirve para comprender **qué objetivos, autoridades y riesgos** intervienen.
 
-## STF-401-U04 — Cadena de mando
+### Práctica
 
-### Qué debes dominar
+Clasifica estos casos por función principal y secundaria:
 
-- **autoridad ordinaria**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **sucesión básica**: La cadena de mando define por dónde circula la autoridad y la responsabilidad. Como regla de proyecto, la sucesión ordinaria parte del oficial al mando, sigue por Primer Oficial y Segundo Oficial y, después, por un sucesor cualificado y designado; el rango por sí solo no basta.
-- **órdenes válidas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **límites de autoridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Resolver a quién informar y de quién aceptar una orden en casos simples. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+1. Cartografiar un sistema no registrado.
+2. Investigar una alteración subespacial.
+3. Evacuar una colonia amenazada por una tormenta solar.
+4. Escoltar una nave civil durante una crisis regional.
+5. Transportar una delegación para una negociación.
 
 ### Qué se evalúa
 
-Casos de cadena de mando. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+No se evalúa trivia de episodios o naves famosas. Se evalúa que puedas explicar qué función de Starfleet está presente y qué tipo de responsabilidad genera.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **autoridad ordinaria** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **autoridad ordinaria** y **sucesión básica**?
-3. Resuelve de forma razonada esta práctica: *Resolver a quién informar y de quién aceptar una orden en casos simples.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. Explica con tus palabras cuál es la misión general de Starfleet.
+2. ¿Por qué Starfleet y la Federación no son la misma institución?
+3. ¿Puede una misión pertenecer a más de una función? Pon un ejemplo.
+4. ¿Por qué “defensa” no significa que Starfleet se defina únicamente como una fuerza de guerra?
+5. ¿Qué error podría cometer un oficial si confundiera autoridad operativa con autoridad política?
 
-## STF-401-U05 — Divisiones, departamentos y puestos
+---
 
-### Qué debes dominar
+# STF-401-U02 — Rangos y divisas
 
-- **Mando**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **Operaciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **Ciencias**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **departamentos y estaciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **puesto frente a especialidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Para qué sirve un rango
 
-### Aplicación operativa
+El rango expresa la posición jerárquica del oficial dentro de Starfleet. Ayuda a ordenar responsabilidad, precedencia y progresión profesional.
 
-Construir el organigrama básico de una nave de ejemplo. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Sin embargo, el rango **no describe por sí solo el trabajo exacto que una persona está realizando en ese momento**.
 
-### Qué se evalúa
+Un Teniente puede estar destinado a Ciencia, Ingeniería, Operaciones o cualquier otro departamento compatible con su carrera. Dos oficiales con el mismo rango pueden ejercer funciones muy distintas.
 
-Ejercicio de asignación de funciones. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Escala de oficiales del proyecto
 
-### Errores frecuentes
+La progresión comisionada normal utilizada por el proyecto es:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+| Orden | Rango |
+|---:|---|
+| 1 | Alférez |
+| 2 | Teniente júnior |
+| 3 | Teniente |
+| 4 | Teniente comandante |
+| 5 | Comandante |
+| 6 | Capitán |
+| 7 | Comodoro |
+| 8 | Contraalmirante |
+| 9 | Vicealmirante |
+| 10 | Almirante |
+| 11 | Almirante de Flota |
+
+El cadete constituye una vía separada y todavía no posee una comisión de oficial.
+
+## 3. Divisas
+
+El proyecto utiliza un estándar visual común inspirado en las divisas de pips de la era TNG para facilitar el reconocimiento entre las tres eras jugables.
+
+Para oficiales hasta Capitán:
+
+| Rango | Divisa de proyecto |
+|---|---|
+| Alférez | ● |
+| Teniente júnior | ●○ |
+| Teniente | ●● |
+| Teniente comandante | ●●○ |
+| Comandante | ●●● |
+| Capitán | ●●●● |
+
+Los rangos de almirantazgo utilizan pips enmarcados.
+
+Esta uniformización es una decisión del juego: las insignias históricas reales de Starfleet variaron según la época.
+
+## 4. Rango, puesto y autoridad
+
+Debes separar tres conceptos:
+
+**Rango**: posición jerárquica general.
+
+**Puesto**: responsabilidad concreta asignada, por ejemplo Oficial al Mando, Primer Oficial, Oficial de Operaciones o Jefe de Ingeniería.
+
+**Autoridad**: capacidad válida para ordenar, decidir o autorizar algo en un contexto determinado.
+
+El rango influye en la autoridad, pero no la determina por sí solo.
+
+Ejemplo:
+
+> Un Comandante destinado como Primer Oficial puede tener mayor rango que un Teniente que actúa como jefe temporal de una tarea técnica. Eso no significa que el Comandante deba sustituir al especialista en cada decisión técnica concreta.
+
+## 5. El error del “rango gana siempre”
+
+Starfleet no funciona como una simple comparación de números.
+
+La autoridad también puede depender de:
+
+- puesto formal;
+- cualificación;
+- órdenes específicas;
+- responsabilidad de guardia;
+- disponibilidad;
+- contexto de emergencia;
+- reglas de sucesión.
+
+### Práctica
+
+Para cada caso, identifica por separado rango, puesto y autoridad relevante.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **Mando** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **Mando** y **Operaciones**?
-3. Resuelve de forma razonada esta práctica: *Construir el organigrama básico de una nave de ejemplo.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué diferencia existe entre rango y puesto?
+2. ¿Por qué el oficial de mayor rango no decide necesariamente cada cuestión técnica?
+3. ¿Cuál es el rango comisionado inicial normal tras graduarse?
+4. ¿Qué parte del sistema de divisas es una estandarización del proyecto?
+5. ¿Qué información adicional necesitas antes de decidir quién tiene autoridad sobre una acción?
 
-## STF-401-U06 — Protocolo integrado
+---
 
-### Qué debes dominar
+# STF-401-U03 — Formas de tratamiento
 
-- **presentación al servicio**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **recepción y acuse de órdenes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **conducta profesional básica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Para qué existe el protocolo verbal
 
-### Aplicación operativa
+El protocolo no es una colección de frases ceremoniales. Su función es reducir ambigüedad.
 
-Mini-simulación de llegada a una unidad y primera instrucción. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+En una organización grande, una comunicación profesional debe permitir reconocer:
 
-### Qué se evalúa
+- a quién se habla;
+- en qué calidad se habla;
+- qué se informa o solicita;
+- quién asume responsabilidad.
 
-Evaluación integrada de conocimiento, comunicación y disciplina. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Rango y cargo al dirigirse a alguien
 
-### Errores frecuentes
+En un contexto formal puede ser apropiado identificar a una persona por su rango. En un contexto funcional puede ser más útil emplear su cargo.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Ejemplos conceptuales:
+
+- identificar a alguien como **Teniente** destaca su rango;
+- dirigirse al **Jefe de Ingeniería** destaca la función que desempeña;
+- referirse al **Primer Oficial** identifica una responsabilidad dentro de la cadena de mando.
+
+El contexto decide qué información resulta más útil.
+
+El proyecto no impone una fórmula verbal única para todas las eras cuando el lore validado no lo exige. La regla estable es **claridad profesional y respeto a rango, cargo y contexto**.
+
+## 3. Superiores, iguales y subordinados
+
+Tratar correctamente a otra persona no significa utilizar un tono servil.
+
+Con un superior:
+- comunicar con claridad;
+- reconocer su autoridad válida;
+- pedir aclaración cuando una instrucción sea ambigua;
+- informar de impedimentos reales.
+
+Con un igual:
+- coordinar;
+- no inventar autoridad que no posees;
+- compartir información necesaria.
+
+Con un subordinado:
+- dar instrucciones comprensibles;
+- respetar su competencia;
+- no ocultar información necesaria para ejecutar la tarea;
+- asumir responsabilidad por las órdenes propias.
+
+## 4. Formal e informal
+
+Una conversación fuera de servicio puede ser mucho más relajada que un reporte durante una emergencia.
+
+El cambio de tono no elimina la estructura profesional cuando vuelve a ser relevante.
+
+Dos compañeros pueden tutearse durante una comida y, minutos después, utilizar rango o cargo porque uno está informando oficialmente al otro.
+
+## 5. Pedir permiso y reportar
+
+Una petición profesional debe incluir lo necesario para que la otra persona pueda decidir.
+
+Ejemplo de estructura:
+
+> “Teniente, solicito autorización para repetir el barrido con mayor resolución. La primera lectura está degradada por interferencia.”
+
+Un reporte debe separar hechos de interpretación:
+
+> “Contacto detectado a larga distancia. Identidad no confirmada. Solicito análisis adicional.”
+
+### Práctica
+
+Representa tres escenas:
+1. presentación ante un instructor;
+2. reporte a un superior;
+3. coordinación con un compañero de otro departamento.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **presentación al servicio** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **presentación al servicio** y **recepción y acuse de órdenes**?
-3. Resuelve de forma razonada esta práctica: *Mini-simulación de llegada a una unidad y primera instrucción.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Para qué sirve realmente el protocolo verbal?
+2. ¿Cuándo puede ser más útil emplear un cargo que un rango?
+3. ¿Qué diferencia existe entre respeto profesional y obediencia ciega?
+4. ¿Qué debe contener una petición de permiso útil?
+5. ¿Por qué un tono informal no elimina necesariamente las responsabilidades del servicio?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# STF-401-U04 — Cadena de mando
 
-## Tratamiento por era
+## 1. Qué es la cadena de mando
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+La cadena de mando organiza autoridad y responsabilidad.
+
+No existe únicamente para decir “quién manda”. También permite saber:
+
+- quién debe recibir un informe;
+- quién puede autorizar una acción;
+- quién asume responsabilidad;
+- quién sustituye a quién cuando alguien no puede ejercer su función.
+
+## 2. Sucesión básica
+
+La secuencia general establecida por el proyecto es:
+
+1. Oficial al Mando;
+2. Primer Oficial;
+3. Segundo Oficial;
+4. sucesor cualificado designado.
+
+Después intervienen factores como rango, antigüedad, cualificación, disponibilidad, aptitud médica, órdenes específicas y el roster local de sucesión.
+
+Por tanto, la sucesión no se resuelve simplemente buscando “la persona con más galones”.
+
+## 3. Autoridad ordinaria
+
+Una persona posee autoridad sobre aquello que su puesto, misión, cualificación y órdenes le permiten dirigir.
+
+La autoridad puede ser:
+
+- permanente mientras se ocupa un puesto;
+- limitada a una guardia;
+- temporal durante una emergencia;
+- específica para una misión.
+
+Asumir mando temporal no cambia automáticamente el rango permanente del personaje.
+
+## 4. Una orden no es válida solo porque alguien la pronuncie
+
+Antes de ejecutar una orden relevante, un cadete debe considerar:
+
+- quién la da;
+- si esa persona posee autoridad en ese contexto;
+- si la instrucción es comprensible;
+- si contradice una restricción conocida;
+- si requiere una autorización adicional.
+
+En 4.ª clase no se estudian todavía todas las excepciones legales o reglamentarias. Sí se aprende una regla básica: **si la autoridad o la instrucción no están claras, se pide aclaración en lugar de improvisar**.
+
+## 5. Límites de autoridad
+
+Tener autoridad en un área no otorga autoridad universal.
+
+Ejemplos:
+- el jefe de un departamento dirige su ámbito, pero no se convierte por ello en Oficial al Mando;
+- el Oficial al Mando puede marcar objetivos operativos, pero sigue dependiendo de especialistas para muchas decisiones técnicas;
+- un oficial médico puede poseer autoridad específica en cuestiones médicas sin asumir automáticamente el control de toda la nave.
+
+### Práctica
+
+Resuelve a quién informarías y de quién aceptarías instrucciones en varios casos de guardia ordinaria.
+
+### Autoevaluación
+
+1. ¿Cuál es la secuencia básica de sucesión?
+2. ¿Por qué el rango por sí solo no basta para resolver una sucesión?
+3. ¿Qué significa autoridad temporal?
+4. ¿Qué harías si recibes una instrucción ambigua?
+5. Pon un ejemplo de autoridad limitada a un ámbito concreto.
+
+---
+
+# STF-401-U05 — Divisiones, departamentos y puestos
+
+## 1. Tres grandes divisiones
+
+El proyecto agrupa gran parte de Starfleet en tres grandes familias:
+
+### Mando
+
+Incluye funciones de dirección y, habitualmente, control de vuelo/navegación.
+
+### Operaciones
+
+Incluye áreas como gestión de operaciones, Ingeniería, Seguridad, Táctica y Comunicaciones.
+
+### Ciencias
+
+Incluye Ciencia, Medicina y Consejería.
+
+Estas divisiones sirven para organizar funciones y tradición profesional. No significan que todas las personas de una misma división sepan realizar el trabajo de todos los departamentos incluidos en ella.
+
+## 2. Departamento
+
+Un departamento agrupa trabajo profesional especializado.
+
+Ejemplos:
+- Ingeniería;
+- Seguridad;
+- Táctica;
+- Ciencia;
+- Medicina;
+- Operaciones;
+- Comunicaciones.
+
+Una nave concreta puede adaptar su organización a tamaño, época y misión.
+
+## 3. Puesto
+
+El puesto es la responsabilidad concreta que una persona desempeña.
+
+Ejemplos del modelo del proyecto:
+
+- Oficial al Mando;
+- Primer Oficial;
+- Segundo Oficial;
+- Oficial de Operaciones;
+- Oficial de Control de Vuelo;
+- Jefe Táctico;
+- Jefe de Seguridad;
+- Jefe de Ingeniería;
+- Jefe Científico;
+- Jefe Médico;
+- Oficial de Comunicaciones.
+
+## 4. Estación de trabajo
+
+Una estación es un punto funcional desde el que se accede a sistemas autorizados.
+
+No debe confundirse:
+
+> **persona ≠ puesto ≠ estación ≠ sistema**
+
+Un mismo tipo de puesto puede usar estaciones distintas según la clase de nave y la era. Una misma estación puede permitir varias funciones compatibles con autorización y configuración.
+
+## 5. Especialidad
+
+La especialidad describe la formación profesional del personaje.
+
+Un oficial puede poseer una especialidad determinada y encontrarse temporalmente en un puesto diferente, siempre que tenga la cualificación y la autoridad necesarias.
+
+### Práctica
+
+Construye un organigrama básico de una nave de ejemplo diferenciando:
+
+- división;
+- departamento;
+- puesto;
+- rango;
+- estación.
+
+### Autoevaluación
+
+1. Nombra las tres grandes divisiones del proyecto.
+2. ¿Por qué división y departamento no son exactamente lo mismo?
+3. ¿Qué diferencia existe entre puesto y estación?
+4. ¿Puede dos personas con la misma especialidad ocupar puestos distintos?
+5. ¿Por qué “Operaciones” puede significar una división amplia y también un puesto/departamento concreto según el contexto?
+
+---
+
+# STF-401-U06 — Protocolo integrado
+
+## 1. Llegar a una unidad
+
+El primer contacto con una unidad resume gran parte de lo aprendido.
+
+El cadete debe ser capaz de:
+
+1. identificar a quién debe presentarse;
+2. confirmar su identidad y destino;
+3. recibir una asignación;
+4. reconocer quién supervisa su actividad;
+5. preguntar cuando algo no está claro.
+
+## 2. Recibir una instrucción
+
+Una recepción profesional de una orden o instrucción consta de varias fases:
+
+### Escuchar
+
+No interrumpir ni anticipar lo que se cree que el superior va a decir.
+
+### Comprender
+
+Identificar:
+- objetivo;
+- tarea;
+- restricciones;
+- prioridad;
+- plazo si existe.
+
+### Confirmar
+
+Cuando sea necesario, repetir o resumir la instrucción para comprobar que se ha entendido.
+
+### Ejecutar
+
+Actuar dentro de la propia autoridad y capacidad.
+
+### Informar
+
+Comunicar:
+- resultado;
+- impedimento;
+- cambio de situación;
+- necesidad de apoyo.
+
+## 3. Acuse no significa obediencia automática
+
+Confirmar una orden significa que se ha recibido y entendido.
+
+No significa fingir que:
+- posees una cualificación que no tienes;
+- el sistema está disponible cuando no lo está;
+- una instrucción imposible puede ejecutarse;
+- una duda de autoridad debe ignorarse.
+
+Un buen profesional comunica el problema antes de convertirlo en un fallo mayor.
+
+## 4. Conducta profesional básica
+
+En este curso la conducta profesional se resume en:
+
+- puntualidad;
+- preparación;
+- claridad;
+- honestidad;
+- respeto;
+- responsabilidad;
+- reconocimiento de límites;
+- comunicación de errores.
+
+Ocultar un error puede ser más grave que cometerlo, porque impide que el resto de la organización responda correctamente.
+
+## 5. Caso integrado
+
+Llegas por primera vez a una nave de entrenamiento. Un Alférez te indica que debes incorporarte a una práctica en una estación que nunca has utilizado. El instructor responsable no se encuentra allí.
+
+Una respuesta profesional sería:
+
+1. confirmar la instrucción;
+2. explicar que no estás cualificado para operar la estación de forma autónoma;
+3. preguntar quién supervisará la práctica;
+4. acudir al lugar asignado;
+5. no ejecutar acciones fuera del entrenamiento autorizado.
+
+Eso demuestra disciplina sin convertirla en obediencia ciega.
+
+### Práctica
+
+Mini-simulación completa de:
+- llegada;
+- presentación;
+- recepción de instrucción;
+- aclaración;
+- ejecución;
+- reporte final.
+
+### Autoevaluación
+
+1. ¿Qué debes identificar al recibir una instrucción?
+2. ¿Qué diferencia existe entre confirmar y obedecer ciegamente?
+3. ¿Cuándo debes informar de un impedimento?
+4. ¿Por qué reconocer un límite profesional es una fortaleza y no una debilidad?
+5. Describe una llegada correcta a una unidad de entrenamiento.
+
+---
+
+# Evaluación del curso
+
+STF-401 combina:
+
+- conocimiento institucional;
+- reconocimiento de rango, puesto y autoridad;
+- comunicación;
+- juicio básico;
+- disciplina;
+- conducta profesional.
+
+El contenido explicado aquí puede preguntarse directamente.
+
+No forman parte de la evaluación:
+- trivia de episodios;
+- listas enciclopédicas de oficiales;
+- datos no enseñados;
+- excepciones complejas de reglamento propias de cursos posteriores.
+
+Un error localizado puede generar tutoría, práctica adicional o reevaluación. La campaña no necesita convertir una duda de protocolo en un callejón sin salida.
+
+# Tratamiento por era
+
+El núcleo de esta asignatura permanece estable en Pike, Kirk y TNG/DS9/Voyager.
+
+Cambian:
+- uniformes;
+- interfaces;
+- terminología visual;
+- determinados usos históricos;
+- presentación de simuladores y material académico.
+
+El proyecto mantiene un estándar común de reconocimiento de divisas para que el jugador no tenga que reaprender la jerarquía completa en cada era.
+
+# Referencias internas
+
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `lore/federation/starfleet/ranks/officer_ranks.json`
+- `lore/federation/starfleet/ranks/rank_insignia_standard.json`
+- `lore/federation/starfleet/departments/divisions_and_departments.json`
+- `lore/federation/starfleet/positions/positions.json`
+- `lore/federation/starfleet/command_structure/succession_rules.json`
+
+Estas referencias constriñen el contenido factual. La organización pedagógica, ejemplos y ejercicios son una capa de diseño del proyecto cuando el canon no especifica una Academia completa con este nivel de detalle.
