@@ -39,11 +39,16 @@ El sistema evalúa:
 
 ## Usuario vs personaje
 
-El usuario decide **cómo actuar**.
+El usuario decide **cómo actuar** y puede ser evaluado directamente sobre conocimientos profesionales que la Academia le haya enseñado de forma explícita.
 
-El personaje determina **qué sabe hacer**.
+El personaje determina **qué sabe hacer**, qué experiencia tiene y con qué calidad puede ejecutar una tarea.
 
-No se penaliza al usuario por no conocer ciencia ficticia de Star Trek.
+Reglas:
+- no se exige trivia de episodios, películas o wiki;
+- no se exige ciencia ficticia que no haya sido enseñada;
+- el contenido profesional enseñado sí puede aparecer en preguntas, decisiones, procedimientos y prácticas;
+- la ejecución técnica puede combinar conocimiento del jugador, competencia del personaje, contexto y evidencia previa;
+- cuando una tarea dependa de conocimiento diegético especializado no enseñado al jugador, el sistema debe apoyarse en la competencia del personaje en lugar de convertirlo en un examen sorpresa.
 
 ## Recuperación
 
