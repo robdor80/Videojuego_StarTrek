@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "historical_conflict_definition",
+  "status": "foundation_fixed",
+  "required_fields": [
+    "conflict_id",
+    "display_name",
+    "start_date_or_range",
+    "participant_refs",
+    "provenance"
+  ],
+  "optional_fields": [
+    "end_date_or_range",
+    "regions",
+    "fronts_or_key_locations",
+    "political_context",
+    "major_event_refs",
+    "technology_impacts",
+    "territorial_impacts",
+    "population_impacts",
+    "veteran_background_hooks",
+    "era_knowledge_profile",
+    "campaign_start_effects"
+  ],
+  "rules": [
+    "Historical conflict data initializes campaign context; post-start future is emergent.",
+    "Participant species and political allegiance are not interchangeable.",
+    "Generated NPC histories may reference a conflict only when age/date/location/context are compatible.",
+    "Conflict knowledge available to characters depends on era, education, access and personal history."
+  ]
+}
