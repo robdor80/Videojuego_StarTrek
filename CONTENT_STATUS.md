@@ -105,6 +105,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
 | Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
 | Observable universe core | ✅ COMPLETE | Authoritative world truth, observable-entity/signature contracts, deterministic seeded v0.0.1 generator and deterministic sensor-detection resolution are implemented for the current vertical-slice scope. |
+| Operational event log v0.1 | ✅ COMPLETE | Cross-console append-only event contract, event vocabulary, visibility projection and Sensors worked example established; evaluation remains a separate consumer. |
 
 ## Major remaining domains
 
@@ -129,6 +130,6 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 ## Active block
 
-**Interactive ship systems vertical slice: Sensors console → operational log/evaluation → Academy/Galaxy UX → playable v0.0.1 duty scenario.**
+**Interactive ship systems vertical slice: Sensors console → operational log ✅ → Academy/Galaxy UX → playable v0.0.1 duty scenario.**
 
-The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Sensors functional design v0.1 is now fully approved across all ten branches, including persistence and inter-console handoffs. Sensors operator manuals are delivered in in-game study and external PDF forms. Immediate next work: operational event log/evaluation, then Academy and Galaxy-class console UX skins, and the playable duty scenario. Wider lore continues only when required by this gameplay path.
+The authoritative observable-universe core, deterministic minimal generator and sensor-detection resolution are complete for v0.0.1. Sensors functional design v0.1 is fully approved across all ten branches, including persistence and inter-console handoffs. Sensors operator manuals are delivered in in-game study and external PDF forms. Operational event log v0.1 is now complete as a Star Trek-side contract. Immediate next work: Academy Sensors UX, then Galaxy-class console UX and the playable duty scenario; evaluation will consume logged evidence rather than being embedded in the log. Wider lore continues only when required by this gameplay path.
