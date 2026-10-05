@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "procedural_traffic_activity",
+  "status": "foundation_fixed",
+  "activity_drivers": [
+    "resource_extraction",
+    "cargo_supply",
+    "passenger_demand",
+    "trade",
+    "scientific_research",
+    "exploration",
+    "patrol",
+    "border_security",
+    "diplomacy",
+    "medical_need",
+    "repair_or_refit",
+    "colonization",
+    "training",
+    "emergency_response",
+    "military_deployment",
+    "criminal_activity_when_context_valid"
+  ],
+  "traffic_record_fields": [
+    "traffic_id",
+    "actor_entity_refs",
+    "origin_ref",
+    "destination_ref",
+    "purpose",
+    "scheduled_departure",
+    "expected_arrival",
+    "route_ref",
+    "cargo_or_passenger_summary",
+    "authority_or_contract_ref",
+    "current_status",
+    "seed_and_provenance"
+  ],
+  "rules": [
+    "Traffic should preferentially arise from real infrastructure, population and operational needs.",
+    "A facility's existence may create recurring traffic demand.",
+    "Traffic may be delayed, diverted, cancelled or interrupted by campaign events.",
+    "Distant traffic may be simulated at lower fidelity but remains temporally coherent.",
+    "Local traffic becomes higher fidelity as it approaches player relevance.",
+    "A random encounter should ideally be an intersection with existing traffic/activity rather than an entity spawned solely for the encounter."
+  ]
+}
