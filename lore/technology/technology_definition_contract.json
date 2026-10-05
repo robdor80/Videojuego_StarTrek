@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "technology_definition",
+  "status": "foundation_fixed",
+  "required_fields": [
+    "technology_id",
+    "display_name",
+    "category",
+    "temporal_validity",
+    "availability",
+    "provenance"
+  ],
+  "optional_fields": [
+    "operator_or_civilization_validity",
+    "platform_compatibility",
+    "maturity",
+    "capabilities",
+    "operational_constraints",
+    "power_or_resource_requirements",
+    "detectable_signature_refs",
+    "failure_modes",
+    "dependencies",
+    "access_restrictions",
+    "era_overrides",
+    "generation_weight_profile"
+  ],
+  "availability_values": [
+    "standard",
+    "available",
+    "experimental",
+    "class_specific",
+    "rare",
+    "not_standard",
+    "unavailable"
+  ],
+  "rules": [
+    "Availability in an era does not imply installation on every compatible entity.",
+    "Procedural generation must validate date, civilization/operator and platform.",
+    "Canon uncertainty must not be converted into false numerical precision.",
+    "Game-added constraints must be labeled separately from canon/reference facts.",
+    "Live damage/state belongs in runtime state, not in the immutable technology definition."
+  ]
+}
