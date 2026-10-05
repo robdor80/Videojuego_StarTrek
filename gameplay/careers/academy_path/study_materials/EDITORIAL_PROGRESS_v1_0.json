@@ -29,9 +29,10 @@
     "FED_401": "synced_developed_content_and_assessment",
     "ACA_401": "synced_developed_content_and_assessment",
     "INF_401": "synced_developed_content_and_assessment",
-    "PHY_401": "pending_sync_after_main_commit"
+    "PHY_401": "synced_developed_content_and_assessment"
   },
   "milestones": [
     "fourth_class_trimester_1_developed"
-  ]
+  ],
+  "current_milestone": "fourth_class_trimester_1_developed_and_synced"
 }
