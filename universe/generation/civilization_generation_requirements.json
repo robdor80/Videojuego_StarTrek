@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "requirements_id": "civilization_generation_requirements",
+  "status": "foundation_fixed_content_pending",
+  "generation_dimensions": [
+    "homeworld_or_origin",
+    "species_or_multi_species_population",
+    "population_scale",
+    "technology_level",
+    "spaceflight_capability",
+    "warp_status",
+    "political_structure",
+    "economic_and_resource_profile",
+    "settlement_distribution",
+    "orbital_infrastructure",
+    "language_context",
+    "culture_profile",
+    "contact_status",
+    "relationship_to_nearby_powers",
+    "known_to_starfleet_by_era"
+  ],
+  "rules": [
+    "Generated civilizations need not belong to a major canonical faction.",
+    "Pre-warp contact status constrains Starfleet interaction.",
+    "Technology level constrains generated ships, facilities and detectable signatures.",
+    "Culture influences institutions and norms but does not prescribe every individual's personality.",
+    "Political alignment and species identity are separate.",
+    "Once materialized, civilization identity and history persist and evolve through campaign events."
+  ],
+  "content_work_needed": [
+    "technology_level_grammar",
+    "government_archetype_grammar",
+    "settlement_infrastructure_grammar",
+    "contact_status_rules",
+    "naming_language_generation_profiles",
+    "population_species_compatibility_rules",
+    "trade_resource_interaction_rules"
+  ]
+}
