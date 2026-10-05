@@ -1,190 +1,62 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.2.1",
   "curriculum_id": "starfleet_academy_master_v0_2",
   "status": "design_baseline",
   "pre_admission": {
-    "optional_study": true,
-    "domains": [
-      "starfleet_orientation",
-      "federation_foundations",
-      "basic_scientific_reasoning",
-      "spatial_reasoning",
-      "communication",
-      "physical_readiness",
-      "intro_ranks_divisions",
-      "technology_literacy"
-    ]
+    "curriculum_id": "starfleet_academy_access_v1_0",
+    "manual_id": "candidate_manual_v1_0",
+    "purpose": "general_orientation_only",
+    "blocks": ["ACC-01","ACC-02","ACC-03","ACC-04","ACC-05"],
+    "professional_depth_forbidden": true
   },
   "years": [
     {
       "sequence_year": 1,
       "cadet_class_id": "cadet_fourth_class",
       "trimesters": [
-        {
-          "trimester": 1,
-          "theme": "becoming_a_cadet",
-          "required_subjects": [
-            "starfleet_structure_and_mission",
-            "ranks_insignia_forms_of_address",
-            "chain_of_command",
-            "divisions_departments_roles",
-            "academy_conduct",
-            "federation_foundations",
-            "physical_readiness",
-            "computer_and_padd_basics"
-          ]
-        },
-        {
-          "trimester": 2,
-          "theme": "life_aboard_a_starship",
-          "required_subjects": [
-            "shipboard_organization",
-            "duty_watches_relief_reporting",
-            "bridge_station_overview",
-            "starship_roles_and_classes",
-            "alerts_and_emergency_basics",
-            "basic_communications",
-            "tricorder_and_personal_equipment",
-            "environmental_life_support_basics",
-            "damage_control_safety"
-          ]
-        },
-        {
-          "trimester": 3,
-          "theme": "operational_technology_fundamentals",
-          "required_subjects": [
-            "warp_impulse_fundamentals",
-            "navigation_astrography_basics",
-            "sensor_fundamentals",
-            "transporter_fundamentals",
-            "replicator_fundamentals",
-            "holodeck_fundamentals",
-            "shields_weapons_overview",
-            "scientific_method",
-            "emergency_response_practical",
-            "division_exploration"
-          ]
-        }
+        {"trimester":1,"theme":"becoming_a_cadet","required_subjects":["starfleet_structure_and_mission","ranks_insignia_forms_of_address","chain_of_command","divisions_departments_roles","academy_conduct","federation_foundations","physical_readiness","computer_and_padd_basics"]},
+        {"trimester":2,"theme":"life_aboard_a_starship","required_subjects":["shipboard_organization","duty_watches_relief_reporting","bridge_station_overview","starship_roles_and_classes","alerts_and_emergency_basics","basic_communications","tricorder_and_personal_equipment","environmental_life_support_basics","damage_control_safety"]},
+        {"trimester":3,"theme":"operational_technology_fundamentals","required_subjects":["warp_impulse_fundamentals","navigation_astrography_basics","sensor_fundamentals","transporter_fundamentals","replicator_fundamentals","holodeck_fundamentals","shields_weapons_overview","scientific_method","emergency_response_practical","division_exploration"]}
       ]
     },
     {
       "sequence_year": 2,
       "cadet_class_id": "cadet_third_class",
       "trimesters": [
-        {
-          "trimester": 1,
-          "theme": "applied_ship_operations",
-          "required_subjects": [
-            "bridge_operations",
-            "operations_coordination",
-            "power_fundamentals",
-            "engineering_fundamentals",
-            "sensor_search_fundamentals",
-            "navigation_plotting",
-            "structured_reporting",
-            "interdepartment_handoff",
-            "team_practical"
-          ]
-        },
-        {
-          "trimester": 2,
-          "theme": "people_risk_federation",
-          "required_subjects": [
-            "interspecies_protocol",
-            "first_contact_principles",
-            "prime_directive_and_regulations",
-            "diplomacy_fundamentals",
-            "medical_triage_basics",
-            "security_fundamentals",
-            "survival",
-            "away_team_fundamentals",
-            "field_training"
-          ]
-        },
-        {
-          "trimester": 3,
-          "theme": "division_decision_window",
-          "required_subjects": [
-            "integrated_simulation",
-            "leadership_foundations",
-            "advanced_reporting",
-            "professional_self_assessment",
-            "branch_exposure_practicals"
-          ],
-          "specialization_commitment": "optional_begin"
-        }
+        {"trimester":1,"theme":"applied_ship_operations","required_subjects":["bridge_operations","operations_coordination","power_fundamentals","engineering_fundamentals","sensor_search_fundamentals","navigation_plotting","structured_reporting","interdepartment_handoff","team_practical"]},
+        {"trimester":2,"theme":"people_risk_federation","required_subjects":["interspecies_protocol","first_contact_principles","prime_directive_and_regulations","diplomacy_fundamentals","medical_triage_basics","security_fundamentals","survival","away_team_fundamentals","field_training"]},
+        {"trimester":3,"theme":"division_decision_window","required_subjects":["integrated_simulation","leadership_foundations","advanced_reporting","professional_self_assessment","branch_exposure_practicals"],"specialization_selection":"required_by_end_of_trimester"}
       ]
     },
     {
       "sequence_year": 3,
       "cadet_class_id": "cadet_second_class",
       "trimesters": [
-        {
-          "trimester": 1,
-          "theme": "specialization_core_1",
-          "specialization_commitment": "normal_completion_window",
-          "branch_curriculum_slot": true
-        },
-        {
-          "trimester": 2,
-          "theme": "specialization_core_2",
-          "branch_curriculum_slot": true,
-          "cross_training_slot": true
-        },
-        {
-          "trimester": 3,
-          "theme": "specialization_core_3",
-          "branch_curriculum_slot": true,
-          "intermediate_qualification": true
-        }
+        {"trimester":1,"theme":"specialization_core_1","specialization_status":"formally_active","branch_curriculum_slot":true},
+        {"trimester":2,"theme":"specialization_core_2","branch_curriculum_slot":true,"cross_training_slot":true},
+        {"trimester":3,"theme":"specialization_core_3","branch_curriculum_slot":true,"intermediate_qualification":true}
       ]
     },
     {
       "sequence_year": 4,
       "cadet_class_id": "cadet_first_class",
       "trimesters": [
-        {
-          "trimester": 1,
-          "theme": "advanced_specialization",
-          "branch_curriculum_slot": true,
-          "service_like_supervised_watch": true
-        },
-        {
-          "trimester": 2,
-          "theme": "integrated_starship_operations",
-          "required_subjects": [
-            "integrated_bridge_operations",
-            "extended_team_simulation",
-            "duty_continuity",
-            "operational_debrief"
-          ]
-        },
-        {
-          "trimester": 3,
-          "theme": "capstone_and_commissioning",
-          "required_subjects": [
-            "final_branch_evaluation",
-            "service_readiness",
-            "kobayashi_maru",
-            "assignment_preparation",
-            "graduation_requirements"
-          ]
-        }
+        {"trimester":1,"theme":"advanced_specialization","branch_curriculum_slot":true,"service_like_supervised_watch":true},
+        {"trimester":2,"theme":"integrated_starship_operations","required_subjects":["integrated_bridge_operations","extended_team_simulation","duty_continuity","operational_debrief"]},
+        {"trimester":3,"theme":"capstone_and_commissioning","required_subjects":["final_branch_evaluation","service_readiness","kobayashi_maru","assignment_preparation","graduation_requirements"],"kobayashi_maru":"universal_project_tradition_all_playable_eras"}
       ]
     }
   ],
-  "learning_cycle": [
-    "theory",
-    "instructor_class",
-    "real_system_practice",
-    "continuous_evaluation"
-  ],
+  "learning_cycle": ["theory","instructor_class","real_system_practice","continuous_evaluation"],
   "rules": [
-    "The player chooses specialization.",
+    "The player chooses specialization by the end of Third Class Trimester 3.",
+    "Formal specialization begins in Second Class Trimester 1.",
     "Instructor recommendations are advisory.",
-    "Specialization changes remain possible with catch-up requirements.",
+    "Specialization changes remain possible with realistic catch-up requirements.",
     "Academy practice uses real gameplay systems whenever available.",
+    "Taught professional knowledge may be required from the player in Academy exams and practice.",
     "External website study progress does not automatically grant in-game qualification without explicit validation/import rules.",
-    "Era-specific content may override examples/equipment without duplicating the curriculum architecture."
+    "Era-specific content may override examples/equipment without duplicating the curriculum architecture.",
+    "Kobayashi Maru is a project-wide Academy tradition; its exact implementation is era-appropriate."
   ]
 }
