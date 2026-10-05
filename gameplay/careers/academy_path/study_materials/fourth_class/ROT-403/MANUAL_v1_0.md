@@ -1,198 +1,376 @@
 # ROT-403 — Rotaciones operativas e integración
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Dar exposición práctica suficiente a las principales áreas profesionales sin seleccionar todavía especialización.
+Dar al cadete exposición práctica a las principales áreas profesionales sin obligarlo todavía a elegir especialización.
 
-## Cómo estudiar esta asignatura
+ROT-403 no pretende convertir una visita breve en competencia profesional. Su función es que el cadete vea **cómo trabaja cada área, qué información maneja, qué responsabilidades asume y qué tipo de tareas le resultan naturales o difíciles**.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## ROT-403-U01 — Puente y Operaciones
+# ROT-403-U01 — Puente y Operaciones
 
-### Qué debes dominar
+## 1. Flujo de órdenes
 
-- **flujo de órdenes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **coordinación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **estaciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Una orden útil sigue un recorrido:
 
-### Aplicación operativa
+> Mando define intención → estación interpreta → sistema valida → acción se ejecuta → resultado se informa.
 
-Rotación breve supervisada. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+El cadete debe observar que el puente no funciona como una persona controlándolo todo.
 
-### Qué se evalúa
+## 2. Coordinación
 
-Informe de observación y tarea. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Operaciones ayuda a mantener una imagen funcional de:
 
-### Errores frecuentes
+- recursos;
+- sistemas;
+- tareas;
+- necesidades de departamentos;
+- prioridades de misión.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 3. Estaciones
 
-### Autoevaluación
+Durante la rotación se reconocen las funciones de:
 
-1. Explica con tus palabras qué significa **flujo de órdenes** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **flujo de órdenes** y **coordinación**?
-3. Resuelve de forma razonada esta práctica: *Rotación breve supervisada.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- Mando;
+- Conn/Navegación;
+- Ops;
+- Sensores/Ciencia;
+- Táctica;
+- Comunicaciones;
+- Ingeniería de puente cuando exista.
 
-## ROT-403-U02 — Ingeniería
+## 4. Límites
 
-### Qué debes dominar
+El cadete puede realizar una tarea preparada y supervisada.
 
-- **estado**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **energía**: La nave es una red de sistemas dependientes de fuentes y distribución de energía. La idea clave es que una decisión local puede afectar a otros consumidores; el cadete debe aprender a pensar en prioridades y dependencias antes que en números aislados.
-- **mantenimiento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **seguridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+No obtiene autoridad general sobre el puente por ocupar temporalmente una estación.
 
-### Aplicación operativa
+### Práctica
 
-Tarea técnica de baja complejidad. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Ejecución supervisada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Rotación breve supervisada con una orden sencilla, una coordinación con otra estación y un informe final.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **estado** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **estado** y **energía**?
-3. Resuelve de forma razonada esta práctica: *Tarea técnica de baja complejidad.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Cómo fluye una orden desde Mando hasta un resultado?
+2. ¿Qué función general cumple Operaciones?
+3. ¿Por qué una estación no funciona aislada?
+4. ¿Qué limita a un cadete durante la rotación?
+5. ¿Qué debe contener el informe final?
 
-## ROT-403-U03 — Ciencia y Sensores
+---
 
-### Qué debes dominar
+# ROT-403-U02 — Ingeniería
 
-- **medición**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **barrido**: Los sensores producen mediciones y contactos; no sustituyen la interpretación científica. La formación separa siempre detección, calidad de la lectura, seguimiento y análisis para que el jugador no trate una lectura como una verdad ya interpretada.
-- **interpretación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **reporte**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Observar estado antes de actuar
 
-### Aplicación operativa
+Ingeniería trabaja con:
 
-Barrido y entrega de datos. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- estado de sistemas;
+- energía;
+- daños;
+- mantenimiento;
+- recursos;
+- seguridad.
 
-### Qué se evalúa
+## 2. Energía
 
-Práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+El cadete observa cómo una necesidad técnica puede competir con otras por recursos.
 
-### Errores frecuentes
+No se enseña todavía gestión avanzada, pero sí la idea de que “dar más potencia” tiene coste.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 3. Mantenimiento
 
-### Autoevaluación
+El mantenimiento evita esperar a que un sistema falle.
 
-1. Explica con tus palabras qué significa **medición** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **medición** y **barrido**?
-3. Resuelve de forma razonada esta práctica: *Barrido y entrega de datos.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Puede incluir:
 
-## ROT-403-U04 — Navegación y vuelo
+- inspección;
+- prueba;
+- calibración;
+- sustitución;
+- registro.
 
-### Qué debes dominar
+## 4. Seguridad
 
-- **plotting**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **rumbo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **velocidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **control**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Una tarea sencilla sigue procedimiento.
 
-### Aplicación operativa
+El cadete debe:
 
-Preparar una ruta en simulador. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- identificar riesgos;
+- utilizar equipo apropiado;
+- no improvisar una modificación no autorizada;
+- informar si el estado real no coincide con el esperado.
 
-### Qué se evalúa
+### Práctica
 
-Práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Tarea técnica de baja complejidad bajo supervisión, con comprobación previa y registro posterior.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **plotting** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **plotting** y **rumbo**?
-3. Resuelve de forma razonada esta práctica: *Preparar una ruta en simulador.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué información observa Ingeniería antes de actuar?
+2. ¿Por qué más potencia tiene un coste?
+3. ¿Para qué sirve mantenimiento preventivo?
+4. ¿Qué debes hacer si la tarea real difiere del briefing?
+5. ¿Por qué una rotación breve no concede competencia de ingeniero?
 
-## ROT-403-U05 — Seguridad y Medicina
+---
 
-### Qué debes dominar
+# ROT-403-U03 — Ciencia y Sensores
 
-- **protección**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **respuesta**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **triaje básico**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **límites**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Medir e interpretar
 
-### Aplicación operativa
+La rotación refuerza:
 
-Dos micro-rotaciones con casos controlados. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+> Sensores obtiene observaciones. Ciencia interpreta.
 
-### Qué se evalúa
+## 2. Barrido
 
-Evaluación de conducta y seguridad. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+El cadete puede participar en un barrido preparado:
 
-### Errores frecuentes
+- revisar objetivo;
+- comprobar modo;
+- ejecutar;
+- observar resultado;
+- guardar o enviar datos.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 3. Interpretación
 
-### Autoevaluación
+El resultado puede contener:
 
-1. Explica con tus palabras qué significa **protección** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **protección** y **respuesta**?
-3. Resuelve de forma razonada esta práctica: *Dos micro-rotaciones con casos controlados.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- hechos medidos;
+- estimaciones;
+- incertidumbre;
+- firmas;
+- clasificación parcial.
 
-## ROT-403-U06 — Reflexión profesional
+La interpretación debe respetar esos límites.
 
-### Qué debes dominar
+## 4. Reporte
 
-- **intereses**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **fortalezas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **dificultades**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **preguntas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Un buen reporte distingue:
 
-### Aplicación operativa
+- qué se observó;
+- con qué confianza;
+- qué sigue sin saberse;
+- qué análisis adicional podría ayudar.
 
-Debrief con instructor. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+### Práctica
 
-### Qué se evalúa
-
-Registro descriptivo; no elección final. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Ejecuta un barrido guiado y entrega los datos a Ciencia sin añadir conclusiones no demostradas.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **intereses** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **intereses** y **fortalezas**?
-3. Resuelve de forma razonada esta práctica: *Debrief con instructor.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué diferencia existe entre Sensores y Ciencia?
+2. ¿Qué pasos básicos revisas antes de un barrido?
+3. ¿Por qué debe conservarse incertidumbre?
+4. ¿Qué debe incluir un reporte científico inicial?
+5. ¿Qué error cometes si transformas una lectura en certeza sin evidencia?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# ROT-403-U04 — Navegación y vuelo
 
-## Tratamiento por era
+## 1. Plotting
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Plotting significa preparar una solución de ruta coherente con:
+
+- origen;
+- destino;
+- restricciones;
+- capacidad;
+- riesgos;
+- ETA.
+
+## 2. Rumbo
+
+El rumbo expresa la dirección operacional de la nave dentro del marco utilizado.
+
+## 3. Velocidad
+
+La velocidad elegida debe ser:
+
+- posible;
+- autorizada;
+- compatible con la misión;
+- coherente con el estado de la nave.
+
+## 4. Control
+
+El cadete observa cómo Conn/Navegación transforma una intención en movimiento real y cómo debe informar si una orden no puede ejecutarse tal como se pidió.
+
+### Práctica
+
+Prepara una ruta sencilla en simulador y comunícala con ETA y restricción principal.
+
+### Autoevaluación
+
+1. ¿Qué elementos necesita una solución de plotting?
+2. ¿Qué representa el rumbo?
+3. ¿Por qué una velocidad debe validarse?
+4. ¿Qué debe hacer el operador si la orden no puede ejecutarse?
+5. ¿Qué diferencia existe entre decidir destino y ejecutar movimiento?
+
+---
+
+# ROT-403-U05 — Seguridad y Medicina
+
+## 1. Dos áreas con límites claros
+
+Seguridad y Medicina pueden intervenir en situaciones críticas, pero sus responsabilidades son diferentes.
+
+## 2. Seguridad
+
+El cadete observa:
+
+- protección;
+- control de acceso;
+- respuesta a incidentes;
+- evaluación inicial de riesgo;
+- coordinación.
+
+## 3. Medicina
+
+El cadete observa:
+
+- seguridad de escena;
+- estado observable;
+- triage básico;
+- asistencia;
+- relevo.
+
+## 4. Triaje básico
+
+Triage organiza prioridad cuando hay varios pacientes.
+
+En esta rotación no se exige diagnóstico profesional.
+
+Se aprende a reconocer que:
+
+- los recursos pueden ser limitados;
+- no todos los casos tienen la misma urgencia;
+- la prioridad médica debe basarse en evaluación.
+
+## 5. Límites
+
+Un cadete no obtiene autoridad de Seguridad ni cualificación médica por una micro-rotación.
+
+### Práctica
+
+Dos casos breves: control de una zona y primera respuesta ante un paciente simulado.
+
+### Autoevaluación
+
+1. ¿Qué función general observa el cadete en Seguridad?
+2. ¿Qué función general observa en Medicina?
+3. ¿Para qué sirve el triaje?
+4. ¿Por qué no se exige diagnóstico avanzado?
+5. ¿Qué límite mantiene el cadete tras completar la rotación?
+
+---
+
+# ROT-403-U06 — Reflexión profesional
+
+## 1. El objetivo no es elegir todavía
+
+Al final de 4.ª clase el cadete debe empezar a conocerse profesionalmente, no cerrar su carrera.
+
+La especialización formal llegará más adelante.
+
+## 2. Intereses
+
+Interés significa:
+
+- qué tareas atraen;
+- qué problemas resultan motivadores;
+- qué entornos se disfrutan.
+
+No equivale a competencia.
+
+## 3. Fortalezas
+
+Una fortaleza debe apoyarse en evidencia.
+
+Ejemplos:
+
+- comunicación clara;
+- buena atención;
+- razonamiento espacial;
+- calma;
+- precisión;
+- trabajo en equipo.
+
+## 4. Dificultades
+
+Detectar una dificultad es útil si permite:
+
+- entrenar;
+- buscar tutoría;
+- probar otra estrategia;
+- ajustar expectativas.
+
+No se trata de etiquetar al cadete como “malo” en una rama.
+
+## 5. Preguntas
+
+Una buena reflexión puede terminar con preguntas:
+
+- ¿quiero más exposición a esta área?
+- ¿qué me falta por aprender?
+- ¿me atrae el trabajo real o solo su imagen?
+- ¿qué parte me costó y por qué?
+
+## 6. Registro descriptivo
+
+El debrief genera un registro descriptivo.
+
+No selecciona automáticamente la especialización.
+
+### Práctica
+
+Debrief con instructor usando evidencia de todas las rotaciones.
+
+### Autoevaluación
+
+1. ¿Por qué ROT-403 no elige especialización?
+2. ¿Qué diferencia existe entre interés y competencia?
+3. ¿Qué convierte una fortaleza en algo más que una impresión?
+4. ¿Por qué una dificultad puede ser útil?
+5. ¿Qué debe producir el debrief final?
+
+---
+
+# Evaluación del curso
+
+ROT-403 evalúa:
+
+- observación profesional;
+- conducta;
+- ejecución básica supervisada;
+- comunicación;
+- respeto a límites;
+- reflexión.
+
+No concede una cualificación profesional ni bloquea una futura rama.
+
+# Tratamiento por era
+
+Las estaciones, equipos y métodos de entrenamiento cambian.
+
+La lógica de rotación se mantiene:
+
+> exposición → tarea supervisada → evidencia → debrief.
+
+# Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/field_training_model.json`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `gameplay/ship_operations/consoles/sensors/README.md`
+- `gameplay/navigation/README.md`
+- `gameplay/engineering/engineering_loop.json`
+
+La rotación orienta; no sustituye la especialización formal.
