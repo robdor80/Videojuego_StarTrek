@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "pre_game_activity_and_hobby",
+  "status": "locked_baseline",
+  "entry_fields": [
+    "activity_id",
+    "category",
+    "name",
+    "started_at_or_age",
+    "ended_at_or_current",
+    "typical_frequency",
+    "training_context",
+    "instruction_type",
+    "formal_certification_optional",
+    "competition_or_public_experience_optional",
+    "recent_activity_level",
+    "notes"
+  ],
+  "categories": [
+    "physical_training",
+    "martial_art",
+    "sport",
+    "academic_interest",
+    "science",
+    "technical",
+    "medical",
+    "language",
+    "artistic",
+    "craft",
+    "social_or_cultural",
+    "outdoor",
+    "other"
+  ],
+  "rules": [
+    "The player declares biography and evidence, not a numeric skill value.",
+    "Starting capability is derived from duration, frequency, recency, instruction, certification and plausible experience.",
+    "A certification may constrain or support a claim but does not replace capability evidence.",
+    "Multiple activities are allowed only when the combined chronology remains plausible.",
+    "Hobbies and interests may later become high-level capabilities through sustained in-world practice.",
+    "Professional specialization is not required for a hobby or cross-domain competence to improve."
+  ],
+  "example": {
+    "category": "martial_art",
+    "name": "human_martial_art_example",
+    "started_at_or_age": 8,
+    "ended_at_or_current": "current",
+    "typical_frequency": "regular",
+    "training_context": "civilian_dojo",
+    "instruction_type": "qualified_instructor",
+    "formal_certification_optional": "black_belt_1_dan",
+    "recent_activity_level": "active"
+  }
+}
