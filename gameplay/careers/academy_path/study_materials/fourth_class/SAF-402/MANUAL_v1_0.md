@@ -1,200 +1,477 @@
 # SAF-402 — Seguridad y respuesta a emergencias I
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 2**
 
 ## Finalidad
 
-Evitar que un cadete sea un riesgo para sí mismo o para otros durante emergencias comunes.
+Enseñar al cadete a responder de forma segura y disciplinada ante emergencias comunes sin convertirse todavía en especialista de Seguridad, Medicina o Ingeniería.
 
-## Cómo estudiar esta asignatura
+La meta es sencilla:
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+> **Durante una emergencia, un cadete debe ayudar a que la situación mejore y, sobre todo, no convertirse en un riesgo adicional.**
 
-## SAF-402-U01 — Alertas y señales
+SAF-402 trabaja reconocimiento, movimiento, comunicación, asistencia básica, aislamiento y cooperación.
 
-### Qué debes dominar
+---
 
-- **estados de alerta**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **alarmas locales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **instrucciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **prioridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+# SAF-402-U01 — Alertas y señales
 
-### Aplicación operativa
+## 1. Una alerta cambia prioridades
 
-Reconocer y responder a señales de entrenamiento. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Una alerta indica que la situación normal ha cambiado.
 
-### Qué se evalúa
+Puede afectar:
 
-Prueba práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+- movimiento;
+- acceso;
+- tareas;
+- comunicaciones;
+- supervisión;
+- disponibilidad de sistemas.
 
-### Errores frecuentes
+El cadete debe dejar de pensar únicamente en su actividad anterior y atender la instrucción vigente.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 2. Estados y señales
 
-### Autoevaluación
+La presentación visual o sonora puede variar por era y nave.
 
-1. Explica con tus palabras qué significa **estados de alerta** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **estados de alerta** y **alarmas locales**?
-3. Resuelve de forma razonada esta práctica: *Reconocer y responder a señales de entrenamiento.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Lo importante es reconocer:
 
-## SAF-402-U02 — Evacuación y pérdida de presión
+- que existe una alerta;
+- su prioridad;
+- si es general o local;
+- qué instrucción acompaña a la señal.
 
-### Qué debes dominar
+## 3. Alarma local
 
-- **sellado**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **rutas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **compartimentos**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **recuento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Una alarma puede afectar solo a:
 
-### Aplicación operativa
+- un compartimento;
+- una cubierta;
+- un sistema;
+- un laboratorio;
+- una zona técnica.
 
-Ejercicio de evacuación. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No toda alarma significa evacuar toda la nave.
 
-### Qué se evalúa
+## 4. Prioridad
 
-Tiempo, seguridad y disciplina. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+En emergencia, una orden clara y válida relacionada con seguridad puede sustituir una actividad rutinaria.
 
-### Errores frecuentes
+El cadete debe:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+1. detener lo que sea necesario;
+2. escuchar;
+3. identificar el riesgo;
+4. seguir la instrucción;
+5. informar si no puede cumplirla.
 
-### Autoevaluación
+## 5. No adivinar
 
-1. Explica con tus palabras qué significa **sellado** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **sellado** y **rutas**?
-3. Resuelve de forma razonada esta práctica: *Ejercicio de evacuación.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Si una señal no se entiende, no debe inventarse su significado.
 
-## SAF-402-U03 — Incendio y ambiente
+Se consulta la información disponible o se solicita aclaración.
 
-### Qué debes dominar
+### Práctica
 
-- **fuego**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **humo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **atmósfera**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **aislamiento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Respuesta inicial en simulador. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Práctica de procedimiento. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Reconoce varias señales de entrenamiento y decide si debes mantener posición, evacuar, informar o esperar instrucciones.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **fuego** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **fuego** y **humo**?
-3. Resuelve de forma razonada esta práctica: *Respuesta inicial en simulador.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué cambia cuando se declara una alerta?
+2. ¿Por qué una alarma local no implica evacuar toda la nave?
+3. ¿Qué debe hacer un cadete si no entiende una señal?
+4. ¿Qué significa prioridad en una emergencia?
+5. ¿Por qué la presentación de una alerta puede variar por era?
 
-## SAF-402-U04 — Heridos y primera respuesta
+---
 
-### Qué debes dominar
+# SAF-402-U02 — Evacuación y pérdida de presión
 
-- **seguridad de escena**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **aviso médico**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **asistencia básica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **no exceder competencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. El objetivo de una evacuación
 
-### Aplicación operativa
+Evacuar significa mover personas desde una zona peligrosa hacia una zona más segura de forma controlada.
 
-Atender un supuesto hasta relevo médico. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No consiste en correr en cualquier dirección.
 
-### Qué se evalúa
+## 2. Compartimentos y sellado
 
-Evaluación práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Una nave está dividida en compartimentos y zonas que pueden aislarse.
 
-### Errores frecuentes
+Ante pérdida de presión, contaminación o daño estructural, el aislamiento puede limitar la propagación del peligro.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Un cadete no cualificado no debe anular un sellado porque la ruta habitual esté bloqueada.
 
-### Autoevaluación
+## 3. Rutas
 
-1. Explica con tus palabras qué significa **seguridad de escena** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **seguridad de escena** y **aviso médico**?
-3. Resuelve de forma razonada esta práctica: *Atender un supuesto hasta relevo médico.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+La ruta segura depende de:
 
-## SAF-402-U05 — Control de daños: conciencia básica
+- estado de compartimentos;
+- instrucciones activas;
+- accesos;
+- daños;
+- zonas restringidas;
+- punto de reunión.
 
-### Qué debes dominar
+La ruta habitual puede dejar de ser válida.
 
-- **aislamiento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **prioridades**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **riesgo secundario**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **cooperación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Recuento
 
-### Aplicación operativa
+En un punto de reunión debe saberse:
 
-Apoyar un equipo sin asumir funciones técnicas no cualificadas. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- quién llegó;
+- quién falta;
+- quién necesita ayuda;
+- qué zona dejó cada grupo.
 
-### Qué se evalúa
+Esto evita enviar equipos a buscar personas que ya están a salvo.
 
-Caso práctico. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 5. Pérdida de presión
 
-### Errores frecuentes
+El cadete debe reconocer que una pérdida de presión puede convertir una zona en inaccesible o peligrosa.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+En este nivel no se enseña reparación estructural.
 
-### Autoevaluación
+Se enseña:
 
-1. Explica con tus palabras qué significa **aislamiento** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **aislamiento** y **prioridades**?
-3. Resuelve de forma razonada esta práctica: *Apoyar un equipo sin asumir funciones técnicas no cualificadas.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- alejarse del peligro;
+- respetar cierres;
+- seguir rutas indicadas;
+- informar de personas o daños observados;
+- no exponerse sin equipo y autorización.
 
-## SAF-402-U06 — Ejercicio integrado
+### Práctica
 
-### Qué debes dominar
-
-- **alarma**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **movimiento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **comunicación**: La comunicación profesional de Starfleet debe identificar destinatario, hecho o solicitud, prioridad cuando proceda y confirmación. Se valora que el mensaje sea suficiente para actuar, no que sea largo.
-- **asistencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **registro**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Simulación corta de emergencia. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Evaluación integrada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Ejercicio de evacuación con una ruta bloqueada y un punto de reunión alternativo.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **alarma** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **alarma** y **movimiento**?
-3. Resuelve de forma razonada esta práctica: *Simulación corta de emergencia.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Cuál es el objetivo de una evacuación?
+2. ¿Para qué sirve aislar compartimentos?
+3. ¿Por qué no debe abrirse un cierre solo porque bloquea la ruta habitual?
+4. ¿Para qué sirve el recuento?
+5. ¿Qué límites tiene un cadete ante una zona despresurizada?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# SAF-402-U03 — Incendio y ambiente
 
-## Tratamiento por era
+## 1. Un incendio genera más de un riesgo
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+El peligro puede incluir:
+
+- calor;
+- humo;
+- atmósfera degradada;
+- daño de sistemas;
+- propagación;
+- pérdida de visibilidad.
+
+Por eso “apagar el fuego” no es la única preocupación.
+
+## 2. Seguridad de escena
+
+Antes de acercarse debe valorarse:
+
+- si la zona es accesible;
+- si existe una ruta de salida;
+- si hay humo o atmósfera peligrosa;
+- si el cadete posee equipo y autorización;
+- si un equipo especializado ya está en camino.
+
+## 3. Aislamiento
+
+Cerrar una zona puede ser más seguro que entrar sin preparación.
+
+El aislamiento puede:
+
+- contener humo;
+- limitar propagación;
+- proteger otras zonas;
+- ganar tiempo.
+
+## 4. Ambiente
+
+La atmósfera forma parte de la emergencia.
+
+Un área puede parecer visualmente segura y no serlo.
+
+La información del sistema, sensores o equipos de emergencia debe respetarse.
+
+## 5. Primera respuesta
+
+En 4.ª clase, la primera respuesta se centra en:
+
+1. alertar;
+2. proteger a personas cercanas;
+3. aislar si procede y está autorizado;
+4. retirarse a una zona segura;
+5. colaborar con equipos cualificados.
+
+### Práctica
+
+Simulación de humo y alarma local donde el cadete debe elegir entre intervenir, aislar, evacuar o pedir apoyo.
+
+### Autoevaluación
+
+1. ¿Qué riesgos adicionales puede producir un incendio?
+2. ¿Qué debe comprobarse antes de acercarse?
+3. ¿Por qué aislar puede ser mejor que entrar?
+4. ¿Puede una zona aparentemente limpia tener atmósfera peligrosa?
+5. ¿Cuál es la prioridad de un cadete no especialista?
+
+---
+
+# SAF-402-U04 — Heridos y primera respuesta
+
+## 1. Primero: seguridad de escena
+
+Antes de ayudar a una persona herida, el cadete debe evitar convertirse en otra víctima.
+
+La pregunta inicial es:
+
+> ¿Puedo acercarme con seguridad?
+
+## 2. Aviso médico
+
+El cadete debe comunicar:
+
+- localización;
+- número aproximado de afectados;
+- riesgo visible;
+- estado observable básico;
+- acceso a la zona.
+
+No debe inventar un diagnóstico.
+
+## 3. Asistencia básica
+
+La ayuda debe limitarse a lo que el personaje esté entrenado y autorizado para hacer.
+
+El proyecto separa:
+
+- estado real del paciente;
+- síntomas observados;
+- diagnósticos conocidos;
+- tratamientos.
+
+Un cadete puede observar signos y pedir ayuda sin conocer todavía la causa.
+
+## 4. No exceder competencia
+
+No se improvisa un tratamiento especializado porque parezca urgente.
+
+La urgencia puede justificar actuar dentro de entrenamiento básico, pero no inventar conocimientos médicos.
+
+## 5. Entrega a personal médico
+
+Cuando llega personal cualificado, el relevo debe incluir:
+
+- qué ocurrió;
+- qué se observó;
+- qué asistencia se realizó;
+- cambios desde el primer contacto.
+
+### Práctica
+
+Atiende un supuesto hasta la llegada de personal médico y realiza un relevo breve.
+
+### Autoevaluación
+
+1. ¿Qué debe comprobarse antes de acercarse a un herido?
+2. ¿Qué información conviene transmitir a Medicina?
+3. ¿Por qué síntoma y diagnóstico no son lo mismo?
+4. ¿Qué significa no exceder competencia?
+5. ¿Qué debe incluir el relevo al personal médico?
+
+---
+
+# SAF-402-U05 — Control de daños: conciencia básica
+
+## 1. El control de daños es trabajo técnico coordinado
+
+Una nave dañada puede sufrir efectos encadenados.
+
+Ejemplos:
+
+- fallo de un sistema;
+- pérdida de energía;
+- riesgo ambiental;
+- daño estructural;
+- propagación a sistemas vecinos.
+
+## 2. Prioridades
+
+A nivel básico se piensa en:
+
+1. proteger vidas;
+2. contener el riesgo;
+3. preservar funciones esenciales;
+4. recuperar capacidad cuando sea seguro.
+
+La reparación perfecta puede esperar.
+
+## 3. Riesgo secundario
+
+Un problema puede generar otro.
+
+Ejemplo conceptual:
+
+> Un daño de energía puede afectar soporte vital, puertas, comunicaciones o sensores.
+
+Por eso no se actúa mirando un único síntoma.
+
+## 4. Cooperación
+
+Un cadete puede apoyar mediante:
+
+- transporte de material;
+- comunicaciones;
+- control de acceso;
+- evacuación;
+- seguimiento de instrucciones;
+- observación y reporte.
+
+No debe ejecutar reparaciones para las que no está cualificado.
+
+## 5. Improvisación
+
+La Ingeniería puede proponer soluciones improvisadas.
+
+Pero una improvisación solo es válida si los sistemas autoritativos confirman:
+
+- recursos;
+- conocimiento;
+- riesgo;
+- compatibilidad;
+- resultado.
+
+“Se me ocurre algo” no garantiza que funcione.
+
+### Práctica
+
+Apoya a un equipo de control de daños sin asumir funciones técnicas no cualificadas.
+
+### Autoevaluación
+
+1. ¿Qué cuatro prioridades generales orientan el control de daños?
+2. ¿Qué significa riesgo secundario?
+3. ¿Cómo puede ayudar un cadete sin reparar sistemas?
+4. ¿Por qué una solución improvisada no funciona automáticamente?
+5. ¿Qué debe validar una improvisación técnica?
+
+---
+
+# SAF-402-U06 — Ejercicio integrado
+
+## 1. Integrar sin convertirse en especialista
+
+El ejercicio combina:
+
+- señal de alerta;
+- movimiento;
+- comunicación;
+- asistencia;
+- registro.
+
+El objetivo no es “ganar” una emergencia simulada.
+
+El objetivo es demostrar comportamiento seguro.
+
+## 2. Secuencia básica
+
+Un esquema útil es:
+
+1. detectar o recibir alerta;
+2. identificar la instrucción;
+3. moverse de forma segura;
+4. informar cambios relevantes;
+5. asistir dentro de competencia;
+6. registrar o entregar información;
+7. confirmar cierre o relevo.
+
+## 3. Comunicación bajo presión
+
+Un mensaje de emergencia debe priorizar:
+
+- lugar;
+- hecho;
+- riesgo;
+- necesidad.
+
+Ejemplo:
+
+> “Cubierta seis, corredor dos. Humo visible, acceso parcial. Dos cadetes evacuando. Solicito equipo de respuesta.”
+
+## 4. Evitar heroísmo improcedente
+
+El juego no recompensa exponerse sin necesidad.
+
+Una acción arriesgada puede ser correcta en un contexto extraordinario, pero no se presume heroica por ser peligrosa.
+
+## 5. Debrief
+
+Después del ejercicio se revisa:
+
+- qué se sabía;
+- qué se hizo;
+- qué se comunicó;
+- qué riesgo se asumió;
+- qué podría mejorarse.
+
+### Práctica
+
+Simulación corta con alarma, ruta alterada, una persona que necesita ayuda y entrega final de información.
+
+### Autoevaluación
+
+1. ¿Qué fases componen una respuesta integrada básica?
+2. ¿Qué información debe priorizar un mensaje de emergencia?
+3. ¿Por qué el peligro no convierte automáticamente una acción en heroica?
+4. ¿Qué límites de competencia siguen existiendo durante una emergencia?
+5. ¿Qué debe revisarse en el debrief?
+
+---
+
+# Evaluación del curso
+
+SAF-402 evalúa:
+
+- reconocimiento de alertas;
+- movimiento seguro;
+- disciplina;
+- comunicación;
+- asistencia básica;
+- cooperación;
+- respeto a límites de competencia.
+
+No evalúa reparación avanzada, táctica especializada ni medicina profesional.
+
+# Tratamiento por era
+
+Cambian:
+
+- alarmas;
+- señalización;
+- equipo;
+- puertas y cierres;
+- interfaces.
+
+Permanece estable:
+
+- prioridad;
+- aislamiento;
+- comunicación;
+- movimiento seguro;
+- cooperación;
+- respeto a autoridad.
+
+# Referencias internas
+
+- `gameplay/engineering/engineering_loop.json`
+- `gameplay/medical/medical_state_model.json`
+- `gameplay/security/README.md`
+- `gameplay/ship_operations/operational_event_log/README.md`
+
+La respuesta concreta depende de la nave, su estado y las instrucciones activas.
