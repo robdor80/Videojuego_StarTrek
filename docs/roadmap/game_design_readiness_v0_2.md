@@ -162,7 +162,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. **Autonomous four-year unit deployment is authorized and active.** Expand every approved course into units, learning objectives, practicals and evaluation evidence; then derive study manuals/PDF/web material from the same academic source.
+1. ✅ **Four-year unit deployment complete.** Next produce study manuals, lesson content, exercises, question banks and instructor material from the authoritative course/branch JSON, then derive PDF/web outputs from the same source.
 2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
@@ -188,7 +188,7 @@ The following are now **closed to the current defined scope** and should only re
 - Second Class / Year 3 three-trimester specialization architecture;
 - First Class / Year 4 service-readiness and commissioning architecture.
 
-The remaining Pillar 1 work is primarily **autonomous unit-level deployment of all four years, seven branch curricula, study-material generation, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
+The remaining Pillar 1 work is primarily **study-material generation from the completed 60-course/7-branch unit design, Academy-life scheduling/content, richer evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 
