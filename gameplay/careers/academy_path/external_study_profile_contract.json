@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_external_study_profile",
+  "status": "foundation_fixed",
+  "purpose": "Allow an external Starfleet Academy study website/app to consume curriculum and preserve learner progress without becoming authoritative gameplay state.",
+  "profile_fields": [
+    "profile_id",
+    "display_name",
+    "created_at",
+    "last_updated_at",
+    "curriculum_version",
+    "current_sequence_year",
+    "current_trimester",
+    "selected_specialization_or_interest",
+    "theory_progress",
+    "practice_history",
+    "test_history",
+    "bookmarks",
+    "notes"
+  ],
+  "theory_progress_fields": [
+    "subject_id",
+    "unit_id",
+    "status",
+    "last_opened_at",
+    "self_marked_complete"
+  ],
+  "practice_history_fields": [
+    "practice_id",
+    "attempted_at",
+    "result_band",
+    "evidence_summary",
+    "source"
+  ],
+  "test_history_fields": [
+    "test_id",
+    "attempted_at",
+    "score_or_band",
+    "question_set_version",
+    "source"
+  ],
+  "rules": [
+    "External study profiles may be stored locally or exported/imported as JSON.",
+    "No password is required by this contract; identity/security policy belongs to the consuming application.",
+    "External progress is not automatically authoritative in-game Academy state.",
+    "The future game may import validated study evidence through an explicit import/verification path.",
+    "Curriculum IDs and versions must remain stable enough to migrate saved progress.",
+    "The external app should consume the same curriculum/content IDs used by the game whenever practical."
+  ]
+}
