@@ -1,16 +1,16 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "academy_external_study_profile",
   "status": "foundation_fixed",
-  "purpose": "Allow an external Starfleet Academy study website/app to consume curriculum and preserve learner progress without becoming authoritative gameplay state.",
+  "purpose": "Allow an external Starfleet Academy study website/app to consume the same curriculum while remaining independent from gameplay runtime.",
   "profile_fields": [
     "profile_id",
-    "display_name",
+    "player_nickname",
+    "character_display_name_optional",
     "created_at",
     "last_updated_at",
     "curriculum_version",
-    "current_sequence_year",
-    "current_trimester",
+    "current_game_context_optional",
     "selected_specialization_or_interest",
     "theory_progress",
     "practice_history",
@@ -18,33 +18,20 @@
     "bookmarks",
     "notes"
   ],
-  "theory_progress_fields": [
-    "subject_id",
-    "unit_id",
-    "status",
-    "last_opened_at",
-    "self_marked_complete"
-  ],
-  "practice_history_fields": [
-    "practice_id",
-    "attempted_at",
-    "result_band",
-    "evidence_summary",
-    "source"
-  ],
-  "test_history_fields": [
-    "test_id",
-    "attempted_at",
-    "score_or_band",
-    "question_set_version",
-    "source"
-  ],
+  "current_game_context_fields": ["era_id","cadet_class_id","trimester","specialization_id"],
+  "theory_progress_fields": ["subject_id","unit_id","status","last_opened_at","self_marked_complete"],
+  "practice_history_fields": ["practice_id","attempted_at","result_band","evidence_summary","source"],
+  "test_history_fields": ["test_id","attempted_at","score_or_band","question_set_version","source"],
   "rules": [
     "External study profiles may be stored locally or exported/imported as JSON.",
+    "The player nickname may match the game profile to help identify which campaign context the user is studying for.",
+    "Game context shown by the web is informational and may be entered manually.",
+    "The web does not simulate passage through four Academy years and must not lock the curriculum by game progress.",
     "No password is required by this contract; identity/security policy belongs to the consuming application.",
     "External progress is not automatically authoritative in-game Academy state.",
-    "The future game may import validated study evidence through an explicit import/verification path.",
+    "The future game may import validated study evidence only through an explicit import/verification path.",
     "Curriculum IDs and versions must remain stable enough to migrate saved progress.",
-    "The external app should consume the same curriculum/content IDs used by the game whenever practical."
+    "The external app should consume the same curriculum/content IDs used by the game whenever practical.",
+    "Access curriculum, Academy curriculum, PDF material and web presentation must not diverge into separate academic canons."
   ]
 }
