@@ -95,3 +95,18 @@ Un oficial procedente de Ingeniería, Ciencia, Seguridad u otra rama puede desar
 ## Preparación física y hábitos
 
 Continúan como programa longitudinal y vida personal del personaje, no como asignatura independiente.
+
+## Despliegue de unidades v1.0
+
+Status: **COMPLETE**
+
+La arquitectura de este año ya fue expandida a nivel de asignatura y unidad.
+
+Consultar:
+- `COURSE_INDEX_v1_0.md`
+- `courses_manifest_v1_0.json`
+- `courses/<COURSE_ID>/course.json`
+
+Cada curso define finalidad, prerrequisitos, unidades, contenido nuclear, práctica, evaluación y salidas previstas.
+
+Los manuales extensos, bancos de preguntas, PDF y web son derivados de esta fuente curricular y no alteran por sí mismos la arquitectura aprobada.
