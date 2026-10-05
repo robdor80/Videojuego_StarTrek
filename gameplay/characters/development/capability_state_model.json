@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "character_capability_state",
+  "status": "locked_semantic_model_runtime_formula_deferred_to_core",
+  "capability_fields": [
+    "capability_id",
+    "domain",
+    "specialization_tags",
+    "theoretical_knowledge",
+    "practical_execution",
+    "supervised_experience",
+    "live_experience",
+    "recency",
+    "breadth",
+    "depth",
+    "related_transfer_refs",
+    "formal_qualification_refs",
+    "condition_dependencies",
+    "last_meaningful_use_at",
+    "evidence_refs"
+  ],
+  "domains": [
+    "physical",
+    "combat",
+    "technical",
+    "engineering",
+    "science",
+    "medical",
+    "operations",
+    "navigation",
+    "leadership",
+    "communication",
+    "language",
+    "artistic",
+    "craft",
+    "recreational",
+    "other"
+  ],
+  "player_facing_bands": [
+    "no_experience",
+    "familiarized",
+    "basic",
+    "competent",
+    "advanced",
+    "expert"
+  ],
+  "internal_representation_rule": "CoreRPG may use hidden continuous or structured values when needed for resolution, but the player does not allocate or spend them.",
+  "rules": [
+    "Capability changes require evidence.",
+    "Certification does not equal current capability.",
+    "Recency and current condition can affect execution without erasing deep experience.",
+    "Related capabilities may transfer only explicitly modeled components.",
+    "Species biology may affect physical potential but never grants unrelated learned expertise.",
+    "The same semantic model applies to NPCs."
+  ]
+}
