@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "social_relationship_graph",
+  "status": "foundation_fixed",
+  "edge_key": [
+    "observer_character_id",
+    "subject_character_id"
+  ],
+  "directional": true,
+  "dimensions": {
+    "familiarity": "degree of recognition and repeated contact",
+    "personal_affinity": "degree of personal liking/compatibility",
+    "personal_trust": "confidence in the person in private/social contexts",
+    "professional_respect": "assessment of professional competence/conduct",
+    "command_confidence": "confidence in the subject under authority/responsibility",
+    "friendship_state": "none, developing, friend, close_friend, strained, former_friend",
+    "mentorship_state": "none, mentor, mentee, former_mentor",
+    "conflict_state": "none, tension, active_conflict, repairing, reconciled_unresolved_history",
+    "emotional_intimacy": "degree of personal emotional openness",
+    "romantic_interest": "none, possible, unilateral, mutual, active",
+    "sexual_interest": "none, possible, present",
+    "relationship_state": "none, dating, established, strained, separated, former_partner",
+    "privacy_expectations": "relationship-specific expectations around disclosure",
+    "shared_history_refs": "references to relevant memories/events"
+  },
+  "rules": [
+    "Relationship dimensions are not collapsed into one universal score.",
+    "Edges are directional: A's trust in B may differ from B's trust in A.",
+    "Relationship changes require plausible events/interactions or explicit state transitions.",
+    "Professional respect and personal affinity are independent.",
+    "Romance and sexual interest apply only to adults.",
+    "Consent is not inferred from any relationship dimension.",
+    "Relationship state does not grant world knowledge.",
+    "AI consumes relationship state but does not authoritatively create it without validated events."
+  ]
+}
