@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "character_cognitive_assistance",
+  "status": "foundation_fixed",
+  "purpose": "Translate character competence and wellbeing into gameplay assistance without pretending the human player becomes more or less intelligent.",
+  "inputs": [
+    "relevant_competence",
+    "experience",
+    "specialization",
+    "current_workload",
+    "acute_fatigue",
+    "accumulated_fatigue",
+    "stress_load",
+    "recovery_capacity"
+  ],
+  "possible_outputs": [
+    "brief_option_highlight",
+    "contextual_warning",
+    "priority_hint",
+    "faster_character_side_classification",
+    "better_multitask_assistance",
+    "reduced_or_absent_assistance"
+  ],
+  "sensor_example": {
+    "rested_expert": "May briefly highlight one especially appropriate scan configuration or relevant anomaly already supported by known data.",
+    "normal_state": "Little or no special assistance.",
+    "fatigued_expert": "Experience may preserve some assistance but with reduced frequency/clarity.",
+    "fatigued_novice": "May receive no special assistance."
+  },
+  "hard_rules": [
+    "Assistance never reveals hidden world truth.",
+    "Assistance never fabricates contacts, signals or evidence.",
+    "Assistance does not auto-select or auto-execute the player's decision unless a separate authorized automation system explicitly owns that behavior.",
+    "The player may ignore every hint.",
+    "A hint should normally be brief and non-intrusive rather than a persistent tutorial arrow.",
+    "Competence is the primary source of professional insight; good wellbeing mainly preserves access to that competence."
+  ]
+}
