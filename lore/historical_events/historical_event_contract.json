@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "historical_event_definition",
+  "status": "foundation_fixed",
+  "required_fields": [
+    "event_id",
+    "time_anchor",
+    "event_type",
+    "provenance"
+  ],
+  "optional_fields": [
+    "location_refs",
+    "participant_refs",
+    "faction_refs",
+    "summary",
+    "consequences",
+    "technology_effects",
+    "political_effects",
+    "astrography_effects",
+    "character_history_hooks",
+    "known_by_era",
+    "uncertainty"
+  ],
+  "rules": [
+    "Historical events are bootstrap truth only up to the campaign start boundary.",
+    "After campaign start, authoritative campaign events supersede any presumed future canon path.",
+    "Uncertain dating remains uncertain rather than receiving invented precision.",
+    "Procedural generation may use historical consequences only when temporally and spatially relevant."
+  ]
+}
