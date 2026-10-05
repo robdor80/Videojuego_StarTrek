@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.1.0",
+  "catalog_id": "procedural_generator_domains",
+  "status": "foundation_fixed",
+  "domains": [
+    {
+      "id": "cosmic_structure",
+      "generates": [
+        "star",
+        "stellar_system",
+        "planet",
+        "moon",
+        "asteroid_belt",
+        "comet",
+        "nebula",
+        "neutron_star",
+        "pulsar",
+        "black_hole",
+        "radiation_region",
+        "spatial_anomaly",
+        "subspace_phenomenon",
+        "wormhole"
+      ]
+    },
+    {
+      "id": "civilization",
+      "generates": [
+        "habitable_world_profile",
+        "civilization_profile",
+        "settlement_distribution",
+        "orbital_infrastructure",
+        "contact_status"
+      ]
+    },
+    {
+      "id": "starship",
+      "generates": [
+        "civilian_ship",
+        "commercial_ship",
+        "scientific_ship",
+        "medical_ship",
+        "industrial_ship",
+        "passenger_ship",
+        "government_ship",
+        "military_ship",
+        "small_craft"
+      ]
+    },
+    {
+      "id": "facility",
+      "generates": [
+        "station",
+        "outpost",
+        "shipyard",
+        "relay",
+        "research_facility",
+        "medical_facility",
+        "mining_facility",
+        "trade_facility",
+        "colony_infrastructure"
+      ]
+    },
+    {
+      "id": "traffic",
+      "generates": [
+        "route",
+        "transport_job",
+        "patrol",
+        "research_mission",
+        "passenger_movement",
+        "logistics_movement",
+        "emergency_response"
+      ]
+    },
+    {
+      "id": "population",
+      "generates": [
+        "crew_structure",
+        "staff_structure",
+        "shift_roster",
+        "persistent_character",
+        "passenger_population"
+      ]
+    },
+    {
+      "id": "activity",
+      "generates": [
+        "current_assignment",
+        "current_route",
+        "current_task",
+        "scheduled_task",
+        "operational_need"
+      ]
+    }
+  ],
+  "shared_constraints": [
+    "campaign_date",
+    "era_id",
+    "location",
+    "canonical_reservations",
+    "political_context",
+    "technology_context",
+    "campaign_history",
+    "deterministic_seed"
+  ],
+  "rules": [
+    "Domains may depend on upstream generated entities but must use stable IDs.",
+    "Generated entities persist after materialization.",
+    "No generator may reveal its entity to the player merely because generation occurred.",
+    "Observation remains a separate gameplay process."
+  ]
+}
