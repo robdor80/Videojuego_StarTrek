@@ -25,11 +25,12 @@
     "SEN-301",
     "ENG-301",
     "PRO-301",
-    "REG-302"
+    "REG-302",
+    "XEN-302"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 21,
-  "remaining_count": 46,
+  "developed_count": 22,
+  "remaining_count": 45,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -37,8 +38,8 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "REG-302",
-  "next_planned": "XEN-302",
+  "last_completed": "XEN-302",
+  "next_planned": "MED-302",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -61,7 +62,8 @@
     "SEN_301": "synced_developed_content_and_assessment",
     "ENG_301": "synced_developed_content_and_assessment",
     "PRO_301": "synced_developed_content_and_assessment",
-    "REG_302": "pending_sync_after_main_commit"
+    "REG_302": "synced_developed_content_and_assessment",
+    "XEN_302": "pending_sync_after_main_commit"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
