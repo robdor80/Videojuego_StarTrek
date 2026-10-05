@@ -6,11 +6,12 @@
   "total_branch_manuals": 7,
   "developed_main_courses": [
     "STF-401",
-    "FED-401"
+    "FED-401",
+    "ACA-401"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 2,
-  "remaining_count": 65,
+  "developed_count": 3,
+  "remaining_count": 64,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -18,11 +19,12 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "FED-401",
-  "next_planned": "ACA-401",
+  "last_completed": "ACA-401",
+  "next_planned": "INF-401",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
-    "FED_401": "pending_sync_after_main_commit"
+    "FED_401": "synced_developed_content_and_assessment",
+    "ACA_401": "pending_sync_after_main_commit"
   }
 }
