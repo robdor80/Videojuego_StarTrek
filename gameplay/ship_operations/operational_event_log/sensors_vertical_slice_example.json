@@ -1,0 +1,201 @@
+{
+  "schema_version": "0.1.0",
+  "example_id": "sensors_order_scan_report_vertical_slice",
+  "purpose": "Illustrate linkable operational events without duplicating authoritative sensor result contents.",
+  "events": [
+    {
+      "event_id": "evt_104211_order",
+      "event_type": "ORDER_ISSUED",
+      "occurred_at": "2399-03-14T10:42:11",
+      "scope": {
+        "ship_id": "example_ship",
+        "watch_id": "watch_alpha_2399_03_14",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "issuer_character_id": "captain_001",
+        "recipient_character_id": "player_001"
+      },
+      "subject_refs": {
+        "order_id": "ord_scan_014"
+      },
+      "payload": {
+        "instruction": "scan sector 14 for subspace emissions"
+      },
+      "provenance": {
+        "source": "command_order_system"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "participants",
+          "present_witnesses",
+          "command_log"
+        ]
+      }
+    },
+    {
+      "event_id": "evt_104214_ack",
+      "event_type": "ORDER_ACKNOWLEDGED",
+      "occurred_at": "2399-03-14T10:42:14",
+      "scope": {
+        "ship_id": "example_ship",
+        "watch_id": "watch_alpha_2399_03_14",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "character_id": "player_001"
+      },
+      "subject_refs": {
+        "order_id": "ord_scan_014"
+      },
+      "causal_refs": [
+        "evt_104211_order"
+      ],
+      "provenance": {
+        "source": "order_acknowledgement"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "participants",
+          "command_log"
+        ]
+      }
+    },
+    {
+      "event_id": "evt_104218_start",
+      "event_type": "ACTION_STARTED",
+      "occurred_at": "2399-03-14T10:42:18",
+      "scope": {
+        "ship_id": "example_ship",
+        "station_id": "bridge_sensors_01",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "operator_character_id": "player_001"
+      },
+      "subject_refs": {
+        "order_id": "ord_scan_014",
+        "operation_id": "scan_op_7781"
+      },
+      "payload": {
+        "mode": "passive",
+        "target_region": "sector_14",
+        "filters": [
+          "subspace"
+        ]
+      },
+      "causal_refs": [
+        "evt_104211_order"
+      ],
+      "provenance": {
+        "source": "sensors_console"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "participants",
+          "station_log"
+        ]
+      }
+    },
+    {
+      "event_id": "evt_104229_result",
+      "event_type": "RESULT_CREATED",
+      "occurred_at": "2399-03-14T10:42:29",
+      "scope": {
+        "ship_id": "example_ship",
+        "station_id": "bridge_sensors_01",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "system_id": "sensor_resolution"
+      },
+      "subject_refs": {
+        "operation_id": "scan_op_7781",
+        "result_id": "sensor_result_991"
+      },
+      "causal_refs": [
+        "evt_104218_start"
+      ],
+      "payload": {
+        "status": "complete"
+      },
+      "provenance": {
+        "source": "sensor_resolution"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "station_log"
+        ]
+      }
+    },
+    {
+      "event_id": "evt_104241_report",
+      "event_type": "REPORT_MADE",
+      "occurred_at": "2399-03-14T10:42:41",
+      "scope": {
+        "ship_id": "example_ship",
+        "watch_id": "watch_alpha_2399_03_14",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "reporter_character_id": "player_001",
+        "recipient_character_id": "captain_001"
+      },
+      "subject_refs": {
+        "order_id": "ord_scan_014",
+        "result_id": "sensor_result_991"
+      },
+      "payload": {
+        "report_text": "Two subspace contacts detected; identification uncertain."
+      },
+      "causal_refs": [
+        "evt_104229_result"
+      ],
+      "provenance": {
+        "source": "bridge_dialogue_or_report_system"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "participants",
+          "present_witnesses",
+          "command_log"
+        ]
+      }
+    },
+    {
+      "event_id": "evt_104247_send",
+      "event_type": "DATA_SENT",
+      "occurred_at": "2399-03-14T10:42:47",
+      "scope": {
+        "ship_id": "example_ship",
+        "console_family": "sensors"
+      },
+      "actor_refs": {
+        "sender_character_id": "player_001"
+      },
+      "subject_refs": {
+        "package_id": "pkg_sensor_science_128",
+        "result_id": "sensor_result_991"
+      },
+      "causal_refs": [
+        "evt_104229_result"
+      ],
+      "provenance": {
+        "source": "interconsole_transfer"
+      },
+      "visibility": {
+        "initial_scopes": [
+          "participants",
+          "station_log",
+          "department_log"
+        ]
+      }
+    }
+  ],
+  "evaluation_examples_not_stored_in_events": [
+    "response time was excellent",
+    "the cadet used appropriate scan parameters",
+    "the officer reported uncertainty correctly",
+    "the captain's professional trust increased"
+  ]
+}
