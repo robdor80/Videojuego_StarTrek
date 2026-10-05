@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "requirements_id": "celestial_generation_requirements",
+  "status": "foundation_fixed_content_pending",
+  "entity_families": [
+    "star",
+    "multiple_star_system",
+    "planet",
+    "dwarf_planet",
+    "moon",
+    "ring_system",
+    "asteroid",
+    "asteroid_belt",
+    "comet",
+    "nebula",
+    "stellar_remnant",
+    "neutron_star",
+    "pulsar",
+    "black_hole",
+    "radiation_region",
+    "gravimetric_phenomenon",
+    "subspace_phenomenon",
+    "spatial_anomaly",
+    "wormhole"
+  ],
+  "required_generation_dimensions": [
+    "spatial_context",
+    "physical_profile",
+    "temporal_stability_or_variability",
+    "hazard_profile",
+    "resource_or_scientific_interest",
+    "detectable_signatures",
+    "relationship_to_parent_system_or_region",
+    "canon_or_procedural_provenance"
+  ],
+  "content_work_needed": [
+    "science_grounded_baseline_ranges",
+    "star_trek_specific_phenomenon_catalogue",
+    "era_specific_knowledge_profiles",
+    "sensor_signature_mappings",
+    "navigation_hazard_mappings",
+    "rarity_distribution_profiles"
+  ],
+  "rules": [
+    "Real astrophysical constraints are preferred for ordinary objects.",
+    "Star Trek phenomena may extend ordinary physics only where supported by project lore design.",
+    "Rare phenomena must not become common merely because they are interesting.",
+    "Generated physical properties must be internally compatible.",
+    "Observation and classification remain separate from generation."
+  ]
+}
