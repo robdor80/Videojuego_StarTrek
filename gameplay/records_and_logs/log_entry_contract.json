@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "records_and_logs_entry",
+  "status": "fixed_foundation",
+  "required": [
+    "log_entry_id",
+    "log_family",
+    "author_ref",
+    "created_at",
+    "content",
+    "access_policy",
+    "provenance"
+  ],
+  "log_family_values": [
+    "captains_log",
+    "personal_log",
+    "department_log",
+    "duty_log",
+    "medical_log",
+    "security_log",
+    "classified_log",
+    "other_institutional_log"
+  ],
+  "fields": {
+    "log_entry_id": "stable identifier",
+    "log_family": "semantic family of the entry",
+    "author_ref": "character or authorized institutional author",
+    "owner_ref": "person, ship, station, department or institution owning the record",
+    "created_at": "authoritative campaign timestamp",
+    "effective_period": "optional period summarized by the entry",
+    "display_stardate": "derived or authored stardate presentation; authoritative time remains the campaign timestamp",
+    "content": {
+      "transcript": "author-approved text/transcript",
+      "summary": "optional derived summary",
+      "subjective": "true for personal/opinion-bearing entries where statements are not guaranteed world truth"
+    },
+    "source_refs": "optional references to operational events, results, reports or other authorized records",
+    "audio_ref": "optional original voice recording reference",
+    "draft_state": "none, draft, awaiting_approval, approved",
+    "access_policy": "reference/inline access classification",
+    "provenance": "how the entry was authored, transcribed or assisted",
+    "supersedes_entry_id": "optional later corrected/replaced entry reference",
+    "tags": "optional search/index tags"
+  },
+  "rules": [
+    "A log entry is not authoritative proof that every claim inside it is true.",
+    "Personal logs are subjective by default.",
+    "Official logs may summarize authoritative events but do not replace the underlying event records.",
+    "AI-assisted text requires the same authorization and approval as human-authored text.",
+    "Private entries are never globally visible merely because they exist.",
+    "Corrections create a new version/entry relationship rather than silently rewriting historical publication."
+  ]
+}
