@@ -79,7 +79,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Area | Status |
 |---|---|
 | History and campus | ✅ COMPLETE | Playable hub, location graph and gameplay-relevant era differences established. |
-| Admissions and cadet life | ✅ COMPLETE | Playable admission flow, soft-failure/retake model, four-year cadet progression and conduct consequences established. |
+| Admissions and cadet life | ✅ COMPLETE | Access v1.0 locked: five-block general curriculum, candidate manual source, holistic admission, targeted reassessment and persistent attempt history; four-year cadet progression/conduct baseline retained. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
 | Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
 | Instructors | ✅ COMPLETE | Persistent canonical/generated instructor model, temporal validity and AI authority limits established. |
@@ -115,7 +115,7 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 
 | Pillar | Foundation | Content depth |
 |---|---|---|
-| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — access/character-entry/objectives closed; four-year curriculum depth remains |
 | People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
@@ -130,7 +130,7 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
 | Domain | Status |
 |---|---|
-| Characters | 🟨 IN_PROGRESS | Persistent character identity/runtime, personality, knowledge, memory, relationships, reputation, generated-NPC rules and dialogue context are established; canonical-character catalogues and deeper behavioral content remain progressive. |
+| Characters | 🟨 IN_PROGRESS | Initial player creation v1.0, mandatory biography validation, evidence-based capability growth and objective/trajectory models are now established in addition to identity/runtime, personality, knowledge, memory, relationships and reputation. Canonical-character catalogues and deeper behavioral content remain progressive. |
 | Species / cultures / languages | 🟨 IN_PROGRESS | Founding species plus Klingon, Romulan, Cardassian, Bajoran, Ferengi, Trill, Betazoid, Dominion-engineered species and Borg/Changeling state models established; language runtime and Universal Translator failure/ambiguity rules added. Wider coverage remains progressive. |
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
@@ -147,8 +147,20 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 | Runtime content / schemas / manifests | ⬜ TODO |
 | Validation suites | ⬜ TODO |
 
+## Pillar 1 — closed sub-blocks
+
+| Sub-block | Status | Notes |
+|---|---|---|
+| Academy access v1.0 | ✅ COMPLETE | Five compact blocks, manual source, assessment model, holistic admission and targeted retakes. |
+| Player profile + initial character sheet | ✅ COMPLETE | Nickname separated from character identity; adult-equivalent rule; biography-driven starting state. |
+| Biography validation | ✅ COMPLETE | Mandatory deterministic + semantic coherence gate before campaign start. |
+| Character development semantics | ✅ COMPLETE | Universal evidence-driven learning/practice model; no player-allocated attributes or generic visible XP. |
+| Objectives / trajectory | ✅ COMPLETE | Long-term aspiration + medium-term goals, descriptive trajectory coherence, no guaranteed outcomes. |
+| Specialization decision timing | ✅ COMPLETE | Selected by end of Third Class; formally active in Second Class T1. |
+| Kobayashi Maru scope | ✅ COMPLETE | Project-wide Academy tradition for every playable era, with era-specific presentation. |
+
 ## Active block
 
-**Game-design readiness v0.2: eight-pillar foundation pass complete; content-depth work is now active while CoreRPG runtime catches up.**
+**Pillar 1 remains active: entry systems are closed; the next work is the definitive four-year grouped-subject curriculum and its unit-level depth.**
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
