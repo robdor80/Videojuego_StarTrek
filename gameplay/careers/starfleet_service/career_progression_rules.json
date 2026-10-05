@@ -1,0 +1,70 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "starfleet_career_progression",
+  "status": "foundation_fixed",
+  "stages": [
+    {
+      "rank_band": "ensign",
+      "focus": [
+        "supervised_service",
+        "ship_familiarization",
+        "basic_qualifications",
+        "professional_consolidation"
+      ]
+    },
+    {
+      "rank_band": "lieutenant_junior_grade",
+      "focus": [
+        "greater_autonomy",
+        "advanced_qualifications",
+        "broader_watch_eligibility",
+        "early_supervision"
+      ]
+    },
+    {
+      "rank_band": "lieutenant",
+      "focus": [
+        "independent_professional_trust",
+        "specialization_depth",
+        "leadership",
+        "mentoring"
+      ]
+    },
+    {
+      "rank_band": "senior_officer",
+      "focus": [
+        "department_responsibility",
+        "command_path",
+        "organizational_leadership",
+        "mentoring_others"
+      ]
+    }
+  ],
+  "promotion_inputs": [
+    "minimum_service_conditions",
+    "qualification_eligibility",
+    "professional_evidence",
+    "conduct_record",
+    "demonstrated_responsibility",
+    "recommendations",
+    "available_billet_or_organizational_need",
+    "campaign_context"
+  ],
+  "transfer_inputs": [
+    "player_request_or_star_fleet_need",
+    "available_billet",
+    "rank_match",
+    "specialization_match",
+    "qualification_match",
+    "service_record",
+    "recommendations",
+    "campaign_context"
+  ],
+  "hard_rules": [
+    "No visible generic XP threshold is required.",
+    "Friendship, romance or favoritism alone cannot grant a formal promotion or qualification.",
+    "A transfer may be denied despite good performance when no valid billet exists.",
+    "A promotion may change authority without automatically granting unrelated technical qualifications.",
+    "Career decisions must remain compatible with live campaign state and Starfleet organizational needs."
+  ]
+}
