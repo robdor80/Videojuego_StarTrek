@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "catalog_id": "operational_event_types",
+  "status": "fixed_for_vertical_slice_v0_0_1",
+  "categories": {
+    "orders": [
+      "ORDER_ISSUED",
+      "ORDER_ACKNOWLEDGED",
+      "ORDER_CLARIFICATION_REQUESTED",
+      "ORDER_MODIFIED",
+      "ORDER_CANCELLED",
+      "ORDER_REFUSED"
+    ],
+    "actions": [
+      "ACTION_STARTED",
+      "ACTION_EXECUTED",
+      "ACTION_COMPLETED",
+      "ACTION_CANCELLED",
+      "ACTION_FAILED"
+    ],
+    "results_and_data": [
+      "RESULT_CREATED",
+      "RESULT_REVIEWED",
+      "RESULT_SAVED",
+      "DATA_SENT",
+      "DATA_RECEIVED"
+    ],
+    "contacts_and_tracking": [
+      "CONTACT_CREATED",
+      "CONTACT_UPDATED",
+      "CONTACT_MARKED",
+      "TRACKING_STARTED",
+      "TRACKING_LOST",
+      "TRACKING_RECOVERED",
+      "TRACKING_ENDED"
+    ],
+    "communication": [
+      "REPORT_MADE",
+      "REPORT_CORRECTED",
+      "REQUEST_MADE",
+      "REQUEST_ACKNOWLEDGED"
+    ],
+    "diagnostics_and_support": [
+      "DIAGNOSTIC_RUN",
+      "SUPPORT_REQUESTED",
+      "SUPPORT_ACKNOWLEDGED",
+      "SUPPORT_COMPLETED"
+    ],
+    "duty": [
+      "DUTY_ASSUMED",
+      "DUTY_RELIEF_REQUESTED",
+      "DUTY_RELIEVED",
+      "STATION_ASSUMED",
+      "STATION_RELIEVED"
+    ],
+    "record_integrity": [
+      "EVENT_CORRECTED",
+      "EVENT_ANNOTATED"
+    ]
+  },
+  "rules": [
+    "The catalogue is intentionally small for v0.0.1 and grows only when a concrete gameplay flow requires a new event.",
+    "Event types describe what happened, not whether it was good or bad.",
+    "Console-specific detail belongs in the payload and referenced domain records unless a cross-console semantic event is genuinely required.",
+    "Do not create duplicate event types solely for Academy versus operational-ship presentation."
+  ]
+}
