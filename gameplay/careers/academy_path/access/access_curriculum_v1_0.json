@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "curriculum_id": "starfleet_academy_access_v1_0",
+  "status": "locked_baseline",
+  "player_facing_locale": "es-ES",
+  "purpose": "compact_general_orientation_before_academy",
+  "depth_rule": {
+    "access_teaches": "what_it_is_and_why_it_exists",
+    "academy_teaches": "how_it_works_how_to_operate_and_professional_depth"
+  },
+  "blocks": [
+    {
+      "id": "ACC-01",
+      "title_es": "Federación y Flota Estelar",
+      "emphasis": "high",
+      "learning_outcomes": [
+        "Reconocer qué es la Federación Unida de Planetas.",
+        "Reconocer qué es Starfleet.",
+        "Distinguir Federación y Starfleet.",
+        "Identificar exploración, ciencia, diplomacia, asistencia y defensa como grandes ámbitos de misión."
+      ],
+      "explicitly_out_of_scope": [
+        "historia detallada de la Federación",
+        "derecho federal",
+        "instituciones civiles en profundidad",
+        "cronologías y fechas memorísticas"
+      ]
+    },
+    {
+      "id": "ACC-02",
+      "title_es": "Cómo se organiza Starfleet",
+      "emphasis": "medium",
+      "learning_outcomes": [
+        "Entender que Starfleet es una organización jerarquizada.",
+        "Reconocer la existencia de cadena de mando, rangos, divisiones, departamentos y puestos.",
+        "Reconocer Mando, Operaciones y Ciencias como grandes familias funcionales del proyecto."
+      ],
+      "explicitly_out_of_scope": [
+        "memorizar divisas",
+        "precedencia detallada de rangos",
+        "formas profesionales de tratamiento",
+        "procedimientos de relevo",
+        "autoridad en casos especiales"
+      ]
+    },
+    {
+      "id": "ACC-03",
+      "title_es": "Vida a bordo de una nave",
+      "emphasis": "medium",
+      "learning_outcomes": [
+        "Reconocer las principales áreas de una nave de Starfleet.",
+        "Entender de forma general qué significa tener un puesto asignado y estar de guardia.",
+        "Reconocer puente, Ingeniería, Enfermería, Seguridad, transportadores y alojamientos como espacios funcionales."
+      ],
+      "explicitly_out_of_scope": [
+        "procedimientos de guardia",
+        "relevos e informes profesionales",
+        "protocolos de emergencia",
+        "operación de departamentos"
+      ]
+    },
+    {
+      "id": "ACC-04",
+      "title_es": "Tecnología básica de Starfleet",
+      "emphasis": "medium_high",
+      "learning_outcomes": [
+        "Reconocer la función general de impulso y curvatura.",
+        "Reconocer para qué sirven sensores, computadora, comunicadores, tricorder, transportadores, replicadores, escudos y fáseres.",
+        "Distinguir tecnologías con funciones diferentes sin saber todavía operarlas."
+      ],
+      "explicitly_out_of_scope": [
+        "ecuaciones",
+        "factores warp detallados",
+        "configuración de sensores",
+        "gestión de potencia",
+        "diagnóstico",
+        "procedimientos de uso",
+        "mantenimiento"
+      ]
+    },
+    {
+      "id": "ACC-05",
+      "title_es": "Principios del servicio en Starfleet",
+      "emphasis": "high",
+      "learning_outcomes": [
+        "Reconocer responsabilidad, cooperación, disciplina, integridad y protección de la vida como principios de servicio.",
+        "Entender la orientación exploratoria y pacífica de Starfleet.",
+        "Reconocer que existe una Directiva Principal que limita determinadas intervenciones."
+      ],
+      "explicitly_out_of_scope": [
+        "casos de jurisprudencia",
+        "excepciones",
+        "interpretación profesional de la Directiva Principal",
+        "reglamentos operativos",
+        "procedimientos disciplinarios"
+      ]
+    }
+  ],
+  "manual_target": {
+    "format": "single_candidate_manual",
+    "approximate_page_range": [15, 25],
+    "study_expectation": "one_or_two_relaxed_sessions_for_a_newcomer"
+  },
+  "assessment_rules": [
+    "Only taught access content may be tested as player knowledge.",
+    "Star Trek trivia is forbidden.",
+    "Professional Academy content is forbidden from the entrance knowledge test.",
+    "Knowledge mistakes are recoverable evidence, not automatic rejection.",
+    "Reasoning, interpersonal, psychological and practical assessments are not memorization subjects."
+  ]
+}
