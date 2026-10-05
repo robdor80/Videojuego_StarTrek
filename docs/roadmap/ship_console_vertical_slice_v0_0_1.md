@@ -17,6 +17,8 @@ Prove the core gameplay loop:
 - World truth exists before observation.
 - AI may communicate structured results but does not own or invent world truth.
 - No visible XP bar is required for professional progression; operational events can feed service evaluations.
+- Operational history is append-only: the event log records facts and later systems perform evaluation.
+- Recording an event does not create universal NPC knowledge; visibility/knowledge requires a valid projection path.
 
 ## Implementation sequence
 
@@ -31,7 +33,7 @@ Prove the core gameplay loop:
 | B6. Generator implementation | ✅ COMPLETE | Seeded persistent system materialization + regression tests |
 | C. Sensor detection resolution | ✅ COMPLETE | Deterministic scan request → observable result engine + contracts/tests |
 | D. Sensors console functional tree | ✅ COMPLETE | All ten Sensors branches approved and fixed for v0.1; inter-console handoffs and persistence contracts defined |
-| E. Operational event log | ⬜ TODO | Structured record of player console actions |
+| E. Operational event log | ✅ COMPLETE | Cross-console append-only event contract, fixed event vocabulary, visibility projection and Sensors worked example |
 | F. Academy Sensors UX | ⬜ TODO | Training presentation over same operations |
 | G. Galaxy-class Sensors UX | ⬜ TODO | Operational presentation over same operations |
 | H. v0.0.1 duty scenario | ⬜ TODO | Order → scan → report → evaluation |
@@ -42,8 +44,9 @@ This file is the control sheet for the current vertical slice and must be update
 
 ## Immediate next task
 
-Begin **E. Operational event log**.
+Begin **F. Academy Sensors UX**.
 
+The Academy UX should reuse the same Sensors operations and event log, adding teaching context, supervised practice and later evaluation without creating a separate tutorial-only sensor system.
 
 ## Required post-D deliverable
 
@@ -53,6 +56,16 @@ Delivered for Sensors v0.1:
 
 Control document: `docs/roadmap/sensors_operator_manual_plan.md`.
 
+## Phase E deliverable
+
+Delivered under `gameplay/ship_operations/operational_event_log/`:
+
+- ✅ operational event contract;
+- ✅ event type catalogue for the current vertical slice;
+- ✅ visibility/knowledge projection rules;
+- ✅ worked Sensors order → scan → result → report → interconsole transfer example.
+
+Evaluation remains a separate consumer: the log records evidence and does not itself judge performance.
 
 ## CoreRPG dependency
 
@@ -64,6 +77,6 @@ Rules for this project:
 
 - **Do not implement a duplicate game engine inside Videojuego_StarTrek.**
 - Star Trek defines content, gameplay contracts, console behavior and presentation requirements that CoreRPG must later host.
-- E (Operational Event Log) can be specified now as a reusable contract.
+- E (Operational Event Log) is now specified as a reusable Star Trek-side contract; its authoritative runtime implementation belongs in CoreRPG.
 - F/G may be designed and prototyped as UX, but final runtime integration waits for the necessary CoreRPG milestones.
 - H is **runtime-blocked by CoreRPG**, not by missing Star Trek console design.
