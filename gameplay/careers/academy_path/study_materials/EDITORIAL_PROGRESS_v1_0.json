@@ -79,7 +79,7 @@
     "LDR_303": "synced_developed_content_and_assessment",
     "BRN_303": "synced_developed_content_and_assessment",
     "JDG_303": "synced_developed_content_and_assessment",
-    "CAR_303": "pending_sync_after_main_commit"
+    "CAR_303": "synced_developed_content_and_assessment"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
@@ -89,5 +89,5 @@
     "third_class_trimester_2_developed",
     "third_class_year_2_developed"
   ],
-  "current_milestone": "fourth_class_year_1_developed_and_synced"
+  "current_milestone": "third_class_year_2_developed_and_synced"
 }
