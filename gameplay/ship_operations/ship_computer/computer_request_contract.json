@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "starship_computer_request",
+  "status": "foundation_fixed",
+  "request_types": [
+    "query",
+    "analysis",
+    "action_request",
+    "record_request",
+    "communication_request",
+    "clarification_response"
+  ],
+  "required_fields": [
+    "request_id",
+    "requester_id",
+    "request_type",
+    "received_at",
+    "input"
+  ],
+  "fields": {
+    "request_id": "stable request identifier",
+    "requester_id": "character/system making request",
+    "request_type": "query/analysis/action/etc",
+    "received_at": "authoritative campaign timestamp",
+    "input": "raw text/voice transcript or structured request",
+    "location_ref": "where request originates",
+    "interface_ref": "terminal/combadge/PADD/etc",
+    "resolved_intent": "optional structured candidate",
+    "required_data_refs": "data sources needed",
+    "authorization_result": "allowed/denied/clarification_required/pending_secondary_auth",
+    "execution_ref": "validated action reference when applicable",
+    "response_payload": "structured factual result before language presentation",
+    "ai_route": "none, COMPUTER_FAST or COMPUTER_REASONING",
+    "provenance": "query/action/data source metadata"
+  },
+  "rules": [
+    "Deterministic handling is preferred when sufficient.",
+    "AI interpretation produces a candidate intent, not an authoritative state mutation.",
+    "Data retrieval obeys requester authorization.",
+    "Complex analysis may run deterministic calculations before AI verbalization.",
+    "Responses preserve uncertainty and source boundaries.",
+    "No request can reveal hidden world truth merely because natural language asks for it."
+  ]
+}
