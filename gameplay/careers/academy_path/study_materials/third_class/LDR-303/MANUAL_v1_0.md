@@ -1,219 +1,388 @@
 # LDR-303 — Liderazgo y responsabilidad I
 
-**Material de estudio v1.0 — Cadete de 3.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 3.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Introducir liderazgo como responsabilidad por personas, tareas y comunicación, no como autoridad ornamental.
+Introducir liderazgo como responsabilidad por personas, tareas y comunicación, no como autoridad ornamental. LDR-303 enseña a aceptar responsabilidad, dar instrucciones claras, delegar según capacidad, corregir errores sin humillar, resolver conflicto operativo y liderar un equipo pequeño en simulación.
 
-## Enfoque
+La regla central es:
 
-En 3.ª clase ya no basta reconocer sistemas. Debes **operar bajo supervisión**, comunicar con precisión y justificar decisiones con la información disponible. El conocimiento enseñado puede evaluarse directamente.
+> **Liderar no es hacerlo todo ni mandar más: es conseguir que el equipo entienda qué debe lograr, pueda hacerlo y sepa qué ocurre cuando algo cambia.**
 
-## LDR-303-U01 — Responsabilidad
+---
 
-### Núcleo
+# LDR-303-U01 — Responsabilidad
 
-- **tarea**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **equipo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **resultado**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **rendición de cuentas**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Aceptar una responsabilidad
 
-### Práctica
+Antes de aceptar debe quedar claro:
+- tarea;
+- objetivo;
+- personas;
+- recursos;
+- límites;
+- plazo o condición de cierre.
 
-Aceptar y definir una responsabilidad.
+## 2. Responsabilidad sobre tarea
 
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
+El líder debe:
+- seguir progreso;
+- detectar bloqueos;
+- pedir apoyo;
+- ajustar;
+- cerrar.
 
-### Evaluación
+## 3. Responsabilidad sobre equipo
 
-Caso.
+No significa controlar cada movimiento.
 
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
+Significa atender:
+- carga;
+- capacidad;
+- seguridad;
+- coordinación;
+- información.
 
-### Errores frecuentes
+## 4. Resultado
 
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Un mal resultado no prueba automáticamente mal liderazgo.
 
-### Autoevaluación
+La evaluación debe considerar:
+- información disponible;
+- recursos;
+- decisiones;
+- ejecución;
+- cambios externos.
 
-1. Define **tarea** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Aceptar y definir una responsabilidad.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+## 5. Rendición de cuentas
 
-## LDR-303-U02 — Dar instrucciones
-
-### Núcleo
-
-- **claridad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **intención**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **confirmación**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **límites**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-
-### Práctica
-
-Dirigir tarea breve.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
-
-### Autoevaluación
-
-1. Define **claridad** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Dirigir tarea breve.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
-
-## LDR-303-U03 — Delegar
-
-### Núcleo
-
-- **capacidad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **carga**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **seguimiento**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **confianza**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+Rendir cuentas significa poder explicar:
+- qué sabías;
+- qué decidiste;
+- por qué;
+- qué ocurrió;
+- qué aprendiste.
 
 ### Práctica
 
-Repartir trabajo en equipo.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evaluación.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Aceptar una responsabilidad de equipo y definir claramente su alcance.
 
 ### Autoevaluación
 
-1. Define **capacidad** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Repartir trabajo en equipo.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué debe quedar claro al aceptar una responsabilidad?
+2. ¿Qué implica seguimiento?
+3. ¿Qué significa responsabilidad sobre equipo?
+4. ¿Un mal resultado demuestra siempre mal liderazgo?
+5. ¿Qué significa rendición de cuentas?
 
-## LDR-303-U04 — Corregir errores
+---
 
-### Núcleo
+# LDR-303-U02 — Dar instrucciones
 
-- **hecho**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **riesgo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **feedback**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **escalado**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Claridad
+
+Una instrucción debe permitir actuar sin adivinar.
+
+Puede incluir:
+- objetivo;
+- acción;
+- límite;
+- prioridad;
+- tiempo;
+- criterio de finalización.
+
+## 2. Intención
+
+Explicar intención ayuda a adaptar la ejecución si cambia el contexto.
+
+Ejemplo:
+> “Mantén este corredor libre para que Medicina pueda evacuar pacientes.”
+
+La intención es mantener acceso médico, no simplemente ocupar un punto.
+
+## 3. Confirmación
+
+El receptor debe poder:
+- acusar recibo;
+- aclarar;
+- informar imposibilidad;
+- confirmar ejecución.
+
+## 4. Límites
+
+El líder no debe ordenar tareas fuera de:
+- autoridad;
+- cualificación;
+- seguridad;
+- misión.
+
+## 5. Corrección en curso
+
+Si la instrucción resulta inadecuada, se actualiza.
+
+Cambiar una orden ante nueva información no es debilidad.
 
 ### Práctica
 
-Responder a error de compañero.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Escena.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Dirigir una tarea breve y corregir una instrucción cuando cambie el escenario.
 
 ### Autoevaluación
 
-1. Define **hecho** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Responder a error de compañero.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué puede incluir una instrucción clara?
+2. ¿Para qué sirve explicar intención?
+3. ¿Qué respuestas puede dar el receptor?
+4. ¿Qué límites restringen una instrucción?
+5. ¿Por qué cambiar una instrucción puede ser correcto?
 
-## LDR-303-U05 — Conflicto y presión
+---
 
-### Núcleo
+# LDR-303-U03 — Delegar
 
-- **desacuerdo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **prioridad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **desescalada**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **decisión**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Delegar no es abandonar
+
+Delegar significa asignar una tarea a otra persona manteniendo responsabilidad de seguimiento.
+
+## 2. Capacidad
+
+La tarea debe ajustarse a:
+- formación;
+- experiencia;
+- autoridad;
+- estado;
+- supervisión disponible.
+
+## 3. Carga
+
+Una persona competente puede estar saturada.
+
+Delegar bien exige conocer:
+- tareas actuales;
+- prioridad;
+- tiempo;
+- fatiga;
+- apoyo.
+
+## 4. Seguimiento
+
+El líder debe fijar:
+- cuándo informar;
+- qué hitos importan;
+- cuándo escalar;
+- qué resultado cierra la tarea.
+
+## 5. Confianza
+
+Confiar no significa no verificar nunca.
+
+La cantidad de seguimiento depende de:
+- riesgo;
+- experiencia;
+- complejidad;
+- novedad.
 
 ### Práctica
 
-Resolver conflicto operativo moderado.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Caso.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Repartir trabajo entre cuatro cadetes con capacidades y cargas distintas.
 
 ### Autoevaluación
 
-1. Define **desacuerdo** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Resolver conflicto operativo moderado.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué significa delegar?
+2. ¿Qué factores determinan capacidad?
+3. ¿Por qué la carga importa?
+4. ¿Qué debe fijar el seguimiento?
+5. ¿Confianza significa ausencia total de verificación?
 
-## LDR-303-U06 — Liderazgo en simulación
+---
 
-### Núcleo
+# LDR-303-U04 — Corregir errores
 
-- **briefing**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **ejecución**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **cierre**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **debrief**: Un debrief útil reconstruye hechos, información disponible entonces, decisiones y consecuencias sin juzgar con datos que solo se conocieron después.
+## 1. Empezar por el hecho
+
+Antes de corregir:
+- qué ocurrió;
+- qué riesgo creó;
+- qué información tenía la persona;
+- si sigue ocurriendo.
+
+## 2. Intervenir según urgencia
+
+Si el error crea riesgo inmediato:
+- primero se detiene o corrige la situación;
+- después se explica.
+
+Si no hay urgencia, puede darse feedback sin interrumpir innecesariamente.
+
+## 3. Feedback
+
+Un feedback útil separa:
+- conducta observada;
+- efecto;
+- alternativa;
+- expectativa futura.
+
+## 4. No humillar
+
+Humillar no mejora precisión ni responsabilidad.
+
+La corrección profesional busca:
+- seguridad;
+- aprendizaje;
+- confianza funcional.
+
+## 5. Escalado
+
+Un error debe escalarse cuando:
+- supera autoridad;
+- se repite;
+- existe ocultación;
+- afecta seguridad;
+- requiere registro formal.
 
 ### Práctica
 
-Liderar equipo pequeño.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evaluación integrada.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Responder a un error de compañero primero como operador y después como responsable del equipo.
 
 ### Autoevaluación
 
-1. Define **briefing** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Liderar equipo pequeño.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Por qué empezar por hechos?
+2. ¿Qué cambia si el riesgo es inmediato?
+3. ¿Qué elementos tiene feedback útil?
+4. ¿Por qué humillar es mala práctica?
+5. ¿Cuándo debe escalarse un error?
 
-## Cierre del curso
+---
 
-La superación combina conocimiento, práctica y juicio. Las carencias localizadas pueden producir tutoría, práctica adicional y reevaluación; no obligan por defecto a reiniciar todo el trimestre.
+# LDR-303-U05 — Conflicto y presión
+
+## 1. Desacuerdo no es insubordinación automática
+
+Dos profesionales pueden discrepar sobre:
+- prioridad;
+- interpretación;
+- recurso;
+- riesgo;
+- método.
+
+## 2. Bajo presión
+
+La presión puede:
+- reducir escucha;
+- acelerar conclusiones;
+- aumentar tono;
+- estrechar opciones.
+
+El líder debe reconocerlo.
+
+## 3. Desescalada
+
+Puede:
+- resumir el desacuerdo;
+- volver a hechos;
+- separar urgencia de emoción;
+- pedir alternativas;
+- fijar autoridad de decisión.
+
+## 4. Decisión
+
+Cuando debe decidirse:
+- no esperar consenso infinito;
+- explicar criterio;
+- asignar tareas;
+- mantener posibilidad de revisión.
+
+## 5. Después
+
+Un conflicto resuelto operativamente puede requerir conversación posterior.
+
+No todo debe resolverse durante la crisis.
+
+### Práctica
+
+Resolver un desacuerdo moderado entre dos estaciones con tiempo limitado.
+
+### Autoevaluación
+
+1. ¿Por qué desacuerdo no equivale a insubordinación?
+2. ¿Qué efectos puede tener presión?
+3. Nombra técnicas de desescalada.
+4. ¿Cuándo debe cerrarse una decisión?
+5. ¿Por qué puede hacer falta conversación posterior?
+
+---
+
+# LDR-303-U06 — Liderazgo en simulación
+
+## 1. Briefing
+
+El líder:
+- define objetivo;
+- reparte roles;
+- confirma restricciones;
+- identifica puntos de reporte;
+- resuelve dudas.
+
+## 2. Ejecución
+
+Durante la operación:
+- mantiene imagen general;
+- no micromaneja;
+- escucha;
+- redistribuye si cambia la situación;
+- escala si excede autoridad.
+
+## 3. Cierre
+
+Antes de terminar:
+- comprueba resultado;
+- pendientes;
+- personas;
+- handoffs;
+- registros.
+
+## 4. Debrief
+
+Debe incluir:
+- hechos;
+- decisiones;
+- impacto;
+- feedback;
+- aprendizaje.
+
+## 5. Evidencia
+
+La valoración de liderazgo se apoya en:
+- observación;
+- eventos;
+- informes;
+- resultados;
+- comportamiento repetido.
+
+Una sola escena no debe dominar una trayectoria salvo gravedad excepcional.
+
+### Práctica
+
+Liderar un equipo pequeño en simulación.
+
+### Autoevaluación
+
+1. ¿Qué hace el líder en briefing?
+2. ¿Por qué no debe micromanejar?
+3. ¿Qué puede obligar a redistribuir?
+4. ¿Qué se comprueba en cierre?
+5. ¿En qué evidencia se basa la valoración?
+
+---
+
+# Evaluación del curso
+
+LDR-303 evalúa responsabilidad, claridad, delegación, feedback, conflicto y liderazgo básico.
+
+No concede rango ni cualificación de mando por sí solo.
+
+# Referencias internas
+
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `lore/federation/starfleet/command_structure/succession_rules.json`
+- `gameplay/careers/academy_path/simulation_model.json`
