@@ -146,6 +146,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 - ✅ **Fourth Class / Year 1 architecture locked v1.0**: three trimesters, five grouped subjects per trimester, with PHY as a longitudinal line and professional specialization explicitly deferred.
 - ✅ **Third Class / Year 2 architecture locked v1.0**: supervised ship operations → people/risk/field action → integration/leadership/branch choice.
 - ✅ **Second Class / Year 3 architecture locked v1.0**: formal specialization → complex/degraded operations → supervised professional competence and intermediate qualification.
+- ✅ **First Class / Year 4 architecture locked v1.0**: advanced professional consolidation → service-like integrated operations → commissioning and first assignment.
 
 ### Earlier design-depth progress
 
@@ -161,7 +162,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. Complete the **First Class / Year 4 grouped-subject architecture** with Roberto before any unit-level deployment. Once all four years are locked, begin the autonomous deployment pass starting with Fourth Class / Trimester 1.
+1. **Autonomous four-year unit deployment is authorized and active.** Expand every approved course into units, learning objectives, practicals and evaluation evidence; then derive study manuals/PDF/web material from the same academic source.
 2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
@@ -184,9 +185,10 @@ The following are now **closed to the current defined scope** and should only re
 - project-wide Kobayashi Maru tradition;
 - Fourth Class / Year 1 three-trimester grouped-subject architecture;
 - Third Class / Year 2 three-trimester grouped-subject architecture;
-- Second Class / Year 3 three-trimester specialization architecture.
+- Second Class / Year 3 three-trimester specialization architecture;
+- First Class / Year 4 service-readiness and commissioning architecture.
 
-The remaining Pillar 1 work is primarily **First Class / Year 4 architecture, then autonomous unit-level deployment of all four years, branch curriculum depth, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
+The remaining Pillar 1 work is primarily **autonomous unit-level deployment of all four years, seven branch curricula, study-material generation, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 
