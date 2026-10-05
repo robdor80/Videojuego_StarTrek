@@ -1,200 +1,562 @@
 # SCI-403 — Ciencia, sensores y método científico I
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Separar medición de interpretación y enseñar los fundamentos de observación científica y sensores.
+Aprender a observar sin confundir observación con explicación.
 
-## Cómo estudiar esta asignatura
+SCI-403 introduce el método científico, la incertidumbre y el funcionamiento conceptual de los sensores. También sirve como primera preparación directa para la consola de Sensores del juego.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+La regla central es:
 
-## SCI-403-U01 — Método científico
+> **El mundo existe primero. Sensores obtiene información. Ciencia interpreta.**
 
-### Qué debes dominar
+El sistema nunca crea una anomalía porque el jugador la busque, ni revela automáticamente la verdad oculta porque el jugador pulse “scan”.
 
-- **observación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **pregunta**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **hipótesis**: El método científico obliga a separar observación, hipótesis, prueba y conclusión. Una explicación útil debe indicar qué dato la apoya, qué incertidumbre existe y qué observación podría obligar a revisarla.
-- **evidencia**: El método científico obliga a separar observación, hipótesis, prueba y conclusión. Una explicación útil debe indicar qué dato la apoya, qué incertidumbre existe y qué observación podría obligar a revisarla.
-- **revisión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+---
 
-### Aplicación operativa
+# SCI-403-U01 — Método científico
 
-Analizar una observación sencilla. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+## 1. Observar antes de explicar
 
-### Qué se evalúa
+Una observación describe algo detectado o medido.
 
-Ejercicio razonado. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Ejemplo:
 
-### Errores frecuentes
+> “La intensidad de radiación aumenta al acercarnos al objeto.”
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Eso no explica todavía la causa.
 
-### Autoevaluación
+## 2. Pregunta
 
-1. Explica con tus palabras qué significa **observación** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **observación** y **pregunta**?
-3. Resuelve de forma razonada esta práctica: *Analizar una observación sencilla.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Una pregunta convierte la observación en un problema investigable.
 
-## SCI-403-U02 — Medición e incertidumbre
+Ejemplo:
 
-### Qué debes dominar
+> “¿Qué está produciendo el aumento de radiación?”
 
-- **precisión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ruido**: Toda medición tiene calidad y límites. El cadete debe evitar convertir una lectura débil en una afirmación rotunda y debe comunicar incertidumbre cuando puede cambiar una decisión.
-- **error**: Toda medición tiene calidad y límites. El cadete debe evitar convertir una lectura débil en una afirmación rotunda y debe comunicar incertidumbre cuando puede cambiar una decisión.
-- **límite de detección**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 3. Hipótesis
 
-### Aplicación operativa
+Una hipótesis es una explicación provisional que debe poder contrastarse.
 
-Comparar lecturas con distinta calidad. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Una buena hipótesis ayuda a decidir:
 
-### Qué se evalúa
+- qué buscar;
+- qué medir;
+- qué resultado la apoyaría;
+- qué resultado la debilitaría.
 
-Evaluación aplicada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 4. Evidencia
 
-### Errores frecuentes
+La evidencia puede:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- apoyar;
+- debilitar;
+- contradecir;
+- dejar abierta una hipótesis.
 
-### Autoevaluación
+Una sola lectura rara vez convierte una explicación compleja en certeza.
 
-1. Explica con tus palabras qué significa **precisión** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **precisión** y **ruido**?
-3. Resuelve de forma razonada esta práctica: *Comparar lecturas con distinta calidad.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 5. Revisión
 
-## SCI-403-U03 — Qué es un sensor
+Si la evidencia cambia, la explicación debe cambiar.
 
-### Qué debes dominar
+El objetivo no es “tener razón a la primera”, sino construir una conclusión que siga siendo compatible con los datos.
 
-- **detección**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **medición**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **firma**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **canales generales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+### Ejemplo
 
-### Aplicación operativa
+Observación:
+> Un contacto emite una firma energética intermitente.
 
-Relacionar fenómeno con medición posible. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Hipótesis A:
+> Es un fallo técnico.
 
-### Qué se evalúa
+Hipótesis B:
+> Es una señal deliberada.
 
-Caso conceptual. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+La siguiente observación debe buscar información que ayude a distinguirlas.
 
-### Errores frecuentes
+### Práctica
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Recibe una observación sencilla, formula dos hipótesis y propone una medición que permita diferenciarlas.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **detección** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **detección** y **medición**?
-3. Resuelve de forma razonada esta práctica: *Relacionar fenómeno con medición posible.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué diferencia existe entre observación e hipótesis?
+2. ¿Para qué sirve formular una pregunta?
+3. ¿Qué hace que una hipótesis sea útil?
+4. ¿Puede una sola lectura demostrar siempre una causa?
+5. ¿Qué debes hacer cuando nueva evidencia contradice tu explicación?
 
-## SCI-403-U04 — Activo y pasivo
+---
 
-### Qué debes dominar
+# SCI-403-U02 — Medición e incertidumbre
 
-- **ventajas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **costes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **exposición**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **contexto**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Medir no significa conocer con exactitud perfecta
 
-### Aplicación operativa
+Toda medición tiene límites.
 
-Elegir modo en situaciones sencillas. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+El cadete debe aprender a leer:
 
-### Qué se evalúa
+- valor;
+- calidad;
+- confianza;
+- incertidumbre;
+- condiciones de observación.
 
-Caso de decisión. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Precisión
 
-### Errores frecuentes
+La precisión describe cuánto detalle o estabilidad posee una medición.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Más precisión puede exigir:
 
-### Autoevaluación
+- más tiempo;
+- más potencia;
+- mejor resolución;
+- menos interferencia.
 
-1. Explica con tus palabras qué significa **ventajas** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **ventajas** y **costes**?
-3. Resuelve de forma razonada esta práctica: *Elegir modo en situaciones sencillas.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 3. Ruido
 
-## SCI-403-U05 — Contacto, lectura e interpretación
+Ruido es información no deseada que dificulta distinguir la señal útil.
 
-### Qué debes dominar
+Puede provenir de:
 
-- **contacto**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **tracking inicial**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **readout**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **Science como interpretación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+- entorno;
+- otras emisiones;
+- daño;
+- condiciones de observación;
+- interferencia deliberada.
 
-### Aplicación operativa
+## 4. Error
 
-Distinguir datos de conclusión. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+“Error” no significa necesariamente equivocación humana.
 
-### Qué se evalúa
+Puede describir el margen de incertidumbre asociado a una medición.
 
-Práctica con lecturas. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Ejemplo:
 
-### Errores frecuentes
+> distancia estimada: 12.000 km ± margen de lectura.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 5. Límite de detección
 
-### Autoevaluación
+Una señal puede existir y ser demasiado débil para ser detectada con la configuración disponible.
 
-1. Explica con tus palabras qué significa **contacto** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **contacto** y **tracking inicial**?
-3. Resuelve de forma razonada esta práctica: *Distinguir datos de conclusión.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Por eso:
 
-## SCI-403-U06 — Barrido básico
+> **no detectado ≠ inexistente**
 
-### Qué debes dominar
+## 6. Calidad de lectura
 
-- **objetivo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **configuración preparada**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **resultado**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **registro**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+El proyecto admite estados de conocimiento como:
 
-### Aplicación operativa
+- confirmado;
+- alta confianza;
+- estimado;
+- hipótesis;
+- desconocido;
+- contradictorio.
 
-Ejecutar un scan guiado en consola real cuando exista. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+La interfaz debe comunicar estos niveles en lugar de convertir todo en “verdadero/falso”.
 
-### Qué se evalúa
+### Práctica
 
-Evaluación práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Compara tres lecturas del mismo fenómeno con distinta interferencia y decide cuál permite una conclusión más fuerte.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **objetivo** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **objetivo** y **configuración preparada**?
-3. Resuelve de forma razonada esta práctica: *Ejecutar un scan guiado en consola real cuando exista.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Por qué una medición no es perfecta?
+2. ¿Qué factores pueden mejorar precisión?
+3. ¿Qué es ruido?
+4. ¿Qué significa límite de detección?
+5. ¿Por qué debe mostrarse la confianza de una lectura?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# SCI-403-U03 — Qué es un sensor
 
-## Tratamiento por era
+## 1. Función general
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Un sensor detecta y mide propiedades observables.
+
+Puede ayudar a determinar:
+
+- que existe una señal;
+- de dónde procede;
+- cómo cambia;
+- qué firmas presenta;
+- con qué confianza se ha medido.
+
+## 2. Detección
+
+El motor de sensores puede producir estados como:
+
+1. no detectado;
+2. traza detectada;
+3. detectado sin clasificar;
+4. parcialmente resuelto;
+5. resuelto.
+
+Cada nivel depende de observaciones reales y capacidad disponible.
+
+## 3. Firma
+
+Una firma es un patrón observable asociado a una fuente o fenómeno.
+
+La consola puede trabajar con categorías como:
+
+- electromagnética;
+- subespacial;
+- gravimétrica;
+- térmica;
+- radiación;
+- partículas;
+- biológica;
+- warp;
+- transpondedor artificial.
+
+## 4. Medición y clasificación
+
+Detectar una firma no equivale automáticamente a identificar el objeto.
+
+Ejemplo:
+
+> “Firma warp compatible con una nave”
+
+no significa:
+
+> “Es definitivamente una nave concreta.”
+
+## 5. Canales y filtros
+
+El operador puede elegir qué firmas buscar o priorizar.
+
+Un filtro más específico puede ayudar a aislar información, pero también puede ignorar señales fuera del criterio seleccionado.
+
+### Práctica
+
+Relaciona cinco fenómenos de entrenamiento con el tipo de firma que podría proporcionar información útil.
+
+### Autoevaluación
+
+1. ¿Qué hace un sensor?
+2. ¿Qué diferencia existe entre detección y clasificación?
+3. ¿Qué es una firma?
+4. ¿Por qué una coincidencia de patrón no es certeza absoluta?
+5. ¿Qué riesgo tiene filtrar demasiado una búsqueda?
+
+---
+
+# SCI-403-U04 — Activo y pasivo
+
+## 1. Dos formas generales de observar
+
+### Pasivo
+
+El sistema observa señales disponibles sin emitir una búsqueda equivalente dirigida al entorno.
+
+Ventajas posibles:
+
+- menor exposición;
+- menor interferencia provocada;
+- discreción.
+
+Limitaciones posibles:
+
+- menos información;
+- dependencia de emisiones existentes;
+- menor capacidad de detección en ciertas condiciones.
+
+### Activo
+
+El sistema utiliza una emisión o interacción deliberada para mejorar capacidad de observación.
+
+Ventajas posibles:
+
+- detección mejorada;
+- mejor resolución en determinadas condiciones.
+
+Costes posibles:
+
+- consumo;
+- tiempo;
+- mayor detectabilidad de la propia actividad.
+
+## 2. No existe un modo universalmente mejor
+
+La elección depende de:
+
+- misión;
+- riesgo;
+- distancia;
+- interferencia;
+- discreción;
+- necesidad de detalle.
+
+## 3. Activo tiene consecuencias
+
+El proyecto fija una regla:
+
+> un barrido activo puede hacer perceptible que estamos escaneando.
+
+No significa que siempre seamos detectados, pero el coste debe existir en el modelo.
+
+## 4. Malas decisiones válidas
+
+Si el operador elige un modo técnicamente válido pero inapropiado, el sistema puede ejecutarlo.
+
+Eso es un error profesional, no un error de interfaz.
+
+### Práctica
+
+Elige activo o pasivo en cuatro escenarios: exploración tranquila, búsqueda de señal débil, vigilancia discreta y emergencia.
+
+### Autoevaluación
+
+1. ¿Qué caracteriza a un modo pasivo?
+2. ¿Qué puede aportar el modo activo?
+3. ¿Qué coste estratégico puede tener un barrido activo?
+4. ¿Por qué no existe un modo siempre mejor?
+5. ¿Qué ocurre si el operador selecciona una opción válida pero poco adecuada?
+
+---
+
+# SCI-403-U05 — Contacto, lectura e interpretación
+
+## 1. Contacto
+
+Un contacto es una representación persistente de algo que la nave ha detectado.
+
+No es una copia de la entidad oculta del World State.
+
+Por eso utiliza una identidad observacional propia.
+
+## 2. Ficha de contacto
+
+Puede incluir, cuando haya sido realmente descubierto:
+
+- posición estimada;
+- distancia;
+- vector;
+- velocidad estimada;
+- firmas;
+- confianza;
+- clasificación;
+- historial de observaciones.
+
+## 3. Tracking inicial
+
+Seguir un contacto significa actualizar su conocimiento a lo largo del tiempo.
+
+Puede mejorar:
+
+- posición;
+- rumbo estimado;
+- velocidad;
+- trayectoria probable.
+
+No revela mágicamente su naturaleza.
+
+## 4. Readout
+
+La lectura sensorial presenta datos medidos o estimados.
+
+Debe conservar:
+
+- procedencia;
+- momento;
+- confianza;
+- incertidumbre.
+
+## 5. Ciencia interpreta
+
+Sensores puede decir:
+
+> “Masa aproximada, firma térmica, emisión subespacial y vector.”
+
+Ciencia puede recibir esos datos y plantear:
+
+> “El patrón es compatible con un fenómeno de tipo X.”
+
+La interpretación no borra ni modifica la lectura original.
+
+## 6. Conocimiento compartido sin omnisciencia
+
+Varias estaciones pueden trabajar sobre el mismo contacto:
+
+- Sensores: posición y firmas;
+- Ciencia: interpretación;
+- Táctica: postura y capacidad de combate;
+- Comunicaciones: señales y autenticación;
+- Ordenador: comparación con registros.
+
+Cada dato conserva su fuente.
+
+### Práctica
+
+Recibe una ficha de contacto y separa:
+- datos observados;
+- estimaciones;
+- clasificación;
+- hipótesis científica.
+
+### Autoevaluación
+
+1. ¿Qué representa un contacto?
+2. ¿Qué puede mejorar un tracking?
+3. ¿Qué información debe conservar un readout?
+4. ¿Qué diferencia existe entre Sensores y Ciencia?
+5. ¿Por qué compartir una ficha no convierte a todas las estaciones en omniscientes?
+
+---
+
+# SCI-403-U06 — Barrido básico
+
+## 1. El primer procedimiento real de consola
+
+Esta unidad conecta directamente con la consola funcional de Sensores.
+
+Un barrido básico sigue la lógica:
+
+> **tipo → modo → área/objetivo → resolución → filtros → prioridad → duración → revisar → ejecutar**
+
+Los valores por defecto permiten cambiar solo lo necesario.
+
+## 2. Tipo
+
+La consola contempla:
+
+- corto alcance;
+- largo alcance;
+- focalizado.
+
+Un barrido focalizado necesita un objetivo concreto.
+
+## 3. Área u objetivo
+
+Puede ser:
+
+- espacio circundante;
+- sector;
+- sistema;
+- coordenadas;
+- vector;
+- contacto conocido.
+
+## 4. Resolución
+
+Puede elegirse un nivel de detalle.
+
+Más resolución puede implicar:
+
+- más tiempo;
+- más potencia;
+- menor cobertura.
+
+## 5. Filtros y prioridad
+
+**Filtro**  
+Define qué firmas interesan.
+
+**Prioridad**  
+Indica qué firma recibe atención preferente sin excluir necesariamente las demás.
+
+No son el mismo concepto.
+
+## 6. Duración
+
+La duración importa.
+
+Un barrido puede ser:
+
+- rápido;
+- estándar;
+- extendido;
+- personalizado.
+
+Más tiempo puede mejorar la calidad potencial si las condiciones lo permiten.
+
+## 7. Resultados inciertos
+
+Son resultados válidos:
+
+- traza;
+- posible contacto;
+- señal intermitente;
+- lectura insuficiente;
+- detectado sin clasificar.
+
+El sistema no tiene obligación de entregar una respuesta completa.
+
+## 8. Repetir lo mismo
+
+Repetir exactamente la misma operación bajo las mismas condiciones no debe revelar mágicamente más.
+
+Para mejorar puede ser necesario cambiar:
+
+- resolución;
+- duración;
+- filtros;
+- potencia;
+- posición;
+- condiciones.
+
+## 9. Error humano
+
+Si la orden era:
+
+> “sector 041”
+
+y el cadete configura:
+
+> “sector 014”
+
+la consola puede ejecutar el barrido si es técnicamente válido.
+
+El error pertenece al operador.
+
+### Práctica
+
+Ejecuta un barrido guiado en la consola real cuando esté disponible, revisando configuración antes de confirmar.
+
+### Autoevaluación
+
+1. ¿Qué pasos básicos configuran un barrido?
+2. ¿Qué exige un barrido focalizado?
+3. Diferencia filtro y prioridad.
+4. ¿Por qué la duración importa?
+5. ¿Repetir exactamente lo mismo debe revelar más información?
+6. ¿Qué ocurre si el operador introduce un sector válido pero equivocado?
+
+---
+
+# Evaluación del curso
+
+SCI-403 evalúa:
+
+- método científico;
+- incertidumbre;
+- separación entre medición e interpretación;
+- concepto de firma y contacto;
+- activo/pasivo;
+- barrido básico real.
+
+No exige análisis científico avanzado.
+
+# Relación con la prueba v0.0.1
+
+Esta asignatura es una de las bases pedagógicas del vertical slice de Sensores.
+
+La consola utilizada en Academia debe compartir el mismo árbol funcional que la consola operativa del juego.
+
+La skin puede cambiar por era; la operación subyacente no.
+
+# Referencias internas
+
+- `gameplay/science/sensor_analysis_model.json`
+- `gameplay/ship_operations/consoles/sensors/README.md`
+- `gameplay/ship_operations/sensor_resolution/README.md`
+- `gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md`
+
+Estas fuentes gobiernan detección, lectura, incertidumbre y límites de conocimiento.
