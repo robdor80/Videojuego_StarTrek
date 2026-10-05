@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.2",
+  "schema_version": "0.2.3",
   "model_id": "academy_year_trimester_model",
   "status": "foundation_fixed",
   "sequence": [
@@ -50,7 +50,14 @@
       "display_year": "1st_year",
       "phase": "service_preparation",
       "trimesters": 3,
-      "specialization_pressure": "high"
+      "specialization_pressure": "high",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_first_class_v1_0",
+      "trimester_themes": [
+        "advanced_professional_consolidation",
+        "integrated_service_like_operations",
+        "commissioning_and_service_readiness"
+      ]
     }
   ],
   "unit_learning_cycle": [
