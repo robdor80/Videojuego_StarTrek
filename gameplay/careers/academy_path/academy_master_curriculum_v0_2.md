@@ -333,3 +333,21 @@ Control files:
 - `curriculum/VALIDATION_v1_0.md`
 
 The next content layer is study-material production, not further year-architecture design.
+
+
+## Study-material production v1.0
+
+The first complete study-material layer has been generated from the authoritative curriculum:
+
+- 67 learner manuals: 60 main course/process manuals + 7 branch manuals;
+- 67 structured assessment banks;
+- 67 instructor guides;
+- 1,864 generated assessment prompts across course and branch banks.
+
+Directories:
+
+- `study_materials/`
+- `assessment_banks/`
+- `instructor_guides/`
+
+This layer is editable content derived from the curriculum source. Final PDF layout and Academy website publishing remain downstream outputs.

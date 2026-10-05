@@ -81,7 +81,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | History and campus | ✅ COMPLETE | Playable hub, location graph and gameplay-relevant era differences established. |
 | Admissions and cadet life | ✅ COMPLETE | Access v1.0 locked: five-block general curriculum, candidate manual source, holistic admission, targeted reassessment and persistent attempt history; four-year cadet progression/conduct baseline retained. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
-| Curriculum and courses | ✅ COMPLETE | All four year-level architectures are locked v1.0. Autonomous unit-level deployment is authorized; manuals/PDF/web outputs derive from the same academic source. |
+| Curriculum and courses | ✅ COMPLETE | Four-year architecture, 60 main course/process definitions, 7 branch curricula and 501 unit designs are locked. Study-material v1.0 packs now derive from the same academic source. |
 | Instructors | ✅ COMPLETE | Persistent canonical/generated instructor model, temporal validity and AI authority limits established. |
 | Evaluations and examinations | ✅ COMPLETE | Multi-axis evaluation, exam formats, recovery and persistent record model established. |
 | Simulations and field training | ✅ COMPLETE | Simulation, active-unit field study, training cruise and live-world interruption models established. |
@@ -115,7 +115,7 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 
 | Pillar | Foundation | Content depth |
 |---|---|---|
-| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — entry systems and four-year unit curriculum closed; study materials, Academy-life scheduling and post-Academy depth remain |
+| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — entry systems, four-year unit curriculum and study-material v1.0 packs closed; PDF/web publishing, Academy-life scheduling and post-Academy depth remain |
 | People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
@@ -165,6 +165,6 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
 ## Active block
 
-**Pillar 1 remains active: all four year-level architectures and the complete unit-level curriculum are closed. The next autonomous layer is study-material production: manuals, lesson content, exercises, question banks, instructor material and derived PDF/web outputs.**
+**Pillar 1 remains active: the four-year architecture, unit curriculum and study-material v1.0 layer are closed. There are now 67 learner manuals, 67 assessment banks and 67 instructor guides. Next work is editorial/provenance QA plus derived PDF/web publishing, Academy-life scheduling/content and post-Academy depth.**
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.

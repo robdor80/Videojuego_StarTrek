@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "academy_study_materials_v1_0",
+  "status": "generated",
+  "authoritative_source": "gameplay/careers/academy_path/curriculum/",
+  "learner_manuals": 67,
+  "assessment_banks": 67,
+  "instructor_guides": 67,
+  "generated_assessment_prompts": 1864,
+  "coverage": {
+    "fourth_class": {
+      "main_courses": 15
+    },
+    "third_class": {
+      "main_courses": 15
+    },
+    "second_class": {
+      "main_courses": 15
+    },
+    "first_class": {
+      "main_courses": 15
+    },
+    "professional_branches": 7
+  },
+  "output_rule": "PDF and Academy web must be derived from these materials and the authoritative curriculum; they must not become independent curricula.",
+  "qa_status": "structural_generation_complete_editorial_and_provenance_qa_pending"
+}

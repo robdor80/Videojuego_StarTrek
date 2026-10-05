@@ -162,8 +162,8 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. ✅ **Four-year unit deployment complete.** Next produce study manuals, lesson content, exercises, question banks and instructor material from the authoritative course/branch JSON, then derive PDF/web outputs from the same source.
-2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
+1. ✅ **Four-year unit deployment and study-material v1.0 generation complete.** 67 learner manuals, 67 assessment banks and 67 instructor guides now derive from the authoritative course/branch JSON. Next: editorial/provenance QA and derived PDF/web publication.
+2. ✅ **Seven branch curricula built** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical, including advanced 2nd/1st Class progression and study packs.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
 5. Add **procedural generation grammars and distributions** for ordinary stars/planets, civilizations, ship roles/operators, facilities and traffic.
@@ -188,7 +188,7 @@ The following are now **closed to the current defined scope** and should only re
 - Second Class / Year 3 three-trimester specialization architecture;
 - First Class / Year 4 service-readiness and commissioning architecture.
 
-The remaining Pillar 1 work is primarily **study-material generation from the completed 60-course/7-branch unit design, Academy-life scheduling/content, richer evaluation outputs and post-Academy career depth**.
+The remaining Pillar 1 work is primarily **editorial/provenance QA of generated study material, PDF/web derivation, Academy-life scheduling/content, richer evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 
