@@ -1,196 +1,411 @@
 # PHY-403 — Preparación física III
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Cerrar el primer año con una condición funcional sostenible y capacidad de autogestión.
+Cerrar el primer año con una condición funcional sostenible y una capacidad básica de autogestión.
 
-## Cómo estudiar esta asignatura
+PHY-403 no busca una “nota física” aislada. Integra el estado inicial, la evidencia acumulada durante el año, la evolución, la capacidad para ajustar una rutina y la preparación funcional del personaje según su biología y contexto.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## PHY-403-U01 — Revisión de progreso
+# PHY-403-U01 — Revisión de progreso
 
-### Qué debes dominar
+## 1. Comparar contra el punto de partida
 
-- **estado inicial**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **evidencia acumulada**: El método científico obliga a separar observación, hipótesis, prueba y conclusión. Una explicación útil debe indicar qué dato la apoya, qué incertidumbre existe y qué observación podría obligar a revisarla.
-- **cambios**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+La revisión de progreso parte de la evaluación inicial de PHY-401.
 
-### Aplicación operativa
+Se comparan:
 
-Comparar registros del año. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- estado inicial;
+- evidencia acumulada;
+- continuidad;
+- cambios observados;
+- interrupciones;
+- recuperación.
 
-### Qué se evalúa
+## 2. Progreso no significa mejora continua
 
-Evaluación descriptiva. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Puede haber semanas mejores y peores.
 
-### Errores frecuentes
+Lo importante es distinguir:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- tendencia;
+- fluctuación;
+- adaptación;
+- deterioro;
+- recuperación.
 
-### Autoevaluación
+## 3. Evidencia acumulada
 
-1. Explica con tus palabras qué significa **estado inicial** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **estado inicial** y **evidencia acumulada**?
-3. Resuelve de forma razonada esta práctica: *Comparar registros del año.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+La evidencia puede incluir:
 
-## PHY-403-U02 — Condición funcional
+- sesiones;
+- evaluaciones;
+- actividad personal;
+- incidencias;
+- lesiones;
+- descansos;
+- observaciones de instructor.
 
-### Qué debes dominar
+## 4. Cambio significativo
 
-- **resistencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **fuerza**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **movilidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **coordinación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Un cambio debe interpretarse con contexto.
 
-### Aplicación operativa
+Más cansancio durante exámenes no demuestra automáticamente pérdida de condición.
 
-Sesión integrada. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+### Práctica
 
-### Qué se evalúa
-
-Adecuación al servicio y biología. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Compara registros del comienzo y final de año y describe cambios sin traducirlos a XP.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **resistencia** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **resistencia** y **fuerza**?
-3. Resuelve de forma razonada esta práctica: *Sesión integrada.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Contra qué debe compararse el progreso?
+2. ¿Por qué una semana peor no demuestra regresión?
+3. ¿Qué tipos de evidencia pueden revisarse?
+4. ¿Qué diferencia existe entre fluctuación y tendencia?
+5. ¿Por qué el contexto importa al interpretar cambios?
 
-## PHY-403-U03 — Autogestión
+---
 
-### Qué debes dominar
+# PHY-403-U02 — Condición funcional
 
-- **planificación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **carga**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **recuperación**: La preparación física se trata como un proceso longitudinal. Carga, descanso, lesiones y recuperación modifican el estado del personaje; no existen bonificaciones instantáneas por completar una sesión.
-- **señales de riesgo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Integración
 
-### Aplicación operativa
+La condición funcional reúne:
 
-Diseñar semana realista. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- resistencia;
+- fuerza;
+- movilidad;
+- coordinación.
 
-### Qué se evalúa
+No existe una única cifra que sustituya todas esas dimensiones.
 
-Criterio. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Adecuación al servicio
 
-### Errores frecuentes
+La pregunta es:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+> ¿Puede este personaje realizar de forma segura y razonable las demandas físicas comunes de su contexto de servicio?
 
-### Autoevaluación
+## 3. Biología
 
-1. Explica con tus palabras qué significa **planificación** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **planificación** y **carga**?
-3. Resuelve de forma razonada esta práctica: *Diseñar semana realista.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+La respuesta depende de:
 
-## PHY-403-U04 — Entrenamiento bajo carga académica
+- especie;
+- fisiología;
+- limitaciones;
+- adaptación;
+- historia personal.
 
-### Qué debes dominar
+No se usa un estándar bruto humano para todas las especies.
 
-- **prioridades**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ajuste**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **consistencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Sesión integrada
 
-### Aplicación operativa
+Una evaluación integrada puede combinar:
 
-Adaptar rutina durante exámenes. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- desplazamiento;
+- carga;
+- movilidad;
+- equilibrio;
+- tarea sostenida;
+- cooperación.
 
-### Qué se evalúa
+## 5. Seguridad y técnica
 
-Decisión contextual. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+La calidad de ejecución sigue importando incluso cuando la condición ha mejorado.
 
-### Errores frecuentes
+### Práctica
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
-
-### Autoevaluación
-
-1. Explica con tus palabras qué significa **prioridades** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **prioridades** y **ajuste**?
-3. Resuelve de forma razonada esta práctica: *Adaptar rutina durante exámenes.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
-
-## PHY-403-U05 — Actividad personal y Academia
-
-### Qué debes dominar
-
-- **aficiones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **evidencia**: El método científico obliga a separar observación, hipótesis, prueba y conclusión. Una explicación útil debe indicar qué dato la apoya, qué incertidumbre existe y qué observación podría obligar a revisarla.
-- **separación de currículo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **transferencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Registrar actividad personal sin convertirla en nota de PHY. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Corrección de registro. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Sesión integrada adaptada al personaje, con observación de resistencia, fuerza, movilidad y coordinación.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **aficiones** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **aficiones** y **evidencia**?
-3. Resuelve de forma razonada esta práctica: *Registrar actividad personal sin convertirla en nota de PHY.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué dimensiones forman condición funcional?
+2. ¿Por qué no se resume todo en una cifra?
+3. ¿Qué significa adecuación al servicio?
+4. ¿Por qué la biología modifica la evaluación?
+5. ¿Qué sigue importando además del rendimiento bruto?
 
-## PHY-403-U06 — Cierre anual
+---
 
-### Qué debes dominar
+# PHY-403-U03 — Autogestión
 
-- **continuidad futura**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **hábitos**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **áreas de mejora**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. El cadete debe aprender a planificar
 
-### Aplicación operativa
+Autogestión significa tomar decisiones razonables sobre:
 
-Plan longitudinal para 3.ª clase. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- carga;
+- descanso;
+- recuperación;
+- prioridades;
+- señales de riesgo.
 
-### Qué se evalúa
+## 2. Carga semanal
 
-Apto / apoyo recomendado, sin XP. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Una semana real puede contener:
 
-### Errores frecuentes
+- clases;
+- simulaciones;
+- estudio;
+- actividades sociales;
+- entrenamiento;
+- descanso.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La rutina física debe convivir con todas ellas.
+
+## 3. Señales de riesgo
+
+El personaje puede mostrar:
+
+- fatiga persistente;
+- dolor;
+- peor técnica;
+- sueño insuficiente;
+- caída de rendimiento;
+- recuperación anormal.
+
+Estas señales justifican revisar la carga.
+
+## 4. Planificar no es optimizar una barra
+
+El objetivo es construir una semana sostenible.
+
+No existe un horario matemáticamente perfecto para todos.
+
+## 5. Decidir cuándo pedir ayuda
+
+Autogestión también incluye reconocer cuándo una situación requiere:
+
+- instructor;
+- Medicina;
+- ajuste temporal;
+- descanso.
+
+### Práctica
+
+Diseña una semana realista con entrenamiento, estudio, descanso y obligaciones académicas.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **continuidad futura** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **continuidad futura** y **hábitos**?
-3. Resuelve de forma razonada esta práctica: *Plan longitudinal para 3.ª clase.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué significa autogestión?
+2. ¿Qué compite por tiempo en una semana académica?
+3. Nombra tres señales de riesgo.
+4. ¿Por qué no existe un horario perfecto universal?
+5. ¿Cuándo debe pedirse ayuda?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# PHY-403-U04 — Entrenamiento bajo carga académica
 
-## Tratamiento por era
+## 1. Prioridades cambiantes
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Durante exámenes o simulaciones intensas, la carga académica aumenta.
+
+La rutina debe adaptarse.
+
+## 2. Ajustar no es abandonar
+
+Puede mantenerse continuidad mediante:
+
+- menor duración;
+- menor intensidad;
+- menos sesiones;
+- actividad ligera;
+- recuperación prioritaria.
+
+## 3. Consistencia
+
+Consistencia no significa repetir exactamente la misma semana.
+
+Significa mantener una relación sostenible con la actividad a lo largo del tiempo.
+
+## 4. Exámenes
+
+Una semana de examen puede justificar:
+
+- reducir entrenamiento;
+- proteger sueño;
+- mantener movilidad;
+- evitar sobrecarga.
+
+No se penaliza absurdamente una adaptación temporal razonable.
+
+## 5. Volver a la rutina
+
+Tras el pico académico, el personaje puede recuperar progresivamente su patrón anterior.
+
+### Práctica
+
+Adapta una rutina normal a una semana de exámenes y explica qué mantienes, qué reduces y por qué.
+
+### Autoevaluación
+
+1. ¿Qué significa ajustar sin abandonar?
+2. ¿Qué puede reducirse durante alta carga académica?
+3. ¿Qué significa consistencia?
+4. ¿Por qué proteger sueño puede ser prioritario?
+5. ¿Cómo se retoma una rutina tras el pico?
+
+---
+
+# PHY-403-U05 — Actividad personal y Academia
+
+## 1. La vida personal también genera evidencia
+
+Un cadete puede practicar por su cuenta:
+
+- correr;
+- nadar;
+- gimnasio;
+- artes marciales;
+- deporte de equipo;
+- senderismo;
+- otra actividad válida.
+
+## 2. Separación del currículo
+
+Una actividad personal no se convierte automáticamente en una nota de PHY.
+
+Puede generar evidencia de:
+
+- hábitos;
+- capacidades;
+- experiencia;
+- recuperación;
+- intereses.
+
+La evaluación académica conserva sus propios requisitos.
+
+## 3. Transferencia
+
+Una actividad puede ayudar a otra capacidad.
+
+Ejemplo:
+
+- correr puede apoyar resistencia;
+- artes marciales puede ayudar a coordinación;
+- fuerza general puede facilitar tareas físicas.
+
+Pero transferencia no equivale a cualificación profesional.
+
+## 4. Registrar correctamente
+
+El registro debe describir:
+
+- actividad;
+- duración;
+- regularidad;
+- contexto;
+- relevancia.
+
+No debe inventar una nota académica.
+
+## 5. Afición y obligación
+
+Una afición puede ser útil precisamente porque el jugador la elige por interés, no porque sea una tarea de Academia.
+
+### Práctica
+
+Registra una actividad personal del personaje y separa claramente evidencia personal y requisito académico.
+
+### Autoevaluación
+
+1. ¿Puede una actividad personal generar evidencia?
+2. ¿Se convierte automáticamente en nota de PHY?
+3. ¿Qué significa transferencia?
+4. ¿Por qué transferencia no concede cualificación profesional?
+5. ¿Qué debe contener un registro correcto?
+
+---
+
+# PHY-403-U06 — Cierre anual
+
+## 1. El objetivo es continuidad futura
+
+La evaluación final no “resetea” al personaje.
+
+El año siguiente hereda:
+
+- hábitos;
+- experiencia;
+- estado;
+- fortalezas;
+- áreas de mejora.
+
+## 2. Resultado descriptivo
+
+El resultado puede expresarse como:
+
+- apto;
+- apto con apoyo recomendado;
+- necesidad de recuperación concreta.
+
+No hay recompensa de XP.
+
+## 3. Áreas de mejora
+
+Una recomendación puede señalar:
+
+- resistencia;
+- movilidad;
+- fuerza;
+- coordinación;
+- recuperación;
+- consistencia.
+
+La recomendación orienta, no etiqueta permanentemente al personaje.
+
+## 4. Plan para 3.ª clase
+
+El plan debe ser realista.
+
+Puede incluir:
+
+- mantener una rutina;
+- corregir una debilidad;
+- continuar una afición;
+- pedir apoyo;
+- adaptar carga.
+
+## 5. Persistencia
+
+La historia física continúa más allá del curso.
+
+No se vuelve a “nivel cero” al comenzar el siguiente año.
+
+### Práctica
+
+Prepara un plan longitudinal de mantenimiento y mejora para 3.ª clase.
+
+### Autoevaluación
+
+1. ¿Qué persiste al cerrar el año?
+2. ¿Qué resultados descriptivos puede producir PHY-403?
+3. ¿Por qué una recomendación no es una etiqueta permanente?
+4. ¿Qué puede incluir un plan para 3.ª clase?
+5. ¿Por qué no se reinicia el personaje al comenzar el año siguiente?
+
+---
+
+# Evaluación del curso
+
+PHY-403 evalúa:
+
+- evolución;
+- condición funcional;
+- autogestión;
+- ajuste ante carga académica;
+- separación entre actividad personal y currículo;
+- continuidad futura.
+
+No utiliza XP ni compara directamente especies distintas.
+
+# Referencias internas
+
+- `gameplay/characters/wellbeing/README.md`
+- `gameplay/characters/wellbeing/activity_effect_contract.json`
+- `gameplay/characters/wellbeing/habit_formation_rules.json`
+- `gameplay/characters/development/development_rules.md`
+- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`
