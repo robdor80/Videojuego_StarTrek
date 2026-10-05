@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "WCH-102",
+  "title_es": "Continuidad de guardia y responsabilidad de puesto",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Garantizar que información, órdenes y problemas sobrevivan correctamente al cambio de turno.",
+  "prerequisites": [
+    "DUT-101",
+    "PRO-301"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "WCH-102-U01",
+      "title_es": "Estado heredado",
+      "core_content_es": [
+        "órdenes vigentes",
+        "pendientes",
+        "degradaciones",
+        "riesgos"
+      ],
+      "practice_es": "Recibir un relevo complejo.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "WCH-102-U02",
+      "title_es": "Seguimiento longitudinal",
+      "core_content_es": [
+        "incidencias",
+        "tendencias",
+        "ETA",
+        "responsables"
+      ],
+      "practice_es": "Mantener asuntos abiertos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "WCH-102-U03",
+      "title_es": "Registro factual",
+      "core_content_es": [
+        "evento",
+        "acción",
+        "resultado",
+        "fuente"
+      ],
+      "practice_es": "Actualizar event log/registro.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "WCH-102-U04",
+      "title_es": "Cambio de prioridad",
+      "core_content_es": [
+        "nueva orden",
+        "impacto",
+        "comunicación"
+      ],
+      "practice_es": "Reorganizar pendientes.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "WCH-102-U05",
+      "title_es": "Entrega de guardia",
+      "core_content_es": [
+        "resumen",
+        "alertas",
+        "acciones futuras",
+        "confirmación"
+      ],
+      "practice_es": "Handoff formal.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "WCH-102-U06",
+      "title_es": "Responsabilidad posterior",
+      "core_content_es": [
+        "decisiones anteriores",
+        "auditoría",
+        "consulta",
+        "debrief"
+      ],
+      "practice_es": "Responder por una decisión pasada.",
+      "assessment_es": "Juicio."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

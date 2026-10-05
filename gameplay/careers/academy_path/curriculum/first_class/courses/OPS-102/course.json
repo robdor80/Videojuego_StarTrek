@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "OPS-102",
+  "title_es": "Operaciones integradas de misión",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 2,
+  "course_type": "mission",
+  "purpose_es": "Vivir una misión completa desde briefing hasta debrief, con varias guardias y eventos emergentes.",
+  "prerequisites": [
+    "INT-101",
+    "DUT-101"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "OPS-102-U01",
+      "title_es": "Briefing de misión",
+      "core_content_es": [
+        "objetivos",
+        "autoridad",
+        "restricciones",
+        "riesgos"
+      ],
+      "practice_es": "Preparación multi-rama.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "OPS-102-U02",
+      "title_es": "Preparación de nave/equipo",
+      "core_content_es": [
+        "configuración",
+        "personal",
+        "recursos",
+        "checklists"
+      ],
+      "practice_es": "Preparar salida.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "OPS-102-U03",
+      "title_es": "Tránsito y rutina",
+      "core_content_es": [
+        "guardias",
+        "registros",
+        "mantenimiento",
+        "observación"
+      ],
+      "practice_es": "Operación sostenida.",
+      "assessment_es": "Evaluación longitudinal."
+    },
+    {
+      "unit_id": "OPS-102-U04",
+      "title_es": "Objetivo principal",
+      "core_content_es": [
+        "ciencia/diplomacia/logística/exploración contextual",
+        "coordinación"
+      ],
+      "practice_es": "Ejecutar misión.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "OPS-102-U05",
+      "title_es": "Cambio de condiciones",
+      "core_content_es": [
+        "evento",
+        "prioridad",
+        "adaptación",
+        "consecuencia"
+      ],
+      "practice_es": "Responder sin guion fijo.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "OPS-102-U06",
+      "title_es": "Regreso y cierre",
+      "core_content_es": [
+        "handoff",
+        "logs",
+        "pendientes",
+        "debrief"
+      ],
+      "practice_es": "Cerrar misión.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

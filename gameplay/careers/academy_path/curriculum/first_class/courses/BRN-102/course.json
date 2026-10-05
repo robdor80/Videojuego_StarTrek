@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "BRN-102",
+  "title_es": "Especialización profesional avanzada II",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 2,
+  "course_type": "branch_shell",
+  "purpose_es": "Cerrar la formación académica intensa de rama mediante operación avanzada de misión.",
+  "prerequisites": [
+    "BRN-101"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "BRN-102-U01",
+      "title_es": "Preparación de misión de rama",
+      "core_content_es": [
+        "objetivo",
+        "recursos",
+        "riesgos",
+        "contingencias"
+      ],
+      "practice_es": "Plan de especialidad.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "BRN-102-U02",
+      "title_es": "Operación prolongada",
+      "core_content_es": [
+        "continuidad",
+        "carga",
+        "calidad",
+        "registro"
+      ],
+      "practice_es": "Ejecutar bloque extenso.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "BRN-102-U03",
+      "title_es": "Problema complejo",
+      "core_content_es": [
+        "incertidumbre",
+        "fallos",
+        "personas",
+        "tiempo"
+      ],
+      "practice_es": "Resolver incidente.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "BRN-102-U04",
+      "title_es": "Asesoramiento profesional",
+      "core_content_es": [
+        "dato",
+        "opciones",
+        "riesgo",
+        "recomendación"
+      ],
+      "practice_es": "Briefing a mando.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "BRN-102-U05",
+      "title_es": "Recuperación y handoff",
+      "core_content_es": [
+        "restauración",
+        "pendientes",
+        "evidencia",
+        "relevo"
+      ],
+      "practice_es": "Cerrar operación.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "BRN-102-U06",
+      "title_es": "Caso avanzado II",
+      "core_content_es": [
+        "misión completa",
+        "cambios",
+        "resultado",
+        "debrief"
+      ],
+      "practice_es": "Caso final de rama antes de CAP-103.",
+      "assessment_es": "Evaluación continua."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "DUT-101",
+  "title_es": "Servicio operativo avanzado",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 1,
+  "course_type": "supervised_service",
+  "purpose_es": "Convertir el servicio supervisado previo en guardias largas y realistas con intervención mínima del instructor.",
+  "prerequisites": [
+    "DUT-203"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "DUT-101-U01",
+      "title_es": "Incorporación avanzada",
+      "core_content_es": [
+        "órdenes vigentes",
+        "estado",
+        "pendientes",
+        "riesgos"
+      ],
+      "practice_es": "Tomar puesto con briefing realista.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "DUT-101-U02",
+      "title_es": "Rutina sostenida",
+      "core_content_es": [
+        "monitorización",
+        "tareas periódicas",
+        "registros",
+        "comunicaciones"
+      ],
+      "practice_es": "Guardia prolongada sin incidentes forzados.",
+      "assessment_es": "Constancia."
+    },
+    {
+      "unit_id": "DUT-101-U03",
+      "title_es": "Incidencia operativa",
+      "core_content_es": [
+        "detección",
+        "respuesta",
+        "escalado",
+        "seguimiento"
+      ],
+      "practice_es": "Resolver evento contextual.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "DUT-101-U04",
+      "title_es": "Interrupciones y carga",
+      "core_content_es": [
+        "prioridades",
+        "multitarea",
+        "delegación",
+        "fatiga"
+      ],
+      "practice_es": "Gestionar varias demandas.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "DUT-101-U05",
+      "title_es": "Relevo profesional",
+      "core_content_es": [
+        "estado",
+        "pendientes",
+        "órdenes",
+        "riesgo"
+      ],
+      "practice_es": "Entregar puesto.",
+      "assessment_es": "Calidad del handoff."
+    },
+    {
+      "unit_id": "DUT-101-U06",
+      "title_es": "Informe de supervisor",
+      "core_content_es": [
+        "competencia",
+        "conducta",
+        "autonomía",
+        "límites"
+      ],
+      "practice_es": "Debrief formal.",
+      "assessment_es": "Registro en expediente."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

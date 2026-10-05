@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ASS-103",
+  "title_es": "Primer destino y transición a servicio activo",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 3,
+  "course_type": "assignment",
+  "purpose_es": "Cruzar el perfil real del graduando con necesidades y vacantes del mundo vivo sin garantizar destino concreto.",
+  "prerequisites": [
+    "SVC-103"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "ASS-103-U01",
+      "title_es": "Preferencias del jugador",
+      "core_content_es": [
+        "tipo de unidad",
+        "misión",
+        "tamaño",
+        "región",
+        "puesto"
+      ],
+      "practice_es": "Registrar preferencias.",
+      "assessment_es": "No son órdenes garantizadas."
+    },
+    {
+      "unit_id": "ASS-103-U02",
+      "title_es": "Perfil de asignación",
+      "core_content_es": [
+        "especialidad",
+        "cualificaciones",
+        "recomendaciones",
+        "restricciones"
+      ],
+      "practice_es": "Construir perfil.",
+      "assessment_es": "Validación."
+    },
+    {
+      "unit_id": "ASS-103-U03",
+      "title_es": "Vacantes y necesidades",
+      "core_content_es": [
+        "estado del mundo",
+        "fecha",
+        "unidades",
+        "puestos",
+        "prioridad"
+      ],
+      "practice_es": "Consultar candidatos generados por sistema.",
+      "assessment_es": "Sin crear vacantes por deseo."
+    },
+    {
+      "unit_id": "ASS-103-U04",
+      "title_es": "Entrevistas/órdenes preliminares",
+      "core_content_es": [
+        "contacto",
+        "preguntas",
+        "encaje",
+        "condiciones"
+      ],
+      "practice_es": "Escenas cuando correspondan.",
+      "assessment_es": "Evidencia contextual."
+    },
+    {
+      "unit_id": "ASS-103-U05",
+      "title_es": "Selección institucional",
+      "core_content_es": [
+        "necesidad",
+        "encaje",
+        "disponibilidad",
+        "preferencias"
+      ],
+      "practice_es": "Resolver asignación por reglas.",
+      "assessment_es": "Resultado persistente."
+    },
+    {
+      "unit_id": "ASS-103-U06",
+      "title_es": "Transición",
+      "core_content_es": [
+        "órdenes",
+        "fecha",
+        "viaje",
+        "presentación"
+      ],
+      "practice_es": "Preparar incorporación.",
+      "assessment_es": "Cierre."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

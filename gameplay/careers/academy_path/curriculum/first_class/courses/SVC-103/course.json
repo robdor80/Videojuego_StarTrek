@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SVC-103",
+  "title_es": "Evaluación integral de preparación para el servicio",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 3,
+  "course_type": "service_readiness",
+  "purpose_es": "Determinar la preparación global para comisión utilizando evidencia de toda la Academia.",
+  "prerequisites": [
+    "CAP-103",
+    "KM-103",
+    "PRC-102"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SVC-103-U01",
+      "title_es": "Integridad de expediente",
+      "core_content_es": [
+        "años",
+        "cursos",
+        "prácticas",
+        "conducta",
+        "incidentes"
+      ],
+      "practice_es": "Validar historial.",
+      "assessment_es": "Control."
+    },
+    {
+      "unit_id": "SVC-103-U02",
+      "title_es": "Preparación profesional",
+      "core_content_es": [
+        "CAP-103",
+        "DUT",
+        "PRC",
+        "cualificaciones"
+      ],
+      "practice_es": "Revisión de competencia.",
+      "assessment_es": "Panel."
+    },
+    {
+      "unit_id": "SVC-103-U03",
+      "title_es": "Preparación como oficial",
+      "core_content_es": [
+        "juicio",
+        "liderazgo",
+        "comunicación",
+        "integridad"
+      ],
+      "practice_es": "Revisión longitudinal.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "SVC-103-U04",
+      "title_es": "Kobayashi y presión",
+      "core_content_es": [
+        "conducta",
+        "criterio",
+        "ética",
+        "aprendizaje"
+      ],
+      "practice_es": "Incorporar evidencia sin sobrerrepresentarla.",
+      "assessment_es": "Panel."
+    },
+    {
+      "unit_id": "SVC-103-U05",
+      "title_es": "Recomendaciones",
+      "core_content_es": [
+        "fortalezas",
+        "desarrollo",
+        "mentoría",
+        "limitaciones"
+      ],
+      "practice_es": "Redactar salida profesional.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "SVC-103-U06",
+      "title_es": "Resultado de comisión",
+      "core_content_es": [
+        "ready_for_commission",
+        "ready_with_development_recommendations",
+        "additional_training_required"
+      ],
+      "practice_es": "Emitir decisión.",
+      "assessment_es": "No game over automático."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

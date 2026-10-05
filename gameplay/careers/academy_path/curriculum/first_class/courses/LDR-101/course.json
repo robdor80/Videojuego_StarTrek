@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "LDR-101",
+  "title_es": "Liderazgo profesional y supervisión III",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Ejercer liderazgo sobre trabajo realista, personas con capacidades distintas y consecuencias profesionales.",
+  "prerequisites": [
+    "LDR-201",
+    "DUT-101"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "LDR-101-U01",
+      "title_es": "Liderazgo de turno",
+      "core_content_es": [
+        "objetivos",
+        "roles",
+        "estándares",
+        "seguimiento"
+      ],
+      "practice_es": "Dirigir un turno simulado.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "LDR-101-U02",
+      "title_es": "Personal con distinta experiencia",
+      "core_content_es": [
+        "novato",
+        "competente",
+        "experto",
+        "delegación"
+      ],
+      "practice_es": "Asignar tareas razonadamente.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "LDR-101-U03",
+      "title_es": "Error de subordinado",
+      "core_content_es": [
+        "seguridad",
+        "corrección",
+        "responsabilidad",
+        "registro"
+      ],
+      "practice_es": "Gestionar un error.",
+      "assessment_es": "Escena."
+    },
+    {
+      "unit_id": "LDR-101-U04",
+      "title_es": "Conflicto profesional",
+      "core_content_es": [
+        "desacuerdo",
+        "autoridad",
+        "escucha",
+        "decisión"
+      ],
+      "practice_es": "Resolver conflicto.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "LDR-101-U05",
+      "title_es": "Fatiga y capacidad",
+      "core_content_es": [
+        "riesgo",
+        "relevo",
+        "prioridad",
+        "bienestar"
+      ],
+      "practice_es": "Tomar decisión sobre personal.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "LDR-101-U06",
+      "title_es": "Debrief de liderazgo",
+      "core_content_es": [
+        "resultado",
+        "proceso",
+        "equipo",
+        "mejora"
+      ],
+      "practice_es": "Revisar desempeño.",
+      "assessment_es": "Evaluación longitudinal."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

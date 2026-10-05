@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PRC-102",
+  "title_es": "Prácticum / crucero de formación",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 2,
+  "course_type": "practicum",
+  "purpose_es": "Exponer al cadete a servicio real o casi real durante un periodo significativo en una unidad o instalación apropiada.",
+  "prerequisites": [
+    "DUT-101",
+    "BRN-102"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PRC-102-U01",
+      "title_es": "Asignación de prácticum",
+      "core_content_es": [
+        "unidad",
+        "supervisor",
+        "puesto",
+        "alcance",
+        "reglas"
+      ],
+      "practice_es": "Recibir órdenes de incorporación.",
+      "assessment_es": "Validación."
+    },
+    {
+      "unit_id": "PRC-102-U02",
+      "title_es": "Integración en tripulación",
+      "core_content_es": [
+        "alojamiento",
+        "guardias",
+        "cultura de unidad",
+        "cadena"
+      ],
+      "practice_es": "Primeros días jugables o resumidos según relevancia.",
+      "assessment_es": "Observación."
+    },
+    {
+      "unit_id": "PRC-102-U03",
+      "title_es": "Servicio ordinario",
+      "core_content_es": [
+        "rutina",
+        "tareas",
+        "tiempo libre",
+        "relaciones profesionales"
+      ],
+      "practice_es": "Bloques de servicio realista.",
+      "assessment_es": "Evidencia longitudinal."
+    },
+    {
+      "unit_id": "PRC-102-U04",
+      "title_es": "Misión/actividad de unidad",
+      "core_content_es": [
+        "objetivo",
+        "rol",
+        "supervisión",
+        "consecuencias"
+      ],
+      "practice_es": "Participar en actividad real o equivalente.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "PRC-102-U05",
+      "title_es": "Incidencias emergentes",
+      "core_content_es": [
+        "mundo vivo",
+        "no crisis garantizada",
+        "respuesta"
+      ],
+      "practice_es": "Resolver lo que ocurra si ocurre.",
+      "assessment_es": "Evidencia contextual."
+    },
+    {
+      "unit_id": "PRC-102-U06",
+      "title_es": "Informe final de prácticum",
+      "core_content_es": [
+        "desempeño",
+        "conducta",
+        "autonomía",
+        "recomendaciones"
+      ],
+      "practice_es": "Entrevista de cierre.",
+      "assessment_es": "Registro persistente."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

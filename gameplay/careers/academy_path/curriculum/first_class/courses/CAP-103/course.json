@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "CAP-103",
+  "title_es": "Evaluación final de especialidad",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 3,
+  "course_type": "qualification",
+  "purpose_es": "Determinar si el cadete puede comenzar a servir como Alférez de su especialidad bajo supervisión normal de unidad.",
+  "prerequisites": [
+    "BRN-102",
+    "PRC-102"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "CAP-103-U01",
+      "title_es": "Revisión de rama",
+      "core_content_es": [
+        "evidencia 2.ª/1.ª clase",
+        "cualificaciones",
+        "carencias"
+      ],
+      "practice_es": "Compilar expediente de especialidad.",
+      "assessment_es": "Validación."
+    },
+    {
+      "unit_id": "CAP-103-U02",
+      "title_es": "Conocimiento profesional",
+      "core_content_es": [
+        "principios",
+        "procedimientos",
+        "límites",
+        "seguridad"
+      ],
+      "practice_es": "Prueba focalizada.",
+      "assessment_es": "Resultado por áreas."
+    },
+    {
+      "unit_id": "CAP-103-U03",
+      "title_es": "Caso práctico",
+      "core_content_es": [
+        "preparación",
+        "ejecución",
+        "comunicación",
+        "cierre"
+      ],
+      "practice_es": "Prueba real/simulada.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "CAP-103-U04",
+      "title_es": "Caso de juicio",
+      "core_content_es": [
+        "incertidumbre",
+        "riesgo",
+        "autoridad",
+        "recomendación"
+      ],
+      "practice_es": "Escenario oral/simulado.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "CAP-103-U05",
+      "title_es": "Revisión de servicio",
+      "core_content_es": [
+        "DUT",
+        "PRC",
+        "simulaciones",
+        "conducta"
+      ],
+      "practice_es": "Panel de instructores.",
+      "assessment_es": "Informe."
+    },
+    {
+      "unit_id": "CAP-103-U06",
+      "title_es": "Resultado",
+      "core_content_es": [
+        "ready",
+        "targeted_remediation",
+        "reassessment"
+      ],
+      "practice_es": "Cerrar evaluación.",
+      "assessment_es": "No exige pericia experta; exige preparación de oficial novel."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

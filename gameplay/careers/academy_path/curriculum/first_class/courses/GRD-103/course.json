@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "GRD-103",
+  "title_es": "Graduación y comisión",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 3,
+  "course_type": "commissioning",
+  "purpose_es": "Cerrar la vida académica mediante una ceremonia jugable, comisión y transición biográfica al servicio.",
+  "prerequisites": [
+    "SVC-103",
+    "ASS-103"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "GRD-103-U01",
+      "title_es": "Últimos días",
+      "core_content_es": [
+        "cierres",
+        "despedidas",
+        "documentación",
+        "relaciones"
+      ],
+      "practice_es": "Escenas relevantes.",
+      "assessment_es": "Persistencia social."
+    },
+    {
+      "unit_id": "GRD-103-U02",
+      "title_es": "Expediente académico final",
+      "core_content_es": [
+        "especialidad",
+        "fortalezas",
+        "cualificaciones",
+        "evaluaciones",
+        "incidentes"
+      ],
+      "practice_es": "Sellar registro.",
+      "assessment_es": "Validación."
+    },
+    {
+      "unit_id": "GRD-103-U03",
+      "title_es": "Ceremonia",
+      "core_content_es": [
+        "protocolo",
+        "compañeros",
+        "instructores",
+        "familia cuando proceda"
+      ],
+      "practice_es": "Evento jugable.",
+      "assessment_es": "Sin recompensa XP."
+    },
+    {
+      "unit_id": "GRD-103-U04",
+      "title_es": "Comisión",
+      "core_content_es": [
+        "rango de Alférez",
+        "autoridad",
+        "responsabilidad",
+        "documento"
+      ],
+      "practice_es": "Aplicar cambio de estado.",
+      "assessment_es": "Validación de carrera."
+    },
+    {
+      "unit_id": "GRD-103-U05",
+      "title_es": "Órdenes",
+      "core_content_es": [
+        "primer destino",
+        "fecha",
+        "puesto",
+        "viaje"
+      ],
+      "practice_es": "Recibir órdenes.",
+      "assessment_es": "Persistencia."
+    },
+    {
+      "unit_id": "GRD-103-U06",
+      "title_es": "Salida de Academia",
+      "core_content_es": [
+        "relaciones",
+        "objetivos",
+        "historial",
+        "nuevo lifecycle"
+      ],
+      "practice_es": "Transición a servicio activo.",
+      "assessment_es": "Cierre del arco académico."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

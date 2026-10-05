@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "INT-101",
+  "title_es": "Operaciones integradas de nave III",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Pensar en la nave como sistema completo y anticipar efectos cruzados de decisiones profesionales.",
+  "prerequisites": [
+    "INT-201",
+    "RSK-202"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "INT-101-U01",
+      "title_es": "Estado global de nave",
+      "core_content_es": [
+        "misión",
+        "sistemas",
+        "tripulación",
+        "entorno"
+      ],
+      "practice_es": "Construir picture integrado.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "INT-101-U02",
+      "title_es": "Efectos cruzados",
+      "core_content_es": [
+        "energía",
+        "sensores",
+        "movimiento",
+        "defensa",
+        "médico"
+      ],
+      "practice_es": "Analizar decisión multi-sistema.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "INT-101-U03",
+      "title_es": "Coordinación bajo presión",
+      "core_content_es": [
+        "peticiones",
+        "prioridad",
+        "capacidad",
+        "mando"
+      ],
+      "practice_es": "Resolver conflicto entre departamentos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "INT-101-U04",
+      "title_es": "Cambio de misión",
+      "core_content_es": [
+        "nueva prioridad",
+        "reconfiguración",
+        "handoff"
+      ],
+      "practice_es": "Adaptar operación.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "INT-101-U05",
+      "title_es": "Continuidad y recuperación",
+      "core_content_es": [
+        "degradación",
+        "restauración",
+        "registro",
+        "pendientes"
+      ],
+      "practice_es": "Cerrar incidente sistémico.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "INT-101-U06",
+      "title_es": "Ejercicio integrado III",
+      "core_content_es": [
+        "misión",
+        "fallo",
+        "personas",
+        "decisión",
+        "cierre"
+      ],
+      "practice_es": "Simulación compleja.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

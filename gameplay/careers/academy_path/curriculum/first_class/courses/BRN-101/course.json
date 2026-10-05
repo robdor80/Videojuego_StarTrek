@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "BRN-101",
+  "title_es": "Especialización profesional avanzada I",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 1,
+  "course_type": "branch_shell",
+  "purpose_es": "Consolidar la rama elegida en problemas avanzados, supervisión y criterio profesional.",
+  "prerequisites": [
+    "QUA-203"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "BRN-101-U01",
+      "title_es": "Revisión de cualificación intermedia",
+      "core_content_es": [
+        "fortalezas",
+        "carencias",
+        "evidencia",
+        "objetivos"
+      ],
+      "practice_es": "Analizar resultado de QUA-203.",
+      "assessment_es": "Plan individual."
+    },
+    {
+      "unit_id": "BRN-101-U02",
+      "title_es": "Herramientas avanzadas de rama",
+      "core_content_es": [
+        "configuración",
+        "límites",
+        "fallos",
+        "seguridad"
+      ],
+      "practice_es": "Práctica avanzada según especialidad.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "BRN-101-U03",
+      "title_es": "Decisión profesional",
+      "core_content_es": [
+        "opciones",
+        "riesgo",
+        "misión",
+        "recomendación"
+      ],
+      "practice_es": "Resolver caso sin receta.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "BRN-101-U04",
+      "title_es": "Supervisión de tarea",
+      "core_content_es": [
+        "briefing",
+        "delegación",
+        "control",
+        "cierre"
+      ],
+      "practice_es": "Supervisar micro-equipo.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "BRN-101-U05",
+      "title_es": "Interfaz con mando",
+      "core_content_es": [
+        "estado",
+        "riesgo",
+        "opciones",
+        "ETA/recomendación"
+      ],
+      "practice_es": "Briefing profesional.",
+      "assessment_es": "Comunicación y criterio."
+    },
+    {
+      "unit_id": "BRN-101-U06",
+      "title_es": "Caso avanzado I",
+      "core_content_es": [
+        "situación",
+        "ejecución",
+        "cambio",
+        "debrief"
+      ],
+      "practice_es": "Caso de rama completo.",
+      "assessment_es": "Evaluación continua."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

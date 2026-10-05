@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "DEB-102",
+  "title_es": "Análisis operativo y debriefing avanzado",
+  "status": "unit_design_complete",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Analizar decisiones con rigor, distinguiendo información disponible, proceso y resultado.",
+  "prerequisites": [
+    "OPS-102",
+    "PRC-102"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge may be tested; execution also uses accumulated character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "DEB-102-U01",
+      "title_es": "Reconstrucción factual",
+      "core_content_es": [
+        "timeline",
+        "fuentes",
+        "acciones",
+        "resultados"
+      ],
+      "practice_es": "Reconstruir misión.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "DEB-102-U02",
+      "title_es": "Información disponible entonces",
+      "core_content_es": [
+        "conocimiento",
+        "incertidumbre",
+        "supuestos",
+        "señales"
+      ],
+      "practice_es": "Separar hindsight.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "DEB-102-U03",
+      "title_es": "Calidad de decisión",
+      "core_content_es": [
+        "proceso",
+        "riesgo",
+        "reglas",
+        "alternativas"
+      ],
+      "practice_es": "Evaluar decisión sin confundirla con resultado.",
+      "assessment_es": "Debate."
+    },
+    {
+      "unit_id": "DEB-102-U04",
+      "title_es": "Responsabilidad",
+      "core_content_es": [
+        "acción propia",
+        "equipo",
+        "mando",
+        "registro"
+      ],
+      "practice_es": "Asumir y explicar decisiones.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "DEB-102-U05",
+      "title_es": "Lecciones y cambio",
+      "core_content_es": [
+        "procedimiento",
+        "hábito",
+        "entrenamiento",
+        "sistema"
+      ],
+      "practice_es": "Proponer mejora.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "DEB-102-U06",
+      "title_es": "Debrief de prácticum",
+      "core_content_es": [
+        "evidencia",
+        "feedback",
+        "trayectoria",
+        "preparación"
+      ],
+      "practice_es": "Sesión final.",
+      "assessment_es": "Registro profesional."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "discipline",
+    "pressure_control"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

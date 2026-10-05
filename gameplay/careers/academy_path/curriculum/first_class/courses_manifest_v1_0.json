@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "cadet_class_id": "cadet_first_class",
+  "sequence_year": 4,
+  "status": "unit_design_complete",
+  "course_count": 15,
+  "course_ids": [
+    "BRN-101",
+    "DUT-101",
+    "LDR-101",
+    "INT-101",
+    "DEV-101",
+    "BRN-102",
+    "OPS-102",
+    "WCH-102",
+    "PRC-102",
+    "DEB-102",
+    "CAP-103",
+    "KM-103",
+    "SVC-103",
+    "ASS-103",
+    "GRD-103"
+  ],
+  "branch_curricula_ref": "../../branches/*/branch_curriculum_v1_0.json",
+  "source_rule": "Course JSON plus branch curricula are the academic source for game, web and PDF derivatives."
+}
