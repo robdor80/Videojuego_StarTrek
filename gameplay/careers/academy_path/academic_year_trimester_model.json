@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.1",
+  "schema_version": "0.2.2",
   "model_id": "academy_year_trimester_model",
   "status": "foundation_fixed",
   "sequence": [
@@ -22,14 +22,28 @@
       "display_year": "3rd_year",
       "phase": "professional_exploration",
       "trimesters": 3,
-      "specialization_pressure": "medium"
+      "specialization_pressure": "medium",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_third_class_v1_0",
+      "trimester_themes": [
+        "supervised_ship_operations",
+        "people_risk_and_field_action",
+        "integration_leadership_and_branch_choice"
+      ]
     },
     {
       "sequence_index": 3,
       "display_year": "2nd_year",
       "phase": "specialization_and_integration",
       "trimesters": 3,
-      "specialization_pressure": "high"
+      "specialization_pressure": "high",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_second_class_v1_0",
+      "trimester_themes": [
+        "professional_specialization_foundations",
+        "complex_and_degraded_operations",
+        "supervised_professional_competence"
+      ]
     },
     {
       "sequence_index": 4,

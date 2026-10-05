@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.2",
+  "schema_version": "0.2.3",
   "curriculum_id": "starfleet_academy_master_v0_2",
   "status": "design_baseline",
   "pre_admission": {
@@ -60,46 +60,40 @@
     {
       "sequence_year": 2,
       "cadet_class_id": "cadet_third_class",
+      "curriculum_ref": "academy_third_class_v1_0",
+      "curriculum_status": "architecture_locked",
       "trimesters": [
         {
           "trimester": 1,
-          "theme": "applied_ship_operations",
+          "theme": "supervised_ship_operations",
           "required_subjects": [
-            "bridge_operations",
-            "operations_coordination",
-            "power_fundamentals",
-            "engineering_fundamentals",
-            "sensor_search_fundamentals",
-            "navigation_plotting",
-            "structured_reporting",
-            "interdepartment_handoff",
-            "team_practical"
+            "OPS-301",
+            "NAV-301",
+            "SEN-301",
+            "ENG-301",
+            "PRO-301"
           ]
         },
         {
           "trimester": 2,
-          "theme": "people_risk_federation",
+          "theme": "people_risk_and_field_action",
           "required_subjects": [
-            "interspecies_protocol",
-            "first_contact_principles",
-            "prime_directive_and_regulations",
-            "diplomacy_fundamentals",
-            "medical_triage_basics",
-            "security_fundamentals",
-            "survival",
-            "away_team_fundamentals",
-            "field_training"
+            "REG-302",
+            "XEN-302",
+            "MED-302",
+            "SEC-302",
+            "FLD-302"
           ]
         },
         {
           "trimester": 3,
-          "theme": "division_decision_window",
+          "theme": "integration_leadership_and_branch_choice",
           "required_subjects": [
-            "integrated_simulation",
-            "leadership_foundations",
-            "advanced_reporting",
-            "professional_self_assessment",
-            "branch_exposure_practicals"
+            "SIM-303",
+            "LDR-303",
+            "BRN-303",
+            "JDG-303",
+            "CAR-303"
           ],
           "specialization_selection": "required_by_end_of_trimester"
         }
@@ -108,23 +102,43 @@
     {
       "sequence_year": 3,
       "cadet_class_id": "cadet_second_class",
+      "curriculum_ref": "academy_second_class_v1_0",
+      "curriculum_status": "architecture_locked",
       "trimesters": [
         {
           "trimester": 1,
-          "theme": "specialization_core_1",
-          "specialization_status": "formally_active",
-          "branch_curriculum_slot": true
+          "theme": "professional_specialization_foundations",
+          "required_subjects": [
+            "BRN-201",
+            "PRA-201",
+            "INT-201",
+            "LDR-201",
+            "XTR-201"
+          ],
+          "specialization_status": "formally_active"
         },
         {
           "trimester": 2,
-          "theme": "specialization_core_2",
-          "branch_curriculum_slot": true,
+          "theme": "complex_and_degraded_operations",
+          "required_subjects": [
+            "BRN-202",
+            "PRA-202",
+            "RSK-202",
+            "FLD-202",
+            "XTR-202"
+          ],
           "cross_training_slot": true
         },
         {
           "trimester": 3,
-          "theme": "specialization_core_3",
-          "branch_curriculum_slot": true,
+          "theme": "supervised_professional_competence",
+          "required_subjects": [
+            "BRN-203",
+            "DUT-203",
+            "SIM-203",
+            "PRJ-203",
+            "QUA-203"
+          ],
           "intermediate_qualification": true
         }
       ]

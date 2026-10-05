@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.1",
+  "schema_version": "0.2.2",
   "model": "four_year_three_trimester_modular_curriculum",
   "years": [
     {
@@ -34,6 +34,13 @@
       "specialization_load": "medium",
       "era_hooks": [
         "tng_second_year_field_study"
+      ],
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_third_class_v1_0",
+      "course_instances": 15,
+      "specialization_choice": "required_at_end_of_year",
+      "longitudinal_lines": [
+        "physical_readiness_shared_program"
       ]
     },
     {
@@ -50,6 +57,14 @@
       "specialization_load": "high",
       "era_hooks": [
         "tng_third_year_spacewalk_course"
+      ],
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_second_class_v1_0",
+      "course_instances": 15,
+      "branch_course_families": 7,
+      "intermediate_qualification": true,
+      "longitudinal_lines": [
+        "physical_readiness_shared_program"
       ]
     },
     {

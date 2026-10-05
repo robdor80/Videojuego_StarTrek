@@ -144,6 +144,8 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 - ✅ **Specialization timing locked**: choice by the end of Third Class, formal specialization begins in Second Class.
 - ✅ **Kobayashi Maru normalized as a project-wide Academy tradition** across Pike, Kirk and TNG/DS9/Voyager with era-appropriate implementation.
 - ✅ **Fourth Class / Year 1 architecture locked v1.0**: three trimesters, five grouped subjects per trimester, with PHY as a longitudinal line and professional specialization explicitly deferred.
+- ✅ **Third Class / Year 2 architecture locked v1.0**: supervised ship operations → people/risk/field action → integration/leadership/branch choice.
+- ✅ **Second Class / Year 3 architecture locked v1.0**: formal specialization → complex/degraded operations → supervised professional competence and intermediate qualification.
 
 ### Earlier design-depth progress
 
@@ -159,7 +161,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. Continue Pillar 1 with **Fourth Class / Trimester 1 unit-level design**, starting with STF-401 and proceeding subject by subject. Fourth Class year architecture is already locked.
+1. Complete the **First Class / Year 4 grouped-subject architecture** with Roberto before any unit-level deployment. Once all four years are locked, begin the autonomous deployment pass starting with Fourth Class / Trimester 1.
 2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
@@ -180,9 +182,11 @@ The following are now **closed to the current defined scope** and should only re
 - long-term and medium-term objective semantics;
 - specialization selection timing;
 - project-wide Kobayashi Maru tradition;
-- Fourth Class / Year 1 three-trimester grouped-subject architecture.
+- Fourth Class / Year 1 three-trimester grouped-subject architecture;
+- Third Class / Year 2 three-trimester grouped-subject architecture;
+- Second Class / Year 3 three-trimester specialization architecture.
 
-The remaining Pillar 1 work is primarily **Fourth Class unit-level depth, the grouped-subject architecture for Third/Second/First Class, branch curricula, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
+The remaining Pillar 1 work is primarily **First Class / Year 4 architecture, then autonomous unit-level deployment of all four years, branch curriculum depth, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 
