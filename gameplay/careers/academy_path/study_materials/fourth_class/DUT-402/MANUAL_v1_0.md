@@ -1,199 +1,468 @@
 # DUT-402 — Servicio, guardias y trabajo profesional
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 2**
 
 ## Finalidad
 
-Introducir la disciplina cotidiana del servicio y la continuidad de una guardia.
+Introducir la disciplina cotidiana del servicio: qué significa estar de guardia, cómo presentarse a un puesto, cómo recibir y entregar un relevo, qué debe informarse y cómo mantener continuidad incluso cuando no ocurre nada extraordinario.
 
-## Cómo estudiar esta asignatura
+DUT-402 enseña una idea central:
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+> **Una guardia no es una escena aislada. Es un tramo de una operación continua.**
 
-## DUT-402-U01 — Qué es una guardia
+---
 
-### Qué debes dominar
+# DUT-402-U01 — Qué es una guardia
 
-- **turno**: Una guardia es una franja de servicio con un puesto y responsabilidades concretas. El proyecto admite patrones de tres, cuatro o turnos personalizados; lo importante académicamente es recibir el puesto, mantener continuidad, informar incidencias y entregarlo correctamente.
-- **puesto**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **responsabilidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **supervisión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Una franja de responsabilidad
 
-### Aplicación operativa
+Una guardia es un periodo durante el que una persona asume tareas concretas en un puesto o función.
 
-Leer una asignación de guardia. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No significa “estar despierto durante unas horas”. Significa:
 
-### Qué se evalúa
+- estar asignado;
+- estar disponible;
+- cumplir una función;
+- mantener continuidad;
+- responder dentro de la autoridad propia.
 
-Comprobación práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Turno y puesto
 
-### Errores frecuentes
+**Turno** describe la franja temporal.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+**Puesto** describe la función.
 
-### Autoevaluación
+Una misma persona puede ocupar puestos diferentes en turnos distintos si está cualificada y asignada.
 
-1. Explica con tus palabras qué significa **turno** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **turno** y **puesto**?
-3. Resuelve de forma razonada esta práctica: *Leer una asignación de guardia.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 3. Patrones de guardia
 
-## DUT-402-U02 — Presentación al puesto
+El proyecto admite:
 
-### Qué debes dominar
+- tres turnos;
+- cuatro turnos;
+- patrones personalizados.
 
-- **puntualidad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **estado personal**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **briefing**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **órdenes vigentes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+No se fija una única distribución horaria universal para todas las eras y clases de nave.
 
-### Aplicación operativa
+## 4. Responsabilidad
 
-Escena de incorporación. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Durante la guardia, el cadete debe saber:
 
-### Qué se evalúa
+- qué tareas son suyas;
+- qué debe monitorizar;
+- quién supervisa;
+- qué puede decidir;
+- qué debe escalar.
 
-Disciplina y comunicación. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 5. Supervisión
 
-### Errores frecuentes
+En esta etapa, gran parte del trabajo de un cadete se realiza bajo supervisión.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La supervisión no elimina responsabilidad. El cadete sigue siendo responsable de:
 
-### Autoevaluación
+- prestar atención;
+- informar;
+- seguir procedimiento;
+- reconocer límites.
 
-1. Explica con tus palabras qué significa **puntualidad** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **puntualidad** y **estado personal**?
-3. Resuelve de forma razonada esta práctica: *Escena de incorporación.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+### Práctica
 
-## DUT-402-U03 — Relevo
-
-### Qué debes dominar
-
-- **entrega/recepción**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **estado del puesto**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **pendientes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **incidencias**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Realizar un relevo básico. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Checklist evaluada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Lee una asignación de guardia e identifica turno, puesto, supervisor, tareas y límites.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **entrega/recepción** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **entrega/recepción** y **estado del puesto**?
-3. Resuelve de forma razonada esta práctica: *Realizar un relevo básico.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué diferencia existe entre turno y puesto?
+2. ¿Qué convierte un periodo en una guardia profesional?
+3. ¿Qué patrones de guardia admite el proyecto?
+4. ¿Por qué la supervisión no elimina responsabilidad?
+5. ¿Qué información debes conocer antes de asumir una guardia?
 
-## DUT-402-U04 — Informes básicos
+---
 
-### Qué debes dominar
+# DUT-402-U02 — Presentación al puesto
 
-- **qué informar**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **a quién**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **claridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **confirmación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Llegar preparado
 
-### Aplicación operativa
+La presentación al puesto comienza antes de sentarse frente a una consola.
 
-Emitir un informe breve. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Incluye:
 
-### Qué se evalúa
+- puntualidad;
+- estado personal;
+- equipo necesario;
+- conocimiento de la asignación;
+- disposición para recibir briefing.
 
-Evaluación de precisión y brevedad. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Puntualidad
 
-### Errores frecuentes
+Llegar tarde no afecta solo a la propia agenda.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Puede obligar a otra persona a:
 
-### Autoevaluación
+- prolongar su guardia;
+- retrasar un relevo;
+- dejar una función sin cubrir.
 
-1. Explica con tus palabras qué significa **qué informar** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **qué informar** y **a quién**?
-3. Resuelve de forma razonada esta práctica: *Emitir un informe breve.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Por eso la puntualidad es una responsabilidad operativa, no solo cortesía.
 
-## DUT-402-U05 — Cadena de responsabilidad
+## 3. Estado personal
 
-### Qué debes dominar
+Si el cadete está:
 
-- **responsable de puesto**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **supervisor**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **jefe de departamento**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **mando**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+- enfermo;
+- lesionado;
+- extremadamente fatigado;
+- bajo una limitación médica;
+- incapaz de cumplir con seguridad,
 
-### Aplicación operativa
+debe comunicarlo.
 
-Escalar tres incidencias de distinta gravedad. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Ocultarlo puede ser más perjudicial que reconocerlo.
 
-### Qué se evalúa
+## 4. Briefing
 
-Caso aplicado. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Antes de asumir el puesto, el cadete debe conocer:
 
-### Errores frecuentes
+- estado actual;
+- órdenes vigentes;
+- incidencias;
+- tareas pendientes;
+- riesgos;
+- cambios relevantes.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 5. Órdenes vigentes
 
-### Autoevaluación
+Una nueva guardia no borra órdenes activas.
 
-1. Explica con tus palabras qué significa **responsable de puesto** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **responsable de puesto** y **supervisor**?
-3. Resuelve de forma razonada esta práctica: *Escalar tres incidencias de distinta gravedad.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+El relevo debe saber qué instrucciones continúan aplicándose.
 
-## DUT-402-U06 — Guardia rutinaria
+### Práctica
 
-### Qué debes dominar
-
-- **monitorización**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **tareas periódicas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **registro**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **fin de turno**: Una guardia es una franja de servicio con un puesto y responsabilidades concretas. El proyecto admite patrones de tres, cuatro o turnos personalizados; lo importante académicamente es recibir el puesto, mantener continuidad, informar incidencias y entregarlo correctamente.
-
-### Aplicación operativa
-
-Simulación de una guardia sin crisis. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Evaluación de constancia y handoff. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Escena de incorporación al puesto con briefing y comprobación de disponibilidad.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **monitorización** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **monitorización** y **tareas periódicas**?
-3. Resuelve de forma razonada esta práctica: *Simulación de una guardia sin crisis.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Por qué la puntualidad tiene efecto operativo?
+2. ¿Qué debe hacer un cadete si no está apto para el servicio?
+3. ¿Qué debe incluir un briefing?
+4. ¿Una nueva guardia cancela órdenes vigentes?
+5. ¿Por qué ocultar fatiga o lesión puede ser una mala decisión?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# DUT-402-U03 — Relevo
 
-## Tratamiento por era
+## 1. La continuidad depende del relevo
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Un relevo transfiere responsabilidad sin perder información importante.
+
+No es:
+
+> “Ya terminé, ahora te toca.”
+
+Es una transferencia estructurada de estado.
+
+## 2. Qué debe entregarse
+
+Como mínimo:
+
+- estado del puesto;
+- sistemas o recursos relevantes;
+- órdenes activas;
+- tareas pendientes;
+- incidencias abiertas;
+- riesgos conocidos;
+- cambios desde el relevo anterior.
+
+## 3. Qué debe recibir el siguiente
+
+El receptor debe:
+
+- escuchar;
+- comprobar puntos críticos;
+- pedir aclaraciones;
+- confirmar que entiende la situación;
+- asumir formalmente el puesto.
+
+## 4. Brevedad útil
+
+Un relevo no debe convertirse en una narración de cada minuto.
+
+La regla es:
+
+> transmitir lo que el siguiente responsable necesita para continuar sin perder contexto.
+
+## 5. Relevo incompleto
+
+Omitir una incidencia puede provocar:
+
+- duplicar trabajo;
+- ignorar un riesgo;
+- contradecir una orden;
+- perder una oportunidad;
+- crear un fallo posterior.
+
+### Práctica
+
+Realiza un relevo básico con un incidente abierto, una tarea pendiente y una orden vigente.
+
+### Autoevaluación
+
+1. ¿Qué objetivo tiene un relevo?
+2. Nombra cinco elementos que deberían transferirse.
+3. ¿Qué debe hacer el receptor?
+4. ¿Por qué un relevo no debe ser ni demasiado escaso ni excesivamente narrativo?
+5. ¿Qué puede causar una incidencia omitida?
+
+---
+
+# DUT-402-U04 — Informes básicos
+
+## 1. Informar es convertir una observación en información útil
+
+Un informe profesional debe permitir que otra persona comprenda qué ocurre y decida si necesita actuar.
+
+## 2. Qué informar
+
+Normalmente importa:
+
+- hecho observado;
+- cambio de estado;
+- impedimento;
+- riesgo;
+- resultado;
+- necesidad de apoyo;
+- tarea completada.
+
+## 3. A quién informar
+
+El destinatario depende de:
+
+- puesto;
+- cadena de responsabilidad;
+- gravedad;
+- urgencia;
+- departamento afectado.
+
+No todo debe llegar al Capitán.
+
+## 4. Claridad
+
+Un buen informe evita:
+
+- adornos;
+- conclusiones no demostradas;
+- detalles irrelevantes;
+- ambigüedad.
+
+Ejemplo:
+
+> “Interferencia creciente en el sector tres. Calidad de lectura degradada. Solicito ajuste o apoyo.”
+
+## 5. Confirmación
+
+En información importante puede ser necesario confirmar recepción o comprensión.
+
+Especialmente cuando una omisión puede comprometer continuidad o seguridad.
+
+### Práctica
+
+Convierte tres mensajes desordenados en informes breves, precisos y dirigidos al destinatario correcto.
+
+### Autoevaluación
+
+1. ¿Qué debe lograr un informe profesional?
+2. ¿Qué tipo de cambios deben informarse?
+3. ¿Por qué no todo se informa directamente al Capitán?
+4. ¿Qué problemas causa una conclusión no demostrada?
+5. ¿Cuándo puede ser necesaria confirmación?
+
+---
+
+# DUT-402-U05 — Cadena de responsabilidad
+
+## 1. Responsabilidad no significa “quién manda más”
+
+La cadena de responsabilidad ayuda a resolver:
+
+- quién debe actuar;
+- quién supervisa;
+- quién necesita saber;
+- quién puede autorizar;
+- cuándo escalar.
+
+## 2. Responsable de puesto
+
+Es la persona que atiende una función concreta en ese momento.
+
+Debe resolver lo que entra dentro de:
+
+- su capacidad;
+- su autoridad;
+- sus procedimientos.
+
+## 3. Supervisor
+
+El supervisor:
+
+- apoya;
+- revisa;
+- autoriza cuando corresponde;
+- interviene si la situación excede al operador.
+
+## 4. Jefe de departamento
+
+Recibe problemas que afectan al conjunto del área:
+
+- recursos;
+- personal;
+- prioridades;
+- fallos importantes;
+- decisiones de alcance departamental.
+
+## 5. Mando
+
+Mando interviene cuando la situación:
+
+- afecta a la misión;
+- cruza departamentos;
+- implica riesgo relevante;
+- requiere autoridad de mando;
+- cambia prioridades operativas.
+
+## 6. Escalar no es fracasar
+
+Escalar correctamente es una competencia profesional.
+
+El error es:
+
+- escalar todo por miedo;
+- no escalar nada por orgullo.
+
+### Práctica
+
+Decide a qué nivel escalar:
+1. una duda rutinaria;
+2. una avería que afecta a todo el departamento;
+3. un riesgo que puede alterar la misión.
+
+### Autoevaluación
+
+1. ¿Qué diferencia existe entre responsable de puesto y supervisor?
+2. ¿Qué tipo de problema corresponde al jefe de departamento?
+3. ¿Cuándo debe intervenir Mando?
+4. ¿Por qué escalar correctamente es una competencia?
+5. ¿Qué problemas causa escalar demasiado o demasiado poco?
+
+---
+
+# DUT-402-U06 — Guardia rutinaria
+
+## 1. La rutina también cuenta
+
+No todas las guardias contienen una emergencia.
+
+Una guardia rutinaria puede consistir en:
+
+- monitorizar;
+- comprobar sistemas;
+- ejecutar tareas periódicas;
+- responder consultas;
+- registrar cambios;
+- coordinar pequeñas incidencias;
+- preparar el relevo.
+
+## 2. Monitorización
+
+Monitorizar no es mirar pasivamente una pantalla.
+
+Implica:
+
+- conocer estado normal;
+- detectar cambios;
+- reconocer qué cambio importa;
+- saber cuándo actuar.
+
+## 3. Tareas periódicas
+
+Una guardia puede incluir:
+
+- verificaciones;
+- informes;
+- mantenimiento programado;
+- actualización de registros;
+- comprobaciones de estado.
+
+La rutina evita que los problemas solo se descubran cuando ya son graves.
+
+## 4. Registro
+
+El Operational Event Log conserva hechos.
+
+El operador puede generar otros registros según su función, pero no debe reescribir hechos ni confundir opinión con evento.
+
+## 5. Fin de turno
+
+Antes de terminar:
+
+1. completar o marcar pendientes;
+2. actualizar estado;
+3. preparar relevo;
+4. transferir incidencias;
+5. confirmar entrega.
+
+## 6. Constancia
+
+La calidad profesional también se ve en una guardia donde “no pasó nada”.
+
+Mantener atención, procedimiento y continuidad sin estímulo dramático es parte del trabajo.
+
+### Práctica
+
+Simulación de guardia sin crisis: varias tareas periódicas, una incidencia menor y un relevo final.
+
+### Autoevaluación
+
+1. ¿Por qué una guardia rutinaria sigue generando evidencia?
+2. ¿Qué significa monitorizar activamente?
+3. ¿Para qué sirven las tareas periódicas?
+4. ¿Qué debe hacerse antes del fin de turno?
+5. ¿Por qué la constancia importa aunque no ocurra una emergencia?
+
+---
+
+# Evaluación del curso
+
+DUT-402 evalúa:
+
+- lectura de asignaciones;
+- puntualidad y preparación;
+- recepción y entrega de relevo;
+- calidad de informes;
+- escalado;
+- constancia;
+- disciplina.
+
+No se premia crear drama donde no lo hay.
+
+# Tratamiento por era
+
+El patrón concreto de turnos puede variar.
+
+El proyecto admite:
+
+- tres turnos;
+- cuatro turnos;
+- patrones personalizados.
+
+Lo estable es la responsabilidad de continuidad.
+
+# Referencias internas
+
+- `lore/federation/starfleet/duty_shifts/shift_model.json`
+- `lore/federation/starfleet/command_structure/succession_rules.json`
+- `gameplay/ship_operations/operational_event_log/README.md`
+- `gameplay/careers/academy_path/course_resolution.md`
+
+Estas referencias constriñen la organización del servicio. Los horarios concretos dependen de unidad, era y campaña.
