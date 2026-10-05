@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "post_academy_qualification_and_mentorship",
+  "status": "foundation_fixed",
+  "qualification_lifecycle": [
+    "not_started",
+    "theory_in_progress",
+    "simulation_ready",
+    "supervised_practice",
+    "operational_evidence_accumulating",
+    "assessment_ready",
+    "qualified",
+    "suspended_or_expired_when_applicable",
+    "revoked_when_authorized"
+  ],
+  "qualification_evidence": [
+    "theory_completion",
+    "simulation_result",
+    "supervised_practice",
+    "operational_event_refs",
+    "supervisor_observation",
+    "final_assessment"
+  ],
+  "mentorship_fields": [
+    "mentor_character_id",
+    "mentee_character_id",
+    "assignment_start",
+    "assignment_end",
+    "professional_scope",
+    "supervision_level",
+    "qualification_targets",
+    "review_history",
+    "recommendation_refs"
+  ],
+  "rules": [
+    "Mentorship is separate from friendship and personal affinity.",
+    "A mentor cannot award a qualification without satisfying qualification rules.",
+    "General qualifications may survive transfers while class-specific familiarization may be required again.",
+    "Operational evidence is preferred over abstract XP.",
+    "Lieutenants and senior officers may eventually mentor junior officers when role/qualification permits.",
+    "Mentor recommendations influence but do not override formal eligibility or available billets."
+  ]
+}
