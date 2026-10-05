@@ -13,16 +13,73 @@ The target is not merely lore completeness. The target is:
 
 ## Eight work pillars
 
-| # | Pillar | Status | Primary goal |
-|---|---|---|---|
-| 1 | Academy + career | 🟨 IN_PROGRESS | Full four-year/trimesters learning path through post-Academy professional development |
-| 2 | People and life aboard | 🟨 IN_PROGRESS | NPC↔NPC and player↔NPC social simulation with memory, trust, friendship, conflict and adult relationships |
-| 3 | Habits, wellbeing and daily life | 🟨 IN_PROGRESS | Long-horizon routines, recovery and character operational readiness without gamey happiness bars |
-| 4 | Starfleet professional life | 🟨 IN_PROGRESS | Watches, qualifications, mentorship, evaluations, transfers, promotions and service progression |
-| 5 | Gameplay-required lore | 🟨 IN_PROGRESS | Fill technology, medicine/science, conflicts, historical and operational knowledge needed by mechanics |
-| 6 | AI and narrative | 🟨 IN_PROGRESS | Define AI roles, authority boundaries, dialogue, narration, interpretation and context routing |
-| 7 | Procedural universe and population | 🟨 IN_PROGRESS | Generate coherent persistent systems, worlds, traffic, ships, crews, NPCs and local activity |
-| 8 | Starship Computer | 🟨 IN_PROGRESS | Canon-feeling neutral computer interface, access control, deterministic queries/actions and routed AI assistance |
+| # | Pillar | Foundation | Content depth | Primary goal |
+|---|---|---|---|---|
+| 1 | Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Full four-year/trimesters learning path through post-Academy professional development |
+| 2 | People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS | NPC↔NPC and player↔NPC social simulation with memory, trust, friendship, conflict and adult relationships |
+| 3 | Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Long-horizon routines, recovery and character operational readiness without gamey happiness bars |
+| 4 | Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Watches, qualifications, mentorship, evaluations, transfers, promotions and service progression |
+| 5 | Gameplay-required lore | ✅ READINESS PLAN | 🟨 IN_PROGRESS | Fill technology, medicine/science, conflicts, historical and operational knowledge needed by mechanics |
+| 6 | AI and narrative | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Define AI roles, authority boundaries, dialogue, narration, interpretation and context routing |
+| 7 | Procedural universe and population | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Generate coherent persistent systems, worlds, traffic, ships, crews, NPCs and local activity |
+| 8 | Starship Computer | ✅ ESTABLISHED | 🟨 IN_PROGRESS | Canon-feeling neutral computer interface, access control, deterministic queries/actions and routed AI assistance |
+
+## Foundation pass completed
+
+The first architecture pass now includes:
+
+### 1 — Academy + career
+- `gameplay/careers/academy_path/academy_career_v0_2.md`
+- three-trimester year model;
+- Academy state aligned away from standalone fatigue/stress meters;
+- Kobayashi Maru capstone rules;
+- post-Academy mentorship/qualification foundation.
+
+### 2 — People and life aboard
+- `gameplay/social/`
+- multidimensional directional relationship graph;
+- friendship/professional/romantic distinctions;
+- adult consent/privacy rules;
+- social simulation LOD.
+
+### 3 — Habits, wellbeing and daily life
+- `gameplay/characters/wellbeing/`
+- acute vs longitudinal state;
+- 24h/7d/30d windows;
+- preference-aware recovery;
+- cognitive-assistance gameplay translation.
+
+### 4 — Starfleet professional life
+- `gameplay/careers/starfleet_service/`
+- evidence-based professional evaluation;
+- promotion/transfer rules;
+- qualifications and mentorship.
+
+### 5 — Gameplay-required lore
+- `docs/roadmap/gameplay_lore_readiness.md`
+- technology root made generation/gameplay-aware;
+- explicit backlog for technology/equipment, medicine/science, conflicts/history, species, factions, astrography and non-combat infrastructure.
+
+### 6 — AI and narrative
+- `ai/README.md`
+- `ai/runtime_orchestration.md`
+- `gameplay/interactions/npc_interaction_framework.md`
+- deterministic-first routing and no direct AI state mutation.
+
+### 7 — Procedural universe and population
+- `universe/generation/PROCEDURAL_UNIVERSE_BIBLE_v0.1.md`
+- generator-domain catalogue;
+- starship-role generation;
+- population generation;
+- traffic/activity model.
+
+### 8 — Starship Computer
+- `gameplay/ship_operations/ship_computer/`
+- neutral Starfleet computer personality;
+- access control;
+- request contract;
+- deterministic/fast/reasoning routing;
+- console separated from ship-wide service.
 
 ## Cross-cutting systems already established
 
@@ -67,7 +124,7 @@ Each pillar is developed in two layers:
 - validation suites;
 - player-facing material.
 
-A pillar may have a complete foundation while its content catalogue remains progressive.
+The first foundation pass is complete. The project now cycles through the pillars to add content depth and consistency.
 
 ## Runtime dependency
 
@@ -75,15 +132,19 @@ Design work proceeds independently.
 
 Runtime implementation is deferred where CoreRPG does not yet expose the required generic world-state, action, simulation, persistence or event capabilities.
 
-## Current sequence
+## Next design-depth priorities
 
-1. Formalize Academy + career v0.2.
-2. Establish social/relationship foundation.
-3. Establish habits/wellbeing foundation.
-4. Establish professional-service foundation.
-5. Build gameplay-lore readiness backlog.
-6. Consolidate AI/narrative architecture.
-7. Expand procedural generation from vertical-slice seed to full-universe framework.
-8. Establish Starship Computer service architecture.
+1. Build the **Academy master curriculum** down to year → trimester → subject → unit, before mass-producing Sensors exercises.
+2. Define **social event/state transitions** and knowledge propagation from real events into memories/relationships.
+3. Define **wellbeing activity inputs and habit formation** without exposing optimization bars.
+4. Connect **professional evidence** to formal evaluation, recommendations and career opportunities.
+5. Begin concrete **technology/equipment + medicine/science lore packs** required by Academy and procedural generation.
+6. Define **AI context assembly and privacy filters** for dialogue/computer/log drafting.
+7. Add **procedural generation grammars/profiles** for stars, worlds, civilizations, ship roles/operators, facilities and traffic.
+8. Expand **Starship Computer command/query catalogue**, profiles by era/civilization and integrations.
 
-Work may then cycle back through all eight pillars for increasing content depth.
+## Roberto decision policy
+
+Work continues autonomously while rules can be derived from already approved principles and repository architecture.
+
+If a choice would materially determine creative canon/gameplay direction and is not already approved, mark it `NEEDS_ROBERTO` and stop that branch rather than silently deciding it.
