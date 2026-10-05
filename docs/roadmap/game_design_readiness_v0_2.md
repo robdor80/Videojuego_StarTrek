@@ -134,6 +134,18 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Design-depth pass 1 progress
 
+### Pillar 1 — closed entry sub-blocks
+
+- ✅ **Academy Access v1.0 locked**: five-block general candidate curriculum, candidate manual source, holistic admission review and targeted reassessment.
+- ✅ **Player profile + character creation v1.0 locked**: nickname separated from in-world identity; adult-equivalent rule; no manual attributes/skill points.
+- ✅ **Mandatory biography validation locked**: deterministic hard checks plus semantic coherence review before the character can enter the campaign.
+- ✅ **Evidence-based character growth locked**: study, practice, habits, instruction, simulation and live experience change capabilities; no generic visible XP.
+- ✅ **Objectives and trajectory locked**: one primary long-term aspiration plus a small set of medium-term goals; descriptive coherence, no completion percentage and no goal-spawned world events.
+- ✅ **Specialization timing locked**: choice by the end of Third Class, formal specialization begins in Second Class.
+- ✅ **Kobayashi Maru normalized as a project-wide Academy tradition** across Pike, Kirk and TNG/DS9/Voyager with era-appropriate implementation.
+
+### Earlier design-depth progress
+
 - ✅ Academy master curriculum baseline: year → trimester → subject structure created.
 - ✅ External Academy study/profile interoperability contract created.
 - ✅ Social event transitions and knowledge-propagation rules created.
@@ -146,7 +158,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 
 ## Next design-depth priorities
 
-1. Expand the **Academy curriculum from subject level to unit/lesson objectives**, starting with common-core material before mass-producing Sensors exercises.
+1. Continue Pillar 1 by converting the **four Academy years into the definitive grouped-subject curriculum**, then expand each subject into unit/lesson objectives. Start with Fourth Class / Trimester 1 and proceed trimester by trimester.
 2. Build **branch curricula** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
@@ -154,6 +166,21 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 6. Define **AI context filtering/assembly implementation requirements** in a form compatible with CoreRPG/Host privacy boundaries.
 7. Expand **Starship Computer integration** with records/logs, crew lookup, ship status, navigation and analysis.
 8. Add validation rules checking cross-pillar contradictions as the content grows.
+
+## Pillar 1 current boundary
+
+The following are now **closed to the current defined scope** and should only reopen for explicit revision or discovered contradiction:
+
+- access curriculum and admission philosophy;
+- pre-game player profile / nickname distinction;
+- initial character sheet structure;
+- mandatory character-coherence validation;
+- growth through life evidence rather than point allocation;
+- long-term and medium-term objective semantics;
+- specialization selection timing;
+- project-wide Kobayashi Maru tradition.
+
+The remaining Pillar 1 work is primarily **four-year curriculum depth, branch curricula, Academy-life scheduling/content, evaluation outputs and post-Academy career depth**.
 
 ## Roberto decision policy
 
