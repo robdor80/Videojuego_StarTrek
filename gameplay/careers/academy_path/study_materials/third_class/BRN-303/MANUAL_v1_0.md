@@ -1,253 +1,429 @@
 # BRN-303 — Exploración profesional y rotaciones de rama
 
-**Material de estudio v1.0 — Cadete de 3.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 3.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Dar suficiente exposición realista a las siete ramas para que la elección sea informada.
+Dar suficiente exposición realista a las siete ramas jugables para que la elección de especialización sea informada. BRN-303 no busca “probar una clase de RPG”, sino observar cómo es el trabajo cotidiano, qué responsabilidades exige y qué tipo de evidencia produce cada rama.
 
-## Enfoque
+La regla central es:
 
-En 3.ª clase ya no basta reconocer sistemas. Debes **operar bajo supervisión**, comunicar con precisión y justificar decisiones con la información disponible. El conocimiento enseñado puede evaluarse directamente.
+> **Elegir rama debe basarse en trabajo real observado, intereses y evidencia; no en el color del uniforme ni en una fantasía de destino final.**
 
-## BRN-303-U01 — Mando
+---
 
-### Núcleo
+# BRN-303-U01 — Mando
 
-- **coordinación**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **decisión**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **puente**: El puente funciona como un equipo distribuido: cada estación mantiene una parte de la situación y debe compartir la información que cambia decisiones de otros puestos.
-- **responsabilidad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Qué se observa
 
-### Práctica
+Mando trabaja con:
+- coordinación;
+- decisiones;
+- prioridades;
+- puente;
+- responsabilidad sobre personas y misión.
 
-Rotación guiada.
+## 2. No es “dar órdenes”
 
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
+La rama exige:
+- escuchar;
+- integrar información;
+- asumir responsabilidad;
+- decidir con incertidumbre;
+- comunicar intención.
 
-### Evaluación
+## 3. Trabajo real
 
-Informe reflexivo.
+Un oficial de mando puede pasar gran parte del tiempo:
+- coordinando;
+- revisando;
+- haciendo guardia;
+- resolviendo prioridades;
+- preparando misiones;
+- desarrollando liderazgo.
 
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
+## 4. Evidencia útil
 
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
-
-### Autoevaluación
-
-1. Define **coordinación** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
-
-## BRN-303-U02 — Vuelo / Navegación
-
-### Núcleo
-
-- **helm**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **plotting**: Navegar no es elegir un punto y acelerar: exige posición, ruta, restricciones, margen, estado de propulsión y actualización continua cuando cambian los datos.
-- **maniobra**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **seguridad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+La rotación observa:
+- claridad;
+- juicio;
+- comunicación;
+- responsabilidad;
+- capacidad de mantener imagen general.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Rotación guiada con una decisión de prioridad y un breve debrief.
 
 ### Autoevaluación
 
-1. Define **helm** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué tipo de trabajo caracteriza Mando?
+2. ¿Por qué no se reduce a dar órdenes?
+3. ¿Qué evidencia resulta relevante?
+4. ¿Qué exige decidir con incertidumbre?
+5. ¿Qué diferencia hay entre interés por mando y competencia demostrada?
 
-## BRN-303-U03 — Operaciones
+---
 
-### Núcleo
+# BRN-303-U02 — Vuelo / Navegación
 
-- **recursos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **sistemas**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **coordinación**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **logística**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Núcleo
+
+La rama trabaja con:
+- helm/Conn;
+- plotting;
+- maniobra;
+- astrogación;
+- seguridad de movimiento.
+
+## 2. Trabajo real
+
+Incluye:
+- preparar rutas;
+- interpretar órdenes;
+- controlar impulso;
+- gestionar tránsito warp;
+- aproximar;
+- orbitar;
+- atracar;
+- responder a anomalías.
+
+## 3. Precisión y anticipación
+
+El operador debe pensar:
+- dónde estamos;
+- hacia dónde vamos;
+- qué restricciones existen;
+- qué ocurrirá después de la maniobra.
+
+## 4. Evidencia
+
+Se observa:
+- razonamiento espacial;
+- precisión;
+- disciplina;
+- capacidad de reportar límites;
+- manejo de incertidumbre.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Preparar y ejecutar una ruta breve con una modificación inesperada.
 
 ### Autoevaluación
 
-1. Define **recursos** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué funciones pertenecen a Vuelo/Navegación?
+2. ¿Qué debe anticipar el operador?
+3. ¿Por qué precisión no significa obediencia ciega?
+4. ¿Qué evidencia se observa?
+5. ¿Qué diferencia hay entre plotting y maniobra?
 
-## BRN-303-U04 — Ingeniería
+---
 
-### Núcleo
+# BRN-303-U03 — Operaciones
 
-- **energía**: La energía es un recurso compartido. Cualquier asignación debe considerar consumidores, reservas, prioridades de misión y efectos secundarios sobre otros sistemas.
-- **diagnóstico**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **mantenimiento**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **daños**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Núcleo
+
+Operaciones coordina:
+- recursos;
+- sistemas;
+- prioridades;
+- logística;
+- apoyo interdepartamental.
+
+## 2. Imagen funcional
+
+Ops necesita saber:
+- qué está usando recursos;
+- qué está degradado;
+- qué solicitudes compiten;
+- qué necesita la misión.
+
+## 3. Coordinación
+
+No sustituye a Ingeniería, Sensores o Mando.
+
+Conecta necesidades y capacidad.
+
+## 4. Logística
+
+También puede involucrar:
+- personal;
+- suministros;
+- equipos;
+- disponibilidad;
+- programación.
+
+## 5. Evidencia
+
+Se observa:
+- organización;
+- visión de conjunto;
+- priorización;
+- comunicación;
+- trazabilidad.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Gestionar tres solicitudes simultáneas con recursos limitados.
 
 ### Autoevaluación
 
-1. Define **energía** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué coordina Operaciones?
+2. ¿Qué información necesita?
+3. ¿Por qué no sustituye a Ingeniería?
+4. ¿Qué puede incluir logística?
+5. ¿Qué evidencia se observa?
 
-## BRN-303-U05 — Seguridad / Táctica
+---
 
-### Núcleo
+# BRN-303-U04 — Ingeniería
 
-- **protección**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **amenaza**: La seguridad exige autoridad, proporcionalidad y control. Reconocer una amenaza no autoriza automáticamente el uso máximo de fuerza.
-- **armamento**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **procedimiento**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Núcleo
+
+Ingeniería trabaja con:
+- energía;
+- diagnóstico;
+- mantenimiento;
+- propulsión;
+- sistemas;
+- recuperación.
+
+## 2. Pensar en causas y dependencias
+
+Un ingeniero no solo ve:
+> “no funciona”.
+
+Debe preguntar:
+- qué síntoma;
+- qué recursos;
+- qué dependencia;
+- qué prueba;
+- qué riesgo;
+- qué alternativa.
+
+## 3. Trabajo rutinario
+
+Gran parte del trabajo es:
+- mantenimiento;
+- calibración;
+- prueba;
+- inspección;
+- prevención.
+
+No solo emergencias.
+
+## 4. Evidencia
+
+Se observa:
+- razonamiento técnico;
+- disciplina;
+- seguridad;
+- capacidad de diagnóstico;
+- comunicación con el puente.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Rotación con una degradación preparada y un informe técnico.
 
 ### Autoevaluación
 
-1. Define **protección** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué áreas cubre Ingeniería?
+2. ¿Por qué síntoma no equivale a causa?
+3. ¿Qué importancia tiene mantenimiento rutinario?
+4. ¿Qué evidencia se observa?
+5. ¿Por qué comunicación técnica es parte del trabajo?
 
-## BRN-303-U06 — Ciencia / Sensores
+---
 
-### Núcleo
+# BRN-303-U05 — Seguridad / Táctica
 
-- **detección**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **análisis**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **método**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **reporte**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Dos dimensiones relacionadas
+
+Seguridad protege:
+- personas;
+- instalaciones;
+- accesos;
+- procedimiento.
+
+Táctica trabaja con:
+- amenaza;
+- postura;
+- defensa;
+- sistemas tácticos;
+- apoyo a Mando.
+
+## 2. No es “la rama de disparar”
+
+El trabajo incluye:
+- prevención;
+- evaluación;
+- disciplina;
+- planificación;
+- control;
+- proporcionalidad.
+
+## 3. Autoridad
+
+Acceso a sistemas tácticos no significa autorización de uso.
+
+Las decisiones dependen de:
+- Mando;
+- reglas;
+- situación;
+- permisos.
+
+## 4. Evidencia
+
+Se observa:
+- conciencia de riesgo;
+- autocontrol;
+- claridad;
+- procedimiento;
+- protección de terceros.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Rotación guiada con evaluación de amenaza y respuesta proporcional.
 
 ### Autoevaluación
 
-1. Define **detección** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. Diferencia Seguridad y Táctica.
+2. ¿Por qué la rama no se reduce a armamento?
+3. ¿Qué limita uso de sistemas tácticos?
+4. ¿Qué evidencia se observa?
+5. ¿Por qué autocontrol es importante?
 
-## BRN-303-U07 — Medicina
+---
 
-### Núcleo
+# BRN-303-U06 — Ciencia / Sensores
 
-- **paciente**: La prioridad médica es proteger vida y evitar daño adicional dentro del nivel de competencia. El cadete común estabiliza, observa, comunica y entrega el caso a personal cualificado.
-- **diagnóstico**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **triaje**: La prioridad médica es proteger vida y evitar daño adicional dentro del nivel de competencia. El cadete común estabiliza, observa, comunica y entrega el caso a personal cualificado.
-- **ética**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Dos funciones complementarias
+
+Sensores:
+- detecta;
+- mide;
+- localiza;
+- sigue;
+- organiza observaciones.
+
+Ciencia:
+- interpreta;
+- formula hipótesis;
+- compara;
+- investiga;
+- explica.
+
+## 2. Método
+
+La rama requiere:
+- curiosidad;
+- rigor;
+- incertidumbre explícita;
+- separación entre dato e interpretación.
+
+## 3. Trabajo real
+
+Puede incluir:
+- barridos;
+- análisis;
+- bases de datos;
+- experimentos;
+- informes;
+- trabajo de campo.
+
+## 4. Evidencia
+
+Se observa:
+- método;
+- precisión;
+- gestión de incertidumbre;
+- calidad de reporte;
+- capacidad de pedir datos adicionales.
 
 ### Práctica
 
-Rotación guiada.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evidencia práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Ejecutar un barrido y convertirlo en una pregunta científica sin inventar causa.
 
 ### Autoevaluación
 
-1. Define **paciente** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Rotación guiada.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. Diferencia Sensores y Ciencia.
+2. ¿Qué exige método científico?
+3. ¿Qué trabajo puede realizar la rama?
+4. ¿Qué evidencia se observa?
+5. ¿Por qué incertidumbre explícita es una fortaleza?
 
-## Cierre del curso
+---
 
-La superación combina conocimiento, práctica y juicio. Las carencias localizadas pueden producir tutoría, práctica adicional y reevaluación; no obligan por defecto a reiniciar todo el trimestre.
+# BRN-303-U07 — Medicina
+
+## 1. Núcleo
+
+Medicina trabaja con:
+- paciente;
+- diagnóstico;
+- tratamiento;
+- triaje;
+- prevención;
+- aptitud para servicio;
+- xenomedicina.
+
+## 2. Responsabilidad profesional
+
+La rama combina:
+- conocimiento;
+- juicio;
+- privacidad;
+- ética;
+- comunicación.
+
+## 3. Incertidumbre
+
+Una prueba no garantiza certeza.
+
+El personal médico debe distinguir:
+- estado real;
+- observaciones;
+- diagnóstico conocido;
+- hipótesis.
+
+## 4. Especies
+
+La medicina usa perfiles fisiológicos reales del paciente.
+
+No trata la biología humana como universal.
+
+## 5. Evidencia
+
+Se observa:
+- observación;
+- prudencia;
+- comunicación;
+- ética;
+- respuesta a prioridades.
+
+### Práctica
+
+Rotación guiada con un paciente simulado y un handoff.
+
+### Autoevaluación
+
+1. ¿Qué áreas cubre Medicina?
+2. ¿Qué responsabilidades además de conocimiento técnico exige?
+3. ¿Por qué una prueba no garantiza certeza?
+4. ¿Por qué especie importa?
+5. ¿Qué evidencia se observa?
+
+---
+
+# Evaluación del curso
+
+BRN-303 genera evidencia descriptiva y comparativa. No bloquea automáticamente una rama porque una rotación haya salido peor.
+
+La elección formal se realiza en CAR-303.
+
+# Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`

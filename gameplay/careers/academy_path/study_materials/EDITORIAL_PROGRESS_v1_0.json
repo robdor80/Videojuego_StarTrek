@@ -31,11 +31,12 @@
     "SEC-302",
     "FLD-302",
     "SIM-303",
-    "LDR-303"
+    "LDR-303",
+    "BRN-303"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 27,
-  "remaining_count": 40,
+  "developed_count": 28,
+  "remaining_count": 39,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -43,8 +44,8 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "LDR-303",
-  "next_planned": "BRN-303",
+  "last_completed": "BRN-303",
+  "next_planned": "JDG-303",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -73,7 +74,8 @@
     "SEC_302": "synced_developed_content_and_assessment",
     "FLD_302": "synced_developed_content_and_assessment",
     "SIM_303": "synced_developed_content_and_assessment",
-    "LDR_303": "pending_sync_after_main_commit"
+    "LDR_303": "synced_developed_content_and_assessment",
+    "BRN_303": "pending_sync_after_main_commit"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
