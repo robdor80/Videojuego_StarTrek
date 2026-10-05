@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "medical",
+  "status": "generated_from_authoritative_branch_curriculum",
+  "question_count": 60,
+  "questions": [
+    {
+      "id": "MEDICAL-Q001",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica síntomas desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "síntomas",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q002",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U01",
+      "type": "scenario",
+      "prompt_es": "Entrevista paciente. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q003",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Historia y evaluación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q004",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica tricorder desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "tricorder",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q005",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U02",
+      "type": "scenario",
+      "prompt_es": "Obtener datos. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q006",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Diagnóstico instrumental, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q007",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica diferencial desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "diferencial",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q008",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U03",
+      "type": "scenario",
+      "prompt_es": "Caso clínico. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q009",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Razonamiento diagnóstico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q010",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica indicación desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "indicación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q011",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U04",
+      "type": "scenario",
+      "prompt_es": "Procedimiento simulado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q012",
+      "course_id": "MED-201",
+      "unit_id": "MED-201-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Tratamiento supervisado, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q013",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica variación desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "variación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q014",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U01",
+      "type": "scenario",
+      "prompt_es": "Caso interespecie. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q015",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Xenofisiología aplicada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q016",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica triaje desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "triaje",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q017",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U02",
+      "type": "scenario",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q018",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Emergencia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q019",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica capacidad desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "capacidad",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q020",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U03",
+      "type": "scenario",
+      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q021",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Múltiples pacientes, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q022",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica consentimiento desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "consentimiento",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q023",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U04",
+      "type": "scenario",
+      "prompt_es": "Caso. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q024",
+      "course_id": "MED-202",
+      "unit_id": "MED-202-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Ética clínica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q025",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica pacientes desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "pacientes",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q026",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U01",
+      "type": "scenario",
+      "prompt_es": "Servicio supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q027",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Turno clínico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q028",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica evaluación desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "evaluación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q029",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U02",
+      "type": "scenario",
+      "prompt_es": "Caso longitudinal. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q030",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Caso completo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q031",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica mando desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "mando",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q032",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U03",
+      "type": "scenario",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q033",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Emergencia en nave, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q034",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica seguridad desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "seguridad",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q035",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U04",
+      "type": "scenario",
+      "prompt_es": "Evaluación integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q036",
+      "course_id": "MED-203",
+      "unit_id": "MED-203-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q037",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica datos discordantes desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "datos discordantes",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q038",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U01",
+      "type": "scenario",
+      "prompt_es": "Caso avanzado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q039",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Diagnóstico complejo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q040",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica equipo desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "equipo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q041",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U02",
+      "type": "scenario",
+      "prompt_es": "Dirigir turno. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q042",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Supervisión clínica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q043",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica beneficio desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "beneficio",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q044",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U03",
+      "type": "scenario",
+      "prompt_es": "Planificar tratamiento. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q045",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Plan terapéutico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q046",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica aptitud desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "aptitud",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q047",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U04",
+      "type": "scenario",
+      "prompt_es": "Escena profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q048",
+      "course_id": "MED-101",
+      "unit_id": "MED-101-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Asesoramiento al mando, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q049",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica preparación desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "preparación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q050",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U01",
+      "type": "scenario",
+      "prompt_es": "Operación completa. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q051",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Misión médica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q052",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica múltiples casos desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "múltiples casos",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q053",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U02",
+      "type": "scenario",
+      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q054",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Crisis sanitaria, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q055",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica handoff desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "handoff",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q056",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U03",
+      "type": "scenario",
+      "prompt_es": "Relevo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q057",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Continuidad asistencial, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q058",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica resultado desde la perspectiva de Medicina.",
+      "answer_key_es": [
+        "resultado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q059",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U04",
+      "type": "scenario",
+      "prompt_es": "Debrief. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "MEDICAL-Q060",
+      "course_id": "MED-102",
+      "unit_id": "MED-102-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Cierre clínico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    }
+  ]
+}

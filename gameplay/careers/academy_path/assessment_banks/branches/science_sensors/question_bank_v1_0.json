@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "science_sensors",
+  "status": "generated_from_authoritative_branch_curriculum",
+  "question_count": 60,
+  "questions": [
+    {
+      "id": "SCIENCE_SENSORS-Q001",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica objetivo desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "objetivo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q002",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U01",
+      "type": "scenario",
+      "prompt_es": "Configurar barrido. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q003",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Configuración de sensores, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q004",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica patrones desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "patrones",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q005",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U02",
+      "type": "scenario",
+      "prompt_es": "Localizar objetivo débil. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q006",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Búsqueda avanzada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q007",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica medidas desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "medidas",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q008",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U03",
+      "type": "scenario",
+      "prompt_es": "Construir readout. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q009",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Caracterización, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q010",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica hipótesis desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "hipótesis",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q011",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U04",
+      "type": "scenario",
+      "prompt_es": "Diseñar observación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q012",
+      "course_id": "SCI-201",
+      "unit_id": "SCI-201-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Método científico operacional, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q013",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica prioridad desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "prioridad",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q014",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U01",
+      "type": "scenario",
+      "prompt_es": "Gestionar tráfico. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q015",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Gestión de contactos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q016",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica actualización desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "actualización",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q017",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U02",
+      "type": "scenario",
+      "prompt_es": "Mantener varios tracks. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q018",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Tracking, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q019",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica ruido desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "ruido",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q020",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U03",
+      "type": "scenario",
+      "prompt_es": "Recuperar señal. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q021",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Interferencia y compensación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q022",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica sensores desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "sensores",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q023",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U04",
+      "type": "scenario",
+      "prompt_es": "Fusionar evidencias. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q024",
+      "course_id": "SCI-202",
+      "unit_id": "SCI-202-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Correlación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q025",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica datos desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "datos",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q026",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U01",
+      "type": "scenario",
+      "prompt_es": "Emitir resultado reproducible. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q027",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Resultados y trazabilidad, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q028",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica anomalía desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "anomalía",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q029",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U02",
+      "type": "scenario",
+      "prompt_es": "Resolver fallo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q030",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Diagnóstico de sensores, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q031",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica observación desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "observación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q032",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U03",
+      "type": "scenario",
+      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q033",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Guardia científica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q034",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica medición desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "medición",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q035",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U04",
+      "type": "scenario",
+      "prompt_es": "Caso integrado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q036",
+      "course_id": "SCI-203",
+      "unit_id": "SCI-203-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q037",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica objetivo desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "objetivo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q038",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U01",
+      "type": "scenario",
+      "prompt_es": "Plan científico. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q039",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Diseño de observación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q040",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica múltiples firmas desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "múltiples firmas",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q041",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U02",
+      "type": "scenario",
+      "prompt_es": "Caso avanzado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q042",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Fenómenos complejos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q043",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica equipo desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "equipo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q044",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U03",
+      "type": "scenario",
+      "prompt_es": "Dirigir turno. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q045",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Supervisión de estación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q046",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica dato desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "dato",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q047",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U04",
+      "type": "scenario",
+      "prompt_es": "Briefing al mando. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q048",
+      "course_id": "SCI-101",
+      "unit_id": "SCI-101-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Asesoramiento científico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q049",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica pregunta desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "pregunta",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q050",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U01",
+      "type": "scenario",
+      "prompt_es": "Ejecutar misión. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q051",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Misión científica completa, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q052",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica cobertura desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "cobertura",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q053",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U02",
+      "type": "scenario",
+      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q054",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Sensores degradados, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q055",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica anomalía desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "anomalía",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q056",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U03",
+      "type": "scenario",
+      "prompt_es": "Caso complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q057",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Descubrimiento inesperado, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q058",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica datos desde la perspectiva de Ciencia / Sensores.",
+      "answer_key_es": [
+        "datos",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q059",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U04",
+      "type": "scenario",
+      "prompt_es": "Relevo profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "SCIENCE_SENSORS-Q060",
+      "course_id": "SCI-102",
+      "unit_id": "SCI-102-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Handoff científico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    }
+  ]
+}

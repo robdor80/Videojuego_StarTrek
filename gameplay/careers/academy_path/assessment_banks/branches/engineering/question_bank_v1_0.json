@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "engineering",
+  "status": "generated_from_authoritative_branch_curriculum",
+  "question_count": 60,
+  "questions": [
+    {
+      "id": "ENGINEERING-Q001",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica fuentes desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "fuentes",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q002",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U01",
+      "type": "scenario",
+      "prompt_es": "Configurar energía. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q003",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Generación y distribución, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q004",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica subsistemas desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "subsistemas",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q005",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U02",
+      "type": "scenario",
+      "prompt_es": "Caso operativo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q006",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Propulsión warp, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q007",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica potencia desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "potencia",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q008",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U03",
+      "type": "scenario",
+      "prompt_es": "Coordinar con vuelo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q009",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Impulso y maniobra, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q010",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica síntoma desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "síntoma",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q011",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U04",
+      "type": "scenario",
+      "prompt_es": "Diagnosticar fallo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q012",
+      "course_id": "ENG-201",
+      "unit_id": "ENG-201-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Diagnóstico sistemático, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q013",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica sección desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "sección",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q014",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U01",
+      "type": "scenario",
+      "prompt_es": "Práctica. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q015",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Aislamiento de fallos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q016",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica misión desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "misión",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q017",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U02",
+      "type": "scenario",
+      "prompt_es": "Planificar reparación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q018",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Reparación priorizada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q019",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica equipo desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "equipo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q020",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U03",
+      "type": "scenario",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q021",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Control de daños, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q022",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica cascada desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "cascada",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q023",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U04",
+      "type": "scenario",
+      "prompt_es": "Caso complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q024",
+      "course_id": "ENG-202",
+      "unit_id": "ENG-202-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Sistemas encadenados, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q025",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica estado desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "estado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q026",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U01",
+      "type": "scenario",
+      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q027",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Guardia de Ingeniería, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q028",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica temperatura contextual desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "temperatura contextual",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q029",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U02",
+      "type": "scenario",
+      "prompt_es": "Misión extendida. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q030",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Carga sostenida, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q031",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica diagnóstico desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "diagnóstico",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q032",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U03",
+      "type": "scenario",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q033",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Emergencia técnica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q034",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica seguridad desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "seguridad",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q035",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U04",
+      "type": "scenario",
+      "prompt_es": "Evaluación integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q036",
+      "course_id": "ENG-203",
+      "unit_id": "ENG-203-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q037",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica interdependencias desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "interdependencias",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q038",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U01",
+      "type": "scenario",
+      "prompt_es": "Caso de clase. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q039",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Sistemas complejos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q040",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica equipo desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "equipo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q041",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U02",
+      "type": "scenario",
+      "prompt_es": "Dirigir reparación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q042",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Supervisión técnica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q043",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica opciones desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "opciones",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q044",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U03",
+      "type": "scenario",
+      "prompt_es": "Briefing al mando. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q045",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Decisión técnica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q046",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica tendencia desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "tendencia",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q047",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U04",
+      "type": "scenario",
+      "prompt_es": "Plan de mantenimiento. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q048",
+      "course_id": "ENG-101",
+      "unit_id": "ENG-101-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Mantenimiento avanzado, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q049",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica demanda desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "demanda",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q050",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U01",
+      "type": "scenario",
+      "prompt_es": "Operar misión. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q051",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Misión completa, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q052",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica fallos múltiples desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "fallos múltiples",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q053",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U02",
+      "type": "scenario",
+      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q054",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Crisis técnica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q055",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica restauración desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "restauración",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q056",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U03",
+      "type": "scenario",
+      "prompt_es": "Cerrar incidente. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q057",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Recuperación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q058",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica estado desde la perspectiva de Ingeniería.",
+      "answer_key_es": [
+        "estado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q059",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U04",
+      "type": "scenario",
+      "prompt_es": "Relevo profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "ENGINEERING-Q060",
+      "course_id": "ENG-102",
+      "unit_id": "ENG-102-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Handoff de Ingeniería, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    }
+  ]
+}

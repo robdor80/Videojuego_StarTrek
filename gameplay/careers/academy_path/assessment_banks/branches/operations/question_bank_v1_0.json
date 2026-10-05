@@ -1,0 +1,788 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "operations",
+  "status": "generated_from_authoritative_branch_curriculum",
+  "question_count": 60,
+  "questions": [
+    {
+      "id": "OPERATIONS-Q001",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica energía desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "energía",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q002",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U01",
+      "type": "scenario",
+      "prompt_es": "Asignar recursos. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q003",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Gestión de recursos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q004",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica dependencias desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "dependencias",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q005",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U02",
+      "type": "scenario",
+      "prompt_es": "Gestionar caso. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q006",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Coordinación de sistemas, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q007",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica configuración desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "configuración",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q008",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U03",
+      "type": "scenario",
+      "prompt_es": "Preparar misión. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q009",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Soporte de misión, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q010",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica capacidad desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "capacidad",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q011",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U04",
+      "type": "scenario",
+      "prompt_es": "Caso operativo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q012",
+      "course_id": "OPS-201",
+      "unit_id": "OPS-201-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Transportadores y servicios, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q013",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica inventario desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "inventario",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q014",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U01",
+      "type": "scenario",
+      "prompt_es": "Replanificar recursos. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q015",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Logística dinámica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q016",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica servicio mínimo desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "servicio mínimo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q017",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U02",
+      "type": "scenario",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q018",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Sistemas degradados, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q019",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica colas desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "colas",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q020",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U03",
+      "type": "scenario",
+      "prompt_es": "Gestionar puesto cargado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q021",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Tráfico de solicitudes, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q022",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica ingeniería desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "ingeniería",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q023",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U04",
+      "type": "scenario",
+      "prompt_es": "Misión integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q024",
+      "course_id": "OPS-202",
+      "unit_id": "OPS-202-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Apoyo interdepartamental, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q025",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica estado desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "estado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q026",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U01",
+      "type": "scenario",
+      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q027",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Guardia de Operaciones, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q028",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica recursos desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "recursos",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q029",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U02",
+      "type": "scenario",
+      "prompt_es": "Preparar nave. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q030",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Configuración de misión, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q031",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica priorización desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "priorización",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q032",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U03",
+      "type": "scenario",
+      "prompt_es": "Resolver escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q033",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Incidente múltiple, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q034",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica consistencia desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "consistencia",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q035",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U04",
+      "type": "scenario",
+      "prompt_es": "Evaluación integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q036",
+      "course_id": "OPS-203",
+      "unit_id": "OPS-203-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q037",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica misión desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "misión",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q038",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U01",
+      "type": "scenario",
+      "prompt_es": "Plan completo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q039",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Planificación de recursos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q040",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica equipo desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "equipo",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q041",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U02",
+      "type": "scenario",
+      "prompt_es": "Dirigir turno. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q042",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Supervisión de Ops, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q043",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica estado desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "estado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q044",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U03",
+      "type": "scenario",
+      "prompt_es": "Briefing. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q045",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Interfaz con mando, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q046",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica degradación desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "degradación",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q047",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U04",
+      "type": "scenario",
+      "prompt_es": "Caso avanzado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q048",
+      "course_id": "OPS-101",
+      "unit_id": "OPS-101-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Continuidad de servicios, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q049",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U01",
+      "type": "knowledge",
+      "prompt_es": "Explica configuración desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "configuración",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q050",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U01",
+      "type": "scenario",
+      "prompt_es": "Operar misión. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q051",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U01",
+      "type": "debrief",
+      "prompt_es": "Después de Misión prolongada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q052",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U02",
+      "type": "knowledge",
+      "prompt_es": "Explica escasez desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "escasez",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q053",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U02",
+      "type": "scenario",
+      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q054",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U02",
+      "type": "debrief",
+      "prompt_es": "Después de Crisis de recursos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q055",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U03",
+      "type": "knowledge",
+      "prompt_es": "Explica equipos desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "equipos",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q056",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U03",
+      "type": "scenario",
+      "prompt_es": "Caso integrado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q057",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U03",
+      "type": "debrief",
+      "prompt_es": "Después de Coordinación de soporte, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q058",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U04",
+      "type": "knowledge",
+      "prompt_es": "Explica estado desde la perspectiva de Operaciones.",
+      "answer_key_es": [
+        "estado",
+        "aplicación profesional",
+        "límite o riesgo"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q059",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U04",
+      "type": "scenario",
+      "prompt_es": "Relevo profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "answer_key_es": [
+        "preparación",
+        "decisión",
+        "comunicación",
+        "escalado"
+      ]
+    },
+    {
+      "id": "OPERATIONS-Q060",
+      "course_id": "OPS-102B",
+      "unit_id": "OPS-102B-U04",
+      "type": "debrief",
+      "prompt_es": "Después de Handoff avanzado, ¿qué evidencia conservarías para demostrar competencia real?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "contexto",
+        "feedback"
+      ]
+    }
+  ]
+}
