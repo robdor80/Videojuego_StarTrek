@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "curriculum_id": "academy_fourth_class_v1_0",
   "status": "architecture_locked",
   "sequence_year": 1,
@@ -279,7 +279,11 @@
   "longitudinal_lines": [
     {
       "line_id": "physical_readiness_year_1",
-      "courses": ["PHY-401","PHY-402","PHY-403"],
+      "courses": [
+        "PHY-401",
+        "PHY-402",
+        "PHY-403"
+      ],
       "purpose": "Mantener y desarrollar condición funcional adecuada al servicio sin minijuego físico repetitivo."
     }
   ],
@@ -290,6 +294,6 @@
     "Physical readiness is longitudinal and uses the shared habit/development systems.",
     "Personal hobbies remain separate from required physical-readiness coursework but may develop the same underlying character capabilities.",
     "Course IDs are stable across game, PDF, web, practices, evaluations and records.",
-    "Unit-level content is intentionally deferred to the next design pass."
+    "Unit-level content is deployed under curriculum/fourth_class/courses and study materials derive from it."
   ]
 }

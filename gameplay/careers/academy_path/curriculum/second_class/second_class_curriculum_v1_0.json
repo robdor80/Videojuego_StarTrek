@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "curriculum_id": "academy_second_class_v1_0",
   "status": "architecture_locked",
   "sequence_year": 3,
@@ -12,11 +12,29 @@
       "theme_es": "Fundamentos profesionales de especialización",
       "specialization_status": "formally_active",
       "subjects": [
-        {"course_id":"BRN-201","title_es":"Especialización profesional I","branch_slot":true},
-        {"course_id":"PRA-201","title_es":"Práctica de especialidad I","branch_practice":true},
-        {"course_id":"INT-201","title_es":"Operaciones integradas de nave II"},
-        {"course_id":"LDR-201","title_es":"Liderazgo y responsabilidad de equipo II"},
-        {"course_id":"XTR-201","title_es":"Formación cruzada I","cross_training":true}
+        {
+          "course_id": "BRN-201",
+          "title_es": "Especialización profesional I",
+          "branch_slot": true
+        },
+        {
+          "course_id": "PRA-201",
+          "title_es": "Práctica de especialidad I",
+          "branch_practice": true
+        },
+        {
+          "course_id": "INT-201",
+          "title_es": "Operaciones integradas de nave II"
+        },
+        {
+          "course_id": "LDR-201",
+          "title_es": "Liderazgo y responsabilidad de equipo II"
+        },
+        {
+          "course_id": "XTR-201",
+          "title_es": "Formación cruzada I",
+          "cross_training": true
+        }
       ]
     },
     {
@@ -24,11 +42,29 @@
       "theme_id": "complex_and_degraded_operations",
       "theme_es": "Operaciones complejas y condiciones adversas",
       "subjects": [
-        {"course_id":"BRN-202","title_es":"Especialización profesional II","branch_slot":true},
-        {"course_id":"PRA-202","title_es":"Práctica de especialidad II","branch_practice":true},
-        {"course_id":"RSK-202","title_es":"Operaciones degradadas y contingencias"},
-        {"course_id":"FLD-202","title_es":"Operaciones de campo y EVA II"},
-        {"course_id":"XTR-202","title_es":"Formación cruzada II","cross_training":true}
+        {
+          "course_id": "BRN-202",
+          "title_es": "Especialización profesional II",
+          "branch_slot": true
+        },
+        {
+          "course_id": "PRA-202",
+          "title_es": "Práctica de especialidad II",
+          "branch_practice": true
+        },
+        {
+          "course_id": "RSK-202",
+          "title_es": "Operaciones degradadas y contingencias"
+        },
+        {
+          "course_id": "FLD-202",
+          "title_es": "Operaciones de campo y EVA II"
+        },
+        {
+          "course_id": "XTR-202",
+          "title_es": "Formación cruzada II",
+          "cross_training": true
+        }
       ]
     },
     {
@@ -36,23 +72,69 @@
       "theme_id": "supervised_professional_competence",
       "theme_es": "Competencia profesional supervisada",
       "subjects": [
-        {"course_id":"BRN-203","title_es":"Especialización profesional III","branch_slot":true},
-        {"course_id":"DUT-203","title_es":"Servicio supervisado de especialidad","supervised_service":true},
-        {"course_id":"SIM-203","title_es":"Simulación operacional compleja II"},
-        {"course_id":"PRJ-203","title_es":"Trabajo aplicado de especialidad"},
-        {"course_id":"QUA-203","title_es":"Cualificación intermedia","evidence_review":true}
+        {
+          "course_id": "BRN-203",
+          "title_es": "Especialización profesional III",
+          "branch_slot": true
+        },
+        {
+          "course_id": "DUT-203",
+          "title_es": "Servicio supervisado de especialidad",
+          "supervised_service": true
+        },
+        {
+          "course_id": "SIM-203",
+          "title_es": "Simulación operacional compleja II"
+        },
+        {
+          "course_id": "PRJ-203",
+          "title_es": "Trabajo aplicado de especialidad"
+        },
+        {
+          "course_id": "QUA-203",
+          "title_es": "Cualificación intermedia",
+          "evidence_review": true
+        }
       ],
       "intermediate_qualification": true
     }
   ],
   "branch_course_families": {
-    "command": ["CMD-201","CMD-202","CMD-203"],
-    "flight_navigation": ["NAV-201","NAV-202","NAV-203"],
-    "operations": ["OPS-201","OPS-202","OPS-203"],
-    "engineering": ["ENG-201","ENG-202","ENG-203"],
-    "security_tactical": ["SEC-201","SEC-202","SEC-203"],
-    "science_sensors": ["SCI-201","SCI-202","SCI-203"],
-    "medical": ["MED-201","MED-202","MED-203"]
+    "command": [
+      "CMD-201",
+      "CMD-202",
+      "CMD-203"
+    ],
+    "flight_navigation": [
+      "NAV-201",
+      "NAV-202",
+      "NAV-203"
+    ],
+    "operations": [
+      "OPR-201",
+      "OPR-202",
+      "OPR-203"
+    ],
+    "engineering": [
+      "ENG-201",
+      "ENG-202",
+      "ENG-203"
+    ],
+    "security_tactical": [
+      "SEC-201",
+      "SEC-202",
+      "SEC-203"
+    ],
+    "science_sensors": [
+      "SCI-201",
+      "SCI-202",
+      "SCI-203"
+    ],
+    "medical": [
+      "MED-201",
+      "MED-202",
+      "MED-203"
+    ]
   },
   "cross_training": {
     "enabled": true,
@@ -68,6 +150,6 @@
     "Practice uses real gameplay systems whenever available.",
     "Operational problems increasingly require judgment rather than step-by-step prompts.",
     "Intermediate qualification is evidence-based and may trigger targeted remediation.",
-    "Unit-level branch content is intentionally deferred to the deployment pass."
+    "Unit-level branch content is deployed under curriculum/branches and study materials derive from it."
   ]
 }

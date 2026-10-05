@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "curriculum_id": "academy_third_class_v1_0",
   "status": "architecture_locked",
   "sequence_year": 2,
@@ -11,11 +11,26 @@
       "theme_id": "supervised_ship_operations",
       "theme_es": "Operaciones de nave supervisadas",
       "subjects": [
-        {"course_id":"OPS-301","title_es":"Operaciones de puente y coordinación"},
-        {"course_id":"NAV-301","title_es":"Navegación y control de vuelo I"},
-        {"course_id":"SEN-301","title_es":"Sensores y adquisición de situación I"},
-        {"course_id":"ENG-301","title_es":"Ingeniería y gestión de energía I"},
-        {"course_id":"PRO-301","title_es":"Procedimientos operativos y trabajo interdepartamental"}
+        {
+          "course_id": "OPS-301",
+          "title_es": "Operaciones de puente y coordinación"
+        },
+        {
+          "course_id": "NAV-301",
+          "title_es": "Navegación y control de vuelo I"
+        },
+        {
+          "course_id": "SEN-301",
+          "title_es": "Sensores y adquisición de situación I"
+        },
+        {
+          "course_id": "ENG-301",
+          "title_es": "Ingeniería y gestión de energía I"
+        },
+        {
+          "course_id": "PRO-301",
+          "title_es": "Procedimientos operativos y trabajo interdepartamental"
+        }
       ]
     },
     {
@@ -23,11 +38,26 @@
       "theme_id": "people_risk_and_field_action",
       "theme_es": "Personas, riesgo y actuación exterior",
       "subjects": [
-        {"course_id":"REG-302","title_es":"Regulaciones, Directiva Principal y responsabilidad"},
-        {"course_id":"XEN-302","title_es":"Relaciones interespecies y contacto"},
-        {"course_id":"MED-302","title_es":"Medicina de emergencia y primeros auxilios"},
-        {"course_id":"SEC-302","title_es":"Seguridad, supervivencia y equipos de salida"},
-        {"course_id":"FLD-302","title_es":"Formación de campo I"}
+        {
+          "course_id": "REG-302",
+          "title_es": "Regulaciones, Directiva Principal y responsabilidad"
+        },
+        {
+          "course_id": "XEN-302",
+          "title_es": "Relaciones interespecies y contacto"
+        },
+        {
+          "course_id": "MED-302",
+          "title_es": "Medicina de emergencia y primeros auxilios"
+        },
+        {
+          "course_id": "SEC-302",
+          "title_es": "Seguridad, supervivencia y equipos de salida"
+        },
+        {
+          "course_id": "FLD-302",
+          "title_es": "Formación de campo I"
+        }
       ]
     },
     {
@@ -35,11 +65,26 @@
       "theme_id": "integration_leadership_and_branch_choice",
       "theme_es": "Integración, liderazgo y elección profesional",
       "subjects": [
-        {"course_id":"SIM-303","title_es":"Operaciones integradas y simulación I"},
-        {"course_id":"LDR-303","title_es":"Liderazgo y responsabilidad I"},
-        {"course_id":"BRN-303","title_es":"Exploración profesional y rotaciones de rama"},
-        {"course_id":"JDG-303","title_es":"Juicio operativo, informes y debriefing"},
-        {"course_id":"CAR-303","title_es":"Desarrollo profesional y elección de especialización"}
+        {
+          "course_id": "SIM-303",
+          "title_es": "Operaciones integradas y simulación I"
+        },
+        {
+          "course_id": "LDR-303",
+          "title_es": "Liderazgo y responsabilidad I"
+        },
+        {
+          "course_id": "BRN-303",
+          "title_es": "Exploración profesional y rotaciones de rama"
+        },
+        {
+          "course_id": "JDG-303",
+          "title_es": "Juicio operativo, informes y debriefing"
+        },
+        {
+          "course_id": "CAR-303",
+          "title_es": "Desarrollo profesional y elección de especialización"
+        }
       ],
       "specialization_selection": "required_by_end_of_trimester"
     }
@@ -62,6 +107,6 @@
     "Real gameplay systems are used for supervised practical work when available.",
     "The player chooses specialization; instructors may recommend but never choose.",
     "Formal specialization begins in Second Class Trimester 1.",
-    "Unit-level content is intentionally deferred to the deployment pass."
+    "Unit-level content is deployed under curriculum/third_class/courses and study materials derive from it."
   ]
 }
