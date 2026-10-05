@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.3",
+  "schema_version": "0.2.4",
   "curriculum_id": "starfleet_academy_master_v0_2",
   "status": "design_baseline",
   "pre_admission": {
@@ -146,32 +146,40 @@
     {
       "sequence_year": 4,
       "cadet_class_id": "cadet_first_class",
+      "curriculum_ref": "academy_first_class_v1_0",
+      "curriculum_status": "architecture_locked",
       "trimesters": [
         {
           "trimester": 1,
-          "theme": "advanced_specialization",
-          "branch_curriculum_slot": true,
-          "service_like_supervised_watch": true
+          "theme": "advanced_professional_consolidation",
+          "required_subjects": [
+            "BRN-101",
+            "DUT-101",
+            "LDR-101",
+            "INT-101",
+            "DEV-101"
+          ]
         },
         {
           "trimester": 2,
-          "theme": "integrated_starship_operations",
+          "theme": "integrated_service_like_operations",
           "required_subjects": [
-            "integrated_bridge_operations",
-            "extended_team_simulation",
-            "duty_continuity",
-            "operational_debrief"
+            "BRN-102",
+            "OPS-102",
+            "WCH-102",
+            "PRC-102",
+            "DEB-102"
           ]
         },
         {
           "trimester": 3,
-          "theme": "capstone_and_commissioning",
+          "theme": "commissioning_and_service_readiness",
           "required_subjects": [
-            "final_branch_evaluation",
-            "service_readiness",
-            "kobayashi_maru",
-            "assignment_preparation",
-            "graduation_requirements"
+            "CAP-103",
+            "KM-103",
+            "SVC-103",
+            "ASS-103",
+            "GRD-103"
           ],
           "kobayashi_maru": "universal_project_tradition_all_playable_eras"
         }
