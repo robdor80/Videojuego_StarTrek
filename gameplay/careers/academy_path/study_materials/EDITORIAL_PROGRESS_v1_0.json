@@ -34,11 +34,12 @@
     "LDR-303",
     "BRN-303",
     "JDG-303",
-    "CAR-303"
+    "CAR-303",
+    "BRN-201"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 30,
-  "remaining_count": 37,
+  "developed_count": 31,
+  "remaining_count": 36,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -46,8 +47,8 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "CAR-303",
-  "next_planned": "BRN-201",
+  "last_completed": "BRN-201",
+  "next_planned": "PRA-201",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -79,7 +80,8 @@
     "LDR_303": "synced_developed_content_and_assessment",
     "BRN_303": "synced_developed_content_and_assessment",
     "JDG_303": "synced_developed_content_and_assessment",
-    "CAR_303": "synced_developed_content_and_assessment"
+    "CAR_303": "synced_developed_content_and_assessment",
+    "BRN_201": "pending_sync_after_main_commit"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
