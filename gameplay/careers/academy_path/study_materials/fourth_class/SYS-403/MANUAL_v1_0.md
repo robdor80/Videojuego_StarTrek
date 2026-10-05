@@ -1,198 +1,464 @@
 # SYS-403 — Sistemas fundamentales de una nave estelar
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Comprender la función, relación y limitaciones generales de los principales sistemas de una nave.
+Comprender la función general y las dependencias de los principales sistemas de una nave estelar sin convertir al cadete en ingeniero.
 
-## Cómo estudiar esta asignatura
+SYS-403 enseña a pensar en una nave como una **red de sistemas interdependientes**. El objetivo es reconocer qué sistema permite una función, qué necesita para operar y qué consecuencias puede producir su degradación.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## SYS-403-U01 — Arquitectura de sistemas y energía
+# SYS-403-U01 — Arquitectura de sistemas y energía
 
-### Qué debes dominar
+## 1. Una nave es una red
 
-- **fuentes**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **distribución**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **cargas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **dependencias**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Los sistemas de una nave no funcionan de forma aislada.
 
-### Aplicación operativa
+Propulsión, sensores, soporte vital, comunicaciones, defensas, transporte y servicios comparten recursos y dependen unos de otros.
 
-Seguir un diagrama funcional simplificado. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+## 2. Fuentes
 
-### Qué se evalúa
+Una fuente proporciona energía utilizable por la nave.
 
-Evaluación de relaciones. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+En este nivel no se exige ingeniería interna detallada. Se aprende que la disponibilidad energética condiciona qué sistemas pueden funcionar y con qué prioridad.
 
-### Errores frecuentes
+## 3. Distribución
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La energía debe llegar desde una fuente hasta los consumidores.
 
-### Autoevaluación
+Una distribución puede:
 
-1. Explica con tus palabras qué significa **fuentes** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **fuentes** y **distribución**?
-3. Resuelve de forma razonada esta práctica: *Seguir un diagrama funcional simplificado.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- priorizar;
+- limitar;
+- aislar;
+- redirigir;
+- degradarse.
 
-## SYS-403-U02 — Propulsión de impulso
+## 4. Cargas
 
-### Qué debes dominar
+Una carga es un sistema o función que consume recursos energéticos.
 
-- **función**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **uso subluz**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **limitaciones generales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Ejemplos conceptuales:
 
-### Aplicación operativa
+- sensores;
+- propulsión;
+- escudos;
+- servicios;
+- laboratorios;
+- transportadores.
 
-Interpretar estado básico de propulsión. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+## 5. Dependencias
 
-### Qué se evalúa
+Un sistema puede depender de varios recursos.
 
-Caso conceptual. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Por ejemplo, una consola puede estar intacta físicamente pero no funcionar si:
 
-### Errores frecuentes
+- no recibe energía;
+- su red de datos está caída;
+- el sistema remoto que controla está dañado;
+- la autorización necesaria no está disponible.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 6. Prioridad
 
-### Autoevaluación
+No siempre puede mantenerse todo al máximo.
 
-1. Explica con tus palabras qué significa **función** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **función** y **uso subluz**?
-3. Resuelve de forma razonada esta práctica: *Interpretar estado básico de propulsión.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+En una emergencia, la nave puede priorizar:
 
-## SYS-403-U03 — Propulsión warp
+- vida;
+- control;
+- propulsión;
+- comunicaciones;
+- defensa;
+- recuperación.
 
-### Qué debes dominar
+La prioridad concreta depende del contexto y de la autoridad competente.
 
-- **función**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **campo warp**: La curvatura permite viaje superlumínico mediante el sistema warp. En 4.ª clase se estudia su función, relación con navegación y limitaciones generales, sin exigir ingeniería de campo warp ni fórmulas no enseñadas.
-- **factor de curvatura como concepto**: La curvatura permite viaje superlumínico mediante el sistema warp. En 4.ª clase se estudia su función, relación con navegación y limitaciones generales, sin exigir ingeniería de campo warp ni fórmulas no enseñadas.
-- **riesgos generales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+### Práctica
 
-### Aplicación operativa
-
-Relacionar misión, distancia y uso de warp sin cálculo avanzado. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Preguntas aplicadas. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Sigue un diagrama funcional sencillo desde fuente de energía hasta tres consumidores y predice qué ocurre si se pierde una rama.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **función** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **función** y **campo warp**?
-3. Resuelve de forma razonada esta práctica: *Relacionar misión, distancia y uso de warp sin cálculo avanzado.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Por qué una nave debe entenderse como una red de sistemas?
+2. ¿Qué diferencia existe entre fuente y carga?
+3. ¿Qué hace la distribución?
+4. ¿Puede una consola estar intacta y aun así no funcionar?
+5. ¿Por qué la prioridad depende del contexto?
 
-## SYS-403-U04 — Habitabilidad y servicios
+---
 
-### Qué debes dominar
+# SYS-403-U02 — Propulsión de impulso
 
-- **soporte vital**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **replicadores**: Los replicadores cubren necesidades materiales ordinarias dentro de las capacidades de la nave. El cadete debe entenderlos como un servicio de a bordo con límites de energía, autorización y disponibilidad contextual.
-- **transportadores**: El transportador es un sistema de desplazamiento de materia que exige condiciones y procedimientos de seguridad. En el nivel inicial se estudia su función, sus límites generales y su dependencia de sistemas, no su mantenimiento especializado.
-- **computer service**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Función general
 
-### Aplicación operativa
+La propulsión de impulso permite el movimiento normal de la nave en régimen subluz.
 
-Resolver qué sistema soporta una necesidad concreta. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+A nivel de 4.ª clase, el cadete debe entender:
 
-### Qué se evalúa
+- cuándo se utiliza;
+- qué función cumple;
+- qué limitaciones generales puede tener;
+- cómo se relaciona con Navegación y Mando.
 
-Caso de sistema. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Subluz
 
-### Errores frecuentes
+“Subluz” significa operar por debajo de la velocidad de la luz dentro del modelo del juego.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Las maniobras locales, aproximaciones y gran parte del control cercano se resuelven en este régimen.
 
-### Autoevaluación
+## 3. Estado de propulsión
 
-1. Explica con tus palabras qué significa **soporte vital** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **soporte vital** y **replicadores**?
-3. Resuelve de forma razonada esta práctica: *Resolver qué sistema soporta una necesidad concreta.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Un operador puede recibir estados como:
 
-## SYS-403-U05 — Defensa y entorno de misión
+- disponible;
+- degradado;
+- limitado;
+- no disponible.
 
-### Qué debes dominar
+La velocidad solicitada debe respetar la capacidad real de la nave en ese momento.
 
-- **escudos**: Los escudos protegen la nave frente a amenazas y fenómenos, pero consumen recursos y se integran con sensores, táctica, energía y maniobra. En el nivel común se estudia su función y dependencia, no doctrina táctica avanzada.
-- **armamento**: El armamento de Starfleet se usa dentro de reglas de autoridad, seguridad y proporcionalidad. En formación común se aprende reconocimiento, manejo seguro y límites; el empleo táctico avanzado pertenece a la especialidad.
-- **sensores como consumidor/proveedor**: Los sensores producen mediciones y contactos; no sustituyen la interpretación científica. La formación separa siempre detección, calidad de la lectura, seguimiento y análisis para que el jugador no trate una lectura como una verdad ya interpretada.
-- **holodeck cuando proceda**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Navegación y control
 
-### Aplicación operativa
+Propulsión no decide el destino.
 
-Analizar dependencias generales. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Navegación/Conn interpreta órdenes de movimiento y utiliza la capacidad disponible para ejecutar una solución válida.
 
-### Qué se evalúa
+## 5. Limitaciones generales
 
-Ejercicio integrado. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+La operación puede verse afectada por:
 
-### Errores frecuentes
+- daño;
+- energía;
+- maniobra;
+- seguridad;
+- condiciones locales;
+- restricciones de misión.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+### Práctica
 
-### Autoevaluación
-
-1. Explica con tus palabras qué significa **escudos** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **escudos** y **armamento**?
-3. Resuelve de forma razonada esta práctica: *Analizar dependencias generales.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
-
-## SYS-403-U06 — Fallos y dependencias
-
-### Qué debes dominar
-
-- **degradación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **sistema primario/secundario**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **efecto cascada**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **prioridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Seguir una avería sencilla entre sistemas. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Evaluación de razonamiento. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Interpreta un estado básico de propulsión y decide qué órdenes simples siguen siendo ejecutables.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **degradación** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **degradación** y **sistema primario/secundario**?
-3. Resuelve de forma razonada esta práctica: *Seguir una avería sencilla entre sistemas.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué función general cumple la propulsión de impulso?
+2. ¿Qué significa régimen subluz?
+3. ¿Quién decide el destino y quién aporta capacidad de movimiento?
+4. ¿Qué factores pueden limitar impulso?
+5. ¿Por qué una velocidad solicitada no puede superar el estado real de la nave?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# SYS-403-U03 — Propulsión warp
 
-## Tratamiento por era
+## 1. Función general
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+La propulsión warp permite el viaje superlumínico dentro del universo de Star Trek.
+
+En este nivel se estudia como **capacidad de navegación interestelar**, no como ingeniería de campo avanzada.
+
+## 2. Campo warp
+
+El sistema warp genera las condiciones necesarias para que la nave viaje a velocidades efectivas superiores a la luz según la tecnología del universo.
+
+El cadete no necesita todavía calcular la física interna del campo.
+
+## 3. Factor de curvatura
+
+El factor warp expresa una selección de régimen de velocidad.
+
+Pero el proyecto establece una regla importante:
+
+> **No existe una conversión única, universal e inmutable de factor warp a velocidad para todas las eras, naves y condiciones.**
+
+La capacidad real depende de:
+
+- clase;
+- configuración;
+- estado;
+- potencia;
+- límites sostenibles;
+- condiciones locales.
+
+## 4. Máximo no significa sostenible
+
+Una nave puede tener una capacidad máxima superior a la que puede mantener durante largo tiempo.
+
+Por eso Navegación trabaja con:
+
+- velocidad solicitada;
+- capacidad disponible;
+- límite sostenible;
+- ETA resultante.
+
+## 5. Riesgos generales
+
+Una transición o viaje warp puede verse condicionado por:
+
+- daño;
+- energía;
+- navegación;
+- condiciones subespaciales;
+- peligros;
+- restricciones de ruta.
+
+### Práctica
+
+Compara dos rutas donde una es más corta pero exige una velocidad menos sostenible y otra es más larga pero más segura.
+
+### Autoevaluación
+
+1. ¿Qué función cumple warp?
+2. ¿Qué significa factor de curvatura a este nivel?
+3. ¿Por qué no usamos una única ecuación universal para todas las eras?
+4. ¿Qué diferencia existe entre capacidad máxima y sostenible?
+5. ¿Qué factores pueden condicionar un viaje warp?
+
+---
+
+# SYS-403-U04 — Habitabilidad y servicios
+
+## 1. Mantener una tripulación viva
+
+Una nave necesita sistemas que no “mueven” la misión pero hacen posible que exista.
+
+## 2. Soporte vital
+
+El soporte vital mantiene condiciones habitables.
+
+A nivel introductorio incluye la idea de controlar:
+
+- atmósfera;
+- temperatura;
+- condiciones ambientales básicas.
+
+Un fallo de soporte vital puede convertir un problema técnico en una emergencia para la tripulación.
+
+## 3. Síntesis de alimentos y replicación
+
+El proyecto distingue por era:
+
+### Siglo XXIII
+
+Puede utilizarse síntesis de alimentos y tecnologías de producción a bordo.
+
+No se trata automáticamente todo sistema de comida como un replicador molecular del siglo XXIV.
+
+### Siglo XXIV
+
+Los replicadores son tecnología madura para:
+
+- alimentos;
+- muchos objetos;
+- reciclaje de materia según capacidad y contexto.
+
+Su uso depende de:
+
+- energía;
+- patrones autorizados;
+- reservas;
+- restricciones.
+
+## 4. Transportadores
+
+El transportador es un sistema de movimiento de personas o materia.
+
+En 4.ª clase se estudia su **función y dependencia**, no operación avanzada ni mantenimiento.
+
+Su disponibilidad puede depender de:
+
+- estado;
+- energía;
+- condiciones;
+- autorización;
+- objetivo válido.
+
+## 5. Computer service
+
+La computadora de la nave conecta información y acciones autorizadas entre múltiples interfaces.
+
+No es un sistema omnipotente.
+
+### Práctica
+
+Relaciona cada necesidad con el sistema que principalmente la soporta: alimento, traslado, consulta de datos, habitabilidad o acceso a servicios.
+
+### Autoevaluación
+
+1. ¿Qué función general cumple soporte vital?
+2. ¿Qué diferencia de era existe entre sintetizador y replicador?
+3. ¿Qué limita el uso de replicadores?
+4. ¿Qué se espera saber del transportador en 4.ª clase?
+5. ¿Por qué la computadora no es una solución universal a cualquier fallo?
+
+---
+
+# SYS-403-U05 — Defensa y entorno de misión
+
+## 1. Sistemas defensivos
+
+La defensa de una nave puede incluir sistemas como:
+
+- escudos;
+- armamento;
+- sensores;
+- maniobra;
+- comunicaciones;
+- control de daños.
+
+En 4.ª clase se estudian funciones y dependencias, no doctrina táctica avanzada.
+
+## 2. Escudos
+
+Los escudos protegen la nave frente a amenazas o fenómenos compatibles con sus capacidades.
+
+Su disponibilidad depende del estado real de la nave y de recursos.
+
+## 3. Armamento
+
+El armamento permite aplicar fuerza cuando existe autoridad y contexto para ello.
+
+Tener un sistema disponible no equivale a tener permiso para usarlo.
+
+## 4. Sensores como proveedor y consumidor
+
+Sensores:
+
+- consume energía y capacidad;
+- produce conocimiento;
+- alimenta Navegación, Ciencia, Táctica, Mando y otros sistemas.
+
+Una defensa sin información puede tomar decisiones peores.
+
+## 5. Holodeck cuando proceda
+
+El holodeck es una capacidad propia de determinadas eras y naves.
+
+No debe retrotraerse automáticamente a Pike o Kirk.
+
+Puede utilizarse para:
+
+- entrenamiento;
+- simulación;
+- recreo
+
+cuando la nave y era lo permitan.
+
+### Práctica
+
+Analiza una situación donde aumentar recursos a sensores mejora conocimiento pero reduce recursos disponibles para otra función.
+
+### Autoevaluación
+
+1. ¿Qué sistemas pueden contribuir a la defensa?
+2. ¿Tener armamento disponible concede permiso para usarlo?
+3. ¿Por qué sensores es a la vez consumidor y proveedor?
+4. ¿Qué problema causa defenderse con información pobre?
+5. ¿Por qué holodeck no puede asumirse en todas las eras?
+
+---
+
+# SYS-403-U06 — Fallos y dependencias
+
+## 1. Degradación
+
+Un sistema degradado puede seguir funcionando con:
+
+- menos capacidad;
+- menor precisión;
+- menor velocidad;
+- restricciones;
+- riesgo adicional.
+
+“Funciona” y “funciona al cien por cien” no son lo mismo.
+
+## 2. Primario y secundario
+
+Una función puede disponer de:
+
+- sistema primario;
+- respaldo;
+- alternativa parcial.
+
+El respaldo no siempre ofrece la misma capacidad.
+
+## 3. Efecto cascada
+
+Un fallo puede afectar a sistemas dependientes.
+
+Ejemplo conceptual:
+
+> pérdida de energía → menos sensores → menor conocimiento → navegación más incierta.
+
+El problema inicial puede producir consecuencias operativas indirectas.
+
+## 4. Prioridad
+
+En una avería, la tripulación decide qué restaurar primero según:
+
+- vidas;
+- misión;
+- peligro;
+- capacidad restante;
+- tiempo;
+- recursos.
+
+## 5. Diagnóstico frente a suposición
+
+No debe asumirse la causa solo por el síntoma.
+
+Una misma pérdida de función puede tener causas distintas.
+
+Ingeniería diagnostica; otras estaciones informan de los efectos que observan.
+
+### Práctica
+
+Sigue una avería sencilla desde el sistema afectado hasta dos consecuencias secundarias y propone qué información debe enviarse a Ingeniería.
+
+### Autoevaluación
+
+1. ¿Qué significa degradación?
+2. ¿Qué diferencia existe entre primario y respaldo?
+3. ¿Qué es un efecto cascada?
+4. ¿Qué factores influyen en la prioridad de recuperación?
+5. ¿Por qué un síntoma no demuestra automáticamente la causa?
+
+---
+
+# Evaluación del curso
+
+SYS-403 evalúa:
+
+- relaciones entre sistemas;
+- comprensión de energía y dependencias;
+- función general de impulso y warp;
+- servicios de habitabilidad;
+- defensa a nivel no especializado;
+- razonamiento sobre fallos.
+
+No exige ingeniería avanzada ni fórmulas warp no enseñadas.
+
+# Tratamiento por era
+
+La función puede mantenerse mientras cambian:
+
+- tecnología;
+- interfaz;
+- nivel de automatización;
+- disponibilidad de replicadores;
+- holodecks;
+- capacidad de sensores y otros sistemas.
+
+# Referencias internas
+
+- `lore/starships/ship_systems/warp/README.md`
+- `lore/starships/ship_systems/transporters/README.md`
+- `lore/starships/ship_systems/shields/README.md`
+- `lore/technology/replicators/README.md`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `gameplay/navigation/README.md`
+- `gameplay/engineering/engineering_loop.json`
+
+Cuando una referencia tecnológica está todavía reservada, este curso se limita a la función curricular aprobada y no inventa especificaciones técnicas.
