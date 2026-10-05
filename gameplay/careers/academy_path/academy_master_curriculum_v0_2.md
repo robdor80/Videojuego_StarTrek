@@ -1,6 +1,6 @@
 # Starfleet Academy Master Curriculum v0.2
 
-Status: **DESIGN BASELINE — IN PROGRESS**
+Status: **FOUR-YEAR ARCHITECTURE LOCKED — UNIT DEPLOYMENT IN PROGRESS**
 
 ## Purpose
 
@@ -151,8 +151,9 @@ Common:
 Specialization:
 
 - candidate specialization modules begin;
-- player may commit now or during the following trimester;
-- instructors may recommend but never choose.
+- the player selects specialization by the end of this trimester;
+- instructors may recommend but never choose;
+- formal specialization begins in 2nd Class / Trimester 1.
 
 Gameplay goals:
 
@@ -243,15 +244,13 @@ Includes:
 
 ## Branch commitment
 
-The normal commitment window is:
+The normal selection point is:
 
 ```text
-3rd Class — Trimester 3
-through
-2nd Class — Trimester 1
+END OF 3rd Class — Trimester 3
 ```
 
-This is intentionally a window rather than one mandatory click moment.
+Formal specialization begins in 2nd Class / Trimester 1.
 
 Changing specialization later remains possible with realistic catch-up.
 
