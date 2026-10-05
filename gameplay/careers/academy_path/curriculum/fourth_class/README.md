@@ -67,6 +67,20 @@ El cadete:
 
 La profundidad profesional pertenece a cursos posteriores.
 
+## Preparación física: implementación jugable
+
+Preparación Física es una línea longitudinal del año, no un minijuego repetitivo.
+
+El jugador decide prioridades, rutinas y actividades; el personaje realiza físicamente el entrenamiento dentro del calendario. Las sesiones ordinarias pueden resolverse mediante avance temporal y generan evidencia de hábitos/desarrollo.
+
+La Academia programa sesiones obligatorias. Las aficiones personales —gimnasio, carrera, natación, artes marciales u otros deportes— permanecen separadas de PHY y pueden desarrollar capacidades adicionales.
+
+PHY evalúa principalmente asistencia, esfuerzo, seguridad, cumplimiento, progreso razonable y condición funcional adecuada a la biología del cadete. No compara directamente especies físicamente distintas.
+
+Determinadas sesiones sí pueden convertirse en escenas cuando tienen valor: evaluación inicial o trimestral, circuito, defensa personal, entrenamiento EVA, competición o interacción relevante con NPC.
+
+No existe una recompensa visible del tipo “+2 Fuerza”. El estado y las capacidades se derivan de la vida del personaje mediante los sistemas compartidos de hábitos y desarrollo.
+
 ## Siguiente trabajo
 
 La arquitectura del año está cerrada.
