@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "player_character_sheet_v1_0",
+  "status": "locked_baseline",
+  "sections": {
+    "player_profile": [
+      "nickname"
+    ],
+    "identity": [
+      "display_name",
+      "species",
+      "age",
+      "birth_date",
+      "origin",
+      "citizenship",
+      "culture_refs"
+    ],
+    "appearance": [
+      "presentation_ref",
+      "descriptive_features"
+    ],
+    "pre_game_biography": [
+      "education",
+      "activities_and_hobbies",
+      "certifications",
+      "prior_experience",
+      "languages",
+      "family_context"
+    ],
+    "development": [
+      "capability_state_ref",
+      "development_evidence_ref",
+      "habit_state_ref"
+    ],
+    "aspirations": [
+      "objective_state_ref"
+    ],
+    "academy": [
+      "admission_history_ref",
+      "academy_record_ref"
+    ],
+    "career": [
+      "service_record_ref",
+      "qualification_refs",
+      "assignment_history_refs"
+    ],
+    "personal_life": [
+      "relationship_state_refs",
+      "memory_state_ref",
+      "knowledge_state_ref"
+    ],
+    "current_state": [
+      "medical_state_ref",
+      "fatigue_state_ref",
+      "mood_state_ref",
+      "current_location_ref",
+      "duty_state_ref"
+    ],
+    "history": [
+      "campaign_event_log_ref",
+      "objective_history_ref"
+    ]
+  },
+  "visibility_rule": "The character sheet may present descriptive summaries while authoritative state remains in its owning systems.",
+  "record_separation_rule": "Character sheet is not the same thing as the official Starfleet service or Academy record."
+}
