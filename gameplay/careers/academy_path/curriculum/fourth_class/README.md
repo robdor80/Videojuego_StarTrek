@@ -81,16 +81,17 @@ Determinadas sesiones sí pueden convertirse en escenas cuando tienen valor: eva
 
 No existe una recompensa visible del tipo “+2 Fuerza”. El estado y las capacidades se derivan de la vida del personaje mediante los sistemas compartidos de hábitos y desarrollo.
 
-## Siguiente trabajo
+## Despliegue de unidades v1.0
 
-La arquitectura del año está cerrada.
+Status: **COMPLETE**
 
-El siguiente paso de diseño es **Trimestre 1**, asignatura por asignatura, definiendo:
-- unidades;
-- objetivos de aprendizaje;
-- teoría;
-- clase de instructor;
-- práctica;
-- evaluación;
-- material PDF/web;
-- dependencias de gameplay.
+La arquitectura de este año ya fue expandida a nivel de asignatura y unidad.
+
+Consultar:
+- `COURSE_INDEX_v1_0.md`
+- `courses_manifest_v1_0.json`
+- `courses/<COURSE_ID>/course.json`
+
+Cada curso define finalidad, prerrequisitos, unidades, contenido nuclear, práctica, evaluación y salidas previstas.
+
+Los manuales extensos, bancos de preguntas, PDF y web son derivados de esta fuente curricular y no alteran por sí mismos la arquitectura aprobada.
