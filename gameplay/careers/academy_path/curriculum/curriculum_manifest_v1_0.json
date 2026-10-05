@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "curriculum_id": "starfleet_academy_four_year_deployment_v1_0",
+  "status": "unit_design_complete",
+  "architecture_status": "all_four_years_locked",
+  "years": [
+    {
+      "sequence_year": 1,
+      "cadet_class_id": "cadet_fourth_class",
+      "course_count": 15,
+      "manifest_ref": "fourth_class/courses_manifest_v1_0.json"
+    },
+    {
+      "sequence_year": 2,
+      "cadet_class_id": "cadet_third_class",
+      "course_count": 15,
+      "manifest_ref": "third_class/courses_manifest_v1_0.json"
+    },
+    {
+      "sequence_year": 3,
+      "cadet_class_id": "cadet_second_class",
+      "course_count": 15,
+      "manifest_ref": "second_class/courses_manifest_v1_0.json"
+    },
+    {
+      "sequence_year": 4,
+      "cadet_class_id": "cadet_first_class",
+      "course_count": 15,
+      "manifest_ref": "first_class/courses_manifest_v1_0.json"
+    }
+  ],
+  "main_course_components": 60,
+  "branch_curricula": 7,
+  "branch_stage_components": 35,
+  "unit_design_count": 501,
+  "branch_ids": [
+    "command",
+    "flight_navigation",
+    "operations",
+    "engineering",
+    "security_tactical",
+    "science_sensors",
+    "medical"
+  ],
+  "academic_source_rule": "Course and branch curriculum JSON are authoritative curriculum sources. Game, Academy web, manuals, PDFs, tests and instructor material derive from them.",
+  "player_knowledge_rule": "Explicitly taught professional knowledge may be directly tested. Untaught franchise trivia and untaught advanced real-world science are not required.",
+  "next_content_layer": "study_materials_and_assessment_banks"
+}
