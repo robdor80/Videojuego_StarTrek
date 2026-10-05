@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.2.0",
+  "model_id": "academy_year_trimester_model",
+  "status": "foundation_fixed",
+  "sequence": [
+    {
+      "sequence_index": 1,
+      "display_year": "4th_year",
+      "phase": "discovery_and_foundations",
+      "trimesters": 3,
+      "specialization_pressure": "low"
+    },
+    {
+      "sequence_index": 2,
+      "display_year": "3rd_year",
+      "phase": "professional_exploration",
+      "trimesters": 3,
+      "specialization_pressure": "medium"
+    },
+    {
+      "sequence_index": 3,
+      "display_year": "2nd_year",
+      "phase": "specialization_and_integration",
+      "trimesters": 3,
+      "specialization_pressure": "high"
+    },
+    {
+      "sequence_index": 4,
+      "display_year": "1st_year",
+      "phase": "service_preparation",
+      "trimesters": 3,
+      "specialization_pressure": "high"
+    }
+  ],
+  "unit_learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "rules": [
+    "Displayed year names progress from 4th Year to 1st Year.",
+    "Internal sequence indexes are independent from display naming.",
+    "Subjects may span multiple trimesters.",
+    "The player chooses final specialization; instructor recommendations are advisory.",
+    "Training uses real gameplay systems whenever the relevant system exists.",
+    "Evaluation consumes authoritative evidence rather than AI opinion alone.",
+    "Failure may trigger remediation, retake or delayed qualification rather than automatic campaign failure."
+  ]
+}
