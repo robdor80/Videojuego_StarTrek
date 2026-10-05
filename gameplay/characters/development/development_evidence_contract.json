@@ -1,0 +1,43 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "character_development_evidence",
+  "status": "locked_baseline",
+  "evidence_fields": [
+    "evidence_id",
+    "character_id",
+    "timestamp_or_period",
+    "activity_type",
+    "capability_refs",
+    "duration",
+    "frequency",
+    "difficulty_or_challenge",
+    "instruction_quality",
+    "supervision_level",
+    "context",
+    "outcome",
+    "source_event_refs"
+  ],
+  "activity_types": [
+    "study",
+    "instruction",
+    "observation",
+    "deliberate_practice",
+    "simulation",
+    "supervised_work",
+    "operational_use",
+    "competition_or_test",
+    "teaching",
+    "recovery",
+    "inactivity_period"
+  ],
+  "evidence_rules": [
+    "Reading mainly develops theoretical knowledge unless paired with practice.",
+    "Observation may build familiarity and procedural understanding but does not equal independent execution.",
+    "Simulation can build execution while remaining distinct from live experience.",
+    "Supervised work provides stronger practical evidence than passive observation.",
+    "Live use adds context-specific experience and consequences.",
+    "Repeated trivial activity has diminishing developmental value.",
+    "Quality, challenge, feedback, recovery and consistency matter.",
+    "Inactivity is modeled over meaningful periods, not day-to-day punishment."
+  ]
+}
