@@ -1,219 +1,355 @@
 # MED-302 — Medicina de emergencia y primeros auxilios
 
-**Material de estudio v1.0 — Cadete de 3.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 3.ª clase · Trimestre 2**
 
 ## Finalidad
 
-Permitir que cualquier cadete responda correctamente hasta la llegada de personal médico cualificado.
+Permitir que cualquier cadete responda correctamente hasta la llegada de personal médico cualificado. MED-302 no convierte al cadete en sanitario: enseña seguridad de escena, valoración inicial, triaje básico, estabilización dentro de competencia, uso elemental de equipo médico y un handoff claro a Medicina.
 
-## Enfoque
+La regla central es:
 
-En 3.ª clase ya no basta reconocer sistemas. Debes **operar bajo supervisión**, comunicar con precisión y justificar decisiones con la información disponible. El conocimiento enseñado puede evaluarse directamente.
+> **Ayudar bien también significa reconocer qué no sabes y no inventar un diagnóstico.**
 
-## MED-302-U01 — Seguridad de escena
+---
 
-### Núcleo
+# MED-302-U01 — Seguridad de escena
 
-- **riesgo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **protección**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **alerta médica**: La prioridad médica es proteger vida y evitar daño adicional dentro del nivel de competencia. El cadete común estabiliza, observa, comunica y entrega el caso a personal cualificado.
-- **prioridad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Antes del paciente está la escena
 
-### Práctica
+El primer deber es evitar que la persona que ayuda se convierta en otra víctima.
 
-Evaluar escenario antes de intervenir.
+Antes de acercarse se valora:
+- ambiente;
+- energía o sistemas activos;
+- humo o atmósfera;
+- riesgo estructural;
+- amenaza física;
+- contaminación;
+- acceso y salida.
 
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
+## 2. Protección
 
-### Evaluación
+La protección puede incluir:
+- equipo;
+- distancia;
+- aislamiento;
+- apoyo de Seguridad;
+- espera a personal especializado.
 
-Práctica.
+## 3. Alerta médica
 
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
+La llamada inicial debe indicar:
+- localización;
+- número aproximado de afectados;
+- riesgo visible;
+- acceso;
+- estado observable general.
 
-### Errores frecuentes
+## 4. Prioridad
 
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Una situación con riesgo activo puede exigir asegurar la escena antes de realizar asistencia detallada.
 
-### Autoevaluación
+## 5. No superar límites
 
-1. Define **riesgo** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Evaluar escenario antes de intervenir.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
-
-## MED-302-U02 — Valoración inicial
-
-### Núcleo
-
-- **respuesta**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **respiración/circulación contextual**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **hemorragia**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **dolor**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **datos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-
-### Práctica
-
-Valorar paciente simulado.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Checklist.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
-
-### Autoevaluación
-
-1. Define **respuesta** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Valorar paciente simulado.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
-
-## MED-302-U03 — Triaje básico
-
-### Núcleo
-
-- **prioridad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **múltiples heridos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **recursos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+Si el entorno exige equipo o conocimientos que el cadete no posee, se mantiene a distancia y se solicita apoyo.
 
 ### Práctica
 
-Ordenar atención en supuesto sencillo.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Caso.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Evalúa tres escenarios antes de decidir si puedes acercarte.
 
 ### Autoevaluación
 
-1. Define **prioridad** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Ordenar atención en supuesto sencillo.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué debe evaluarse antes de acercarse?
+2. ¿Qué formas de protección pueden usarse?
+3. ¿Qué debe incluir una alerta médica?
+4. ¿Por qué asegurar escena puede preceder a asistir?
+5. ¿Qué haces si el riesgo excede tu competencia?
 
-## MED-302-U04 — Estabilización básica
+---
 
-### Núcleo
+# MED-302-U02 — Valoración inicial
 
-- **hemorragia**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **inmovilización contextual**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **posición**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **monitorización**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Estado observable
+
+La valoración inicial intenta identificar problemas urgentes con la información disponible.
+
+No pretende establecer un diagnóstico definitivo.
+
+## 2. Respuesta
+
+Se observa si la persona:
+- responde;
+- comprende;
+- puede comunicarse;
+- cambia de estado.
+
+## 3. Respiración y circulación contextual
+
+El modelo del juego debe considerar la especie del paciente.
+
+El humano es solo una referencia de baseline; no un estándar universal.
+
+Los datos deben interpretarse con:
+- especie;
+- fisiología;
+- contexto;
+- historial conocido;
+- equipo disponible.
+
+## 4. Hemorragia
+
+Una pérdida visible relevante debe reconocerse e informarse.
+
+El cadete aplica solo medidas autorizadas y entrenadas.
+
+## 5. Dolor y síntomas
+
+Dolor, mareo, debilidad o confusión son datos observables.
+
+No equivalen por sí solos a una causa concreta.
+
+## 6. Datos
+
+La valoración debe conservar:
+- qué se observó;
+- cuándo;
+- cambios;
+- intervenciones realizadas.
 
 ### Práctica
 
-Aplicar medidas autorizadas.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Valora un paciente simulado y separa observaciones de interpretaciones.
 
 ### Autoevaluación
 
-1. Define **hemorragia** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Aplicar medidas autorizadas.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Cuál es el objetivo de la valoración inicial?
+2. ¿Por qué la especie importa?
+3. ¿Síntoma equivale a diagnóstico?
+4. ¿Qué debe registrarse?
+5. ¿Qué limita la asistencia del cadete?
 
-## MED-302-U05 — Equipo médico básico
+---
 
-### Núcleo
+# MED-302-U03 — Triaje básico
 
-- **tricorder médico**: La prioridad médica es proteger vida y evitar daño adicional dentro del nivel de competencia. El cadete común estabiliza, observa, comunica y entrega el caso a personal cualificado.
-- **kit**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **comunicaciones**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **límites**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Priorizar con recursos limitados
+
+El triaje organiza la atención cuando existen varios pacientes y no es posible atenderlos a todos al mismo tiempo.
+
+## 2. Niveles del modelo
+
+El modelo médico utiliza:
+- minor;
+- delayed;
+- urgent;
+- immediate;
+- expectant_or_deceased.
+
+En la interfaz pueden traducirse o representarse de forma apropiada a la era.
+
+## 3. Objetivo
+
+El triaje no decide quién “merece” ayuda.
+
+Ordena recursos según:
+- urgencia;
+- posibilidad de beneficio;
+- estado;
+- capacidad disponible.
+
+## 4. Revisión
+
+La prioridad puede cambiar.
+
+Un paciente estable puede empeorar y otro crítico puede estabilizarse.
+
+## 5. Cadete
+
+El cadete trabaja bajo protocolo y supervisión.
+
+No inventa categorías nuevas ni sustituye criterio médico cualificado cuando está disponible.
 
 ### Práctica
 
-Preparar equipo y obtener datos.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Evaluación práctica.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Ordena cinco pacientes simulados con recursos limitados y justifica la prioridad.
 
 ### Autoevaluación
 
-1. Define **tricorder médico** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Preparar equipo y obtener datos.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Para qué sirve triaje?
+2. ¿Qué niveles usa el modelo?
+3. ¿Qué factores influyen en prioridad?
+4. ¿Puede cambiar una categoría?
+5. ¿Qué límite mantiene el cadete?
 
-## MED-302-U06 — Handoff a Medicina
+---
 
-### Núcleo
+# MED-302-U04 — Estabilización básica
 
-- **estado**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **intervenciones**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **cambios**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **tiempo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Objetivo
+
+Estabilizar significa evitar que la situación empeore mientras llega ayuda o se prepara traslado.
+
+## 2. Hemorragia
+
+La respuesta debe seguir entrenamiento y contexto.
+
+El cadete puede:
+- alertar;
+- aplicar medidas básicas autorizadas;
+- monitorizar;
+- comunicar cambios.
+
+## 3. Inmovilización contextual
+
+Una lesión puede exigir limitar movimiento.
+
+No se aplica automáticamente la misma técnica a todas las especies o lesiones.
+
+## 4. Posición
+
+La posición del paciente puede depender de:
+- estado;
+- respiración;
+- lesión;
+- entorno;
+- indicación médica.
+
+El cadete no improvisa una postura “universal”.
+
+## 5. Monitorización
+
+Después de una medida:
+- se reevalúa;
+- se registran cambios;
+- se prepara handoff.
 
 ### Práctica
 
-Entregar paciente a profesional.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Informe evaluado.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Aplicar medidas básicas autorizadas a un paciente simulado y reevaluar.
 
 ### Autoevaluación
 
-1. Define **estado** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Entregar paciente a profesional.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué significa estabilizar?
+2. ¿Qué puede hacer un cadete ante hemorragia dentro de competencia?
+3. ¿Por qué inmovilización depende del contexto?
+4. ¿Existe una posición universal para todos los pacientes?
+5. ¿Qué debe hacerse después de intervenir?
 
-## Cierre del curso
+---
 
-La superación combina conocimiento, práctica y juicio. Las carencias localizadas pueden producir tutoría, práctica adicional y reevaluación; no obligan por defecto a reiniciar todo el trimestre.
+# MED-302-U05 — Equipo médico básico
+
+## 1. Tricorder médico
+
+El tricorder médico ayuda a obtener datos.
+
+No garantiza certeza diagnóstica.
+
+El proyecto fija:
+> una capacidad diagnóstica no garantiza una respuesta definitiva.
+
+## 2. Especie
+
+El sistema debe utilizar el perfil de especie del paciente.
+
+No debe asumir parámetros humanos como universales.
+
+## 3. Kit
+
+Un kit puede contener herramientas y suministros adecuados a:
+- primeros auxilios;
+- estabilización;
+- monitorización;
+- contexto de misión.
+
+La disponibilidad real depende de inventario y era.
+
+## 4. Comunicaciones
+
+El equipo sirve también para transmitir datos a Medicina cuando esté permitido.
+
+## 5. Límites
+
+Tener un dispositivo no concede:
+- formación médica avanzada;
+- acceso a toda información;
+- certeza;
+- autoridad para tratamientos especializados.
+
+### Práctica
+
+Preparar equipo, obtener datos de un paciente simulado y transmitirlos correctamente.
+
+### Autoevaluación
+
+1. ¿Qué función cumple el tricorder médico?
+2. ¿Garantiza diagnóstico?
+3. ¿Por qué importa la especie?
+4. ¿De qué depende el contenido del kit?
+5. ¿Qué no concede poseer equipo médico?
+
+---
+
+# MED-302-U06 — Handoff a Medicina
+
+## 1. Entrega profesional
+
+Cuando llega personal médico cualificado, el cadete debe transferir información de forma clara.
+
+## 2. Contenido
+
+El handoff puede incluir:
+- identidad si se conoce;
+- localización y contexto;
+- estado inicial;
+- síntomas observados;
+- cambios;
+- intervenciones;
+- hora o secuencia temporal.
+
+## 3. Hechos antes que teoría
+
+Debe distinguirse:
+- “presentaba dificultad respiratoria”;
+- de “tenía tal enfermedad”.
+
+El primer dato puede ser observable; el segundo exige evidencia diagnóstica.
+
+## 4. Cambios
+
+Es importante informar:
+- mejoró;
+- empeoró;
+- no cambió;
+- apareció un nuevo signo.
+
+## 5. Continuidad
+
+El handoff evita que Medicina tenga que reconstruir todo desde cero y preserva el tiempo clínico.
+
+### Práctica
+
+Entregar un paciente simulado en menos de un minuto sin perder información crítica.
+
+### Autoevaluación
+
+1. ¿Qué debe contener un handoff?
+2. ¿Por qué separar síntomas y diagnóstico?
+3. ¿Qué cambios deben informarse?
+4. ¿Por qué importa la secuencia temporal?
+5. ¿Qué objetivo tiene la entrega?
+
+---
+
+# Evaluación del curso
+
+MED-302 evalúa seguridad, observación, triaje, estabilización básica, uso responsable de equipo y comunicación.
+
+No autoriza medicina avanzada ni tratamiento fuera de competencia.
+
+# Referencias internas
+
+- `gameplay/medical/medical_state_model.json`
+- `gameplay/medical/species_medical_hooks.json`
+- `lore/medicine/medical_capability_contract.json`
