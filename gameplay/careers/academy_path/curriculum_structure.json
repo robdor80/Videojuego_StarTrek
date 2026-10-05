@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.2",
+  "schema_version": "0.2.3",
   "model": "four_year_three_trimester_modular_curriculum",
   "years": [
     {
@@ -80,7 +80,15 @@
         "final_evaluations",
         "assignment_preparation"
       ],
-      "specialization_load": "high"
+      "specialization_load": "high",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_first_class_v1_0",
+      "course_instances": 15,
+      "branch_course_families": 7,
+      "service_readiness_review": true,
+      "longitudinal_lines": [
+        "physical_readiness_shared_program"
+      ]
     }
   ],
   "learning_unit_cycle": [
