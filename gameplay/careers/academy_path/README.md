@@ -5,26 +5,41 @@ Starfleet Academy is the first full playable career hub.
 ## Player journey
 
 ```text
-CANDIDATO
+VALIDATED CHARACTER
   ↓
-ADMISIÓN
+ACCESS / ADMISSION
   ↓
-CADETE DE 4.ª CLASE
+CADET DE 4.ª CLASE
   ↓
-CADETE DE 3.ª CLASE
+CADET DE 3.ª CLASE
   ↓
-CADETE DE 2.ª CLASE
+SPECIALIZATION CHOICE
   ↓
-CADETE DE 1.ª CLASE
+CADET DE 2.ª CLASE
   ↓
-GRADUACIÓN
+CADET DE 1.ª CLASE
+  ↓
+GRADUATION
   ↓
 ALFÉREZ
   ↓
 DESARROLLO PROFESIONAL EN SERVICIO
 ```
 
-Each Academy year is divided into **three trimesters** for project gameplay structure.
+Each Academy year is divided into **three trimesters**.
+
+## Access v1.0
+
+The definitive access scope is under `access/`.
+
+Five compact blocks:
+- ACC-01 Federación y Flota Estelar
+- ACC-02 Cómo se organiza Starfleet
+- ACC-03 Vida a bordo de una nave
+- ACC-04 Tecnología básica de Starfleet
+- ACC-05 Principios del servicio en Starfleet
+
+Access is general orientation. Professional depth belongs to Academy.
 
 ## Core gameplay pillars
 
@@ -32,9 +47,9 @@ Each Academy year is divided into **three trimesters** for project gameplay stru
 - **Competencia** — courses, simulations and practical work build real game capabilities.
 - **Expediente** — evaluations, commendations, reprimands and qualifications persist.
 - **Relaciones** — cadets and instructors remember the player.
-- **Elecciones** — the player chooses specialization; instructors may advise but do not choose for them.
+- **Elecciones** — specialization is chosen by the player at the end of Third Class.
 - **Consecuencias** — failure may mean remediation, retakes, delayed progression, discipline or altered opportunities rather than automatic game over.
-- **Vida** — study, duty-like practice, rest, social life and relationships share the same calendar.
+- **Vida** — study, practice, rest, social life, hobbies and relationships share the same calendar.
 - **Era** — the same Academy architecture is presented/configured differently for Pike, Kirk and TNG/DS9/Voyager.
 
 ## Learning loop
@@ -46,7 +61,13 @@ THEORY
 → CONTINUOUS EVALUATION
 ```
 
-Whenever possible, Academy practice uses the same gameplay systems later used in real service.
+Academy may require player knowledge that was explicitly taught. It does not use untaught trivia as a gate.
+
+## Character continuity
+
+The cadet enters with a validated biography, existing hobbies/experience and long-term objectives.
+
+Academy life can therefore develop both professional and non-professional capabilities. A cadet may improve fitness, martial arts, music, languages, medicine or any other plausible domain through sustained activity even when it is not their chosen specialization.
 
 ## Career continuity
 
@@ -55,19 +76,7 @@ Graduation is not the end of learning.
 The post-Academy path continues through supervised Ensign service, ship/class familiarization, qualifications, mentorship and increasingly autonomous responsibility.
 
 See:
-
 - `academy_career_v0_2.md`
 - `academic_year_trimester_model.json`
+- `access/`
 - `../post_academy/README.md`
-
-## Separation of concerns
-
-Lore answers:
-
-> What is Starfleet Academy?
-
-Gameplay answers:
-
-> What can the player do there and what changes because of it?
-
-Both layers are required.
