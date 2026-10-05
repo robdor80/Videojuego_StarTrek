@@ -1,200 +1,491 @@
 # NAV-403 — Navegación y astrográfica I
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Dar una alfabetización espacial suficiente para comprender rutas, posiciones y movimiento de una nave.
+Dar al cadete una alfabetización espacial suficiente para comprender posiciones, rutas, tiempos, peligros y movimiento de una nave.
 
-## Cómo estudiar esta asignatura
+NAV-403 no exige ecuaciones orbitales reales ni cálculos avanzados de astrogación. El objetivo es que el jugador pueda **entender una solución de navegación, comparar opciones y tomar decisiones razonadas**.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## NAV-403-U01 — Mapa estelar y referencias
+# NAV-403-U01 — Mapa estelar y referencias
 
-### Qué debes dominar
+## 1. Un mapa estelar es una representación
 
-- **sistemas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **sectores**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **regiones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **cartografía**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Una carta no es el universo completo.
 
-### Aplicación operativa
+Representa conocimiento disponible sobre:
 
-Localizar destinos en mapa de entrenamiento. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- sistemas;
+- sectores;
+- regiones;
+- rutas;
+- fronteras;
+- peligros conocidos;
+- instalaciones;
+- zonas no exploradas.
 
-### Qué se evalúa
+## 2. Sistemas
 
-Práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Un sistema estelar es una referencia espacial que puede contener:
 
-### Errores frecuentes
+- una estrella;
+- planetas;
+- estaciones;
+- cuerpos menores;
+- rutas de entrada y salida;
+- áreas de interés.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+No todo lo que existe en un sistema tiene por qué estar conocido.
 
-### Autoevaluación
+## 3. Sectores y regiones
 
-1. Explica con tus palabras qué significa **sistemas** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **sistemas** y **sectores**?
-3. Resuelve de forma razonada esta práctica: *Localizar destinos en mapa de entrenamiento.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Sectores y regiones ayudan a organizar el espacio para:
 
-## NAV-403-U02 — Coordenadas y posición
+- localizar;
+- comunicar;
+- planificar;
+- agrupar información.
 
-### Qué debes dominar
+Son referencias operativas, no “casillas mágicas” que revelan todo lo que contienen.
 
-- **referencias**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **posición relativa**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **vectores conceptuales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **orientación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Cartografía y conocimiento
 
-### Aplicación operativa
+Una carta puede ser:
 
-Interpretar varias posiciones. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- detallada;
+- incompleta;
+- desactualizada;
+- incierta.
 
-### Qué se evalúa
+El mapa disponible al personaje refleja conocimiento de la nave, no World Truth completa.
 
-Ejercicio aplicado. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 5. Fecha y política
 
-### Errores frecuentes
+Una carta útil también puede incluir:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- fronteras;
+- jurisdicciones;
+- zonas restringidas;
+- conflictos;
+- instalaciones de apoyo.
 
-### Autoevaluación
+Estos elementos dependen de la fecha y del estado político.
 
-1. Explica con tus palabras qué significa **referencias** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **referencias** y **posición relativa**?
-3. Resuelve de forma razonada esta práctica: *Interpretar varias posiciones.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+### Práctica
 
-## NAV-403-U03 — Distancia y tiempo
-
-### Qué debes dominar
-
-- **distancias astronómicas de juego**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ETA**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **orden de magnitud**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **incertidumbre**: Toda medición tiene calidad y límites. El cadete debe evitar convertir una lectura débil en una afirmación rotunda y debe comunicar incertidumbre cuando puede cambiar una decisión.
-
-### Aplicación operativa
-
-Comparar rutas y tiempos dados por el sistema. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Problemas básicos. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Localiza tres destinos en un mapa de entrenamiento y describe qué información conoces y qué permanece incierta.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **distancias astronómicas de juego** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **distancias astronómicas de juego** y **ETA**?
-3. Resuelve de forma razonada esta práctica: *Comparar rutas y tiempos dados por el sistema.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Por qué un mapa estelar no representa toda la verdad del universo?
+2. ¿Qué tipo de información puede contener una carta?
+3. ¿Qué función cumplen sectores y regiones?
+4. ¿Por qué una carta puede quedar desactualizada?
+5. ¿Cómo puede afectar la política a una ruta?
 
-## NAV-403-U04 — Impulso y warp en navegación
+---
 
-### Qué debes dominar
+# NAV-403-U02 — Coordenadas y posición
 
-- **régimen subluz**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **régimen warp**: La curvatura permite viaje superlumínico mediante el sistema warp. En 4.ª clase se estudia su función, relación con navegación y limitaciones generales, sin exigir ingeniería de campo warp ni fórmulas no enseñadas.
-- **transición**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **restricciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Posición absoluta y relativa
 
-### Aplicación operativa
+Una posición puede expresarse respecto a un marco de referencia o respecto a otro objeto.
 
-Elegir régimen adecuado en escenarios simples. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Ejemplos conceptuales:
 
-### Qué se evalúa
+- posición de una nave respecto a un sistema;
+- distancia y dirección respecto a una estación;
+- vector relativo de un contacto.
 
-Caso de decisión. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 2. Referencias
 
-### Errores frecuentes
+Una referencia responde a:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+> ¿desde dónde estamos midiendo?
 
-### Autoevaluación
+Sin referencia, una coordenada puede resultar inútil o ambigua.
 
-1. Explica con tus palabras qué significa **régimen subluz** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **régimen subluz** y **régimen warp**?
-3. Resuelve de forma razonada esta práctica: *Elegir régimen adecuado en escenarios simples.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+## 3. Posición relativa
 
-## NAV-403-U05 — Rutas y peligros
+La posición relativa es especialmente útil en:
 
-### Qué debes dominar
+- aproximaciones;
+- formación;
+- interceptación;
+- seguimiento;
+- maniobras locales.
 
-- **obstáculos**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **zonas restringidas**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **anomalías**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **fronteras**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Vector conceptual
 
-### Aplicación operativa
+Un vector describe dirección y magnitud.
 
-Trazar una ruta segura básica. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+En NAV-403 no se exige cálculo vectorial avanzado.
 
-### Qué se evalúa
+El cadete debe poder entender frases como:
 
-Práctica de plotting. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+- “se desplaza hacia nosotros”;
+- “cruza nuestra trayectoria”;
+- “mantiene vector paralelo”;
+- “se aleja”.
 
-### Errores frecuentes
+## 5. Orientación
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La orientación de la nave y su movimiento no son necesariamente lo mismo.
 
-### Autoevaluación
+Una nave puede:
 
-1. Explica con tus palabras qué significa **obstáculos** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **obstáculos** y **zonas restringidas**?
-3. Resuelve de forma razonada esta práctica: *Trazar una ruta segura básica.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- apuntar en una dirección;
+- desplazarse en otra;
+- cambiar actitud;
+- mantener trayectoria.
 
-## NAV-403-U06 — Ejercicio de astrográfica
+### Práctica
 
-### Qué debes dominar
-
-- **origen**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **destino**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **restricciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ETA**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **reporte**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Preparar y comunicar una ruta básica. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Evaluación integrada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Interpreta varias posiciones relativas y determina qué contactos se aproximan, alejan o cruzan la ruta.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **origen** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **origen** y **destino**?
-3. Resuelve de forma razonada esta práctica: *Preparar y comunicar una ruta básica.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué diferencia existe entre posición absoluta y relativa?
+2. ¿Por qué toda coordenada necesita referencia?
+3. ¿Cuándo resulta útil posición relativa?
+4. ¿Qué representa un vector?
+5. ¿Orientación y movimiento son siempre iguales?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# NAV-403-U03 — Distancia y tiempo
 
-## Tratamiento por era
+## 1. Distancia
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+La ruta debe partir de una estimación de distancia.
+
+La distancia puede proceder de:
+
+- cartografía;
+- geometría de ruta;
+- sensores;
+- datos históricos.
+
+Su precisión puede variar.
+
+## 2. ETA
+
+ETA es la **hora o tiempo estimado de llegada**.
+
+No es necesariamente una promesa exacta.
+
+El proyecto prefiere una ventana cuando existe incertidumbre.
+
+## 3. Orden de magnitud
+
+En 4.ª clase importa distinguir:
+
+- un trayecto local;
+- una ruta entre sistemas;
+- un viaje regional;
+- una travesía mucho mayor.
+
+No hace falta resolver ecuaciones avanzadas para comprender que la escala cambia las decisiones.
+
+## 4. Qué modifica una ETA
+
+La ETA puede cambiar por:
+
+- velocidad;
+- ruta;
+- daño;
+- energía;
+- condiciones subespaciales;
+- fronteras;
+- esperas;
+- encuentros;
+- nueva información.
+
+## 5. Confianza
+
+Una ETA puede tener confianza:
+
+- alta;
+- media;
+- baja.
+
+Una cartografía incierta o condiciones variables ensanchan la ventana de llegada.
+
+### Práctica
+
+Compara tres rutas con ETA diferentes y explica cuál elegirías para una misión urgente y cuál para una misión de bajo riesgo.
+
+### Autoevaluación
+
+1. ¿De dónde puede proceder una distancia de navegación?
+2. ¿Qué significa ETA?
+3. ¿Por qué ETA puede expresarse como rango?
+4. Nombra cuatro causas de cambio de ETA.
+5. ¿Qué relación existe entre confianza cartográfica y precisión de llegada?
+
+---
+
+# NAV-403-U04 — Impulso y warp en navegación
+
+## 1. Dos regímenes de movimiento
+
+### Impulso
+
+Se usa para movimiento subluz y maniobras locales.
+
+### Warp
+
+Se usa para viaje superlumínico interestelar cuando nave, ruta y condiciones lo permiten.
+
+## 2. Elegir régimen
+
+La decisión depende de:
+
+- distancia;
+- objetivo;
+- entorno;
+- seguridad;
+- capacidad de la nave;
+- restricciones;
+- misión.
+
+## 3. Transición
+
+Entrar o salir de warp no se trata como teletransporte instantáneo.
+
+Forma parte de una operación de navegación.
+
+La ruta continúa teniendo:
+
+- origen;
+- destino;
+- segmentos;
+- progreso;
+- ETA;
+- eventos potenciales.
+
+## 4. Factor warp solicitado
+
+El factor solicitado debe validarse frente a:
+
+- capacidad actual;
+- límite sostenible;
+- energía;
+- daño;
+- condiciones.
+
+## 5. Restricciones
+
+Puede ser necesario evitar o respetar:
+
+- zonas restringidas;
+- fronteras;
+- peligros;
+- regiones con incertidumbre;
+- condiciones incompatibles.
+
+### Práctica
+
+Elige entre impulso y warp para varias situaciones sencillas y justifica la decisión.
+
+### Autoevaluación
+
+1. ¿Para qué se usa principalmente impulso?
+2. ¿Para qué se usa warp?
+3. ¿Por qué entrar en warp no equivale a cambiar de posición instantáneamente?
+4. ¿Qué debe validarse antes de aceptar un factor warp?
+5. ¿Qué restricciones pueden afectar la elección de régimen?
+
+---
+
+# NAV-403-U05 — Rutas y peligros
+
+## 1. La ruta más corta no siempre es la mejor
+
+Una ruta puede optimizar:
+
+- tiempo;
+- seguridad;
+- soporte;
+- discreción;
+- territorio conocido;
+- restricciones.
+
+## 2. Preferencias de ruta
+
+El proyecto contempla preferencias como:
+
+- más rápida;
+- más segura;
+- evitar espacio hostil;
+- evitar espacio restringido;
+- preferir rutas cartografiadas;
+- preferir apoyo de bases;
+- bajo contacto.
+
+## 3. Peligros conocidos
+
+Una ruta puede contener:
+
+- anomalías;
+- inestabilidad;
+- conflictos;
+- patrullas hostiles;
+- fronteras;
+- poco soporte;
+- incertidumbre de sensores.
+
+## 4. Peligros desconocidos
+
+El World State puede contener un riesgo que el personaje no conoce.
+
+El sistema **no debe mostrarlo disfrazado como advertencia**.
+
+El jugador solo puede decidir con la información disponible.
+
+## 5. Fronteras
+
+Cruzar una frontera puede implicar:
+
+- aviso;
+- permiso;
+- inspección;
+- interceptación;
+- consecuencia diplomática.
+
+La navegación también es política.
+
+### Práctica
+
+Traza una ruta entre dos destinos con una frontera restringida y una zona de incertidumbre.
+
+### Autoevaluación
+
+1. ¿Por qué la ruta más corta no siempre es la mejor?
+2. Nombra tres preferencias de ruta.
+3. ¿Qué diferencia existe entre peligro conocido y oculto?
+4. ¿Debe el sistema avisar de un peligro que nadie ha detectado?
+5. ¿Qué consecuencias puede tener cruzar una frontera?
+
+---
+
+# NAV-403-U06 — Ejercicio de astrográfica
+
+## 1. De la orden al reporte
+
+Una solución básica de navegación puede seguir:
+
+> **origen → destino → restricciones → rutas candidatas → selección → ETA → reporte**
+
+## 2. Origen y destino
+
+Primero deben resolverse correctamente.
+
+Una orden ambigua debe aclararse antes de ejecutar.
+
+## 3. Restricciones
+
+La solución debe considerar:
+
+- nave;
+- propulsión;
+- daño;
+- fronteras;
+- peligros conocidos;
+- permisos;
+- prioridad de misión.
+
+## 4. Rutas candidatas
+
+El sistema puede generar más de una opción.
+
+El jugador puede valorar:
+
+- rapidez;
+- seguridad;
+- confianza;
+- apoyo;
+- exposición.
+
+## 5. ETA y reporte
+
+El reporte debe incluir lo útil para decidir.
+
+Ejemplo:
+
+> “Ruta segura disponible. ETA estimada entre 14 y 16 horas. Evita zona restringida; confianza alta.”
+
+No hace falta recitar todo el cálculo interno.
+
+## 6. Ejecución y reevaluación
+
+Una ruta aceptada no queda congelada.
+
+Puede reevaluarse si cambia:
+
+- velocidad;
+- daño;
+- energía;
+- subespacio;
+- frontera;
+- encuentro;
+- detección de peligro.
+
+### Práctica
+
+Prepara una ruta básica completa y comunícala a Mando con ETA, riesgo y restricción principal.
+
+### Autoevaluación
+
+1. ¿Qué pasos básicos sigue una solución de navegación?
+2. ¿Qué haces si origen o destino son ambiguos?
+3. ¿Por qué conviene generar rutas candidatas?
+4. ¿Qué debe contener un reporte breve de navegación?
+5. ¿Qué cambios obligan a reevaluar una ruta?
+
+---
+
+# Evaluación del curso
+
+NAV-403 evalúa:
+
+- lectura de mapas;
+- posición;
+- relación distancia-tiempo;
+- selección de régimen;
+- rutas y riesgos;
+- reporte.
+
+No exige cálculos orbitales avanzados ni fórmulas warp no enseñadas.
+
+# Tratamiento por era
+
+Cambian:
+
+- interfaces;
+- cartas;
+- precisión;
+- capacidad warp;
+- automatización.
+
+Permanece estable:
+
+- origen;
+- destino;
+- ruta;
+- restricciones;
+- ETA;
+- incertidumbre.
+
+# Referencias internas
+
+- `gameplay/navigation/README.md`
+- `gameplay/navigation/route_context_model.json`
+- `gameplay/warp_travel/route_planning_model.json`
+- `gameplay/warp_travel/eta_resolution_model.json`
+
+Estas fuentes definen la navegación como un proceso persistente, contextual y limitado por conocimiento.
