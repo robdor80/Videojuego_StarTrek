@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "course_id": "BRN-102",
   "title_es": "Especialización profesional avanzada II",
   "status": "unit_design_complete",
@@ -109,5 +109,15 @@
     "pdf"
   ],
   "era_handling": "stable_core_with_era_specific_examples_interfaces_equipment_and_training_assets",
-  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/academy_era_profiles.json",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/academy_path/curriculum/branches"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; service-readiness and assignment outcomes remain evidence/world-state driven."
 }
