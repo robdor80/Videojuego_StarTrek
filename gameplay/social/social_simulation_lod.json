@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "social_simulation_lod",
+  "status": "foundation_fixed",
+  "tiers": [
+    {
+      "id": "A",
+      "name": "important_persistent",
+      "description": "Rich personality, memory, relationship graph, routines and ongoing personal history.",
+      "typical_examples": [
+        "close crewmates",
+        "mentor",
+        "partner",
+        "department head",
+        "recurring rival",
+        "important classmate"
+      ]
+    },
+    {
+      "id": "B",
+      "name": "persistent_crew",
+      "description": "Persistent identity, role, simplified relationships, selected memories and routines.",
+      "typical_examples": [
+        "regular shift colleague",
+        "department member",
+        "frequently encountered crewmember"
+      ]
+    },
+    {
+      "id": "C",
+      "name": "background_population",
+      "description": "Aggregated or low-detail population state until interaction makes an individual relevant.",
+      "typical_examples": [
+        "most large-ship crew",
+        "station background personnel",
+        "passengers"
+      ]
+    }
+  ],
+  "promotion_rules": [
+    "C may materialize into B when an individual becomes directly relevant.",
+    "B may promote to A when sustained interaction or narrative importance justifies richer simulation.",
+    "Promotion must preserve already established identity/history rather than replacing the character.",
+    "LOD changes affect simulation detail, not whether the person canonically existed."
+  ],
+  "principle": "A Galaxy-class population can exceed one thousand people without simulating every person's full psychology every tick."
+}
