@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.2.1",
   "model": "four_year_three_trimester_modular_curriculum",
   "years": [
     {
@@ -13,7 +13,13 @@
         "basic_practical",
         "division_exploration"
       ],
-      "specialization_load": "low"
+      "specialization_load": "low",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_fourth_class_v1_0",
+      "course_instances": 15,
+      "longitudinal_lines": [
+        "physical_readiness_year_1"
+      ]
     },
     {
       "sequence_year": 2,
@@ -86,6 +92,6 @@
     "the player chooses specialization",
     "instructors may recommend but do not decide the player's branch",
     "practical training reuses real gameplay systems",
-    "Kobayashi Maru belongs to the late-Academy capstone window; exact trimester remains configurable"
+    "Kobayashi Maru is a project-wide late-Academy capstone tradition with era-appropriate presentation"
   ]
 }

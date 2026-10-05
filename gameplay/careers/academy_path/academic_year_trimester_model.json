@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.2.1",
   "model_id": "academy_year_trimester_model",
   "status": "foundation_fixed",
   "sequence": [
@@ -8,7 +8,14 @@
       "display_year": "4th_year",
       "phase": "discovery_and_foundations",
       "trimesters": 3,
-      "specialization_pressure": "low"
+      "specialization_pressure": "low",
+      "curriculum_status": "locked_v1_0",
+      "curriculum_ref": "academy_fourth_class_v1_0",
+      "trimester_themes": [
+        "becoming_a_cadet",
+        "shipboard_life_and_service",
+        "operational_and_technology_fundamentals"
+      ]
     },
     {
       "sequence_index": 2,

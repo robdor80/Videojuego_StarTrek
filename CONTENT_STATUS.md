@@ -81,7 +81,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | History and campus | ✅ COMPLETE | Playable hub, location graph and gameplay-relevant era differences established. |
 | Admissions and cadet life | ✅ COMPLETE | Access v1.0 locked: five-block general curriculum, candidate manual source, holistic admission, targeted reassessment and persistent attempt history; four-year cadet progression/conduct baseline retained. |
 | Departments and specializations | ✅ COMPLETE | Playable divisions, specializations, medical route and change/cross-training rules established. |
-| Curriculum and courses | ✅ COMPLETE | Four-year modular curriculum, playable course catalogue and character-vs-player resolution model established. |
+| Curriculum and courses | ✅ COMPLETE | Four-year modular baseline retained; Fourth Class / Year 1 architecture is now locked v1.0 with three trimesters and 15 course instances (PHY longitudinal). Unit-level content remains active depth work. |
 | Instructors | ✅ COMPLETE | Persistent canonical/generated instructor model, temporal validity and AI authority limits established. |
 | Evaluations and examinations | ✅ COMPLETE | Multi-axis evaluation, exam formats, recovery and persistent record model established. |
 | Simulations and field training | ✅ COMPLETE | Simulation, active-unit field study, training cruise and live-world interruption models established. |
@@ -158,9 +158,10 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 | Objectives / trajectory | ✅ COMPLETE | Long-term aspiration + medium-term goals, descriptive trajectory coherence, no guaranteed outcomes. |
 | Specialization decision timing | ✅ COMPLETE | Selected by end of Third Class; formally active in Second Class T1. |
 | Kobayashi Maru scope | ✅ COMPLETE | Project-wide Academy tradition for every playable era, with era-specific presentation. |
+| Fourth Class / Year 1 architecture | ✅ COMPLETE | T1 cadet identity, T2 shipboard life/service, T3 operational foundations; five grouped subjects per trimester; PHY longitudinal and habit-driven. |
 
 ## Active block
 
-**Pillar 1 remains active: entry systems are closed; the next work is the definitive four-year grouped-subject curriculum and its unit-level depth.**
+**Pillar 1 remains active: entry systems and Fourth Class year architecture are closed; next work is Fourth Class / Trimester 1 at unit level, beginning with STF-401.**
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
