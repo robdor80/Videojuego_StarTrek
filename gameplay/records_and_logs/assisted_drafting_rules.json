@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "records_and_logs_assisted_drafting",
+  "status": "fixed_foundation",
+  "workflow": [
+    "authenticate_requester",
+    "resolve_target_log",
+    "resolve_authorized_source_scope",
+    "retrieve_factual_source_refs",
+    "optionally_retrieve_author_knowledge_and_memories",
+    "produce_draft",
+    "present_draft_to_author",
+    "author_edits_or_approves",
+    "persist_approved_entry"
+  ],
+  "rules": [
+    "A generated draft is not a published log entry.",
+    "Official drafts may use only authorized factual sources and must preserve uncertainty.",
+    "Personal-log drafts may express subjective interpretation but may not grant the author knowledge they did not have.",
+    "The AI must not invent events to make a log more dramatic or complete.",
+    "The author may dictate verbatim and bypass stylistic rewriting.",
+    "The original voice recording may be retained separately from the approved transcript when configured.",
+    "Approval must be attributable to the author or authorized institutional signer."
+  ],
+  "modes": [
+    "verbatim_dictation",
+    "transcription_cleanup",
+    "structured_draft_from_sources",
+    "author_guided_rewrite"
+  ]
+}
