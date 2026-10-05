@@ -106,6 +106,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
 | Observable universe core | ✅ COMPLETE | Authoritative world truth, observable-entity/signature contracts, deterministic seeded v0.0.1 generator and deterministic sensor-detection resolution are implemented for the current vertical-slice scope. |
 | Operational event log v0.1 | ✅ COMPLETE | Cross-console append-only event contract, event vocabulary, visibility projection and Sensors worked example established; evaluation remains a separate consumer. |
+| Records and logs foundation | ✅ COMPLETE | Captain's, personal, department, duty and restricted-log foundations established with privacy/access and AI-assisted drafting boundaries. |
 
 ## Major remaining domains
 
