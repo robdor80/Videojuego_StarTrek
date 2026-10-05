@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "policy_id": "starship_computer_ai_routing",
+  "status": "foundation_fixed",
+  "routes": [
+    {
+      "id": "DETERMINISTIC",
+      "use_for": [
+        "direct_database_lookup",
+        "time_and_schedule",
+        "known_status_query",
+        "access_check",
+        "simple_calculation",
+        "known_action_intent"
+      ]
+    },
+    {
+      "id": "COMPUTER_FAST",
+      "use_for": [
+        "natural_language_intent_parsing",
+        "short_query_reformulation",
+        "concise_summary",
+        "simple_multi_source_language_synthesis"
+      ]
+    },
+    {
+      "id": "COMPUTER_REASONING",
+      "use_for": [
+        "complex_multi_source_analysis",
+        "difficult_explanation",
+        "ambiguous_but_resolvable_analytical_request",
+        "extended_correlation_interpretation"
+      ]
+    }
+  ],
+  "rules": [
+    "Model/provider names are configuration, not gameplay contract.",
+    "Escalate from fast to reasoning only when task complexity justifies it.",
+    "Mathematical/statistical computation should be deterministic where practical; AI explains results.",
+    "Authorized data is gathered before AI analysis.",
+    "AI route never bypasses access control.",
+    "If authoritative inputs are insufficient, return insufficient data rather than fabricate."
+  ]
+}
