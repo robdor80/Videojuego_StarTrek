@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.6.0",
+  "schema_version": "0.7.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -14,8 +14,9 @@
   ],
   "fields": {
     "academy_status": "lifecycle_state",
-    "academic_year": "integer_or_null",
-    "semester": "integer_or_null",
+    "academic_sequence_year": "integer_or_null",
+    "cadet_class_id": "cadet_fourth_class_to_cadet_first_class",
+    "trimester": "integer_1_to_3_or_null",
     "division_track": "division_id_or_undecided",
     "specialization": "specialization_id_or_null",
     "academic_record": "record_ref",
@@ -33,8 +34,7 @@
     "admission_outcome": "admission_outcome_or_null",
     "preparatory_status": "preparatory_state_or_null",
     "conduct_status": "conduct_state",
-    "fatigue": "numeric_state",
-    "stress": "numeric_state",
+    "wellbeing_state_ref": "character_habit_state_ref",
     "free_time": "time_budget_state",
     "academic_standing": "standing_state",
     "practical_standing": "standing_state",
@@ -55,5 +55,11 @@
     "academy_era_profile": "era_profile_id",
     "cadet_insignia_standard": "cadet_insignia_standard_id"
   },
-  "design_note": "This is an authoring/gameplay contract, not yet a CoreRPG runtime schema."
+  "rules": [
+    "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
+    "each academic sequence year contains three trimesters",
+    "fatigue/stress are not standalone Academy meters; Academy references the shared character wellbeing system",
+    "relationships use the shared social relationship system",
+    "this is an authoring/gameplay contract, not yet a CoreRPG runtime schema"
+  ]
 }
