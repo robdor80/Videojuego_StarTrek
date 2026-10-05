@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SYS-403",
+  "title_es": "Sistemas fundamentales de una nave estelar",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 3,
+  "course_type": "core",
+  "purpose_es": "Comprender la función, relación y limitaciones generales de los principales sistemas de una nave.",
+  "prerequisites": [
+    "SHP-402",
+    "SAF-402"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SYS-403-U01",
+      "title_es": "Arquitectura de sistemas y energía",
+      "core_content_es": [
+        "fuentes",
+        "distribución",
+        "cargas",
+        "dependencias"
+      ],
+      "practice_es": "Seguir un diagrama funcional simplificado.",
+      "assessment_es": "Evaluación de relaciones."
+    },
+    {
+      "unit_id": "SYS-403-U02",
+      "title_es": "Propulsión de impulso",
+      "core_content_es": [
+        "función",
+        "uso subluz",
+        "limitaciones generales"
+      ],
+      "practice_es": "Interpretar estado básico de propulsión.",
+      "assessment_es": "Caso conceptual."
+    },
+    {
+      "unit_id": "SYS-403-U03",
+      "title_es": "Propulsión warp",
+      "core_content_es": [
+        "función",
+        "campo warp",
+        "factor de curvatura como concepto",
+        "riesgos generales"
+      ],
+      "practice_es": "Relacionar misión, distancia y uso de warp sin cálculo avanzado.",
+      "assessment_es": "Preguntas aplicadas."
+    },
+    {
+      "unit_id": "SYS-403-U04",
+      "title_es": "Habitabilidad y servicios",
+      "core_content_es": [
+        "soporte vital",
+        "replicadores",
+        "transportadores",
+        "computer service"
+      ],
+      "practice_es": "Resolver qué sistema soporta una necesidad concreta.",
+      "assessment_es": "Caso de sistema."
+    },
+    {
+      "unit_id": "SYS-403-U05",
+      "title_es": "Defensa y entorno de misión",
+      "core_content_es": [
+        "escudos",
+        "armamento",
+        "sensores como consumidor/proveedor",
+        "holodeck cuando proceda"
+      ],
+      "practice_es": "Analizar dependencias generales.",
+      "assessment_es": "Ejercicio integrado."
+    },
+    {
+      "unit_id": "SYS-403-U06",
+      "title_es": "Fallos y dependencias",
+      "core_content_es": [
+        "degradación",
+        "sistema primario/secundario",
+        "efecto cascada",
+        "prioridad"
+      ],
+      "practice_es": "Seguir una avería sencilla entre sistemas.",
+      "assessment_es": "Evaluación de razonamiento."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

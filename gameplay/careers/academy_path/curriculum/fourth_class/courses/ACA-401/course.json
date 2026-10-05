@@ -1,0 +1,109 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ACA-401",
+  "title_es": "Vida académica, conducta y responsabilidad profesional",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Enseñar al cadete a vivir, estudiar y responder por su conducta dentro de la Academia.",
+  "prerequisites": [],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "ACA-401-U01",
+      "title_es": "Ciclo académico y condición de cadete",
+      "core_content_es": [
+        "años y trimestres",
+        "matrícula",
+        "evaluación",
+        "progresión"
+      ],
+      "practice_es": "Consultar calendario y expediente de ejemplo.",
+      "assessment_es": "Comprobación de comprensión."
+    },
+    {
+      "unit_id": "ACA-401-U02",
+      "title_es": "Integridad académica",
+      "core_content_es": [
+        "honestidad",
+        "autoría",
+        "fraude",
+        "responsabilidad personal"
+      ],
+      "practice_es": "Resolver casos de colaboración válida y fraude.",
+      "assessment_es": "Caso de integridad."
+    },
+    {
+      "unit_id": "ACA-401-U03",
+      "title_es": "Disciplina y conducta",
+      "core_content_es": [
+        "normas",
+        "puntualidad",
+        "respeto",
+        "incidencias"
+      ],
+      "practice_es": "Responder a una incidencia menor de disciplina.",
+      "assessment_es": "Evaluación situacional."
+    },
+    {
+      "unit_id": "ACA-401-U04",
+      "title_es": "Rutinas y uso de instalaciones",
+      "core_content_es": [
+        "aulas",
+        "residencias",
+        "biblioteca",
+        "simuladores",
+        "accesos"
+      ],
+      "practice_es": "Planificar una jornada de cadete.",
+      "assessment_es": "Práctica de navegación académica."
+    },
+    {
+      "unit_id": "ACA-401-U05",
+      "title_es": "Tutorías y recuperación",
+      "core_content_es": [
+        "pedir ayuda",
+        "refuerzo",
+        "reevaluación",
+        "registro de progreso"
+      ],
+      "practice_es": "Solicitar una tutoría y acordar plan de recuperación.",
+      "assessment_es": "Escena y registro."
+    },
+    {
+      "unit_id": "ACA-401-U06",
+      "title_es": "Trabajo en equipo académico",
+      "core_content_es": [
+        "responsabilidad compartida",
+        "reparto de tareas",
+        "comunicación",
+        "conflicto"
+      ],
+      "practice_es": "Actividad de equipo con roles definidos.",
+      "assessment_es": "Evaluación de teamwork e integridad."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

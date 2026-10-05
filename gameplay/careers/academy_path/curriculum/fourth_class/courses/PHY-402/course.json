@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PHY-402",
+  "title_es": "Preparación física II",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 2,
+  "course_type": "physical_readiness",
+  "purpose_es": "Consolidar la rutina física y añadir trabajo funcional y cooperativo.",
+  "prerequisites": [
+    "PHY-401"
+  ],
+  "player_knowledge_policy": "character_activity_and_habit_evidence_not_player_fitness_test",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PHY-402-U01",
+      "title_es": "Continuidad y carga",
+      "core_content_es": [
+        "frecuencia",
+        "progresión",
+        "adaptación"
+      ],
+      "practice_es": "Mantener calendario de entrenamiento.",
+      "assessment_es": "Evidencia longitudinal."
+    },
+    {
+      "unit_id": "PHY-402-U02",
+      "title_es": "Resistencia aplicada",
+      "core_content_es": [
+        "esfuerzo sostenido",
+        "recuperación",
+        "ritmo"
+      ],
+      "practice_es": "Sesión funcional del personaje.",
+      "assessment_es": "Progresión individual."
+    },
+    {
+      "unit_id": "PHY-402-U03",
+      "title_es": "Fuerza y coordinación",
+      "core_content_es": [
+        "fuerza funcional",
+        "equilibrio",
+        "coordinación"
+      ],
+      "practice_es": "Circuito supervisado.",
+      "assessment_es": "Ejecución segura."
+    },
+    {
+      "unit_id": "PHY-402-U04",
+      "title_es": "Trabajo en equipo",
+      "core_content_es": [
+        "cooperación",
+        "ritmo de grupo",
+        "seguridad"
+      ],
+      "practice_es": "Actividad colectiva.",
+      "assessment_es": "Teamwork y disciplina."
+    },
+    {
+      "unit_id": "PHY-402-U05",
+      "title_es": "Actividad acuática o equivalente",
+      "core_content_es": [
+        "seguridad",
+        "adaptación fisiológica",
+        "capacidad funcional"
+      ],
+      "practice_es": "Sesión adaptada a especie/contexto.",
+      "assessment_es": "Competencia funcional, no comparación interespecies."
+    },
+    {
+      "unit_id": "PHY-402-U06",
+      "title_es": "Revisión de rutina",
+      "core_content_es": [
+        "fatiga",
+        "estudio",
+        "descanso",
+        "ajuste"
+      ],
+      "practice_es": "Modificar rutina ante carga académica.",
+      "assessment_es": "Criterio y sostenibilidad."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

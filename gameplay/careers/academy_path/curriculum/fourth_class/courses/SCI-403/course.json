@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SCI-403",
+  "title_es": "Ciencia, sensores y método científico I",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 3,
+  "course_type": "core",
+  "purpose_es": "Separar medición de interpretación y enseñar los fundamentos de observación científica y sensores.",
+  "prerequisites": [
+    "INF-401",
+    "SYS-403"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SCI-403-U01",
+      "title_es": "Método científico",
+      "core_content_es": [
+        "observación",
+        "pregunta",
+        "hipótesis",
+        "evidencia",
+        "revisión"
+      ],
+      "practice_es": "Analizar una observación sencilla.",
+      "assessment_es": "Ejercicio razonado."
+    },
+    {
+      "unit_id": "SCI-403-U02",
+      "title_es": "Medición e incertidumbre",
+      "core_content_es": [
+        "precisión",
+        "ruido",
+        "error",
+        "límite de detección"
+      ],
+      "practice_es": "Comparar lecturas con distinta calidad.",
+      "assessment_es": "Evaluación aplicada."
+    },
+    {
+      "unit_id": "SCI-403-U03",
+      "title_es": "Qué es un sensor",
+      "core_content_es": [
+        "detección",
+        "medición",
+        "firma",
+        "canales generales"
+      ],
+      "practice_es": "Relacionar fenómeno con medición posible.",
+      "assessment_es": "Caso conceptual."
+    },
+    {
+      "unit_id": "SCI-403-U04",
+      "title_es": "Activo y pasivo",
+      "core_content_es": [
+        "ventajas",
+        "costes",
+        "exposición",
+        "contexto"
+      ],
+      "practice_es": "Elegir modo en situaciones sencillas.",
+      "assessment_es": "Caso de decisión."
+    },
+    {
+      "unit_id": "SCI-403-U05",
+      "title_es": "Contacto, lectura e interpretación",
+      "core_content_es": [
+        "contacto",
+        "tracking inicial",
+        "readout",
+        "Science como interpretación"
+      ],
+      "practice_es": "Distinguir datos de conclusión.",
+      "assessment_es": "Práctica con lecturas."
+    },
+    {
+      "unit_id": "SCI-403-U06",
+      "title_es": "Barrido básico",
+      "core_content_es": [
+        "objetivo",
+        "configuración preparada",
+        "resultado",
+        "registro"
+      ],
+      "practice_es": "Ejecutar un scan guiado en consola real cuando exista.",
+      "assessment_es": "Evaluación práctica."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

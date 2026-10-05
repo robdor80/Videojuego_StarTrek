@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SHP-402",
+  "title_es": "Organización y vida a bordo",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Comprender una nave como lugar de trabajo, vivienda y organización.",
+  "prerequisites": [
+    "STF-401",
+    "ACA-401"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SHP-402-U01",
+      "title_es": "Anatomía funcional de una nave",
+      "core_content_es": [
+        "puente",
+        "Ingeniería",
+        "Enfermería",
+        "Seguridad",
+        "Ciencias",
+        "Operaciones"
+      ],
+      "practice_es": "Recorrido guiado físico o virtual.",
+      "assessment_es": "Identificación funcional de espacios."
+    },
+    {
+      "unit_id": "SHP-402-U02",
+      "title_es": "Tripulación y departamentos",
+      "core_content_es": [
+        "departamentos",
+        "jefaturas",
+        "personal de guardia",
+        "apoyo"
+      ],
+      "practice_es": "Ubicar funciones en un organigrama de nave.",
+      "assessment_es": "Ejercicio de organización."
+    },
+    {
+      "unit_id": "SHP-402-U03",
+      "title_es": "Puente y estaciones",
+      "core_content_es": [
+        "Mando",
+        "Conn",
+        "Operaciones",
+        "Sensores",
+        "Ciencia",
+        "Táctica",
+        "Comunicaciones según era"
+      ],
+      "practice_es": "Visita a puente/simulador y reconocimiento de puestos.",
+      "assessment_es": "Práctica supervisada."
+    },
+    {
+      "unit_id": "SHP-402-U04",
+      "title_es": "Vida cotidiana",
+      "core_content_es": [
+        "alojamientos",
+        "comedores",
+        "recreo",
+        "servicios",
+        "privacidad"
+      ],
+      "practice_es": "Planificar una jornada a bordo.",
+      "assessment_es": "Actividad contextual."
+    },
+    {
+      "unit_id": "SHP-402-U05",
+      "title_es": "Tipos y funciones de naves",
+      "core_content_es": [
+        "exploración",
+        "ciencia",
+        "patrulla",
+        "transporte",
+        "apoyo"
+      ],
+      "practice_es": "Relacionar misión con función de nave sin memorizar catálogos.",
+      "assessment_es": "Caso aplicado."
+    },
+    {
+      "unit_id": "SHP-402-U06",
+      "title_es": "Flujo entre espacios",
+      "core_content_es": [
+        "rutas",
+        "acceso",
+        "zonas restringidas",
+        "movimiento en emergencia"
+      ],
+      "practice_es": "Desplazamiento guiado durante un supuesto.",
+      "assessment_es": "Evaluación práctica."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

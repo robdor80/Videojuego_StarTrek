@@ -1,0 +1,106 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PHY-401",
+  "title_es": "Preparación física I",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 1,
+  "course_type": "physical_readiness",
+  "purpose_es": "Establecer una base funcional y una rutina sostenible adaptada a la biología y contexto del cadete.",
+  "prerequisites": [],
+  "player_knowledge_policy": "character_activity_and_habit_evidence_not_player_fitness_test",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PHY-401-U01",
+      "title_es": "Evaluación funcional inicial",
+      "core_content_es": [
+        "movilidad",
+        "resistencia",
+        "fuerza funcional",
+        "coordinación"
+      ],
+      "practice_es": "Sesión inicial del personaje registrada como evidencia.",
+      "assessment_es": "Comparación con mínimos funcionales individualizados."
+    },
+    {
+      "unit_id": "PHY-401-U02",
+      "title_es": "Movilidad y técnica segura",
+      "core_content_es": [
+        "movilidad",
+        "calentamiento",
+        "técnica",
+        "prevención"
+      ],
+      "practice_es": "Rutina supervisada.",
+      "assessment_es": "Evidencia de ejecución segura."
+    },
+    {
+      "unit_id": "PHY-401-U03",
+      "title_es": "Resistencia básica",
+      "core_content_es": [
+        "capacidad aeróbica",
+        "ritmo",
+        "progresión"
+      ],
+      "practice_es": "Sesiones programadas por calendario.",
+      "assessment_es": "Regularidad y progresión razonable."
+    },
+    {
+      "unit_id": "PHY-401-U04",
+      "title_es": "Fuerza funcional",
+      "core_content_es": [
+        "patrones básicos",
+        "control corporal",
+        "carga progresiva contextual"
+      ],
+      "practice_es": "Entrenamiento supervisado del personaje.",
+      "assessment_es": "Seguridad y consistencia."
+    },
+    {
+      "unit_id": "PHY-401-U05",
+      "title_es": "Recuperación",
+      "core_content_es": [
+        "descanso",
+        "fatiga",
+        "lesión",
+        "adaptación"
+      ],
+      "practice_es": "Elegir recuperación adecuada tras cargas distintas.",
+      "assessment_es": "Decisión contextual."
+    },
+    {
+      "unit_id": "PHY-401-U06",
+      "title_es": "Rutina personal",
+      "core_content_es": [
+        "frecuencia",
+        "sostenibilidad",
+        "hábitos",
+        "compatibilidad académica"
+      ],
+      "practice_es": "Configurar rutina longitudinal.",
+      "assessment_es": "Adherencia y ajuste, no puntuación RPG."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

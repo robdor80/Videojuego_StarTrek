@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "NAV-403",
+  "title_es": "Navegación y astrográfica I",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 3,
+  "course_type": "core",
+  "purpose_es": "Dar una alfabetización espacial suficiente para comprender rutas, posiciones y movimiento de una nave.",
+  "prerequisites": [
+    "SYS-403"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "NAV-403-U01",
+      "title_es": "Mapa estelar y referencias",
+      "core_content_es": [
+        "sistemas",
+        "sectores",
+        "regiones",
+        "cartografía"
+      ],
+      "practice_es": "Localizar destinos en mapa de entrenamiento.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "NAV-403-U02",
+      "title_es": "Coordenadas y posición",
+      "core_content_es": [
+        "referencias",
+        "posición relativa",
+        "vectores conceptuales",
+        "orientación"
+      ],
+      "practice_es": "Interpretar varias posiciones.",
+      "assessment_es": "Ejercicio aplicado."
+    },
+    {
+      "unit_id": "NAV-403-U03",
+      "title_es": "Distancia y tiempo",
+      "core_content_es": [
+        "distancias astronómicas de juego",
+        "ETA",
+        "orden de magnitud",
+        "incertidumbre"
+      ],
+      "practice_es": "Comparar rutas y tiempos dados por el sistema.",
+      "assessment_es": "Problemas básicos."
+    },
+    {
+      "unit_id": "NAV-403-U04",
+      "title_es": "Impulso y warp en navegación",
+      "core_content_es": [
+        "régimen subluz",
+        "régimen warp",
+        "transición",
+        "restricciones"
+      ],
+      "practice_es": "Elegir régimen adecuado en escenarios simples.",
+      "assessment_es": "Caso de decisión."
+    },
+    {
+      "unit_id": "NAV-403-U05",
+      "title_es": "Rutas y peligros",
+      "core_content_es": [
+        "obstáculos",
+        "zonas restringidas",
+        "anomalías",
+        "fronteras"
+      ],
+      "practice_es": "Trazar una ruta segura básica.",
+      "assessment_es": "Práctica de plotting."
+    },
+    {
+      "unit_id": "NAV-403-U06",
+      "title_es": "Ejercicio de astrográfica",
+      "core_content_es": [
+        "origen",
+        "destino",
+        "restricciones",
+        "ETA",
+        "reporte"
+      ],
+      "practice_es": "Preparar y comunicar una ruta básica.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

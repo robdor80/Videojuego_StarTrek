@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PHY-403",
+  "title_es": "Preparación física III",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 3,
+  "course_type": "physical_readiness",
+  "purpose_es": "Cerrar el primer año con una condición funcional sostenible y capacidad de autogestión.",
+  "prerequisites": [
+    "PHY-402"
+  ],
+  "player_knowledge_policy": "character_activity_and_habit_evidence_not_player_fitness_test",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PHY-403-U01",
+      "title_es": "Revisión de progreso",
+      "core_content_es": [
+        "estado inicial",
+        "evidencia acumulada",
+        "cambios"
+      ],
+      "practice_es": "Comparar registros del año.",
+      "assessment_es": "Evaluación descriptiva."
+    },
+    {
+      "unit_id": "PHY-403-U02",
+      "title_es": "Condición funcional",
+      "core_content_es": [
+        "resistencia",
+        "fuerza",
+        "movilidad",
+        "coordinación"
+      ],
+      "practice_es": "Sesión integrada.",
+      "assessment_es": "Adecuación al servicio y biología."
+    },
+    {
+      "unit_id": "PHY-403-U03",
+      "title_es": "Autogestión",
+      "core_content_es": [
+        "planificación",
+        "carga",
+        "recuperación",
+        "señales de riesgo"
+      ],
+      "practice_es": "Diseñar semana realista.",
+      "assessment_es": "Criterio."
+    },
+    {
+      "unit_id": "PHY-403-U04",
+      "title_es": "Entrenamiento bajo carga académica",
+      "core_content_es": [
+        "prioridades",
+        "ajuste",
+        "consistencia"
+      ],
+      "practice_es": "Adaptar rutina durante exámenes.",
+      "assessment_es": "Decisión contextual."
+    },
+    {
+      "unit_id": "PHY-403-U05",
+      "title_es": "Actividad personal y Academia",
+      "core_content_es": [
+        "aficiones",
+        "evidencia",
+        "separación de currículo",
+        "transferencia"
+      ],
+      "practice_es": "Registrar actividad personal sin convertirla en nota de PHY.",
+      "assessment_es": "Corrección de registro."
+    },
+    {
+      "unit_id": "PHY-403-U06",
+      "title_es": "Cierre anual",
+      "core_content_es": [
+        "continuidad futura",
+        "hábitos",
+        "áreas de mejora"
+      ],
+      "practice_es": "Plan longitudinal para 3.ª clase.",
+      "assessment_es": "Apto / apoyo recomendado, sin XP."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

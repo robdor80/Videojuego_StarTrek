@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "INF-401",
+  "title_es": "Sistemas de información Starfleet",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Dar al cadete autonomía básica para consultar, registrar y manejar información autorizada.",
+  "prerequisites": [],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "INF-401-U01",
+      "title_es": "Computadora y terminales",
+      "core_content_es": [
+        "servicio de computadora",
+        "terminales",
+        "interfaces de era",
+        "consultas autorizadas"
+      ],
+      "practice_es": "Realizar consultas simples al sistema.",
+      "assessment_es": "Práctica guiada."
+    },
+    {
+      "unit_id": "INF-401-U02",
+      "title_es": "PADD y flujo personal",
+      "core_content_es": [
+        "documentos",
+        "material académico",
+        "anotaciones",
+        "sincronización contextual"
+      ],
+      "practice_es": "Abrir, consultar y entregar material académico.",
+      "assessment_es": "Tarea práctica."
+    },
+    {
+      "unit_id": "INF-401-U03",
+      "title_es": "Identidad y acceso",
+      "core_content_es": [
+        "perfil",
+        "autenticación",
+        "niveles de acceso",
+        "principio de mínimo acceso"
+      ],
+      "practice_es": "Intentar accesos válidos e inválidos en entorno de entrenamiento.",
+      "assessment_es": "Evaluación práctica de permisos."
+    },
+    {
+      "unit_id": "INF-401-U04",
+      "title_es": "Búsqueda de información",
+      "core_content_es": [
+        "consulta",
+        "filtros",
+        "fuentes",
+        "resultado frente a interpretación"
+      ],
+      "practice_es": "Encontrar información concreta sin pedir al sistema que invente respuesta.",
+      "assessment_es": "Práctica de búsqueda."
+    },
+    {
+      "unit_id": "INF-401-U05",
+      "title_es": "Registros y trazabilidad",
+      "core_content_es": [
+        "registros académicos",
+        "logs",
+        "autoría",
+        "marca temporal"
+      ],
+      "practice_es": "Crear y consultar un registro permitido.",
+      "assessment_es": "Comprobación práctica."
+    },
+    {
+      "unit_id": "INF-401-U06",
+      "title_es": "Privacidad y uso responsable",
+      "core_content_es": [
+        "datos personales",
+        "restricciones",
+        "uso indebido",
+        "auditoría"
+      ],
+      "practice_es": "Resolver casos de acceso por curiosidad frente a necesidad de servicio.",
+      "assessment_es": "Caso de juicio."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

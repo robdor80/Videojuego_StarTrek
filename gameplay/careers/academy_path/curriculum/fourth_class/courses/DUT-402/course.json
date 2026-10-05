@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "DUT-402",
+  "title_es": "Servicio, guardias y trabajo profesional",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Introducir la disciplina cotidiana del servicio y la continuidad de una guardia.",
+  "prerequisites": [
+    "STF-401",
+    "SHP-402"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "DUT-402-U01",
+      "title_es": "Qué es una guardia",
+      "core_content_es": [
+        "turno",
+        "puesto",
+        "responsabilidad",
+        "supervisión"
+      ],
+      "practice_es": "Leer una asignación de guardia.",
+      "assessment_es": "Comprobación práctica."
+    },
+    {
+      "unit_id": "DUT-402-U02",
+      "title_es": "Presentación al puesto",
+      "core_content_es": [
+        "puntualidad",
+        "estado personal",
+        "briefing",
+        "órdenes vigentes"
+      ],
+      "practice_es": "Escena de incorporación.",
+      "assessment_es": "Disciplina y comunicación."
+    },
+    {
+      "unit_id": "DUT-402-U03",
+      "title_es": "Relevo",
+      "core_content_es": [
+        "entrega/recepción",
+        "estado del puesto",
+        "pendientes",
+        "incidencias"
+      ],
+      "practice_es": "Realizar un relevo básico.",
+      "assessment_es": "Checklist evaluada."
+    },
+    {
+      "unit_id": "DUT-402-U04",
+      "title_es": "Informes básicos",
+      "core_content_es": [
+        "qué informar",
+        "a quién",
+        "claridad",
+        "confirmación"
+      ],
+      "practice_es": "Emitir un informe breve.",
+      "assessment_es": "Evaluación de precisión y brevedad."
+    },
+    {
+      "unit_id": "DUT-402-U05",
+      "title_es": "Cadena de responsabilidad",
+      "core_content_es": [
+        "responsable de puesto",
+        "supervisor",
+        "jefe de departamento",
+        "mando"
+      ],
+      "practice_es": "Escalar tres incidencias de distinta gravedad.",
+      "assessment_es": "Caso aplicado."
+    },
+    {
+      "unit_id": "DUT-402-U06",
+      "title_es": "Guardia rutinaria",
+      "core_content_es": [
+        "monitorización",
+        "tareas periódicas",
+        "registro",
+        "fin de turno"
+      ],
+      "practice_es": "Simulación de una guardia sin crisis.",
+      "assessment_es": "Evaluación de constancia y handoff."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

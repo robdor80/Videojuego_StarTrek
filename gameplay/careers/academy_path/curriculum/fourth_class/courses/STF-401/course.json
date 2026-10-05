@@ -1,0 +1,105 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "STF-401",
+  "title_es": "Organización y protocolo de Starfleet",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Dominar la estructura institucional y el protocolo básico necesarios para funcionar como cadete y futuro oficial.",
+  "prerequisites": [],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "STF-401-U01",
+      "title_es": "Starfleet como institución",
+      "core_content_es": [
+        "misión general",
+        "exploración, ciencia, diplomacia, asistencia y defensa",
+        "relación funcional con la Federación"
+      ],
+      "practice_es": "Clasificar situaciones por función institucional sin recurrir a trivia.",
+      "assessment_es": "Preguntas aplicadas y breve caso de misión."
+    },
+    {
+      "unit_id": "STF-401-U02",
+      "title_es": "Rangos y divisas",
+      "core_content_es": [
+        "jerarquía de oficiales",
+        "divisas del estándar del proyecto",
+        "diferencia entre rango y puesto"
+      ],
+      "practice_es": "Identificar rango, puesto y autoridad en ejemplos de tripulación.",
+      "assessment_es": "Reconocimiento y razonamiento de precedencia básica."
+    },
+    {
+      "unit_id": "STF-401-U03",
+      "title_es": "Formas de tratamiento",
+      "core_content_es": [
+        "tratamiento a superiores, iguales y subordinados",
+        "uso de rango y cargo",
+        "contexto formal e informal"
+      ],
+      "practice_es": "Diálogos de presentación, reporte y petición de permiso.",
+      "assessment_es": "Escena breve evaluada por corrección y contexto."
+    },
+    {
+      "unit_id": "STF-401-U04",
+      "title_es": "Cadena de mando",
+      "core_content_es": [
+        "autoridad ordinaria",
+        "sucesión básica",
+        "órdenes válidas",
+        "límites de autoridad"
+      ],
+      "practice_es": "Resolver a quién informar y de quién aceptar una orden en casos simples.",
+      "assessment_es": "Casos de cadena de mando."
+    },
+    {
+      "unit_id": "STF-401-U05",
+      "title_es": "Divisiones, departamentos y puestos",
+      "core_content_es": [
+        "Mando",
+        "Operaciones",
+        "Ciencias",
+        "departamentos y estaciones",
+        "puesto frente a especialidad"
+      ],
+      "practice_es": "Construir el organigrama básico de una nave de ejemplo.",
+      "assessment_es": "Ejercicio de asignación de funciones."
+    },
+    {
+      "unit_id": "STF-401-U06",
+      "title_es": "Protocolo integrado",
+      "core_content_es": [
+        "presentación al servicio",
+        "recepción y acuse de órdenes",
+        "conducta profesional básica"
+      ],
+      "practice_es": "Mini-simulación de llegada a una unidad y primera instrucción.",
+      "assessment_es": "Evaluación integrada de conocimiento, comunicación y disciplina."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

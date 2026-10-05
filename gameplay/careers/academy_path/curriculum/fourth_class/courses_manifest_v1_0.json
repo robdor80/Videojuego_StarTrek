@@ -1,0 +1,25 @@
+{
+  "schema_version": "1.0.0",
+  "cadet_class_id": "cadet_fourth_class",
+  "sequence_year": 1,
+  "status": "unit_design_complete",
+  "course_count": 15,
+  "course_ids": [
+    "STF-401",
+    "FED-401",
+    "ACA-401",
+    "INF-401",
+    "PHY-401",
+    "SHP-402",
+    "DUT-402",
+    "SAF-402",
+    "COM-402",
+    "PHY-402",
+    "SYS-403",
+    "NAV-403",
+    "SCI-403",
+    "ROT-403",
+    "PHY-403"
+  ],
+  "source_rule": "These course JSON files are the academic source for later game, web and PDF derivatives."
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SAF-402",
+  "title_es": "Seguridad y respuesta a emergencias I",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Evitar que un cadete sea un riesgo para sí mismo o para otros durante emergencias comunes.",
+  "prerequisites": [
+    "SHP-402",
+    "DUT-402"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SAF-402-U01",
+      "title_es": "Alertas y señales",
+      "core_content_es": [
+        "estados de alerta",
+        "alarmas locales",
+        "instrucciones",
+        "prioridad"
+      ],
+      "practice_es": "Reconocer y responder a señales de entrenamiento.",
+      "assessment_es": "Prueba práctica."
+    },
+    {
+      "unit_id": "SAF-402-U02",
+      "title_es": "Evacuación y pérdida de presión",
+      "core_content_es": [
+        "sellado",
+        "rutas",
+        "compartimentos",
+        "recuento"
+      ],
+      "practice_es": "Ejercicio de evacuación.",
+      "assessment_es": "Tiempo, seguridad y disciplina."
+    },
+    {
+      "unit_id": "SAF-402-U03",
+      "title_es": "Incendio y ambiente",
+      "core_content_es": [
+        "fuego",
+        "humo",
+        "atmósfera",
+        "aislamiento"
+      ],
+      "practice_es": "Respuesta inicial en simulador.",
+      "assessment_es": "Práctica de procedimiento."
+    },
+    {
+      "unit_id": "SAF-402-U04",
+      "title_es": "Heridos y primera respuesta",
+      "core_content_es": [
+        "seguridad de escena",
+        "aviso médico",
+        "asistencia básica",
+        "no exceder competencia"
+      ],
+      "practice_es": "Atender un supuesto hasta relevo médico.",
+      "assessment_es": "Evaluación práctica."
+    },
+    {
+      "unit_id": "SAF-402-U05",
+      "title_es": "Control de daños: conciencia básica",
+      "core_content_es": [
+        "aislamiento",
+        "prioridades",
+        "riesgo secundario",
+        "cooperación"
+      ],
+      "practice_es": "Apoyar un equipo sin asumir funciones técnicas no cualificadas.",
+      "assessment_es": "Caso práctico."
+    },
+    {
+      "unit_id": "SAF-402-U06",
+      "title_es": "Ejercicio integrado",
+      "core_content_es": [
+        "alarma",
+        "movimiento",
+        "comunicación",
+        "asistencia",
+        "registro"
+      ],
+      "practice_es": "Simulación corta de emergencia.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ROT-403",
+  "title_es": "Rotaciones operativas e integración",
+  "status": "unit_design_complete",
+  "sequence_year": 1,
+  "cadet_class_id": "cadet_fourth_class",
+  "trimester": 3,
+  "course_type": "practical",
+  "purpose_es": "Dar exposición práctica suficiente a las principales áreas profesionales sin seleccionar todavía especialización.",
+  "prerequisites": [
+    "DUT-402",
+    "SYS-403",
+    "NAV-403",
+    "SCI-403"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "ROT-403-U01",
+      "title_es": "Puente y Operaciones",
+      "core_content_es": [
+        "flujo de órdenes",
+        "coordinación",
+        "estaciones"
+      ],
+      "practice_es": "Rotación breve supervisada.",
+      "assessment_es": "Informe de observación y tarea."
+    },
+    {
+      "unit_id": "ROT-403-U02",
+      "title_es": "Ingeniería",
+      "core_content_es": [
+        "estado",
+        "energía",
+        "mantenimiento",
+        "seguridad"
+      ],
+      "practice_es": "Tarea técnica de baja complejidad.",
+      "assessment_es": "Ejecución supervisada."
+    },
+    {
+      "unit_id": "ROT-403-U03",
+      "title_es": "Ciencia y Sensores",
+      "core_content_es": [
+        "medición",
+        "barrido",
+        "interpretación",
+        "reporte"
+      ],
+      "practice_es": "Barrido y entrega de datos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "ROT-403-U04",
+      "title_es": "Navegación y vuelo",
+      "core_content_es": [
+        "plotting",
+        "rumbo",
+        "velocidad",
+        "control"
+      ],
+      "practice_es": "Preparar una ruta en simulador.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "ROT-403-U05",
+      "title_es": "Seguridad y Medicina",
+      "core_content_es": [
+        "protección",
+        "respuesta",
+        "triaje básico",
+        "límites"
+      ],
+      "practice_es": "Dos micro-rotaciones con casos controlados.",
+      "assessment_es": "Evaluación de conducta y seguridad."
+    },
+    {
+      "unit_id": "ROT-403-U06",
+      "title_es": "Reflexión profesional",
+      "core_content_es": [
+        "intereses",
+        "fortalezas",
+        "dificultades",
+        "preguntas"
+      ],
+      "practice_es": "Debrief con instructor.",
+      "assessment_es": "Registro descriptivo; no elección final."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}
