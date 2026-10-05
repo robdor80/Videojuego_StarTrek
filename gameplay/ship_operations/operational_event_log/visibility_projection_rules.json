@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "operational_event_visibility_projection",
+  "status": "fixed",
+  "principle": "An authoritative event may exist without being known to every character or exposed in every operational record.",
+  "visibility_scopes": [
+    "authoritative_internal",
+    "participants",
+    "present_witnesses",
+    "station_log",
+    "department_log",
+    "command_log",
+    "academy_instructor",
+    "investigation_authorized",
+    "service_record_candidate",
+    "public_ship_record"
+  ],
+  "knowledge_channels": [
+    "direct_participation",
+    "direct_observation",
+    "console_or_station_record",
+    "formal_report",
+    "interconsole_transfer",
+    "command_briefing",
+    "academy_supervision",
+    "authorized_review"
+  ],
+  "rules": [
+    "authoritative_internal is not automatically player-visible or NPC-visible.",
+    "Participants may know an event occurred without knowing every referenced payload detail.",
+    "Witness knowledge requires plausible presence, perception or an explicit information channel.",
+    "Formal reports may expose a curated subset rather than the full authoritative event.",
+    "Academy instructors may receive events for supervised exercises when the session grants that authority.",
+    "Service records are derived curated records; they do not mirror every operational event.",
+    "NPC memory must be produced through a valid knowledge path, not by reading the entire event store.",
+    "Classified, private, medical or otherwise restricted data may require additional domain-specific access rules.",
+    "Visibility changes do not mutate the original operational fact; they change who may retrieve or know it."
+  ],
+  "projection_examples": [
+    {
+      "event_type": "ACTION_STARTED",
+      "example": "Cadet begins a sensor scan in a supervised simulator.",
+      "likely_visibility": [
+        "participants",
+        "station_log",
+        "academy_instructor"
+      ]
+    },
+    {
+      "event_type": "REPORT_MADE",
+      "example": "Sensor officer reports two unidentified contacts to command.",
+      "likely_visibility": [
+        "participants",
+        "present_witnesses",
+        "command_log"
+      ]
+    },
+    {
+      "event_type": "RESULT_CREATED",
+      "example": "A raw sensor result is created.",
+      "likely_visibility": [
+        "station_log"
+      ],
+      "note": "The result itself remains governed by the sensor result record and ship knowledge rules."
+    }
+  ]
+}
