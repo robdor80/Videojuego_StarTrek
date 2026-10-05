@@ -1,194 +1,424 @@
 # PHY-402 — Preparación física II
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 2**
 
 ## Finalidad
 
-Consolidar la rutina física y añadir trabajo funcional y cooperativo.
+Consolidar la rutina física iniciada en PHY-401 y añadir trabajo funcional, cooperativo y contextual.
 
-## Cómo estudiar esta asignatura
+PHY-402 sigue la misma filosofía: el jugador decide prioridades y rutina; el personaje realiza físicamente la actividad dentro del calendario; el sistema observa evidencia longitudinal de continuidad, carga, recuperación, seguridad y adaptación.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## PHY-402-U01 — Continuidad y carga
+# PHY-402-U01 — Continuidad y carga
 
-### Qué debes dominar
+## 1. La continuidad importa más que un día espectacular
 
-- **frecuencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **progresión**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **adaptación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+La preparación física mejora cuando existe una relación sostenible entre:
 
-### Aplicación operativa
+- frecuencia;
+- carga;
+- recuperación;
+- tiempo.
 
-Mantener calendario de entrenamiento. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Una sesión extraordinaria no compensa una rutina incoherente.
 
-### Qué se evalúa
+## 2. Frecuencia
 
-Evidencia longitudinal. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Frecuencia significa cuántas veces se repite una actividad o estímulo en un periodo.
 
-### Errores frecuentes
+Demasiado poco puede limitar adaptación.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Demasiado, sin recuperación suficiente, puede acumular fatiga.
 
-### Autoevaluación
+## 3. Progresión
 
-1. Explica con tus palabras qué significa **frecuencia** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **frecuencia** y **progresión**?
-3. Resuelve de forma razonada esta práctica: *Mantener calendario de entrenamiento.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+Progresar no significa subir siempre la intensidad.
 
-## PHY-402-U02 — Resistencia aplicada
+Puede aumentar:
 
-### Qué debes dominar
+- duración;
+- complejidad;
+- resistencia;
+- densidad de trabajo;
+- autonomía;
+- especificidad.
 
-- **esfuerzo sostenido**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **recuperación**: La preparación física se trata como un proceso longitudinal. Carga, descanso, lesiones y recuperación modifican el estado del personaje; no existen bonificaciones instantáneas por completar una sesión.
-- **ritmo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Adaptación
 
-### Aplicación operativa
+La adaptación es longitudinal.
 
-Sesión funcional del personaje. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+El sistema debe diferenciar:
 
-### Qué se evalúa
+- rendimiento puntual;
+- capacidad acumulada;
+- experiencia previa;
+- estado de recuperación.
 
-Progresión individual. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 5. Carga contextual
 
-### Errores frecuentes
+Una semana con simulaciones, exámenes o poco sueño puede requerir ajustar el entrenamiento.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La mejor sesión no siempre es la más dura.
 
-### Autoevaluación
+### Práctica
 
-1. Explica con tus palabras qué significa **esfuerzo sostenido** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **esfuerzo sostenido** y **recuperación**?
-3. Resuelve de forma razonada esta práctica: *Sesión funcional del personaje.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
-
-## PHY-402-U03 — Fuerza y coordinación
-
-### Qué debes dominar
-
-- **fuerza funcional**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **equilibrio**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **coordinación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Circuito supervisado. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Ejecución segura. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Mantén un calendario de entrenamiento durante varias semanas y ajusta la carga cuando cambie la carga académica.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **fuerza funcional** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **fuerza funcional** y **equilibrio**?
-3. Resuelve de forma razonada esta práctica: *Circuito supervisado.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Por qué continuidad importa más que una sesión espectacular?
+2. ¿Qué significa frecuencia?
+3. ¿De qué formas puede progresar una tarea?
+4. ¿Qué diferencia existe entre rendimiento puntual y adaptación?
+5. ¿Por qué la mejor sesión no siempre es la más dura?
 
-## PHY-402-U04 — Trabajo en equipo
+---
 
-### Qué debes dominar
+# PHY-402-U02 — Resistencia aplicada
 
-- **cooperación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **ritmo de grupo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **seguridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. De la base a la función
 
-### Aplicación operativa
+PHY-401 introdujo resistencia básica.
 
-Actividad colectiva. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+PHY-402 la aplica a tareas donde el personaje debe sostener esfuerzo con control.
 
-### Qué se evalúa
+## 2. Esfuerzo sostenido
 
-Teamwork y disciplina. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Puede incluir:
 
-### Errores frecuentes
+- desplazamientos;
+- circuito funcional;
+- actividad prolongada;
+- tareas repetidas;
+- entrenamiento de campo.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+La forma exacta depende de biología y contexto.
 
-### Autoevaluación
+## 3. Ritmo
 
-1. Explica con tus palabras qué significa **cooperación** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **cooperación** y **ritmo de grupo**?
-3. Resuelve de forma razonada esta práctica: *Actividad colectiva.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+El personaje debe aprender a distribuir esfuerzo.
 
-## PHY-402-U05 — Actividad acuática o equivalente
+Un inicio demasiado intenso puede:
 
-### Qué debes dominar
+- empeorar técnica;
+- aumentar fatiga;
+- obligar a abandonar;
+- comprometer recuperación.
 
-- **seguridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **adaptación fisiológica**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **capacidad funcional**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Recuperación entre esfuerzos
 
-### Aplicación operativa
+La capacidad de recuperarse entre bloques también importa.
 
-Sesión adaptada a especie/contexto. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No se mide solo “cuánto aguanta”, sino cómo vuelve a un estado funcional.
 
-### Qué se evalúa
+## 5. Progreso individual
 
-Competencia funcional, no comparación interespecies. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+La comparación principal es con:
 
-### Errores frecuentes
+- punto de partida;
+- historial;
+- condición actual;
+- demandas razonables.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+No con el cadete biológicamente más capaz.
 
-### Autoevaluación
+### Práctica
 
-1. Explica con tus palabras qué significa **seguridad** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **seguridad** y **adaptación fisiológica**?
-3. Resuelve de forma razonada esta práctica: *Sesión adaptada a especie/contexto.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
-
-## PHY-402-U06 — Revisión de rutina
-
-### Qué debes dominar
-
-- **fatiga**: La preparación física se trata como un proceso longitudinal. Carga, descanso, lesiones y recuperación modifican el estado del personaje; no existen bonificaciones instantáneas por completar una sesión.
-- **estudio**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **descanso**: Los sensores producen mediciones y contactos; no sustituyen la interpretación científica. La formación separa siempre detección, calidad de la lectura, seguimiento y análisis para que el jugador no trate una lectura como una verdad ya interpretada.
-- **ajuste**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Modificar rutina ante carga académica. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Criterio y sostenibilidad. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Completa una sesión de esfuerzo sostenido y revisa si el ritmo permitió mantener técnica y recuperación.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **fatiga** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **fatiga** y **estudio**?
-3. Resuelve de forma razonada esta práctica: *Modificar rutina ante carga académica.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué significa resistencia aplicada?
+2. ¿Por qué importa distribuir el esfuerzo?
+3. ¿Qué puede ocurrir si se sale demasiado rápido?
+4. ¿Por qué importa la recuperación entre bloques?
+5. ¿Con qué se compara el progreso individual?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# PHY-402-U03 — Fuerza y coordinación
 
-## Tratamiento por era
+## 1. Integrar capacidades
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Fuerza y coordinación se trabajan juntas porque en una tarea real no basta con producir fuerza.
+
+Hay que aplicarla:
+
+- en la dirección correcta;
+- en el momento adecuado;
+- con equilibrio;
+- con control.
+
+## 2. Equilibrio
+
+El equilibrio ayuda a:
+
+- estabilizarse;
+- cambiar dirección;
+- trabajar en superficies difíciles;
+- controlar el cuerpo bajo carga.
+
+## 3. Coordinación
+
+Coordinar significa organizar movimientos de forma eficiente.
+
+Puede afectar:
+
+- desplazamientos;
+- manipulación de equipo;
+- circuitos;
+- trabajo cooperativo.
+
+## 4. Circuito supervisado
+
+Un circuito puede combinar estaciones con:
+
+- empuje;
+- tracción;
+- transporte;
+- desplazamiento;
+- estabilidad;
+- coordinación.
+
+El objetivo es calidad sostenida.
+
+## 5. Ejecución segura
+
+La evaluación observa:
+
+- técnica;
+- control;
+- fatiga;
+- respuesta a correcciones;
+- capacidad de detenerse cuando el riesgo aumenta.
+
+### Práctica
+
+Circuito supervisado que combine fuerza funcional, equilibrio y coordinación.
+
+### Autoevaluación
+
+1. ¿Por qué fuerza y coordinación se trabajan juntas?
+2. ¿Qué funciones cumple el equilibrio?
+3. ¿Qué significa coordinar movimiento?
+4. ¿Qué puede incluir un circuito funcional?
+5. ¿Qué señales indican que debe reducirse o detenerse una tarea?
+
+---
+
+# PHY-402-U04 — Trabajo en equipo
+
+## 1. El rendimiento del grupo no es la suma de máximos individuales
+
+Una actividad colectiva necesita sincronización.
+
+Puede exigir:
+
+- adaptar ritmo;
+- compartir carga;
+- comunicar fatiga;
+- respetar roles;
+- mantener seguridad.
+
+## 2. Ritmo de grupo
+
+El grupo debe elegir un ritmo que permita completar la tarea sin dejar atrás a quien necesita apoyo ni convertir la actividad en una competición innecesaria.
+
+## 3. Cooperación
+
+Cooperar puede significar:
+
+- repartir peso;
+- alternar esfuerzo;
+- guiar;
+- asegurar;
+- informar;
+- modificar plan.
+
+## 4. Seguridad compartida
+
+Cada participante debe atender:
+
+- su propio estado;
+- el de compañeros;
+- el entorno;
+- las instrucciones.
+
+Ignorar una señal de problema porque “el grupo va bien” no es buen trabajo en equipo.
+
+## 5. Disciplina
+
+En una actividad colectiva se evalúa también:
+
+- escucha;
+- comunicación;
+- cumplimiento;
+- respuesta a cambios.
+
+### Práctica
+
+Actividad colectiva con carga compartida y objetivo común.
+
+### Autoevaluación
+
+1. ¿Qué significa ritmo de grupo?
+2. ¿Por qué el rendimiento del grupo no es solo la suma de máximos individuales?
+3. Nombra tres formas de cooperación.
+4. ¿Qué significa seguridad compartida?
+5. ¿Qué conductas se observan además del rendimiento físico?
+
+---
+
+# PHY-402-U05 — Actividad acuática o equivalente
+
+## 1. No todas las especies ni todos los contextos son iguales
+
+La actividad acuática es una opción de entrenamiento, no una prueba universal idéntica.
+
+Si el agua no es apropiada para una especie o contexto, se utiliza una actividad funcional equivalente.
+
+## 2. Seguridad
+
+Antes de la sesión deben considerarse:
+
+- capacidad previa;
+- entorno;
+- supervisión;
+- equipo;
+- riesgos específicos;
+- adaptación fisiológica.
+
+## 3. Adaptación fisiológica
+
+La respuesta al agua, temperatura, presión o flotabilidad puede variar entre especies.
+
+El proyecto no presupone que el estándar humano sea universal.
+
+## 4. Capacidad funcional
+
+La evaluación busca:
+
+- desenvolverse con seguridad;
+- seguir instrucciones;
+- mantener control;
+- completar una tarea adecuada.
+
+No comparar tiempos brutos entre especies incompatibles.
+
+## 5. Equivalencia
+
+Cuando una actividad se sustituye, debe entrenar una capacidad razonablemente comparable.
+
+No se trata de hacer “algo cualquiera” para marcar asistencia.
+
+### Práctica
+
+Sesión acuática o equivalente adaptada a la especie y contexto del personaje.
+
+### Autoevaluación
+
+1. ¿Por qué la actividad acuática no es universal?
+2. ¿Qué factores deben revisarse antes de la sesión?
+3. ¿Qué significa adaptación fisiológica?
+4. ¿Qué se evalúa principalmente?
+5. ¿Qué debe conservar una actividad equivalente?
+
+---
+
+# PHY-402-U06 — Revisión de rutina
+
+## 1. Una rutina útil debe poder cambiar
+
+La vida académica no es constante.
+
+Puede aumentar:
+
+- estudio;
+- simulación;
+- guardias;
+- estrés;
+- fatiga.
+
+La rutina debe adaptarse sin desaparecer por completo.
+
+## 2. Fatiga
+
+Si la fatiga aumenta, puede ser necesario reducir:
+
+- intensidad;
+- duración;
+- frecuencia;
+- complejidad.
+
+El ajuste no significa “perder progreso”.
+
+## 3. Estudio
+
+Una semana de exámenes puede requerir priorizar tiempo mental y descanso.
+
+Reducir temporalmente el entrenamiento puede ser una decisión razonable.
+
+## 4. Descanso
+
+El descanso compite por tiempo con otras actividades, pero no debe tratarse como tiempo desperdiciado.
+
+Sin recuperación, el entrenamiento puede dejar de ser productivo.
+
+## 5. Ajuste consciente
+
+El cadete debe revisar:
+
+- qué está funcionando;
+- qué genera fatiga excesiva;
+- qué obligaciones han cambiado;
+- qué puede mantenerse;
+- qué conviene modificar.
+
+### Práctica
+
+Modifica una rutina realista cuando aparece una semana de alta carga académica.
+
+### Autoevaluación
+
+1. ¿Por qué una rutina debe poder cambiar?
+2. ¿Qué variables pueden reducirse ante fatiga?
+3. ¿Reducir temporalmente entrenamiento significa perder todo progreso?
+4. ¿Por qué el descanso no es tiempo desperdiciado?
+5. ¿Qué preguntas ayudan a revisar una rutina?
+
+---
+
+# Evaluación del curso
+
+PHY-402 evalúa:
+
+- continuidad;
+- adaptación;
+- seguridad;
+- trabajo en equipo;
+- gestión de carga;
+- criterio para ajustar la rutina.
+
+No exige al jugador realizar actividad física real.
+
+# Tratamiento por especie y contexto
+
+Las actividades y mínimos se adaptan.
+
+La evaluación no compara directamente:
+
+- fuerza bruta;
+- tiempos;
+- tolerancia fisiológica
+
+entre especies con capacidades distintas.
+
+# Referencias internas
+
+- `gameplay/characters/wellbeing/README.md`
+- `gameplay/characters/wellbeing/activity_effect_contract.json`
+- `gameplay/characters/wellbeing/habit_formation_rules.json`
+- `gameplay/characters/development/development_rules.md`
+- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`
