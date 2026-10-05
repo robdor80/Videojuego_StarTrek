@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0.0",
+  "cadet_class_id": "cadet_third_class",
+  "sequence_year": 2,
+  "status": "unit_design_complete",
+  "course_count": 15,
+  "course_ids": [
+    "OPS-301",
+    "NAV-301",
+    "SEN-301",
+    "ENG-301",
+    "PRO-301",
+    "REG-302",
+    "XEN-302",
+    "MED-302",
+    "SEC-302",
+    "FLD-302",
+    "SIM-303",
+    "LDR-303",
+    "BRN-303",
+    "JDG-303",
+    "CAR-303"
+  ],
+  "specialization_selection": "required_by_end_of_trimester_3",
+  "source_rule": "Course JSON is the academic source for game, web and PDF derivatives."
+}

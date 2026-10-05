@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "LDR-303",
+  "title_es": "Liderazgo y responsabilidad I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 3,
+  "course_type": "core",
+  "purpose_es": "Introducir liderazgo como responsabilidad por personas, tareas y comunicación, no como autoridad ornamental.",
+  "prerequisites": [
+    "PRO-301",
+    "SIM-303"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "LDR-303-U01",
+      "title_es": "Responsabilidad",
+      "core_content_es": [
+        "tarea",
+        "equipo",
+        "resultado",
+        "rendición de cuentas"
+      ],
+      "practice_es": "Aceptar y definir una responsabilidad.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "LDR-303-U02",
+      "title_es": "Dar instrucciones",
+      "core_content_es": [
+        "claridad",
+        "intención",
+        "confirmación",
+        "límites"
+      ],
+      "practice_es": "Dirigir tarea breve.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "LDR-303-U03",
+      "title_es": "Delegar",
+      "core_content_es": [
+        "capacidad",
+        "carga",
+        "seguimiento",
+        "confianza"
+      ],
+      "practice_es": "Repartir trabajo en equipo.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "LDR-303-U04",
+      "title_es": "Corregir errores",
+      "core_content_es": [
+        "hecho",
+        "riesgo",
+        "feedback",
+        "escalado"
+      ],
+      "practice_es": "Responder a error de compañero.",
+      "assessment_es": "Escena."
+    },
+    {
+      "unit_id": "LDR-303-U05",
+      "title_es": "Conflicto y presión",
+      "core_content_es": [
+        "desacuerdo",
+        "prioridad",
+        "desescalada",
+        "decisión"
+      ],
+      "practice_es": "Resolver conflicto operativo moderado.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "LDR-303-U06",
+      "title_es": "Liderazgo en simulación",
+      "core_content_es": [
+        "briefing",
+        "ejecución",
+        "cierre",
+        "debrief"
+      ],
+      "practice_es": "Liderar equipo pequeño.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

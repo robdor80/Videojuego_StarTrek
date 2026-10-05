@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SIM-303",
+  "title_es": "Operaciones integradas y simulación I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 3,
+  "course_type": "simulation",
+  "purpose_es": "Unir conocimientos de dos años en misiones multiestación con consecuencias y debrief.",
+  "prerequisites": [
+    "OPS-301",
+    "PRO-301",
+    "FLD-302"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SIM-303-U01",
+      "title_es": "Briefing y preparación",
+      "core_content_es": [
+        "misión",
+        "roles",
+        "información conocida",
+        "restricciones"
+      ],
+      "practice_es": "Preparar equipo.",
+      "assessment_es": "Evaluación de preparación."
+    },
+    {
+      "unit_id": "SIM-303-U02",
+      "title_es": "Operación normal",
+      "core_content_es": [
+        "guardia",
+        "coordinación",
+        "ritmo",
+        "registro"
+      ],
+      "practice_es": "Fase rutinaria de misión.",
+      "assessment_es": "Observación continua."
+    },
+    {
+      "unit_id": "SIM-303-U03",
+      "title_es": "Evento inesperado",
+      "core_content_es": [
+        "detección",
+        "informe",
+        "priorización",
+        "adaptación"
+      ],
+      "practice_es": "Responder sin guion paso a paso.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "SIM-303-U04",
+      "title_es": "Interacción entre departamentos",
+      "core_content_es": [
+        "dependencias",
+        "handoff",
+        "conflictos"
+      ],
+      "practice_es": "Coordinar solución.",
+      "assessment_es": "Teamwork."
+    },
+    {
+      "unit_id": "SIM-303-U05",
+      "title_es": "Cierre de misión",
+      "core_content_es": [
+        "resultado",
+        "seguridad",
+        "retorno",
+        "logs"
+      ],
+      "practice_es": "Cerrar operación.",
+      "assessment_es": "Evaluación práctica."
+    },
+    {
+      "unit_id": "SIM-303-U06",
+      "title_es": "Debrief",
+      "core_content_es": [
+        "hechos",
+        "decisiones",
+        "alternativas",
+        "aprendizaje"
+      ],
+      "practice_es": "Debrief con instructor.",
+      "assessment_es": "Evaluación descriptiva."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

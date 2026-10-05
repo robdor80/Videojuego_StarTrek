@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "NAV-301",
+  "title_es": "Navegación y control de vuelo I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Pasar de entender rutas a operar navegación y vuelo básico bajo supervisión.",
+  "prerequisites": [
+    "NAV-403",
+    "OPS-301"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "NAV-301-U01",
+      "title_es": "Estación de vuelo",
+      "core_content_es": [
+        "controles",
+        "rumbo",
+        "velocidad",
+        "estado de propulsión"
+      ],
+      "practice_es": "Familiarización con consola real/simulada.",
+      "assessment_es": "Prueba de manejo básico."
+    },
+    {
+      "unit_id": "NAV-301-U02",
+      "title_es": "Plotting operativo",
+      "core_content_es": [
+        "origen",
+        "destino",
+        "waypoints",
+        "restricciones",
+        "ETA"
+      ],
+      "practice_es": "Preparar un plan de vuelo.",
+      "assessment_es": "Evaluación de ruta."
+    },
+    {
+      "unit_id": "NAV-301-U03",
+      "title_es": "Maniobra a impulso",
+      "core_content_es": [
+        "cambios de rumbo",
+        "velocidad",
+        "aproximación",
+        "separación"
+      ],
+      "practice_es": "Ejecutar maniobras básicas.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "NAV-301-U04",
+      "title_es": "Curso warp",
+      "core_content_es": [
+        "selección de ruta",
+        "entrada/salida",
+        "restricciones",
+        "monitorización"
+      ],
+      "practice_es": "Preparar y ejecutar salto supervisado.",
+      "assessment_es": "Evaluación procedural."
+    },
+    {
+      "unit_id": "NAV-301-U05",
+      "title_es": "Aproximación y órbita",
+      "core_content_es": [
+        "interceptación",
+        "órbita",
+        "acoplamiento como contexto",
+        "márgenes"
+      ],
+      "practice_es": "Simulación de llegada.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "NAV-301-U06",
+      "title_es": "Anomalías de navegación",
+      "core_content_es": [
+        "desviación",
+        "obstáculos",
+        "datos incompletos",
+        "abort"
+      ],
+      "practice_es": "Resolver una desviación de ruta.",
+      "assessment_es": "Caso de juicio."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

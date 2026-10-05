@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "JDG-303",
+  "title_es": "Juicio operativo, informes y debriefing",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 3,
+  "course_type": "core",
+  "purpose_es": "Enseñar a valorar decisiones por la información disponible en el momento y a documentarlas profesionalmente.",
+  "prerequisites": [
+    "SIM-303",
+    "LDR-303"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "JDG-303-U01",
+      "title_es": "Hechos, inferencias y supuestos",
+      "core_content_es": [
+        "evidencia",
+        "hipótesis",
+        "sesgo",
+        "incertidumbre"
+      ],
+      "practice_es": "Separar capas en un caso.",
+      "assessment_es": "Ejercicio."
+    },
+    {
+      "unit_id": "JDG-303-U02",
+      "title_es": "Riesgo y prioridad",
+      "core_content_es": [
+        "probabilidad contextual",
+        "impacto",
+        "urgencia",
+        "reversibilidad"
+      ],
+      "practice_es": "Comparar cursos de acción.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "JDG-303-U03",
+      "title_es": "Decisión bajo información incompleta",
+      "core_content_es": [
+        "umbral",
+        "consulta",
+        "acción",
+        "espera"
+      ],
+      "practice_es": "Resolver escenario con datos parciales.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "JDG-303-U04",
+      "title_es": "Informe operativo",
+      "core_content_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "pendientes"
+      ],
+      "practice_es": "Redactar informe breve.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "JDG-303-U05",
+      "title_es": "Debrief profesional",
+      "core_content_es": [
+        "responsabilidad",
+        "no hindsight bias",
+        "alternativas",
+        "lecciones"
+      ],
+      "practice_es": "Debrief oral.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "JDG-303-U06",
+      "title_es": "Caso integrado",
+      "core_content_es": [
+        "situación",
+        "decisión",
+        "consecuencia",
+        "documentación"
+      ],
+      "practice_es": "Analizar una simulación completa.",
+      "assessment_es": "Evaluación final."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

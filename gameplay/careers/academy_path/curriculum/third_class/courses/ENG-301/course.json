@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "ENG-301",
+  "title_es": "Ingeniería y gestión de energía I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Comprender y operar de forma supervisada los fundamentos de energía y sistemas de nave.",
+  "prerequisites": [
+    "SYS-403",
+    "SAF-402"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "ENG-301-U01",
+      "title_es": "Producción y reservas",
+      "core_content_es": [
+        "fuentes",
+        "reservas",
+        "consumo",
+        "margen"
+      ],
+      "practice_es": "Leer estado energético.",
+      "assessment_es": "Preguntas aplicadas."
+    },
+    {
+      "unit_id": "ENG-301-U02",
+      "title_es": "Distribución de energía",
+      "core_content_es": [
+        "prioridades",
+        "rutas",
+        "cargas",
+        "aislamiento"
+      ],
+      "practice_es": "Asignar energía en escenario simple.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "ENG-301-U03",
+      "title_es": "Propulsión y energía",
+      "core_content_es": [
+        "impulso",
+        "warp",
+        "demanda",
+        "limitaciones"
+      ],
+      "practice_es": "Relacionar orden de vuelo con capacidad técnica.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "ENG-301-U04",
+      "title_es": "Dependencias de sistemas",
+      "core_content_es": [
+        "sensores",
+        "escudos",
+        "transportadores",
+        "soporte vital"
+      ],
+      "practice_es": "Trazar dependencias.",
+      "assessment_es": "Evaluación de razonamiento."
+    },
+    {
+      "unit_id": "ENG-301-U05",
+      "title_es": "Mantenimiento y diagnóstico básico",
+      "core_content_es": [
+        "síntoma",
+        "lectura",
+        "causa probable",
+        "escalado"
+      ],
+      "practice_es": "Diagnosticar fallo preparado.",
+      "assessment_es": "Práctica supervisada."
+    },
+    {
+      "unit_id": "ENG-301-U06",
+      "title_es": "Informe de Ingeniería",
+      "core_content_es": [
+        "estado",
+        "capacidad",
+        "riesgo",
+        "ETA técnica"
+      ],
+      "practice_es": "Emitir informe al puente.",
+      "assessment_es": "Evaluación de claridad."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

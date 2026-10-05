@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "FLD-302",
+  "title_es": "Formación de campo I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 2,
+  "course_type": "field",
+  "purpose_es": "Integrar procedimientos, equipo y criterio fuera del entorno controlado de aula/puente.",
+  "prerequisites": [
+    "MED-302",
+    "SEC-302",
+    "XEN-302"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "FLD-302-U01",
+      "title_es": "Preparación de misión",
+      "core_content_es": [
+        "briefing",
+        "roles",
+        "objetivos",
+        "equipo",
+        "abort criteria"
+      ],
+      "practice_es": "Preparar salida de entrenamiento.",
+      "assessment_es": "Evaluación de plan."
+    },
+    {
+      "unit_id": "FLD-302-U02",
+      "title_es": "Movimiento y orientación",
+      "core_content_es": [
+        "mapa",
+        "sensores portátiles",
+        "cohesión",
+        "puntos de reunión"
+      ],
+      "practice_es": "Recorrido de campo.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "FLD-302-U03",
+      "title_es": "Ambiente y protección",
+      "core_content_es": [
+        "atmósfera",
+        "temperatura",
+        "radiación contextual",
+        "trajes"
+      ],
+      "practice_es": "Seleccionar protección adecuada.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "FLD-302-U04",
+      "title_es": "Comunicaciones de campo",
+      "core_content_es": [
+        "check-ins",
+        "pérdida de contacto",
+        "canal",
+        "reporte"
+      ],
+      "practice_es": "Mantener comunicaciones durante ejercicio.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "FLD-302-U05",
+      "title_es": "Incidente de campo",
+      "core_content_es": [
+        "cambio de misión",
+        "herido",
+        "riesgo",
+        "retirada"
+      ],
+      "practice_es": "Resolver incidente controlado.",
+      "assessment_es": "Juicio y teamwork."
+    },
+    {
+      "unit_id": "FLD-302-U06",
+      "title_es": "Extracción y debrief",
+      "core_content_es": [
+        "recuento",
+        "equipo",
+        "handoff",
+        "registro",
+        "lecciones"
+      ],
+      "practice_es": "Cerrar misión y debrief.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

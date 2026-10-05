@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "MED-302",
+  "title_es": "Medicina de emergencia y primeros auxilios",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Permitir que cualquier cadete responda correctamente hasta la llegada de personal médico cualificado.",
+  "prerequisites": [
+    "SAF-402",
+    "COM-402"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "MED-302-U01",
+      "title_es": "Seguridad de escena",
+      "core_content_es": [
+        "riesgo",
+        "protección",
+        "alerta médica",
+        "prioridad"
+      ],
+      "practice_es": "Evaluar escenario antes de intervenir.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "MED-302-U02",
+      "title_es": "Valoración inicial",
+      "core_content_es": [
+        "respuesta",
+        "respiración/circulación contextual",
+        "hemorragia",
+        "dolor",
+        "datos"
+      ],
+      "practice_es": "Valorar paciente simulado.",
+      "assessment_es": "Checklist."
+    },
+    {
+      "unit_id": "MED-302-U03",
+      "title_es": "Triaje básico",
+      "core_content_es": [
+        "prioridad",
+        "múltiples heridos",
+        "recursos"
+      ],
+      "practice_es": "Ordenar atención en supuesto sencillo.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "MED-302-U04",
+      "title_es": "Estabilización básica",
+      "core_content_es": [
+        "hemorragia",
+        "inmovilización contextual",
+        "posición",
+        "monitorización"
+      ],
+      "practice_es": "Aplicar medidas autorizadas.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "MED-302-U05",
+      "title_es": "Equipo médico básico",
+      "core_content_es": [
+        "tricorder médico",
+        "kit",
+        "comunicaciones",
+        "límites"
+      ],
+      "practice_es": "Preparar equipo y obtener datos.",
+      "assessment_es": "Evaluación práctica."
+    },
+    {
+      "unit_id": "MED-302-U06",
+      "title_es": "Handoff a Medicina",
+      "core_content_es": [
+        "estado",
+        "intervenciones",
+        "cambios",
+        "tiempo"
+      ],
+      "practice_es": "Entregar paciente a profesional.",
+      "assessment_es": "Informe evaluado."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

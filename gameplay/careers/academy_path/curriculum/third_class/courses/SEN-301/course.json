@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SEN-301",
+  "title_es": "Sensores y adquisición de situación I",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Operar funciones básicas de sensores y construir una imagen de situación confiable.",
+  "prerequisites": [
+    "SCI-403",
+    "OPS-301"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SEN-301-U01",
+      "title_es": "Estado del sistema",
+      "core_content_es": [
+        "disponibilidad",
+        "canales",
+        "cobertura",
+        "limitaciones"
+      ],
+      "practice_es": "Comprobar estado antes de operar.",
+      "assessment_es": "Checklist práctico."
+    },
+    {
+      "unit_id": "SEN-301-U02",
+      "title_es": "Scans básicos",
+      "core_content_es": [
+        "objetivo",
+        "alcance",
+        "resolución",
+        "resultado"
+      ],
+      "practice_es": "Ejecutar barridos estándar.",
+      "assessment_es": "Evaluación en consola."
+    },
+    {
+      "unit_id": "SEN-301-U03",
+      "title_es": "Búsqueda y localización",
+      "core_content_es": [
+        "zona",
+        "criterios",
+        "patrón",
+        "detección"
+      ],
+      "practice_es": "Buscar una firma conocida.",
+      "assessment_es": "Tiempo y procedimiento."
+    },
+    {
+      "unit_id": "SEN-301-U04",
+      "title_es": "Contactos",
+      "core_content_es": [
+        "creación",
+        "identificación provisional",
+        "actualización",
+        "pérdida"
+      ],
+      "practice_es": "Gestionar varios contactos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "SEN-301-U05",
+      "title_es": "Tracking y readout",
+      "core_content_es": [
+        "seguimiento",
+        "tendencia",
+        "lectura",
+        "calidad"
+      ],
+      "practice_es": "Mantener tracking y emitir readout.",
+      "assessment_es": "Evaluación de precisión."
+    },
+    {
+      "unit_id": "SEN-301-U06",
+      "title_es": "Interferencia básica",
+      "core_content_es": [
+        "ruido",
+        "degradación",
+        "compensación elemental",
+        "límites"
+      ],
+      "practice_es": "Repetir búsqueda con interferencia.",
+      "assessment_es": "Caso práctico."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SEC-302",
+  "title_es": "Seguridad, supervivencia y equipos de salida",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Dar una base común de autoprotección, seguridad operativa y supervivencia sin convertir a todos en especialistas tácticos.",
+  "prerequisites": [
+    "SAF-402",
+    "COM-402",
+    "REG-302"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SEC-302-U01",
+      "title_es": "Conciencia de amenaza",
+      "core_content_es": [
+        "entorno",
+        "personas",
+        "salidas",
+        "cambios",
+        "alerta"
+      ],
+      "practice_es": "Detectar riesgos en escenario.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "SEC-302-U02",
+      "title_es": "Phaser: seguridad y límites",
+      "core_content_es": [
+        "manejo seguro",
+        "autoridad",
+        "escalada",
+        "proporcionalidad"
+      ],
+      "practice_es": "Práctica controlada en simulador.",
+      "assessment_es": "Seguridad y disciplina."
+    },
+    {
+      "unit_id": "SEC-302-U03",
+      "title_es": "Seguridad a bordo",
+      "core_content_es": [
+        "accesos",
+        "zonas restringidas",
+        "incidente",
+        "detención básica contextual"
+      ],
+      "practice_es": "Responder a intrusión simulada.",
+      "assessment_es": "Caso práctico."
+    },
+    {
+      "unit_id": "SEC-302-U04",
+      "title_es": "Equipo de salida",
+      "core_content_es": [
+        "rol",
+        "equipo",
+        "comunicaciones",
+        "responsabilidad"
+      ],
+      "practice_es": "Preparar loadout según misión.",
+      "assessment_es": "Checklist razonada."
+    },
+    {
+      "unit_id": "SEC-302-U05",
+      "title_es": "Supervivencia básica",
+      "core_content_es": [
+        "refugio",
+        "recursos",
+        "orientación",
+        "señalización"
+      ],
+      "practice_es": "Ejercicio de campo.",
+      "assessment_es": "Evaluación práctica."
+    },
+    {
+      "unit_id": "SEC-302-U06",
+      "title_es": "Equipo de salida bajo riesgo",
+      "core_content_es": [
+        "formación",
+        "cobertura",
+        "retirada",
+        "herido"
+      ],
+      "practice_es": "Simulación corta.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

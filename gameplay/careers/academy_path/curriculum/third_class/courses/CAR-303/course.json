@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "CAR-303",
+  "title_es": "Desarrollo profesional y elección de especialización",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 3,
+  "course_type": "career",
+  "purpose_es": "Convertir experiencia, intereses y evidencia en una elección de especialización consciente del jugador.",
+  "prerequisites": [
+    "BRN-303",
+    "JDG-303"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "CAR-303-U01",
+      "title_es": "Perfil académico actual",
+      "core_content_es": [
+        "fortalezas",
+        "carencias",
+        "evidencia",
+        "preferencias"
+      ],
+      "practice_es": "Revisar expediente.",
+      "assessment_es": "Tutoría."
+    },
+    {
+      "unit_id": "CAR-303-U02",
+      "title_es": "Qué exige cada rama",
+      "core_content_es": [
+        "tipo de trabajo",
+        "responsabilidades",
+        "competencias",
+        "estilo de servicio"
+      ],
+      "practice_es": "Comparar ramas con ejemplos.",
+      "assessment_es": "Comprobación de comprensión."
+    },
+    {
+      "unit_id": "CAR-303-U03",
+      "title_es": "Aptitud y preferencia",
+      "core_content_es": [
+        "recomendación",
+        "motivación",
+        "capacidad",
+        "objetivos"
+      ],
+      "practice_es": "Contrastar deseo y evidencia sin bloquear por puntuación oculta.",
+      "assessment_es": "Entrevista."
+    },
+    {
+      "unit_id": "CAR-303-U04",
+      "title_es": "Objetivos de carrera",
+      "core_content_es": [
+        "largo plazo",
+        "medio plazo",
+        "rutas múltiples",
+        "cambio futuro"
+      ],
+      "practice_es": "Actualizar trayectoria.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "CAR-303-U05",
+      "title_es": "Entrevistas de orientación",
+      "core_content_es": [
+        "feedback",
+        "preguntas",
+        "recomendaciones",
+        "apoyos"
+      ],
+      "practice_es": "Hablar con instructores/mentores.",
+      "assessment_es": "Registro cualitativo."
+    },
+    {
+      "unit_id": "CAR-303-U06",
+      "title_es": "Selección final",
+      "core_content_es": [
+        "decisión del jugador",
+        "requisitos objetivos",
+        "consecuencias",
+        "catch-up futuro"
+      ],
+      "practice_es": "Confirmar especialización.",
+      "assessment_es": "Validación de requisitos y registro."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

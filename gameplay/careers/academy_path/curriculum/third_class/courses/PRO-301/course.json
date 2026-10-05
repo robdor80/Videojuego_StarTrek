@@ -1,0 +1,113 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PRO-301",
+  "title_es": "Procedimientos operativos y trabajo interdepartamental",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Convertir acciones aisladas en trabajo coordinado, trazable y profesional.",
+  "prerequisites": [
+    "DUT-402",
+    "COM-402",
+    "OPS-301"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PRO-301-U01",
+      "title_es": "Orden, tarea y responsabilidad",
+      "core_content_es": [
+        "orden",
+        "intención",
+        "responsable",
+        "confirmación"
+      ],
+      "practice_es": "Descomponer una orden en tareas.",
+      "assessment_es": "Ejercicio."
+    },
+    {
+      "unit_id": "PRO-301-U02",
+      "title_es": "Informes estructurados",
+      "core_content_es": [
+        "hechos",
+        "estado",
+        "riesgo",
+        "recomendación"
+      ],
+      "practice_es": "Emitir informes de 30 segundos.",
+      "assessment_es": "Evaluación oral."
+    },
+    {
+      "unit_id": "PRO-301-U03",
+      "title_es": "Handoff interdepartamental",
+      "core_content_es": [
+        "datos necesarios",
+        "formato",
+        "recepción",
+        "confirmación"
+      ],
+      "practice_es": "Transferir un caso entre departamentos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "PRO-301-U04",
+      "title_es": "Prioridades en conflicto",
+      "core_content_es": [
+        "misión",
+        "seguridad",
+        "recursos",
+        "autoridad"
+      ],
+      "practice_es": "Resolver prioridades incompatibles.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "PRO-301-U05",
+      "title_es": "Registro operativo",
+      "core_content_es": [
+        "evento",
+        "hora",
+        "acción",
+        "resultado"
+      ],
+      "practice_es": "Crear entrada de log factual.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "PRO-301-U06",
+      "title_es": "Ejercicio integrado",
+      "core_content_es": [
+        "orden",
+        "coordinación",
+        "reporte",
+        "handoff",
+        "registro"
+      ],
+      "practice_es": "Micro-misión de equipo.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

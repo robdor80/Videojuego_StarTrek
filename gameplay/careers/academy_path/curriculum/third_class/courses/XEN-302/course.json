@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "XEN-302",
+  "title_es": "Relaciones interespecies y contacto",
+  "status": "unit_design_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Trabajar con personas y culturas distintas sin suponer que los patrones humanos son universales.",
+  "prerequisites": [
+    "FED-401",
+    "REG-302"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "XEN-302-U01",
+      "title_es": "Diferencia biológica y cultural",
+      "core_content_es": [
+        "biología",
+        "cultura",
+        "costumbre",
+        "individuo"
+      ],
+      "practice_es": "Separar hechos de estereotipos.",
+      "assessment_es": "Ejercicio."
+    },
+    {
+      "unit_id": "XEN-302-U02",
+      "title_es": "Comunicación intercultural",
+      "core_content_es": [
+        "contexto",
+        "tono",
+        "tabúes",
+        "malentendidos"
+      ],
+      "practice_es": "Escena de conversación.",
+      "assessment_es": "Evaluación de comunicación."
+    },
+    {
+      "unit_id": "XEN-302-U03",
+      "title_es": "Protocolo básico",
+      "core_content_es": [
+        "presentación",
+        "hospitalidad",
+        "símbolos",
+        "espacio personal contextual"
+      ],
+      "practice_es": "Preparar encuentro formal.",
+      "assessment_es": "Caso práctico."
+    },
+    {
+      "unit_id": "XEN-302-U04",
+      "title_es": "Traductor Universal y límites",
+      "core_content_es": [
+        "traducción",
+        "ambigüedad",
+        "conceptos no equivalentes",
+        "fallo"
+      ],
+      "practice_es": "Resolver malentendido de traducción.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "XEN-302-U05",
+      "title_es": "Primer Contacto: fundamentos",
+      "core_content_es": [
+        "observación",
+        "autoridad",
+        "preparación",
+        "riesgo cultural"
+      ],
+      "practice_es": "Planificar fase inicial supervisada.",
+      "assessment_es": "Evaluación de criterio."
+    },
+    {
+      "unit_id": "XEN-302-U06",
+      "title_es": "Diplomacia básica",
+      "core_content_es": [
+        "intereses",
+        "posición",
+        "escucha",
+        "desescalada"
+      ],
+      "practice_es": "Negociación breve controlada.",
+      "assessment_es": "Debrief."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}
