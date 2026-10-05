@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "scientific_domain_definition",
+  "status": "foundation_fixed",
+  "required_fields": [
+    "domain_id",
+    "display_name",
+    "provenance"
+  ],
+  "optional_fields": [
+    "subdomains",
+    "academy_course_refs",
+    "observation_sources",
+    "analysis_capabilities",
+    "required_equipment_refs",
+    "qualification_refs",
+    "known_limitations",
+    "era_validity",
+    "procedural_phenomenon_refs"
+  ],
+  "rules": [
+    "Sensors observe; scientific domains interpret within available evidence.",
+    "Scientific analysis does not reveal hidden world truth without sufficient observations.",
+    "Unknown/novel phenomena may remain uncertain or unclassified.",
+    "AI can explain analysis but cannot manufacture measurements."
+  ]
+}
