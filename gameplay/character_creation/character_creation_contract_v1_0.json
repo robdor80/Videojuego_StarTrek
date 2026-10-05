@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "campaign_character_creation_v1_0",
+  "status": "locked_baseline",
+  "start_order": [
+    "era_and_campaign_date",
+    "player_profile_nickname",
+    "character_draft",
+    "coherence_validation",
+    "character_lock",
+    "academy_access"
+  ],
+  "required_character_fields": [
+    "display_name",
+    "species_id",
+    "age_or_birth_date",
+    "adult_equivalent_status",
+    "origin",
+    "citizenship_context",
+    "culture_context",
+    "appearance_profile",
+    "prior_education",
+    "prior_activities_and_hobbies",
+    "prior_experience",
+    "initial_long_term_objective"
+  ],
+  "optional_character_fields": [
+    "languages",
+    "family_context",
+    "prior_relationship_seeds",
+    "medical_background",
+    "certifications",
+    "interests",
+    "medium_term_objectives"
+  ],
+  "forbidden_creation_mechanics": [
+    "manual_attribute_point_allocation",
+    "global_character_level",
+    "manual_skill_point_allocation",
+    "free_selection_of_expert_capability_without_biographical_evidence"
+  ],
+  "adult_rule": "Player character must be an adult-equivalent for the selected species and campaign context.",
+  "validation_required": true,
+  "validation_contract": "biography_validation_rules",
+  "post_validation_edit_policy": "initial_biography_locked_except_corrections_or_explicit_retcon_workflow",
+  "post_start_growth_policy": "world_events_and_evidence_only"
+}
