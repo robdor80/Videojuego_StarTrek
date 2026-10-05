@@ -1,97 +1,47 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "1.0.0",
   "flow_id": "starfleet_academy_admission",
   "player_facing_locale": "es-ES",
   "purpose": "playable_onboarding",
+  "required_access_curriculum": "starfleet_academy_access_v1_0",
   "stages": [
-    {
-      "id": "eligibility",
-      "display_es": "Comprobación de requisitos",
-      "resolution": "rules"
-    },
-    {
-      "id": "candidate_profile",
-      "display_es": "Perfil del candidato",
-      "resolution": "dialogue_and_background"
-    },
-    {
-      "id": "academic_assessment",
-      "display_es": "Evaluación académica",
-      "resolution": "character_stats_plus_scene_choices"
-    },
-    {
-      "id": "interpersonal_assessment",
-      "display_es": "Evaluación interpersonal",
-      "resolution": "scene_choices"
-    },
-    {
-      "id": "psychological_assessment",
-      "display_es": "Evaluación psicológica",
-      "resolution": "adaptive_scenario"
-    },
-    {
-      "id": "practical_assessment",
-      "display_es": "Evaluación práctica",
-      "resolution": "simulation_or_scene"
-    },
-    {
-      "id": "review",
-      "display_es": "Revisión de candidatura",
-      "resolution": "rules_plus_record"
-    },
-    {
-      "id": "decision",
-      "display_es": "Decisión de admisión",
-      "resolution": "authoritative_rules"
-    }
+    {"id":"eligibility","display_es":"Comprobación de requisitos","resolution":"authoritative_rules"},
+    {"id":"candidate_profile","display_es":"Perfil del candidato","resolution":"validated_character_background"},
+    {"id":"optional_orientation","display_es":"Evaluación de orientación","resolution":"diagnostic_only","consequences":"none"},
+    {"id":"academic_assessment","display_es":"Conocimientos generales","resolution":"access_curriculum_evidence"},
+    {"id":"reasoning_assessment","display_es":"Evaluación de razonamiento","resolution":"rules_plus_player_decisions"},
+    {"id":"interpersonal_assessment","display_es":"Evaluación interpersonal","resolution":"scene_actions_and_group_evidence"},
+    {"id":"psychological_assessment","display_es":"Evaluación psicológica","resolution":"adaptive_scenario"},
+    {"id":"practical_assessment","display_es":"Evaluación práctica","resolution":"general_simulation_or_scene"},
+    {"id":"interview","display_es":"Entrevista final","resolution":"dialogue_grounded_in_candidate_record"},
+    {"id":"review","display_es":"Revisión de candidatura","resolution":"holistic_rules_plus_record"},
+    {"id":"decision","display_es":"Decisión de admisión","resolution":"authoritative_rules"}
   ],
-  "player_knowledge_test_required": false,
+  "player_knowledge_test_required": true,
+  "player_knowledge_scope": "access_curriculum_only",
   "literal_real_world_science_exam_required": false,
+  "professional_academy_knowledge_required": false,
+  "single_percentage_cutoff_for_admission": false,
   "failure_is_automatic_game_over": false,
+  "targeted_reassessment_preferred": true,
   "possible_outcomes": [
     "admitted",
     "admitted_with_support",
     "preparatory_program",
-    "retake_required",
+    "targeted_reassessment",
     "deferred",
     "rejected_for_current_cycle"
   ],
   "era_overrides": {
-    "pike": {
-      "exact_canonical_exam_structure": false,
-      "treatment": "game_addition_consistent_with_era"
-    },
-    "kirk": {
-      "exact_canonical_exam_structure": false,
-      "treatment": "game_addition_consistent_with_era"
-    },
-    "tng_ds9_voyager": {
-      "exact_canonical_exam_structure": true,
-      "non_federation_sponsorship_supported": true,
-      "remote_or_satellite_testing_supported": true,
-      "psych_test_supported": true
-    }
+    "pike": {"exact_canonical_exam_structure":false,"treatment":"game_addition_consistent_with_era"},
+    "kirk": {"exact_canonical_exam_structure":false,"treatment":"game_addition_consistent_with_era"},
+    "tng_ds9_voyager": {"exact_canonical_exam_structure":true,"non_federation_sponsorship_supported":true,"remote_or_satellite_testing_supported":true,"psych_test_supported":true}
   },
   "provenance": [
-    {
-      "source_id": "TNG_COMING_OF_AGE",
-      "confidence": "HIGH"
-    },
-    {
-      "source_id": "DS9_HEART_OF_STONE",
-      "confidence": "HIGH"
-    },
-    {
-      "source_id": "DS9_FACETS",
-      "confidence": "HIGH"
-    },
-    {
-      "source_id": "VOY_IMPERFECTION",
-      "confidence": "HIGH"
-    },
-    {
-      "source_id": "MA_ACADEMY_ENTRANCE_EXAM",
-      "confidence": "HIGH"
-    }
+    {"source_id":"TNG_COMING_OF_AGE","confidence":"HIGH"},
+    {"source_id":"DS9_HEART_OF_STONE","confidence":"HIGH"},
+    {"source_id":"DS9_FACETS","confidence":"HIGH"},
+    {"source_id":"VOY_IMPERFECTION","confidence":"HIGH"},
+    {"source_id":"MA_ACADEMY_ENTRANCE_EXAM","confidence":"HIGH"}
   ]
 }
