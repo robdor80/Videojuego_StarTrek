@@ -49,12 +49,12 @@
     "NAV_403": "synced_developed_content_and_assessment",
     "SCI_403": "synced_developed_content_and_assessment",
     "ROT_403": "synced_developed_content_and_assessment",
-    "PHY_403": "pending_sync_after_main_commit"
+    "PHY_403": "synced_developed_content_and_assessment"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
     "fourth_class_trimester_2_developed",
     "fourth_class_year_1_developed"
   ],
-  "current_milestone": "fourth_class_trimester_2_developed_and_synced"
+  "current_milestone": "fourth_class_year_1_developed_and_synced"
 }
