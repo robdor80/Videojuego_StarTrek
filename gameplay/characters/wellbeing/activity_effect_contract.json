@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "wellbeing_activity_effect",
+  "status": "foundation_fixed",
+  "inputs": [
+    "character_id",
+    "activity_type",
+    "start_time",
+    "duration",
+    "intensity",
+    "location",
+    "participants",
+    "character_preferences",
+    "relationship_context",
+    "duty_context",
+    "acute_state_before",
+    "habit_state_before"
+  ],
+  "activity_families": [
+    "sleep",
+    "quiet_rest",
+    "meal",
+    "exercise",
+    "study",
+    "social_leisure",
+    "solitary_leisure",
+    "holodeck",
+    "creative_activity",
+    "romantic_time",
+    "consensual_intimacy",
+    "duty",
+    "emergency_duty",
+    "travel_or_commute",
+    "medical_recovery"
+  ],
+  "outputs": [
+    "acute_state_contribution",
+    "weekly_pattern_contribution",
+    "monthly_pattern_contribution",
+    "routine_observation_candidate"
+  ],
+  "rules": [
+    "Activity effects depend on context and character preferences rather than fixed universal rewards.",
+    "Duration and intensity matter.",
+    "A socially positive activity may be tiring rather than restorative for some characters.",
+    "Study can advance learning while also consuming time/recovery capacity.",
+    "Emergency duty may be professionally necessary while increasing short-term load.",
+    "Consensual intimacy may contribute to connection/recovery in a positive context but is never modeled as a fixed morale reward.",
+    "No activity instantly cancels long-term accumulated strain."
+  ]
+}
