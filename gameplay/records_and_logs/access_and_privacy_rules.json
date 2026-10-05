@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "records_and_logs_access_privacy",
+  "status": "fixed_foundation",
+  "principles": [
+    "Authentication does not imply authorization.",
+    "Log ownership and log access are separate concepts.",
+    "Rank alone does not grant unrestricted access to private, medical, security or classified records.",
+    "The Starship Computer must enforce access before retrieval, search, playback, transcription or export.",
+    "NPCs do not gain knowledge of a log merely because the record exists."
+  ],
+  "default_access": {
+    "captains_log": [
+      "author",
+      "command_authorized"
+    ],
+    "personal_log": [
+      "owner"
+    ],
+    "department_log": [
+      "department_authorized",
+      "command_authorized"
+    ],
+    "duty_log": [
+      "relevant_duty_personnel",
+      "department_authorized",
+      "command_authorized"
+    ],
+    "medical_log": [
+      "medical_authorized"
+    ],
+    "security_log": [
+      "security_authorized",
+      "command_authorized_when_policy_allows"
+    ],
+    "classified_log": [
+      "explicit_clearance_only"
+    ]
+  },
+  "exception_rules": [
+    "A record may be voluntarily shared by an authorized owner.",
+    "Investigations may grant scoped temporary access through an explicit authority path.",
+    "Emergency access must be domain-authorized, recorded and auditable.",
+    "Death, incapacity, transfer or archival status do not automatically make a private log public.",
+    "Search results must not reveal titles/snippets of inaccessible records unless policy explicitly permits metadata disclosure."
+  ]
+}
