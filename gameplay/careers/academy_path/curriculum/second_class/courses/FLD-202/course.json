@@ -1,0 +1,114 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "FLD-202",
+  "title_es": "Operaciones de campo y EVA II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 2,
+  "course_type": "field",
+  "purpose_es": "Ejecutar operaciones de campo y extravehiculares con mayor autonomía, riesgo y coordinación nave-equipo.",
+  "prerequisites": [
+    "FLD-302",
+    "RSK-202"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "FLD-202-U01",
+      "title_es": "Plan avanzado de salida",
+      "core_content_es": [
+        "objetivos",
+        "amenazas",
+        "equipo",
+        "abort criteria",
+        "reserva"
+      ],
+      "practice_es": "Preparar misión.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "FLD-202-U02",
+      "title_es": "Traje y entorno",
+      "core_content_es": [
+        "integridad",
+        "soporte",
+        "movilidad",
+        "limitaciones"
+      ],
+      "practice_es": "Preparación de equipo ambiental/EVA según era.",
+      "assessment_es": "Checklist."
+    },
+    {
+      "unit_id": "FLD-202-U03",
+      "title_es": "EVA básica operativa",
+      "core_content_es": [
+        "desplazamiento",
+        "anclaje",
+        "comunicación",
+        "orientación"
+      ],
+      "practice_es": "Ejercicio EVA simulado/real autorizado.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "FLD-202-U04",
+      "title_es": "Trabajo técnico/científico exterior",
+      "core_content_es": [
+        "herramientas",
+        "muestras",
+        "reparación contextual",
+        "seguridad"
+      ],
+      "practice_es": "Tarea de rama en exterior.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "FLD-202-U05",
+      "title_es": "Emergencia de campo/EVA",
+      "core_content_es": [
+        "pérdida de contacto",
+        "fallo de equipo",
+        "herido",
+        "extracción"
+      ],
+      "practice_es": "Incidente simulado.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "FLD-202-U06",
+      "title_es": "Coordinación con nave",
+      "core_content_es": [
+        "ventanas",
+        "transportador",
+        "lanzadera",
+        "reporte",
+        "recuperación"
+      ],
+      "practice_es": "Cerrar operación.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

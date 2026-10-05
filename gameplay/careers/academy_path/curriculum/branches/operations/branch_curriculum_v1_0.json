@@ -1,0 +1,282 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "operations",
+  "display_es": "Operaciones",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "OPS-201",
+    "OPS-202",
+    "OPS-203",
+    "OPS-101",
+    "OPS-102B"
+  ],
+  "stages": [
+    {
+      "course_id": "OPS-201",
+      "title_es": "Operaciones II — recursos y sistemas",
+      "units": [
+        {
+          "unit_id": "OPS-201-U01",
+          "title_es": "Gestión de recursos",
+          "core_content_es": [
+            "energía",
+            "tiempo",
+            "capacidad",
+            "prioridad"
+          ],
+          "practice_es": "Asignar recursos.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-201-U02",
+          "title_es": "Coordinación de sistemas",
+          "core_content_es": [
+            "dependencias",
+            "servicios",
+            "peticiones"
+          ],
+          "practice_es": "Gestionar caso.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "OPS-201-U03",
+          "title_es": "Soporte de misión",
+          "core_content_es": [
+            "configuración",
+            "logística",
+            "información"
+          ],
+          "practice_es": "Preparar misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-201-U04",
+          "title_es": "Transportadores y servicios",
+          "core_content_es": [
+            "capacidad",
+            "seguridad",
+            "ventanas",
+            "límites"
+          ],
+          "practice_es": "Caso operativo.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "OPS-202",
+      "title_es": "Operaciones III — carga y contingencia",
+      "units": [
+        {
+          "unit_id": "OPS-202-U01",
+          "title_es": "Logística dinámica",
+          "core_content_es": [
+            "inventario",
+            "personal",
+            "capacidad",
+            "prioridad"
+          ],
+          "practice_es": "Replanificar recursos.",
+          "assessment_es": "Caso."
+        },
+        {
+          "unit_id": "OPS-202-U02",
+          "title_es": "Sistemas degradados",
+          "core_content_es": [
+            "servicio mínimo",
+            "reroute",
+            "coordination"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "OPS-202-U03",
+          "title_es": "Tráfico de solicitudes",
+          "core_content_es": [
+            "colas",
+            "urgencia",
+            "conflictos"
+          ],
+          "practice_es": "Gestionar puesto cargado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-202-U04",
+          "title_es": "Apoyo interdepartamental",
+          "core_content_es": [
+            "ingeniería",
+            "ciencia",
+            "táctica",
+            "médico"
+          ],
+          "practice_es": "Misión integrada.",
+          "assessment_es": "Teamwork."
+        }
+      ]
+    },
+    {
+      "course_id": "OPS-203",
+      "title_es": "Operaciones integradas",
+      "units": [
+        {
+          "unit_id": "OPS-203-U01",
+          "title_es": "Guardia de Operaciones",
+          "core_content_es": [
+            "estado",
+            "peticiones",
+            "registro"
+          ],
+          "practice_es": "Turno supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-203-U02",
+          "title_es": "Configuración de misión",
+          "core_content_es": [
+            "recursos",
+            "sistemas",
+            "plan"
+          ],
+          "practice_es": "Preparar nave.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "OPS-203-U03",
+          "title_es": "Incidente múltiple",
+          "core_content_es": [
+            "priorización",
+            "reroute",
+            "handoff"
+          ],
+          "practice_es": "Resolver escenario.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "OPS-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "consistencia",
+            "seguridad",
+            "comunicación"
+          ],
+          "practice_es": "Evaluación integrada.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "OPS-101",
+      "title_es": "Operaciones avanzadas I",
+      "units": [
+        {
+          "unit_id": "OPS-101-U01",
+          "title_es": "Planificación de recursos",
+          "core_content_es": [
+            "misión",
+            "reserva",
+            "riesgo",
+            "contingencia"
+          ],
+          "practice_es": "Plan completo.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "OPS-101-U02",
+          "title_es": "Supervisión de Ops",
+          "core_content_es": [
+            "equipo",
+            "peticiones",
+            "prioridades"
+          ],
+          "practice_es": "Dirigir turno.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-101-U03",
+          "title_es": "Interfaz con mando",
+          "core_content_es": [
+            "estado",
+            "opciones",
+            "recomendación"
+          ],
+          "practice_es": "Briefing.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-101-U04",
+          "title_es": "Continuidad de servicios",
+          "core_content_es": [
+            "degradación",
+            "restauración",
+            "registro"
+          ],
+          "practice_es": "Caso avanzado.",
+          "assessment_es": "Práctica."
+        }
+      ]
+    },
+    {
+      "course_id": "OPS-102B",
+      "title_es": "Operaciones avanzadas II",
+      "units": [
+        {
+          "unit_id": "OPS-102B-U01",
+          "title_es": "Misión prolongada",
+          "core_content_es": [
+            "configuración",
+            "consumo",
+            "cambios"
+          ],
+          "practice_es": "Operar misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "OPS-102B-U02",
+          "title_es": "Crisis de recursos",
+          "core_content_es": [
+            "escasez",
+            "prioridad",
+            "impacto"
+          ],
+          "practice_es": "Escenario.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "OPS-102B-U03",
+          "title_es": "Coordinación de soporte",
+          "core_content_es": [
+            "equipos",
+            "lanzaderas",
+            "transportes",
+            "departamentos"
+          ],
+          "practice_es": "Caso integrado.",
+          "assessment_es": "Teamwork."
+        },
+        {
+          "unit_id": "OPS-102B-U04",
+          "title_es": "Handoff avanzado",
+          "core_content_es": [
+            "estado",
+            "pendientes",
+            "riesgos",
+            "órdenes"
+          ],
+          "practice_es": "Relevo profesional.",
+          "assessment_es": "Práctica."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

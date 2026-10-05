@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "QUA-203",
+  "title_es": "Cualificación intermedia",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 3,
+  "course_type": "qualification",
+  "purpose_es": "Determinar mediante evidencia si el cadete está preparado para entrar en 1.ª clase con trabajo profesional avanzado.",
+  "prerequisites": [
+    "DUT-203",
+    "SIM-203",
+    "PRJ-203"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "QUA-203-U01",
+      "title_es": "Revisión de evidencia",
+      "core_content_es": [
+        "cursos",
+        "prácticas",
+        "simulaciones",
+        "servicio",
+        "proyecto"
+      ],
+      "practice_es": "Compilar expediente.",
+      "assessment_es": "Validación de integridad."
+    },
+    {
+      "unit_id": "QUA-203-U02",
+      "title_es": "Conocimiento de rama",
+      "core_content_es": [
+        "conceptos",
+        "procedimientos",
+        "límites"
+      ],
+      "practice_es": "Evaluación escrita/oral focalizada.",
+      "assessment_es": "Resultado por áreas."
+    },
+    {
+      "unit_id": "QUA-203-U03",
+      "title_es": "Ejecución práctica",
+      "core_content_es": [
+        "procedimiento",
+        "seguridad",
+        "comunicación"
+      ],
+      "practice_es": "Prueba práctica.",
+      "assessment_es": "Evidencia."
+    },
+    {
+      "unit_id": "QUA-203-U04",
+      "title_es": "Juicio",
+      "core_content_es": [
+        "incertidumbre",
+        "prioridad",
+        "escalado",
+        "responsabilidad"
+      ],
+      "practice_es": "Caso situacional.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "QUA-203-U05",
+      "title_es": "Revisión de supervisor",
+      "core_content_es": [
+        "fortalezas",
+        "carencias",
+        "consistencia",
+        "conducta"
+      ],
+      "practice_es": "Panel académico.",
+      "assessment_es": "Informe cualitativo."
+    },
+    {
+      "unit_id": "QUA-203-U06",
+      "title_es": "Resultado y plan",
+      "core_content_es": [
+        "qualified",
+        "targeted_remediation",
+        "reassessment"
+      ],
+      "practice_es": "Definir siguiente paso.",
+      "assessment_es": "No se repite automáticamente el año por una carencia localizada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

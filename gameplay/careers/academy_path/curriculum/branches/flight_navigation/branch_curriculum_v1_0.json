@@ -1,0 +1,280 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "flight_navigation",
+  "display_es": "Vuelo / Navegación",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "NAV-201",
+    "NAV-202",
+    "NAV-203",
+    "NAV-101",
+    "NAV-102"
+  ],
+  "stages": [
+    {
+      "course_id": "NAV-201",
+      "title_es": "Vuelo y navegación II",
+      "units": [
+        {
+          "unit_id": "NAV-201-U01",
+          "title_es": "Helm de precisión",
+          "core_content_es": [
+            "rumbo",
+            "velocidad",
+            "vector",
+            "márgenes"
+          ],
+          "practice_es": "Maniobra precisa.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "NAV-201-U02",
+          "title_es": "Astrogación",
+          "core_content_es": [
+            "rutas",
+            "waypoints",
+            "ETA",
+            "restricciones"
+          ],
+          "practice_es": "Plan avanzado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-201-U03",
+          "title_es": "Warp routing",
+          "core_content_es": [
+            "entrada",
+            "salida",
+            "zonas",
+            "ajuste"
+          ],
+          "practice_es": "Ejecutar ruta.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "NAV-201-U04",
+          "title_es": "Aproximaciones",
+          "core_content_es": [
+            "órbita",
+            "rendezvous",
+            "acoplamiento contextual"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "NAV-202",
+      "title_es": "Vuelo y navegación III",
+      "units": [
+        {
+          "unit_id": "NAV-202-U01",
+          "title_es": "Navegación degradada",
+          "core_content_es": [
+            "sensores parciales",
+            "estimación",
+            "margen"
+          ],
+          "practice_es": "Ruta con datos pobres.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "NAV-202-U02",
+          "title_es": "Maniobra de emergencia",
+          "core_content_es": [
+            "abort",
+            "evasión",
+            "propulsión limitada"
+          ],
+          "practice_es": "Escenario.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "NAV-202-U03",
+          "title_es": "Entornos complejos",
+          "core_content_es": [
+            "anomalías",
+            "gravedad",
+            "tráfico"
+          ],
+          "practice_es": "Plotting complejo.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-202-U04",
+          "title_es": "Coordinación con sensores/ingeniería",
+          "core_content_es": [
+            "datos",
+            "potencia",
+            "capacidad"
+          ],
+          "practice_es": "Misión integrada.",
+          "assessment_es": "Teamwork."
+        }
+      ]
+    },
+    {
+      "course_id": "NAV-203",
+      "title_es": "Vuelo integrado",
+      "units": [
+        {
+          "unit_id": "NAV-203-U01",
+          "title_es": "Guardia de vuelo",
+          "core_content_es": [
+            "rutina",
+            "relevo",
+            "monitorización"
+          ],
+          "practice_es": "Turno supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-203-U02",
+          "title_es": "Misión multi-tramo",
+          "core_content_es": [
+            "rutas",
+            "cambios",
+            "reserva"
+          ],
+          "practice_es": "Plan y ejecución.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "NAV-203-U03",
+          "title_es": "Incidente de navegación",
+          "core_content_es": [
+            "desvío",
+            "riesgo",
+            "reporte"
+          ],
+          "practice_es": "Resolver evento.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "NAV-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "precisión",
+            "seguridad",
+            "comunicación"
+          ],
+          "practice_es": "Checkride académico.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "NAV-101",
+      "title_es": "Vuelo avanzado I",
+      "units": [
+        {
+          "unit_id": "NAV-101-U01",
+          "title_es": "Comportamiento por clase",
+          "core_content_es": [
+            "masa",
+            "respuesta",
+            "límites",
+            "sistemas"
+          ],
+          "practice_es": "Familiarización de clase.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-101-U02",
+          "title_es": "Vuelo con daños",
+          "core_content_es": [
+            "propulsión degradada",
+            "control",
+            "margen"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "NAV-101-U03",
+          "title_es": "Operaciones cercanas",
+          "core_content_es": [
+            "formación",
+            "rendezvous",
+            "espacio congestionado"
+          ],
+          "practice_es": "Maniobra.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-101-U04",
+          "title_es": "Liderazgo de vuelo",
+          "core_content_es": [
+            "relevo",
+            "instrucción",
+            "coordinación"
+          ],
+          "practice_es": "Supervisar puesto.",
+          "assessment_es": "Observación."
+        }
+      ]
+    },
+    {
+      "course_id": "NAV-102",
+      "title_es": "Vuelo avanzado II",
+      "units": [
+        {
+          "unit_id": "NAV-102-U01",
+          "title_es": "Plan de misión",
+          "core_content_es": [
+            "ruta",
+            "tiempo",
+            "riesgos",
+            "alternativas"
+          ],
+          "practice_es": "Plan completo.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "NAV-102-U02",
+          "title_es": "Ejecución prolongada",
+          "core_content_es": [
+            "continuidad",
+            "cambios",
+            "logs"
+          ],
+          "practice_es": "Misión extendida.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "NAV-102-U03",
+          "title_es": "Crisis de vuelo",
+          "core_content_es": [
+            "prioridad",
+            "comunicación",
+            "abort"
+          ],
+          "practice_es": "Escenario complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "NAV-102-U04",
+          "title_es": "Entrega de navegación",
+          "core_content_es": [
+            "estado",
+            "pendientes",
+            "riesgos"
+          ],
+          "practice_es": "Handoff profesional.",
+          "assessment_es": "Práctica."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PRA-202",
+  "title_es": "Práctica de especialidad II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 2,
+  "course_type": "practical",
+  "purpose_es": "Aumentar autonomía, variabilidad y carga de trabajo en la ejecución profesional.",
+  "prerequisites": [
+    "PRA-201",
+    "BRN-202"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PRA-202-U01",
+      "title_es": "Preparación autónoma",
+      "core_content_es": [
+        "objetivo",
+        "estado",
+        "riesgos",
+        "recursos"
+      ],
+      "practice_es": "Preparar tarea con briefing mínimo.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "PRA-202-U02",
+      "title_es": "Caso no guionizado",
+      "core_content_es": [
+        "problema",
+        "diagnóstico",
+        "opciones",
+        "acción"
+      ],
+      "practice_es": "Resolver sin receta explícita.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "PRA-202-U03",
+      "title_es": "Trabajo bajo presión",
+      "core_content_es": [
+        "tiempo",
+        "interrupciones",
+        "prioridad",
+        "comunicación"
+      ],
+      "practice_es": "Práctica cronometrada contextual.",
+      "assessment_es": "Observación."
+    },
+    {
+      "unit_id": "PRA-202-U04",
+      "title_es": "Fallo secundario",
+      "core_content_es": [
+        "cascada",
+        "contención",
+        "escalado"
+      ],
+      "practice_es": "Gestionar degradación añadida.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "PRA-202-U05",
+      "title_es": "Handoff de especialidad",
+      "core_content_es": [
+        "estado",
+        "pendientes",
+        "riesgo",
+        "recomendación"
+      ],
+      "practice_es": "Entregar puesto/caso.",
+      "assessment_es": "Evaluación de continuidad."
+    },
+    {
+      "unit_id": "PRA-202-U06",
+      "title_es": "Debrief comparativo",
+      "core_content_es": [
+        "decisión",
+        "alternativa",
+        "resultado",
+        "sesgo retrospectivo"
+      ],
+      "practice_es": "Comparar ejecuciones.",
+      "assessment_es": "Evaluación."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "INT-201",
+  "title_es": "Operaciones integradas de nave II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Entender cómo la especialidad propia consume, modifica y entrega información o recursos al resto de la nave.",
+  "prerequisites": [
+    "BRN-201",
+    "OPS-301"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "INT-201-U01",
+      "title_es": "Mapa de dependencias",
+      "core_content_es": [
+        "entradas",
+        "salidas",
+        "recursos",
+        "autoridad"
+      ],
+      "practice_es": "Modelar dependencias de la rama.",
+      "assessment_es": "Ejercicio."
+    },
+    {
+      "unit_id": "INT-201-U02",
+      "title_es": "Peticiones entre departamentos",
+      "core_content_es": [
+        "formato",
+        "prioridad",
+        "capacidad",
+        "confirmación"
+      ],
+      "practice_es": "Coordinar petición realista.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "INT-201-U03",
+      "title_es": "Conflicto de recursos",
+      "core_content_es": [
+        "energía",
+        "tiempo",
+        "personal",
+        "riesgo"
+      ],
+      "practice_es": "Negociar prioridad operacional.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "INT-201-U04",
+      "title_es": "Impacto de decisiones",
+      "core_content_es": [
+        "efecto local",
+        "efecto sistémico",
+        "efecto en misión"
+      ],
+      "practice_es": "Analizar consecuencias.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "INT-201-U05",
+      "title_es": "Imagen común de situación",
+      "core_content_es": [
+        "estado",
+        "riesgos",
+        "cambios",
+        "recomendaciones"
+      ],
+      "practice_es": "Actualizar briefing común.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "INT-201-U06",
+      "title_es": "Ejercicio integrado",
+      "core_content_es": [
+        "misión",
+        "dependencias",
+        "incidente",
+        "recuperación"
+      ],
+      "practice_es": "Simulación multi-departamento.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

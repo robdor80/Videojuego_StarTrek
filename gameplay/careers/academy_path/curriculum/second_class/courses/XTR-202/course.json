@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "XTR-202",
+  "title_es": "Formación cruzada II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 2,
+  "course_type": "cross_training",
+  "purpose_es": "Convertir el foco secundario en capacidad útil y demostrable sin otorgar cualificación completa automática.",
+  "prerequisites": [
+    "XTR-201"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "XTR-202-U01",
+      "title_es": "Repaso y brechas",
+      "core_content_es": [
+        "evidencia",
+        "recencia",
+        "carencias",
+        "objetivo"
+      ],
+      "practice_es": "Revisar XTR-201.",
+      "assessment_es": "Tutoría."
+    },
+    {
+      "unit_id": "XTR-202-U02",
+      "title_es": "Procedimiento secundario",
+      "core_content_es": [
+        "tarea",
+        "límites",
+        "seguridad",
+        "reporte"
+      ],
+      "practice_es": "Práctica supervisada.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "XTR-202-U03",
+      "title_es": "Caso aplicado",
+      "core_content_es": [
+        "integración con rama principal",
+        "prioridad",
+        "handoff"
+      ],
+      "practice_es": "Resolver caso mixto.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "XTR-202-U04",
+      "title_es": "Trabajo en equipo secundario",
+      "core_content_es": [
+        "rol auxiliar",
+        "autoridad",
+        "comunicación"
+      ],
+      "practice_es": "Participar en equipo de otra rama.",
+      "assessment_es": "Observación."
+    },
+    {
+      "unit_id": "XTR-202-U05",
+      "title_es": "Límites de competencia",
+      "core_content_es": [
+        "qué puede hacer",
+        "qué debe escalar",
+        "qué requiere certificación"
+      ],
+      "practice_es": "Resolver casos fronterizos.",
+      "assessment_es": "Evaluación de juicio."
+    },
+    {
+      "unit_id": "XTR-202-U06",
+      "title_es": "Resultado de cross-training",
+      "core_content_es": [
+        "capacidad demostrada",
+        "próximos pasos",
+        "sin equivalencia automática"
+      ],
+      "practice_es": "Cerrar bloque.",
+      "assessment_es": "Registro de evidencia."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

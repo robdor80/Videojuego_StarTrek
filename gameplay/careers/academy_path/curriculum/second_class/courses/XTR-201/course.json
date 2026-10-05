@@ -1,0 +1,107 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "XTR-201",
+  "title_es": "Formación cruzada I",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 1,
+  "course_type": "cross_training",
+  "purpose_es": "Abrir un foco secundario real sin confundir familiarización con cualificación completa.",
+  "prerequisites": [
+    "CAR-303"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "XTR-201-U01",
+      "title_es": "Elección de foco secundario",
+      "core_content_es": [
+        "interés",
+        "utilidad",
+        "prerrequisitos",
+        "carga"
+      ],
+      "practice_es": "Seleccionar área secundaria.",
+      "assessment_es": "Validación."
+    },
+    {
+      "unit_id": "XTR-201-U02",
+      "title_es": "Lenguaje y herramientas",
+      "core_content_es": [
+        "terminología",
+        "sistemas",
+        "roles",
+        "límites"
+      ],
+      "practice_es": "Familiarización.",
+      "assessment_es": "Comprobación."
+    },
+    {
+      "unit_id": "XTR-201-U03",
+      "title_es": "Fundamentos teóricos",
+      "core_content_es": [
+        "principios",
+        "riesgos",
+        "interfaz con rama principal"
+      ],
+      "practice_es": "Estudio guiado.",
+      "assessment_es": "Evaluación ligera."
+    },
+    {
+      "unit_id": "XTR-201-U04",
+      "title_es": "Práctica inicial",
+      "core_content_es": [
+        "tarea segura",
+        "supervisión",
+        "reporte"
+      ],
+      "practice_es": "Ejecutar tarea básica.",
+      "assessment_es": "Evidencia práctica."
+    },
+    {
+      "unit_id": "XTR-201-U05",
+      "title_es": "Transferencia de experiencia",
+      "core_content_es": [
+        "habilidades relacionadas",
+        "límites",
+        "no equivalencia"
+      ],
+      "practice_es": "Analizar qué experiencia previa ayuda y cuál no.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "XTR-201-U06",
+      "title_es": "Plan de continuidad",
+      "core_content_es": [
+        "objetivo",
+        "práctica futura",
+        "límites de autoridad"
+      ],
+      "practice_es": "Definir continuación XTR-202.",
+      "assessment_es": "Tutoría."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

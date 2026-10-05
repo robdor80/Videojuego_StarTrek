@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "medical",
+  "display_es": "Medicina",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "MED-201",
+    "MED-202",
+    "MED-203",
+    "MED-101",
+    "MED-102"
+  ],
+  "stages": [
+    {
+      "course_id": "MED-201",
+      "title_es": "Medicina II — diagnóstico y práctica clínica",
+      "units": [
+        {
+          "unit_id": "MED-201-U01",
+          "title_es": "Historia y evaluación",
+          "core_content_es": [
+            "síntomas",
+            "contexto",
+            "especie",
+            "riesgo"
+          ],
+          "practice_es": "Entrevista paciente.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "MED-201-U02",
+          "title_es": "Diagnóstico instrumental",
+          "core_content_es": [
+            "tricorder",
+            "biocama contextual",
+            "datos",
+            "límites"
+          ],
+          "practice_es": "Obtener datos.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "MED-201-U03",
+          "title_es": "Razonamiento diagnóstico",
+          "core_content_es": [
+            "diferencial",
+            "evidencia",
+            "confirmación",
+            "urgencia"
+          ],
+          "practice_es": "Caso clínico.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "MED-201-U04",
+          "title_es": "Tratamiento supervisado",
+          "core_content_es": [
+            "indicación",
+            "contraindicación",
+            "monitorización",
+            "handoff"
+          ],
+          "practice_es": "Procedimiento simulado.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "MED-202",
+      "title_es": "Medicina III — emergencia y xenomedicina",
+      "units": [
+        {
+          "unit_id": "MED-202-U01",
+          "title_es": "Xenofisiología aplicada",
+          "core_content_es": [
+            "variación",
+            "riesgo",
+            "no extrapolación",
+            "datos"
+          ],
+          "practice_es": "Caso interespecie.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "MED-202-U02",
+          "title_es": "Emergencia",
+          "core_content_es": [
+            "triaje",
+            "estabilización",
+            "prioridad",
+            "recursos"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "MED-202-U03",
+          "title_es": "Múltiples pacientes",
+          "core_content_es": [
+            "capacidad",
+            "prioridad",
+            "equipo",
+            "comunicación"
+          ],
+          "practice_es": "Escenario.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "MED-202-U04",
+          "title_es": "Ética clínica",
+          "core_content_es": [
+            "consentimiento",
+            "confidencialidad",
+            "autoridad médica"
+          ],
+          "practice_es": "Caso.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "MED-203",
+      "title_es": "Práctica clínica integrada",
+      "units": [
+        {
+          "unit_id": "MED-203-U01",
+          "title_es": "Turno clínico",
+          "core_content_es": [
+            "pacientes",
+            "rutina",
+            "registro",
+            "consulta"
+          ],
+          "practice_es": "Servicio supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "MED-203-U02",
+          "title_es": "Caso completo",
+          "core_content_es": [
+            "evaluación",
+            "diagnóstico",
+            "tratamiento",
+            "seguimiento"
+          ],
+          "practice_es": "Caso longitudinal.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "MED-203-U03",
+          "title_es": "Emergencia en nave",
+          "core_content_es": [
+            "mando",
+            "seguridad",
+            "recursos",
+            "evacuación"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "MED-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "seguridad",
+            "razonamiento",
+            "comunicación",
+            "ética"
+          ],
+          "practice_es": "Evaluación integrada.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "MED-101",
+      "title_es": "Medicina avanzada I",
+      "units": [
+        {
+          "unit_id": "MED-101-U01",
+          "title_es": "Diagnóstico complejo",
+          "core_content_es": [
+            "datos discordantes",
+            "comorbilidad",
+            "especie",
+            "incertidumbre"
+          ],
+          "practice_es": "Caso avanzado.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "MED-101-U02",
+          "title_es": "Supervisión clínica",
+          "core_content_es": [
+            "equipo",
+            "delegación",
+            "prioridad",
+            "registro"
+          ],
+          "practice_es": "Dirigir turno.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "MED-101-U03",
+          "title_es": "Plan terapéutico",
+          "core_content_es": [
+            "beneficio",
+            "riesgo",
+            "monitorización",
+            "alternativas"
+          ],
+          "practice_es": "Planificar tratamiento.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "MED-101-U04",
+          "title_es": "Asesoramiento al mando",
+          "core_content_es": [
+            "aptitud",
+            "riesgo",
+            "privacidad",
+            "autoridad"
+          ],
+          "practice_es": "Escena profesional.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "MED-102",
+      "title_es": "Medicina avanzada II",
+      "units": [
+        {
+          "unit_id": "MED-102-U01",
+          "title_es": "Misión médica",
+          "core_content_es": [
+            "preparación",
+            "pacientes",
+            "recursos",
+            "seguimiento"
+          ],
+          "practice_es": "Operación completa.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "MED-102-U02",
+          "title_es": "Crisis sanitaria",
+          "core_content_es": [
+            "múltiples casos",
+            "contención contextual",
+            "prioridad"
+          ],
+          "practice_es": "Escenario complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "MED-102-U03",
+          "title_es": "Continuidad asistencial",
+          "core_content_es": [
+            "handoff",
+            "historia",
+            "pendientes",
+            "confidencialidad"
+          ],
+          "practice_es": "Relevo.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "MED-102-U04",
+          "title_es": "Cierre clínico",
+          "core_content_es": [
+            "resultado",
+            "complicaciones",
+            "registro",
+            "aprendizaje"
+          ],
+          "practice_es": "Debrief.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "LDR-201",
+  "title_es": "Liderazgo y responsabilidad de equipo II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 1,
+  "course_type": "core",
+  "purpose_es": "Supervisar pequeñas tareas y personas manteniendo estándares, seguridad y responsabilidad.",
+  "prerequisites": [
+    "LDR-303"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "LDR-201-U01",
+      "title_es": "Estándares y expectativas",
+      "core_content_es": [
+        "objetivo",
+        "criterio",
+        "seguridad",
+        "plazo"
+      ],
+      "practice_es": "Dar briefing de tarea.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "LDR-201-U02",
+      "title_es": "Delegación con seguimiento",
+      "core_content_es": [
+        "capacidad",
+        "carga",
+        "checkpoints",
+        "intervención"
+      ],
+      "practice_es": "Repartir trabajo y monitorizar.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "LDR-201-U03",
+      "title_es": "Corrección y feedback",
+      "core_content_es": [
+        "hecho",
+        "impacto",
+        "corrección",
+        "respeto"
+      ],
+      "practice_es": "Dar feedback tras error.",
+      "assessment_es": "Escena."
+    },
+    {
+      "unit_id": "LDR-201-U04",
+      "title_es": "Carga y prioridades",
+      "core_content_es": [
+        "multitarea",
+        "urgencia",
+        "fatiga",
+        "recurso humano"
+      ],
+      "practice_es": "Reasignar equipo ante cambios.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "LDR-201-U05",
+      "title_es": "Responsabilidad por el equipo",
+      "core_content_es": [
+        "supervisión",
+        "escalado",
+        "registro",
+        "aprendizaje"
+      ],
+      "practice_es": "Gestionar incidencia de subordinado simulado.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "LDR-201-U06",
+      "title_es": "Liderazgo en práctica de rama",
+      "core_content_es": [
+        "briefing",
+        "ejecución",
+        "control",
+        "debrief"
+      ],
+      "practice_es": "Dirigir micro-equipo.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

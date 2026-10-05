@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "security_tactical",
+  "display_es": "Seguridad / Táctica",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "SEC-201",
+    "SEC-202",
+    "SEC-203",
+    "SEC-101",
+    "SEC-102"
+  ],
+  "stages": [
+    {
+      "course_id": "SEC-201",
+      "title_es": "Seguridad y Táctica II",
+      "units": [
+        {
+          "unit_id": "SEC-201-U01",
+          "title_es": "Sistemas defensivos",
+          "core_content_es": [
+            "escudos",
+            "armamento",
+            "estado",
+            "seguridad"
+          ],
+          "practice_es": "Familiarización.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-201-U02",
+          "title_es": "Análisis de amenaza",
+          "core_content_es": [
+            "capacidad",
+            "intención",
+            "posición",
+            "incertidumbre"
+          ],
+          "practice_es": "Clasificar contacto.",
+          "assessment_es": "Caso."
+        },
+        {
+          "unit_id": "SEC-201-U03",
+          "title_es": "Seguridad interna",
+          "core_content_es": [
+            "accesos",
+            "patrulla",
+            "incidente",
+            "custodia"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SEC-201-U04",
+          "title_es": "Uso proporcional de fuerza",
+          "core_content_es": [
+            "autoridad",
+            "escalada",
+            "alternativas",
+            "registro"
+          ],
+          "practice_es": "Caso situacional.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "SEC-202",
+      "title_es": "Seguridad y Táctica III",
+      "units": [
+        {
+          "unit_id": "SEC-202-U01",
+          "title_es": "Táctica defensiva",
+          "core_content_es": [
+            "posición",
+            "escudos",
+            "maniobra",
+            "fuego"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-202-U02",
+          "title_es": "Respuesta a abordaje",
+          "core_content_es": [
+            "detección",
+            "contención",
+            "equipo",
+            "mando"
+          ],
+          "practice_es": "Ejercicio.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SEC-202-U03",
+          "title_es": "Amenazas múltiples",
+          "core_content_es": [
+            "prioridad",
+            "protección",
+            "misión"
+          ],
+          "practice_es": "Escenario.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SEC-202-U04",
+          "title_es": "Equipo de seguridad",
+          "core_content_es": [
+            "roles",
+            "comunicación",
+            "detención",
+            "handoff"
+          ],
+          "practice_es": "Dirigir célula.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "SEC-203",
+      "title_es": "Operaciones tácticas integradas",
+      "units": [
+        {
+          "unit_id": "SEC-203-U01",
+          "title_es": "Guardia táctica",
+          "core_content_es": [
+            "estado",
+            "contactos",
+            "reglas",
+            "relevo"
+          ],
+          "practice_es": "Turno supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-203-U02",
+          "title_es": "Plan de seguridad",
+          "core_content_es": [
+            "amenaza",
+            "zonas",
+            "personal",
+            "contingencia"
+          ],
+          "practice_es": "Diseñar plan.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "SEC-203-U03",
+          "title_es": "Incidente complejo",
+          "core_content_es": [
+            "externo",
+            "interno",
+            "coordinación"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SEC-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "disciplina",
+            "proporcionalidad",
+            "comunicación"
+          ],
+          "practice_es": "Evaluación integrada.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "SEC-101",
+      "title_es": "Seguridad/Táctica avanzada I",
+      "units": [
+        {
+          "unit_id": "SEC-101-U01",
+          "title_es": "Supervisión de seguridad",
+          "core_content_es": [
+            "equipo",
+            "turnos",
+            "riesgo",
+            "estándares"
+          ],
+          "practice_es": "Dirigir servicio.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-101-U02",
+          "title_es": "Táctica bajo daño",
+          "core_content_es": [
+            "sensores/escudos degradados",
+            "prioridad",
+            "coordinación"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SEC-101-U03",
+          "title_es": "Protección de misión",
+          "core_content_es": [
+            "personal",
+            "instalación",
+            "away team"
+          ],
+          "practice_es": "Plan avanzado.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "SEC-101-U04",
+          "title_es": "Asesoramiento al mando",
+          "core_content_es": [
+            "amenaza",
+            "opciones",
+            "consecuencias"
+          ],
+          "practice_es": "Briefing.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "SEC-102",
+      "title_es": "Seguridad/Táctica avanzada II",
+      "units": [
+        {
+          "unit_id": "SEC-102-U01",
+          "title_es": "Misión táctica completa",
+          "core_content_es": [
+            "brief",
+            "reglas",
+            "ejecución",
+            "cierre"
+          ],
+          "practice_es": "Operar misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-102-U02",
+          "title_es": "Crisis de seguridad",
+          "core_content_es": [
+            "abordaje",
+            "rehén contextual",
+            "evacuación"
+          ],
+          "practice_es": "Escenario complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SEC-102-U03",
+          "title_es": "Desescalada",
+          "core_content_es": [
+            "comunicación",
+            "posición",
+            "alternativas"
+          ],
+          "practice_es": "Caso.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SEC-102-U04",
+          "title_es": "Handoff táctico",
+          "core_content_es": [
+            "amenazas",
+            "estado",
+            "órdenes",
+            "pendientes"
+          ],
+          "practice_es": "Relevo profesional.",
+          "assessment_es": "Práctica."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

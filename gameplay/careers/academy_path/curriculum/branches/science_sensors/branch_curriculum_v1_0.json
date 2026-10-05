@@ -1,0 +1,293 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "science_sensors",
+  "display_es": "Ciencia / Sensores",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "SCI-201",
+    "SCI-202",
+    "SCI-203",
+    "SCI-101",
+    "SCI-102"
+  ],
+  "stages": [
+    {
+      "course_id": "SCI-201",
+      "title_es": "Ciencia y Sensores II — adquisición",
+      "units": [
+        {
+          "unit_id": "SCI-201-U01",
+          "title_es": "Configuración de sensores",
+          "core_content_es": [
+            "objetivo",
+            "canales",
+            "resolución",
+            "alcance"
+          ],
+          "practice_es": "Configurar barrido.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-201-U02",
+          "title_es": "Búsqueda avanzada",
+          "core_content_es": [
+            "patrones",
+            "firmas",
+            "filtros",
+            "cobertura"
+          ],
+          "practice_es": "Localizar objetivo débil.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SCI-201-U03",
+          "title_es": "Caracterización",
+          "core_content_es": [
+            "medidas",
+            "calidad",
+            "comparación",
+            "registro"
+          ],
+          "practice_es": "Construir readout.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-201-U04",
+          "title_es": "Método científico operacional",
+          "core_content_es": [
+            "hipótesis",
+            "medición",
+            "prueba",
+            "límite"
+          ],
+          "practice_es": "Diseñar observación.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "SCI-202",
+      "title_es": "Ciencia y Sensores III — tracking e interferencia",
+      "units": [
+        {
+          "unit_id": "SCI-202-U01",
+          "title_es": "Gestión de contactos",
+          "core_content_es": [
+            "prioridad",
+            "identidad",
+            "historial",
+            "pérdida"
+          ],
+          "practice_es": "Gestionar tráfico.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-202-U02",
+          "title_es": "Tracking",
+          "core_content_es": [
+            "actualización",
+            "predicción",
+            "incertidumbre"
+          ],
+          "practice_es": "Mantener varios tracks.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SCI-202-U03",
+          "title_es": "Interferencia y compensación",
+          "core_content_es": [
+            "ruido",
+            "fuente",
+            "filtros",
+            "trade-offs"
+          ],
+          "practice_es": "Recuperar señal.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SCI-202-U04",
+          "title_es": "Correlación",
+          "core_content_es": [
+            "sensores",
+            "bases de datos",
+            "otras estaciones",
+            "consistencia"
+          ],
+          "practice_es": "Fusionar evidencias.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "SCI-203",
+      "title_es": "Ciencia operacional integrada",
+      "units": [
+        {
+          "unit_id": "SCI-203-U01",
+          "title_es": "Resultados y trazabilidad",
+          "core_content_es": [
+            "datos",
+            "procesamiento",
+            "conclusión",
+            "registro"
+          ],
+          "practice_es": "Emitir resultado reproducible.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-203-U02",
+          "title_es": "Diagnóstico de sensores",
+          "core_content_es": [
+            "anomalía",
+            "self-test",
+            "degradación",
+            "handoff a Ingeniería"
+          ],
+          "practice_es": "Resolver fallo.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SCI-203-U03",
+          "title_es": "Guardia científica",
+          "core_content_es": [
+            "observación",
+            "prioridad",
+            "reporte",
+            "consulta"
+          ],
+          "practice_es": "Turno supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "medición",
+            "interpretación",
+            "incertidumbre",
+            "comunicación"
+          ],
+          "practice_es": "Caso integrado.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "SCI-101",
+      "title_es": "Ciencia/Sensores avanzada I",
+      "units": [
+        {
+          "unit_id": "SCI-101-U01",
+          "title_es": "Diseño de observación",
+          "core_content_es": [
+            "objetivo",
+            "instrumento",
+            "estrategia",
+            "validación"
+          ],
+          "practice_es": "Plan científico.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "SCI-101-U02",
+          "title_es": "Fenómenos complejos",
+          "core_content_es": [
+            "múltiples firmas",
+            "cambios",
+            "modelos",
+            "incertidumbre"
+          ],
+          "practice_es": "Caso avanzado.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SCI-101-U03",
+          "title_es": "Supervisión de estación",
+          "core_content_es": [
+            "equipo",
+            "prioridades",
+            "calidad",
+            "logs"
+          ],
+          "practice_es": "Dirigir turno.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-101-U04",
+          "title_es": "Asesoramiento científico",
+          "core_content_es": [
+            "dato",
+            "interpretación",
+            "confianza",
+            "recomendación"
+          ],
+          "practice_es": "Briefing al mando.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "SCI-102",
+      "title_es": "Ciencia/Sensores avanzada II",
+      "units": [
+        {
+          "unit_id": "SCI-102-U01",
+          "title_es": "Misión científica completa",
+          "core_content_es": [
+            "pregunta",
+            "adquisición",
+            "análisis",
+            "resultado"
+          ],
+          "practice_es": "Ejecutar misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "SCI-102-U02",
+          "title_es": "Sensores degradados",
+          "core_content_es": [
+            "cobertura",
+            "ruido",
+            "alternativas",
+            "riesgo"
+          ],
+          "practice_es": "Escenario.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "SCI-102-U03",
+          "title_es": "Descubrimiento inesperado",
+          "core_content_es": [
+            "anomalía",
+            "verificación",
+            "prioridad"
+          ],
+          "practice_es": "Caso complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "SCI-102-U04",
+          "title_es": "Handoff científico",
+          "core_content_es": [
+            "datos",
+            "hipótesis",
+            "pendientes",
+            "calidad"
+          ],
+          "practice_es": "Relevo profesional.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

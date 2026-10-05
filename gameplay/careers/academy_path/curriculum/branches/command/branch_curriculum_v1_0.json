@@ -1,0 +1,285 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "command",
+  "display_es": "Mando",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "CMD-201",
+    "CMD-202",
+    "CMD-203",
+    "CMD-101",
+    "CMD-102"
+  ],
+  "stages": [
+    {
+      "course_id": "CMD-201",
+      "title_es": "Mando I — autoridad y puente",
+      "units": [
+        {
+          "unit_id": "CMD-201-U01",
+          "title_es": "Función de mando",
+          "core_content_es": [
+            "autoridad",
+            "responsabilidad",
+            "intención"
+          ],
+          "practice_es": "Resolver cadena de decisión.",
+          "assessment_es": "Caso."
+        },
+        {
+          "unit_id": "CMD-201-U02",
+          "title_es": "Conciencia situacional",
+          "core_content_es": [
+            "misión",
+            "nave",
+            "tripulación",
+            "entorno"
+          ],
+          "practice_es": "Mantener picture de mando.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-201-U03",
+          "title_es": "Órdenes",
+          "core_content_es": [
+            "claridad",
+            "delegación",
+            "confirmación"
+          ],
+          "practice_es": "Dirigir micro-equipo.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "CMD-201-U04",
+          "title_es": "Decisión básica",
+          "core_content_es": [
+            "opciones",
+            "riesgo",
+            "reglas",
+            "tiempo"
+          ],
+          "practice_es": "Caso de puente.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "CMD-202",
+      "title_es": "Mando II — crisis y coordinación",
+      "units": [
+        {
+          "unit_id": "CMD-202-U01",
+          "title_es": "Prioridad en crisis",
+          "core_content_es": [
+            "vida",
+            "misión",
+            "nave",
+            "regulación"
+          ],
+          "practice_es": "Ordenar acciones.",
+          "assessment_es": "Caso."
+        },
+        {
+          "unit_id": "CMD-202-U02",
+          "title_es": "Decisión con incertidumbre",
+          "core_content_es": [
+            "datos",
+            "supuestos",
+            "consulta",
+            "tiempo"
+          ],
+          "practice_es": "Escenario incompleto.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-202-U03",
+          "title_es": "Coordinación de departamentos",
+          "core_content_es": [
+            "recursos",
+            "conflictos",
+            "handoff"
+          ],
+          "practice_es": "Dirigir equipo multiárea.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "CMD-202-U04",
+          "title_es": "Diplomacia operativa",
+          "core_content_es": [
+            "desescalada",
+            "intereses",
+            "autoridad"
+          ],
+          "practice_es": "Escena de contacto.",
+          "assessment_es": "Debrief."
+        }
+      ]
+    },
+    {
+      "course_id": "CMD-203",
+      "title_es": "Mando III — guardia integrada",
+      "units": [
+        {
+          "unit_id": "CMD-203-U01",
+          "title_es": "Oficial de guardia",
+          "core_content_es": [
+            "estado",
+            "órdenes",
+            "autoridad delegada"
+          ],
+          "practice_es": "Guardia simulada.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-203-U02",
+          "title_es": "Plan de misión",
+          "core_content_es": [
+            "objetivo",
+            "riesgo",
+            "recursos",
+            "contingencia"
+          ],
+          "practice_es": "Preparar plan.",
+          "assessment_es": "Revisión."
+        },
+        {
+          "unit_id": "CMD-203-U03",
+          "title_es": "Gestión de incidente",
+          "core_content_es": [
+            "brief",
+            "órdenes",
+            "seguimiento",
+            "cierre"
+          ],
+          "practice_es": "Dirigir incidente.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-203-U04",
+          "title_es": "Revisión intermedia",
+          "core_content_es": [
+            "liderazgo",
+            "juicio",
+            "comunicación",
+            "ética"
+          ],
+          "practice_es": "Panel de mando.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "CMD-101",
+      "title_es": "Mando avanzado I",
+      "units": [
+        {
+          "unit_id": "CMD-101-U01",
+          "title_es": "Supervisión profesional",
+          "core_content_es": [
+            "equipo",
+            "estándares",
+            "feedback"
+          ],
+          "practice_es": "Dirigir turno.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-101-U02",
+          "title_es": "Mando y personal",
+          "core_content_es": [
+            "capacidad",
+            "fatiga",
+            "conflicto",
+            "delegación"
+          ],
+          "practice_es": "Caso humano.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "CMD-101-U03",
+          "title_es": "Órdenes complejas",
+          "core_content_es": [
+            "intención",
+            "condiciones",
+            "autonomía"
+          ],
+          "practice_es": "Emitir plan de órdenes.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "CMD-101-U04",
+          "title_es": "Preparación de mando",
+          "core_content_es": [
+            "cualificaciones",
+            "puente",
+            "responsabilidad"
+          ],
+          "practice_es": "Revisión de trayectoria.",
+          "assessment_es": "Informe."
+        }
+      ]
+    },
+    {
+      "course_id": "CMD-102",
+      "title_es": "Mando avanzado II",
+      "units": [
+        {
+          "unit_id": "CMD-102-U01",
+          "title_es": "Misión completa",
+          "core_content_es": [
+            "briefing",
+            "ejecución",
+            "adaptación",
+            "cierre"
+          ],
+          "practice_es": "Dirigir misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-102-U02",
+          "title_es": "Riesgo estratégico local",
+          "core_content_es": [
+            "consecuencias",
+            "regulación",
+            "tripulación"
+          ],
+          "practice_es": "Caso complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "CMD-102-U03",
+          "title_es": "Interacción externa",
+          "core_content_es": [
+            "autoridad",
+            "negociación",
+            "representación"
+          ],
+          "practice_es": "Escena diplomática.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "CMD-102-U04",
+          "title_es": "Handover de mando",
+          "core_content_es": [
+            "estado",
+            "órdenes",
+            "pendientes",
+            "responsabilidad"
+          ],
+          "practice_es": "Transferir control.",
+          "assessment_es": "Práctica."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "RSK-202",
+  "title_es": "Operaciones degradadas y contingencias",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Trabajar de forma segura cuando sistemas, información o personal no están disponibles en condiciones normales.",
+  "prerequisites": [
+    "INT-201",
+    "PRA-202"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "RSK-202-U01",
+      "title_es": "Degradación y redundancia",
+      "core_content_es": [
+        "capacidad reducida",
+        "backup",
+        "aislamiento",
+        "margen"
+      ],
+      "practice_es": "Interpretar estado degradado.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "RSK-202-U02",
+      "title_es": "Información incompleta",
+      "core_content_es": [
+        "calidad",
+        "confirmación",
+        "supuestos",
+        "riesgo"
+      ],
+      "practice_es": "Decidir con datos parciales.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "RSK-202-U03",
+      "title_es": "Pérdida de sistemas",
+      "core_content_es": [
+        "prioridades",
+        "servicio mínimo",
+        "procedimiento alternativo"
+      ],
+      "practice_es": "Continuar misión limitada.",
+      "assessment_es": "Simulación."
+    },
+    {
+      "unit_id": "RSK-202-U04",
+      "title_es": "Personal insuficiente",
+      "core_content_es": [
+        "reparto",
+        "cross-training",
+        "fatiga",
+        "seguridad"
+      ],
+      "practice_es": "Reconfigurar equipo.",
+      "assessment_es": "Caso."
+    },
+    {
+      "unit_id": "RSK-202-U05",
+      "title_es": "Contingencias encadenadas",
+      "core_content_es": [
+        "efecto cascada",
+        "triage operacional",
+        "escalado"
+      ],
+      "practice_es": "Resolver secuencia de fallos.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "RSK-202-U06",
+      "title_es": "Recuperación y retorno a normalidad",
+      "core_content_es": [
+        "verificación",
+        "handoff",
+        "logs",
+        "lecciones"
+      ],
+      "practice_es": "Cerrar contingencia.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

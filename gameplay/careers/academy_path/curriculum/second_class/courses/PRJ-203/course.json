@@ -1,0 +1,111 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PRJ-203",
+  "title_es": "Trabajo aplicado de especialidad",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 3,
+  "course_type": "project",
+  "purpose_es": "Demostrar capacidad para planificar, ejecutar y explicar una tarea profesional extensa.",
+  "prerequisites": [
+    "BRN-203"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PRJ-203-U01",
+      "title_es": "Definición del problema",
+      "core_content_es": [
+        "alcance",
+        "objetivo",
+        "restricciones",
+        "evidencia"
+      ],
+      "practice_es": "Elegir/recibir proyecto.",
+      "assessment_es": "Aprobación de alcance."
+    },
+    {
+      "unit_id": "PRJ-203-U02",
+      "title_es": "Plan de trabajo",
+      "core_content_es": [
+        "método",
+        "recursos",
+        "riesgos",
+        "hitos"
+      ],
+      "practice_es": "Preparar plan.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "PRJ-203-U03",
+      "title_es": "Ejecución",
+      "core_content_es": [
+        "datos",
+        "acciones",
+        "cambios",
+        "registro"
+      ],
+      "practice_es": "Desarrollar proyecto.",
+      "assessment_es": "Seguimiento."
+    },
+    {
+      "unit_id": "PRJ-203-U04",
+      "title_es": "Validación",
+      "core_content_es": [
+        "prueba",
+        "resultado",
+        "limitaciones",
+        "repetibilidad"
+      ],
+      "practice_es": "Verificar resultado.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "PRJ-203-U05",
+      "title_es": "Informe profesional",
+      "core_content_es": [
+        "hechos",
+        "método",
+        "resultado",
+        "recomendación"
+      ],
+      "practice_es": "Entregar informe.",
+      "assessment_es": "Revisión."
+    },
+    {
+      "unit_id": "PRJ-203-U06",
+      "title_es": "Defensa/debrief",
+      "core_content_es": [
+        "preguntas",
+        "decisiones",
+        "lecciones",
+        "mejoras"
+      ],
+      "practice_es": "Presentación breve.",
+      "assessment_es": "Evaluación integrada."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

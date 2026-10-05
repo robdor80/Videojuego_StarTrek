@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "PRA-201",
+  "title_es": "Práctica de especialidad I",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 1,
+  "course_type": "practical",
+  "purpose_es": "Convertir teoría de rama en ejecución supervisada repetible.",
+  "prerequisites": [
+    "BRN-201"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "PRA-201-U01",
+      "title_es": "Preparación de puesto",
+      "core_content_es": [
+        "estado",
+        "herramientas",
+        "órdenes",
+        "seguridad"
+      ],
+      "practice_es": "Preparar estación/espacio de trabajo.",
+      "assessment_es": "Checklist."
+    },
+    {
+      "unit_id": "PRA-201-U02",
+      "title_es": "Procedimiento guiado",
+      "core_content_es": [
+        "secuencia",
+        "confirmaciones",
+        "límites"
+      ],
+      "practice_es": "Práctica paso a paso.",
+      "assessment_es": "Ejecución."
+    },
+    {
+      "unit_id": "PRA-201-U03",
+      "title_es": "Procedimiento supervisado",
+      "core_content_es": [
+        "autonomía parcial",
+        "consulta",
+        "corrección"
+      ],
+      "practice_es": "Repetir con menos ayuda.",
+      "assessment_es": "Observación."
+    },
+    {
+      "unit_id": "PRA-201-U04",
+      "title_es": "Caso con variación",
+      "core_content_es": [
+        "cambio de condición",
+        "adaptación",
+        "reporte"
+      ],
+      "practice_es": "Resolver variante.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "PRA-201-U05",
+      "title_es": "Registro profesional",
+      "core_content_es": [
+        "acciones",
+        "resultado",
+        "pendientes",
+        "lecciones"
+      ],
+      "practice_es": "Completar log de práctica.",
+      "assessment_es": "Calidad del registro."
+    },
+    {
+      "unit_id": "PRA-201-U06",
+      "title_es": "Debrief",
+      "core_content_es": [
+        "error",
+        "causa",
+        "mejora",
+        "repetición"
+      ],
+      "practice_es": "Debrief con instructor.",
+      "assessment_es": "Evidencia de aprendizaje."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

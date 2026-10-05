@@ -1,0 +1,287 @@
+{
+  "schema_version": "1.0.0",
+  "branch_id": "engineering",
+  "display_es": "Ingeniería",
+  "status": "unit_design_complete",
+  "course_ids": [
+    "ENG-201",
+    "ENG-202",
+    "ENG-203",
+    "ENG-101",
+    "ENG-102"
+  ],
+  "stages": [
+    {
+      "course_id": "ENG-201",
+      "title_es": "Ingeniería II — potencia y propulsión",
+      "units": [
+        {
+          "unit_id": "ENG-201-U01",
+          "title_es": "Generación y distribución",
+          "core_content_es": [
+            "fuentes",
+            "buses",
+            "reservas",
+            "cargas"
+          ],
+          "practice_es": "Configurar energía.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-201-U02",
+          "title_es": "Propulsión warp",
+          "core_content_es": [
+            "subsistemas",
+            "estado",
+            "demanda",
+            "seguridad"
+          ],
+          "practice_es": "Caso operativo.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "ENG-201-U03",
+          "title_es": "Impulso y maniobra",
+          "core_content_es": [
+            "potencia",
+            "refrigeración contextual",
+            "capacidad"
+          ],
+          "practice_es": "Coordinar con vuelo.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-201-U04",
+          "title_es": "Diagnóstico sistemático",
+          "core_content_es": [
+            "síntoma",
+            "telemetría",
+            "hipótesis",
+            "prueba"
+          ],
+          "practice_es": "Diagnosticar fallo.",
+          "assessment_es": "Juicio."
+        }
+      ]
+    },
+    {
+      "course_id": "ENG-202",
+      "title_es": "Ingeniería III — reparación y daños",
+      "units": [
+        {
+          "unit_id": "ENG-202-U01",
+          "title_es": "Aislamiento de fallos",
+          "core_content_es": [
+            "sección",
+            "riesgo",
+            "bypass",
+            "seguridad"
+          ],
+          "practice_es": "Práctica.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-202-U02",
+          "title_es": "Reparación priorizada",
+          "core_content_es": [
+            "misión",
+            "vida",
+            "propulsión",
+            "defensa"
+          ],
+          "practice_es": "Planificar reparación.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "ENG-202-U03",
+          "title_es": "Control de daños",
+          "core_content_es": [
+            "equipo",
+            "sellado",
+            "energía",
+            "restauración"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "ENG-202-U04",
+          "title_es": "Sistemas encadenados",
+          "core_content_es": [
+            "cascada",
+            "causa raíz",
+            "recuperación"
+          ],
+          "practice_es": "Caso complejo.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    },
+    {
+      "course_id": "ENG-203",
+      "title_es": "Ingeniería operacional",
+      "units": [
+        {
+          "unit_id": "ENG-203-U01",
+          "title_es": "Guardia de Ingeniería",
+          "core_content_es": [
+            "estado",
+            "mantenimiento",
+            "avisos"
+          ],
+          "practice_es": "Turno supervisado.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-203-U02",
+          "title_es": "Carga sostenida",
+          "core_content_es": [
+            "temperatura contextual",
+            "potencia",
+            "margen",
+            "reserva"
+          ],
+          "practice_es": "Misión extendida.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "ENG-203-U03",
+          "title_es": "Emergencia técnica",
+          "core_content_es": [
+            "diagnóstico",
+            "prioridad",
+            "coordinación"
+          ],
+          "practice_es": "Simulación.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "ENG-203-U04",
+          "title_es": "Cualificación intermedia",
+          "core_content_es": [
+            "seguridad",
+            "diagnóstico",
+            "ejecución",
+            "reporte"
+          ],
+          "practice_es": "Evaluación integrada.",
+          "assessment_es": "Evidencia."
+        }
+      ]
+    },
+    {
+      "course_id": "ENG-101",
+      "title_es": "Ingeniería avanzada I",
+      "units": [
+        {
+          "unit_id": "ENG-101-U01",
+          "title_es": "Sistemas complejos",
+          "core_content_es": [
+            "interdependencias",
+            "configuración",
+            "limitaciones"
+          ],
+          "practice_es": "Caso de clase.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-101-U02",
+          "title_es": "Supervisión técnica",
+          "core_content_es": [
+            "equipo",
+            "trabajo",
+            "seguridad",
+            "ETA"
+          ],
+          "practice_es": "Dirigir reparación.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "ENG-101-U03",
+          "title_es": "Decisión técnica",
+          "core_content_es": [
+            "opciones",
+            "riesgo",
+            "misión",
+            "recomendación"
+          ],
+          "practice_es": "Briefing al mando.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "ENG-101-U04",
+          "title_es": "Mantenimiento avanzado",
+          "core_content_es": [
+            "tendencia",
+            "prevención",
+            "planificación"
+          ],
+          "practice_es": "Plan de mantenimiento.",
+          "assessment_es": "Revisión."
+        }
+      ]
+    },
+    {
+      "course_id": "ENG-102",
+      "title_es": "Ingeniería avanzada II",
+      "units": [
+        {
+          "unit_id": "ENG-102-U01",
+          "title_es": "Misión completa",
+          "core_content_es": [
+            "demanda",
+            "reservas",
+            "configuración",
+            "continuidad"
+          ],
+          "practice_es": "Operar misión.",
+          "assessment_es": "Evaluación."
+        },
+        {
+          "unit_id": "ENG-102-U02",
+          "title_es": "Crisis técnica",
+          "core_content_es": [
+            "fallos múltiples",
+            "personal",
+            "prioridad"
+          ],
+          "practice_es": "Escenario complejo.",
+          "assessment_es": "Juicio."
+        },
+        {
+          "unit_id": "ENG-102-U03",
+          "title_es": "Recuperación",
+          "core_content_es": [
+            "restauración",
+            "verificación",
+            "logs"
+          ],
+          "practice_es": "Cerrar incidente.",
+          "assessment_es": "Práctica."
+        },
+        {
+          "unit_id": "ENG-102-U04",
+          "title_es": "Handoff de Ingeniería",
+          "core_content_es": [
+            "estado",
+            "ETA",
+            "riesgos",
+            "pendientes"
+          ],
+          "practice_es": "Relevo profesional.",
+          "assessment_es": "Evaluación."
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Branch depth supplements BRN shell courses.",
+    "Cross-training does not automatically grant this branch qualification.",
+    "First Class advanced stages continue the same professional evidence chain."
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ]
+}

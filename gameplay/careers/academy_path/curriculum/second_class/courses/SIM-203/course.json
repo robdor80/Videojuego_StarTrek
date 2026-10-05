@@ -1,0 +1,110 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "SIM-203",
+  "title_es": "Simulación operacional compleja II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 3,
+  "course_type": "simulation",
+  "purpose_es": "Probar la rama dentro de una misión que combina carga, degradación, personas y objetivos en conflicto.",
+  "prerequisites": [
+    "RSK-202",
+    "DUT-203"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "SIM-203-U01",
+      "title_es": "Briefing incompleto",
+      "core_content_es": [
+        "datos conocidos",
+        "incertidumbre",
+        "roles",
+        "restricciones"
+      ],
+      "practice_es": "Preparar misión.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "SIM-203-U02",
+      "title_es": "Fase normal extendida",
+      "core_content_es": [
+        "rutina",
+        "carga",
+        "comunicación",
+        "logs"
+      ],
+      "practice_es": "Operar durante periodo sostenido.",
+      "assessment_es": "Observación."
+    },
+    {
+      "unit_id": "SIM-203-U03",
+      "title_es": "Primer incidente",
+      "core_content_es": [
+        "detección",
+        "respuesta",
+        "coordinación"
+      ],
+      "practice_es": "Resolver evento.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "SIM-203-U04",
+      "title_es": "Escalada",
+      "core_content_es": [
+        "segundo problema",
+        "recursos limitados",
+        "prioridades"
+      ],
+      "practice_es": "Adaptar plan.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "SIM-203-U05",
+      "title_es": "Resolución y consecuencias",
+      "core_content_es": [
+        "éxito parcial",
+        "costes",
+        "seguridad",
+        "misión"
+      ],
+      "practice_es": "Cerrar escenario.",
+      "assessment_es": "Resultado contextual, no score único."
+    },
+    {
+      "unit_id": "SIM-203-U06",
+      "title_es": "Debrief avanzado",
+      "core_content_es": [
+        "información disponible",
+        "decisiones",
+        "alternativas",
+        "responsabilidad"
+      ],
+      "practice_es": "Debrief con evidencias.",
+      "assessment_es": "Evaluación descriptiva."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}

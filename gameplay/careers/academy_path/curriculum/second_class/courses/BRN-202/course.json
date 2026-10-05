@@ -1,0 +1,112 @@
+{
+  "schema_version": "1.0.0",
+  "course_id": "BRN-202",
+  "title_es": "Especialización profesional II",
+  "status": "unit_design_complete",
+  "sequence_year": 3,
+  "cadet_class_id": "cadet_second_class",
+  "trimester": 2,
+  "course_type": "branch_shell",
+  "purpose_es": "Profundizar en la rama mediante situaciones complejas y menos estructuradas.",
+  "prerequisites": [
+    "BRN-201"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; execution also uses character evidence and context",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "BRN-202-U01",
+      "title_es": "Procedimientos avanzados",
+      "core_content_es": [
+        "variantes",
+        "excepciones",
+        "riesgos",
+        "diagnóstico"
+      ],
+      "practice_es": "Caso avanzado guiado.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "BRN-202-U02",
+      "title_es": "Incertidumbre",
+      "core_content_es": [
+        "datos incompletos",
+        "hipótesis",
+        "verificación",
+        "decisión"
+      ],
+      "practice_es": "Resolver problema ambiguo.",
+      "assessment_es": "Juicio."
+    },
+    {
+      "unit_id": "BRN-202-U03",
+      "title_es": "Múltiples demandas",
+      "core_content_es": [
+        "prioridad",
+        "recursos",
+        "secuenciación",
+        "delegación"
+      ],
+      "practice_es": "Gestionar carga concurrente.",
+      "assessment_es": "Evaluación."
+    },
+    {
+      "unit_id": "BRN-202-U04",
+      "title_es": "Error y recuperación",
+      "core_content_es": [
+        "detección",
+        "contención",
+        "alternativa",
+        "reporte"
+      ],
+      "practice_es": "Recuperar de fallo inducido.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "BRN-202-U05",
+      "title_es": "Coordinación avanzada",
+      "core_content_es": [
+        "dependencias",
+        "negociación",
+        "escalado",
+        "mando"
+      ],
+      "practice_es": "Trabajar con dos departamentos.",
+      "assessment_es": "Teamwork."
+    },
+    {
+      "unit_id": "BRN-202-U06",
+      "title_es": "Caso de rama II",
+      "core_content_es": [
+        "misión",
+        "incidente",
+        "decisión",
+        "resultado",
+        "debrief"
+      ],
+      "practice_es": "Caso integrado.",
+      "assessment_es": "Evaluación continua."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE"
+}
