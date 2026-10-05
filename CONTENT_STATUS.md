@@ -115,7 +115,7 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 
 | Pillar | Foundation | Content depth |
 |---|---|---|
-| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — access/character-entry/objectives closed; four-year curriculum depth remains |
+| Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — entry systems and four-year unit curriculum closed; study materials, Academy-life scheduling and post-Academy depth remain |
 | People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
@@ -165,6 +165,6 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
 ## Active block
 
-**Pillar 1 remains active: all four year-level architectures are closed and Roberto has authorized autonomous deployment of the complete curriculum. Unit-level course development is now active across all four years.**
+**Pillar 1 remains active: all four year-level architectures and the complete unit-level curriculum are closed. The next autonomous layer is study-material production: manuals, lesson content, exercises, question banks, instructor material and derived PDF/web outputs.**
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
