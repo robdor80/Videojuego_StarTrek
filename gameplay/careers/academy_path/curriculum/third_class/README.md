@@ -83,3 +83,18 @@ La ausencia de una asignatura PHY no significa ausencia de entrenamiento.
 ## Límite del año
 
 3.ª clase no convierte al cadete en especialista. Le da una base operativa suficientemente amplia para elegir con conocimiento real la profesión que empezará formalmente en 2.ª clase.
+
+## Despliegue de unidades v1.0
+
+Status: **COMPLETE**
+
+La arquitectura de este año ya fue expandida a nivel de asignatura y unidad.
+
+Consultar:
+- `COURSE_INDEX_v1_0.md`
+- `courses_manifest_v1_0.json`
+- `courses/<COURSE_ID>/course.json`
+
+Cada curso define finalidad, prerrequisitos, unidades, contenido nuclear, práctica, evaluación y salidas previstas.
+
+Los manuales extensos, bancos de preguntas, PDF y web son derivados de esta fuente curricular y no alteran por sí mismos la arquitectura aprobada.
