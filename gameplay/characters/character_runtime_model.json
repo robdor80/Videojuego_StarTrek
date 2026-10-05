@@ -1,8 +1,8 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "character_runtime_state",
   "classification": "GAME_ADDITION",
-  "principle": "IDENTITY != SPECIES != CULTURE != CITIZENSHIP != FACTION != RANK != POSITION != PERSONALITY != CURRENT STATE",
+  "principle": "IDENTITY != SPECIES != CULTURE != CITIZENSHIP != FACTION != RANK != POSITION != PERSONALITY != CAPABILITY != CURRENT_STATE",
   "identity_fields": {
     "character_id": null,
     "display_name": null,
@@ -24,13 +24,19 @@
     "current_chain_of_command_refs": [],
     "clearance_refs": []
   },
+  "development_fields": {
+    "capability_state_ref": null,
+    "development_evidence_ref": null,
+    "habit_state_ref": null,
+    "objective_state_ref": null,
+    "qualification_refs": []
+  },
   "live_fields": {
     "current_location_ref": null,
     "duty_state_ref": null,
     "medical_state_ref": null,
     "mood_state_ref": null,
     "fatigue_state_ref": null,
-    "active_goal_refs": [],
     "current_task_refs": [],
     "relationship_state_refs": [],
     "knowledge_state_ref": null,
@@ -41,6 +47,8 @@
   "history_fields": {
     "canonical_history_cutoff": "campaign_start_date",
     "campaign_event_log_ref": null,
+    "objective_history_ref": null,
+    "initial_validated_biography_ref": null,
     "append_only_campaign_history": true
   },
   "rules": [
@@ -50,6 +58,9 @@
     "Faction membership and citizenship are separate.",
     "Species and culture never define personality automatically.",
     "A character knows only information present in their knowledge state.",
+    "Capabilities change only through validated evidence, not manual point allocation.",
+    "Current condition may affect performance without rewriting deep experience.",
+    "Objectives do not grant capability or force world events.",
     "AI dialogue cannot mutate authoritative character state directly."
   ]
 }
