@@ -1,10 +1,10 @@
 # Guía de instructor — Rama Vuelo / Navegación
 
-**v1.0**
+**v1.0.1**
 
-## Principio
+## Regla docente
 
-La especialidad debe enseñarse usando los sistemas reales del juego siempre que existan. La IA puede presentar escenas y NPC, pero no decide el estado técnico, el resultado ni la cualificación.
+La especialidad usa sistemas reales del juego siempre que existan. La IA puede presentar escenas y diálogo, pero no inventa estado técnico, autoridad, resultado ni cualificación.
 
 ## NAV-201 — Vuelo y navegación II
 
@@ -16,7 +16,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-201-U02 — Astrogación
 
@@ -26,7 +26,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-201-U03 — Warp routing
 
@@ -36,7 +36,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-201-U04 — Aproximaciones
 
@@ -46,7 +46,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## NAV-202 — Vuelo y navegación III
 
@@ -58,7 +58,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-202-U02 — Maniobra de emergencia
 
@@ -68,7 +68,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-202-U03 — Entornos complejos
 
@@ -78,7 +78,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-202-U04 — Coordinación con sensores/ingeniería
 
@@ -88,7 +88,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Teamwork.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## NAV-203 — Vuelo integrado
 
@@ -100,7 +100,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-203-U02 — Misión multi-tramo
 
@@ -110,7 +110,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-203-U03 — Incidente de navegación
 
@@ -120,7 +120,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-203-U04 — Cualificación intermedia
 
@@ -130,7 +130,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evidencia.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## NAV-101 — Vuelo avanzado I
 
@@ -142,7 +142,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-101-U02 — Vuelo con daños
 
@@ -152,7 +152,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-101-U03 — Operaciones cercanas
 
@@ -162,7 +162,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-101-U04 — Liderazgo de vuelo
 
@@ -172,7 +172,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Observación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## NAV-102 — Vuelo avanzado II
 
@@ -184,7 +184,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Revisión.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-102-U02 — Ejecución prolongada
 
@@ -194,7 +194,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-102-U03 — Crisis de vuelo
 
@@ -204,7 +204,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### NAV-102-U04 — Entrega de navegación
 
@@ -214,8 +214,15 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## Cualificación
+## Referencias internas
 
-No declarar competencia por una única escena. Exigir evidencia consistente y conservar áreas de desarrollo después de la graduación.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/navigation/navigation_order_contract.json`
+- `gameplay/navigation/route_cost_model.json`
+- `gameplay/warp_travel/route_planning_model.json`
+- `gameplay/warp_travel/eta_resolution_model.json`

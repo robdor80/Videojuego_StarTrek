@@ -1,10 +1,10 @@
 # Guía de instructor — Rama Mando
 
-**v1.0**
+**v1.0.1**
 
-## Principio
+## Regla docente
 
-La especialidad debe enseñarse usando los sistemas reales del juego siempre que existan. La IA puede presentar escenas y NPC, pero no decide el estado técnico, el resultado ni la cualificación.
+La especialidad usa sistemas reales del juego siempre que existan. La IA puede presentar escenas y diálogo, pero no inventa estado técnico, autoridad, resultado ni cualificación.
 
 ## CMD-201 — Mando I — autoridad y puente
 
@@ -16,7 +16,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Caso.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-201-U02 — Conciencia situacional
 
@@ -26,7 +26,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-201-U03 — Órdenes
 
@@ -36,7 +36,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-201-U04 — Decisión básica
 
@@ -46,7 +46,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## CMD-202 — Mando II — crisis y coordinación
 
@@ -58,7 +58,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Caso.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-202-U02 — Decisión con incertidumbre
 
@@ -68,7 +68,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-202-U03 — Coordinación de departamentos
 
@@ -78,7 +78,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-202-U04 — Diplomacia operativa
 
@@ -88,7 +88,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Debrief.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## CMD-203 — Mando III — guardia integrada
 
@@ -100,7 +100,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-203-U02 — Plan de misión
 
@@ -110,7 +110,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Revisión.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-203-U03 — Gestión de incidente
 
@@ -120,7 +120,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-203-U04 — Revisión intermedia
 
@@ -130,7 +130,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evidencia.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## CMD-101 — Mando avanzado I
 
@@ -142,7 +142,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-101-U02 — Mando y personal
 
@@ -152,7 +152,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-101-U03 — Órdenes complejas
 
@@ -162,7 +162,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-101-U04 — Preparación de mando
 
@@ -172,7 +172,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Informe.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## CMD-102 — Mando avanzado II
 
@@ -184,7 +184,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-102-U02 — Riesgo estratégico local
 
@@ -194,7 +194,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-102-U03 — Interacción externa
 
@@ -204,7 +204,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### CMD-102-U04 — Handover de mando
 
@@ -214,8 +214,15 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## Cualificación
+## Referencias internas
 
-No declarar competencia por una única escena. Exigir evidencia consistente y conservar áreas de desarrollo después de la graduación.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `lore/federation/starfleet/command_structure/succession_rules.json`
+- `lore/federation/starfleet/qualifications/command_qualification.json`
+- `lore/federation/starfleet/prime_directive/prime_directive.json`
+- `gameplay/orders/starfleet_mission_tasking_order.json`

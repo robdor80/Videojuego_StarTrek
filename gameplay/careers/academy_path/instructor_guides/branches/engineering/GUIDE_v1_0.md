@@ -1,10 +1,10 @@
 # Guía de instructor — Rama Ingeniería
 
-**v1.0**
+**v1.0.1**
 
-## Principio
+## Regla docente
 
-La especialidad debe enseñarse usando los sistemas reales del juego siempre que existan. La IA puede presentar escenas y NPC, pero no decide el estado técnico, el resultado ni la cualificación.
+La especialidad usa sistemas reales del juego siempre que existan. La IA puede presentar escenas y diálogo, pero no inventa estado técnico, autoridad, resultado ni cualificación.
 
 ## ENG-201 — Ingeniería II — potencia y propulsión
 
@@ -16,7 +16,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-201-U02 — Propulsión warp
 
@@ -26,7 +26,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-201-U03 — Impulso y maniobra
 
@@ -36,7 +36,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-201-U04 — Diagnóstico sistemático
 
@@ -46,7 +46,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## ENG-202 — Ingeniería III — reparación y daños
 
@@ -58,7 +58,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-202-U02 — Reparación priorizada
 
@@ -68,7 +68,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-202-U03 — Control de daños
 
@@ -78,7 +78,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-202-U04 — Sistemas encadenados
 
@@ -88,7 +88,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## ENG-203 — Ingeniería operacional
 
@@ -100,7 +100,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-203-U02 — Carga sostenida
 
@@ -110,7 +110,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-203-U03 — Emergencia técnica
 
@@ -120,7 +120,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-203-U04 — Cualificación intermedia
 
@@ -130,7 +130,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evidencia.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## ENG-101 — Ingeniería avanzada I
 
@@ -142,7 +142,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-101-U02 — Supervisión técnica
 
@@ -152,7 +152,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-101-U03 — Decisión técnica
 
@@ -162,7 +162,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-101-U04 — Mantenimiento avanzado
 
@@ -172,7 +172,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Revisión.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## ENG-102 — Ingeniería avanzada II
 
@@ -184,7 +184,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-102-U02 — Crisis técnica
 
@@ -194,7 +194,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-102-U03 — Recuperación
 
@@ -204,7 +204,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### ENG-102-U04 — Handoff de Ingeniería
 
@@ -214,8 +214,15 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## Cualificación
+## Referencias internas
 
-No declarar competencia por una única escena. Exigir evidencia consistente y conservar áreas de desarrollo después de la graduación.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/engineering/engineering_loop.json`
+- `gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json`
+- `lore/starships/ship_systems/warp/README.md`
+- `lore/starships/ship_systems/transporters/README.md`

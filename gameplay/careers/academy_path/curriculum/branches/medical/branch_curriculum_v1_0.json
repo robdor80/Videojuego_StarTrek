@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "medical",
   "display_es": "Medicina",
   "status": "unit_design_complete",
@@ -289,5 +289,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/medical/medical_state_model.json",
+    "gameplay/medical/species_medical_hooks.json",
+    "lore/medicine/medical_capability_contract.json",
+    "lore/federation/starfleet/regulations/medical_authority.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

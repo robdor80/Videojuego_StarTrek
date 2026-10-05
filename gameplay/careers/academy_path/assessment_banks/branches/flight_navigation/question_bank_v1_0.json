@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "flight_navigation",
   "status": "generated_from_authoritative_branch_curriculum",
   "question_count": 60,
@@ -12,7 +12,7 @@
       "prompt_es": "Explica rumbo desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "rumbo",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -21,7 +21,7 @@
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U01",
       "type": "scenario",
-      "prompt_es": "Maniobra precisa. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Maniobra precisa. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -33,13 +33,12 @@
       "id": "FLIGHT_NAVIGATION-Q003",
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Helm de precisión, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Helm de precisión para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -51,7 +50,7 @@
       "prompt_es": "Explica rutas desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "rutas",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -60,7 +59,7 @@
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U02",
       "type": "scenario",
-      "prompt_es": "Plan avanzado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Plan avanzado. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -72,13 +71,12 @@
       "id": "FLIGHT_NAVIGATION-Q006",
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Astrogación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Astrogación para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -90,7 +88,7 @@
       "prompt_es": "Explica entrada desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "entrada",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -99,7 +97,7 @@
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U03",
       "type": "scenario",
-      "prompt_es": "Ejecutar ruta. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Ejecutar ruta. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -111,13 +109,12 @@
       "id": "FLIGHT_NAVIGATION-Q009",
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Warp routing, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Warp routing para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -129,7 +126,7 @@
       "prompt_es": "Explica órbita desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "órbita",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -138,7 +135,7 @@
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U04",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -150,13 +147,12 @@
       "id": "FLIGHT_NAVIGATION-Q012",
       "course_id": "NAV-201",
       "unit_id": "NAV-201-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Aproximaciones, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Aproximaciones para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -168,7 +164,7 @@
       "prompt_es": "Explica sensores parciales desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "sensores parciales",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -177,7 +173,7 @@
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U01",
       "type": "scenario",
-      "prompt_es": "Ruta con datos pobres. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Ruta con datos pobres. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -189,13 +185,12 @@
       "id": "FLIGHT_NAVIGATION-Q015",
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Navegación degradada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Navegación degradada para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -207,7 +202,7 @@
       "prompt_es": "Explica abort desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "abort",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -216,7 +211,7 @@
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U02",
       "type": "scenario",
-      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -228,13 +223,12 @@
       "id": "FLIGHT_NAVIGATION-Q018",
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Maniobra de emergencia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Maniobra de emergencia para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -246,7 +240,7 @@
       "prompt_es": "Explica anomalías desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "anomalías",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -255,7 +249,7 @@
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U03",
       "type": "scenario",
-      "prompt_es": "Plotting complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Plotting complejo. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -267,13 +261,12 @@
       "id": "FLIGHT_NAVIGATION-Q021",
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Entornos complejos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Entornos complejos para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -285,7 +278,7 @@
       "prompt_es": "Explica datos desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "datos",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -294,7 +287,7 @@
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U04",
       "type": "scenario",
-      "prompt_es": "Misión integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Misión integrada. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -306,13 +299,12 @@
       "id": "FLIGHT_NAVIGATION-Q024",
       "course_id": "NAV-202",
       "unit_id": "NAV-202-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Coordinación con sensores/ingeniería, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Coordinación con sensores/ingeniería para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -324,7 +316,7 @@
       "prompt_es": "Explica rutina desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "rutina",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -333,7 +325,7 @@
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U01",
       "type": "scenario",
-      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -345,13 +337,12 @@
       "id": "FLIGHT_NAVIGATION-Q027",
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Guardia de vuelo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Guardia de vuelo para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -363,7 +354,7 @@
       "prompt_es": "Explica rutas desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "rutas",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -372,7 +363,7 @@
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U02",
       "type": "scenario",
-      "prompt_es": "Plan y ejecución. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Plan y ejecución. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -384,13 +375,12 @@
       "id": "FLIGHT_NAVIGATION-Q030",
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Misión multi-tramo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Misión multi-tramo para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -402,7 +392,7 @@
       "prompt_es": "Explica desvío desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "desvío",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -411,7 +401,7 @@
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U03",
       "type": "scenario",
-      "prompt_es": "Resolver evento. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Resolver evento. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -423,13 +413,12 @@
       "id": "FLIGHT_NAVIGATION-Q033",
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Incidente de navegación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Incidente de navegación para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -441,7 +430,7 @@
       "prompt_es": "Explica precisión desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "precisión",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -450,7 +439,7 @@
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U04",
       "type": "scenario",
-      "prompt_es": "Checkride académico. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Checkride académico. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -462,13 +451,12 @@
       "id": "FLIGHT_NAVIGATION-Q036",
       "course_id": "NAV-203",
       "unit_id": "NAV-203-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Cualificación intermedia para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -480,7 +468,7 @@
       "prompt_es": "Explica masa desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "masa",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -489,7 +477,7 @@
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U01",
       "type": "scenario",
-      "prompt_es": "Familiarización de clase. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Familiarización de clase. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -501,13 +489,12 @@
       "id": "FLIGHT_NAVIGATION-Q039",
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Comportamiento por clase, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Comportamiento por clase para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -519,7 +506,7 @@
       "prompt_es": "Explica propulsión degradada desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "propulsión degradada",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -528,7 +515,7 @@
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U02",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -540,13 +527,12 @@
       "id": "FLIGHT_NAVIGATION-Q042",
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Vuelo con daños, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Vuelo con daños para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -558,7 +544,7 @@
       "prompt_es": "Explica formación desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "formación",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -567,7 +553,7 @@
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U03",
       "type": "scenario",
-      "prompt_es": "Maniobra. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Maniobra. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -579,13 +565,12 @@
       "id": "FLIGHT_NAVIGATION-Q045",
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Operaciones cercanas, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Operaciones cercanas para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -597,7 +582,7 @@
       "prompt_es": "Explica relevo desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "relevo",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -606,7 +591,7 @@
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U04",
       "type": "scenario",
-      "prompt_es": "Supervisar puesto. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Supervisar puesto. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -618,13 +603,12 @@
       "id": "FLIGHT_NAVIGATION-Q048",
       "course_id": "NAV-101",
       "unit_id": "NAV-101-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Liderazgo de vuelo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Liderazgo de vuelo para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -636,7 +620,7 @@
       "prompt_es": "Explica ruta desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "ruta",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -645,7 +629,7 @@
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U01",
       "type": "scenario",
-      "prompt_es": "Plan completo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Plan completo. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -657,13 +641,12 @@
       "id": "FLIGHT_NAVIGATION-Q051",
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Plan de misión, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Plan de misión para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -675,7 +658,7 @@
       "prompt_es": "Explica continuidad desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "continuidad",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -684,7 +667,7 @@
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U02",
       "type": "scenario",
-      "prompt_es": "Misión extendida. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Misión extendida. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -696,13 +679,12 @@
       "id": "FLIGHT_NAVIGATION-Q054",
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Ejecución prolongada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Ejecución prolongada para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -714,7 +696,7 @@
       "prompt_es": "Explica prioridad desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "prioridad",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -723,7 +705,7 @@
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U03",
       "type": "scenario",
-      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -735,13 +717,12 @@
       "id": "FLIGHT_NAVIGATION-Q057",
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Crisis de vuelo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Crisis de vuelo para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -753,7 +734,7 @@
       "prompt_es": "Explica estado desde la perspectiva de Vuelo / Navegación.",
       "answer_key_es": [
         "estado",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -762,7 +743,7 @@
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U04",
       "type": "scenario",
-      "prompt_es": "Handoff profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Handoff profesional. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -774,13 +755,12 @@
       "id": "FLIGHT_NAVIGATION-Q060",
       "course_id": "NAV-102",
       "unit_id": "NAV-102-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Entrega de navegación, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Entrega de navegación para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     }

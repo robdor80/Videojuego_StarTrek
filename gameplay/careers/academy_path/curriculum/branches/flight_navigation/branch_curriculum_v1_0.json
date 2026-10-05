@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "flight_navigation",
   "display_es": "Vuelo / Navegación",
   "status": "unit_design_complete",
@@ -276,5 +276,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/navigation/navigation_order_contract.json",
+    "gameplay/navigation/route_cost_model.json",
+    "gameplay/warp_travel/route_planning_model.json",
+    "gameplay/warp_travel/eta_resolution_model.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

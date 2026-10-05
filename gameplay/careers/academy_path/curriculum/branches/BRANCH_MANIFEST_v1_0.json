@@ -1,0 +1,153 @@
+{
+  "schema_version": "1.0.0",
+  "status": "locked_v1_0",
+  "branches": [
+    {
+      "branch_id": "command",
+      "display_es": "Mando",
+      "course_ids": [
+        "CMD-201",
+        "CMD-202",
+        "CMD-203",
+        "CMD-101",
+        "CMD-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "lore/federation/starfleet/command_structure/succession_rules.json",
+        "lore/federation/starfleet/qualifications/command_qualification.json",
+        "lore/federation/starfleet/prime_directive/prime_directive.json",
+        "gameplay/orders/starfleet_mission_tasking_order.json"
+      ]
+    },
+    {
+      "branch_id": "flight_navigation",
+      "display_es": "Vuelo / Navegación",
+      "course_ids": [
+        "NAV-201",
+        "NAV-202",
+        "NAV-203",
+        "NAV-101",
+        "NAV-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/navigation/navigation_order_contract.json",
+        "gameplay/navigation/route_cost_model.json",
+        "gameplay/warp_travel/route_planning_model.json",
+        "gameplay/warp_travel/eta_resolution_model.json"
+      ]
+    },
+    {
+      "branch_id": "operations",
+      "display_es": "Operaciones",
+      "course_ids": [
+        "OPR-201",
+        "OPR-202",
+        "OPR-203",
+        "OPR-101",
+        "OPR-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/ship_operations/bridge_station_model.json",
+        "gameplay/ship_operations/ship_computer/computer_query_action_catalog.json",
+        "gameplay/engineering/engineering_loop.json",
+        "gameplay/ship_operations/operational_event_log/README.md"
+      ]
+    },
+    {
+      "branch_id": "engineering",
+      "display_es": "Ingeniería",
+      "course_ids": [
+        "ENG-201",
+        "ENG-202",
+        "ENG-203",
+        "ENG-101",
+        "ENG-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/engineering/engineering_loop.json",
+        "gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json",
+        "lore/starships/ship_systems/warp/README.md",
+        "lore/starships/ship_systems/transporters/README.md"
+      ]
+    },
+    {
+      "branch_id": "security_tactical",
+      "display_es": "Seguridad / Táctica",
+      "course_ids": [
+        "SEC-201",
+        "SEC-202",
+        "SEC-203",
+        "SEC-101",
+        "SEC-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/security/README.md",
+        "gameplay/ship_operations/bridge_station_model.json",
+        "lore/federation/starfleet/regulations/README.md",
+        "lore/federation/starfleet/prime_directive/prime_directive.json"
+      ]
+    },
+    {
+      "branch_id": "science_sensors",
+      "display_es": "Ciencia / Sensores",
+      "course_ids": [
+        "SCI-201",
+        "SCI-202",
+        "SCI-203",
+        "SCI-101",
+        "SCI-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/ship_operations/consoles/sensors/README.md",
+        "gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json",
+        "gameplay/science/sensor_analysis_model.json",
+        "gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md"
+      ]
+    },
+    {
+      "branch_id": "medical",
+      "display_es": "Medicina",
+      "course_ids": [
+        "MED-201",
+        "MED-202",
+        "MED-203",
+        "MED-101",
+        "MED-102"
+      ],
+      "source_refs": [
+        "gameplay/careers/academy_path/specializations.json",
+        "gameplay/careers/academy_path/specialization_rules.md",
+        "gameplay/careers/starfleet_service/professional_evidence_model.json",
+        "gameplay/careers/starfleet_service/career_progression_rules.json",
+        "gameplay/medical/medical_state_model.json",
+        "gameplay/medical/species_medical_hooks.json",
+        "lore/medicine/medical_capability_contract.json",
+        "lore/federation/starfleet/regulations/medical_authority.json"
+      ]
+    }
+  ]
+}

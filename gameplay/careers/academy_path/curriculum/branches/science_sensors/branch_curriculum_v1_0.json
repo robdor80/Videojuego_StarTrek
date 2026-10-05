@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "science_sensors",
   "display_es": "Ciencia / Sensores",
   "status": "unit_design_complete",
@@ -289,5 +289,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/ship_operations/consoles/sensors/README.md",
+    "gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json",
+    "gameplay/science/sensor_analysis_model.json",
+    "gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

@@ -1,14 +1,14 @@
 # Guía de instructor — Rama Operaciones
 
-**v1.0**
+**v1.0.1**
 
-## Principio
+## Regla docente
 
-La especialidad debe enseñarse usando los sistemas reales del juego siempre que existan. La IA puede presentar escenas y NPC, pero no decide el estado técnico, el resultado ni la cualificación.
+La especialidad usa sistemas reales del juego siempre que existan. La IA puede presentar escenas y diálogo, pero no inventa estado técnico, autoridad, resultado ni cualificación.
 
-## OPS-201 — Operaciones II — recursos y sistemas
+## OPR-201 — Operaciones II — recursos y sistemas
 
-### OPS-201-U01 — Gestión de recursos
+### OPR-201-U01 — Gestión de recursos
 
 **Enseñar:** energía; tiempo; capacidad; prioridad.
 
@@ -16,9 +16,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-201-U02 — Coordinación de sistemas
+### OPR-201-U02 — Coordinación de sistemas
 
 **Enseñar:** dependencias; servicios; peticiones.
 
@@ -26,9 +26,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-201-U03 — Soporte de misión
+### OPR-201-U03 — Soporte de misión
 
 **Enseñar:** configuración; logística; información.
 
@@ -36,9 +36,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-201-U04 — Transportadores y servicios
+### OPR-201-U04 — Transportadores y servicios
 
 **Enseñar:** capacidad; seguridad; ventanas; límites.
 
@@ -46,11 +46,11 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## OPS-202 — Operaciones III — carga y contingencia
+## OPR-202 — Operaciones III — carga y contingencia
 
-### OPS-202-U01 — Logística dinámica
+### OPR-202-U01 — Logística dinámica
 
 **Enseñar:** inventario; personal; capacidad; prioridad.
 
@@ -58,9 +58,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Caso.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-202-U02 — Sistemas degradados
+### OPR-202-U02 — Sistemas degradados
 
 **Enseñar:** servicio mínimo; reroute; coordination.
 
@@ -68,9 +68,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-202-U03 — Tráfico de solicitudes
+### OPR-202-U03 — Tráfico de solicitudes
 
 **Enseñar:** colas; urgencia; conflictos.
 
@@ -78,9 +78,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-202-U04 — Apoyo interdepartamental
+### OPR-202-U04 — Apoyo interdepartamental
 
 **Enseñar:** ingeniería; ciencia; táctica; médico.
 
@@ -88,11 +88,11 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Teamwork.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## OPS-203 — Operaciones integradas
+## OPR-203 — Operaciones integradas
 
-### OPS-203-U01 — Guardia de Operaciones
+### OPR-203-U01 — Guardia de Operaciones
 
 **Enseñar:** estado; peticiones; registro.
 
@@ -100,9 +100,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-203-U02 — Configuración de misión
+### OPR-203-U02 — Configuración de misión
 
 **Enseñar:** recursos; sistemas; plan.
 
@@ -110,9 +110,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-203-U03 — Incidente múltiple
+### OPR-203-U03 — Incidente múltiple
 
 **Enseñar:** priorización; reroute; handoff.
 
@@ -120,9 +120,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-203-U04 — Cualificación intermedia
+### OPR-203-U04 — Cualificación intermedia
 
 **Enseñar:** consistencia; seguridad; comunicación.
 
@@ -130,11 +130,11 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evidencia.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## OPS-101 — Operaciones avanzadas I
+## OPR-101 — Operaciones avanzadas I
 
-### OPS-101-U01 — Planificación de recursos
+### OPR-101-U01 — Planificación de recursos
 
 **Enseñar:** misión; reserva; riesgo; contingencia.
 
@@ -142,9 +142,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Revisión.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-101-U02 — Supervisión de Ops
+### OPR-101-U02 — Supervisión de Ops
 
 **Enseñar:** equipo; peticiones; prioridades.
 
@@ -152,9 +152,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-101-U03 — Interfaz con mando
+### OPR-101-U03 — Interfaz con mando
 
 **Enseñar:** estado; opciones; recomendación.
 
@@ -162,9 +162,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-101-U04 — Continuidad de servicios
+### OPR-101-U04 — Continuidad de servicios
 
 **Enseñar:** degradación; restauración; registro.
 
@@ -172,11 +172,11 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## OPS-102B — Operaciones avanzadas II
+## OPR-102 — Operaciones avanzadas II
 
-### OPS-102B-U01 — Misión prolongada
+### OPR-102-U01 — Misión prolongada
 
 **Enseñar:** configuración; consumo; cambios.
 
@@ -184,9 +184,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-102B-U02 — Crisis de recursos
+### OPR-102-U02 — Crisis de recursos
 
 **Enseñar:** escasez; prioridad; impacto.
 
@@ -194,9 +194,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-102B-U03 — Coordinación de soporte
+### OPR-102-U03 — Coordinación de soporte
 
 **Enseñar:** equipos; lanzaderas; transportes; departamentos.
 
@@ -204,9 +204,9 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Teamwork.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-### OPS-102B-U04 — Handoff avanzado
+### OPR-102-U04 — Handoff avanzado
 
 **Enseñar:** estado; pendientes; riesgos; órdenes.
 
@@ -214,8 +214,15 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## Cualificación
+## Referencias internas
 
-No declarar competencia por una única escena. Exigir evidencia consistente y conservar áreas de desarrollo después de la graduación.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `gameplay/ship_operations/ship_computer/computer_query_action_catalog.json`
+- `gameplay/engineering/engineering_loop.json`
+- `gameplay/ship_operations/operational_event_log/README.md`

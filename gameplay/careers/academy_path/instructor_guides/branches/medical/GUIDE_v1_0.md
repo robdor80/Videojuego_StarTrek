@@ -1,10 +1,10 @@
 # Guía de instructor — Rama Medicina
 
-**v1.0**
+**v1.0.1**
 
-## Principio
+## Regla docente
 
-La especialidad debe enseñarse usando los sistemas reales del juego siempre que existan. La IA puede presentar escenas y NPC, pero no decide el estado técnico, el resultado ni la cualificación.
+La especialidad usa sistemas reales del juego siempre que existan. La IA puede presentar escenas y diálogo, pero no inventa estado técnico, autoridad, resultado ni cualificación.
 
 ## MED-201 — Medicina II — diagnóstico y práctica clínica
 
@@ -16,7 +16,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-201-U02 — Diagnóstico instrumental
 
@@ -26,7 +26,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-201-U03 — Razonamiento diagnóstico
 
@@ -36,7 +36,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-201-U04 — Tratamiento supervisado
 
@@ -46,7 +46,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## MED-202 — Medicina III — emergencia y xenomedicina
 
@@ -58,7 +58,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-202-U02 — Emergencia
 
@@ -68,7 +68,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-202-U03 — Múltiples pacientes
 
@@ -78,7 +78,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-202-U04 — Ética clínica
 
@@ -88,7 +88,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## MED-203 — Práctica clínica integrada
 
@@ -100,7 +100,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-203-U02 — Caso completo
 
@@ -110,7 +110,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-203-U03 — Emergencia en nave
 
@@ -120,7 +120,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-203-U04 — Cualificación intermedia
 
@@ -130,7 +130,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evidencia.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## MED-101 — Medicina avanzada I
 
@@ -142,7 +142,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-101-U02 — Supervisión clínica
 
@@ -152,7 +152,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-101-U03 — Plan terapéutico
 
@@ -162,7 +162,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Revisión.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-101-U04 — Asesoramiento al mando
 
@@ -172,7 +172,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ## MED-102 — Medicina avanzada II
 
@@ -184,7 +184,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-102-U02 — Crisis sanitaria
 
@@ -194,7 +194,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Juicio.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-102-U03 — Continuidad asistencial
 
@@ -204,7 +204,7 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Práctica.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
 ### MED-102-U04 — Cierre clínico
 
@@ -214,8 +214,15 @@ La especialidad debe enseñarse usando los sistemas reales del juego siempre que
 
 **Observar:** Evaluación.
 
-**Variación:** cambiar una restricción relevante para comprobar que el cadete transfiere la competencia en vez de repetir un guion memorizado.
+**Variación:** cambia una restricción para comprobar transferencia de competencia.
 
-## Cualificación
+## Referencias internas
 
-No declarar competencia por una única escena. Exigir evidencia consistente y conservar áreas de desarrollo después de la graduación.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/medical/medical_state_model.json`
+- `gameplay/medical/species_medical_hooks.json`
+- `lore/medicine/medical_capability_contract.json`
+- `lore/federation/starfleet/regulations/medical_authority.json`

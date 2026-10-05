@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "security_tactical",
   "status": "generated_from_authoritative_branch_curriculum",
   "question_count": 60,
@@ -12,7 +12,7 @@
       "prompt_es": "Explica escudos desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "escudos",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -21,7 +21,7 @@
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U01",
       "type": "scenario",
-      "prompt_es": "Familiarización. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Familiarización. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -33,13 +33,12 @@
       "id": "SECURITY_TACTICAL-Q003",
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Sistemas defensivos, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Sistemas defensivos para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -51,7 +50,7 @@
       "prompt_es": "Explica capacidad desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "capacidad",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -60,7 +59,7 @@
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U02",
       "type": "scenario",
-      "prompt_es": "Clasificar contacto. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Clasificar contacto. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -72,13 +71,12 @@
       "id": "SECURITY_TACTICAL-Q006",
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Análisis de amenaza, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Análisis de amenaza para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -90,7 +88,7 @@
       "prompt_es": "Explica accesos desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "accesos",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -99,7 +97,7 @@
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U03",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -111,13 +109,12 @@
       "id": "SECURITY_TACTICAL-Q009",
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Seguridad interna, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Seguridad interna para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -129,7 +126,7 @@
       "prompt_es": "Explica autoridad desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "autoridad",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -138,7 +135,7 @@
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U04",
       "type": "scenario",
-      "prompt_es": "Caso situacional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Caso situacional. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -150,13 +147,12 @@
       "id": "SECURITY_TACTICAL-Q012",
       "course_id": "SEC-201",
       "unit_id": "SEC-201-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Uso proporcional de fuerza, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Uso proporcional de fuerza para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -168,7 +164,7 @@
       "prompt_es": "Explica posición desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "posición",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -177,7 +173,7 @@
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U01",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -189,13 +185,12 @@
       "id": "SECURITY_TACTICAL-Q015",
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Táctica defensiva, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Táctica defensiva para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -207,7 +202,7 @@
       "prompt_es": "Explica detección desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "detección",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -216,7 +211,7 @@
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U02",
       "type": "scenario",
-      "prompt_es": "Ejercicio. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Ejercicio. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -228,13 +223,12 @@
       "id": "SECURITY_TACTICAL-Q018",
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Respuesta a abordaje, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Respuesta a abordaje para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -246,7 +240,7 @@
       "prompt_es": "Explica prioridad desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "prioridad",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -255,7 +249,7 @@
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U03",
       "type": "scenario",
-      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Escenario. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -267,13 +261,12 @@
       "id": "SECURITY_TACTICAL-Q021",
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Amenazas múltiples, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Amenazas múltiples para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -285,7 +278,7 @@
       "prompt_es": "Explica roles desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "roles",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -294,7 +287,7 @@
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U04",
       "type": "scenario",
-      "prompt_es": "Dirigir célula. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Dirigir célula. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -306,13 +299,12 @@
       "id": "SECURITY_TACTICAL-Q024",
       "course_id": "SEC-202",
       "unit_id": "SEC-202-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Equipo de seguridad, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Equipo de seguridad para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -324,7 +316,7 @@
       "prompt_es": "Explica estado desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "estado",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -333,7 +325,7 @@
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U01",
       "type": "scenario",
-      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Turno supervisado. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -345,13 +337,12 @@
       "id": "SECURITY_TACTICAL-Q027",
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Guardia táctica, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Guardia táctica para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -363,7 +354,7 @@
       "prompt_es": "Explica amenaza desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "amenaza",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -372,7 +363,7 @@
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U02",
       "type": "scenario",
-      "prompt_es": "Diseñar plan. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Diseñar plan. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -384,13 +375,12 @@
       "id": "SECURITY_TACTICAL-Q030",
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Plan de seguridad, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Plan de seguridad para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -402,7 +392,7 @@
       "prompt_es": "Explica externo desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "externo",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -411,7 +401,7 @@
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U03",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -423,13 +413,12 @@
       "id": "SECURITY_TACTICAL-Q033",
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Incidente complejo, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Incidente complejo para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -441,7 +430,7 @@
       "prompt_es": "Explica disciplina desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "disciplina",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -450,7 +439,7 @@
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U04",
       "type": "scenario",
-      "prompt_es": "Evaluación integrada. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Evaluación integrada. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -462,13 +451,12 @@
       "id": "SECURITY_TACTICAL-Q036",
       "course_id": "SEC-203",
       "unit_id": "SEC-203-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Cualificación intermedia, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Cualificación intermedia para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -480,7 +468,7 @@
       "prompt_es": "Explica equipo desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "equipo",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -489,7 +477,7 @@
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U01",
       "type": "scenario",
-      "prompt_es": "Dirigir servicio. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Dirigir servicio. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -501,13 +489,12 @@
       "id": "SECURITY_TACTICAL-Q039",
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Supervisión de seguridad, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Supervisión de seguridad para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -519,7 +506,7 @@
       "prompt_es": "Explica sensores/escudos degradados desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "sensores/escudos degradados",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -528,7 +515,7 @@
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U02",
       "type": "scenario",
-      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Simulación. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -540,13 +527,12 @@
       "id": "SECURITY_TACTICAL-Q042",
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Táctica bajo daño, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Táctica bajo daño para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -558,7 +544,7 @@
       "prompt_es": "Explica personal desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "personal",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -567,7 +553,7 @@
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U03",
       "type": "scenario",
-      "prompt_es": "Plan avanzado. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Plan avanzado. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -579,13 +565,12 @@
       "id": "SECURITY_TACTICAL-Q045",
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Protección de misión, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Protección de misión para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -597,7 +582,7 @@
       "prompt_es": "Explica amenaza desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "amenaza",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -606,7 +591,7 @@
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U04",
       "type": "scenario",
-      "prompt_es": "Briefing. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Briefing. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -618,13 +603,12 @@
       "id": "SECURITY_TACTICAL-Q048",
       "course_id": "SEC-101",
       "unit_id": "SEC-101-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Asesoramiento al mando, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Asesoramiento al mando para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -636,7 +620,7 @@
       "prompt_es": "Explica brief desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "brief",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -645,7 +629,7 @@
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U01",
       "type": "scenario",
-      "prompt_es": "Operar misión. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Operar misión. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -657,13 +641,12 @@
       "id": "SECURITY_TACTICAL-Q051",
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U01",
-      "type": "debrief",
-      "prompt_es": "Después de Misión táctica completa, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Misión táctica completa para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -675,7 +658,7 @@
       "prompt_es": "Explica abordaje desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "abordaje",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -684,7 +667,7 @@
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U02",
       "type": "scenario",
-      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Escenario complejo. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -696,13 +679,12 @@
       "id": "SECURITY_TACTICAL-Q054",
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U02",
-      "type": "debrief",
-      "prompt_es": "Después de Crisis de seguridad, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Crisis de seguridad para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -714,7 +696,7 @@
       "prompt_es": "Explica comunicación desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "comunicación",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -723,7 +705,7 @@
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U03",
       "type": "scenario",
-      "prompt_es": "Caso. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Caso. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -735,13 +717,12 @@
       "id": "SECURITY_TACTICAL-Q057",
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U03",
-      "type": "debrief",
-      "prompt_es": "Después de Desescalada, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Desescalada para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     },
@@ -753,7 +734,7 @@
       "prompt_es": "Explica amenazas desde la perspectiva de Seguridad / Táctica.",
       "answer_key_es": [
         "amenazas",
-        "aplicación profesional",
+        "aplicación",
         "límite o riesgo"
       ]
     },
@@ -762,7 +743,7 @@
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U04",
       "type": "scenario",
-      "prompt_es": "Relevo profesional. Describe preparación, decisión, comunicación y criterio de escalado.",
+      "prompt_es": "Relevo profesional. Describe preparación, decisión, comunicación y escalado.",
       "answer_key_es": [
         "preparación",
         "decisión",
@@ -774,13 +755,12 @@
       "id": "SECURITY_TACTICAL-Q060",
       "course_id": "SEC-102",
       "unit_id": "SEC-102-U04",
-      "type": "debrief",
-      "prompt_es": "Después de Handoff táctico, ¿qué evidencia conservarías para demostrar competencia real?",
+      "type": "evidence",
+      "prompt_es": "¿Qué evidencia conservarías tras Handoff táctico para demostrar competencia real?",
       "answer_key_es": [
-        "hechos",
+        "contexto",
         "acciones",
         "resultado",
-        "contexto",
         "feedback"
       ]
     }

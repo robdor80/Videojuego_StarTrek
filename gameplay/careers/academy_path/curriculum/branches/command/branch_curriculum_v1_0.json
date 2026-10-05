@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "command",
   "display_es": "Mando",
   "status": "unit_design_complete",
@@ -281,5 +281,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "lore/federation/starfleet/command_structure/succession_rules.json",
+    "lore/federation/starfleet/qualifications/command_qualification.json",
+    "lore/federation/starfleet/prime_directive/prime_directive.json",
+    "gameplay/orders/starfleet_mission_tasking_order.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

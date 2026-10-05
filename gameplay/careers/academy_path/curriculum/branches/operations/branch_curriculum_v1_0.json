@@ -1,22 +1,22 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "operations",
   "display_es": "Operaciones",
   "status": "unit_design_complete",
   "course_ids": [
-    "OPS-201",
-    "OPS-202",
-    "OPS-203",
-    "OPS-101",
-    "OPS-102B"
+    "OPR-201",
+    "OPR-202",
+    "OPR-203",
+    "OPR-101",
+    "OPR-102"
   ],
   "stages": [
     {
-      "course_id": "OPS-201",
+      "course_id": "OPR-201",
       "title_es": "Operaciones II — recursos y sistemas",
       "units": [
         {
-          "unit_id": "OPS-201-U01",
+          "unit_id": "OPR-201-U01",
           "title_es": "Gestión de recursos",
           "core_content_es": [
             "energía",
@@ -28,7 +28,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-201-U02",
+          "unit_id": "OPR-201-U02",
           "title_es": "Coordinación de sistemas",
           "core_content_es": [
             "dependencias",
@@ -39,7 +39,7 @@
           "assessment_es": "Práctica."
         },
         {
-          "unit_id": "OPS-201-U03",
+          "unit_id": "OPR-201-U03",
           "title_es": "Soporte de misión",
           "core_content_es": [
             "configuración",
@@ -50,7 +50,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-201-U04",
+          "unit_id": "OPR-201-U04",
           "title_es": "Transportadores y servicios",
           "core_content_es": [
             "capacidad",
@@ -64,11 +64,11 @@
       ]
     },
     {
-      "course_id": "OPS-202",
+      "course_id": "OPR-202",
       "title_es": "Operaciones III — carga y contingencia",
       "units": [
         {
-          "unit_id": "OPS-202-U01",
+          "unit_id": "OPR-202-U01",
           "title_es": "Logística dinámica",
           "core_content_es": [
             "inventario",
@@ -80,7 +80,7 @@
           "assessment_es": "Caso."
         },
         {
-          "unit_id": "OPS-202-U02",
+          "unit_id": "OPR-202-U02",
           "title_es": "Sistemas degradados",
           "core_content_es": [
             "servicio mínimo",
@@ -91,7 +91,7 @@
           "assessment_es": "Práctica."
         },
         {
-          "unit_id": "OPS-202-U03",
+          "unit_id": "OPR-202-U03",
           "title_es": "Tráfico de solicitudes",
           "core_content_es": [
             "colas",
@@ -102,7 +102,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-202-U04",
+          "unit_id": "OPR-202-U04",
           "title_es": "Apoyo interdepartamental",
           "core_content_es": [
             "ingeniería",
@@ -116,11 +116,11 @@
       ]
     },
     {
-      "course_id": "OPS-203",
+      "course_id": "OPR-203",
       "title_es": "Operaciones integradas",
       "units": [
         {
-          "unit_id": "OPS-203-U01",
+          "unit_id": "OPR-203-U01",
           "title_es": "Guardia de Operaciones",
           "core_content_es": [
             "estado",
@@ -131,7 +131,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-203-U02",
+          "unit_id": "OPR-203-U02",
           "title_es": "Configuración de misión",
           "core_content_es": [
             "recursos",
@@ -142,7 +142,7 @@
           "assessment_es": "Práctica."
         },
         {
-          "unit_id": "OPS-203-U03",
+          "unit_id": "OPR-203-U03",
           "title_es": "Incidente múltiple",
           "core_content_es": [
             "priorización",
@@ -153,7 +153,7 @@
           "assessment_es": "Juicio."
         },
         {
-          "unit_id": "OPS-203-U04",
+          "unit_id": "OPR-203-U04",
           "title_es": "Cualificación intermedia",
           "core_content_es": [
             "consistencia",
@@ -166,11 +166,11 @@
       ]
     },
     {
-      "course_id": "OPS-101",
+      "course_id": "OPR-101",
       "title_es": "Operaciones avanzadas I",
       "units": [
         {
-          "unit_id": "OPS-101-U01",
+          "unit_id": "OPR-101-U01",
           "title_es": "Planificación de recursos",
           "core_content_es": [
             "misión",
@@ -182,7 +182,7 @@
           "assessment_es": "Revisión."
         },
         {
-          "unit_id": "OPS-101-U02",
+          "unit_id": "OPR-101-U02",
           "title_es": "Supervisión de Ops",
           "core_content_es": [
             "equipo",
@@ -193,7 +193,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-101-U03",
+          "unit_id": "OPR-101-U03",
           "title_es": "Interfaz con mando",
           "core_content_es": [
             "estado",
@@ -204,7 +204,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-101-U04",
+          "unit_id": "OPR-101-U04",
           "title_es": "Continuidad de servicios",
           "core_content_es": [
             "degradación",
@@ -217,11 +217,11 @@
       ]
     },
     {
-      "course_id": "OPS-102B",
+      "course_id": "OPR-102",
       "title_es": "Operaciones avanzadas II",
       "units": [
         {
-          "unit_id": "OPS-102B-U01",
+          "unit_id": "OPR-102-U01",
           "title_es": "Misión prolongada",
           "core_content_es": [
             "configuración",
@@ -232,7 +232,7 @@
           "assessment_es": "Evaluación."
         },
         {
-          "unit_id": "OPS-102B-U02",
+          "unit_id": "OPR-102-U02",
           "title_es": "Crisis de recursos",
           "core_content_es": [
             "escasez",
@@ -243,7 +243,7 @@
           "assessment_es": "Juicio."
         },
         {
-          "unit_id": "OPS-102B-U03",
+          "unit_id": "OPR-102-U03",
           "title_es": "Coordinación de soporte",
           "core_content_es": [
             "equipos",
@@ -255,7 +255,7 @@
           "assessment_es": "Teamwork."
         },
         {
-          "unit_id": "OPS-102B-U04",
+          "unit_id": "OPR-102-U04",
           "title_es": "Handoff avanzado",
           "core_content_es": [
             "estado",
@@ -278,5 +278,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/ship_operations/bridge_station_model.json",
+    "gameplay/ship_operations/ship_computer/computer_query_action_catalog.json",
+    "gameplay/engineering/engineering_loop.json",
+    "gameplay/ship_operations/operational_event_log/README.md"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

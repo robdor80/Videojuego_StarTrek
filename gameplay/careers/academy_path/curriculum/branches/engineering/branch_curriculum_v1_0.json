@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "engineering",
   "display_es": "Ingeniería",
   "status": "unit_design_complete",
@@ -283,5 +283,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/engineering/engineering_loop.json",
+    "gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json",
+    "lore/starships/ship_systems/warp/README.md",
+    "lore/starships/ship_systems/transporters/README.md"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }

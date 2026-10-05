@@ -4,271 +4,231 @@
 
 ## Propósito
 
-Este manual reúne la progresión profesional de la rama **Operaciones** desde el inicio formal de la especialización en 2.ª clase hasta el final de 1.ª clase.
+La especialización **Operaciones** desarrolla competencia mediante estudio, práctica y evidencia. Seleccionar la rama no concede por sí mismo ninguna capacidad.
 
-La rama no otorga capacidades por selección. Cada competencia requiere estudio, práctica y evidencia.
+## OPR-201 — Operaciones II — recursos y sistemas
 
-## OPS-201 — Operaciones II — recursos y sistemas
+### OPR-201-U01 — Gestión de recursos
 
-### OPS-201-U01 — Gestión de recursos
-
-- **energía**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **tiempo**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **capacidad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **prioridad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** energía; tiempo; capacidad; prioridad.
 
 **Práctica:** Asignar recursos.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-201-U02 — Coordinación de sistemas
+### OPR-201-U02 — Coordinación de sistemas
 
-- **dependencias**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **servicios**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **peticiones**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** dependencias; servicios; peticiones.
 
 **Práctica:** Gestionar caso.
 
 **Evaluación:** Práctica.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-201-U03 — Soporte de misión
+### OPR-201-U03 — Soporte de misión
 
-- **configuración**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **logística**: Operaciones mantiene disponibles recursos, sistemas y servicios para que la misión pueda continuar. Priorizar significa asignar capacidad donde produce mayor valor sin ocultar costes.
-- **información**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** configuración; logística; información.
 
 **Práctica:** Preparar misión.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-201-U04 — Transportadores y servicios
+### OPR-201-U04 — Transportadores y servicios
 
-- **capacidad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **seguridad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **ventanas**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **límites**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** capacidad; seguridad; ventanas; límites.
 
 **Práctica:** Caso operativo.
 
 **Evaluación:** Juicio.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-## OPS-202 — Operaciones III — carga y contingencia
+## OPR-202 — Operaciones III — carga y contingencia
 
-### OPS-202-U01 — Logística dinámica
+### OPR-202-U01 — Logística dinámica
 
-- **inventario**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **personal**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **capacidad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **prioridad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** inventario; personal; capacidad; prioridad.
 
 **Práctica:** Replanificar recursos.
 
 **Evaluación:** Caso.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-202-U02 — Sistemas degradados
+### OPR-202-U02 — Sistemas degradados
 
-- **servicio mínimo**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **reroute**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **coordination**: Ops actúa como tejido conectivo entre departamentos: recibe necesidades, detecta conflictos y conserva una imagen de capacidad común.
+**Contenidos:** servicio mínimo; reroute; coordination.
 
 **Práctica:** Simulación.
 
 **Evaluación:** Práctica.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-202-U03 — Tráfico de solicitudes
+### OPR-202-U03 — Tráfico de solicitudes
 
-- **colas**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **urgencia**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **conflictos**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** colas; urgencia; conflictos.
 
 **Práctica:** Gestionar puesto cargado.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-202-U04 — Apoyo interdepartamental
+### OPR-202-U04 — Apoyo interdepartamental
 
-- **ingeniería**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **ciencia**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **táctica**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **médico**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** ingeniería; ciencia; táctica; médico.
 
 **Práctica:** Misión integrada.
 
 **Evaluación:** Teamwork.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-## OPS-203 — Operaciones integradas
+## OPR-203 — Operaciones integradas
 
-### OPS-203-U01 — Guardia de Operaciones
+### OPR-203-U01 — Guardia de Operaciones
 
-- **estado**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **peticiones**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **registro**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** estado; peticiones; registro.
 
 **Práctica:** Turno supervisado.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-203-U02 — Configuración de misión
+### OPR-203-U02 — Configuración de misión
 
-- **recursos**: Operaciones mantiene disponibles recursos, sistemas y servicios para que la misión pueda continuar. Priorizar significa asignar capacidad donde produce mayor valor sin ocultar costes.
-- **sistemas**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **plan**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** recursos; sistemas; plan.
 
 **Práctica:** Preparar nave.
 
 **Evaluación:** Práctica.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-203-U03 — Incidente múltiple
+### OPR-203-U03 — Incidente múltiple
 
-- **priorización**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **reroute**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **handoff**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** priorización; reroute; handoff.
 
 **Práctica:** Resolver escenario.
 
 **Evaluación:** Juicio.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-203-U04 — Cualificación intermedia
+### OPR-203-U04 — Cualificación intermedia
 
-- **consistencia**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **seguridad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **comunicación**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** consistencia; seguridad; comunicación.
 
 **Práctica:** Evaluación integrada.
 
 **Evaluación:** Evidencia.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-## OPS-101 — Operaciones avanzadas I
+## OPR-101 — Operaciones avanzadas I
 
-### OPS-101-U01 — Planificación de recursos
+### OPR-101-U01 — Planificación de recursos
 
-- **misión**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **reserva**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **riesgo**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **contingencia**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** misión; reserva; riesgo; contingencia.
 
 **Práctica:** Plan completo.
 
 **Evaluación:** Revisión.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-101-U02 — Supervisión de Ops
+### OPR-101-U02 — Supervisión de Ops
 
-- **equipo**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **peticiones**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **prioridades**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** equipo; peticiones; prioridades.
 
 **Práctica:** Dirigir turno.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-101-U03 — Interfaz con mando
+### OPR-101-U03 — Interfaz con mando
 
-- **estado**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **opciones**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **recomendación**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** estado; opciones; recomendación.
 
 **Práctica:** Briefing.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-101-U04 — Continuidad de servicios
+### OPR-101-U04 — Continuidad de servicios
 
-- **degradación**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **restauración**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **registro**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** degradación; restauración; registro.
 
 **Práctica:** Caso avanzado.
 
 **Evaluación:** Práctica.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-## OPS-102B — Operaciones avanzadas II
+## OPR-102 — Operaciones avanzadas II
 
-### OPS-102B-U01 — Misión prolongada
+### OPR-102-U01 — Misión prolongada
 
-- **configuración**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **consumo**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **cambios**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** configuración; consumo; cambios.
 
 **Práctica:** Operar misión.
 
 **Evaluación:** Evaluación.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-102B-U02 — Crisis de recursos
+### OPR-102-U02 — Crisis de recursos
 
-- **escasez**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **prioridad**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **impacto**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** escasez; prioridad; impacto.
 
 **Práctica:** Escenario.
 
 **Evaluación:** Juicio.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-102B-U03 — Coordinación de soporte
+### OPR-102-U03 — Coordinación de soporte
 
-- **equipos**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **lanzaderas**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **transportes**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **departamentos**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** equipos; lanzaderas; transportes; departamentos.
 
 **Práctica:** Caso integrado.
 
 **Evaluación:** Teamwork.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
-### OPS-102B-U04 — Handoff avanzado
+### OPR-102-U04 — Handoff avanzado
 
-- **estado**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **pendientes**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **riesgos**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
-- **órdenes**: Este elemento forma parte de la competencia profesional de la rama. Debe poder explicarse, aplicarse en contexto y conectarse con una decisión, un límite de autoridad y un resultado observable.
+**Contenidos:** estado; pendientes; riesgos; órdenes.
 
 **Práctica:** Relevo profesional.
 
 **Evaluación:** Práctica.
 
-**Pregunta profesional:** ¿qué información necesitarías para ejecutar esta tarea sin exceder tu autoridad y qué dejarías registrado al terminar?
+**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
 
 ## Formación cruzada
 
-Un cadete de otra rama puede cursar partes de este contenido como formación cruzada. Esa evidencia puede producir capacidad auxiliar, pero **no concede automáticamente la cualificación completa de Operaciones**.
+La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
 
-## Después de la Academia
+## Referencias internas
 
-La graduación no cierra esta progresión. El servicio real, nuevas cualificaciones, mentoría y responsabilidad creciente continúan desarrollando la rama.
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `gameplay/ship_operations/ship_computer/computer_query_action_catalog.json`
+- `gameplay/engineering/engineering_loop.json`
+- `gameplay/ship_operations/operational_event_log/README.md`
+
+Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.

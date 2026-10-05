@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "branch_id": "security_tactical",
   "display_es": "Seguridad / Táctica",
   "status": "unit_design_complete",
@@ -283,5 +283,16 @@
     "game",
     "academy_web",
     "pdf"
-  ]
+  ],
+  "source_refs": [
+    "gameplay/careers/academy_path/specializations.json",
+    "gameplay/careers/academy_path/specialization_rules.md",
+    "gameplay/careers/starfleet_service/professional_evidence_model.json",
+    "gameplay/careers/starfleet_service/career_progression_rules.json",
+    "gameplay/security/README.md",
+    "gameplay/ship_operations/bridge_station_model.json",
+    "lore/federation/starfleet/regulations/README.md",
+    "lore/federation/starfleet/prime_directive/prime_directive.json"
+  ],
+  "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; curriculum packaging is GAME_ADDITION."
 }
