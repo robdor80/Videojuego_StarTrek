@@ -1,42 +1,42 @@
 # Starfleet Academy + Career Design v0.2
 
-Status: **FOUNDATION IN PROGRESS**
-
-This document extends the existing Academy baseline into the intended full RPG experience.
+Status: **FOUNDATION ESTABLISHED — CONTENT DEPTH IN PROGRESS**
 
 ## Career arc
 
 ```text
+VALIDATED CHARACTER
+      ↓
 ACCESS / ADMISSION
       ↓
-4th YEAR
+CADET — 4th CLASS
       ↓
-3rd YEAR
+CADET — 3rd CLASS
       ↓
-2nd YEAR
+SPECIALIZATION CHOICE
       ↓
-1st YEAR
+CADET — 2nd CLASS
+      ↓
+CADET — 1st CLASS
       ↓
 GRADUATION
       ↓
 ENSIGN
       ↓
-LT. JG
-      ↓
-LIEUTENANT
-      ↓
-SENIOR OFFICER / MENTOR / COMMAND PATH
+PROFESSIONAL DEVELOPMENT IN SERVICE
 ```
 
-The displayed year naming is intentionally Academy-flavoured: the cadet enters **4th Year** and progresses toward **1st Year** before graduation.
+Each Academy year is divided into three trimesters.
 
-Internal sequence indexes may remain ascending for implementation clarity.
+## Access
+
+Access uses a compact general curriculum: ACC-01 Federación y Flota Estelar; ACC-02 Cómo se organiza Starfleet; ACC-03 Vida a bordo; ACC-04 Tecnología básica; ACC-05 Principios del servicio.
+
+> **Access teaches what Starfleet is. Academy teaches how Starfleet work is actually done.**
+
+Admission is holistic and may use knowledge, reasoning, interpersonal, psychological, practical and interview evidence. Recoverable failure should normally produce preparation or targeted reassessment rather than forcing a full restart.
 
 ## Academic structure
-
-Each year is divided into three trimesters.
-
-Each subject can contain units built from real game systems.
 
 ```text
 YEAR
@@ -49,207 +49,70 @@ YEAR
             └── EVALUATION
 ```
 
-### Theory
-Manuals, PADDs, regulations, reference material and self-study.
+Subjects group related material instead of creating dozens of tiny one-topic courses. Course IDs must remain stable across game, PDF, web, practices, evaluations and records.
 
-### Class
-Persistent instructor NPC teaches, demonstrates, answers free-form questions and can reformulate explanations.
+## Learning philosophy
 
-### Practice
-The cadet uses the **same gameplay backend** later used in active service.
+Theory uses manuals, PADDs, regulations, reference material and self-study. Class uses persistent instructors. Practice uses the same gameplay backend later used in active service. Evaluation consumes evidence from actual actions.
 
-### Evaluation
-Evidence-based assessment from actual actions/events. AI may explain the result but does not invent grades.
-
-## Curriculum philosophy
-
-Academy study must teach what the player will genuinely use.
-
-Examples include:
-
-- ranks and insignia;
-- chain of command;
-- shipboard roles;
-- orders and reporting;
-- duty watches;
-- bridge operations;
-- galactic map / astrography;
-- ship and station types;
-- warp fundamentals;
-- transporters;
-- replicators;
-- holodecks;
-- ship weapons;
-- personal equipment;
-- tricorders;
-- Federation cultures;
-- sensors;
-- navigation;
-- operations;
-- engineering;
-- tactical/security;
-- medicine/science;
-- emergency procedures.
-
-It must not become a passive Star Trek wiki.
+Professional knowledge explicitly taught by Academy material **may be required from the player**. Unteachable trivia and advanced fictional science not provided to the player may not be used as gotchas.
 
 ## Specialization
 
-The player chooses the final professional direction.
+The normal timeline is fixed:
 
-Instructors may recommend. They do not choose for the player.
+```text
+3rd Class — Trimester 3
+→ final branch exposure and decision
 
-Broad playable paths already supported by the current specialization model include:
+END OF 3rd CLASS
+→ specialization selected
 
-- Command;
-- Flight Control / Navigation;
-- Operations;
-- Engineering;
-- Security / Tactical;
-- Science;
-- specialist science fields;
-- Medical.
+2nd Class — Trimester 1
+→ formal specialization training begins
+```
 
-Cadets may begin undecided, explore divisions, cross-train and change direction with realistic catch-up requirements.
+Instructors may recommend. They never choose. Later changes remain possible with realistic catch-up.
+
+Broad paths: Command; Flight Control / Navigation; Operations; Engineering; Security / Tactical; Science / Sensors; specialist science fields; Medical.
+
+Division, career and specialty are separate concepts.
 
 ## Academic record
 
-The Academy Record is persistent and evidence-based.
-
-It may contain:
-
-- course completion;
-- practical results;
-- exam results;
-- instructor observations;
-- strengths;
-- weaknesses;
-- disciplinary incidents;
-- commendations;
-- simulator performance;
-- qualifications;
-- recommendations;
-- specialization history;
-- field-training performance;
-- capstone/final practical results.
+The Academy Record is persistent and evidence-based: course completion, practical/exam results, instructor observations, strengths, weaknesses, discipline, commendations, simulator performance, qualifications, recommendations, specialization history, field training and capstone results.
 
 The record is not a single score.
 
-## Instructor model
-
-Instructors are persistent characters with:
-
-- rank and role;
-- subject expertise;
-- personality;
-- teaching style;
-- strictness;
-- mentoring tendency;
-- memory of the cadet;
-- knowledge and authority limits.
-
-AI supports natural explanation and dialogue. Authoritative systems decide schedules, grades, qualifications and sanctions.
-
 ## Real-system training
 
-Wrong-but-valid actions normally execute.
+Wrong-but-valid actions normally execute. If a cadet configures a valid passive scan but points it at the wrong sector, the scan occurs and the instructor evaluates the error afterward.
 
-Example:
+## Deep Academy with time advancement
 
-- assignment: passive scan of sector 14;
-- cadet correctly configures a passive subspace scan;
-- cadet scans sector 16;
-- scan executes;
-- instructor later evaluates: procedure correct, target wrong.
+The Academy should feel like four lived years rather than a short tutorial: classes, practices, instructors, classmates, study, campus, free time, relationships, training and field activity.
 
-This preserves system realism and creates meaningful evidence.
+Routine time may advance intelligently. Relevant events are preserved. Exact trimester calendar duration remains a separate scheduling decision.
 
 ## Kobayashi Maru
 
-The Kobayashi Maru is a late-Academy capstone experience.
+Kobayashi Maru is a **project-wide Starfleet Academy tradition across all playable eras**.
 
-It is not a puzzle with one correct solution.
+Canon evidence is strongest in Kirk material; Pike and TNG-era use is a deliberate project normalization.
 
-It evaluates conduct under a no-win or irreducibly adverse situation:
+Era presentation differs:
+- Pike: physical/electronic simulation;
+- Kirk: bridge simulation;
+- TNG/DS9/Voyager: advanced computer/holodeck simulation when appropriate.
 
-- judgment;
-- leadership;
-- communication;
-- responsibility;
-- ethical reasoning;
-- risk handling;
-- consistency;
-- team use;
-- response to uncertainty.
-
-Command candidates may command the full scenario.
-
-Other branches experience the event from their real station and receive branch-specific evaluation.
-
-The exact trimester placement remains configurable until the complete master curriculum is scheduled.
+It is a late-Academy capstone in First Class, Trimester 3. It is not a puzzle with one correct answer and is not something the player must “win”.
 
 ## Graduation
 
-Graduation means:
-
-> **ready to begin professional service**
-
-not:
-
-> **fully mastered officer**
-
-The cadet becomes an Ensign and enters supervised operational learning.
-
-## Post-Academy principle
-
-Academy teaches Starfleet standards and controlled practice.
-
-Active service teaches:
-
-- this ship;
-- this crew;
-- real consequences;
-- class-specific systems;
-- operational tempo;
-- judgment under live conditions.
-
-## Progression philosophy
-
-```text
-ENSIGN
-→ supervised real-world consolidation
-
-LT. JG
-→ increasing autonomy and advanced qualifications
-
-LIEUTENANT
-→ consolidated professional capability and early leadership
-
-SENIOR OFFICER
-→ supervision, department responsibility, mentorship and command pathways
-```
-
-There is no requirement for a generic visible XP level.
-
-Growth is represented by qualifications, evidence, responsibility, trust and service history.
+Graduation means **ready to begin professional service**, not fully mastered officer. The cadet becomes an Ensign and enters supervised operational learning.
 
 ## Integration
 
-Consumes:
+Consumes validated identity/background, objectives, Operational Event Log, records, timekeeping, memory, social/wellbeing systems and real console operations.
 
-- Operational Event Log;
-- service record;
-- timekeeping;
-- character memory;
-- relationship/social systems;
-- habits/wellbeing;
-- real console operations.
-
-Produces:
-
-- academic evaluations;
-- qualifications;
-- recommendations;
-- career evidence;
-- relationships with instructors/classmates;
-- first-assignment candidates.
+Produces academic evaluations, qualifications, recommendations, career evidence, persistent relationships and first-assignment candidates.
