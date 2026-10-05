@@ -1,219 +1,379 @@
 # CAR-303 — Desarrollo profesional y elección de especialización
 
-**Material de estudio v1.0 — Cadete de 3.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 3.ª clase · Trimestre 3**
 
 ## Finalidad
 
-Convertir experiencia, intereses y evidencia en una elección de especialización consciente del jugador.
+Convertir experiencia, intereses y evidencia de dos años en una elección de especialización consciente. CAR-303 no utiliza una puntuación secreta para decirle al jugador “qué debe ser”. La Academia puede recomendar, advertir y proponer recuperación; la elección final corresponde al jugador dentro de los requisitos objetivos del mundo.
 
-## Enfoque
+La regla central es:
 
-En 3.ª clase ya no basta reconocer sistemas. Debes **operar bajo supervisión**, comunicar con precisión y justificar decisiones con la información disponible. El conocimiento enseñado puede evaluarse directamente.
+> **Preferencia, aptitud, trayectoria y oportunidad son cosas distintas.**
 
-## CAR-303-U01 — Perfil académico actual
+---
 
-### Núcleo
+# CAR-303-U01 — Perfil académico actual
 
-- **fortalezas**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **carencias**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **evidencia**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **preferencias**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Qué se revisa
 
-### Práctica
+El perfil actual reúne:
+- fortalezas;
+- carencias;
+- evidencia;
+- preferencias;
+- conducta;
+- experiencias;
+- cualificaciones obtenidas.
 
-Revisar expediente.
+## 2. Fortalezas
 
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
+Una fortaleza no es “me gusta”.
 
-### Evaluación
+Debe estar respaldada por:
+- práctica;
+- observación;
+- resultados;
+- repetición.
 
-Tutoría.
+## 3. Carencias
 
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
+Una carencia puede significar:
+- falta de experiencia;
+- capacidad todavía básica;
+- inconsistencia;
+- necesidad de formación.
 
-### Errores frecuentes
+No siempre significa incompatibilidad con una rama.
 
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+## 4. Preferencias
 
-### Autoevaluación
+La preferencia del jugador es válida incluso si todavía no coincide con la mejor evidencia.
 
-1. Define **fortalezas** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Revisar expediente.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+La respuesta puede ser:
+> “Posible, pero faltan experiencias.”
 
-## CAR-303-U02 — Qué exige cada rama
+## 5. Expediente
 
-### Núcleo
-
-- **tipo de trabajo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **responsabilidades**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **competencias**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **estilo de servicio**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-
-### Práctica
-
-Comparar ramas con ejemplos.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Comprobación de comprensión.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
-
-### Autoevaluación
-
-1. Define **tipo de trabajo** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Comparar ramas con ejemplos.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
-
-## CAR-303-U03 — Aptitud y preferencia
-
-### Núcleo
-
-- **recomendación**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **motivación**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **capacidad**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **objetivos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+El expediente muestra historia, no destino.
 
 ### Práctica
 
-Contrastar deseo y evidencia sin bloquear por puntuación oculta.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Entrevista.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Revisar el expediente y separar interés, evidencia fuerte y áreas aún no probadas.
 
 ### Autoevaluación
 
-1. Define **recomendación** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Contrastar deseo y evidencia sin bloquear por puntuación oculta.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué forma el perfil académico?
+2. ¿Qué convierte una capacidad en fortaleza?
+3. ¿Una carencia significa incompatibilidad?
+4. ¿Puede una preferencia superar la evidencia actual como objetivo?
+5. ¿Por qué expediente no equivale a destino?
 
-## CAR-303-U04 — Objetivos de carrera
+---
 
-### Núcleo
+# CAR-303-U02 — Qué exige cada rama
 
-- **largo plazo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **medio plazo**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **rutas múltiples**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **cambio futuro**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Tipo de trabajo
+
+Cada rama implica actividades y responsabilidades diferentes.
+
+### Mando
+Coordinación, decisión, liderazgo y puente.
+
+### Vuelo/Navegación
+Rutas, maniobra, astrogación y control.
+
+### Operaciones
+Recursos, sistemas, logística y coordinación.
+
+### Ingeniería
+Energía, sistemas, diagnóstico y mantenimiento.
+
+### Seguridad/Táctica
+Protección, riesgo, procedimiento y defensa.
+
+### Ciencia/Sensores
+Medición, análisis, investigación y método.
+
+### Medicina
+Diagnóstico, tratamiento, triaje, ética y xenomedicina.
+
+## 2. Competencias
+
+No basta con una única habilidad.
+
+Cada rama combina:
+- técnica;
+- procedimiento;
+- comunicación;
+- juicio;
+- trabajo en equipo.
+
+## 3. Estilo de servicio
+
+También cambia:
+- ritmo;
+- entorno;
+- tipo de responsabilidad;
+- frecuencia de guardias;
+- contacto con pacientes, sistemas o mando.
 
 ### Práctica
 
-Actualizar trayectoria.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Revisión.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Comparar tres ramas a partir de un día de trabajo realista.
 
 ### Autoevaluación
 
-1. Define **largo plazo** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Actualizar trayectoria.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué diferencia principal existe entre ramas?
+2. ¿Qué combina una competencia profesional?
+3. ¿Por qué importa el estilo de servicio?
+4. ¿Qué rama prioriza coordinación de recursos?
+5. ¿Qué rama prioriza análisis científico?
 
-## CAR-303-U05 — Entrevistas de orientación
+---
 
-### Núcleo
+# CAR-303-U03 — Aptitud y preferencia
 
-- **feedback**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **preguntas**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **recomendaciones**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **apoyos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Aptitud
+
+Aptitud es la capacidad demostrada o razonablemente desarrollable para una función.
+
+## 2. Preferencia
+
+Preferencia es lo que el personaje quiere hacer.
+
+No son idénticas.
+
+## 3. Recomendación
+
+Una recomendación puede ser:
+- favorable;
+- favorable con desarrollo;
+- prudente;
+- sugerir más exposición.
+
+No debe convertirse en orden oculta.
+
+## 4. Motivación
+
+Una motivación sostenida puede justificar invertir tiempo en desarrollar una capacidad todavía débil.
+
+## 5. Requisitos objetivos
+
+Algunas rutas pueden exigir:
+- asignaturas;
+- cualificaciones;
+- mínimos;
+- recuperación.
+
+Esos requisitos sí pueden bloquear temporalmente una elección.
 
 ### Práctica
 
-Hablar con instructores/mentores.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Registro cualitativo.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Contrastar una preferencia fuerte con evidencia mixta y preparar un plan realista.
 
 ### Autoevaluación
 
-1. Define **feedback** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Hablar con instructores/mentores.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. Diferencia aptitud y preferencia.
+2. ¿Qué puede expresar una recomendación?
+3. ¿Puede una recomendación obligar al jugador?
+4. ¿Qué papel tiene motivación?
+5. ¿Qué puede bloquear objetivamente una ruta?
 
-## CAR-303-U06 — Selección final
+---
 
-### Núcleo
+# CAR-303-U04 — Objetivos de carrera
 
-- **decisión del jugador**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **requisitos objetivos**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **consecuencias**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
-- **catch-up futuro**: El concepto debe comprenderse por su efecto práctico: qué información aporta, qué decisión modifica, qué límite impone y a quién debe comunicarse.
+## 1. Medio y largo plazo
+
+Un objetivo profesional describe dirección.
+
+Ejemplos:
+- obtener cualificación de puente;
+- desarrollar liderazgo;
+- completar especialización;
+- aspirar a mando futuro.
+
+## 2. No garantiza resultado
+
+Decir:
+> “Quiero mandar una nave”
+
+no crea:
+- puesto;
+- promoción;
+- vacante;
+- recomendación.
+
+## 3. Rutas múltiples
+
+Un mismo objetivo puede alcanzarse desde trayectorias distintas.
+
+Mando de nave no exige necesariamente una única rama original.
+
+## 4. Cambio futuro
+
+El objetivo puede:
+- cambiar;
+- pausarse;
+- abandonarse;
+- recuperarse.
+
+La historia previa no desaparece.
+
+## 5. Coherencia
+
+La trayectoria se valora con:
+- objetivo;
+- acciones realizadas;
+- requisitos;
+- oportunidades reales.
 
 ### Práctica
 
-Confirmar especialización.
-
-Antes de actuar identifica: **objetivo, información disponible, autoridad, riesgos y destinatario del informe**.
-
-### Evaluación
-
-Validación de requisitos y registro.
-
-La evaluación distingue entre una decisión razonable con mal resultado y una mala decisión que tuvo suerte.
-
-### Errores frecuentes
-
-- Actuar sin confirmar qué se sabe realmente.
-- Resolver dentro de tu estación algo que necesita coordinación o escalado.
-- Omitir una limitación porque el procedimiento básico parece funcionar.
+Definir un objetivo a medio plazo y dos rutas plausibles para acercarse.
 
 ### Autoevaluación
 
-1. Define **decisión del jugador** en contexto operativo.
-2. ¿Qué información necesitarías antes de ejecutar esta unidad?
-3. Resuelve: *Confirmar especialización.*
-4. ¿Qué deberías comunicar a otro departamento o a tu supervisor?
+1. ¿Qué es un objetivo profesional?
+2. ¿Garantiza un puesto?
+3. ¿Puede haber varias rutas?
+4. ¿Qué ocurre al cambiar objetivo?
+5. ¿Qué elementos determinan coherencia?
 
-## Cierre del curso
+---
 
-La superación combina conocimiento, práctica y juicio. Las carencias localizadas pueden producir tutoría, práctica adicional y reevaluación; no obligan por defecto a reiniciar todo el trimestre.
+# CAR-303-U05 — Entrevistas de orientación
+
+## 1. Para qué sirven
+
+Una entrevista ayuda a interpretar:
+- evidencia;
+- intereses;
+- dudas;
+- oportunidades de desarrollo.
+
+## 2. Feedback
+
+El instructor debe distinguir:
+- observación;
+- evaluación;
+- recomendación;
+- opinión personal.
+
+## 3. Preguntas útiles
+
+El cadete puede preguntar:
+- ¿qué tareas reales realiza esta rama?
+- ¿qué me falta?
+- ¿qué evidencia respalda la recomendación?
+- ¿qué recuperación sería necesaria?
+- ¿qué alternativas existen?
+
+## 4. Apoyos
+
+Pueden proponerse:
+- tutoría;
+- optativas;
+- práctica adicional;
+- rotación;
+- curso cruzado;
+- catch-up.
+
+## 5. Registro cualitativo
+
+La entrevista genera registro útil, no un número oculto de “compatibilidad”.
+
+### Práctica
+
+Entrevista con instructor y contraste de dos recomendaciones diferentes.
+
+### Autoevaluación
+
+1. ¿Para qué sirve orientación?
+2. ¿Qué debe separar el feedback?
+3. Nombra preguntas útiles.
+4. ¿Qué apoyos pueden proponerse?
+5. ¿Por qué no usar porcentaje oculto de compatibilidad?
+
+---
+
+# CAR-303-U06 — Selección final
+
+## 1. Decisión del jugador
+
+La especialización se confirma al final del proceso.
+
+Puede elegirse:
+- siguiendo recomendación;
+- contra una recomendación prudente;
+- tras recuperación;
+- después de más exposición.
+
+## 2. Validación
+
+El sistema comprueba:
+- requisitos académicos;
+- cualificaciones;
+- prerequisitos;
+- restricciones reales.
+
+## 3. Consecuencias
+
+La elección afecta:
+- horario;
+- clases;
+- instructores;
+- simulaciones;
+- prácticas;
+- compañeros;
+- cualificaciones;
+- candidatos a primer destino.
+
+No determina automáticamente el destino final.
+
+## 4. Cambio futuro
+
+Cambiar de rama puede requerir:
+- tutoría;
+- catch-up;
+- evaluación;
+- tiempo adicional.
+
+No borra conocimiento ya adquirido.
+
+## 5. Registro
+
+La decisión queda registrada con:
+- rama;
+- fecha;
+- evidencia;
+- requisitos;
+- apoyos pendientes cuando existan.
+
+### Práctica
+
+Confirmar especialización y revisar cómo cambia el tercer año.
+
+### Autoevaluación
+
+1. ¿Quién toma la decisión final?
+2. ¿Qué valida el sistema?
+3. ¿Qué cambia con la especialización?
+4. ¿Garantiza destino final?
+5. ¿Qué puede requerir un cambio futuro?
+
+---
+
+# Evaluación del curso
+
+CAR-303 cierra 3.ª clase y habilita el inicio formal de especialización en 2.ª clase.
+
+No hay barra de aptitud ni bloqueo por afinidad social.
+
+# Referencias internas
+
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/characters/objectives/trajectory_coherence_rules.md`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
