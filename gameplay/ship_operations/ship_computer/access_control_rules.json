@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "starship_computer_access_control",
+  "status": "foundation_fixed",
+  "identity_signals": [
+    "active_user_session",
+    "terminal_identity",
+    "combadge_identity",
+    "voice_identity_when_available",
+    "location",
+    "duty_assignment"
+  ],
+  "authorization_inputs": [
+    "character_id",
+    "rank",
+    "position",
+    "department",
+    "duty_status",
+    "clearance",
+    "current_alert_state",
+    "location",
+    "requested_function",
+    "temporary_authorization",
+    "command_override_if_valid"
+  ],
+  "access_classes": [
+    "general_crew",
+    "department_authorized",
+    "officer",
+    "department_head",
+    "command",
+    "captain",
+    "medical_restricted",
+    "security_restricted",
+    "classified_clearance",
+    "explicit_multi_party_authorization"
+  ],
+  "rules": [
+    "Authentication and authorization are separate checks.",
+    "Rank alone does not grant unrestricted access to medical, security, intelligence or private records.",
+    "Low-consequence routine queries should not require repetitive explicit credentials when identity is already trusted.",
+    "Sensitive actions may require explicit authorization code or confirmation.",
+    "Some critical actions may require multiple authorized participants.",
+    "Denied access must not leak protected content through error messages or search snippets.",
+    "Emergency overrides must be explicit, auditable and governed by valid Starfleet rules rather than AI discretion."
+  ]
+}
