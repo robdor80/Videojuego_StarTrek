@@ -12,11 +12,12 @@
     "PHY-401",
     "SHP-402",
     "DUT-402",
-    "SAF-402"
+    "SAF-402",
+    "COM-402"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 8,
-  "remaining_count": 59,
+  "developed_count": 9,
+  "remaining_count": 58,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -24,8 +25,8 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "SAF-402",
-  "next_planned": "COM-402",
+  "last_completed": "COM-402",
+  "next_planned": "PHY-402",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -35,7 +36,8 @@
     "PHY_401": "synced_developed_content_and_assessment",
     "SHP_402": "synced_developed_content_and_assessment",
     "DUT_402": "synced_developed_content_and_assessment",
-    "SAF_402": "pending_sync_after_main_commit"
+    "SAF_402": "synced_developed_content_and_assessment",
+    "COM_402": "pending_sync_after_main_commit"
   },
   "milestones": [
     "fourth_class_trimester_1_developed"

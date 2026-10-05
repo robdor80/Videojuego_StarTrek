@@ -1,199 +1,465 @@
 # COM-402 — Comunicaciones y equipo personal
 
-**Material de estudio v1.0 — Cadete de 4.ª clase**
+**Material de estudio v1.0 — edición desarrollada**  
+**Cadete de 4.ª clase · Trimestre 2**
 
 ## Finalidad
 
-Usar correctamente el equipo cotidiano de Starfleet y comunicarse de forma profesional.
+Aprender a usar de forma profesional las herramientas cotidianas de comunicación y adquisición de información sin confundir facilidad de uso con autoridad.
 
-## Cómo estudiar esta asignatura
+COM-402 cubre el comunicador, la familiarización inicial con tricorder, comunicaciones internas y externas sencillas, formato profesional de mensajes y preparación básica de equipo para una salida.
 
-No memorices frases aisladas. Para cada unidad debes poder **explicar el concepto, reconocerlo en una situación y aplicarlo dentro de tus límites de autoridad**. Cuando exista práctica sobre un sistema real del juego, esa práctica tiene prioridad sobre aprender nombres de botones.
+---
 
-## COM-402-U01 — Comunicador
+# COM-402-U01 — Comunicador
 
-### Qué debes dominar
+## 1. Comunicar es establecer un enlace
 
-- **llamada**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **canal**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **prioridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **identificación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Un comunicador no es solo un “botón para hablar”.
 
-### Aplicación operativa
+Una comunicación necesita:
 
-Realizar comunicaciones internas sencillas. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+- origen;
+- destino;
+- canal;
+- estado del enlace;
+- contenido transmitido.
 
-### Qué se evalúa
+## 2. Identificación
 
-Práctica. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+Cuando el contexto lo requiere, el mensaje debe permitir saber:
 
-### Errores frecuentes
+- quién llama;
+- a quién;
+- desde dónde o desde qué función;
+- para qué.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+No todos los mensajes necesitan una presentación larga.
 
-### Autoevaluación
+## 3. Canal
 
-1. Explica con tus palabras qué significa **llamada** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **llamada** y **canal**?
-3. Resuelve de forma razonada esta práctica: *Realizar comunicaciones internas sencillas.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+El proyecto contempla diferentes tipos de enlace, como:
 
-## COM-402-U02 — Tricorder: familiarización
+- interno;
+- subespacio directo;
+- relay;
+- haz estrecho;
+- broadcast;
+- distress.
 
-### Qué debes dominar
+En 4.ª clase no se estudia todavía operación avanzada de comunicaciones. Sí se entiende que **canal y destino importan**.
 
-- **función**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **modos generales**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **lectura**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **limitaciones**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 4. Prioridad
 
-### Aplicación operativa
+No toda comunicación tiene la misma urgencia.
 
-Obtener una lectura preparada. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Un mensaje rutinario no debe ocupar el mismo nivel de atención que:
 
-### Qué se evalúa
+- una emergencia;
+- una advertencia de seguridad;
+- una petición crítica.
 
-Práctica de equipo. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+## 5. Estado del enlace
 
-### Errores frecuentes
+Una comunicación puede estar:
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+- conectando;
+- abierta;
+- degradada;
+- bloqueada;
+- interferida;
+- perdida;
+- cerrada.
 
-### Autoevaluación
+La calidad del enlace condiciona qué puede entender el receptor.
 
-1. Explica con tus palabras qué significa **función** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **función** y **modos generales**?
-3. Resuelve de forma razonada esta práctica: *Obtener una lectura preparada.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+### Práctica
 
-## COM-402-U03 — Comunicaciones internas
-
-### Qué debes dominar
-
-- **destinatario**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **mensaje**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **confirmación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **brevedad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-
-### Aplicación operativa
-
-Coordinar una tarea con otro departamento. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
-
-### Qué se evalúa
-
-Evaluación de claridad. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Realiza tres llamadas internas: rutina, prioridad elevada y petición de asistencia.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **destinatario** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **destinatario** y **mensaje**?
-3. Resuelve de forma razonada esta práctica: *Coordinar una tarea con otro departamento.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué elementos forman un enlace de comunicación?
+2. ¿Por qué importa identificar origen y destino?
+3. ¿Qué diferencia existe entre canal y contenido?
+4. ¿Por qué la prioridad debe usarse con criterio?
+5. ¿Qué significa que un enlace esté degradado?
 
-## COM-402-U04 — Comunicaciones externas básicas
+---
 
-### Qué debes dominar
+# COM-402-U02 — Tricorder: familiarización
 
-- **apertura**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **identificación**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **registro**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **autoridad**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+## 1. Qué es a este nivel
 
-### Aplicación operativa
+El tricorder se introduce como herramienta portátil de adquisición y consulta.
 
-Simular una llamada no táctica. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+No se exige conocer todavía todos sus modos especializados.
 
-### Qué se evalúa
+La idea básica es:
 
-Escena guiada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+> usar una herramienta portátil para obtener o consultar información dentro de sus capacidades.
 
-### Errores frecuentes
+## 2. Modos generales
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Según variante, era y especialidad, un tricorder puede apoyar tareas como:
 
-### Autoevaluación
+- observación;
+- medición;
+- consulta;
+- registro;
+- análisis preliminar.
 
-1. Explica con tus palabras qué significa **apertura** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **apertura** y **identificación**?
-3. Resuelve de forma razonada esta práctica: *Simular una llamada no táctica.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+No todos los modelos ni contextos ofrecen las mismas funciones.
 
-## COM-402-U05 — Formato de mensajes
+## 3. Leer no es interpretar automáticamente
 
-### Qué debes dominar
+Una lectura puede mostrar datos.
 
-- **hecho**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **solicitud**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **estado**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **urgencia**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Eso no significa que el cadete posea automáticamente la explicación correcta.
 
-### Aplicación operativa
+Ejemplo:
 
-Convertir información desordenada en un mensaje profesional. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+> “Elevación de radiación en una zona”
 
-### Qué se evalúa
+es una observación.
 
-Ejercicio escrito/oral. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
+> “Existe un sabotaje”
 
-### Errores frecuentes
+es una hipótesis que necesita evidencia adicional.
 
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+## 4. Limitaciones
 
-### Autoevaluación
+Una lectura puede estar afectada por:
 
-1. Explica con tus palabras qué significa **hecho** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **hecho** y **solicitud**?
-3. Resuelve de forma razonada esta práctica: *Convertir información desordenada en un mensaje profesional.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+- alcance;
+- resolución;
+- interferencia;
+- calibración;
+- entorno;
+- calidad de señal.
 
-## COM-402-U06 — Equipo de salida básico
+El usuario debe reconocer cuándo el dato es insuficiente.
 
-### Qué debes dominar
+## 5. Registro
 
-- **comunicador**: La comunicación profesional de Starfleet debe identificar destinatario, hecho o solicitud, prioridad cuando proceda y confirmación. Se valora que el mensaje sea suficiente para actuar, no que sea largo.
-- **tricorder**: El tricorder es una herramienta portátil de adquisición y consulta. En esta etapa se enseña qué tipo de información puede proporcionar, cómo leer una salida preparada y cuándo una lectura necesita interpretación especializada.
-- **kit contextual**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
-- **responsabilidad sobre equipo**: Este concepto se estudia por su utilidad operativa. El cadete debe poder definirlo con sus palabras, reconocer cuándo aparece en servicio y explicar qué cambia en una decisión o procedimiento cuando está presente.
+Cuando una lectura es relevante puede quedar asociada a:
 
-### Aplicación operativa
+- hora;
+- lugar;
+- operador;
+- tarea;
+- resultado.
 
-Preparar un equipo sencillo para una salida. La práctica no es decorativa: sirve para convertir conocimiento en evidencia de que el personaje sabe desenvolverse en esa situación.
+Esto ayuda a comparar y auditar.
 
-### Qué se evalúa
+### Práctica
 
-Checklist razonada. Se valora especialmente que distingas hechos, autoridad, procedimiento y límites de tu competencia.
-
-### Errores frecuentes
-
-- Responder por intuición cuando existe una regla o cadena de responsabilidad aplicable.
-- Confundir conocer el nombre de un sistema con saber cuándo utilizarlo.
-- Dar por cierta una conclusión que los datos disponibles todavía no permiten sostener.
+Obtén una lectura preparada, identifica qué dato es directo y qué conclusión requeriría análisis adicional.
 
 ### Autoevaluación
 
-1. Explica con tus palabras qué significa **comunicador** y por qué importa en servicio.
-2. ¿Qué diferencia práctica existe entre **comunicador** y **tricorder**?
-3. Resuelve de forma razonada esta práctica: *Preparar un equipo sencillo para una salida.*
-4. ¿Qué error profesional podría producirse si aplicas esta unidad fuera de tus límites de autoridad?
+1. ¿Qué función general cumple un tricorder?
+2. ¿Por qué una lectura no es automáticamente una explicación?
+3. Nombra tres factores que pueden limitar una lectura.
+4. ¿Qué metadatos pueden acompañar a una medición?
+5. ¿Por qué diferentes modelos pueden tener capacidades distintas?
 
-## Evaluación del curso
+---
 
-La evaluación combina conocimiento, ejecución práctica, juicio, trabajo en equipo, comunicación y disciplina. El contenido profesional explicado aquí puede preguntarse directamente. No se exige trivia de episodios ni ciencia ficticia que no haya sido enseñada.
+# COM-402-U03 — Comunicaciones internas
 
-## Tratamiento por era
+## 1. Hablar con la persona adecuada
 
-La arquitectura académica es común. Interfaces, uniformes, equipos, ejemplos y determinadas tecnologías se adaptan a Pike, Kirk o TNG/DS9/Voyager sin duplicar el currículo.
+Una comunicación interna debe dirigirse al:
+
+- personaje;
+- puesto;
+- departamento;
+- equipo
+
+que realmente pueda actuar.
+
+## 2. Estructura mínima
+
+Un mensaje útil suele contener:
+
+1. destinatario;
+2. hecho o situación;
+3. solicitud si existe;
+4. prioridad cuando sea relevante;
+5. confirmación cuando haga falta.
+
+## 3. Brevedad
+
+Breve no significa incompleto.
+
+Un mensaje corto es bueno si contiene lo necesario para actuar.
+
+Un mensaje largo es malo si oculta el dato importante entre detalles irrelevantes.
+
+## 4. Confirmación
+
+Una petición crítica puede exigir que el receptor confirme:
+
+- recepción;
+- comprensión;
+- aceptación de tarea.
+
+## 5. Comunicación entre departamentos
+
+Cuando una tarea cruza departamentos, debe quedar claro:
+
+- qué necesitas;
+- por qué;
+- qué información compartes;
+- qué parte sigue siendo responsabilidad propia.
+
+### Práctica
+
+Coordina una tarea sencilla con otro departamento mediante un mensaje inicial y una confirmación.
+
+### Autoevaluación
+
+1. ¿Cómo eliges destinatario?
+2. ¿Qué elementos contiene un mensaje interno útil?
+3. ¿Brevedad significa omitir información importante?
+4. ¿Cuándo conviene pedir confirmación?
+5. ¿Qué debe quedar claro al coordinar departamentos?
+
+---
+
+# COM-402-U04 — Comunicaciones externas básicas
+
+## 1. Una comunicación externa representa a la unidad
+
+Contactar con otra nave, estación o autoridad requiere más cuidado que un mensaje interno rutinario.
+
+## 2. Apertura
+
+La apertura puede incluir:
+
+- identificación propia;
+- identificación del destinatario;
+- intención básica;
+- petición de establecimiento de enlace.
+
+La forma exacta puede variar por era y contexto.
+
+## 3. Autoridad
+
+Poder abrir un canal no significa poder:
+
+- negociar un tratado;
+- declarar hostilidad;
+- prometer recursos;
+- revelar información restringida.
+
+El contenido permitido depende de misión, puesto y órdenes.
+
+## 4. Registro
+
+Las comunicaciones externas relevantes pueden formar parte de un historial persistente.
+
+Eso permite revisar:
+
+- qué se transmitió;
+- cuándo;
+- por qué canal;
+- a quién.
+
+## 5. Traducción e interferencia
+
+El enlace puede verse afectado por:
+
+- interferencia;
+- latencia;
+- traducción imperfecta;
+- cifrado;
+- relay.
+
+Una frase aparentemente clara puede necesitar confirmación si la calidad de traducción o enlace es baja.
+
+### Práctica
+
+Simula una llamada externa no táctica: apertura, identificación, mensaje y cierre.
+
+### Autoevaluación
+
+1. ¿Por qué una comunicación externa exige más cuidado?
+2. ¿Qué puede incluir una apertura?
+3. ¿Abrir un canal concede autoridad diplomática?
+4. ¿Por qué conviene registrar comunicaciones externas relevantes?
+5. ¿Qué problemas pueden introducir traducción o interferencia?
+
+---
+
+# COM-402-U05 — Formato de mensajes
+
+## 1. De información desordenada a mensaje profesional
+
+Durante una operación puede recibirse demasiada información.
+
+El objetivo es extraer:
+
+- hecho;
+- estado;
+- solicitud;
+- urgencia.
+
+## 2. Hecho
+
+Describe lo observado.
+
+Ejemplo:
+
+> “Puerta del laboratorio tres no responde.”
+
+## 3. Estado
+
+Explica la situación actual.
+
+> “Acceso bloqueado; no hay personal atrapado confirmado.”
+
+## 4. Solicitud
+
+Indica qué necesitas.
+
+> “Solicito apoyo de Ingeniería.”
+
+## 5. Urgencia
+
+La urgencia se usa cuando cambia la prioridad de respuesta.
+
+No debe inflarse por costumbre.
+
+## 6. Separar hechos de hipótesis
+
+Mensaje incorrecto:
+
+> “Alguien ha saboteado la puerta.”
+
+si solo sabemos que no responde.
+
+Mensaje correcto:
+
+> “La puerta no responde a control local. Causa no determinada.”
+
+### Práctica
+
+Convierte información desordenada en tres mensajes profesionales: rutina, incidencia y emergencia.
+
+### Autoevaluación
+
+1. ¿Qué cuatro elementos pueden estructurar un mensaje?
+2. ¿Qué diferencia existe entre hecho y estado?
+3. ¿Cuándo debe incluirse una solicitud?
+4. ¿Por qué no se debe inflar urgencia?
+5. ¿Cómo distingues hecho e hipótesis?
+
+---
+
+# COM-402-U06 — Equipo de salida básico
+
+## 1. Preparar antes de salir
+
+Una salida no empieza al abandonar la nave.
+
+Empieza con:
+
+- objetivo;
+- entorno;
+- duración;
+- riesgos;
+- comunicación;
+- equipo.
+
+## 2. Equipo contextual
+
+No existe un kit idéntico para todas las misiones.
+
+Puede incluir, según tarea y autorización:
+
+- comunicador;
+- tricorder;
+- suministros;
+- protección;
+- herramientas;
+- equipo especializado.
+
+## 3. Responsabilidad sobre equipo
+
+Recibir equipo implica:
+
+- comprobar estado;
+- saber para qué sirve;
+- mantenerlo;
+- informar de fallo;
+- devolverlo o registrarlo según procedimiento.
+
+## 4. No cargar por cargar
+
+Más equipo no siempre es mejor.
+
+Puede aumentar:
+
+- peso;
+- complejidad;
+- tiempo de preparación;
+- riesgo de pérdida;
+- dependencia.
+
+El equipo debe corresponder a la misión.
+
+## 5. Límites
+
+Llevar una herramienta no concede automáticamente competencia para utilizar todas sus funciones.
+
+### Práctica
+
+Prepara un equipo sencillo para una salida de reconocimiento no hostil y justifica cada elemento.
+
+### Autoevaluación
+
+1. ¿Qué información debe conocerse antes de preparar equipo?
+2. ¿Por qué no existe un kit universal?
+3. ¿Qué responsabilidades asumes al recibir equipo?
+4. ¿Por qué más equipo no siempre es mejor?
+5. ¿Tener una herramienta concede automáticamente competencia?
+
+---
+
+# Evaluación del curso
+
+COM-402 evalúa:
+
+- uso básico de comunicación;
+- claridad;
+- identificación;
+- lectura prudente de instrumentos;
+- separación entre dato e interpretación;
+- autoridad en comunicaciones externas;
+- preparación de equipo.
+
+No exige operación avanzada de comunicaciones ni especialización científica.
+
+# Tratamiento por era
+
+Cambian dispositivos, interfaz, alcance y presentación.
+
+Permanece estable la necesidad de:
+
+- identificar;
+- dirigir;
+- transmitir;
+- confirmar;
+- respetar autoridad;
+- conservar procedencia.
+
+# Referencias internas
+
+- `gameplay/communications/communications_model.json`
+- `lore/technology/tricorders/README.md`
+- `lore/technology/communications/README.md`
+- `gameplay/ship_operations/ship_computer/README.md`
+
+Cuando una referencia de lore permanece reservada, el curso no inventa especificaciones técnicas ausentes.
