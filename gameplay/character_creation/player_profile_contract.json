@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "model_id": "player_profile_contract",
+  "status": "locked_baseline",
+  "purpose": "Separate the real user's campaign identity from the in-world character.",
+  "fields": [
+    "player_profile_id",
+    "nickname",
+    "created_at",
+    "campaign_refs"
+  ],
+  "nickname_rules": [
+    "Nickname identifies the player profile/campaign context.",
+    "Nickname is not automatically the in-world character name.",
+    "The same nickname may be used manually in the external Academy website to identify study context.",
+    "Nickname grants no gameplay capability or authority."
+  ]
+}
