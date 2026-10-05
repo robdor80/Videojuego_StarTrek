@@ -1,0 +1,64 @@
+{
+  "schema_version": "1.0.0",
+  "curriculum_id": "academy_first_class_v1_0",
+  "status": "architecture_locked",
+  "sequence_year": 4,
+  "cadet_class_id": "cadet_first_class",
+  "mission_es": "Transformar a un cadete competente en su especialidad en un oficial preparado para recibir una comisión como Alférez e incorporarse a una unidad real.",
+  "trimesters": [
+    {
+      "trimester": 1,
+      "theme_id": "advanced_professional_consolidation",
+      "theme_es": "Especialización avanzada y responsabilidad profesional",
+      "subjects": [
+        {"course_id":"BRN-101","title_es":"Especialización profesional avanzada I","branch_slot":true},
+        {"course_id":"DUT-101","title_es":"Servicio operativo avanzado"},
+        {"course_id":"LDR-101","title_es":"Liderazgo profesional y supervisión III"},
+        {"course_id":"INT-101","title_es":"Operaciones integradas de nave III"},
+        {"course_id":"DEV-101","title_es":"Desarrollo profesional avanzado"}
+      ]
+    },
+    {
+      "trimester": 2,
+      "theme_id": "integrated_service_like_operations",
+      "theme_es": "Operaciones integradas y servicio casi real",
+      "subjects": [
+        {"course_id":"BRN-102","title_es":"Especialización profesional avanzada II","branch_slot":true},
+        {"course_id":"OPS-102","title_es":"Operaciones integradas de misión"},
+        {"course_id":"WCH-102","title_es":"Continuidad de guardia y responsabilidad de puesto"},
+        {"course_id":"PRC-102","title_es":"Prácticum / crucero de formación"},
+        {"course_id":"DEB-102","title_es":"Análisis operativo y debriefing avanzado"}
+      ]
+    },
+    {
+      "trimester": 3,
+      "theme_id": "commissioning_and_service_readiness",
+      "theme_es": "Comisión y preparación para el servicio",
+      "subjects": [
+        {"course_id":"CAP-103","title_es":"Evaluación final de especialidad","capstone":true},
+        {"course_id":"KM-103","title_es":"Kobayashi Maru","no_win_assessment":true},
+        {"course_id":"SVC-103","title_es":"Evaluación integral de preparación para el servicio","evidence_review":true},
+        {"course_id":"ASS-103","title_es":"Primer destino y transición a servicio activo","world_state_dependent":true},
+        {"course_id":"GRD-103","title_es":"Graduación y comisión","commissioning":true}
+      ]
+    }
+  ],
+  "branch_course_families": {
+    "command": ["CMD-101","CMD-102"],
+    "flight_navigation": ["NAV-101","NAV-102"],
+    "operations": ["OPS-101","OPS-102B"],
+    "engineering": ["ENG-101","ENG-102"],
+    "security_tactical": ["SEC-101","SEC-102"],
+    "science_sensors": ["SCI-101","SCI-102"],
+    "medical": ["MED-101","MED-102"]
+  },
+  "graduation_principle_es": "La Academia forma oficiales noveles preparados para entrar en servicio; no expertos terminados.",
+  "rules": [
+    "First Class increasingly resembles real Starfleet service rather than school exercises.",
+    "Service-readiness assessment consumes evidence from all four Academy years.",
+    "Kobayashi Maru is universal across playable eras with era-appropriate implementation and branch-appropriate roles.",
+    "Assignment preferences never guarantee a specific ship or post.",
+    "Graduation and commissioning are playable campaign events.",
+    "Unit-level content is deployed from this locked architecture."
+  ]
+}
