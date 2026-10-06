@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "model_id": "social_relationship_graph",
   "status": "foundation_fixed",
   "edge_key": [
@@ -31,6 +31,9 @@
     "Romance and sexual interest apply only to adults.",
     "Consent is not inferred from any relationship dimension.",
     "Relationship state does not grant world knowledge.",
-    "AI consumes relationship state but does not authoritatively create it without validated events."
-  ]
+    "AI consumes relationship state but does not authoritatively create it without validated events.",
+    "Initial nontrivial relationship edges require plausible shared-history provenance.",
+    "Off-screen relationship changes require plausible contact, time and event causes."
+  ],
+  "change_provenance_contract_ref": "gameplay/relationships/relationship_change_provenance_contract.json"
 }
