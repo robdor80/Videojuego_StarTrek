@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "character_cognition_social_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "knowledge_is_not_world_truth",
+      "expected": [
+        "character may lack true facts",
+        "character may believe outdated or false claims",
+        "AI only receives authorized character knowledge"
+      ]
+    },
+    {
+      "id": "memory_is_not_world_truth",
+      "expected": [
+        "recollection may be incomplete or uncertain",
+        "memory cannot overwrite authoritative event history",
+        "forgetting does not erase consequences"
+      ]
+    },
+    {
+      "id": "memory_fades_without_fabrication",
+      "expected": [
+        "detail may degrade to gist",
+        "missing detail remains missing unless valid reconstruction evidence exists",
+        "AI may answer that the character does not remember"
+      ]
+    },
+    {
+      "id": "shared_event_different_memories",
+      "expected": [
+        "two participants may retain different interpretations and emotional tags",
+        "authoritative event remains one event"
+      ]
+    },
+    {
+      "id": "species_rank_faction_not_personality",
+      "expected": [
+        "stable personality is individual-specific",
+        "institutional duty may override tendency without rewriting personality"
+      ]
+    },
+    {
+      "id": "goal_does_not_create_opportunity",
+      "expected": [
+        "character objective may identify an existing relevant opportunity",
+        "objective does not spawn vacancy, promotion or world event"
+      ]
+    },
+    {
+      "id": "relationship_is_multidimensional",
+      "expected": [
+        "professional respect may change independently of affection/trust",
+        "rank obedience is not social trust"
+      ]
+    },
+    {
+      "id": "relationship_requires_provenance",
+      "expected": [
+        "deep initial edges cite plausible shared context",
+        "co-location alone cannot create old friendship or hostility"
+      ]
+    },
+    {
+      "id": "relationship_is_directional",
+      "expected": [
+        "A-to-B state may differ from B-to-A state",
+        "one person's affection/trust does not force reciprocity"
+      ]
+    },
+    {
+      "id": "consent_not_inferred",
+      "expected": [
+        "rank, gifts, fame, prior affection or repeated pressure do not imply consent",
+        "relationship transition requires valid reciprocal/event state where applicable"
+      ]
+    },
+    {
+      "id": "rumor_requires_channel",
+      "expected": [
+        "hidden event does not automatically become reputation",
+        "rumor preserves source channel and uncertainty/distortion"
+      ]
+    },
+    {
+      "id": "reputation_is_scope_specific",
+      "expected": [
+        "different crews/factions may hold different reputations",
+        "service record and public reputation remain separate"
+      ]
+    }
+  ]
+}
