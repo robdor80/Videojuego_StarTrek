@@ -1,0 +1,687 @@
+{
+  "schema_version": "2.1.0",
+  "course_id": "INT-201",
+  "status": "concept_driven_autocorrectable_v2_1",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 5,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1,
+    "concepts_available_per_unit": 6,
+    "avoid_duplicate_concepts": true
+  },
+  "concepts": [
+    {
+      "id": "INT-201-C001",
+      "unit_id": "INT-201-U01",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa entradas en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa entradas en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa entradas en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "entradas · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "entradas",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C002",
+      "unit_id": "INT-201-U01",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Modelar dependencias de la rama.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Modelar dependencias de la rama.",
+        "Repaso: Planifica esta tarea: Modelar dependencias de la rama."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C003",
+      "unit_id": "INT-201-U01",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Mapa de dependencias cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Mapa de dependencias cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Mapa de dependencias cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C004",
+      "unit_id": "INT-201-U01",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C005",
+      "unit_id": "INT-201-U02",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa formato en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa formato en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa formato en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "formato · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "formato",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C006",
+      "unit_id": "INT-201-U02",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Coordinar petición realista.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Coordinar petición realista.",
+        "Repaso: Planifica esta tarea: Coordinar petición realista."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C007",
+      "unit_id": "INT-201-U02",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Peticiones entre departamentos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Peticiones entre departamentos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Peticiones entre departamentos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C008",
+      "unit_id": "INT-201-U02",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C009",
+      "unit_id": "INT-201-U03",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa energía en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa energía en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa energía en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "energía · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "energía",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C010",
+      "unit_id": "INT-201-U03",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Negociar prioridad operacional.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Negociar prioridad operacional.",
+        "Repaso: Planifica esta tarea: Negociar prioridad operacional."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C011",
+      "unit_id": "INT-201-U03",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Conflicto de recursos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Conflicto de recursos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Conflicto de recursos cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C012",
+      "unit_id": "INT-201-U03",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C013",
+      "unit_id": "INT-201-U04",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa efecto local en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa efecto local en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa efecto local en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "efecto local · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "efecto local",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C014",
+      "unit_id": "INT-201-U04",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Analizar consecuencias.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Analizar consecuencias.",
+        "Repaso: Planifica esta tarea: Analizar consecuencias."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C015",
+      "unit_id": "INT-201-U04",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Impacto de decisiones cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Impacto de decisiones cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Impacto de decisiones cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C016",
+      "unit_id": "INT-201-U04",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C017",
+      "unit_id": "INT-201-U05",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa estado en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa estado en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa estado en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "estado · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C018",
+      "unit_id": "INT-201-U05",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Actualizar briefing común.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Actualizar briefing común.",
+        "Repaso: Planifica esta tarea: Actualizar briefing común."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C019",
+      "unit_id": "INT-201-U05",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Imagen común de situación cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Imagen común de situación cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Imagen común de situación cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C020",
+      "unit_id": "INT-201-U05",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C021",
+      "unit_id": "INT-201-U06",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa misión en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa misión en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa misión en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "misión · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "misión",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "INT-201-C022",
+      "unit_id": "INT-201-U06",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Simulación multi-departamento.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Simulación multi-departamento.",
+        "Repaso: Planifica esta tarea: Simulación multi-departamento."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "INT-201-C023",
+      "unit_id": "INT-201-U06",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Ejercicio integrado cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Ejercicio integrado cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Ejercicio integrado cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "INT-201-C024",
+      "unit_id": "INT-201-U06",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "INT-201-C025",
+      "unit_id": "INT-201-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Entradas: entradas se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Entradas: entradas se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "INT-201-C026",
+      "unit_id": "INT-201-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica entradas desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica entradas desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "INT-201-C027",
+      "unit_id": "INT-201-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Formato: formato se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Formato: formato se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "INT-201-C028",
+      "unit_id": "INT-201-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica formato desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica formato desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "INT-201-C029",
+      "unit_id": "INT-201-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Energía: Es un recurso compartido; aumentar consumo en un área puede reducir margen o disponibilidad en otra.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Energía: Es un recurso compartido; aumentar consumo en un área puede reducir margen o disponibilidad en otra."
+      ]
+    },
+    {
+      "id": "INT-201-C030",
+      "unit_id": "INT-201-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica energía desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica energía desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "INT-201-C031",
+      "unit_id": "INT-201-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Efecto local: efecto local se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Efecto local: efecto local se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "INT-201-C032",
+      "unit_id": "INT-201-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica efecto local desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica efecto local desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "INT-201-C033",
+      "unit_id": "INT-201-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Estado: Fija la condición real de partida —normal, degradada, limitada o desconocida— antes de actuar; si cambia, el plan debe revisarse.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Estado: Fija la condición real de partida —normal, degradada, limitada o desconocida— antes de actuar; si cambia, el plan debe revisarse."
+      ]
+    },
+    {
+      "id": "INT-201-C034",
+      "unit_id": "INT-201-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica estado desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica estado desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "INT-201-C035",
+      "unit_id": "INT-201-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Misión: Define qué se intenta conseguir y bajo qué restricciones; las decisiones locales deben relacionarse con esa intención.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Misión: Define qué se intenta conseguir y bajo qué restricciones; las decisiones locales deben relacionarse con esa intención."
+      ]
+    },
+    {
+      "id": "INT-201-C036",
+      "unit_id": "INT-201-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica misión desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica misión desde el punto de vista profesional."
+      ]
+    }
+  ]
+}

@@ -31,7 +31,7 @@ No significa convertirse en experto al comenzar tercer año.
 
 ## 1. Del interés a la responsabilidad profesional
 
-Hasta ahora el cadete ha explorado ramas. Desde BRN-201 empieza a formarse de manera sostenida dentro de una.
+**Hasta ahora el cadete ha explorado ramas.** Desde BRN-201 empieza a formarse de manera sostenida dentro de una.
 
 La primera pregunta ya no es:
 
@@ -133,7 +133,7 @@ Una herramienta profesional puede ser:
 
 ## 2. Sistemas de la rama
 
-Cada rama trabaja con sistemas diferentes.
+**Cada rama trabaja con sistemas diferentes.**
 
 Ejemplos:
 
@@ -196,7 +196,7 @@ Identifica cinco herramientas esenciales de tu rama y explica qué función cump
 
 ## 1. Qué es un procedimiento nuclear
 
-Es una secuencia que aparece repetidamente en el trabajo normal de la rama.
+**Es una secuencia que aparece repetidamente en el trabajo normal de la rama.**
 
 No es necesariamente una emergencia.
 
@@ -279,7 +279,7 @@ Un profesional aprende a distinguir:
 - bloqueo;
 - riesgo.
 
-El síntoma no es automáticamente la causa.
+**El síntoma no es automáticamente la causa.**
 
 ## 2. Prioridades
 
@@ -345,7 +345,7 @@ Resuelve un caso supervisado con síntoma ambiguo, dos causas posibles y una dec
 
 ## 1. Ninguna rama trabaja sola
 
-Toda especialidad consume y produce información o recursos para otras.
+**Toda especialidad consume y produce información o recursos para otras.**
 
 Ejemplos:
 
@@ -413,7 +413,7 @@ Coordina una tarea de tu rama con otro departamento y documenta la dependencia.
 
 ## 1. Integrar conocimiento y práctica
 
-El cierre no consiste en un examen único.
+**El cierre no consiste en un examen único.**
 
 Se revisa evidencia de:
 
