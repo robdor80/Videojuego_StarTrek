@@ -28,7 +28,7 @@ La conciencia de amenaza consiste en detectar cambios relevantes en:
 
 ## 2. Baseline
 
-Para reconocer una anomalía conviene saber qué es normal en ese contexto.
+**Para reconocer una anomalía conviene saber qué es normal en ese contexto.**
 
 Un ruido, gesto o puerta abierta puede ser rutinario o relevante según el lugar.
 
@@ -83,7 +83,7 @@ El phaser es un sistema sujeto a:
 - contexto;
 - reglas de uso.
 
-No es una extensión de la voluntad del jugador.
+**No es una extensión de la voluntad del jugador.**
 
 ## 2. Manejo seguro
 
@@ -162,7 +162,7 @@ Una intervención sobre una persona debe depender de:
 - contexto;
 - procedimiento.
 
-SEC-302 no enseña al cadete a actuar como investigador o agente especializado.
+**SEC-302 no enseña al cadete a actuar como investigador o agente especializado.**
 
 ## 5. Preservar información
 
@@ -203,7 +203,7 @@ Un loadout debe responder a:
 
 ## 2. Rol
 
-No todos los miembros llevan lo mismo.
+**No todos los miembros llevan lo mismo.**
 
 Ejemplos:
 - Ciencia prioriza instrumentos;
@@ -302,7 +302,7 @@ Una señal de rescate debe ser:
 
 ### Práctica
 
-Ejercicio de campo con recursos limitados y objetivo de mantener cohesión y señalización.
+**Ejercicio de campo con recursos limitados y objetivo de mantener cohesión y señalización.**
 
 ### Autoevaluación
 
@@ -318,7 +318,7 @@ Ejercicio de campo con recursos limitados y objetivo de mantener cohesión y se�
 
 ## 1. Formación
 
-Una formación organiza posiciones y responsabilidades.
+**Una formación organiza posiciones y responsabilidades.**
 
 No es una geometría rígida universal.
 

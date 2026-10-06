@@ -38,7 +38,7 @@ Cada miembro debe saber:
 
 ## 3. Objetivos
 
-El objetivo debe ser observable.
+**El objetivo debe ser observable.**
 
 Ejemplo:
 > “Cartografiar la zona y recoger tres muestras autorizadas.”
@@ -108,7 +108,7 @@ La velocidad del grupo debe permitir:
 - asistir;
 - reaccionar.
 
-Separarse sin plan aumenta incertidumbre.
+**Separarse sin plan aumenta incertidumbre.**
 
 ## 4. Puntos de reunión
 
@@ -167,7 +167,7 @@ Puede incluir:
 
 ## 3. Aptitud
 
-Un entorno compatible con una especie puede no serlo con otra.
+**Un entorno compatible con una especie puede no serlo con otra.**
 
 La planificación debe utilizar perfiles reales de la tripulación.
 
@@ -221,7 +221,7 @@ Un check-in confirma:
 - progreso;
 - incidencias.
 
-No necesita ser un informe largo.
+**No necesita ser un informe largo.**
 
 ## 3. Pérdida de contacto
 
@@ -280,7 +280,7 @@ Un herido afecta:
 - comunicaciones;
 - prioridad.
 
-La misión original puede dejar de ser prioritaria.
+**La misión original puede dejar de ser prioritaria.**
 
 ## 3. Riesgo
 
@@ -348,7 +348,7 @@ Si hay:
 - datos;
 - equipo con anomalías,
 
-deben entregarse al responsable adecuado.
+**deben entregarse al responsable adecuado.**
 
 ## 4. Registro
 
