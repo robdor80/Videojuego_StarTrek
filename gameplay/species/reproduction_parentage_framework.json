@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "reproduction_parentage_framework",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Biological reproduction, legal/social parentage, guardianship, household and affection are separate systems.",
+  "biological_event_fields": [
+    "event_id",
+    "species_profile_ref",
+    "participant_refs",
+    "reproductive_role_refs_if_known",
+    "development_mode",
+    "start_time_if_known",
+    "expected_transition_time_if_known",
+    "medical_state_refs",
+    "privacy_state",
+    "source_refs"
+  ],
+  "parentage_fields": [
+    "parentage_id",
+    "child_or_new_entity_ref",
+    "parent_or_origin_refs",
+    "parentage_type",
+    "source_event_refs",
+    "legal_or_social_status_ref_if_any",
+    "knowledge_visibility",
+    "created_time"
+  ],
+  "supported_parentage_type_examples": [
+    "biological",
+    "genetic",
+    "gestational",
+    "engineered_origin",
+    "adoptive",
+    "legal",
+    "social_or_cultural",
+    "synthetic_creator_or_lineage"
+  ],
+  "rules": [
+    "No universal number of biological or social parents is assumed.",
+    "Pair/romantic status does not create pregnancy, conception or parentage.",
+    "Co-residence does not create parentage.",
+    "Biological facts and who knows them are separate.",
+    "Species-specific reproduction rules must come from authoritative species data; unknown data remains unknown.",
+    "Legal adoption, guardianship and inheritance depend on the applicable society/law layer.",
+    "Cross-species reproduction is allowed only when authoritative canon/project data supports it.",
+    "AI may not infer hidden pregnancy, fertility, parentage or reproductive state from relationship status."
+  ]
+}
