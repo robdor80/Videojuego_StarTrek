@@ -1,0 +1,687 @@
+{
+  "schema_version": "2.1.0",
+  "course_id": "RSK-202",
+  "status": "concept_driven_autocorrectable_v2_1",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 5,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1,
+    "concepts_available_per_unit": 6,
+    "avoid_duplicate_concepts": true
+  },
+  "concepts": [
+    {
+      "id": "RSK-202-C001",
+      "unit_id": "RSK-202-U01",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa capacidad reducida en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa capacidad reducida en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa capacidad reducida en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "capacidad reducida · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "capacidad reducida",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C002",
+      "unit_id": "RSK-202-U01",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Interpretar estado degradado.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Interpretar estado degradado.",
+        "Repaso: Planifica esta tarea: Interpretar estado degradado."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C003",
+      "unit_id": "RSK-202-U01",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Degradación y redundancia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Degradación y redundancia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Degradación y redundancia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C004",
+      "unit_id": "RSK-202-U01",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C005",
+      "unit_id": "RSK-202-U02",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa calidad en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa calidad en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa calidad en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "calidad · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "calidad",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C006",
+      "unit_id": "RSK-202-U02",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Decidir con datos parciales.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Decidir con datos parciales.",
+        "Repaso: Planifica esta tarea: Decidir con datos parciales."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C007",
+      "unit_id": "RSK-202-U02",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Información incompleta cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Información incompleta cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Información incompleta cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C008",
+      "unit_id": "RSK-202-U02",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C009",
+      "unit_id": "RSK-202-U03",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa prioridades en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa prioridades en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa prioridades en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "prioridades · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "prioridades",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C010",
+      "unit_id": "RSK-202-U03",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Continuar misión limitada.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Continuar misión limitada.",
+        "Repaso: Planifica esta tarea: Continuar misión limitada."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C011",
+      "unit_id": "RSK-202-U03",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Pérdida de sistemas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Pérdida de sistemas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Pérdida de sistemas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C012",
+      "unit_id": "RSK-202-U03",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C013",
+      "unit_id": "RSK-202-U04",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa reparto en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa reparto en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa reparto en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "reparto · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "reparto",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C014",
+      "unit_id": "RSK-202-U04",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Reconfigurar equipo.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Reconfigurar equipo.",
+        "Repaso: Planifica esta tarea: Reconfigurar equipo."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C015",
+      "unit_id": "RSK-202-U04",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Personal insuficiente cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Personal insuficiente cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Personal insuficiente cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C016",
+      "unit_id": "RSK-202-U04",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C017",
+      "unit_id": "RSK-202-U05",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa efecto cascada en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa efecto cascada en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa efecto cascada en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "efecto cascada · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "efecto cascada",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C018",
+      "unit_id": "RSK-202-U05",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Resolver secuencia de fallos.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Resolver secuencia de fallos.",
+        "Repaso: Planifica esta tarea: Resolver secuencia de fallos."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C019",
+      "unit_id": "RSK-202-U05",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Contingencias encadenadas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Contingencias encadenadas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Contingencias encadenadas cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C020",
+      "unit_id": "RSK-202-U05",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C021",
+      "unit_id": "RSK-202-U06",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa verificación en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa verificación en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa verificación en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "verificación · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "verificación",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "RSK-202-C022",
+      "unit_id": "RSK-202-U06",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Cerrar contingencia.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Cerrar contingencia.",
+        "Repaso: Planifica esta tarea: Cerrar contingencia."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "RSK-202-C023",
+      "unit_id": "RSK-202-U06",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Recuperación y retorno a normalidad cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Recuperación y retorno a normalidad cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Recuperación y retorno a normalidad cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "RSK-202-C024",
+      "unit_id": "RSK-202-U06",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "RSK-202-C025",
+      "unit_id": "RSK-202-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Capacidad reducida: capacidad reducida se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Capacidad reducida: capacidad reducida se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "RSK-202-C026",
+      "unit_id": "RSK-202-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica capacidad reducida desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica capacidad reducida desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "RSK-202-C027",
+      "unit_id": "RSK-202-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Calidad: calidad se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Calidad: calidad se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "RSK-202-C028",
+      "unit_id": "RSK-202-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica calidad desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica calidad desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "RSK-202-C029",
+      "unit_id": "RSK-202-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Prioridades: prioridades ordena la actuación comparando seguridad, misión, tiempo, impacto y recursos disponibles.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Prioridades: prioridades ordena la actuación comparando seguridad, misión, tiempo, impacto y recursos disponibles."
+      ]
+    },
+    {
+      "id": "RSK-202-C030",
+      "unit_id": "RSK-202-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica prioridades desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica prioridades desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "RSK-202-C031",
+      "unit_id": "RSK-202-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Reparto: reparto se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Reparto: reparto se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "RSK-202-C032",
+      "unit_id": "RSK-202-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica reparto desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica reparto desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "RSK-202-C033",
+      "unit_id": "RSK-202-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Efecto cascada: efecto cascada se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Efecto cascada: efecto cascada se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "RSK-202-C034",
+      "unit_id": "RSK-202-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica efecto cascada desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica efecto cascada desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "RSK-202-C035",
+      "unit_id": "RSK-202-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Verificación: Comprueba que una lectura, acción o recuperación produce el efecto esperado antes de darla por válida.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Verificación: Comprueba que una lectura, acción o recuperación produce el efecto esperado antes de darla por válida."
+      ]
+    },
+    {
+      "id": "RSK-202-C036",
+      "unit_id": "RSK-202-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica verificación desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica verificación desde el punto de vista profesional."
+      ]
+    }
+  ]
+}
