@@ -71,15 +71,9 @@ El resultado puede indicar:
 - recomendación de rutina;
 - necesidad de revisión adicional.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Para qué sirve la evaluación funcional inicial?
-2. ¿Qué cuatro áreas básicas observa PHY-401?
-3. ¿Por qué no se comparan directamente especies distintas?
-4. ¿Qué significa que la sesión produzca evidencia?
-5. ¿Qué diferencia existe entre condición funcional y una puntuación RPG?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-401-U02 — Movilidad y técnica segura
 
@@ -142,15 +136,9 @@ Una sesión supervisada puede registrar:
 
 Realiza una rutina supervisada centrada en movilidad y técnica. El objetivo es ejecutar correctamente, no terminar antes que otros cadetes.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa movilidad funcional?
-2. ¿Para qué sirve un calentamiento?
-3. ¿Qué factores definen una técnica segura?
-4. ¿Por qué prevención no significa riesgo cero?
-5. ¿Qué valor tiene responder bien a una corrección del instructor?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-401-U03 — Resistencia básica
 
@@ -211,15 +199,9 @@ Fatiga, enfermedad, lesiones, cambios de horario o carga académica pueden modif
 
 Completa varias sesiones programadas y revisa si el ritmo elegido permite mantener continuidad sin comprometer recuperación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa resistencia básica?
-2. ¿Por qué una sola sesión intensa no demuestra adaptación?
-3. ¿Qué relación existe entre ritmo y sostenibilidad?
-4. ¿Qué factores de calendario observa el sistema?
-5. ¿Por qué el progreso no tiene que ser lineal?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-401-U04 — Fuerza funcional
 
@@ -287,15 +269,9 @@ Ser fuerte no convierte al cadete en especialista de Seguridad, EVA o Ingenierí
 
 Realiza una sesión supervisada de patrones básicos y explica qué capacidad funcional intenta desarrollar cada ejercicio.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre fuerza máxima y fuerza funcional?
-2. Nombra cuatro patrones básicos.
-3. ¿Por qué el control corporal forma parte de la evaluación?
-4. ¿Cómo puede progresar una tarea sin aumentar únicamente el peso?
-5. ¿Por qué fuerza general no concede una cualificación profesional?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-401-U05 — Recuperación
 
@@ -351,15 +327,9 @@ La inactividad breve no debe castigar de forma absurda. Periodos prolongados sí
 
 Elige una estrategia de recuperación para tres escenarios: fatiga normal tras entrenamiento, varias noches de poco sueño y recuperación tras lesión.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la recuperación forma parte del entrenamiento?
-2. Diferencia fatiga aguda y carga acumulada.
-3. ¿Una buena noche elimina un mes de sobrecarga?
-4. ¿Por qué una lesión puede exigir cambiar la rutina?
-5. ¿Cómo trata el sistema una interrupción breve frente a meses de inactividad?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-401-U06 — Rutina personal
 
@@ -431,46 +401,7 @@ El sistema observa consecuencias y evidencia; no reparte puntos manuales.
 
 Configura una rutina semanal que incluya actividad física, estudio y recuperación y que pueda mantenerse durante varias semanas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cómo se forma una rutina?
-2. ¿Qué significa sostenibilidad?
-3. ¿Por qué una actividad agradable no funciona como una bonificación universal?
-4. Nombra tres causas de interrupción de rutina.
-5. ¿Qué decide el jugador y qué observa el sistema?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-PHY-401 evalúa principalmente:
-
-- participación;
-- seguridad;
-- respuesta a supervisión;
-- regularidad;
-- progreso razonable;
-- capacidad funcional contextual;
-- gestión básica de recuperación.
-
-No exige al jugador realizar físicamente las pruebas.
-
-El personaje realiza la actividad dentro del mundo y genera evidencia.
-
-# Tratamiento por especie y contexto
-
-La Academia adapta mínimos y evaluación a la biología del cadete.
-
-No se comparan de forma directa capacidades físicas brutas de especies diferentes.
-
-El objetivo es preparación funcional para el servicio, no una competición interespecies.
-
-# Referencias internas
-
-- `gameplay/characters/wellbeing/README.md`
-- `gameplay/characters/wellbeing/activity_effect_contract.json`
-- `gameplay/characters/wellbeing/habit_formation_rules.json`
-- `gameplay/characters/development/development_rules.md`
-- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`
-
-Estas referencias definen la relación entre actividad, hábitos, recuperación y desarrollo. La rutina concreta del cadete emerge de su vida y sus decisiones.

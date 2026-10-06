@@ -97,15 +97,9 @@ Clasifica estos casos por función principal y secundaria:
 
 No se evalúa trivia de episodios o naves famosas. Se evalúa que puedas explicar qué función de Starfleet está presente y qué tipo de responsabilidad genera.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. Explica con tus palabras cuál es la misión general de Starfleet.
-2. ¿Por qué Starfleet y la Federación no son la misma institución?
-3. ¿Puede una misión pertenecer a más de una función? Pon un ejemplo.
-4. ¿Por qué “defensa” no significa que Starfleet se defina únicamente como una fuerza de guerra?
-5. ¿Qué error podría cometer un oficial si confundiera autoridad operativa con autoridad política?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # STF-401-U02 — Rangos y divisas
 
@@ -190,15 +184,9 @@ La autoridad también puede depender de:
 
 Para cada caso, identifica por separado rango, puesto y autoridad relevante.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre rango y puesto?
-2. ¿Por qué el oficial de mayor rango no decide necesariamente cada cuestión técnica?
-3. ¿Cuál es el rango comisionado inicial normal tras graduarse?
-4. ¿Qué parte del sistema de divisas es una estandarización del proyecto?
-5. ¿Qué información adicional necesitas antes de decidir quién tiene autoridad sobre una acción?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # STF-401-U03 — Formas de tratamiento
 
@@ -275,15 +263,9 @@ Representa tres escenas:
 2. reporte a un superior;
 3. coordinación con un compañero de otro departamento.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Para qué sirve realmente el protocolo verbal?
-2. ¿Cuándo puede ser más útil emplear un cargo que un rango?
-3. ¿Qué diferencia existe entre respeto profesional y obediencia ciega?
-4. ¿Qué debe contener una petición de permiso útil?
-5. ¿Por qué un tono informal no elimina necesariamente las responsabilidades del servicio?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # STF-401-U04 — Cadena de mando
 
@@ -349,15 +331,9 @@ Ejemplos:
 
 Resuelve a quién informarías y de quién aceptarías instrucciones en varios casos de guardia ordinaria.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cuál es la secuencia básica de sucesión?
-2. ¿Por qué el rango por sí solo no basta para resolver una sucesión?
-3. ¿Qué significa autoridad temporal?
-4. ¿Qué harías si recibes una instrucción ambigua?
-5. Pon un ejemplo de autoridad limitada a un ámbito concreto.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # STF-401-U05 — Divisiones, departamentos y puestos
 
@@ -438,15 +414,9 @@ Construye un organigrama básico de una nave de ejemplo diferenciando:
 - rango;
 - estación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. Nombra las tres grandes divisiones del proyecto.
-2. ¿Por qué división y departamento no son exactamente lo mismo?
-3. ¿Qué diferencia existe entre puesto y estación?
-4. ¿Puede dos personas con la misma especialidad ocupar puestos distintos?
-5. ¿Por qué “Operaciones” puede significar una división amplia y también un puesto/departamento concreto según el contexto?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # STF-401-U06 — Protocolo integrado
 
@@ -546,59 +516,7 @@ Mini-simulación completa de:
 - ejecución;
 - reporte final.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué debes identificar al recibir una instrucción?
-2. ¿Qué diferencia existe entre confirmar y obedecer ciegamente?
-3. ¿Cuándo debes informar de un impedimento?
-4. ¿Por qué reconocer un límite profesional es una fortaleza y no una debilidad?
-5. Describe una llegada correcta a una unidad de entrenamiento.
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-STF-401 combina:
-
-- conocimiento institucional;
-- reconocimiento de rango, puesto y autoridad;
-- comunicación;
-- juicio básico;
-- disciplina;
-- conducta profesional.
-
-El contenido explicado aquí puede preguntarse directamente.
-
-No forman parte de la evaluación:
-- trivia de episodios;
-- listas enciclopédicas de oficiales;
-- datos no enseñados;
-- excepciones complejas de reglamento propias de cursos posteriores.
-
-Un error localizado puede generar tutoría, práctica adicional o reevaluación. La campaña no necesita convertir una duda de protocolo en un callejón sin salida.
-
-# Tratamiento por era
-
-El núcleo de esta asignatura permanece estable en Pike, Kirk y TNG/DS9/Voyager.
-
-Cambian:
-- uniformes;
-- interfaces;
-- terminología visual;
-- determinados usos históricos;
-- presentación de simuladores y material académico.
-
-El proyecto mantiene un estándar común de reconocimiento de divisas para que el jugador no tenga que reaprender la jerarquía completa en cada era.
-
-# Referencias internas
-
-- `gameplay/careers/academy_path/course_resolution.md`
-- `gameplay/careers/academy_path/evaluation_model.json`
-- `gameplay/careers/academy_path/academy_era_profiles.json`
-- `lore/federation/starfleet/ranks/officer_ranks.json`
-- `lore/federation/starfleet/ranks/rank_insignia_standard.json`
-- `lore/federation/starfleet/departments/divisions_and_departments.json`
-- `lore/federation/starfleet/positions/positions.json`
-- `lore/federation/starfleet/command_structure/succession_rules.json`
-
-Estas referencias constriñen el contenido factual. La organización pedagógica, ejemplos y ejercicios son una capa de diseño del proyecto cuando el canon no especifica una Academia completa con este nivel de detalle.

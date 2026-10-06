@@ -1,0 +1,384 @@
+{
+  "schema_version": "2.0.0",
+  "course_id": "PHY-401",
+  "status": "concept_driven_autocorrectable",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 4,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1
+  },
+  "concepts": [
+    {
+      "id": "PHY-401-C001",
+      "unit_id": "PHY-401-U01",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Para qué sirve la evaluación funcional inicial?",
+      "answer_display_es": "establecer referencia · detectar limitaciones/riesgos · orientar rutina · comparar progreso",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "establecer referencia",
+        "detectar limitaciones/riesgos",
+        "orientar rutina",
+        "comparar progreso"
+      ]
+    },
+    {
+      "id": "PHY-401-C002",
+      "unit_id": "PHY-401-U01",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente las cuatro áreas básicas observadas al inicio.",
+      "answer_display_es": "movilidad · resistencia · fuerza funcional · coordinación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "movilidad",
+        "resistencia",
+        "fuerza funcional",
+        "coordinación"
+      ]
+    },
+    {
+      "id": "PHY-401-C003",
+      "unit_id": "PHY-401-U01",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué no se comparan directamente especies físicamente distintas?",
+      "answer_display_es": "biología distinta · evaluación contextual · funcionalidad individualizada",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "biología distinta",
+        "evaluación contextual",
+        "funcionalidad individualizada"
+      ]
+    },
+    {
+      "id": "PHY-401-C004",
+      "unit_id": "PHY-401-U01",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente evidencia de estado y recompensa RPG.",
+      "answer_display_es": "evidencia describe lo ocurrido/estado · no asigna puntos manuales · capacidad deriva de vida y práctica",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "evidencia describe lo ocurrido/estado",
+        "no asigna puntos manuales",
+        "capacidad deriva de vida y práctica"
+      ]
+    },
+    {
+      "id": "PHY-401-C005",
+      "unit_id": "PHY-401-U02",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué significa movilidad funcional?",
+      "answer_display_es": "rango útil · control · ejecutar tarea sin compensación innecesaria",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "rango útil",
+        "control",
+        "ejecutar tarea sin compensación innecesaria"
+      ]
+    },
+    {
+      "id": "PHY-401-C006",
+      "unit_id": "PHY-401-U02",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Para qué sirve un calentamiento?",
+      "answer_display_es": "preparar progresivamente · movilidad específica · incrementar intensidad · ensayar técnica",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "preparar progresivamente",
+        "movilidad específica",
+        "incrementar intensidad",
+        "ensayar técnica"
+      ]
+    },
+    {
+      "id": "PHY-401-C007",
+      "unit_id": "PHY-401-U02",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué prevención no significa riesgo cero?",
+      "answer_display_es": "el riesgo no desaparece · se reduce riesgo evitable · preparación/equipo/progresión/descanso",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "el riesgo no desaparece",
+        "se reduce riesgo evitable",
+        "preparación/equipo/progresión/descanso"
+      ]
+    },
+    {
+      "id": "PHY-401-C008",
+      "unit_id": "PHY-401-U02",
+      "source_type": "scenario",
+      "web_prompt_es": "Un instructor corrige tu técnica. ¿Qué evidencia positiva puede generar una buena respuesta?",
+      "answer_display_es": "aceptar feedback · corregir ejecución · priorizar seguridad · aprendizaje",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "aceptar feedback",
+        "corregir ejecución",
+        "priorizar seguridad",
+        "aprendizaje"
+      ]
+    },
+    {
+      "id": "PHY-401-C009",
+      "unit_id": "PHY-401-U03",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué significa resistencia básica?",
+      "answer_display_es": "sostener actividad razonable · evitar deterioro excesivo · capacidad funcional prolongada",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "sostener actividad razonable",
+        "evitar deterioro excesivo",
+        "capacidad funcional prolongada"
+      ]
+    },
+    {
+      "id": "PHY-401-C010",
+      "unit_id": "PHY-401-U03",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué una sola sesión intensa no demuestra adaptación?",
+      "answer_display_es": "adaptación requiere tiempo · regularidad · recuperación · repetición",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "adaptación requiere tiempo",
+        "regularidad",
+        "recuperación",
+        "repetición"
+      ]
+    },
+    {
+      "id": "PHY-401-C011",
+      "unit_id": "PHY-401-U03",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción relaciona correctamente ritmo y sostenibilidad.",
+      "answer_display_es": "ritmo permite completar · reduce riesgo · facilita continuidad y recuperación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "ritmo permite completar",
+        "reduce riesgo",
+        "facilita continuidad y recuperación"
+      ]
+    },
+    {
+      "id": "PHY-401-C012",
+      "unit_id": "PHY-401-U03",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente cuatro variables que el sistema puede observar en sesiones programadas.",
+      "answer_display_es": "frecuencia · duración · intensidad · continuidad · descanso/estudio",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "frecuencia",
+        "duración",
+        "intensidad",
+        "continuidad",
+        "descanso/estudio"
+      ]
+    },
+    {
+      "id": "PHY-401-C013",
+      "unit_id": "PHY-401-U04",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente fuerza máxima y fuerza funcional.",
+      "answer_display_es": "máxima = producir pico de fuerza · funcional = fuerza útil/controlada para tareas · contexto importa",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "máxima = producir pico de fuerza",
+        "funcional = fuerza útil/controlada para tareas",
+        "contexto importa"
+      ]
+    },
+    {
+      "id": "PHY-401-C014",
+      "unit_id": "PHY-401-U04",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente cuatro patrones básicos de fuerza funcional.",
+      "answer_display_es": "empujar · tirar · levantarse · agacharse · transportar · estabilizar · rotar/resistir rotación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "empujar",
+        "tirar",
+        "levantarse",
+        "agacharse",
+        "transportar",
+        "estabilizar",
+        "rotar/resistir rotación"
+      ]
+    },
+    {
+      "id": "PHY-401-C015",
+      "unit_id": "PHY-401-U04",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué el control corporal forma parte de la evaluación?",
+      "answer_display_es": "seguridad · coordinación · calidad de ejecución · repetibilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "seguridad",
+        "coordinación",
+        "calidad de ejecución",
+        "repetibilidad"
+      ]
+    },
+    {
+      "id": "PHY-401-C016",
+      "unit_id": "PHY-401-U04",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Cómo puede progresar una tarea sin aumentar únicamente el peso?",
+      "answer_display_es": "duración · complejidad · menos ayuda · situación específica · resistencia contextual",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "duración",
+        "complejidad",
+        "menos ayuda",
+        "situación específica",
+        "resistencia contextual"
+      ]
+    },
+    {
+      "id": "PHY-401-C017",
+      "unit_id": "PHY-401-U05",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente fatiga aguda y carga acumulada.",
+      "answer_display_es": "aguda = corto plazo · acumulada = patrón de semanas/meses · efectos y recuperación distintos",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "aguda = corto plazo",
+        "acumulada = patrón de semanas/meses",
+        "efectos y recuperación distintos"
+      ]
+    },
+    {
+      "id": "PHY-401-C018",
+      "unit_id": "PHY-401-U05",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Una buena noche elimina un mes de sobrecarga?",
+      "answer_display_es": "No. mejora estado inmediato; patrón longitudinal persiste parcialmente.",
+      "accepted_short_answers_es": [
+        "no"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "no",
+        "mejora estado inmediato",
+        "patrón longitudinal persiste parcialmente"
+      ]
+    },
+    {
+      "id": "PHY-401-C019",
+      "unit_id": "PHY-401-U05",
+      "source_type": "scenario",
+      "web_prompt_es": "Una lesión impide seguir la rutina normal. ¿Qué opciones coherentes existen?",
+      "answer_display_es": "reducir/cambiar actividad · tratamiento · recuperación médica · reintroducción progresiva",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "reducir/cambiar actividad",
+        "tratamiento",
+        "recuperación médica",
+        "reintroducción progresiva"
+      ]
+    },
+    {
+      "id": "PHY-401-C020",
+      "unit_id": "PHY-401-U05",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Cómo trata el sistema una interrupción breve frente a meses de inactividad?",
+      "answer_display_es": "días no penalizan absurdamente · periodos largos pueden reducir adaptación · experiencia profunda persiste mejor",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "días no penalizan absurdamente",
+        "periodos largos pueden reducir adaptación",
+        "experiencia profunda persiste mejor"
+      ]
+    },
+    {
+      "id": "PHY-401-C021",
+      "unit_id": "PHY-401-U06",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Cómo se forma una rutina en el sistema?",
+      "answer_display_es": "repetición real · frecuencia · continuidad · patrón observado · no perk seleccionado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "repetición real",
+        "frecuencia",
+        "continuidad",
+        "patrón observado",
+        "no perk seleccionado"
+      ]
+    },
+    {
+      "id": "PHY-401-C022",
+      "unit_id": "PHY-401-U06",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Qué hace sostenible una rutina?",
+      "answer_display_es": "compatible con clases · sueño · estudio · relaciones · recuperación · obligaciones",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "compatible con clases",
+        "sueño",
+        "estudio",
+        "relaciones",
+        "recuperación",
+        "obligaciones"
+      ]
+    },
+    {
+      "id": "PHY-401-C023",
+      "unit_id": "PHY-401-U06",
+      "source_type": "scenario",
+      "web_prompt_es": "Una nueva práctica académica rompe tu horario habitual de entrenamiento. ¿Qué ocurre con el hábito?",
+      "answer_display_es": "no se borra instantáneamente · puede adaptarse/decadencia gradual · el jugador puede reorganizar",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "no se borra instantáneamente",
+        "puede adaptarse/decadencia gradual",
+        "el jugador puede reorganizar"
+      ]
+    },
+    {
+      "id": "PHY-401-C024",
+      "unit_id": "PHY-401-U06",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué decide el jugador y qué observa el sistema en preparación física?",
+      "answer_display_es": "jugador decide prioridades/rutinas · personaje realiza actividad · sistema registra evidencia/consecuencias · sin repartir puntos",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "jugador decide prioridades/rutinas",
+        "personaje realiza actividad",
+        "sistema registra evidencia/consecuencias",
+        "sin repartir puntos"
+      ]
+    }
+  ]
+}

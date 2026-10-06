@@ -82,15 +82,9 @@ Distingue cuáles de estas afirmaciones describen correctamente a la Federación
 3. “Los mundos miembros cooperan bajo instituciones comunes.”
 4. “La composición de la Federación puede variar según la fecha de campaña.”
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué tipo de entidad política es la Federación?
-2. ¿En qué año se funda según el proyecto?
-3. ¿Cuáles son los cuatro miembros fundadores retenidos?
-4. ¿Por qué no debe extrapolarse la escala de 2373 a la era de Pike?
-5. ¿Por qué pertenecer a la Federación no elimina la diversidad cultural?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # FED-401-U02 — Instituciones fundamentales
 
@@ -160,15 +154,9 @@ El cadete aprende a identificar cuándo debe:
 
 Clasifica cada asunto como principalmente **civil**, **planetario/local**, **Starfleet/operativo** o **dependiente de coordinación**.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué dos instituciones federales mínimas retiene el proyecto?
-2. ¿Por qué no se detallan elecciones o mandatos cuando no existe base suficiente?
-3. ¿Qué significa que Starfleet esté subordinada a autoridad civil?
-4. ¿Puede un capitán sustituir automáticamente a una autoridad política?
-5. ¿Qué debes hacer cuando la competencia institucional no está clara?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # FED-401-U03 — Mundos miembros y ciudadanía
 
@@ -250,15 +238,9 @@ No puedes deducir automáticamente:
 - que su rango de Starfleet le concede competencia política;
 - que comparte todas las costumbres de todos los vulcanos.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. Explica la regla “especie ≠ ciudadanía”.
-2. ¿Por qué mundo y gobierno se modelan por separado?
-3. ¿Qué puede cambiar cuando un mundo entra o sale de una estructura política?
-4. ¿Ser oficial de Starfleet concede autoridad civil universal?
-5. ¿Qué datos necesitarías antes de decidir qué jurisdicción se aplica a un caso?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # FED-401-U04 — Federación y Starfleet
 
@@ -339,15 +321,9 @@ Para cada caso, distingue:
 - negociación;
 - consecuencia de World State.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. Resume en una frase la relación entre Federación y Starfleet.
-2. ¿Qué significa subordinación civil?
-3. ¿Puede una conversación generada por IA cambiar un tratado por sí sola?
-4. ¿Qué ocurre con los eventos canónicos posteriores al inicio de campaña?
-5. Pon un ejemplo de una decisión civil que limite una operación de Starfleet.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # FED-401-U05 — Pluralidad cultural
 
@@ -414,15 +390,9 @@ B. “Sé que existe una tradición asociada, pero confirmaré cómo la aplica e
 
 Explica por qué B es profesionalmente más segura.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la Federación no debe representarse como una cultura única?
-2. Diferencia especie, cultura e individuo.
-3. ¿Qué es una suposición antropocéntrica?
-4. ¿Por qué conocer una tradición no permite predecir automáticamente a una persona?
-5. ¿Qué harías ante una norma cultural que no comprendes?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # FED-401-U06 — Derechos y responsabilidades básicas
 
@@ -490,55 +460,7 @@ Un cadete presencia una disputa civil en un mundo miembro durante una visita aca
 
 Su uniforme no le concede automáticamente autoridad policial o política local. Puede proteger una vida ante una emergencia inmediata, pedir ayuda y comunicar la situación, pero no debe inventar competencias que no posee.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué esta asignatura no enumera una constitución completa?
-2. ¿Qué significa responsabilidad pública para un cadete?
-3. Explica “debido proceso” a nivel introductorio.
-4. ¿Por qué un uniforme de Starfleet no concede autoridad ilimitada?
-5. ¿Qué preguntas debes hacerte antes de intervenir en un asunto civil?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-FED-401 evalúa:
-
-- comprensión institucional;
-- separación entre Federación y Starfleet;
-- distinción entre especie, ciudadanía, mundo y gobierno;
-- criterio básico de jurisdicción;
-- respeto por diversidad cultural;
-- reconocimiento de límites de autoridad;
-- capacidad para no inventar detalles políticos no establecidos.
-
-No se exige:
-
-- memorizar listas extensas de mundos;
-- conocer una constitución inexistente en el material;
-- recordar trivia de episodios;
-- anticipar acontecimientos futuros de la campaña.
-
-# Tratamiento por era
-
-El núcleo conceptual es estable, pero la Federación debe cargarse según la fecha de campaña.
-
-En particular:
-
-- los miembros activos pueden variar;
-- la situación exterior cambia;
-- la escala del siglo XXIV tardío no se aplica automáticamente a Pike o Kirk;
-- los acontecimientos futuros no están predeterminados después del inicio de campaña.
-
-# Referencias internas
-
-- `lore/federation/government/README.md`
-- `lore/federation/government/federation_government.json`
-- `lore/federation/member_worlds/README.md`
-- `lore/federation/member_worlds/founding_members.json`
-- `gameplay/diplomacy/federation_political_state.json`
-- `validation/consistency/federation_political_state_rules.md`
-- `gameplay/careers/academy_path/course_resolution.md`
-- `gameplay/careers/academy_path/evaluation_model.json`
-
-Estas fuentes constriñen el contenido factual. Los ejemplos y la organización docente son adiciones de diseño cuando el canon no describe una asignatura académica equivalente con este nivel de detalle.

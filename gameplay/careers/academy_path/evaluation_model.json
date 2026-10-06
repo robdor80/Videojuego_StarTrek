@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "internal_score_range": [
     0,
     100
@@ -47,5 +47,30 @@
   "conduct_can_override_academic_score": true,
   "automatic_game_over_on_failure": false,
   "record_persistence": true,
-  "design_provenance": "GAME_ADDITION"
+  "design_provenance": "GAME_ADDITION",
+  "theory_assessment": {
+    "source": "concept_banks_v2",
+    "allowed_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "correction": "deterministic",
+    "same_question_instances_in_web_and_game": false,
+    "shared_between_web_and_game": [
+      "concepts",
+      "correct_answers",
+      "accepted_short_answers",
+      "source_units"
+    ],
+    "generated_per_interface": [
+      "wording",
+      "question_selection",
+      "option_order",
+      "distractors"
+    ],
+    "rule": "If a question cannot be answered unambiguously from taught material, it is invalid.",
+    "complex_competence_assessment": "gameplay_practice_or_simulation"
+  }
 }

@@ -76,15 +76,9 @@ El proyecto contempla resultados como:
 
 Una dificultad académica no significa automáticamente “game over”.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cuántos años dura el programa estándar?
-2. ¿Qué clase de cadete corresponde al primer año?
-3. ¿Cuál es el rango normal tras graduarse?
-4. ¿Por qué teoría y práctica no son equivalentes?
-5. ¿Qué factores, además de las notas, pueden afectar a la progresión?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ACA-401-U02 — Integridad académica
 
@@ -147,15 +141,9 @@ Un cadete pide a una IA que le explique una materia y luego resuelve personalmen
 
 Otro cadete entrega como propio un trabajo generado íntegramente por la IA en una actividad destinada a comprobar su razonamiento individual: la evidencia ya no representa su capacidad.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la integridad afecta a la seguridad profesional?
-2. ¿Toda colaboración es fraude?
-3. ¿Cuándo una ayuda deja de ser apoyo y pasa a falsear evidencia?
-4. ¿Por qué encubrir un error puede ser peor que cometerlo?
-5. ¿Puede una IA decidir por sí sola una cualificación académica?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ACA-401-U03 — Disciplina y conducta
 
@@ -229,15 +217,9 @@ Analiza tres casos:
 
 Ordena la gravedad razonadamente sin usar una tabla automática.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué no existe una tabla universal “falta = castigo”?
-2. ¿Qué factores deben considerarse en una incidencia?
-3. ¿Qué diferencia existe entre error y encubrimiento?
-4. ¿Puede un instructor controlado por IA sancionar arbitrariamente?
-5. ¿Por qué la proporcionalidad importa en disciplina?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ACA-401-U04 — Rutinas y uso de instalaciones
 
@@ -320,15 +302,9 @@ No se trata de optimizar barras, sino de vivir con tiempo finito.
 
 Diseña una jornada que incluya una clase obligatoria, una práctica, estudio, entrenamiento, comida y descanso sin solapar horarios.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Dónde se sitúa la Academia terrestre en las eras jugables?
-2. Nombra dos instalaciones retenidas y dos añadidas por jugabilidad.
-3. ¿Por qué los horarios no son universales?
-4. ¿Qué significa que el tiempo del cadete sea finito?
-5. ¿Por qué no conviene convertir cada rutina diaria en una escena completa?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ACA-401-U05 — Tutorías y recuperación
 
@@ -389,15 +365,9 @@ La campaña debe crear consecuencias y caminos de recuperación antes que obliga
 
 Un cadete falla una práctica por confundir un procedimiento, pero demuestra buen conocimiento teórico. Diseña un plan de recuperación proporcionado.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué objetivo tiene una tutoría?
-2. ¿Por qué teoría y ejecución pueden requerir recuperaciones distintas?
-3. ¿Una reevaluación borra el intento anterior?
-4. ¿Qué significa recuperación dirigida?
-5. ¿Cuándo podría ser razonable repetir un módulo o un año?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ACA-401-U06 — Trabajo en equipo académico
 
@@ -458,52 +428,7 @@ Ocultarlo hasta el final perjudica al equipo. Informarlo con tiempo permite redi
 
 Realiza una actividad de equipo con roles definidos y termina con un debrief: qué funcionó, qué se comunicó tarde y qué cambiarías.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué necesita un reparto de tareas eficaz?
-2. ¿Qué diferencia existe entre responsabilidad del equipo e individual?
-3. ¿Por qué un desacuerdo no es automáticamente mala conducta?
-4. ¿Cuándo debe comunicarse un bloqueo?
-5. ¿Qué información debería aparecer en el debrief del equipo?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-ACA-401 evalúa:
-
-- comprensión del programa académico;
-- integridad;
-- conducta;
-- gestión básica del tiempo;
-- capacidad para pedir ayuda;
-- trabajo en equipo;
-- responsabilidad.
-
-No se premia “hacer siempre lo perfecto”. Se evalúa también cómo responde el cadete cuando algo sale mal.
-
-# Tratamiento por era
-
-La estructura común de cuatro años se mantiene por jugabilidad.
-
-La presentación puede adaptar:
-
-- terminología;
-- uniformes;
-- instalaciones disponibles;
-- tecnología educativa;
-- simuladores.
-
-La serie del siglo XXXII *Star Trek: Starfleet Academy* no se usa como fuente para importar automáticamente instalaciones o tecnología a las eras jugables del proyecto.
-
-# Referencias internas
-
-- `lore/federation/starfleet/academy/cadet_life/README.md`
-- `lore/federation/starfleet/academy/campus/README.md`
-- `lore/federation/starfleet/disciplinary_system/README.md`
-- `lore/federation/starfleet/disciplinary_system/discipline_model.json`
-- `gameplay/careers/academy_path/academy_gameplay_loop.md`
-- `gameplay/careers/academy_path/exam_model.json`
-- `gameplay/careers/academy_path/cadet_progression.json`
-
-Estas referencias constriñen los hechos y las reglas. Horarios concretos, espacios funcionales y estructura pedagógica pueden ser GAME_ADDITION cuando así se indica.

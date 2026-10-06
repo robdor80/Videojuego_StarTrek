@@ -87,15 +87,9 @@ Cuando una petición es simple, el sistema debería resolverla por rutas determi
 
 La IA puede intervenir para entender lenguaje complejo o resumir información, pero su resultado debe convertirse en una petición estructurada que después pasa por reglas autoritativas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la computadora no debe tratarse como una única consola?
-2. ¿Qué diferencia existe entre consulta y acción?
-3. ¿Por qué “no detectado” no significa “no existe”?
-4. ¿Puede una IA cambiar directamente el estado de la nave?
-5. Pon dos ejemplos de consulta rutinaria.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # INF-401-U02 — PADD y flujo personal
 
@@ -160,15 +154,9 @@ Esta diferencia será importante más adelante en logs profesionales.
 
 Abre una tarea académica, crea una anotación, guarda un borrador y prepara una entrega sin modificar la fuente original.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué un PADD es una interfaz y no la “propiedad” del documento?
-2. ¿Qué factores pueden limitar sincronización o acceso?
-3. ¿Qué diferencia existe entre borrador y registro final?
-4. ¿Por qué no debe aparecer automáticamente información restringida?
-5. Describe un flujo básico de trabajo académico.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # INF-401-U03 — Identidad y acceso
 
@@ -244,15 +232,9 @@ Algunas funciones pueden exigir:
 
 Los overrides de emergencia deben ser auditables y estar gobernados por reglas, no por improvisación de IA.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. Diferencia autenticación y autorización.
-2. ¿Por qué el rango no concede acceso universal?
-3. Nombra cuatro factores que pueden influir en autorización.
-4. ¿Qué significa principio de mínimo acceso?
-5. ¿Por qué un override de emergencia debe quedar auditado?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # INF-401-U04 — Búsqueda de información
 
@@ -327,15 +309,9 @@ La IA puede ayudar a expresar el resumen, pero no inventar eventos que no exista
 
 Formula una búsqueda útil para localizar un reglamento, una incidencia técnica y un resultado de sensores sin pedir conclusiones que la fuente no contiene.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué debe especificar una buena consulta?
-2. ¿Por qué importa conocer la fuente?
-3. ¿Qué diferencia existe entre resultado e interpretación?
-4. ¿Puede un resumen generado incluir hechos no registrados?
-5. Pon un ejemplo de búsqueda compleja legítima.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # INF-401-U05 — Registros y trazabilidad
 
@@ -403,15 +379,9 @@ Un registro debe poder conservar:
 
 Distingue qué elementos de una situación pertenecen al Event Log y cuáles a un log personal o de departamento.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Para qué sirve la trazabilidad?
-2. Diferencia Operational Event Log y log personal.
-3. ¿Debe borrarse un registro antiguo cuando aparece una corrección?
-4. ¿Por qué importa conservar autoría y hora?
-5. ¿Puede una opinión personal convertirse automáticamente en verdad operativa?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # INF-401-U06 — Privacidad y uso responsable
 
@@ -473,54 +443,7 @@ Un cadete sabe que existe un log personal de un instructor y tiene curiosidad po
 
 El hecho de saber que el log existe no concede acceso al contenido.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre acceso técnico y autorización?
-2. Nombra cuatro tipos de información que pueden estar restringidos.
-3. ¿Por qué un mensaje de acceso denegado no debe filtrar contenido?
-4. ¿Para qué sirve auditar accesos?
-5. ¿Puede la IA reconstruir información privada para “ayudar” al usuario?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-INF-401 evalúa:
-
-- comprensión del papel de la computadora;
-- uso responsable de terminales y PADD;
-- autenticación y autorización;
-- búsqueda con procedencia;
-- distinción entre hechos e interpretación;
-- registros y trazabilidad;
-- privacidad.
-
-No exige:
-- programación;
-- administración avanzada;
-- arquitectura informática profunda;
-- memorizar comandos de interfaz específicos de una sola era.
-
-# Tratamiento por era
-
-Cambian interfaces, dispositivos y presentación.
-
-Permanece estable la lógica de:
-
-- identidad;
-- autorización;
-- procedencia;
-- trazabilidad;
-- privacidad;
-- autoridad del estado de juego.
-
-# Referencias internas
-
-- `gameplay/ship_operations/ship_computer/README.md`
-- `gameplay/ship_operations/ship_computer/access_control_rules.json`
-- `gameplay/ship_operations/ship_computer/computer_query_action_catalog.json`
-- `gameplay/records_and_logs/README.md`
-- `gameplay/ship_operations/operational_event_log/README.md`
-- `gameplay/careers/academy_path/course_resolution.md`
-
-Estas referencias constriñen la semántica. Interfaces concretas y ejercicios pedagógicos pueden variar por era.
