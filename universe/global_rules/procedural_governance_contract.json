@@ -1,0 +1,157 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_governance_contract",
+  "status": "foundation_fixed",
+  "purpose": "Single machine-readable governance contract for procedural Star Trek world generation, persistence, authority, versioning and completion gates.",
+  "authoritative_references": [
+    "sources/canon_policy.md",
+    "sources/provenance_policy.md",
+    "docs/decisions/playable_eras.md",
+    "docs/decisions/campaign_continuity.md",
+    "docs/decisions/lore_to_game_rule.md",
+    "docs/decisions/authoritative_observable_universe.md",
+    "universe/global_rules/canon_vs_campaign.md",
+    "universe/generation/procedural_context_resolution_hierarchy.json",
+    "universe/generation/procedural_generation_rules.json"
+  ],
+  "authority_model": {
+    "before_campaign_start": [
+      "retained_screen_canon_valid_for_campaign_date",
+      "approved_project_decisions_and_game_additions",
+      "authored_instance_data",
+      "procedural_generation_within_unreserved_space"
+    ],
+    "after_campaign_start": [
+      "authoritative_live_world_state",
+      "persisted_campaign_history",
+      "pre_start_canonical_history",
+      "approved_project_rules",
+      "procedural_defaults_for_still_unmaterialized_space"
+    ],
+    "future_screen_canon_after_campaign_start": "reference_only_not_mandatory",
+    "materialized_instance_rule": "Persisted entity state and history outrank generator defaults for that entity."
+  },
+  "core_vs_star_trek": {
+    "core_rpg_owns": [
+      "stable identity semantics",
+      "generic deterministic sub-seeding",
+      "generic persistence and history semantics",
+      "generic knowledge_vs_world_truth separation",
+      "generic relationship graph semantics where setting-neutral",
+      "generic migration mechanisms"
+    ],
+    "star_trek_owns": [
+      "canon and playable-era constraints",
+      "Star Trek species/culture/organization data",
+      "Starfleet ranks, positions, departments and doctrine",
+      "Star Trek technology and exceptional-being rules",
+      "Star Trek visual profiles and NAP mappings"
+    ],
+    "rule": "Do not duplicate setting-neutral semantics in Trek-specific form when a CoreRPG contract can own them."
+  },
+  "stable_identity_requirements": {
+    "persistent_entities_require_stable_ids": true,
+    "display_name_is_not_identity": true,
+    "ids_must_survive": [
+      "rename",
+      "movement",
+      "assignment_change",
+      "rank_change",
+      "damage",
+      "repair",
+      "refit",
+      "aging",
+      "LOD_transition",
+      "save_load"
+    ],
+    "cross_references_use_stable_ids": true,
+    "silent_id_reuse_for_unrelated_entity_forbidden": true
+  },
+  "deterministic_generation": {
+    "global_sequential_rng_for_persistent_generation_forbidden": true,
+    "derived_seed_inputs": [
+      "campaign_seed",
+      "stable_entity_id",
+      "subsystem_key",
+      "rules_version"
+    ],
+    "subsystem_isolation_required": true,
+    "materialized_results_are_loaded_not_rerolled": true,
+    "generator_upgrade_must_not_silently_change_existing_entities": true
+  },
+  "versioning_and_migration": {
+    "persist": [
+      "rules_version",
+      "generator_version",
+      "seed_provenance"
+    ],
+    "allowed_strategies": [
+      "keep_persisted_result",
+      "explicit_migration",
+      "new_saves_only_regeneration"
+    ],
+    "silent_regeneration_forbidden": true,
+    "migration_must_preserve_identity_unless_explicit_world_event_replaces_entity": true
+  },
+  "source_and_provenance": {
+    "authority_categories": [
+      "SCREEN_CANON",
+      "OFFICIAL_REFERENCE",
+      "LICENSED_NOVEL",
+      "LICENSED_COMIC",
+      "RELIABLE_SECONDARY",
+      "GENERAL_WEB",
+      "INFERRED",
+      "GAME_ADDITION"
+    ],
+    "confidence_values": [
+      "HIGH",
+      "MEDIUM",
+      "LOW"
+    ],
+    "authority_and_confidence_are_separate": true,
+    "gameplay_or_chronology_critical_claims_require_traceable_provenance": true,
+    "inference_must_be_labeled": true,
+    "game_additions_must_be_labeled": true
+  },
+  "observable_universe": {
+    "ground_truth_precedes_observation": true,
+    "sensors_and_ai_do_not_create_truth": true,
+    "knowledge_is_observer_specific": true,
+    "ai_cannot_mutate_authoritative_truth_without_validated_action_path": true
+  },
+  "domain_definition_of_done": {
+    "required": [
+      "authority_and_ownership_defined",
+      "inputs_and_outputs_defined",
+      "stable_ids_defined_where_persistent",
+      "deterministic_seed_policy_defined_where_generated",
+      "persistence_and_live_state_rules_defined",
+      "dependencies_declared",
+      "canon_and_era_constraints_declared",
+      "validation_invariants_or_cases_present",
+      "AI_authority_boundary_defined_where_applicable",
+      "visual_and_NAP_implications_defined_where_applicable",
+      "migration_or_versioning_behavior_defined",
+      "representative_fixture_or_worked_case_present_when_runtime_relevant"
+    ],
+    "lore_only_is_not_complete_when_gameplay_relevant": true
+  },
+  "author_decision_gate": {
+    "requires_author": [
+      "change_playable_era_scope",
+      "major_canon_divergence_policy",
+      "major_species_representation_choice_not_resolved_by_sources",
+      "major_relationship_reproduction_or_content_boundary",
+      "fundamental_gameplay_philosophy_change"
+    ],
+    "autonomous": [
+      "data_structure",
+      "contract_refactoring",
+      "validation_design",
+      "migration_mechanics",
+      "documentation_organization",
+      "CoreRPG_vs_Trek_ownership_classification"
+    ]
+  }
+}
