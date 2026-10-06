@@ -1,7 +1,7 @@
 # Seguridad / Táctica — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -196,18 +196,18 @@ La especialización **Seguridad / Táctica** desarrolla competencia mediante est
 
 ### Objetivo operativo
 
-La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar control y apoyo al riesgo.
-- **turnos**: periodos de responsabilidad operativa que requieren incorporación, desempeño sostenido y relevo formal.
-- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad.
-- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una actuación es aceptable y repetible.
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar control y apoyo al riesgo
+- **turnos**: periodos de responsabilidad operativa que requieren incorporación, desempeño sostenido y relevo formal
+- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad
+- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una actuación es aceptable y repetible
 
 ### Aplicación profesional
 
-Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
 
 ### Práctica
 
@@ -215,12 +215,251 @@ Dirigir servicio.
 
 ### Criterio de servicio
 
-Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+Seguridad / Táctica debe distinguir amenaza, riesgo y respuesta autorizada, aplicar proporcionalidad y proteger personas, nave y misión antes de escalar la fuerza.
 
 ### Evaluación
 
-Evaluación. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-101-U02 — Táctica bajo daño
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **sensores/escudos degradados**: pérdida parcial de detección o protección que reduce información o margen defensivo y obliga a revisar táctica
+- **prioridad**: orden relativo entre amenazas, protección de personas, misión y otras demandas
+- **coordinación**: alineación entre seguridad, táctica, mando y otros puestos para que acciones y restricciones sean compatibles
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Simulación.
+
+### Criterio de servicio
+
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-101-U03 — Protección de misión
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **personal**: personas a proteger o emplear consideradas por exposición, competencia, ubicación y capacidad de evacuación
+- **instalación**: espacio físico o infraestructura cuya protección exige conocer accesos, zonas críticas, ocupación y rutas de respuesta
+- **away team**: equipo desplegado fuera de la unidad que necesita misión, comunicaciones, extracción y límites de autoridad claros
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Plan avanzado.
+
+### Criterio de servicio
+
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+
+### Evaluación
+
+Revisión. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-101-U04 — Asesoramiento al mando
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **amenaza**: actor, capacidad o condición con posibilidad de causar daño; debe describirse por evidencia y no por intención asumida
+- **opciones**: cursos de acción viables comparados por proporcionalidad, riesgo, tiempo y consecuencias
+- **consecuencias**: efectos previsibles o reales sobre personas, misión, relaciones y entorno
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Briefing.
+
+### Criterio de servicio
+
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## SEC-102 — Seguridad/Táctica avanzada II
+
+### SEC-102-U01 — Misión táctica completa
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **brief**: síntesis previa de misión, amenaza, reglas, roles, comunicaciones y contingencias
+- **reglas**: restricciones de actuación y uso de fuerza que siguen vigentes bajo presión
+- **ejecución**: realización del plan con control, comunicación y adaptación proporcional a la situación
+- **cierre**: confirmación de seguridad, estado, detenidos o afectados cuando proceda, registro y pendientes
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Operar misión.
+
+### Criterio de servicio
+
+Seguridad / Táctica debe distinguir amenaza, riesgo y respuesta autorizada, aplicar proporcionalidad y proteger personas, nave y misión antes de escalar la fuerza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-102-U02 — Crisis de seguridad
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **abordaje**: entrada hostil o no autorizada que requiere proteger personas, sectores críticos y continuidad de mando sin perder proporcionalidad
+- **rehén contextual**: situación en la que la seguridad de una persona condiciona opciones; exige información, contención y decisiones proporcionadas al contexto
+- **evacuación**: movimiento planificado de personas desde una zona de riesgo a una segura con rutas, prioridad y control de recuento
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Escenario complejo.
+
+### Criterio de servicio
+
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-102-U03 — Desescalada
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **comunicación**: intercambio claro que reduce ambigüedad, permite desescalar y mantiene coordinación entre actores
+- **posición**: ubicación física o táctica elegida para proteger, observar o controlar sin aumentar innecesariamente el riesgo
+- **alternativas**: métodos o fuentes distintas que pueden compensar la pérdida de un sensor o una interpretación dudosa
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Caso.
+
+### Criterio de servicio
+
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SEC-102-U04 — Handoff táctico
+
+### Objetivo operativo
+
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **amenazas**: riesgos activos o potenciales que deben entregarse en el relevo con evidencia, ubicación y estado
+- **estado**: situación actual verificable de seguridad, sistemas defensivos, personal y acciones en curso
+- **órdenes**: instrucciones vigentes con prioridad, alcance y autoridad emisora
+- **pendientes**: acciones abiertas con responsable, prioridad y criterio de cierre
+
+### Aplicación profesional
+
+Se verifica amenaza, entorno, autoridad y reglas aplicables; después se selecciona la respuesta mínima suficiente, se coordina con mando y se conserva evidencia para revisión, relevo y consecuencias posteriores.
+
+### Práctica
+
+Relevo profesional.
+
+### Criterio de servicio
+
+Seguridad / Táctica debe distinguir amenaza, riesgo y respuesta autorizada, aplicar proporcionalidad y proteger personas, nave y misión antes de escalar la fuerza.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/security/README.md`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `lore/federation/starfleet/regulations/README.md`
+- `lore/federation/starfleet/prime_directive/prime_directive.json`

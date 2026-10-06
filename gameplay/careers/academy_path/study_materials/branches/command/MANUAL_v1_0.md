@@ -1,7 +1,7 @@
 # Mando — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -194,17 +194,17 @@ La especialización **Mando** desarrolla competencia mediante estudio, práctica
 
 ### Objetivo operativo
 
-En esta unidad de **Mando avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar el control al riesgo y experiencia.
-- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una ejecución es aceptable y repetible.
-- **feedback**: información específica que conecta una conducta observada con su efecto y con una acción concreta de mejora.
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar el control al riesgo y experiencia
+- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una ejecución es aceptable y repetible
+- **feedback**: información específica que conecta una conducta observada con su efecto y con una acción concreta de mejora
 
 ### Aplicación profesional
 
-La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
 
 ### Práctica
 
@@ -216,8 +216,248 @@ Mando debe integrar información incompleta, personas, regulación y misión, y 
 
 ### Evaluación
 
-Evaluación. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-101-U02 — Mando y personal
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **capacidad**: margen real de una persona o sistema para asumir una tarea sin superar límites de competencia o seguridad
+- **fatiga**: degradación de rendimiento por carga o tiempo que debe tratarse como riesgo operativo y puede exigir relevo
+- **conflicto**: choque de objetivos, criterios o relaciones que se gestiona haciendo visibles hechos, autoridad, riesgo y decisión
+- **delegación**: asignación de una tarea a quien tiene capacidad suficiente manteniendo seguimiento proporcional y responsabilidad de supervisión
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Caso humano.
+
+### Criterio de servicio
+
+Mando debe mantener una imagen operativa clara, decidir dentro de autoridad, proteger a la tripulación y comunicar intención, riesgo y límites.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-101-U03 — Órdenes complejas
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **intención**: efecto que se desea conseguir con una orden; permite adaptar la ejecución sin perder el propósito
+- **condiciones**: circunstancias que activan, limitan o detienen una orden o acción
+- **autonomía**: capacidad de actuar sin guía continua dentro del ámbito autorizado y de escalar cuando se supera
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Emitir plan de órdenes.
+
+### Criterio de servicio
+
+Mando debe integrar información incompleta, personas, regulación y misión, y asumir una decisión explicable sin invadir la competencia técnica de sus especialistas.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-101-U04 — Preparación de mando
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **cualificaciones**: competencias formalmente demostradas que habilitan funciones concretas y conservan límites definidos
+- **puente**: entorno de coordinación donde información y decisiones de varios puestos deben integrarse en una picture común
+- **responsabilidad**: obligación de responder por decisiones y por el uso de autoridad, incluida la decisión de delegar o escalar
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Revisión de trayectoria.
+
+### Criterio de servicio
+
+Mando debe integrar información incompleta, personas, regulación y misión, y asumir una decisión explicable sin invadir la competencia técnica de sus especialistas.
+
+### Evaluación
+
+Informe. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## CMD-102 — Mando avanzado II
+
+### CMD-102-U01 — Misión completa
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **briefing**: comunicación previa que alinea misión, situación, roles, límites, riesgos y contingencias
+- **ejecución**: realización del plan con monitorización y adaptación dentro de los límites autorizados
+- **adaptación**: modificación razonada del plan cuando cambian las condiciones sin perder intención ni trazabilidad
+- **cierre**: confirmación de resultado, estado final, pendientes y transferencia de responsabilidad
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Dirigir misión.
+
+### Criterio de servicio
+
+Mando debe mantener una imagen operativa clara, decidir dentro de autoridad, proteger a la tripulación y comunicar intención, riesgo y límites.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-102-U02 — Riesgo estratégico local
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **consecuencias**: efectos probables o reales sobre vidas, nave, misión, relaciones y recursos
+- **regulación**: marco de normas y restricciones que sigue vigente bajo presión y delimita acciones permitidas
+- **tripulación**: personas de la unidad consideradas por seguridad, competencia, distribución y carga
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Caso complejo.
+
+### Criterio de servicio
+
+Mando debe integrar información incompleta, personas, regulación y misión, y asumir una decisión explicable sin invadir la competencia técnica de sus especialistas.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-102-U03 — Interacción externa
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **autoridad**: facultad reconocida para decidir o representar a la organización dentro de un ámbito concreto
+- **negociación**: proceso para buscar un acuerdo sin prometer capacidades ni compromisos fuera de la propia autoridad
+- **representación**: actuación en nombre de Starfleet que exige precisión sobre mandato, límites y compromisos asumibles
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Escena diplomática.
+
+### Criterio de servicio
+
+Mando debe integrar información incompleta, personas, regulación y misión, y asumir una decisión explicable sin invadir la competencia técnica de sus especialistas.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### CMD-102-U04 — Handover de mando
+
+### Objetivo operativo
+
+La unidad lleva **Mando** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso
+- **órdenes**: instrucciones vigentes que deben entregarse con prioridad, alcance, emisor y condiciones
+- **pendientes**: acciones abiertas con responsable, prioridad y condición prevista de cierre
+- **responsabilidad**: obligación de responder por decisiones y por el uso de autoridad, incluida la decisión de delegar o escalar
+
+### Aplicación profesional
+
+Se establece el estado de misión, se confirma quién tiene autoridad, se comparan opciones y riesgos, se comunica la intención y se deja evidencia suficiente para supervisión, relevo y debrief.
+
+### Práctica
+
+Transferir control.
+
+### Criterio de servicio
+
+Mando debe mantener una imagen operativa clara, decidir dentro de autoridad, proteger a la tripulación y comunicar intención, riesgo y límites.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `lore/federation/starfleet/command_structure/succession_rules.json`
+- `lore/federation/starfleet/qualifications/command_qualification.json`
+- `lore/federation/starfleet/prime_directive/prime_directive.json`
+- `gameplay/orders/starfleet_mission_tasking_order.json`

@@ -1,7 +1,7 @@
 # Ciencia / Sensores — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -198,18 +198,18 @@ La especialización **Ciencia / Sensores** desarrolla competencia mediante estud
 
 ### Objetivo operativo
 
-La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **objetivo**: pregunta o efecto de observación que determina qué medir y con qué precisión.
-- **instrumento**: sensor o método elegido por cobertura, resolución, sensibilidad, limitaciones y adecuación al fenómeno.
-- **estrategia**: plan de adquisición que combina geometría, tiempo, modos de sensor y repetición para obtener evidencia útil.
-- **validación**: comprobación independiente o repetida que reduce la probabilidad de aceptar una lectura espuria.
+- **objetivo**: pregunta o efecto de observación que determina qué medir y con qué precisión
+- **instrumento**: sensor o método elegido por cobertura, resolución, sensibilidad, limitaciones y adecuación al fenómeno
+- **estrategia**: plan de adquisición que combina geometría, tiempo, modos de sensor y repetición para obtener evidencia útil
+- **validación**: comprobación independiente o repetida que reduce la probabilidad de aceptar una lectura espuria
 
 ### Aplicación profesional
 
-Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
 
 ### Práctica
 
@@ -221,8 +221,251 @@ Ciencia/Sensores debe separar **observación, interpretación y confianza**, dec
 
 ### Evaluación
 
-Revisión. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
+Revisión. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-101-U02 — Fenómenos complejos
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **múltiples firmas**: señales superpuestas de distintos orígenes que exigen separación antes de atribuir causa
+- **cambios**: variaciones temporales que pueden distinguir fenómeno real de ruido o indicar evolución
+- **modelos**: representaciones explicativas que predicen observaciones y deben revisarse cuando los datos no encajan
+- **incertidumbre**: margen de desconocimiento o error que acompaña una medida o interpretación y debe comunicarse
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Caso avanzado.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-101-U03 — Supervisión de estación
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar control y apoyo al riesgo
+- **prioridades**: orden de tareas de observación según misión, urgencia, ventanas y valor de la información
+- **calidad**: grado de fiabilidad y utilidad de los datos según cobertura, resolución, calibración, ruido y trazabilidad
+- **logs**: registros de configuración, adquisición, anomalías y decisiones necesarios para reproducir y revisar el análisis
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Dirigir turno.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-101-U04 — Asesoramiento científico
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **dato**: observación con origen, contexto, tiempo y calidad identificables antes de interpretarla
+- **interpretación**: explicación inferida a partir de datos; debe distinguirse de la observación y expresar incertidumbre
+- **confianza**: grado de apoyo que la evidencia ofrece a una interpretación, sin convertir probabilidad en certeza
+- **recomendación**: acción aconsejada al mando basada en datos, interpretación, incertidumbre y consecuencias
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Briefing al mando.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## SCI-102 — Ciencia/Sensores avanzada II
+
+### SCI-102-U01 — Misión científica completa
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **pregunta**: problema científico formulado de modo que determine qué observaciones pueden apoyarlo o refutarlo
+- **adquisición**: proceso planificado de obtener datos con configuración y condiciones registradas
+- **análisis**: tratamiento de datos para identificar patrones, comparar hipótesis y estimar incertidumbre
+- **resultado**: conclusión o producto científico acompañado por evidencia, límites y nivel de confianza
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Ejecutar misión.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-102-U02 — Sensores degradados
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **cobertura**: parte del espacio, espectro o fenómeno que el sistema puede observar en una configuración concreta
+- **ruido**: variación no deseada que reduce la capacidad de distinguir una señal y obliga a controlar falsos positivos
+- **alternativas**: métodos o fuentes distintas que pueden compensar la pérdida de un sensor o una interpretación dudosa
+- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Escenario.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-102-U03 — Descubrimiento inesperado
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **anomalía**: observación que no encaja con el modelo esperado y debe verificarse antes de tratarse como descubrimiento
+- **verificación**: repetición o contraste independiente destinado a confirmar que la anomalía no procede de error, ruido o configuración
+- **prioridad**: orden relativo entre amenazas, protección de personas, misión y otras demandas
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Caso complejo.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### SCI-102-U04 — Handoff científico
+
+### Objetivo operativo
+
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **datos**: conjunto de observaciones conservadas con origen, contexto y calidad
+- **hipótesis**: explicación provisional que genera predicciones comprobables y debe poder descartarse
+- **pendientes**: acciones abiertas con responsable, prioridad y criterio de cierre
+- **calidad**: grado de fiabilidad y utilidad de los datos según cobertura, resolución, calibración, ruido y trazabilidad
+
+### Aplicación profesional
+
+Se parte de datos con origen y calidad conocidos, se separa observación de inferencia, se contrastan hipótesis, se expresa incertidumbre y se comunica al mando una conclusión útil con límites y recomendación.
+
+### Práctica
+
+Relevo profesional.
+
+### Criterio de servicio
+
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/ship_operations/consoles/sensors/README.md`
+- `gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json`
+- `gameplay/science/sensor_analysis_model.json`
+- `gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md`

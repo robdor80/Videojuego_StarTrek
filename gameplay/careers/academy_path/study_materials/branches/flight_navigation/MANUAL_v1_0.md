@@ -1,7 +1,7 @@
 # Vuelo / Navegación — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -190,18 +190,18 @@ La especialización **Vuelo / Navegación** desarrolla competencia mediante estu
 
 ### Objetivo operativo
 
-En esta unidad de **Vuelo / Navegación avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **masa**: propiedad que condiciona inercia y respuesta de una nave; se traduce en anticipación y márgenes de maniobra.
-- **respuesta**: forma y rapidez con que la nave cambia su estado tras una orden, condicionada por clase, configuración y daños.
-- **límites**: fronteras técnicas o procedimentales que no deben superarse sin autoridad y justificación.
-- **sistemas**: capacidades de propulsión, control, sensores y soporte cuyo estado afecta la maniobra disponible.
+- **masa**: propiedad que condiciona inercia y respuesta de una nave; se traduce en anticipación y márgenes de maniobra
+- **respuesta**: forma y rapidez con que la nave cambia su estado tras una orden, condicionada por clase, configuración y daños
+- **límites**: fronteras técnicas o procedimentales que no deben superarse sin autoridad y justificación
+- **sistemas**: capacidades de propulsión, control, sensores y soporte cuyo estado afecta la maniobra disponible
 
 ### Aplicación profesional
 
-La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
 
 ### Práctica
 
@@ -209,12 +209,250 @@ Familiarización de clase.
 
 ### Criterio de servicio
 
-Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+Vuelo / Navegación debe conservar márgenes de seguridad, energía y geometría, anticipar la trayectoria y coordinar cada maniobra con el resto de la nave.
 
 ### Evaluación
 
-Evaluación. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-101-U02 — Vuelo con daños
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **propulsión degradada**: pérdida parcial de capacidad de impulso o curvatura que reduce aceleración, control o reservas
+- **control**: capacidad de mantener actitud, vector y maniobra dentro de tolerancias seguras
+- **margen**: distancia respecto a un límite de seguridad; debe conservarse para absorber error, retraso o cambio inesperado
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Simulación.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-101-U03 — Operaciones cercanas
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **formación**: posición relativa coordinada entre varias naves con separaciones y responsabilidades definidas
+- **rendezvous**: encuentro planificado que exige sincronizar posición, vector, tiempo y velocidad relativa
+- **espacio congestionado**: entorno con múltiples trayectorias y restricciones donde disminuye el margen para corregir tarde
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Maniobra.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-101-U04 — Liderazgo de vuelo
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **relevo**: transferencia formal de responsabilidad acompañada de estado, plan, riesgos y acciones futuras
+- **instrucción**: orientación dada a otra persona para ejecutar o aprender una tarea, adaptada a su experiencia
+- **coordinación**: alineación de acciones y tiempos entre puestos o unidades para evitar conflictos y mantener objetivo común
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Supervisar puesto.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Observación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## NAV-102 — Vuelo avanzado II
+
+### NAV-102-U01 — Plan de misión
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **ruta**: secuencia de posiciones o tramos que lleva al objetivo respetando restricciones, reservas y márgenes
+- **tiempo**: recurso de misión que afecta ventanas, combustible, exposición y posibilidad de esperar por mejor información
+- **riesgos**: amenazas plausibles a seguridad o misión que deben identificarse y reevaluarse
+- **alternativas**: rutas o cursos distintos preparados para cambios de situación o pérdida de la opción principal
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Plan completo.
+
+### Criterio de servicio
+
+Vuelo / Navegación debe conservar márgenes de seguridad, energía y geometría, anticipar la trayectoria y coordinar cada maniobra con el resto de la nave.
+
+### Evaluación
+
+Revisión. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-102-U02 — Ejecución prolongada
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **continuidad**: mantenimiento del plan y de la picture durante una operación prolongada y entre relevos
+- **cambios**: variaciones de entorno, misión o nave que obligan a recalcular navegación y márgenes
+- **logs**: registros cronológicos de órdenes, parámetros, eventos y decisiones necesarios para continuidad y revisión
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Misión extendida.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-102-U03 — Crisis de vuelo
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **prioridad**: orden relativo entre seguridad de vuelo, misión y otras demandas cuando no pueden atenderse simultáneamente
+- **comunicación**: reporte claro de maniobra, límites, desviaciones y necesidades a los puestos afectados
+- **abort**: decisión de abandonar o interrumpir una maniobra cuando continuar supera límites o riesgo aceptable
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Escenario complejo.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### NAV-102-U04 — Entrega de navegación
+
+### Objetivo operativo
+
+La unidad lleva **Vuelo / Navegación** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso
+- **pendientes**: acciones abiertas con responsable, prioridad y condición prevista de cierre
+- **riesgos**: amenazas plausibles a seguridad o misión que deben identificarse y reevaluarse
+
+### Aplicación profesional
+
+Se confirma posición, vector, energía, entorno y restricciones; después se compara la maniobra con sus márgenes, se coordina con puente y se conserva la solución necesaria para continuidad y relevo.
+
+### Práctica
+
+Handoff profesional.
+
+### Criterio de servicio
+
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/navigation/navigation_order_contract.json`
+- `gameplay/navigation/route_cost_model.json`
+- `gameplay/warp_travel/route_planning_model.json`
+- `gameplay/warp_travel/eta_resolution_model.json`

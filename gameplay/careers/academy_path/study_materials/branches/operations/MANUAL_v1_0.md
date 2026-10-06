@@ -1,7 +1,7 @@
 # Operaciones — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -191,18 +191,18 @@ La especialización **Operaciones** desarrolla competencia mediante estudio, pr�
 
 ### Objetivo operativo
 
-En esta unidad de **Operaciones avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **misión**: propósito operativo que determina qué recursos necesitan reserva y qué demandas tienen prioridad.
-- **reserva**: capacidad no comprometida que se conserva para contingencias y degradaciones.
-- **riesgo**: combinación de probabilidad, impacto y exposición comparada con misión, alternativas y autoridad.
-- **contingencia**: plan alternativo preparado para una desviación concreta, con condición de activación.
+- **misión**: propósito operativo que determina qué recursos necesitan reserva y qué demandas tienen prioridad
+- **reserva**: capacidad no comprometida que se conserva para contingencias y degradaciones
+- **riesgo**: combinación de probabilidad, impacto y exposición comparada con misión, alternativas y autoridad
+- **contingencia**: plan alternativo preparado para una desviación concreta, con condición de activación
 
 ### Aplicación profesional
 
-La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
 
 ### Práctica
 
@@ -210,12 +210,251 @@ Plan completo.
 
 ### Criterio de servicio
 
-Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+Operaciones debe integrar estado de sistemas, recursos, prioridades y continuidad, manteniendo trazabilidad suficiente para que mando y relevo entiendan qué puede hacer la nave y qué limita la misión.
 
 ### Evaluación
 
-Revisión. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
+Revisión. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-101-U02 — Supervisión de Ops
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar el control al riesgo y experiencia
+- **peticiones**: demandas de recursos o capacidad que deben registrar origen, urgencia, impacto y responsable
+- **prioridades**: orden explícito entre demandas competidoras según seguridad, misión, urgencia y efecto
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Dirigir turno.
+
+### Criterio de servicio
+
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-101-U03 — Interfaz con mando
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso
+- **opciones**: cursos de acción viables comparados por coste, riesgo, tiempo y consecuencias
+- **recomendación**: curso aconsejado respaldado por datos, alternativas y riesgos
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Briefing.
+
+### Criterio de servicio
+
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-101-U04 — Continuidad de servicios
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **degradación**: pérdida parcial de capacidad que obliga a recalcular recursos y servicios soportables
+- **restauración**: recuperación controlada de un servicio con verificación antes de declararlo disponible
+- **registro**: evidencia factual de asignaciones, cambios, decisiones y resultados
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Caso avanzado.
+
+### Criterio de servicio
+
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## OPR-102 — Operaciones avanzadas II
+
+### OPR-102-U01 — Misión prolongada
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **configuración**: estado deliberado de recursos y sistemas preparado para una fase concreta de misión
+- **consumo**: ritmo al que una operación utiliza recursos; permite prever agotamiento y necesidad de reconfigurar
+- **cambios**: variaciones de entorno, misión o nave que obligan a recalcular navegación y márgenes
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Operar misión.
+
+### Criterio de servicio
+
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-102-U02 — Crisis de recursos
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **escasez**: situación en que los recursos disponibles no permiten satisfacer todas las demandas simultáneamente
+- **prioridad**: orden relativo entre seguridad de vuelo, misión y otras demandas cuando no pueden atenderse simultáneamente
+- **impacto**: magnitud de las consecuencias que tendrá aceptar o rechazar una demanda
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Escenario.
+
+### Criterio de servicio
+
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-102-U03 — Coordinación de soporte
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **equipos**: grupos o medios coordinados para prestar apoyo con capacidad y disponibilidad limitadas
+- **lanzaderas**: activos de transporte y operación local cuya asignación consume tripulación, tiempo y capacidad
+- **transportes**: capacidad de movimiento de personas o material sujeta a disponibilidad, alcance y condiciones
+- **departamentos**: áreas especialistas con necesidades propias que Operaciones integra sin sustituir su criterio técnico
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Caso integrado.
+
+### Criterio de servicio
+
+Operaciones debe integrar estado de sistemas, recursos, prioridades y continuidad, manteniendo trazabilidad suficiente para que mando y relevo entiendan qué puede hacer la nave y qué limita la misión.
+
+### Evaluación
+
+Teamwork. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### OPR-102-U04 — Handoff avanzado
+
+### Objetivo operativo
+
+La unidad lleva **Operaciones** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso
+- **pendientes**: acciones abiertas con responsable, prioridad y condición prevista de cierre
+- **riesgos**: amenazas plausibles a seguridad o misión que deben identificarse y reevaluarse
+- **órdenes**: instrucciones vigentes que deben entregarse con prioridad, alcance, emisor y condiciones
+
+### Aplicación profesional
+
+Se construye una imagen integrada de recursos y estado, se identifican dependencias y conflictos, se priorizan acciones con el mando y se mantiene registro suficiente para continuidad de misión y relevo.
+
+### Práctica
+
+Relevo profesional.
+
+### Criterio de servicio
+
+Operaciones debe integrar estado de sistemas, recursos, prioridades y continuidad, manteniendo trazabilidad suficiente para que mando y relevo entiendan qué puede hacer la nave y qué limita la misión.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/ship_operations/bridge_station_model.json`
+- `gameplay/ship_operations/ship_computer/computer_query_action_catalog.json`
+- `gameplay/engineering/engineering_loop.json`
+- `gameplay/ship_operations/operational_event_log/README.md`

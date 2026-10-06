@@ -1,7 +1,7 @@
 # Medicina — Currículo profesional v1.0
 
 **Manual de rama — 2.ª y 1.ª clase**  
-**Tramos de 2.ª clase (201–203): edición desarrollada v1.1**
+**Tramos de 2.ª clase (201–203) y 1.ª clase (101–102): edición desarrollada v1.2**
 
 ## Propósito
 
@@ -198,18 +198,18 @@ La especialización **Medicina** desarrolla competencia mediante estudio, práct
 
 ### Objetivo operativo
 
-La unidad lleva **Medicina** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
 
 ### Contenidos
 
-- **datos discordantes**: resultados que no apuntan a una misma explicación y obligan a revisar calidad, hipótesis y diagnósticos alternativos.
-- **comorbilidad**: presencia simultánea de varias condiciones que puede modificar síntomas, riesgos y tratamiento.
-- **especie**: contexto biológico del paciente que condiciona valores normales, fisiología, farmacología y riesgos.
-- **incertidumbre**: margen de desconocimiento o error que acompaña una medida o interpretación y debe comunicarse.
+- **datos discordantes**: resultados que no apuntan a una misma explicación y obligan a revisar calidad, hipótesis y diagnósticos alternativos
+- **comorbilidad**: presencia simultánea de varias condiciones que puede modificar síntomas, riesgos y tratamiento
+- **especie**: contexto biológico del paciente que condiciona valores normales, fisiología, farmacología y riesgos
+- **incertidumbre**: margen de desconocimiento o error que acompaña una medida o interpretación y debe comunicarse
 
 ### Aplicación profesional
 
-Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
 
 ### Práctica
 
@@ -217,12 +217,255 @@ Caso avanzado.
 
 ### Criterio de servicio
 
-Medicina prioriza seguridad del paciente, juicio clínico, continuidad asistencial y privacidad; el mando recibe la información necesaria, no toda la historia clínica.
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
 
 ### Evaluación
 
-Juicio. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
 
 ### Repaso interactivo
 
 El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-101-U02 — Supervisión clínica
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar control y apoyo al riesgo
+- **delegación**: asignación de una tarea clínica a personal con competencia suficiente manteniendo supervisión y responsabilidad
+- **prioridad**: orden relativo entre amenazas, protección de personas, misión y otras demandas
+- **registro**: historia factual de valoración, decisiones, intervenciones y evolución necesaria para continuidad asistencial
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Dirigir turno.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-101-U03 — Plan terapéutico
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **beneficio**: mejora clínica esperada de una intervención comparada con alternativas y con no actuar
+- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad
+- **monitorización**: seguimiento de variables clínicas para detectar respuesta, deterioro o efectos adversos a tiempo
+- **alternativas**: métodos o fuentes distintas que pueden compensar la pérdida de un sensor o una interpretación dudosa
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Planificar tratamiento.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Revisión. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-101-U04 — Asesoramiento al mando
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **aptitud**: capacidad médica para realizar una función concreta en unas condiciones determinadas, no juicio general sobre la persona
+- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad
+- **privacidad**: protección de información clínica, compartida solo en la medida necesaria y autorizada para atención o seguridad
+- **autoridad**: facultad clínica o de mando para decidir dentro de un ámbito; no permite revelar datos médicos innecesarios
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Escena profesional.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## MED-102 — Medicina avanzada II
+
+### MED-102-U01 — Misión médica
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **preparación**: organización previa de personal, material, aislamiento y contingencias para una misión sanitaria
+- **pacientes**: personas atendidas consideradas por gravedad, necesidades, especie, riesgo y continuidad
+- **recursos**: personal, camas, material, tiempo y capacidad diagnóstica o terapéutica disponibles
+- **seguimiento**: revisión posterior para comprobar evolución, respuesta y tareas clínicas pendientes
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Operación completa.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-102-U02 — Crisis sanitaria
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **múltiples casos**: varios pacientes simultáneos que obligan a priorizar por necesidad clínica y recursos, no por orden de llegada
+- **contención contextual**: medidas proporcionales para limitar un riesgo sanitario según mecanismo plausible, evidencia y situación
+- **prioridad**: orden relativo entre amenazas, protección de personas, misión y otras demandas
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Escenario complejo.
+
+### Criterio de servicio
+
+Medicina prioriza seguridad del paciente, juicio clínico, continuidad asistencial y privacidad; el mando recibe la información necesaria, no toda la historia clínica.
+
+### Evaluación
+
+Juicio. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-102-U03 — Continuidad asistencial
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **handoff**: transferencia estructurada de paciente, estado, tratamiento, riesgos y pendientes entre profesionales
+- **historia**: registro clínico longitudinal que reúne antecedentes, hallazgos, decisiones y evolución
+- **pendientes**: acciones abiertas con responsable, prioridad y criterio de cierre
+- **confidencialidad**: obligación de limitar acceso y divulgación de datos clínicos a quienes los necesitan legítimamente
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Relevo.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Práctica. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+### MED-102-U04 — Cierre clínico
+
+### Objetivo operativo
+
+La unidad lleva **Medicina** al estándar de 1.ª clase: autonomía dentro de competencia, responsabilidad por la continuidad y capacidad de explicar qué se sabe, qué se decide y cuándo hay que escalar.
+
+### Contenidos
+
+- **resultado**: conclusión o producto científico acompañado por evidencia, límites y nivel de confianza
+- **complicaciones**: problemas surgidos durante enfermedad o tratamiento que deben reconocerse, tratarse y documentarse
+- **registro**: historia factual de valoración, decisiones, intervenciones y evolución necesaria para continuidad asistencial
+- **aprendizaje**: cambio concreto en práctica, protocolo o formación derivado de evidencia y revisión clínica
+
+### Aplicación profesional
+
+Se confirma el estado clínico con los datos disponibles, se priorizan riesgos vitales, se selecciona una intervención proporcional a competencia y recursos, se reevalúa la respuesta y se documentan tratamiento, límites y pendientes.
+
+### Práctica
+
+Debrief.
+
+### Criterio de servicio
+
+Medicina debe priorizar vida y estabilidad, distinguir datos clínicos de hipótesis, actuar dentro de competencia y conservar continuidad asistencial mediante registro y relevo claros.
+
+### Evaluación
+
+Evaluación. Se exige desempeño repetible y explicable; el resultado no sustituye el criterio profesional ni la seguridad.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `gameplay/careers/academy_path/specializations.json`
+- `gameplay/careers/academy_path/specialization_rules.md`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/medical/medical_state_model.json`
+- `gameplay/medical/species_medical_hooks.json`
+- `lore/medicine/medical_capability_contract.json`
+- `lore/federation/starfleet/regulations/medical_authority.json`
