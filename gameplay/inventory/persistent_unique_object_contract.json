@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "persistent_unique_object_contract",
+  "classification": "GAME_ADDITION",
+  "entity_identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
+  "principle": "OBJECT TYPE != INDIVIDUAL OBJECT != OWNER != LOCATION != CURRENT CONDITION",
+  "required_fields": [
+    "object_id",
+    "object_type_id",
+    "creation_or_provenance_ref",
+    "current_state_ref"
+  ],
+  "optional_fields": [
+    "display_name",
+    "serial_or_registry",
+    "maker_ref",
+    "original_owner_ref",
+    "current_owner_ref",
+    "current_location_ref",
+    "visual_identity_ref",
+    "modification_refs",
+    "history_ref"
+  ],
+  "rules": [
+    "A unique persistent object keeps object_id through transfer, theft, loss, recovery, repair, damage and relocation.",
+    "Changing owner or location never creates a new object.",
+    "Damage or repair changes state/history rather than base identity.",
+    "Mass-produced interchangeable inventory may remain aggregate/non-unique until a gameplay reason materializes a specific persistent instance.",
+    "Materializing a unique instance from aggregate stock must preserve inventory accounting.",
+    "AI and presentation layers may not invent ownership, provenance or modifications."
+  ]
+}
