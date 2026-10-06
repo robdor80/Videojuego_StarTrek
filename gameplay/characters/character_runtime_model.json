@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "model_id": "character_runtime_state",
   "classification": "GAME_ADDITION",
   "principle": "IDENTITY != SPECIES != CULTURE != CITIZENSHIP != FACTION != RANK != POSITION != PERSONALITY != CAPABILITY != CURRENT_STATE",
@@ -34,6 +34,7 @@
   "live_fields": {
     "current_location_ref": null,
     "duty_state_ref": null,
+    "schedule_state_ref": null,
     "medical_state_ref": null,
     "mood_state_ref": null,
     "fatigue_state_ref": null,
@@ -61,6 +62,7 @@
     "Capabilities change only through validated evidence, not manual point allocation.",
     "Current condition may affect performance without rewriting deep experience.",
     "Objectives do not grant capability or force world events.",
-    "AI dialogue cannot mutate authoritative character state directly."
+    "AI dialogue cannot mutate authoritative character state directly.",
+    "Character availability and expected presence are constrained by authoritative schedule state, travel and current events."
   ]
 }
