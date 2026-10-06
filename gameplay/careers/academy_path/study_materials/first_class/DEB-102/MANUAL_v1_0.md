@@ -1,6 +1,6 @@
 # DEB-102 — Análisis operativo y debriefing avanzado
 
-**Material de estudio v1.0 — Cadete de 1.ª clase**
+**Material de estudio v2.0 — Cadete de 1.ª clase**
 
 ## Finalidad
 
@@ -8,176 +8,210 @@ Analizar decisiones con rigor, distinguiendo información disponible, proceso y 
 
 ## Enfoque de último año
 
-La pregunta ya no es «¿conoce el cadete el procedimiento?», sino **«¿puede comportarse como un Alférez novel dentro de una unidad real?»**. Las actividades se parecen cada vez más a servicio normal y la supervisión se retira progresivamente.
+El cadete trabaja ya con un estándar próximo al servicio: **autonomía dentro de autoridad, continuidad, comunicación profesional y responsabilidad por las decisiones**.
 
 ## DEB-102-U01 — Reconstrucción factual
 
-### Contenido
+### Objetivo operativo
 
-- **timeline**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **fuentes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **acciones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **resultados**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Reconstrucción factual** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **timeline**: secuencia temporal reconstruida a partir de fuentes para distinguir qué ocurrió y cuándo.
+- **fuentes**: orígenes independientes de información que deben conservarse para comparar fiabilidad y contradicciones.
+- **acciones**: intervenciones ejecutadas, asociadas a responsable, momento, motivo y efecto observado.
+- **resultados**: efectos observados de las acciones, separados de la intención y del proceso de decisión.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Reconstruir misión.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## DEB-102-U02 — Información disponible entonces
 
-### Contenido
+### Objetivo operativo
 
-- **conocimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **incertidumbre**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **supuestos**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **señales**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Información disponible entonces** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **conocimiento**: información que estaba realmente disponible en el momento de decidir, no la descubierta después.
+- **incertidumbre**: parte relevante de la situación que no está confirmada; debe declararse en lugar de rellenarse con suposiciones.
+- **supuestos**: proposiciones no confirmadas utilizadas provisionalmente; deben quedar explícitas para poder revisarlas.
+- **señales**: indicios que pueden apoyar una hipótesis sin equivaler por sí solos a una conclusión.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Separar hindsight.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Caso.
+Caso. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## DEB-102-U03 — Calidad de decisión
 
-### Contenido
+### Objetivo operativo
 
-- **proceso**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **riesgo**: El juicio profesional compara misión, vida, nave, autoridad, recursos y reversibilidad. Una decisión razonable puede terminar mal sin convertirse por ello en una mala decisión.
-- **reglas**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **alternativas**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Calidad de decisión** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **proceso**: forma en que se obtuvieron datos, se compararon opciones, se decidió y se verificó el resultado.
+- **riesgo**: combinación de probabilidad, impacto y exposición; se compara con misión, alternativas, autoridad y reversibilidad.
+- **reglas**: normas y restricciones aplicables que continúan vigentes incluso bajo presión.
+- **alternativas**: cursos de acción distintos que permiten comparar riesgo, coste, tiempo y reversibilidad.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Evaluar decisión sin confundirla con resultado.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Debate.
+Debate. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## DEB-102-U04 — Responsabilidad
 
-### Contenido
+### Objetivo operativo
 
-- **acción propia**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **equipo**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **mando**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **registro**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Responsabilidad** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **acción propia**: parte de la actuación bajo responsabilidad directa de quien realiza el debrief.
+- **equipo**: personas coordinadas mediante roles, comunicación y objetivos compartidos.
+- **mando**: autoridad que integra información y decide prioridades cuando los conflictos superan el ámbito de un puesto.
+- **registro**: constancia factual de evento, fuente, acción, decisión y resultado que sostiene continuidad y auditoría.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Asumir y explicar decisiones.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## DEB-102-U05 — Lecciones y cambio
 
-### Contenido
+### Objetivo operativo
 
-- **procedimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **hábito**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **entrenamiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **sistema**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Lecciones y cambio** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **procedimiento**: secuencia definida para realizar una tarea de forma segura y repetible, adaptable solo dentro de márgenes permitidos.
+- **hábito**: conducta repetida que puede reforzar fiabilidad o introducir sesgos y debe revisarse con evidencia.
+- **entrenamiento**: práctica diseñada para convertir conocimiento en desempeño repetible y corregir brechas concretas.
+- **sistema**: conjunto de personas, reglas y medios cuyo diseño puede facilitar o provocar determinados resultados.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Proponer mejora.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Revisión.
+Revisión. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## DEB-102-U06 — Debrief de prácticum
 
-### Contenido
+### Objetivo operativo
 
-- **evidencia**: La evidencia conserva qué ocurrió, qué sabía el cadete y cómo actuó. Debe poder auditarse y no puede ser reescrita por una impresión posterior.
-- **feedback**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **trayectoria**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **preparación**: La preparación profesional se demuestra con evidencia acumulada, no con una única nota. El estándar es el de un oficial novel capaz de entrar en servicio con supervisión normal.
+Al completar esta unidad, el cadete debe integrar los elementos de **Debrief de prácticum** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **evidencia**: registro verificable de contexto, información disponible, actuación, resultado y feedback.
+- **feedback**: información específica sobre desempeño que debe vincular observación con mejora concreta.
+- **trayectoria**: evolución del desempeño a lo largo del tiempo, más informativa que una actuación aislada.
+- **preparación**: grado en que conocimiento, práctica, juicio y conducta permiten asumir la siguiente responsabilidad.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Sesión final.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
 
 ### Evaluación
 
-Registro profesional.
+Registro profesional. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+## Referencias internas
 
-## Resultado esperado
-
-El estándar final no es «experto». Es **oficial novel preparado para entrar en servicio, reconocer sus límites, pedir apoyo cuando corresponde y seguir desarrollándose mediante experiencia real**.
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/ship_operations/operational_event_log/README.md`

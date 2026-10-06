@@ -1,6 +1,6 @@
 # OPS-102 — Operaciones integradas de misión
 
-**Material de estudio v1.0 — Cadete de 1.ª clase**
+**Material de estudio v2.0 — Cadete de 1.ª clase**
 
 ## Finalidad
 
@@ -8,174 +8,210 @@ Vivir una misión completa desde briefing hasta debrief, con varias guardias y e
 
 ## Enfoque de último año
 
-La pregunta ya no es «¿conoce el cadete el procedimiento?», sino **«¿puede comportarse como un Alférez novel dentro de una unidad real?»**. Las actividades se parecen cada vez más a servicio normal y la supervisión se retira progresivamente.
+El cadete trabaja ya con un estándar próximo al servicio: **autonomía dentro de autoridad, continuidad, comunicación profesional y responsabilidad por las decisiones**.
 
 ## OPS-102-U01 — Briefing de misión
 
-### Contenido
+### Objetivo operativo
 
-- **objetivos**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **autoridad**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **restricciones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **riesgos**: El juicio profesional compara misión, vida, nave, autoridad, recursos y reversibilidad. Una decisión razonable puede terminar mal sin convertirse por ello en una mala decisión.
+Al completar esta unidad, el cadete debe integrar los elementos de **Briefing de misión** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **objetivos**: resultados que deben alcanzarse y que permiten ordenar esfuerzos, recursos y criterios de éxito.
+- **autoridad**: facultad reconocida para decidir u ordenar dentro de un ámbito y unas condiciones definidas.
+- **restricciones**: condiciones legales, técnicas, éticas, temporales o de seguridad que reducen las acciones permitidas.
+- **riesgos**: consecuencias plausibles que deben identificarse, priorizarse y reevaluarse cuando cambia la situación.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Preparación multi-rama.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## OPS-102-U02 — Preparación de nave/equipo
 
-### Contenido
+### Objetivo operativo
 
-- **configuración**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **personal**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **recursos**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **checklists**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Preparación de nave/equipo** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **configuración**: estado deliberado de sistemas, herramientas y equipos antes de una fase de misión.
+- **personal**: personas disponibles consideradas por número, competencia, fatiga, asignación y capacidad de relevo.
+- **recursos**: tiempo, personal, energía, material, capacidad y atención disponibles; asignarlos a una tarea reduce el margen para otras.
+- **checklists**: secuencias de verificación para tareas críticas o repetitivas; reducen omisiones sin sustituir el juicio.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Preparar salida.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Práctica.
+Práctica. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## OPS-102-U03 — Tránsito y rutina
 
-### Contenido
+### Objetivo operativo
 
-- **guardias**: Una guardia avanzada exige mantener continuidad durante horas: recibir estado, ejecutar tareas, responder a cambios, registrar incidencias y entregar un relevo útil.
-- **registros**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **mantenimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **observación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Tránsito y rutina** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **guardias**: periodos de responsabilidad operativa que requieren incorporación, desempeño sostenido y relevo formal.
+- **registros**: conjunto cronológico de evidencias que permite entender qué ocurrió y qué permanece abierto.
+- **mantenimiento**: acciones preventivas y correctivas destinadas a conservar disponibilidad y reducir fallos futuros.
+- **observación**: obtención deliberada de información sin convertir automáticamente una lectura en conclusión.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Operación sostenida.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Evaluación longitudinal.
+Evaluación longitudinal. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## OPS-102-U04 — Objetivo principal
 
-### Contenido
+### Objetivo operativo
 
-- **ciencia/diplomacia/logística/exploración contextual**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **coordinación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Objetivo principal** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **ciencia/diplomacia/logística/exploración contextual**: naturaleza concreta del objetivo de misión; determina qué capacidades, reglas y especialistas deben coordinarse.
+- **coordinación**: alineación de personas, sistemas y departamentos para que acciones compatibles ocurran en el orden y momento adecuados.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Ejecutar misión.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## OPS-102-U05 — Cambio de condiciones
 
-### Contenido
+### Objetivo operativo
 
-- **evento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **prioridad**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **adaptación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **consecuencia**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Al completar esta unidad, el cadete debe integrar los elementos de **Cambio de condiciones** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **evento**: cambio observable que puede modificar el estado operativo y exige registrar relevancia, fuente y respuesta.
+- **prioridad**: orden relativo entre demandas según seguridad, misión, urgencia, impacto y autoridad.
+- **adaptación**: modificación del plan cuando cambian condiciones, preservando intención, límites y trazabilidad.
+- **consecuencia**: efecto probable o real de una decisión sobre personas, nave, misión, relaciones o recursos.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Responder sin guion fijo.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Juicio.
+Juicio. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
 ## OPS-102-U06 — Regreso y cierre
 
-### Contenido
+### Objetivo operativo
 
-- **handoff**: La continuidad de servicio depende de un relevo que transmita estado, riesgos, órdenes vigentes y pendientes. Lo que no se entrega puede convertirse en un fallo del siguiente turno.
-- **logs**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **pendientes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **debrief**: El análisis posterior debe separar hechos, información disponible en el momento, decisiones y resultados. Evita juzgar con información retrospectiva que el cadete no tenía.
+Al completar esta unidad, el cadete debe integrar los elementos de **Regreso y cierre** sin perder seguridad, prioridades ni continuidad.
 
-### Aplicación
+### Contenidos
+
+- **handoff**: transferencia estructurada de estado, órdenes, riesgos, acciones y pendientes entre responsables.
+- **logs**: registros cronológicos técnicos u operativos usados para continuidad, diagnóstico y revisión.
+- **pendientes**: acciones abiertas con responsable, prioridad, estado y condición prevista de cierre.
+- **debrief**: revisión posterior estructurada que separa hechos, decisiones, resultados, lecciones y acciones de mejora.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
 
 Cerrar misión.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Una misión se evalúa desde preparación hasta cierre: la continuidad, el relevo y el registro importan tanto como el momento de máxima tensión.
 
 ### Evaluación
 
-Evaluación integrada.
+Evaluación integrada. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
 
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+## Referencias internas
 
-## Resultado esperado
-
-El estándar final no es «experto». Es **oficial novel preparado para entrar en servicio, reconocer sus límites, pedir apoyo cuando corresponde y seguir desarrollándose mediante experiencia real**.
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/orders/starfleet_mission_tasking_order.json`
+- `gameplay/ship_operations/operational_event_log/operational_event_contract.json`
+- `gameplay/navigation/route_context_model.json`
