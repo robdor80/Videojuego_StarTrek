@@ -589,6 +589,166 @@
       "answer_key_es": [
         "Paciente, diagnóstico, tratamiento, triaje, privacidad, ética y xenomedicina."
       ]
+    },
+    {
+      "id": "BRN-303-C033",
+      "unit_id": "BRN-303-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué capacidades se observan especialmente en la rotación de Vuelo / Navegación?",
+      "web_prompt_variants_es": [
+        "¿Qué capacidades se observan especialmente en la rotación de Vuelo / Navegación?",
+        "Selecciona la opción correcta: Qué capacidades se observan especialmente en la rotación de Vuelo / Navegación."
+      ],
+      "answer_display_es": "razonamiento espacial, precisión y comunicación de límites",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "razonamiento espacial, precisión y comunicación de límites"
+      ]
+    },
+    {
+      "id": "BRN-303-C034",
+      "unit_id": "BRN-303-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué tareas caracterizan esta rotación?",
+      "web_prompt_variants_es": [
+        "¿Qué tareas caracterizan esta rotación?",
+        "Selecciona la opción correcta: Qué tareas caracterizan esta rotación."
+      ],
+      "answer_display_es": "Conn, plotting, maniobra y seguridad de movimiento",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Conn, plotting, maniobra y seguridad de movimiento"
+      ]
+    },
+    {
+      "id": "BRN-303-C035",
+      "unit_id": "BRN-303-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué coordina principalmente la rama de Operaciones?",
+      "web_prompt_variants_es": [
+        "¿Qué coordina principalmente la rama de Operaciones?",
+        "Selecciona la opción correcta: Qué coordina principalmente la rama de Operaciones."
+      ],
+      "answer_display_es": "recursos, sistemas, prioridades y logística",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "recursos, sistemas, prioridades y logística"
+      ]
+    },
+    {
+      "id": "BRN-303-C036",
+      "unit_id": "BRN-303-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué límite profesional se enseña en la rotación de Operaciones?",
+      "web_prompt_variants_es": [
+        "¿Qué límite profesional se enseña en la rotación de Operaciones?",
+        "Selecciona la opción correcta: Qué límite profesional se enseña en la rotación de Operaciones."
+      ],
+      "answer_display_es": "conecta necesidades sin sustituir a los especialistas",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "conecta necesidades sin sustituir a los especialistas"
+      ]
+    },
+    {
+      "id": "BRN-303-C037",
+      "unit_id": "BRN-303-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué áreas aparecen como núcleo de la rotación de Ingeniería?",
+      "web_prompt_variants_es": [
+        "¿Qué áreas aparecen como núcleo de la rotación de Ingeniería?",
+        "Selecciona la opción correcta: Qué áreas aparecen como núcleo de la rotación de Ingeniería."
+      ],
+      "answer_display_es": "energía, diagnóstico, mantenimiento, propulsión y recuperación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "energía, diagnóstico, mantenimiento, propulsión y recuperación"
+      ]
+    },
+    {
+      "id": "BRN-303-C038",
+      "unit_id": "BRN-303-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué idea importante se enseña sobre el trabajo de Ingeniería?",
+      "web_prompt_variants_es": [
+        "¿Qué idea importante se enseña sobre el trabajo de Ingeniería?",
+        "Selecciona la opción correcta: Qué idea importante se enseña sobre el trabajo de Ingeniería."
+      ],
+      "answer_display_es": "el trabajo rutinario es tan importante como la respuesta a fallos",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "el trabajo rutinario es tan importante como la respuesta a fallos"
+      ]
+    },
+    {
+      "id": "BRN-303-C039",
+      "unit_id": "BRN-303-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué elementos definen la rotación de Seguridad / Táctica?",
+      "web_prompt_variants_es": [
+        "¿Qué elementos definen la rotación de Seguridad / Táctica?",
+        "Selecciona la opción correcta: Qué elementos definen la rotación de Seguridad / Táctica."
+      ],
+      "answer_display_es": "protección, control, amenaza y defensa con autoridad y proporcionalidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "protección, control, amenaza y defensa con autoridad y proporcionalidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C040",
+      "unit_id": "BRN-303-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué error de enfoque evita expresamente esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué error de enfoque evita expresamente esta unidad?",
+        "Selecciona la opción correcta: Qué error de enfoque evita expresamente esta unidad."
+      ],
+      "answer_display_es": "Seguridad / Táctica no es simplemente la rama del armamento",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Seguridad / Táctica no es simplemente la rama del armamento"
+      ]
+    },
+    {
+      "id": "BRN-303-C041",
+      "unit_id": "BRN-303-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué diferencia funcional básica enseña la rotación de Ciencia / Sensores?",
+      "web_prompt_variants_es": [
+        "¿Qué diferencia funcional básica enseña la rotación de Ciencia / Sensores?",
+        "Selecciona la opción correcta: Qué diferencia funcional básica enseña la rotación de Ciencia / Sensores."
+      ],
+      "answer_display_es": "Sensores obtiene observaciones; Ciencia interpreta",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Sensores obtiene observaciones; Ciencia interpreta"
+      ]
+    },
+    {
+      "id": "BRN-303-C042",
+      "unit_id": "BRN-303-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué se valora especialmente en esta rotación?",
+      "web_prompt_variants_es": [
+        "¿Qué se valora especialmente en esta rotación?",
+        "Selecciona la opción correcta: Qué se valora especialmente en esta rotación."
+      ],
+      "answer_display_es": "método, incertidumbre y calidad de reporte",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "método, incertidumbre y calidad de reporte"
+      ]
     }
   ]
 }
