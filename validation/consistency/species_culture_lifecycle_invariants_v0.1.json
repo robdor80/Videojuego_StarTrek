@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "species_culture_lifecycle_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "species_not_personality_or_culture",
+      "expected": [
+        "species profile cannot assign morality, loyalty or personality",
+        "culture and citizenship remain independent character state"
+      ]
+    },
+    {
+      "id": "unknown_biology_not_filled_with_human_defaults",
+      "expected": [
+        "missing non-human lifecycle/reproduction data remains unknown",
+        "human age thresholds are not silently reused"
+      ]
+    },
+    {
+      "id": "age_progression_preserves_identity",
+      "expected": [
+        "same character_id and visual identity lineage",
+        "appearance may age according to species profile",
+        "history remains continuous"
+      ]
+    },
+    {
+      "id": "reproduction_requires_species_support",
+      "expected": [
+        "reproductive event uses species-authorized mode",
+        "pair status alone cannot create pregnancy/conception/offspring"
+      ]
+    },
+    {
+      "id": "parentage_separate_from_relationship",
+      "expected": [
+        "biological/legal/social parentage cite appropriate events or rules",
+        "co-residence and romance do not imply parentage"
+      ]
+    },
+    {
+      "id": "kinship_persists",
+      "expected": [
+        "move, conflict or death do not erase kinship history",
+        "LOD/save-load do not reroll family graph"
+      ]
+    },
+    {
+      "id": "culture_is_compositional",
+      "expected": [
+        "character may hold multiple cultural contexts",
+        "homeworld/species/faction do not uniquely determine culture"
+      ]
+    },
+    {
+      "id": "species_capability_not_omniscience",
+      "expected": [
+        "telepathy/empathy/sensory advantages use capability resolution",
+        "hidden truth is not exposed beyond resolved scope"
+      ]
+    },
+    {
+      "id": "medical_species_context",
+      "expected": [
+        "treatment consumes patient species plus individual state",
+        "AI cannot diagnose a hidden species-specific condition without evidence"
+      ]
+    },
+    {
+      "id": "language_translation_separation",
+      "expected": [
+        "knowing translated words does not grant cultural familiarity",
+        "Universal Translator failure/ambiguity remains possible"
+      ]
+    },
+    {
+      "id": "transformation_preserves_or_explicitly_changes_identity",
+      "expected": [
+        "joining, assimilation, liberation or morphology change append history",
+        "identity replacement requires an explicit setting rule/event"
+      ]
+    },
+    {
+      "id": "death_preserves_history",
+      "expected": [
+        "dead/destroyed person remains historically addressable",
+        "relationships, records and consequences are not erased"
+      ]
+    }
+  ]
+}
