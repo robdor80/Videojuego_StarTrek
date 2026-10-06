@@ -13,7 +13,7 @@ La implementación operativa de entrenamiento se mantiene en:
 
 - repositorio: `robdor80/academiaflota`
 - ruta: `holodeck/sensors/`
-- referencia validada: commit `a851bec63acfd918c06dcc6b2c882afd32755225`
+- referencia validada: commit `3d1d1c263f09cb08d870bb30f4f7cd5f1cceb17b`
 
 ## Propósito
 
