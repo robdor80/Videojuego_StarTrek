@@ -127,7 +127,8 @@
     "fourth_class_year_1_assessment_v2_developed",
     "fourth_class_year_1_assessment_v2_developed_and_synced",
     "fourth_class_year_1_assessment_v2_1_synced",
-    "third_class_year_2_assessment_v2_1_synced"
+    "third_class_year_2_assessment_v2_1_synced",
+    "second_class_year_3_assessment_v2_1_synced"
   ],
   "current_milestone": "second_class_year_3_developed_and_synced",
   "developed_branch_year3_stages": [
@@ -154,14 +155,15 @@
   "year1_assessment_scope": "15 main courses / 90 units / 6 evaluable concepts per unit",
   "year1_assessment_status": "developed_and_synced",
   "assessment_refactor": {
-    "current": "year1_v2_1_synced",
+    "current": "year3_v2_1_synced",
     "rules": [
       "Theory uses only multiple-choice and deterministic short answers.",
       "Web and game share evaluable concepts, not exact question instances.",
       "Questions must be answerable unambiguously from taught material or established prerequisites.",
       "Complex judgment, leadership and execution are assessed through practice or simulation."
     ],
-    "year2": "third_class_v2_1_synced"
+    "year2": "third_class_v2_1_synced",
+    "year3": "second_class_v2_1_synced"
   },
   "year1_review_questions_per_attempt": 5,
   "year1_study_emphasis": "key_points_bolded",
@@ -171,5 +173,12 @@
   "year2_assessment_status": "developed_and_synced",
   "year2_review_questions_per_attempt": 5,
   "year2_study_emphasis": "key_points_bolded",
-  "year2_mobile_navigation": "inherits_global_prev_next_scroll_to_lesson_start"
+  "year2_mobile_navigation": "inherits_global_prev_next_scroll_to_lesson_start",
+  "year3_assessment_model": "concept_driven_autocorrectable_v2_1",
+  "year3_assessment_scope": "15 main courses / 90 common units plus 7 branches x 12 Year-3 units / 6 evaluable concepts per unit",
+  "year3_assessment_status": "developed_and_synced",
+  "year3_review_questions_per_attempt": 5,
+  "year3_study_emphasis": "key_points_bolded",
+  "year3_mobile_navigation": "inherits_global_prev_next_scroll_to_lesson_start",
+  "year3_branch_scope": "201-203 only; 101-102 reserved for Year 4 and not refactored"
 }
