@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.3",
+  "schema_version": "0.4",
   "model_id": "character_runtime_state",
   "classification": "GAME_ADDITION",
   "principle": "IDENTITY != SPECIES != CULTURE != CITIZENSHIP != FACTION != RANK != POSITION != PERSONALITY != CAPABILITY != CURRENT_STATE",
@@ -12,7 +12,8 @@
     "species_state_ref": null,
     "lineage_refs": [],
     "culture_refs": [],
-    "citizenship_refs": []
+    "citizenship_refs": [],
+    "base_visual_identity_id": null
   },
   "institutional_fields": {
     "faction_memberships": [],
@@ -50,7 +51,8 @@
     "campaign_event_log_ref": null,
     "objective_history_ref": null,
     "initial_validated_biography_ref": null,
-    "append_only_campaign_history": true
+    "append_only_campaign_history": true,
+    "identity_history_ref": null
   },
   "rules": [
     "Canonical biography initializes only history before campaign start.",
@@ -63,6 +65,10 @@
     "Current condition may affect performance without rewriting deep experience.",
     "Objectives do not grant capability or force world events.",
     "AI dialogue cannot mutate authoritative character state directly.",
-    "Character availability and expected presence are constrained by authoritative schedule state, travel and current events."
-  ]
+    "Character availability and expected presence are constrained by authoritative schedule state, travel and current events.",
+    "Runtime state evolves an existing character identity; it never regenerates the person.",
+    "Age progression and persistent physical changes are history/state updates linked to the same base visual identity."
+  ],
+  "identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
+  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json"
 }
