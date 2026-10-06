@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "required_fields": [
     "ship_id",
     "display_name",
@@ -7,6 +7,7 @@
     "operator"
   ],
   "identity_fields": [
+    "ship_id",
     "registry",
     "registry_history"
   ],
@@ -23,5 +24,12 @@
     "notes"
   ],
   "bootstrap_rule": "historical_events_are_input_only_before_campaign_start",
-  "runtime_rule": "individual_ship_definition_bootstraps_entity_but_is_not_live_state"
+  "runtime_rule": "individual_ship_definition_bootstraps_entity_but_is_not_live_state",
+  "entity_identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
+  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json",
+  "identity_rules": [
+    "Ship identity persists through repair, refit, change of crew, command, assignment, operator state and location.",
+    "Class/configuration changes caused by explicit refit do not silently create a new ship entity.",
+    "Registry history may change while ship_id remains authoritative technical identity."
+  ]
 }
