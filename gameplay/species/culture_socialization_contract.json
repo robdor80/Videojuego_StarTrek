@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "culture_socialization_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Culture is learned, contextual, compositional and individually adopted; species is never a culture lock.",
+  "character_fields": [
+    "culture_refs",
+    "upbringing_context_refs",
+    "household_culture_refs",
+    "education_context_refs",
+    "regional_context_refs",
+    "institutional_culture_refs",
+    "culture_affinity",
+    "rejected_norms",
+    "mixed_or_hybrid_context_refs"
+  ],
+  "rules": [
+    "One character may belong to multiple cultural contexts.",
+    "Homeworld does not uniquely determine culture.",
+    "Species does not uniquely determine culture.",
+    "Citizenship and faction membership do not uniquely determine culture.",
+    "Culture supplies norms, expectations, references and probability priors, not compulsory personality scripts.",
+    "A character may selectively adopt, reinterpret or reject norms.",
+    "Cultural familiarity is knowledge/experience and may differ from cultural identity.",
+    "AI may use only culture state actually attached to the character/context."
+  ]
+}
