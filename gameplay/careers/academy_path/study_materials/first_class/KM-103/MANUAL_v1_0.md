@@ -1,184 +1,219 @@
 # KM-103 — Kobayashi Maru
 
-**Material de estudio v1.0 — Cadete de 1.ª clase**
+**Material de estudio v2.0 — Cadete de 1.ª clase**
 
 ## Finalidad
 
 Evaluar comportamiento profesional ante una situación sin solución satisfactoria garantizada.
 
-## Enfoque de último año
+## Enfoque de cierre de Academia
 
-La pregunta ya no es «¿conoce el cadete el procedimiento?», sino **«¿puede comportarse como un Alférez novel dentro de una unidad real?»**. Las actividades se parecen cada vez más a servicio normal y la supervisión se retira progresivamente.
+El tramo final integra **expediente, competencia profesional, juicio, conducta y preparación para el servicio**. El objetivo no es premiar una escena espectacular, sino decidir si el cadete puede comenzar una carrera como Alférez con supervisión normal.
 
 ## KM-103-U01 — Briefing
 
-### Contenido
+### Objetivo operativo
 
-- **misión aparente**: Una misión completa combina preparación, tránsito, objetivo, cambios de situación, continuidad entre turnos y cierre. No se evalúa solo el incidente más espectacular.
-- **rol de rama**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **reglas visibles**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **incertidumbre**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Briefing** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **misión aparente**: objetivo y contexto presentados al cadete al inicio del escenario, que pueden no revelar todas las tensiones que aparecerán.
+- **rol de rama**: responsabilidad profesional que el cadete mantiene durante la simulación y desde la que debe aportar al conjunto.
+- **reglas visibles**: restricciones conocidas al inicio que delimitan qué acciones están autorizadas o prohibidas.
+- **incertidumbre**: información relevante no confirmada que debe declararse y gestionarse, no ocultarse mediante suposiciones.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Preparar puesto sin conocer ejes ocultos.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-No se revelan criterios ocultos.
+No se revelan criterios ocultos. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
 ## KM-103-U02 — Desarrollo inicial
 
-### Contenido
+### Objetivo operativo
 
-- **información**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **decisiones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **comunicación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **equipo**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Desarrollo inicial** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **información**: datos e informes disponibles que deben distinguirse por origen, calidad, recencia e incertidumbre.
+- **decisiones**: elecciones realizadas con la información disponible entonces y por las que debe poder explicarse el razonamiento.
+- **comunicación**: transmisión clara y oportuna de estado, intención, riesgo, necesidades y resultado al destinatario adecuado.
+- **equipo**: personas coordinadas mediante roles, comunicación, confianza y responsabilidad compartida.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Operar escenario.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-Observación.
+Observación. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
 ## KM-103-U03 — Escalada
 
-### Contenido
+### Objetivo operativo
 
-- **pérdida de opciones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **riesgo**: El juicio profesional compara misión, vida, nave, autoridad, recursos y reversibilidad. Una decisión razonable puede terminar mal sin convertirse por ello en una mala decisión.
-- **presión**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **conflicto**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Escalada** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **pérdida de opciones**: reducción progresiva de cursos de acción que obliga a reconocer cuándo una solución perfecta ya no existe.
+- **riesgo**: combinación de probabilidad, impacto y exposición comparada con misión, alternativas, autoridad y reversibilidad.
+- **presión**: condición de tiempo, riesgo o carga que aumenta el coste del error pero no elimina regulación ni responsabilidad.
+- **conflicto**: choque entre objetivos, valores, órdenes o intereses que exige priorización y criterio explícitos.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Continuar desde el rol real.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-Evaluación contextual.
+Evaluación contextual. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
 ## KM-103-U04 — Situación no ganable
 
-### Contenido
+### Objetivo operativo
 
-- **limitaciones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **consecuencias**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **responsabilidad**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **ética**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Situación no ganable** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **limitaciones**: condiciones o fronteras que deben ser conocidas y comunicadas para no asumir una capacidad inexistente.
+- **consecuencias**: efectos previsibles o reales de una decisión sobre vidas, nave, misión, relaciones y recursos.
+- **responsabilidad**: obligación de responder por decisiones propias, incluida la decisión de delegar, continuar o escalar.
+- **ética**: valoración de lo que es profesionalmente defendible cuando varias obligaciones o consecuencias entran en tensión.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Tomar decisiones sin solución perfecta.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-No se evalúa 'salvar la nave' como condición de aprobado.
+No se evalúa 'salvar la nave' como condición de aprobado. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
 ## KM-103-U05 — Cierre
 
-### Contenido
+### Objetivo operativo
 
-- **resultado**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **conducta**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **registro**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **impacto**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Cierre** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **resultado**: estado final del escenario; aporta evidencia, pero no sustituye la evaluación del proceso y la conducta.
+- **conducta**: forma observable de actuar respecto a integridad, disciplina, respeto, seguridad, comunicación y responsabilidad.
+- **registro**: constancia factual de hechos, acciones y decisiones necesaria para reconstrucción y aprendizaje.
+- **impacto**: magnitud de los efectos de una decisión o evento sobre personas, misión y mundo persistente.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Finalizar escenario.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-Evidencia.
+Evidencia. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
 ## KM-103-U06 — Debrief
 
-### Contenido
+### Objetivo operativo
 
-- **juicio**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **comunicación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **ética**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **disciplina**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **autoconocimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad sitúa **Debrief** dentro de la transición real de cadete a oficial. El cadete debe comprender qué información pesa, qué decisiones son institucionales y qué consecuencias persisten después de graduarse.
 
-### Aplicación
+### Contenidos
+
+- **juicio**: capacidad de seleccionar una acción razonable integrando información, límites, riesgo, alternativas y consecuencias.
+- **comunicación**: transmisión clara y oportuna de estado, intención, riesgo, necesidades y resultado al destinatario adecuado.
+- **ética**: valoración de lo que es profesionalmente defendible cuando varias obligaciones o consecuencias entran en tensión.
+- **disciplina**: capacidad de mantener procedimientos, comunicación y cadena de mando bajo presión sin ocultar riesgos reales.
+- **autoconocimiento**: reconocimiento honesto de fortalezas, sesgos, límites y reacciones propias para poder mejorar.
+
+### Aplicación profesional
+
+Se trabaja siempre con la información disponible en ese momento, diferenciando hechos, incertidumbre, responsabilidad individual y decisión institucional. El resultado se conserva como parte del historial del personaje.
+
+### Práctica
 
 Debrief individual y de equipo.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Kobayashi Maru evalúa **cómo se decide y se actúa cuando no existe una salida perfecta**; salvar la nave o conseguir un resultado heroico no es condición automática de aprobado.
 
 ### Evaluación
 
-Evaluación narrativa respaldada por eventos.
+Evaluación narrativa respaldada por eventos. Se valora la coherencia entre expediente, actuación y preparación real para el siguiente estado de carrera.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
+El repaso dinámico utiliza únicamente materia enseñada en esta unidad; las competencias complejas siguen evaluándose mediante escenas, práctica y simulación.
 
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+## Referencias internas
 
-## Resultado esperado
-
-El estándar final no es «experto». Es **oficial novel preparado para entrar en servicio, reconocer sus límites, pedir apoyo cuando corresponde y seguir desarrollándose mediante experiencia real**.
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/careers/academy_path/kobayashi_maru_design.md`
+- `gameplay/careers/academy_path/simulation_model.json`
