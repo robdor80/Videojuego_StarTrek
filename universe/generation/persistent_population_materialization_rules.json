@@ -38,7 +38,10 @@
       "knowledge_state",
       "memory_state",
       "relationship_refs",
-      "known_interactions"
+      "known_interactions",
+      "base_visual_identity_id",
+      "base_morphology_identity",
+      "persistent_history_ref"
     ]
   },
   "structure_first_generation": {
@@ -90,6 +93,10 @@
     "Named materialization from a station or settlement must preserve resident/visitor/passenger accounting.",
     "Vacancies remain vacancies until filled by a real assignment or migration event.",
     "LOD changes simulation detail, not canonical existence.",
-    "Off-screen simulation cannot execute incompatible simultaneous activities for the same person."
-  ]
+    "Off-screen simulation cannot execute incompatible simultaneous activities for the same person.",
+    "A materialized individual keeps the same identity for life; aging and other changes evolve that identity rather than regenerate it.",
+    "New portraits or visual assets for an existing individual must resolve from the same persistent visual identity.",
+    "Save/load, LOD transitions and off-screen simulation must never reroll a materialized individual."
+  ],
+  "identity_persistence_contract_ref": "persistent_entity_identity_contract"
 }
