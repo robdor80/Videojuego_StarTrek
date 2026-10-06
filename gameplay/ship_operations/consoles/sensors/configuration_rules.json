@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "rule_set_id": "sensors_configuration_behavior",
   "status": "fixed",
   "approved_by": "Roberto",
@@ -30,8 +30,11 @@
   },
   "power_boundary": {
     "sensors_controls_only_allocated_power": true,
+    "distribution_within_allocated_power_allowed": true,
     "additional_power_requires_operations_request": true,
-    "related_system": "operations"
+    "related_system": "operations",
+    "request_contract": "gameplay/ship_operations/interconsole/sensor_to_operations_power_request.json",
+    "sensors_may_not_choose_power_donor": true
   },
   "costs": {
     "sensitivity": true,

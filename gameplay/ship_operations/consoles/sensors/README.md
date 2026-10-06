@@ -647,3 +647,37 @@ Material de estudio canónico:
 
 La experiencia PADD/LCARS se define en:
 `ui/academy/sensors_manual_experience.md`.
+
+
+## Arquitectura de interacción v0.2
+
+La consola se implementa como **un único modelo funcional con tres paneles lógicos**:
+
+1. **Navegación primaria** — los 10 menús de primer nivel.
+2. **Área de trabajo** — menús de segundo nivel, formularios/detalles de tercer nivel y acciones contextuales.
+3. **Estado persistente** — estado del sistema, potencia asignada, operaciones activas, seguimiento, interferencias, alertas y solicitudes interconsola.
+
+Cambiar de menú **no cancela** operaciones en curso ni el seguimiento. El menú visible y el estado operativo son conceptos distintos.
+
+Las acciones contextuales son inteligentes en el sentido de que la consola determina si son **aplicables**, pero **nunca decide por el jugador**. El resolvedor devuelve tres estados:
+
+- `available`: se muestra y puede usarse;
+- `blocked`: es conceptualmente aplicable pero imposible en ese momento; la skin puede mostrarla deshabilitada con el motivo;
+- `irrelevant`: no se presenta.
+
+Ejemplo: desde la ficha de un contacto pueden aparecer `Barrido focalizado`, `Seguimiento`, `Lectura sensorial`, `Comparar lecturas` o `Enviar a Ciencia`. Al pulsar una acción, se abre la función propietaria con el contexto ya rellenado, pero el jugador debe revisar y ejecutar.
+
+### Potencia adicional
+
+Sensores puede redistribuir únicamente la potencia que ya tiene asignada. Cuando la situación lo justifica puede aparecer **SOLICITAR POTENCIA ADICIONAL**. La petición se envía a Operaciones; Sensores no elige de qué sistema se retira energía.
+
+El botón puede aparecer contextualmente ante señal débil, alcance insuficiente, operación limitada por potencia, interferencia intensa, saturación de seguimiento o recuperación de un contacto. También está disponible explícitamente desde `CONFIGURACIÓN > POTENCIA DE SENSORES`.
+
+Contrato: `gameplay/ship_operations/interconsole/sensor_to_operations_power_request.json`.
+
+### Ficheros autoritativos de UI funcional
+
+- `sensor_menu_tree.json` — niveles 1, 2 y 3, controles y acciones terminales.
+- `sensor_console_interaction_model.json` — arquitectura de paneles, navegación y concurrencia.
+- `sensor_context_actions.json` — botones contextuales y reglas para mostrarlos/bloquearlos/ocultarlos.
+- Las skins de Academia o de cada era/nave pueden reorganizar visualmente estos elementos, pero no alterar su semántica funcional.

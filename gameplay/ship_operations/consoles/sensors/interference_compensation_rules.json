@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "rule_set_id": "sensors_interference_compensation",
   "status": "fixed",
   "approved_by": "Roberto",
@@ -9,7 +9,8 @@
     "automatic_compensation",
     "manual_adjustment",
     "change_band_frequency",
-    "increase_power",
+    "increase_operation_power_within_allocation",
+    "request_additional_power",
     "reduce_resolution",
     "extend_integration",
     "recover_signal"
@@ -49,6 +50,9 @@
       "can_outperform_automatic": true,
       "operator_error_possible": true
     },
+    "operation_power_increase_uses_only_existing_sensor_allocation": true,
+    "extra_ship_power_requires_operations_request": true,
+    "extra_power_request_contract": "gameplay/ship_operations/interconsole/sensor_to_operations_power_request.json",
     "signature_specific_effects": true,
     "causal_attribution_may_require_other_console": true,
     "recovery_uses_contact_history": true,
@@ -57,7 +61,7 @@
   "cross_console_dependencies": {
     "science": "deep physical interpretation of complex interference",
     "tactical": "hostile countermeasure assessment where combat-relevant",
-    "engineering": "sensor hardware/power faults and physical repair",
-    "operations": "shipwide power/resource redistribution"
+    "engineering": "sensor hardware faults and physical repair; may execute power changes coordinated by Operations",
+    "operations": "shipwide power/resource redistribution and approval of additional sensor power"
   }
 }
