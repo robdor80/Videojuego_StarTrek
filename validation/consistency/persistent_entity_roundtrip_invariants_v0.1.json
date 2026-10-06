@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "persistent_entity_roundtrip_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "contracts": [
+    "universe/generation/persistent_entity_identity_contract.json",
+    "gameplay/persistence/persistent_state_roundtrip_contract.json",
+    "art_direction/schemas/persistent_visual_identity.schema.json",
+    "gameplay/inventory/persistent_unique_object_contract.json"
+  ],
+  "cases": [
+    {
+      "id": "character_ten_year_reencounter",
+      "expected": [
+        "same character_id",
+        "same base visual identity lineage",
+        "age progression is derived as evolution",
+        "history/relationships/memories are preserved or validly evolved",
+        "no new identity roll occurs"
+      ]
+    },
+    {
+      "id": "ship_refit_roundtrip",
+      "expected": [
+        "same ship_id before and after refit",
+        "configuration/refit history changes",
+        "damage and repair history persists",
+        "registry/name changes do not create a replacement vessel"
+      ]
+    },
+    {
+      "id": "facility_capture_and_repair",
+      "expected": [
+        "same facility_id",
+        "owner/operator may change",
+        "physical live state may change",
+        "design identity/history remain traceable"
+      ]
+    },
+    {
+      "id": "unique_object_transfer",
+      "expected": [
+        "same object_id after owner/location transfer",
+        "ownership and location history append",
+        "damage/repair do not duplicate the object"
+      ]
+    },
+    {
+      "id": "latent_npc_materialization",
+      "expected": [
+        "C to B promotion is irreversible",
+        "real latent/staffing/population slot is consumed or referenced",
+        "population total is conserved without external cause",
+        "stable character and visual identity are persisted"
+      ]
+    },
+    {
+      "id": "lod_unload_reload",
+      "expected": [
+        "identity fields unchanged",
+        "history prefix unchanged",
+        "no duplicated assignments, slots or objects",
+        "temporary presentation may be rebuilt only from authoritative identity/state"
+      ]
+    },
+    {
+      "id": "save_load_roundtrip",
+      "expected": [
+        "identity lineage is byte/logically equivalent where required",
+        "current state restores without reroll",
+        "seed provenance and versions persist",
+        "AI/presentation caches cannot replace authoritative state"
+      ]
+    },
+    {
+      "id": "offline_catchup",
+      "expected": [
+        "valid elapsed-time events may append",
+        "current state may evolve",
+        "stable identity cannot reroll",
+        "an entity destroyed/dead/retired remains historically addressable"
+      ]
+    },
+    {
+      "id": "generator_version_upgrade",
+      "expected": [
+        "existing materialized results remain persisted or explicitly migrate",
+        "new rules may affect new/unmaterialized content",
+        "silent identity replacement fails validation"
+      ]
+    },
+    {
+      "id": "visual_regeneration_for_existing_entity",
+      "expected": [
+        "new image references same entity_id and visual_identity_id lineage",
+        "age/clothing/injury/environment changes are overlays/evolution",
+        "unexplained face/body identity replacement fails validation"
+      ]
+    }
+  ]
+}
