@@ -19,7 +19,7 @@ El programa estándar de formación de oficiales del proyecto dura cuatro años:
 
 | Año | Clase de cadete |
 |---:|---|
-| 1.º | Cadete de 4.ª clase |
+| 1.º | **Cadete de 4.ª clase** |
 | 2.º | Cadete de 3.ª clase |
 | 3.º | Cadete de 2.ª clase |
 | 4.º | Cadete de 1.ª clase |
@@ -54,7 +54,7 @@ No todas las materias usan exactamente el mismo peso en cada fase, pero la idea 
 
 La progresión anual puede depender de:
 
-- requisitos académicos;
+- **requisitos académicos**;
 - requisitos prácticos;
 - evaluaciones;
 - conducta;
@@ -84,7 +84,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Qué significa integridad
 
-La integridad académica exige que el expediente represente de forma razonable lo que el cadete realmente sabe, hizo y produjo.
+**La integridad académica exige que el expediente represente de forma razonable lo que el cadete realmente sabe, hizo y produjo.**
 
 Sin integridad, una evaluación deja de servir para decidir si alguien está preparado para asumir responsabilidad.
 
@@ -119,7 +119,7 @@ El problema no es solo obtener una ventaja injusta.
 
 El fraude puede producir un expediente falso y permitir que alguien reciba responsabilidades para las que no está preparado.
 
-El encubrimiento puede agravar una situación porque impide corregir el problema y destruye confianza.
+El encubrimiento puede agravar una situación porque impide corregir el problema y **destruye confianza**.
 
 ## 5. IA como apoyo
 
@@ -163,12 +163,12 @@ Una incidencia puede evaluarse considerando:
 
 - conducta concreta;
 - intención;
-- consecuencias;
+- **consecuencias**;
 - órdenes existentes;
 - daño causado;
 - antecedentes;
 - contexto de misión;
-- autoridad competente.
+- **autoridad competente**.
 
 Dos acciones superficialmente parecidas pueden tener consecuencias distintas.
 
@@ -243,11 +243,11 @@ El objetivo del juego es que los cuatro años se sientan vividos sin obligar al 
 
 ## 2. Campus
 
-Para las eras jugables, la Academia terrestre se sitúa en el área de San Francisco / Golden Gate, con instalaciones vinculadas al Presidio y terrenos al norte del puente.
+Para las eras jugables, la Academia terrestre se sitúa en el área de **San Francisco** / Golden Gate, con instalaciones vinculadas al Presidio y terrenos al norte del puente.
 
 El proyecto retiene como elementos de base:
 
-- campus y terrenos;
+- **campus y terrenos**;
 - patio de instrucción;
 - Escuela de Mando;
 - Escuela de Vuelo;
@@ -314,7 +314,7 @@ Una tutoría no representa fracaso personal.
 
 Sirve para identificar qué tipo de problema existe:
 
-- conocimiento insuficiente;
+- **conocimiento insuficiente**;
 - mala ejecución;
 - falta de práctica;
 - error de juicio;
@@ -379,9 +379,9 @@ La Academia entrena cooperación porque el servicio real depende de personas que
 
 Un equipo eficaz necesita:
 
-- objetivo común;
+- **objetivo común**;
 - roles comprensibles;
-- reparto razonable de trabajo;
+- **reparto razonable** de trabajo;
 - comunicación;
 - seguimiento;
 - entrega final coherente.

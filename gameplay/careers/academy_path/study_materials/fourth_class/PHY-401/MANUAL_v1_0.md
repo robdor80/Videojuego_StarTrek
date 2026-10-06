@@ -33,8 +33,8 @@ La evaluación puede observar:
 
 - movilidad;
 - resistencia;
-- fuerza funcional;
-- coordinación.
+- **fuerza funcional**;
+- **coordinación**.
 
 Estas áreas no se reducen necesariamente a una cifra visible.
 
@@ -89,8 +89,8 @@ Un calentamiento prepara progresivamente al personaje para la actividad.
 
 Puede incluir:
 
-- movimiento general;
-- movilidad específica;
+- **movimiento general**;
+- **movilidad específica**;
 - incremento gradual de intensidad;
 - ensayo técnico con baja carga.
 
@@ -153,7 +153,7 @@ En el servicio puede influir en:
 - emergencias;
 - EVA;
 - guardias exigentes;
-- recuperación entre esfuerzos.
+- **recuperación** entre esfuerzos.
 
 ## 2. Progresión
 
@@ -163,7 +163,7 @@ La lógica es:
 
 > carga apropiada + recuperación + repetición → adaptación
 
-Una sesión excepcional no sustituye semanas de regularidad.
+Una sesión excepcional no sustituye semanas de **regularidad**.
 
 ## 3. Ritmo
 
@@ -228,7 +228,7 @@ La formación puede trabajar patrones como:
 - tirar;
 - levantarse;
 - agacharse;
-- transportar;
+- **transportar**;
 - estabilizar;
 - rotar o resistir rotación;
 - desplazarse bajo carga.
@@ -242,7 +242,7 @@ Mover una carga sin control no es automáticamente mejor que mover menos con bue
 La Academia valora:
 
 - estabilidad;
-- coordinación;
+- **coordinación**;
 - control;
 - seguridad;
 - capacidad de repetir el esfuerzo.
@@ -318,8 +318,8 @@ Una lesión puede exigir:
 - reducir actividad;
 - cambiar ejercicio;
 - tratamiento;
-- recuperación médica;
-- reintroducción progresiva.
+- **recuperación médica**;
+- **reintroducción progresiva**.
 
 La inactividad breve no debe castigar de forma absurda. Periodos prolongados sí pueden afectar adaptación.
 
@@ -357,7 +357,7 @@ Una buena rutina debe convivir con:
 - sueño;
 - relaciones;
 - guardias o prácticas;
-- recuperación.
+- **recuperación**.
 
 Una planificación perfecta sobre el papel puede ser mala si obliga al cadete a dormir poco o incumplir obligaciones.
 
@@ -380,7 +380,7 @@ La preferencia puede ayudar a sostener una rutina, pero no convierte la activida
 
 Una rutina puede alterarse por:
 
-- horario académico;
+- **horario académico**;
 - lesión;
 - viaje;
 - entrenamiento especial;

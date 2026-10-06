@@ -25,7 +25,7 @@ En esta asignatura no basta memorizar nombres. Debes poder:
 
 ## 1. Qué es Starfleet
 
-Starfleet es un servicio de la Federación Unida de Planetas. No es la Federación en sí misma y no sustituye al gobierno civil. La Federación dispone de sus propias instituciones civiles, mientras que Starfleet ejerce funciones operativas, científicas, exploratorias, diplomáticas, de asistencia y de defensa dentro de su marco de autoridad.
+****Starfleet es un servicio de la Federación** Unida de Planetas.** No es la Federación en sí misma y no sustituye al gobierno civil. La Federación dispone de sus propias instituciones civiles, mientras que Starfleet ejerce funciones operativas, científicas, exploratorias, diplomáticas, de asistencia y de defensa dentro de su marco de autoridad.
 
 Para un cadete, esta separación es fundamental porque evita un error muy común: pensar que una nave de Starfleet puede decidir por sí sola cualquier cuestión política, jurídica o diplomática.
 
@@ -70,7 +70,7 @@ La Federación es la entidad política. Starfleet es uno de sus grandes servicio
 Esto implica tres ideas básicas:
 
 - Starfleet está sujeta a autoridad civil.
-- Una nave no es un gobierno independiente.
+- **Una nave no es un gobierno independiente**.
 - Una orden operativa puede ser legítima dentro de Starfleet y, aun así, estar limitada por leyes, políticas o decisiones civiles superiores.
 
 ## 4. Clasificar una misión
@@ -105,11 +105,11 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Para qué sirve un rango
 
-El rango expresa la posición jerárquica del oficial dentro de Starfleet. Ayuda a ordenar responsabilidad, precedencia y progresión profesional.
+**El rango expresa la posición jerárquica del oficial dentro de Starfleet.** Ayuda a ordenar responsabilidad, precedencia y progresión profesional.
 
 Sin embargo, el rango **no describe por sí solo el trabajo exacto que una persona está realizando en ese momento**.
 
-Un Teniente puede estar destinado a Ciencia, Ingeniería, Operaciones o cualquier otro departamento compatible con su carrera. Dos oficiales con el mismo rango pueden ejercer funciones muy distintas.
+Un **Teniente** puede estar destinado a Ciencia, Ingeniería, Operaciones o cualquier otro departamento compatible con su carrera. Dos oficiales con el mismo rango pueden ejercer funciones muy distintas.
 
 ## 2. Escala de oficiales del proyecto
 
@@ -120,7 +120,7 @@ La progresión comisionada normal utilizada por el proyecto es:
 | 1 | Alférez |
 | 2 | Teniente júnior |
 | 3 | Teniente |
-| 4 | Teniente comandante |
+| 4 | Teniente **comandante** |
 | 5 | Comandante |
 | 6 | Capitán |
 | 7 | Comodoro |
@@ -192,7 +192,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Para qué existe el protocolo verbal
 
-El protocolo no es una colección de frases ceremoniales. Su función es reducir ambigüedad.
+El protocolo no es una colección de frases ceremoniales. Su función es **reducir ambigüedad**.
 
 En una organización grande, una comunicación profesional debe permitir reconocer:
 
@@ -271,7 +271,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Qué es la cadena de mando
 
-La cadena de mando organiza autoridad y responsabilidad.
+**La cadena de mando organiza autoridad y responsabilidad.**
 
 No existe únicamente para decir “quién manda”. También permite saber:
 
@@ -287,9 +287,9 @@ La secuencia general establecida por el proyecto es:
 1. Oficial al Mando;
 2. Primer Oficial;
 3. Segundo Oficial;
-4. sucesor cualificado designado.
+4. **sucesor cualificado designado**.
 
-Después intervienen factores como rango, antigüedad, cualificación, disponibilidad, aptitud médica, órdenes específicas y el roster local de sucesión.
+Después intervienen factores como rango, antigüedad, cualificación, disponibilidad, aptitud médica, **órdenes específicas** y el roster local de sucesión.
 
 Por tanto, la sucesión no se resuelve simplemente buscando “la persona con más galones”.
 
@@ -345,11 +345,11 @@ El proyecto agrupa gran parte de Starfleet en tres grandes familias:
 
 Incluye funciones de dirección y, habitualmente, control de vuelo/navegación.
 
-### Operaciones
+### **Operaciones**
 
 Incluye áreas como gestión de operaciones, Ingeniería, Seguridad, Táctica y Comunicaciones.
 
-### Ciencias
+### **Ciencias**
 
 Incluye Ciencia, Medicina y Consejería.
 
@@ -436,11 +436,11 @@ El cadete debe ser capaz de:
 
 Una recepción profesional de una orden o instrucción consta de varias fases:
 
-### Escuchar
+### **Escuchar**
 
 No interrumpir ni anticipar lo que se cree que el superior va a decir.
 
-### Comprender
+### **Comprender**
 
 Identificar:
 - objetivo;

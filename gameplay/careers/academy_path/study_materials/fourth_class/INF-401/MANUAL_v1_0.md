@@ -54,7 +54,7 @@ Ejemplos:
 - estado de un sistema;
 - historial autorizado.
 
-Una acción solicita cambiar algo.
+Una **acción solicita cambiar algo**.
 
 Ejemplos:
 - contactar un departamento;
@@ -63,7 +63,7 @@ Ejemplos:
 - transferir datos;
 - cambiar una configuración permitida.
 
-Las acciones requieren validación de autoridad, contexto y estado.
+Las **acciones requieren validación** de autoridad, contexto y estado.
 
 ## 4. El ordenador no es omnisciente
 
@@ -99,7 +99,7 @@ En el juego, un PADD es una interfaz portátil para trabajar con información au
 
 Puede servir para:
 
-- consultar material académico;
+- consultar **material académico**;
 - leer documentos;
 - realizar anotaciones;
 - recibir tareas;
@@ -124,7 +124,7 @@ La disponibilidad depende de:
 - identidad;
 - acceso;
 - contexto;
-- conectividad;
+- **conectividad**;
 - políticas de privacidad;
 - tipo de dato.
 
@@ -198,7 +198,7 @@ La autorización puede depender de:
 - alerta actual;
 - ubicación;
 - función solicitada;
-- autorización temporal;
+- **autorización temporal**;
 - override válido.
 
 ## 4. El rango no abre todo
@@ -211,7 +211,7 @@ Tener mayor rango no concede acceso automático a:
 - registros privados;
 - información clasificada.
 
-La necesidad funcional y la autorización específica también importan.
+La **necesidad funcional** y la autorización específica también importan.
 
 ## 5. Mínimo acceso
 
@@ -285,7 +285,7 @@ Interpretar que:
 
 > “la causa es un arma enemiga”
 
-requiere evidencia adicional.
+**requiere evidencia adicional**.
 
 El sistema no debe rellenar automáticamente el salto lógico.
 
@@ -301,7 +301,7 @@ puede necesitar:
 2. comprobar permisos;
 3. correlacionar;
 4. resumir;
-5. conservar incertidumbre.
+5. **conservar incertidumbre**.
 
 La IA puede ayudar a expresar el resumen, pero no inventar eventos que no existan.
 
@@ -317,7 +317,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Por qué registrar
 
-Una institución compleja necesita poder reconstruir qué ocurrió.
+Una institución compleja necesita poder **reconstruir qué ocurrió**.
 
 Los registros permiten:
 
@@ -326,7 +326,7 @@ Los registros permiten:
 - evaluación;
 - investigación;
 - mantenimiento;
-- responsabilidad;
+- **responsabilidad**;
 - aprendizaje.
 
 ## 2. Dos cosas que no deben confundirse
@@ -399,8 +399,8 @@ Pueden requerir protección especial:
 - Seguridad;
 - Inteligencia;
 - datos clasificados;
-- logs personales;
-- expedientes sensibles.
+- **logs personales**;
+- **expedientes sensibles**.
 
 La computadora debe evitar incluso filtrar contenido protegido a través de mensajes de error o fragmentos de búsqueda.
 

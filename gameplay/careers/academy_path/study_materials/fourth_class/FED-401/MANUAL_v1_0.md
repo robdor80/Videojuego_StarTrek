@@ -25,7 +25,7 @@ En FED-401 debes poder:
 
 ## 1. Una unión política interestelar
 
-La Federación Unida de Planetas es una **república federal interestelar** formada por mundos miembros que cooperan bajo instituciones comunes.
+La Federación Unida de Planetas es una **república federal interestelar** formada por mundos miembros que cooperan bajo **instituciones comunes**.
 
 No es simplemente una alianza militar ni una colección de planetas unidos por Starfleet. Es una entidad política civil con instituciones propias.
 
@@ -56,7 +56,7 @@ La existencia de instituciones federales convive con:
 
 Por eso un oficial no puede asumir que una norma cultural humana sea automáticamente universal dentro de la Federación.
 
-## 4. La Federación cambia con el tiempo
+## 4. **La Federación cambia con el tiempo**
 
 La Federación no debe modelarse como una ficha estática.
 
@@ -90,7 +90,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Gobierno civil
 
-La Federación posee un gobierno civil propio. Starfleet está subordinada a esa autoridad civil y no sustituye al gobierno.
+**La Federación posee un gobierno civil propio.** Starfleet está subordinada a esa autoridad civil y no sustituye al gobierno.
 
 Dentro de la base política actualmente validada, el proyecto retiene al menos:
 
@@ -147,7 +147,7 @@ El cadete aprende a identificar cuándo debe:
 
 - actuar dentro de una misión autorizada;
 - consultar a la cadena de mando;
-- coordinar con autoridad civil;
+- **coordinar** con autoridad civil;
 - esperar una decisión competente.
 
 ### Práctica
@@ -191,8 +191,8 @@ Puede afectar a:
 - jurisdicción;
 - tránsito;
 - tratados;
-- acceso diplomático;
-- respuesta de Starfleet;
+- **acceso diplomático**;
+- **respuesta de Starfleet**;
 - derechos y obligaciones reconocidos;
 - disponibilidad de destinos y misiones.
 
@@ -277,8 +277,8 @@ Starfleet está sujeta a autoridad civil.
 En términos de juego, esto permite que existan:
 
 - órdenes civiles;
-- autorizaciones de misión;
-- restricciones diplomáticas;
+- **autorizaciones de misión**;
+- **restricciones diplomáticas**;
 - directivas de emergencia;
 - decisiones políticas que condicionan operaciones.
 
@@ -369,7 +369,7 @@ Ejemplos de preguntas profesionales:
 - ¿Esta forma de saludo es apropiada aquí?
 - ¿Esta costumbre tiene significado religioso, familiar o político?
 - ¿Estoy confundiendo preferencia personal con norma cultural?
-- ¿La información que tengo procede de experiencia real o de un estereotipo?
+- ¿La información que tengo procede de experiencia real o de un **estereotipo**?
 
 ## 5. Diversidad dentro del mismo grupo
 
@@ -415,7 +415,7 @@ Quien ejerce autoridad pública o profesional debe responder por sus decisiones.
 Para un cadete, esto implica:
 
 - no esconder errores;
-- registrar acciones relevantes;
+- **registrar acciones relevantes**;
 - aceptar revisión;
 - distinguir una orden válida de una preferencia personal;
 - reconocer cuándo se ha excedido la propia autoridad.
@@ -424,7 +424,7 @@ Para un cadete, esto implica:
 
 A este nivel, “debido proceso” significa que una actuación con consecuencias importantes no debe depender simplemente del capricho de una persona.
 
-Debe existir una autoridad competente, una base reconocible y un procedimiento apropiado al contexto.
+Debe existir una autoridad competente, una base reconocible y un **procedimiento apropiado** al contexto.
 
 No se enseñan todavía reglas judiciales detalladas.
 
