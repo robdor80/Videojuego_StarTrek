@@ -36,6 +36,7 @@ Foundation now established in:
 - `traffic_activity_model.json`;
 - `procedural_context_resolution_hierarchy.json`;
 - `persistent_population_materialization_rules.json`;
+- `planetary_environment_state_rules.json`;
 - `docs/roadmap/procedural_living_universe_depth_plan.md`.
 
 The long-term generator covers coherent:
