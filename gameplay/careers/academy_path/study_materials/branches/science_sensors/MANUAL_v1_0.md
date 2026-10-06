@@ -196,99 +196,33 @@ La especialización **Ciencia / Sensores** desarrolla competencia mediante estud
 
 ### SCI-101-U01 — Diseño de observación
 
-**Contenidos:** objetivo; instrumento; estrategia; validación.
+### Objetivo operativo
 
-**Práctica:** Plan científico.
+La unidad lleva **Ciencia / Sensores** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
 
-**Evaluación:** Revisión.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **objetivo**: pregunta o efecto de observación que determina qué medir y con qué precisión.
+- **instrumento**: sensor o método elegido por cobertura, resolución, sensibilidad, limitaciones y adecuación al fenómeno.
+- **estrategia**: plan de adquisición que combina geometría, tiempo, modos de sensor y repetición para obtener evidencia útil.
+- **validación**: comprobación independiente o repetida que reduce la probabilidad de aceptar una lectura espuria.
 
-### SCI-101-U02 — Fenómenos complejos
+### Aplicación profesional
 
-**Contenidos:** múltiples firmas; cambios; modelos; incertidumbre.
+Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
 
-**Práctica:** Caso avanzado.
+### Práctica
 
-**Evaluación:** Juicio.
+Plan científico.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### SCI-101-U03 — Supervisión de estación
+Ciencia/Sensores debe separar **observación, interpretación y confianza**, declarar incertidumbre y evitar que una lectura aislada se convierta en certeza.
 
-**Contenidos:** equipo; prioridades; calidad; logs.
+### Evaluación
 
-**Práctica:** Dirigir turno.
+Revisión. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
 
-**Evaluación:** Evaluación.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SCI-101-U04 — Asesoramiento científico
-
-**Contenidos:** dato; interpretación; confianza; recomendación.
-
-**Práctica:** Briefing al mando.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## SCI-102 — Ciencia/Sensores avanzada II
-
-### SCI-102-U01 — Misión científica completa
-
-**Contenidos:** pregunta; adquisición; análisis; resultado.
-
-**Práctica:** Ejecutar misión.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SCI-102-U02 — Sensores degradados
-
-**Contenidos:** cobertura; ruido; alternativas; riesgo.
-
-**Práctica:** Escenario.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SCI-102-U03 — Descubrimiento inesperado
-
-**Contenidos:** anomalía; verificación; prioridad.
-
-**Práctica:** Caso complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SCI-102-U04 — Handoff científico
-
-**Contenidos:** datos; hipótesis; pendientes; calidad.
-
-**Práctica:** Relevo profesional.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/ship_operations/consoles/sensors/README.md`
-- `gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json`
-- `gameplay/science/sensor_analysis_model.json`
-- `gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.

@@ -196,99 +196,33 @@ La especialización **Medicina** desarrolla competencia mediante estudio, práct
 
 ### MED-101-U01 — Diagnóstico complejo
 
-**Contenidos:** datos discordantes; comorbilidad; especie; incertidumbre.
+### Objetivo operativo
 
-**Práctica:** Caso avanzado.
+La unidad lleva **Medicina** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
 
-**Evaluación:** Juicio.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **datos discordantes**: resultados que no apuntan a una misma explicación y obligan a revisar calidad, hipótesis y diagnósticos alternativos.
+- **comorbilidad**: presencia simultánea de varias condiciones que puede modificar síntomas, riesgos y tratamiento.
+- **especie**: contexto biológico del paciente que condiciona valores normales, fisiología, farmacología y riesgos.
+- **incertidumbre**: margen de desconocimiento o error que acompaña una medida o interpretación y debe comunicarse.
 
-### MED-101-U02 — Supervisión clínica
+### Aplicación profesional
 
-**Contenidos:** equipo; delegación; prioridad; registro.
+Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
 
-**Práctica:** Dirigir turno.
+### Práctica
 
-**Evaluación:** Evaluación.
+Caso avanzado.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### MED-101-U03 — Plan terapéutico
+Medicina prioriza seguridad del paciente, juicio clínico, continuidad asistencial y privacidad; el mando recibe la información necesaria, no toda la historia clínica.
 
-**Contenidos:** beneficio; riesgo; monitorización; alternativas.
+### Evaluación
 
-**Práctica:** Planificar tratamiento.
+Juicio. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
 
-**Evaluación:** Revisión.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### MED-101-U04 — Asesoramiento al mando
-
-**Contenidos:** aptitud; riesgo; privacidad; autoridad.
-
-**Práctica:** Escena profesional.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## MED-102 — Medicina avanzada II
-
-### MED-102-U01 — Misión médica
-
-**Contenidos:** preparación; pacientes; recursos; seguimiento.
-
-**Práctica:** Operación completa.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### MED-102-U02 — Crisis sanitaria
-
-**Contenidos:** múltiples casos; contención contextual; prioridad.
-
-**Práctica:** Escenario complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### MED-102-U03 — Continuidad asistencial
-
-**Contenidos:** handoff; historia; pendientes; confidencialidad.
-
-**Práctica:** Relevo.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### MED-102-U04 — Cierre clínico
-
-**Contenidos:** resultado; complicaciones; registro; aprendizaje.
-
-**Práctica:** Debrief.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/medical/medical_state_model.json`
-- `gameplay/medical/species_medical_hooks.json`
-- `lore/medicine/medical_capability_contract.json`
-- `lore/federation/starfleet/regulations/medical_authority.json`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.

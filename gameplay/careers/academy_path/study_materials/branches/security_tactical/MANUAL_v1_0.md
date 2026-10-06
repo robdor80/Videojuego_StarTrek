@@ -194,99 +194,33 @@ La especialización **Seguridad / Táctica** desarrolla competencia mediante est
 
 ### SEC-101-U01 — Supervisión de seguridad
 
-**Contenidos:** equipo; turnos; riesgo; estándares.
+### Objetivo operativo
 
-**Práctica:** Dirigir servicio.
+La unidad lleva **Seguridad / Táctica** al estándar de 1.ª clase: actuación autónoma dentro de competencia, comunicación clara de límites y responsabilidad por la continuidad.
 
-**Evaluación:** Evaluación.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar control y apoyo al riesgo.
+- **turnos**: periodos de responsabilidad operativa que requieren incorporación, desempeño sostenido y relevo formal.
+- **riesgo**: combinación de probabilidad, impacto y exposición; la respuesta debe ser proporcionada y quedar dentro de autoridad.
+- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una actuación es aceptable y repetible.
 
-### SEC-101-U02 — Táctica bajo daño
+### Aplicación profesional
 
-**Contenidos:** sensores/escudos degradados; prioridad; coordinación.
+Se trabaja con evidencia suficiente, se distinguen hechos de inferencias, se valoran alternativas y se escala antes de superar autoridad o seguridad.
 
-**Práctica:** Simulación.
+### Práctica
 
-**Evaluación:** Práctica.
+Dirigir servicio.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### SEC-101-U03 — Protección de misión
+Seguridad/Táctica debe responder con **autoridad y proporcionalidad**, proteger personas y mantener siempre una vía de desescalada cuando sea compatible con la amenaza.
 
-**Contenidos:** personal; instalación; away team.
+### Evaluación
 
-**Práctica:** Plan avanzado.
+Evaluación. Se exige desempeño repetible y explicable; una respuesta llamativa sin fundamento no sustituye el criterio profesional.
 
-**Evaluación:** Revisión.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SEC-101-U04 — Asesoramiento al mando
-
-**Contenidos:** amenaza; opciones; consecuencias.
-
-**Práctica:** Briefing.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## SEC-102 — Seguridad/Táctica avanzada II
-
-### SEC-102-U01 — Misión táctica completa
-
-**Contenidos:** brief; reglas; ejecución; cierre.
-
-**Práctica:** Operar misión.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SEC-102-U02 — Crisis de seguridad
-
-**Contenidos:** abordaje; rehén contextual; evacuación.
-
-**Práctica:** Escenario complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SEC-102-U03 — Desescalada
-
-**Contenidos:** comunicación; posición; alternativas.
-
-**Práctica:** Caso.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### SEC-102-U04 — Handoff táctico
-
-**Contenidos:** amenazas; estado; órdenes; pendientes.
-
-**Práctica:** Relevo profesional.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/security/README.md`
-- `gameplay/ship_operations/bridge_station_model.json`
-- `lore/federation/starfleet/regulations/README.md`
-- `lore/federation/starfleet/prime_directive/prime_directive.json`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
