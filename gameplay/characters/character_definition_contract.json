@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "model_id": "character_definition_contract",
   "classification": "GAME_ADDITION",
   "required_fields": [
@@ -27,7 +27,9 @@
     "presentation_refs",
     "validated_creation_ref",
     "initial_background_ref",
-    "initial_objective_ref"
+    "initial_objective_ref",
+    "base_visual_identity_id",
+    "identity_history_ref"
   ],
   "temporal_validity_fields": [
     "known_active_from",
@@ -45,6 +47,12 @@
     "Unknown biographical gaps remain unknown.",
     "Generated characters must satisfy live-world assignment, species, faction and location constraints.",
     "Presentation references do not grant gameplay authority or knowledge.",
-    "Species and culture never define personality automatically."
-  ]
+    "Species and culture never define personality automatically.",
+    "Once materialized, a generated or campaign-created character keeps the same character_id and identity lineage permanently.",
+    "A character may age, change appearance, assignment, rank, relationships and condition without becoming a new entity.",
+    "New visual assets for an existing character must resolve from the same base visual identity lineage.",
+    "Save/load, LOD transitions and generator upgrades may not reroll a materialized character."
+  ],
+  "entity_identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
+  "visual_identity_schema_ref": "art_direction/schemas/persistent_visual_identity.schema.json"
 }
