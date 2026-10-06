@@ -17,7 +17,7 @@ La regla central es:
 
 ## 1. Hecho
 
-Un hecho es algo observado o registrado con procedencia.
+**Un hecho es algo observado o registrado con procedencia.**
 
 Ejemplo:
 > “El contacto aceleró a las 14:03.”
@@ -75,7 +75,7 @@ Separar hechos, inferencias, supuestos e hipótesis en un caso operativo.
 
 ## 1. Riesgo contextual
 
-El riesgo no es una cifra universal.
+**El riesgo no es una cifra universal.**
 
 Depende de:
 - probabilidad estimada;
@@ -134,7 +134,7 @@ Comparar tres cursos de acción según probabilidad, impacto, urgencia y reversi
 
 ## 1. El problema real
 
-En una operación casi nunca se dispone de información perfecta.
+**En una operación casi nunca se dispone de información perfecta.**
 
 Esperar puede:
 - mejorar conocimiento;
@@ -203,7 +203,7 @@ Un informe operativo permite reconstruir:
 
 ## 2. Hechos
 
-Deben mantener procedencia.
+**Deben mantener procedencia.**
 
 ## 3. Acciones
 
@@ -249,7 +249,7 @@ Redactar un informe de una simulación en menos de una página.
 
 ## 1. Objetivo
 
-El debrief busca aprender y evaluar con justicia profesional.
+**El debrief busca aprender y evaluar con justicia profesional.**
 
 ## 2. Hindsight bias
 
@@ -317,7 +317,7 @@ El caso combina:
 
 ## 2. Reconstrucción
 
-Primero se ordena la línea temporal.
+**Primero se ordena la línea temporal.**
 
 ## 3. Decisión
 

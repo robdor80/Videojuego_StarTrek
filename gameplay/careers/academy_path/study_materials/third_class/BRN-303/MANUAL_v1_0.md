@@ -54,7 +54,7 @@ La rotación observa:
 
 ### Práctica
 
-Rotación guiada con una decisión de prioridad y un breve debrief.
+**Rotación guiada con una decisión de prioridad y un breve debrief.**
 
 ### Autoevaluación
 
@@ -108,7 +108,7 @@ Se observa:
 
 ### Práctica
 
-Preparar y ejecutar una ruta breve con una modificación inesperada.
+**Preparar y ejecutar una ruta breve con una modificación inesperada.**
 
 ### Autoevaluación
 
@@ -141,7 +141,7 @@ Ops necesita saber:
 
 ## 3. Coordinación
 
-No sustituye a Ingeniería, Sensores o Mando.
+**No sustituye a Ingeniería, Sensores o Mando.**
 
 Conecta necesidades y capacidad.
 
@@ -211,7 +211,7 @@ Gran parte del trabajo es:
 - inspección;
 - prevención.
 
-No solo emergencias.
+**No solo emergencias.**
 
 ## 4. Evidencia
 
@@ -265,7 +265,7 @@ El trabajo incluye:
 
 ## 3. Autoridad
 
-Acceso a sistemas tácticos no significa autorización de uso.
+**Acceso a sistemas tácticos no significa autorización de uso.**
 
 Las decisiones dependen de:
 - Mando;
@@ -343,7 +343,7 @@ Se observa:
 
 ### Práctica
 
-Ejecutar un barrido y convertirlo en una pregunta científica sin inventar causa.
+**Ejecutar un barrido y convertirlo en una pregunta científica sin inventar causa.**
 
 ### Autoevaluación
 
@@ -379,7 +379,7 @@ La rama combina:
 
 ## 3. Incertidumbre
 
-Una prueba no garantiza certeza.
+**Una prueba no garantiza certeza.**
 
 El personal médico debe distinguir:
 - estado real;

@@ -1,0 +1,594 @@
+{
+  "schema_version": "2.1.0",
+  "course_id": "BRN-303",
+  "status": "concept_driven_autocorrectable_v2_1",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 5,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1,
+    "concepts_available_per_unit": 6,
+    "avoid_duplicate_concepts": true
+  },
+  "concepts": [
+    {
+      "id": "BRN-303-C001",
+      "unit_id": "BRN-303-U01",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué caracteriza Mando?",
+      "web_prompt_variants_es": [
+        "¿Qué caracteriza Mando?",
+        "Repaso: ¿Qué caracteriza Mando?"
+      ],
+      "answer_display_es": "coordinación · decisión · prioridades · responsabilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "coordinación",
+        "decisión",
+        "prioridades",
+        "responsabilidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C002",
+      "unit_id": "BRN-303-U01",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué no se reduce a dar órdenes?",
+      "web_prompt_variants_es": [
+        "¿Por qué no se reduce a dar órdenes?",
+        "Repaso: ¿Por qué no se reduce a dar órdenes?"
+      ],
+      "answer_display_es": "escuchar · integrar · responsabilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "escuchar",
+        "integrar",
+        "responsabilidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C003",
+      "unit_id": "BRN-303-U01",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué evidencia se observa?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia se observa?",
+        "Repaso: ¿Qué evidencia se observa?"
+      ],
+      "answer_display_es": "claridad · juicio · comunicación · responsabilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "claridad",
+        "juicio",
+        "comunicación",
+        "responsabilidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C004",
+      "unit_id": "BRN-303-U02",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué funciones cubre Vuelo/Navegación?",
+      "web_prompt_variants_es": [
+        "¿Qué funciones cubre Vuelo/Navegación?",
+        "Repaso: ¿Qué funciones cubre Vuelo/Navegación?"
+      ],
+      "answer_display_es": "Conn · plotting · maniobra · astrogación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Conn",
+        "plotting",
+        "maniobra",
+        "astrogación"
+      ]
+    },
+    {
+      "id": "BRN-303-C005",
+      "unit_id": "BRN-303-U02",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué debe anticipar el operador?",
+      "web_prompt_variants_es": [
+        "¿Qué debe anticipar el operador?",
+        "Repaso: ¿Qué debe anticipar el operador?"
+      ],
+      "answer_display_es": "posición futura · restricciones · resultado maniobra",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "posición futura",
+        "restricciones",
+        "resultado maniobra"
+      ]
+    },
+    {
+      "id": "BRN-303-C006",
+      "unit_id": "BRN-303-U02",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente plotting y maniobra?",
+      "web_prompt_variants_es": [
+        "¿Qué opción diferencia correctamente plotting y maniobra?",
+        "Diferencia plotting y maniobra."
+      ],
+      "answer_display_es": "plan de ruta · ejecución de movimiento",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "plan de ruta",
+        "ejecución de movimiento"
+      ]
+    },
+    {
+      "id": "BRN-303-C007",
+      "unit_id": "BRN-303-U03",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué coordina Operaciones?",
+      "web_prompt_variants_es": [
+        "¿Qué coordina Operaciones?",
+        "Repaso: ¿Qué coordina Operaciones?"
+      ],
+      "answer_display_es": "recursos · sistemas · prioridades · logística",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "recursos",
+        "sistemas",
+        "prioridades",
+        "logística"
+      ]
+    },
+    {
+      "id": "BRN-303-C008",
+      "unit_id": "BRN-303-U03",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué Ops no sustituye Ingeniería?",
+      "web_prompt_variants_es": [
+        "¿Por qué Ops no sustituye Ingeniería?",
+        "Repaso: ¿Por qué Ops no sustituye Ingeniería?"
+      ],
+      "answer_display_es": "ámbitos diferentes · coordina no repara",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "ámbitos diferentes",
+        "coordina no repara"
+      ]
+    },
+    {
+      "id": "BRN-303-C009",
+      "unit_id": "BRN-303-U03",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué evidencia se observa en Ops?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia se observa en Ops?",
+        "Repaso: ¿Qué evidencia se observa en Ops?"
+      ],
+      "answer_display_es": "organización · priorización · comunicación · trazabilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "organización",
+        "priorización",
+        "comunicación",
+        "trazabilidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C010",
+      "unit_id": "BRN-303-U04",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué cubre Ingeniería?",
+      "web_prompt_variants_es": [
+        "¿Qué cubre Ingeniería?",
+        "Repaso: ¿Qué cubre Ingeniería?"
+      ],
+      "answer_display_es": "energía · diagnóstico · mantenimiento · propulsión · sistemas",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "energía",
+        "diagnóstico",
+        "mantenimiento",
+        "propulsión",
+        "sistemas"
+      ]
+    },
+    {
+      "id": "BRN-303-C011",
+      "unit_id": "BRN-303-U04",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué síntoma no equivale a causa?",
+      "web_prompt_variants_es": [
+        "¿Por qué síntoma no equivale a causa?",
+        "Repaso: ¿Por qué síntoma no equivale a causa?"
+      ],
+      "answer_display_es": "causas múltiples",
+      "accepted_short_answers_es": [
+        "causas múltiples"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "causas múltiples"
+      ]
+    },
+    {
+      "id": "BRN-303-C012",
+      "unit_id": "BRN-303-U04",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Por qué mantenimiento rutinario importa?",
+      "web_prompt_variants_es": [
+        "¿Por qué mantenimiento rutinario importa?",
+        "Repaso: ¿Por qué mantenimiento rutinario importa?"
+      ],
+      "answer_display_es": "prevención · fiabilidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "prevención",
+        "fiabilidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C013",
+      "unit_id": "BRN-303-U05",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente Seguridad y Táctica?",
+      "web_prompt_variants_es": [
+        "¿Qué opción diferencia correctamente Seguridad y Táctica?",
+        "Diferencia Seguridad y Táctica."
+      ],
+      "answer_display_es": "protección/accesos · amenaza/defensa",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "protección/accesos",
+        "amenaza/defensa"
+      ]
+    },
+    {
+      "id": "BRN-303-C014",
+      "unit_id": "BRN-303-U05",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué no se reduce a armamento?",
+      "web_prompt_variants_es": [
+        "¿Por qué no se reduce a armamento?",
+        "Repaso: ¿Por qué no se reduce a armamento?"
+      ],
+      "answer_display_es": "prevención · disciplina · evaluación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "prevención",
+        "disciplina",
+        "evaluación"
+      ]
+    },
+    {
+      "id": "BRN-303-C015",
+      "unit_id": "BRN-303-U05",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué limita uso táctico?",
+      "web_prompt_variants_es": [
+        "¿Qué limita uso táctico?",
+        "Repaso: ¿Qué limita uso táctico?"
+      ],
+      "answer_display_es": "Mando · reglas · situación · permisos",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Mando",
+        "reglas",
+        "situación",
+        "permisos"
+      ]
+    },
+    {
+      "id": "BRN-303-C016",
+      "unit_id": "BRN-303-U06",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente Sensores y Ciencia?",
+      "web_prompt_variants_es": [
+        "¿Qué opción diferencia correctamente Sensores y Ciencia?",
+        "Diferencia Sensores y Ciencia."
+      ],
+      "answer_display_es": "medir · interpretar",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "medir",
+        "interpretar"
+      ]
+    },
+    {
+      "id": "BRN-303-C017",
+      "unit_id": "BRN-303-U06",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué exige método?",
+      "web_prompt_variants_es": [
+        "¿Qué exige método?",
+        "Repaso: ¿Qué exige método?"
+      ],
+      "answer_display_es": "evidencia · hipótesis · incertidumbre · revisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "evidencia",
+        "hipótesis",
+        "incertidumbre",
+        "revisión"
+      ]
+    },
+    {
+      "id": "BRN-303-C018",
+      "unit_id": "BRN-303-U06",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué incertidumbre explícita es fortaleza?",
+      "web_prompt_variants_es": [
+        "¿Por qué incertidumbre explícita es fortaleza?",
+        "Repaso: ¿Por qué incertidumbre explícita es fortaleza?"
+      ],
+      "answer_display_es": "honestidad de conocimiento · mejor decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "honestidad de conocimiento",
+        "mejor decisión"
+      ]
+    },
+    {
+      "id": "BRN-303-C019",
+      "unit_id": "BRN-303-U07",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué cubre Medicina?",
+      "web_prompt_variants_es": [
+        "¿Qué cubre Medicina?",
+        "Repaso: ¿Qué cubre Medicina?"
+      ],
+      "answer_display_es": "diagnóstico · tratamiento · triaje · prevención · aptitud · xenomedicina",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "diagnóstico",
+        "tratamiento",
+        "triaje",
+        "prevención",
+        "aptitud",
+        "xenomedicina"
+      ]
+    },
+    {
+      "id": "BRN-303-C020",
+      "unit_id": "BRN-303-U07",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué una prueba no garantiza certeza?",
+      "web_prompt_variants_es": [
+        "¿Por qué una prueba no garantiza certeza?",
+        "Repaso: ¿Por qué una prueba no garantiza certeza?"
+      ],
+      "answer_display_es": "limitaciones diagnósticas",
+      "accepted_short_answers_es": [
+        "limitaciones diagnósticas"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "limitaciones diagnósticas"
+      ]
+    },
+    {
+      "id": "BRN-303-C021",
+      "unit_id": "BRN-303-U07",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Por qué especie importa?",
+      "web_prompt_variants_es": [
+        "¿Por qué especie importa?",
+        "Repaso: ¿Por qué especie importa?"
+      ],
+      "answer_display_es": "fisiología distinta",
+      "accepted_short_answers_es": [
+        "fisiología distinta"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "fisiología distinta"
+      ]
+    },
+    {
+      "id": "BRN-303-C022",
+      "unit_id": "BRN-303-U07",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué evidencia se observa?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia se observa?",
+        "Repaso: ¿Qué evidencia se observa?"
+      ],
+      "answer_display_es": "observación · prudencia · comunicación · ética",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "observación",
+        "prudencia",
+        "comunicación",
+        "ética"
+      ]
+    },
+    {
+      "id": "BRN-303-C023",
+      "unit_id": "BRN-303-U01",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente interés por rama y competencia?",
+      "web_prompt_variants_es": [
+        "¿Qué opción diferencia correctamente interés por rama y competencia?",
+        "Diferencia interés por rama y competencia."
+      ],
+      "answer_display_es": "preferencia · evidencia de capacidad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "preferencia",
+        "evidencia de capacidad"
+      ]
+    },
+    {
+      "id": "BRN-303-C024",
+      "unit_id": "BRN-303-U07",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Una mala rotación bloquea automáticamente una rama?",
+      "web_prompt_variants_es": [
+        "¿Una mala rotación bloquea automáticamente una rama?",
+        "Repaso: ¿Una mala rotación bloquea automáticamente una rama?"
+      ],
+      "answer_display_es": "No — evidencia descriptiva.",
+      "accepted_short_answers_es": [
+        "no"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "no",
+        "evidencia descriptiva"
+      ]
+    },
+    {
+      "id": "BRN-303-C025",
+      "unit_id": "BRN-303-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué expresa el aviso «ROTACIÓN»?",
+      "web_prompt_variants_es": [
+        "¿Qué expresa el aviso «ROTACIÓN»?",
+        "Selecciona la idea correcta asociada a «ROTACIÓN»."
+      ],
+      "answer_display_es": "La finalidad es conocer el trabajo real y generar evidencia descriptiva; una sola rotación no concede cualificación ni bloquea automáticamente esta rama.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "La finalidad es conocer el trabajo real y generar evidencia descriptiva; una sola rotación no concede cualificación ni bloquea automáticamente esta rama."
+      ]
+    },
+    {
+      "id": "BRN-303-C026",
+      "unit_id": "BRN-303-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Coordinación, decisiones, prioridades y responsabilidad.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Coordinación, decisiones, prioridades y responsabilidad."
+      ]
+    },
+    {
+      "id": "BRN-303-C027",
+      "unit_id": "BRN-303-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Conn, plotting, maniobra y seguridad de movimiento.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Conn, plotting, maniobra y seguridad de movimiento."
+      ]
+    },
+    {
+      "id": "BRN-303-C028",
+      "unit_id": "BRN-303-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Coordina recursos, sistemas, prioridades y logística.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Coordina recursos, sistemas, prioridades y logística."
+      ]
+    },
+    {
+      "id": "BRN-303-C029",
+      "unit_id": "BRN-303-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Energía, diagnóstico, mantenimiento, propulsión y recuperación.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Energía, diagnóstico, mantenimiento, propulsión y recuperación."
+      ]
+    },
+    {
+      "id": "BRN-303-C030",
+      "unit_id": "BRN-303-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Protección, control, amenaza y defensa con autoridad y proporcionalidad.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Protección, control, amenaza y defensa con autoridad y proporcionalidad."
+      ]
+    },
+    {
+      "id": "BRN-303-C031",
+      "unit_id": "BRN-303-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Sensores obtiene observaciones; Ciencia interpreta.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Sensores obtiene observaciones; Ciencia interpreta."
+      ]
+    },
+    {
+      "id": "BRN-303-C032",
+      "unit_id": "BRN-303-U07",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué afirmación recoge correctamente una idea clave de esta unidad?",
+        "Selecciona la afirmación que coincide con los apuntes de esta unidad."
+      ],
+      "answer_display_es": "Paciente, diagnóstico, tratamiento, triaje, privacidad, ética y xenomedicina.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Paciente, diagnóstico, tratamiento, triaje, privacidad, ética y xenomedicina."
+      ]
+    }
+  ]
+}
