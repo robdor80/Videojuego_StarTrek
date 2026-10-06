@@ -17,7 +17,7 @@ La meta no es fabricar atletas idénticos. La meta es que cada cadete alcance y 
 
 ## 1. Para qué sirve la evaluación inicial
 
-La primera evaluación establece una referencia.
+**La primera evaluación establece una referencia.**
 
 No busca responder “¿quién es el cadete más fuerte?”, sino:
 
@@ -33,8 +33,8 @@ La evaluación puede observar:
 
 - movilidad;
 - resistencia;
-- **fuerza funcional**;
-- **coordinación**.
+- fuerza funcional;
+- coordinación.
 
 Estas áreas no se reducen necesariamente a una cifra visible.
 
@@ -79,7 +79,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Antes de cargar, mover bien
 
-La movilidad permite realizar movimientos necesarios con control suficiente.
+**La movilidad permite realizar movimientos necesarios con control suficiente.**
 
 No significa alcanzar posiciones extremas. Significa disponer del rango útil para ejecutar una tarea sin compensaciones innecesarias.
 
@@ -89,8 +89,8 @@ Un calentamiento prepara progresivamente al personaje para la actividad.
 
 Puede incluir:
 
-- **movimiento general**;
-- **movilidad específica**;
+- movimiento general;
+- movilidad específica;
 - incremento gradual de intensidad;
 - ensayo técnico con baja carga.
 
@@ -144,7 +144,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Qué se busca
 
-La resistencia básica representa la capacidad de sostener actividad durante un periodo razonable sin deterioro excesivo del rendimiento.
+**La resistencia básica representa la capacidad de sostener actividad durante un periodo razonable sin deterioro excesivo del rendimiento.**
 
 En el servicio puede influir en:
 
@@ -153,7 +153,7 @@ En el servicio puede influir en:
 - emergencias;
 - EVA;
 - guardias exigentes;
-- **recuperación** entre esfuerzos.
+- recuperación entre esfuerzos.
 
 ## 2. Progresión
 
@@ -163,7 +163,7 @@ La lógica es:
 
 > carga apropiada + recuperación + repetición → adaptación
 
-Una sesión excepcional no sustituye semanas de **regularidad**.
+Una sesión excepcional no sustituye semanas de regularidad.
 
 ## 3. Ritmo
 
@@ -207,7 +207,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Fuerza para hacer, no para coleccionar números
 
-La fuerza funcional representa la capacidad de producir y controlar fuerza útil para tareas reales.
+**La fuerza funcional representa la capacidad de producir y controlar fuerza útil para tareas reales.**
 
 No se limita a levantar el mayor peso posible.
 
@@ -228,7 +228,7 @@ La formación puede trabajar patrones como:
 - tirar;
 - levantarse;
 - agacharse;
-- **transportar**;
+- transportar;
 - estabilizar;
 - rotar o resistir rotación;
 - desplazarse bajo carga.
@@ -242,7 +242,7 @@ Mover una carga sin control no es automáticamente mejor que mover menos con bue
 La Academia valora:
 
 - estabilidad;
-- **coordinación**;
+- coordinación;
 - control;
 - seguridad;
 - capacidad de repetir el esfuerzo.
@@ -277,7 +277,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El entrenamiento no termina al acabar la sesión
 
-La recuperación forma parte del proceso de adaptación.
+**La recuperación forma parte del proceso de adaptación.**
 
 El sistema distingue entre estado agudo y patrones longitudinales.
 
@@ -318,8 +318,8 @@ Una lesión puede exigir:
 - reducir actividad;
 - cambiar ejercicio;
 - tratamiento;
-- **recuperación médica**;
-- **reintroducción progresiva**.
+- recuperación médica;
+- reintroducción progresiva.
 
 La inactividad breve no debe castigar de forma absurda. Periodos prolongados sí pueden afectar adaptación.
 
@@ -335,7 +335,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La rutina es un patrón, no un botón
 
-Una rutina se forma a partir de comportamiento repetido.
+**Una rutina se forma a partir de comportamiento repetido.**
 
 El sistema observa:
 
@@ -357,7 +357,7 @@ Una buena rutina debe convivir con:
 - sueño;
 - relaciones;
 - guardias o prácticas;
-- **recuperación**.
+- recuperación.
 
 Una planificación perfecta sobre el papel puede ser mala si obliga al cadete a dormir poco o incumplir obligaciones.
 
@@ -380,7 +380,7 @@ La preferencia puede ayudar a sostener una rutina, pero no convierte la activida
 
 Una rutina puede alterarse por:
 
-- **horario académico**;
+- horario académico;
 - lesión;
 - viaje;
 - entrenamiento especial;

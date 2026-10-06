@@ -17,7 +17,7 @@ DUT-402 enseña una idea central:
 
 ## 1. Una franja de responsabilidad
 
-Una guardia es un periodo durante el que una persona asume tareas concretas en un puesto o función.
+**Una guardia es un periodo durante el que una persona asume tareas concretas en un puesto o función.**
 
 No significa “estar despierto durante unas horas”. Significa:
 
@@ -78,7 +78,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Llegar preparado
 
-La presentación al puesto comienza antes de sentarse frente a una consola.
+**La presentación al puesto comienza antes de sentarse frente a una consola.**
 
 Incluye:
 
@@ -143,7 +143,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La continuidad depende del relevo
 
-Un relevo transfiere responsabilidad sin perder información importante.
+**Un relevo transfiere responsabilidad sin perder información importante.**
 
 No es:
 
@@ -203,7 +203,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Informar es convertir una observación en información útil
 
-Un informe profesional debe permitir que otra persona comprenda qué ocurre y decida si necesita actuar.
+**Un informe profesional debe permitir que otra persona comprenda qué ocurre y decida si necesita actuar.**
 
 ## 2. Qué informar
 
@@ -270,7 +270,7 @@ La cadena de responsabilidad ayuda a resolver:
 
 ## 2. Responsable de puesto
 
-Es la persona que atiende una función concreta en ese momento.
+**Es la persona que atiende una función concreta en ese momento.**
 
 Debe resolver lo que entra dentro de:
 
@@ -331,7 +331,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La rutina también cuenta
 
-No todas las guardias contienen una emergencia.
+**No todas las guardias contienen una emergencia.**
 
 Una guardia rutinaria puede consistir en:
 

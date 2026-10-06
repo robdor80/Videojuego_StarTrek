@@ -25,9 +25,9 @@ En FED-401 debes poder:
 
 ## 1. Una unión política interestelar
 
-La Federación Unida de Planetas es una **república federal interestelar** formada por mundos miembros que cooperan bajo **instituciones comunes**.
+La Federación Unida de Planetas es una **república federal interestelar** formada por mundos miembros que cooperan bajo instituciones comunes.
 
-No es simplemente una alianza militar ni una colección de planetas unidos por Starfleet. Es una entidad política civil con instituciones propias.
+**No es simplemente una alianza militar ni una colección de planetas unidos por Starfleet.** Es una entidad política civil con instituciones propias.
 
 El proyecto fija como fecha de fundación **2161**, con la ceremonia fundacional situada en **San Francisco, Tierra**.
 
@@ -56,7 +56,7 @@ La existencia de instituciones federales convive con:
 
 Por eso un oficial no puede asumir que una norma cultural humana sea automáticamente universal dentro de la Federación.
 
-## 4. **La Federación cambia con el tiempo**
+## 4. La Federación cambia con el tiempo
 
 La Federación no debe modelarse como una ficha estática.
 
@@ -147,7 +147,7 @@ El cadete aprende a identificar cuándo debe:
 
 - actuar dentro de una misión autorizada;
 - consultar a la cadena de mando;
-- **coordinar** con autoridad civil;
+- coordinar con autoridad civil;
 - esperar una decisión competente.
 
 ### Práctica
@@ -170,7 +170,7 @@ Y además:
 
 > **ESPECIE ≠ CIUDADANÍA**
 
-Ser vulcano no demuestra por sí solo que una persona sea ciudadana de la Federación, representante del gobierno de Vulcano, miembro de Starfleet ni partidaria de una política concreta.
+**Ser vulcano no demuestra por sí solo que una persona sea ciudadana de la Federación, representante del gobierno de Vulcano, miembro de Starfleet ni partidaria de una política concreta.**
 
 Lo mismo vale para cualquier otra especie.
 
@@ -191,8 +191,8 @@ Puede afectar a:
 - jurisdicción;
 - tránsito;
 - tratados;
-- **acceso diplomático**;
-- **respuesta de Starfleet**;
+- acceso diplomático;
+- respuesta de Starfleet;
 - derechos y obligaciones reconocidos;
 - disponibilidad de destinos y misiones.
 
@@ -246,7 +246,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Dos entidades distintas
 
-La Federación es una entidad política civil.
+**La Federación es una entidad política civil.**
 
 Starfleet es un servicio de la Federación.
 
@@ -277,8 +277,8 @@ Starfleet está sujeta a autoridad civil.
 En términos de juego, esto permite que existan:
 
 - órdenes civiles;
-- **autorizaciones de misión**;
-- **restricciones diplomáticas**;
+- autorizaciones de misión;
+- restricciones diplomáticas;
 - directivas de emergencia;
 - decisiones políticas que condicionan operaciones.
 
@@ -329,7 +329,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La Federación no es “humanidad ampliada”
 
-Aunque la Tierra sea uno de los miembros fundadores y San Francisco tenga un papel importante en la historia institucional, la Federación no debe tratarse como si todas sus sociedades compartieran normas humanas.
+**Aunque la Tierra sea uno de los miembros fundadores y San Francisco tenga un papel importante en la historia institucional, la Federación no debe tratarse como si todas sus sociedades compartieran normas humanas.**
 
 La pluralidad cultural es estructural.
 
@@ -369,7 +369,7 @@ Ejemplos de preguntas profesionales:
 - ¿Esta forma de saludo es apropiada aquí?
 - ¿Esta costumbre tiene significado religioso, familiar o político?
 - ¿Estoy confundiendo preferencia personal con norma cultural?
-- ¿La información que tengo procede de experiencia real o de un **estereotipo**?
+- ¿La información que tengo procede de experiencia real o de un estereotipo?
 
 ## 5. Diversidad dentro del mismo grupo
 
@@ -398,7 +398,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Nivel introductorio
 
-FED-401 no pretende inventar una constitución completa de la Federación.
+**FED-401 no pretende inventar una constitución completa de la Federación.**
 
 Por ello esta unidad trabaja **principios generales** y no una lista jurídica exhaustiva de artículos o procedimientos.
 
@@ -415,7 +415,7 @@ Quien ejerce autoridad pública o profesional debe responder por sus decisiones.
 Para un cadete, esto implica:
 
 - no esconder errores;
-- **registrar acciones relevantes**;
+- registrar acciones relevantes;
 - aceptar revisión;
 - distinguir una orden válida de una preferencia personal;
 - reconocer cuándo se ha excedido la propia autoridad.
@@ -424,7 +424,7 @@ Para un cadete, esto implica:
 
 A este nivel, “debido proceso” significa que una actuación con consecuencias importantes no debe depender simplemente del capricho de una persona.
 
-Debe existir una autoridad competente, una base reconocible y un **procedimiento apropiado** al contexto.
+Debe existir una autoridad competente, una base reconocible y un procedimiento apropiado al contexto.
 
 No se enseñan todavía reglas judiciales detalladas.
 

@@ -21,7 +21,7 @@ La asignatura evita convertir las naves en catálogos de cubiertas y salas. El o
 
 ## 1. Pensar por funciones, no por planos memorizados
 
-Dos clases de nave pueden distribuir sus espacios de forma distinta.
+**Dos clases de nave pueden distribuir sus espacios de forma distinta.**
 
 Por eso el conocimiento transferible no es memorizar una cubierta concreta, sino reconocer funciones:
 
@@ -83,7 +83,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Una nave es una organización
 
-Una nave no funciona porque “el puente lo hace todo”.
+**Una nave no funciona porque “el puente lo hace todo”.**
 
 La tripulación se distribuye en departamentos, puestos, equipos y guardias.
 
@@ -164,7 +164,7 @@ El proyecto define cada estación mediante cuatro ideas:
 
 > **FUNCIÓN · SISTEMAS ACCESIBLES · AUTORIDAD · INFORMACIÓN DISPONIBLE**
 
-Una estación es una interfaz profesional, no una decoración.
+**Una estación es una interfaz profesional, no una decoración.**
 
 ## 2. Familias principales en el puente
 
@@ -236,7 +236,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La nave también es hogar temporal
 
-Una misión puede durar días, meses o más.
+**Una misión puede durar días, meses o más.**
 
 Por eso una nave necesita espacios y servicios para sostener la vida cotidiana.
 
@@ -300,7 +300,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Evitar el catálogo
 
-SHP-402 no exige memorizar decenas de clases de nave.
+**SHP-402 no exige memorizar decenas de clases de nave.**
 
 Se estudia la relación:
 
@@ -378,7 +378,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Moverse también es una competencia
 
-En rutina, desplazarse parece trivial.
+**En rutina, desplazarse parece trivial.**
 
 En una emergencia, una mala ruta puede:
 

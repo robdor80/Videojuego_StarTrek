@@ -19,12 +19,12 @@ El programa estándar de formación de oficiales del proyecto dura cuatro años:
 
 | Año | Clase de cadete |
 |---:|---|
-| 1.º | **Cadete de 4.ª clase** |
+| 1.º | Cadete de 4.ª clase |
 | 2.º | Cadete de 3.ª clase |
 | 3.º | Cadete de 2.ª clase |
 | 4.º | Cadete de 1.ª clase |
 
-La progresión interna es común a las eras jugables. La presentación histórica puede variar; por ejemplo, en el siglo XXIII puede aparecer el término guardiamarina/midshipman.
+**La progresión interna es común a las eras jugables.** La presentación histórica puede variar; por ejemplo, en el siglo XXIII puede aparecer el término guardiamarina/midshipman.
 
 Tras la graduación, el rango comisionado inicial normal del proyecto es **Alférez**.
 
@@ -54,7 +54,7 @@ No todas las materias usan exactamente el mismo peso en cada fase, pero la idea 
 
 La progresión anual puede depender de:
 
-- **requisitos académicos**;
+- requisitos académicos;
 - requisitos prácticos;
 - evaluaciones;
 - conducta;
@@ -119,7 +119,7 @@ El problema no es solo obtener una ventaja injusta.
 
 El fraude puede producir un expediente falso y permitir que alguien reciba responsabilidades para las que no está preparado.
 
-El encubrimiento puede agravar una situación porque impide corregir el problema y **destruye confianza**.
+El encubrimiento puede agravar una situación porque impide corregir el problema y destruye confianza.
 
 ## 5. IA como apoyo
 
@@ -149,7 +149,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. La disciplina no es una barra de castigo
 
-La disciplina existe para sostener seguridad, responsabilidad y funcionamiento institucional.
+**La disciplina existe para sostener seguridad, responsabilidad y funcionamiento institucional.**
 
 No se modela como:
 
@@ -163,12 +163,12 @@ Una incidencia puede evaluarse considerando:
 
 - conducta concreta;
 - intención;
-- **consecuencias**;
+- consecuencias;
 - órdenes existentes;
 - daño causado;
 - antecedentes;
 - contexto de misión;
-- **autoridad competente**.
+- autoridad competente.
 
 Dos acciones superficialmente parecidas pueden tener consecuencias distintas.
 
@@ -239,15 +239,15 @@ La vida académica incluye:
 - permisos;
 - tiempo libre.
 
-El objetivo del juego es que los cuatro años se sientan vividos sin obligar al jugador a repetir cada rutina irrelevante.
+**El objetivo del juego es que los cuatro años se sientan vividos sin obligar al jugador a repetir cada rutina irrelevante.**
 
 ## 2. Campus
 
-Para las eras jugables, la Academia terrestre se sitúa en el área de **San Francisco** / Golden Gate, con instalaciones vinculadas al Presidio y terrenos al norte del puente.
+Para las eras jugables, la Academia terrestre se sitúa en el área de San Francisco / Golden Gate, con instalaciones vinculadas al Presidio y terrenos al norte del puente.
 
 El proyecto retiene como elementos de base:
 
-- **campus y terrenos**;
+- campus y terrenos;
 - patio de instrucción;
 - Escuela de Mando;
 - Escuela de Vuelo;
@@ -310,11 +310,11 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Pedir ayuda forma parte de la formación
 
-Una tutoría no representa fracaso personal.
+**Una tutoría no representa fracaso personal.**
 
 Sirve para identificar qué tipo de problema existe:
 
-- **conocimiento insuficiente**;
+- conocimiento insuficiente;
 - mala ejecución;
 - falta de práctica;
 - error de juicio;
@@ -373,15 +373,15 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Una nave no funciona como una colección de solistas
 
-La Academia entrena cooperación porque el servicio real depende de personas que comparten información, responsabilidad y tiempo.
+**La Academia entrena cooperación porque el servicio real depende de personas que comparten información, responsabilidad y tiempo.**
 
 ## 2. Repartir tareas
 
 Un equipo eficaz necesita:
 
-- **objetivo común**;
+- objetivo común;
 - roles comprensibles;
-- **reparto razonable** de trabajo;
+- reparto razonable de trabajo;
 - comunicación;
 - seguimiento;
 - entrega final coherente.
