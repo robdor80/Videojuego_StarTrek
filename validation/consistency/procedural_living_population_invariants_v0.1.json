@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_living_population_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "latent_to_persistent_conserves_population",
+      "expected": [
+        "Tier C to Tier B promotion does not increase total population without a world-state cause",
+        "promoted individual preserves the consumed latent slot context"
+      ]
+    },
+    {
+      "id": "materialized_identity_never_rerolls",
+      "expected": [
+        "name remains stable",
+        "species/culture context remains stable unless changed by explicit world-state event",
+        "assignment and relationships do not reroll when player leaves and returns"
+      ]
+    },
+    {
+      "id": "visible_name_not_identity",
+      "expected": [
+        "changing display name does not regenerate personality, history, residence, assignment or relationships"
+      ]
+    },
+    {
+      "id": "crew_structure_precedes_character_generation",
+      "expected": [
+        "generated Starfleet crew member occupies a valid staffing slot",
+        "rank/position/qualification are compatible",
+        "ship complement accounting remains coherent"
+      ]
+    },
+    {
+      "id": "species_not_personality",
+      "expected": [
+        "two individuals of same species may receive different personality states",
+        "species profile does not directly set morality, loyalty or friendship"
+      ]
+    },
+    {
+      "id": "relationships_require_provenance",
+      "expected": [
+        "initial friendship/trust/mentorship edges reference plausible shared context",
+        "co-location in one scene alone does not create deep relationship history"
+      ]
+    },
+    {
+      "id": "knowledge_not_omniscient",
+      "expected": [
+        "NPC cannot access hidden world truth without a valid knowledge channel",
+        "AI dialogue receives only authorized/known information"
+      ]
+    },
+    {
+      "id": "schedule_has_physical_exclusivity",
+      "expected": [
+        "one NPC cannot perform incompatible activities in parallel",
+        "conversation does not teleport an unavailable NPC",
+        "travel time and duty obligations constrain presence"
+      ]
+    },
+    {
+      "id": "deterministic_subsystems_are_isolated",
+      "expected": [
+        "adding a new unrelated generator subsystem does not reroll existing identity/personality/relationship outputs",
+        "same campaign seed + stable entity ID + subsystem key + rules version reproduces the same unresolved result"
+      ]
+    },
+    {
+      "id": "save_upgrade_does_not_silently_reroll",
+      "expected": [
+        "existing materialized NPCs remain stable after generator rule updates",
+        "changes occur only through explicit migration or world-state events"
+      ]
+    }
+  ]
+}
