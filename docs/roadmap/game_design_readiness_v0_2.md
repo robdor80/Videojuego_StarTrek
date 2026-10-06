@@ -166,7 +166,7 @@ Runtime implementation is deferred where CoreRPG does not yet expose the require
 2. ✅ **Seven branch curricula built** for Command, Flight/Navigation, Operations, Engineering, Tactical/Security, Science/Sensors and Medical, including advanced 2nd/1st Class progression and study packs.
 3. Define **professional evaluation/recommendation outputs** that consume operational evidence without becoming global scores.
 4. Start concrete **technology/equipment, medicine/science and historical-conflict content packs** with provenance.
-5. Add **procedural generation grammars and distributions** for ordinary stars/planets, civilizations, ship roles/operators, facilities and traffic.
+5. Add **procedural generation grammars and distributions** for ordinary stars/planets, civilizations, ship roles/operators, facilities and traffic, then deepen living-population generation with Starfleet/station/planetary slot structures, derived subsystem seeds, schedules and species/culture composition.
 6. Define **AI context filtering/assembly implementation requirements** in a form compatible with CoreRPG/Host privacy boundaries.
 7. Expand **Starship Computer integration** with records/logs, crew lookup, ship status, navigation and analysis.
 8. Add validation rules checking cross-pillar contradictions as the content grows.
