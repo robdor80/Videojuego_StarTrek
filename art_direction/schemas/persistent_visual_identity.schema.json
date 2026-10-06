@@ -1,0 +1,76 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star_trek/persistent_visual_identity.schema.json",
+  "title": "Star Trek Persistent Visual Identity",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "visual_identity_id",
+    "entity_id",
+    "entity_type",
+    "identity_anchor_version",
+    "identity_anchors",
+    "creation_provenance"
+  ],
+  "properties": {
+    "visual_identity_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entity_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "entity_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity_anchor_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "creation_provenance": {
+      "type": "object"
+    },
+    "identity_anchors": {
+      "type": "object"
+    },
+    "persistent_modification_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_evolution_channels": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_identity_changes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes_visual_identity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "migration_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "x_rules": [
+    "One persistent entity may have many visual assets but one continuous base visual identity lineage.",
+    "Age progression and persistent scars modify/evolve identity without creating an unrelated person.",
+    "Temporary clothing, lighting, dirt, injury presentation and environmental exposure are current-state overlays.",
+    "A replacement visual identity requires explicit migration or an explicit world event that actually replaces the entity.",
+    "visual_identity_id must remain traceable through NAP asset metadata."
+  ]
+}
