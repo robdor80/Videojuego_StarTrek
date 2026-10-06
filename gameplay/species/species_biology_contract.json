@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "species_biology_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Species biology constrains physiology and lifecycle; it does not define culture, citizenship, faction, personality or morality.",
+  "required_profile_sections": [
+    "identity",
+    "morphology",
+    "physiology",
+    "environmental_tolerances",
+    "development_and_aging",
+    "reproduction_if_known",
+    "sensory_and_cognitive_capabilities",
+    "medical_hooks",
+    "individual_variation",
+    "provenance"
+  ],
+  "unknown_policy": {
+    "unknown_is_valid": true,
+    "no_human_default_for_missing_nonhuman_data": true,
+    "no_invention_to_fill_schema": true,
+    "inferred_values_require_labeled_provenance": true
+  },
+  "morphology": {
+    "fields": [
+      "body_plan",
+      "external_traits",
+      "internal_anatomy_refs",
+      "sexual_dimorphism_if_established",
+      "developmental_changes",
+      "individual_variation_ranges"
+    ],
+    "visual_identity_link_required": true
+  },
+  "physiology": {
+    "fields": [
+      "metabolism",
+      "circulation",
+      "respiration",
+      "temperature_profile",
+      "sleep_or_rest",
+      "nutrition",
+      "environmental_tolerances",
+      "regeneration_or_recovery",
+      "species_specific_states"
+    ]
+  },
+  "development_and_aging": {
+    "fields": [
+      "birth_or_creation_mode",
+      "maturity_model",
+      "development_stages",
+      "typical_lifespan_if_established",
+      "aging_profile",
+      "senescence_notes"
+    ],
+    "chronological_age_must_not_be_interpreted_using_human_stage_thresholds_without_profile_support": true
+  },
+  "reproduction_if_known": {
+    "fields": [
+      "reproductive_mode",
+      "reproductive_roles_if_established",
+      "fertility_or_cycle_states_if_established",
+      "gestation_or_development_if_established",
+      "offspring_development_if_established",
+      "cross_species_compatibility_if_established"
+    ],
+    "consent_and_privacy_states_are_separate_from_biology": true,
+    "parentage_is_not_inferred_from_pair_status": true
+  },
+  "sex_gender_variation": {
+    "biological_sex_model_may_be_species_specific": true,
+    "gender_identity_and_social_role_are_not_inferred_from_reproductive_biology": true,
+    "binary_human_model_is_not_universal_default": true,
+    "unknown_or_unmodeled_variation_must_not_be_fabricated": true
+  },
+  "capabilities": {
+    "contextual_not_flat_bonuses": true,
+    "training_may_gate_use": true,
+    "knowledge_and_consent_may_gate_use": true,
+    "telepathy_or_empathy_is_not_omniscience": true
+  },
+  "rules": [
+    "Species profiles may expose only claims supported by project provenance.",
+    "Individual characters may vary within or outside common species ranges when authoritative state supports it.",
+    "Culture and upbringing may influence behavior but are not biological fields.",
+    "Medical resolution consumes the patient's species profile plus individual state.",
+    "Visual generation consumes morphology plus individual visual identity; it does not create new biological facts."
+  ]
+}
