@@ -1,14 +1,23 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "selection_model": "division_then_specialization",
+  "canonical_specialization_count": 7,
   "can_start_undecided": true,
   "can_change_specialization": true,
   "change_requires": "academic_review_and_catchup",
+  "legacy_id_map": {
+    "flight_control_navigation": "flight_navigation",
+    "science": "science_sensors",
+    "astrophysics_cartography": "science_sensors",
+    "exosciences": "science_sensors"
+  },
   "specializations": [
     {
       "id": "command",
+      "academy_branch_id": "command",
       "division_id": "command",
       "display_es": "Mando",
+      "legacy_ids": [],
       "career_examples": [
         "oficial_de_mando",
         "primer_oficial",
@@ -19,12 +28,20 @@
         "command_decision",
         "diplomacy",
         "bridge_operations"
+      ],
+      "subspecializations": [
+        "diplomacy",
+        "command_operations"
       ]
     },
     {
-      "id": "flight_control_navigation",
+      "id": "flight_navigation",
+      "academy_branch_id": "flight_navigation",
       "division_id": "command",
-      "display_es": "Control de vuelo y navegación",
+      "display_es": "Vuelo / Navegación",
+      "legacy_ids": [
+        "flight_control_navigation"
+      ],
       "career_examples": [
         "oficial_de_control_de_vuelo",
         "navegante",
@@ -35,12 +52,39 @@
         "navigation",
         "astrogation",
         "small_craft"
+      ],
+      "subspecializations": [
+        "astrogation",
+        "small_craft",
+        "advanced_flight_control"
+      ]
+    },
+    {
+      "id": "operations",
+      "academy_branch_id": "operations",
+      "division_id": "operations",
+      "display_es": "Operaciones",
+      "legacy_ids": [],
+      "career_examples": [
+        "oficial_de_operaciones"
+      ],
+      "competency_focus": [
+        "resource_management",
+        "ship_operations",
+        "systems_coordination",
+        "logistics"
+      ],
+      "subspecializations": [
+        "resource_coordination",
+        "mission_operations"
       ]
     },
     {
       "id": "engineering",
+      "academy_branch_id": "engineering",
       "division_id": "operations",
       "display_es": "Ingeniería",
+      "legacy_ids": [],
       "career_examples": [
         "oficial_de_ingenieria",
         "jefe_de_ingenieria"
@@ -50,26 +94,19 @@
         "warp_systems",
         "power",
         "damage_control"
-      ]
-    },
-    {
-      "id": "operations",
-      "division_id": "operations",
-      "display_es": "Operaciones",
-      "career_examples": [
-        "oficial_de_operaciones"
       ],
-      "competency_focus": [
-        "resource_management",
-        "ship_operations",
-        "systems_coordination",
-        "logistics"
+      "subspecializations": [
+        "propulsion",
+        "power_systems",
+        "damage_control"
       ]
     },
     {
       "id": "security_tactical",
+      "academy_branch_id": "security_tactical",
       "division_id": "operations",
-      "display_es": "Seguridad y Táctica",
+      "display_es": "Seguridad / Táctica",
+      "legacy_ids": [],
       "career_examples": [
         "oficial_tactico",
         "jefe_de_seguridad",
@@ -81,60 +118,58 @@
         "security",
         "combat",
         "risk_management"
+      ],
+      "subspecializations": [
+        "ship_security",
+        "tactical_operations"
       ]
     },
     {
-      "id": "science",
+      "id": "science_sensors",
+      "academy_branch_id": "science_sensors",
       "division_id": "sciences",
-      "display_es": "Ciencias",
+      "display_es": "Ciencia / Sensores",
+      "legacy_ids": [
+        "science",
+        "astrophysics_cartography",
+        "exosciences"
+      ],
       "career_examples": [
         "oficial_cientifico",
+        "oficial_de_sensores",
         "jefe_cientifico"
       ],
       "competency_focus": [
         "scientific_method",
+        "sensor_operations",
         "sensor_analysis",
-        "research",
-        "field_science"
-      ]
-    },
-    {
-      "id": "astrophysics_cartography",
-      "division_id": "sciences",
-      "display_es": "Astrofísica y cartografía",
-      "career_examples": [
-        "astrofisico",
-        "cartografo_estelar",
-        "oficial_cientifico"
+        "research"
       ],
-      "competency_focus": [
-        "astrophysics",
-        "stellar_cartography",
-        "subspace",
-        "celestial_analysis"
-      ]
-    },
-    {
-      "id": "exosciences",
-      "division_id": "sciences",
-      "display_es": "Exociencias",
-      "career_examples": [
-        "exobiologo",
-        "xenoantropologo",
-        "oficial_cientifico"
+      "qualification_tracks": [
+        "science_analysis",
+        "sensor_operations"
       ],
-      "competency_focus": [
-        "exobiology",
-        "xenology",
-        "anthropology",
-        "linguistics"
+      "subspecializations": [
+        "astrophysics_cartography",
+        "exosciences",
+        "stellar_cartography"
+      ],
+      "operational_manuals": [
+        {
+          "id": "sensors_operator_manual",
+          "path": "gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md",
+          "console_spec": "gameplay/ship_operations/consoles/sensors/README.md",
+          "relation": "operational_training_not_separate_specialization"
+        }
       ]
     },
     {
       "id": "medical",
+      "academy_branch_id": "medical",
       "division_id": "sciences",
       "professional_route": "starfleet_medical",
       "display_es": "Medicina",
+      "legacy_ids": [],
       "career_examples": [
         "oficial_medico",
         "jefe_medico"
@@ -144,13 +179,20 @@
         "diagnostics",
         "emergency_care",
         "xenomedicine"
+      ],
+      "subspecializations": [
+        "emergency_medicine",
+        "xenomedicine"
       ]
     }
   ],
   "design_notes": [
-    "The list is deliberately smaller than the full canon list of academic majors.",
-    "Canon majors are represented through course choices, electives and qualifications beneath these playable specializations.",
-    "Medical training is flagged as a distinct professional route."
+    "Academy exposes exactly seven playable top-level specializations.",
+    "Academy branch ids are canonical across game data and the public academy web.",
+    "Astrophysics/cartography and exosciences are science/sensors subspecializations, not top-level branches.",
+    "Sensor operations is an operational qualification track inside Science / Sensors; the Sensors Operator Manual teaches the real console and is not an eighth specialization.",
+    "Legacy ids are normalized through legacy_id_map when older saves or data are encountered.",
+    "Medical training remains a distinct professional route inside the seven-branch academy model."
   ],
   "provenance": [
     {
