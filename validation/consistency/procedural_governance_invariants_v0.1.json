@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_governance_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "governance_contract_ref": "universe/global_rules/procedural_governance_contract.json",
+  "cases": [
+    {
+      "id": "campaign_history_outranks_future_canon",
+      "expected": [
+        "A post-start canonical event is not forced into an already-running campaign.",
+        "Persisted campaign consequences remain authoritative even when later screen canon differs."
+      ]
+    },
+    {
+      "id": "canonical_reservation_blocks_procedural_collision",
+      "expected": [
+        "Procedural generation cannot overwrite a canon-reserved entity/location valid for the campaign date.",
+        "Unreserved space may be procedurally enriched."
+      ]
+    },
+    {
+      "id": "materialized_state_outranks_generator_defaults",
+      "expected": [
+        "Existing entity state is loaded rather than regenerated.",
+        "Generator rule changes do not silently rewrite materialized entities."
+      ]
+    },
+    {
+      "id": "display_name_is_not_identity",
+      "expected": [
+        "Renaming an entity preserves its stable ID, history and linked state.",
+        "Two entities may not become the same entity merely because their visible names match."
+      ]
+    },
+    {
+      "id": "subsystem_rng_isolation",
+      "expected": [
+        "Adding a new unrelated subsystem does not change existing identity/personality/relationship outputs.",
+        "Derived seeds include campaign seed, stable entity ID, subsystem key and rules version."
+      ]
+    },
+    {
+      "id": "migration_is_explicit",
+      "expected": [
+        "Rules-version changes use keep-persisted, explicit migration or new-saves-only regeneration.",
+        "Silent regeneration of existing persistent entities fails validation."
+      ]
+    },
+    {
+      "id": "provenance_boundary_visible",
+      "expected": [
+        "INFERRED and GAME_ADDITION claims remain distinguishable from SCREEN_CANON.",
+        "Authority and confidence are represented as separate concepts."
+      ]
+    },
+    {
+      "id": "observation_does_not_create_truth",
+      "expected": [
+        "Sensor, tricorder, dialogue or AI requests cannot spawn the fact they are querying.",
+        "Knowledge changes after observation while ground truth remains independently authoritative."
+      ]
+    },
+    {
+      "id": "core_vs_trek_ownership",
+      "expected": [
+        "Generic persistence/identity semantics are not duplicated as setting-specific Star Trek rules without justification.",
+        "Trek-specific canon, species, organizations and technology remain in the Star Trek layer."
+      ]
+    },
+    {
+      "id": "definition_of_done_gate",
+      "expected": [
+        "Gameplay-relevant lore cannot be marked complete without game-facing rules/data where applicable.",
+        "Persistent/generated domains declare identity, seed, persistence, versioning and validation behavior."
+      ]
+    }
+  ]
+}
