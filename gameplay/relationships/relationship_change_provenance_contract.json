@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "relationship_change_provenance",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Relationship state is persistent, directional and multidimensional; every meaningful change requires represented cause and provenance.",
+  "relationship_state_refs": [
+    "gameplay/relationships/relationship_state_model.json",
+    "gameplay/social/relationship_graph_model.json",
+    "gameplay/social/social_event_rules.json"
+  ],
+  "initial_edge_requirements": [
+    "participant_refs",
+    "plausible_shared_context_ref",
+    "initial_dimension_values",
+    "knowledge_visibility",
+    "source_or_generation_provenance"
+  ],
+  "change_record_fields": [
+    "relationship_event_id",
+    "observer_character_id",
+    "subject_character_id",
+    "cause_event_refs",
+    "changed_dimensions",
+    "previous_values",
+    "new_values",
+    "occurred_at",
+    "knowledge_visibility"
+  ],
+  "rules": [
+    "Initial friendship, trust, mentorship, hostility or intimacy cannot exist without plausible shared-history provenance.",
+    "Co-location alone may create recognition/familiarity but not deep relationship history.",
+    "A single positive interaction does not automatically create friendship or strong trust.",
+    "A disagreement does not automatically create permanent hostility.",
+    "Professional respect, command confidence, personal affinity, trust, fear, affection and intimacy remain separate dimensions.",
+    "Relationship edges are directional and may be asymmetric.",
+    "Rank or authority can require compliance without creating trust, affection or consent.",
+    "Romantic interest may be unilateral; relationship commitment requires compatible reciprocal state.",
+    "Consent is event/context specific and is never inferred from rank, prior affection, reputation, gifts or repeated pressure.",
+    "Separation, transfer, death or estrangement does not erase shared history.",
+    "Off-screen relationship changes require plausible contact, elapsed time and represented interaction/event causes.",
+    "AI can express relationship state but cannot directly authoritatively advance it without validated events."
+  ],
+  "core_rpg_candidate": true
+}
