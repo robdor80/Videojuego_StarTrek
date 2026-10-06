@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_context_resolution_hierarchy",
+  "status": "foundation_fixed",
+  "purpose": "Resolve layered procedural constraints before materializing persistent Star Trek world entities.",
+  "resolution_layers": [
+    "core_simulation_capabilities",
+    "campaign_date_and_era",
+    "canonical_reservations_and_campaign_history",
+    "polity_faction_or_operator",
+    "civilization_species_and_culture_context",
+    "entity_class_and_function",
+    "local_location_context",
+    "instance_specific_overrides",
+    "authoritative_world_state"
+  ],
+  "composition_rules": [
+    "Lower layers may refine inherited constraints but cannot silently contradict higher-authority canon or World State.",
+    "Species and culture are compositional contexts rather than a single rigid inheritance chain.",
+    "Authored instance data overrides procedural defaults within canon and temporal constraints.",
+    "World State is authoritative for already-materialized entities.",
+    "A generator upgrade never silently rerolls an existing materialized entity."
+  ],
+  "deterministic_seed": {
+    "global_sequential_rng_for_persistent_generation_forbidden": true,
+    "derived_seed_inputs": [
+      "campaign_seed",
+      "stable_entity_id",
+      "subsystem_key",
+      "rules_version"
+    ],
+    "recommended_subsystem_keys": [
+      "identity",
+      "naming",
+      "species_population",
+      "culture",
+      "residence",
+      "career_or_assignment",
+      "qualifications",
+      "personality",
+      "knowledge",
+      "memory",
+      "relationships",
+      "social_circles",
+      "schedule",
+      "appearance",
+      "possessions",
+      "local_activity"
+    ],
+    "visible_name_is_not_technical_identity": true,
+    "unrelated_subsystems_must_not_reroll_when_new_subsystem_is_added": true
+  },
+  "versioning": {
+    "persist_rules_version": true,
+    "persist_generator_version": true,
+    "persist_seed_provenance": true,
+    "valid_upgrade_strategies": [
+      "keep_persisted_result",
+      "explicit_migration",
+      "new_saves_only_regeneration"
+    ]
+  }
+}
