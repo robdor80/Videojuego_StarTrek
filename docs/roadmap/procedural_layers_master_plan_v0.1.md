@@ -43,14 +43,14 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 001 | Jerarquía de autoridad de datos | PARTIAL | — | Canon, campaña, procedural y World State tienen precedencia inequívoca |
-| 002 | Separación CoreRPG / Star Trek | PARTIAL | 001 | Cada contrato sabe si es genérico o Trek-específico |
-| 003 | Identificadores estables y namespaces | PARTIAL | 001 | Todas las entidades persistentes pueden referenciarse sin usar nombres visibles |
-| 004 | Semillas deterministas por subsistema | PARTIAL | 003 | Añadir subsistemas no rerolleará resultados existentes |
-| 005 | Versionado y migraciones | PARTIAL | 003-004 | Cambios de reglas tienen estrategia de migración explícita |
-| 006 | Canon temporal y reservas | PARTIAL | 001 | Generadores no pisan hechos/entidades reservados por fecha |
-| 007 | Proveniencia y confianza de fuentes | PARTIAL | 001 | Todo dato sensible a canon puede rastrear fuente y nivel de autoridad |
-| 008 | Definición de terminado y validación transversal | IN_PROGRESS | 001-007 | Toda futura capa usa la misma plantilla de cierre |
+| 001 | Jerarquía de autoridad de datos | COMPLETE | — | Canon, campaña, procedural y World State tienen precedencia inequívoca |
+| 002 | Separación CoreRPG / Star Trek | COMPLETE | 001 | Cada contrato sabe si es genérico o Trek-específico |
+| 003 | Identificadores estables y namespaces | COMPLETE | 001 | Todas las entidades persistentes pueden referenciarse sin usar nombres visibles |
+| 004 | Semillas deterministas por subsistema | COMPLETE | 003 | Añadir subsistemas no rerolleará resultados existentes |
+| 005 | Versionado y migraciones | COMPLETE | 003-004 | Cambios de reglas tienen estrategia de migración explícita |
+| 006 | Canon temporal y reservas | COMPLETE | 001 | Generadores no pisan hechos/entidades reservados por fecha |
+| 007 | Proveniencia y confianza de fuentes | COMPLETE | 001 | Todo dato sensible a canon puede rastrear fuente y nivel de autoridad |
+| 008 | Definición de terminado y validación transversal | COMPLETE | 001-007 | Toda futura capa usa la misma plantilla de cierre |
 
 # FASE 1 — EXISTENCIA, IDENTIDAD Y PERSISTENCIA
 
