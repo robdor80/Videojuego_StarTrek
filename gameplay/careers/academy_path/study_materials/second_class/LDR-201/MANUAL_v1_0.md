@@ -1,6 +1,7 @@
 # LDR-201 — Liderazgo y responsabilidad de equipo II
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,14 +11,16 @@ Supervisar pequeñas tareas y personas manteniendo estándares, seguridad y resp
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## LDR-201-U01 — Estándares y expectativas
 
 ### Contenido profesional
 
-- **objetivo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **criterio**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **seguridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **plazo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **objetivo**: Describe el resultado que debe lograrse y debe estar claro antes de repartir tareas.
+- **criterio**: Criterio debe expresarse como un resultado o condición verificable, relacionado con la intención de misión y sus restricciones.
+- **seguridad**: Limita cualquier procedimiento: se identifican peligros, protecciones, condición de aborto y quién puede autorizar continuar.
+- **plazo**: Plazo ordena la actuación comparando seguridad, misión, tiempo, impacto y recursos disponibles.
 
 ### Trabajo práctico
 
@@ -42,10 +45,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **capacidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **carga**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **checkpoints**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **intervención**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **capacidad**: Es lo que un sistema o equipo puede hacer en su estado actual, no en condiciones ideales.
+- **carga**: Combina número de tareas, dificultad, interrupciones y tiempo disponible; una carga excesiva degrada calidad y seguridad.
+- **checkpoints**: Checkpoints se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **intervención**: Intervención se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
 
 ### Trabajo práctico
 
@@ -70,10 +73,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **hecho**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **impacto**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **corrección**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **respeto**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **hecho**: Hecho se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **impacto**: Impacto se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **corrección**: Identifica el desvío, restaura el procedimiento y verifica el nuevo resultado antes de cerrar.
+- **respeto**: Respeto se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
 
 ### Trabajo práctico
 
@@ -98,10 +101,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **multitarea**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **urgencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **fatiga**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **recurso humano**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **multitarea**: Multitarea se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **urgencia**: Urgencia ordena la actuación comparando seguridad, misión, tiempo, impacto y recursos disponibles.
+- **fatiga**: Reduce atención, memoria de trabajo y calidad de decisión, por lo que debe incorporarse al reparto de carga y a la seguridad.
+- **recurso humano**: Recurso humano se evalúa por estado actual, disponibilidad, demanda, dependencias y margen antes de comprometerlo a una tarea.
 
 ### Trabajo práctico
 
@@ -126,10 +129,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **supervisión**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **escalado**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **registro**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **aprendizaje**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **supervisión**: Establece objetivo, límites y puntos de control, dejando autonomía proporcional a competencia y riesgo.
+- **escalado**: Transfiere una decisión a la autoridad o especialidad adecuada cuando se exceden límites, recursos o riesgo aceptable.
+- **registro**: Conserva estado, decisiones, acciones, resultados y pendientes para continuidad y trazabilidad.
+- **aprendizaje**: Aprendizaje se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
 
 ### Trabajo práctico
 
@@ -154,10 +157,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **briefing**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **ejecución**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **control**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **debrief**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **briefing**: Alinea objetivo, roles, límites, riesgos, criterio de éxito y mecanismo de comunicación antes de ejecutar.
+- **ejecución**: Ejecución se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **control**: Control se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **debrief**: Reconstruye qué se sabía, qué se decidió, qué ocurrió y qué debe cambiar, sin juzgar con información conocida solo después.
 
 ### Trabajo práctico
 

@@ -1,6 +1,7 @@
 # XTR-201 — Formación cruzada I
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,14 +11,16 @@ Abrir un foco secundario real sin confundir familiarización con cualificación 
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## XTR-201-U01 — Elección de foco secundario
 
 ### Contenido profesional
 
-- **interés**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **utilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **prerrequisitos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **carga**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **interés**: Interés se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **utilidad**: Utilidad se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **prerrequisitos**: Prerrequisitos se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **carga**: Combina número de tareas, dificultad, interrupciones y tiempo disponible; una carga excesiva degrada calidad y seguridad.
 
 ### Trabajo práctico
 
@@ -42,10 +45,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **terminología**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **sistemas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **roles**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **límites**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **terminología**: Reduce ambigüedad entre profesionales y permite interpretar estados, órdenes y reportes con precisión.
+- **sistemas**: Sistemas se evalúa por estado actual, disponibilidad, demanda, dependencias y margen antes de comprometerlo a una tarea.
+- **roles**: Delimitan responsabilidad y autoridad de cada persona dentro del equipo.
+- **límites**: Definen hasta dónde puede actuar el cadete por competencia, autoridad, estado y riesgo; fuera de ellos se detiene, consulta o escala.
 
 ### Trabajo práctico
 
@@ -70,8 +73,8 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **principios**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **riesgos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **principios**: Principios se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **riesgos**: Deben expresarse de forma concreta: qué puede ocurrir, con qué impacto y qué mitigación existe.
 - **interfaz con rama principal**: La especialización define el núcleo profesional principal del cadete. A partir de 2.ª clase se espera ejecución real bajo supervisión, no mera familiarización.
 
 ### Trabajo práctico
@@ -97,9 +100,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **tarea segura**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **supervisión**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **reporte**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **tarea segura**: Tarea segura se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **supervisión**: Establece objetivo, límites y puntos de control, dejando autonomía proporcional a competencia y riesgo.
+- **reporte**: Separa hechos, interpretación, resultado, limitaciones y pendientes para que otro pueda actuar.
 
 ### Trabajo práctico
 
@@ -124,9 +127,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **habilidades relacionadas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **límites**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **no equivalencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **habilidades relacionadas**: Habilidades relacionadas se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **límites**: Definen hasta dónde puede actuar el cadete por competencia, autoridad, estado y riesgo; fuera de ellos se detiene, consulta o escala.
+- **no equivalencia**: No equivalencia se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
 
 ### Trabajo práctico
 
@@ -151,9 +154,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **objetivo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **práctica futura**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **límites de autoridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **objetivo**: Describe el resultado que debe lograrse y debe estar claro antes de repartir tareas.
+- **práctica futura**: Práctica futura se trata como un elemento operativo explícito: el cadete debe saber qué significa en la tarea, cómo modifica el plan o el riesgo, qué límite impone y cuándo debe informar o escalar.
+- **límites de autoridad**: Límites de autoridad delimita qué puede hacer el cadete por competencia y autorización; fuera de ese marco debe consultar o transferir la decisión.
 
 ### Trabajo práctico
 
