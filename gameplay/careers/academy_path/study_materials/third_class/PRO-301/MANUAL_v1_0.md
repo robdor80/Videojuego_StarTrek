@@ -11,7 +11,7 @@ Convertir acciones aisladas en trabajo coordinado, trazable y profesional. PRO-3
 
 # PRO-301-U01 — Orden, tarea y responsabilidad
 
-Una orden expresa qué debe lograrse y bajo qué límites. No tiene por qué dictar cada paso técnico.
+**Una orden expresa qué debe lograrse y bajo qué límites.** No tiene por qué dictar cada paso técnico.
 
 Ejemplo: “Preparar ruta segura a Vulcano y reportar ETA.”
 
@@ -40,7 +40,7 @@ Descompón una orden de misión en cinco tareas y asigna responsable y condició
 
 # PRO-301-U02 — Informes estructurados
 
-Un informe operativo debe ayudar a decidir.
+**Un informe operativo debe ayudar a decidir.**
 
 Una estructura útil separa:
 - hechos;
@@ -71,7 +71,7 @@ Emite tres informes de 30 segundos: técnico, sensor y logístico.
 
 # PRO-301-U03 — Handoff interdepartamental
 
-Un handoff transfiere una tarea, caso o paquete de información entre responsables.
+**Un handoff transfiere una tarea, caso o paquete de información entre responsables.**
 
 Debe incluir:
 - identificador;
@@ -107,7 +107,7 @@ Transfiere un caso de Sensores a Ciencia y después de Ciencia a Mando.
 
 # PRO-301-U04 — Prioridades en conflicto
 
-Dos necesidades legítimas pueden competir por recursos, tiempo o autoridad.
+**Dos necesidades legítimas pueden competir por recursos, tiempo o autoridad.**
 
 Para compararlas se consideran:
 - misión;
@@ -141,7 +141,7 @@ Resuelve tres conflictos de prioridad, uno técnico y dos de mando.
 
 # PRO-301-U05 — Registro operativo
 
-El Operational Event Log registra hechos estructurados.
+**El Operational Event Log registra hechos estructurados.**
 
 No asigna:
 - notas;
@@ -187,7 +187,7 @@ La micro-misión sigue:
 
 > orden → tareas → coordinación → ejecución → reporte → handoff → registro
 
-Antes de empezar se fijan objetivo, roles, restricciones, información conocida y autoridad.
+**Antes de empezar se fijan objetivo, roles, restricciones, información conocida y autoridad.**
 
 Durante la ejecución, el equipo:
 - mantiene responsables claros;

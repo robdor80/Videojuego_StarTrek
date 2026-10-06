@@ -32,7 +32,7 @@ Por eso deben separarse:
 
 ## 2. Órdenes
 
-Una orden válida debe provenir de una autoridad competente y ser aplicable al contexto.
+**Una orden válida debe provenir de una autoridad competente y ser aplicable al contexto.**
 
 El cadete no evalúa una orden solo por el rango de quien la emite.
 
@@ -91,7 +91,7 @@ El proyecto la aplica contextualmente a:
 
 ## 2. No es un “muro invisible”
 
-La regulación no bloquea físicamente al jugador.
+**La regulación no bloquea físicamente al jugador.**
 
 Puede desobedecerse.
 
@@ -158,7 +158,7 @@ El cadete no debe inventar:
 - permisos;
 - castigos.
 
-Debe trabajar con normas conocidas y autoridad real.
+**Debe trabajar con normas conocidas y autoridad real.**
 
 ## 3. Aclaración
 
@@ -196,7 +196,7 @@ Responder a una orden discutible sin asumir que el cadete conoce toda la doctrin
 
 ## 1. Ámbitos distintos
 
-Algunas posiciones poseen autoridad especial dentro de un ámbito concreto.
+**Algunas posiciones poseen autoridad especial dentro de un ámbito concreto.**
 
 No significa autoridad universal.
 
@@ -249,7 +249,7 @@ Compara cuatro casos donde Medicina, Seguridad, Mando y clasificación afectan a
 
 ## 1. Need-to-know
 
-Tener identidad, rango o acceso técnico no basta.
+**Tener identidad, rango o acceso técnico no basta.**
 
 La información restringida puede requerir:
 - función;
@@ -318,7 +318,7 @@ Un caso complejo debe dividirse en:
 
 ## 2. Hechos
 
-Primero se establece qué ocurrió realmente y qué se sabe.
+**Primero se establece qué ocurrió realmente y qué se sabe.**
 
 ## 3. Norma
 
