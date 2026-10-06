@@ -1,6 +1,7 @@
 # PRJ-203 — Trabajo aplicado de especialidad
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,14 +11,16 @@ Demostrar capacidad para planificar, ejecutar y explicar una tarea profesional e
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## PRJ-203-U01 — Definición del problema
 
 ### Contenido profesional
 
-- **alcance**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **objetivo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **restricciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **evidencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **alcance**: Alcance se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **objetivo**: Describe el resultado que debe lograrse y debe estar claro antes de repartir tareas.
+- **restricciones**: Restricciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **evidencia**: Debe ser observable y trazable: qué se hizo, en qué contexto, con qué resultado y bajo qué supervisión.
 
 ### Trabajo práctico
 
@@ -42,10 +45,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **método**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **recursos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **riesgos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **hitos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **método**: Método se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **recursos**: Recursos se evalúa por disponibilidad, demanda, dependencias y margen antes de comprometerlo.
+- **riesgos**: Deben expresarse de forma concreta: qué puede ocurrir, con qué impacto y qué mitigación existe.
+- **hitos**: Hitos se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -70,10 +73,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **datos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **acciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **cambios**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **registro**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **datos**: Datos debe conservar origen, recencia, fiabilidad y contexto para sostener una decisión sin convertir inferencias en certezas.
+- **acciones**: Acciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **cambios**: Cambios se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **registro**: Conserva estado, decisiones, acciones, resultados y pendientes para continuidad y trazabilidad.
 
 ### Trabajo práctico
 
@@ -98,10 +101,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **prueba**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **resultado**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **limitaciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **repetibilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **prueba**: Prueba se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **resultado**: Se describe con evidencia observable y con sus límites; éxito parcial y fallo también deben documentarse.
+- **limitaciones**: Limitaciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **repetibilidad**: Repetibilidad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -126,10 +129,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **hechos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **método**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **resultado**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **recomendación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **hechos**: Hechos se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **método**: Método se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **resultado**: Se describe con evidencia observable y con sus límites; éxito parcial y fallo también deben documentarse.
+- **recomendación**: Recomendación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -154,10 +157,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **preguntas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **decisiones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **lecciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **mejoras**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **preguntas**: Preguntas se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **decisiones**: Decisiones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **lecciones**: Lecciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **mejoras**: Mejoras se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 

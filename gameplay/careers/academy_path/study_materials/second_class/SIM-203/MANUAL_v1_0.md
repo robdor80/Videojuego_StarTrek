@@ -1,6 +1,7 @@
 # SIM-203 — Simulación operacional compleja II
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,14 +11,16 @@ Probar la rama dentro de una misión que combina carga, degradación, personas y
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## SIM-203-U01 — Briefing incompleto
 
 ### Contenido profesional
 
-- **datos conocidos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **datos conocidos**: Datos conocidos debe conservar origen, recencia, fiabilidad y contexto para sostener una decisión sin convertir inferencias en certezas.
 - **incertidumbre**: La incertidumbre no se oculta. Se incorpora a la decisión mediante márgenes, verificación, alternativas y comunicación explícita.
-- **roles**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **restricciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **roles**: Roles se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **restricciones**: Restricciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -42,10 +45,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **rutina**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **carga**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **comunicación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **logs**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **rutina**: Rutina se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **carga**: Carga se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **comunicación**: Debe ser proporcional, precisa y dirigida a quien puede actuar; demasiado ruido también degrada la operación.
+- **logs**: Logs preserva continuidad mediante hechos, estado, acciones, resultado, limitaciones y pendientes.
 
 ### Trabajo práctico
 
@@ -70,9 +73,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **detección**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **respuesta**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **coordinación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **detección**: Detección se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **respuesta**: Respuesta se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **coordinación**: Coordinación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -97,8 +100,8 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **segundo problema**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **recursos limitados**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **segundo problema**: Segundo problema se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **recursos limitados**: Recursos limitados se evalúa por disponibilidad, demanda, dependencias y margen antes de comprometerlo.
 - **prioridades**: Priorizar implica comparar misión, seguridad, tiempo, recursos y reversibilidad. La mejor acción puede no ser la más rápida ni la más vistosa.
 
 ### Trabajo práctico
@@ -124,10 +127,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **éxito parcial**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **costes**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **seguridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **misión**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **éxito parcial**: Éxito parcial se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **costes**: Costes se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **seguridad**: Limita cualquier procedimiento: se identifican peligros, protecciones, condición de aborto y quién puede autorizar continuar.
+- **misión**: Define qué se intenta conseguir y bajo qué restricciones; las decisiones locales deben relacionarse con esa intención.
 
 ### Trabajo práctico
 
@@ -152,10 +155,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **información disponible**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **decisiones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **alternativas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **responsabilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **información disponible**: Información disponible debe conservar origen, recencia, fiabilidad y contexto para sostener una decisión sin convertir inferencias en certezas.
+- **decisiones**: Decisiones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **alternativas**: Se comparan por viabilidad, riesgo, recursos, reversibilidad y efecto en misión.
+- **responsabilidad**: Responsabilidad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 

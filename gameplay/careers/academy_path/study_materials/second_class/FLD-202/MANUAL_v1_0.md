@@ -1,6 +1,7 @@
 # FLD-202 — Operaciones de campo y EVA II
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,15 +11,17 @@ Ejecutar operaciones de campo y extravehiculares con mayor autonomía, riesgo y 
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## FLD-202-U01 — Plan avanzado de salida
 
 ### Contenido profesional
 
-- **objetivos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **amenazas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **equipo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **abort criteria**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **reserva**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **objetivos**: Objetivos debe expresarse como resultado o condición verificable, relacionado con la intención de misión y sus restricciones.
+- **amenazas**: Amenazas se analiza por probabilidad, impacto, exposición y mitigación, dejando claro cuándo detener o escalar.
+- **equipo**: Equipo se organiza por funciones, competencia, carga y responsabilidad, con apoyo proporcional al riesgo.
+- **abort criteria**: Abort criteria debe expresarse como resultado o condición verificable, relacionado con la intención de misión y sus restricciones.
+- **reserva**: Reserva se evalúa por disponibilidad, demanda, dependencias y margen antes de comprometerlo.
 
 ### Trabajo práctico
 
@@ -43,10 +46,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **integridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **soporte**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **movilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **limitaciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **integridad**: Integridad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **soporte**: Soporte se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **movilidad**: Movilidad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **limitaciones**: Limitaciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -71,10 +74,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **desplazamiento**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **anclaje**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **comunicación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **orientación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **desplazamiento**: Desplazamiento se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **anclaje**: Anclaje se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **comunicación**: Debe ser proporcional, precisa y dirigida a quien puede actuar; demasiado ruido también degrada la operación.
+- **orientación**: Orientación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -99,10 +102,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **herramientas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **muestras**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **reparación contextual**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **seguridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **herramientas**: Herramientas se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **muestras**: Muestras se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **reparación contextual**: Reparación contextual se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **seguridad**: Limita cualquier procedimiento: se identifican peligros, protecciones, condición de aborto y quién puede autorizar continuar.
 
 ### Trabajo práctico
 
@@ -127,10 +130,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **pérdida de contacto**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **fallo de equipo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **herido**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **extracción**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **pérdida de contacto**: Pérdida de contacto se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **fallo de equipo**: Fallo de equipo se gestiona identificando función perdida, capacidad restante, riesgo inmediato, alternativa y condición de recuperación segura.
+- **herido**: Herido se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **extracción**: Extracción se gestiona identificando función perdida, capacidad restante, riesgo inmediato, alternativa y condición de recuperación segura.
 
 ### Trabajo práctico
 
@@ -155,10 +158,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **ventanas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **transportador**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **lanzadera**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **reporte**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **ventanas**: Ventanas se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **transportador**: Transportador se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **lanzadera**: Lanzadera se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **reporte**: Separa hechos, interpretación, resultado, limitaciones y pendientes para que otro pueda actuar.
 - **recuperación**: La recuperación tras un fallo incluye contención, verificación, retorno controlado y documentación; no termina cuando el síntoma desaparece.
 
 ### Trabajo práctico

@@ -1,6 +1,7 @@
 # BRN-203 — Especialización profesional III
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,14 +11,16 @@ Integrar conocimiento, ejecución y criterio antes del servicio supervisado y la
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## BRN-203-U01 — Diagnóstico profesional
 
 ### Contenido profesional
 
-- **situación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **evidencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **situación**: Situación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **evidencia**: Debe ser observable y trazable: qué se hizo, en qué contexto, con qué resultado y bajo qué supervisión.
 - **prioridad**: Priorizar implica comparar misión, seguridad, tiempo, recursos y reversibilidad. La mejor acción puede no ser la más rápida ni la más vistosa.
-- **plan**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **plan**: Plan se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -42,10 +45,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **carga**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **consistencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **monitorización**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **ajuste**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **carga**: Carga se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **consistencia**: Consistencia se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **monitorización**: Monitorización se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **ajuste**: Ajuste se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -70,10 +73,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **estado**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **riesgo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **opciones**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **recomendación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **estado**: Fija la condición real de partida —normal, degradada, limitada o desconocida— antes de actuar; si cambia, el plan debe revisarse.
+- **riesgo**: Combina probabilidad, impacto y exposición; se reduce, acepta dentro de autoridad o se escala.
+- **opciones**: Opciones se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **recomendación**: Recomendación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -98,9 +101,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **equipo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **otro departamento**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **mando**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **equipo**: Equipo se organiza por funciones, competencia, carga y responsabilidad, con apoyo proporcional al riesgo.
+- **otro departamento**: Otro departamento se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **mando**: Mando se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 - **handoff**: El handoff conserva continuidad: estado, riesgos, tareas pendientes, órdenes y cambios desde el último relevo.
 
 ### Trabajo práctico
@@ -126,10 +129,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **fallo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **fallo**: Fallo se gestiona identificando función perdida, capacidad restante, riesgo inmediato, alternativa y condición de recuperación segura.
 - **incertidumbre**: La incertidumbre no se oculta. Se incorpora a la decisión mediante márgenes, verificación, alternativas y comunicación explícita.
-- **tiempo**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **consecuencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **tiempo**: Tiempo ordena la actuación comparando seguridad, misión, tiempo, impacto y recursos disponibles.
+- **consecuencia**: Consecuencia se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -154,10 +157,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **límites**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **responsabilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **criterios**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **documentación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **límites**: Definen hasta dónde puede actuar el cadete por competencia, autoridad, estado y riesgo; fuera de ellos se detiene, consulta o escala.
+- **responsabilidad**: Responsabilidad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **criterios**: Criterios debe expresarse como resultado o condición verificable, relacionado con la intención de misión y sus restricciones.
+- **documentación**: Documentación se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 

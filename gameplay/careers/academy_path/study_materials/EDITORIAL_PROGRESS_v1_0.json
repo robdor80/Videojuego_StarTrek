@@ -35,11 +35,25 @@
     "BRN-303",
     "JDG-303",
     "CAR-303",
-    "BRN-201"
+    "BRN-201",
+    "PRA-201",
+    "INT-201",
+    "LDR-201",
+    "XTR-201",
+    "BRN-202",
+    "PRA-202",
+    "RSK-202",
+    "FLD-202",
+    "XTR-202",
+    "BRN-203",
+    "DUT-203",
+    "SIM-203",
+    "PRJ-203",
+    "QUA-203"
   ],
   "developed_branch_manuals": [],
-  "developed_count": 31,
-  "remaining_count": 36,
+  "developed_count": 45,
+  "remaining_count": 22,
   "current_sequence": [
     "STF-401",
     "FED-401",
@@ -47,8 +61,8 @@
     "INF-401",
     "PHY-401"
   ],
-  "last_completed": "BRN-201",
-  "next_planned": "PRA-201",
+  "last_completed": "QUA-203",
+  "next_planned": "branch_professional_packs_year_3",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -81,7 +95,21 @@
     "BRN_303": "synced_developed_content_and_assessment",
     "JDG_303": "synced_developed_content_and_assessment",
     "CAR_303": "synced_developed_content_and_assessment",
-    "BRN_201": "pending_sync_after_main_commit"
+    "BRN_201": "pending_sync_after_main_commit",
+    "PRA_201": "pending_sync_after_main_commit",
+    "INT_201": "pending_sync_after_main_commit",
+    "LDR_201": "pending_sync_after_main_commit",
+    "XTR_201": "pending_sync_after_main_commit",
+    "BRN_202": "pending_sync_after_main_commit",
+    "PRA_202": "pending_sync_after_main_commit",
+    "RSK_202": "pending_sync_after_main_commit",
+    "FLD_202": "pending_sync_after_main_commit",
+    "XTR_202": "pending_sync_after_main_commit",
+    "BRN_203": "pending_sync_after_main_commit",
+    "DUT_203": "pending_sync_after_main_commit",
+    "SIM_203": "pending_sync_after_main_commit",
+    "PRJ_203": "pending_sync_after_main_commit",
+    "QUA_203": "pending_sync_after_main_commit"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
@@ -89,7 +117,8 @@
     "fourth_class_year_1_developed",
     "third_class_trimester_1_developed",
     "third_class_trimester_2_developed",
-    "third_class_year_2_developed"
+    "third_class_year_2_developed",
+    "second_class_main_courses_developed"
   ],
   "current_milestone": "third_class_year_2_developed_and_synced"
 }

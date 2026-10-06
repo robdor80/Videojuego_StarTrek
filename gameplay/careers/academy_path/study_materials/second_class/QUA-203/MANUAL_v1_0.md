@@ -1,6 +1,7 @@
 # QUA-203 — Cualificación intermedia
 
-**Material de estudio v1.0 — Cadete de 2.ª clase**
+**Material de estudio v1.1 — edición desarrollada**  
+**Cadete de 2.ª clase**
 
 ## Finalidad
 
@@ -10,12 +11,14 @@ Determinar mediante evidencia si el cadete está preparado para entrar en 1.ª c
 
 Este año comienza la profesión. Se espera que el cadete pase de seguir instrucciones a **resolver problemas de su especialidad con supervisión decreciente**. La evidencia se conserva por tarea y contexto; no se transforma en XP visible.
 
+> **Regla de 2.ª clase:** aumentar autonomía exige aumentar también trazabilidad, juicio, seguridad y respeto de los límites de autoridad.
+
 ## QUA-203-U01 — Revisión de evidencia
 
 ### Contenido profesional
 
-- **cursos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **prácticas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **cursos**: Cursos se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **prácticas**: Prácticas se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 - **simulaciones**: La simulación sirve para someter procedimientos y juicio a una situación controlada pero coherente. El sistema evalúa decisiones y evidencia, no una puntuación arcade.
 - **servicio**: El servicio supervisado produce evidencia longitudinal: rutina, reacción ante incidencias, handoff, disciplina y consistencia importan tanto como un ejercicio brillante.
 - **proyecto**: El trabajo aplicado demuestra que el cadete puede definir un problema, planificar, ejecutar, validar y explicar un resultado profesional.
@@ -43,9 +46,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **conceptos**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **conceptos**: Conceptos se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 - **procedimientos**: Un procedimiento profesional establece secuencia, comprobaciones, límites y puntos de escalado. Conocerlo no basta: hay que ejecutarlo correctamente cuando cambian las condiciones.
-- **límites**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **límites**: Definen hasta dónde puede actuar el cadete por competencia, autoridad, estado y riesgo; fuera de ellos se detiene, consulta o escala.
 
 ### Trabajo práctico
 
@@ -71,8 +74,8 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 ### Contenido profesional
 
 - **procedimiento**: Un procedimiento profesional establece secuencia, comprobaciones, límites y puntos de escalado. Conocerlo no basta: hay que ejecutarlo correctamente cuando cambian las condiciones.
-- **seguridad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **comunicación**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **seguridad**: Limita cualquier procedimiento: se identifican peligros, protecciones, condición de aborto y quién puede autorizar continuar.
+- **comunicación**: Debe ser proporcional, precisa y dirigida a quien puede actuar; demasiado ruido también degrada la operación.
 
 ### Trabajo práctico
 
@@ -99,8 +102,8 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 - **incertidumbre**: La incertidumbre no se oculta. Se incorpora a la decisión mediante márgenes, verificación, alternativas y comunicación explícita.
 - **prioridad**: Priorizar implica comparar misión, seguridad, tiempo, recursos y reversibilidad. La mejor acción puede no ser la más rápida ni la más vistosa.
-- **escalado**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **responsabilidad**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **escalado**: Transfiere una decisión a la autoridad o especialidad adecuada cuando se exceden límites, recursos o riesgo aceptable.
+- **responsabilidad**: Responsabilidad se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -125,10 +128,10 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **fortalezas**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **carencias**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **consistencia**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **conducta**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **fortalezas**: Fortalezas se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **carencias**: Carencias se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **consistencia**: Consistencia se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **conducta**: Conducta se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
@@ -153,9 +156,9 @@ El evaluador debe distinguir conocimiento, ejecución, juicio, liderazgo, comuni
 
 ### Contenido profesional
 
-- **qualified**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **targeted_remediation**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
-- **reassessment**: Este contenido debe convertirse en una capacidad profesional observable. El cadete tiene que explicar el principio, ejecutarlo, reconocer límites y justificar sus decisiones.
+- **qualified**: Qualified se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **targeted_remediation**: Targeted_remediation se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
+- **reassessment**: Reassessment se trata como un elemento operativo explícito: el cadete debe conocer su significado, impacto, límites y condición de escalado.
 
 ### Trabajo práctico
 
