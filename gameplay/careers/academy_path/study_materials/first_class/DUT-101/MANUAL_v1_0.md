@@ -1,6 +1,6 @@
 # DUT-101 — Servicio operativo avanzado
 
-**Material de estudio v1.0 — Cadete de 1.ª clase**
+**Material de estudio v2.0 — Cadete de 1.ª clase**
 
 ## Finalidad
 
@@ -8,176 +8,210 @@ Convertir el servicio supervisado previo en guardias largas y realistas con inte
 
 ## Enfoque de último año
 
-La pregunta ya no es «¿conoce el cadete el procedimiento?», sino **«¿puede comportarse como un Alférez novel dentro de una unidad real?»**. Las actividades se parecen cada vez más a servicio normal y la supervisión se retira progresivamente.
+En 1.ª clase el objetivo es trabajar con el criterio de un **Alférez novel**: actuar con autonomía normal dentro de la propia competencia, justificar decisiones, comunicar límites y dejar continuidad suficiente para que otra persona pueda asumir el trabajo.
 
 ## DUT-101-U01 — Incorporación avanzada
 
-### Contenido
+### Objetivo operativo
 
-- **órdenes vigentes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **estado**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **pendientes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **riesgos**: El juicio profesional compara misión, vida, nave, autoridad, recursos y reversibilidad. Una decisión razonable puede terminar mal sin convertirse por ello en una mala decisión.
+Esta unidad aplica «Incorporación avanzada» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **órdenes vigentes**: instrucciones actualmente aplicables al puesto; deben conocerse junto con prioridad, alcance, autoridad emisora y condiciones de finalización.
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso.
+- **pendientes**: acciones no cerradas que conservan responsable, prioridad, estado y condición prevista de resolución.
+- **riesgos**: amenazas o consecuencias plausibles que deben identificarse antes de actuar y reevaluarse cuando cambia la situación.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Tomar puesto con briefing realista.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DUT-101-U02 — Rutina sostenida
 
-### Contenido
+### Objetivo operativo
 
-- **monitorización**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **tareas periódicas**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **registros**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **comunicaciones**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Rutina sostenida» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **monitorización**: observación deliberada de variables relevantes para detectar tendencias, límites o cambios antes de que se conviertan en incidentes.
+- **tareas periódicas**: acciones recurrentes con frecuencia y criterio definidos; su cumplimiento evita que la rutina oculte degradaciones.
+- **registros**: evidencia cronológica y factual de eventos, acciones, fuentes, decisiones y resultados necesaria para continuidad y auditoría.
+- **comunicaciones**: intercambio operativo que prioriza claridad, destinatario correcto, confirmación cuando importa y mínima ambigüedad.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Guardia prolongada sin incidentes forzados.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Constancia.
+Constancia. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DUT-101-U03 — Incidencia operativa
 
-### Contenido
+### Objetivo operativo
 
-- **detección**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **respuesta**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **escalado**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **seguimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Incidencia operativa» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **detección**: reconocimiento de una desviación o evento a partir de indicios suficientes, sin confundir observación con diagnóstico.
+- **respuesta**: acción inicial proporcionada que protege seguridad y gana tiempo mientras se confirma la situación.
+- **escalado**: transferencia de una decisión o problema a la autoridad o especialidad adecuada cuando supera competencia, riesgo o límites propios.
+- **seguimiento**: comprobación posterior de que una acción produjo el efecto esperado y de que no quedan riesgos o tareas abiertas.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Resolver evento contextual.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Juicio.
+Juicio. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DUT-101-U04 — Interrupciones y carga
 
-### Contenido
+### Objetivo operativo
 
-- **prioridades**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **multitarea**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **delegación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **fatiga**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Interrupciones y carga» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **prioridades**: orden explícito entre demandas competidoras según misión, seguridad, urgencia, impacto y autoridad.
+- **multitarea**: gestión de varias demandas sin perder prioridades ni trazabilidad; implica secuenciar, delegar o rechazar carga cuando sea necesario.
+- **delegación**: asignación de una tarea a una persona con capacidad suficiente, manteniendo quien delega la responsabilidad de supervisar lo necesario.
+- **fatiga**: degradación de capacidad por carga y tiempo; es un riesgo operativo que debe declararse, mitigarse y, si procede, provocar relevo.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Gestionar varias demandas.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Evaluación.
+Evaluación. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DUT-101-U05 — Relevo profesional
 
-### Contenido
+### Objetivo operativo
 
-- **estado**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **pendientes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **órdenes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **riesgo**: El juicio profesional compara misión, vida, nave, autoridad, recursos y reversibilidad. Una decisión razonable puede terminar mal sin convertirse por ello en una mala decisión.
+Esta unidad aplica «Relevo profesional» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **estado**: descripción actual y verificable de capacidad, configuración, degradaciones y acciones en curso.
+- **pendientes**: acciones no cerradas que conservan responsable, prioridad, estado y condición prevista de resolución.
+- **órdenes**: instrucciones operativas que deben ser claras, legítimas, comprendidas y compatibles con límites superiores.
+- **riesgo**: combinación de probabilidad, impacto y exposición; se gestiona, comunica y acepta solo dentro de la autoridad disponible.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Entregar puesto.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Calidad del handoff.
+Calidad del handoff. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DUT-101-U06 — Informe de supervisor
 
-### Contenido
+### Objetivo operativo
 
-- **competencia**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **conducta**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **autonomía**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **límites**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Informe de supervisor» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **competencia**: capacidad demostrada para realizar una tarea al estándar requerido en más de un contexto, no mera exposición previa.
+- **conducta**: forma observable de actuar respecto a disciplina, integridad, comunicación, seguridad y responsabilidad.
+- **autonomía**: capacidad de actuar sin guía continua dentro del ámbito autorizado, sabiendo cuándo detenerse y escalar.
+- **límites**: fronteras técnicas, legales, de autoridad o competencia que obligan a detener, adaptar o escalar una acción.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Debrief formal.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+La autonomía no consiste en trabajar sin supervisión, sino en resolver lo rutinario dentro de autoridad y escalar pronto lo que supera competencia o riesgo aceptable.
 
 ### Evaluación
 
-Registro en expediente.
+Registro en expediente. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+## Referencias internas
 
-## Resultado esperado
-
-El estándar final no es «experto». Es **oficial novel preparado para entrar en servicio, reconocer sus límites, pedir apoyo cuando corresponde y seguir desarrollándose mediante experiencia real**.
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `lore/federation/starfleet/duty_shifts/shift_model.json`

@@ -1,6 +1,6 @@
 # DEV-101 — Desarrollo profesional avanzado
 
-**Material de estudio v1.0 — Cadete de 1.ª clase**
+**Material de estudio v2.0 — Cadete de 1.ª clase**
 
 ## Finalidad
 
@@ -8,175 +8,211 @@ Preparar la transición de cadete a oficial usando expediente, objetivos, cualif
 
 ## Enfoque de último año
 
-La pregunta ya no es «¿conoce el cadete el procedimiento?», sino **«¿puede comportarse como un Alférez novel dentro de una unidad real?»**. Las actividades se parecen cada vez más a servicio normal y la supervisión se retira progresivamente.
+En 1.ª clase el objetivo es trabajar con el criterio de un **Alférez novel**: actuar con autonomía normal dentro de la propia competencia, justificar decisiones, comunicar límites y dejar continuidad suficiente para que otra persona pueda asumir el trabajo.
 
 ## DEV-101-U01 — Expediente acumulado
 
-### Contenido
+### Objetivo operativo
 
-- **cuatro años**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **fortalezas**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **incidentes**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **cualificaciones**: La preparación profesional se demuestra con evidencia acumulada, no con una única nota. El estándar es el de un oficial novel capaz de entrar en servicio con supervisión normal.
+Esta unidad aplica «Expediente acumulado» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **cuatro años**: historial acumulado de aprendizaje y desempeño que permite valorar tendencia y consistencia, no solo episodios aislados.
+- **fortalezas**: capacidades demostradas de forma repetida y con evidencia; sirven para asignar responsabilidad, no para asumir que el cadete nunca fallará.
+- **incidentes**: eventos relevantes que deben contextualizarse por causas, actuación, consecuencias y aprendizaje posterior.
+- **cualificaciones**: reconocimientos de competencia concreta basados en evidencia; habilitan tareas definidas, no autoridad universal.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Revisar historial.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Tutoría.
+Tutoría. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DEV-101-U02 — Objetivos de carrera
 
-### Contenido
+### Objetivo operativo
 
-- **largo plazo**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **medio plazo**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **rutas alternativas**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Objetivos de carrera» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **largo plazo**: dirección profesional de varios destinos o etapas, útil para orientar desarrollo sin convertirla en garantía.
+- **medio plazo**: objetivo alcanzable mediante próximos destinos, cursos o cualificaciones y revisable según experiencia y necesidades.
+- **rutas alternativas**: caminos profesionales distintos que conservan opciones cuando cambian vacantes, intereses, rendimiento o necesidades.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Actualizar objetivos.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Revisión.
+Revisión. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DEV-101-U03 — Brechas de preparación
 
-### Contenido
+### Objetivo operativo
 
-- **conocimiento**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **experiencia**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **liderazgo**: El liderazgo de 1.ª clase ya se acerca al servicio real: coordinar personas, distribuir carga, dar feedback y responder por decisiones tomadas bajo presión.
-- **cross-training**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Brechas de preparación» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **conocimiento**: comprensión teórica necesaria para decidir y actuar, que por sí sola no demuestra competencia práctica.
+- **experiencia**: exposición práctica contextual que gana valor cuando queda acompañada por feedback y evidencia de desempeño.
+- **liderazgo**: capacidad de orientar personas hacia un objetivo manteniendo seguridad, claridad, responsabilidad y desarrollo del equipo.
+- **cross-training**: formación fuera de la especialidad principal suficiente para coordinarse, reconocer límites y apoyar sin suplantar al especialista.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Identificar carencias.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Plan.
+Plan. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DEV-101-U04 — Preferencias de servicio
 
-### Contenido
+### Objetivo operativo
 
-- **tipo de unidad**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **misión**: Una misión completa combina preparación, tránsito, objetivo, cambios de situación, continuidad entre turnos y cierre. No se evalúa solo el incidente más espectacular.
-- **entorno**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **ubicación**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Preferencias de servicio» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **tipo de unidad**: clase funcional de destino — nave, estación u otra instalación — que condiciona tareas, ritmo y oportunidades.
+- **misión**: propósito operativo junto con restricciones, prioridades y condiciones de éxito; guía decisiones sin anular seguridad ni regulación.
+- **entorno**: condiciones externas que afectan sensores, movimiento, seguridad, comunicaciones y opciones operativas.
+- **ubicación**: zona de servicio que afecta distancia, apoyo disponible, misión y contexto, pero no crea derecho a una vacante.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Registrar preferencias no vinculantes.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Validación.
+Validación. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DEV-101-U05 — Recomendaciones
 
-### Contenido
+### Objetivo operativo
 
-- **instructores**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **mentores**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **evidencia**: La evidencia conserva qué ocurrió, qué sabía el cadete y cómo actuó. Debe poder auditarse y no puede ser reescrita por una impresión posterior.
-- **límites**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Recomendaciones» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **instructores**: personal que evalúa aprendizaje y desempeño académico mediante observación y criterios establecidos.
+- **mentores**: profesionales que orientan desarrollo y contexto de carrera sin sustituir la cadena formal de evaluación.
+- **evidencia**: registro verificable de contexto, información disponible, acciones, resultados y feedback; debe poder revisarse después sin reescribir lo ocurrido.
+- **límites**: fronteras técnicas, legales, de autoridad o competencia que obligan a detener, adaptar o escalar una acción.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Entrevista profesional.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Registro.
+Registro. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
-
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
 ## DEV-101-U06 — Plan post-Academia
 
-### Contenido
+### Objetivo operativo
 
-- **primer destino**: El primer destino depende de necesidades y vacantes reales del mundo, además del expediente y las preferencias. El deseo del jugador no crea una plaza que no exista.
-- **mentoría**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
-- **cualificaciones futuras**: La preparación profesional se demuestra con evidencia acumulada, no con una única nota. El estándar es el de un oficial novel capaz de entrar en servicio con supervisión normal.
-- **desarrollo**: En 1.ª clase este concepto se estudia por su efecto directo en servicio. Debe poder explicarse, ejecutarse y defenderse ante un superior durante un debrief.
+Esta unidad aplica «Plan post-Academia» a situaciones de servicio. Al terminar, el cadete debe poder **reconocer la situación, decidir dentro de su autoridad, ejecutar con seguridad y explicar por qué actuó así**.
 
-### Aplicación
+### Contenidos
+
+- **primer destino**: primera asignación tras la comisión, determinada por perfil, vacantes y necesidades, no solo por preferencia.
+- **mentoría**: acompañamiento profesional continuado para convertir experiencia inicial en aprendizaje y desarrollo dirigido.
+- **cualificaciones futuras**: competencias posteriores a la Academia que se obtienen mediante servicio, entrenamiento y evidencia adicional.
+- **desarrollo**: proceso continuo de cerrar brechas, ampliar competencia y asumir responsabilidad progresiva.
+
+### Aplicación profesional
+
+Los conceptos anteriores se usan juntos: primero se establece qué se sabe y qué falta, después se comprueban autoridad y límites, se comparan alternativas y se mantiene registro suficiente para seguimiento y relevo.
+
+### Práctica
 
 Crear plan inicial.
 
-Trabaja siempre con cinco preguntas: **qué se sabe, qué autoridad tienes, qué está en riesgo, qué alternativas existen y qué debe saber el siguiente responsable**.
+### Criterio de servicio
+
+Las preferencias y objetivos orientan el desarrollo, pero no sustituyen evidencia, requisitos ni necesidades reales del servicio.
 
 ### Evaluación
 
-Evaluación cualitativa.
+Evaluación cualitativa. La evaluación distingue **calidad del proceso, conducta profesional y resultado**; un resultado favorable no compensa una decisión temeraria y un resultado adverso no invalida automáticamente una decisión razonable.
 
-La evaluación usa el historial del cadete cuando corresponda; una actuación aislada no borra cuatro años de evidencia ni garantiza por sí sola una comisión.
+### Repaso interactivo
 
-### Autoevaluación
+El repaso de la Academia se genera a partir de los conceptos enseñados en esta unidad y se corrige de forma determinista.
 
-1. ¿Qué tendría que saber un Alférez para asumir esta tarea sin un instructor al lado?
-2. ¿Qué decisión sería reversible y cuál podría comprometer vidas o misión?
-3. ¿Qué dato te obligaría a cambiar de plan?
-4. ¿Qué dejarías documentado para auditoría o relevo?
+## Referencias internas
 
-## Resultado esperado
-
-El estándar final no es «experto». Es **oficial novel preparado para entrar en servicio, reconocer sus límites, pedir apoyo cuando corresponde y seguir desarrollándose mediante experiencia real**.
+- `gameplay/careers/academy_path/course_resolution.md`
+- `gameplay/careers/academy_path/evaluation_model.json`
+- `gameplay/careers/academy_path/academy_era_profiles.json`
+- `gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `gameplay/characters/objectives/trajectory_coherence_rules.md`
+- `gameplay/careers/starfleet_service/career_progression_rules.json`
+- `gameplay/careers/post_academy/qualification_and_mentorship_model.json`
