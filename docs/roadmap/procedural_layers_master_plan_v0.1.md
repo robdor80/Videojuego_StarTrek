@@ -57,15 +57,15 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
 | 009 | Contrato universal de entidad persistente | COMPLETE | 003-005 | ID + procedencia + historial + estado actual quedan separados |
-| 010 | Identidad persistente de personajes | PARTIAL | 009 | Un individuo jamás se rerollea tras materialización |
-| 011 | Identidad visual persistente | PARTIAL | 009-010 | Cambiar edad/ropa/estado no crea otra persona |
-| 012 | Identidad persistente de naves | PARTIAL | 009 | Refit, reparación y cambio de capitán preservan nave |
-| 013 | Identidad persistente de instalaciones | PARTIAL | 009 | Daño/reconstrucción compatible preserva continuidad |
-| 014 | Identidad de objetos únicos | PARTIAL | 009 | Propiedad, daño o traslado no rerollean objeto |
-| 015 | Población A/B/C | PARTIAL | 009-010 | C→B irreversible conserva contabilidad poblacional |
-| 016 | Materialización desde slots reales | PARTIAL | 015 | NPC nace de necesidad/posición/hogar real, no de petición del jugador |
-| 017 | Persistencia fuera de cámara / LOD | PARTIAL | 009-016 | Descargar simulación no altera identidad ni hechos |
-| 018 | Guardado/carga y round-trip de identidad | PARTIAL | 009-017 | Serializar y restaurar preserva exactamente identidad e historia |
+| 010 | Identidad persistente de personajes | COMPLETE | 009 | Un individuo jamás se rerollea tras materialización |
+| 011 | Identidad visual persistente | COMPLETE | 009-010 | Cambiar edad/ropa/estado no crea otra persona |
+| 012 | Identidad persistente de naves | COMPLETE | 009 | Refit, reparación y cambio de capitán preservan nave |
+| 013 | Identidad persistente de instalaciones | COMPLETE | 009 | Daño/reconstrucción compatible preserva continuidad |
+| 014 | Identidad de objetos únicos | COMPLETE | 009 | Propiedad, daño o traslado no rerollean objeto |
+| 015 | Población A/B/C | COMPLETE | 009-010 | C→B irreversible conserva contabilidad poblacional |
+| 016 | Materialización desde slots reales | COMPLETE | 015 | NPC nace de necesidad/posición/hogar real, no de petición del jugador |
+| 017 | Persistencia fuera de cámara / LOD | COMPLETE | 009-016 | Descargar simulación no altera identidad ni hechos |
+| 018 | Guardado/carga y round-trip de identidad | COMPLETE | 009-017 | Serializar y restaurar preserva exactamente identidad e historia |
 
 # FASE 2 — PERSONA, MEMORIA, CONOCIMIENTO Y RELACIONES
 
