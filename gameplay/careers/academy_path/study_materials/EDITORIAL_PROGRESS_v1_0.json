@@ -62,7 +62,7 @@
     "PHY-401"
   ],
   "last_completed": "QUA-203",
-  "next_planned": "branch_professional_packs_year_3",
+  "next_planned": "awaiting_next_user_assignment",
   "web_sync": {
     "repository": "robdor80/academiaflota",
     "STF_401": "synced_developed_content_and_assessment",
@@ -95,21 +95,21 @@
     "BRN_303": "synced_developed_content_and_assessment",
     "JDG_303": "synced_developed_content_and_assessment",
     "CAR_303": "synced_developed_content_and_assessment",
-    "BRN_201": "pending_sync_after_main_commit",
-    "PRA_201": "pending_sync_after_main_commit",
-    "INT_201": "pending_sync_after_main_commit",
-    "LDR_201": "pending_sync_after_main_commit",
-    "XTR_201": "pending_sync_after_main_commit",
-    "BRN_202": "pending_sync_after_main_commit",
-    "PRA_202": "pending_sync_after_main_commit",
-    "RSK_202": "pending_sync_after_main_commit",
-    "FLD_202": "pending_sync_after_main_commit",
-    "XTR_202": "pending_sync_after_main_commit",
-    "BRN_203": "pending_sync_after_main_commit",
-    "DUT_203": "pending_sync_after_main_commit",
-    "SIM_203": "pending_sync_after_main_commit",
-    "PRJ_203": "pending_sync_after_main_commit",
-    "QUA_203": "pending_sync_after_main_commit"
+    "BRN_201": "synced_developed_content_and_assessment",
+    "PRA_201": "synced_developed_content_and_assessment",
+    "INT_201": "synced_developed_content_and_assessment",
+    "LDR_201": "synced_developed_content_and_assessment",
+    "XTR_201": "synced_developed_content_and_assessment",
+    "BRN_202": "synced_developed_content_and_assessment",
+    "PRA_202": "synced_developed_content_and_assessment",
+    "RSK_202": "synced_developed_content_and_assessment",
+    "FLD_202": "synced_developed_content_and_assessment",
+    "XTR_202": "synced_developed_content_and_assessment",
+    "BRN_203": "synced_developed_content_and_assessment",
+    "DUT_203": "synced_developed_content_and_assessment",
+    "SIM_203": "synced_developed_content_and_assessment",
+    "PRJ_203": "synced_developed_content_and_assessment",
+    "QUA_203": "synced_developed_content_and_assessment"
   },
   "milestones": [
     "fourth_class_trimester_1_developed",
@@ -118,7 +118,32 @@
     "third_class_trimester_1_developed",
     "third_class_trimester_2_developed",
     "third_class_year_2_developed",
-    "second_class_main_courses_developed"
+    "second_class_main_courses_developed",
+    "second_class_trimester_1_developed",
+    "second_class_trimester_2_developed",
+    "second_class_trimester_3_developed",
+    "second_class_year_3_developed",
+    "second_class_year_3_developed_and_synced"
   ],
-  "current_milestone": "third_class_year_2_developed_and_synced"
+  "current_milestone": "second_class_year_3_developed_and_synced",
+  "developed_branch_year3_stages": [
+    "command",
+    "flight_navigation",
+    "operations",
+    "engineering",
+    "security_tactical",
+    "science_sensors",
+    "medical"
+  ],
+  "year3_branch_stage_status": "developed_and_synced",
+  "branch_year3_web_sync": {
+    "command": "synced_developed_content_and_assessment",
+    "flight_navigation": "synced_developed_content_and_assessment",
+    "operations": "synced_developed_content_and_assessment",
+    "engineering": "synced_developed_content_and_assessment",
+    "security_tactical": "synced_developed_content_and_assessment",
+    "science_sensors": "synced_developed_content_and_assessment",
+    "medical": "synced_developed_content_and_assessment"
+  },
+  "second_class_year3_scope": "15 main courses plus 201-203 stages of all seven specialization branches"
 }
