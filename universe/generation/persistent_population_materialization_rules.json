@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "persistent_population_materialization",
+  "status": "foundation_fixed",
+  "principle": "Generate population structure first; materialize persistent individuals from real slots second.",
+  "tiers": {
+    "A": {
+      "id": "authored_or_canonical_persistent",
+      "persistent_from_start": true,
+      "procedural_replacement_forbidden": true
+    },
+    "B": {
+      "id": "generated_persistent_individual",
+      "deterministic_materialization": true,
+      "persistent_after_materialization": true,
+      "demotion_to_anonymous_forbidden": true
+    },
+    "C": {
+      "id": "latent_population",
+      "full_identity_required": false,
+      "promotion_target": "B",
+      "aggregate_constraints_preserved": true
+    }
+  },
+  "promotion": {
+    "irreversible": true,
+    "must_consume_or_reference_real_latent_slot": true,
+    "cannot_increase_population_without_world_state_cause": true,
+    "preserve_after_materialization": [
+      "stable_character_id",
+      "origin_seed_and_provenance",
+      "species_and_culture_context",
+      "residence_or_quarters",
+      "assignment_or_function",
+      "shift_or_schedule_context",
+      "qualification_refs",
+      "personality_state",
+      "knowledge_state",
+      "memory_state",
+      "relationship_refs",
+      "known_interactions"
+    ]
+  },
+  "structure_first_generation": {
+    "starfleet_or_organized_starship": [
+      "resolve_ship_role_class_and_mission",
+      "resolve_departments_and_functions",
+      "resolve_positions",
+      "resolve_shift_coverage",
+      "resolve_qualification_requirements",
+      "materialize_latent_staffing_slots",
+      "materialize_persistent_individuals_as_needed"
+    ],
+    "station_or_facility": [
+      "resolve_facility_function",
+      "resolve_services_security_and_logistics",
+      "resolve_staffing_and_resident_population",
+      "resolve_visitors_and_passengers",
+      "resolve_schedules_and_shift_coverage",
+      "materialize_persistent_individuals_as_needed"
+    ],
+    "colony_or_planetary_settlement": [
+      "resolve_civilization_and_settlement_role",
+      "resolve_infrastructure_economy_and_services",
+      "resolve_residential_and_social_structure",
+      "resolve_population_bands",
+      "resolve_institutions_and_occupations",
+      "resolve_households_or_family_units_when_culturally_valid",
+      "materialize_persistent_individuals_as_needed"
+    ],
+    "civilian_vessel": [
+      "resolve_operator_vessel_role_and_route",
+      "resolve_required_crew",
+      "resolve_passenger_and_cargo_demand",
+      "resolve_duty_structure",
+      "resolve_transient_population",
+      "materialize_persistent_individuals_as_needed"
+    ]
+  },
+  "individual_rules": [
+    "Species does not determine personality, morality, loyalty, political opinion, competence or relationship state.",
+    "Culture may supply norms and probability biases but cannot force individual traits.",
+    "Initial relationships require plausible shared-context provenance.",
+    "Generated NPC knowledge is limited by experience, role, records access, communication and observation.",
+    "Expected presence derives from schedule and current state; NPCs do not teleport to satisfy interaction.",
+    "Canonical characters are instantiated from canonical definitions, never generic random generation."
+  ],
+  "population_integrity": [
+    "Named materialization from a ship crew must not silently increase the ship complement.",
+    "Named materialization from a station or settlement must preserve resident/visitor/passenger accounting.",
+    "Vacancies remain vacancies until filled by a real assignment or migration event.",
+    "LOD changes simulation detail, not canonical existence.",
+    "Off-screen simulation cannot execute incompatible simultaneous activities for the same person."
+  ]
+}
