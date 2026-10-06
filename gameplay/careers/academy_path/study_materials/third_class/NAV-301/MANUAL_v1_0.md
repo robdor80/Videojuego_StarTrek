@@ -25,7 +25,7 @@ La estación de vuelo trabaja con:
 - maniobra;
 - ejecución de órdenes de movimiento.
 
-No decide por sí sola la misión.
+**No decide por sí sola la misión.**
 
 ## 2. Información mínima
 
@@ -85,7 +85,7 @@ Familiarización con una consola simulada: identificar controles de rumbo, veloc
 
 ## 1. De destino a ruta
 
-Plotting significa construir una solución de navegación entre origen y destino.
+**Plotting significa construir una solución de navegación entre origen y destino.**
 
 La solución considera:
 - waypoints;
@@ -148,7 +148,7 @@ Preparar un plan de vuelo entre dos sistemas con una frontera y un waypoint opci
 
 ## 1. Maniobra local
 
-La maniobra a impulso se utiliza en movimiento subluz y control cercano.
+**La maniobra a impulso se utiliza en movimiento subluz y control cercano.**
 
 Incluye:
 - cambios de rumbo;
@@ -208,7 +208,7 @@ Ejecutar una secuencia de cambio de rumbo, velocidad, aproximación y separació
 
 ## 1. Preparación
 
-Entrar en warp requiere una ruta y condiciones válidas.
+**Entrar en warp requiere una ruta y condiciones válidas.**
 
 Debe comprobarse:
 - destino;
@@ -269,7 +269,7 @@ Preparar y ejecutar un salto supervisado con una modificación de ETA en ruta.
 
 ## 1. Interceptación
 
-Interceptar significa calcular una trayectoria para encontrarse con un objetivo móvil.
+**Interceptar significa calcular una trayectoria para encontrarse con un objetivo móvil.**
 
 Se necesita:
 - contacto válido;
@@ -331,7 +331,7 @@ Simulación de llegada: interceptación, aproximación y entrada en órbita.
 
 ## 1. Desviación
 
-Una desviación aparece cuando la nave no sigue la solución prevista o cuando la ruta deja de ser válida.
+**Una desviación aparece cuando la nave no sigue la solución prevista o cuando la ruta deja de ser válida.**
 
 Puede deberse a:
 - daño;

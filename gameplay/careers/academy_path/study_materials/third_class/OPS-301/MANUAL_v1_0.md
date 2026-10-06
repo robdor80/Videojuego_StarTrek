@@ -17,7 +17,7 @@ La regla central del curso es:
 
 ## 1. Del mapa de puestos al flujo real
 
-En primer año aprendiste qué estaciones existen. Ahora debes comprender cómo se relacionan durante una guardia.
+**En primer año aprendiste qué estaciones existen.** Ahora debes comprender cómo se relacionan durante una guardia.
 
 Una situación operativa puede pasar por varias estaciones:
 
@@ -74,7 +74,7 @@ Observa una guardia simulada y dibuja el recorrido de tres eventos desde su dete
 
 ## 1. Una orden no es solo una frase
 
-Una orden debe contener suficiente intención para que el destinatario pueda actuar. Puede incluir acción, objetivo, prioridad, límite, condición o plazo.
+**Una orden debe contener suficiente intención para que el destinatario pueda actuar.** Puede incluir acción, objetivo, prioridad, límite, condición o plazo.
 
 ## 2. Acuse
 
@@ -119,7 +119,7 @@ Ejecuta cuatro órdenes sencillas, una de ellas ambigua y otra técnicamente imp
 
 ## 1. Dependencias
 
-Muchas tareas requieren más de una estación.
+**Muchas tareas requieren más de una estación.**
 
 Ejemplo:
 - Sensores necesita más potencia;
@@ -167,7 +167,7 @@ Resuelve una tarea que necesita Sensores, Ops e Ingeniería con una restricción
 
 ## 1. Qué significa “situación”
 
-La imagen operativa común es un resumen compartido de lo relevante para la misión.
+**La imagen operativa común es un resumen compartido de lo relevante para la misión.**
 
 Puede incluir estado de nave, misión actual, contactos, riesgos, tareas activas, restricciones e incidencias.
 
@@ -217,7 +217,7 @@ Mantén un resumen de situación durante una simulación con tres cambios releva
 
 ## 1. Resolver localmente
 
-Un operador puede resolver localmente cuando está dentro de su función, tiene autoridad, el riesgo es controlable y no altera prioridades mayores.
+**Un operador puede resolver localmente cuando está dentro de su función, tiene autoridad, el riesgo es controlable y no altera prioridades mayores.**
 
 ## 2. Informar
 
@@ -257,7 +257,7 @@ Clasifica diez incidencias como resolver, informar o escalar.
 
 ## 1. Integración
 
-La guardia combina rutina, órdenes, contactos, coordinación, incidente y relevo.
+**La guardia combina rutina, órdenes, contactos, coordinación, incidente y relevo.**
 
 ## 2. Rutina
 
