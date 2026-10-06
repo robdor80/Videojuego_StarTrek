@@ -27,7 +27,7 @@ El operador debe conocer:
 
 ## 2. Producción
 
-Las fuentes proporcionan energía utilizable. En este nivel no se estudia todavía diseño interno avanzado, sino:
+**Las fuentes proporcionan energía utilizable.** En este nivel no se estudia todavía diseño interno avanzado, sino:
 - disponibilidad;
 - estabilidad;
 - capacidad;
@@ -78,7 +78,7 @@ Lee un estado energético y decide si existe margen para aumentar consumo de Sen
 
 ## 1. Distribuir es priorizar
 
-La energía debe llegar a cargas concretas.
+**La energía debe llegar a cargas concretas.**
 
 La distribución puede:
 - mantener;
@@ -141,7 +141,7 @@ Asigna energía en un escenario con tres demandas incompatibles.
 
 ## 1. Una orden de vuelo tiene coste técnico
 
-Impulso y warp necesitan capacidad técnica disponible.
+**Impulso y warp necesitan capacidad técnica disponible.**
 
 Ingeniería debe poder responder:
 - si es posible;
@@ -219,7 +219,7 @@ Sensores depende de:
 - procesamiento;
 - entorno.
 
-Si Sensores pide más potencia, Ingeniería y Ops deben distinguir necesidad técnica y prioridad operacional.
+**Si Sensores pide más potencia, Ingeniería y Ops deben distinguir necesidad técnica y prioridad operacional.**
 
 ## 3. Escudos
 
@@ -265,7 +265,7 @@ Traza dependencias de cuatro sistemas y predice qué ocurre tras perder una rama
 
 ## 1. Síntoma no es causa
 
-Un síntoma describe lo observado.
+**Un síntoma describe lo observado.**
 
 Ejemplo:
 > “Matriz de sensores pierde resolución.”
@@ -373,7 +373,7 @@ Cuando sea razonable, Ingeniería puede estimar:
 - tiempo de reparación;
 - tiempo para recuperar capacidad.
 
-Debe incluir incertidumbre si existe.
+**Debe incluir incertidumbre si existe.**
 
 ## 6. Recomendación
 

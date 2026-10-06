@@ -19,7 +19,7 @@ La regla central es:
 
 ## 1. Antes de operar, comprobar
 
-Un operador no debe iniciar un barrido sin conocer el estado del sistema.
+**Un operador no debe iniciar un barrido sin conocer el estado del sistema.**
 
 La consola muestra:
 - estado general;
@@ -100,7 +100,7 @@ Un barrido puede configurar:
 - prioridad;
 - duración.
 
-Los valores por defecto permiten cambiar solo lo necesario.
+**Los valores por defecto permiten cambiar solo lo necesario.**
 
 ## 3. Corto alcance
 
@@ -185,7 +185,7 @@ Aumentar sensibilidad puede:
 
 ## 5. Candidatos
 
-Una búsqueda devuelve candidatos compatibles.
+**Una búsqueda devuelve candidatos compatibles.**
 
 No garantiza:
 - identidad;
@@ -216,7 +216,7 @@ Localiza una baliza conocida dentro de una zona con señales débiles y varios c
 
 ## 1. Qué es un contacto
 
-Un contacto es una ficha observacional persistente de algo detectado.
+**Un contacto es una ficha observacional persistente de algo detectado.**
 
 La nave no expone al jugador el identificador oculto de la entidad real.
 
@@ -291,7 +291,7 @@ El seguimiento acumula observaciones para actualizar:
 - velocidad;
 - trayectoria probable.
 
-No revela automáticamente qué es el objeto.
+**No revela automáticamente qué es el objeto.**
 
 ## 2. Capacidad finita
 
@@ -356,7 +356,7 @@ Mantén seguimiento de tres contactos y emite un readout breve de uno prioritari
 
 ## 1. Interferencia
 
-La interferencia degrada la relación entre señal y lectura.
+**La interferencia degrada la relación entre señal y lectura.**
 
 Puede ser:
 - ambiental;
