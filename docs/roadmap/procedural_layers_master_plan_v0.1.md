@@ -81,25 +81,25 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 | 026 | Grafo social multidimensional | COMPLETE | 019 | Relaciones son direccionales y no un único score |
 | 027 | Procedencia de relaciones | COMPLETE | 026 | Amistad/confianza/hostilidad requieren historia plausible |
 | 028 | Romance, afecto, intimidad y consentimiento | COMPLETE | 026-027 | Estados separados, recíprocos cuando corresponda y nunca forzados |
-| 029 | Parentesco y redes familiares | TODO | 019,031-036 | Familia separada de amistad, hogar, tutela y afecto |
+| 029 | Parentesco y redes familiares | COMPLETE | 019,031-036 | Familia separada de amistad, hogar, tutela y afecto |
 | 030 | Reputación, rumor y propagación social | COMPLETE | 023-027 | Información pública emerge por observación/transmisión |
 
 # FASE 3 — BIOLOGÍA, ESPECIES, CULTURAS Y CICLO VITAL
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 031 | Esquema universal de especie | PARTIAL | 002 | Biología tiene contrato común sin definir personalidad |
-| 032 | Morfología y anatomía | PARTIAL | 031 | Rasgos físicos canon y variación individual diferenciados |
-| 033 | Fisiología y necesidades | PARTIAL | 031 | Sueño, alimentación, ambiente y tolerancias son resolubles |
-| 034 | Longevidad, madurez y envejecimiento | TODO | 031-033 | Edad cronológica se traduce correctamente por especie |
-| 035 | Reproducción y desarrollo | TODO | 031-034 | Reglas dependen de biología/canon y nunca de supuestos humanos |
-| 036 | Sexo, género y variación biológica | TODO | 031-035 | Datos permiten especies no humanas sin forzar binarios universales |
-| 037 | Medicina específica por especie | PARTIAL | 031-036 | Diagnóstico/tratamiento respeta fisiología y conocimiento disponible |
-| 038 | Capacidades sensoriales y cognitivas | PARTIAL | 031 | Telepatía/empatía/sentidos no equivalen a omnisciencia |
-| 039 | Cultura como dimensión independiente | PARTIAL | 031 | Cultura no está bloqueada por especie |
-| 040 | Socialización, origen y culturas mixtas | TODO | 039 | Individuos pueden pertenecer a múltiples contextos culturales |
-| 041 | Lenguas y comunicación | PARTIAL | 039 | Lengua conocida, competencia y traducción universal quedan separadas |
-| 042 | Ciclo vital completo y muerte | TODO | 019,029,031-041 | Nacimiento/creación→vida→envejecimiento→muerte→legado es persistente |
+| 031 | Esquema universal de especie | COMPLETE | 002 | Biología tiene contrato común sin definir personalidad |
+| 032 | Morfología y anatomía | COMPLETE | 031 | Rasgos físicos canon y variación individual diferenciados |
+| 033 | Fisiología y necesidades | COMPLETE | 031 | Sueño, alimentación, ambiente y tolerancias son resolubles |
+| 034 | Longevidad, madurez y envejecimiento | COMPLETE | 031-033 | Edad cronológica se traduce correctamente por especie |
+| 035 | Reproducción y desarrollo | COMPLETE | 031-034 | Reglas dependen de biología/canon y nunca de supuestos humanos |
+| 036 | Sexo, género y variación biológica | COMPLETE | 031-035 | Datos permiten especies no humanas sin forzar binarios universales |
+| 037 | Medicina específica por especie | COMPLETE | 031-036 | Diagnóstico/tratamiento respeta fisiología y conocimiento disponible |
+| 038 | Capacidades sensoriales y cognitivas | COMPLETE | 031 | Telepatía/empatía/sentidos no equivalen a omnisciencia |
+| 039 | Cultura como dimensión independiente | COMPLETE | 031 | Cultura no está bloqueada por especie |
+| 040 | Socialización, origen y culturas mixtas | COMPLETE | 039 | Individuos pueden pertenecer a múltiples contextos culturales |
+| 041 | Lenguas y comunicación | COMPLETE | 039 | Lengua conocida, competencia y traducción universal quedan separadas |
+| 042 | Ciclo vital completo y muerte | COMPLETE | 019,029,031-041 | Nacimiento/creación→vida→envejecimiento→muerte→legado es persistente |
 
 # FASE 4 — ORGANIZACIONES, SERVICIO Y CARRERA
 
