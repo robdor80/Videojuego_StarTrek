@@ -189,99 +189,33 @@ La especialización **Operaciones** desarrolla competencia mediante estudio, pr�
 
 ### OPR-101-U01 — Planificación de recursos
 
-**Contenidos:** misión; reserva; riesgo; contingencia.
+### Objetivo operativo
 
-**Práctica:** Plan completo.
+En esta unidad de **Operaciones avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
 
-**Evaluación:** Revisión.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **misión**: propósito operativo que determina qué recursos necesitan reserva y qué demandas tienen prioridad.
+- **reserva**: capacidad no comprometida que se conserva para contingencias y degradaciones.
+- **riesgo**: combinación de probabilidad, impacto y exposición comparada con misión, alternativas y autoridad.
+- **contingencia**: plan alternativo preparado para una desviación concreta, con condición de activación.
 
-### OPR-101-U02 — Supervisión de Ops
+### Aplicación profesional
 
-**Contenidos:** equipo; peticiones; prioridades.
+La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
 
-**Práctica:** Dirigir turno.
+### Práctica
 
-**Evaluación:** Evaluación.
+Plan completo.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### OPR-101-U03 — Interfaz con mando
+Operaciones debe hacer visibles conflictos de recursos y mantener una picture de capacidad útil para que mando pueda priorizar.
 
-**Contenidos:** estado; opciones; recomendación.
+### Evaluación
 
-**Práctica:** Briefing.
+Revisión. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
 
-**Evaluación:** Evaluación.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### OPR-101-U04 — Continuidad de servicios
-
-**Contenidos:** degradación; restauración; registro.
-
-**Práctica:** Caso avanzado.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## OPR-102 — Operaciones avanzadas II
-
-### OPR-102-U01 — Misión prolongada
-
-**Contenidos:** configuración; consumo; cambios.
-
-**Práctica:** Operar misión.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### OPR-102-U02 — Crisis de recursos
-
-**Contenidos:** escasez; prioridad; impacto.
-
-**Práctica:** Escenario.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### OPR-102-U03 — Coordinación de soporte
-
-**Contenidos:** equipos; lanzaderas; transportes; departamentos.
-
-**Práctica:** Caso integrado.
-
-**Evaluación:** Teamwork.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### OPR-102-U04 — Handoff avanzado
-
-**Contenidos:** estado; pendientes; riesgos; órdenes.
-
-**Práctica:** Relevo profesional.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/ship_operations/bridge_station_model.json`
-- `gameplay/ship_operations/ship_computer/computer_query_action_catalog.json`
-- `gameplay/engineering/engineering_loop.json`
-- `gameplay/ship_operations/operational_event_log/README.md`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.

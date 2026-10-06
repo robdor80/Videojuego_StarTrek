@@ -188,99 +188,33 @@ La especialización **Vuelo / Navegación** desarrolla competencia mediante estu
 
 ### NAV-101-U01 — Comportamiento por clase
 
-**Contenidos:** masa; respuesta; límites; sistemas.
+### Objetivo operativo
 
-**Práctica:** Familiarización de clase.
+En esta unidad de **Vuelo / Navegación avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
 
-**Evaluación:** Evaluación.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **masa**: propiedad que condiciona inercia y respuesta de una nave; se traduce en anticipación y márgenes de maniobra.
+- **respuesta**: forma y rapidez con que la nave cambia su estado tras una orden, condicionada por clase, configuración y daños.
+- **límites**: fronteras técnicas o procedimentales que no deben superarse sin autoridad y justificación.
+- **sistemas**: capacidades de propulsión, control, sensores y soporte cuyo estado afecta la maniobra disponible.
 
-### NAV-101-U02 — Vuelo con daños
+### Aplicación profesional
 
-**Contenidos:** propulsión degradada; control; margen.
+La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
 
-**Práctica:** Simulación.
+### Práctica
 
-**Evaluación:** Práctica.
+Familiarización de clase.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### NAV-101-U03 — Operaciones cercanas
+Vuelo debe conservar márgenes, anunciar límites y adaptar trayectoria antes de que una situación deje de ser recuperable.
 
-**Contenidos:** formación; rendezvous; espacio congestionado.
+### Evaluación
 
-**Práctica:** Maniobra.
+Evaluación. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
 
-**Evaluación:** Evaluación.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### NAV-101-U04 — Liderazgo de vuelo
-
-**Contenidos:** relevo; instrucción; coordinación.
-
-**Práctica:** Supervisar puesto.
-
-**Evaluación:** Observación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## NAV-102 — Vuelo avanzado II
-
-### NAV-102-U01 — Plan de misión
-
-**Contenidos:** ruta; tiempo; riesgos; alternativas.
-
-**Práctica:** Plan completo.
-
-**Evaluación:** Revisión.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### NAV-102-U02 — Ejecución prolongada
-
-**Contenidos:** continuidad; cambios; logs.
-
-**Práctica:** Misión extendida.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### NAV-102-U03 — Crisis de vuelo
-
-**Contenidos:** prioridad; comunicación; abort.
-
-**Práctica:** Escenario complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### NAV-102-U04 — Entrega de navegación
-
-**Contenidos:** estado; pendientes; riesgos.
-
-**Práctica:** Handoff profesional.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/navigation/navigation_order_contract.json`
-- `gameplay/navigation/route_cost_model.json`
-- `gameplay/warp_travel/route_planning_model.json`
-- `gameplay/warp_travel/eta_resolution_model.json`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.

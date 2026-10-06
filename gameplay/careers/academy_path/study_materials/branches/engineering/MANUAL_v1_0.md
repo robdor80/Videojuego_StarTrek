@@ -193,99 +193,32 @@ La especialización **Ingeniería** desarrolla competencia mediante estudio, pr�
 
 ### ENG-101-U01 — Sistemas complejos
 
-**Contenidos:** interdependencias; configuración; limitaciones.
+### Objetivo operativo
 
-**Práctica:** Caso de clase.
+En esta unidad de **Ingeniería avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
 
-**Evaluación:** Evaluación.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **interdependencias**: relaciones por las que un cambio en un sistema altera capacidad o riesgo de otros.
+- **configuración**: estado deliberado de recursos y sistemas preparado para una fase concreta de misión.
+- **limitaciones**: capacidades reducidas o restricciones que condicionan qué configuración y reparación son viables.
 
-### ENG-101-U02 — Supervisión técnica
+### Aplicación profesional
 
-**Contenidos:** equipo; trabajo; seguridad; ETA.
+La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
 
-**Práctica:** Dirigir reparación.
+### Práctica
 
-**Evaluación:** Práctica.
+Caso de clase.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### ENG-101-U03 — Decisión técnica
+Ingeniería debe diagnosticar antes de intervenir, proteger al personal y verificar cualquier restauración antes de declarar capacidad recuperada.
 
-**Contenidos:** opciones; riesgo; misión; recomendación.
+### Evaluación
 
-**Práctica:** Briefing al mando.
+Evaluación. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
 
-**Evaluación:** Juicio.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### ENG-101-U04 — Mantenimiento avanzado
-
-**Contenidos:** tendencia; prevención; planificación.
-
-**Práctica:** Plan de mantenimiento.
-
-**Evaluación:** Revisión.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## ENG-102 — Ingeniería avanzada II
-
-### ENG-102-U01 — Misión completa
-
-**Contenidos:** demanda; reservas; configuración; continuidad.
-
-**Práctica:** Operar misión.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### ENG-102-U02 — Crisis técnica
-
-**Contenidos:** fallos múltiples; personal; prioridad.
-
-**Práctica:** Escenario complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### ENG-102-U03 — Recuperación
-
-**Contenidos:** restauración; verificación; logs.
-
-**Práctica:** Cerrar incidente.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### ENG-102-U04 — Handoff de Ingeniería
-
-**Contenidos:** estado; ETA; riesgos; pendientes.
-
-**Práctica:** Relevo profesional.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `gameplay/engineering/engineering_loop.json`
-- `gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json`
-- `lore/starships/ship_systems/warp/README.md`
-- `lore/starships/ship_systems/transporters/README.md`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.

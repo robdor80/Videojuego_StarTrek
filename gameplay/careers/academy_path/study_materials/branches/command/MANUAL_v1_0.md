@@ -192,99 +192,32 @@ La especialización **Mando** desarrolla competencia mediante estudio, práctica
 
 ### CMD-101-U01 — Supervisión profesional
 
-**Contenidos:** equipo; estándares; feedback.
+### Objetivo operativo
 
-**Práctica:** Dirigir turno.
+En esta unidad de **Mando avanzada**, el cadete debe convertir conocimiento de rama en actuación de oficial novel: preparar, ejecutar, comunicar límites y mantener continuidad.
 
-**Evaluación:** Evaluación.
+### Contenidos
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+- **equipo**: personas disponibles consideradas por rol, competencia, carga y capacidad de relevo; supervisar exige adaptar el control al riesgo y experiencia.
+- **estándares**: criterios mínimos de seguridad y calidad que permiten decidir si una ejecución es aceptable y repetible.
+- **feedback**: información específica que conecta una conducta observada con su efecto y con una acción concreta de mejora.
 
-### CMD-101-U02 — Mando y personal
+### Aplicación profesional
 
-**Contenidos:** capacidad; fatiga; conflicto; delegación.
+La tarea se aborda desde la situación real, no desde una respuesta memorizada: se identifican condiciones y límites, se ejecuta dentro de autoridad y se informa de cualquier desviación que cambie riesgo o misión.
 
-**Práctica:** Caso humano.
+### Práctica
 
-**Evaluación:** Juicio.
+Dirigir turno.
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
+### Criterio de servicio
 
-### CMD-101-U03 — Órdenes complejas
+Mando debe integrar información incompleta, personas, regulación y misión, y asumir una decisión explicable sin invadir la competencia técnica de sus especialistas.
 
-**Contenidos:** intención; condiciones; autonomía.
+### Evaluación
 
-**Práctica:** Emitir plan de órdenes.
+Evaluación. La evaluación exige desempeño repetible y capacidad de explicar decisiones, no una actuación espectacular aislada.
 
-**Evaluación:** Práctica.
+### Repaso interactivo
 
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### CMD-101-U04 — Preparación de mando
-
-**Contenidos:** cualificaciones; puente; responsabilidad.
-
-**Práctica:** Revisión de trayectoria.
-
-**Evaluación:** Informe.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## CMD-102 — Mando avanzado II
-
-### CMD-102-U01 — Misión completa
-
-**Contenidos:** briefing; ejecución; adaptación; cierre.
-
-**Práctica:** Dirigir misión.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### CMD-102-U02 — Riesgo estratégico local
-
-**Contenidos:** consecuencias; regulación; tripulación.
-
-**Práctica:** Caso complejo.
-
-**Evaluación:** Juicio.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### CMD-102-U03 — Interacción externa
-
-**Contenidos:** autoridad; negociación; representación.
-
-**Práctica:** Escena diplomática.
-
-**Evaluación:** Evaluación.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-### CMD-102-U04 — Handover de mando
-
-**Contenidos:** estado; órdenes; pendientes; responsabilidad.
-
-**Práctica:** Transferir control.
-
-**Evaluación:** Práctica.
-
-**Criterio profesional:** explica qué sabes, qué autoridad tienes, qué riesgo existe, qué harías y qué debe quedar registrado.
-
-## Formación cruzada
-
-La formación cruzada puede aportar capacidad auxiliar, pero no equivale automáticamente a la cualificación completa de esta rama.
-
-## Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/specialization_rules.md`
-- `gameplay/careers/starfleet_service/professional_evidence_model.json`
-- `gameplay/careers/starfleet_service/career_progression_rules.json`
-- `lore/federation/starfleet/command_structure/succession_rules.json`
-- `lore/federation/starfleet/qualifications/command_qualification.json`
-- `lore/federation/starfleet/prime_directive/prime_directive.json`
-- `gameplay/orders/starfleet_mission_tasking_order.json`
-
-Estas referencias constriñen los hechos de lore y los sistemas de juego. La organización pedagógica del currículo es una adición de diseño del proyecto.
+El repaso dinámico utiliza exclusivamente conceptos enseñados en esta unidad.
