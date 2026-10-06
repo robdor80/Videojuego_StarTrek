@@ -36,7 +36,7 @@ El líder debe:
 
 ## 3. Responsabilidad sobre equipo
 
-No significa controlar cada movimiento.
+**No significa controlar cada movimiento.**
 
 Significa atender:
 - carga;
@@ -83,7 +83,7 @@ Aceptar una responsabilidad de equipo y definir claramente su alcance.
 
 ## 1. Claridad
 
-Una instrucción debe permitir actuar sin adivinar.
+**Una instrucción debe permitir actuar sin adivinar.**
 
 Puede incluir:
 - objetivo;
@@ -142,7 +142,7 @@ Dirigir una tarea breve y corregir una instrucción cuando cambie el escenario.
 
 ## 1. Delegar no es abandonar
 
-Delegar significa asignar una tarea a otra persona manteniendo responsabilidad de seguimiento.
+**Delegar significa asignar una tarea a otra persona manteniendo responsabilidad de seguimiento.**
 
 ## 2. Capacidad
 
@@ -212,7 +212,7 @@ Si el error crea riesgo inmediato:
 - primero se detiene o corrige la situación;
 - después se explica.
 
-Si no hay urgencia, puede darse feedback sin interrumpir innecesariamente.
+**Si no hay urgencia, puede darse feedback sin interrumpir innecesariamente.**
 
 ## 3. Feedback
 
@@ -273,7 +273,7 @@ La presión puede:
 - aumentar tono;
 - estrechar opciones.
 
-El líder debe reconocerlo.
+**El líder debe reconocerlo.**
 
 ## 3. Desescalada
 
@@ -359,7 +359,7 @@ La valoración de liderazgo se apoya en:
 - resultados;
 - comportamiento repetido.
 
-Una sola escena no debe dominar una trayectoria salvo gravedad excepcional.
+**Una sola escena no debe dominar una trayectoria salvo gravedad excepcional.**
 
 ### Práctica
 

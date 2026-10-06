@@ -34,7 +34,7 @@ El escenario puede contener:
 - riesgos;
 - condiciones de evaluación
 
-que el cadete no conoce.
+**que el cadete no conoce.**
 
 La IA no puede revelar ese estado oculto.
 
@@ -88,7 +88,7 @@ Antes de una crisis puede haber:
 
 ## 2. Ritmo
 
-Un equipo profesional no se acelera sin necesidad ni se relaja hasta perder conciencia.
+**Un equipo profesional no se acelera sin necesidad ni se relaja hasta perder conciencia.**
 
 Debe mantener:
 - atención;
@@ -137,7 +137,7 @@ El equipo solo puede reaccionar a:
 - lo que se le comunica;
 - lo que conoce.
 
-No a la verdad oculta del escenario.
+**No a la verdad oculta del escenario.**
 
 ## 2. Informar
 
@@ -227,7 +227,7 @@ El equipo:
 
 ## 5. Teamwork
 
-Trabajo en equipo no significa acuerdo constante.
+**Trabajo en equipo no significa acuerdo constante.**
 
 Significa coordinar desacuerdo sin romper la operación.
 
@@ -273,7 +273,7 @@ La vuelta o transferencia debe mantener:
 
 ## 4. Logs
 
-El registro conserva hechos y referencias.
+**El registro conserva hechos y referencias.**
 
 No se reescribe para que la misión “quede mejor”.
 
@@ -313,7 +313,7 @@ El debrief separa:
 
 ## 2. Sin hindsight injusto
 
-Una decisión se evalúa con la información que el cadete tenía en ese momento.
+**Una decisión se evalúa con la información que el cadete tenía en ese momento.**
 
 No con el contenido oculto que se revela después.
 
