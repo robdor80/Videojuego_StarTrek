@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "kinship_family_network",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Kinship is persistent relational world state and is separate from household, affection, friendship, care, guardianship, inheritance and legal status.",
+  "relation_types": [
+    "parent_child",
+    "sibling",
+    "grandparent_grandchild",
+    "aunt_uncle_niece_nephew",
+    "cousin",
+    "extended_kin",
+    "adoptive_kin",
+    "social_family_role",
+    "species_or_culture_specific_kin_role"
+  ],
+  "record_fields": [
+    "kinship_id",
+    "participant_refs",
+    "kinship_type",
+    "directionality_if_relevant",
+    "source_event_refs",
+    "parentage_ref_if_relevant",
+    "legal_status_ref_if_any",
+    "knowledge_visibility",
+    "active_social_role_if_any",
+    "created_time",
+    "last_update_time"
+  ],
+  "rules": [
+    "Kinship does not automatically create friendship, affection, trust, obedience, care, access, property or secret knowledge.",
+    "Household and kinship are independent graphs.",
+    "Separate residence does not erase kinship.",
+    "Conflict does not erase kinship.",
+    "Death does not erase kinship history.",
+    "Biological parentage is created only by an authorized lifecycle/reproduction record.",
+    "Adoption, guardianship and legal family status require applicable legal/social rules.",
+    "Affective partnership does not automatically create parentage or kinship.",
+    "Kinship facts and character knowledge of kinship are separate.",
+    "Disputed or unknown kinship may exist without rewriting authoritative truth.",
+    "LOD and save/load do not reroll family relations.",
+    "AI cannot invent family relations for drama or dialogue."
+  ],
+  "dependencies": [
+    "gameplay/species/reproduction_parentage_framework.json",
+    "gameplay/relationships/relationship_change_provenance_contract.json",
+    "gameplay/knowledge/character_knowledge_state.json"
+  ]
+}
