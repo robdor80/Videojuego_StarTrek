@@ -71,18 +71,18 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 019 | Definición base de personaje | PARTIAL | 010 | Identidad inicial separada de estado vivo |
-| 020 | Personalidad estable vs estado emocional | PARTIAL | 019 | Personalidad no deriva automáticamente de especie/rango |
-| 021 | Valores, objetivos, miedos y límites | PARTIAL | 020 | Motivaciones persistentes tienen causas y privacidad |
-| 022 | Toma de decisiones | PARTIAL | 020-021 | Decisiones consumen estado, no inventan hechos |
-| 023 | Modelo de conocimiento | PARTIAL | 019 | Saber requiere canal válido de adquisición |
-| 024 | Memoria actor-específica | PARTIAL | 023 | Memoria ≠ World Truth; admite saliencia e incertidumbre |
-| 025 | Olvido, resumen y reinterpretación | TODO | 024 | Perder detalle no fabrica ni borra consecuencias |
-| 026 | Grafo social multidimensional | PARTIAL | 019 | Relaciones son direccionales y no un único score |
-| 027 | Procedencia de relaciones | PARTIAL | 026 | Amistad/confianza/hostilidad requieren historia plausible |
-| 028 | Romance, afecto, intimidad y consentimiento | PARTIAL | 026-027 | Estados separados, recíprocos cuando corresponda y nunca forzados |
+| 019 | Definición base de personaje | COMPLETE | 010 | Identidad inicial separada de estado vivo |
+| 020 | Personalidad estable vs estado emocional | COMPLETE | 019 | Personalidad no deriva automáticamente de especie/rango |
+| 021 | Valores, objetivos, miedos y límites | COMPLETE | 020 | Motivaciones persistentes tienen causas y privacidad |
+| 022 | Toma de decisiones | COMPLETE | 020-021 | Decisiones consumen estado, no inventan hechos |
+| 023 | Modelo de conocimiento | COMPLETE | 019 | Saber requiere canal válido de adquisición |
+| 024 | Memoria actor-específica | COMPLETE | 023 | Memoria ≠ World Truth; admite saliencia e incertidumbre |
+| 025 | Olvido, resumen y reinterpretación | COMPLETE | 024 | Perder detalle no fabrica ni borra consecuencias |
+| 026 | Grafo social multidimensional | COMPLETE | 019 | Relaciones son direccionales y no un único score |
+| 027 | Procedencia de relaciones | COMPLETE | 026 | Amistad/confianza/hostilidad requieren historia plausible |
+| 028 | Romance, afecto, intimidad y consentimiento | COMPLETE | 026-027 | Estados separados, recíprocos cuando corresponda y nunca forzados |
 | 029 | Parentesco y redes familiares | TODO | 019,031-036 | Familia separada de amistad, hogar, tutela y afecto |
-| 030 | Reputación, rumor y propagación social | PARTIAL | 023-027 | Información pública emerge por observación/transmisión |
+| 030 | Reputación, rumor y propagación social | COMPLETE | 023-027 | Información pública emerge por observación/transmisión |
 
 # FASE 3 — BIOLOGÍA, ESPECIES, CULTURAS Y CICLO VITAL
 
