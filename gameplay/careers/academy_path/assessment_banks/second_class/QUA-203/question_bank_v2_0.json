@@ -1,0 +1,687 @@
+{
+  "schema_version": "2.1.0",
+  "course_id": "QUA-203",
+  "status": "concept_driven_autocorrectable_v2_1",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 5,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1,
+    "concepts_available_per_unit": 6,
+    "avoid_duplicate_concepts": true
+  },
+  "concepts": [
+    {
+      "id": "QUA-203-C001",
+      "unit_id": "QUA-203-U01",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa cursos en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa cursos en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa cursos en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "cursos · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "cursos",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C002",
+      "unit_id": "QUA-203-U01",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Compilar expediente.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Compilar expediente.",
+        "Repaso: Planifica esta tarea: Compilar expediente."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C003",
+      "unit_id": "QUA-203-U01",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Revisión de evidencia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Revisión de evidencia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Revisión de evidencia cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C004",
+      "unit_id": "QUA-203-U01",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C005",
+      "unit_id": "QUA-203-U02",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa conceptos en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa conceptos en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa conceptos en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "conceptos · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "conceptos",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C006",
+      "unit_id": "QUA-203-U02",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Evaluación escrita/oral focalizada.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Evaluación escrita/oral focalizada.",
+        "Repaso: Planifica esta tarea: Evaluación escrita/oral focalizada."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C007",
+      "unit_id": "QUA-203-U02",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Conocimiento de rama cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Conocimiento de rama cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Conocimiento de rama cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C008",
+      "unit_id": "QUA-203-U02",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C009",
+      "unit_id": "QUA-203-U03",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa procedimiento en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa procedimiento en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa procedimiento en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "procedimiento · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "procedimiento",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C010",
+      "unit_id": "QUA-203-U03",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Prueba práctica.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Prueba práctica.",
+        "Repaso: Planifica esta tarea: Prueba práctica."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C011",
+      "unit_id": "QUA-203-U03",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Ejecución práctica cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Ejecución práctica cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Ejecución práctica cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C012",
+      "unit_id": "QUA-203-U03",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C013",
+      "unit_id": "QUA-203-U04",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa incertidumbre en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa incertidumbre en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa incertidumbre en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "incertidumbre · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "incertidumbre",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C014",
+      "unit_id": "QUA-203-U04",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Caso situacional.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Caso situacional.",
+        "Repaso: Planifica esta tarea: Caso situacional."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C015",
+      "unit_id": "QUA-203-U04",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Juicio cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Juicio cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Juicio cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C016",
+      "unit_id": "QUA-203-U04",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C017",
+      "unit_id": "QUA-203-U05",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa fortalezas en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa fortalezas en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa fortalezas en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "fortalezas · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "fortalezas",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C018",
+      "unit_id": "QUA-203-U05",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Panel académico.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Panel académico.",
+        "Repaso: Planifica esta tarea: Panel académico."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C019",
+      "unit_id": "QUA-203-U05",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Revisión de supervisor cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Revisión de supervisor cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Revisión de supervisor cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C020",
+      "unit_id": "QUA-203-U05",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C021",
+      "unit_id": "QUA-203-U06",
+      "source_type": "professional_knowledge",
+      "web_prompt_es": "¿Qué opción explica correctamente qué significa qualified en esta unidad y cómo puede cambiar una decisión?",
+      "web_prompt_variants_es": [
+        "¿Qué opción explica correctamente qué significa qualified en esta unidad y cómo puede cambiar una decisión?",
+        "Explica qué significa qualified en esta unidad y cómo puede cambiar una decisión."
+      ],
+      "answer_display_es": "qualified · contexto · impacto en decisión",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "qualified",
+        "contexto",
+        "impacto en decisión"
+      ]
+    },
+    {
+      "id": "QUA-203-C022",
+      "unit_id": "QUA-203-U06",
+      "source_type": "planning",
+      "web_prompt_es": "Planifica esta tarea: Definir siguiente paso.",
+      "web_prompt_variants_es": [
+        "Planifica esta tarea: Definir siguiente paso.",
+        "Repaso: Planifica esta tarea: Definir siguiente paso."
+      ],
+      "answer_display_es": "objetivo · riesgos · recursos · autoridad · criterio de éxito",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "objetivo",
+        "riesgos",
+        "recursos",
+        "autoridad",
+        "criterio de éxito"
+      ]
+    },
+    {
+      "id": "QUA-203-C023",
+      "unit_id": "QUA-203-U06",
+      "source_type": "contingency",
+      "web_prompt_es": "Durante Resultado y plan cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+      "web_prompt_variants_es": [
+        "Durante Resultado y plan cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?",
+        "Repaso: Durante Resultado y plan cambia una condición relevante. ¿Qué revisas antes de continuar, adaptar el plan o escalar?"
+      ],
+      "answer_display_es": "estado · seguridad · riesgo · autoridad · adaptación o escalado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "estado",
+        "seguridad",
+        "riesgo",
+        "autoridad",
+        "adaptación o escalado"
+      ]
+    },
+    {
+      "id": "QUA-203-C024",
+      "unit_id": "QUA-203-U06",
+      "source_type": "handoff",
+      "web_prompt_es": "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+      "web_prompt_variants_es": [
+        "¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?",
+        "Repaso: ¿Qué evidencia mínima debe quedar registrada al cerrar esta unidad?"
+      ],
+      "answer_display_es": "acción · resultado · limitaciones · riesgos · pendientes",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "acción",
+        "resultado",
+        "limitaciones",
+        "riesgos",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "QUA-203-C025",
+      "unit_id": "QUA-203-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Cursos: cursos se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Cursos: cursos se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "QUA-203-C026",
+      "unit_id": "QUA-203-U01",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica cursos desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica cursos desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "QUA-203-C027",
+      "unit_id": "QUA-203-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Conceptos: conceptos se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Conceptos: conceptos se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "QUA-203-C028",
+      "unit_id": "QUA-203-U02",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica conceptos desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica conceptos desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "QUA-203-C029",
+      "unit_id": "QUA-203-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Procedimiento: procedimiento se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Procedimiento: procedimiento se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "QUA-203-C030",
+      "unit_id": "QUA-203-U03",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica procedimiento desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica procedimiento desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "QUA-203-C031",
+      "unit_id": "QUA-203-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Incertidumbre: Debe expresarse y gestionarse; ocultarla produce decisiones falsamente precisas.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Incertidumbre: Debe expresarse y gestionarse; ocultarla produce decisiones falsamente precisas."
+      ]
+    },
+    {
+      "id": "QUA-203-C032",
+      "unit_id": "QUA-203-U04",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica incertidumbre desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica incertidumbre desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "QUA-203-C033",
+      "unit_id": "QUA-203-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Fortalezas: fortalezas se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Fortalezas: fortalezas se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "QUA-203-C034",
+      "unit_id": "QUA-203-U05",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica fortalezas desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica fortalezas desde el punto de vista profesional."
+      ]
+    },
+    {
+      "id": "QUA-203-C035",
+      "unit_id": "QUA-203-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Contenidos»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Contenidos»?",
+        "En «Contenidos», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Qualified: qualified se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Qualified: qualified se trata como un elemento operativo explícito: significado, impacto, límites y condición de escalado deben quedar claros."
+      ]
+    },
+    {
+      "id": "QUA-203-C036",
+      "unit_id": "QUA-203-U06",
+      "source_type": "study_anchor",
+      "web_prompt_es": "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+      "web_prompt_variants_es": [
+        "¿Cuál de estas opciones forma parte de «Autoevaluación»?",
+        "En «Autoevaluación», ¿qué elemento aparece en los apuntes?"
+      ],
+      "answer_display_es": "Explica qualified desde el punto de vista profesional.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "Explica qualified desde el punto de vista profesional."
+      ]
+    }
+  ]
+}
