@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "persistent_state_roundtrip_contract",
+  "status": "foundation_fixed",
+  "scope": [
+    "save",
+    "load",
+    "LOD_unload",
+    "LOD_reload",
+    "offline_catchup",
+    "runtime_migration"
+  ],
+  "required_persisted_identity_fields": [
+    "entity_id",
+    "entity_type",
+    "creation_provenance",
+    "materialization_state",
+    "rules_version",
+    "generator_version",
+    "seed_provenance"
+  ],
+  "required_persisted_links_when_applicable": [
+    "visual_identity_id",
+    "history_ref",
+    "relationship_refs",
+    "knowledge_state_ref",
+    "memory_state_ref",
+    "assignment_refs",
+    "ownership_refs",
+    "location_ref"
+  ],
+  "rules": [
+    "Save/load is serialization of authoritative state, not regeneration.",
+    "Missing optional presentation data may be rebuilt only from persistent identity and authoritative state.",
+    "Identity-affecting data may not be reconstructed from a fresh random roll.",
+    "LOD unload/reload preserves stable identity and authoritative history.",
+    "Offline catch-up may append valid events and mutate current state but cannot reroll identity.",
+    "Migration is explicit, versioned and auditable.",
+    "A failed or incomplete migration must retain the old persisted result or fail safely; it cannot silently replace the entity."
+  ],
+  "roundtrip_invariants": [
+    "same_entity_id",
+    "same_identity_lineage",
+    "same_materialization_provenance",
+    "same_history_prefix",
+    "same_visual_identity_lineage_when_applicable",
+    "no_duplicate_population_slot",
+    "no_duplicate_unique_object",
+    "no_duplicate_ship_or_facility"
+  ]
+}
