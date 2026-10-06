@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "character_memory_lifecycle",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "source_inspiration": "Nimroel memory salience/forgetting semantics",
+  "principle": "Memory is actor-specific recollection derived from events/knowledge; it is not World Truth and is not guaranteed perfect.",
+  "states": {
+    "recent_detailed": "fresh memory with relatively rich retrievable detail",
+    "consolidated_relevant": "stable memory with important detail retained",
+    "routine_low_salience": "ordinary memory eligible for aggregation",
+    "fading_detail": "specific detail is degrading",
+    "gist_retained": "core meaning remains while detail is lost",
+    "recalled_with_uncertainty": "retrieval is partial or confidence-limited",
+    "reinterpreted": "meaning/emotional interpretation changed without changing the past event",
+    "inactive_or_forgotten": "not normally retrievable without valid reconstruction cues"
+  },
+  "high_salience_sources": [
+    "important_relationship",
+    "death",
+    "serious_injury",
+    "conflict",
+    "promise_or_commitment",
+    "commendation_or_discipline",
+    "major_professional_event",
+    "danger",
+    "home_or_assignment_change",
+    "important_success_or_failure",
+    "consequential_decision"
+  ],
+  "required_record_fields": [
+    "memory_id",
+    "character_id",
+    "source_event_refs",
+    "subject_refs",
+    "memory_state",
+    "gist",
+    "salience",
+    "confidence",
+    "formed_at",
+    "last_recalled_at",
+    "last_updated_at"
+  ],
+  "optional_record_fields": [
+    "detail_refs",
+    "interpretation",
+    "emotional_tag_refs",
+    "retrieval_cues",
+    "privacy_context",
+    "reconstruction_source_refs"
+  ],
+  "rules": [
+    "Not every experienced event requires a persistent detailed memory.",
+    "Routine episodes may be summarized or aggregated.",
+    "Loss of detail does not authorize fabrication.",
+    "Gist may persist after details fade.",
+    "Shared events do not create identical memories in different characters.",
+    "A memory may be inaccurate, incomplete, emotionally colored or sincerely misinterpreted.",
+    "Reinterpretation changes the actor's understanding, not the authoritative past event.",
+    "Forgetting does not erase external commitments, records, injuries, relationships or world consequences.",
+    "Evidence or another person's reminder may support reconstruction but does not force perfect recall.",
+    "LOD and save/load do not reroll memory.",
+    "AI may use only available relevant memories and may express uncertainty or lack of recall.",
+    "AI cannot invent missing shared history or missing details to improve dialogue."
+  ],
+  "core_rpg_candidate": true
+}
