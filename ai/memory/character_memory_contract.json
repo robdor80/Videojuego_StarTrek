@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "character_memory_contract",
   "classification": "GAME_ADDITION",
   "memory_types": [
@@ -36,6 +36,10 @@
     "Important promises, injuries, betrayals, commendations and shared experiences can persist as social memory.",
     "AI may recall only memories present and retrievable in state.",
     "Memory is not silently created retroactively to justify dialogue.",
-    "Forgetting or uncertainty must not be used to erase authoritative service/campaign records."
-  ]
+    "Forgetting or uncertainty must not be used to erase authoritative service/campaign records.",
+    "Memory detail may fade while gist and consequences remain.",
+    "Reinterpretation may change meaning without rewriting the past event.",
+    "Shared events do not imply identical memories across characters."
+  ],
+  "lifecycle_contract_ref": "ai/memory/character_memory_lifecycle_contract.json"
 }
