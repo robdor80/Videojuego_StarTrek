@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "validation_pack_id": "procedural_living_population_invariants",
   "status": "design_level_tests_before_runtime_implementation",
   "cases": [
@@ -73,6 +73,31 @@
       "expected": [
         "existing materialized NPCs remain stable after generator rule updates",
         "changes occur only through explicit migration or world-state events"
+      ]
+    },
+    {
+      "id": "visual_identity_survives_elapsed_years",
+      "expected": [
+        "same character_id resolves to the same base_visual_identity_id after years of campaign time",
+        "age progression modifies the persistent visual identity rather than replacing it",
+        "hair, uniform, rank, scars, body composition and temporary condition may change without changing the underlying person",
+        "a newly generated portrait for an existing character must preserve identity anchors and provenance"
+      ]
+    },
+    {
+      "id": "lod_save_load_and_offscreen_identity_roundtrip",
+      "expected": [
+        "unload/reload cannot change base morphology, personality seed, origin seed or visual identity",
+        "save/load cannot change persistent identity",
+        "offline catch-up may append history and evolve state but cannot reroll identity"
+      ]
+    },
+    {
+      "id": "persistent_entity_refit_not_replacement",
+      "expected": [
+        "ship repair or refit preserves vessel entity identity unless an explicit replacement event creates a new vessel",
+        "facility repair or reconstruction preserves entity identity when World State models continuity",
+        "unique persistent objects do not reroll because their visual or damage state changes"
       ]
     }
   ]
