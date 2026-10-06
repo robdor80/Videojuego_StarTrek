@@ -19,7 +19,7 @@ Una orden útil sigue un recorrido:
 
 > Mando define intención → estación interpreta → sistema valida → acción se ejecuta → resultado se informa.
 
-El cadete debe observar que el puente no funciona como una persona controlándolo todo.
+**El cadete debe observar que el puente no funciona como una persona controlándolo todo.**
 
 ## 2. Coordinación
 
@@ -72,7 +72,7 @@ Ingeniería trabaja con:
 
 ## 2. Energía
 
-El cadete observa cómo una necesidad técnica puede competir con otras por recursos.
+**El cadete observa cómo una necesidad técnica puede competir con otras por recursos.**
 
 No se enseña todavía gestión avanzada, pero sí la idea de que “dar más potencia” tiene coste.
 
@@ -135,7 +135,7 @@ El resultado puede contener:
 - firmas;
 - clasificación parcial.
 
-La interpretación debe respetar esos límites.
+**La interpretación debe respetar esos límites.**
 
 ## 4. Reporte
 
@@ -169,7 +169,7 @@ Plotting significa preparar una solución de ruta coherente con:
 
 ## 2. Rumbo
 
-El rumbo expresa la dirección operacional de la nave dentro del marco utilizado.
+**El rumbo expresa la dirección operacional de la nave dentro del marco utilizado.**
 
 ## 3. Velocidad
 
@@ -196,7 +196,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Dos áreas con límites claros
 
-Seguridad y Medicina pueden intervenir en situaciones críticas, pero sus responsabilidades son diferentes.
+**Seguridad y Medicina pueden intervenir en situaciones críticas, pero sus responsabilidades son diferentes.**
 
 ## 2. Seguridad
 
@@ -246,7 +246,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El objetivo no es elegir todavía
 
-Al final de 4.ª clase el cadete debe empezar a conocerse profesionalmente, no cerrar su carrera.
+**Al final de 4.ª clase el cadete debe empezar a conocerse profesionalmente, no cerrar su carrera.**
 
 La especialización formal llegará más adelante.
 

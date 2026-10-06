@@ -15,7 +15,7 @@ NAV-403 no exige ecuaciones orbitales reales ni cálculos avanzados de astrogaci
 
 ## 1. Un mapa estelar es una representación
 
-Una carta no es el universo completo.
+**Una carta no es el universo completo.**
 
 Representa conocimiento disponible sobre:
 
@@ -87,7 +87,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Posición absoluta y relativa
 
-Una posición puede expresarse respecto a un marco de referencia o respecto a otro objeto.
+**Una posición puede expresarse respecto a un marco de referencia o respecto a otro objeto.**
 
 Ejemplos conceptuales:
 
@@ -149,7 +149,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Distancia
 
-La ruta debe partir de una estimación de distancia.
+**La ruta debe partir de una estimación de distancia.**
 
 La distancia puede proceder de:
 
@@ -217,7 +217,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ### Impulso
 
-Se usa para movimiento subluz y maniobras locales.
+**Se usa para movimiento subluz y maniobras locales.**
 
 ### Warp
 
@@ -317,7 +317,7 @@ Una ruta puede contener:
 
 ## 4. Peligros desconocidos
 
-El World State puede contener un riesgo que el personaje no conoce.
+**El World State puede contener un riesgo que el personaje no conoce.**
 
 El sistema **no debe mostrarlo disfrazado como advertencia**.
 
@@ -353,7 +353,7 @@ Una solución básica de navegación puede seguir:
 
 ## 2. Origen y destino
 
-Primero deben resolverse correctamente.
+**Primero deben resolverse correctamente.**
 
 Una orden ambigua debe aclararse antes de ejecutar.
 

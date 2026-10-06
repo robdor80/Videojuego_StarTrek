@@ -22,7 +22,7 @@ La preparación física mejora cuando existe una relación sostenible entre:
 - recuperación;
 - tiempo.
 
-Una sesión extraordinaria no compensa una rutina incoherente.
+**Una sesión extraordinaria no compensa una rutina incoherente.**
 
 ## 2. Frecuencia
 
@@ -74,7 +74,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. De la base a la función
 
-PHY-401 introdujo resistencia básica.
+**PHY-401 introdujo resistencia básica.**
 
 PHY-402 la aplica a tareas donde el personaje debe sostener esfuerzo con control.
 
@@ -130,7 +130,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Integrar capacidades
 
-Fuerza y coordinación se trabajan juntas porque en una tarea real no basta con producir fuerza.
+**Fuerza y coordinación se trabajan juntas porque en una tarea real no basta con producir fuerza.**
 
 Hay que aplicarla:
 
@@ -194,7 +194,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El rendimiento del grupo no es la suma de máximos individuales
 
-Una actividad colectiva necesita sincronización.
+**Una actividad colectiva necesita sincronización.**
 
 Puede exigir:
 
@@ -251,7 +251,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. No todas las especies ni todos los contextos son iguales
 
-La actividad acuática es una opción de entrenamiento, no una prueba universal idéntica.
+**La actividad acuática es una opción de entrenamiento, no una prueba universal idéntica.**
 
 Si el agua no es apropiada para una especie o contexto, se utiliza una actividad funcional equivalente.
 
@@ -301,7 +301,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Una rutina útil debe poder cambiar
 
-La vida académica no es constante.
+**La vida académica no es constante.**
 
 Puede aumentar:
 

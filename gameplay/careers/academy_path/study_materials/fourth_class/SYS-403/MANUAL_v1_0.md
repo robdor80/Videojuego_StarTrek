@@ -15,7 +15,7 @@ SYS-403 enseña a pensar en una nave como una **red de sistemas interdependiente
 
 ## 1. Una nave es una red
 
-Los sistemas de una nave no funcionan de forma aislada.
+**Los sistemas de una nave no funcionan de forma aislada.**
 
 Propulsión, sensores, soporte vital, comunicaciones, defensas, transporte y servicios comparten recursos y dependen unos de otros.
 
@@ -88,7 +88,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Función general
 
-La propulsión de impulso permite el movimiento normal de la nave en régimen subluz.
+**La propulsión de impulso permite el movimiento normal de la nave en régimen subluz.**
 
 A nivel de 4.ª clase, el cadete debe entender:
 
@@ -143,7 +143,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Función general
 
-La propulsión warp permite el viaje superlumínico dentro del universo de Star Trek.
+**La propulsión warp permite el viaje superlumínico dentro del universo de Star Trek.**
 
 En este nivel se estudia como **capacidad de navegación interestelar**, no como ingeniería de campo avanzada.
 
@@ -204,7 +204,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Mantener una tripulación viva
 
-Una nave necesita sistemas que no “mueven” la misión pero hacen posible que exista.
+**Una nave necesita sistemas que no “mueven” la misión pero hacen posible que exista.**
 
 ## 2. Soporte vital
 
@@ -284,7 +284,7 @@ La defensa de una nave puede incluir sistemas como:
 - comunicaciones;
 - control de daños.
 
-En 4.ª clase se estudian funciones y dependencias, no doctrina táctica avanzada.
+**En 4.ª clase se estudian funciones y dependencias, no doctrina táctica avanzada.**
 
 ## 2. Escudos
 
@@ -342,7 +342,7 @@ Un sistema degradado puede seguir funcionando con:
 - restricciones;
 - riesgo adicional.
 
-“Funciona” y “funciona al cien por cien” no son lo mismo.
+**“Funciona” y “funciona al cien por cien” no son lo mismo.**
 
 ## 2. Primario y secundario
 

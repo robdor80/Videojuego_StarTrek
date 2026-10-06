@@ -19,7 +19,7 @@ SAF-402 trabaja reconocimiento, movimiento, comunicación, asistencia básica, a
 
 ## 1. Una alerta cambia prioridades
 
-Una alerta indica que la situación normal ha cambiado.
+**Una alerta indica que la situación normal ha cambiado.**
 
 Puede afectar:
 
@@ -85,7 +85,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El objetivo de una evacuación
 
-Evacuar significa mover personas desde una zona peligrosa hacia una zona más segura de forma controlada.
+**Evacuar significa mover personas desde una zona peligrosa hacia una zona más segura de forma controlada.**
 
 No consiste en correr en cualquier dirección.
 
@@ -156,7 +156,7 @@ El peligro puede incluir:
 - propagación;
 - pérdida de visibilidad.
 
-Por eso “apagar el fuego” no es la única preocupación.
+**Por eso “apagar el fuego” no es la única preocupación.**
 
 ## 2. Seguridad de escena
 
@@ -209,7 +209,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Primero: seguridad de escena
 
-Antes de ayudar a una persona herida, el cadete debe evitar convertirse en otra víctima.
+**Antes de ayudar a una persona herida, el cadete debe evitar convertirse en otra víctima.**
 
 La pregunta inicial es:
 
@@ -267,7 +267,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El control de daños es trabajo técnico coordinado
 
-Una nave dañada puede sufrir efectos encadenados.
+**Una nave dañada puede sufrir efectos encadenados.**
 
 Ejemplos:
 
@@ -345,7 +345,7 @@ El ejercicio combina:
 - asistencia;
 - registro.
 
-El objetivo no es “ganar” una emergencia simulada.
+**El objetivo no es “ganar” una emergencia simulada.**
 
 El objetivo es demostrar comportamiento seguro.
 

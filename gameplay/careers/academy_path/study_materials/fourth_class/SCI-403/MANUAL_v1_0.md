@@ -21,7 +21,7 @@ El sistema nunca crea una anomalía porque el jugador la busque, ni revela autom
 
 ## 1. Observar antes de explicar
 
-Una observación describe algo detectado o medido.
+**Una observación describe algo detectado o medido.**
 
 Ejemplo:
 
@@ -90,7 +90,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Medir no significa conocer con exactitud perfecta
 
-Toda medición tiene límites.
+**Toda medición tiene límites.**
 
 El cadete debe aprender a leer:
 
@@ -166,7 +166,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Función general
 
-Un sensor detecta y mide propiedades observables.
+**Un sensor detecta y mide propiedades observables.**
 
 Puede ayudar a determinar:
 
@@ -236,7 +236,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ### Pasivo
 
-El sistema observa señales disponibles sin emitir una búsqueda equivalente dirigida al entorno.
+**El sistema observa señales disponibles sin emitir una búsqueda equivalente dirigida al entorno.**
 
 Ventajas posibles:
 
@@ -302,7 +302,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Contacto
 
-Un contacto es una representación persistente de algo que la nave ha detectado.
+**Un contacto es una representación persistente de algo que la nave ha detectado.**
 
 No es una copia de la entidad oculta del World State.
 
@@ -385,7 +385,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El primer procedimiento real de consola
 
-Esta unidad conecta directamente con la consola funcional de Sensores.
+**Esta unidad conecta directamente con la consola funcional de Sensores.**
 
 Un barrido básico sigue la lógica:
 

@@ -15,7 +15,7 @@ COM-402 cubre el comunicador, la familiarización inicial con tricorder, comunic
 
 ## 1. Comunicar es establecer un enlace
 
-Un comunicador no es solo un “botón para hablar”.
+**Un comunicador no es solo un “botón para hablar”.**
 
 Una comunicación necesita:
 
@@ -85,7 +85,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Qué es a este nivel
 
-El tricorder se introduce como herramienta portátil de adquisición y consulta.
+**El tricorder se introduce como herramienta portátil de adquisición y consulta.**
 
 No se exige conocer todavía todos sus modos especializados.
 
@@ -165,7 +165,7 @@ Una comunicación interna debe dirigirse al:
 - departamento;
 - equipo
 
-que realmente pueda actuar.
+**que realmente pueda actuar.**
 
 ## 2. Estructura mínima
 
@@ -214,7 +214,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Una comunicación externa representa a la unidad
 
-Contactar con otra nave, estación o autoridad requiere más cuidado que un mensaje interno rutinario.
+**Contactar con otra nave, estación o autoridad requiere más cuidado que un mensaje interno rutinario.**
 
 ## 2. Apertura
 
@@ -273,7 +273,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. De información desordenada a mensaje profesional
 
-Durante una operación puede recibirse demasiada información.
+**Durante una operación puede recibirse demasiada información.**
 
 El objetivo es extraer:
 
@@ -332,7 +332,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Preparar antes de salir
 
-Una salida no empieza al abandonar la nave.
+**Una salida no empieza al abandonar la nave.**
 
 Empieza con:
 
