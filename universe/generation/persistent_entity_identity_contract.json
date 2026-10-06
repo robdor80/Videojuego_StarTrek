@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "persistent_entity_identity_contract",
+  "status": "foundation_fixed",
+  "principle": "Once a latent or generated thing becomes a persistent concrete entity, its identity is never rerolled or silently replaced. It may evolve only through authoritative state/history.",
+  "scope": [
+    "character",
+    "starship",
+    "facility",
+    "settlement",
+    "unique_object",
+    "other_persistent_entity"
+  ],
+  "identity_core": {
+    "immutable_after_materialization": [
+      "entity_id",
+      "entity_type",
+      "creation_provenance",
+      "origin_seed",
+      "materialization_timestamp_or_campaign_date"
+    ],
+    "character_identity_anchors": [
+      "biological_origin_or_species_context",
+      "birth_or_origin_identity",
+      "base_visual_identity_id",
+      "base_morphology_identity"
+    ],
+    "starship_identity_anchors": [
+      "vessel_entity_id",
+      "construction_origin",
+      "original_class_or_design_identity",
+      "registry_identity_when_applicable"
+    ]
+  },
+  "evolution_model": {
+    "formula": "persistent_identity + authoritative_history + current_world_state = current_entity_state",
+    "allowed_examples": [
+      "aging",
+      "hair_or_grooming_change",
+      "body_composition_change",
+      "scars_or_persistent_injuries",
+      "uniform_or_rank_change",
+      "career_or_assignment_change",
+      "relationship_change",
+      "knowledge_and_memory_change",
+      "ship_damage_and_repairs",
+      "ship_refit",
+      "facility_damage_and_reconstruction",
+      "settlement_growth_or_decline"
+    ],
+    "forbidden_examples": [
+      "reroll_face_because_time_passed",
+      "replace_character_with_new_generated_person_under_same_name",
+      "change_species_without explicit world event and supported rules",
+      "regenerate_personality_seed to create variety",
+      "replace_ship identity after repair or refit",
+      "discard history when entity leaves simulation LOD"
+    ]
+  },
+  "visual_identity": {
+    "persistent_visual_identity_required_for_materialized_visual_entities": true,
+    "base_identity_must_survive_new_asset_generation": true,
+    "nap_assets_must_reference_entity_id_when_entity_backed": true,
+    "nap_assets_must_reference_visual_identity_id_when_visual_identity_exists": true,
+    "later_age_or_state_images_are_variants_or_evolutions_not_new_identity": true,
+    "temporary_state_must_not_overwrite_base_identity": true,
+    "examples_of_temporary_state": [
+      "uniform",
+      "dirt",
+      "wetness",
+      "fatigue",
+      "injury_state",
+      "lighting",
+      "carried_equipment",
+      "environmental_exposure"
+    ]
+  },
+  "deterministic_rules": [
+    "Identity-affecting generation uses stable derived seeds tied to entity_id and subsystem/version.",
+    "Adding unrelated generator subsystems must not change an existing entity identity.",
+    "Loading, unloading, LOD changes, travel, save/load and offline catch-up must not reroll identity.",
+    "Rules upgrades require explicit migration; they cannot silently regenerate existing identities."
+  ],
+  "history_rules": [
+    "Persistent change is represented as authoritative state mutation and/or historical event.",
+    "Current presentation is resolved from persistent identity plus accumulated changes plus temporary state.",
+    "If an entity is encountered years later, the system resolves the same entity at the later date.",
+    "Death, destruction or retirement ends active participation but does not erase identity or history."
+  ],
+  "validation_invariants": [
+    "same_entity_id_cannot_resolve_to_unrelated_base_identity",
+    "materialized_character_cannot_return_to_latent_anonymous_population",
+    "visual_asset_for_existing_entity_cannot_introduce_unexplained_identity_change",
+    "refit_or_repair_cannot_create_new_ship_entity_without explicit replacement event",
+    "LOD_transition_cannot_change_identity",
+    "save_load_roundtrip_cannot_change_identity",
+    "rules_version_change_cannot_silently_reroll_identity"
+  ],
+  "core_rpg_boundary": "Generic persistent identity, history and migration semantics belong in CoreRPG; Star Trek owns Trek-specific identity anchors, species/canon constraints and presentation rules."
+}
