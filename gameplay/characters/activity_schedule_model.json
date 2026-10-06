@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "character_activity_schedule",
+  "status": "foundation_fixed",
+  "purpose": "Provide persistent temporal plausibility for character duty, travel, rest, social activity and availability.",
+  "schedule_states": [
+    "tentative_plan",
+    "scheduled",
+    "confirmed",
+    "in_progress",
+    "delayed",
+    "rescheduled",
+    "cancelled",
+    "missed",
+    "completed"
+  ],
+  "activity_families": [
+    "duty_shift",
+    "watch_assignment",
+    "professional_task",
+    "training",
+    "medical",
+    "meal",
+    "rest_or_sleep",
+    "recreation",
+    "social_commitment",
+    "family_or_private_commitment",
+    "travel_or_transport",
+    "shore_leave",
+    "administrative",
+    "emergency_response"
+  ],
+  "record_fields": [
+    "schedule_item_id",
+    "character_id",
+    "activity_family",
+    "activity_ref",
+    "state",
+    "source_system_ref",
+    "time_window_or_anchor",
+    "location_ref",
+    "participant_refs",
+    "travel_dependency_refs",
+    "priority_context",
+    "preemption_reason_ref",
+    "created_at",
+    "last_updated_at"
+  ],
+  "presence_resolution_inputs": [
+    "confirmed_schedule",
+    "current_location",
+    "travel_state",
+    "duty_state",
+    "medical_state",
+    "leave_state",
+    "alert_state",
+    "emergency_events",
+    "current_task_state"
+  ],
+  "rules": [
+    "A character cannot perform physically incompatible activities simultaneously.",
+    "Shift assignment defines expected duty availability, not forced physical location.",
+    "Travel and transit consume time.",
+    "Rest and sleep consume time.",
+    "Conversation and social interaction consume time.",
+    "Emergencies may preempt lower-priority activities but must leave an event/state trace.",
+    "Delay requires a plausible cause.",
+    "Rescheduling requires a plausible new window.",
+    "Off-screen activity resolution must respect schedule compatibility.",
+    "LOD reduction cannot execute incompatible intentions in parallel.",
+    "The player cannot create free time or teleport an NPC by initiating interaction.",
+    "AI may describe or reason from schedule state but cannot invent availability or mutate authoritative schedule state directly."
+  ],
+  "integration_refs": [
+    "gameplay/ship_operations/crew_manifest_model.json",
+    "gameplay/characters/character_runtime_model.json",
+    "gameplay/social/social_event_rules.json",
+    "gameplay/characters/wellbeing/",
+    "gameplay/ship_operations/alert_state_model.json"
+  ],
+  "core_rpg_boundary": "Generic schedule arbitration, time exclusivity, travel occupancy and catch-up semantics should live in CoreRPG when available; this contract defines Star Trek-facing requirements."
+}
