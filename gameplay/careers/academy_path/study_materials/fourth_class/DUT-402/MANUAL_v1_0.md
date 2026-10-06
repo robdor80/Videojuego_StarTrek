@@ -70,15 +70,9 @@ La supervisión no elimina responsabilidad. El cadete sigue siendo responsable d
 
 Lee una asignación de guardia e identifica turno, puesto, supervisor, tareas y límites.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre turno y puesto?
-2. ¿Qué convierte un periodo en una guardia profesional?
-3. ¿Qué patrones de guardia admite el proyecto?
-4. ¿Por qué la supervisión no elimina responsabilidad?
-5. ¿Qué información debes conocer antes de asumir una guardia?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # DUT-402-U02 — Presentación al puesto
 
@@ -141,15 +135,9 @@ El relevo debe saber qué instrucciones continúan aplicándose.
 
 Escena de incorporación al puesto con briefing y comprobación de disponibilidad.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la puntualidad tiene efecto operativo?
-2. ¿Qué debe hacer un cadete si no está apto para el servicio?
-3. ¿Qué debe incluir un briefing?
-4. ¿Una nueva guardia cancela órdenes vigentes?
-5. ¿Por qué ocultar fatiga o lesión puede ser una mala decisión?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # DUT-402-U03 — Relevo
 
@@ -207,15 +195,9 @@ Omitir una incidencia puede provocar:
 
 Realiza un relevo básico con un incidente abierto, una tarea pendiente y una orden vigente.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué objetivo tiene un relevo?
-2. Nombra cinco elementos que deberían transferirse.
-3. ¿Qué debe hacer el receptor?
-4. ¿Por qué un relevo no debe ser ni demasiado escaso ni excesivamente narrativo?
-5. ¿Qué puede causar una incidencia omitida?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # DUT-402-U04 — Informes básicos
 
@@ -270,15 +252,9 @@ Especialmente cuando una omisión puede comprometer continuidad o seguridad.
 
 Convierte tres mensajes desordenados en informes breves, precisos y dirigidos al destinatario correcto.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué debe lograr un informe profesional?
-2. ¿Qué tipo de cambios deben informarse?
-3. ¿Por qué no todo se informa directamente al Capitán?
-4. ¿Qué problemas causa una conclusión no demostrada?
-5. ¿Cuándo puede ser necesaria confirmación?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # DUT-402-U05 — Cadena de responsabilidad
 
@@ -347,15 +323,9 @@ Decide a qué nivel escalar:
 2. una avería que afecta a todo el departamento;
 3. un riesgo que puede alterar la misión.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre responsable de puesto y supervisor?
-2. ¿Qué tipo de problema corresponde al jefe de departamento?
-3. ¿Cuándo debe intervenir Mando?
-4. ¿Por qué escalar correctamente es una competencia?
-5. ¿Qué problemas causa escalar demasiado o demasiado poco?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # DUT-402-U06 — Guardia rutinaria
 
@@ -422,47 +392,7 @@ Mantener atención, procedimiento y continuidad sin estímulo dramático es part
 
 Simulación de guardia sin crisis: varias tareas periódicas, una incidencia menor y un relevo final.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una guardia rutinaria sigue generando evidencia?
-2. ¿Qué significa monitorizar activamente?
-3. ¿Para qué sirven las tareas periódicas?
-4. ¿Qué debe hacerse antes del fin de turno?
-5. ¿Por qué la constancia importa aunque no ocurra una emergencia?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-DUT-402 evalúa:
-
-- lectura de asignaciones;
-- puntualidad y preparación;
-- recepción y entrega de relevo;
-- calidad de informes;
-- escalado;
-- constancia;
-- disciplina.
-
-No se premia crear drama donde no lo hay.
-
-# Tratamiento por era
-
-El patrón concreto de turnos puede variar.
-
-El proyecto admite:
-
-- tres turnos;
-- cuatro turnos;
-- patrones personalizados.
-
-Lo estable es la responsabilidad de continuidad.
-
-# Referencias internas
-
-- `lore/federation/starfleet/duty_shifts/shift_model.json`
-- `lore/federation/starfleet/command_structure/succession_rules.json`
-- `gameplay/ship_operations/operational_event_log/README.md`
-- `gameplay/careers/academy_path/course_resolution.md`
-
-Estas referencias constriñen la organización del servicio. Los horarios concretos dependen de unidad, era y campaña.

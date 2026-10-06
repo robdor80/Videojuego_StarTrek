@@ -66,15 +66,9 @@ La mejor sesión no siempre es la más dura.
 
 Mantén un calendario de entrenamiento durante varias semanas y ajusta la carga cuando cambie la carga académica.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué continuidad importa más que una sesión espectacular?
-2. ¿Qué significa frecuencia?
-3. ¿De qué formas puede progresar una tarea?
-4. ¿Qué diferencia existe entre rendimiento puntual y adaptación?
-5. ¿Por qué la mejor sesión no siempre es la más dura?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-402-U02 — Resistencia aplicada
 
@@ -128,15 +122,9 @@ No con el cadete biológicamente más capaz.
 
 Completa una sesión de esfuerzo sostenido y revisa si el ritmo permitió mantener técnica y recuperación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa resistencia aplicada?
-2. ¿Por qué importa distribuir el esfuerzo?
-3. ¿Qué puede ocurrir si se sale demasiado rápido?
-4. ¿Por qué importa la recuperación entre bloques?
-5. ¿Con qué se compara el progreso individual?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-402-U03 — Fuerza y coordinación
 
@@ -198,15 +186,9 @@ La evaluación observa:
 
 Circuito supervisado que combine fuerza funcional, equilibrio y coordinación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué fuerza y coordinación se trabajan juntas?
-2. ¿Qué funciones cumple el equilibrio?
-3. ¿Qué significa coordinar movimiento?
-4. ¿Qué puede incluir un circuito funcional?
-5. ¿Qué señales indican que debe reducirse o detenerse una tarea?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-402-U04 — Trabajo en equipo
 
@@ -261,15 +243,9 @@ En una actividad colectiva se evalúa también:
 
 Actividad colectiva con carga compartida y objetivo común.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa ritmo de grupo?
-2. ¿Por qué el rendimiento del grupo no es solo la suma de máximos individuales?
-3. Nombra tres formas de cooperación.
-4. ¿Qué significa seguridad compartida?
-5. ¿Qué conductas se observan además del rendimiento físico?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-402-U05 — Actividad acuática o equivalente
 
@@ -317,15 +293,9 @@ No se trata de hacer “algo cualquiera” para marcar asistencia.
 
 Sesión acuática o equivalente adaptada a la especie y contexto del personaje.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la actividad acuática no es universal?
-2. ¿Qué factores deben revisarse antes de la sesión?
-3. ¿Qué significa adaptación fisiológica?
-4. ¿Qué se evalúa principalmente?
-5. ¿Qué debe conservar una actividad equivalente?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-402-U06 — Revisión de rutina
 
@@ -380,45 +350,7 @@ El cadete debe revisar:
 
 Modifica una rutina realista cuando aparece una semana de alta carga académica.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una rutina debe poder cambiar?
-2. ¿Qué variables pueden reducirse ante fatiga?
-3. ¿Reducir temporalmente entrenamiento significa perder todo progreso?
-4. ¿Por qué el descanso no es tiempo desperdiciado?
-5. ¿Qué preguntas ayudan a revisar una rutina?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-PHY-402 evalúa:
-
-- continuidad;
-- adaptación;
-- seguridad;
-- trabajo en equipo;
-- gestión de carga;
-- criterio para ajustar la rutina.
-
-No exige al jugador realizar actividad física real.
-
-# Tratamiento por especie y contexto
-
-Las actividades y mínimos se adaptan.
-
-La evaluación no compara directamente:
-
-- fuerza bruta;
-- tiempos;
-- tolerancia fisiológica
-
-entre especies con capacidades distintas.
-
-# Referencias internas
-
-- `gameplay/characters/wellbeing/README.md`
-- `gameplay/characters/wellbeing/activity_effect_contract.json`
-- `gameplay/characters/wellbeing/habit_formation_rules.json`
-- `gameplay/characters/development/development_rules.md`
-- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`

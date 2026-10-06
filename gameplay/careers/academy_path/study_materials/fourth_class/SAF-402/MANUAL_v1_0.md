@@ -77,15 +77,9 @@ Se consulta la información disponible o se solicita aclaración.
 
 Reconoce varias señales de entrenamiento y decide si debes mantener posición, evacuar, informar o esperar instrucciones.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué cambia cuando se declara una alerta?
-2. ¿Por qué una alarma local no implica evacuar toda la nave?
-3. ¿Qué debe hacer un cadete si no entiende una señal?
-4. ¿Qué significa prioridad en una emergencia?
-5. ¿Por qué la presentación de una alerta puede variar por era?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SAF-402-U02 — Evacuación y pérdida de presión
 
@@ -145,15 +139,9 @@ Se enseña:
 
 Ejercicio de evacuación con una ruta bloqueada y un punto de reunión alternativo.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cuál es el objetivo de una evacuación?
-2. ¿Para qué sirve aislar compartimentos?
-3. ¿Por qué no debe abrirse un cierre solo porque bloquea la ruta habitual?
-4. ¿Para qué sirve el recuento?
-5. ¿Qué límites tiene un cadete ante una zona despresurizada?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SAF-402-U03 — Incendio y ambiente
 
@@ -213,15 +201,9 @@ En 4.ª clase, la primera respuesta se centra en:
 
 Simulación de humo y alarma local donde el cadete debe elegir entre intervenir, aislar, evacuar o pedir apoyo.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué riesgos adicionales puede producir un incendio?
-2. ¿Qué debe comprobarse antes de acercarse?
-3. ¿Por qué aislar puede ser mejor que entrar?
-4. ¿Puede una zona aparentemente limpia tener atmósfera peligrosa?
-5. ¿Cuál es la prioridad de un cadete no especialista?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SAF-402-U04 — Heridos y primera respuesta
 
@@ -277,15 +259,9 @@ Cuando llega personal cualificado, el relevo debe incluir:
 
 Atiende un supuesto hasta la llegada de personal médico y realiza un relevo breve.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué debe comprobarse antes de acercarse a un herido?
-2. ¿Qué información conviene transmitir a Medicina?
-3. ¿Por qué síntoma y diagnóstico no son lo mismo?
-4. ¿Qué significa no exceder competencia?
-5. ¿Qué debe incluir el relevo al personal médico?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SAF-402-U05 — Control de daños: conciencia básica
 
@@ -353,15 +329,9 @@ Pero una improvisación solo es válida si los sistemas autoritativos confirman:
 
 Apoya a un equipo de control de daños sin asumir funciones técnicas no cualificadas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué cuatro prioridades generales orientan el control de daños?
-2. ¿Qué significa riesgo secundario?
-3. ¿Cómo puede ayudar un cadete sin reparar sistemas?
-4. ¿Por qué una solución improvisada no funciona automáticamente?
-5. ¿Qué debe validar una improvisación técnica?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SAF-402-U06 — Ejercicio integrado
 
@@ -424,54 +394,7 @@ Después del ejercicio se revisa:
 
 Simulación corta con alarma, ruta alterada, una persona que necesita ayuda y entrega final de información.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué fases componen una respuesta integrada básica?
-2. ¿Qué información debe priorizar un mensaje de emergencia?
-3. ¿Por qué el peligro no convierte automáticamente una acción en heroica?
-4. ¿Qué límites de competencia siguen existiendo durante una emergencia?
-5. ¿Qué debe revisarse en el debrief?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-SAF-402 evalúa:
-
-- reconocimiento de alertas;
-- movimiento seguro;
-- disciplina;
-- comunicación;
-- asistencia básica;
-- cooperación;
-- respeto a límites de competencia.
-
-No evalúa reparación avanzada, táctica especializada ni medicina profesional.
-
-# Tratamiento por era
-
-Cambian:
-
-- alarmas;
-- señalización;
-- equipo;
-- puertas y cierres;
-- interfaces.
-
-Permanece estable:
-
-- prioridad;
-- aislamiento;
-- comunicación;
-- movimiento seguro;
-- cooperación;
-- respeto a autoridad.
-
-# Referencias internas
-
-- `gameplay/engineering/engineering_loop.json`
-- `gameplay/medical/medical_state_model.json`
-- `gameplay/security/README.md`
-- `gameplay/ship_operations/operational_event_log/README.md`
-
-La respuesta concreta depende de la nave, su estado y las instrucciones activas.

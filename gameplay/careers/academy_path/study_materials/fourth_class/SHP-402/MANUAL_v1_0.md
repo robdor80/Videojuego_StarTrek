@@ -75,15 +75,9 @@ En muchas naves ambas áreas colaboran estrechamente con Sensores, Ingeniería y
 
 Realiza un recorrido guiado —físico, virtual o en simulador— identificando áreas por **función**, no por decoración.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué no basta memorizar un plano de una clase de nave?
-2. ¿Qué función general cumple el puente?
-3. ¿Por qué estar físicamente en Ingeniería no concede autoridad técnica?
-4. ¿Qué diferencia existe entre un dato médico y la realidad completa del paciente?
-5. ¿Qué papel general cumplen Ciencia y Operaciones?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SHP-402-U02 — Tripulación y departamentos
 
@@ -158,15 +152,9 @@ Una unidad necesita funciones que no siempre ocupan una consola protagonista:
 
 Construye un organigrama básico de una nave y coloca varios puestos bajo el departamento o jefatura más razonable.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una nave no debe modelarse como “el puente y el resto”?
-2. ¿Qué significa una jefatura?
-3. ¿Qué diferencia existe entre departamento y personal de guardia?
-4. ¿Por qué no toda la tripulación está simultáneamente de servicio?
-5. Pon un ejemplo de una función de apoyo no centrada en el puente.
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SHP-402-U03 — Puente y estaciones
 
@@ -240,15 +228,9 @@ El puente funciona cuando esas piezas se coordinan.
 
 Visita un puente o simulador e identifica qué información y acciones corresponderían a cada estación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué cuatro elementos definen una estación?
-2. ¿Por qué sentarse en una consola no concede automáticamente acceso?
-3. ¿Qué diferencia general existe entre un puente tipo Constitution y uno tipo Galaxy?
-4. ¿Qué significa POV profesional?
-5. ¿Por qué ninguna estación debe conocer por sí sola toda la realidad operativa?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SHP-402-U04 — Vida cotidiana
 
@@ -310,15 +292,9 @@ La autoridad válida y el contexto siguen importando.
 
 Planifica una jornada a bordo con guardia, comida, descanso, actividad personal y tiempo de preparación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una nave necesita espacios de vida y no solo espacios técnicos?
-2. ¿Qué funciones cumplen los alojamientos?
-3. ¿Por qué el ocio puede formar parte del funcionamiento saludable de la tripulación?
-4. ¿Qué significa privacidad a bordo?
-5. ¿Debe toda rutina cotidiana convertirse en una escena jugable?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SHP-402-U05 — Tipos y funciones de naves
 
@@ -394,15 +370,9 @@ Una unidad de apoyo puede verse obligada a defenderse.
 
 Relaciona cinco perfiles de misión con capacidades necesarias sin nombrar clases concretas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué SHP-402 evita memorizar catálogos de naves?
-2. ¿Qué capacidades suelen ser útiles para exploración?
-3. ¿Qué puede priorizar una nave científica?
-4. ¿Una nave tiene una sola función posible?
-5. ¿Qué significa diseñar desde misión hacia capacidad?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SHP-402-U06 — Flujo entre espacios
 
@@ -477,50 +447,7 @@ Puede:
 
 Resuelve un desplazamiento desde alojamiento a punto de reunión con una ruta habitual bloqueada y una zona restringida activa.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué factores pueden cambiar una ruta a bordo?
-2. ¿Por qué una zona puede estar restringida?
-3. ¿Qué prioridad tiene la ruta segura frente a la ruta habitual?
-4. ¿Para qué sirve el recuento?
-5. ¿Por qué llegar a una zona dañada no autoriza a intervenir técnicamente?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-SHP-402 evalúa:
-
-- reconocimiento funcional de espacios;
-- comprensión de departamentos y jefaturas;
-- identificación de estaciones;
-- vida cotidiana y privacidad;
-- relación misión-capacidad;
-- movimiento seguro.
-
-No exige memorizar planos de todas las clases de nave.
-
-# Tratamiento por era
-
-La función permanece estable; la disposición cambia.
-
-Pike, Kirk y TNG/DS9/Voyager pueden presentar:
-
-- puentes diferentes;
-- compartimentos diferentes;
-- otra distribución de estaciones;
-- otros dispositivos;
-- distintos niveles de automatización.
-
-El cadete aprende principios transferibles.
-
-# Referencias internas
-
-- `lore/starships/bridge_stations/README.md`
-- `gameplay/ship_operations/bridge_station_model.json`
-- `lore/federation/starfleet/departments/divisions_and_departments.json`
-- `lore/federation/starfleet/positions/positions.json`
-- `gameplay/medical/medical_state_model.json`
-- `gameplay/ship_operations/ship_computer/access_control_rules.json`
-
-La distribución exacta de una nave depende de su clase y era. Los ejemplos pedagógicos no fijan una arquitectura universal.

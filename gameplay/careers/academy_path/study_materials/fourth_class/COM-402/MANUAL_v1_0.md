@@ -77,15 +77,9 @@ La calidad del enlace condiciona qué puede entender el receptor.
 
 Realiza tres llamadas internas: rutina, prioridad elevada y petición de asistencia.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué elementos forman un enlace de comunicación?
-2. ¿Por qué importa identificar origen y destino?
-3. ¿Qué diferencia existe entre canal y contenido?
-4. ¿Por qué la prioridad debe usarse con criterio?
-5. ¿Qué significa que un enlace esté degradado?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # COM-402-U02 — Tricorder: familiarización
 
@@ -156,15 +150,9 @@ Esto ayuda a comparar y auditar.
 
 Obtén una lectura preparada, identifica qué dato es directo y qué conclusión requeriría análisis adicional.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué función general cumple un tricorder?
-2. ¿Por qué una lectura no es automáticamente una explicación?
-3. Nombra tres factores que pueden limitar una lectura.
-4. ¿Qué metadatos pueden acompañar a una medición?
-5. ¿Por qué diferentes modelos pueden tener capacidades distintas?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # COM-402-U03 — Comunicaciones internas
 
@@ -218,15 +206,9 @@ Cuando una tarea cruza departamentos, debe quedar claro:
 
 Coordina una tarea sencilla con otro departamento mediante un mensaje inicial y una confirmación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cómo eliges destinatario?
-2. ¿Qué elementos contiene un mensaje interno útil?
-3. ¿Brevedad significa omitir información importante?
-4. ¿Cuándo conviene pedir confirmación?
-5. ¿Qué debe quedar claro al coordinar departamentos?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # COM-402-U04 — Comunicaciones externas básicas
 
@@ -283,15 +265,9 @@ Una frase aparentemente clara puede necesitar confirmación si la calidad de tra
 
 Simula una llamada externa no táctica: apertura, identificación, mensaje y cierre.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una comunicación externa exige más cuidado?
-2. ¿Qué puede incluir una apertura?
-3. ¿Abrir un canal concede autoridad diplomática?
-4. ¿Por qué conviene registrar comunicaciones externas relevantes?
-5. ¿Qué problemas pueden introducir traducción o interferencia?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # COM-402-U05 — Formato de mensajes
 
@@ -348,15 +324,9 @@ Mensaje correcto:
 
 Convierte información desordenada en tres mensajes profesionales: rutina, incidencia y emergencia.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué cuatro elementos pueden estructurar un mensaje?
-2. ¿Qué diferencia existe entre hecho y estado?
-3. ¿Cuándo debe incluirse una solicitud?
-4. ¿Por qué no se debe inflar urgencia?
-5. ¿Cómo distingues hecho e hipótesis?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # COM-402-U06 — Equipo de salida básico
 
@@ -418,48 +388,7 @@ Llevar una herramienta no concede automáticamente competencia para utilizar tod
 
 Prepara un equipo sencillo para una salida de reconocimiento no hostil y justifica cada elemento.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué información debe conocerse antes de preparar equipo?
-2. ¿Por qué no existe un kit universal?
-3. ¿Qué responsabilidades asumes al recibir equipo?
-4. ¿Por qué más equipo no siempre es mejor?
-5. ¿Tener una herramienta concede automáticamente competencia?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-COM-402 evalúa:
-
-- uso básico de comunicación;
-- claridad;
-- identificación;
-- lectura prudente de instrumentos;
-- separación entre dato e interpretación;
-- autoridad en comunicaciones externas;
-- preparación de equipo.
-
-No exige operación avanzada de comunicaciones ni especialización científica.
-
-# Tratamiento por era
-
-Cambian dispositivos, interfaz, alcance y presentación.
-
-Permanece estable la necesidad de:
-
-- identificar;
-- dirigir;
-- transmitir;
-- confirmar;
-- respetar autoridad;
-- conservar procedencia.
-
-# Referencias internas
-
-- `gameplay/communications/communications_model.json`
-- `lore/technology/tricorders/README.md`
-- `lore/technology/communications/README.md`
-- `gameplay/ship_operations/ship_computer/README.md`
-
-Cuando una referencia de lore permanece reservada, el curso no inventa especificaciones técnicas ausentes.
