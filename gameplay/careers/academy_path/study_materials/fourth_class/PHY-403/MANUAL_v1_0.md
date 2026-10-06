@@ -60,15 +60,9 @@ Más cansancio durante exámenes no demuestra automáticamente pérdida de condi
 
 Compara registros del comienzo y final de año y describe cambios sin traducirlos a XP.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Contra qué debe compararse el progreso?
-2. ¿Por qué una semana peor no demuestra regresión?
-3. ¿Qué tipos de evidencia pueden revisarse?
-4. ¿Qué diferencia existe entre fluctuación y tendencia?
-5. ¿Por qué el contexto importa al interpretar cambios?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-403-U02 — Condición funcional
 
@@ -120,15 +114,9 @@ La calidad de ejecución sigue importando incluso cuando la condición ha mejora
 
 Sesión integrada adaptada al personaje, con observación de resistencia, fuerza, movilidad y coordinación.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué dimensiones forman condición funcional?
-2. ¿Por qué no se resume todo en una cifra?
-3. ¿Qué significa adecuación al servicio?
-4. ¿Por qué la biología modifica la evaluación?
-5. ¿Qué sigue importando además del rendimiento bruto?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-403-U03 — Autogestión
 
@@ -187,15 +175,9 @@ Autogestión también incluye reconocer cuándo una situación requiere:
 
 Diseña una semana realista con entrenamiento, estudio, descanso y obligaciones académicas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa autogestión?
-2. ¿Qué compite por tiempo en una semana académica?
-3. Nombra tres señales de riesgo.
-4. ¿Por qué no existe un horario perfecto universal?
-5. ¿Cuándo debe pedirse ayuda?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-403-U04 — Entrenamiento bajo carga académica
 
@@ -240,15 +222,9 @@ Tras el pico académico, el personaje puede recuperar progresivamente su patrón
 
 Adapta una rutina normal a una semana de exámenes y explica qué mantienes, qué reduces y por qué.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa ajustar sin abandonar?
-2. ¿Qué puede reducirse durante alta carga académica?
-3. ¿Qué significa consistencia?
-4. ¿Por qué proteger sueño puede ser prioritario?
-5. ¿Cómo se retoma una rutina tras el pico?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-403-U05 — Actividad personal y Academia
 
@@ -310,15 +286,9 @@ Una afición puede ser útil precisamente porque el jugador la elige por interé
 
 Registra una actividad personal del personaje y separa claramente evidencia personal y requisito académico.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Puede una actividad personal generar evidencia?
-2. ¿Se convierte automáticamente en nota de PHY?
-3. ¿Qué significa transferencia?
-4. ¿Por qué transferencia no concede cualificación profesional?
-5. ¿Qué debe contener un registro correcto?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # PHY-403-U06 — Cierre anual
 
@@ -379,33 +349,7 @@ No se vuelve a “nivel cero” al comenzar el siguiente año.
 
 Prepara un plan longitudinal de mantenimiento y mejora para 3.ª clase.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué persiste al cerrar el año?
-2. ¿Qué resultados descriptivos puede producir PHY-403?
-3. ¿Por qué una recomendación no es una etiqueta permanente?
-4. ¿Qué puede incluir un plan para 3.ª clase?
-5. ¿Por qué no se reinicia el personaje al comenzar el año siguiente?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-PHY-403 evalúa:
-
-- evolución;
-- condición funcional;
-- autogestión;
-- ajuste ante carga académica;
-- separación entre actividad personal y currículo;
-- continuidad futura.
-
-No utiliza XP ni compara directamente especies distintas.
-
-# Referencias internas
-
-- `gameplay/characters/wellbeing/README.md`
-- `gameplay/characters/wellbeing/activity_effect_contract.json`
-- `gameplay/characters/wellbeing/habit_formation_rules.json`
-- `gameplay/characters/development/development_rules.md`
-- `gameplay/careers/academy_path/curriculum/fourth_class/README.md`

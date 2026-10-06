@@ -79,15 +79,9 @@ Estos elementos dependen de la fecha y del estado político.
 
 Localiza tres destinos en un mapa de entrenamiento y describe qué información conoces y qué permanece incierta.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué un mapa estelar no representa toda la verdad del universo?
-2. ¿Qué tipo de información puede contener una carta?
-3. ¿Qué función cumplen sectores y regiones?
-4. ¿Por qué una carta puede quedar desactualizada?
-5. ¿Cómo puede afectar la política a una ruta?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # NAV-403-U02 — Coordenadas y posición
 
@@ -147,15 +141,9 @@ Una nave puede:
 
 Interpreta varias posiciones relativas y determina qué contactos se aproximan, alejan o cruzan la ruta.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre posición absoluta y relativa?
-2. ¿Por qué toda coordenada necesita referencia?
-3. ¿Cuándo resulta útil posición relativa?
-4. ¿Qué representa un vector?
-5. ¿Orientación y movimiento son siempre iguales?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # NAV-403-U03 — Distancia y tiempo
 
@@ -219,15 +207,9 @@ Una cartografía incierta o condiciones variables ensanchan la ventana de llegad
 
 Compara tres rutas con ETA diferentes y explica cuál elegirías para una misión urgente y cuál para una misión de bajo riesgo.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿De dónde puede proceder una distancia de navegación?
-2. ¿Qué significa ETA?
-3. ¿Por qué ETA puede expresarse como rango?
-4. Nombra cuatro causas de cambio de ETA.
-5. ¿Qué relación existe entre confianza cartográfica y precisión de llegada?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # NAV-403-U04 — Impulso y warp en navegación
 
@@ -292,15 +274,9 @@ Puede ser necesario evitar o respetar:
 
 Elige entre impulso y warp para varias situaciones sencillas y justifica la decisión.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Para qué se usa principalmente impulso?
-2. ¿Para qué se usa warp?
-3. ¿Por qué entrar en warp no equivale a cambiar de posición instantáneamente?
-4. ¿Qué debe validarse antes de aceptar un factor warp?
-5. ¿Qué restricciones pueden afectar la elección de régimen?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # NAV-403-U05 — Rutas y peligros
 
@@ -363,15 +339,9 @@ La navegación también es política.
 
 Traza una ruta entre dos destinos con una frontera restringida y una zona de incertidumbre.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué la ruta más corta no siempre es la mejor?
-2. Nombra tres preferencias de ruta.
-3. ¿Qué diferencia existe entre peligro conocido y oculto?
-4. ¿Debe el sistema avisar de un peligro que nadie ha detectado?
-5. ¿Qué consecuencias puede tener cruzar una frontera?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # NAV-403-U06 — Ejercicio de astrográfica
 
@@ -439,53 +409,7 @@ Puede reevaluarse si cambia:
 
 Prepara una ruta básica completa y comunícala a Mando con ETA, riesgo y restricción principal.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué pasos básicos sigue una solución de navegación?
-2. ¿Qué haces si origen o destino son ambiguos?
-3. ¿Por qué conviene generar rutas candidatas?
-4. ¿Qué debe contener un reporte breve de navegación?
-5. ¿Qué cambios obligan a reevaluar una ruta?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-NAV-403 evalúa:
-
-- lectura de mapas;
-- posición;
-- relación distancia-tiempo;
-- selección de régimen;
-- rutas y riesgos;
-- reporte.
-
-No exige cálculos orbitales avanzados ni fórmulas warp no enseñadas.
-
-# Tratamiento por era
-
-Cambian:
-
-- interfaces;
-- cartas;
-- precisión;
-- capacidad warp;
-- automatización.
-
-Permanece estable:
-
-- origen;
-- destino;
-- ruta;
-- restricciones;
-- ETA;
-- incertidumbre.
-
-# Referencias internas
-
-- `gameplay/navigation/README.md`
-- `gameplay/navigation/route_context_model.json`
-- `gameplay/warp_travel/route_planning_model.json`
-- `gameplay/warp_travel/eta_resolution_model.json`
-
-Estas fuentes definen la navegación como un proceso persistente, contextual y limitado por conocimiento.

@@ -82,15 +82,9 @@ La siguiente observación debe buscar información que ayude a distinguirlas.
 
 Recibe una observación sencilla, formula dos hipótesis y propone una medición que permita diferenciarlas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre observación e hipótesis?
-2. ¿Para qué sirve formular una pregunta?
-3. ¿Qué hace que una hipótesis sea útil?
-4. ¿Puede una sola lectura demostrar siempre una causa?
-5. ¿Qué debes hacer cuando nueva evidencia contradice tu explicación?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SCI-403-U02 — Medición e incertidumbre
 
@@ -164,15 +158,9 @@ La interfaz debe comunicar estos niveles en lugar de convertir todo en “verdad
 
 Compara tres lecturas del mismo fenómeno con distinta interferencia y decide cuál permite una conclusión más fuerte.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una medición no es perfecta?
-2. ¿Qué factores pueden mejorar precisión?
-3. ¿Qué es ruido?
-4. ¿Qué significa límite de detección?
-5. ¿Por qué debe mostrarse la confianza de una lectura?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SCI-403-U03 — Qué es un sensor
 
@@ -238,15 +226,9 @@ Un filtro más específico puede ayudar a aislar información, pero también pue
 
 Relaciona cinco fenómenos de entrenamiento con el tipo de firma que podría proporcionar información útil.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué hace un sensor?
-2. ¿Qué diferencia existe entre detección y clasificación?
-3. ¿Qué es una firma?
-4. ¿Por qué una coincidencia de patrón no es certeza absoluta?
-5. ¿Qué riesgo tiene filtrar demasiado una búsqueda?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SCI-403-U04 — Activo y pasivo
 
@@ -312,15 +294,9 @@ Eso es un error profesional, no un error de interfaz.
 
 Elige activo o pasivo en cuatro escenarios: exploración tranquila, búsqueda de señal débil, vigilancia discreta y emergencia.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué caracteriza a un modo pasivo?
-2. ¿Qué puede aportar el modo activo?
-3. ¿Qué coste estratégico puede tener un barrido activo?
-4. ¿Por qué no existe un modo siempre mejor?
-5. ¿Qué ocurre si el operador selecciona una opción válida pero poco adecuada?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SCI-403-U05 — Contacto, lectura e interpretación
 
@@ -401,15 +377,9 @@ Recibe una ficha de contacto y separa:
 - clasificación;
 - hipótesis científica.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué representa un contacto?
-2. ¿Qué puede mejorar un tracking?
-3. ¿Qué información debe conservar un readout?
-4. ¿Qué diferencia existe entre Sensores y Ciencia?
-5. ¿Por qué compartir una ficha no convierte a todas las estaciones en omniscientes?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SCI-403-U06 — Barrido básico
 
@@ -520,43 +490,7 @@ El error pertenece al operador.
 
 Ejecuta un barrido guiado en la consola real cuando esté disponible, revisando configuración antes de confirmar.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué pasos básicos configuran un barrido?
-2. ¿Qué exige un barrido focalizado?
-3. Diferencia filtro y prioridad.
-4. ¿Por qué la duración importa?
-5. ¿Repetir exactamente lo mismo debe revelar más información?
-6. ¿Qué ocurre si el operador introduce un sector válido pero equivocado?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-SCI-403 evalúa:
-
-- método científico;
-- incertidumbre;
-- separación entre medición e interpretación;
-- concepto de firma y contacto;
-- activo/pasivo;
-- barrido básico real.
-
-No exige análisis científico avanzado.
-
-# Relación con la prueba v0.0.1
-
-Esta asignatura es una de las bases pedagógicas del vertical slice de Sensores.
-
-La consola utilizada en Academia debe compartir el mismo árbol funcional que la consola operativa del juego.
-
-La skin puede cambiar por era; la operación subyacente no.
-
-# Referencias internas
-
-- `gameplay/science/sensor_analysis_model.json`
-- `gameplay/ship_operations/consoles/sensors/README.md`
-- `gameplay/ship_operations/sensor_resolution/README.md`
-- `gameplay/careers/academy_path/study_materials/sensors/SENSORS_OPERATOR_MANUAL_v0.1.md`
-
-Estas fuentes gobiernan detección, lectura, incertidumbre y límites de conocimiento.

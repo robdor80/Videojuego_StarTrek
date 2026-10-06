@@ -1,0 +1,359 @@
+{
+  "schema_version": "2.0.0",
+  "course_id": "SYS-403",
+  "status": "concept_driven_autocorrectable",
+  "source_bank": "question_bank_v1_0.json",
+  "policy": {
+    "theory_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "deterministic_correction": true,
+    "web_and_game_share_concepts_not_question_instances": true,
+    "complex_judgment_moves_to_practice_and_simulation": true,
+    "source_rule": "Every evaluated concept must be explicitly taught in the course material or an established prerequisite."
+  },
+  "unit_review": {
+    "questions_per_attempt": 4,
+    "reshuffle_each_attempt": true,
+    "preferred_short_answers_per_attempt": 1
+  },
+  "concepts": [
+    {
+      "id": "SYS-403-C001",
+      "unit_id": "SYS-403-U01",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Por qué una nave debe entenderse como una red de sistemas?",
+      "answer_display_es": "dependencias · recursos compartidos · fallos pueden propagarse",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "dependencias",
+        "recursos compartidos",
+        "fallos pueden propagarse"
+      ]
+    },
+    {
+      "id": "SYS-403-C002",
+      "unit_id": "SYS-403-U01",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente fuente, distribución y carga.",
+      "answer_display_es": "fuente aporta energía · distribución la entrega/prioriza · carga consume",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "fuente aporta energía",
+        "distribución la entrega/prioriza",
+        "carga consume"
+      ]
+    },
+    {
+      "id": "SYS-403-C003",
+      "unit_id": "SYS-403-U01",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Puede una consola intacta dejar de funcionar?",
+      "answer_display_es": "Sí. energía/red/sistema remoto/autorización.",
+      "accepted_short_answers_es": [
+        "sí"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "sí",
+        "energía/red/sistema remoto/autorización"
+      ]
+    },
+    {
+      "id": "SYS-403-C004",
+      "unit_id": "SYS-403-U01",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Por qué la prioridad energética depende del contexto?",
+      "answer_display_es": "misión · vidas · daños · autoridad · capacidad restante",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "misión",
+        "vidas",
+        "daños",
+        "autoridad",
+        "capacidad restante"
+      ]
+    },
+    {
+      "id": "SYS-403-C005",
+      "unit_id": "SYS-403-U02",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué función general cumple la propulsión de impulso?",
+      "answer_display_es": "movimiento subluz · maniobras locales",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "movimiento subluz",
+        "maniobras locales"
+      ]
+    },
+    {
+      "id": "SYS-403-C006",
+      "unit_id": "SYS-403-U02",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué significa régimen subluz?",
+      "answer_display_es": "por debajo de velocidad de la luz en modelo del juego",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "por debajo de velocidad de la luz en modelo del juego"
+      ]
+    },
+    {
+      "id": "SYS-403-C007",
+      "unit_id": "SYS-403-U02",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué diferencia existe entre Propulsión y Navegación?",
+      "answer_display_es": "propulsión aporta capacidad · navegación define/ejecuta solución de movimiento",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "propulsión aporta capacidad",
+        "navegación define/ejecuta solución de movimiento"
+      ]
+    },
+    {
+      "id": "SYS-403-C008",
+      "unit_id": "SYS-403-U02",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente tres factores que pueden limitar impulso.",
+      "answer_display_es": "daño · energía · maniobra · seguridad · condiciones locales",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "daño",
+        "energía",
+        "maniobra",
+        "seguridad",
+        "condiciones locales"
+      ]
+    },
+    {
+      "id": "SYS-403-C009",
+      "unit_id": "SYS-403-U03",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué función cumple warp?",
+      "answer_display_es": "viaje superlumínico · navegación interestelar",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "viaje superlumínico",
+        "navegación interestelar"
+      ]
+    },
+    {
+      "id": "SYS-403-C010",
+      "unit_id": "SYS-403-U03",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué no existe una única conversión universal de factor warp a velocidad?",
+      "answer_display_es": "eras/naves/condiciones diferentes · regla del proyecto",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "eras/naves/condiciones diferentes",
+        "regla del proyecto"
+      ]
+    },
+    {
+      "id": "SYS-403-C011",
+      "unit_id": "SYS-403-U03",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente capacidad máxima y sostenible.",
+      "answer_display_es": "pico permitido · capacidad mantenible en el tiempo",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "pico permitido",
+        "capacidad mantenible en el tiempo"
+      ]
+    },
+    {
+      "id": "SYS-403-C012",
+      "unit_id": "SYS-403-U03",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente cuatro factores que condicionan viaje warp.",
+      "answer_display_es": "daño · energía · navegación · subespacio · peligros · restricciones",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "daño",
+        "energía",
+        "navegación",
+        "subespacio",
+        "peligros",
+        "restricciones"
+      ]
+    },
+    {
+      "id": "SYS-403-C013",
+      "unit_id": "SYS-403-U04",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué función general cumple soporte vital?",
+      "answer_display_es": "mantener condiciones habitables · atmósfera/temperatura/ambiente",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "mantener condiciones habitables",
+        "atmósfera/temperatura/ambiente"
+      ]
+    },
+    {
+      "id": "SYS-403-C014",
+      "unit_id": "SYS-403-U04",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente sintetizador de alimentos y replicador del siglo XXIV.",
+      "answer_display_es": "tecnologías/eras distintas · no retrotraer replicador completo",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "tecnologías/eras distintas",
+        "no retrotraer replicador completo"
+      ]
+    },
+    {
+      "id": "SYS-403-C015",
+      "unit_id": "SYS-403-U04",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué puede limitar un replicador?",
+      "answer_display_es": "energía · patrones · reservas · seguridad",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "energía",
+        "patrones",
+        "reservas",
+        "seguridad"
+      ]
+    },
+    {
+      "id": "SYS-403-C016",
+      "unit_id": "SYS-403-U04",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Qué se exige saber del transportador en 4.ª clase?",
+      "answer_display_es": "función · dependencias · límites generales · no operación/mantenimiento avanzado",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "función",
+        "dependencias",
+        "límites generales",
+        "no operación/mantenimiento avanzado"
+      ]
+    },
+    {
+      "id": "SYS-403-C017",
+      "unit_id": "SYS-403-U05",
+      "source_type": "knowledge",
+      "web_prompt_es": "¿Qué opción contiene correctamente cuatro sistemas que pueden contribuir a defensa.",
+      "answer_display_es": "escudos · armamento · sensores · maniobra · comunicaciones · control de daños",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "escudos",
+        "armamento",
+        "sensores",
+        "maniobra",
+        "comunicaciones",
+        "control de daños"
+      ]
+    },
+    {
+      "id": "SYS-403-C018",
+      "unit_id": "SYS-403-U05",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Tener armamento disponible concede permiso para usarlo?",
+      "answer_display_es": "No. requiere autoridad/contexto.",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "no",
+        "requiere autoridad/contexto"
+      ]
+    },
+    {
+      "id": "SYS-403-C019",
+      "unit_id": "SYS-403-U05",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Por qué Sensores es consumidor y proveedor?",
+      "answer_display_es": "consume energía/capacidad · produce conocimiento para otras estaciones",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "consume energía/capacidad",
+        "produce conocimiento para otras estaciones"
+      ]
+    },
+    {
+      "id": "SYS-403-C020",
+      "unit_id": "SYS-403-U05",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué no puede asumirse holodeck en todas las eras?",
+      "answer_display_es": "tecnología depende de era/nave",
+      "accepted_short_answers_es": [
+        "tecnología depende de era/nave"
+      ],
+      "preferred_mode": "short_answer",
+      "answer_key_es": [
+        "tecnología depende de era/nave"
+      ]
+    },
+    {
+      "id": "SYS-403-C021",
+      "unit_id": "SYS-403-U06",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué significa sistema degradado?",
+      "answer_display_es": "funciona con menos capacidad/restricciones/riesgo",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "funciona con menos capacidad/restricciones/riesgo"
+      ]
+    },
+    {
+      "id": "SYS-403-C022",
+      "unit_id": "SYS-403-U06",
+      "source_type": "compare",
+      "web_prompt_es": "¿Qué opción diferencia correctamente sistema primario y respaldo.",
+      "answer_display_es": "principal · alternativa parcial/no necesariamente equivalente",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "principal",
+        "alternativa parcial/no necesariamente equivalente"
+      ]
+    },
+    {
+      "id": "SYS-403-C023",
+      "unit_id": "SYS-403-U06",
+      "source_type": "short_answer",
+      "web_prompt_es": "¿Qué es un efecto cascada?",
+      "answer_display_es": "fallo inicial afecta sistemas dependientes · consecuencias indirectas",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "fallo inicial afecta sistemas dependientes",
+        "consecuencias indirectas"
+      ]
+    },
+    {
+      "id": "SYS-403-C024",
+      "unit_id": "SYS-403-U06",
+      "source_type": "judgment",
+      "web_prompt_es": "¿Por qué un síntoma no demuestra automáticamente la causa?",
+      "answer_display_es": "causas múltiples · requiere diagnóstico · separar observación de explicación",
+      "accepted_short_answers_es": [],
+      "preferred_mode": "multiple_choice",
+      "answer_key_es": [
+        "causas múltiples",
+        "requiere diagnóstico",
+        "separar observación de explicación"
+      ]
+    }
+  ]
+}

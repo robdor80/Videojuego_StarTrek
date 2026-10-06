@@ -123,7 +123,8 @@
     "second_class_trimester_2_developed",
     "second_class_trimester_3_developed",
     "second_class_year_3_developed",
-    "second_class_year_3_developed_and_synced"
+    "second_class_year_3_developed_and_synced",
+    "fourth_class_year_1_assessment_v2_developed"
   ],
   "current_milestone": "second_class_year_3_developed_and_synced",
   "developed_branch_year3_stages": [
@@ -145,5 +146,8 @@
     "science_sensors": "synced_developed_content_and_assessment",
     "medical": "synced_developed_content_and_assessment"
   },
-  "second_class_year3_scope": "15 main courses plus 201-203 stages of all seven specialization branches"
+  "second_class_year3_scope": "15 main courses plus 201-203 stages of all seven specialization branches",
+  "year1_assessment_model": "concept_driven_autocorrectable_v2",
+  "year1_assessment_scope": "15 main courses",
+  "year1_assessment_status": "developed_pending_web_sync"
 }

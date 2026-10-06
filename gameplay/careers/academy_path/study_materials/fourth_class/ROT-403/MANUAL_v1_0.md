@@ -53,15 +53,9 @@ No obtiene autoridad general sobre el puente por ocupar temporalmente una estaci
 
 Rotación breve supervisada con una orden sencilla, una coordinación con otra estación y un informe final.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Cómo fluye una orden desde Mando hasta un resultado?
-2. ¿Qué función general cumple Operaciones?
-3. ¿Por qué una estación no funciona aislada?
-4. ¿Qué limita a un cadete durante la rotación?
-5. ¿Qué debe contener el informe final?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ROT-403-U02 — Ingeniería
 
@@ -109,15 +103,9 @@ El cadete debe:
 
 Tarea técnica de baja complejidad bajo supervisión, con comprobación previa y registro posterior.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué información observa Ingeniería antes de actuar?
-2. ¿Por qué más potencia tiene un coste?
-3. ¿Para qué sirve mantenimiento preventivo?
-4. ¿Qué debes hacer si la tarea real difiere del briefing?
-5. ¿Por qué una rotación breve no concede competencia de ingeniero?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ROT-403-U03 — Ciencia y Sensores
 
@@ -162,15 +150,9 @@ Un buen reporte distingue:
 
 Ejecuta un barrido guiado y entrega los datos a Ciencia sin añadir conclusiones no demostradas.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué diferencia existe entre Sensores y Ciencia?
-2. ¿Qué pasos básicos revisas antes de un barrido?
-3. ¿Por qué debe conservarse incertidumbre?
-4. ¿Qué debe incluir un reporte científico inicial?
-5. ¿Qué error cometes si transformas una lectura en certeza sin evidencia?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ROT-403-U04 — Navegación y vuelo
 
@@ -206,15 +188,9 @@ El cadete observa cómo Conn/Navegación transforma una intención en movimiento
 
 Prepara una ruta sencilla en simulador y comunícala con ETA y restricción principal.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué elementos necesita una solución de plotting?
-2. ¿Qué representa el rumbo?
-3. ¿Por qué una velocidad debe validarse?
-4. ¿Qué debe hacer el operador si la orden no puede ejecutarse?
-5. ¿Qué diferencia existe entre decidir destino y ejecutar movimiento?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ROT-403-U05 — Seguridad y Medicina
 
@@ -262,15 +238,9 @@ Un cadete no obtiene autoridad de Seguridad ni cualificación médica por una mi
 
 Dos casos breves: control de una zona y primera respuesta ante un paciente simulado.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué función general observa el cadete en Seguridad?
-2. ¿Qué función general observa en Medicina?
-3. ¿Para qué sirve el triaje?
-4. ¿Por qué no se exige diagnóstico avanzado?
-5. ¿Qué límite mantiene el cadete tras completar la rotación?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # ROT-403-U06 — Reflexión profesional
 
@@ -333,44 +303,7 @@ No selecciona automáticamente la especialización.
 
 Debrief con instructor usando evidencia de todas las rotaciones.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué ROT-403 no elige especialización?
-2. ¿Qué diferencia existe entre interés y competencia?
-3. ¿Qué convierte una fortaleza en algo más que una impresión?
-4. ¿Por qué una dificultad puede ser útil?
-5. ¿Qué debe producir el debrief final?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-ROT-403 evalúa:
-
-- observación profesional;
-- conducta;
-- ejecución básica supervisada;
-- comunicación;
-- respeto a límites;
-- reflexión.
-
-No concede una cualificación profesional ni bloquea una futura rama.
-
-# Tratamiento por era
-
-Las estaciones, equipos y métodos de entrenamiento cambian.
-
-La lógica de rotación se mantiene:
-
-> exposición → tarea supervisada → evidencia → debrief.
-
-# Referencias internas
-
-- `gameplay/careers/academy_path/specializations.json`
-- `gameplay/careers/academy_path/field_training_model.json`
-- `gameplay/ship_operations/bridge_station_model.json`
-- `gameplay/ship_operations/consoles/sensors/README.md`
-- `gameplay/navigation/README.md`
-- `gameplay/engineering/engineering_loop.json`
-
-La rotación orienta; no sustituye la especialización formal.

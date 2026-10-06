@@ -80,15 +80,9 @@ La prioridad concreta depende del contexto y de la autoridad competente.
 
 Sigue un diagrama funcional sencillo desde fuente de energía hasta tres consumidores y predice qué ocurre si se pierde una rama.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Por qué una nave debe entenderse como una red de sistemas?
-2. ¿Qué diferencia existe entre fuente y carga?
-3. ¿Qué hace la distribución?
-4. ¿Puede una consola estar intacta y aun así no funcionar?
-5. ¿Por qué la prioridad depende del contexto?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SYS-403-U02 — Propulsión de impulso
 
@@ -141,15 +135,9 @@ La operación puede verse afectada por:
 
 Interpreta un estado básico de propulsión y decide qué órdenes simples siguen siendo ejecutables.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué función general cumple la propulsión de impulso?
-2. ¿Qué significa régimen subluz?
-3. ¿Quién decide el destino y quién aporta capacidad de movimiento?
-4. ¿Qué factores pueden limitar impulso?
-5. ¿Por qué una velocidad solicitada no puede superar el estado real de la nave?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SYS-403-U03 — Propulsión warp
 
@@ -208,15 +196,9 @@ Una transición o viaje warp puede verse condicionado por:
 
 Compara dos rutas donde una es más corta pero exige una velocidad menos sostenible y otra es más larga pero más segura.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué función cumple warp?
-2. ¿Qué significa factor de curvatura a este nivel?
-3. ¿Por qué no usamos una única ecuación universal para todas las eras?
-4. ¿Qué diferencia existe entre capacidad máxima y sostenible?
-5. ¿Qué factores pueden condicionar un viaje warp?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SYS-403-U04 — Habitabilidad y servicios
 
@@ -285,15 +267,9 @@ No es un sistema omnipotente.
 
 Relaciona cada necesidad con el sistema que principalmente la soporta: alimento, traslado, consulta de datos, habitabilidad o acceso a servicios.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué función general cumple soporte vital?
-2. ¿Qué diferencia de era existe entre sintetizador y replicador?
-3. ¿Qué limita el uso de replicadores?
-4. ¿Qué se espera saber del transportador en 4.ª clase?
-5. ¿Por qué la computadora no es una solución universal a cualquier fallo?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SYS-403-U05 — Defensa y entorno de misión
 
@@ -350,15 +326,9 @@ cuando la nave y era lo permitan.
 
 Analiza una situación donde aumentar recursos a sensores mejora conocimiento pero reduce recursos disponibles para otra función.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué sistemas pueden contribuir a la defensa?
-2. ¿Tener armamento disponible concede permiso para usarlo?
-3. ¿Por qué sensores es a la vez consumidor y proveedor?
-4. ¿Qué problema causa defenderse con información pobre?
-5. ¿Por qué holodeck no puede asumirse en todas las eras?
-
----
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
 # SYS-403-U06 — Fallos y dependencias
 
@@ -417,48 +387,7 @@ Ingeniería diagnostica; otras estaciones informan de los efectos que observan.
 
 Sigue una avería sencilla desde el sistema afectado hasta dos consecuencias secundarias y propone qué información debe enviarse a Ingeniería.
 
-### Autoevaluación
+### Repaso interactivo
 
-1. ¿Qué significa degradación?
-2. ¿Qué diferencia existe entre primario y respaldo?
-3. ¿Qué es un efecto cascada?
-4. ¿Qué factores influyen en la prioridad de recuperación?
-5. ¿Por qué un síntoma no demuestra automáticamente la causa?
+Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El repaso teórico utiliza test de cuatro opciones y respuestas cortas autocorregibles; las competencias complejas se valoran en prácticas y simulaciones.
 
----
-
-# Evaluación del curso
-
-SYS-403 evalúa:
-
-- relaciones entre sistemas;
-- comprensión de energía y dependencias;
-- función general de impulso y warp;
-- servicios de habitabilidad;
-- defensa a nivel no especializado;
-- razonamiento sobre fallos.
-
-No exige ingeniería avanzada ni fórmulas warp no enseñadas.
-
-# Tratamiento por era
-
-La función puede mantenerse mientras cambian:
-
-- tecnología;
-- interfaz;
-- nivel de automatización;
-- disponibilidad de replicadores;
-- holodecks;
-- capacidad de sensores y otros sistemas.
-
-# Referencias internas
-
-- `lore/starships/ship_systems/warp/README.md`
-- `lore/starships/ship_systems/transporters/README.md`
-- `lore/starships/ship_systems/shields/README.md`
-- `lore/technology/replicators/README.md`
-- `gameplay/ship_operations/bridge_station_model.json`
-- `gameplay/navigation/README.md`
-- `gameplay/engineering/engineering_loop.json`
-
-Cuando una referencia tecnológica está todavía reservada, este curso se limita a la función curricular aprobada y no inventa especificaciones técnicas.
