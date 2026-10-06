@@ -1,12 +1,14 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "species_character_runtime",
   "principles": {
     "species_is_not_culture": true,
     "species_is_not_citizenship": true,
     "species_is_not_personality": true,
     "contextual_capabilities_not_flat_stat_bonuses": true,
-    "individual_variation_required": true
+    "individual_variation_required": true,
+    "unknown_biology_remains_unknown": true,
+    "human_lifecycle_is_not_universal_default": true
   },
   "character_fields": {
     "species_id": null,
@@ -46,5 +48,10 @@
     "may_roleplay_cultural_influence": true,
     "may_mutate_species_state": false,
     "may_infer_hidden_medical_state_without_evidence": false
-  }
+  },
+  "biology_contract_ref": "gameplay/species/species_biology_contract.json",
+  "lifecycle_contract_ref": "gameplay/species/character_lifecycle_contract.json",
+  "culture_socialization_contract_ref": "gameplay/species/culture_socialization_contract.json",
+  "reproduction_parentage_contract_ref": "gameplay/species/reproduction_parentage_framework.json",
+  "kinship_contract_ref": "gameplay/relationships/kinship_family_network_contract.json"
 }
