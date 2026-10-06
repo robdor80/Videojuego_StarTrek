@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "ruleset_id": "planetary_environment_state_generation",
+  "status": "foundation_fixed_content_pending",
+  "purpose": "Separate persistent planetary place identity from causally evolving local environmental state.",
+  "principle": "A place persists; its environmental state changes as a consequence of world conditions.",
+  "existence_vs_state": {
+    "existence_inputs": [
+      "star_and_orbit",
+      "planetary_mass_and_gravity",
+      "rotation_and_axial_context",
+      "atmosphere",
+      "hydrosphere",
+      "geology_and_topography",
+      "biosphere",
+      "persistent_geography"
+    ],
+    "state_inputs": [
+      "regional_climate",
+      "seasonal_context",
+      "recent_weather_history",
+      "local_altitude_and_latitude",
+      "terrain_exposure",
+      "water_proximity",
+      "vegetation_or_surface_cover",
+      "current_hydrology",
+      "extraordinary_events"
+    ],
+    "weather_must_not_create_persistent_geography_without_causal_event": true
+  },
+  "spatial_scales": [
+    {
+      "id": "planetary_or_regional",
+      "examples": [
+        "climate regime",
+        "seasonal circulation",
+        "large storm systems",
+        "radiation or atmospheric regime"
+      ]
+    },
+    {
+      "id": "local",
+      "examples": [
+        "valley",
+        "coast",
+        "mountain",
+        "forest",
+        "desert",
+        "settlement",
+        "river basin"
+      ]
+    },
+    {
+      "id": "immediate",
+      "examples": [
+        "visibility",
+        "surface wetness",
+        "snow_or_ice",
+        "dust",
+        "local wind",
+        "flooding",
+        "temperature exposure"
+      ]
+    }
+  ],
+  "state_persistence": {
+    "previous_state_contributes_to_next_state": true,
+    "single_weather_change_does_not_reset_surface_state": true,
+    "examples": [
+      "rain may leave wet ground after precipitation stops",
+      "snow may persist after temperature rises depending on accumulated energy and exposure",
+      "flooding may persist after the storm moves away",
+      "dust and dryness require causal drying history"
+    ]
+  },
+  "gameplay_outputs_may_affect": [
+    "visibility",
+    "movement_and_access",
+    "sensor_conditions",
+    "transport_and_landing",
+    "survival_or_exposure",
+    "local_population_activity",
+    "infrastructure_operation",
+    "narrative_description"
+  ],
+  "rules": [
+    "A climate or biome label supplies context, not an instantaneous weather result.",
+    "Local geography modifies regional conditions.",
+    "Environmental state must be temporally continuous unless an explicit event changes it abruptly.",
+    "Returning to a known location must load and evolve prior environmental state rather than reroll it.",
+    "AI narration may describe authoritative environmental state but cannot invent contradictory weather or terrain.",
+    "Exceptional conditions require an explicit cause or generated event.",
+    "Simulation LOD may simplify calculations but must preserve causal continuity."
+  ],
+  "core_rpg_boundary": "Generic environmental persistence and causal-state evolution should live in CoreRPG when available; Star Trek owns planetary, technological and setting-specific profiles."
+}
