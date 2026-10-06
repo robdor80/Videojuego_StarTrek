@@ -18,7 +18,7 @@ La regla central es:
 ## 1. Cuatro capas distintas
 
 **Biología**  
-Características fisiológicas de una especie.
+**Características fisiológicas de una especie.**
 
 **Cultura**  
 Valores, normas y prácticas compartidas por un grupo.
@@ -91,7 +91,7 @@ El tono puede transmitir:
 - distancia;
 - desafío.
 
-No todos los grupos interpretan el mismo tono de la misma forma.
+**No todos los grupos interpretan el mismo tono de la misma forma.**
 
 ## 3. Tabúes
 
@@ -157,7 +157,7 @@ Una presentación profesional debe evitar:
 - familiaridad improcedente;
 - asumir relaciones inexistentes.
 
-Cuando existe duda, es preferible una forma prudente y formal.
+**Cuando existe duda, es preferible una forma prudente y formal.**
 
 ## 3. Hospitalidad
 
@@ -201,7 +201,7 @@ Prepara un encuentro formal usando un dossier cultural incompleto y marca qué a
 
 ## 1. Traducir no es transferir cultura completa
 
-El Traductor Universal ayuda a convertir lenguaje.
+**El Traductor Universal ayuda a convertir lenguaje.**
 
 No garantiza:
 - equivalencia perfecta;
@@ -263,7 +263,7 @@ Resolver un malentendido donde una palabra traducida admite dos significados pla
 
 ## 1. Observar antes de intervenir
 
-Primer Contacto exige especial prudencia.
+**Primer Contacto exige especial prudencia.**
 
 La fase inicial busca comprender:
 - quiénes son;
@@ -327,7 +327,7 @@ Planificar la fase inicial supervisada de un contacto con información cultural 
 ## 1. Intereses y posiciones
 
 **Posición**  
-Lo que una parte dice que quiere.
+**Lo que una parte dice que quiere.**
 
 **Interés**  
 La necesidad o motivo que intenta proteger.

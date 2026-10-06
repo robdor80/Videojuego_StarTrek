@@ -17,7 +17,7 @@ La regla central es:
 
 ## 1. Antes del paciente está la escena
 
-El primer deber es evitar que la persona que ayuda se convierta en otra víctima.
+**El primer deber es evitar que la persona que ayuda se convierta en otra víctima.**
 
 Antes de acercarse se valora:
 - ambiente;
@@ -72,7 +72,7 @@ Evalúa tres escenarios antes de decidir si puedes acercarte.
 
 ## 1. Estado observable
 
-La valoración inicial intenta identificar problemas urgentes con la información disponible.
+**La valoración inicial intenta identificar problemas urgentes con la información disponible.**
 
 No pretende establecer un diagnóstico definitivo.
 
@@ -135,7 +135,7 @@ Valora un paciente simulado y separa observaciones de interpretaciones.
 
 ## 1. Priorizar con recursos limitados
 
-El triaje organiza la atención cuando existen varios pacientes y no es posible atenderlos a todos al mismo tiempo.
+**El triaje organiza la atención cuando existen varios pacientes y no es posible atenderlos a todos al mismo tiempo.**
 
 ## 2. Niveles del modelo
 
@@ -188,7 +188,7 @@ Ordena cinco pacientes simulados con recursos limitados y justifica la prioridad
 
 ## 1. Objetivo
 
-Estabilizar significa evitar que la situación empeore mientras llega ayuda o se prepara traslado.
+**Estabilizar significa evitar que la situación empeore mientras llega ayuda o se prepara traslado.**
 
 ## 2. Hemorragia
 
@@ -242,7 +242,7 @@ Aplicar medidas básicas autorizadas a un paciente simulado y reevaluar.
 
 ## 1. Tricorder médico
 
-El tricorder médico ayuda a obtener datos.
+**El tricorder médico ayuda a obtener datos.**
 
 No garantiza certeza diagnóstica.
 
@@ -295,7 +295,7 @@ Preparar equipo, obtener datos de un paciente simulado y transmitirlos correctam
 
 ## 1. Entrega profesional
 
-Cuando llega personal médico cualificado, el cadete debe transferir información de forma clara.
+**Cuando llega personal médico cualificado, el cadete debe transferir información de forma clara.**
 
 ## 2. Contenido
 
