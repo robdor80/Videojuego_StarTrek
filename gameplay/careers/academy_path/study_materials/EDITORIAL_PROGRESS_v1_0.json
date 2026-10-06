@@ -125,7 +125,8 @@
     "second_class_year_3_developed",
     "second_class_year_3_developed_and_synced",
     "fourth_class_year_1_assessment_v2_developed",
-    "fourth_class_year_1_assessment_v2_developed_and_synced"
+    "fourth_class_year_1_assessment_v2_developed_and_synced",
+    "fourth_class_year_1_assessment_v2_1_synced"
   ],
   "current_milestone": "second_class_year_3_developed_and_synced",
   "developed_branch_year3_stages": [
@@ -148,16 +149,19 @@
     "medical": "synced_developed_content_and_assessment"
   },
   "second_class_year3_scope": "15 main courses plus 201-203 stages of all seven specialization branches",
-  "year1_assessment_model": "concept_driven_autocorrectable_v2",
-  "year1_assessment_scope": "15 main courses / 90 units",
+  "year1_assessment_model": "concept_driven_autocorrectable_v2_1",
+  "year1_assessment_scope": "15 main courses / 90 units / 6 evaluable concepts per unit",
   "year1_assessment_status": "developed_and_synced",
   "assessment_refactor": {
-    "current": "year1_v2_synced",
+    "current": "year1_v2_1_synced",
     "rules": [
       "Theory uses only multiple-choice and deterministic short answers.",
       "Web and game share evaluable concepts, not exact question instances.",
       "Questions must be answerable unambiguously from taught material or established prerequisites.",
       "Complex judgment, leadership and execution are assessed through practice or simulation."
     ]
-  }
+  },
+  "year1_review_questions_per_attempt": 5,
+  "year1_study_emphasis": "key_points_bolded",
+  "year1_mobile_navigation": "prev_next_scrolls_to_lesson_start"
 }

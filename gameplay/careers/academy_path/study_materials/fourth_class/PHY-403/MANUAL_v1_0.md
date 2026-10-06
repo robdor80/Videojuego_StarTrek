@@ -15,7 +15,7 @@ PHY-403 no busca una “nota física” aislada. Integra el estado inicial, la e
 
 ## 1. Comparar contra el punto de partida
 
-La revisión de progreso parte de la evaluación inicial de PHY-401.
+**La revisión de progreso parte de la evaluación inicial de PHY-401.**
 
 Se comparan:
 
@@ -75,7 +75,7 @@ La condición funcional reúne:
 - movilidad;
 - coordinación.
 
-No existe una única cifra que sustituya todas esas dimensiones.
+**No existe una única cifra que sustituya todas esas dimensiones.**
 
 ## 2. Adecuación al servicio
 
@@ -141,7 +141,7 @@ Una semana real puede contener:
 - entrenamiento;
 - descanso.
 
-La rutina física debe convivir con todas ellas.
+**La rutina física debe convivir con todas ellas.**
 
 ## 3. Señales de riesgo
 
@@ -183,7 +183,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. Prioridades cambiantes
 
-Durante exámenes o simulaciones intensas, la carga académica aumenta.
+**Durante exámenes o simulaciones intensas, la carga académica aumenta.**
 
 La rutina debe adaptarse.
 
@@ -242,7 +242,7 @@ Un cadete puede practicar por su cuenta:
 
 ## 2. Separación del currículo
 
-Una actividad personal no se convierte automáticamente en una nota de PHY.
+**Una actividad personal no se convierte automáticamente en una nota de PHY.**
 
 Puede generar evidencia de:
 
@@ -294,7 +294,7 @@ Las preguntas de esta unidad se generan desde conceptos evaluables del curso. El
 
 ## 1. El objetivo es continuidad futura
 
-La evaluación final no “resetea” al personaje.
+**La evaluación final no “resetea” al personaje.**
 
 El año siguiente hereda:
 
