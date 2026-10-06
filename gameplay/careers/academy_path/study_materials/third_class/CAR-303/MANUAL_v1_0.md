@@ -28,7 +28,7 @@ El perfil actual reúne:
 
 ## 2. Fortalezas
 
-Una fortaleza no es “me gusta”.
+**Una fortaleza no es “me gusta”.**
 
 Debe estar respaldada por:
 - práctica;
@@ -75,7 +75,7 @@ Revisar el expediente y separar interés, evidencia fuerte y áreas aún no prob
 
 ## 1. Tipo de trabajo
 
-Cada rama implica actividades y responsabilidades diferentes.
+**Cada rama implica actividades y responsabilidades diferentes.**
 
 ### Mando
 Coordinación, decisión, liderazgo y puente.
@@ -136,7 +136,7 @@ Comparar tres ramas a partir de un día de trabajo realista.
 
 ## 1. Aptitud
 
-Aptitud es la capacidad demostrada o razonablemente desarrollable para una función.
+**Aptitud es la capacidad demostrada o razonablemente desarrollable para una función.**
 
 ## 2. Preferencia
 
@@ -186,7 +186,7 @@ Contrastar una preferencia fuerte con evidencia mixta y preparar un plan realist
 
 ## 1. Medio y largo plazo
 
-Un objetivo profesional describe dirección.
+**Un objetivo profesional describe dirección.**
 
 Ejemplos:
 - obtener cualificación de puente;
@@ -282,7 +282,7 @@ Pueden proponerse:
 
 ## 5. Registro cualitativo
 
-La entrevista genera registro útil, no un número oculto de “compatibilidad”.
+**La entrevista genera registro útil, no un número oculto de “compatibilidad”.**
 
 ### Práctica
 
@@ -302,7 +302,7 @@ Entrevista con instructor y contraste de dos recomendaciones diferentes.
 
 ## 1. Decisión del jugador
 
-La especialización se confirma al final del proceso.
+**La especialización se confirma al final del proceso.**
 
 Puede elegirse:
 - siguiendo recomendación;

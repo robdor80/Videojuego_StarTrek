@@ -163,5 +163,11 @@
   },
   "year1_review_questions_per_attempt": 5,
   "year1_study_emphasis": "key_points_bolded",
-  "year1_mobile_navigation": "prev_next_scrolls_to_lesson_start"
+  "year1_mobile_navigation": "prev_next_scrolls_to_lesson_start",
+  "year2_assessment_model": "concept_driven_autocorrectable_v2_1",
+  "year2_assessment_scope": "15 main courses / all Third Class units / 6 evaluable concepts per unit",
+  "year2_assessment_status": "developed_pending_web_sync",
+  "year2_review_questions_per_attempt": 5,
+  "year2_study_emphasis": "key_points_bolded",
+  "year2_mobile_navigation": "inherits_global_prev_next_scroll_to_lesson_start"
 }
