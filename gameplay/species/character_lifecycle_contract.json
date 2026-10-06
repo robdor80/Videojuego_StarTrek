@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "character_lifecycle_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "A persistent person or person-equivalent has one continuous identity across development, aging, transformation, retirement and death/end-of-function.",
+  "stages": [
+    "origin_or_creation",
+    "dependent_or_early_development",
+    "maturation",
+    "adult_or_functional_maturity",
+    "later_life_or_long_service",
+    "retirement_or_reduced_activity_if_applicable",
+    "death_destruction_or_end_of_function",
+    "legacy"
+  ],
+  "origin_modes_examples": [
+    "biological_birth",
+    "engineered_birth_or_accelerated_development",
+    "constructed_synthetic",
+    "activated_holographic_or_software_person",
+    "other_authorized_origin"
+  ],
+  "rules": [
+    "Stage thresholds come from species/entity profiles, not a universal human age table.",
+    "Aging changes current biological/visual state while preserving entity identity.",
+    "Persistent injuries, augmentations, joining, assimilation, liberation or comparable transformations append history and do not silently replace identity unless a setting rule explicitly defines a new entity.",
+    "Death/destruction/end-of-function ends normal active simulation but does not erase identity, history, relationships, records or consequences.",
+    "Lifecycle transitions require authoritative events or elapsed-time rules.",
+    "Off-screen catch-up may advance lifecycle only through valid dated transitions.",
+    "AI cannot declare birth, pregnancy, joining, assimilation, death or revival without authoritative state."
+  ],
+  "dependencies": [
+    "gameplay/species/species_biology_contract.json",
+    "universe/generation/persistent_entity_identity_contract.json",
+    "gameplay/persistence/persistent_state_roundtrip_contract.json"
+  ]
+}
