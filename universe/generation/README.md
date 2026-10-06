@@ -33,7 +33,10 @@ Foundation now established in:
 - `generator_domain_catalog.json`;
 - `procedural_starship_rules.json`;
 - `procedural_population_rules.json`;
-- `traffic_activity_model.json`.
+- `traffic_activity_model.json`;
+- `procedural_context_resolution_hierarchy.json`;
+- `persistent_population_materialization_rules.json`;
+- `docs/roadmap/procedural_living_universe_depth_plan.md`.
 
 The long-term generator covers coherent:
 
@@ -55,3 +58,18 @@ Once a procedural entity is materialized, it is loaded and evolved through simul
 Simulation fidelity may vary with relevance.
 
 LOD changes computational detail, not whether an entity exists.
+
+
+## Living-population depth
+
+The procedural universe now uses an explicit layered-context and population-materialization architecture inspired by reusable simulation lessons from Nimroel:
+
+- resolve structure before individuals;
+- preserve authored/canonical characters;
+- keep background population latent until needed;
+- promote latent population deterministically into persistent individuals;
+- never reroll a materialized person;
+- isolate deterministic subsystem seeds;
+- validate population conservation, staffing, knowledge, relationships and schedules.
+
+Generic runtime semantics remain CoreRPG responsibilities; Star Trek owns era, canon, species/culture, Starfleet, technology and setting-specific generation rules.
