@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "betazoid_telepathic_social_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "betazoid",
+    "automatic_attachment_by_species": false,
+    "principle": "A telepathic society can develop different norms around honesty, communication and privacy without making every Betazoid intrusive or omniscient."
+  },
+  "values_and_norms": [
+    {
+      "norm": "honesty_and_direct_feedback_can_be_socially_salient",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "telepathic_awareness_shapes_social_expectations",
+      "strength": "strong_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "spoken_language_may_be_chosen_for_cross_species_comfort",
+      "strength": "possible_norm",
+      "evidence_state": "contextual_inference_explicitly_marked"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "high awareness of emotional state",
+      "direct feedback",
+      "telepathic communication where capability/context allows"
+    ],
+    "misread_risks": [
+      "Honest feedback may be perceived as rude by non-Betazoids.",
+      "Emotional sensing does not reveal motive or objective truth.",
+      "Telepathic contact does not guarantee identical capability strength."
+    ]
+  },
+  "authority_and_status": {
+    "universal_structure": null
+  },
+  "privacy_and_intimacy": {
+    "central_domain": true,
+    "rules": [
+      "Privacy expectations are shaped by telepathy but are not absent by definition.",
+      "Cross-species interaction may require explicit restraint and consent norms.",
+      "Professional confidentiality remains relevant even when emotional information is sensed."
+    ]
+  },
+  "family_kinship_and_household": {
+    "universal_structure": null
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "telepathic self-regulation",
+      "cross-species etiquette",
+      "honesty norms"
+    ],
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Telepathy does not imply counselor, diplomat or medical profession."
+  },
+  "law_duty_and_obligation": {
+    "rule": "Do not invent universal legal mind-reading rules; use explicit law/institution state."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misreads": [
+      "automatic lie detector",
+      "no privacy",
+      "all Betazoids equally powerful"
+    ],
+    "professional_response": "Treat sensed information as capability-limited character knowledge, then apply privacy/professional rules."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "telepathic strength",
+      "development timing",
+      "training",
+      "family culture",
+      "offworld exposure",
+      "mixed heritage",
+      "individual privacy preference"
+    ]
+  },
+  "era_variation": {
+    "required": true
+  },
+  "gameplay_hooks": [
+    "telepathic_etiquette",
+    "privacy_conflict",
+    "honesty_vs_politeness",
+    "cross_species_communication",
+    "professional_confidentiality"
+  ],
+  "ai_guardrails": [
+    "Do not expose hidden truth because a Betazoid is present.",
+    "Do not infer motive from emotion.",
+    "Do not assume privacy is meaningless.",
+    "Do not force counselor/diplomat roles."
+  ],
+  "unknowns": [
+    "complete marriage/household model",
+    "inheritance rules",
+    "regional subcultures",
+    "universal religious system",
+    "funerary practices"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BETAZOID",
+      "confidence": "MEDIUM",
+      "claim_scope": "telepathy, honesty/directness and cultural cross-check"
+    }
+  ]
+}
