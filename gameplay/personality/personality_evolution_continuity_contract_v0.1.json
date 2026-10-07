@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "personality_evolution_continuity_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Character growth modifies bounded aspects of expression or trait intensity through represented causes; it never silently replaces personality.",
+  "evolution_record_fields": [
+    "event_id",
+    "character_id",
+    "time",
+    "cause_refs",
+    "affected_dimensions",
+    "old_values",
+    "new_values",
+    "confidence_or_stability",
+    "knowledge_visibility"
+  ],
+  "rules": [
+    "Small changes may accumulate through long service, relationships, mentorship, trauma recovery, success/failure and aging when represented by events.",
+    "Large trait inversions require exceptional, explicit narrative/state causes.",
+    "Relationship warmth/trust normally changes relationship state, not global personality.",
+    "Temporary grief, fear, intoxication, fatigue, injury or acute stress belongs to current state.",
+    "Recovery may return expression toward baseline without deleting event history.",
+    "Personality evolution survives save/load and off-screen simulation.",
+    "Canonical-character research phases may inspire this model but procedural NPCs never copy a canonical arc."
+  ],
+  "examples": [
+    "guarded NPC becomes somewhat more open after years of stable trusted relationships",
+    "insecure junior officer gains self-confidence after repeated competence and promotion",
+    "rule-rigid officer becomes slightly more flexible after several situations where rigid procedure caused avoidable harm",
+    "highly humorous officer becomes temporarily quiet during grief without changing humor_frequency baseline"
+  ]
+}
