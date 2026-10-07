@@ -120,18 +120,18 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 053 | Clase de nave vs nave individual | PARTIAL | 012 | Diseño/clase no se confunde con instancia |
-| 054 | Era/configuración/refit de clase | PARTIAL | 006,053 | Capacidades dependen de configuración fechada |
-| 055 | Misión y función operacional de nave | PARTIAL | 043,053 | Una nave existe por operador, función y contexto |
-| 056 | Sistemas de nave como capacidades | PARTIAL | 054-055 | Sistemas disponibles son fecha/configuración dependientes |
-| 057 | Topología e interiores funcionales | PARTIAL | 053-056 | Espacios existen por función y conectividad |
-| 058 | Necesidades de dotación | TODO | 045-057 | Departamentos/puestos nacen de sistemas y misión |
-| 059 | Generación de tripulación por slots | PARTIAL | 015-016,058 | Complemento conserva contabilidad y cualificaciones |
-| 060 | Cuadrantes/turnos de tripulación | PARTIAL | 049,059 | Cada guardia mantiene cobertura viable |
-| 061 | Vida a bordo y espacios privados/sociales | TODO | 026-030,057-060 | Rutinas personales y de servicio coexisten |
-| 062 | Daño, reparación y mantenimiento | PARTIAL | 012,056 | Estado técnico cambia sin reemplazar identidad |
-| 063 | Instalaciones, estaciones y starbases | PARTIAL | 013,043 | Función→servicios→staff→tráfico→estado |
-| 064 | Astilleros, atraque, reabastecimiento y refit | PARTIAL | 054,062-063 | Servicios requieren capacidad, cola, recursos y tiempo |
+| 053 | Clase de nave vs nave individual | COMPLETE | 012 | Diseño/clase no se confunde con instancia |
+| 054 | Era/configuración/refit de clase | COMPLETE | 006,053 | Capacidades dependen de configuración fechada |
+| 055 | Misión y función operacional de nave | COMPLETE | 043,053 | Una nave existe por operador, función y contexto |
+| 056 | Sistemas de nave como capacidades | COMPLETE | 054-055 | Sistemas disponibles son fecha/configuración dependientes |
+| 057 | Topología e interiores funcionales | COMPLETE | 053-056 | Espacios existen por función y conectividad |
+| 058 | Necesidades de dotación | COMPLETE | 045-057 | Departamentos/puestos nacen de sistemas y misión |
+| 059 | Generación de tripulación por slots | COMPLETE | 015-016,058 | Complemento conserva contabilidad y cualificaciones |
+| 060 | Cuadrantes/turnos de tripulación | COMPLETE | 049,059 | Cada guardia mantiene cobertura viable |
+| 061 | Vida a bordo y espacios privados/sociales | COMPLETE | 026-030,057-060 | Rutinas personales y de servicio coexisten |
+| 062 | Daño, reparación y mantenimiento | COMPLETE | 012,056 | Estado técnico cambia sin reemplazar identidad |
+| 063 | Instalaciones, estaciones y starbases | COMPLETE | 013,043 | Función→servicios→staff→tráfico→estado |
+| 064 | Astilleros, atraque, reabastecimiento y refit | COMPLETE | 054,062-063 | Servicios requieren capacidad, cola, recursos y tiempo |
 
 # FASE 6 — ASTROGRAFÍA, PLANETAS Y CIVILIZACIONES
 
