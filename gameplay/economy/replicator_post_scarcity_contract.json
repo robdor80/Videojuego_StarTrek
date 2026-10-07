@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "replicator_post_scarcity_contract",
+  "classification": "GAME_ADDITION",
+  "principle": "Replicators transform logistics and scarcity but do not erase energy, feedstock, access, legality, specialized fabrication, rare materials, time, location or political constraints.",
+  "resolution_inputs": [
+    "era",
+    "technology_profile",
+    "replicator_or_synthesizer_capability",
+    "power_state",
+    "feedstock_state",
+    "pattern_access",
+    "authorization",
+    "requested_item_profile",
+    "local_law_or_policy"
+  ],
+  "output_states": [
+    "available",
+    "available_with_cost_or_priority",
+    "restricted",
+    "requires_specialized_fabrication",
+    "requires_import",
+    "temporarily_unavailable",
+    "unknown"
+  ],
+  "rules": [
+    "Do not model Federation society as a universal moneyless rule for every civilization.",
+    "A replicator cannot fabricate unsupported/forbidden matter or equipment merely because the player asks.",
+    "Power loss, damage, access rules and pattern availability affect use.",
+    "A replicated common item does not imply that every industrial or strategic component is locally producible.",
+    "Scarcity may remain social, legal, spatial, informational, energetic, material or capacity-based."
+  ]
+}
