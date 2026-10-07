@@ -1,0 +1,68 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "shipboard_life_and_procedural_starship_generation_status",
+  "plan_ref": "docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md",
+  "summary": {
+    "total_packages": 12,
+    "complete": 12,
+    "partial": 0,
+    "todo": 0
+  },
+  "packages": [
+    {
+      "package_id": "SB001",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB002",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB003",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB004",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB005",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB006",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB007",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB008",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB009",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB010",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB011",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB012",
+      "status": "COMPLETE"
+    }
+  ],
+  "implementation_state": {
+    "content_and_contracts": "COMPLETE",
+    "deterministic_reference_generators": "PRESENT",
+    "locked_fixture": "PRESENT",
+    "repository_ci_runner": "NOT_CONFIGURED",
+    "core_rpg_authoritative_runtime": "PENDING_CORERPG_4_5_PLUS"
+  }
+}
