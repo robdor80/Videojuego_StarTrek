@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilian_trade_operator_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "operator_fields": [
+    "operator_id",
+    "organization_ref",
+    "home_jurisdiction_ref",
+    "vessel_or_facility_refs",
+    "business_or_service_types",
+    "resource_capabilities",
+    "route_refs",
+    "contract_refs",
+    "legal_status_refs",
+    "reputation_refs"
+  ],
+  "trade_event_fields": [
+    "trade_event_id",
+    "buyer_ref",
+    "seller_ref",
+    "goods_or_service_refs",
+    "quantity_or_scope",
+    "consideration_model",
+    "location_ref",
+    "time_ref",
+    "contract_or_authority_ref",
+    "source_event_refs"
+  ],
+  "rules": [
+    "Civilian economic activity derives from demand, capability, access and incentives rather than generic random merchants.",
+    "Operator profession or species does not determine honesty.",
+    "Different civilizations may use money, credits, barter, allocation, reciprocal service or other models.",
+    "Trade must obey inventory/capacity/legal state.",
+    "A completed transfer changes ownership/inventory state and leaves provenance."
+  ]
+}
