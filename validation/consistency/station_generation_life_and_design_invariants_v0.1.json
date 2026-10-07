@@ -1,0 +1,170 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "station_generation_life_and_design_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
+  "refs": [
+    "lore/stations_and_facilities/facility_design_generation_index_v0.1.json",
+    "lore/stations_and_facilities/canonical_station_design_catalogue_v0.1.json",
+    "lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+    "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+    "universe/generation/procedural_station_design_grammar_v0.1.json",
+    "universe/generation/procedural_facility_generation_pipeline_v0.1.json",
+    "universe/generation/facility_staffing_population_guidance_v0.1.json",
+    "gameplay/facilities/facility_watch_and_work_schedule_contract_v0.1.json",
+    "gameplay/facilities/facility_residency_tenancy_visitor_model_v0.1.json",
+    "gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+    "universe/generation/facility_expansion_redundancy_drawdown_contract_v0.1.json",
+    "art_direction/visual_bibles/facilities/STAR_TREK_STATION_DESIGN_VISUAL_PROFILES_v0.1.json",
+    "validation/fixtures/procedural_facility_generation/relay_outpost_2372_v0.1/expected_facility.json"
+  ],
+  "cases": [
+    {
+      "id": "type_design_instance_separation",
+      "expected": [
+        "Facility type, reusable design, individual facility, owner and operator remain separate.",
+        "Capture/operator change does not reroll physical identity.",
+        "Refit changes configuration/topology, not facility_id."
+      ]
+    },
+    {
+      "id": "canonical_unique_not_cloned",
+      "expected": [
+        "K-7, Starbase One, Jupiter Station, Utopia Planitia, DS9 and other seeded identities are reserved.",
+        "Generated facilities receive new facility_id and temporary designation.",
+        "Reusable design does not copy canonical individual name/history."
+      ]
+    },
+    {
+      "id": "reuse_policy_respected",
+      "expected": [
+        "Broadly reusable designs may be selected when fit.",
+        "Controlled designs require strong need or explicit permission.",
+        "Restricted designs require explicit permission.",
+        "Seeded-only identities are never procedural outputs."
+      ]
+    },
+    {
+      "id": "anti_gas_station",
+      "expected": [
+        "Player arrival/repair/resource need never creates a station.",
+        "Map emptiness is not a cause.",
+        "Low service convenience can remain low service convenience."
+      ]
+    },
+    {
+      "id": "minimum_sufficient_scale",
+      "expected": [
+        "Micro outpost preferred when enough.",
+        "Starbase requires high sustained need.",
+        "Major complex requires explicit high-level authorization.",
+        "Role minimum scale can reject underpowered projects."
+      ]
+    },
+    {
+      "id": "construction_not_instant",
+      "expected": [
+        "Authorized project has no facility_id before construction commitment.",
+        "Committed project receives persistent facility_id.",
+        "Construction/partial-operation precede operational state as time advances."
+      ]
+    },
+    {
+      "id": "relay_station_two_person_life",
+      "expected": [
+        "Relay Station 47-type anchor uses two officers.",
+        "Tiny station uses alternating active/on-call coverage instead of three fake complete teams.",
+        "No civilian-resident population is inferred by generic scale rule."
+      ]
+    },
+    {
+      "id": "population_categories_separate",
+      "expected": [
+        "Operator staff, residents, dependents, tenants, visitors, patients, detainees and docked ship crews are distinct.",
+        "Docked ship crews do not become station staff.",
+        "Patients/detainees do not fill duty positions."
+      ]
+    },
+    {
+      "id": "business_requires_tenancy",
+      "expected": [
+        "Shops/bars/services require space, permission, demand and business entity.",
+        "Canonical venue is not copied across same-design stations.",
+        "Business workers have their own schedules."
+      ]
+    },
+    {
+      "id": "finite_services",
+      "expected": [
+        "Design role determines capabilities.",
+        "Emergency priority changes queue order, not physical capacity.",
+        "No missing berth/repair/medical service is invented for player convenience."
+      ]
+    },
+    {
+      "id": "traffic_is_causal",
+      "expected": [
+        "Arrivals need route/mission/service/economic provenance.",
+        "Quiet stations may remain quiet.",
+        "Traffic is not spawned decoratively."
+      ]
+    },
+    {
+      "id": "sustained_saturation_before_expansion",
+      "expected": [
+        "Single queue spike does not justify expansion.",
+        "Expansion competes with staffing/process/refit/temporary support.",
+        "Duplicate nearby facility requires residual need, resilience, sovereignty or strategy."
+      ]
+    },
+    {
+      "id": "drawdown_is_real",
+      "expected": [
+        "Demand decline can reduce staffing/mothball modules/repurpose/decommission.",
+        "War-built capacity can become excess postwar.",
+        "Abandoned infrastructure remains historical physical state."
+      ]
+    },
+    {
+      "id": "operator_era_visual_integrity",
+      "expected": [
+        "Starbase 1-type is not rendered as Spacedock-type.",
+        "Terok Nor-origin station retains Cardassian physical design under later operators.",
+        "Starbase 375-type 23c instance does not inherit DS9-era equipment by default."
+      ]
+    },
+    {
+      "id": "procedural_design_reuse",
+      "expected": [
+        "Same operator/era/role/scale/site-type design seed can be reused by multiple facilities.",
+        "Individual facilities retain independent facility_id, ownership, damage, tenants and history.",
+        "Procedural design does not kitbash famous canonical station geometry."
+      ]
+    },
+    {
+      "id": "locked_relay_fixture",
+      "expected": [
+        "Need score 54.75 resolves micro-outpost.",
+        "Design resolves Starfleet Relay Station 47-type.",
+        "Facility id is gen:facility:353f30d58ca7e2e0.",
+        "Duty staff is 2 and expected arrivals planning is 3 per 30 days."
+      ]
+    },
+    {
+      "id": "negative_fixture_player_repair",
+      "expected": [
+        "origin_trigger player_needs_repairs returns NO_PERMANENT_FACILITY regardless of high numeric score.",
+        "facility_id remains null.",
+        "Alternative support/diversion is recommended."
+      ]
+    },
+    {
+      "id": "ai_expression_only",
+      "expected": [
+        "AI may describe resolved facility state and propose plans.",
+        "AI cannot create station, tenant, shop, berth, staff, visitor or traffic without authoritative generation/state.",
+        "AI cannot upgrade scale because player is important."
+      ]
+    }
+  ],
+  "runtime_boundary": "CoreRPG 4.5+ remains future authoritative owner of live facility World State, construction catch-up, queues, traffic, population schedules and persistence."
+}
