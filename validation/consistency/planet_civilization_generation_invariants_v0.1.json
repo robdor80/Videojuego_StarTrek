@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "planet_civilization_generation_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "system_exists_before_scan",
+      "expected": [
+        "system/planet entities are materialized or loaded before observation",
+        "scan only changes observer knowledge"
+      ]
+    },
+    {
+      "id": "planet_physics_internal_consistency",
+      "expected": [
+        "bulk physics/orbit/atmosphere values are mutually compatible unless explicitly anomalous",
+        "unknown values remain unknown rather than convenient defaults"
+      ]
+    },
+    {
+      "id": "weather_does_not_rewrite_geography",
+      "expected": [
+        "persistent terrain/geography survives weather updates",
+        "surface wetness/snow/flooding evolve from prior state"
+      ]
+    },
+    {
+      "id": "biome_matches_environment",
+      "expected": [
+        "biome/ecosystem distribution is compatible with climate/water/terrain or explicit anomaly",
+        "mission generation cannot spawn convenient life"
+      ]
+    },
+    {
+      "id": "settlement_has_causal_basis",
+      "expected": [
+        "population/function/infrastructure/transport justify settlement existence",
+        "service capacity is compatible with population and technology"
+      ]
+    },
+    {
+      "id": "civilization_not_species_label",
+      "expected": [
+        "multi-species civilization supported",
+        "political alignment not inferred from species"
+      ]
+    },
+    {
+      "id": "technology_constrains_civilization",
+      "expected": [
+        "ships/facilities/medicine/comms/signatures stay within technology profile",
+        "pre-warp status constrains valid space capabilities"
+      ]
+    },
+    {
+      "id": "economy_changes_causally",
+      "expected": [
+        "stock/resources/production/trade changes cite causes",
+        "replicators do not erase rare-material or energy constraints"
+      ]
+    },
+    {
+      "id": "jurisdiction_is_resolvable",
+      "expected": [
+        "authority references valid territorial/organizational scope",
+        "culture does not automatically imply government authority"
+      ]
+    },
+    {
+      "id": "history_causes_present_state",
+      "expected": [
+        "major current conflicts/institutions can reference historical causes when relevant",
+        "campaign history appends rather than overwrites pre-start history"
+      ]
+    },
+    {
+      "id": "return_to_world_preserves_state",
+      "expected": [
+        "planet/settlement identity persists across LOD/save-load",
+        "environment and infrastructure evolve from prior state rather than rerolling"
+      ]
+    },
+    {
+      "id": "ai_does_not_invent_planetary_truth",
+      "expected": [
+        "AI narration cannot add terrain, species, settlements, government or hazards absent from authoritative state",
+        "unknown facts may be described as unknown"
+      ]
+    }
+  ]
+}
