@@ -165,6 +165,32 @@ Current baseline:
 
 **Runtime boundary:** content/contracts/reference implementation are complete for v0.1, but authoritative live World State, schedule arbitration and off-screen catch-up remain dependent on CoreRPG 4.5+.
 
+## Procedural facilities & station life v0.1
+
+Control documents:
+- `docs/roadmap/procedural_facilities_and_station_life_plan_v0.1.md`
+- `docs/roadmap/procedural_facilities_and_station_life_status_v0.1.json`
+
+Current baseline:
+- **15 / 15 packages COMPLETE**;
+- **12 reusable/controlled/restricted canonical station designs** catalogued;
+- **12 canonical facility identities** reserved;
+- **14 procedural functional design families**;
+- strict anti-"space gas station" existence rules;
+- temporary/mobile alternatives checked before permanent construction;
+- smallest-sufficient-scale and existing-coverage suppression;
+- construction, partial operation, commissioning, expansion, mothball and decommission states;
+- operator staff, contractors, residents, dependents, tenants, visitors, patients/detainees and docked ship crews separated;
+- continuous watches + day/peak work + tiny-outpost active/on-call patterns;
+- finite berths, service nodes, inventory/staff dependencies and queues;
+- traffic generated from real routes/missions/services/economy rather than visual decoration;
+- design-specific station-life and visual/NAP profiles;
+- deterministic facility reference generator;
+- locked positive Relay Station 47-type fixture;
+- locked negative fixture proving `player_needs_repairs` cannot create a station.
+
+**Runtime boundary:** content/contracts/reference implementation are complete for v0.1. Authoritative live construction catch-up, facility population simulation, queues, traffic and persistence remain dependent on CoreRPG 4.5+.
+
 ## Major remaining domains
 
 | Domain | Status |
@@ -174,15 +200,15 @@ Current baseline:
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity/class/design separation, runtime system state, causal persistent ship generation, class-specific shipboard life, civilian procedural design grammar, staffing/watch generation and deterministic reference generators are established; wider class/system content and CoreRPG runtime mapping remain progressive. |
-| Stations and facilities | 🟨 IN_PROGRESS | Facility identity/design separation, topology/live interior state, docking/access, service nodes, traffic/transfer simulation, playable assignments, shipyard/refit support and blueprint-ingest workflow are established; wider catalogue and source-backed interiors remain progressive. |
+| Stations and facilities | 🟨 IN_PROGRESS | **Procedural Facilities & Station Life v0.1 baseline is COMPLETE (15/15):** strict causal existence, reusable canonical/procedural designs, construction lifecycle, staffing/residents/tenants/visitors, watches, finite services/queues, causal traffic, expansion/drawdown, visual profiles, deterministic generator and positive/negative fixtures. Wider canon catalogue and source-backed interiors remain progressive. |
 | Technology and equipment | 🟨 IN_PROGRESS | Game-ready technology framework and readiness plan established; concrete equipment/technology depth remains progressive. |
 | Medicine and science | 🟨 IN_PROGRESS | Game-ready medical/scientific capability contracts established; concrete canon/gameplay content remains progressive. |
 | Conflicts and historical events | 🟨 IN_PROGRESS | Machine-usable conflict and historical-event contracts established; event catalogues and provenance-backed depth remain progressive. |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State. Current vertical slice: procedural observable world → sensor resolution → interactive console → event log/evaluation. Living-population depth architecture now adds layered generation context, deterministic latent→persistent NPC materialization and validation invariants. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State. Facility generation now enforces need→alternatives→scale→site→design→construction, explicitly rejecting player-convenience 'space gas stations'. Current vertical slice: procedural observable world → sensor resolution → interactive console → event log/evaluation. |
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | 🟨 IN_PROGRESS | AI authority, deterministic-first routing, provider-independent capability routes and NPC interaction foundation established; deeper prompt/context/presentation content remains progressive. |
 | Presentation and UI | ⬜ TODO |
-| Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP content-depth baseline is now closed for D058–D063: complete species/organization profile catalogues for current scope, era/operator ship/interior profiles, homeworld environment profiles and a verified binary Sensors-console NAP fixture. Wider production assets/audio remain progressive. |
+| Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP content-depth baseline is closed for current species/organization/ship/interior/homeworld scope and now also includes station-design visual profiles. Verified Sensors-console NAP fixture remains the representative binary lifecycle fixture. Wider production assets/audio remain progressive. |
 | Runtime content / schemas / manifests | 🟨 IN_PROGRESS | Procedural contracts, validation manifests and machine-readable 120-layer status are established; final runtime mapping depends on CoreRPG 4.5+ contracts. |
 | Validation suites | 🟨 IN_PROGRESS | Cross-domain design invariants and Sensors acceptance fixture established; executable runtime suites expand as CoreRPG gains Generic World State/actions/persistence. |
 
