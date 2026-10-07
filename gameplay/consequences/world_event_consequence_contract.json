@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "world_event_consequence_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "event_fields": [
+    "event_id",
+    "event_type",
+    "started_at",
+    "ended_at_if_any",
+    "location_refs",
+    "participant_refs",
+    "cause_refs",
+    "authority_refs",
+    "observability",
+    "state_changes",
+    "consequence_refs",
+    "provenance"
+  ],
+  "consequence_domains": [
+    "physical",
+    "medical",
+    "personnel",
+    "relationship",
+    "knowledge",
+    "reputation",
+    "career",
+    "resource",
+    "infrastructure",
+    "political",
+    "diplomatic",
+    "economic",
+    "environmental",
+    "mission",
+    "legal"
+  ],
+  "rules": [
+    "An event changes authoritative state only through validated state-change records.",
+    "One event may create multiple independent consequences.",
+    "Consequences may generate new operational needs/events but cannot rewrite the original cause.",
+    "Failure and partial success are valid persistent outcomes.",
+    "Event history is append-only except explicit correction/migration metadata.",
+    "Knowledge of an event is separate from the event itself.",
+    "AI summaries cannot add consequences absent from structured state."
+  ]
+}
