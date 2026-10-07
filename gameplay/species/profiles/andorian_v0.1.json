@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "andorian",
+  "display_name_es": "Andoriano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "gameplay/species/species_biology_contract.json",
+  "baseline_refs": [
+    "gameplay/species/founding_species_profiles.json#andorian"
+  ],
+  "identity": {
+    "homeworld_common_ref": "andoria"
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "persistent_species_markers": [
+      "paired cranial antennae"
+    ],
+    "antennae": {
+      "count": 2,
+      "persistent_individual_morphology": true,
+      "visual_variation": "allowed by individual visual identity"
+    },
+    "visual_profile_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1.json#andorian"
+  },
+  "physiology": {
+    "cold_environment_adaptation": true,
+    "antennae_function": {
+      "contributes_to_balance": true,
+      "injury_can_impair_balance": true,
+      "regrowth_possible": true,
+      "regrowth_timescale": "months_not_instant"
+    },
+    "unknowns": [
+      "exact universal temperature tolerance",
+      "exact lifespan and maturity thresholds",
+      "universal strength/reflex modifiers"
+    ]
+  },
+  "medical": {
+    "hooks_ref": "gameplay/medical/species_medical_hooks.json#andorian",
+    "critical_persistent_identity_rule": "Antenna injury/regrowth evolves the same character visual identity."
+  },
+  "related_populations": {
+    "aenar": {
+      "separate_profile_required": true,
+      "cosmetic_variant_forbidden": true,
+      "detailed_profile_status": "pending"
+    }
+  },
+  "culture_socialization": {
+    "rules": [
+      "Martial and challenge traditions may exist without defining every individual.",
+      "Direct or confrontational norms do not automatically mean aggression.",
+      "Ushaan is contextual cultural practice, not a default combat behavior."
+    ]
+  },
+  "ai_boundary": [
+    "Do not classify direct speech as hostility without context.",
+    "Do not turn every Andorian into a warrior.",
+    "Do not infer emotion as objective fact from antenna presentation unless state exposes it."
+  ],
+  "provenance": [
+    {
+      "source_id": "ENT_UNITED",
+      "confidence": "HIGH",
+      "claim_scope": "antennae, balance, regrowth and Ushaan context"
+    },
+    {
+      "source_id": "ENT_THE_AENAR",
+      "confidence": "HIGH",
+      "claim_scope": "Andoria environment and Aenar distinction"
+    },
+    {
+      "source_id": "MA_ANDORIAN",
+      "confidence": "HIGH",
+      "claim_scope": "cross-check physiology"
+    }
+  ]
+}
