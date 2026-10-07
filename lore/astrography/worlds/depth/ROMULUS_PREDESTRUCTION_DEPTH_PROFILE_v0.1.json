@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "romulus_predestruction_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "scope": "pre-destruction playable-era only",
+  "identity": {
+    "system_id": "romulan_home_system",
+    "planet_id": "romulus",
+    "display_name_es": "Romulus",
+    "world_type": "inhabited_habitable_planet",
+    "native_or_primary_population_refs": [
+      "romulan"
+    ],
+    "polity_ref": "romulan_star_empire",
+    "capital_world": true,
+    "sister_world_ref": "remus"
+  },
+  "orbital_context": {
+    "romulus_and_remus": "sister planets in same system",
+    "exact_orbits": null
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "not_locked": true
+  },
+  "geology_topography": {
+    "not_locked_global": true
+  },
+  "climate_refs": [
+    "habitable; regional details not sufficiently locked for baseline"
+  ],
+  "biosphere_ref": "romulus_biosphere_unknown_depth",
+  "region_refs": [
+    "Romulan Senate/government complex context",
+    "capital/urban centers only when sourced",
+    "Remus is separate world and not interchangeable with Romulus"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "institutional_refs": [
+    "gameplay/organizations/profiles/ROMULAN_EMPIRE_ORGANIZATIONS_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "senate_politics",
+    "diplomacy",
+    "security/intelligence",
+    "military_traffic",
+    "family/civilian_life",
+    "Romulus-Remus_power_relations"
+  ],
+  "temporal_rules": [
+    "Current playable scope ends before Romulus destruction; destruction is not imported.",
+    "Federation contact/isolation status is date-dependent.",
+    "Campaign history after start overrides future canonical political events."
+  ],
+  "ai_boundary": [
+    "Do not treat every Romulan as Tal Shiar.",
+    "Do not reveal hidden security information because world profile knows it.",
+    "Do not import post-destruction/New Romulus material into this profile."
+  ],
+  "visual_nap": [
+    "pre-destruction Romulan capital-world imagery only",
+    "architecture should reflect era and institution",
+    "do not use post-2387 refugee/New Romulus visual grammar"
+  ],
+  "unknowns": [
+    "exact bulk physics",
+    "complete geography",
+    "population by playable year",
+    "full city catalogue"
+  ],
+  "provenance": [
+    "MA_ROMULUS_WORLD",
+    "ST_OFFICIAL_ROMULANS_REMANS_101",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "TNG_THE_NEUTRAL_ZONE"
+  ]
+}
