@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "synthetic_android_person_framework",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "classification": "person_equivalent_entity_framework",
+  "contract_refs": [
+    "gameplay/species/exceptional_entity_state_contract.json",
+    "gameplay/species/character_lifecycle_contract.json",
+    "universe/generation/persistent_entity_identity_contract.json"
+  ],
+  "principle": "A synthetic/android person is a persistent person-equivalent entity with continuous identity, memory/history and rights/status determined by explicit world/legal state—not a disposable object or regenerated NPC.",
+  "identity_fields": [
+    "entity_id",
+    "visual_identity_id",
+    "model_or_origin_ref_if_known",
+    "creator_or_lineage_refs_if_known",
+    "activation_or_origin_event_ref",
+    "memory_state_ref",
+    "legal_personhood_state_ref",
+    "citizenship_refs",
+    "organization_membership_refs",
+    "persistent_modification_refs"
+  ],
+  "lifecycle": [
+    "construction_or_creation_if_applicable",
+    "activation_or_origin",
+    "learning_and_service",
+    "repair_or_modification",
+    "damage_or_degradation",
+    "deactivation_if_applicable",
+    "destruction_or_end_of_function",
+    "legacy"
+  ],
+  "rules": [
+    "Model/type does not replace individual identity.",
+    "Copying hardware design does not copy personhood, memory or relationship history.",
+    "Repair preserves identity unless an explicit setting rule establishes a genuinely new entity.",
+    "Memory loss or restoration changes state/history and does not silently reroll personality.",
+    "Legal personhood, ownership claims, citizenship and service membership are separate state.",
+    "A synthetic person can form relationships, knowledge, career history and reputation like other persistent persons when applicable.",
+    "AI cannot declare sentience, legal status, memory restoration, destruction or revival without authoritative state.",
+    "Visual changes from repair, upgrades or damage remain within the same identity lineage."
+  ],
+  "unknown_policy": "Specific android models, rights law, internal systems and lifecycle details require era/source-specific profiles.",
+  "ai_guardrails": [
+    "Do not treat every android/synthetic as identical to Data.",
+    "Do not infer emotion, obedience, legal ownership or Starfleet status from synthetic nature.",
+    "Do not recreate a destroyed person from a generic model template unless world state explicitly defines a continuity mechanism."
+  ],
+  "academy_relevance": "Only operational/legal/ethical knowledge required by a course should be taught; no generic synthetic-person trivia."
+}
