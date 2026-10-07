@@ -12,13 +12,13 @@
 | SB003 | Off-watch obligations and on-call model | COMPLETE |
 | SB004 | Off-duty activity and social-life catalogue | COMPLETE |
 | SB005 | Habitability/life profile contract | COMPLETE |
-| SB006 | Starfleet class/configuration life profiles | IN_PROGRESS |
-| SB007 | Klingon/Romulan/Cardassian class life profiles | IN_PROGRESS |
+| SB006 | Starfleet class/configuration life profiles | COMPLETE |
+| SB007 | Klingon/Romulan/Cardassian class life profiles | COMPLETE |
 | SB008 | Procedural ship-design generation contract | COMPLETE |
 | SB009 | Procedural ship-instance generation pipeline | COMPLETE |
 | SB010 | Crew + watch + schedule generation pipeline | COMPLETE |
 | SB011 | Operator naming/registry collision contract | COMPLETE |
-| SB012 | Runtime integration, fixtures and invariants | TODO |
+| SB012 | Runtime integration, fixtures and invariants | COMPLETE |
 
 ## Core principles
 
@@ -87,3 +87,20 @@ A generated ship must be able to answer, from authoritative state:
 - What facilities are actually available to them?
 - How does the answer change during yellow/red alert, casualties or shortages?
 - Does all of this remain the same ship and the same people after save/load/off-screen simulation?
+
+
+## v0.1 closure
+
+**SB001–SB012: 12/12 COMPLETE** for the current content/reference-implementation scope.
+
+Delivered:
+- class/configuration-specific shipboard life for Starfleet, Klingon, Romulan and Cardassian vessels;
+- procedural civilian design/life profiles;
+- generated three/four/custom watches;
+- off-watch obligations and leisure;
+- staffing guidance with provenance/confidence separation;
+- persistent ship/design identity rules;
+- deterministic reference generators for catalogued and civilian procedural vessels;
+- locked Oberth fixture and cross-domain invariants.
+
+Runtime note: CoreRPG 4.5+ remains responsible for future authoritative live World State, schedule arbitration and off-screen catch-up. Reference generator tests are present in the repository; this closure does not claim they have been executed by CI because no CI runner is configured in this repository.
