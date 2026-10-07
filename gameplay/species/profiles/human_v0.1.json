@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "human",
+  "display_name_es": "Humano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "gameplay/species/species_biology_contract.json",
+  "baseline_refs": [
+    "gameplay/species/founding_species_profiles.json#human"
+  ],
+  "identity": {
+    "homeworld_common_ref": "earth",
+    "federation_citizenship_implied": false,
+    "earth_upbringing_implied": false
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "species_specific_external_markers": [],
+    "individual_variation": "broad",
+    "visual_profile_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1.json#human"
+  },
+  "physiology": {
+    "comparative_role": "reference_humanoid_baseline",
+    "strength_profile": "baseline_reference",
+    "reflex_profile": "baseline_reference",
+    "broad_species_bonus": null,
+    "unknowns": [
+      "exact universal lifespan rule",
+      "universal reproduction timing rule",
+      "universal environmental tolerance ranges"
+    ]
+  },
+  "lifecycle": {
+    "maturity_model": "human_reference_contextual",
+    "exact_gameplay_age_thresholds": "not_locked",
+    "aging_rule": "use character age plus validated human lifecycle data when later added"
+  },
+  "medical": {
+    "role": "reference baseline only",
+    "species_specific_hooks": [],
+    "rule": "Individual medical state overrides any generic baseline assumption."
+  },
+  "culture_socialization": {
+    "rules": [
+      "Human species does not imply Earth culture.",
+      "Human colonies may have strongly divergent cultures, laws and social assumptions.",
+      "Human species does not imply Federation citizenship, Starfleet membership or a specific political identity."
+    ]
+  },
+  "character_generation": {
+    "forced_personality_traits": [],
+    "forced_professions": [],
+    "forced_cultures": [],
+    "required_individual_variation": true
+  },
+  "ai_boundary": [
+    "Do not use Human as shorthand for Earth-raised.",
+    "Do not infer Federation loyalty or citizenship from species.",
+    "Do not treat human cultural assumptions as universal defaults for non-human species."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_HUMAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "Human cultural diversity and comparative baseline"
+    },
+    {
+      "source_id": "ST8_FIRST_CONTACT",
+      "confidence": "HIGH",
+      "claim_scope": "late-24th-century Earth social context"
+    }
+  ]
+}
