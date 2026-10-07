@@ -1,0 +1,25 @@
+{
+  "profile_id": "starfleet_visual_profile",
+  "profile_type": "organization",
+  "version": "0.1",
+  "status": "FOUNDATION",
+  "authority_scope": "organization:starfleet",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "rules": [
+    "Starfleet organization profile does not choose species or personality.",
+    "Visual presentation must resolve era, department/division, rank, position and duty state.",
+    "Functional console/interior requirements precede era-specific visual skin.",
+    "Insignia/rank readability follows approved project rules.",
+    "Damage/emergency presentation requires live World State cause."
+  ],
+  "references": [
+    "docs/decisions/universal_rank_insignia.md",
+    "docs/decisions/universal_cadet_insignia.md",
+    "lore/federation/starfleet/uniforms/division_colors.json",
+    "lore/federation/starfleet/departments/divisions_and_departments.json",
+    "lore/federation/starfleet/positions/positions.json"
+  ]
+}
