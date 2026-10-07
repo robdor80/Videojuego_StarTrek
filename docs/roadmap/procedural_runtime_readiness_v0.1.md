@@ -193,3 +193,11 @@ While CoreRPG advances, Star Trek can continue safely in parallel with **content
 - continue Academy/Sensors UX and other console presentation design where runtime-independent.
 
 All such additions must satisfy the contracts and validation packs already established.
+
+## 10. Dynamic civilization depth extension
+
+The Star Trek-side design baseline has now been extended with **Block 1 — Procedural Civilization Evolution & Galactic Interaction v0.1**. This adds deterministic/casual long-horizon civilization evolution contracts and a reference simulator without changing the CoreRPG runtime boundary.
+
+Control sequence: `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`.
+
+Only Block 1 is complete. Blocks 2–10 remain intentionally unimplemented and must proceed sequentially.

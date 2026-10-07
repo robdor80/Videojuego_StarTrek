@@ -289,3 +289,16 @@ Implementation may proceed autonomously unless a change would establish or alter
 - major political/canonical divergence.
 
 Those decisions remain authorial.
+
+## Dynamic-universe deepening sequence
+
+The structural procedural baseline remains closed through the existing master-layer plan. Detailed long-horizon simulation depth is now tracked separately by:
+
+`docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+
+Current sequential state:
+- **Block 1 — Procedural Civilization Evolution & Galactic Interaction: COMPLETE**;
+- **Blocks 2–10: not implemented**;
+- the next eligible block is **Block 2 — Colonization, Expansion & Borders**, but it is not started by this update.
+
+This separation prevents the earlier 001–118 design-readiness closure from being mistaken for completion of all detailed dynamic-universe behavior.
