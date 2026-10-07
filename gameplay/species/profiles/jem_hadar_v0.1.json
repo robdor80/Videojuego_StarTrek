@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "jem_hadar",
+  "display_name_es": "Jem'Hadar",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/dominion_borg_profiles.json#jem_hadar",
+    "gameplay/species/jem_hadar_dependency_state.json"
+  ],
+  "biology": {
+    "genetically_engineered_by_founders": true,
+    "accelerated_maturation": true,
+    "engineered_ketracel_white_dependency": true,
+    "species_specific_medical_profile_required": true,
+    "exact_dose_timing": "not_invented",
+    "unknowns": [
+      "universal lifespan threshold",
+      "full reproductive model",
+      "exact maturation schedule unless later sourced"
+    ]
+  },
+  "dependency": {
+    "runtime_state_ref": "gameplay/species/jem_hadar_dependency_state.json",
+    "logistics_resource": "ketracel_white",
+    "supply_failure_can_create": [
+      "medical_crisis",
+      "operational_crisis"
+    ],
+    "missing_supply_does_not_instantly_force_single_outcome": true
+  },
+  "culture_socialization": {
+    "military_service": "engineered_institutional_context",
+    "founder_reverence": "strong_contextual_drive",
+    "individual_doubt_or_deviation_supported": true
+  },
+  "gameplay_hooks": [
+    "ketracel_white_logistics",
+    "dominion_military",
+    "unit_cohesion",
+    "founder_vorta_authority",
+    "accelerated_lifecycle"
+  ],
+  "ai_boundary": [
+    "Do not invent hidden ketracel supply, a dose, cure or dependency removal.",
+    "Do not advance deprivation state without Core resolution.",
+    "Do not erase individual deviation or doubt because of species."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_JEM_HADAR",
+      "confidence": "MEDIUM",
+      "claim_scope": "engineered soldier species and accelerated maturation"
+    },
+    {
+      "source_id": "MA_KETRACEL_WHITE",
+      "confidence": "MEDIUM",
+      "claim_scope": "engineered dependency"
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "confidence": "HIGH",
+      "claim_scope": "Dominion military hierarchy"
+    }
+  ]
+}
