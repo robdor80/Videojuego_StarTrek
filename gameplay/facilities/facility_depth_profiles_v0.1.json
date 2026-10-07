@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.1.0",
+  "depth_profile_id": "facility_depth_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity_ref": "gameplay/facilities/facility_identity_model.json",
+  "capability_ref": "gameplay/facilities/facility_capability_model.json",
+  "topology_ref": "gameplay/facilities/facility_topology_model.json",
+  "design_families": {
+    "frontier_station": {
+      "roles": [
+        "border_support",
+        "trade",
+        "inspection",
+        "resupply",
+        "security",
+        "diplomacy"
+      ],
+      "expected_services": [
+        "berth",
+        "resupply_general",
+        "cargo_transfer",
+        "personnel_transfer",
+        "security_support"
+      ],
+      "optional_services": [
+        "repair_field",
+        "trade_services",
+        "diplomatic_services",
+        "medical_basic"
+      ],
+      "gameplay_pressure": [
+        "limited_capacity",
+        "border_incidents",
+        "inspection",
+        "supply_shortage",
+        "mixed_civilian_military_traffic"
+      ]
+    },
+    "strategic_hub": {
+      "roles": [
+        "fleet_coordination",
+        "regional_trade",
+        "repair",
+        "personnel",
+        "security",
+        "diplomacy"
+      ],
+      "expected_services": [
+        "traffic_control",
+        "dock",
+        "berth",
+        "resupply_general",
+        "medical_basic",
+        "repair_field",
+        "communications_relay",
+        "command_and_control"
+      ],
+      "optional_services": [
+        "trade_services",
+        "diplomatic_services",
+        "resupply_ordnance",
+        "smallcraft_support"
+      ],
+      "gameplay_pressure": [
+        "heavy_traffic",
+        "queue_priority",
+        "security",
+        "politics",
+        "casualty_surge",
+        "blockade_or_war"
+      ]
+    },
+    "fleet_starbase": {
+      "roles": [
+        "fleet_support",
+        "staging",
+        "resupply",
+        "repair",
+        "personnel"
+      ],
+      "expected_services": [
+        "traffic_control",
+        "dock",
+        "berth",
+        "resupply_general",
+        "security_support",
+        "command_and_control",
+        "communications_relay"
+      ],
+      "optional_services": [
+        "resupply_ordnance",
+        "repair_field",
+        "repair_heavy",
+        "drydock",
+        "medical_advanced"
+      ],
+      "gameplay_pressure": [
+        "fleet_readiness",
+        "repair_queue",
+        "parts_shortage",
+        "mission_priority",
+        "military_security"
+      ]
+    },
+    "shipyard_drydock": {
+      "roles": [
+        "construction",
+        "major_repair",
+        "refit"
+      ],
+      "expected_services": [
+        "drydock",
+        "shipyard",
+        "repair_heavy",
+        "cargo_transfer",
+        "personnel_transfer"
+      ],
+      "optional_services": [
+        "resupply_general",
+        "smallcraft_support",
+        "medical_basic"
+      ],
+      "gameplay_pressure": [
+        "yard_slot_scarcity",
+        "parts",
+        "specialist_teams",
+        "refit_duration",
+        "security"
+      ]
+    },
+    "research_station": {
+      "roles": [
+        "science",
+        "monitoring",
+        "field_research"
+      ],
+      "expected_services": [
+        "science_support",
+        "communications_relay",
+        "berth_or_smallcraft_support"
+      ],
+      "optional_services": [
+        "medical_basic",
+        "repair_minor",
+        "cargo_transfer"
+      ],
+      "gameplay_pressure": [
+        "hazard_exposure",
+        "data_integrity",
+        "specialist_shortage",
+        "containment"
+      ]
+    },
+    "medical_station": {
+      "roles": [
+        "regional_treatment",
+        "casualty_transfer",
+        "quarantine"
+      ],
+      "expected_services": [
+        "medical_advanced",
+        "personnel_transfer",
+        "communications_relay"
+      ],
+      "optional_services": [
+        "berth",
+        "smallcraft_support",
+        "resupply_general"
+      ],
+      "gameplay_pressure": [
+        "triage",
+        "isolation",
+        "medical_supply",
+        "surge_capacity"
+      ]
+    },
+    "depot": {
+      "roles": [
+        "storage",
+        "resupply",
+        "logistics"
+      ],
+      "expected_services": [
+        "cargo_transfer",
+        "resupply_general"
+      ],
+      "optional_services": [
+        "resupply_ordnance",
+        "berth",
+        "repair_minor"
+      ],
+      "gameplay_pressure": [
+        "inventory_shortage",
+        "security",
+        "throughput",
+        "priority_conflict"
+      ]
+    }
+  },
+  "canonical_or_seeded_examples": {
+    "deep_space_station_k7": {
+      "profile": "frontier_station",
+      "source_ref": "gameplay/facilities/initial_facility_profiles.json"
+    },
+    "deep_space_9": {
+      "profile": "strategic_hub",
+      "source_ref": "gameplay/facilities/initial_facility_profiles.json"
+    },
+    "starbase_375": {
+      "profile": "fleet_starbase",
+      "source_ref": "gameplay/facilities/initial_facility_profiles.json"
+    }
+  },
+  "persistence": [
+    "Facility design, operator, sovereign territory and current command are separate.",
+    "Queues, damage, services and traffic persist off-screen.",
+    "Expansion/refit appends configuration history; facility_id remains stable."
+  ],
+  "ai_boundary": [
+    "A station type does not grant unsourced services or infinite capacity.",
+    "AI cannot skip service queues, create spare parts or assign docking clearance without state.",
+    "Current operator does not rewrite original physical design."
+  ],
+  "visual_nap": [
+    "Exterior/interior visual assets bind to facility design/configuration then individual state.",
+    "Crowding, docked ships, damage and repair activity are current-state overlays.",
+    "Blueprint gaps remain unknown rather than visually invented as canonical geometry."
+  ]
+}
