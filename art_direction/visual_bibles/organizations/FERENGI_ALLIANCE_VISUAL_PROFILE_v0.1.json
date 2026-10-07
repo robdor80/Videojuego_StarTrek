@@ -1,0 +1,40 @@
+{
+  "profile_id": "ferengi_alliance_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:ferengi_alliance",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "ferengi_alliance_government",
+      "ferengi_commerce_authority",
+      "ferengi_business_entities"
+    ]
+  },
+  "rules": [
+    "Ferengi anatomy does not imply merchant dress, wealth or business ownership.",
+    "Government/regulatory presentation, private-business branding and personal clothing are separate layers.",
+    "Commercial wealth may influence clothing/material quality only when actual economic state supports it.",
+    "Late-24th-century reforms may change official presentation and cannot be backfilled."
+  ],
+  "allowed_variation": [
+    "private business branding",
+    "wealth-dependent materials when state supports",
+    "formal commercial attire",
+    "government/regulatory insignia when sourced"
+  ],
+  "forbidden_variation": [
+    "latinum props by default",
+    "comic greed styling",
+    "merchant costume for every Ferengi",
+    "wealth inferred from species"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/FERENGI_ALLIANCE_ORGANIZATIONS_v0.1.json",
+    "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
