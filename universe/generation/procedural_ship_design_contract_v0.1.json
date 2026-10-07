@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_ship_design_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "The generator distinguishes a reusable ship design/class from an individual vessel. A new procedural civilian design may later produce many persistent ships.",
+  "design_modes": [
+    "canonical_class",
+    "canonical_design_family",
+    "procedural_design"
+  ],
+  "inputs": [
+    "operator_or_civilization",
+    "campaign_date",
+    "era_id",
+    "technology_profile",
+    "role_family",
+    "mission_endurance",
+    "cargo_or_passenger_need",
+    "size_band",
+    "legal_context",
+    "industrial_context",
+    "design_grammar_ref",
+    "campaign_seed"
+  ],
+  "required_outputs": [
+    "design_id",
+    "design_mode",
+    "operator_compatibility",
+    "availability_window",
+    "role_families",
+    "size_band",
+    "capability_baseline",
+    "capacity_ranges",
+    "crew_requirement_inputs",
+    "interior_functional_profile",
+    "habitability_profile_ref",
+    "visual_profile_stack_refs",
+    "source_or_generation_provenance"
+  ],
+  "procedural_design_rules": [
+    "Generate a procedural design only when no valid canonical/authored design is selected and the operator/role has a procedural design grammar.",
+    "Procedural design_id is deterministic and persistent once introduced.",
+    "A procedural design is not regenerated per ship.",
+    "Technology must be legal/available for date and operator.",
+    "Military capability cannot be added to a civilian design without operator/legal/mission justification.",
+    "Civilian design geometry follows operator/era visual grammar and functional capacity, not random kitbashing.",
+    "Procedural designs may be reused by traffic generation according to production availability/rarity."
+  ],
+  "canonical_rules": [
+    "Canonical class definitions are immutable design data.",
+    "Canonical unique ships are separate individual entities and reserved.",
+    "Generated ships may use canonical classes without copying a canonical ship name, registry, crew or history."
+  ]
+}
