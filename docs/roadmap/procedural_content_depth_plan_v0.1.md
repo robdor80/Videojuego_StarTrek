@@ -94,11 +94,11 @@
 | Package | Scope | Status |
 |---|---|---|
 | D058 | Founding species visual profiles | COMPLETE |
-| D059 | Major species visual profiles | PARTIAL |
-| D060 | Faction/organization visual profiles | TODO |
-| D061 | Era-specific ship/interior profiles | TODO |
-| D062 | Planet/environment profiles | TODO |
-| D063 | Representative NAP fixture asset package | TODO |
+| D059 | Major species visual profiles | COMPLETE |
+| D060 | Faction/organization visual profiles | COMPLETE |
+| D061 | Era-specific ship/interior profiles | COMPLETE |
+| D062 | Planet/environment profiles | COMPLETE |
+| D063 | Representative NAP fixture asset package | COMPLETE |
 
 ## Work order
 
@@ -114,3 +114,10 @@ A package closes only when:
 - AI knowledge boundary exists;
 - visual/NAP implications exist when relevant;
 - validation has at least one representative case.
+
+
+## Content-depth closure
+
+**D001–D063: 63/63 COMPLETE** for the currently defined content-depth scope.
+
+This closes the baseline population of species, cultures, organizations, ships, facilities, homeworlds and visual/NAP profiles required by this plan. It does not claim exhaustive Star Trek universe coverage; future content expands the same contracts without reopening the baseline unless contradictions or missing required capabilities are found.
