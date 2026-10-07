@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "exceptional_species_content_depth_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "profiles": [
+    "gameplay/species/profiles/changeling_v0.1.json",
+    "gameplay/species/profiles/vorta_v0.1.json",
+    "gameplay/species/profiles/jem_hadar_v0.1.json",
+    "gameplay/species/profiles/borg_assimilated_character_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "changeling_copy_is_not_identity_theft",
+      "expected": [
+        "Copied appearance does not copy memories, clearance, skills, relationships or legal identity.",
+        "Current form is state; persistent entity identity remains distinct.",
+        "Detection requires evidence."
+      ]
+    },
+    {
+      "id": "vorta_role_not_species_lock",
+      "expected": [
+        "Administrative/diplomatic/command roles may be common but are not mandatory.",
+        "Current Dominion assignment and access require actual organization state.",
+        "Unknown biology remains unknown."
+      ]
+    },
+    {
+      "id": "jem_hadar_dependency_is_logistical_and_medical",
+      "expected": [
+        "Ketracel-white supply participates in inventory/logistics.",
+        "Missing supply changes state through Core progression rather than instant scripted outcome.",
+        "AI cannot invent dose/cure/supply."
+      ]
+    },
+    {
+      "id": "borg_is_transformative_state_not_species",
+      "expected": [
+        "Origin species remains attached.",
+        "Assimilation stages modify same persistent entity/history.",
+        "Liberation/recovery preserves identity lineage.",
+        "Collective link is not omniscience."
+      ]
+    },
+    {
+      "id": "exceptional_state_does_not_bypass_persistence",
+      "expected": [
+        "Save/load and LOD preserve transformation history.",
+        "Visual changes remain linked to same entity/visual identity when continuity applies.",
+        "AI cannot create transformation events."
+      ]
+    }
+  ]
+}
