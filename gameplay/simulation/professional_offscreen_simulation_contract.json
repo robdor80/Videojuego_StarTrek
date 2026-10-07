@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "professional_offscreen_simulation",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "inputs": [
+    "character_id",
+    "assignment",
+    "position",
+    "rank",
+    "qualifications",
+    "schedule",
+    "duty_state",
+    "current_objectives",
+    "supervision_context",
+    "performance_evidence",
+    "wellbeing_state",
+    "world_events",
+    "elapsed_time"
+  ],
+  "outputs": [
+    "completed_duty_events",
+    "performance_evidence_refs",
+    "training_or_practice_refs",
+    "schedule_changes",
+    "career_candidate_events",
+    "relationship_or_reputation_event_refs"
+  ],
+  "rules": [
+    "Off-screen work consumes time and obeys assignment/schedule/location constraints.",
+    "Career progression does not occur merely because time passed.",
+    "Promotion, qualification and commendation require valid institutional process/evidence.",
+    "Professional failure, absence, injury or crisis may alter outcomes.",
+    "LOD may aggregate routine duty but must preserve consequential events.",
+    "AI cannot award rank, qualification or performance evidence without authoritative event/state."
+  ]
+}
