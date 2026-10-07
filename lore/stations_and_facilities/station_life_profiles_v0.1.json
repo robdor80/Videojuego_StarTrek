@@ -1,0 +1,219 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "station_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "profiles": {
+    "starfleet_starbase_1_type": {
+      "habitability": "very_comfortable_large_community",
+      "duty_character": "major_fleet_hub_with_24_7_operations_and_large_day_staff",
+      "resident_character": "family-capable; large long-term community",
+      "privacy": "high_by_scale_but_population_dense",
+      "social_density": "low_at_whole_station_high_in_local_communities",
+      "recreation": [
+        "lounges",
+        "bars_or_social_venues_when_tenanted",
+        "family_spaces",
+        "education",
+        "green_or_recreation_spaces_when_configuration_supports"
+      ],
+      "watch_model": "three_or_four_shift_for_critical_operations_plus_large_day_staff",
+      "source_refs": [
+        "MA_STARBASE_1_TYPE",
+        "ST_OFFICIAL_SNW_BROKEN_CIRCLE"
+      ]
+    },
+    "starfleet_bavali_station_type": {
+      "habitability": "industrial_standard",
+      "duty_character": "construction/refinery/industrial shifts with hazard response",
+      "resident_character": "primarily workers/technical staff; family residency not assumed",
+      "privacy": "medium_low",
+      "social_density": "high",
+      "recreation": [
+        "common_room",
+        "mess",
+        "limited_personal_recreation"
+      ],
+      "watch_model": "continuous industrial control plus construction/project shifts",
+      "source_refs": [
+        "MA_BAVALI_STATION"
+      ]
+    },
+    "starfleet_starbase_6_type": {
+      "habitability": "standard_regional_starbase",
+      "duty_character": "docking/security/regional-support watches",
+      "resident_character": "operator staff plus limited long-term residents as configuration permits",
+      "privacy": "medium",
+      "social_density": "medium",
+      "recreation": [
+        "common_room",
+        "lounge",
+        "tenant_services_if_present"
+      ],
+      "watch_model": "three_or_four_shift critical ops plus day services",
+      "source_refs": [
+        "MA_STARBASE_6_TYPE"
+      ]
+    },
+    "federation_starbase_25_type": {
+      "habitability": "very_comfortable_citylike_hub",
+      "duty_character": "large docking/hospitality/conference support",
+      "resident_character": "large community possible",
+      "privacy": "medium_high",
+      "social_density": "medium",
+      "recreation": [
+        "promenade_like_services_when_era_configuration_supports",
+        "hospitality",
+        "green_space_only_if_explicit_configuration"
+      ],
+      "watch_model": "continuous ops plus strong civil/business day-night rhythm",
+      "source_refs": [
+        "MA_STARBASE_25_TYPE"
+      ],
+      "caution": "Detailed 2381 aviary/ballroom/promenade configuration is not auto-backfilled into 2260s-2378 instances."
+    },
+    "federation_regula_i_type": {
+      "habitability": "isolated_research_standard",
+      "duty_character": "project-oriented science with small continuous engineering/security/communications coverage",
+      "resident_character": "primarily research staff; visitors controlled",
+      "privacy": "medium",
+      "social_density": "high",
+      "recreation": [
+        "common_room",
+        "personal_recreation"
+      ],
+      "watch_model": "science day/project shifts plus small continuous technical watch",
+      "source_refs": [
+        "MA_REGULA_I_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    "starfleet_spacedock_type": {
+      "habitability": "very_comfortable_major_hub",
+      "duty_character": "traffic/docking/repair/security/logistics continuous; large day workforce",
+      "resident_character": "large resident/workforce and large transient ship-crew population possible",
+      "privacy": "medium_high",
+      "social_density": "medium",
+      "recreation": [
+        "multiple_tenant_services",
+        "lounges",
+        "hospitality",
+        "family_services_if_configured"
+      ],
+      "watch_model": "three_or_four shift critical ops plus large industrial/civil day shifts",
+      "source_refs": [
+        "MA_SPACEDOCK_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    "starfleet_mckinley_type": {
+      "habitability": "industrial_austere_to_standard",
+      "duty_character": "construction/refit/maintenance teams around docked ship project schedules",
+      "resident_character": "mostly technical workforce; ship crews remain ship population",
+      "privacy": "medium",
+      "social_density": "high",
+      "recreation": [
+        "break_rooms",
+        "mess_or_common_room"
+      ],
+      "watch_model": "industrial project shifts plus continuous safety/power watch",
+      "source_refs": [
+        "MA_MCKINLEY_TYPE",
+        "TNG_FAMILY"
+      ]
+    },
+    "federation_starbase_375_type": {
+      "habitability": "standard",
+      "duty_character": "regional support/research; can become high-tempo fleet staging by assignment",
+      "resident_character": "operator/research staff with transient fleet population varying by campaign",
+      "privacy": "medium",
+      "social_density": "medium",
+      "recreation": [
+        "common_room",
+        "tenant_services_if_present"
+      ],
+      "watch_model": "three/four critical watches plus research/logistics day staff",
+      "source_refs": [
+        "MA_STARBASE_375_TYPE",
+        "DS9_A_TIME_TO_STAND"
+      ]
+    },
+    "starfleet_relay_station_47_type": {
+      "habitability": "very_austere_isolated",
+      "duty_character": "communications monitoring and maintenance with heavy automation",
+      "resident_character": "two-officer standard complement context; extreme social isolation",
+      "privacy": "high_between_two_quarters_but_low_social_variety",
+      "social_density": "very_high",
+      "recreation": [
+        "private_terminal",
+        "reading_study",
+        "small_personal_recreation"
+      ],
+      "watch_model": "alternating active/on-call coverage, not three fully staffed teams",
+      "source_refs": [
+        "MA_RELAY_STATION_47",
+        "MA_RELAY_47_TYPE",
+        "TNG_AQUIEL"
+      ]
+    },
+    "cardassian_terok_nor_type": {
+      "habitability": "industrial_standard",
+      "duty_character": "docking/processing/security/logistics; operator/refit may transform role",
+      "resident_character": "large mixed worker/resident population possible",
+      "privacy": "medium",
+      "social_density": "medium",
+      "recreation": [
+        "promenade_or_commercial_services_only_if_actual_configuration/tenants_support",
+        "common_spaces"
+      ],
+      "watch_model": "operator-local continuous ops plus industrial/business shifts",
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ]
+    },
+    "klingon_tygokor_orbital_facility": {
+      "habitability": "military_austere",
+      "duty_character": "fortress readiness, docks, defense and command",
+      "resident_character": "military personnel; families/civilians not assumed",
+      "privacy": "low_to_medium",
+      "social_density": "medium",
+      "recreation": [
+        "military_common_spaces",
+        "culture-specific_activity_when_actual_state_supports"
+      ],
+      "watch_model": "operator-local military continuous coverage",
+      "source_refs": [
+        "MA_TYGOKOR_ORBITAL_FACILITY",
+        "DS9_APOCALYPSE_RISING"
+      ]
+    },
+    "dominion_monac_type": {
+      "habitability": "industrial_military_austere",
+      "duty_character": "continuous warship production, logistics and security",
+      "resident_character": "industrial/military workforce; civilians not assumed",
+      "privacy": "low",
+      "social_density": "medium",
+      "recreation": [
+        "minimal"
+      ],
+      "watch_model": "continuous industrial production and security rotations",
+      "source_refs": [
+        "MA_MONAC_SHIPYARD"
+      ]
+    },
+    "dominion_ketracel_white_facility": {
+      "habitability": "mission_specific_austere",
+      "duty_character": "storage/production/distribution security and logistics",
+      "resident_character": "only personnel required by actual site/configuration",
+      "privacy": "low",
+      "social_density": "mission_dependent",
+      "recreation": [
+        "minimal"
+      ],
+      "watch_model": "continuous security/logistics with automation where design supports",
+      "source_refs": [
+        "MA_DOMINION_KETRACEL_FACILITY",
+        "DS9_A_TIME_TO_STAND"
+      ]
+    }
+  }
+}
