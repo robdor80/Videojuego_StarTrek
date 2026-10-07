@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "bajoran_institutions",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "bajoran_provisional_government",
+  "organizations": [
+    {
+      "organization_id": "bajoran_provisional_government",
+      "organization_type": "government",
+      "display_name": "Gobierno Provisional Bajorano",
+      "rules": [
+        "Bajoran sovereignty is distinct from Federation cooperation.",
+        "Civil government authority remains separate from religious authority."
+      ]
+    },
+    {
+      "organization_id": "bajoran_militia",
+      "organization_type": "military_or_service",
+      "display_name": "Milicia Bajorana",
+      "parent_organization_ref": "bajoran_provisional_government",
+      "rules": [
+        "Militia rank/position requires service state.",
+        "Starfleet personnel do not automatically outrank Bajoran personnel outside applicable joint-command context."
+      ]
+    },
+    {
+      "organization_id": "bajoran_religious_institutions",
+      "organization_type": "religious",
+      "display_name": "Instituciones religiosas bajoranas",
+      "authority_model": {
+        "known_role_types": [
+          "kai",
+          "vedek"
+        ],
+        "exact_full_hierarchy": "not_exhaustively_locked"
+      },
+      "rules": [
+        "Religious authority is not civil authority by default.",
+        "Personal faith is not inferred from Bajoran species."
+      ]
+    },
+    {
+      "organization_id": "bajoran_resistance_cells_historical",
+      "organization_type": "other",
+      "display_name": "Células de la Resistencia Bajorana",
+      "era_validity": "occupation/historical and any campaign-specific successors",
+      "rules": [
+        "Resistance history persists after disbandment.",
+        "Former resistance membership does not automatically create current government/militia authority."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not merge Bajoran government, Militia and religious institutions.",
+    "Do not invent resistance service.",
+    "Do not treat Federation presence as Federation sovereignty."
+  ],
+  "provenance_refs": [
+    "gameplay/diplomacy/major_faction_catalogue.json#bajoran_provisional_government",
+    "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
