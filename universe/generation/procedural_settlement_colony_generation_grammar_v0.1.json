@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "procedural_settlement_colony_generation_grammar",
+  "status": "FOUNDATION_FIXED",
+  "parent_ref": "universe/generation/settlement_infrastructure_contract.json",
+  "settlement_types": [
+    "capital",
+    "major_city",
+    "regional_city",
+    "town",
+    "village",
+    "frontier_colony",
+    "mining_settlement",
+    "agricultural_settlement",
+    "industrial_settlement",
+    "scientific_settlement",
+    "military_settlement",
+    "spaceport_settlement",
+    "orbital_link_settlement",
+    "religious_or_cultural_center",
+    "refugee_or_displaced_settlement",
+    "penal_settlement",
+    "temporary_camp"
+  ],
+  "existence_inputs": [
+    "population_need",
+    "water_and_environment",
+    "energy",
+    "food",
+    "resources",
+    "employment_or_function",
+    "transport_access",
+    "political_history",
+    "security",
+    "existing_settlement_network",
+    "founding_history"
+  ],
+  "generation_rules": [
+    "A settlement requires a causal founding/continuation reason.",
+    "Planet exists does not imply settlement exists.",
+    "Population scale constrains number and size distribution of settlements.",
+    "Infrastructure scales with technology, environment, population and political capacity.",
+    "Capital status requires political/institutional history, not largest-city assumption.",
+    "Spaceport appears only when local technology/traffic justifies it.",
+    "Colonies may fail, shrink, merge, relocate or be abandoned.",
+    "Stable districts/settlements retain identity once materialized."
+  ],
+  "anti_convenience": [
+    "do_not_spawn_settlement_where_player_lands",
+    "do_not_spawn_shop_or_medical_center_to_solve_player_need",
+    "do_not_create_spaceport_on_pre_spaceflight_world"
+  ]
+}
