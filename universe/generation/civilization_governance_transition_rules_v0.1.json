@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_governance_transition_rules",
+  "status": "FOUNDATION_FIXED",
+  "transition_families": [
+    "routine_succession",
+    "election_or_selection",
+    "coalition_change",
+    "constitutional_reform",
+    "institutional_reorganization",
+    "regime_change",
+    "authority_collapse",
+    "restoration"
+  ],
+  "required_context": [
+    "current_government_id",
+    "institution_refs",
+    "jurisdiction_refs",
+    "leadership_selection",
+    "legitimacy_context",
+    "institutional_capacity",
+    "cause_refs"
+  ],
+  "rules": [
+    "Leadership replacement is not necessarily government replacement.",
+    "Government replacement/reform preserves civilization_id and appends history.",
+    "A transition requires a lawful process, political process, crisis, coercive event or other explicit causal chain.",
+    "Government form is not derived from species or culture stereotypes.",
+    "Political change can occur off-screen, but major transitions must materialize an event record.",
+    "A new government does not inherit planet-wide external recognition beyond its actual jurisdiction/recognition."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_continuity_lineage_rules",
+  "status": "FOUNDATION_FIXED",
+  "states": [
+    "active",
+    "dormant_or_displaced",
+    "fragmented",
+    "merged_or_integrated",
+    "extinct"
+  ],
+  "rules": [
+    "Government replacement preserves civilization identity.",
+    "Territorial loss does not by itself erase civilization identity.",
+    "Political fragmentation may create multiple polities without automatically creating multiple civilizations.",
+    "A true civilization split creates successor IDs with predecessor lineage and never deletes predecessor history.",
+    "A merger/integration records predecessor IDs; whether one identity continues or a new composite ID is created must be explicit.",
+    "Extinction requires causal evidence and an append-only extinction event.",
+    "Extinct civilizations remain addressable historical entities for archaeology, records and descendants.",
+    "Later rediscovery cannot reroll extinct civilization facts."
+  ],
+  "future_dependencies": {
+    "block_2": "Territory/colonies/borders may affect lineage context.",
+    "block_3": "War may cause fragmentation/extinction but cannot bypass lineage.",
+    "block_5": "Generated pre-campaign history must respect lineage."
+  }
+}

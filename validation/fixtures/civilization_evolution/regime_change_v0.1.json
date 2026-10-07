@@ -1,0 +1,70 @@
+{
+  "fixture_id": "regime_change_v0.1",
+  "input": {
+    "campaign_seed": "civ_evo_fixture_regime",
+    "civilization_id": "gen:civilization:regime",
+    "years": 6,
+    "initial": {
+      "population": 750000000,
+      "population_capacity": 2000000000,
+      "natural_growth_basis_points": 50,
+      "legitimacy": 52,
+      "institutional_capacity": 65,
+      "social_cohesion": 50,
+      "economic_resilience": 62,
+      "capability_maturity": 35,
+      "government_id": "gen:government:old",
+      "governance_state": "constitutional_republic",
+      "technology_band": "early_warp",
+      "external_relations": [
+        {
+          "party_ref": "federation",
+          "scope": "planetary",
+          "trust": 40,
+          "tension": 20,
+          "relation_state": "normal_relations",
+          "planetary_binding": true
+        }
+      ]
+    },
+    "scheduled_events": [
+      {
+        "year": 3,
+        "event_id": "evt:constitutional_crisis",
+        "event_type": "political_crisis",
+        "cause_refs": [
+          "cause:leadership_deadlock"
+        ],
+        "effects": {
+          "legitimacy_delta": -20,
+          "social_cohesion_delta": -10,
+          "government_transition": {
+            "new_governance_state": "coalition_republic"
+          }
+        }
+      },
+      {
+        "year": 4,
+        "event_id": "evt:reform_recovery",
+        "event_type": "institutional_reform",
+        "cause_refs": [
+          "evt:constitutional_crisis"
+        ],
+        "effects": {
+          "legitimacy_delta": 18,
+          "institutional_capacity_delta": 5,
+          "social_cohesion_delta": 7
+        }
+      }
+    ]
+  },
+  "expected": {
+    "population": 773013834,
+    "government_id": "gen:government:bd16f94e1e299ac0",
+    "governance_state": "coalition_republic",
+    "legitimacy": 50,
+    "institutional_capacity": 70,
+    "social_cohesion": 47,
+    "civilization_id_preserved": true
+  }
+}

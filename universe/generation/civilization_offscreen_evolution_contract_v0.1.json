@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilization_offscreen_evolution_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "lod_modes": [
+    "full_local",
+    "regional_summary",
+    "civilization_summary",
+    "dormant_catch_up"
+  ],
+  "catch_up_order": [
+    "load_previous_authoritative_state",
+    "resolve_elapsed_time",
+    "apply_explicit_events_in_time_order",
+    "apply_allowed_aggregate_drift",
+    "materialize_major_transitions",
+    "validate_invariants",
+    "commit_next_authoritative_state"
+  ],
+  "rules": [
+    "Simulation fidelity may change; identity and causal facts may not.",
+    "Player distance/presence never changes the probability of a major historical event merely to provide content.",
+    "Routine population/capability drift may aggregate; government transitions, fragmentation, extinction and formal diplomatic changes remain explicit events.",
+    "Save/load of the same state/time/event stream must reproduce the same result.",
+    "Catch-up may emit future-block candidates but cannot execute Blocks 2–10.",
+    "Observer knowledge is updated only when a valid observation/communication channel later exists."
+  ],
+  "parent_ref": "universe/generation/planetary_offscreen_simulation_contract.json"
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_capability_maturation_rules",
+  "status": "FOUNDATION_FIXED",
+  "scope": "Maturation inside existing capability/technology state only.",
+  "inputs": [
+    "technology_band",
+    "institutional_capacity",
+    "education_or_knowledge_refs",
+    "industrial_capacity_refs",
+    "existing_research_context_refs",
+    "disruption_refs"
+  ],
+  "outputs": [
+    "capability_maturity",
+    "technology_transition_candidate",
+    "block_6_discovery_refs"
+  ],
+  "rules": [
+    "Capability may mature through time and functioning institutions.",
+    "Block 1 never automatically changes technology_band.",
+    "Reaching a maturity threshold emits a candidate for Block 6 rather than inventing a breakthrough.",
+    "Contact with an advanced civilization does not grant technology automatically.",
+    "Technology transfer requires explicit later rules, authority and events."
+  ]
+}

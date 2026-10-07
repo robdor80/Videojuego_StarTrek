@@ -74,3 +74,7 @@ The procedural universe now uses an explicit layered-context and population-mate
 - validate population conservation, staffing, knowledge, relationships and schedules.
 
 Generic runtime semantics remain CoreRPG responsibilities; Star Trek owns era, canon, species/culture, Starfleet, technology and setting-specific generation rules.
+
+## Civilization evolution
+
+Long-horizon civilization evolution is indexed by `civilization_evolution_index_v0.1.json`. It extends the existing civilization/First Contact contracts without implementing later dynamic-universe blocks.

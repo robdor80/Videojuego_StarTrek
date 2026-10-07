@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_demographic_evolution_rules",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "population",
+    "population_capacity",
+    "birth_death_context",
+    "health_context",
+    "food_energy_context",
+    "environment_context",
+    "migration_refs",
+    "casualty_event_refs"
+  ],
+  "outputs": [
+    "population",
+    "population_composition_refs",
+    "demographic_pressure_refs",
+    "explicit_mass_change_event_refs"
+  ],
+  "rules": [
+    "Routine birth/death change may be aggregated at LOD; mass-casualty or mass-migration changes require explicit records.",
+    "Population never increases because a settlement/NPC is requested by gameplay.",
+    "Migration is movement, not duplication, and delegates to population_movement_contract.",
+    "Population capacity constrains sustained growth but is not a hard magical cap.",
+    "Species-specific lifecycle data may affect rates only through validated biology profiles.",
+    "Zero population does not by itself authorize an extinction history event; extinction requires causal confirmation."
+  ],
+  "refs": [
+    "universe/generation/population_movement_contract.json",
+    "universe/generation/planetary_offscreen_simulation_contract.json"
+  ]
+}

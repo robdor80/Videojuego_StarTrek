@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilization_evolution_event_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "event_types": [
+    "demographic_shift",
+    "institutional_reform",
+    "government_transition",
+    "political_fragmentation_candidate",
+    "economic_disruption_or_recovery",
+    "capability_maturation",
+    "diplomatic_relation_change",
+    "civilization_split_or_merge",
+    "civilization_extinction"
+  ],
+  "required_major_event_fields": [
+    "event_id",
+    "effective_time",
+    "civilization_ref",
+    "cause_refs",
+    "state_changes",
+    "provenance"
+  ],
+  "rules": [
+    "Major civilization evolution is represented as append-only events.",
+    "An event may reference another event as its cause.",
+    "Events never retroactively invent pre-existing facts to justify themselves.",
+    "Knowledge of the event is separate from the event.",
+    "Future Blocks 2–10 may originate events, but Block 1 only consumes their validated outputs.",
+    "AI narration cannot add state changes missing from authoritative event records."
+  ],
+  "parent_ref": "gameplay/consequences/world_event_consequence_contract.json"
+}

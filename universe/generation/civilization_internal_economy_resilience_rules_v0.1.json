@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_internal_economy_resilience_rules",
+  "status": "FOUNDATION_FIXED",
+  "scope": "Block 1 summary/resilience only; detailed interstellar economy belongs to Block 4.",
+  "inputs": [
+    "resource_base",
+    "production_capabilities",
+    "infrastructure_dependencies",
+    "distribution_model",
+    "critical_import_refs",
+    "critical_export_refs",
+    "disruption_event_refs"
+  ],
+  "outputs": [
+    "economic_resilience",
+    "dependency_pressure_refs",
+    "recovery_or_decline_trend",
+    "block_4_economy_candidate_refs"
+  ],
+  "rules": [
+    "Economic resilience changes only from production, consumption, policy, infrastructure, trade or disruption causes.",
+    "Post-scarcity is contextual rather than universal.",
+    "Block 1 does not synthesize market prices, shipping routes or trade volumes.",
+    "A trade interruption may modify resilience only when an actual dependency exists.",
+    "Economic state can influence demographics/politics without deterministically forcing a single political result."
+  ],
+  "parent_ref": "universe/generation/procedural_civilization_economy_resource_trade_grammar_v0.1.json"
+}

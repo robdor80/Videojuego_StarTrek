@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilization_evolution_state_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "identity_fields": [
+    "civilization_id",
+    "lineage_refs",
+    "origin_refs"
+  ],
+  "state_domains": {
+    "demography": [
+      "population",
+      "population_capacity",
+      "population_composition_refs",
+      "demographic_pressure_refs"
+    ],
+    "governance": [
+      "government_id",
+      "governance_state",
+      "legitimacy",
+      "institutional_capacity",
+      "succession_or_selection_ref"
+    ],
+    "society": [
+      "social_cohesion",
+      "political_fragmentation_state",
+      "public_opinion_refs"
+    ],
+    "economy": [
+      "economic_resilience",
+      "critical_dependency_refs",
+      "internal_distribution_state_ref"
+    ],
+    "capability": [
+      "technology_band",
+      "capability_maturity",
+      "technology_transition_candidate"
+    ],
+    "external": [
+      "external_relations",
+      "contact_status_refs",
+      "recognized_scope_refs"
+    ],
+    "continuity": [
+      "civilization_status",
+      "lineage_refs",
+      "history_ref"
+    ]
+  },
+  "bounded_reference_metrics": {
+    "legitimacy": [
+      0,
+      100
+    ],
+    "institutional_capacity": [
+      0,
+      100
+    ],
+    "social_cohesion": [
+      0,
+      100
+    ],
+    "economic_resilience": [
+      0,
+      100
+    ],
+    "capability_maturity": [
+      0,
+      100
+    ]
+  },
+  "rules": [
+    "Metrics summarize state for LOD/reference simulation; they are not player-visible universal truth scores.",
+    "Government changes do not change civilization_id.",
+    "Species/culture do not set political metrics by stereotype.",
+    "Major state transitions require event/cause references.",
+    "Observer knowledge is stored separately from this authoritative state.",
+    "Technology-band transitions are not resolved by Block 1."
+  ]
+}

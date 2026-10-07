@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "contract_id": "diplomatic_state_contract",
   "classification": "GAME_ADDITION",
   "relation_fields": [
@@ -36,7 +36,9 @@
     "Campaign events may change relations after start without being forced back to future canon.",
     "AI may negotiate or interpret only within authority granted to the acting character/organization.",
     "First Contact initializes only the relationship scope actually achieved.",
-    "Contact with one sovereign state does not silently create planet-wide Federation relations."
+    "Contact with one sovereign state does not silently create planet-wide Federation relations.",
+    "Long-horizon relation changes require causal events and preserve the actually recognized polity scope."
   ],
-  "first_contact_initialization_ref": "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json"
+  "first_contact_initialization_ref": "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json",
+  "relation_evolution_ref": "gameplay/diplomacy/civilization_relation_evolution_rules_v0.1.json"
 }

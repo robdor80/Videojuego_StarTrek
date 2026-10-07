@@ -219,6 +219,32 @@ Current baseline:
 
 **Runtime boundary:** civilization/settlement/contact content and reference implementation are complete for v0.1. Physical planet generation remains its separate existing contract layer; authoritative runtime execution waits on CoreRPG 4.5+.
 
+## Procedural Civilization Evolution & Galactic Interaction v0.1
+
+Control documents:
+- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `docs/roadmap/procedural_civilization_evolution_galactic_interaction_plan_v0.1.md`
+- `docs/roadmap/procedural_civilization_evolution_galactic_interaction_status_v0.1.json`
+
+Current baseline:
+- **Block 1 COMPLETE — CE001–CE015: 15/15**;
+- civilizations evolve after generation/First Contact instead of freezing;
+- demographic evolution is conservative and causal;
+- government succession/regime change preserves civilization identity;
+- cohesion/fragmentation is separated from species/culture stereotypes;
+- internal economic resilience feeds evolution without pre-implementing Block 4;
+- capability maturity may create a Block 6 candidate but cannot auto-advance technology;
+- diplomatic relationships evolve from explicit events and preserve polity scope;
+- high tension cannot silently create war;
+- split/merge/extinction semantics preserve lineage/history;
+- off-screen/LOD catch-up preserves identity and explicit major transitions;
+- deterministic reference simulator + **9 executable tests**;
+- **4 locked fictional fixtures**: stable growth, regime change, divided-world post-contact relations and causal extinction.
+
+**Sequential boundary:** Blocks 2–10 remain TODO and have not been implemented. Block 2 is next only after this Block 1 closure.
+
+**Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains responsible for authoritative scheduling, persistence, generic event/action execution and World State mutation.
+
 ## Major remaining domains
 
 | Domain | Status |

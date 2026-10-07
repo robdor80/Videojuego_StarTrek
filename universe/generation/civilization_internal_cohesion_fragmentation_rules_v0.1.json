@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_internal_cohesion_fragmentation_rules",
+  "status": "FOUNDATION_FIXED",
+  "pressure_inputs": [
+    "institutional_legitimacy",
+    "economic_stress",
+    "regional_disputes",
+    "identity_or_constitutional_disputes",
+    "external_interference",
+    "recent_conflict_refs",
+    "inequality_or_distribution_context",
+    "historical_grievance_refs"
+  ],
+  "states": [
+    "contained",
+    "elevated",
+    "high_risk",
+    "fragmentation_candidate",
+    "fragmented_polities"
+  ],
+  "rules": [
+    "Low cohesion is not proof of violence.",
+    "High tension does not automatically create civil war; Block 3 owns armed-conflict simulation.",
+    "Fragmentation requires explicit political/institutional causes and cannot be rolled solely from species/culture.",
+    "Multiple polities may remain part of one civilization identity while holding independent governments/relations.",
+    "Durable successor-civilization creation requires lineage rules and an explicit authoritative transition.",
+    "First Contact may alter political pressures, but cannot invent a planetary unity or fracture without causes."
+  ]
+}

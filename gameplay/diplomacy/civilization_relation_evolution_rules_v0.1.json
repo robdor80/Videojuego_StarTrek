@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civilization_relation_evolution_rules",
+  "status": "FOUNDATION_FIXED",
+  "state_dimensions": [
+    "recognition",
+    "trust_context",
+    "tension_context",
+    "contact_scope",
+    "treaty_refs",
+    "access_refs",
+    "trade_state_ref",
+    "military_state_ref",
+    "current_dispute_refs"
+  ],
+  "transition_causes": [
+    "diplomatic_exchange",
+    "fulfilled_or_broken_commitment",
+    "incident",
+    "aid_or_cooperation",
+    "dispute",
+    "sanction_or_restriction",
+    "public_or_government_change",
+    "treaty_action",
+    "hostile_action"
+  ],
+  "rules": [
+    "Relations change because of events/actions, not passive elapsed time alone unless an existing timed agreement/condition explicitly expires.",
+    "First Contact does not automatically mature into normal relations, trade, treaty, alliance or Federation membership.",
+    "Trust/tension summaries cannot override treaty/access/recognition facts.",
+    "High tension may become hostile but cannot create war without an explicit Block 3 cause/action.",
+    "Relations remain scoped to the actual recognized polity/institution.",
+    "A partial-polity relation cannot bind a whole divided planet.",
+    "Government succession may require recognition review rather than silently copying all diplomatic authority.",
+    "Public opinion and government diplomatic state remain separate."
+  ],
+  "refs": [
+    "gameplay/diplomacy/diplomatic_state_contract.json",
+    "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json"
+  ]
+}

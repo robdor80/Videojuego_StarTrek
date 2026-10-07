@@ -1,0 +1,39 @@
+{
+  "fixture_id": "stable_growth_20y_v0.1",
+  "input": {
+    "campaign_seed": "civ_evo_fixture_stable",
+    "civilization_id": "gen:civilization:stable",
+    "years": 20,
+    "initial": {
+      "population": 1000000000,
+      "population_capacity": 2000000000,
+      "natural_growth_basis_points": 50,
+      "legitimacy": 60,
+      "institutional_capacity": 65,
+      "social_cohesion": 58,
+      "economic_resilience": 62,
+      "capability_maturity": 35,
+      "government_id": "gen:government:stable",
+      "governance_state": "constitutional_republic",
+      "technology_band": "early_warp",
+      "external_relations": [
+        {
+          "party_ref": "federation",
+          "scope": "planetary",
+          "trust": 40,
+          "tension": 20,
+          "relation_state": "normal_relations",
+          "planetary_binding": true
+        }
+      ]
+    }
+  },
+  "expected": {
+    "population": 1107096444,
+    "government_id": "gen:government:stable",
+    "technology_band": "early_warp",
+    "capability_maturity": 55,
+    "civilization_status": "active",
+    "history_events": 0
+  }
+}

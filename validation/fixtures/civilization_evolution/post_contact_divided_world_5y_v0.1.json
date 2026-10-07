@@ -1,0 +1,84 @@
+{
+  "fixture_id": "post_contact_divided_world_5y_v0.1",
+  "input": {
+    "campaign_seed": "civ_evo_fixture_divided",
+    "civilization_id": "gen:civilization:divided",
+    "years": 5,
+    "initial": {
+      "population": 1400000000,
+      "population_capacity": 2000000000,
+      "natural_growth_basis_points": 50,
+      "legitimacy": 60,
+      "institutional_capacity": 65,
+      "social_cohesion": 58,
+      "economic_resilience": 62,
+      "capability_maturity": 35,
+      "government_id": "gen:government:divided",
+      "governance_state": "multi_state_planet",
+      "technology_band": "early_warp",
+      "external_relations": [
+        {
+          "party_ref": "federation",
+          "scope": "partial_polity",
+          "trust": 20,
+          "tension": 45,
+          "relation_state": "strained",
+          "planetary_binding": false
+        },
+        {
+          "party_ref": "neighboring_polity",
+          "scope": "partial_polity",
+          "trust": 55,
+          "tension": 25,
+          "relation_state": "normal_relations",
+          "planetary_binding": false
+        }
+      ]
+    },
+    "scheduled_events": [
+      {
+        "year": 2,
+        "event_id": "evt:limited_exchange",
+        "event_type": "diplomatic_exchange",
+        "cause_refs": [
+          "contact:limited_federation_contact"
+        ],
+        "effects": {
+          "relation_target_ref": "federation",
+          "trust_delta": 20,
+          "tension_delta": -10
+        }
+      },
+      {
+        "year": 4,
+        "event_id": "evt:orbital_dispute",
+        "event_type": "diplomatic_dispute",
+        "cause_refs": [
+          "dispute:orbital_access"
+        ],
+        "effects": {
+          "relation_target_ref": "neighboring_polity",
+          "trust_delta": -25,
+          "tension_delta": 35
+        }
+      }
+    ]
+  },
+  "expected": {
+    "population": 1436066001,
+    "federation": {
+      "trust": 40,
+      "tension": 35,
+      "relation_state": "normal_relations",
+      "scope": "partial_polity",
+      "planetary_binding": false
+    },
+    "neighboring_polity": {
+      "trust": 30,
+      "tension": 60,
+      "relation_state": "strained",
+      "scope": "partial_polity",
+      "planetary_binding": false
+    }
+  }
+}

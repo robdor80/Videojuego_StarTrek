@@ -32,3 +32,5 @@ python tools/generation/test_v0_0_1_generator.py
 ```
 
 The reference regression seed is locked by SHA-256 digest. An intentional generator-algorithm change must increment the generator version and update the expected digest deliberately.
+
+- `simulate_civilization_evolution.py` — deterministic reference simulator for Block 1 civilization evolution; major transitions require explicit causes and later-block boundaries are enforced.

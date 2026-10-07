@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "civilization_evolution_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
+  "refs": [
+    "universe/generation/civilization_evolution_index_v0.1.json",
+    "tools/generation/simulate_civilization_evolution.py"
+  ],
+  "cases": [
+    {
+      "id": "time_does_not_reroll_identity",
+      "expected": [
+        "civilization_id stable",
+        "government may change separately",
+        "save/load same inputs reproduces same output"
+      ]
+    },
+    {
+      "id": "major_transitions_require_causes",
+      "expected": [
+        "government transition has cause_refs",
+        "fragmentation has cause_refs",
+        "extinction has cause_refs",
+        "relation change has cause_refs"
+      ]
+    },
+    {
+      "id": "government_not_civilization",
+      "expected": [
+        "new government preserves civilization_id",
+        "leadership change need not replace government"
+      ]
+    },
+    {
+      "id": "culture_species_not_politics",
+      "expected": [
+        "no stability/aggression outcome derived from species/culture alone"
+      ]
+    },
+    {
+      "id": "population_conservation",
+      "expected": [
+        "population never negative",
+        "migration cannot duplicate population",
+        "mass changes have events"
+      ]
+    },
+    {
+      "id": "partial_relation_scope",
+      "expected": [
+        "partial_polity cannot planetary_bind",
+        "divided world relations evolve independently"
+      ]
+    },
+    {
+      "id": "tension_not_war",
+      "expected": [
+        "high tension may become hostile",
+        "war requires explicit later action/cause"
+      ]
+    },
+    {
+      "id": "first_contact_not_auto_diplomacy",
+      "expected": [
+        "elapsed time alone grants no treaty/trade/alliance/membership"
+      ]
+    },
+    {
+      "id": "technology_boundary",
+      "expected": [
+        "capability_maturity may rise",
+        "technology_transition_candidate may emit",
+        "technology_band unchanged in Block 1"
+      ]
+    },
+    {
+      "id": "offscreen_equivalence",
+      "expected": [
+        "LOD may aggregate",
+        "major events remain explicit",
+        "player presence not a driver"
+      ]
+    },
+    {
+      "id": "extinction_causal",
+      "expected": [
+        "zero population not silently rewritten as extinction",
+        "confirmed extinction persists with event"
+      ]
+    },
+    {
+      "id": "lineage_preserved",
+      "expected": [
+        "split/merge references predecessors",
+        "history never erased"
+      ]
+    },
+    {
+      "id": "world_truth_vs_knowledge",
+      "expected": [
+        "evolution can happen unknown to Starfleet",
+        "knowledge changes only via valid channel"
+      ]
+    },
+    {
+      "id": "future_block_boundary",
+      "expected": [
+        "Block 1 emits candidates only",
+        "does not execute Blocks 2-10"
+      ]
+    }
+  ]
+}

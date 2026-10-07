@@ -1,0 +1,51 @@
+{
+  "fixture_id": "causal_extinction_v0.1",
+  "note": "The placeholder cause is an already-authoritative external cause consumed by Block 1; Block 8 crisis generation is not implemented here.",
+  "input": {
+    "campaign_seed": "civ_evo_fixture_extinct",
+    "civilization_id": "gen:civilization:extinct",
+    "years": 3,
+    "initial": {
+      "population": 100000,
+      "population_capacity": 500000,
+      "natural_growth_basis_points": 50,
+      "legitimacy": 60,
+      "institutional_capacity": 65,
+      "social_cohesion": 58,
+      "economic_resilience": 62,
+      "capability_maturity": 35,
+      "government_id": "gen:government:stable",
+      "governance_state": "constitutional_republic",
+      "technology_band": "early_warp",
+      "external_relations": [
+        {
+          "party_ref": "federation",
+          "scope": "planetary",
+          "trust": 40,
+          "tension": 20,
+          "relation_state": "normal_relations",
+          "planetary_binding": true
+        }
+      ]
+    },
+    "scheduled_events": [
+      {
+        "year": 2,
+        "event_id": "evt:terminal_loss",
+        "event_type": "mass_casualty",
+        "cause_refs": [
+          "cause:external_catastrophe_placeholder"
+        ],
+        "effects": {
+          "population_loss_basis_points": 10000,
+          "extinction_confirmed": true
+        }
+      }
+    ]
+  },
+  "expected": {
+    "population": 0,
+    "civilization_status": "extinct",
+    "extinction_event_id": "evt:terminal_loss"
+  }
+}
