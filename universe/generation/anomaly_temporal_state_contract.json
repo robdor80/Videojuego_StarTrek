@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "anomaly_temporal_state_contract",
+  "classification": "GAME_ADDITION",
+  "anomaly_families": [
+    "spatial",
+    "subspace",
+    "temporal",
+    "gravimetric",
+    "radiation",
+    "wormhole",
+    "dimensional_or_other_authorized"
+  ],
+  "fields": [
+    "anomaly_id",
+    "location_or_extent_ref",
+    "origin_or_unknown_origin",
+    "physical_or_setting_profile",
+    "detectable_signature_refs",
+    "temporal_behavior",
+    "hazard_state",
+    "interaction_rules",
+    "history_ref",
+    "provenance_refs"
+  ],
+  "rules": [
+    "An anomaly exists in World State before a scan detects it.",
+    "Rare phenomena use rarity/context rules and are not spawned because they are dramatic.",
+    "Temporal effects require explicit event/state transitions and may not silently erase campaign history.",
+    "Causal paradox/branch behavior must use an explicit rules profile rather than ad hoc narrative replacement.",
+    "Affected entities retain identity/history unless the temporal rule explicitly records a branch/replacement semantics.",
+    "AI may describe resolved anomaly effects but cannot author them."
+  ]
+}
