@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "subspace_communication_contract",
+  "classification": "GAME_ADDITION",
+  "link_inputs": [
+    "sender_ref",
+    "recipient_or_target_ref",
+    "distance_and_route_context",
+    "transmitter_state",
+    "receiver_state",
+    "relay_network_refs",
+    "power",
+    "interference",
+    "encryption",
+    "language_translation_state",
+    "political_or_access_context"
+  ],
+  "link_states": [
+    "not_attempted",
+    "acquiring",
+    "connected",
+    "degraded",
+    "delayed",
+    "store_and_forward",
+    "blocked",
+    "jammed",
+    "lost",
+    "recipient_refused"
+  ],
+  "rules": [
+    "Interstellar communication is not assumed universally instantaneous.",
+    "Distance, relays, interference, damage, jamming and network disruption may affect latency/quality.",
+    "Opening a channel does not force recipient acceptance.",
+    "Encryption/access control and translation are separate layers.",
+    "Only actually transmitted/received content may enter recipient knowledge.",
+    "AI may generate interlocutor dialogue only after communication/knowledge state permits it."
+  ]
+}
