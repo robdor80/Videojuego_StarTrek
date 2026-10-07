@@ -1,0 +1,121 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "living_simulation_event_consequence_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "schedule_time_exclusivity",
+      "expected": [
+        "character cannot perform incompatible simultaneous activities",
+        "travel/rest/conversation/duty consume authoritative time"
+      ]
+    },
+    {
+      "id": "wellbeing_accumulates_not_resets",
+      "expected": [
+        "acute and accumulated states are separate",
+        "one leisure event does not erase long-term fatigue/stress"
+      ]
+    },
+    {
+      "id": "social_offscreen_requires_contact",
+      "expected": [
+        "relationship changes require plausible interaction/contact/time",
+        "LOD does not fabricate dramatic relationship events"
+      ]
+    },
+    {
+      "id": "professional_offscreen_requires_evidence",
+      "expected": [
+        "promotion/qualification/commendation require institutional process/evidence",
+        "elapsed time alone does not advance career"
+      ]
+    },
+    {
+      "id": "ship_offscreen_respects_travel_and_resources",
+      "expected": [
+        "ship cannot arrive before valid travel time",
+        "maintenance/resupply consume capacity/resources",
+        "major events are explicitly logged"
+      ]
+    },
+    {
+      "id": "facility_offscreen_not_infinite",
+      "expected": [
+        "queues/capacity/resources remain relevant off-screen",
+        "return to high LOD restores accumulated state"
+      ]
+    },
+    {
+      "id": "planetary_lod_conserves_major_state",
+      "expected": [
+        "population/infrastructure/politics remain traceable",
+        "major migration/disaster/regime/conflict events are explicit"
+      ]
+    },
+    {
+      "id": "event_has_causes_and_state_changes",
+      "expected": [
+        "event references causes/participants/location as applicable",
+        "consequences mutate state through validated records"
+      ]
+    },
+    {
+      "id": "failure_partial_success_persist",
+      "expected": [
+        "mission outcome may be partial or failed",
+        "damage/casualties/diplomacy/logistics/career consequences persist independently"
+      ]
+    },
+    {
+      "id": "death_does_not_erase_identity",
+      "expected": [
+        "dead/destroyed entity remains historically addressable",
+        "relationships/kinship/memories/records persist as changed/historical state"
+      ]
+    },
+    {
+      "id": "death_creates_real_vacancy",
+      "expected": [
+        "lost crew/staff assignment becomes vacant",
+        "replacement requires real assignment/materialization"
+      ]
+    },
+    {
+      "id": "knowledge_of_death_not_instant",
+      "expected": [
+        "observer knowledge depends on witness/communication channels",
+        "truth may precede notification"
+      ]
+    },
+    {
+      "id": "mission_derives_from_world_state",
+      "expected": [
+        "mission traces to need/event/standing duty",
+        "template cannot create incident retroactively",
+        "NPC units may resolve need"
+      ]
+    },
+    {
+      "id": "quiet_period_is_valid",
+      "expected": [
+        "AI director does not manufacture encounters for pacing alone",
+        "ordinary duty/travel may remain uneventful"
+      ]
+    },
+    {
+      "id": "ai_no_direct_state_mutation",
+      "expected": [
+        "AI output becomes candidate/dialogue/summary only",
+        "validated deterministic action path owns state mutation"
+      ]
+    },
+    {
+      "id": "ai_context_is_authorized",
+      "expected": [
+        "AI receives only knowledge/state allowed for route/actor",
+        "hidden World Truth is not leaked for dramatic narration"
+      ]
+    }
+  ]
+}
