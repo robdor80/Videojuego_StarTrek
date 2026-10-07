@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "dossier_id": "academy_operational_culture_reference",
-  "status": "ACTIVE",
+  "status": "ACTIVE_WAVE_B_SYNCED",
   "purpose_es": "Seleccionar conocimiento cultural con utilidad operativa para la formación de cadetes sin convertir la Academia en una enciclopedia de especies.",
   "teaching_rule_es": "Enseñar patrones útiles como hipótesis de contexto; nunca como predicciones absolutas sobre una persona.",
   "authority_refs": [
@@ -21,7 +21,19 @@
     "gameplay/species/profiles/betazoid_v0.1.json",
     "gameplay/species/profiles/changeling_v0.1.json",
     "gameplay/species/profiles/vorta_v0.1.json",
-    "gameplay/species/profiles/jem_hadar_v0.1.json"
+    "gameplay/species/profiles/jem_hadar_v0.1.json",
+    "lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json",
+    "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json",
+    "lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
   ],
   "academy_scope": {
     "year1": {
@@ -98,7 +110,8 @@
       "operational_takeaways": [
         "Jerarquía, orden y deber familiar/estatal pueden ser marcos culturales relevantes.",
         "La confianza institucional no prueba crueldad, culpabilidad o colaboración.",
-        "Especie no implica lealtad a la Unión."
+        "Especie no implica lealtad a la Unión.",
+        "Familia, edad y jerarquía pueden tener peso social, pero requieren biografía y contexto reales."
       ],
       "common_misread": "Convertir historia de ocupación en culpabilidad individual automática."
     },
@@ -114,7 +127,8 @@
       "operational_takeaways": [
         "Comercio, contratos y negociación pueden ser marcos culturales frecuentes.",
         "Interés comercial no demuestra engaño.",
-        "Especie no implica profesión mercantil ni avaricia."
+        "Especie no implica profesión mercantil ni avaricia.",
+        "Las normas legales/sociales Ferengi cambian con la época; no se aplican reformas tardías a campañas anteriores."
       ],
       "common_misread": "Presuponer fraude o motivación económica en toda interacción."
     },
@@ -122,7 +136,8 @@
       "operational_takeaways": [
         "Un Trill unido es una identidad vivida de host y simbionte, no un huésped anterior resucitado.",
         "Recuerdos y habilidades previos siguen límites de acceso; no son conocimiento universal.",
-        "Estado de unión puede ser información médica/personal restringida."
+        "Estado de unión puede ser información médica/personal restringida.",
+        "La familia y relaciones del huésped actual no se sustituyen por las de huéspedes anteriores."
       ],
       "common_misread": "Hablar al individuo actual como si fuera exactamente un huésped previo."
     },
@@ -130,7 +145,8 @@
       "operational_takeaways": [
         "Telepatía y empatía varían entre individuos y tienen limitaciones.",
         "Percibir emoción no equivale a conocer intención, memoria o verdad objetiva.",
-        "Privacidad y consentimiento siguen siendo relevantes."
+        "Privacidad y consentimiento siguen siendo relevantes.",
+        "La franqueza u honestidad cultural puede resultar brusca a otras especies, pero no elimina privacidad o tacto profesional."
       ],
       "common_misread": "Usar a un Betazoide como detector de mentiras infalible."
     },
@@ -139,7 +155,8 @@
         "Founder, Vorta y Jem'Hadar ocupan contextos institucionales distintos.",
         "Jem'Hadar combina biología diseñada, dependencia logística y fuerte contexto militar.",
         "Vorta pueden desempeñar administración, mando o diplomacia sin que la especie garantice un puesto concreto.",
-        "La apariencia copiada por un Cambiante no copia recuerdos, permisos ni relaciones."
+        "La apariencia copiada por un Cambiante no copia recuerdos, permisos ni relaciones.",
+        "La autoridad de Vorta o Jem'Hadar depende de puesto, unidad y asignación; especie por sí sola no basta."
       ],
       "common_misread": "Reducir el Dominion a una sola cultura o asumir capacidades/autoridad por apariencia."
     }
