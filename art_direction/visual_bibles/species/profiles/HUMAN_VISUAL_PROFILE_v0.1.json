@@ -1,0 +1,22 @@
+{
+  "profile_id": "human_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION",
+  "species_id": "human",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Human morphology is broad and individually varied.",
+    "Do not use a single ethnic, regional or Earth-cultural look as the human default.",
+    "Species does not imply Earth upbringing, Federation citizenship or Starfleet service.",
+    "Hair, grooming, clothing and cultural markers belong to individual/cultural context, not biological species identity."
+  ],
+  "forbidden": [
+    "beauty homogenization",
+    "Earth-culture-as-species shortcut",
+    "Federation-uniform-as-human default"
+  ]
+}
