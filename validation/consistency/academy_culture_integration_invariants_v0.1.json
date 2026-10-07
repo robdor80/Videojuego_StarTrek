@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_culture_integration_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "refs": [
+    "gameplay/careers/academy_path/cultural_operations_reference_v0.1.json",
+    "gameplay/careers/academy_path/curriculum/fourth_class/courses/FED-401/course.json",
+    "gameplay/careers/academy_path/curriculum/third_class/courses/XEN-302/course.json",
+    "gameplay/careers/academy_path/assessment_banks/third_class/XEN-302/question_bank_v2_0.json"
+  ],
+  "cases": [
+    {
+      "id": "academy_uses_game_culture_source",
+      "expected": [
+        "Academy cultural teaching references the same operational profiles used by the game.",
+        "No separate encyclopedia-only culture canon is created."
+      ]
+    },
+    {
+      "id": "year1_teaches_separation",
+      "expected": [
+        "FED-401 teaches species ≠ culture ≠ citizenship ≠ personality.",
+        "Founding examples remain introductory rather than encyclopedic."
+      ]
+    },
+    {
+      "id": "year2_teaches_operational_cases",
+      "expected": [
+        "XEN-302 teaches founding and major-species cases with direct service relevance.",
+        "Cultural knowledge is framed as context, not personality prediction."
+      ]
+    },
+    {
+      "id": "telepathy_privacy_is_taught",
+      "expected": [
+        "Aenar/Betazoid/Vulcan cases teach capability limits and consent/privacy.",
+        "Telepathy is never taught as omniscience."
+      ]
+    },
+    {
+      "id": "assessment_matches_taught_material",
+      "expected": [
+        "Every XEN-302 concept is explicitly taught.",
+        "Exactly 6 concepts exist per unit.",
+        "Each attempt draws 5 concepts without duplicates."
+      ]
+    },
+    {
+      "id": "no_old_autoevaluation_model",
+      "expected": [
+        "The XEN-302 manual uses interactive review backed by concept bank.",
+        "Legacy fixed autoevaluation lists are absent."
+      ]
+    },
+    {
+      "id": "web_is_derived_not_parallel",
+      "expected": [
+        "academiaflota mirrors game-source course and assessment content.",
+        "Web presentation changes do not redefine gameplay/culture truth."
+      ]
+    }
+  ]
+}
