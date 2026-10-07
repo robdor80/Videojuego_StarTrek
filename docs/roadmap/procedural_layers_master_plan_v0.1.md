@@ -154,14 +154,14 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 077 | Rutas y costes de navegación | PARTIAL | 065-066,056 | Trayectos consumen distancia/tiempo/riesgo válidos |
-| 078 | Tráfico espacial causal | PARTIAL | 055,063-077 | Cada nave en tráfico tiene origen, destino y razón |
-| 079 | Pasajeros, migración y visitantes | TODO | 015,072,078 | Movimientos alteran población sin duplicarla |
-| 080 | Recursos, inventarios y abastecimiento | PARTIAL | 064,074,078 | Stock cambia por causas reales |
-| 081 | Replicadores y economía post-escasez contextual | TODO | 056,074,080 | Replicación no elimina energía, acceso, rareza ni logística especial |
-| 082 | Comercio y operadores civiles | TODO | 043,074,078-081 | Actividad comercial tiene actores/rutas/demanda |
-| 083 | Fronteras, jurisdicción y diplomacia | PARTIAL | 043-044,065,075 | Espacio político afecta acceso y conducta |
-| 084 | Crisis, bloqueos, guerras y alteración de redes | TODO | 076-083 | Eventos estratégicos repercuten en tráfico, suministro y población |
+| 077 | Rutas y costes de navegación | COMPLETE | 065-066,056 | Trayectos consumen distancia/tiempo/riesgo válidos |
+| 078 | Tráfico espacial causal | COMPLETE | 055,063-077 | Cada nave en tráfico tiene origen, destino y razón |
+| 079 | Pasajeros, migración y visitantes | COMPLETE | 015,072,078 | Movimientos alteran población sin duplicarla |
+| 080 | Recursos, inventarios y abastecimiento | COMPLETE | 064,074,078 | Stock cambia por causas reales |
+| 081 | Replicadores y economía post-escasez contextual | COMPLETE | 056,074,080 | Replicación no elimina energía, acceso, rareza ni logística especial |
+| 082 | Comercio y operadores civiles | COMPLETE | 043,074,078-081 | Actividad comercial tiene actores/rutas/demanda |
+| 083 | Fronteras, jurisdicción y diplomacia | COMPLETE | 043-044,065,075 | Espacio político afecta acceso y conducta |
+| 084 | Crisis, bloqueos, guerras y alteración de redes | COMPLETE | 076-083 | Eventos estratégicos repercuten en tráfico, suministro y población |
 
 # FASE 8 — TECNOLOGÍA TREK Y CASOS EXCEPCIONALES
 
