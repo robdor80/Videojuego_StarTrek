@@ -1,0 +1,28 @@
+{
+  "fixture_id": "prewarp_observation_v0.1",
+  "input": {
+    "campaign_seed": "first_contact_fixture_prewarp",
+    "world_id": "gen:planet:velora_2",
+    "civilization_slot": 0,
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-04-03",
+    "environment_class": "temperate",
+    "population_band": "medium",
+    "technology_band": "advanced_prewarp",
+    "warp_state": "active_research",
+    "political_representation_state": "single_planetary_authority",
+    "prior_alien_exposure": false,
+    "public_alien_awareness": false,
+    "active_internal_conflict": false,
+    "mutual_contact": false,
+    "language_samples": 1,
+    "materialization_level": "observed"
+  },
+  "expected": {
+    "contact_eligibility": "not_eligible_normal_contact",
+    "recommended_contact_timing": "observe_only",
+    "prime_directive_state": "strict_non_interference",
+    "materialized_civilization_absent": true,
+    "automatic_contact_forbidden": true
+  }
+}
