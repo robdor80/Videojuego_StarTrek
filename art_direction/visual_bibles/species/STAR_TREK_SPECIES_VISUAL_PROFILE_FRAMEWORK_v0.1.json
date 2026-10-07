@@ -1,8 +1,8 @@
 {
   "profile_id": "star_trek_species_visual_profile_framework",
   "profile_type": "species_collection",
-  "version": "0.3",
-  "status": "FOUNDATION_WITH_USER_VISUAL_REFERENCE_OBSERVATIONS",
+  "version": "0.4",
+  "status": "CONTENT_DEPTH_COMPLETE",
   "authority_scope": "species_morphology",
   "inherits": [
     "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
@@ -12,7 +12,8 @@
     "Species visual profile defines biology/morphology only; it does not define culture, organization, clothing or personality.",
     "Canonical morphology evidence is required before locking unsupported details.",
     "Individual variation is required within canon-compatible bounds.",
-    "Persistent characters preserve their individual morphology across all assets."
+    "Persistent characters preserve their individual morphology across all assets.",
+    "Major-species production must resolve through the individual profile catalog rather than relying only on framework-level observations."
   ],
   "initial_profiles": {
     "human": {
@@ -173,5 +174,6 @@
         "Cybernetic components require state/function provenance; do not add random implants purely for visual drama."
       ]
     }
-  }
+  },
+  "profile_catalog_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_CATALOG_v0.1.json"
 }
