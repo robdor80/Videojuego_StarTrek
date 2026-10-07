@@ -1,0 +1,153 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "off_duty_activity_catalog",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Off-duty activity is generated from actual facilities, preferences, relationships, culture, wellbeing and free-time windows.",
+  "activity_types": {
+    "sleep_or_rest": {
+      "requires": [
+        "rest_location_or_valid_alternative"
+      ],
+      "schedule_family": "rest_or_sleep"
+    },
+    "meal": {
+      "requires": [
+        "food_service_or_personal_food_access"
+      ],
+      "schedule_family": "meal"
+    },
+    "hygiene_personal_care": {
+      "requires": [
+        "quarters_or_hygiene_facility"
+      ],
+      "schedule_family": "family_or_private_commitment"
+    },
+    "private_quarters_time": {
+      "requires": [
+        "quarters_or_assigned_residency"
+      ],
+      "schedule_family": "family_or_private_commitment"
+    },
+    "social_meal": {
+      "requires": [
+        "food_service_or_social_space",
+        "relationship_or_open_social_context"
+      ],
+      "schedule_family": "social_commitment"
+    },
+    "lounge_or_common_room": {
+      "requires": [
+        "lounge_or_common_space"
+      ],
+      "schedule_family": "recreation"
+    },
+    "holodeck": {
+      "requires": [
+        "holodeck",
+        "reservation_capacity"
+      ],
+      "schedule_family": "recreation"
+    },
+    "physical_exercise": {
+      "requires": [
+        "gym_or_suitable_space"
+      ],
+      "schedule_family": "recreation"
+    },
+    "games_cards_chess": {
+      "requires": [
+        "social_or_private_space"
+      ],
+      "schedule_family": "recreation"
+    },
+    "music_art_performance": {
+      "requires": [
+        "suitable_space_or_personal_equipment"
+      ],
+      "schedule_family": "recreation"
+    },
+    "reading_study": {
+      "requires": [
+        "personal_terminal_or_library_access"
+      ],
+      "schedule_family": "recreation"
+    },
+    "personal_project": {
+      "requires": [
+        "relevant_space_or_terminal"
+      ],
+      "schedule_family": "professional_task"
+    },
+    "family_time": {
+      "requires": [
+        "family_refs",
+        "shared_or_accessible_location"
+      ],
+      "schedule_family": "family_or_private_commitment"
+    },
+    "friendship_social_visit": {
+      "requires": [
+        "relationship_ref",
+        "accessible_location"
+      ],
+      "schedule_family": "social_commitment"
+    },
+    "romantic_private_time": {
+      "requires": [
+        "relationship_and_consent_state",
+        "private_accessible_location"
+      ],
+      "schedule_family": "family_or_private_commitment"
+    },
+    "cultural_or_religious_practice": {
+      "requires": [
+        "individual_culture_or_belief_state",
+        "appropriate_space_if_needed"
+      ],
+      "schedule_family": "family_or_private_commitment"
+    },
+    "counseling": {
+      "requires": [
+        "counseling_service_or_qualified_person"
+      ],
+      "schedule_family": "medical"
+    },
+    "shore_leave": {
+      "requires": [
+        "authorized_leave",
+        "accessible_destination"
+      ],
+      "schedule_family": "shore_leave"
+    },
+    "observation_or_stargazing": {
+      "requires": [
+        "viewing_space_or_window_access"
+      ],
+      "schedule_family": "recreation"
+    }
+  },
+  "selection_inputs": [
+    "personality_profile",
+    "preferences_and_habits",
+    "relationship_graph",
+    "family_refs",
+    "culture_refs",
+    "fatigue_and_wellbeing",
+    "current_free_time_window",
+    "ship_facilities",
+    "facility_capacity",
+    "alert_state",
+    "mission_state",
+    "privacy_availability",
+    "current_location"
+  ],
+  "rules": [
+    "Unavailable facilities cannot be selected.",
+    "Holodeck use requires a real holodeck and capacity/reservation state.",
+    "Large ships provide more variety; small ships concentrate social life into fewer spaces.",
+    "Small crews increase repeated encounters but do not automatically create friendships.",
+    "Characters can choose solitude even on socially dense ships.",
+    "Current grief, fatigue or stress may change activity preference temporarily without rewriting personality.",
+    "Off-screen activity resolution must remain schedule-compatible and cannot create major relationship events without the social/relationship systems."
+  ]
+}
