@@ -1,0 +1,165 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "klingon_cultural_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "klingon",
+    "automatic_attachment_by_species": false,
+    "principle": "Honor, House identity, ritual and martial traditions can be culturally central without forcing profession, morality or political loyalty."
+  },
+  "values_and_norms": [
+    {
+      "norm": "honor_and_reputation_can_shape_social_judgment",
+      "strength": "strong_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "house_or_lineage_identity_can_be_socially_significant",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "ritualized_challenge_and_martial_tradition_exist",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "strength_and_courage_can_carry_social_prestige",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "direct challenge",
+      "formal declaration",
+      "ritual language",
+      "reputation-sensitive response"
+    ],
+    "misread_risks": [
+      "Direct challenge is not always immediate violence.",
+      "Honor language does not prove objective morality or legal right.",
+      "Refusing an insult response can have different meanings depending on House, rank, relationship and era."
+    ]
+  },
+  "authority_and_status": {
+    "possible_status_sources": [
+      "House/lineage",
+      "political office",
+      "military rank",
+      "personal reputation",
+      "formal obligation"
+    ],
+    "rules": [
+      "House identity must be a persistent family/social state, never improvised by AI.",
+      "Military rank and House standing are separate.",
+      "Species does not imply Klingon Empire citizenship or loyalty."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "universal_rule": null,
+    "note": "Do not derive intimate conduct from warrior stereotypes."
+  },
+  "family_kinship_and_household": {
+    "known_contexts": [
+      "House/lineage can affect social identity and obligation"
+    ],
+    "rules": [
+      "Kinship and House membership require persistent provenance.",
+      "Family honor/reputation can influence expectations but does not overwrite individual relationships.",
+      "No universal marriage/household template is imposed by this baseline."
+    ]
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "honor narratives",
+      "ritual milestones",
+      "martial tradition",
+      "House history"
+    ],
+    "exact_curriculum_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Warrior is a profession/status path, not the default identity of every Klingon.",
+    "civilian_roles_required_by_universe": true
+  },
+  "law_duty_and_obligation": {
+    "rule": "Honor obligations, challenges or blood feuds require explicit state/event provenance; they are not generated from species label."
+  },
+  "mourning_death_and_legacy": {
+    "cultural_salience": "death, honor and legacy can be socially meaningful",
+    "universal_funeral_script": null,
+    "rule": "Do not impose one grief reaction on all Klingons."
+  },
+  "cross_cultural_interaction": {
+    "common_misreads": [
+      "every disagreement is a duel",
+      "every Klingon is military",
+      "honor has one universal definition"
+    ],
+    "professional_response": "Resolve actual House, rank, relationship, political and individual context before interpreting honor language."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "House",
+      "world/region",
+      "military_or_civilian_context",
+      "era",
+      "offworld upbringing",
+      "politics",
+      "personal interpretation of honor"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Federation-Klingon political context changes substantially between retained eras.",
+      "Cultural profile must not import a later alliance or later political settlement into earlier campaigns."
+    ]
+  },
+  "gameplay_hooks": [
+    "house_network",
+    "reputation_and_honor_context",
+    "ritual_challenge",
+    "family_obligation",
+    "civilian_vs_military_identity",
+    "era_specific_diplomacy"
+  ],
+  "ai_guardrails": [
+    "Do not turn every Klingon into an aggressive warrior.",
+    "Do not create a House, feud, duel, marriage or honor debt without world-state provenance.",
+    "Do not use 'honor' as a universal morality score.",
+    "Do not infer Empire loyalty from species."
+  ],
+  "unknowns": [
+    "universal household form",
+    "complete inheritance law",
+    "complete marriage ritual state machine",
+    "regional subculture catalogue",
+    "universal funerary practice"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_KLINGON",
+      "confidence": "MEDIUM",
+      "claim_scope": "House, honor, society and cultural cross-check"
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP",
+      "confidence": "HIGH",
+      "claim_scope": "era-dependent political relationship"
+    },
+    {
+      "source_id": "VOY_DAY_OF_HONOR",
+      "confidence": "HIGH",
+      "claim_scope": "honor-linked ritual/cultural context"
+    },
+    {
+      "source_id": "DS9_THE_WAY_OF_THE_WARRIOR",
+      "confidence": "HIGH",
+      "claim_scope": "late-24th-century Klingon political/military context"
+    }
+  ]
+}
