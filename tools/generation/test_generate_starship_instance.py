@@ -118,5 +118,20 @@ class ProceduralStarshipGeneratorTests(unittest.TestCase):
         self.assertEqual(watch["allocation_total"], 80)
 
 
+    def test_same_campaign_distinct_need_ids_create_distinct_ships(self):
+        common = dict(
+            campaign_seed="one_campaign",
+            era_id="tng_ds9_voyager",
+            campaign_date="2372-01-01",
+            operator="starfleet",
+            role="science",
+            requested_watch_pattern=None,
+        )
+        a = shipgen.generate(**common, need_id="need:science:001")
+        b = shipgen.generate(**common, need_id="need:science:002")
+        self.assertNotEqual(a["ship"]["ship_id"], b["ship"]["ship_id"])
+        self.assertEqual(a["generation_context"]["campaign_seed"], b["generation_context"]["campaign_seed"])
+
+
 if __name__ == "__main__":
     unittest.main()
