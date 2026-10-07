@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "trill_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "trill_system",
+    "planet_id": "trill",
+    "display_name_es": "Trill",
+    "world_type": "inhabited_class_m_planet",
+    "native_species_refs": [
+      "trill",
+      "trill_symbiont"
+    ],
+    "government_ref": "trill_government",
+    "dual_native_species_context": true
+  },
+  "orbital_context": {
+    "moon_count_context": 1,
+    "exact_orbits": null
+  },
+  "bulk_physics": {
+    "policy": "Exact values exist in later-screen planetary data but baseline retained-era gameplay does not require them; keep optional until system-level astronomy pass.",
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "class_m_habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "known": [
+      "lakes",
+      "oceans",
+      "Mak'ala symbiont pools"
+    ],
+    "exact_fraction": null
+  },
+  "geology_topography": {
+    "known": [
+      "forests",
+      "lakes",
+      "canyons",
+      "caves",
+      "Tenaran Ice Cliffs"
+    ],
+    "global_map": "not_exhaustive"
+  },
+  "climate_refs": [
+    "varied_temperate_habitable_regions"
+  ],
+  "biosphere_ref": "trill_biosphere_including_symbiont_ecology",
+  "region_refs": [
+    "Mak'ala",
+    "Caves of Mak'ala",
+    "Symbiosis Commission",
+    "Tenaran Ice Cliffs"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "joining/medical",
+    "symbiont_ecology",
+    "family_and_identity",
+    "science",
+    "cultural_visits",
+    "medical_emergency",
+    "institutional_secrecy_or_access_when_state_supports"
+  ],
+  "temporal_rules": [
+    "Joining institutions and public knowledge use campaign-date state.",
+    "Symbiont pools are physical ecology; government policy is mutable institutional state."
+  ],
+  "ai_boundary": [
+    "Do not expose host/symbiont private information.",
+    "Do not invent compatibility, joining approval or previous-host memories.",
+    "Do not treat unjoined Trill as incomplete."
+  ],
+  "visual_nap": [
+    "lush forests/caves/pools where region supports",
+    "Mak'ala should visually distinguish civic/institutional vs sacred/ecological spaces",
+    "symbiont pools require biological reference not generic glowing magic"
+  ],
+  "unknowns": [
+    "complete global geography",
+    "population by retained era",
+    "exact planetary bulk values in baseline"
+  ],
+  "provenance": [
+    "MA_TRILL_PLANET",
+    "MA_CAVES_MAKALA",
+    "DS9_EQUILIBRIUM",
+    "ST_OFFICIAL_TRILL_HISTORY_101",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
+  ]
+}
