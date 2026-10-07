@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "facility_scale_justification_model",
+  "status": "FOUNDATION_FIXED",
+  "classification": "GAME_ADDITION",
+  "principle": "Facility scale grows only when the need, throughput and strategic role justify fixed infrastructure at that scale.",
+  "scales": {
+    "temporary_support": {
+      "persistence_expectation": "hours_to_months",
+      "examples": [
+        "repair_tender",
+        "temporary_depot",
+        "construction_camp",
+        "mobile_medical_support"
+      ],
+      "permanent_station": false,
+      "justification": "short-lived or uncertain need",
+      "default_preference": "Use before permanent construction when feasible."
+    },
+    "micro_outpost": {
+      "persistence_expectation": "months_to_years",
+      "examples": [
+        "sensor_outpost",
+        "communications_relay",
+        "border_listening_post",
+        "small_science_post"
+      ],
+      "staffing_character": "very_small",
+      "services": "mission-specific only",
+      "requirement": "One narrow sustained function with clear site advantage.",
+      "anti_inflation": "No broad resupply/repair/trade services unless separately justified."
+    },
+    "small_station": {
+      "persistence_expectation": "years",
+      "examples": [
+        "research_station",
+        "small_trade_transfer",
+        "regional_medical_post",
+        "industrial_processing_post"
+      ],
+      "staffing_character": "small_to_medium",
+      "requirement": "Several sustained service demands or one high-value specialist function.",
+      "anti_inflation": "Must not grow into generic all-services stop."
+    },
+    "standard_station": {
+      "persistence_expectation": "many_years",
+      "examples": [
+        "frontier_station",
+        "orbital_trade_station",
+        "regional_support_station",
+        "Terok_Nor_type_role_context"
+      ],
+      "staffing_character": "medium_to_large",
+      "requirement": "Sustained regional throughput/population or strong strategic/industrial function.",
+      "anti_inflation": "Services remain bounded by design/capability; not every standard station has shipyard, hospital and diplomacy."
+    },
+    "starbase": {
+      "persistence_expectation": "decades",
+      "examples": [
+        "fleet_starbase",
+        "major_regional_hub",
+        "large_spacedock"
+      ],
+      "staffing_character": "large",
+      "requirement": "Regional-scale military/economic/administrative demand, high traffic, major fleet support or equivalent exceptional strategic value.",
+      "anti_inflation": "Rare. Existing starbases strongly suppress generation of another overlapping starbase unless redundancy/war/expansion justifies it."
+    },
+    "major_complex": {
+      "persistence_expectation": "decades_plus",
+      "examples": [
+        "Utopia_Planitia_scale_fleet_yards",
+        "capital_system_spacedock_complex",
+        "major_industrial_shipbuilding_cluster"
+      ],
+      "staffing_character": "very_large_multi_facility",
+      "requirement": "Exceptional polity-scale industrial, fleet, population or capital-system demand.",
+      "anti_inflation": "Procedural generation disabled by default; require authored/canonical anchor or explicit high-level world-development event."
+    }
+  },
+  "escalation_rules": [
+    "A lower-scale facility should be preferred when it can satisfy projected demand with acceptable queue/load.",
+    "Expansion is favored over constructing a nearby duplicate when topology/site/sovereignty permits.",
+    "Chronic saturation can justify expansion or a second facility only after traffic/service history demonstrates sustained unmet demand.",
+    "War may justify temporary or permanent redundancy, but postwar drawdown can mothball/decommission excess capacity.",
+    "Population growth alone does not mandate an orbital station if planetary infrastructure already serves the need."
+  ]
+}
