@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "facility_construction_and_lifecycle_state",
+  "status": "FOUNDATION_FIXED",
+  "states": [
+    "proposed",
+    "surveying",
+    "authorized",
+    "funding_or_resource_commitment",
+    "construction",
+    "partial_operation",
+    "commissioning",
+    "operational",
+    "expanding",
+    "refit",
+    "degraded",
+    "mothballed",
+    "abandoned",
+    "decommissioning",
+    "decommissioned",
+    "destroyed"
+  ],
+  "fields": {
+    "facility_id": null,
+    "origin_need_refs": [],
+    "sponsor_refs": [],
+    "design_ref": null,
+    "scale": null,
+    "site_ref": null,
+    "state": "proposed",
+    "proposal_time": null,
+    "authorized_time": null,
+    "construction_started_at": null,
+    "expected_completion_at": null,
+    "commissioning_at": null,
+    "operational_since": null,
+    "expansion_history_refs": [],
+    "refit_history_refs": [],
+    "mothball_or_decommission_reason": null,
+    "current_sustainment_refs": []
+  },
+  "rules": [
+    "No permanent station jumps from nonexistent to operational.",
+    "Construction time and material/personnel commitments must be represented at the appropriate simulation LOD.",
+    "Partial operation may expose only completed capabilities.",
+    "If the original need disappears before completion, construction may pause, cancel or be repurposed.",
+    "A facility can become obsolete or uneconomic and be mothballed/decommissioned.",
+    "Destroyed/abandoned stations remain historical objects until physically removed or otherwise resolved."
+  ]
+}
