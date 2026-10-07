@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "catalogue_index_id": "starship_class_catalogue_index",
   "class_definition_contract_ref": "gameplay/ship_operations/class_definition_contract.json",
   "catalogues": [
@@ -30,5 +30,16 @@
   ],
   "generation_rule": "Filter all catalogues by campaign date, operator, role and valid configuration; canonical individual ships are reserved identities.",
   "shipboard_life_catalog_ref": "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json",
-  "generation_pipeline_ref": "universe/generation/procedural_starship_instance_generation_pipeline_v0.1.json"
+  "generation_pipeline_ref": "universe/generation/procedural_starship_instance_generation_pipeline_v0.1.json",
+  "procedural_design_catalogues": [
+    {
+      "operator_family": "civilian_procedural",
+      "design_profiles_ref": "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json",
+      "life_profiles_ref": "lore/starships/classes/shipboard_life/CIVILIAN_PROCEDURAL_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    }
+  ],
+  "reference_generators": [
+    "tools/generation/generate_starship_instance.py",
+    "tools/generation/generate_civilian_starship.py"
+  ]
 }
