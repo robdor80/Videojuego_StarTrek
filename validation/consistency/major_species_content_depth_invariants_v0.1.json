@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "major_species_content_depth_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "profiles": [
+    "gameplay/species/profiles/klingon_v0.1.json",
+    "gameplay/species/profiles/romulan_v0.1.json",
+    "gameplay/species/profiles/cardassian_v0.1.json",
+    "gameplay/species/profiles/bajoran_v0.1.json",
+    "gameplay/species/profiles/ferengi_v0.1.json",
+    "gameplay/species/profiles/trill_v0.1.json",
+    "gameplay/species/profiles/betazoid_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "klingon_not_warrior_lock",
+      "expected": [
+        "Species does not force warrior profession or aggression.",
+        "House/honor state requires actual provenance.",
+        "Cranial-ridge identity remains individual and persistent."
+      ]
+    },
+    {
+      "id": "romulan_not_vulcan_clone",
+      "expected": [
+        "Vulcan ancestry does not import Vulcan telepathy or medicine automatically.",
+        "Tal Shiar membership is never inferred.",
+        "Reserved behavior is not proof of deception."
+      ]
+    },
+    {
+      "id": "cardassian_not_union_loyalty",
+      "expected": [
+        "Species does not imply Cardassian Union loyalty.",
+        "Environmental preference can matter without becoming personality.",
+        "Ridge identity remains individual and persistent."
+      ]
+    },
+    {
+      "id": "bajoran_faith_not_species_lock",
+      "expected": [
+        "Faith, orthodoxy, trauma and resistance history require character state.",
+        "Religious and civil authority remain separate."
+      ]
+    },
+    {
+      "id": "ferengi_commerce_not_personality",
+      "expected": [
+        "Species does not force merchant role, greed or deceit.",
+        "Telepathic-reading limitation is not universal psionic immunity.",
+        "Ear/cranial morphology remains individual."
+      ]
+    },
+    {
+      "id": "trill_joining_identity_continuity",
+      "expected": [
+        "Host and symbiont histories remain traceable.",
+        "Joined identity is synthesis, not a previous host resurrected.",
+        "Previous-host memory remains knowledge-gated."
+      ]
+    },
+    {
+      "id": "betazoid_telepathy_not_omniscience",
+      "expected": [
+        "Capability strength is individual.",
+        "Emotion sensing does not reveal motive/objective truth.",
+        "Only resolved information enters character knowledge."
+      ]
+    },
+    {
+      "id": "unknown_biology_remains_unknown",
+      "expected": [
+        "Missing lifecycle/reproduction/medical numbers stay unknown.",
+        "No human defaults silently fill non-human profiles."
+      ]
+    },
+    {
+      "id": "visual_reference_not_template",
+      "expected": [
+        "Reference images inform species morphology grammar only.",
+        "Canonical/reference faces are not cloned into procedural NPC pools."
+      ]
+    }
+  ]
+}
