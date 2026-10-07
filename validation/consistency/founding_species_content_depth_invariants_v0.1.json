@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "founding_species_content_depth_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "profiles": [
+    "gameplay/species/profiles/human_v0.1.json",
+    "gameplay/species/profiles/vulcan_v0.1.json",
+    "gameplay/species/profiles/andorian_v0.1.json",
+    "gameplay/species/profiles/tellarite_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "human_is_not_earth_federation_default",
+      "expected": [
+        "Human species does not imply Earth upbringing.",
+        "Human species does not imply Federation citizenship or Starfleet service."
+      ]
+    },
+    {
+      "id": "vulcan_emotion_and_telepathy_boundaries",
+      "expected": [
+        "Logic/emotional control is cultural discipline, not absence of emotion.",
+        "Mind meld is scoped and never omniscient.",
+        "Pon farr remains private unless known."
+      ]
+    },
+    {
+      "id": "andorian_antenna_identity_and_injury",
+      "expected": [
+        "Antenna geometry persists per individual.",
+        "Injury/regrowth changes state/history of the same character.",
+        "Directness does not automatically mean hostility."
+      ]
+    },
+    {
+      "id": "tellarite_sparse_biology_stays_sparse",
+      "expected": [
+        "Unknown biology remains unknown.",
+        "Argumentative social norms do not become anger/personality lock.",
+        "No unsourced medical modifiers are invented."
+      ]
+    },
+    {
+      "id": "species_profiles_do_not_force_profession",
+      "expected": [
+        "No founding species profile forces profession, faction, morality or personality."
+      ]
+    },
+    {
+      "id": "visual_reference_is_not_identity_template",
+      "expected": [
+        "Reference morphology can guide species grammar.",
+        "Procedural NPCs receive independent persistent visual identities.",
+        "Canonical/reference faces are not cloned as generic NPC templates."
+      ]
+    }
+  ]
+}
