@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "settlement_infrastructure_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Settlements exist because population, geography, institutions, resources and transport create a viable reason for them.",
+  "settlement_fields": [
+    "settlement_id",
+    "planet_or_location_id",
+    "population_state_ref",
+    "founding_or_origin_ref",
+    "function_refs",
+    "region_ref",
+    "governance_ref",
+    "infrastructure_ref",
+    "service_refs",
+    "economy_ref",
+    "history_ref"
+  ],
+  "infrastructure_domains": [
+    "habitation",
+    "energy",
+    "water_and_environmental_control",
+    "food",
+    "transport",
+    "communications",
+    "medical",
+    "education",
+    "security",
+    "administration",
+    "industry",
+    "storage",
+    "spaceport_or_transport_link_if_applicable",
+    "waste_and_recycling"
+  ],
+  "rules": [
+    "Settlement size and services must be compatible with population, technology and environment.",
+    "Infrastructure requires capacity and may fail, degrade, expand or be repaired.",
+    "A settlement is not just a visual landmark; its population and services exist in World State.",
+    "Orbital and surface infrastructure are linked through actual transport/logistics capabilities.",
+    "Generated settlement layout/detail may use LOD, but stable districts/services retain identity once materialized."
+  ]
+}
