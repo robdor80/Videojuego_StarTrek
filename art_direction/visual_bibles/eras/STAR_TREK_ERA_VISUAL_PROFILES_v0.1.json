@@ -1,0 +1,56 @@
+{
+  "profile_id": "star_trek_era_visual_profiles",
+  "profile_type": "era_collection",
+  "version": "0.1",
+  "status": "FOUNDATION",
+  "authority_scope": "playable_eras",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1"
+  ],
+  "profiles": {
+    "pike": {
+      "era_id": "pike",
+      "reference_years": [
+        2259,
+        2265
+      ],
+      "source_profile_ref": "universe/chronology/era_profiles/pike/era_profile.json",
+      "rules": [
+        "Use Pike/SNW visual language only where source-backed.",
+        "Do not import later-era LCARS, uniforms or standard technologies without explicit exception.",
+        "Exact campaign date may narrow the broad era profile."
+      ]
+    },
+    "kirk": {
+      "era_id": "kirk",
+      "reference_years": [
+        2265,
+        2293
+      ],
+      "source_profile_ref": "universe/chronology/era_profiles/kirk/era_profile.json",
+      "subperiods": [
+        "tos",
+        "motion_picture_transition",
+        "kirk_films"
+      ],
+      "rules": [
+        "Kirk is a broad era with substantial internal visual evolution.",
+        "Exact date/subperiod must resolve before uniform/interior/equipment generation.",
+        "Do not flatten TOS and film-era presentation into one style."
+      ]
+    },
+    "tng_ds9_voyager": {
+      "era_id": "tng_ds9_voyager",
+      "reference_years": [
+        2364,
+        2378
+      ],
+      "source_profile_ref": "universe/chronology/era_profiles/tng_ds9_voyager/era_profile.json",
+      "rules": [
+        "TNG, DS9 and Voyager coexist only when date permits.",
+        "Organization/platform context chooses the correct local visual language.",
+        "Do not treat all late-24th-century interiors/uniforms as visually identical."
+      ]
+    }
+  }
+}
