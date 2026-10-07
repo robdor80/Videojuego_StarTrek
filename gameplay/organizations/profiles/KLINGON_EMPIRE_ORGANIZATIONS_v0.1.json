@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "klingon_empire_organizations",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "klingon_empire",
+  "organizations": [
+    {
+      "organization_id": "klingon_imperial_government",
+      "organization_type": "government",
+      "display_name": "Gobierno Imperial Klingon",
+      "authority_model": {
+        "known_roles": [
+          "chancellor",
+          "high_council"
+        ]
+      },
+      "rules": [
+        "Central policy may conflict with House interests.",
+        "Current Chancellor/leadership is temporal World State."
+      ]
+    },
+    {
+      "organization_id": "klingon_high_council",
+      "organization_type": "government",
+      "display_name": "Alto Consejo Klingon",
+      "parent_organization_ref": "klingon_imperial_government",
+      "rules": [
+        "Council participation/standing requires actual political state.",
+        "House influence does not equal automatic command over every Imperial unit."
+      ]
+    },
+    {
+      "organization_id": "klingon_great_houses",
+      "organization_type": "social",
+      "display_name": "Grandes Casas Klingon",
+      "instance_model": "Each persistent House is its own organization/social-political network.",
+      "rules": [
+        "House membership is persistent kinship/social state.",
+        "Different Houses may pursue competing interests.",
+        "A House is not identical to the Empire or military."
+      ]
+    },
+    {
+      "organization_id": "klingon_imperial_military",
+      "organization_type": "military_or_service",
+      "display_name": "Fuerzas militares del Imperio Klingon",
+      "rules": [
+        "Military service requires membership/assignment.",
+        "House status and military rank remain separate.",
+        "Local commanders can act within or against wider political pressure only through represented events."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not invent House membership or Council seat.",
+    "Do not infer military service from Klingon species.",
+    "Do not let House reputation silently grant Imperial command authority."
+  ],
+  "provenance_refs": [
+    "gameplay/diplomacy/major_faction_catalogue.json#klingon_empire",
+    "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
