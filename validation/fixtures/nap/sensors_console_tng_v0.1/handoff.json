@@ -1,0 +1,36 @@
+{
+  "handoff_id": "nap_fixture_handoff_sensor_console_tng_001",
+  "entity_id": "fixture_console_sensors_tng_001",
+  "visual_identity_id": "vid_fixture_sensor_console_tng_001",
+  "asset_id": "asset_fixture_sensor_console_tng_001",
+  "asset_category": "interior_console_reference_fixture",
+  "resolved_visual_context_ref": "validation/fixtures/nap/sensors_console_tng_v0.1/resolved_visual_context.json",
+  "exact_prompt_ref": null,
+  "reference_refs": [
+    "gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json",
+    "gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json"
+  ],
+  "requested_output_profile": {
+    "format": "webp",
+    "width": 320,
+    "height": 180,
+    "quality": 86,
+    "fixture_only": true
+  },
+  "source_repo": "robdor80/Videojuego_StarTrek",
+  "lifecycle_state": "COMPLETED",
+  "archive_record_ref": "validation/fixtures/nap/sensors_console_tng_v0.1/archive/sensor_console_tng_fixture_master.png",
+  "production_record_ref": "validation/fixtures/nap/sensors_console_tng_v0.1/production/sensor_console_tng_fixture.webp",
+  "bible_profile_versions": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_INTERIOR_CONSOLE_FACILITY_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_ERA_VISUAL_PROFILES_v0.1",
+    "STARFLEET_VISUAL_PROFILE_v0.1",
+    "STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1"
+  ],
+  "provenance": {
+    "fixture_mode": true,
+    "not_production_asset": true,
+    "note": "COMPLETED means the repository fixture simulates and validates the full NAP handoff/archive/derivative/verification contract; it is not approved game art."
+  }
+}
