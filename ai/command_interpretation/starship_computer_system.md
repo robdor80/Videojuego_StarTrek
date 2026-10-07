@@ -212,6 +212,40 @@ The personal runtime uses quota-aware routing.
 
 This policy exists to preserve the limited 3.8 quota for cases where the higher-capability model is genuinely needed because the default model is unavailable, rather than using it as a generic repair mechanism for unsupported contracts.
 
+## Result presentation layer
+
+After deterministic execution, the authoritative result is not sent back to the LLM by default.
+
+The runtime uses a local contextual response composer:
+
+```
+PLAYER ORDER
+   ↓
+GEMINI INTERPRETS
+   ↓
+COMMAND PLAN
+   ↓
+DETERMINISTIC ENGINE
+   ↓
+AUTHORITATIVE RESULT
+   ↓
+LOCAL RESPONSE COMPOSER
+   ↓
+PLAYER
+```
+
+The composer receives the original plan plus structured engine results and decides what belongs in the primary Computer reply. It must:
+
+- answer the actual condition requested by the officer;
+- avoid presenting non-matching observations as if they were successful matches;
+- keep full raw observations available in technical details/logs;
+- never invent or reinterpret authoritative state;
+- avoid a second model call merely to phrase routine results.
+
+Example: if the officer asks to mark **new** contacts above 60% confidence, existing contacts above 60% may remain visible in technical details but must not be presented in the main reply as qualifying candidates.
+
+A future optional LLM summarization pass may exist for special narrative or conversational cases, but it is not part of the default operational path.
+
 ## Transparency
 
 Routine use should be simple. Advanced technical data remains inspectable.
