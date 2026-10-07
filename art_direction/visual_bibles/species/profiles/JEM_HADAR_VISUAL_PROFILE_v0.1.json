@@ -1,0 +1,38 @@
+{
+  "profile_id": "jem_hadar_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:jem_hadar",
+  "species_id": "jem_hadar",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Jem'Hadar have strongly non-Human craniofacial morphology with pronounced ridges/projections and textured/mottled dermal presentation.",
+    "Cranial ridge/projection topology varies by individual and belongs to persistent identity.",
+    "Accelerated maturation affects lifecycle/age-state, not permission to regenerate a different face.",
+    "Ketracel-white delivery hardware, weapons and armor are equipment/state layers and require actual Dominion service/resource context."
+  ],
+  "allowed_variation": [
+    "cranial ridge/projection topology",
+    "dermal mottling",
+    "facial proportions",
+    "build",
+    "age/maturation state",
+    "battle scars with provenance"
+  ],
+  "forbidden_variation": [
+    "automatic weapon/armor in civilian/medical portrait context",
+    "random horns beyond validated morphology",
+    "permanent rage expression",
+    "ketracel hardware without state"
+  ],
+  "source_refs": [
+    "MA_JEM_HADAR",
+    "MA_KETRACEL_WHITE",
+    "ST_OFFICIAL_DOMINION_101"
+  ],
+  "notes": "Military socialization is not encoded as a permanently aggressive face."
+}
