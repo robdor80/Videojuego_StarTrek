@@ -1,0 +1,29 @@
+{
+  "profile_id": "vulcan_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "vulcan",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Pointed external ears are a primary persistent species-readable feature in the supplied reference set.",
+    "Strongly angled/up-swept eyebrow presentation is a recurring screen cue but should not erase individual facial variation.",
+    "Underlying facial structure remains broadly individual.",
+    "Haircut is presentation state, not species anatomy."
+  ],
+  "identity_rules": [
+    "Ear geometry must stay stable for a persistent individual unless an explicit injury/medical event changes it.",
+    "A later portrait may change hair, age and clothing but must preserve face identity."
+  ],
+  "forbidden": [
+    "bowl-cut as mandatory biology",
+    "blank facial expression as species requirement",
+    "one canonical character face reused as procedural template"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
