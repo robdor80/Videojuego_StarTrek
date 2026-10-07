@@ -1,0 +1,211 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "captain_operational_decision_authority",
+  "status": "FOUNDATION_FIXED",
+  "principle": "When the player is the lawful commanding officer, automated ship-management decisions are defaults/proposals inside the captain's authority, not irrevocable outcomes.",
+  "core_rule": "The engine may calculate a safe/competent default, but the captain retains the right and duty to accept, modify, replace, delegate or later revise decisions that fall within legitimate command authority.",
+  "player_captain_rights": [
+    "inspect_engine_or_subordinate_proposal",
+    "accept_proposal_unchanged",
+    "modify_parameters",
+    "reject_and_request_alternative",
+    "issue_direct_policy",
+    "delegate_decision",
+    "revoke_delegation",
+    "set_standing_orders",
+    "temporarily_override_normal_policy_when_authority_and_rules_allow",
+    "review_consequences_and_revise_later"
+  ],
+  "player_captain_duties": [
+    "retain_responsibility_for_command_decisions_even_when_delegated",
+    "consider_readiness_safety_mission_and_crew_state",
+    "respond_to_reported_conflicts_or_unfilled_coverage",
+    "respect_valid_professional_or_external_authority_limits",
+    "own_consequences_of_overriding_advice_or_safe_defaults"
+  ],
+  "control_modes": {
+    "manual": {
+      "description": "No effective policy change is made until the captain chooses.",
+      "suitable_for": [
+        "major_policy_changes",
+        "player_favorite_domains",
+        "sensitive_personnel_or_operational_decisions"
+      ]
+    },
+    "proposal_requires_approval": {
+      "description": "XO/engine builds a complete proposal; captain accepts, edits or rejects it.",
+      "suitable_for": [
+        "watch_patterns",
+        "duty_rosters",
+        "leave_plans",
+        "training_cycles",
+        "maintenance_priorities"
+      ]
+    },
+    "delegated_autonomous": {
+      "description": "Delegated officer/system may apply decisions within standing limits; captain can review and revoke later.",
+      "suitable_for": [
+        "routine_roster_adjustments",
+        "minor_schedule_repairs",
+        "normal_departmental_detail"
+      ]
+    }
+  },
+  "decision_domains": {
+    "watch_policy": {
+      "captain_authority": "final_within_rules",
+      "examples": [
+        "three_vs_four_watches",
+        "watch_start_times",
+        "temporary_extra_watch",
+        "reversion_to_prior_pattern"
+      ],
+      "normal_delegate": "executive_officer"
+    },
+    "duty_roster_policy": {
+      "captain_authority": "final_policy",
+      "examples": [
+        "minimum_manning_posture",
+        "relief_pool_size",
+        "temporary_double_watch_authorization"
+      ],
+      "normal_delegate": "executive_officer",
+      "detail_owner": "department_heads_or_personnel_function"
+    },
+    "alert_and_readiness_policy": {
+      "captain_authority": "final_when_not_superseded_by_automatic_safety_or_valid_external_rule",
+      "examples": [
+        "yellow_alert",
+        "red_alert",
+        "battle_station_posture",
+        "readiness_level"
+      ],
+      "normal_delegate": "officer_of_the_watch_with_standing_orders"
+    },
+    "training_and_drill_policy": {
+      "captain_authority": "final_policy",
+      "examples": [
+        "drill_frequency",
+        "department_training_priority",
+        "recertification_tempo"
+      ],
+      "normal_delegate": "executive_officer_and_department_heads"
+    },
+    "maintenance_priority": {
+      "captain_authority": "final_priority_with_safety_limits",
+      "examples": [
+        "which_noncritical_system_is_repaired_first",
+        "defer_noncritical_maintenance",
+        "surge_engineering_effort"
+      ],
+      "normal_delegate": "chief_engineer"
+    },
+    "shore_leave_and_liberty": {
+      "captain_authority": "final_with_mission_security_medical_and_external_constraints",
+      "examples": [
+        "authorize_leave_window",
+        "suspend_leave",
+        "stagger_departments"
+      ],
+      "normal_delegate": "executive_officer"
+    },
+    "department_operational_priority": {
+      "captain_authority": "final_policy",
+      "examples": [
+        "science_focus",
+        "security_posture",
+        "engineering_endurance_priority",
+        "medical_readiness"
+      ],
+      "normal_delegate": "relevant_department_head"
+    },
+    "resource_allocation_policy": {
+      "captain_authority": "final_with_capability_safety_and_mission_constraints",
+      "examples": [
+        "power_priority",
+        "shuttle_allocation",
+        "sensor_time_priority",
+        "damage_control_priority"
+      ],
+      "normal_delegate": "operations_or_relevant_department"
+    },
+    "away_team_and_detachment_policy": {
+      "captain_authority": "final_with_qualification_medical_and_mission_constraints",
+      "examples": [
+        "team_size",
+        "mission_lead",
+        "required_specialties",
+        "reserve_team"
+      ],
+      "normal_delegate": "executive_officer"
+    },
+    "shipboard_access_and_security_posture": {
+      "captain_authority": "final_inside_owned_clearance_scope",
+      "examples": [
+        "restricted_areas",
+        "visitor_escort_policy",
+        "security_level"
+      ],
+      "normal_delegate": "security_chief"
+    },
+    "passenger_civilian_safety_policy": {
+      "captain_authority": "final_operational_policy",
+      "examples": [
+        "evacuation_readiness",
+        "restricted_areas_during_alert",
+        "shelter_or_muster_policy"
+      ],
+      "normal_delegate": "executive_officer_or_operations"
+    },
+    "mission_execution": {
+      "captain_authority": "broad_discretion_inside_valid_tasking_order",
+      "examples": [
+        "route",
+        "tactical_approach",
+        "timing",
+        "resource_commitment"
+      ],
+      "normal_delegate": "bridge_and_department_team"
+    }
+  },
+  "protected_or_external_limits": [
+    {
+      "domain": "physics_and_capability",
+      "rule": "The captain cannot order a capability the ship does not possess or create resources that do not exist."
+    },
+    {
+      "domain": "qualification",
+      "rule": "Command authority does not make an unqualified person professionally qualified. Emergency acting assignments still require the rules to permit them."
+    },
+    {
+      "domain": "medical_fitness",
+      "rule": "Valid medical authority can declare personnel, including the captain, unfit for duty. Captain rank does not silently cancel that professional determination.",
+      "ref": "lore/federation/starfleet/regulations/medical_command_authority.md"
+    },
+    {
+      "domain": "higher_authority_and_law",
+      "rule": "Valid mission tasking, law, treaty, rules of engagement and external authority may constrain command discretion. The captain may contest/disobey only through explicit gameplay with consequences, not by silently rewriting the constraint."
+    },
+    {
+      "domain": "safety_interlocks",
+      "rule": "Some safeguards may be overrideable and others not; each subsystem must declare this explicitly. Captain status alone does not mean every interlock has an override."
+    },
+    {
+      "domain": "personal_autonomy",
+      "rule": "Command may assign lawful duty but does not own a person's private relationships, beliefs or consent."
+    }
+  ],
+  "acceptance_rule": "Choosing to keep the engine/XO proposal unchanged is still a captain decision and may be recorded as captain_approved.",
+  "consequence_rule": "A captain may make a worse choice than the engine recommendation. The system should model the consequences rather than secretly correcting the order back to the preferred default.",
+  "ai_boundary": [
+    "AI may advise, propose alternatives and explain consequences.",
+    "AI cannot remove the captain's lawful decision right because its own proposal scores better.",
+    "AI cannot fabricate legal/medical/technical authority to block a valid command decision.",
+    "AI cannot execute a captain-only manual decision before approval when the domain is configured manual."
+  ],
+  "source_refs": [
+    "TNG_CHAIN_OF_COMMAND_PART_I",
+    "lore/federation/starfleet/regulations/medical_command_authority.md",
+    "gameplay/orders/starfleet_mission_tasking_order.json"
+  ]
+}
