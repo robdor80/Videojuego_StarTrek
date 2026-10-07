@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "network_disruption_crisis_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "affected_networks": [
+    "transport",
+    "trade",
+    "supply",
+    "communications",
+    "energy",
+    "medical_support",
+    "fleet_support",
+    "population_movement",
+    "political_access"
+  ],
+  "crisis_fields": [
+    "crisis_id",
+    "cause_event_refs",
+    "affected_region_refs",
+    "affected_network_refs",
+    "severity",
+    "started_at",
+    "expected_or_unknown_duration",
+    "mitigation_refs",
+    "current_state",
+    "resolution_event_refs"
+  ],
+  "rules": [
+    "Blockades, wars, disasters and infrastructure failures alter existing networks rather than spawning arbitrary inconvenience.",
+    "A disrupted route can delay, divert, cancel or reprioritize traffic.",
+    "Supply shortages emerge from changed flows/capacity and persist until resolved.",
+    "Population movement may react to safety, access and service availability.",
+    "LOD simulation may aggregate effects but must conserve major resources/populations and preserve causal history."
+  ]
+}
