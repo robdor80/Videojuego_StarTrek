@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "faction_contact_knowledge",
   "layers": [
     "world_truth",
@@ -15,7 +15,9 @@
     "A known faction does not reveal current orders, hidden alliances or covert intent.",
     "Historical relations are available only if the observing character or ship database plausibly knows them.",
     "Classified intelligence requires clearance.",
-    "AI descriptions must use only the highest knowledge layer actually available."
+    "AI descriptions must use only the highest knowledge layer actually available.",
+    "A generated civilization self-name is not player-visible until language/contact evidence supports it.",
+    "Knowledge of one polity or representative does not reveal all governments or internal politics."
   ],
   "contact_states": [
     "unidentified",
@@ -44,5 +46,7 @@
     "known_treaty_status",
     "known_threat_profile",
     "confidence_display"
-  ]
+  ],
+  "civilization_contact_status_ref": "gameplay/first_contact/civilization_contact_status_model_v0.1.json",
+  "first_contact_readiness_ref": "gameplay/first_contact/first_contact_readiness_assessment_v0.1.json"
 }
