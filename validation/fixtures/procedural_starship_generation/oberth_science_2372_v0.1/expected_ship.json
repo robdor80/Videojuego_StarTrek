@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "oberth_science_2372_v0.1",
+  "expected": {
+    "seed_key_hash": "1976d1ae9cbc2461e77e542c495a435275dba26d3a81bcd15282ff4a766b3d32",
+    "ship_id": "gen:starship:de67f663aaf6de92",
+    "designation": "STARFLEET-6D0EDF",
+    "class_id": "oberth",
+    "configuration_id": null,
+    "class_or_configuration_ref": "oberth",
+    "operator": "starfleet",
+    "role": "science",
+    "duty_crew_target": 80,
+    "staffing_guidance_key": "oberth",
+    "life_profile_id": "starfleet_oberth_life",
+    "habitability_tier": "standard",
+    "privacy_level": "medium",
+    "social_density": "high",
+    "watch": {
+      "pattern": "three_shift",
+      "alpha": {
+        "start": "04:00",
+        "end": "12:00",
+        "assigned_primary_personnel": 28
+      },
+      "beta": {
+        "start": "12:00",
+        "end": "20:00",
+        "assigned_primary_personnel": 24
+      },
+      "gamma": {
+        "start": "20:00",
+        "end": "04:00",
+        "assigned_primary_personnel": 24
+      },
+      "relief_or_float": 4,
+      "allocation_total": 80
+    },
+    "persistence": {
+      "reroll_on_reload": false
+    }
+  },
+  "assertions": [
+    "The requested science role filters selection to science-capable Starfleet classes before weighted selection.",
+    "The resulting 80-person duty crew exactly equals 28 + 24 + 24 + 4.",
+    "The 04:00 watch anchor is individual-ship policy, not Oberth class canon.",
+    "The same input must reproduce the same ship_id and schedule.",
+    "A different generation seed must produce a distinct individual ship identity."
+  ]
+}
