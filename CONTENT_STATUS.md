@@ -191,21 +191,49 @@ Current baseline:
 
 **Runtime boundary:** content/contracts/reference implementation are complete for v0.1. Authoritative live construction catch-up, facility population simulation, queues, traffic and persistence remain dependent on CoreRPG 4.5+.
 
+## Procedural worlds, settlements, civilizations & First Contact v0.1
+
+Control documents:
+- `docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_plan_v0.1.md`
+- `docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_status_v0.1.json`
+
+Current baseline:
+- **18 / 18 packages COMPLETE**;
+- latent civilizations exist before discovery;
+- deterministic persistent species morphology/appearance;
+- generated language/naming systems;
+- governments, institutions and representative authority;
+- cities/colonies/settlements with causal infrastructure;
+- economy/resources/trade grammar;
+- technology and warp-state grammar;
+- observer-scoped contact knowledge;
+- operational Prime Directive protocol;
+- First Contact readiness/briefing/protocol;
+- warp threshold **does not** auto-trigger contact;
+- captain command decision integrated;
+- Universal Translator bootstrap with partial/ambiguous states;
+- divided-world contact remains polity-scoped;
+- procedural civilization visual/NAP identity;
+- deterministic reference generator;
+- four First Contact fixtures including pre-warp, first warp, mutual post-warp encounter and divided world.
+
+**Runtime boundary:** civilization/settlement/contact content and reference implementation are complete for v0.1. Physical planet generation remains its separate existing contract layer; authoritative runtime execution waits on CoreRPG 4.5+.
+
 ## Major remaining domains
 
 | Domain | Status |
 |---|---|
 | Characters | 🟨 IN_PROGRESS | Initial player creation v1.0, mandatory biography validation, evidence-based capability growth and objective/trajectory models are now established in addition to identity/runtime, personality, knowledge, memory, relationships and reputation. Canonical-character catalogues and deeper behavioral content remain progressive. |
-| Species / cultures / languages | 🟨 IN_PROGRESS | Founding species plus Klingon, Romulan, Cardassian, Bajoran, Ferengi, Trill, Betazoid, Dominion-engineered species and Borg/Changeling state models established; language runtime and Universal Translator failure/ambiguity rules added. Wider coverage remains progressive. |
+| Species / cultures / languages | 🟨 IN_PROGRESS | Canonical baseline remains progressive, while **procedural civilization v0.1 now adds persistent generated species morphology, language/naming profiles and Universal Translator bootstrap for newly encountered civilizations**. Wider canon coverage remains progressive. |
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
-| Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
+| Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography/navigation remains progressive. **Procedural Worlds/Civilizations v0.1 now closes civilization/settlement materialization on pre-existing worlds, including technology, governments, cities, economy and contact state.** Wider systems/routes and exhaustive physical-world generation remain progressive. |
 | Starships and ship systems | 🟨 IN_PROGRESS | Identity/class/design separation, runtime system state, causal persistent ship generation, class-specific shipboard life, civilian procedural design grammar, staffing/watch generation and deterministic reference generators are established; wider class/system content and CoreRPG runtime mapping remain progressive. |
 | Stations and facilities | 🟨 IN_PROGRESS | **Procedural Facilities & Station Life v0.1 baseline is COMPLETE (15/15):** strict causal existence, reusable canonical/procedural designs, construction lifecycle, staffing/residents/tenants/visitors, watches, finite services/queues, causal traffic, expansion/drawdown, visual profiles, deterministic generator and positive/negative fixtures. Wider canon catalogue and source-backed interiors remain progressive. |
 | Technology and equipment | 🟨 IN_PROGRESS | Game-ready technology framework and readiness plan established; concrete equipment/technology depth remains progressive. |
 | Medicine and science | 🟨 IN_PROGRESS | Game-ready medical/scientific capability contracts established; concrete canon/gameplay content remains progressive. |
 | Conflicts and historical events | 🟨 IN_PROGRESS | Machine-usable conflict and historical-event contracts established; event catalogues and provenance-backed depth remain progressive. |
-| Gameplay | 🟨 IN_PROGRESS | Navigation, travel, exploration, encounters, missions, duty watches, consequences, operational needs, autonomous fleet tasking, logistics/endurance, facility traffic/support, station-duty loops and persistent ship refits are connected to World State. Facility generation now enforces need→alternatives→scale→site→design→construction, explicitly rejecting player-convenience 'space gas stations'. Current vertical slice: procedural observable world → sensor resolution → interactive console → event log/evaluation. |
-| Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
+| Gameplay | 🟨 IN_PROGRESS | Navigation/travel/operations remain active. Facility generation rejects player-convenience stations, and **First Contact is now a full gameplay protocol: observation → Prime Directive assessment → readiness brief → captain decision → linguistic bootstrap → scoped diplomacy**, with no automatic hail at warp threshold. |
+| Narrative | 🟨 IN_PROGRESS | Travel encounters and mission hooks remain progressive. **Procedural First Contact can now generate episode-like situations from pre-existing World State rather than scripted retroactive civilizations.** Campaign arcs and authored narrative structures remain future work. |
 | AI | 🟨 IN_PROGRESS | AI authority, deterministic-first routing, provider-independent capability routes and NPC interaction foundation established; deeper prompt/context/presentation content remains progressive. |
 | Presentation and UI | ⬜ TODO |
 | Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP content-depth baseline is closed for current species/organization/ship/interior/homeworld scope and now also includes station-design visual profiles. Verified Sensors-console NAP fixture remains the representative binary lifecycle fixture. Wider production assets/audio remain progressive. |
