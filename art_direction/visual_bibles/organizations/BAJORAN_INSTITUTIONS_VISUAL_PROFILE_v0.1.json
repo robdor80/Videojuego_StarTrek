@@ -1,0 +1,41 @@
+{
+  "profile_id": "bajoran_institutions_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:bajor",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "bajoran_provisional_government",
+      "bajoran_militia",
+      "bajoran_religious_institutions",
+      "bajoran_resistance_cells_historical"
+    ]
+  },
+  "rules": [
+    "Civil government, Militia, religious institutions and historical resistance have distinct visual authority.",
+    "Religious jewelry or vestments require actual faith/office/context; Bajoran species alone is insufficient.",
+    "Militia uniforms require service membership/rank state.",
+    "Resistance clothing/equipment is historical/event-based and not an eternal Bajoran visual default."
+  ],
+  "allowed_variation": [
+    "civil dress",
+    "Militia duty uniform",
+    "religious vestments by office",
+    "historical resistance clothing/equipment where valid"
+  ],
+  "forbidden_variation": [
+    "automatic earring on every Bajoran",
+    "religious vestment without office",
+    "resistance styling for post-occupation civilians by default",
+    "Starfleet styling replacing Bajoran sovereignty"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/BAJORAN_INSTITUTIONS_v0.1.json",
+    "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
