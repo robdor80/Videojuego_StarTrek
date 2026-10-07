@@ -1,0 +1,26 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "post_conflict_consequence_rules",
+  "status": "FOUNDATION_FIXED",
+  "domains": [
+    "population",
+    "veterans_and_personnel",
+    "infrastructure",
+    "politics",
+    "diplomacy",
+    "territory_and_control",
+    "law_and_accountability",
+    "reputation",
+    "memory_and_history",
+    "displacement",
+    "economic_pressure"
+  ],
+  "rules": [
+    "War leaves persistent consequences even after peace.",
+    "Veteran/background hooks require actual service/conflict participation.",
+    "Destroyed infrastructure remains destroyed/damaged until repaired/rebuilt.",
+    "Territorial settlements must update Block 2 claim/control/border state explicitly.",
+    "Reparations/economic burdens can emit Block 4 inputs but Block 3 does not model the full economy.",
+    "Post-conflict resentment/reconciliation are stateful processes, not automatic mood resets."
+  ]
+}

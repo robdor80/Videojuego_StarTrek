@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "war_objective_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "objective_types": [
+    "defend_territory",
+    "restore_control",
+    "compel_withdrawal",
+    "end_blockade",
+    "protect_ally",
+    "secure_route_or_access",
+    "neutralize_specific_threat",
+    "capture_or_disable_facility",
+    "limited_punitive_action",
+    "regime_or_state_survival",
+    "secession_or_reunification",
+    "other_explicit_political_objective"
+  ],
+  "fields": [
+    "objective_id",
+    "sponsor_ref",
+    "target_ref",
+    "scope_refs",
+    "success_conditions",
+    "failure_conditions",
+    "priority",
+    "authority_ref",
+    "start_time",
+    "end_time_if_any"
+  ],
+  "rules": [
+    "War is never represented as violence without political/military objectives.",
+    "Objectives may be limited, incompatible, revised or abandoned through explicit events.",
+    "Destroy enemy is not sufficient without a defined political/strategic purpose.",
+    "Objective completion may support termination but never auto-erases the conflict."
+  ]
+}

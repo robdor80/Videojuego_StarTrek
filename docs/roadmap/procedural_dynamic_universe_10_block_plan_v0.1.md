@@ -7,7 +7,7 @@
 |---|---|---|
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
 | 2 | Colonization, Expansion & Borders | COMPLETE |
-| 3 | Procedural Conflict & War | TODO |
+| 3 | Procedural Conflict & War | COMPLETE |
 | 4 | Living Interplanetary / Interstellar Economy | TODO |
 | 5 | Procedural History & Major Events | TODO |
 | 6 | Science, Technology & Discovery | TODO |
@@ -36,3 +36,7 @@ Cross-block hooks may be emitted as candidates/refs, never silently resolved by 
 ## Block 2 ownership
 
 Block 2 closes causal colony founding/growth/abandonment, population transfer, claim/control/sovereignty separation, sparse political-border derivation, claim disputes and colonial autonomy/independence semantics. It does not implement war or the later blocks.
+
+## Block 3 ownership
+
+Block 3 closes crisis/escalation, culture/faction/government conflict behaviour, authority/ROE, objectives, real-force mobilization, strategic operations, losses, occupation/blockade, civil conflict and peace. It does not implement Blocks 4–10.

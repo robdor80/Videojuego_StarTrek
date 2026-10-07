@@ -308,3 +308,9 @@ This separation prevents the earlier 001–118 design-readiness closure from bei
 - Block 1 — Procedural Civilization Evolution & Galactic Interaction: COMPLETE.
 - **Block 2 — Colonization, Expansion & Borders: COMPLETE.**
 - Blocks 3–10 remain unimplemented; Block 3 is next in strict sequence.
+
+### Dynamic-universe sequence update — Block 3
+
+- Blocks 1–2 remain COMPLETE.
+- **Block 3 — Procedural Conflict & War: COMPLETE.**
+- Blocks 4–10 remain unimplemented; Block 4 is next in strict sequence.

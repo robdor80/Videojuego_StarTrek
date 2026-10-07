@@ -1,0 +1,65 @@
+{
+  "fixture_id": "strategic_operation_v0.1",
+  "input": {
+    "campaign_seed": "fixture",
+    "operation_id": "op:border",
+    "attacker": {
+      "force_id": "fleet:k1",
+      "units": [
+        {
+          "unit_id": "ship:k1",
+          "combat_power": 100,
+          "readiness": 90,
+          "logistics": 90,
+          "integrity": 100,
+          "status": "operational"
+        },
+        {
+          "unit_id": "ship:k2",
+          "combat_power": 80,
+          "readiness": 85,
+          "logistics": 80,
+          "integrity": 100,
+          "status": "operational"
+        }
+      ]
+    },
+    "defender": {
+      "force_id": "fleet:f1",
+      "units": [
+        {
+          "unit_id": "ship:f1",
+          "combat_power": 90,
+          "readiness": 80,
+          "logistics": 85,
+          "integrity": 100,
+          "status": "operational"
+        },
+        {
+          "unit_id": "ship:f2",
+          "combat_power": 70,
+          "readiness": 75,
+          "logistics": 80,
+          "integrity": 100,
+          "status": "operational"
+        }
+      ]
+    },
+    "objective_ref": "objective:control_outpost",
+    "location_ref": "system:delta"
+  },
+  "expected": {
+    "outcome": "attacker_advantage",
+    "spawned_unit_ids": [],
+    "sovereignty_changed": false,
+    "control_change_candidate": true,
+    "attacker_integrity": {
+      "ship:k1": 87,
+      "ship:k2": 80
+    },
+    "defender_integrity": {
+      "ship:f1": 59,
+      "ship:f2": 60
+    }
+  }
+}

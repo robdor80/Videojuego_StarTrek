@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "model_id": "political_space_overlay",
   "key": "region_or_boundary_id_plus_effective_time",
   "fields": {
@@ -46,7 +46,9 @@
     "Claims and actual control are separate fields.",
     "Neutral zones and demilitarized zones are rules-bearing regions, not decorative map colors.",
     "Settlement presence, claim, effective control, jurisdiction, sovereignty and recognition are separate inputs; no single colony auto-owns surrounding space.",
-    "Procedural border geometry follows procedural_border_derivation_rules_v0.1 and permits gaps, enclaves, corridors and disputed regions."
+    "Procedural border geometry follows procedural_border_derivation_rules_v0.1 and permits gaps, enclaves, corridors and disputed regions.",
+    "Military occupation may change controller/effective-control state while sovereignty/recognition remain separate."
   ],
-  "procedural_border_derivation_ref": "gameplay/navigation/procedural_border_derivation_rules_v0.1.json"
+  "procedural_border_derivation_ref": "gameplay/navigation/procedural_border_derivation_rules_v0.1.json",
+  "conflict_control_ref": "gameplay/conflict/occupation_blockade_control_rules_v0.1.json"
 }

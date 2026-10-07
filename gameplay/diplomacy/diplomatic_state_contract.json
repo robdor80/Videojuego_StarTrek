@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.4.0",
+  "schema_version": "0.5.0",
   "contract_id": "diplomatic_state_contract",
   "classification": "GAME_ADDITION",
   "relation_fields": [
@@ -38,9 +38,11 @@
     "First Contact initializes only the relationship scope actually achieved.",
     "Contact with one sovereign state does not silently create planet-wide Federation relations.",
     "Long-horizon relation changes require causal events and preserve the actually recognized polity scope.",
-    "Overlapping expansion claims create a scoped diplomatic dispute; they do not auto-create war."
+    "Overlapping expansion claims create a scoped diplomatic dispute; they do not auto-create war.",
+    "Hostility, claims and mobilization may feed a conflict crisis, but formal war follows the conflict/authority rules rather than a relation score threshold."
   ],
   "first_contact_initialization_ref": "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json",
   "relation_evolution_ref": "gameplay/diplomacy/civilization_relation_evolution_rules_v0.1.json",
-  "expansion_claim_dispute_ref": "gameplay/diplomacy/expansion_encounter_claim_dispute_rules_v0.1.json"
+  "expansion_claim_dispute_ref": "gameplay/diplomacy/expansion_encounter_claim_dispute_rules_v0.1.json",
+  "conflict_escalation_ref": "gameplay/conflict/conflict_war_index_v0.1.json"
 }

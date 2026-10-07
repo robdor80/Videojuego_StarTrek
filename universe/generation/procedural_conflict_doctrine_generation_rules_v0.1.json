@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "procedural_conflict_doctrine_generation_rules",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "culture_refs",
+    "government_and_institution_refs",
+    "military_institution_refs",
+    "historical_conflict_refs",
+    "diplomatic_norm_refs",
+    "law_and_authority_refs",
+    "current_leader_policy_refs",
+    "economic_and_logistics_context_refs"
+  ],
+  "outputs": [
+    "conflict_behavior_profile_ref",
+    "war_authority_model_ref",
+    "roe_baseline_ref",
+    "objective_preferences_ref",
+    "doctrine_history_ref"
+  ],
+  "dimensions": [
+    "force_acceptance",
+    "diplomatic_patience",
+    "prestige_sensitivity",
+    "institutional_restraint",
+    "casualty_aversion",
+    "civilian_harm_constraint",
+    "covert_or_indirect_preference"
+  ],
+  "rules": [
+    "Species biology is not an input for aggression or war propensity.",
+    "Generated culture may influence learned norms only through an actual culture_ref.",
+    "Government structure determines who can authorize war and how quickly, not whether a species is warlike.",
+    "Military tradition can exist without militarizing every citizen.",
+    "Recent defeat, victory, exhaustion, alliance and leadership change may alter current policy from historical norms.",
+    "Profiles persist and evolve causally; they do not reroll whenever a crisis occurs.",
+    "Unknown doctrine remains uncertain rather than defaulting to Federation/Human behavior."
+  ]
+}

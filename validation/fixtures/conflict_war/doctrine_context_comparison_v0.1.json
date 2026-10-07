@@ -1,0 +1,61 @@
+{
+  "fixture_id": "doctrine_context_comparison_v0.1",
+  "profiles": {
+    "klingon_empire_context": {
+      "profile_id": "klingon_empire_context",
+      "force_acceptance": 78,
+      "diplomatic_patience": 40,
+      "prestige_sensitivity": 85,
+      "institutional_restraint": 45,
+      "casualty_aversion": 35,
+      "civilian_harm_constraint": 45,
+      "covert_or_indirect_preference": 30
+    },
+    "vulcan_mainstream_context": {
+      "profile_id": "vulcan_mainstream_context",
+      "force_acceptance": 25,
+      "diplomatic_patience": 88,
+      "prestige_sensitivity": 20,
+      "institutional_restraint": 88,
+      "casualty_aversion": 68,
+      "civilian_harm_constraint": 92,
+      "covert_or_indirect_preference": 25
+    },
+    "romulan_state_context": {
+      "profile_id": "romulan_state_context",
+      "force_acceptance": 55,
+      "diplomatic_patience": 65,
+      "prestige_sensitivity": 55,
+      "institutional_restraint": 62,
+      "casualty_aversion": 55,
+      "civilian_harm_constraint": 60,
+      "covert_or_indirect_preference": 88
+    }
+  },
+  "situation": {
+    "relative_force_percent": 105,
+    "military_readiness": 75,
+    "logistics_support": 75,
+    "war_exhaustion": 10,
+    "expected_loss_risk": 35,
+    "threat": 72,
+    "stakes": 75,
+    "grievance": 65,
+    "honor_or_reputation_challenge": 75,
+    "relation_tension": 78,
+    "negotiation_opportunity": 55,
+    "cause_refs": [
+      "claim:disputed_system"
+    ],
+    "war_objective_refs": [
+      "objective:secure_border"
+    ],
+    "war_authority_granted": true
+  },
+  "expected": {
+    "klingon_action": "mobilize",
+    "vulcan_action": "formal_pressure",
+    "klingon_score": 71,
+    "vulcan_score": 44
+  }
+}

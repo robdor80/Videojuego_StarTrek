@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "conflict_offscreen_simulation_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "lod_modes": [
+    "local_tactical",
+    "system_operation",
+    "theater_summary",
+    "strategic_conflict_summary",
+    "dormant_catch_up"
+  ],
+  "catch_up_order": [
+    "load_conflict_and_force_state",
+    "apply_diplomatic_and_authority_events",
+    "resolve_mobilization_and_travel",
+    "resolve_due_operations",
+    "persist_losses_and_control_changes",
+    "resolve_negotiation_or_termination_events",
+    "validate_invariants",
+    "commit"
+  ],
+  "rules": [
+    "LOD may aggregate maneuvers but cannot reroll force identity, destroyed units, occupation or signed agreements.",
+    "Major battles/operations, capital losses, occupation, mass casualties, ceasefires, armistices and peace remain explicit records.",
+    "Player absence does not make wars safer, deadlier or more likely.",
+    "Player presence may increase tactical detail only; it must not change strategic inputs merely for drama.",
+    "Save/load with the same state/event stream produces the same strategic result."
+  ]
+}

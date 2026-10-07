@@ -1,0 +1,37 @@
+{
+  "fixture_id": "weakened_klingon_restraint_v0.1",
+  "profile": {
+    "profile_id": "klingon_empire_context",
+    "force_acceptance": 78,
+    "diplomatic_patience": 40,
+    "prestige_sensitivity": 85,
+    "institutional_restraint": 45,
+    "casualty_aversion": 35,
+    "civilian_harm_constraint": 45,
+    "covert_or_indirect_preference": 30
+  },
+  "situation": {
+    "relative_force_percent": 45,
+    "military_readiness": 25,
+    "logistics_support": 30,
+    "war_exhaustion": 85,
+    "expected_loss_risk": 90,
+    "threat": 72,
+    "stakes": 75,
+    "grievance": 65,
+    "honor_or_reputation_challenge": 75,
+    "relation_tension": 78,
+    "negotiation_opportunity": 55,
+    "cause_refs": [
+      "claim:disputed_system"
+    ],
+    "war_objective_refs": [
+      "objective:secure_border"
+    ],
+    "war_authority_granted": true
+  },
+  "expected": {
+    "recommended_action": "formal_pressure",
+    "escalation_score": 35
+  }
+}

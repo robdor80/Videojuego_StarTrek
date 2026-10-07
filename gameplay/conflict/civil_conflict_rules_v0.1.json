@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "civil_conflict_rules",
+  "status": "FOUNDATION_FIXED",
+  "prerequisites": [
+    "multiple_political_or_armed_actor_refs",
+    "internal_grievance_or_power_dispute_refs",
+    "distinct_objective_refs",
+    "force_or_security_control_refs",
+    "escalation_event_refs"
+  ],
+  "states": [
+    "political_crisis",
+    "unrest",
+    "armed_faction_incident",
+    "insurgency_or_internal_armed_conflict",
+    "civil_war",
+    "ceasefire",
+    "political_settlement"
+  ],
+  "rules": [
+    "Low cohesion or fragmentation from Block 1 does not automatically create armed conflict.",
+    "Civil war requires actual armed actors and territorial/institutional contest.",
+    "Faction identity is not species identity.",
+    "External support/intervention requires explicit foreign actor events.",
+    "A civil conflict may create successor-polity candidates, but civilization lineage changes use Block 1 rules.",
+    "Generated rebel/loyalist labels do not create people, forces or territory from nothing."
+  ]
+}

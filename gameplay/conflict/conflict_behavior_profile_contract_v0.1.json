@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "conflict_behavior_profile_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "composition_order": [
+    "cultural_context_refs",
+    "faction_or_polity_doctrine_ref",
+    "government_policy_ref",
+    "leader_or_command_policy_ref",
+    "era_context",
+    "relationship_history",
+    "current_domestic_context",
+    "military_logistics_context",
+    "crisis_specific_context"
+  ],
+  "tuning_dimensions": [
+    "force_acceptance",
+    "diplomatic_patience",
+    "prestige_sensitivity",
+    "institutional_restraint",
+    "casualty_aversion",
+    "civilian_harm_constraint",
+    "covert_or_indirect_preference"
+  ],
+  "rules": [
+    "Tuning dimensions are non-canon gameplay priors, not biological or moral scores.",
+    "Species identifier is not a valid direct input to political/military escalation.",
+    "Culture supplies learned/contextual priors and never forces behavior.",
+    "Faction/polity doctrine applies only when the actor actually represents that faction/polity.",
+    "Government and leader policy may temporarily override broad cultural expectations.",
+    "Force balance, logistics, exhaustion and objectives can reverse a normal doctrinal preference.",
+    "Individual captains/commanders still require personality, orders and authority state.",
+    "Unknown context produces uncertainty rather than a default Human/Federation doctrine."
+  ],
+  "cultural_contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json"
+}

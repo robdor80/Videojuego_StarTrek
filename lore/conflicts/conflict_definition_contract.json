@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "historical_conflict_definition",
   "status": "foundation_fixed",
   "required_fields": [
@@ -26,6 +26,8 @@
     "Historical conflict data initializes campaign context; post-start future is emergent.",
     "Participant species and political allegiance are not interchangeable.",
     "Generated NPC histories may reference a conflict only when age/date/location/context are compatible.",
-    "Conflict knowledge available to characters depends on era, education, access and personal history."
-  ]
+    "Conflict knowledge available to characters depends on era, education, access and personal history.",
+    "Live campaign conflict execution uses gameplay/conflict/conflict_war_index_v0.1; this lore contract remains the historical/canon initializer."
+  ],
+  "live_conflict_runtime_ref": "gameplay/conflict/conflict_war_index_v0.1.json"
 }

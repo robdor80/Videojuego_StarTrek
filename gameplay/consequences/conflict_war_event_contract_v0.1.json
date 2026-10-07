@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "conflict_war_event_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "event_types": [
+    "crisis_opened",
+    "ultimatum_or_demand",
+    "mobilization",
+    "armed_incident",
+    "war_declared",
+    "operation_started",
+    "operation_resolved",
+    "unit_damaged_or_destroyed",
+    "casualty_event",
+    "capture_or_prisoner_event",
+    "blockade_started_or_ended",
+    "occupation_control_changed",
+    "ceasefire",
+    "armistice",
+    "surrender",
+    "peace_settlement"
+  ],
+  "required_major_fields": [
+    "event_id",
+    "effective_time",
+    "participant_refs",
+    "cause_refs",
+    "authority_refs_if_applicable",
+    "state_changes",
+    "provenance"
+  ],
+  "rules": [
+    "War declarations require cause/objective/authority state.",
+    "Operations reference pre-existing forces and objectives.",
+    "Control changes do not silently rewrite sovereignty.",
+    "Ceasefire/peace records append rather than deleting prior conflict history.",
+    "Knowledge of conflict events remains observer-scoped.",
+    "AI narration cannot invent victories, losses, declarations or treaties absent from structured events."
+  ]
+}

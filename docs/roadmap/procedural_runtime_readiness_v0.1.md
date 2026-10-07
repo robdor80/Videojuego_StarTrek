@@ -205,3 +205,7 @@ Only Block 1 is complete. Blocks 2–10 remain intentionally unimplemented and m
 ## Dynamic-universe extension — Block 2
 
 **Block 2 — Colonization, Expansion & Borders v0.1 is COMPLETE** on the Star Trek content/contract/reference side. Colony founding, population transfer, lifecycle, claim/control/sovereignty separation, border derivation, disputes, autonomy and abandonment are now specified. The CoreRPG runtime boundary is unchanged. Blocks 3–10 remain sequentially pending.
+
+## Dynamic-universe extension — Block 3
+
+**Block 3 — Procedural Conflict & War v0.1 is COMPLETE** on the Star Trek content/contract/reference side. It adds cultural-political doctrine composition, escalation/de-escalation, authority/ROE, objectives, pre-existing-force mobilization, strategic operations, persistent losses, occupation/blockade, civil conflict and conflict termination. Species is explicitly prohibited as a direct aggression/war-propensity input. CoreRPG runtime ownership is unchanged. Blocks 4–10 remain pending.

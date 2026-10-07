@@ -36,3 +36,5 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 - `simulate_civilization_evolution.py` — deterministic reference simulator for Block 1 civilization evolution; major transitions require explicit causes and later-block boundaries are enforced.
 
 - `simulate_colonization_expansion.py` — deterministic Block 2 reference for target selection, colony lifecycle, population transfer, claim overlap and abandonment.
+
+- `simulate_conflict_war.py` — deterministic Block 3 reference for doctrine/context response, war-authority gating and strategic-LOD operations with persistent force identities.

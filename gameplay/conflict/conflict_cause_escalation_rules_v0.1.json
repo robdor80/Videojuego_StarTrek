@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "conflict_cause_escalation_rules",
+  "status": "FOUNDATION_FIXED",
+  "cause_families": [
+    "territorial_dispute",
+    "treaty_breach",
+    "armed_attack",
+    "border_incident",
+    "blockade",
+    "occupation",
+    "alliance_obligation",
+    "secession_or_internal_power_struggle",
+    "strategic_threat",
+    "coercive_demand",
+    "resource_or_access_dispute",
+    "retaliation",
+    "other_validated_world_state_cause"
+  ],
+  "escalation_steps": [
+    "diplomatic_protest",
+    "negotiation",
+    "sanction_or_restriction",
+    "coercive_pressure",
+    "force_posture_change",
+    "mobilization",
+    "ultimatum",
+    "armed_incident",
+    "limited_conflict",
+    "war"
+  ],
+  "deescalation_steps": [
+    "communication",
+    "stand_down",
+    "withdrawal",
+    "confidence_building_measure",
+    "mediation",
+    "ceasefire",
+    "armistice",
+    "peace_settlement"
+  ],
+  "rules": [
+    "No cause family automatically determines an escalation path.",
+    "The same event may be interpreted differently by different governments according to knowledge, doctrine and interests.",
+    "One actor's mobilization may raise another actor's threat perception but does not force war.",
+    "Player presence or mission convenience is never an escalation cause.",
+    "Escalation decisions consume conflict-behaviour profiles and actual World State."
+  ]
+}

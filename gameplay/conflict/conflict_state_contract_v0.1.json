@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "conflict_state_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "states": [
+    "none",
+    "diplomatic_crisis",
+    "coercive_pressure",
+    "mobilization",
+    "armed_incident",
+    "limited_conflict",
+    "war",
+    "ceasefire",
+    "armistice",
+    "peace_settlement",
+    "frozen_or_unresolved"
+  ],
+  "fields": [
+    "conflict_id",
+    "participant_refs",
+    "cause_refs",
+    "grievance_refs",
+    "objective_refs",
+    "authority_refs",
+    "start_time",
+    "current_state",
+    "theater_refs",
+    "committed_force_refs",
+    "control_change_refs",
+    "casualty_and_damage_refs",
+    "prisoner_refs",
+    "displacement_refs",
+    "negotiation_refs",
+    "treaty_refs",
+    "history_ref"
+  ],
+  "rules": [
+    "Conflict state is explicit and time-scoped.",
+    "A dispute can remain unresolved indefinitely without becoming armed conflict.",
+    "War is not inferred solely from hostile diplomatic relation.",
+    "Ceasefire and armistice are distinct from peace.",
+    "Campaign history after start is authoritative even if it diverges from future canon."
+  ]
+}

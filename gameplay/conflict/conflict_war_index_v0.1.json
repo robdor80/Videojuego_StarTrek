@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "conflict_war_index",
+  "status": "FOUNDATION_FIXED",
+  "parent_refs": [
+    "universe/generation/civilization_evolution_index_v0.1.json",
+    "universe/generation/colonization_expansion_borders_index_v0.1.json",
+    "gameplay/diplomacy/diplomatic_state_contract.json",
+    "gameplay/diplomacy/faction_runtime_model.json",
+    "gameplay/tactical/tactical_state.json",
+    "lore/conflicts/conflict_definition_contract.json"
+  ],
+  "contracts": [
+    "gameplay/conflict/conflict_state_contract_v0.1.json",
+    "gameplay/conflict/conflict_cause_escalation_rules_v0.1.json",
+    "gameplay/conflict/conflict_behavior_profile_contract_v0.1.json",
+    "gameplay/conflict/canonical_conflict_behavior_profiles_v0.1.json",
+    "gameplay/conflict/war_authority_rules_of_engagement_contract_v0.1.json",
+    "gameplay/conflict/war_objective_contract_v0.1.json",
+    "gameplay/conflict/force_mobilization_commitment_contract_v0.1.json",
+    "gameplay/conflict/strategic_front_operation_contract_v0.1.json",
+    "gameplay/conflict/strategic_operation_resolution_rules_v0.1.json",
+    "gameplay/conflict/conflict_losses_prisoners_displacement_contract_v0.1.json",
+    "gameplay/conflict/occupation_blockade_control_rules_v0.1.json",
+    "gameplay/conflict/civil_conflict_rules_v0.1.json",
+    "gameplay/conflict/ceasefire_armistice_peace_rules_v0.1.json",
+    "gameplay/conflict/post_conflict_consequence_rules_v0.1.json",
+    "gameplay/conflict/conflict_offscreen_simulation_contract_v0.1.json",
+    "universe/generation/procedural_conflict_doctrine_generation_rules_v0.1.json",
+    "gameplay/consequences/conflict_war_event_contract_v0.1.json"
+  ],
+  "reference_implementation": "tools/generation/simulate_conflict_war.py",
+  "validation_ref": "validation/consistency/procedural_conflict_war_invariants_v0.1.json",
+  "fixture_root": "validation/fixtures/conflict_war",
+  "principle": "War is a causal political state with objectives, authority and real forces; it is never a random encounter generator."
+}

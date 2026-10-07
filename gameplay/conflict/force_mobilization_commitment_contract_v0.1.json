@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "force_mobilization_commitment_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "fields": [
+    "force_id",
+    "owner_ref",
+    "unit_refs",
+    "current_location_refs",
+    "readiness",
+    "logistics_support_refs",
+    "repair_state_refs",
+    "mission_commitments",
+    "mobilization_state",
+    "reserve_state",
+    "command_ref"
+  ],
+  "mobilization_states": [
+    "routine_posture",
+    "heightened_readiness",
+    "mobilizing",
+    "deployed",
+    "committed",
+    "recovering",
+    "reserve_or_unavailable"
+  ],
+  "rules": [
+    "Only pre-existing units may be committed unless a separate construction/commissioning event created new units.",
+    "A war cannot materialize fleets to match an encounter difficulty target.",
+    "Units already assigned elsewhere remain unavailable unless actually reassigned.",
+    "Readiness, damage, crew, travel time and logistics affect usable force.",
+    "Mobilization consumes time unless already-deployed forces are used.",
+    "Detailed economic production/supply networks remain Block 4; Block 3 consumes available logistics summaries."
+  ]
+}

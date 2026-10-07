@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "occupation_blockade_control_rules",
+  "status": "FOUNDATION_FIXED",
+  "states": [
+    "no_special_control",
+    "contested_control",
+    "military_occupation",
+    "partial_occupation",
+    "blockaded",
+    "besieged_or_isolated",
+    "liberated_or_restored_control"
+  ],
+  "rules": [
+    "Occupation changes effective control only where forces can actually sustain it.",
+    "Occupation does not automatically transfer sovereignty, claim recognition or population loyalty.",
+    "Blockade requires real force presence/capability and a defined access area.",
+    "Blockade effectiveness can vary; it is not a magical system-wide switch.",
+    "Civilian administration, resistance and collaboration require their own actual World State.",
+    "Withdrawal or defeat can end effective occupation while territorial claims persist separately.",
+    "Political-space overlays consume validated control/occupation changes."
+  ],
+  "territorial_contract_ref": "universe/generation/territorial_claim_control_sovereignty_contract_v0.1.json"
+}

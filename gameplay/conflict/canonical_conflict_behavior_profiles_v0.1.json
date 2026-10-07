@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "canonical_conflict_behavior_profiles",
+  "status": "GAMEPLAY_REFERENCE_TUNING",
+  "note": "Numeric values are project gameplay tuning derived from existing qualitative lore/faction profiles. They are not canon statistics and never attach by species alone.",
+  "profiles": {
+    "united_federation_of_planets": {
+      "scope": "faction_policy_context",
+      "faction_ref": "united_federation_of_planets",
+      "cultural_refs": [
+        "lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json"
+      ],
+      "force_acceptance": 32,
+      "diplomatic_patience": 82,
+      "prestige_sensitivity": 25,
+      "institutional_restraint": 88,
+      "casualty_aversion": 72,
+      "civilian_harm_constraint": 96,
+      "covert_or_indirect_preference": 35,
+      "interpretation": "Strong institutional/negotiated restraint with defensive force available when authority, threat and necessity justify it."
+    },
+    "klingon_empire": {
+      "scope": "faction_policy_context",
+      "faction_ref": "klingon_empire",
+      "cultural_refs": [
+        "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 78,
+      "diplomatic_patience": 40,
+      "prestige_sensitivity": 85,
+      "institutional_restraint": 45,
+      "casualty_aversion": 35,
+      "civilian_harm_constraint": 45,
+      "covert_or_indirect_preference": 30,
+      "interpretation": "Imperial/House/honor context can make overt coercion and force more acceptable, but House politics, leadership, capability and era remain decisive."
+    },
+    "vulcan_mainstream_context": {
+      "scope": "cultural_context_modifier_only",
+      "cultural_refs": [
+        "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 25,
+      "diplomatic_patience": 88,
+      "prestige_sensitivity": 20,
+      "institutional_restraint": 88,
+      "casualty_aversion": 68,
+      "civilian_harm_constraint": 92,
+      "covert_or_indirect_preference": 25,
+      "interpretation": "Logic-centered restraint and analysis favor de-escalation when rational; force remains possible when evidence/necessity supports it. This is not an independent war-declaration authority profile."
+    },
+    "romulan_star_empire": {
+      "scope": "faction_policy_context",
+      "faction_ref": "romulan_star_empire",
+      "cultural_refs": [
+        "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 55,
+      "diplomatic_patience": 65,
+      "prestige_sensitivity": 55,
+      "institutional_restraint": 62,
+      "casualty_aversion": 55,
+      "civilian_harm_constraint": 60,
+      "covert_or_indirect_preference": 88,
+      "interpretation": "Security awareness and strategic ambiguity support indirect/covert pressure as an available political tool; they do not make every Romulan deceptive."
+    },
+    "cardassian_union": {
+      "scope": "faction_policy_context",
+      "faction_ref": "cardassian_union",
+      "cultural_refs": [
+        "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 64,
+      "diplomatic_patience": 48,
+      "prestige_sensitivity": 62,
+      "institutional_restraint": 58,
+      "casualty_aversion": 48,
+      "civilian_harm_constraint": 50,
+      "covert_or_indirect_preference": 62,
+      "interpretation": "State hierarchy, security and strategic-control context can support coercive action; era/government changes are mandatory inputs."
+    },
+    "ferengi_alliance": {
+      "scope": "faction_policy_context",
+      "faction_ref": "ferengi_alliance",
+      "cultural_refs": [
+        "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 18,
+      "diplomatic_patience": 82,
+      "prestige_sensitivity": 35,
+      "institutional_restraint": 66,
+      "casualty_aversion": 78,
+      "civilian_harm_constraint": 68,
+      "covert_or_indirect_preference": 58,
+      "interpretation": "Commercial bargaining and negotiated advantage are strong contextual priors; no Ferengi individual inherits this policy automatically."
+    },
+    "dominion": {
+      "scope": "faction_policy_context",
+      "faction_ref": "dominion",
+      "cultural_refs": [
+        "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "force_acceptance": 82,
+      "diplomatic_patience": 48,
+      "prestige_sensitivity": 52,
+      "institutional_restraint": 72,
+      "casualty_aversion": 28,
+      "civilian_harm_constraint": 35,
+      "covert_or_indirect_preference": 78,
+      "interpretation": "Hierarchical strategic control can support coercion, infiltration or force; actual Founder/Vorta/Jem'Hadar authority and assignment state remain required."
+    }
+  },
+  "rules": [
+    "Profiles are starting context only; campaign World State can move policy substantially.",
+    "Do not attach a profile because an NPC shares a species label.",
+    "Vulcan cultural context may affect actors with that culture_ref but cannot itself declare war.",
+    "Klingon Imperial context applies to actual Imperial decision structures, not every Klingon."
+  ]
+}

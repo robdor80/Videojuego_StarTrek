@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "war_authority_rules_of_engagement_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "authority_checks": [
+    "actor_identity",
+    "government_or_command_authority",
+    "jurisdiction",
+    "existing_orders",
+    "treaty_constraints",
+    "self_defense_state",
+    "emergency_authority",
+    "delegation_scope"
+  ],
+  "roe_states": [
+    "weapons_hold",
+    "weapons_tight",
+    "self_defense_only",
+    "limited_engagement_authorized",
+    "mission_specific_force_authorized",
+    "open_hostilities_under_war_state"
+  ],
+  "rules": [
+    "A captain may be able to fire weapons without possessing political authority to declare war.",
+    "Unauthorized force may create a major incident without automatically changing formal war state.",
+    "Self-defense can authorize immediate force while later political consequences remain unresolved.",
+    "ROE constrain valid tactical actions but do not guarantee compliance.",
+    "Player violations may occur where physically possible and create persistent consequences.",
+    "AI cannot invent authority or silently upgrade ROE."
+  ]
+}

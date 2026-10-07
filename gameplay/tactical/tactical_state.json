@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "fields": {
     "contacts": "tactical_contact_list",
     "selected_target": "contact_id_or_null",
@@ -10,7 +10,9 @@
     "ammunition": "ammunition_state",
     "firing_solutions": "solution_map",
     "tractor_state": "tractor_state",
-    "defensive_posture": "posture_state"
+    "defensive_posture": "posture_state",
+    "strategic_conflict_ref": "conflict_id_or_null",
+    "strategic_operation_ref": "operation_id_or_null"
   },
   "contact_fields": [
     "contact_id",
@@ -29,7 +31,8 @@
     "power_or_ammunition_available",
     "firing_solution",
     "authorization",
-    "rules_of_engagement"
+    "rules_of_engagement",
+    "strategic_conflict_context_if_any"
   ],
   "provenance": [
     {
@@ -40,5 +43,6 @@
       "source_id": "MA_DEFLECTOR_SHIELD",
       "confidence": "HIGH"
     }
-  ]
+  ],
+  "strategic_conflict_ref": "gameplay/conflict/conflict_war_index_v0.1.json"
 }

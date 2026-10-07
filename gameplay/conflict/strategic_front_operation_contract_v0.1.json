@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "strategic_front_operation_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "theater_fields": [
+    "theater_id",
+    "conflict_ref",
+    "location_refs",
+    "participant_refs",
+    "control_refs",
+    "front_or_contested_zone_refs",
+    "force_refs",
+    "objective_refs",
+    "supply_context_refs",
+    "operation_refs"
+  ],
+  "operation_types": [
+    "patrol_or_screen",
+    "interception",
+    "raid",
+    "escort",
+    "blockade",
+    "blockade_break",
+    "facility_attack",
+    "system_defense",
+    "limited_incursion",
+    "withdrawal",
+    "evacuation_cover",
+    "major_offensive",
+    "counteroffensive"
+  ],
+  "rules": [
+    "Operations require an objective, location and assigned force.",
+    "A front is a strategic abstraction over actual locations/control, not decorative combat geometry.",
+    "Multiple fronts may evolve independently.",
+    "A strategic outcome may trigger tactical encounters when player/local detail requires it.",
+    "Strategic resolution cannot create units absent from World State."
+  ]
+}

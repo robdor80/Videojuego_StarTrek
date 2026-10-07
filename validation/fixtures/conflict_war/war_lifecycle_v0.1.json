@@ -1,0 +1,68 @@
+{
+  "fixture_id": "war_lifecycle_v0.1",
+  "initial_state": {
+    "conflict_state": "diplomatic_crisis",
+    "war_exhaustion": 5,
+    "sovereignty_ref": "polity:defender",
+    "effective_control_ref": "polity:defender",
+    "grievance_refs": [
+      "claim:delta"
+    ]
+  },
+  "events": [
+    {
+      "event_id": "evt:war",
+      "cause_refs": [
+        "incident:armed_attack"
+      ],
+      "effects": {
+        "declare_war": true,
+        "war_objective_refs": [
+          "objective:secure_delta"
+        ],
+        "authority_ref": "authority:high_council"
+      }
+    },
+    {
+      "event_id": "evt:occupation",
+      "cause_refs": [
+        "operation:delta"
+      ],
+      "effects": {
+        "occupation_control_ref": "polity:attacker"
+      }
+    },
+    {
+      "event_id": "evt:ceasefire",
+      "cause_refs": [
+        "agreement:ceasefire"
+      ],
+      "effects": {
+        "ceasefire": true,
+        "war_exhaustion_delta": 25
+      }
+    },
+    {
+      "event_id": "evt:peace",
+      "cause_refs": [
+        "treaty:peace"
+      ],
+      "effects": {
+        "peace_settlement": true
+      }
+    }
+  ],
+  "expected": {
+    "after_war": "war",
+    "after_occupation_control": "polity:attacker",
+    "sovereignty_ref": "polity:defender",
+    "after_ceasefire": "ceasefire",
+    "final_state": "peace",
+    "war_objectives_preserved": [
+      "objective:secure_delta"
+    ],
+    "grievance_refs": [
+      "claim:delta"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "conflict_losses_prisoners_displacement_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "consequence_types": [
+    "ship_or_facility_damage",
+    "unit_destroyed",
+    "fatality",
+    "injury",
+    "missing",
+    "captured_or_detained",
+    "rescued_or_repatriated",
+    "civilian_casualty",
+    "evacuation",
+    "refugee_or_displaced_population"
+  ],
+  "rules": [
+    "Losses attach to existing entities/populations; they are not flavor text.",
+    "Destroyed ships/facilities remain unavailable until a valid recovery/reconstruction event.",
+    "Deaths and injuries use existing personnel/consequence systems.",
+    "Prisoners remain persistent characters/populations with location/custody state.",
+    "Refugee/evacuation movements conserve population and delegate to population_movement_contract.",
+    "Civilian harm feeds diplomatic, legal, reputation and political consequences without assigning morality from species."
+  ]
+}

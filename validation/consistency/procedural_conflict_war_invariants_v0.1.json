@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_conflict_war_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED",
+  "refs": [
+    "gameplay/conflict/conflict_war_index_v0.1.json",
+    "tools/generation/simulate_conflict_war.py"
+  ],
+  "cases": [
+    {
+      "id": "species_not_aggression",
+      "expected": [
+        "species-derived aggression fields rejected",
+        "culture/faction/government required"
+      ]
+    },
+    {
+      "id": "same_crisis_different_context",
+      "expected": [
+        "Klingon Imperial context may escalate earlier than Vulcan mainstream context",
+        "neither result is forced by species"
+      ]
+    },
+    {
+      "id": "capability_can_override_doctrine",
+      "expected": [
+        "weakened/exhausted Klingon context may prefer restraint"
+      ]
+    },
+    {
+      "id": "dispute_not_war",
+      "expected": [
+        "claim dispute may remain diplomatic",
+        "war needs cause objective authority"
+      ]
+    },
+    {
+      "id": "captain_not_state",
+      "expected": [
+        "tactical firing authority does not equal political war-declaration authority"
+      ]
+    },
+    {
+      "id": "real_force_only",
+      "expected": [
+        "operation consumes existing units",
+        "no balancing spawn"
+      ]
+    },
+    {
+      "id": "persistent_losses",
+      "expected": [
+        "same unit IDs retain damage/destruction"
+      ]
+    },
+    {
+      "id": "victory_not_sovereignty",
+      "expected": [
+        "operation can create control candidate",
+        "sovereignty unchanged without political settlement"
+      ]
+    },
+    {
+      "id": "occupation_not_recognition",
+      "expected": [
+        "effective control separate from claim/sovereignty/recognition"
+      ]
+    },
+    {
+      "id": "civil_fragmentation_not_civil_war",
+      "expected": [
+        "armed actors and escalation required"
+      ]
+    },
+    {
+      "id": "ceasefire_not_peace",
+      "expected": [
+        "underlying grievances/objectives persist unless explicitly settled"
+      ]
+    },
+    {
+      "id": "peace_not_reset",
+      "expected": [
+        "losses/history/grievances remain persistent"
+      ]
+    },
+    {
+      "id": "offscreen_deterministic",
+      "expected": [
+        "same seed/state gives same result",
+        "player presence not input"
+      ]
+    },
+    {
+      "id": "ai_no_authority_mutation",
+      "expected": [
+        "AI cannot declare war or invent outcomes"
+      ]
+    },
+    {
+      "id": "future_block_boundary",
+      "expected": [
+        "Block 4-10 outputs are candidates only"
+      ]
+    }
+  ]
+}

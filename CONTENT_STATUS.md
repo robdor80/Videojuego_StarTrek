@@ -272,6 +272,35 @@ Current baseline:
 
 **Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains authoritative for live scheduling, state mutation, persistence and generic action/event execution.
 
+## Procedural Conflict & War v0.1
+
+Control documents:
+- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `docs/roadmap/procedural_conflict_war_plan_v0.1.md`
+- `docs/roadmap/procedural_conflict_war_status_v0.1.json`
+
+Current baseline:
+- **Block 3 COMPLETE — CW001–CW018: 18/18**;
+- disputes/crises can escalate or de-escalate without automatic combat;
+- **species is not an aggression/war-propensity variable**;
+- cultural context + faction/polity doctrine + government + leader + era + history + capability produce conflict behaviour;
+- canonical gameplay tuning includes Federation, Klingon Empire, Vulcan mainstream context, Romulan Star Empire, Cardassian Union, Ferengi Alliance and Dominion;
+- same crisis fixture makes Klingon Imperial context escalate further than Vulcan mainstream context, while a weakened/exhausted Klingon fixture chooses restraint;
+- war requires cause + objective + valid authority;
+- tactical firing authority is separated from political war authority;
+- only pre-existing forces may mobilize/fight; no encounter-balancing fleet spawn;
+- strategic-LOD operations persist damage against the same unit IDs;
+- occupation/control do not auto-transfer sovereignty;
+- civil fragmentation does not auto-create civil war;
+- ceasefire/armistice/peace remain distinct;
+- off-screen war persists deterministically;
+- deterministic reference simulator + **13 executable tests**;
+- **4 locked fictional fixtures** covering doctrine context, Klingon restraint, strategic operation and war lifecycle.
+
+**Sequential boundary:** Blocks 1–3 are COMPLETE. Blocks 4–10 remain TODO. **Block 4 — Living Interplanetary / Interstellar Economy is next but has not been started.**
+
+**Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains authoritative for scheduling, persistence and World State mutation.
+
 ## Major remaining domains
 
 | Domain | Status |
