@@ -34,6 +34,7 @@ Cada capa debe responder:
 - `PARTIAL` — existe base útil pero no cumple aún definición de terminado.
 - `COMPLETE` — cumple contrato, persistencia, validación y dependencias.
 - `BLOCKED_AUTHOR` — necesita una decisión real de autor.
+- `BLOCKED_RUNTIME` — diseño/contenido listo hasta su frontera, pero depende de una capacidad aún inexistente en CoreRPG/Host.
 
 Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explícita.
 
@@ -210,12 +211,12 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 113 | Invariantes de identidad/persistencia | PARTIAL | 009-018 | Tests cubren años, LOD, save/load y migraciones |
-| 114 | Invariantes de población/social | PARTIAL | 015-030 | No duplicación, omnisciencia ni relaciones sin procedencia |
-| 115 | Invariantes biología/cultura | TODO | 031-042 | Especie no fuerza personalidad/cultura y casos especiales son válidos |
-| 116 | Invariantes organización/tripulación | PARTIAL | 043-064 | Puesto/rango/cualificación/turno/complemento coherentes |
-| 117 | Invariantes mundo/logística | PARTIAL | 065-084 | Geografía, tráfico, inventario y política conservan causalidad |
-| 118 | Invariantes tecnología/canon/era | PARTIAL | 006,085-092 | Nada existe antes de tiempo ni fuera de capacidades válidas |
+| 113 | Invariantes de identidad/persistencia | COMPLETE | 009-018 | Tests cubren años, LOD, save/load y migraciones |
+| 114 | Invariantes de población/social | COMPLETE | 015-030 | No duplicación, omnisciencia ni relaciones sin procedencia |
+| 115 | Invariantes biología/cultura | COMPLETE | 031-042 | Especie no fuerza personalidad/cultura y casos especiales son válidos |
+| 116 | Invariantes organización/tripulación | COMPLETE | 043-064 | Puesto/rango/cualificación/turno/complemento coherentes |
+| 117 | Invariantes mundo/logística | COMPLETE | 065-084 | Geografía, tráfico, inventario y política conservan causalidad |
+| 118 | Invariantes tecnología/canon/era | COMPLETE | 006,085-092 | Nada existe antes de tiempo ni fuera de capacidades válidas |
 | 119 | Fixture vertical v0.0.1 — Sensores | PARTIAL | 087 + dependencias | Una consola detecta/analiza mundo generado previamente |
 | 120 | Readiness CoreRPG + UE5 | TODO | 001-119 | Contratos estables, fixtures reproducibles, migraciones y límites definidos |
 
@@ -277,3 +278,16 @@ Secuencia inmediata:
 **019–030 → persona/conocimiento/memoria/relaciones**
 
 Tras esas capas, especies y ciclo vital pueden desarrollarse sin crear contradicciones posteriores.
+
+
+## 7. Estado de cierre v0.1
+
+- **001–118:** COMPLETE a nivel de diseño/contratos/validación del repositorio Star Trek.
+- **119:** PARTIAL. Fixture de aceptación de Sensores v0.0.1 definido; faltan las fases F/G/H del roadmap de consola para cerrar la experiencia ejecutable.
+- **120:** BLOCKED_RUNTIME. La integración completa requiere CoreRPG 4.5+ (Generic World State y capacidades runtime posteriores).
+
+Referencia de readiness:
+`docs/roadmap/procedural_runtime_readiness_v0.1.md`
+
+Fixture principal:
+`validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json`
