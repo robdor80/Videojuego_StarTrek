@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_sapient_species_morphology_biology",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Generate persistent biology/morphology from environment and seed before visual styling. Biology constrains bodies; it does not prescribe morality, culture or personality.",
+  "morphology_families": [
+    "humanoid_bilateral",
+    "nonhuman_bilateral",
+    "radial_or_multilateral",
+    "aquatic_or_amphibious",
+    "avian_or_gliding_adapted",
+    "arthropod_like",
+    "reptilian_like",
+    "mammalian_like_nonhuman",
+    "silicon_or_exotic_biochemistry_when_setting_rules_support",
+    "energy_or_noncorporeal_exception_when_explicitly_authorized"
+  ],
+  "persistent_fields": [
+    "species_id",
+    "origin_world_ref",
+    "biochemistry",
+    "body_plan",
+    "limb_pattern",
+    "sensory_organs",
+    "respiration",
+    "temperature_range",
+    "gravity_adaptation",
+    "reproductive_model_if_relevant",
+    "lifespan_band",
+    "sexual_dimorphism_or_other_polymorphism",
+    "skin_surface_cover",
+    "pigmentation_palette_constraints",
+    "craniofacial_or_equivalent_structure",
+    "height_or_size_distribution",
+    "medical_hazard_refs",
+    "visual_identity_profile_ref"
+  ],
+  "individual_variation": [
+    "body_size",
+    "age_state",
+    "pigmentation",
+    "surface_patterning",
+    "facial_or_equivalent_geometry",
+    "hair_or_follicle_equivalent",
+    "scars_injuries",
+    "health_state"
+  ],
+  "rules": [
+    "Homeworld gravity/atmosphere/temperature and biosphere constrain plausible morphology unless explicit anomaly/provenance explains otherwise.",
+    "Do not generate every new species as Human plus forehead appliance.",
+    "Do not generate grotesque/extreme morphology merely for novelty.",
+    "Biology does not force government, culture, loyalty, aggression, humor, intelligence or ethics.",
+    "One civilization may contain multiple sapient species.",
+    "One species may belong to multiple civilizations.",
+    "Materialized species morphology persists; later art must use same morphology identity.",
+    "Unknown biological detail remains unresolved until observation/sample/contact requires it."
+  ],
+  "visual_boundary": "NAP consumes persistent species morphology; image generation cannot redefine biology."
+}
