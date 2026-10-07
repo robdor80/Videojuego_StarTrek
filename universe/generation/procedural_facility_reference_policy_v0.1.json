@@ -1,0 +1,142 @@
+{
+  "schema_version": "0.1.0",
+  "policy_id": "procedural_facility_reference_generation_policy",
+  "status": "REFERENCE_IMPLEMENTATION_POLICY",
+  "score": {
+    "formula": "0.25*need_strength + 0.20*service_gap + 0.15*strategic_value + 0.10*site_advantage + 0.10*operator_capacity + 0.10*sustainment + 0.10*duration_score - 0.15*alternative_sufficiency",
+    "clamps": [
+      0,
+      100
+    ],
+    "duration_score": "min(expected_need_years / 20, 1) * 100"
+  },
+  "hard_gates": {
+    "minimum_need_strength": 30,
+    "minimum_expected_need_years": 1,
+    "maximum_alternative_sufficiency": 69,
+    "minimum_operator_capacity": 50,
+    "minimum_site_advantage": 40,
+    "minimum_sustainment": 50
+  },
+  "scale_thresholds": [
+    {
+      "minimum_score": 96,
+      "scale": "major_complex",
+      "extra_gate": "allow_major_complex=true"
+    },
+    {
+      "minimum_score": 85,
+      "scale": "starbase"
+    },
+    {
+      "minimum_score": 70,
+      "scale": "standard_station"
+    },
+    {
+      "minimum_score": 55,
+      "scale": "small_station"
+    },
+    {
+      "minimum_score": 35,
+      "scale": "micro_outpost"
+    }
+  ],
+  "below_threshold_result": "temporary_or_mobile_solution",
+  "role_scale_limits": {
+    "communications_relay": [
+      "micro_outpost",
+      "small_station"
+    ],
+    "sensor_listening_outpost": [
+      "micro_outpost",
+      "small_station"
+    ],
+    "research_observatory": [
+      "micro_outpost",
+      "small_station",
+      "standard_station"
+    ],
+    "medical_quarantine": [
+      "small_station",
+      "standard_station"
+    ],
+    "depot_supply": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "trade_cargo_transfer": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "orbital_habitat": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "refinery_processing": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "repair_drydock": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "shipyard": [
+      "standard_station",
+      "starbase",
+      "major_complex"
+    ],
+    "military_outpost": [
+      "micro_outpost",
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "detention_security": [
+      "small_station",
+      "standard_station"
+    ],
+    "diplomatic_administrative": [
+      "small_station",
+      "standard_station",
+      "starbase"
+    ],
+    "colony_support": [
+      "small_station",
+      "standard_station"
+    ]
+  },
+  "construction_months": {
+    "micro_outpost": [
+      4,
+      18
+    ],
+    "small_station": [
+      9,
+      36
+    ],
+    "standard_station": [
+      18,
+      72
+    ],
+    "starbase": [
+      48,
+      144
+    ],
+    "major_complex": [
+      84,
+      300
+    ]
+  },
+  "canonical_reuse_rules": {
+    "broadly_reusable": "allowed when operator/date/role/scale fit",
+    "controlled_reuse": "requires score >= 80 and strategic_value >= 65, or explicit allow_controlled_design",
+    "restricted_reuse": "requires explicit allow_restricted_design",
+    "seeded_only": "never procedurally instantiated"
+  },
+  "note": "These thresholds are GAME_ADDITION reference values and can be tuned after simulation telemetry. Hard anti-convenience gates remain invariant."
+}
