@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "tellarite",
+  "display_name_es": "Tellarita",
+  "status": "CONTENT_DEPTH_BASELINE_SPARSE_BIOLOGY",
+  "contract_ref": "gameplay/species/species_biology_contract.json",
+  "baseline_refs": [
+    "gameplay/species/founding_species_profiles.json#tellarite"
+  ],
+  "identity": {
+    "homeworld_common_ref": "tellar_prime"
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "detailed_anatomy_status": "visual_reference_supported_but_gameplay_biology_not_locked",
+    "visual_profile_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1.json#tellarite"
+  },
+  "physiology": {
+    "broad_species_bonus": null,
+    "current_gameplay_specialization": "no_broad_species_bonus_defined",
+    "unknowns": [
+      "exact strength/reflex comparison",
+      "lifecycle thresholds",
+      "reproductive biology",
+      "species-specific environmental tolerance ranges",
+      "species-specific medical reference ranges"
+    ]
+  },
+  "medical": {
+    "species_specific_hooks": [],
+    "rule": "Do not invent a Tellarite medical modifier until sourced."
+  },
+  "culture_socialization": {
+    "rules": [
+      "Argument and debate can be socially positive.",
+      "Complaints or insults may function as conventional engagement.",
+      "Conventional sharp speech is not automatic hostility.",
+      "Individual adherence varies and is separate from personality."
+    ]
+  },
+  "diplomacy": {
+    "tone_classifier_rule": "Do not map insult or argumentative phrasing directly to hostility without cultural/context resolution."
+  },
+  "ai_boundary": [
+    "Do not treat every Tellarite line as anger.",
+    "Do not invent biological traits because the schema has empty fields.",
+    "Do not infer profession, loyalty or temperament from species."
+  ],
+  "provenance": [
+    {
+      "source_id": "ENT_BABEL_ONE",
+      "confidence": "HIGH",
+      "claim_scope": "complaint/argument interaction style"
+    },
+    {
+      "source_id": "ENT_BOUNTY",
+      "confidence": "HIGH",
+      "claim_scope": "debate culture"
+    },
+    {
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "confidence": "HIGH",
+      "claim_scope": "Federation diplomatic participation"
+    },
+    {
+      "source_id": "MA_TELLARITE",
+      "confidence": "HIGH",
+      "claim_scope": "cross-check culture"
+    }
+  ]
+}
