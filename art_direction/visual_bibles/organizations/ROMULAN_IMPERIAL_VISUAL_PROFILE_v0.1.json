@@ -1,0 +1,39 @@
+{
+  "profile_id": "romulan_imperial_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:romulan_star_empire",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "romulan_imperial_government",
+      "romulan_military",
+      "tal_shiar"
+    ]
+  },
+  "rules": [
+    "Government, military and Tal Shiar presentation are separate layers.",
+    "Tal Shiar membership may be covert and must not be exposed visually unless the current scene/state permits it.",
+    "Romulan visual language must resolve era; 23rd-century and 24th-century uniforms/interiors are not one timeless style.",
+    "Species morphology cannot imply loyalty or intelligence affiliation."
+  ],
+  "allowed_variation": [
+    "civil formalwear",
+    "military uniform by dated reference",
+    "covert/plain-clothes presentation",
+    "institution-specific insignia when known"
+  ],
+  "forbidden_variation": [
+    "automatic Tal Shiar uniform on secret members",
+    "forehead ridges used as organization markers",
+    "TNG-era military look backfilled into Kirk-era Romulans"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/ROMULAN_EMPIRE_ORGANIZATIONS_v0.1.json",
+    "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
