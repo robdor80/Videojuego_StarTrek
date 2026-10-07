@@ -1,0 +1,72 @@
+{
+  "profile_id": "borg_assimilation_visual_state",
+  "profile_type": "character_transformative_state",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_VISUAL_REFERENCE_OBSERVATIONS",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1"
+  ],
+  "authority_scope": "character_state:borg_assimilation",
+  "runtime_state_ref": "gameplay/species/borg_assimilation_state.json",
+  "identity_rule": "origin entity_id, origin_species_id and visual_identity_id remain authoritative through assimilation, drone state, disconnection, liberation and recovery unless an explicit world rule creates a genuinely separate entity.",
+  "resolution_order": [
+    "origin persistent visual identity",
+    "origin species morphology",
+    "assimilation stage",
+    "drone/function context if established",
+    "persistent implant/modification history",
+    "current damage/medical state",
+    "current environment/lighting"
+  ],
+  "visual_layers": {
+    "persistent_origin_identity": [
+      "underlying facial proportions",
+      "origin species cranial/ear/facial morphology",
+      "body frame",
+      "persistent scars or pre-existing modifications"
+    ],
+    "assimilation_overlays": [
+      "dermal pallor or altered surface presentation where supported",
+      "cranial housings",
+      "ocular implants",
+      "facial prosthetic/cybernetic structures",
+      "external cabling/tubing",
+      "torso and limb cybernetics",
+      "armor/protective components",
+      "function-specific modules when supported"
+    ],
+    "liberation_recovery": [
+      "removed implants leave only state-supported residual structures/scars",
+      "remaining implants are persistent modifications",
+      "skin/hair/soft-tissue recovery evolves over time rather than resetting identity"
+    ]
+  },
+  "variation_rules": [
+    "Implant coverage and topology may vary substantially between drones.",
+    "Asymmetry is allowed and common in the supplied references.",
+    "The same persistent person keeps traceable underlying morphology beneath different Borg states.",
+    "Origin species traits may remain visible where not physically obscured or altered."
+  ],
+  "forbidden": [
+    "changing origin species to 'borg'",
+    "rerolling the face during assimilation or liberation",
+    "copying one canonical drone implant layout as a universal template",
+    "adding implants solely for spectacle without state/function provenance",
+    "treating implant configuration as personality or knowledge",
+    "assuming Collective access exposes all World Truth"
+  ],
+  "nap_requirements": [
+    "entity_id required",
+    "visual_identity_id required",
+    "origin_species_id required",
+    "assimilation_state snapshot required",
+    "persistent implant/modification refs required when established",
+    "later assets must reference the same visual identity lineage"
+  ],
+  "reference_policy": {
+    "user_supplied_images_used_as_morphology_and_state_reference_only": true,
+    "canonical_character_likeness_is_not_a_procedural_template": true
+  }
+}
