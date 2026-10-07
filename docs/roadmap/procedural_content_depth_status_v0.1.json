@@ -1,0 +1,455 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_content_depth_status",
+  "plan_ref": "docs/roadmap/procedural_content_depth_plan_v0.1.md",
+  "summary": {
+    "total_packages": 63,
+    "complete": 17,
+    "partial": 2,
+    "in_progress": 0,
+    "todo": 44
+  },
+  "packages": [
+    {
+      "package_id": "D001",
+      "scope": "Human detailed gameplay/biology profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Baseline, lifecycle unknown policy, culture separation, medical/visual hooks"
+    },
+    {
+      "package_id": "D002",
+      "scope": "Vulcan detailed gameplay/biology profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Physiology, telepathy boundaries, pon farr, lifecycle/visual hooks"
+    },
+    {
+      "package_id": "D003",
+      "scope": "Andorian detailed gameplay/biology profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Cold adaptation, antenna anatomy/state, culture separation, visual hooks"
+    },
+    {
+      "package_id": "D004",
+      "scope": "Tellarite detailed gameplay/biology profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Sparse-canon safe biology, social interpretation, visual hooks"
+    },
+    {
+      "package_id": "D005",
+      "scope": "Aenar related-population profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Separate identity from Andorian; no cosmetic-variant shortcut"
+    },
+    {
+      "package_id": "D006",
+      "scope": "Klingon detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Biology, era-aware morphology, house/honor context, no warrior lock"
+    },
+    {
+      "package_id": "D007",
+      "scope": "Romulan detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Vulcan ancestry without equivalence; state/security culture separation"
+    },
+    {
+      "package_id": "D008",
+      "scope": "Cardassian detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Environmental/medical hooks, morphology, hierarchy without loyalty lock"
+    },
+    {
+      "package_id": "D009",
+      "scope": "Bajoran detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Biology baseline, faith/occupation context separated from individual state"
+    },
+    {
+      "package_id": "D010",
+      "scope": "Ferengi detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Telepathic-reading limitation, morphology, economy/culture separation"
+    },
+    {
+      "package_id": "D011",
+      "scope": "Trill host/symbiont/joining profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Composite identity, memory gating, medical compatibility"
+    },
+    {
+      "package_id": "D012",
+      "scope": "Betazoid detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Telepathy/empathy limits, development, privacy/consent"
+    },
+    {
+      "package_id": "D013",
+      "scope": "Changeling detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Morph state, regeneration, identity verification"
+    },
+    {
+      "package_id": "D014",
+      "scope": "Vorta detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Engineered biology, Dominion role without personality lock"
+    },
+    {
+      "package_id": "D015",
+      "scope": "Jem'Hadar detailed profile",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Accelerated lifecycle, ketracel dependency, operational consequences"
+    },
+    {
+      "package_id": "D016",
+      "scope": "Borg assimilation state depth",
+      "status": "COMPLETE",
+      "wave": "Wave A",
+      "exit_condition": "Origin-species continuity, implant/function state, liberation/recovery"
+    },
+    {
+      "package_id": "D017",
+      "scope": "Synthetic/android person framework",
+      "status": "TODO",
+      "wave": "Wave A",
+      "exit_condition": "Identity/lifecycle/rights/state hooks"
+    },
+    {
+      "package_id": "D018",
+      "scope": "Persistent holographic person framework",
+      "status": "TODO",
+      "wave": "Wave A",
+      "exit_condition": "Program instance identity, memory/state persistence, embodiment constraints"
+    },
+    {
+      "package_id": "D019",
+      "scope": "Earth/Federation cultural composition",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D020",
+      "scope": "Vulcan cultural profiles",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D021",
+      "scope": "Andorian + Aenar cultural profiles",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D022",
+      "scope": "Tellarite cultural profiles",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D023",
+      "scope": "Klingon houses/honor/social grammar",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D024",
+      "scope": "Romulan social/security grammar",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D025",
+      "scope": "Cardassian family/state/institutional grammar",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D026",
+      "scope": "Bajoran religion/civil society/occupation legacy",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D027",
+      "scope": "Ferengi commercial/legal/social grammar",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D028",
+      "scope": "Trill joining/social continuity",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D029",
+      "scope": "Betazoid telepathic privacy/social grammar",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D030",
+      "scope": "Dominion social hierarchy",
+      "status": "TODO",
+      "wave": "Wave B",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D031",
+      "scope": "Federation institutions",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D032",
+      "scope": "Starfleet concrete organization profiles",
+      "status": "PARTIAL",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D033",
+      "scope": "Klingon Empire organizations/houses",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D034",
+      "scope": "Romulan Star Empire / Tal Shiar separation",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D035",
+      "scope": "Cardassian Union institutions",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D036",
+      "scope": "Bajoran government/religious institutions",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D037",
+      "scope": "Ferengi Alliance commercial institutions",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D038",
+      "scope": "Dominion organizations",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D039",
+      "scope": "Borg Collective operational state",
+      "status": "TODO",
+      "wave": "Wave C",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D040",
+      "scope": "Starfleet class-depth pass",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D041",
+      "scope": "Klingon class-depth pass",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D042",
+      "scope": "Romulan class-depth pass",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D043",
+      "scope": "Cardassian class-depth pass",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D044",
+      "scope": "Civilian/commercial vessel grammar",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D045",
+      "scope": "Starbase/station depth profiles",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D046",
+      "scope": "Shipboard interior functional profiles",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D047",
+      "scope": "Earth / Sol system depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D048",
+      "scope": "Vulcan system/world depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D049",
+      "scope": "Andoria depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D050",
+      "scope": "Tellar Prime depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D051",
+      "scope": "Qo'noS depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D052",
+      "scope": "Romulus pre-destruction playable-era profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D053",
+      "scope": "Cardassia Prime depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D054",
+      "scope": "Bajor system/world depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D055",
+      "scope": "Ferenginar depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D056",
+      "scope": "Trill depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D057",
+      "scope": "Betazed depth profile",
+      "status": "TODO",
+      "wave": "Wave D",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D058",
+      "scope": "Founding species visual profiles",
+      "status": "COMPLETE",
+      "wave": "Wave E",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D059",
+      "scope": "Major species visual profiles",
+      "status": "PARTIAL",
+      "wave": "Wave E",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D060",
+      "scope": "Faction/organization visual profiles",
+      "status": "TODO",
+      "wave": "Wave E",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D061",
+      "scope": "Era-specific ship/interior profiles",
+      "status": "TODO",
+      "wave": "Wave E",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D062",
+      "scope": "Planet/environment profiles",
+      "status": "TODO",
+      "wave": "Wave E",
+      "exit_condition": null
+    },
+    {
+      "package_id": "D063",
+      "scope": "Representative NAP fixture asset package",
+      "status": "TODO",
+      "wave": "Wave E",
+      "exit_condition": null
+    }
+  ]
+}
