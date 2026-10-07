@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "dominion_hierarchical_multispecies_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "polity_association": "dominion",
+    "automatic_attachment_by_species": false,
+    "principle": "The Dominion is a hierarchical multispecies imperial system. Founder, Vorta and Jem'Hadar contexts must remain distinct."
+  },
+  "historical_context": {
+    "core": "Founders created/shape a hierarchy aimed at imposing order and preventing vulnerability to solids.",
+    "chronology_conflict_policy": "Conflicting statements about Dominion age remain source-contextual; do not force one exact founding date without project decision."
+  },
+  "values_and_norms": {
+    "founder_context": [
+      "Great Link and Changeling solidarity can be central.",
+      "Control/order over solids can be institutional ideology."
+    ],
+    "vorta_context": [
+      "Founder reverence is engineered/institutional.",
+      "Administration, diplomacy and command are common institutional roles."
+    ],
+    "jem_hadar_context": [
+      "Founder reverence and obedience are engineered/institutional drives.",
+      "Military unit identity and chain of command are central contexts.",
+      "Ketracel-white dependence creates real logistical power relations."
+    ]
+  },
+  "communication_and_conflict": {
+    "rules": [
+      "Founder appearance/form does not grant copied memories or identity.",
+      "Vorta negotiation may represent Dominion authority only when actual assignment/authorization exists.",
+      "Jem'Hadar obedience and unit behavior remain stateful and can include deviation/doubt."
+    ]
+  },
+  "authority_and_status": {
+    "hierarchy": [
+      "Founders",
+      "Vorta",
+      "Jem'Hadar",
+      "other Dominion member/subjugated populations contextual"
+    ],
+    "rules": [
+      "Founder authority is structurally highest in standard Dominion context.",
+      "Vorta command over Jem'Hadar depends on actual unit/assignment state.",
+      "Species alone does not prove current post, clearance or mission."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "universal_cross_dominion_rule": null
+  },
+  "family_kinship_and_household": {
+    "founder_model": "Great Link is not represented as ordinary humanoid household/kinship.",
+    "vorta_model": "unknown_not_locked",
+    "jem_hadar_model": "engineered lifecycle context; do not impose Human family model",
+    "rule": "Do not generate conventional family structures where canon/project does not support them."
+  },
+  "education_and_socialization": {
+    "founder": "Great Link/social memory context",
+    "vorta": "engineered and institutional role socialization",
+    "jem_hadar": "accelerated maturation plus military/obedience socialization",
+    "exact_training_programs": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Institutional role prevalence does not replace actual assignment state."
+  },
+  "religion_philosophy_or_worldview": {
+    "founder_reverence": {
+      "vorta": "engineered/institutional",
+      "jem_hadar": "engineered/institutional"
+    },
+    "rule": "Do not model this as generic voluntary humanoid religion."
+  },
+  "law_duty_and_obligation": {
+    "core": "strict hierarchy and obedience expectations",
+    "rule": "Actual punishment, command and resource control require event/state."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misread": "Dominion as one homogeneous culture",
+    "professional_response": "Resolve whether the actor is Founder, Vorta, Jem'Hadar or another Dominion population and what authority they actually hold."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "species/role layer",
+      "unit/assignment",
+      "individual deviation",
+      "campaign state",
+      "member/subjugated society"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Alpha/Gamma contact, war and territorial control are date-sensitive.",
+      "Campaign World State supersedes assumed future canon after start."
+    ]
+  },
+  "gameplay_hooks": [
+    "dominion_chain_of_command",
+    "founder_authority",
+    "vorta_administration",
+    "jem_hadar_unit_state",
+    "ketracel_logistics",
+    "infiltration_identity_verification"
+  ],
+  "ai_guardrails": [
+    "Do not treat the Dominion as a single species.",
+    "Do not grant authority from species without assignment state.",
+    "Do not let a Changeling copied form inherit permissions.",
+    "Do not invent ketracel supply, punishment, command orders or Founder directives.",
+    "Do not assume individual Jem'Hadar or Vorta can never deviate."
+  ],
+  "unknowns": [
+    "Vorta household/reproduction culture",
+    "Jem'Hadar non-military private-life model beyond supported canon",
+    "complete member-world social structures",
+    "universal funerary norms"
+  ],
+  "provenance": [
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "confidence": "HIGH",
+      "claim_scope": "Dominion hierarchy"
+    },
+    {
+      "source_id": "MA_FOUNDER",
+      "confidence": "MEDIUM",
+      "claim_scope": "Founder/Great Link context"
+    },
+    {
+      "source_id": "MA_VORTA",
+      "confidence": "MEDIUM",
+      "claim_scope": "Vorta institutional role"
+    },
+    {
+      "source_id": "MA_JEM_HADAR",
+      "confidence": "MEDIUM",
+      "claim_scope": "Jem'Hadar engineered military context"
+    },
+    {
+      "source_id": "MA_KETRACEL_WHITE",
+      "confidence": "MEDIUM",
+      "claim_scope": "dependency/logistical control context"
+    },
+    {
+      "source_id": "DS9_THE_JEMHADAR",
+      "confidence": "HIGH",
+      "claim_scope": "first direct Federation-Dominion military encounter"
+    }
+  ]
+}
