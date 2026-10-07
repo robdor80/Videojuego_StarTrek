@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.35.0",
+  "registry_version": "0.35.1",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -2482,6 +2482,24 @@
       "title": "Shadows and Symbols",
       "publisher": "Star Trek: Deep Space Nine",
       "notes": "Screen context for Monac/Dominion-war industrial targets where applicable."
+    },
+    {
+      "source_id": "MA_STARBASE_25_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starbase 25 type",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starbase_25_type",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for large long-lived Federation starbase design known to have been in service since the mid-2260s; detailed 2380s amenities are not automatically backfilled into playable earlier eras."
+    },
+    {
+      "source_id": "MA_RELAY_STATION_47",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Relay Station 47",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Relay_Station_47",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for standard two-officer crew complement, one shuttlecraft and 2369 operational context."
     }
   ]
 }
