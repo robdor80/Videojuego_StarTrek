@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "organization_service_career_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "organization_not_species",
+      "expected": [
+        "species never grants organization membership automatically",
+        "mixed-species organizations and same-species political diversity are supported"
+      ]
+    },
+    {
+      "id": "citizenship_membership_loyalty_separate",
+      "expected": [
+        "citizenship may exist without service membership",
+        "membership does not prove loyalty",
+        "loyalty or sympathy may be private/unknown"
+      ]
+    },
+    {
+      "id": "rank_not_position",
+      "expected": [
+        "rank/grade and billet/position resolve independently",
+        "temporary acting position does not silently change permanent rank"
+      ]
+    },
+    {
+      "id": "chain_of_command_is_contextual",
+      "expected": [
+        "command authority resolves from current valid position/qualification/succession state",
+        "social trust does not grant command authority"
+      ]
+    },
+    {
+      "id": "duty_shift_has_coverage",
+      "expected": [
+        "staffing and duty requirements can resolve to real shift slots",
+        "handoff changes responsible actor without teleporting people"
+      ]
+    },
+    {
+      "id": "qualification_gates_position",
+      "expected": [
+        "required position capability is supported by qualification/evidence state",
+        "goal or desire alone does not grant qualification"
+      ]
+    },
+    {
+      "id": "career_transition_has_event",
+      "expected": [
+        "promotion, transfer, discipline, commendation and retirement append service history",
+        "future canon does not force post-start career outcomes"
+      ]
+    },
+    {
+      "id": "academy_to_service_continuity",
+      "expected": [
+        "graduation preserves same character identity",
+        "qualification and service record flow into first assignment",
+        "first assignment consumes a real valid opportunity"
+      ]
+    },
+    {
+      "id": "organization_history_persists",
+      "expected": [
+        "leaving or changing organization does not erase prior membership",
+        "save/load and LOD preserve affiliation history"
+      ]
+    },
+    {
+      "id": "ai_cannot_infer_secret_affiliation",
+      "expected": [
+        "AI uses authorized character knowledge only",
+        "species/culture/appearance cannot be used as proof of secret membership"
+      ]
+    }
+  ]
+}
