@@ -1,0 +1,50 @@
+{
+  "profile_id": "starfleet_uniform_visual_profiles",
+  "profile_type": "uniform_collection",
+  "version": "0.1",
+  "status": "FOUNDATION",
+  "authority_scope": "organization:starfleet",
+  "inherits": [
+    "starfleet_visual_profile"
+  ],
+  "rank_display_policy": "universal_tng_style_project_pips",
+  "cadet_display_policy": "universal_silver_cadet_pips",
+  "division_color_source": "lore/federation/starfleet/uniforms/division_colors.json",
+  "profiles": [
+    {
+      "id": "pike_snw",
+      "era_id": "pike",
+      "source_profile_id": "pike_snw"
+    },
+    {
+      "id": "kirk_tos",
+      "era_id": "kirk",
+      "subperiod": "TOS",
+      "source_profile_id": "kirk_tos"
+    },
+    {
+      "id": "kirk_tmp_mid_2270s",
+      "era_id": "kirk",
+      "subperiod": "The Motion Picture",
+      "source_profile_id": "kirk_tmp_mid_2270s"
+    },
+    {
+      "id": "kirk_movies_2280s_2293",
+      "era_id": "kirk",
+      "subperiod": "films",
+      "source_profile_id": "kirk_movies_2280s_2293"
+    },
+    {
+      "id": "tng_ds9_voyager",
+      "era_id": "tng_ds9_voyager",
+      "source_profile_id": "tng_ds9_voyager"
+    }
+  ],
+  "rules": [
+    "Exact uniform cut/material details require validated visual references before locking production assets.",
+    "Division color must match date/profile and department mapping.",
+    "Gold/black commissioned pips and framed flag pips follow approved project mapping.",
+    "Silver cadet pips indicate academic class, never commissioned rank.",
+    "Uniform state is current presentation; changing uniform does not change character identity."
+  ]
+}
