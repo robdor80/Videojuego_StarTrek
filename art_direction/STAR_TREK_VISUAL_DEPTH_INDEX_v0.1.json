@@ -1,0 +1,21 @@
+{
+  "profile_id": "star_trek_visual_depth_index",
+  "profile_type": "visual_depth_index",
+  "version": "0.1",
+  "status": "WAVE_E_CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "visual_profile_resolution_and_nap_fixture",
+  "species_catalog_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_CATALOG_v0.1.json",
+  "organization_catalog_ref": "art_direction/visual_bibles/organizations/STAR_TREK_ORGANIZATION_VISUAL_PROFILE_CATALOG_v0.1.json",
+  "ship_class_profiles_ref": "art_direction/visual_bibles/ships/STAR_TREK_SHIP_CLASS_VISUAL_PROFILES_v0.1.json",
+  "interior_era_operator_profiles_ref": "art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1.json",
+  "planet_environment_profiles_ref": "art_direction/visual_bibles/planets/STAR_TREK_HOMEWORLD_ENVIRONMENT_VISUAL_PROFILES_v0.1.json",
+  "nap_fixture_ref": "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json",
+  "resolution_rule": "World/entity truth resolves first; this index only selects presentation profiles and cannot invent identity, capability, affiliation or current state.",
+  "rules": [
+    "Species profile never chooses personality, culture, organization or clothing.",
+    "Organization profile never chooses species.",
+    "Era/operator profiles never change console functionality.",
+    "Planet profiles never invent unknown physical geography.",
+    "NAP output must preserve entity/visual identity lineage and profile versions."
+  ]
+}
