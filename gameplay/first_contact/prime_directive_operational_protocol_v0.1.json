@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "prime_directive_operational_protocol",
+  "status": "FOUNDATION_FIXED",
+  "source_refs": [
+    "MA_PRIME_DIRECTIVE",
+    "TOS_BREAD_AND_CIRCUSES",
+    "TNG_WHO_WATCHES_THE_WATCHERS",
+    "TNG_PEN_PALS",
+    "TNG_HOMEWARD",
+    "SNW_STRANGE_NEW_WORLDS_EP1",
+    "ST_OFFICIAL_FIRST_CONTACTS_ACROSS_TREK",
+    "ST_OFFICIAL_PREWARP_IMPERSONATIONS"
+  ],
+  "principle": "Prime Directive is a contextual non-interference doctrine evaluated against actual knowledge, contamination, technological/social development and internal sovereignty.",
+  "assessment_dimensions": [
+    "technological_development",
+    "alien_awareness",
+    "cultural_contamination",
+    "internal_political_affairs",
+    "self_determination",
+    "requested_assistance",
+    "existing_external_interference",
+    "immediate_life_threat",
+    "Starfleet_prior_actions",
+    "treaty_or_recognized_diplomatic_context"
+  ],
+  "normal_prewarp_protocol": [
+    "observe without revealing Starfleet identity when lawfully authorized",
+    "minimize detectable technological/cultural contamination",
+    "use remote or covert observation only when mission/authority permits",
+    "avoid introducing advanced concepts, technology or political leverage",
+    "document accidental exposure immediately",
+    "if exposure occurs, assess mitigation before further disclosure"
+  ],
+  "contamination_response": [
+    "freeze unnecessary additional exposure",
+    "determine exactly what became known and by whom",
+    "assess whether concealment remains possible without greater harm/interference",
+    "report to command and legal/diplomatic chain where communications permit",
+    "generate mitigation options",
+    "record every deliberate deviation and consequence"
+  ],
+  "violation_model": {
+    "hard_action_block": false,
+    "possible_outcomes": [
+      "warning",
+      "formal_objection",
+      "investigation",
+      "discipline",
+      "diplomatic_harm",
+      "cultural_harm",
+      "reputation_change"
+    ],
+    "rule": "If an action is physically possible but violates doctrine, gameplay usually permits it and models consequences unless another hard authority/safety rule blocks it."
+  },
+  "captain_rule": "Captain may interpret and decide within lawful mission authority, but Prime Directive is not merely optional advice. Deliberate deviation is recorded and reviewable.",
+  "ai_boundary": [
+    "AI may summarize doctrine and propose interpretations.",
+    "AI cannot invent an emergency exception or retroactively declare contamination harmless.",
+    "AI cannot erase evidence of violation."
+  ]
+}
