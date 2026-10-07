@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "transporter_operation_contract",
+  "classification": "GAME_ADDITION",
+  "operation_inputs": [
+    "transporter_capability",
+    "campaign_date",
+    "source_location",
+    "destination_location",
+    "target_refs",
+    "pattern_lock_state",
+    "sensor_support",
+    "power_state",
+    "system_damage",
+    "interference",
+    "shields_or_field_constraints",
+    "authorization",
+    "medical_or_hazard_context"
+  ],
+  "operation_states": [
+    "planned",
+    "locking",
+    "energizing",
+    "in_transit",
+    "completed",
+    "aborted",
+    "failed",
+    "partial_or_exceptional"
+  ],
+  "rules": [
+    "Transport capability and limitations are era/platform specific.",
+    "Transport moves existing entities; it does not duplicate them.",
+    "Location changes only on authoritative successful resolution.",
+    "Interference, shields, distance, pattern lock, power and damage may block or increase risk.",
+    "Site-to-site capability is not assumed where era/platform does not support it.",
+    "AI cannot declare a transport success, rescue or duplicate without structured resolution."
+  ]
+}
