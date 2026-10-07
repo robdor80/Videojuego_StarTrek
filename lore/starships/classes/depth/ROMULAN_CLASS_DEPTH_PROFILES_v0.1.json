@@ -1,0 +1,112 @@
+{
+  "schema_version": "0.1.0",
+  "depth_profile_id": "romulan_class_depth_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "operator_refs": [
+    "romulan_military",
+    "tal_shiar_when_explicit"
+  ],
+  "designs": {
+    "romulan_bird_of_prey_2260s": {
+      "design_family_id": "romulan_bird_of_prey_2260s",
+      "canonical_class_name_status": "UNSPECIFIED",
+      "display_name": "Bird-of-Prey romulano del siglo XXIII",
+      "availability": {
+        "confirmed_2260s": true,
+        "retained_profiles": [
+          "kirk"
+        ],
+        "knowledge_gate": "Federation knowledge depends on campaign date/contact history"
+      },
+      "role_families": [
+        "patrol",
+        "border_attack",
+        "ambush",
+        "reconnaissance"
+      ],
+      "strengths": [
+        "cloaking",
+        "high-threat plasma weapon context",
+        "surprise_attack"
+      ],
+      "constraints": [
+        "do not invent official class name",
+        "weapon/capability knowledge is observer-dependent",
+        "cloaking is not invisibility to World Truth"
+      ],
+      "crew_generation": [
+        "Romulan military staffing derived from actual systems/mission; exact complement remains source-specific"
+      ],
+      "persistence": [
+        "same vessel persists through cloak cycles, damage and mission changes"
+      ],
+      "ai_boundary": [
+        "Federation characters before valid discovery cannot know hidden class/capability facts simply because project data does."
+      ],
+      "visual_hooks": [
+        "bird-of-prey hull markings and 23c Romulan design grammar; no D'deridex retrofitting"
+      ],
+      "source_ids": [
+        "TOS_BALANCE_OF_TERROR",
+        "MA_ROMULAN"
+      ]
+    },
+    "dderidex": {
+      "class_id": "dderidex",
+      "display_name": "D'deridex",
+      "availability": {
+        "active_24c": true,
+        "retained_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "role_families": [
+        "warbird",
+        "battle_cruiser",
+        "capital_patrol",
+        "fleet_combat",
+        "strategic_presence"
+      ],
+      "strengths": [
+        "large_capital_presence",
+        "cloaking",
+        "heavy_combat",
+        "long-range strategic missions"
+      ],
+      "constraints": [
+        "not backfilled into Pike/Kirk eras",
+        "Tal Shiar operation must be explicit membership/assignment state"
+      ],
+      "crew_generation": [
+        "large crew and support structure; mission and operator determine intelligence/security specialists"
+      ],
+      "persistence": [
+        "forced-singularity/power and cloak are ship-system state; damage persists"
+      ],
+      "ai_boundary": [
+        "Do not infer Tal Shiar because vessel is Romulan; do not expose cloaked identity without valid sensor/knowledge resolution."
+      ],
+      "visual_hooks": [
+        "large split-shell silhouette",
+        "green Romulan design grammar",
+        "cloak/current damage overlays"
+      ],
+      "source_ids": [
+        "MA_DDERIDEX_CLASS",
+        "TNG_THE_NEUTRAL_ZONE"
+      ]
+    }
+  },
+  "excluded_from_current_playable_scope": [
+    "Valdore-type: 2379 Nemesis-era, outside approved TNG/DS9/Voyager series boundary"
+  ],
+  "generation_rules": [
+    "Political/military/intelligence operator state resolves separately.",
+    "Cloak changes sensor observability, not underlying existence.",
+    "Knowledge of Romulan designs is era/contact dependent."
+  ],
+  "unknown_policy": "Where class names/specifications are not canonically established, retain design-family identity without inventing nomenclature.",
+  "nap_implications": [
+    "Romulan era design grammar is not one timeless skin; 23c Bird-of-Prey and 24c D'deridex remain distinct."
+  ]
+}
