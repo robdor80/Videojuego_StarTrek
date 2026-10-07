@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "shipboard_habitability_profile_contract",
+  "status": "FOUNDATION_FIXED",
+  "purpose": "Describe how a class/configuration constrains day-to-day life without pretending every individual ship has identical population or mission.",
+  "required_fields": [
+    "life_profile_id",
+    "class_or_configuration_ref",
+    "operator_family",
+    "habitability_tier",
+    "privacy_level",
+    "social_density",
+    "family_civilian_policy",
+    "recreation_capabilities",
+    "meal_model",
+    "quarters_model",
+    "watch_guidance",
+    "off_watch_obligation_emphasis",
+    "life_character",
+    "source_refs"
+  ],
+  "enums": {
+    "habitability_tier": [
+      "very_austere",
+      "austere",
+      "standard",
+      "comfortable",
+      "very_comfortable"
+    ],
+    "privacy_level": [
+      "very_low",
+      "low",
+      "medium",
+      "high",
+      "very_high"
+    ],
+    "social_density": [
+      "very_high",
+      "high",
+      "medium",
+      "low",
+      "very_low"
+    ],
+    "family_civilian_policy": [
+      "none_normal_operations",
+      "exception_only",
+      "mission_dependent",
+      "supported",
+      "designed_for"
+    ]
+  },
+  "watch_guidance_fields": [
+    "preferred_pattern",
+    "allowed_patterns",
+    "routine_primary_watch_allocation",
+    "routine_day_staff_bias",
+    "emergency_recall_intensity",
+    "small_crew_staggered_rest"
+  ],
+  "recreation_capability_values": [
+    "none",
+    "mess_only",
+    "common_room",
+    "lounge",
+    "gym",
+    "recreation_room",
+    "holodeck",
+    "arboretum_or_green_space",
+    "education_spaces",
+    "family_spaces",
+    "viewing_space",
+    "custom"
+  ],
+  "rules": [
+    "Class profile describes capabilities and normal living character, not a guaranteed live population.",
+    "Individual ship configuration can remove/add services only through explicit refit/configuration state.",
+    "Enterprise-D-specific named venues such as Ten Forward are not automatically assigned to every Galaxy-class vessel.",
+    "Voyager-specific modifications such as Neelix's galley are individual-ship state, not Intrepid-class default.",
+    "Reference crew numbers are guidance and provenance-tagged; runtime crew count comes from generated staffing/manifests.",
+    "A class can support families without every mission carrying families."
+  ]
+}
