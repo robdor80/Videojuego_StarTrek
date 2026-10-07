@@ -1,13 +1,13 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "manifest_id": "procedural_content_depth_status",
   "plan_ref": "docs/roadmap/procedural_content_depth_plan_v0.1.md",
   "summary": {
     "total_packages": 63,
-    "complete": 29,
-    "partial": 2,
+    "complete": 38,
+    "partial": 1,
     "in_progress": 0,
-    "todo": 32
+    "todo": 24
   },
   "wave_summary": {
     "Wave A": {
@@ -24,9 +24,9 @@
     },
     "Wave C": {
       "total": 9,
-      "complete": 0,
-      "partial": 1,
-      "todo": 8
+      "complete": 9,
+      "partial": 0,
+      "todo": 0
     },
     "Wave D": {
       "total": 18,
@@ -255,63 +255,63 @@
     {
       "package_id": "D031",
       "scope": "Federation institutions",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D032",
       "scope": "Starfleet concrete organization profiles",
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D033",
       "scope": "Klingon Empire organizations/houses",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D034",
       "scope": "Romulan Star Empire / Tal Shiar separation",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D035",
       "scope": "Cardassian Union institutions",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D036",
       "scope": "Bajoran government/religious institutions",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D037",
       "scope": "Ferengi Alliance commercial institutions",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D038",
       "scope": "Dominion organizations",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
     {
       "package_id": "D039",
       "scope": "Borg Collective operational state",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave C",
       "exit_condition": null
     },
