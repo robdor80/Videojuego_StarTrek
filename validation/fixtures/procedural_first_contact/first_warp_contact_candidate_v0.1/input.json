@@ -1,0 +1,39 @@
+{
+  "fixture_id": "first_warp_contact_candidate_v0.1",
+  "input": {
+    "campaign_seed": "first_contact_fixture_001",
+    "world_id": "gen:planet:elyra_4",
+    "civilization_slot": 0,
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-06-18",
+    "environment_class": "temperate",
+    "population_band": "large",
+    "technology_band": "early_warp",
+    "warp_state": "first_successful_warp_flight",
+    "political_representation_state": "single_planetary_authority",
+    "prior_alien_exposure": false,
+    "public_alien_awareness": false,
+    "active_internal_conflict": false,
+    "mutual_contact": false,
+    "language_samples": 5,
+    "materialization_level": "first_contact_preparation"
+  },
+  "expected": {
+    "civilization_id": "gen:civilization:03fd61e37036005f",
+    "civilization_self_name": "Raerraith",
+    "planet_self_name": "Thesqolqu",
+    "population_estimate": 3894320550,
+    "species_count": 1,
+    "primary_morphology": "nonhuman_bilateral",
+    "primary_surface": "fine_fur",
+    "primary_language_word_order": "VOS",
+    "government_type": "unitary_republic",
+    "government_self_name": "Mesikfis",
+    "representative_name": "Bathsatim Sailairdak",
+    "representative_office": "senior_civic_representative",
+    "contact_eligibility": "formal_contact_candidate",
+    "recommended_contact_timing": "captain_decision_after_brief",
+    "automatic_contact_forbidden": true,
+    "translation_state": "universal_translator_confident"
+  }
+}
