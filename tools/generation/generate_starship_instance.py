@@ -373,6 +373,23 @@ def generate(
     watch = make_watch_schedule(
         rng, operator, life_profile, crew_count, requested_watch_pattern
     )
+    watch["command_control"] = {
+        "decision_domain": "watch_policy",
+        "proposal_source": "engine",
+        "authority_owner_position": "commanding_officer",
+        "generated_policy_status": "proposed_default",
+        "player_captain_default_control_mode": "proposal_requires_approval",
+        "captain_may_accept_modify_replace_or_delegate": True,
+        "hard_constraint_refs": [
+            "staffing",
+            "qualification",
+            "medical_fitness",
+            "coverage",
+            "physical_time",
+            "valid_external_authority",
+        ],
+        "authority_contract_ref": "gameplay/chain_of_command/captain_operational_decision_authority_contract_v0.1.json",
+    }
 
     ship_id = f"gen:starship:{stable_token(seed_key, class_ref, str(crew_count))}"
     designation = f"{operator.upper()}-{stable_token(ship_id, length=6).upper()}"
