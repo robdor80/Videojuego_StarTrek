@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "human_federation_cultural_composition",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "scope": "composition_model_not_single_human_culture",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "principle": "There is no single Human culture and no automatic Human=Earth=Federation mapping.",
+    "composition_axes": [
+      "earth_regional_or_local_culture",
+      "human_colonial_culture",
+      "mixed_multispecies_household_or_community_culture",
+      "federation_civic_context",
+      "starfleet_institutional_context",
+      "individual_family_or_subculture_context"
+    ],
+    "species_lock": false,
+    "federation_citizenship_implied": false,
+    "earth_upbringing_implied": false
+  },
+  "values_and_norms": {
+    "earth_or_human_universal_norms": [],
+    "federation_civic_context": [
+      {
+        "norm": "cooperation_across_member_world_difference",
+        "evidence_state": "screen_canon_or_official_supported",
+        "strength": "common_norm"
+      },
+      {
+        "norm": "civil_political_identity_is_distinct_from_starfleet_service",
+        "evidence_state": "screen_canon_or_official_supported",
+        "strength": "strong_norm"
+      }
+    ],
+    "rule": "Do not promote late-24th-century Earth social norms into universal Human biology or all-era Human culture."
+  },
+  "communication_and_conflict": {
+    "universal_human_style": null,
+    "rule": "Communication priors come from attached regional, household, institutional and individual culture refs, not species."
+  },
+  "authority_and_status": {
+    "rules": [
+      "Human species does not grant Federation authority.",
+      "Earth origin does not grant Federation-wide political authority.",
+      "Starfleet rank belongs to organization state, not Human culture."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "universal_human_rule": null,
+    "note": "Use individual/household/regional culture state. Do not impose a contemporary Earth privacy model universally."
+  },
+  "family_kinship_and_household": {
+    "universal_structure": null,
+    "rules": [
+      "No universal Human household form is imposed.",
+      "Biological parentage, legal/social parentage and household remain distinct.",
+      "Colonial or multispecies households may differ strongly from Earth-local norms."
+    ]
+  },
+  "education_and_socialization": {
+    "rule": "Education context must be attached separately; Earth, colony, Federation and Starfleet education are not interchangeable."
+  },
+  "work_service_and_profession": {
+    "rule": "Profession and service are not inferred from species, citizenship or culture."
+  },
+  "religion_philosophy_or_worldview": {
+    "universal_human_worldview": null,
+    "rule": "No single Human religion, secularism or philosophy is assigned at species level."
+  },
+  "mourning_death_and_legacy": {
+    "universal_funeral_model": null,
+    "rule": "Use local/household/individual culture state; no universal Human mourning duration."
+  },
+  "internal_variation": {
+    "level": "extreme",
+    "dimensions": [
+      "region",
+      "colony",
+      "generation",
+      "religion_or_worldview",
+      "politics",
+      "class_or_resource_context",
+      "profession",
+      "household",
+      "institution",
+      "mixed_species_context"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "rule": "Earth/Federation norms can change substantially between Pike, Kirk and TNG/DS9/Voyager eras."
+  },
+  "gameplay_hooks": [
+    "culture_selection_at_character_materialization",
+    "mixed_household_generation",
+    "colony_specific_social_norms",
+    "federation_civic_vs_local_authority",
+    "starfleet_institutional_socialization"
+  ],
+  "ai_guardrails": [
+    "Do not use Human as a cultural default for the galaxy.",
+    "Do not equate Human with Earth-raised.",
+    "Do not equate Earth-raised with Federation citizen.",
+    "Do not infer religion, family form, political belief or profession from Human species.",
+    "When no culture_ref exists, prefer uncertainty over invented Earth norms."
+  ],
+  "unknowns": [
+    "exhaustive Earth regional culture catalogue",
+    "colony-specific cultures until authored/generated",
+    "universal Human marriage or inheritance rules",
+    "universal Human funerary rules"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_HUMAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "Human cultural diversity and Earth/colony distinction"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "confidence": "HIGH",
+      "claim_scope": "Federation political/civic context"
+    },
+    {
+      "source_id": "ENT_4X22_THESE_ARE_THE_VOYAGES",
+      "confidence": "HIGH",
+      "claim_scope": "founding cooperation among distinct societies"
+    },
+    {
+      "source_id": "ST8_FIRST_CONTACT",
+      "confidence": "HIGH",
+      "claim_scope": "late-24th-century Earth/Federation social context only"
+    }
+  ]
+}
