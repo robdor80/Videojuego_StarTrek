@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "cultural_profile_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Culture supplies learned norms, expectations and interpretation priors. It never replaces species biology, individual personality, citizenship, organization membership or authoritative world state.",
+  "profile_dimensions": [
+    "identity_and_scope",
+    "historical_context",
+    "values_and_norms",
+    "communication_and_conflict",
+    "authority_and_status",
+    "privacy_and_intimacy",
+    "family_kinship_and_household",
+    "education_and_socialization",
+    "work_service_and_profession",
+    "hospitality_food_and_daily_life",
+    "religion_philosophy_or_worldview",
+    "law_duty_and_obligation",
+    "mourning_death_and_legacy",
+    "cross_cultural_interaction",
+    "internal_variation",
+    "era_variation",
+    "gameplay_hooks",
+    "ai_guardrails",
+    "unknowns",
+    "provenance"
+  ],
+  "evidence_states": [
+    "screen_canon_or_official_supported",
+    "reliable_secondary_crosscheck",
+    "project_game_addition",
+    "contextual_inference_explicitly_marked",
+    "unknown_not_locked"
+  ],
+  "runtime_rules": [
+    "A character may attach zero, one or many culture_refs.",
+    "Culture membership requires upbringing, self-identification, household, education, regional, institutional or other represented provenance.",
+    "Species alone never auto-attaches a full culture profile.",
+    "A culture profile may contain strong norms while an individual rejects, modifies or selectively follows them.",
+    "Cultural knowledge and cultural identity are separate.",
+    "Household, kinship, religion, profession, citizenship and organization membership remain separate graphs/state.",
+    "Era/date can change cultural institutions and political meanings without rerolling personal identity.",
+    "Unknown domains remain unknown and cannot be silently filled with Human defaults.",
+    "AI may use a norm only when the character/context has relevant culture state and the norm is visible/known enough for the scene.",
+    "AI cannot create marriages, kinship, legal obligations, religious affiliation, titles, Houses, clans or cultural authority for dramatic convenience."
+  ],
+  "interpretation_policy": {
+    "strong_norm": "May heavily influence expectations/social consequences but still does not force behavior.",
+    "common_norm": "Useful prior that requires contextual confirmation.",
+    "possible_norm": "Can appear but should not be used as default prediction.",
+    "unknown": "Do not generate a canon claim; use individual/project-authored state if needed."
+  },
+  "family_policy": [
+    "Biological reproduction comes from species biology, not culture.",
+    "Marriage/partnership, parentage, household, guardianship and inheritance are distinct.",
+    "Culture may define social/legal expectations only where sourced or explicitly authored as GAME_ADDITION.",
+    "No universal two-parent or pair-bond household model is assumed."
+  ],
+  "death_policy": [
+    "Culture may shape funerary or mourning practices only when sourced.",
+    "Individual grief remains separate from cultural expectation.",
+    "No fixed mourning duration is inferred from a cultural profile unless canon/project data explicitly defines it."
+  ],
+  "dependencies": [
+    "gameplay/species/culture_socialization_contract.json",
+    "gameplay/relationships/kinship_family_network_contract.json",
+    "gameplay/relationships/relationship_state_model.json",
+    "gameplay/species/reproduction_parentage_framework.json",
+    "gameplay/consequences/death_destruction_mourning_continuity_contract.json"
+  ]
+}
