@@ -1,0 +1,41 @@
+{
+  "profile_id": "cardassian_union_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:cardassian_union",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "cardassian_union_government",
+      "cardassian_military",
+      "cardassian_intelligence_service",
+      "cardassian_resistance_cells"
+    ]
+  },
+  "rules": [
+    "Cardassian government, military, intelligence and resistance presentation are separate organization/state layers.",
+    "Military or intelligence clothing cannot be inferred from Cardassian species.",
+    "Resistance presentation derives from actual cell/resources/history rather than a universal resistance costume.",
+    "Occupation-era and Dominion-era political symbols/markings are temporal state."
+  ],
+  "allowed_variation": [
+    "military duty uniform",
+    "civil/institutional clothing",
+    "covert/intelligence presentation",
+    "resistance improvised equipment when event state supports"
+  ],
+  "forbidden_variation": [
+    "automatic military uniform",
+    "Obsidian/intelligence styling inferred from secrecy",
+    "Dominion markings before valid political state",
+    "permanent occupation iconography after state changes"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/CARDASSIAN_UNION_ORGANIZATIONS_v0.1.json",
+    "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
