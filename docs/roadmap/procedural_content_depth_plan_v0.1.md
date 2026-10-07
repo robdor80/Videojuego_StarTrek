@@ -28,10 +28,10 @@
 | D010 | Ferengi detailed profile | COMPLETE | Telepathic-reading limitation, morphology, economy/culture separation |
 | D011 | Trill host/symbiont/joining profile | COMPLETE | Composite identity, memory gating, medical compatibility |
 | D012 | Betazoid detailed profile | COMPLETE | Telepathy/empathy limits, development, privacy/consent |
-| D013 | Changeling detailed profile | TODO | Morph state, regeneration, identity verification |
-| D014 | Vorta detailed profile | TODO | Engineered biology, Dominion role without personality lock |
-| D015 | Jem'Hadar detailed profile | TODO | Accelerated lifecycle, ketracel dependency, operational consequences |
-| D016 | Borg assimilation state depth | PARTIAL | Origin-species continuity, implant/function state, liberation/recovery |
+| D013 | Changeling detailed profile | COMPLETE | Morph state, regeneration, identity verification |
+| D014 | Vorta detailed profile | COMPLETE | Engineered biology, Dominion role without personality lock |
+| D015 | Jem'Hadar detailed profile | COMPLETE | Accelerated lifecycle, ketracel dependency, operational consequences |
+| D016 | Borg assimilation state depth | COMPLETE | Origin-species continuity, implant/function state, liberation/recovery |
 | D017 | Synthetic/android person framework | TODO | Identity/lifecycle/rights/state hooks |
 | D018 | Persistent holographic person framework | TODO | Program instance identity, memory/state persistence, embodiment constraints |
 
