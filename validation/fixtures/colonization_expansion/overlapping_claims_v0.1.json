@@ -1,0 +1,29 @@
+{
+  "fixture_id": "overlapping_claims_v0.1",
+  "claims": [
+    {
+      "claimant_ref": "polity:a",
+      "controller_ref": "polity:a",
+      "effective_control": true,
+      "active": true
+    },
+    {
+      "claimant_ref": "polity:b",
+      "controller_ref": null,
+      "effective_control": false,
+      "active": true
+    }
+  ],
+  "expected": {
+    "border_status": "disputed_space",
+    "claimant_refs": [
+      "polity:a",
+      "polity:b"
+    ],
+    "controller_refs": [
+      "polity:a"
+    ],
+    "diplomatic_dispute_candidate": true,
+    "war_created": false
+  }
+}

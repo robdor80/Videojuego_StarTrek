@@ -1,0 +1,64 @@
+{
+  "fixture_id": "abandoned_colony_v0.1",
+  "input": {
+    "campaign_seed": "colonization_fixture_abandoned",
+    "civilization_id": "gen:civilization:alpha",
+    "project_id": "colony:failed",
+    "years": 8,
+    "initial": {
+      "origin_population": 100000000,
+      "founding_population": 3000,
+      "annual_migrants": 500,
+      "natural_growth_basis_points": 100,
+      "annual_support_capacity": 500000,
+      "self_sufficiency": 20,
+      "development_rate": 2,
+      "infrastructure_maturity": 15,
+      "governance_maturity": 35,
+      "target_location_id": "sys:haven",
+      "effective_controller_ref": "gen:civilization:alpha",
+      "governance_status": "home_administered"
+    },
+    "scheduled_events": [
+      {
+        "year": 1,
+        "event_id": "evt:failed_claim",
+        "cause_refs": [
+          "authority:colonial_charter"
+        ],
+        "effects": {
+          "declare_claim": true
+        }
+      },
+      {
+        "year": 3,
+        "event_id": "evt:route_loss",
+        "event_type": "support_disruption",
+        "cause_refs": [
+          "event:route_disruption"
+        ],
+        "effects": {
+          "annual_support_capacity_set": 0,
+          "annual_migrants_set": 0
+        }
+      },
+      {
+        "year": 5,
+        "event_id": "evt:evacuation",
+        "cause_refs": [
+          "evt:route_loss"
+        ],
+        "effects": {
+          "evacuate_all": true
+        }
+      }
+    ]
+  },
+  "expected": {
+    "colony_population": 0,
+    "stage": "abandoned",
+    "effective_control": false,
+    "claim_state": "declared_claim",
+    "evacuation_event": "evt:evacuation"
+  }
+}

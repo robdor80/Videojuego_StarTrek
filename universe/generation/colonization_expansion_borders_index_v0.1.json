@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "colonization_expansion_borders_index",
+  "status": "FOUNDATION_FIXED",
+  "parent_refs": [
+    "universe/generation/civilization_evolution_index_v0.1.json",
+    "universe/generation/procedural_settlement_colony_generation_grammar_v0.1.json",
+    "universe/generation/population_movement_contract.json",
+    "gameplay/navigation/political_space_overlay_model.json",
+    "gameplay/diplomacy/diplomatic_state_contract.json"
+  ],
+  "contracts": [
+    "universe/generation/colonization_expansion_prerequisite_rules_v0.1.json",
+    "universe/generation/colonization_target_selection_rules_v0.1.json",
+    "universe/generation/colony_lifecycle_contract_v0.1.json",
+    "universe/generation/colony_logistics_viability_rules_v0.1.json",
+    "universe/generation/territorial_claim_control_sovereignty_contract_v0.1.json",
+    "universe/generation/colonial_governance_autonomy_rules_v0.1.json",
+    "universe/generation/colony_failure_abandonment_rules_v0.1.json",
+    "universe/generation/colonization_offscreen_simulation_contract_v0.1.json",
+    "gameplay/navigation/procedural_border_derivation_rules_v0.1.json",
+    "gameplay/diplomacy/expansion_encounter_claim_dispute_rules_v0.1.json",
+    "gameplay/consequences/colonization_expansion_event_contract_v0.1.json"
+  ],
+  "reference_implementation": "tools/generation/simulate_colonization_expansion.py",
+  "validation_ref": "validation/consistency/colonization_expansion_borders_invariants_v0.1.json",
+  "fixture_root": "validation/fixtures/colonization_expansion",
+  "principle": "Expansion is a causal persistent process; settlement presence, claim, control and sovereignty are never collapsed into one fact."
+}

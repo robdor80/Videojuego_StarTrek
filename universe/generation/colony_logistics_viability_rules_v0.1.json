@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "colony_logistics_viability_rules",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "population",
+    "environment",
+    "life_support_need",
+    "food_energy_need",
+    "local_production",
+    "transport_capacity",
+    "route_reliability",
+    "medical_capacity",
+    "infrastructure_maturity",
+    "external_support"
+  ],
+  "outputs": [
+    "support_dependency",
+    "self_sufficiency",
+    "viability_pressure",
+    "growth_or_decline_context",
+    "block_4_logistics_candidate_refs"
+  ],
+  "rules": [
+    "Early colonies may rely on external support and real travel time.",
+    "Support cargo cannot teleport or exist without transport capacity.",
+    "Local self-sufficiency grows only from actual infrastructure/capability.",
+    "A broken route matters only when the colony depends on it.",
+    "Block 2 tracks support/viability summaries; detailed production, markets and shipping economics belong to Block 4.",
+    "Insufficient support may cause stagnation, decline or evacuation but not an uncaused instant disappearance."
+  ]
+}

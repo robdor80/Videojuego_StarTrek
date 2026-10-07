@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "grammar_id": "procedural_settlement_colony_generation_grammar",
   "status": "FOUNDATION_FIXED",
   "parent_ref": "universe/generation/settlement_infrastructure_contract.json",
@@ -43,11 +43,14 @@
     "Capital status requires political/institutional history, not largest-city assumption.",
     "Spaceport appears only when local technology/traffic justifies it.",
     "Colonies may fail, shrink, merge, relocate or be abandoned.",
-    "Stable districts/settlements retain identity once materialized."
+    "Stable districts/settlements retain identity once materialized.",
+    "A colony must originate from an authorized colonization/expansion process; settlement grammar cannot found one by itself."
   ],
   "anti_convenience": [
     "do_not_spawn_settlement_where_player_lands",
     "do_not_spawn_shop_or_medical_center_to_solve_player_need",
     "do_not_create_spaceport_on_pre_spaceflight_world"
-  ]
+  ],
+  "colony_lifecycle_ref": "universe/generation/colony_lifecycle_contract_v0.1.json",
+  "expansion_index_ref": "universe/generation/colonization_expansion_borders_index_v0.1.json"
 }

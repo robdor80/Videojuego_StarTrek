@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "procedural_border_derivation_rules",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "physical_location_refs",
+    "claim_refs",
+    "effective_control_refs",
+    "jurisdiction_refs",
+    "recognition_refs",
+    "treaty_refs",
+    "neutral_or_dmz_refs",
+    "effective_time"
+  ],
+  "outputs": [
+    "political_space_overlay_refs",
+    "boundary_segments_or_regions",
+    "access_policy_refs",
+    "border_status"
+  ],
+  "rules": [
+    "Borders are derived from political facts and explicit geometry, not nearest-colony/Voronoi ownership.",
+    "Colonized systems do not automatically fill all space between them.",
+    "Unclaimed gaps, corridors, enclaves, shared regions and isolated holdings are valid.",
+    "A recognized treaty boundary overrides naive geometric inference.",
+    "Overlapping claims produce disputed_space unless an agreement defines a shared/neutral arrangement.",
+    "Neutral zones and demilitarized zones require explicit treaty/legal refs.",
+    "Unknown borders may remain approximate/unknown rather than being invented for map completeness.",
+    "Physical astrography remains independent from political overlay."
+  ],
+  "parent_ref": "gameplay/navigation/political_space_overlay_model.json"
+}

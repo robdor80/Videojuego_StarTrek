@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "population_movement_contract",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "movement_types": [
@@ -35,6 +35,8 @@
     "Migration becomes residency only through a represented world-state transition.",
     "Travel consumes time unless a valid technology/event explicitly resolves it differently.",
     "Evacuation/refugee flows conserve people while changing location/status.",
-    "A materialized persistent individual remains the same entity through movement."
-  ]
+    "A materialized persistent individual remains the same entity through movement.",
+    "Colonization subtracts founders/migrants from an origin population and adds the same persistent people/population cohort to the destination; it never duplicates them."
+  ],
+  "colonization_ref": "universe/generation/colonization_expansion_borders_index_v0.1.json"
 }

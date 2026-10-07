@@ -245,6 +245,33 @@ Current baseline:
 
 **Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains responsible for authoritative scheduling, persistence, generic event/action execution and World State mutation.
 
+## Procedural Colonization, Expansion & Borders v0.1
+
+Control documents:
+- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `docs/roadmap/procedural_colonization_expansion_borders_plan_v0.1.md`
+- `docs/roadmap/procedural_colonization_expansion_borders_status_v0.1.json`
+
+Current baseline:
+- **Block 2 COMPLETE — CX001–CX016: 16/16**;
+- causal expansion prerequisites and target selection;
+- Prime Directive / indigenous-sovereignty safeguards;
+- founders and migrants move from existing populations rather than duplicating;
+- colony lifecycle from expedition/outpost through dependent, established, self-sustaining, integrated or abandoned states;
+- logistics/self-sufficiency and failure/evacuation rules;
+- claim, presence, effective control, jurisdiction, sovereignty and recognition explicitly separated;
+- sparse borders: no automatic Voronoi/bubble ownership;
+- overlapping claims create disputed space, not automatic war;
+- autonomy does not auto-create independence;
+- recognized independence changes polity authority without automatically creating a new civilization;
+- off-screen/LOD persistence;
+- deterministic reference simulator + **10 executable tests**;
+- **4 locked fictional fixtures** covering target selection, viable maturation, overlapping claims and abandonment.
+
+**Sequential boundary:** Blocks 1–2 are COMPLETE. Blocks 3–10 remain TODO. **Block 3 — Procedural Conflict & War is now the next eligible block but has not been started.**
+
+**Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains authoritative for live scheduling, state mutation, persistence and generic action/event execution.
+
 ## Major remaining domains
 
 | Domain | Status |

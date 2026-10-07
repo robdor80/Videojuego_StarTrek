@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "colonization_expansion_event_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "event_types": [
+    "colonization_proposal",
+    "expedition_authorized",
+    "colonists_departed",
+    "colony_founded",
+    "colony_stage_changed",
+    "claim_declared",
+    "claim_recognized_or_contested",
+    "border_agreement",
+    "autonomy_change",
+    "independence_recognized",
+    "evacuation",
+    "colony_abandoned"
+  ],
+  "required_major_event_fields": [
+    "event_id",
+    "effective_time",
+    "actor_refs",
+    "location_refs",
+    "cause_refs",
+    "state_changes",
+    "provenance"
+  ],
+  "rules": [
+    "Founding and abandonment are append-only historical facts.",
+    "Population movement events reference origin and destination.",
+    "Claim/border events cannot silently rewrite physical astrography.",
+    "Independence changes political state only through validated state changes.",
+    "Knowledge of a colony/claim is separate from its existence.",
+    "AI narration cannot create settlements, claims or borders absent from structured World State."
+  ]
+}

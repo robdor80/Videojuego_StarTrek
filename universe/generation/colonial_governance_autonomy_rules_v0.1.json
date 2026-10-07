@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "colonial_governance_autonomy_rules",
+  "status": "FOUNDATION_FIXED",
+  "governance_states": [
+    "direct_home_administration",
+    "chartered_local_government",
+    "territorial_government",
+    "high_autonomy",
+    "integrated_member_world",
+    "independent_polity",
+    "joint_or_shared_governance"
+  ],
+  "pressure_inputs": [
+    "distance_and_communication",
+    "population_scale",
+    "local_institutions",
+    "self_sufficiency",
+    "identity_context",
+    "representation_context",
+    "home_government_policy",
+    "historical_commitments"
+  ],
+  "rules": [
+    "Distance may influence autonomy pressure but never determines independence by itself.",
+    "Self-government and sovereignty are separate.",
+    "Autonomy thresholds create political candidates, not automatic transitions.",
+    "Independence requires an explicit constitutional, negotiated or otherwise authoritative transition.",
+    "Recognized independence changes polity authority but does not automatically create a new civilization_id.",
+    "If a genuine civilization split occurs, use civilization_continuity_lineage_rules_v0.1."
+  ]
+}

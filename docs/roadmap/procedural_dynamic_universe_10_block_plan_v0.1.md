@@ -6,7 +6,7 @@
 | Block | Scope | Status |
 |---|---|---|
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
-| 2 | Colonization, Expansion & Borders | TODO |
+| 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | TODO |
 | 4 | Living Interplanetary / Interstellar Economy | TODO |
 | 5 | Procedural History & Major Events | TODO |
@@ -32,3 +32,7 @@ It intentionally does **not** implement:
 - whole-galaxy scheduling/priority simulation — Block 10.
 
 Cross-block hooks may be emitted as candidates/refs, never silently resolved by the wrong block.
+
+## Block 2 ownership
+
+Block 2 closes causal colony founding/growth/abandonment, population transfer, claim/control/sovereignty separation, sparse political-border derivation, claim disputes and colonial autonomy/independence semantics. It does not implement war or the later blocks.

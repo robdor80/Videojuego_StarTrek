@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "colony_failure_abandonment_rules",
+  "status": "FOUNDATION_FIXED",
+  "failure_causes": [
+    "support_loss",
+    "environmental_unsuitability",
+    "infrastructure_failure",
+    "population_decline",
+    "policy_withdrawal",
+    "evacuation_order",
+    "loss_of_access",
+    "later_block_crisis_or_conflict_output"
+  ],
+  "outcomes": [
+    "recovering",
+    "stagnating",
+    "shrinking",
+    "evacuating",
+    "abandoned",
+    "relocated"
+  ],
+  "rules": [
+    "Failure requires modeled causes.",
+    "Evacuees move to a destination; they are not deleted.",
+    "Abandonment ends settlement services and effective control unless another persistent controller/presence remains.",
+    "Buildings/ruins may remain physically after population leaves.",
+    "A historical claim may remain after abandonment but must not be confused with control.",
+    "Recolonization loads prior site/history instead of rerolling an unrelated colony."
+  ]
+}

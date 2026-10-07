@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "colonization_target_selection_rules",
+  "status": "FOUNDATION_FIXED",
+  "candidate_dimensions": [
+    "known",
+    "reachable",
+    "habitability",
+    "environmental_risk",
+    "logistics_access",
+    "distance_cost",
+    "motive_fit",
+    "strategic_or_scientific_value",
+    "existing_population",
+    "existing_claims",
+    "settlement_rights",
+    "biosphere_constraints"
+  ],
+  "rules": [
+    "Only known and reachable locations may be selected.",
+    "Best physical habitability does not automatically win; logistics and founding motive matter.",
+    "Protected/pre-warp sapient worlds are ineligible for colonization through this system.",
+    "Contacted sovereign worlds require treaty grant, invitation or joint-colony authority.",
+    "Existing foreign claims create dispute risk rather than silently transferring ownership.",
+    "Non-sapient biospheres may impose environmental restrictions rather than being treated as empty terrain.",
+    "Unknown data remains unknown; the scorer may lower confidence or reject rather than inventing certainty."
+  ],
+  "scoring_note": "Reference scores are deterministic implementation aids, not universal visible gameplay stats."
+}

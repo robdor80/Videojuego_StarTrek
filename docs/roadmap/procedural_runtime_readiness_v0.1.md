@@ -201,3 +201,7 @@ The Star Trek-side design baseline has now been extended with **Block 1 — Proc
 Control sequence: `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`.
 
 Only Block 1 is complete. Blocks 2–10 remain intentionally unimplemented and must proceed sequentially.
+
+## Dynamic-universe extension — Block 2
+
+**Block 2 — Colonization, Expansion & Borders v0.1 is COMPLETE** on the Star Trek content/contract/reference side. Colony founding, population transfer, lifecycle, claim/control/sovereignty separation, border derivation, disputes, autonomy and abandonment are now specified. The CoreRPG runtime boundary is unchanged. Blocks 3–10 remain sequentially pending.

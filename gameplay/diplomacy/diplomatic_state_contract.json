@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.3.0",
+  "schema_version": "0.4.0",
   "contract_id": "diplomatic_state_contract",
   "classification": "GAME_ADDITION",
   "relation_fields": [
@@ -37,8 +37,10 @@
     "AI may negotiate or interpret only within authority granted to the acting character/organization.",
     "First Contact initializes only the relationship scope actually achieved.",
     "Contact with one sovereign state does not silently create planet-wide Federation relations.",
-    "Long-horizon relation changes require causal events and preserve the actually recognized polity scope."
+    "Long-horizon relation changes require causal events and preserve the actually recognized polity scope.",
+    "Overlapping expansion claims create a scoped diplomatic dispute; they do not auto-create war."
   ],
   "first_contact_initialization_ref": "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json",
-  "relation_evolution_ref": "gameplay/diplomacy/civilization_relation_evolution_rules_v0.1.json"
+  "relation_evolution_ref": "gameplay/diplomacy/civilization_relation_evolution_rules_v0.1.json",
+  "expansion_claim_dispute_ref": "gameplay/diplomacy/expansion_encounter_claim_dispute_rules_v0.1.json"
 }

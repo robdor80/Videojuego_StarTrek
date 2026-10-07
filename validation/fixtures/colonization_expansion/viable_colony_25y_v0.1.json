@@ -1,0 +1,45 @@
+{
+  "fixture_id": "viable_colony_25y_v0.1",
+  "input": {
+    "campaign_seed": "colonization_fixture_viable",
+    "civilization_id": "gen:civilization:alpha",
+    "project_id": "colony:haven",
+    "years": 25,
+    "initial": {
+      "origin_population": 100000000,
+      "founding_population": 2000,
+      "annual_migrants": 800,
+      "natural_growth_basis_points": 100,
+      "annual_support_capacity": 500000,
+      "self_sufficiency": 25,
+      "development_rate": 4,
+      "infrastructure_maturity": 20,
+      "governance_maturity": 35,
+      "target_location_id": "sys:haven",
+      "effective_controller_ref": "gen:civilization:alpha",
+      "governance_status": "home_administered"
+    },
+    "scheduled_events": [
+      {
+        "year": 2,
+        "event_id": "evt:haven_claim",
+        "cause_refs": [
+          "authority:colonial_charter"
+        ],
+        "effects": {
+          "declare_claim": true
+        }
+      }
+    ]
+  },
+  "expected": {
+    "origin_population": 99978000,
+    "colony_population": 25372,
+    "natural_births_total": 3372,
+    "self_sufficiency": 100,
+    "infrastructure_maturity": 70,
+    "governance_maturity": 60,
+    "stage": "self_sustaining_colony",
+    "claim_state": "declared_claim"
+  }
+}

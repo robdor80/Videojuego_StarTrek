@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "expansion_encounter_claim_dispute_rules",
+  "status": "FOUNDATION_FIXED",
+  "encounter_states": [
+    "no_overlap",
+    "parallel_presence",
+    "overlapping_claims",
+    "disputed_system",
+    "shared_or_joint_settlement",
+    "negotiated_boundary",
+    "withdrawal_or_renunciation"
+  ],
+  "rules": [
+    "Discovery of another claimant does not auto-transfer ownership.",
+    "Overlapping claims generate diplomatic/legal dispute state, not automatic war.",
+    "Possible peaceful outcomes include recognition, withdrawal, shared access, joint colony, corridor, neutral zone or negotiated boundary.",
+    "A military escalation candidate may be emitted only from later explicit actions; Block 2 never resolves war.",
+    "Claims and effective control are reported independently to diplomacy.",
+    "Existing treaties/recognition constrain valid settlement and border outcomes."
+  ],
+  "future_ref": "Block 3 — Procedural Conflict & War"
+}

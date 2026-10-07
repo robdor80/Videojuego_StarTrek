@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "colonization_expansion_prerequisite_rules",
+  "status": "FOUNDATION_FIXED",
+  "drivers": [
+    "demographic_pressure",
+    "resource_or_industrial_need",
+    "scientific_presence",
+    "strategic_presence",
+    "cultural_or_religious_migration",
+    "refuge_or_resettlement",
+    "planned_development",
+    "existing_route_support"
+  ],
+  "prerequisites": [
+    "spaceflight_capability",
+    "reachable_destination",
+    "transport_capacity",
+    "population_source",
+    "sustained_support_capacity",
+    "legal_or_political_authority",
+    "destination_knowledge",
+    "environmental_viability"
+  ],
+  "rules": [
+    "Expansion requires a reason and capacity; elapsed time alone does not create colonies.",
+    "A motive never overrides physical reachability, law, Prime Directive or settlement rights.",
+    "Colonization cannot be triggered by player arrival or immediate gameplay need.",
+    "Expansion pressure may create a proposal/candidate without guaranteeing authorization.",
+    "Terraforming-required targets need a real capability/project reference; Block 2 does not invent the technology.",
+    "Temporary scientific/mining/security presence is not automatically a permanent colony."
+  ]
+}

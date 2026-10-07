@@ -302,3 +302,9 @@ Current sequential state:
 - the next eligible block is **Block 2 — Colonization, Expansion & Borders**, but it is not started by this update.
 
 This separation prevents the earlier 001–118 design-readiness closure from being mistaken for completion of all detailed dynamic-universe behavior.
+
+### Dynamic-universe sequence update
+
+- Block 1 — Procedural Civilization Evolution & Galactic Interaction: COMPLETE.
+- **Block 2 — Colonization, Expansion & Borders: COMPLETE.**
+- Blocks 3–10 remain unimplemented; Block 3 is next in strict sequence.

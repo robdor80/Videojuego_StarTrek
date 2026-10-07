@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.3.0",
+  "schema_version": "0.4.0",
   "contract_id": "civilization_runtime_state_contract",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "principle": "A civilization is a persistent network of populations, cultures, institutions, settlements, technology and relationships—not a single species label.",
@@ -23,7 +23,8 @@
     "external_relationship_refs",
     "contact_status_ref",
     "campaign_history_ref",
-    "evolution_state_ref"
+    "evolution_state_ref",
+    "colonization_and_expansion_state_ref"
   ],
   "rules": [
     "Civilization may be single-species or multi-species.",
@@ -36,10 +37,12 @@
     "Civilization may exist at latent LOD before names, leaders and visual detail are materialized.",
     "Materialized species/languages/governments/settlements persist and never reroll on contact.",
     "First Contact changes observer/diplomatic state, not civilization identity.",
-    "Long-horizon civilization evolution follows civilization_evolution_index_v0.1 and cannot be driven by player proximity."
+    "Long-horizon civilization evolution follows civilization_evolution_index_v0.1 and cannot be driven by player proximity.",
+    "Colonization, claims and borders follow colonization_expansion_borders_index_v0.1 and remain separate from civilization identity."
   ],
   "generation_index_ref": "universe/generation/procedural_worlds_civilizations_first_contact_index_v0.1.json",
   "materialization_pipeline_ref": "universe/generation/civilization_latent_observed_materialized_pipeline_v0.1.json",
   "first_contact_status_ref": "gameplay/first_contact/civilization_contact_status_model_v0.1.json",
-  "evolution_index_ref": "universe/generation/civilization_evolution_index_v0.1.json"
+  "evolution_index_ref": "universe/generation/civilization_evolution_index_v0.1.json",
+  "colonization_expansion_index_ref": "universe/generation/colonization_expansion_borders_index_v0.1.json"
 }

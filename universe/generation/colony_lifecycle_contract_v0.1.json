@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "colony_lifecycle_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "stages": [
+    "proposal",
+    "authorized_expedition",
+    "en_route",
+    "pioneer_outpost",
+    "dependent_colony",
+    "established_colony",
+    "self_sustaining_colony",
+    "integrated_colony_or_member_world",
+    "failing_colony",
+    "evacuating",
+    "abandoned"
+  ],
+  "state_fields": [
+    "colony_id",
+    "parent_civilization_ref",
+    "founding_event_ref",
+    "location_ref",
+    "population_state_ref",
+    "support_dependency_refs",
+    "self_sufficiency_state",
+    "infrastructure_ref",
+    "governance_ref",
+    "claim_ref",
+    "control_ref",
+    "history_ref"
+  ],
+  "rules": [
+    "Stages are causal states, not a fixed timer progression.",
+    "A colony can remain dependent indefinitely, regress, fail or be abandoned.",
+    "Self-sufficiency does not imply political independence.",
+    "Integration/member-world status requires an explicit legal/political transition.",
+    "Stable colony identity persists through growth, administration changes and save/load.",
+    "Settlement detail delegates to settlement_infrastructure_contract."
+  ]
+}

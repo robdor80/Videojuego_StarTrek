@@ -1,0 +1,114 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "colonization_expansion_borders_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
+  "refs": [
+    "universe/generation/colonization_expansion_borders_index_v0.1.json",
+    "tools/generation/simulate_colonization_expansion.py"
+  ],
+  "cases": [
+    {
+      "id": "no_player_convenience_colony",
+      "expected": [
+        "player arrival not input driver",
+        "service need cannot found colony"
+      ]
+    },
+    {
+      "id": "known_reachable_target",
+      "expected": [
+        "unknown/unreachable rejected",
+        "target selection causal and deterministic"
+      ]
+    },
+    {
+      "id": "prime_directive_safeguard",
+      "expected": [
+        "prewarp/protected sapient target rejected"
+      ]
+    },
+    {
+      "id": "inhabited_sovereign_rights",
+      "expected": [
+        "contacted sovereign world needs explicit settlement rights"
+      ]
+    },
+    {
+      "id": "population_conservation",
+      "expected": [
+        "founders/migrants subtract from origin",
+        "births accounted separately",
+        "no duplicated colonists"
+      ]
+    },
+    {
+      "id": "colony_identity_persists",
+      "expected": [
+        "same colony_id/history through lifecycle",
+        "no reroll on revisit"
+      ]
+    },
+    {
+      "id": "claim_not_control",
+      "expected": [
+        "declared claim may lack control",
+        "abandonment can end control while historical claim persists"
+      ]
+    },
+    {
+      "id": "control_not_sovereignty",
+      "expected": [
+        "administration does not silently create recognized sovereignty"
+      ]
+    },
+    {
+      "id": "sparse_borders_valid",
+      "expected": [
+        "no automatic filled bubble",
+        "gaps/enclaves/corridors valid"
+      ]
+    },
+    {
+      "id": "claim_overlap_not_war",
+      "expected": [
+        "disputed_space possible",
+        "war_created false in Block 2"
+      ]
+    },
+    {
+      "id": "autonomy_not_independence",
+      "expected": [
+        "pressure creates candidate",
+        "explicit event required for independence"
+      ]
+    },
+    {
+      "id": "independence_not_new_civilization",
+      "expected": [
+        "polity authority may change",
+        "civilization_id remains unless Block 1 lineage event says otherwise"
+      ]
+    },
+    {
+      "id": "abandonment_causal",
+      "expected": [
+        "evacuation has cause",
+        "population moves",
+        "effective control ends absent presence"
+      ]
+    },
+    {
+      "id": "offscreen_equivalence",
+      "expected": [
+        "LOD preserves founding/claims/major transitions"
+      ]
+    },
+    {
+      "id": "future_block_boundary",
+      "expected": [
+        "Blocks 3-10 not executed",
+        "candidate refs only"
+      ]
+    }
+  ]
+}

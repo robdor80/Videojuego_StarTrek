@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "colonization_offscreen_simulation_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "lod_modes": [
+    "local_full",
+    "system_summary",
+    "civilization_expansion_summary",
+    "dormant_catch_up"
+  ],
+  "catch_up_order": [
+    "load_colony_and_claim_state",
+    "resolve_population_movements",
+    "resolve_support_and_viability",
+    "apply_explicit_political_events",
+    "derive_lifecycle_state",
+    "derive_claim_control_changes",
+    "validate_border_overlay_inputs",
+    "commit"
+  ],
+  "rules": [
+    "LOD may aggregate routine migration/growth/support but cannot reroll colony identity or founding history.",
+    "Founding, independence, abandonment, major claim changes and recognized border changes remain explicit events.",
+    "Player proximity is not an expansion driver.",
+    "Off-screen movement conserves population.",
+    "Catch-up may emit Block 3-10 candidates but never executes those systems.",
+    "Re-materialization must be compatible with every explicit prior colony/claim event."
+  ]
+}

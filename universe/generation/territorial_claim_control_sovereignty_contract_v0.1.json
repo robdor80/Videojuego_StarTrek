@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "territorial_claim_control_sovereignty_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "separate_dimensions": {
+    "presence": "physical persistent people/assets at a location",
+    "claim": "asserted entitlement over a defined scope",
+    "effective_control": "ability to administer/enforce policy in practice",
+    "jurisdiction": "legal/organizational authority actually asserted",
+    "sovereignty": "political status of ultimate governing authority",
+    "recognition": "what other parties accept or acknowledge"
+  },
+  "claim_states": [
+    "none",
+    "settlement_presence",
+    "declared_claim",
+    "recognized_claim",
+    "contested_claim",
+    "renounced_or_expired_claim"
+  ],
+  "rules": [
+    "Presence does not automatically equal sovereignty.",
+    "A declared claim does not automatically equal effective control.",
+    "Effective control may exist without universal external recognition.",
+    "Claim scope must reference real locations/geometry and effective time.",
+    "A colony cannot claim arbitrary surrounding systems merely by existing.",
+    "Historical claims may survive abandonment while effective control ends.",
+    "Occupation or war-derived control is outside Block 2 and must come from later validated events."
+  ]
+}

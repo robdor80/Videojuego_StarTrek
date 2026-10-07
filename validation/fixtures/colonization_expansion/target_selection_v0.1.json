@@ -1,0 +1,54 @@
+{
+  "fixture_id": "target_selection_v0.1",
+  "mode": "select_target",
+  "policy": {
+    "min_habitability": 35
+  },
+  "candidates": [
+    {
+      "location_id": "sys:haven",
+      "known": true,
+      "reachable": true,
+      "habitability": 85,
+      "logistics_access": 75,
+      "motive_fit": 80,
+      "strategic_or_scientific_value": 50,
+      "hazard_risk": 15,
+      "distance_cost": 20,
+      "inhabited_state": "uninhabited",
+      "settlement_rights": "unclaimed"
+    },
+    {
+      "location_id": "sys:far",
+      "known": true,
+      "reachable": true,
+      "habitability": 95,
+      "logistics_access": 45,
+      "motive_fit": 60,
+      "strategic_or_scientific_value": 75,
+      "hazard_risk": 10,
+      "distance_cost": 50,
+      "inhabited_state": "uninhabited",
+      "settlement_rights": "unclaimed"
+    },
+    {
+      "location_id": "sys:protected",
+      "known": true,
+      "reachable": true,
+      "habitability": 90,
+      "logistics_access": 90,
+      "motive_fit": 90,
+      "strategic_or_scientific_value": 90,
+      "hazard_risk": 5,
+      "distance_cost": 10,
+      "inhabited_state": "sapient_pre_contact",
+      "settlement_rights": "none"
+    }
+  ],
+  "expected": {
+    "selected_location_id": "sys:haven",
+    "haven_score": 620,
+    "far_score": 495,
+    "protected_reason": "prime_directive_or_indigenous_protection"
+  }
+}

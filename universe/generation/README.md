@@ -78,3 +78,7 @@ Generic runtime semantics remain CoreRPG responsibilities; Star Trek owns era, c
 ## Civilization evolution
 
 Long-horizon civilization evolution is indexed by `civilization_evolution_index_v0.1.json`. It extends the existing civilization/First Contact contracts without implementing later dynamic-universe blocks.
+
+## Colonization, expansion and borders
+
+Block 2 is indexed by `colonization_expansion_borders_index_v0.1.json`. It connects settlement generation, population movement, political-space overlays and diplomacy while keeping claim, control and sovereignty distinct.
