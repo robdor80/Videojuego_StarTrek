@@ -1,11 +1,11 @@
 {
   "schema_version": "0.1.0",
   "corpus_id": "star_trek_canonical_personality_trait_corpus",
-  "status": "INITIAL_BROAD_PASS",
+  "status": "INITIAL_ALL_MAJOR_SERIES_PASS",
   "purpose": "Research corpus for abstract trait extraction. It is not a procedural personality library.",
   "hard_rule": "Canonical character labels and combinations must not be emitted as NPC personality templates. Production generation consumes only normalized abstract traits/recipes.",
   "coverage": {
-    "sample_count": 49,
+    "sample_count": 54,
     "continuities": [
       "prime",
       "kelvin"
@@ -23,7 +23,8 @@
       "SNW",
       "LD",
       "PIC",
-      "PRO_via_Janeway_Chakotay_context"
+      "PRO_via_Janeway_Chakotay_context",
+      "PRO"
     ]
   },
   "methodology": [
@@ -1894,6 +1895,198 @@
         "PERS_RAFFI"
       ],
       "abstraction_note": "Useful for loyalty + distrust + persistence combination."
+    },
+    {
+      "sample_id": "CANON_DAL_REL",
+      "character_label": "Dal R'El",
+      "continuity": "prime",
+      "primary_era": "PRO",
+      "species_context": "human_augment_hybrid",
+      "observed_traits": [
+        "clever",
+        "headstrong",
+        "outwardly_confident",
+        "deeply_insecure",
+        "ambitious_for_leadership",
+        "humorous",
+        "curious_about_identity"
+      ],
+      "interaction_style": [
+        "bold",
+        "informal",
+        "sometimes_overclaims_competence"
+      ],
+      "humor_style": [
+        "frequent",
+        "deflective"
+      ],
+      "authority_style": [
+        "wants_to_lead_before_fully_understanding_leadership"
+      ],
+      "stress_style": [
+        "improvises",
+        "can_overcompensate",
+        "learns_to_support_team"
+      ],
+      "evolution_observation": "Visible confidence gradually becomes more grounded leadership while insecurity becomes acknowledged rather than hidden.",
+      "source_refs": [
+        "PERS_PRODIGY_CREW",
+        "PERS_PRODIGY_DAL"
+      ],
+      "abstraction_note": "Useful for confidence-mask-over-insecurity pattern."
+    },
+    {
+      "sample_id": "CANON_GWYN",
+      "character_label": "Gwyndala",
+      "continuity": "prime",
+      "primary_era": "PRO",
+      "species_context": "vau_n_akat",
+      "observed_traits": [
+        "educated",
+        "guarded",
+        "responsible",
+        "compassionate",
+        "identity_searching",
+        "self_controlled",
+        "increasingly_self_confident",
+        "loyal_to_chosen_family"
+      ],
+      "interaction_style": [
+        "formal_at_first",
+        "measured",
+        "becomes_more_open"
+      ],
+      "humor_style": [
+        "low_to_moderate",
+        "warms_with_trust"
+      ],
+      "authority_style": [
+        "comfortable_taking_control_when_needed",
+        "learns_independent_judgment"
+      ],
+      "stress_style": [
+        "contains_feelings",
+        "acts_from_duty",
+        "later_integrates_emotion"
+      ],
+      "evolution_observation": "Moves from father-pleasing and emotional suppression to independent values and chosen-family loyalty.",
+      "source_refs": [
+        "PERS_PRODIGY_GWYN"
+      ],
+      "abstraction_note": "Useful for family-conditioned obedience evolving into autonomy."
+    },
+    {
+      "sample_id": "CANON_ROK_TAHK",
+      "character_label": "Rok-Tahk",
+      "continuity": "prime",
+      "primary_era": "PRO",
+      "species_context": "brikar",
+      "observed_traits": [
+        "compassionate",
+        "intelligent",
+        "resilient",
+        "sensitive",
+        "scientifically_curious",
+        "hopeful",
+        "eager_to_be_liked",
+        "conscientious"
+      ],
+      "interaction_style": [
+        "gentle",
+        "earnest",
+        "supportive"
+      ],
+      "humor_style": [
+        "innocent",
+        "warm"
+      ],
+      "authority_style": [
+        "cooperative",
+        "eager_to_learn"
+      ],
+      "stress_style": [
+        "fearful_of_isolation_but_courageous_for_friends",
+        "persists"
+      ],
+      "evolution_observation": "Rejects an imposed 'brute' role and develops a science-centered identity.",
+      "source_refs": [
+        "PERS_PRODIGY_ROK"
+      ],
+      "abstraction_note": "Excellent anti-stereotype sample: intimidating body vs gentle intellectual personality."
+    },
+    {
+      "sample_id": "CANON_JANKOM_POG",
+      "character_label": "Jankom Pog",
+      "continuity": "prime",
+      "primary_era": "PRO",
+      "species_context": "tellarite",
+      "observed_traits": [
+        "contrarian",
+        "argumentative",
+        "resourceful",
+        "technically_capable",
+        "self_assertive",
+        "survivor_independent"
+      ],
+      "interaction_style": [
+        "debate_first",
+        "devils_advocate",
+        "blunt"
+      ],
+      "humor_style": [
+        "argumentative_comedy",
+        "boastful"
+      ],
+      "authority_style": [
+        "questions_claims",
+        "prefers_reasoning_through_argument"
+      ],
+      "stress_style": [
+        "argues_while_solving",
+        "uses_engineering_pragmatism"
+      ],
+      "source_refs": [
+        "PERS_PRODIGY_JANKOM"
+      ],
+      "abstraction_note": "Useful evidence that Tellarite debate style can be individual humor/social signature without hostility."
+    },
+    {
+      "sample_id": "CANON_ZERO",
+      "character_label": "Zero",
+      "continuity": "prime",
+      "primary_era": "PRO",
+      "species_context": "medusan",
+      "observed_traits": [
+        "sensitive",
+        "caring",
+        "curious",
+        "protective",
+        "guilt_sensitive",
+        "self_reflective",
+        "service_oriented"
+      ],
+      "interaction_style": [
+        "gentle",
+        "thoughtful",
+        "telepathically_direct_when_possible"
+      ],
+      "humor_style": [
+        "gentle",
+        "low"
+      ],
+      "authority_style": [
+        "cooperative",
+        "ethically_sensitive"
+      ],
+      "stress_style": [
+        "takes_responsibility",
+        "tries_to_make_amends",
+        "protects_others"
+      ],
+      "source_refs": [
+        "PERS_PRODIGY_ZERO"
+      ],
+      "abstraction_note": "Useful for high sensitivity + courage/responsibility."
     }
   ]
 }
