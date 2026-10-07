@@ -195,16 +195,16 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 103 | Agenda y actividad diaria | PARTIAL | 019-030,049 | Presencia deriva de deberes, necesidades y rutina |
-| 104 | Necesidades, bienestar y fatiga | PARTIAL | 033,103 | Estado físico/cognitivo altera rendimiento sin redefinir identidad |
-| 105 | Simulación social off-screen | PARTIAL | 026-030,103 | Relaciones solo cambian con contacto/causa plausible |
-| 106 | Simulación profesional off-screen | TODO | 049-052,103 | Trabajo, carrera y evaluaciones avanzan causalmente |
-| 107 | Simulación de naves/instalaciones off-screen | TODO | 053-064,078 | Operaciones cambian estado sin necesitar al jugador |
-| 108 | Simulación planetaria off-screen | TODO | 067-084 | Población/economía/política evolucionan a LOD apropiado |
-| 109 | Sistema universal de eventos y consecuencias | TODO | 009-108 | Eventos mutan estado con historial trazable |
-| 110 | Muerte, destrucción, duelo y continuidad | TODO | 042,109 | Pérdidas persisten social, profesional y materialmente |
-| 111 | IA como capa de expresión/decisión limitada | PARTIAL | 022-030,109 | IA no escribe World Truth por su cuenta |
-| 112 | Misiones emergentes desde World State | PARTIAL | 078-111 | Misión descubre/explota problemas existentes en vez de crearlos retroactivamente |
+| 103 | Agenda y actividad diaria | COMPLETE | 019-030,049 | Presencia deriva de deberes, necesidades y rutina |
+| 104 | Necesidades, bienestar y fatiga | COMPLETE | 033,103 | Estado físico/cognitivo altera rendimiento sin redefinir identidad |
+| 105 | Simulación social off-screen | COMPLETE | 026-030,103 | Relaciones solo cambian con contacto/causa plausible |
+| 106 | Simulación profesional off-screen | COMPLETE | 049-052,103 | Trabajo, carrera y evaluaciones avanzan causalmente |
+| 107 | Simulación de naves/instalaciones off-screen | COMPLETE | 053-064,078 | Operaciones cambian estado sin necesitar al jugador |
+| 108 | Simulación planetaria off-screen | COMPLETE | 067-084 | Población/economía/política evolucionan a LOD apropiado |
+| 109 | Sistema universal de eventos y consecuencias | COMPLETE | 009-108 | Eventos mutan estado con historial trazable |
+| 110 | Muerte, destrucción, duelo y continuidad | COMPLETE | 042,109 | Pérdidas persisten social, profesional y materialmente |
+| 111 | IA como capa de expresión/decisión limitada | COMPLETE | 022-030,109 | IA no escribe World Truth por su cuenta |
+| 112 | Misiones emergentes desde World State | COMPLETE | 078-111 | Misión descubre/explota problemas existentes en vez de crearlos retroactivamente |
 
 # FASE 11 — VALIDACIÓN, VERTICAL SLICE Y PREPARACIÓN DE RUNTIME
 
