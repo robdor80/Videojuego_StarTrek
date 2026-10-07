@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "visual_nap_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "world_state_precedes_visual_generation",
+      "expected": [
+        "resolved visual context references authoritative entity/world state",
+        "image generation cannot choose species, rank, ship class or damage state independently"
+      ]
+    },
+    {
+      "id": "persistent_face_identity",
+      "expected": [
+        "same character_id keeps same visual_identity_id lineage",
+        "age/hair/uniform/injury variations preserve recognition anchors",
+        "unexplained face replacement fails"
+      ]
+    },
+    {
+      "id": "species_culture_affiliation_separation",
+      "expected": [
+        "species profile cannot force culture or faction presentation",
+        "culture/organization layers compose independently"
+      ]
+    },
+    {
+      "id": "era_consistency",
+      "expected": [
+        "uniform/interior/equipment/ship profile matches campaign date/subperiod",
+        "cross-era presentation requires explicit cause"
+      ]
+    },
+    {
+      "id": "rank_division_uniform_consistency",
+      "expected": [
+        "visible rank maps to authoritative rank",
+        "division color/profile matches era and organization",
+        "cadet and commissioned insignia are not confused"
+      ]
+    },
+    {
+      "id": "ship_class_instance_separation",
+      "expected": [
+        "class silhouette/configuration remains valid",
+        "individual registry/refit/damage belong to vessel state",
+        "repair/refit preserves ship identity when continuous"
+      ]
+    },
+    {
+      "id": "console_function_before_skin",
+      "expected": [
+        "visual console exposes only supported functional actions/data",
+        "era skin cannot add capabilities absent from operational model"
+      ]
+    },
+    {
+      "id": "planet_visual_matches_world_profile",
+      "expected": [
+        "terrain/climate/biome/settlement/weather derive from structured world state",
+        "visual generation cannot add convenient city/life/hazard"
+      ]
+    },
+    {
+      "id": "state_has_cause",
+      "expected": [
+        "damage/dirt/smoke/emergency lighting/weather overlays require current-state cause",
+        "temporary overlay cannot rewrite base identity"
+      ]
+    },
+    {
+      "id": "nap_traceability",
+      "expected": [
+        "asset retains asset_id plus entity_id/visual_identity_id when applicable",
+        "profile versions, prompt/reference provenance and lifecycle state are recorded"
+      ]
+    },
+    {
+      "id": "archive_production_separation",
+      "expected": [
+        "archival master and production derivative remain distinct records",
+        "ProductionRoot path creation follows NAP authority"
+      ]
+    },
+    {
+      "id": "generic_scifi_rejection",
+      "expected": [
+        "unsupported neon/greebles/random holograms/pseudo-canon insignia fail review",
+        "unknown visual detail is not promoted to canon merely because generator produced it"
+      ]
+    }
+  ]
+}
