@@ -80,3 +80,37 @@ Rules for this project:
 - E (Operational Event Log) is now specified as a reusable Star Trek-side contract; its authoritative runtime implementation belongs in CoreRPG.
 - F/G may be designed and prototyped as UX, but final runtime integration waits for the necessary CoreRPG milestones.
 - H is **runtime-blocked by CoreRPG**, not by missing Star Trek console design.
+
+
+## Procedural acceptance fixture
+
+The Star Trek-side end-to-end acceptance contract is now defined at:
+
+`validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json`
+
+Fixture campaign context:
+- era: `tng_ds9_voyager`;
+- date: **2372-03-14**;
+- deterministic campaign seed: `fixture_sensor_v0_0_1`.
+
+The fixture validates:
+- world materialization before observation;
+- deterministic identities;
+- sensor-state-dependent detection;
+- hidden-information gating;
+- observer-relative contacts;
+- anti-leakage;
+- append-only operational event chain;
+- knowledge visibility;
+- save/load identity continuity;
+- AI/UI authority boundaries.
+
+The worked operational-event example was aligned to 2372 because 2399 lies outside the project's currently approved playable-era scope.
+
+### Runtime status
+
+Star Trek-side contracts and acceptance expectations are defined.
+
+Executable F/G/H completion remains dependent on presentation work and on CoreRPG capabilities beginning with **4.5 — Generic World State**. The verified CoreRPG `main` still reports 4.4 closed and a deliberately minimal `WorldState`.
+
+This remains an architectural dependency, not permission to implement a duplicate engine in this repository.
