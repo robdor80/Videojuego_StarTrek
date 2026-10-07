@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "procedural_worlds_civilizations_first_contact_index",
+  "status": "FOUNDATION_FIXED",
+  "world_refs": [
+    "universe/generation/planetary_world_profile_contract.json",
+    "universe/generation/planetary_environment_state_rules.json",
+    "universe/generation/biosphere_ecosystem_contract.json"
+  ],
+  "civilization_refs": [
+    "universe/generation/civilization_runtime_state_contract.json",
+    "universe/generation/civilization_technology_spaceflight_warp_grammar_v0.1.json",
+    "universe/generation/procedural_sapient_species_morphology_biology_v0.1.json",
+    "universe/generation/procedural_civilization_language_naming_generation_v0.1.json",
+    "universe/generation/procedural_government_institution_representation_grammar_v0.1.json",
+    "universe/generation/procedural_settlement_colony_generation_grammar_v0.1.json",
+    "universe/generation/procedural_civilization_economy_resource_trade_grammar_v0.1.json",
+    "universe/generation/civilization_latent_observed_materialized_pipeline_v0.1.json"
+  ],
+  "first_contact_refs": [
+    "gameplay/first_contact/civilization_contact_status_model_v0.1.json",
+    "gameplay/first_contact/first_contact_readiness_assessment_v0.1.json",
+    "gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+    "gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+    "gameplay/first_contact/universal_translator_bootstrap_v0.1.json",
+    "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json",
+    "gameplay/first_contact/first_contact_brief_v0.1.json"
+  ],
+  "visual_ref": "art_direction/visual_bibles/planets/PROCEDURAL_CIVILIZATION_VISUAL_PROFILE_CONTRACT_v0.1.json",
+  "principle": "World truth exists first; observation, materialization and contact are separate transitions."
+}
