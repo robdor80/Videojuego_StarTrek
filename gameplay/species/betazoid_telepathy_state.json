@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "betazoid_telepathic_capability_state",
+  "classification": "GAME_ADDITION",
+  "species_profile_ref": "gameplay/species/profiles/betazoid_v0.1.json",
+  "fields": {
+    "character_id": null,
+    "capability_state": "present_variable",
+    "telepathy_strength_profile": null,
+    "empathy_strength_profile": null,
+    "development_state": null,
+    "training_state": null,
+    "current_impairment_refs": [],
+    "consent_or_professional_constraints": [],
+    "known_target_limitations": [],
+    "last_resolved_contact_refs": []
+  },
+  "capability_states": [
+    "unknown",
+    "latent_or_developing",
+    "present_variable",
+    "impaired",
+    "unavailable"
+  ],
+  "rules": [
+    "Capability strength varies by individual.",
+    "Telepathy or empathy never exposes World Truth directly.",
+    "Every reading resolves against target, context, species/state limitations and available capability.",
+    "Sensing emotion is not equivalent to knowing motive, memory or objective fact.",
+    "Ferengi and Changeling limitations remain target/context rules rather than universal binary immunity.",
+    "Consent, privacy and professional rules are contextual and remain separate from raw biological capability.",
+    "AI receives only the resolved information actually available to the character.",
+    "AI cannot invent a successful reading, hidden motive or secret."
+  ]
+}
