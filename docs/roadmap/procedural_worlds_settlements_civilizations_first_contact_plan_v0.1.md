@@ -1,6 +1,6 @@
 # Procedural Worlds, Settlements, Civilizations & First Contact — Plan v0.1
 
-**Status:** ACTIVE
+**Status:** COMPLETE
 
 ## Packages
 
@@ -15,15 +15,15 @@
 | PW007 | Settlements, colonies and surface infrastructure | COMPLETE |
 | PW008 | Economy, resources, production and trade | COMPLETE |
 | PW009 | Civilization latent → observed → materialized pipeline | COMPLETE |
-| PW010 | Contact knowledge and readiness assessment | IN_PROGRESS |
-| PW011 | Prime Directive operational protocol | IN_PROGRESS |
-| PW012 | First Contact operational protocol | IN_PROGRESS |
-| PW013 | Universal Translator bootstrap / linguistic contact | IN_PROGRESS |
-| PW014 | Initial diplomacy and divided-civilization representation | IN_PROGRESS |
-| PW015 | Visual/NAP profiles for generated civilizations | TODO |
-| PW016 | Deterministic reference generator | TODO |
-| PW017 | First-contact fixtures | TODO |
-| PW018 | Cross-domain invariants + project/status integration | TODO |
+| PW010 | Contact knowledge and readiness assessment | COMPLETE |
+| PW011 | Prime Directive operational protocol | COMPLETE |
+| PW012 | First Contact operational protocol | COMPLETE |
+| PW013 | Universal Translator bootstrap / linguistic contact | COMPLETE |
+| PW014 | Initial diplomacy and divided-civilization representation | COMPLETE |
+| PW015 | Visual/NAP profiles for generated civilizations | COMPLETE |
+| PW016 | Deterministic reference generator | COMPLETE |
+| PW017 | First-contact fixtures | COMPLETE |
+| PW018 | Cross-domain invariants + project/status integration | COMPLETE |
 
 ## Core doctrine
 
@@ -73,3 +73,36 @@ A low-LOD civilization may already know:
 It does **not** require every leader, city name, language phoneme or face to be pre-generated.
 
 Detail is materialized only when needed and becomes permanent.
+
+
+## v0.1 closure
+
+**PW001–PW018: 18/18 COMPLETE** for the current content/reference-implementation scope.
+
+Delivered:
+- procedural civilization technology/warp grammar;
+- persistent generated species morphology/biology;
+- language and naming systems;
+- governments, institutions and representative authority;
+- settlements/colonies and infrastructure causality;
+- economy/resources/trade grammar;
+- latent → observed → materialized civilization pipeline;
+- observer-scoped contact status;
+- Prime Directive operational protocol;
+- First Contact readiness and operational protocol;
+- Universal Translator bootstrap;
+- initial diplomacy and divided-world representation rules;
+- First Contact briefing model;
+- captain command-authority integration;
+- persistent visual/NAP contract for generated civilizations;
+- deterministic civilization/First Contact reference generator;
+- four representative fixtures;
+- cross-domain validation invariants.
+
+### Scope boundary
+
+This v0.1 assumes the physical planet/world already exists in authoritative World State under the existing planetary contracts. It closes civilization/settlement/contact materialization on top of that world; it does not claim a fully exhaustive astrophysical planet generator or every possible alien biology/civilization pattern.
+
+### Runtime boundary
+
+CoreRPG 4.5+ remains responsible for authoritative mutable World State, knowledge, action validation, save/load, off-screen simulation and LOD execution. Reference Python tests exist but no repository CI runner is configured for this subsystem.
