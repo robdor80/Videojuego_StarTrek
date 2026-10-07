@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "betazed_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "beta_zeta_system",
+    "planet_id": "betazed",
+    "display_name_es": "Betazed",
+    "world_type": "inhabited_class_m_planet",
+    "native_species_refs": [
+      "betazoid"
+    ],
+    "government_ref": "betazed_government",
+    "federation_member_context": "confirmed within retained later eras"
+  },
+  "orbital_context": {
+    "moon_count_context": 3,
+    "exact_orbits": null
+  },
+  "bulk_physics": {
+    "policy": "Later-screen planetary data exists; baseline playable profile keeps only stable broad facts unless exact astronomy becomes gameplay-relevant.",
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "class_m_habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "known": [
+      "lakes",
+      "seas/water features"
+    ],
+    "exact_fraction": null
+  },
+  "geology_topography": {
+    "known": [
+      "lush landscapes",
+      "lakes",
+      "jungle/green regions in later references"
+    ],
+    "global_map": "not_exhaustive"
+  },
+  "climate_refs": [
+    "lush_habitable",
+    "regional_variation_unknown"
+  ],
+  "biosphere_ref": "betazed_biosphere",
+  "region_refs": [
+    "University of Betazed",
+    "lakes/falls only when mission/source resolves location"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "telepathic_privacy",
+    "diplomacy",
+    "education",
+    "family/social_visits",
+    "Federation_membership",
+    "strategic_threat_by_campaign_date"
+  ],
+  "temporal_rules": [
+    "Federation membership is political state separate from physical world.",
+    "Any Dominion occupation/control event is applied only if already in retained history at campaign start or produced by campaign events.",
+    "Telepathic culture does not expose World Truth."
+  ],
+  "ai_boundary": [
+    "AI cannot reveal residents' private thoughts globally.",
+    "Do not infer all Betazoids have equal telepathic ability.",
+    "Do not invent noble/House status from cultural references."
+  ],
+  "visual_nap": [
+    "lush attractive world without generic paradise exaggeration",
+    "Betazoid civic/house architecture needs specific references",
+    "telepathy has no automatic visual glow"
+  ],
+  "unknowns": [
+    "complete global geography",
+    "population in playable eras",
+    "exact political institutions beyond known government context"
+  ],
+  "provenance": [
+    "MA_BETAZED_WORLD",
+    "MA_BETAZOID"
+  ]
+}
