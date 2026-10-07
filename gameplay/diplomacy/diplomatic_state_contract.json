@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "diplomatic_state_contract",
+  "classification": "GAME_ADDITION",
+  "relation_fields": [
+    "relation_id",
+    "party_refs",
+    "effective_from",
+    "effective_to",
+    "recognition_state",
+    "treaty_refs",
+    "border_or_access_refs",
+    "trade_state",
+    "military_state",
+    "contact_state",
+    "current_disputes",
+    "liaison_or_embassy_refs",
+    "campaign_history_ref"
+  ],
+  "relation_states": [
+    "allied",
+    "friendly",
+    "normal_relations",
+    "strained",
+    "hostile",
+    "war",
+    "ceasefire",
+    "non_contact",
+    "unknown_or_unestablished"
+  ],
+  "rules": [
+    "Diplomatic state is time-scoped and directional where necessary.",
+    "Formal diplomatic state is not identical to public opinion or individual NPC attitude.",
+    "Claims, control, recognition and access are separate concepts.",
+    "Treaties and ceasefires constrain valid actions but do not erase historical grievances.",
+    "Campaign events may change relations after start without being forced back to future canon.",
+    "AI may negotiate or interpret only within authority granted to the acting character/organization."
+  ]
+}
