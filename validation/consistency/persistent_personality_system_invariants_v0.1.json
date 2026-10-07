@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "persistent_personality_system_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "refs": [
+    "gameplay/personality/persistent_personality_profile_contract_v0.1.json",
+    "gameplay/personality/npc_personality_assignment_contract_v0.1.json",
+    "gameplay/personality/abstract_personality_trait_lexicon_v0.1.json",
+    "gameplay/personality/species_culture_expression_modifiers_v0.1.json",
+    "gameplay/personality/procedural_personality_recipe_library_v0.1.json",
+    "gameplay/personality/personality_evolution_continuity_contract_v0.1.json",
+    "gameplay/personality/persistent_personality_generation_pipeline_v0.1.json",
+    "ai/personality/ai_personality_dialogue_context_contract_v0.1.json",
+    "research/personality/star_trek_character_trait_corpus_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "canonical_research_not_template",
+      "expected": [
+        "Canonical names exist only in research corpus.",
+        "Production recipes have original abstract IDs.",
+        "No NPC is assigned 'Picard/Kirk/etc personality'."
+      ]
+    },
+    {
+      "id": "species_not_personality",
+      "expected": [
+        "Base recipe selection is species-agnostic.",
+        "Culture/species modifies expression only within bounded rules.",
+        "Human is not the neutral galactic personality."
+      ]
+    },
+    {
+      "id": "persistent_assignment",
+      "expected": [
+        "A/B profile is linked permanently to entity_id.",
+        "Save/load and LOD preserve profile.",
+        "Ship, rank, uniform or location changes do not reroll it."
+      ]
+    },
+    {
+      "id": "C_to_B_consistency",
+      "expected": [
+        "Latent seed resolves deterministically.",
+        "Previously observed dialogue/behavior constrains the full profile.",
+        "Promotion never contradicts established behavior without explicit change event."
+      ]
+    },
+    {
+      "id": "B_to_A_no_reset",
+      "expected": [
+        "Authored expansion preserves established core/history.",
+        "Importance promotion does not replace personality.",
+        "Major redesign requires explicit character-development provenance."
+      ]
+    },
+    {
+      "id": "current_state_not_core",
+      "expected": [
+        "Fatigue, grief, injury, intoxication and acute fear modify current expression only.",
+        "Recovery returns toward baseline.",
+        "State history remains recorded."
+      ]
+    },
+    {
+      "id": "relationship_not_global_rewrite",
+      "expected": [
+        "Trust/warmth toward one person belongs to relationship state.",
+        "Guarded NPC can be warm with a trusted friend without becoming globally trusting."
+      ]
+    },
+    {
+      "id": "cultural_expression_not_caricature",
+      "expected": [
+        "Vulcan may be warm or funny beneath controlled expression.",
+        "Tellarite argument may be friendly.",
+        "Klingon humor frequency is not forced to zero.",
+        "Betazoid telepathy does not become personality or omniscience."
+      ]
+    },
+    {
+      "id": "borg_identity_continuity",
+      "expected": [
+        "Assimilation suppresses/changes expression while preserving underlying profile.",
+        "Liberation restores/evolves same personality lineage.",
+        "No new profile is assigned merely because Collective connection changes."
+      ]
+    },
+    {
+      "id": "procedural_safety_range",
+      "expected": [
+        "No random psychopathy/sadism/extreme cruelty flavor traits.",
+        "Negative traits remain ordinary believable variation unless explicit authored story/medical state exists."
+      ]
+    },
+    {
+      "id": "recipe_library_integrity",
+      "expected": [
+        "All recipe anchors use registered scalar dimensions.",
+        "All style/qualitative tags exist in lexicon.",
+        "Exact generated profiles are unique per entity seed."
+      ]
+    },
+    {
+      "id": "ai_is_expression_layer",
+      "expected": [
+        "AI receives compact personality block.",
+        "AI can express but not mutate core personality.",
+        "AI cannot create hidden personality history or relationship changes."
+      ]
+    }
+  ]
+}
