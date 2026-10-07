@@ -1,0 +1,362 @@
+{
+  "profile_id": "star_trek_ship_class_visual_profiles",
+  "profile_type": "ship_class_visual_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "ship_class_design_and_dated_configuration",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_SHIP_EXTERIOR_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "rules": [
+    "Exterior resolution order is era → operator → class/design → dated configuration → individual ship identity → current state.",
+    "Blueprint/reference geometry outranks generic style completion.",
+    "Registry, name, damage and temporary state never redefine class.",
+    "Unknown hull detail must remain non-authoritative rather than becoming pseudo-canon."
+  ],
+  "profiles": {
+    "constitution_pike": {
+      "applies_when": {
+        "class_id": "constitution",
+        "configuration_id": "constitution_pike",
+        "era_id": "pike"
+      },
+      "anchors": [
+        "classic Starfleet saucer + engineering hull + paired nacelle arrangement",
+        "Pike/SNW-era Constitution proportions/details only",
+        "clean exploratory Starfleet hull presentation"
+      ],
+      "forbidden": [
+        "TOS-era exact bridge/exterior detail substituted blindly",
+        "TMP refit geometry",
+        "TNG-era hull paneling language",
+        "random weapon ports"
+      ],
+      "reference_asset_refs": [
+        "assets/ships/starfleet/constitution_class/reference_blueprints/ncc_1700_franz_joseph/"
+      ],
+      "source_refs": [
+        "MA_CONSTITUTION_CLASS"
+      ]
+    },
+    "constitution_tos": {
+      "applies_when": {
+        "class_id": "constitution",
+        "configuration_id": "constitution_tos",
+        "era_id": "kirk"
+      },
+      "anchors": [
+        "TOS Constitution silhouette and major hull relationships",
+        "saucer, secondary hull and nacelle geometry remain primary recognition anchors"
+      ],
+      "forbidden": [
+        "SNW-specific surface language treated as TOS canon",
+        "TMP refit nacelles/secondary hull",
+        "modern generic panel noise"
+      ],
+      "reference_asset_refs": [
+        "assets/ships/starfleet/constitution_class/reference_blueprints/ncc_1700_franz_joseph/"
+      ],
+      "source_refs": [
+        "MA_CONSTITUTION_CLASS"
+      ]
+    },
+    "constitution_major_refit": {
+      "applies_when": {
+        "class_id": "constitution",
+        "configuration_id": "constitution_major_refit",
+        "era_id": "kirk"
+      },
+      "anchors": [
+        "major late-23rd-century refit is visibly substantial, not a paint change",
+        "refit nacelles, secondary hull and overall detailing must follow dated reference"
+      ],
+      "forbidden": [
+        "calling the refit a new vessel identity by appearance alone",
+        "TOS exterior retained when refit state says otherwise",
+        "TNG styling"
+      ],
+      "source_refs": [
+        "MA_CONSTITUTION_CLASS"
+      ]
+    },
+    "miranda": {
+      "applies_when": {
+        "class_id": "miranda"
+      },
+      "anchors": [
+        "recognizable Miranda/Reliant primary hull and aft/rollbar family geometry where configuration supports",
+        "multi-mission variants must preserve class lineage"
+      ],
+      "forbidden": [
+        "one exact Reliant fit copied to every Miranda",
+        "role equipment invented from mission label",
+        "age represented as automatic rust/decay"
+      ],
+      "reference_asset_refs": [
+        "assets/ships/starfleet/miranda_class/reference_blueprints/ncc_1864_reliant/"
+      ],
+      "source_refs": [
+        "MA_MIRANDA_CLASS"
+      ]
+    },
+    "excelsior": {
+      "applies_when": {
+        "class_id": "excelsior"
+      },
+      "anchors": [
+        "distinct late-23rd-century Excelsior saucer/secondary-hull/nacelle language",
+        "long-service lineage remains recognizable through later refits"
+      ],
+      "forbidden": [
+        "Galaxy-era design language pasted onto veteran hull",
+        "automatic obsolete/damaged look in 24th century"
+      ],
+      "source_refs": [
+        "MA_EXCELSIOR_CLASS"
+      ]
+    },
+    "oberth": {
+      "applies_when": {
+        "class_id": "oberth"
+      },
+      "anchors": [
+        "small science-vessel silhouette with distinctive upper/lower hull relationship",
+        "science/support character conveyed through design, not added random dishes"
+      ],
+      "forbidden": [
+        "upscaling to cruiser proportions",
+        "frontline-warship detailing by default"
+      ],
+      "source_refs": [
+        "MA_OBERTH_CLASS"
+      ]
+    },
+    "galaxy": {
+      "applies_when": {
+        "class_id": "galaxy",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "very broad saucer",
+        "separate stardrive section",
+        "paired nacelles",
+        "large explorer scale",
+        "saucer separation geometry preserved"
+      ],
+      "forbidden": [
+        "compact tactical proportions",
+        "random exposed armor plating",
+        "registry deformation",
+        "saucer separation unless state says so"
+      ],
+      "reference_asset_refs": [
+        "assets/ships/starfleet/galaxy_class/enterprise_d/reference_blueprints/"
+      ],
+      "source_refs": [
+        "MA_GALAXY_CLASS"
+      ]
+    },
+    "nebula": {
+      "applies_when": {
+        "class_id": "nebula",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "24th-century Starfleet multi-mission hull language",
+        "mission module/configuration visibly consistent with resolved configuration"
+      ],
+      "forbidden": [
+        "one module assumed universal",
+        "Galaxy-class silhouette substitution",
+        "generic tactical pod without configuration state"
+      ],
+      "source_refs": [
+        "MA_NEBULA_CLASS"
+      ]
+    },
+    "intrepid": {
+      "applies_when": {
+        "class_id": "intrepid",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "sleek 2370s Starfleet long-range explorer language",
+        "variable-geometry nacelles represented according to live flight state",
+        "compact relative scale vs Galaxy"
+      ],
+      "forbidden": [
+        "nacelle position chosen for drama rather than state",
+        "Voyager-specific damage/history copied to generated ships",
+        "TNG Galaxy proportions"
+      ],
+      "source_refs": [
+        "MA_INTREPID_CLASS"
+      ]
+    },
+    "defiant": {
+      "applies_when": {
+        "class_id": "defiant",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "compact tactical hull",
+        "integrated nacelle/engine geometry",
+        "dense purposeful external form"
+      ],
+      "forbidden": [
+        "cloaking hardware visually assumed on all class members",
+        "large-explorer scaling",
+        "random battleship turrets"
+      ],
+      "source_refs": [
+        "MA_DEFIANT_CLASS"
+      ]
+    },
+    "klingon_d7_ktinga": {
+      "applies_when": {
+        "design_family_id": "klingon_d7_ktinga_family"
+      },
+      "anchors": [
+        "long-necked Klingon battle-cruiser silhouette",
+        "forward command/head section + neck + broad aft engineering/nacelle form",
+        "dated D7/K't'inga differences preserved"
+      ],
+      "forbidden": [
+        "Vor'cha geometry backfilled",
+        "House markings without state",
+        "generic spiky sci-fi additions"
+      ],
+      "source_refs": [
+        "MA_D7_CLASS",
+        "MA_KTINGA_CLASS"
+      ]
+    },
+    "klingon_bird_of_prey": {
+      "applies_when": {
+        "design_family_id": "klingon_bird_of_prey_family"
+      },
+      "anchors": [
+        "birdlike planform",
+        "wing geometry tied to configuration/flight state where applicable",
+        "subtype scale preserved"
+      ],
+      "forbidden": [
+        "B'rel and K'Vort treated as same physical scale",
+        "random wing position",
+        "cloak effect without active state"
+      ],
+      "source_refs": [
+        "MA_KLINGON_BIRD_OF_PREY_2280S",
+        "MA_BREL_CLASS"
+      ]
+    },
+    "vorcha": {
+      "applies_when": {
+        "class_id": "vorcha"
+      },
+      "anchors": [
+        "large 24th-century Klingon attack-cruiser silhouette",
+        "strong forward body with long structural spine/winged aft geometry"
+      ],
+      "forbidden": [
+        "23rd-century D7 styling substituted",
+        "automatic House markings",
+        "unexplained extra weapons"
+      ],
+      "source_refs": [
+        "MA_VORCHA_CLASS"
+      ]
+    },
+    "romulan_bird_of_prey_2260s": {
+      "applies_when": {
+        "class_id": "romulan_bird_of_prey_2260s",
+        "era_id": "kirk"
+      },
+      "anchors": [
+        "23rd-century Romulan Bird-of-Prey silhouette and bird motif/markings where sourced",
+        "simple period-consistent military hull language"
+      ],
+      "forbidden": [
+        "D'deridex geometry",
+        "TNG-era green warbird language treated as timeless",
+        "invented canonical class badge"
+      ],
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR"
+      ]
+    },
+    "dderidex": {
+      "applies_when": {
+        "class_id": "dderidex",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "very large split-shell/open-core warbird silhouette",
+        "distinct 24th-century Romulan green-toned hull presentation where reference supports",
+        "capital scale"
+      ],
+      "forbidden": [
+        "Valdore/Nemesis-era styling",
+        "solid conventional cruiser body replacing open form",
+        "Tal Shiar markings without state"
+      ],
+      "source_refs": [
+        "MA_DDERIDEX_CLASS"
+      ]
+    },
+    "galor": {
+      "applies_when": {
+        "class_id": "galor",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "recognizable Cardassian Galor planform",
+        "ochre/gold-brown Cardassian hull language",
+        "central spine/body geometry preserved"
+      ],
+      "forbidden": [
+        "Dominion purple styling replacing Cardassian design",
+        "automatic occupation markings",
+        "random militarized plating"
+      ],
+      "source_refs": [
+        "MA_GALOR_CLASS"
+      ]
+    },
+    "keldon": {
+      "applies_when": {
+        "class_id": "keldon",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "Galor-derived Cardassian lineage with Keldon-specific additions/configuration"
+      ],
+      "forbidden": [
+        "cloaking apparatus assumed visible/universal",
+        "Obsidian Order identity inferred from class"
+      ],
+      "source_refs": [
+        "MA_KELDON_CLASS"
+      ]
+    },
+    "hideki": {
+      "applies_when": {
+        "class_id": "hideki",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "small Cardassian patrol/attack craft scale",
+        "distinctive compact Cardassian design language"
+      ],
+      "forbidden": [
+        "Galor-scale presentation",
+        "capital-ship interior/exterior density"
+      ],
+      "source_refs": [
+        "MA_HIDEKI_CLASS"
+      ]
+    }
+  }
+}
