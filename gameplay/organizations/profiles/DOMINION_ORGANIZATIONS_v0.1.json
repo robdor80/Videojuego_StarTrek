@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "dominion_organizations",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "dominion",
+  "organizations": [
+    {
+      "organization_id": "founder_collective_authority",
+      "organization_type": "government",
+      "display_name": "Autoridad de los Fundadores",
+      "rules": [
+        "Founders hold supreme Dominion authority in standard context.",
+        "Copied appearance does not grant Founder identity or authority."
+      ]
+    },
+    {
+      "organization_id": "vorta_administration",
+      "organization_type": "government",
+      "display_name": "Administración Vorta",
+      "parent_organization_ref": "founder_collective_authority",
+      "rules": [
+        "Vorta posts require assignment state.",
+        "A Vorta may negotiate only within actual authority/mission scope."
+      ]
+    },
+    {
+      "organization_id": "jem_hadar_military",
+      "organization_type": "military_or_service",
+      "display_name": "Fuerzas Jem'Hadar",
+      "parent_organization_ref": "founder_collective_authority",
+      "rules": [
+        "Unit, First/subordinate role and command relationship require live assignment state.",
+        "Ketracel distribution is a resource/logistics interface, not AI narrative convenience."
+      ]
+    },
+    {
+      "organization_id": "dominion_member_or_subordinate_states",
+      "organization_type": "government",
+      "display_name": "Estados miembros o subordinados del Dominio",
+      "instance_model": "Each polity remains its own entity with a dated relationship to the Dominion.",
+      "rules": [
+        "Dominion membership/subordination is temporal and does not erase local government identity."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not infer authority from species alone.",
+    "Do not let a Changeling copied form inherit Founder permissions.",
+    "Do not invent Vorta mission authority, Jem'Hadar orders or ketracel allocations."
+  ],
+  "provenance_refs": [
+    "ST_OFFICIAL_DOMINION_101",
+    "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+  ]
+}
