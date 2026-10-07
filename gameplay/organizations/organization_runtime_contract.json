@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "organization_runtime_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "ORGANIZATION != POLITY != SPECIES != CULTURE != CITIZENSHIP != MEMBERSHIP != POSITION != RANK",
+  "organization_types": [
+    "government",
+    "military_or_service",
+    "scientific",
+    "medical",
+    "commercial",
+    "educational",
+    "religious",
+    "diplomatic",
+    "intelligence",
+    "law_enforcement",
+    "criminal",
+    "social",
+    "other"
+  ],
+  "definition_fields": [
+    "organization_id",
+    "organization_type",
+    "display_name",
+    "parent_organization_ref",
+    "jurisdiction_refs",
+    "era_validity",
+    "membership_model_ref",
+    "authority_model_ref",
+    "position_catalog_ref",
+    "rank_or_grade_catalog_ref",
+    "facility_refs",
+    "provenance_refs"
+  ],
+  "live_state_fields": [
+    "current_leadership_refs",
+    "current_policy_state_refs",
+    "current_resource_state_refs",
+    "current_jurisdiction_state_refs",
+    "active_unit_refs",
+    "relationship_to_other_org_refs",
+    "campaign_history_ref"
+  ],
+  "rules": [
+    "An organization may exist without owning territory.",
+    "Political sovereignty and organizational authority are separate.",
+    "Species composition never defines organization membership automatically.",
+    "Organization membership does not imply citizenship or personal loyalty.",
+    "Rank/grade systems are organization-specific and optional.",
+    "Positions and ranks are separate dimensions.",
+    "Sub-organizations may inherit policy/authority constraints but retain their own identity.",
+    "After campaign start, live organizational state may diverge from future screen canon through represented events."
+  ]
+}
