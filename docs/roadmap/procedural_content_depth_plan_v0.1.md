@@ -20,7 +20,7 @@
 | D002 | Vulcan detailed gameplay/biology profile | COMPLETE | Physiology, telepathy boundaries, pon farr, lifecycle/visual hooks |
 | D003 | Andorian detailed gameplay/biology profile | COMPLETE | Cold adaptation, antenna anatomy/state, culture separation, visual hooks |
 | D004 | Tellarite detailed gameplay/biology profile | COMPLETE | Sparse-canon safe biology, social interpretation, visual hooks |
-| D005 | Aenar related-population profile | TODO | Separate identity from Andorian; no cosmetic-variant shortcut |
+| D005 | Aenar related-population profile | COMPLETE | Separate identity from Andorian; no cosmetic-variant shortcut |
 | D006 | Klingon detailed profile | COMPLETE | Biology, era-aware morphology, house/honor context, no warrior lock |
 | D007 | Romulan detailed profile | COMPLETE | Vulcan ancestry without equivalence; state/security culture separation |
 | D008 | Cardassian detailed profile | COMPLETE | Environmental/medical hooks, morphology, hierarchy without loyalty lock |
@@ -93,7 +93,7 @@
 
 | Package | Scope | Status |
 |---|---|---|
-| D058 | Founding species visual profiles | PARTIAL |
+| D058 | Founding species visual profiles | COMPLETE |
 | D059 | Major species visual profiles | PARTIAL |
 | D060 | Faction/organization visual profiles | TODO |
 | D061 | Era-specific ship/interior profiles | TODO |
