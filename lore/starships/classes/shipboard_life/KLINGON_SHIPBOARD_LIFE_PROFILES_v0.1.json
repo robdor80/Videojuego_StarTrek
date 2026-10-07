@@ -1,0 +1,313 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "klingon_shipboard_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "operator_family": "klingon_imperial_military",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "doctrine": {
+    "canon_shift_pattern": "UNSPECIFIED",
+    "simulation_default": "continuous_coverage_with_operator_local_watch_labels",
+    "preferred_pattern": "custom",
+    "default_equivalent_watch_count": 3,
+    "exact_watch_duration": "INSTANCE_POLICY",
+    "note": "Three-watch equivalent is a GAME_ADDITION for simulation continuity, not a claim of canonical Klingon terminology or hours.",
+    "common_obligations": [
+      "combat_readiness",
+      "weapons_training",
+      "maintenance",
+      "damage_control",
+      "mission_briefing",
+      "on_call"
+    ],
+    "cultural_activity_rule": "Klingon cultural practices, meals, music, storytelling or martial recreation require individual/culture state and available space; none are forced on every crewmember."
+  },
+  "profiles": {
+    "d7_2250s_2260s": {
+      "life_profile_id": "klingon_d7_life",
+      "class_or_configuration_ref": "d7",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "values": [
+          {
+            "range": [
+              30,
+              40
+            ],
+            "context": "2256 Discovery-era D7 example",
+            "confidence": "screen_supported_secondary_crosscheck"
+          },
+          {
+            "value": 430,
+            "context": "TOS-era D7 reference",
+            "confidence": "screen_secondary_crosscheck"
+          }
+        ],
+        "warning": "Treat as dated configurations/production contexts, not one timeless complement.",
+        "source_refs": [
+          "MA_D7_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.34,
+          "watch_2": 0.31,
+          "watch_3": 0.3,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_examples": [
+          {
+            "crew": 36,
+            "watch_1": 12,
+            "watch_2": 11,
+            "watch_3": 11,
+            "relief_or_float": 2
+          },
+          {
+            "crew": 430,
+            "watch_1": 146,
+            "watch_2": 133,
+            "watch_3": 129,
+            "relief_or_float": 22
+          }
+        ],
+        "routine_day_staff_bias": "low_to_moderate",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "military accommodation",
+        "privacy not assumed beyond sourced/individual configuration"
+      ],
+      "meal_model": "communal military food spaces if present; exact layout configuration-specific",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "combat_training",
+        "maintenance",
+        "damage_control",
+        "on_call"
+      ],
+      "life_character": "Military cruiser with strong around-the-clock readiness. Social life is concentrated because the ship is a combat workplace rather than a civilian community.",
+      "source_refs": [
+        "MA_D7_CLASS"
+      ]
+    },
+    "ktinga": {
+      "life_profile_id": "klingon_ktinga_life",
+      "class_or_configuration_ref": "ktinga",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": null,
+        "type": "dated_configuration_unknown",
+        "confidence": "not_locked"
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.34,
+          "watch_2": 0.31,
+          "watch_3": 0.3,
+          "relief_or_float": 0.05
+        },
+        "routine_day_staff_bias": "low",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "military accommodation; exact berthing must follow dated interior evidence/configuration"
+      ],
+      "meal_model": "communal military food service where configured",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "combat_training",
+        "maintenance",
+        "damage_control",
+        "mission_briefing"
+      ],
+      "life_character": "Long-lived battle-cruiser lineage. A 23rd-century K't'inga and a veteran 24th-century ship can share design ancestry while differing in refit, crew size and daily routine.",
+      "source_refs": [
+        "MA_KTINGA_CLASS"
+      ]
+    },
+    "bird_of_prey_brel": {
+      "life_profile_id": "klingon_brel_life",
+      "class_or_configuration_ref": "klingon_bird_of_prey/brel",
+      "habitability_tier": "very_austere",
+      "privacy_level": "very_low",
+      "social_density": "very_high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "range": [
+          6,
+          36
+        ],
+        "typical_context": "about a dozen to several dozen; skeleton operation possible",
+        "confidence": "high_secondary_crosscheck",
+        "source_refs": [
+          "MA_KLINGON_BIRD_OF_PREY_2280S",
+          "MA_BREL_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_staggered_small_crew",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": "DYNAMIC_BY_CREW_SIZE",
+        "example": {
+          "crew": 12,
+          "active_control_and_systems": 4,
+          "secondary_or_maintenance": 2,
+          "rest_offwatch": 5,
+          "relief_or_command_float": 1,
+          "note": "simulation example; not canonical roster"
+        },
+        "routine_day_staff_bias": "minimal",
+        "emergency_recall_intensity": "near_total",
+        "small_crew_staggered_rest": true
+      },
+      "quarters_model": [
+        "cramped military berthing",
+        "minimal privacy",
+        "space pressure high"
+      ],
+      "meal_model": "compact communal eating or duty-area eating as configuration permits",
+      "recreation_capabilities": [
+        "mess_only",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "combat_readiness",
+        "on_call",
+        "sleep_protection"
+      ],
+      "life_character": "Cramped and uncomfortable even by military standards. Everyone knows everyone, a single injury can affect watch coverage, and off-duty life is mostly improvised around sleep, meals and small shared spaces.",
+      "source_refs": [
+        "MA_KLINGON_BIRD_OF_PREY_2280S",
+        "DS9_SOLDIERS_OF_THE_EMPIRE"
+      ]
+    },
+    "bird_of_prey_kvort": {
+      "life_profile_id": "klingon_kvort_life",
+      "class_or_configuration_ref": "klingon_bird_of_prey/kvort",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "medium_high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": null,
+        "type": "variant_scale_and_source_disputed",
+        "confidence": "not_locked",
+        "warning": "Do not import technical-manual accommodation as hard canon without configuration/source policy."
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.34,
+          "watch_2": 0.31,
+          "watch_3": 0.3,
+          "relief_or_float": 0.05
+        },
+        "routine_day_staff_bias": "low",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "larger than B'rel but military/austere",
+        "exact scale and accommodation configuration must be resolved"
+      ],
+      "meal_model": "communal military food service",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "combat_training",
+        "maintenance",
+        "damage_control",
+        "boarding_or_embarked_force_readiness_if_present"
+      ],
+      "life_character": "Larger Bird-of-Prey family member: still military and socially dense, but with more compartmentalized departments than a B'rel.",
+      "source_refs": [
+        "MA_KLINGON_BIRD_OF_PREY_2280S"
+      ]
+    },
+    "vorcha": {
+      "life_profile_id": "klingon_vorcha_life",
+      "class_or_configuration_ref": "vorcha",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "medium",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": 1900,
+        "type": "technical_reference_not_screen_hard_fact",
+        "confidence": "medium",
+        "source_refs": [
+          "MA_VORCHA_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.35,
+          "watch_2": 0.31,
+          "watch_3": 0.29,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 1900,
+          "watch_1": 665,
+          "watch_2": 589,
+          "watch_3": 551,
+          "relief_or_float": 95,
+          "note": "simulation example only; complement reference is technical, not hard screen canon"
+        },
+        "routine_day_staff_bias": "moderate command/maintenance/logistics",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "large military ship with more compartmentalized accommodation than small raiders",
+        "comfort remains secondary to operational function"
+      ],
+      "meal_model": "multiple communal military food spaces likely by scale; exact layout configuration-specific",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "combat_training",
+        "maintenance",
+        "damage_control",
+        "command_briefing",
+        "embarked_force_readiness_if_present"
+      ],
+      "life_character": "Large capital combatant with many departments and personnel but still military-first. An individual crewmember can know a department well without knowing the whole ship population.",
+      "source_refs": [
+        "MA_VORCHA_CLASS"
+      ]
+    }
+  }
+}
