@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "ferengi_alliance_organizations",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "ferengi_alliance",
+  "organizations": [
+    {
+      "organization_id": "ferengi_alliance_government",
+      "organization_type": "government",
+      "display_name": "Gobierno de la Alianza Ferengi",
+      "authority_model": {
+        "known_role": "grand_nagus"
+      },
+      "rules": [
+        "Grand Nagus leadership is temporal state.",
+        "Government/political authority does not make every business a state organ."
+      ]
+    },
+    {
+      "organization_id": "ferengi_commerce_authority",
+      "organization_type": "commercial",
+      "display_name": "Autoridad de Comercio Ferengi",
+      "rules": [
+        "Commercial regulation and enforcement apply only where jurisdiction/current law support them.",
+        "Era-sensitive social/legal reforms update policy state rather than species traits."
+      ]
+    },
+    {
+      "organization_id": "ferengi_business_entities",
+      "organization_type": "commercial",
+      "display_name": "Empresas y negocios Ferengi",
+      "instance_model": "Each persistent business is its own organization with owners, workers, contracts, assets and liabilities.",
+      "rules": [
+        "Species does not auto-create business ownership.",
+        "Contracts and debts are persistent economic state."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not invent ownership, debt, contract or regulator authority.",
+    "Do not infer Alliance citizenship or profession from species.",
+    "Do not apply late-era reforms to earlier campaigns."
+  ],
+  "provenance_refs": [
+    "gameplay/diplomacy/major_faction_catalogue.json#ferengi_alliance",
+    "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json",
+    "ST_OFFICIAL_ROM_GRAND_NAGUS"
+  ]
+}
