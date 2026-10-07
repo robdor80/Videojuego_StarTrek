@@ -13,15 +13,15 @@ The production library never contains procedural profiles named after Kirk, Pica
 
 | Package | Scope | Status |
 |---|---|---|
-| P001 | Canon personality research corpus | IN_PROGRESS |
-| P002 | Abstract personality trait lexicon | IN_PROGRESS |
+| P001 | Canon personality research corpus | COMPLETE |
+| P002 | Abstract personality trait lexicon | COMPLETE |
 | P003 | Persistent personality profile contract | COMPLETE |
 | P004 | NPC personality assignment/promotion contract | COMPLETE |
-| P005 | Species/culture expression modifiers | TODO |
-| P006 | Procedural personality recipe library | TODO |
+| P005 | Species/culture expression modifiers | COMPLETE |
+| P006 | Procedural personality recipe library | COMPLETE |
 | P007 | AI dialogue personality context contract | COMPLETE |
 | P008 | Personality evolution / continuity rules | COMPLETE |
-| P009 | Validation fixtures and anti-caricature tests | TODO |
+| P009 | Validation fixtures and anti-caricature tests | COMPLETE |
 | P010 | Authored personality mode for principal NPCs | COMPLETE |
 
 ## NPC depth tiers
@@ -61,3 +61,17 @@ The canonical research corpus stores:
 - source provenance.
 
 The generator consumes only **abstracted traits and recipes**, never canonical names or likeness/personality clones.
+
+
+## v0.1 closure
+
+Initial system closed with:
+- 54 canonical research samples spanning major Star Trek series/continuities used only for abstraction;
+- 24 scalar personality dimensions plus qualitative/style vocabularies;
+- 46 original procedural recipes;
+- culture/species expression modifiers;
+- A/B/C personality-depth assignment and promotion rules;
+- persistent evolution and AI dialogue context contracts;
+- validation pack preventing canonical cloning, species=personality shortcuts and rerolls.
+
+Further character research expands the corpus without changing the production rule: **research samples are evidence, never NPC templates**.
