@@ -1,0 +1,94 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "ship_crew_facility_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "class_not_individual_ship",
+      "expected": [
+        "class data contains design/capability baseline",
+        "individual ship contains live state/history",
+        "damage/crew are not stored in immutable class baseline"
+      ]
+    },
+    {
+      "id": "dated_configuration_controls_capability",
+      "expected": [
+        "ship capability is resolved from class + dated configuration + individual refit/state",
+        "future technology cannot appear merely because class survives into another era"
+      ]
+    },
+    {
+      "id": "ship_exists_for_operational_reason",
+      "expected": [
+        "generated ship has operator, role/mission and world-state context",
+        "sensor scan does not create ship existence"
+      ]
+    },
+    {
+      "id": "crew_structure_precedes_named_people",
+      "expected": [
+        "departments/positions/watch needs resolve before NPC materialization",
+        "named crew occupies valid slots",
+        "vacancies remain explicit"
+      ]
+    },
+    {
+      "id": "crew_complement_accounting",
+      "expected": [
+        "materializing crew does not increase complement silently",
+        "passengers/civilians remain separate from duty crew",
+        "temporary embarked specialists are explicitly modeled"
+      ]
+    },
+    {
+      "id": "watch_coverage",
+      "expected": [
+        "required functions have valid shift/watch coverage or explicit shortage risk",
+        "one character cannot fill incompatible simultaneous posts"
+      ]
+    },
+    {
+      "id": "shipboard_life_time_exclusivity",
+      "expected": [
+        "rest, meals, recreation and social activity consume time",
+        "off-duty activity cannot occur simultaneously with incompatible duty assignment"
+      ]
+    },
+    {
+      "id": "quarters_not_relationship",
+      "expected": [
+        "shared residence does not create romance/friendship/kinship",
+        "relationship and residency remain independent graphs"
+      ]
+    },
+    {
+      "id": "damage_repair_preserves_identity",
+      "expected": [
+        "ship_id/facility_id survive repair/refit",
+        "damage and repair append history/state changes"
+      ]
+    },
+    {
+      "id": "facility_function_drives_services",
+      "expected": [
+        "service nodes derive from facility capability",
+        "unknown room geometry is not invented to justify a service"
+      ]
+    },
+    {
+      "id": "shipyard_service_has_capacity_and_time",
+      "expected": [
+        "refit/repair consumes service capacity and duration",
+        "ship cannot receive unavailable facility capability instantly"
+      ]
+    },
+    {
+      "id": "ai_does_not_invent_shipboard_reality",
+      "expected": [
+        "AI cannot create missing rooms, staff, services or availability",
+        "AI consumes authoritative interior/crew/facility state"
+      ]
+    }
+  ]
+}
