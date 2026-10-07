@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.1.0",
+  "guidance_id": "facility_staffing_and_population_generation_guidance",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "principle": "Staffing is derived from capabilities, throughput and continuous coverage. Population categories remain separate.",
+  "population_categories": [
+    "operator_duty_staff",
+    "contractor_staff",
+    "civilian_residents",
+    "dependents",
+    "business_tenant_workers",
+    "students",
+    "diplomatic_missions",
+    "patients",
+    "detainees",
+    "transient_visitors",
+    "docked_ship_crews"
+  ],
+  "scale_guidance": {
+    "temporary_support": {
+      "operator_duty_staff": [
+        1,
+        80
+      ],
+      "civilian_residents": [
+        0,
+        10
+      ],
+      "note": "Mission-specific; usually no permanent population."
+    },
+    "micro_outpost": {
+      "operator_duty_staff": [
+        1,
+        12
+      ],
+      "civilian_residents": [
+        0,
+        4
+      ],
+      "note": "May be automated or run by a tiny crew."
+    },
+    "small_station": {
+      "operator_duty_staff": [
+        10,
+        180
+      ],
+      "civilian_residents": [
+        0,
+        120
+      ]
+    },
+    "standard_station": {
+      "operator_duty_staff": [
+        100,
+        2500
+      ],
+      "civilian_residents": [
+        0,
+        5000
+      ]
+    },
+    "starbase": {
+      "operator_duty_staff": [
+        1000,
+        30000
+      ],
+      "civilian_residents": [
+        0,
+        60000
+      ]
+    },
+    "major_complex": {
+      "operator_duty_staff": [
+        10000,
+        120000
+      ],
+      "civilian_residents": [
+        0,
+        150000
+      ],
+      "note": "Exceptional; multiple sub-facilities and organizations likely."
+    }
+  },
+  "design_anchors": {
+    "starfleet_starbase_1_type": {
+      "operator_duty_staff_or_total_crew_min": 80000,
+      "confidence": "screen_supported_secondary_crosscheck",
+      "source_refs": [
+        "MA_STARBASE_1_TYPE"
+      ],
+      "note": "Use as large 2250s crew/community anchor, not universal starbase staffing."
+    },
+    "starfleet_relay_station_47_type": {
+      "operator_duty_staff": 2,
+      "confidence": "screen_supported",
+      "source_refs": [
+        "MA_RELAY_STATION_47",
+        "TNG_AQUIEL"
+      ]
+    },
+    "federation_starbase_375_type": {
+      "minimum_known_capacity": 127,
+      "confidence": "screen_supported_secondary_crosscheck",
+      "source_refs": [
+        "MA_STARBASE_375_TYPE"
+      ],
+      "note": "Capacity is not the same as duty staff."
+    }
+  },
+  "staffing_domains": [
+    "command_administration",
+    "traffic_control",
+    "engineering_power",
+    "maintenance_damage_control",
+    "security",
+    "medical",
+    "logistics_cargo",
+    "communications",
+    "science_or_mission_specialists",
+    "docking_flight_operations",
+    "construction_repair_teams",
+    "civilian_services_if_present",
+    "education_family_services_if_present",
+    "emergency_response"
+  ],
+  "derivation_rules": [
+    "Determine 24/7 operational posts separately from day/peak staffing.",
+    "Business tenants staff their own businesses and do not count as Starfleet/operator duty staff unless separately assigned.",
+    "Docked ship crews remain members of their ships unless formally detached/transferred.",
+    "Transient visitors never fill station watch slots by default.",
+    "Patients/detainees are population load, not labor.",
+    "Large civilian populations increase medical/security/logistics/life-support demands but do not automatically increase command staff linearly.",
+    "Automation may reduce routine watch staffing but cannot eliminate required maintenance/emergency competence.",
+    "Vacancies remain explicit."
+  ],
+  "source_policy": "Exact population figures remain unknown unless sourced; game-generated ranges are tagged GAME_ADDITION."
+}
