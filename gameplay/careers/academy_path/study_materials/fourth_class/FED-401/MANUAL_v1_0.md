@@ -381,6 +381,21 @@ Dos personas de la misma especie o mundo pueden:
 - tener experiencias personales incompatibles;
 - interpretar de forma distinta una misma costumbre.
 
+## 6. Puente hacia Relaciones interespecies
+
+En este primer año no se exige memorizar protocolos de todas las culturas. Sí debes dominar la regla que después utilizará **XEN-302 — Relaciones interespecies y contacto**:
+
+> **Una sociedad fundadora puede aportar normas culturales importantes sin convertir esas normas en personalidad individual.**
+
+Ejemplos introductorios:
+
+- un Vulcano no carece de emociones por practicar disciplina lógica;
+- un Andoriano no es automáticamente agresivo por proceder de una cultura con tradiciones de desafío;
+- un Aenar no debe tratarse como incapaz por ser ciego;
+- un Tellarita no demuestra hostilidad solo por utilizar un tono argumentativo.
+
+El detalle operativo se estudia en XEN-302. Aquí importa comprender **por qué una Federación plural necesita oficiales capaces de distinguir especie, cultura, ciudadanía e individuo**.
+
 ### Práctica
 
 Compara dos respuestas ante una costumbre desconocida:
