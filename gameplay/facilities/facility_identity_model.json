@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2",
+  "schema_version": "0.3",
   "model_id": "facility_identity",
   "classification": "GAME_ADDITION",
   "principle": "FACILITY TYPE != FACILITY DESIGN/CLASS != INDIVIDUAL FACILITY != CURRENT OWNER != CURRENT OPERATOR",
@@ -44,8 +44,14 @@
     "Facility registry/designation is not a universal chronological numbering system.",
     "Current operator and sovereign territory are separate facts.",
     "facility_id remains stable through ownership, operator, command, damage, repair, expansion and compatible reconstruction.",
-    "Save/load and LOD transitions may not recreate a facility as a new entity."
+    "Save/load and LOD transitions may not recreate a facility as a new entity.",
+    "A facility may not be instantiated without a resolved origin need and construction/lifecycle provenance.",
+    "Player convenience, map emptiness or random-point-of-interest demand are never valid origin needs.",
+    "Committed construction creates persistent facility identity even before commissioning."
   ],
   "entity_identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
-  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json"
+  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json",
+  "existence_causality_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+  "generation_pipeline_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json",
+  "lifecycle_ref": "gameplay/facilities/facility_construction_and_lifecycle_state_v0.1.json"
 }
