@@ -1,0 +1,161 @@
+{
+  "schema_version": "0.1.0",
+  "depth_profile_id": "klingon_class_depth_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "operator_refs": [
+    "klingon_imperial_military"
+  ],
+  "classes": {
+    "d7_ktinga_family": {
+      "design_family_id": "klingon_d7_ktinga_family",
+      "display_name": "Familia D7 / K't'inga",
+      "availability": {
+        "from_2250s": true,
+        "retained_profiles": [
+          "pike",
+          "kirk",
+          "tng_ds9_voyager_as_veteran_where_valid"
+        ]
+      },
+      "role_families": [
+        "battle_cruiser",
+        "patrol",
+        "fleet_combat",
+        "diplomatic_military_presence"
+      ],
+      "strengths": [
+        "iconic_long_service_design_family",
+        "balanced_warship_role",
+        "credible_cross-era_veteran_presence"
+      ],
+      "constraints": [
+        "D7 and K't'inga configuration/variant identity must remain date-aware",
+        "do not collapse every Klingon cruiser into one exact specification"
+      ],
+      "crew_generation": [
+        "military watch coverage",
+        "engineering/tactical emphasis",
+        "command and House context remain separate from ship class"
+      ],
+      "persistence": [
+        "refit/variant changes preserve individual vessel identity when explicit"
+      ],
+      "ai_boundary": [
+        "Klingon class does not prove House ownership, captain personality or current hostility."
+      ],
+      "visual_hooks": [
+        "D7/K't'inga lineage recognizable but dated hull/configuration differences preserved"
+      ],
+      "source_ids": [
+        "MA_D7_CLASS",
+        "MA_KTINGA_CLASS"
+      ]
+    },
+    "bird_of_prey_family": {
+      "design_family_id": "klingon_bird_of_prey_family",
+      "display_name": "Familia Bird-of-Prey",
+      "availability": {
+        "from_2280s_core_profile": true,
+        "late_24c_continued_service": true,
+        "retained_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "role_families": [
+        "scout",
+        "raider",
+        "patrol",
+        "escort",
+        "small_cruiser"
+      ],
+      "variants": [
+        "brel",
+        "kvort",
+        "d12_or_other_when_source/context_valid"
+      ],
+      "strengths": [
+        "versatility",
+        "cloaking",
+        "small-unit missions",
+        "raiding/reconnaissance"
+      ],
+      "constraints": [
+        "variant scale and capability differ substantially",
+        "class designation must be known before exact staffing/capability assumptions"
+      ],
+      "crew_generation": [
+        "B'rel-scale crews can be very small",
+        "larger K'Vort-like variants require much larger staffing",
+        "boarding/ground-force embarkation only when mission requires"
+      ],
+      "persistence": [
+        "wing/mechanical state and cloak condition are live systems",
+        "variant does not change because of camera scale"
+      ],
+      "ai_boundary": [
+        "Do not infer exact Bird-of-Prey subtype from generic silhouette unless sensors/knowledge support it."
+      ],
+      "visual_hooks": [
+        "variable wing geometry where applicable",
+        "recognizable birdlike planform",
+        "cloak visual state from World State"
+      ],
+      "source_ids": [
+        "MA_KLINGON_BIRD_OF_PREY_2280S",
+        "MA_BREL_CLASS"
+      ]
+    },
+    "vorcha": {
+      "class_id": "vorcha",
+      "display_name": "Vor'cha",
+      "availability": {
+        "active_24c": true,
+        "retained_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "role_families": [
+        "attack_cruiser",
+        "heavy_cruiser",
+        "fleet_combat",
+        "command"
+      ],
+      "strengths": [
+        "major_24c_Klingon_fleet_mainstay",
+        "heavy_combat_presence",
+        "cloaking"
+      ],
+      "constraints": [
+        "not available to Pike/Kirk-era generation",
+        "House/political ownership is separate from class"
+      ],
+      "crew_generation": [
+        "large combatant staffing with command, engineering, tactical, support and embarked forces only as mission requires"
+      ],
+      "persistence": [
+        "battle damage/refits stay on individual vessel"
+      ],
+      "ai_boundary": [
+        "Do not treat every Vor'cha as hostile or as belonging to a specific House."
+      ],
+      "visual_hooks": [
+        "distinct TNG-era Klingon capital-ship language"
+      ],
+      "source_ids": [
+        "MA_VORCHA_CLASS",
+        "TNG_REUNION"
+      ]
+    }
+  },
+  "generation_rules": [
+    "Klingon species does not imply Imperial military membership.",
+    "House interests, military assignment and vessel operator/owner state are separate.",
+    "Cloak capability presence does not imply current cloak state or perfect undetectability.",
+    "Older designs may remain in service when date/source supports it."
+  ],
+  "unknown_policy": "Do not import disputed fan technical specifications or force exact crew counts where screen canon is ambiguous.",
+  "nap_implications": [
+    "Era and design family resolve before House markings, individual identity, damage and cloak/current-state overlays."
+  ]
+}
