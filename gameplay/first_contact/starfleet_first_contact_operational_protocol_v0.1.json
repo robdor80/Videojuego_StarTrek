@@ -1,0 +1,108 @@
+{
+  "schema_version": "0.1.0",
+  "protocol_id": "starfleet_first_contact_operational_protocol",
+  "status": "FOUNDATION_FIXED",
+  "source_refs": [
+    "TNG_FIRST_CONTACT",
+    "MA_OBSERVATION_TEAM",
+    "ST_OFFICIAL_PREWARP_IMPERSONATIONS",
+    "ST_OFFICIAL_FIRST_CONTACT_PLAYLIST",
+    "ST_OFFICIAL_FIRST_CONTACTS_ACROSS_TREK"
+  ],
+  "phases": [
+    {
+      "id": "detection",
+      "actions": [
+        "confirm distinct civilization/entity",
+        "preserve observer-relative uncertainty",
+        "avoid identification claims without evidence"
+      ]
+    },
+    {
+      "id": "precontact_intelligence",
+      "actions": [
+        "technology/warp assessment",
+        "linguistic analysis",
+        "government/representation mapping",
+        "culture/law/custom research",
+        "security and contamination assessment"
+      ]
+    },
+    {
+      "id": "prime_directive_review",
+      "actions": [
+        "resolve non-interference constraints",
+        "determine whether covert observation remains valid",
+        "identify contamination or exceptional circumstances"
+      ]
+    },
+    {
+      "id": "contact_readiness",
+      "actions": [
+        "identify lawful/credible representatives",
+        "select contact scope",
+        "assess public-readiness risks",
+        "prepare translation and cultural briefing"
+      ]
+    },
+    {
+      "id": "command_decision",
+      "actions": [
+        "XO/diplomatic/science staff submit recommendation",
+        "captain accepts/delays/modifies/rejects within authority",
+        "record decision"
+      ]
+    },
+    {
+      "id": "initial_approach",
+      "actions": [
+        "choose least destabilizing communication channel",
+        "identify Starfleet/Federation only to approved scope",
+        "avoid coercive technology displays unless safety requires"
+      ]
+    },
+    {
+      "id": "mutual_identification",
+      "actions": [
+        "exchange names/designations as communication permits",
+        "establish representative authority scope",
+        "clarify whether contact is private/public"
+      ]
+    },
+    {
+      "id": "dialogue_and_boundaries",
+      "actions": [
+        "explain presence/purpose",
+        "ask consent for continued interaction",
+        "respect local restrictions where lawful",
+        "avoid premature promises/treaties"
+      ]
+    },
+    {
+      "id": "closure_or_transition",
+      "actions": [
+        "respect refusal/delay",
+        "establish next-contact mechanism if agreed",
+        "create contact dossier",
+        "initialize diplomatic state only at actually achieved scope"
+      ]
+    }
+  ],
+  "captain_options": [
+    "proceed",
+    "delay_for_more_observation",
+    "limit_contact_scope",
+    "request_alternative_plan",
+    "delegate_contact_execution",
+    "abort_contact",
+    "respond_to_unavoidable_mutual_contact"
+  ],
+  "rules": [
+    "First Contact is not equivalent to Federation membership talks.",
+    "A positive greeting does not create treaty, trade rights or territorial access.",
+    "The target civilization can refuse or postpone contact.",
+    "Contact with a scientist/ship captain/local state does not make them planetary representative.",
+    "If target initiates unavoidable contact, protocol adapts to disclosed reality rather than attempting impossible secrecy.",
+    "All newly materialized names, species traits and representatives persist after contact."
+  ]
+}
