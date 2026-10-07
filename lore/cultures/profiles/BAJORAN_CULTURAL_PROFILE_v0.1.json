@@ -1,0 +1,143 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "bajoran_religion_sovereignty_occupation_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "bajoran",
+    "automatic_attachment_by_species": false,
+    "principle": "Religion, sovereignty and occupation memory can be culturally central without assigning belief, trauma or resistance history to every Bajoran."
+  },
+  "values_and_norms": [
+    {
+      "norm": "prophets_centered_religious_tradition_is_culturally_major",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "sovereignty_and_post_occupation_self_determination_can_be_salient",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "occupation_and_resistance_memory_can_shape_social_context",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "religious vocabulary",
+      "occupation/resistance references",
+      "sovereignty-sensitive language"
+    ],
+    "misread_risks": [
+      "Religious language does not prove personal orthodoxy.",
+      "Strong sovereignty language does not prove hostility to Federation personnel.",
+      "Occupation memory does not prove personal trauma or resistance service."
+    ]
+  },
+  "authority_and_status": {
+    "rules": [
+      "Civil government and religious authority are separate systems.",
+      "Religious title does not automatically grant civil authority.",
+      "Resistance history, militia/service and government role require explicit character state."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "universal_rule": null,
+    "rule": "Faith and trauma may be private; AI cannot infer either from species."
+  },
+  "family_kinship_and_household": {
+    "universal_structure": null
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "religious tradition",
+      "occupation history",
+      "sovereignty/civic recovery"
+    ],
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Species does not imply priesthood, militia/resistance service or government employment."
+  },
+  "religion_philosophy_or_worldview": {
+    "prophets_centered_tradition": true,
+    "personal_faith_implied": false,
+    "rules": [
+      "Faith intensity and interpretation are individual/cultural state.",
+      "Religious institutions and civil institutions are represented separately."
+    ]
+  },
+  "law_duty_and_obligation": {
+    "rule": "Civil jurisdiction, religious expectation and personal belief must not be collapsed."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misreads": [
+      "every Bajoran is devout",
+      "every Bajoran was resistance",
+      "every Bajoran is anti-Cardassian in identical ways"
+    ],
+    "professional_response": "Ask which history, faith, institution and individual experience actually apply."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "faith intensity",
+      "religious interpretation",
+      "occupation generation",
+      "resistance history",
+      "civilian/militia",
+      "region",
+      "politics",
+      "diaspora/offworld exposure"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Pre-occupation, occupation and post-occupation/reconstruction contexts must not be mixed.",
+      "Campaign state after start may diverge from later canon outcomes."
+    ]
+  },
+  "gameplay_hooks": [
+    "religious_etiquette",
+    "civil_vs_religious_authority",
+    "occupation_memory",
+    "resistance_history",
+    "sovereignty_sensitive_diplomacy"
+  ],
+  "ai_guardrails": [
+    "Do not assign faith or orthodoxy by species.",
+    "Do not invent trauma or resistance service.",
+    "Do not let religious authority silently become civil authority.",
+    "Do not treat all Cardassian-related reactions as identical."
+  ],
+  "unknowns": [
+    "universal household structure",
+    "marriage/inheritance law",
+    "complete regional traditions",
+    "universal funerary practice"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BAJORAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "culture and society cross-check"
+    },
+    {
+      "source_id": "MA_BAJORAN_RELIGION",
+      "confidence": "MEDIUM",
+      "claim_scope": "religion and institutions cross-check"
+    },
+    {
+      "source_id": "DS9_EMISSARY",
+      "confidence": "HIGH",
+      "claim_scope": "post-occupation sovereignty/religion context"
+    }
+  ]
+}
