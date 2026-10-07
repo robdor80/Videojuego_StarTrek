@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "facility_service_berth_and_throughput_generation_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Services, berths and throughput are physical/organizational capacities derived from design and need. Priority changes queue order, not capacity.",
+  "berth_types": [
+    "external_docking_port",
+    "internal_docking_bay",
+    "drydock_slot",
+    "shipyard_build_slot",
+    "smallcraft_bay",
+    "cargo_transfer_berth",
+    "anchorage_or_orbit_hold"
+  ],
+  "generation_inputs": [
+    "facility_design_ref",
+    "resolved_scale",
+    "role_family",
+    "projected_vessel_mix",
+    "projected_service_requests",
+    "construction_budget",
+    "site_constraints",
+    "operator_technology"
+  ],
+  "rules": [
+    "Generate only service nodes required or justified by the facility role/design.",
+    "Berth capacity is sized from projected throughput plus explicit reserve policy; not from maximum imaginable traffic.",
+    "Larger berths capable of servicing larger ships consume disproportionate space/resources.",
+    "Repair/heavy-repair/shipyard capability require specialist teams, tools, parts and dedicated nodes.",
+    "Medical/trade/diplomatic services do not appear just because the facility is called a starbase.",
+    "Emergency priority can reorder queues but cannot create a missing berth, part, bed, specialist or capability.",
+    "Current damage, staff shortage or inventory shortage can reduce live capacity below design capacity.",
+    "Docked ship crew remains ship population unless transferred."
+  ],
+  "output_fields": [
+    "design_service_nodes",
+    "berth_profiles",
+    "nominal_throughput",
+    "emergency_reserve",
+    "live_capacity_dependencies",
+    "queue_policy"
+  ],
+  "traffic_causality": [
+    "Ships arrive because routes, missions, cargo, passengers or service needs point to the facility.",
+    "Facility does not spawn decorative traffic.",
+    "Low-demand stations remain quiet.",
+    "Saturation may cause holding, diversion, delayed departure or demand for expansion."
+  ]
+}
