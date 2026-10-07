@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "bajoran",
+  "display_name_es": "Bajorano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#bajoran"
+  ],
+  "identity": {
+    "common_homeworld_ref": "bajor",
+    "common_faction_association": "bajoran_provisional_government",
+    "faction_membership_implied": false
+  },
+  "physiology": {
+    "broad_species_bonus": null,
+    "current_gameplay_specialization": "no_broad_species_bonus_defined",
+    "unknowns": [
+      "universal lifecycle thresholds",
+      "reproductive biology",
+      "species-specific medical reference ranges"
+    ]
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "Prophet-centered religious traditions",
+      "occupation/resistance history",
+      "strong sovereignty awareness"
+    ],
+    "rules": [
+      "Personal faith is never implied by species.",
+      "Religious authority and civil authority remain separate.",
+      "Occupation history may shape the person but trauma or resistance service is never automatic.",
+      "Individual adherence and belief vary."
+    ]
+  },
+  "gameplay_hooks": [
+    "religious_etiquette",
+    "occupation_legacy",
+    "resistance_history",
+    "bajoran_jurisdiction",
+    "wormhole_prophets_context"
+  ],
+  "ai_boundary": [
+    "Do not assign faith, orthodoxy, trauma or resistance history automatically.",
+    "Do not convert religious vocabulary into objective proof of belief.",
+    "Do not infer government membership from species."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BAJORAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "species and language context"
+    },
+    {
+      "source_id": "MA_BAJORAN_RELIGION",
+      "confidence": "MEDIUM",
+      "claim_scope": "Prophets and Bajoran religious tradition"
+    },
+    {
+      "source_id": "DS9_EMISSARY",
+      "confidence": "HIGH",
+      "claim_scope": "post-occupation society and sovereignty"
+    }
+  ]
+}
