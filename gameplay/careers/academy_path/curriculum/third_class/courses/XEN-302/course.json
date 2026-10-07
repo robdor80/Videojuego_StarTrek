@@ -1,13 +1,13 @@
 {
-  "schema_version": "1.0.1",
+  "schema_version": "1.1.0",
   "course_id": "XEN-302",
   "title_es": "Relaciones interespecies y contacto",
-  "status": "unit_design_complete",
+  "status": "operational_culture_content_complete",
   "sequence_year": 2,
   "cadet_class_id": "cadet_third_class",
   "trimester": 2,
   "course_type": "core",
-  "purpose_es": "Trabajar con personas y culturas distintas sin suponer que los patrones humanos son universales.",
+  "purpose_es": "Trabajar con personas y culturas distintas sin suponer patrones humanos universales, aplicando perfiles culturales reales del universo del juego a comunicación, protocolo, traducción, Primer Contacto y diplomacia.",
   "prerequisites": [
     "FED-401",
     "REG-302"
@@ -27,9 +27,11 @@
         "biología",
         "cultura",
         "costumbre",
-        "individuo"
+        "individuo",
+        "especie ≠ cultura ≠ ciudadanía ≠ personalidad",
+        "casos fundadores: vulcanos, andorianos, Aenar y tellaritas"
       ],
-      "practice_es": "Separar hechos de estereotipos.",
+      "practice_es": "Separar hechos, cultura e individuo usando casos reales de especies fundadoras.",
       "assessment_es": "Ejercicio."
     },
     {
@@ -39,9 +41,12 @@
         "contexto",
         "tono",
         "tabúes",
-        "malentendidos"
+        "malentendidos",
+        "telepatía y consentimiento",
+        "límites de lectura mental",
+        "directividad tellarita y andoriana"
       ],
-      "practice_es": "Escena de conversación.",
+      "practice_es": "Resolver una conversación donde tono, telepatía o contexto pueden inducir una interpretación errónea.",
       "assessment_es": "Evaluación de comunicación."
     },
     {
@@ -51,9 +56,15 @@
         "presentación",
         "hospitalidad",
         "símbolos",
-        "espacio personal contextual"
+        "espacio personal contextual",
+        "Klingon: honor/Casas",
+        "Romulano: reserva/seguridad",
+        "Cardassiano: jerarquía/ocupación",
+        "Bajorano: religión/soberanía",
+        "Ferengi: comercio/contratos",
+        "Trill: identidad unida"
       ],
-      "practice_es": "Preparar encuentro formal.",
+      "practice_es": "Preparar encuentros formales con dossiers culturales incompletos sin convertirlos en estereotipos.",
       "assessment_es": "Caso práctico."
     },
     {
@@ -63,9 +74,11 @@
         "traducción",
         "ambigüedad",
         "conceptos no equivalentes",
-        "fallo"
+        "fallo",
+        "lenguaje culturalmente cargado",
+        "traducir palabras no equivale a transferir cultura"
       ],
-      "practice_es": "Resolver malentendido de traducción.",
+      "practice_es": "Resolver un malentendido donde la traducción literal es correcta pero la interpretación cultural no.",
       "assessment_es": "Práctica."
     },
     {
@@ -75,9 +88,11 @@
         "observación",
         "autoridad",
         "preparación",
-        "riesgo cultural"
+        "riesgo cultural",
+        "incertidumbre",
+        "no proyectar culturas conocidas sobre una especie desconocida"
       ],
-      "practice_es": "Planificar fase inicial supervisada.",
+      "practice_es": "Planificar contacto supervisado con información cultural limitada y marcar hipótesis frente a hechos.",
       "assessment_es": "Evaluación de criterio."
     },
     {
@@ -87,9 +102,11 @@
         "intereses",
         "posición",
         "escucha",
-        "desescalada"
+        "desescalada",
+        "Klingon/Romulano/Ferengi como casos de negociación",
+        "Dominion: jerarquía y autoridad diferenciadas"
       ],
-      "practice_es": "Negociación breve controlada.",
+      "practice_es": "Negociación controlada con diferencias culturales relevantes y límites de autoridad reales.",
       "assessment_es": "Debrief."
     }
   ],
@@ -113,7 +130,11 @@
     "gameplay/careers/academy_path/evaluation_model.json",
     "gameplay/careers/academy_path/academy_era_profiles.json",
     "lore/federation/member_worlds/founding_members.json",
-    "localization/terminology/starfleet_terms.json"
+    "localization/terminology/starfleet_terms.json",
+    "gameplay/careers/academy_path/cultural_operations_reference_v0.1.json",
+    "lore/cultures/founding_species_interaction_profiles.json",
+    "lore/cultures/major_species_interaction_profiles.json",
+    "gameplay/species/culture_socialization_contract.json"
   ],
   "source_ref_policy": "Internal validated lore/gameplay references constrain factual content; pedagogy and scenario packaging may be GAME_ADDITION."
 }
