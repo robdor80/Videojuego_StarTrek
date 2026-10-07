@@ -1,0 +1,37 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "death_destruction_mourning_continuity",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "death_event_fields": [
+    "event_id",
+    "entity_id",
+    "time",
+    "location_ref",
+    "cause_refs",
+    "certainty_state",
+    "witness_refs",
+    "record_refs",
+    "knowledge_visibility"
+  ],
+  "continuity_domains": [
+    "relationships",
+    "kinship",
+    "memory",
+    "service_record",
+    "legal_or_command_state",
+    "assignment_vacancy",
+    "property_or_object_links",
+    "reputation",
+    "organizational_effects",
+    "mourning_or_grief_state"
+  ],
+  "rules": [
+    "Death or destruction ends normal active simulation but does not erase identity/history.",
+    "Relationships and kinship become historical/changed state rather than disappearing.",
+    "A dead crew member creates a real vacancy until replaced.",
+    "Knowledge of death may lag behind truth depending on communication/witness channels.",
+    "Mourning/grief responses are individual and contextual; no universal fixed timer or emotional script is imposed.",
+    "AI cannot resurrect, declare death, fake certainty or complete mourning without authoritative state/events.",
+    "Destroyed ships/facilities remain in historical records and may leave wreckage/aftermath if World State says so."
+  ]
+}
