@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "population_movement_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "movement_types": [
+    "commute",
+    "crew_transfer",
+    "passenger_trip",
+    "migration",
+    "evacuation",
+    "refugee_movement",
+    "tourism_or_visit",
+    "diplomatic_travel",
+    "medical_transfer",
+    "training_assignment",
+    "shore_leave",
+    "colonization"
+  ],
+  "record_fields": [
+    "movement_id",
+    "character_or_population_refs",
+    "origin_ref",
+    "destination_ref",
+    "reason",
+    "departure_state",
+    "arrival_state",
+    "route_or_transport_ref",
+    "expected_duration",
+    "legal_or_access_context_ref",
+    "source_event_refs"
+  ],
+  "rules": [
+    "Movement changes location/residency state; it does not duplicate population.",
+    "Visitors are not residents by default.",
+    "Migration becomes residency only through a represented world-state transition.",
+    "Travel consumes time unless a valid technology/event explicitly resolves it differently.",
+    "Evacuation/refugee flows conserve people while changing location/status.",
+    "A materialized persistent individual remains the same entity through movement."
+  ]
+}
