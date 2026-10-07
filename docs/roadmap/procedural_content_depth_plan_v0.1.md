@@ -32,8 +32,8 @@
 | D014 | Vorta detailed profile | COMPLETE | Engineered biology, Dominion role without personality lock |
 | D015 | Jem'Hadar detailed profile | COMPLETE | Accelerated lifecycle, ketracel dependency, operational consequences |
 | D016 | Borg assimilation state depth | COMPLETE | Origin-species continuity, implant/function state, liberation/recovery |
-| D017 | Synthetic/android person framework | TODO | Identity/lifecycle/rights/state hooks |
-| D018 | Persistent holographic person framework | TODO | Program instance identity, memory/state persistence, embodiment constraints |
+| D017 | Synthetic/android person framework | COMPLETE | Identity/lifecycle/rights/state hooks |
+| D018 | Persistent holographic person framework | COMPLETE | Program instance identity, memory/state persistence, embodiment constraints |
 
 ## Wave B — Culture and social context
 
