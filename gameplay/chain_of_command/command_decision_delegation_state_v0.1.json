@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "command_decision_delegation_state",
+  "status": "FOUNDATION_FIXED",
+  "fields": {
+    "delegation_id": null,
+    "ship_id": null,
+    "commanding_officer_character_id": null,
+    "decision_domain": null,
+    "control_mode": "proposal_requires_approval",
+    "delegate_character_or_position_id": null,
+    "standing_order_ref": null,
+    "authority_limits": [],
+    "effective_at": null,
+    "expires_at": null,
+    "revoked_at": null,
+    "status": "active"
+  },
+  "statuses": [
+    "draft",
+    "active",
+    "suspended",
+    "revoked",
+    "expired"
+  ],
+  "control_modes": [
+    "manual",
+    "proposal_requires_approval",
+    "delegated_autonomous"
+  ],
+  "rules": [
+    "Delegation transfers execution/decision latitude only inside declared limits; command responsibility remains with the commanding officer.",
+    "The captain may revoke or narrow delegation unless a superior/external authority has validly changed command authority.",
+    "A delegate cannot delegate more authority than they received.",
+    "Department heads may resolve detailed assignments beneath a captain/XO policy without requiring captain approval for every micro-decision unless the control mode says otherwise.",
+    "Changing control_mode is itself a persistent command decision."
+  ]
+}
