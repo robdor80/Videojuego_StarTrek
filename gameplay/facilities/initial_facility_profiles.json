@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2.0",
   "catalogue_id": "initial_facility_profiles",
   "classification": "GAME_ADDITION",
   "purpose": "Seed operational support profiles for already-modeled locations. These are conservative gameplay baselines, not claims of exhaustive canonical capacity.",
@@ -36,7 +36,10 @@
       "notes": [
         "No exact berth count, stock level or repair throughput is asserted here.",
         "Additional capabilities require later source validation."
-      ]
+      ],
+      "canonical_identity_ref": "canon:facility:deep_space_station_k7",
+      "design_ref": null,
+      "design_identity_status": "reserved_unique_design"
     },
     {
       "facility_id": "deep_space_9",
@@ -80,7 +83,10 @@
       ],
       "notes": [
         "Capability availability remains live and may be degraded by damage, occupation, blockade, shortages or campaign divergence."
-      ]
+      ],
+      "canonical_identity_ref": "canon:facility:deep_space_9",
+      "design_ref": "cardassian_terok_nor_type",
+      "design_identity_status": "reused_canonical_design"
     },
     {
       "facility_id": "starbase_375",
@@ -118,7 +124,10 @@
       "notes": [
         "Heavy-repair/drydock capability is not assumed until validated separately.",
         "This profile models strategic fleet support without inventing exact throughput."
-      ]
+      ],
+      "canonical_identity_ref": "canon:facility:starbase_375",
+      "design_ref": "federation_starbase_375_type",
+      "design_identity_status": "reused_canonical_design"
     }
   ],
   "rules": [
@@ -126,5 +135,7 @@
     "All service use checks live facility operational state and queue.",
     "Exact capacities remain undefined until sourced or deliberately defined as GAME_ADDITION.",
     "Campaign events may permanently change these profiles through authoritative overrides."
-  ]
+  ],
+  "design_catalogue_ref": "lore/stations_and_facilities/canonical_station_design_catalogue_v0.1.json",
+  "canonical_unique_catalogue_ref": "lore/stations_and_facilities/canonical_unique_facilities_v0.1.json"
 }
