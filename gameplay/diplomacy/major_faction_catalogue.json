@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "catalogue_id": "major_factions_gameplay_baseline",
   "factions": {
     "united_federation_of_planets": {
@@ -18,6 +18,10 @@
       "rules": [
         "Federation is not Starfleet.",
         "Member-world citizenship is not inferred from species."
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+        "gameplay/organizations/profiles/STARFLEET_ORGANIZATION_PROFILE_v0.1.json"
       ]
     },
     "klingon_empire": {
@@ -45,6 +49,9 @@
         "TOS_ERRAND_OF_MERCY",
         "ST6_THE_UNDISCOVERED_COUNTRY",
         "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/KLINGON_EMPIRE_ORGANIZATIONS_v0.1.json"
       ]
     },
     "romulan_star_empire": {
@@ -68,6 +75,9 @@
         "TOS_BALANCE_OF_TERROR",
         "TNG_THE_NEUTRAL_ZONE",
         "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/ROMULAN_EMPIRE_ORGANIZATIONS_v0.1.json"
       ]
     },
     "cardassian_union": {
@@ -91,6 +101,9 @@
         "DS9_THE_WAY_OF_THE_WARRIOR",
         "ST_OFFICIAL_INTERSTELLAR_POLITICS",
         "ST_OFFICIAL_DOMINION_101"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/CARDASSIAN_UNION_ORGANIZATIONS_v0.1.json"
       ]
     },
     "bajoran_provisional_government": {
@@ -115,6 +128,9 @@
       "provenance": [
         "DS9_EMISSARY",
         "DS9_CALL_TO_ARMS"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/BAJORAN_INSTITUTIONS_v0.1.json"
       ]
     },
     "ferengi_alliance": {
@@ -141,6 +157,9 @@
       "provenance": [
         "TNG_THE_LAST_OUTPOST",
         "ST_OFFICIAL_ROM_GRAND_NAGUS"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/FERENGI_ALLIANCE_ORGANIZATIONS_v0.1.json"
       ]
     },
     "borg_collective": {
@@ -164,6 +183,9 @@
         "TNG_BEST_OF_BOTH_WORLDS",
         "VOY_SCORPION",
         "ST_OFFICIAL_BORG_101"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/BORG_COLLECTIVE_OPERATIONAL_PROFILE_v0.1.json"
       ]
     },
     "dominion": {
@@ -191,6 +213,9 @@
         "DS9_THE_JEMHADAR",
         "DS9_CALL_TO_ARMS",
         "ST_OFFICIAL_DOMINION_101"
+      ],
+      "organization_profile_refs": [
+        "gameplay/organizations/profiles/DOMINION_ORGANIZATIONS_v0.1.json"
       ]
     }
   }
