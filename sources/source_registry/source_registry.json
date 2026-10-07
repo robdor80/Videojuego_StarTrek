@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.32.0",
+  "registry_version": "0.33.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -2021,6 +2021,168 @@
       "source_type": "SCREEN_CANON",
       "title": "Defiant / Hideki-era Cardassian patrol context",
       "notes": "Screen-era context for Cardassian small patrol/attack craft."
+    },
+    {
+      "source_id": "MA_EARTH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Earth",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Earth",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Earth/Sol III, Federation capital context, Starfleet Headquarters and Academy."
+    },
+    {
+      "source_id": "MA_SOL_SYSTEM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Sol system",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Sol_system",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Sol system composition and Sector 001 context."
+    },
+    {
+      "source_id": "MA_VULCAN_PLANET",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vulcan (planet)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Vulcan_%28planet%29",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Vulcan homeworld, arid terrain and Federation founding-world context."
+    },
+    {
+      "source_id": "MA_ANDORIA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Andoria",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Andoria",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Andoria as inhabited icy moon of a gas giant, breathable atmosphere, geothermal underground cities and Aenar/Andorian homeworld."
+    },
+    {
+      "source_id": "MA_TELLAR_PRIME",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tellar Prime",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tellar_Prime",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Tellar Prime in 61 Cygni, Tellarite homeworld and healing bogs."
+    },
+    {
+      "source_id": "MA_QONOS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Qo'noS",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Qo%27noS",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Klingon homeworld, First City, Praxis and cave/volcanic context."
+    },
+    {
+      "source_id": "MA_PRAXIS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Praxis",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Praxis",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Praxis as Qo'noS moon and major energy-production facility destroyed in 2293."
+    },
+    {
+      "source_id": "MA_ROMULUS_WORLD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Romulus",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Romulus",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Romulan homeworld and sister-world Remus context."
+    },
+    {
+      "source_id": "MA_CARDASSIA_PRIME",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Cardassia Prime",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Cardassia_Prime",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Cardassian homeworld, environment, resource scarcity and key institutions."
+    },
+    {
+      "source_id": "MA_BAJOR_WORLD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bajor",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bajor",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Bajoran homeworld, moons and system context."
+    },
+    {
+      "source_id": "MA_FERENGINAR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ferenginar",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ferenginar",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Ferengi homeworld, near-constant heavy rain and Alliance capital context."
+    },
+    {
+      "source_id": "MA_TRILL_PLANET",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Trill (planet)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Trill_%28planet%29",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Trill homeworld, Caves of Mak'ala and humanoid/symbiont shared world."
+    },
+    {
+      "source_id": "MA_CAVES_MAKALA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Caves of Mak'ala",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Caves_of_Mak%27ala",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for symbiont pools and Guardian context."
+    },
+    {
+      "source_id": "MA_BETAZED_WORLD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Betazed",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Betazed",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Betazoid homeworld, three moons, lush environment and Federation membership."
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Get To Know — Star Trek Worlds",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/get-to-know",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference for broad visual/cultural world cues for Earth, Vulcan, Qo'noS, Romulus, Cardassia Prime, Ferenginar, Trill and Andoria."
+    },
+    {
+      "source_id": "ST_OFFICIAL_QONOS_ENCOUNTERS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Starfleet's Close Encounters with Qo'noS",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/starfleet-encounters-with-qonos",
+      "accessed_at": "2026-10-07",
+      "notes": "Official overview of Qo'noS locations, culture and Starfleet encounters."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TRILL_HISTORY_101",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Trill History",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/trill-history-101",
+      "accessed_at": "2026-10-07",
+      "notes": "Official overview of Trill joining and Trill-world cultural context."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULANS_REMANS_101",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Romulans and Remans",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-101-romulans-and-remans",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference for Romulus/Remus sister-world relationship and environmental distinction."
     }
   ]
 }
