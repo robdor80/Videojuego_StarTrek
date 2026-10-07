@@ -1,8 +1,8 @@
 {
   "profile_id": "star_trek_species_visual_profile_framework",
   "profile_type": "species_collection",
-  "version": "0.1",
-  "status": "FOUNDATION_CONTENT_PROGRESSIVE",
+  "version": "0.2",
+  "status": "FOUNDATION_WITH_USER_VISUAL_REFERENCE_OBSERVATIONS",
   "authority_scope": "species_morphology",
   "inherits": [
     "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
@@ -50,6 +50,75 @@
       "visual_rules": [
         "Morphology requires era/source-aware reference resolution.",
         "Do not make warrior equipment or aggressive pose a species default."
+      ]
+    }
+  },
+  "reference_policy": {
+    "user_reference_images_are_morphology_guides_not_identity_templates": true,
+    "do_not_copy_canonical_actor_or_character_likeness_for_procedural_npcs": true,
+    "extract_species_level_shape_color_surface_and_anatomy_cues_only": true,
+    "production_assets_require_independent_persistent_visual_identity": true,
+    "reference_images_do_not_by_themselves_create_canon_facts": true
+  },
+  "reference_observations": {
+    "andorian": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "blue-to-cyan skin presentation with meaningful individual/production variation",
+        "paired cranial antennae as primary species-readability feature",
+        "antenna angle, curvature, length and presentation may vary by individual/reference",
+        "white-to-silver hair is a strong recurring visual association in the supplied references",
+        "humanlike facial individuality remains broad beneath species traits"
+      ],
+      "guardrails": [
+        "Do not force one exact shade of blue on every Andorian.",
+        "Do not use aggressive expression or martial styling as a species default.",
+        "Antennae belong to persistent individual morphology and must remain recognizable across later images."
+      ]
+    },
+    "tellarite": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "strongly non-human nasal/snout morphology",
+        "large and highly distinctive ear structures",
+        "pronounced brow and mid-face sculpting",
+        "facial hair can be visually prominent in some references but must not become universal",
+        "significant morphology/presentation variation exists across production eras"
+      ],
+      "guardrails": [
+        "Do not reduce Tellarites to a single prosthetic face template.",
+        "Era-specific visual interpretation must be resolved before production lock.",
+        "Argumentative cultural norms must not be encoded as permanent angry facial expression."
+      ]
+    },
+    "vulcan": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "pointed external ears as the strongest persistent species marker",
+        "upswept or strongly angled eyebrow presentation is a recurring screen cue",
+        "otherwise broad humanlike facial variation is present",
+        "haircut and grooming vary and are not biological identity",
+        "skin tone remains within broad humanlike variation in the supplied references"
+      ],
+      "guardrails": [
+        "Do not treat a specific bowl-style haircut as a biological species trait.",
+        "Do not encode emotional restraint as a permanently blank face.",
+        "Ear shape must stay consistent for a persistent individual across images."
+      ]
+    },
+    "ferengi": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "very large external ears are a dominant species-readability feature",
+        "pronounced cranial/forehead ridge structure",
+        "distinctive nasal bridge and central facial anatomy",
+        "strong individual variation remains visible despite shared species morphology",
+        "clothing and commercial styling are cultural/occupational layers, not species anatomy"
+      ],
+      "guardrails": [
+        "Do not infer merchant profession, greed or personality from Ferengi morphology.",
+        "Ear and cranial structure belong to persistent individual morphology.",
+        "Do not make every Ferengi face identical by overusing one prosthetic pattern."
       ]
     }
   }
