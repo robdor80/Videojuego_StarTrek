@@ -143,9 +143,9 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | 🟨 IN_PROGRESS | AI authority, deterministic-first routing, provider-independent capability routes and NPC interaction foundation established; deeper prompt/context/presentation content remains progressive. |
 | Presentation and UI | ⬜ TODO |
-| Assets / audio / NAP mappings | ⬜ TODO |
-| Runtime content / schemas / manifests | ⬜ TODO |
-| Validation suites | ⬜ TODO |
+| Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP foundation now includes persistent visual identity, resolved-context/handoff schemas, global/category Visual Bibles and initial era/species/Starfleet profiles. Concrete asset/profile coverage remains progressive. |
+| Runtime content / schemas / manifests | 🟨 IN_PROGRESS | Procedural contracts, validation manifests and machine-readable 120-layer status are established; final runtime mapping depends on CoreRPG 4.5+ contracts. |
+| Validation suites | 🟨 IN_PROGRESS | Cross-domain design invariants and Sensors acceptance fixture established; executable runtime suites expand as CoreRPG gains Generic World State/actions/persistence. |
 
 ## Pillar 1 — closed sub-blocks
 
@@ -170,3 +170,19 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 **Procedural-universe depth note:** reusable simulation patterns extracted from Nimroel have now been formalized for Star Trek: layered authority/context resolution, derived subsystem seeds, Tier A/B/C populations, irreversible latent→persistent NPC promotion, schedule/knowledge/relationship constraints and validation invariants. This is architecture only; species/culture grammars, concrete population distributions and runtime/CoreRPG integration remain active work.
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
+
+
+## Procedural living-universe master plan
+
+Control documents:
+- `docs/roadmap/procedural_layers_master_plan_v0.1.md`
+- `docs/roadmap/procedural_layers_status_v0.1.json`
+- `docs/roadmap/procedural_runtime_readiness_v0.1.md`
+- `docs/roadmap/nimroel_to_star_trek_procedural_reuse_matrix_v0.1.md`
+
+Current layer status:
+- **118 / 120 COMPLETE** at Star Trek design/contract/validation-foundation level;
+- **119 PARTIAL** — Sensors acceptance fixture exists; executable console UX/duty scenario remains;
+- **120 BLOCKED_RUNTIME** — waits on CoreRPG Generic World State and later runtime capabilities.
+
+This status does **not** mean all species, planets, ships, organizations or assets are exhaustively populated. It means their governing procedural contracts and cross-domain rules now have a coherent baseline.
