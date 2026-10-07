@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "vulcan_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "vulcan_system",
+    "planet_id": "vulcan",
+    "display_name_es": "Vulcano",
+    "world_type": "inhabited_class_m_arid_planet",
+    "native_species_refs": [
+      "vulcan"
+    ],
+    "federation_founder_context": true
+  },
+  "orbital_context": {
+    "exact_coordinates_status": "not_locked",
+    "companion_context": "T'Khut/sister-world context exists in canon references; detailed orbital mechanics not required for baseline gameplay."
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": "higher_than_Earth_context_supported_but_exact_value_not_locked",
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "human_visitable": true,
+    "relative_character": "thinner/harsher than Earth context",
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "surface_water": "limited relative to Earth",
+    "major_water_bodies": "small/seas where sourced; exhaustive map not locked"
+  },
+  "geology_topography": {
+    "dominant": [
+      "arid_deserts",
+      "mountain_ranges",
+      "rock_formations",
+      "lava_or_volcanic_regions"
+    ],
+    "hazards": [
+      "heat",
+      "intense_light",
+      "sandfire/electrical desert storms where source/context supports"
+    ]
+  },
+  "climate_refs": [
+    "hot_arid",
+    "regional_variation_unknown"
+  ],
+  "biosphere_ref": "vulcan_biosphere_sparse_arid",
+  "region_refs": [
+    "Vulcan Forge",
+    "ShirKahr when campaign/source requires",
+    "ancient sites and monasteries only when individually sourced"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "diplomacy",
+    "science",
+    "philosophy_and_training",
+    "medical_species_context",
+    "desert_survival",
+    "family_or_cultural_visits",
+    "Federation_strategy"
+  ],
+  "temporal_rules": [
+    "Vulcan remains Federation founding world during retained playable eras.",
+    "Later Ni'Var reunification history is outside current playable scope and not backfilled."
+  ],
+  "ai_boundary": [
+    "AI cannot infer every Vulcan resident follows identical logic discipline.",
+    "AI cannot invent monasteries, family estates or ritual obligations.",
+    "Environmental hazards must come from resolved region/weather state."
+  ],
+  "visual_nap": [
+    "arid red/brown landscapes",
+    "strong rock/mountain forms",
+    "architecture must use Vulcan-era visual references, not generic desert sci-fi"
+  ],
+  "unknowns": [
+    "exact global geography",
+    "exact atmosphere",
+    "exact population by playable year",
+    "complete city/region catalogue"
+  ],
+  "provenance": [
+    "MA_VULCAN_PLANET",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "MA_VULCAN",
+    "ENT_4X22_THESE_ARE_THE_VOYAGES"
+  ]
+}
