@@ -1,0 +1,1132 @@
+{
+  "schema_version": "0.1.0",
+  "library_id": "species_agnostic_procedural_personality_recipes",
+  "status": "INITIAL_LIBRARY",
+  "source_lexicon_ref": "gameplay/personality/abstract_personality_trait_lexicon_v0.1.json",
+  "source_corpus_ref": "research/personality/star_trek_character_trait_corpus_v0.1.json",
+  "rule": "Recipes are original abstract combinations. They are not canonical-character templates.",
+  "generation": {
+    "neutral_default": 0.5,
+    "unspecified_dimension_random_band": [
+      0.38,
+      0.62
+    ],
+    "anchor_variation_band": 0.1,
+    "deterministic_from_personality_seed": true,
+    "clamp": [
+      0,
+      1
+    ],
+    "resulting_profile_unique_per_entity": true
+  },
+  "usage": {
+    "human": "May use library directly plus actual culture/institution modifiers.",
+    "nonhuman": "Uses the same base library unless project rules say otherwise; culture/species expression modifiers are layered afterward.",
+    "principal_npc": "Authored mode preferred."
+  },
+  "recipes": [
+    {
+      "recipe_id": "warm_reliable_mentor",
+      "display_es": "warm reliable mentor",
+      "anchors": {
+        "warmth": 0.82,
+        "empathy_expression": 0.82,
+        "teaching_instinct": 0.88,
+        "patience": 0.8,
+        "conscientiousness": 0.72,
+        "self_confidence": 0.68
+      },
+      "qualitative_traits": [
+        "relationship_invested",
+        "responsibility_driven",
+        "loyal"
+      ],
+      "humor_styles": [
+        "warm",
+        "gentle"
+      ],
+      "leadership_styles": [
+        "mentor",
+        "protective"
+      ]
+    },
+    {
+      "recipe_id": "dry_pragmatic_specialist",
+      "display_es": "dry pragmatic specialist",
+      "anchors": {
+        "warmth": 0.38,
+        "humor_frequency": 0.28,
+        "directness": 0.72,
+        "patience": 0.52,
+        "conscientiousness": 0.86,
+        "self_confidence": 0.74,
+        "curiosity": 0.7
+      },
+      "qualitative_traits": [
+        "pragmatic",
+        "mastery_proud",
+        "resourceful"
+      ],
+      "humor_styles": [
+        "dry",
+        "deadpan"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "cheerful_social_technician",
+      "display_es": "cheerful social technician",
+      "anchors": {
+        "social_energy": 0.78,
+        "warmth": 0.84,
+        "humor_frequency": 0.72,
+        "optimism": 0.88,
+        "curiosity": 0.7,
+        "conscientiousness": 0.68
+      },
+      "qualitative_traits": [
+        "resourceful",
+        "relationship_invested"
+      ],
+      "humor_styles": [
+        "playful",
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "reserved_dutiful_officer",
+      "display_es": "reserved dutiful officer",
+      "anchors": {
+        "social_energy": 0.28,
+        "warmth": 0.46,
+        "formality": 0.82,
+        "emotional_expressiveness": 0.24,
+        "conscientiousness": 0.92,
+        "rule_orientation": 0.8
+      },
+      "qualitative_traits": [
+        "loyal",
+        "responsibility_driven",
+        "principled"
+      ],
+      "humor_styles": [
+        "rare_or_none",
+        "dry"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "confident_playful_operator",
+      "display_es": "confident playful operator",
+      "anchors": {
+        "social_energy": 0.76,
+        "self_confidence": 0.88,
+        "humor_frequency": 0.78,
+        "risk_tolerance": 0.66,
+        "directness": 0.68,
+        "conscientiousness": 0.7
+      },
+      "qualitative_traits": [
+        "adaptable",
+        "resourceful"
+      ],
+      "humor_styles": [
+        "playful",
+        "teasing"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "anxious_conscientious_achiever",
+      "display_es": "anxious conscientious achiever",
+      "anchors": {
+        "self_confidence": 0.36,
+        "conscientiousness": 0.94,
+        "ambition": 0.82,
+        "rule_orientation": 0.86,
+        "patience": 0.58,
+        "social_energy": 0.48
+      },
+      "qualitative_traits": [
+        "responsibility_driven",
+        "people_pleasing",
+        "resilient"
+      ],
+      "humor_styles": [
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "seeks_input"
+      ]
+    },
+    {
+      "recipe_id": "blunt_compassionate_medic",
+      "display_es": "blunt compassionate medic",
+      "anchors": {
+        "warmth": 0.78,
+        "empathy_expression": 0.88,
+        "directness": 0.86,
+        "tact": 0.38,
+        "patience": 0.68,
+        "conscientiousness": 0.88
+      },
+      "qualitative_traits": [
+        "compassionate",
+        "pragmatic",
+        "principled"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "dry"
+      ],
+      "leadership_styles": [
+        "protective"
+      ]
+    },
+    {
+      "recipe_id": "quiet_observant_professional",
+      "display_es": "quiet observant professional",
+      "anchors": {
+        "social_energy": 0.22,
+        "intimacy_openness": 0.24,
+        "directness": 0.58,
+        "tact": 0.66,
+        "conscientiousness": 0.84,
+        "curiosity": 0.72
+      },
+      "qualitative_traits": [
+        "observant",
+        "pragmatic",
+        "loyal"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "ambitious_by_the_book",
+      "display_es": "ambitious by the book",
+      "anchors": {
+        "ambition": 0.9,
+        "rule_orientation": 0.92,
+        "authority_deference": 0.78,
+        "conscientiousness": 0.94,
+        "self_confidence": 0.58,
+        "competitiveness": 0.72
+      },
+      "qualitative_traits": [
+        "status_sensitive",
+        "responsibility_driven"
+      ],
+      "humor_styles": [
+        "rare_or_none",
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "independent_rule_flexible_explorer",
+      "display_es": "independent rule flexible explorer",
+      "anchors": {
+        "autonomy_need": 0.9,
+        "rule_orientation": 0.28,
+        "curiosity": 0.94,
+        "risk_tolerance": 0.78,
+        "self_confidence": 0.74,
+        "optimism": 0.72
+      },
+      "qualitative_traits": [
+        "improvisational",
+        "idealistic",
+        "resourceful"
+      ],
+      "humor_styles": [
+        "playful",
+        "dry"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "skeptical_prickly_veteran",
+      "display_es": "skeptical prickly veteran",
+      "anchors": {
+        "warmth": 0.34,
+        "optimism": 0.32,
+        "initial_trust_speed": 0.22,
+        "directness": 0.78,
+        "tact": 0.34,
+        "conscientiousness": 0.8
+      },
+      "qualitative_traits": [
+        "skeptical",
+        "resilient",
+        "loyal",
+        "wounded_but_functional"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "dry"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "calm_diplomatic_scholar",
+      "display_es": "calm diplomatic scholar",
+      "anchors": {
+        "patience": 0.92,
+        "tact": 0.9,
+        "formality": 0.78,
+        "curiosity": 0.92,
+        "conflict_assertiveness": 0.42,
+        "self_confidence": 0.74
+      },
+      "qualitative_traits": [
+        "intellectual",
+        "principled",
+        "observant"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "consultative",
+        "consensus_seeking"
+      ]
+    },
+    {
+      "recipe_id": "energetic_people_pleaser",
+      "display_es": "energetic people pleaser",
+      "anchors": {
+        "social_energy": 0.88,
+        "warmth": 0.9,
+        "optimism": 0.84,
+        "self_confidence": 0.48,
+        "intimacy_openness": 0.72,
+        "ambition": 0.62
+      },
+      "qualitative_traits": [
+        "people_pleasing",
+        "relationship_invested"
+      ],
+      "humor_styles": [
+        "playful",
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "mentor"
+      ]
+    },
+    {
+      "recipe_id": "competitive_good_natured_ace",
+      "display_es": "competitive good natured ace",
+      "anchors": {
+        "competitiveness": 0.9,
+        "self_confidence": 0.86,
+        "social_energy": 0.72,
+        "warmth": 0.7,
+        "risk_tolerance": 0.74,
+        "humor_frequency": 0.68
+      },
+      "qualitative_traits": [
+        "mastery_proud",
+        "loyal"
+      ],
+      "humor_styles": [
+        "teasing",
+        "boastful"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "humble_high_competence",
+      "display_es": "humble high competence",
+      "anchors": {
+        "self_confidence": 0.72,
+        "ambition": 0.38,
+        "conscientiousness": 0.92,
+        "curiosity": 0.78,
+        "warmth": 0.62,
+        "formality": 0.62
+      },
+      "qualitative_traits": [
+        "resourceful",
+        "mastery_proud",
+        "principled"
+      ],
+      "humor_styles": [
+        "dry",
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "delegating"
+      ]
+    },
+    {
+      "recipe_id": "proud_perfectionist_specialist",
+      "display_es": "proud perfectionist specialist",
+      "anchors": {
+        "self_confidence": 0.82,
+        "conscientiousness": 0.96,
+        "patience": 0.38,
+        "tact": 0.42,
+        "ambition": 0.7,
+        "competitiveness": 0.68
+      },
+      "qualitative_traits": [
+        "perfectionistic",
+        "mastery_proud",
+        "intellectual"
+      ],
+      "humor_styles": [
+        "dry",
+        "sarcastic"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "cautious_curious_scientist",
+      "display_es": "cautious curious scientist",
+      "anchors": {
+        "risk_tolerance": 0.28,
+        "curiosity": 0.96,
+        "patience": 0.84,
+        "conscientiousness": 0.88,
+        "self_confidence": 0.6,
+        "formality": 0.64
+      },
+      "qualitative_traits": [
+        "intellectual",
+        "observant",
+        "principled"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "seeks_input"
+      ]
+    },
+    {
+      "recipe_id": "warm_protective_leader",
+      "display_es": "warm protective leader",
+      "anchors": {
+        "warmth": 0.86,
+        "empathy_expression": 0.84,
+        "self_confidence": 0.84,
+        "conflict_assertiveness": 0.72,
+        "teaching_instinct": 0.76,
+        "patience": 0.72
+      },
+      "qualitative_traits": [
+        "protective",
+        "responsibility_driven",
+        "loyal"
+      ],
+      "humor_styles": [
+        "warm",
+        "playful"
+      ],
+      "leadership_styles": [
+        "protective",
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "formal_private_mentor",
+      "display_es": "formal private mentor",
+      "anchors": {
+        "formality": 0.9,
+        "intimacy_openness": 0.22,
+        "teaching_instinct": 0.84,
+        "warmth": 0.54,
+        "patience": 0.86,
+        "conscientiousness": 0.9
+      },
+      "qualitative_traits": [
+        "principled",
+        "intellectual",
+        "loyal"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "mentor"
+      ]
+    },
+    {
+      "recipe_id": "sarcastic_loyal_friend",
+      "display_es": "sarcastic loyal friend",
+      "anchors": {
+        "warmth": 0.66,
+        "humor_frequency": 0.78,
+        "directness": 0.72,
+        "tact": 0.44,
+        "initial_trust_speed": 0.46,
+        "intimacy_openness": 0.58
+      },
+      "qualitative_traits": [
+        "loyal",
+        "relationship_invested"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "teasing"
+      ],
+      "leadership_styles": [
+        "protective"
+      ]
+    },
+    {
+      "recipe_id": "idealistic_earnest_junior",
+      "display_es": "idealistic earnest junior",
+      "anchors": {
+        "optimism": 0.88,
+        "warmth": 0.78,
+        "ambition": 0.66,
+        "self_confidence": 0.52,
+        "rule_orientation": 0.7,
+        "curiosity": 0.82
+      },
+      "qualitative_traits": [
+        "idealistic",
+        "responsibility_driven",
+        "people_pleasing"
+      ],
+      "humor_styles": [
+        "self_deprecating",
+        "playful"
+      ],
+      "leadership_styles": [
+        "seeks_input"
+      ]
+    },
+    {
+      "recipe_id": "serious_compassionate_guardian",
+      "display_es": "serious compassionate guardian",
+      "anchors": {
+        "humor_frequency": 0.18,
+        "warmth": 0.64,
+        "empathy_expression": 0.78,
+        "conflict_assertiveness": 0.84,
+        "conscientiousness": 0.92,
+        "rule_orientation": 0.72
+      },
+      "qualitative_traits": [
+        "protective",
+        "justice_oriented",
+        "loyal"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "protective",
+        "directive"
+      ]
+    },
+    {
+      "recipe_id": "laid_back_resourceful_tech",
+      "display_es": "laid back resourceful tech",
+      "anchors": {
+        "social_energy": 0.58,
+        "formality": 0.28,
+        "patience": 0.74,
+        "conscientiousness": 0.7,
+        "optimism": 0.76,
+        "self_confidence": 0.7
+      },
+      "qualitative_traits": [
+        "resourceful",
+        "hands_on",
+        "adaptable"
+      ],
+      "humor_styles": [
+        "playful",
+        "dry"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "direct_impatient_expert",
+      "display_es": "direct impatient expert",
+      "anchors": {
+        "directness": 0.92,
+        "tact": 0.3,
+        "patience": 0.24,
+        "self_confidence": 0.9,
+        "conscientiousness": 0.88,
+        "curiosity": 0.78
+      },
+      "qualitative_traits": [
+        "mastery_proud",
+        "pragmatic"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "dry"
+      ],
+      "leadership_styles": [
+        "directive"
+      ]
+    },
+    {
+      "recipe_id": "optimistic_brave_novice",
+      "display_es": "optimistic brave novice",
+      "anchors": {
+        "optimism": 0.94,
+        "self_confidence": 0.46,
+        "risk_tolerance": 0.58,
+        "curiosity": 0.88,
+        "warmth": 0.82,
+        "conscientiousness": 0.68
+      },
+      "qualitative_traits": [
+        "courageous_despite_fear",
+        "idealistic",
+        "resilient"
+      ],
+      "humor_styles": [
+        "self_deprecating",
+        "playful"
+      ],
+      "leadership_styles": [
+        "seeks_input"
+      ]
+    },
+    {
+      "recipe_id": "guarded_loyal_professional",
+      "display_es": "guarded loyal professional",
+      "anchors": {
+        "initial_trust_speed": 0.2,
+        "intimacy_openness": 0.18,
+        "warmth": 0.46,
+        "conscientiousness": 0.9,
+        "formality": 0.78,
+        "self_confidence": 0.7
+      },
+      "qualitative_traits": [
+        "loyal",
+        "principled",
+        "wounded_but_functional"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "witty_confident_extrovert",
+      "display_es": "witty confident extrovert",
+      "anchors": {
+        "social_energy": 0.94,
+        "self_confidence": 0.9,
+        "humor_frequency": 0.9,
+        "warmth": 0.72,
+        "directness": 0.72,
+        "tact": 0.6
+      },
+      "qualitative_traits": [
+        "relationship_invested",
+        "adaptable"
+      ],
+      "humor_styles": [
+        "playful",
+        "teasing",
+        "sarcastic"
+      ],
+      "leadership_styles": [
+        "charismatic"
+      ]
+    },
+    {
+      "recipe_id": "introspective_principled_officer",
+      "display_es": "introspective principled officer",
+      "anchors": {
+        "social_energy": 0.3,
+        "intimacy_openness": 0.26,
+        "patience": 0.84,
+        "rule_orientation": 0.72,
+        "curiosity": 0.82,
+        "conscientiousness": 0.88
+      },
+      "qualitative_traits": [
+        "principled",
+        "intellectual",
+        "observant"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "rebellious_good_hearted_operator",
+      "display_es": "rebellious good hearted operator",
+      "anchors": {
+        "rule_orientation": 0.22,
+        "authority_deference": 0.28,
+        "warmth": 0.72,
+        "risk_tolerance": 0.82,
+        "humor_frequency": 0.76,
+        "self_confidence": 0.76
+      },
+      "qualitative_traits": [
+        "anti_pretension",
+        "loyal",
+        "protective",
+        "improvisational"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "teasing"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "disciplined_low_humor_specialist",
+      "display_es": "disciplined low humor specialist",
+      "anchors": {
+        "formality": 0.86,
+        "humor_frequency": 0.14,
+        "conscientiousness": 0.96,
+        "patience": 0.76,
+        "self_confidence": 0.74,
+        "curiosity": 0.72
+      },
+      "qualitative_traits": [
+        "mastery_proud",
+        "principled"
+      ],
+      "humor_styles": [
+        "rare_or_none",
+        "deadpan"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "nurturing_practical_doctor",
+      "display_es": "nurturing practical doctor",
+      "anchors": {
+        "warmth": 0.92,
+        "empathy_expression": 0.94,
+        "patience": 0.82,
+        "directness": 0.58,
+        "tact": 0.78,
+        "conscientiousness": 0.9
+      },
+      "qualitative_traits": [
+        "compassionate",
+        "pragmatic",
+        "protective"
+      ],
+      "humor_styles": [
+        "warm",
+        "gentle"
+      ],
+      "leadership_styles": [
+        "mentor",
+        "protective"
+      ]
+    },
+    {
+      "recipe_id": "curious_artistic_introvert",
+      "display_es": "curious artistic introvert",
+      "anchors": {
+        "social_energy": 0.24,
+        "curiosity": 0.96,
+        "intimacy_openness": 0.34,
+        "optimism": 0.72,
+        "conscientiousness": 0.7,
+        "warmth": 0.58
+      },
+      "qualitative_traits": [
+        "intellectual",
+        "observant",
+        "identity_secure"
+      ],
+      "humor_styles": [
+        "dry",
+        "absurdist"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "self_doubting_ambitious_cadet",
+      "display_es": "self doubting ambitious cadet",
+      "anchors": {
+        "ambition": 0.92,
+        "self_confidence": 0.28,
+        "conscientiousness": 0.88,
+        "rule_orientation": 0.82,
+        "social_energy": 0.5,
+        "optimism": 0.64
+      },
+      "qualitative_traits": [
+        "people_pleasing",
+        "responsibility_driven",
+        "resilient"
+      ],
+      "humor_styles": [
+        "self_deprecating"
+      ],
+      "leadership_styles": [
+        "seeks_input"
+      ]
+    },
+    {
+      "recipe_id": "resilient_family_oriented_worker",
+      "display_es": "resilient family oriented worker",
+      "anchors": {
+        "warmth": 0.74,
+        "ambition": 0.42,
+        "conscientiousness": 0.86,
+        "patience": 0.68,
+        "social_energy": 0.54,
+        "optimism": 0.62
+      },
+      "qualitative_traits": [
+        "family_oriented",
+        "resilient",
+        "loyal",
+        "pragmatic"
+      ],
+      "humor_styles": [
+        "dry",
+        "friendly"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "charming_rule_flexible_pilot",
+      "display_es": "charming rule flexible pilot",
+      "anchors": {
+        "social_energy": 0.86,
+        "self_confidence": 0.84,
+        "rule_orientation": 0.3,
+        "risk_tolerance": 0.82,
+        "humor_frequency": 0.76,
+        "competitiveness": 0.68
+      },
+      "qualitative_traits": [
+        "improvisational",
+        "resourceful",
+        "loyal"
+      ],
+      "humor_styles": [
+        "playful",
+        "teasing"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "cool_efficient_first_officer",
+      "display_es": "cool efficient first officer",
+      "anchors": {
+        "formality": 0.8,
+        "self_confidence": 0.82,
+        "conscientiousness": 0.94,
+        "emotional_expressiveness": 0.28,
+        "patience": 0.74,
+        "directness": 0.7
+      },
+      "qualitative_traits": [
+        "responsibility_driven",
+        "observant",
+        "loyal"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "delegating",
+        "calm_command"
+      ]
+    },
+    {
+      "recipe_id": "gentle_contrarian_debater",
+      "display_es": "gentle contrarian debater",
+      "anchors": {
+        "warmth": 0.72,
+        "conflict_assertiveness": 0.78,
+        "directness": 0.82,
+        "tact": 0.48,
+        "humor_frequency": 0.54,
+        "patience": 0.66
+      },
+      "qualitative_traits": [
+        "intellectual",
+        "relationship_invested"
+      ],
+      "humor_styles": [
+        "teasing",
+        "sarcastic"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "private_idealistic_reformer",
+      "display_es": "private idealistic reformer",
+      "anchors": {
+        "intimacy_openness": 0.24,
+        "rule_orientation": 0.38,
+        "authority_deference": 0.32,
+        "optimism": 0.7,
+        "conscientiousness": 0.84,
+        "conflict_assertiveness": 0.66
+      },
+      "qualitative_traits": [
+        "idealistic",
+        "principled",
+        "resilient"
+      ],
+      "humor_styles": [
+        "dry"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "status_sensitive_competent_commander",
+      "display_es": "Mando competente sensible a reputación",
+      "anchors": {
+        "self_confidence": 0.78,
+        "ambition": 0.76,
+        "formality": 0.72,
+        "conscientiousness": 0.9,
+        "warmth": 0.54,
+        "patience": 0.58
+      },
+      "qualitative_traits": [
+        "reputation_sensitive",
+        "responsibility_driven",
+        "mastery_proud"
+      ],
+      "humor_styles": [
+        "dry"
+      ],
+      "leadership_styles": [
+        "directive",
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "quiet_protective_friend",
+      "display_es": "quiet protective friend",
+      "anchors": {
+        "social_energy": 0.26,
+        "warmth": 0.68,
+        "intimacy_openness": 0.26,
+        "initial_trust_speed": 0.28,
+        "empathy_expression": 0.64,
+        "conscientiousness": 0.78
+      },
+      "qualitative_traits": [
+        "loyal",
+        "protective",
+        "slow_but_deep"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "protective"
+      ]
+    },
+    {
+      "recipe_id": "sunny_eccentric_expert",
+      "display_es": "sunny eccentric expert",
+      "anchors": {
+        "social_energy": 0.72,
+        "warmth": 0.86,
+        "optimism": 0.94,
+        "curiosity": 0.92,
+        "humor_frequency": 0.68,
+        "formality": 0.34
+      },
+      "qualitative_traits": [
+        "resourceful",
+        "intellectual",
+        "identity_secure"
+      ],
+      "humor_styles": [
+        "playful",
+        "absurdist"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "skeptical_ethical_realist",
+      "display_es": "skeptical ethical realist",
+      "anchors": {
+        "optimism": 0.38,
+        "rule_orientation": 0.56,
+        "authority_deference": 0.36,
+        "patience": 0.66,
+        "directness": 0.74,
+        "conscientiousness": 0.84
+      },
+      "qualitative_traits": [
+        "pragmatic",
+        "principled",
+        "justice_oriented"
+      ],
+      "humor_styles": [
+        "dry",
+        "sarcastic"
+      ],
+      "leadership_styles": [
+        "consultative"
+      ]
+    },
+    {
+      "recipe_id": "emotionally_open_team_anchor",
+      "display_es": "emotionally open team anchor",
+      "anchors": {
+        "warmth": 0.9,
+        "emotional_expressiveness": 0.86,
+        "empathy_expression": 0.88,
+        "social_energy": 0.7,
+        "self_confidence": 0.72,
+        "patience": 0.78
+      },
+      "qualitative_traits": [
+        "relationship_invested",
+        "loyal",
+        "protective"
+      ],
+      "humor_styles": [
+        "warm",
+        "playful"
+      ],
+      "leadership_styles": [
+        "mentor"
+      ]
+    },
+    {
+      "recipe_id": "focused_solitary_analyst",
+      "display_es": "focused solitary analyst",
+      "anchors": {
+        "social_energy": 0.16,
+        "warmth": 0.38,
+        "curiosity": 0.9,
+        "conscientiousness": 0.94,
+        "patience": 0.8,
+        "intimacy_openness": 0.16
+      },
+      "qualitative_traits": [
+        "intellectual",
+        "perfectionistic",
+        "observant"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "mission_first"
+      ]
+    },
+    {
+      "recipe_id": "blunt_good_natured_engineer",
+      "display_es": "blunt good natured engineer",
+      "anchors": {
+        "directness": 0.88,
+        "tact": 0.36,
+        "warmth": 0.72,
+        "humor_frequency": 0.58,
+        "conscientiousness": 0.82,
+        "self_confidence": 0.76
+      },
+      "qualitative_traits": [
+        "hands_on",
+        "resourceful",
+        "loyal"
+      ],
+      "humor_styles": [
+        "sarcastic",
+        "teasing"
+      ],
+      "leadership_styles": [
+        "hands_on"
+      ]
+    },
+    {
+      "recipe_id": "measured_security_professional",
+      "display_es": "measured security professional",
+      "anchors": {
+        "formality": 0.76,
+        "conflict_assertiveness": 0.78,
+        "risk_tolerance": 0.42,
+        "conscientiousness": 0.94,
+        "initial_trust_speed": 0.32,
+        "tact": 0.62
+      },
+      "qualitative_traits": [
+        "protective",
+        "observant",
+        "responsibility_driven"
+      ],
+      "humor_styles": [
+        "dry",
+        "rare_or_none"
+      ],
+      "leadership_styles": [
+        "protective",
+        "directive"
+      ]
+    }
+  ]
+}
