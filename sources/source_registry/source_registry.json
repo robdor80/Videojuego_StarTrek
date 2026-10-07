@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.35.1",
+  "registry_version": "0.36.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -2500,6 +2500,123 @@
       "url": "https://memory-alpha.fandom.com/wiki/Relay_Station_47",
       "accessed_at": "2026-10-07",
       "notes": "Cross-check for standard two-officer crew complement, one shuttlecraft and 2369 operational context."
+    },
+    {
+      "source_id": "ST_OFFICIAL_FIRST_CONTACTS_ACROSS_TREK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "First Contacts Across Star Trek",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/first-contacts-across-star-trek",
+      "accessed_at": "2026-10-07",
+      "notes": "Official overview emphasizing that first-contact procedures are governed by General Order One / Prime Directive and respect sovereignty, beliefs and self-determination."
+    },
+    {
+      "source_id": "ST_OFFICIAL_PREWARP_IMPERSONATIONS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Pre-Warp Impersonations: Starfleet Preserves the Prime Directive",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/pre-warp-impersonations-prime-directive",
+      "accessed_at": "2026-10-07",
+      "notes": "Official examples of concealed observation/appearance modification, Malcorian pre-contact observation and first-contact preparation, and Prime Directive contamination risk."
+    },
+    {
+      "source_id": "ST_OFFICIAL_FIRST_CONTACT_DAY_ORIGIN",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Origin Of First Contact Day Explained",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/origin-of-first-contact-day-explained",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference connecting successful warp flight to Vulcan detection and Earth's first contact."
+    },
+    {
+      "source_id": "ST_OFFICIAL_FIRST_CONTACT_PLAYLIST",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "A Star Trek First Contact Day Episode Playlist",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/a-star-trek-first-contact-day-episode-playlist",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference describing Starfleet first contact with a planet/species about to become warp capable and the delicacy of Malcorian contact."
+    },
+    {
+      "source_id": "TNG_FIRST_CONTACT",
+      "source_type": "SCREEN_CANON",
+      "title": "First Contact",
+      "publisher": "Star Trek: The Next Generation",
+      "season": 4,
+      "episode": 15,
+      "notes": "Primary playable-era screen canon for covert observation before formal contact, contact with senior officials, cultural readiness, and a civilization choosing to delay warp/contact."
+    },
+    {
+      "source_id": "TNG_WHO_WATCHES_THE_WATCHERS",
+      "source_type": "SCREEN_CANON",
+      "title": "Who Watches the Watchers",
+      "publisher": "Star Trek: The Next Generation",
+      "season": 3,
+      "episode": 4,
+      "notes": "Screen canon for concealed observation of a less-developed civilization, accidental cultural contamination and attempted mitigation."
+    },
+    {
+      "source_id": "TNG_PEN_PALS",
+      "source_type": "SCREEN_CANON",
+      "title": "Pen Pals",
+      "publisher": "Star Trek: The Next Generation",
+      "season": 2,
+      "episode": 15,
+      "notes": "Screen canon for Prime Directive debate involving unsolicited contact and intervention in a pre-warp society."
+    },
+    {
+      "source_id": "TNG_HOMEWARD",
+      "source_type": "SCREEN_CANON",
+      "title": "Homeward",
+      "publisher": "Star Trek: The Next Generation",
+      "season": 7,
+      "episode": 13,
+      "notes": "Screen canon for consequences of violating non-interference while attempting to save a pre-warp population."
+    },
+    {
+      "source_id": "TOS_BREAD_AND_CIRCUSES",
+      "source_type": "SCREEN_CANON",
+      "title": "Bread and Circuses",
+      "publisher": "Star Trek: The Original Series",
+      "season": 2,
+      "episode": 25,
+      "notes": "Playable-era screen canon for Prime Directive/non-interference constraints with a less-developed society."
+    },
+    {
+      "source_id": "SNW_STRANGE_NEW_WORLDS_EP1",
+      "source_type": "SCREEN_CANON",
+      "title": "Strange New Worlds",
+      "publisher": "Star Trek: Strange New Worlds",
+      "season": 1,
+      "episode": 1,
+      "notes": "Playable Pike-era screen canon involving first-contact mission failure, a pre-warp society using warp-derived knowledge as a weapon, concealment attempts and Pike's deliberate contact/intervention."
+    },
+    {
+      "source_id": "MA_FIRST_CONTACTS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "First contacts",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/First_contacts",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check catalogue for canon first contacts and Malcorian case outcome."
+    },
+    {
+      "source_id": "MA_OBSERVATION_TEAM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Observation team",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Observation_team",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for trained covert observation teams used to prepare for first contact while limiting contamination."
+    },
+    {
+      "source_id": "MA_WARP_CAPABLE_CIVILIZATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Warp-capable civilization",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Warp-capable_civilization",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for warp-capability as an important Federation/Starfleet contact threshold, without treating it as an automatic-contact command."
     }
   ]
 }
