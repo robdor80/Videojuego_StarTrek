@@ -180,16 +180,16 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 093 | Contrato Trek ↔ NAP | PARTIAL | 009-018 | Todo asset productivo puede rastrear entidad, reglas y procedencia |
-| 094 | Esquema de contexto visual resuelto | TODO | 093 | Prompt/asset recibe composición completa de autoridades |
-| 095 | Biblia Visual Global Star Trek | TODO | 093-094 | Lenguaje visual común sin borrar diferencias de era/cultura |
-| 096 | Biblia de retrato/personaje | TODO | 011,031-041,095 | Identidad base separada de estado visual temporal |
-| 097 | Perfiles visuales de especies | TODO | 031-038,096 | Morfología canon + variación individual controlada |
-| 098 | Perfiles de cultura/afiliación/organización | TODO | 039-045,095 | Uniformidad institucional sin convertir cultura en estereotipo |
-| 099 | Uniformes, divisiones, rango y variantes de era | TODO | 006,045-052,098 | Vestuario deriva de fecha/organización/función |
-| 100 | Naves exteriores e identidad de clase/instancia | TODO | 012,053-056,095 | Clase reconocible; nave individual persistente |
-| 101 | Interiores, consolas e instalaciones | TODO | 057,063,095 | Operatividad primero; skin visual después según era |
-| 102 | Planetas, entornos, equipo y props | TODO | 067-075,085,095 | Assets visuales consumen World State y función real |
+| 093 | Contrato Trek ↔ NAP | COMPLETE | 009-018 | Todo asset productivo puede rastrear entidad, reglas y procedencia |
+| 094 | Esquema de contexto visual resuelto | COMPLETE | 093 | Prompt/asset recibe composición completa de autoridades |
+| 095 | Biblia Visual Global Star Trek | COMPLETE | 093-094 | Lenguaje visual común sin borrar diferencias de era/cultura |
+| 096 | Biblia de retrato/personaje | COMPLETE | 011,031-041,095 | Identidad base separada de estado visual temporal |
+| 097 | Perfiles visuales de especies | COMPLETE | 031-038,096 | Morfología canon + variación individual controlada |
+| 098 | Perfiles de cultura/afiliación/organización | COMPLETE | 039-045,095 | Uniformidad institucional sin convertir cultura en estereotipo |
+| 099 | Uniformes, divisiones, rango y variantes de era | COMPLETE | 006,045-052,098 | Vestuario deriva de fecha/organización/función |
+| 100 | Naves exteriores e identidad de clase/instancia | COMPLETE | 012,053-056,095 | Clase reconocible; nave individual persistente |
+| 101 | Interiores, consolas e instalaciones | COMPLETE | 057,063,095 | Operatividad primero; skin visual después según era |
+| 102 | Planetas, entornos, equipo y props | COMPLETE | 067-075,085,095 | Assets visuales consumen World State y función real |
 
 # FASE 10 — SIMULACIÓN VIVA, IA Y CONSECUENCIAS
 
