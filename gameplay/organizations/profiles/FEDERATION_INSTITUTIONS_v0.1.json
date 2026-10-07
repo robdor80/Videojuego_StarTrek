@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "federation_institutions",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "united_federation_of_planets",
+  "contract_ref": "gameplay/organizations/organization_runtime_contract.json",
+  "organizations": [
+    {
+      "organization_id": "federation_civil_government",
+      "organization_type": "government",
+      "display_name": "Gobierno civil de la Federación",
+      "jurisdiction_refs": [
+        "united_federation_of_planets"
+      ],
+      "era_validity": "2161+ within retained campaign eras",
+      "authority_model": {
+        "known_roles": [
+          "federation_president",
+          "federation_council"
+        ],
+        "detailed_constitutional_mechanics": "UNSPECIFIED"
+      },
+      "rules": [
+        "Civil authority and Starfleet authority are distinct.",
+        "Member-world governments retain separate identity and local competence.",
+        "Do not invent election, term, seat-allocation or constitutional detail absent from validated lore."
+      ]
+    },
+    {
+      "organization_id": "federation_council",
+      "organization_type": "government",
+      "display_name": "Consejo de la Federación",
+      "parent_organization_ref": "federation_civil_government",
+      "authority_model": {
+        "representation_context": "member worlds participate; exact mechanism unspecified"
+      }
+    }
+  ],
+  "interfaces": {
+    "starfleet_ref": "starfleet",
+    "member_world_government_rule": "Each member-world government remains a distinct political/organizational entity.",
+    "diplomacy_rule": "Treaties and foreign relations belong to Federation political state, not Starfleet membership."
+  },
+  "ai_guardrails": [
+    "Do not let a Starfleet officer speak with unlimited Federation civil authority.",
+    "Do not infer a citizen represents their member-world government.",
+    "Do not invent constitutional mechanics to answer dialogue."
+  ],
+  "provenance_refs": [
+    "lore/federation/government/federation_government.json",
+    "gameplay/diplomacy/federation_political_state.json"
+  ]
+}
