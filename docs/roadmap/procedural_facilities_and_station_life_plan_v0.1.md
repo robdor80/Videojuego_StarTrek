@@ -1,6 +1,6 @@
 # Procedural Facilities & Station Life — Plan v0.1
 
-**Status:** ACTIVE  
+**Status:** COMPLETE  
 **Purpose:** define which stations can exist, which designs they use, how they are built, staffed, inhabited, operated, visited and persisted.
 
 ## Packages
@@ -11,17 +11,17 @@
 | PF002 | Facility type / design / instance taxonomy | COMPLETE |
 | PF003 | Canonical reusable station-design catalogue | COMPLETE |
 | PF004 | Canonical unique/seeded facility catalogue | COMPLETE |
-| PF005 | Procedural station-design grammar | IN_PROGRESS |
-| PF006 | Facility staffing/population guidance | IN_PROGRESS |
-| PF007 | Station watches, work and life profiles | IN_PROGRESS |
-| PF008 | Residents, businesses, visitors and tenancy model | IN_PROGRESS |
-| PF009 | Docking, services, queues and traffic integration | IN_PROGRESS |
+| PF005 | Procedural station-design grammar | COMPLETE |
+| PF006 | Facility staffing/population guidance | COMPLETE |
+| PF007 | Station watches, work and life profiles | COMPLETE |
+| PF008 | Residents, businesses, visitors and tenancy model | COMPLETE |
+| PF009 | Docking, services, queues and traffic integration | COMPLETE |
 | PF010 | Construction / expansion / mothball lifecycle integration | COMPLETE |
-| PF011 | Facility visual/NAP design profiles | TODO |
-| PF012 | Deterministic reference generator | TODO |
-| PF013 | Locked procedural facility fixture | TODO |
-| PF014 | Cross-domain invariants | TODO |
-| PF015 | Project status / documentation integration | TODO |
+| PF011 | Facility visual/NAP design profiles | COMPLETE |
+| PF012 | Deterministic reference generator | COMPLETE |
+| PF013 | Locked procedural facility fixture | COMPLETE |
+| PF014 | Cross-domain invariants | COMPLETE |
+| PF015 | Project status / documentation integration | COMPLETE |
 
 ## Core doctrine
 
@@ -81,3 +81,30 @@ The facility system must be able to answer:
 - What is being built/repaired/moved through the facility?
 - What happens if demand disappears?
 - Does the same facility remain through capture, refit, expansion, abandonment or save/load?
+
+
+## v0.1 closure
+
+**PF001–PF015: 15/15 COMPLETE** for the current content/reference-implementation scope.
+
+Delivered:
+- source-backed canonical reusable station designs;
+- reserved canonical individual facilities;
+- strict anti-"space gas station" causality;
+- smallest-sufficient-scale and site-selection rules;
+- procedural reusable station-design grammar;
+- construction/commissioning/expansion/mothball lifecycle;
+- station staffing, residents, tenants, visitors and docked-crew separation;
+- continuous watches + day/peak work + tiny-outpost on-call schedules;
+- finite berths/services/queues and causal traffic;
+- station-life profiles by canonical design;
+- facility visual/NAP profiles;
+- deterministic reference generator;
+- positive relay-station fixture and negative player-convenience fixture;
+- cross-domain validation invariants.
+
+### Runtime boundary
+
+The repository contains the content contracts and deterministic reference implementation. CoreRPG 4.5+ remains the future authoritative owner of live facility World State, construction catch-up, queue arbitration, traffic, population schedules and persistence.
+
+Reference Python tests exist in `tools/generation/`. This closure does not claim they have run under repository CI because no CI runner is currently configured for this subsystem.
