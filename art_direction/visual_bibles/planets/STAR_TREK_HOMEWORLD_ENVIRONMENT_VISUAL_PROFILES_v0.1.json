@@ -1,0 +1,343 @@
+{
+  "profile_id": "star_trek_homeworld_environment_visual_profiles",
+  "profile_type": "planet_environment_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "planetary_environment_visual_presentation",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_PLANET_ENVIRONMENT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "World depth profile is authoritative for physics, geography, culture/settlement context and temporal state.",
+    "Weather/event state changes presentation without regenerating geography.",
+    "Unknown continents, cities, atmospheric colors or orbital objects are not invented as canon.",
+    "Settlement architecture requires culture/organization/era context in addition to planetary environment."
+  ],
+  "profiles": {
+    "earth": {
+      "world_profile_ref": "lore/astrography/worlds/depth/SOL_EARTH_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "recognizable real-Earth geography when specific location is known",
+        "Earth oceans/atmosphere/vegetation remain natural baseline",
+        "Trek-era infrastructure overlays real geography rather than replacing planet with generic megacity"
+      ],
+      "civilization_rules": [
+        "San Francisco/Marin Starfleet/Federation areas use dated institutional architecture",
+        "other regions retain regional identity",
+        "global Human culture is not visually homogenized"
+      ],
+      "state_channels": [
+        "weather",
+        "season",
+        "time_of_day",
+        "traffic",
+        "event_damage"
+      ],
+      "forbidden": [
+        "generic planetwide future city",
+        "random giant orbital structures without facility state",
+        "one uniform Earth culture"
+      ],
+      "unknowns": [
+        "exhaustive 23rd/24th-century city transformations",
+        "complete orbital-facility inventory"
+      ]
+    },
+    "vulcan": {
+      "world_profile_ref": "lore/astrography/worlds/depth/VULCAN_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "hot arid terrain",
+        "red/brown/orange rock and desert families where references support",
+        "large rock/mountain formations",
+        "strong light and sparse water/vegetation"
+      ],
+      "civilization_rules": [
+        "Vulcan architecture must be sourced/era-aware",
+        "settlements should respond to heat/aridity rather than generic desert fantasy"
+      ],
+      "state_channels": [
+        "heat_haze",
+        "dust",
+        "sandfire_or_electrical_storm_only_when_state_supports",
+        "time_of_day"
+      ],
+      "forbidden": [
+        "lush Earth vegetation by default",
+        "mystical glow because culture is logical/telepathic",
+        "one monastery in every frame"
+      ],
+      "unknowns": [
+        "global map",
+        "exact sky/atmospheric color outside sourced scenes"
+      ]
+    },
+    "andoria": {
+      "world_profile_ref": "lore/astrography/worlds/depth/ANDORIA_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "extreme ice/snow",
+        "mountainous frozen terrain",
+        "subterranean/geothermal settlement context",
+        "ringed gas giant may dominate sky only from physically valid views"
+      ],
+      "civilization_rules": [
+        "Andorian and Aenar spaces may differ; do not visually collapse them",
+        "underground infrastructure should read as adapted to extreme cold/geothermal energy"
+      ],
+      "state_channels": [
+        "snow",
+        "ice_haze",
+        "temperature",
+        "surface_storm",
+        "geothermal_steam",
+        "interior_heat_state"
+      ],
+      "forbidden": [
+        "Andoria rendered as ordinary Earth alpine world",
+        "Aenar spaces given psychic glow",
+        "gas giant inserted in every shot regardless of camera/location"
+      ],
+      "unknowns": [
+        "global city map",
+        "exact gas giant appearance",
+        "complete climate distribution"
+      ]
+    },
+    "tellar_prime": {
+      "world_profile_ref": "lore/astrography/worlds/depth/TELLAR_PRIME_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "habitable alien world",
+        "healing bog/wetland regions only where resolved",
+        "61 Cygni stellar context must not become decorative dual-sun fantasy without actual lighting model"
+      ],
+      "civilization_rules": [
+        "Tellarite settlements require separate architectural references",
+        "debate culture has no environmental visual shorthand"
+      ],
+      "state_channels": [
+        "weather",
+        "wetland_mud/water_state",
+        "time_of_day"
+      ],
+      "forbidden": [
+        "entire planet as swamp",
+        "pig-themed architecture",
+        "permanent muddy caricature"
+      ],
+      "unknowns": [
+        "global climate",
+        "major continents",
+        "capital visual grammar"
+      ]
+    },
+    "qonos": {
+      "world_profile_ref": "lore/astrography/worlds/depth/QONOS_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "Class-M inhabited capital world",
+        "cave/subterranean volcanic regions where resolved",
+        "First City/Great Hall contexts only when location is specified",
+        "Praxis status by date/history"
+      ],
+      "civilization_rules": [
+        "Klingon urban/civic architecture must distinguish government, House and military contexts",
+        "world is a civilization center, not a permanent battlefield"
+      ],
+      "state_channels": [
+        "weather",
+        "volcanic_activity_when_region_supports",
+        "industrial_state",
+        "Praxis_pre/post_2293_state",
+        "war_damage_if_evented"
+      ],
+      "forbidden": [
+        "lava everywhere",
+        "eternal red sky without source",
+        "battle damage by species stereotype",
+        "destroyed Praxis before 2293"
+      ],
+      "unknowns": [
+        "global climate",
+        "complete geography",
+        "planetwide architectural uniformity"
+      ]
+    },
+    "romulus": {
+      "world_profile_ref": "lore/astrography/worlds/depth/ROMULUS_PREDESTRUCTION_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "habitable pre-destruction capital world",
+        "Romulus and Remus are separate sister worlds",
+        "urban/government scenes use Romulan institutional language appropriate to era"
+      ],
+      "civilization_rules": [
+        "military/Tal Shiar styling does not define all civilian architecture",
+        "political/security spaces may be more formal/controlled than domestic spaces"
+      ],
+      "state_channels": [
+        "weather",
+        "time_of_day",
+        "traffic",
+        "security_state",
+        "campaign_damage"
+      ],
+      "forbidden": [
+        "post-2387 destruction/refugee imagery",
+        "Remus surface used as Romulus",
+        "all-green environment because Romulan UI uses green"
+      ],
+      "unknowns": [
+        "global terrain",
+        "climate distribution",
+        "exact city map"
+      ]
+    },
+    "cardassia_prime": {
+      "world_profile_ref": "lore/astrography/worlds/depth/CARDASSIA_PRIME_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "resource-poor homeworld context",
+        "warm/humid environmental preference informs inhabited interiors",
+        "Cardassian monumental/institutional urban language where sourced",
+        "Ithian forests where resolved"
+      ],
+      "civilization_rules": [
+        "government/military/intelligence/civil spaces resolve separately",
+        "urban damage depends on campaign/date"
+      ],
+      "state_channels": [
+        "weather",
+        "resource/infrastructure_condition",
+        "occupation/war_damage",
+        "lighting",
+        "crowding"
+      ],
+      "forbidden": [
+        "planet permanently dim because Cardassians prefer dimmer interiors",
+        "Dominion styling before alliance/state",
+        "ruined capital before actual event"
+      ],
+      "unknowns": [
+        "global hydrology",
+        "global climate map",
+        "complete city geography"
+      ]
+    },
+    "bajor": {
+      "world_profile_ref": "lore/astrography/worlds/depth/BAJOR_SYSTEM_WORLD_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "diverse Class-M landscapes",
+        "Bajoran natural/cultural regions vary; no single biome default",
+        "system context may include moons/Denorios Belt/wormhole only when composition is physically relevant"
+      ],
+      "civilization_rules": [
+        "surface architecture remains Bajoran",
+        "Cardassian occupation remnants/reconstruction appear only where history/location supports",
+        "DS9 is a separate facility asset"
+      ],
+      "state_channels": [
+        "weather",
+        "agriculture/land_use",
+        "reconstruction",
+        "occupation_remnants",
+        "religious_event_state",
+        "war_state"
+      ],
+      "forbidden": [
+        "DS9 architecture pasted onto Bajor cities",
+        "religious symbols in every landscape",
+        "occupation damage universalized planetwide"
+      ],
+      "unknowns": [
+        "complete geography",
+        "global biome map",
+        "all settlement styles"
+      ]
+    },
+    "ferenginar": {
+      "world_profile_ref": "lore/astrography/worlds/depth/FERENGINAR_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "near-constant heavy rain",
+        "wet reflective surfaces",
+        "mud/wetland/rivers-of-muck context",
+        "dense commercial/urban environments where resolved"
+      ],
+      "civilization_rules": [
+        "commercial density/branding derives from actual district/business state",
+        "wealth differences may affect materials but not species caricature"
+      ],
+      "state_channels": [
+        "rain_intensity",
+        "flooding",
+        "mud",
+        "traffic",
+        "market_activity",
+        "time_of_day"
+      ],
+      "forbidden": [
+        "dry sunny default without exceptional state",
+        "comic filth everywhere",
+        "latinum signs/props without business context"
+      ],
+      "unknowns": [
+        "global map",
+        "non-urban regional diversity"
+      ]
+    },
+    "trill": {
+      "world_profile_ref": "lore/astrography/worlds/depth/TRILL_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "lush habitable environment",
+        "forests/lakes/canyons/caves where resolved",
+        "Mak'ala pools/caves are distinct ecological-cultural location",
+        "symbiont pools are biological, not magical"
+      ],
+      "civilization_rules": [
+        "Symbiosis Commission and civic spaces are institutional, not all sacred",
+        "joined/unjoined status is not visible in city design"
+      ],
+      "state_channels": [
+        "weather",
+        "pool/ecology_state",
+        "season",
+        "institutional_access",
+        "medical_event_state"
+      ],
+      "forbidden": [
+        "glowing fantasy pools",
+        "spots motif used across architecture",
+        "every Trill scene centered on joining"
+      ],
+      "unknowns": [
+        "global geography",
+        "complete architectural language"
+      ]
+    },
+    "betazed": {
+      "world_profile_ref": "lore/astrography/worlds/depth/BETAZED_DEPTH_PROFILE_v0.1.json",
+      "visual_identity_anchors": [
+        "lush Class-M world",
+        "lakes/green landscapes where resolved",
+        "Federation-member civic context in late playable eras"
+      ],
+      "civilization_rules": [
+        "Betazoid architecture requires actual local/institutional reference",
+        "telepathic culture does not create visible psychic infrastructure by default"
+      ],
+      "state_channels": [
+        "weather",
+        "season",
+        "time_of_day",
+        "civic_activity",
+        "war/occupation_state_if_evented"
+      ],
+      "forbidden": [
+        "psychic glow/aura",
+        "generic paradise imagery in every region",
+        "Dominion occupation visuals unless date/campaign state says so"
+      ],
+      "unknowns": [
+        "complete global geography",
+        "planetwide architecture",
+        "exact climate distribution"
+      ]
+    }
+  }
+}
