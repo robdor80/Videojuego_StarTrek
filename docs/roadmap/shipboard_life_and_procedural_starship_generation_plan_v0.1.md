@@ -19,6 +19,9 @@
 | SB010 | Crew + watch + schedule generation pipeline | COMPLETE |
 | SB011 | Operator naming/registry collision contract | COMPLETE |
 | SB012 | Runtime integration, fixtures and invariants | COMPLETE |
+| SB013 | Player-captain operational decision authority | COMPLETE |
+| SB014 | Delegation / proposal / standing-order control modes | COMPLETE |
+| SB015 | Automatic-decision registry + command integration | COMPLETE |
 
 ## Core principles
 
@@ -91,7 +94,7 @@ A generated ship must be able to answer, from authoritative state:
 
 ## v0.1 closure
 
-**SB001–SB012: 12/12 COMPLETE** for the current content/reference-implementation scope.
+**SB001–SB015: 15/15 COMPLETE** for the current content/reference-implementation scope.
 
 Delivered:
 - class/configuration-specific shipboard life for Starfleet, Klingon, Romulan and Cardassian vessels;
@@ -101,6 +104,9 @@ Delivered:
 - staffing guidance with provenance/confidence separation;
 - persistent ship/design identity rules;
 - deterministic reference generators for catalogued and civilian procedural vessels;
-- locked Oberth fixture and cross-domain invariants.
+- locked Oberth fixture and cross-domain invariants;
+- player-captain authority over captain-owned automatic decisions;
+- manual / proposal-with-approval / delegated-autonomous control modes;
+- future-proof automatic-decision registry.
 
 Runtime note: CoreRPG 4.5+ remains responsible for future authoritative live World State, schedule arbitration and off-screen catch-up. Reference generator tests are present in the repository; this closure does not claim they have been executed by CI because no CI runner is configured in this repository.
