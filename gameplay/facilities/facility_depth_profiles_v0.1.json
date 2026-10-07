@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "depth_profile_id": "facility_depth_profiles",
   "status": "CONTENT_DEPTH_BASELINE",
   "identity_ref": "gameplay/facilities/facility_identity_model.json",
@@ -214,16 +214,23 @@
   "persistence": [
     "Facility design, operator, sovereign territory and current command are separate.",
     "Queues, damage, services and traffic persist off-screen.",
-    "Expansion/refit appends configuration history; facility_id remains stable."
+    "Expansion/refit appends configuration history; facility_id remains stable.",
+    "Facility role/profile never implies that a facility should exist; existence is resolved first from sustained world need.",
+    "Scale must be the smallest sufficient fixed-infrastructure solution after alternatives and overlap are checked."
   ],
   "ai_boundary": [
     "A station type does not grant unsourced services or infinite capacity.",
     "AI cannot skip service queues, create spare parts or assign docking clearance without state.",
-    "Current operator does not rewrite original physical design."
+    "Current operator does not rewrite original physical design.",
+    "AI cannot propose or assume a new station merely because a player-controlled ship needs nearby support."
   ],
   "visual_nap": [
     "Exterior/interior visual assets bind to facility design/configuration then individual state.",
     "Crowding, docked ships, damage and repair activity are current-state overlays.",
     "Blueprint gaps remain unknown rather than visually invented as canonical geometry."
-  ]
+  ],
+  "existence_causality_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+  "scale_justification_ref": "universe/generation/facility_scale_justification_model_v0.1.json",
+  "site_selection_ref": "universe/generation/facility_site_selection_contract_v0.1.json",
+  "generation_pipeline_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json"
 }
