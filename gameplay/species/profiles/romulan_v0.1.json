@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "romulan",
+  "display_name_es": "Romulano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#romulan"
+  ],
+  "identity": {
+    "common_homeworld_ref": "romulus",
+    "common_faction_association": "romulan_star_empire",
+    "faction_membership_implied": false
+  },
+  "biology": {
+    "vulcan_related_ancestry": true,
+    "similar_to_vulcan_not_identical": true,
+    "automatic_vulcan_telepathy": false,
+    "medical_equivalence_with_vulcan_forbidden": true,
+    "unknowns": [
+      "universal telepathic capability",
+      "exact comparative physiology",
+      "lifecycle thresholds",
+      "reproductive biology"
+    ]
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "controlled disclosure",
+      "state/security awareness",
+      "strategic ambiguity",
+      "formal loyalty language"
+    ],
+    "rules": [
+      "Reserved disclosure is not proof of deception.",
+      "Tal Shiar membership is never inferred from species.",
+      "State loyalty, citizenship, culture and personal loyalty remain separate.",
+      "Individual adherence varies."
+    ]
+  },
+  "gameplay_hooks": [
+    "neutral_zone_context",
+    "security_clearance",
+    "intelligence_risk",
+    "political_loyalty",
+    "covert_operation_context"
+  ],
+  "ai_boundary": [
+    "Do not assume treachery, hostility or secret-service membership.",
+    "Do not reuse Vulcan medical/telepathic rules as Romulan defaults.",
+    "Do not infer hidden allegiance from anatomy."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_ROMULAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "shared Vulcan ancestry and distinct physiology"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "confidence": "MEDIUM",
+      "claim_scope": "broad secrecy, loyalty and political-culture framing"
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER",
+      "confidence": "HIGH",
+      "claim_scope": "Federation-Romulan political context"
+    }
+  ]
+}
