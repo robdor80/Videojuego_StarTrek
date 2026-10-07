@@ -1,0 +1,27 @@
+{
+  "fixture_id": "postwarp_mutual_encounter_v0.1",
+  "input": {
+    "campaign_seed": "first_contact_fixture_postwarp",
+    "world_id": "gen:planet:unknown_origin_77",
+    "civilization_slot": 0,
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2374-02-11",
+    "environment_class": "arid",
+    "population_band": "medium",
+    "technology_band": "mature_warp",
+    "warp_state": "interstellar_warp_operations",
+    "political_representation_state": "recognized_federal_authority",
+    "prior_alien_exposure": true,
+    "public_alien_awareness": true,
+    "active_internal_conflict": false,
+    "mutual_contact": true,
+    "language_samples": 0,
+    "materialization_level": "first_contact_preparation"
+  },
+  "expected": {
+    "contact_eligibility": "contact_required_by_mutual_encounter_or_exposure",
+    "recommended_contact_timing": "respond_now_with_controlled_disclosure",
+    "translation_state": "untranslated",
+    "automatic_contact_forbidden": true
+  }
+}
