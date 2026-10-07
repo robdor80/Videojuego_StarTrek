@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "first_contact_diplomatic_initialization",
+  "status": "FOUNDATION_FIXED",
+  "parent_ref": "gameplay/diplomacy/diplomatic_state_contract.json",
+  "initial_states": [
+    "unknown_or_unestablished",
+    "limited_contact",
+    "formal_contact_no_relations",
+    "normal_relations_pending",
+    "contact_refused",
+    "contact_delayed",
+    "hostile_contact"
+  ],
+  "representation_rules": [
+    "Record exactly which polity/institution/person participated.",
+    "Do not initialize planet-wide diplomatic relations if representative authority is local/partial/contested.",
+    "Multi-state civilizations may hold separate relation states with the Federation.",
+    "Public opinion remains separate from government relation state.",
+    "First Contact can create recognition without access, trade, alliance or membership."
+  ],
+  "followup_outputs": [
+    "contact_dossier_ref",
+    "recognized_parties",
+    "next_contact_channel",
+    "liaison_candidates",
+    "restrictions_or_requests",
+    "public_disclosure_state",
+    "future_diplomatic_task_refs"
+  ]
+}
