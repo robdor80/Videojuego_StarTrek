@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "procedural_civilization_language_naming_generation",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Language and names are persistent systems, not independent random strings generated at each encounter.",
+  "language_profile_fields": [
+    "language_id",
+    "language_family_id",
+    "phoneme_inventory_seed",
+    "syllable_structure",
+    "stress_or_prosody",
+    "word_order_profile",
+    "morphology_complexity",
+    "writing_system_type",
+    "grapheme_style_profile",
+    "number_system",
+    "registers",
+    "dialect_refs",
+    "translator_analysis_state"
+  ],
+  "naming_domains": [
+    "species_self_name",
+    "civilization_self_name",
+    "planet_self_name",
+    "states_or_polities",
+    "settlements",
+    "persons",
+    "organizations",
+    "ships",
+    "facilities",
+    "geographic_features"
+  ],
+  "generation_order": [
+    "resolve language family and sound/structure profile",
+    "resolve endonym/exonym behavior",
+    "derive naming morphology/patterns",
+    "generate stable lexical roots",
+    "generate civilization/species/place names from roots",
+    "generate individual names from culture-specific naming patterns"
+  ],
+  "rules": [
+    "Names generated from the same language/culture should exhibit recognizable internal consistency without becoming repetitive.",
+    "A Starfleet provisional designation may exist before a self-name is known.",
+    "Self-name, translated name and Federation exonym are separate fields.",
+    "Do not reveal a civilization's self-name before plausible linguistic/contact evidence.",
+    "Writing and spoken language are distinct knowledge layers.",
+    "Generated names persist after first materialization.",
+    "Language profile does not determine culture/personality."
+  ]
+}
