@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "ship_crew_requirement_model",
+  "classification": "GAME_ADDITION",
+  "principle": "Crew is generated from operational requirements and coverage; a reference complement is not a bag of random NPCs.",
+  "inputs": [
+    "ship_class_id",
+    "configuration_id",
+    "operator_id",
+    "campaign_date",
+    "mission_profile",
+    "installed_capabilities",
+    "operational_readiness_requirement",
+    "watch_pattern",
+    "department_model",
+    "position_catalog",
+    "qualification_catalog",
+    "automation_level",
+    "embarked_mission_specialists",
+    "medical_and_safety_requirements"
+  ],
+  "outputs": [
+    "required_departments",
+    "required_positions",
+    "watch_coverage_requirements",
+    "minimum_safe_staffing",
+    "target_operational_staffing",
+    "specialist_requirements",
+    "vacancy_slots",
+    "reserve_or_relief_requirements"
+  ],
+  "slot_fields": [
+    "crew_slot_id",
+    "department_id",
+    "position_id",
+    "watch_requirement",
+    "minimum_rank_or_grade_if_any",
+    "qualification_requirements",
+    "clearance_requirements",
+    "duty_station_refs",
+    "redundancy_priority",
+    "status"
+  ],
+  "rules": [
+    "Class crew_reference is guidance, not a live manifest or mandatory exact count.",
+    "Required staffing derives from systems, mission, safety, organization and watch coverage.",
+    "One person may cover multiple compatible duties only when time, qualification and command rules allow it.",
+    "A vacant slot remains a vacancy until a real assignment fills it.",
+    "Materializing a named crewmember consumes or occupies a valid staffing slot.",
+    "Passengers and civilians do not become duty crew merely because they are aboard.",
+    "Emergency staffing may temporarily violate normal patterns but must create explicit risk/exception state.",
+    "Generated crew identity follows persistent population materialization rules."
+  ],
+  "integration_refs": [
+    "gameplay/ship_operations/crew_manifest_model.json",
+    "gameplay/duty_system/duty_assignment_model.json",
+    "gameplay/duty_system/duty_watch_state.json",
+    "universe/generation/persistent_population_materialization_rules.json"
+  ]
+}
