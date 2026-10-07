@@ -1,0 +1,128 @@
+{
+  "schema_version": "0.1.0",
+  "entity_id": "fixture_console_sensors_tng_001",
+  "visual_identity_id": "vid_fixture_sensor_console_tng_001",
+  "asset_id": "asset_fixture_sensor_console_tng_001",
+  "asset_category": "interior_console_reference_fixture",
+  "campaign_era": "tng_ds9_voyager",
+  "profile_stack": [
+    {
+      "profile_id": "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+      "version": "0.1",
+      "role": "global"
+    },
+    {
+      "profile_id": "STAR_TREK_INTERIOR_CONSOLE_FACILITY_VISUAL_BIBLE_v0.1",
+      "version": "0.1",
+      "role": "category"
+    },
+    {
+      "profile_id": "star_trek_era_visual_profiles",
+      "version": "0.1",
+      "role": "era"
+    },
+    {
+      "profile_id": "starfleet_visual_profile",
+      "version": "0.1",
+      "role": "organization"
+    },
+    {
+      "profile_id": "star_trek_interior_era_operator_visual_profiles",
+      "version": "0.1",
+      "role": "era_operator_skin"
+    }
+  ],
+  "identity_context": {
+    "console_id": "sensors",
+    "station_role": "sensor_operations",
+    "functional_layout": [
+      "primary_navigation",
+      "workspace",
+      "persistent_status"
+    ],
+    "world_truth_authority": "none"
+  },
+  "species_context": null,
+  "culture_context": null,
+  "affiliation_context": {
+    "polity_id": "united_federation_of_planets"
+  },
+  "organization_context": {
+    "organization_id": "starfleet"
+  },
+  "role_function_context": {
+    "owns": [
+      "detection",
+      "search",
+      "localization",
+      "measurement",
+      "tracking",
+      "sensor_filtering",
+      "sensor_readout"
+    ],
+    "delegates": [
+      "scientific_interpretation",
+      "weapons_and_fire_control",
+      "course_plotting",
+      "physical_repairs",
+      "shipwide_resource_priorities"
+    ]
+  },
+  "uniform_equipment_context": null,
+  "location_environment_context": {
+    "environment_type": "starship_bridge_or_sensor_station",
+    "platform_family": "tng_starfleet_fixture",
+    "alert_state": "normal"
+  },
+  "current_state": {
+    "system_state": "operational",
+    "selected_primary_workspace": "contacts",
+    "interference": "moderate_fixture_value",
+    "active_operations": 2,
+    "tracking_capacity": "4/8",
+    "note": "All displayed values are fixture-only and not campaign World State."
+  },
+  "composition": {
+    "format": "landscape_console_reference",
+    "logical_panels": [
+      "left_navigation",
+      "center_workspace",
+      "right_persistent_status"
+    ],
+    "resolution": [
+      320,
+      180
+    ]
+  },
+  "allowed_variation": [
+    "visual skin details that preserve functional panel semantics",
+    "approved LCARS-era styling refinements"
+  ],
+  "forbidden_variation": [
+    "new console functions",
+    "automatic action execution",
+    "hidden World Truth",
+    "TOS/TMP/Pike controls mixed into this TNG fixture"
+  ],
+  "output_profile": {
+    "format": "webp",
+    "width": 320,
+    "height": 180,
+    "quality": 86,
+    "fixture_only": true
+  },
+  "prompt_provenance": {
+    "generation_method": "deterministic_programmatic_fixture_renderer",
+    "exact_prompt_required": false,
+    "renderer_spec_ref": "validation/fixtures/nap/sensors_console_tng_v0.1/renderer_spec.json"
+  },
+  "provenance": {
+    "fixture_mode": true,
+    "source_refs": [
+      "gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json",
+      "gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json",
+      "art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1.json",
+      "docs/roadmap/ship_console_vertical_slice_v0_0_1.md"
+    ]
+  }
+}
