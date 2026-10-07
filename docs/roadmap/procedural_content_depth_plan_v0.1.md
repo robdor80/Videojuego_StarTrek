@@ -56,15 +56,15 @@
 
 | Package | Scope | Status |
 |---|---|---|
-| D031 | Federation institutions | TODO |
-| D032 | Starfleet concrete organization profiles | PARTIAL |
-| D033 | Klingon Empire organizations/houses | TODO |
-| D034 | Romulan Star Empire / Tal Shiar separation | TODO |
-| D035 | Cardassian Union institutions | TODO |
-| D036 | Bajoran government/religious institutions | TODO |
-| D037 | Ferengi Alliance commercial institutions | TODO |
-| D038 | Dominion organizations | TODO |
-| D039 | Borg Collective operational state | TODO |
+| D031 | Federation institutions | COMPLETE |
+| D032 | Starfleet concrete organization profiles | COMPLETE |
+| D033 | Klingon Empire organizations/houses | COMPLETE |
+| D034 | Romulan Star Empire / Tal Shiar separation | COMPLETE |
+| D035 | Cardassian Union institutions | COMPLETE |
+| D036 | Bajoran government/religious institutions | COMPLETE |
+| D037 | Ferengi Alliance commercial institutions | COMPLETE |
+| D038 | Dominion organizations | COMPLETE |
+| D039 | Borg Collective operational state | COMPLETE |
 
 ## Wave D — Ships, facilities and worlds
 
