@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "pipeline_id": "procedural_starship_instance_generation_pipeline",
   "status": "FOUNDATION_FIXED",
   "parent_rules_ref": "universe/generation/procedural_starship_rules.json",
@@ -74,12 +74,14 @@
       "id": "watch_and_life",
       "outputs": [
         "habitability_profile_ref",
-        "watch_policy",
+        "proposed_watch_policy",
         "watch_rosters",
         "on_call_pool",
         "life_services",
-        "schedule_baseline"
-      ]
+        "schedule_baseline",
+        "command_decision_control_state"
+      ],
+      "rule": "Generate a competent default/proposal. If a lawful captain exists, effective policy is resolved through command authority/delegation rather than treating generator output as immutable."
     },
     {
       "order": 8,
@@ -145,7 +147,8 @@
     "Once materialized, the ship remains the same entity across save/load/off-screen simulation.",
     "Later refits, crew changes, damage, ownership changes and route changes append history.",
     "A ship can change operator without changing physical identity.",
-    "Destroyed, captured, decommissioned or missing states are outcomes, not regeneration triggers."
+    "Destroyed, captured, decommissioned or missing states are outcomes, not regeneration triggers.",
+    "Command policy choices, approvals, overrides and delegations append to ship history and do not disappear on reload."
   ],
   "forbidden": [
     "spawn_ship_because_player_scanned_empty_space",
@@ -154,5 +157,6 @@
     "invent_crew_to_fill_runtime_vacancy",
     "add_damage_for_visual_interest_without_cause",
     "generate_cargo_without_economic_or_mission_cause"
-  ]
+  ],
+  "command_authority_ref": "gameplay/chain_of_command/captain_operational_decision_authority_contract_v0.1.json"
 }
