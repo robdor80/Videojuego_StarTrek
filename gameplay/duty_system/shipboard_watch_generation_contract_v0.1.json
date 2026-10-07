@@ -1,0 +1,175 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "shipboard_watch_generation_contract",
+  "status": "FOUNDATION_FIXED",
+  "classification": "GAME_ADDITION_CANON_COMPATIBLE",
+  "source_refs": [
+    "MA_DUTY_SHIFT",
+    "TNG_CHAIN_OF_COMMAND_PART_I",
+    "TNG_LOWER_DECKS"
+  ],
+  "principle": "A watch is generated from continuous operational coverage, crew availability and ship policy. Class/era constrain the solution but do not hard-code one universal roster.",
+  "inputs": [
+    "ship_id",
+    "operator_id",
+    "class_id",
+    "configuration_id",
+    "campaign_date",
+    "mission_profile",
+    "assigned_duty_crew_count",
+    "department_staffing",
+    "continuous_station_requirements",
+    "day_staff_requirements",
+    "specialist_on_call_requirements",
+    "automation_level",
+    "alert_state",
+    "casualty_state",
+    "vacancies",
+    "medical_restrictions",
+    "command_policy"
+  ],
+  "starfleet_patterns": {
+    "three_shift": {
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma"
+      ],
+      "shipboard_cycle_hours": 24,
+      "nominal_watch_duration_hours": 8,
+      "exact_start_hour": "INSTANCE_POLICY",
+      "canon_basis": "Three shifts are directly supported aboard Enterprise-D and late-23rd-century/24th-century Starfleet practice.",
+      "normal_assignment_ratio_guidance": {
+        "alpha": [
+          0.34,
+          0.4
+        ],
+        "beta": [
+          0.28,
+          0.33
+        ],
+        "gamma": [
+          0.24,
+          0.29
+        ],
+        "relief_or_float": [
+          0.04,
+          0.08
+        ]
+      },
+      "note": "Ratios assign primary watch teams; active headcount at a moment also includes day staff, projects, maintenance and call-outs."
+    },
+    "four_shift": {
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma",
+        "delta"
+      ],
+      "shipboard_cycle_hours": 24,
+      "nominal_watch_duration_hours": 6,
+      "exact_start_hour": "INSTANCE_POLICY",
+      "canon_basis": "Enterprise-D could be ordered from three to four shifts; the change created personnel scheduling problems.",
+      "normal_assignment_ratio_guidance": {
+        "alpha": [
+          0.24,
+          0.28
+        ],
+        "beta": [
+          0.22,
+          0.26
+        ],
+        "gamma": [
+          0.2,
+          0.24
+        ],
+        "delta": [
+          0.2,
+          0.24
+        ],
+        "relief_or_float": [
+          0.04,
+          0.08
+        ]
+      },
+      "note": "Used when command policy, fatigue management, mission tempo or staffing model justifies it; not automatically better."
+    },
+    "custom": {
+      "labels": [],
+      "shipboard_cycle_hours": "INSTANCE_POLICY",
+      "nominal_watch_duration_hours": "INSTANCE_POLICY",
+      "use_cases": [
+        "small_craft",
+        "alien_operator",
+        "mission_specific_rotation",
+        "crew_shortage",
+        "medical_accommodation"
+      ]
+    }
+  },
+  "coverage_categories": [
+    "continuous_bridge_or_control",
+    "engineering_watch",
+    "medical_readiness",
+    "security_readiness",
+    "sensor_or_operations_watch",
+    "communications_if_separate",
+    "flight_control",
+    "damage_control_readiness",
+    "mission_specific_continuous_systems"
+  ],
+  "day_staff_categories": [
+    "department_heads_when_not_watchstanding",
+    "research_projects",
+    "major_maintenance",
+    "administration",
+    "training_staff",
+    "counseling",
+    "specialist_medical",
+    "education_if_present",
+    "civilian_services_if_present"
+  ],
+  "calculation_rules": [
+    "Do not divide total population by number of watches.",
+    "Remove civilians/passengers/non-duty residents before duty-roster calculation.",
+    "Create continuous station slots first, then assign one qualified primary and valid relief coverage per watch.",
+    "Add roaming/security/maintenance/medical coverage required by class, mission and readiness.",
+    "Add day staff separately; day staff can belong to a watch for recall purposes without occupying a continuous station.",
+    "Reserve/relief personnel remain real assigned crew and may be scheduled for training, maintenance or off-watch obligations.",
+    "Vacancies remain vacancies; generator may not spawn extra crew at runtime to hide shortages.",
+    "One character cannot satisfy overlapping incompatible assignments.",
+    "Alert states may call off-watch personnel to battle/emergency stations and create fatigue debt.",
+    "Watch handoff consumes time and transfers known unresolved state only.",
+    "Exact start/end times are stored on the individual ship schedule, not the class."
+  ],
+  "handoff_default_guidance": {
+    "routine_overlap_minutes": [
+      10,
+      20
+    ],
+    "elevated_or_complex_overlap_minutes": [
+      15,
+      30
+    ],
+    "status": "GAME_ADDITION",
+    "rule": "Overlap must be scheduled and consumes time; emergencies may abbreviate it."
+  },
+  "output": [
+    "watch_pattern_id",
+    "shipboard_cycle",
+    "watch_definitions",
+    "primary_watch_assignments",
+    "continuous_station_coverage",
+    "day_staff_schedule",
+    "relief_pool",
+    "on_call_pool",
+    "unfilled_watch_slots",
+    "fatigue_risk_flags",
+    "handoff_windows"
+  ],
+  "ai_boundary": [
+    "AI cannot place an off-duty character on watch without assignment/recall state.",
+    "AI cannot invent a relief officer to cover a vacancy.",
+    "AI cannot alter shift length or pattern without command/order/state."
+  ]
+}
