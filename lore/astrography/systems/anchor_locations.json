@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "catalogue_id": "astrography_anchor_locations",
   "purpose": "Minimal gameplay anchor set for routing, jurisdiction and campaign initialization. Absence from this file does not imply nonexistence.",
   "locations": [
@@ -11,7 +11,8 @@
       "region_id": "local_space",
       "source_refs": [
         "STAR_CHARTS_2002"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/SOL_EARTH_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "earth",
@@ -22,7 +23,8 @@
       "source_refs": [
         "STAR_CHARTS_2002",
         "ST_OFFICIAL_GET_TO_KNOW_FEDERATION"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/SOL_EARTH_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "alpha_centauri",
@@ -73,7 +75,8 @@
       "source_refs": [
         "STAR_CHARTS_2002",
         "ENT_4X22_THESE_ARE_THE_VOYAGES"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/VULCAN_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "andoria_system",
@@ -88,13 +91,15 @@
     {
       "location_id": "andoria",
       "display_name_es": "Andoria",
-      "location_type": "planet",
+      "location_type": "moon",
       "parent_location_id": "andoria_system",
       "region_id": "local_space",
       "source_refs": [
         "STAR_CHARTS_2002",
         "ENT_4X22_THESE_ARE_THE_VOYAGES"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/ANDORIA_DEPTH_PROFILE_v0.1.json",
+      "orbital_parent_context": "ringed_gas_giant"
     },
     {
       "location_id": "tellar_system",
@@ -115,7 +120,9 @@
       "source_refs": [
         "STAR_CHARTS_2002",
         "ENT_4X22_THESE_ARE_THE_VOYAGES"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/TELLAR_PRIME_DEPTH_PROFILE_v0.1.json",
+      "canonical_system_context": "61 Cygni"
     },
     {
       "location_id": "ophiuchus_36",
@@ -172,7 +179,8 @@
       "source_refs": [
         "DS9_EMISSARY",
         "STAR_CHARTS_2002"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/BAJOR_SYSTEM_WORLD_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "deep_space_9",
@@ -212,7 +220,8 @@
       "source_refs": [
         "DS9_EMISSARY",
         "STAR_CHARTS_2002"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/CARDASSIA_PRIME_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "badlands",
@@ -231,7 +240,8 @@
       "region_id": "ferengi_space",
       "source_refs": [
         "STAR_CHARTS_2002"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/FERENGINAR_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "trill",
@@ -241,7 +251,8 @@
       "source_refs": [
         "DS9_EQUILIBRIUM",
         "STAR_CHARTS_2002"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/TRILL_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "starbase_375",
@@ -280,7 +291,8 @@
         "STAR_CHARTS_2002",
         "MA_KLINGON",
         "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/QONOS_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "romulus",
@@ -291,7 +303,8 @@
         "STAR_CHARTS_2002",
         "MA_ROMULAN",
         "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/ROMULUS_PREDESTRUCTION_DEPTH_PROFILE_v0.1.json"
     },
     {
       "location_id": "betazed",
@@ -300,7 +313,8 @@
       "region_id": "federation_space",
       "source_refs": [
         "MA_BETAZOID"
-      ]
+      ],
+      "depth_profile_ref": "lore/astrography/worlds/depth/BETAZED_DEPTH_PROFILE_v0.1.json"
     }
   ],
   "rules": [
