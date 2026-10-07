@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.30.0",
+  "registry_version": "0.31.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -1798,6 +1798,124 @@
       "url": "https://memory-alpha.fandom.com/wiki/Aenar",
       "accessed_at": "2026-10-07",
       "notes": "Secondary cross-check for Andorian-related physiology, antennae, blindness, telepathy, enhanced senses and Andorian/Aenar biological compatibility."
+    },
+    {
+      "source_id": "MA_KLINGON",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Klingon",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Klingon",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Klingon society, culture, Houses, honor traditions and physiology."
+    },
+    {
+      "source_id": "MA_ROMULAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Romulan",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Romulan",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Romulan society, state/security context and Vulcan-related ancestry."
+    },
+    {
+      "source_id": "MA_CARDASSIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Cardassian",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Cardassian",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Cardassian hierarchy, family/state framing and environmental/physiological context."
+    },
+    {
+      "source_id": "MA_BAJORAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bajoran",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bajoran",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Bajoran society, occupation legacy and culture."
+    },
+    {
+      "source_id": "MA_BAJORAN_RELIGION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bajoran religion",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bajoran_religion",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Prophets-centered religion, religious institutions and social context."
+    },
+    {
+      "source_id": "MA_FERENGI",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ferengi",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ferengi",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Ferengi culture, commerce, social norms and physiology."
+    },
+    {
+      "source_id": "MA_TRILL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Trill",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Trill",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Trill joining, host/symbiont social context and culture."
+    },
+    {
+      "source_id": "MA_BETAZOID",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Betazoid",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Betazoid",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Betazoid telepathy, cultural honesty/directness and social context."
+    },
+    {
+      "source_id": "MA_FOUNDER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Founder",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Founder",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Founder authority, Great Link and Dominion context."
+    },
+    {
+      "source_id": "MA_VORTA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vorta",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Vorta",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Vorta engineered role and Dominion administrative/command context."
+    },
+    {
+      "source_id": "MA_JEM_HADAR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Jem'Hadar",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Jem%27Hadar",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Jem'Hadar engineered military culture and lifecycle."
+    },
+    {
+      "source_id": "MA_BORG_DRONE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Borg drone",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Borg_drone",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Borg drones as assimilated individuals of origin species plus cybernetic augmentation."
+    },
+    {
+      "source_id": "ST_OFFICIAL_FERENGI_RULES_2023",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Ferengi Rules of Acquisition",
+      "publisher": "StarTrek.com",
+      "release_date": "2023-10-10",
+      "url": "https://www.startrek.com/gallery/ferengi-rules-of-acquisition",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference for Rules of Acquisition as governing Ferengi business transactions and for their cultural prominence."
     }
   ]
 }
