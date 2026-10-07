@@ -1,0 +1,157 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "ferengi_commercial_social_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "ferengi",
+    "automatic_attachment_by_species": false,
+    "principle": "Commerce, profit and contractual reasoning can be culturally central without making every Ferengi greedy, dishonest or a merchant."
+  },
+  "values_and_norms": [
+    {
+      "norm": "profit_and_acquisition_can_be_major_social_values",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "rules_of_acquisition_are_major_cultural_business_reference",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "business_and_social_status_can_overlap",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "family_attachment_can_compete_with_profit_norms",
+      "strength": "possible_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "negotiation",
+      "price/value framing",
+      "contractual bargaining",
+      "opportunity language"
+    ],
+    "misread_risks": [
+      "Commercial framing is not proof of fraud.",
+      "Negotiation does not mean no personal loyalty exists.",
+      "Rules of Acquisition references are cultural tools, not deterministic commands."
+    ]
+  },
+  "authority_and_status": {
+    "possible_status_sources": [
+      "wealth",
+      "business ownership",
+      "commercial reputation",
+      "political/commercial office"
+    ],
+    "rule": "Actual wealth, contracts, business ownership and office require authoritative state."
+  },
+  "privacy_and_intimacy": {
+    "universal_rule": null
+  },
+  "family_kinship_and_household": {
+    "known_context": "family can be socially and emotionally significant despite profit ideology",
+    "rule": "Kinship and inheritance/property rights depend on era-specific law and explicit state."
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "Rules of Acquisition",
+      "business reasoning",
+      "negotiation"
+    ],
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Merchant/proprietor is not implied by species; generate actual profession from economy/organization needs."
+  },
+  "law_duty_and_obligation": {
+    "era_sensitive_gender_and_property_rules": true,
+    "rules": [
+      "Ferengi social/legal norms change during the late 24th century.",
+      "Do not backfill late-DS9 reforms into earlier dates.",
+      "Contracts/property obligations require actual legal/economic records."
+    ]
+  },
+  "religion_philosophy_or_worldview": {
+    "economic_ethos_can_have_quasi_moral_weight": true,
+    "rule": "Do not force identical belief in every Rule or custom."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misreads": [
+      "merchant by default",
+      "dishonest by default",
+      "everything is for sale"
+    ],
+    "professional_response": "Treat commercial framing seriously while checking actual contract, incentive, relationship and individual values."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "wealth/class",
+      "profession",
+      "family",
+      "gender/legal era",
+      "reformist/traditionalist orientation",
+      "offworld exposure",
+      "individual adherence"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Gender, property and political norms undergo visible late-24th-century reform.",
+      "Grand Nagus leadership and social reforms are date-sensitive."
+    ]
+  },
+  "gameplay_hooks": [
+    "contracts",
+    "pricing_and_negotiation",
+    "commercial_reputation",
+    "property_state",
+    "era_sensitive_gender_law",
+    "reformist_vs_traditionalist_context"
+  ],
+  "ai_guardrails": [
+    "Do not invent a contract, debt or wealth state.",
+    "Do not make every Ferengi greedy or dishonest.",
+    "Do not apply one-era gender/property rules to all eras.",
+    "Do not let a Rule of Acquisition override individual relationship or legal state automatically."
+  ],
+  "unknowns": [
+    "complete marriage/household model",
+    "complete inheritance law across eras",
+    "regional subcultures",
+    "universal funerary practice"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_FERENGI",
+      "confidence": "MEDIUM",
+      "claim_scope": "culture, family and social cross-check"
+    },
+    {
+      "source_id": "ST_OFFICIAL_FERENGI_RULES_2023",
+      "confidence": "HIGH",
+      "claim_scope": "Rules of Acquisition and business culture"
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROM_GRAND_NAGUS",
+      "confidence": "HIGH",
+      "claim_scope": "late-DS9 social/political change"
+    },
+    {
+      "source_id": "TNG_THE_LAST_OUTPOST",
+      "confidence": "HIGH",
+      "claim_scope": "early Federation contact context"
+    }
+  ]
+}
