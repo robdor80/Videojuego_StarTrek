@@ -261,9 +261,10 @@
         "federation_civil"
       ],
       "availability": {
-        "from_decade": 2300,
+        "from_decade": 2260,
         "to_year": 2378,
         "playable_profiles": [
+          "kirk",
           "tng_ds9_voyager"
         ]
       },
@@ -281,7 +282,8 @@
       "reuse_policy": "broadly_reusable",
       "constraints": [
         "Wartime staging is an assignment state, not inherent to every instance.",
-        "At least 11 docking bays in observed Starbase 375-type context do not imply identical live availability everywhere."
+        "At least 11 docking bays in observed Starbase 375-type context do not imply identical live availability everywhere.",
+        "23rd-century instances must use era-appropriate interiors/equipment rather than backfilling DS9-era appearance/state."
       ],
       "source_refs": [
         "MA_STARBASE_375_TYPE",
