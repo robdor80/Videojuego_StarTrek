@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "catalogue_id": "shipboard_life_profile_catalog",
   "status": "CONTENT_DEPTH_COMPLETE",
   "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
@@ -20,6 +20,10 @@
     {
       "operator_family": "cardassian",
       "ref": "lore/starships/classes/shipboard_life/CARDASSIAN_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "civilian_procedural",
+      "ref": "lore/starships/classes/shipboard_life/CIVILIAN_PROCEDURAL_SHIPBOARD_LIFE_PROFILES_v0.1.json"
     }
   ],
   "selection_rule": "Resolve operator → class/design → dated configuration/variant → mission → live crew state. Life profile supplies normal constraints; individual ship state decides actual schedule and services.",
@@ -43,6 +47,8 @@
     "dderidex",
     "galor",
     "keldon",
-    "hideki"
-  ]
+    "hideki",
+    "procedural_civilian_design"
+  ],
+  "procedural_civilian_design_profiles_ref": "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json"
 }
