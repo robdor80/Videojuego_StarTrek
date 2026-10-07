@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "founding_species_cultural_interaction",
   "rules": {
     "culture_is_character_state_not_species_lock": true,
@@ -50,6 +50,24 @@
         "An insult can be conventional engagement rather than escalation."
       ],
       "forbidden_ai_shortcut": "Do not treat every Tellarite line as anger."
+    },
+    "aenar": {
+      "possible_norms": [
+        "pacifism",
+        "telepathic consent",
+        "relative isolation"
+      ],
+      "misread_risks": [
+        "Blindness must not be read as helplessness; telepathy must not be read as omniscience."
+      ],
+      "forbidden_ai_shortcut": "Do not collapse Aenar into mainstream Andorian culture or assume unrestricted mind-reading."
     }
+  },
+  "detailed_profile_refs": {
+    "human": "lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json",
+    "vulcan": "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json",
+    "andorian": "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json#andorian",
+    "aenar": "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json#aenar",
+    "tellarite": "lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json"
   }
 }
