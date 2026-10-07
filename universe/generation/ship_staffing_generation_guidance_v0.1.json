@@ -1,0 +1,294 @@
+{
+  "schema_version": "0.1.0",
+  "guidance_id": "ship_staffing_generation_guidance",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "principle": "Runtime staffing must be derived from operational requirements. These bands only seed a plausible target when the source material lacks a complete live staffing model.",
+  "confidence_levels": {
+    "screen_supported": "Direct or strong screen/production support.",
+    "official_or_secondary": "Official reference or reliable secondary cross-check.",
+    "technical_reference": "Licensed/technical reference used as guidance, not hard screen canon.",
+    "game_addition_estimate": "Project estimate for generator continuity; explicitly not canon."
+  },
+  "profiles": {
+    "constitution/constitution_pike": {
+      "target_duty_crew": [
+        198,
+        208
+      ],
+      "anchor": 203,
+      "confidence": "screen_supported"
+    },
+    "constitution/constitution_tos": {
+      "target_duty_crew": [
+        425,
+        435
+      ],
+      "anchor": 430,
+      "confidence": "screen_supported"
+    },
+    "constitution/constitution_major_refit_2270s_2280s": {
+      "target_duty_crew": [
+        420,
+        445
+      ],
+      "anchor": 432,
+      "confidence": "official_or_secondary",
+      "source_note": "Constitution II 2270s complement reference."
+    },
+    "constitution/constitution_major_refit_2290s": {
+      "target_duty_crew": [
+        290,
+        310
+      ],
+      "anchor": 300,
+      "confidence": "official_or_secondary",
+      "source_note": "Constitution II 2290s complement reference."
+    },
+    "miranda/23c": {
+      "target_duty_crew": [
+        180,
+        240
+      ],
+      "anchor": 220,
+      "confidence": "technical_reference"
+    },
+    "miranda/24c": {
+      "target_duty_crew": [
+        26,
+        35
+      ],
+      "confidence": "screen_supported"
+    },
+    "excelsior": {
+      "target_duty_crew": [
+        680,
+        760
+      ],
+      "anchor": 705,
+      "confidence": "technical_reference"
+    },
+    "oberth": {
+      "target_duty_crew": [
+        74,
+        84
+      ],
+      "anchor": 80,
+      "minimum_safe_floor": 5,
+      "confidence": "screen_supported"
+    },
+    "galaxy/explorer_baseline": {
+      "target_duty_crew": [
+        650,
+        900
+      ],
+      "civilian_resident_range": [
+        50,
+        350
+      ],
+      "passenger_range": [
+        0,
+        150
+      ],
+      "normal_total_population_target": [
+        900,
+        1200
+      ],
+      "confidence": "game_addition_estimate",
+      "source_note": "Enterprise-D normal ship population around ~1000 is screen-supported; duty/civilian split is generated rather than canonical."
+    },
+    "galaxy/fleet_or_evacuative_assignment": {
+      "target_duty_crew": [
+        750,
+        1100
+      ],
+      "additional_embarked_personnel": [
+        0,
+        4500
+      ],
+      "confidence": "game_addition_estimate",
+      "source_note": "Galaxy class supports very large assignment-dependent populations; exact composition is mission state."
+    },
+    "nebula": {
+      "target_duty_crew": [
+        500,
+        800
+      ],
+      "confidence": "game_addition_estimate"
+    },
+    "intrepid": {
+      "target_duty_crew": [
+        145,
+        155
+      ],
+      "anchor": 150,
+      "confidence": "official_or_secondary"
+    },
+    "defiant": {
+      "target_duty_crew": [
+        40,
+        50
+      ],
+      "anchor": 45,
+      "confidence": "screen_supported"
+    },
+    "d7/2250s": {
+      "target_duty_crew": [
+        30,
+        40
+      ],
+      "confidence": "screen_supported"
+    },
+    "d7/2260s_2270s": {
+      "target_duty_crew": [
+        400,
+        450
+      ],
+      "anchor": 430,
+      "confidence": "official_or_secondary"
+    },
+    "ktinga": {
+      "target_duty_crew": [
+        350,
+        500
+      ],
+      "confidence": "game_addition_estimate",
+      "source_note": "Lineage/scale-compatible generation range pending stronger class-specific complement evidence."
+    },
+    "klingon_bird_of_prey/brel": {
+      "target_duty_crew": [
+        6,
+        36
+      ],
+      "typical_target": [
+        10,
+        16
+      ],
+      "confidence": "screen_supported"
+    },
+    "klingon_bird_of_prey/kvort": {
+      "target_duty_crew": [
+        600,
+        1500
+      ],
+      "confidence": "technical_reference",
+      "source_note": "Large subtype; exact scale/complement remains source-sensitive."
+    },
+    "vorcha": {
+      "target_duty_crew": [
+        1600,
+        2000
+      ],
+      "anchor": 1900,
+      "confidence": "technical_reference"
+    },
+    "romulan_bird_of_prey_2260s": {
+      "target_duty_crew": [
+        12,
+        30
+      ],
+      "confidence": "game_addition_estimate",
+      "source_note": "Compact/submarine-like bridge and finite observed crew; exact complement not established."
+    },
+    "dderidex": {
+      "target_duty_crew": [
+        1300,
+        1700
+      ],
+      "anchor": 1500,
+      "confidence": "technical_reference"
+    },
+    "galor": {
+      "target_duty_crew": [
+        300,
+        400
+      ],
+      "confidence": "official_or_secondary"
+    },
+    "keldon": {
+      "target_duty_crew": [
+        450,
+        550
+      ],
+      "anchor": 500,
+      "confidence": "technical_reference"
+    },
+    "hideki": {
+      "target_duty_crew": [
+        3,
+        5
+      ],
+      "confidence": "screen_supported"
+    }
+  },
+  "procedural_design_size_bands": {
+    "micro": {
+      "target_duty_crew": [
+        1,
+        5
+      ]
+    },
+    "small": {
+      "target_duty_crew": [
+        3,
+        15
+      ]
+    },
+    "light": {
+      "target_duty_crew": [
+        8,
+        30
+      ]
+    },
+    "medium": {
+      "target_duty_crew": [
+        20,
+        80
+      ]
+    },
+    "large": {
+      "target_duty_crew": [
+        60,
+        250
+      ]
+    },
+    "heavy": {
+      "target_duty_crew": [
+        150,
+        600
+      ]
+    },
+    "capital": {
+      "target_duty_crew": [
+        500,
+        2500
+      ]
+    }
+  },
+  "modifiers": [
+    {
+      "id": "high_automation",
+      "effect": "reduce target duty crew after minimum-safe/coverage calculation, not below required qualified slots"
+    },
+    {
+      "id": "science_heavy",
+      "effect": "increase day/project specialist pool"
+    },
+    {
+      "id": "combat_high_readiness",
+      "effect": "increase relief, damage-control, security and tactical coverage"
+    },
+    {
+      "id": "long_range",
+      "effect": "increase maintenance, medical redundancy and cross-qualification"
+    },
+    {
+      "id": "passenger_or_colony",
+      "effect": "passengers/civilians remain separate from duty crew"
+    },
+    {
+      "id": "casualty_or_vacancy",
+      "effect": "do not refill automatically; create understaffing and schedule/fatigue pressure"
+    }
+  ],
+  "hard_rule": "Source-tagged target bands never override actual crew_requirement_model outputs."
+}
