@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star_trek/resolved_visual_context.schema.json",
+  "title": "Star Trek Resolved Visual Context",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "asset_id",
+    "asset_category",
+    "campaign_era",
+    "profile_stack",
+    "identity_context",
+    "current_state",
+    "output_profile",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visual_identity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_category": {
+      "type": "string"
+    },
+    "campaign_era": {
+      "type": "string"
+    },
+    "profile_stack": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "profile_id",
+          "version"
+        ],
+        "properties": {
+          "profile_id": {
+            "type": "string"
+          },
+          "version": {
+            "type": "string"
+          },
+          "role": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "identity_context": {
+      "type": "object"
+    },
+    "species_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "culture_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "affiliation_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "organization_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "role_function_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "uniform_equipment_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "location_environment_context": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "current_state": {
+      "type": "object"
+    },
+    "composition": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "allowed_variation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_variation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "output_profile": {
+      "type": "object"
+    },
+    "prompt_provenance": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "provenance": {
+      "type": "object"
+    }
+  },
+  "x_rules": [
+    "World/entity state is resolved before visual generation.",
+    "Species, culture, affiliation, organization, role, rank and personality are independent inputs.",
+    "Temporary current state cannot overwrite persistent visual identity.",
+    "An entity-backed asset must preserve entity_id and visual_identity_id lineage.",
+    "Profiles may specialize presentation but cannot contradict authoritative World State."
+  ]
+}
