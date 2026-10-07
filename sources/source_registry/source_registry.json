@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.34.0",
+  "registry_version": "0.35.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -2280,6 +2280,208 @@
       "url": "https://www.startrek.com/news/deep-cut-ds9-25th-anniversary-ships",
       "accessed_at": "2026-10-07",
       "notes": "Official reference for Defiant compact combat role and roughly forty-person crew context."
+    },
+    {
+      "source_id": "ST_OFFICIAL_STARBASES_FEDERATION",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Starbases of The Federation: From K-7 to Yorktown",
+      "publisher": "StarTrek.com",
+      "notes": "Official overview of K-7, Regula I, Earth Spacedock, Spacedock-type regional hubs, DS9 and Starbase 375 functions.",
+      "url": "https://www.startrek.com/news/starbases-of-the-federation-from-k-7-to-yorktown",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "ST_OFFICIAL_SNW_BROKEN_CIRCLE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "RECAP | Star Trek: Strange New Worlds 201 - 'The Broken Circle'",
+      "publisher": "StarTrek.com",
+      "notes": "Official recap confirming Starbase One as a major inspection/upgrade/docking location in 2259.",
+      "url": "https://www.startrek.com/news/recap-201-the-broken-circle-strange-new-worlds",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_STARBASE_1_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starbase 1 type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for reusable 2230s-2250s Starbase 1-type design, 80,000+ crew context and family-capable habitation.",
+      "url": "https://memory-alpha.fandom.com/wiki/Starbase_1_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_BAVALI_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bavali Station",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for 2259 Starfleet deuterium refinery/outpost, construction lifecycle and frontier strategic role.",
+      "url": "https://memory-alpha.fandom.com/wiki/Bavali_Station",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_STARBASE_6_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starbase 6 type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for 2260s Federation starbase design, multi-ship docking and large holding-area context.",
+      "url": "https://memory-alpha.fandom.com/wiki/Starbase_6_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_REGULA_I_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Regula I type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for scientific-research station design reused across 23rd/24th centuries.",
+      "url": "https://memory-alpha.fandom.com/wiki/Regula_I_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_SPACEDOCK_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Spacedock type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for large Federation enclosed starbase/spacedock design used from the 23rd century into the 24th.",
+      "url": "https://memory-alpha.fandom.com/wiki/Spacedock_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_MCKINLEY_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "McKinley type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for 24th-century Starfleet construction/refit/maintenance spacedock design deployed at multiple locations.",
+      "url": "https://memory-alpha.fandom.com/wiki/McKinley_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_STARBASE_375_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starbase 375 type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for reusable Federation starbase/research-station design and docking capacity.",
+      "url": "https://memory-alpha.fandom.com/wiki/Starbase_375_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_RELAY_47_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Relay Station 47 type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for small 24th-century communications relay station design with small crew module, antenna farm, quarters and shuttlebay.",
+      "url": "https://memory-alpha.fandom.com/wiki/Relay_Station_47_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_TEROK_NOR_TYPE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Terok Nor type",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for reusable Cardassian orbital docking/ore-processing station design including Terok Nor and Empok Nor context.",
+      "url": "https://memory-alpha.fandom.com/wiki/Terok_Nor_type",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_TYGOKOR_ORBITAL_FACILITY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ty'Gokor orbital facility",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for repeated Klingon armored orbital-facility design around Ty'Gokor in 2373.",
+      "url": "https://memory-alpha.fandom.com/wiki/Ty%27Gokor_orbital_facility",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_MONAC_SHIPYARD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Monac shipyard",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for Dominion/Cardassian Monac-type orbital shipyards producing warships during the Dominion War.",
+      "url": "https://memory-alpha.fandom.com/wiki/Monac_shipyard",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_DOMINION_KETRACEL_FACILITY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Dominion ketracel-white facility",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for Dominion white storage/distribution facilities and asteroid-facility security context.",
+      "url": "https://memory-alpha.fandom.com/wiki/Dominion_ketracel-white_facility",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_UTOPIA_PLANITIA_FLEET_YARDS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Utopia Planitia Fleet Yards",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for Mars-based multi-facility fleet-yard complex with surface design facilities and orbital docks/stations.",
+      "url": "https://memory-alpha.fandom.com/wiki/Utopia_Planitia_Fleet_Yards",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_JUPITER_STATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Jupiter Station",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for unique Starfleet research/maintenance station and 24th-century holoprogramming center.",
+      "url": "https://memory-alpha.fandom.com/wiki/Jupiter_Station",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "MA_SPACEDOCK_GENERIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Spacedock",
+      "publisher": "Memory Alpha",
+      "notes": "Cross-check for drydock/spacedock role separation, cage-style single-ship docks and enclosed multi-function facilities.",
+      "url": "https://memory-alpha.fandom.com/wiki/Spacedock",
+      "accessed_at": "2026-10-07"
+    },
+    {
+      "source_id": "TOS_THE_ULTIMATE_COMPUTER",
+      "source_type": "SCREEN_CANON",
+      "title": "The Ultimate Computer",
+      "publisher": "Star Trek: The Original Series",
+      "notes": "Screen/remastered evidence for Starbase 6 and multi-ship docking context."
+    },
+    {
+      "source_id": "ST2_WRATH_OF_KHAN",
+      "source_type": "SCREEN_CANON",
+      "title": "Star Trek II: The Wrath of Khan",
+      "publisher": "Star Trek II",
+      "notes": "Screen evidence for Regula I scientific research station."
+    },
+    {
+      "source_id": "TNG_FAMILY",
+      "source_type": "SCREEN_CANON",
+      "title": "Family",
+      "publisher": "Star Trek: The Next Generation",
+      "notes": "Screen evidence for McKinley Station and Enterprise-D refit/repair support."
+    },
+    {
+      "source_id": "TNG_AQUIEL",
+      "source_type": "SCREEN_CANON",
+      "title": "Aquiel",
+      "publisher": "Star Trek: The Next Generation",
+      "notes": "Screen evidence for Relay Station 47 communications duties, compact quarters and small crew context."
+    },
+    {
+      "source_id": "DS9_APOCALYPSE_RISING",
+      "source_type": "SCREEN_CANON",
+      "title": "Apocalypse Rising",
+      "publisher": "Star Trek: Deep Space Nine",
+      "notes": "Screen evidence for Ty'Gokor fortified Klingon orbital facilities."
+    },
+    {
+      "source_id": "DS9_A_TIME_TO_STAND",
+      "source_type": "SCREEN_CANON",
+      "title": "A Time to Stand",
+      "publisher": "Star Trek: Deep Space Nine",
+      "notes": "Screen evidence for Starbase 375 use and Dominion ketracel-white facility."
+    },
+    {
+      "source_id": "DS9_SHADOWS_AND_SYMBOLS",
+      "source_type": "SCREEN_CANON",
+      "title": "Shadows and Symbols",
+      "publisher": "Star Trek: Deep Space Nine",
+      "notes": "Screen context for Monac/Dominion-war industrial targets where applicable."
     }
   ]
 }
