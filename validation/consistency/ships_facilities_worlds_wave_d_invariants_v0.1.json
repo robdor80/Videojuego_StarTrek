@@ -1,0 +1,198 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "ships_facilities_worlds_wave_d_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "refs": [
+    "lore/starships/classes/class_catalogue_index_v0.1.json",
+    "lore/starships/classes/depth/STARFLEET_CLASS_DEPTH_PROFILES_v0.1.json",
+    "lore/starships/classes/depth/KLINGON_CLASS_DEPTH_PROFILES_v0.1.json",
+    "lore/starships/classes/depth/ROMULAN_CLASS_DEPTH_PROFILES_v0.1.json",
+    "lore/starships/classes/depth/CARDASSIAN_CLASS_DEPTH_PROFILES_v0.1.json",
+    "universe/generation/civilian_commercial_vessel_grammar_v0.1.json",
+    "gameplay/facilities/facility_depth_profiles_v0.1.json",
+    "gameplay/ship_operations/interior_functional_profiles_v0.1.json",
+    "lore/astrography/systems/anchor_locations.json"
+  ],
+  "ship_cases": [
+    {
+      "id": "class_is_not_vessel",
+      "expected": [
+        "class data contains no live captain/crew/damage",
+        "individual ship_id persists through repair/refit/assignment",
+        "canonical individual identities are never procedurally duplicated"
+      ]
+    },
+    {
+      "id": "starfleet_era_filter",
+      "expected": [
+        "Constitution valid only in relevant 23c profiles",
+        "Intrepid/Defiant not generated in Pike/Kirk eras",
+        "veteran Miranda/Excelsior/Oberth remain eligible in 24c where supported"
+      ]
+    },
+    {
+      "id": "defiant_cloak_not_generic",
+      "expected": [
+        "Defiant class does not imply cloak",
+        "cloak requires individual configuration and authorization",
+        "AI/sensors do not assume hidden equipment"
+      ]
+    },
+    {
+      "id": "klingon_design_era",
+      "expected": [
+        "Vor'cha not generated in Kirk era",
+        "D7/K't'inga family resolves dated configuration",
+        "Bird-of-Prey subtype is not guessed without data"
+      ]
+    },
+    {
+      "id": "romulan_knowledge_gate",
+      "expected": [
+        "2260s Romulan Bird-of-Prey exists independently of Federation knowledge",
+        "no false canonical class name is invented",
+        "cloaked vessel existence remains World Truth even when observer cannot identify it"
+      ]
+    },
+    {
+      "id": "cardassian_special_config",
+      "expected": [
+        "Keldon does not imply Obsidian Order or cloak",
+        "Hideki remains small craft/patrol scale",
+        "Galor crew does not imply Union loyalty"
+      ]
+    },
+    {
+      "id": "civilian_reason_to_exist",
+      "expected": [
+        "civilian vessel has economic/social/logistics need",
+        "cargo/passengers/routes are live state",
+        "species does not imply trader/criminal role"
+      ]
+    },
+    {
+      "id": "civilian_not_military_default",
+      "expected": [
+        "weapons require legal/design/operator support",
+        "wear/shortage require history",
+        "civilian role remains first-class generation outcome"
+      ]
+    }
+  ],
+  "facility_interior_cases": [
+    {
+      "id": "facility_capacity_real",
+      "expected": [
+        "capability existence differs from availability",
+        "queue and berth limits persist off-screen",
+        "emergency priority does not create physical capacity"
+      ]
+    },
+    {
+      "id": "facility_identity_persists",
+      "expected": [
+        "operator/owner changes do not recreate facility",
+        "damage/refit/expansion append state/history",
+        "sovereignty differs from current operator"
+      ]
+    },
+    {
+      "id": "interior_function_before_style",
+      "expected": [
+        "class/configuration determines possible locations",
+        "era UI skin does not invent functionality",
+        "unknown rooms/connectors remain unknown"
+      ]
+    },
+    {
+      "id": "interior_spatial_consistency",
+      "expected": [
+        "characters cannot teleport",
+        "damage can block connections",
+        "access state differs from physical connectivity"
+      ]
+    }
+  ],
+  "world_cases": [
+    {
+      "id": "physical_world_vs_politics",
+      "expected": [
+        "planet_id and geography persist through government/occupation change",
+        "political control is temporal overlay",
+        "future canon after campaign start is not inevitable"
+      ]
+    },
+    {
+      "id": "andoria_is_moon",
+      "expected": [
+        "anchor location type is moon",
+        "profile records ringed gas giant parent context",
+        "Andorian/Aenar communities remain distinct"
+      ]
+    },
+    {
+      "id": "tellar_prime_unknowns",
+      "expected": [
+        "61 Cygni context is retained",
+        "healing bogs do not make entire planet a swamp",
+        "unknown global climate/geography remain unknown"
+      ]
+    },
+    {
+      "id": "praxis_timeline",
+      "expected": [
+        "Praxis exists before 2293 retained event",
+        "destruction applies when already historical at campaign start",
+        "no pre-2293 destroyed moon state"
+      ]
+    },
+    {
+      "id": "romulus_scope",
+      "expected": [
+        "pre-destruction Romulus profile only",
+        "2387 destruction/post-destruction material not imported into current scope",
+        "Remus remains separate world"
+      ]
+    },
+    {
+      "id": "bajor_sovereignty",
+      "expected": [
+        "Bajor is not Federation territory",
+        "DS9 operator state does not rewrite planet sovereignty",
+        "wormhole knowledge is discovery/knowledge gated"
+      ]
+    },
+    {
+      "id": "ferenginar_climate_not_personality",
+      "expected": [
+        "heavy rain/mud are environmental state",
+        "residents do not inherit greed/dishonesty from planet",
+        "late reforms remain date-sensitive"
+      ]
+    },
+    {
+      "id": "trill_ecology_and_identity",
+      "expected": [
+        "symbiont pools are physical ecology",
+        "joining approvals/memories are not invented",
+        "unjoined Trill remain full persons"
+      ]
+    },
+    {
+      "id": "betazed_future_not_forced",
+      "expected": [
+        "Federation membership and any wartime occupation are political state",
+        "pre-start retained events may bootstrap",
+        "post-start future occupation is not inevitable"
+      ]
+    },
+    {
+      "id": "earth_not_human_default",
+      "expected": [
+        "Earth geography/culture is not universal Human template",
+        "Starfleet/Federation facilities require access state",
+        "real-world geography persists under Trek-era overlays"
+      ]
+    }
+  ]
+}
