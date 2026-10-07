@@ -39,18 +39,18 @@
 
 | Package | Scope | Status |
 |---|---|---|
-| D019 | Earth/Federation cultural composition | TODO |
-| D020 | Vulcan cultural profiles | TODO |
-| D021 | Andorian + Aenar cultural profiles | TODO |
-| D022 | Tellarite cultural profiles | TODO |
-| D023 | Klingon houses/honor/social grammar | TODO |
-| D024 | Romulan social/security grammar | TODO |
-| D025 | Cardassian family/state/institutional grammar | TODO |
-| D026 | Bajoran religion/civil society/occupation legacy | TODO |
-| D027 | Ferengi commercial/legal/social grammar | TODO |
-| D028 | Trill joining/social continuity | TODO |
-| D029 | Betazoid telepathic privacy/social grammar | TODO |
-| D030 | Dominion social hierarchy | TODO |
+| D019 | Earth/Federation cultural composition | COMPLETE |
+| D020 | Vulcan cultural profiles | COMPLETE |
+| D021 | Andorian + Aenar cultural profiles | COMPLETE |
+| D022 | Tellarite cultural profiles | COMPLETE |
+| D023 | Klingon houses/honor/social grammar | COMPLETE |
+| D024 | Romulan social/security grammar | COMPLETE |
+| D025 | Cardassian family/state/institutional grammar | COMPLETE |
+| D026 | Bajoran religion/civil society/occupation legacy | COMPLETE |
+| D027 | Ferengi commercial/legal/social grammar | COMPLETE |
+| D028 | Trill joining/social continuity | COMPLETE |
+| D029 | Betazoid telepathic privacy/social grammar | COMPLETE |
+| D030 | Dominion social hierarchy | COMPLETE |
 
 ## Wave C — Organizations and factions
 
