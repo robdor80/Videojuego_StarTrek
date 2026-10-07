@@ -1,13 +1,45 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "manifest_id": "procedural_content_depth_status",
   "plan_ref": "docs/roadmap/procedural_content_depth_plan_v0.1.md",
   "summary": {
     "total_packages": 63,
-    "complete": 17,
+    "complete": 29,
     "partial": 2,
     "in_progress": 0,
-    "todo": 44
+    "todo": 32
+  },
+  "wave_summary": {
+    "Wave A": {
+      "total": 18,
+      "complete": 16,
+      "partial": 0,
+      "todo": 2
+    },
+    "Wave B": {
+      "total": 12,
+      "complete": 12,
+      "partial": 0,
+      "todo": 0
+    },
+    "Wave C": {
+      "total": 9,
+      "complete": 0,
+      "partial": 1,
+      "todo": 8
+    },
+    "Wave D": {
+      "total": 18,
+      "complete": 0,
+      "partial": 0,
+      "todo": 18
+    },
+    "Wave E": {
+      "total": 6,
+      "complete": 1,
+      "partial": 1,
+      "todo": 4
+    }
   },
   "packages": [
     {
@@ -139,84 +171,84 @@
     {
       "package_id": "D019",
       "scope": "Earth/Federation cultural composition",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D020",
       "scope": "Vulcan cultural profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D021",
       "scope": "Andorian + Aenar cultural profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D022",
       "scope": "Tellarite cultural profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D023",
       "scope": "Klingon houses/honor/social grammar",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D024",
       "scope": "Romulan social/security grammar",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D025",
       "scope": "Cardassian family/state/institutional grammar",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D026",
       "scope": "Bajoran religion/civil society/occupation legacy",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D027",
       "scope": "Ferengi commercial/legal/social grammar",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D028",
       "scope": "Trill joining/social continuity",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D029",
       "scope": "Betazoid telepathic privacy/social grammar",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
     {
       "package_id": "D030",
       "scope": "Dominion social hierarchy",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave B",
       "exit_condition": null
     },
