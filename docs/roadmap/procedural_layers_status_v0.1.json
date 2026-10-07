@@ -1,0 +1,975 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "procedural_layers_status",
+  "plan_ref": "docs/roadmap/procedural_layers_master_plan_v0.1.md",
+  "updated_from_plan": true,
+  "summary": {
+    "total_layers": 120,
+    "complete": 118,
+    "partial": 1,
+    "blocked_runtime": 0,
+    "other": 1
+  },
+  "layers": [
+    {
+      "layer_id": "001",
+      "name": "Jerarquía de autoridad de datos",
+      "status": "COMPLETE",
+      "dependency": "—",
+      "completion_criterion": "Canon, campaña, procedural y World State tienen precedencia inequívoca",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "002",
+      "name": "Separación CoreRPG / Star Trek",
+      "status": "COMPLETE",
+      "dependency": "001",
+      "completion_criterion": "Cada contrato sabe si es genérico o Trek-específico",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "003",
+      "name": "Identificadores estables y namespaces",
+      "status": "COMPLETE",
+      "dependency": "001",
+      "completion_criterion": "Todas las entidades persistentes pueden referenciarse sin usar nombres visibles",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "004",
+      "name": "Semillas deterministas por subsistema",
+      "status": "COMPLETE",
+      "dependency": "003",
+      "completion_criterion": "Añadir subsistemas no rerolleará resultados existentes",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "005",
+      "name": "Versionado y migraciones",
+      "status": "COMPLETE",
+      "dependency": "003-004",
+      "completion_criterion": "Cambios de reglas tienen estrategia de migración explícita",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "006",
+      "name": "Canon temporal y reservas",
+      "status": "COMPLETE",
+      "dependency": "001",
+      "completion_criterion": "Generadores no pisan hechos/entidades reservados por fecha",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "007",
+      "name": "Proveniencia y confianza de fuentes",
+      "status": "COMPLETE",
+      "dependency": "001",
+      "completion_criterion": "Todo dato sensible a canon puede rastrear fuente y nivel de autoridad",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "008",
+      "name": "Definición de terminado y validación transversal",
+      "status": "COMPLETE",
+      "dependency": "001-007",
+      "completion_criterion": "Toda futura capa usa la misma plantilla de cierre",
+      "phase": "authority_architecture_governance"
+    },
+    {
+      "layer_id": "009",
+      "name": "Contrato universal de entidad persistente",
+      "status": "COMPLETE",
+      "dependency": "003-005",
+      "completion_criterion": "ID + procedencia + historial + estado actual quedan separados",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "010",
+      "name": "Identidad persistente de personajes",
+      "status": "COMPLETE",
+      "dependency": "009",
+      "completion_criterion": "Un individuo jamás se rerollea tras materialización",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "011",
+      "name": "Identidad visual persistente",
+      "status": "COMPLETE",
+      "dependency": "009-010",
+      "completion_criterion": "Cambiar edad/ropa/estado no crea otra persona",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "012",
+      "name": "Identidad persistente de naves",
+      "status": "COMPLETE",
+      "dependency": "009",
+      "completion_criterion": "Refit, reparación y cambio de capitán preservan nave",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "013",
+      "name": "Identidad persistente de instalaciones",
+      "status": "COMPLETE",
+      "dependency": "009",
+      "completion_criterion": "Daño/reconstrucción compatible preserva continuidad",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "014",
+      "name": "Identidad de objetos únicos",
+      "status": "COMPLETE",
+      "dependency": "009",
+      "completion_criterion": "Propiedad, daño o traslado no rerollean objeto",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "015",
+      "name": "Población A/B/C",
+      "status": "COMPLETE",
+      "dependency": "009-010",
+      "completion_criterion": "C→B irreversible conserva contabilidad poblacional",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "016",
+      "name": "Materialización desde slots reales",
+      "status": "COMPLETE",
+      "dependency": "015",
+      "completion_criterion": "NPC nace de necesidad/posición/hogar real, no de petición del jugador",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "017",
+      "name": "Persistencia fuera de cámara / LOD",
+      "status": "COMPLETE",
+      "dependency": "009-016",
+      "completion_criterion": "Descargar simulación no altera identidad ni hechos",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "018",
+      "name": "Guardado/carga y round-trip de identidad",
+      "status": "COMPLETE",
+      "dependency": "009-017",
+      "completion_criterion": "Serializar y restaurar preserva exactamente identidad e historia",
+      "phase": "existence_identity_persistence"
+    },
+    {
+      "layer_id": "019",
+      "name": "Definición base de personaje",
+      "status": "COMPLETE",
+      "dependency": "010",
+      "completion_criterion": "Identidad inicial separada de estado vivo",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "020",
+      "name": "Personalidad estable vs estado emocional",
+      "status": "COMPLETE",
+      "dependency": "019",
+      "completion_criterion": "Personalidad no deriva automáticamente de especie/rango",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "021",
+      "name": "Valores, objetivos, miedos y límites",
+      "status": "COMPLETE",
+      "dependency": "020",
+      "completion_criterion": "Motivaciones persistentes tienen causas y privacidad",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "022",
+      "name": "Toma de decisiones",
+      "status": "COMPLETE",
+      "dependency": "020-021",
+      "completion_criterion": "Decisiones consumen estado, no inventan hechos",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "023",
+      "name": "Modelo de conocimiento",
+      "status": "COMPLETE",
+      "dependency": "019",
+      "completion_criterion": "Saber requiere canal válido de adquisición",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "024",
+      "name": "Memoria actor-específica",
+      "status": "COMPLETE",
+      "dependency": "023",
+      "completion_criterion": "Memoria ≠ World Truth; admite saliencia e incertidumbre",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "025",
+      "name": "Olvido, resumen y reinterpretación",
+      "status": "COMPLETE",
+      "dependency": "024",
+      "completion_criterion": "Perder detalle no fabrica ni borra consecuencias",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "026",
+      "name": "Grafo social multidimensional",
+      "status": "COMPLETE",
+      "dependency": "019",
+      "completion_criterion": "Relaciones son direccionales y no un único score",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "027",
+      "name": "Procedencia de relaciones",
+      "status": "COMPLETE",
+      "dependency": "026",
+      "completion_criterion": "Amistad/confianza/hostilidad requieren historia plausible",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "028",
+      "name": "Romance, afecto, intimidad y consentimiento",
+      "status": "COMPLETE",
+      "dependency": "026-027",
+      "completion_criterion": "Estados separados, recíprocos cuando corresponda y nunca forzados",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "029",
+      "name": "Parentesco y redes familiares",
+      "status": "COMPLETE",
+      "dependency": "019,031-036",
+      "completion_criterion": "Familia separada de amistad, hogar, tutela y afecto",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "030",
+      "name": "Reputación, rumor y propagación social",
+      "status": "COMPLETE",
+      "dependency": "023-027",
+      "completion_criterion": "Información pública emerge por observación/transmisión",
+      "phase": "person_memory_knowledge_relationships"
+    },
+    {
+      "layer_id": "031",
+      "name": "Esquema universal de especie",
+      "status": "COMPLETE",
+      "dependency": "002",
+      "completion_criterion": "Biología tiene contrato común sin definir personalidad",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "032",
+      "name": "Morfología y anatomía",
+      "status": "COMPLETE",
+      "dependency": "031",
+      "completion_criterion": "Rasgos físicos canon y variación individual diferenciados",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "033",
+      "name": "Fisiología y necesidades",
+      "status": "COMPLETE",
+      "dependency": "031",
+      "completion_criterion": "Sueño, alimentación, ambiente y tolerancias son resolubles",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "034",
+      "name": "Longevidad, madurez y envejecimiento",
+      "status": "COMPLETE",
+      "dependency": "031-033",
+      "completion_criterion": "Edad cronológica se traduce correctamente por especie",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "035",
+      "name": "Reproducción y desarrollo",
+      "status": "COMPLETE",
+      "dependency": "031-034",
+      "completion_criterion": "Reglas dependen de biología/canon y nunca de supuestos humanos",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "036",
+      "name": "Sexo, género y variación biológica",
+      "status": "COMPLETE",
+      "dependency": "031-035",
+      "completion_criterion": "Datos permiten especies no humanas sin forzar binarios universales",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "037",
+      "name": "Medicina específica por especie",
+      "status": "COMPLETE",
+      "dependency": "031-036",
+      "completion_criterion": "Diagnóstico/tratamiento respeta fisiología y conocimiento disponible",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "038",
+      "name": "Capacidades sensoriales y cognitivas",
+      "status": "COMPLETE",
+      "dependency": "031",
+      "completion_criterion": "Telepatía/empatía/sentidos no equivalen a omnisciencia",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "039",
+      "name": "Cultura como dimensión independiente",
+      "status": "COMPLETE",
+      "dependency": "031",
+      "completion_criterion": "Cultura no está bloqueada por especie",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "040",
+      "name": "Socialización, origen y culturas mixtas",
+      "status": "COMPLETE",
+      "dependency": "039",
+      "completion_criterion": "Individuos pueden pertenecer a múltiples contextos culturales",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "041",
+      "name": "Lenguas y comunicación",
+      "status": "COMPLETE",
+      "dependency": "039",
+      "completion_criterion": "Lengua conocida, competencia y traducción universal quedan separadas",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "042",
+      "name": "Ciclo vital completo y muerte",
+      "status": "COMPLETE",
+      "dependency": "019,029,031-041",
+      "completion_criterion": "Nacimiento/creación→vida→envejecimiento→muerte→legado es persistente",
+      "phase": "biology_species_cultures_lifecycle"
+    },
+    {
+      "layer_id": "043",
+      "name": "Modelo universal de organización",
+      "status": "COMPLETE",
+      "dependency": "002,009",
+      "completion_criterion": "Federación, imperios, gobiernos, civiles y organizaciones caben sin hacks",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "044",
+      "name": "Afiliación, ciudadanía y lealtad",
+      "status": "COMPLETE",
+      "dependency": "043",
+      "completion_criterion": "Dimensiones separadas y temporalmente mutables",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "045",
+      "name": "Starfleet: divisiones y departamentos",
+      "status": "COMPLETE",
+      "dependency": "043",
+      "completion_criterion": "División, departamento y función tienen semántica clara",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "046",
+      "name": "Rangos y antigüedad",
+      "status": "COMPLETE",
+      "dependency": "045",
+      "completion_criterion": "Rango no equivale a puesto",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "047",
+      "name": "Puestos y posiciones",
+      "status": "COMPLETE",
+      "dependency": "045-046",
+      "completion_criterion": "Puesto define función y requisitos, no personalidad",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "048",
+      "name": "Cadena de mando y sucesión",
+      "status": "COMPLETE",
+      "dependency": "046-047",
+      "completion_criterion": "Autoridad efectiva puede resolverse en cualquier momento",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "049",
+      "name": "Turnos, guardias y relevos",
+      "status": "COMPLETE",
+      "dependency": "047-048",
+      "completion_criterion": "Cobertura temporal y handoff son consistentes",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "050",
+      "name": "Cualificaciones y competencias",
+      "status": "COMPLETE",
+      "dependency": "019,047",
+      "completion_criterion": "Puestos exigen evidencia/cualificación real",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "051",
+      "name": "Carrera, evaluaciones, ascensos y traslados",
+      "status": "COMPLETE",
+      "dependency": "046-050",
+      "completion_criterion": "Trayectoria emerge de servicio e historial",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "052",
+      "name": "Academia → graduación → primera asignación",
+      "status": "COMPLETE",
+      "dependency": "045-051",
+      "completion_criterion": "Formación enlaza sin discontinuidad con personaje y carrera reales",
+      "phase": "organizations_service_career"
+    },
+    {
+      "layer_id": "053",
+      "name": "Clase de nave vs nave individual",
+      "status": "COMPLETE",
+      "dependency": "012",
+      "completion_criterion": "Diseño/clase no se confunde con instancia",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "054",
+      "name": "Era/configuración/refit de clase",
+      "status": "COMPLETE",
+      "dependency": "006,053",
+      "completion_criterion": "Capacidades dependen de configuración fechada",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "055",
+      "name": "Misión y función operacional de nave",
+      "status": "COMPLETE",
+      "dependency": "043,053",
+      "completion_criterion": "Una nave existe por operador, función y contexto",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "056",
+      "name": "Sistemas de nave como capacidades",
+      "status": "COMPLETE",
+      "dependency": "054-055",
+      "completion_criterion": "Sistemas disponibles son fecha/configuración dependientes",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "057",
+      "name": "Topología e interiores funcionales",
+      "status": "COMPLETE",
+      "dependency": "053-056",
+      "completion_criterion": "Espacios existen por función y conectividad",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "058",
+      "name": "Necesidades de dotación",
+      "status": "COMPLETE",
+      "dependency": "045-057",
+      "completion_criterion": "Departamentos/puestos nacen de sistemas y misión",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "059",
+      "name": "Generación de tripulación por slots",
+      "status": "COMPLETE",
+      "dependency": "015-016,058",
+      "completion_criterion": "Complemento conserva contabilidad y cualificaciones",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "060",
+      "name": "Cuadrantes/turnos de tripulación",
+      "status": "COMPLETE",
+      "dependency": "049,059",
+      "completion_criterion": "Cada guardia mantiene cobertura viable",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "061",
+      "name": "Vida a bordo y espacios privados/sociales",
+      "status": "COMPLETE",
+      "dependency": "026-030,057-060",
+      "completion_criterion": "Rutinas personales y de servicio coexisten",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "062",
+      "name": "Daño, reparación y mantenimiento",
+      "status": "COMPLETE",
+      "dependency": "012,056",
+      "completion_criterion": "Estado técnico cambia sin reemplazar identidad",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "063",
+      "name": "Instalaciones, estaciones y starbases",
+      "status": "COMPLETE",
+      "dependency": "013,043",
+      "completion_criterion": "Función→servicios→staff→tráfico→estado",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "064",
+      "name": "Astilleros, atraque, reabastecimiento y refit",
+      "status": "COMPLETE",
+      "dependency": "054,062-063",
+      "completion_criterion": "Servicios requieren capacidad, cola, recursos y tiempo",
+      "phase": "ships_crews_facilities"
+    },
+    {
+      "layer_id": "065",
+      "name": "Coordenadas, sectores y anclas espaciales",
+      "status": "COMPLETE",
+      "dependency": "006",
+      "completion_criterion": "Toda localización tiene identidad espacial consistente",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "066",
+      "name": "Sistemas estelares",
+      "status": "COMPLETE",
+      "dependency": "065",
+      "completion_criterion": "Estrella/cuerpos/orbitas se generan antes de ser observados",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "067",
+      "name": "Planetas y lunas físicos",
+      "status": "COMPLETE",
+      "dependency": "066",
+      "completion_criterion": "Masa, gravedad, atmósfera, órbita y superficie son coherentes",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "068",
+      "name": "Clima y estado ambiental",
+      "status": "COMPLETE",
+      "dependency": "067",
+      "completion_criterion": "Tiempo actual evoluciona sobre clima persistente",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "069",
+      "name": "Biomas y ecosistemas",
+      "status": "COMPLETE",
+      "dependency": "067-068",
+      "completion_criterion": "Distribución ecológica responde a condiciones físicas",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "070",
+      "name": "Habitabilidad y biosfera",
+      "status": "COMPLETE",
+      "dependency": "067-069",
+      "completion_criterion": "Vida no aparece sin causalidad ambiental",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "071",
+      "name": "Civilización y nivel tecnológico",
+      "status": "COMPLETE",
+      "dependency": "067-070",
+      "completion_criterion": "Sociedad deriva de mundo/historia, no de etiqueta decorativa",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "072",
+      "name": "Regiones y asentamientos",
+      "status": "COMPLETE",
+      "dependency": "071",
+      "completion_criterion": "Población e infraestructura se distribuyen espacialmente",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "073",
+      "name": "Infraestructura y servicios",
+      "status": "COMPLETE",
+      "dependency": "071-072",
+      "completion_criterion": "Energía, transporte, salud, administración, etc. tienen soporte real",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "074",
+      "name": "Economía y recursos planetarios",
+      "status": "COMPLETE",
+      "dependency": "071-073",
+      "completion_criterion": "Producción/escasez/comercio reflejan tecnología y política",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "075",
+      "name": "Política, leyes e instituciones",
+      "status": "COMPLETE",
+      "dependency": "043,071-074",
+      "completion_criterion": "Autoridad e instituciones tienen jurisdicción y estado",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "076",
+      "name": "Historia local y conflictos persistentes",
+      "status": "COMPLETE",
+      "dependency": "071-075",
+      "completion_criterion": "El presente tiene causas históricas trazables",
+      "phase": "astrography_planets_civilizations"
+    },
+    {
+      "layer_id": "077",
+      "name": "Rutas y costes de navegación",
+      "status": "COMPLETE",
+      "dependency": "065-066,056",
+      "completion_criterion": "Trayectos consumen distancia/tiempo/riesgo válidos",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "078",
+      "name": "Tráfico espacial causal",
+      "status": "COMPLETE",
+      "dependency": "055,063-077",
+      "completion_criterion": "Cada nave en tráfico tiene origen, destino y razón",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "079",
+      "name": "Pasajeros, migración y visitantes",
+      "status": "COMPLETE",
+      "dependency": "015,072,078",
+      "completion_criterion": "Movimientos alteran población sin duplicarla",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "080",
+      "name": "Recursos, inventarios y abastecimiento",
+      "status": "COMPLETE",
+      "dependency": "064,074,078",
+      "completion_criterion": "Stock cambia por causas reales",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "081",
+      "name": "Replicadores y economía post-escasez contextual",
+      "status": "COMPLETE",
+      "dependency": "056,074,080",
+      "completion_criterion": "Replicación no elimina energía, acceso, rareza ni logística especial",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "082",
+      "name": "Comercio y operadores civiles",
+      "status": "COMPLETE",
+      "dependency": "043,074,078-081",
+      "completion_criterion": "Actividad comercial tiene actores/rutas/demanda",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "083",
+      "name": "Fronteras, jurisdicción y diplomacia",
+      "status": "COMPLETE",
+      "dependency": "043-044,065,075",
+      "completion_criterion": "Espacio político afecta acceso y conducta",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "084",
+      "name": "Crisis, bloqueos, guerras y alteración de redes",
+      "status": "COMPLETE",
+      "dependency": "076-083",
+      "completion_criterion": "Eventos estratégicos repercuten en tráfico, suministro y población",
+      "phase": "movement_logistics_economy_diplomacy"
+    },
+    {
+      "layer_id": "085",
+      "name": "Matriz tecnológica por era/civilización",
+      "status": "COMPLETE",
+      "dependency": "006,071",
+      "completion_criterion": "Disponibilidad tecnológica se resuelve por fecha y actor",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "086",
+      "name": "Warp, impulso y propulsión",
+      "status": "COMPLETE",
+      "dependency": "056,077,085",
+      "completion_criterion": "Rendimiento y disponibilidad coherentes",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "087",
+      "name": "Sensores y firmas detectables",
+      "status": "COMPLETE",
+      "dependency": "056,085",
+      "completion_criterion": "Sensores observan realidad preexistente",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "088",
+      "name": "Comunicaciones subespaciales",
+      "status": "COMPLETE",
+      "dependency": "023,065,085",
+      "completion_criterion": "Información tiene latencia/alcance/interferencia cuando proceda",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "089",
+      "name": "Transportadores",
+      "status": "COMPLETE",
+      "dependency": "033,056,085",
+      "completion_criterion": "Movimiento y riesgos respetan restricciones de época/contexto",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "090",
+      "name": "Replicación, holocubierta y computación",
+      "status": "COMPLETE",
+      "dependency": "056,081,085",
+      "completion_criterion": "Capacidades no se convierten en magia sin límites",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "091",
+      "name": "Seres y estados excepcionales",
+      "status": "COMPLETE",
+      "dependency": "031-042,085",
+      "completion_criterion": "Androides, hologramas, simbiontes, Changelings, Borg, etc. usan extensiones explícitas",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "092",
+      "name": "Anomalías temporales/subespaciales",
+      "status": "COMPLETE",
+      "dependency": "006,066,085",
+      "completion_criterion": "Excepciones no destruyen causalidad ni persistencia sin evento explícito",
+      "phase": "technology_exceptional_cases"
+    },
+    {
+      "layer_id": "093",
+      "name": "Contrato Trek ↔ NAP",
+      "status": "COMPLETE",
+      "dependency": "009-018",
+      "completion_criterion": "Todo asset productivo puede rastrear entidad, reglas y procedencia",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "094",
+      "name": "Esquema de contexto visual resuelto",
+      "status": "COMPLETE",
+      "dependency": "093",
+      "completion_criterion": "Prompt/asset recibe composición completa de autoridades",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "095",
+      "name": "Biblia Visual Global Star Trek",
+      "status": "COMPLETE",
+      "dependency": "093-094",
+      "completion_criterion": "Lenguaje visual común sin borrar diferencias de era/cultura",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "096",
+      "name": "Biblia de retrato/personaje",
+      "status": "COMPLETE",
+      "dependency": "011,031-041,095",
+      "completion_criterion": "Identidad base separada de estado visual temporal",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "097",
+      "name": "Perfiles visuales de especies",
+      "status": "COMPLETE",
+      "dependency": "031-038,096",
+      "completion_criterion": "Morfología canon + variación individual controlada",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "098",
+      "name": "Perfiles de cultura/afiliación/organización",
+      "status": "COMPLETE",
+      "dependency": "039-045,095",
+      "completion_criterion": "Uniformidad institucional sin convertir cultura en estereotipo",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "099",
+      "name": "Uniformes, divisiones, rango y variantes de era",
+      "status": "COMPLETE",
+      "dependency": "006,045-052,098",
+      "completion_criterion": "Vestuario deriva de fecha/organización/función",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "100",
+      "name": "Naves exteriores e identidad de clase/instancia",
+      "status": "COMPLETE",
+      "dependency": "012,053-056,095",
+      "completion_criterion": "Clase reconocible; nave individual persistente",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "101",
+      "name": "Interiores, consolas e instalaciones",
+      "status": "COMPLETE",
+      "dependency": "057,063,095",
+      "completion_criterion": "Operatividad primero; skin visual después según era",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "102",
+      "name": "Planetas, entornos, equipo y props",
+      "status": "COMPLETE",
+      "dependency": "067-075,085,095",
+      "completion_criterion": "Assets visuales consumen World State y función real",
+      "phase": "visual_system_nap"
+    },
+    {
+      "layer_id": "103",
+      "name": "Agenda y actividad diaria",
+      "status": "COMPLETE",
+      "dependency": "019-030,049",
+      "completion_criterion": "Presencia deriva de deberes, necesidades y rutina",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "104",
+      "name": "Necesidades, bienestar y fatiga",
+      "status": "COMPLETE",
+      "dependency": "033,103",
+      "completion_criterion": "Estado físico/cognitivo altera rendimiento sin redefinir identidad",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "105",
+      "name": "Simulación social off-screen",
+      "status": "COMPLETE",
+      "dependency": "026-030,103",
+      "completion_criterion": "Relaciones solo cambian con contacto/causa plausible",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "106",
+      "name": "Simulación profesional off-screen",
+      "status": "COMPLETE",
+      "dependency": "049-052,103",
+      "completion_criterion": "Trabajo, carrera y evaluaciones avanzan causalmente",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "107",
+      "name": "Simulación de naves/instalaciones off-screen",
+      "status": "COMPLETE",
+      "dependency": "053-064,078",
+      "completion_criterion": "Operaciones cambian estado sin necesitar al jugador",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "108",
+      "name": "Simulación planetaria off-screen",
+      "status": "COMPLETE",
+      "dependency": "067-084",
+      "completion_criterion": "Población/economía/política evolucionan a LOD apropiado",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "109",
+      "name": "Sistema universal de eventos y consecuencias",
+      "status": "COMPLETE",
+      "dependency": "009-108",
+      "completion_criterion": "Eventos mutan estado con historial trazable",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "110",
+      "name": "Muerte, destrucción, duelo y continuidad",
+      "status": "COMPLETE",
+      "dependency": "042,109",
+      "completion_criterion": "Pérdidas persisten social, profesional y materialmente",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "111",
+      "name": "IA como capa de expresión/decisión limitada",
+      "status": "COMPLETE",
+      "dependency": "022-030,109",
+      "completion_criterion": "IA no escribe World Truth por su cuenta",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "112",
+      "name": "Misiones emergentes desde World State",
+      "status": "COMPLETE",
+      "dependency": "078-111",
+      "completion_criterion": "Misión descubre/explota problemas existentes en vez de crearlos retroactivamente",
+      "phase": "living_simulation_ai_consequences"
+    },
+    {
+      "layer_id": "113",
+      "name": "Invariantes de identidad/persistencia",
+      "status": "COMPLETE",
+      "dependency": "009-018",
+      "completion_criterion": "Tests cubren años, LOD, save/load y migraciones",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "114",
+      "name": "Invariantes de población/social",
+      "status": "COMPLETE",
+      "dependency": "015-030",
+      "completion_criterion": "No duplicación, omnisciencia ni relaciones sin procedencia",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "115",
+      "name": "Invariantes biología/cultura",
+      "status": "COMPLETE",
+      "dependency": "031-042",
+      "completion_criterion": "Especie no fuerza personalidad/cultura y casos especiales son válidos",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "116",
+      "name": "Invariantes organización/tripulación",
+      "status": "COMPLETE",
+      "dependency": "043-064",
+      "completion_criterion": "Puesto/rango/cualificación/turno/complemento coherentes",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "117",
+      "name": "Invariantes mundo/logística",
+      "status": "COMPLETE",
+      "dependency": "065-084",
+      "completion_criterion": "Geografía, tráfico, inventario y política conservan causalidad",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "118",
+      "name": "Invariantes tecnología/canon/era",
+      "status": "COMPLETE",
+      "dependency": "006,085-092",
+      "completion_criterion": "Nada existe antes de tiempo ni fuera de capacidades válidas",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "119",
+      "name": "Fixture vertical v0.0.1 — Sensores",
+      "status": "PARTIAL",
+      "dependency": "087 + dependencias",
+      "completion_criterion": "Una consola detecta/analiza mundo generado previamente",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    },
+    {
+      "layer_id": "120",
+      "name": "Readiness CoreRPG + UE5",
+      "status": "TODO",
+      "dependency": "001-119",
+      "completion_criterion": "Contratos estables, fixtures reproducibles, migraciones y límites definidos",
+      "phase": "validation_vertical_slice_runtime_readiness"
+    }
+  ]
+}
