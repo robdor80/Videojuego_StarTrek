@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "model_id": "character_activity_schedule",
   "status": "foundation_fixed",
   "purpose": "Provide persistent temporal plausibility for character duty, travel, rest, social activity and availability.",
@@ -69,14 +69,21 @@
     "Off-screen activity resolution must respect schedule compatibility.",
     "LOD reduction cannot execute incompatible intentions in parallel.",
     "The player cannot create free time or teleport an NPC by initiating interaction.",
-    "AI may describe or reason from schedule state but cannot invent availability or mutate authoritative schedule state directly."
+    "AI may describe or reason from schedule state but cannot invent availability or mutate authoritative schedule state directly.",
+    "On-call windows constrain availability even when the character is not physically at a duty station.",
+    "Mandatory off-watch obligations consume real schedule time and cannot overlap protected rest or incompatible activities without an explicit exception.",
+    "Off-duty activity selection must be physically supported by the current ship/facility capabilities."
   ],
   "integration_refs": [
     "gameplay/ship_operations/crew_manifest_model.json",
     "gameplay/characters/character_runtime_model.json",
     "gameplay/social/social_event_rules.json",
     "gameplay/characters/wellbeing/",
-    "gameplay/ship_operations/alert_state_model.json"
+    "gameplay/ship_operations/alert_state_model.json",
+    "gameplay/duty_system/shipboard_watch_generation_contract_v0.1.json",
+    "gameplay/ship_operations/off_watch_obligation_model_v0.1.json",
+    "gameplay/ship_operations/off_duty_activity_catalog_v0.1.json",
+    "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json"
   ],
   "core_rpg_boundary": "Generic schedule arbitration, time exclusivity, travel occupancy and catch-up semantics should live in CoreRPG when available; this contract defines Star Trek-facing requirements."
 }
