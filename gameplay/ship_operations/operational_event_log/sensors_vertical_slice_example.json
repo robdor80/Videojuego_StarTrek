@@ -6,10 +6,10 @@
     {
       "event_id": "evt_104211_order",
       "event_type": "ORDER_ISSUED",
-      "occurred_at": "2399-03-14T10:42:11",
+      "occurred_at": "2372-03-14T10:42:11",
       "scope": {
         "ship_id": "example_ship",
-        "watch_id": "watch_alpha_2399_03_14",
+        "watch_id": "watch_alpha_2372_03_14",
         "console_family": "sensors"
       },
       "actor_refs": {
@@ -36,10 +36,10 @@
     {
       "event_id": "evt_104214_ack",
       "event_type": "ORDER_ACKNOWLEDGED",
-      "occurred_at": "2399-03-14T10:42:14",
+      "occurred_at": "2372-03-14T10:42:14",
       "scope": {
         "ship_id": "example_ship",
-        "watch_id": "watch_alpha_2399_03_14",
+        "watch_id": "watch_alpha_2372_03_14",
         "console_family": "sensors"
       },
       "actor_refs": {
@@ -64,7 +64,7 @@
     {
       "event_id": "evt_104218_start",
       "event_type": "ACTION_STARTED",
-      "occurred_at": "2399-03-14T10:42:18",
+      "occurred_at": "2372-03-14T10:42:18",
       "scope": {
         "ship_id": "example_ship",
         "station_id": "bridge_sensors_01",
@@ -100,7 +100,7 @@
     {
       "event_id": "evt_104229_result",
       "event_type": "RESULT_CREATED",
-      "occurred_at": "2399-03-14T10:42:29",
+      "occurred_at": "2372-03-14T10:42:29",
       "scope": {
         "ship_id": "example_ship",
         "station_id": "bridge_sensors_01",
@@ -131,10 +131,10 @@
     {
       "event_id": "evt_104241_report",
       "event_type": "REPORT_MADE",
-      "occurred_at": "2399-03-14T10:42:41",
+      "occurred_at": "2372-03-14T10:42:41",
       "scope": {
         "ship_id": "example_ship",
-        "watch_id": "watch_alpha_2399_03_14",
+        "watch_id": "watch_alpha_2372_03_14",
         "console_family": "sensors"
       },
       "actor_refs": {
@@ -165,7 +165,7 @@
     {
       "event_id": "evt_104247_send",
       "event_type": "DATA_SENT",
-      "occurred_at": "2399-03-14T10:42:47",
+      "occurred_at": "2372-03-14T10:42:47",
       "scope": {
         "ship_id": "example_ship",
         "console_family": "sensors"
