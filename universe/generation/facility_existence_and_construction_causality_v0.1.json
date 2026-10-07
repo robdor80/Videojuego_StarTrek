@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "facility_existence_and_construction_causality",
+  "status": "FOUNDATION_FIXED",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "A permanent facility exists only because a sustained operational, social, economic, scientific or strategic need justifies its construction and continued support. The generator may not place stations as generic points of interest.",
+  "anti_gas_station_rule": "NEVER generate a permanent station merely because a route, system, planet or player location lacks one nearby.",
+  "required_gates": [
+    {
+      "gate_id": "real_need",
+      "rule": "There must be at least one authoritative unmet need with identifiable beneficiaries/stakeholders.",
+      "examples": [
+        "persistent_fleet_support",
+        "sustained_trade_transfer",
+        "border_monitoring",
+        "scientific_observation",
+        "industrial_processing",
+        "medical_regional_support",
+        "communications_relay",
+        "ship_construction_or_heavy_repair",
+        "colony_or_population_support"
+      ]
+    },
+    {
+      "gate_id": "persistence_of_need",
+      "rule": "The need must last long enough that fixed infrastructure is more rational than temporary/mobile support.",
+      "failure_result": "Use ships, tenders, mobile support units, temporary depots or mission-specific assets instead."
+    },
+    {
+      "gate_id": "alternative_solution_check",
+      "rule": "Evaluate cheaper/lighter alternatives before fixed construction.",
+      "alternatives": [
+        "existing_nearby_facility",
+        "surface_facility",
+        "planetary_infrastructure",
+        "mobile_support_unit",
+        "fleet_tender",
+        "scheduled_cargo_service",
+        "communications_satellite_or_array",
+        "temporary_outpost",
+        "contracted_civilian_service"
+      ],
+      "hard_rule": "If a lower-cost alternative satisfies the need with acceptable risk/capacity, do not build a permanent station."
+    },
+    {
+      "gate_id": "coverage_overlap",
+      "rule": "Check whether an existing reachable facility already provides sufficient service capacity.",
+      "hard_rule": "Do not create duplicate support stations just to reduce travel inconvenience unless demand, resilience or strategy explicitly justifies redundancy."
+    },
+    {
+      "gate_id": "demand_or_strategic_value",
+      "rule": "The scale of the facility must be justified by sustained traffic/population/service throughput or exceptional strategic/scientific value."
+    },
+    {
+      "gate_id": "operator_capacity",
+      "rule": "The sponsoring polity/organization must possess the technology, materials, personnel, industrial access and political authority to build and operate the facility."
+    },
+    {
+      "gate_id": "site_viability",
+      "rule": "The chosen location must support the intended function better than realistic alternatives after hazards, orbital mechanics, security, logistics and access are considered."
+    },
+    {
+      "gate_id": "maintenance_viability",
+      "rule": "The facility must have a credible continuing supply/staff/maintenance chain. Construction without a sustainment model is forbidden."
+    },
+    {
+      "gate_id": "construction_commitment",
+      "rule": "Permanent facilities require planning, construction/refit time and resource commitment. They do not appear fully operational in one simulation tick."
+    }
+  ],
+  "need_strength_inputs": [
+    "served_population",
+    "persistent_traffic_volume",
+    "service_request_rate",
+    "distance_or_travel_time_to_existing_support",
+    "strategic_border_or_chokepoint_value",
+    "military_staging_need",
+    "resource_extraction_or_processing_throughput",
+    "scientific_uniqueness_or_observation_value",
+    "communications_coverage_gap",
+    "medical_or_disaster_response_gap",
+    "industrial_supply_chain_strength",
+    "political_or_diplomatic_importance",
+    "hazard_and_security_risk",
+    "redundancy_requirement",
+    "expected_need_duration"
+  ],
+  "prohibited_generation_triggers": [
+    "player_entered_system",
+    "player_needs_repairs",
+    "player_is_low_on_resources",
+    "map_feels_empty",
+    "route_has_no_station",
+    "random_point_of_interest_roll",
+    "planet_exists",
+    "colony_exists_without_additional_need",
+    "ship_traffic_exists_but_is_below_sustained_threshold",
+    "visual_variety"
+  ],
+  "lifecycle_rule": "Need may justify planning first, then construction, commissioning, operation, expansion/contraction, mothballing or decommissioning. Facility existence is historical state, not a static map decoration.",
+  "persistence_rule": "Once construction begins, the facility receives a stable facility_id. Cancellation, incomplete construction, abandonment, capture, refit and decommissioning preserve identity/history.",
+  "ai_boundary": [
+    "AI cannot create a station to solve a narrative convenience.",
+    "AI cannot upgrade station scale because the player is important.",
+    "AI can propose construction only from authoritative need/capacity state."
+  ]
+}
