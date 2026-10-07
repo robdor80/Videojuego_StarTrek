@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "aenar",
+  "display_name_es": "Aenar",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "classification": "andorian_related_subspecies_profile",
+  "contract_ref": "gameplay/species/species_biology_contract.json",
+  "identity": {
+    "common_homeworld_ref": "andoria",
+    "regional_origin_context": "northern_wastes",
+    "do_not_collapse_into_andorian": true
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "related_to_andorian": true,
+    "pigmentation": "little_or_no_skin_and_hair_pigmentation",
+    "antennae": {
+      "count": 2,
+      "related_andorian_morphology": true,
+      "funnel_tip_indentation_reported": true,
+      "persistent_individual_morphology": true
+    },
+    "visual_profile_ref": "art_direction/visual_bibles/species/profiles/AENAR_VISUAL_PROFILE_v0.1.json"
+  },
+  "physiology": {
+    "blindness": "most_aenar_blind",
+    "sensory_compensation": "strong_other_senses_and_telepathic_perception_context",
+    "telepathy": "highly_evolved_species_capability",
+    "precognition": "limited_form_reported_in_some_cases",
+    "mind_control_resistance": "some_resistance_reported",
+    "environmental_context": "freezing_cold_andorian_northern_wastes",
+    "unknowns": [
+      "exact sensory ranges",
+      "universal telepathic strength",
+      "lifespan thresholds",
+      "exact medical reference ranges"
+    ]
+  },
+  "capabilities": {
+    "telepathic_communication": true,
+    "mind_reading": {
+      "capability_exists": true,
+      "cultural_consent_rule": "do_not_read_others_without_permission",
+      "core_resolves_scope": true,
+      "omniscient": false
+    }
+  },
+  "reproduction": {
+    "andorian_compatibility": "supported_by_recorded_hybrid_child",
+    "exact_inheritance_rules": "unknown",
+    "hybrid_traits_must_not_be_averaged_automatically": true
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "strong pacifist norm",
+      "telepathic consent",
+      "relative isolation",
+      "diplomatic ties with Andorian government"
+    ],
+    "rules": [
+      "Pacifism is a strong cultural norm, not a replacement for individual personality.",
+      "Telepathic access to another person's mind is culturally constrained by consent.",
+      "Aenar identity is distinct from mainstream Andorian identity despite close biological relation."
+    ]
+  },
+  "gameplay_hooks": [
+    "telepathic_communication",
+    "telepathic_perception",
+    "consent_and_privacy",
+    "blindness_and_interface_access",
+    "cold_environment_context",
+    "andorian_aenar_social_relations"
+  ],
+  "ai_boundary": [
+    "Do not treat blindness as helplessness.",
+    "Do not grant unlimited telepathic knowledge.",
+    "Do not read minds without a valid capability resolution and consent/context rule.",
+    "Do not infer Andorian cultural identity or Starfleet affiliation from Aenar species.",
+    "Do not assume every Aenar has identical precognitive capability."
+  ],
+  "provenance": [
+    {
+      "source_id": "ST_OFFICIAL_AENAR_101_2022",
+      "confidence": "HIGH",
+      "claim_scope": "origin, pigmentation, blindness, telepathy, consent norm, pacifism and social context"
+    },
+    {
+      "source_id": "MA_AENAR",
+      "confidence": "MEDIUM",
+      "claim_scope": "antennae, enhanced senses, telepathy and Andorian/Aenar compatibility"
+    },
+    {
+      "source_id": "ENT_THE_AENAR",
+      "confidence": "HIGH",
+      "claim_scope": "Aenar distinction and Andorian context"
+    }
+  ]
+}
