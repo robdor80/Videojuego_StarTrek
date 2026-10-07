@@ -1,0 +1,113 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "visual_nap_wave_e_invariants",
+  "status": "design_and_fixture_validated",
+  "refs": [
+    "art_direction/STAR_TREK_VISUAL_DEPTH_INDEX_v0.1.json",
+    "art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md",
+    "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
+  ],
+  "cases": [
+    {
+      "id": "species_visual_identity_not_personality",
+      "expected": [
+        "species profile contains morphology only",
+        "neutral expression is not culture/personality shorthand",
+        "persistent morphology survives age/clothing/state changes"
+      ]
+    },
+    {
+      "id": "major_species_coverage",
+      "expected": [
+        "Romulan, Bajoran, Trill, Betazoid, Changeling, Vorta and Jem'Hadar have individual production profiles",
+        "Borg remains transformative state, not species",
+        "Changeling current form does not replace entity identity"
+      ]
+    },
+    {
+      "id": "organization_not_species",
+      "expected": [
+        "Klingon anatomy does not imply Imperial military styling",
+        "Romulan anatomy does not reveal Tal Shiar",
+        "Bajoran anatomy does not imply faith/Militia",
+        "Ferengi anatomy does not imply wealth/business"
+      ]
+    },
+    {
+      "id": "covert_affiliation_not_visible_by_default",
+      "expected": [
+        "Tal Shiar/intelligence membership may have no visible marker",
+        "secret affiliation remains knowledge gated",
+        "visual presentation cannot grant clearance"
+      ]
+    },
+    {
+      "id": "era_specific_ship_exterior",
+      "expected": [
+        "Constitution Pike/TOS/refit configurations are not visually flattened",
+        "Vor'cha does not appear in Kirk era",
+        "D'deridex does not replace 23c Romulan Bird-of-Prey",
+        "Valdore/Nemesis styling remains outside current scope"
+      ]
+    },
+    {
+      "id": "console_function_before_skin",
+      "expected": [
+        "Pike/TOS/TMP/TNG/alien skins consume the same approved functional contracts where applicable",
+        "visual skin cannot add/remove actions",
+        "UI cannot reveal hidden World Truth"
+      ]
+    },
+    {
+      "id": "facility_history_visible_without_identity_reset",
+      "expected": [
+        "Cardassian-origin facility can receive Bajoran/Starfleet overlays",
+        "operator change does not regenerate architecture",
+        "major reconstruction requires explicit topology/configuration event"
+      ]
+    },
+    {
+      "id": "planet_profile_no_fake_geography",
+      "expected": [
+        "environment visuals consume world-depth profiles",
+        "unknown global geography remains unknown",
+        "weather/event state changes without rerolling persistent geography"
+      ]
+    },
+    {
+      "id": "world_specific_guardrails",
+      "expected": [
+        "Andoria is an icy moon, not a generic planet",
+        "Tellar Prime is not globally reduced to bogs",
+        "Qo'noS does not show destroyed Praxis before 2293",
+        "Romulus remains pre-destruction in current scope",
+        "Betazed occupation visuals require actual campaign state"
+      ]
+    },
+    {
+      "id": "nap_fixture_schema_minimum",
+      "expected": [
+        "visual identity includes all required schema fields",
+        "resolved visual context includes all required schema fields",
+        "handoff includes all required schema fields"
+      ]
+    },
+    {
+      "id": "nap_fixture_binary_lineage",
+      "expected": [
+        "archive master PNG and production WebP are distinct physical blobs",
+        "both are referenced by one asset_id/entity_id/visual_identity_id lineage",
+        "fixture manifest records SHA-256 and Git blob SHAs"
+      ]
+    },
+    {
+      "id": "nap_fixture_not_shippable_art",
+      "expected": [
+        "fixture_mode=true",
+        "not_production_asset=true",
+        "COMPLETED lifecycle describes fixture contract validation only",
+        "production game art must undergo separate review/approval"
+      ]
+    }
+  ]
+}
