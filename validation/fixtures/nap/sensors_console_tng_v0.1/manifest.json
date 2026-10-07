@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "nap_sensors_console_tng_v0.1",
+  "status": "VERIFIED_COMPLETE_FIXTURE",
+  "fixture_mode": true,
+  "not_production_asset": true,
+  "purpose": "Representative end-to-end NAP package for a Starfleet/TNG Sensors console visual reference.",
+  "files": {
+    "visual_identity": "validation/fixtures/nap/sensors_console_tng_v0.1/visual_identity.json",
+    "resolved_visual_context": "validation/fixtures/nap/sensors_console_tng_v0.1/resolved_visual_context.json",
+    "handoff": "validation/fixtures/nap/sensors_console_tng_v0.1/handoff.json",
+    "renderer_spec": "validation/fixtures/nap/sensors_console_tng_v0.1/renderer_spec.json",
+    "archive_master": "validation/fixtures/nap/sensors_console_tng_v0.1/archive/sensor_console_tng_fixture_master.png",
+    "production_derivative": "validation/fixtures/nap/sensors_console_tng_v0.1/production/sensor_console_tng_fixture.webp",
+    "readme": "validation/fixtures/nap/sensors_console_tng_v0.1/README.md"
+  },
+  "binary_verification": {
+    "archive_master": {
+      "format": "png",
+      "size_bytes": 1741,
+      "sha256": "360b59bfe370cea46b84ab4c431931462da46c5b7f74ca876038128189561262",
+      "git_blob_sha": "eb6d646f4be101989973d3f181df1d5adb50195e"
+    },
+    "production_derivative": {
+      "format": "webp",
+      "size_bytes": 3114,
+      "sha256": "73d5207d9993b62529abc4bf6ae8a2ec857b87d2b172bb0deb2738f536d6f36e",
+      "git_blob_sha": "ebc8815666762bd6184efb271af04ce28a61eb0f"
+    }
+  },
+  "lifecycle_assertions": [
+    "authoritative functional model resolved before visual output",
+    "visual identity assigned",
+    "resolved visual profile stack recorded",
+    "master and production derivative are distinct binaries",
+    "production derivative traceable to same asset/entity/visual identity",
+    "fixture physically present in repository",
+    "fixture is explicitly barred from use as production art"
+  ],
+  "validation_refs": [
+    "art_direction/schemas/persistent_visual_identity.schema.json",
+    "art_direction/schemas/resolved_visual_context.schema.json",
+    "art_direction/schemas/nap_asset_handoff.schema.json"
+  ]
+}
