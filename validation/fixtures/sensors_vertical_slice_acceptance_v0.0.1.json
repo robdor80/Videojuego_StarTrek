@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "sensors_vertical_slice_acceptance_v0_0_1",
+  "status": "design_acceptance_fixture",
+  "campaign_context": {
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-03-14",
+    "campaign_seed": "fixture_sensor_v0_0_1"
+  },
+  "references": {
+    "generation_profile": "universe/generation/v0_0_1_generation_profile.json",
+    "generation_contract": "universe/generation/generated_system_contract.json",
+    "observable_entity_model": "universe/generation/observable_entity_model.json",
+    "signature_model": "universe/generation/detectable_signature_model.json",
+    "scan_request": "gameplay/ship_operations/sensor_resolution/sensor_scan_request_contract.json",
+    "detection_rules": "gameplay/ship_operations/sensor_resolution/sensor_detection_rules.json",
+    "scan_result": "gameplay/ship_operations/sensor_resolution/sensor_result_contract.json",
+    "event_example": "gameplay/ship_operations/operational_event_log/sensors_vertical_slice_example.json",
+    "vertical_slice_control": "docs/roadmap/ship_console_vertical_slice_v0_0_1.md"
+  },
+  "acceptance_sequence": [
+    "materialize deterministic system from campaign context",
+    "persist system and stable entity IDs before any sensor request",
+    "issue or load an operational scan order",
+    "build sensor scan request from console/operator/system state",
+    "resolve request against pre-existing detectable signatures",
+    "return observer-relative structured detections only",
+    "update observer knowledge without mutating target truth",
+    "append operational events for order, action, result and report",
+    "optionally hand off authorized structured result to another console",
+    "save/reload and verify persistent world/entity identity",
+    "repeat identical unresolved scan context and verify deterministic result"
+  ],
+  "must_pass": [
+    {
+      "id": "deterministic_world",
+      "expected": "Same seed, era/date, sector/context and generator version reproduce the same unresolved structured world."
+    },
+    {
+      "id": "reality_precedes_scan",
+      "expected": "Every detected entity/signature exists in authoritative World State before the scan."
+    },
+    {
+      "id": "persistent_identity",
+      "expected": "Materialized entity IDs survive reload and are never regenerated because the player rescans."
+    },
+    {
+      "id": "detection_not_truth_creation",
+      "expected": "Scan resolution changes observation/knowledge only; it does not add target properties or entities."
+    },
+    {
+      "id": "hidden_information_gate",
+      "expected": "Hidden properties are omitted until resolution/filter requirements are satisfied."
+    },
+    {
+      "id": "anti_leakage",
+      "expected": "Player-facing results never expose authoritative entity_id, full ground truth or unresolved hidden properties."
+    },
+    {
+      "id": "observer_relative_contacts",
+      "expected": "Detections use observer-relative stable contact identifiers appropriate to available knowledge."
+    },
+    {
+      "id": "system_state_matters",
+      "expected": "Sensor capability, power, integrity, scan mode, resolution, duration, interference and masking affect result."
+    },
+    {
+      "id": "event_chain",
+      "expected": "Order → acknowledgement → action start → result → report/data handoff is causally linked in the append-only event log."
+    },
+    {
+      "id": "knowledge_visibility",
+      "expected": "Event recording does not create universal NPC knowledge; visibility/projection rules govern who learns what."
+    },
+    {
+      "id": "ai_boundary",
+      "expected": "AI/UI may verbalize structured sensor results but cannot add discoveries, identities or causes."
+    },
+    {
+      "id": "save_load_roundtrip",
+      "expected": "Reload preserves world entities, identity lineage, relevant observer knowledge and operational history."
+    },
+    {
+      "id": "era_validity",
+      "expected": "Fixture date and available technology are valid for the selected playable era."
+    }
+  ],
+  "runtime_note": "This fixture defines Star Trek-side acceptance. Executable runtime realization belongs in CoreRPG/UE5 and must not be duplicated inside this repository."
+}
