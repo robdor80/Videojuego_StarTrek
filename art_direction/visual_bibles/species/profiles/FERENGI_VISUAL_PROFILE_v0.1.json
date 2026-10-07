@@ -1,0 +1,36 @@
+{
+  "profile_id": "ferengi_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "ferengi",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Very large external ears are a dominant species-readable feature in the supplied references.",
+    "Pronounced cranial/forehead ridge structures are recurring.",
+    "Distinctive nasal bridge and central facial anatomy are recurring.",
+    "Strong individual facial variation remains visible despite shared species anatomy.",
+    "Ear, cranial and nasal topology should vary per persistent individual inside approved species bounds."
+  ],
+  "identity_rules": [
+    "External ear geometry belongs to persistent individual morphology.",
+    "Cranial/facial topology remains stable across clothing, profession, wealth and age-state variants.",
+    "Later portraits must preserve the same underlying person."
+  ],
+  "cultural_separation": [
+    "Commercial clothing or accessories are culture/profession/state layers, not species anatomy.",
+    "Do not infer wealth, merchant profession, greed or dishonesty from morphology."
+  ],
+  "forbidden": [
+    "merchant styling by default",
+    "one prosthetic pattern across all Ferengi",
+    "comic greed expression as neutral baseline",
+    "latinum/accessories without world-state provenance"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
