@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "andoria_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "andoria_system",
+    "world_id": "andoria",
+    "display_name_es": "Andoria",
+    "world_type": "inhabited_icy_moon",
+    "parent_body_type": "ringed_gas_giant",
+    "native_species_refs": [
+      "andorian",
+      "aenar"
+    ],
+    "federation_founder_context": true
+  },
+  "orbital_context": {
+    "parent_body": "unnamed_ringed_gas_giant",
+    "distance_from_sol_context": "approximately 11 light-years in secondary cross-check",
+    "exact_orbit": null
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "human_breathable": true,
+    "composition": "oxygen-nitrogen context",
+    "exact_pressure": null
+  },
+  "hydrosphere": {
+    "dominant_state": "ice",
+    "subsurface_or_liquid_details": "not globally locked"
+  },
+  "geology_topography": {
+    "dominant": [
+      "ice_fields",
+      "mountains",
+      "northern_wastes",
+      "subterranean_cities_and_tunnels"
+    ],
+    "energy_context": "geothermal energy supports underground cities"
+  },
+  "climate_refs": [
+    "extreme_cold",
+    "rare_heatwaves_above_freezing",
+    "northern_wastes_very_cold"
+  ],
+  "biosphere_ref": "andoria_cold_biosphere",
+  "region_refs": [
+    "Northern Wastes",
+    "Aenar compound/context",
+    "underground Andorian cities",
+    "Wall of Heroes when relevant"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "cold_environment_survival",
+    "underground_city_navigation",
+    "Andorian_Aenar_social_context",
+    "diplomacy",
+    "Federation_strategy",
+    "geothermal_infrastructure"
+  ],
+  "temporal_rules": [
+    "Political organization may change; physical icy moon identity does not."
+  ],
+  "ai_boundary": [
+    "AI must distinguish Andorian and Aenar communities.",
+    "Blindness/Aenar telepathy cannot be inferred into unlimited perception.",
+    "Do not invent surface cities where underground geography is the supported baseline."
+  ],
+  "visual_nap": [
+    "blue-white ice formations",
+    "subterranean geothermal architecture",
+    "ringed gas giant sky context when exterior view supports it",
+    "avoid making Aenar areas mystical/glowing by default"
+  ],
+  "unknowns": [
+    "exact global map",
+    "exact atmospheric pressure",
+    "city count",
+    "population by playable year"
+  ],
+  "provenance": [
+    "MA_ANDORIA",
+    "ENT_THE_AENAR",
+    "ST_OFFICIAL_AENAR_101_2022",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS"
+  ]
+}
