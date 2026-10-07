@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "civilization_technology_spaceflight_warp_grammar",
+  "status": "FOUNDATION_FIXED",
+  "technology_bands": [
+    {
+      "id": "preindustrial",
+      "spaceflight": "none",
+      "warp_status": "none"
+    },
+    {
+      "id": "industrial",
+      "spaceflight": "none_or_primitive",
+      "warp_status": "none"
+    },
+    {
+      "id": "atomic_early_space",
+      "spaceflight": "orbital_or_early_interplanetary",
+      "warp_status": "none"
+    },
+    {
+      "id": "advanced_prewarp",
+      "spaceflight": "mature_sublight",
+      "warp_status": "research_or_none"
+    },
+    {
+      "id": "warp_threshold",
+      "spaceflight": "mature_sublight",
+      "warp_status": "prototype_or_imminent"
+    },
+    {
+      "id": "early_warp",
+      "spaceflight": "interstellar_limited",
+      "warp_status": "demonstrated"
+    },
+    {
+      "id": "mature_warp",
+      "spaceflight": "interstellar",
+      "warp_status": "established"
+    },
+    {
+      "id": "advanced_warp",
+      "spaceflight": "interstellar_advanced",
+      "warp_status": "established_advanced"
+    }
+  ],
+  "warp_states": [
+    "none",
+    "theoretical",
+    "active_research",
+    "prototype_ground_test",
+    "prototype_space_test",
+    "first_successful_warp_flight",
+    "repeatable_warp_capability",
+    "interstellar_warp_operations"
+  ],
+  "first_contact_implications": {
+    "none": "normally protected from overt Starfleet contact absent exceptional contamination/emergency/legal context",
+    "theoretical": "not sufficient by itself for overt contact",
+    "active_research": "observation and preparation may intensify; overt contact still not automatic",
+    "prototype_ground_test": "pre-contact monitoring candidate",
+    "prototype_space_test": "high first-contact-readiness monitoring candidate",
+    "first_successful_warp_flight": "major contact threshold; initiate readiness assessment, not automatic hail",
+    "repeatable_warp_capability": "post-warp contact candidate",
+    "interstellar_warp_operations": "contact becomes increasingly likely/necessary if mutual encounter occurs"
+  },
+  "technology_domains": [
+    "energy",
+    "materials",
+    "computing",
+    "communications",
+    "sensors",
+    "medicine",
+    "transport",
+    "spaceflight",
+    "weapons",
+    "automation",
+    "manufacturing",
+    "agriculture",
+    "environmental_control"
+  ],
+  "rules": [
+    "Technology band is multi-domain; one exceptional domain does not automatically uplift every other domain.",
+    "Warp technology may be externally contaminated or independently developed; provenance matters.",
+    "A warp-capable civilization can still be politically/socially unready for public contact.",
+    "Technology constrains generated infrastructure, weapons, medicine, ships and signatures.",
+    "No future Federation technology is granted to a newly generated civilization for balance convenience."
+  ],
+  "source_refs": [
+    "ST_OFFICIAL_FIRST_CONTACT_DAY_ORIGIN",
+    "ST_OFFICIAL_FIRST_CONTACT_PLAYLIST",
+    "TNG_FIRST_CONTACT",
+    "MA_WARP_CAPABLE_CIVILIZATION"
+  ]
+}
