@@ -1,0 +1,40 @@
+{
+  "profile_id": "romulan_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:romulan",
+  "species_id": "romulan",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Pointed external ears and angled eyebrow presentation are recurring Romulan species-readable cues.",
+    "Romulans share ancestry with Vulcans but are not a visual clone of the Vulcan profile.",
+    "Forehead ridge presentation varies by production era and individual; it is not mandatory on every Romulan.",
+    "Broad humanlike facial, skin-tone, hair and age variation remains available.",
+    "Hair/grooming are presentation layers, not biological identity."
+  ],
+  "allowed_variation": [
+    "ear geometry within canon-compatible range",
+    "forehead ridge presence/shape when era/reference supports it",
+    "skin tone",
+    "face shape",
+    "hair/grooming",
+    "age",
+    "body type"
+  ],
+  "forbidden_variation": [
+    "automatic Tal Shiar styling",
+    "permanent suspicious expression",
+    "Vulcan cultural clothing by ancestry",
+    "one canonical actor likeness reused",
+    "mandatory forehead ridges on every individual"
+  ],
+  "source_refs": [
+    "MA_ROMULAN",
+    "ST_OFFICIAL_ROMULANS_REMANS_101"
+  ],
+  "notes": "Resolve era before locking forehead-ridge presentation."
+}
