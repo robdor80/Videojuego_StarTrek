@@ -105,16 +105,16 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 043 | Modelo universal de organización | TODO | 002,009 | Federación, imperios, gobiernos, civiles y organizaciones caben sin hacks |
-| 044 | Afiliación, ciudadanía y lealtad | PARTIAL | 043 | Dimensiones separadas y temporalmente mutables |
-| 045 | Starfleet: divisiones y departamentos | PARTIAL | 043 | División, departamento y función tienen semántica clara |
-| 046 | Rangos y antigüedad | PARTIAL | 045 | Rango no equivale a puesto |
-| 047 | Puestos y posiciones | PARTIAL | 045-046 | Puesto define función y requisitos, no personalidad |
-| 048 | Cadena de mando y sucesión | PARTIAL | 046-047 | Autoridad efectiva puede resolverse en cualquier momento |
-| 049 | Turnos, guardias y relevos | PARTIAL | 047-048 | Cobertura temporal y handoff son consistentes |
-| 050 | Cualificaciones y competencias | PARTIAL | 019,047 | Puestos exigen evidencia/cualificación real |
-| 051 | Carrera, evaluaciones, ascensos y traslados | PARTIAL | 046-050 | Trayectoria emerge de servicio e historial |
-| 052 | Academia → graduación → primera asignación | PARTIAL/MATURE | 045-051 | Formación enlaza sin discontinuidad con personaje y carrera reales |
+| 043 | Modelo universal de organización | COMPLETE | 002,009 | Federación, imperios, gobiernos, civiles y organizaciones caben sin hacks |
+| 044 | Afiliación, ciudadanía y lealtad | COMPLETE | 043 | Dimensiones separadas y temporalmente mutables |
+| 045 | Starfleet: divisiones y departamentos | COMPLETE | 043 | División, departamento y función tienen semántica clara |
+| 046 | Rangos y antigüedad | COMPLETE | 045 | Rango no equivale a puesto |
+| 047 | Puestos y posiciones | COMPLETE | 045-046 | Puesto define función y requisitos, no personalidad |
+| 048 | Cadena de mando y sucesión | COMPLETE | 046-047 | Autoridad efectiva puede resolverse en cualquier momento |
+| 049 | Turnos, guardias y relevos | COMPLETE | 047-048 | Cobertura temporal y handoff son consistentes |
+| 050 | Cualificaciones y competencias | COMPLETE | 019,047 | Puestos exigen evidencia/cualificación real |
+| 051 | Carrera, evaluaciones, ascensos y traslados | COMPLETE | 046-050 | Trayectoria emerge de servicio e historial |
+| 052 | Academia → graduación → primera asignación | COMPLETE | 045-051 | Formación enlaza sin discontinuidad con personaje y carrera reales |
 
 # FASE 5 — NAVES, TRIPULACIONES E INSTALACIONES
 
