@@ -1,7 +1,7 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "requirements_id": "civilization_generation_requirements",
-  "status": "foundation_fixed_content_pending",
+  "status": "baseline_content_complete",
   "generation_dimensions": [
     "homeworld_or_origin",
     "species_or_multi_species_population",
@@ -25,15 +25,14 @@
     "Technology level constrains generated ships, facilities and detectable signatures.",
     "Culture influences institutions and norms but does not prescribe every individual's personality.",
     "Political alignment and species identity are separate.",
-    "Once materialized, civilization identity and history persist and evolve through campaign events."
+    "Once materialized, civilization identity and history persist and evolve through campaign events.",
+    "Warp threshold triggers contact-readiness assessment rather than automatic contact.",
+    "Generated names, morphology, languages, governments and settlements materialize deterministically and persist.",
+    "Contact with one polity does not imply planet-wide recognition on politically divided worlds."
   ],
-  "content_work_needed": [
-    "technology_level_grammar",
-    "government_archetype_grammar",
-    "settlement_infrastructure_grammar",
-    "contact_status_rules",
-    "naming_language_generation_profiles",
-    "population_species_compatibility_rules",
-    "trade_resource_interaction_rules"
-  ]
+  "content_work_needed": [],
+  "index_ref": "universe/generation/procedural_worlds_civilizations_first_contact_index_v0.1.json",
+  "materialization_pipeline_ref": "universe/generation/civilization_latent_observed_materialized_pipeline_v0.1.json",
+  "first_contact_protocol_ref": "gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+  "prime_directive_protocol_ref": "gameplay/first_contact/prime_directive_operational_protocol_v0.1.json"
 }
