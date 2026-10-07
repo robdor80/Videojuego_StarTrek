@@ -1,0 +1,186 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "cardassian_shipboard_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "operator_family": "cardassian_military",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "doctrine": {
+    "canon_shift_pattern": "UNSPECIFIED",
+    "simulation_default": "continuous_hierarchical_watch_coverage",
+    "preferred_pattern": "custom",
+    "default_equivalent_watch_count": 3,
+    "note": "Watch count/duration is a project simulation model when canon is silent. Hierarchy affects reporting/authority, not an automatic personality trait."
+  },
+  "profiles": {
+    "galor": {
+      "life_profile_id": "cardassian_galor_life",
+      "class_or_configuration_ref": "galor",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "medium",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "minimum_context": 300,
+        "type": "secondary_reference",
+        "confidence": "medium",
+        "source_refs": [
+          "MA_GALOR_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.35,
+          "watch_2": 0.31,
+          "watch_3": 0.29,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 300,
+          "watch_1": 105,
+          "watch_2": 93,
+          "watch_3": 87,
+          "relief_or_float": 15,
+          "note": "minimum-reference simulation example"
+        },
+        "routine_day_staff_bias": "moderate administration/maintenance/security",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "military accommodation; rank/status may affect assignment where organization state supports",
+        "exact berth geometry not locked"
+      ],
+      "meal_model": "communal military food service according to configuration",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "security",
+        "training",
+        "administrative_reports",
+        "readiness"
+      ],
+      "life_character": "Medium warship with strong hierarchy and continuous readiness. Crew life is less luxurious than Starfleet explorers and more centered on duty/maintenance cycles.",
+      "source_refs": [
+        "MA_GALOR_CLASS",
+        "TNG_THE_WOUNDED"
+      ]
+    },
+    "keldon": {
+      "life_profile_id": "cardassian_keldon_life",
+      "class_or_configuration_ref": "keldon",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "medium",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": 500,
+        "type": "technical_reference_not_hard_screen_fact",
+        "confidence": "medium",
+        "source_refs": [
+          "MA_KELDON_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.35,
+          "watch_2": 0.31,
+          "watch_3": 0.29,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 500,
+          "watch_1": 175,
+          "watch_2": 155,
+          "watch_3": 145,
+          "relief_or_float": 25,
+          "note": "simulation example using technical complement reference"
+        },
+        "routine_day_staff_bias": "moderate; special mission/intelligence configurations can add compartmented specialist staff",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "military accommodation; special covert configuration can alter personnel access and berthing"
+      ],
+      "meal_model": "communal military food service",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "special_mission_training",
+        "security",
+        "administration",
+        "on_call"
+      ],
+      "life_character": "Heavier/special-mission cruiser. Covert configurations alter who may access which spaces but do not turn every crewmember into intelligence staff.",
+      "source_refs": [
+        "MA_KELDON_CLASS"
+      ]
+    },
+    "hideki": {
+      "life_profile_id": "cardassian_hideki_life",
+      "class_or_configuration_ref": "hideki",
+      "habitability_tier": "very_austere",
+      "privacy_level": "very_low",
+      "social_density": "very_high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "range": [
+          3,
+          5
+        ],
+        "type": "screen_secondary_reference",
+        "confidence": "high",
+        "source_refs": [
+          "MA_HIDEKI_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_staggered_small_crew",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": "DYNAMIC_BY_CREW_SIZE",
+        "reference_assignment_example": {
+          "crew": 4,
+          "active_control": 2,
+          "maintenance_or_secondary": 1,
+          "rest_or_relief": 1,
+          "note": "simulation example; all crew may be recalled immediately"
+        },
+        "routine_day_staff_bias": "none",
+        "emergency_recall_intensity": "total",
+        "small_crew_staggered_rest": true
+      },
+      "quarters_model": [
+        "minimal small-craft accommodation; dedicated private quarters not assumed"
+      ],
+      "meal_model": "compact duty-compatible food provision",
+      "recreation_capabilities": [
+        "none",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "sleep_protection",
+        "maintenance",
+        "on_call",
+        "mission_readiness"
+      ],
+      "life_character": "Tiny patrol/attack craft. There is effectively no anonymity, almost no separation between workplace and living space, and every crewmember is operationally critical.",
+      "source_refs": [
+        "MA_HIDEKI_CLASS"
+      ]
+    }
+  }
+}
