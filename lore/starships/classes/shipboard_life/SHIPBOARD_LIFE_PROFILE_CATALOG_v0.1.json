@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "shipboard_life_profile_catalog",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "watch_contract_ref": "gameplay/duty_system/shipboard_watch_generation_contract_v0.1.json",
+  "profile_sets": [
+    {
+      "operator_family": "starfleet",
+      "ref": "lore/starships/classes/shipboard_life/STARFLEET_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "klingon",
+      "ref": "lore/starships/classes/shipboard_life/KLINGON_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "romulan",
+      "ref": "lore/starships/classes/shipboard_life/ROMULAN_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "cardassian",
+      "ref": "lore/starships/classes/shipboard_life/CARDASSIAN_SHIPBOARD_LIFE_PROFILES_v0.1.json"
+    }
+  ],
+  "selection_rule": "Resolve operator → class/design → dated configuration/variant → mission → live crew state. Life profile supplies normal constraints; individual ship state decides actual schedule and services.",
+  "current_supported_designs": [
+    "constitution_pike",
+    "constitution_tos",
+    "constitution_major_refit",
+    "miranda",
+    "excelsior",
+    "oberth",
+    "galaxy",
+    "nebula",
+    "intrepid",
+    "defiant",
+    "d7",
+    "ktinga",
+    "klingon_bird_of_prey/brel",
+    "klingon_bird_of_prey/kvort",
+    "vorcha",
+    "romulan_bird_of_prey_2260s",
+    "dderidex",
+    "galor",
+    "keldon",
+    "hideki"
+  ]
+}
