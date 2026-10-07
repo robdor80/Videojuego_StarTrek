@@ -1,0 +1,351 @@
+{
+  "schema_version": "0.1.0",
+  "depth_profile_id": "starfleet_class_depth_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "class_catalog_ref": "lore/starships/classes/core_starship_classes.json",
+  "class_contract_ref": "gameplay/ship_operations/class_definition_contract.json",
+  "selection_rules_ref": "gameplay/ship_operations/class_selection_rules.md",
+  "visual_bible_ref": "art_direction/visual_bibles/ships/STAR_TREK_SHIP_EXTERIOR_VISUAL_BIBLE_v0.1.md",
+  "classes": {
+    "constitution": {
+      "gameplay_identity": "large 23rd-century Starfleet exploration/cruiser platform with strong diplomacy, science, patrol and defense utility",
+      "valid_profiles": [
+        "pike",
+        "kirk"
+      ],
+      "configuration_priority": [
+        "constitution_pike",
+        "constitution_tos",
+        "constitution_major_refit"
+      ],
+      "generation_roles": [
+        "deep_space_exploration",
+        "diplomacy",
+        "patrol",
+        "defense",
+        "command_assignment"
+      ],
+      "strengths": [
+        "broad_mission_flexibility",
+        "science_capacity",
+        "long_range_service",
+        "credible_flagship_or_independent_command"
+      ],
+      "constraints": [
+        "dated_configuration_must_match_campaign_year",
+        "crew_and_internal_layout_may_change_substantially_by_configuration",
+        "major_refit_is_explicit_event_not_cosmetic_skin"
+      ],
+      "crew_generation": [
+        "derive departments from installed systems and mission",
+        "reference complement is guidance, not a random population target"
+      ],
+      "persistence": [
+        "same individual vessel persists through compatible refit",
+        "registry/name remain individual-vessel data"
+      ],
+      "ai_boundary": [
+        "AI may describe known class capabilities but cannot invent live readiness, damage, crew or unsourced exact performance."
+      ],
+      "visual_hooks": [
+        "configuration-specific silhouette/details",
+        "registry overlay",
+        "persistent refit/damage lineage"
+      ],
+      "source_ids": [
+        "MA_CONSTITUTION_CLASS"
+      ]
+    },
+    "miranda": {
+      "gameplay_identity": "long-lived modular/multi-role Starfleet workhorse",
+      "valid_profiles": [
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "science",
+        "patrol",
+        "escort",
+        "supply",
+        "general_service",
+        "training_or_support_when_context_valid"
+      ],
+      "strengths": [
+        "role_flexibility",
+        "long_service_life",
+        "credible_old_ship_assignments"
+      ],
+      "constraints": [
+        "do_not_assume_one_identical_mission_configuration",
+        "late-era examples may be veteran/refitted designs"
+      ],
+      "crew_generation": [
+        "mission configuration determines specialist mix",
+        "support/science/escort variants need different staffing"
+      ],
+      "persistence": [
+        "configuration/refit history belongs to individual ship",
+        "old hull does not imply poor maintenance automatically"
+      ],
+      "ai_boundary": [
+        "Do not infer armament, sensor fit or internal layout beyond selected configuration."
+      ],
+      "visual_hooks": [
+        "shared Miranda silhouette with configuration/refit differences",
+        "age/wear only from World State"
+      ],
+      "source_ids": [
+        "MA_MIRANDA_CLASS"
+      ]
+    },
+    "excelsior": {
+      "gameplay_identity": "late-23rd-century cruiser/explorer with very long 24th-century fleet-service relevance",
+      "valid_profiles": [
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "exploration",
+        "patrol",
+        "fleet_service",
+        "diplomacy",
+        "command_or_support"
+      ],
+      "strengths": [
+        "longevity",
+        "fleet_presence",
+        "credible_high-end_23c_then_veteran_24c_role"
+      ],
+      "constraints": [
+        "prototype/early service and later mature configurations must be date-aware",
+        "age alone does not imply obsolescence in all systems"
+      ],
+      "crew_generation": [
+        "mission and dated configuration drive staffing"
+      ],
+      "persistence": [
+        "refits can extend service without creating new identity"
+      ],
+      "ai_boundary": [
+        "Do not use registry sequence as chronology or infer exact refit level from class name."
+      ],
+      "visual_hooks": [
+        "era-sensitive nacelle/hull/refit detail only when sourced",
+        "individual markings persistent"
+      ],
+      "source_ids": [
+        "MA_EXCELSIOR_CLASS"
+      ]
+    },
+    "oberth": {
+      "gameplay_identity": "small science/survey/support platform",
+      "valid_profiles": [
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "science",
+        "survey",
+        "research",
+        "support",
+        "specialist_transport"
+      ],
+      "strengths": [
+        "science_specialization",
+        "small-ship missions",
+        "credible low-prestige but important assignments"
+      ],
+      "constraints": [
+        "not a generic frontline combatant",
+        "exact tactical capacity remains configuration-specific"
+      ],
+      "crew_generation": [
+        "science specialists can dominate mission complement",
+        "smaller watch structure than large explorers"
+      ],
+      "persistence": [
+        "research equipment/refits are individual/configuration state"
+      ],
+      "ai_boundary": [
+        "Do not inflate combat capability because player importance is high."
+      ],
+      "visual_hooks": [
+        "recognizable small science silhouette",
+        "mission equipment additions need explicit configuration"
+      ],
+      "source_ids": [
+        "MA_OBERTH_CLASS"
+      ]
+    },
+    "galaxy": {
+      "gameplay_identity": "large 24th-century explorer/capital multi-mission platform",
+      "valid_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "deep_space_exploration",
+        "diplomacy",
+        "science",
+        "command",
+        "fleet_operations",
+        "long_duration_presence"
+      ],
+      "strengths": [
+        "large_science_capacity",
+        "large_population_support",
+        "broad_mission_flexibility",
+        "saucer_separation"
+      ],
+      "constraints": [
+        "large crew/population produces major logistics and social simulation load",
+        "saucer separation is capability not default behavior"
+      ],
+      "crew_generation": [
+        "large multi-department staffing",
+        "civilian/passenger population remains separate from duty crew",
+        "watch redundancy expected"
+      ],
+      "persistence": [
+        "saucer/stardrive states remain same ship identity unless explicit catastrophic separation outcome defines otherwise"
+      ],
+      "ai_boundary": [
+        "Do not treat approximately 1000 aboard as 1000 duty officers; do not invent current civilian complement."
+      ],
+      "visual_hooks": [
+        "large-scale recognizability",
+        "configuration/current state overlays",
+        "saucer separation only from authoritative state"
+      ],
+      "source_ids": [
+        "MA_GALAXY_CLASS"
+      ]
+    },
+    "nebula": {
+      "gameplay_identity": "24th-century multi-mission Starfleet platform with configurable mission emphasis",
+      "valid_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "science",
+        "exploration",
+        "fleet_operations",
+        "support",
+        "special_mission"
+      ],
+      "strengths": [
+        "mission_modularity",
+        "shared-era high capability"
+      ],
+      "constraints": [
+        "specific mission module/configuration must be resolved before assuming specialist capability"
+      ],
+      "crew_generation": [
+        "module/mission determines specialist staffing"
+      ],
+      "persistence": [
+        "module changes require explicit refit/configuration event"
+      ],
+      "ai_boundary": [
+        "Do not assume every Nebula carries identical mission hardware."
+      ],
+      "visual_hooks": [
+        "mission-module silhouette/state must match configuration"
+      ],
+      "source_ids": [
+        "MA_NEBULA_CLASS"
+      ]
+    },
+    "intrepid": {
+      "gameplay_identity": "2370s long-range explorer optimized for science, speed and relatively lean crew",
+      "valid_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "long_range_exploration",
+        "science",
+        "rapid_response",
+        "independent_mission"
+      ],
+      "strengths": [
+        "long_range_operation",
+        "science",
+        "variable_geometry_nacelles",
+        "bio_neural_computing",
+        "EMH-capable medical support"
+      ],
+      "constraints": [
+        "technology availability is late-24th-century only",
+        "EMH presence/capability does not imply persistent holographic personhood"
+      ],
+      "crew_generation": [
+        "leaner complement increases cross-qualification and vacancy consequences",
+        "long-range missions require endurance/logistics planning"
+      ],
+      "persistence": [
+        "bio-neural damage/repairs and EMH state are individual ship state"
+      ],
+      "ai_boundary": [
+        "Do not equate Intrepid class with Voyager's unique campaign history or exact loadout."
+      ],
+      "visual_hooks": [
+        "variable-nacelle state",
+        "late-24c Starfleet hull language",
+        "individual damage/refits"
+      ],
+      "source_ids": [
+        "MA_INTREPID_CLASS",
+        "MA_BIONEURAL_GEL_PACK"
+      ]
+    },
+    "defiant": {
+      "gameplay_identity": "small 2370s combat/escort-focused Starfleet design",
+      "valid_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "combat",
+        "escort",
+        "reconnaissance",
+        "high-threat_response"
+      ],
+      "strengths": [
+        "compact_firepower",
+        "armor",
+        "tactical_specialization"
+      ],
+      "constraints": [
+        "small size/crew limits broad long-duration support compared with explorers",
+        "cloaking device is not generic class capability"
+      ],
+      "crew_generation": [
+        "tactical/engineering/security coverage prioritized",
+        "small crew makes casualties/vacancies immediately consequential"
+      ],
+      "persistence": [
+        "individual special equipment such as cloak belongs to ship configuration and political authorization"
+      ],
+      "ai_boundary": [
+        "Never assume cloak because class=Defiant; never copy USS Defiant special history into generated class members."
+      ],
+      "visual_hooks": [
+        "compact tactical silhouette",
+        "special equipment only if configuration says so"
+      ],
+      "source_ids": [
+        "MA_DEFIANT_CLASS",
+        "MA_QUANTUM_TORPEDO"
+      ]
+    }
+  },
+  "generation_rules": [
+    "Filter by date, operator, role and configuration before class selection.",
+    "Veteran classes remain valid where canon supports continued service.",
+    "Player importance never forces prestigious or newest class.",
+    "Generated individual ships receive stable ship_id and persist once materialized.",
+    "Class data never contains individual damage, crew, captain or live readiness."
+  ],
+  "unknown_policy": "Exact unsourced deck counts, complements, performance figures and internal layouts remain unknown/configuration-specific.",
+  "nap_implications": [
+    "NAP binds exterior assets first to class/design and dated configuration, then to individual ship identity and current state."
+  ]
+}
