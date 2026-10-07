@@ -1,0 +1,158 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "procedural_starship_instance_generation_pipeline",
+  "status": "FOUNDATION_FIXED",
+  "parent_rules_ref": "universe/generation/procedural_starship_rules.json",
+  "principle": "Generate the reason first, then the ship. Observation never causes the vessel to spring into existence retroactively.",
+  "stages": [
+    {
+      "order": 1,
+      "id": "causal_need",
+      "outputs": [
+        "need_id",
+        "purpose",
+        "origin",
+        "destination_or_operating_area",
+        "time_window",
+        "stakeholders"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "operator_and_role",
+      "outputs": [
+        "operator_id",
+        "role_family",
+        "legal_and_political_context"
+      ]
+    },
+    {
+      "order": 3,
+      "id": "design_selection",
+      "outputs": [
+        "design_or_class_ref",
+        "configuration_ref",
+        "selection_reason"
+      ],
+      "rule": "Filter by date, operator, role, availability, mission endurance, capacity and technology."
+    },
+    {
+      "order": 4,
+      "id": "stable_identity",
+      "outputs": [
+        "stable_ship_id",
+        "display_name_state",
+        "registry_state",
+        "construction_or_origin_ref"
+      ],
+      "rule": "Reserve canonical identities and prevent collisions."
+    },
+    {
+      "order": 5,
+      "id": "physical_configuration",
+      "outputs": [
+        "installed_capabilities",
+        "capacity_state",
+        "refit_state",
+        "smallcraft_state",
+        "interior_topology_ref"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "crew_requirements",
+      "outputs": [
+        "minimum_safe_staffing",
+        "target_operational_staffing",
+        "department_requirements",
+        "specialist_requirements",
+        "vacancies"
+      ]
+    },
+    {
+      "order": 7,
+      "id": "watch_and_life",
+      "outputs": [
+        "habitability_profile_ref",
+        "watch_policy",
+        "watch_rosters",
+        "on_call_pool",
+        "life_services",
+        "schedule_baseline"
+      ]
+    },
+    {
+      "order": 8,
+      "id": "population_materialization",
+      "outputs": [
+        "crew_manifest",
+        "civilian_manifest",
+        "passenger_manifest",
+        "population_tiers"
+      ],
+      "rule": "Named NPCs materialize from staffing/population needs and persist."
+    },
+    {
+      "order": 9,
+      "id": "mission_and_resources",
+      "outputs": [
+        "route_or_patrol_area",
+        "cargo_or_passenger_manifest",
+        "fuel_resource_state",
+        "maintenance_state",
+        "current_activity"
+      ]
+    },
+    {
+      "order": 10,
+      "id": "visual_identity",
+      "outputs": [
+        "visual_identity_id",
+        "resolved_visual_profile_stack"
+      ],
+      "rule": "Visual layer consumes authoritative design/identity/state."
+    },
+    {
+      "order": 11,
+      "id": "knowledge_and_sensor_visibility",
+      "outputs": [
+        "detectable_signatures",
+        "known_identity_by_observer",
+        "transponder_or_record_state"
+      ]
+    },
+    {
+      "order": 12,
+      "id": "persist",
+      "outputs": [
+        "world_state_entity",
+        "generation_provenance",
+        "event_history_seed"
+      ]
+    }
+  ],
+  "deterministic_seed_domains": [
+    "design_selection",
+    "ship_identity",
+    "crew_requirement",
+    "population_materialization",
+    "watch_schedule",
+    "cargo_or_passenger_manifest",
+    "visual_identity",
+    "initial_condition"
+  ],
+  "persistence_rules": [
+    "Once materialized, the ship remains the same entity across save/load/off-screen simulation.",
+    "Later refits, crew changes, damage, ownership changes and route changes append history.",
+    "A ship can change operator without changing physical identity.",
+    "Destroyed, captured, decommissioned or missing states are outcomes, not regeneration triggers."
+  ],
+  "forbidden": [
+    "spawn_ship_because_player_scanned_empty_space",
+    "copy_canonical_ship_identity",
+    "reroll_class_after_save_load",
+    "invent_crew_to_fill_runtime_vacancy",
+    "add_damage_for_visual_interest_without_cause",
+    "generate_cargo_without_economic_or_mission_cause"
+  ]
+}
