@@ -67,8 +67,12 @@
     "AI dialogue cannot mutate authoritative character state directly.",
     "Character availability and expected presence are constrained by authoritative schedule state, travel and current events.",
     "Runtime state evolves an existing character identity; it never regenerates the person.",
-    "Age progression and persistent physical changes are history/state updates linked to the same base visual identity."
+    "Age progression and persistent physical changes are history/state updates linked to the same base visual identity.",
+    "Citizenship, organization membership, assignment and personal loyalty remain separate state.",
+    "Species, culture or visible uniform do not by themselves prove affiliation."
   ],
   "identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
-  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json"
+  "persistence_contract_ref": "gameplay/persistence/persistent_state_roundtrip_contract.json",
+  "organization_contract_ref": "gameplay/organizations/organization_runtime_contract.json",
+  "affiliation_citizenship_contract_ref": "gameplay/organizations/character_affiliation_citizenship_contract.json"
 }
