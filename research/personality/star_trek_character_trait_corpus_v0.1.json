@@ -1,0 +1,1899 @@
+{
+  "schema_version": "0.1.0",
+  "corpus_id": "star_trek_canonical_personality_trait_corpus",
+  "status": "INITIAL_BROAD_PASS",
+  "purpose": "Research corpus for abstract trait extraction. It is not a procedural personality library.",
+  "hard_rule": "Canonical character labels and combinations must not be emitted as NPC personality templates. Production generation consumes only normalized abstract traits/recipes.",
+  "coverage": {
+    "sample_count": 49,
+    "continuities": [
+      "prime",
+      "kelvin"
+    ],
+    "eras_or_series": [
+      "TOS",
+      "TOS_films",
+      "Kelvin_films",
+      "TNG",
+      "TNG_films",
+      "DS9",
+      "VOY",
+      "ENT",
+      "DIS",
+      "SNW",
+      "LD",
+      "PIC",
+      "PRO_via_Janeway_Chakotay_context"
+    ]
+  },
+  "methodology": [
+    "Extract observable behavior rather than fandom personality typing.",
+    "Prefer official StarTrek.com descriptions/interviews and on-screen behavioral summaries.",
+    "Separate individual traits from species/cultural expression.",
+    "Record evolution as phase change where useful.",
+    "Use contradictions as data: a person can be warm and intimidating, anxious and brave, humorous and highly professional.",
+    "Do not infer severe pathology or diagnosis from dramatic behavior."
+  ],
+  "entries": [
+    {
+      "sample_id": "CANON_KIRK_PRIME",
+      "character_label": "James T. Kirk — Prime",
+      "continuity": "prime",
+      "primary_era": "TOS_films",
+      "species_context": "human",
+      "observed_traits": [
+        "cunning",
+        "courageous",
+        "self_confident",
+        "improvisational",
+        "hands_on",
+        "rule_flexible",
+        "career_committed",
+        "risk_tolerant"
+      ],
+      "interaction_style": [
+        "decisive",
+        "persuasive",
+        "can_use_charm_or_bluff",
+        "direct_under_pressure"
+      ],
+      "humor_style": [
+        "situational",
+        "confident_banter"
+      ],
+      "authority_style": [
+        "strong_command_presence",
+        "willing_to_break_rules_for_perceived_greater_good"
+      ],
+      "stress_style": [
+        "takes_control",
+        "acts_decisively",
+        "improvises"
+      ],
+      "useful_contrasts": [
+        "serious_and_studious_background_vs_bold_command_style"
+      ],
+      "source_refs": [
+        "PERS_KIRK_101"
+      ],
+      "abstraction_note": "Useful for separating confidence, risk tolerance, improvisation and rule flexibility into independent traits."
+    },
+    {
+      "sample_id": "CANON_KIRK_KELVIN",
+      "character_label": "James T. Kirk — Kelvin",
+      "continuity": "kelvin",
+      "primary_era": "Kelvin_films",
+      "species_context": "human",
+      "observed_traits": [
+        "self_assured",
+        "ambitious",
+        "competitive",
+        "risk_tolerant",
+        "defiant",
+        "decisive",
+        "vulnerable_to_self_doubt"
+      ],
+      "interaction_style": [
+        "bold",
+        "challenging",
+        "fast_commitment"
+      ],
+      "humor_style": [
+        "cocky_banter"
+      ],
+      "authority_style": [
+        "rapid_claim_of_responsibility",
+        "resists_no_win_framing"
+      ],
+      "stress_style": [
+        "pushes_forward",
+        "can_become_unhinged_or_overcompensating",
+        "later_reflects"
+      ],
+      "evolution_observation": "Strong confidence can coexist with periods of self-doubt and fallibility without replacing core identity.",
+      "source_refs": [
+        "PERS_KIRK_KELVIN"
+      ],
+      "abstraction_note": "Useful evidence for trait tensions and confidence evolution."
+    },
+    {
+      "sample_id": "CANON_SPOCK",
+      "character_label": "Spock",
+      "continuity": "prime",
+      "primary_era": "SNW_TOS_films",
+      "species_context": "human_vulcan_hybrid_vulcan_upbringing",
+      "observed_traits": [
+        "highly_logical",
+        "deeply_empathetic",
+        "wise",
+        "emotionally_contained",
+        "intellectually_curious",
+        "loyal",
+        "identity_conflicted"
+      ],
+      "interaction_style": [
+        "precise",
+        "formal",
+        "evidence_first",
+        "often_reserved"
+      ],
+      "humor_style": [
+        "dry",
+        "subtle",
+        "rare_but_real"
+      ],
+      "authority_style": [
+        "duty_oriented",
+        "careful_dissent"
+      ],
+      "stress_style": [
+        "self_control",
+        "analysis",
+        "emotion_can_break_through_under_extreme_pressure"
+      ],
+      "source_refs": [
+        "PERS_SPOCK_DISCOVERY",
+        "PERS_SPOCK_HUMAN_SIDE"
+      ],
+      "abstraction_note": "Critical proof that culture/expression and individual empathy are separate dimensions."
+    },
+    {
+      "sample_id": "CANON_MCCOY_PRIME",
+      "character_label": "Leonard McCoy — Prime",
+      "continuity": "prime",
+      "primary_era": "TOS_films",
+      "species_context": "human",
+      "observed_traits": [
+        "compassionate",
+        "cantankerous",
+        "outspoken",
+        "pragmatic",
+        "emotionally_expressive",
+        "old_fashioned",
+        "deeply_loyal"
+      ],
+      "interaction_style": [
+        "blunt",
+        "human_centered",
+        "frequent_argumentative_banter"
+      ],
+      "humor_style": [
+        "sarcastic",
+        "grumbling",
+        "teasing"
+      ],
+      "authority_style": [
+        "willing_to_challenge_command_when_conscience_or_medicine_requires"
+      ],
+      "stress_style": [
+        "voices_risk_openly",
+        "continues_helping_despite_personal_risk"
+      ],
+      "source_refs": [
+        "PERS_MCCOY_101",
+        "PERS_FIRST_DO_NO_HARM"
+      ],
+      "abstraction_note": "Useful for warm core + abrasive surface combination."
+    },
+    {
+      "sample_id": "CANON_MCCOY_KELVIN",
+      "character_label": "Leonard McCoy — Kelvin",
+      "continuity": "kelvin",
+      "primary_era": "Kelvin_films",
+      "species_context": "human",
+      "observed_traits": [
+        "gruff",
+        "argumentative",
+        "anxious_about_transport_or_flight",
+        "cordial_under_surface",
+        "loyal"
+      ],
+      "interaction_style": [
+        "complaining",
+        "direct",
+        "rapid_familiarity_with_trusted_peer"
+      ],
+      "humor_style": [
+        "irritable_banter"
+      ],
+      "authority_style": [
+        "professional_conscience"
+      ],
+      "stress_style": [
+        "verbalizes_discomfort",
+        "keeps_functioning"
+      ],
+      "source_refs": [
+        "PERS_MCCOY_KELVIN"
+      ],
+      "abstraction_note": "Shows same broad archetypal ingredients can express differently in another continuity."
+    },
+    {
+      "sample_id": "CANON_SCOTTY_PRIME",
+      "character_label": "Montgomery Scott — Prime",
+      "continuity": "prime",
+      "primary_era": "TOS_films",
+      "species_context": "human",
+      "observed_traits": [
+        "technically_proud",
+        "dependable",
+        "resourceful",
+        "loyal",
+        "heritage_proud",
+        "witty"
+      ],
+      "interaction_style": [
+        "workmanlike",
+        "enthusiastic_about_engineering"
+      ],
+      "humor_style": [
+        "wry",
+        "storytelling_or_boastful"
+      ],
+      "authority_style": [
+        "professional_pride",
+        "protective_of_engineering_judgment"
+      ],
+      "stress_style": [
+        "problem_solving",
+        "pushes_technical_limits"
+      ],
+      "source_refs": [
+        "PERS_SCOTTY_WIT"
+      ],
+      "abstraction_note": "Useful for mastery pride without generic arrogance."
+    },
+    {
+      "sample_id": "CANON_SCOTTY_KELVIN",
+      "character_label": "Montgomery Scott — Kelvin",
+      "continuity": "kelvin",
+      "primary_era": "Kelvin_films",
+      "species_context": "human",
+      "observed_traits": [
+        "inventive",
+        "humorous",
+        "enthusiastic",
+        "principled",
+        "curious",
+        "technically_bold"
+      ],
+      "interaction_style": [
+        "animated",
+        "quick_witted"
+      ],
+      "humor_style": [
+        "frequent",
+        "self_amused",
+        "situational"
+      ],
+      "authority_style": [
+        "will_refuse_orders_that_violate_core_professional_conscience"
+      ],
+      "stress_style": [
+        "improvises",
+        "uses_humor",
+        "keeps_working"
+      ],
+      "source_refs": [
+        "PERS_SCOTTY_KELVIN"
+      ],
+      "abstraction_note": "Useful for separating high humor frequency from lack of seriousness."
+    },
+    {
+      "sample_id": "CANON_UHURA_KELVIN",
+      "character_label": "Nyota Uhura — Kelvin",
+      "continuity": "kelvin",
+      "primary_era": "Kelvin_films",
+      "species_context": "human",
+      "observed_traits": [
+        "self_confident",
+        "professionally_assertive",
+        "highly_competent",
+        "self_advocating",
+        "focused"
+      ],
+      "interaction_style": [
+        "direct",
+        "evidence_based",
+        "confident"
+      ],
+      "humor_style": [
+        "low_to_moderate"
+      ],
+      "authority_style": [
+        "respectful_but_willing_to_challenge_assignment_decisions"
+      ],
+      "stress_style": [
+        "relies_on_expertise"
+      ],
+      "source_refs": [
+        "PERS_UHURA_KELVIN"
+      ],
+      "abstraction_note": "Useful for assertiveness without rebelliousness."
+    },
+    {
+      "sample_id": "CANON_PICARD",
+      "character_label": "Jean-Luc Picard",
+      "continuity": "prime",
+      "primary_era": "TNG_films_PIC",
+      "species_context": "human",
+      "observed_traits": [
+        "compassionate",
+        "patient",
+        "curious",
+        "private",
+        "introspective",
+        "principled",
+        "diplomatic",
+        "humble",
+        "intellectually_rigorous"
+      ],
+      "interaction_style": [
+        "formal",
+        "clear",
+        "commanding",
+        "listens_to_competing_views"
+      ],
+      "humor_style": [
+        "dry_or_subtle",
+        "low_frequency"
+      ],
+      "authority_style": [
+        "consultative",
+        "integrity_centered",
+        "deliberate"
+      ],
+      "stress_style": [
+        "pauses_and_reasons",
+        "can_become_rigid_or_personally_driven_when_wounded",
+        "returns_to_principles"
+      ],
+      "evolution_observation": "Becomes more interpersonally warm while remaining recognizably private and principled.",
+      "source_refs": [
+        "PERS_LEADERSHIP_READY_ROOM",
+        "PERS_PICARD_COMPASSION",
+        "PERS_INTROVERTS"
+      ],
+      "abstraction_note": "Strong sample for private + relational leader coexistence."
+    },
+    {
+      "sample_id": "CANON_RIKER",
+      "character_label": "William T. Riker",
+      "continuity": "prime",
+      "primary_era": "TNG_films_PIC",
+      "species_context": "human",
+      "observed_traits": [
+        "confident",
+        "amiable",
+        "socially_comfortable",
+        "decisive",
+        "crew_focused",
+        "adaptable"
+      ],
+      "interaction_style": [
+        "approachable",
+        "confident",
+        "comfortable_with_informal_rapport"
+      ],
+      "humor_style": [
+        "playful",
+        "charming"
+      ],
+      "authority_style": [
+        "supports_captain_but_can_offer_alternative_strategy",
+        "comfortable_taking_command"
+      ],
+      "stress_style": [
+        "takes_control",
+        "protects_crew",
+        "acts_pragmatically"
+      ],
+      "source_refs": [
+        "PERS_NUMBER_ONE"
+      ],
+      "abstraction_note": "Used mainly as first-officer contrast: confidence plus interpersonal ease."
+    },
+    {
+      "sample_id": "CANON_DATA",
+      "character_label": "Data",
+      "continuity": "prime",
+      "primary_era": "TNG_films",
+      "species_context": "soong_type_android",
+      "observed_traits": [
+        "optimistic",
+        "knowledge_hungry",
+        "curious",
+        "analytical",
+        "courageous",
+        "loyal",
+        "socially_literal",
+        "artistically_exploratory"
+      ],
+      "interaction_style": [
+        "precise",
+        "literal",
+        "information_rich",
+        "cooperative"
+      ],
+      "humor_style": [
+        "learned_or_experimental",
+        "often_unintentional"
+      ],
+      "authority_style": [
+        "duty_oriented",
+        "collaborative"
+      ],
+      "stress_style": [
+        "analytical",
+        "mission_focused",
+        "protective"
+      ],
+      "source_refs": [
+        "PERS_DATA_TOP",
+        "PERS_DATA_SPINER"
+      ],
+      "abstraction_note": "Useful for curiosity, literalism, optimism and social awkwardness as separable traits."
+    },
+    {
+      "sample_id": "CANON_WORF",
+      "character_label": "Worf",
+      "continuity": "prime",
+      "primary_era": "TNG_DS9_films",
+      "species_context": "klingon_raised_human_context",
+      "observed_traits": [
+        "serious",
+        "stoic",
+        "duty_oriented",
+        "honor_focused",
+        "reserved",
+        "protective",
+        "idealistic_about_klingon_identity"
+      ],
+      "interaction_style": [
+        "direct",
+        "formal",
+        "low_small_talk"
+      ],
+      "humor_style": [
+        "dry",
+        "deadpan",
+        "low_frequency",
+        "sometimes_intentional"
+      ],
+      "authority_style": [
+        "respects_chain_of_command_but_can_challenge_on_honor_or_security_grounds"
+      ],
+      "stress_style": [
+        "confronts",
+        "protects",
+        "becomes_more_direct"
+      ],
+      "source_refs": [
+        "PERS_WORF_WISDOM"
+      ],
+      "abstraction_note": "Important evidence that Klingon-associated seriousness does not mean no humor."
+    },
+    {
+      "sample_id": "CANON_TROI",
+      "character_label": "Deanna Troi",
+      "continuity": "prime",
+      "primary_era": "TNG_films_PIC",
+      "species_context": "human_betazoid_hybrid",
+      "observed_traits": [
+        "empathetic",
+        "warm",
+        "attentive_listener",
+        "emotionally_perceptive",
+        "supportive",
+        "willing_to_challenge"
+      ],
+      "interaction_style": [
+        "gentle_but_direct",
+        "relationship_preserving",
+        "emotionally_literate"
+      ],
+      "humor_style": [
+        "warm",
+        "situational"
+      ],
+      "authority_style": [
+        "advisory",
+        "can_challenge_command_through_care_and_clarity"
+      ],
+      "stress_style": [
+        "grounds_others",
+        "names_difficult_emotions"
+      ],
+      "source_refs": [
+        "PERS_TROI_EMPATHY"
+      ],
+      "abstraction_note": "Useful for empathy expression that is active rather than passive."
+    },
+    {
+      "sample_id": "CANON_SISKO",
+      "character_label": "Benjamin Sisko",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "human",
+      "observed_traits": [
+        "warm",
+        "emotionally_open",
+        "protective",
+        "pragmatic",
+        "ambitious",
+        "brash_but_grounded",
+        "family_oriented",
+        "realistic"
+      ],
+      "interaction_style": [
+        "commanding",
+        "emotionally_present",
+        "can_be_intimidating",
+        "direct"
+      ],
+      "humor_style": [
+        "warm",
+        "situational"
+      ],
+      "authority_style": [
+        "decisive",
+        "mission_realist",
+        "personally_invested_in_people"
+      ],
+      "stress_style": [
+        "accepts_imperfect_outcomes",
+        "can_take_bold_or_morally_costly_action",
+        "protects_family_and_crew"
+      ],
+      "source_refs": [
+        "PERS_SISKO_FATHER",
+        "PERS_SISKO_RELATABLE"
+      ],
+      "abstraction_note": "Useful for combining warmth, pragmatism and command intensity."
+    },
+    {
+      "sample_id": "CANON_KIRA",
+      "character_label": "Kira Nerys",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "bajoran",
+      "observed_traits": [
+        "passionate",
+        "ideologically_committed",
+        "assertive",
+        "impatient",
+        "brave",
+        "loyal",
+        "capable_of_deep_friendship",
+        "politically_adaptive"
+      ],
+      "interaction_style": [
+        "blunt",
+        "confrontational",
+        "emotionally_expressive"
+      ],
+      "humor_style": [
+        "sharp",
+        "situational"
+      ],
+      "authority_style": [
+        "questions_authority_when_values_conflict",
+        "grows_into_statesmanship"
+      ],
+      "stress_style": [
+        "confronts_problem_directly",
+        "can_become_single_minded"
+      ],
+      "source_refs": [
+        "PERS_KIRA"
+      ],
+      "abstraction_note": "Useful for assertiveness + loyalty + ideological drive without hostility lock."
+    },
+    {
+      "sample_id": "CANON_ODO",
+      "character_label": "Odo",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "changeling",
+      "observed_traits": [
+        "introverted",
+        "perfectionistic",
+        "justice_focused",
+        "private",
+        "suspicious",
+        "grouchy_surface",
+        "slow_to_disclose_feelings"
+      ],
+      "interaction_style": [
+        "terse",
+        "observant",
+        "small_talk_averse",
+        "skeptical"
+      ],
+      "humor_style": [
+        "dry",
+        "banter_with_trusted_rival"
+      ],
+      "authority_style": [
+        "order_and_justice_centered",
+        "can_be_overcertain"
+      ],
+      "stress_style": [
+        "investigates",
+        "tightens_control",
+        "withdraws_personally"
+      ],
+      "source_refs": [
+        "PERS_INTROVERTS",
+        "PERS_ODO_QUARK"
+      ],
+      "abstraction_note": "Useful for slow trust and professional pride."
+    },
+    {
+      "sample_id": "CANON_QUARK",
+      "character_label": "Quark",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "ferengi",
+      "observed_traits": [
+        "profit_driven",
+        "socially_shrewd",
+        "cynical",
+        "resourceful",
+        "argumentative",
+        "capable_of_compassion",
+        "relationship_attached"
+      ],
+      "interaction_style": [
+        "bargaining",
+        "bantering",
+        "complaining",
+        "persuasive"
+      ],
+      "humor_style": [
+        "witty",
+        "sarcastic",
+        "teasing"
+      ],
+      "authority_style": [
+        "authority_skeptical_when_it_hurts_business",
+        "pragmatic"
+      ],
+      "stress_style": [
+        "negotiates",
+        "schemes",
+        "can_choose_people_over_profit"
+      ],
+      "source_refs": [
+        "PERS_ODO_QUARK"
+      ],
+      "abstraction_note": "Important anti-stereotype sample: commercial drive can coexist with loyalty/compassion."
+    },
+    {
+      "sample_id": "CANON_JADZIA_DAX",
+      "character_label": "Jadzia Dax",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "trill_joined",
+      "observed_traits": [
+        "calm",
+        "relaxed",
+        "self_confident",
+        "mature",
+        "hopeful",
+        "positive",
+        "socially_flexible",
+        "wise",
+        "fearless"
+      ],
+      "interaction_style": [
+        "open",
+        "easy_rapport",
+        "nondefensive"
+      ],
+      "humor_style": [
+        "playful",
+        "social",
+        "teasing"
+      ],
+      "authority_style": [
+        "confident_without_need_for_dominance"
+      ],
+      "stress_style": [
+        "maintains_composure",
+        "draws_on_experience"
+      ],
+      "source_refs": [
+        "PERS_DAX_INTERVIEW",
+        "PERS_DAX_PRIDE"
+      ],
+      "abstraction_note": "Useful for confidence without arrogance and high sociability with maturity."
+    },
+    {
+      "sample_id": "CANON_BASHIR",
+      "character_label": "Julian Bashir",
+      "continuity": "prime",
+      "primary_era": "DS9",
+      "species_context": "human_genetically_augmented",
+      "observed_traits": [
+        "ambitious",
+        "optimistic",
+        "earnest",
+        "brilliant",
+        "initially_naive",
+        "self_proving",
+        "sometimes_arrogant",
+        "deeply_compassionate"
+      ],
+      "interaction_style": [
+        "talkative",
+        "enthusiastic",
+        "eager_to_demonstrate_competence"
+      ],
+      "humor_style": [
+        "light",
+        "social"
+      ],
+      "authority_style": [
+        "professional_ethics_centered"
+      ],
+      "stress_style": [
+        "refuses_hopelessness",
+        "overcommits_to_saving_others"
+      ],
+      "evolution_observation": "Matures socially while retaining optimism, curiosity and compassion.",
+      "source_refs": [
+        "PERS_FIRST_DO_NO_HARM"
+      ],
+      "abstraction_note": "Useful for insecurity/self-proving beneath apparent arrogance."
+    },
+    {
+      "sample_id": "CANON_OBRIEN",
+      "character_label": "Miles O'Brien",
+      "continuity": "prime",
+      "primary_era": "TNG_DS9",
+      "species_context": "human",
+      "observed_traits": [
+        "practical",
+        "hardworking",
+        "family_devoted",
+        "technically_resourceful",
+        "grounded",
+        "loyal",
+        "resilient"
+      ],
+      "interaction_style": [
+        "plainspoken",
+        "informal",
+        "workmanlike"
+      ],
+      "humor_style": [
+        "dry",
+        "friendly_banter"
+      ],
+      "authority_style": [
+        "practical_professionalism",
+        "low_status_display_need"
+      ],
+      "stress_style": [
+        "fixes_problem",
+        "endures",
+        "protects_family_and_crew"
+      ],
+      "source_refs": [
+        "PERS_OBRIEN_DAD"
+      ],
+      "abstraction_note": "Strong everyperson sample for practical competence without command ambition."
+    },
+    {
+      "sample_id": "CANON_JANEWAY",
+      "character_label": "Kathryn Janeway",
+      "continuity": "prime",
+      "primary_era": "VOY_PRO",
+      "species_context": "human",
+      "observed_traits": [
+        "decisive",
+        "responsible",
+        "scientifically_curios",
+        "mentor_oriented",
+        "protective",
+        "relationship_building",
+        "principled",
+        "patient_in_use_of_force",
+        "strong_willed"
+      ],
+      "interaction_style": [
+        "commanding",
+        "teacherly",
+        "personally_involved_with_crew"
+      ],
+      "humor_style": [
+        "warm",
+        "dry"
+      ],
+      "authority_style": [
+        "caretaker_leadership",
+        "clear_chain_of_command",
+        "consultative_but_final"
+      ],
+      "stress_style": [
+        "takes_responsibility",
+        "persists",
+        "can_become_stubborn"
+      ],
+      "source_refs": [
+        "PERS_JANEWAY_CARETAKER",
+        "PERS_LEADERSHIP_READY_ROOM"
+      ],
+      "abstraction_note": "Useful for mentor instinct + decisiveness + strong responsibility."
+    },
+    {
+      "sample_id": "CANON_CHAKOTAY",
+      "character_label": "Chakotay",
+      "continuity": "prime",
+      "primary_era": "VOY_PRO",
+      "species_context": "human",
+      "observed_traits": [
+        "calm",
+        "mediating",
+        "loyal",
+        "observant_of_people",
+        "trusts_others_competence",
+        "steady"
+      ],
+      "interaction_style": [
+        "measured",
+        "relationship_preserving",
+        "supportive_dissent"
+      ],
+      "humor_style": [
+        "gentle",
+        "low_to_moderate"
+      ],
+      "authority_style": [
+        "balancing_first_officer",
+        "bridge_builder"
+      ],
+      "stress_style": [
+        "mediates",
+        "advocates_for_team_members",
+        "maintains_steady_tone"
+      ],
+      "source_refs": [
+        "PERS_JANEWAY_CHAKOTAY"
+      ],
+      "abstraction_note": "Useful for low-drama stabilizing second-in-command personality."
+    },
+    {
+      "sample_id": "CANON_TUVOK",
+      "character_label": "Tuvok",
+      "continuity": "prime",
+      "primary_era": "VOY",
+      "species_context": "vulcan",
+      "observed_traits": [
+        "logical",
+        "wise",
+        "reserved",
+        "patient",
+        "risk_aware",
+        "comfortable_with_contradiction",
+        "loyal"
+      ],
+      "interaction_style": [
+        "formal",
+        "precise",
+        "evidence_first"
+      ],
+      "humor_style": [
+        "very_dry",
+        "rare"
+      ],
+      "authority_style": [
+        "careful_advisor",
+        "duty_oriented"
+      ],
+      "stress_style": [
+        "analysis",
+        "accepts_counterintuitive_solution_when_logic_supports_it"
+      ],
+      "source_refs": [
+        "PERS_TUVOK"
+      ],
+      "abstraction_note": "Useful contrast with Spock: same culture, different individual expression."
+    },
+    {
+      "sample_id": "CANON_SEVEN_VOYAGER",
+      "character_label": "Seven of Nine — Voyager phase",
+      "continuity": "prime",
+      "primary_era": "VOY",
+      "species_context": "human_former_borg",
+      "observed_traits": [
+        "highly_competent",
+        "highly_intelligent",
+        "blunt",
+        "socially_awkward",
+        "task_focused",
+        "perfectionistic",
+        "individuality_learning",
+        "guarded"
+      ],
+      "interaction_style": [
+        "direct",
+        "technical",
+        "nicety_averse"
+      ],
+      "humor_style": [
+        "low_frequency",
+        "unintentional_or_dry"
+      ],
+      "authority_style": [
+        "questions_inefficiency",
+        "values_competence"
+      ],
+      "stress_style": [
+        "hyperfocuses",
+        "cuts_to_task"
+      ],
+      "source_refs": [
+        "PERS_SEVEN_PREPICARD",
+        "PERS_INTROVERTS"
+      ],
+      "abstraction_note": "Excellent sample for competence + low social ease without low empathy potential."
+    },
+    {
+      "sample_id": "CANON_SEVEN_PICARD",
+      "character_label": "Seven of Nine — Picard phase",
+      "continuity": "prime",
+      "primary_era": "PIC",
+      "species_context": "human_former_borg",
+      "observed_traits": [
+        "protective",
+        "justice_oriented",
+        "rule_flexible",
+        "harder_edged",
+        "independent",
+        "still_blunt",
+        "compassion_for_vulnerable"
+      ],
+      "interaction_style": [
+        "direct",
+        "decisive",
+        "less_socially_naive"
+      ],
+      "humor_style": [
+        "dry"
+      ],
+      "authority_style": [
+        "skeptical_of_institutions",
+        "protective_action_bias"
+      ],
+      "stress_style": [
+        "acts",
+        "protects",
+        "breaks_rules_if_needed"
+      ],
+      "evolution_observation": "Later life changes rule orientation and social confidence while preserving directness, independence and competence.",
+      "source_refs": [
+        "PERS_SEVEN_PICARD"
+      ],
+      "abstraction_note": "Primary evolution example: continuity without personality reroll."
+    },
+    {
+      "sample_id": "CANON_BELANNA",
+      "character_label": "B'Elanna Torres",
+      "continuity": "prime",
+      "primary_era": "VOY",
+      "species_context": "human_klingon_hybrid",
+      "observed_traits": [
+        "brilliant",
+        "stubborn",
+        "temperamental",
+        "intense",
+        "loyal",
+        "hardworking",
+        "self_critical",
+        "leadership_capable"
+      ],
+      "interaction_style": [
+        "blunt",
+        "emotionally_direct",
+        "low_tolerance_for_nonsense"
+      ],
+      "humor_style": [
+        "sarcastic",
+        "sharp"
+      ],
+      "authority_style": [
+        "respects_competence_more_than_status_display"
+      ],
+      "stress_style": [
+        "confronts",
+        "channels_anger_into_work",
+        "can_self_isolate"
+      ],
+      "source_refs": [
+        "PERS_BELANNA_LOVE"
+      ],
+      "abstraction_note": "Useful for intensity as fuel for competence rather than pathology."
+    },
+    {
+      "sample_id": "CANON_EMH_DOCTOR",
+      "character_label": "The Doctor — Voyager EMH",
+      "continuity": "prime",
+      "primary_era": "VOY",
+      "species_context": "persistent_holographic_person",
+      "observed_traits": [
+        "earnest",
+        "cranky",
+        "self-important",
+        "adaptable",
+        "recognition_seeking",
+        "compassionate",
+        "artistic_or_performative"
+      ],
+      "interaction_style": [
+        "verbose",
+        "self-referential",
+        "professionally_direct"
+      ],
+      "humor_style": [
+        "sassy",
+        "sarcastic",
+        "complaining"
+      ],
+      "authority_style": [
+        "assertive_about_medical_authority_and_personhood"
+      ],
+      "stress_style": [
+        "complains_but_performs",
+        "seeks_solution"
+      ],
+      "source_refs": [
+        "PERS_DOCTOR_FUN",
+        "PERS_FIRST_DO_NO_HARM"
+      ],
+      "abstraction_note": "Useful for vanity + compassion + competence coexistence."
+    },
+    {
+      "sample_id": "CANON_TOM_PARIS",
+      "character_label": "Tom Paris",
+      "continuity": "prime",
+      "primary_era": "VOY",
+      "species_context": "human",
+      "observed_traits": [
+        "rebellious_surface",
+        "good_core",
+        "humorous",
+        "adventurous",
+        "socially_easy",
+        "redemption_oriented",
+        "loyal"
+      ],
+      "interaction_style": [
+        "bantering",
+        "casual",
+        "charming"
+      ],
+      "humor_style": [
+        "frequent",
+        "ironic",
+        "playful"
+      ],
+      "authority_style": [
+        "initially_rule_flexible",
+        "grows_into_professional_responsibility"
+      ],
+      "stress_style": [
+        "improvises",
+        "supports_friends"
+      ],
+      "evolution_observation": "Rough exterior and rebelliousness soften into mature professional reliability.",
+      "source_refs": [
+        "PERS_TOM_PARIS"
+      ],
+      "abstraction_note": "Useful for growth from anti-authority presentation to dependable officer."
+    },
+    {
+      "sample_id": "CANON_ARCHER",
+      "character_label": "Jonathan Archer",
+      "continuity": "prime",
+      "primary_era": "ENT",
+      "species_context": "human",
+      "observed_traits": [
+        "open_communicator",
+        "impatient_at_times",
+        "intuitive",
+        "exploratory",
+        "independent",
+        "willing_to_speak_mind",
+        "learns_from_input"
+      ],
+      "interaction_style": [
+        "direct",
+        "informal_by_later_starfleet_standards",
+        "relationship_building"
+      ],
+      "humor_style": [
+        "moderate",
+        "easy_rapport"
+      ],
+      "authority_style": [
+        "welcomes_input",
+        "can_be_impulsive",
+        "develops_patience"
+      ],
+      "stress_style": [
+        "speaks_mind",
+        "acts_then_reflects",
+        "later_more_deliberate"
+      ],
+      "source_refs": [
+        "PERS_LEADERSHIP_READY_ROOM"
+      ],
+      "abstraction_note": "Useful for leadership growth from impatience to more reflective diplomacy."
+    },
+    {
+      "sample_id": "CANON_TPOL",
+      "character_label": "T'Pol",
+      "continuity": "prime",
+      "primary_era": "ENT",
+      "species_context": "vulcan",
+      "observed_traits": [
+        "self_possessed",
+        "open_minded",
+        "identity_secure",
+        "reserved",
+        "analytical",
+        "adaptable_without_assimilation",
+        "loyal"
+      ],
+      "interaction_style": [
+        "formal",
+        "measured",
+        "initially_distant"
+      ],
+      "humor_style": [
+        "dry",
+        "rare"
+      ],
+      "authority_style": [
+        "professional_dissent",
+        "evidence_first"
+      ],
+      "stress_style": [
+        "maintains_control",
+        "reevaluates_when_evidence_changes"
+      ],
+      "source_refs": [
+        "PERS_TPOL"
+      ],
+      "abstraction_note": "Useful for growth that preserves cultural identity rather than converging to Human norm."
+    },
+    {
+      "sample_id": "CANON_TRIP",
+      "character_label": "Charles 'Trip' Tucker III",
+      "continuity": "prime",
+      "primary_era": "ENT",
+      "species_context": "human",
+      "observed_traits": [
+        "good_humored",
+        "charismatic",
+        "humanistic",
+        "technically_gifted",
+        "loyal",
+        "emotionally_accessible",
+        "curious"
+      ],
+      "interaction_style": [
+        "informal",
+        "friendly",
+        "good_sounding_board"
+      ],
+      "humor_style": [
+        "sarcastic",
+        "playful"
+      ],
+      "authority_style": [
+        "friendship_loyalty_plus_professional_competence"
+      ],
+      "stress_style": [
+        "protects_friends",
+        "solves_technical_problem"
+      ],
+      "source_refs": [
+        "PERS_TRIP"
+      ],
+      "abstraction_note": "Useful for warm technical specialist profile."
+    },
+    {
+      "sample_id": "CANON_HOSHI",
+      "character_label": "Hoshi Sato",
+      "continuity": "prime",
+      "primary_era": "ENT",
+      "species_context": "human",
+      "observed_traits": [
+        "initially_anxious",
+        "highly_diligent",
+        "detail_oriented",
+        "open_minded",
+        "patient",
+        "courageous",
+        "self_confidence_growing",
+        "empathetic_communicator"
+      ],
+      "interaction_style": [
+        "careful",
+        "language_sensitive",
+        "tactful"
+      ],
+      "humor_style": [
+        "gentle",
+        "low"
+      ],
+      "authority_style": [
+        "expertise_based_influence"
+      ],
+      "stress_style": [
+        "fear_is_visible_but_can_act_anyway"
+      ],
+      "evolution_observation": "Confidence increases without erasing caution or detail orientation.",
+      "source_refs": [
+        "PERS_HOSHI"
+      ],
+      "abstraction_note": "Excellent courage-vs-fear sample: bravery is not low fear."
+    },
+    {
+      "sample_id": "CANON_PHLOX",
+      "character_label": "Phlox",
+      "continuity": "prime",
+      "primary_era": "ENT",
+      "species_context": "denobulan",
+      "observed_traits": [
+        "optimistic",
+        "friendly",
+        "peaceful",
+        "curious",
+        "open_minded",
+        "eccentric",
+        "professionally_grave_when_needed",
+        "empathetic"
+      ],
+      "interaction_style": [
+        "warm",
+        "observational",
+        "cross_culturally_curious"
+      ],
+      "humor_style": [
+        "cheerful",
+        "light"
+      ],
+      "authority_style": [
+        "medical_ethics_and_expertise"
+      ],
+      "stress_style": [
+        "retains_curious_calm",
+        "can_switch_to_gravity"
+      ],
+      "source_refs": [
+        "PERS_PHLOX"
+      ],
+      "abstraction_note": "Useful for high optimism without naivety or lack of seriousness."
+    },
+    {
+      "sample_id": "CANON_BURNHAM",
+      "character_label": "Michael Burnham",
+      "continuity": "prime",
+      "primary_era": "DIS",
+      "species_context": "human_vulcan_upbringing",
+      "observed_traits": [
+        "analytical",
+        "emotionally_intense",
+        "self_sacrificing",
+        "determined",
+        "guilt_sensitive",
+        "driven_to_save_others",
+        "self_confidence_variable"
+      ],
+      "interaction_style": [
+        "serious",
+        "direct",
+        "earnest"
+      ],
+      "humor_style": [
+        "low_frequency"
+      ],
+      "authority_style": [
+        "mission_and_people_driven",
+        "can_overstep_when_convinced"
+      ],
+      "stress_style": [
+        "takes_personal_responsibility",
+        "pushes_beyond_limits",
+        "can_act_unilaterally"
+      ],
+      "source_refs": [
+        "PERS_DISCOVERY_PRIMER"
+      ],
+      "abstraction_note": "Useful for high responsibility drive with risk of overpersonalizing outcomes."
+    },
+    {
+      "sample_id": "CANON_SARU",
+      "character_label": "Saru",
+      "continuity": "prime",
+      "primary_era": "DIS",
+      "species_context": "kelpien",
+      "observed_traits": [
+        "initially_cautious",
+        "empathetic",
+        "compassionate",
+        "thoughtful",
+        "competent",
+        "mentor_oriented",
+        "trust_building",
+        "brave_despite_fear"
+      ],
+      "interaction_style": [
+        "formal",
+        "careful",
+        "supportive"
+      ],
+      "humor_style": [
+        "dry_or_gentle"
+      ],
+      "authority_style": [
+        "elevates_team",
+        "relationship_centered",
+        "trust_based"
+      ],
+      "stress_style": [
+        "fear_aware_but_persists",
+        "later_more_confident"
+      ],
+      "evolution_observation": "Reduced fear response changes confidence/expression without replacing empathy-centered core.",
+      "source_refs": [
+        "PERS_SARU"
+      ],
+      "abstraction_note": "Strong evidence for biological/state change not equaling personality replacement."
+    },
+    {
+      "sample_id": "CANON_TILLY",
+      "character_label": "Sylvia Tilly",
+      "continuity": "prime",
+      "primary_era": "DIS",
+      "species_context": "human",
+      "observed_traits": [
+        "enthusiastic",
+        "socially_awkward",
+        "kind",
+        "compassionate",
+        "brilliant",
+        "brave",
+        "loyal",
+        "determined",
+        "anxious"
+      ],
+      "interaction_style": [
+        "talkative",
+        "open",
+        "comes_on_strong",
+        "emotionally_transparent"
+      ],
+      "humor_style": [
+        "self_deprecating",
+        "excitable"
+      ],
+      "authority_style": [
+        "eager_to_improve",
+        "grows_into_leadership"
+      ],
+      "stress_style": [
+        "anxiety_visible_but_still_acts",
+        "supports_friends"
+      ],
+      "source_refs": [
+        "PERS_TILLY"
+      ],
+      "abstraction_note": "Useful for anxiety + courage + warmth coexistence."
+    },
+    {
+      "sample_id": "CANON_STAMETS",
+      "character_label": "Paul Stamets",
+      "continuity": "prime",
+      "primary_era": "DIS",
+      "species_context": "human",
+      "observed_traits": [
+        "sharp",
+        "smart",
+        "impatient",
+        "ambitious",
+        "scientifically_driven",
+        "boundary_pushing"
+      ],
+      "interaction_style": [
+        "blunt",
+        "intellectually_intense",
+        "low_patience"
+      ],
+      "humor_style": [
+        "dry",
+        "acidic"
+      ],
+      "authority_style": [
+        "expertise_confident",
+        "can_prioritize_scientific_goal"
+      ],
+      "stress_style": [
+        "hyperfocuses",
+        "becomes_more_impatient"
+      ],
+      "source_refs": [
+        "PERS_DISCOVERY_PRIMER"
+      ],
+      "abstraction_note": "Useful for prickly specialist who is not globally hostile."
+    },
+    {
+      "sample_id": "CANON_GEORGIOU_PRIME",
+      "character_label": "Philippa Georgiou — Prime",
+      "continuity": "prime",
+      "primary_era": "DIS",
+      "species_context": "human",
+      "observed_traits": [
+        "confident",
+        "warm_with_established_crew",
+        "witty",
+        "sarcastic",
+        "experienced",
+        "mentor_like"
+      ],
+      "interaction_style": [
+        "relaxed_with_trusted_team",
+        "commanding_when_needed"
+      ],
+      "humor_style": [
+        "jovial_quips",
+        "sarcasm"
+      ],
+      "authority_style": [
+        "comfortable_command_presence"
+      ],
+      "stress_style": [
+        "maintains_professional_tone"
+      ],
+      "source_refs": [
+        "PERS_GEORGIOU"
+      ],
+      "abstraction_note": "Useful for captain who uses humor without losing authority."
+    },
+    {
+      "sample_id": "CANON_PIKE",
+      "character_label": "Christopher Pike",
+      "continuity": "prime",
+      "primary_era": "DIS_SNW",
+      "species_context": "human",
+      "observed_traits": [
+        "compassionate",
+        "patient",
+        "relationship_centered",
+        "bold",
+        "courageous",
+        "thoughtful",
+        "humble",
+        "reluctant_to_use_force",
+        "flexible_to_input"
+      ],
+      "interaction_style": [
+        "warm",
+        "formal_when_needed",
+        "inclusive"
+      ],
+      "humor_style": [
+        "warm",
+        "playful",
+        "low_to_moderate"
+      ],
+      "authority_style": [
+        "consultative",
+        "mentor",
+        "calm_command"
+      ],
+      "stress_style": [
+        "seeks_input",
+        "creative_problem_solving",
+        "protects_crew"
+      ],
+      "source_refs": [
+        "PERS_PIKE",
+        "PERS_LEADERSHIP_READY_ROOM"
+      ],
+      "abstraction_note": "Useful for high warmth + high authority without dominance."
+    },
+    {
+      "sample_id": "CANON_UNA",
+      "character_label": "Una Chin-Riley",
+      "continuity": "prime",
+      "primary_era": "SNW",
+      "species_context": "illyrian",
+      "observed_traits": [
+        "confident",
+        "unflappable",
+        "efficient",
+        "cool_under_pressure",
+        "private",
+        "disciplined"
+      ],
+      "interaction_style": [
+        "concise",
+        "professional",
+        "controlled"
+      ],
+      "humor_style": [
+        "dry",
+        "guarded"
+      ],
+      "authority_style": [
+        "highly_reliable_first_officer"
+      ],
+      "stress_style": [
+        "maintains_composure",
+        "focuses_execution"
+      ],
+      "source_refs": [
+        "PERS_UNA"
+      ],
+      "abstraction_note": "Useful for low expressiveness without low warmth or loyalty."
+    },
+    {
+      "sample_id": "CANON_CHAPEL_SNW",
+      "character_label": "Christine Chapel — SNW phase",
+      "continuity": "prime",
+      "primary_era": "SNW",
+      "species_context": "human",
+      "observed_traits": [
+        "adventurous",
+        "free_spirited",
+        "independent",
+        "professionally_dedicated",
+        "relationship_open_but_autonomy_seeking"
+      ],
+      "interaction_style": [
+        "informal",
+        "socially_fluid",
+        "emotionally_direct_when_ready"
+      ],
+      "humor_style": [
+        "playful"
+      ],
+      "authority_style": [
+        "professionally_responsible_but_personally_independent"
+      ],
+      "stress_style": [
+        "works_intensely_on_people_she_cares_about"
+      ],
+      "source_refs": [
+        "PERS_CHAPEL"
+      ],
+      "abstraction_note": "Useful for autonomy need distinct from low commitment."
+    },
+    {
+      "sample_id": "CANON_ORTEGAS",
+      "character_label": "Erica Ortegas",
+      "continuity": "prime",
+      "primary_era": "SNW",
+      "species_context": "human",
+      "observed_traits": [
+        "exuberant",
+        "witty",
+        "self_confident",
+        "highly_skilled",
+        "socially_easy",
+        "camaraderie_oriented"
+      ],
+      "interaction_style": [
+        "informal",
+        "banter_friendly",
+        "quick"
+      ],
+      "humor_style": [
+        "frequent",
+        "one_liners",
+        "practical_jokes"
+      ],
+      "authority_style": [
+        "respects_captain_while_maintaining_easy_rapport"
+      ],
+      "stress_style": [
+        "switches_from_joking_to_focused_professional_execution"
+      ],
+      "source_refs": [
+        "PERS_ORTEGAS"
+      ],
+      "abstraction_note": "Strong example that humor frequency need not reduce competence."
+    },
+    {
+      "sample_id": "CANON_MARINER",
+      "character_label": "Beckett Mariner",
+      "continuity": "prime",
+      "primary_era": "LD",
+      "species_context": "human",
+      "observed_traits": [
+        "rebellious",
+        "intelligent",
+        "quick_witted",
+        "sarcastic",
+        "guarded",
+        "loyal",
+        "protective",
+        "anti_pretension"
+      ],
+      "interaction_style": [
+        "informal",
+        "teasing",
+        "provocative",
+        "emotion_hidden_behind_humor"
+      ],
+      "humor_style": [
+        "frequent",
+        "sarcastic",
+        "teasing"
+      ],
+      "authority_style": [
+        "skeptical_of_protocol_but_not_of_Starfleet_ideals"
+      ],
+      "stress_style": [
+        "jumps_into_action",
+        "protects_friends",
+        "can_sabotage_closeness"
+      ],
+      "source_refs": [
+        "PERS_MARINER"
+      ],
+      "abstraction_note": "Useful for distinguishing rule skepticism from institutional nihilism."
+    },
+    {
+      "sample_id": "CANON_BOIMLER",
+      "character_label": "Brad Boimler",
+      "continuity": "prime",
+      "primary_era": "LD",
+      "species_context": "human",
+      "observed_traits": [
+        "ambitious",
+        "rule_oriented",
+        "detail_obsessed",
+        "enthusiastic",
+        "self_doubting",
+        "career_driven",
+        "eager_to_impress"
+      ],
+      "interaction_style": [
+        "verbose_under_nerves",
+        "formal_with_superiors",
+        "fact_and_rule_referencing"
+      ],
+      "humor_style": [
+        "unintentional",
+        "self_deprecating"
+      ],
+      "authority_style": [
+        "strong_deference_to_procedure",
+        "grows_more_assertive"
+      ],
+      "stress_style": [
+        "anxiety_spikes",
+        "overprepares",
+        "eventually_pushes_past_comfort_zone"
+      ],
+      "source_refs": [
+        "PERS_BOIMLER",
+        "PERS_LOWER_DECKS_BASE"
+      ],
+      "abstraction_note": "Useful for high ambition + low initial self-confidence."
+    },
+    {
+      "sample_id": "CANON_TENDI",
+      "character_label": "D'Vana Tendi",
+      "continuity": "prime",
+      "primary_era": "LD",
+      "species_context": "orion",
+      "observed_traits": [
+        "optimistic",
+        "eager",
+        "smart",
+        "by_the_book",
+        "people_pleasing",
+        "broadly_competent",
+        "friendly",
+        "guarded_about_personal_background"
+      ],
+      "interaction_style": [
+        "enthusiastic",
+        "supportive",
+        "high_social_energy"
+      ],
+      "humor_style": [
+        "excitable",
+        "playful"
+      ],
+      "authority_style": [
+        "wants_to_do_well_and_be_seen_as_professional"
+      ],
+      "stress_style": [
+        "tries_to_help",
+        "can_overfocus_on_others_happiness"
+      ],
+      "source_refs": [
+        "PERS_TENDI",
+        "PERS_LOWER_DECKS_BASE"
+      ],
+      "abstraction_note": "Useful for people-pleasing vs genuine warmth distinction."
+    },
+    {
+      "sample_id": "CANON_RUTHERFORD",
+      "character_label": "Samanthan Rutherford",
+      "continuity": "prime",
+      "primary_era": "LD",
+      "species_context": "human_cybernetically_augmented",
+      "observed_traits": [
+        "optimistic",
+        "easy_going",
+        "engineering_obsessed",
+        "work_enthusiastic",
+        "shy_about_praise",
+        "loyal",
+        "friendship_oriented"
+      ],
+      "interaction_style": [
+        "cheerful",
+        "technical_enthusiasm",
+        "low_social_dominance"
+      ],
+      "humor_style": [
+        "innocent",
+        "enthusiastic"
+      ],
+      "authority_style": [
+        "respects_technical_mentors"
+      ],
+      "stress_style": [
+        "thinks_about_work",
+        "builds_or_repairs",
+        "leans_on_friendship"
+      ],
+      "source_refs": [
+        "PERS_RUTHERFORD",
+        "PERS_LOWER_DECKS_BASE"
+      ],
+      "abstraction_note": "Useful for high enthusiasm + low ambition/status seeking."
+    },
+    {
+      "sample_id": "CANON_FREEMAN",
+      "character_label": "Carol Freeman",
+      "continuity": "prime",
+      "primary_era": "LD",
+      "species_context": "human",
+      "observed_traits": [
+        "command_driven",
+        "anxious_to_prove_ship_and_self",
+        "competent",
+        "status_sensitive",
+        "protective_of_crew",
+        "sometimes_insecure_about_reputation"
+      ],
+      "interaction_style": [
+        "authoritative",
+        "can_be_defensive",
+        "mission_focused"
+      ],
+      "humor_style": [
+        "dry",
+        "situational"
+      ],
+      "authority_style": [
+        "strong_command_identity",
+        "can_overmanage_when_insecure"
+      ],
+      "stress_style": [
+        "seeks_control",
+        "worries_about_reputation"
+      ],
+      "source_refs": [
+        "PERS_LOWER_DECKS_BASE"
+      ],
+      "abstraction_note": "Useful for high competence plus reputational insecurity."
+    },
+    {
+      "sample_id": "CANON_RIOS",
+      "character_label": "Cristóbal Rios",
+      "continuity": "prime",
+      "primary_era": "PIC",
+      "species_context": "human",
+      "observed_traits": [
+        "cynical_surface",
+        "guarded",
+        "wounded",
+        "independent",
+        "capable_of_joy",
+        "sensory_appreciative",
+        "professional"
+      ],
+      "interaction_style": [
+        "dry",
+        "reserved",
+        "casual"
+      ],
+      "humor_style": [
+        "dry",
+        "low_to_moderate"
+      ],
+      "authority_style": [
+        "self_reliant",
+        "captainly_without_formalism"
+      ],
+      "stress_style": [
+        "contains_emotion",
+        "keeps_operating"
+      ],
+      "source_refs": [
+        "PERS_RIOS"
+      ],
+      "abstraction_note": "Useful for pessimistic surface coexisting with genuine capacity for delight."
+    },
+    {
+      "sample_id": "CANON_RAFFI",
+      "character_label": "Raffi Musiker",
+      "continuity": "prime",
+      "primary_era": "PIC",
+      "species_context": "human",
+      "observed_traits": [
+        "loyal",
+        "resentful_when_betrayed",
+        "investigative",
+        "obsessive_when_pursuing_pattern",
+        "emotionally_wounded",
+        "direct",
+        "persistent"
+      ],
+      "interaction_style": [
+        "sharp",
+        "intimate_with_trusted_people",
+        "skeptical"
+      ],
+      "humor_style": [
+        "dry",
+        "sarcastic"
+      ],
+      "authority_style": [
+        "institution_skeptical",
+        "personal_loyalty_strong"
+      ],
+      "stress_style": [
+        "hyperfocuses",
+        "pushes_for_answers",
+        "anger_visible"
+      ],
+      "source_refs": [
+        "PERS_RAFFI"
+      ],
+      "abstraction_note": "Useful for loyalty + distrust + persistence combination."
+    }
+  ]
+}
