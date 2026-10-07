@@ -1,0 +1,37 @@
+{
+  "profile_id": "cardassian_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "cardassian",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Cranial and facial ridge architecture is the dominant species-readable feature.",
+    "A central forehead structure recurs while temple, orbital and cheek ridge topology varies by individual.",
+    "Ridge continuity may extend through jaw and neck.",
+    "Neck surface relief/patterning is a prominent recurring anatomical cue.",
+    "The supplied references show pale grey, beige and brown-grey surface presentation with individual and lighting variation.",
+    "Hair remains an individual presentation layer rather than part of the ridge identity."
+  ],
+  "identity_rules": [
+    "Cranial, facial and neck ridge topology belongs to persistent individual morphology.",
+    "Later portraits must preserve the same ridge map and underlying facial identity.",
+    "Hair, clothing, role and political affiliation may change independently."
+  ],
+  "cultural_separation": [
+    "Do not infer Cardassian Union loyalty from anatomy.",
+    "Do not encode cruelty, military status or intelligence-service affiliation into neutral portrait design."
+  ],
+  "forbidden": [
+    "one prosthetic ridge map across all Cardassians",
+    "automatic military uniform",
+    "occupation-era political identity inferred from species",
+    "facial expression used as loyalty shortcut"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
