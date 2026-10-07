@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "synthetic_holographic_person_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "refs": [
+    "gameplay/species/synthetic_android_person_framework.json",
+    "gameplay/species/persistent_holographic_person_framework.json"
+  ],
+  "cases": [
+    {
+      "id": "synthetic_model_not_identity",
+      "expected": [
+        "Shared model/type does not merge individuals.",
+        "Repair/modification preserves entity identity.",
+        "Legal status and organization membership remain separate state."
+      ]
+    },
+    {
+      "id": "synthetic_memory_not_reroll",
+      "expected": [
+        "Memory loss/restoration changes state/history.",
+        "AI cannot restore or rewrite memory without authoritative event.",
+        "Relationships and service history persist unless actual events change them."
+      ]
+    },
+    {
+      "id": "holographic_activation_not_rebirth",
+      "expected": [
+        "Activation/deactivation preserves same entity.",
+        "Host transfer preserves identity when continuity is explicit.",
+        "Projection location does not create a new person."
+      ]
+    },
+    {
+      "id": "holographic_copy_requires_branch_rule",
+      "expected": [
+        "Loading/copying a program does not automatically create one shared person.",
+        "A copy/branch needs explicit continuity semantics.",
+        "AI cannot duplicate personhood for convenience."
+      ]
+    },
+    {
+      "id": "simulation_character_not_person_by_default",
+      "expected": [
+        "Disposable simulation NPC remains nonpersistent unless world state promotes/defines person-level persistence.",
+        "Dialogue quality alone does not create legal/personhood state."
+      ]
+    },
+    {
+      "id": "persistent_visual_lineage",
+      "expected": [
+        "Repair, projection or avatar changes remain linked to same identity lineage when continuity applies.",
+        "Save/load and LOD do not reroll appearance or biography."
+      ]
+    }
+  ]
+}
