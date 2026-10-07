@@ -126,6 +126,22 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 
 Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
+## Procedural content-depth baseline
+
+Control documents:
+- `docs/roadmap/procedural_content_depth_plan_v0.1.md`
+- `docs/roadmap/procedural_content_depth_status_v0.1.json`
+
+Current defined baseline:
+- **63 / 63 packages COMPLETE**;
+- **Wave A** species/person foundations: 18/18;
+- **Wave B** cultures/social context: 12/12;
+- **Wave C** organizations/factions: 9/9;
+- **Wave D** ships/facilities/homeworlds: 18/18;
+- **Wave E** visual/NAP depth: 6/6.
+
+This means the currently defined depth pass has coherent source/provenance, gameplay hooks, persistence rules, AI boundaries, visual/NAP mappings and representative validation. It does **not** mean every Star Trek species, planet, ship, organization, historical event or production asset is exhaustively populated.
+
 ## Major remaining domains
 
 | Domain | Status |
@@ -143,7 +159,7 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 | Narrative | 🟨 IN_PROGRESS | Travel encounters, mission hooks, operational-needs generation and briefing/debrief structures established; campaign arcs and authored narrative structures remain future work. |
 | AI | 🟨 IN_PROGRESS | AI authority, deterministic-first routing, provider-independent capability routes and NPC interaction foundation established; deeper prompt/context/presentation content remains progressive. |
 | Presentation and UI | ⬜ TODO |
-| Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP foundation now includes persistent visual identity, resolved-context/handoff schemas, global/category Visual Bibles and initial era/species/Starfleet profiles. Concrete asset/profile coverage remains progressive. |
+| Assets / audio / NAP mappings | 🟨 IN_PROGRESS | Visual/NAP content-depth baseline is now closed for D058–D063: complete species/organization profile catalogues for current scope, era/operator ship/interior profiles, homeworld environment profiles and a verified binary Sensors-console NAP fixture. Wider production assets/audio remain progressive. |
 | Runtime content / schemas / manifests | 🟨 IN_PROGRESS | Procedural contracts, validation manifests and machine-readable 120-layer status are established; final runtime mapping depends on CoreRPG 4.5+ contracts. |
 | Validation suites | 🟨 IN_PROGRESS | Cross-domain design invariants and Sensors acceptance fixture established; executable runtime suites expand as CoreRPG gains Generic World State/actions/persistence. |
 
@@ -167,7 +183,7 @@ Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
 
 **Pillar 1 remains active: four-year architecture, unit curriculum and study-material v1.0 are closed; provenance pass 1 now covers 60/60 main courses and 7/7 branches, and academiaflota v0.5.0 publishes all 60 courses plus 7 branch manuals. Remaining Academy work is deeper bespoke editing, PDF production, richer interactive assessment, Academy-life scheduling/content and post-Academy depth.**
 
-**Procedural-universe depth note:** reusable simulation patterns extracted from Nimroel have now been formalized for Star Trek: layered authority/context resolution, derived subsystem seeds, Tier A/B/C populations, irreversible latent→persistent NPC promotion, schedule/knowledge/relationship constraints and validation invariants. This is architecture only; species/culture grammars, concrete population distributions and runtime/CoreRPG integration remain active work.
+**Procedural-universe depth note:** reusable simulation patterns extracted from Nimroel have been formalized for Star Trek: layered authority/context resolution, derived subsystem seeds, Tier A/B/C populations, irreversible latent→persistent NPC promotion, schedule/knowledge/relationship constraints and validation invariants. The D001–D063 content-depth baseline is now closed across species, cultures, organizations, ships, facilities, homeworlds and visual/NAP profiles. Wider universe coverage and runtime/CoreRPG integration remain active work.
 
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
 
