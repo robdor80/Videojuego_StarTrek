@@ -1,0 +1,102 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "vulcan",
+  "display_name_es": "Vulcano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "gameplay/species/species_biology_contract.json",
+  "baseline_refs": [
+    "gameplay/species/founding_species_profiles.json#vulcan"
+  ],
+  "identity": {
+    "homeworld_common_ref": "vulcan"
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "persistent_species_markers": [
+      "validated Vulcan ear morphology through visual profile"
+    ],
+    "individual_variation": "required",
+    "visual_profile_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1.json#vulcan"
+  },
+  "physiology": {
+    "strength_profile": "enhanced_vs_human_contextual",
+    "reflex_profile": "enhanced_vs_human_contextual",
+    "arid_environment_adaptation": true,
+    "inner_eyelid": true,
+    "touch_telepathy": "species_capability_with_individual_and_training_variation",
+    "unknowns": [
+      "exact universal strength multiplier",
+      "exact universal lifespan threshold",
+      "universal medical reference ranges"
+    ]
+  },
+  "capabilities": {
+    "mind_meld": {
+      "requires": [
+        "character_has_capability",
+        "sufficient_training_or_established_ability",
+        "valid_context"
+      ],
+      "consent_policy": "consent_required_when_reasonably_possible",
+      "knowledge_result": "core_resolved",
+      "omniscient": false
+    }
+  },
+  "lifecycle": {
+    "pon_farr": {
+      "periodicity": "approximately_seven_year_cycle",
+      "private_medical_state": true,
+      "potentially_critical": true,
+      "reveal_only_if_known": true
+    },
+    "exact_maturity_and_longevity": "not_locked"
+  },
+  "medical": {
+    "hooks_ref": "gameplay/medical/species_medical_hooks.json#vulcan",
+    "hidden_state_policy": "knowledge_gated"
+  },
+  "culture_socialization": {
+    "rules": [
+      "Logic and emotional control are cultural disciplines, not absence of emotion.",
+      "Adherence to Vulcan norms varies by individual.",
+      "Species biology does not force a Starfleet role, profession or personality."
+    ]
+  },
+  "ai_boundary": [
+    "Do not portray every Vulcan as emotionless.",
+    "Mind meld does not reveal unlimited memory or World Truth.",
+    "Pon farr remains private medical information unless valid knowledge exists."
+  ],
+  "provenance": [
+    {
+      "source_id": "TOS_DAGGER_OF_THE_MIND",
+      "confidence": "HIGH",
+      "claim_scope": "mind meld"
+    },
+    {
+      "source_id": "TOS_AMOK_TIME",
+      "confidence": "HIGH",
+      "claim_scope": "pon farr"
+    },
+    {
+      "source_id": "TOS_OPERATION_ANNIHILATE",
+      "confidence": "HIGH",
+      "claim_scope": "inner eyelid"
+    },
+    {
+      "source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
+      "confidence": "HIGH",
+      "claim_scope": "enhanced physical strength"
+    },
+    {
+      "source_id": "VOY_BLOOD_FEVER",
+      "confidence": "HIGH",
+      "claim_scope": "telepathic bonding and pon farr"
+    },
+    {
+      "source_id": "MA_VULCAN",
+      "confidence": "HIGH",
+      "claim_scope": "cross-check physiology"
+    }
+  ]
+}
