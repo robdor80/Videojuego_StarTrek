@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "persistent_personality_profile_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "A resolved personality is persistent character state. It may evolve through represented history, but it is never rerolled because the character is reloaded, revisited or promoted.",
+  "modes": [
+    "procedural",
+    "authored"
+  ],
+  "immutable_identity_fields": [
+    "personality_profile_id",
+    "personality_seed",
+    "core_trait_vector_initial",
+    "core_trait_tags_initial",
+    "resolved_at_event_ref"
+  ],
+  "scalar_dimensions": {
+    "social_energy": "0=very solitary; 1=highly socially energized",
+    "warmth": "0=cool/distant presentation; 1=very warm",
+    "formality": "0=informal; 1=highly formal",
+    "humor_frequency": "0=rare; 1=frequent",
+    "patience": "0=quickly impatient; 1=very patient",
+    "emotional_expressiveness": "0=strongly contained; 1=highly expressive",
+    "empathy_expression": "0=rarely expresses empathy outwardly; 1=actively expresses it",
+    "directness": "0=indirect; 1=very direct",
+    "tact": "0=blunt; 1=highly tactful",
+    "rule_orientation": "0=highly flexible; 1=strongly by-the-book",
+    "authority_deference": "0=questions authority readily; 1=strong deference to valid authority",
+    "risk_tolerance": "0=risk-averse; 1=risk-seeking",
+    "curiosity": "0=low exploratory drive; 1=very curious",
+    "ambition": "0=low status/career drive; 1=high ambition",
+    "competitiveness": "0=noncompetitive; 1=very competitive",
+    "initial_trust_speed": "0=slow to trust; 1=quick to trust",
+    "intimacy_openness": "0=guarded; 1=quickly personally open",
+    "optimism": "0=pessimistic/cautious expectation; 1=optimistic",
+    "self_confidence": "0=self-doubting; 1=very self-confident",
+    "conscientiousness": "0=loose/unstructured; 1=highly disciplined",
+    "conflict_assertiveness": "0=avoidant; 1=highly confrontational/assertive",
+    "forgiveness_tendency": "0=holds grievances; 1=forgiving",
+    "teaching_instinct": "0=rarely mentors; 1=strong mentor instinct",
+    "autonomy_need": "0=comfortable being directed; 1=strong independent streak"
+  },
+  "tag_families": {
+    "humor_style": [
+      "dry",
+      "deadpan",
+      "playful",
+      "sarcastic",
+      "teasing",
+      "dark",
+      "self_deprecating",
+      "absurdist",
+      "storytelling",
+      "rare_or_none"
+    ],
+    "stress_style": [
+      "more_formal",
+      "more_blunt",
+      "withdraws",
+      "takes_control",
+      "seeks_input",
+      "uses_humor",
+      "becomes_impatient",
+      "hyperfocuses",
+      "protects_others",
+      "questions_self"
+    ],
+    "affection_style": [
+      "verbal",
+      "acts_of_service",
+      "protective",
+      "teasing",
+      "quiet_presence",
+      "physical_warmth",
+      "formal_loyalty",
+      "slow_but_deep"
+    ],
+    "disagreement_style": [
+      "debate",
+      "direct_challenge",
+      "careful_dissent",
+      "sarcasm",
+      "questioning",
+      "avoidance",
+      "evidence_first",
+      "relationship_preserving"
+    ],
+    "leadership_style": [
+      "directive",
+      "consultative",
+      "mentor",
+      "protective",
+      "mission_first",
+      "consensus_seeking",
+      "delegating",
+      "hands_on"
+    ],
+    "social_signature": [
+      "small_talk_averse",
+      "storyteller",
+      "listener",
+      "banter_friendly",
+      "private",
+      "gregarious",
+      "quietly_observant",
+      "eager_to_impress"
+    ]
+  },
+  "procedural_guardrails": [
+    "Do not randomly generate severe antisocial pathology, sadism, psychopathy, compulsive cruelty or similar extreme dysfunction.",
+    "Negative procedural traits should remain believable human/person-level variation: prickly, stubborn, pessimistic, blunt, aloof, vain, competitive, irritable, overly formal, insecure, etc.",
+    "A personality may contain tensions or contradictions; people do not need internally perfect trait consistency.",
+    "Species/culture modifiers change expression probabilities and social interpretation, not the individual's core trait identity.",
+    "Profession does not dictate personality.",
+    "Authored principal NPC profiles may override procedural priors deliberately."
+  ],
+  "persistence_rules": [
+    "Save/load preserves profile and trait history.",
+    "LOD/off-screen simulation does not reroll personality.",
+    "Aging does not automatically invert core traits.",
+    "Major events may create bounded trait evolution with provenance.",
+    "Relationship-specific behavior is stored in relationship state, not by rewriting global personality.",
+    "Current mood, fatigue, injury, grief or intoxication modifies expression temporarily and does not become a new personality unless a represented long-term change is explicitly resolved."
+  ]
+}
