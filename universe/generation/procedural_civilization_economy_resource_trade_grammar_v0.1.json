@@ -1,0 +1,29 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "procedural_civilization_economy_resource_trade_grammar",
+  "status": "FOUNDATION_FIXED",
+  "parent_ref": "universe/generation/civilization_economy_governance_history_contract.json",
+  "dimensions": [
+    "resource_base",
+    "energy_system",
+    "food_system",
+    "manufacturing",
+    "distribution_model",
+    "labor_model",
+    "currency_or_accounting_if_applicable",
+    "scarcity_profile",
+    "trade_policy",
+    "critical_imports",
+    "critical_exports",
+    "transport_network",
+    "strategic_industries"
+  ],
+  "rules": [
+    "Economy follows population, environment, technology, institutions and resources.",
+    "Trade requires partners/routes or internal interregional flows.",
+    "A newly discovered civilization does not automatically want Federation trade.",
+    "Post-scarcity is contextual and cannot be assumed for procedural warp cultures.",
+    "Resource abundance does not automatically imply political stability or wealth equality.",
+    "Economic outputs feed settlement function, traffic, orbital infrastructure and diplomatic interests."
+  ]
+}
