@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "bajor_system_world_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "bajoran_system",
+    "planet_id": "bajor",
+    "display_name_es": "Bajor / Sistema Bajorano",
+    "world_type": "inhabited_class_m_homeworld",
+    "native_species_refs": [
+      "bajoran"
+    ],
+    "sovereign_polity_ref": "bajoran_provisional_government_or_successor_by_date"
+  },
+  "orbital_context": {
+    "star": "B'hava'el context where validated by system references",
+    "moons": [
+      "Derna",
+      "Jeraddo",
+      "other moons exist but exhaustive baseline not required"
+    ],
+    "nearby_special_regions": [
+      "Denorios Belt",
+      "Bajoran wormhole Alpha terminus",
+      "Deep Space 9"
+    ],
+    "strategic_note": "Wormhole makes system a major transport/diplomatic/military hub in DS9-era state."
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "class_m_habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "known_water_bodies": true,
+    "exact_fraction": null
+  },
+  "geology_topography": {
+    "diverse_habitable_regions": true,
+    "global_map": "not_locked"
+  },
+  "climate_refs": [
+    "regional_variation; no single global climate asserted"
+  ],
+  "biosphere_ref": "bajor_biosphere",
+  "region_refs": [
+    "Bajor surface regions as mission-authored",
+    "Derna",
+    "Jeraddo",
+    "Denorios Belt",
+    "Deep Space 9",
+    "wormhole approach"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "institutional_refs": [
+    "gameplay/organizations/profiles/BAJORAN_INSTITUTIONS_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "post_occupation_reconstruction",
+    "religion/civil_authority",
+    "wormhole_traffic",
+    "DS9_operations",
+    "Cardassian_legacy",
+    "Federation_cooperation",
+    "trade",
+    "warfront_by_date"
+  ],
+  "temporal_rules": [
+    "Bajoran sovereignty is distinct from Starfleet presence.",
+    "Cardassian occupation belongs to retained history before playable DS9 era; future relations evolve from campaign events.",
+    "Wormhole existence and known access are dated discovery/knowledge state.",
+    "DS9 position/operator changes are facility World State, not planet identity."
+  ],
+  "ai_boundary": [
+    "Do not equate Bajor with Federation territory.",
+    "Do not infer faith/resistance history for individual Bajorans.",
+    "Knowledge of wormhole entities/Prophets depends on character knowledge and belief state."
+  ],
+  "visual_nap": [
+    "Bajoran landscape and architecture must use specific region references",
+    "DS9/Cardassian station visuals remain facility assets separate from Bajor surface",
+    "occupation damage/reconstruction is temporal"
+  ],
+  "unknowns": [
+    "exact bulk physics",
+    "complete moon catalogue in baseline",
+    "global population and geography"
+  ],
+  "provenance": [
+    "MA_BAJOR_WORLD",
+    "DS9_EMISSARY",
+    "DS9_TECHNICAL_MANUAL",
+    "STAR_CHARTS_2002"
+  ]
+}
