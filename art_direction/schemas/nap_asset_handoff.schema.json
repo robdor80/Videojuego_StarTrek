@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star_trek/nap_asset_handoff.schema.json",
+  "title": "Star Trek NAP Asset Handoff",
+  "type": "object",
+  "required": [
+    "handoff_id",
+    "asset_id",
+    "asset_category",
+    "resolved_visual_context_ref",
+    "lifecycle_state",
+    "source_repo"
+  ],
+  "properties": {
+    "handoff_id": {
+      "type": "string"
+    },
+    "entity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visual_identity_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_category": {
+      "type": "string"
+    },
+    "resolved_visual_context_ref": {
+      "type": "string"
+    },
+    "exact_prompt_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "reference_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "requested_output_profile": {
+      "type": "object"
+    },
+    "source_repo": {
+      "type": "string"
+    },
+    "lifecycle_state": {
+      "type": "string",
+      "enum": [
+        "REQUESTED",
+        "CANDIDATE",
+        "REVIEW",
+        "APPROVED",
+        "NAP_INGESTED",
+        "AI_PASS",
+        "ARCHIVED_MASTER",
+        "PRODUCTION_DERIVED",
+        "PRODUCTION_VERIFIED",
+        "COMPLETED",
+        "REJECTED",
+        "QUARANTINED"
+      ]
+    },
+    "archive_record_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "production_record_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "bible_profile_versions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "provenance": {
+      "type": "object"
+    }
+  },
+  "x_rules": [
+    "NAP controls archive and production lifecycle.",
+    "Archive master and production derivative are distinct records.",
+    "Entity-backed assets retain entity/visual identity linkage.",
+    "Production path creation must follow NAP-authorized ProductionRoot rules.",
+    "Git publication is a separate concern from NAP lifecycle completion."
+  ]
+}
