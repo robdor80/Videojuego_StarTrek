@@ -1,0 +1,97 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "cardassia_prime_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "planet_id": "cardassia_prime",
+    "display_name_es": "Cardassia Prime",
+    "world_type": "inhabited_homeworld",
+    "native_species_refs": [
+      "cardassian"
+    ],
+    "polity_ref": "cardassian_union",
+    "capital_world": true
+  },
+  "orbital_context": {
+    "system_id": "cardassia_system_unresolved_identifier",
+    "moon_count_context": 1,
+    "exact_orbits": null
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "habitable_for_humanoids": true,
+    "environmental_character": "Cardassians prefer darker, warmer and more humid conditions than Humans; exact global atmospheric values remain unlocked.",
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "global_fraction": null
+  },
+  "geology_topography": {
+    "known": [
+      "Ithian Forests",
+      "resource-poor planetary context",
+      "jevonite deposits"
+    ],
+    "global_map": "unknown"
+  },
+  "climate_refs": [
+    "warmer_humid_dark-adapted_context",
+    "regional_variation_unknown"
+  ],
+  "biosphere_ref": "cardassia_prime_biosphere",
+  "region_refs": [
+    "Central City/context",
+    "Lakarian City",
+    "Lakat",
+    "institutional districts where sourced"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "institutional_refs": [
+    "gameplay/organizations/profiles/CARDASSIAN_UNION_ORGANIZATIONS_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "Union_politics",
+    "military/intelligence_presence",
+    "family/status_context",
+    "resource_pressure",
+    "occupation_legacy",
+    "Dominion_alignment_by_date",
+    "resistance_by_event",
+    "postwar_consequence_if_campaign_reaches_it"
+  ],
+  "temporal_rules": [
+    "Government alignment and foreign occupation/alliance state are overlays, not physical identity.",
+    "Dominion membership or resistance is date/campaign-state dependent.",
+    "If catastrophic wartime damage occurs in campaign, geography/infrastructure updates through explicit consequence events."
+  ],
+  "ai_boundary": [
+    "Do not assign Union loyalty to all residents.",
+    "Do not infer Obsidian Order affiliation.",
+    "Do not invent abundance despite established resource scarcity context."
+  ],
+  "visual_nap": [
+    "warm/dim urban-interior light where setting supports",
+    "Cardassian monumental/institutional architecture",
+    "planetary damage only from dated World State"
+  ],
+  "unknowns": [
+    "exact atmosphere",
+    "global hydrology",
+    "full planetary geography",
+    "population by playable year"
+  ],
+  "provenance": [
+    "MA_CARDASSIA_PRIME",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+    "DS9_THE_DOGS_OF_WAR"
+  ]
+}
