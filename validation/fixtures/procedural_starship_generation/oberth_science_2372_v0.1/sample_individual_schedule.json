@@ -1,0 +1,72 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "oberth_science_2372_v0.1",
+  "purpose": "Example schedule resolution for one Alpha-watch science officer slot; demonstrates duty + obligations + rest + leisure without overlap.",
+  "character_slot_id": "fixture:oberth:science:alpha:07",
+  "primary_watch": "alpha",
+  "activities": [
+    {
+      "start": "03:00",
+      "end": "03:40",
+      "family": "meal",
+      "state": "scheduled",
+      "note": "pre-watch meal/private preparation"
+    },
+    {
+      "start": "03:40",
+      "end": "04:00",
+      "family": "professional_task",
+      "activity": "watch_handoff",
+      "state": "scheduled"
+    },
+    {
+      "start": "04:00",
+      "end": "12:00",
+      "family": "duty_shift",
+      "activity": "science_watch",
+      "state": "scheduled"
+    },
+    {
+      "start": "12:15",
+      "end": "13:00",
+      "family": "meal",
+      "state": "scheduled"
+    },
+    {
+      "start": "13:30",
+      "end": "14:30",
+      "family": "training",
+      "activity": "sensor_recertification_session",
+      "state": "scheduled"
+    },
+    {
+      "start": "15:00",
+      "end": "16:00",
+      "family": "recreation",
+      "activity": "reading_study",
+      "state": "tentative_plan"
+    },
+    {
+      "start": "19:00",
+      "end": "03:00",
+      "family": "rest_or_sleep",
+      "state": "scheduled"
+    }
+  ],
+  "free_or_flexible_windows": [
+    {
+      "start": "13:00",
+      "end": "13:30"
+    },
+    {
+      "start": "14:30",
+      "end": "15:00"
+    },
+    {
+      "start": "16:00",
+      "end": "19:00"
+    }
+  ],
+  "emergency_rule": "Yellow/red alert or specialist recall may preempt eligible low-priority items but must create schedule and fatigue state; protected sleep is not silently erased.",
+  "note": "This is a validation example, not a universal Starfleet personal timetable."
+}
