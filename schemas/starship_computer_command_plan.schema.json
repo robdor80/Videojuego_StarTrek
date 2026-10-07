@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://robertodorado.es/schemas/starship-computer-command-plan.schema.json",
+  "title": "Starship Computer CommandPlan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "intentSummary", "needsClarification", "clarificationQuestion", "actions"],
+  "properties": {
+    "version": {"const": "1.0"},
+    "intentSummary": {"type": "string"},
+    "needsClarification": {"type": "boolean"},
+    "clarificationQuestion": {"type": ["string", "null"]},
+    "actions": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "required": ["type"],
+        "properties": {
+          "type": {
+            "enum": [
+              "scan","search","track_start","track_stop","track_priority","track_signature",
+              "track_update","readout","transfer","power_request","interference","diagnostic",
+              "calibrate","select_array","engineering_request","mark","save_result",
+              "compare_results","load_profile","apply_config","watch","status"
+            ]
+          },
+          "contactId": {"type": ["string","null"]},
+          "scanType": {"enum": ["short_range","long_range","focused"]},
+          "target": {"type": ["string","null"]},
+          "mode": {"enum": ["passive","active"]},
+          "resolution": {"enum": ["general","standard","high"]},
+          "priority": {"type": ["string","null"]},
+          "duration": {"enum": ["quick","standard","extended"]},
+          "filters": {"type": "array","items":{"type":"string"}},
+          "searchType": {"type": "string"},
+          "area": {"type": ["string","null"]},
+          "sensitivity": {"enum": ["low","standard","high","maximum"]},
+          "criteria": {"type": ["string","null"]},
+          "signature": {"type": ["string","null"]},
+          "operation": {"type": ["string","null"]},
+          "horizon": {"type": ["string","null"]},
+          "readout": {"type": ["string","null"]},
+          "requested": {"type": ["number","null"]},
+          "reason": {"type": ["string","null"]},
+          "band": {"type": ["string","null"]},
+          "scope": {"type": ["string","null"]},
+          "arrayId": {"type": ["string","null"]},
+          "component": {"type": ["string","null"]},
+          "marked": {"type": ["boolean","null"]},
+          "resultId": {"type": ["string","null"]},
+          "a": {"type": ["string","null"]},
+          "b": {"type": ["string","null"]},
+          "profileId": {"type": ["string","null"]},
+          "setting": {"type": ["string","null"]},
+          "value": {},
+          "condition": {"type": ["string","null"]},
+          "threshold": {"type": ["number","null"]}
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties":{"needsClarification":{"const":true}}},
+      "then": {
+        "properties": {
+          "clarificationQuestion":{"type":"string","minLength":1},
+          "actions":{"maxItems":0}
+        }
+      }
+    }
+  ]
+}
