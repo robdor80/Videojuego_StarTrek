@@ -57,3 +57,38 @@ Un capitán o Primer Oficial debe poder razonar sobre ella en contexto, no repet
 El juego no obliga a repetir las decisiones de Kirk, Picard, Sisko o Janeway en situaciones parecidas.
 
 El jugador se enfrenta al mismo marco ético/jurídico, pero toma sus propias decisiones.
+
+
+## Protocolo operativo
+
+El uso jugable está definido en:
+
+- `../../../gameplay/first_contact/prime_directive_operational_protocol_v0.1.json`
+- `../../../gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json`
+- `../../../gameplay/first_contact/first_contact_readiness_assessment_v0.1.json`
+
+### Regla de curvatura
+
+La capacidad warp es un **umbral importante para evaluar Primer Contacto**, pero no una orden automática de contactar.
+
+Una civilización puede:
+- estar a punto de lograr curvatura;
+- haber logrado un primer vuelo;
+- ser warp pero políticamente fragmentada;
+- conocer ya vida extraterrestre;
+- rechazar o retrasar el contacto;
+- no poseer un único representante planetario.
+
+Por tanto:
+
+```text
+warp detectado → evaluación → briefing → decisión de mando
+```
+
+nunca:
+
+```text
+warp detectado → hail automático
+```
+
+La Primera Directiva sigue siendo relevante para la autodeterminación, contaminación cultural e interferencia política incluso cuando una sociedad avanzada es candidata a contacto.
