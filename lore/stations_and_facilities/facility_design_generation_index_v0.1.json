@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "facility_design_and_generation_index",
+  "status": "FOUNDATION_FIXED",
+  "taxonomy_ref": "gameplay/facilities/facility_type_design_instance_taxonomy_v0.1.json",
+  "canonical_designs_ref": "lore/stations_and_facilities/canonical_station_design_catalogue_v0.1.json",
+  "canonical_unique_ref": "lore/stations_and_facilities/canonical_unique_facilities_v0.1.json",
+  "procedural_design_grammar_ref": "universe/generation/procedural_station_design_grammar_v0.1.json",
+  "existence_contract_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+  "scale_model_ref": "universe/generation/facility_scale_justification_model_v0.1.json",
+  "site_selection_ref": "universe/generation/facility_site_selection_contract_v0.1.json",
+  "generation_pipeline_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json",
+  "staffing_ref": "universe/generation/facility_staffing_population_guidance_v0.1.json",
+  "life_profiles_ref": "lore/stations_and_facilities/station_life_profiles_v0.1.json",
+  "watch_ref": "gameplay/facilities/facility_watch_and_work_schedule_contract_v0.1.json",
+  "population_ref": "gameplay/facilities/facility_residency_tenancy_visitor_model_v0.1.json",
+  "services_ref": "gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+  "expansion_ref": "universe/generation/facility_expansion_redundancy_drawdown_contract_v0.1.json",
+  "visual_ref": "art_direction/visual_bibles/facilities/STAR_TREK_STATION_DESIGN_VISUAL_PROFILES_v0.1.json",
+  "reference_policy_ref": "universe/generation/procedural_facility_reference_policy_v0.1.json"
+}
