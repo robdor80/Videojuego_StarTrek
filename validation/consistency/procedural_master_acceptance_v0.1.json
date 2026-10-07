@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_master_acceptance",
+  "status": "star_trek_design_acceptance",
+  "purpose": "Cross-domain acceptance index for the 120-layer procedural development plan.",
+  "validation_packs": [
+    "validation/consistency/procedural_governance_invariants_v0.1.json",
+    "validation/consistency/persistent_entity_roundtrip_invariants_v0.1.json",
+    "validation/consistency/procedural_living_population_invariants_v0.1.json",
+    "validation/consistency/character_cognition_social_invariants_v0.1.json",
+    "validation/consistency/species_culture_lifecycle_invariants_v0.1.json",
+    "validation/consistency/organization_service_career_invariants_v0.1.json",
+    "validation/consistency/ship_crew_facility_invariants_v0.1.json",
+    "validation/consistency/planet_civilization_generation_invariants_v0.1.json",
+    "validation/consistency/movement_logistics_economy_diplomacy_invariants_v0.1.json",
+    "validation/technology_consistency/technology_exceptional_state_invariants_v0.1.json",
+    "validation/consistency/visual_nap_invariants_v0.1.json",
+    "validation/consistency/living_simulation_event_consequence_invariants_v0.1.json"
+  ],
+  "acceptance_fixtures": [
+    "validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
+  ],
+  "cross_domain_invariants": [
+    "Authoritative World State exists before observation.",
+    "Persistent entities never reroll after materialization.",
+    "Identity and current mutable state remain distinct.",
+    "Species, culture, citizenship, affiliation, organization, rank, position and personality remain distinct.",
+    "Knowledge and memory are actor-specific and distinct from World Truth.",
+    "Population materialization conserves real slots and totals unless a world event changes them.",
+    "Generated traffic, missions and crises have causal World State origins.",
+    "Technology is era/operator/platform/state constrained.",
+    "Visual assets consume authoritative state and preserve identity lineage.",
+    "AI cannot directly mutate World State or invent hidden truth.",
+    "Save/load, LOD and generator upgrades cannot silently regenerate persistent entities.",
+    "Campaign history outranks future screen canon after campaign start."
+  ],
+  "runtime_boundary": {
+    "star_trek_repository_owns": "content rules, universe-specific contracts, validation expectations, fixtures, visual/NAP rules and gameplay requirements",
+    "core_rpg_owns": "generic live entity records, authoritative mutations, generic persistence, actions, simulation, deterministic runtime systems and reusable world-state semantics",
+    "ue5_or_host_owns": "presentation, input, 3D scene/UI/audio and host integration",
+    "no_duplicate_engine_in_star_trek": true
+  },
+  "runtime_dependency_status": {
+    "core_rpg_repository": "robdor80/CoreRPG",
+    "verified_state": "Phase 4.4 closed; Generic World State 4.5 not yet implemented.",
+    "verified_evidence": [
+      "CoreRPG README states WorldState is deliberately minimal and 4.5 begins Generic World State.",
+      "Current WorldState only creates monotonic EntityId values, tests membership/count/revision and lacks general live domain records.",
+      "No general DefinitionId-to-EntityId instantiation, gameplay persistence, knowledge, population or simulation exists yet."
+    ],
+    "effect": "Star Trek-side design acceptance can close, but full executable vertical-slice/runtime acceptance remains blocked on CoreRPG."
+  },
+  "release_gate_for_runtime": [
+    "CoreRPG Generic World State supports persistent live records.",
+    "Definition/content definitions can instantiate persistent entities with provenance.",
+    "Generic deterministic state mutation/actions are available.",
+    "Persistence/save-load supports Star Trek identity round-trip requirements.",
+    "Simulation/event infrastructure can host the sensor operation/event-log fixture.",
+    "Star Trek content pack mapping to CoreRPG contracts is implemented and validated.",
+    "Host/UE5 can submit sensor action and render structured result without owning truth."
+  ]
+}
