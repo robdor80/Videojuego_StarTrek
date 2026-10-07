@@ -1,0 +1,36 @@
+{
+  "profile_id": "klingon_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "klingon",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Forehead cranial ridges are the primary recurring species-readable feature in the supplied late-24th-century-style references.",
+    "Ridge topology varies strongly between individuals and must not be standardized to one pattern.",
+    "Cranial ridges can change forehead height, brow silhouette and upper-face contour.",
+    "Humanlike variation in skin tone, facial proportions, hair and facial hair remains broad.",
+    "Male- and female-presenting individuals both retain strong individual cranial-ridge identity."
+  ],
+  "identity_rules": [
+    "Forehead-ridge topology is part of persistent visual identity.",
+    "Age, scars, hair, rank, clothing and expression may change without replacing ridge/face identity.",
+    "Era-aware morphology must resolve before final production because screen presentation changes across periods."
+  ],
+  "cultural_separation": [
+    "Do not add armor, weapons, House symbols or warrior styling from species alone.",
+    "Do not encode honor or aggression as a neutral facial expression."
+  ],
+  "forbidden": [
+    "one famous Klingon ridge pattern reused across procedural NPCs",
+    "automatic warrior costume",
+    "permanent aggressive expression",
+    "House insignia without actual House state"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
