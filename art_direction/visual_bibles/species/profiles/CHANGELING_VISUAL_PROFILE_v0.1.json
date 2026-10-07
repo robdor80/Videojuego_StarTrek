@@ -1,0 +1,36 @@
+{
+  "profile_id": "changeling_visual_profile",
+  "profile_type": "species_stateful_morphology",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:changeling",
+  "species_id": "changeling",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Natural-state morphogenic liquid and assumed solid forms are distinct visual states of the same persistent entity.",
+    "A humanoid Founder-style form is a chosen form, not proof that every Changeling has one immutable humanoid face.",
+    "Copied appearance may reproduce visible surface form when World State says the transformation succeeded; it does not copy identity, memory, authorization or relationships.",
+    "Persistent identity must track the Changeling entity through form changes rather than treating every form as a new person."
+  ],
+  "allowed_variation": [
+    "natural liquid-state presentation",
+    "authored habitual form",
+    "resolved copied forms",
+    "partial transformation only when authoritative state supports it"
+  ],
+  "forbidden_variation": [
+    "random body horror",
+    "automatic Founder uniform/status",
+    "copied face treated as copied identity",
+    "visual form change granting clearance or knowledge"
+  ],
+  "source_refs": [
+    "MA_CHANGELING",
+    "MA_FOUNDER",
+    "ST_OFFICIAL_DOMINION_101"
+  ],
+  "notes": "For entity-backed assets, store habitual-form anchors separately from current_form state."
+}
