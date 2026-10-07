@@ -1,0 +1,371 @@
+{
+  "schema_version": "0.1.0",
+  "source_index_id": "star_trek_personality_research_sources",
+  "policy": "Prefer official StarTrek.com character/feature material and on-screen behavioral anchors. Sources are research evidence only; production personalities consume abstracted traits, never canonical character identities.",
+  "sources": [
+    {
+      "id": "PERS_KIRK_101",
+      "title": "Star Trek 101: James T. Kirk",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-101-james-kirk",
+      "use": "Prime Kirk: cunning, courage, confidence, outside-the-box thinking, regulation flexibility, serious student/career focus."
+    },
+    {
+      "id": "PERS_KIRK_KELVIN",
+      "title": "The Best of James T. Kirk: Kelvin Edition",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/best-of-james-kirk-kelvin",
+      "use": "Kelvin Kirk: self-assurance, ambition, no-win rejection, command decisiveness, self-doubt/fallibility arc."
+    },
+    {
+      "id": "PERS_SPOCK_DISCOVERY",
+      "title": "Discovery's Spock Makes His Debut",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/discoverys-spock-makes-his-debut",
+      "use": "Spock: wisdom, empathy, logic/emotion tension."
+    },
+    {
+      "id": "PERS_SPOCK_HUMAN_SIDE",
+      "title": "How Spock's Human Side in Strange New Worlds Fully Explains The Original Series",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/spocks-human-side-snw-fully-explains-tos",
+      "use": "Spock emotionalism/humor and dual heritage context."
+    },
+    {
+      "id": "PERS_MCCOY_101",
+      "title": "Star Trek 101: Dr. Leonard Bones McCoy",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-101-dr-leonard-bones-mccoy",
+      "use": "McCoy: cantankerous, compassionate, old-fashioned, candid, emotionally expressive."
+    },
+    {
+      "id": "PERS_FIRST_DO_NO_HARM",
+      "title": "First Do No Harm",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/first-do-no-harm",
+      "use": "McCoy, Bashir and EMH medical temperament contrasts."
+    },
+    {
+      "id": "PERS_MCCOY_KELVIN",
+      "title": "The Best of Dr. Leonard 'Bones' McCoy",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/best-of-bones-mccoy-kelvin",
+      "use": "Kelvin McCoy: gruff/argumentative surface with cordial loyalty."
+    },
+    {
+      "id": "PERS_SCOTTY_WIT",
+      "title": "The Wit and Wisdom of Montgomery 'Scotty' Scott",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/wit-wisdom-of-montgomery-scotty-scott",
+      "use": "Scotty: wit, pride in engineering/heritage, dependable technical identity."
+    },
+    {
+      "id": "PERS_SCOTTY_KELVIN",
+      "title": "Kelvin Timeline | 5 Signs You're Like Scotty",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/signs-youre-like-kelvin-timeline-scotty",
+      "use": "Kelvin Scotty: humor, ingenuity, conscience, explorer identity."
+    },
+    {
+      "id": "PERS_UHURA_KELVIN",
+      "title": "The Zen of Zoe Saldana's Nyota Uhura",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/zen-of-zoe-saldana-kelvin-uhura",
+      "use": "Kelvin Uhura: confidence, professional self-advocacy, expertise."
+    },
+    {
+      "id": "PERS_LEADERSHIP_READY_ROOM",
+      "title": "Leadership from the Ready Room",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/leadership-from-the-ready-room",
+      "use": "Archer, Pike, Picard and Janeway leadership traits."
+    },
+    {
+      "id": "PERS_PICARD_COMPASSION",
+      "title": "Star Trek: Picard — Be Compassionate, Be Patient, Be Curious",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/videos/star-trek-picard-be-compassionate-be-patient-be-curious",
+      "use": "Picard core: compassionate, patient, curious."
+    },
+    {
+      "id": "PERS_INTROVERTS",
+      "title": "Introverts Can See Themselves in Star Trek",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/introverts-see-themselves-in-star-trek",
+      "use": "Picard, Odo, Seven and Spock introversion/social-style observations."
+    },
+    {
+      "id": "PERS_NUMBER_ONE",
+      "title": "What Does it Take to be 'Number One?'",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/number-one-list",
+      "use": "First-officer behavioral qualities including discretion, cool-headedness and alternative strategy."
+    },
+    {
+      "id": "PERS_DATA_TOP",
+      "title": "Top 10 Data Moments",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/top-10-data-moments",
+      "use": "Data: optimistic, knowledge-hungry, socially awkward, human-curious."
+    },
+    {
+      "id": "PERS_DATA_SPINER",
+      "title": "Brent Spiner's Greatest Hits, Ranked",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/brent-spiners-greatest-hits-ranked",
+      "use": "Data: analytical, curious, courageous, loyal, artistic."
+    },
+    {
+      "id": "PERS_WORF_WISDOM",
+      "title": "The Wisdom of Worf",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/wisdom-of-worf",
+      "use": "Worf: serious/stoic reputation with dry and sometimes intentional humor."
+    },
+    {
+      "id": "PERS_TROI_EMPATHY",
+      "title": "The Radical Empathy of Deanna Troi",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/the-radical-empathy-of-deanna-troi",
+      "use": "Troi: listening, challenge-with-care, empathy, social connection."
+    },
+    {
+      "id": "PERS_SISKO_FATHER",
+      "title": "Benjamin Sisko is One of The Greatest Fathers in TV History",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/benjamin-sisko-is-one-of-the-greatest-fathers-in-tv-history",
+      "use": "Sisko: warm, present, vulnerable, supportive father alongside command authority."
+    },
+    {
+      "id": "PERS_SISKO_RELATABLE",
+      "title": "10 Reasons Why Captain Sisko is the Most Relatable Captain",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/captain-sisko-most-relatable-captain",
+      "use": "Sisko: brashness tempered by realism, ambition, acceptance of imperfect outcomes."
+    },
+    {
+      "id": "PERS_KIRA",
+      "title": "Star Trek Created Feminist Icons in Front of and Behind the Camera",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-created-feminist-icons",
+      "use": "Kira: passionate, ideologically committed, confrontational, friendship capacity."
+    },
+    {
+      "id": "PERS_ODO_QUARK",
+      "title": "Odo & Quark's Outlandish Quarrels",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/deep-space-nine-odo-quark-outlandish-quarrels",
+      "use": "Odo/Quark: justice vs wealth, insults, banter, friendly advice, frenemy dynamic."
+    },
+    {
+      "id": "PERS_DAX_INTERVIEW",
+      "title": "The Trill of It All: An Interview with Terry Farrell",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/terry-farrell-star-trek-deep-space-nine-interview",
+      "use": "Jadzia: calm, relaxed, confident, mature, hopeful, positive."
+    },
+    {
+      "id": "PERS_DAX_PRIDE",
+      "title": "6 Characters That Defined My Bisexual Journey",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/6-characters-that-defined-my-bisexual-journey",
+      "use": "Jadzia: fun, wise, fearless, socially confident."
+    },
+    {
+      "id": "PERS_OBRIEN_DAD",
+      "title": "Celebrating Star Trek's Most Memorable Dads",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/most-memorable-dads",
+      "use": "O'Brien: work/home balance, devotion to family, practical competence."
+    },
+    {
+      "id": "PERS_JANEWAY_CARETAKER",
+      "title": "How Captain Janeway Became Star Trek's Caretaker",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/en-un/news/how-captain-janeway-became-the-caretaker",
+      "use": "Janeway: scientist/explorer/teacher/guide, responsibility, clear decisions, emotional humanity."
+    },
+    {
+      "id": "PERS_JANEWAY_CHAKOTAY",
+      "title": "Plot A Course: 5 Moments That Defined Janeway and Chakotay's Relationship",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/en-un/news/janeway-chakotay-relationship-primer",
+      "use": "Chakotay: balancing influence, mediation/integration, trust in others' competence."
+    },
+    {
+      "id": "PERS_TUVOK",
+      "title": "Tuvok was Voyager's Secret Weapon",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/tuvok-was-voyagers-secret-weapon",
+      "use": "Tuvok: logic, wisdom, tolerance of contradiction, risk-aware advice."
+    },
+    {
+      "id": "PERS_SEVEN_PREPICARD",
+      "title": "Everything You Need to Read, See, and Watch Before Star Trek: Picard",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/everything-you-need-to-read-see-and-watch-before-star-trek-picard",
+      "use": "Seven: high competence/intelligence, social difficulty, human/individual growth."
+    },
+    {
+      "id": "PERS_SEVEN_PICARD",
+      "title": "Why We Need More of Seven of Nine's Story in Picard",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/why-we-need-more-of-seven-of-nines-story-in-picard-and-everywhere-else",
+      "use": "Seven later phase: protective, rule-breaking, harder, justice-oriented."
+    },
+    {
+      "id": "PERS_BELANNA_LOVE",
+      "title": "Tom Paris and B'Elanna Torres: A Realistic Love Story",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/tom-paris-belanna-torres-realistic-love-story",
+      "use": "B'Elanna: temper, stubborn will, leadership growth."
+    },
+    {
+      "id": "PERS_DOCTOR_FUN",
+      "title": "The Funnest Frontier: Which Star Trek Characters Should Be Animated?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/the-funnest-frontier-which-star-trek-characters-should-be-animated",
+      "use": "EMH: cranky, earnest, sass, place/respect seeking."
+    },
+    {
+      "id": "PERS_TOM_PARIS",
+      "title": "Star Trek Magazine Issue #30 Preview",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-magazine-issue-30-preview",
+      "use": "Tom Paris: rough exterior/good core, humor, redemption, adventurousness."
+    },
+    {
+      "id": "PERS_TPOL",
+      "title": "T’Pol’s Inner Strength: Lessons from Enterprise’s First Vulcan Officer",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/tpol-inner-strength-vulcan-lessons",
+      "use": "T'Pol: core-belief stability, open-mindedness, growth without assimilation."
+    },
+    {
+      "id": "PERS_TRIP",
+      "title": "The Best of Charles 'Trip' Tucker III",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/best-of-charles-trip-tucker",
+      "use": "Trip: good humor, humanity, charisma, gifted engineer."
+    },
+    {
+      "id": "PERS_HOSHI",
+      "title": "Hoshi Sato Created a Linguistic Legacy",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/hoshi-sato-created-a-linguistic-legacy",
+      "use": "Hoshi: fear/anxiety, courage, open-mindedness, patience, diligence, growing confidence."
+    },
+    {
+      "id": "PERS_PHLOX",
+      "title": "John Billingsley Answers Fan Questions - Part 1",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/john-billingsley-answers-fan-questions-part-1",
+      "use": "Phlox: positive, charming, peaceful, friendly, optimistic with professional gravitas."
+    },
+    {
+      "id": "PERS_DISCOVERY_PRIMER",
+      "title": "Discovery Episode #10 Primer",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/discovery-episode-10-primer",
+      "use": "Burnham conflict/self-confidence; Stamets sharp, smart, impatient, ambitious."
+    },
+    {
+      "id": "PERS_SARU",
+      "title": "How Saru Earned the Captain's Chair, and More",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/captain-saru-star-trek-discovery",
+      "use": "Saru: fear/caution evolving into compassionate, thoughtful, effective leadership."
+    },
+    {
+      "id": "PERS_TILLY",
+      "title": "The Tilly Moment",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/the-tilly-moment",
+      "use": "Tilly: enthusiastic, socially awkward, kind, compassionate, smart, brave, loyal, determined."
+    },
+    {
+      "id": "PERS_GEORGIOU",
+      "title": "5 Signs You're Like Captain Georgiou",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/signs-youre-like-captain-georgiou",
+      "use": "Prime Georgiou: jovial quips/sarcasm, experienced familiarity with crew."
+    },
+    {
+      "id": "PERS_PIKE",
+      "title": "Captain Pike Shows Leadership for a New World",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/captain-pike-shows-leadership-new-world",
+      "use": "Pike: logic+compassion, patience, relationship-centered leadership, reluctance toward violence."
+    },
+    {
+      "id": "PERS_UNA",
+      "title": "Top Una Chin-Riley Reveals",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/people/top-una-chin-riley-reveals",
+      "use": "Una: confident, unflappable, efficient, cool, private."
+    },
+    {
+      "id": "PERS_CHAPEL",
+      "title": "What to Expect from Season 3 of Star Trek: Strange New Worlds",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/strange-new-worlds-season-3-primer-guide",
+      "use": "Chapel: adventurous, free-spirited, values freedom of movement."
+    },
+    {
+      "id": "PERS_ORTEGAS",
+      "title": "All of Lt. Erica Ortegas' Best One-Liners",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/all-of-lt-erica-ortegas-best-one-liners-on-star-trek-strange-new-worlds",
+      "use": "Ortegas: exuberant, witty, confident, skilled, camaraderie, work-mode switch."
+    },
+    {
+      "id": "PERS_MARINER",
+      "title": "Star Trek: Lower Decks | Who is Beckett Mariner?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-lower-decks-who-is-beckett-mariner",
+      "use": "Mariner: rebellious, intelligent, quick wit/sarcasm, guarded vulnerability, loyalty."
+    },
+    {
+      "id": "PERS_BOIMLER",
+      "title": "Star Trek: Lower Decks | Who is Bradward Boimler?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-lower-decks-who-is-bradward-boimler",
+      "use": "Boimler: ambitious, rules-focused, detail-oriented, career-driven."
+    },
+    {
+      "id": "PERS_LOWER_DECKS_BASE",
+      "title": "Here's What Happened on Star Trek: Lower Decks Last Season",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/heres-what-happened-on-star-trek-lower-decks-last-season",
+      "use": "Boimler neurotic ambition; Rutherford optimism/easy-going engineering enthusiasm; Tendi eager/by-the-book; Freeman proving-command anxiety."
+    },
+    {
+      "id": "PERS_TENDI",
+      "title": "Star Trek: Lower Decks | Who is D’Vana Tendi?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-lower-decks-who-is-dvana-tendi",
+      "use": "Tendi: eager-to-please, guarded about self, smart, broad competence, optimism."
+    },
+    {
+      "id": "PERS_RUTHERFORD",
+      "title": "Star Trek: Lower Decks | Who is Samanthan Rutherford?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/star-trek-lower-decks-who-is-samanthan-rutherford",
+      "use": "Rutherford: engineering enthusiasm, shy praise, work focus, friendship."
+    },
+    {
+      "id": "PERS_RIOS",
+      "title": "How Cristóbal Rios Teaches Us to Appreciate the Little Things",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/captains-week-how-captain-rios-teaches-us-to-appreciate-the-little-things",
+      "use": "Rios: cynical/broken surface with capacity for joy and appreciation."
+    },
+    {
+      "id": "PERS_RAFFI",
+      "title": "For Some Viewers, Raffi Musiker's Story is All Too Familiar",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/for-some-viewers-raffis-story-is-all-too-familiar",
+      "use": "Raffi: anger, humiliation, damaged trust, persistent loyalty and investigative drive."
+    }
+  ]
+}
