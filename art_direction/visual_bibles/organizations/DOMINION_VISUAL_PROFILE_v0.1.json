@@ -1,0 +1,43 @@
+{
+  "profile_id": "dominion_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:dominion",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "founder_collective_authority",
+      "vorta_administration",
+      "jem_hadar_military",
+      "dominion_member_or_subordinate_states"
+    ]
+  },
+  "rules": [
+    "Founder, Vorta, Jem'Hadar and subordinate-state visuals are distinct components of a shared Dominion hierarchy.",
+    "Dominion styling may unify equipment/architecture/markings while species morphology remains separate.",
+    "Vorta or Jem'Hadar authority/rank is never inferred from species alone; exact uniform/equipment follows assignment state.",
+    "Subordinate member-state visuals must retain local identity rather than becoming generic Dominion clones."
+  ],
+  "allowed_variation": [
+    "Founder chosen-form clothing",
+    "Vorta administrative/command clothing",
+    "Jem'Hadar armor/equipment by role",
+    "Dominion facility/ship markings",
+    "local member-state presentation"
+  ],
+  "forbidden_variation": [
+    "one homogeneous Dominion species look",
+    "automatic command insignia",
+    "Jem'Hadar weapon in every portrait",
+    "Founder status inferred from generic Changeling form"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/DOMINION_ORGANIZATIONS_v0.1.json",
+    "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json",
+    "ST_OFFICIAL_DOMINION_101"
+  ]
+}
