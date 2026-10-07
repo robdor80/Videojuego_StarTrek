@@ -1,0 +1,32 @@
+{
+  "profile_id": "andorian_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "andorian",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Blue-to-cyan skin presentation is recurring in the supplied references, with individual/production variation.",
+    "Two cranial antennae are the dominant species-readable feature.",
+    "Antenna angle, length and curvature may vary by individual.",
+    "White-to-silver hair is a strong recurring visual association in the supplied reference set but is not by itself the species identity.",
+    "Humanlike facial individuality remains broad beneath species traits."
+  ],
+  "identity_rules": [
+    "Antenna geometry belongs to persistent individual morphology.",
+    "Injury or regrowth evolves the same antenna identity/history rather than replacing the person.",
+    "Skin tone may vary within an approved Andorian range; do not force one exact blue."
+  ],
+  "forbidden": [
+    "automatic warrior styling",
+    "permanent aggressive expression",
+    "one antenna shape copied across the population",
+    "Aenar treated as cosmetic Andorian variant"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
