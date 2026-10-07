@@ -1,6 +1,6 @@
 {
-  "registry_version": "0.29.0",
-  "last_updated": "2026-10-03",
+  "registry_version": "0.30.0",
+  "last_updated": "2026-10-07",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -1779,6 +1779,25 @@
       "url": "https://memory-alpha.fandom.com/wiki/Nanoprobe",
       "accessed_at": "2026-10-03",
       "notes": "Cross-check for Borg nanoprobe roles in assimilation, maintenance and repair."
+    },
+    {
+      "source_id": "ST_OFFICIAL_AENAR_101_2022",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Strange New Worlds 101: The Aenar",
+      "publisher": "StarTrek.com",
+      "release_date": "2022-07-05",
+      "url": "https://www.startrek.com/en-un/news/strange-new-worlds-101-the-aenar",
+      "accessed_at": "2026-10-07",
+      "notes": "Official overview used for Aenar origin on Andoria, pigmentation, blindness, telepathy, telepathic-consent norm, pacifism and diplomatic/social context."
+    },
+    {
+      "source_id": "MA_AENAR",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Aenar",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Aenar",
+      "accessed_at": "2026-10-07",
+      "notes": "Secondary cross-check for Andorian-related physiology, antennae, blindness, telepathy, enhanced senses and Andorian/Aenar biological compatibility."
     }
   ]
 }
