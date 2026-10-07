@@ -1,0 +1,111 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_facility_existence_invariants",
+  "status": "FOUNDATION_FIXED",
+  "refs": [
+    "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+    "universe/generation/facility_scale_justification_model_v0.1.json",
+    "universe/generation/facility_site_selection_contract_v0.1.json",
+    "universe/generation/procedural_facility_generation_pipeline_v0.1.json",
+    "gameplay/facilities/facility_construction_and_lifecycle_state_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "no_player_convenience_station",
+      "expected": [
+        "Player damage/fuel/resource need cannot create a station.",
+        "Existing world state determines reachable support.",
+        "Player may need to divert, wait, call support or fail."
+      ]
+    },
+    {
+      "id": "no_station_per_system",
+      "expected": [
+        "A populated or visited system may have zero space stations.",
+        "Surface infrastructure can satisfy needs.",
+        "Sparse regions remain sparse."
+      ]
+    },
+    {
+      "id": "temporary_before_permanent",
+      "expected": [
+        "Short crisis prefers mobile/temporary support.",
+        "Permanent construction requires sustained need.",
+        "Temporary infrastructure can disappear/demobilize after need ends."
+      ]
+    },
+    {
+      "id": "existing_capacity_suppresses_duplicates",
+      "expected": [
+        "Nearby facility capacity is checked first.",
+        "Duplicate facility requires sustained overload, resilience, sovereignty or strategic justification.",
+        "Travel inconvenience alone is insufficient."
+      ]
+    },
+    {
+      "id": "smallest_sufficient_scale",
+      "expected": [
+        "Micro outpost is preferred over starbase when adequate.",
+        "Starbase requires regional-scale justification.",
+        "Major complex procedural generation is disabled by default."
+      ]
+    },
+    {
+      "id": "construction_takes_time",
+      "expected": [
+        "Permanent facility passes through lifecycle states.",
+        "Partial construction provides only completed capabilities.",
+        "Construction can be delayed/cancelled/reoriented."
+      ]
+    },
+    {
+      "id": "sustainment_required",
+      "expected": [
+        "Staff, parts, supplies and maintenance chain must exist.",
+        "Unsupported facility can degrade, mothball or fail.",
+        "Replicators do not erase specialized logistics."
+      ]
+    },
+    {
+      "id": "site_follows_function",
+      "expected": [
+        "Science station site depends on phenomenon.",
+        "Shipyard depends on industrial/fleet logistics.",
+        "Border outpost depends on sensor/response geometry.",
+        "Player route is not a placement input."
+      ]
+    },
+    {
+      "id": "traffic_is_consequence",
+      "expected": [
+        "Traffic derives from services/economy/mission.",
+        "Empty low-demand station stays low-traffic.",
+        "Traffic does not spawn solely to make station feel alive."
+      ]
+    },
+    {
+      "id": "identity_persists",
+      "expected": [
+        "facility_id survives operator changes, expansion and damage.",
+        "Cancelled/abandoned construction remains historical state.",
+        "No reroll on revisit/save-load."
+      ]
+    },
+    {
+      "id": "services_not_universal",
+      "expected": [
+        "Facility type does not grant every service.",
+        "Capacity/queue/inventory limit access.",
+        "Emergency priority cannot create missing capability."
+      ]
+    },
+    {
+      "id": "war_and_drawdown",
+      "expected": [
+        "War can justify temporary redundancy or rapid construction.",
+        "Postwar excess may be mothballed/decommissioned.",
+        "War-built infrastructure does not remain eternally busy by fiat."
+      ]
+    }
+  ]
+}
