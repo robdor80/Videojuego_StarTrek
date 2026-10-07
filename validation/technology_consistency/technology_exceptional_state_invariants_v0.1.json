@@ -1,0 +1,95 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "technology_exceptional_state_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "technology_is_context_bound",
+      "expected": [
+        "capability resolves from date/operator/platform/configuration/live state",
+        "knowledge of a technology elsewhere does not grant local availability"
+      ]
+    },
+    {
+      "id": "platform_cannot_exceed_era_without_provenance",
+      "expected": [
+        "class/configuration stays within applicable technology matrix",
+        "experimental/special override requires explicit provenance"
+      ]
+    },
+    {
+      "id": "propulsion_uses_live_system_state",
+      "expected": [
+        "performance changes with damage/power/reactants/navigation context",
+        "travel consumes authoritative time"
+      ]
+    },
+    {
+      "id": "sensors_observe_not_create",
+      "expected": [
+        "target signatures preexist scan",
+        "detection quality changes observer knowledge only"
+      ]
+    },
+    {
+      "id": "communications_have_channel_constraints",
+      "expected": [
+        "distance/relay/interference/damage/jamming may affect link",
+        "recipient may refuse or fail to receive",
+        "only received content enters knowledge"
+      ]
+    },
+    {
+      "id": "transporter_conserves_entities",
+      "expected": [
+        "successful transport changes location of same entity",
+        "blocked/failed operation does not create duplicate",
+        "site-to-site obeys era/platform capability"
+      ]
+    },
+    {
+      "id": "replicator_holodeck_computer_are_not_magic",
+      "expected": [
+        "resource/access/platform constraints apply",
+        "simulation does not mutate external World State by itself",
+        "database access does not imply omniscience"
+      ]
+    },
+    {
+      "id": "exceptional_state_preserves_identity_semantics",
+      "expected": [
+        "assimilation/shapechange/joining/synthetic state explicitly declares continuity",
+        "appearance copying does not copy memories or authority"
+      ]
+    },
+    {
+      "id": "telepathy_not_omniscience",
+      "expected": [
+        "resolved capability scope limits information",
+        "hidden truth outside resolved scope remains hidden"
+      ]
+    },
+    {
+      "id": "temporal_anomaly_is_explicit",
+      "expected": [
+        "temporal effects have authoritative event/state records",
+        "campaign history is not silently rewritten",
+        "branch/replacement semantics require explicit profile"
+      ]
+    },
+    {
+      "id": "rare_phenomenon_not_spawned_for_drama",
+      "expected": [
+        "anomaly has world-state/provenance before observation",
+        "rarity/context rules constrain frequency"
+      ]
+    },
+    {
+      "id": "ai_cannot_grant_technology_or_exception",
+      "expected": [
+        "AI cannot invent installed systems, cures, powers, successful transport or anomaly effects",
+        "AI verbalizes structured outcomes only"
+      ]
+    }
+  ]
+}
