@@ -55,6 +55,7 @@
               "select_array",
               "engineering_request",
               "mark",
+              "mark_matches",
               "save_result",
               "compare_results",
               "repeat_operation",
@@ -226,6 +227,26 @@
               "boolean",
               "null"
             ]
+          },
+          "source": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "newOnly": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          },
+          "minConfidence": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
           },
           "resultId": {
             "type": [
