@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "command_operational_decision_record",
+  "status": "FOUNDATION_FIXED",
+  "fields": {
+    "decision_id": null,
+    "ship_id": null,
+    "decision_domain": null,
+    "proposal_source": null,
+    "proposal_ref": null,
+    "proposed_parameters": {},
+    "decision_owner_position_id": "commanding_officer",
+    "decision_owner_character_id": null,
+    "control_mode": "proposal_requires_approval",
+    "disposition": null,
+    "effective_parameters": {},
+    "delegated_to": null,
+    "issued_order_ref": null,
+    "decided_at": null,
+    "effective_at": null,
+    "supersedes_decision_id": null,
+    "rationale_optional": null,
+    "advisory_warnings": [],
+    "predicted_consequences": [],
+    "actual_consequence_event_refs": []
+  },
+  "proposal_sources": [
+    "engine",
+    "executive_officer",
+    "department_head",
+    "staff_officer",
+    "captain",
+    "external_order"
+  ],
+  "dispositions": [
+    "accepted_unchanged",
+    "modified",
+    "rejected",
+    "delegated",
+    "auto_applied_under_delegation",
+    "cancelled",
+    "superseded"
+  ],
+  "rules": [
+    "Engine proposal and effective command policy are separate records.",
+    "accepted_unchanged records a real captain approval when approval is required.",
+    "modified preserves the original proposal for later debrief/comparison.",
+    "A later decision supersedes rather than erases prior command history.",
+    "Warnings are advisory unless backed by a hard authority/safety constraint.",
+    "Actual consequences are linked later; they are not retroactively used to pretend the captain knew the future."
+  ]
+}
