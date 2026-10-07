@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "technology_capability_contract",
+  "classification": "GAME_ADDITION",
+  "principle": "Technology availability is resolved from civilization/operator, era/date, platform/configuration, authorization and live condition.",
+  "availability_states": [
+    "standard",
+    "available",
+    "limited",
+    "experimental",
+    "class_or_platform_specific",
+    "restricted",
+    "known_but_unavailable",
+    "unknown",
+    "unavailable"
+  ],
+  "capability_fields": [
+    "capability_id",
+    "domain",
+    "operator_or_civilization_refs",
+    "effective_date_range",
+    "availability_state",
+    "platform_constraints",
+    "resource_dependencies",
+    "authorization_requirements",
+    "failure_modes",
+    "provenance_refs"
+  ],
+  "resolution_order": [
+    "campaign_date",
+    "civilization_or_operator",
+    "platform_class_and_configuration",
+    "individual_modifications",
+    "authorization",
+    "live_system_state"
+  ],
+  "rules": [
+    "A technology known somewhere in the galaxy is not automatically available to every faction or platform.",
+    "Era matrix sets an upper bound unless explicit experimental/special provenance overrides it.",
+    "Platform definitions may narrow but not silently exceed applicable technology context.",
+    "Damage, power, resources or authorization may make an installed capability temporarily unavailable.",
+    "AI cannot grant technology because a narrative outcome would be convenient."
+  ]
+}
