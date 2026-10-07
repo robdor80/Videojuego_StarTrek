@@ -1,6 +1,6 @@
 # Star Trek Visual System + NAP Contract v0.1
 
-Status: **FOUNDATION**
+Status: **FOUNDATION + WAVE E CONTENT DEPTH COMPLETE**
 
 ## Purpose
 
@@ -217,3 +217,27 @@ For entity-backed assets, NAP must preserve both:
 - `visual_identity_id` lineage.
 
 A new render, age progression, new uniform, injury state, ship refit or repaired environment is a new asset/state representation of the same persistent entity when World State says identity is continuous. It is not permission to generate an unrelated replacement identity.
+
+
+## Wave E depth implementation
+
+The content-depth pass now resolves through:
+
+- `art_direction/STAR_TREK_VISUAL_DEPTH_INDEX_v0.1.json`
+- `art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_CATALOG_v0.1.json`
+- `art_direction/visual_bibles/organizations/STAR_TREK_ORGANIZATION_VISUAL_PROFILE_CATALOG_v0.1.json`
+- `art_direction/visual_bibles/ships/STAR_TREK_SHIP_CLASS_VISUAL_PROFILES_v0.1.json`
+- `art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1.json`
+- `art_direction/visual_bibles/planets/STAR_TREK_HOMEWORLD_ENVIRONMENT_VISUAL_PROFILES_v0.1.json`
+
+Representative NAP fixture:
+
+- `validation/fixtures/nap/sensors_console_tng_v0.1/`
+
+The fixture contains a physical PNG master, a physical WebP derivative, persistent visual identity, resolved visual context, lifecycle handoff, deterministic renderer specification and verification manifest.
+
+The fixture is explicitly **not production art**. Its purpose is contract/regression validation.
+
+### Completion meaning
+
+Wave E completion means the current defined species/organization/ship/interior/homeworld scope has a coherent visual-resolution and NAP baseline. It does **not** mean every future species, ship class, facility, planet, uniform, prop or production asset has already been authored.
