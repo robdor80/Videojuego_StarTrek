@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "depth_profile_id": "facility_depth_profiles",
   "status": "CONTENT_DEPTH_BASELINE",
   "identity_ref": "gameplay/facilities/facility_identity_model.json",
@@ -232,5 +232,12 @@
   "existence_causality_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json",
   "scale_justification_ref": "universe/generation/facility_scale_justification_model_v0.1.json",
   "site_selection_ref": "universe/generation/facility_site_selection_contract_v0.1.json",
-  "generation_pipeline_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json"
+  "generation_pipeline_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json",
+  "design_generation_index_ref": "lore/stations_and_facilities/facility_design_generation_index_v0.1.json",
+  "staffing_population_ref": "universe/generation/facility_staffing_population_guidance_v0.1.json",
+  "watch_work_ref": "gameplay/facilities/facility_watch_and_work_schedule_contract_v0.1.json",
+  "residency_tenancy_ref": "gameplay/facilities/facility_residency_tenancy_visitor_model_v0.1.json",
+  "service_throughput_ref": "gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+  "expansion_drawdown_ref": "universe/generation/facility_expansion_redundancy_drawdown_contract_v0.1.json",
+  "station_visual_profiles_ref": "art_direction/visual_bibles/facilities/STAR_TREK_STATION_DESIGN_VISUAL_PROFILES_v0.1.json"
 }
