@@ -40,3 +40,25 @@ Las guardias permiten que durante un viaje aparentemente tranquilo sigan existie
 - relevos;
 - errores u omisiones;
 - decisiones rutinarias que pueden volverse importantes más tarde.
+
+
+## Generación de guardias por nave
+
+La capa de profundidad vive en:
+
+- `shipboard_watch_generation_contract_v0.1.json`
+- `../ship_operations/off_watch_obligation_model_v0.1.json`
+- `../ship_operations/off_duty_activity_catalog_v0.1.json`
+- `../../lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json`
+
+### Regla
+
+```text
+DOTACIÓN DE REFERENCIA ≠ MANIFIESTO REAL ≠ PERSONAL ACTIVO EN ESTA GUARDIA
+```
+
+La nave genera primero sus puestos y cobertura necesaria. Después se asignan guardias, personal diurno, relevos, reservas y especialistas localizados.
+
+En Starfleet, el modelo soporta tres guardias de 8 h o cuatro guardias de 6 h como regla de simulación compatible con el canon. La hora exacta de inicio pertenece a cada nave concreta. Otras organizaciones usan guardias locales/personalizadas salvo que exista evidencia canónica de su terminología.
+
+Fuera de turno, un tripulante puede seguir ocupado con relevo, informes, entrenamiento, mantenimiento, guardia localizada, controles médicos, comida, descanso, ocio o compromisos privados. El jugador no puede volver disponible a un NPC simplemente iniciando una conversación.
