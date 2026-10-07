@@ -1,0 +1,13 @@
+{
+  "fixture_id": "oberth_science_2372_v0.1",
+  "generator_ref": "tools/generation/generate_starship_instance.py",
+  "input": {
+    "campaign_seed": "shipboard_fixture_001",
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-01-01",
+    "operator": "starfleet",
+    "role": "science",
+    "requested_watch_pattern": null
+  },
+  "note": "Locked deterministic reference fixture. The values below are game-generation outputs, not a claim that every Oberth carries exactly this schedule."
+}
