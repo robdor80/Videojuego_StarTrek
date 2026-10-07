@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "procedural_worlds_civilizations_first_contact_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
+  "refs": [
+    "universe/generation/procedural_worlds_civilizations_first_contact_index_v0.1.json",
+    "universe/generation/civilization_latent_observed_materialized_pipeline_v0.1.json",
+    "universe/generation/civilization_technology_spaceflight_warp_grammar_v0.1.json",
+    "universe/generation/procedural_sapient_species_morphology_biology_v0.1.json",
+    "universe/generation/procedural_civilization_language_naming_generation_v0.1.json",
+    "universe/generation/procedural_government_institution_representation_grammar_v0.1.json",
+    "universe/generation/procedural_settlement_colony_generation_grammar_v0.1.json",
+    "gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+    "gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+    "gameplay/first_contact/universal_translator_bootstrap_v0.1.json",
+    "tools/generation/generate_civilization_first_contact.py"
+  ],
+  "cases": [
+    {
+      "id": "civilization_exists_before_discovery",
+      "expected": [
+        "civilization_id and aggregate world truth exist before observation",
+        "scan changes knowledge/materialization only",
+        "missions cannot retroactively create civilization history"
+      ]
+    },
+    {
+      "id": "latent_to_materialized_identity",
+      "expected": [
+        "same campaign/world/slot keeps same civilization_id",
+        "materialization only adds deterministic detail",
+        "save/load/revisit never rerolls materialized facts"
+      ]
+    },
+    {
+      "id": "species_not_civilization",
+      "expected": [
+        "species identity does not determine polity/culture",
+        "multi-species civilizations supported",
+        "one species may belong to multiple civilizations"
+      ]
+    },
+    {
+      "id": "species_not_personality",
+      "expected": [
+        "procedural morphology has no personality lock",
+        "aggression/ethics/humor/loyalty not inferred from biology",
+        "individual personality resolved separately"
+      ]
+    },
+    {
+      "id": "appearance_persists",
+      "expected": [
+        "species morphology becomes persistent after materialization",
+        "representative NPC reuses visual_identity",
+        "NAP cannot redesign biology on later portrait generation"
+      ]
+    },
+    {
+      "id": "language_names_are_systemic",
+      "expected": [
+        "names derive from stable language/naming profile",
+        "self-name distinct from provisional Federation designation",
+        "generated names persist"
+      ]
+    },
+    {
+      "id": "unknown_name_remains_unknown",
+      "expected": [
+        "internal deterministic self-name need not be player-visible",
+        "knowledge layer gates display",
+        "AI cannot reveal hidden self-name"
+      ]
+    },
+    {
+      "id": "settlement_causality",
+      "expected": [
+        "settlements require population/function/infrastructure/history",
+        "player landing cannot spawn settlement",
+        "spaceport requires technological/traffic justification"
+      ]
+    },
+    {
+      "id": "technology_constraints",
+      "expected": [
+        "ships/facilities/signatures fit technology band",
+        "warp exception does not uplift all domains",
+        "no Federation tech granted for gameplay convenience"
+      ]
+    },
+    {
+      "id": "warp_not_auto_contact",
+      "expected": [
+        "first warp triggers readiness assessment",
+        "automatic_contact_forbidden remains true",
+        "captain/authority decision is required for normal formal contact"
+      ]
+    },
+    {
+      "id": "prewarp_noninterference",
+      "expected": [
+        "unexposed pre-warp society normally remains observe-only",
+        "covert/remote observation minimizes contamination",
+        "overt contact requires exceptional explicit context"
+      ]
+    },
+    {
+      "id": "contamination_is_state",
+      "expected": [
+        "accidental exposure is recorded",
+        "mitigation assesses who learned what",
+        "contamination does not magically reset or nullify Prime Directive"
+      ]
+    },
+    {
+      "id": "first_contact_can_be_refused",
+      "expected": [
+        "target civilization can delay/refuse/limit contact",
+        "Starfleet does not force public disclosure",
+        "contact refusal persists in diplomatic/contact state"
+      ]
+    },
+    {
+      "id": "divided_world_representation",
+      "expected": [
+        "one polity representative cannot bind whole planet without authority",
+        "relation state may be polity-specific",
+        "contact itself can create political consequences"
+      ]
+    },
+    {
+      "id": "first_contact_not_treaty",
+      "expected": [
+        "first greeting creates no automatic trade/access/alliance",
+        "membership never follows automatically",
+        "formal diplomacy is a later state transition"
+      ]
+    },
+    {
+      "id": "translator_bootstrap",
+      "expected": [
+        "new language can begin untranslated",
+        "samples causally improve translation",
+        "literal translation does not grant cultural pragmatics"
+      ]
+    },
+    {
+      "id": "mutual_encounter",
+      "expected": [
+        "direct post-warp encounter may make secrecy impossible",
+        "protocol adapts to controlled disclosure",
+        "mutual encounter still does not create treaties/omniscience"
+      ]
+    },
+    {
+      "id": "representative_materialization",
+      "expected": [
+        "representatives consume real institution/population slots",
+        "office does not determine personality",
+        "representatives retain character_id after contact"
+      ]
+    },
+    {
+      "id": "prime_directive_not_wall",
+      "expected": [
+        "physically possible violating action can remain playable",
+        "violation is recorded",
+        "disciplinary/diplomatic/cultural consequences may follow"
+      ]
+    },
+    {
+      "id": "captain_first_contact_authority",
+      "expected": [
+        "engine/staff provide recommendation",
+        "captain may proceed/delay/limit/abort within lawful authority",
+        "warp threshold alone never bypasses command decision"
+      ]
+    },
+    {
+      "id": "ai_expression_only",
+      "expected": [
+        "AI can speak for already-materialized representatives within knowledge/personality",
+        "AI cannot invent government/species/history during dialogue",
+        "candidate facts require deterministic validation before becoming World Truth"
+      ]
+    },
+    {
+      "id": "locked_first_warp_fixture",
+      "expected": [
+        "civilization_id gen:civilization:03fd61e37036005f",
+        "self-name Raerraith",
+        "homeworld self-name Thesqolqu",
+        "population 3894320550",
+        "formal_contact_candidate but automatic contact forbidden"
+      ]
+    }
+  ],
+  "runtime_boundary": "CoreRPG 4.5+ remains future owner of live World State, knowledge, action validation, persistence and off-screen civilization simulation."
+}
