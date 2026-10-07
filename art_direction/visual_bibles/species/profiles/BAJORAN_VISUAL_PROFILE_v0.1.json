@@ -1,0 +1,37 @@
+{
+  "profile_id": "bajoran_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:bajoran",
+  "species_id": "bajoran",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Nasal ridge topology is the primary recurring Bajoran species-readable feature.",
+    "Ridge number, spacing and relief may vary by individual inside canon-compatible bounds.",
+    "Otherwise broad humanlike variation in face, skin tone, hair and body type is preserved.",
+    "Religious jewelry, militia uniforms and occupation/resistance styling are culture/organization/history layers, not anatomy."
+  ],
+  "allowed_variation": [
+    "nasal ridge topology",
+    "skin tone",
+    "facial proportions",
+    "hair/grooming",
+    "age",
+    "body type"
+  ],
+  "forbidden_variation": [
+    "automatic religious earring",
+    "automatic militia/resistance styling",
+    "permanent trauma expression",
+    "one nasal-ridge template for all Bajorans"
+  ],
+  "source_refs": [
+    "MA_BAJORAN",
+    "DS9_EMISSARY"
+  ],
+  "notes": "Personal faith and resistance history never derive from morphology."
+}
