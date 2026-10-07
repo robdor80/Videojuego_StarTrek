@@ -1,0 +1,156 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "procedural_facility_generation_pipeline",
+  "status": "FOUNDATION_FIXED",
+  "existence_contract_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json",
+  "scale_model_ref": "universe/generation/facility_scale_justification_model_v0.1.json",
+  "site_selection_ref": "universe/generation/facility_site_selection_contract_v0.1.json",
+  "lifecycle_ref": "gameplay/facilities/facility_construction_and_lifecycle_state_v0.1.json",
+  "principle": "Facilities are consequences of sustained world needs, not map decoration.",
+  "stages": [
+    {
+      "order": 1,
+      "id": "need_detection",
+      "outputs": [
+        "need_id",
+        "need_type",
+        "beneficiaries",
+        "expected_duration",
+        "service_gap"
+      ]
+    },
+    {
+      "order": 2,
+      "id": "alternative_solution_check",
+      "outputs": [
+        "candidate_nonstation_solutions",
+        "selected_solution_or_continue"
+      ],
+      "rule": "Prefer existing facilities, surface infrastructure, mobile support or scheduled service when sufficient."
+    },
+    {
+      "order": 3,
+      "id": "coverage_overlap_check",
+      "outputs": [
+        "reachable_existing_support",
+        "residual_unmet_demand"
+      ],
+      "rule": "Existing capacity suppresses duplicate construction unless resilience/strategy/demand justifies redundancy."
+    },
+    {
+      "order": 4,
+      "id": "scale_resolution",
+      "outputs": [
+        "facility_scale",
+        "justification_record"
+      ],
+      "rule": "Choose the smallest scale that can satisfy projected demand with acceptable risk and queue/load."
+    },
+    {
+      "order": 5,
+      "id": "operator_and_sponsor",
+      "outputs": [
+        "sponsor_id",
+        "owner_candidate",
+        "operator_candidate",
+        "authority_to_build"
+      ]
+    },
+    {
+      "order": 6,
+      "id": "site_selection",
+      "outputs": [
+        "site_ref",
+        "site_score_breakdown",
+        "rejected_site_refs"
+      ],
+      "rule": "Function determines site; player convenience is excluded."
+    },
+    {
+      "order": 7,
+      "id": "design_selection",
+      "outputs": [
+        "design_ref",
+        "design_mode"
+      ],
+      "rule": "Use valid canonical/authored design first; procedural design only when needed and permitted."
+    },
+    {
+      "order": 8,
+      "id": "stable_identity",
+      "outputs": [
+        "facility_id",
+        "designation_state"
+      ],
+      "rule": "Identity begins no later than committed construction and never rerolls."
+    },
+    {
+      "order": 9,
+      "id": "construction_plan",
+      "outputs": [
+        "construction_state",
+        "resource_commitments",
+        "staffing_plan",
+        "expected_completion_window"
+      ]
+    },
+    {
+      "order": 10,
+      "id": "construction_simulation",
+      "outputs": [
+        "progress",
+        "partial_capabilities",
+        "delays",
+        "cost_overruns_or_shortages"
+      ],
+      "rule": "No instant operational station."
+    },
+    {
+      "order": 11,
+      "id": "commissioning",
+      "outputs": [
+        "operational_capabilities",
+        "service_limits",
+        "initial_staff",
+        "maintenance_chain"
+      ]
+    },
+    {
+      "order": 12,
+      "id": "traffic_and_population",
+      "outputs": [
+        "traffic_generation",
+        "resident_staff",
+        "civilians_or_visitors",
+        "service_queues"
+      ],
+      "rule": "Traffic follows actual services/needs; station does not generate traffic merely to look busy."
+    },
+    {
+      "order": 13,
+      "id": "persistent_operation",
+      "outputs": [
+        "facility_world_state",
+        "history",
+        "offscreen_simulation_state"
+      ]
+    }
+  ],
+  "abort_or_downgrade_paths": [
+    "need disappears -> cancel/pause/repurpose",
+    "existing support becomes sufficient -> downgrade scale or cancel",
+    "operator loses capacity/funding -> pause or abandon",
+    "site becomes nonviable -> select new site before construction or create relocation event",
+    "projected demand lower than expected -> build smaller facility",
+    "temporary crisis ends -> prefer temporary/mobile support and demobilize"
+  ],
+  "forbidden": [
+    "generate because player needs a service",
+    "generate because system lacks a station icon",
+    "generate because random encounter table wants a location",
+    "upgrade scale to match player rank or ship prestige",
+    "skip construction lifecycle",
+    "grant generic all-services capability",
+    "spawn duplicate nearby station without unmet demand or resilience justification"
+  ]
+}
