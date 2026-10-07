@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "states": [
     {
       "id": "normal",
@@ -50,5 +50,13 @@
       "source_id": "MA_ALERT_SIGNAL",
       "confidence": "HIGH"
     }
+  ],
+  "command_authority_ref": "gameplay/chain_of_command/captain_operational_decision_authority_contract_v0.1.json",
+  "automatic_decision_registry_ref": "gameplay/chain_of_command/automatic_command_decision_registry_v0.1.json",
+  "command_rules": [
+    "Automatic alert transitions may occur where the ship/system rules permit.",
+    "When command authority owns the resulting alert/readiness decision, the lawful commanding officer may review/change it when declared rules allow.",
+    "Non-overrideable automatic safety conditions must identify themselves explicitly rather than relying on captain status assumptions.",
+    "Changing alert state through command is a persistent order/state transition, not a UI-only toggle."
   ]
 }
