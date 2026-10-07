@@ -198,6 +198,20 @@ Examples:
 
 The computer should say what blocks execution and ask for the smallest missing decision.
 
+## Model routing policy
+
+The personal runtime uses quota-aware routing.
+
+- **Gemini 3.5 Flash-Lite** is the default interpreter.
+- A transient HTTP 503 is retried once after a short delay.
+- **Gemini 3.8 Flash** is used automatically only when 3.5 remains technically unavailable after that retry.
+- 3.8 also receives one retry for a transient 503.
+- A schema/contract validation failure or interpreter uncertainty from 3.5 does **not** automatically consume a 3.8 call; the Computer asks the officer for clarification instead.
+- The operator may explicitly force 3.8 when desired.
+- If both external models remain unavailable, a deterministic local fallback may handle supported intents without mutating state outside normal validators.
+
+This policy exists to preserve the limited 3.8 quota for cases where the higher-capability model is genuinely needed because the default model is unavailable, rather than using it as a generic repair mechanism for unsupported contracts.
+
 ## Transparency
 
 Routine use should be simple. Advanced technical data remains inspectable.
