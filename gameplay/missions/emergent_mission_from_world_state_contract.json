@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "emergent_mission_from_world_state",
+  "classification": "GAME_ADDITION",
+  "pipeline": [
+    "world_state_condition_or_event",
+    "operational_need",
+    "candidate_unit_resolution",
+    "authority_decision",
+    "mission_tasking",
+    "execution",
+    "consequences",
+    "new_world_state"
+  ],
+  "rules": [
+    "Mission templates shape task structure but never create the factual incident they respond to.",
+    "Every generated mission traces to live World State, standing duty or valid command policy.",
+    "NPC units may resolve needs without the player.",
+    "Player proximity is not sufficient reason for assignment.",
+    "Capability, readiness, legal access, chain of command and existing orders constrain selection.",
+    "Quiet periods are valid when no justified player tasking exists.",
+    "Mission completion produces consequences in World State rather than generic XP rewards.",
+    "AI may brief and dramatize only already-authorized mission/world facts."
+  ]
+}
