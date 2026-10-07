@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "romulan_state_security_cultural_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "romulan",
+    "automatic_attachment_by_species": false,
+    "principle": "State/security awareness and controlled disclosure can be culturally salient without making every Romulan deceptive, hostile or Tal Shiar."
+  },
+  "values_and_norms": [
+    {
+      "norm": "controlled_disclosure_can_be_socially_normal",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "state_and_security_awareness_can_shape_behavior",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "formal_loyalty_language_can_be_socially_salient",
+      "strength": "possible_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "strategic_ambiguity_can_appear_in_political_context",
+      "strength": "possible_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "reserved disclosure",
+      "formal political language",
+      "strategic ambiguity",
+      "security-conscious framing"
+    ],
+    "misread_risks": [
+      "Reservation is not proof of lying.",
+      "Ambiguity is not proof of Tal Shiar activity.",
+      "A Romulan civilian is not automatically a state operative."
+    ]
+  },
+  "authority_and_status": {
+    "rules": [
+      "Citizenship, military service, political office and Tal Shiar membership are separate state.",
+      "Security clearance cannot be inferred from species.",
+      "Romulan state institutions vary by era and campaign World State."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "possible_norm": "information boundaries may be socially important",
+    "rule": "Do not turn security-conscious culture into zero intimacy or permanent paranoia."
+  },
+  "family_kinship_and_household": {
+    "universal_structure": null,
+    "rule": "Do not invent family loyalty obligations, marriage law or hereditary office without source/state."
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "state history",
+      "security awareness",
+      "political identity"
+    ],
+    "exact_model_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Species does not imply military, intelligence, diplomatic or political profession."
+  },
+  "law_duty_and_obligation": {
+    "rule": "State duty and personal loyalty can conflict; neither is inferred automatically."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misread": "treachery_or_spy_by_default",
+    "professional_response": "Separate what the person withholds, what they are authorized to reveal, and what evidence actually supports deception."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "civilian/military",
+      "state institution",
+      "region/world",
+      "family",
+      "politics",
+      "era",
+      "offworld exposure",
+      "individual loyalty"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Neutral Zone relations and Federation contact differ strongly by retained era.",
+      "Post-campaign history must follow World State rather than future canon destiny."
+    ]
+  },
+  "gameplay_hooks": [
+    "information_disclosure",
+    "security_clearance",
+    "loyalty_conflict",
+    "diplomatic_ambiguity",
+    "intelligence_risk_without_species_prejudice"
+  ],
+  "ai_guardrails": [
+    "Do not make every Romulan deceptive.",
+    "Do not infer Tal Shiar membership.",
+    "Do not invent secret allegiance because a scene needs intrigue.",
+    "Do not copy Vulcan cultural norms just because of shared ancestry."
+  ],
+  "unknowns": [
+    "complete household structure",
+    "marriage/inheritance rules",
+    "regional subcultures",
+    "funerary norms",
+    "complete civilian education system"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_ROMULAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "society and cultural cross-check"
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULAN_FEDERATION_PRIMER",
+      "confidence": "HIGH",
+      "claim_scope": "state/security and Federation relationship context"
+    },
+    {
+      "source_id": "TOS_BALANCE_OF_TERROR",
+      "confidence": "HIGH",
+      "claim_scope": "23rd-century border/security context"
+    },
+    {
+      "source_id": "TNG_THE_NEUTRAL_ZONE",
+      "confidence": "HIGH",
+      "claim_scope": "24th-century return from isolation"
+    }
+  ]
+}
