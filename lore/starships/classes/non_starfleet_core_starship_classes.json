@@ -1,0 +1,262 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "non_starfleet_core_starship_classes",
+  "contract_ref": "gameplay/ship_operations/class_definition_contract.json",
+  "classes": [
+    {
+      "class_id": "d7",
+      "display_name": "D7",
+      "operator": "klingon_imperial_military",
+      "availability": {
+        "confirmed_active_from_decade": 2250,
+        "retained_playable_profiles": [
+          "pike",
+          "kirk"
+        ]
+      },
+      "classifications": [
+        "battle_cruiser",
+        "military_cruiser"
+      ],
+      "primary_gameplay_roles": [
+        "fleet_combat",
+        "patrol",
+        "military_presence"
+      ],
+      "source_ids": [
+        "MA_D7_CLASS"
+      ]
+    },
+    {
+      "class_id": "ktinga",
+      "display_name": "K't'inga",
+      "operator": "klingon_imperial_military",
+      "availability": {
+        "confirmed_active_by_year": 2259,
+        "retained_playable_profiles": [
+          "pike",
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "battle_cruiser",
+        "military_cruiser"
+      ],
+      "primary_gameplay_roles": [
+        "fleet_combat",
+        "patrol",
+        "military_presence"
+      ],
+      "variants": [
+        "late_23c_refit/configuration",
+        "24c_veteran_configuration_when_valid"
+      ],
+      "source_ids": [
+        "MA_KTINGA_CLASS"
+      ]
+    },
+    {
+      "class_id": "klingon_bird_of_prey",
+      "display_name": "Klingon Bird-of-Prey",
+      "operator": "klingon_imperial_military",
+      "availability": {
+        "confirmed_active_from_decade": 2280,
+        "retained_playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "scout",
+        "raider",
+        "patrol",
+        "escort"
+      ],
+      "primary_gameplay_roles": [
+        "reconnaissance",
+        "raiding",
+        "patrol",
+        "escort"
+      ],
+      "variants": [
+        "brel",
+        "kvort",
+        "d12_when_date_and_source_support"
+      ],
+      "capabilities": [
+        "cloaking_device_when_configuration_valid"
+      ],
+      "special_constraints": [
+        "Exact scale, crew and armament require resolved subtype/configuration."
+      ],
+      "source_ids": [
+        "MA_KLINGON_BIRD_OF_PREY_2280S",
+        "MA_BREL_CLASS"
+      ]
+    },
+    {
+      "class_id": "vorcha",
+      "display_name": "Vor'cha",
+      "operator": "klingon_imperial_military",
+      "availability": {
+        "confirmed_active_from_decade": 2360,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "attack_cruiser",
+        "heavy_cruiser"
+      ],
+      "primary_gameplay_roles": [
+        "fleet_combat",
+        "command",
+        "patrol"
+      ],
+      "capabilities": [
+        "cloaking_device",
+        "heavy_disruptor_and_torpedo_context"
+      ],
+      "source_ids": [
+        "MA_VORCHA_CLASS",
+        "TNG_REUNION"
+      ]
+    },
+    {
+      "class_id": "romulan_bird_of_prey_2260s",
+      "display_name": "Romulan Bird-of-Prey (2260s design family)",
+      "operator": "romulan_military",
+      "availability": {
+        "confirmed_active_by_year": 2266,
+        "retained_playable_profiles": [
+          "kirk"
+        ]
+      },
+      "classifications": [
+        "patrol",
+        "attack",
+        "ambush"
+      ],
+      "primary_gameplay_roles": [
+        "border_patrol",
+        "ambush",
+        "reconnaissance"
+      ],
+      "capabilities": [
+        "cloaking_device",
+        "plasma_weapon_context"
+      ],
+      "special_constraints": [
+        "Canonical class name unspecified; retain design-family identity rather than inventing one."
+      ],
+      "source_ids": [
+        "TOS_BALANCE_OF_TERROR"
+      ]
+    },
+    {
+      "class_id": "dderidex",
+      "display_name": "D'deridex",
+      "operator": "romulan_military",
+      "availability": {
+        "confirmed_active_by_year": 2364,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "warbird",
+        "battle_cruiser",
+        "capital_ship"
+      ],
+      "primary_gameplay_roles": [
+        "fleet_combat",
+        "strategic_presence",
+        "patrol",
+        "command"
+      ],
+      "capabilities": [
+        "cloaking_device",
+        "forced_quantum_singularity_power_context"
+      ],
+      "source_ids": [
+        "MA_DDERIDEX_CLASS",
+        "TNG_THE_NEUTRAL_ZONE"
+      ]
+    },
+    {
+      "class_id": "galor",
+      "display_name": "Galor",
+      "operator": "cardassian_military",
+      "availability": {
+        "confirmed_active_from_decade": 2360,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "medium_cruiser",
+        "warship"
+      ],
+      "primary_gameplay_roles": [
+        "patrol",
+        "fleet_combat",
+        "border_security"
+      ],
+      "source_ids": [
+        "MA_GALOR_CLASS",
+        "TNG_THE_WOUNDED"
+      ]
+    },
+    {
+      "class_id": "keldon",
+      "display_name": "Keldon",
+      "operator": "cardassian_military",
+      "availability": {
+        "confirmed_active_by_year": 2371,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "cruiser"
+      ],
+      "primary_gameplay_roles": [
+        "fleet_combat",
+        "special_mission"
+      ],
+      "special_constraints": [
+        "Obsidian Order cloaked/enhanced examples are special configurations, not universal class baseline."
+      ],
+      "source_ids": [
+        "MA_KELDON_CLASS"
+      ]
+    },
+    {
+      "class_id": "hideki",
+      "display_name": "Hideki",
+      "operator": "cardassian_military",
+      "availability": {
+        "confirmed_active_by_year": 2370,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "classifications": [
+        "patrol_ship",
+        "attack_ship",
+        "small_multipurpose"
+      ],
+      "primary_gameplay_roles": [
+        "local_patrol",
+        "security",
+        "attack",
+        "smallcraft_support"
+      ],
+      "crew_reference": "very_small_crew_context",
+      "source_ids": [
+        "MA_HIDEKI_CLASS"
+      ]
+    }
+  ]
+}
