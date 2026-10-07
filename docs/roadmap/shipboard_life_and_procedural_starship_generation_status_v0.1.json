@@ -1,10 +1,10 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "manifest_id": "shipboard_life_and_procedural_starship_generation_status",
   "plan_ref": "docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md",
   "summary": {
-    "total_packages": 12,
-    "complete": 12,
+    "total_packages": 15,
+    "complete": 15,
     "partial": 0,
     "todo": 0
   },
@@ -56,6 +56,18 @@
     {
       "package_id": "SB012",
       "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB013",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB014",
+      "status": "COMPLETE"
+    },
+    {
+      "package_id": "SB015",
+      "status": "COMPLETE"
     }
   ],
   "implementation_state": {
@@ -63,6 +75,9 @@
     "deterministic_reference_generators": "PRESENT",
     "locked_fixture": "PRESENT",
     "repository_ci_runner": "NOT_CONFIGURED",
-    "core_rpg_authoritative_runtime": "PENDING_CORERPG_4_5_PLUS"
+    "core_rpg_authoritative_runtime": "PENDING_CORERPG_4_5_PLUS",
+    "player_captain_command_authority": "COMPLETE",
+    "automatic_decision_registry": "COMPLETE",
+    "delegation_control_modes": "COMPLETE"
   }
 }
