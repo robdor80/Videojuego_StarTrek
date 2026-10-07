@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "language_runtime",
   "classification": "GAME_ADDITION",
   "character_fields": {
@@ -41,12 +41,16 @@
     "Unknown languages may require observation and analysis before a usable matrix exists.",
     "A character who knows the original language can notice translator errors when their knowledge permits.",
     "Machine translation never grants cultural familiarity automatically.",
-    "AI output may present translated dialogue, partial translation or untranslated content only as Core language state allows."
+    "AI output may present translated dialogue, partial translation or untranslated content only as Core language state allows.",
+    "Newly generated languages receive stable language_id and translation-matrix state.",
+    "First-contact dialogue cannot silently jump from analysis_required to confident translation without samples/cause."
   ],
   "provenance": [
     {
       "source_id": "MA_UNIVERSAL_TRANSLATOR",
       "confidence": "MEDIUM"
     }
-  ]
+  ],
+  "first_contact_bootstrap_ref": "gameplay/first_contact/universal_translator_bootstrap_v0.1.json",
+  "generated_language_contract_ref": "universe/generation/procedural_civilization_language_naming_generation_v0.1.json"
 }
