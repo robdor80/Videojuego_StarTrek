@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_index_id": "starship_class_catalogue_index",
+  "class_definition_contract_ref": "gameplay/ship_operations/class_definition_contract.json",
+  "catalogues": [
+    {
+      "operator_family": "starfleet",
+      "catalogue_ref": "lore/starships/classes/core_starship_classes.json",
+      "depth_ref": "lore/starships/classes/depth/STARFLEET_CLASS_DEPTH_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "klingon",
+      "catalogue_ref": "lore/starships/classes/non_starfleet_core_starship_classes.json",
+      "depth_ref": "lore/starships/classes/depth/KLINGON_CLASS_DEPTH_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "romulan",
+      "catalogue_ref": "lore/starships/classes/non_starfleet_core_starship_classes.json",
+      "depth_ref": "lore/starships/classes/depth/ROMULAN_CLASS_DEPTH_PROFILES_v0.1.json"
+    },
+    {
+      "operator_family": "cardassian",
+      "catalogue_ref": "lore/starships/classes/non_starfleet_core_starship_classes.json",
+      "depth_ref": "lore/starships/classes/depth/CARDASSIAN_CLASS_DEPTH_PROFILES_v0.1.json"
+    }
+  ],
+  "generation_rule": "Filter all catalogues by campaign date, operator, role and valid configuration; canonical individual ships are reserved identities."
+}
