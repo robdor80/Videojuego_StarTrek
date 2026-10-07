@@ -1,0 +1,60 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "borg_assimilated_character",
+  "display_name_es": "Personaje asimilado Borg",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "profile_type": "transformative_character_state_not_species",
+  "baseline_refs": [
+    "gameplay/species/dominion_borg_profiles.json#borg_drone",
+    "gameplay/species/borg_assimilation_state.json"
+  ],
+  "origin_species_required": true,
+  "identity": {
+    "origin_entity_id_persists": true,
+    "origin_species_id_persists": true,
+    "base_visual_identity_lineage_persists": true,
+    "designation_and_function_are_runtime_state": true
+  },
+  "transformation": {
+    "stages": [
+      "unassimilated",
+      "exposed",
+      "early_assimilation",
+      "collective_link_established",
+      "drone_conversion_in_progress",
+      "drone",
+      "disconnected",
+      "liberated",
+      "recovery_or_residual_state"
+    ],
+    "cybernetic_augmentation": true,
+    "implant_profile_depends_on_function": true,
+    "collective_connection": "state_dependent",
+    "liberation_supported": true
+  },
+  "gameplay_hooks": [
+    "collective_connection",
+    "assimilation",
+    "cybernetic_systems",
+    "adaptation",
+    "liberation_or_disconnection"
+  ],
+  "visual_profile_ref": "art_direction/visual_bibles/characters/states/BORG_ASSIMILATION_VISUAL_PROFILE_v0.1.json",
+  "ai_boundary": [
+    "Collective connection does not expose unrestricted hidden World Truth.",
+    "AI cannot advance assimilation, declare recovery or invent implants.",
+    "Designation does not replace persistent identity/history."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BORG_DRONE",
+      "confidence": "MEDIUM",
+      "claim_scope": "assimilated origin species plus cybernetic augmentation"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BORG_101",
+      "confidence": "HIGH",
+      "claim_scope": "Borg collective and drone context"
+    }
+  ]
+}
