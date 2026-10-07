@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "ferenginar_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "ferenginar_system",
+    "planet_id": "ferenginar",
+    "display_name_es": "Ferenginar",
+    "world_type": "inhabited_habitable_planet",
+    "native_species_refs": [
+      "ferengi"
+    ],
+    "polity_ref": "ferengi_alliance",
+    "capital_world": true
+  },
+  "orbital_context": {
+    "system_type": "single_star_context",
+    "exact_orbit": null
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "habitable": true,
+    "humidity": "very_high context",
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "dominant_surface_experience": [
+      "near-constant torrential rainfall",
+      "mud/rivers_of_muck"
+    ],
+    "global_fraction": null
+  },
+  "geology_topography": {
+    "wetlands_swamp_like_regions": true,
+    "global_map": "unknown"
+  },
+  "climate_refs": [
+    "near_constant_heavy_rain",
+    "very_humid"
+  ],
+  "biosphere_ref": "ferenginar_wet_biosphere",
+  "region_refs": [
+    "Tower of Commerce context",
+    "urban/commercial districts",
+    "mud/rain landscape regions"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "institutional_refs": [
+    "gameplay/organizations/profiles/FERENGI_ALLIANCE_ORGANIZATIONS_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "commerce",
+    "contracts",
+    "regulation",
+    "Grand_Nagus_politics",
+    "rain-weather_operations",
+    "trade_traffic",
+    "property/dispute",
+    "era-sensitive reform"
+  ],
+  "temporal_rules": [
+    "Commercial/social law changes by era/campaign state.",
+    "Late-DS9 reforms are not applied before they occur.",
+    "Weather remains environmental state on top of wet-climate baseline."
+  ],
+  "ai_boundary": [
+    "Do not infer every resident is merchant, wealthy or dishonest.",
+    "Do not invent contracts/debts/property.",
+    "Heavy rain affects scenes but must not become comedy in every interaction."
+  ],
+  "visual_nap": [
+    "persistent wet surfaces",
+    "heavy rainfall",
+    "dense commercial interiors/urban activity where region supports",
+    "avoid one-note filthy caricature"
+  ],
+  "unknowns": [
+    "exact planetary science",
+    "global geography",
+    "population by retained era"
+  ],
+  "provenance": [
+    "MA_FERENGINAR",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "ST_OFFICIAL_FERENGI_RULES_2023",
+    "ST_OFFICIAL_ROM_GRAND_NAGUS"
+  ]
+}
