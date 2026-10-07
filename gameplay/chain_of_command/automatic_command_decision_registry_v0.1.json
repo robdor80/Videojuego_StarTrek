@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "registry_id": "automatic_command_decision_registry",
   "status": "FOUNDATION_FIXED",
   "purpose": "Ensure every engine-generated operational decision has an explicit command owner, delegation policy and captain-review path.",
@@ -152,12 +152,26 @@
         "higher_order_constraints",
         "capability"
       ]
+    },
+    "first_contact_policy": {
+      "authority_owner": "commanding_officer_with_mission_and_diplomatic_constraints",
+      "engine_default": "prepare_first_contact_brief_and_recommendation",
+      "override_policy": "captain_may_proceed_delay_limit_abort_or_request_alternative_within_lawful_authority",
+      "delegation_policy": "captain_may_delegate_execution_but_not_silently_transfer_accountability",
+      "hard_constraints": [
+        "Prime_Directive",
+        "higher_mission_orders",
+        "recognized_diplomatic_authority",
+        "communication_capability",
+        "known_representation_scope"
+      ]
     }
   },
   "future_domain_rule": [
     "If authority_owner is commanding_officer and the player currently holds that lawful position, the UI/AI must expose the decision or its delegation state.",
     "If the player delegates the domain, routine decisions may apply without repeated approval but remain reviewable.",
     "If the decision belongs to a protected professional/external authority, captain review does not silently convert it into captain-owned authority.",
-    "Engine recommendation score never becomes authority."
+    "Engine recommendation score never becomes authority.",
+    "First Contact recommendation never auto-executes solely because warp capability was detected."
   ]
 }
