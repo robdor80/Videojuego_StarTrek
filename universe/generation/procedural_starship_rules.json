@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "ruleset_id": "procedural_starship_generation",
   "status": "foundation_fixed",
   "role_families": [
@@ -66,11 +66,15 @@
     "Generated design and generated individual ship are separate persistent identities.",
     "Individual ship watch/life state is generated after staffing requirements and before NPC schedules.",
     "A generated vessel receives a shipboard life profile appropriate to class/configuration/operator and mission.",
-    "The generator must expose vacancies/understaffing rather than silently creating extra crew."
+    "The generator must expose vacancies/understaffing rather than silently creating extra crew.",
+    "Civilian traffic may instantiate a previously generated procedural design or create one when a real role need lacks a suitable authored/canonical design.",
+    "The design_id remains reusable; each individual vessel receives a distinct stable_ship_id."
   ],
   "design_contract_ref": "universe/generation/procedural_ship_design_contract_v0.1.json",
   "instance_pipeline_ref": "universe/generation/procedural_starship_instance_generation_pipeline_v0.1.json",
   "crew_watch_schedule_pipeline_ref": "universe/generation/procedural_ship_crew_watch_schedule_pipeline_v0.1.json",
   "shipboard_life_catalog_ref": "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json",
-  "naming_registry_contract_ref": "universe/generation/operator_ship_naming_registry_contract_v0.1.json"
+  "naming_registry_contract_ref": "universe/generation/operator_ship_naming_registry_contract_v0.1.json",
+  "procedural_civilian_design_profiles_ref": "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json",
+  "civilian_shipboard_life_profiles_ref": "lore/starships/classes/shipboard_life/CIVILIAN_PROCEDURAL_SHIPBOARD_LIFE_PROFILES_v0.1.json"
 }
