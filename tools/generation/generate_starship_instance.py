@@ -346,12 +346,14 @@ def generate(
     operator: str,
     role: str | None = None,
     requested_watch_pattern: str | None = None,
+    need_id: str = "default",
 ) -> dict[str, Any]:
     if operator not in OPERATOR_MAP:
         raise ValueError(f"Unsupported operator alias: {operator}")
 
     year = parse_year(campaign_date)
-    seed_key = f"{campaign_seed}|{era_id}|{campaign_date}|{operator}|{role or 'auto'}|ship"
+    need_scope = "" if need_id == "default" else f"|{need_id}"
+    seed_key = f"{campaign_seed}|{era_id}|{campaign_date}|{operator}|{role or 'auto'}|ship{need_scope}"
     rng = DeterministicRng(seed_key)
 
     class_entry = choose_class(rng, operator, era_id, year, role)
@@ -394,6 +396,7 @@ def generate(
             "operator_alias": operator,
             "operator_id": OPERATOR_MAP[operator],
             "requested_role": role,
+            "need_id": need_id,
             "seed_key_hash": hashlib.sha256(seed_key.encode("utf-8")).hexdigest(),
         },
         "ship": {
@@ -472,6 +475,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--date", default="2372-01-01")
     parser.add_argument("--operator", choices=sorted(OPERATOR_MAP), default="starfleet")
     parser.add_argument("--role")
+    parser.add_argument("--need-id", default="default", help="Stable causal need/event id used to distinguish vessels inside one campaign.")
     parser.add_argument("--watch-pattern", choices=["three_shift", "four_shift"])
     parser.add_argument("--output", type=Path)
     parser.add_argument("--validate", action="store_true")
@@ -487,6 +491,7 @@ def main() -> int:
         operator=args.operator,
         role=args.role,
         requested_watch_pattern=args.watch_pattern,
+        need_id=args.need_id,
     )
     if args.validate:
         errors = validate(payload)
