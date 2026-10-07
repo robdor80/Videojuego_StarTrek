@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "operator_ship_naming_registry_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Ship identity needs a collision-safe diegetic name/registry layer, but the generator must not invent canonical naming rules where none are established.",
+  "fields": [
+    "ship_id",
+    "operator_id",
+    "display_name",
+    "display_name_source",
+    "registry_or_hull_number",
+    "registry_status",
+    "prefix_if_valid",
+    "reserved_identity_check",
+    "name_history"
+  ],
+  "rules": [
+    "Canonical ship names and registries are reserved.",
+    "Generated display names must be checked against canonical and already-generated active/historical identities within the relevant operator context.",
+    "Renaming appends name_history and does not change ship_id.",
+    "Registry/hull number is optional until a validated operator allocator exists.",
+    "Do not assume Human naval prefixes for alien operators.",
+    "Starfleet may use USS when the era/context supports it; exact registry allocation is separate from internal stable_ship_id.",
+    "House/clan/family naming may be used only when actual operator culture/ownership state supports it."
+  ],
+  "generated_name_modes": [
+    "controlled_lexicon",
+    "place_or_person_reference_when_culturally_valid",
+    "concept_or_value",
+    "operator_designation",
+    "numbered_or_code_designation",
+    "author_assigned"
+  ],
+  "safety_rule": "If a valid diegetic name cannot be generated confidently, the ship still exists with stable_ship_id and a temporary sensor/traffic designation."
+}
