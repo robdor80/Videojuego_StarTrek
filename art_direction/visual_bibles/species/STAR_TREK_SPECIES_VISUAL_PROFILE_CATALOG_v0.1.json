@@ -1,0 +1,39 @@
+{
+  "profile_id": "star_trek_species_visual_profile_catalog",
+  "profile_type": "species_profile_catalog",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "species_morphology_and_state_profiles",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Species profile selection never selects culture, organization, uniform or personality.",
+    "Persistent characters retain one visual identity lineage through age and state changes.",
+    "Transformative states such as Borg assimilation or Changeling form changes modify/present identity without silently replacing entity identity."
+  ],
+  "profiles": {
+    "human": "art_direction/visual_bibles/species/profiles/HUMAN_VISUAL_PROFILE_v0.1.json",
+    "vulcan": "art_direction/visual_bibles/species/profiles/VULCAN_VISUAL_PROFILE_v0.1.json",
+    "andorian": "art_direction/visual_bibles/species/profiles/ANDORIAN_VISUAL_PROFILE_v0.1.json",
+    "aenar": "art_direction/visual_bibles/species/profiles/AENAR_VISUAL_PROFILE_v0.1.json",
+    "tellarite": "art_direction/visual_bibles/species/profiles/TELLARITE_VISUAL_PROFILE_v0.1.json",
+    "klingon": "art_direction/visual_bibles/species/profiles/KLINGON_VISUAL_PROFILE_v0.1.json",
+    "romulan": "art_direction/visual_bibles/species/profiles/ROMULAN_VISUAL_PROFILE_v0.1.json",
+    "cardassian": "art_direction/visual_bibles/species/profiles/CARDASSIAN_VISUAL_PROFILE_v0.1.json",
+    "bajoran": "art_direction/visual_bibles/species/profiles/BAJORAN_VISUAL_PROFILE_v0.1.json",
+    "ferengi": "art_direction/visual_bibles/species/profiles/FERENGI_VISUAL_PROFILE_v0.1.json",
+    "trill": "art_direction/visual_bibles/species/profiles/TRILL_VISUAL_PROFILE_v0.1.json",
+    "betazoid": "art_direction/visual_bibles/species/profiles/BETAZOID_VISUAL_PROFILE_v0.1.json",
+    "changeling": "art_direction/visual_bibles/species/profiles/CHANGELING_VISUAL_PROFILE_v0.1.json",
+    "vorta": "art_direction/visual_bibles/species/profiles/VORTA_VISUAL_PROFILE_v0.1.json",
+    "jem_hadar": "art_direction/visual_bibles/species/profiles/JEM_HADAR_VISUAL_PROFILE_v0.1.json",
+    "borg_assimilation_state": "art_direction/visual_bibles/characters/states/BORG_ASSIMILATION_VISUAL_PROFILE_v0.1.json"
+  },
+  "source_refs": [
+    "gameplay/species/founding_species_profiles.json",
+    "gameplay/species/major_species_profiles.json",
+    "gameplay/species/dominion_borg_profiles.json"
+  ]
+}
