@@ -1,0 +1,37 @@
+{
+  "profile_id": "betazoid_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:betazoid",
+  "species_id": "betazoid",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Betazoids are externally very Human-like; dark/black iris presentation is a recurring full-Betazoid species cue.",
+    "Telepathy has no automatic visible glow, aura or eye effect.",
+    "Broad humanlike variation in skin tone, facial structure, hair and body type remains available.",
+    "Hybrid ancestry may alter visible traits and must resolve from the actual lineage profile rather than this full-Betazoid default."
+  ],
+  "allowed_variation": [
+    "humanlike facial variation",
+    "skin tone",
+    "hair/grooming",
+    "age",
+    "body type",
+    "iris presentation when lineage/context supports"
+  ],
+  "forbidden_variation": [
+    "psychic glow",
+    "telepathic visual effects without an explicit scene effect",
+    "permanent empathic facial expression",
+    "automatic counselor styling"
+  ],
+  "source_refs": [
+    "MA_BETAZOID",
+    "MA_BETAZED_WORLD"
+  ],
+  "notes": "Capability strength and privacy norms are gameplay state, not visible morphology."
+}
