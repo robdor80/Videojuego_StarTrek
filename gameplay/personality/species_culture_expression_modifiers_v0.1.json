@@ -1,0 +1,268 @@
+{
+  "schema_version": "0.1.0",
+  "modifier_set_id": "species_culture_personality_expression_modifiers",
+  "status": "FOUNDATION",
+  "principle": "Species does not choose personality. Attached culture/upbringing can modify learned expression, register and interpretation while preserving the same core personality.",
+  "application_order": [
+    "persistent personality core",
+    "attached culture/upbringing expression modifiers",
+    "institution/profession register",
+    "relationship-specific behavior",
+    "current state"
+  ],
+  "socialization_prior_limit": 0.1,
+  "expression_modifier_limit": 0.3,
+  "hybrid_rule": "Never average species numerically. Resolve actual upbringing/culture_refs and individual history.",
+  "modifiers": {
+    "human_federation": {
+      "trigger": "relevant human/Earth/Federation culture_refs only; Human species alone is insufficient",
+      "socialization_priors": {},
+      "expression_effects": {},
+      "note": "No single Human expression default. Regional/colony/institutional culture decides."
+    },
+    "vulcan_mainstream": {
+      "trigger": "vulcan cultural socialization ref",
+      "socialization_priors": {
+        "formality": 0.08,
+        "conscientiousness": 0.06
+      },
+      "expression_effects": {
+        "public_emotional_display": -0.25,
+        "formal_register": 0.2,
+        "evidence_first_disagreement": 0.25,
+        "small_talk_frequency": -0.1
+      },
+      "humor_style_bias": [
+        "dry",
+        "deadpan"
+      ],
+      "guardrails": [
+        "Do not suppress core empathy.",
+        "Do not make every Vulcan emotionless or humorless.",
+        "Individual personality can be warm, ambitious, curious, shy, bold, etc."
+      ]
+    },
+    "andorian_mainstream": {
+      "trigger": "andorian cultural socialization ref",
+      "socialization_priors": {
+        "directness": 0.06,
+        "conflict_assertiveness": 0.04
+      },
+      "expression_effects": {
+        "direct_register": 0.15,
+        "challenge_response_readability": 0.15
+      },
+      "humor_style_bias": [],
+      "guardrails": [
+        "Directness is not aggression.",
+        "Do not force warrior personality or profession."
+      ]
+    },
+    "aenar": {
+      "trigger": "Aenar cultural socialization ref",
+      "socialization_priors": {},
+      "expression_effects": {
+        "telepathic_consent_salience": 0.3,
+        "de_escalatory_conflict_bias": 0.12
+      },
+      "humor_style_bias": [],
+      "guardrails": [
+        "Pacifism does not mean passive personality.",
+        "Blindness does not imply dependence.",
+        "Telepathy does not expose secrets automatically."
+      ]
+    },
+    "tellarite": {
+      "trigger": "Tellarite cultural socialization ref",
+      "socialization_priors": {
+        "conflict_assertiveness": 0.06,
+        "directness": 0.05
+      },
+      "expression_effects": {
+        "debate_as_engagement": 0.25,
+        "complaint_as_social_contact": 0.2
+      },
+      "humor_style_bias": [
+        "sarcastic",
+        "teasing",
+        "boastful"
+      ],
+      "guardrails": [
+        "Argument does not equal anger.",
+        "A warm Tellarite may still sound argumentative."
+      ]
+    },
+    "klingon": {
+      "trigger": "Klingon cultural socialization ref",
+      "socialization_priors": {
+        "directness": 0.05,
+        "competitiveness": 0.04
+      },
+      "expression_effects": {
+        "honor_reputation_salience": 0.2,
+        "direct_challenge_legibility": 0.15
+      },
+      "humor_style_bias": [
+        "dry",
+        "teasing",
+        "dark",
+        "storytelling"
+      ],
+      "guardrails": [
+        "Do not lower humor_frequency automatically.",
+        "Do not force aggression, military service or Empire loyalty.",
+        "House/honor references require real state."
+      ]
+    },
+    "romulan": {
+      "trigger": "Romulan cultural socialization ref",
+      "socialization_priors": {
+        "formality": 0.05,
+        "initial_trust_speed": -0.05
+      },
+      "expression_effects": {
+        "controlled_disclosure": 0.2,
+        "security_awareness": 0.18
+      },
+      "humor_style_bias": [
+        "dry",
+        "subtle"
+      ],
+      "guardrails": [
+        "Reservation is not deceit.",
+        "Do not infer Tal Shiar or paranoia."
+      ]
+    },
+    "cardassian": {
+      "trigger": "Cardassian cultural socialization ref",
+      "socialization_priors": {
+        "formality": 0.04
+      },
+      "expression_effects": {
+        "hierarchy_awareness": 0.18,
+        "family_reputation_salience": 0.12,
+        "institutional_register": 0.1
+      },
+      "humor_style_bias": [
+        "dry",
+        "sarcastic"
+      ],
+      "guardrails": [
+        "Hierarchy is not cruelty.",
+        "Do not infer Union loyalty, occupation guilt or intelligence work."
+      ]
+    },
+    "bajoran": {
+      "trigger": "Bajoran cultural socialization ref",
+      "socialization_priors": {},
+      "expression_effects": {
+        "sovereignty_context_salience": 0.15,
+        "religious_vocabulary_if_belief_state_allows": 0.15,
+        "occupation_memory_if_character_has_it": 0.15
+      },
+      "humor_style_bias": [],
+      "guardrails": [
+        "Do not infer faith, resistance history or trauma."
+      ]
+    },
+    "ferengi": {
+      "trigger": "Ferengi cultural socialization ref",
+      "socialization_priors": {
+        "competitiveness": 0.04
+      },
+      "expression_effects": {
+        "commercial_value_framing": 0.22,
+        "negotiation_register": 0.18
+      },
+      "humor_style_bias": [
+        "sarcastic",
+        "teasing",
+        "boastful"
+      ],
+      "guardrails": [
+        "Do not infer greed, dishonesty, merchant profession, wealth or contracts.",
+        "Era-sensitive social/legal norms apply separately."
+      ]
+    },
+    "trill": {
+      "trigger": "Trill cultural socialization ref",
+      "socialization_priors": {},
+      "expression_effects": {
+        "joined_history_salience_if_joined": 0.18
+      },
+      "humor_style_bias": [],
+      "guardrails": [
+        "Joined status does not impose calmness, wisdom or profession.",
+        "Prior-host relationships do not overwrite current ones."
+      ]
+    },
+    "betazoid": {
+      "trigger": "Betazoid cultural socialization ref",
+      "socialization_priors": {
+        "directness": 0.04
+      },
+      "expression_effects": {
+        "emotional_information_awareness": 0.22,
+        "frankness_norm": 0.12,
+        "privacy_negotiation_salience": 0.18
+      },
+      "humor_style_bias": [],
+      "guardrails": [
+        "Telepathy is not omniscience or lie detection.",
+        "Privacy still exists.",
+        "Capability varies by individual."
+      ]
+    },
+    "vorta_dominion": {
+      "trigger": "Vorta Dominion institutional/cultural socialization",
+      "socialization_priors": {
+        "formality": 0.06
+      },
+      "expression_effects": {
+        "founder_reverence_register": 0.25,
+        "administrative_diplomatic_register": 0.15
+      },
+      "humor_style_bias": [
+        "dry",
+        "rare_or_none"
+      ],
+      "guardrails": [
+        "Do not infer exact assignment or authority.",
+        "Individual deviation remains possible."
+      ]
+    },
+    "jem_hadar_dominion": {
+      "trigger": "Jem'Hadar Dominion military socialization",
+      "socialization_priors": {
+        "formality": 0.07,
+        "conscientiousness": 0.07
+      },
+      "expression_effects": {
+        "unit_chain_of_command_salience": 0.25,
+        "founder_reverence_register": 0.25
+      },
+      "humor_style_bias": [
+        "rare_or_none"
+      ],
+      "guardrails": [
+        "Do not erase individuality or doubt.",
+        "Authority and ketracel state come from runtime, not personality."
+      ]
+    },
+    "borg_assimilated_state": {
+      "trigger": "active Borg assimilation/Collective connection state",
+      "socialization_priors": {},
+      "expression_effects": {
+        "individual_expression_suppression": 0.3,
+        "collective_register": 0.3
+      },
+      "humor_style_bias": [
+        "rare_or_none"
+      ],
+      "guardrails": [
+        "Underlying personality profile is retained, not deleted.",
+        "Liberation/recovery re-exposes the same identity rather than assigning a new personality."
+      ]
+    }
+  }
+}
