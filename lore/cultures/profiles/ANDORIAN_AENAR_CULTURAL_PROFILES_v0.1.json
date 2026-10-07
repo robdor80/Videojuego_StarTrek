@@ -1,0 +1,204 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "andorian_aenar_cultural_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "profiles": {
+    "andorian": {
+      "identity_and_scope": {
+        "species_association": "andorian",
+        "automatic_attachment_by_species": false,
+        "principle": "Andorian directness, challenge traditions and martial context are cultural priors, not personality locks."
+      },
+      "values_and_norms": [
+        {
+          "norm": "direct_communication_can_be_socially_normal",
+          "strength": "common_norm",
+          "evidence_state": "reliable_secondary_crosscheck"
+        },
+        {
+          "norm": "challenge_response_traditions_can_have_formal_social_meaning",
+          "strength": "possible_norm",
+          "evidence_state": "screen_canon_or_official_supported"
+        },
+        {
+          "norm": "martial_or_honor_linked_practices_exist",
+          "strength": "possible_norm",
+          "evidence_state": "screen_canon_or_official_supported"
+        }
+      ],
+      "communication_and_conflict": {
+        "possible_norms": [
+          "directness",
+          "challenge-response",
+          "formal confrontation in some contexts"
+        ],
+        "misread_risks": [
+          "Directness can be misread as hostility.",
+          "Challenge can be misread as immediate violence when it may have ritual/social structure."
+        ],
+        "rule": "Actual threat level comes from behavior/world state, not species/culture label."
+      },
+      "authority_and_status": {
+        "universal_military_status": false,
+        "rule": "Do not infer rank, warrior status, clan/House equivalent or government authority from species."
+      },
+      "privacy_and_intimacy": {
+        "universal_rule": null
+      },
+      "family_kinship_and_household": {
+        "universal_structure": null,
+        "rule": "No Andorian family/reproductive social template is locked here; use explicit canon/project data only."
+      },
+      "education_and_socialization": {
+        "universal_curriculum": null
+      },
+      "work_service_and_profession": {
+        "rule": "Martial tradition does not force military service."
+      },
+      "mourning_death_and_legacy": {
+        "universal_protocol": null
+      },
+      "internal_variation": {
+        "required": true,
+        "examples": [
+          "regional context",
+          "military/civilian socialization",
+          "offworld upbringing",
+          "mixed Federation context",
+          "individual adherence"
+        ]
+      },
+      "gameplay_hooks": [
+        "directness_interpretation",
+        "formal_challenge_context",
+        "diplomatic_misread_prevention",
+        "civilian_vs_military_identity"
+      ],
+      "ai_guardrails": [
+        "Do not turn all Andorians into warriors.",
+        "Do not classify direct speech as hostility without evidence.",
+        "Do not create Ushaan or challenge obligations unless state explicitly establishes them."
+      ],
+      "unknowns": [
+        "universal family structure",
+        "marriage system",
+        "inheritance",
+        "funerary norms",
+        "complete regional subcultures"
+      ],
+      "provenance": [
+        {
+          "source_id": "ENT_UNITED",
+          "confidence": "HIGH",
+          "claim_scope": "Ushaan/challenge context and Andorian interaction"
+        },
+        {
+          "source_id": "ENT_BABEL_ONE",
+          "confidence": "HIGH",
+          "claim_scope": "Andorian-Tellarite diplomatic conflict context"
+        },
+        {
+          "source_id": "MA_ANDORIAN",
+          "confidence": "HIGH",
+          "claim_scope": "broad cultural cross-check"
+        },
+        {
+          "source_id": "TOS_JOURNEY_TO_BABEL",
+          "confidence": "HIGH",
+          "claim_scope": "Federation diplomatic participation"
+        }
+      ]
+    },
+    "aenar": {
+      "identity_and_scope": {
+        "species_association": "aenar",
+        "related_to_andorian": true,
+        "automatic_attachment_by_species": false,
+        "principle": "Aenar identity is culturally distinct from mainstream Andorian identity."
+      },
+      "values_and_norms": [
+        {
+          "norm": "pacifism",
+          "strength": "strong_norm",
+          "evidence_state": "screen_canon_or_official_supported"
+        },
+        {
+          "norm": "telepathic_consent_and_nonintrusion",
+          "strength": "strong_norm",
+          "evidence_state": "screen_canon_or_official_supported"
+        },
+        {
+          "norm": "relative_isolation",
+          "strength": "common_norm",
+          "evidence_state": "screen_canon_or_official_supported"
+        }
+      ],
+      "communication_and_conflict": {
+        "telepathic_context": true,
+        "rule": "Telepathic communication does not grant unrestricted mental access and remains constrained by consent/capability."
+      },
+      "authority_and_status": {
+        "relationship_to_andorian_government": "diplomatic/social ties exist; exact institutional model not locked"
+      },
+      "privacy_and_intimacy": {
+        "strong_norm": "Do not read another mind without permission.",
+        "gameplay_effect": "Consent and privacy checks remain active even when telepathy is available."
+      },
+      "family_kinship_and_household": {
+        "universal_structure": null,
+        "andorian_aenar_biological_compatibility_context": true,
+        "rule": "Biological compatibility does not define household or cultural identity."
+      },
+      "education_and_socialization": {
+        "exact_model": null
+      },
+      "work_service_and_profession": {
+        "rule": "Pacifism does not imply helplessness, passivity or one profession."
+      },
+      "mourning_death_and_legacy": {
+        "universal_protocol": null
+      },
+      "internal_variation": {
+        "required": true
+      },
+      "gameplay_hooks": [
+        "telepathic_consent",
+        "pacifist_conflict_response",
+        "accessibility_without_helplessness",
+        "andorian_aenar_identity_difference"
+      ],
+      "ai_guardrails": [
+        "Do not treat blindness as dependence or incapacity.",
+        "Do not use telepathy as omniscience.",
+        "Do not assume every Aenar interprets pacifism identically.",
+        "Do not collapse Aenar culture into mainstream Andorian culture."
+      ],
+      "unknowns": [
+        "household structure",
+        "marriage norms",
+        "inheritance",
+        "funerary norms",
+        "education system",
+        "complete political institutions"
+      ],
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_AENAR_101_2022",
+          "confidence": "HIGH",
+          "claim_scope": "pacifism, telepathic consent, isolation and social context"
+        },
+        {
+          "source_id": "ENT_THE_AENAR",
+          "confidence": "HIGH",
+          "claim_scope": "Aenar distinction and Andorian relationship"
+        },
+        {
+          "source_id": "MA_AENAR",
+          "confidence": "MEDIUM",
+          "claim_scope": "cross-check identity and biology"
+        }
+      ]
+    }
+  }
+}
