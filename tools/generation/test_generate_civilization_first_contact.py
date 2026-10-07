@@ -87,5 +87,41 @@ class CivilizationFirstContactTests(unittest.TestCase):
         self.assertTrue(all(x["personality_lock"] is None for x in p["materialized_civilization"]["species"]))
 
 
+    def test_locked_first_warp_fixture(self):
+        p = civgen.generate(
+            campaign_seed="first_contact_fixture_001",
+            world_id="gen:planet:elyra_4",
+            civilization_slot=0,
+            era_id="tng_ds9_voyager",
+            campaign_date="2372-06-18",
+            environment_class="temperate",
+            population_band="large",
+            technology_band="early_warp",
+            warp_state="first_successful_warp_flight",
+            political_representation_state="single_planetary_authority",
+            prior_alien_exposure=False,
+            public_alien_awareness=False,
+            active_internal_conflict=False,
+            mutual_contact=False,
+            language_samples=5,
+            materialization_level="first_contact_preparation",
+        )
+        self.assertEqual(p["world_truth"]["civilization_id"], "gen:civilization:03fd61e37036005f")
+        self.assertEqual(p["world_truth"]["population_estimate"], 3894320550)
+        mat = p["materialized_civilization"]
+        self.assertEqual(mat["civilization_self_name"], "Raerraith")
+        self.assertEqual(mat["primary_language"]["planet_self_name"], "Thesqolqu")
+        self.assertEqual(mat["species"][0]["morphology_family"], "nonhuman_bilateral")
+        self.assertEqual(mat["species"][0]["surface_cover"], "fine_fur")
+        self.assertEqual(mat["governments"][0]["government_type"], "unitary_republic")
+        self.assertEqual(mat["governments"][0]["display_self_name"], "Mesikfis")
+        rep = p["first_contact_preparation"]["representative_candidates"][0]
+        self.assertEqual(rep["name"], "Bathsatim Sailairdak")
+        self.assertEqual(rep["office"], "senior_civic_representative")
+        self.assertEqual(p["first_contact"]["contact_eligibility"], "formal_contact_candidate")
+        self.assertTrue(p["first_contact"]["automatic_contact_forbidden"])
+        self.assertEqual(civgen.validate(p), [])
+
+
 if __name__ == "__main__":
     unittest.main()
