@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "first_contact_brief",
+  "status": "FOUNDATION_FIXED",
+  "sections": [
+    "civilization_designation_and_confidence",
+    "known_self_name_if_available",
+    "homeworld_and_population",
+    "species_or_population_composition",
+    "technology_and_warp_state",
+    "government_and_representative_scope",
+    "languages_and_translation_status",
+    "cultural_observation_summary",
+    "known_laws_customs_or_taboo_risks",
+    "Prime_Directive_assessment",
+    "security_and_contamination_risks",
+    "contact_options",
+    "recommended_representative",
+    "recommended_opening_method",
+    "unknowns_and_confidence"
+  ],
+  "rules": [
+    "Brief separates World Truth from what Starfleet actually knows.",
+    "Unknown facts are explicitly unknown.",
+    "No AI-generated cultural claim enters the brief without authoritative/provenance-backed state.",
+    "Recommendation is advisory; captain authority remains separate."
+  ]
+}
