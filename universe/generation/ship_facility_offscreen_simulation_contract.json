@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "ship_facility_offscreen_simulation",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "inputs": [
@@ -29,6 +29,11 @@
     "Maintenance, resupply and repair consume time/capacity/resources.",
     "Routine simulation may aggregate uneventful work but major damage, death, refit, mission completion or route diversion requires explicit event records.",
     "LOD reduction does not make facilities infinite-capacity or ships immune to logistics.",
-    "Returning to high LOD restores from accumulated state rather than rerolling."
-  ]
+    "Returning to high LOD restores from accumulated state rather than rerolling.",
+    "Facility construction, partial commissioning, expansion, mothballing and decommissioning continue off-screen at appropriate LOD.",
+    "Off-screen simulation cannot instantiate a new permanent facility without passing the causal generation pipeline.",
+    "Persistent low demand can reduce traffic or lead to drawdown; facilities are not kept artificially busy."
+  ],
+  "facility_lifecycle_ref": "gameplay/facilities/facility_construction_and_lifecycle_state_v0.1.json",
+  "facility_generation_ref": "universe/generation/procedural_facility_generation_pipeline_v0.1.json"
 }
