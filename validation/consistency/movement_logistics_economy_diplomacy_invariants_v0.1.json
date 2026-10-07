@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "movement_logistics_economy_diplomacy_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "cases": [
+    {
+      "id": "route_has_real_costs",
+      "expected": [
+        "travel time/hazard/political access/uncertainty are represented",
+        "unknown risk is not treated as zero"
+      ]
+    },
+    {
+      "id": "traffic_has_origin_destination_reason",
+      "expected": [
+        "traffic record references real origin/destination and purpose",
+        "encounter ideally intersects existing traffic instead of spawning a vessel solely for the player"
+      ]
+    },
+    {
+      "id": "population_movement_conserves_people",
+      "expected": [
+        "visitor/migrant/evacuee movement changes location/status without duplication",
+        "residency changes only through explicit transition"
+      ]
+    },
+    {
+      "id": "inventory_changes_causally",
+      "expected": [
+        "use/transfer/damage/fabrication/resupply alter stock",
+        "provider cannot deliver unavailable stock"
+      ]
+    },
+    {
+      "id": "replicator_not_magic",
+      "expected": [
+        "power/feedstock/pattern/access/legal state constrain fabrication",
+        "strategic or rare components may remain scarce"
+      ]
+    },
+    {
+      "id": "civilian_trade_has_actors_and_capacity",
+      "expected": [
+        "buyer/seller/operator state exists",
+        "transfer changes ownership/inventory and leaves provenance"
+      ]
+    },
+    {
+      "id": "political_space_affects_routes",
+      "expected": [
+        "jurisdiction/access/treaty state can constrain or penalize route",
+        "geometry and political control remain separate"
+      ]
+    },
+    {
+      "id": "diplomatic_state_not_personal_attitude",
+      "expected": [
+        "formal relations do not dictate every NPC relationship",
+        "public opinion and organization relation remain separate"
+      ]
+    },
+    {
+      "id": "campaign_can_change_diplomacy",
+      "expected": [
+        "post-start events may change treaties/borders/relations",
+        "future canon is not forced"
+      ]
+    },
+    {
+      "id": "crisis_propagates_through_networks",
+      "expected": [
+        "blockade/disaster/war modifies traffic/supply/comms/population movement through explicit network effects",
+        "shortage does not appear without disrupted supply/demand/capacity cause"
+      ]
+    },
+    {
+      "id": "lod_preserves_network_causality",
+      "expected": [
+        "aggregated simulation conserves major population/resource flows",
+        "return to high LOD does not reroll network history"
+      ]
+    },
+    {
+      "id": "ai_does_not_conjure_trade_or_access",
+      "expected": [
+        "AI cannot invent stock, treaty permission, border access or transport availability absent from state",
+        "uncertainty remains explicit"
+      ]
+    }
+  ]
+}
