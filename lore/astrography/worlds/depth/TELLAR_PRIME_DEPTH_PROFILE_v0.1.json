@@ -1,0 +1,84 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "tellar_prime_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "tellar_system",
+    "canonical_system_context": "61 Cygni",
+    "planet_id": "tellar_prime",
+    "display_name_es": "Tellar Prime",
+    "world_type": "inhabited_planet",
+    "native_species_refs": [
+      "tellarite"
+    ],
+    "federation_founder_context": true
+  },
+  "orbital_context": {
+    "system": "61 Cygni context",
+    "exact_planetary_orbit": null,
+    "moons": "Kera and Phinda appear in secondary cross-check; baseline gameplay does not require orbital detail yet"
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "notable_feature": "healing bogs/mud-bath context",
+    "global_fraction": null
+  },
+  "geology_topography": {
+    "known": [
+      "bog/wetland therapeutic regions"
+    ],
+    "global_map": "unknown"
+  },
+  "climate_refs": [
+    "not sufficiently locked beyond habitable/bog context"
+  ],
+  "biosphere_ref": "tellar_prime_biosphere_unknown_depth",
+  "region_refs": [
+    "healing bogs",
+    "capital/settlements only when separately sourced"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "Federation_diplomacy",
+    "debate/social_context",
+    "medical_or_recreation_bog_visits",
+    "founder-world_traffic"
+  ],
+  "temporal_rules": [
+    "Federation founder status retained across playable eras; local government detail remains separate."
+  ],
+  "ai_boundary": [
+    "Do not invent a piglike swamp world stereotype from Tellarite appearance.",
+    "Debate culture does not define every resident interaction.",
+    "Unknown geography remains unknown."
+  ],
+  "visual_nap": [
+    "Do not default entire planet to mud/bogs; use bog regions only where sourced/contextual.",
+    "Tellarite architecture needs separate visual development rather than species caricature."
+  ],
+  "unknowns": [
+    "global climate",
+    "bulk physics",
+    "major continents",
+    "capital certainty in current project",
+    "population by playable year"
+  ],
+  "provenance": [
+    "MA_TELLAR_PRIME",
+    "MA_TELLARITE",
+    "ENT_BABEL_ONE",
+    "TOS_JOURNEY_TO_BABEL"
+  ]
+}
