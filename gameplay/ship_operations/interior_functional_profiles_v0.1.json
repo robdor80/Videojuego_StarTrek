@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "shipboard_interior_functional_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "location_model_ref": "gameplay/ship_operations/interior_location_model.json",
+  "principle": "Interior spaces exist because ship systems, staffing, mission and habitation require them. A deck plan is a functional topology before it is scenery.",
+  "functional_domains": {
+    "command": [
+      "bridge",
+      "ready_room_if_design_supports",
+      "briefing_or_observation_room"
+    ],
+    "propulsion_engineering": [
+      "main_engineering",
+      "power_control",
+      "maintenance_access",
+      "damage_control_nodes"
+    ],
+    "medical": [
+      "sickbay_or_medical_bay",
+      "treatment",
+      "isolation_if_supported"
+    ],
+    "science": [
+      "labs",
+      "sensor_analysis",
+      "mission_specific_research_space"
+    ],
+    "transport": [
+      "transporter_room_if_technology/design_supports",
+      "airlocks",
+      "docking_access"
+    ],
+    "smallcraft": [
+      "shuttlebay_or_flight_deck_if_supported",
+      "maintenance",
+      "flight_control"
+    ],
+    "logistics": [
+      "cargo_bays",
+      "stores",
+      "transfer_nodes"
+    ],
+    "security": [
+      "security_office",
+      "brig_if_supported",
+      "armory_if_supported"
+    ],
+    "habitation": [
+      "quarters",
+      "sanitation",
+      "mess_or_lounge",
+      "recreation_if_supported"
+    ],
+    "computing_operations": [
+      "computer_core_or_distributed_compute_spaces_if_represented",
+      "operations_support",
+      "communications"
+    ],
+    "circulation": [
+      "corridors",
+      "turbolifts_or_lifts",
+      "ladders",
+      "jefferies_or_maintenance_routes",
+      "emergency_access"
+    ]
+  },
+  "class_scaling_profiles": {
+    "very_small_craft": {
+      "rule": "Combine functions aggressively; no assumption of dedicated bridge, sickbay, lab or quarters.",
+      "likely_layout": [
+        "cockpit_or_control",
+        "engineering_access",
+        "minimal_cargo_or_mission_space",
+        "airlock_or_hatch"
+      ]
+    },
+    "small_ship": {
+      "rule": "Dedicated bridge/control and engineering likely; medical/science/habitation scale to mission and endurance.",
+      "combine_examples": [
+        "mess_lounge",
+        "small_medical_bay",
+        "multiuse_lab"
+      ]
+    },
+    "medium_multimission": {
+      "rule": "Dedicated departments and multiple support spaces become plausible; mission configuration decides lab/cargo/security emphasis."
+    },
+    "large_explorer_or_capital": {
+      "rule": "Multiple redundant/departmental spaces, larger habitation and specialist facilities; civilians/passengers only if actual ship population state supports them."
+    }
+  },
+  "topology_rules": [
+    "Class/configuration defines possible baseline locations and connections.",
+    "Blueprint/reference evidence overrides generic assumptions.",
+    "Unknown deck/room placement remains unknown.",
+    "Damage blocks runtime connections without rewriting baseline layout.",
+    "Access and clearance are runtime layers on top of physical connectivity.",
+    "Refits may add/remove spaces only through explicit topology version change."
+  ],
+  "gameplay_hooks": [
+    "travel_time_between_locations",
+    "duty_station_presence",
+    "evacuation_and_damage_control",
+    "fire_decompression_contamination",
+    "security_access",
+    "crew_routines_and_off_duty_life",
+    "boarding",
+    "maintenance",
+    "medical_response"
+  ],
+  "ai_boundary": [
+    "AI cannot teleport characters between interior locations.",
+    "AI cannot create a holodeck, lounge, brig, lab or transporter room merely because it is convenient.",
+    "AI cannot know occupants behind inaccessible/unknown areas without sensor/knowledge support."
+  ],
+  "visual_nap": [
+    "Resolve era→operator→class→configuration→location type→individual state.",
+    "Functional architecture precedes stylistic skin such as Pike/TOS/TNG.",
+    "Console design must follow operational function already defined by gameplay."
+  ],
+  "source_refs": [
+    "lore/starships/interiors/README.md",
+    "gameplay/ship_operations/shipboard_life_state_contract.json",
+    "assets/ships/starfleet/galaxy_class/enterprise_d/reference_blueprints/",
+    "assets/ships/starfleet/miranda_class/reference_blueprints/ncc_1864_reliant/",
+    "assets/ships/starfleet/constitution_class/reference_blueprints/ncc_1700_franz_joseph/"
+  ]
+}
