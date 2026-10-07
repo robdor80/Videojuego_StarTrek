@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "directive_id": "prime_directive",
   "display_es": "Primera Directiva",
   "general_order": "General Order 1",
@@ -32,6 +32,21 @@
     {
       "source_id": "MA_GENERAL_ORDERS",
       "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_FIRST_CONTACT",
+      "confidence": "HIGH"
+    },
+    {
+      "source_id": "TNG_WHO_WATCHES_THE_WATCHERS",
+      "confidence": "HIGH"
     }
+  ],
+  "operational_protocol_ref": "gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+  "first_contact_protocol_ref": "gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+  "rules": [
+    "Warp capability is not a universal automatic-contact trigger.",
+    "First Contact remains governed by non-interference, self-determination and local political/cultural readiness.",
+    "Accidental contamination creates a mitigation problem; it does not erase the Prime Directive."
   ]
 }
