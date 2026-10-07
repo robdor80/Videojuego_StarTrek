@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "civilization_contact_status_model",
+  "status": "FOUNDATION_FIXED",
+  "observer_scoped": true,
+  "states": [
+    "unknown",
+    "suspected",
+    "remotely_observed",
+    "covertly_observed",
+    "contact_preparation",
+    "limited_secret_contact",
+    "formal_first_contact",
+    "public_contact",
+    "diplomatic_contact",
+    "contact_refused",
+    "contact_delayed",
+    "contact_broken_off",
+    "hostile_contact"
+  ],
+  "fields": [
+    "observer_party_ref",
+    "civilization_id",
+    "state",
+    "effective_from",
+    "knowledge_confidence",
+    "public_awareness_on_target_world",
+    "contact_parties",
+    "recognized_representative_scope",
+    "prime_directive_assessment_ref",
+    "first_contact_event_refs",
+    "diplomatic_relation_ref"
+  ],
+  "rules": [
+    "Contact state is observer-relative.",
+    "Formal First Contact with one polity does not automatically mean every polity or citizen is informed.",
+    "Secret/limited contact and public contact are separate states.",
+    "Contact can be delayed or refused by the target civilization.",
+    "Later contact never rewrites the fact that earlier observers had less knowledge."
+  ]
+}
