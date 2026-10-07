@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "cardassian",
+  "display_name_es": "Cardassiano",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#cardassian"
+  ],
+  "identity": {
+    "common_homeworld_ref": "cardassia_prime",
+    "common_faction_association": "cardassian_union",
+    "faction_membership_implied": false
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "persistent_species_markers": [
+      "individual cranial/facial/neck ridge topology through visual profile"
+    ],
+    "visual_profile_ref": "art_direction/visual_bibles/species/profiles/CARDASSIAN_VISUAL_PROFILE_v0.1.json"
+  },
+  "physiology": {
+    "preferred_environment": {
+      "darker_than_human_standard": true,
+      "hotter_than_human_standard": true,
+      "more_humid_than_human_standard": true
+    },
+    "species_specific_medical_profile_required": true,
+    "unknowns": [
+      "exact comfort ranges",
+      "universal lifecycle thresholds",
+      "reproductive biology",
+      "generic physical performance multipliers"
+    ]
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "formal hierarchy",
+      "order/control language",
+      "family or state-duty framing",
+      "occupation legacy"
+    ],
+    "rules": [
+      "Confidence or institutional loyalty is not proof of cruelty or criminal intent.",
+      "Cardassian Union loyalty is not implied by species.",
+      "Occupation history can shape context but does not assign guilt, trauma or collaboration automatically.",
+      "Individual adherence varies."
+    ]
+  },
+  "gameplay_hooks": [
+    "environmental_comfort",
+    "occupation_legacy",
+    "state_or_family_loyalty",
+    "military_and_intelligence_context"
+  ],
+  "ai_boundary": [
+    "Do not treat every Cardassian as a Union loyalist or occupation collaborator.",
+    "Do not infer cruelty, deceit or military role from anatomy.",
+    "Do not invent exact medical thresholds until sourced."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_CARDASSIAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "species origin and environmental preference"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "confidence": "MEDIUM",
+      "claim_scope": "broad order/control cultural framing"
+    },
+    {
+      "source_id": "DS9_EMISSARY",
+      "confidence": "HIGH",
+      "claim_scope": "post-occupation Bajor/Cardassian context"
+    }
+  ]
+}
