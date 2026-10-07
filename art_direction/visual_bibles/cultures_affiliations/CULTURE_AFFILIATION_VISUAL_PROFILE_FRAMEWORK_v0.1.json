@@ -1,0 +1,65 @@
+{
+  "profile_id": "culture_affiliation_visual_profile_framework",
+  "profile_type": "compositional_context",
+  "version": "0.1",
+  "status": "FOUNDATION_CONTENT_PROGRESSIVE",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1"
+  ],
+  "dimensions": {
+    "culture": {
+      "may_influence": [
+        "clothing_when_not_uniformed",
+        "grooming",
+        "jewelry_or_symbols_when_supported",
+        "domestic_objects",
+        "architecture_and_decoration",
+        "social_formality"
+      ],
+      "may_not_define": [
+        "species",
+        "personality",
+        "faction_loyalty",
+        "profession",
+        "morality"
+      ]
+    },
+    "affiliation": {
+      "may_influence": [
+        "authorized_symbols",
+        "institutional_equipment",
+        "official_documents",
+        "access_markings",
+        "political_or_service presentation"
+      ],
+      "may_not_define": [
+        "species",
+        "culture",
+        "private beliefs",
+        "personality"
+      ]
+    },
+    "organization": {
+      "may_influence": [
+        "uniforms",
+        "insignia",
+        "equipment standards",
+        "facility language",
+        "vehicle markings",
+        "role presentation"
+      ],
+      "may_not_define": [
+        "species",
+        "culture",
+        "individual personality"
+      ]
+    }
+  },
+  "rules": [
+    "Culture, affiliation and organization are resolved independently and then composed.",
+    "A character may have multiple cultures and historical affiliations.",
+    "Current organization does not erase cultural identity.",
+    "Visual symbols require source-backed or approved project design; do not invent pseudo-canon emblems.",
+    "Institutional presentation may change through transfer without changing the person."
+  ]
+}
