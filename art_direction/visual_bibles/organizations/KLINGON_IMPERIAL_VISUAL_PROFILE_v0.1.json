@@ -1,0 +1,41 @@
+{
+  "profile_id": "klingon_imperial_visual_profile",
+  "profile_type": "organization_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organizations:klingon_empire",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "klingon_imperial_government",
+      "klingon_high_council",
+      "klingon_great_houses",
+      "klingon_imperial_military"
+    ]
+  },
+  "rules": [
+    "Klingon organizational styling is separate from Klingon anatomy.",
+    "Military uniforms, armor, weapons and House emblems require actual organization/assignment/House state.",
+    "High Council, Great House and military presentation must remain distinct even where materials or design language overlap.",
+    "Era resolves before armor/uniform/ship-interior styling."
+  ],
+  "allowed_variation": [
+    "House markings when House state exists",
+    "rank/command presentation when sourced",
+    "ceremonial vs duty clothing",
+    "era-specific materials and silhouettes"
+  ],
+  "forbidden_variation": [
+    "automatic armor for all Klingons",
+    "random House insignia",
+    "warrior styling for civilians",
+    "mixing 23c and 24c costume/interior language without dated cause"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/KLINGON_EMPIRE_ORGANIZATIONS_v0.1.json",
+    "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
