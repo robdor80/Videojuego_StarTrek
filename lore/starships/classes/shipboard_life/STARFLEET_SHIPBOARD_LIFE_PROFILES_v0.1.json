@@ -1,0 +1,685 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "starfleet_shipboard_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "watch_contract_ref": "gameplay/duty_system/shipboard_watch_generation_contract_v0.1.json",
+  "operator_family": "starfleet",
+  "common_doctrine": {
+    "shipboard_cycle_hours": 24,
+    "default_watch_pattern": "three_shift",
+    "supported_watch_patterns": [
+      "three_shift",
+      "four_shift",
+      "custom"
+    ],
+    "exact_shift_anchor": "individual_ship_policy",
+    "normal_shift_duration_hours": {
+      "three_shift": 8,
+      "four_shift": 6
+    },
+    "source_basis": [
+      "MA_DUTY_SHIFT",
+      "TNG_CHAIN_OF_COMMAND_PART_I",
+      "TNG_LOWER_DECKS"
+    ],
+    "note": "Three/four-shift durations are project scheduling defaults compatible with canon; exact start hour is not class data."
+  },
+  "profiles": {
+    "constitution_pike": {
+      "life_profile_id": "starfleet_constitution_pike_life",
+      "class_or_configuration_ref": "constitution/constitution_pike",
+      "habitability_tier": "comfortable",
+      "privacy_level": "medium_high",
+      "social_density": "medium",
+      "family_civilian_policy": "exception_only",
+      "crew_reference": {
+        "value": 203,
+        "type": "duty_crew_reference",
+        "confidence": "screen_supported",
+        "source_refs": [
+          "MA_CONSTITUTION_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.38,
+          "beta": 0.31,
+          "gamma": 0.26,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 203,
+          "alpha": 77,
+          "beta": 63,
+          "gamma": 53,
+          "relief_or_float": 10,
+          "note": "simulation allocation, not canon roster"
+        },
+        "routine_day_staff_bias": "moderate_science_and_department_head_day_staff",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "2250s Constitution officers' quarters are relatively spacious compared with later higher-complement configuration",
+        "multi-species environmental controls may modify quarters locally"
+      ],
+      "meal_model": "mess/food-service and quarters access as configuration supports",
+      "recreation_capabilities": [
+        "common_room",
+        "recreation_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "science_project_work",
+        "training",
+        "department_briefing",
+        "maintenance",
+        "medical_readiness"
+      ],
+      "life_character": "Exploration vessel with enough population for departmental depth but still socially finite; officers can know many colleagues outside their immediate department.",
+      "source_refs": [
+        "MA_CONSTITUTION_CLASS",
+        "MA_QUARTERS",
+        "MA_CONSTITUTION_CLASS_DECKS"
+      ]
+    },
+    "constitution_tos": {
+      "life_profile_id": "starfleet_constitution_tos_life",
+      "class_or_configuration_ref": "constitution/constitution_tos",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "medium",
+      "family_civilian_policy": "exception_only",
+      "crew_reference": {
+        "value": 430,
+        "type": "duty_crew_reference",
+        "confidence": "production_and_screen_supported_range",
+        "source_refs": [
+          "MA_CONSTITUTION_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.38,
+          "beta": 0.31,
+          "gamma": 0.26,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 430,
+          "alpha": 163,
+          "beta": 133,
+          "gamma": 112,
+          "relief_or_float": 22,
+          "note": "simulation allocation, not canon roster"
+        },
+        "routine_day_staff_bias": "science_labs_and_department_heads_cluster_toward_primary_watch",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "senior officers private quarters",
+        "junior/enlisted accommodation more compact than Pike-era configuration",
+        "passenger/guest quarters possible"
+      ],
+      "meal_model": "crew mess/food preparation and personal meal access according to configuration",
+      "recreation_capabilities": [
+        "recreation_room",
+        "gym",
+        "games_cards_chess",
+        "viewing_or_social_space",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "science_project_work",
+        "training",
+        "readiness_reports",
+        "maintenance",
+        "department_briefing"
+      ],
+      "life_character": "Large 23rd-century explorer where hundreds of crew create formal departments but recreational life still occurs in a limited number of communal spaces.",
+      "source_refs": [
+        "MA_CONSTITUTION_CLASS",
+        "MA_CONSTITUTION_CLASS_DECKS",
+        "MA_RECREATION_ROOM",
+        "MA_QUARTERS"
+      ]
+    },
+    "constitution_major_refit": {
+      "life_profile_id": "starfleet_constitution_refit_life",
+      "class_or_configuration_ref": "constitution/constitution_major_refit",
+      "habitability_tier": "standard",
+      "privacy_level": "medium_low",
+      "social_density": "medium_high",
+      "family_civilian_policy": "exception_only",
+      "crew_reference": {
+        "value": null,
+        "type": "configuration_dependent",
+        "confidence": "not_locked"
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.37,
+          "beta": 0.31,
+          "gamma": 0.27,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": null,
+        "routine_day_staff_bias": "moderate",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "senior-officer quarters remain private",
+        "late-2290s examples show enlisted/shared dormitory-style bunking with space at a premium"
+      ],
+      "meal_model": "mess rooms plus configurable food-service spaces",
+      "recreation_capabilities": [
+        "recreation_room",
+        "gym",
+        "lounge",
+        "games_cards_chess",
+        "viewing_space",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "training",
+        "readiness_reports",
+        "department_briefing",
+        "administrative_work"
+      ],
+      "life_character": "Refit-era ship with improved recreation and modernized systems but potentially denser berthing as complement grows.",
+      "source_refs": [
+        "MA_QUARTERS",
+        "MA_RECREATION_ROOM",
+        "MA_CONSTITUTION_CLASS_DECKS"
+      ]
+    },
+    "miranda": {
+      "life_profile_id": "starfleet_miranda_life",
+      "class_or_configuration_ref": "miranda",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "high",
+      "family_civilian_policy": "mission_dependent",
+      "crew_reference": {
+        "value_range": [
+          26,
+          35
+        ],
+        "applicability": "24th_century examples only",
+        "type": "screen_secondary_reference",
+        "confidence": "medium",
+        "source_refs": [
+          "MA_MIRANDA_CLASS"
+        ],
+        "warning": "Do not backfill this range to every 23rd-century Miranda configuration."
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.34,
+          "beta": 0.31,
+          "gamma": 0.3,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew_range": [
+            26,
+            35
+          ],
+          "alpha_range": [
+            9,
+            12
+          ],
+          "beta_range": [
+            8,
+            11
+          ],
+          "gamma_range": [
+            8,
+            11
+          ],
+          "relief_or_float_range": [
+            1,
+            2
+          ],
+          "note": "24c small-crew simulation example"
+        },
+        "routine_day_staff_bias": "low_to_moderate; mission configuration can create science or maintenance day staff",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "configuration-dependent",
+        "small later crews can increase privacy even on old hulls",
+        "do not assume Reliant-specific interior on every Miranda"
+      ],
+      "meal_model": "shared mess/common eating spaces when configured",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "cross_qualification",
+        "maintenance",
+        "mission_specific_training",
+        "on_call"
+      ],
+      "life_character": "Workhorse life varies dramatically by mission package. Small later complements make vacancies obvious and interpersonal familiarity high.",
+      "source_refs": [
+        "MA_MIRANDA_CLASS"
+      ]
+    },
+    "excelsior": {
+      "life_profile_id": "starfleet_excelsior_life",
+      "class_or_configuration_ref": "excelsior",
+      "habitability_tier": "standard",
+      "privacy_level": "medium_low",
+      "social_density": "medium_high",
+      "family_civilian_policy": "mission_dependent",
+      "crew_reference": {
+        "value": null,
+        "type": "era_and_configuration_dependent",
+        "confidence": "not_locked"
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.36,
+          "beta": 0.31,
+          "gamma": 0.28,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": null,
+        "routine_day_staff_bias": "moderate",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "captain/senior officers can have private quarters",
+        "many enlisted/junior personnel in late-23rd-century examples share bunk rooms of roughly four to nine occupants"
+      ],
+      "meal_model": "communal mess plus personal/officer arrangements as configuration supports",
+      "recreation_capabilities": [
+        "lounge",
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "training",
+        "department_briefing",
+        "administrative_work"
+      ],
+      "life_character": "Large long-service cruiser with stronger communal/bunk-room culture than later luxury-oriented explorers; 24th-century refits may alter amenities but require explicit configuration.",
+      "source_refs": [
+        "MA_QUARTERS",
+        "MA_RECREATION_ROOM",
+        "MA_EXCELSIOR_CLASS"
+      ]
+    },
+    "oberth": {
+      "life_profile_id": "starfleet_oberth_life",
+      "class_or_configuration_ref": "oberth",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "high",
+      "family_civilian_policy": "mission_dependent",
+      "crew_reference": {
+        "value": 80,
+        "minimal_value": 5,
+        "type": "screen_supported",
+        "confidence": "high",
+        "source_refs": [
+          "MA_OBERTH_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.35,
+          "beta": 0.3,
+          "gamma": 0.3,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 80,
+          "alpha": 28,
+          "beta": 24,
+          "gamma": 24,
+          "relief_or_float": 4,
+          "note": "standard-complement simulation example; minimal crew uses custom staggered schedule"
+        },
+        "routine_day_staff_bias": "high_on_science_missions",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": "enabled for skeleton/minimal operation"
+      },
+      "quarters_model": [
+        "standard quarters can include living area, bedroom and bathroom despite small vessel size",
+        "minimal-operation configuration does not imply normal habitability for five indefinitely"
+      ],
+      "meal_model": "compact communal/private food service according to configuration",
+      "recreation_capabilities": [
+        "common_room",
+        "reading_study",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "science_project_work",
+        "maintenance",
+        "cross_qualification",
+        "on_call"
+      ],
+      "life_character": "Small science ship with high social familiarity and heavy specialist project work; quiet periods can be academically intense rather than militarily busy.",
+      "source_refs": [
+        "MA_OBERTH_CLASS",
+        "MA_QUARTERS"
+      ]
+    },
+    "galaxy": {
+      "life_profile_id": "starfleet_galaxy_life",
+      "class_or_configuration_ref": "galaxy",
+      "habitability_tier": "very_comfortable",
+      "privacy_level": "high",
+      "social_density": "low",
+      "family_civilian_policy": "designed_for",
+      "crew_reference": {
+        "value": "~1000 normal Enterprise-D-era ship population; class can vary substantially by assignment",
+        "type": "mixed_ship_population_reference",
+        "confidence": "high",
+        "source_refs": [
+          "MA_GALAXY_CLASS"
+        ],
+        "warning": "Do not use total population as duty crew count."
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.4,
+          "beta": 0.3,
+          "gamma": 0.25,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": null,
+        "routine_day_staff_bias": "high: science, education, counseling, administration, civilian services and maintenance coexist with watch teams",
+        "emergency_recall_intensity": "selective_then_high_by_alert",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "substantial private/shared quarters",
+        "families can share family quarters",
+        "junior personnel may share depending rank/assignment",
+        "guest accommodation can be comparatively generous"
+      ],
+      "meal_model": "multiple food/replicator access points and communal social spaces; named venues remain individual-ship assets",
+      "recreation_capabilities": [
+        "lounge",
+        "holodeck",
+        "gym",
+        "recreation_room",
+        "arboretum_or_green_space",
+        "education_spaces",
+        "family_spaces",
+        "viewing_space",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "training",
+        "department_briefing",
+        "administrative_work",
+        "science_project_work",
+        "education_or_family_obligations",
+        "counseling",
+        "maintenance"
+      ],
+      "life_character": "A city-like long-duration explorer. Crew can maintain family life, education and broad recreation; many residents will not personally know most of the ship population.",
+      "source_refs": [
+        "MA_GALAXY_CLASS",
+        "MA_QUARTERS",
+        "TNG_LOWER_DECKS",
+        "TNG_CHAIN_OF_COMMAND_PART_I"
+      ]
+    },
+    "nebula": {
+      "life_profile_id": "starfleet_nebula_life",
+      "class_or_configuration_ref": "nebula",
+      "habitability_tier": "comfortable",
+      "privacy_level": "medium_high",
+      "social_density": "medium",
+      "family_civilian_policy": "mission_dependent",
+      "crew_reference": {
+        "value": null,
+        "type": "module_and_mission_dependent",
+        "confidence": "not_locked"
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.38,
+          "beta": 0.31,
+          "gamma": 0.26,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": null,
+        "routine_day_staff_bias": "module-dependent; science modules can create heavy day/project staffing",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "24th-century Starfleet standard accommodation expected, exact layout/configuration not locked"
+      ],
+      "meal_model": "communal/personal replicated food access according to configuration",
+      "recreation_capabilities": [
+        "common_room",
+        "lounge",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "module_specific_project_work",
+        "training",
+        "maintenance",
+        "department_briefing"
+      ],
+      "life_character": "Comfortable 24th-century multi-mission ship whose social rhythm changes strongly with installed mission module and specialist complement.",
+      "source_refs": [
+        "MA_NEBULA_CLASS"
+      ]
+    },
+    "intrepid": {
+      "life_profile_id": "starfleet_intrepid_life",
+      "class_or_configuration_ref": "intrepid",
+      "habitability_tier": "comfortable",
+      "privacy_level": "medium_high",
+      "social_density": "high",
+      "family_civilian_policy": "exception_only",
+      "crew_reference": {
+        "value": 150,
+        "type": "duty_crew_reference",
+        "confidence": "project_source_high",
+        "source_refs": [
+          "MA_INTREPID_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.36,
+          "beta": 0.31,
+          "gamma": 0.28,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 150,
+          "alpha": 54,
+          "beta": 47,
+          "gamma": 42,
+          "relief_or_float": 7,
+          "note": "simulation allocation; Voyager's actual losses/replacements must use its live manifest"
+        },
+        "routine_day_staff_bias": "moderate science/maintenance/administration",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "quarters smaller than on larger Starfleet vessels",
+        "many junior officers can still have private quarters",
+        "special-environment quarters may exist"
+      ],
+      "meal_model": "dedicated mess hall; captain dining room can exist but individual conversion such as Voyager's galley is ship-specific",
+      "recreation_capabilities": [
+        "holodeck",
+        "gym",
+        "lounge",
+        "common_room",
+        "viewing_space"
+      ],
+      "off_watch_obligation_emphasis": [
+        "cross_qualification",
+        "science_project_work",
+        "training",
+        "maintenance",
+        "on_call",
+        "daily_department_reporting_when_command_policy_uses_it"
+      ],
+      "life_character": "Long-range explorer with excellent amenities for its size but only around 150 crew: repeated encounters are common, absences are noticeable, and specialists are frequently on call.",
+      "source_refs": [
+        "MA_INTREPID_CLASS",
+        "MA_INTREPID_CLASS_DECKS",
+        "MA_MESS_HALL",
+        "VOY_SCIENTIFIC_METHOD"
+      ]
+    },
+    "defiant": {
+      "life_profile_id": "starfleet_defiant_life",
+      "class_or_configuration_ref": "defiant",
+      "habitability_tier": "very_austere",
+      "privacy_level": "low",
+      "social_density": "very_high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value_range": [
+          40,
+          50
+        ],
+        "type": "screen_official_context",
+        "confidence": "high",
+        "source_refs": [
+          "ST_OFFICIAL_DS9_SHIPS_2018",
+          "MA_DEFIANT_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.34,
+          "beta": 0.32,
+          "gamma": 0.29,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew_range": [
+            40,
+            50
+          ],
+          "alpha_range": [
+            14,
+            17
+          ],
+          "beta_range": [
+            13,
+            16
+          ],
+          "gamma_range": [
+            12,
+            15
+          ],
+          "relief_or_float_range": [
+            2,
+            3
+          ],
+          "note": "simulation allocation; actual battle-stations recall can activate most available crew"
+        },
+        "routine_day_staff_bias": "low; most personnel directly support ship operation/tactical readiness",
+        "emergency_recall_intensity": "very_high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "shared crew quarters/bunks are normal",
+        "commanding officer can have private room",
+        "space is deliberately compact and functional"
+      ],
+      "meal_model": "small mess deck doubles as principal informal social venue",
+      "recreation_capabilities": [
+        "mess_only"
+      ],
+      "off_watch_obligation_emphasis": [
+        "combat_drills",
+        "maintenance",
+        "cross_qualification",
+        "physical_readiness",
+        "on_call",
+        "damage_control_training"
+      ],
+      "life_character": "Purpose-built combat ship. Almost no dedicated recreation, little privacy, very high social familiarity, and rapid recall to battle stations. Time off tends to be quieter, improvised and space-limited.",
+      "source_refs": [
+        "MA_DEFIANT_CLASS",
+        "ST_OFFICIAL_DESIGNING_DEFIANT",
+        "ST_OFFICIAL_DS9_SHIPS_2018"
+      ]
+    }
+  }
+}
