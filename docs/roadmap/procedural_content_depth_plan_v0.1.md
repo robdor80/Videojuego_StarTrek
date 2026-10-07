@@ -70,24 +70,24 @@
 
 | Package | Scope | Status |
 |---|---|---|
-| D040 | Starfleet class-depth pass | TODO |
-| D041 | Klingon class-depth pass | TODO |
-| D042 | Romulan class-depth pass | TODO |
-| D043 | Cardassian class-depth pass | TODO |
-| D044 | Civilian/commercial vessel grammar | TODO |
-| D045 | Starbase/station depth profiles | TODO |
-| D046 | Shipboard interior functional profiles | TODO |
-| D047 | Earth / Sol system depth profile | TODO |
-| D048 | Vulcan system/world depth profile | TODO |
-| D049 | Andoria depth profile | TODO |
-| D050 | Tellar Prime depth profile | TODO |
-| D051 | Qo'noS depth profile | TODO |
-| D052 | Romulus pre-destruction playable-era profile | TODO |
-| D053 | Cardassia Prime depth profile | TODO |
-| D054 | Bajor system/world depth profile | TODO |
-| D055 | Ferenginar depth profile | TODO |
-| D056 | Trill depth profile | TODO |
-| D057 | Betazed depth profile | TODO |
+| D040 | Starfleet class-depth pass | COMPLETE |
+| D041 | Klingon class-depth pass | COMPLETE |
+| D042 | Romulan class-depth pass | COMPLETE |
+| D043 | Cardassian class-depth pass | COMPLETE |
+| D044 | Civilian/commercial vessel grammar | COMPLETE |
+| D045 | Starbase/station depth profiles | COMPLETE |
+| D046 | Shipboard interior functional profiles | COMPLETE |
+| D047 | Earth / Sol system depth profile | COMPLETE |
+| D048 | Vulcan system/world depth profile | COMPLETE |
+| D049 | Andoria depth profile | COMPLETE |
+| D050 | Tellar Prime depth profile | COMPLETE |
+| D051 | Qo'noS depth profile | COMPLETE |
+| D052 | Romulus pre-destruction playable-era profile | COMPLETE |
+| D053 | Cardassia Prime depth profile | COMPLETE |
+| D054 | Bajor system/world depth profile | COMPLETE |
+| D055 | Ferenginar depth profile | COMPLETE |
+| D056 | Trill depth profile | COMPLETE |
+| D057 | Betazed depth profile | COMPLETE |
 
 ## Wave E — Visual/NAP production depth
 
