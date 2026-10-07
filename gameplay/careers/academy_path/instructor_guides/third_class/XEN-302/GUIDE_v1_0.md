@@ -1,75 +1,84 @@
 # Guía de instructor — XEN-302 Relaciones interespecies y contacto
 
-**v1.0**
+**v1.1 — edición operativa intercultural**
 
 ## Objetivo
 
-Trabajar con personas y culturas distintas sin suponer que los patrones humanos son universales.
+Entrenar al cadete para utilizar conocimiento cultural **sin convertirlo en estereotipo**. Los casos del curso proceden del mismo dossier operacional que alimenta el universo del juego.
 
 ## Regla docente
 
-3.ª clase introduce autonomía supervisada. El instructor debe reducir ayuda gradualmente y evaluar lo que el cadete sabía en el momento, no solo el desenlace.
+> La cultura orienta la preparación. La persona concreta decide la interacción real.
+
+3.ª clase introduce autonomía supervisada. El instructor debe evaluar lo que el cadete podía saber en ese momento, no premiar el uso de trivia externa.
 
 ### XEN-302-U01 — Diferencia biológica y cultural
 
-**Explicar:** biología; cultura; costumbre; individuo.
+**Explicar:** biología; cultura; costumbre; individuo; especie ≠ ciudadanía ≠ personalidad.
 
-**Práctica mínima:** Separar hechos de estereotipos.
+**Casos obligatorios:** Vulcano, Andoriano, Aenar y Tellarita.
 
-**Evidencia:** Ejercicio.
+**Práctica mínima:** clasificar hechos, tendencias culturales, datos individuales y estereotipos.
 
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+**Error crítico:** convertir una norma cultural en una predicción absoluta.
 
 ### XEN-302-U02 — Comunicación intercultural
 
-**Explicar:** contexto; tono; tabúes; malentendidos.
+**Explicar:** contexto; tono; malentendido; privacidad; consentimiento.
 
-**Práctica mínima:** Escena de conversación.
+**Casos obligatorios:** tono Tellarita/Andoriano; telepatía Aenar/Betazoide; límites del mind meld Vulcano.
 
-**Evidencia:** Evaluación de comunicación.
+**Práctica mínima:** resolver una escena donde el significado aparente no coincide con el contexto real.
 
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+**Error crítico:** usar telepatía como detector de verdad o ignorar consentimiento.
 
-### XEN-302-U03 — Protocolo básico
+### XEN-302-U03 — Protocolo con culturas conocidas
 
-**Explicar:** presentación; hospitalidad; símbolos; espacio personal contextual.
+**Explicar:** protocolo, símbolos, autoridad y preparación cultural.
 
-**Práctica mínima:** Preparar encuentro formal.
+**Casos obligatorios:** Klingon, Romulano, Cardassiano, Bajorano, Ferengi y Trill.
 
-**Evidencia:** Caso práctico.
+**Práctica mínima:** preparar tres encuentros formales con información incompleta.
 
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+**Error crítico:** asignar lealtad, profesión, culpabilidad, fe o personalidad por especie.
 
 ### XEN-302-U04 — Traductor Universal y límites
 
-**Explicar:** traducción; ambigüedad; conceptos no equivalentes; fallo.
+**Explicar:** traducción ≠ transferencia cultural; ambigüedad; concepto sin equivalente; incertidumbre.
 
-**Práctica mínima:** Resolver malentendido de traducción.
+**Práctica mínima:** resolver un caso donde la traducción literal sea correcta pero socialmente insuficiente.
 
-**Evidencia:** Práctica.
+**Error crítico:** inventar significado cultural cuando no existe equivalencia confirmada.
 
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+### XEN-302-U05 — Primer Contacto
 
-### XEN-302-U05 — Primer Contacto: fundamentos
+**Explicar:** observación, autoridad, hipótesis, incertidumbre y riesgo de interferencia.
 
-**Explicar:** observación; autoridad; preparación; riesgo cultural.
+**Práctica mínima:** separar hechos, inferencias y desconocidos antes de una propuesta de contacto.
 
-**Práctica mínima:** Planificar fase inicial supervisada.
-
-**Evidencia:** Evaluación de criterio.
-
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+**Error crítico:** proyectar una cultura conocida sobre una especie nueva.
 
 ### XEN-302-U06 — Diplomacia básica
 
-**Explicar:** intereses; posición; escucha; desescalada.
+**Explicar:** posición, interés, desescalada, límites de autoridad.
 
-**Práctica mínima:** Negociación breve controlada.
+**Casos obligatorios:** Klingon, Romulano, Ferengi y Dominion.
 
-**Evidencia:** Debrief.
+**Práctica mínima:** negociación donde la cultura modifica la estrategia sin sustituir el estado individual.
 
-**Intervención del instructor:** detener solo por seguridad, infracción grave o bloqueo pedagógico; en los demás casos permitir que la decisión produzca material para el debrief.
+**Error crítico:** negociar con un estereotipo en lugar de con los participantes reales.
+
+## Evaluación
+
+Cada unidad dispone de **6 conceptos evaluables**. Cada intento teórico extrae **5**. Las decisiones complejas se evalúan en práctica/simulación, no mediante trivia.
 
 ## Recuperación
 
-Separar fallo de conocimiento, fallo de procedimiento, fallo de comunicación y fallo de juicio. La recuperación debe atacar la causa concreta.
+Separar:
+- fallo de conocimiento;
+- fallo de procedimiento;
+- fallo de comunicación;
+- fallo de juicio;
+- uso de estereotipo.
+
+La recuperación debe atacar la causa concreta.
