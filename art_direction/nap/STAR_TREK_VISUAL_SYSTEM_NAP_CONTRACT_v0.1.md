@@ -258,3 +258,26 @@ Station visuals therefore cannot decide:
 - whether it is damaged, under construction or abandoned.
 
 Reusable station designs may have multiple facility instances, but each instance retains its own `facility_id` and visual-state history.
+
+
+## Procedural civilization materialization
+
+Generated civilization/species art resolves only after persistent World State has fixed the relevant detail.
+
+Authority chain:
+
+```text
+planet/world state
+→ civilization_id
+→ species morphology
+→ culture/language/technology
+→ organization/profession
+→ individual visual_identity_id
+→ current state
+→ asset request
+```
+
+Profile:
+- `art_direction/visual_bibles/planets/PROCEDURAL_CIVILIZATION_VISUAL_PROFILE_CONTRACT_v0.1.json`
+
+A first-contact portrait may materialize a previously unseen representative, but it must consume the representative's already-resolved persistent character/species identity. Regenerating the portrait cannot redesign the species.
