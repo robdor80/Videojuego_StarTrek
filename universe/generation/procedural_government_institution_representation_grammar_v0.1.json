@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "procedural_government_institution_representation_grammar",
+  "status": "FOUNDATION_FIXED",
+  "government_archetypes": [
+    "unitary_republic",
+    "federal_republic",
+    "constitutional_monarchy",
+    "parliamentary_system",
+    "council_governance",
+    "technocratic_governance",
+    "theocratic_governance",
+    "hereditary_monarchy",
+    "oligarchic_governance",
+    "military_governance",
+    "corporate_governance",
+    "confederation",
+    "city_state_network",
+    "multi_state_planet",
+    "clan_or_house_federation",
+    "distributed_consensus",
+    "other_generated_institutional_form"
+  ],
+  "required_outputs": [
+    "government_or_governments",
+    "jurisdictions",
+    "leadership_selection",
+    "authority_distribution",
+    "law_institution_refs",
+    "security_defense_refs",
+    "diplomatic_authority",
+    "public_legitimacy_context"
+  ],
+  "representation_states": [
+    "single_planetary_authority",
+    "recognized_federal_authority",
+    "multiple_sovereign_states",
+    "contested_planetary_authority",
+    "civil_war_or_fragmentation",
+    "no_single_external_representative",
+    "unknown_to_observer"
+  ],
+  "first_contact_rules": [
+    "Do not assume first leader encountered can bind the entire civilization.",
+    "Resolve who has lawful/recognized authority for external relations.",
+    "For multi-state worlds, contact may initially be limited to one state and may itself alter internal politics.",
+    "Starfleet must avoid accidentally recognizing one faction as planetary sovereign without basis.",
+    "Government structure may evolve after campaign start without changing civilization_id."
+  ],
+  "separation_rules": [
+    "government != culture",
+    "government != species",
+    "government != public opinion",
+    "government != civilization identity"
+  ]
+}
