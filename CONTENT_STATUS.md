@@ -69,7 +69,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Universal pip insignia | ✅ COMPLETE | TNG-style project standard across all eras. |
 | Uniform division colors | ✅ COMPLETE | Era-aware baseline fixed. |
 | Departments, positions and duty stations | ✅ COMPLETE | Core model and era-aware baseline established. |
-| Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom shift model; duty-officer command separated from permanent rank. |
+| Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom model plus class/configuration-specific generated watches, relief/on-call pools, handoffs, off-watch obligations and individual schedule integration. |
 | Command succession / acting command | ✅ COMPLETE | CO → XO → second officer → qualified designated successor. |
 | Qualifications, regulations, protocols and Prime Directive | ✅ COMPLETE | Command qualification, Prime Directive, medical authority and classified-directive model established for baseline scope. |
 | Assignments, promotions, commendations and discipline | ✅ COMPLETE | Career-event baseline, service record and disciplinary consequences established. |
@@ -116,7 +116,7 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 | Pillar | Foundation | Content depth |
 |---|---|---|
 | Academy + career | ✅ ESTABLISHED | 🟨 IN_PROGRESS — entry systems, four-year unit curriculum and study-material v1.0 packs closed; PDF/web publishing, Academy-life scheduling and post-Academy depth remain |
-| People and life aboard | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
+| People and life aboard | ✅ ESTABLISHED | ✅ BASELINE COMPLETE — class/configuration habitability, watches, off-watch obligations, leisure constraints and persistent schedules closed in Shipboard Life v0.1; future classes/content extend the same contracts. |
 | Habits, wellbeing and daily life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Starfleet professional life | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Gameplay-required lore | ✅ READINESS PLAN | 🟨 IN_PROGRESS |
@@ -142,6 +142,26 @@ Current defined baseline:
 
 This means the currently defined depth pass has coherent source/provenance, gameplay hooks, persistence rules, AI boundaries, visual/NAP mappings and representative validation. It does **not** mean every Star Trek species, planet, ship, organization, historical event or production asset is exhaustively populated.
 
+## Shipboard life & procedural starship generation v0.1
+
+Control documents:
+- `docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`
+- `docs/roadmap/shipboard_life_and_procedural_starship_generation_status_v0.1.json`
+
+Current baseline:
+- **12 / 12 packages COMPLETE**;
+- Starfleet class/configuration life profiles;
+- Klingon, Romulan and Cardassian class life profiles;
+- procedural civilian design and life profiles;
+- three/four/custom watch generation;
+- relief, on-call and off-watch obligations;
+- constrained off-duty life from actual facilities and schedules;
+- source-confidence-aware staffing guidance;
+- causal persistent ship-generation pipeline;
+- deterministic reference generators and locked Oberth fixture.
+
+**Runtime boundary:** content/contracts/reference implementation are complete for v0.1, but authoritative live World State, schedule arbitration and off-screen catch-up remain dependent on CoreRPG 4.5+.
+
 ## Major remaining domains
 
 | Domain | Status |
@@ -150,7 +170,7 @@ This means the currently defined depth pass has coherent source/provenance, game
 | Species / cultures / languages | 🟨 IN_PROGRESS | Founding species plus Klingon, Romulan, Cardassian, Bajoran, Ferengi, Trill, Betazoid, Dominion-engineered species and Borg/Changeling state models established; language runtime and Universal Translator failure/ambiguity rules added. Wider coverage remains progressive. |
 | Factions and organizations | 🟨 IN_PROGRESS | Major gameplay baseline established for Federation, Klingon Empire, Romulan Star Empire, Cardassian Union, Bajor, Ferengi Alliance, Borg Collective and Dominion; wider organizations and deeper era-specific state remain progressive. |
 | Astrography | 🟨 IN_PROGRESS | Gameplay-first astrography and navigation runtime established: provenance-aware locations/distances, sector reference scheme, route scoring, structured navigation orders, persistent warp travel, ETA uncertainty, era-aware chart knowledge, political-space anchors and border crossings. Wider system/route coverage remains progressive. |
-| Starships and ship systems | 🟨 IN_PROGRESS | Identity model, class-vs-ship separation, runtime system state, generated-ship rules and temporal validation established. |
+| Starships and ship systems | 🟨 IN_PROGRESS | Identity/class/design separation, runtime system state, causal persistent ship generation, class-specific shipboard life, civilian procedural design grammar, staffing/watch generation and deterministic reference generators are established; wider class/system content and CoreRPG runtime mapping remain progressive. |
 | Stations and facilities | 🟨 IN_PROGRESS | Facility identity/design separation, topology/live interior state, docking/access, service nodes, traffic/transfer simulation, playable assignments, shipyard/refit support and blueprint-ingest workflow are established; wider catalogue and source-backed interiors remain progressive. |
 | Technology and equipment | 🟨 IN_PROGRESS | Game-ready technology framework and readiness plan established; concrete equipment/technology depth remains progressive. |
 | Medicine and science | 🟨 IN_PROGRESS | Game-ready medical/scientific capability contracts established; concrete canon/gameplay content remains progressive. |
