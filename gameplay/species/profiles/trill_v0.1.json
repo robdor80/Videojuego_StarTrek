@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "trill",
+  "display_name_es": "Trill",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#trill"
+  ],
+  "identity": {
+    "common_homeworld_ref": "trill",
+    "common_faction_association": "united_federation_of_planets",
+    "federation_membership_implied_for_individual": false
+  },
+  "biology": {
+    "host_population": true,
+    "symbiont_population_separate": true,
+    "joined_state_possible_for_small_population": true,
+    "universal_joined_state": false,
+    "unknowns": [
+      "exact population ratios",
+      "exact lifecycle thresholds",
+      "full compatibility rules unless later sourced"
+    ]
+  },
+  "joining": {
+    "identity_rule": "joined identity is host-symbiont synthesis; neither previous host nor symbiont alone replaces the current person's identity",
+    "previous_host_memories_and_skills": "contextually_available",
+    "recall": "core_resolved_not_omniscient",
+    "medical_state_private_when_not_known": true,
+    "persistent_history_required": true
+  },
+  "culture_socialization": {
+    "rules": [
+      "Joined and unjoined people are not separate species.",
+      "Joining status does not define the entire personality.",
+      "Previous-host experience may affect social context but does not grant unlimited knowledge."
+    ]
+  },
+  "gameplay_hooks": [
+    "joined_memory",
+    "medical_compatibility",
+    "identity_and_relationship_continuity",
+    "previous_host_knowledge"
+  ],
+  "ai_boundary": [
+    "Do not expose previous-host memories not made available by Core.",
+    "Do not treat a joined Trill as simply a previous host returned.",
+    "Do not infer joining status if it is private/unknown."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_TRILL",
+      "confidence": "MEDIUM",
+      "claim_scope": "joining and previous-host memory/skill access"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "confidence": "MEDIUM",
+      "claim_scope": "broad Trill cultural framing"
+    },
+    {
+      "source_id": "DS9_EQUILIBRIUM",
+      "confidence": "HIGH",
+      "claim_scope": "Trill medical/cultural context"
+    }
+  ]
+}
