@@ -1,7 +1,7 @@
 {
   "profile_id": "star_trek_visual_depth_index",
   "profile_type": "visual_depth_index",
-  "version": "0.1",
+  "version": "0.2",
   "status": "WAVE_E_CONTENT_DEPTH_COMPLETE",
   "authority_scope": "visual_profile_resolution_and_nap_fixture",
   "species_catalog_ref": "art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_CATALOG_v0.1.json",
@@ -16,6 +16,8 @@
     "Organization profile never chooses species.",
     "Era/operator profiles never change console functionality.",
     "Planet profiles never invent unknown physical geography.",
-    "NAP output must preserve entity/visual identity lineage and profile versions."
-  ]
+    "NAP output must preserve entity/visual identity lineage and profile versions.",
+    "Facility visuals cannot create unsupported services, modules, docking capacity or operator history."
+  ],
+  "facility_design_profiles_ref": "art_direction/visual_bibles/facilities/STAR_TREK_STATION_DESIGN_VISUAL_PROFILES_v0.1.json"
 }
