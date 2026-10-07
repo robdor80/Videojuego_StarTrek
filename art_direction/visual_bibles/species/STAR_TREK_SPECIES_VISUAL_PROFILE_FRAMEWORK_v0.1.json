@@ -1,7 +1,7 @@
 {
   "profile_id": "star_trek_species_visual_profile_framework",
   "profile_type": "species_collection",
-  "version": "0.2",
+  "version": "0.3",
   "status": "FOUNDATION_WITH_USER_VISUAL_REFERENCE_OBSERVATIONS",
   "authority_scope": "species_morphology",
   "inherits": [
@@ -119,6 +119,58 @@
         "Do not infer merchant profession, greed or personality from Ferengi morphology.",
         "Ear and cranial structure belong to persistent individual morphology.",
         "Do not make every Ferengi face identical by overusing one prosthetic pattern."
+      ]
+    },
+    "cardassian": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "cranial and facial ridge architecture is the dominant species-readability feature",
+        "central forehead structure and temple/eye-region ridges vary meaningfully by individual",
+        "ridge continuity can extend from head through jaw and neck",
+        "neck surface patterning and relief are prominent recurring anatomical cues",
+        "skin presentation ranges through pale grey, beige and brown-grey tones in the supplied references",
+        "hair remains an individual presentation layer and is not part of the cranial ridge identity"
+      ],
+      "guardrails": [
+        "Do not use one prosthetic ridge map as the template for all Cardassians.",
+        "Cranial, facial and neck ridge topology belongs to persistent individual morphology.",
+        "Do not infer political loyalty, military role or personality from Cardassian anatomy.",
+        "Sex/gender presentation must not be reduced to a single cranial-ridge pattern without validated canon support."
+      ]
+    },
+    "klingon": {
+      "observed_from_user_reference_set": true,
+      "visual_cues": [
+        "forehead cranial ridges are the primary recurring species-readability feature in the supplied late-24th-century-style references",
+        "ridge geometry varies strongly between individuals rather than following one universal pattern",
+        "cranial structure can influence forehead height, brow silhouette and upper-face contour",
+        "humanlike variation in skin tone, hair, facial proportions and facial hair remains broad",
+        "female and male-presenting individuals both retain strong cranial-ridge individuality",
+        "hair length and styling are presentation choices rather than species anatomy"
+      ],
+      "guardrails": [
+        "Do not clone a single famous Klingon ridge pattern across procedural NPCs.",
+        "Do not encode aggression, warrior profession or honor stance into neutral facial expression.",
+        "Forehead-ridge topology is part of persistent visual identity and must survive age/state changes.",
+        "Era-aware morphology rules are required before production locking because Klingon screen presentation changes across periods."
+      ]
+    },
+    "borg_assimilation": {
+      "observed_from_user_reference_set": true,
+      "classification": "transformative_state_not_species",
+      "visual_cues": [
+        "asymmetrical cybernetic augmentation can alter face, skull, eye region, torso and limbs while leaving portions of origin-species anatomy visible",
+        "ocular implants, cranial housings, cabling, tubes, armor-like components and dermal pallor are recurring cues",
+        "implant coverage and arrangement may vary significantly by drone/function/individual",
+        "origin facial structure can remain partially recognizable beneath assimilation hardware",
+        "assimilation presentation may range from partial facial/cranial augmentation to extensive full-body drone configuration"
+      ],
+      "guardrails": [
+        "Never replace origin_species_id with a fictional Borg species identity.",
+        "Assimilation overlays and modifies an existing persistent visual identity; it does not reroll the person.",
+        "Liberation/removal of implants must evolve from the same identity/history rather than generate a new face.",
+        "Implant layout must not grant memories, authority, personality or knowledge.",
+        "Cybernetic components require state/function provenance; do not add random implants purely for visual drama."
       ]
     }
   }
