@@ -1,0 +1,125 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "trill_joining_social_continuity_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "trill",
+    "automatic_attachment_by_species": false,
+    "principle": "Joining is culturally prestigious/meaningful context for some Trill but does not divide joined and unjoined people into separate species or personalities."
+  },
+  "values_and_norms": [
+    {
+      "norm": "joining_and_symbiont_continuity_can_have_major_social_significance",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "previous_life_experience_can_shape_social_interaction",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "symbiont_care_has_spiritual_or_institutional_significance",
+      "strength": "possible_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    }
+  ],
+  "communication_and_conflict": {
+    "misread_risks": [
+      "A joined Trill is not simply a previous host returned.",
+      "Knowledge from prior hosts is not unlimited or automatically accessible.",
+      "Unjoined Trill are not incomplete people."
+    ]
+  },
+  "authority_and_status": {
+    "joining_status_can_affect_social_context": true,
+    "rule": "Actual institutional authority, selection status and medical access require explicit state."
+  },
+  "privacy_and_intimacy": {
+    "rules": [
+      "Joining status and medical compatibility may be private.",
+      "Previous-host memories can create sensitive relationship history but do not automatically restore old relationship states."
+    ]
+  },
+  "family_kinship_and_household": {
+    "rules": [
+      "Current host kinship remains persistent.",
+      "Prior-host kinship/history is historical memory/context, not automatic present kinship.",
+      "Do not rewrite a family graph because a symbiont had earlier hosts."
+    ],
+    "universal_household_structure": null
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "joining knowledge",
+      "symbiont cultural importance",
+      "host suitability/selection context"
+    ],
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Joined status does not force profession or elite office."
+  },
+  "religion_philosophy_or_worldview": {
+    "possible_context": "symbiont continuity may carry spiritual significance",
+    "universal_belief": false
+  },
+  "mourning_death_and_legacy": {
+    "special_continuity_rule": "Host death, symbiont survival and transfer must be represented as distinct lifecycle events when applicable.",
+    "universal_mourning_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misread": "treating the current person as an earlier host",
+    "professional_response": "Address the current joined individual while respecting persistent symbiont history and knowledge limits."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "joined/unjoined",
+      "family",
+      "institutional involvement",
+      "offworld exposure",
+      "individual interpretation of prior lives"
+    ]
+  },
+  "era_variation": {
+    "required": true
+  },
+  "gameplay_hooks": [
+    "joining_selection",
+    "previous_host_memory",
+    "relationship_continuity_without_reset",
+    "medical_privacy",
+    "host_symbiont_lifecycle"
+  ],
+  "ai_guardrails": [
+    "Do not reveal previous-host memories unless Core exposes them.",
+    "Do not treat joining as omniscience.",
+    "Do not auto-restore previous-host romances, kinship or obligations.",
+    "Do not portray unjoined Trill as culturally lesser by default unless a specific context supports it."
+  ],
+  "unknowns": [
+    "complete household/marriage law",
+    "complete joining selection bureaucracy",
+    "regional subcultures",
+    "universal funerary practice"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_TRILL",
+      "confidence": "MEDIUM",
+      "claim_scope": "joining, social and spiritual context"
+    },
+    {
+      "source_id": "DS9_EQUILIBRIUM",
+      "confidence": "HIGH",
+      "claim_scope": "joining institution, medical and social context"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "confidence": "MEDIUM",
+      "claim_scope": "broad Trill joining cultural framing"
+    }
+  ]
+}
