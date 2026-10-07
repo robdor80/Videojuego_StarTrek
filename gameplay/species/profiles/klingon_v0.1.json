@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "klingon",
+  "display_name_es": "Klingon",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#klingon"
+  ],
+  "identity": {
+    "common_homeworld_ref": "qonos",
+    "common_faction_association": "klingon_empire",
+    "faction_membership_implied": false
+  },
+  "morphology": {
+    "body_plan": "humanoid",
+    "persistent_species_markers": [
+      "era-aware cranial ridge morphology through visual profile"
+    ],
+    "individual_variation": "strongly_required",
+    "visual_profile_ref": "art_direction/visual_bibles/species/profiles/KLINGON_VISUAL_PROFILE_v0.1.json"
+  },
+  "physiology": {
+    "strength_profile": "enhanced_vs_human_contextual",
+    "exact_performance": "individual_and_context_dependent",
+    "unknowns": [
+      "universal lifespan thresholds",
+      "universal reproduction timings",
+      "exact strength multipliers",
+      "generic medical reference ranges"
+    ]
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "honor traditions",
+      "martial traditions",
+      "house identity",
+      "ritual challenge",
+      "military/diplomatic protocol"
+    ],
+    "rules": [
+      "Honor is not one universal code shared identically by every Klingon.",
+      "Warrior profession is not implied by species.",
+      "House identity may matter but must be attached to actual character/family state.",
+      "Individual adherence to cultural norms varies."
+    ]
+  },
+  "ai_boundary": [
+    "Do not turn every Klingon into an aggressive warrior.",
+    "Do not infer Klingon Empire loyalty from species alone.",
+    "Do not invent a house, challenge, blood feud or honor obligation without state/provenance."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_KLINGON",
+      "confidence": "MEDIUM",
+      "claim_scope": "species origin, language, broad cultural context"
+    },
+    {
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "confidence": "MEDIUM",
+      "claim_scope": "honor, ritual and martial cultural framing"
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP",
+      "confidence": "HIGH",
+      "claim_scope": "era-dependent Federation-Klingon political context"
+    }
+  ]
+}
