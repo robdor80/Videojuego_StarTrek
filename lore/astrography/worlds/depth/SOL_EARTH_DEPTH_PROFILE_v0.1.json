@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "sol_earth_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "sol_system",
+    "planet_id": "earth",
+    "display_name_es": "Tierra / Sistema Sol",
+    "physical_identity_persistent": true,
+    "world_type": "inhabited_class_m_planet",
+    "native_species_refs": [
+      "human"
+    ],
+    "political_identity_rule": "Earth, Federation civil government and Starfleet institutions are separate entities."
+  },
+  "orbital_context": {
+    "primary_star": "Sol",
+    "system_components_known": [
+      "Mercury",
+      "Venus",
+      "Earth",
+      "Luna",
+      "Mars",
+      "Jupiter",
+      "Saturn",
+      "Uranus",
+      "Neptune",
+      "Pluto"
+    ],
+    "sector": "001",
+    "strategic_context": "Federation capital system throughout retained playable eras."
+  },
+  "bulk_physics": {
+    "policy": "Use real-Earth astronomy where authoritative physical data is required; no invented Trek deviations without source.",
+    "exact_gameplay_values_status": "external_real_world_reference_not_duplicated_here"
+  },
+  "atmosphere": {
+    "human_breathable": true,
+    "notes": "Baseline Human environment; species-specific comfort/medical checks still use biology profiles."
+  },
+  "hydrosphere": {
+    "earthlike_global_oceans": true
+  },
+  "geology_topography": {
+    "persistent_real_world_geography": true
+  },
+  "climate_refs": [
+    "real Earth climate plus dated Trek-era environmental state when gameplay requires"
+  ],
+  "biosphere_ref": "earth_biosphere",
+  "region_refs": [
+    "San Francisco",
+    "Marin County",
+    "New Orleans",
+    "Paris",
+    "other real/local regions as needed"
+  ],
+  "institutional_anchors": [
+    "Federation President/Council context on Earth",
+    "Starfleet Headquarters",
+    "Starfleet Academy main campus",
+    "major Sol-system fleet/defense/logistics facilities generated or authored separately"
+  ],
+  "gameplay_hooks": [
+    "academy_and_career",
+    "Federation_government",
+    "Starfleet_command",
+    "diplomacy",
+    "fleet_traffic",
+    "shore_leave",
+    "family/home_visits",
+    "strategic_defense",
+    "Sol_system_logistics"
+  ],
+  "temporal_rules": [
+    "Campaign date selects institutional configuration.",
+    "Future attacks, wars or political changes are not forced after campaign start.",
+    "Earth remains physical world even if political capital/status changes."
+  ],
+  "ai_boundary": [
+    "AI cannot treat Earth customs as universal Human or Federation culture.",
+    "AI cannot invent unrestricted access to Starfleet/Federation facilities.",
+    "Planetary security and traffic use live World State."
+  ],
+  "visual_nap": [
+    "Preserve recognizable real geography where shown.",
+    "Trek-era architecture overlays must be era-specific.",
+    "Do not turn Earth into generic futuristic megacity everywhere."
+  ],
+  "unknowns": [
+    "exact campaign-era population by playable year unless sourced",
+    "exhaustive orbital facility list"
+  ],
+  "provenance": [
+    "MA_EARTH",
+    "MA_SOL_SYSTEM",
+    "MA_STARFLEET_ACADEMY_EARTH",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "ST_OFFICIAL_GET_TO_KNOW_FEDERATION"
+  ]
+}
