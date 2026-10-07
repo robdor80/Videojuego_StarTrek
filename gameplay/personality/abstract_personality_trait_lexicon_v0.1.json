@@ -1,0 +1,260 @@
+{
+  "schema_version": "0.1.0",
+  "lexicon_id": "abstract_personality_trait_lexicon",
+  "status": "FOUNDATION_FIXED",
+  "source_corpus_ref": "research/personality/star_trek_character_trait_corpus_v0.1.json",
+  "rule": "The lexicon abstracts recurring behavioral dimensions from canonical research. Canonical character identities are not generator templates.",
+  "scalar_dimensions": [
+    {
+      "id": "social_energy",
+      "low": "solitary/recharges alone",
+      "high": "energized by frequent social contact"
+    },
+    {
+      "id": "warmth",
+      "low": "cool/distant presentation",
+      "high": "warm/affectionate presentation"
+    },
+    {
+      "id": "formality",
+      "low": "informal/casual",
+      "high": "formal/protocol-conscious"
+    },
+    {
+      "id": "humor_frequency",
+      "low": "rarely jokes",
+      "high": "frequent humor"
+    },
+    {
+      "id": "patience",
+      "low": "quickly impatient",
+      "high": "very patient"
+    },
+    {
+      "id": "emotional_expressiveness",
+      "low": "highly contained",
+      "high": "emotionally transparent"
+    },
+    {
+      "id": "empathy_expression",
+      "low": "rarely displays empathy outwardly",
+      "high": "actively validates and supports others"
+    },
+    {
+      "id": "directness",
+      "low": "indirect/softened",
+      "high": "very direct"
+    },
+    {
+      "id": "tact",
+      "low": "blunt",
+      "high": "highly tactful"
+    },
+    {
+      "id": "rule_orientation",
+      "low": "flexible/exception-tolerant",
+      "high": "strongly by-the-book"
+    },
+    {
+      "id": "authority_deference",
+      "low": "readily questions authority",
+      "high": "strongly defers to legitimate authority"
+    },
+    {
+      "id": "risk_tolerance",
+      "low": "risk-averse",
+      "high": "comfortable with significant risk"
+    },
+    {
+      "id": "curiosity",
+      "low": "low exploratory drive",
+      "high": "strong exploratory/intellectual curiosity"
+    },
+    {
+      "id": "ambition",
+      "low": "little status/career drive",
+      "high": "strong advancement/achievement drive"
+    },
+    {
+      "id": "competitiveness",
+      "low": "noncompetitive",
+      "high": "strongly competitive"
+    },
+    {
+      "id": "initial_trust_speed",
+      "low": "slow to trust",
+      "high": "quick to extend trust"
+    },
+    {
+      "id": "intimacy_openness",
+      "low": "guarded/private",
+      "high": "quickly personally open"
+    },
+    {
+      "id": "optimism",
+      "low": "pessimistic/cautious expectation",
+      "high": "optimistic"
+    },
+    {
+      "id": "self_confidence",
+      "low": "self-doubting",
+      "high": "very self-confident"
+    },
+    {
+      "id": "conscientiousness",
+      "low": "loose/unstructured",
+      "high": "disciplined/detail-conscious"
+    },
+    {
+      "id": "conflict_assertiveness",
+      "low": "avoids confrontation",
+      "high": "readily confronts"
+    },
+    {
+      "id": "forgiveness_tendency",
+      "low": "holds grievances",
+      "high": "forgiving"
+    },
+    {
+      "id": "teaching_instinct",
+      "low": "rarely mentors",
+      "high": "strong mentor/teacher impulse"
+    },
+    {
+      "id": "autonomy_need",
+      "low": "comfortable being directed",
+      "high": "strong need for independence"
+    }
+  ],
+  "qualitative_traits": [
+    "pragmatic",
+    "idealistic",
+    "loyal",
+    "protective",
+    "resilient",
+    "adaptable",
+    "perfectionistic",
+    "intellectual",
+    "hands_on",
+    "improvisational",
+    "skeptical",
+    "status_sensitive",
+    "reputation_sensitive",
+    "people_pleasing",
+    "mastery_proud",
+    "self_deprecating",
+    "identity_secure",
+    "responsibility_driven",
+    "justice_oriented",
+    "relationship_invested",
+    "family_oriented",
+    "mission_focused",
+    "self_sacrificing",
+    "observant",
+    "resourceful",
+    "principled",
+    "courageous_despite_fear",
+    "wounded_but_functional",
+    "recognition_seeking",
+    "anti_pretension"
+  ],
+  "style_tags": {
+    "humor": [
+      "dry",
+      "deadpan",
+      "playful",
+      "sarcastic",
+      "teasing",
+      "dark",
+      "self_deprecating",
+      "absurdist",
+      "storytelling",
+      "boastful",
+      "rare_or_none"
+    ],
+    "stress": [
+      "more_formal",
+      "more_blunt",
+      "withdraws",
+      "takes_control",
+      "seeks_input",
+      "uses_humor",
+      "becomes_impatient",
+      "hyperfocuses",
+      "protects_others",
+      "questions_self",
+      "overprepares",
+      "acts_fast"
+    ],
+    "affection": [
+      "verbal",
+      "acts_of_service",
+      "protective",
+      "teasing",
+      "quiet_presence",
+      "physical_warmth",
+      "formal_loyalty",
+      "slow_but_deep",
+      "shared_activity"
+    ],
+    "disagreement": [
+      "debate",
+      "direct_challenge",
+      "careful_dissent",
+      "sarcasm",
+      "questioning",
+      "avoidance",
+      "evidence_first",
+      "relationship_preserving",
+      "authority_appeal"
+    ],
+    "leadership": [
+      "directive",
+      "consultative",
+      "mentor",
+      "protective",
+      "mission_first",
+      "consensus_seeking",
+      "delegating",
+      "hands_on",
+      "calm_command",
+      "charismatic"
+    ],
+    "social_signature": [
+      "small_talk_averse",
+      "storyteller",
+      "listener",
+      "banter_friendly",
+      "private",
+      "gregarious",
+      "quietly_observant",
+      "eager_to_impress",
+      "complainer",
+      "professional_distance"
+    ]
+  },
+  "allowed_tensions": [
+    "high warmth + low social energy",
+    "high courage + high fear/anxiety expression",
+    "high humor + high professionalism",
+    "high loyalty + low authority deference",
+    "high compassion + blunt communication",
+    "high self-confidence + occasional deep self-doubt",
+    "high ambition + low status display",
+    "high formality + playful humor with trusted people",
+    "high rule orientation + strong autonomy need",
+    "low intimacy openness + strong long-term attachment"
+  ],
+  "anti_pathology_policy": {
+    "procedural_exclusions": [
+      "psychopathy",
+      "sadism",
+      "compulsive_cruelty",
+      "predatory_abuse_as_personality_flavor",
+      "extreme_paranoia_without_world_cause",
+      "severe_uncontrolled_violence",
+      "random_maliciousness"
+    ],
+    "note": "Clinical/trauma/medical states, where story-relevant, belong to explicit authored or health/state systems and are not randomized as personality spice."
+  }
+}
