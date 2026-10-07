@@ -1,0 +1,56 @@
+{
+  "profile_id": "star_trek_species_visual_profile_framework",
+  "profile_type": "species_collection",
+  "version": "0.1",
+  "status": "FOUNDATION_CONTENT_PROGRESSIVE",
+  "authority_scope": "species_morphology",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Species visual profile defines biology/morphology only; it does not define culture, organization, clothing or personality.",
+    "Canonical morphology evidence is required before locking unsupported details.",
+    "Individual variation is required within canon-compatible bounds.",
+    "Persistent characters preserve their individual morphology across all assets."
+  ],
+  "initial_profiles": {
+    "human": {
+      "gameplay_profile_ref": "gameplay/species/founding_species_profiles.json#human",
+      "visual_rules": [
+        "Human is a biological baseline only.",
+        "Do not infer Earth upbringing, Federation citizenship or Starfleet membership."
+      ]
+    },
+    "vulcan": {
+      "gameplay_profile_ref": "gameplay/species/founding_species_profiles.json#vulcan",
+      "visual_rules": [
+        "Morphology must follow validated Vulcan visual references.",
+        "Logical discipline is not a visual personality stereotype.",
+        "Do not use uniform or culture to substitute for species identity."
+      ]
+    },
+    "andorian": {
+      "gameplay_profile_ref": "gameplay/species/founding_species_profiles.json#andorian",
+      "visual_rules": [
+        "Two antennae are persistent anatomical identity features unless explicit injury/state changes them.",
+        "Antenna injury/regrowth must evolve the same individual's visual identity.",
+        "Aenar require a separate profile."
+      ]
+    },
+    "tellarite": {
+      "gameplay_profile_ref": "gameplay/species/founding_species_profiles.json#tellarite",
+      "visual_rules": [
+        "Morphology requires validated source/reference profile before production lock.",
+        "Argumentative cultural norms must not be encoded as permanent facial aggression."
+      ]
+    },
+    "klingon": {
+      "gameplay_profile_ref": "gameplay/species/major_species_profiles.json#klingon",
+      "visual_rules": [
+        "Morphology requires era/source-aware reference resolution.",
+        "Do not make warrior equipment or aggressive pose a species default."
+      ]
+    }
+  }
+}
