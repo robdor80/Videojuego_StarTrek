@@ -1,0 +1,25 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "exceptional_entity_state_contract",
+  "classification": "GAME_ADDITION",
+  "supported_extension_families": [
+    "joined_symbiotic_identity",
+    "assimilation_state",
+    "shapechanging_state",
+    "engineered_dependency",
+    "synthetic_person",
+    "persistent_holographic_person",
+    "telepathic_or_empathic_capability",
+    "stasis_or_suspended_state",
+    "other_authorized_exception"
+  ],
+  "rules": [
+    "Exceptional state extends a persistent entity; it does not bypass identity/history contracts.",
+    "Transformation must declare whether base species/body, memories, legal identity, visual identity and relationships persist, transform or split.",
+    "Copying appearance never copies memory, authority or relationships automatically.",
+    "Assimilation is state transition, not a species reroll.",
+    "Symbiotic joining may create a composite lived identity only according to setting-specific rules; prior identities/history remain traceable.",
+    "Exceptional capabilities are scoped and never imply omniscience.",
+    "AI cannot create exceptional powers or transformations without authoritative event/state."
+  ]
+}
