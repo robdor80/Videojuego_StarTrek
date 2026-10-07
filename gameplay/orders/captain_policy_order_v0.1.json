@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "captain_policy_order",
+  "status": "FOUNDATION_FIXED",
+  "fields": {
+    "policy_order_id": null,
+    "ship_id": null,
+    "issuer_character_id": null,
+    "issuer_position_id": "commanding_officer",
+    "decision_domain": null,
+    "policy_action": null,
+    "parameters": {},
+    "delegate_or_executor_id": null,
+    "issued_at": null,
+    "effective_at": null,
+    "review_at": null,
+    "constraints": [],
+    "status": "issued",
+    "supersedes_policy_order_id": null
+  },
+  "policy_actions": [
+    "set_watch_pattern",
+    "set_watch_anchor_times",
+    "request_roster_proposal",
+    "approve_roster",
+    "set_readiness_policy",
+    "set_training_policy",
+    "set_maintenance_priority",
+    "set_leave_policy",
+    "set_department_priority",
+    "set_resource_priority",
+    "set_security_posture",
+    "set_passenger_safety_policy",
+    "delegate_domain",
+    "revoke_delegation",
+    "request_alternative"
+  ],
+  "rules": [
+    "Policy orders change operating policy; they do not directly fabricate resources or qualifications.",
+    "A policy order can instruct the XO or department head to prepare detailed implementation.",
+    "The order pipeline validates authority, capability, regulation, staffing and safety before state mutation.",
+    "If the captain insists against advice but the order remains lawful/possible, execute it and model consequences."
+  ]
+}
