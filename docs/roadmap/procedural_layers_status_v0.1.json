@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "manifest_id": "procedural_layers_status",
   "plan_ref": "docs/roadmap/procedural_layers_master_plan_v0.1.md",
   "updated_from_plan": true,
@@ -7,8 +7,8 @@
     "total_layers": 120,
     "complete": 118,
     "partial": 1,
-    "blocked_runtime": 0,
-    "other": 1
+    "blocked_runtime": 1,
+    "other": 0
   },
   "layers": [
     {
@@ -966,7 +966,7 @@
     {
       "layer_id": "120",
       "name": "Readiness CoreRPG + UE5",
-      "status": "TODO",
+      "status": "BLOCKED_RUNTIME",
       "dependency": "001-119",
       "completion_criterion": "Contratos estables, fixtures reproducibles, migraciones y límites definidos",
       "phase": "validation_vertical_slice_runtime_readiness"
