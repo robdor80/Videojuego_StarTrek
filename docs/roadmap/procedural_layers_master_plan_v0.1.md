@@ -137,18 +137,18 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 065 | Coordenadas, sectores y anclas espaciales | PARTIAL | 006 | Toda localización tiene identidad espacial consistente |
-| 066 | Sistemas estelares | PARTIAL | 065 | Estrella/cuerpos/orbitas se generan antes de ser observados |
-| 067 | Planetas y lunas físicos | PARTIAL | 066 | Masa, gravedad, atmósfera, órbita y superficie son coherentes |
-| 068 | Clima y estado ambiental | PARTIAL | 067 | Tiempo actual evoluciona sobre clima persistente |
-| 069 | Biomas y ecosistemas | TODO | 067-068 | Distribución ecológica responde a condiciones físicas |
-| 070 | Habitabilidad y biosfera | TODO | 067-069 | Vida no aparece sin causalidad ambiental |
-| 071 | Civilización y nivel tecnológico | PARTIAL | 067-070 | Sociedad deriva de mundo/historia, no de etiqueta decorativa |
-| 072 | Regiones y asentamientos | TODO | 071 | Población e infraestructura se distribuyen espacialmente |
-| 073 | Infraestructura y servicios | TODO | 071-072 | Energía, transporte, salud, administración, etc. tienen soporte real |
-| 074 | Economía y recursos planetarios | TODO | 071-073 | Producción/escasez/comercio reflejan tecnología y política |
-| 075 | Política, leyes e instituciones | TODO | 043,071-074 | Autoridad e instituciones tienen jurisdicción y estado |
-| 076 | Historia local y conflictos persistentes | TODO | 071-075 | El presente tiene causas históricas trazables |
+| 065 | Coordenadas, sectores y anclas espaciales | COMPLETE | 006 | Toda localización tiene identidad espacial consistente |
+| 066 | Sistemas estelares | COMPLETE | 065 | Estrella/cuerpos/orbitas se generan antes de ser observados |
+| 067 | Planetas y lunas físicos | COMPLETE | 066 | Masa, gravedad, atmósfera, órbita y superficie son coherentes |
+| 068 | Clima y estado ambiental | COMPLETE | 067 | Tiempo actual evoluciona sobre clima persistente |
+| 069 | Biomas y ecosistemas | COMPLETE | 067-068 | Distribución ecológica responde a condiciones físicas |
+| 070 | Habitabilidad y biosfera | COMPLETE | 067-069 | Vida no aparece sin causalidad ambiental |
+| 071 | Civilización y nivel tecnológico | COMPLETE | 067-070 | Sociedad deriva de mundo/historia, no de etiqueta decorativa |
+| 072 | Regiones y asentamientos | COMPLETE | 071 | Población e infraestructura se distribuyen espacialmente |
+| 073 | Infraestructura y servicios | COMPLETE | 071-072 | Energía, transporte, salud, administración, etc. tienen soporte real |
+| 074 | Economía y recursos planetarios | COMPLETE | 071-073 | Producción/escasez/comercio reflejan tecnología y política |
+| 075 | Política, leyes e instituciones | COMPLETE | 043,071-074 | Autoridad e instituciones tienen jurisdicción y estado |
+| 076 | Historia local y conflictos persistentes | COMPLETE | 071-075 | El presente tiene causas históricas trazables |
 
 # FASE 7 — MOVIMIENTO, LOGÍSTICA, ECONOMÍA Y DIPLOMACIA
 
