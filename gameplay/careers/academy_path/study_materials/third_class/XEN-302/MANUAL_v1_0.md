@@ -136,7 +136,7 @@ La existencia de una capacidad telepática no significa:
 
 En Aenar, además, el proyecto conserva una fuerte norma cultural de **no leer a otros sin permiso**.
 
-En Betazoides, la intensidad de telepatía y empatía **varía entre individuos**. Percibir emoción no significa conocer verdad objetiva.
+En Betazoides, la intensidad de telepatía y empatía **varía entre individuos**. Percibir emoción no significa conocer verdad objetiva. Además, una cultura acostumbrada a la telepatía puede valorar una **franqueza** que otras especies perciban como brusca; eso no elimina privacidad, consentimiento ni tacto profesional.
 
 ## 5. Vulcanos: capacidad no significa acceso ilimitado
 
@@ -218,7 +218,8 @@ Pueden ser relevantes:
 Pero:
 - especie no implica lealtad a la Unión;
 - historia de ocupación no implica culpabilidad individual;
-- firmeza institucional no demuestra crueldad.
+- firmeza institucional no demuestra crueldad;
+- **familia, edad y jerarquía pueden tener peso social**, pero solo cuando la biografía y el contexto reales del personaje lo sostienen.
 
 ## 5. Bajorianos
 
@@ -245,7 +246,8 @@ Pueden ser relevantes:
 Pero:
 - interés comercial no demuestra fraude;
 - especie no implica comerciante;
-- especie no implica avaricia ni deshonestidad.
+- especie no implica avaricia ni deshonestidad;
+- las normas sociales, de propiedad y de género son **sensibles a la época**: una reforma tardía no se aplica retroactivamente a campañas anteriores.
 
 ## 7. Trill
 
@@ -254,7 +256,8 @@ Un Trill unido debe tratarse como **identidad vivida compuesta de huésped y sim
 No debe tratarse:
 - como si fuera exactamente un huésped anterior;
 - como poseedor automático de todos los recuerdos previos;
-- como si su estado médico fuera información pública.
+- como si su estado médico fuera información pública;
+- como si la familia, pareja o deberes de un huésped anterior sustituyeran automáticamente las relaciones del huésped actual.
 
 ### Práctica
 
@@ -441,9 +444,9 @@ Una apariencia copiada por un Cambiante:
 - no copia relaciones;
 - no copia permisos.
 
-Un Vorta puede ejercer funciones administrativas, diplomáticas o de mando, pero el cargo concreto requiere estado real.
+Un Vorta puede ejercer funciones administrativas, diplomáticas o de mando, pero el cargo concreto requiere **estado real de puesto y asignación**.
 
-Un Jem'Hadar combina contexto militar y dependencia logística de ketracel-white; esa dependencia no autoriza al cadete a inventar dosis, suministros o desenlaces.
+Un Jem'Hadar combina contexto militar y dependencia logística de ketracel-white; su autoridad concreta también depende de **unidad, puesto y cadena de mando**. Esa dependencia no autoriza al cadete a inventar dosis, suministros o desenlaces.
 
 ## 4. Desescalada
 
