@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "diplomatic_state_contract",
   "classification": "GAME_ADDITION",
   "relation_fields": [
@@ -34,6 +34,9 @@
     "Claims, control, recognition and access are separate concepts.",
     "Treaties and ceasefires constrain valid actions but do not erase historical grievances.",
     "Campaign events may change relations after start without being forced back to future canon.",
-    "AI may negotiate or interpret only within authority granted to the acting character/organization."
-  ]
+    "AI may negotiate or interpret only within authority granted to the acting character/organization.",
+    "First Contact initializes only the relationship scope actually achieved.",
+    "Contact with one sovereign state does not silently create planet-wide Federation relations."
+  ],
+  "first_contact_initialization_ref": "gameplay/first_contact/first_contact_diplomatic_initialization_v0.1.json"
 }
