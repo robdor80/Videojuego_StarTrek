@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilization_economy_governance_history",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "economy": {
+    "fields": [
+      "resource_base",
+      "production_capabilities",
+      "scarcity_constraints",
+      "distribution_model",
+      "trade_refs",
+      "critical_imports",
+      "critical_exports",
+      "infrastructure_dependencies"
+    ],
+    "rules": [
+      "Post-scarcity is contextual rather than universal.",
+      "Replicator access does not erase energy, rare matter, specialized manufacturing, location or political constraints.",
+      "Economic state changes require production, consumption, trade, disruption or policy causes."
+    ]
+  },
+  "governance": {
+    "fields": [
+      "government_id",
+      "institution_refs",
+      "jurisdiction_refs",
+      "authority_distribution",
+      "law_refs",
+      "public_service_refs",
+      "security_refs",
+      "current_leadership_refs"
+    ],
+    "rules": [
+      "Government, culture and species are separate.",
+      "Jurisdiction must be spatial/organizationally resolvable.",
+      "Institutional authority does not imply universal public support."
+    ]
+  },
+  "history": {
+    "fields": [
+      "historical_event_refs",
+      "conflict_refs",
+      "migration_refs",
+      "disaster_refs",
+      "contact_refs",
+      "institutional_change_refs",
+      "campaign_event_refs"
+    ],
+    "rules": [
+      "Current conditions should have traceable causes where historically relevant.",
+      "Conflict does not require permanent hostility after resolution.",
+      "Campaign events append to history rather than overwrite prior events."
+    ]
+  }
+}
