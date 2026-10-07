@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "procedural_ship_crew_watch_schedule_pipeline",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "ship_id",
+    "design_or_class_ref",
+    "configuration_ref",
+    "operator_id",
+    "mission_profile",
+    "installed_capabilities",
+    "target_readiness",
+    "habitability_profile_ref",
+    "watch_policy",
+    "campaign_seed"
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "id": "derive_departments",
+      "rule": "Required systems/mission determine departments; organization doctrine names them."
+    },
+    {
+      "order": 2,
+      "id": "derive_continuous_slots",
+      "rule": "Bridge/control, engineering, medical/security/sensor coverage are sized from actual design and readiness."
+    },
+    {
+      "order": 3,
+      "id": "derive_day_staff",
+      "rule": "Research, maintenance, administration, education/services and project staff are mission/capability dependent."
+    },
+    {
+      "order": 4,
+      "id": "derive_minimum_and_target_staffing",
+      "rule": "Minimum safe != target operational != maximum berthing."
+    },
+    {
+      "order": 5,
+      "id": "select_watch_pattern",
+      "rule": "Use operator/class guidance, crew size, fatigue, mission tempo and command policy."
+    },
+    {
+      "order": 6,
+      "id": "allocate_watch_teams",
+      "rule": "Assign primary watch shares and reserve/relief without hiding vacancies."
+    },
+    {
+      "order": 7,
+      "id": "generate_staffing_slots",
+      "rule": "Each slot has qualification, rank/grade if any, duty station, redundancy and watch requirements."
+    },
+    {
+      "order": 8,
+      "id": "materialize_or_assign_people",
+      "rule": "Use existing eligible characters first where context provides them; generate persistent people only for real slots."
+    },
+    {
+      "order": 9,
+      "id": "build_individual_schedules",
+      "rule": "Duty + handoff + obligations + protected rest + meals + free time; no overlaps."
+    },
+    {
+      "order": 10,
+      "id": "seed_off_duty_preferences",
+      "rule": "Use personality/preferences/culture plus actual ship facilities; do not force activity."
+    },
+    {
+      "order": 11,
+      "id": "validate_coverage",
+      "rule": "Flag vacancies, fatigue risk, overwork, unsupported services and qualification gaps."
+    }
+  ],
+  "outputs": [
+    "crew_requirement_profile",
+    "crew_manifest",
+    "watch_rosters",
+    "shift_schedule",
+    "off_watch_obligation_schedule",
+    "on_call_roster",
+    "habitability_usage_state",
+    "coverage_validation"
+  ],
+  "normal_operation_rules": [
+    "Every person receives one primary schedule identity but may have secondary/acting roles.",
+    "Department heads need not stand every bridge/department watch personally.",
+    "Commanding officer is not assumed to remain on bridge for an entire shipboard day.",
+    "Small-crew ships may use staggered sleep/on-call instead of symmetric watch teams.",
+    "High-tempo missions may temporarily use double shifts but create fatigue debt."
+  ]
+}
