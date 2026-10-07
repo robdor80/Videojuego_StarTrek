@@ -229,6 +229,7 @@ The content-depth pass now resolves through:
 - `art_direction/visual_bibles/ships/STAR_TREK_SHIP_CLASS_VISUAL_PROFILES_v0.1.json`
 - `art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1.json`
 - `art_direction/visual_bibles/planets/STAR_TREK_HOMEWORLD_ENVIRONMENT_VISUAL_PROFILES_v0.1.json`
+- `art_direction/visual_bibles/facilities/STAR_TREK_STATION_DESIGN_VISUAL_PROFILES_v0.1.json`
 
 Representative NAP fixture:
 
@@ -241,3 +242,19 @@ The fixture is explicitly **not production art**. Its purpose is contract/regres
 ### Completion meaning
 
 Wave E completion means the current defined species/organization/ship/interior/homeworld scope has a coherent visual-resolution and NAP baseline. It does **not** mean every future species, ship class, facility, planet, uniform, prop or production asset has already been authored.
+
+
+## Facility visual resolution
+
+Facility generation resolves visual context only after:
+`need → scale → site → design → individual facility identity → configuration/current state`.
+
+Station visuals therefore cannot decide:
+- that a station exists;
+- which services it provides;
+- how many berths/drydocks it has;
+- who owns or operates it;
+- which ships are docked;
+- whether it is damaged, under construction or abandoned.
+
+Reusable station designs may have multiple facility instances, but each instance retains its own `facility_id` and visual-state history.
