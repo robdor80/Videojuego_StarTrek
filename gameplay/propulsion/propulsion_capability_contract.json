@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "propulsion_capability_contract",
+  "classification": "GAME_ADDITION",
+  "modes": [
+    "impulse",
+    "warp",
+    "thrusters",
+    "other_authorized_mode"
+  ],
+  "resolution_inputs": [
+    "platform_configuration",
+    "propulsion_system_state",
+    "power_state",
+    "fuel_or_reactant_state",
+    "navigation_solution",
+    "environmental_hazards",
+    "crew_or_autopilot_authority",
+    "era_technology_profile"
+  ],
+  "outputs": [
+    "available_modes",
+    "safe_performance_envelope",
+    "estimated_travel_time",
+    "risk_state",
+    "resource_effects",
+    "failure_or_degradation_state"
+  ],
+  "rules": [
+    "Displayed performance comes from installed/live systems, not generic franchise maximums.",
+    "Damage or resource shortage may reduce performance without changing ship identity.",
+    "Travel consumes authoritative elapsed time.",
+    "Warp capability does not imply every warp factor is safe/available in every context.",
+    "Anomalous propulsion requires explicit technology or phenomenon provenance."
+  ]
+}
