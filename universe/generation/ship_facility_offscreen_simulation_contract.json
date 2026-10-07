@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "ship_facility_offscreen_simulation",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "inputs": [
+    "entity_id",
+    "mission_or_function",
+    "route_or_location",
+    "crew_or_staff_state",
+    "system_state",
+    "resource_state",
+    "maintenance_state",
+    "traffic_context",
+    "alert_or_crisis_state",
+    "elapsed_time"
+  ],
+  "outputs": [
+    "position_or_route_progress",
+    "resource_changes",
+    "maintenance_changes",
+    "service_jobs",
+    "operational_events",
+    "casualty_or_damage_events_if_resolved",
+    "traffic_state_changes"
+  ],
+  "rules": [
+    "Off-screen ships and facilities continue existing and operating at appropriate simulation LOD.",
+    "A ship cannot arrive before valid travel time elapses.",
+    "Maintenance, resupply and repair consume time/capacity/resources.",
+    "Routine simulation may aggregate uneventful work but major damage, death, refit, mission completion or route diversion requires explicit event records.",
+    "LOD reduction does not make facilities infinite-capacity or ships immune to logistics.",
+    "Returning to high LOD restores from accumulated state rather than rerolling."
+  ]
+}
