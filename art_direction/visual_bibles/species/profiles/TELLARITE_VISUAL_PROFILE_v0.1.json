@@ -1,0 +1,31 @@
+{
+  "profile_id": "tellarite_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "FOUNDATION_WITH_USER_REFERENCE_OBSERVATIONS",
+  "species_id": "tellarite",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Strong non-human nasal/snout morphology is a major species-readable feature in the supplied references.",
+    "Large distinctive ear structures are a major species-readable feature.",
+    "Pronounced brow and mid-face sculpting recur.",
+    "Facial hair appears prominently in some references but must not become universal.",
+    "Screen-era morphology can vary substantially and requires era-aware production profiles."
+  ],
+  "identity_rules": [
+    "Snout/nasal, ear and brow geometry belong to persistent individual morphology.",
+    "Facial hair and grooming remain presentation layers.",
+    "Individual variation must be preserved rather than cloning one prosthetic face."
+  ],
+  "forbidden": [
+    "permanent angry expression",
+    "argumentative personality encoded into neutral portrait",
+    "one prosthetic template across all Tellarites"
+  ],
+  "reference_policy": {
+    "user_supplied_images_are_morphology_guides_not_identity_templates": true
+  }
+}
