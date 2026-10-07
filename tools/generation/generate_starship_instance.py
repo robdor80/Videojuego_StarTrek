@@ -126,8 +126,11 @@ def choose_class(
             if role in row.get("primary_gameplay_roles", [])
             or role in row.get("classifications", [])
         ]
-        if matching:
-            valid = matching
+        if not matching:
+            raise ValueError(
+                f"No valid class for operator={operator} era={era_id} year={year} role={role}"
+            )
+        valid = matching
 
     weighted: list[tuple[dict[str, Any], int]] = []
     for row in valid:
