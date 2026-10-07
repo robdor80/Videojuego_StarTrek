@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "betazoid",
+  "display_name_es": "Betazoide",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/major_species_profiles.json#betazoid"
+  ],
+  "identity": {
+    "common_homeworld_ref": "betazed",
+    "common_faction_association": "united_federation_of_planets",
+    "federation_membership_implied_for_individual": false
+  },
+  "physiology": {
+    "telepathy": "natural_species_capability_with_individual_variation",
+    "empathy_and_telepathy_strength_varies": true,
+    "development_timing": "commonly_develops_by_adolescence_but_varies",
+    "reading_limitations": [
+      "ferengi",
+      "changeling"
+    ],
+    "unknowns": [
+      "exact universal range",
+      "universal lifecycle thresholds",
+      "reproductive biology"
+    ]
+  },
+  "capabilities": {
+    "telepathic_reading": {
+      "core_resolves_scope": true,
+      "automatic_lie_detector": false,
+      "target_species_and_state_can_limit": true,
+      "hidden_information_not_revealed_without_resolution": true,
+      "consent_and_professional_rules": "contextual"
+    }
+  },
+  "culture_socialization": {
+    "possible_contexts": [
+      "telepathic/empathic awareness",
+      "privacy expectations shaped by telepathy"
+    ],
+    "rules": [
+      "Telepathy does not replace personality.",
+      "Sensing emotion is not knowing motive or objective truth."
+    ]
+  },
+  "gameplay_hooks": [
+    "telepathic_contact",
+    "empathic_assessment",
+    "privacy_and_consent",
+    "species_reading_limitations"
+  ],
+  "ai_boundary": [
+    "Do not use telepathy as omniscience or automatic lie detection.",
+    "Do not expose secrets merely because a Betazoid is present.",
+    "Do not assume every individual has identical capability strength."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_BETAZOID",
+      "confidence": "MEDIUM",
+      "claim_scope": "telepathy, variation and reading limitations"
+    }
+  ]
+}
