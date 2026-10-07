@@ -1,20 +1,20 @@
 {
-  "schema_version": "0.1.2",
+  "schema_version": "0.1.3",
   "manifest_id": "procedural_content_depth_status",
   "plan_ref": "docs/roadmap/procedural_content_depth_plan_v0.1.md",
   "summary": {
     "total_packages": 63,
-    "complete": 38,
+    "complete": 40,
     "partial": 1,
     "in_progress": 0,
-    "todo": 24
+    "todo": 22
   },
   "wave_summary": {
     "Wave A": {
       "total": 18,
-      "complete": 16,
+      "complete": 18,
       "partial": 0,
-      "todo": 2
+      "todo": 0
     },
     "Wave B": {
       "total": 12,
@@ -157,14 +157,14 @@
     {
       "package_id": "D017",
       "scope": "Synthetic/android person framework",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave A",
       "exit_condition": "Identity/lifecycle/rights/state hooks"
     },
     {
       "package_id": "D018",
       "scope": "Persistent holographic person framework",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave A",
       "exit_condition": "Program instance identity, memory/state persistence, embodiment constraints"
     },
