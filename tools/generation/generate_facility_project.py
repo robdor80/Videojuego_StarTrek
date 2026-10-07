@@ -353,7 +353,18 @@ def resident_population(
     role: str,
     duty_staff: int,
     operator_family: str,
+    design_id: str,
 ) -> dict[str, int]:
+    if design_id == "starfleet_relay_station_47_type":
+        residents = 0
+        dependents = 0
+        visitors = rng.randint(0, 1)
+        return {
+            "civilian_residents": residents,
+            "dependents": dependents,
+            "transient_visitors_baseline": visitors,
+        }
+
     if role in {"military_outpost", "shipyard"} and operator_family in {"klingon_imperial_military", "dominion"}:
         resident_max = max(0, duty_staff // 20)
     elif role == "orbital_habitat":
@@ -626,6 +637,7 @@ def generate(
         role=role,
         duty_staff=duty_staff,
         operator_family=operator_family,
+        design_id=design["design_id"],
     )
     watch = watch_model(operator, role, duty_staff)
     services = service_profile(role, design["design_id"])
