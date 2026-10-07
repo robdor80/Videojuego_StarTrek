@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "shipboard_watch_generation_contract",
   "status": "FOUNDATION_FIXED",
   "classification": "GAME_ADDITION_CANON_COMPATIBLE",
@@ -165,11 +165,26 @@
     "on_call_pool",
     "unfilled_watch_slots",
     "fatigue_risk_flags",
-    "handoff_windows"
+    "handoff_windows",
+    "command_decision_ref",
+    "proposal_source",
+    "approval_or_delegation_state"
   ],
   "ai_boundary": [
     "AI cannot place an off-duty character on watch without assignment/recall state.",
     "AI cannot invent a relief officer to cover a vacancy.",
     "AI cannot alter shift length or pattern without command/order/state."
+  ],
+  "command_authority_ref": "gameplay/chain_of_command/captain_operational_decision_authority_contract_v0.1.json",
+  "decision_registry_ref": "gameplay/chain_of_command/automatic_command_decision_registry_v0.1.json",
+  "delegation_state_ref": "gameplay/chain_of_command/command_decision_delegation_state_v0.1.json",
+  "command_decision_rules": [
+    "The generated watch pattern is an engine/XO proposal or delegated default, not an irrevocable command decision.",
+    "If the lawful commanding officer is player-controlled and watch_policy is manual or proposal_requires_approval, the captain may accept, modify or replace the generated pattern before it becomes effective.",
+    "The captain may order three, four or custom watches when staffing, qualification, medical, regulatory and physical constraints permit.",
+    "The captain may delegate detailed roster construction to the executive officer while retaining final policy authority.",
+    "Changing watch pattern requires roster regeneration and validation; the engine may warn of uncovered posts, fatigue or readiness loss but must not silently restore its preferred solution.",
+    "Accepting the generated pattern unchanged can be recorded as captain_approved.",
+    "If the domain is delegated_autonomous, the XO/engine may apply routine changes inside standing orders; the captain can later review or revoke the delegation."
   ]
 }
