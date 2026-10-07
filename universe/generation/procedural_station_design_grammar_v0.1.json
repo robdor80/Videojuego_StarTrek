@@ -1,0 +1,322 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "procedural_station_design_grammar",
+  "status": "FOUNDATION_FIXED",
+  "design_contract_principle": "A procedural station design is reusable architecture. It is not regenerated independently for every individual facility.",
+  "inputs": [
+    "operator_or_civilization",
+    "campaign_era",
+    "facility_role_family",
+    "resolved_scale",
+    "site_type",
+    "throughput_requirements",
+    "population_requirements",
+    "technology_profile",
+    "industrial_capability",
+    "security_context",
+    "environmental_hazards",
+    "expected_lifetime"
+  ],
+  "role_families": {
+    "communications_relay": {
+      "allowed_scales": [
+        "micro_outpost",
+        "small_station"
+      ],
+      "required": [
+        "communications_relay"
+      ],
+      "optional": [
+        "smallcraft_support",
+        "basic_habitation"
+      ],
+      "forbidden_by_default": [
+        "shipyard",
+        "trade_hub",
+        "heavy_repair"
+      ]
+    },
+    "sensor_listening_outpost": {
+      "allowed_scales": [
+        "micro_outpost",
+        "small_station"
+      ],
+      "required": [
+        "science_support",
+        "communications_relay"
+      ],
+      "optional": [
+        "security_support",
+        "smallcraft_support"
+      ],
+      "forbidden_by_default": [
+        "trade_services",
+        "heavy_repair"
+      ]
+    },
+    "research_observatory": {
+      "allowed_scales": [
+        "micro_outpost",
+        "small_station",
+        "standard_station"
+      ],
+      "required": [
+        "science_support"
+      ],
+      "optional": [
+        "medical_basic",
+        "berth",
+        "smallcraft_support",
+        "communications_relay"
+      ],
+      "forbidden_by_default": [
+        "resupply_ordnance",
+        "shipyard"
+      ]
+    },
+    "medical_quarantine": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station"
+      ],
+      "required": [
+        "medical_advanced",
+        "personnel_transfer"
+      ],
+      "optional": [
+        "berth",
+        "smallcraft_support",
+        "quarantine_zones"
+      ],
+      "forbidden_by_default": [
+        "shipyard"
+      ]
+    },
+    "depot_supply": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "cargo_transfer",
+        "storage",
+        "resupply_general"
+      ],
+      "optional": [
+        "resupply_ordnance",
+        "berth",
+        "repair_minor"
+      ],
+      "forbidden_by_default": [
+        "diplomatic_services"
+      ]
+    },
+    "trade_cargo_transfer": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "cargo_transfer",
+        "berth",
+        "traffic_control"
+      ],
+      "optional": [
+        "trade_services",
+        "personnel_transfer",
+        "resupply_general",
+        "medical_basic"
+      ],
+      "forbidden_by_default": [
+        "shipyard"
+      ]
+    },
+    "orbital_habitat": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "habitation",
+        "life_support",
+        "personnel_transfer"
+      ],
+      "optional": [
+        "trade_services",
+        "education_spaces",
+        "medical_basic",
+        "recreation"
+      ],
+      "forbidden_by_default": [
+        "resupply_ordnance"
+      ]
+    },
+    "refinery_processing": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "industrial_processing",
+        "cargo_transfer"
+      ],
+      "optional": [
+        "berth",
+        "resupply_general",
+        "repair_minor"
+      ],
+      "forbidden_by_default": [
+        "diplomatic_services"
+      ]
+    },
+    "repair_drydock": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "drydock",
+        "repair_heavy"
+      ],
+      "optional": [
+        "cargo_transfer",
+        "personnel_transfer",
+        "resupply_general"
+      ],
+      "forbidden_by_default": [
+        "civilian_city_services"
+      ]
+    },
+    "shipyard": {
+      "allowed_scales": [
+        "standard_station",
+        "starbase",
+        "major_complex"
+      ],
+      "required": [
+        "shipyard",
+        "drydock",
+        "repair_heavy",
+        "cargo_transfer"
+      ],
+      "optional": [
+        "resupply_general",
+        "personnel_transfer",
+        "command_and_control"
+      ],
+      "forbidden_by_default": []
+    },
+    "military_outpost": {
+      "allowed_scales": [
+        "micro_outpost",
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "security_support",
+        "communications_relay"
+      ],
+      "optional": [
+        "command_and_control",
+        "resupply_ordnance",
+        "berth",
+        "repair_field"
+      ],
+      "forbidden_by_default": [
+        "open_trade_services"
+      ]
+    },
+    "detention_security": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station"
+      ],
+      "required": [
+        "security_support",
+        "detention"
+      ],
+      "optional": [
+        "medical_basic",
+        "berth"
+      ],
+      "forbidden_by_default": [
+        "open_trade_services"
+      ]
+    },
+    "diplomatic_administrative": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station",
+        "starbase"
+      ],
+      "required": [
+        "diplomatic_services",
+        "communications_relay",
+        "personnel_transfer"
+      ],
+      "optional": [
+        "trade_services",
+        "medical_basic",
+        "berth"
+      ],
+      "forbidden_by_default": [
+        "shipyard"
+      ]
+    },
+    "colony_support": {
+      "allowed_scales": [
+        "small_station",
+        "standard_station"
+      ],
+      "required": [
+        "cargo_transfer",
+        "personnel_transfer",
+        "resupply_general"
+      ],
+      "optional": [
+        "medical_basic",
+        "trade_services",
+        "repair_minor"
+      ],
+      "forbidden_by_default": [
+        "heavy_fleet_command"
+      ]
+    }
+  },
+  "design_outputs": [
+    "design_id",
+    "design_mode",
+    "role_family",
+    "operator_compatibility",
+    "era_window",
+    "scale",
+    "structural_modules",
+    "power_and_life_support",
+    "docking_topology",
+    "service_capabilities",
+    "capacity_bands",
+    "staffing_inputs",
+    "habitability_profile",
+    "visual_profile_stack",
+    "provenance"
+  ],
+  "rules": [
+    "Search valid canonical/authored designs before generating a new design.",
+    "A new procedural design is created only when no selected existing design adequately fits role, scale, era, operator and site.",
+    "Generated design_id is deterministic and reusable for later facilities in the same design ecosystem.",
+    "Different individual facilities may share design_id but never share facility_id or live state.",
+    "Do not add capabilities merely to make a design convenient.",
+    "Modules exist because a required/optional capability was selected.",
+    "Defensive systems require operator, strategic context and legal/organizational justification.",
+    "Habitation capacity is sized from staff/resident requirements plus emergency margin, not visual scale.",
+    "Docking capacity is sized from actual throughput and vessel-size demand.",
+    "Procedural visual geometry follows operator/era/facility-role grammar after function is fixed."
+  ],
+  "anti_generic_rule": "No procedural station may become an all-services starbase unless its resolved scale and need package independently justify those capabilities."
+}
