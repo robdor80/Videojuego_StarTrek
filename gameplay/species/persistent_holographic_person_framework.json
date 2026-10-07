@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "persistent_holographic_person_framework",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "classification": "persistent_software_holographic_person_framework",
+  "contract_refs": [
+    "gameplay/species/exceptional_entity_state_contract.json",
+    "gameplay/species/character_lifecycle_contract.json",
+    "gameplay/technology/computation_holography_replication_contract.json",
+    "universe/generation/persistent_entity_identity_contract.json"
+  ],
+  "principle": "A persistent holographic person is not the same thing as a disposable holodeck character. Once person-level persistence is established, identity, memory, relationships and history remain attached to the same entity across activations and embodiments.",
+  "identity_fields": [
+    "entity_id",
+    "program_lineage_ref",
+    "visual_identity_id",
+    "memory_state_ref",
+    "persistent_personhood_state_ref",
+    "authorized_host_system_refs",
+    "current_embodiment_or_projection_ref",
+    "backup_or_copy_refs_if_any",
+    "legal_status_ref"
+  ],
+  "runtime_states": [
+    "inactive_stored",
+    "active_projected",
+    "active_mobile_emitter_or_equivalent_if_supported",
+    "transferred_between_authorized_hosts",
+    "degraded_or_damaged",
+    "isolated_or_disconnected",
+    "destroyed_or_irrecoverable_if_authoritative"
+  ],
+  "rules": [
+    "Activation/deactivation does not create a new person each time.",
+    "Changing projection location or host system does not reroll identity.",
+    "A copied program is not automatically the same continuing person; continuity requires explicit copy/branch rules.",
+    "Memory persistence is authoritative state and cannot be assumed from a generic holographic template.",
+    "A disposable simulation character does not become a persistent person merely because AI generated dialogue for it.",
+    "Persistent holographic persons can accumulate relationships, knowledge, career and reputation when world/legal state permits.",
+    "Host-system access, permissions and mobility are operational constraints, not personality.",
+    "AI cannot promote a simulation character to persistent personhood, duplicate a person or restore a destroyed instance without authoritative events.",
+    "Visual projection remains linked to persistent identity unless the person intentionally changes avatar and that change is recorded."
+  ],
+  "unknown_policy": "Specific EMH generations, mobile-emitter availability, legal personhood and copy/backup continuity require era/source-specific profiles.",
+  "ai_guardrails": [
+    "Do not treat every hologram as a person.",
+    "Do not treat every persistent holographic person as an EMH.",
+    "Do not assume unlimited computer access or ship-wide omnipresence.",
+    "Do not duplicate one person by casually loading the same program twice without explicit branch/continuity rules."
+  ],
+  "academy_relevance": "Teach only role-relevant computer, medical, legal or ethical constraints when a course requires them."
+}
