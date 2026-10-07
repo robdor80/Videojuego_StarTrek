@@ -1,0 +1,161 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "cardassian_hierarchy_family_state_context",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "cardassian",
+    "automatic_attachment_by_species": false,
+    "principle": "Hierarchy, family and State can be culturally salient while loyalty, guilt, cruelty and political alignment remain individual/stateful."
+  },
+  "values_and_norms": [
+    {
+      "norm": "hierarchy_can_structure_public_life",
+      "strength": "strong_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "family_and_parental_authority_can_be_socially_salient",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "age_can_be_associated_with_strength_wisdom_and_status",
+      "strength": "possible_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "order_and_duty_can_be_social_values",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "formal hierarchy",
+      "institutional confidence",
+      "family/state duty framing",
+      "irony/suspicion in some contexts"
+    ],
+    "misread_risks": [
+      "Institutional confidence is not proof of cruelty.",
+      "Suspicion or caution is not proof of guilt.",
+      "Occupation-era history does not assign personal responsibility to every Cardassian."
+    ]
+  },
+  "authority_and_status": {
+    "possible_status_sources": [
+      "state office",
+      "military rank",
+      "family reputation",
+      "age/seniority",
+      "institutional position"
+    ],
+    "rules": [
+      "State loyalty is not implied by species.",
+      "Military rank and civilian/state authority are separate.",
+      "Family reputation can influence social context only when actual family state exists."
+    ]
+  },
+  "privacy_and_intimacy": {
+    "universal_rule": null
+  },
+  "family_kinship_and_household": {
+    "known_context": "family and parental authority can carry cultural weight",
+    "rules": [
+      "Kinship must come from persistent family graph.",
+      "Family duty does not automatically equal affection or obedience.",
+      "Do not invent relatives or family rivalries for drama."
+    ]
+  },
+  "education_and_socialization": {
+    "possible_contexts": [
+      "hierarchy",
+      "state duty",
+      "family responsibility"
+    ],
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Species does not imply military, intelligence or state employment."
+  },
+  "law_duty_and_obligation": {
+    "possible_contexts": [
+      "state duty",
+      "institutional hierarchy",
+      "family obligation"
+    ],
+    "rule": "Actual legal obligation comes from era/campaign institutions, not culture alone."
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misreads": [
+      "occupation collaborator by default",
+      "cruel by default",
+      "Union loyalist by default"
+    ],
+    "professional_response": "Separate historical context from individual biography, legal responsibility and present loyalty."
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "family",
+      "class/status",
+      "civilian/military",
+      "pre/post-occupation experience",
+      "resistance/reform context",
+      "era",
+      "diaspora/offworld exposure"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "notes": [
+      "Occupation, withdrawal from Bajor, Klingon invasion, Dominion alignment and resistance radically change social/political context across the 2370s."
+    ]
+  },
+  "gameplay_hooks": [
+    "family_reputation",
+    "institutional_hierarchy",
+    "occupation_legacy",
+    "state_loyalty_conflict",
+    "postwar_or_resistance_context"
+  ],
+  "ai_guardrails": [
+    "Do not make every Cardassian cruel, authoritarian or deceptive.",
+    "Do not assign occupation guilt without individual history.",
+    "Do not invent family/state obligations without provenance.",
+    "Do not confuse cultural hierarchy with automatic legal authority."
+  ],
+  "unknowns": [
+    "complete household model",
+    "marriage/inheritance law",
+    "regional subcultures",
+    "funerary practices",
+    "civilian education detail"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_CARDASSIAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "hierarchy, family/state and age-status cross-check"
+    },
+    {
+      "source_id": "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+      "confidence": "HIGH",
+      "claim_scope": "Cardassian Union polity context"
+    },
+    {
+      "source_id": "DS9_EMISSARY",
+      "confidence": "HIGH",
+      "claim_scope": "post-occupation Bajor/Cardassian context"
+    },
+    {
+      "source_id": "DS9_THE_DOGS_OF_WAR",
+      "confidence": "HIGH",
+      "claim_scope": "late-war Cardassian resistance context"
+    }
+  ]
+}
