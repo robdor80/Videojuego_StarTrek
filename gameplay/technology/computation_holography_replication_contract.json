@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "computation_holography_replication_contract",
+  "classification": "GAME_ADDITION",
+  "domains": [
+    "ship_computer",
+    "automation",
+    "replication_or_synthesis",
+    "holographic_simulation",
+    "holodeck",
+    "holographic_person_or_agent"
+  ],
+  "rules": [
+    "Capability is date/platform specific and may be class-specific or experimental.",
+    "Computer access does not equal omniscience; databases contain only stored/authorized knowledge.",
+    "Replicator rules defer to resource/pattern/access constraints.",
+    "Holodeck simulation does not rewrite World State unless a real action leaves the simulation.",
+    "Holographic characters/agents that qualify as persistent persons use explicit identity/lifecycle rules rather than disposable dialogue generation.",
+    "AI interface is not automatically an in-universe sentient computer."
+  ]
+}
