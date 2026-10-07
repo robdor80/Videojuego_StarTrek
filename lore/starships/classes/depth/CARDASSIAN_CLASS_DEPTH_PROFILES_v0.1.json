@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.1.0",
+  "depth_profile_id": "cardassian_class_depth_profiles",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "retained_profiles": [
+    "tng_ds9_voyager"
+  ],
+  "classes": {
+    "galor": {
+      "class_id": "galor",
+      "display_name": "Galor",
+      "role_families": [
+        "medium_cruiser",
+        "patrol",
+        "fleet_combat",
+        "occupation_or_border_presence_when_history_valid"
+      ],
+      "strengths": [
+        "mainstay_warship",
+        "patrol_and_fleet_role",
+        "credible_multi-ship_group_operations"
+      ],
+      "constraints": [
+        "occupation authority depends on date/location/history",
+        "do not project 2370s political alignment backwards or forwards automatically"
+      ],
+      "crew_generation": [
+        "Cardassian military staffing derived from actual mission/watch requirements"
+      ],
+      "persistence": [
+        "individual ship survives operator/political changes unless destroyed/captured"
+      ],
+      "ai_boundary": [
+        "Class does not imply crew loyalty, cruelty, Dominion alignment or intelligence mission."
+      ],
+      "visual_hooks": [
+        "Cardassian ochre/gold hull grammar and recognizable Galor planform"
+      ],
+      "source_ids": [
+        "MA_GALOR_CLASS",
+        "TNG_THE_WOUNDED"
+      ]
+    },
+    "keldon": {
+      "class_id": "keldon",
+      "display_name": "Keldon",
+      "availability": {
+        "confirmed_2370s": true
+      },
+      "role_families": [
+        "cruiser",
+        "heavy_or_special_mission",
+        "fleet_combat"
+      ],
+      "strengths": [
+        "enhanced_cruiser_context",
+        "credible covert/special variants"
+      ],
+      "constraints": [
+        "cloaking/enhanced Obsidian Order examples are special configurations, not universal class baseline"
+      ],
+      "crew_generation": [
+        "mission/operator determines intelligence specialists or special crews"
+      ],
+      "persistence": [
+        "special covert configuration belongs to individual/configuration state"
+      ],
+      "ai_boundary": [
+        "Do not assume every Keldon is Obsidian Order or cloaked."
+      ],
+      "visual_hooks": [
+        "Galor-derived lineage with Keldon-specific geometry/configuration"
+      ],
+      "source_ids": [
+        "MA_KELDON_CLASS"
+      ]
+    },
+    "hideki": {
+      "class_id": "hideki",
+      "display_name": "Hideki",
+      "availability": {
+        "confirmed_2370s": true
+      },
+      "role_families": [
+        "patrol",
+        "attack_craft",
+        "shuttle_or_small_multipurpose"
+      ],
+      "strengths": [
+        "small_crew",
+        "local_patrol",
+        "rapid_security_presence",
+        "small-craft missions"
+      ],
+      "constraints": [
+        "small platform; do not upscale into Galor-equivalent capability",
+        "modified armament must be explicit"
+      ],
+      "crew_generation": [
+        "very small crew makes named occupants likely to become persistent quickly",
+        "mission specialists only as needed"
+      ],
+      "persistence": [
+        "small craft remains same entity through assignment/operator changes"
+      ],
+      "ai_boundary": [
+        "Visual recognition as Cardassian does not reveal crew mission or allegiance."
+      ],
+      "visual_hooks": [
+        "small Cardassian hull grammar distinct from Galor/Keldon"
+      ],
+      "source_ids": [
+        "MA_HIDEKI_CLASS"
+      ]
+    }
+  },
+  "generation_rules": [
+    "No Pike/Kirk-era Cardassian military class generation is added without sources.",
+    "Union, intelligence-service, resistance or Dominion operator state is temporal and explicit.",
+    "Individual vessels can be captured, defect or change operator without changing physical identity."
+  ],
+  "unknown_policy": "Exact performance, crew and internal layout remain conservative unless sourced.",
+  "nap_implications": [
+    "Cardassian visual identity resolves design class before operator markings, campaign damage and political-state overlays."
+  ]
+}
