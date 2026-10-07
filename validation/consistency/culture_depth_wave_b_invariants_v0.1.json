@@ -1,0 +1,149 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "culture_depth_wave_b_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "profile_refs": [
+    "lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json",
+    "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json",
+    "lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json",
+    "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+  ],
+  "cross_domain_invariants": [
+    "Species never auto-locks a complete culture profile.",
+    "Culture never creates citizenship, organization membership, profession or personality.",
+    "Culture never creates kinship, marriage, household, religion, title or authority without explicit state/provenance.",
+    "Unknown cultural domains remain unknown rather than inheriting Human defaults.",
+    "Era/date resolves before culture-dependent legal or political assumptions.",
+    "Individual adherence can differ from cultural norms.",
+    "AI may express cultural priors but cannot authoritatively create obligations or hidden biography."
+  ],
+  "cases": [
+    {
+      "id": "human_not_galactic_default",
+      "expected": [
+        "Human species does not imply Earth upbringing.",
+        "Earth norms are not universal Human norms.",
+        "Federation civic culture and Starfleet institutional culture are separate from species."
+      ]
+    },
+    {
+      "id": "vulcan_logic_not_emotion_absence",
+      "expected": [
+        "Logical/emotional discipline is cultural.",
+        "Emotion still exists.",
+        "Mind meld and pon farr do not erase privacy.",
+        "No spouse/bond is invented from species."
+      ]
+    },
+    {
+      "id": "andorian_directness_not_hostility",
+      "expected": [
+        "Directness/challenge requires context.",
+        "Military profession is not inferred.",
+        "Ushaan obligation requires explicit state."
+      ]
+    },
+    {
+      "id": "aenar_pacifism_and_consent",
+      "expected": [
+        "Pacifism is a strong norm but not helplessness.",
+        "Telepathy remains consent/capability limited.",
+        "Aenar culture remains distinct from mainstream Andorian culture."
+      ]
+    },
+    {
+      "id": "tellarite_argument_not_relationship_damage",
+      "expected": [
+        "Argument/complaint can be conventional engagement.",
+        "Relationship state changes require actual event/context.",
+        "Family/legal customs are not invented."
+      ]
+    },
+    {
+      "id": "klingon_house_requires_provenance",
+      "expected": [
+        "House membership requires persistent family/social state.",
+        "Honor is contextual, not a universal morality score.",
+        "Warrior profession and Empire loyalty are not implied."
+      ]
+    },
+    {
+      "id": "romulan_security_not_spy_lock",
+      "expected": [
+        "Controlled disclosure does not prove deception.",
+        "Tal Shiar membership requires organization state.",
+        "Vulcan cultural rules are not imported by ancestry."
+      ]
+    },
+    {
+      "id": "cardassian_history_not_individual_guilt",
+      "expected": [
+        "Occupation history can shape context.",
+        "Guilt/collaboration requires individual history.",
+        "Family reputation requires actual family graph.",
+        "Hierarchy does not equal legal authority everywhere."
+      ]
+    },
+    {
+      "id": "bajoran_faith_is_stateful",
+      "expected": [
+        "Prophets-centered culture can be major.",
+        "Personal faith is not implied.",
+        "Religious and civil authority remain separate.",
+        "Resistance/trauma are not inferred."
+      ]
+    },
+    {
+      "id": "ferengi_era_sensitive_social_law",
+      "expected": [
+        "Commercial culture is strong but profession/personality remain individual.",
+        "Property/gender/legal assumptions resolve by date.",
+        "Late-DS9 reforms are not backfilled to earlier eras.",
+        "Contracts/debts require actual records."
+      ]
+    },
+    {
+      "id": "trill_joining_does_not_rewrite_family",
+      "expected": [
+        "Current host kinship remains persistent.",
+        "Previous-host history can influence memory/context.",
+        "Prior-host family/romance is not automatically current relationship state.",
+        "Unjoined Trill are complete persons."
+      ]
+    },
+    {
+      "id": "betazoid_telepathy_not_truth",
+      "expected": [
+        "Capability varies by person.",
+        "Emotion does not equal motive/truth.",
+        "Privacy/professional confidentiality remain active.",
+        "Profession is not inferred."
+      ]
+    },
+    {
+      "id": "dominion_not_single_culture",
+      "expected": [
+        "Founder, Vorta and Jem'Hadar contexts remain distinct.",
+        "Authority depends on assignment/hierarchy state.",
+        "Copied Changeling appearance grants no permissions.",
+        "Ketracel logistics remain authoritative state."
+      ]
+    },
+    {
+      "id": "offscreen_persistence",
+      "expected": [
+        "Culture refs survive save/load and LOD.",
+        "Characters do not reroll upbringing or cultural affiliation when re-encountered.",
+        "Cultural evolution requires events/time rather than regeneration."
+      ]
+    }
+  ]
+}
