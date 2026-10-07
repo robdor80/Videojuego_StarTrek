@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "shipboard_life_state_contract",
+  "classification": "GAME_ADDITION",
+  "principle": "A starship is simultaneously workplace, transport, emergency platform and—where applicable—home; off-duty life is constrained by the same authoritative time and location state as duty.",
+  "life_domains": [
+    "quarters_and_residency",
+    "sleep_and_rest",
+    "meals",
+    "hygiene_and_personal_care",
+    "recreation",
+    "holodeck_use_if_available",
+    "social_activity",
+    "family_or_private_time",
+    "exercise",
+    "personal_projects",
+    "counseling_and_medical",
+    "shore_leave",
+    "passenger_and_guest_life",
+    "community_events"
+  ],
+  "character_state_inputs": [
+    "assignment",
+    "quarters_or_residency_ref",
+    "schedule",
+    "duty_watch",
+    "current_location",
+    "fatigue_and_wellbeing",
+    "relationships",
+    "family_refs",
+    "preferences_and_habits",
+    "medical_state",
+    "alert_state",
+    "mission_state"
+  ],
+  "ship_state_inputs": [
+    "interior_location_state",
+    "occupancy_and_capacity",
+    "service_availability",
+    "power_state",
+    "damage_and_hazards",
+    "security_or_access_state",
+    "recreation_capabilities",
+    "food_or_replicator_state",
+    "current_alert"
+  ],
+  "rules": [
+    "Off-duty does not mean nonexistent; characters continue to occupy time and space.",
+    "Rest, meals, recreation and conversation consume time and may be interrupted by duty/emergency events.",
+    "Quarters assignment is residency state, not proof of relationship or family status.",
+    "Shared quarters or social space do not automatically create friendship, romance or private knowledge.",
+    "Alert and casualty states may preempt normal activity and change accessible locations.",
+    "Shipboard life uses the same persistent characters, memories, relationships and schedules as operational gameplay.",
+    "A character cannot simultaneously be on duty at a station and in private off-duty activity elsewhere.",
+    "NPC routines continue off-screen at appropriate LOD without inventing major life events.",
+    "AI may describe shipboard life from resolved state but cannot teleport characters or create facilities/services the ship lacks."
+  ],
+  "integration_refs": [
+    "gameplay/characters/activity_schedule_model.json",
+    "gameplay/characters/wellbeing/",
+    "gameplay/social/",
+    "gameplay/relationships/",
+    "gameplay/ship_operations/interior_location_model.json",
+    "gameplay/ship_operations/crew_manifest_model.json"
+  ]
+}
