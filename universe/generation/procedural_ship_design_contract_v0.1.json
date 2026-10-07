@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "procedural_ship_design_contract",
   "status": "FOUNDATION_FIXED",
   "principle": "The generator distinguishes a reusable ship design/class from an individual vessel. A new procedural civilian design may later produce many persistent ships.",
@@ -44,11 +44,15 @@
     "Technology must be legal/available for date and operator.",
     "Military capability cannot be added to a civilian design without operator/legal/mission justification.",
     "Civilian design geometry follows operator/era visual grammar and functional capacity, not random kitbashing.",
-    "Procedural designs may be reused by traffic generation according to production availability/rarity."
+    "Procedural designs may be reused by traffic generation according to production availability/rarity.",
+    "Civilian procedural role profiles resolve a reusable design before individual vessel generation.",
+    "Different individual vessels may share one procedural design_id while retaining separate ship_id, ownership, cargo, crew, damage and history."
   ],
   "canonical_rules": [
     "Canonical class definitions are immutable design data.",
     "Canonical unique ships are separate individual entities and reserved.",
     "Generated ships may use canonical classes without copying a canonical ship name, registry, crew or history."
-  ]
+  ],
+  "procedural_civilian_profiles_ref": "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json",
+  "shipboard_life_catalog_ref": "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json"
 }
