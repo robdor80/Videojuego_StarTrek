@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "persistent_personality_generation_pipeline",
+  "status": "FOUNDATION_FIXED",
+  "inputs": [
+    "campaign_seed",
+    "entity_id",
+    "personality_depth_tier",
+    "species_id",
+    "culture_refs",
+    "upbringing_context_refs",
+    "career_or_institution_refs",
+    "already_observed_behavior_constraints",
+    "authored_profile_ref_if_any"
+  ],
+  "steps": [
+    {
+      "order": 1,
+      "id": "resolve_mode",
+      "rule": "Tier A prefers authored mode; Tier B uses procedural unless explicitly authored; Tier C may remain latent."
+    },
+    {
+      "order": 2,
+      "id": "resolve_seed",
+      "rule": "personality_seed = campaign_seed + entity_id + 'personality' + rules_version"
+    },
+    {
+      "order": 3,
+      "id": "select_base_recipe",
+      "rule": "Choose from species-agnostic recipe library. Species alone never selects personality."
+    },
+    {
+      "order": 4,
+      "id": "instantiate_unique_core",
+      "rule": "Apply deterministic variation to recipe anchors and fill unspecified dimensions inside allowed bands."
+    },
+    {
+      "order": 5,
+      "id": "apply_observed_constraints",
+      "rule": "If the NPC was previously seen/spoken to, keep the resolved profile compatible with recorded behavior."
+    },
+    {
+      "order": 6,
+      "id": "attach_expression_modifiers",
+      "rule": "Apply actual culture/upbringing/institution modifiers as expression/socialization layers; never overwrite core identity."
+    },
+    {
+      "order": 7,
+      "id": "assign_permanent_profile_id",
+      "rule": "Bind unique personality_profile_id to entity_id permanently."
+    },
+    {
+      "order": 8,
+      "id": "dialogue_context",
+      "rule": "At conversation time combine core + culture expression + relationship + current state + scene constraints."
+    }
+  ],
+  "procedural_uniqueness": {
+    "recipe_reuse_allowed": true,
+    "exact_profile_reuse_forbidden": true,
+    "note": "Two NPCs can share an abstract recipe while differing in scalar values, secondary tags, history, culture, relationships and current state."
+  },
+  "tier_transitions": {
+    "C_to_B": "Resolve once from latent seed plus observed constraints; irreversible.",
+    "B_to_A": "Deepen or author around established personality; no reroll.",
+    "A_to_other": "Narrative importance may change but personality identity remains."
+  },
+  "output_fields": [
+    "personality_profile_id",
+    "personality_seed",
+    "recipe_id_or_authored_profile_ref",
+    "core_trait_vector",
+    "qualitative_traits",
+    "style_tags",
+    "expression_modifier_refs",
+    "evolution_history_refs"
+  ],
+  "forbidden": [
+    "canonical_character_template_id as production recipe",
+    "species=personality shortcut",
+    "reroll on save/load",
+    "reroll on ship transfer/rank change",
+    "dialogue model mutating core profile",
+    "random severe pathology as flavor"
+  ]
+}
