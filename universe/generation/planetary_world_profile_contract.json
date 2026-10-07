@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "planetary_world_profile",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "A planet is a persistent physical world. Local environmental state evolves on top of persistent planetary identity and geography.",
+  "required_sections": [
+    "identity",
+    "orbital_context",
+    "bulk_physics",
+    "atmosphere",
+    "hydrosphere",
+    "geology_topography",
+    "climate_refs",
+    "biosphere_ref",
+    "region_refs",
+    "provenance"
+  ],
+  "bulk_physics_fields": [
+    "mass",
+    "radius",
+    "surface_gravity",
+    "rotation_period",
+    "axial_tilt",
+    "orbital_period",
+    "parent_star_refs"
+  ],
+  "atmosphere_fields": [
+    "composition",
+    "pressure_profile",
+    "temperature_regime",
+    "breathability_by_species_profile",
+    "hazard_refs"
+  ],
+  "hydrosphere_fields": [
+    "surface_water_fraction",
+    "major_water_body_refs",
+    "ice_refs",
+    "hydrological_regime"
+  ],
+  "rules": [
+    "Physical properties must be internally compatible or explicitly anomalous.",
+    "Persistent geography is not rerolled when weather changes.",
+    "A procedural planet receives stable planet_id and generation provenance before observation.",
+    "Unknown scientific values remain unknown rather than receiving convenient defaults.",
+    "Star Trek-specific anomalies require explicit phenomenon/event provenance."
+  ]
+}
