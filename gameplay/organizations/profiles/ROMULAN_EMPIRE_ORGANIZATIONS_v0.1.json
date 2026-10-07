@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "romulan_empire_organizations",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "romulan_star_empire",
+  "organizations": [
+    {
+      "organization_id": "romulan_imperial_government",
+      "organization_type": "government",
+      "display_name": "Gobierno del Imperio Estelar Romulano",
+      "rules": [
+        "Political authority is distinct from military and intelligence membership.",
+        "Leadership and policy are temporal World State."
+      ]
+    },
+    {
+      "organization_id": "romulan_military",
+      "organization_type": "military_or_service",
+      "display_name": "Fuerzas militares romulanas",
+      "rules": [
+        "Military membership/rank requires explicit state.",
+        "Ship command does not imply Tal Shiar membership."
+      ]
+    },
+    {
+      "organization_id": "tal_shiar",
+      "organization_type": "intelligence",
+      "display_name": "Tal Shiar",
+      "rules": [
+        "Tal Shiar is a distinct intelligence/security organization.",
+        "Membership can be secret/knowledge-gated.",
+        "Species, citizenship, uniform or secrecy do not prove membership."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not infer Tal Shiar affiliation from Romulan species.",
+    "Do not expose covert membership unless observer knowledge permits it.",
+    "Do not merge military and intelligence chains of command."
+  ],
+  "provenance_refs": [
+    "gameplay/diplomacy/major_faction_catalogue.json#romulan_star_empire",
+    "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
