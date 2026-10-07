@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "validation_pack_id": "shipboard_life_and_procedural_starship_invariants",
   "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
   "refs": [
@@ -12,7 +12,12 @@
     "universe/generation/procedural_starship_instance_generation_pipeline_v0.1.json",
     "universe/generation/procedural_ship_crew_watch_schedule_pipeline_v0.1.json",
     "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json",
-    "validation/fixtures/procedural_starship_generation/oberth_science_2372_v0.1/expected_ship.json"
+    "validation/fixtures/procedural_starship_generation/oberth_science_2372_v0.1/expected_ship.json",
+    "gameplay/chain_of_command/captain_operational_decision_authority_contract_v0.1.json",
+    "gameplay/chain_of_command/automatic_command_decision_registry_v0.1.json",
+    "gameplay/chain_of_command/command_decision_delegation_state_v0.1.json",
+    "gameplay/chain_of_command/command_operational_decision_record_v0.1.json",
+    "gameplay/orders/captain_policy_order_v0.1.json"
   ],
   "cases": [
     {
@@ -182,6 +187,55 @@
         "AI can explain current duty/off-duty state.",
         "AI cannot create shifts, people, rooms, free time, cargo, authority or availability.",
         "AI cannot teleport an NPC because player initiates conversation."
+      ]
+    },
+    {
+      "id": "player_captain_owns_command_domains",
+      "expected": [
+        "Engine-generated operational policy is proposal/default, not higher authority.",
+        "Player captain can accept, modify, replace or delegate captain-owned decisions.",
+        "Accepting the engine proposal unchanged may be recorded as captain_approved."
+      ]
+    },
+    {
+      "id": "captain_can_change_watch_policy",
+      "expected": [
+        "Player captain may order three, four or custom watches when constraints permit.",
+        "XO can be tasked to build the detailed new roster.",
+        "Warnings about fatigue/coverage do not silently restore engine preference."
+      ]
+    },
+    {
+      "id": "delegation_preserves_command_responsibility",
+      "expected": [
+        "Manual, proposal_requires_approval and delegated_autonomous modes are supported.",
+        "Captain can revoke or narrow delegation.",
+        "Delegate cannot exercise authority outside declared limits."
+      ]
+    },
+    {
+      "id": "captain_authority_has_real_limits",
+      "expected": [
+        "Captain cannot create capabilities/resources/qualifications.",
+        "Valid medical fitness authority remains protected.",
+        "Higher lawful tasking/regulation can constrain discretion.",
+        "Non-overrideable safety constraints remain non-overrideable."
+      ]
+    },
+    {
+      "id": "bad_but_valid_command_is_not_auto_corrected",
+      "expected": [
+        "Engine may warn against a captain choice.",
+        "If lawful and physically possible, the order can execute.",
+        "Consequences are simulated and linked to command history."
+      ]
+    },
+    {
+      "id": "future_automatic_decisions_require_registry",
+      "expected": [
+        "Every new automated operational decision declares authority owner.",
+        "Override/review and delegation policies are explicit.",
+        "Engine recommendation score never becomes authority."
       ]
     }
   ],
