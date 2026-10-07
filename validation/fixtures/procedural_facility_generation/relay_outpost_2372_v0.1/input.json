@@ -1,0 +1,29 @@
+{
+  "fixture_id": "relay_outpost_2372_v0.1",
+  "generator_ref": "tools/generation/generate_facility_project.py",
+  "input": {
+    "campaign_seed": "facility_fixture_001",
+    "need_id": "need:communications:relay_aux_001",
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-01-01",
+    "operator": "starfleet",
+    "role": "communications_relay",
+    "site_id": "site:relay_chain:aux_001",
+    "site_type": "deep_space_relay_node",
+    "origin_trigger": "persistent_world_need",
+    "need_strength": 35,
+    "strategic_value": 30,
+    "existing_coverage": 50,
+    "expected_need_years": 20,
+    "alternative_sufficiency": 30,
+    "site_advantage": 85,
+    "operator_capacity": 90,
+    "sustainment": 85,
+    "redundancy_need": 20,
+    "allow_major_complex": false,
+    "allow_controlled_design": false,
+    "allow_restricted_design": false,
+    "commit_construction": true,
+    "elapsed_construction_months": 24
+  }
+}
