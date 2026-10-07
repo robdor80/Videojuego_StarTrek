@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "civilization_runtime_state_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "A civilization is a persistent network of populations, cultures, institutions, settlements, technology and relationships—not a single species label.",
+  "definition_fields": [
+    "civilization_id",
+    "origin_refs",
+    "population_composition_refs",
+    "culture_refs",
+    "technology_profile_ref",
+    "language_refs",
+    "historical_origin_refs",
+    "provenance_refs"
+  ],
+  "live_state_fields": [
+    "population_state_ref",
+    "government_and_institution_refs",
+    "economic_state_ref",
+    "territory_or_jurisdiction_refs",
+    "settlement_refs",
+    "infrastructure_refs",
+    "external_relationship_refs",
+    "contact_status_ref",
+    "campaign_history_ref"
+  ],
+  "rules": [
+    "Civilization may be single-species or multi-species.",
+    "Species identity does not determine political alignment.",
+    "Technology level constrains available infrastructure, ships, medicine, communications and detectable signatures.",
+    "Government/institutions may change while civilization identity/history persists.",
+    "First Contact status is observer/relationship specific and may differ by faction.",
+    "Pre-warp and protected-contact rules constrain Starfleet actions when applicable.",
+    "Civilization history after campaign start evolves from campaign events."
+  ]
+}
