@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "relay_outpost_2372_v0.1",
+  "expected": {
+    "outcome": "FACILITY_PROJECT",
+    "need_score": 54.75,
+    "desired_scale": "micro_outpost",
+    "resolved_scale": "micro_outpost",
+    "design_id": "starfleet_relay_station_47_type",
+    "design_mode": "canonical_reusable_design",
+    "project_id": "gen:facility_project:a087bd05771651d2",
+    "facility_id": "gen:facility:353f30d58ca7e2e0",
+    "temporary_designation": "FAC-E18BB5D",
+    "lifecycle_state": "operational",
+    "estimated_construction_months": 15,
+    "elapsed_construction_months": 24,
+    "operator_duty_staff": 2,
+    "civilian_residents": 0,
+    "dependents": 0,
+    "transient_visitors_baseline": 1,
+    "watch": {
+      "pattern": "custom_alternating_active_on_call",
+      "active_at_one_time": 1,
+      "on_call_or_rest": 1,
+      "allocation_total": 2
+    },
+    "services": {
+      "required_capabilities": [
+        "communications_relay"
+      ],
+      "selected_optional_capabilities": [
+        "smallcraft_support"
+      ]
+    },
+    "traffic": {
+      "traffic_status": "light",
+      "expected_arrivals_per_30d": 3,
+      "decorative_traffic_forbidden": true
+    }
+  },
+  "assertions": [
+    "The facility exists because of a sustained communications gap, not because the player needs a service.",
+    "The canonical reusable Relay Station 47-type design is selected without copying the canonical Relay Station 47 identity.",
+    "Two officers do not become three fake shift teams; coverage uses alternating active/on-call duty.",
+    "No repair, trade or shipyard service is inferred.",
+    "The station took fifteen generated construction months and is only operational because twenty-four months elapsed.",
+    "The same input must reproduce the same design, facility identity and operational planning state."
+  ]
+}
