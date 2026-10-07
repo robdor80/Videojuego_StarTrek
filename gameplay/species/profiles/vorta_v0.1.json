@@ -1,0 +1,56 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "vorta",
+  "display_name_es": "Vorta",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/dominion_borg_profiles.json#vorta"
+  ],
+  "biology": {
+    "genetically_engineered_by_founders": true,
+    "species_specific_medical_profile_required": true,
+    "unknowns": [
+      "exact lifespan thresholds",
+      "reproduction model",
+      "full sensory capability model",
+      "generic physical-performance modifiers"
+    ]
+  },
+  "culture_socialization": {
+    "founder_reverence": "engineered_and_institutional_context",
+    "common_roles": [
+      "administrative",
+      "command",
+      "diplomatic"
+    ],
+    "profession_implied_for_every_individual": false
+  },
+  "organization_boundary": {
+    "dominion_service_requires_character_state": true,
+    "species_does_not_itself_prove_current_assignment": true
+  },
+  "gameplay_hooks": [
+    "dominion_command",
+    "negotiation",
+    "administration",
+    "jem_hadar_command_context",
+    "founder_authority"
+  ],
+  "ai_boundary": [
+    "Do not make every Vorta a diplomat or commander.",
+    "Do not infer access, rank or current Dominion assignment from species alone.",
+    "Do not invent medical abilities or resurrection/cloning details not represented in sourced state."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_VORTA",
+      "confidence": "MEDIUM",
+      "claim_scope": "genetic engineering and Dominion administrative/command role"
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "confidence": "HIGH",
+      "claim_scope": "Dominion hierarchy"
+    }
+  ]
+}
