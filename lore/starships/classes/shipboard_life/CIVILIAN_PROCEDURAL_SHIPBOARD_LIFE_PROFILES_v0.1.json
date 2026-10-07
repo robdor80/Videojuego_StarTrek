@@ -1,0 +1,204 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "civilian_procedural_shipboard_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "operator_family": "civilian_procedural",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "profiles": {
+    "micro_or_small": {
+      "life_profile_id": "civilian_micro_small_life",
+      "selector": "micro_or_small",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "very_high",
+      "family_civilian_policy": "mission_dependent",
+      "watch_guidance": {
+        "preferred_pattern": "custom_staggered_small_crew",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "small_crew_staggered_rest": true,
+        "emergency_recall_intensity": "near_total"
+      },
+      "quarters_model": [
+        "combined sleeping/living/work spaces common",
+        "privacy depends heavily on occupancy"
+      ],
+      "meal_model": "compact galley/replicator/food storage according to technology",
+      "recreation_capabilities": [
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "sleep_protection",
+        "on_call"
+      ],
+      "life_character": "Very small civilian craft where work and home overlap and every person is operationally important.",
+      "source_refs": []
+    },
+    "industrial_by_size": {
+      "life_profile_id": "civilian_industrial_life",
+      "selector": "industrial_by_size",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "high",
+      "family_civilian_policy": "mission_dependent",
+      "watch_guidance": {
+        "preferred_pattern": "custom",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "default_equivalent_watch_count": 3,
+        "emergency_recall_intensity": "high"
+      },
+      "quarters_model": [
+        "crew accommodation scaled behind industrial/cargo needs"
+      ],
+      "meal_model": "communal practical food service",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "safety_drills",
+        "equipment_training",
+        "on_call"
+      ],
+      "life_character": "Working vessel where industrial systems and cargo dominate volume; off-duty life centers on a few shared spaces.",
+      "source_refs": []
+    },
+    "civilian_standard_by_size": {
+      "life_profile_id": "civilian_standard_life",
+      "selector": "civilian_standard_by_size",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "high",
+      "family_civilian_policy": "mission_dependent",
+      "watch_guidance": {
+        "preferred_pattern": "custom",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "default_equivalent_watch_count": 3,
+        "emergency_recall_intensity": "high"
+      },
+      "quarters_model": [
+        "crew quarters scale with ship size and owner economics"
+      ],
+      "meal_model": "crew galley/mess or equivalent",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "administrative_work",
+        "on_call"
+      ],
+      "life_character": "General civilian ship with a real work/rest cycle but fewer institutional obligations than Starfleet or military crews.",
+      "source_refs": []
+    },
+    "passenger_liner": {
+      "life_profile_id": "civilian_passenger_liner_life",
+      "selector": "passenger_liner",
+      "habitability_tier": "comfortable",
+      "privacy_level": "medium_high",
+      "social_density": "medium",
+      "family_civilian_policy": "supported",
+      "watch_guidance": {
+        "preferred_pattern": "custom",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "default_equivalent_watch_count": 3,
+        "emergency_recall_intensity": "selective_then_high"
+      },
+      "quarters_model": [
+        "crew/service quarters separate from passenger cabins where design supports",
+        "passenger accommodation tier depends operator/economics"
+      ],
+      "meal_model": "crew food service plus passenger hospitality services",
+      "recreation_capabilities": [
+        "lounge",
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "service_handoffs",
+        "maintenance",
+        "safety_drills",
+        "passenger_care_on_call"
+      ],
+      "life_character": "Passenger service ship where hospitality schedules, passenger needs and safety drills coexist with navigation/engineering watches.",
+      "source_refs": []
+    },
+    "medical": {
+      "life_profile_id": "civilian_medical_ship_life",
+      "selector": "medical",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "medium",
+      "family_civilian_policy": "exception_only",
+      "watch_guidance": {
+        "preferred_pattern": "custom",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "default_equivalent_watch_count": 3,
+        "emergency_recall_intensity": "high"
+      },
+      "quarters_model": [
+        "crew accommodation plus patient spaces kept distinct where possible"
+      ],
+      "meal_model": "crew service plus patient nutrition requirements",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "medical_on_call",
+        "sanitation",
+        "training",
+        "maintenance",
+        "patient_handoffs"
+      ],
+      "life_character": "Medical vessel with a larger on-call burden and patient-care rhythm than a normal transport.",
+      "source_refs": []
+    },
+    "colony_transport": {
+      "life_profile_id": "civilian_colony_transport_life",
+      "selector": "colony_transport",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "medium",
+      "family_civilian_policy": "designed_for",
+      "watch_guidance": {
+        "preferred_pattern": "custom",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "default_equivalent_watch_count": 3,
+        "emergency_recall_intensity": "selective_then_high"
+      },
+      "quarters_model": [
+        "crew and colonist/passenger accommodation are separate population categories",
+        "long-duration voyages require more private/family space than freight craft"
+      ],
+      "meal_model": "large passenger/colonist food-service demand",
+      "recreation_capabilities": [
+        "common_room",
+        "family_spaces",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "passenger_support",
+        "safety_drills",
+        "medical_on_call"
+      ],
+      "life_character": "Transport where a small professional crew supports a much larger non-duty population over an extended voyage.",
+      "source_refs": []
+    }
+  }
+}
