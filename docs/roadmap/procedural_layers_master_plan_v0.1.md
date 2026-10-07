@@ -218,7 +218,7 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 | 117 | Invariantes mundo/logística | COMPLETE | 065-084 | Geografía, tráfico, inventario y política conservan causalidad |
 | 118 | Invariantes tecnología/canon/era | COMPLETE | 006,085-092 | Nada existe antes de tiempo ni fuera de capacidades válidas |
 | 119 | Fixture vertical v0.0.1 — Sensores | PARTIAL | 087 + dependencias | Una consola detecta/analiza mundo generado previamente |
-| 120 | Readiness CoreRPG + UE5 | TODO | 001-119 | Contratos estables, fixtures reproducibles, migraciones y límites definidos |
+| 120 | Readiness CoreRPG + UE5 | BLOCKED_RUNTIME | 001-119 | Contratos estables, fixtures reproducibles, migraciones y límites definidos |
 
 ---
 
