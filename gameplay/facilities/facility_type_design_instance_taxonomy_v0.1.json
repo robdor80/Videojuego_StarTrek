@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "facility_type_design_instance_taxonomy",
+  "status": "FOUNDATION_FIXED",
+  "principle": "FACILITY TYPE != FACILITY DESIGN != INDIVIDUAL FACILITY != OWNER != OPERATOR != CURRENT FUNCTION",
+  "layers": {
+    "facility_type": {
+      "examples": [
+        "starbase",
+        "outpost",
+        "research_station",
+        "shipyard",
+        "communications_station"
+      ],
+      "meaning": "Broad gameplay/functional category."
+    },
+    "design_or_design_family": {
+      "examples": [
+        "spacedock_type",
+        "regula_i_type",
+        "terok_nor_type"
+      ],
+      "meaning": "Reusable physical/technical architecture."
+    },
+    "individual_facility": {
+      "examples": [
+        "spacedock_one",
+        "deep_space_9",
+        "relay_station_47"
+      ],
+      "meaning": "Persistent world entity with facility_id and history."
+    },
+    "ownership": {
+      "meaning": "Legal/property or sovereign owner; may change."
+    },
+    "operation": {
+      "meaning": "Organization currently running the facility; may differ from owner."
+    },
+    "assignment_profile": {
+      "meaning": "Current mission/service role; can change without rebuilding the whole facility."
+    }
+  },
+  "rules": [
+    "One design can produce multiple individual facilities when its reuse policy permits.",
+    "One individual facility can change owner/operator/mission without changing facility_id.",
+    "A major physical refit changes configuration/topology version, not identity.",
+    "A captured facility retains original physical design until changed by explicit refit/reconstruction.",
+    "A facility's current function may be narrower or broader than the design's original role."
+  ]
+}
