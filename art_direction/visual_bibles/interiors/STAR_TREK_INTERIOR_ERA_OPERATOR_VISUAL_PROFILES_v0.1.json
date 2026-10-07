@@ -1,0 +1,261 @@
+{
+  "profile_id": "star_trek_interior_era_operator_visual_profiles",
+  "profile_type": "interior_era_operator_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "ship_and_facility_interior_visual_language",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_INTERIOR_CONSOLE_FACILITY_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "prime_rule": "Operational layout/function is authoritative; era/operator profile supplies visual language only.",
+  "profiles": {
+    "starfleet_pike": {
+      "applies_when": {
+        "organization": "starfleet",
+        "era_id": "pike"
+      },
+      "anchors": [
+        "bright exploratory Starfleet environment",
+        "clean retro-futurist geometry",
+        "physical workstation architecture with integrated illuminated digital displays",
+        "clear department/function differentiation"
+      ],
+      "console_rule": "Sensor/engineering/tactical controls must expose only functions defined by gameplay; visual treatment may use SNW/Pike-era reference language.",
+      "forbidden": [
+        "TNG LCARS",
+        "TOS exact panel layout substituted indiscriminately",
+        "holographic controls without source/function"
+      ]
+    },
+    "starfleet_tos": {
+      "applies_when": {
+        "organization": "starfleet",
+        "era_id": "kirk",
+        "subperiod": "tos"
+      },
+      "anchors": [
+        "bold period color blocking",
+        "flat geometric wall/control surfaces",
+        "physical buttons, switches and indicator-light language",
+        "simple readable station zoning"
+      ],
+      "console_rule": "Tactile/indicator presentation skin over the same functional action model.",
+      "forbidden": [
+        "LCARS",
+        "TMP bridge styling",
+        "modern transparent holographic UI",
+        "excessive generic screen clutter"
+      ]
+    },
+    "starfleet_tmp_films": {
+      "applies_when": {
+        "organization": "starfleet",
+        "era_id": "kirk",
+        "subperiod": "motion_picture_transition_or_films"
+      },
+      "anchors": [
+        "more restrained naval/technical palette than TOS",
+        "denser physical controls and instrumentation",
+        "refit-era industrial precision",
+        "era-specific bridge/engineering materials"
+      ],
+      "console_rule": "Physical/CRT-like/illuminated instrumentation as reference permits; functionality remains system-defined.",
+      "forbidden": [
+        "TOS saturated bridge copied unchanged",
+        "TNG LCARS",
+        "generic modern glass cockpit"
+      ]
+    },
+    "starfleet_tng": {
+      "applies_when": {
+        "organization": "starfleet",
+        "era_id": "tng_ds9_voyager",
+        "platform_family": "tng_galaxy_nebula_or_similar"
+      },
+      "anchors": [
+        "warm neutral habitable interiors",
+        "carpeted/comfortable long-duration spaces where appropriate",
+        "broad LCARS touch-panel language",
+        "soft integrated lighting",
+        "large-explorer spatial generosity"
+      ],
+      "console_rule": "LCARS presentation mirrors station functions; no decorative buttons without actions.",
+      "forbidden": [
+        "Voyager-specific compact styling on every ship",
+        "DS9 Cardassian architecture",
+        "hard industrial military look as default"
+      ],
+      "reference_asset_refs": [
+        "assets/ships/starfleet/galaxy_class/enterprise_d/bridge/",
+        "assets/ships/starfleet/galaxy_class/enterprise_d/reference_blueprints/"
+      ]
+    },
+    "starfleet_2370s_compact": {
+      "applies_when": {
+        "organization": "starfleet",
+        "era_id": "tng_ds9_voyager",
+        "platform_family": "intrepid_defiant_or_compact_2370s"
+      },
+      "anchors": [
+        "2370s LCARS family",
+        "more compact operational spaces than Galaxy-class",
+        "greater functional density",
+        "ship-specific palette/material differences retained"
+      ],
+      "console_rule": "Do not flatten Intrepid and Defiant into identical interiors; class/mission modifies the same era family.",
+      "forbidden": [
+        "Galaxy-class spaciousness everywhere",
+        "Cardassian DS9 architecture",
+        "TMP controls"
+      ]
+    },
+    "cardassian_station_ship_24c": {
+      "applies_when": {
+        "operator_family": "cardassian",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "warm amber/orange display language",
+        "dark ochre/bronze structural materials",
+        "ribbed/curved structural motifs",
+        "strong vertical/arched architectural rhythm",
+        "dim functional lighting"
+      ],
+      "console_rule": "Cardassian controls remain function-first and operator-specific; Starfleet/Bajoran use of Cardassian hardware does not visually rebuild it.",
+      "forbidden": [
+        "LCARS replacing captured/joint-operated Cardassian architecture wholesale",
+        "generic gothic spikes",
+        "Dominion styling unless actual refit"
+      ]
+    },
+    "bajoran_overlay_on_cardassian_facility": {
+      "applies_when": {
+        "facility_origin": "cardassian",
+        "current_operator_context": "bajoran_or_joint_federation"
+      },
+      "anchors": [
+        "original Cardassian structural identity remains visible",
+        "Bajoran/Starfleet signage, equipment or local modifications appear as overlays/refits",
+        "mixed-operator spaces reveal history"
+      ],
+      "forbidden": [
+        "facility visually regenerates as Starfleet architecture after operator change",
+        "all Cardassian identity removed without explicit major reconstruction"
+      ]
+    },
+    "klingon_23c": {
+      "applies_when": {
+        "operator_family": "klingon",
+        "era_id": "kirk"
+      },
+      "anchors": [
+        "austere military-functional interior",
+        "period-appropriate physical controls",
+        "dark metallic materials with practical lighting",
+        "shipboard spaces prioritize duty over comfort"
+      ],
+      "forbidden": [
+        "24th-century Vor'cha bridge copied backwards",
+        "random ritual decoration on every console",
+        "LCARS"
+      ]
+    },
+    "klingon_24c": {
+      "applies_when": {
+        "operator_family": "klingon",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "dark robust industrial interior",
+        "red/amber illumination as contextual recurring cue",
+        "heavy structural forms",
+        "physical/tactile Klingon control language"
+      ],
+      "forbidden": [
+        "constant red alert lighting without state",
+        "House emblems without state",
+        "generic dungeon styling"
+      ]
+    },
+    "romulan_23c": {
+      "applies_when": {
+        "operator_family": "romulan",
+        "era_id": "kirk"
+      },
+      "anchors": [
+        "clean period military control room",
+        "simple physical/illuminated controls",
+        "distinct from contemporary Starfleet while remaining 23rd-century technology"
+      ],
+      "forbidden": [
+        "TNG D'deridex green console language copied backwards",
+        "Tal Shiar visual markers without state"
+      ]
+    },
+    "romulan_24c": {
+      "applies_when": {
+        "operator_family": "romulan",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "controlled geometric military interior",
+        "green-dominant display accents where reference supports",
+        "formal command layout",
+        "low-clutter disciplined presentation"
+      ],
+      "forbidden": [
+        "Tal Shiar styling on all warbirds",
+        "Klingon industrial language",
+        "Starfleet LCARS"
+      ]
+    },
+    "dominion_24c": {
+      "applies_when": {
+        "operator_family": "dominion",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "functional high-technology Dominion language",
+        "Vorta/Jem'Hadar operational needs expressed without Human comfort assumptions",
+        "materials/controls visually coherent across Dominion military infrastructure"
+      ],
+      "forbidden": [
+        "generic purple organic sci-fi without reference",
+        "Founder morphology used as architecture motif by default",
+        "Starfleet console logic"
+      ]
+    },
+    "borg_collective": {
+      "applies_when": {
+        "operator_family": "borg"
+      },
+      "anchors": [
+        "dense integrated cybernetic infrastructure",
+        "alcoves/nodes/conduits serve real functions",
+        "repetition/module logic",
+        "low emphasis on individual comfort or decoration"
+      ],
+      "forbidden": [
+        "random cables with no system logic",
+        "cyberpunk neon",
+        "Human corridor plan copied and darkened",
+        "decorative skull imagery"
+      ]
+    }
+  },
+  "current_state_overlays": [
+    "normal",
+    "alert",
+    "emergency_power",
+    "damage",
+    "fire",
+    "smoke",
+    "decompression",
+    "contamination",
+    "repair",
+    "evacuation"
+  ],
+  "state_rule": "Every overlay requires World State cause and must preserve baseline topology."
+}
