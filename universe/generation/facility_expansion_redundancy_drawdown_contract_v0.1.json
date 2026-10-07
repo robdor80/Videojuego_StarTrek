@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "facility_expansion_redundancy_and_drawdown_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Expansion and new construction are consequences of sustained evidence, not one-time queue spikes.",
+  "expansion_inputs": [
+    "service_queue_history",
+    "berth_utilization_history",
+    "traffic_growth",
+    "served_population_growth",
+    "mission_change",
+    "strategic_change",
+    "maintenance_burden",
+    "site_expandability",
+    "construction_cost",
+    "existing_nearby_capacity",
+    "redundancy_need"
+  ],
+  "possible_outcomes": [
+    "no_change",
+    "process_improvement",
+    "staffing_increase_within_existing_capacity",
+    "refit",
+    "module_expansion",
+    "new_berth_or_drydock",
+    "second_facility",
+    "temporary_support",
+    "mothball_modules",
+    "reduce_staffing",
+    "repurpose",
+    "decommission"
+  ],
+  "rules": [
+    "Single emergencies or temporary wartime spikes do not automatically justify permanent expansion.",
+    "Sustained queue saturation must be demonstrated across an evaluation window appropriate to service type.",
+    "Expand the existing facility before building a nearby duplicate when site/topology/sovereignty and economics make expansion preferable.",
+    "A second facility requires residual demand, resilience, sovereignty or strategic separation that expansion cannot satisfy.",
+    "War can shorten planning/construction thresholds but creates postwar overcapacity risk.",
+    "Postwar or economic drawdown can mothball modules, reduce staffing or decommission the facility.",
+    "Abandoned capacity remains physical/history state and may later be reactivated or repurposed."
+  ],
+  "ai_boundary": "AI may recommend expansion/drawdown from authoritative history; it cannot declare chronic saturation from a single player visit."
+}
