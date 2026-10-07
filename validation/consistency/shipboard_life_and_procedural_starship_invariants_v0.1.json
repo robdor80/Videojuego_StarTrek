@@ -1,0 +1,189 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "shipboard_life_and_procedural_starship_invariants",
+  "status": "CONTENT_AND_REFERENCE_IMPLEMENTATION_VALIDATED_BY_DESIGN",
+  "refs": [
+    "gameplay/duty_system/shipboard_watch_generation_contract_v0.1.json",
+    "gameplay/ship_operations/off_watch_obligation_model_v0.1.json",
+    "gameplay/ship_operations/off_duty_activity_catalog_v0.1.json",
+    "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+    "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json",
+    "universe/generation/procedural_ship_design_contract_v0.1.json",
+    "universe/generation/procedural_starship_instance_generation_pipeline_v0.1.json",
+    "universe/generation/procedural_ship_crew_watch_schedule_pipeline_v0.1.json",
+    "universe/generation/procedural_civilian_ship_design_profiles_v0.1.json",
+    "validation/fixtures/procedural_starship_generation/oberth_science_2372_v0.1/expected_ship.json"
+  ],
+  "cases": [
+    {
+      "id": "class_not_individual_ship",
+      "expected": [
+        "Class/design has no live captain, damage, cargo or crew.",
+        "Generated vessel receives stable ship_id.",
+        "Refit/operator/crew changes append history rather than creating a new ship."
+      ]
+    },
+    {
+      "id": "procedural_design_not_ship",
+      "expected": [
+        "Civilian procedural design_id can be reused by several ships.",
+        "Two ships sharing design_id have distinct ship_id/history.",
+        "Individual cargo, owner, crew and damage never live in design definition."
+      ]
+    },
+    {
+      "id": "canonical_identity_reserved",
+      "expected": [
+        "Canonical ship names/registries cannot be procedurally duplicated.",
+        "Temporary designation is acceptable when a diegetic name cannot yet be validated.",
+        "Renaming preserves ship_id."
+      ]
+    },
+    {
+      "id": "reason_before_ship",
+      "expected": [
+        "Traffic/mission/economy/logistics need exists before vessel generation.",
+        "Scanning does not retroactively create ships.",
+        "Role and operator constrain valid design/class."
+      ]
+    },
+    {
+      "id": "reference_complement_not_manifest",
+      "expected": [
+        "Crew reference only guides generation.",
+        "Live manifest is generated from real staffing slots.",
+        "Vacancies remain visible and are not auto-filled."
+      ]
+    },
+    {
+      "id": "watch_not_population_division",
+      "expected": [
+        "Civilians/passengers are excluded from duty-watch allocation.",
+        "Continuous posts, day staff, relief and on-call are modeled separately.",
+        "Watch allocations sum to generated duty crew in the reference fixture."
+      ]
+    },
+    {
+      "id": "starfleet_three_four_shift",
+      "expected": [
+        "Three-watch uses Alpha/Beta/Gamma.",
+        "Four-watch uses Alpha/Beta/Gamma/Delta.",
+        "Exact hours are individual-ship policy.",
+        "Changing pattern redistributes actual roster and can create scheduling/fatigue consequences."
+      ]
+    },
+    {
+      "id": "alien_watch_not_starfleet_labels",
+      "expected": [
+        "Klingon/Romulan/Cardassian profiles do not claim Alpha/Beta/Gamma canon.",
+        "Unknown alien schedules use explicit GAME_ADDITION local watch model.",
+        "Operator doctrine affects reporting/readiness without personality locks."
+      ]
+    },
+    {
+      "id": "small_ship_staggered_rest",
+      "expected": [
+        "B'rel and Hideki-class small crews may use staggered custom coverage.",
+        "Not all crew can sleep simultaneously.",
+        "Every casualty/vacancy can materially affect coverage."
+      ]
+    },
+    {
+      "id": "galaxy_vs_defiant_life",
+      "expected": [
+        "Galaxy supports families/civilians/broad recreation when actual mission/population permits.",
+        "Defiant normal operations are spartan with low privacy and no family community assumption.",
+        "Named Enterprise-D venues are not automatically cloned to every Galaxy-class ship."
+      ]
+    },
+    {
+      "id": "intrepid_not_voyager_history",
+      "expected": [
+        "Intrepid profile supports holodecks/gym/mess/social life.",
+        "Voyager-specific galley, losses and relationships remain individual-ship history.",
+        "Generated Intrepid ship does not inherit USS Voyager biography."
+      ]
+    },
+    {
+      "id": "miranda_configuration_variance",
+      "expected": [
+        "23c and 24c staffing may differ substantially.",
+        "24c 26–35 reference is not backfilled to every Miranda.",
+        "Mission configuration changes specialists, obligations and social rhythm."
+      ]
+    },
+    {
+      "id": "off_watch_not_free",
+      "expected": [
+        "Handoff, training, recertification, maintenance, reports, medical and on-call consume time.",
+        "Player conversation cannot cancel obligations.",
+        "Protected rest cannot be silently erased."
+      ]
+    },
+    {
+      "id": "off_duty_facility_constraint",
+      "expected": [
+        "Holodeck activity requires actual holodeck/capacity.",
+        "Lounge/common-room activity requires actual space.",
+        "Small/austere craft offer fewer leisure choices."
+      ]
+    },
+    {
+      "id": "schedule_exclusivity",
+      "expected": [
+        "A character cannot be simultaneously on duty and in private activity elsewhere.",
+        "Travel and handoff consume time.",
+        "Emergency preemption leaves event/fatigue trace."
+      ]
+    },
+    {
+      "id": "species_rest_not_human_default",
+      "expected": [
+        "Biological rest requirements can vary by species/medical state.",
+        "Ship schedule does not force one Human sleep model on every species."
+      ]
+    },
+    {
+      "id": "personality_drives_preference_not_availability",
+      "expected": [
+        "Personality/preferences influence chosen leisure.",
+        "Schedule/facility/access state determines what is possible.",
+        "Social density changes encounter probability but not relationship state directly."
+      ]
+    },
+    {
+      "id": "civilian_first_class_generation",
+      "expected": [
+        "Cargo, liner, courier, tug, salvage, mining, survey, medical, rescue, colony transport, trader and private roles can use procedural design grammar.",
+        "Weapons are absent by default unless legal/operator context supports them.",
+        "Smuggling cannot be generated without an actual illegal-market cause."
+      ]
+    },
+    {
+      "id": "locked_oberth_fixture",
+      "expected": [
+        "Seed shipboard_fixture_001 resolves Oberth science vessel.",
+        "Duty crew target is 80.",
+        "Watch allocation is 28 Alpha + 24 Beta + 24 Gamma + 4 relief.",
+        "Stable ship_id is gen:starship:de67f663aaf6de92."
+      ]
+    },
+    {
+      "id": "save_load_persistence",
+      "expected": [
+        "Ship, design, crew, watch assignment and schedules do not reroll on reload.",
+        "Off-screen simulation may evolve state through events only.",
+        "Destroyed/captured/decommissioned states are outcomes, not regeneration triggers."
+      ]
+    },
+    {
+      "id": "ai_expression_only",
+      "expected": [
+        "AI can explain current duty/off-duty state.",
+        "AI cannot create shifts, people, rooms, free time, cargo, authority or availability.",
+        "AI cannot teleport an NPC because player initiates conversation."
+      ]
+    }
+  ],
+  "runtime_boundary": "CoreRPG 4.5+ must eventually own generic live World State, schedule arbitration, persistence and catch-up execution. These invariants define the Star Trek-facing contract."
+}
