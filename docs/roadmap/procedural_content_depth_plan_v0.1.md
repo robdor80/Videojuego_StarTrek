@@ -21,13 +21,13 @@
 | D003 | Andorian detailed gameplay/biology profile | COMPLETE | Cold adaptation, antenna anatomy/state, culture separation, visual hooks |
 | D004 | Tellarite detailed gameplay/biology profile | COMPLETE | Sparse-canon safe biology, social interpretation, visual hooks |
 | D005 | Aenar related-population profile | TODO | Separate identity from Andorian; no cosmetic-variant shortcut |
-| D006 | Klingon detailed profile | TODO | Biology, era-aware morphology, house/honor context, no warrior lock |
-| D007 | Romulan detailed profile | TODO | Vulcan ancestry without equivalence; state/security culture separation |
-| D008 | Cardassian detailed profile | TODO | Environmental/medical hooks, morphology, hierarchy without loyalty lock |
-| D009 | Bajoran detailed profile | TODO | Biology baseline, faith/occupation context separated from individual state |
-| D010 | Ferengi detailed profile | TODO | Telepathic-reading limitation, morphology, economy/culture separation |
-| D011 | Trill host/symbiont/joining profile | TODO | Composite identity, memory gating, medical compatibility |
-| D012 | Betazoid detailed profile | TODO | Telepathy/empathy limits, development, privacy/consent |
+| D006 | Klingon detailed profile | COMPLETE | Biology, era-aware morphology, house/honor context, no warrior lock |
+| D007 | Romulan detailed profile | COMPLETE | Vulcan ancestry without equivalence; state/security culture separation |
+| D008 | Cardassian detailed profile | COMPLETE | Environmental/medical hooks, morphology, hierarchy without loyalty lock |
+| D009 | Bajoran detailed profile | COMPLETE | Biology baseline, faith/occupation context separated from individual state |
+| D010 | Ferengi detailed profile | COMPLETE | Telepathic-reading limitation, morphology, economy/culture separation |
+| D011 | Trill host/symbiont/joining profile | COMPLETE | Composite identity, memory gating, medical compatibility |
+| D012 | Betazoid detailed profile | COMPLETE | Telepathy/empathy limits, development, privacy/consent |
 | D013 | Changeling detailed profile | TODO | Morph state, regeneration, identity verification |
 | D014 | Vorta detailed profile | TODO | Engineered biology, Dominion role without personality lock |
 | D015 | Jem'Hadar detailed profile | TODO | Accelerated lifecycle, ketracel dependency, operational consequences |
@@ -94,7 +94,7 @@
 | Package | Scope | Status |
 |---|---|---|
 | D058 | Founding species visual profiles | PARTIAL |
-| D059 | Major species visual profiles | IN_PROGRESS |
+| D059 | Major species visual profiles | PARTIAL |
 | D060 | Faction/organization visual profiles | TODO |
 | D061 | Era-specific ship/interior profiles | TODO |
 | D062 | Planet/environment profiles | TODO |
