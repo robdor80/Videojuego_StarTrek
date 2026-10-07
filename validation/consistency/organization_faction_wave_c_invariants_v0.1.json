@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "organization_faction_wave_c_invariants",
+  "status": "design_level_tests_before_runtime_implementation",
+  "profile_refs": [
+    "gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+    "gameplay/organizations/profiles/STARFLEET_ORGANIZATION_PROFILE_v0.1.json",
+    "gameplay/organizations/profiles/KLINGON_EMPIRE_ORGANIZATIONS_v0.1.json",
+    "gameplay/organizations/profiles/ROMULAN_EMPIRE_ORGANIZATIONS_v0.1.json",
+    "gameplay/organizations/profiles/CARDASSIAN_UNION_ORGANIZATIONS_v0.1.json",
+    "gameplay/organizations/profiles/BAJORAN_INSTITUTIONS_v0.1.json",
+    "gameplay/organizations/profiles/FERENGI_ALLIANCE_ORGANIZATIONS_v0.1.json",
+    "gameplay/organizations/profiles/DOMINION_ORGANIZATIONS_v0.1.json",
+    "gameplay/organizations/profiles/BORG_COLLECTIVE_OPERATIONAL_PROFILE_v0.1.json"
+  ],
+  "cross_domain_invariants": [
+    "POLITY != ORGANIZATION != SPECIES != CULTURE != CITIZENSHIP != MEMBERSHIP != POSITION != RANK.",
+    "Organization membership requires explicit persistent state.",
+    "Secret membership remains knowledge-gated.",
+    "Authority resolves from current valid position/assignment/jurisdiction, not appearance or species.",
+    "Leaving an organization preserves history.",
+    "Era/campaign World State controls active institutions and leadership.",
+    "AI may roleplay representatives but cannot mutate membership, rank, assignment, treaty, sovereignty or secret affiliation."
+  ],
+  "cases": [
+    {
+      "id": "federation_not_starfleet",
+      "expected": [
+        "Federation civil government and Starfleet remain distinct.",
+        "Member-world government remains distinct.",
+        "Starfleet officer does not gain unlimited civil authority."
+      ]
+    },
+    {
+      "id": "starfleet_rank_not_position",
+      "expected": [
+        "Rank and billet resolve separately.",
+        "Command requires position/assignment/qualification/succession.",
+        "Uniform/clearance assumptions are rejected."
+      ]
+    },
+    {
+      "id": "klingon_house_not_empire",
+      "expected": [
+        "House is persistent social/political organization.",
+        "House membership does not imply military rank.",
+        "House standing does not grant universal Imperial command."
+      ]
+    },
+    {
+      "id": "romulan_tal_shiar_secret",
+      "expected": [
+        "Tal Shiar is distinct from military/government.",
+        "Membership can be covert.",
+        "Species/secrecy does not prove membership."
+      ]
+    },
+    {
+      "id": "cardassian_institutions_temporal",
+      "expected": [
+        "Government, military, intelligence and resistance are distinct.",
+        "Resistance appears only through dated campaign history.",
+        "Occupation authority does not persist automatically after political change."
+      ]
+    },
+    {
+      "id": "bajoran_authority_separation",
+      "expected": [
+        "Government, Militia and religious institutions remain separate.",
+        "Religious office is not civil authority by default.",
+        "Federation presence does not erase Bajoran sovereignty."
+      ]
+    },
+    {
+      "id": "ferengi_contracts_are_state",
+      "expected": [
+        "Business entities are persistent organizations.",
+        "Ownership/contracts/debts require records.",
+        "Commercial regulator authority is jurisdiction and era sensitive."
+      ]
+    },
+    {
+      "id": "dominion_role_authority",
+      "expected": [
+        "Founder, Vorta, Jem'Hadar and subordinate-state layers remain distinct.",
+        "Vorta/Jem'Hadar authority requires unit/post/assignment.",
+        "Changeling copied form grants no authority."
+      ]
+    },
+    {
+      "id": "borg_not_normal_membership",
+      "expected": [
+        "Drone status is assimilation/collective connection state.",
+        "Liberation preserves same entity identity/history.",
+        "Collective cooperation does not create ordinary bilateral diplomacy."
+      ]
+    },
+    {
+      "id": "save_load_organization_history",
+      "expected": [
+        "Membership/rank/assignment/history persist across save/load and LOD.",
+        "Organization change appends events rather than rerolling biography."
+      ]
+    }
+  ]
+}
