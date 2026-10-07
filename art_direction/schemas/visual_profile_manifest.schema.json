@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "star_trek/visual_profile_manifest.schema.json",
+  "title": "Star Trek Visual Profile Manifest",
+  "type": "object",
+  "required": [
+    "profile_id",
+    "profile_type",
+    "version",
+    "status",
+    "authority_scope",
+    "inherits",
+    "rules"
+  ],
+  "properties": {
+    "profile_id": {
+      "type": "string"
+    },
+    "profile_type": {
+      "type": "string"
+    },
+    "version": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "authority_scope": {
+      "type": "string"
+    },
+    "inherits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applies_when": {
+      "type": "object"
+    },
+    "rules": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "allowed_variation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "forbidden_variation": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reference_asset_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "x_rules": [
+    "Profile IDs are stable technical identifiers; display names may change.",
+    "A profile cannot infer unrelated identity dimensions.",
+    "Version changes must be explicit; approved historical versions are not overwritten."
+  ]
+}
