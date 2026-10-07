@@ -1,0 +1,160 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "canonical_unique_and_seeded_facilities",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "rule": "These facility identities are reserved. A reusable design may be selected elsewhere only when its design catalogue reuse policy allows it.",
+  "facilities": [
+    {
+      "facility_id": "canon:facility:starbase_1",
+      "display_name": "Starbase One",
+      "design_ref": "starfleet_starbase_1_type",
+      "playable_profiles": [
+        "pike"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_STARBASE_1_TYPE",
+        "ST_OFFICIAL_SNW_BROKEN_CIRCLE"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:deep_space_station_k7",
+      "display_name": "Deep Space Station K-7",
+      "design_ref": null,
+      "playable_profiles": [
+        "kirk"
+      ],
+      "identity_policy": "reserved_unique_design",
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:regula_i",
+      "display_name": "Regula I",
+      "design_ref": "federation_regula_i_type",
+      "playable_profiles": [
+        "kirk"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_REGULA_I_TYPE",
+        "ST2_WRATH_OF_KHAN"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:spacedock_one",
+      "display_name": "Spacedock One / Earth Spacedock",
+      "design_ref": "starfleet_spacedock_type",
+      "playable_profiles": [
+        "kirk",
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_SPACEDOCK_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:jupiter_station",
+      "display_name": "Jupiter Station",
+      "design_ref": null,
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved_unique_design",
+      "source_refs": [
+        "MA_JUPITER_STATION"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:utopia_planitia_fleet_yards",
+      "display_name": "Utopia Planitia Fleet Yards",
+      "design_ref": null,
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved_major_complex",
+      "source_refs": [
+        "MA_UTOPIA_PLANITIA_FLEET_YARDS"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:starbase_375",
+      "display_name": "Starbase 375",
+      "design_ref": "federation_starbase_375_type",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_STARBASE_375_TYPE",
+        "DS9_A_TIME_TO_STAND"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:relay_station_47",
+      "display_name": "Relay Station 47",
+      "design_ref": "starfleet_relay_station_47_type",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_RELAY_STATION_47",
+        "TNG_AQUIEL"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:deep_space_9",
+      "display_name": "Deep Space 9 / Terok Nor",
+      "design_ref": "cardassian_terok_nor_type",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:empok_nor",
+      "display_name": "Empok Nor",
+      "design_ref": "cardassian_terok_nor_type",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:tygokor_complex",
+      "display_name": "Ty'Gokor orbital complex",
+      "design_ref": "klingon_tygokor_orbital_facility",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved_complex",
+      "source_refs": [
+        "MA_TYGOKOR_ORBITAL_FACILITY",
+        "DS9_APOCALYPSE_RISING"
+      ]
+    },
+    {
+      "facility_id": "canon:facility:monac_shipyards",
+      "display_name": "Monac shipyards",
+      "design_ref": "dominion_monac_type",
+      "playable_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "identity_policy": "reserved",
+      "source_refs": [
+        "MA_MONAC_SHIPYARD"
+      ]
+    }
+  ]
+}
