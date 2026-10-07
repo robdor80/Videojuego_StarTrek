@@ -1,0 +1,38 @@
+{
+  "profile_id": "trill_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:trill_host",
+  "species_id": "trill",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Paired spotted markings running from the temples/head down the sides of the neck/body are the primary recurring host-species cue in the DS9-era visual model.",
+    "Spot pattern belongs to persistent individual morphology and must remain recognizable across later portraits.",
+    "Joined status is not visible by default and must not be guessed from appearance.",
+    "Humanlike facial, skin-tone, hair and body variation remains broad."
+  ],
+  "allowed_variation": [
+    "spot size/density/path within canon-compatible bounds",
+    "skin tone",
+    "facial proportions",
+    "hair/grooming",
+    "age",
+    "body type"
+  ],
+  "forbidden_variation": [
+    "visible symbiont outline by default",
+    "automatic joined-status insignia",
+    "previous-host visual blending",
+    "one spot map cloned across NPCs"
+  ],
+  "source_refs": [
+    "MA_TRILL",
+    "MA_TRILL_PLANET",
+    "DS9_EQUILIBRIUM"
+  ],
+  "notes": "Symbiont identity is separate; host portrait does not reveal private joining state unless World State makes it visible/known."
+}
