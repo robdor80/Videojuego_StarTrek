@@ -149,5 +149,44 @@ class FacilityGeneratorTests(unittest.TestCase):
             self.assertEqual(facgen.validate(payload), [], msg=role)
 
 
+    def test_locked_relay_fixture(self):
+        payload = facgen.generate(
+            campaign_seed="facility_fixture_001",
+            need_id="need:communications:relay_aux_001",
+            era_id="tng_ds9_voyager",
+            campaign_date="2372-01-01",
+            operator="starfleet",
+            role="communications_relay",
+            site_id="site:relay_chain:aux_001",
+            site_type="deep_space_relay_node",
+            origin_trigger="persistent_world_need",
+            need_strength=35,
+            strategic_value=30,
+            existing_coverage=50,
+            expected_need_years=20,
+            alternative_sufficiency=30,
+            site_advantage=85,
+            operator_capacity=90,
+            sustainment=85,
+            redundancy_need=20,
+            allow_major_complex=False,
+            allow_controlled_design=False,
+            allow_restricted_design=False,
+            commit_construction=True,
+            elapsed_construction_months=24,
+        )
+        self.assertEqual(payload["causality"]["need_score"], 54.75)
+        self.assertEqual(payload["design"]["design_id"], "starfleet_relay_station_47_type")
+        self.assertEqual(payload["project"]["project_id"], "gen:facility_project:a087bd05771651d2")
+        self.assertEqual(payload["project"]["facility_id"], "gen:facility:353f30d58ca7e2e0")
+        self.assertEqual(payload["project"]["temporary_designation"], "FAC-E18BB5D")
+        self.assertEqual(payload["project"]["estimated_construction_months"], 15)
+        self.assertEqual(payload["project"]["lifecycle_state"], "operational")
+        self.assertEqual(payload["population_target"]["operator_duty_staff"], 2)
+        self.assertEqual(payload["population_target"]["civilian_residents"], 0)
+        self.assertEqual(payload["operations"]["watch"]["allocation_total"], 2)
+        self.assertEqual(payload["operations"]["traffic_planning"]["expected_arrivals_per_30d"], 3)
+
+
 if __name__ == "__main__":
     unittest.main()
