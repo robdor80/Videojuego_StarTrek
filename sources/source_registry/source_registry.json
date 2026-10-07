@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.31.0",
+  "registry_version": "0.32.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -1916,6 +1916,111 @@
       "url": "https://www.startrek.com/gallery/ferengi-rules-of-acquisition",
       "accessed_at": "2026-10-07",
       "notes": "Official reference for Rules of Acquisition as governing Ferengi business transactions and for their cultural prominence."
+    },
+    {
+      "source_id": "MA_D7_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "D7 class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/D7_class",
+      "accessed_at": "2026-10-07",
+      "notes": "Klingon 23rd-century battle cruiser core reference."
+    },
+    {
+      "source_id": "MA_KTINGA_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "K't'inga class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/K%27t%27inga_class",
+      "accessed_at": "2026-10-07",
+      "notes": "Klingon battle cruiser used from late 23rd into 24th century."
+    },
+    {
+      "source_id": "MA_KLINGON_BIRD_OF_PREY_2280S",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Klingon Bird-of-Prey (2280s)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Klingon_Bird-of-Prey_%282280s%29",
+      "accessed_at": "2026-10-07",
+      "notes": "Versatile Klingon scout/raider/patrol/cruiser family including B'rel/K'Vort/D12 designations."
+    },
+    {
+      "source_id": "MA_BREL_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "B'rel class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/B%27rel_class",
+      "accessed_at": "2026-10-07",
+      "notes": "Small Klingon Bird-of-Prey scout/raider cross-check."
+    },
+    {
+      "source_id": "MA_VORCHA_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vor'cha class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Vor%27cha_class",
+      "accessed_at": "2026-10-07",
+      "notes": "24th-century Klingon attack/heavy cruiser mainstay."
+    },
+    {
+      "source_id": "MA_DDERIDEX_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "D'deridex class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/D%27deridex_class",
+      "accessed_at": "2026-10-07",
+      "notes": "24th-century Romulan warbird/battle cruiser mainstay."
+    },
+    {
+      "source_id": "MA_GALOR_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Galor class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Galor_class",
+      "accessed_at": "2026-10-07",
+      "notes": "Cardassian medium cruiser/warship mainstay."
+    },
+    {
+      "source_id": "MA_KELDON_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Keldon class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Keldon_class",
+      "accessed_at": "2026-10-07",
+      "notes": "2370s Cardassian cruiser derivative used by Cardassian military and covert forces."
+    },
+    {
+      "source_id": "MA_HIDEKI_CLASS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Hideki class",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Hideki_class",
+      "accessed_at": "2026-10-07",
+      "notes": "2370s Cardassian multipurpose patrol/attack small craft."
+    },
+    {
+      "source_id": "TNG_REUNION",
+      "source_type": "SCREEN_CANON",
+      "title": "Reunion",
+      "notes": "Screen evidence for Vor'cha-class Klingon attack cruiser in 2367."
+    },
+    {
+      "source_id": "TNG_THE_WOUNDED",
+      "source_type": "SCREEN_CANON",
+      "title": "The Wounded",
+      "notes": "Screen evidence for Galor-class Cardassian warships."
+    },
+    {
+      "source_id": "DS9_DEFIANT_EP",
+      "source_type": "SCREEN_CANON",
+      "title": "Defiant",
+      "notes": "Screen evidence for Cardassian military vessels and regional context."
+    },
+    {
+      "source_id": "DS9_DEFIANT_HIDEKI",
+      "source_type": "SCREEN_CANON",
+      "title": "Defiant / Hideki-era Cardassian patrol context",
+      "notes": "Screen-era context for Cardassian small patrol/attack craft."
     }
   ]
 }
