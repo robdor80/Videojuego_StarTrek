@@ -91,5 +91,32 @@ class ProceduralStarshipGeneratorTests(unittest.TestCase):
         self.assertTrue(all(x["nominal_duration_hours"] == 6 for x in watch["definitions"]))
 
 
+    def test_locked_oberth_fixture(self):
+        payload = shipgen.generate(
+            campaign_seed="shipboard_fixture_001",
+            era_id="tng_ds9_voyager",
+            campaign_date="2372-01-01",
+            operator="starfleet",
+            role="science",
+            requested_watch_pattern=None,
+        )
+        self.assertEqual(payload["ship"]["ship_id"], "gen:starship:de67f663aaf6de92")
+        self.assertEqual(payload["ship"]["designation"], "STARFLEET-6D0EDF")
+        self.assertEqual(payload["ship"]["class_id"], "oberth")
+        self.assertEqual(payload["population"]["duty_crew_target"], 80)
+        watch = payload["shipboard_life"]["watch"]
+        self.assertEqual(watch["pattern"], "three_shift")
+        self.assertEqual(
+            [(row["watch_id"], row["starts_at_ship_time"], row["ends_at_ship_time"], row["assigned_primary_personnel"]) for row in watch["definitions"]],
+            [
+                ("alpha", "04:00", "12:00", 28),
+                ("beta", "12:00", "20:00", 24),
+                ("gamma", "20:00", "04:00", 24),
+            ],
+        )
+        self.assertEqual(watch["relief_or_float"], 4)
+        self.assertEqual(watch["allocation_total"], 80)
+
+
 if __name__ == "__main__":
     unittest.main()
