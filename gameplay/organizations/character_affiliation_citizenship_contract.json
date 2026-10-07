@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "character_affiliation_citizenship_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Citizenship, legal status, organization membership, assignment, allegiance, sympathy and cultural identity are distinct character state.",
+  "fields": [
+    "character_id",
+    "citizenship_refs",
+    "legal_status_refs",
+    "organization_membership_refs",
+    "service_refs",
+    "current_assignment_refs",
+    "declared_allegiance_refs",
+    "known_sympathy_refs",
+    "historical_affiliation_refs"
+  ],
+  "membership_record_fields": [
+    "membership_id",
+    "organization_id",
+    "membership_type",
+    "started_at",
+    "ended_at",
+    "status",
+    "rank_or_grade_ref",
+    "position_ref",
+    "clearance_refs",
+    "source_event_refs"
+  ],
+  "rules": [
+    "Species does not grant faction membership.",
+    "Birthplace does not automatically settle citizenship unless applicable law says so.",
+    "Citizenship does not prove loyalty.",
+    "Organization membership does not prove personal agreement with every policy.",
+    "Assignment is not the same as membership.",
+    "Leaving an organization ends or changes current membership state but preserves history.",
+    "Covert, disputed or unknown affiliation may exist with restricted knowledge visibility.",
+    "AI cannot infer secret membership or loyalty from species, culture, uniform appearance or reputation alone."
+  ]
+}
