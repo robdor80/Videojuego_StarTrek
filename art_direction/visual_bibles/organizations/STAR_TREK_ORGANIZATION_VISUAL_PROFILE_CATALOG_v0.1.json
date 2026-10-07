@@ -1,0 +1,32 @@
+{
+  "profile_id": "star_trek_organization_visual_profile_catalog",
+  "profile_type": "organization_profile_catalog",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "organization_and_faction_visual_presentation",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "rules": [
+    "Organization profile never selects species or personality.",
+    "Exact era, role, rank/position and current duty state resolve before uniform/equipment presentation.",
+    "Secret or covert affiliations remain knowledge/state gated and may have no visible marker.",
+    "Organization markings cannot grant gameplay authority by appearance alone."
+  ],
+  "profiles": {
+    "federation_civil": "art_direction/visual_bibles/organizations/FEDERATION_CIVIL_VISUAL_PROFILE_v0.1.json",
+    "starfleet": "art_direction/visual_bibles/organizations/STARFLEET_VISUAL_PROFILE_v0.1.json",
+    "klingon_empire": "art_direction/visual_bibles/organizations/KLINGON_IMPERIAL_VISUAL_PROFILE_v0.1.json",
+    "romulan_empire": "art_direction/visual_bibles/organizations/ROMULAN_IMPERIAL_VISUAL_PROFILE_v0.1.json",
+    "cardassian_union": "art_direction/visual_bibles/organizations/CARDASSIAN_UNION_VISUAL_PROFILE_v0.1.json",
+    "bajor": "art_direction/visual_bibles/organizations/BAJORAN_INSTITUTIONS_VISUAL_PROFILE_v0.1.json",
+    "ferengi_alliance": "art_direction/visual_bibles/organizations/FERENGI_ALLIANCE_VISUAL_PROFILE_v0.1.json",
+    "dominion": "art_direction/visual_bibles/organizations/DOMINION_VISUAL_PROFILE_v0.1.json",
+    "borg_collective": "art_direction/visual_bibles/organizations/BORG_COLLECTIVE_VISUAL_PROFILE_v0.1.json"
+  },
+  "source_refs": [
+    "gameplay/organizations/profiles/",
+    "art_direction/visual_bibles/eras/STAR_TREK_ERA_VISUAL_PROFILES_v0.1.json"
+  ]
+}
