@@ -1,0 +1,35 @@
+{
+  "profile_id": "procedural_civilization_visual_profile_contract",
+  "version": "0.1",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Generated civilization visuals resolve from persistent biology + environment + technology + culture + institution + individual identity.",
+  "profile_stack": [
+    "planet_environment",
+    "species_morphology",
+    "culture_material_language",
+    "technology_level",
+    "government_or_organization",
+    "profession_or_role",
+    "individual_visual_identity",
+    "current_state"
+  ],
+  "generated_outputs": [
+    "species_visual_profile",
+    "civilization_material_palette",
+    "architecture_profile",
+    "clothing_profile",
+    "writing_symbol_profile",
+    "vehicle_ship_design_language",
+    "settlement_visual_profile"
+  ],
+  "rules": [
+    "No visual generation before required world-state authorities exist.",
+    "A species face/body design, once materialized, becomes persistent morphology canon for that generated species.",
+    "Culture may shape clothing/architecture but cannot overwrite biology.",
+    "Technology level constrains fabrication, materials, vehicles and architecture.",
+    "A divided world may have multiple visual cultures/states under one civilization.",
+    "First Contact portrait generation must reuse persistent representative NPC visual_identity_id.",
+    "Image generation cannot invent badges, writing, government symbols or technology absent from resolved state."
+  ],
+  "nap_rule": "Prompt/asset metadata must carry civilization_id, species_id, culture_ref, era/date, visual_identity_id where individual-backed, and provenance."
+}
