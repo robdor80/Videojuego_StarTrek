@@ -1,0 +1,228 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "procedural_civilian_ship_design_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "parent_ref": "universe/generation/civilian_commercial_vessel_grammar_v0.1.json",
+  "design_contract_ref": "universe/generation/procedural_ship_design_contract_v0.1.json",
+  "principle": "Civilian design is generated from a persistent economic/service role and may be reused by many individual vessels.",
+  "role_profiles": {
+    "cargo_freighter": {
+      "size_weights": {
+        "small": 2,
+        "medium": 5,
+        "large": 3
+      },
+      "crew_style": "small_professional",
+      "capacity_focus": "cargo",
+      "habitability_selector": "industrial_by_size"
+    },
+    "bulk_hauler": {
+      "size_weights": {
+        "medium": 2,
+        "large": 5,
+        "heavy": 3
+      },
+      "crew_style": "small_relative_to_volume",
+      "capacity_focus": "bulk_cargo",
+      "habitability_selector": "industrial_by_size"
+    },
+    "passenger_liner": {
+      "size_weights": {
+        "medium": 2,
+        "large": 5,
+        "heavy": 2
+      },
+      "crew_style": "service_navigation_engineering",
+      "capacity_focus": "passengers",
+      "habitability_selector": "passenger_liner"
+    },
+    "personnel_transport": {
+      "size_weights": {
+        "small": 2,
+        "medium": 5,
+        "large": 2
+      },
+      "crew_style": "transport",
+      "capacity_focus": "passengers",
+      "habitability_selector": "civilian_standard_by_size"
+    },
+    "courier": {
+      "size_weights": {
+        "micro": 4,
+        "small": 5,
+        "light": 1
+      },
+      "crew_style": "very_small",
+      "capacity_focus": "speed_small_cargo",
+      "habitability_selector": "micro_or_small"
+    },
+    "tug": {
+      "size_weights": {
+        "micro": 2,
+        "small": 6,
+        "light": 2
+      },
+      "crew_style": "small_specialist",
+      "capacity_focus": "tractor_work",
+      "habitability_selector": "industrial_by_size"
+    },
+    "salvage": {
+      "size_weights": {
+        "small": 4,
+        "medium": 5,
+        "large": 1
+      },
+      "crew_style": "small_specialist",
+      "capacity_focus": "recovery_cargo",
+      "habitability_selector": "industrial_by_size"
+    },
+    "mining": {
+      "size_weights": {
+        "small": 2,
+        "medium": 5,
+        "large": 3
+      },
+      "crew_style": "industrial_specialist",
+      "capacity_focus": "extraction_cargo",
+      "habitability_selector": "industrial_by_size"
+    },
+    "survey": {
+      "size_weights": {
+        "small": 3,
+        "medium": 6,
+        "large": 1
+      },
+      "crew_style": "science_technical",
+      "capacity_focus": "sensors_labs",
+      "habitability_selector": "civilian_standard_by_size"
+    },
+    "medical": {
+      "size_weights": {
+        "small": 2,
+        "medium": 5,
+        "large": 3
+      },
+      "crew_style": "medical_operations",
+      "capacity_focus": "medical_beds",
+      "habitability_selector": "medical"
+    },
+    "rescue": {
+      "size_weights": {
+        "small": 4,
+        "medium": 5,
+        "large": 1
+      },
+      "crew_style": "specialist",
+      "capacity_focus": "medical_recovery",
+      "habitability_selector": "civilian_standard_by_size"
+    },
+    "colony_transport": {
+      "size_weights": {
+        "medium": 1,
+        "large": 5,
+        "heavy": 4
+      },
+      "crew_style": "transport_plus_colonists",
+      "capacity_focus": "passengers_cargo_endurance",
+      "habitability_selector": "colony_transport"
+    },
+    "trader": {
+      "size_weights": {
+        "micro": 1,
+        "small": 5,
+        "medium": 4
+      },
+      "crew_style": "small_private_company",
+      "capacity_focus": "mixed_cargo",
+      "habitability_selector": "civilian_standard_by_size"
+    },
+    "private_civilian": {
+      "size_weights": {
+        "micro": 6,
+        "small": 4
+      },
+      "crew_style": "owner_small_crew",
+      "capacity_focus": "travel",
+      "habitability_selector": "micro_or_small"
+    },
+    "criminal_or_smuggling_when_context_valid": {
+      "size_weights": {
+        "micro": 1,
+        "small": 5,
+        "medium": 4
+      },
+      "crew_style": "small",
+      "capacity_focus": "mixed_cargo_evasion",
+      "habitability_selector": "civilian_standard_by_size"
+    }
+  },
+  "generic_size_design_guidance": {
+    "micro": {
+      "deck_complexity": "cockpit_or_few_compartments",
+      "crew_band": [
+        1,
+        5
+      ],
+      "endurance": "short_to_medium",
+      "privacy": "very_low_to_medium_by_occupancy"
+    },
+    "small": {
+      "deck_complexity": "few_to_several_compartments",
+      "crew_band": [
+        3,
+        15
+      ],
+      "endurance": "medium",
+      "privacy": "low_to_medium"
+    },
+    "light": {
+      "deck_complexity": "small_ship",
+      "crew_band": [
+        8,
+        30
+      ],
+      "endurance": "medium",
+      "privacy": "low_to_medium"
+    },
+    "medium": {
+      "deck_complexity": "departmental_ship",
+      "crew_band": [
+        20,
+        80
+      ],
+      "endurance": "medium_to_long",
+      "privacy": "medium"
+    },
+    "large": {
+      "deck_complexity": "multi_department",
+      "crew_band": [
+        60,
+        250
+      ],
+      "endurance": "long",
+      "privacy": "medium_to_high"
+    },
+    "heavy": {
+      "deck_complexity": "large_transport_or_industrial",
+      "crew_band": [
+        150,
+        600
+      ],
+      "endurance": "long",
+      "privacy": "mission_dependent"
+    }
+  },
+  "capability_rules": [
+    "Role defines required capabilities before optional amenities.",
+    "Passenger and colony designs require life-support/passenger capacity separate from duty crew.",
+    "Industrial designs require work areas, maintenance and cargo/extraction capacity before recreation.",
+    "Medical/rescue designs prioritize medical spaces and response systems.",
+    "Weapons are absent by default unless operator/legal/security context authorizes defensive armament.",
+    "Smuggling role cannot be generated unless legal/economic world state supplies an illegal-market cause."
+  ],
+  "reuse_rules": [
+    "procedural design_id persists and can be selected for later ships",
+    "design production availability can spread across regions/operators only when industrial context permits",
+    "individual wear, ownership, cargo and crew never belong to the design definition"
+  ]
+}
