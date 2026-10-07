@@ -1,0 +1,37 @@
+{
+  "profile_id": "federation_civil_visual_profile",
+  "profile_type": "organization",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "organization:federation_civil_government",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "star_trek_era_visual_profiles"
+  ],
+  "applies_when": {
+    "organization_ids": [
+      "federation_civil_government",
+      "federation_council"
+    ]
+  },
+  "rules": [
+    "Federation civil presentation must remain distinct from Starfleet military/service presentation.",
+    "Civil offices, diplomatic venues and council contexts prioritize institutional clarity, accessibility and member-world plurality.",
+    "Species/culture presentation remains independent; civil affiliation does not standardize faces or personal clothing outside actual dress rules.",
+    "Exact insignia, architecture and formal dress require era/source-specific references before production lock."
+  ],
+  "allowed_variation": [
+    "member-world cultural clothing when context allows",
+    "civil formalwear",
+    "era-sensitive institutional architecture"
+  ],
+  "forbidden_variation": [
+    "Starfleet uniform as generic Federation clothing",
+    "military rank pips on civilians without real service state",
+    "one Human-centric visual default for Federation government"
+  ],
+  "source_refs": [
+    "gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+    "ST_OFFICIAL_GET_TO_KNOW_FEDERATION"
+  ]
+}
