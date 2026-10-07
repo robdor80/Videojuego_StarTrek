@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2.0",
   "model_id": "facility_service_queue",
   "classification": "GAME_ADDITION",
   "fields": {
@@ -41,6 +41,10 @@
     "Queue order is not always first-come-first-served.",
     "Emergency priority can move a request ahead without eliminating resource constraints.",
     "Estimated service time may change when damage, parts or facility load changes.",
-    "Waiting time is gameplay time and may affect mission feasibility."
-  ]
+    "Waiting time is gameplay time and may affect mission feasibility.",
+    "Repeated queue saturation may become evidence for staffing/refit/expansion, but only through sustained history.",
+    "A player's urgent request can change priority without increasing physical service capacity."
+  ],
+  "throughput_contract_ref": "gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+  "expansion_contract_ref": "universe/generation/facility_expansion_redundancy_drawdown_contract_v0.1.json"
 }
