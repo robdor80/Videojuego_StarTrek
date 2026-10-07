@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "borg_collective_operational_profile",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "faction_ref": "borg_collective",
+  "classification": "collective_network_operational_power_not_conventional_membership_org",
+  "organization_type": "other",
+  "identity_model": {
+    "collective_id": "borg_collective",
+    "drone_membership_model": "assimilation/collective-connection state, not citizenship or ordinary employment",
+    "liberated_or_disconnected_rule": "Individual remains same persistent entity with changed collective connection state."
+  },
+  "authority_and_coordination": {
+    "default_model": "collective coordination",
+    "conventional_rank_system": false,
+    "drone_designation_is_runtime_state": true,
+    "queen_or_centralized_manifestation_handling": "era/encounter-specific authoritative state; do not assume omnipresent direct control in every scene"
+  },
+  "operational_interfaces": [
+    "collective_connection",
+    "assimilation",
+    "adaptation",
+    "boarding",
+    "resource/technology integration",
+    "temporary tactical cooperation"
+  ],
+  "diplomacy": {
+    "ordinary_bilateral_diplomacy": false,
+    "temporary_operational_cooperation_supported": true,
+    "rule": "Temporary cooperation does not create normal diplomatic membership or trust."
+  },
+  "ai_guardrails": [
+    "Do not treat Borg as a species.",
+    "Do not create assimilation success, adaptation or liberation through dialogue.",
+    "Do not infer Collective knowledge as total World Truth.",
+    "Do not erase origin identity/history of a drone."
+  ],
+  "provenance_refs": [
+    "gameplay/species/borg_assimilation_state.json",
+    "gameplay/diplomacy/major_faction_catalogue.json#borg_collective",
+    "ST_OFFICIAL_BORG_101"
+  ]
+}
