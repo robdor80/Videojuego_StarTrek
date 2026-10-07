@@ -187,3 +187,33 @@ This foundation must be followed by:
 4. global Star Trek visual bible;
 5. category bibles;
 6. era/species/culture/organization profiles.
+
+
+## Implemented foundation references
+
+Schemas:
+- `art_direction/schemas/persistent_visual_identity.schema.json`
+- `art_direction/schemas/resolved_visual_context.schema.json`
+- `art_direction/schemas/visual_profile_manifest.schema.json`
+- `art_direction/schemas/nap_asset_handoff.schema.json`
+
+Visual Bibles / profile families:
+- `art_direction/visual_bibles/global/STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1.md`
+- `art_direction/visual_bibles/characters/STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1.md`
+- `art_direction/visual_bibles/eras/STAR_TREK_ERA_VISUAL_PROFILES_v0.1.json`
+- `art_direction/visual_bibles/species/STAR_TREK_SPECIES_VISUAL_PROFILE_FRAMEWORK_v0.1.json`
+- `art_direction/visual_bibles/cultures_affiliations/CULTURE_AFFILIATION_VISUAL_PROFILE_FRAMEWORK_v0.1.json`
+- `art_direction/visual_bibles/organizations/STARFLEET_VISUAL_PROFILE_v0.1.json`
+- `art_direction/visual_bibles/uniforms/STARFLEET_UNIFORM_VISUAL_PROFILES_v0.1.json`
+- `art_direction/visual_bibles/ships/STAR_TREK_SHIP_EXTERIOR_VISUAL_BIBLE_v0.1.md`
+- `art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_CONSOLE_FACILITY_VISUAL_BIBLE_v0.1.md`
+- `art_direction/visual_bibles/planets/STAR_TREK_PLANET_ENVIRONMENT_VISUAL_BIBLE_v0.1.md`
+- `art_direction/visual_bibles/equipment/STAR_TREK_EQUIPMENT_PROP_VISUAL_BIBLE_v0.1.md`
+
+### Identity-lineage rule
+
+For entity-backed assets, NAP must preserve both:
+- `entity_id`;
+- `visual_identity_id` lineage.
+
+A new render, age progression, new uniform, injury state, ship refit or repaired environment is a new asset/state representation of the same persistent entity when World State says identity is continuous. It is not permission to generate an unrelated replacement identity.
