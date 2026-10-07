@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2.0",
   "model_id": "facility_traffic_state",
   "classification": "GAME_ADDITION",
   "fields": {
@@ -17,13 +17,26 @@
     "local_navigation_hazards": [],
     "traffic_event_refs": []
   },
-  "traffic_statuses": ["light","normal","heavy","saturated","restricted","emergency","closed"],
+  "traffic_statuses": [
+    "light",
+    "normal",
+    "heavy",
+    "saturated",
+    "restricted",
+    "emergency",
+    "closed"
+  ],
   "rules": [
     "Traffic state is live World State and can change independently of facility design.",
     "Arrival does not imply docking clearance.",
     "Docked, holding, approaching and departing are distinct operational states.",
     "Emergency traffic can reprioritize movement without creating physical berth capacity.",
     "Traffic control uses known sensor and contact data, not omniscient vessel identity.",
-    "NPC traffic continues to arrive, depart or divert when the player is absent."
-  ]
+    "NPC traffic continues to arrive, depart or divert when the player is absent.",
+    "Traffic is generated from routes, mission/service requests, cargo/passengers and economic/logistics state; never to make the station look busy.",
+    "Low demand may legitimately produce long quiet periods.",
+    "Traffic history feeds expansion/drawdown evaluation but a short spike does not establish chronic demand."
+  ],
+  "service_generation_ref": "gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+  "existence_causality_ref": "universe/generation/facility_existence_and_construction_causality_v0.1.json"
 }
