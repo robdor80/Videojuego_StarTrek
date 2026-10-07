@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.33.0",
+  "registry_version": "0.34.0",
   "last_updated": "2026-10-07",
   "sources": [
     {
@@ -2183,6 +2183,103 @@
       "url": "https://www.startrek.com/news/star-trek-101-romulans-and-remans",
       "accessed_at": "2026-10-07",
       "notes": "Official reference for Romulus/Remus sister-world relationship and environmental distinction."
+    },
+    {
+      "source_id": "MA_QUARTERS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Quarters",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Quarters",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for class-specific quarters, shared berthing, Galaxy family accommodations and Excelsior/Constitution bunking."
+    },
+    {
+      "source_id": "MA_RECREATION_ROOM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Recreation room",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Recreation_room",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Constitution and Excelsior recreation spaces and late-23rd-century leisure facilities."
+    },
+    {
+      "source_id": "MA_MESS_HALL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Mess hall",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Mess_hall",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for mess-hall use, especially Intrepid-class social and food-service spaces."
+    },
+    {
+      "source_id": "MA_CONSTITUTION_CLASS_DECKS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Constitution class decks",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Constitution_class_decks",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Constitution-class quarters, labs, sickbay, recreation and refit-era accommodation/recreation spaces."
+    },
+    {
+      "source_id": "MA_INTREPID_CLASS_DECKS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Intrepid class decks",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Intrepid_class_decks",
+      "accessed_at": "2026-10-07",
+      "notes": "Cross-check for Intrepid-class bridge, mess, quarters, sickbay, holodecks and distributed facilities."
+    },
+    {
+      "source_id": "TNG_CHAIN_OF_COMMAND_PART_I",
+      "source_type": "SCREEN_CANON",
+      "title": "Chain of Command, Part I",
+      "publisher": "Star Trek: The Next Generation",
+      "release_date": "1992-12-14",
+      "notes": "Screen canon for Enterprise-D normally using three shifts and Jellico ordering a four-shift rotation that caused personnel-scheduling problems."
+    },
+    {
+      "source_id": "TNG_LOWER_DECKS",
+      "source_type": "SCREEN_CANON",
+      "title": "Lower Decks",
+      "publisher": "Star Trek: The Next Generation",
+      "release_date": "1994-02-07",
+      "notes": "Screen canon for Enterprise-D duty shifts, relief officers and shared quarters for junior personnel."
+    },
+    {
+      "source_id": "VOY_SCIENTIFIC_METHOD",
+      "source_type": "SCREEN_CANON",
+      "title": "Scientific Method",
+      "publisher": "Star Trek: Voyager",
+      "release_date": "1997-10-29",
+      "notes": "Screen canon that Tuvok had thirteen department heads reporting to him daily aboard Voyager."
+    },
+    {
+      "source_id": "DS9_SOLDIERS_OF_THE_EMPIRE",
+      "source_type": "SCREEN_CANON",
+      "title": "Soldiers of the Empire",
+      "publisher": "Star Trek: Deep Space Nine",
+      "release_date": "1997-04-28",
+      "notes": "Screen canon for Klingon Bird-of-Prey shipboard conditions, command/crew social dynamics and the vessel being cramped and uncomfortable."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DESIGNING_DEFIANT",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Designing the Defiant",
+      "publisher": "StarTrek.com",
+      "release_date": "2015-03-19",
+      "url": "https://www.startrek.com/news/designing-the-defiant",
+      "accessed_at": "2026-10-07",
+      "notes": "Official production reference for Defiant as a small purpose-built combat starship rather than exploration/science vessel."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DS9_SHIPS_2018",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Deep Cut: DS9 25th Anniversary Ships",
+      "publisher": "StarTrek.com",
+      "release_date": "2018-01-16",
+      "url": "https://www.startrek.com/news/deep-cut-ds9-25th-anniversary-ships",
+      "accessed_at": "2026-10-07",
+      "notes": "Official reference for Defiant compact combat role and roughly forty-person crew context."
     }
   ]
 }
