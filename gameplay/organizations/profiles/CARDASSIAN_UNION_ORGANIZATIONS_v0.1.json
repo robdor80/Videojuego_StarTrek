@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "cardassian_union_organizations",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "polity_ref": "cardassian_union",
+  "organizations": [
+    {
+      "organization_id": "cardassian_union_government",
+      "organization_type": "government",
+      "display_name": "Gobierno de la Unión Cardassiana",
+      "rules": [
+        "Government alignment and institutional structure are date/campaign sensitive.",
+        "Species does not imply government membership or loyalty."
+      ]
+    },
+    {
+      "organization_id": "cardassian_military",
+      "organization_type": "military_or_service",
+      "display_name": "Fuerzas militares cardassianas",
+      "rules": [
+        "Rank/position require actual service state.",
+        "Occupation-era authority does not persist automatically after political change."
+      ]
+    },
+    {
+      "organization_id": "cardassian_intelligence_service",
+      "organization_type": "intelligence",
+      "display_name": "Servicio de inteligencia cardassiano",
+      "canonical_label_policy": "Concrete historical intelligence-service names may be attached per era/source; membership remains knowledge-gated.",
+      "rules": [
+        "Do not infer intelligence membership from Cardassian species or suspicious behavior."
+      ]
+    },
+    {
+      "organization_id": "cardassian_resistance_cells",
+      "organization_type": "other",
+      "display_name": "Células de resistencia cardassianas",
+      "era_validity": "only when campaign history supports them",
+      "instance_model": "Separate persistent organizations/cells created by represented events.",
+      "rules": [
+        "Resistance membership is not backfilled before formation.",
+        "A resistant Cardassian remains distinct from Union government affiliation."
+      ]
+    }
+  ],
+  "ai_guardrails": [
+    "Do not invent intelligence affiliation or resistance membership.",
+    "Do not preserve obsolete occupation authority after World State changes.",
+    "Do not make every Cardassian an agent of the Union."
+  ],
+  "provenance_refs": [
+    "gameplay/diplomacy/major_faction_catalogue.json#cardassian_union",
+    "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+  ]
+}
