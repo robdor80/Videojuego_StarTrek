@@ -1,0 +1,91 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "off_watch_obligation_model",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Off-watch time includes both genuine leisure and mandatory obligations. These obligations consume schedule time and can reduce available rest/recreation if overused.",
+  "obligation_types": {
+    "watch_handoff": {
+      "activity_family": "professional_task",
+      "priority": "high",
+      "trigger": "watch_transition"
+    },
+    "department_briefing": {
+      "activity_family": "administrative",
+      "priority": "normal",
+      "trigger": "department_or_mission_policy"
+    },
+    "readiness_report": {
+      "activity_family": "administrative",
+      "priority": "normal",
+      "trigger": "command_policy_or_event"
+    },
+    "training": {
+      "activity_family": "training",
+      "priority": "normal",
+      "trigger": "qualification_or_department_plan"
+    },
+    "recertification": {
+      "activity_family": "training",
+      "priority": "normal",
+      "trigger": "qualification_expiry_or_role_requirement"
+    },
+    "emergency_drill": {
+      "activity_family": "training",
+      "priority": "high",
+      "trigger": "ship_readiness_plan"
+    },
+    "physical_readiness": {
+      "activity_family": "training",
+      "priority": "normal",
+      "trigger": "organization_or_medical_policy"
+    },
+    "maintenance_callout": {
+      "activity_family": "professional_task",
+      "priority": "high",
+      "trigger": "system_need"
+    },
+    "project_work": {
+      "activity_family": "professional_task",
+      "priority": "normal",
+      "trigger": "science_engineering_or_mission_project"
+    },
+    "administrative_work": {
+      "activity_family": "administrative",
+      "priority": "normal",
+      "trigger": "rank_position_or_assignment"
+    },
+    "medical_appointment": {
+      "activity_family": "medical",
+      "priority": "high",
+      "trigger": "medical_state_or_periodic_requirement"
+    },
+    "counseling_or_wellbeing": {
+      "activity_family": "medical",
+      "priority": "normal",
+      "trigger": "wellbeing_or_voluntary_request"
+    },
+    "on_call_window": {
+      "activity_family": "professional_task",
+      "priority": "standby",
+      "trigger": "specialist_or_command_policy"
+    },
+    "command_duty": {
+      "activity_family": "watch_assignment",
+      "priority": "high",
+      "trigger": "officer_of_watch_or_duty_officer_schedule"
+    }
+  },
+  "scheduling_rules": [
+    "Mandatory obligations cannot consume protected biological rest below the active fatigue/safety policy without an explicit exception.",
+    "Department heads and senior officers may have administrative time outside station watch.",
+    "On-call is an availability constraint, not continuous physical presence at a duty station.",
+    "Training and drills may be cancelled or preempted by mission/emergency state.",
+    "Repeated double shifts create fatigue debt and readiness consequences.",
+    "An officer who is off watch can still be unavailable because of sleep, medical care, training or private commitments.",
+    "The player initiating dialogue does not cancel an NPC obligation."
+  ],
+  "species_rule": "Rest/sleep needs come from character biology/medical state where available; do not impose one Human sleep requirement on all species.",
+  "ai_boundary": [
+    "AI may explain why an NPC is unavailable; it cannot cancel or invent obligations."
+  ]
+}
