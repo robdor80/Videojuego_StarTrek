@@ -120,14 +120,22 @@ def choose_class(
     if not valid:
         raise ValueError(f"No class available for operator={operator} era={era_id} year={year}")
 
+    if role:
+        matching = [
+            row for row in valid
+            if role in row.get("primary_gameplay_roles", [])
+            or role in row.get("classifications", [])
+        ]
+        if matching:
+            valid = matching
+
     weighted: list[tuple[dict[str, Any], int]] = []
     for row in valid:
         weight = 1
-        if role:
-            if role in row.get("primary_gameplay_roles", []):
-                weight += 8
-            if role in row.get("classifications", []):
-                weight += 4
+        if role in row.get("primary_gameplay_roles", []):
+            weight += 8
+        if role in row.get("classifications", []):
+            weight += 4
         weighted.append((row, weight))
     return rng.weighted_choice(weighted)
 
@@ -262,13 +270,20 @@ def make_watch_schedule(
             labels = ["alpha", "beta", "gamma", "delta"]
             duration = 6
             anchor = rng.choice([0, 6])
+            fractions = {
+                "alpha": 0.26,
+                "beta": 0.24,
+                "gamma": 0.23,
+                "delta": 0.22,
+                "relief_or_float": 0.05,
+            }
         else:
             pattern = "three_shift"
             labels = ["alpha", "beta", "gamma"]
             duration = 8
             anchor = rng.choice([0, 4, 8])
+            fractions = guidance.get("routine_primary_watch_allocation", {})
 
-        fractions = guidance.get("routine_primary_watch_allocation", {})
         allocation = allocate_by_fractions(crew_count, fractions) if isinstance(fractions, dict) else {}
         definitions = []
         for index, label in enumerate(labels):
