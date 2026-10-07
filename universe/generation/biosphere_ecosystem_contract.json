@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "biosphere_ecosystem_contract",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Biosphere and ecosystems derive from physical/environmental context and persist as world state; a biome label is not sufficient ecology.",
+  "fields": [
+    "biosphere_id",
+    "planet_id",
+    "origin_or_provenance",
+    "biome_regions",
+    "ecological_network_refs",
+    "habitability_refs",
+    "hazard_refs",
+    "resource_refs",
+    "disturbance_history_refs"
+  ],
+  "biome_region_fields": [
+    "region_id",
+    "climate_context",
+    "terrain_context",
+    "dominant_ecosystem_type",
+    "seasonality",
+    "productivity_or_energy_context",
+    "species_or_lifeform_refs",
+    "current_condition_ref"
+  ],
+  "rules": [
+    "Life does not appear because a mission requests it.",
+    "Biome distribution must be compatible with climate, water, terrain and extraordinary influences.",
+    "Ecosystem state may change through fire, disease, climate shifts, colonization, terraforming or other explicit events.",
+    "Sapient population and natural ecosystem are separate layers.",
+    "Alien life may violate ordinary Earth expectations only with explicit setting/science rules."
+  ]
+}
