@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "major_species_cultural_interaction",
   "rules": {
     "culture_is_character_state_not_species_lock": true,
@@ -86,6 +86,28 @@
         "Sensing emotion is not equivalent to knowing motive or objective truth."
       ],
       "forbidden_ai_shortcut": "Do not use telepathy as omniscience or automatic lie detection."
+    },
+    "dominion": {
+      "possible_norms": [
+        "strict hierarchy",
+        "Founder authority",
+        "Vorta administration/command",
+        "Jem'Hadar military unit context"
+      ],
+      "misread_risks": [
+        "The Dominion is not one homogeneous species or culture; authority depends on role and assignment."
+      ],
+      "forbidden_ai_shortcut": "Do not infer command authority, permissions or obedience outcomes solely from species."
     }
+  },
+  "detailed_profile_refs": {
+    "klingon": "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json",
+    "romulan": "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json",
+    "cardassian": "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json",
+    "bajoran": "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json",
+    "ferengi": "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json",
+    "trill": "lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json",
+    "betazoid": "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json",
+    "dominion": "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
   }
 }
