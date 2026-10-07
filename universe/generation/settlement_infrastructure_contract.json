@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "settlement_infrastructure_contract",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "principle": "Settlements exist because population, geography, institutions, resources and transport create a viable reason for them.",
@@ -37,6 +37,9 @@
     "Infrastructure requires capacity and may fail, degrade, expand or be repaired.",
     "A settlement is not just a visual landmark; its population and services exist in World State.",
     "Orbital and surface infrastructure are linked through actual transport/logistics capabilities.",
-    "Generated settlement layout/detail may use LOD, but stable districts/services retain identity once materialized."
-  ]
+    "Generated settlement layout/detail may use LOD, but stable districts/services retain identity once materialized.",
+    "Settlement existence cannot be triggered by player arrival or immediate service need.",
+    "Generated settlement names and stable districts persist after materialization."
+  ],
+  "generation_grammar_ref": "universe/generation/procedural_settlement_colony_generation_grammar_v0.1.json"
 }
