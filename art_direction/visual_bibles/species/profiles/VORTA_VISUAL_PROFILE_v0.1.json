@@ -1,0 +1,36 @@
+{
+  "profile_id": "vorta_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "authority_scope": "species_morphology:vorta",
+  "species_id": "vorta",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Vorta use a humanoid morphology with species-specific facial/ear/eye presentation resolved from validated references.",
+    "Pale to cool/lilac skin and distinctive eye presentation may be used where the chosen screen-reference profile supports them.",
+    "Individual facial identity must remain broad enough to avoid cloning a small set of canonical Vorta.",
+    "Dominion administrative clothing is an organization layer, not species anatomy."
+  ],
+  "allowed_variation": [
+    "face shape",
+    "skin presentation within validated Vorta bounds",
+    "hair/grooming",
+    "age-equivalent presentation when state supports",
+    "body type"
+  ],
+  "forbidden_variation": [
+    "automatic diplomat smile",
+    "automatic Dominion rank/authority",
+    "one Weyoun-like face reused",
+    "Founder-reverence expression encoded permanently"
+  ],
+  "source_refs": [
+    "MA_VORTA",
+    "ST_OFFICIAL_DOMINION_101"
+  ],
+  "notes": "Specific clone lineage/identity must come from persistent entity state; visual similarity cannot establish continuity by itself."
+}
