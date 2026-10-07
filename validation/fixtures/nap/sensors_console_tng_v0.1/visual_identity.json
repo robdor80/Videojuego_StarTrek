@@ -1,0 +1,37 @@
+{
+  "visual_identity_id": "vid_fixture_sensor_console_tng_001",
+  "entity_id": "fixture_console_sensors_tng_001",
+  "entity_type": "console_station_fixture",
+  "identity_anchor_version": "0.1",
+  "creation_provenance": {
+    "fixture_mode": true,
+    "created_for": "D063 representative NAP fixture",
+    "source_repo": "robdor80/Videojuego_StarTrek",
+    "generation_method": "deterministic_programmatic_fixture_renderer"
+  },
+  "identity_anchors": {
+    "console_family": "sensors",
+    "logical_layout": [
+      "primary_navigation_left",
+      "workspace_center",
+      "persistent_status_right"
+    ],
+    "primary_menu_count": 10,
+    "functional_model_ref": "gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json",
+    "information_architecture_ref": "gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json"
+  },
+  "persistent_modification_refs": [],
+  "allowed_evolution_channels": [
+    "era_skin_revision",
+    "physical_station_geometry_refinement",
+    "approved_visual_bible_version_change"
+  ],
+  "forbidden_identity_changes": [
+    "change_console_family",
+    "remove_persistent_status_panel_without_functional_contract_change",
+    "expose_world_truth_not_available_to_sensor_operator",
+    "change_functional_actions_through_visual_skin"
+  ],
+  "supersedes_visual_identity_id": null,
+  "migration_ref": null
+}
