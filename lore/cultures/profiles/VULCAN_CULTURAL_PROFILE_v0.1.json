@@ -1,0 +1,158 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "vulcan_mainstream_logic_traditions",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "scope": "broad_mainstream_vulcan_cultural_context_not_species_lock",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "vulcan",
+    "automatic_attachment_by_species": false,
+    "principle": "Vulcan biology and Vulcan cultural discipline are separate. A Vulcan character may follow, reinterpret or reject mainstream norms."
+  },
+  "historical_context": {
+    "core_theme": "logic-centered social discipline and controlled emotional expression",
+    "detailed_historical_doctrine_status": "not_exhaustively_locked"
+  },
+  "values_and_norms": [
+    {
+      "norm": "logic_centered_reasoning",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "controlled_emotional_display",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "formal_restraint",
+      "strength": "common_norm",
+      "evidence_state": "reliable_secondary_crosscheck"
+    },
+    {
+      "norm": "telepathic_contact_requires_context_and_privacy",
+      "strength": "strong_norm",
+      "evidence_state": "project_game_addition"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "formal restraint",
+      "precise framing",
+      "logic-centered argument",
+      "limited public emotional display"
+    ],
+    "misread_risks": [
+      "Restraint may be misread as indifference.",
+      "Logical disagreement may be misread as personal contempt.",
+      "Reduced emotional display must not be interpreted as absence of emotion."
+    ]
+  },
+  "authority_and_status": {
+    "universal_caste_or_rank_model": null,
+    "rule": "Do not invent cultural authority, priesthood, family office or status from species alone."
+  },
+  "privacy_and_intimacy": {
+    "rules": [
+      "Telepathic or mind-meld capability does not eliminate privacy.",
+      "Private biological states such as pon farr are not public cultural knowledge about a specific individual unless known.",
+      "Emotional privacy and medical privacy remain individual/contextual."
+    ]
+  },
+  "family_kinship_and_household": {
+    "canon_supported_generalization": "Formal pair-bond/marriage traditions exist, but this profile does not yet encode a universal household template.",
+    "rules": [
+      "Do not auto-generate arranged bonds or spouse refs for every Vulcan.",
+      "Do not turn pon farr into automatic marriage or conception.",
+      "Family relations require persistent kinship/relationship provenance."
+    ],
+    "detailed_rituals_status": "not_locked"
+  },
+  "education_and_socialization": {
+    "likely_domains": [
+      "logic discipline",
+      "emotional control",
+      "cultural philosophy"
+    ],
+    "exact_curriculum_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Logic-centered culture does not imply science profession, Starfleet service or pacifist occupation."
+  },
+  "religion_philosophy_or_worldview": {
+    "model": "philosophical_and_cultural_discipline",
+    "rule": "Do not reduce all Vulcan identity to one identical interpretation of logic."
+  },
+  "law_duty_and_obligation": {
+    "rule": "Specific legal or ritual obligations require explicit source/state; logic alone does not create authority."
+  },
+  "mourning_death_and_legacy": {
+    "universal_mourning_script": null,
+    "rule": "Do not infer absence of grief from restrained display."
+  },
+  "cross_cultural_interaction": {
+    "common_misread": "emotionless_or_cold",
+    "professional_response": "Treat restraint as a cultural communication style, then evaluate the individual and context."
+  },
+  "internal_variation": {
+    "required": true,
+    "examples": [
+      "degree of adherence",
+      "family tradition",
+      "education",
+      "offworld upbringing",
+      "mixed cultural exposure",
+      "institutional socialization"
+    ]
+  },
+  "era_variation": {
+    "required": true
+  },
+  "gameplay_hooks": [
+    "formal_dialogue_style_prior",
+    "telepathic_consent_and_privacy",
+    "misread_emotion_resolution",
+    "family_or_pair_bond_state_when_explicit",
+    "offworld_or_mixed_upbringing"
+  ],
+  "ai_guardrails": [
+    "Never portray every Vulcan as emotionless.",
+    "Do not infer hidden feelings as objective truth from restrained behavior.",
+    "Do not create a mind meld, bond, spouse, ritual obligation or private medical state through dialogue.",
+    "Do not equate Vulcan with scientist."
+  ],
+  "unknowns": [
+    "universal household structure",
+    "universal inheritance rules",
+    "exhaustive marriage/betrothal ritual state machine",
+    "universal funeral and mourning protocol",
+    "complete regional/subcultural map"
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_VULCAN",
+      "confidence": "HIGH",
+      "claim_scope": "cross-check culture/physiology separation"
+    },
+    {
+      "source_id": "TOS_DAGGER_OF_THE_MIND",
+      "confidence": "HIGH",
+      "claim_scope": "mind meld capability context"
+    },
+    {
+      "source_id": "TOS_AMOK_TIME",
+      "confidence": "HIGH",
+      "claim_scope": "pon farr and formal relationship/ritual context"
+    },
+    {
+      "source_id": "VOY_BLOOD_FEVER",
+      "confidence": "HIGH",
+      "claim_scope": "telepathic bonding and privacy-sensitive biological context"
+    },
+    {
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "confidence": "HIGH",
+      "claim_scope": "Vulcan participation in Federation diplomacy"
+    }
+  ]
+}
