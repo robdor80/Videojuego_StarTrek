@@ -167,14 +167,14 @@ Una capa marcada `COMPLETE` solo vuelve a abrirse mediante una migración explí
 
 | Capa | Sistema | Estado inicial | Dependencia | Criterio de cierre |
 |---|---|---|---|---|
-| 085 | Matriz tecnológica por era/civilización | TODO | 006,071 | Disponibilidad tecnológica se resuelve por fecha y actor |
-| 086 | Warp, impulso y propulsión | PARTIAL | 056,077,085 | Rendimiento y disponibilidad coherentes |
-| 087 | Sensores y firmas detectables | PARTIAL | 056,085 | Sensores observan realidad preexistente |
-| 088 | Comunicaciones subespaciales | TODO | 023,065,085 | Información tiene latencia/alcance/interferencia cuando proceda |
-| 089 | Transportadores | TODO | 033,056,085 | Movimiento y riesgos respetan restricciones de época/contexto |
-| 090 | Replicación, holocubierta y computación | TODO | 056,081,085 | Capacidades no se convierten en magia sin límites |
-| 091 | Seres y estados excepcionales | TODO | 031-042,085 | Androides, hologramas, simbiontes, Changelings, Borg, etc. usan extensiones explícitas |
-| 092 | Anomalías temporales/subespaciales | TODO | 006,066,085 | Excepciones no destruyen causalidad ni persistencia sin evento explícito |
+| 085 | Matriz tecnológica por era/civilización | COMPLETE | 006,071 | Disponibilidad tecnológica se resuelve por fecha y actor |
+| 086 | Warp, impulso y propulsión | COMPLETE | 056,077,085 | Rendimiento y disponibilidad coherentes |
+| 087 | Sensores y firmas detectables | COMPLETE | 056,085 | Sensores observan realidad preexistente |
+| 088 | Comunicaciones subespaciales | COMPLETE | 023,065,085 | Información tiene latencia/alcance/interferencia cuando proceda |
+| 089 | Transportadores | COMPLETE | 033,056,085 | Movimiento y riesgos respetan restricciones de época/contexto |
+| 090 | Replicación, holocubierta y computación | COMPLETE | 056,081,085 | Capacidades no se convierten en magia sin límites |
+| 091 | Seres y estados excepcionales | COMPLETE | 031-042,085 | Androides, hologramas, simbiontes, Changelings, Borg, etc. usan extensiones explícitas |
+| 092 | Anomalías temporales/subespaciales | COMPLETE | 006,066,085 | Excepciones no destruyen causalidad ni persistencia sin evento explícito |
 
 # FASE 9 — SISTEMA VISUAL Y NAP
 
