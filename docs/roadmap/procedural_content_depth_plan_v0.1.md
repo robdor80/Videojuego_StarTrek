@@ -16,10 +16,10 @@
 
 | Package | Scope | Status | Exit condition |
 |---|---|---|---|
-| D001 | Human detailed gameplay/biology profile | IN_PROGRESS | Baseline, lifecycle unknown policy, culture separation, medical/visual hooks |
-| D002 | Vulcan detailed gameplay/biology profile | IN_PROGRESS | Physiology, telepathy boundaries, pon farr, lifecycle/visual hooks |
-| D003 | Andorian detailed gameplay/biology profile | IN_PROGRESS | Cold adaptation, antenna anatomy/state, culture separation, visual hooks |
-| D004 | Tellarite detailed gameplay/biology profile | IN_PROGRESS | Sparse-canon safe biology, social interpretation, visual hooks |
+| D001 | Human detailed gameplay/biology profile | COMPLETE | Baseline, lifecycle unknown policy, culture separation, medical/visual hooks |
+| D002 | Vulcan detailed gameplay/biology profile | COMPLETE | Physiology, telepathy boundaries, pon farr, lifecycle/visual hooks |
+| D003 | Andorian detailed gameplay/biology profile | COMPLETE | Cold adaptation, antenna anatomy/state, culture separation, visual hooks |
+| D004 | Tellarite detailed gameplay/biology profile | COMPLETE | Sparse-canon safe biology, social interpretation, visual hooks |
 | D005 | Aenar related-population profile | TODO | Separate identity from Andorian; no cosmetic-variant shortcut |
 | D006 | Klingon detailed profile | TODO | Biology, era-aware morphology, house/honor context, no warrior lock |
 | D007 | Romulan detailed profile | TODO | Vulcan ancestry without equivalence; state/security culture separation |
@@ -93,7 +93,7 @@
 
 | Package | Scope | Status |
 |---|---|---|
-| D058 | Founding species visual profiles | IN_PROGRESS |
+| D058 | Founding species visual profiles | PARTIAL |
 | D059 | Major species visual profiles | IN_PROGRESS |
 | D060 | Faction/organization visual profiles | TODO |
 | D061 | Era-specific ship/interior profiles | TODO |
