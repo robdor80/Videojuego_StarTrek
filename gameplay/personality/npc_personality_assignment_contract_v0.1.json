@@ -1,0 +1,51 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "npc_personality_assignment_contract",
+  "status": "FOUNDATION_FIXED",
+  "personality_depth_tiers": {
+    "A": {
+      "display": "principal_or_major",
+      "rule": "authored personality preferred; procedural only by explicit design choice",
+      "full_profile_required": true
+    },
+    "B": {
+      "display": "interactive_persistent",
+      "rule": "resolve one full procedural profile when first promoted/materialized as interactive",
+      "full_profile_required": true
+    },
+    "C": {
+      "display": "background_light",
+      "rule": "full profile optional; persistent entities receive latent deterministic personality_seed when useful",
+      "full_profile_required": false
+    }
+  },
+  "warning": "These A/B/C personality depth tiers are not the same thing as population/materialization tiers elsewhere in the project.",
+  "deterministic_seed_formula": "campaign_seed + entity_id + 'personality' + personality_rules_version",
+  "promotion_rules": [
+    "C→B promotion resolves the full profile once from the persistent personality seed and any already-observed behavior constraints.",
+    "If a C NPC has already spoken or acted in a way witnessed by the player, the resolved B profile must be compatible with those recorded observations.",
+    "B→A does not reroll personality. An authored expansion may deepen the existing profile but must preserve established traits/history unless a deliberate character-development event explains changes.",
+    "A/B profiles remain permanently linked to entity_id.",
+    "A C entity that never becomes interaction-relevant may remain lightweight indefinitely."
+  ],
+  "creation_order": [
+    "entity identity exists",
+    "species/origin/upbringing/culture refs resolve",
+    "career/institutional context resolves",
+    "personality seed resolves",
+    "if tier A or B: core personality resolves",
+    "species/culture expression layer resolves separately",
+    "dialogue context consumes resolved personality"
+  ],
+  "authored_mode": {
+    "rule": "Principal NPCs may use a hand-authored personality_profile_id and authored notes.",
+    "required_preservation": "Once exposed in play, authored revisions must preserve established behavior unless represented character development explains the change."
+  },
+  "forbidden": [
+    "rerolling because a dialogue session restarts",
+    "rerolling after save/load",
+    "replacing personality when NPC changes rank/ship/uniform",
+    "choosing personality solely from species",
+    "using canonical character names as procedural personality templates"
+  ]
+}
