@@ -1,0 +1,155 @@
+{
+  "schema_version": "0.1.0",
+  "dossier_id": "academy_operational_culture_reference",
+  "status": "ACTIVE",
+  "purpose_es": "Seleccionar conocimiento cultural con utilidad operativa para la formación de cadetes sin convertir la Academia en una enciclopedia de especies.",
+  "teaching_rule_es": "Enseñar patrones útiles como hipótesis de contexto; nunca como predicciones absolutas sobre una persona.",
+  "authority_refs": [
+    "gameplay/species/culture_socialization_contract.json",
+    "lore/cultures/founding_species_interaction_profiles.json",
+    "lore/cultures/major_species_interaction_profiles.json",
+    "gameplay/species/profiles/vulcan_v0.1.json",
+    "gameplay/species/profiles/andorian_v0.1.json",
+    "gameplay/species/profiles/aenar_v0.1.json",
+    "gameplay/species/profiles/tellarite_v0.1.json",
+    "gameplay/species/profiles/klingon_v0.1.json",
+    "gameplay/species/profiles/romulan_v0.1.json",
+    "gameplay/species/profiles/cardassian_v0.1.json",
+    "gameplay/species/profiles/bajoran_v0.1.json",
+    "gameplay/species/profiles/ferengi_v0.1.json",
+    "gameplay/species/profiles/trill_v0.1.json",
+    "gameplay/species/profiles/betazoid_v0.1.json",
+    "gameplay/species/profiles/changeling_v0.1.json",
+    "gameplay/species/profiles/vorta_v0.1.json",
+    "gameplay/species/profiles/jem_hadar_v0.1.json"
+  ],
+  "academy_scope": {
+    "year1": {
+      "course_id": "FED-401",
+      "teach": [
+        "especie_cultura_ciudadania_personalidad_separadas",
+        "fundadores_no_comparten_una_cultura_unica",
+        "no_antropocentrismo"
+      ]
+    },
+    "year2": {
+      "course_id": "XEN-302",
+      "teach": [
+        "founding_species_operational_interpretation",
+        "major_species_operational_interpretation",
+        "telepathy_privacy_and_consent",
+        "joined_identity_and_memory_limits",
+        "dominion_hierarchy_context",
+        "translation_and_first_contact_application"
+      ]
+    },
+    "later_years": {
+      "rule": "Las especializaciones reutilizan únicamente los aspectos necesarios para su función profesional: Medicina, Mando, Seguridad, Comunicaciones, Ciencia/Sensores, Operaciones e Ingeniería."
+    }
+  },
+  "profiles": {
+    "vulcan": {
+      "operational_takeaways": [
+        "El control emocional y la lógica son disciplinas culturales; no significan ausencia de emociones.",
+        "La telepatía/mind meld no equivale a omnisciencia.",
+        "La privacidad médica o telepática no desaparece por especie."
+      ],
+      "common_misread": "Interpretar contención como indiferencia o asumir que todo vulcano actuará igual."
+    },
+    "andorian": {
+      "operational_takeaways": [
+        "La directividad o el desafío pueden formar parte del contexto cultural sin significar hostilidad inmediata.",
+        "Las tradiciones marciales no convierten a todo individuo en guerrero."
+      ],
+      "common_misread": "Escalar una interacción por interpretar directividad como agresión automática."
+    },
+    "aenar": {
+      "operational_takeaways": [
+        "La ceguera no implica incapacidad funcional.",
+        "La telepatía está sujeta a límites y a una fuerte norma cultural de consentimiento.",
+        "La identidad Aenar es distinta de la Andoriana mayoritaria."
+      ],
+      "common_misread": "Tratar a un Aenar como dependiente o asumir acceso mental ilimitado."
+    },
+    "tellarite": {
+      "operational_takeaways": [
+        "Discusión, queja o desafío verbal pueden ser formas convencionales de interacción.",
+        "Una frase áspera no demuestra hostilidad por sí sola."
+      ],
+      "common_misread": "Clasificar tono argumentativo como amenaza sin contexto."
+    },
+    "klingon": {
+      "operational_takeaways": [
+        "Honor, Casas y rituales de desafío pueden ser contextualmente importantes.",
+        "No existe un único código de honor aplicado idénticamente por todos.",
+        "Especie no implica profesión guerrera ni lealtad imperial automática."
+      ],
+      "common_misread": "Responder como si toda interacción Klingon fuera un desafío de fuerza."
+    },
+    "romulan": {
+      "operational_takeaways": [
+        "La reserva informativa y la conciencia de seguridad pueden ser culturalmente salientes.",
+        "Reserva no es prueba de engaño.",
+        "Especie no implica Tal Shiar ni lealtad estatal."
+      ],
+      "common_misread": "Tratar toda ambigüedad como conspiración o espionaje."
+    },
+    "cardassian": {
+      "operational_takeaways": [
+        "Jerarquía, orden y deber familiar/estatal pueden ser marcos culturales relevantes.",
+        "La confianza institucional no prueba crueldad, culpabilidad o colaboración.",
+        "Especie no implica lealtad a la Unión."
+      ],
+      "common_misread": "Convertir historia de ocupación en culpabilidad individual automática."
+    },
+    "bajoran": {
+      "operational_takeaways": [
+        "Religión, soberanía y memoria de la ocupación pueden ser contextos importantes.",
+        "Lenguaje religioso no demuestra fe personal.",
+        "Especie no implica experiencia de resistencia ni trauma concreto."
+      ],
+      "common_misread": "Asignar ortodoxia, trauma o pasado resistente sin evidencia."
+    },
+    "ferengi": {
+      "operational_takeaways": [
+        "Comercio, contratos y negociación pueden ser marcos culturales frecuentes.",
+        "Interés comercial no demuestra engaño.",
+        "Especie no implica profesión mercantil ni avaricia."
+      ],
+      "common_misread": "Presuponer fraude o motivación económica en toda interacción."
+    },
+    "trill": {
+      "operational_takeaways": [
+        "Un Trill unido es una identidad vivida de host y simbionte, no un huésped anterior resucitado.",
+        "Recuerdos y habilidades previos siguen límites de acceso; no son conocimiento universal.",
+        "Estado de unión puede ser información médica/personal restringida."
+      ],
+      "common_misread": "Hablar al individuo actual como si fuera exactamente un huésped previo."
+    },
+    "betazoid": {
+      "operational_takeaways": [
+        "Telepatía y empatía varían entre individuos y tienen limitaciones.",
+        "Percibir emoción no equivale a conocer intención, memoria o verdad objetiva.",
+        "Privacidad y consentimiento siguen siendo relevantes."
+      ],
+      "common_misread": "Usar a un Betazoide como detector de mentiras infalible."
+    },
+    "dominion": {
+      "operational_takeaways": [
+        "Founder, Vorta y Jem'Hadar ocupan contextos institucionales distintos.",
+        "Jem'Hadar combina biología diseñada, dependencia logística y fuerte contexto militar.",
+        "Vorta pueden desempeñar administración, mando o diplomacia sin que la especie garantice un puesto concreto.",
+        "La apariencia copiada por un Cambiante no copia recuerdos, permisos ni relaciones."
+      ],
+      "common_misread": "Reducir el Dominion a una sola cultura o asumir capacidades/autoridad por apariencia."
+    }
+  },
+  "exclusions_from_core_exam": [
+    "listas exhaustivas de rituales",
+    "cronologías enciclopédicas",
+    "genealogías completas de Casas",
+    "detalles biológicos sin impacto operativo",
+    "trivia de episodios",
+    "nombres propios no necesarios para una decisión profesional"
+  ]
+}
