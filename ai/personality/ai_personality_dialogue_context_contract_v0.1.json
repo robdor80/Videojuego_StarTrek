@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "ai_personality_dialogue_context_contract",
+  "status": "FOUNDATION_FIXED",
+  "purpose": "Provide the dialogue model with a compact, authoritative personality expression block without granting it authority to rewrite personality or World State.",
+  "input_order": [
+    "speaker identity and role",
+    "speaker knowledge available for this scene",
+    "relationship state toward interlocutor",
+    "persistent personality core",
+    "species/culture expression modifiers",
+    "institutional/professional register",
+    "current physical/emotional state",
+    "scene objective and constraints"
+  ],
+  "compact_block_fields": [
+    "personality_profile_id",
+    "dominant_traits",
+    "secondary_traits",
+    "humor_style",
+    "social_signature",
+    "disagreement_style",
+    "stress_style",
+    "speech_preferences",
+    "relationship_specific_modifiers",
+    "current_state_modifiers",
+    "hard_do_not_break"
+  ],
+  "expression_rules": [
+    "Do not mention trait labels in dialogue.",
+    "Express personality statistically across conversation, not as a gimmick in every sentence.",
+    "The same personality should remain recognizable across calm, stress, duty and off-duty contexts.",
+    "Current state may amplify or suppress expression but not replace the core personality.",
+    "Culture affects how traits are expressed and interpreted; it does not overwrite them.",
+    "Avoid caricature: a dry character need not be dry in every line; a humorous character need not joke constantly.",
+    "Professional duty can temporarily increase formality without changing underlying personality.",
+    "Relationship history can make a guarded person warmer toward trusted individuals without globally changing trust speed."
+  ],
+  "ai_authority": {
+    "may_express_personality": true,
+    "may_select_wording_consistent_with_profile": true,
+    "may_create_new_core_trait": false,
+    "may_change_personality_profile_id": false,
+    "may_invent_personality_history": false,
+    "may_mutate_relationship_state": false,
+    "may_mutate_current_emotional_state": false
+  }
+}
