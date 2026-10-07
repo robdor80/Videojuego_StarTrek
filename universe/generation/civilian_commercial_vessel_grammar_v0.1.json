@@ -1,0 +1,219 @@
+{
+  "schema_version": "0.1.0",
+  "grammar_id": "civilian_commercial_vessel_grammar",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "parent_rules_ref": "universe/generation/procedural_starship_rules.json",
+  "principle": "Civilian traffic exists because economies, populations, services and routes create transport needs; it is not decorative random traffic.",
+  "role_families": {
+    "cargo_freighter": {
+      "needs": [
+        "cargo_demand",
+        "trade_route",
+        "facility_supply"
+      ],
+      "crew_pattern": "small_to_medium_professional",
+      "common_capabilities": [
+        "cargo_capacity",
+        "basic_defense_if_operator_context_allows",
+        "docking_or_transfer"
+      ]
+    },
+    "bulk_hauler": {
+      "needs": [
+        "high_volume_resource_flow"
+      ],
+      "crew_pattern": "small_relative_to_cargo_volume",
+      "common_capabilities": [
+        "bulk_storage",
+        "tug_or_transfer_interface"
+      ]
+    },
+    "passenger_liner": {
+      "needs": [
+        "population_movement",
+        "scheduled_route"
+      ],
+      "crew_pattern": "service_plus_navigation_engineering",
+      "common_capabilities": [
+        "passenger_accommodation",
+        "medical_basic",
+        "life_support_margin"
+      ]
+    },
+    "personnel_transport": {
+      "needs": [
+        "organization_or_colony_transfer"
+      ],
+      "crew_pattern": "transport_crew_plus_passengers",
+      "common_capabilities": [
+        "passenger_capacity",
+        "cargo_basic"
+      ]
+    },
+    "courier": {
+      "needs": [
+        "time_sensitive_messages_or_small_cargo"
+      ],
+      "crew_pattern": "very_small",
+      "common_capabilities": [
+        "speed_priority",
+        "limited_cargo"
+      ]
+    },
+    "tug": {
+      "needs": [
+        "shipyard",
+        "station",
+        "disabled_ship",
+        "construction"
+      ],
+      "crew_pattern": "small_specialist",
+      "common_capabilities": [
+        "tractor_or_towing",
+        "work_beams_if_valid"
+      ]
+    },
+    "salvage": {
+      "needs": [
+        "wreck_or_recovery_job"
+      ],
+      "crew_pattern": "small_specialist",
+      "common_capabilities": [
+        "recovery_equipment",
+        "cargo",
+        "sensors"
+      ]
+    },
+    "mining": {
+      "needs": [
+        "resource_site",
+        "extraction_economy"
+      ],
+      "crew_pattern": "industrial_specialist",
+      "common_capabilities": [
+        "extraction",
+        "cargo",
+        "survey"
+      ]
+    },
+    "survey": {
+      "needs": [
+        "civil_science",
+        "colony_development",
+        "resource_assessment"
+      ],
+      "crew_pattern": "science_technical",
+      "common_capabilities": [
+        "sensors",
+        "labs_if_design_supports"
+      ]
+    },
+    "medical": {
+      "needs": [
+        "patient_transfer",
+        "relief",
+        "regional_health_service"
+      ],
+      "crew_pattern": "medical_plus_operations",
+      "common_capabilities": [
+        "medical_capacity",
+        "transport_or_docking"
+      ]
+    },
+    "rescue": {
+      "needs": [
+        "traffic_density",
+        "hazard_region",
+        "facility_support"
+      ],
+      "crew_pattern": "small_specialist",
+      "common_capabilities": [
+        "medical_basic",
+        "tractor_or_recovery",
+        "sensors"
+      ]
+    },
+    "colony_transport": {
+      "needs": [
+        "colonization_or_resupply"
+      ],
+      "crew_pattern": "transport_crew_plus_colonists_or_cargo",
+      "common_capabilities": [
+        "high_endurance",
+        "cargo",
+        "passenger_support"
+      ]
+    },
+    "trader": {
+      "needs": [
+        "market_opportunity",
+        "route"
+      ],
+      "crew_pattern": "small_private_or_company",
+      "common_capabilities": [
+        "mixed_cargo",
+        "negotiation/comms",
+        "defense_if_legal"
+      ]
+    },
+    "private_civilian": {
+      "needs": [
+        "owner_goal",
+        "travel"
+      ],
+      "crew_pattern": "owner_or_small_crew",
+      "common_capabilities": [
+        "varies_by_design"
+      ]
+    },
+    "smuggler_when_valid": {
+      "needs": [
+        "illegal_or_sanctioned_market",
+        "concealment_opportunity"
+      ],
+      "crew_pattern": "small",
+      "common_capabilities": [
+        "cargo",
+        "evasion_or_concealment_if_design_supports"
+      ],
+      "guardrail": "Criminality is generated only from actual economic/legal context, never from species."
+    }
+  },
+  "generation_order": [
+    "resolve economic/social/logistics need",
+    "resolve operator/civilization and legal context",
+    "select role family",
+    "select valid design/technology for date/operator",
+    "derive cargo/passenger/service capacity",
+    "derive crew requirements",
+    "create route/activity and facility dependencies",
+    "materialize persistent ship_id if observed or simulation requires persistence"
+  ],
+  "identity_rules": [
+    "Company/private ownership, operator and flag/jurisdiction are separate state.",
+    "Cargo and passengers are live manifests, not class properties.",
+    "A civilian ship may change owner, route, cargo or employment without becoming a new entity.",
+    "Wear, shortages and maintenance arise from history/resources, not from civilian status."
+  ],
+  "traffic_rules": [
+    "Traffic volume derives from route/facility/economy state.",
+    "Ships may wait, divert or cancel when berths, fuel/resources, security or route conditions change.",
+    "Not every civilian vessel carries weapons; legality and operator technology decide.",
+    "Civilian vessels can become mission sources through shortages, accidents, disputes, rescue, medical or security needs."
+  ],
+  "ai_boundary": [
+    "AI cannot invent cargo, passengers, contraband, ownership or criminal intent.",
+    "AI sees vessel identity only to the extent sensors/records/knowledge allow.",
+    "A trader or freighter role does not imply Ferengi ownership."
+  ],
+  "visual_nap": [
+    "Civilian designs should express operator, role and era before current wear.",
+    "Cargo modules, passenger sections and work equipment require resolved design/configuration.",
+    "Avoid generic military silhouette for civilian roles unless the design is explicitly converted military surplus."
+  ],
+  "source_refs": [
+    "universe/generation/procedural_starship_rules.json",
+    "gameplay/logistics/",
+    "gameplay/facilities/facility_traffic_state.json"
+  ]
+}
