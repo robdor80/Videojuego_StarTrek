@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.1",
+  "schema_version": "1.1.0",
   "course_id": "FED-401",
   "title_es": "Federación: fundamentos políticos y sociales",
   "status": "unit_design_complete",
@@ -70,9 +70,11 @@
       "core_content_es": [
         "diversidad cultural",
         "no asumir normas humanas como universales",
+        "especie ≠ cultura ≠ ciudadanía ≠ personalidad",
+        "fundadores como sociedades distintas",
         "respeto y cooperación"
       ],
-      "practice_es": "Comparar dos respuestas posibles a una diferencia cultural.",
+      "practice_es": "Comparar respuestas profesionales ante diferencias culturales entre sociedades fundadoras sin convertirlas en estereotipos.",
       "assessment_es": "Evaluación de criterio."
     },
     {
@@ -108,7 +110,9 @@
     "gameplay/careers/academy_path/evaluation_model.json",
     "gameplay/careers/academy_path/academy_era_profiles.json",
     "lore/federation/government/federation_government.json",
-    "lore/federation/member_worlds/founding_members.json"
+    "lore/federation/member_worlds/founding_members.json",
+    "gameplay/careers/academy_path/cultural_operations_reference_v0.1.json",
+    "gameplay/species/culture_socialization_contract.json"
   ],
   "source_ref_policy": "Internal validated lore/gameplay references. Course source refs constrain factual content; GAME_ADDITION pedagogy remains explicit."
 }
