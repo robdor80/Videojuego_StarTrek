@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1.0",
+  "profile_set_id": "romulan_shipboard_life_profiles",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "operator_family": "romulan_military",
+  "contract_ref": "gameplay/ship_operations/shipboard_habitability_profile_contract_v0.1.json",
+  "doctrine": {
+    "canon_shift_pattern": "UNSPECIFIED",
+    "simulation_default": "continuous_coverage_with_operator_local_watch_labels",
+    "preferred_pattern": "custom",
+    "default_equivalent_watch_count": 3,
+    "note": "Watch structure is a GAME_ADDITION where canon is silent. Security compartmentalization affects access/briefing, not personality."
+  },
+  "profiles": {
+    "bird_of_prey_2260s": {
+      "life_profile_id": "romulan_bop_2260s_life",
+      "class_or_configuration_ref": "romulan_bird_of_prey_2260s",
+      "habitability_tier": "austere",
+      "privacy_level": "low",
+      "social_density": "high",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": null,
+        "type": "unknown",
+        "confidence": "not_locked"
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.34,
+          "watch_2": 0.31,
+          "watch_3": 0.3,
+          "relief_or_float": 0.05
+        },
+        "routine_day_staff_bias": "low",
+        "emergency_recall_intensity": "very_high"
+      },
+      "quarters_model": [
+        "compact military accommodation; exact arrangement not locked"
+      ],
+      "meal_model": "military communal/private food access according to configuration",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "sensor_and_cloak_readiness",
+        "maintenance",
+        "security",
+        "mission_briefing"
+      ],
+      "life_character": "Border warship where cloak/sensor readiness and a finite crew create repeated interaction; mission secrecy does not imply personal isolation.",
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR",
+        "MA_ROMULAN"
+      ]
+    },
+    "dderidex": {
+      "life_profile_id": "romulan_dderidex_life",
+      "class_or_configuration_ref": "dderidex",
+      "habitability_tier": "standard",
+      "privacy_level": "medium",
+      "social_density": "medium_low",
+      "family_civilian_policy": "none_normal_operations",
+      "crew_reference": {
+        "value": 1500,
+        "type": "technical_secondary_reference",
+        "confidence": "medium",
+        "source_refs": [
+          "MA_DDERIDEX_CLASS"
+        ]
+      },
+      "watch_guidance": {
+        "preferred_pattern": "custom_three_watch_equivalent",
+        "allowed_patterns": [
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "watch_1": 0.35,
+          "watch_2": 0.31,
+          "watch_3": 0.29,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": {
+          "crew": 1500,
+          "watch_1": 525,
+          "watch_2": 465,
+          "watch_3": 435,
+          "relief_or_float": 75,
+          "note": "simulation example using technical complement reference"
+        },
+        "routine_day_staff_bias": "moderate command/intelligence/maintenance depending mission",
+        "emergency_recall_intensity": "high"
+      },
+      "quarters_model": [
+        "large military capital ship permits more compartmentalized accommodation; exact comfort/layout not locked"
+      ],
+      "meal_model": "multiple crew-service areas inferred by scale but exact rooms require interior profile/reference",
+      "recreation_capabilities": [
+        "common_room",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "maintenance",
+        "security_clearance_briefings",
+        "training",
+        "mission_analysis",
+        "on_call"
+      ],
+      "life_character": "Very large military ship. Daily life is less socially intimate than on small craft; access compartmentalization and role separation matter more than universal personal familiarity.",
+      "source_refs": [
+        "MA_DDERIDEX_CLASS"
+      ]
+    }
+  }
+}
