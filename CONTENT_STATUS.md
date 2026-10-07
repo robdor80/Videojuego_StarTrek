@@ -69,7 +69,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Universal pip insignia | ✅ COMPLETE | TNG-style project standard across all eras. |
 | Uniform division colors | ✅ COMPLETE | Era-aware baseline fixed. |
 | Departments, positions and duty stations | ✅ COMPLETE | Core model and era-aware baseline established. |
-| Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom model plus class/configuration-specific generated watches, relief/on-call pools, handoffs, off-watch obligations and individual schedule integration. |
+| Duty shifts / watches | ✅ COMPLETE | Flexible 3/4/custom model plus class/configuration-specific generated watches, relief/on-call pools, handoffs, off-watch obligations and individual schedule integration. When the player is captain, generated watch policy is reviewable/changeable/delegable command policy. |
 | Command succession / acting command | ✅ COMPLETE | CO → XO → second officer → qualified designated successor. |
 | Qualifications, regulations, protocols and Prime Directive | ✅ COMPLETE | Command qualification, Prime Directive, medical authority and classified-directive model established for baseline scope. |
 | Assignments, promotions, commendations and discipline | ✅ COMPLETE | Career-event baseline, service record and disciplinary consequences established. |
@@ -149,7 +149,7 @@ Control documents:
 - `docs/roadmap/shipboard_life_and_procedural_starship_generation_status_v0.1.json`
 
 Current baseline:
-- **12 / 12 packages COMPLETE**;
+- **15 / 15 packages COMPLETE**;
 - Starfleet class/configuration life profiles;
 - Klingon, Romulan and Cardassian class life profiles;
 - procedural civilian design and life profiles;
@@ -158,7 +158,10 @@ Current baseline:
 - constrained off-duty life from actual facilities and schedules;
 - source-confidence-aware staffing guidance;
 - causal persistent ship-generation pipeline;
-- deterministic reference generators and locked Oberth fixture.
+- deterministic reference generators and locked Oberth fixture;
+- player-captain authority over captain-owned automated decisions;
+- manual / proposal-with-approval / delegated-autonomous command modes;
+- mandatory registry for future automated command decisions.
 
 **Runtime boundary:** content/contracts/reference implementation are complete for v0.1, but authoritative live World State, schedule arbitration and off-screen catch-up remain dependent on CoreRPG 4.5+.
 
