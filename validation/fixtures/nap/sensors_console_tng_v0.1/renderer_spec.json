@@ -1,0 +1,47 @@
+{
+  "schema_version": "0.1.0",
+  "renderer_id": "sensor_console_tng_fixture_renderer_spec",
+  "deterministic": true,
+  "canvas": {
+    "width": 320,
+    "height": 180
+  },
+  "design_intent": "Minimal geometric technical fixture representing the approved three-panel Sensors interaction model; not production art.",
+  "layout": {
+    "header": true,
+    "left_primary_navigation": {
+      "button_count": 10,
+      "selected_index": 3
+    },
+    "center_workspace": {
+      "mode": "contacts",
+      "contact_rows": 4,
+      "detail_panel": true,
+      "context_action_buttons": 3
+    },
+    "right_persistent_status": {
+      "cards": 6,
+      "alert_footer": true
+    }
+  },
+  "fixture_values": {
+    "selected_workspace": "contacts",
+    "contact_confidences": [
+      62,
+      91,
+      47,
+      99
+    ],
+    "power_percent": 74,
+    "interference": "moderate",
+    "active_operations": 2,
+    "tracking_capacity": "4/8"
+  },
+  "rendering_rules": [
+    "No fixture value becomes World State.",
+    "No hidden identity is displayed.",
+    "One workspace visible at a time.",
+    "Persistent status remains visible.",
+    "Colors/shapes are test presentation only and may be replaced by production art."
+  ]
+}
