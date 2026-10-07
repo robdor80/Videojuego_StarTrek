@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "world_profile_id": "qonos_depth",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity": {
+    "system_id": "qonos_system",
+    "planet_id": "qonos",
+    "display_name_es": "Qo'noS",
+    "world_type": "inhabited_class_m_planet",
+    "native_species_refs": [
+      "klingon"
+    ],
+    "polity_ref": "klingon_empire",
+    "capital_world": true
+  },
+  "orbital_context": {
+    "moon_refs": [
+      "praxis"
+    ],
+    "praxis_timeline": {
+      "2293": "destroyed in retained Prime history only if campaign start is after event",
+      "before_2293": "inhabited/industrial moon and major energy-production facility",
+      "after_event": "absence/debris/consequences must be historical World State, not generic scenery"
+    }
+  },
+  "bulk_physics": {
+    "mass": null,
+    "radius": null,
+    "surface_gravity": null,
+    "rotation_period": null,
+    "orbital_period": null
+  },
+  "atmosphere": {
+    "class_m_habitable": true,
+    "exact_composition": null
+  },
+  "hydrosphere": {
+    "global_detail": null
+  },
+  "geology_topography": {
+    "known": [
+      "large cave systems",
+      "subterranean volcanic context"
+    ],
+    "global_map": "unknown"
+  },
+  "climate_refs": [
+    "regional climate not globally locked"
+  ],
+  "biosphere_ref": "qonos_biosphere",
+  "region_refs": [
+    "First City",
+    "Great Hall/High Council context",
+    "cave/volcanic regions",
+    "other locations only when sourced"
+  ],
+  "population_culture_refs": [
+    "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+  ],
+  "institutional_refs": [
+    "gameplay/organizations/profiles/KLINGON_EMPIRE_ORGANIZATIONS_v0.1.json"
+  ],
+  "gameplay_hooks": [
+    "Imperial_politics",
+    "Great_Houses",
+    "military_traffic",
+    "diplomacy",
+    "ritual/cultural_visits",
+    "Praxis_crisis_by_date",
+    "industrial/logistics"
+  ],
+  "temporal_rules": [
+    "Federation-Klingon relation state is campaign/date dependent.",
+    "Praxis destruction is not applied before 2293 and is not skipped when campaign starts after retained event.",
+    "Future political canon after campaign start is not inevitable."
+  ],
+  "ai_boundary": [
+    "Klingon homeworld does not mean every encountered NPC is warrior/military.",
+    "AI cannot invent House authority or access to High Council.",
+    "Praxis status must resolve by date/history."
+  ],
+  "visual_nap": [
+    "First City/Great Hall and Klingon architecture should be era-aware",
+    "caves/volcanic geology where region supports",
+    "avoid making entire planet a battlefield"
+  ],
+  "unknowns": [
+    "exact planetary science",
+    "global terrain map",
+    "population in retained playable years"
+  ],
+  "provenance": [
+    "MA_QONOS",
+    "MA_PRAXIS",
+    "ST_OFFICIAL_QONOS_ENCOUNTERS",
+    "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+    "ST6_THE_UNDISCOVERED_COUNTRY"
+  ]
+}
