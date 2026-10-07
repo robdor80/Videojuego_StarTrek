@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "starfleet_organization_profile",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "organization_id": "starfleet",
+  "organization_type": "military_or_service",
+  "display_name": "Flota Estelar",
+  "parent_polity_ref": "united_federation_of_planets",
+  "civil_authority_ref": "federation_civil_government",
+  "contract_ref": "gameplay/organizations/organization_runtime_contract.json",
+  "command_levels_ref": "lore/federation/starfleet/organization/command_levels.json",
+  "divisions_departments_ref": "lore/federation/starfleet/departments/divisions_and_departments.json",
+  "ranks_ref": "lore/federation/starfleet/ranks/officer_ranks.json",
+  "positions_ref": "lore/federation/starfleet/positions/positions.json",
+  "qualifications_ref": "lore/federation/starfleet/qualifications/command_qualification.json",
+  "suborganizations": [
+    {
+      "organization_id": "starfleet_command",
+      "organization_type": "military_or_service",
+      "role": "top_operational_command"
+    },
+    {
+      "organization_id": "starfleet_academy",
+      "organization_type": "educational",
+      "role": "officer/cadet education and training"
+    },
+    {
+      "organization_id": "starfleet_sector_commands",
+      "organization_type": "military_or_service",
+      "role": "sector-level coordination; concrete instances generated/defined by era and need"
+    },
+    {
+      "organization_id": "starfleet_units",
+      "organization_type": "military_or_service",
+      "role": "ships, stations, bases and installations as command units"
+    }
+  ],
+  "authority_rules": [
+    "Rank and position are separate.",
+    "Command authority comes from valid position, assignment, qualification and succession context.",
+    "A uniform does not grant unrestricted authority.",
+    "Academy graduation creates qualification/service continuity but not a guaranteed desired posting.",
+    "Starfleet service does not replace citizenship or culture."
+  ],
+  "career_interfaces": [
+    "academy",
+    "assignment",
+    "transfer",
+    "promotion",
+    "discipline",
+    "commendation",
+    "retirement"
+  ],
+  "ai_guardrails": [
+    "Do not promote, transfer or assign without authoritative event/state.",
+    "Do not let social trust substitute for command authority.",
+    "Do not invent clearance from rank alone.",
+    "Do not treat Starfleet as the Federation government."
+  ],
+  "provenance_refs": [
+    "lore/federation/starfleet/organization/command_levels.json",
+    "lore/federation/starfleet/departments/divisions_and_departments.json",
+    "gameplay/careers/academy_path/academy_state.json"
+  ]
+}
