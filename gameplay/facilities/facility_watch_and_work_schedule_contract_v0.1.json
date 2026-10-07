@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "facility_watch_and_work_schedule_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Facilities combine continuous operational watches with day/peak work, tenancy hours and resident life. A station is not staffed as if every person were a starship watchstander.",
+  "starfleet": {
+    "supported_patterns": [
+      "three_shift",
+      "four_shift",
+      "custom"
+    ],
+    "three_shift": {
+      "nominal_hours": 8,
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma"
+      ]
+    },
+    "four_shift": {
+      "nominal_hours": 6,
+      "labels": [
+        "alpha",
+        "beta",
+        "gamma",
+        "delta"
+      ]
+    },
+    "exact_anchor": "INSTANCE_POLICY",
+    "source_basis": [
+      "MA_DUTY_SHIFT",
+      "TNG_CHAIN_OF_COMMAND_PART_I"
+    ],
+    "rule": "Use only for operator duty functions requiring shift coverage; shops, research projects and civil services may have separate schedules."
+  },
+  "alien_operator_rule": "Where canon does not establish watch terminology, use operator-local custom watch identifiers and never claim Starfleet labels as canon.",
+  "staffing_modes": {
+    "continuous_watch": [
+      "traffic_control",
+      "power_engineering",
+      "security_response",
+      "medical_readiness",
+      "communications",
+      "critical_industrial_control",
+      "command_duty_officer"
+    ],
+    "peak_or_day_staff": [
+      "administration",
+      "research_projects",
+      "major_maintenance",
+      "construction",
+      "education",
+      "business_services",
+      "diplomatic_offices"
+    ],
+    "on_call": [
+      "specialist_engineering",
+      "medical_specialists",
+      "senior_command",
+      "hazard_response",
+      "IT/computer_specialists"
+    ]
+  },
+  "micro_outpost_rule": "Tiny stations may use automation + alternating active/on-call personnel rather than pretending to have three complete human teams.",
+  "resident_life_rule": "Permanent residents have personal schedules separate from station duty schedules.",
+  "visitor_rule": "Visitors and docked crews follow their own schedule/ship duty state and station access rules.",
+  "fatigue_rule": "Extended crisis staffing creates fatigue debt and service degradation; the generator may not silently produce fresh staff.",
+  "outputs": [
+    "watch_policy",
+    "continuous_post_rosters",
+    "peak_staff_schedule",
+    "on_call_roster",
+    "business_hours",
+    "resident_schedule_constraints",
+    "coverage_gaps"
+  ]
+}
