@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "contract_id": "captain_operational_decision_authority",
   "status": "FOUNDATION_FIXED",
   "principle": "When the player is the lawful commanding officer, automated ship-management decisions are defaults/proposals inside the captain's authority, not irrevocable outcomes.",
@@ -166,6 +166,17 @@
         "resource_commitment"
       ],
       "normal_delegate": "bridge_and_department_team"
+    },
+    "first_contact_policy": {
+      "captain_authority": "broad_discretion_within_Prime_Directive_mission_and_diplomatic_constraints",
+      "examples": [
+        "proceed_with_contact",
+        "delay_for_observation",
+        "limit_contact_to_authorized_representatives",
+        "abort_contact",
+        "respond_to_unavoidable_contact"
+      ],
+      "normal_delegate": "executive_officer_diplomatic_or_science_staff_for_preparation_and_execution"
     }
   },
   "protected_or_external_limits": [
@@ -206,6 +217,7 @@
   "source_refs": [
     "TNG_CHAIN_OF_COMMAND_PART_I",
     "lore/federation/starfleet/regulations/medical_command_authority.md",
-    "gameplay/orders/starfleet_mission_tasking_order.json"
+    "gameplay/orders/starfleet_mission_tasking_order.json",
+    "TNG_FIRST_CONTACT"
   ]
 }
