@@ -1,0 +1,35 @@
+{
+  "profile_id": "aenar_visual_profile",
+  "profile_type": "species",
+  "version": "0.1",
+  "status": "SOURCE_GROUNDED_FOUNDATION",
+  "species_id": "aenar",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_CHARACTER_PORTRAIT_VISUAL_BIBLE_v0.1"
+  ],
+  "morphology_rules": [
+    "Aenar are visually related to Andorians but remain a distinct profile.",
+    "Little or no skin/hair pigmentation is a defining presentation cue.",
+    "Two Andorian-related antennae remain primary persistent species morphology.",
+    "Antenna tip structure may include the reported funnel-tip indentation.",
+    "Blindness must be represented without turning every individual into an identical eye treatment."
+  ],
+  "identity_rules": [
+    "Antenna geometry and underlying face remain persistent individual identity.",
+    "Low-pigmentation presentation does not justify cloning one pale-blue/white face across the population.",
+    "Hair and clothing remain individual/cultural/organizational layers.",
+    "Any accessibility device or interface adaptation requires actual character/environment state."
+  ],
+  "forbidden": [
+    "treating Aenar as merely white Andorians",
+    "automatic closed-eye or opaque-eye stereotype without sourced individual state",
+    "automatic Starfleet uniform",
+    "telepathy visualized as generic glowing psychic effect by default",
+    "pacifism encoded as a fixed facial expression"
+  ],
+  "source_refs": [
+    "ST_OFFICIAL_AENAR_101_2022",
+    "MA_AENAR"
+  ]
+}
