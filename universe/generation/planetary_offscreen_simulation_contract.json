@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "planetary_offscreen_simulation",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "domains": [
+    "environment",
+    "population",
+    "infrastructure",
+    "economy",
+    "politics",
+    "traffic",
+    "public_services",
+    "conflict",
+    "major_projects"
+  ],
+  "rules": [
+    "Planetary simulation uses domain-specific LOD rather than simulating every individual at full fidelity.",
+    "Population totals, major settlements, infrastructure and political state remain conserved/traceable.",
+    "Routine changes may be aggregated; migrations, disasters, regime changes, wars, major construction and mass-casualty events require explicit records.",
+    "Environmental state evolves causally from prior state.",
+    "Off-screen economy and logistics cannot create or destroy critical resources without modeled causes.",
+    "When a persistent individual becomes relevant, materialization must be compatible with aggregated population history."
+  ]
+}
