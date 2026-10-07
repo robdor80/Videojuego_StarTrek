@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "tellarite_argumentative_social_traditions",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "scope": "broad_tellarite_interaction_context_not_species_lock",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "tellarite",
+    "automatic_attachment_by_species": false,
+    "principle": "Argumentative social norms can be meaningful without making every Tellarite angry, hostile or identical."
+  },
+  "values_and_norms": [
+    {
+      "norm": "argument_and_debate_can_be_positive_social_engagement",
+      "strength": "strong_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "complaint_can_be_conventional_opening_or_engagement",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm": "verbal_challenge_can_be_socially_normal",
+      "strength": "common_norm",
+      "evidence_state": "screen_canon_or_official_supported"
+    }
+  ],
+  "communication_and_conflict": {
+    "possible_norms": [
+      "argument",
+      "complaint",
+      "verbal challenge",
+      "debate"
+    ],
+    "misread_risks": [
+      "Insult may be conventional engagement rather than escalation.",
+      "Complaint may be participation rather than refusal.",
+      "Strong disagreement does not automatically equal personal hostility."
+    ],
+    "interpretation_rule": "Measure hostility from context, consequences, explicit threats and relationship state—not sharp wording alone."
+  },
+  "authority_and_status": {
+    "universal_structure": null,
+    "rule": "Do not invent titles, guilds, clans or political offices from argumentative style."
+  },
+  "privacy_and_intimacy": {
+    "universal_rule": null
+  },
+  "family_kinship_and_household": {
+    "universal_structure": null,
+    "rule": "No Tellarite marriage, household or inheritance model is locked without sources."
+  },
+  "education_and_socialization": {
+    "possible_norm": "Debate competence may be socially valued.",
+    "exact_system_status": "not_locked"
+  },
+  "work_service_and_profession": {
+    "rule": "Argument skill does not imply diplomacy, law, trade or any profession."
+  },
+  "hospitality_food_and_daily_life": {
+    "universal_rules": null
+  },
+  "religion_philosophy_or_worldview": {
+    "universal_model": null
+  },
+  "mourning_death_and_legacy": {
+    "universal_protocol": null
+  },
+  "cross_cultural_interaction": {
+    "common_misread": "anger_or_hostility",
+    "professional_response": "Treat sharp debate as context-sensitive; verify actual threat, refusal, offense or escalation."
+  },
+  "internal_variation": {
+    "required": true,
+    "examples": [
+      "individual temperament",
+      "profession",
+      "regional/family culture",
+      "offworld upbringing",
+      "Federation institutional socialization"
+    ]
+  },
+  "era_variation": {
+    "required": true
+  },
+  "gameplay_hooks": [
+    "tone_classifier_cultural_override",
+    "negotiation_without_false_hostility",
+    "debate_as_engagement",
+    "relationship_change_requires_actual_event_not_insult_wording"
+  ],
+  "ai_guardrails": [
+    "Do not write every Tellarite as permanently angry.",
+    "Do not escalate relationship state solely from conventional insult/complaint.",
+    "Do not infer profession or political role from debate style.",
+    "Do not invent family/religious/legal customs to fill empty domains."
+  ],
+  "unknowns": [
+    "family and household structure",
+    "marriage and inheritance rules",
+    "funerary practices",
+    "religious/philosophical institutions",
+    "regional subcultures",
+    "daily-life hospitality norms"
+  ],
+  "provenance": [
+    {
+      "source_id": "ENT_BABEL_ONE",
+      "confidence": "HIGH",
+      "claim_scope": "argument/complaint interaction style"
+    },
+    {
+      "source_id": "ENT_BOUNTY",
+      "confidence": "HIGH",
+      "claim_scope": "debate culture"
+    },
+    {
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "confidence": "HIGH",
+      "claim_scope": "Federation diplomatic participation"
+    },
+    {
+      "source_id": "MA_TELLARITE",
+      "confidence": "HIGH",
+      "claim_scope": "cultural cross-check"
+    }
+  ]
+}
