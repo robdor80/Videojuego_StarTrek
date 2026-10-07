@@ -1,0 +1,78 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "facility_residency_tenancy_and_visitor_model",
+  "status": "FOUNDATION_FIXED",
+  "categories": {
+    "operator_duty_staff": {
+      "persistent": true,
+      "counts_as_station_staff": true
+    },
+    "contractor_staff": {
+      "persistent_or_contract_term": true,
+      "counts_as_station_staff": "role-dependent"
+    },
+    "civilian_residents": {
+      "persistent": true,
+      "counts_as_station_staff": false
+    },
+    "dependents": {
+      "persistent": true,
+      "counts_as_station_staff": false
+    },
+    "business_tenants": {
+      "persistent_business_entity": true,
+      "counts_as_station_staff": false
+    },
+    "business_tenant_workers": {
+      "persistent_or_shift_worker": true,
+      "counts_as_station_staff": false
+    },
+    "diplomatic_missions": {
+      "persistent_or_temporary": true,
+      "counts_as_station_staff": false
+    },
+    "students": {
+      "persistent_or_term_based": true,
+      "counts_as_station_staff": false
+    },
+    "patients": {
+      "temporary_or_long_term": true,
+      "counts_as_station_staff": false
+    },
+    "detainees": {
+      "custody_state": true,
+      "counts_as_station_staff": false
+    },
+    "transient_visitors": {
+      "temporary": true,
+      "counts_as_station_staff": false
+    },
+    "docked_ship_crews": {
+      "belongs_to_ship": true,
+      "counts_as_station_staff": false
+    }
+  },
+  "tenancy_rules": [
+    "A business requires available commercial space, legal permission, demand and a persistent business entity.",
+    "Commercial space has finite capacity and rent/lease/assignment state where the economy model supports it.",
+    "A famous venue on one canonical station is not automatically cloned to same-design stations.",
+    "Business failure, relocation, ownership change and closure preserve history.",
+    "Open hours and worker shifts are business schedules, not station-wide watch policy."
+  ],
+  "resident_rules": [
+    "Families/dependents appear only when facility design, operator policy and mission permit long-term residency.",
+    "Permanent residents consume habitation, medical, food, education/recreation and evacuation capacity.",
+    "Large starbases may form neighborhoods/communities; micro-outposts may have no non-duty residents.",
+    "Population does not regenerate when player arrives."
+  ],
+  "visitor_rules": [
+    "Visitors require an arrival path, access/clearance state and a reason for presence.",
+    "Docking does not grant unrestricted station access.",
+    "Transient visitors leave according to itinerary/ship/service state.",
+    "Visitors do not become persistent residents merely because the player interacted with them."
+  ],
+  "ai_boundary": [
+    "AI cannot invent a shop, bartender, tenant, family or visitor to decorate a scene.",
+    "AI may describe only resolved residents/tenants/visitors or propose candidates for deterministic world validation."
+  ]
+}
