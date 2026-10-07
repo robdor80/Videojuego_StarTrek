@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "validation_pack_id": "planet_civilization_generation_invariants",
   "status": "design_level_tests_before_runtime_implementation",
   "cases": [
@@ -86,6 +86,31 @@
         "AI narration cannot add terrain, species, settlements, government or hazards absent from authoritative state",
         "unknown facts may be described as unknown"
       ]
+    },
+    {
+      "id": "civilization_detail_materializes_without_reroll",
+      "expected": [
+        "latent civilization identity predates contact",
+        "names/species/governments added deterministically",
+        "known prior facts remain compatible"
+      ]
+    },
+    {
+      "id": "first_contact_does_not_create_civilization",
+      "expected": [
+        "contact reads pre-existing civilization state",
+        "representatives consume real institutions/population",
+        "contact history appends"
+      ]
+    },
+    {
+      "id": "warp_threshold_not_auto_hail",
+      "expected": [
+        "warp event triggers readiness assessment",
+        "Prime Directive/representation are evaluated",
+        "captain decision remains explicit"
+      ]
     }
-  ]
+  ],
+  "first_contact_validation_ref": "validation/consistency/procedural_worlds_civilizations_first_contact_invariants_v0.1.json"
 }
