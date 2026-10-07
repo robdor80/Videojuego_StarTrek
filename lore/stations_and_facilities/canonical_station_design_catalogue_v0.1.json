@@ -1,0 +1,429 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "canonical_station_design_catalogue",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "identity_model_ref": "gameplay/facilities/facility_identity_model.json",
+  "reuse_policies": {
+    "broadly_reusable": "Multiple canon instances/design reuse; generator may select when date/operator/need/scale fit.",
+    "controlled_reuse": "Design is reusable but rare/specialized; generation requires strong matching need.",
+    "restricted_reuse": "Design/type exists but confirmed reuse evidence is limited; default generator does not multiply it without explicit world-development justification.",
+    "seeded_only": "Use for authored/canonical instances only."
+  },
+  "designs": [
+    {
+      "design_id": "starfleet_starbase_1_type",
+      "display_name": "Starbase 1-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2230,
+        "to_year": 2265,
+        "playable_profiles": [
+          "pike"
+        ]
+      },
+      "facility_types": [
+        "starbase",
+        "space_station"
+      ],
+      "scale": "major_complex",
+      "primary_roles": [
+        "major_fleet_support",
+        "inspection",
+        "upgrades",
+        "docking",
+        "habitation",
+        "command"
+      ],
+      "known_population_context": "80,000+ crew in 2250s context",
+      "family_residency_supported": true,
+      "reuse_policy": "controlled_reuse",
+      "constraints": [
+        "Major-complex threshold required.",
+        "Not a generic frontier stop.",
+        "Do not generate from player repair need."
+      ],
+      "source_refs": [
+        "MA_STARBASE_1_TYPE",
+        "ST_OFFICIAL_SNW_BROKEN_CIRCLE"
+      ]
+    },
+    {
+      "design_id": "starfleet_bavali_station_type",
+      "display_name": "Bavali Station-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_year": 2259,
+        "to_year": 2265,
+        "playable_profiles": [
+          "pike"
+        ]
+      },
+      "facility_types": [
+        "outpost",
+        "orbital_facility"
+      ],
+      "scale": "standard_station",
+      "primary_roles": [
+        "deuterium_refinery",
+        "frontier_logistics",
+        "strategic_range_extension"
+      ],
+      "reuse_policy": "restricted_reuse",
+      "constraints": [
+        "Requires deuterium-rich site and sustained strategic/exploration demand.",
+        "Construction/environmental consequences must be simulated."
+      ],
+      "source_refs": [
+        "MA_BAVALI_STATION"
+      ]
+    },
+    {
+      "design_id": "starfleet_starbase_6_type",
+      "display_name": "Starbase 6-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2260,
+        "to_year": 2293,
+        "playable_profiles": [
+          "kirk"
+        ]
+      },
+      "facility_types": [
+        "starbase"
+      ],
+      "scale": "standard_station",
+      "primary_roles": [
+        "regional_starship_support",
+        "docking",
+        "security",
+        "detention"
+      ],
+      "reuse_policy": "restricted_reuse",
+      "constraints": [
+        "Known design but limited confirmed instance reuse; do not spam procedural copies."
+      ],
+      "source_refs": [
+        "MA_STARBASE_6_TYPE",
+        "TOS_THE_ULTIMATE_COMPUTER"
+      ]
+    },
+    {
+      "design_id": "federation_starbase_25_type",
+      "display_name": "Starbase 25-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2260,
+        "to_year": 2378,
+        "playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "starbase"
+      ],
+      "scale": "starbase",
+      "primary_roles": [
+        "regional_hub",
+        "docking",
+        "conference",
+        "trade_and_social_services"
+      ],
+      "reuse_policy": "restricted_reuse",
+      "constraints": [
+        "Design existed by 2260s; detailed 2380s promenade/aviary amenities are not automatically backfilled into playable eras."
+      ],
+      "source_refs": [
+        "MA_STARBASE_25_TYPE"
+      ]
+    },
+    {
+      "design_id": "federation_regula_i_type",
+      "display_name": "Regula I-type",
+      "operator_families": [
+        "federation_civil",
+        "starfleet",
+        "compatible_member_worlds"
+      ],
+      "availability": {
+        "from_year": 2285,
+        "to_year": 2378,
+        "playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "research_station",
+        "starbase"
+      ],
+      "scale": "small_station",
+      "primary_roles": [
+        "scientific_research",
+        "classified_research",
+        "remote_laboratory"
+      ],
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Limited general ship-support compared with major starbases.",
+        "Research specialization and isolation can dominate site choice."
+      ],
+      "source_refs": [
+        "MA_REGULA_I_TYPE",
+        "ST2_WRATH_OF_KHAN",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    {
+      "design_id": "starfleet_spacedock_type",
+      "display_name": "Spacedock-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2280,
+        "to_year": 2378,
+        "playable_profiles": [
+          "kirk",
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "starbase",
+        "spacedock"
+      ],
+      "scale": "starbase",
+      "primary_roles": [
+        "multi_ship_docking",
+        "repair",
+        "regional_hub",
+        "fleet_support",
+        "personnel_support"
+      ],
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Extremely expensive fixed infrastructure.",
+        "Requires sustained regional/fleet demand.",
+        "Exact size/configuration varies by era/instance."
+      ],
+      "source_refs": [
+        "MA_SPACEDOCK_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION",
+        "MA_SPACEDOCK_GENERIC"
+      ]
+    },
+    {
+      "design_id": "starfleet_mckinley_type",
+      "display_name": "McKinley-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2360,
+        "to_year": 2378,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "drydock",
+        "shipyard"
+      ],
+      "scale": "small_station",
+      "primary_roles": [
+        "construction",
+        "refit",
+        "maintenance_layover"
+      ],
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Not a general-purpose city/starbase by default.",
+        "Requires shipyard/fleet-yard or major maintenance context."
+      ],
+      "source_refs": [
+        "MA_MCKINLEY_TYPE",
+        "TNG_FAMILY"
+      ]
+    },
+    {
+      "design_id": "federation_starbase_375_type",
+      "display_name": "Starbase 375-type",
+      "operator_families": [
+        "starfleet",
+        "federation_civil"
+      ],
+      "availability": {
+        "from_decade": 2300,
+        "to_year": 2378,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "starbase",
+        "research_station"
+      ],
+      "scale": "standard_station",
+      "primary_roles": [
+        "research",
+        "regional_support",
+        "fleet_staging_when_needed",
+        "docking"
+      ],
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Wartime staging is an assignment state, not inherent to every instance.",
+        "At least 11 docking bays in observed Starbase 375-type context do not imply identical live availability everywhere."
+      ],
+      "source_refs": [
+        "MA_STARBASE_375_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION",
+        "DS9_A_TIME_TO_STAND"
+      ]
+    },
+    {
+      "design_id": "starfleet_relay_station_47_type",
+      "display_name": "Relay Station 47-type",
+      "operator_families": [
+        "starfleet"
+      ],
+      "availability": {
+        "from_decade": 2360,
+        "to_year": 2378,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "communications_station",
+        "outpost"
+      ],
+      "scale": "micro_outpost",
+      "primary_roles": [
+        "subspace_communications_relay"
+      ],
+      "standard_crew_context": 2,
+      "smallcraft_context": "one Type 6 shuttle at Relay Station 47",
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Communication service only; not generic repair/resupply stop.",
+        "Very small resident staff."
+      ],
+      "source_refs": [
+        "MA_RELAY_47_TYPE",
+        "MA_RELAY_STATION_47",
+        "TNG_AQUIEL"
+      ]
+    },
+    {
+      "design_id": "cardassian_terok_nor_type",
+      "display_name": "Terok Nor-type",
+      "operator_families": [
+        "cardassian_military",
+        "bajoran_or_joint_operator_after_capture"
+      ],
+      "availability": {
+        "from_decade": 2340,
+        "to_year": 2378,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "space_station",
+        "orbital_facility"
+      ],
+      "scale": "standard_station",
+      "primary_roles": [
+        "ore_processing",
+        "orbital_docking",
+        "habitation",
+        "cargo_transfer",
+        "regional_control"
+      ],
+      "reuse_policy": "broadly_reusable",
+      "constraints": [
+        "Original Cardassian design persists through later operator changes.",
+        "Exact armament/services depend on individual refits."
+      ],
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ]
+    },
+    {
+      "design_id": "klingon_tygokor_orbital_facility",
+      "display_name": "Ty'Gokor orbital facility design family",
+      "operator_families": [
+        "klingon_imperial_military"
+      ],
+      "availability": {
+        "from_year": 2373,
+        "to_year": 2378,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "starbase",
+        "orbital_facility"
+      ],
+      "scale": "standard_station",
+      "primary_roles": [
+        "fortified_military_support",
+        "ship_docks",
+        "defense",
+        "regional_command"
+      ],
+      "reuse_policy": "controlled_reuse",
+      "constraints": [
+        "Military strategic sites only.",
+        "At least two same-design facilities at Ty'Gokor support family reuse; no invented formal class name."
+      ],
+      "source_refs": [
+        "MA_TYGOKOR_ORBITAL_FACILITY",
+        "DS9_APOCALYPSE_RISING"
+      ]
+    },
+    {
+      "design_id": "dominion_monac_type",
+      "display_name": "Monac-type",
+      "operator_families": [
+        "dominion",
+        "cardassian_union_under_dominion"
+      ],
+      "availability": {
+        "from_year": 2373,
+        "to_year": 2375,
+        "playable_profiles": [
+          "tng_ds9_voyager"
+        ]
+      },
+      "facility_types": [
+        "shipyard",
+        "orbital_facility"
+      ],
+      "scale": "starbase",
+      "primary_roles": [
+        "warship_construction",
+        "major_repair",
+        "war_industry"
+      ],
+      "reuse_policy": "controlled_reuse",
+      "constraints": [
+        "Dominion-war industrial context required.",
+        "High-value military target; strong logistics/security burden."
+      ],
+      "source_refs": [
+        "MA_MONAC_SHIPYARD"
+      ]
+    }
+  ]
+}
