@@ -1,0 +1,238 @@
+{
+  "profile_id": "star_trek_station_design_visual_profiles",
+  "profile_type": "facility_design_visual_collection",
+  "version": "0.1",
+  "status": "CONTENT_DEPTH_COMPLETE",
+  "authority_scope": "station_design_and_operator_visual_presentation",
+  "inherits": [
+    "STAR_TREK_GLOBAL_VISUAL_BIBLE_v0.1",
+    "STAR_TREK_INTERIOR_CONSOLE_FACILITY_VISUAL_BIBLE_v0.1"
+  ],
+  "rules": [
+    "Resolve function → scale → operator/era → design → individual facility state before visuals.",
+    "Canonical design silhouette/structure outranks generic operator style.",
+    "Captured/reoperated facilities keep physical origin design until explicit refit.",
+    "Docked ships, queue activity, construction scaffolds, damage and crowding are live-state overlays.",
+    "Procedural station visuals may not add services/modules absent from the resolved design."
+  ],
+  "profiles": {
+    "starfleet_starbase_1_type": {
+      "anchors": [
+        "very large 2250s Starfleet starbase",
+        "wide saucer-like base",
+        "perimeter docking context",
+        "vertical upper structural column",
+        "major habitation scale"
+      ],
+      "forbidden": [
+        "TNG LCARS/exterior language by default",
+        "small frontier-outpost scaling",
+        "generic mushroom Spacedock substitution"
+      ],
+      "source_refs": [
+        "MA_STARBASE_1_TYPE",
+        "ST_OFFICIAL_SNW_BROKEN_CIRCLE"
+      ]
+    },
+    "starfleet_bavali_station_type": {
+      "anchors": [
+        "industrial deuterium refinery/outpost",
+        "frontier construction/processing context",
+        "functional extraction infrastructure"
+      ],
+      "forbidden": [
+        "luxury hub styling",
+        "generic all-services starbase modules",
+        "refinery equipment without resource-site context"
+      ],
+      "source_refs": [
+        "MA_BAVALI_STATION"
+      ]
+    },
+    "starfleet_starbase_6_type": {
+      "anchors": [
+        "2260s Starfleet docking-ring station",
+        "multiple starship docking positions",
+        "period-appropriate central station massing"
+      ],
+      "forbidden": [
+        "late-24c LCARS-city visual language",
+        "Spacedock-type enclosed megabay substitution"
+      ],
+      "source_refs": [
+        "MA_STARBASE_6_TYPE"
+      ]
+    },
+    "federation_starbase_25_type": {
+      "anchors": [
+        "large long-lived Federation hub",
+        "docking-ring/citylike station context",
+        "era-sensitive configuration"
+      ],
+      "forbidden": [
+        "2381 promenade/aviary/ballroom details automatically backfilled to earlier dates",
+        "Spacedock-type silhouette substitution"
+      ],
+      "source_refs": [
+        "MA_STARBASE_25_TYPE"
+      ]
+    },
+    "federation_regula_i_type": {
+      "anchors": [
+        "functional modular scientific complex",
+        "small remote-research station scale",
+        "laboratory-first design"
+      ],
+      "forbidden": [
+        "major starbase city scale",
+        "heavy fleet dock appearance",
+        "generic weaponized fortress"
+      ],
+      "source_refs": [
+        "MA_REGULA_I_TYPE",
+        "ST2_WRATH_OF_KHAN"
+      ]
+    },
+    "starfleet_spacedock_type": {
+      "anchors": [
+        "massive mushroom-like upper enclosed docking structure",
+        "multiple large space doors",
+        "large internal starship bay",
+        "regional-hub scale"
+      ],
+      "forbidden": [
+        "single-ship open drydock treated as same physical design",
+        "same exact scale in every era/configuration",
+        "decorative extra docking capacity"
+      ],
+      "source_refs": [
+        "MA_SPACEDOCK_TYPE",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ]
+    },
+    "starfleet_mckinley_type": {
+      "anchors": [
+        "open framed starship construction/refit cradle",
+        "ship-sized maintenance/construction geometry",
+        "industrial rather than city-hub presentation"
+      ],
+      "forbidden": [
+        "enclosed Spacedock megabay",
+        "commercial promenade assumed",
+        "facility larger than supported project/site state"
+      ],
+      "source_refs": [
+        "MA_MCKINLEY_TYPE",
+        "TNG_FAMILY"
+      ]
+    },
+    "federation_starbase_375_type": {
+      "anchors": [
+        "orbital office-complex-derived Federation station silhouette",
+        "multiple docking-bay context",
+        "mid-24c regional/research hub"
+      ],
+      "forbidden": [
+        "wartime weapons/staging clutter unless campaign state supports",
+        "Spacedock-type substitution"
+      ],
+      "source_refs": [
+        "MA_STARBASE_375_TYPE"
+      ]
+    },
+    "starfleet_relay_station_47_type": {
+      "anchors": [
+        "small crew module",
+        "large antenna farm",
+        "solar-panel context",
+        "small operations core",
+        "single-shuttle scale"
+      ],
+      "forbidden": [
+        "large docking ring",
+        "trade promenade",
+        "repair docks",
+        "visual bustle inconsistent with two-person outpost"
+      ],
+      "source_refs": [
+        "MA_RELAY_47_TYPE",
+        "MA_RELAY_STATION_47"
+      ]
+    },
+    "cardassian_terok_nor_type": {
+      "anchors": [
+        "central core assembly",
+        "two concentric rings",
+        "crossover bridges",
+        "three sweeping pylons",
+        "Cardassian industrial/docking architecture"
+      ],
+      "forbidden": [
+        "Starfleet structural rebuild after operator change without major refit",
+        "generic circular station losing triradial identity"
+      ],
+      "source_refs": [
+        "MA_TEROK_NOR_TYPE"
+      ]
+    },
+    "klingon_tygokor_orbital_facility": {
+      "anchors": [
+        "armored Klingon orbital fortress design",
+        "multi-arm heavy structure",
+        "military dock/defense context"
+      ],
+      "forbidden": [
+        "invented formal class insignia",
+        "civilian trade-hub styling",
+        "random spikes disconnected from functional structure"
+      ],
+      "source_refs": [
+        "MA_TYGOKOR_ORBITAL_FACILITY"
+      ]
+    },
+    "dominion_monac_type": {
+      "anchors": [
+        "large orbital war-production shipyard",
+        "industrial construction geometry",
+        "Dominion/Cardassian wartime context"
+      ],
+      "forbidden": [
+        "civilian station amenities",
+        "decorative purple organic styling without reference",
+        "shipyard modules that do not serve construction"
+      ],
+      "source_refs": [
+        "MA_MONAC_SHIPYARD"
+      ]
+    },
+    "dominion_ketracel_white_facility": {
+      "anchors": [
+        "storage/distribution industrial facility",
+        "asteroid-integrated form when that site configuration is selected",
+        "high-security logistics"
+      ],
+      "forbidden": [
+        "one universal silhouette for all white facilities",
+        "Jem'Hadar ship styling copied directly into architecture",
+        "public trade-hub presentation"
+      ],
+      "source_refs": [
+        "MA_DOMINION_KETRACEL_FACILITY"
+      ]
+    },
+    "procedural_generic": {
+      "anchors": [
+        "function-first modules",
+        "operator/era design grammar",
+        "site-adapted structure",
+        "scale justified by need"
+      ],
+      "forbidden": [
+        "kitbash randomness",
+        "unearned megastructure scale",
+        "modules for services that do not exist",
+        "copying a famous canonical station as a procedural design"
+      ]
+    }
+  }
+}
