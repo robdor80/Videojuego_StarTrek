@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "civilization_latent_observed_materialized_pipeline",
+  "status": "FOUNDATION_FIXED",
+  "principle": "The civilization exists first; discovery changes knowledge and may force deterministic detail resolution without creating retroactive truth.",
+  "levels": {
+    "latent_world_truth": {
+      "required": [
+        "civilization_id",
+        "origin_world_ref",
+        "population_band",
+        "technology_profile_seed",
+        "warp_state",
+        "political_fragmentation_state",
+        "settlement_distribution_seed",
+        "economy_seed",
+        "culture_seed",
+        "language_seed",
+        "history_seed",
+        "contact_status_by_observer"
+      ],
+      "not_required": [
+        "leader_names",
+        "city_names",
+        "species_portrait",
+        "full_lexicon",
+        "individual_npcs"
+      ]
+    },
+    "observed_low_detail": {
+      "adds": [
+        "detectable_signatures",
+        "estimated_population",
+        "visible_infrastructure",
+        "observed_spaceflight",
+        "emission_languages_or_signal_structure",
+        "political_activity_estimates"
+      ],
+      "rule": "Observation can be wrong/uncertain; world truth remains separate."
+    },
+    "materialized_civilization": {
+      "adds": [
+        "self_names_when_known_or_generated",
+        "species_profiles",
+        "culture_profiles",
+        "language_profiles",
+        "government_entities",
+        "major_settlements",
+        "technology_profile",
+        "economy_profile",
+        "visual_profiles"
+      ],
+      "trigger_examples": [
+        "sustained observation",
+        "database ingestion",
+        "first-contact preparation",
+        "direct encounter"
+      ]
+    },
+    "materialized_individuals": {
+      "adds": [
+        "leader_or_representative_npcs",
+        "scientists",
+        "pilots",
+        "citizens",
+        "other relevant people"
+      ],
+      "rule": "Consume real population/institution slots through Tier C→B promotion."
+    }
+  },
+  "deterministic_domains": [
+    "species_biology",
+    "language",
+    "names",
+    "government",
+    "settlements",
+    "economy",
+    "visual_profile",
+    "representatives"
+  ],
+  "rules": [
+    "Materialization never changes previously observed facts unless the earlier observation was explicitly uncertain/wrong.",
+    "Unknown self-names remain unknown to the player even if internally materialized for deterministic persistence.",
+    "Materialization cannot increase population merely to provide NPCs.",
+    "Each generated sub-entity receives stable id and provenance.",
+    "Save/load and revisit never reroll materialized civilization detail.",
+    "A civilization can remain partially materialized indefinitely if gameplay never requires more detail."
+  ]
+}
