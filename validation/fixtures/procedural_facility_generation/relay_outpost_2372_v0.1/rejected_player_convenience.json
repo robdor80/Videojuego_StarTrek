@@ -1,0 +1,33 @@
+{
+  "fixture_id": "reject_player_repair_station_v0.1",
+  "generator_ref": "tools/generation/generate_facility_project.py",
+  "input": {
+    "campaign_seed": "facility_fixture_001",
+    "need_id": "need:player_repair_convenience",
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-01-01",
+    "operator": "starfleet",
+    "role": "repair_drydock",
+    "site_id": "site:player_current_system",
+    "site_type": "arbitrary_player_location",
+    "origin_trigger": "player_needs_repairs",
+    "need_strength": 100,
+    "strategic_value": 80,
+    "existing_coverage": 0,
+    "expected_need_years": 50,
+    "alternative_sufficiency": 0,
+    "site_advantage": 100,
+    "operator_capacity": 100,
+    "sustainment": 100,
+    "redundancy_need": 0,
+    "commit_construction": true,
+    "elapsed_construction_months": 200
+  },
+  "expected": {
+    "outcome": "NO_PERMANENT_FACILITY",
+    "facility_id": null,
+    "mandatory_rejection_reason": "prohibited_origin_trigger:player_needs_repairs",
+    "anti_convenience_rule": true
+  },
+  "assertion": "Even extreme numeric scores cannot override a prohibited player-convenience origin trigger."
+}
