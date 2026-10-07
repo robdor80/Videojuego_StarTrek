@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "trill_joining_state",
+  "classification": "GAME_ADDITION",
+  "identity_contract_ref": "universe/generation/persistent_entity_identity_contract.json",
+  "species_profile_ref": "gameplay/species/profiles/trill_v0.1.json",
+  "fields": {
+    "joined_character_id": null,
+    "current_host_character_id": null,
+    "symbiont_entity_id": null,
+    "joining_status": "unjoined",
+    "joined_at": null,
+    "separation_or_end_at": null,
+    "prior_host_refs": [],
+    "accessible_memory_refs": [],
+    "accessible_skill_refs": [],
+    "relationship_continuity_refs": [],
+    "medical_compatibility_state": "unknown",
+    "privacy_state": "restricted",
+    "knowledge_visibility_refs": []
+  },
+  "statuses": [
+    "unjoined",
+    "candidate_or_preparation",
+    "joined",
+    "medical_complication",
+    "separation_or_transfer_in_progress",
+    "ended"
+  ],
+  "rules": [
+    "Host and symbiont retain traceable pre-joining identity/history.",
+    "Joined lived identity is a persistent synthesis state, not the simple return of a previous host.",
+    "Previous-host memories and skills are available only when Core has made specific content accessible.",
+    "Joining does not grant omniscient access to all prior experience.",
+    "Previous relationships may affect the current joined character but do not automatically recreate identical relationship state.",
+    "Medical compatibility and joining state are private unless valid knowledge exists.",
+    "Joining/separation is an authoritative lifecycle/medical event and cannot be created by AI dialogue.",
+    "Save/load and LOD preserve host, symbiont and joining history."
+  ]
+}
