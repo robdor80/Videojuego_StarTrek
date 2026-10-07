@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "first_contact_universal_translator_bootstrap",
+  "status": "FOUNDATION_FIXED",
+  "parent_ref": "gameplay/languages/language_runtime_model.json",
+  "stages": [
+    "signal_segmentation",
+    "symbol_or_phoneme_detection",
+    "repetition_pattern_detection",
+    "candidate_semantic_mapping",
+    "literal_exchange",
+    "contextual_pragmatic_learning",
+    "functional_translation",
+    "high_confidence_translation"
+  ],
+  "outputs": [
+    "translation_state",
+    "confidence",
+    "known_lexical_domains",
+    "unresolved_ambiguities",
+    "metaphor_pragmatics_risk",
+    "specialist_review_required"
+  ],
+  "rules": [
+    "Unknown language can begin untranslated or analysis_required.",
+    "More samples and reciprocal interaction improve translation state causally.",
+    "Perfect grammar does not imply correct cultural pragmatics.",
+    "A civilization may use multiple languages; translating one does not expose all.",
+    "Writing-system decoding is separate from spoken translation.",
+    "Misunderstanding may occur without either side being irrational or deceptive.",
+    "Translation matrices persist and improve; they do not reroll between conversations."
+  ]
+}
