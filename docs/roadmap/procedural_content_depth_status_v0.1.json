@@ -1,13 +1,13 @@
 {
-  "schema_version": "0.1.4",
+  "schema_version": "0.1.5",
   "manifest_id": "procedural_content_depth_status",
   "plan_ref": "docs/roadmap/procedural_content_depth_plan_v0.1.md",
   "summary": {
     "total_packages": 63,
-    "complete": 58,
-    "partial": 1,
+    "complete": 63,
+    "partial": 0,
     "in_progress": 0,
-    "todo": 4
+    "todo": 0
   },
   "wave_summary": {
     "Wave A": {
@@ -36,9 +36,9 @@
     },
     "Wave E": {
       "total": 6,
-      "complete": 1,
-      "partial": 1,
-      "todo": 4
+      "complete": 6,
+      "partial": 0,
+      "todo": 0
     }
   },
   "packages": [
@@ -451,35 +451,35 @@
     {
       "package_id": "D059",
       "scope": "Major species visual profiles",
-      "status": "PARTIAL",
+      "status": "COMPLETE",
       "wave": "Wave E",
       "exit_condition": null
     },
     {
       "package_id": "D060",
       "scope": "Faction/organization visual profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave E",
       "exit_condition": null
     },
     {
       "package_id": "D061",
       "scope": "Era-specific ship/interior profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave E",
       "exit_condition": null
     },
     {
       "package_id": "D062",
       "scope": "Planet/environment profiles",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave E",
       "exit_condition": null
     },
     {
       "package_id": "D063",
       "scope": "Representative NAP fixture asset package",
-      "status": "TODO",
+      "status": "COMPLETE",
       "wave": "Wave E",
       "exit_condition": null
     }
