@@ -1,0 +1,64 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "facility_site_selection_contract",
+  "status": "FOUNDATION_FIXED",
+  "principle": "A station's site follows function. The generator does not place stations at arbitrary aesthetically pleasing coordinates.",
+  "site_factors": {
+    "orbital_planetary": [
+      "served_planet_or_moon",
+      "traffic_transfer",
+      "surface_access",
+      "orbital_stability",
+      "radiation_environment"
+    ],
+    "route_chokepoint": [
+      "route_centrality",
+      "junction_value",
+      "travel_time_savings",
+      "border_or_wormhole_context",
+      "traffic_density"
+    ],
+    "resource_site": [
+      "resource_location",
+      "processing_efficiency",
+      "hazard",
+      "cargo_export_route",
+      "worker_support"
+    ],
+    "border_security": [
+      "sensor_geometry",
+      "response_time",
+      "defensibility",
+      "communication_links",
+      "treaty_or_sovereignty_limits"
+    ],
+    "science": [
+      "unique_phenomenon",
+      "safe_observation_distance",
+      "instrument_geometry",
+      "contamination_or_interference_control"
+    ],
+    "communications": [
+      "coverage_gap",
+      "line_or_subspace_geometry",
+      "relay_chain_need",
+      "maintenance_access"
+    ],
+    "shipyard": [
+      "industrial_supply",
+      "workforce",
+      "large_orbit_space",
+      "parts_logistics",
+      "security",
+      "fleet_access"
+    ]
+  },
+  "rules": [
+    "Choose site after function and scale are resolved.",
+    "A location must outperform plausible alternatives or satisfy a unique constraint.",
+    "Hazardous sites may still win for science/strategy but must impose real maintenance/safety cost.",
+    "A planet with adequate surface infrastructure does not automatically need an orbital station.",
+    "A station at a route junction must serve enough sustained traffic or strategic function to justify fixed presence.",
+    "Player convenience is never a placement factor."
+  ]
+}
