@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1.0",
+  "registry_id": "automatic_command_decision_registry",
+  "status": "FOUNDATION_FIXED",
+  "purpose": "Ensure every engine-generated operational decision has an explicit command owner, delegation policy and captain-review path.",
+  "hard_rule": "No new automatic operational decision may be implemented without registering decision_domain, authority_owner, override_policy, delegation_policy and hard_constraints.",
+  "default_for_player_captain": {
+    "authority_owner": "commanding_officer",
+    "control_mode": "proposal_requires_approval",
+    "delegation_available": true,
+    "engine_role": "advisor_and_proposal_generator",
+    "note": "Individual domains may use delegated_autonomous by player preference or standing order."
+  },
+  "registered_domains": {
+    "watch_pattern": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "generate_best_fit_pattern",
+      "override_policy": "captain_may_accept_modify_replace",
+      "delegation_policy": "executive_officer",
+      "hard_constraints": [
+        "staffing",
+        "qualification",
+        "medical_fitness",
+        "physical_time"
+      ]
+    },
+    "watch_anchor_times": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "generate_instance_schedule",
+      "override_policy": "captain_may_change",
+      "delegation_policy": "executive_officer",
+      "hard_constraints": [
+        "coverage",
+        "rest_and_fatigue",
+        "handoff"
+      ]
+    },
+    "detailed_duty_roster": {
+      "authority_owner": "commanding_officer_policy_with_delegated_detail",
+      "engine_default": "generate_valid_roster",
+      "override_policy": "captain_may_direct_policy_or_specific_assignments_when_authority_allows",
+      "delegation_policy": "executive_officer_and_department_heads",
+      "hard_constraints": [
+        "qualification",
+        "medical_fitness",
+        "overlap",
+        "coverage"
+      ]
+    },
+    "training_schedule": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "generate_readiness_plan",
+      "override_policy": "captain_may_change_priority_frequency_timing",
+      "delegation_policy": "executive_officer_and_department_heads",
+      "hard_constraints": [
+        "mandatory_qualification_requirements",
+        "medical_limits"
+      ]
+    },
+    "drill_schedule": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "generate_readiness_drills",
+      "override_policy": "captain_may_change",
+      "delegation_policy": "executive_officer",
+      "hard_constraints": [
+        "mission_state",
+        "safety"
+      ]
+    },
+    "maintenance_priority": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "rank_by_safety_mission_readiness",
+      "override_policy": "captain_may_reprioritize_non_hard_constraint_work",
+      "delegation_policy": "chief_engineer",
+      "hard_constraints": [
+        "non_overrideable_safety_or_physics_when_declared"
+      ]
+    },
+    "alert_state": {
+      "authority_owner": "commanding_officer_or_valid_watch_authority",
+      "engine_default": "automatic_alert_possible",
+      "override_policy": "captain_may_change_when_rules_allow",
+      "delegation_policy": "officer_of_watch_under_standing_orders",
+      "hard_constraints": [
+        "automatic_safety_conditions",
+        "external_rules_if_any"
+      ]
+    },
+    "resource_priority": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "optimize_for_current_mission_and_readiness",
+      "override_policy": "captain_may_reprioritize",
+      "delegation_policy": "operations_or_relevant_department",
+      "hard_constraints": [
+        "available_resources",
+        "system_capability",
+        "declared_safety_limits"
+      ]
+    },
+    "shore_leave": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "propose_windows_from_mission_and_staffing",
+      "override_policy": "captain_may_authorize_suspend_stagger",
+      "delegation_policy": "executive_officer",
+      "hard_constraints": [
+        "mission",
+        "security",
+        "medical",
+        "external_port_rules"
+      ]
+    },
+    "security_posture": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "propose_from_threat_state",
+      "override_policy": "captain_may_change_inside_authority",
+      "delegation_policy": "security_chief",
+      "hard_constraints": [
+        "law",
+        "clearance_scope",
+        "physical_security_capability"
+      ]
+    },
+    "away_team_composition": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "propose_qualified_team",
+      "override_policy": "captain_may_select_or_change_members",
+      "delegation_policy": "executive_officer",
+      "hard_constraints": [
+        "qualification",
+        "medical_fitness",
+        "availability",
+        "mission_requirements"
+      ]
+    },
+    "passenger_civilian_safety": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "propose_muster_restriction_or_evacuation_policy",
+      "override_policy": "captain_may_change_operational_policy",
+      "delegation_policy": "executive_officer_or_operations",
+      "hard_constraints": [
+        "life_safety",
+        "law",
+        "physical_capacity"
+      ]
+    },
+    "department_priority": {
+      "authority_owner": "commanding_officer",
+      "engine_default": "propose_from_mission",
+      "override_policy": "captain_may_change",
+      "delegation_policy": "department_head",
+      "hard_constraints": [
+        "higher_order_constraints",
+        "capability"
+      ]
+    }
+  },
+  "future_domain_rule": [
+    "If authority_owner is commanding_officer and the player currently holds that lawful position, the UI/AI must expose the decision or its delegation state.",
+    "If the player delegates the domain, routine decisions may apply without repeated approval but remain reviewable.",
+    "If the decision belongs to a protected professional/external authority, captain review does not silently convert it into captain-owned authority.",
+    "Engine recommendation score never becomes authority."
+  ]
+}
