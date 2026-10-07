@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "changeling",
+  "display_name_es": "Cambiante",
+  "status": "CONTENT_DEPTH_BASELINE",
+  "baseline_refs": [
+    "gameplay/species/dominion_borg_profiles.json#changeling",
+    "gameplay/species/changeling_morph_state.json"
+  ],
+  "biology": {
+    "natural_state": "morphogenic_liquid",
+    "shapeshifting": true,
+    "periodic_regeneration_required": true,
+    "exact_regeneration_interval": "individual_and_source_contextual",
+    "form_mimicry": "subject_to_observation_skill_and_core_resolution"
+  },
+  "identity": {
+    "persistent_entity_id_required": true,
+    "copied_appearance_does_not_copy": [
+      "memories",
+      "clearance",
+      "skills",
+      "relationships",
+      "legal_identity"
+    ],
+    "current_form_is_state_not_identity": true
+  },
+  "culture_socialization": {
+    "great_link_culturally_central_for_founder_society": true,
+    "founder_identity_not_implied_for_every_context": true,
+    "dominion_loyalty_not_implied_for_every_individual_context": true
+  },
+  "gameplay_hooks": [
+    "shapechange",
+    "infiltration",
+    "identity_verification",
+    "regeneration",
+    "founder_authority"
+  ],
+  "ai_boundary": [
+    "Do not reveal a hidden Changeling without valid evidence.",
+    "Do not grant copied memories, passwords or authority from appearance.",
+    "Do not change form or regeneration state through dialogue alone."
+  ],
+  "provenance": [
+    {
+      "source_id": "MA_CHANGELING",
+      "confidence": "MEDIUM",
+      "claim_scope": "shapeshifting, natural state and regeneration"
+    },
+    {
+      "source_id": "MA_FOUNDER",
+      "confidence": "MEDIUM",
+      "claim_scope": "Founders and Dominion authority"
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "confidence": "HIGH",
+      "claim_scope": "Dominion hierarchy"
+    }
+  ]
+}
