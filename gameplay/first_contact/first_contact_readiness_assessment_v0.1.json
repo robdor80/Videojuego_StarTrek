@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "assessment_id": "first_contact_readiness_assessment",
+  "status": "FOUNDATION_FIXED",
+  "source_refs": [
+    "TNG_FIRST_CONTACT",
+    "ST_OFFICIAL_FIRST_CONTACT_PLAYLIST",
+    "ST_OFFICIAL_FIRST_CONTACTS_ACROSS_TREK"
+  ],
+  "inputs": [
+    "warp_state",
+    "prior_alien_exposure",
+    "public_awareness_of_extraterrestrial_life",
+    "government_representation_state",
+    "political_stability",
+    "active_internal_conflict",
+    "communication_readiness",
+    "language_analysis_state",
+    "cultural_observation_depth",
+    "risk_of_contact_destabilization",
+    "target_policy_toward_unknown_outsiders",
+    "Starfleet_mission_authority",
+    "Prime_Directive_assessment"
+  ],
+  "outputs": [
+    "contact_eligibility",
+    "recommended_contact_timing",
+    "recommended_contact_scope",
+    "representative_candidates",
+    "precontact_observation_needs",
+    "risk_flags",
+    "captain_decision_required"
+  ],
+  "eligibility": [
+    "not_eligible_normal_contact",
+    "observe_only",
+    "prepare_contact",
+    "limited_contact_possible",
+    "formal_contact_candidate",
+    "contact_required_by_mutual_encounter_or_exposure"
+  ],
+  "rules": [
+    "Warp threshold creates a First Contact candidate, not mandatory contact.",
+    "A civilization may be technologically eligible but socially/politically unready.",
+    "If outsiders are already publicly known, contamination analysis changes but non-interference remains relevant.",
+    "If multiple sovereign governments exist, representative scope must be explicit.",
+    "If accidental exposure occurs, assessment shifts to mitigation/controlled disclosure rather than pretending secrecy remains intact."
+  ]
+}
