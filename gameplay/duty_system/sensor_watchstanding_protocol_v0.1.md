@@ -161,3 +161,14 @@ La estación debe permitir una guardia auténticamente tranquila: relevo, compro
 ### UX final de contactos perdidos
 
 Los contactos perdidos no deben ocupar permanentemente la lista principal de contactos activos. Después de cualquier transición visual de pérdida, el contacto se archiva en un apartado consultable **CONTACTOS PERDIDOS**, con su última solución conocida, hora de pérdida y causa confirmada o no determinada. La lista principal queda reservada para contactos actualmente detectables. La Holocubierta puede mantener temporalmente una representación simplificada hasta la fase de UX final.
+
+
+## Regla de operabilidad de contactos perdidos
+
+Un contacto que ya no forma parte de la solución actual de sensores no puede recibir operaciones que requieran una detección presente. Esta regla se aplica de forma central en el Sensor Core y no depende de un botón concreto de la UI.
+
+Se bloquean, entre otras, las siguientes operaciones sobre un contacto perdido o fuera de rango: seguimiento nuevo, cambio de prioridad de seguimiento, seguimiento de firma, vigilancia de curso, actualización de posición/curso/velocidad/trayectoria, escaneo focalizado y marcado operativo activo.
+
+Sí se permiten operaciones sobre información ya registrada: consultar estado histórico, leer la última solución conocida y transferir datos almacenados. Una búsqueda o readquisición debe plantearse como operación específica de recuperación y solo puede tener éxito si las condiciones físicas/sensoriales lo permiten.
+
+La Computer debe responder explícitamente que la operación no está disponible; nunca debe aceptar silenciosamente una orden imposible sobre un contacto perdido.
