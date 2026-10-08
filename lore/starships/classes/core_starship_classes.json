@@ -294,6 +294,50 @@
         "MA_DEFIANT_CLASS",
         "MA_QUANTUM_TORPEDO"
       ]
+    },
+    {
+      "class_id": "sovereign",
+      "display_name": "Sovereign",
+      "operator": "starfleet",
+      "availability": {
+        "confirmed_active_by_year": 2373,
+        "retained_playable_profiles": [
+          "tng_ds9_voyager"
+        ],
+        "scope_note": "Late-24th-century feature-film extension explicitly admitted for class presence."
+      },
+      "classifications": [
+        "advanced_long_range_starship",
+        "explorer",
+        "capital_ship"
+      ],
+      "primary_gameplay_roles": [
+        "long_range_exploration",
+        "diplomacy",
+        "fleet_command",
+        "high_threat_response",
+        "strategic_presence"
+      ],
+      "capabilities": [
+        "warp_drive",
+        "impulse_drive",
+        "phaser_arrays",
+        "photon_torpedoes",
+        "quantum_torpedoes",
+        "deflector_shields",
+        "transporters",
+        "replicators",
+        "holodecks",
+        "advanced_sensor_suite"
+      ],
+      "notes": [
+        "Class presence is admitted as a deliberate late-24th-century scope extension.",
+        "Do not copy USS Enterprise-E individual damage, crew, mission history or exact loadout into generated Sovereign-class vessels."
+      ],
+      "source_ids": [
+        "STVIII_FIRST_CONTACT",
+        "MA_SOVEREIGN_CLASS"
+      ]
     }
   ]
 }
