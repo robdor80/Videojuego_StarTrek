@@ -143,6 +143,27 @@
         "historical_last_known_data_remains_queryable",
         "explicit_reacquisition_may_be_attempted_only_when_physically_possible"
       ]
+    },
+    {
+      "id": "SW-010",
+      "name": "Meaningful contact behavior change is reported without inventing hostility",
+      "given": [
+        "identified_non_hostile_contact_visible",
+        "contact_changes_course",
+        "contact_accelerates",
+        "relative_motion_becomes_approaching",
+        "closest_approach_becomes_operationally_significant",
+        "no_hostile_indicator_confirmed"
+      ],
+      "when": "next_passive_cycle_runs",
+      "expect": [
+        "significant_behavior_change_alert",
+        "new_course_reported",
+        "new_velocity_reported",
+        "closest_approach_reported",
+        "contact_may_become_high_operational_priority",
+        "no_hostile_claim"
+      ]
     }
   ]
 }
