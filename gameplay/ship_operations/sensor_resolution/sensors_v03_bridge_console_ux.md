@@ -14,6 +14,7 @@ La v0.3 deja de presentar Sensores como una superficie de Academia o ejercicio y
 - **Centro superior — Solución espacial**: dos visores simultáneos.
   - vista cenital: marcación del contacto seleccionado, línea de posición y flecha de curso;
   - vista de perfil: elevación positiva/negativa respecto al plano de la nave.
+- **Centro acción — Contact Action System**: bajo la solución espacial, máximo 8 controles dinámicos en rejilla 4×2, resueltos por el Core según el contacto seleccionado.
 - **Centro medio — Computadora / Puente**: últimas comunicaciones operativas sin scroll infinito.
 - **Centro inferior — Órdenes**: destino COMPUTADORA u OFICIAL AL MANDO, entrada por texto/voz y accesos rápidos.
 - **Derecha — Situación**: estado de sensores, guardia, contacto seleccionado, seguimiento y vigilancias.
@@ -39,7 +40,9 @@ Los blueprints futuros sustituirán las siluetas sin cambiar el contrato de dato
 - Solo se muestran comunicaciones recientes; el histórico completo permanece en registro.
 - La lista activa de contactos no incluye contactos perdidos una vez concluida su transición visual.
 - Las columnas laterales pueden usar scroll interno si el volumen de datos lo exige.
-- La selección de un contacto actualiza simultáneamente visor espacial, ficha de situación y acciones rápidas.
+- La selección de un contacto actualiza simultáneamente visor espacial, ficha de situación y acciones contextuales.
+- La botonera contextual oculta operaciones irrelevantes y puede deshabilitar las temporalmente imposibles indicando el motivo.
+- El control evolutivo de seguimiento ocupa un solo hueco: `SEGUIR` → `INTENSIFICAR / DETENER` → `ESTÁNDAR / DETENER`.
 
 ## Funcionalidad heredada
 
