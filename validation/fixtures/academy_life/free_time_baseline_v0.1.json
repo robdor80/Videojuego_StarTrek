@@ -1,0 +1,264 @@
+{
+  "fixture_id": "academy_free_time_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step6-fixture",
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "character_id": "cadet:00",
+        "is_player": true,
+        "species_id": "human",
+        "personality_recipe_id": "irrelevant",
+        "hobby_refs": [
+          "reading"
+        ],
+        "interest_refs": [
+          "history"
+        ],
+        "free_time_preference_refs": []
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "character_id": null,
+        "is_player": false,
+        "species_id": "vulcan",
+        "personality_recipe_id": "irrelevant",
+        "hobby_refs": [
+          "fitness"
+        ],
+        "interest_refs": [
+          "navigation"
+        ],
+        "free_time_preference_refs": []
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "character_id": null,
+        "is_player": false,
+        "species_id": "andorian",
+        "personality_recipe_id": "irrelevant",
+        "hobby_refs": [
+          "reading"
+        ],
+        "interest_refs": [
+          "history"
+        ],
+        "free_time_preference_refs": []
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "character_id": null,
+        "is_player": false,
+        "species_id": "tellarite",
+        "personality_recipe_id": "irrelevant",
+        "hobby_refs": [
+          "exploration"
+        ],
+        "interest_refs": [
+          "culture"
+        ],
+        "free_time_preference_refs": [
+          "city_leave"
+        ]
+      }
+    ],
+    "free_time_windows": [
+      {
+        "window_ref": "W-P0",
+        "population_slot_ref": "cadet4:00",
+        "day_index": 0,
+        "start_minute": 780,
+        "end_minute": 930,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W-N1",
+        "population_slot_ref": "cadet4:01",
+        "day_index": 0,
+        "start_minute": 780,
+        "end_minute": 930,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W-N2",
+        "population_slot_ref": "cadet4:02",
+        "day_index": 0,
+        "start_minute": 780,
+        "end_minute": 930,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W-N3",
+        "population_slot_ref": "cadet4:03",
+        "day_index": 1,
+        "start_minute": 600,
+        "end_minute": 900,
+        "start_location_ref": "cadet_quarters",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "library_study",
+        "minutes": 10
+      },
+      {
+        "from": "library_study",
+        "to": "cadet_quarters",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "athletics_area",
+        "minutes": 12
+      },
+      {
+        "from": "athletics_area",
+        "to": "cadet_quarters",
+        "minutes": 14
+      },
+      {
+        "from": "academic_core",
+        "to": "academy_main_grounds",
+        "minutes": 5
+      },
+      {
+        "from": "academy_main_grounds",
+        "to": "cadet_quarters",
+        "minutes": 10
+      },
+      {
+        "from": "cadet_quarters",
+        "to": "san_francisco_leave",
+        "minutes": 35
+      },
+      {
+        "from": "academic_core",
+        "to": "cadet_quarters",
+        "minutes": 10
+      }
+    ],
+    "locations": [
+      {
+        "location_ref": "library_study",
+        "capability_tags": [
+          "reading_or_terminal_access",
+          "personal_terminal_or_workspace"
+        ]
+      },
+      {
+        "location_ref": "athletics_area",
+        "capability_tags": [
+          "exercise_space"
+        ]
+      },
+      {
+        "location_ref": "academy_main_grounds",
+        "capability_tags": [
+          "outdoor_recreation",
+          "common_recreation_space"
+        ]
+      },
+      {
+        "location_ref": "cadet_quarters",
+        "capability_tags": [
+          "rest_space",
+          "private_personal_space",
+          "reading_or_terminal_access",
+          "personal_terminal_or_workspace"
+        ]
+      },
+      {
+        "location_ref": "san_francisco_leave",
+        "capability_tags": [
+          "off_campus_destination"
+        ]
+      }
+    ],
+    "activities": {
+      "reading_recreation": {
+        "family": "solitary_leisure",
+        "min_minutes": 30,
+        "max_minutes": 90,
+        "required_capabilities": [
+          "reading_or_terminal_access"
+        ],
+        "affinity_refs": [
+          "reading",
+          "history"
+        ],
+        "capacity": null
+      },
+      "physical_exercise": {
+        "family": "exercise",
+        "min_minutes": 30,
+        "max_minutes": 90,
+        "required_capabilities": [
+          "exercise_space"
+        ],
+        "affinity_refs": [
+          "fitness"
+        ],
+        "capacity": 1
+      },
+      "outdoor_walk_reflection": {
+        "family": "solitary_leisure",
+        "min_minutes": 20,
+        "max_minutes": 75,
+        "required_capabilities": [
+          "outdoor_recreation"
+        ],
+        "affinity_refs": [
+          "outdoors",
+          "reflection"
+        ],
+        "capacity": null
+      },
+      "quiet_rest": {
+        "family": "quiet_rest",
+        "min_minutes": 20,
+        "max_minutes": 90,
+        "required_capabilities": [
+          "rest_space"
+        ],
+        "affinity_refs": [
+          "quiet_time",
+          "rest"
+        ],
+        "capacity": null
+      },
+      "city_leave": {
+        "family": "shore_leave",
+        "min_minutes": 90,
+        "max_minutes": 180,
+        "required_capabilities": [
+          "off_campus_destination"
+        ],
+        "affinity_refs": [
+          "city_leave",
+          "exploration",
+          "culture"
+        ],
+        "requires_authorized_leave": true,
+        "capacity": null
+      }
+    },
+    "authorized_leave_slot_refs": [
+      "cadet4:03"
+    ],
+    "player_choice_requests": []
+  },
+  "expected": {
+    "player_auto_plan_count": 0,
+    "player_options_minimum": 1,
+    "npc_plan_count": 3,
+    "city_leave_slot": "cadet4:03",
+    "automatic_relationship_effect": "none",
+    "plan_truth_semantics": "intention_not_actual_execution"
+  }
+}

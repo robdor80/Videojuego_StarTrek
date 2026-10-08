@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1.0",
+  "catalogue_id": "academy_free_time_activity_catalog",
+  "status": "STEP_6_COMPLETE",
+  "principle": "Catalogue defines Academy leisure possibilities, not guaranteed facilities. Every activity still requires real matching location/capability state in the campaign.",
+  "activities": {
+    "quiet_rest": {
+      "family": "quiet_rest",
+      "min_minutes": 20,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "rest_space"
+      ],
+      "affinity_refs": [
+        "quiet_time",
+        "rest"
+      ],
+      "social_resolution": "none"
+    },
+    "private_hobby": {
+      "family": "solitary_leisure",
+      "min_minutes": 30,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "private_personal_space"
+      ],
+      "affinity_refs": [
+        "creative_hobby",
+        "personal_hobby"
+      ],
+      "social_resolution": "none"
+    },
+    "reading_recreation": {
+      "family": "solitary_leisure",
+      "min_minutes": 30,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "reading_or_terminal_access"
+      ],
+      "affinity_refs": [
+        "reading",
+        "history",
+        "literature",
+        "research_interest"
+      ],
+      "social_resolution": "none"
+    },
+    "physical_exercise": {
+      "family": "exercise",
+      "min_minutes": 30,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "exercise_space"
+      ],
+      "affinity_refs": [
+        "fitness",
+        "sport",
+        "martial_training_recreational"
+      ],
+      "social_resolution": "none"
+    },
+    "outdoor_walk_reflection": {
+      "family": "solitary_leisure",
+      "min_minutes": 20,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "outdoor_recreation"
+      ],
+      "affinity_refs": [
+        "outdoors",
+        "walking",
+        "reflection"
+      ],
+      "social_resolution": "none"
+    },
+    "common_space_recreation": {
+      "family": "recreation",
+      "min_minutes": 30,
+      "max_minutes": 120,
+      "required_capabilities": [
+        "common_recreation_space"
+      ],
+      "affinity_refs": [
+        "games",
+        "casual_recreation",
+        "public_space"
+      ],
+      "social_resolution": "deferred_step_9"
+    },
+    "meal_at_leisure": {
+      "family": "meal",
+      "min_minutes": 20,
+      "max_minutes": 75,
+      "required_capabilities": [
+        "food_access"
+      ],
+      "affinity_refs": [
+        "food",
+        "meal_routine"
+      ],
+      "social_resolution": "none"
+    },
+    "self_directed_personal_project": {
+      "family": "solitary_leisure",
+      "min_minutes": 30,
+      "max_minutes": 150,
+      "required_capabilities": [
+        "personal_terminal_or_workspace"
+      ],
+      "affinity_refs": [
+        "personal_project",
+        "technical_hobby",
+        "creative_hobby"
+      ],
+      "social_resolution": "none"
+    },
+    "city_leave": {
+      "family": "shore_leave",
+      "min_minutes": 90,
+      "max_minutes": 360,
+      "required_capabilities": [
+        "off_campus_destination"
+      ],
+      "affinity_refs": [
+        "city_leave",
+        "exploration",
+        "culture"
+      ],
+      "requires_authorized_leave": true,
+      "social_resolution": "deferred_step_9"
+    }
+  },
+  "rules": [
+    "Catalog activities are gameplay options, not claims that every Academy era/campus instance supplies every capability.",
+    "Participant-targeted friendship, family, dating and romantic activities are excluded from Step 6 and resolve in later social steps.",
+    "Cultural/private practices may be authored as personal hobbies/preferences but never inferred automatically from species.",
+    "Wellbeing effects are intentionally not assigned here."
+  ]
+}

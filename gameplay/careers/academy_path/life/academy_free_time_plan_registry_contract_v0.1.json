@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_free_time_plan_registry_contract",
+  "status": "STEP_6_COMPLETE",
+  "record_fields": [
+    "free_time_plan_id",
+    "population_slot_ref",
+    "schedule_version_ref",
+    "window_ref",
+    "activity_id",
+    "location_ref",
+    "planned_start",
+    "planned_end",
+    "plan_state",
+    "selection_provenance",
+    "created_at",
+    "superseded_by_ref_if_any"
+  ],
+  "plan_states": [
+    "candidate",
+    "player_option",
+    "planned",
+    "accepted_player_choice",
+    "cancelled",
+    "superseded",
+    "completed_by_runtime_ref"
+  ],
+  "derived_queries": [
+    "free_time_plan_for_window",
+    "player_options_for_window",
+    "remaining_unallocated_time",
+    "planned_location_for_window"
+  ],
+  "rules": [
+    "One persisted plan entry belongs to one existing free-time window.",
+    "Plan records do not assert actual execution until runtime activity/event state confirms it.",
+    "Superseded/cancelled plans remain history.",
+    "Player options are proposals and are not persisted as performed activities.",
+    "NPC plan persistence prevents rerolling when the player enters/leaves the area."
+  ]
+}

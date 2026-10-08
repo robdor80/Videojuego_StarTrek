@@ -16,7 +16,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 3 | Classmates, study groups and practical teams | COMPLETE |
 | 4 | Quarters and roommates | COMPLETE |
 | 5 | Personal schedules | COMPLETE |
-| 6 | Free time | TODO |
+| 6 | Free time | COMPLETE |
 | 7 | Extracurricular activities | TODO |
 | 8 | Conferences, seminars and additional courses | TODO |
 | 9 | Social life | TODO |
@@ -210,3 +210,22 @@ Uncommitted intervals are exposed as temporal capacity only. Step 5 does not cho
 Schedule mutation requires an explicit revision/exception event and preserves prior versions/history.
 
 **Boundary:** free-time choice remains Step 6; extracurricular activity Step 7; social life Step 9; romance Step 10; wellbeing consequences Step 13; obligation/discipline consequences Step 14; off-screen life execution Step 16.
+
+
+## Step 6 — Free time
+
+Step 6 converts the **real uncommitted temporal capacity** exposed by Step 5 into optional off-duty activity plans without stealing time from academic obligations.
+
+Free time is not generated independently of the schedule. An activity must fit wholly inside an available interval, including travel from the previous anchor and to the next anchor. If no suitable activity fits, the interval may remain genuinely unallocated.
+
+NPC cadets may choose autonomous free-time plans from authored activities using persistent interests, hobbies and explicit preference state. **Species is not a leisure stereotype** and player proximity is never a selection weight.
+
+The player character is treated differently for agency: the system exposes feasible options but does not automatically choose a leisure activity for the player. A player-selected activity is accepted only if it is physically and temporally valid.
+
+Activity selection is capability-driven. A location/facility must actually support the activity, limited capacity may be consumed, and authorized leave is required for off-campus leave activities. No holodeck, gym, social venue or other capability is invented merely because an activity would be convenient.
+
+**Free-time plan ≠ actual activity execution.** The plan represents an intention/tentative schedule item. Runtime presence/action state decides what actually happens; interruptions or changes require state/event provenance rather than retroactively rewriting the plan.
+
+A Step-6 activity may place a cadet in a common/public space, but it does not create a social event or relationship change. Participants, friendships, invitations, dating and NPC↔NPC social evolution remain later steps.
+
+**Boundary:** extracurricular commitments remain Step 7; conferences/additional courses Step 8; social-life event resolution Step 9; romance Step 10; NPC↔NPC relationship evolution Step 11; wellbeing effects Step 13; obligations/consequences Step 14; off-screen execution Step 16.

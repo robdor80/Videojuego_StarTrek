@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_free_time_contract",
+  "status": "STEP_6_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Free time is real temporal capacity left after obligations. NPCs may form autonomous leisure intentions from persistent preferences and available capabilities; the player's leisure is never auto-selected.",
+  "plan_key": "population_slot_ref",
+  "inputs": [
+    "Step-5 uncommitted intervals",
+    "boundary locations around each interval",
+    "cadet hobby_refs and interest_refs",
+    "authored free-time activity catalogue",
+    "real location capability state",
+    "travel-time graph",
+    "activity capacity state",
+    "authorized leave state",
+    "explicit player choice if any"
+  ],
+  "outputs": [
+    "npc_free_time_plan_entries",
+    "player_feasible_activity_options",
+    "accepted_player_choice_entries",
+    "remaining_unallocated_intervals",
+    "capacity_usage",
+    "unresolved_choice_refs"
+  ],
+  "rules": [
+    "A free-time activity must fit wholly inside an existing uncommitted schedule interval including required travel.",
+    "Free-time planning cannot move, delete or overlap required Academy commitments.",
+    "NPC selection may use persistent hobbies, interests and explicit preferences; species is not a leisure selector.",
+    "Player proximity, camera presence, dialogue initiation or narrative convenience cannot bias NPC activity selection.",
+    "The player character receives feasible options and no automatic activity choice.",
+    "An explicit player choice is accepted only if the activity, facility, capacity, leave state and travel are valid.",
+    "Activity locations/capabilities must pre-exist; the planner cannot invent a gym, holodeck, room, reservation or city access.",
+    "Finite capacity is respected when supplied by activity/facility state.",
+    "Authorized leave is required for activities marked off-campus/leave-gated.",
+    "An interval may remain partly or wholly unallocated; free time does not need to be filled.",
+    "A free-time plan is an intention/tentative schedule state and is not proof of actual execution or physical presence.",
+    "Public/common-space leisure creates co-location opportunity only; Step 6 does not create participants, encounters or relationship changes.",
+    "No automatic friendship, rivalry, romance, attraction, wellbeing effect, disciplinary consequence or habit formation occurs in Step 6.",
+    "Repeated actual activities may later feed shared wellbeing/habit systems, but Step 6 only plans free time.",
+    "Extracurriculars, seminars/additional courses, social events, romance and NPC relationship evolution remain later Academy Life steps."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_cadet_background_generation_rules_v0.1.json",
+    "gameplay/careers/academy_path/campus_location_graph.json",
+    "gameplay/characters/activity_schedule_model.json",
+    "gameplay/ship_operations/off_duty_activity_catalog_v0.1.json",
+    "gameplay/characters/wellbeing/activity_effect_contract.json",
+    "gameplay/social/social_event_rules.json"
+  ],
+  "next_step_ref": "Step 7 — Extracurricular activities"
+}

@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_free_time_invariants",
+  "status": "STEP_6_VALIDATED",
+  "cases": [
+    {
+      "id": "free_time_requires_real_gap",
+      "expected": [
+        "every planned activity references an existing Step-5 uncommitted window"
+      ]
+    },
+    {
+      "id": "obligations_not_displaced",
+      "expected": [
+        "Step-6 planning never moves or overlaps required commitments"
+      ]
+    },
+    {
+      "id": "travel_feasible",
+      "expected": [
+        "activity plus boundary travel fits the free-time window"
+      ]
+    },
+    {
+      "id": "facility_capability_real",
+      "expected": [
+        "activity requires an actually supplied compatible location capability"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "supplied activity capacity is not exceeded"
+      ]
+    },
+    {
+      "id": "leave_authorization",
+      "expected": [
+        "off-campus leave-gated activity requires authorized leave"
+      ]
+    },
+    {
+      "id": "npc_autonomy",
+      "expected": [
+        "NPC cadets may select deterministic leisure intentions without player input"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "player cadet is not automatically assigned a leisure activity"
+      ]
+    },
+    {
+      "id": "invalid_player_choice",
+      "expected": [
+        "invalid player choice is rejected rather than replaced automatically"
+      ]
+    },
+    {
+      "id": "background_affinity",
+      "expected": [
+        "explicit hobbies/interests may influence NPC selection"
+      ]
+    },
+    {
+      "id": "species_not_leisure_stereotype",
+      "expected": [
+        "changing species_id alone does not change the plan"
+      ]
+    },
+    {
+      "id": "raw_personality_not_mapping",
+      "expected": [
+        "changing raw personality recipe alone does not change plan when explicit preferences are unchanged"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not bias NPC free-time plans"
+      ]
+    },
+    {
+      "id": "unallocated_time_allowed",
+      "expected": [
+        "free time may remain partly or wholly unallocated"
+      ]
+    },
+    {
+      "id": "plan_not_execution",
+      "expected": [
+        "free-time plan does not assert actual action/current location"
+      ]
+    },
+    {
+      "id": "public_colocation_not_relationship",
+      "expected": [
+        "common-space plan has no automatic relationship effect"
+      ]
+    },
+    {
+      "id": "history_persistence",
+      "expected": [
+        "materialization/observation cannot reroll a persisted plan"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no extracurricular assignment",
+        "no social event",
+        "no romance or relationship mutation",
+        "no wellbeing/discipline effect",
+        "no off-screen execution"
+      ]
+    }
+  ]
+}

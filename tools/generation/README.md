@@ -44,3 +44,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `generate_academy_schedule_step5.py` is a deterministic reference scheduler for fixed Academy commitments, flexible required obligations and transfer feasibility.
 - `test_generate_academy_schedule_step5.py` validates determinism, slot continuity, travel-time feasibility, conflict exposure and strict Step-6+ boundaries.
+
+
+### Academy Life Step 6 — free time
+
+- `generate_academy_free_time_step6.py` builds deterministic NPC leisure intentions and player-facing feasible choices strictly from real Step-5 schedule gaps.
+- `test_generate_academy_free_time_step6.py` covers agency, facility/capacity gating, travel feasibility, background affinity, determinism and strict Step-7+ boundaries.

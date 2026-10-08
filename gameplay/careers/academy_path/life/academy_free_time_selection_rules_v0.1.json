@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_free_time_selection_rules",
+  "status": "STEP_6_COMPLETE",
+  "npc_priority_order": [
+    "fit_inside_real_free_window",
+    "satisfy_leave_and_capability_requirements",
+    "satisfy_travel_feasibility",
+    "satisfy_finite_capacity",
+    "prefer explicit hobby/interest affinity",
+    "stable deterministic tiebreak"
+  ],
+  "player_policy": [
+    "enumerate feasible options",
+    "do not auto-select",
+    "validate explicit player choice with same physical constraints",
+    "do not replace an invalid player choice with a different automatic activity"
+  ],
+  "rules": [
+    "Interest/hobby affinity raises likelihood but does not guarantee selection.",
+    "No affinity match may still yield a neutral feasible activity when authored policy permits.",
+    "Species, gender, culture, branch, social rank and player proximity are not generic leisure-choice weights.",
+    "Raw personality labels are not deterministic activity mappings; only explicit preference state may contribute.",
+    "NPC plans are stable for the same authoritative inputs and rules version.",
+    "Observation/materialization cannot reroll a persisted plan.",
+    "No Step-6 selection directly mutates relationships, wellbeing, habits, grades or discipline."
+  ]
+}

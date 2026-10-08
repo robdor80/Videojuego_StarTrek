@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–5/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules**;
+- **Steps 1–6/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -348,7 +348,17 @@ Current status:
 - schedule changes require explicit revision/exception events and preserve history;
 - **18 executable Step-5 tests defined**.
 
-**Strict sequence:** Step 6 — Free time is next and has not been started.
+- free time consumes only genuine Step-5 uncommitted intervals;
+- NPCs select persistent leisure intentions from actual hobbies/interests, facility capabilities and temporal feasibility;
+- the player receives valid options but is never auto-played during free time;
+- travel and finite activity capacity remain real constraints;
+- off-campus leave requires explicit authorization;
+- species and player proximity are excluded as leisure-selection shortcuts;
+- public co-location creates no automatic friendship, rivalry, romance or other relationship mutation;
+- free-time plan remains distinct from actual runtime action/presence;
+- **18 executable Step-6 tests defined**.
+
+**Strict sequence:** Step 7 — Extracurricular activities is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

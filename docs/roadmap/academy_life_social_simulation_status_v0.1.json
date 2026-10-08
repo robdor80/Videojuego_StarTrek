@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 5,
+    "complete": 6,
     "partial": 0,
-    "todo": 15,
-    "current_step": 5
+    "todo": 14,
+    "current_step": 6
   },
   "steps": [
     {
@@ -37,7 +37,7 @@
     },
     {
       "step": 6,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Free time"
     },
     {
@@ -179,6 +179,25 @@
     "latent_to_materialized_schedule_continuity": "COMPLETE",
     "uncommitted_time_exposed_not_filled": "COMPLETE",
     "player_and_npc_rule_parity": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 18,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_6": {
+    "free_time_from_real_schedule_gaps": "COMPLETE",
+    "npc_autonomous_leisure_choice": "COMPLETE",
+    "player_choice_not_autoplayed": "COMPLETE",
+    "background_interest_hobby_affinity": "COMPLETE",
+    "facility_capability_gating": "COMPLETE",
+    "travel_time_feasibility": "COMPLETE",
+    "finite_activity_capacity_support": "COMPLETE",
+    "authorized_leave_gating": "COMPLETE",
+    "unallocated_free_time_preserved": "COMPLETE",
+    "no_species_stereotyping": "COMPLETE",
+    "no_player_proximity_bias": "COMPLETE",
+    "no_automatic_social_relationship_effect": "COMPLETE",
+    "plan_vs_actual_activity_separation": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 18,
     "fixture_count": 1,

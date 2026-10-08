@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.11.0",
+  "schema_version": "0.12.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -35,7 +35,7 @@
     "preparatory_status": "preparatory_state_or_null",
     "conduct_status": "conduct_state",
     "wellbeing_state_ref": "character_habit_state_ref",
-    "free_time": "time_budget_state",
+    "free_time": "academy_free_time_plan_ref_or_null",
     "academic_standing": "standing_state",
     "practical_standing": "standing_state",
     "year_progression_status": "progression_state",
@@ -63,7 +63,9 @@
     "roommate_slot_refs": "population_slot_ref_list",
     "quarters_registry_ref": "academy_quarters_registry_id",
     "schedule_registry_ref": "academy_schedule_registry_id",
-    "schedule_revision_refs": "schedule_revision_event_ref_list"
+    "schedule_revision_refs": "schedule_revision_event_ref_list",
+    "free_time_plan_history_refs": "academy_free_time_plan_ref_list",
+    "free_time_preference_refs": "interest_or_hobby_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -80,10 +82,17 @@
     "personal schedule is anchored to population_slot_ref and survives latent-to-materialized promotion",
     "schedule expresses expected commitments and locations, not authoritative current physical presence",
     "travel time between different scheduled locations must be feasible or recorded as an explicit schedule conflict",
-    "uncommitted timetable intervals are not automatically filled with free-time activities"
+    "uncommitted timetable intervals are not automatically filled with free-time activities",
+    "free-time planning consumes only Step-5 uncommitted intervals and cannot displace required Academy commitments",
+    "NPC free-time plans may be selected autonomously from persistent interests/hobbies and real facility capabilities",
+    "the player receives feasible free-time choices but no automatic leisure selection",
+    "species and player proximity are not free-time selection shortcuts",
+    "free-time plan is an intention and not authoritative proof of actual activity or location",
+    "Step-6 co-location or public-space use does not itself create social or relationship state"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
   "quarters_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json",
-  "schedule_contract_ref": "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json"
+  "schedule_contract_ref": "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+  "free_time_contract_ref": "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json"
 }
