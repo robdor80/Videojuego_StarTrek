@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 6,
+    "complete": 7,
     "partial": 0,
-    "todo": 14,
-    "current_step": 6
+    "todo": 13,
+    "current_step": 7
   },
   "steps": [
     {
@@ -42,7 +42,7 @@
     },
     {
       "step": 7,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Extracurricular activities"
     },
     {
@@ -200,6 +200,25 @@
     "plan_vs_actual_activity_separation": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 18,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_7": {
+    "persistent_extracurricular_entities": "COMPLETE",
+    "finite_membership_capacity": "COMPLETE",
+    "eligibility_and_prerequisite_gating": "COMPLETE",
+    "recurring_session_schedule_binding": "COMPLETE",
+    "travel_and_free_window_feasibility": "COMPLETE",
+    "npc_autonomous_enrollment": "COMPLETE",
+    "player_choice_not_auto_enrolled": "COMPLETE",
+    "existing_membership_persistence": "COMPLETE",
+    "interests_hobbies_affinity": "COMPLETE",
+    "no_species_or_player_proximity_bias": "COMPLETE",
+    "membership_not_relationship": "COMPLETE",
+    "membership_not_skill_or_grade_reward": "COMPLETE",
+    "plan_vs_actual_participation_separation": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 20,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

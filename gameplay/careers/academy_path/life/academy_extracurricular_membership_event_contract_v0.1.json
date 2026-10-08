@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_extracurricular_membership_event_contract",
+  "status": "STEP_7_COMPLETE",
+  "fields": [
+    "event_id",
+    "event_type",
+    "effective_at",
+    "extracurricular_id",
+    "population_slot_ref",
+    "cause_ref",
+    "prior_membership_state",
+    "new_membership_state",
+    "schedule_revision_ref_if_any"
+  ],
+  "rules": [
+    "Join creates recurring schedule commitments only after membership acceptance.",
+    "Withdrawal/removal ends future recurring commitments but does not erase past membership or attendance history.",
+    "Suspension preserves membership history and may temporarily suppress recurring sessions.",
+    "Materialization, player observation and save/load are not valid membership-change causes.",
+    "Membership events do not directly mutate social relationships, skills, grades, wellbeing or discipline."
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_extracurricular_registry_contract",
+  "status": "STEP_7_COMPLETE",
+  "registry_fields": [
+    "extracurricular_registry_id",
+    "academic_period_ref",
+    "activity_records",
+    "membership_records",
+    "membership_event_refs",
+    "capacity_snapshot_refs",
+    "last_reconciled_at"
+  ],
+  "membership_states": [
+    "candidate",
+    "applied",
+    "active",
+    "suspended",
+    "withdrawn",
+    "removed",
+    "completed",
+    "activity_closed"
+  ],
+  "event_types": [
+    "join",
+    "withdraw",
+    "authorized_removal",
+    "suspension",
+    "reinstatement",
+    "role_change",
+    "activity_closure",
+    "activity_reactivation"
+  ],
+  "conservation_rules": [
+    "active membership count cannot exceed configured capacity",
+    "one population_slot_ref cannot hold duplicate active membership in the same extracurricular",
+    "membership changes do not create/delete Academy population",
+    "existing valid active memberships consume capacity before new allocation"
+  ],
+  "rules": [
+    "Roster history is append-preserving.",
+    "Materialization or player arrival cannot reorder or reroll an established roster.",
+    "A cadet may belong to multiple extracurriculars only when configured membership limits and schedule feasibility allow it.",
+    "Membership role does not imply command authority outside the extracurricular context."
+  ]
+}

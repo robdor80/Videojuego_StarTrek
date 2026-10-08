@@ -1,0 +1,250 @@
+{
+  "fixture_id": "academy_extracurricular_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step7-fixture",
+    "max_active_memberships_per_cadet": 2,
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "is_player": true,
+        "character_id": "cadet:00",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "human",
+        "hobby_refs": [
+          "chess"
+        ],
+        "interest_refs": [
+          "strategy"
+        ],
+        "qualification_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "vulcan",
+        "hobby_refs": [
+          "fitness"
+        ],
+        "interest_refs": [
+          "athletics"
+        ],
+        "qualification_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "andorian",
+        "hobby_refs": [
+          "engineering_projects"
+        ],
+        "interest_refs": [
+          "technology"
+        ],
+        "qualification_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "tellarite",
+        "hobby_refs": [
+          "chess"
+        ],
+        "interest_refs": [
+          "strategy"
+        ],
+        "qualification_refs": [],
+        "specialization": null
+      }
+    ],
+    "free_time_windows": [
+      {
+        "window_ref": "W0",
+        "population_slot_ref": "cadet4:00",
+        "day_index": 2,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W1",
+        "population_slot_ref": "cadet4:01",
+        "day_index": 1,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W2",
+        "population_slot_ref": "cadet4:02",
+        "day_index": 3,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W3",
+        "population_slot_ref": "cadet4:03",
+        "day_index": 2,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "athletics_area",
+        "minutes": 12
+      },
+      {
+        "from": "athletics_area",
+        "to": "cadet_quarters",
+        "minutes": 14
+      },
+      {
+        "from": "academic_core",
+        "to": "simulation_complex",
+        "minutes": 10
+      },
+      {
+        "from": "simulation_complex",
+        "to": "cadet_quarters",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "library_study",
+        "minutes": 10
+      },
+      {
+        "from": "library_study",
+        "to": "cadet_quarters",
+        "minutes": 12
+      }
+    ],
+    "locations": [
+      {
+        "location_ref": "athletics_area",
+        "capability_tags": [
+          "team_sport_space"
+        ]
+      },
+      {
+        "location_ref": "simulation_complex",
+        "capability_tags": [
+          "technical_club_workspace",
+          "strategy_game_space"
+        ]
+      },
+      {
+        "location_ref": "library_study",
+        "capability_tags": [
+          "quiet_group_space"
+        ]
+      }
+    ],
+    "activities": {
+      "academy_fitness_team": {
+        "display_name_ref": "Academy Fitness Team",
+        "category": "sport_or_fitness",
+        "capacity": 2,
+        "location_ref": "athletics_area",
+        "required_location_capabilities": [
+          "team_sport_space"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "affinity_refs": [
+          "fitness",
+          "athletics"
+        ],
+        "recurring_sessions": [
+          {
+            "day_index": 1,
+            "start_minute": 1080,
+            "end_minute": 1140
+          }
+        ]
+      },
+      "engineering_project_club": {
+        "display_name_ref": "Engineering Project Club",
+        "category": "technical_or_scientific_club",
+        "capacity": 2,
+        "location_ref": "simulation_complex",
+        "required_location_capabilities": [
+          "technical_club_workspace"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "affinity_refs": [
+          "engineering_projects",
+          "technology"
+        ],
+        "recurring_sessions": [
+          {
+            "day_index": 3,
+            "start_minute": 1080,
+            "end_minute": 1140
+          }
+        ]
+      },
+      "strategy_games_society": {
+        "display_name_ref": "Strategy Games Society",
+        "category": "recreation_or_game",
+        "capacity": 1,
+        "location_ref": "simulation_complex",
+        "required_location_capabilities": [
+          "strategy_game_space"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "affinity_refs": [
+          "chess",
+          "strategy"
+        ],
+        "recurring_sessions": [
+          {
+            "day_index": 2,
+            "start_minute": 1080,
+            "end_minute": 1140
+          }
+        ]
+      }
+    },
+    "existing_memberships": [
+      {
+        "membership_id": "xm:strategy_games_society:cadet4:03",
+        "extracurricular_id": "strategy_games_society",
+        "population_slot_ref": "cadet4:03",
+        "membership_state": "active"
+      }
+    ],
+    "player_join_requests": []
+  },
+  "expected": {
+    "preserved_existing_member": "cadet4:03",
+    "player_auto_enrollment": false,
+    "player_strategy_option_blocked_by_capacity": true,
+    "npc_fitness_member": "cadet4:01",
+    "npc_engineering_member": "cadet4:02",
+    "automatic_relationship_effect": "none",
+    "membership_truth_semantics": "membership_not_attendance"
+  }
+}

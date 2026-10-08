@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–6/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time**;
+- **Steps 1–7/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -358,7 +358,17 @@ Current status:
 - free-time plan remains distinct from actual runtime action/presence;
 - **18 executable Step-6 tests defined**.
 
-**Strict sequence:** Step 7 — Extracurricular activities is next and has not been started.
+- extracurriculars are persistent Academy-life entities with stable IDs, capacity, eligibility, facilities and recurring sessions;
+- membership is slot-first and survives later NPC materialization;
+- NPCs may autonomously enroll from real interests/hobbies; the player must explicitly choose;
+- recurring sessions consume real timetable capacity and require feasible travel;
+- finite roster capacity is conserved and existing memberships are preserved before new allocation;
+- species, player proximity and narrative convenience are excluded from enrollment decisions;
+- membership does not automatically create friendship, rivalry, romance, skill, grades, reputation or wellbeing effects;
+- actual attendance/participation remains separate runtime truth;
+- **20 executable Step-7 tests defined**.
+
+**Strict sequence:** Step 8 — Conferences, seminars and additional courses is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

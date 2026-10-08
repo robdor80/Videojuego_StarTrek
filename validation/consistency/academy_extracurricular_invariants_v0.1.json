@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_extracurricular_invariants",
+  "status": "STEP_7_VALIDATED",
+  "cases": [
+    {
+      "id": "persistent_entity",
+      "expected": [
+        "extracurricular has stable identity independent of player observation"
+      ]
+    },
+    {
+      "id": "slot_first_membership",
+      "expected": [
+        "latent cadets may hold membership before materialization"
+      ]
+    },
+    {
+      "id": "existing_roster_priority",
+      "expected": [
+        "valid existing memberships consume capacity before new enrollment"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "active roster never exceeds configured capacity"
+      ]
+    },
+    {
+      "id": "eligibility",
+      "expected": [
+        "class/specialization/qualification requirements are explicit authored constraints"
+      ]
+    },
+    {
+      "id": "facility_requirement",
+      "expected": [
+        "required facility capability must actually exist"
+      ]
+    },
+    {
+      "id": "schedule_feasibility",
+      "expected": [
+        "every recurring session fits real available time"
+      ]
+    },
+    {
+      "id": "travel_feasibility",
+      "expected": [
+        "travel to/from recurring session fits its surrounding window"
+      ]
+    },
+    {
+      "id": "npc_autonomy",
+      "expected": [
+        "NPC cadets may autonomously join feasible activities"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "player is never auto-enrolled"
+      ]
+    },
+    {
+      "id": "invalid_player_request",
+      "expected": [
+        "invalid/full request is rejected without substitute enrollment"
+      ]
+    },
+    {
+      "id": "interest_affinity",
+      "expected": [
+        "explicit hobbies/interests may guide NPC preference after feasibility"
+      ]
+    },
+    {
+      "id": "species_not_selector",
+      "expected": [
+        "species change alone does not alter membership outcome"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not alter NPC enrollment"
+      ]
+    },
+    {
+      "id": "membership_not_attendance",
+      "expected": [
+        "membership does not assert actual session attendance"
+      ]
+    },
+    {
+      "id": "membership_not_relationship",
+      "expected": [
+        "co-membership has no automatic social relationship effect"
+      ]
+    },
+    {
+      "id": "membership_not_skill",
+      "expected": [
+        "membership alone grants no capability/qualification/grade"
+      ]
+    },
+    {
+      "id": "no_wellbeing_reward",
+      "expected": [
+        "membership alone grants no wellbeing bonus"
+      ]
+    },
+    {
+      "id": "history_preserved",
+      "expected": [
+        "withdrawal/removal later preserves prior membership history"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no seminar/course assignment",
+        "no social/romance/mentor mutation",
+        "no discipline or off-screen execution"
+      ]
+    }
+  ]
+}

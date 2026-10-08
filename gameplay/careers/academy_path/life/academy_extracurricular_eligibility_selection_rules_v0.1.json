@@ -1,0 +1,32 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_extracurricular_eligibility_and_selection_rules",
+  "status": "STEP_7_COMPLETE",
+  "eligibility_inputs": [
+    "cadet_class_id",
+    "specialization_if_relevant",
+    "qualification_refs_if_explicitly_required",
+    "medical_or_accessibility_constraints_if_explicitly_represented",
+    "membership_limit",
+    "existing_memberships",
+    "free_time_windows",
+    "travel_graph",
+    "facility_capabilities"
+  ],
+  "npc_selection_inputs": [
+    "hobby_refs",
+    "interest_refs",
+    "explicit_extracurricular_preference_refs",
+    "stable deterministic seed"
+  ],
+  "rules": [
+    "Eligibility rules are authored per extracurricular and cannot be invented ad hoc for a desired candidate.",
+    "No generic species-based eligibility rule exists.",
+    "Medical/accessibility state may constrain participation only when the activity has an explicit requirement and accommodations are represented.",
+    "Interests/hobbies affect NPC preference after eligibility and feasibility, not before.",
+    "No player-proximity or narrative-convenience weight exists.",
+    "The player chooses among valid eligible options; no best club is auto-selected.",
+    "When several NPC candidates compete for limited capacity, existing members are preserved and new candidates use deterministic affinity/tiebreak resolution.",
+    "Rejected/no-capacity candidates remain un-enrolled rather than forcing roster expansion."
+  ]
+}

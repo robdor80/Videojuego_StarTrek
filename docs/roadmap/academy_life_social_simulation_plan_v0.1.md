@@ -17,7 +17,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 4 | Quarters and roommates | COMPLETE |
 | 5 | Personal schedules | COMPLETE |
 | 6 | Free time | COMPLETE |
-| 7 | Extracurricular activities | TODO |
+| 7 | Extracurricular activities | COMPLETE |
 | 8 | Conferences, seminars and additional courses | TODO |
 | 9 | Social life | TODO |
 | 10 | Romance and dating | TODO |
@@ -229,3 +229,26 @@ Activity selection is capability-driven. A location/facility must actually suppo
 A Step-6 activity may place a cadet in a common/public space, but it does not create a social event or relationship change. Participants, friendships, invitations, dating and NPC↔NPC social evolution remain later steps.
 
 **Boundary:** extracurricular commitments remain Step 7; conferences/additional courses Step 8; social-life event resolution Step 9; romance Step 10; NPC↔NPC relationship evolution Step 11; wellbeing effects Step 13; obligations/consequences Step 14; off-screen execution Step 16.
+
+
+## Step 7 — Extracurricular activities
+
+Step 7 introduces **persistent organized extracurriculars**: clubs, teams, associations, service groups and recurring non-curricular activities that cadets may voluntarily join.
+
+An extracurricular is a real Academy-life entity with a stable ID, category, membership capacity, eligibility/prerequisite rules, recurring session schedule and required facility/location capabilities. It is not a cosmetic trait attached to the player.
+
+Membership is anchored to `population_slot_ref`. Latent cadets may already belong to an extracurricular and later materialization must preserve that membership.
+
+NPC cadets may autonomously join eligible activities using persistent hobbies/interests/preferences as affinity inputs, subject to capacity and timetable feasibility. **Species, player proximity and narrative convenience are never membership selectors.**
+
+The player is never automatically enrolled. The system exposes eligible activities and accepts only an explicit player join request that satisfies the same requirements and capacity rules as NPCs.
+
+Recurring sessions become real schedule commitments and therefore must fit existing available windows, including travel. If the recurring pattern cannot fit, the membership is not created merely to satisfy story intent.
+
+**Membership ≠ attendance ≠ relationship ≠ skill.** Joining an activity creates a persistent organizational context and recurring obligation. It does not prove attendance at every session, create friendship/rivalry/romance, grant competence, improve grades or produce wellbeing bonuses. Actual participation can later provide evidence to the appropriate systems only when runtime events confirm it.
+
+Extracurricular capacity is finite when configured. Existing valid memberships are preserved before new allocations, so observing/materializing the player cannot reshuffle club rosters.
+
+Step 7 does not implement academic seminars, guest lectures or additional formal courses; those belong to Step 8.
+
+**Boundary:** conferences/seminars/additional courses remain Step 8; social event resolution Step 9; romance Step 10; NPC↔NPC relationships Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; off-screen execution Step 16.

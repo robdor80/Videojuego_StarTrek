@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_extracurricular_contract",
+  "status": "STEP_7_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Extracurriculars are persistent organized Academy-life entities with finite membership and recurring time commitments. Membership is voluntary context, not an automatic relationship, skill or reward.",
+  "extracurricular_fields": [
+    "extracurricular_id",
+    "display_name_ref",
+    "category",
+    "status",
+    "capacity",
+    "eligibility_rules",
+    "prerequisite_refs",
+    "recurring_sessions",
+    "required_location_capabilities",
+    "membership_role_catalogue"
+  ],
+  "membership_fields": [
+    "membership_id",
+    "extracurricular_id",
+    "population_slot_ref",
+    "membership_state",
+    "joined_at",
+    "ended_at_if_any",
+    "membership_role",
+    "selection_provenance",
+    "schedule_commitment_refs"
+  ],
+  "categories": [
+    "sport_or_fitness",
+    "technical_or_scientific_club",
+    "arts_or_culture",
+    "service_or_volunteering",
+    "recreation_or_game",
+    "debate_or_interest_group"
+  ],
+  "rules": [
+    "Extracurricular identity and roster exist independently of player observation.",
+    "Membership is anchored to population_slot_ref and may exist before full NPC materialization.",
+    "Existing valid memberships are preserved before allocating new roster slots.",
+    "NPCs may autonomously apply/join using explicit interests, hobbies and preference state as affinity inputs.",
+    "Species, gender, culture, player proximity and desired story chemistry are not generic enrollment weights.",
+    "The player receives eligible options but is never automatically enrolled.",
+    "Player and NPC membership obey the same eligibility, prerequisite, capacity, facility and schedule constraints.",
+    "Recurring sessions consume real time and must fit the cadet timetable including travel.",
+    "A full roster remains full; the system may not synthesize a vacancy for the player.",
+    "An activity requiring unavailable facilities cannot accept a member for an impossible recurring schedule.",
+    "Membership may be active while an individual session is missed; attendance is separate runtime/event truth.",
+    "Membership alone creates no friendship, rivalry, romance, attraction, mentorship or relationship mutation.",
+    "Membership alone creates no competence, qualification, academic grade, reputation or wellbeing benefit.",
+    "Confirmed actual participation may later become evidence for other systems, but Step 7 does not apply those effects.",
+    "Withdrawal, removal or activity closure requires an explicit membership/activity event and preserves history.",
+    "Formal seminars, conferences and additional academic courses are excluded and belong to Step 8."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_cadet_background_generation_rules_v0.1.json",
+    "gameplay/careers/academy_path/campus_location_graph.json",
+    "gameplay/characters/activity_schedule_model.json",
+    "gameplay/social/social_event_rules.json"
+  ],
+  "next_step_ref": "Step 8 — Conferences, seminars and additional courses"
+}

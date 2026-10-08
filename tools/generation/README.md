@@ -50,3 +50,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `generate_academy_free_time_step6.py` builds deterministic NPC leisure intentions and player-facing feasible choices strictly from real Step-5 schedule gaps.
 - `test_generate_academy_free_time_step6.py` covers agency, facility/capacity gating, travel feasibility, background affinity, determinism and strict Step-7+ boundaries.
+
+
+### Academy Life Step 7 — extracurricular activities
+
+- `generate_academy_extracurricular_step7.py` deterministically builds/preserves finite extracurricular memberships and recurring schedule commitments from real availability.
+- `test_generate_academy_extracurricular_step7.py` validates eligibility, capacity, player agency, NPC autonomy, travel/time feasibility, persistence and strict Step-8+ boundaries.
