@@ -1,0 +1,30 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_social_circle_contract",
+  "status": "STEP_9_COMPLETE",
+  "circle_sources": [
+    "class_section",
+    "study_group",
+    "practical_team",
+    "roommate_context",
+    "extracurricular",
+    "academic_enrichment",
+    "authored_open_circle"
+  ],
+  "fields": [
+    "social_circle_id",
+    "source_type",
+    "source_ref",
+    "member_slot_refs",
+    "active_period_ref",
+    "visibility_scope"
+  ],
+  "rules": [
+    "Circle membership is contextual membership, not friendship.",
+    "A cadet may belong to multiple overlapping circles.",
+    "Latent cadets may have stable circle membership before materialization.",
+    "Materialization cannot create or remove a valid circle membership.",
+    "Circle membership may affect which non-romantic social opportunities are visible/plausible, but cannot itself mutate relationship dimensions.",
+    "Romantic compatibility is not evaluated by social-circle membership."
+  ]
+}

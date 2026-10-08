@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "ruleset_id": "social_event_transitions",
   "status": "foundation_fixed",
   "event_families": [
@@ -52,6 +52,9 @@
     "Consensual intimacy does not automatically create an established relationship.",
     "Romantic rejection does not automatically create hostility.",
     "Professional rank does not override personal consent.",
-    "AI may express the consequence but authoritative relationship state changes must be validated from the event and rules."
-  ]
+    "AI may express the consequence but authoritative relationship state changes must be validated from the event and rules.",
+    "Ordinary non-romantic social events do not use romantic compatibility as an eligibility filter.",
+    "Romantic/sexual event families must satisfy the project relationship canon before any such transition is eligible."
+  ],
+  "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
 }

@@ -1,0 +1,153 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_social_life_invariants",
+  "status": "STEP_9_VALIDATED",
+  "cases": [
+    {
+      "id": "opportunity_preexists",
+      "expected": [
+        "social opportunity exists independently of player proximity"
+      ]
+    },
+    {
+      "id": "open_vs_invited",
+      "expected": [
+        "open gathering and invitation-required access rules remain distinct"
+      ]
+    },
+    {
+      "id": "circle_not_relationship",
+      "expected": [
+        "social circle membership is context only"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "planned attendance never exceeds supplied capacity"
+      ]
+    },
+    {
+      "id": "existing_plan_priority",
+      "expected": [
+        "valid existing social plans consume capacity first"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "player is never auto-RSVPed or auto-socialized"
+      ]
+    },
+    {
+      "id": "npc_autonomy",
+      "expected": [
+        "NPCs may plan feasible non-romantic social participation"
+      ]
+    },
+    {
+      "id": "facility_required",
+      "expected": [
+        "social venue capability must exist"
+      ]
+    },
+    {
+      "id": "schedule_required",
+      "expected": [
+        "social opportunity must fit a real available window"
+      ]
+    },
+    {
+      "id": "travel_required",
+      "expected": [
+        "travel to/from social opportunity must fit"
+      ]
+    },
+    {
+      "id": "species_irrelevant",
+      "expected": [
+        "species does not select ordinary non-romantic social participation"
+      ]
+    },
+    {
+      "id": "sex_irrelevant_nonromantic",
+      "expected": [
+        "sex category does not filter ordinary social participation"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not bias NPC plan"
+      ]
+    },
+    {
+      "id": "plan_not_attendance",
+      "expected": [
+        "social plan does not assert attendance"
+      ]
+    },
+    {
+      "id": "attendance_not_interaction",
+      "expected": [
+        "co-presence alone does not assert conversation"
+      ]
+    },
+    {
+      "id": "interaction_not_friendship",
+      "expected": [
+        "confirmed interaction is evidence, not automatic friendship"
+      ]
+    },
+    {
+      "id": "no_automatic_relationship_mutation",
+      "expected": [
+        "Step 9 emits no friendship/trust/rivalry change directly"
+      ]
+    },
+    {
+      "id": "no_romance_step9",
+      "expected": [
+        "romantic/sexual event families are prohibited"
+      ]
+    },
+    {
+      "id": "adult_only_future_romance",
+      "expected": [
+        "future romantic/sexual systems are adult-equivalent only"
+      ]
+    },
+    {
+      "id": "heterosexual_future_romance",
+      "expected": [
+        "future romantic/sexual systems use heterosexual-only project canon"
+      ]
+    },
+    {
+      "id": "consent_future_rule",
+      "expected": [
+        "future sexual/romantic consent cannot be inferred from social state"
+      ]
+    },
+    {
+      "id": "npc_to_npc_relationship_deferred",
+      "expected": [
+        "NPC-to-NPC relationship evolution remains Step 11"
+      ]
+    },
+    {
+      "id": "history_preserved",
+      "expected": [
+        "decline/cancel/supersede later preserves social-plan history"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no romance/dating",
+        "no NPC relationship mutation",
+        "no mentor/wellbeing/discipline/campus-event/off-screen execution"
+      ]
+    }
+  ]
+}

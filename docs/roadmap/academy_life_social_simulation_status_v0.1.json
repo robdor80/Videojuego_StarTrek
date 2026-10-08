@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 8,
+    "complete": 9,
     "partial": 0,
-    "todo": 12,
-    "current_step": 8
+    "todo": 11,
+    "current_step": 9
   },
   "steps": [
     {
@@ -52,7 +52,7 @@
     },
     {
       "step": 9,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Social life"
     },
     {
@@ -238,6 +238,25 @@
     "no_species_or_player_proximity_bias": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 22,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_9": {
+    "persistent_social_opportunities": "COMPLETE",
+    "social_circle_context_without_auto_relationship": "COMPLETE",
+    "invitation_and_open_gathering_modes": "COMPLETE",
+    "timetable_facility_travel_feasibility": "COMPLETE",
+    "finite_social_event_capacity": "COMPLETE",
+    "npc_autonomous_social_planning": "COMPLETE",
+    "player_rsvp_and_agency": "COMPLETE",
+    "existing_social_plan_persistence": "COMPLETE",
+    "plan_attendance_interaction_separation": "COMPLETE",
+    "familiarity_requires_confirmed_interaction_evidence": "COMPLETE",
+    "no_automatic_friendship_rivalry_or_romance": "COMPLETE",
+    "heterosexual_adult_romance_canon_locked_for_future_steps": "COMPLETE",
+    "species_sex_and_player_proximity_not_nonromantic_social_selectors": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 24,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

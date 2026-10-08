@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_social_interaction_evidence_contract",
+  "status": "STEP_9_COMPLETE",
+  "evidence_fields": [
+    "evidence_id",
+    "opportunity_ref",
+    "participant_slot_refs",
+    "confirmed_attendance_refs",
+    "interaction_event_ref",
+    "interaction_kind",
+    "duration_or_intensity_context",
+    "created_at"
+  ],
+  "candidate_outputs": [
+    "familiarity_candidate",
+    "shared_history_candidate",
+    "conversation_memory_candidate"
+  ],
+  "rules": [
+    "No evidence exists from planned attendance alone.",
+    "Simple co-location without confirmed interaction is insufficient for friendship or trust change.",
+    "Confirmed interaction may create familiarity/shared-history candidates.",
+    "Relationship graph mutation must be validated by the shared social/relationship rules.",
+    "Step 9 never emits romantic_interest, sexual_interest or dating-state changes.",
+    "NPC-to-NPC relationship evolution is deferred to Step 11."
+  ]
+}

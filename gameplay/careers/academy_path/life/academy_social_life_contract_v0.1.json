@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_social_life_contract",
+  "status": "STEP_9_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Academy social life is generated from real opportunities for contact. Co-location creates opportunity; only confirmed interaction creates social evidence; relationship change remains separately validated.",
+  "opportunity_fields": [
+    "social_opportunity_id",
+    "event_family",
+    "access_mode",
+    "day_index",
+    "start_minute",
+    "end_minute",
+    "location_ref",
+    "capacity",
+    "required_location_capabilities",
+    "eligible_circle_refs",
+    "invited_slot_refs",
+    "preference_tags",
+    "organizer_ref_if_any"
+  ],
+  "access_modes": [
+    "open_gathering",
+    "invitation_required"
+  ],
+  "nonromantic_event_families": [
+    "shared_meal",
+    "common_room_gathering",
+    "games_recreation",
+    "informal_conversation",
+    "group_outing",
+    "celebration",
+    "study_break",
+    "club_social"
+  ],
+  "rules": [
+    "Social opportunities exist independently of player proximity or camera observation.",
+    "Every opportunity consumes real time and requires a real accessible location.",
+    "Open gatherings permit any otherwise eligible cadet to plan attendance.",
+    "Invitation-required opportunities require represented invitation eligibility.",
+    "Finite capacity is respected; existing persisted plans consume capacity before new plans.",
+    "NPC planning may use explicit social preference tags and real social-circle context.",
+    "Species, sex category and player proximity are not selectors for ordinary non-romantic social planning.",
+    "The player is never automatically RSVP'd, auto-attending or auto-speaking.",
+    "A player invitation may be accepted, declined or left unanswered without forced replacement behavior.",
+    "Social circle membership creates encounter context only and is not a relationship state.",
+    "Plan does not prove attendance; attendance does not prove interaction; co-location does not prove conversation.",
+    "Confirmed interaction may produce familiarity/shared-history evidence but Step 9 does not directly create friendship, trust, rivalry or romance.",
+    "NPC-to-NPC relationship mutation remains Step 11.",
+    "Romantic and sexual event generation is prohibited in Step 9.",
+    "All future romantic/sexual systems must obey gameplay/social/adult_heterosexual_relationship_canon_v0.1.json."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json",
+    "gameplay/social/social_event_rules.json",
+    "gameplay/social/relationship_graph_model.json",
+    "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
+  ],
+  "next_step_ref": "Step 10 — Romance and dating"
+}

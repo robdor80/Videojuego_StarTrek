@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "canon_id": "adult_heterosexual_relationship_canon",
+  "status": "AUTHOR_CANON_LOCKED",
+  "scope": "PROJECT_GLOBAL",
+  "immutability": "FIXED_BY_AUTHOR",
+  "principles": {
+    "adult_content_tone": "The game may include mature adult relationship themes.",
+    "adult_only_rule": "Romantic and sexual relationship mechanics apply only to adult-equivalent characters.",
+    "romantic_orientation_policy": "heterosexual_only",
+    "sexual_relationship_policy": "heterosexual_only",
+    "pairing_rule": "romantic/sexual pairing requires one adult male and one adult female character under the project's authored sex-category model",
+    "no_fallback_widening": "Procedural systems may not widen or reinterpret romantic/sexual compatibility when no eligible partner exists.",
+    "consent": "Consent remains contextual, explicit in state/event terms, and may be refused or withdrawn.",
+    "autonomy": "No friendship, favor, rank, persistence, attraction or existing relationship implies consent."
+  },
+  "step_boundaries": {
+    "step_9": "non-romantic social life only; romantic/sexual event generation prohibited",
+    "step_10": "romance and dating mechanics must consume this canon",
+    "later_steps": "NPC-to-NPC relationship evolution and off-screen simulation must preserve this canon"
+  },
+  "nonromantic_rule": "Friendship, familiarity, trust, rivalry, mentorship, professional respect and ordinary social participation are not restricted by romantic compatibility.",
+  "ai_boundary": [
+    "AI may express compatible authored relationship state but cannot broaden romantic/sexual eligibility.",
+    "AI may not invent consent, attraction or sexual/romantic history.",
+    "AI may not reinterpret this canon from prose context."
+  ]
+}

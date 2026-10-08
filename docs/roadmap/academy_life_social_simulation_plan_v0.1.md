@@ -19,7 +19,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 6 | Free time | COMPLETE |
 | 7 | Extracurricular activities | COMPLETE |
 | 8 | Conferences, seminars and additional courses | COMPLETE |
-| 9 | Social life | TODO |
+| 9 | Social life | COMPLETE |
 | 10 | Romance and dating | TODO |
 | 11 | NPC↔NPC relationships | TODO |
 | 12 | Mentors and instructors | TODO |
@@ -278,3 +278,26 @@ All sessions must fit real available timetable windows, including travel. Multi-
 Step 8 may define **completion evidence candidates**, but it does not write final Academy-record credit, qualification or transcript state. That authoritative integration remains Step 19. No registration alone grants competence, grade, reputation or wellbeing benefit.
 
 **Boundary:** social event resolution remains Step 9; romance Step 10; NPC↔NPC relationships Step 11; mentors/instructors as relationship systems Step 12; wellbeing Step 13; obligations/consequences Step 14; campus events Step 15; off-screen execution Step 16; Academy-record integration Step 19.
+
+
+## Step 9 — Social life
+
+Step 9 turns Academy co-presence into a **persistent but causal social layer**: invitations, open gatherings, shared meals, common-room time, informal group activities and conversation opportunities.
+
+A social opportunity is not spawned because the player is nearby. It has a stable ID, time, place, access mode, capacity and contextual eligibility. It must fit real available time, real travel and a real venue/capability.
+
+Two access modes are supported:
+- **open_gathering** — eligible cadets may independently plan to attend;
+- **invitation_required** — only represented invitees may RSVP/plan attendance.
+
+NPCs may autonomously form social attendance intentions from explicit social preferences and relevant social-circle context. **Species, sex category and player proximity are not selectors for ordinary non-romantic social life.**
+
+The player is never auto-RSVPed or auto-socialized. The system exposes feasible invitations/gatherings and accepts explicit player decisions. Rejecting or ignoring an invitation is a valid outcome.
+
+Social circles are contextual indexes such as class section, roommate context, practical team, extracurricular or enrichment cohort. **Circle membership is not friendship.**
+
+**Plan ≠ attendance ≠ interaction ≠ relationship.** Planning to attend does not prove presence. Co-presence does not prove conversation. Conversation does not automatically create friendship. Confirmed interaction may later create familiarity/shared-history evidence, but authoritative relationship transitions remain event/rule driven. NPC↔NPC relationship evolution is still Step 11.
+
+Step 9 deliberately forbids romantic/sexual event generation. The project-wide author canon is now locked in `gameplay/social/adult_heterosexual_relationship_canon_v0.1.json`: romance/sexual relationship systems apply only to adult-equivalent characters and are heterosexual-only. Step 10 must consume that canon rather than reinterpret it.
+
+**Boundary:** romance/dating remains Step 10; NPC↔NPC relationship evolution Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; campus events Step 15; off-screen execution Step 16.

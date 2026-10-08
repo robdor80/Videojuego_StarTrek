@@ -62,3 +62,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `generate_academy_academic_enrichment_step8.py` deterministically preserves/allocates optional formal academic registrations, waitlists and session commitments.
 - `test_generate_academy_academic_enrichment_step8.py` validates offering type, capacity, eligibility, presenter availability, facility/travel feasibility, player agency, NPC autonomy and registration/attendance/completion boundaries.
+
+
+### Academy Life Step 9 — social life
+
+- `generate_academy_social_life_step9.py` deterministically preserves/plans non-romantic Academy social attendance from real time, place, invitations, circles and capacity.
+- `test_generate_academy_social_life_step9.py` validates player agency, NPC autonomy, invitations, open gatherings, capacity, travel/venue constraints, non-romantic boundaries and no automatic relationship mutation.

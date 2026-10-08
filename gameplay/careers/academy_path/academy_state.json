@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.14.0",
+  "schema_version": "0.15.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -73,7 +73,11 @@
     "academic_enrichment_registry_ref": "academy_academic_enrichment_registry_id",
     "academic_enrichment_waitlist_refs": "academy_academic_enrichment_waitlist_ref_list",
     "academic_enrichment_schedule_entry_refs": "schedule_entry_ref_list",
-    "academic_enrichment_completion_evidence_refs": "completion_evidence_ref_list"
+    "academic_enrichment_completion_evidence_refs": "completion_evidence_ref_list",
+    "social_circle_refs": "academy_social_circle_ref_list",
+    "social_plan_refs": "academy_social_plan_ref_list",
+    "social_invitation_refs": "academy_social_invitation_ref_list",
+    "social_interaction_evidence_refs": "social_interaction_evidence_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -107,7 +111,12 @@
     "the player is never automatically registered for optional academic enrichment",
     "every required enrichment session must be presenter-, facility-, timetable- and travel-feasible",
     "registration, attendance and completion are separate states",
-    "completion evidence may be produced later but final Academy-record writes remain Step 19"
+    "completion evidence may be produced later but final Academy-record writes remain Step 19",
+    "social circles are contextual encounter indexes and do not themselves imply friendship, trust, rivalry or romance",
+    "NPC social plans may use explicit social preferences and real shared context but not species, sex category or player proximity",
+    "the player is never automatically RSVP'd or assigned a social interaction",
+    "social plan, attendance, interaction and relationship state are separate",
+    "Step 9 cannot generate romantic or sexual events; Step 10 must obey the locked adult heterosexual relationship canon"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -115,5 +124,7 @@
   "schedule_contract_ref": "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
   "free_time_contract_ref": "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
   "extracurricular_contract_ref": "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json",
-  "academic_enrichment_contract_ref": "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json"
+  "academic_enrichment_contract_ref": "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json",
+  "social_life_contract_ref": "gameplay/careers/academy_path/life/academy_social_life_contract_v0.1.json",
+  "relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
 }

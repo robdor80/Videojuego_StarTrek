@@ -187,3 +187,13 @@ AI may not:
 Generic relationship graphs, memories, knowledge provenance and social-state persistence are candidates for CoreRPG.
 
 Star Trek defines the universe-specific professional, rank, duty and Starfleet context layered on top.
+
+
+## Project relationship canon
+
+The Star Trek game uses an author-locked relationship canon defined by:
+- `gameplay/social/adult_heterosexual_relationship_canon_v0.1.json`
+
+Romantic and sexual mechanics are adult-only and heterosexual-only for this project. Generic social friendship, professional relationships, familiarity, rivalry and mentorship remain non-romantic and are not filtered by romantic compatibility.
+
+Academy Life Step 9 does not create romantic/sexual events. Step 10 and later relationship logic must consume the locked project canon.

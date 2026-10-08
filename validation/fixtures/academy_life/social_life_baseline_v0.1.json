@@ -1,0 +1,260 @@
+{
+  "fixture_id": "academy_social_life_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step9-fixture",
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "is_player": true,
+        "character_id": "cadet:00",
+        "species_id": "human",
+        "sex_category": "male",
+        "interest_refs": [
+          "strategy"
+        ],
+        "hobby_refs": [
+          "chess"
+        ],
+        "social_preference_refs": [
+          "small_group"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "is_player": false,
+        "character_id": null,
+        "species_id": "vulcan",
+        "sex_category": "female",
+        "interest_refs": [
+          "conversation"
+        ],
+        "hobby_refs": [
+          "reading"
+        ],
+        "social_preference_refs": [
+          "quiet_social"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "is_player": false,
+        "character_id": null,
+        "species_id": "andorian",
+        "sex_category": "male",
+        "interest_refs": [
+          "strategy"
+        ],
+        "hobby_refs": [
+          "games"
+        ],
+        "social_preference_refs": [
+          "small_group"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "is_player": false,
+        "character_id": null,
+        "species_id": "tellarite",
+        "sex_category": "female",
+        "interest_refs": [
+          "food"
+        ],
+        "hobby_refs": [
+          "conversation"
+        ],
+        "social_preference_refs": [
+          "shared_meal"
+        ]
+      }
+    ],
+    "available_windows": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "day_index": 0,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "day_index": 0,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "day_index": 1,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "day_index": 0,
+        "start_minute": 1020,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "cadet_mess",
+        "minutes": 8
+      },
+      {
+        "from": "cadet_mess",
+        "to": "cadet_quarters",
+        "minutes": 10
+      },
+      {
+        "from": "academic_core",
+        "to": "simulation_complex",
+        "minutes": 10
+      },
+      {
+        "from": "simulation_complex",
+        "to": "cadet_quarters",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "library_study",
+        "minutes": 8
+      },
+      {
+        "from": "library_study",
+        "to": "cadet_quarters",
+        "minutes": 12
+      }
+    ],
+    "locations": [
+      {
+        "location_ref": "cadet_mess",
+        "capability_tags": [
+          "social_meal_space"
+        ]
+      },
+      {
+        "location_ref": "simulation_complex",
+        "capability_tags": [
+          "small_group_recreation"
+        ]
+      },
+      {
+        "location_ref": "library_study",
+        "capability_tags": [
+          "quiet_social_space"
+        ]
+      }
+    ],
+    "social_circles": [
+      {
+        "social_circle_id": "circle:class:A",
+        "member_slot_refs": [
+          "cadet4:00",
+          "cadet4:01",
+          "cadet4:03"
+        ]
+      },
+      {
+        "social_circle_id": "circle:strategy",
+        "member_slot_refs": [
+          "cadet4:00",
+          "cadet4:02"
+        ]
+      }
+    ],
+    "social_opportunities": {
+      "evening_shared_meal": {
+        "event_family": "shared_meal",
+        "access_mode": "open_gathering",
+        "day_index": 0,
+        "start_minute": 1080,
+        "end_minute": 1140,
+        "location_ref": "cadet_mess",
+        "capacity": 2,
+        "required_location_capabilities": [
+          "social_meal_space"
+        ],
+        "eligible_circle_refs": [
+          "circle:class:A"
+        ],
+        "invited_slot_refs": [],
+        "preference_tags": [
+          "shared_meal",
+          "conversation"
+        ]
+      },
+      "strategy_small_group": {
+        "event_family": "games_recreation",
+        "access_mode": "invitation_required",
+        "day_index": 1,
+        "start_minute": 1080,
+        "end_minute": 1140,
+        "location_ref": "simulation_complex",
+        "capacity": 2,
+        "required_location_capabilities": [
+          "small_group_recreation"
+        ],
+        "eligible_circle_refs": [
+          "circle:strategy"
+        ],
+        "invited_slot_refs": [
+          "cadet4:00",
+          "cadet4:02"
+        ],
+        "preference_tags": [
+          "strategy",
+          "small_group"
+        ]
+      },
+      "quiet_common_time": {
+        "event_family": "informal_conversation",
+        "access_mode": "open_gathering",
+        "day_index": 0,
+        "start_minute": 1080,
+        "end_minute": 1140,
+        "location_ref": "library_study",
+        "capacity": 2,
+        "required_location_capabilities": [
+          "quiet_social_space"
+        ],
+        "eligible_circle_refs": [
+          "circle:class:A"
+        ],
+        "invited_slot_refs": [],
+        "preference_tags": [
+          "quiet_social",
+          "reading"
+        ]
+      }
+    },
+    "existing_social_plans": [
+      {
+        "social_plan_id": "social:evening_shared_meal:cadet4:03",
+        "social_opportunity_id": "evening_shared_meal",
+        "population_slot_ref": "cadet4:03",
+        "plan_state": "planned"
+      }
+    ],
+    "player_rsvp_responses": []
+  },
+  "expected": {
+    "preserved_existing_plan": "cadet4:03",
+    "player_auto_socialized": false,
+    "player_has_options": true,
+    "npc_quiet_social": "cadet4:01",
+    "npc_strategy_plan": "cadet4:02",
+    "relationship_mutations": 0,
+    "romantic_or_sexual_events": 0,
+    "social_truth_semantics": "plan_not_attendance_not_interaction_not_relationship"
+  }
+}

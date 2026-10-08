@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–8/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment**;
+- **Steps 1–9/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -379,7 +379,18 @@ Current status:
 - species and player proximity are excluded from registration decisions;
 - **22 executable Step-8 tests pass against the locked fixture**.
 
-**Strict sequence:** Step 9 — Social life is next and has not been started.
+- social opportunities are persistent causal entities with time, place, access mode and finite capacity;
+- open gatherings and invitation-only events are separated;
+- social circles provide encounter context but never automatic friendship/trust/rivalry;
+- NPCs may plan social attendance from explicit preferences/context; the player must choose explicitly;
+- timetable, travel and venue capability remain hard constraints;
+- plan, attendance, interaction and relationship state remain separate;
+- familiarity/shared-history evidence requires confirmed interaction rather than simple co-location;
+- Step 9 creates no romantic/sexual events;
+- project author canon now explicitly locks adult-equivalent, heterosexual-only romance/sexual relationship mechanics for Step 10+;
+- **24 executable Step-9 tests defined**.
+
+**Strict sequence:** Step 10 — Romance and dating is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 
