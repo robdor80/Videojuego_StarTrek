@@ -91,3 +91,12 @@ El visor acompaña, sin sustituirlos, a los datos textuales: distancia, marcaci�
 - La silueta de referencia debe adaptarse a la clase de nave del jugador (Galaxy, Miranda, Constitution, etc.) aprovechando los blueprints disponibles.
 
 Esta idea queda reservada para la fase de UX final; no forma parte de la implementación funcional actual de la Holocubierta.
+
+
+## UX futura · consola sin scroll global
+
+La consola de Sensores debe permanecer estable dentro del viewport: **la página completa no debe desplazarse** durante la guardia.
+
+La zona central de comunicaciones tampoco debe convertirse en una conversación infinita con scroll. Debe mostrar únicamente las comunicaciones recientes necesarias para el contexto inmediato; las anteriores se conservan en historial/log consultable.
+
+Esta regla reserva espacio estable para el futuro visor espacial basado en blueprints (vista superior, vista lateral, marcación, elevación y flecha de curso) sin que nuevas alertas o respuestas desplacen la instrumentación fuera de pantalla.
