@@ -57,3 +57,37 @@ La Computer puede resumir operacionalmente la solución, por ejemplo «aproximá
 ## Pérdida de contacto
 
 Cuando un contacto se pierde, la alerta conserva la última solución conocida separando posición y curso. La causa de la pérdida sigue siendo independiente de esos datos.
+
+## Idea UX futura · visor espacial del contacto seleccionado
+
+Reservar en la zona central de la consola de Sensores un visor espacial del **contacto seleccionado**, usando blueprints/siluetas de la nave propia como referencia.
+
+### Vista superior
+
+- Nave propia centrada y orientada de forma fija, con proa a 000°.
+- Espacio/anillo de 360° alrededor.
+- El contacto seleccionado se representa como un punto en su marcación real.
+- Una línea discreta une nave propia y contacto para facilitar lectura inmediata.
+- Mostrar distancia asociada.
+- Desde el punto del contacto sale una **flecha de curso** que muestra hacia dónde se desplaza, separando visualmente posición y movimiento.
+
+### Vista lateral
+
+- Nave propia de perfil y orientación fija.
+- Plano horizontal de referencia marcado como 0°.
+- El mismo contacto se representa arriba o abajo según su elevación positiva o negativa.
+- Puede mostrarse también la flecha de curso cuando aporte información útil.
+
+### Datos asociados
+
+El visor acompaña, sin sustituirlos, a los datos textuales: distancia, marcación, elevación, curso, velocidad, movimiento relativo, CPA y TCPA cuando exista.
+
+### Reglas visuales
+
+- Un solo contacto seleccionado en este visor para evitar saturación.
+- Orientación de las vistas siempre fija; no rotar la nave por motivos estéticos.
+- Contacto normal: neutro; desconocido/prioritario: resaltado; hostil confirmado: rojo según reglas tácticas.
+- Un contacto perdido desaparece del visor actual tras su transición visual; si se consulta desde históricos, mostrar solo su **última posición conocida** con tratamiento claramente histórico/discontinuo.
+- La silueta de referencia debe adaptarse a la clase de nave del jugador (Galaxy, Miranda, Constitution, etc.) aprovechando los blueprints disponibles.
+
+Esta idea queda reservada para la fase de UX final; no forma parte de la implementación funcional actual de la Holocubierta.
