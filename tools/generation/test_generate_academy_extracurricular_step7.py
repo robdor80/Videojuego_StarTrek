@@ -40,5 +40,5 @@ class AcademyExtracurricularStep7Tests(unittest.TestCase):
   r=req();r["cadets"].append(copy.deepcopy(r["cadets"][0]))
   with self.assertRaises(ValueError):mod.build_memberships(r)
   r=req();r["activities"]["strategy_games_society"]["capacity"]=0
-  o=mod.build_memberships(r);self.assertEqual(o["rosters"]["strategy_games_society"],[])
+  with self.assertRaises(ValueError):mod.build_memberships(r)
 if __name__=="__main__":unittest.main()
