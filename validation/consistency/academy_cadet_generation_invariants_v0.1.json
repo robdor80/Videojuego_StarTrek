@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_cadet_generation_invariants",
+  "status": "STEP_2_VALIDATED",
+  "cases": [
+    {
+      "id": "real_slot_required",
+      "expected": [
+        "generated cadet consumes a real latent cadet slot",
+        "visitor/staff slot cannot generate cadet"
+      ]
+    },
+    {
+      "id": "deterministic_identity",
+      "expected": [
+        "same campaign/registry/group/slot produces same character_id",
+        "different slot produces different character_id"
+      ]
+    },
+    {
+      "id": "population_conserved",
+      "expected": [
+        "materialization decrements latent_count",
+        "total_count unchanged"
+      ]
+    },
+    {
+      "id": "slot_materialized_once",
+      "expected": [
+        "same population_slot_ref cannot produce a second cadet"
+      ]
+    },
+    {
+      "id": "species_not_personality",
+      "expected": [
+        "forcing a different valid species does not change isolated personality seed/recipe for the same identity slot"
+      ]
+    },
+    {
+      "id": "name_not_species",
+      "expected": [
+        "same cultural/social naming context can produce same name independently of species",
+        "species alone never supplies name pool"
+      ]
+    },
+    {
+      "id": "culture_not_species_lock",
+      "expected": [
+        "social/cultural context is a separate generation layer"
+      ]
+    },
+    {
+      "id": "citizenship_not_species",
+      "expected": [
+        "citizenship/sponsorship comes from context/admission state, not species"
+      ]
+    },
+    {
+      "id": "adult_without_fake_age",
+      "expected": [
+        "adult-equivalent status required",
+        "exact age may remain unresolved if lifecycle data is not locked"
+      ]
+    },
+    {
+      "id": "specialization_timing",
+      "expected": [
+        "4th/3rd Class specialization null",
+        "2nd/1st Class specialization resolves from valid branch state"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "class_group_refs empty",
+        "roommate_ref null",
+        "Academy relationship refs empty",
+        "schedule_state_ref null"
+      ]
+    },
+    {
+      "id": "reserved_name_collision_guard",
+      "expected": [
+        "reserved/canonical display names excluded before selection"
+      ]
+    },
+    {
+      "id": "no_free_capability",
+      "expected": [
+        "background creates evidence/context only",
+        "no arbitrary expert capability generated"
+      ]
+    },
+    {
+      "id": "persistent_seeds",
+      "expected": [
+        "personality/knowledge/background seeds stable across rerun/save-load semantics"
+      ]
+    }
+  ]
+}

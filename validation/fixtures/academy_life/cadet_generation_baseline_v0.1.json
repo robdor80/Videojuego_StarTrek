@@ -1,0 +1,150 @@
+{
+  "fixture_id": "academy_cadet_generation_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step2-fixture",
+    "population_registry_id": "academy:fixture:population",
+    "group_id": "cadet_4",
+    "population_category": "cadet",
+    "population_slot_ref": "cadet_4:latent:0037",
+    "cadet_class_id": "cadet_fourth_class",
+    "academy_era_profile_ref": "tng_ds9_voyager",
+    "academy_entry_basis_ref": "admission:standard",
+    "species_pool": [
+      {
+        "species_id": "human",
+        "weight": 50
+      },
+      {
+        "species_id": "vulcan",
+        "weight": 20
+      },
+      {
+        "species_id": "andorian",
+        "weight": 15
+      },
+      {
+        "species_id": "tellarite",
+        "weight": 15
+      }
+    ],
+    "social_origin_context_pool": [
+      {
+        "context_id": "earth_multicultural",
+        "origin_ref": "earth",
+        "culture_refs": [
+          "human_federation_cultural_composition"
+        ],
+        "citizenship_refs": [
+          "united_federation_of_planets"
+        ],
+        "name_candidates": [
+          "Mara Chen",
+          "Daniel Okafor",
+          "Elena Varga",
+          "Tomás Vale"
+        ],
+        "weight": 1
+      },
+      {
+        "context_id": "vulcan_federation",
+        "origin_ref": "vulcan",
+        "culture_refs": [
+          "vulcan_mainstream_logic_traditions"
+        ],
+        "citizenship_refs": [
+          "united_federation_of_planets"
+        ],
+        "name_candidates": [
+          "T'Lan",
+          "Sovar",
+          "T'Vek",
+          "Selar"
+        ],
+        "weight": 1
+      },
+      {
+        "context_id": "andorian_federation",
+        "origin_ref": "andoria",
+        "culture_refs": [
+          "andorian"
+        ],
+        "citizenship_refs": [
+          "united_federation_of_planets"
+        ],
+        "name_candidates": [
+          "Thira zh'Renn",
+          "Kelan th'Voras",
+          "Shala sh'Renn",
+          "Taren ch'Vor"
+        ],
+        "weight": 1
+      }
+    ],
+    "reserved_display_names": [
+      "Selar"
+    ],
+    "branch_pool": [
+      {
+        "branch_id": "command"
+      },
+      {
+        "branch_id": "flight_navigation"
+      },
+      {
+        "branch_id": "operations"
+      },
+      {
+        "branch_id": "engineering"
+      },
+      {
+        "branch_id": "security_tactical"
+      },
+      {
+        "branch_id": "science_sensors"
+      },
+      {
+        "branch_id": "medical"
+      }
+    ],
+    "personality_recipe_ids": [
+      "self_doubting_ambitious_cadet",
+      "optimistic_brave_novice",
+      "quiet_observant_professional",
+      "gentle_contrarian_debater",
+      "curious_artistic_introvert"
+    ],
+    "prior_education_pool": [
+      "general_sciences",
+      "engineering_foundations",
+      "languages_and_culture",
+      "athletics"
+    ],
+    "interest_pool": [
+      "stellar_cartography",
+      "xenobiology",
+      "engineering",
+      "diplomacy",
+      "flight",
+      "medicine",
+      "security"
+    ],
+    "hobby_pool": [
+      "music",
+      "running",
+      "chess",
+      "martial_arts",
+      "painting",
+      "astronomy"
+    ]
+  },
+  "expected": {
+    "character_id": "cadet:proc:871873fac5d7c03e",
+    "display_name": "Elena Varga",
+    "species_id": "human",
+    "specialization": null,
+    "personality_recipe_id": "self_doubting_ambitious_cadet",
+    "population_total_unchanged": true,
+    "future_step_fields_empty": true
+  }
+}

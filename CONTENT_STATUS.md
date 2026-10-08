@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Step 1/20 COMPLETE — Academy population**;
+- **Steps 1–2/20 COMPLETE — Academy population + procedural cadet generation**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -318,8 +318,15 @@ Current status:
 - no universal exact Academy headcount asserted as canon;
 - Step 1 validation pack + fictional fixture + reference validator;
 - **10 executable Step-1 tests defined and reference logic validated**.
+- deterministic Step-2 cadet materialization from a real population slot;
+- stable character identity, species/social-origin/culture/citizenship separation and context-driven naming;
+- isolated personality/knowledge/background seeds with species explicitly excluded as a personality selector;
+- 4th/3rd Class branch interests remain nonbinding; 2nd/1st Class specialization state resolves;
+- future-step fields (class groups, roommate, Academy relationships, schedule) remain unresolved;
+- reserved/canonical display-name collision guard;
+- **12 executable Step-2 tests validated**.
 
-**Strict sequence:** Step 2 — Procedural cadet generation is next and has not been started.
+**Strict sequence:** Step 3 — Classmates, study groups and practical teams is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

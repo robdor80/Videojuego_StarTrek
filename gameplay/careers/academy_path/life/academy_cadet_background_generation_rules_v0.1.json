@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_cadet_background_generation_rules",
+  "status": "STEP_2_COMPLETE",
+  "background_domains": [
+    "prior_education",
+    "prior_activities_and_hobbies",
+    "interests",
+    "languages_when_supported",
+    "origin_and_upbringing_context",
+    "citizenship_or_sponsorship_context"
+  ],
+  "rules": [
+    "Background selection is deterministic from an isolated background seed.",
+    "Background values come from era/campaign-valid authored pools; no contemporary-Earth default is assumed.",
+    "Prior education may create evidence/context for later capability initialization but cannot directly assign expert proficiency.",
+    "Hobbies and interests do not force specialization.",
+    "Branch interests may correlate with background through future evidence rules, but Step 2 does not manufacture academic achievements.",
+    "No generated deep friendship, romance, roommate history or Academy group membership is created here.",
+    "Pre-Academy relationships may be preserved only when explicitly supplied by validated background state; Step 2 does not invent them."
+  ]
+}

@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 1,
+    "complete": 2,
     "partial": 0,
-    "todo": 19,
-    "current_step": 1
+    "todo": 18,
+    "current_step": 2
   },
   "steps": [
     {
@@ -17,7 +17,7 @@
     },
     {
       "step": 2,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Procedural cadet generation"
     },
     {
@@ -115,5 +115,22 @@
     "work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy",
     "roadmap_ref": "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
     "status": "TODO_DEFERRED_UNTIL_ACADEMY_STEP_20_COMPLETE"
+  },
+  "delivered_step_2": {
+    "persistent_cadet_identity": "COMPLETE",
+    "population_slot_binding": "COMPLETE",
+    "species_context_generation": "COMPLETE",
+    "social_origin_culture_citizenship_context": "COMPLETE",
+    "contextual_name_generation": "COMPLETE",
+    "background_interests_hobbies": "COMPLETE",
+    "branch_interest_and_specialization_timing": "COMPLETE",
+    "personality_seed_and_recipe_integration": "COMPLETE",
+    "knowledge_and_background_seeds": "COMPLETE",
+    "visual_identity_lineage": "COMPLETE",
+    "reserved_name_collision_guard": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 12,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "model_id": "generated_character_rules",
   "classification": "GAME_ADDITION",
   "generation_inputs": [
@@ -28,6 +28,8 @@
     "Species selection does not generate personality stereotypes.",
     "No generated NPC receives famous-canon relationships without explicit campaign justification.",
     "Generated characters persist once introduced unless the campaign explicitly discards them.",
-    "Names and presentation must avoid accidental collisions with canonical characters where validation can detect them."
-  ]
+    "Names and presentation must avoid accidental collisions with canonical characters where validation can detect them.",
+    "Academy cadets generated from Academy population must follow the Academy-specific materialization contract and consume a real cadet population slot."
+  ],
+  "academy_cadet_generation_ref": "gameplay/careers/academy_path/life/academy_cadet_generation_contract_v0.1.json"
 }

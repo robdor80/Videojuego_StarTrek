@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1.0",
+  "pipeline_id": "academy_cadet_materialization_pipeline",
+  "status": "STEP_2_COMPLETE",
+  "deterministic_seed_pattern": "campaign_seed + stable_character_id + subsystem_key + academy_cadet_generation_rules_version",
+  "steps": [
+    {
+      "order": 1,
+      "id": "validate_population_slot",
+      "rule": "Confirm real latent cadet slot in exactly one cadet-class group."
+    },
+    {
+      "order": 2,
+      "id": "resolve_stable_character_id",
+      "rule": "Derive stable character_id from registry/group/slot identity."
+    },
+    {
+      "order": 3,
+      "id": "resolve_species_context",
+      "rule": "Choose only from era/campaign-valid species population context."
+    },
+    {
+      "order": 4,
+      "id": "resolve_social_origin_context",
+      "rule": "Resolve origin/culture/citizenship/upbringing context independently from personality."
+    },
+    {
+      "order": 5,
+      "id": "resolve_name",
+      "rule": "Use social/cultural naming context; remove reserved/canonical collisions."
+    },
+    {
+      "order": 6,
+      "id": "resolve_background",
+      "rule": "Seed prior education, interests and hobbies without granting unsupported capability."
+    },
+    {
+      "order": 7,
+      "id": "resolve_academic_state",
+      "rule": "Bind current cadet class; resolve branch interests and specialization timing."
+    },
+    {
+      "order": 8,
+      "id": "resolve_personality",
+      "rule": "Call species-agnostic persistent personality pipeline with isolated personality seed."
+    },
+    {
+      "order": 9,
+      "id": "resolve_knowledge",
+      "rule": "Create isolated knowledge seed; actual knowledge remains constrained by education/experience/access."
+    },
+    {
+      "order": 10,
+      "id": "bind_visual_identity",
+      "rule": "Assign persistent base visual identity lineage compatible with species morphology."
+    },
+    {
+      "order": 11,
+      "id": "enforce_future_step_boundary",
+      "rule": "Leave class groups, roommate, Academy relationships and schedule unresolved."
+    },
+    {
+      "order": 12,
+      "id": "consume_population_slot",
+      "rule": "Bind slot→character_id, decrement latent count, preserve total count."
+    },
+    {
+      "order": 13,
+      "id": "persist",
+      "rule": "Append materialization provenance; no reroll after save/load/LOD/rules update."
+    }
+  ]
+}

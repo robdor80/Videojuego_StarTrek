@@ -12,7 +12,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | Step | Scope | Status |
 |---|---|---|
 | 1 | Academy population | COMPLETE |
-| 2 | Procedural cadet generation | TODO |
+| 2 | Procedural cadet generation | COMPLETE |
 | 3 | Classmates, study groups and practical teams | TODO |
 | 4 | Quarters and roommates | TODO |
 | 5 | Personal schedules | TODO |
@@ -108,3 +108,66 @@ Step 1 deliberately does **not** implement:
 ## Deferred external work
 
 **Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life & Social Simulation Step 20 is COMPLETE.** After Step 20, work returns to Dynamic Universe Block 4 before Block 5.
+
+## Step 2 — Procedural cadet generation
+
+Step 2 materializes a **persistent individual cadet** from one real latent cadet slot defined by Step 1.
+
+### Generation pipeline
+
+```text
+real Academy population slot
+→ stable cadet entity_id
+→ species context
+→ social/origin/culture/citizenship context
+→ name from cultural/social naming context
+→ prior education / interests / hobbies
+→ Academy class state
+→ branch interests or already-existing specialization
+→ isolated personality seed + species-agnostic personality recipe
+→ isolated knowledge/background seeds
+→ persistent visual identity reference
+→ consume latent slot without changing population total
+```
+
+### Identity rules
+
+- Species, culture, citizenship, origin, Academy membership and personality are separate state.
+- Species is selected from the campaign/era population context but **does not select personality**.
+- Names resolve from the selected social/origin/cultural naming context, not directly from species.
+- Culture may be mixed, off-world or cross-species when the supplied context supports it.
+- Citizenship is not inferred from species or birthplace.
+- A generated cadet must already have a valid Academy admission/membership basis.
+- Exact age/birth date is not invented when species lifecycle data does not provide a valid range; adult-equivalent status remains mandatory.
+- Reserved/canonical display-name collisions are rejected/avoided.
+
+### Academy-state rules
+
+- 4th Class and 3rd Class generated cadets have branch **interests**, not a prematurely locked specialization.
+- 2nd Class and 1st Class cadets materialize with their already-existing specialization state because formal specialization has begun by then.
+- Generation never grants capability scores without evidence; prior education/hobbies/interests are background evidence/context only.
+- Knowledge is seeded independently and remains observer/experience constrained.
+
+### Strict boundary
+
+Step 2 does **not** create:
+- classmates or study/practical groups — Step 3;
+- roommates/quarters relationships — Step 4;
+- personal schedules — Step 5;
+- new Academy friendships/rivalries — Steps 9/11;
+- romance — Step 10.
+
+Those fields remain empty/null at Step 2 materialization.
+
+### Persistence
+
+The cadet is bound permanently to:
+- one stable `character_id`;
+- the consumed `population_slot_ref`;
+- one personality seed;
+- one knowledge seed;
+- one background seed;
+- one base visual identity lineage.
+
+Save/load, LOD changes, later social importance or generator updates cannot reroll the cadet.
+
