@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_academic_group_contract",
+  "status": "STEP_3_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Academic groups are persistent institutional/shared-context structures over real Academy population slots. Group co-membership is not itself a social relationship.",
+  "group_types": [
+    "class_section",
+    "study_group",
+    "practical_team"
+  ],
+  "membership_key": "population_slot_ref",
+  "rules": [
+    "Academic grouping consumes existing cadet slots; it never creates cadets.",
+    "Latent and materialized cadets may belong to the same group.",
+    "Materialization preserves membership because membership is anchored to population_slot_ref.",
+    "A current class section may contain cadets from only one cadet class.",
+    "One cadet has exactly one primary class-section membership for the relevant grouping period.",
+    "Study groups require an academic context and do not create friendship, trust, affection or rivalry automatically.",
+    "Practical teams require actual course/activity eligibility.",
+    "Practical composition may use specialization/branch state where academically relevant but not species or personality as a balancing shortcut.",
+    "Player presence, dialogue initiation or narrative convenience cannot reshuffle groups.",
+    "Group reassignment requires an explicit academic/reorganization event and preserves prior membership history.",
+    "Group membership may provide future shared-context provenance for social events, but Step 3 does not mutate relationship state.",
+    "Roommates, schedules, social relationships and romance remain outside Step 3."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_cadet_generation_contract_v0.1.json",
+    "gameplay/careers/academy_path/curriculum_structure.json",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/relationships/relationship_state_model.json"
+  ],
+  "next_step_ref": "Step 4 — Quarters and roommates"
+}

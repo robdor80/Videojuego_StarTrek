@@ -1,0 +1,22 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_class_section_rules",
+  "status": "STEP_3_COMPLETE",
+  "fields": [
+    "group_id",
+    "cadet_class_id",
+    "academic_period_ref",
+    "member_slot_refs",
+    "capacity",
+    "membership_event_refs"
+  ],
+  "rules": [
+    "Section membership is based on current cadet class and valid enrollment context.",
+    "One primary section per cadet per applicable academic period.",
+    "Section capacity is configured by Academy content/runtime and is not asserted as one canon-wide number.",
+    "A section may contain latent slots and materialized cadets simultaneously.",
+    "Materializing or interacting with the player does not rebalance a section.",
+    "Course or curriculum changes may cause explicit section reassignment.",
+    "Being classmates is an institutional/shared-context fact, not proof of friendship or even prior conversation."
+  ]
+}

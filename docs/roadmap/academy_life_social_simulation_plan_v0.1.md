@@ -13,7 +13,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 |---|---|---|
 | 1 | Academy population | COMPLETE |
 | 2 | Procedural cadet generation | COMPLETE |
-| 3 | Classmates, study groups and practical teams | TODO |
+| 3 | Classmates, study groups and practical teams | COMPLETE |
 | 4 | Quarters and roommates | TODO |
 | 5 | Personal schedules | TODO |
 | 6 | Free time | TODO |
@@ -171,3 +171,9 @@ The cadet is bound permanently to:
 
 Save/load, LOD changes, later social importance or generator updates cannot reroll the cadet.
 
+
+## Step 3 — Classmates, study groups and practical teams
+
+Step 3 closes slot-first academic grouping: class sections, study groups and course-eligible practical teams. **Academic proximity is not a social relationship.** Membership is anchored to `population_slot_ref`, so latent cadets can already have stable classmates/teams and later materialization preserves them. Class sections never mix cadet classes; study groups do not create friendship; practical teams support deterministic, specialization-aligned or cross-branch policies. Player presence cannot reshuffle groups. Reassignment requires an explicit academic event.
+
+**Boundary:** quarters/roommates remain Step 4; schedules Step 5; social relationship mutation Steps 9/11; romance Step 10.

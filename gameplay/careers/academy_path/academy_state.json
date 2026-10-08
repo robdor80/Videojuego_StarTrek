@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.8.0",
+  "schema_version": "0.9.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -54,7 +54,11 @@
     "first_assignment": "assignment_id_or_null",
     "academy_era_profile": "era_profile_id",
     "cadet_insignia_standard": "cadet_insignia_standard_id",
-    "academy_population_registry_ref": "academy_population_registry_id"
+    "academy_population_registry_ref": "academy_population_registry_id",
+    "class_section_refs": "academic_group_ref_list",
+    "study_group_refs": "academic_group_ref_list",
+    "practical_team_refs": "academic_group_ref_list",
+    "academic_group_registry_ref": "academy_academic_group_registry_id"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -63,7 +67,10 @@
     "relationships use the shared social relationship system",
     "this is an authoring/gameplay contract, not yet a CoreRPG runtime schema",
     "an admitted player cadet occupies one real slot in the Academy population registry",
-    "temporary absence from campus does not remove Academy cohort membership"
+    "temporary absence from campus does not remove Academy cohort membership",
+    "academic group co-membership is not itself a social relationship",
+    "materializing a latent cadet preserves slot-based academic group memberships"
   ],
-  "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json"
+  "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
+  "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json"
 }

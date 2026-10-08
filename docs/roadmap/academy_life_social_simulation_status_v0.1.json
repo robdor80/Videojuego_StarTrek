@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 2,
+    "complete": 3,
     "partial": 0,
-    "todo": 18,
-    "current_step": 2
+    "todo": 17,
+    "current_step": 3
   },
   "steps": [
     {
@@ -22,7 +22,7 @@
     },
     {
       "step": 3,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Classmates, study groups and practical teams"
     },
     {
@@ -130,6 +130,22 @@
     "reserved_name_collision_guard": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 12,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_3": {
+    "slot_first_academic_grouping": "COMPLETE",
+    "class_sections": "COMPLETE",
+    "classmate_context": "COMPLETE",
+    "study_groups": "COMPLETE",
+    "practical_teams": "COMPLETE",
+    "specialization_aligned_composition": "COMPLETE",
+    "cross_branch_composition": "COMPLETE",
+    "latent_to_materialized_membership_continuity": "COMPLETE",
+    "no_automatic_relationship_effect": "COMPLETE",
+    "group_reassignment_semantics": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 15,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

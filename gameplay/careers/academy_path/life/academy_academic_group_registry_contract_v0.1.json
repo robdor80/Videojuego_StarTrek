@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_academic_group_registry_contract",
+  "status": "STEP_3_COMPLETE",
+  "group_record_fields": [
+    "group_id",
+    "group_type",
+    "scope_ref",
+    "cadet_class_id_if_applicable",
+    "course_id_if_applicable",
+    "composition_policy_if_applicable",
+    "member_slot_refs",
+    "created_by_event_ref",
+    "active_from",
+    "active_until_if_any",
+    "reassignment_history_refs"
+  ],
+  "derived_queries": [
+    "class_section_for_slot",
+    "study_groups_for_slot",
+    "practical_teams_for_slot",
+    "classmate_slot_refs",
+    "shared_academic_context_refs"
+  ],
+  "rules": [
+    "population_slot_ref is the authoritative membership anchor; character_id is resolved from the population registry when materialized.",
+    "A materialized character inherits all existing group memberships of its slot.",
+    "History records prior groups after reassignment or academic progression.",
+    "Group membership records cannot mutate relationship state directly.",
+    "An inactive/ended group remains historical context rather than being deleted.",
+    "Current group records must validate against Academy population and course eligibility."
+  ]
+}

@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–2/20 COMPLETE — Academy population + procedural cadet generation**;
+- **Steps 1–3/20 COMPLETE — Academy population + procedural cadets + academic grouping**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -325,8 +325,15 @@ Current status:
 - future-step fields (class groups, roommate, Academy relationships, schedule) remain unresolved;
 - reserved/canonical display-name collision guard;
 - **12 executable Step-2 tests validated**.
+- slot-first class sections, study groups and practical teams;
+- latent cadets can have stable classmates/teams before individual materialization;
+- class sections never mix cadet classes and respect configured capacity;
+- practical teams enforce course eligibility and support branch-aligned/cross-branch composition;
+- academic co-membership creates shared context only, **never automatic friendship/rivalry/romance**;
+- materialization preserves group membership and player presence cannot reshuffle it;
+- **15 executable Step-3 tests validated**.
 
-**Strict sequence:** Step 3 — Classmates, study groups and practical teams is next and has not been started.
+**Strict sequence:** Step 4 — Quarters and roommates is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_study_group_rules",
+  "status": "STEP_3_COMPLETE",
+  "formation_modes": [
+    "academy_assigned_peer_study",
+    "cadet_initiated_explicit_event",
+    "remediation_or_tutoring_group"
+  ],
+  "reference_generator_mode": "academy_assigned_peer_study",
+  "rules": [
+    "Academy-assigned peer-study groups are deterministic within a valid academic context.",
+    "Cadet-initiated groups require a later explicit gameplay/social event; they are not retroactively invented.",
+    "Study-group membership does not modify trust, affection, rivalry or romance automatically.",
+    "Repeated actual participation may later become relationship evidence through the shared social system.",
+    "A study group does not guarantee that every member is present at every session; scheduling is Step 5.",
+    "Group membership may persist for a term/course or end through an explicit reorganization event."
+  ]
+}

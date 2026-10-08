@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_practical_team_rules",
+  "status": "STEP_3_COMPLETE",
+  "composition_policies": [
+    "deterministic",
+    "specialization_aligned",
+    "cross_branch"
+  ],
+  "rules": [
+    "Every team member must be eligible/enrolled for the practical course or activity.",
+    "Specialization-aligned teams use real specialization/branch state and do not infer branch from species/personality.",
+    "Cross-branch teams seek functional academic diversity when the eligible roster supports it.",
+    "Fourth/Third Class may use branch interests only where a course explicitly allows exploratory grouping; branch interest remains nonbinding.",
+    "Team membership and team role are separate; exercise-specific roles may be assigned by the practical activity.",
+    "A practical team does not create interpersonal relationship state automatically.",
+    "Team changes require an academic/activity event rather than player proximity.",
+    "Scheduling and physical co-presence are resolved later; team membership alone does not teleport anyone."
+  ]
+}

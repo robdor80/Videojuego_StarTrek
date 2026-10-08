@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_grouping_invariants",
+  "status": "STEP_3_VALIDATED",
+  "cases": [
+    {
+      "id": "one_primary_section",
+      "expected": [
+        "each roster slot appears in exactly one current class section"
+      ]
+    },
+    {
+      "id": "section_class_purity",
+      "expected": [
+        "class section never mixes cadet classes"
+      ]
+    },
+    {
+      "id": "capacity_respected",
+      "expected": [
+        "section membership does not exceed configured capacity"
+      ]
+    },
+    {
+      "id": "slot_first_membership",
+      "expected": [
+        "latent population slots may be assigned before character materialization"
+      ]
+    },
+    {
+      "id": "materialization_preserves_membership",
+      "expected": [
+        "adding character_id to an existing slot does not change its groups"
+      ]
+    },
+    {
+      "id": "input_order_independent",
+      "expected": [
+        "reordering roster input does not reroll grouping"
+      ]
+    },
+    {
+      "id": "species_irrelevant_to_grouping",
+      "expected": [
+        "species changes alone do not alter academic group assignment"
+      ]
+    },
+    {
+      "id": "player_presence_irrelevant",
+      "expected": [
+        "player presence does not alter group assignment"
+      ]
+    },
+    {
+      "id": "study_within_context",
+      "expected": [
+        "reference study groups remain inside their parent section"
+      ]
+    },
+    {
+      "id": "study_not_friendship",
+      "expected": [
+        "study group adds no automatic relationship state"
+      ]
+    },
+    {
+      "id": "practical_course_eligibility",
+      "expected": [
+        "every practical-team member is enrolled/eligible for that course"
+      ]
+    },
+    {
+      "id": "aligned_practice",
+      "expected": [
+        "specialization-aligned team members share branch label"
+      ]
+    },
+    {
+      "id": "cross_branch_practice",
+      "expected": [
+        "cross-branch teams contain multiple branch labels when eligible roster supports it"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no roommate assignment",
+        "no personal schedule",
+        "no social/romantic mutation"
+      ]
+    },
+    {
+      "id": "explicit_reassignment_only",
+      "expected": [
+        "group changes require represented academic events"
+      ]
+    }
+  ]
+}

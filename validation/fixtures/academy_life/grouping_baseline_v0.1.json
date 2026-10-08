@@ -1,0 +1,361 @@
+{
+  "fixture_id": "academy_grouping_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step3-fixture",
+    "roster": [
+      {
+        "population_slot_ref": "cadet_3:slot:00",
+        "character_id": "cadet:3:00",
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:01",
+        "character_id": "cadet:3:01",
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "flight_navigation"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:02",
+        "character_id": "cadet:3:02",
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "operations"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:03",
+        "character_id": "cadet:3:03",
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:04",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "security_tactical"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:05",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "science_sensors"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:06",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "medical"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:07",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:08",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "flight_navigation"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:09",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "operations"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:10",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_3:slot:11",
+        "character_id": null,
+        "cadet_class_id": "cadet_third_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "security_tactical"
+        ],
+        "specialization": null,
+        "course_ids": [
+          "OPS-301"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:00",
+        "character_id": "cadet:2:00",
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": "command",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:01",
+        "character_id": "cadet:2:01",
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": "command",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:02",
+        "character_id": "cadet:2:02",
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": "command",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:03",
+        "character_id": "cadet:2:03",
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "command"
+        ],
+        "specialization": "command",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:04",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": "engineering",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:05",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": "engineering",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:06",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": "engineering",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:07",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "specialization": "engineering",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:08",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "human",
+        "branch_interest_ids": [
+          "science_sensors"
+        ],
+        "specialization": "science_sensors",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:09",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "vulcan",
+        "branch_interest_ids": [
+          "science_sensors"
+        ],
+        "specialization": "science_sensors",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:10",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "andorian",
+        "branch_interest_ids": [
+          "science_sensors"
+        ],
+        "specialization": "science_sensors",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      },
+      {
+        "population_slot_ref": "cadet_2:slot:11",
+        "character_id": null,
+        "cadet_class_id": "cadet_second_class",
+        "species_id": "tellarite",
+        "branch_interest_ids": [
+          "science_sensors"
+        ],
+        "specialization": "science_sensors",
+        "course_ids": [
+          "PRA-201",
+          "INT-CROSS"
+        ]
+      }
+    ],
+    "class_section_capacity": 6,
+    "study_group_size": 3,
+    "study_group_participation_percent": 100,
+    "practical_courses": [
+      {
+        "course_id": "OPS-301",
+        "cadet_class_id": "cadet_third_class",
+        "team_size": 4,
+        "composition_policy": "cross_branch"
+      },
+      {
+        "course_id": "PRA-201",
+        "cadet_class_id": "cadet_second_class",
+        "team_size": 4,
+        "composition_policy": "specialization_aligned"
+      },
+      {
+        "course_id": "INT-CROSS",
+        "cadet_class_id": "cadet_second_class",
+        "team_size": 4,
+        "composition_policy": "cross_branch"
+      }
+    ]
+  },
+  "expected": {
+    "class_sections": 4,
+    "study_groups": 8,
+    "practical_teams": 9
+  }
+}
