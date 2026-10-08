@@ -62,3 +62,20 @@ La nave genera primero sus puestos y cobertura necesaria. Después se asignan gu
 En Starfleet, el modelo soporta tres guardias de 8 h o cuatro guardias de 6 h como regla de simulación compatible con el canon. La hora exacta de inicio pertenece a cada nave concreta. Otras organizaciones usan guardias locales/personalizadas salvo que exista evidencia canónica de su terminología.
 
 Fuera de turno, un tripulante puede seguir ocupado con relevo, informes, entrenamiento, mantenimiento, guardia localizada, controles médicos, comida, descanso, ocio o compromisos privados. El jugador no puede volver disponible a un NPC simplemente iniciando una conversación.
+
+
+## Guardia de Sensores
+
+La estación de Sensores mantiene vigilancia pasiva continua incluso sin órdenes directas. La automatización de la nave realiza adquisición, actualización y control rutinario; el oficial supervisa, investiga, prioriza y reporta.
+
+Regla de simulación:
+
+**vigilancia continua ≠ eventos continuos**
+
+Una guardia completa puede terminar sin novedades. La Computer no crea contactos, anomalías ni crisis para llenar tiempo.
+
+Contrato específico:
+- `sensor_watchstanding_protocol_v0.1.md`
+- `sensor_watchstanding_state_v0.1.json`
+
+La estación informa normalmente al oficial que tenga el mando del puente; el capitán solo recibe escalado cuando corresponda por presencia, órdenes permanentes, decisión del mando o gravedad.
