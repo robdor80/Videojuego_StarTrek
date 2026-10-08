@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_quarters_housing_contract",
+  "status": "STEP_4_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Cadet housing is finite physical residential capacity. A quarters assignment establishes residence and co-residency context, not current physical presence or a social relationship.",
+  "housing_membership_key": "population_slot_ref",
+  "room_fields": [
+    "room_id",
+    "location_ref",
+    "capacity",
+    "capability_tags",
+    "preference_tags",
+    "allowed_cadet_class_ids_if_any",
+    "occupant_slot_refs",
+    "availability_state",
+    "assignment_history_refs"
+  ],
+  "cadet_housing_inputs": [
+    "population_slot_ref",
+    "cadet_class_id",
+    "hard_housing_requirement_tags",
+    "single_occupancy_required",
+    "soft_housing_preference_tags"
+  ],
+  "rules": [
+    "Every housed cadet occupies one real bed/room capacity unit.",
+    "A cadet may have at most one current Academy quarters assignment.",
+    "Latent and materialized cadets may hold quarters because assignment is anchored to population_slot_ref.",
+    "Materializing a cadet does not change their quarters or roommates.",
+    "Hard medical, environmental, accessibility, safety or legally represented needs constrain eligible rooms.",
+    "Species ID alone never determines room assignment; any species-related need must first resolve into an explicit housing requirement.",
+    "Personality never determines mandatory housing compatibility.",
+    "Soft preferences may influence assignment only after all hard constraints and capacity rules are satisfied.",
+    "No compatible capacity produces an unresolved housing need; the system does not invent a new room.",
+    "Temporary leave, field training or training cruise does not automatically release quarters.",
+    "Graduation, withdrawal, dismissal, transfer, authorized move or facility change may release/reassign quarters through explicit events.",
+    "Quarters assignment defines residence, not guaranteed current location; schedule/presence is Step 5.",
+    "Roommate co-residency creates shared-context provenance only and has no automatic friendship, trust, affection, rivalry or romance effect.",
+    "The player uses the same housing inventory and assignment rules as other cadets."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_cadet_generation_contract_v0.1.json",
+    "gameplay/facilities/facility_residency_tenancy_visitor_model_v0.1.json",
+    "gameplay/relationships/relationship_state_model.json",
+    "gameplay/careers/academy_path/campus_location_graph.json"
+  ],
+  "next_step_ref": "Step 5 — Personal schedules"
+}

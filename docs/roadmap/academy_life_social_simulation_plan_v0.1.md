@@ -14,7 +14,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 1 | Academy population | COMPLETE |
 | 2 | Procedural cadet generation | COMPLETE |
 | 3 | Classmates, study groups and practical teams | COMPLETE |
-| 4 | Quarters and roommates | TODO |
+| 4 | Quarters and roommates | COMPLETE |
 | 5 | Personal schedules | TODO |
 | 6 | Free time | TODO |
 | 7 | Extracurricular activities | TODO |
@@ -177,3 +177,17 @@ Save/load, LOD changes, later social importance or generator updates cannot rero
 Step 3 closes slot-first academic grouping: class sections, study groups and course-eligible practical teams. **Academic proximity is not a social relationship.** Membership is anchored to `population_slot_ref`, so latent cadets can already have stable classmates/teams and later materialization preserves them. Class sections never mix cadet classes; study groups do not create friendship; practical teams support deterministic, specialization-aligned or cross-branch policies. Player presence cannot reshuffle groups. Reassignment requires an explicit academic event.
 
 **Boundary:** quarters/roommates remain Step 4; schedules Step 5; social relationship mutation Steps 9/11; romance Step 10.
+
+## Step 4 — Quarters and roommates
+
+Step 4 closes Academy residential assignment over **finite, pre-existing quarters capacity**.
+
+A quarters assignment is anchored to `population_slot_ref`, so latent cadets can already have a stable room and roommate context before individual materialization. Materializing the cadet does not change housing.
+
+**Roommate ≠ friend.** Sharing a room creates co-residency/shared-history opportunity only. It never creates trust, affection, rivalry or romance by itself.
+
+Hard medical, environmental, accessibility, safety or represented legal requirements constrain eligible housing. Species ID itself is never a roommate rule; a species-specific physiological need must first resolve into an explicit housing requirement. Personality likewise does not determine mandatory compatibility.
+
+If no compatible room/bed exists, housing remains explicitly unresolved; the system does not synthesize a new room.
+
+Temporary absence does not automatically release the room. Reassignment/release requires a real event. Quarters establish residence, not current physical presence: **personal schedule and actual presence remain Step 5**.

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.9.0",
+  "schema_version": "0.10.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -58,7 +58,10 @@
     "class_section_refs": "academic_group_ref_list",
     "study_group_refs": "academic_group_ref_list",
     "practical_team_refs": "academic_group_ref_list",
-    "academic_group_registry_ref": "academy_academic_group_registry_id"
+    "academic_group_registry_ref": "academy_academic_group_registry_id",
+    "quarters_assignment_ref": "academy_quarters_assignment_ref_or_null",
+    "roommate_slot_refs": "population_slot_ref_list",
+    "quarters_registry_ref": "academy_quarters_registry_id"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -69,8 +72,11 @@
     "an admitted player cadet occupies one real slot in the Academy population registry",
     "temporary absence from campus does not remove Academy cohort membership",
     "academic group co-membership is not itself a social relationship",
-    "materializing a latent cadet preserves slot-based academic group memberships"
+    "materializing a latent cadet preserves slot-based academic group memberships",
+    "quarters assignment defines residence but does not guarantee current physical presence",
+    "roommate co-residency is shared context and not itself a social relationship"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
-  "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json"
+  "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
+  "quarters_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json"
 }

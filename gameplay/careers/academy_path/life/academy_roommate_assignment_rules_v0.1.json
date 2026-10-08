@@ -1,0 +1,36 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_roommate_assignment_rules",
+  "status": "STEP_4_COMPLETE",
+  "assignment_order": [
+    "preserve_valid_existing_assignment",
+    "resolve_hard_housing_requirements",
+    "resolve_single_occupancy_requirements",
+    "respect_finite_room_capacity",
+    "apply_authored_assignment_policy",
+    "apply_soft_preferences_if_possible",
+    "stable_deterministic_tiebreak",
+    "leave_unresolved_if_no_compatible_capacity"
+  ],
+  "rules": [
+    "Roommate is a derived co-residency relation from sharing one current quarters unit.",
+    "Roommate assignment cannot be based on desired story chemistry, romance potential or player convenience.",
+    "Species, culture, gender, personality, branch or social status are not automatic roommate partitions.",
+    "An explicit Academy policy may constrain housing only when represented in configuration/content and compatible with project canon/policy.",
+    "Hard accessibility, medical, environmental or safety constraints outrank convenience and soft preferences.",
+    "A single-occupancy requirement must use actual single-capacity housing or remain unresolved.",
+    "Existing valid assignment persists until an explicit move/reassignment event.",
+    "Sharing quarters does not create friendship, trust, affection, resentment or romance automatically.",
+    "Later lived events in shared quarters may affect relationships through the social system.",
+    "Roommates do not have to share identical schedules; schedule arbitration is Step 5."
+  ],
+  "reassignment_causes": [
+    "medical_or_accessibility_change",
+    "room_unavailable_or_maintenance",
+    "authorized_cadet_request",
+    "academy_reorganization",
+    "disciplinary_or_safety_action",
+    "leave_or_return_when_assignment_released_by_policy",
+    "withdrawal_transfer_graduation_or_dismissal"
+  ]
+}

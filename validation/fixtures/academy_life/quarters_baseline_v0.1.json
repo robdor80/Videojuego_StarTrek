@@ -1,0 +1,206 @@
+{
+  "fixture_id": "academy_quarters_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step4-fixture",
+    "prefer_same_cadet_class_roommates": true,
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "character_id": "cadet:00",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "human",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "character_id": "cadet:01",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "vulcan",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "character_id": "cadet:02",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "andorian",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "character_id": "cadet:03",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "tellarite",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:04",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "human",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:05",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "vulcan",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:06",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "andorian",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:07",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "tellarite",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:08",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "human",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support",
+          "mobility_accessible"
+        ],
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:09",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "vulcan",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support",
+          "medical_privacy"
+        ],
+        "single_occupancy_required": true,
+        "soft_housing_preference_tags": []
+      },
+      {
+        "population_slot_ref": "cadet4:10",
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "andorian",
+        "personality_recipe_id": "irrelevant",
+        "hard_housing_requirement_tags": [
+          "standard_life_support",
+          "unsupported_special_environment"
+        ],
+        "soft_housing_preference_tags": []
+      }
+    ],
+    "rooms": [
+      {
+        "room_id": "Q-A01",
+        "location_ref": "cadet_quarters",
+        "capacity": 2,
+        "capability_tags": [
+          "standard_life_support"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      },
+      {
+        "room_id": "Q-A02",
+        "location_ref": "cadet_quarters",
+        "capacity": 2,
+        "capability_tags": [
+          "standard_life_support"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      },
+      {
+        "room_id": "Q-A03",
+        "location_ref": "cadet_quarters",
+        "capacity": 2,
+        "capability_tags": [
+          "standard_life_support"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      },
+      {
+        "room_id": "Q-A04",
+        "location_ref": "cadet_quarters",
+        "capacity": 2,
+        "capability_tags": [
+          "standard_life_support"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      },
+      {
+        "room_id": "Q-ACC01",
+        "location_ref": "cadet_quarters",
+        "capacity": 1,
+        "capability_tags": [
+          "standard_life_support",
+          "mobility_accessible"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      },
+      {
+        "room_id": "Q-MED01",
+        "location_ref": "cadet_quarters",
+        "capacity": 1,
+        "capability_tags": [
+          "standard_life_support",
+          "medical_privacy"
+        ],
+        "preference_tags": [],
+        "occupant_slot_refs": []
+      }
+    ]
+  },
+  "expected": {
+    "assigned_count": 10,
+    "unresolved_count": 1,
+    "accessible_slot_room": "Q-ACC01",
+    "medical_single_slot_room": "Q-MED01",
+    "automatic_relationship_effect": "none"
+  }
+}

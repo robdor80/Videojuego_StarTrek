@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "graph_id": "starfleet_academy_earth_base",
   "player_facing_locale": "es-ES",
   "model": "location_graph",
@@ -109,7 +109,10 @@
         "personal_events",
         "roommate_interactions",
         "planning"
-      ]
+      ],
+      "residential_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json",
+      "capacity_model": "finite_room_inventory",
+      "assignment_key": "population_slot_ref"
     },
     {
       "id": "cadet_mess",

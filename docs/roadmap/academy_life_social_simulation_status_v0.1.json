@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 3,
+    "complete": 4,
     "partial": 0,
-    "todo": 17,
-    "current_step": 3
+    "todo": 16,
+    "current_step": 4
   },
   "steps": [
     {
@@ -27,7 +27,7 @@
     },
     {
       "step": 4,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Quarters and roommates"
     },
     {
@@ -146,6 +146,23 @@
     "group_reassignment_semantics": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 15,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_4": {
+    "finite_quarters_inventory": "COMPLETE",
+    "slot_first_housing_assignment": "COMPLETE",
+    "roommate_derivation": "COMPLETE",
+    "hard_housing_constraints": "COMPLETE",
+    "accessibility_medical_environmental_support": "COMPLETE",
+    "single_occupancy_support": "COMPLETE",
+    "unresolved_capacity_semantics": "COMPLETE",
+    "assignment_persistence_and_reassignment": "COMPLETE",
+    "species_personality_non_shortcut": "COMPLETE",
+    "no_automatic_relationship_effect": "COMPLETE",
+    "residence_presence_separation": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 16,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

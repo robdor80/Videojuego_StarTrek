@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_quarters_registry_contract",
+  "status": "STEP_4_COMPLETE",
+  "registry_fields": [
+    "quarters_registry_id",
+    "academy_era_profile_ref",
+    "campaign_date",
+    "room_records",
+    "assignment_event_refs",
+    "last_reconciled_at"
+  ],
+  "derived_queries": [
+    "room_for_population_slot",
+    "roommates_for_population_slot",
+    "available_compatible_rooms",
+    "unresolved_housing_needs"
+  ],
+  "conservation_rules": [
+    "occupied_capacity = count(current occupant_slot_refs)",
+    "occupied_capacity must never exceed room capacity",
+    "one population_slot_ref cannot occupy multiple current rooms",
+    "room assignment never creates or deletes cadet population"
+  ],
+  "event_types": [
+    "initial_assignment",
+    "authorized_move",
+    "medical_reassignment",
+    "accessibility_reassignment",
+    "maintenance_reassignment",
+    "temporary_retention_during_absence",
+    "release_on_departure",
+    "room_return_to_inventory"
+  ],
+  "rules": [
+    "Assignment history remains after a cadet moves or departs.",
+    "An ended assignment is historical context and is not deleted.",
+    "Room inventory must exist before assignment.",
+    "Unresolved demand remains explicit instead of synthesizing capacity.",
+    "Current occupant slots must resolve to active Academy cadet membership unless an explicit transition is in progress."
+  ]
+}

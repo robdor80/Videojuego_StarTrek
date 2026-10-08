@@ -1,0 +1,105 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_quarters_invariants",
+  "status": "STEP_4_VALIDATED",
+  "cases": [
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "room occupancy never exceeds capacity"
+      ]
+    },
+    {
+      "id": "single_current_assignment",
+      "expected": [
+        "one cadet slot cannot occupy multiple current rooms"
+      ]
+    },
+    {
+      "id": "slot_first_residence",
+      "expected": [
+        "latent cadets may hold quarters before materialization"
+      ]
+    },
+    {
+      "id": "materialization_preserves_quarters",
+      "expected": [
+        "adding character_id does not change room or roommates"
+      ]
+    },
+    {
+      "id": "input_order_independent",
+      "expected": [
+        "reordering cadet input does not reroll quarters"
+      ]
+    },
+    {
+      "id": "hard_requirements_first",
+      "expected": [
+        "room satisfies every explicit hard_housing_requirement_tag"
+      ]
+    },
+    {
+      "id": "single_occupancy_respected",
+      "expected": [
+        "single_occupancy_required cadet has no roommate"
+      ]
+    },
+    {
+      "id": "species_not_roommate_policy",
+      "expected": [
+        "changing species_id alone does not change housing assignment"
+      ]
+    },
+    {
+      "id": "personality_not_roommate_policy",
+      "expected": [
+        "changing personality alone does not change housing assignment"
+      ]
+    },
+    {
+      "id": "roommate_symmetry",
+      "expected": [
+        "if A lists B as roommate then B lists A"
+      ]
+    },
+    {
+      "id": "roommate_not_friendship",
+      "expected": [
+        "co-residency has automatic_relationship_effect none"
+      ]
+    },
+    {
+      "id": "absence_does_not_release",
+      "expected": [
+        "temporary absence does not implicitly free the room"
+      ]
+    },
+    {
+      "id": "no_capacity_no_magic_room",
+      "expected": [
+        "lack of compatible capacity yields unresolved_housing_need"
+      ]
+    },
+    {
+      "id": "existing_assignment_persists",
+      "expected": [
+        "valid pre-existing occupant mapping is preserved"
+      ]
+    },
+    {
+      "id": "residence_not_presence",
+      "expected": [
+        "quarters assignment does not create schedule/current-location truth"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no personal schedules",
+        "no social mutation",
+        "no romance mutation"
+      ]
+    }
+  ]
+}
