@@ -1,0 +1,80 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_academic_enrichment_contract",
+  "status": "STEP_8_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Optional formal academic enrichment is persistent scheduled instruction distinct from core curriculum and extracurricular clubs. Registration, attendance, completion and final record credit are separate authoritative states.",
+  "offering_types": {
+    "conference": {
+      "default_shape": "one_off_or_short_form",
+      "assessment_optional": true
+    },
+    "seminar": {
+      "default_shape": "focused_small_group_or_workshop",
+      "assessment_optional": true
+    },
+    "additional_course": {
+      "default_shape": "formal_optional_multi_session",
+      "assessment_optional": true
+    }
+  },
+  "offering_fields": [
+    "offering_id",
+    "display_name_ref",
+    "offering_type",
+    "status",
+    "capacity",
+    "eligibility_rules",
+    "prerequisite_refs",
+    "presenter_ref",
+    "presenter_available_session_ids",
+    "sessions",
+    "location_ref",
+    "required_location_capabilities",
+    "completion_policy",
+    "academic_period_ref"
+  ],
+  "registration_fields": [
+    "registration_id",
+    "offering_id",
+    "population_slot_ref",
+    "registration_state",
+    "source",
+    "waitlist_state_if_any",
+    "schedule_entry_refs",
+    "attendance_state",
+    "completion_state",
+    "completion_evidence_refs",
+    "academic_record_effect"
+  ],
+  "rules": [
+    "Offerings and their capacity exist independently of player observation.",
+    "Registration is anchored to population_slot_ref and may exist before full NPC materialization.",
+    "Existing valid registrations consume capacity before new allocations.",
+    "Conference, seminar and additional_course are separate offering types with authored completion policy.",
+    "Eligibility and prerequisites must be explicit authored rules; they are not invented for a desired participant.",
+    "A represented presenter/instructor must be available for all required sessions.",
+    "Required venue capabilities must actually exist.",
+    "Every required session must fit the cadet's real available timetable including travel.",
+    "Full offerings use waitlist state; no extra seat is invented for player or NPC.",
+    "NPC registration may use academic interests, branch interests and explicit enrichment preferences after eligibility/feasibility.",
+    "Species, gender, culture, player proximity and narrative convenience are not generic registration weights.",
+    "The player receives eligible options and is never automatically registered.",
+    "Registration does not prove attendance.",
+    "Attendance does not automatically prove completion when completion policy requires assessment or practical evidence.",
+    "Completion evidence may be produced by later actual attendance/evaluation events.",
+    "Step 8 does not write final transcript, qualification or Academy-record credit; Step 19 owns that integration.",
+    "Registration alone grants no competence, grade, reputation, relationship or wellbeing effect.",
+    "Cancellation, withdrawal, completion or waitlist promotion requires explicit state/event provenance and preserves history."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json",
+    "gameplay/careers/academy_path/course_catalog.json",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/course_resolution.md",
+    "gameplay/careers/academy_path/campus_location_graph.json"
+  ],
+  "next_step_ref": "Step 9 — Social life"
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_academic_enrichment_invariants",
+  "status": "STEP_8_VALIDATED",
+  "cases": [
+    {
+      "id": "persistent_offering",
+      "expected": [
+        "offering identity/capacity exist independently of player observation"
+      ]
+    },
+    {
+      "id": "offering_taxonomy",
+      "expected": [
+        "only conference, seminar or additional_course types are valid"
+      ]
+    },
+    {
+      "id": "slot_first_registration",
+      "expected": [
+        "latent cadets may have persistent registration before materialization"
+      ]
+    },
+    {
+      "id": "existing_registration_priority",
+      "expected": [
+        "valid existing registrations consume seats before new allocation"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "registered roster never exceeds offering capacity"
+      ]
+    },
+    {
+      "id": "waitlist_not_fake_capacity",
+      "expected": [
+        "full eligible offering produces waitlist rather than extra seat"
+      ]
+    },
+    {
+      "id": "eligibility_prerequisites",
+      "expected": [
+        "class, specialization, qualification and completed-course requirements are explicit gates"
+      ]
+    },
+    {
+      "id": "presenter_exists",
+      "expected": [
+        "offering needs represented presenter/instructor"
+      ]
+    },
+    {
+      "id": "presenter_available",
+      "expected": [
+        "presenter availability covers every required session"
+      ]
+    },
+    {
+      "id": "facility_capability",
+      "expected": [
+        "required teaching/venue capability must exist"
+      ]
+    },
+    {
+      "id": "all_sessions_feasible",
+      "expected": [
+        "multi-session registration requires every session to fit"
+      ]
+    },
+    {
+      "id": "travel_feasible",
+      "expected": [
+        "travel to/from every session fits surrounding availability"
+      ]
+    },
+    {
+      "id": "npc_autonomy",
+      "expected": [
+        "NPCs may register autonomously from academic affinity after feasibility"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "player is never automatically registered"
+      ]
+    },
+    {
+      "id": "species_not_selector",
+      "expected": [
+        "species change alone does not change registration outcome"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not alter NPC registration"
+      ]
+    },
+    {
+      "id": "registration_not_attendance",
+      "expected": [
+        "registration does not assert session attendance"
+      ]
+    },
+    {
+      "id": "attendance_not_always_completion",
+      "expected": [
+        "assessment-required policies require additional evidence"
+      ]
+    },
+    {
+      "id": "record_write_deferred",
+      "expected": [
+        "completion evidence cannot directly write Academy record before Step 19"
+      ]
+    },
+    {
+      "id": "no_automatic_rewards",
+      "expected": [
+        "registration alone grants no skill, grade, reputation, relationship or wellbeing effect"
+      ]
+    },
+    {
+      "id": "history_preserved",
+      "expected": [
+        "withdrawal/cancellation/completion later preserve registration history"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no social/romance/mentor/wellbeing/discipline/campus-event/off-screen/Academy-record mutation"
+      ]
+    }
+  ]
+}

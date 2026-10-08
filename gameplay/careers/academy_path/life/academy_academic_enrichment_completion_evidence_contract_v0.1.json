@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_academic_enrichment_completion_evidence_contract",
+  "status": "STEP_8_COMPLETE",
+  "evidence_fields": [
+    "completion_evidence_id",
+    "registration_ref",
+    "offering_ref",
+    "attendance_event_refs",
+    "assessment_event_refs",
+    "practical_evidence_refs",
+    "completion_policy_snapshot",
+    "resolved_completion_state",
+    "resolved_at",
+    "resolver_rule_version"
+  ],
+  "completion_states": [
+    "not_evaluated",
+    "in_progress",
+    "completed",
+    "not_completed",
+    "withdrawn",
+    "cancelled"
+  ],
+  "rules": [
+    "Registration itself is never completion evidence.",
+    "Attendance-only offerings may complete from sufficient validated attendance events.",
+    "Assessment-required offerings need valid assessment/practical evidence defined by the offering policy.",
+    "AI prose cannot award completion without authoritative evidence.",
+    "Completion evidence may later be consumed by Academy-record integration.",
+    "Step 8 does not itself mutate transcript credit, qualifications, graduation eligibility or year progression."
+  ],
+  "academy_record_integration": "DEFERRED_TO_STEP_19"
+}

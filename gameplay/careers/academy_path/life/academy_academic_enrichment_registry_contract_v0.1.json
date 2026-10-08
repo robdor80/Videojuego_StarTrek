@@ -1,0 +1,48 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_academic_enrichment_registry_contract",
+  "status": "STEP_8_COMPLETE",
+  "registry_fields": [
+    "enrichment_registry_id",
+    "academic_period_ref",
+    "offering_records",
+    "registration_records",
+    "waitlist_records",
+    "registration_event_refs",
+    "completion_evidence_refs",
+    "last_reconciled_at"
+  ],
+  "registration_states": [
+    "candidate",
+    "waitlisted",
+    "registered",
+    "withdrawn",
+    "cancelled",
+    "in_progress",
+    "completed",
+    "not_completed"
+  ],
+  "event_types": [
+    "register",
+    "waitlist",
+    "waitlist_promote",
+    "withdraw",
+    "offering_cancel",
+    "attendance",
+    "completion_evidence",
+    "completion_resolution"
+  ],
+  "conservation_rules": [
+    "registered population never exceeds offering capacity",
+    "one cadet has at most one active registration per offering",
+    "existing valid registrations consume capacity before new registrations",
+    "waitlisted candidates do not consume registered capacity",
+    "registration changes do not mutate Academy population"
+  ],
+  "rules": [
+    "Registration and waitlist history are append-preserving.",
+    "Materialization, observation and save/load cannot reroll established registration state.",
+    "Waitlist promotion requires a real vacancy plus a represented promotion event.",
+    "Completion evidence is retained even though final Academy-record integration remains deferred to Step 19."
+  ]
+}

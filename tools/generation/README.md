@@ -56,3 +56,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `generate_academy_extracurricular_step7.py` deterministically builds/preserves finite extracurricular memberships and recurring schedule commitments from real availability.
 - `test_generate_academy_extracurricular_step7.py` validates eligibility, capacity, player agency, NPC autonomy, travel/time feasibility, persistence and strict Step-8+ boundaries.
+
+
+### Academy Life Step 8 — conferences, seminars and additional courses
+
+- `generate_academy_academic_enrichment_step8.py` deterministically preserves/allocates optional formal academic registrations, waitlists and session commitments.
+- `test_generate_academy_academic_enrichment_step8.py` validates offering type, capacity, eligibility, presenter availability, facility/travel feasibility, player agency, NPC autonomy and registration/attendance/completion boundaries.

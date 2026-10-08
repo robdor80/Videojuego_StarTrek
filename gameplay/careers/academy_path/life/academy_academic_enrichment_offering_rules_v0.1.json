@@ -1,0 +1,35 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_academic_enrichment_offering_rules",
+  "status": "STEP_8_COMPLETE",
+  "type_rules": {
+    "conference": [
+      "may be one-off or short series",
+      "attendance-only completion is allowed",
+      "assessment is not mandatory unless explicitly authored"
+    ],
+    "seminar": [
+      "may require active participation, discussion, workshop or practical evidence",
+      "may be one-off or recurring",
+      "assessment remains offering-specific"
+    ],
+    "additional_course": [
+      "may span multiple sessions",
+      "may define formal assessment",
+      "does not automatically become a core-curriculum requirement"
+    ]
+  },
+  "scheduling_rules": [
+    "All required sessions must be feasible before registration is accepted.",
+    "Travel time is real and must fit around every session.",
+    "Presenter availability is required for every represented session.",
+    "Unavailable venue capability blocks the offering/session rather than fabricating an alternative.",
+    "Offering cancellation requires an explicit event and must not silently erase registration history."
+  ],
+  "selection_rules": [
+    "NPC preference can use academic interests, branch interests and explicit enrichment preferences after feasibility.",
+    "Player registration requires explicit choice.",
+    "Species and player proximity are excluded as selectors.",
+    "Capacity shortage produces waitlist rather than roster expansion."
+  ]
+}

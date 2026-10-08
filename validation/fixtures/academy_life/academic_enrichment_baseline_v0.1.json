@@ -1,0 +1,304 @@
+{
+  "fixture_id": "academy_academic_enrichment_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step8-fixture",
+    "max_active_enrichment_registrations_per_cadet": 2,
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "is_player": true,
+        "character_id": "cadet:00",
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "human",
+        "interest_refs": [
+          "temporal_mechanics"
+        ],
+        "branch_interest_ids": [
+          "science"
+        ],
+        "qualification_refs": [],
+        "completed_course_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "vulcan",
+        "interest_refs": [
+          "first_contact"
+        ],
+        "branch_interest_ids": [
+          "command"
+        ],
+        "qualification_refs": [],
+        "completed_course_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "andorian",
+        "interest_refs": [
+          "warp_physics"
+        ],
+        "branch_interest_ids": [
+          "engineering"
+        ],
+        "qualification_refs": [],
+        "completed_course_refs": [],
+        "specialization": null
+      },
+      {
+        "population_slot_ref": "cadet4:03",
+        "is_player": false,
+        "character_id": null,
+        "cadet_class_id": "cadet_fourth_class",
+        "species_id": "tellarite",
+        "interest_refs": [
+          "temporal_mechanics"
+        ],
+        "branch_interest_ids": [
+          "science"
+        ],
+        "qualification_refs": [],
+        "completed_course_refs": [],
+        "specialization": null
+      }
+    ],
+    "available_windows": [
+      {
+        "window_ref": "W0",
+        "population_slot_ref": "cadet4:00",
+        "day_index": 4,
+        "start_minute": 960,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W1",
+        "population_slot_ref": "cadet4:01",
+        "day_index": 2,
+        "start_minute": 960,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W2A",
+        "population_slot_ref": "cadet4:02",
+        "day_index": 1,
+        "start_minute": 960,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W2B",
+        "population_slot_ref": "cadet4:02",
+        "day_index": 3,
+        "start_minute": 960,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "W3",
+        "population_slot_ref": "cadet4:03",
+        "day_index": 4,
+        "start_minute": 960,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "command_school",
+        "minutes": 10
+      },
+      {
+        "from": "command_school",
+        "to": "cadet_quarters",
+        "minutes": 15
+      },
+      {
+        "from": "academic_core",
+        "to": "simulation_complex",
+        "minutes": 10
+      },
+      {
+        "from": "simulation_complex",
+        "to": "cadet_quarters",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "library_study",
+        "minutes": 8
+      },
+      {
+        "from": "library_study",
+        "to": "cadet_quarters",
+        "minutes": 12
+      }
+    ],
+    "locations": [
+      {
+        "location_ref": "command_school",
+        "capability_tags": [
+          "lecture_hall",
+          "seminar_room"
+        ]
+      },
+      {
+        "location_ref": "simulation_complex",
+        "capability_tags": [
+          "advanced_instruction_lab"
+        ]
+      },
+      {
+        "location_ref": "library_study",
+        "capability_tags": [
+          "seminar_room",
+          "course_classroom"
+        ]
+      }
+    ],
+    "offerings": {
+      "first_contact_guest_conference": {
+        "display_name_ref": "First Contact Guest Conference",
+        "offering_type": "conference",
+        "capacity": 2,
+        "location_ref": "command_school",
+        "required_location_capabilities": [
+          "lecture_hall"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "required_qualification_refs": [],
+        "required_completed_course_refs": [],
+        "affinity_refs": [
+          "first_contact",
+          "command"
+        ],
+        "presenter_ref": "visitor:fc_specialist_01",
+        "presenter_available_session_ids": [
+          "FC-1"
+        ],
+        "sessions": [
+          {
+            "session_id": "FC-1",
+            "day_index": 2,
+            "start_minute": 1020,
+            "end_minute": 1110
+          }
+        ],
+        "completion_policy": {
+          "mode": "attendance_only",
+          "assessment_required": false
+        }
+      },
+      "advanced_warp_workshop": {
+        "display_name_ref": "Advanced Warp Workshop",
+        "offering_type": "seminar",
+        "capacity": 2,
+        "location_ref": "simulation_complex",
+        "required_location_capabilities": [
+          "advanced_instruction_lab"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "required_qualification_refs": [],
+        "required_completed_course_refs": [],
+        "affinity_refs": [
+          "warp_physics",
+          "engineering"
+        ],
+        "presenter_ref": "instructor:warp_01",
+        "presenter_available_session_ids": [
+          "WW-1",
+          "WW-2"
+        ],
+        "sessions": [
+          {
+            "session_id": "WW-1",
+            "day_index": 1,
+            "start_minute": 1020,
+            "end_minute": 1110
+          },
+          {
+            "session_id": "WW-2",
+            "day_index": 3,
+            "start_minute": 1020,
+            "end_minute": 1110
+          }
+        ],
+        "completion_policy": {
+          "mode": "attendance_plus_practical_evidence",
+          "assessment_required": true
+        }
+      },
+      "temporal_mechanics_optional_course": {
+        "display_name_ref": "Temporal Mechanics Optional Course",
+        "offering_type": "additional_course",
+        "capacity": 1,
+        "location_ref": "library_study",
+        "required_location_capabilities": [
+          "course_classroom"
+        ],
+        "allowed_cadet_class_ids": [
+          "cadet_fourth_class"
+        ],
+        "required_qualification_refs": [],
+        "required_completed_course_refs": [],
+        "affinity_refs": [
+          "temporal_mechanics",
+          "science"
+        ],
+        "presenter_ref": "instructor:science_02",
+        "presenter_available_session_ids": [
+          "TM-1"
+        ],
+        "sessions": [
+          {
+            "session_id": "TM-1",
+            "day_index": 4,
+            "start_minute": 1020,
+            "end_minute": 1140
+          }
+        ],
+        "completion_policy": {
+          "mode": "attendance_plus_assessment",
+          "assessment_required": true
+        }
+      }
+    },
+    "existing_registrations": [
+      {
+        "registration_id": "enrich:temporal_mechanics_optional_course:cadet4:03",
+        "offering_id": "temporal_mechanics_optional_course",
+        "population_slot_ref": "cadet4:03",
+        "registration_state": "registered"
+      }
+    ],
+    "player_registration_requests": []
+  },
+  "expected": {
+    "preserved_existing_registration": "cadet4:03",
+    "player_auto_registration": false,
+    "temporal_course_full_for_player": true,
+    "npc_first_contact_registration": "cadet4:01",
+    "npc_warp_registration": "cadet4:02",
+    "completion_record_effect": "deferred_step_19",
+    "registration_truth_semantics": "registration_not_attendance_or_completion"
+  }
+}

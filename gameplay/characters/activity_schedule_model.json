@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.2",
+  "schema_version": "0.2.3",
   "model_id": "character_activity_schedule",
   "status": "foundation_fixed",
   "purpose": "Provide persistent temporal plausibility for character duty, travel, rest, social activity and availability.",
@@ -74,7 +74,8 @@
     "Mandatory off-watch obligations consume real schedule time and cannot overlap protected rest or incompatible activities without an explicit exception.",
     "Off-duty activity selection must be physically supported by the current ship/facility capabilities.",
     "Academy free-time intentions must consume real uncommitted schedule windows and preserve player agency.",
-    "Recurring Academy extracurricular sessions are real schedule commitments after membership is accepted."
+    "Recurring Academy extracurricular sessions are real schedule commitments after membership is accepted.",
+    "Registered Academy enrichment sessions are real schedule commitments; registration does not prove attendance or completion."
   ],
   "integration_refs": [
     "gameplay/ship_operations/crew_manifest_model.json",
@@ -87,7 +88,8 @@
     "gameplay/ship_operations/off_duty_activity_catalog_v0.1.json",
     "lore/starships/classes/shipboard_life/SHIPBOARD_LIFE_PROFILE_CATALOG_v0.1.json",
     "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
-    "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json"
+    "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json"
   ],
   "core_rpg_boundary": "Generic schedule arbitration, time exclusivity, travel occupancy and catch-up semantics should live in CoreRPG when available; this contract defines Star Trek-facing requirements."
 }

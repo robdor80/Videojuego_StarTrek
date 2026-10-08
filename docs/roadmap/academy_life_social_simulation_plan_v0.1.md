@@ -18,7 +18,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 5 | Personal schedules | COMPLETE |
 | 6 | Free time | COMPLETE |
 | 7 | Extracurricular activities | COMPLETE |
-| 8 | Conferences, seminars and additional courses | TODO |
+| 8 | Conferences, seminars and additional courses | COMPLETE |
 | 9 | Social life | TODO |
 | 10 | Romance and dating | TODO |
 | 11 | NPC↔NPC relationships | TODO |
@@ -252,3 +252,29 @@ Extracurricular capacity is finite when configured. Existing valid memberships a
 Step 7 does not implement academic seminars, guest lectures or additional formal courses; those belong to Step 8.
 
 **Boundary:** conferences/seminars/additional courses remain Step 8; social event resolution Step 9; romance Step 10; NPC↔NPC relationships Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; off-screen execution Step 16.
+
+
+## Step 8 — Conferences, seminars and additional courses
+
+Step 8 introduces **formal optional academic enrichment** as persistent Academy offerings distinct from ordinary curriculum and from Step-7 extracurricular clubs.
+
+Three offering families are supported:
+- **conference** — normally one-off or short-form academic presentation; may require registration/attendance but need not include assessment;
+- **seminar** — focused small-group or workshop-style instruction that may require active participation or practical evidence;
+- **additional_course** — optional formal multi-session instruction that may define assessment/completion requirements.
+
+An offering has stable identity, type, capacity, eligibility/prerequisites, presenter/instructor reference, presenter availability, session schedule, venue/capability requirements and a completion policy.
+
+Existing valid registrations are preserved before new allocation. Capacity is finite; when a valid candidate cannot be admitted because the offering is full, the result is a **waitlist**, not a fabricated extra seat.
+
+NPC cadets may register autonomously from academic interests, branch interests and explicit enrichment preferences after eligibility and schedule feasibility are satisfied. **Species, player proximity and narrative convenience are never registration selectors.**
+
+The player is never automatically registered. The system exposes eligible offerings and accepts only explicit player registration requests. Full offerings may place the player on the same waitlist logic used for NPCs.
+
+All sessions must fit real available timetable windows, including travel. Multi-session seminars/courses are admitted only when every required scheduled session is feasible. The offering must also have a real compatible venue and a represented presenter available for the required sessions.
+
+**Registration ≠ attendance ≠ completion.** Registration creates schedule commitments. Attendance remains runtime/event truth. Completion may require attendance, practical evidence and/or assessment according to the offering policy.
+
+Step 8 may define **completion evidence candidates**, but it does not write final Academy-record credit, qualification or transcript state. That authoritative integration remains Step 19. No registration alone grants competence, grade, reputation or wellbeing benefit.
+
+**Boundary:** social event resolution remains Step 9; romance Step 10; NPC↔NPC relationships Step 11; mentors/instructors as relationship systems Step 12; wellbeing Step 13; obligations/consequences Step 14; campus events Step 15; off-screen execution Step 16; Academy-record integration Step 19.

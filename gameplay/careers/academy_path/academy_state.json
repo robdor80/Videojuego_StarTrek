@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.13.0",
+  "schema_version": "0.14.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -68,7 +68,12 @@
     "free_time_preference_refs": "interest_or_hobby_ref_list",
     "extracurricular_membership_refs": "academy_extracurricular_membership_ref_list",
     "extracurricular_registry_ref": "academy_extracurricular_registry_id",
-    "extracurricular_schedule_entry_refs": "schedule_entry_ref_list"
+    "extracurricular_schedule_entry_refs": "schedule_entry_ref_list",
+    "academic_enrichment_registration_refs": "academy_academic_enrichment_registration_ref_list",
+    "academic_enrichment_registry_ref": "academy_academic_enrichment_registry_id",
+    "academic_enrichment_waitlist_refs": "academy_academic_enrichment_waitlist_ref_list",
+    "academic_enrichment_schedule_entry_refs": "schedule_entry_ref_list",
+    "academic_enrichment_completion_evidence_refs": "completion_evidence_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -96,12 +101,19 @@
     "NPC extracurricular enrollment may use explicit interests/hobbies but not species or player proximity",
     "the player is never automatically enrolled in an extracurricular",
     "extracurricular recurring sessions consume real schedule time and must be travel-feasible",
-    "extracurricular membership does not automatically create relationships, capability, grades, wellbeing effects or reputation"
+    "extracurricular membership does not automatically create relationships, capability, grades, wellbeing effects or reputation",
+    "formal optional enrichment distinguishes conferences, seminars and additional courses from extracurricular clubs",
+    "NPC enrichment registration may use explicit academic interests but not species or player proximity",
+    "the player is never automatically registered for optional academic enrichment",
+    "every required enrichment session must be presenter-, facility-, timetable- and travel-feasible",
+    "registration, attendance and completion are separate states",
+    "completion evidence may be produced later but final Academy-record writes remain Step 19"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
   "quarters_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json",
   "schedule_contract_ref": "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
   "free_time_contract_ref": "gameplay/careers/academy_path/life/academy_free_time_contract_v0.1.json",
-  "extracurricular_contract_ref": "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json"
+  "extracurricular_contract_ref": "gameplay/careers/academy_path/life/academy_extracurricular_contract_v0.1.json",
+  "academic_enrichment_contract_ref": "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json"
 }

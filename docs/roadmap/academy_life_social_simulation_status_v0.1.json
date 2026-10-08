@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 7,
+    "complete": 8,
     "partial": 0,
-    "todo": 13,
-    "current_step": 7
+    "todo": 12,
+    "current_step": 8
   },
   "steps": [
     {
@@ -47,7 +47,7 @@
     },
     {
       "step": 8,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Conferences, seminars and additional courses"
     },
     {
@@ -219,6 +219,25 @@
     "plan_vs_actual_participation_separation": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 20,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_8": {
+    "persistent_academic_enrichment_offerings": "COMPLETE",
+    "conference_seminar_additional_course_taxonomy": "COMPLETE",
+    "eligibility_and_prerequisite_gating": "COMPLETE",
+    "finite_capacity_and_waitlist": "COMPLETE",
+    "presenter_availability_gating": "COMPLETE",
+    "facility_and_travel_feasibility": "COMPLETE",
+    "multi_session_schedule_binding": "COMPLETE",
+    "npc_autonomous_registration": "COMPLETE",
+    "player_choice_not_auto_registered": "COMPLETE",
+    "existing_registration_persistence": "COMPLETE",
+    "registration_attendance_completion_separation": "COMPLETE",
+    "completion_evidence_without_record_write": "COMPLETE",
+    "no_species_or_player_proximity_bias": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 22,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }
