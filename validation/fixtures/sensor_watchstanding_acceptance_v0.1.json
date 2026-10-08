@@ -125,6 +125,24 @@
         "recipient=current_bridge_command_officer",
         "captain_only_if_escalated_or_required"
       ]
+    },
+    {
+      "id": "SW-009",
+      "name": "Lost contact rejects live operations",
+      "given": [
+        "contact_status=lost",
+        "contact_not_in_current_sensor_solution"
+      ],
+      "when": "officer_orders_live_operation_on_lost_contact",
+      "expect": [
+        "operation_not_executed",
+        "tracking_not_created",
+        "watch_not_created",
+        "focused_live_analysis_not_fabricated",
+        "computer_reports_operation_unavailable",
+        "historical_last_known_data_remains_queryable",
+        "explicit_reacquisition_may_be_attempted_only_when_physically_possible"
+      ]
     }
   ]
 }
