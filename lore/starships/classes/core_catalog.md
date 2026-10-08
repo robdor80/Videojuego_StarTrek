@@ -28,6 +28,7 @@ Contiene las primeras clases necesarias para que las tres eras jugables tengan:
 - Nebula
 - Intrepid
 - Defiant
+- Sovereign — extensión tardía del siglo XXIV admitida explícitamente para presencia de clase
 - Miranda, Excelsior y Oberth como diseños veteranos cuando sigan activos
 
 ## Regla de expansión
