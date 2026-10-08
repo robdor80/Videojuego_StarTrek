@@ -1,0 +1,119 @@
+{
+  "schema_version": "0.1.0",
+  "manifest_id": "academy_life_social_simulation_status",
+  "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
+  "summary": {
+    "total_steps": 20,
+    "complete": 1,
+    "partial": 0,
+    "todo": 19,
+    "current_step": 1
+  },
+  "steps": [
+    {
+      "step": 1,
+      "status": "COMPLETE",
+      "scope": "Academy population"
+    },
+    {
+      "step": 2,
+      "status": "TODO",
+      "scope": "Procedural cadet generation"
+    },
+    {
+      "step": 3,
+      "status": "TODO",
+      "scope": "Classmates, study groups and practical teams"
+    },
+    {
+      "step": 4,
+      "status": "TODO",
+      "scope": "Quarters and roommates"
+    },
+    {
+      "step": 5,
+      "status": "TODO",
+      "scope": "Personal schedules"
+    },
+    {
+      "step": 6,
+      "status": "TODO",
+      "scope": "Free time"
+    },
+    {
+      "step": 7,
+      "status": "TODO",
+      "scope": "Extracurricular activities"
+    },
+    {
+      "step": 8,
+      "status": "TODO",
+      "scope": "Conferences, seminars and additional courses"
+    },
+    {
+      "step": 9,
+      "status": "TODO",
+      "scope": "Social life"
+    },
+    {
+      "step": 10,
+      "status": "TODO",
+      "scope": "Romance and dating"
+    },
+    {
+      "step": 11,
+      "status": "TODO",
+      "scope": "NPC-to-NPC relationships"
+    },
+    {
+      "step": 12,
+      "status": "TODO",
+      "scope": "Mentors and instructors"
+    },
+    {
+      "step": 13,
+      "status": "TODO",
+      "scope": "Wellbeing and balance"
+    },
+    {
+      "step": 14,
+      "status": "TODO",
+      "scope": "Obligations and consequences"
+    },
+    {
+      "step": 15,
+      "status": "TODO",
+      "scope": "Campus events"
+    },
+    {
+      "step": 16,
+      "status": "TODO",
+      "scope": "Off-screen Academy life"
+    },
+    {
+      "step": 17,
+      "status": "TODO",
+      "scope": "Social LOD"
+    },
+    {
+      "step": 18,
+      "status": "TODO",
+      "scope": "Year progression and continuity"
+    },
+    {
+      "step": 19,
+      "status": "TODO",
+      "scope": "Academy-record integration"
+    },
+    {
+      "step": 20,
+      "status": "TODO",
+      "scope": "Final fixtures, invariants, simulator and test closure"
+    }
+  ],
+  "deferred_after_step_20": {
+    "work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy",
+    "roadmap_ref": "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+    "status": "TODO_DEFERRED_UNTIL_ACADEMY_STEP_20_COMPLETE"
+  }
+}

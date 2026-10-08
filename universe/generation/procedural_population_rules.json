@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "ruleset_id": "procedural_population_generation",
   "status": "foundation_fixed",
   "generation_order": [
@@ -31,6 +31,8 @@
     "Initial relationships require a plausible pre-existing shared context.",
     "Background populations may use aggregate LOD until an individual becomes relevant.",
     "LOD promotion preserves pre-existing identity and history.",
-    "Canonical characters are generated only from canonical definitions, never by generic random generation."
-  ]
+    "Canonical characters are generated only from canonical definitions, never by generic random generation.",
+    "Academy population follows gameplay/careers/academy_path/life/academy_population_contract_v0.1.json before individual cadet generation."
+  ],
+  "academy_population_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json"
 }

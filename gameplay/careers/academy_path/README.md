@@ -80,3 +80,9 @@ See:
 - `academic_year_trimester_model.json`
 - `access/`
 - `../post_academy/README.md`
+
+## Academy Life & Social Simulation
+
+The living-Academy layer is tracked in `life/` and `docs/roadmap/academy_life_social_simulation_plan_v0.1.md`.
+
+Current status: **Step 1/20 — Academy population COMPLETE.** The Academy population now has explicit cohort/group accounting, Tier A/B/C conservation, player-slot accounting and membership/presence separation. Procedural individual cadet generation is deliberately reserved for Step 2.

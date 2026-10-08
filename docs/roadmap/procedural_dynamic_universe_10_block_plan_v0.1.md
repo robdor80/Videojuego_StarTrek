@@ -40,3 +40,7 @@ Block 2 closes causal colony founding/growth/abandonment, population transfer, c
 ## Block 3 ownership
 
 Block 3 closes crisis/escalation, culture/faction/government conflict behaviour, authority/ROE, objectives, real-force mobilization, strategic operations, losses, occupation/blockade, civil conflict and peace. It does not implement Blocks 4–10.
+
+## Temporary priority gate — Academy Life
+
+Dynamic Universe **Block 4 — Living Interplanetary / Interstellar Economy remains TODO and unstarted**. By project decision it is temporarily deferred while `Academy Life & Social Simulation v0.1` is completed strictly from Step 1 through Step 20. After Academy Step 20 is COMPLETE, work returns here to Block 4 before any Block 5 implementation.

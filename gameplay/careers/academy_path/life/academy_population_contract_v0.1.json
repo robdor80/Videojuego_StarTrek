@@ -1,0 +1,46 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_population_contract",
+  "status": "STEP_1_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Academy population exists independently of player observation. Population structure is resolved before persistent individuals are materialized.",
+  "population_categories": [
+    "cadet",
+    "instructional_staff",
+    "operational_support_staff",
+    "attached_training_personnel",
+    "visitor"
+  ],
+  "cadet_classes": [
+    "cadet_fourth_class",
+    "cadet_third_class",
+    "cadet_second_class",
+    "cadet_first_class"
+  ],
+  "accounting_tiers": {
+    "A": "authored_or_canonical_persistent_individual",
+    "B": "generated_persistent_individual",
+    "C": "latent_population_slot"
+  },
+  "rules": [
+    "Every active cadet occupies exactly one cadet-class membership slot.",
+    "The player cadet occupies one real cadet slot.",
+    "Canonical/authored cadets occupy real population slots and may not be layered on top of aggregate counts.",
+    "Tier C to Tier B materialization consumes the same latent slot and does not increase population.",
+    "Tier B or A identities never demote back to anonymous Tier C.",
+    "Temporary physical absence does not remove a cadet from cohort membership.",
+    "Academy population numbers are campaign/era/content data; this contract does not assert one universal canon total.",
+    "Visitors are accounted separately from enrolled cadets and assigned staff.",
+    "Population changes require explicit membership/assignment/arrival/departure events.",
+    "Species or culture context may constrain population composition but never directly defines personality, morality, competence or relationship state.",
+    "Player proximity does not create, delete or rebalance Academy population."
+  ],
+  "dependencies": [
+    "universe/generation/persistent_population_materialization_rules.json",
+    "universe/generation/persistent_entity_identity_contract.json",
+    "universe/generation/procedural_population_rules.json",
+    "gameplay/characters/character_runtime_model.json",
+    "gameplay/social/social_simulation_lod.json"
+  ],
+  "next_step_ref": "Step 2 — Procedural cadet generation"
+}

@@ -301,6 +301,28 @@ Current baseline:
 
 **Runtime boundary:** Star Trek-side rules/contracts/reference simulation are complete. CoreRPG 4.5+ remains authoritative for scheduling, persistence and World State mutation.
 
+## Academy Life & Social Simulation v0.1
+
+Control documents:
+- `docs/roadmap/academy_life_social_simulation_plan_v0.1.md`
+- `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
+
+Current status:
+- **Step 1/20 COMPLETE — Academy population**;
+- structure-first Academy population accounting;
+- four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
+- Tier A/B/C population semantics reused from the global persistent-population model;
+- Tier C→B materialization conserves population;
+- player and canonical/authored cadets consume real population slots;
+- Academy membership separated from physical campus presence;
+- no universal exact Academy headcount asserted as canon;
+- Step 1 validation pack + fictional fixture + reference validator;
+- **10 executable Step-1 tests defined and reference logic validated**.
+
+**Strict sequence:** Step 2 — Procedural cadet generation is next and has not been started.
+
+**Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
+
 ## Major remaining domains
 
 | Domain | Status |

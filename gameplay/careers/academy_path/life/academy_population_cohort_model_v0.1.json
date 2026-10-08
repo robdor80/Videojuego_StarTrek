@@ -1,0 +1,42 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "academy_population_cohort_model",
+  "status": "STEP_1_COMPLETE",
+  "cohort_fields": [
+    "cohort_id",
+    "academy_era_profile_ref",
+    "admission_term_ref",
+    "current_cadet_class_id",
+    "member_count",
+    "materialized_character_ids",
+    "latent_slot_count",
+    "temporarily_absent_count",
+    "membership_event_refs"
+  ],
+  "class_progression": [
+    {
+      "sequence_year": 1,
+      "cadet_class_id": "cadet_fourth_class"
+    },
+    {
+      "sequence_year": 2,
+      "cadet_class_id": "cadet_third_class"
+    },
+    {
+      "sequence_year": 3,
+      "cadet_class_id": "cadet_second_class"
+    },
+    {
+      "sequence_year": 4,
+      "cadet_class_id": "cadet_first_class"
+    }
+  ],
+  "rules": [
+    "A cohort is an accounting/history structure, not a promise that every member follows identical academic outcomes.",
+    "Retakes, delayed progression, withdrawal or other exceptions require explicit state/events rather than silent cohort reshuffling.",
+    "A cadet cannot occupy two current cadet-class memberships simultaneously.",
+    "Field training or temporary leave changes presence, not cohort membership.",
+    "Graduation/commission removes the cadet from active Academy cadet population through an explicit transition.",
+    "Cohort membership history remains after graduation or departure."
+  ]
+}

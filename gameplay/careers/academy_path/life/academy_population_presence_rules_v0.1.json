@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_population_presence_rules",
+  "status": "STEP_1_COMPLETE",
+  "presence_states": [
+    "on_campus",
+    "academy_local_off_campus",
+    "field_training",
+    "training_cruise",
+    "authorized_leave",
+    "medical_absence",
+    "official_travel",
+    "unknown_pending_resolution"
+  ],
+  "rules": [
+    "Academy membership and physical presence are separate state.",
+    "A cadet on field training remains a cadet of the same current class unless a progression/membership event says otherwise.",
+    "Presence must later be constrained by authoritative schedule, travel and current-location state.",
+    "Player interaction cannot summon an absent cadet to campus.",
+    "Visitors may be present without belonging to Academy staff or cadet cohorts.",
+    "Temporary absence cannot be used to create a replacement duplicate cadet."
+  ],
+  "future_step_links": {
+    "personal_schedules": 5,
+    "offscreen_life": 16,
+    "social_lod": 17
+  }
+}

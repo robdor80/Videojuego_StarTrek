@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_population_registry_contract",
+  "status": "STEP_1_COMPLETE",
+  "registry_fields": [
+    "academy_population_registry_id",
+    "campaign_date",
+    "academy_era_profile_ref",
+    "population_group_records",
+    "membership_event_refs",
+    "last_reconciled_at"
+  ],
+  "group_record_fields": [
+    "group_id",
+    "category",
+    "cadet_class_id_if_applicable",
+    "total_count",
+    "latent_count",
+    "materialized_character_ids",
+    "temporarily_absent_count",
+    "source_or_configuration_ref"
+  ],
+  "conservation_equation": "total_count = latent_count + count(materialized_character_ids)",
+  "membership_event_types": [
+    "admission",
+    "transfer_in",
+    "transfer_out",
+    "withdrawal",
+    "dismissal",
+    "death",
+    "graduation_or_commission",
+    "staff_assignment",
+    "staff_reassignment",
+    "visitor_arrival",
+    "visitor_departure"
+  ],
+  "rules": [
+    "Materialization alone is not a membership event and cannot change total_count.",
+    "Every materialized character_id may occur in only one mutually-exclusive population group at a time within the registry.",
+    "Temporary absence is a presence overlay and cannot exceed group total_count.",
+    "Moving between Academy population groups requires an explicit transition event preserving identity/history.",
+    "Population reconciliation must fail closed if counts and persistent identities disagree."
+  ]
+}

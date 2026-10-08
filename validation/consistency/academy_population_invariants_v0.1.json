@@ -1,0 +1,84 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_population_invariants",
+  "status": "STEP_1_VALIDATED",
+  "cases": [
+    {
+      "id": "structure_before_individuals",
+      "expected": [
+        "population groups exist before individual procedural cadet materialization"
+      ]
+    },
+    {
+      "id": "materialization_conserves_population",
+      "expected": [
+        "Tier C to B reduces latent_count by one",
+        "total_count unchanged"
+      ]
+    },
+    {
+      "id": "player_consumes_real_slot",
+      "expected": [
+        "player cadet is counted inside the active cadet cohort",
+        "no extra player-only headcount"
+      ]
+    },
+    {
+      "id": "canonical_cadets_consume_slots",
+      "expected": [
+        "authored/canonical cadets are included in total_count"
+      ]
+    },
+    {
+      "id": "one_current_class_per_cadet",
+      "expected": [
+        "one materialized cadet ID cannot be present in multiple cadet-class groups"
+      ]
+    },
+    {
+      "id": "membership_not_presence",
+      "expected": [
+        "field training/leave may reduce campus presence",
+        "cohort total remains unchanged"
+      ]
+    },
+    {
+      "id": "explicit_membership_transition",
+      "expected": [
+        "admission/graduation/withdrawal/transfer changes totals only by explicit event"
+      ]
+    },
+    {
+      "id": "visitor_separation",
+      "expected": [
+        "visitor population does not silently become cadet/staff population"
+      ]
+    },
+    {
+      "id": "no_player_proximity_population_change",
+      "expected": [
+        "entering a campus location does not add/rebalance population"
+      ]
+    },
+    {
+      "id": "no_species_personality_shortcut",
+      "expected": [
+        "population composition may use species context",
+        "personality is unresolved until proper character/personality systems"
+      ]
+    },
+    {
+      "id": "identity_never_demotes",
+      "expected": [
+        "materialized persistent cadet cannot return to anonymous population"
+      ]
+    },
+    {
+      "id": "production_count_not_claimed_as_canon",
+      "expected": [
+        "exact Academy headcount requires source/configuration",
+        "fixture totals are explicitly fictional"
+      ]
+    }
+  ]
+}

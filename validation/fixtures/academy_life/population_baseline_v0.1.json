@@ -1,0 +1,84 @@
+{
+  "fixture_id": "academy_population_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "campaign_date": "2372-09-01",
+  "registry_id": "academy:fixture:population",
+  "groups": [
+    {
+      "group_id": "cadet_4",
+      "category": "cadet",
+      "cadet_class_id": "cadet_fourth_class",
+      "total_count": 100,
+      "latent_count": 98,
+      "materialized_character_ids": [
+        "cadet:a",
+        "cadet:b"
+      ],
+      "temporarily_absent_count": 0
+    },
+    {
+      "group_id": "cadet_3",
+      "category": "cadet",
+      "cadet_class_id": "cadet_third_class",
+      "total_count": 100,
+      "latent_count": 100,
+      "materialized_character_ids": [],
+      "temporarily_absent_count": 12
+    },
+    {
+      "group_id": "cadet_2",
+      "category": "cadet",
+      "cadet_class_id": "cadet_second_class",
+      "total_count": 100,
+      "latent_count": 100,
+      "materialized_character_ids": [],
+      "temporarily_absent_count": 18
+    },
+    {
+      "group_id": "cadet_1",
+      "category": "cadet",
+      "cadet_class_id": "cadet_first_class",
+      "total_count": 100,
+      "latent_count": 100,
+      "materialized_character_ids": [],
+      "temporarily_absent_count": 25
+    },
+    {
+      "group_id": "instruction",
+      "category": "instructional_staff",
+      "cadet_class_id": null,
+      "total_count": 60,
+      "latent_count": 58,
+      "materialized_character_ids": [
+        "instructor:a",
+        "instructor:b"
+      ],
+      "temporarily_absent_count": 3
+    },
+    {
+      "group_id": "support",
+      "category": "operational_support_staff",
+      "cadet_class_id": null,
+      "total_count": 40,
+      "latent_count": 40,
+      "materialized_character_ids": [],
+      "temporarily_absent_count": 2
+    },
+    {
+      "group_id": "visitors",
+      "category": "visitor",
+      "cadet_class_id": null,
+      "total_count": 20,
+      "latent_count": 20,
+      "materialized_character_ids": [],
+      "temporarily_absent_count": 0
+    }
+  ],
+  "expected": {
+    "cadet_total": 400,
+    "total_population": 520,
+    "validation_errors": [],
+    "materializing_one_cadet_keeps_total_population": 520,
+    "temporary_absence_keeps_membership": true
+  }
+}

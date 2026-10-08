@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.7.0",
+  "schema_version": "0.8.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -53,13 +53,17 @@
     "first_assignment_candidate_list": "assignment_candidate_list",
     "first_assignment": "assignment_id_or_null",
     "academy_era_profile": "era_profile_id",
-    "cadet_insignia_standard": "cadet_insignia_standard_id"
+    "cadet_insignia_standard": "cadet_insignia_standard_id",
+    "academy_population_registry_ref": "academy_population_registry_id"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
     "each academic sequence year contains three trimesters",
     "fatigue/stress are not standalone Academy meters; Academy references the shared character wellbeing system",
     "relationships use the shared social relationship system",
-    "this is an authoring/gameplay contract, not yet a CoreRPG runtime schema"
-  ]
+    "this is an authoring/gameplay contract, not yet a CoreRPG runtime schema",
+    "an admitted player cadet occupies one real slot in the Academy population registry",
+    "temporary absence from campus does not remove Academy cohort membership"
+  ],
+  "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json"
 }
