@@ -680,6 +680,66 @@
         "ST_OFFICIAL_DESIGNING_DEFIANT",
         "ST_OFFICIAL_DS9_SHIPS_2018"
       ]
+    },
+    "sovereign": {
+      "life_profile_id": "starfleet_sovereign_life",
+      "class_or_configuration_ref": "sovereign",
+      "habitability_tier": "comfortable",
+      "privacy_level": "medium_high",
+      "social_density": "medium",
+      "family_civilian_policy": "mission_dependent",
+      "crew_reference": {
+        "value": null,
+        "type": "large_late_24c_multidepartment_crew",
+        "confidence": "not_locked",
+        "warning": "Do not promote an Enterprise-E complement figure into a universal class constant."
+      },
+      "watch_guidance": {
+        "preferred_pattern": "three_shift",
+        "allowed_patterns": [
+          "three_shift",
+          "four_shift",
+          "custom"
+        ],
+        "routine_primary_watch_allocation": {
+          "alpha": 0.38,
+          "beta": 0.31,
+          "gamma": 0.26,
+          "relief_or_float": 0.05
+        },
+        "reference_assignment_example": null,
+        "routine_day_staff_bias": "moderate_to_high: science, tactical readiness, maintenance, diplomacy and administration coexist with standing watches",
+        "emergency_recall_intensity": "high",
+        "small_crew_staggered_rest": false
+      },
+      "quarters_model": [
+        "late-24th-century Starfleet private/shared accommodation according to rank and assignment",
+        "guest and diplomatic accommodation may exist when individual configuration supports it",
+        "civilian or family presence must come from live mission/manifest state"
+      ],
+      "meal_model": "distributed replicated food access plus communal social spaces according to individual-ship layout",
+      "recreation_capabilities": [
+        "lounge",
+        "holodeck",
+        "gym",
+        "recreation_room",
+        "viewing_space",
+        "custom"
+      ],
+      "off_watch_obligation_emphasis": [
+        "training",
+        "department_briefing",
+        "tactical_readiness",
+        "science_project_work",
+        "maintenance",
+        "administrative_work",
+        "on_call"
+      ],
+      "life_character": "Large, advanced late-24th-century Starfleet ship with good habitability but a more operationally concentrated character than a Galaxy-class city-like explorer. Long deployments, diplomacy, science and high-threat readiness can all shape daily life.",
+      "source_refs": [
+        "STVIII_FIRST_CONTACT",
+        "MA_SOVEREIGN_CLASS"
+      ]
     }
   }
 }
