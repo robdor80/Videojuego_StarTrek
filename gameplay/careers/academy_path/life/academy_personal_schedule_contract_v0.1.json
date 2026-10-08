@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_personal_schedule_contract",
+  "status": "STEP_5_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "A cadet schedule is a persistent plan of expected commitments over real time. It constrains where a cadet should be, but does not overwrite authoritative actual-presence World State.",
+  "schedule_key": "population_slot_ref",
+  "schedule_fields": [
+    "schedule_id",
+    "population_slot_ref",
+    "academic_period_ref",
+    "valid_from",
+    "valid_until",
+    "schedule_version",
+    "entries",
+    "uncommitted_intervals",
+    "conflict_refs",
+    "revision_history_refs"
+  ],
+  "entry_fields": [
+    "entry_id",
+    "entry_type",
+    "source_ref",
+    "day_index",
+    "start_minute",
+    "end_minute",
+    "location_ref",
+    "obligation_level",
+    "derived",
+    "revision_event_ref_if_any"
+  ],
+  "entry_types": [
+    "class",
+    "practical",
+    "formal_study",
+    "required_preparation",
+    "medical_or_accessibility",
+    "protected_personal_window",
+    "field_training",
+    "transit"
+  ],
+  "rules": [
+    "Schedules consume existing Academy population slots and never create cadets.",
+    "Latent and materialized cadets may hold schedules because schedule identity is anchored to population_slot_ref.",
+    "Materialization cannot reroll a valid existing schedule.",
+    "Shared academic commitments must remain synchronized for all members assigned to that commitment.",
+    "Fixed commitments cannot overlap for the same cadet.",
+    "Flexible required obligations may move only inside their authored allowed windows.",
+    "Travel between different locations consumes nonzero configured/derived time when locations are not co-located.",
+    "Impossible transfer time creates an explicit schedule conflict instead of teleportation or silent time rewriting.",
+    "Protected medical/accessibility/personal windows are explicit constraints; species or personality alone never create them.",
+    "The player follows the same schedule feasibility rules as NPC cadets.",
+    "Schedule states expected activity/location; authoritative current_location remains separate runtime truth.",
+    "Being absent or late does not retroactively alter what the schedule required.",
+    "Uncommitted intervals are exposed as available temporal capacity but Step 5 does not choose how they are used.",
+    "Free time, clubs, social life, romance, wellbeing consequences, discipline and off-screen execution remain later steps.",
+    "Schedule changes require explicit revision/exception events and prior schedule versions remain historical."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json",
+    "gameplay/careers/academy_path/campus_location_graph.json",
+    "gameplay/timekeeping/README.md"
+  ],
+  "next_step_ref": "Step 6 — Free time"
+}

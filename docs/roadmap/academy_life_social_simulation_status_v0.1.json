@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 4,
+    "complete": 5,
     "partial": 0,
-    "todo": 16,
-    "current_step": 4
+    "todo": 15,
+    "current_step": 5
   },
   "steps": [
     {
@@ -32,7 +32,7 @@
     },
     {
       "step": 5,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Personal schedules"
     },
     {
@@ -163,6 +163,24 @@
     "residence_presence_separation": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 16,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_5": {
+    "slot_first_personal_schedules": "COMPLETE",
+    "fixed_and_flexible_commitments": "COMPLETE",
+    "academic_group_schedule_integration": "COMPLETE",
+    "explicit_travel_feasibility": "COMPLETE",
+    "no_zero_time_teleporting": "COMPLETE",
+    "protected_personal_windows": "COMPLETE",
+    "unresolved_conflict_semantics": "COMPLETE",
+    "schedule_revision_events": "COMPLETE",
+    "schedule_vs_actual_presence_separation": "COMPLETE",
+    "latent_to_materialized_schedule_continuity": "COMPLETE",
+    "uncommitted_time_exposed_not_filled": "COMPLETE",
+    "player_and_npc_rule_parity": "COMPLETE",
+    "deterministic_reference_generator": "PRESENT",
+    "executable_tests": 18,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

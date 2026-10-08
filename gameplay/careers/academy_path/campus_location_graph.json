@@ -1,11 +1,12 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.3.0",
   "graph_id": "starfleet_academy_earth_base",
   "player_facing_locale": "es-ES",
   "model": "location_graph",
   "notes": [
     "This graph is a playable authoring foundation, not a claim that every room below is named on screen.",
-    "Nodes explicitly marked game_addition exist to make the Academy playable without contradicting known geography."
+    "Nodes explicitly marked game_addition exist to make the Academy playable without contradicting known geography.",
+    "Campus travel duration is configured/derived for scheduling; graph adjacency alone never means zero-time movement."
   ],
   "locations": [
     {
@@ -244,5 +245,6 @@
       "golden_gate_grounds",
       "san_francisco_leave"
     ]
-  ]
+  ],
+  "travel_time_policy_ref": "gameplay/careers/academy_path/life/academy_schedule_feasibility_rules_v0.1.json"
 }

@@ -1,0 +1,118 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_personal_schedule_invariants",
+  "status": "STEP_5_VALIDATED",
+  "cases": [
+    {
+      "id": "slot_first_schedule",
+      "expected": [
+        "latent cadets may hold schedules before character materialization"
+      ]
+    },
+    {
+      "id": "materialization_continuity",
+      "expected": [
+        "adding character_id does not reroll schedule"
+      ]
+    },
+    {
+      "id": "shared_commitment_sync",
+      "expected": [
+        "all members of one shared commitment receive the same time and location"
+      ]
+    },
+    {
+      "id": "single_person_temporal_exclusivity",
+      "expected": [
+        "one cadet has no overlapping current commitments"
+      ]
+    },
+    {
+      "id": "travel_consumes_time",
+      "expected": [
+        "movement between different locations requires configured/derived transfer time"
+      ]
+    },
+    {
+      "id": "no_zero_time_teleport",
+      "expected": [
+        "insufficient transfer time becomes an explicit conflict"
+      ]
+    },
+    {
+      "id": "missing_route_is_conflict",
+      "expected": [
+        "missing required travel path is not treated as instantaneous movement"
+      ]
+    },
+    {
+      "id": "flexible_window_integrity",
+      "expected": [
+        "flexible required obligations stay inside authored allowed windows"
+      ]
+    },
+    {
+      "id": "fixed_commitment_integrity",
+      "expected": [
+        "fixed commitments are not silently moved to hide conflicts"
+      ]
+    },
+    {
+      "id": "species_not_schedule_priority",
+      "expected": [
+        "species_id alone does not alter scheduling"
+      ]
+    },
+    {
+      "id": "personality_not_schedule_priority",
+      "expected": [
+        "personality alone does not alter scheduling"
+      ]
+    },
+    {
+      "id": "player_parity",
+      "expected": [
+        "player presence does not change scheduling rules"
+      ]
+    },
+    {
+      "id": "schedule_not_presence",
+      "expected": [
+        "expected timetable state remains separate from actual current_location"
+      ]
+    },
+    {
+      "id": "uncommitted_time_only",
+      "expected": [
+        "open intervals are exposed without choosing leisure behavior"
+      ]
+    },
+    {
+      "id": "revision_event_required",
+      "expected": [
+        "persistent schedule mutation has an explicit cause/effective time"
+      ]
+    },
+    {
+      "id": "history_preserved",
+      "expected": [
+        "old schedule version survives later revision"
+      ]
+    },
+    {
+      "id": "no_social_leak",
+      "expected": [
+        "schedule generation does not create friendship/rivalry/romance"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no free-time activity assignment",
+        "no extracurricular assignment",
+        "no wellbeing or discipline consequence",
+        "no off-screen social simulation"
+      ]
+    }
+  ]
+}

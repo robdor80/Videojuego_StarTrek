@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_schedule_feasibility_rules",
+  "status": "STEP_5_COMPLETE",
+  "ordering": [
+    "preserve_valid_fixed_commitments",
+    "enforce_no_overlap",
+    "enforce_hard_personal_or_medical_constraints",
+    "enforce_location_transfer_time",
+    "place_flexible_required_obligations_inside_allowed_windows",
+    "derive_transit_blocks",
+    "expose_uncommitted_intervals",
+    "record_unresolved_conflicts"
+  ],
+  "rules": [
+    "Time is stored as exact authoritative timestamps at runtime; fixture/reference scheduling may use day_index plus minute-of-day.",
+    "Campus graph adjacency is not zero-time travel.",
+    "Travel durations are content/configuration/runtime data and are not silently asserted as canon by this contract.",
+    "A missing required travel path makes the transition unresolved/invalid.",
+    "Fixed obligations are not silently moved to hide conflicts.",
+    "Flexible obligations may move only within authored windows and keep their required duration.",
+    "Transit entries are derived schedule blocks and never social/free-time activities.",
+    "Uncommitted intervals do not imply the cadet is physically at the previous or next scheduled location.",
+    "Species, culture, gender, personality, branch and social status are not generic schedule-priority shortcuts.",
+    "Explicit medical/accessibility requirements may constrain timing/location when represented as state."
+  ]
+}

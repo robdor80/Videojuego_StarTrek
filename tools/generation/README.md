@@ -38,3 +38,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 - `simulate_colonization_expansion.py` — deterministic Block 2 reference for target selection, colony lifecycle, population transfer, claim overlap and abandonment.
 
 - `simulate_conflict_war.py` — deterministic Block 3 reference for doctrine/context response, war-authority gating and strategic-LOD operations with persistent force identities.
+
+
+### Academy Life Step 5 — personal schedules
+
+- `generate_academy_schedule_step5.py` is a deterministic reference scheduler for fixed Academy commitments, flexible required obligations and transfer feasibility.
+- `test_generate_academy_schedule_step5.py` validates determinism, slot continuity, travel-time feasibility, conflict exposure and strict Step-6+ boundaries.

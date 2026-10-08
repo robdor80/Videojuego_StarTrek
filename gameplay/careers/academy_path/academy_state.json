@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.10.0",
+  "schema_version": "0.11.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -24,7 +24,7 @@
     "qualifications": "definition_id_list",
     "relationships": "relationship_refs",
     "reputation": "academy_reputation_state",
-    "timetable": "schedule_ref",
+    "timetable": "academy_personal_schedule_ref_or_null",
     "current_location": "location_id",
     "current_activity": "activity_id_or_null",
     "field_training": "field_training_state",
@@ -61,7 +61,9 @@
     "academic_group_registry_ref": "academy_academic_group_registry_id",
     "quarters_assignment_ref": "academy_quarters_assignment_ref_or_null",
     "roommate_slot_refs": "population_slot_ref_list",
-    "quarters_registry_ref": "academy_quarters_registry_id"
+    "quarters_registry_ref": "academy_quarters_registry_id",
+    "schedule_registry_ref": "academy_schedule_registry_id",
+    "schedule_revision_refs": "schedule_revision_event_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -74,9 +76,14 @@
     "academic group co-membership is not itself a social relationship",
     "materializing a latent cadet preserves slot-based academic group memberships",
     "quarters assignment defines residence but does not guarantee current physical presence",
-    "roommate co-residency is shared context and not itself a social relationship"
+    "roommate co-residency is shared context and not itself a social relationship",
+    "personal schedule is anchored to population_slot_ref and survives latent-to-materialized promotion",
+    "schedule expresses expected commitments and locations, not authoritative current physical presence",
+    "travel time between different scheduled locations must be feasible or recorded as an explicit schedule conflict",
+    "uncommitted timetable intervals are not automatically filled with free-time activities"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
-  "quarters_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json"
+  "quarters_contract_ref": "gameplay/careers/academy_path/life/academy_quarters_housing_contract_v0.1.json",
+  "schedule_contract_ref": "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json"
 }

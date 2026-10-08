@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_schedule_registry_contract",
+  "status": "STEP_5_COMPLETE",
+  "registry_fields": [
+    "schedule_registry_id",
+    "academy_era_profile_ref",
+    "academic_period_ref",
+    "schedule_records",
+    "shared_commitment_records",
+    "revision_event_refs",
+    "last_reconciled_at"
+  ],
+  "derived_queries": [
+    "schedule_for_population_slot",
+    "expected_commitment_at_time",
+    "expected_location_at_time",
+    "next_commitment",
+    "uncommitted_intervals",
+    "schedule_conflicts_for_slot"
+  ],
+  "conservation_rules": [
+    "one active schedule version per population_slot_ref and academic period",
+    "shared commitment membership references existing cadet population slots",
+    "schedule generation never changes Academy cohort population",
+    "historical schedule versions and revisions are retained"
+  ],
+  "rules": [
+    "Shared commitment time/location is authoritative for all listed members unless a represented exception applies.",
+    "A schedule can exist for a latent Tier-C cadet slot.",
+    "Queries return expected schedule state and must not impersonate actual runtime presence.",
+    "Schedule history is append-preserving rather than destructive."
+  ]
+}

@@ -15,7 +15,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 2 | Procedural cadet generation | COMPLETE |
 | 3 | Classmates, study groups and practical teams | COMPLETE |
 | 4 | Quarters and roommates | COMPLETE |
-| 5 | Personal schedules | TODO |
+| 5 | Personal schedules | COMPLETE |
 | 6 | Free time | TODO |
 | 7 | Extracurricular activities | TODO |
 | 8 | Conferences, seminars and additional courses | TODO |
@@ -191,3 +191,22 @@ Hard medical, environmental, accessibility, safety or represented legal requirem
 If no compatible room/bed exists, housing remains explicitly unresolved; the system does not synthesize a new room.
 
 Temporary absence does not automatically release the room. Reassignment/release requires a real event. Quarters establish residence, not current physical presence: **personal schedule and actual presence remain Step 5**.
+
+
+## Step 5 — Personal schedules
+
+Step 5 closes persistent **personal timetable construction and feasibility** for Academy cadets.
+
+Schedules are anchored to `population_slot_ref`, not to whether an NPC is currently materialized. A latent cadet may therefore already have a stable class/practical/study timetable; later materialization must preserve it.
+
+The schedule contains fixed institutional commitments, explicitly configured protected personal/medical windows, deterministic placement of flexible required preparation/study obligations, and derived transit blocks where travel is required between locations.
+
+**Schedule ≠ actual presence.** A timetable states where a cadet is expected to be. Runtime World State remains authoritative for where that cadet actually is. Later systems may represent lateness, absence, emergencies or deliberate non-compliance without rewriting historical schedule truth.
+
+Travel consumes time. Two commitments at different locations are invalid when the configured location graph cannot provide sufficient transfer time; the scheduler records an explicit conflict rather than granting zero-time movement.
+
+Uncommitted intervals are exposed as temporal capacity only. Step 5 does not choose leisure, clubs, social encounters, dates or other free-time behavior.
+
+Schedule mutation requires an explicit revision/exception event and preserves prior versions/history.
+
+**Boundary:** free-time choice remains Step 6; extracurricular activity Step 7; social life Step 9; romance Step 10; wellbeing consequences Step 13; obligation/discipline consequences Step 14; off-screen life execution Step 16.

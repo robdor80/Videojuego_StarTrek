@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_schedule_revision_event_contract",
+  "status": "STEP_5_COMPLETE",
+  "event_fields": [
+    "event_id",
+    "effective_at",
+    "population_slot_refs",
+    "cause_type",
+    "cause_ref",
+    "prior_schedule_version",
+    "new_schedule_version",
+    "changed_entry_refs",
+    "authoritative_source_ref"
+  ],
+  "cause_types": [
+    "course_enrollment_change",
+    "academic_group_reassignment",
+    "instructor_or_room_reschedule",
+    "facility_unavailability",
+    "medical_or_accessibility_accommodation",
+    "approved_leave",
+    "field_training_assignment",
+    "academic_calendar_change",
+    "authorized_correction"
+  ],
+  "rules": [
+    "A revision requires a represented cause and effective time.",
+    "Past schedule truth is not rewritten by ordinary future revisions.",
+    "Corrections to erroneous historical data require an explicit authorized_correction event.",
+    "Player convenience or NPC materialization is not a valid revision cause.",
+    "Schedule revision does not itself apply attendance, discipline, social or wellbeing consequences."
+  ]
+}

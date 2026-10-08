@@ -1,0 +1,178 @@
+{
+  "fixture_id": "academy_schedule_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step5-fixture",
+    "day_start_minute": 420,
+    "day_end_minute": 1320,
+    "day_indices": [
+      0,
+      1
+    ],
+    "slot_granularity_minutes": 15,
+    "player_present": false,
+    "cadets": [
+      {
+        "population_slot_ref": "cadet4:00",
+        "character_id": "cadet:00",
+        "species_id": "human",
+        "personality_recipe_id": "p1",
+        "residence_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "cadet4:01",
+        "character_id": null,
+        "species_id": "vulcan",
+        "personality_recipe_id": "p2",
+        "residence_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "cadet4:02",
+        "character_id": null,
+        "species_id": "andorian",
+        "personality_recipe_id": "p3",
+        "residence_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "simulation_complex",
+        "minutes": 15
+      },
+      {
+        "from": "simulation_complex",
+        "to": "cadet_mess",
+        "minutes": 10
+      },
+      {
+        "from": "cadet_mess",
+        "to": "library_study",
+        "minutes": 8
+      },
+      {
+        "from": "library_study",
+        "to": "medical_academy",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "library_study",
+        "minutes": 10
+      },
+      {
+        "from": "simulation_complex",
+        "to": "library_study",
+        "minutes": 7
+      },
+      {
+        "from": "academic_core",
+        "to": "medical_academy",
+        "minutes": 18
+      }
+    ],
+    "shared_commitments": [
+      {
+        "commitment_id": "CLS-NAV-01",
+        "entry_type": "class",
+        "member_slot_refs": [
+          "cadet4:00",
+          "cadet4:01",
+          "cadet4:02"
+        ],
+        "day_index": 0,
+        "start_minute": 540,
+        "end_minute": 600,
+        "location_ref": "academic_core",
+        "obligation_level": "required"
+      },
+      {
+        "commitment_id": "PRA-SIM-01",
+        "entry_type": "practical",
+        "member_slot_refs": [
+          "cadet4:00",
+          "cadet4:01"
+        ],
+        "day_index": 0,
+        "start_minute": 660,
+        "end_minute": 720,
+        "location_ref": "simulation_complex",
+        "obligation_level": "required"
+      }
+    ],
+    "individual_commitments": [
+      {
+        "commitment_id": "MEAL-A",
+        "population_slot_ref": "cadet4:00",
+        "entry_type": "protected_personal_window",
+        "day_index": 0,
+        "start_minute": 750,
+        "end_minute": 795,
+        "location_ref": "cadet_mess",
+        "obligation_level": "protected"
+      },
+      {
+        "commitment_id": "MED-C",
+        "population_slot_ref": "cadet4:02",
+        "entry_type": "medical_or_accessibility",
+        "day_index": 0,
+        "start_minute": 900,
+        "end_minute": 930,
+        "location_ref": "medical_academy",
+        "obligation_level": "required"
+      }
+    ],
+    "flexible_requirements": [
+      {
+        "requirement_id": "STUDY-A",
+        "population_slot_ref": "cadet4:00",
+        "entry_type": "formal_study",
+        "duration_minutes": 60,
+        "location_ref": "library_study",
+        "allowed_windows": [
+          {
+            "day_index": 0,
+            "start_minute": 810,
+            "end_minute": 1020
+          }
+        ]
+      },
+      {
+        "requirement_id": "PREP-B",
+        "population_slot_ref": "cadet4:01",
+        "entry_type": "required_preparation",
+        "duration_minutes": 45,
+        "location_ref": "library_study",
+        "allowed_windows": [
+          {
+            "day_index": 0,
+            "start_minute": 780,
+            "end_minute": 1020
+          }
+        ]
+      },
+      {
+        "requirement_id": "STUDY-C",
+        "population_slot_ref": "cadet4:02",
+        "entry_type": "formal_study",
+        "duration_minutes": 45,
+        "location_ref": "library_study",
+        "allowed_windows": [
+          {
+            "day_index": 0,
+            "start_minute": 720,
+            "end_minute": 870
+          }
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "cadet_count": 3,
+    "schedule_conflicts": 0,
+    "unresolved_flexible_requirements": 0,
+    "shared_class_member_count": 3,
+    "future_free_time_assignments": 0,
+    "schedule_truth_semantics": "expected_not_actual_presence"
+  }
+}
