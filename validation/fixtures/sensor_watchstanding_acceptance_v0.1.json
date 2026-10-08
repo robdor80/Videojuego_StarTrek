@@ -164,6 +164,27 @@
         "contact_may_become_high_operational_priority",
         "no_hostile_claim"
       ]
+    },
+    {
+      "id": "SW-011",
+      "name": "Romulan warbird acquisition is plotted consistently in zenith and profile views",
+      "given": [
+        "identified_romulan_warbird_initially_outside_sensor_range",
+        "contact_enters_long_range",
+        "bearing_is_118_deg",
+        "elevation_is_minus_7_deg",
+        "course_is_287_deg_with_plus_2_deg_vertical_component",
+        "military_contact_without_confirmed_hostility"
+      ],
+      "when": "next_passive_cycle_and_spatial_display_update_run",
+      "expect": [
+        "contact_is_acquired_and_selected",
+        "zenith_marker_appears_at_118_deg",
+        "profile_marker_appears_below_reference_plane_at_minus_7_deg",
+        "course_vector_is_visible_in_both_views",
+        "operational_priority_is_high",
+        "hostility_is_not_invented"
+      ]
     }
   ]
 }
