@@ -10,6 +10,8 @@ SENSORES / COMPUTADORA → vigilancia pasiva continua → actualización de la s
 
 La vigilancia continua **no crea acontecimientos**. Si el espacio está tranquilo, una guardia completa puede terminar sin novedad.
 
+La vigilancia es una responsabilidad del **runtime de la nave**, no de la pantalla de la consola. Debe existir durante todo el tiempo simulado en que la nave esté operativa, aunque el jugador no esté sentado en Sensores. Al reanudar una nave tras tiempo fuera de pantalla, el Core debe resolver el catch-up del World State y reconstruir la imagen sensorial coherente antes de presentar novedades al jugador.
+
 ## Separación de responsabilidades
 
 ### Automatización de la nave
@@ -26,7 +28,10 @@ En condiciones normales, el subsistema de Sensores y la Computadora mantienen de
 - control de interferencias y degradación de calidad;
 - registro temporal de observaciones;
 - evaluación de umbrales y órdenes permanentes;
-- generación de avisos cuando aparece una novedad significativa.
+- generación de avisos cuando aparece una novedad significativa;
+- clasificación de nuevos contactos como identificados, no identificados o de identidad incierta;
+- reconocimiento automático de transpondedores válidos cuando el World State lo permita;
+- detección de pérdidas anómalas de contactos previamente estables.
 
 Estas rutinas son deterministas y no requieren una llamada LLM.
 
@@ -67,12 +72,46 @@ La rutina automática no genera enemigos, anomalías, llamadas de socorro ni con
 
 Si el World State no cambia y no hay ninguna condición relevante, la Computer permanece silenciosa salvo consultas del oficial.
 
+## Adquisición automática de contactos
+
+La vigilancia pasiva 24/7 mantiene dos capas simultáneas: corto alcance y largo alcance.
+
+Cuando un contacto entra en detectabilidad:
+
+- si existe un transpondedor reconocido o una correlación suficiente, la Computer lo incorpora como **contacto identificado** y muestra los datos disponibles;
+- si no existe identificación suficiente, lo incorpora como **nuevo contacto desconocido/no identificado**;
+- los contactos desconocidos nuevos deben quedar visualmente resaltados hasta que el oficial los revise, seleccione o investigue;
+- el hecho de que un contacto sea visible no autoriza a la Computer a inventar su identidad, intención o afiliación.
+
+El oficial puede continuar usando la consola para otras tareas mientras esta adquisición automática sigue funcionando.
+
+## Pérdida de contacto y desaparición anómala
+
+La Computer debe distinguir entre una pérdida **explicable** y una pérdida **anómala**.
+
+Pérdidas explicables incluyen, cuando el estado lo justifique, salida de alcance, interferencia conocida, oclusión conocida, entrada en sombra sensorial o una partida a curvatura detectada.
+
+Si un contacto que estaba estable y con confianza suficiente desaparece súbitamente sin una explicación sensorial conocida, la Computer debe generar una alerta inmediata de **pérdida anómala de contacto**.
+
+La alerta debe informar solo de hechos observados:
+
+- contacto afectado;
+- última confianza;
+- última distancia;
+- último rumbo/vector;
+- última velocidad;
+- hora de última observación;
+- causa: no determinada.
+
+La Computer **no debe decir que el contacto explotó, fue destruido, se camufló o saltó a curvatura** salvo que exista evidencia suficiente para esa conclusión.
+
 ## Avisos de rutina
 
 La Computer debe interrumpir al oficial solo cuando exista una condición que cruce un umbral o una orden permanente, por ejemplo:
 
 - nuevo contacto detectable;
 - contacto perdido;
+- pérdida súbita anómala de un contacto previamente estable;
 - cambio significativo de vector/velocidad;
 - cambio material de confianza o clasificación;
 - firma que coincide con una vigilancia activa;
@@ -99,6 +138,8 @@ La vigilancia de Sensores debe ser **event-driven + comprobación periódica**, 
 World State cambia → Sensor Core evalúa detectabilidad → estado observado cambia → Routine Watch compara con baseline → si cruza criterio: ALERTA → si no: silencio.
 
 Las acciones del propio jugador actualizan el baseline después de ejecutarse para evitar alertas duplicadas sobre algo que el oficial acaba de ordenar.
+
+En la Holocubierta web, un temporizador local aproxima este comportamiento mientras el prototipo está abierto. En el juego final, la vigilancia pertenece al Core de la nave y debe continuar 24/7 en tiempo simulado, independiente de la UI concreta de Sensores.
 
 ## Relación con IA
 
