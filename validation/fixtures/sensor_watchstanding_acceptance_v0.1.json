@@ -1,0 +1,130 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "sensor_watchstanding_acceptance_v0.1",
+  "status": "ACCEPTANCE",
+  "purpose": "Validate autonomous 24/7 passive Sensor watchstanding without manufacturing events.",
+  "cases": [
+    {
+      "id": "SW-001",
+      "name": "Quiet watch remains quiet",
+      "given": [
+        "ship_operational",
+        "passive_watch_enabled",
+        "no_meaningful_world_state_change"
+      ],
+      "when": "eight_hours_simulated_watch_elapse",
+      "expect": [
+        "short_range_watch_continues",
+        "long_range_watch_continues",
+        "zero_fabricated_contacts",
+        "zero_fabricated_anomalies",
+        "zero_required_alerts"
+      ]
+    },
+    {
+      "id": "SW-002",
+      "name": "Recognized transponder acquired automatically",
+      "given": [
+        "new_contact_becomes_detectable",
+        "recognized_transponder=true"
+      ],
+      "when": "passive_cycle_observes_contact",
+      "expect": [
+        "contact_added_without_manual_scan",
+        "contact_identified",
+        "available_distance_vector_velocity_confidence_presented",
+        "no_llm_required"
+      ]
+    },
+    {
+      "id": "SW-003",
+      "name": "Unknown contact highlighted",
+      "given": [
+        "new_contact_becomes_detectable",
+        "no_sufficient_identification"
+      ],
+      "when": "passive_cycle_observes_contact",
+      "expect": [
+        "contact_added_as_unknown",
+        "officer_attention_highlight=true",
+        "identity_not_invented",
+        "officer_can_act_on_contact"
+      ]
+    },
+    {
+      "id": "SW-004",
+      "name": "Sudden unexplained loss raises anomaly",
+      "given": [
+        "contact_previously_stable",
+        "previous_confidence>=60",
+        "contact_suddenly_not_detectable",
+        "no_known_loss_reason"
+      ],
+      "when": "next_passive_cycle_runs",
+      "expect": [
+        "anomalous_contact_loss_alert",
+        "last_confidence_reported",
+        "last_distance_reported",
+        "last_vector_reported",
+        "last_velocity_reported",
+        "cause_reported_as_unknown",
+        "no_explosion_claim",
+        "no_cloak_claim",
+        "no_warp_departure_claim"
+      ]
+    },
+    {
+      "id": "SW-005",
+      "name": "Explained loss is not falsely anomalous",
+      "given": [
+        "contact_leaves_passive_range",
+        "loss_reason=out_of_range"
+      ],
+      "when": "next_passive_cycle_runs",
+      "expect": [
+        "loss_logged_or_reported_according_to_policy",
+        "no_anomalous_loss_claim"
+      ]
+    },
+    {
+      "id": "SW-006",
+      "name": "Officer work does not disable background watch",
+      "given": [
+        "officer_is_using_console_for_other_task",
+        "passive_watch_enabled"
+      ],
+      "when": "world_state_changes_during_watch",
+      "expect": [
+        "passive_watch_still_evaluates_change",
+        "meaningful_alert_can_be_raised"
+      ]
+    },
+    {
+      "id": "SW-007",
+      "name": "Sensor watch belongs to ship runtime",
+      "given": [
+        "player_not_at_sensor_console",
+        "ship_runtime_advances"
+      ],
+      "when": "contact_becomes_detectable_offscreen",
+      "expect": [
+        "event_resolved_by_ship_runtime",
+        "sensor_picture_reconstructed_on_resume",
+        "ui_not_owner_of_surveillance"
+      ]
+    },
+    {
+      "id": "SW-008",
+      "name": "Report goes to current bridge command",
+      "given": [
+        "sensor_event_requires_human_report",
+        "captain_not_in_command_of_bridge_watch"
+      ],
+      "when": "sensor_officer_reports_event",
+      "expect": [
+        "recipient=current_bridge_command_officer",
+        "captain_only_if_escalated_or_required"
+      ]
+    }
+  ]
+}
