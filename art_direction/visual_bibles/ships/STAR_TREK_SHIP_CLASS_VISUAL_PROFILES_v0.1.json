@@ -357,6 +357,29 @@
       "source_refs": [
         "MA_HIDEKI_CLASS"
       ]
+    },
+    "sovereign": {
+      "applies_when": {
+        "class_id": "sovereign",
+        "era_id": "tng_ds9_voyager"
+      },
+      "anchors": [
+        "sleek elongated late-24th-century Starfleet capital-ship silhouette",
+        "broad forward saucer flowing into a long narrow secondary hull",
+        "paired swept nacelles and a lower, more streamlined overall profile than Galaxy class",
+        "clean Starfleet hull language appropriate to the late 2370s feature-film era"
+      ],
+      "forbidden": [
+        "Galaxy-class broad-neck proportions substituted",
+        "Intrepid variable-geometry nacelle language",
+        "Enterprise-E-specific battle damage copied to generic class members",
+        "post-Nemesis or unrelated later-era Starfleet design language",
+        "random armor plates, turrets or weapon ports unsupported by reference"
+      ],
+      "source_refs": [
+        "STVIII_FIRST_CONTACT",
+        "MA_SOVEREIGN_CLASS"
+      ]
     }
   }
 }
