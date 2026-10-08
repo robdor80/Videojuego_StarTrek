@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_contact_navigation_solution",
+  "status": "FOUNDATION_FIXED",
+  "fields": {
+    "distanceKm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "current range from own ship"
+    },
+    "bearingDeg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "relative horizontal bearing"
+    },
+    "elevationDeg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "relative vertical angle"
+    },
+    "courseBearingDeg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "contact motion course horizontal component"
+    },
+    "courseElevationDeg": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "contact motion course vertical component"
+    },
+    "velocity": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "meaning": "contact speed"
+    },
+    "relativeMotion": {
+      "enum": [
+        "approaching",
+        "receding",
+        "crossing",
+        "stationary",
+        "unknown",
+        null
+      ]
+    },
+    "closestApproachKm": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "predicted closest point of approach"
+    },
+    "tcpaMinutes": {
+      "type": [
+        "number",
+        "null"
+      ],
+      "meaning": "time to closest approach when resolvable"
+    }
+  },
+  "legacy": {
+    "vector": "prototype compatibility only; must not be presented as course"
+  },
+  "ui_order": [
+    "identity",
+    "distanceKm",
+    "bearingDeg",
+    "elevationDeg",
+    "courseBearingDeg/courseElevationDeg",
+    "velocity",
+    "relativeMotion",
+    "closestApproachKm"
+  ],
+  "ai_boundary": "LLM may verbalize deterministic values but may not invent navigation solution fields."
+}
