@@ -1,0 +1,69 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "sensor_watchstanding_state",
+  "status": "FOUNDATION_FIXED",
+  "principle": "Continuous passive sensing is automatic; events are never spawned to keep the watch interesting.",
+  "default_state": {
+    "enabled": true,
+    "mode": "passive_continuous",
+    "alert_policy": "meaningful_changes_only",
+    "reporting_recipient": "current_bridge_command_officer",
+    "last_check": null,
+    "last_notable_event": null,
+    "status": "quiet"
+  },
+  "automatic_routines": [
+    "passive_short_range_watch",
+    "passive_long_range_watch",
+    "known_contact_refresh",
+    "detectable_contact_acquisition",
+    "signature_and_transponder_correlation",
+    "authorized_tracking_maintenance",
+    "sensor_health_monitoring",
+    "interference_monitoring",
+    "standing_order_watch_evaluation",
+    "observation_logging"
+  ],
+  "officer_routine_duties": [
+    "supervise_sensor_picture",
+    "review_low_confidence_readings",
+    "investigate_ambiguous_contacts",
+    "refine_scans_within_authority",
+    "adjust_filters_and_priorities",
+    "maintain_bridge_contact_picture",
+    "report_sensor_degradation",
+    "maintain_log_and_handoff",
+    "report_notable_changes_to_current_bridge_command_officer"
+  ],
+  "default_alerts": [
+    "new_detectable_contact",
+    "contact_lost",
+    "significant_course_change",
+    "significant_velocity_change",
+    "confidence_threshold_crossing",
+    "classification_change",
+    "standing_order_match",
+    "sensor_array_degradation",
+    "interference_out_of_tolerance",
+    "distress_or_priority_transponder"
+  ],
+  "requires_authority_or_standing_order": [
+    "detectable_active_scan",
+    "power_reallocation_beyond_station_budget",
+    "drop_protected_tracking_assignment",
+    "intrusive_or_sensitive_scan",
+    "mission_priority_change",
+    "command_level_tactical_decision"
+  ],
+  "quiet_watch_rule": {
+    "may_complete_with_zero_alerts": true,
+    "random_event_injection": false,
+    "ai_may_create_world_event": false
+  },
+  "reporting_chain": [
+    "sensor_watch_officer",
+    "current_bridge_command_officer",
+    "captain_when_escalated_or_required"
+  ],
+  "runtime_rule": "World State changes first. Sensor Core evaluates detectability. Routine Watch compares observed state with baseline and alerts only on meaningful deltas."
+}
