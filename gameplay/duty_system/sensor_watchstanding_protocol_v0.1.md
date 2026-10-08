@@ -156,3 +156,8 @@ La estación debe permitir una guardia auténticamente tranquila: relevo, compro
 - Pérdida anómala sin causa conocida: tres pulsos rojos y después pasa a CONTACTOS PERDIDOS.
 - La afiliación, especie, clase militar o prioridad alta no bastan por sí solas para considerar un contacto hostil.
 - El registro conserva la última solución conocida del contacto perdido.
+
+
+### UX final de contactos perdidos
+
+Los contactos perdidos no deben ocupar permanentemente la lista principal de contactos activos. Después de cualquier transición visual de pérdida, el contacto se archiva en un apartado consultable **CONTACTOS PERDIDOS**, con su última solución conocida, hora de pérdida y causa confirmada o no determinada. La lista principal queda reservada para contactos actualmente detectables. La Holocubierta puede mantener temporalmente una representación simplificada hasta la fase de UX final.
