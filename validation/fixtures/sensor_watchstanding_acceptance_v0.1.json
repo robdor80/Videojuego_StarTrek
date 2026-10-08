@@ -185,6 +185,55 @@
         "operational_priority_is_high",
         "hostility_is_not_invented"
       ]
+    },
+    {
+      "id": "SW-012",
+      "name": "Contact action deck changes with selected contact context",
+      "given": [
+        "sensor_console_v03_active",
+        "different_contact_categories_are_selectable"
+      ],
+      "when": "officer_selects_unknown_civilian_military_natural_or_lost_contact",
+      "expect": [
+        "maximum_eight_visible_action_slots",
+        "actions_are_resolved_deterministically_from_contact_state",
+        "irrelevant_actions_are_hidden",
+        "military_affiliation_does_not_imply_hostility",
+        "gemini_not_required_to_choose_buttons"
+      ]
+    },
+    {
+      "id": "SW-013",
+      "name": "Tracking control evolves inside one action slot",
+      "given": [
+        "live_contact_selected",
+        "tracking_initially_inactive"
+      ],
+      "when": "officer_cycles_standard_intensified_and_stopped_tracking",
+      "expect": [
+        "inactive_state_shows_follow",
+        "standard_tracking_shows_diagonal_intensify_and_stop_control",
+        "intensified_tracking_shows_diagonal_standard_and_stop_control",
+        "intensified_tracking_consumes_more_tracking_capacity",
+        "intensified_tracking_improves_tracking_quality",
+        "stop_returns_control_to_follow"
+      ]
+    },
+    {
+      "id": "SW-014",
+      "name": "Lost contact action deck exposes only historical or recovery-safe actions",
+      "given": [
+        "selected_contact_is_lost"
+      ],
+      "when": "contact_action_resolver_builds_available_controls",
+      "expect": [
+        "live_analysis_actions_hidden",
+        "live_tracking_start_hidden",
+        "last_known_data_available",
+        "existing_tracking_may_be_stopped",
+        "reacquisition_disabled_when_no_current_signal_exists",
+        "historical_data_can_be_transferred"
+      ]
     }
   ]
 }
