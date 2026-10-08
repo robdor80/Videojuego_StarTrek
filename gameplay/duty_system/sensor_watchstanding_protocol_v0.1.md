@@ -148,3 +148,11 @@ La vigilancia automática no depende de Gemini. Core detecta y calcula; la Compu
 ## Objetivo de simulación
 
 La estación debe permitir una guardia auténticamente tranquila: relevo, comprobación de estado, vigilancia pasiva, alguna consulta o ajuste rutinario si el oficial quiere, registro/relevo y fin de guardia sin novedad. También debe reaccionar de inmediato si el World State realmente cambia.
+
+## Presentación visual de pérdida de contacto
+
+- Pérdida normal explicable: tres pulsos amarillos y después el contacto pasa a CONTACTOS PERDIDOS.
+- Pérdida de una amenaza hostil confirmada o estado táctico crítico: tres pulsos rojos y después pasa a CONTACTOS PERDIDOS.
+- Pérdida anómala sin causa conocida: tres pulsos rojos y después pasa a CONTACTOS PERDIDOS.
+- La afiliación, especie, clase militar o prioridad alta no bastan por sí solas para considerar un contacto hostil.
+- El registro conserva la última solución conocida del contacto perdido.
