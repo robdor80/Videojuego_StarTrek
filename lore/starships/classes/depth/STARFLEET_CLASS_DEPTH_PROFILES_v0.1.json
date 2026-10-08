@@ -335,6 +335,54 @@
         "MA_DEFIANT_CLASS",
         "MA_QUANTUM_TORPEDO"
       ]
+    },
+    "sovereign": {
+      "gameplay_identity": "advanced late-24th-century Starfleet long-range capital starship balancing exploration, diplomacy and very strong defensive/tactical capability",
+      "valid_profiles": [
+        "tng_ds9_voyager"
+      ],
+      "generation_roles": [
+        "long_range_exploration",
+        "diplomacy",
+        "fleet_command",
+        "high_threat_response",
+        "strategic_presence"
+      ],
+      "strengths": [
+        "advanced_late_24c_systems",
+        "strong_tactical_capability",
+        "long_range_independent_operation",
+        "command_and_diplomatic_presence"
+      ],
+      "constraints": [
+        "not available before late-24th-century introduction",
+        "class capability does not imply permanent combat posture",
+        "individual Enterprise-E history and damage are never class defaults",
+        "exact complement and internal arrangement remain configuration-specific unless sourced"
+      ],
+      "crew_generation": [
+        "large multi-department Starfleet crew",
+        "mission profile determines tactical, science, diplomatic and support staffing",
+        "civilian/passenger presence is individual-assignment state rather than automatic class population"
+      ],
+      "persistence": [
+        "refits, damage, registry, command crew and mission equipment belong to the individual ship",
+        "generated Sovereign-class vessels remain persistent identities once materialized"
+      ],
+      "ai_boundary": [
+        "Do not infer USS Enterprise-E-specific officers, history, damage, modifications or readiness from class identity.",
+        "AI may describe established class-level capabilities but cannot invent live tactical status."
+      ],
+      "visual_hooks": [
+        "sleek elongated late-24c Starfleet silhouette",
+        "long secondary hull integrated with broad forward saucer",
+        "swept paired nacelles",
+        "individual registry and damage overlays only from authoritative state"
+      ],
+      "source_ids": [
+        "STVIII_FIRST_CONTACT",
+        "MA_SOVEREIGN_CLASS"
+      ]
     }
   },
   "generation_rules": [
