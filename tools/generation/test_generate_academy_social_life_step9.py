@@ -9,7 +9,8 @@ class AcademySocialLifeStep9Tests(unittest.TestCase):
  def test_01_deterministic(self):self.assertEqual(out(),out())
  def test_02_input_order_independent(self):
   r=req();x=copy.deepcopy(r);x["cadets"]=list(reversed(x["cadets"]));x["available_windows"]=list(reversed(x["available_windows"]));self.assertEqual(mod.build_social_plans(r),mod.build_social_plans(x))
- def test_03_existing_plan_preserved(self):self.assertIn("cadet4:03",out()["rosters"]["evening_shared_meal"])
+ def test_03_existing_plan_preserved(self):
+  o=out();self.assertIn("cadet4:03",o["rosters"]["evening_shared_meal"]);self.assertEqual(sum(1 for x in o["social_plans"] if x["population_slot_ref"]=="cadet4:03"),1)
  def test_04_player_not_auto_socialized(self):self.assertFalse(any(x["population_slot_ref"]=="cadet4:00" for x in out()["social_plans"]))
  def test_05_player_has_feasible_options(self):self.assertTrue(any(x["population_slot_ref"]=="cadet4:00" for x in out()["player_options"]))
  def test_06_player_acceptance(self):

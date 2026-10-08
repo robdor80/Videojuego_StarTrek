@@ -75,6 +75,14 @@ def build_social_plans(request):
         if not o["_facility_valid"]:return False,"facility_unavailable"
         if not context_eligible(slot,oid):return False,"not_invited_or_context_ineligible"
         if not window_fits(slot,o,windows,g):return False,"schedule_or_travel_conflict"
+        for existing_plan in plans:
+            if existing_plan["population_slot_ref"] != slot:
+                continue
+            existing_opp = opps[existing_plan["social_opportunity_id"]]
+            if int(existing_opp["day_index"]) != int(o["day_index"]):
+                continue
+            if int(existing_opp["start_minute"]) < int(o["end_minute"]) and int(o["start_minute"]) < int(existing_opp["end_minute"]):
+                return False,"social_plan_conflict"
         return True,None
 
     def add_plan(slot,oid,source,plan_id=None):
