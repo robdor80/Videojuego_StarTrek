@@ -127,14 +127,14 @@ def resolve(request:dict[str,Any])->dict[str,Any]:
                 e["familiarity"]=bump(e["familiarity"],FAMILIARITY,1)
         elif typ=="reciprocal_commitment":
             ok,reason=romantic_eligible(by_slot[a],by_slot[b])
-            rev=edge(b,a)
-            if not ok or not ev.get("bilateral_confirmed",False) or e["romantic_interest"] not in {"present","expressed"} or rev["romantic_interest"] not in {"present","expressed"}:
+            rev_existing=edges.get(pair_key(b,a))
+            if not ok or not ev.get("bilateral_confirmed",False) or e["romantic_interest"] not in {"present","expressed"} or rev_existing is None or rev_existing["romantic_interest"] not in {"present","expressed"}:
                 applied=False;rejected.append({"event_id":ev["event_id"],"reason":reason or "commitment_not_reciprocal"})
             else:
                 state=ev.get("relationship_state","dating")
                 if state not in {"dating","established"}:raise ValueError("invalid commitment relationship state")
-                e["relationship_state"]=state;rev["relationship_state"]=state
-                history(rev,ev["event_id"])
+                e["relationship_state"]=state;rev_existing["relationship_state"]=state
+                history(rev_existing,ev["event_id"])
         elif typ=="relationship_strain":
             if e["relationship_state"] in {"dating","established"}:e["relationship_state"]="strained"
             else:e["conflict_state"]="tension"
