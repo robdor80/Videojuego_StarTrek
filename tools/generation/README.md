@@ -80,3 +80,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_npc_relationships_step11.py` deterministically evolves persistent directional NPC relationship edges from confirmed causal events.
 - `test_resolve_academy_npc_relationships_step11.py` validates asymmetry, familiarity/friendship thresholds, conflict/reconciliation history, adult heterosexual NPC romance, bilateral commitment, player exclusion and strict Step-12+ boundaries.
+
+
+### Academy Life Step 12 — mentors and instructors
+
+- `resolve_academy_mentors_instructors_step12.py` validates teaching assignments, tutoring, voluntary mentorship, mentoring sessions and evidence-backed recommendations.
+- `test_resolve_academy_mentors_instructors_step12.py` validates role separation, player agency, finite capacity, authority/scope, schedule/travel/facility constraints and strict Step-13+ boundaries.

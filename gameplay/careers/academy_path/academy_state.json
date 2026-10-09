@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.17.0",
+  "schema_version": "0.18.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -84,7 +84,12 @@
     "romantic_consent_context_refs": "romantic_consent_context_ref_list",
     "npc_relationship_registry_ref": "academy_npc_relationship_registry_id",
     "npc_relationship_edge_refs": "directional_relationship_edge_ref_list",
-    "npc_relationship_event_history_refs": "relationship_event_ref_list"
+    "npc_relationship_event_history_refs": "relationship_event_ref_list",
+    "instructor_assignment_refs": "academy_instructor_assignment_ref_list",
+    "tutoring_session_refs": "academy_tutoring_session_ref_list",
+    "mentorship_ref": "academy_mentorship_ref_or_null",
+    "mentoring_session_refs": "academy_mentoring_session_ref_list",
+    "mentor_recommendation_evidence_refs": "mentor_recommendation_evidence_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -137,7 +142,14 @@
     "friendship requires sustained positive shared history; conflict/reconciliation preserves original history",
     "autonomous NPC romance reuses the locked adult heterosexual canon and Step-10 consent/provenance rules",
     "Step-11 autonomous resolver excludes the player and cannot mutate player relationship state",
-    "species, materialization state, player proximity and observation are not NPC relationship selectors"
+    "species, materialization state, player proximity and observation are not NPC relationship selectors",
+    "instructor assignment, tutoring and mentorship are distinct states even when the same character fills multiple roles",
+    "teaching assignment or tutoring does not automatically create mentorship",
+    "player mentorship requires explicit player acceptance and may be declined without academic penalty",
+    "mentorship is professional context and does not itself create friendship, romance, grades, qualifications or discipline",
+    "mentor capacity, professional scope, authority and bilateral schedule/travel feasibility are real constraints",
+    "mentor recommendations require evidence and authority but never guarantee grades, qualifications or future assignments",
+    "Academy mentorship history persists after graduation but active post-Academy mentorship requires a new valid assignment"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -149,5 +161,6 @@
   "social_life_contract_ref": "gameplay/careers/academy_path/life/academy_social_life_contract_v0.1.json",
   "relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",
   "romance_dating_contract_ref": "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json",
-  "npc_relationship_contract_ref": "gameplay/careers/academy_path/life/academy_npc_relationship_evolution_contract_v0.1.json"
+  "npc_relationship_contract_ref": "gameplay/careers/academy_path/life/academy_npc_relationship_evolution_contract_v0.1.json",
+  "mentor_instructor_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json"
 }

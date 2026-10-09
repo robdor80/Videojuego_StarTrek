@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_mentor_instructor_contract",
+  "status": "STEP_12_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Instruction, tutoring and mentorship are separate persistent professional relationships. Mentorship is voluntary and cannot expand formal authority.",
+  "instructor_roles": [
+    "course_instructor",
+    "practical_instructor",
+    "evaluator",
+    "tutor",
+    "mentor"
+  ],
+  "rules": [
+    "An instructor is a persistent character with temporal, assignment and campaign-history validity.",
+    "Teaching assignment does not itself create tutoring or mentorship.",
+    "Tutoring is academic assistance and does not itself create mentorship.",
+    "Mentorship requires represented bilateral acceptance and professional scope.",
+    "The player cannot be automatically assigned or auto-accepted into a mentorship.",
+    "NPC mentorship acceptance must also be represented rather than inferred from convenience.",
+    "Mentor capacity is finite and existing valid mentorships consume capacity first.",
+    "Mentorship does not expand authority_scope.",
+    "Mentorship alone creates no grade, qualification, discipline, friendship, romance, promotion or posting.",
+    "Species, sex category, materialization state and player proximity are not mentor-selection shortcuts.",
+    "Tutoring/mentoring sessions require real bilateral time, travel and an appropriate location.",
+    "A planned session does not assert actual attendance.",
+    "Recommendation evidence requires active mentorship, recommendation authority and real basis_event_refs.",
+    "Recommendation evidence never guarantees a result.",
+    "Ended mentorship preserves history.",
+    "Academy mentorship does not automatically continue as active-duty mentorship after graduation."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/instructor_model.json",
+    "lore/federation/starfleet/academy/instructors/README.md",
+    "gameplay/social/relationship_graph_model.json",
+    "gameplay/relationships/relationship_change_provenance_contract.json",
+    "gameplay/careers/post_academy/qualification_and_mentorship_model.json"
+  ],
+  "next_step_ref": "Step 13 — Wellbeing and balance"
+}

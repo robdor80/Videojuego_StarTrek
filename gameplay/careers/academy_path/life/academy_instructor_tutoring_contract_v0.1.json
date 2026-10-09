@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_instructor_tutoring_contract",
+  "status": "STEP_12_COMPLETE",
+  "fields": [
+    "session_id",
+    "instructor_id",
+    "cadet_slot_ref",
+    "subject_id",
+    "day_index",
+    "start_minute",
+    "end_minute",
+    "location_ref",
+    "attendance_state"
+  ],
+  "rules": [
+    "Tutoring requires an active instructor authorized for the subject.",
+    "Tutoring requires compatible instructor/cadet windows, travel and location capability.",
+    "Tutoring does not create mentorship.",
+    "Tutoring does not award a grade or qualification by itself.",
+    "Actual attendance remains runtime/event truth."
+  ]
+}

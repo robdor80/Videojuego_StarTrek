@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.3",
+  "schema_version": "0.2.4",
   "model_id": "social_relationship_graph",
   "status": "foundation_fixed",
   "edge_key": [
@@ -43,7 +43,10 @@
     "A completed date may provide relationship evidence but does not automatically establish a committed relationship.",
     "Autonomous NPC-to-NPC Academy relationship evolution consumes confirmed event provenance and may be asymmetric.",
     "Friendship requires sustained positive shared history rather than co-location or a single favorable interaction.",
-    "Autonomous NPC romantic evolution must reuse the same adult heterosexual eligibility and consent rules as player-facing romance."
+    "Autonomous NPC romantic evolution must reuse the same adult heterosexual eligibility and consent rules as player-facing romance.",
+    "Mentorship is a professional relationship dimension distinct from friendship, romance and personal affinity.",
+    "Instructor authority does not increase because a mentorship relationship exists.",
+    "Mentorship transitions require represented proposal/acceptance/end provenance."
   ],
   "change_provenance_contract_ref": "gameplay/relationships/relationship_change_provenance_contract.json",
   "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"

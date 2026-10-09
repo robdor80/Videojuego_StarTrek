@@ -1,0 +1,175 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_mentors_instructors_invariants",
+  "status": "STEP_12_VALIDATED",
+  "cases": [
+    {
+      "id": "instructor_persistent",
+      "expected": [
+        "instructor identity persists independently of player observation"
+      ]
+    },
+    {
+      "id": "teaching_not_mentorship",
+      "expected": [
+        "course assignment does not create mentorship"
+      ]
+    },
+    {
+      "id": "tutoring_not_mentorship",
+      "expected": [
+        "one-off tutoring does not create mentorship"
+      ]
+    },
+    {
+      "id": "bilateral_acceptance",
+      "expected": [
+        "active mentorship requires represented mentor/cadet acceptance"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "player mentorship never auto-accepts"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "mentor mentee_capacity is conserved"
+      ]
+    },
+    {
+      "id": "scope_gate",
+      "expected": [
+        "mentor may mentor only authored professional scope"
+      ]
+    },
+    {
+      "id": "authority_not_expanded",
+      "expected": [
+        "mentorship never expands formal authority_scope"
+      ]
+    },
+    {
+      "id": "session_bilateral_time",
+      "expected": [
+        "both mentor and cadet need real available time"
+      ]
+    },
+    {
+      "id": "session_travel",
+      "expected": [
+        "both participants need real travel feasibility"
+      ]
+    },
+    {
+      "id": "session_location",
+      "expected": [
+        "real tutoring_or_mentoring_space capability required"
+      ]
+    },
+    {
+      "id": "plan_not_attendance",
+      "expected": [
+        "planned session does not assert attendance"
+      ]
+    },
+    {
+      "id": "recommendation_authority",
+      "expected": [
+        "recommendation needs valid authority"
+      ]
+    },
+    {
+      "id": "recommendation_basis",
+      "expected": [
+        "recommendation cites real basis event refs"
+      ]
+    },
+    {
+      "id": "recommendation_not_guarantee",
+      "expected": [
+        "recommendation guarantees no grade qualification or assignment"
+      ]
+    },
+    {
+      "id": "no_grade_override",
+      "expected": [
+        "mentor cannot award grade outside academic resolution"
+      ]
+    },
+    {
+      "id": "no_qualification_override",
+      "expected": [
+        "mentor cannot award qualification outside qualification rules"
+      ]
+    },
+    {
+      "id": "no_discipline_override",
+      "expected": [
+        "mentor role itself creates no discipline action"
+      ]
+    },
+    {
+      "id": "mentorship_not_friendship",
+      "expected": [
+        "mentorship alone does not create friendship"
+      ]
+    },
+    {
+      "id": "mentorship_not_romance",
+      "expected": [
+        "mentorship alone does not create romance"
+      ]
+    },
+    {
+      "id": "species_not_selector",
+      "expected": [
+        "species does not choose mentors"
+      ]
+    },
+    {
+      "id": "materialization_not_selector",
+      "expected": [
+        "latent/materialized state does not change mentorship"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player proximity does not change mentor assignment"
+      ]
+    },
+    {
+      "id": "history_preserved",
+      "expected": [
+        "ended mentorship preserves sessions/recommendations"
+      ]
+    },
+    {
+      "id": "post_academy_not_automatic",
+      "expected": [
+        "Academy mentorship does not auto-continue after graduation"
+      ]
+    },
+    {
+      "id": "wellbeing_deferred",
+      "expected": [
+        "wellbeing effects remain Step 13"
+      ]
+    },
+    {
+      "id": "consequences_deferred",
+      "expected": [
+        "obligations/consequences remain Step 14"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no campus-event/off-screen/social-LOD mutation"
+      ]
+    }
+  ]
+}

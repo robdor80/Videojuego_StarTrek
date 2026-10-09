@@ -1,0 +1,20 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_mentor_recommendation_evidence_contract",
+  "status": "STEP_12_COMPLETE",
+  "fields": [
+    "recommendation_candidate_id",
+    "mentor_instructor_id",
+    "cadet_slot_ref",
+    "professional_scope",
+    "basis_event_refs",
+    "effect"
+  ],
+  "rules": [
+    "Recommendation requires an active mentorship.",
+    "Mentor must possess recommendation authority in the represented context.",
+    "Recommendation must cite observed evidence.",
+    "Recommendation is evidence/input for later systems, not a guaranteed outcome.",
+    "Recommendation cannot bypass formal grade, qualification, graduation, assignment or promotion rules."
+  ]
+}

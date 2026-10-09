@@ -22,7 +22,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 9 | Social life | COMPLETE |
 | 10 | Romance and dating | COMPLETE |
 | 11 | NPC↔NPC relationships | COMPLETE |
-| 12 | Mentors and instructors | TODO |
+| 12 | Mentors and instructors | COMPLETE |
 | 13 | Wellbeing and balance | TODO |
 | 14 | Obligations and consequences | TODO |
 | 15 | Campus events | TODO |
@@ -395,3 +395,54 @@ The autonomous Step-11 resolver **rejects any event containing the player**. Pla
 Materialization state, player proximity, species identity and camera observation do not change relationship outcomes. Relationship history belongs to persistent World Truth.
 
 **Boundary:** mentors/instructors remain Step 12; wellbeing Step 13; obligations/consequences Step 14; campus events Step 15; off-screen execution Step 16; social LOD Step 17.
+
+
+## Step 12 — Mentors and instructors
+
+Step 12 closes the Academy's **persistent instructor, tutoring and professional mentorship layer**.
+
+The same character may teach, tutor and mentor, but these are separate roles:
+- **instructor assignment** — institutional authority to teach/evaluate specified subjects;
+- **tutoring** — a one-off or limited academic-help session;
+- **mentorship** — a persistent voluntary professional relationship with explicit scope, capacity and history.
+
+**Instructor ≠ tutor ≠ mentor.** Being assigned to teach a cadet does not create mentorship. A tutoring session does not create mentorship. Mentorship does not enlarge an instructor's academic, disciplinary or qualification authority.
+
+Instructors remain persistent characters and retain the existing temporal/campaign-validity rules. Canonical characters may only teach or mentor when their actual date, assignment and campaign history allow it.
+
+### Mentorship
+
+Mentorship requires:
+- an active represented instructor;
+- a professional scope the instructor is actually allowed to mentor;
+- causal provenance for the proposal;
+- available mentor capacity;
+- cadet mentor-capacity availability;
+- represented acceptance by both sides.
+
+The player is never assigned a mentor automatically. A proposal to the player remains unresolved until the player explicitly accepts or declines. NPC acceptance likewise requires represented state rather than narrative convenience.
+
+Mentorship is professional context, **not friendship, romance, grade advantage or command privilege**. Species, sex category, materialization state and player proximity are not mentor-selection shortcuts.
+
+### Tutoring and mentoring sessions
+
+Tutoring and mentoring meetings consume real time. Instructor and cadet must both have compatible windows, real travel time and an actual location with the required capability.
+
+A planned session does not prove attendance. Actual participation remains runtime/event truth.
+
+### Recommendations and authority
+
+A mentor may create a recommendation evidence candidate only when:
+- an active mentorship exists;
+- the instructor has recommendation authority;
+- the recommendation cites real observed evidence.
+
+A recommendation may influence later systems but **never guarantees a grade, qualification, posting, billet, promotion or assignment**. Mentorship cannot bypass curriculum, evaluation, qualification, discipline or career rules.
+
+### Continuity
+
+Mentorship history persists. Ending or changing a mentorship does not erase previous sessions/recommendations.
+
+Academy mentorship does not automatically continue after graduation. Its history may remain part of the relationship, but active-duty mentorship requires a new valid post-Academy assignment.
+
+**Boundary:** wellbeing/balance remains Step 13; obligations/consequences Step 14; campus events Step 15; off-screen Academy life Step 16; social LOD Step 17.

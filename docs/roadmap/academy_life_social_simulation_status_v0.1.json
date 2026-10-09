@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 11,
+    "complete": 12,
     "partial": 0,
-    "todo": 9,
-    "current_step": 11
+    "todo": 8,
+    "current_step": 12
   },
   "steps": [
     {
@@ -67,7 +67,7 @@
     },
     {
       "step": 12,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Mentors and instructors"
     },
     {
@@ -299,6 +299,27 @@
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 30,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_12": {
+    "persistent_instructor_roles": "COMPLETE",
+    "teaching_tutoring_mentorship_separation": "COMPLETE",
+    "authority_scope_preserved": "COMPLETE",
+    "tutoring_without_auto_mentorship": "COMPLETE",
+    "bilateral_mentorship_acceptance": "COMPLETE",
+    "explicit_player_mentorship_agency": "COMPLETE",
+    "finite_mentor_capacity": "COMPLETE",
+    "professional_scope_gating": "COMPLETE",
+    "real_schedule_travel_location_feasibility": "COMPLETE",
+    "mentoring_session_persistence": "COMPLETE",
+    "recommendation_evidence_without_guarantee": "COMPLETE",
+    "no_grade_or_qualification_override": "COMPLETE",
+    "no_automatic_friendship_or_romance": "COMPLETE",
+    "academy_to_post_academy_continuity_without_auto_carryover": "COMPLETE",
+    "species_materialization_player_proximity_nonselectors": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 28,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

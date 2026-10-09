@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "instructor_fields": [
     "character_id",
     "display_name",
@@ -15,7 +15,13 @@
     "mentoring_tendency",
     "relationship_ref",
     "knowledge_scope",
-    "authority_scope"
+    "authority_scope",
+    "active",
+    "staff_slot_ref",
+    "availability_windows",
+    "mentor_scopes",
+    "mentee_capacity",
+    "tutoring_capacity"
   ],
   "source_types": [
     "canonical_character",
@@ -30,6 +36,10 @@
     "cannot_award_grade_without_rule_result",
     "cannot_grant_qualification_without_rule_result",
     "cannot_issue_invalid_discipline",
-    "cannot_know_hidden_world_state"
-  ]
+    "cannot_know_hidden_world_state",
+    "cannot_expand_authority_through_mentorship",
+    "cannot_guarantee_grade_qualification_or_assignment_from_mentorship",
+    "cannot_convert_teaching_or_tutoring_into_mentorship_without_bilateral_acceptance"
+  ],
+  "mentorship_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json"
 }

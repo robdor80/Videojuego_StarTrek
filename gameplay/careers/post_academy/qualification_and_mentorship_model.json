@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "model_id": "post_academy_qualification_and_mentorship",
   "status": "foundation_fixed",
   "qualification_lifecycle": [
@@ -38,6 +38,10 @@
     "General qualifications may survive transfers while class-specific familiarization may be required again.",
     "Operational evidence is preferred over abstract XP.",
     "Lieutenants and senior officers may eventually mentor junior officers when role/qualification permits.",
-    "Mentor recommendations influence but do not override formal eligibility or available billets."
-  ]
+    "Mentor recommendations influence but do not override formal eligibility or available billets.",
+    "Academy mentorship history may persist as shared professional history after graduation.",
+    "An Academy mentor relationship does not automatically become an active-duty mentorship assignment.",
+    "Post-Academy mentorship requires a new valid service assignment, scope and supervision relationship."
+  ],
+  "academy_mentorship_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json"
 }

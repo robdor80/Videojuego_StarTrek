@@ -1,0 +1,235 @@
+{
+  "request": {
+    "max_active_mentors_per_cadet": 1,
+    "instructors": [
+      {
+        "instructor_id": "INST-SCI",
+        "active": true,
+        "subject_ids": [
+          "SEN-301",
+          "PHY-401"
+        ],
+        "mentor_scopes": [
+          "science",
+          "sensors"
+        ],
+        "mentee_capacity": 2,
+        "authority_scope": [
+          "teach",
+          "evaluate",
+          "tutor",
+          "recommendation"
+        ]
+      },
+      {
+        "instructor_id": "INST-OPS",
+        "active": true,
+        "subject_ids": [
+          "OPS-301"
+        ],
+        "mentor_scopes": [
+          "operations"
+        ],
+        "mentee_capacity": 1,
+        "authority_scope": [
+          "teach",
+          "evaluate",
+          "tutor"
+        ]
+      },
+      {
+        "instructor_id": "INST-OFF",
+        "active": false,
+        "subject_ids": [
+          "NAV-301"
+        ],
+        "mentor_scopes": [
+          "navigation"
+        ],
+        "mentee_capacity": 1,
+        "authority_scope": [
+          "teach",
+          "tutor",
+          "recommendation"
+        ]
+      }
+    ],
+    "cadets": [
+      {
+        "population_slot_ref": "PLAYER",
+        "is_player": true,
+        "character_id": "player",
+        "species_id": "human"
+      },
+      {
+        "population_slot_ref": "C1",
+        "is_player": false,
+        "character_id": null,
+        "species_id": "vulcan"
+      },
+      {
+        "population_slot_ref": "C2",
+        "is_player": false,
+        "character_id": null,
+        "species_id": "andorian"
+      }
+    ],
+    "teaching_assignments": [
+      {
+        "instructor_id": "INST-SCI",
+        "subject_id": "SEN-301",
+        "cadet_slot_refs": [
+          "PLAYER",
+          "C1"
+        ]
+      },
+      {
+        "instructor_id": "INST-OPS",
+        "subject_id": "OPS-301",
+        "cadet_slot_refs": [
+          "C2"
+        ]
+      }
+    ],
+    "existing_mentorships": [
+      {
+        "mentorship_id": "mentor:INST-SCI:C1",
+        "mentor_instructor_id": "INST-SCI",
+        "mentee_population_slot_ref": "C1",
+        "professional_scope": "science",
+        "state": "active"
+      }
+    ],
+    "mentorship_proposals": [
+      {
+        "mentor_instructor_id": "INST-SCI",
+        "cadet_slot_ref": "PLAYER",
+        "professional_scope": "science",
+        "cause_event_refs": [
+          "tutoring:prior"
+        ]
+      },
+      {
+        "mentor_instructor_id": "INST-OPS",
+        "cadet_slot_ref": "C2",
+        "professional_scope": "operations",
+        "cause_event_refs": [
+          "interaction:ops"
+        ],
+        "npc_response": "accept"
+      }
+    ],
+    "player_mentorship_responses": [],
+    "available_windows": [
+      {
+        "participant_ref": "INST-SCI",
+        "window_ref": "IS-W",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "faculty_offices",
+        "end_location_ref": "faculty_offices"
+      },
+      {
+        "participant_ref": "INST-OPS",
+        "window_ref": "IO-W",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "faculty_offices",
+        "end_location_ref": "faculty_offices"
+      },
+      {
+        "participant_ref": "PLAYER",
+        "window_ref": "P-W",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "participant_ref": "C1",
+        "window_ref": "C1-W",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "participant_ref": "C2",
+        "window_ref": "C2-W",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "faculty_offices",
+        "to": "tutorial_room",
+        "minutes": 5
+      },
+      {
+        "from": "academic_core",
+        "to": "tutorial_room",
+        "minutes": 10
+      },
+      {
+        "from": "tutorial_room",
+        "to": "cadet_quarters",
+        "minutes": 10
+      }
+    ],
+    "locations": [
+      {
+        "location_ref": "tutorial_room",
+        "capability_tags": [
+          "tutoring_or_mentoring_space"
+        ]
+      }
+    ],
+    "tutoring_requests": [
+      {
+        "session_id": "TUT-1",
+        "instructor_id": "INST-SCI",
+        "cadet_slot_ref": "PLAYER",
+        "subject_id": "SEN-301",
+        "day_index": 2,
+        "start_minute": 960,
+        "end_minute": 1020,
+        "location_ref": "tutorial_room",
+        "mentor_window_ref": "IS-W",
+        "cadet_window_ref": "P-W"
+      }
+    ],
+    "mentoring_session_requests": [
+      {
+        "session_id": "MENT-1",
+        "mentor_instructor_id": "INST-SCI",
+        "cadet_slot_ref": "C1",
+        "day_index": 2,
+        "start_minute": 1020,
+        "end_minute": 1080,
+        "location_ref": "tutorial_room",
+        "mentor_window_ref": "IS-W",
+        "cadet_window_ref": "C1-W"
+      }
+    ],
+    "recommendation_requests": [
+      {
+        "recommendation_candidate_id": "REC-1",
+        "mentor_instructor_id": "INST-SCI",
+        "cadet_slot_ref": "C1",
+        "professional_scope": "science",
+        "basis_event_refs": [
+          "MENT-OLD",
+          "EVAL-OBS"
+        ]
+      }
+    ]
+  }
+}

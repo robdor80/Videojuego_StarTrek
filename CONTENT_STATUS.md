@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–11/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships**;
+- **Steps 1–12/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -413,7 +413,18 @@ Current status:
 - species, materialization and player proximity cannot bias outcomes;
 - **30 executable Step-11 tests defined**.
 
-**Strict sequence:** Step 12 — Mentors and instructors is next and has not been started.
+- instructor assignment, tutoring and professional mentorship are distinct persistent concepts;
+- an instructor may teach/evaluate without being a mentor, and tutoring never auto-creates mentorship;
+- mentorship requires real professional scope, causal provenance, finite mentor capacity and represented bilateral acceptance;
+- the player is never assigned/accepted into mentorship automatically;
+- tutoring and mentoring sessions consume real schedule/travel time and real facilities;
+- mentorship does not expand academic/disciplinary authority or create friendship/romance automatically;
+- mentor recommendations require real evidence and valid authority but guarantee nothing;
+- no mentor can bypass grade, qualification, curriculum, discipline or posting rules;
+- Academy mentorship history can survive graduation, but active-duty mentorship requires a new valid assignment;
+- **28 executable Step-12 tests pass against the locked fixture**.
+
+**Strict sequence:** Step 13 — Wellbeing and balance is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

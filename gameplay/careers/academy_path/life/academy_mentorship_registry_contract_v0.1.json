@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_mentorship_registry_contract",
+  "status": "STEP_12_COMPLETE",
+  "fields": [
+    "mentorship_registry_id",
+    "academic_period_ref",
+    "active_mentorship_records",
+    "mentorship_event_refs",
+    "session_refs",
+    "recommendation_evidence_refs"
+  ],
+  "mentorship_states": [
+    "proposed",
+    "active",
+    "declined",
+    "paused",
+    "ended",
+    "completed"
+  ],
+  "event_types": [
+    "proposal",
+    "acceptance",
+    "decline",
+    "session",
+    "pause",
+    "resume",
+    "scope_change",
+    "recommendation",
+    "end",
+    "completion"
+  ],
+  "rules": [
+    "One active mentorship record has one mentor instructor and one cadet mentee.",
+    "Existing valid active mentorships consume mentor capacity before proposals.",
+    "A cadet active-mentor limit is configuration-controlled.",
+    "History is append-preserving.",
+    "Save/load/materialization cannot reroll mentor identity or state.",
+    "Mentorship end does not erase sessions or recommendations."
+  ]
+}
