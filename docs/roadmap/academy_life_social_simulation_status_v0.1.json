@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 12,
+    "complete": 13,
     "partial": 0,
-    "todo": 8,
-    "current_step": 12
+    "todo": 7,
+    "current_step": 13
   },
   "steps": [
     {
@@ -72,7 +72,7 @@
     },
     {
       "step": 13,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Wellbeing and balance"
     },
     {
@@ -320,6 +320,26 @@
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 28,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_13": {
+    "actual_confirmed_behavior_only": "COMPLETE",
+    "acute_weekly_monthly_windows": "COMPLETE",
+    "individualized_wellbeing_profiles": "COMPLETE",
+    "sleep_load_recovery_stress_balance": "COMPLETE",
+    "preferences_modify_recovery": "COMPLETE",
+    "sustained_pattern_not_single_action": "COMPLETE",
+    "routine_observation_candidates": "COMPLETE",
+    "balanced_state_preserves_normal_capacity": "COMPLETE",
+    "no_superhuman_wellbeing_bonus": "COMPLETE",
+    "character_side_assistance_only": "COMPLETE",
+    "no_world_truth_mutation": "COMPLETE",
+    "no_forced_player_choices": "COMPLETE",
+    "no_formal_academic_or_disciplinary_consequences": "COMPLETE",
+    "species_materialization_player_proximity_nonselectors": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 30,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

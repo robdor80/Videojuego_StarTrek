@@ -163,3 +163,14 @@ Transfer, crisis, schedule change, relationship change or injury can disrupt a r
 Generic actor state, fatigue, rest, longitudinal habits and availability are candidates for CoreRPG.
 
 Star Trek supplies Starfleet duty context, holodecks, shipboard activities, quarters, Ten Forward-like social spaces and professional consequences.
+
+
+## Academy integration — Step 13
+
+Academy Life Step 13 is defined by `gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json`.
+
+Academy contributes confirmed activity evidence from study, sleep, duty/training, exercise, recovery, leisure and social life to the shared character wellbeing model. Planned-but-unperformed activity contributes nothing.
+
+The Academy resolver uses explicit per-character wellbeing profiles rather than species IDs. Good balance preserves normal capacity; it never produces superhuman bonuses.
+
+Step 13 does not apply attendance, academic-standing or disciplinary consequences. Those remain Academy Life Step 14.

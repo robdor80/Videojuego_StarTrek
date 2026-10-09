@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "ruleset_id": "habit_formation_and_disruption",
   "status": "foundation_fixed",
   "habit_candidate_fields": [
@@ -17,7 +17,8 @@
     "Habits emerge from repeated actual behavior rather than being selected as perks.",
     "A routine may involve time, place, activity and recurring participants.",
     "Irregular but meaningful patterns may remain preferences rather than habits.",
-    "A habit becomes more stable through repeated continuity, not one isolated action."
+    "A habit becomes more stable through repeated continuity, not one isolated action.",
+    "Academy routine candidates require repeated confirmed actual activity across distinct days."
   ],
   "disruption_causes": [
     "duty_schedule_change",
@@ -34,6 +35,8 @@
     "A broken routine may decay over time or be replaced by a new pattern.",
     "Recurring participants may make a social routine emotionally meaningful.",
     "The player is never forced to resume a habit.",
-    "NPC dialogue may recognize established routines only when the NPC plausibly knows them."
-  ]
+    "NPC dialogue may recognize established routines only when the NPC plausibly knows them.",
+    "Planned-but-unperformed Academy activities cannot form habits."
+  ],
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
 }

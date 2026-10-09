@@ -1,0 +1,510 @@
+{
+  "fixture_id": "academy_wellbeing_balance_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "observation_end_hour": 720,
+    "characters": [
+      {
+        "character_id": "PLAYER",
+        "is_player": true,
+        "species_id": "human",
+        "wellbeing_profile": {
+          "sleep_target_minutes_per_24h": 480,
+          "max_sustainable_load_minutes_per_7d": 3000,
+          "preferred_recovery_activity_families": [
+            "quiet_rest",
+            "exercise",
+            "solitary_leisure"
+          ]
+        }
+      },
+      {
+        "character_id": "NPC-A",
+        "is_player": false,
+        "species_id": "vulcan",
+        "wellbeing_profile": {
+          "sleep_target_minutes_per_24h": 420,
+          "max_sustainable_load_minutes_per_7d": 3200,
+          "preferred_recovery_activity_families": [
+            "solitary_leisure",
+            "study",
+            "quiet_rest"
+          ]
+        }
+      },
+      {
+        "character_id": "NPC-B",
+        "is_player": false,
+        "species_id": "andorian",
+        "wellbeing_profile": {
+          "sleep_target_minutes_per_24h": 480,
+          "max_sustainable_load_minutes_per_7d": 2800,
+          "preferred_recovery_activity_families": [
+            "social_leisure",
+            "exercise"
+          ]
+        }
+      }
+    ],
+    "confirmed_activity_events": [
+      {
+        "event_id": "P-S0",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 720,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:0"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S1",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 696,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:1"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S2",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 672,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:2"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S3",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 648,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:3"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S4",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 624,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:4"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S5",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 600,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:5"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-S6",
+        "character_id": "PLAYER",
+        "activity_family": "sleep",
+        "end_hour": 576,
+        "duration_minutes": 480,
+        "confirmed": true,
+        "cause_event_refs": [
+          "sleep:6"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "P-E0",
+        "character_id": "PLAYER",
+        "activity_family": "exercise",
+        "end_hour": 710,
+        "duration_minutes": 60,
+        "confirmed": true,
+        "cause_event_refs": [
+          "exercise:0"
+        ],
+        "location_ref": "gym",
+        "typical_time_bucket": "evening"
+      },
+      {
+        "event_id": "P-E1",
+        "character_id": "PLAYER",
+        "activity_family": "exercise",
+        "end_hour": 662,
+        "duration_minutes": 60,
+        "confirmed": true,
+        "cause_event_refs": [
+          "exercise:1"
+        ],
+        "location_ref": "gym",
+        "typical_time_bucket": "evening"
+      },
+      {
+        "event_id": "P-E2",
+        "character_id": "PLAYER",
+        "activity_family": "exercise",
+        "end_hour": 614,
+        "duration_minutes": 60,
+        "confirmed": true,
+        "cause_event_refs": [
+          "exercise:2"
+        ],
+        "location_ref": "gym",
+        "typical_time_bucket": "evening"
+      },
+      {
+        "event_id": "P-E3",
+        "character_id": "PLAYER",
+        "activity_family": "exercise",
+        "end_hour": 566,
+        "duration_minutes": 60,
+        "confirmed": true,
+        "cause_event_refs": [
+          "exercise:3"
+        ],
+        "location_ref": "gym",
+        "typical_time_bucket": "evening"
+      },
+      {
+        "event_id": "P-ST1",
+        "character_id": "PLAYER",
+        "activity_family": "study",
+        "end_hour": 700,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "study:1"
+        ],
+        "stress_weight": 1
+      },
+      {
+        "event_id": "P-D1",
+        "character_id": "PLAYER",
+        "activity_family": "duty",
+        "end_hour": 690,
+        "duration_minutes": 300,
+        "confirmed": true,
+        "cause_event_refs": [
+          "duty:1"
+        ],
+        "stress_weight": 1
+      },
+      {
+        "event_id": "A-S0",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 720,
+        "duration_minutes": 180,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:0"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S1",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 696,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:1"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S2",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 672,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:2"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S3",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 648,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:3"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S4",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 624,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:4"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S5",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 600,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:5"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-S6",
+        "character_id": "NPC-A",
+        "activity_family": "sleep",
+        "end_hour": 576,
+        "duration_minutes": 420,
+        "confirmed": true,
+        "cause_event_refs": [
+          "asleep:6"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "A-REST",
+        "character_id": "NPC-A",
+        "activity_family": "quiet_rest",
+        "end_hour": 680,
+        "duration_minutes": 120,
+        "confirmed": true,
+        "cause_event_refs": [
+          "arest"
+        ],
+        "location_ref": "library",
+        "typical_time_bucket": "evening"
+      },
+      {
+        "event_id": "B-S0",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 720,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:0"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S1",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 696,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:1"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S2",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 672,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:2"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S3",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 648,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:3"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S4",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 624,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:4"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S5",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 600,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:5"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-S6",
+        "character_id": "NPC-B",
+        "activity_family": "sleep",
+        "end_hour": 576,
+        "duration_minutes": 240,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bsleep:6"
+        ],
+        "location_ref": "quarters",
+        "typical_time_bucket": "night"
+      },
+      {
+        "event_id": "B-D0",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 715,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:0"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D1",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 695,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:1"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D2",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 675,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:2"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D3",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 655,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:3"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D4",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 635,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:4"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D5",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 615,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:5"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-D6",
+        "character_id": "NPC-B",
+        "activity_family": "duty",
+        "end_hour": 595,
+        "duration_minutes": 540,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bduty:6"
+        ],
+        "stress_weight": 2
+      },
+      {
+        "event_id": "B-EM",
+        "character_id": "NPC-B",
+        "activity_family": "emergency_duty",
+        "end_hour": 718,
+        "duration_minutes": 300,
+        "confirmed": true,
+        "cause_event_refs": [
+          "bem"
+        ],
+        "stress_weight": 5
+      }
+    ]
+  }
+}

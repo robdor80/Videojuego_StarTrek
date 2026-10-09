@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "ruleset_id": "character_cognitive_assistance",
   "status": "foundation_fixed",
   "purpose": "Translate character competence and wellbeing into gameplay assistance without pretending the human player becomes more or less intelligent.",
@@ -33,6 +33,9 @@
     "Assistance does not auto-select or auto-execute the player's decision unless a separate authorized automation system explicitly owns that behavior.",
     "The player may ignore every hint.",
     "A hint should normally be brief and non-intrusive rather than a persistent tutorial arrow.",
-    "Competence is the primary source of professional insight; good wellbeing mainly preserves access to that competence."
-  ]
+    "Competence is the primary source of professional insight; good wellbeing mainly preserves access to that competence.",
+    "Positive wellbeing never raises competence above the character's normal competence-derived ceiling.",
+    "Academy wellbeing state cannot alter authoritative academic/world facts or force the player's choices."
+  ],
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
 }

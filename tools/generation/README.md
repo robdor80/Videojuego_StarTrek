@@ -86,3 +86,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_mentors_instructors_step12.py` validates teaching assignments, tutoring, voluntary mentorship, mentoring sessions and evidence-backed recommendations.
 - `test_resolve_academy_mentors_instructors_step12.py` validates role separation, player agency, finite capacity, authority/scope, schedule/travel/facility constraints and strict Step-13+ boundaries.
+
+
+### Academy Life Step 13 — wellbeing and balance
+
+- `resolve_academy_wellbeing_step13.py` derives individualized acute/weekly/monthly wellbeing from confirmed actual activity and emits routine-observation candidates.
+- `test_resolve_academy_wellbeing_step13.py` validates longitudinal behavior, profile-based sleep/load/recovery, no universal activity rewards, no superhuman bonuses, player agency, World-Truth isolation and strict Step-14+ boundaries.

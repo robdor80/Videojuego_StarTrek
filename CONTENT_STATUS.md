@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–12/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors**;
+- **Steps 1–13/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -424,7 +424,18 @@ Current status:
 - Academy mentorship history can survive graduation, but active-duty mentorship requires a new valid assignment;
 - **28 executable Step-12 tests pass against the locked fixture**.
 
-**Strict sequence:** Step 13 — Wellbeing and balance is next and has not been started.
+- Academy wellbeing consumes only confirmed actual behavior, never unexecuted plans;
+- overlapping 24h / 7d / 30d windows separate acute state from sustained patterns;
+- each character uses an explicit individual sleep/load/recovery profile rather than species stereotypes;
+- sleep, workload, recovery, stress and preferences feed a contextual balance state;
+- one ordinary bad night has limited longitudinal effect while sustained overload accumulates;
+- repeated real behavior may create routine-observation candidates; one isolated action cannot;
+- good balance preserves normal capacity and never grants superhuman bonuses;
+- imbalance may reduce character-side assistance/readiness but cannot alter World Truth or force player choices;
+- Step 13 emits no academic/disciplinary/obligation consequence; that remains Step 14;
+- **30 executable Step-13 tests pass against the locked fixture**.
+
+**Strict sequence:** Step 14 — Obligations and consequences is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

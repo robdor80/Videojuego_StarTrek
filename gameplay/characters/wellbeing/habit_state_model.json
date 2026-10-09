@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "model_id": "character_habit_state",
   "status": "foundation_fixed",
   "observation_windows": [
@@ -46,6 +46,10 @@
     "Character preferences modify the recovery value of leisure/social activities.",
     "Positive balance maintains normal capacity rather than creating superhuman bonuses.",
     "Derived state never changes authoritative world truth.",
-    "Derived state never forces player dialogue or moral choices."
-  ]
+    "Derived state never forces player dialogue or moral choices.",
+    "Individual physiology/preferences are consumed from explicit character wellbeing profiles rather than inferred from species_id.",
+    "Academy Step 13 may derive wellbeing snapshots but formal obligation/academic/disciplinary consequences remain separate."
+  ],
+  "profile_contract_ref": "gameplay/careers/academy_path/life/academy_wellbeing_profile_contract_v0.1.json",
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
 }

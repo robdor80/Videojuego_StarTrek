@@ -1,0 +1,187 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_wellbeing_balance_invariants",
+  "status": "STEP_13_VALIDATED",
+  "cases": [
+    {
+      "id": "actual_not_planned",
+      "expected": [
+        "only confirmed actual activity affects wellbeing"
+      ]
+    },
+    {
+      "id": "provenance_required",
+      "expected": [
+        "unconfirmed/provenance-less activity is ignored and reported"
+      ]
+    },
+    {
+      "id": "acute_window",
+      "expected": [
+        "24-hour state is represented"
+      ]
+    },
+    {
+      "id": "weekly_window",
+      "expected": [
+        "7-day accumulated pattern is represented"
+      ]
+    },
+    {
+      "id": "monthly_window",
+      "expected": [
+        "30-day longitudinal pattern is represented"
+      ]
+    },
+    {
+      "id": "individual_sleep_target",
+      "expected": [
+        "sleep interpretation uses explicit character target"
+      ]
+    },
+    {
+      "id": "individual_load_capacity",
+      "expected": [
+        "load interpretation uses explicit sustainable-load profile"
+      ]
+    },
+    {
+      "id": "preference_sensitive_recovery",
+      "expected": [
+        "recovery value depends on personal preferences/context"
+      ]
+    },
+    {
+      "id": "species_not_rule",
+      "expected": [
+        "species_id alone cannot alter outcome"
+      ]
+    },
+    {
+      "id": "single_bad_night_limited",
+      "expected": [
+        "ordinary isolated deviation does not create severe longitudinal collapse"
+      ]
+    },
+    {
+      "id": "sustained_overload_matters",
+      "expected": [
+        "repeated overload/undersleep can accumulate strain"
+      ]
+    },
+    {
+      "id": "no_activity_potion",
+      "expected": [
+        "one social/leisure/intimacy action cannot instantly reset long-term strain"
+      ]
+    },
+    {
+      "id": "balanced_no_buff",
+      "expected": [
+        "balanced state preserves normal capacity rather than adding superhuman bonus"
+      ]
+    },
+    {
+      "id": "character_side_effect",
+      "expected": [
+        "wellbeing affects assistance/readiness rather than World Truth"
+      ]
+    },
+    {
+      "id": "world_truth_immutable",
+      "expected": [
+        "wellbeing cannot create/remove facts, contacts or academic results"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "wellbeing never forces player dialogue/action"
+      ]
+    },
+    {
+      "id": "habit_repetition",
+      "expected": [
+        "routine candidate requires repeated actual behavior across days"
+      ]
+    },
+    {
+      "id": "one_action_not_habit",
+      "expected": [
+        "single activity cannot form habit"
+      ]
+    },
+    {
+      "id": "materialization_irrelevant",
+      "expected": [
+        "materialization state does not alter wellbeing history"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not alter NPC wellbeing"
+      ]
+    },
+    {
+      "id": "no_grade_consequence",
+      "expected": [
+        "Step 13 does not issue grade/course consequences"
+      ]
+    },
+    {
+      "id": "no_discipline_consequence",
+      "expected": [
+        "Step 13 does not issue discipline"
+      ]
+    },
+    {
+      "id": "no_obligation_excuse",
+      "expected": [
+        "Step 13 does not automatically excuse obligations"
+      ]
+    },
+    {
+      "id": "step14_deferred",
+      "expected": [
+        "obligations/consequences remain Step 14"
+      ]
+    },
+    {
+      "id": "campus_events_deferred",
+      "expected": [
+        "campus events remain Step 15"
+      ]
+    },
+    {
+      "id": "offscreen_deferred",
+      "expected": [
+        "off-screen execution remains Step 16"
+      ]
+    },
+    {
+      "id": "social_lod_deferred",
+      "expected": [
+        "social LOD remains Step 17"
+      ]
+    },
+    {
+      "id": "year_progression_deferred",
+      "expected": [
+        "year progression remains Step 18"
+      ]
+    },
+    {
+      "id": "record_integration_deferred",
+      "expected": [
+        "Academy record writes remain Step 19"
+      ]
+    },
+    {
+      "id": "shared_system_reuse",
+      "expected": [
+        "Academy uses shared character wellbeing contracts rather than duplicate meters"
+      ]
+    }
+  ]
+}

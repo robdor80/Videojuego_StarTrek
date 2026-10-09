@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_wellbeing_balance_contract",
+  "status": "STEP_13_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Academy wellbeing is an individualized longitudinal interpretation of confirmed actual behavior, not an arcade morale meter.",
+  "observation_windows": {
+    "acute_hours": 24,
+    "weekly_days": 7,
+    "monthly_days": 30
+  },
+  "input_evidence": [
+    "confirmed actual sleep",
+    "confirmed study/duty/training",
+    "confirmed meals/exercise",
+    "confirmed leisure/recovery",
+    "confirmed social/relationship activity",
+    "confirmed exceptional stressors",
+    "explicit character wellbeing profile"
+  ],
+  "derived_outputs": [
+    "acute_fatigue",
+    "accumulated_fatigue",
+    "stress_load",
+    "recovery_capacity",
+    "concentration_readiness",
+    "sustained_attention_capacity",
+    "learning_readiness",
+    "physical_readiness",
+    "social_energy",
+    "balance_state",
+    "routine_observation_candidates"
+  ],
+  "rules": [
+    "Planned activity has no effect unless runtime/event evidence confirms execution.",
+    "One ordinary adverse event has limited longitudinal effect unless severe.",
+    "Sustained patterns matter more than isolated actions.",
+    "Recovery value is contextual and preference-sensitive; no activity is a universal morale potion.",
+    "Individual wellbeing profiles define sleep/load/recovery baselines; species_id alone is never used as a shortcut.",
+    "Good balance preserves normal character capacity rather than granting superhuman bonuses.",
+    "Derived wellbeing may affect character-side cognitive/physical assistance but not authoritative World Truth.",
+    "Player dialogue, morality and decisions are never forced by wellbeing.",
+    "Routine candidates require repeated confirmed behavior and do not become perks automatically.",
+    "Step 13 emits no academic, attendance, disciplinary or career consequence.",
+    "Step 14 owns obligations and consequences."
+  ],
+  "dependencies": [
+    "gameplay/characters/wellbeing/activity_effect_contract.json",
+    "gameplay/characters/wellbeing/habit_state_model.json",
+    "gameplay/characters/wellbeing/habit_formation_rules.json",
+    "gameplay/characters/wellbeing/cognitive_assistance_rules.json",
+    "gameplay/careers/academy_path/academy_state.json"
+  ],
+  "next_step_ref": "Step 14 — Obligations and consequences"
+}

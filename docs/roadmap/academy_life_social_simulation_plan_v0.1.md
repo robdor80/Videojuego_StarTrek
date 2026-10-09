@@ -23,7 +23,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 10 | Romance and dating | COMPLETE |
 | 11 | NPC↔NPC relationships | COMPLETE |
 | 12 | Mentors and instructors | COMPLETE |
-| 13 | Wellbeing and balance | TODO |
+| 13 | Wellbeing and balance | COMPLETE |
 | 14 | Obligations and consequences | TODO |
 | 15 | Campus events | TODO |
 | 16 | Off-screen Academy life | TODO |
@@ -446,3 +446,77 @@ Mentorship history persists. Ending or changing a mentorship does not erase prev
 Academy mentorship does not automatically continue after graduation. Its history may remain part of the relationship, but active-duty mentorship requires a new valid post-Academy assignment.
 
 **Boundary:** wellbeing/balance remains Step 13; obligations/consequences Step 14; campus events Step 15; off-screen Academy life Step 16; social LOD Step 17.
+
+
+## Step 13 — Wellbeing and balance
+
+Step 13 connects Academy life to the shared character habits/wellbeing system. It does **not** create Academy-specific happiness, stress or fatigue bars.
+
+Wellbeing is derived from **confirmed actual behavior**, not from plans:
+- sleeping;
+- studying;
+- duty/training;
+- exercise;
+- meals;
+- quiet or active recovery;
+- leisure;
+- social connection;
+- romantic/intimate time when actually represented and consensual;
+- exceptional/emergency stressors.
+
+A planned gym visit, date, rest period or mentoring session contributes nothing until authoritative runtime/event evidence confirms that the activity occurred.
+
+### Time horizons
+
+The resolver observes overlapping windows:
+- **24 hours** — acute fatigue/current load;
+- **7 days** — short-term accumulated fatigue, recovery and overload;
+- **30 days** — longitudinal pattern/routine evidence and persistent stress context.
+
+One poor night normally creates an acute effect, not a month-long collapse. Sustained overload matters more than a single ordinary deviation.
+
+### Individual baselines
+
+Each character uses an explicit wellbeing profile:
+- sleep target;
+- sustainable workload;
+- preferred recovery activity families;
+- other authored physiological/preference context.
+
+**Species ID alone never determines wellbeing.** Species/culture may inform an authored character profile elsewhere, but Step 13 consumes the explicit profile rather than stereotyping from species identity.
+
+### Balance and gameplay effect
+
+Good balance preserves normal professional/learning capacity. It **does not create superhuman buffs**.
+
+Sustained imbalance may reduce character-side:
+- concentration readiness;
+- sustained attention;
+- learning readiness;
+- physical readiness;
+- contextual professional assistance.
+
+It never alters authoritative World Truth. A fatigued sensor officer does not make a real contact disappear; the character may simply provide less assistance interpreting it.
+
+The player keeps agency. Fatigue/stress never force dialogue, morality or decisions.
+
+### Habits
+
+Repeated **actual** activity may generate routine-observation candidates. One isolated activity cannot become a habit. Habits remain evidence-based patterns rather than selectable perks.
+
+### Strict Step-14 boundary
+
+Step 13 calculates wellbeing/balance state only.
+
+It does **not**:
+- mark absence/tardiness;
+- fail a course;
+- issue punishment;
+- create disciplinary action;
+- change standing;
+- automatically excuse obligations;
+- create academic/career consequences.
+
+Those causal obligation/consequence rules remain Step 14.
+
+**Boundary:** obligations/consequences remain Step 14; campus events Step 15; off-screen Academy life Step 16; social LOD Step 17.

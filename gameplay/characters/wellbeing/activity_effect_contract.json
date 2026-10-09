@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "wellbeing_activity_effect",
   "status": "foundation_fixed",
   "inputs": [
@@ -14,7 +14,8 @@
     "relationship_context",
     "duty_context",
     "acute_state_before",
-    "habit_state_before"
+    "habit_state_before",
+    "confirmed_event_provenance"
   ],
   "activity_families": [
     "sleep",
@@ -46,6 +47,9 @@
     "Study can advance learning while also consuming time/recovery capacity.",
     "Emergency duty may be professionally necessary while increasing short-term load.",
     "Consensual intimacy may contribute to connection/recovery in a positive context but is never modeled as a fixed morale reward.",
-    "No activity instantly cancels long-term accumulated strain."
-  ]
+    "No activity instantly cancels long-term accumulated strain.",
+    "Planned activity has no wellbeing effect until authoritative evidence confirms actual execution.",
+    "Academy integration supplies activity evidence but does not define fixed activity-as-morale rewards."
+  ],
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
 }

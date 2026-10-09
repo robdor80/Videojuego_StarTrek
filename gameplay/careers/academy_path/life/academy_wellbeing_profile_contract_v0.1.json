@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_wellbeing_profile_contract",
+  "status": "STEP_13_COMPLETE",
+  "fields": [
+    "character_id",
+    "sleep_target_minutes_per_24h",
+    "max_sustainable_load_minutes_per_7d",
+    "preferred_recovery_activity_families",
+    "physiology_profile_ref_if_any",
+    "preference_profile_ref_if_any"
+  ],
+  "rules": [
+    "Profile values are explicit character state/configuration and are not derived directly from species_id.",
+    "Species/culture physiology may inform an authored upstream profile but Step 13 consumes the explicit resolved profile.",
+    "Profile changes require represented physiological/medical/contextual cause rather than player convenience.",
+    "Preferences influence recovery interpretation but do not guarantee positive outcome."
+  ]
+}

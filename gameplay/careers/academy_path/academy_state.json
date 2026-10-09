@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.18.0",
+  "schema_version": "0.19.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -89,7 +89,10 @@
     "tutoring_session_refs": "academy_tutoring_session_ref_list",
     "mentorship_ref": "academy_mentorship_ref_or_null",
     "mentoring_session_refs": "academy_mentoring_session_ref_list",
-    "mentor_recommendation_evidence_refs": "mentor_recommendation_evidence_ref_list"
+    "mentor_recommendation_evidence_refs": "mentor_recommendation_evidence_ref_list",
+    "wellbeing_profile_ref": "character_wellbeing_profile_ref",
+    "wellbeing_snapshot_ref": "character_wellbeing_snapshot_ref",
+    "routine_observation_candidate_refs": "routine_observation_candidate_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -149,7 +152,14 @@
     "mentorship is professional context and does not itself create friendship, romance, grades, qualifications or discipline",
     "mentor capacity, professional scope, authority and bilateral schedule/travel feasibility are real constraints",
     "mentor recommendations require evidence and authority but never guarantee grades, qualifications or future assignments",
-    "Academy mentorship history persists after graduation but active post-Academy mentorship requires a new valid assignment"
+    "Academy mentorship history persists after graduation but active post-Academy mentorship requires a new valid assignment",
+    "Academy wellbeing consumes confirmed actual activity rather than planned activity",
+    "wellbeing uses acute, weekly and monthly observation windows rather than one universal meter",
+    "individual explicit wellbeing profiles define sleep/load/recovery context; species_id alone is not a wellbeing rule",
+    "balanced wellbeing preserves normal capacity and never grants superhuman competence",
+    "wellbeing may alter character-side assistance/readiness but never authoritative World Truth",
+    "player dialogue/actions are never forced by fatigue, stress or balance state",
+    "Step 13 produces no formal academic, disciplinary or obligation consequence; those remain Step 14"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -162,5 +172,6 @@
   "relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",
   "romance_dating_contract_ref": "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json",
   "npc_relationship_contract_ref": "gameplay/careers/academy_path/life/academy_npc_relationship_evolution_contract_v0.1.json",
-  "mentor_instructor_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json"
+  "mentor_instructor_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json",
+  "wellbeing_balance_contract_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
 }
