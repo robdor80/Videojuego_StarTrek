@@ -1,0 +1,166 @@
+{
+  "fixture_id": "academy_romance_dating_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "characters": [
+      {
+        "population_slot_ref": "cadet4:PLAYER",
+        "character_id": "player:01",
+        "is_player": true,
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "species_id": "human"
+      },
+      {
+        "population_slot_ref": "cadet4:A",
+        "character_id": "cadet:A",
+        "is_player": false,
+        "adult_equivalent": true,
+        "sex_category": "female",
+        "species_id": "vulcan"
+      },
+      {
+        "population_slot_ref": "cadet4:B",
+        "character_id": "cadet:B",
+        "is_player": false,
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "species_id": "andorian"
+      },
+      {
+        "population_slot_ref": "cadet4:C",
+        "character_id": "cadet:C",
+        "is_player": false,
+        "adult_equivalent": false,
+        "sex_category": "female",
+        "species_id": "human"
+      }
+    ],
+    "npc_romantic_interest_edges": [
+      {
+        "observer_slot_ref": "cadet4:A",
+        "subject_slot_ref": "cadet4:PLAYER",
+        "romantic_interest_state": "present",
+        "cause_event_refs": [
+          "social-interaction:42"
+        ]
+      }
+    ],
+    "available_windows": [
+      {
+        "window_ref": "P-W1",
+        "population_slot_ref": "cadet4:PLAYER",
+        "day_index": 5,
+        "start_minute": 1080,
+        "end_minute": 1320,
+        "start_location_ref": "cadet_quarters",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "A-W1",
+        "population_slot_ref": "cadet4:A",
+        "day_index": 5,
+        "start_minute": 1080,
+        "end_minute": 1320,
+        "start_location_ref": "cadet_quarters",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "B-W1",
+        "population_slot_ref": "cadet4:B",
+        "day_index": 5,
+        "start_minute": 1080,
+        "end_minute": 1320,
+        "start_location_ref": "cadet_quarters",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "window_ref": "C-W1",
+        "population_slot_ref": "cadet4:C",
+        "day_index": 5,
+        "start_minute": 1080,
+        "end_minute": 1320,
+        "start_location_ref": "cadet_quarters",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "cadet_quarters",
+        "to": "campus_garden",
+        "minutes": 10
+      },
+      {
+        "from": "cadet_quarters",
+        "to": "city_cafe",
+        "minutes": 25
+      }
+    ],
+    "venues": [
+      {
+        "location_ref": "campus_garden",
+        "capability_tags": [
+          "date_venue",
+          "public_social_space"
+        ]
+      },
+      {
+        "location_ref": "city_cafe",
+        "capability_tags": [
+          "date_venue",
+          "public_social_space"
+        ]
+      }
+    ],
+    "date_proposals": [
+      {
+        "proposal_id": "DATE-A1",
+        "npc_slot_ref": "cadet4:A",
+        "day_index": 5,
+        "start_minute": 1140,
+        "end_minute": 1230,
+        "venue_ref": "campus_garden",
+        "player_window_ref": "P-W1",
+        "npc_window_ref": "A-W1"
+      },
+      {
+        "proposal_id": "DATE-B1",
+        "npc_slot_ref": "cadet4:B",
+        "day_index": 5,
+        "start_minute": 1140,
+        "end_minute": 1230,
+        "venue_ref": "campus_garden",
+        "player_window_ref": "P-W1",
+        "npc_window_ref": "B-W1"
+      },
+      {
+        "proposal_id": "DATE-C1",
+        "npc_slot_ref": "cadet4:C",
+        "day_index": 5,
+        "start_minute": 1140,
+        "end_minute": 1230,
+        "venue_ref": "campus_garden",
+        "player_window_ref": "P-W1",
+        "npc_window_ref": "C-W1"
+      }
+    ],
+    "npc_initiation_requests": [
+      {
+        "npc_slot_ref": "cadet4:A",
+        "proposal_id": "DATE-A1"
+      }
+    ],
+    "player_romantic_actions": [],
+    "existing_date_plans": [],
+    "romantic_completion_evidence": []
+  },
+  "expected": {
+    "npc_a_can_invite": true,
+    "player_auto_acceptance": false,
+    "same_sex_ineligible": true,
+    "non_adult_ineligible": true,
+    "player_interest_inferred": false,
+    "automatic_hostility_from_rejection": "none",
+    "dating_truth_semantics": "invitation_not_acceptance_not_attendance_not_completion_not_commitment"
+  }
+}

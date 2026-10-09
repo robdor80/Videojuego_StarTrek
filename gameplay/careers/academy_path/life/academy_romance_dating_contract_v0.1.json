@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_romance_dating_contract",
+  "status": "STEP_10_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "scope": "ACADEMY_PLAYER_NPC",
+  "principle": "Romance is directional, causal and consent-based. Canon compatibility permits a possibility; it never creates attraction, consent, a date or a relationship.",
+  "eligibility": [
+    "both characters are adult-equivalent",
+    "one authored sex_category is male and the other female",
+    "both character identities and population slots already exist",
+    "no represented hard romantic boundary forbids the interaction"
+  ],
+  "player_agency": [
+    "player romantic interest is never inferred",
+    "player invitation/acceptance/rejection/commitment/withdrawal require explicit input",
+    "invalid or unanswered romantic opportunities do not auto-select a player response"
+  ],
+  "npc_initiation": [
+    "NPC may initiate toward player only from authoritative NPC-to-player romantic_interest_state",
+    "romantic_interest_state must carry cause/provenance references",
+    "species, appearance tags, player proximity and narrative convenience cannot create NPC interest"
+  ],
+  "states": {
+    "romantic_interest": [
+      "none",
+      "possible",
+      "present",
+      "expressed"
+    ],
+    "invitation": [
+      "proposed",
+      "accepted",
+      "declined",
+      "withdrawn",
+      "expired"
+    ],
+    "date_plan": [
+      "proposed",
+      "scheduled",
+      "cancelled",
+      "completed_by_runtime_evidence"
+    ],
+    "relationship": [
+      "none",
+      "dating",
+      "established",
+      "strained",
+      "separated",
+      "former_partner"
+    ]
+  },
+  "rules": [
+    "Romantic compatibility is not attraction.",
+    "Attraction can be unilateral.",
+    "Mutual attraction does not itself establish dating.",
+    "Invitation is not consent to a relationship or intimacy.",
+    "Acceptance may be withdrawn before the date.",
+    "A romantic rejection does not automatically create hostility, resentment or rivalry.",
+    "A date requires mutually compatible time, real travel feasibility and an actual compatible venue.",
+    "A scheduled date does not prove attendance or completion.",
+    "Relationship-state change requires represented completed-date or explicit reciprocal commitment evidence.",
+    "Friendship, favors, rank, gifts, persistence, prior dating and existing relationship do not imply consent.",
+    "Consent is context-specific and may be refused or withdrawn.",
+    "Step 10 produces no autonomous NPC-to-NPC romantic evolution; Step 11 owns that use case.",
+    "Step 10 does not force wellbeing, academic, disciplinary or career consequences."
+  ],
+  "dependencies": [
+    "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",
+    "gameplay/social/relationship_graph_model.json",
+    "gameplay/social/social_event_rules.json",
+    "gameplay/relationships/relationship_change_provenance_contract.json",
+    "gameplay/careers/academy_path/life/academy_social_life_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json"
+  ],
+  "next_step_ref": "Step 11 — NPC-to-NPC relationships"
+}

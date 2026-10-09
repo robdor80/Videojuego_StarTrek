@@ -68,3 +68,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `generate_academy_social_life_step9.py` deterministically preserves/plans non-romantic Academy social attendance from real time, place, invitations, circles and capacity.
 - `test_generate_academy_social_life_step9.py` validates player agency, NPC autonomy, invitations, open gatherings, capacity, travel/venue constraints, non-romantic boundaries and no automatic relationship mutation.
+
+
+### Academy Life Step 10 — romance and dating
+
+- `resolve_academy_romance_dating_step10.py` deterministically validates player↔NPC romantic eligibility, invitations, responses and bilateral date feasibility under the locked adult heterosexual canon.
+- `test_resolve_academy_romance_dating_step10.py` validates adult/sex-category eligibility, player agency, directional NPC interest, consent boundaries, rejection semantics, dual schedules/travel, venue requirements and strict Step-11+ boundaries.

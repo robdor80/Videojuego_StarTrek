@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "relationship_change_provenance",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "principle": "Relationship state is persistent, directional and multidimensional; every meaningful change requires represented cause and provenance.",
@@ -38,7 +38,12 @@
     "Consent is event/context specific and is never inferred from rank, prior affection, reputation, gifts or repeated pressure.",
     "Separation, transfer, death or estrangement does not erase shared history.",
     "Off-screen relationship changes require plausible contact, elapsed time and represented interaction/event causes.",
-    "AI can express relationship state but cannot directly authoritatively advance it without validated events."
+    "AI can express relationship state but cannot directly authoritatively advance it without validated events.",
+    "Romantic invitation, acceptance, completed date, relationship commitment and intimacy are separate causal events.",
+    "Player romantic/consent state cannot be inferred from compatibility, repeated contact or NPC desire.",
+    "Romantic rejection alone is not sufficient cause for hostility, resentment or retaliation.",
+    "Project romantic/sexual relationship changes must satisfy the locked adult heterosexual relationship canon."
   ],
-  "core_rpg_candidate": true
+  "core_rpg_candidate": true,
+  "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
 }

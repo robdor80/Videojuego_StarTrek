@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_romantic_invitation_and_date_contract",
+  "status": "STEP_10_COMPLETE",
+  "invitation_fields": [
+    "romantic_invitation_id",
+    "initiator_slot_ref",
+    "recipient_slot_ref",
+    "cause_ref",
+    "proposed_date_window_ref",
+    "proposed_venue_ref",
+    "state",
+    "created_at",
+    "resolved_at"
+  ],
+  "date_fields": [
+    "date_plan_id",
+    "participant_slot_refs",
+    "invitation_ref",
+    "day_index",
+    "start_minute",
+    "end_minute",
+    "venue_ref",
+    "travel_dependency_refs",
+    "plan_state",
+    "attendance_state",
+    "completion_event_ref_if_any"
+  ],
+  "rules": [
+    "Only two eligible adult participants may form one Step-10 date plan.",
+    "One participant must be the player in Step 10.",
+    "Player-origin invitations require explicit player request.",
+    "NPC-origin invitations require authoritative NPC romantic-interest state toward player.",
+    "Recipient response is independent from initiator desire.",
+    "Both participants need compatible schedule windows.",
+    "Venue capability and travel feasibility are required for both participants.",
+    "Overlapping date plans for either participant are invalid.",
+    "Cancelled/declined/expired invitations remain historical provenance.",
+    "Completed date requires runtime attendance/completion evidence and cannot be fabricated from the plan."
+  ]
+}

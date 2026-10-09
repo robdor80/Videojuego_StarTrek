@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.1",
+  "schema_version": "0.2.2",
   "model_id": "social_relationship_graph",
   "status": "foundation_fixed",
   "edge_key": [
@@ -21,7 +21,9 @@
     "sexual_interest": "none, possible, present",
     "relationship_state": "none, dating, established, strained, separated, former_partner",
     "privacy_expectations": "relationship-specific expectations around disclosure",
-    "shared_history_refs": "references to relevant memories/events"
+    "shared_history_refs": "references to relevant memories/events",
+    "romantic_availability": "directional/contextual availability for romantic interaction, not attraction",
+    "consent_context_refs": "references to context-specific consent/refusal/withdrawal events"
   },
   "rules": [
     "Relationship dimensions are not collapsed into one universal score.",
@@ -35,7 +37,10 @@
     "Initial nontrivial relationship edges require plausible shared-history provenance.",
     "Off-screen relationship changes require plausible contact, time and event causes.",
     "Project romantic/sexual eligibility is constrained by the author-locked adult heterosexual relationship canon.",
-    "Non-romantic familiarity, friendship, conflict, trust and professional dimensions remain independent of romantic compatibility."
+    "Non-romantic familiarity, friendship, conflict, trust and professional dimensions remain independent of romantic compatibility.",
+    "Heterosexual project compatibility is an eligibility constraint and never by itself creates romantic or sexual interest.",
+    "Player romantic-interest dimensions change only from explicit player actions.",
+    "A completed date may provide relationship evidence but does not automatically establish a committed relationship."
   ],
   "change_provenance_contract_ref": "gameplay/relationships/relationship_change_provenance_contract.json",
   "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"

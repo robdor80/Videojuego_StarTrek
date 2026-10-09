@@ -20,7 +20,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 7 | Extracurricular activities | COMPLETE |
 | 8 | Conferences, seminars and additional courses | COMPLETE |
 | 9 | Social life | COMPLETE |
-| 10 | Romance and dating | TODO |
+| 10 | Romance and dating | COMPLETE |
 | 11 | NPC↔NPC relationships | TODO |
 | 12 | Mentors and instructors | TODO |
 | 13 | Wellbeing and balance | TODO |
@@ -301,3 +301,52 @@ Social circles are contextual indexes such as class section, roommate context, p
 Step 9 deliberately forbids romantic/sexual event generation. The project-wide author canon is now locked in `gameplay/social/adult_heterosexual_relationship_canon_v0.1.json`: romance/sexual relationship systems apply only to adult-equivalent characters and are heterosexual-only. Step 10 must consume that canon rather than reinterpret it.
 
 **Boundary:** romance/dating remains Step 10; NPC↔NPC relationship evolution Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; campus events Step 15; off-screen execution Step 16.
+
+
+## Step 10 — Romance and dating
+
+Step 10 closes **Academy player↔NPC romance and dating mechanics** under the project-wide author canon in `gameplay/social/adult_heterosexual_relationship_canon_v0.1.json`.
+
+### Hard eligibility
+
+Romantic/dating mechanics require:
+- both participants are represented as adult-equivalent;
+- one participant has authored sex category `male` and the other `female`;
+- both are current eligible Academy-life characters;
+- no represented hard boundary forbids the interaction.
+
+Missing sex/adult state is unresolved/ineligible. The system does not infer it from species, name, appearance or prose.
+
+**Heterosexual compatibility ≠ attraction.** Compatibility only determines whether romance is permitted by project canon. Attraction/interest is separate, directional relationship state with causal provenance.
+
+### Player agency
+
+The player character's romantic interest is **never inferred or generated**. Player flirting, invitation, acceptance, rejection, commitment or withdrawal must come from explicit player action.
+
+An NPC may initiate a romantic invitation toward the player only when an authoritative NPC→player romantic-interest state already exists and other eligibility/boundary rules pass. Player proximity or narrative convenience cannot synthesize interest.
+
+### Invitation and dating
+
+A romantic invitation is a proposal, not consent to a relationship. The recipient may:
+- accept;
+- decline;
+- leave unanswered/expire;
+- withdraw acceptance before the date.
+
+A declined invitation does not automatically create hostility, humiliation, resentment or rivalry.
+
+An accepted date must fit **both participants' real schedules**, real travel time and an actual compatible venue. No private/social venue is invented for convenience.
+
+**Invitation ≠ accepted date ≠ attendance ≠ completed date ≠ relationship.** A completed date may produce relationship-change evidence, but dating/commitment state requires validated reciprocal events/provenance.
+
+### Consent and adult intimacy boundary
+
+Any romantic or intimate escalation is context-specific and independently consented. Friendship, rank, favors, persistence, prior dates, attraction or established relationship never imply consent. Consent may be refused or withdrawn.
+
+Step 10 models relationship state and consent gates without graphic sexual content. Intimate adult relationship events, when represented, remain non-automatic and subject to the same canon/provenance rules.
+
+### Step boundary
+
+Step 10 implements the player↔NPC romance/dating mechanics. **Autonomous NPC↔NPC relationship evolution remains Step 11**, which must reuse these eligibility, provenance and consent rules rather than inventing another romance model.
+
+**Boundary:** NPC↔NPC relationship evolution remains Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; campus events Step 15; off-screen execution Step 16.

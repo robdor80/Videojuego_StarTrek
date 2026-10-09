@@ -1,0 +1,163 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_romance_dating_invariants",
+  "status": "STEP_10_VALIDATED",
+  "cases": [
+    {
+      "id": "adult_only",
+      "expected": [
+        "both romantic participants are adult-equivalent"
+      ]
+    },
+    {
+      "id": "heterosexual_only",
+      "expected": [
+        "eligible pair is one adult male and one adult female under author canon"
+      ]
+    },
+    {
+      "id": "compatibility_not_attraction",
+      "expected": [
+        "eligibility alone never creates interest"
+      ]
+    },
+    {
+      "id": "directional_interest",
+      "expected": [
+        "NPC interest toward player is directional and provenance-backed"
+      ]
+    },
+    {
+      "id": "player_interest_explicit",
+      "expected": [
+        "player romantic interest is never inferred"
+      ]
+    },
+    {
+      "id": "npc_initiation_requires_interest",
+      "expected": [
+        "NPC may invite only from authoritative interest state"
+      ]
+    },
+    {
+      "id": "invitation_not_consent",
+      "expected": [
+        "invitation does not establish relationship or intimacy consent"
+      ]
+    },
+    {
+      "id": "player_response_explicit",
+      "expected": [
+        "player acceptance/rejection is never automatic"
+      ]
+    },
+    {
+      "id": "rejection_no_hostility",
+      "expected": [
+        "rejection alone causes no automatic hostility/resentment"
+      ]
+    },
+    {
+      "id": "bilateral_schedule",
+      "expected": [
+        "both participants need real compatible time"
+      ]
+    },
+    {
+      "id": "bilateral_travel",
+      "expected": [
+        "both participants must physically reach/leave venue"
+      ]
+    },
+    {
+      "id": "real_venue",
+      "expected": [
+        "venue must have date_venue capability"
+      ]
+    },
+    {
+      "id": "no_overlap",
+      "expected": [
+        "neither participant may hold overlapping date plans"
+      ]
+    },
+    {
+      "id": "plan_not_attendance",
+      "expected": [
+        "scheduled date does not assert attendance"
+      ]
+    },
+    {
+      "id": "attendance_not_completion",
+      "expected": [
+        "attendance alone does not imply completed relationship transition"
+      ]
+    },
+    {
+      "id": "date_not_commitment",
+      "expected": [
+        "completed date does not automatically establish relationship"
+      ]
+    },
+    {
+      "id": "reciprocal_commitment",
+      "expected": [
+        "commitment requires bilateral represented evidence"
+      ]
+    },
+    {
+      "id": "consent_contextual",
+      "expected": [
+        "consent is scoped and may be refused/withdrawn"
+      ]
+    },
+    {
+      "id": "rank_not_consent",
+      "expected": [
+        "authority/rank never implies romantic/intimate consent"
+      ]
+    },
+    {
+      "id": "friendship_not_consent",
+      "expected": [
+        "friendship/favors/gifts do not imply consent"
+      ]
+    },
+    {
+      "id": "species_not_attraction",
+      "expected": [
+        "species is not a generic attraction selector"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player proximity does not synthesize NPC interest"
+      ]
+    },
+    {
+      "id": "no_player_autonomy_theft",
+      "expected": [
+        "system never chooses player attraction/commitment"
+      ]
+    },
+    {
+      "id": "npc_npc_deferred",
+      "expected": [
+        "autonomous NPC-to-NPC romance evolution remains Step 11"
+      ]
+    },
+    {
+      "id": "provenance_preserved",
+      "expected": [
+        "declines/cancellations/completed dates retain event history"
+      ]
+    },
+    {
+      "id": "no_future_step_leak",
+      "expected": [
+        "no mentor/wellbeing/discipline/campus-event/off-screen mutation"
+      ]
+    }
+  ]
+}

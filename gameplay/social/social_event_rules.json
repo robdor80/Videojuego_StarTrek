@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "ruleset_id": "social_event_transitions",
   "status": "foundation_fixed",
   "event_families": [
@@ -54,7 +54,11 @@
     "Professional rank does not override personal consent.",
     "AI may express the consequence but authoritative relationship state changes must be validated from the event and rules.",
     "Ordinary non-romantic social events do not use romantic compatibility as an eligibility filter.",
-    "Romantic/sexual event families must satisfy the project relationship canon before any such transition is eligible."
+    "Romantic/sexual event families must satisfy the project relationship canon before any such transition is eligible.",
+    "Player romantic interest, consent, acceptance and commitment are explicit player actions and are never inferred from state.",
+    "NPC romantic expression toward the player requires an authoritative directional romantic-interest state with causal provenance.",
+    "Date invitation, date acceptance, date completion and relationship commitment are distinct events.",
+    "Romantic rejection alone cannot authoritatively create hostility or resentment."
   ],
   "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
 }

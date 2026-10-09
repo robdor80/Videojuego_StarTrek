@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_romantic_consent_context_contract",
+  "status": "STEP_10_COMPLETE",
+  "consent_states": [
+    "not_asked",
+    "accepted_for_context",
+    "declined",
+    "withdrawn",
+    "expired"
+  ],
+  "context_types": [
+    "romantic_invitation",
+    "date_attendance",
+    "relationship_commitment",
+    "adult_intimacy"
+  ],
+  "rules": [
+    "Consent is scoped to one represented context and time.",
+    "Consent to a date is not consent to relationship commitment.",
+    "Consent to a relationship is not automatic consent to adult intimacy.",
+    "Prior intimacy is not consent to later intimacy.",
+    "Rank, authority, friendship, gifts, favors, attraction and repeated requests do not establish consent.",
+    "Decline or withdrawal ends the current consent path without requiring hostility.",
+    "The player consent state is always explicit player input.",
+    "AI may phrase a consensual or declined interaction only from authoritative consent state."
+  ]
+}

@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 9,
+    "complete": 10,
     "partial": 0,
-    "todo": 11,
-    "current_step": 9
+    "todo": 10,
+    "current_step": 10
   },
   "steps": [
     {
@@ -57,7 +57,7 @@
     },
     {
       "step": 10,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Romance and dating"
     },
     {
@@ -257,6 +257,27 @@
     "species_sex_and_player_proximity_not_nonromantic_social_selectors": "COMPLETE",
     "deterministic_reference_generator": "PRESENT",
     "executable_tests": 24,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_10": {
+    "adult_heterosexual_pair_eligibility": "COMPLETE",
+    "player_npc_scope": "COMPLETE",
+    "directional_romantic_interest": "COMPLETE",
+    "player_interest_never_inferred": "COMPLETE",
+    "npc_interest_requires_authoritative_state": "COMPLETE",
+    "date_invitation_and_response": "COMPLETE",
+    "rejection_without_automatic_hostility": "COMPLETE",
+    "bilateral_schedule_and_travel_feasibility": "COMPLETE",
+    "venue_capability_gating": "COMPLETE",
+    "dating_plan_attendance_completion_separation": "COMPLETE",
+    "relationship_transition_requires_completed_date_or_explicit_commitment_evidence": "COMPLETE",
+    "consent_context_and_withdrawal": "COMPLETE",
+    "no_rank_favor_friendship_or_persistence_implied_consent": "COMPLETE",
+    "no_species_or_player_proximity_attraction_bias": "COMPLETE",
+    "npc_npc_autonomous_evolution_deferred_to_step_11": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 26,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

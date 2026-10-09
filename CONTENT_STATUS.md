@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–9/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life**;
+- **Steps 1–10/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -390,7 +390,18 @@ Current status:
 - project author canon now explicitly locks adult-equivalent, heterosexual-only romance/sexual relationship mechanics for Step 10+;
 - **24 executable Step-9 tests defined**.
 
-**Strict sequence:** Step 10 — Romance and dating is next and has not been started.
+- adult-equivalent + heterosexual-only eligibility is enforced from the locked author canon;
+- compatibility does not generate attraction; romantic interest remains directional and provenance-backed;
+- the player's attraction/consent is never inferred or auto-selected;
+- NPC initiation toward the player requires existing authoritative romantic-interest state;
+- invitations support accept/decline/expire/withdraw without automatic hostility from rejection;
+- dates require both participants' real schedule windows, travel feasibility and a real compatible venue;
+- invitation, acceptance, attendance, completed date and relationship commitment are separate states;
+- any intimacy/commitment escalation requires contextual consent and explicit evidence;
+- autonomous NPC↔NPC relationship evolution remains Step 11;
+- **26 executable Step-10 tests defined**.
+
+**Strict sequence:** Step 11 — NPC-to-NPC relationships is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 
