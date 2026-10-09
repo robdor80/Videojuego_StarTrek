@@ -1,0 +1,40 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_npc_relationship_registry_contract",
+  "status": "STEP_11_COMPLETE",
+  "fields": [
+    "relationship_registry_id",
+    "academic_period_ref",
+    "directional_edge_records",
+    "relationship_event_refs",
+    "last_reconciled_at"
+  ],
+  "edge_fields": [
+    "edge_id",
+    "observer_population_slot_ref",
+    "subject_population_slot_ref",
+    "familiarity",
+    "personal_affinity",
+    "personal_trust",
+    "professional_respect",
+    "friendship_state",
+    "conflict_state",
+    "emotional_intimacy",
+    "romantic_interest",
+    "relationship_state",
+    "shared_history_refs",
+    "last_updated_event_ref"
+  ],
+  "conservation_rules": [
+    "one current directional edge per observer-subject pair",
+    "reverse direction is a separate edge",
+    "event processing does not create/delete Academy population",
+    "historical relationship events are append-preserving"
+  ],
+  "rules": [
+    "Latent NPCs may hold relationship edges before materialization.",
+    "Materialization cannot reroll or reset a valid edge.",
+    "Edge changes require event provenance.",
+    "Deleting an NPC presentation entity does not erase persistent relationship history."
+  ]
+}

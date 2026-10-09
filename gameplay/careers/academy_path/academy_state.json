@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.16.0",
+  "schema_version": "0.17.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -81,7 +81,10 @@
     "romantic_interest_edge_refs": "relationship_edge_ref_list",
     "romantic_invitation_refs": "academy_romantic_invitation_ref_list",
     "date_plan_refs": "academy_date_plan_ref_list",
-    "romantic_consent_context_refs": "romantic_consent_context_ref_list"
+    "romantic_consent_context_refs": "romantic_consent_context_ref_list",
+    "npc_relationship_registry_ref": "academy_npc_relationship_registry_id",
+    "npc_relationship_edge_refs": "directional_relationship_edge_ref_list",
+    "npc_relationship_event_history_refs": "relationship_event_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -128,7 +131,13 @@
     "an accepted invitation does not prove date attendance/completion or relationship commitment",
     "romantic rejection does not automatically create hostility, resentment or disciplinary/social penalty",
     "dates consume real time for both participants and require feasible bilateral travel and venue capability",
-    "Step 10 is player-to-NPC/NPC-to-player romance; autonomous NPC-to-NPC evolution remains Step 11"
+    "Step 10 is player-to-NPC/NPC-to-player romance; autonomous NPC-to-NPC evolution remains Step 11",
+    "NPC-to-NPC relationship edges are directional, multidimensional, persistent and event-provenance driven",
+    "co-location, class membership, club membership and social-circle membership do not automatically create friendship",
+    "friendship requires sustained positive shared history; conflict/reconciliation preserves original history",
+    "autonomous NPC romance reuses the locked adult heterosexual canon and Step-10 consent/provenance rules",
+    "Step-11 autonomous resolver excludes the player and cannot mutate player relationship state",
+    "species, materialization state, player proximity and observation are not NPC relationship selectors"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -139,5 +148,6 @@
   "academic_enrichment_contract_ref": "gameplay/careers/academy_path/life/academy_academic_enrichment_contract_v0.1.json",
   "social_life_contract_ref": "gameplay/careers/academy_path/life/academy_social_life_contract_v0.1.json",
   "relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",
-  "romance_dating_contract_ref": "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json"
+  "romance_dating_contract_ref": "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json",
+  "npc_relationship_contract_ref": "gameplay/careers/academy_path/life/academy_npc_relationship_evolution_contract_v0.1.json"
 }

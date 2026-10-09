@@ -1,0 +1,187 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_npc_relationship_invariants",
+  "status": "STEP_11_VALIDATED",
+  "cases": [
+    {
+      "id": "persistent_directional_edges",
+      "expected": [
+        "A->B and B->A are separate persistent states"
+      ]
+    },
+    {
+      "id": "player_excluded",
+      "expected": [
+        "autonomous Step-11 resolver rejects player-containing events"
+      ]
+    },
+    {
+      "id": "provenance_required",
+      "expected": [
+        "unconfirmed/provenance-less event cannot mutate an edge"
+      ]
+    },
+    {
+      "id": "familiarity_not_friendship",
+      "expected": [
+        "encounters may increase familiarity without friendship"
+      ]
+    },
+    {
+      "id": "professional_personal_separation",
+      "expected": [
+        "professional respect may change independently of personal affinity"
+      ]
+    },
+    {
+      "id": "friendship_threshold",
+      "expected": [
+        "friendship requires familiarity plus multiple positive shared-history refs"
+      ]
+    },
+    {
+      "id": "close_friendship_threshold",
+      "expected": [
+        "close friendship requires existing friendship plus further evidence"
+      ]
+    },
+    {
+      "id": "asymmetric_trust",
+      "expected": [
+        "support/confidence changes need not affect reverse edge"
+      ]
+    },
+    {
+      "id": "conflict_causal",
+      "expected": [
+        "conflict requires event and need not become permanent hostility"
+      ]
+    },
+    {
+      "id": "reconciliation_preserves_history",
+      "expected": [
+        "repair never deletes original conflict history"
+      ]
+    },
+    {
+      "id": "adult_only_romance",
+      "expected": [
+        "NPC romance requires adult-equivalent participants"
+      ]
+    },
+    {
+      "id": "heterosexual_only_romance",
+      "expected": [
+        "NPC romance requires one male and one female under locked canon"
+      ]
+    },
+    {
+      "id": "compatibility_not_attraction",
+      "expected": [
+        "eligibility never creates romantic interest by itself"
+      ]
+    },
+    {
+      "id": "directional_romance",
+      "expected": [
+        "one NPC's romantic interest does not create reciprocal interest"
+      ]
+    },
+    {
+      "id": "romantic_provenance",
+      "expected": [
+        "interest emergence/expression requires confirmed causal event"
+      ]
+    },
+    {
+      "id": "mutual_not_dating",
+      "expected": [
+        "mutual interest alone does not establish relationship"
+      ]
+    },
+    {
+      "id": "completed_date_not_commitment",
+      "expected": [
+        "completed date alone does not auto-establish partnership"
+      ]
+    },
+    {
+      "id": "bilateral_commitment",
+      "expected": [
+        "dating/established state requires bilateral confirmation and reciprocal interest"
+      ]
+    },
+    {
+      "id": "rejection_no_hostility",
+      "expected": [
+        "rejection alone creates no automatic hostility/resentment"
+      ]
+    },
+    {
+      "id": "separation_history",
+      "expected": [
+        "separation preserves prior shared history"
+      ]
+    },
+    {
+      "id": "species_not_selector",
+      "expected": [
+        "species identity alone does not alter relationship outcome"
+      ]
+    },
+    {
+      "id": "materialization_not_selector",
+      "expected": [
+        "latent/materialized presentation state does not alter outcome"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not alter NPC relationships"
+      ]
+    },
+    {
+      "id": "mentor_deferred",
+      "expected": [
+        "mentorship changes remain Step 12"
+      ]
+    },
+    {
+      "id": "wellbeing_deferred",
+      "expected": [
+        "wellbeing effects remain Step 13"
+      ]
+    },
+    {
+      "id": "discipline_deferred",
+      "expected": [
+        "obligation/consequence handling remains Step 14"
+      ]
+    },
+    {
+      "id": "campus_event_deferred",
+      "expected": [
+        "campus-event system remains Step 15"
+      ]
+    },
+    {
+      "id": "offscreen_deferred",
+      "expected": [
+        "off-screen catch-up remains Step 16"
+      ]
+    },
+    {
+      "id": "social_lod_deferred",
+      "expected": [
+        "social LOD remains Step 17"
+      ]
+    },
+    {
+      "id": "history_append_preserved",
+      "expected": [
+        "meaningful prior history is not erased by later transitions"
+      ]
+    }
+  ]
+}

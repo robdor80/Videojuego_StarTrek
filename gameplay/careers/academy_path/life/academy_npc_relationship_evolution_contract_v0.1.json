@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_npc_relationship_evolution_contract",
+  "status": "STEP_11_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "scope": "ACADEMY_NPC_TO_NPC",
+  "principle": "NPC relationships evolve autonomously only from represented shared history and confirmed events. Edges are persistent, directional and multidimensional.",
+  "edge_key": [
+    "observer_population_slot_ref",
+    "subject_population_slot_ref"
+  ],
+  "dimensions": [
+    "familiarity",
+    "personal_affinity",
+    "personal_trust",
+    "professional_respect",
+    "friendship_state",
+    "conflict_state",
+    "emotional_intimacy",
+    "romantic_interest",
+    "relationship_state",
+    "shared_history_refs"
+  ],
+  "rules": [
+    "The player is excluded from the autonomous NPC-to-NPC resolver.",
+    "A-to-B and B-to-A are separate edges and may evolve differently.",
+    "Co-location or shared membership alone does not create relationship state.",
+    "Confirmed encounters may increase familiarity without increasing friendship.",
+    "Professional respect may change independently of personal affinity/trust.",
+    "Friendship requires sustained positive shared-history evidence and sufficient familiarity.",
+    "Close friendship requires an existing friendship plus additional represented positive history.",
+    "Conflict may reduce trust/affinity without creating permanent hostility.",
+    "Apology and reconciliation may repair current dimensions but never erase prior conflict history.",
+    "Romantic eligibility uses the author-locked adult heterosexual canon.",
+    "Romantic compatibility does not create attraction.",
+    "Romantic interest is directional and requires causal event provenance.",
+    "Mutual romantic interest does not automatically create dating.",
+    "Dating/established relationship requires bilateral represented evidence.",
+    "Romantic rejection alone creates no automatic hostility or resentment.",
+    "Separation/estrangement preserves shared history.",
+    "Species identity, materialization, player proximity and camera observation are not relationship selectors.",
+    "Mentorship state is not advanced here; Step 12 owns mentors/instructors.",
+    "Wellbeing, discipline, campus-event and off-screen catch-up consequences remain later steps."
+  ],
+  "dependencies": [
+    "gameplay/social/relationship_graph_model.json",
+    "gameplay/social/social_event_rules.json",
+    "gameplay/relationships/relationship_change_provenance_contract.json",
+    "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_social_interaction_evidence_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json"
+  ],
+  "next_step_ref": "Step 12 — Mentors and instructors"
+}

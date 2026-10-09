@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "contract_id": "relationship_change_provenance",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "principle": "Relationship state is persistent, directional and multidimensional; every meaningful change requires represented cause and provenance.",
@@ -42,7 +42,10 @@
     "Romantic invitation, acceptance, completed date, relationship commitment and intimacy are separate causal events.",
     "Player romantic/consent state cannot be inferred from compatibility, repeated contact or NPC desire.",
     "Romantic rejection alone is not sufficient cause for hostility, resentment or retaliation.",
-    "Project romantic/sexual relationship changes must satisfy the locked adult heterosexual relationship canon."
+    "Project romantic/sexual relationship changes must satisfy the locked adult heterosexual relationship canon.",
+    "NPC-to-NPC autonomous changes require confirmed event provenance; proximity, materialization and observer presence are not causes.",
+    "Friendship-state advancement requires sustained positive shared history rather than one isolated positive event.",
+    "Reconciliation may improve current state without deleting conflict, rejection, separation or prior negative history."
   ],
   "core_rpg_candidate": true,
   "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"

@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 10,
+    "complete": 11,
     "partial": 0,
-    "todo": 10,
-    "current_step": 10
+    "todo": 9,
+    "current_step": 11
   },
   "steps": [
     {
@@ -62,7 +62,7 @@
     },
     {
       "step": 11,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "NPC-to-NPC relationships"
     },
     {
@@ -278,6 +278,27 @@
     "npc_npc_autonomous_evolution_deferred_to_step_11": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 26,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_11": {
+    "slot_first_npc_relationship_edges": "COMPLETE",
+    "directional_multidimensional_evolution": "COMPLETE",
+    "confirmed_event_provenance_required": "COMPLETE",
+    "familiarity_without_automatic_friendship": "COMPLETE",
+    "friendship_requires_positive_shared_history": "COMPLETE",
+    "asymmetric_trust_affinity_conflict": "COMPLETE",
+    "conflict_apology_reconciliation_history": "COMPLETE",
+    "autonomous_npc_romantic_interest_from_causal_event": "COMPLETE",
+    "adult_heterosexual_romance_canon_enforced": "COMPLETE",
+    "mutual_interest_not_automatic": "COMPLETE",
+    "dating_commitment_requires_bilateral_evidence": "COMPLETE",
+    "romantic_rejection_without_automatic_hostility": "COMPLETE",
+    "separation_preserves_shared_history": "COMPLETE",
+    "player_excluded_from_autonomous_npc_resolver": "COMPLETE",
+    "species_materialization_player_proximity_nonselectors": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 30,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

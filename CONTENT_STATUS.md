@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–10/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating**;
+- **Steps 1–11/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -401,7 +401,19 @@ Current status:
 - autonomous NPC↔NPC relationship evolution remains Step 11;
 - **26 executable Step-10 tests defined**.
 
-**Strict sequence:** Step 11 — NPC-to-NPC relationships is next and has not been started.
+- NPC relationships are persistent directional multidimensional edges, not a single friendship meter;
+- only confirmed events/shared-history provenance can advance or damage a relationship;
+- familiarity may grow without friendship, and professional respect remains independent from personal affinity;
+- friendship requires sustained positive shared history rather than proximity or one good interaction;
+- conflict, apology and reconciliation preserve history and may remain asymmetric;
+- autonomous NPC romance reuses the locked adult heterosexual canon from Step 10;
+- romantic interest may be unilateral; mutual interest does not auto-create dating;
+- dating/commitment needs bilateral event evidence and rejection does not auto-create hostility;
+- the autonomous resolver explicitly excludes the player;
+- species, materialization and player proximity cannot bias outcomes;
+- **30 executable Step-11 tests defined**.
+
+**Strict sequence:** Step 12 — Mentors and instructors is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

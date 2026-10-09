@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "rules_id": "academy_npc_relationship_transition_rules",
+  "status": "STEP_11_COMPLETE",
+  "event_types": [
+    "first_meeting",
+    "repeated_encounter",
+    "successful_collaboration",
+    "professional_failure",
+    "support_given",
+    "confidences_shared",
+    "conflict",
+    "apology",
+    "reconciliation_attempt",
+    "friendship_develops",
+    "close_friendship_develops",
+    "romantic_interest_emergence",
+    "romantic_expression",
+    "romantic_rejection",
+    "completed_date",
+    "reciprocal_commitment",
+    "relationship_strain",
+    "separation"
+  ],
+  "rules": [
+    "first_meeting/repeated_encounter primarily affect familiarity.",
+    "successful collaboration may increase professional respect without friendship.",
+    "support/confidences may improve trust/affinity only in the represented direction.",
+    "friendship_develops requires familiarity >= acquainted plus at least two positive shared-history refs.",
+    "close_friendship_develops requires current friendship_state=friend plus additional positive history.",
+    "conflict may create tension and reduce trust/affinity; it does not automatically create permanent hostility.",
+    "apology may move active conflict toward repairing but cannot erase the conflict event.",
+    "accepted reconciliation may produce reconciled_unresolved_history and partial trust repair.",
+    "romantic_interest_emergence is directional, adult heterosexual canon-gated and cause-provenance gated.",
+    "romantic_expression does not create reciprocal interest.",
+    "romantic_rejection has no automatic hostility effect.",
+    "completed_date records shared romantic history but does not automatically establish partnership.",
+    "reciprocal_commitment requires bilateral confirmation and compatible reciprocal romantic state.",
+    "separation changes relationship state but preserves all prior shared history."
+  ]
+}

@@ -21,7 +21,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 8 | Conferences, seminars and additional courses | COMPLETE |
 | 9 | Social life | COMPLETE |
 | 10 | Romance and dating | COMPLETE |
-| 11 | NPC↔NPC relationships | TODO |
+| 11 | NPC↔NPC relationships | COMPLETE |
 | 12 | Mentors and instructors | TODO |
 | 13 | Wellbeing and balance | TODO |
 | 14 | Obligations and consequences | TODO |
@@ -350,3 +350,48 @@ Step 10 models relationship state and consent gates without graphic sexual conte
 Step 10 implements the player↔NPC romance/dating mechanics. **Autonomous NPC↔NPC relationship evolution remains Step 11**, which must reuse these eligibility, provenance and consent rules rather than inventing another romance model.
 
 **Boundary:** NPC↔NPC relationship evolution remains Step 11; mentors Step 12; wellbeing Step 13; obligation/consequence handling Step 14; campus events Step 15; off-screen execution Step 16.
+
+
+## Step 11 — NPC↔NPC relationships
+
+Step 11 closes **autonomous persistent relationship evolution between Academy NPCs**.
+
+The resolver consumes confirmed social/professional/relationship events and evolves **directional, multidimensional edges**. It does not use a single friendship score and it never creates relationship history merely because two NPCs occupy the same room, class, club or social event.
+
+Supported evolution includes:
+- familiarity from confirmed encounters;
+- personal affinity/trust from represented positive or negative history;
+- professional respect from actual collaboration/conduct;
+- developing friendship from sustained positive shared history;
+- conflict, apology and partial reconciliation without erasing the original history;
+- adult heterosexual romantic-interest emergence, expression, dating and commitment when the locked project canon and event evidence permit it;
+- separation/estrangement while retaining shared history.
+
+**A→B and B→A are separate edges.** One NPC may trust, admire, resent or feel romantic interest toward another without the reverse being true.
+
+Friendship is never created by one positive interaction. A friendship transition requires sufficient prior familiarity plus multiple positive shared-history references. Close friendship requires an already established friendship plus further represented history.
+
+Conflict is likewise causal. A disagreement may create tension without permanent hostility. Apology/reconciliation may repair dimensions partially while preserving the underlying conflict event in history.
+
+### Autonomous romance between NPCs
+
+Step 11 reuses the exact Step-10 canon and does not create an alternative romance model:
+- both NPCs must be adult-equivalent;
+- romantic/sexual eligibility is heterosexual-only under the locked author canon;
+- eligibility does not create attraction;
+- romantic interest may be unilateral;
+- interest emergence/expression requires represented causal event provenance;
+- mutual interest does not automatically create dating;
+- dating/commitment requires bilateral evidence;
+- rejection alone never creates hostility;
+- relationship/intimacy consent remains contextual and cannot be inferred.
+
+### Player boundary
+
+The autonomous Step-11 resolver **rejects any event containing the player**. Player↔NPC romance/social decisions remain under the player-facing mechanics of Steps 9–10.
+
+### Persistence boundary
+
+Materialization state, player proximity, species identity and camera observation do not change relationship outcomes. Relationship history belongs to persistent World Truth.
+
+**Boundary:** mentors/instructors remain Step 12; wellbeing Step 13; obligations/consequences Step 14; campus events Step 15; off-screen execution Step 16; social LOD Step 17.

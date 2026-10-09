@@ -1,0 +1,166 @@
+{
+  "fixture_id": "academy_npc_relationships_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "characters": [
+      {
+        "population_slot_ref": "PLAYER",
+        "is_player": true,
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "species_id": "human"
+      },
+      {
+        "population_slot_ref": "A",
+        "is_player": false,
+        "adult_equivalent": true,
+        "sex_category": "female",
+        "species_id": "vulcan",
+        "character_id": "npc:A"
+      },
+      {
+        "population_slot_ref": "B",
+        "is_player": false,
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "species_id": "andorian",
+        "character_id": null
+      },
+      {
+        "population_slot_ref": "C",
+        "is_player": false,
+        "adult_equivalent": true,
+        "sex_category": "female",
+        "species_id": "tellarite",
+        "character_id": null
+      },
+      {
+        "population_slot_ref": "D",
+        "is_player": false,
+        "adult_equivalent": false,
+        "sex_category": "male",
+        "species_id": "human",
+        "character_id": null
+      }
+    ],
+    "existing_edges": [],
+    "confirmed_events": [
+      {
+        "event_id": "E01",
+        "occurred_at": "2372-03-01T10:00:00",
+        "event_type": "first_meeting",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "cause_event_refs": [
+          "interaction:01"
+        ]
+      },
+      {
+        "event_id": "E02",
+        "occurred_at": "2372-03-02T10:00:00",
+        "event_type": "repeated_encounter",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "cause_event_refs": [
+          "interaction:02"
+        ]
+      },
+      {
+        "event_id": "E03",
+        "occurred_at": "2372-03-03T10:00:00",
+        "event_type": "support_given",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "cause_event_refs": [
+          "interaction:03"
+        ]
+      },
+      {
+        "event_id": "E04",
+        "occurred_at": "2372-03-04T10:00:00",
+        "event_type": "friendship_develops",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "cause_event_refs": [
+          "relationship:04"
+        ],
+        "positive_shared_history_refs": [
+          "interaction:02",
+          "interaction:03"
+        ]
+      },
+      {
+        "event_id": "E05",
+        "occurred_at": "2372-03-05T10:00:00",
+        "event_type": "romantic_interest_emergence",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "cause_event_refs": [
+          "relationship:05"
+        ]
+      },
+      {
+        "event_id": "E06",
+        "occurred_at": "2372-03-06T10:00:00",
+        "event_type": "romantic_interest_emergence",
+        "actor_slot_ref": "B",
+        "target_slot_ref": "A",
+        "confirmed": true,
+        "cause_event_refs": [
+          "relationship:06"
+        ]
+      },
+      {
+        "event_id": "E07",
+        "occurred_at": "2372-03-07T10:00:00",
+        "event_type": "reciprocal_commitment",
+        "actor_slot_ref": "A",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "bilateral_confirmed": true,
+        "relationship_state": "dating",
+        "cause_event_refs": [
+          "commitment:07"
+        ]
+      },
+      {
+        "event_id": "E08",
+        "occurred_at": "2372-03-08T10:00:00",
+        "event_type": "conflict",
+        "actor_slot_ref": "C",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "severity": "minor",
+        "cause_event_refs": [
+          "conflict:08"
+        ]
+      },
+      {
+        "event_id": "E09",
+        "occurred_at": "2372-03-09T10:00:00",
+        "event_type": "apology",
+        "actor_slot_ref": "C",
+        "target_slot_ref": "B",
+        "confirmed": true,
+        "accepted": true,
+        "cause_event_refs": [
+          "apology:09"
+        ]
+      }
+    ]
+  },
+  "expected": {
+    "a_to_b_friend": true,
+    "a_to_b_romantic_interest": true,
+    "b_to_a_romantic_interest": true,
+    "a_b_dating": true,
+    "c_to_b_conflict_repairing": true,
+    "player_edges_mutated": false,
+    "heterosexual_canon": true
+  }
+}

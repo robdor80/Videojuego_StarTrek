@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.2",
+  "schema_version": "0.1.3",
   "ruleset_id": "social_event_transitions",
   "status": "foundation_fixed",
   "event_families": [
@@ -58,7 +58,9 @@
     "Player romantic interest, consent, acceptance and commitment are explicit player actions and are never inferred from state.",
     "NPC romantic expression toward the player requires an authoritative directional romantic-interest state with causal provenance.",
     "Date invitation, date acceptance, date completion and relationship commitment are distinct events.",
-    "Romantic rejection alone cannot authoritatively create hostility or resentment."
+    "Romantic rejection alone cannot authoritatively create hostility or resentment.",
+    "NPC-to-NPC Academy social events may evolve directional relationship dimensions independently.",
+    "Autonomous friendship/romance transitions require their specific evidence gates rather than generic positive-contact accumulation alone."
   ],
   "project_relationship_canon_ref": "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json"
 }

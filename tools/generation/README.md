@@ -74,3 +74,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_romance_dating_step10.py` deterministically validates player↔NPC romantic eligibility, invitations, responses and bilateral date feasibility under the locked adult heterosexual canon.
 - `test_resolve_academy_romance_dating_step10.py` validates adult/sex-category eligibility, player agency, directional NPC interest, consent boundaries, rejection semantics, dual schedules/travel, venue requirements and strict Step-11+ boundaries.
+
+
+### Academy Life Step 11 — NPC-to-NPC relationships
+
+- `resolve_academy_npc_relationships_step11.py` deterministically evolves persistent directional NPC relationship edges from confirmed causal events.
+- `test_resolve_academy_npc_relationships_step11.py` validates asymmetry, familiarity/friendship thresholds, conflict/reconciliation history, adult heterosexual NPC romance, bilateral commitment, player exclusion and strict Step-12+ boundaries.
