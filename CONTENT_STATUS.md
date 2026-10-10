@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–14/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences**;
+- **Steps 1–15/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -447,7 +447,20 @@ Current status:
 - final record writes remain Step 19 and annual progression/dismissal decisions remain Step 18;
 - **32 executable Step-14 tests pass against the locked fixture**.
 
-**Strict sequence:** Step 15 — Campus events is next and has not been started.
+- campus events are persistent objects with stable source/cause, authority, time, location, priority and capacity;
+- planned institutional events, emergent incidents and crisis alerts have distinct validity rules;
+- external visitors must already exist; events cannot spawn famous guests for fanservice;
+- quiet periods with no events are explicitly valid;
+- mandatory events create obligation candidates, never automatic attendance;
+- optional events preserve player agency while NPC plans remain capacity/schedule constrained;
+- normal conflicts produce explicit schedule-conflict candidates rather than silent rewriting;
+- authorized crisis alerts may produce preemption/revision candidates, still without automatic execution;
+- institutional preemption may produce a Step-14 justification candidate but does not self-excuse an obligation;
+- cancellations require provenance and authority;
+- Step 15 directly changes no relationships, wellbeing, academic record or year progression;
+- **34 executable Step-15 tests pass against the locked fixture**.
+
+**Strict sequence:** Step 16 — Off-screen Academy life is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

@@ -1,0 +1,211 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_campus_events_invariants",
+  "status": "STEP_15_VALIDATED",
+  "cases": [
+    {
+      "id": "event_preexists",
+      "expected": [
+        "event source/cause exists before player participation"
+      ]
+    },
+    {
+      "id": "scheduled_authority",
+      "expected": [
+        "scheduled event needs scheduling authority and source"
+      ]
+    },
+    {
+      "id": "emergent_cause",
+      "expected": [
+        "emergent incident needs cause provenance"
+      ]
+    },
+    {
+      "id": "crisis_cause_authority",
+      "expected": [
+        "crisis alert needs real cause and alert authority"
+      ]
+    },
+    {
+      "id": "quiet_period_valid",
+      "expected": [
+        "empty event set remains valid"
+      ]
+    },
+    {
+      "id": "visitor_preexists",
+      "expected": [
+        "external participant must be known entity"
+      ]
+    },
+    {
+      "id": "real_location",
+      "expected": [
+        "event uses existing compatible location"
+      ]
+    },
+    {
+      "id": "finite_capacity",
+      "expected": [
+        "capacity cannot be negative or silently expanded"
+      ]
+    },
+    {
+      "id": "mandatory_capacity",
+      "expected": [
+        "mandatory target scope must fit represented capacity"
+      ]
+    },
+    {
+      "id": "mandatory_not_attendance",
+      "expected": [
+        "obligation candidate does not assert attendance"
+      ]
+    },
+    {
+      "id": "player_optional_agency",
+      "expected": [
+        "player optional participation is never auto-planned"
+      ]
+    },
+    {
+      "id": "npc_optional_plan",
+      "expected": [
+        "NPC optional plan may use preferences after feasibility"
+      ]
+    },
+    {
+      "id": "plan_not_attendance",
+      "expected": [
+        "NPC plan attendance remains unresolved"
+      ]
+    },
+    {
+      "id": "travel_feasibility",
+      "expected": [
+        "optional planning needs real travel/time"
+      ]
+    },
+    {
+      "id": "normal_conflict_explicit",
+      "expected": [
+        "unfeasible mandatory event yields conflict candidate"
+      ]
+    },
+    {
+      "id": "crisis_preemption_policy",
+      "expected": [
+        "preemption requires crisis policy"
+      ]
+    },
+    {
+      "id": "crisis_preemption_authority",
+      "expected": [
+        "preemption requires authority scope"
+      ]
+    },
+    {
+      "id": "revision_candidate_only",
+      "expected": [
+        "preemption does not silently mutate schedule"
+      ]
+    },
+    {
+      "id": "institutional_exception_candidate",
+      "expected": [
+        "conflict may feed Step-14 justification candidate only"
+      ]
+    },
+    {
+      "id": "cancellation_provenance",
+      "expected": [
+        "cancelled event needs cancellation cause"
+      ]
+    },
+    {
+      "id": "cancellation_authority",
+      "expected": [
+        "cancellation needs competent authority"
+      ]
+    },
+    {
+      "id": "cancelled_no_new_obligation",
+      "expected": [
+        "cancelled event creates no new obligation"
+      ]
+    },
+    {
+      "id": "no_event_generation_for_pacing",
+      "expected": [
+        "resolver emits no event absent from input"
+      ]
+    },
+    {
+      "id": "species_not_selector",
+      "expected": [
+        "species does not create/select campus events"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not create events"
+      ]
+    },
+    {
+      "id": "no_relationship_mutation",
+      "expected": [
+        "Step 15 changes no relationships directly"
+      ]
+    },
+    {
+      "id": "no_wellbeing_mutation",
+      "expected": [
+        "Step 15 changes no wellbeing directly"
+      ]
+    },
+    {
+      "id": "no_record_write",
+      "expected": [
+        "Academy record remains Step 19"
+      ]
+    },
+    {
+      "id": "offscreen_deferred",
+      "expected": [
+        "actual off-screen event execution remains Step 16"
+      ]
+    },
+    {
+      "id": "social_lod_deferred",
+      "expected": [
+        "social LOD remains Step 17"
+      ]
+    },
+    {
+      "id": "year_progression_deferred",
+      "expected": [
+        "year progression remains Step 18"
+      ]
+    },
+    {
+      "id": "academic_enrichment_not_duplicated",
+      "expected": [
+        "conference/seminar/course ownership remains Step 8"
+      ]
+    },
+    {
+      "id": "history_persistent",
+      "expected": [
+        "completed/cancelled event remains historically addressable"
+      ]
+    },
+    {
+      "id": "world_first",
+      "expected": [
+        "campus events cannot retroactively create the cause they represent"
+      ]
+    }
+  ]
+}

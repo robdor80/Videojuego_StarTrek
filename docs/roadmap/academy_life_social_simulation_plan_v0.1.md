@@ -25,7 +25,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 12 | Mentors and instructors | COMPLETE |
 | 13 | Wellbeing and balance | COMPLETE |
 | 14 | Obligations and consequences | COMPLETE |
-| 15 | Campus events | TODO |
+| 15 | Campus events | COMPLETE |
 | 16 | Off-screen Academy life | TODO |
 | 17 | Social LOD | TODO |
 | 18 | Year progression and continuity | TODO |
@@ -601,3 +601,67 @@ It does **not** directly:
 - execute off-screen catch-up — Step 16.
 
 **Boundary:** campus events remain Step 15; off-screen Academy life Step 16; social LOD Step 17; year progression Step 18; Academy-record integration Step 19.
+
+
+## Step 15 — Campus events
+
+Step 15 closes the Academy's **institutional campus-event layer**.
+
+A campus event is a persistent institutional/world event with stable identity, source/cause, authority, time, location, capacity, priority and participation rules. It is not generated because the player is nearby or because pacing needs “something to happen”.
+
+Three event origins are supported:
+- **scheduled_institutional** — calendar/authority-backed ceremonies, assemblies, competitions, drills or other planned institutional activity;
+- **emergent_incident** — a campus incident registered from a pre-existing causal event;
+- **crisis_alert** — a high-priority institutional alert activated from real causes and competent authority.
+
+A quiet period with no event is a valid state.
+
+### Existing world first
+
+Scheduled events require an institutional source and scheduling authority.
+
+Emergent incidents and crisis alerts require explicit cause-event provenance. A template cannot retroactively invent the incident it claims to represent.
+
+External visitors/guests must already exist as known entities. The event cannot materialize an admiral, celebrity or visiting officer merely because the event wants one.
+
+### Participation
+
+Campus events may use:
+- **mandatory_scope**;
+- **role_assignment**;
+- **optional_open**;
+- **invitation_only**.
+
+Mandatory/assigned events create **obligation candidates**, not attendance facts.
+
+Optional events never auto-enroll or auto-attend the player. NPCs may create deterministic optional participation plans from real interests/preferences, capacity and schedule feasibility.
+
+**Event exists ≠ invited/required ≠ participation plan ≠ attendance ≠ interaction.**
+
+Actual attendance remains runtime/event truth.
+
+### Schedule and crisis handling
+
+Every event uses a real campus location/capability and real travel time.
+
+A normal event that cannot coexist with a cadet's current schedule creates a **schedule conflict candidate** rather than silently rewriting the timetable.
+
+A crisis alert may create a **schedule-revision/preemption candidate** only when:
+- its preemption policy permits it;
+- the activating authority has explicit preemption scope.
+
+Even then the output is a candidate for authoritative schedule resolution, never an invisible mutation.
+
+If an institutional preemption causes a conflict with another obligation, Step 15 may emit an **institutional schedule-conflict justification candidate** for Step 14. It does not mark the prior absence as automatically excused by itself.
+
+### Cancellation and history
+
+Cancellation requires explicit provenance and competent authority. A cancelled event remains historically addressable and produces no new attendance obligation.
+
+### Cross-system boundaries
+
+Campus events may create context for later social interactions, wellbeing activity evidence, academic/conduct consequences and records. Step 15 performs none of those mutations directly.
+
+Academic conferences/seminars/courses remain owned by Step 8 and may be referenced by a campus event, not duplicated into a second academic-enrichment system.
+
+**Boundary:** off-screen Academy life remains Step 16; social LOD Step 17; year progression Step 18; Academy-record integration Step 19.

@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_campus_event_schedule_impact_contract",
+  "status": "STEP_15_COMPLETE",
+  "outputs": [
+    "mandatory_obligation_candidate",
+    "schedule_conflict_candidate",
+    "schedule_revision_candidate",
+    "institutional_exception_candidate"
+  ],
+  "rules": [
+    "Mandatory event obligation does not assert attendance.",
+    "Normal campus events do not automatically preempt existing fixed commitments.",
+    "Authorized crisis alerts may propose preemption only under explicit preemption policy and authority.",
+    "Schedule revision candidate is not an applied revision.",
+    "Institutional conflict exception is only a candidate for Step-14 justification processing.",
+    "No output from this contract retroactively alters historical schedule versions."
+  ]
+}

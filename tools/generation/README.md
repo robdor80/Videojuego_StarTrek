@@ -98,3 +98,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_obligations_consequences_step14.py` resolves mandatory/voluntary Academy obligations from confirmed evidence, represented justifications, recurrence and authority-gated disciplinary decisions.
 - `test_resolve_academy_obligations_consequences_step14.py` validates no-fault absence, make-up/remediation, lateness tolerance, recurrence, formal-review gating, authority, proportionality, player agency and strict Step-15+ boundaries.
+
+
+### Academy Life Step 15 — campus events
+
+- `resolve_academy_campus_events_step15.py` validates persistent scheduled/emergent/crisis campus events, participation/obligation candidates, capacity, location, authority and crisis schedule-preemption candidates.
+- `test_resolve_academy_campus_events_step15.py` validates quiet periods, event provenance, visitors, mandatory-vs-optional participation, capacity, cancellation, crisis authority/preemption and strict Step-16+ boundaries.

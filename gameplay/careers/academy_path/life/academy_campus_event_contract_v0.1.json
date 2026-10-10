@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_campus_event_contract",
+  "status": "STEP_15_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Campus events are persistent institutional/world events with real sources or causes. They create participation context and schedule/obligation candidates without asserting attendance or inventing incidents for pacing.",
+  "event_types": [
+    "scheduled_institutional",
+    "emergent_incident",
+    "crisis_alert"
+  ],
+  "access_modes": [
+    "mandatory_scope",
+    "role_assignment",
+    "optional_open",
+    "invitation_only"
+  ],
+  "representative_event_families": [
+    "ceremony",
+    "assembly",
+    "competition",
+    "drill",
+    "visitor_event",
+    "facility_disruption",
+    "security_incident",
+    "medical_incident",
+    "environmental_alert"
+  ],
+  "event_fields": [
+    "campus_event_id",
+    "event_type",
+    "event_family",
+    "status",
+    "authority_id",
+    "source_ref_if_scheduled",
+    "cause_event_refs_if_emergent",
+    "day_index",
+    "start_minute",
+    "end_minute",
+    "location_ref",
+    "capacity",
+    "priority",
+    "access_mode",
+    "target_or_invited_or_assigned_slot_refs",
+    "external_participant_refs",
+    "preemption_policy_if_any"
+  ],
+  "rules": [
+    "Event identity and cause/source exist independently of player observation.",
+    "Scheduled institutional events require scheduling authority and a source/calendar reference.",
+    "Emergent incidents require causal event provenance and incident-registration authority.",
+    "Crisis alerts require causal event provenance and alert authority.",
+    "Quiet periods are valid; no event is generated merely to improve pacing.",
+    "External participant entities must already exist before the event references them.",
+    "Every event requires a real compatible location and nonnegative finite capacity.",
+    "Mandatory/role-assigned events create obligation candidates but never prove attendance.",
+    "Optional events never auto-enroll or auto-attend the player.",
+    "NPC optional participation plans remain schedule/travel/capacity constrained.",
+    "Normal schedule conflicts remain explicit conflicts.",
+    "Crisis preemption requires both a permitting policy and authority with preempt_schedule scope.",
+    "Preemption output is a revision candidate, not a silent timetable mutation.",
+    "Institutional schedule-conflict outputs may become Step-14 justification candidates but are not self-approved excuses.",
+    "Cancellation requires provenance and competent authority and preserves event history.",
+    "Participation plan is not attendance; attendance is not interaction.",
+    "Step 15 directly mutates no relationship, wellbeing, academic record or year progression.",
+    "Academic enrichment remains Step 8-owned and should be referenced rather than duplicated."
+  ],
+  "dependencies": [
+    "gameplay/careers/academy_path/campus_location_graph.json",
+    "gameplay/careers/academy_path/life/academy_personal_schedule_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
+    "validation/consistency/living_simulation_event_consequence_invariants_v0.1.json"
+  ],
+  "next_step_ref": "Step 16 — Off-screen Academy life"
+}

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "academy_personal_schedule_contract",
   "status": "STEP_5_COMPLETE",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
@@ -54,7 +54,9 @@
     "Being absent or late does not retroactively alter what the schedule required.",
     "Uncommitted intervals are exposed as available temporal capacity but Step 5 does not choose how they are used.",
     "Free time, clubs, social life, romance, wellbeing consequences, discipline and off-screen execution remain later steps.",
-    "Schedule changes require explicit revision/exception events and prior schedule versions remain historical."
+    "Schedule changes require explicit revision/exception events and prior schedule versions remain historical.",
+    "Campus events may create explicit obligation/conflict/revision candidates, but never silently rewrite a valid schedule.",
+    "Authorized crisis preemption remains a schedule-revision candidate until authoritative execution applies it."
   ],
   "dependencies": [
     "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
@@ -63,5 +65,6 @@
     "gameplay/careers/academy_path/campus_location_graph.json",
     "gameplay/timekeeping/README.md"
   ],
-  "next_step_ref": "Step 6 — Free time"
+  "next_step_ref": "Step 6 — Free time",
+  "campus_event_contract_ref": "gameplay/careers/academy_path/life/academy_campus_event_contract_v0.1.json"
 }

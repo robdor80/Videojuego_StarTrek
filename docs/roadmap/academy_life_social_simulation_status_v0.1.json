@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 14,
+    "complete": 15,
     "partial": 0,
-    "todo": 6,
-    "current_step": 14
+    "todo": 5,
+    "current_step": 15
   },
   "steps": [
     {
@@ -82,7 +82,7 @@
     },
     {
       "step": 15,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Campus events"
     },
     {
@@ -363,6 +363,29 @@
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 32,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_15": {
+    "persistent_campus_event_entities": "COMPLETE",
+    "scheduled_emergent_crisis_taxonomy": "COMPLETE",
+    "authority_and_cause_gating": "COMPLETE",
+    "preexisting_visitor_validation": "COMPLETE",
+    "real_location_capability_gating": "COMPLETE",
+    "finite_capacity": "COMPLETE",
+    "mandatory_obligation_candidates": "COMPLETE",
+    "optional_player_agency": "COMPLETE",
+    "npc_optional_participation_planning": "COMPLETE",
+    "crisis_schedule_preemption_candidates": "COMPLETE",
+    "no_silent_schedule_rewrite": "COMPLETE",
+    "institutional_conflict_exception_candidates": "COMPLETE",
+    "cancellation_with_provenance": "COMPLETE",
+    "quiet_period_valid": "COMPLETE",
+    "plan_not_attendance": "COMPLETE",
+    "no_direct_relationship_wellbeing_record_mutation": "COMPLETE",
+    "no_player_proximity_or_species_event_generation": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 34,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

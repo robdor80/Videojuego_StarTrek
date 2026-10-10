@@ -1,0 +1,251 @@
+{
+  "fixture_id": "academy_campus_events_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "campaign_seed": "academy-step15-fixture",
+    "max_new_optional_campus_plans_per_npc": 1,
+    "cadets": [
+      {
+        "population_slot_ref": "PLAYER",
+        "is_player": true,
+        "interest_refs": [
+          "ceremony"
+        ],
+        "campus_event_preference_tags": [
+          "competition"
+        ]
+      },
+      {
+        "population_slot_ref": "C1",
+        "is_player": false,
+        "interest_refs": [
+          "competition"
+        ],
+        "campus_event_preference_tags": [
+          "competition"
+        ]
+      },
+      {
+        "population_slot_ref": "C2",
+        "is_player": false,
+        "interest_refs": [
+          "ceremony"
+        ],
+        "campus_event_preference_tags": [
+          "institutional"
+        ]
+      }
+    ],
+    "authorities": [
+      {
+        "authority_id": "ACADEMY_ADMIN",
+        "scopes": [
+          "schedule_campus_event",
+          "register_campus_incident",
+          "cancel_campus_event"
+        ]
+      },
+      {
+        "authority_id": "ACADEMY_ALERT",
+        "scopes": [
+          "activate_campus_alert",
+          "preempt_schedule",
+          "cancel_campus_event"
+        ]
+      }
+    ],
+    "known_external_entity_refs": [
+      "visitor:admiral_01"
+    ],
+    "locations": [
+      {
+        "location_ref": "parade_grounds",
+        "capability_tags": [
+          "ceremonies",
+          "formation"
+        ]
+      },
+      {
+        "location_ref": "athletics_area",
+        "capability_tags": [
+          "competition"
+        ]
+      },
+      {
+        "location_ref": "academy_main_grounds",
+        "capability_tags": [
+          "assembly",
+          "emergency_muster"
+        ]
+      }
+    ],
+    "travel_edges": [
+      {
+        "from": "academic_core",
+        "to": "parade_grounds",
+        "minutes": 10
+      },
+      {
+        "from": "parade_grounds",
+        "to": "cadet_quarters",
+        "minutes": 12
+      },
+      {
+        "from": "academic_core",
+        "to": "athletics_area",
+        "minutes": 12
+      },
+      {
+        "from": "athletics_area",
+        "to": "cadet_quarters",
+        "minutes": 14
+      },
+      {
+        "from": "academic_core",
+        "to": "academy_main_grounds",
+        "minutes": 8
+      },
+      {
+        "from": "academy_main_grounds",
+        "to": "cadet_quarters",
+        "minutes": 10
+      }
+    ],
+    "availability_windows": [
+      {
+        "population_slot_ref": "PLAYER",
+        "day_index": 1,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "C1",
+        "day_index": 1,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "C2",
+        "day_index": 1,
+        "start_minute": 900,
+        "end_minute": 1200,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "PLAYER",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 980,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "C1",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 980,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      },
+      {
+        "population_slot_ref": "C2",
+        "day_index": 2,
+        "start_minute": 900,
+        "end_minute": 980,
+        "start_location_ref": "academic_core",
+        "end_location_ref": "cadet_quarters"
+      }
+    ],
+    "campus_events": [
+      {
+        "campus_event_id": "EV-CER",
+        "event_type": "scheduled_institutional",
+        "event_family": "ceremony",
+        "status": "scheduled",
+        "authority_id": "ACADEMY_ADMIN",
+        "source_ref": "calendar:academy_foundation_day",
+        "access_mode": "mandatory_scope",
+        "target_slot_refs": [
+          "PLAYER",
+          "C1",
+          "C2"
+        ],
+        "day_index": 1,
+        "start_minute": 1000,
+        "end_minute": 1080,
+        "location_ref": "parade_grounds",
+        "capacity": 20,
+        "required_location_capabilities": [
+          "ceremonies"
+        ],
+        "priority": "normal",
+        "preference_tags": [
+          "ceremony",
+          "institutional"
+        ],
+        "external_participant_refs": [
+          "visitor:admiral_01"
+        ]
+      },
+      {
+        "campus_event_id": "EV-COMP",
+        "event_type": "scheduled_institutional",
+        "event_family": "competition",
+        "status": "scheduled",
+        "authority_id": "ACADEMY_ADMIN",
+        "source_ref": "calendar:cadet_games",
+        "access_mode": "optional_open",
+        "target_slot_refs": [
+          "PLAYER",
+          "C1",
+          "C2"
+        ],
+        "day_index": 1,
+        "start_minute": 1090,
+        "end_minute": 1160,
+        "location_ref": "athletics_area",
+        "capacity": 3,
+        "required_location_capabilities": [
+          "competition"
+        ],
+        "priority": "low",
+        "preference_tags": [
+          "competition"
+        ]
+      },
+      {
+        "campus_event_id": "EV-ALERT",
+        "event_type": "crisis_alert",
+        "event_family": "environmental_alert",
+        "status": "active",
+        "authority_id": "ACADEMY_ALERT",
+        "cause_event_refs": [
+          "weather:severe_01"
+        ],
+        "access_mode": "mandatory_scope",
+        "target_slot_refs": [
+          "PLAYER",
+          "C1",
+          "C2"
+        ],
+        "day_index": 2,
+        "start_minute": 930,
+        "end_minute": 1010,
+        "location_ref": "academy_main_grounds",
+        "capacity": 20,
+        "required_location_capabilities": [
+          "emergency_muster"
+        ],
+        "priority": "emergency",
+        "preemption_policy": "preempt_lower_priority",
+        "preference_tags": []
+      }
+    ],
+    "existing_participation_plans": []
+  }
+}

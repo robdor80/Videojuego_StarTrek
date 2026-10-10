@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_campus_event_registry_contract",
+  "status": "STEP_15_COMPLETE",
+  "fields": [
+    "campus_event_registry_id",
+    "academic_period_ref",
+    "event_records",
+    "event_change_refs",
+    "participation_plan_refs",
+    "obligation_candidate_refs",
+    "schedule_revision_candidate_refs"
+  ],
+  "event_states": [
+    "scheduled",
+    "active",
+    "cancelled",
+    "completed"
+  ],
+  "change_types": [
+    "schedule",
+    "reschedule",
+    "activate",
+    "cancel",
+    "complete"
+  ],
+  "rules": [
+    "Event history is append-preserving.",
+    "Reschedule/cancel/activation requires explicit event provenance.",
+    "Save/load, materialization and player proximity cannot create/remove events.",
+    "Cancelled/completed events remain historically addressable.",
+    "Visitors remain separate Academy population category and cannot be silently added to cadet/staff counts."
+  ]
+}
