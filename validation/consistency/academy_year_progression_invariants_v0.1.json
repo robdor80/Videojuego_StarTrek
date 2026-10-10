@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_year_progression_invariants",
+  "status": "STEP_18_VALIDATED",
+  "cases": [
+    {
+      "id": "evidence_not_time",
+      "expected": [
+        "elapsed time alone cannot advance"
+      ]
+    },
+    {
+      "id": "single_failure_not_dismissal",
+      "expected": [
+        "ordinary failure routes to remediation/repeat"
+      ]
+    },
+    {
+      "id": "dismissal_authorized",
+      "expected": [
+        "dismissal requires explicit authority basis"
+      ]
+    },
+    {
+      "id": "specialization_year2",
+      "expected": [
+        "Year2 transition requires specialization"
+      ]
+    },
+    {
+      "id": "player_choice",
+      "expected": [
+        "player specialization explicit"
+      ]
+    },
+    {
+      "id": "year4_graduation_pending",
+      "expected": [
+        "no direct commission"
+      ]
+    },
+    {
+      "id": "continuity",
+      "expected": [
+        "identity/history persist"
+      ]
+    },
+    {
+      "id": "record_deferred",
+      "expected": [
+        "record integration Step19"
+      ]
+    }
+  ]
+}

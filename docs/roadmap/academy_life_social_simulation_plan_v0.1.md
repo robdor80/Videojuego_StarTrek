@@ -28,7 +28,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 15 | Campus events | COMPLETE |
 | 16 | Off-screen Academy life | COMPLETE |
 | 17 | Social LOD | COMPLETE |
-| 18 | Year progression and continuity | TODO |
+| 18 | Year progression and continuity | COMPLETE |
 | 19 | Academy-record integration | TODO |
 | 20 | Final fixtures, invariants, simulator and test closure | TODO |
 
@@ -726,3 +726,40 @@ Player proximity alone is insufficient to promote an NPC. Direct interaction, pe
 At low LOD, routine contact may aggregate, but friendship, romance, breakup, discipline, major conflict, injury and other consequential transitions still require explicit causal events. LOD is never permission to fabricate drama.
 
 **Boundary:** year progression remains Step 18; Academy-record integration Step 19.
+
+
+## Step 18 — Year progression and continuity
+
+Step 18 resolves Academy year outcomes from **consolidated evidence**, not from elapsed time.
+
+Standard class continuity is:
+- Year 1 → Cadet 4th Class;
+- Year 2 → Cadet 3rd Class;
+- Year 3 → Cadet 2nd Class;
+- Year 4 → Cadet 1st Class.
+
+Possible outcomes remain evidence/policy-driven: advance, advance with remediation, repeat selected modules, repeat academic year, authorized leave of absence, or dismissal.
+
+A single ordinary failed activity never causes automatic dismissal. Dismissal requires an explicit authorized institutional basis.
+
+### Specialization transition
+
+At the end of Year 2 / Cadet 3rd Class, advancement into Year 3 requires the specialization-selection transition defined by the Academy design.
+
+For the player, specialization is never auto-chosen. If no explicit valid choice exists, the academic result may be resolved but next-year activation remains pending the player's specialization decision.
+
+NPC specialization may use already represented branch-interest/evidence rules, but the decision must be persisted and may not reroll on materialization.
+
+### Final year
+
+Successful completion of Year 4 moves the cadet to **graduation_pending**. It does not directly award Ensign rank, commission or first assignment.
+
+Graduation/commission require the graduation process and record integration. The ceremony may be playable as already defined.
+
+### Continuity
+
+Advancement never replaces the character. Identity, relationships, mentorship history, disciplinary history, qualifications/evidence, social history and prior academic results persist across years.
+
+New-year schedules/groups/housing may be recalculated by their owning systems, but prior versions remain historical.
+
+**Boundary:** Academy-record integration remains Step 19; final full-system closure Step 20.

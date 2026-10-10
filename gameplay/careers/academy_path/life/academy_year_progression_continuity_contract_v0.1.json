@@ -1,0 +1,34 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_year_progression_continuity_contract",
+  "status": "STEP_18_COMPLETE",
+  "year_class_map": {
+    "1": "cadet_fourth_class",
+    "2": "cadet_third_class",
+    "3": "cadet_second_class",
+    "4": "cadet_first_class"
+  },
+  "outcomes": [
+    "advance",
+    "advance_with_remediation",
+    "repeat_selected_modules",
+    "repeat_academic_year",
+    "leave_of_absence",
+    "dismissal",
+    "graduation_pending"
+  ],
+  "rules": [
+    "Progression requires consolidated evidence and a completed academic period.",
+    "Elapsed time alone never advances a cadet.",
+    "Ordinary single failure cannot directly dismiss the cadet.",
+    "Dismissal requires explicit authorized dismissal basis.",
+    "Authorized leave may interrupt progression without erasing prior history.",
+    "Repeat selected modules and repeat year preserve all prior evidence/history.",
+    "At end of Year 2, Year 3 activation requires persisted specialization selection.",
+    "Player specialization choice is explicit and never inferred.",
+    "Successful Year 4 produces graduation_pending only.",
+    "Commission, Ensign rank and first assignment are downstream of graduation/record process.",
+    "Persistent identity, relationships, mentors, discipline, social history and prior results survive year transitions."
+  ],
+  "next_step_ref": "Step 19 — Academy-record integration"
+}

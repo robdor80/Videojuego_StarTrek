@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.23.0",
+  "schema_version": "0.24.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -107,7 +107,10 @@
     "offscreen_execution_event_refs": "academy_offscreen_event_ref_list",
     "offscreen_unresolved_choice_refs": "unresolved_player_choice_ref_list",
     "social_lod_registry_ref": "academy_social_lod_registry_ref",
-    "social_lod_transition_refs": "social_lod_transition_ref_list"
+    "social_lod_transition_refs": "social_lod_transition_ref_list",
+    "year_progression_decision_ref": "academy_year_progression_decision_ref",
+    "year_transition_action_refs": "academy_year_transition_action_ref_list",
+    "continuity_snapshot_ref": "academy_continuity_snapshot_ref"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -197,7 +200,11 @@
     "latent/materialized presentation state does not change authoritative off-screen outcomes",
     "social LOD changes simulation detail but never World Truth, identity or established history",
     "player proximity alone is not sufficient for Academy NPC LOD promotion",
-    "low-detail simulation may aggregate routine contact but cannot fabricate major relationship or career events"
+    "low-detail simulation may aggregate routine contact but cannot fabricate major relationship or career events",
+    "year progression requires consolidated academic/practical/evaluation/conduct evidence and never occurs from elapsed time alone",
+    "the player must explicitly choose specialization at the end of Year 2 before Year 3 activation",
+    "successful Year 4 completion moves to graduation_pending and does not directly award commission/rank",
+    "year transitions preserve persistent identity and all established history"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -215,5 +222,6 @@
   "obligation_consequence_contract_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
   "campus_event_contract_ref": "gameplay/careers/academy_path/life/academy_campus_event_contract_v0.1.json",
   "offscreen_life_contract_ref": "gameplay/careers/academy_path/life/academy_offscreen_life_contract_v0.1.json",
-  "social_lod_contract_ref": "gameplay/careers/academy_path/life/academy_social_lod_contract_v0.1.json"
+  "social_lod_contract_ref": "gameplay/careers/academy_path/life/academy_social_lod_contract_v0.1.json",
+  "year_progression_contract_ref": "gameplay/careers/academy_path/life/academy_year_progression_continuity_contract_v0.1.json"
 }

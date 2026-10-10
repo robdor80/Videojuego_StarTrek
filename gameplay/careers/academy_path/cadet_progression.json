@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.2.0",
   "standard_program_years": 4,
   "year_progression": [
     {
@@ -39,7 +39,8 @@
     "repeat_selected_modules",
     "repeat_academic_year",
     "leave_of_absence",
-    "dismissal"
+    "dismissal",
+    "graduation_pending"
   ],
   "era_treatment": {
     "pike": {
@@ -84,6 +85,9 @@
   "rules": [
     "Step-14 consequence/review events are inputs to later progression checks, not direct year-progression mutations.",
     "Repeat-year, leave-of-absence and dismissal outcomes are resolved at Academy Life Step 18.",
-    "A single ordinary failure does not automatically produce dismissal."
-  ]
+    "A single ordinary failure does not automatically produce dismissal.",
+    "Specialization selection occurs at the end of Year 2 / Cadet 3rd Class before Year 3 activation.",
+    "Successful Year 4 completion transitions to graduation_pending rather than directly commissioning the cadet."
+  ],
+  "year_progression_contract_ref": "gameplay/careers/academy_path/life/academy_year_progression_continuity_contract_v0.1.json"
 }

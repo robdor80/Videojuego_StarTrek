@@ -1,0 +1,18 @@
+{
+  "request": {
+    "academic_year": 2,
+    "is_player": true,
+    "evidence": {
+      "period_complete": true,
+      "failed_required_modules": 0,
+      "remediation_open": 0,
+      "practical_requirements_complete": true,
+      "conduct_status": "good"
+    },
+    "policy": {
+      "allow_advance_with_remediation": true,
+      "max_failed_modules_for_selected_repeat": 2
+    },
+    "specialization_selection": null
+  }
+}

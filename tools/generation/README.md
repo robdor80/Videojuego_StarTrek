@@ -115,3 +115,8 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 ### Academy Life Step 17 — social LOD
 - `resolve_academy_social_lod_step17.py` deterministically assigns simulation-detail tiers without changing persistent truth.
 - `test_resolve_academy_social_lod_step17.py` validates promotion/demotion detail semantics, history preservation and low-LOD event restrictions.
+
+
+### Academy Life Step 18 — year progression and continuity
+- `resolve_academy_year_progression_step18.py` resolves annual outcomes from consolidated evidence and authored policy.
+- `test_resolve_academy_year_progression_step18.py` validates remediation/repeat/leave/dismissal gates, specialization transition, final-year graduation-pending and continuity.

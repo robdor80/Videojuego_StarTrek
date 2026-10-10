@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 17,
+    "complete": 18,
     "partial": 0,
-    "todo": 3,
-    "current_step": 17
+    "todo": 2,
+    "current_step": 18
   },
   "steps": [
     {
@@ -97,7 +97,7 @@
     },
     {
       "step": 18,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Year progression and continuity"
     },
     {
@@ -425,6 +425,26 @@
     "materialization_not_identity_creation": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 24,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_18": {
+    "evidence_based_year_resolution": "COMPLETE",
+    "four_year_class_mapping": "COMPLETE",
+    "advance_and_remediation_paths": "COMPLETE",
+    "repeat_module_and_repeat_year_paths": "COMPLETE",
+    "authorized_leave_path": "COMPLETE",
+    "dismissal_requires_authorized_basis": "COMPLETE",
+    "single_failure_not_auto_dismissal": "COMPLETE",
+    "specialization_transition_end_year2": "COMPLETE",
+    "player_specialization_choice_explicit": "COMPLETE",
+    "final_year_to_graduation_pending": "COMPLETE",
+    "no_direct_commission_or_rank_award": "COMPLETE",
+    "continuity_preserves_relationships_history": "COMPLETE",
+    "next_year_population_identity_preserved": "COMPLETE",
+    "elapsed_time_not_progression": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 28,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

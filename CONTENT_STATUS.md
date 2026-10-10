@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–17/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–18/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -475,7 +475,16 @@ Current status:
 - low LOD may aggregate routine contact but cannot invent friendship, romance, breakup, discipline or other major events;
 - **24 executable Step-17 tests defined**.
 
-**Strict sequence:** Step 18 — Year progression and continuity is next and has not been started.
+- annual progression consumes consolidated evidence rather than elapsed time;
+- all six existing outcome families are supported without treating ordinary failure as game over;
+- dismissal requires explicit authorized basis;
+- end of Year 2 / Cadet 3rd Class requires specialization selection before Year 3 activation;
+- player specialization is never auto-chosen;
+- successful Year 4 completion transitions to graduation_pending, not direct commission/rank;
+- identity, relationships, mentor/disciplinary/social/academic history persist across transitions;
+- **28 executable Step-18 tests defined**.
+
+**Strict sequence:** Step 19 — Academy-record integration is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 
