@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "academy_year_progression_continuity_contract",
   "status": "STEP_18_COMPLETE",
   "year_class_map": {
@@ -28,7 +28,9 @@
     "Player specialization choice is explicit and never inferred.",
     "Successful Year 4 produces graduation_pending only.",
     "Commission, Ensign rank and first assignment are downstream of graduation/record process.",
-    "Persistent identity, relationships, mentors, discipline, social history and prior results survive year transitions."
+    "Persistent identity, relationships, mentors, discipline, social history and prior results survive year transitions.",
+    "Authorized leave or dismissal may interrupt an academic period before normal period-completion progression checks.",
+    "When Year-2 academic advancement is resolved but required player specialization is still missing, Year 3 is a target only and is not activated."
   ],
   "next_step_ref": "Step 19 — Academy-record integration"
 }

@@ -45,4 +45,14 @@ class T(unittest.TestCase):
   r=req();r["ai_summary"]="graduated with honors";self.assertEqual(m.resolve(r),out())
  def test_27(self):self.assertEqual(out()["academy_completion_unlock_candidates"][0]["specialization_if_any"],"sensors")
  def test_28(self):self.assertEqual(out()["academy_completion_unlock_candidates"][0]["player_profile_ref"],"profile:1")
+ def test_29_canonical_graduation_family_creates_unlock(self):
+  r=req();r["evidence_events"]=[{"family":"academy_graduation","source_event_id":"grad:canonical","confirmed":True,"payload":{"specialization":"sensors"}}];self.assertEqual(len(m.resolve(r)["academy_completion_unlock_candidates"]),1)
+ def test_30_source_family_preserves_practical_semantics(self):
+  r=req();r["evidence_events"]=[{"family":"practical_evaluation","source_event_id":"prac:1","confirmed":True}];e=m.resolve(r)["appended_record_events"][0];self.assertEqual(e["event_type"],"academic_evaluation");self.assertEqual(e["source_family"],"practical_evaluation")
+ def test_31_same_source_different_record_families_do_not_collide(self):
+  r=req();r["evidence_events"]=[{"family":"academic_evaluation","source_event_id":"same:1","confirmed":True},{"family":"enrichment_completion","source_event_id":"same:1","confirmed":True}];self.assertEqual(len(m.resolve(r)["appended_record_events"]),2)
+ def test_32_missing_source_event_id_is_rejected_not_crash(self):
+  r=req();r["evidence_events"]=[{"family":"academic_evaluation","confirmed":True}];self.assertEqual(m.resolve(r)["rejected_or_unresolved"][0]["reason"],"missing_source_event_id")
+ def test_33_all_contract_canonical_families_are_accepted(self):
+  fams=list(m.CANONICAL_TO_EVENT);r=req();r["evidence_events"]=[{"family":f,"source_event_id":"src:"+str(i),"confirmed":True} for i,f in enumerate(fams)];self.assertEqual(len(m.resolve(r)["appended_record_events"]),len(fams))
 if __name__=="__main__":unittest.main()

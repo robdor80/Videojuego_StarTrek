@@ -1,11 +1,12 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "model_id": "academy_record",
   "storage": "append_only_event_log",
   "event_fields": [
     "record_event_id",
     "cadet_ref",
     "event_type",
+    "source_family",
     "effective_date",
     "source_event_id",
     "authority_id_if_any",

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "academy_record_integration_contract",
   "status": "STEP_19_COMPLETE",
   "record_model": "append_only_event_log",
@@ -27,7 +27,10 @@
     "Year 4 completion alone cannot create graduation or commission.",
     "Graduation alone cannot create first assignment.",
     "Confirmed player graduation may create persistent Academy-completion unlock evidence.",
-    "Unlock evidence permits future campaign option logic but does not guarantee a first posting."
+    "Unlock evidence permits future campaign option logic but does not guarantee a first posting.",
+    "The resolver accepts the canonical recordable family names declared by this contract; legacy short aliases are compatibility-only.",
+    "Every appended record event preserves source_family so practical evaluation, enrichment completion and other semantically distinct inputs are not lost when they share a broader service-record event type.",
+    "Idempotence is keyed by canonical record family plus source event id."
   ],
   "next_step_ref": "Step 20 — Final closure"
 }

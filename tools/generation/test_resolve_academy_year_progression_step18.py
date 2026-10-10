@@ -52,4 +52,10 @@ class T(unittest.TestCase):
   r=req();r["academic_year"]=4;self.assertEqual(m.resolve(r)["next_academy_status"],"graduation_pending")
  def test_28(self):
   r=req();r["academic_year"]=4;self.assertIsNone(m.resolve(r)["direct_commission_award"])
+ def test_29_leave_can_interrupt_incomplete_period(self):
+  r=req();r["evidence"]["period_complete"]=False;r["authorized_leave_ref"]="leave:midyear";self.assertEqual(m.resolve(r)["outcome"],"leave_of_absence")
+ def test_30_dismissal_can_interrupt_incomplete_period(self):
+  r=req();r["evidence"]["period_complete"]=False;r["authorized_dismissal_ref"]="dismiss:midyear";self.assertEqual(m.resolve(r)["outcome"],"dismissal")
+ def test_31_year3_not_activated_before_player_specialization(self):
+  o=m.resolve(req());self.assertEqual(o["next_year"],3);self.assertEqual(o["active_year_after_resolution"],2);self.assertEqual(o["next_academy_status"],"year_3_activation_pending_specialization")
 if __name__=="__main__":unittest.main()
