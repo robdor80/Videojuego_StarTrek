@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "standard_program_years": 4,
   "year_progression": [
     {
@@ -79,5 +79,11 @@
       "source_id": "MA_STARFLEET_RANKS_CADETS",
       "confidence": "HIGH"
     }
+  ],
+  "obligation_consequence_integration_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
+  "rules": [
+    "Step-14 consequence/review events are inputs to later progression checks, not direct year-progression mutations.",
+    "Repeat-year, leave-of-absence and dismissal outcomes are resolved at Academy Life Step 18.",
+    "A single ordinary failure does not automatically produce dismissal."
   ]
 }

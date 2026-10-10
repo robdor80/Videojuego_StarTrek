@@ -1,0 +1,206 @@
+{
+  "fixture_id": "academy_obligations_consequences_baseline_v0.1",
+  "classification": "FICTIONAL_VALIDATION_FIXTURE_NOT_CANON",
+  "request": {
+    "cadets": [
+      {
+        "population_slot_ref": "PLAYER",
+        "is_player": true,
+        "species_id": "human"
+      },
+      {
+        "population_slot_ref": "C1",
+        "is_player": false,
+        "species_id": "vulcan"
+      },
+      {
+        "population_slot_ref": "C2",
+        "is_player": false,
+        "species_id": "andorian"
+      }
+    ],
+    "authorities": [
+      {
+        "authority_id": "DEAN",
+        "scopes": [
+          "approve_justification",
+          "formal_discipline"
+        ],
+        "max_measure_severity": 3
+      },
+      {
+        "authority_id": "MEDICAL",
+        "scopes": [
+          "approve_justification"
+        ],
+        "max_measure_severity": 0
+      }
+    ],
+    "obligations": [
+      {
+        "obligation_id": "O1",
+        "population_slot_ref": "PLAYER",
+        "obligation_type": "class",
+        "obligation_family": "attendance",
+        "mandatory": true,
+        "start_minute": 100,
+        "end_minute": 160,
+        "tolerance_minutes": 5,
+        "makeup_required_when_excused": true
+      },
+      {
+        "obligation_id": "O2",
+        "population_slot_ref": "C1",
+        "obligation_type": "practical",
+        "obligation_family": "attendance",
+        "mandatory": true,
+        "start_minute": 200,
+        "end_minute": 260,
+        "tolerance_minutes": 10,
+        "formal_review_recurrence_threshold": 2
+      },
+      {
+        "obligation_id": "O3",
+        "population_slot_ref": "C2",
+        "obligation_type": "duty",
+        "obligation_family": "conduct",
+        "mandatory": true,
+        "start_minute": 300,
+        "end_minute": 360,
+        "tolerance_minutes": 0
+      },
+      {
+        "obligation_id": "O4",
+        "population_slot_ref": "PLAYER",
+        "obligation_type": "extracurricular_session",
+        "obligation_family": "voluntary",
+        "mandatory": false,
+        "start_minute": 400,
+        "end_minute": 460,
+        "withdrawal_deadline_minute": 390
+      },
+      {
+        "obligation_id": "O5",
+        "population_slot_ref": "C1",
+        "obligation_type": "class",
+        "obligation_family": "attendance",
+        "mandatory": true,
+        "start_minute": 500,
+        "end_minute": 560,
+        "tolerance_minutes": 10
+      },
+      {
+        "obligation_id": "O6",
+        "population_slot_ref": "C1",
+        "obligation_type": "assessment",
+        "obligation_family": "academic",
+        "mandatory": true,
+        "start_minute": 600,
+        "end_minute": 660,
+        "tolerance_minutes": 0
+      }
+    ],
+    "obligation_evidence": [
+      {
+        "event_id": "E1",
+        "obligation_id": "O1",
+        "population_slot_ref": "PLAYER",
+        "outcome": "absent",
+        "confirmed": true,
+        "cause_event_refs": [
+          "absence:1"
+        ]
+      },
+      {
+        "event_id": "E2",
+        "obligation_id": "O2",
+        "population_slot_ref": "C1",
+        "outcome": "absent",
+        "confirmed": true,
+        "cause_event_refs": [
+          "absence:2"
+        ]
+      },
+      {
+        "event_id": "E3",
+        "obligation_id": "O3",
+        "population_slot_ref": "C2",
+        "outcome": "disobeyed_order",
+        "confirmed": true,
+        "cause_event_refs": [
+          "order:3",
+          "damage:3"
+        ],
+        "intent": "deliberate",
+        "harm_level": "moderate",
+        "severity_candidate": 3
+      },
+      {
+        "event_id": "E4",
+        "obligation_id": "O4",
+        "population_slot_ref": "PLAYER",
+        "outcome": "authorized_withdrawal",
+        "occurred_minute": 380,
+        "confirmed": true,
+        "cause_event_refs": [
+          "withdraw:4"
+        ]
+      },
+      {
+        "event_id": "E5",
+        "obligation_id": "O5",
+        "population_slot_ref": "C1",
+        "outcome": "late",
+        "actual_start_minute": 507,
+        "confirmed": true,
+        "cause_event_refs": [
+          "arrival:5"
+        ]
+      },
+      {
+        "event_id": "E6",
+        "obligation_id": "O6",
+        "population_slot_ref": "C1",
+        "outcome": "incomplete",
+        "confirmed": true,
+        "cause_event_refs": [
+          "assessment:6"
+        ]
+      }
+    ],
+    "justifications": [
+      {
+        "justification_id": "J1",
+        "obligation_id": "O1",
+        "population_slot_ref": "PLAYER",
+        "status": "approved",
+        "reason_code": "approved_medical",
+        "authority_id": "MEDICAL",
+        "cause_event_refs": [
+          "medical:1"
+        ]
+      }
+    ],
+    "prior_consequence_history": [
+      {
+        "population_slot_ref": "C1",
+        "obligation_family": "attendance",
+        "counts_for_recurrence": true,
+        "ref": "old:attendance"
+      }
+    ],
+    "disciplinary_decisions": [
+      {
+        "decision_id": "D1",
+        "obligation_id": "O3",
+        "population_slot_ref": "C2",
+        "measure_id": "formal_reprimand",
+        "authority_id": "DEAN",
+        "confirmed": true,
+        "cause_event_refs": [
+          "review:D1"
+        ]
+      }
+    ]
+  }
+}

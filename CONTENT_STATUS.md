@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–13/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance**;
+- **Steps 1–14/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -435,7 +435,19 @@ Current status:
 - Step 13 emits no academic/disciplinary/obligation consequence; that remains Step 14;
 - **30 executable Step-13 tests pass against the locked fixture**.
 
-**Strict sequence:** Step 14 — Obligations and consequences is next and has not been started.
+- obligations must pre-exist and consequences require confirmed event evidence;
+- fulfilled, late, absent, incomplete, withdrawn and conduct-breach outcomes remain distinct;
+- approved medical/leave/institutional/emergency/accommodation reasons can create no-fault absence;
+- no-fault absence may still require make-up activity without becoming punishment;
+- incomplete academic performance may require remediation without being classified as misconduct;
+- repeated unexcused failures may cross an authored formal-review threshold;
+- Starfleet's non-universal sentencing principle is preserved;
+- formal discipline requires review basis, competent authority, provenance and proportionality;
+- the resolver never autonomously chooses a formal punishment and never forces player confession/excuse;
+- final record writes remain Step 19 and annual progression/dismissal decisions remain Step 18;
+- **32 executable Step-14 tests pass against the locked fixture**.
+
+**Strict sequence:** Step 15 — Campus events is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

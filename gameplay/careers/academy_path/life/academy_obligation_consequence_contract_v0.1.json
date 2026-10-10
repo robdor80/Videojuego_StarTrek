@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_obligation_consequence_contract",
+  "status": "STEP_14_COMPLETE",
+  "classification": "GAME_ADDITION_CORE_CANDIDATE",
+  "principle": "Consequences derive from real obligations plus confirmed evidence and context. Failure is not automatically misconduct; formal discipline requires due process and competent authority.",
+  "obligation_outcomes": [
+    "fulfilled",
+    "fulfilled_within_tolerance",
+    "late_breach",
+    "excused",
+    "no_fault_absence",
+    "unexcused_absence",
+    "performance_breach",
+    "authorized_withdrawal",
+    "conduct_breach",
+    "unresolved"
+  ],
+  "consequence_families": [
+    "make_up_required",
+    "remediation_required",
+    "attendance_concern",
+    "formal_review_candidate",
+    "validated_disciplinary_action"
+  ],
+  "no_fault_reasons": [
+    "approved_medical",
+    "authorized_leave",
+    "institutional_schedule_conflict",
+    "emergency_preemption",
+    "authorized_accommodation"
+  ],
+  "rules": [
+    "An obligation must exist before a breach/consequence can exist.",
+    "Only confirmed evidence with provenance may resolve an obligation.",
+    "Academic failure/incompletion may require remediation without being misconduct.",
+    "Approved no-fault context may excuse fault while preserving make-up requirements.",
+    "Make-up and remediation are not punishment by themselves.",
+    "Wellbeing state alone neither excuses nor condemns an obligation outcome.",
+    "Repeated unexcused failures may trigger review only through authored recurrence thresholds.",
+    "Formal discipline requires a review basis and cannot be created directly from lateness/absence labels.",
+    "Intent, harm, orders, context and prior history are relevant to review severity.",
+    "There is no universal offense-to-sentence table.",
+    "Formal measure selection must be an explicitly represented decision, not resolver improvisation.",
+    "Competent authority and authority severity limits are mandatory.",
+    "Disproportionate measures are rejected.",
+    "The player is never assigned a confession, justification, appeal or acceptance automatically.",
+    "Final record write is deferred to Step 19.",
+    "Year advancement/repetition/leave/dismissal resolution is deferred to Step 18."
+  ],
+  "dependencies": [
+    "lore/federation/starfleet/disciplinary_system/discipline_model.json",
+    "gameplay/careers/academy_path/evaluation_model.json",
+    "gameplay/careers/academy_path/cadet_progression.json",
+    "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
+  ],
+  "next_step_ref": "Step 15 — Campus events"
+}

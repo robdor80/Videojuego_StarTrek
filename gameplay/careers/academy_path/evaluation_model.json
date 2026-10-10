@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.2.0",
+  "schema_version": "0.2.1",
   "internal_score_range": [
     0,
     100
@@ -72,5 +72,11 @@
     ],
     "rule": "If a question cannot be answered unambiguously from taught material, it is invalid.",
     "complex_competence_assessment": "gameplay_practice_or_simulation"
-  }
+  },
+  "obligation_consequence_integration_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
+  "rules": [
+    "A missed/incomplete required evaluation may create remediation or make-up requirements through Step 14.",
+    "Remediation is not itself a misconduct finding.",
+    "Disciplinary findings cannot fabricate or directly replace academic score evidence."
+  ]
 }

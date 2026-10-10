@@ -1,0 +1,24 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_due_process_contract",
+  "status": "STEP_14_COMPLETE",
+  "required_formal_review_context": [
+    "recorded_breach_or_recurrence",
+    "confirmed_provenance",
+    "intent_if_known",
+    "harm_or_consequence_if_any",
+    "orders_or_rule_context_if_any",
+    "prior_relevant_history",
+    "competent_authority"
+  ],
+  "rules": [
+    "A review candidate is not itself a punishment.",
+    "The resolver may validate a represented disciplinary decision but must never choose one merely from the offense type.",
+    "Authority scope and maximum permitted severity are validated.",
+    "A measure grossly disproportionate to represented review severity is rejected.",
+    "No-fault or approved justified events cannot be used as recurrence counts for misconduct.",
+    "A rejected/invalid disciplinary decision changes no conduct state.",
+    "Final permanent-record integration remains Step 19."
+  ],
+  "discipline_model_ref": "lore/federation/starfleet/disciplinary_system/discipline_model.json"
+}

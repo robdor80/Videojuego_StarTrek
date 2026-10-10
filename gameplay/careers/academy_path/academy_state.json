@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.19.0",
+  "schema_version": "0.20.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -92,7 +92,12 @@
     "mentor_recommendation_evidence_refs": "mentor_recommendation_evidence_ref_list",
     "wellbeing_profile_ref": "character_wellbeing_profile_ref",
     "wellbeing_snapshot_ref": "character_wellbeing_snapshot_ref",
-    "routine_observation_candidate_refs": "routine_observation_candidate_ref_list"
+    "routine_observation_candidate_refs": "routine_observation_candidate_ref_list",
+    "obligation_registry_ref": "academy_obligation_registry_id",
+    "obligation_resolution_refs": "academy_obligation_resolution_ref_list",
+    "consequence_event_refs": "academy_consequence_event_ref_list",
+    "formal_discipline_review_refs": "academy_formal_discipline_review_ref_list",
+    "validated_disciplinary_action_refs": "disciplinary_action_event_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -159,7 +164,14 @@
     "balanced wellbeing preserves normal capacity and never grants superhuman competence",
     "wellbeing may alter character-side assistance/readiness but never authoritative World Truth",
     "player dialogue/actions are never forced by fatigue, stress or balance state",
-    "Step 13 produces no formal academic, disciplinary or obligation consequence; those remain Step 14"
+    "Step 13 produces no formal academic, disciplinary or obligation consequence; those remain Step 14",
+    "Academy consequences require a pre-existing obligation and confirmed evidence; no obligation is invented for drama",
+    "incomplete academic performance may require remediation without being treated as misconduct",
+    "approved medical/leave/institutional/emergency/accommodation context may create no-fault resolution while still requiring make-up work",
+    "wellbeing state is contextual evidence and never an automatic excuse or sanction",
+    "formal discipline requires review basis, competent authority, confirmed provenance and proportionality",
+    "there is no universal offense-to-punishment table and the resolver does not autonomously choose formal sanctions",
+    "Step 14 does not write final records or decide year progression; those remain Steps 19 and 18"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -173,5 +185,6 @@
   "romance_dating_contract_ref": "gameplay/careers/academy_path/life/academy_romance_dating_contract_v0.1.json",
   "npc_relationship_contract_ref": "gameplay/careers/academy_path/life/academy_npc_relationship_evolution_contract_v0.1.json",
   "mentor_instructor_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json",
-  "wellbeing_balance_contract_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
+  "wellbeing_balance_contract_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json",
+  "obligation_consequence_contract_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json"
 }

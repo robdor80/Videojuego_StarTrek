@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "measures": [
     {
       "id": "warning",
@@ -84,5 +84,13 @@
       "source_id": "VOY_THIRTY_DAYS_REFERENCE",
       "confidence": "HIGH"
     }
+  ],
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
+  "rules": [
+    "A formal disciplinary measure requires a represented review basis and competent authority.",
+    "The system does not select a measure solely from an offense label.",
+    "Academic remediation and make-up requirements are not automatically disciplinary measures.",
+    "Approved no-fault absence cannot be reclassified as misconduct merely because recovery work is required.",
+    "Academy final record integration remains a separate downstream process."
   ]
 }

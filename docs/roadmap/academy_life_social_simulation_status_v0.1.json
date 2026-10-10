@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 13,
+    "complete": 14,
     "partial": 0,
-    "todo": 7,
-    "current_step": 13
+    "todo": 6,
+    "current_step": 14
   },
   "steps": [
     {
@@ -77,7 +77,7 @@
     },
     {
       "step": 14,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Obligations and consequences"
     },
     {
@@ -340,6 +340,29 @@
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 30,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_14": {
+    "obligation_registry_and_evidence": "COMPLETE",
+    "fulfillment_lateness_absence_incomplete_classification": "COMPLETE",
+    "justified_no_fault_absence": "COMPLETE",
+    "makeup_without_discipline": "COMPLETE",
+    "remediation_without_misconduct_assumption": "COMPLETE",
+    "recurrence_tracking": "COMPLETE",
+    "formal_review_candidate_gating": "COMPLETE",
+    "intent_harm_orders_context": "COMPLETE",
+    "competent_authority_required": "COMPLETE",
+    "proportionality_guard": "COMPLETE",
+    "no_universal_sentencing_table": "COMPLETE",
+    "wellbeing_context_not_automatic_excuse": "COMPLETE",
+    "voluntary_withdrawal_without_breach": "COMPLETE",
+    "no_forced_player_confession_or_response": "COMPLETE",
+    "record_write_deferred_to_step_19": "COMPLETE",
+    "year_progression_deferred_to_step_18": "COMPLETE",
+    "species_materialization_player_proximity_nonselectors": "COMPLETE",
+    "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 32,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

@@ -1,0 +1,13 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_remediation_and_makeup_contract",
+  "status": "STEP_14_COMPLETE",
+  "rules": [
+    "Make-up restores an uncompleted required opportunity; it is not automatically punishment.",
+    "Remediation addresses insufficient academic/practical performance and is not automatically misconduct.",
+    "Excused absence may still require make-up if the learning/duty requirement remains unmet.",
+    "Successful remediation does not erase the historical event that caused it.",
+    "Remediation completion and academic score effects are resolved by the appropriate evaluation system.",
+    "Repeated failure after remediation may become progression evidence but Step 18 owns annual outcome."
+  ]
+}

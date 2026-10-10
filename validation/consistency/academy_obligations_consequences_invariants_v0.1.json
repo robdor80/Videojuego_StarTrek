@@ -1,0 +1,199 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_obligations_consequences_invariants",
+  "status": "STEP_14_VALIDATED",
+  "cases": [
+    {
+      "id": "obligation_preexists",
+      "expected": [
+        "no breach/consequence without pre-existing obligation"
+      ]
+    },
+    {
+      "id": "confirmed_evidence",
+      "expected": [
+        "resolution requires confirmed provenance-backed evidence"
+      ]
+    },
+    {
+      "id": "cadet_match",
+      "expected": [
+        "evidence/justification must match obligation cadet"
+      ]
+    },
+    {
+      "id": "lateness_tolerance",
+      "expected": [
+        "lateness inside authored tolerance is not a breach"
+      ]
+    },
+    {
+      "id": "justified_absence_no_fault",
+      "expected": [
+        "approved no-fault reason creates no misconduct finding"
+      ]
+    },
+    {
+      "id": "makeup_not_punishment",
+      "expected": [
+        "excused absence may require make-up without discipline"
+      ]
+    },
+    {
+      "id": "incomplete_not_misconduct",
+      "expected": [
+        "performance failure may create remediation without misconduct"
+      ]
+    },
+    {
+      "id": "wellbeing_context_only",
+      "expected": [
+        "fatigue/stress alone neither excuses nor sanctions"
+      ]
+    },
+    {
+      "id": "voluntary_withdrawal",
+      "expected": [
+        "valid timely withdrawal from voluntary commitment creates no breach"
+      ]
+    },
+    {
+      "id": "recurrence_only_unexcused",
+      "expected": [
+        "only configured qualifying prior history counts toward recurrence"
+      ]
+    },
+    {
+      "id": "review_not_punishment",
+      "expected": [
+        "formal review candidate is not itself sanction"
+      ]
+    },
+    {
+      "id": "intent_context",
+      "expected": [
+        "intent/harm/orders/context may inform review severity"
+      ]
+    },
+    {
+      "id": "no_universal_sentence",
+      "expected": [
+        "resolver has no offense-to-fixed-punishment rule"
+      ]
+    },
+    {
+      "id": "explicit_decision",
+      "expected": [
+        "formal measure must be explicitly represented"
+      ]
+    },
+    {
+      "id": "competent_authority",
+      "expected": [
+        "formal decision requires authority scope"
+      ]
+    },
+    {
+      "id": "authority_severity",
+      "expected": [
+        "authority cannot impose above its represented severity limit"
+      ]
+    },
+    {
+      "id": "proportionality",
+      "expected": [
+        "grossly disproportionate formal measure is rejected"
+      ]
+    },
+    {
+      "id": "invalid_decision_no_mutation",
+      "expected": [
+        "rejected decision changes no conduct state"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "no automatic confession, excuse, appeal or acceptance"
+      ]
+    },
+    {
+      "id": "species_irrelevant",
+      "expected": [
+        "species does not change obligation resolution"
+      ]
+    },
+    {
+      "id": "materialization_irrelevant",
+      "expected": [
+        "latent/materialized state does not change consequence"
+      ]
+    },
+    {
+      "id": "player_proximity_irrelevant",
+      "expected": [
+        "player presence/location does not affect NPC consequence"
+      ]
+    },
+    {
+      "id": "record_write_deferred",
+      "expected": [
+        "permanent record write remains Step 19"
+      ]
+    },
+    {
+      "id": "progression_deferred",
+      "expected": [
+        "advance/repeat/leave/dismissal remains Step 18"
+      ]
+    },
+    {
+      "id": "campus_events_deferred",
+      "expected": [
+        "campus events remain Step 15"
+      ]
+    },
+    {
+      "id": "offscreen_deferred",
+      "expected": [
+        "off-screen catch-up remains Step 16"
+      ]
+    },
+    {
+      "id": "social_lod_deferred",
+      "expected": [
+        "social LOD remains Step 17"
+      ]
+    },
+    {
+      "id": "history_persistent",
+      "expected": [
+        "resolved obligation/consequence history remains addressable"
+      ]
+    },
+    {
+      "id": "remediation_evidence_based",
+      "expected": [
+        "remediation references actual incomplete/failed required activity"
+      ]
+    },
+    {
+      "id": "discipline_model_reused",
+      "expected": [
+        "Academy discipline reuses Starfleet discipline model rather than duplicate sentencing table"
+      ]
+    },
+    {
+      "id": "no_game_over_from_single_failure",
+      "expected": [
+        "ordinary single failure cannot directly terminate campaign"
+      ]
+    },
+    {
+      "id": "downstream_separation",
+      "expected": [
+        "Step 14 does not perform Step 18 or Step 19 mutations"
+      ]
+    }
+  ]
+}

@@ -92,3 +92,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_wellbeing_step13.py` derives individualized acute/weekly/monthly wellbeing from confirmed actual activity and emits routine-observation candidates.
 - `test_resolve_academy_wellbeing_step13.py` validates longitudinal behavior, profile-based sleep/load/recovery, no universal activity rewards, no superhuman bonuses, player agency, World-Truth isolation and strict Step-14+ boundaries.
+
+
+### Academy Life Step 14 — obligations and consequences
+
+- `resolve_academy_obligations_consequences_step14.py` resolves mandatory/voluntary Academy obligations from confirmed evidence, represented justifications, recurrence and authority-gated disciplinary decisions.
+- `test_resolve_academy_obligations_consequences_step14.py` validates no-fault absence, make-up/remediation, lateness tolerance, recurrence, formal-review gating, authority, proportionality, player agency and strict Step-15+ boundaries.

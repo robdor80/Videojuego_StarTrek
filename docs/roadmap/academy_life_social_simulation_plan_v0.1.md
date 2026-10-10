@@ -24,7 +24,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 11 | NPC↔NPC relationships | COMPLETE |
 | 12 | Mentors and instructors | COMPLETE |
 | 13 | Wellbeing and balance | COMPLETE |
-| 14 | Obligations and consequences | TODO |
+| 14 | Obligations and consequences | COMPLETE |
 | 15 | Campus events | TODO |
 | 16 | Off-screen Academy life | TODO |
 | 17 | Social LOD | TODO |
@@ -520,3 +520,84 @@ It does **not**:
 Those causal obligation/consequence rules remain Step 14.
 
 **Boundary:** obligations/consequences remain Step 14; campus events Step 15; off-screen Academy life Step 16; social LOD Step 17.
+
+
+## Step 14 — Obligations and consequences
+
+Step 14 closes the Academy's **obligation-resolution and consequence pipeline**.
+
+The system begins from a pre-existing real obligation and authoritative evidence. It never invents a missed class, failed duty or disciplinary incident merely to create drama.
+
+The causal chain is:
+
+`obligation → confirmed evidence → justification/context → resolution → proportionate consequence or review → authorized decision`
+
+### Obligation outcomes
+
+The resolver distinguishes:
+- fulfilled;
+- fulfilled within lateness tolerance;
+- late breach;
+- excused/no-fault absence;
+- unexcused absence;
+- incomplete/failed required activity;
+- authorized withdrawal;
+- conduct/safety/order breach;
+- unresolved/missing evidence.
+
+**Failure to perform is not automatically misconduct.** An incomplete assessment may require remediation without creating a disciplinary offense.
+
+### Justification and no-fault cases
+
+Represented approved contexts may include:
+- authorized medical reason;
+- authorized leave;
+- institutional schedule conflict;
+- emergency preemption;
+- authorized accommodation.
+
+A justified absence may still require a make-up activity. **Make-up work is not punishment.**
+
+Wellbeing from Step 13 is relevant context but never an automatic excuse. A fatigue/stress state only changes obligation status when an authorized rule/process actually grants accommodation, medical restriction or other recognized justification.
+
+### Recurrence
+
+Repeated unexcused failures may accumulate evidence and cross an authored review threshold. Recurrence does not retroactively turn earlier no-fault/justified events into misconduct.
+
+### Discipline and due process
+
+The project-wide Starfleet rule remains: there is **no universal sentencing table** of “offense X = punishment Y”.
+
+Formal discipline requires:
+- a recorded conduct/order/safety breach or qualifying recurrent pattern;
+- intent/harm/order/context where relevant;
+- a formal review basis;
+- competent authority;
+- confirmed decision provenance;
+- authority sufficient for the measure;
+- proportionality to the reviewed context.
+
+The resolver may validate an explicitly represented disciplinary decision, but it does **not choose a punishment autonomously**.
+
+Invalid authority or a disproportionate measure is rejected.
+
+### Player agency
+
+The system never invents a confession, excuse, appeal or acceptance for the player. Missing player action remains unresolved where that action is required.
+
+### Strict downstream boundaries
+
+Step 14 may produce:
+- make-up requirements;
+- remediation requirements;
+- attendance/conduct concern records;
+- formal-review candidates;
+- validated disciplinary-action events.
+
+It does **not** directly:
+- write the final Academy/service record — Step 19;
+- decide annual advancement/repetition/dismissal — Step 18;
+- invent campus-wide events — Step 15;
+- execute off-screen catch-up — Step 16.
+
+**Boundary:** campus events remain Step 15; off-screen Academy life Step 16; social LOD Step 17; year progression Step 18; Academy-record integration Step 19.

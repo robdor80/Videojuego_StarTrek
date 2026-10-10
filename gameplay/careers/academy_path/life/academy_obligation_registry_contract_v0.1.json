@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_obligation_registry_contract",
+  "status": "STEP_14_COMPLETE",
+  "obligation_fields": [
+    "obligation_id",
+    "population_slot_ref",
+    "obligation_type",
+    "obligation_family",
+    "mandatory",
+    "start",
+    "end",
+    "tolerance",
+    "source_ref",
+    "authority_context_ref",
+    "makeup_policy",
+    "formal_review_recurrence_threshold_if_any"
+  ],
+  "evidence_fields": [
+    "event_id",
+    "obligation_id",
+    "population_slot_ref",
+    "outcome",
+    "confirmed",
+    "cause_event_refs",
+    "reason_code_if_any",
+    "intent_if_relevant",
+    "harm_level_if_relevant"
+  ],
+  "resolution_fields": [
+    "obligation_id",
+    "resolution",
+    "fault",
+    "evidence_refs",
+    "justification_ref_if_any",
+    "consequence_refs"
+  ],
+  "rules": [
+    "One obligation identity is persistent and cannot be created retroactively from its breach.",
+    "Schedule/attendance/activity evidence must reference the same cadet as the obligation.",
+    "Resolved no-fault events remain historically addressable.",
+    "Voluntary obligations may be withdrawn without breach when withdrawal rules are satisfied.",
+    "Save/load/materialization cannot alter already resolved obligation history."
+  ]
+}
