@@ -107,7 +107,7 @@ Step 1 deliberately does **not** implement:
 
 ## Deferred external work
 
-**Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life & Social Simulation Step 20 is COMPLETE.** After Step 20, work returns to Dynamic Universe Block 4 before Block 5.
+**Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy is READY_TO_RESUME.** The Academy Step-20 gate is closed; Block 4 is the next Dynamic Universe work item before Block 5.
 
 ## Step 2 — Procedural cadet generation
 

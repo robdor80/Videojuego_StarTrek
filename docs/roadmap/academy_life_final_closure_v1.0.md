@@ -14,10 +14,14 @@ This repository owns Star Trek domain rules, content, deterministic reference be
 
 ## Validation
 
-The final manifest enumerates 20 test scripts. There are 439 tests defined across Steps 1–19 plus 20 final closure tests = **459 defined tests**.
+The final manifest enumerates 20 test scripts. There are 462 tests defined across Steps 1–19 plus 20 final closure tests = **482 defined tests**.
 
-The CI workflow `.github/workflows/academy-life-closure.yml` executes all twenty Academy Life reference test scripts on changes to Academy-life code/contracts.
+The CI workflow `.github/workflows/academy-life-closure.yml` is configured to run the repository audit and the manifest-driven suite runner for all twenty Academy Life test scripts.
 
 ## Next roadmap item
 
 With the Academy gate closed, **Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy** is READY TO RESUME.
+
+## Closure audit hardening
+
+The final validator now inspects the repository itself: 20/20 status, JSON readability, referenced-file existence, canon lock, append-only record model, canonical record-family alignment, test-manifest counts, CI wiring and the Dynamic Universe Block-4 gate. The old self-asserted boolean fixture is no longer the basis for declaring closure.

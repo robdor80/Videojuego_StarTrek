@@ -1,44 +1,27 @@
-import copy,importlib.util,json,unittest
+import importlib.util,unittest
 from pathlib import Path
-H=Path(__file__).resolve().parent;R=H.parents[1];M=H/"validate_academy_life_final_step20.py";F=R/"validation/fixtures/academy_life/final_closure_baseline_v1.0.json"
+H=Path(__file__).resolve().parent;ROOT=H.parents[1];M=H/"validate_academy_life_final_step20.py"
 s=importlib.util.spec_from_file_location("m",M);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
-def req():return json.loads(F.read_text())["request"]
-class T(unittest.TestCase):
- def test_01(self):self.assertTrue(m.validate(req())["academy_life_complete"])
- def test_02(self):self.assertEqual(m.validate(req())["incomplete_steps"],[])
- def test_03(self):self.assertTrue(m.validate(req())["population_conserved"])
- def test_04(self):self.assertTrue(m.validate(req())["player_agency_preserved"])
- def test_05(self):self.assertTrue(m.validate(req())["plan_execution_separated"])
- def test_06(self):self.assertTrue(m.validate(req())["lod_truth_preserved"])
- def test_07(self):self.assertTrue(m.validate(req())["record_append_only"])
- def test_08(self):self.assertTrue(m.validate(req())["progression_evidence_required"])
- def test_09(self):self.assertTrue(m.validate(req())["romance_canon_locked"])
- def test_10(self):self.assertTrue(m.validate(req())["graduation_assignment_not_fabricated"])
- def test_11(self):
-  r=req();r["steps"][5]["status"]="TODO";self.assertFalse(m.validate(r)["academy_life_complete"])
- def test_12(self):
-  r=req();r["population_slots"].append("C1")
-  with self.assertRaises(ValueError):m.validate(r)
- def test_13(self):
-  r=req();r["player_optional_choice_auto_selected"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_14(self):
-  r=req();r["plan_equals_execution"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_15(self):
-  r=req();r["lod_changes_truth"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_16(self):
-  r=req();r["record_mutable"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_17(self):
-  r=req();r["elapsed_time_grants_progression"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_18(self):
-  r=req();r["romance_canon"]="other"
-  with self.assertRaises(ValueError):m.validate(r)
- def test_19(self):
-  r=req();r["graduation_directly_assigns_posting"]=True
-  with self.assertRaises(ValueError):m.validate(r)
- def test_20(self):self.assertIn("Living Interplanetary",m.validate(req())["next_work_item"])
+def report():return m.audit_repo(ROOT)
+class AcademyLifeFinalRepositoryAuditTests(unittest.TestCase):
+ def test_01_status_20_of_20(self):self.assertTrue(report()["status_ok"])
+ def test_02_all_json_parses(self):self.assertEqual(report()["json_parse_errors"],[])
+ def test_03_no_broken_file_refs(self):self.assertEqual(report()["broken_file_refs"],[])
+ def test_04_all_step_anchors_exist(self):self.assertEqual(report()["missing_step_anchors"],[])
+ def test_05_relationship_canon_locked(self):self.assertTrue(report()["canon_ok"])
+ def test_06_academy_state_finalized(self):self.assertTrue(report()["academy_state_ok"])
+ def test_07_record_model_append_only_and_source_family_safe(self):self.assertTrue(report()["record_model_ok"])
+ def test_08_record_contract_canonical_families(self):self.assertTrue(report()["record_family_contract_ok"])
+ def test_09_record_resolver_matches_contract(self):self.assertTrue(report()["record_resolver_family_ok"])
+ def test_10_progression_contains_graduation_pending(self):self.assertTrue(report()["progression_ok"])
+ def test_11_service_record_bridge_complete(self):self.assertTrue(report()["service_record_bridge_ok"])
+ def test_12_manifest_has_twenty_scripts(self):self.assertEqual(report()["manifest_test_script_count"],20)
+ def test_13_manifest_test_count_matches_repo(self):self.assertTrue(report()["manifest_ok"]);self.assertEqual(report()["defined_test_count"],482)
+ def test_14_no_missing_test_scripts(self):self.assertEqual(report()["missing_test_scripts"],[])
+ def test_15_academy_python_syntax_clean(self):self.assertEqual(report()["python_syntax_errors"],[])
+ def test_16_ci_wired_to_real_audit_and_runner(self):self.assertTrue(report()["workflow_ok"])
+ def test_17_dynamic_universe_gate_consistent(self):self.assertTrue(report()["dynamic_universe_gate_ok"])
+ def test_18_no_obsolete_readme_closure_wording(self):self.assertTrue(report()["docs_ok"])
+ def test_19_final_runtime_boundary_intact(self):self.assertTrue(report()["closure_ok"])
+ def test_20_entire_repository_audit_clean(self):self.assertTrue(report()["ok"],report()["errors"])
 if __name__=="__main__":unittest.main()

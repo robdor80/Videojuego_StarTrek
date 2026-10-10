@@ -277,7 +277,7 @@
     "no_species_or_player_proximity_attraction_bias": "COMPLETE",
     "npc_npc_autonomous_evolution_deferred_to_step_11": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 26,
+    "executable_tests": 29,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -298,7 +298,7 @@
     "player_excluded_from_autonomous_npc_resolver": "COMPLETE",
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 30,
+    "executable_tests": 33,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -319,7 +319,7 @@
     "academy_to_post_academy_continuity_without_auto_carryover": "COMPLETE",
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 28,
+    "executable_tests": 32,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -362,7 +362,7 @@
     "year_progression_deferred_to_step_18": "COMPLETE",
     "species_materialization_player_proximity_nonselectors": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 32,
+    "executable_tests": 34,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -385,7 +385,7 @@
     "no_direct_relationship_wellbeing_record_mutation": "COMPLETE",
     "no_player_proximity_or_species_event_generation": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 34,
+    "executable_tests": 37,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -444,7 +444,7 @@
     "next_year_population_identity_preserved": "COMPLETE",
     "elapsed_time_not_progression": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
-    "executable_tests": 28,
+    "executable_tests": 31,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -465,7 +465,7 @@
     "player_graduation_unlock_candidate": "COMPLETE",
     "no_first_assignment_autocreation": "COMPLETE",
     "deterministic_reference_writer": "PRESENT",
-    "executable_tests": 28,
+    "executable_tests": 33,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   },
@@ -475,11 +475,13 @@
     "integrated_acceptance_fixture": "COMPLETE",
     "final_smoke_simulator": "COMPLETE",
     "ci_closure_workflow": "PRESENT",
-    "defined_tests_steps_1_19": 439,
+    "defined_tests_steps_1_19": 462,
     "defined_step20_tests": 20,
-    "total_defined_tests": 459,
+    "total_defined_tests": 482,
     "academy_runtime_design_closure": "COMPLETE",
     "core_runtime_dependency": "REMAINS_EXTERNAL",
-    "dynamic_universe_block4_gate": "READY_TO_RESUME"
+    "dynamic_universe_block4_gate": "READY_TO_RESUME",
+    "final_repository_audit": "PRESENT",
+    "suite_runner": "PRESENT"
   }
 }

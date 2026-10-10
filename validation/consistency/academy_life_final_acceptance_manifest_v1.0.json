@@ -3,9 +3,9 @@
   "manifest_id": "academy_life_final_acceptance",
   "steps_total": 20,
   "steps_complete": 20,
-  "defined_tests_before_step20": 439,
+  "defined_tests_before_step20": 462,
   "defined_step20_tests": 20,
-  "total_defined_tests": 459,
+  "total_defined_tests": 482,
   "test_scripts": [
     "tools/generation/test_validate_academy_population_step1.py",
     "tools/generation/test_generate_academy_cadet_step2.py",
@@ -29,5 +29,9 @@
     "tools/generation/test_validate_academy_life_final_step20.py"
   ],
   "runtime_dependency_status": "CoreRPG live runtime external dependency retained",
-  "next_work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy"
+  "next_work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy",
+  "audit_mode": "repository_introspection",
+  "final_validator_ref": "tools/generation/validate_academy_life_final_step20.py",
+  "suite_runner_ref": "tools/generation/run_academy_life_suite.py",
+  "ci_workflow_ref": ".github/workflows/academy-life-closure.yml"
 }

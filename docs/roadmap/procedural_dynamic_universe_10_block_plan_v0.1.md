@@ -8,7 +8,7 @@
 | 1 | Procedural Civilization Evolution & Galactic Interaction | COMPLETE |
 | 2 | Colonization, Expansion & Borders | COMPLETE |
 | 3 | Procedural Conflict & War | COMPLETE |
-| 4 | Living Interplanetary / Interstellar Economy | TODO |
+| 4 | Living Interplanetary / Interstellar Economy | READY_TO_RESUME |
 | 5 | Procedural History & Major Events | TODO |
 | 6 | Science, Technology & Discovery | TODO |
 | 7 | Phenomena, Anomalies & Procedural Archaeology | TODO |
@@ -43,4 +43,4 @@ Block 3 closes crisis/escalation, culture/faction/government conflict behaviour,
 
 ## Temporary priority gate — Academy Life
 
-Dynamic Universe **Block 4 — Living Interplanetary / Interstellar Economy remains TODO and unstarted**. By project decision it is temporarily deferred while `Academy Life & Social Simulation v0.1` is completed strictly from Step 1 through Step 20. After Academy Step 20 is COMPLETE, work returns here to Block 4 before any Block 5 implementation.
+Dynamic Universe **Block 4 — Living Interplanetary / Interstellar Economy is READY_TO_RESUME and remains unstarted**. The temporary Academy gate is now closed because `Academy Life & Social Simulation` is 20/20 COMPLETE. Block 4 is the next Dynamic Universe implementation target before any Block 5 work.

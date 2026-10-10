@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–20/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–20/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events + off-screen life + Social LOD + year progression/continuity + Academy record + final closure**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -422,7 +422,7 @@ Current status:
 - mentor recommendations require real evidence and valid authority but guarantee nothing;
 - no mentor can bypass grade, qualification, curriculum, discipline or posting rules;
 - Academy mentorship history can survive graduation, but active-duty mentorship requires a new valid assignment;
-- **28 executable Step-12 tests pass against the locked fixture**.
+- **32 executable Step-12 tests defined**.
 
 - Academy wellbeing consumes only confirmed actual behavior, never unexecuted plans;
 - overlapping 24h / 7d / 30d windows separate acute state from sustained patterns;
@@ -433,7 +433,7 @@ Current status:
 - good balance preserves normal capacity and never grants superhuman bonuses;
 - imbalance may reduce character-side assistance/readiness but cannot alter World Truth or force player choices;
 - Step 13 emits no academic/disciplinary/obligation consequence; that remains Step 14;
-- **30 executable Step-13 tests pass against the locked fixture**.
+- **30 executable Step-13 tests defined**.
 
 - obligations must pre-exist and consequences require confirmed event evidence;
 - fulfilled, late, absent, incomplete, withdrawn and conduct-breach outcomes remain distinct;
@@ -445,7 +445,7 @@ Current status:
 - formal discipline requires review basis, competent authority, provenance and proportionality;
 - the resolver never autonomously chooses a formal punishment and never forces player confession/excuse;
 - final record writes remain Step 19 and annual progression/dismissal decisions remain Step 18;
-- **32 executable Step-14 tests pass against the locked fixture**.
+- **34 executable Step-14 tests defined**.
 
 - campus events are persistent objects with stable source/cause, authority, time, location, priority and capacity;
 - planned institutional events, emergent incidents and crisis alerts have distinct validity rules;
@@ -458,7 +458,7 @@ Current status:
 - institutional preemption may produce a Step-14 justification candidate but does not self-excuse an obligation;
 - cancellations require provenance and authority;
 - Step 15 directly changes no relationships, wellbeing, academic record or year progression;
-- **34 executable Step-15 tests pass against the locked fixture**.
+- **37 executable Step-15 tests defined**.
 
 - off-screen Academy life executes only already-valid schedules, obligations, plans and events;
 - routine events may aggregate while consequential events remain explicit/provenance-backed;
@@ -496,13 +496,13 @@ Current status:
 **ACADEMY LIFE 20/20 COMPLETE.**
 
 - final cross-step acceptance manifest and simulator added;
-- 439 tests were already defined across Steps 1–19;
-- Step 20 adds 20 final cross-system tests, for **459 defined Academy Life tests**;
-- dedicated CI workflow executes all Step 1–20 Academy Life reference tests;
+- 462 tests are defined across Steps 1–19;
+- Step 20 adds 20 final cross-system tests, for **482 defined Academy Life tests**;
+- dedicated CI workflow is configured to execute all Step 1–20 Academy Life reference tests through the suite runner;
 - Star Trek Academy domain design is closed; generic live runtime/persistence remains a CoreRPG dependency;
 - Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy is now **READY TO RESUME**.
 
-**Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
+**Next roadmap work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy is **READY_TO_RESUME** now that Academy Life Step 20 is COMPLETE.
 
 ## Major remaining domains
 

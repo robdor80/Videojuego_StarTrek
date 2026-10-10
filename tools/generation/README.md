@@ -128,6 +128,8 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 
 ### Academy Life Step 20 — final closure
-- `validate_academy_life_final_step20.py` validates the integrated 20-step closure state.
+- `validate_academy_life_final_step20.py` audits the actual repository state, references, canon lock, manifest counts, record model and roadmap gate.
 - `test_validate_academy_life_final_step20.py` adds 20 cross-system closure tests.
 - `.github/workflows/academy-life-closure.yml` runs all Step 1–20 reference test scripts.
+
+- `run_academy_life_suite.py` reads the final acceptance manifest and executes every Academy Life test script, failing if any script fails.

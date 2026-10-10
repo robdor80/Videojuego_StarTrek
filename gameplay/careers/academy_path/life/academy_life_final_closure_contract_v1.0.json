@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.0.1",
   "contract_id": "academy_life_final_closure",
   "status": "ACADEMY_LIFE_20_OF_20_COMPLETE",
   "scope": "Star Trek Academy domain contracts/reference simulation",
@@ -22,7 +22,14 @@
     "LOD changes detail, not truth.",
     "Year progression requires consolidated evidence.",
     "Official record is append-only/provenance-backed.",
-    "Graduation completion may unlock future skip-Academy play but does not fabricate assignment."
+    "Graduation completion may unlock future skip-Academy play but does not fabricate assignment.",
+    "Final closure status is derived from repository introspection, not trusted self-asserted fixture booleans."
   ],
-  "next_roadmap_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy"
+  "next_roadmap_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy",
+  "validation": {
+    "repository_audit_ref": "tools/generation/validate_academy_life_final_step20.py",
+    "suite_runner_ref": "tools/generation/run_academy_life_suite.py",
+    "manifest_ref": "validation/consistency/academy_life_final_acceptance_manifest_v1.0.json",
+    "defined_test_count": 482
+  }
 }
