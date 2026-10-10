@@ -62,4 +62,11 @@ class AcademyNpcRelationshipsStep11Tests(unittest.TestCase):
  def test_30_duplicate_identity_rejected(self):
   r=req();r["characters"].append(copy.deepcopy(r["characters"][1]))
   with self.assertRaises(ValueError):mod.resolve(r)
+ def test_31_friendship_refs_must_exist_in_edge_history(self):
+  r=req();r["confirmed_events"]=r["confirmed_events"][:3]+[{"event_id":"F","occurred_at":"4","event_type":"friendship_develops","actor_slot_ref":"A","target_slot_ref":"B","confirmed":True,"cause_event_refs":["f"],"positive_shared_history_refs":["FAKE1","FAKE2"]}];self.assertTrue(any(x["event_id"]=="F" and x["reason"]=="insufficient_friendship_history" for x in mod.resolve(r)["rejected_or_unresolved"]))
+ def test_32_close_friendship_refs_must_exist_in_edge_history(self):
+  r=req();r["existing_edges"]=[dict(mod.default_edge("A","B"),familiarity="familiar",friendship_state="friend",shared_history_refs=["H1"])];r["confirmed_events"]=[{"event_id":"CF","occurred_at":"1","event_type":"close_friendship_develops","actor_slot_ref":"A","target_slot_ref":"B","confirmed":True,"cause_event_refs":["cf"],"positive_shared_history_refs":["H1","FAKE"]}];self.assertTrue(any(x["reason"]=="insufficient_close_friendship_history" for x in mod.resolve(r)["rejected_or_unresolved"]))
+ def test_33_duplicate_existing_edge_rejected(self):
+  r=req();e=mod.default_edge("A","B");r["existing_edges"]=[e,copy.deepcopy(e)];r["confirmed_events"]=[]
+  with self.assertRaises(ValueError):mod.resolve(r)
 if __name__=="__main__":unittest.main()

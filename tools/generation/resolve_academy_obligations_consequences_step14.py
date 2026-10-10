@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse, copy, json
 from pathlib import Path
 
-RULES_VERSION="academy_obligations_consequences_v0.1"
+RULES_VERSION="academy_obligations_consequences_v0.2"
 FORMAL_MEASURES={"warning":1,"negative_note":2,"restriction":2,"formal_reprimand":3,"remove_from_position":3,"disciplinary_transfer":3,"demotion":4,"brig_confinement":4,"court_martial":5,"stripped_of_rank_or_commission":5}
 NO_FAULT_REASONS={"approved_medical","authorized_leave","institutional_schedule_conflict","emergency_preemption","authorized_accommodation"}
 
@@ -52,26 +52,32 @@ def resolve(request):
             withdrawn=next((e for e in events if e.get("outcome")=="authorized_withdrawal" and int(e.get("occurred_minute",o["start_minute"]))<=int(o.get("withdrawal_deadline_minute",o["start_minute"]))),None)
             if withdrawn:
                 resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"withdrawn_without_breach","fault":"none","evidence_refs":[withdrawn["event_id"]]}); continue
-        if approved and approved.get("reason_code") in NO_FAULT_REASONS:
-            makeup=bool(o.get("makeup_required_when_excused",False)); resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"excused","fault":"none","justification_ref":approved["justification_id"],"makeup_required":makeup})
-            if makeup: consequence_records.append({"consequence_id":f"makeup:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"make_up_required","disciplinary":False,"record_write":"deferred_step_19"})
-            continue
+        approved_no_fault=approved if approved and approved.get("reason_code") in NO_FAULT_REASONS else None
         if pending and not events:
             resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"pending_justification","fault":"unresolved"}); continue
         if not events:
-            resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"missing_evidence","fault":"unresolved"}); continue
+            if approved_no_fault:
+                makeup=bool(o.get("makeup_required_when_excused",False));resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"excused","fault":"none","justification_ref":approved_no_fault["justification_id"],"makeup_required":makeup})
+                if makeup:consequence_records.append({"consequence_id":f"makeup:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"make_up_required","disciplinary":False,"record_write":"deferred_step_19"})
+            else:resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"missing_evidence","fault":"unresolved"})
+            continue
         e=events[-1]; outcome=e["outcome"]
         if outcome=="completed": resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"fulfilled","fault":"none","evidence_refs":[e["event_id"]]})
         elif outcome=="late":
             delay=max(0,int(e.get("actual_start_minute",o["start_minute"]))-int(o["start_minute"]))
             if delay<=int(o.get("tolerance_minutes",0)): resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"fulfilled_within_tolerance","fault":"none","delay_minutes":delay})
+            elif approved_no_fault:resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"excused","fault":"none","justification_ref":approved_no_fault["justification_id"],"delay_minutes":delay})
             else:
                 resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"late_breach","fault":"attributable","delay_minutes":delay}); consequence_records.append({"consequence_id":f"attendance:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"attendance_concern","disciplinary":False,"record_write":"deferred_step_19"})
         elif outcome in {"incomplete","failed_required_activity"}:
-            resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"performance_breach","fault":"not_assumed_misconduct"}); consequence_records.append({"consequence_id":f"remediation:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"remediation_required","disciplinary":False,"record_write":"deferred_step_19"})
+            if approved_no_fault:
+                resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"excused","fault":"none","justification_ref":approved_no_fault["justification_id"]})
+                consequence_records.append({"consequence_id":f"makeup:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"make_up_required","disciplinary":False,"record_write":"deferred_step_19"})
+            else:
+                resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"performance_breach","fault":"not_assumed_misconduct"}); consequence_records.append({"consequence_id":f"remediation:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"remediation_required","disciplinary":False,"record_write":"deferred_step_19"})
         elif outcome=="absent":
-            if e.get("reason_code") in NO_FAULT_REASONS:
-                resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"no_fault_absence","fault":"none"})
+            if approved_no_fault:
+                resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"excused","fault":"none","justification_ref":approved_no_fault["justification_id"]})
                 if o.get("makeup_required_when_excused",False): consequence_records.append({"consequence_id":f"makeup:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"make_up_required","disciplinary":False,"record_write":"deferred_step_19"})
             else:
                 resolutions.append({"obligation_id":oid,"population_slot_ref":slot,"resolution":"unexcused_absence","fault":"attributable"}); fam=o.get("obligation_family",o.get("obligation_type","other")); recurrence=history_count.get((slot,fam),0)+1; consequence_records.append({"consequence_id":f"attendance:{oid}","obligation_id":oid,"population_slot_ref":slot,"type":"attendance_concern","disciplinary":False,"recurrence_count":recurrence,"record_write":"deferred_step_19"})

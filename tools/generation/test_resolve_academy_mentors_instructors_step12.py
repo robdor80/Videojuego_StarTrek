@@ -49,4 +49,15 @@ class T(unittest.TestCase):
   r=req();x=copy.deepcopy(r)
   for c in x['cadets']:c['species_id']='changed';c['character_id']='mat:'+c['population_slot_ref']
   x['player_present']=True;self.assertEqual(m.resolve(r),m.resolve(x))
+ def test_29_existing_cadet_mentor_limit_enforced(self):
+  r=req();r['existing_mentorships'].append({'mentorship_id':'mentor:INST-OPS:C1','mentor_instructor_id':'INST-OPS','mentee_population_slot_ref':'C1','professional_scope':'operations','state':'active'})
+  with self.assertRaises(ValueError):m.resolve(r)
+ def test_30_duplicate_existing_pair_rejected(self):
+  r=req();r['existing_mentorships'].append(copy.deepcopy(r['existing_mentorships'][0]))
+  with self.assertRaises(ValueError):m.resolve(r)
+ def test_31_overlapping_tutoring_and_mentoring_rejected(self):
+  r=req();r['mentoring_session_requests'][0]['start_minute']=1000;r['mentoring_session_requests'][0]['end_minute']=1060;o=m.resolve(r);self.assertTrue(any(x['kind']=='mentoring_session' and x['reason']=='session_plan_conflict' for x in o['rejected_or_unresolved']))
+ def test_32_duplicate_session_id_rejected(self):
+  r=req();r['mentoring_session_requests'][0]['session_id']='TUT-1'
+  with self.assertRaises(ValueError):m.resolve(r)
 if __name__=='__main__':unittest.main()

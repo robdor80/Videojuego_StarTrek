@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "academy_romance_dating_contract",
   "status": "STEP_10_COMPLETE",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
@@ -63,7 +63,9 @@
     "Friendship, favors, rank, gifts, persistence, prior dating and existing relationship do not imply consent.",
     "Consent is context-specific and may be refused or withdrawn.",
     "Step 10 produces no autonomous NPC-to-NPC romantic evolution; Step 11 owns that use case.",
-    "Step 10 does not force wellbeing, academic, disciplinary or career consequences."
+    "Step 10 does not force wellbeing, academic, disciplinary or career consequences.",
+    "Player withdrawal of an accepted/scheduled date is an explicit supported action and releases the planned time without automatic hostility.",
+    "Persisted scheduled date plans must not overlap for either participant."
   ],
   "dependencies": [
     "gameplay/social/adult_heterosexual_relationship_canon_v0.1.json",

@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "academy_obligation_consequence_contract",
   "status": "STEP_14_COMPLETE",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
@@ -46,7 +46,9 @@
     "Disproportionate measures are rejected.",
     "The player is never assigned a confession, justification, appeal or acceptance automatically.",
     "Final record write is deferred to Step 19.",
-    "Year advancement/repetition/leave/dismissal resolution is deferred to Step 18."
+    "Year advancement/repetition/leave/dismissal resolution is deferred to Step 18.",
+    "No-fault reason codes on obligation evidence do not self-authorize an excuse; an approved justification with competent authority is required.",
+    "Confirmed completion takes precedence over an unused justification and remains fulfilled."
   ],
   "dependencies": [
     "lore/federation/starfleet/disciplinary_system/discipline_model.json",

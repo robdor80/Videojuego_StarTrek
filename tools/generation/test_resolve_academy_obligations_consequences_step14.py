@@ -31,8 +31,8 @@ class AcademyObligationsConsequencesStep14Tests(unittest.TestCase):
   r=req();r["obligation_evidence"][1]["confirmed"]=False;self.assertTrue(any(x["reason"]=="missing_confirmed_provenance" for x in m.resolve(r)["rejected_or_unresolved"]))
  def test_21_late_beyond_tolerance_concern(self):
   r=req();next(x for x in r["obligation_evidence"] if x["obligation_id"]=="O5")["actual_start_minute"]=520;o=m.resolve(r);self.assertEqual(res(o,"O5")["resolution"],"late_breach")
- def test_22_institutional_conflict_no_fault(self):
-  r=req();next(x for x in r["obligation_evidence"] if x["obligation_id"]=="O2")["reason_code"]="institutional_schedule_conflict";self.assertEqual(res(m.resolve(r),"O2")["resolution"],"no_fault_absence")
+ def test_22_institutional_conflict_requires_approved_justification(self):
+  r=req();r["justifications"].append({"justification_id":"J2","obligation_id":"O2","population_slot_ref":"C1","status":"approved","reason_code":"institutional_schedule_conflict","authority_id":"DEAN","cause_event_refs":["campus:preempt"]});self.assertEqual(res(m.resolve(r),"O2")["resolution"],"excused")
  def test_23_formal_measure_requires_review(self):
   r=req();r["disciplinary_decisions"][0]["obligation_id"]="O6";r["disciplinary_decisions"][0]["population_slot_ref"]="C1";self.assertTrue(any(x["reason"]=="no_formal_review_basis" for x in m.resolve(r)["rejected_or_unresolved"]))
  def test_24_formal_measure_requires_authority(self):
@@ -59,4 +59,8 @@ class AcademyObligationsConsequencesStep14Tests(unittest.TestCase):
  def test_32_invalid_interval_rejected(self):
   r=req();r["obligations"][0]["end_minute"]=r["obligations"][0]["start_minute"]
   with self.assertRaises(ValueError):m.resolve(r)
+ def test_33_reason_code_alone_cannot_self_excuse_absence(self):
+  r=req();next(x for x in r["obligation_evidence"] if x["obligation_id"]=="O2")["reason_code"]="institutional_schedule_conflict";self.assertEqual(res(m.resolve(r),"O2")["resolution"],"unexcused_absence")
+ def test_34_completed_obligation_beats_unused_justification(self):
+  r=req();next(x for x in r["obligation_evidence"] if x["obligation_id"]=="O1")["outcome"]="completed";self.assertEqual(res(m.resolve(r),"O1")["resolution"],"fulfilled")
 if __name__=="__main__":unittest.main()

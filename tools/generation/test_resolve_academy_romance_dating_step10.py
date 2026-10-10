@@ -53,4 +53,11 @@ class AcademyRomanceDatingStep10Tests(unittest.TestCase):
   with self.assertRaises(ValueError):mod.resolve(r)
   r=req();r["characters"][1]["population_slot_ref"]="cadet4:PLAYER"
   with self.assertRaises(ValueError):mod.resolve(r)
+ def test_27_player_can_withdraw_newly_accepted_date(self):
+  r=req();r["player_romantic_actions"]=[{"action_type":"accept_npc_invitation","npc_slot_ref":"cadet4:A","proposal_id":"DATE-A1"},{"action_type":"withdraw_acceptance","npc_slot_ref":"cadet4:A","proposal_id":"DATE-A1"}];o=mod.resolve(r);self.assertEqual(o["date_plans"][0]["plan_state"],"cancelled_by_player");self.assertTrue(o["withdrawn"])
+ def test_28_player_can_withdraw_existing_date(self):
+  r=req();r["npc_initiation_requests"]=[];r["existing_date_plans"]=[{"date_plan_id":"date:old","participant_slot_refs":["cadet4:PLAYER","cadet4:A"],"invitation_ref":"rominv:cadet4:A:cadet4:PLAYER:OLD","day_index":5,"start_minute":1140,"end_minute":1230,"venue_ref":"campus_garden","plan_state":"scheduled","attendance_state":"unresolved","completion_state":"unresolved"}];r["player_romantic_actions"]=[{"action_type":"withdraw_acceptance","npc_slot_ref":"cadet4:A","date_plan_id":"date:old"}];self.assertEqual(mod.resolve(r)["date_plans"][0]["plan_state"],"cancelled_by_player")
+ def test_29_overlapping_existing_dates_rejected(self):
+  r=req();p={"participant_slot_refs":["cadet4:PLAYER","cadet4:A"],"day_index":5,"venue_ref":"campus_garden","plan_state":"scheduled","attendance_state":"unresolved","completion_state":"unresolved"};r["existing_date_plans"]=[dict(p,date_plan_id="date:x",start_minute=1140,end_minute=1200),dict(p,date_plan_id="date:y",start_minute=1190,end_minute=1250)]
+  with self.assertRaises(ValueError):mod.resolve(r)
 if __name__=="__main__":unittest.main()

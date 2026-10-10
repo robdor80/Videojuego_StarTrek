@@ -45,7 +45,7 @@ def resolve(request:dict[str,Any])->dict[str,Any]:
         a,b=e["observer_population_slot_ref"],e["subject_population_slot_ref"]
         if a not in by_slot or b not in by_slot or a==b:raise ValueError("invalid existing relationship edge")
         if a in player_slots or b in player_slots:raise ValueError("Step 11 existing edge cannot include player")
-        edges[pair_key(a,b)]=copy.deepcopy(e)
+        k=pair_key(a,b)\n        if k in edges:raise ValueError("duplicate existing relationship edge")\n        edges[k]=copy.deepcopy(e)
 
     events=sorted(copy.deepcopy(request.get("confirmed_events",[])),key=lambda x:(str(x.get("occurred_at","")),x["event_id"]))
     rejected=[];changes=[]
@@ -99,11 +99,11 @@ def resolve(request:dict[str,Any])->dict[str,Any]:
                 e["personal_trust"]=bump(e["personal_trust"],SCALE,1)
         elif typ=="friendship_develops":
             positive_refs=ev.get("positive_shared_history_refs",[])
-            if FAMILIARITY.index(e["familiarity"])<FAMILIARITY.index("acquainted") or len(set(positive_refs))<2:
+            if FAMILIARITY.index(e["familiarity"])<FAMILIARITY.index("acquainted") or len(set(positive_refs))<2 or not set(positive_refs).issubset(set(e["shared_history_refs"])):
                 applied=False;rejected.append({"event_id":ev["event_id"],"reason":"insufficient_friendship_history"})
             else:e["friendship_state"]="friend"
         elif typ=="close_friendship_develops":
-            if e["friendship_state"]!="friend" or len(set(ev.get("positive_shared_history_refs",[])))<2:
+            positive_refs=ev.get("positive_shared_history_refs",[])\n            if e["friendship_state"]!="friend" or len(set(positive_refs))<2 or not set(positive_refs).issubset(set(e["shared_history_refs"])):
                 applied=False;rejected.append({"event_id":ev["event_id"],"reason":"insufficient_close_friendship_history"})
             else:e["friendship_state"]="close_friend"
         elif typ=="romantic_interest_emergence":

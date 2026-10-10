@@ -59,4 +59,10 @@ class AcademyCampusEventsStep15Tests(unittest.TestCase):
  def test_33_invalid_interval_rejected(self):
   r=req();r["campus_events"][0]["end_minute"]=r["campus_events"][0]["start_minute"];self.assertTrue(any(x["reason"]=="invalid_event_interval" for x in m.resolve(r)["rejected_or_unresolved"]))
  def test_34_truth_semantics(self):self.assertEqual(out()["truth_semantics"],"event_exists_before_participation_and_participation_plan_is_not_attendance")
+ def test_35_external_participants_consume_capacity(self):
+  r=req();r["campus_events"][0]["capacity"]=3;self.assertTrue(any(x["reason"]=="mandatory_capacity_insufficient" for x in m.resolve(r)["rejected_or_unresolved"]))
+ def test_36_player_option_reflects_npc_filling_last_seat(self):
+  r=req();next(x for x in r["campus_events"] if x["campus_event_id"]=="EV-COMP")["capacity"]=1;o=m.resolve(r);opt=next(x for x in o["player_optional_event_options"] if x["campus_event_id"]=="EV-COMP");self.assertEqual(opt["state"],"full")
+ def test_37_existing_player_plan_not_reported_as_npc_plan(self):
+  r=req();r["existing_participation_plans"]=[{"participation_plan_id":"P1","campus_event_id":"EV-COMP","population_slot_ref":"PLAYER"}];o=m.resolve(r);self.assertTrue(o["player_existing_participation_plans"]);self.assertFalse(any(x["population_slot_ref"]=="PLAYER" for x in o["npc_optional_participation_plans"]))
 if __name__=="__main__":unittest.main()
