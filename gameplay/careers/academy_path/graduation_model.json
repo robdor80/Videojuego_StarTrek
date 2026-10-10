@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.1",
+  "schema_version": "0.1.2",
   "eligibility_checks": [
     "required_courses_complete",
     "specialization_requirements_complete",
@@ -42,6 +42,8 @@
   "rules": [
     "Year 4 successful progression sets graduation_pending.",
     "Graduation itself requires confirmed graduation process/evidence.",
-    "Commission/rank is not awarded by year progression alone."
-  ]
+    "Commission/rank is not awarded by year progression alone.",
+    "Confirmed graduation may emit a player-profile Academy-completion unlock candidate for future campaigns."
+  ],
+  "record_integration_ref": "gameplay/careers/academy_path/life/academy_record_integration_contract_v0.1.json"
 }

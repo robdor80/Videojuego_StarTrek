@@ -120,3 +120,8 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 ### Academy Life Step 18 — year progression and continuity
 - `resolve_academy_year_progression_step18.py` resolves annual outcomes from consolidated evidence and authored policy.
 - `test_resolve_academy_year_progression_step18.py` validates remediation/repeat/leave/dismissal gates, specialization transition, final-year graduation-pending and continuity.
+
+
+### Academy Life Step 19 — record integration
+- `integrate_academy_record_step19.py` appends idempotent provenance-backed Academy/service-record events and graduation unlock candidates.
+- `test_integrate_academy_record_step19.py` validates append-only history, mapping, deduplication, corrections and no fabricated commission/assignment.

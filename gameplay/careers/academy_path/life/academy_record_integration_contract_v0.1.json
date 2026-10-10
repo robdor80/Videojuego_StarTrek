@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_record_integration_contract",
+  "status": "STEP_19_COMPLETE",
+  "record_model": "append_only_event_log",
+  "recordable_families": [
+    "academy_admission",
+    "academic_evaluation",
+    "practical_evaluation",
+    "enrichment_completion",
+    "specialization_selected",
+    "remediation_result",
+    "validated_disciplinary_action",
+    "academy_year_progression",
+    "leave_of_absence",
+    "academy_dismissal",
+    "academy_graduation",
+    "commission"
+  ],
+  "rules": [
+    "Every official entry references authoritative source provenance.",
+    "Integration is idempotent by source event id plus record family.",
+    "Existing events are never modified/deleted by integration.",
+    "Corrections append a new correction/superseding event.",
+    "AI-generated summaries are non-authoritative derived presentation.",
+    "Academy graduation and discipline may bridge into career-wide service record under explicit mapping.",
+    "Year 4 completion alone cannot create graduation or commission.",
+    "Graduation alone cannot create first assignment.",
+    "Confirmed player graduation may create persistent Academy-completion unlock evidence.",
+    "Unlock evidence permits future campaign option logic but does not guarantee a first posting."
+  ],
+  "next_step_ref": "Step 20 — Final closure"
+}

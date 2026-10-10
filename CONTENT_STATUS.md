@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–18/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–19/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -484,7 +484,16 @@ Current status:
 - identity, relationships, mentor/disciplinary/social/academic history persist across transitions;
 - **28 executable Step-18 tests defined**.
 
-**Strict sequence:** Step 19 — Academy-record integration is next and has not been started.
+- Academy record is append-only structured truth; AI summaries are derived only;
+- every official entry requires source provenance and integration is idempotent;
+- corrections append superseding/correction events rather than rewriting history;
+- evaluation, enrichment, specialization, remediation, discipline, progression and graduation evidence can be integrated under explicit mappings;
+- graduation/formal discipline bridge to the career-wide service record;
+- successful player graduation can create persistent skip-Academy unlock evidence for future campaigns;
+- no first assignment or commission is fabricated without its own confirmed event;
+- **28 executable Step-19 tests defined**.
+
+**Strict sequence:** Step 20 — Final fixtures, invariants, simulator and test closure is next.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

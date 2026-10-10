@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_record_integration_invariants",
+  "status": "STEP_19_VALIDATED",
+  "cases": [
+    {
+      "id": "append_only",
+      "expected": [
+        "existing events never mutate/delete"
+      ]
+    },
+    {
+      "id": "provenance",
+      "expected": [
+        "official entry requires source"
+      ]
+    },
+    {
+      "id": "idempotent",
+      "expected": [
+        "same source not duplicated"
+      ]
+    },
+    {
+      "id": "correction_append",
+      "expected": [
+        "correction supersedes by new event"
+      ]
+    },
+    {
+      "id": "summary_non_authoritative",
+      "expected": [
+        "AI prose cannot write truth"
+      ]
+    },
+    {
+      "id": "service_bridge",
+      "expected": [
+        "mapped career events bridge explicitly"
+      ]
+    },
+    {
+      "id": "graduation_unlock",
+      "expected": [
+        "player graduation may unlock future skip option"
+      ]
+    },
+    {
+      "id": "no_assignment_magic",
+      "expected": [
+        "graduation does not fabricate assignment"
+      ]
+    },
+    {
+      "id": "step20_deferred",
+      "expected": [
+        "final closure remains Step20"
+      ]
+    }
+  ]
+}

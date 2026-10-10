@@ -1,0 +1,51 @@
+{
+  "request": {
+    "cadet_ref": "PLAYER",
+    "is_player": true,
+    "player_profile_ref": "profile:1",
+    "existing_record_events": [
+      {
+        "record_event_id": "old",
+        "cadet_ref": "PLAYER",
+        "event_type": "academy_admission",
+        "source_event_id": "admit:1"
+      }
+    ],
+    "evidence_events": [
+      {
+        "family": "admission",
+        "source_event_id": "admit:1",
+        "confirmed": true,
+        "effective_date": "2370-01-01"
+      },
+      {
+        "family": "evaluation",
+        "source_event_id": "eval:1",
+        "confirmed": true,
+        "effective_date": "2370-05-01",
+        "payload": {
+          "score": 88
+        }
+      },
+      {
+        "family": "specialization",
+        "source_event_id": "spec:1",
+        "confirmed": true,
+        "effective_date": "2371-06-01",
+        "payload": {
+          "specialization": "sensors"
+        }
+      },
+      {
+        "family": "graduation",
+        "source_event_id": "grad:1",
+        "confirmed": true,
+        "effective_date": "2374-06-01",
+        "payload": {
+          "specialization": "sensors",
+          "era_profile_ref": "tng"
+        }
+      }
+    ]
+  }
+}

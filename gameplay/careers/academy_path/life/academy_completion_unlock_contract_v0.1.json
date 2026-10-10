@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_completion_unlock_contract",
+  "status": "STEP_19_COMPLETE",
+  "fields": [
+    "unlock_id",
+    "player_profile_ref",
+    "graduation_event_ref",
+    "era_profile_ref",
+    "specialization_if_any",
+    "earned_at"
+  ],
+  "rules": [
+    "Created only from confirmed player Academy graduation evidence.",
+    "Persists outside one campaign in the authorized profile/meta layer.",
+    "May offer skip-Academy on future campaigns.",
+    "Does not auto-create first assignment, rank beyond valid graduation/commission rules, or incompatible era history."
+  ]
+}

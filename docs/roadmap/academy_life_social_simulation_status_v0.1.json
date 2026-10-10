@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 18,
+    "complete": 19,
     "partial": 0,
-    "todo": 2,
-    "current_step": 18
+    "todo": 1,
+    "current_step": 19
   },
   "steps": [
     {
@@ -102,7 +102,7 @@
     },
     {
       "step": 19,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Academy-record integration"
     },
     {
@@ -444,6 +444,27 @@
     "next_year_population_identity_preserved": "COMPLETE",
     "elapsed_time_not_progression": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
+    "executable_tests": 28,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_19": {
+    "append_only_academy_record": "COMPLETE",
+    "source_event_provenance": "COMPLETE",
+    "idempotent_record_integration": "COMPLETE",
+    "academic_evaluation_entries": "COMPLETE",
+    "enrichment_completion_entries": "COMPLETE",
+    "mentor_recommendation_evidence_entries": "COMPLETE",
+    "disciplinary_action_entries": "COMPLETE",
+    "year_progression_entries": "COMPLETE",
+    "specialization_entries": "COMPLETE",
+    "graduation_entries": "COMPLETE",
+    "service_record_bridge": "COMPLETE",
+    "narrative_summary_non_authoritative": "COMPLETE",
+    "historical_correction_as_new_event": "COMPLETE",
+    "player_graduation_unlock_candidate": "COMPLETE",
+    "no_first_assignment_autocreation": "COMPLETE",
+    "deterministic_reference_writer": "PRESENT",
     "executable_tests": 28,
     "fixture_count": 1,
     "validation_pack": "PRESENT"

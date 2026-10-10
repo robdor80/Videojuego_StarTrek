@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.24.0",
+  "schema_version": "0.25.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -110,7 +110,10 @@
     "social_lod_transition_refs": "social_lod_transition_ref_list",
     "year_progression_decision_ref": "academy_year_progression_decision_ref",
     "year_transition_action_refs": "academy_year_transition_action_ref_list",
-    "continuity_snapshot_ref": "academy_continuity_snapshot_ref"
+    "continuity_snapshot_ref": "academy_continuity_snapshot_ref",
+    "academy_record_ref": "academy_record_ref",
+    "academy_record_event_refs": "academy_record_event_ref_list",
+    "academy_completion_unlock_ref": "academy_completion_unlock_ref_or_null"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -204,7 +207,11 @@
     "year progression requires consolidated academic/practical/evaluation/conduct evidence and never occurs from elapsed time alone",
     "the player must explicitly choose specialization at the end of Year 2 before Year 3 activation",
     "successful Year 4 completion moves to graduation_pending and does not directly award commission/rank",
-    "year transitions preserve persistent identity and all established history"
+    "year transitions preserve persistent identity and all established history",
+    "the Academy record is append-only and every official entry requires provenance",
+    "AI prose summaries are derived and cannot mutate the structured Academy record",
+    "record integration is idempotent by source event and corrections append rather than rewrite",
+    "confirmed player graduation may create an Academy-completion unlock candidate for future skip-Academy campaigns"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -223,5 +230,6 @@
   "campus_event_contract_ref": "gameplay/careers/academy_path/life/academy_campus_event_contract_v0.1.json",
   "offscreen_life_contract_ref": "gameplay/careers/academy_path/life/academy_offscreen_life_contract_v0.1.json",
   "social_lod_contract_ref": "gameplay/careers/academy_path/life/academy_social_lod_contract_v0.1.json",
-  "year_progression_contract_ref": "gameplay/careers/academy_path/life/academy_year_progression_continuity_contract_v0.1.json"
+  "year_progression_contract_ref": "gameplay/careers/academy_path/life/academy_year_progression_continuity_contract_v0.1.json",
+  "academy_record_contract_ref": "gameplay/careers/academy_path/life/academy_record_integration_contract_v0.1.json"
 }

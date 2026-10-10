@@ -29,7 +29,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 16 | Off-screen Academy life | COMPLETE |
 | 17 | Social LOD | COMPLETE |
 | 18 | Year progression and continuity | COMPLETE |
-| 19 | Academy-record integration | TODO |
+| 19 | Academy-record integration | COMPLETE |
 | 20 | Final fixtures, invariants, simulator and test closure | TODO |
 
 ## Step 1 — Academy population
@@ -763,3 +763,28 @@ Advancement never replaces the character. Identity, relationships, mentorship hi
 New-year schedules/groups/housing may be recalculated by their owning systems, but prior versions remain historical.
 
 **Boundary:** Academy-record integration remains Step 19; final full-system closure Step 20.
+
+
+## Step 19 — Academy-record integration
+
+Step 19 makes the Academy record **authoritative, append-only and provenance-backed**.
+
+The record is not an AI-written biography. Structured events are truth; prose summaries are derived views.
+
+Recordable Academy evidence includes admission, academic/practical evaluations, enrichment completion where policy permits, specialization selection, remediation outcomes, validated disciplinary actions, annual progression, leave/dismissal, graduation and other explicitly authorized institutional facts.
+
+Every record event must reference its source event/decision. Re-running integration is idempotent: the same source cannot create duplicate official entries.
+
+History is never rewritten. A correction is a new correction/superseding event that references the earlier entry.
+
+### Service-record bridge
+
+Academy graduation, commission and formal discipline bridge into the career-wide append-only service record using explicit mapped event types. Step 19 does not fabricate a commission merely because Year 4 ended; graduation/commission require their own confirmed evidence.
+
+### Replaying / skipping Academy
+
+A confirmed player graduation may emit a persistent **Academy completion unlock candidate** for the profile/meta layer. Future campaigns may use that evidence to offer the already-approved “skip Academy” option.
+
+The unlock proves that the player previously completed the Academy; it does not invent a new campaign's first assignment or bypass era/character constraints by itself.
+
+**Boundary:** Step 20 performs final integrated closure/testing.
