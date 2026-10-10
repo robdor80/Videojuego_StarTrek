@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0.0",
+  "manifest_id": "academy_life_final_acceptance",
+  "steps_total": 20,
+  "steps_complete": 20,
+  "defined_tests_before_step20": 439,
+  "defined_step20_tests": 20,
+  "total_defined_tests": 459,
+  "test_scripts": [
+    "tools/generation/test_validate_academy_population_step1.py",
+    "tools/generation/test_generate_academy_cadet_step2.py",
+    "tools/generation/test_generate_academy_groups_step3.py",
+    "tools/generation/test_generate_academy_quarters_step4.py",
+    "tools/generation/test_generate_academy_schedule_step5.py",
+    "tools/generation/test_generate_academy_free_time_step6.py",
+    "tools/generation/test_generate_academy_extracurricular_step7.py",
+    "tools/generation/test_generate_academy_academic_enrichment_step8.py",
+    "tools/generation/test_generate_academy_social_life_step9.py",
+    "tools/generation/test_resolve_academy_romance_dating_step10.py",
+    "tools/generation/test_resolve_academy_npc_relationships_step11.py",
+    "tools/generation/test_resolve_academy_mentors_instructors_step12.py",
+    "tools/generation/test_resolve_academy_wellbeing_step13.py",
+    "tools/generation/test_resolve_academy_obligations_consequences_step14.py",
+    "tools/generation/test_resolve_academy_campus_events_step15.py",
+    "tools/generation/test_resolve_academy_offscreen_step16.py",
+    "tools/generation/test_resolve_academy_social_lod_step17.py",
+    "tools/generation/test_resolve_academy_year_progression_step18.py",
+    "tools/generation/test_integrate_academy_record_step19.py",
+    "tools/generation/test_validate_academy_life_final_step20.py"
+  ],
+  "runtime_dependency_status": "CoreRPG live runtime external dependency retained",
+  "next_work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy"
+}

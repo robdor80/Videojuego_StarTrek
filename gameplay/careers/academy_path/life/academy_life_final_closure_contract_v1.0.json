@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0.0",
+  "contract_id": "academy_life_final_closure",
+  "status": "ACADEMY_LIFE_20_OF_20_COMPLETE",
+  "scope": "Star Trek Academy domain contracts/reference simulation",
+  "runtime_ownership": {
+    "star_trek_repo": "domain contracts, content, fixtures, deterministic reference resolvers",
+    "core_rpg": "generic live state, persistence, scheduler, action/event execution, LOD runtime"
+  },
+  "hard_invariants": [
+    "World Truth precedes observation.",
+    "Persistent identity survives materialization and LOD.",
+    "Plan/registration/schedule is not execution/attendance/completion.",
+    "Player discretionary choices are never auto-selected.",
+    "Relationship changes require causal evidence.",
+    "Adult heterosexual romance canon remains locked.",
+    "Consent remains contextual and cannot be inferred.",
+    "Good wellbeing preserves normal capacity rather than creating superhuman buffs.",
+    "Consequences require obligation/evidence/context; discipline requires due process.",
+    "Campus events do not spawn for pacing.",
+    "Off-screen time does not create progression or relationships by itself.",
+    "LOD changes detail, not truth.",
+    "Year progression requires consolidated evidence.",
+    "Official record is append-only/provenance-backed.",
+    "Graduation completion may unlock future skip-Academy play but does not fabricate assignment."
+  ],
+  "next_roadmap_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy"
+}

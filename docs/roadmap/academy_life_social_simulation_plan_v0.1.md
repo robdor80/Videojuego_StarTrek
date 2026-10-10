@@ -30,7 +30,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 17 | Social LOD | COMPLETE |
 | 18 | Year progression and continuity | COMPLETE |
 | 19 | Academy-record integration | COMPLETE |
-| 20 | Final fixtures, invariants, simulator and test closure | TODO |
+| 20 | Final fixtures, invariants, simulator and test closure | COMPLETE |
 
 ## Step 1 — Academy population
 
@@ -788,3 +788,30 @@ A confirmed player graduation may emit a persistent **Academy completion unlock 
 The unlock proves that the player previously completed the Academy; it does not invent a new campaign's first assignment or bypass era/character constraints by itself.
 
 **Boundary:** Step 20 performs final integrated closure/testing.
+
+
+## Step 20 — Final closure
+
+Academy Life is **20/20 COMPLETE** at the authoring/contracts/reference-simulator level.
+
+The final closure validates the system as one coherent model:
+- population identity survives every subsystem;
+- schedules/plans remain distinct from actual execution;
+- travel/capacity/location constraints remain real;
+- optional player decisions are never auto-selected;
+- social/romantic/mentor state requires its own causal evidence;
+- the locked adult heterosexual relationship canon remains project-wide;
+- wellbeing changes character-side readiness rather than World Truth;
+- obligations/consequences require evidence and due process;
+- campus events pre-exist participation;
+- off-screen execution cannot invent story;
+- LOD changes detail rather than truth;
+- annual progression requires consolidated evidence;
+- the official record is append-only and provenance-backed;
+- Year 4 completes into graduation pending and confirmed graduation may unlock future skip-Academy play.
+
+This closure does **not** move generic runtime ownership into the Star Trek repository. Live runtime scheduling/state/persistence remains a CoreRPG dependency; Star Trek owns the domain contracts, validation fixtures and reference resolvers.
+
+A dedicated Academy closure CI workflow executes all Step 1–20 reference test scripts.
+
+With Step 20 complete, the previously deferred **Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy** is now eligible to resume as the next roadmap work item.

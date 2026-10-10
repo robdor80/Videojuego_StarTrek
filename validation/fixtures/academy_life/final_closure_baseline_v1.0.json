@@ -1,0 +1,98 @@
+{
+  "request": {
+    "steps": [
+      {
+        "step": 1,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 2,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 3,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 4,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 5,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 6,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 7,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 8,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 9,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 10,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 11,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 12,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 13,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 14,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 15,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 16,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 17,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 18,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 19,
+        "status": "COMPLETE"
+      },
+      {
+        "step": 20,
+        "status": "COMPLETE"
+      }
+    ],
+    "population_slots": [
+      "PLAYER",
+      "C1",
+      "C2"
+    ],
+    "player_optional_choice_auto_selected": false,
+    "plan_equals_execution": false,
+    "lod_changes_truth": false,
+    "record_mutable": false,
+    "elapsed_time_grants_progression": false,
+    "romance_canon": "adult_heterosexual_only",
+    "graduation_directly_assigns_posting": false
+  }
+}

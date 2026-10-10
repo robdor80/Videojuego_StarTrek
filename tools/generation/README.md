@@ -125,3 +125,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 ### Academy Life Step 19 — record integration
 - `integrate_academy_record_step19.py` appends idempotent provenance-backed Academy/service-record events and graduation unlock candidates.
 - `test_integrate_academy_record_step19.py` validates append-only history, mapping, deduplication, corrections and no fabricated commission/assignment.
+
+
+### Academy Life Step 20 — final closure
+- `validate_academy_life_final_step20.py` validates the integrated 20-step closure state.
+- `test_validate_academy_life_final_step20.py` adds 20 cross-system closure tests.
+- `.github/workflows/academy-life-closure.yml` runs all Step 1–20 reference test scripts.

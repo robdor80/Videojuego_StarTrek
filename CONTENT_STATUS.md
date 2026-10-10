@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–19/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–20/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -493,7 +493,14 @@ Current status:
 - no first assignment or commission is fabricated without its own confirmed event;
 - **28 executable Step-19 tests defined**.
 
-**Strict sequence:** Step 20 — Final fixtures, invariants, simulator and test closure is next.
+**ACADEMY LIFE 20/20 COMPLETE.**
+
+- final cross-step acceptance manifest and simulator added;
+- 439 tests were already defined across Steps 1–19;
+- Step 20 adds 20 final cross-system tests, for **459 defined Academy Life tests**;
+- dedicated CI workflow executes all Step 1–20 Academy Life reference tests;
+- Star Trek Academy domain design is closed; generic live runtime/persistence remains a CoreRPG dependency;
+- Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy is now **READY TO RESUME**.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

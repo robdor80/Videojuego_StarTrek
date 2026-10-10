@@ -1,0 +1,127 @@
+{
+  "schema_version": "1.0.0",
+  "validation_pack_id": "academy_life_final_invariants",
+  "status": "FINAL_20_OF_20",
+  "cases": [
+    {
+      "id": "population_conservation",
+      "expected": [
+        "player/authored/materialized people consume real persistent slots"
+      ]
+    },
+    {
+      "id": "identity_continuity",
+      "expected": [
+        "identity survives year, LOD, off-screen, save/load"
+      ]
+    },
+    {
+      "id": "schedule_truth_separation",
+      "expected": [
+        "plan never proves presence"
+      ]
+    },
+    {
+      "id": "travel_capacity_real",
+      "expected": [
+        "no teleporting/infinite seats"
+      ]
+    },
+    {
+      "id": "player_agency",
+      "expected": [
+        "discretionary player choice explicit"
+      ]
+    },
+    {
+      "id": "relationship_causality",
+      "expected": [
+        "no relationship from proximity alone"
+      ]
+    },
+    {
+      "id": "romance_canon",
+      "expected": [
+        "adult heterosexual-only canon remains locked"
+      ]
+    },
+    {
+      "id": "consent",
+      "expected": [
+        "contextual explicit state; never implied"
+      ]
+    },
+    {
+      "id": "mentor_authority",
+      "expected": [
+        "mentor cannot bypass academics/discipline"
+      ]
+    },
+    {
+      "id": "wellbeing_world_truth",
+      "expected": [
+        "readiness effect only; facts unchanged"
+      ]
+    },
+    {
+      "id": "due_process",
+      "expected": [
+        "discipline needs evidence/authority/proportionality"
+      ]
+    },
+    {
+      "id": "campus_world_first",
+      "expected": [
+        "events preexist participation"
+      ]
+    },
+    {
+      "id": "offscreen_no_story_magic",
+      "expected": [
+        "elapsed time alone does not create major state"
+      ]
+    },
+    {
+      "id": "lod_detail_only",
+      "expected": [
+        "LOD changes simulation richness only"
+      ]
+    },
+    {
+      "id": "progression_evidence",
+      "expected": [
+        "year change requires consolidated evidence"
+      ]
+    },
+    {
+      "id": "specialization_transition",
+      "expected": [
+        "end Year2 choice before Year3 activation"
+      ]
+    },
+    {
+      "id": "graduation_pending",
+      "expected": [
+        "Year4 completion not direct commission"
+      ]
+    },
+    {
+      "id": "record_append_only",
+      "expected": [
+        "official record never rewritten"
+      ]
+    },
+    {
+      "id": "skip_unlock",
+      "expected": [
+        "confirmed prior graduation can unlock future skip option"
+      ]
+    },
+    {
+      "id": "runtime_boundary",
+      "expected": [
+        "generic runtime remains CoreRPG-owned"
+      ]
+    }
+  ]
+}

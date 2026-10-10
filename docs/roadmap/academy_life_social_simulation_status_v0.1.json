@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 19,
+    "complete": 20,
     "partial": 0,
-    "todo": 1,
-    "current_step": 19
+    "todo": 0,
+    "current_step": 20
   },
   "steps": [
     {
@@ -107,14 +107,14 @@
     },
     {
       "step": 20,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Final fixtures, invariants, simulator and test closure"
     }
   ],
   "deferred_after_step_20": {
     "work_item": "Procedural Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy",
     "roadmap_ref": "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
-    "status": "TODO_DEFERRED_UNTIL_ACADEMY_STEP_20_COMPLETE"
+    "status": "READY_TO_RESUME"
   },
   "delivered_step_2": {
     "persistent_cadet_identity": "COMPLETE",
@@ -468,5 +468,18 @@
     "executable_tests": 28,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
+  },
+  "delivered_step_20": {
+    "all_20_steps_complete": "COMPLETE",
+    "cross_step_invariants": "COMPLETE",
+    "integrated_acceptance_fixture": "COMPLETE",
+    "final_smoke_simulator": "COMPLETE",
+    "ci_closure_workflow": "PRESENT",
+    "defined_tests_steps_1_19": 439,
+    "defined_step20_tests": 20,
+    "total_defined_tests": 459,
+    "academy_runtime_design_closure": "COMPLETE",
+    "core_runtime_dependency": "REMAINS_EXTERNAL",
+    "dynamic_universe_block4_gate": "READY_TO_RESUME"
   }
 }
