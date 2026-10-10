@@ -1,0 +1,41 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_offscreen_life_contract",
+  "status": "STEP_16_COMPLETE",
+  "principle": "Off-screen Academy life is deterministic execution of already-valid state, not narrative fabrication.",
+  "inputs": [
+    "from_time",
+    "to_time",
+    "population_state",
+    "schedule_entries",
+    "obligations",
+    "participation_plans",
+    "campus_events",
+    "relationship_state",
+    "wellbeing_state",
+    "world_events"
+  ],
+  "outputs": [
+    "executed_routine_event_refs",
+    "explicit_consequential_events",
+    "unresolved_player_choices",
+    "downstream_evidence_candidates",
+    "checkpoint"
+  ],
+  "rules": [
+    "Catch-up only evaluates time inside the requested closed-open interval.",
+    "Events are ordered deterministically by time then stable id.",
+    "Routine low-consequence activity may aggregate.",
+    "Consequential events remain explicit.",
+    "No event absent from authoritative inputs is invented for pacing.",
+    "Optional player choices remain unresolved.",
+    "NPC autonomy operates only inside already-defined eligibility, schedule, capacity and relationship rules.",
+    "Elapsed time alone cannot create relationship transitions, grades, qualifications, progression or discipline.",
+    "Campus events must already exist under Step 15 before off-screen execution can reference them.",
+    "Obligation evidence produced off-screen is consumed by Step 14 rather than bypassing it.",
+    "Wellbeing consumes confirmed resolved activity rather than elapsed time.",
+    "Latent/materialized state changes detail only, never outcome truth.",
+    "Off-screen execution cannot leak hidden World Truth into observer knowledge."
+  ],
+  "next_step_ref": "Step 17 — Social LOD"
+}

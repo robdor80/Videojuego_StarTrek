@@ -104,3 +104,9 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_campus_events_step15.py` validates persistent scheduled/emergent/crisis campus events, participation/obligation candidates, capacity, location, authority and crisis schedule-preemption candidates.
 - `test_resolve_academy_campus_events_step15.py` validates quiet periods, event provenance, visitors, mandatory-vs-optional participation, capacity, cancellation, crisis authority/preemption and strict Step-16+ boundaries.
+
+
+### Academy Life Step 16 — off-screen life
+
+- `resolve_academy_offscreen_step16.py` performs deterministic catch-up of already-valid Academy activities/events without inventing player choices or progression.
+- `test_resolve_academy_offscreen_step16.py` validates causality, ordering, player agency, aggregation and materialization-independence.

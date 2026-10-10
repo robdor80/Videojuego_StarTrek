@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.21.0",
+  "schema_version": "0.22.0",
   "state_id": "cadet_state",
   "player_facing_locale": "es-ES",
   "lifecycle": [
@@ -102,7 +102,10 @@
     "campus_event_participation_plan_refs": "academy_campus_event_participation_plan_ref_list",
     "campus_event_obligation_candidate_refs": "academy_obligation_candidate_ref_list",
     "campus_event_schedule_revision_candidate_refs": "schedule_revision_candidate_ref_list",
-    "campus_event_exception_candidate_refs": "institutional_exception_candidate_ref_list"
+    "campus_event_exception_candidate_refs": "institutional_exception_candidate_ref_list",
+    "offscreen_checkpoint_ref": "academy_offscreen_checkpoint_ref",
+    "offscreen_execution_event_refs": "academy_offscreen_event_ref_list",
+    "offscreen_unresolved_choice_refs": "unresolved_player_choice_ref_list"
   },
   "rules": [
     "academic_sequence_year 1 maps to cadet fourth class and sequence year 4 maps to cadet first class",
@@ -184,7 +187,12 @@
     "optional campus events never auto-enroll or auto-attend the player",
     "crisis preemption creates explicit schedule-revision candidates only under authorized policy; schedules are never silently rewritten",
     "external visitors referenced by campus events must already exist as known entities",
-    "Step 15 directly mutates neither relationships, wellbeing, academic records nor year progression"
+    "Step 15 directly mutates neither relationships, wellbeing, academic records nor year progression",
+    "off-screen Academy catch-up uses the same schedules, capacities, locations, obligations and causal rules as on-screen life",
+    "routine events may aggregate but consequential events remain explicit",
+    "elapsed time alone creates no relationship, qualification, promotion, graduation or disciplinary outcome",
+    "optional player choices are never auto-resolved during catch-up",
+    "latent/materialized presentation state does not change authoritative off-screen outcomes"
   ],
   "population_contract_ref": "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json",
   "academic_group_contract_ref": "gameplay/careers/academy_path/life/academy_academic_group_contract_v0.1.json",
@@ -200,5 +208,6 @@
   "mentor_instructor_contract_ref": "gameplay/careers/academy_path/life/academy_mentor_instructor_contract_v0.1.json",
   "wellbeing_balance_contract_ref": "gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json",
   "obligation_consequence_contract_ref": "gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
-  "campus_event_contract_ref": "gameplay/careers/academy_path/life/academy_campus_event_contract_v0.1.json"
+  "campus_event_contract_ref": "gameplay/careers/academy_path/life/academy_campus_event_contract_v0.1.json",
+  "offscreen_life_contract_ref": "gameplay/careers/academy_path/life/academy_offscreen_life_contract_v0.1.json"
 }

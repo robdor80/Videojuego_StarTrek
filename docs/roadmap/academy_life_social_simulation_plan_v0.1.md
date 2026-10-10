@@ -26,7 +26,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 13 | Wellbeing and balance | COMPLETE |
 | 14 | Obligations and consequences | COMPLETE |
 | 15 | Campus events | COMPLETE |
-| 16 | Off-screen Academy life | TODO |
+| 16 | Off-screen Academy life | COMPLETE |
 | 17 | Social LOD | TODO |
 | 18 | Year progression and continuity | TODO |
 | 19 | Academy-record integration | TODO |
@@ -665,3 +665,45 @@ Campus events may create context for later social interactions, wellbeing activi
 Academic conferences/seminars/courses remain owned by Step 8 and may be referenced by a campus event, not duplicated into a second academic-enrichment system.
 
 **Boundary:** off-screen Academy life remains Step 16; social LOD Step 17; year progression Step 18; Academy-record integration Step 19.
+
+
+## Step 16 — Off-screen Academy life
+
+Step 16 closes deterministic Academy catch-up when cadets, staff or events are outside the player's current simulation focus.
+
+Off-screen simulation does **not** mean free narrative invention. It consumes already-authorized state: schedules, obligations, plans, campus events, relationships, wellbeing context and world events.
+
+Routine activity may be aggregated for efficiency, but consequential events remain explicit and provenance-backed.
+
+The catch-up order is deterministic by time then stable event identity. A latent NPC and a materialized NPC with the same persistent state resolve the same World Truth.
+
+### Player agency boundary
+
+The player's optional social, romantic, extracurricular, enrichment and other discretionary choices are never auto-resolved merely because time advances.
+
+Required obligations may still become due while the player is away, but unresolved player decisions remain unresolved unless an explicit time-skip policy/action authorized their handling.
+
+### No time-is-progress magic
+
+Elapsed time alone does not:
+- create friendship, romance or breakup;
+- complete courses/evaluations;
+- award qualifications;
+- promote or graduate;
+- erase fatigue or discipline;
+- create campus incidents.
+
+All such changes require the same evidence/process used on-screen.
+
+### Cross-system outputs
+
+Confirmed off-screen activity may produce normal event evidence for:
+- attendance/obligations (Step 14 rules);
+- social contact/relationship resolution (Steps 9–11);
+- wellbeing activity (Step 13);
+- campus-event participation (Step 15);
+- evaluation/progression later.
+
+Step 16 owns **execution/catch-up**, not the downstream rule semantics.
+
+**Boundary:** Social LOD remains Step 17; year progression Step 18; Academy-record integration Step 19.

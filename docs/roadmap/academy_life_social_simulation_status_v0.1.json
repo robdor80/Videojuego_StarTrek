@@ -4,10 +4,10 @@
   "plan_ref": "docs/roadmap/academy_life_social_simulation_plan_v0.1.md",
   "summary": {
     "total_steps": 20,
-    "complete": 15,
+    "complete": 16,
     "partial": 0,
-    "todo": 5,
-    "current_step": 15
+    "todo": 4,
+    "current_step": 16
   },
   "steps": [
     {
@@ -87,7 +87,7 @@
     },
     {
       "step": 16,
-      "status": "TODO",
+      "status": "COMPLETE",
       "scope": "Off-screen Academy life"
     },
     {
@@ -386,6 +386,26 @@
     "no_player_proximity_or_species_event_generation": "COMPLETE",
     "deterministic_reference_resolver": "PRESENT",
     "executable_tests": 34,
+    "fixture_count": 1,
+    "validation_pack": "PRESENT"
+  },
+  "delivered_step_16": {
+    "offscreen_catchup_windows": "COMPLETE",
+    "schedule_and_location_constraints": "COMPLETE",
+    "routine_event_aggregation": "COMPLETE",
+    "consequential_event_preservation": "COMPLETE",
+    "optional_player_choices_never_auto_resolved": "COMPLETE",
+    "npc_autonomy_within_existing_rules": "COMPLETE",
+    "no_elapsed_time_career_magic": "COMPLETE",
+    "no_elapsed_time_relationship_magic": "COMPLETE",
+    "campus_events_execute_only_if_existing": "COMPLETE",
+    "obligations_feed_step14_semantics": "COMPLETE",
+    "relationship_events_require_contact": "COMPLETE",
+    "wellbeing_uses_actual_resolved_activity": "COMPLETE",
+    "deterministic_catchup_order": "COMPLETE",
+    "materialization_independent_world_truth": "COMPLETE",
+    "no_hidden_truth_leak": "COMPLETE",
+    "executable_tests": 24,
     "fixture_count": 1,
     "validation_pack": "PRESENT"
   }

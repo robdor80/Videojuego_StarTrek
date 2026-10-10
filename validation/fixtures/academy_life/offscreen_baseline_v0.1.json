@@ -1,0 +1,60 @@
+{
+  "request": {
+    "from_time": 100,
+    "to_time": 200,
+    "population": [
+      {
+        "population_slot_ref": "PLAYER",
+        "is_player": true,
+        "materialized": true
+      },
+      {
+        "population_slot_ref": "N1",
+        "is_player": false,
+        "materialized": false
+      }
+    ],
+    "scheduled_candidates": [
+      {
+        "event_id": "E1",
+        "population_slot_ref": "N1",
+        "time": 110,
+        "activity_family": "class",
+        "duration_minutes": 60,
+        "preconditions_satisfied": true,
+        "source_ref": "schedule:class",
+        "evidence_family": "attendance"
+      },
+      {
+        "event_id": "E2",
+        "population_slot_ref": "PLAYER",
+        "time": 120,
+        "activity_family": "social_optional",
+        "choice_class": "social_optional",
+        "duration_minutes": 30,
+        "preconditions_satisfied": true,
+        "source_ref": "social:plan"
+      },
+      {
+        "event_id": "E3",
+        "population_slot_ref": "N1",
+        "time": 130,
+        "activity_family": "evaluation",
+        "duration_minutes": 30,
+        "preconditions_satisfied": true,
+        "source_ref": "evaluation:scheduled",
+        "consequence_class": "evaluation",
+        "evidence_family": "evaluation"
+      },
+      {
+        "event_id": "E4",
+        "population_slot_ref": "N1",
+        "time": 210,
+        "activity_family": "class",
+        "duration_minutes": 60,
+        "preconditions_satisfied": true,
+        "source_ref": "schedule:future"
+      }
+    ]
+  }
+}

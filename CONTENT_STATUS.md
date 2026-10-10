@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–15/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–16/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -460,7 +460,15 @@ Current status:
 - Step 15 directly changes no relationships, wellbeing, academic record or year progression;
 - **34 executable Step-15 tests pass against the locked fixture**.
 
-**Strict sequence:** Step 16 — Off-screen Academy life is next and has not been started.
+- off-screen Academy life executes only already-valid schedules, obligations, plans and events;
+- routine events may aggregate while consequential events remain explicit/provenance-backed;
+- player discretionary choices never auto-resolve during catch-up;
+- elapsed time alone grants no friendships, romance, qualifications, progression or graduation;
+- latent/materialized presentation state cannot alter World Truth;
+- downstream relationship/wellbeing/obligation semantics reuse existing Steps 9–15;
+- **24 executable Step-16 tests defined**.
+
+**Strict sequence:** Step 17 — Social LOD is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

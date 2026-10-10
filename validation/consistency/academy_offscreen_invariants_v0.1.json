@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_offscreen_invariants",
+  "status": "STEP_16_VALIDATED",
+  "cases": [
+    {
+      "id": "world_first",
+      "expected": [
+        "no new story event invented during catch-up"
+      ]
+    },
+    {
+      "id": "player_optional_unresolved",
+      "expected": [
+        "optional player choices never auto-resolve"
+      ]
+    },
+    {
+      "id": "deterministic_order",
+      "expected": [
+        "time then stable id"
+      ]
+    },
+    {
+      "id": "routine_aggregate",
+      "expected": [
+        "routine events may aggregate"
+      ]
+    },
+    {
+      "id": "major_explicit",
+      "expected": [
+        "consequential events remain explicit"
+      ]
+    },
+    {
+      "id": "time_not_relationship",
+      "expected": [
+        "elapsed time alone creates no relationship transition"
+      ]
+    },
+    {
+      "id": "time_not_career",
+      "expected": [
+        "elapsed time alone creates no progression"
+      ]
+    },
+    {
+      "id": "materialization_irrelevant",
+      "expected": [
+        "presentation LOD does not alter truth"
+      ]
+    },
+    {
+      "id": "step17_deferred",
+      "expected": [
+        "social LOD remains Step 17"
+      ]
+    },
+    {
+      "id": "step18_deferred",
+      "expected": [
+        "year progression remains Step 18"
+      ]
+    },
+    {
+      "id": "step19_deferred",
+      "expected": [
+        "record integration remains Step 19"
+      ]
+    }
+  ]
+}

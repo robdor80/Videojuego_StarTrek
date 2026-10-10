@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.1.1",
   "contract_id": "professional_offscreen_simulation",
   "classification": "GAME_ADDITION_CORE_CANDIDATE",
   "inputs": [
@@ -31,6 +31,8 @@
     "Promotion, qualification and commendation require valid institutional process/evidence.",
     "Professional failure, absence, injury or crisis may alter outcomes.",
     "LOD may aggregate routine duty but must preserve consequential events.",
-    "AI cannot award rank, qualification or performance evidence without authoritative event/state."
-  ]
+    "AI cannot award rank, qualification or performance evidence without authoritative event/state.",
+    "Academy off-screen catch-up never auto-resolves optional player choices or annual progression."
+  ],
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_offscreen_life_contract_v0.1.json"
 }
