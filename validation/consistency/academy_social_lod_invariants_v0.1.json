@@ -1,0 +1,49 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "academy_social_lod_invariants",
+  "status": "STEP_17_VALIDATED",
+  "cases": [
+    {
+      "id": "detail_not_truth",
+      "expected": [
+        "LOD changes simulation richness only"
+      ]
+    },
+    {
+      "id": "identity_persists",
+      "expected": [
+        "known identity never becomes anonymous"
+      ]
+    },
+    {
+      "id": "history_persists",
+      "expected": [
+        "history preserved on promotion/detail reduction"
+      ]
+    },
+    {
+      "id": "proximity_not_promotion",
+      "expected": [
+        "player proximity alone irrelevant"
+      ]
+    },
+    {
+      "id": "major_events_explicit",
+      "expected": [
+        "low LOD cannot fabricate major events"
+      ]
+    },
+    {
+      "id": "year_deferred",
+      "expected": [
+        "year progression remains Step 18"
+      ]
+    },
+    {
+      "id": "record_deferred",
+      "expected": [
+        "record integration remains Step 19"
+      ]
+    }
+  ]
+}

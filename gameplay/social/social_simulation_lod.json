@@ -1,5 +1,5 @@
 {
-  "schema_version": "0.1.0",
+  "schema_version": "0.2.0",
   "model_id": "social_simulation_lod",
   "status": "foundation_fixed",
   "tiers": [
@@ -41,7 +41,15 @@
     "C may materialize into B when an individual becomes directly relevant.",
     "B may promote to A when sustained interaction or narrative importance justifies richer simulation.",
     "Promotion must preserve already established identity/history rather than replacing the character.",
-    "LOD changes affect simulation detail, not whether the person canonically existed."
+    "LOD changes affect simulation detail, not whether the person canonically existed.",
+    "Player proximity alone does not justify Academy LOD promotion.",
+    "Academy mentorship, close relationships, repeated direct interaction or consequential shared history may justify higher detail."
   ],
-  "principle": "A Galaxy-class population can exceed one thousand people without simulating every person's full psychology every tick."
+  "principle": "A Galaxy-class population can exceed one thousand people without simulating every person's full psychology every tick.",
+  "academy_integration_ref": "gameplay/careers/academy_path/life/academy_social_lod_contract_v0.1.json",
+  "detail_reduction_rules": [
+    "A or B may reduce active simulation detail after sustained low relevance.",
+    "Detail reduction never removes stable identity, history, relationships, records, schedules or memberships.",
+    "An already materialized persistent individual never becomes an anonymous replacement slot."
+  ]
 }

@@ -110,3 +110,8 @@ The reference regression seed is locked by SHA-256 digest. An intentional genera
 
 - `resolve_academy_offscreen_step16.py` performs deterministic catch-up of already-valid Academy activities/events without inventing player choices or progression.
 - `test_resolve_academy_offscreen_step16.py` validates causality, ordering, player agency, aggregation and materialization-independence.
+
+
+### Academy Life Step 17 — social LOD
+- `resolve_academy_social_lod_step17.py` deterministically assigns simulation-detail tiers without changing persistent truth.
+- `test_resolve_academy_social_lod_step17.py` validates promotion/demotion detail semantics, history preservation and low-LOD event restrictions.

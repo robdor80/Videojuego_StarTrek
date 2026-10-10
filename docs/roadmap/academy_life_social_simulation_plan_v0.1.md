@@ -27,7 +27,7 @@ Turn Starfleet Academy from a complete academic/training framework into four liv
 | 14 | Obligations and consequences | COMPLETE |
 | 15 | Campus events | COMPLETE |
 | 16 | Off-screen Academy life | COMPLETE |
-| 17 | Social LOD | TODO |
+| 17 | Social LOD | COMPLETE |
 | 18 | Year progression and continuity | TODO |
 | 19 | Academy-record integration | TODO |
 | 20 | Final fixtures, invariants, simulator and test closure | TODO |
@@ -707,3 +707,22 @@ Confirmed off-screen activity may produce normal event evidence for:
 Step 16 owns **execution/catch-up**, not the downstream rule semantics.
 
 **Boundary:** Social LOD remains Step 17; year progression Step 18; Academy-record integration Step 19.
+
+
+## Step 17 — Social LOD
+
+Step 17 adapts the shared A/B/C social-simulation LOD model to Academy life.
+
+LOD controls **simulation richness and update cost**, never whether a person or relationship existed.
+
+- **A — important_persistent:** close relationships, mentor/mentee, recurring rival, major teammate or otherwise deeply relevant cadet/staff.
+- **B — persistent:** stable known individual with simplified but persistent routines, memories and relationship edges.
+- **C — background/latent:** persistent population slot with low-detail state until direct relevance requires richer simulation.
+
+C→B and B→A promotion preserve stable identity, history, relationships, group memberships, schedules and record references. A/B may later reduce simulation detail when sustained relevance falls, but **detail reduction is not identity demotion** and never erases established history.
+
+Player proximity alone is insufficient to promote an NPC. Direct interaction, persistent relationship significance, mentorship, repeated shared activity or consequential history are valid relevance sources.
+
+At low LOD, routine contact may aggregate, but friendship, romance, breakup, discipline, major conflict, injury and other consequential transitions still require explicit causal events. LOD is never permission to fabricate drama.
+
+**Boundary:** year progression remains Step 18; Academy-record integration Step 19.

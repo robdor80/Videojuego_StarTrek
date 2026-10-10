@@ -308,7 +308,7 @@ Control documents:
 - `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
-- **Steps 1–16/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
+- **Steps 1–17/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events**;
 - structure-first Academy population accounting;
 - four cadet-class cohorts separated from instructional staff, operational/support staff, attached training personnel and visitors;
 - Tier A/B/C population semantics reused from the global persistent-population model;
@@ -468,7 +468,14 @@ Current status:
 - downstream relationship/wellbeing/obligation semantics reuse existing Steps 9–15;
 - **24 executable Step-16 tests defined**.
 
-**Strict sequence:** Step 17 — Social LOD is next and has not been started.
+- Academy social LOD uses A/B/C detail tiers while preserving persistent identity and World Truth;
+- promotions preserve all established history; later detail reduction never anonymizes a known individual;
+- direct interaction, important relationship, mentorship and consequential shared history may increase detail;
+- player proximity alone cannot promote an NPC;
+- low LOD may aggregate routine contact but cannot invent friendship, romance, breakup, discipline or other major events;
+- **24 executable Step-17 tests defined**.
+
+**Strict sequence:** Step 18 — Year progression and continuity is next and has not been started.
 
 **Deferred work:** Dynamic Universe Block 4 — Living Interplanetary / Interstellar Economy remains TODO and is intentionally deferred until Academy Life Step 20 is COMPLETE.
 

@@ -1,0 +1,44 @@
+{
+  "request": {
+    "people": [
+      {
+        "population_slot_ref": "A1",
+        "current_lod": "B",
+        "identity_ref": "npc:A1",
+        "history_refs": [
+          "h1"
+        ],
+        "direct_interaction_count": 3,
+        "close_relationship": true
+      },
+      {
+        "population_slot_ref": "B1",
+        "current_lod": "C",
+        "identity_ref": "npc:B1",
+        "history_refs": [
+          "h2"
+        ],
+        "direct_interaction_count": 1
+      },
+      {
+        "population_slot_ref": "C1",
+        "current_lod": "C",
+        "identity_ref": null,
+        "history_refs": [],
+        "direct_interaction_count": 0
+      },
+      {
+        "population_slot_ref": "D1",
+        "current_lod": "A",
+        "identity_ref": "npc:D1",
+        "history_refs": [
+          "h3"
+        ],
+        "direct_interaction_count": 3,
+        "close_relationship": true,
+        "relevance_stale": true,
+        "allow_detail_reduction": true
+      }
+    ]
+  }
+}

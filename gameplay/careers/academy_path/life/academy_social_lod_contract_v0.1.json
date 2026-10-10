@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "academy_social_lod_contract",
+  "status": "STEP_17_COMPLETE",
+  "tiers": {
+    "A": "rich persistent simulation",
+    "B": "persistent simplified simulation",
+    "C": "latent/background persistent population slot"
+  },
+  "rules": [
+    "LOD changes detail, never truth.",
+    "Stable population_slot_ref/character identity survives all LOD changes.",
+    "Promotion preserves every established fact/history reference.",
+    "Detail reduction preserves identity/history and cannot anonymize a known individual.",
+    "Player proximity alone is not a promotion cause.",
+    "Direct interaction, close relationship, mentorship, recurring shared activity and consequential history may increase relevance.",
+    "Low LOD may aggregate routine contact.",
+    "Low LOD cannot fabricate friendship, romance, breakup, discipline, injury, qualification or career transition.",
+    "Major/consequential events remain explicit regardless of LOD.",
+    "Materialization consumes/preserves the same persistent population slot rather than creating a new person."
+  ],
+  "dependencies": [
+    "gameplay/social/social_simulation_lod.json",
+    "gameplay/careers/academy_path/life/academy_offscreen_life_contract_v0.1.json",
+    "gameplay/careers/academy_path/life/academy_population_contract_v0.1.json"
+  ],
+  "next_step_ref": "Step 18 — Year progression and continuity"
+}
