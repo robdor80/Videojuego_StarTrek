@@ -49,6 +49,19 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** luz verde expresa a la idea, aclarando importación exclusivamente local desde el MSI y adoptando «Vincular carpeta» como opción predeterminada.
 - **Ejecución:** no iniciada; no altera la Guardia de Sensores v0.0.1 ni la fase actual.
 
+### IDEA-0003 — Hangares independientes por clase de nave y atraque simulado
+- **Fecha de aprobación conceptual:** 2026-10-11
+- **Estado:** APROBADA CONCEPTUALMENTE; planificación e implementación pendientes.
+- **Propuesta:** crear hangares 3D propios por clase de nave, independientes del casco exterior cuando convenga, con opciones de integración física, híbrida o simulada y transiciones cinematográficas de salida y atraque.
+- **Motivación:** maximizar libertad artística y calidad visual de los hangares sin exigir reconstrucciones destructivas de las mallas exteriores, manteniendo escala, procedimientos y coherencia del universo.
+- **Invariante central:** lanzaderas, tripulantes, carga, daños, posiciones y plazas conservan identidad y persistencia; una lanzadera nunca está en dos lugares a la vez.
+- **Ficha detallada:** [IDEA-0003_hangares_independientes_atraque_simulado.md](IDEA-0003_hangares_independientes_atraque_simulado.md)
+- **Relación con documentación existente:** consola funcional `flight_deck`, Core RPG, UE5 y plan de atraque de instalaciones como referencia, no como contrato ya aplicable a lanzaderas.
+- **Áreas/fases candidatas:** F02, F03, F04, F07, F09, F11, F14 y F15; asignación definitiva pendiente.
+- **Decisión del autor:** idea aportada mediante documento original declarado aprobado conceptualmente; solicitada su incorporación a `/ideas`.
+- **Alcance excluido:** el yate del capitán será una idea/documento distinto.
+- **Ejecución:** no iniciada por este registro; no interrumpe la fase activa.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
