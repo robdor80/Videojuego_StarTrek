@@ -66,11 +66,13 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
         return "unsupported_resolution"
     if not isinstance(request.get("filters"), list) or not request["filters"]:
         return "invalid_filters"
-    if any(f not in SIGNATURE_TYPES for f in request["filters"]):
+    if any(not isinstance(f, str) or f not in SIGNATURE_TYPES for f in request["filters"]):
         return "invalid_filters"
     if "all" in request["filters"] and len(request["filters"]) > 1:
         return "mixed_all_filter"
-    if request.get("priority") not in SIGNATURE_TYPES | {None}:
+    if request.get("priority") is not None and (
+        not isinstance(request["priority"], str) or request["priority"] not in SIGNATURE_TYPES
+    ):
         return "invalid_priority"
     try:
         duration = float(request["scan_duration_s"])
@@ -86,11 +88,13 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
             return "insufficient_power"
         if any(float(profile[k]) == 0 for k in ("capability", "power", "integrity")):
             return "sensors_unavailable"
-    except (KeyError, TypeError, ValueError):
+    except (KeyError, TypeError, ValueError, OverflowError):
         return "invalid_numeric_parameters"
     if context.get("selected_array_state") != "operational":
         return "sensor_array_offline"
-    if request["range_mode"] not in context.get("supported_range_modes", ()):
+    if not isinstance(context.get("supported_range_modes"), (list, tuple, set)):
+        return "missing_capability_list"
+    if request["range_mode"] not in context["supported_range_modes"]:
         return "unsupported_ship_capability"
     if request["range_mode"] == "focused":
         cid = request.get("target_contact_id")
@@ -173,8 +177,10 @@ def run_reference_scan(world: dict[str, Any], request: dict[str, Any],
         cid = request["target_contact_id"]
         result["detections"] = [d for d in result["detections"] if d["contact_id"] == cid]
         partial["detections"] = [d for d in partial["detections"] if d["contact_id"] == cid]
-        result["summary"]["contacts_detected"] = len(result["detections"])
-        partial["summary"]["contacts_detected"] = len(partial["detections"])
+    # Nunca exponer métricas del motor sobre entidades/firmas NO detectadas:
+    # esas cuentas internas permitirían inferir verdad oculta.
+    result["summary"] = {"contacts_detected": len(result["detections"])}
+    partial["summary"] = {"contacts_detected": len(partial["detections"])}
 
     # La lectura parcial no puede revelar más campos que el resultado final.
     result["scan"]["target_contact_id"] = request.get("target_contact_id")
@@ -232,6 +238,8 @@ def science_handoff_candidate(contact_id: str, observation_ids: list[str],
         raise ValueError("unknown_observation")
     if not all(metadata.get(key) for key in ("ship_id", "created_at", "operator_id", "requested_analysis")):
         raise ValueError("missing_handoff_context")
+    if metadata.get("priority", "normal") not in {"routine", "normal", "high", "urgent"}:
+        raise ValueError("invalid_handoff_priority")
     transfer_id = stable_id("handoff", metadata["ship_id"], contact_id,
                             ",".join(sorted(observation_ids)), metadata["created_at"])
     return {
