@@ -3,7 +3,7 @@
 ## Referencia implementada
 - Motor previo reutilizado sin cambios: tools/simulation/resolve_sensor_scan.py.
 - Orquestador **no autoritativo**: tools/simulation/f06_reference.py.
-- Suite: tools/simulation/test_f06_reference.py (**16 pruebas definidas**).
+- Suite: tools/simulation/test_f06_reference.py (**18 pruebas verificadas**).
 - Regresión del motor: tools/simulation/test_sensor_detection_v0_1.py (**8 pruebas preexistentes**).
 - Workflow: .github/workflows/f06-sensors-reference.yml, Python 3.12 sin dependencias externas.
 
@@ -14,10 +14,10 @@ En raíz del repositorio:
     python -m unittest discover -s tools/simulation -p 'test_sensor_detection_v0_1.py' -v
     python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
 
-Las pruebas F06 abarcan: diez ramas y tres modos, motor anterior, no mutación, determinismo, no filtración de verdad oculta, identidad por observador, resultados parciales, sector equivocado permitido, filtro erróneo, interferencia/modo, focalizado limitado al contacto conocido, daños y falta de recursos, autorización, parámetros inválidos, cadena causal de eventos, procedencia de dossier, paquete a Ciencia y compatibilidad de contratos.
+Las **18 pruebas** F06 abarcan: diez ramas y tres modos, motor anterior, no mutación, determinismo, no filtración de verdad oculta, identidad por observador, resultados parciales, sector equivocado permitido, filtro erróneo, interferencia/modo, focalizado limitado al contacto conocido, daños y falta de recursos, autorización, parámetros inválidos, cadena causal de eventos, procedencia de dossier, paquete a Ciencia y compatibilidad de contratos, blindaje contra la filtración de recuentos de entidades ocultas y rechazo defensivo de entradas inválidas.
 
 ## Evidencia y cautela
-**No confundir** una suite incorporada con una suite ejecutada. La evidencia de una ejecución se registra solo al disponer de estado y logs observables de GitHub Actions. Los eventos/dossiers/paquetes de referencia son propuestas sin commit; no prueban consola jugable, latencia, memoria persistente o IA conectada.
+**No confundir** una suite incorporada con una suite ejecutada. **Ejecución observada:** [Actions 38179039670](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38179039670) `completed/success` en commit `70412bc6e01ea64a8a646e91d34e93299306c4c2`: sintaxis OK, **8/8** regresión y **18/18** F06; logs comprobados. Archivo de evidencia: EVIDENCIA_P05.json. Los eventos/dossiers/paquetes de referencia son propuestas sin commit; no prueban consola jugable, latencia, memoria persistente o IA conectada.
 
 ## Entrega a la F07/F08 (interfaz del puesto)
 La pantalla/puente UE5 debe consumir datos confirmados del Core; **no llamar al módulo de referencia como autoridad**. Adaptador conceptual requerido:
