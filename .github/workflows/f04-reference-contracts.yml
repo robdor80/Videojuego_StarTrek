@@ -1,0 +1,40 @@
+name: F04 reference contracts
+
+on:
+  push:
+    branches:
+      - 'docs/f04-*'
+    paths:
+      - 'docs/roadmap/master/fases/F04/**'
+      - 'tools/validation/f04_reference.py'
+      - 'tools/validation/test_f04_reference.py'
+      - 'validation/fixtures/f04/**'
+      - '.github/workflows/f04-reference-contracts.yml'
+  pull_request:
+    paths:
+      - 'docs/roadmap/master/fases/F04/**'
+      - 'tools/validation/f04_reference.py'
+      - 'tools/validation/test_f04_reference.py'
+      - 'validation/fixtures/f04/**'
+      - '.github/workflows/f04-reference-contracts.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  reference-contracts:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile reference tools
+        run: python -m py_compile tools/validation/f04_reference.py tools/validation/test_f04_reference.py
+      - name: Unit tests and canonical source checks
+        run: python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
+      - name: Fixture acceptance cases
+        run: python tools/validation/f04_reference.py --fixture validation/fixtures/f04/authority_watch_acceptance_v0.1.json
