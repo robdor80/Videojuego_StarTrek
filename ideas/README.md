@@ -8,7 +8,7 @@ Este directorio es la **bandeja de entrada de ideas** del videojuego. Sirve para
 2. **Anotar una idea no equivale a aprobarla, convertirla en canon ni autorizar su implementación.**
 3. Antes de desarrollarla, se revisa si ya existe una regla, contrato, asset o tarea equivalente en el repositorio.
 4. Las ideas se clasifican según su destino: **Star Trek específico**, **candidato compartido con Core RPG**, **UE5/visual**, **Academia web**, **NAP/recursos** o **pendiente de clasificar**.
-5. Una vez estudiada, se asigna a la fase y paso correspondientes del futuro plan maestro, respetando dependencias y criterios de cierre. Si afecta al canon o a decisiones de autor, exige aprobación expresa.
+5. Una vez estudiada, se asigna a la fase y paso correspondientes del [plan maestro vigente](../docs/roadmap/master/PLAN_MAESTRO.md), respetando dependencias y criterios de cierre. Si afecta al canon o a decisiones de autor, exige aprobación expresa.
 6. No adelantar trabajo de otra fase por el mero hecho de que haya surgido una idea.
 7. Nunca se pierden las decisiones: si una idea se acepta, descarta o aplaza, conservar su registro y motivo.
 8. No mover ni duplicar contratos existentes para introducir una idea; enlazar a sus ubicaciones originales.
@@ -47,4 +47,4 @@ La fase Core RPG **4.10 (Actions + Simulation)** es una oportunidad para evaluar
 
 ## Registro
 
-Consultar [BUZON.md](./BUZON.md). Las fases definitivas se enlazarán cuando el plan maestro global haya sido debatido y aprobado.
+Consultar [BUZON.md](./BUZON.md). Las fases F00–F15 ya están indexadas en [el plan maestro](../docs/roadmap/master/PLAN_MAESTRO.md). El estado de una idea no altera la fase principal activa.
