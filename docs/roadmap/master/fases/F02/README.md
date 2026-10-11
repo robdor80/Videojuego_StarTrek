@@ -15,7 +15,7 @@ Establecer fronteras firmes entre [CoreRPG](https://github.com/robdor80/CoreRPG)
 | **F02-P02** | **CERRADA COMO INVENTARIO AUDITADO**: 24 fuentes JSON (23 contratos/modelos y 1 fixture), 73 selectores verificados, 5 cabeceras Core/main y decisión de tiempo; **NO** APIs ni integración Core validadas | [Matriz P02](MATRIZ_INTERCAMBIO_Y_PROPIEDAD.md) · [Registro JSON](INVENTARIO_INTERCAMBIO_P02.json) |
 | **F02-P03** | **DISEÑO DOCUMENTAL COMPLETO / EN_REVISION-BLOQUEADA_CORE**: 11 adaptadores + 1 frontera externa, 11 gaps cubiertos; **sin API Core futura ni UE5 validados** | [Arquitectura P03](ADAPTADORES_Y_FRONTERAS.md) · [Mapa JSON](MAPA_ADAPTADORES_P03.json) · [Secuencias](SECUENCIAS_Y_CASOS_P03.md) · [Handoff Core/Host](SOLICITUD_COORDINACION_CORE_P03.md) |
 | **F02-P04** | **DISEÑO DOCUMENTAL COMPLETO / EN_REVISION-BLOQUEADA_CORE**: 13 fallos, 6 ejes, 10 decisiones, 16 pruebas; **CI F02 success**, comprobación de fuentes real y 9/9 tests aislados OK; **sin tests UE5/Core E2E** | [Política P04](FALLOS_VERSIONES_Y_PRUEBAS.md) · [Registro JSON](REGISTRO_FALLOS_COMPATIBILIDAD_P04.json) · [Validador](../../../../../tools/validation/validate_f02_contracts.py) |
-| **F02-P05** | **EN_REVISION/BLOQUEADA_CORE**: plan del primer corte, validación externa pendiente | [Plan de integración](PLAN_INTEGRACION_PRIMER_CORTE.md) |
+| **F02-P05** | **PLAN DOCUMENTAL COMPLETADO / EN_REVISION-BLOQUEADA_CORE**: 11 paquetes de trabajo F03–F08, 13/13 invariantes trazados y plan de entrada F03-P01; **sin validación formal Core/Host ni integración** | [Plan de integración](PLAN_INTEGRACION_PRIMER_CORTE.md) · [Hoja JSON](HOJA_RUTA_EJECUCION_P05.json) · [Validador](../../../../../tools/validation/validate_f02_p05_plan.py) |
 
 Los estados combinados `EN_REVISION/BLOQUEADA_CORE` indican avance documental con **puerta de validación bloqueada por dependencia externa**, no crean un estado nuevo en el JSON de gobierno.
 
@@ -47,3 +47,7 @@ El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la e
 Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
 
 La política P04 diferencia fallos seguros de presentación/IA de los fallos de autoridad del Core. El validador P04 inspecciona trazabilidad y deriva de los contratos, **no ejecuta el videojuego**. Los 9 unit tests sintéticos superados en Python 3.13.5/Linux se repitieron en CI y el checkout completo **sí se validó en GitHub Actions**: [run 38149311936, success](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38149311936). Sigue sin acreditar 4.7/4.9/4.10 ni UE5.
+
+## Traspaso a F03 tras P05
+
+Los cinco pasos **P01–P05** tienen ya entregables documentales inspeccionables en esta rama. **F02 NO se declara cerrada al nivel `CONTRATO_VALIDADO`** porque Core 4.5 no está en `main` y están sin validar APIs/Host UE5. Se permite iniciar en paralelo **F03-P01 de auditoría y diseño** sobre cronología, seeds y materialización, en **rama/PR independiente**, sin fingir ejecución Core. No modificar estado global sin reconciliar F01 (DEC-0001/PR #2) y F02 (PR #3). Fuente de entrada: [P05](PLAN_INTEGRACION_PRIMER_CORTE.md), hoja INT-00…INT-10 y [F03](../F03/README.md).
