@@ -1,0 +1,270 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-11",
+  "repo": "robdor80/Videojuego_StarTrek",
+  "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
+  "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
+  "management": "Se evalúa por separado estado de tarea y madurez del artefacto; no se fusionan COMPLETE documentales con runtime.",
+  "current_global_phase": "F01",
+  "completed_management_phase": "F00",
+  "phase_count": 16,
+  "step_count": 80,
+  "phases": [
+    {
+      "id": "F00",
+      "title": "Auditoría, inventario y gobierno",
+      "status": "CERRADA",
+      "target_maturity": "DOCUMENTACION_AUDITADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "CERRADA",
+        "P05": "CERRADA"
+      },
+      "note": "Fase de organización; queda evidencia en los registros del directorio.",
+      "file": "fases/F00/README.md"
+    },
+    {
+      "id": "F01",
+      "title": "Visión y canon del producto",
+      "status": "PLANIFICADA",
+      "target_maturity": "DISENO_VALIDADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Fuente documental previa significativa; decisiones de Dama/MVP abiertas.",
+      "file": "fases/F01/README.md"
+    },
+    {
+      "id": "F02",
+      "title": "Arquitectura e integración",
+      "status": "PLANIFICADA",
+      "target_maturity": "CONTRATO_VALIDADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Core RPG es dependencia externa; no asumir versión desplegada.",
+      "file": "fases/F02/README.md"
+    },
+    {
+      "id": "F03",
+      "title": "Mundo autoritativo y persistencia",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Contratos y simuladores de referencia existen; runtime pendiente.",
+      "file": "fases/F03/README.md"
+    },
+    {
+      "id": "F04",
+      "title": "Naves, dotación y autoridad",
+      "status": "PLANIFICADA",
+      "target_maturity": "REFERENCIA_PROBADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Shipboard Life 15/15 es cierre de referencia, no de juego.",
+      "file": "fases/F04/README.md"
+    },
+    {
+      "id": "F05",
+      "title": "Órdenes, delegación e iniciativa NPC",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Core RPG 4.10+ es evaluación/avance gradual, no sistema completo asegurado.",
+      "file": "fases/F05/README.md"
+    },
+    {
+      "id": "F06",
+      "title": "Sensores funcionales",
+      "status": "PLANIFICADA",
+      "target_maturity": "REFERENCIA_PROBADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Árbol, detección y fixtures presentes; completar requisitos de integración.",
+      "file": "fases/F06/README.md"
+    },
+    {
+      "id": "F07",
+      "title": "Pipeline 3D y puente piloto",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Assets de planos/POV no equivalen a proyecto UE5.",
+      "file": "fases/F07/README.md"
+    },
+    {
+      "id": "F08",
+      "title": "Primera guardia jugable v0.0.1",
+      "status": "PLANIFICADA",
+      "target_maturity": "ACEPTACION_SUPERADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Corte vertical integrado, no solo fixture JSON.",
+      "file": "fases/F08/README.md"
+    },
+    {
+      "id": "F09",
+      "title": "Resto de consolas",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Catálogo de 16 familias existente; verificar cada operación.",
+      "file": "fases/F09/README.md"
+    },
+    {
+      "id": "F10",
+      "title": "Academia jugable",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "20/20 vida Academia y material web son referencias a reutilizar.",
+      "file": "fases/F10/README.md"
+    },
+    {
+      "id": "F11",
+      "title": "Carrera y flota jugable",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Rutas progresivas; Imperator opcional; no hay capitanía automática.",
+      "file": "fases/F11/README.md"
+    },
+    {
+      "id": "F12",
+      "title": "Vida a bordo y relaciones",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Contratos sociales previos; NPC simulados independientemente de 3D.",
+      "file": "fases/F12/README.md"
+    },
+    {
+      "id": "F13",
+      "title": "Universo dinámico",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Capas 001-118 y bloques 1-3 cerrados solo a su nivel, bloque 4 pendiente.",
+      "file": "fases/F13/README.md"
+    },
+    {
+      "id": "F14",
+      "title": "Recursos audiovisuales y NAP",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "Pipeline visual y repos externos; trazabilidad y licencias.",
+      "file": "fases/F14/README.md"
+    },
+    {
+      "id": "F15",
+      "title": "QA, beta y distribución",
+      "status": "PLANIFICADA",
+      "target_maturity": "ACEPTACION_SUPERADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+      },
+      "note": "QA transversal desde cada fase; F15 es cierre integral.",
+      "file": "fases/F15/README.md"
+    }
+  ]
+}
