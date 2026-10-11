@@ -1,6 +1,6 @@
 # F01 — Visión del producto y canon
 
-**Estado global:** EN_CURSO (F01-P03 y F01-P04 requieren decisión del autor). **Revisión:** 2026-10-11. **Madurez actual:** `DISENO_VALIDADO` del material heredado para P01/P02; propuesta revisable para P03–P05.
+**Estado global:** EN_CURSO (solo F01-P03 requiere elección autoral). **Revisión:** 2026-10-11. **Madurez actual:** `DISENO_VALIDADO` en P01/P02/P04; P05 pendiente de registrar decisión final DEC-0001.
 
 ## Objetivo
 
@@ -11,8 +11,8 @@ Consolidar la visión del videojuego 3D para PC, verificar épocas/canon y cerra
 - [x] **F01-P01 — Visión 3D MSI, carrera libre, universo autónomo.** [Visión de producto](../../../../vision/VISION_PRODUCTO_RPG_3D_v0.1.md). Se reconcilian los acuerdos existentes y se declaran exclusiones; decisión original mantenida.
 - [x] **F01-P02 — Auditoría de épocas y canon.** [Auditoría de canon](AUDITORIA_EPOCAS_Y_CANON.md). Confirmadas tres épocas; continuidad emergente; extension Sovereign explícita y precaución Odyssey.
 - [ ] **F01-P03 — Dama base Imperator.** [Análisis comparado](ANALISIS_DAMAS_IMPERATOR.md). `NECESITA_AUTOR (DEC-0001)`: no seleccionar automáticamente entre Galaxy, Sovereign y Odyssey.
-- [ ] **F01-P04 — Primer MVP y presupuestos.** [Propuesta de escenario y métricas](PROPUESTA_MVP_Y_PRESUPUESTO.md). `NECESITA_AUTOR (DEC-0002)`: aprobar/ajustar guardia de Sensores como primer ejecutable; fijar criterios de rendimiento sin inventar mediciones.
-- [ ] **F01-P05 — Catálogo de decisiones y fuentes.** [Registro de decisiones](REGISTRO_DECISIONES_Y_TRAZABILIDAD.md). Matriz de acuerdos adoptados, no aprobados y pendientes creada; debe actualizarse con DEC-0001/0002 y acta definitiva para cerrar.
+- [x] **F01-P04 — Primer corte técnico y presupuesto medible.** [Contrato aprobado de prototipo de Sensores](PROPUESTA_MVP_Y_PRESUPUESTO.md) y [política de prototipos internos](../../../../decisions/prototype_validation_and_release_policy.md). `DEC-0002 APROBADA`: v0.0.1 interna, solo guardia de Sensores; criterios funcionales fijados; métricas de rendimiento cuantitativas se instrumentarán y validarán en F07/F08, sin inventarlas.
+- [ ] **F01-P05 — Catálogo de decisiones y fuentes.** [Registro de decisiones](REGISTRO_DECISIONES_Y_TRAZABILIDAD.md). Matriz de acuerdos adoptados, no aprobados y pendientes creada; `DEC-0002` registrada y validada; falta resultado de `DEC-0001` y acta definitiva para cerrar.
 
 ## Reutilización exacta
 
@@ -30,6 +30,6 @@ Consolidar la visión del videojuego 3D para PC, verificar épocas/canon y cerra
 
 **NO_EJECUTADO:** pruebas de Core RPG, compilación o sesión UE5, pruebas de rendimiento en MSI o licencia/importación de mallas. Es trabajo de visión, no runtime.
 
-**Bloqueos actuales:** DEC-0001 (Dama) y DEC-0002 (MVP). DEC-0003 (puente piloto y licencias) pertenece a F07. La fase **no** se declarará cerrada hasta recoger decisión de autor, actualizar registros, validar enlaces/estado y fusionar PR.
+**Bloqueo autoral actual:** solo `DEC-0001` (elección de Dama). Sovereign/Enterprise-E figura como **preferencia provisional no confirmada**, a la espera de la evaluación de Codex; no es canon ni clase seleccionada. `DEC-0002` (v0.0.1 interna de Sensores) está aprobada. `DEC-0003` (puente piloto/licencias) pertenece a F07. La fase **no** se declarará cerrada hasta completar `DEC-0001`, actualizar acta, validaciones y fusionar PR.
 
 Consúltese [PLAN_MAESTRO](../../PLAN_MAESTRO.md), [DECISIONES_Y_RIESGOS](../../DECISIONES_Y_RIESGOS.md), [CRITERIOS_DE_CIERRE](../../CRITERIOS_DE_CIERRE.md) y [ESTADO_GLOBAL.json](../../ESTADO_GLOBAL.json).
