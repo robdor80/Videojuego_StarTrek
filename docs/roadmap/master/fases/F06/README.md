@@ -8,7 +8,7 @@
 - [x] **F06-P02 — referencia** — [Detección, filtros, interferencia, conocimiento y resultado parcial](DETECCION_CONOCIMIENTO_P02.md). Reutiliza el motor original; verificado sin efectos autoritativos.
 - [x] **F06-P03 — referencia** — [Memoria de nave, transferencias a Ciencia y eventos](MEMORIA_CIENCIA_EVENTOS_P03.md). Propuestas de dossiers, handoff y eventos; persistencia y envío reales pendientes.
 - [x] **F06-P04 — contrato** — [Matriz de operación, recursos, puestos, rechazo y demora](OPERACIONES_RECURSOS_ORDENES_P04.md). No introduce economía o permisos falsos en el canon.
-- [x] **F06-P05 — suite independiente** — [Pruebas y acuerdo semántico para UE5](PRUEBAS_UE5_Y_CIERRE_P05.md), [evidencia JSON](EVIDENCIA_P05.json). **24/24 pruebas verificadas**, [Actions 38178732719](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38178732719): 8 del motor anterior + 16 F06.
+- [x] **F06-P05 — suite independiente** — [Pruebas y acuerdo semántico para UE5](PRUEBAS_UE5_Y_CIERRE_P05.md), [evidencia JSON](EVIDENCIA_P05.json). **26/26 pruebas verificadas**, [Actions 38179039670](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38179039670): 8 del motor anterior + 18 F06.
 
 **Los checks indican preparación de entregables de referencia, no cierre de la fase completa.** P01 queda abierto por revisión del PDF.
 
@@ -16,7 +16,7 @@
 
 - tools/simulation/resolve_sensor_scan.py — motor original **sin modificaciones**.
 - tools/simulation/f06_reference.py — orquestación de prueba sin escribir World State.
-- tools/simulation/test_f06_reference.py — 16 pruebas automáticas.
+- tools/simulation/test_f06_reference.py — 18 pruebas automáticas.
 - .github/workflows/f06-sensors-reference.yml — compilación y suites del motor + F06.
 
 La implementación devuelve snapshots, candidaturas de dossier y cadenas de eventos; `authoritative=false`, `effects_applied=0` y `reservation_applied=false`. No confirma resultados en campaña.
