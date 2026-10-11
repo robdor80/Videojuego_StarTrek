@@ -11,8 +11,8 @@ from f04_reference import check_roster, check_schedule, evaluate, verify_fixture
 
 
 def context(action, **kw):
-    return dict(action=action, actor_active=True, actor_fit=True,
-                technical_available=True, safety_interlock="none", **kw)
+    return {**dict(action=action, actor_active=True, actor_fit=True,
+                   technical_available=True, safety_interlock="none"), **kw}
 
 
 class F04ReferenceTests(unittest.TestCase):
