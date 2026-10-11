@@ -1,0 +1,39 @@
+name: F06 — Sensores referencia independiente
+
+on:
+  push:
+    branches:
+      - feat/f06-sensors-functional-reference
+    paths:
+      - "tools/simulation/f06_reference.py"
+      - "tools/simulation/test_f06_reference.py"
+      - "tools/simulation/resolve_sensor_scan.py"
+      - "tools/simulation/test_sensor_detection_v0_1.py"
+      - ".github/workflows/f06-sensors-reference.yml"
+  pull_request:
+    paths:
+      - "tools/simulation/f06_reference.py"
+      - "tools/simulation/test_f06_reference.py"
+      - "tools/simulation/resolve_sensor_scan.py"
+      - "tools/simulation/test_sensor_detection_v0_1.py"
+      - ".github/workflows/f06-sensors-reference.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reference-sensors:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verificar sintaxis
+        run: python -m py_compile tools/simulation/resolve_sensor_scan.py tools/simulation/f06_reference.py tools/simulation/test_f06_reference.py
+      - name: Regression motor v0.1
+        run: python -m unittest discover -s tools/simulation -p 'test_sensor_detection_v0_1.py' -v
+      - name: F06 modelo, sensores, eventos y transferencias
+        run: python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
