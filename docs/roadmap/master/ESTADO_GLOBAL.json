@@ -36,10 +36,10 @@
         "P01": "CERRADA",
         "P02": "CERRADA",
         "P03": "BLOQUEADA",
-        "P04": "EN_REVISION",
+        "P04": "CERRADA",
         "P05": "EN_REVISION"
       },
-      "note": "P01 visión consolidada, P02 canon auditado; P03 necesita DEC-0001 (Dama), P04 aprobación DEC-0002 (MVP), P05 cierre posterior de decisiones. F01 no está cerrada; rama docs/f01-vision-canon-scope.",
+      "note": "F01-P01/P02 documentadas y auditadas; P04 cerrada en alcance de diseño: DEC-0002 aprobada, v0.0.1 prototipo interno de Sensores, benchmarks cuantitativos diferidos a F07/F08. P03 espera elección expresa DEC-0001: Sovereign E provisional, NO aprobada; P05 matriz preparada y pendiente de acta final. No cerrar fase ni fusionar PR hasta decisión de Dama.",
       "file": "fases/F01/README.md"
     },
     {
