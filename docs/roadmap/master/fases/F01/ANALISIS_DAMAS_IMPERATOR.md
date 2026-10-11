@@ -1,6 +1,6 @@
 # F01-P03 — Análisis de Damas para Imperator (DEC-0001)
 
-Fecha: 2026-10-11. Estado: BLOQUEADA POR DECISIÓN DE AUTOR. No hay elección aprobada.
+Fecha: 2026-10-11. Estado: BLOQUEADA POR DECISIÓN DE AUTOR. No hay elección aprobada. El autor ha indicado **inclinación provisional por Sovereign/Enterprise-E**, a falta de los resultados finales de Codex; **no es autorización para fijarla**.
 
 ## Candidatas
 | Base | Estado comprobado | Ventaja | Riesgo |
@@ -15,6 +15,6 @@ La clase elegida para Imperator no determina el puente piloto de F07 ni puede sa
 
 Recomendación técnica provisional (no decisión): separar `imperator_reference_class`, `imperator` y `prototype_bridge_class`.
 
-**Decisión requerida:** Roberto selecciona Galaxy, Sovereign u Odyssey.
+**Decisión requerida:** Roberto selecciona Galaxy, Sovereign u Odyssey cuando finalice el análisis de Codex. No anticipar la elección ni solicitarla repetidamente mientras continúe dicha evaluación.
 
 Fuentes: `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`, `docs/decisions/playable_eras.md`, `docs/decisions/starship_identity_model.md`, `lore/starships/classes/core_starship_classes.json`.
