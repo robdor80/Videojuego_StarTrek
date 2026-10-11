@@ -16,7 +16,7 @@ def context(action, **kw):
 
 
 class F04ReferenceTests(unittest.TestCase):
-    def test_all_38_fixture_cases(self):
+    def test_all_39_fixture_cases(self):
         path = ROOT / "validation/fixtures/f04/authority_watch_acceptance_v0.1.json"
         fixture = json.loads(path.read_text(encoding="utf-8"))
         self.assertEqual((len(fixture["authority_cases"]), len(fixture["roster_cases"]),
