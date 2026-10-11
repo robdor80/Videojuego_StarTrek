@@ -1,0 +1,154 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f05_orders_reference_only",
+  "is_core_api": false,
+  "status": "PROPOSED_REFERENCE",
+  "date": "2026-10-11",
+  "objects": {
+    "request": [
+      "request_id",
+      "actor_id",
+      "intent",
+      "world_id",
+      "correlation_id"
+    ],
+    "order": [
+      "order_id",
+      "issuer_character_id",
+      "issuer_appointment_ref",
+      "recipient_id",
+      "action_id",
+      "parameters",
+      "authority_domain",
+      "issued_at",
+      "world_id",
+      "idempotency_key"
+    ],
+    "task": [
+      "task_id",
+      "order_id",
+      "assignee_id",
+      "status",
+      "deadline_at",
+      "reporting_requirement"
+    ],
+    "action_attempt": [
+      "attempt_id",
+      "order_id",
+      "executor_id",
+      "expected_revision",
+      "idempotency_key",
+      "executed_at"
+    ],
+    "result": [
+      "result_id",
+      "attempt_id",
+      "status",
+      "actual_effects",
+      "reason_code"
+    ],
+    "event": [
+      "event_id",
+      "event_type",
+      "occurred_at",
+      "causal_refs",
+      "visibility"
+    ]
+  },
+  "order_states": [
+    "issued",
+    "clarification_required",
+    "accepted",
+    "queued",
+    "executing",
+    "completed",
+    "failed",
+    "refused",
+    "cancelled"
+  ],
+  "terminal_order_states": [
+    "completed",
+    "failed",
+    "refused",
+    "cancelled"
+  ],
+  "transitions": {
+    "issued": [
+      "clarification_required",
+      "accepted",
+      "refused",
+      "cancelled"
+    ],
+    "clarification_required": [
+      "issued",
+      "refused",
+      "cancelled"
+    ],
+    "accepted": [
+      "queued",
+      "executing",
+      "cancelled",
+      "refused"
+    ],
+    "queued": [
+      "executing",
+      "cancelled",
+      "failed"
+    ],
+    "executing": [
+      "completed",
+      "failed",
+      "refused"
+    ],
+    "completed": [],
+    "failed": [],
+    "refused": [],
+    "cancelled": []
+  },
+  "reason_codes": [
+    "missing_information",
+    "authority_denied",
+    "legal_constraint",
+    "medical_unfit",
+    "unavailable_capability",
+    "insufficient_resources",
+    "stale_context",
+    "delegation_revoked",
+    "delegation_expired",
+    "deadline_expired",
+    "deliberate_noncompliance",
+    "idempotency_conflict"
+  ],
+  "delegation_statuses": [
+    "draft",
+    "active",
+    "suspended",
+    "revoked",
+    "expired"
+  ],
+  "control_modes": [
+    "manual",
+    "proposal_requires_approval",
+    "delegated_autonomous"
+  ],
+  "required_runtime_rechecks": [
+    "issuer_effective_authority",
+    "executor_qualification",
+    "medical_fitness",
+    "knowledge_projection",
+    "current_state_revision",
+    "delegation_current_status",
+    "station_capability",
+    "resources",
+    "temporal_exclusivity"
+  ],
+  "invariants": [
+    "ai_never_mutates_world",
+    "events_append_only",
+    "stable_ids",
+    "revalidate_at_execution",
+    "no_double_effect",
+    "command_scope_not_rank",
+    "captain_owns_delegated_responsibility"
+  ]
+}
