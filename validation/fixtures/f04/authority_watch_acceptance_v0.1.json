@@ -225,7 +225,8 @@
         "action": "relieve_command_medically",
         "professional_qualified": true,
         "medical_judgement_documented": true,
-        "target_medically_unfit": true
+        "target_medically_unfit": true,
+        "appointment_active": true
       },
       "expected": {
         "decision": "ALLOW",
@@ -243,7 +244,8 @@
         "action": "relieve_command_medically",
         "professional_qualified": true,
         "medical_judgement_documented": false,
-        "target_medically_unfit": true
+        "target_medically_unfit": true,
+        "appointment_active": true
       },
       "expected": {
         "decision": "DENY",
@@ -489,6 +491,25 @@
       "expected": {
         "decision": "DENY",
         "code": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "id": "a26_cmo_without_appointment",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "chief_medical_officer",
+        "action": "relieve_command_medically",
+        "professional_qualified": true,
+        "medical_judgement_documented": true,
+        "target_medically_unfit": true,
+        "appointment_active": false
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "MEDICAL_AUTHORITY_OR_EVIDENCE"
       }
     }
   ],
