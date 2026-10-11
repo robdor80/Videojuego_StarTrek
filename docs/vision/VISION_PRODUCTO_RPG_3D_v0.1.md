@@ -1,6 +1,6 @@
 # Visión de producto — Star Trek RPG 3D (F01-P01)
 
-**Versión:** 0.1 · **Fecha de auditoría:** 2026-10-11 · **Estado:** BASELINE_RECONCILIADA (principios heredados aprobados; NO equivale a aprobación de Dama/MVP) · **Madurez:** DISENO_VALIDADO del alcance ya fijado.
+**Versión:** 0.1 · **Fecha de auditoría:** 2026-10-11 · **Estado:** BASELINE_RECONCILIADA (principios aprobados y prototipo interno DEC-0002; Dama DEC-0001 pendiente) · **Madurez:** DISENO_VALIDADO del alcance ya fijado.
 
 ## Promesa al jugador
 
@@ -26,6 +26,12 @@ Vivir una trayectoria personal dentro de Star Trek: entrar en la Flota Estelar, 
 - **Trayectoria larga:** ascensos, cambios de destino, especialización, puestos con distinta autoridad, oportunidades de mando y relaciones que no se congelan.
 - **Universo:** descubrir un lugar no equivale a crearlo; las consecuencias pueden alcanzar a otras naves y facciones fuera de cámara.
 
+## Política de prototipos y lanzamiento
+
+Las versiones `v0.0.x` son herramientas **internas de validación previas al lanzamiento**, no episodios obligatorios del producto publicado. `v0.0.1` prueba la **guardia de Sensores**. Las posibles `v0.0.2` y siguientes podrán ensayar Academia/vida social/otras consolas sin fijar contenido ni orden por adelantado. Reutilizar subsistemas que funcionen; no importar automáticamente escenarios de prueba, NPC artificiales o datos de laboratorio a la campaña definitiva. La versión 1.0 del producto integrado queda como meta sin fecha.
+
+Fuente: `docs/decisions/prototype_validation_and_release_policy.md` (DEC-0002).
+
 ## Límites explícitos
 
 - No prometer contenido de toda la galaxia en el primer ejecutable, ni puentes/espacios interiores de las tres Damas simultáneamente.
@@ -44,4 +50,4 @@ Vivir una trayectoria personal dentro de Star Trek: entrar en la Flota Estelar, 
 - `gameplay/careers/starfleet_service/README.md`; `docs/roadmap/game_design_readiness_v0_2.md`.
 - `docs/roadmap/master/PLAN_MAESTRO.md`; `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`.
 
-**Pendiente exclusivamente de autor:** `DEC-0001` (Dama/Imperator) y `DEC-0002` (límites del MVP). Véanse los expedientes en `docs/roadmap/master/fases/F01/`.
+**Pendiente exclusivamente de autor:** `DEC-0001` (Dama/Imperator; Sovereign provisional pero no elegida). `DEC-0002` (primer prototipo) ya aprobada; los umbrales cuantitativos esperan perfilado técnico. Véanse los expedientes en `docs/roadmap/master/fases/F01/`.
