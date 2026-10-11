@@ -6,6 +6,7 @@
 
 - [Registro P04 verificable](REGISTRO_FALLOS_COMPATIBILIDAD_P04.json): **13 situaciones de fallo**, **6 ejes de versión**, **10 condiciones de compatibilidad**, **16 pruebas** y preflight exigido para migraciones.
 - [Validador estático](../../../../../tools/validation/validate_f02_contracts.py) y [sus nueve tests aislados](../../../../../tools/validation/test_validate_f02_contracts.py), sin librerías externas.
+- [Workflow GitHub Actions F02](https://github.com/robdor80/Videojuego_StarTrek/blob/docs/f02-core-integration-contracts/.github/workflows/f02-contracts.yml): ejecuta chequeo de procedencia y tests sin atribuirse pruebas Core/UE5.
 - [Inventario P02](INVENTARIO_INTERCAMBIO_P02.json): 24 fuentes JSON/73 selectores con SHA blob; [mapa P03](MAPA_ADAPTADORES_P03.json): 12 fronteras/11 gaps.
 - CoreRPG línea base real: `main@dcfcb83c9853e005b5450bd39e0ba693cb91e257`, 4.5 rama `2a3da891d8c56e9868c7bd67dbeb6041509df2ce`. `main` carece de acciones generales, Knowledge y Persistence.
 - La referencia `gameplay/persistence/persistent_state_roundtrip_contract.json` exige identidad, historia y procedencia; **no** define el formato físico o una implementación existente de save/load.
@@ -100,11 +101,11 @@ Un guardado que no puede migrarse debe quedar recuperable por una versión compa
 | **F02-T07** | IA tardía y permisos revocados: cero efectos | BLOQUEADO Actions + Host |
 | **F02-T08** | Compilación y enlace C++ Core con UE5 | NO EJECUTADO; necesita MSI/UE5 |
 | **F02-T09** | Examinar CI existente Core main/rama 4.5 | **Solo observación remota previa**; no demuestra integración |
-| **F02-T10** | Integridad de fuentes P02, refs P03 y registro P04 | **Validador creado**; comprobación remota documental, sin checkout repo local completo |
-| **F02-T11** | Validador rechaza errores introducidos deliberadamente | **9 unit tests sintéticos ejecutados: OK** |
+| **F02-T10** | Integridad de fuentes P02, refs P03 y registro P04 | **SUPERADA en CI con checkout real de la rama**: 24 fuentes, 73 selectores, 12 adaptadores, 19 rutas, 11 gaps |
+| **F02-T11** | Validador rechaza errores introducidos deliberadamente | **9/9 unit tests OK**, repetidos también en GitHub Actions con checkout real |
 | **F02-T12** | Política de campos vedados de Sensores | Comprobación **estática** del contrato, NO anti-leak runtime |
-| **F02-T13** | Drift en SHA de fuente P02 | **Prueba sintética ejecutada**; checkout real pendiente |
-| **F02-T14** | Seis ejes y dependencias pruebas/adaptadores | **Comprobación documental**; compatibilidad runtime no probada |
+| **F02-T13** | Drift en SHA de fuente P02 | **Prueba sintética OK y comparación 24/24 SHA OK en CI**; detección preventiva, no migración |
+| **F02-T14** | Seis ejes y dependencias pruebas/adaptadores | **Integridad referencial superada en CI**; compatibilidad runtime no probada |
 | **F02-T15** | Timeout de orden y reconciliación sin doble efecto | BLOQUEADO Actions 4.10 |
 | **F02-T16** | Rechazo atómico de partida corrupta/incompatible | BLOQUEADO Persistence 4.7 |
 
@@ -114,11 +115,11 @@ Un guardado que no puede migrarse debe quedar recuperable por una versión compa
 
 - Entorno de comprobación aislada: **Python 3.13.5 / Linux**.
 - Comando ejecutado sobre una copia local del validador y su fixture construido expresamente: `python -m unittest discover -s . -p 'test_validate_f02_contracts.py' -v`. **Resultado: 9 pruebas, 9 OK** (valid fixture, fuente alterada, selector ausente, gap perdido, test ref inválida, restricción anti-fuga ausente, archivo borrado, ID repetido y normalización CRLF Windows).
-- **No se pudo ejecutar contra un checkout GitHub completo desde este entorno:** fallo DNS al resolver `github.com` durante `git clone`; los archivos de la rama se verifican directamente mediante conector GitHub. El test sintético no certifica el comportamiento del validador frente a todos los archivos reales del repositorio.
-- Comprobación de P02 remota: 24 rutas y sus selectores ya confirmados en P02. Para P03 se comprobaron remotamente 19/19 rutas. Para P04 se comprobarán de nuevo los enlaces, referencias y estructura del registro tras actualizar la PR.
+- **Prueba real sobre checkout de GitHub Actions:** [workflow F02, run 38149311936](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38149311936), completado con conclusión **success**. Los logs muestran: `p02_sources=24`, `p02_selectors=73`, `p03_adapters=12`, `p03_source_paths=19`, `p03_gaps=11`, `p04_failures=13`, `p04_axes=6`, `p04_tests=16`; mensaje `PASS: documentary registries and provenance match` y `Ran 9 tests ... OK`. **El checkout local del asistente no fue posible por DNS**, pero el runner GitHub sí clonó y validó el repositorio real.
+- Verificación independiente adicional: vía conector GitHub se contrastaron **24/24 SHA de blobs fuente P02** y **19/19 rutas de P03**; el workflow verifica también coherencia de los tres registros y campos vetados de Sensores. Las restricciones anti-filtración siguen siendo **estáticas**, no test de proyección real.
 - Evidencia CI independiente sólo para F02-T09: [CoreRPG/main, run 38046482745](https://github.com/robdor80/CoreRPG/actions/runs/38046482745) y [CoreRPG/4.5, run 37812440972](https://github.com/robdor80/CoreRPG/actions/runs/37812440972), previos a cualquier integración Star Trek/UE5.
 
-### Comandos disponibles después del checkout de la rama
+### Comandos para repetir la comprobación en cualquier checkout de la rama
 
 ```bash
 python tools/validation/validate_f02_contracts.py
@@ -132,7 +133,7 @@ La segunda orden ejecuta pruebas **aisladas** del propio verificador y no necesi
 
 ## 5. Puertas de aprobación y próximos pasos
 
-**Aceptación de diseño P04:** política de 13 fallos, seis ejes, diez reglas de compatibilidad y 16 pruebas trazadas; validador y unit tests creados; revisión documental remota. Esto **no** supone aceptación de ABI, serializer ni política de errores de Core.
+**Aceptación de diseño P04:** política de 13 fallos, seis ejes, diez reglas de compatibilidad y 16 pruebas trazadas; validador de fuentes y nueve tests **ejecutados satisfactoriamente en GitHub Actions sobre checkout real**. Esto **no** supone aceptación de ABI, serializer ni política de errores de Core.
 
 **Para `CONTRATO_VALIDADO`:** CoreRPG debe acordar y publicar interfaces de control de transacciones, estados/errores, consulta tras timeout, tiempo, autorizaciones, proyección, persistencia y migración. Versiones/SHAs reales, CI y aprobación de consumidor Trek obligatorios.
 
