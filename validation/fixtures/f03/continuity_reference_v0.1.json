@@ -1,0 +1,189 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "f03_continuity_reference_v0_1",
+  "classification": "INERT_CONTRACT_FIXTURE_NOT_CORE_RUNTIME",
+  "campaign": {
+    "campaign_id": "campaign_f03_test_001",
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-03-14",
+    "campaign_seed": "fixture_sensor_v0_0_1",
+    "generator_id": "star_trek_universe_generator",
+    "generator_version": "0.1.0",
+    "timeline_start": "2372-03-14T10:42:00",
+    "timeline_cursor": "2372-03-14T10:42:47"
+  },
+  "materialized_entities": [
+    {
+      "entity_id": "vessel_beta_001",
+      "entity_type": "starship",
+      "creation_provenance": "authored_game",
+      "origin_seed": "fixture_sensor_v0_0_1/vessel_beta",
+      "materialized_at": "2372-03-14T10:42:00",
+      "visual_identity_id": "visual_vessel_beta_001",
+      "history_ref": "history_vessel_beta_001",
+      "ground_truth": {
+        "classification": "science vessel",
+        "hidden_properties": {
+          "secret_mission": "classified sampling"
+        }
+      }
+    },
+    {
+      "entity_id": "anomaly_001",
+      "entity_type": "anomaly",
+      "creation_provenance": "procedural",
+      "origin_seed": "fixture_sensor_v0_0_1/anomaly",
+      "materialized_at": "2372-03-14T10:42:00",
+      "history_ref": "history_anomaly_001",
+      "ground_truth": {
+        "classification": "subspace disturbance",
+        "hidden_properties": {
+          "origin": "experimental relic"
+        }
+      }
+    }
+  ],
+  "population": {
+    "total_slots": 3,
+    "slots": [
+      {
+        "slot_id": "ship_alpha_role_01",
+        "tier": "B",
+        "character_id": "captain_001"
+      },
+      {
+        "slot_id": "ship_alpha_role_02",
+        "tier": "B",
+        "character_id": "player_001"
+      },
+      {
+        "slot_id": "ship_alpha_role_03",
+        "tier": "C",
+        "character_id": null
+      }
+    ]
+  },
+  "observer_projections": [
+    {
+      "observer_id": "ship_alpha",
+      "contact_id": "alpha_contact_04",
+      "resolution_state": "partially_resolved",
+      "confidence": 0.62,
+      "observed": {
+        "entity_type": "starship",
+        "observed_signatures": [
+          "subspace"
+        ],
+        "properties": {
+          "estimated_course": "unknown"
+        }
+      },
+      "acquired_at": "2372-03-14T10:42:29"
+    },
+    {
+      "observer_id": "ship_gamma",
+      "contact_id": "gamma_contact_02",
+      "resolution_state": "detected_unclassified",
+      "confidence": 0.38,
+      "observed": {
+        "observed_signatures": [
+          "subspace"
+        ]
+      },
+      "acquired_at": "2372-03-14T10:42:29"
+    }
+  ],
+  "projection_links_private": [
+    {
+      "observer_id": "ship_alpha",
+      "contact_id": "alpha_contact_04",
+      "entity_id": "vessel_beta_001"
+    },
+    {
+      "observer_id": "ship_gamma",
+      "contact_id": "gamma_contact_02",
+      "entity_id": "vessel_beta_001"
+    }
+  ],
+  "operational_state": {
+    "event_fixture": "gameplay/ship_operations/operational_event_log/sensors_vertical_slice_example.json",
+    "event_ids": [
+      "evt_104211_order",
+      "evt_104214_ack",
+      "evt_104218_start",
+      "evt_104229_result",
+      "evt_104241_report",
+      "evt_104247_send"
+    ],
+    "orders": [
+      {
+        "order_id": "ord_scan_014",
+        "state": "completed",
+        "result_id": "sensor_result_991",
+        "idempotency_key": "idempotent_scan_op_7781",
+        "last_committed_event_id": "evt_104229_result"
+      },
+      {
+        "order_id": "ord_pending_002",
+        "state": "pending",
+        "result_id": null,
+        "idempotency_key": "idempotent_ord_pending_002",
+        "last_committed_event_id": null
+      }
+    ],
+    "exclusive_assignments": [
+      {
+        "character_id": "player_001",
+        "start": "2372-03-14T10:40:00",
+        "end": "2372-03-14T11:00:00",
+        "station_id": "bridge_sensors_01"
+      },
+      {
+        "character_id": "captain_001",
+        "start": "2372-03-14T10:40:00",
+        "end": "2372-03-14T11:00:00",
+        "station_id": "bridge_command_01"
+      }
+    ],
+    "knowledge_state": [
+      {
+        "observer_id": "ship_alpha",
+        "contact_refs": [
+          "alpha_contact_04"
+        ],
+        "source_event_refs": [
+          "evt_104229_result"
+        ]
+      },
+      {
+        "observer_id": "ship_gamma",
+        "contact_refs": [
+          "gamma_contact_02"
+        ],
+        "source_event_refs": []
+      }
+    ]
+  },
+  "roundtrip_expectations": {
+    "preserve": [
+      "campaign",
+      "materialized_entities",
+      "population",
+      "observer_projections",
+      "projection_links_private",
+      "operational_state"
+    ],
+    "reconstruct_only": [
+      "ue5_actor_ids",
+      "temporary_meshes"
+    ],
+    "forbidden_player_fields": [
+      "authoritative_entity_id",
+      "ground_truth",
+      "unrevealed_hidden_properties",
+      "entity_id",
+      "projection_links_private"
+    ]
+  },
+  "evidence_notice": "Solo fixture de coherencia y prueba negativa. No acredita CoreRPG/UE5 real."
+}
