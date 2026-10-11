@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "F06",
+  "scope": "non_authoritative_sensor_reference",
+  "date": "2026-10-11",
+  "branch": "feat/f06-sensors-functional-reference",
+  "verified_commit": "1233051bc91e31c75d795ecb138ee66bc51951f2",
+  "workflow_run_id": 38178732719,
+  "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38178732719",
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "environment": "GitHub Actions ubuntu-latest / CPython 3.12.15",
+  "commands": [
+    "python -m py_compile tools/simulation/resolve_sensor_scan.py tools/simulation/f06_reference.py tools/simulation/test_f06_reference.py",
+    "python -m unittest discover -s tools/simulation -p 'test_sensor_detection_v0_1.py' -v",
+    "python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v"
+  ],
+  "result": {
+    "compilation": "passed",
+    "legacy_sensor_tests": {
+      "run": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "f06_tests": {
+      "run": 16,
+      "passed": 16,
+      "failed": 0
+    }
+  },
+  "evidence_kind": "REFERENCE_PROBADA",
+  "authoritative": false,
+  "effects_applied": 0,
+  "limits": [
+    "No Core RPG contract tested",
+    "No UE5 build or controller tested",
+    "No real resource reservation, time scheduler or World State mutation",
+    "No save/load or actual Science delivery",
+    "Manual PDF located but binary page review not performed"
+  ]
+}
