@@ -38,6 +38,17 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** aprobada expresamente, incluidas las mejoras discutidas y el límite de catálogo existente.
 - **Ejecución:** no iniciada; no altera la Guardia de Sensores v0.0.1 ni la fase actual.
 
+### IDEA-0002 — Biblioteca musical personal en los camarotes
+- **Fecha de aprobación:** 2026-10-11
+- **Estado:** APROBADA (diseño); implementación pendiente.
+- **Propuesta:** biblioteca personal MP3/FLAC importada desde el MSI, vinculación de carpetas locales predeterminada y copia local opcional; reproducción por órdenes al ordenador de la nave, controles manuales y sonido espacial en camarotes.
+- **Motivación:** convertir el camarote en un espacio habitable con ocio personalizado, sin subir ni distribuir archivos musicales.
+- **Ficha detallada:** [IDEA-0002_biblioteca_musical_personal.md](IDEA-0002_biblioteca_musical_personal.md)
+- **Relación con documentación existente:** Starship Computer, vida a bordo, Core RPG, UE5 y Plan Maestro F00–F15.
+- **Áreas/fases candidatas:** F02, F07, F12 y F14; asignación definitiva pendiente.
+- **Decisión del autor:** luz verde expresa a la idea, aclarando importación exclusivamente local desde el MSI y adoptando «Vincular carpeta» como opción predeterminada.
+- **Ejecución:** no iniciada; no altera la Guardia de Sensores v0.0.1 ni la fase actual.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
