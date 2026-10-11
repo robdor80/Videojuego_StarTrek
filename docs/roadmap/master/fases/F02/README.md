@@ -14,7 +14,7 @@ Establecer fronteras firmes entre [CoreRPG](https://github.com/robdor80/CoreRPG)
 | **F02-P01** | **CERRADA como AUDITORÍA REMOTA**, sin compilación propia | [Auditoría CoreRPG](AUDITORIA_CORE_RPG_2026-10-11.md): main `dcfcb83`, rama 4.5 `2a3da89`, CI examinada |
 | **F02-P02** | **CERRADA COMO INVENTARIO AUDITADO**: 24 fuentes JSON (23 contratos/modelos y 1 fixture), 73 selectores verificados, 5 cabeceras Core/main y decisión de tiempo; **NO** APIs ni integración Core validadas | [Matriz P02](MATRIZ_INTERCAMBIO_Y_PROPIEDAD.md) · [Registro JSON](INVENTARIO_INTERCAMBIO_P02.json) |
 | **F02-P03** | **DISEÑO DOCUMENTAL COMPLETO / EN_REVISION-BLOQUEADA_CORE**: 11 adaptadores + 1 frontera externa, 11 gaps cubiertos; **sin API Core futura ni UE5 validados** | [Arquitectura P03](ADAPTADORES_Y_FRONTERAS.md) · [Mapa JSON](MAPA_ADAPTADORES_P03.json) · [Secuencias](SECUENCIAS_Y_CASOS_P03.md) · [Handoff Core/Host](SOLICITUD_COORDINACION_CORE_P03.md) |
-| **F02-P04** | **EN_REVISION**: política definida; pruebas funcionales pendientes | [Fallos, versiones y pruebas](FALLOS_VERSIONES_Y_PRUEBAS.md) |
+| **F02-P04** | **DISEÑO DOCUMENTAL COMPLETO / EN_REVISION-BLOQUEADA_CORE**: 13 fallos, 6 ejes, 10 decisiones, 16 pruebas, validador estático y 9 tests aislados OK; **sin tests UE5/Core E2E** | [Política P04](FALLOS_VERSIONES_Y_PRUEBAS.md) · [Registro JSON](REGISTRO_FALLOS_COMPATIBILIDAD_P04.json) · [Validador](../../../../../tools/validation/validate_f02_contracts.py) |
 | **F02-P05** | **EN_REVISION/BLOQUEADA_CORE**: plan del primer corte, validación externa pendiente | [Plan de integración](PLAN_INTEGRACION_PRIMER_CORTE.md) |
 
 Los estados combinados `EN_REVISION/BLOQUEADA_CORE` indican avance documental con **puerta de validación bloqueada por dependencia externa**, no crean un estado nuevo en el JSON de gobierno.
@@ -45,3 +45,5 @@ El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la e
 5. PR documentada, revisión/merge y sincronización del estado global cuando proceda.
 
 Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+La política P04 diferencia fallos seguros de presentación/IA de los fallos de autoridad del Core. El validador P04 inspecciona trazabilidad y deriva de los contratos, **no ejecuta el videojuego**. Sus 9 unit tests sintéticos superados en Python 3.13.5/Linux tampoco acreditan 4.7/4.9/4.10 ni UE5. No se pudo clonar el repositorio completo desde el entorno de prueba (DNS), por lo que la ejecución de regresión sobre un checkout completo sigue pendiente.
