@@ -6,16 +6,18 @@
 
 - RPG 3D para PC/MSI con universo persistente, NPC que actúan sin el jugador y Academia de cuatro años antes del servicio activo; la web academiaflota sigue siendo complemento educativo.
 - Carrera gradual y **opcional**; alférez nuevo ≠ capitán; quedarse en cualquier destino, cambiar de nave o aspirar a la Imperator debe tener consecuencias reales.
-- Tres clases candidatas para la futura Dama base (Galaxy, Sovereign, Odyssey) **todavía sin selección aprobada**; no confundir clase Imperator final con el puente piloto del vertical slice.
+- Tres clases candidatas para la futura Dama base (Galaxy, Sovereign, Odyssey) **todavía sin selección aprobada** (Sovereign/E inclinación provisional del autor mientras termina Codex); no confundir Clase Imperator final con puente piloto del vertical slice.
 - Generar realidad antes de observarla. La IA remota propone y dialoga sin modificar World State por sí sola. La vida NPC persiste fuera de escena sin actores 3D cargados.
 - Una fuente por responsabilidad; no crear un Core RPG paralelo en Star Trek; no duplicar temarios de la web en código de juego.
+
+- **v0.0.x son prototipos internos de validación, no lanzamientos ni contenido necesariamente integrado en el juego 1.0**. v0.0.1 se limita a la guardia de Sensores; futuras pruebas parciales de Academia son posibles. La numeración de ensayos es independiente de las fases del plan; véase `docs/decisions/prototype_validation_and_release_policy.md`.
 
 ## Índice oficial de fases
 
 | Fase | Tema | Estado global | Entrega objetivo |
 |---|---|---|---|
 | [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | CERRADA | DOCUMENTACION_AUDITADA |
-| [F01](fases/F01/README.md) | Visión y canon del producto | EN_CURSO | DISENO_VALIDADO |
+| [F01](fases/F01/README.md) | Visión y canon del producto | EN_CURSO (solo Dama pendiente) | DISENO_VALIDADO |
 | [F02](fases/F02/README.md) | Arquitectura e integración | PLANIFICADA | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | PLANIFICADA | CORE_INTEGRADO |
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | PLANIFICADA | REFERENCIA_PROBADA |
