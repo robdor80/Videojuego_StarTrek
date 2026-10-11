@@ -50,3 +50,16 @@ Los comandos son requisitos de ejecución y no evidencia de haber pasado. **Evid
 - **B-04 ESQUEMAS:** saltos de versionado/almacenamiento y mecanismo de idempotencia requieren contrato formal del Core.
 
 **Resultado de la fase para esta rama:** los cinco pasos tienen entregables inspeccionables, pero **F03 permanece EN_REVISION/BLOQUEADA_CORE**, nunca `CERRADA` ni `CORE_INTEGRADO` hasta pruebas reales.
+
+
+## Acta de QA estática ejecutada (GitHub Actions — 11-10-2026)
+
+**Evidencia real observada**, tras checkout de la rama en GitHub Actions:
+- [Push run 38153741443](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38153741443): `completed/success` en `a360e2cd96fbf7d2c2b45ff60fd6a624fd8a9d2e`.
+- [PR run 38153764549](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38153764549): `completed/success` para la [PR #4](https://github.com/robdor80/Videojuego_StarTrek/pull/4) sobre el mismo head SHA.
+- Entorno verificado en logs de push: Ubuntu GitHub-hosted, CPython **3.12.15**, código de la rama `docs/f03-world-knowledge-persistence`.
+- Validador: **PASS**; 2 entidades, 2 proyecciones, 6 eventos, 2 órdenes, 3 plazas; 8 fuentes de referencia y los 13 invariantes originales de Sensores verificados estructuralmente.
+- `unittest`: **26/26 tests OK** (0 errores, 0 fallos), conforme al log del job `static-reference-checks`.
+- Enlace del job push y registro: [workflow run](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38153741443). Auditoría de enlaces internos de los seis Markdown F03 realizada sobre árbol de rama: **0 enlaces relativos rotos**.
+
+**Conclusión comprobada:** `REFERENCIA_PROBADA` **sólo del validador y fixture estático P05**. Integración de Core/Host, prueba de migración real, persistencia real, generación determinista real, clock/catch-up y UE5 = **NO_EJECUTADOS/BLOQUEADOS**. F03 completa NO se declara cerrada.
