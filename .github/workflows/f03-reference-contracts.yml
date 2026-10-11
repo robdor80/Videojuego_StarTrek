@@ -1,0 +1,31 @@
+name: F03 Reference Contracts
+on:
+  push:
+    branches:
+      - docs/f03-world-knowledge-persistence
+    paths:
+      - 'docs/roadmap/master/fases/F03/**'
+      - 'validation/fixtures/f03/**'
+      - 'tools/validation/*f03*'
+      - '.github/workflows/f03-reference-contracts.yml'
+  pull_request:
+    paths:
+      - 'docs/roadmap/master/fases/F03/**'
+      - 'validation/fixtures/f03/**'
+      - 'tools/validation/*f03*'
+      - '.github/workflows/f03-reference-contracts.yml'
+  workflow_dispatch:
+jobs:
+  static-reference-checks:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate F03 static fixture and original sources
+        run: python tools/validation/validate_f03_reference.py
+      - name: Run F03 negative/positive tests (not Core E2E)
+        run: python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
