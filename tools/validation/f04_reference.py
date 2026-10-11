@@ -34,6 +34,9 @@ def current_command(ctx: dict) -> bool:
 def valid_delegation(ctx: dict, domain: str) -> bool:
     d = ctx.get("delegation") or {}
     t = ctx.get("now")
+    if not (isinstance(t, int) and isinstance(d.get("starts_at"), int)
+            and isinstance(d.get("ends_at"), int)):
+        return False
     return all((
         d.get("from_authorized_commander") is True,
         d.get("to_actor") is True,
@@ -185,7 +188,8 @@ def check_schedule(items: list[dict]) -> list[str]:
                     emergency.get("kind") == "emergency",
                     bool(interrupted.get("preemption_event_id")),
                     isinstance(interrupted.get("fatigue_debt"), (int, float)),
-                    interrupted["fatigue_debt"] > 0,
+                    isinstance(interrupted.get("fatigue_debt"), (int, float))
+                    and interrupted["fatigue_debt"] > 0,
                 )):
                     continue
             errors.append("INCOMPATIBLE_OVERLAP:" + ":".join(sorted((a["id"], b["id"]))))
