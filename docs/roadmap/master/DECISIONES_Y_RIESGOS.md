@@ -4,8 +4,8 @@
 
 | ID | Estado | Decisión / frontera | Etapa | Observación |
 |---|---|---|---|---|
-| DEC-0001 | **NECESITA_AUTOR** | Elegir la Dama base entre Galaxy, Sovereign y Odyssey para el diseño de Clase Imperator | F01-P03 | Ninguna seleccionada a la fecha; las otras dos podrán ser naves NPC mientras no tengan interiores |
-| DEC-0002 | **NECESITA_AUTOR** | Cerrar alcance exacto de la primera experiencia UE5 y MVP | F01-P04 | F08 propone una guardia de Sensores, sin imponer toda la Academia como requisito del primer build |
+| DEC-0001 | **NECESITA_AUTOR** | Elegir la Dama base entre Galaxy, Sovereign y Odyssey para el diseño de Clase Imperator | F01-P03 | Expediente en `fases/F01/ANALISIS_DAMAS_IMPERATOR.md`; Odyssey no consta en catálogo actual; ninguna elegida |
+| DEC-0002 | **NECESITA_AUTOR** | Cerrar alcance exacto de la primera experiencia UE5 y MVP | F01-P04 | Propuesta en `fases/F01/PROPUESTA_MVP_Y_PRESUPUESTO.md`; corte Sensores sin 4 años 3D en v0.0.1, umbrales aún sin aprobar |
 | DEC-0003 | **PENDIENTE_TECNICA** | Escoger puente piloto 3D según viabilidad y licencias | F07-P03 | No equivale a elegir Dama final; criterios de prototipo |
 | DEC-0004 | **FIJADA_PREVIAMENTE** | RPG Star Trek en 3D para PC y NPC persistentes fuera de escena | F01-P01 / F12 | No reabrir sin solicitud expresa |
 | DEC-0005 | **FIJADA_PREVIAMENTE** | Carrera profesional opcional, sin capitanía automática de alférez ni final obligatorio Imperator | F11 | Respetar rutas científica, táctica/operativa y exploración/mando; detalles en fase |
@@ -35,3 +35,7 @@
 Cada nueva decisión: `DEC-XXXX` con fecha, alternativas, fundamento, autor/aprobación y archivos afectados. Cada riesgo: actualizar evaluación, plan de mitigación y evidencia de cierre. Los acuerdos ya canonizados **no** se convierten en pendientes por el mero hecho de crear un plan nuevo.
 
 F00 no intenta resolver DEC-0001/0002. El usuario autorizó organización y auditoría; **la selección de clase protagonista y el contenido creativo se decidirán en F01**.
+
+## Seguimiento F01 (11-10-2026)
+
+F01-P01 y F01-P02 documentados/auditados; P03 depende de DEC-0001 y P04 de DEC-0002. El riesgo de incluir Odyssey desde material de una cronología fuera del alcance se trata como **pendiente de autorización explícita**; no se modifica el catálogo ni se declara disponibles naves o tecnología fuera de fecha. El expediente de Damas, el de MVP y la matriz de decisiones se encuentran en `docs/roadmap/master/fases/F01/`. La fase permanece EN_CURSO hasta aprobación autoral y validación del PR.
