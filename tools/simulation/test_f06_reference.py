@@ -224,5 +224,30 @@ class F06Tests(unittest.TestCase):
                          [d["observations"][0]["observation_id"]])
 
 
+    def test_17_player_does_not_learn_undetected_entity_count(self):
+        a = f06.run_reference_scan(WORLD, request(filters=["biological"]), context())
+        self.assertEqual(a["result"]["summary"], {"contacts_detected": 0})
+        self.assertEqual(a["partial_result"]["summary"], {"contacts_detected": 0})
+        self.assertNotIn("entities_in_scope", json.dumps(a))
+        self.assertNotIn("signatures_evaluated", json.dumps(a))
+
+    def test_18_invalid_inputs_refused_without_mutation(self):
+        for r in [request(priority=[]), request(filters=[[]])]:
+            a = f06.run_reference_scan(WORLD, r, context())
+            self.assertEqual(a["status"], "blocked")
+            self.assertEqual(a["events"], [])
+        a = f06.run_reference_scan(WORLD, request(), context(available_power="NaN-payload"))
+        self.assertEqual(a["status"], "blocked")
+        regular = f06.run_reference_scan(WORLD, request(), context())
+        d = regular["dossier_candidates"][0]
+        with self.assertRaisesRegex(ValueError, "invalid_handoff_priority"):
+            f06.science_handoff_candidate(
+                d["contact_id"], [d["observations"][0]["observation_id"]], d,
+                {"ship_id": "ship:academy", "created_at": "2372-03-14T10:45:00",
+                 "operator_id": "cadet:1", "requested_analysis": "Interpretar",
+                 "priority": "forged_priority"}
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
