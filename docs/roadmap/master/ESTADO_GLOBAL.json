@@ -29,17 +29,17 @@
     {
       "id": "F01",
       "title": "Visión y canon del producto",
-      "status": "PLANIFICADA",
+      "status": "EN_CURSO",
       "target_maturity": "DISENO_VALIDADO",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "BLOQUEADA",
+        "P04": "EN_REVISION",
+        "P05": "EN_REVISION"
       },
-      "note": "Fuente documental previa significativa; decisiones de Dama/MVP abiertas.",
+      "note": "P01 visión consolidada, P02 canon auditado; P03 necesita DEC-0001 (Dama), P04 aprobación DEC-0002 (MVP), P05 cierre posterior de decisiones. F01 no está cerrada; rama docs/f01-vision-canon-scope.",
       "file": "fases/F01/README.md"
     },
     {
