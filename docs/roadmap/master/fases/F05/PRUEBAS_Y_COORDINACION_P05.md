@@ -32,4 +32,4 @@ python tools/validation/f05_reference.py --fixture validation/fixtures/f05/order
 No se publica `UniversalCommandSystem`, nombres de API ni ABI hipotéticos. Mantener `ESTADO_GLOBAL.json` intacto hasta cierre de dependencias; no declarar la F05 `CERRADA` en plan global.
 
 ## Evidencia y anomalías
-En el commit inicial del P05: **ejecución pendiente de CI**. Tras cada run anotar URL/SHA/veredicto; un CI verde solo da evidencia `REFERENCIA_PROBADA`. Anotar fallos detectados, reejecutar y no ocultar bloqueos externos.
+**Ejecución observada: 2026-10-11.** [GitHub Actions run 38178262402](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38178262402), sobre commit `9dc73e1366190bd1ba7956f329b11fe87b4f6892`, terminó `completed/success`. Logs: sintaxis Python OK, **16/16** unittest (Ran 16 tests, OK), **48/48** escenarios (0 failures). PR de revisión: [#6](https://github.com/robdor80/Videojuego_StarTrek/pull/6). **Nivel acreditado limitado a `REFERENCIA_PROBADA` de la puerta de evaluación; `CORE_INTEGRADO`/UE5/E2E siguen `NO_EJECUTADO`.** El historial de 48 fixtures no implica 48 acciones ejecutadas en partida.

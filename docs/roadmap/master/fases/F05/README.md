@@ -1,6 +1,6 @@
 # F05 — Órdenes, delegación e iniciativa NPC
 
-**Estado global:** PLANIFICADA; **trabajo en rama:** P01–P05 desarrollados a nivel referencia, revisión/CI en curso.
+**Estado global:** PLANIFICADA; **trabajo en rama:** P01–P05 desarrollados a nivel referencia, CI de referencia confirmada; integración pendiente.
 **Meta de fase del plan maestro:** CORE_INTEGRADO (**no alcanzada**).
 
 ## Puntos
@@ -8,7 +8,7 @@
 - [x] **P02 diseño** — [Estados, negativas, caducidad y delegaciones](CICLOS_REVOCACION_P02.md).
 - [x] **P03 diseño** — [Iniciativa NPC, fuera de escena y cadena de mando](INICIATIVA_NPC_P03.md).
 - [x] **P04 diseño** — [Propuesta LLM, revalidación y fallback](IA_PROPUESTAS_Y_FALLBACK_P04.md).
-- [x] **P05 suite incorporada** — [48 fixtures + 16 tests y plan de integración](PRUEBAS_Y_COORDINACION_P05.md). **CI inicialmente pendiente.**
+- [x] **P05 suite incorporada** — [48 fixtures + 16 tests y plan de integración](PRUEBAS_Y_COORDINACION_P05.md). **GitHub Actions verificada: 16/16 pruebas y 48/48 escenarios (run 38178262402).**
 
 Estos checks se refieren únicamente a los entregables independientes, **no** al cierre de P01–P05 a nivel `CORE_INTEGRADO`.
 
