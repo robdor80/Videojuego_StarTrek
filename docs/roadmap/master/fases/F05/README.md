@@ -1,37 +1,21 @@
-# F05 — Órdenes, iniciativa y delegación NPC
+# F05 — Órdenes, delegación e iniciativa NPC
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Estado global:** PLANIFICADA; **trabajo en rama:** P01–P05 desarrollados a nivel referencia, revisión/CI en curso.
+**Meta de fase del plan maestro:** CORE_INTEGRADO (**no alcanzada**).
 
-## Objetivo
+## Puntos
+- [x] **P01 diseño** — [Modelo de seis objetos y ownership](MODELO_ORDENES_P01.md), [contrato de referencia](CONTRATOS_P01_P02.json).
+- [x] **P02 diseño** — [Estados, negativas, caducidad y delegaciones](CICLOS_REVOCACION_P02.md).
+- [x] **P03 diseño** — [Iniciativa NPC, fuera de escena y cadena de mando](INICIATIVA_NPC_P03.md).
+- [x] **P04 diseño** — [Propuesta LLM, revalidación y fallback](IA_PROPUESTAS_Y_FALLBACK_P04.md).
+- [x] **P05 suite incorporada** — [48 fixtures + 16 tests y plan de integración](PRUEBAS_Y_COORDINACION_P05.md). **CI inicialmente pendiente.**
 
-El capitán y otros oficiales actúan por sí mismos dentro de sus capacidades y límites.
+Estos checks se refieren únicamente a los entregables independientes, **no** al cierre de P01–P05 a nivel `CORE_INTEGRADO`.
 
-## Pasos y entregables
+## Reutilización sin mover rutas
+`gameplay/orders/`, `gameplay/chain_of_command/`, `ai/captain_behavior/`, `ai/npc_behavior/`, `gameplay/ship_operations/operational_event_log/`, `gameplay/ship_operations/ship_computer/`, además de F02/F03/F04 (PR #3/#4/#5). Las fuentes aprobadas no se cambian por la propuesta.
 
-- [ ] **F05-P01** — Separar formalmente orden, solicitud, tarea/compromiso, acción, resultado y evento.
-- [ ] **F05-P02** — Cerrar ciclos de aceptación, aclaración, rechazo, desobediencia, caducidad y revocación de delegaciones.
-- [ ] **F05-P03** — Diseñar iniciativa del capitán NPC, oficiales y tareas NPC↔NPC aun cuando el jugador esté ausente.
-- [ ] **F05-P04** — Conectar propuestas y diálogo por IA remota sin mutación directa y con degradación ante latencia/caída.
-- [ ] **F05-P05** — Preparar pruebas NPC→NPC, NPC→jugador, jugador capitán→NPC y coordinación con Core RPG 4.10+.
+## Bloqueos y aceptación
+CoreRPG `main@dcfcb83` sigue previo a las capacidades de 4.7, 4.9, 4.10 y 4.12. F01 PR #2 y F02–F04 están abiertas; DEC-0001 y DEC-0002 no se resuelven aquí. **No** se fusiona ni se modifica `ESTADO_GLOBAL.json` hasta los controles previos. La iniciativa debe respetar cargo/guardia, conocimiento, recursos y responsabilidad; la IA no muta World State.
 
-## Material del repositorio que se aprovecha sin moverlo
-
-- `gameplay/orders/`
-- `gameplay/chain_of_command/`
-- `ai/captain_behavior/`
-- `ai/npc_behavior/`
-- `gameplay/ship_operations/operational_event_log/`
-- `gameplay/ship_operations/ship_computer/`
-
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
-
-## Dependencias y límites
-
-F04 y F02; 4.10+ solo evaluación e integración incremental de mecanismos comunes.
-
-## Puerta de cierre
-
-Cadena de órdenes y consecuencias trazables, autonomía sin omnisciencia, IA incapaz de escribir estado autoritativo. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
-
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+[Plan maestro](../../PLAN_MAESTRO.md) · [Criterios de cierre](../../CRITERIOS_DE_CIERRE.md) · [Estado global](../../ESTADO_GLOBAL.json).
