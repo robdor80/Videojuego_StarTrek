@@ -1,7 +1,7 @@
 # F02-P02 — Matriz verificada de datos, identidades y límites de integración
 
 **Estado del paso:** **CERRADA COMO INVENTARIO AUDITADO** a 2026-10-11. **No significa CONTRATO_VALIDADO con CoreRPG, ni integración ejecutada**. F02 continúa abierta. Este inventario sustituye la primera matriz preliminar.
-**Evidencia indexada:** [INVENTARIO_INTERCAMBIO_P02.json](INVENTARIO_INTERCAMBIO_P02.json). Se comprobaron en GitHub **24 JSON de Star Trek, 73 selectores existentes**, **5 cabeceras del Core/main** y la decisión de reloj/fecha estelar (verificación remota, no compilación local).
+**Evidencia indexada:** [INVENTARIO_INTERCAMBIO_P02.json](INVENTARIO_INTERCAMBIO_P02.json). Se comprobaron en GitHub **24 fuentes JSON (23 contratos/modelos y 1 fixture), 73 selectores existentes**, **5 cabeceras del Core/main** y la decisión de reloj/fecha estelar (verificación remota, no compilación local).
 
 ## Línea base fija y límites
 
@@ -84,7 +84,7 @@
 
 ## Verificación y criterios de cierre P02
 
-- **Sí verificado:** lectura de los 24 JSON de Star Trek desde la línea base; comprobación de existencia de **73 rutas de campos/selectores** (cero ausentes); lectura de los cinco headers Core publicados y tres afirmaciones del documento de fecha estelar. Todos los hashes de fuentes están en `INVENTARIO_INTERCAMBIO_P02.json`.
+- **Sí verificado:** lectura de las 24 fuentes JSON de Star Trek desde la línea base; comprobación de existencia de **73 rutas de campos/selectores** (cero ausentes); lectura de los cinco headers Core publicados y tres afirmaciones del documento de fecha estelar. Todos los hashes de fuentes están en `INVENTARIO_INTERCAMBIO_P02.json`.
 - **Sí verificado:** Core/main expone `WorldState` mínimo; `RollAction` no muta el mundo y no equivale a escaneos; los `schema_version` fuente tienen versiones independientes del Content Contract.
 - **No ejecutado:** CMake/CTest local, pruebas E2E, carga real de guardados, persistencia, simulación fuera de escena, observadores Core ni integración UE5.
 - **Cierre preciso:** **F02-P02 cerrado a nivel inventario y trazabilidad**; todas las API/interfaces para implementación siguen bloqueadas o sujetas a validación en P03–P05. No se ha modificado CoreRPG, canon, modelos JSON ni `ESTADO_GLOBAL.json`; la F01 permanece abierta.
