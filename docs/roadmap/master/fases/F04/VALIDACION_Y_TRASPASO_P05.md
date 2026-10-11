@@ -6,7 +6,7 @@
 
 - `tools/validation/f04_reference.py`: evaluador **referencial aislado** de autoridad, coberturas y exclusividad temporal; no es API Core ni sistema de órdenes de producción.
 - `tools/validation/test_f04_reference.py`: pruebas unitarias que contrastan invariantes y cinco documentos canónicos existentes.
-- `validation/fixtures/f04/authority_watch_acceptance_v0.1.json`: **38 casos** (25 autoridad, 7 dotación, 6 agenda).
+- `validation/fixtures/f04/authority_watch_acceptance_v0.1.json`: **39 casos** (26 autoridad, 7 dotación, 6 agenda).
 - `.github/workflows/f04-reference-contracts.yml`: unittest + validación de fixture + compilación de Python sin terceros.
 
 ## Cuatro papeles jugables y casos que deben pasar
@@ -45,3 +45,7 @@ python tools/validation/f04_reference.py --fixture validation/fixtures/f04/autho
 - El `ESTADO_GLOBAL.json` se mantiene sin cambios mientras F01/02/03 continúen abiertas; F04 **no** se marca CERRADA en el registro central.
 
 **No decidir:** Dama Imperator, canon/épocas nuevas, reglas definitivas Core, gestión completa F05 de órdenes ni primera guardia jugable. Proseguir F05 a nivel de diseño una vez revisado este contrato.
+
+## Evidencia CI — 11-10-2026
+
+La revisión inicial detectó dos errores de código de referencia (cierre de paréntesis y acceso a campos opcionales sin guardas); fueron corregidos en commits posteriores sin alterar fuentes de juego. GitHub Actions [run 38156353372](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38156353372) terminó **SUCCESS**: compilación Python, 16 tests unitarios y fixture de 38 escenarios. Con posterioridad se añadió el negativo 39 (médico sin nombramiento vigente), cuya CI debe reconfirmarse. **No** acredita Core/UE5.
