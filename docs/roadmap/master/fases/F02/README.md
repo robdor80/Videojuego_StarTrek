@@ -13,13 +13,13 @@ Establecer fronteras firmes entre [CoreRPG](https://github.com/robdor80/CoreRPG)
 |---|---|---|
 | **F02-P01** | **CERRADA como AUDITORÍA REMOTA**, sin compilación propia | [Auditoría CoreRPG](AUDITORIA_CORE_RPG_2026-10-11.md): main `dcfcb83`, rama 4.5 `2a3da89`, CI examinada |
 | **F02-P02** | **CERRADA COMO INVENTARIO AUDITADO**: 24 fuentes JSON (23 contratos/modelos y 1 fixture), 73 selectores verificados, 5 cabeceras Core/main y decisión de tiempo; **NO** APIs ni integración Core validadas | [Matriz P02](MATRIZ_INTERCAMBIO_Y_PROPIEDAD.md) · [Registro JSON](INVENTARIO_INTERCAMBIO_P02.json) |
-| **F02-P03** | **EN_REVISION/BLOQUEADA_CORE**: adaptadores propuestos; APIs 4.5+ no fijadas | [Adaptadores y fronteras](ADAPTADORES_Y_FRONTERAS.md) |
+| **F02-P03** | **DISEÑO DOCUMENTAL COMPLETO / EN_REVISION-BLOQUEADA_CORE**: 11 adaptadores + 1 frontera externa, 11 gaps cubiertos; **sin API Core futura ni UE5 validados** | [Arquitectura P03](ADAPTADORES_Y_FRONTERAS.md) · [Mapa JSON](MAPA_ADAPTADORES_P03.json) · [Secuencias](SECUENCIAS_Y_CASOS_P03.md) · [Handoff Core/Host](SOLICITUD_COORDINACION_CORE_P03.md) |
 | **F02-P04** | **EN_REVISION**: política definida; pruebas funcionales pendientes | [Fallos, versiones y pruebas](FALLOS_VERSIONES_Y_PRUEBAS.md) |
 | **F02-P05** | **EN_REVISION/BLOQUEADA_CORE**: plan del primer corte, validación externa pendiente | [Plan de integración](PLAN_INTEGRACION_PRIMER_CORTE.md) |
 
 Los estados combinados `EN_REVISION/BLOQUEADA_CORE` indican avance documental con **puerta de validación bloqueada por dependencia externa**, no crean un estado nuevo en el JSON de gobierno.
 
-El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la existencia de campos en contratos Trek no significa que Core exponga interfaces para ellos. La matriz contiene **11 gaps P03-G01…G11** a decidir y validar al diseñar los adaptadores; el plan de fases sigue rigiéndose por F01 como fase global activa hasta resolver sus decisiones.
+El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la existencia de campos en contratos Trek no significa que Core exponga interfaces para ellos. Los **11 gaps P03-G01…G11** tienen ya adaptadores y responsables propuestos en el mapa de P03, pero **no** están resueltos como API/runtime. P03 ha terminado su **especificación documental** y sigue **EN_REVISION/BLOQUEADA_CORE** para el nivel `CONTRATO_VALIDADO` hasta disponer de versiones/API reales y acuerdo Core/Host. La fase global activa sigue siendo F01 hasta resolver su decisión.
 
 ## Fuentes originales reutilizadas sin moverlas
 
