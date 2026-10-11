@@ -34,3 +34,5 @@ The first command detects unexpected changes to the **24 P02 source files** (Git
 
 The nine unit tests use **temporary synthetic files** to verify rejection paths, including a normal valid fixture. They do NOT compile CoreRPG, run UE5, demonstrate knowledge filtering at runtime or migrate saves. Core integration and E2E tests remain independently blocked.
 
+[GitHub Actions workflow `f02-contracts.yml`](../../.github/workflows/f02-contracts.yml) runs both checks on a real repository checkout. Initial run [38149311936](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38149311936) completed successfully (24 P02 sources / 73 selectors / 12 P03 adapters / 9 hermetic tests).
+
