@@ -6,7 +6,7 @@
 3. Se rechaza lo imposible: autorización externa no acreditada, puesto desocupado, matriz inoperativa, capacidad ausente, potencia insuficiente o contacto focalizado desconocido.
 4. El motor preexistente tools/simulation/resolve_sensor_scan.py determina detección por distancia, firma, capacidad, potencia, integridad, modo, filtros, duración e interferencias.
 5. Una evaluación de duración reducida ofrece **snapshot parcial de referencia**, no progreso real por ticks. Otra crea el resultado final.
-6. Solo se proyectan campos observables; el ID real de entidad y ground_truth no salen en la respuesta pública.
+6. Solo se proyectan campos observables; el ID real de entidad y ground_truth no salen en la respuesta pública. **Tampoco** salen los contadores internos entities_in_scope ni signatures_evaluated: revelarían posibles contactos que aún no se han detectado.
 7. En focalizado se exige target_contact_id **conocido** y únicamente se proyecta ese contacto. Core deberá integrar selección/alcance en su motor, no solo en el wrapper.
 
 ## Invariantes
