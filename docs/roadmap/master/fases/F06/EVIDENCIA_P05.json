@@ -4,9 +4,9 @@
   "scope": "non_authoritative_sensor_reference",
   "date": "2026-10-11",
   "branch": "feat/f06-sensors-functional-reference",
-  "verified_commit": "1233051bc91e31c75d795ecb138ee66bc51951f2",
-  "workflow_run_id": 38178732719,
-  "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38178732719",
+  "verified_commit": "70412bc6e01ea64a8a646e91d34e93299306c4c2",
+  "workflow_run_id": 38179039670,
+  "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38179039670",
   "workflow_status": "completed",
   "workflow_conclusion": "success",
   "environment": "GitHub Actions ubuntu-latest / CPython 3.12.15",
@@ -23,8 +23,8 @@
       "failed": 0
     },
     "f06_tests": {
-      "run": 16,
-      "passed": 16,
+      "run": 18,
+      "passed": 18,
       "failed": 0
     }
   },
@@ -37,5 +37,10 @@
     "No real resource reservation, time scheduler or World State mutation",
     "No save/load or actual Science delivery",
     "Manual PDF located but binary page review not performed"
+  ],
+  "security_hardening": [
+    "No counts of undetected entities/signatures in public results",
+    "Malformed filter/priority/context rejected before producing results",
+    "Science handoff rejects invalid priority"
   ]
 }
