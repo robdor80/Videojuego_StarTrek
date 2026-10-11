@@ -70,6 +70,7 @@ def evaluate(ctx: dict) -> dict:
 
     if action == "relieve_command_medically":
         if ctx.get("position") != "chief_medical_officer" or not all((
+                ctx.get("appointment_active") is True,
                 ctx.get("professional_qualified") is True,
                 ctx.get("medical_judgement_documented") is True,
                 ctx.get("target_medically_unfit") is True)):
