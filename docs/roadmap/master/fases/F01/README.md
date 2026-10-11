@@ -1,36 +1,35 @@
 # F01 — Visión del producto y canon
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Estado global:** EN_CURSO (F01-P03 y F01-P04 requieren decisión del autor). **Revisión:** 2026-10-11. **Madurez actual:** `DISENO_VALIDADO` del material heredado para P01/P02; propuesta revisable para P03–P05.
 
 ## Objetivo
 
-Producto 3D para PC y criterios autorales estables; impedir decisiones improvisadas de alcance.
+Consolidar la visión del videojuego 3D para PC, verificar épocas/canon y cerrar el primer corte de alcance, **sin trasladar contratos originales ni inventar decisiones creativas**. F00 está cerrada por PR #1, commit `0f989948`.
 
-## Pasos y entregables
+## Pasos y evidencias
 
-- [ ] **F01-P01** — Confirmar visión del RPG 3D para MSI, progresión no obligatoria y autonomía del universo.
-- [ ] **F01-P02** — Auditar épocas y límites temporales existentes, sin reabrir el canon silenciosamente.
-- [ ] **F01-P03** — Resolver la selección de nave protagonista entre Galaxy/Sovereign/Odyssey y el diseño derivado de Imperator mediante decisión expresa.
-- [ ] **F01-P04** — Fijar alcance MVP, experiencia de juego inicial y presupuestos técnicos verificables.
-- [ ] **F01-P05** — Cerrar catálogo de decisiones adoptadas y no adoptadas, con sus fuentes.
+- [x] **F01-P01 — Visión 3D MSI, carrera libre, universo autónomo.** [Visión de producto](../../../../vision/VISION_PRODUCTO_RPG_3D_v0.1.md). Se reconcilian los acuerdos existentes y se declaran exclusiones; decisión original mantenida.
+- [x] **F01-P02 — Auditoría de épocas y canon.** [Auditoría de canon](AUDITORIA_EPOCAS_Y_CANON.md). Confirmadas tres épocas; continuidad emergente; extension Sovereign explícita y precaución Odyssey.
+- [ ] **F01-P03 — Dama base Imperator.** [Análisis comparado](ANALISIS_DAMAS_IMPERATOR.md). `NECESITA_AUTOR (DEC-0001)`: no seleccionar automáticamente entre Galaxy, Sovereign y Odyssey.
+- [ ] **F01-P04 — Primer MVP y presupuestos.** [Propuesta de escenario y métricas](PROPUESTA_MVP_Y_PRESUPUESTO.md). `NECESITA_AUTOR (DEC-0002)`: aprobar/ajustar guardia de Sensores como primer ejecutable; fijar criterios de rendimiento sin inventar mediciones.
+- [ ] **F01-P05 — Catálogo de decisiones y fuentes.** [Registro de decisiones](REGISTRO_DECISIONES_Y_TRAZABILIDAD.md). Matriz de acuerdos adoptados, no aprobados y pendientes creada; debe actualizarse con DEC-0001/0002 y acta definitiva para cerrar.
 
-## Material del repositorio que se aprovecha sin moverlo
+## Reutilización exacta
 
-- `docs/decisions/`
-- `sources/canon_policy.md`
-- `CONTENT_STATUS.md`
-- `lore/starships/`
-- `docs/roadmap/game_design_readiness_v0_2.md`
+- `docs/decisions/`, `sources/canon_policy.md`, `sources/provenance_policy.md` — fuentes y decisiones existentes.
+- `CONTENT_STATUS.md` — editorial sin modificaciones de estado.
+- `lore/starships/classes/core_starship_classes.json` y `core_catalog.md` — clases ya aprobadas para fecha.
+- `docs/roadmap/game_design_readiness_v0_2.md` — objetivos y fronteras.
+- `docs/roadmap/ship_console_vertical_slice_v0_0_1.md` — primer bucle jugable orientativo.
+- `gameplay/careers/academy_path/` y `gameplay/careers/starfleet_service/` — formación/carrera, sin duplicación.
+- `assets/ships/starfleet/galaxy_class/enterprise_d/` — referencia de arte, no prueba de puente 3D jugable.
 
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
+## Pruebas y límites del avance
 
-## Dependencias y límites
+**HECHO:** revisión documental de los archivos enlazados, reconciliación de criterios, inventario de decisiones; los cinco entregables son inspeccionables en rama/PR.
 
-F00; decisiones de autor pendientes para elección de Dama y objetivos de experiencia.
+**NO_EJECUTADO:** pruebas de Core RPG, compilación o sesión UE5, pruebas de rendimiento en MSI o licencia/importación de mallas. Es trabajo de visión, no runtime.
 
-## Puerta de cierre
+**Bloqueos actuales:** DEC-0001 (Dama) y DEC-0002 (MVP). DEC-0003 (puente piloto y licencias) pertenece a F07. La fase **no** se declarará cerrada hasta recoger decisión de autor, actualizar registros, validar enlaces/estado y fusionar PR.
 
-Documento de visión aprobada con límites de alcance, fechas/épocas y decisiones trazables. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
-
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+Consúltese [PLAN_MAESTRO](../../PLAN_MAESTRO.md), [DECISIONES_Y_RIESGOS](../../DECISIONES_Y_RIESGOS.md), [CRITERIOS_DE_CIERRE](../../CRITERIOS_DE_CIERRE.md) y [ESTADO_GLOBAL.json](../../ESTADO_GLOBAL.json).
