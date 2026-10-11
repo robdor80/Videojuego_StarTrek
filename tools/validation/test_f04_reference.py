@@ -20,7 +20,7 @@ class F04ReferenceTests(unittest.TestCase):
         path = ROOT / "validation/fixtures/f04/authority_watch_acceptance_v0.1.json"
         fixture = json.loads(path.read_text(encoding="utf-8"))
         self.assertEqual((len(fixture["authority_cases"]), len(fixture["roster_cases"]),
-                          len(fixture["schedule_cases"])), (25, 7, 6))
+                          len(fixture["schedule_cases"])), (26, 7, 6))
         self.assertEqual(verify_fixture(path), [])
 
     def test_unknown_action_fails_closed(self):
@@ -62,6 +62,7 @@ class F04ReferenceTests(unittest.TestCase):
 
     def test_medical_removal_does_not_grant_command(self):
         c = context("relieve_command_medically", position="chief_medical_officer",
+                    appointment_active=True,
                     professional_qualified=True, medical_judgement_documented=True,
                     target_medically_unfit=True)
         out = evaluate(c)
