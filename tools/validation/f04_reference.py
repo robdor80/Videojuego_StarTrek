@@ -79,7 +79,7 @@ def evaluate(ctx: dict) -> dict:
                     ctx.get("appointment_active") is True,
                     ctx.get("qualified") is True,
                     ctx.get("department") is not None,
-                    ctx.get("department") == ctx.get("target_department")):
+                    ctx.get("department") == ctx.get("target_department"))):
             return result("DENY", "OUTSIDE_DEPARTMENT")
         return result("ALLOW", "DEPARTMENT_SCOPE")
 
