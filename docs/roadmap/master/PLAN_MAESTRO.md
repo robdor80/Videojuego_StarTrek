@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **Fase F00: cerrada (organización)**. Próxima fase global: **F01**.
+**Versión organizativa:** 1.0 / 11-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **Fase F00: cerrada (organización)**. Fase global activa: **F01 (EN_CURSO; DEC-0001/0002 pendientes)**.
 
 ## Principios de producto conservados
 
@@ -15,7 +15,7 @@
 | Fase | Tema | Estado global | Entrega objetivo |
 |---|---|---|---|
 | [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | CERRADA | DOCUMENTACION_AUDITADA |
-| [F01](fases/F01/README.md) | Visión y canon del producto | PLANIFICADA | DISENO_VALIDADO |
+| [F01](fases/F01/README.md) | Visión y canon del producto | EN_CURSO | DISENO_VALIDADO |
 | [F02](fases/F02/README.md) | Arquitectura e integración | PLANIFICADA | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | PLANIFICADA | CORE_INTEGRADO |
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | PLANIFICADA | REFERENCIA_PROBADA |
