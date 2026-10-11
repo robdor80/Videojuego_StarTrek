@@ -14,7 +14,7 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 | F04-P02 | [Turnos, agendas, incompatibilidades, bajas y relevos](GUARDIAS_AGENDAS_P02.md) | Política temporal y ejemplos; arbitraje Core NO_EJECUTADO |
 | F04-P03 | [Cadena de mando contextual y delegación](MANDO_NOMBRAMIENTOS_P03.md) | Matriz de cuatro roles y sucesión; API externa NO_APROBADA |
 | F04-P04 | [Autoridad médica, profesional, Primera Directriz y normas](LIMITES_MEDICOS_NORMATIVOS_P04.md) | Límites y precedencia de ámbito; decisiones en Core NO_EJECUTADAS |
-| F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | 38 escenarios + 16 tests independientes; CI añadida, comprobar workflow |
+| F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | 39 escenarios + 16 tests independientes; CI añadida, comprobar workflow |
 
 ## Reutilización respetada
 
