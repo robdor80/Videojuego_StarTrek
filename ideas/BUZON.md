@@ -62,6 +62,19 @@ Formato para añadir una propuesta:
 - **Alcance excluido:** el yate del capitán será una idea/documento distinto.
 - **Ejecución:** no iniciada por este registro; no interrumpe la fase activa.
 
+### IDEA-0004 — Yate del capitán: acceso interior y desacople simulado
+- **Fecha de aprobación conceptual:** 2026-10-11.
+- **Estado:** APROBADA CONCEPTUALMENTE; diseño detallado e implementación pendientes.
+- **Propuesta:** yate del capitán diferenciado de lanzaderas normales, ligado inicialmente como referencia artística a Sovereign M07, accesible desde el interior, con desacople/acoplamiento simulados, vuelo, tripulación, carga, autorizaciones y persistencia reales.
+- **Objetivo:** disponer de vehículo auxiliar elegante y funcional para viajes oficiales, diplomacia y misiones, sin bloquear su jugabilidad hasta reconstruir el alojamiento ventral y un interior 3D completo.
+- **Ficha detallada:** [IDEA-0004_yate_del_capitan_desacople_simulado.md](IDEA-0004_yate_del_capitan_desacople_simulado.md).
+- **Idea vinculada:** [IDEA-0003 — Hangares independientes](IDEA-0003_hangares_independientes_atraque_simulado.md); lógica común con anclaje específico del yate, no una plaza de lanzaderas estándar.
+- **Invariante:** entidad única, ubicación y ocupantes persistentes; no puede estar a la vez acoplado y en vuelo.
+- **Dependencias candidatas:** F02, F03, F04, F07, F09, F11, F14 y F15, sin asignación definitiva.
+- **Nota de canon:** el archivo indica Sovereign M07 como base elegida; el Plan Maestro vigente en `main` todavía señala pendiente la elección de Dama/Imperator. El archivo no resuelve por sí solo esta discrepancia.
+- **Decisión del autor:** documento aportado como idea conceptualmente aprobada, solicitado su archivo con el número 4.
+- **Ejecución:** ninguna iniciada por este registro; Misión 08 (puertas del hangar de lanzaderas) es un trabajo independiente.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
