@@ -1,37 +1,35 @@
 # F03 — Mundo autoritativo, conocimiento y persistencia
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 sigue siendo `PLANIFICADA` hasta el cierre formal; **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
 
 ## Objetivo
 
-Construir la continuidad mínima de un universo observable, incluso fuera de escena.
+Reconciliar una realidad de campaña existente antes de observarla, información adquirida con límites de acceso, acontecimientos causales incluso fuera de escena y guardados compatibles sin duplicación de identidades. No crear un segundo Core RPG en este repositorio.
 
-## Pasos y entregables
+## Cinco pasos, entregables e interpretación exacta
 
-- [ ] **F03-P01** — Reconciliar cronología, semillas, identidad estable y materialización antes de observación.
-- [ ] **F03-P02** — Definir verdad del mundo frente a percepción/conocimiento por personaje, nave y consola.
-- [ ] **F03-P03** — Conectar simulación causal, tiempo, eventos, agendas y operaciones fuera de escena.
-- [ ] **F03-P04** — Resolver guardado, carga, migraciones y continuidad de datos y órdenes pendientes.
-- [ ] **F03-P05** — Validar determinismo, límites de conocimiento, consistencia de identidad y ausencia de duplicación.
+| Paso | Trabajo realizado en rama F03 | Evidencia / límite |
+|---|---|---|
+| **F03-P01** | [Cronología, semillas, identidad, materialización y ciclo LOD](CONTRATO_IDENTIDAD_MATERIALIZACION_P01.md) | Diseño y fuentes auditadas. Generación real **NO_EJECUTADA** |
+| **F03-P02** | [Verdad, percepción/observación, conocimiento y privacidad](VERDAD_PERCEPCION_CONOCIMIENTO_P02.md) | Política de campos, canales y rechazo. Core Knowledge **NO_EJECUTADO** |
+| **F03-P03** | [Tiempo, eventos, agendas y causalidad fuera de escena](CAUSALIDAD_TIEMPO_OFFSCREEN_P03.md) | Invariantes y escenarios. Core Simulation/Actions **NO_EJECUTADOS** |
+| **F03-P04** | [Guardado, carga, migraciones y operaciones pendientes](GUARDADO_CARGA_MIGRACION_P04.md) | Protocolo de seguridad. Core Persistence **NO_EJECUTADO** |
+| **F03-P05** | [Validador, fixture, batería de pruebas y bloqueo técnico](VALIDACION_Y_BLOQUEOS_P05.md) | [Código de QA](../../../../../tools/validation/validate_f03_reference.py), [tests](../../../../../tools/validation/test_f03_reference.py), [fixture](../../../../../validation/fixtures/f03/continuity_reference_v0.1.json), [workflow](../../../../../.github/workflows/f03-reference-contracts.yml) |
 
-## Material del repositorio que se aprovecha sin moverlo
+### Fuentes reutilizadas sin mover
 
-- `universe/generation/`
-- `universe/chronology/`
-- `gameplay/ship_operations/sensor_resolution/`
-- `gameplay/ship_operations/operational_event_log/`
-- `gameplay/ship_operations/ship_memory/`
-- `validation/fixtures/`
+`universe/chronology/`, `universe/generation/`, `gameplay/persistence/`, `gameplay/ship_operations/sensor_resolution/`, `gameplay/ship_operations/operational_event_log/`, `gameplay/ship_operations/ship_memory/`, `ai/memory/`, `validation/fixtures/` y `docs/decisions/universal_stardate_system.md`.
 
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
+**Actualización 2026-10-13:** [F01 PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) y [F02 PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) **ya están fusionadas en `main`**. DEC-0001 se resolvió: Galaxy/Enterprise-D inspira la nueva **Clase Valhalla**, distinta de Galaxy; su fecha de servicio queda pendiente. La F03 utiliza el traspaso documental **INT-02…INT-06** de F02, sin confundirlo con contratos Core/UE5 validados ni con cierre formal de F01/F02.
 
-## Dependencias y límites
+### Restricciones y puerta de cierre
 
-F02; Generic World State/CoreRPG 4.5 y fases posteriores aún deben contrastarse.
+- **CoreRPG main** comprobado en `dcfcb83c9853e005b5450bd39e0ba693cb91e257`; 4.5 permanece en rama `feat/generic-world-state@2a3da891`; las 4.7, 4.9, 4.10 no están disponibles como interfaces validadas de producción.
+- Ni JSON, ni CI estática, ni test Python, ni ejemplo del log acreditan persistencia/simulación verdadera o una versión UE5 jugable.
+- `ESTADO_GLOBAL.json` no se altera desde la PR F03: F01/F02 ya están en `main` a nivel documental, pero los estados globales se actualizarán por madurez real y cierre formal, evitando declarar integración o fases principales simultáneas indebidamente.
+- Para cerrar al nivel `CORE_INTEGRADO` se exigen SHA/versión real, contratos validados con responsables, pruebas positivas/negativas de Core contra el fixture, guardado/carga y ciclos fuera de escena, evidencias de ejecución y revisión/merge.
+- **DEC-0001 está resuelta:** Galaxy/Enterprise-D es la referencia creativa de la **nueva Clase Valhalla**; la decisión no impone el puente de la v0.0.1, ni resuelve su año de servicio.
 
-## Puerta de cierre
+La rama documenta **todos los P01–P05**; la fase permanece **EN_REVISION / BLOQUEADA_CORE** en su madurez objetivo. Continuar hacia F04 solo para diseño independiente mientras se resuelven dependencias.
 
-Pruebas de continuidad y conocimiento sobre estado autoritativo efectivamente integrado, no solo contratos. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
-
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md), [estado global](../../ESTADO_GLOBAL.json) y [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
