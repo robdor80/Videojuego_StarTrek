@@ -35,16 +35,16 @@ python tools/validation/f04_reference.py --fixture validation/fixtures/f04/autho
 2. **F04 ↔ Core:** traducir entradas y salidas con interfaces **aprobadas**, ejecutar negativos sobre World State y verificar exclusión concurrente.
 3. **F05:** registrar orden/delegación/revocación, actualizaciones y consecuencias; no alterar autoridad desde IA.
 4. **F06/F08/UE5:** consola Sensores y guardia interactiva; proveer evidencias E2E para alférez, mando de guardia y capitán.
-5. Revalidar con `F01` (DEC-0001) y `F02` antes de cualquier merge de estado global.
+5. **F01 DEC-0001 ya resuelta** (Galaxy → nueva Clase Valhalla) y F01/F02/F03 ya fusionadas a nivel documental; cualquier actualización futura del estado global requiere QA, madurez verificada y compatibilidad con las fases previas, no simples cambios de una PR.
 
 ## Puerta de cierre y evidencias
 
 - `DISENO_VALIDADO`/referencia ejecutada solo tras confirmar CI de esta rama y fixture.
 - `REFERENCIA_PROBADA` **limitado** a las reglas cubiertas por el simulador; no prueba spawn/persistencia ni sistema completo de órdenes.
 - `CORE_INTEGRADO` / `UE5_JUGABLE` / `ACEPTACION_SUPERADA`: **NO_EJECUTADO**; requieren SHA, versión, tests reales, trazas y ausencia de incidencias bloqueantes.
-- El `ESTADO_GLOBAL.json` se mantiene sin cambios mientras F01/02/03 continúen abiertas; F04 **no** se marca CERRADA en el registro central.
+- El `ESTADO_GLOBAL.json` se mantiene sin cambios desde esta PR, aunque F01/02/03 ya estén integradas documentalmente. **F04 no se marca CERRADA en el registro central** sin demostrar las puertas de aceptación previstas y registrar su cierre.
 
-**No decidir:** Dama Imperator, canon/épocas nuevas, reglas definitivas Core, gestión completa F05 de órdenes ni primera guardia jugable. Proseguir F05 a nivel de diseño una vez revisado este contrato.
+**Decisión ya adoptada fuera de F04:** Galaxy inspira la nueva Clase Valhalla (antes «Imperator»), con cronología propia autorizada por el autor y fecha de servicio pendiente. Esta fase **no** decide nuevas épocas, reglas definitivas del Core, gestión completa F05 de órdenes ni certifica la primera guardia jugable. Proseguir F05 a nivel de diseño una vez revisado este contrato.
 
 ## Evidencia CI — 11-10-2026
 
