@@ -296,16 +296,13 @@ def build_observation(
 def resolve_scan(world: dict[str, Any], raw_request: dict[str, Any]) -> dict[str, Any]:
     request = normalized_request(raw_request)
     detections: list[dict[str, Any]] = []
-    in_scope = 0
-    evaluated_signatures = 0
-
+    # Cualquier salida del motor podría acabar consumida por UI/IA.
+    # Nunca calcular ni exportar censos de realidad no observada.
     for entity in world.get("entities", []):
         if not entity_is_in_scope(entity, request):
             continue
-        in_scope += 1
         sig_results: list[dict[str, Any]] = []
         for sig in entity.get("signatures", []):
-            evaluated_signatures += 1
             score, distance = score_signature(entity, sig, request)
             sig_results.append({
                 "signature_type": sig.get("signature_type"),
@@ -340,8 +337,6 @@ def resolve_scan(world: dict[str, Any], raw_request: dict[str, Any]) -> dict[str
             "system_id": request["system_id"],
         },
         "summary": {
-            "entities_in_scope": in_scope,
-            "signatures_evaluated": evaluated_signatures,
             "contacts_detected": len(detections),
         },
         "detections": detections,
