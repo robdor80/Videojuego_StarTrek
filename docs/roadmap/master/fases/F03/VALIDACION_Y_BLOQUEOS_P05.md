@@ -1,6 +1,6 @@
 # F03-P05 — Validación reproducible de los contratos de continuidad
 
-**Fecha:** 2026-10-11. **Nivel real alcanzable ahora:** referencia estructurada y QA estática. **Nivel objetivo pendiente:** `CORE_INTEGRADO`. Se respetan los bloqueos de F02 PR #3 y F01 PR #2.
+**Fecha de auditoría:** 2026-10-11; **actualización de dependencias documentales:** 2026-10-13. **Nivel real alcanzado:** referencia estructurada y QA estática. **Nivel objetivo pendiente:** `CORE_INTEGRADO`. F01 PR #2 y F02 PR #3 ya están fusionadas, sin que eso acredite integración Core/Host.
 
 ## Artefactos
 
@@ -46,7 +46,7 @@ Los comandos son requisitos de ejecución y no evidencia de haber pasado. **Evid
 
 - **B-01 CORE:** `CoreRPG/main@dcfcb83c` no integra aún 4.5 ni funcionalidades posteriores de persistencia, conocimiento, acciones/simulación. Reconsultar al integrar.
 - **B-02 HOST:** no hay prueba de UE5 Windows/EntityId↔Actor frente a API real.
-- **B-03 GOBIERNO:** F01 DEC-0001 y PR #2 sin resolver; F02 PR #3 draft; no modificar estado global de forma que simule cierre de ambas.
+- **B-03 GOBIERNO — ACTUALIZADO:** F01 DEC-0001 resuelta (Galaxy → nueva Clase Valhalla) y PR #2/#3 fusionadas. Persiste la obligación de conciliar madurez real y cierre formal; no modificar estado global fingiendo que F03 está integrada en Core.
 - **B-04 ESQUEMAS:** saltos de versionado/almacenamiento y mecanismo de idempotencia requieren contrato formal del Core.
 
 **Resultado de la fase para esta rama:** los cinco pasos tienen entregables inspeccionables, pero **F03 permanece EN_REVISION/BLOQUEADA_CORE**, nunca `CERRADA` ni `CORE_INTEGRADO` hasta pruebas reales.
