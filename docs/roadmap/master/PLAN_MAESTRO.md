@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026; decisiones revisadas 13-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00 cerrada**. Fase global activa: **F01 EN_CURSO** (DEC-0001/0002 resueltas; falta QA y fusión PR #2).
+**Versión organizativa:** 1.0 / 11-10-2026; decisiones revisadas 13-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00 cerrada**. Fase global activa: **F01 EN_CURSO** (DEC-0001/0002 resueltas; falta QA y cierre formal documental).
 
 ## Principios de producto conservados
 
