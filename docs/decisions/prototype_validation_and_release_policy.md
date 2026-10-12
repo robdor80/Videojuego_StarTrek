@@ -31,6 +31,6 @@ Su orden, contenido, número y ejecución **no están aprobados todavía como en
 
 ## Límites de responsabilidad
 
-El prototipo no autoriza implantar un motor Star Trek paralelo a Core RPG. IA remota interpreta pero no muta World State. El puente piloto es selección técnica posterior (`DEC-0003`); la Dama base Imperator sigue pendiente de decisión de autor (`DEC-0001`).
+El prototipo no autoriza implantar un motor Star Trek paralelo a Core RPG. IA remota interpreta pero no muta World State. El puente piloto es selección técnica posterior (`DEC-0003`); la antigua decisión provisional «Imperator» ya fue resuelta el 13-10-2026 en `DEC-0001`: **Galaxy inspira la nueva Clase Valhalla** (no un refit). Esta elección **no** determina el puente piloto ni introduce Valhalla en el fixture de 2372.
 
 **Enlaces:** `docs/roadmap/master/fases/F01/PROPUESTA_MVP_Y_PRESUPUESTO.md`, `docs/roadmap/ship_console_vertical_slice_v0_0_1.md`, `docs/roadmap/master/PLAN_MAESTRO.md`, `docs/roadmap/master/CRITERIOS_DE_CIERRE.md`.
