@@ -125,7 +125,9 @@ class F04ReferenceTests(unittest.TestCase):
 
     def test_bound_f04_evidence_requires_actual_allow(self):
         base = context("sensor_scan", station="sensors", on_duty=True,
-                       assignment_active=True, qualified=True)
+                       assignment_active=True, qualified=True,
+                       actor_id="test:cadet", station_id="station:sensors",
+                       state_revision=7)
         kwargs = dict(actor_id="test:cadet", action_id="sensor_scan",
                       station_id="station:sensors", state_revision=7,
                       issued_tick=90, expires_tick=110)
