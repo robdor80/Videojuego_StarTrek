@@ -1,7 +1,7 @@
 # F02 — Matriz de sincronización tras auditoría (2026-10-12)
 
 **Estado:** plan de coordinación, NO aprobación de APIs nuevas ni `CORE_INTEGRADO`.
-**Ramas:** F01 PR #2, F02 PR #3, F03 #4, F04 #5, F05 #6, F06 #7; todas siguen en borrador.
+**Estado al auditar (12-10-2026):** las PR #2–#7 estaban en borrador. **Actualización 13-10-2026:** PR #2 (F01) **fusionada**, PR #3 (F02) marcada **Ready for review** y sin conflicto con `main` en la comprobación; PR #4–#7 todavía requieren revisión y tratamiento secuencial.
 
 ## Línea base comprobada
 
@@ -31,17 +31,17 @@
 6. **UE5/MSI**: compilar y enlazar Core C++20 en Host y demostrar que descargar el Actor no destruye el NPC.
 7. **Manual PDF F06-P01**: inspección visual pendiente y obligatoria antes del cierre.
 8. **Licencias de planos e imágenes**: clasificación obligatoria de recursos externos antes de su distribución; no mover/borrar/convertir binarios en esta auditoría.
-9. **F01 / DEC-0001**: Galaxy / Sovereign / Odyssey aún sin aprobación del autor; no bloquear prototipo técnico pero tampoco fijar la Imperator.
+9. **F01 / DEC-0001 — RESUELTA:** el autor eligió **Galaxy/Enterprise-D** como referencia artística de una **nueva Clase Valhalla**, no Imperator. Fecha de servicio no fijada. La decisión no bloquea el prototipo interno de Sensores ni valida por sí sola ningún puente UE5.
 
 ## Orden de revisión y pruebas posterior a las PR
 
 - Comprobar SHA de cada rama y `main`, sin asumir que estados o informes antiguos estén actualizados.
-- Revalidar y revisar **secuencialmente** PR #2→#7. No cerrar F01 automáticamente por falta de DEC-0001.
+- Revisar y fusionar **secuencialmente** PR #3→#7 tras la PR #2 ya fusionada. **No** inferir cierre formal F01 o integración Core/UE5 por el mero merge de documentación.
 - F02: ejecutar sus validadores documental y 9 tests; F03: 26; F04: 39 casos/17 unit; F05: 48 casos/19 unit; F06: 8 legados/23 unit.
 - En **main integrado**: ejecutar `test_f04_f05_f06_cross_phase.py`; sus **tres** casos aparecen SKIPPED en PR #7 aislada, y deben pasar efectivamente con F04/F05 integradas.
 - Demostrar después el slice real capitán NPC→orden→Sensores→Ciencia→eventos→save/load→UE5. Hasta entonces **NO-GO para F08 jugable**.
 - Actualizar `ESTADO_GLOBAL.json` por madurez verdadera de cada tarea, sin convertir referencia Python en juego funcional.
-- Conservar las PR como DRAFT y F07/F08 aparcadas hasta la sesión de integración acordada.
+- Las PR pasan de DRAFT a revisión individual cuando se autoriza y comprueba su preparación; F07/F08 permanecen formalmente aparcadas hasta la sesión de integración acordada.
 
 ## Seguimiento de incidencias auditadas
 
@@ -51,7 +51,7 @@ A-04 validación finita y mundo inválido **corregido en PR #7**.
 A-05 CI de contratos **ampliado en PR #7**.
 A-06 hechos no confirmados **separados como candidatos en PR #7**.
 A-07 Core pendiente; A-08 pruebas cruzadas preparadas (ejecución pos-merge pendiente);
-A-09 Dama pendiente; A-10 PDF pendiente; A-11 derechos/licencias pendiente;
+A-09 Dama **resuelta mediante DEC-0001 (Galaxy → Valhalla)**; A-10 PDF pendiente; A-11 derechos/licencias pendiente;
 A-12 suite transversal se ejecutará tras integrar, no certificada anticipadamente.
 
 Ninguna de las modificaciones modifica `robdor80/CoreRPG` ni decide APIs 4.5–4.12.
