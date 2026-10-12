@@ -1,6 +1,6 @@
 # F03 — Mundo autoritativo, conocimiento y persistencia
 
-**Auditoría y desarrollo documental:** 2026-10-11. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE BLOQUEADA**. **Estado global en `main`: PLANIFICADA**, pendiente de gobierno F01/F02; **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
+**Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 sigue siendo `PLANIFICADA` hasta el cierre formal; **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
 
 ## Objetivo
 
@@ -20,15 +20,15 @@ Reconciliar una realidad de campaña existente antes de observarla, información
 
 `universe/chronology/`, `universe/generation/`, `gameplay/persistence/`, `gameplay/ship_operations/sensor_resolution/`, `gameplay/ship_operations/operational_event_log/`, `gameplay/ship_operations/ship_memory/`, `ai/memory/`, `validation/fixtures/` y `docs/decisions/universal_stardate_system.md`.
 
-**F02** se ha desarrollado en [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) (P01–P05 documentales), **F01** sigue en [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) por DEC-0001. Ambas están pendientes de fusión. La F03 usa el traspaso **INT-02…INT-06** sin asumir que `main` contenga los nuevos archivos F02; su rama deriva independientemente de `main`.
+**Actualización 2026-10-13:** [F01 PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) y [F02 PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) **ya están fusionadas en `main`**. DEC-0001 se resolvió: Galaxy/Enterprise-D inspira la nueva **Clase Valhalla**, distinta de Galaxy; su fecha de servicio queda pendiente. La F03 utiliza el traspaso documental **INT-02…INT-06** de F02, sin confundirlo con contratos Core/UE5 validados ni con cierre formal de F01/F02.
 
 ### Restricciones y puerta de cierre
 
 - **CoreRPG main** comprobado en `dcfcb83c9853e005b5450bd39e0ba693cb91e257`; 4.5 permanece en rama `feat/generic-world-state@2a3da891`; las 4.7, 4.9, 4.10 no están disponibles como interfaces validadas de producción.
 - Ni JSON, ni CI estática, ni test Python, ni ejemplo del log acreditan persistencia/simulación verdadera o una versión UE5 jugable.
-- `ESTADO_GLOBAL.json` no se toca desde F03 antes de integrar F01 y F02: se evita anunciar una fase principal concurrente sin resolución de decisiones.
+- `ESTADO_GLOBAL.json` no se altera desde la PR F03: F01/F02 ya están en `main` a nivel documental, pero los estados globales se actualizarán por madurez real y cierre formal, evitando declarar integración o fases principales simultáneas indebidamente.
 - Para cerrar al nivel `CORE_INTEGRADO` se exigen SHA/versión real, contratos validados con responsables, pruebas positivas/negativas de Core contra el fixture, guardado/carga y ciclos fuera de escena, evidencias de ejecución y revisión/merge.
-- Elegir Galaxy, Sovereign u Odyssey como base Imperator **sigue reservado al autor** y no condiciona esta auditoría.
+- **DEC-0001 está resuelta:** Galaxy/Enterprise-D es la referencia creativa de la **nueva Clase Valhalla**; la decisión no impone el puente de la v0.0.1, ni resuelve su año de servicio.
 
 La rama documenta **todos los P01–P05**; la fase permanece **EN_REVISION / BLOQUEADA_CORE** en su madurez objetivo. Continuar hacia F04 solo para diseño independiente mientras se resuelven dependencias.
 
