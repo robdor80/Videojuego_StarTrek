@@ -139,7 +139,10 @@ def issue_reference_binding(ctx: dict, *, actor_id: str, action_id: str,
     if (not all(isinstance(x, str) and x for x in (actor_id, action_id, station_id))
         or type(state_revision) is not int or state_revision < 0
         or type(issued_tick) is not int or type(expires_tick) is not int
-        or issued_tick >= expires_tick or ctx.get("action") != action_id):
+        or issued_tick >= expires_tick or ctx.get("action") != action_id
+        or ctx.get("actor_id") != actor_id
+        or ctx.get("station_id") != station_id
+        or ctx.get("state_revision") != state_revision):
         return None
     if evaluate(ctx)["decision"] != "ALLOW":
         return None
