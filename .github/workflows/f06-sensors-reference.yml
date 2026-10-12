@@ -9,6 +9,13 @@ on:
       - "tools/simulation/test_f06_reference.py"
       - "tools/simulation/resolve_sensor_scan.py"
       - "tools/simulation/test_sensor_detection_v0_1.py"
+      - "docs/roadmap/master/fases/F06/**"
+      - "gameplay/ship_operations/sensor_resolution/**"
+      - "gameplay/ship_operations/consoles/sensors/**"
+      - "gameplay/ship_operations/interconsole/**"
+      - "gameplay/ship_operations/operational_event_log/**"
+      - "tools/validation/f04_reference.py"
+      - "tools/validation/f05_reference.py"
       - ".github/workflows/f06-sensors-reference.yml"
   pull_request:
     paths:
@@ -16,6 +23,13 @@ on:
       - "tools/simulation/test_f06_reference.py"
       - "tools/simulation/resolve_sensor_scan.py"
       - "tools/simulation/test_sensor_detection_v0_1.py"
+      - "docs/roadmap/master/fases/F06/**"
+      - "gameplay/ship_operations/sensor_resolution/**"
+      - "gameplay/ship_operations/consoles/sensors/**"
+      - "gameplay/ship_operations/interconsole/**"
+      - "gameplay/ship_operations/operational_event_log/**"
+      - "tools/validation/f04_reference.py"
+      - "tools/validation/f05_reference.py"
       - ".github/workflows/f06-sensors-reference.yml"
   workflow_dispatch:
 
@@ -37,3 +51,15 @@ jobs:
         run: python -m unittest discover -s tools/simulation -p 'test_sensor_detection_v0_1.py' -v
       - name: F06 modelo, sensores, eventos y transferencias
         run: python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
+
+      - name: Cross-phase reference regression when branches are integrated
+        run: |
+          if [ -f tools/validation/test_f04_reference.py ]; then
+            python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
+          fi
+          if [ -f tools/validation/test_f05_reference.py ]; then
+            python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
+          fi
+          if [ -f tools/validation/test_f03_reference.py ]; then
+            python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
+          fi
