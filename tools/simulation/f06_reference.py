@@ -63,6 +63,7 @@ def blocked(reason: str, operation_id: str | None = None) -> dict[str, Any]:
         "authoritative": False,
         "effects_applied": 0,
         "events": [],
+        "event_candidates": [],
         "dossier_candidates": [],
         "result": None,
     }
@@ -232,17 +233,17 @@ def run_reference_scan(world: dict[str, Any], request: dict[str, Any],
     subject = {"operation_id": request["scan_id"]}
     if context.get("order_id"):
         subject["order_id"] = context["order_id"]
-        sequence = ["ORDER_ACKNOWLEDGED", "ACTION_STARTED", "ACTION_EXECUTED",
-                    "RESULT_CREATED", "REPORT_MADE", "ACTION_COMPLETED"]
-    else:
-        sequence = ["ACTION_STARTED", "ACTION_EXECUTED",
-                    "RESULT_CREATED", "REPORT_MADE", "ACTION_COMPLETED"]
+    # Un cálculo local NO confirma aceptación de orden, ejecución, reporte ni commit.
+    # Estos dos candidatos requieren que Core valide y confirme hechos separados.
+    sequence = ["ACTION_STARTED", "RESULT_CREATED"]
     for i, event_type in enumerate(sequence):
         refs = dict(subject)
         if event_type in {"RESULT_CREATED", "REPORT_MADE", "ACTION_COMPLETED"}:
             refs["result_id"] = result_id
         item = event(event_type, i, request["scan_id"], context,
                      request["operator_id"], refs, previous)
+        item["candidate_only"] = True
+        item["requires_core_confirmation"] = True
         stream.append(item)
         previous = item["event_id"]
 
@@ -262,7 +263,9 @@ def run_reference_scan(world: dict[str, Any], request: dict[str, Any],
         "dossier_candidates": dossier_candidates(
             result["detections"], request, context["campaign_time"]
         ),
-        "events": stream,
+        "events": [],  # No hay eventos autoritativos confirmados.
+        "event_candidates": stream,
+        "report_pending": {"status": "not_reported", "operator_confirmation_required": True},
         "note": "Candidates only; Core must authorize, reserve, commit, project and persist.",
     }
 
