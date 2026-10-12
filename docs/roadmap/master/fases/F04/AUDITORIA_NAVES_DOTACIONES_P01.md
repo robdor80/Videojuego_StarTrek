@@ -1,6 +1,6 @@
 # F04-P01 — Auditoría de naves, puestos y dotación (11-10-2026)
 
-**Resultado:** contratos fuente reconciliados; **no** se crea una dotación jugable ni se elige Dama. Madurez `DISENO_VALIDADO` (auditoría), no `CORE_INTEGRADO`.
+**Resultado de auditoría del 11-10-2026:** contratos fuente reconciliados; **no** se crea una dotación jugable ni una clase nueva con este documento. **Actualización de decisión autoral 13-10-2026:** Galaxy inspira una **nueva Clase Valhalla** (DEC-0001 aprobada), **sin** matrícula o año de entrada en servicio fijados. Madurez `DISENO_VALIDADO` (auditoría), no `CORE_INTEGRADO`.
 
 ## Fuentes reales, sin traslado
 
@@ -31,6 +31,6 @@
 - `crew_reference` no es ni el manifiesto, ni la fuerza disponible, ni la guardia actual.
 - Misma persona **no** cubre simultáneamente dos estaciones incompatibles, aunque tenga doble cualificación.
 - Si falla un mínimo de guardia, se informa de déficit/riesgo; no se autocrea un sustituto.
-- Los modelos de Galaxy, Sovereign y Odyssey permanecen candidatos a Dama de Imperator: **DEC-0001 abierta**.
+- **DEC-0001 RESUELTA:** Galaxy/Enterprise-D se elige como referencia de la **Clase Valhalla**, nueva clase propia y no actualización Galaxy. Sovereign y Odyssey no son ya candidatas a base de Valhalla, pero permanecen disponibles como referencias/naves NPC cuando su modelado y cronología se validen. La decisión no modifica automáticamente el catálogo, los manifiestos, el fixture de Oberth ni las capacidades implementadas.
 
 **Prueba P01:** reutilización de fuentes comprobada en GitHub. Casos ejecutables de plazas y ausencias en `tools/validation/f04_reference.py` / `test_f04_reference.py`. **NO_EJECUTADO:** validación con Core/UE5 y generación de NPC runtime.
