@@ -41,4 +41,4 @@ F00 no resolvió DEC-0001/0002. El autor aprobó **DEC-0002** (prueba interna Se
 
 ## Seguimiento F01 (11-10-2026)
 
-F01-P01 y F01-P02 documentados/auditados; P04 aprobada documentalmente con DEC-0002. **P03 ya no está bloqueada por el autor**, pero necesita QA documental y cierre formal con PR. Odyssey sigue fuera del catálogo vigente hasta decisión explícita. Las tecnologías o naves nuevas se registrarán como GAME_ADDITION en la cronología propia; la autorización conceptual no implica disponibilidad en 2372 ni para Pike/Kirk. Expedientes en `docs/roadmap/master/fases/F01/`. **F01 permanece EN_CURSO; PR #2 sin fusionar**.
+F01-P01…P05 revisados en [acta de cierre documental de 13-10-2026](fases/F01/ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md). DEC-0001/0002 aprobadas; PR #2 **fusionada**. **F01 CERRADA / DISENO_VALIDADO** únicamente en diseño. Odyssey sigue fuera del catálogo vigente hasta decisión explícita. Tecnologías y naves nuevas requieren GAME_ADDITION y reglas temporales; la autorización conceptual no implica Valhalla disponible en 2372, ni para Pike/Kirk. **El desarrollo real Core/UE5 está pendiente**.
