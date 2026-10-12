@@ -42,5 +42,37 @@
     "No counts of undetected entities/signatures in public results",
     "Malformed filter/priority/context rejected before producing results",
     "Science handoff rejects invalid priority"
-  ]
+  ],
+  "audit_hardening_2026_10_12": {
+    "verified_commit": "a6ef6895208a448c235c60ffced522560ce86a8a",
+    "workflow_run_id": 38228217392,
+    "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392",
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "legacy_sensor_tests": {
+      "run": 8,
+      "passed": 8
+    },
+    "f06_tests": {
+      "run": 23,
+      "passed": 23
+    },
+    "interphase_f04_f05_f06": {
+      "cases": 3,
+      "status": "SKIPPED_F04_F05_NOT_MERGED",
+      "executed": 0
+    },
+    "security_fixes": [
+      "A-02 scoped reference binding",
+      "A-03 raw scan no undetected counts",
+      "A-04 finite numeric and malformed world validation",
+      "A-05 CI watching contracts",
+      "A-06 uncommitted event candidates only"
+    ],
+    "limits": [
+      "No signed/authoritative Core authorization",
+      "No actual WorldState commit, persistence or UE5",
+      "Manual PDF visual inspection pending"
+    ]
+  }
 }
