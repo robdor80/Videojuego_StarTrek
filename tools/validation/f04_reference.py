@@ -127,6 +127,28 @@ def evaluate(ctx: dict) -> dict:
     return result("ALLOW", "VALID_WATCH_POLICY")
 
 
+
+def issue_reference_binding(ctx: dict, *, actor_id: str, action_id: str,
+                            station_id: str, state_revision: int,
+                            issued_tick: int, expires_tick: int) -> dict | None:
+    """Puente de TEST F04->F05, NO acredita credenciales reales de Core.
+
+    Las identidades/tiempos proceden del harness de referencia. Un Host o IA
+    no pueden certificar por sí mismos esta estructura en producción.
+    """
+    if (not all(isinstance(x, str) and x for x in (actor_id, action_id, station_id))
+        or type(state_revision) is not int or state_revision < 0
+        or type(issued_tick) is not int or type(expires_tick) is not int
+        or issued_tick >= expires_tick or ctx.get("action") != action_id):
+        return None
+    if evaluate(ctx)["decision"] != "ALLOW":
+        return None
+    return {"source": "F04_REFERENCE", "decision": "ALLOW",
+            "actor_id": actor_id, "action_id": action_id,
+            "station_id": station_id, "state_revision": state_revision,
+            "issued_tick": issued_tick, "expires_tick": expires_tick}
+
+
 def check_roster(slots: list[dict], people: dict[str, dict],
                  assignments: list[dict]) -> list[str]:
     """Find missing slots, spurious crew, duplicated assignments and deficiencies."""
