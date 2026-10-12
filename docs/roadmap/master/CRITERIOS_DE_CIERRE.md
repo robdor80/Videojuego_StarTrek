@@ -6,7 +6,11 @@
 
 **Madurez/evidencia del entregable**: `IDEA`, `DISENO_VALIDADO`, `CONTRATO_VALIDADO`, `REFERENCIA_PROBADA`, `CORE_INTEGRADO`, `UE5_JUGABLE`, `ACEPTACION_SUPERADA`. Esta es una escala orientativa, no confundir con un mismo artefacto que deba pasar linealmente por todas. La web y assets tienen evidencia adicional de publicación/importación.
 
-Ejemplo: un sistema puede estar `CERRADO` en **contrato v0.1** y seguir `BLOQUEADO` para **integración UE5**. El plan mantiene ambos hechos sin sobrescribirlos.
+Ejemplo: un sistema puede tener un paso `CERRADA` en **contrato v0.1** y permanecer con la **fase global `EN_REVISION`** por integración UE5. El plan mantiene ambos hechos sin sobrescribirlos.
+
+En `ESTADO_GLOBAL.json`, `status` indica **estado de planificación**, `target_maturity` la **puerta de fase**, `achieved_maturity` la **evidencia alcanzada en algún alcance comprobable** y `step_evidence_maturity` el **nivel exacto de cada entregable cerrado o documentado**. No atribuir a toda la fase la madurez parcial más elevada. Para cerrar una fase, además de alcanzar su objetivo documental o de runtime, deberán cumplirse **todas las puertas propias de su README**, incluidas negativas, dependencias y artefactos externos pertinentes. 
+
+**Caso 13-10-2026:** F01 `CERRADA` solamente en `DISENO_VALIDADO`; F04/F06 `EN_REVISION` aun con QA `REFERENCIA_PROBADA` porque falta validación operativa de su alcance, y F02 es la única fase principal `EN_CURSO`. Véase [acta de reconciliación](ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Puerta obligatoria de cada paso
 
@@ -35,5 +39,5 @@ Ejemplo: un sistema puede estar `CERRADO` en **contrato v0.1** y seguir `BLOQUEA
 - Priorizar **camino crítico** F01→F08. Antes de ejecutar trabajo específico buscar evidencias ya disponibles en su roadmap fuente.
 - Dependencia externa pendiente: `BLOQUEADA` **solo la tarea dependiente**, no reetiquetar todo el proyecto; documentar versión/comportamiento esperado sin diseñar APIs definitivas sin contraparte.
 - Ideas nuevas siempre en `ideas/BUZON.md`; estado `PLANIFICADA` solo después de ubicar y aceptar su fase/paso.
-- Escenarios donde se requiere autor: clase protagonista de Imperator, cambio de canon/épocas, dimensiones del primer MVP, reglas de consentimiento/privacidad o límites de la simulación.
+- Escenarios donde se requiere autor: **nuevas** decisiones creativas sobre la **Clase Valhalla** (elección de inspiración Galaxy y nombre ya resueltos), alteraciones de canon/épocas no aprobadas, dimensiones sustantivas de nuevos MVP, reglas de consentimiento/privacidad o límites de la simulación.
 - La **F00 se cierra por evidencias documentales y de navegación**; no significa que F01–F15 estén cerradas ni que se haya desarrollado un ejecutable 3D.

@@ -1,6 +1,6 @@
 # F03 — Mundo autoritativo, conocimiento y persistencia
 
-**Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 sigue siendo `PLANIFICADA` hasta el cierre formal; **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
+**Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 es ahora **`EN_REVISION`**, por pruebas de referencia superadas, con P01–P04 **BLOQUEADAS** en ejecución Core y P05 cerrada solo como QA de fixture. **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
 
 ## Objetivo
 
@@ -26,7 +26,7 @@ Reconciliar una realidad de campaña existente antes de observarla, información
 
 - **CoreRPG main** comprobado en `dcfcb83c9853e005b5450bd39e0ba693cb91e257`; 4.5 permanece en rama `feat/generic-world-state@2a3da891`; las 4.7, 4.9, 4.10 no están disponibles como interfaces validadas de producción.
 - Ni JSON, ni CI estática, ni test Python, ni ejemplo del log acreditan persistencia/simulación verdadera o una versión UE5 jugable.
-- `ESTADO_GLOBAL.json` no se altera desde la PR F03: F01/F02 ya están en `main` a nivel documental, pero los estados globales se actualizarán por madurez real y cierre formal, evitando declarar integración o fases principales simultáneas indebidamente.
+- Tras las PR #2–#7 fusionadas, `ESTADO_GLOBAL.json` ha quedado reconciliado: F01 CERRADA en diseño, F02 fase principal, F03 EN_REVISION. **No** confundir QA estática con persistencia/simulación en Core. Véase [acta](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 - Para cerrar al nivel `CORE_INTEGRADO` se exigen SHA/versión real, contratos validados con responsables, pruebas positivas/negativas de Core contra el fixture, guardado/carga y ciclos fuera de escena, evidencias de ejecución y revisión/merge.
 - **DEC-0001 está resuelta:** Galaxy/Enterprise-D es la referencia creativa de la **nueva Clase Valhalla**; la decisión no impone el puente de la v0.0.1, ni resuelve su año de servicio.
 

@@ -27,6 +27,6 @@ La separación funcional del platillo, autonomía prolongada sin warp, combate a
 ## No confundir elecciones
 - **Base creativa de Valhalla (Galaxy)** ≠ **puente piloto de la v0.0.1 de Sensores**; F07 valida el mejor recurso lícito y realmente navegable, pudiendo utilizar Sutherland, Kelvin u otro tras pruebas.
 - **Clase** ≠ **nave individual**; nombre y matrícula de la unidad jugable no están fijados.
-- **Decisión autoral cerrada** ≠ **fase técnica cerrada**: F01 sigue EN_CURSO hasta validar documentos y fusionar PR #2; otros módulos se desarrollan en PR independientes.
+- **Actualización 13-10-2026:** decisión autoral, QA del expediente y PR #2 fusionada, por lo que F01 queda **CERRADA SOLO EN DISEÑO** (véase [acta F01](ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md)). **No** se declara terminada la construcción de Valhalla ni su presencia en un build UE5.
 
 Fuentes: `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`, `docs/decisions/playable_eras.md`, `docs/decisions/starship_identity_model.md`, `lore/starships/classes/core_starship_classes.json` y acta anterior.

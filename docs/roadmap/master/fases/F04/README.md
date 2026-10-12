@@ -1,6 +1,6 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
-**Auditoría y trabajo F04:** 2026-10-11; **actualización de dependencias:** 2026-10-13. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA PROBADA en CI, solo para reglas de referencia. **F04 global no cerrada**: F01–F03 ya están fusionadas a nivel documental; Core/UE5 y las pruebas de integración siguen pendientes. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
+**Auditoría y trabajo F04:** 2026-10-11; **actualización de dependencias:** 2026-10-13. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA PROBADA en CI, solo para reglas de referencia. **F04 global EN_REVISION**: F01–F03 ya fusionadas; **F04 PR #5 fusionada** y suite de 39 casos de fixture + 17 unit tests superada, pero Core/UE5 y validación operativa siguen pendientes. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
 
 ## Objetivo
 
@@ -14,7 +14,7 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 | F04-P02 | [Turnos, agendas, incompatibilidades, bajas y relevos](GUARDIAS_AGENDAS_P02.md) | Política temporal y ejemplos; arbitraje Core NO_EJECUTADO |
 | F04-P03 | [Cadena de mando contextual y delegación](MANDO_NOMBRAMIENTOS_P03.md) | Matriz de cuatro roles y sucesión; API externa NO_APROBADA |
 | F04-P04 | [Autoridad médica, profesional, Primera Directriz y normas](LIMITES_MEDICOS_NORMATIVOS_P04.md) | Límites y precedencia de ámbito; decisiones en Core NO_EJECUTADAS |
-| F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | 39 escenarios + 16 tests independientes; CI añadida, comprobar workflow |
+| F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | **39 escenarios + 17 tests** de referencia verificados en CI, sin runtime Core/UE5 |
 
 ## Reutilización respetada
 
@@ -26,8 +26,8 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 - Star Trek: clases, tripulación, puestos, guardias, restricciones de Flota y Primera Directriz.
 - UE5: actores y escenas interactivos, no fuente independiente de World State; IA aconseja sin ejecutar.
 - No mover contratos ni crear un Core paralelo. **DEC-0001 ya está resuelta**: Galaxy/Enterprise-D es la inspiración de la nueva **Clase Valhalla**, no un refit; su año de servicio sigue sin definirse. Este acuerdo creativo no acredita naves runtime ni afecta al puente de prueba de Sensores.
-- **Actualización 2026-10-13:** F01 [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2), F02 [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) y F03 [PR #4](https://github.com/robdor80/Videojuego_StarTrek/pull/4) **están fusionadas en `main`**. Esta rama F04 nació sobre un corte anterior (`main@6069f6aa`), pero no altera el registro global ni presupone integración Core/UE5. La validación transversal con F05/F06 sigue pendiente.
-- `docs/roadmap/master/ESTADO_GLOBAL.json` y plan maestro no se alteran para no falsear el estado principal.
+- **Reconciliación 2026-10-13:** F01–F04 [PR #2–#5](https://github.com/robdor80/Videojuego_StarTrek/pull/5) y F05/F06 PR #6/#7 están **fusionadas en `main`**. La [suite transversal F04→F05→F06](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021) pasó **3/3 ejecutadas sin omisiones**. El estado oficial F04 queda **EN_REVISION**, aunque sus cinco entregables documentales/de referencia están cerrados a su nivel, porque siguen faltando Core/UE5 reales.
+- `docs/roadmap/master/ESTADO_GLOBAL.json` y plan maestro **ya reflejan** esta distinción entre referencia cerrada por paso y fase todavía en revisión.
 
 **Condición para cierre real:** pruebas de matriz autorizativa y turnos integradas con Core versionado, restricciones negativas demostradas, conexión con guardia jugable y trazabilidad de la aceptación. No marcar `CERRADA` con documentación y Python únicamente.
 

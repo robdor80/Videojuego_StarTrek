@@ -1,6 +1,6 @@
 # F05 — Órdenes, delegación e iniciativa NPC
 
-**Estado global:** PLANIFICADA; **trabajo en rama:** P01–P05 desarrollados a nivel referencia, CI de referencia confirmada; integración pendiente.
+**Estado global reconciliado:** **EN_REVISION**, con P01–P04 BLOQUEADAS para sus capacidades Core reales y P05 CERRADA solo como suite de referencia. **PR #6 fusionada en `main`**; 19 unit tests y 48 fixtures verificados, y regresión F04→F05→F06 superada en [CI integrada](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021). No equivale a implementación de iniciativa NPC.
 **Meta de fase del plan maestro:** CORE_INTEGRADO (**no alcanzada**).
 
 ## Puntos
@@ -10,7 +10,7 @@
 - [x] **P04 diseño** — [Propuesta LLM, revalidación y fallback](IA_PROPUESTAS_Y_FALLBACK_P04.md).
 - [x] **P05 suite incorporada** — [48 escenarios y 19 pruebas unitarias de referencia](PRUEBAS_Y_COORDINACION_P05.md). **GitHub Actions verificada** tras el endurecimiento A-01/A-02: 19/19 pruebas y 48/48 escenarios (run 38228304099). No equivale a ejecución Core/UE5.
 
-Estos checks se refieren únicamente a los entregables independientes, **no** al cierre de P01–P05 a nivel `CORE_INTEGRADO`.
+Estos checks se refieren únicamente a los entregables independientes: el diseño de P01–P04 está terminado **en documentos**, pero **su ejecución real continúa BLOQUEADA**; P05 sí está cerrada a nivel de referencia. F05 no está `CORE_INTEGRADO`. Véase [acta](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Reutilización sin mover rutas
 `gameplay/orders/`, `gameplay/chain_of_command/`, `ai/captain_behavior/`, `ai/npc_behavior/`, `gameplay/ship_operations/operational_event_log/`, `gameplay/ship_operations/ship_computer/`, además de F02/F03/F04 (PR #3/#4/#5). Las fuentes aprobadas no se cambian por la propuesta.

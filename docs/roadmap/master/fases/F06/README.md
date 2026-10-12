@@ -1,6 +1,6 @@
 # F06 — Consola de Sensores
 
-**Estado de fase global:** PLANIFICADA; **trabajo de rama:** referencia verificable preparada. **Actualización de coordinación:** 2026-10-13, PR #2–#6 fusionadas. **Madurez demostrada:** REFERENCIA_PROBADA para los barridos y el paquete de coordinación; **meta de fase:** operaciones integradas reales con Core/UE5 (PENDIENTE).
+**Estado de fase global reconciliado:** **EN_REVISION**, PR #7 ya **fusionada en `main`**. **Madurez demostrada:** `REFERENCIA_PROBADA` en barridos y cadena F04→F05→F06. P01 continúa EN_REVISION por PDF; P02–P04 siguen BLOQUEADAS para operativa autoritativa; P05 cerrada a nivel de pruebas de referencia. Meta de fase: Core/UE5 real (**PENDIENTE**). [Acta](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Entregables de los cinco puntos
 
@@ -8,7 +8,7 @@
 - [x] **F06-P02 — referencia** — [Detección, filtros, interferencia, conocimiento y resultado parcial](DETECCION_CONOCIMIENTO_P02.md). Reutiliza el motor original; verificado sin efectos autoritativos.
 - [x] **F06-P03 — referencia** — [Memoria de nave, transferencias a Ciencia y eventos](MEMORIA_CIENCIA_EVENTOS_P03.md). Propuestas de dossiers, handoff y eventos; persistencia y envío reales pendientes.
 - [x] **F06-P04 — contrato** — [Matriz de operación, recursos, puestos, rechazo y demora](OPERACIONES_RECURSOS_ORDENES_P04.md). No introduce economía o permisos falsos en el canon.
-- [x] **F06-P05 — suite independiente** — [Pruebas y acuerdo semántico para UE5](PRUEBAS_UE5_Y_CIERRE_P05.md), [evidencia JSON](EVIDENCIA_P05.json). **31/31 pruebas de sensores verificadas en la auditoría del 12-10-2026**, [Actions 38228217392](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392): 8 del motor anterior + 23 F06. En aquel corte, tres casos F04→F05→F06 se omitieron porque faltaban las PR precedentes; **tras fusionar PR #2–#6, la cadena pasa a obligatoria en CI** y se debe consultar el resultado del nuevo commit.
+- [x] **F06-P05 — suite independiente** — [Pruebas y acuerdo semántico para UE5](PRUEBAS_UE5_Y_CIERRE_P05.md), [evidencia JSON](EVIDENCIA_P05.json). **31/31 pruebas de sensores verificadas en la auditoría del 12-10-2026**, [Actions 38228217392](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392): 8 del motor anterior + 23 F06. En aquel corte, tres casos F04→F05→F06 se omitieron por faltar PR precedentes; **la CI integrada posterior ejecutó y superó los tres** (run 38321712021, 0 skips).
 
 **Los checks indican preparación de entregables de referencia, no cierre de la fase completa.** P01 queda abierto por revisión del PDF.
 
@@ -48,4 +48,4 @@ La implementación devuelve snapshots, candidaturas de dossier y **event_candida
 - **A-10:** sigue pendiente la lectura visual del PDF del manual; no declarar F06-P01 cerrada.
 - **A-07/A-08:** Core real, save/load, UE5 y E2E siguen pendientes; no inferir `CORE_INTEGRADO` del CI Python.
 
-**CI histórica de referencia (12-10-2026):** [run 38228217392](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392) SUCCESS en `a6ef6895208a448c235c60ffced522560ce86a8a`: **31 casos de sensores** y tres interphase OMITIDOS entonces. **Actualización 13-10-2026:** las tres pruebas interphase ahora se ejecutan obligatoriamente por estar F04/F05 integradas. El resultado de la nueva ejecución debe constar en el control de la PR y **no se presume aprobado antes de ver CI**.
+**CI histórica de referencia (12-10-2026):** [run 38228217392](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392) SUCCESS en `a6ef6895208a448c235c60ffced522560ce86a8a`: **31 casos de sensores** y tres interphase OMITIDOS entonces. **Comprobación posterior, 13-10-2026:** [Actions 38321712021](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021) SUCCESS para la PR integrada: 8+23 Sensores, 3 pruebas cruzadas **ejecutadas**, 26 F03, 17 F04 y 19 F05: **96 tests superados**. Core RPG, guardado real, manual PDF y UE5 siguen pendientes.

@@ -51,6 +51,10 @@
 - Core RPG continúa **agnóstico de Star Trek**; datos, reglas de universo, presentaciones UE5 y mecanismos genéricos permanecen separados. El trabajo documental aquí **no** acredita Core/UE5 integrados.
 - F01 requiere su **QA y cierre formal** con independencia del estado de la PR #2; F02–F06 mantienen validaciones y PR separadas. Ninguna decisión aquí autoriza a cerrar fases sin cumplir sus puertas.
 
+## Actualización de gobierno — cierre F01 de diseño (13-10-2026)
+
+La [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) se fusionó. Se completó la revisión documental de P01–P05 y se emitió [acta de cierre F01](ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md), que modifica el **estado de fase** a `CERRADA / DISENO_VALIDADO`. Este añadido no altera las decisiones creativas ni certifica técnicas de Blender, Core o UE5. Las referencias anteriores de este documento a «F01 pendiente» describen el estado **en el momento del acuerdo inicial**, antes de la QA documental.
+
 ## Trazabilidad
 - DEC-0001: Galaxy como referencia para **nueva Clase Valhalla**, evolución exterior B.
 - Acuerdos consecutivos: hangares híbridos C; hangares ambas secciones A; separación regulada C; mando flexible B; platillo impulso sin warp A; autonomía prolongada B; defensa avanzada C; control de sección remota autónomo A; comunicación por informes C; reacoplamiento asistido B; dotación flexible B.

@@ -1,6 +1,6 @@
 # F08 — Vertical slice jugable v0.0.1
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
+**Estado de la fase global:** **PLANIFICADA / PAUSADA**, pendiente de reactivación formal. F01 está cerrada a nivel de diseño, F02 es la fase principal, F03–F06 tienen entregables de referencia fusionados pero no integración Core/Host. No convertir la prueba interna `v0.0.1` en un lanzamiento por cambios del plan. [Acta de reconciliación](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 **Nivel objetivo:** UE5_JUGABLE / ACEPTACION_SUPERADA.
 
 ## Objetivo
@@ -27,7 +27,7 @@ Una guardia completa de Sensores en un puente 3D con órdenes, resultados y cont
 
 ## Dependencias y límites
 
-F02–F07 y runtime Core RPG necesario; no cerrar por documentación únicamente.
+F02–F07 y runtime Core RPG real siguen siendo dependencias. En particular, la [prueba de referencia integrada de Sensores](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021) **no** acredita save/load real ni un puente UE5 jugable. No cerrar por documentación únicamente.
 
 ## Puerta de cierre
 

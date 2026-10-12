@@ -1,5 +1,7 @@
 # F02 — Matriz de sincronización tras auditoría (2026-10-12)
 
+> **Actualización de gobierno 2026-10-13:** todas las PR #2–#7 se han **fusionado**; la cadena F04→F05→F06 ya se ejecutó sin skips en [CI integrada](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021). El texto inferior documenta el **corte histórico previo** y no describe el estado actual. [Acta vigente](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md): F01 cerrada en diseño, F02 activa, F03–F06 en revisión con Core/UE5 pendientes.
+
 **Estado:** plan de coordinación, NO aprobación de APIs nuevas ni `CORE_INTEGRADO`.
 **Estado al auditar (12-10-2026):** las PR #2–#7 estaban en borrador. **Actualización 13-10-2026:** PR #2 (F01) **fusionada**, PR #3 (F02) marcada **Ready for review** y sin conflicto con `main` en la comprobación; PR #4–#7 todavía requieren revisión y tratamiento secuencial.
 
