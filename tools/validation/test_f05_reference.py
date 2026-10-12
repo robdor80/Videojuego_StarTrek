@@ -3,7 +3,24 @@ import json
 import unittest
 from pathlib import Path
 
-from f05_reference import VERDICTS, assess, verify_fixture
+from f05_reference import VERDICTS, assess as assess_raw, verify_fixture
+
+
+def assess(case: dict) -> dict:
+    """Fuente de evidencias explícita para los tests; no es un adaptador confiable."""
+    base = dict(phase="issue", channel="actor", authority_verdict="allow",
+                knowledge_visible=True, appointment_active=True, medical_fit=True,
+                actor_id="test:captain", action_id="bridge_order",
+                station_id="test:bridge", state_revision=3, current_tick=100,
+                duty_active=True, executor_qualified=True, executor_authorized=True,
+                capability_available=True, resources_available=True, temporal_conflict=False)
+    base.update(case)
+    if base.get("channel") == "actor" and base.get("authority_verdict") == "allow":
+        base.setdefault("authorization_binding", dict(
+            source="F04_REFERENCE", decision="ALLOW", actor_id=base["actor_id"],
+            action_id=base["action_id"], station_id=base["station_id"],
+            state_revision=base["state_revision"], issued_tick=90, expires_tick=110))
+    return assess_raw(base)
 
 ROOT = Path(__file__).resolve().parents[2]
 FIXTURE = ROOT / "validation/fixtures/f05/order_initiative_reference_v0.1.json"
@@ -94,6 +111,55 @@ class TestF05Reference(unittest.TestCase):
         self.assertEqual(d["state_mutation_authority"], "core_rules")
         self.assertFalse(d["ai_direct_state_mutation"])
         self.assertIn("completed", d["outcome_states"])
+
+
+    def test_missing_authority_is_never_allowed(self):
+        for item in ({}, {"phase": "issue", "channel": "actor"},
+                     {"phase": "issue", "channel": "actor", "authority_verdict": "allow"}):
+            self.assertNotEqual(assess_raw(item)["verdict"], "ALLOW_REFERENCE")
+
+    def test_binding_actor_station_revision_and_expiry(self):
+        base = dict(phase="execute", channel="actor", authority_verdict="allow",
+                    knowledge_visible=True, appointment_active=True, medical_fit=True,
+                    actor_id="captain:1", action_id="sensor_scan", station_id="sensor:1",
+                    state_revision=7, current_tick=100, duty_active=True,
+                    executor_qualified=True, executor_authorized=True,
+                    capability_available=True, resources_available=True,
+                    temporal_conflict=False)
+        binding = dict(source="F04_REFERENCE", decision="ALLOW", actor_id="captain:1",
+                       action_id="sensor_scan", station_id="sensor:1",
+                       state_revision=7, issued_tick=90, expires_tick=105)
+        self.assertEqual(assess_raw({**base, "authorization_binding": binding})["verdict"],
+                         "ALLOW_REFERENCE")
+        for mutation in ({"actor_id": "captain:other"}, {"station_id": "sensor:2"},
+                         {"state_revision": 8}, {"action_id": "torpedo_fire"}):
+            bad = {**base, **mutation, "authorization_binding": binding}
+            self.assertEqual(assess_raw(bad)["reason"], "authority_binding_invalid")
+        self.assertEqual(assess_raw({**base, "current_tick": 105,
+                                    "authorization_binding": binding})["verdict"],
+                         "REJECT_STALE")
+        self.assertEqual(assess_raw({**base, "authority_verdict": "deny",
+                                    "authorization_binding": binding})["verdict"],
+                         "REFUSE")
+
+    def test_explicit_execution_evidence_required(self):
+        good = dict(phase="execute", channel="actor", authority_verdict="allow",
+                    knowledge_visible=True, appointment_active=True, medical_fit=True,
+                    actor_id="captain:1", action_id="sensor_scan", station_id="sensor:1",
+                    state_revision=7, current_tick=100, duty_active=True,
+                    executor_qualified=True, executor_authorized=True,
+                    capability_available=True, resources_available=True,
+                    temporal_conflict=False,
+                    authorization_binding=dict(source="F04_REFERENCE", decision="ALLOW",
+                        actor_id="captain:1", action_id="sensor_scan",
+                        station_id="sensor:1", state_revision=7, issued_tick=90,
+                        expires_tick=105))
+        for field in ("knowledge_visible", "appointment_active", "medical_fit",
+                      "resources_available", "executor_qualified", "duty_active",
+                      "temporal_conflict"):
+            invalid = good.copy()
+            invalid.pop(field)
+            self.assertNotEqual(assess_raw(invalid)["verdict"], "ALLOW_REFERENCE")
 
 
 if __name__ == "__main__":
