@@ -4,7 +4,7 @@
   "repo": "robdor80/Videojuego_StarTrek",
   "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
   "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
-  "management": "Estado de planificación independiente de madurez/evidencia. CERRADA en un paso significa cierre únicamente al alcance indicado en step_evidence_maturity y note, nunca runtime por inferencia. PR fusionada no equivale a fase cerrada.",
+  "management": "Estado de planificación independiente de madurez/evidencia. CERRADA en un paso significa cierre únicamente al alcance indicado en step_evidence_maturity y note, nunca runtime por inferencia. PR fusionada no equivale a fase cerrada. Los pasos futuros F07-F15 con PLANIFICADA son una normalización del marcador histórico de trabajo aún no auditado, NO una certificación de ausencia de trabajo previo.",
   "current_global_phase": "F02",
   "completed_management_phase": "F01",
   "phase_count": 16,
@@ -204,11 +204,11 @@
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "PLANIFICADA; pipeline/UE5 local existente como prototipos previos no auditados bajo F07. Pausa formal de fase hasta decisión de reactivación; sin tratar capturas o importaciones como escena integrada validada.",
       "file": "fases/F07/README.md"
@@ -220,11 +220,11 @@
       "target_maturity": "ACEPTACION_SUPERADA",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "PLANIFICADA y PAUSADA formalmente para el corte v0.0.1; depende de Core, F06 y puente piloto probado F07. Fixture 2372 es laboratorio, no juego UE5 jugable.",
       "file": "fases/F08/README.md"
@@ -236,11 +236,11 @@
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "Catálogo de 16 familias existente; verificar cada operación.",
       "file": "fases/F09/README.md"
@@ -252,11 +252,11 @@
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "20/20 vida Academia y material web son referencias a reutilizar.",
       "file": "fases/F10/README.md"
@@ -268,11 +268,11 @@
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "Rutas progresivas; Clase Valhalla como objetivo opcional de mando y nueva clase inspirada en Galaxy. Fecha/disponibilidad y ejecución jugable pendientes; no hay capitanía automática.",
       "file": "fases/F11/README.md"
@@ -284,11 +284,11 @@
       "target_maturity": "CORE_INTEGRADO",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "Contratos sociales previos; NPC simulados independientemente de 3D.",
       "file": "fases/F12/README.md"
@@ -300,11 +300,11 @@
       "target_maturity": "CORE_INTEGRADO",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "Capas 001-118 y bloques 1-3 cerrados solo a su nivel, bloque 4 pendiente.",
       "file": "fases/F13/README.md"
@@ -316,11 +316,11 @@
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "Pipeline visual y repos externos; trazabilidad y licencias.",
       "file": "fases/F14/README.md"
@@ -332,11 +332,11 @@
       "target_maturity": "ACEPTACION_SUPERADA",
       "step_count": 5,
       "steps": {
-        "P01": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P02": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P03": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
-        "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
       },
       "note": "QA transversal desde cada fase; F15 es cierre integral.",
       "file": "fases/F15/README.md"
@@ -354,5 +354,12 @@
       7
     ],
     "scope": "Reconciliación documental F01–F06 después de PR; sin certificar Core/UE5 ni modificar gameplay"
+  },
+  "future_step_migration": {
+    "date": "2026-10-13",
+    "affected_phases": "F07-F15",
+    "legacy_status": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+    "new_status": "PLANIFICADA",
+    "meaning": "Estado de planificación válido para pasos futuros todavía no verificados; NO acredita que no existan prototipos/contratos previos. Requiere auditoría específica al reactivar cada fase."
   }
 }
