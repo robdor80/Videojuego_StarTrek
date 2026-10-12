@@ -26,8 +26,10 @@ def assess(case: dict) -> dict:
     if type(case.get("knowledge_visible")) is not bool:
         return _out("REFUSE", "incomplete_knowledge_evidence")
     if case["channel"] == "actor":
-        if case.get("authority_verdict") not in AUTH:
+        if "authority_verdict" not in case:
             return _out("REFUSE", "missing_authority_verdict")
+        if case["authority_verdict"] not in AUTH:
+            return _out("REFUSE", "invalid_payload")
         required = ("appointment_active", "medical_fit")
         if case["phase"] == "execute":
             required += ("duty_active", "executor_qualified", "executor_authorized",
