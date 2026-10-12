@@ -70,6 +70,13 @@ def context(**kw):
         "supported_range_modes": ["short", "long", "focused"],
         "known_contact_ids": [],
         "order_id": "order:42",
+        "state_revision": 7, "current_tick": 100,
+        "authorization_binding": {
+            "source": "F05_REFERENCE", "decision": "ALLOW_REFERENCE",
+            "actor_id": "cadet:1", "action_id": "sensor_scan",
+            "station_id": "station:sensors", "ship_id": "ship:academy",
+            "state_revision": 7, "issued_tick": 90, "expires_tick": 110,
+        },
     }
     c.update(kw)
     return c
@@ -172,12 +179,16 @@ class F06Tests(unittest.TestCase):
 
     def test_13_order_result_event_chain_is_causal_and_non_authoritative(self):
         a = f06.run_reference_scan(WORLD, request(), context())
-        names = [e["event_type"] for e in a["events"]]
-        self.assertEqual(names, ["ORDER_ACKNOWLEDGED", "ACTION_STARTED", "ACTION_EXECUTED",
-                                "RESULT_CREATED", "REPORT_MADE", "ACTION_COMPLETED"])
-        for prev, nxt in zip(a["events"], a["events"][1:]):
+        self.assertEqual(a["events"], [])
+        names = [e["event_type"] for e in a["event_candidates"]]
+        self.assertEqual(names, ["ACTION_STARTED", "RESULT_CREATED"])
+        self.assertTrue(all(e["candidate_only"] and e["requires_core_confirmation"]
+                            for e in a["event_candidates"]))
+        for prev, nxt in zip(a["event_candidates"], a["event_candidates"][1:]):
             self.assertEqual(nxt["causal_refs"], [prev["event_id"]])
-        self.assertEqual(a["events"][-1]["subject_refs"]["result_id"], a["result_id"])
+        self.assertEqual(a["event_candidates"][-1]["subject_refs"]["result_id"], a["result_id"])
+        self.assertEqual(a["report_pending"]["status"], "not_reported")
+        self.assertNotIn("REPORT_MADE", names)
 
     def test_14_dossier_candidate_provenance(self):
         a = f06.run_reference_scan(WORLD, request(), context())
@@ -247,6 +258,57 @@ class F06Tests(unittest.TestCase):
                  "operator_id": "cadet:1", "requested_analysis": "Interpretar",
                  "priority": "forged_priority"}
             )
+
+
+    def test_19_nonfinite_numbers_and_booleans_rejected(self):
+        for bad in [float("nan"), float("inf"), -float("inf"), True]:
+            for r, cx in (
+                (request(scan_duration_s=bad), context()),
+                (request(origin_position_au=[bad, 0, 0]), context()),
+                (request(sensor_profile={"capability": bad, "power": 1, "integrity": 1}), context()),
+                (request(), context(available_power=bad)),
+            ):
+                self.assertEqual(f06.run_reference_scan(WORLD, r, cx)["status"], "blocked")
+
+    def test_20_binding_not_self_certifying_authorization(self):
+        for cx in (
+            context(authorization_binding={}),
+            context(current_tick=110),
+            context(state_revision=8),
+            context(station_id="station:elsewhere"),
+            context(ship_id="ship:other"),
+        ):
+            a = f06.run_reference_scan(WORLD, request(), cx)
+            self.assertEqual(a["status"], "blocked")
+            self.assertEqual(a["reason"], "authorization_binding_invalid_or_stale")
+        self.assertEqual(f06.run_reference_scan(
+            WORLD, request(operator_id="attacker"), context())["status"], "blocked")
+
+    def test_21_legacy_engine_cannot_export_undetected_counts(self):
+        raw = f06.sensor.resolve_scan(WORLD, request(filters=["biological"],
+                                                    priority="biological"))
+        self.assertEqual(raw["summary"], {"contacts_detected": 0})
+        self.assertNotIn("entities_in_scope", json.dumps(raw))
+        self.assertNotIn("signatures_evaluated", json.dumps(raw))
+
+    def test_22_bad_world_rejected_without_partial_events(self):
+        malformed = copy.deepcopy(WORLD)
+        malformed["entities"][0]["signatures"][0]["detectability_modifiers"]["masking"] = float("nan")
+        for world in [malformed, {"entities": None}, {"entities": [None]}, None]:
+            answer = f06.run_reference_scan(world, request(), context())
+            self.assertEqual(answer["status"], "blocked")
+            self.assertEqual(answer["events"], [])
+            self.assertEqual(answer["event_candidates"], [])
+
+    def test_23_scan_does_not_commit_order_or_report(self):
+        outcome = f06.run_reference_scan(WORLD, request(), context())
+        self.assertEqual(outcome["events"], [])
+        self.assertEqual(outcome["effects_applied"], 0)
+        self.assertFalse(outcome["authoritative"])
+        self.assertNotIn("ACTION_COMPLETED",
+                         [x["event_type"] for x in outcome["event_candidates"]])
+        self.assertNotIn("REPORT_MADE",
+                         [x["event_type"] for x in outcome["event_candidates"]])
 
 
 if __name__ == "__main__":
