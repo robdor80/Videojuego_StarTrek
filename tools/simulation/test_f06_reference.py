@@ -230,7 +230,7 @@ class F06Tests(unittest.TestCase):
         self.assertTrue(set(scan["required"]).issubset(request()))
         self.assertTrue(set(result["required"]).issubset(a["result"]))
         self.assertTrue(set(handoff["required"]).issubset(t))
-        self.assertTrue(set(event["required"]).issubset(a["events"][0]))
+        self.assertTrue(set(event["required"]).issubset(a["event_candidates"][0]))
         self.assertEqual(t["included_observation_ids"],
                          [d["observations"][0]["observation_id"]])
 
