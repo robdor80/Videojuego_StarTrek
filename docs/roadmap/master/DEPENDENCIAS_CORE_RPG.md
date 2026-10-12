@@ -1,5 +1,7 @@
 # Dependencias y fronteras con Core RPG (auditoría F00)
 
+> **Verificación posterior 2026-10-13:** [`CoreRPG/main@dcfcb83c`](https://github.com/robdor80/CoreRPG/tree/dcfcb83c9853e005b5450bd39e0ba693cb91e257) sigue siendo el HEAD consultado; la fusión de PR #2–#7 de Star Trek **no añade APIs nuevas a Core**. F02 EN_CURSO (fase principal), F03/F05 EN_REVISION por integración pendiente, F04/F06 con reglas de referencia probadas. La [acta post-merge](ACTA_RECONCILIACION_F00_F06_2026-10-13.md) es la foto de gobierno vigente; esta auditoría F00 no representa una integración Core↔UE5.
+
 **Fecha:** 11-10-2026. Referencia: informe de coordinación `Star_Trek_RPG_Coordinacion_CoreRPG_4_10_Iniciativa_Ordenes_Delegacion.md`, remitido por la conversación de Core RPG, y contratos ya presentes en Star Trek.
 
 ## Autoridad de los subsistemas
