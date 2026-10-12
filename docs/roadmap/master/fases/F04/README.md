@@ -1,37 +1,50 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Auditoría y trabajo F04:** 2026-10-11; **actualización de dependencias:** 2026-10-13. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA PROBADA en CI, solo para reglas de referencia. **F04 global no cerrada**: F01–F03 ya están fusionadas a nivel documental; Core/UE5 y las pruebas de integración siguen pendientes. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
 
 ## Objetivo
 
-Una nave existe con puestos reales, oficiales activos y autoridad dependiente del destino.
+Una nave existe con puestos reales, oficiales activos, guardias causales, autoridad derivada del destino y restricciones que no desaparecen por tener un rango alto.
 
-## Pasos y entregables
+## Entregables F04
 
-- [ ] **F04-P01** — Auditar catálogo de clases/configuración, necesidades de puestos y dotación generada.
-- [ ] **F04-P02** — Conciliar guardias, agendas, bajas, cualificación y exclusividad temporal del personal.
-- [ ] **F04-P03** — Precisar cadena de mando por puesto real, nombramiento, delegación y sustituciones.
-- [ ] **F04-P04** — Integrar autoridad médica/profesional, órdenes superiores, Primera Directriz y límites técnicos.
-- [ ] **F04-P05** — Crear casos de aceptación para jugador alférez, responsable de departamento, oficial de guardia y capitán.
+| Paso | Trabajo | Evidencia de esta rama |
+|---|---|---|
+| F04-P01 | [Auditoría catálogo/clases, plazas y dotación](AUDITORIA_NAVES_DOTACIONES_P01.md) | Fuentes reales identificadas; generación runtime NO_EJECUTADA |
+| F04-P02 | [Turnos, agendas, incompatibilidades, bajas y relevos](GUARDIAS_AGENDAS_P02.md) | Política temporal y ejemplos; arbitraje Core NO_EJECUTADO |
+| F04-P03 | [Cadena de mando contextual y delegación](MANDO_NOMBRAMIENTOS_P03.md) | Matriz de cuatro roles y sucesión; API externa NO_APROBADA |
+| F04-P04 | [Autoridad médica, profesional, Primera Directriz y normas](LIMITES_MEDICOS_NORMATIVOS_P04.md) | Límites y precedencia de ámbito; decisiones en Core NO_EJECUTADAS |
+| F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | 39 escenarios + 16 tests independientes; CI añadida, comprobar workflow |
 
-## Material del repositorio que se aprovecha sin moverlo
+## Reutilización respetada
 
-- `gameplay/chain_of_command/`
-- `gameplay/duty_system/`
-- `gameplay/ship_operations/`
-- `gameplay/characters/`
-- `lore/federation/starfleet/`
-- `docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`
+`gameplay/chain_of_command/`, `gameplay/duty_system/`, `gameplay/ship_operations/`, `gameplay/characters/`, `lore/federation/starfleet/`, `lore/starships/classes/`, `universe/generation/` y `docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`. El plan previo **SB001–SB015 COMPLETE** solo significa cierre de contenido y generadores de referencia; no equivale a juego integrado.
 
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
+## Límites de autoridad e integración
 
-## Dependencias y límites
+- Core RPG: verdad, entidades, agendas, mutaciones y persistencia, si la versión realmente las ofrece.
+- Star Trek: clases, tripulación, puestos, guardias, restricciones de Flota y Primera Directriz.
+- UE5: actores y escenas interactivos, no fuente independiente de World State; IA aconseja sin ejecutar.
+- No mover contratos ni crear un Core paralelo. **DEC-0001 ya está resuelta**: Galaxy/Enterprise-D es la inspiración de la nueva **Clase Valhalla**, no un refit; su año de servicio sigue sin definirse. Este acuerdo creativo no acredita naves runtime ni afecta al puente de prueba de Sensores.
+- **Actualización 2026-10-13:** F01 [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2), F02 [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) y F03 [PR #4](https://github.com/robdor80/Videojuego_StarTrek/pull/4) **están fusionadas en `main`**. Esta rama F04 nació sobre un corte anterior (`main@6069f6aa`), pero no altera el registro global ni presupone integración Core/UE5. La validación transversal con F05/F06 sigue pendiente.
+- `docs/roadmap/master/ESTADO_GLOBAL.json` y plan maestro no se alteran para no falsear el estado principal.
 
-F03 y F02; reglas Star Trek son propias, runtime genérico en Core RPG.
+**Condición para cierre real:** pruebas de matriz autorizativa y turnos integradas con Core versionado, restricciones negativas demostradas, conexión con guardia jugable y trazabilidad de la aceptación. No marcar `CERRADA` con documentación y Python únicamente.
 
-## Puerta de cierre
+[Plan maestro](../../PLAN_MAESTRO.md) · [Criterios comunes](../../CRITERIOS_DE_CIERRE.md) · [Dependencias Core](../../DEPENDENCIAS_CORE_RPG.md)
 
-Matriz autorizativa probada, puestos y guardias sin ocupación simultánea imposible ni permisos por mero rango. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
 
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+## Endurecimiento de auditoría — 2026-10-12
+
+A-02: `issue_reference_binding` emite únicamente un **comprobante de referencia**
+para F05 cuando `evaluate` responde ALLOW y coinciden `actor_id`,
+`action_id`, `station_id`, `state_revision` y ventana temporal.
+La identidad, revisión y tiempo deben proceder de una fuente confiable en la
+integración real. Este diccionario **no es un token firmado ni un permiso Core**;
+ni la UI ni una LLM pueden usarlo para autenticar una acción. La nueva prueba
+negativa comprueba denegación, acción cruzada y caducidad imposible.
+
+CI comprobada en el último código previo a este apunte:
+[Actions 38228139402](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228139402)
+SUCCESS, 39 escenarios de fixture y **17 tests unitarios**. La fase global
+permanece abierta; faltan Core/UE5 y pruebas transversales post-merge.

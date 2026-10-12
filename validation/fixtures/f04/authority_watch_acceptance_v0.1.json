@@ -1,0 +1,820 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "Pure reference cases, not CoreRPG/UE5 execution",
+  "as_of": "2026-10-11",
+  "sources": [
+    "gameplay/ship_operations/crew_requirement_model.json",
+    "gameplay/duty_system/duty_assignment_model.json",
+    "gameplay/duty_system/shipboard_watch_generation_contract_v0.1.json",
+    "lore/federation/starfleet/regulations/medical_authority.json",
+    "lore/federation/starfleet/prime_directive/prime_directive.json",
+    "lore/federation/starfleet/command_structure/succession_rules.json"
+  ],
+  "authority_cases": [
+    {
+      "id": "a01_ensign_sensor_allowed",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "sensor_officer",
+        "action": "sensor_scan",
+        "rank": "ensign",
+        "station": "sensors",
+        "on_duty": true,
+        "assignment_active": true,
+        "qualified": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "SENSOR_OPERATION"
+      }
+    },
+    {
+      "id": "a02_ensign_no_station",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "sensor_scan",
+        "rank": "ensign",
+        "qualified": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "SENSOR_STATION_OR_QUALIFICATION"
+      }
+    },
+    {
+      "id": "a03_ensign_cannot_run_ship",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "rank": "ensign",
+        "staffing_valid": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "COMMAND_APPOINTMENT_REQUIRED"
+      }
+    },
+    {
+      "id": "a04_department_head_valid",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "department_head",
+        "action": "assign_department_watch",
+        "appointment_active": true,
+        "qualified": true,
+        "department": "science",
+        "target_department": "science"
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "DEPARTMENT_SCOPE"
+      }
+    },
+    {
+      "id": "a05_department_head_outside_department",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "department_head",
+        "action": "assign_department_watch",
+        "appointment_active": true,
+        "qualified": true,
+        "department": "science",
+        "target_department": "engineering"
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "OUTSIDE_DEPARTMENT"
+      }
+    },
+    {
+      "id": "a06_bridge_oow_valid",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "officer_of_watch",
+        "action": "bridge_order",
+        "appointment_active": true,
+        "watch_active": true,
+        "command_qualified": true,
+        "within_standing_orders": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "WATCH_SCOPE"
+      }
+    },
+    {
+      "id": "a07_bridge_oow_excess",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "officer_of_watch",
+        "action": "bridge_order",
+        "appointment_active": true,
+        "watch_active": false,
+        "command_qualified": true,
+        "within_standing_orders": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "NOT_IN_BRIDGE_WATCH_AUTHORITY"
+      }
+    },
+    {
+      "id": "a08_captain_changes_watch",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": true,
+        "control_mode": "manual"
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "VALID_WATCH_POLICY"
+      }
+    },
+    {
+      "id": "a09_captain_invalid_staffing",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": false
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "INVALID_WATCH_COVERAGE"
+      }
+    },
+    {
+      "id": "a10_acting_command_valid",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "acting_command": true,
+        "acting_appointment_active": true,
+        "command_qualified": true,
+        "staffing_valid": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "VALID_WATCH_POLICY"
+      }
+    },
+    {
+      "id": "a11_acting_command_unqualified",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "acting_command": true,
+        "acting_appointment_active": true,
+        "command_qualified": false,
+        "staffing_valid": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "COMMAND_APPOINTMENT_REQUIRED"
+      }
+    },
+    {
+      "id": "a12_cmo_relief_documented",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "chief_medical_officer",
+        "action": "relieve_command_medically",
+        "professional_qualified": true,
+        "medical_judgement_documented": true,
+        "target_medically_unfit": true,
+        "appointment_active": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "MEDICAL_RELIEF"
+      }
+    },
+    {
+      "id": "a13_medical_unsubstantiated",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "chief_medical_officer",
+        "action": "relieve_command_medically",
+        "professional_qualified": true,
+        "medical_judgement_documented": false,
+        "target_medically_unfit": true,
+        "appointment_active": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "MEDICAL_AUTHORITY_OR_EVIDENCE"
+      }
+    },
+    {
+      "id": "a14_prime_directive_review",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "first_contact",
+        "appointment_active": true,
+        "contact_authorized": true,
+        "prime_directive_risk": true
+      },
+      "expected": {
+        "decision": "REVIEW",
+        "code": "PRIME_DIRECTIVE_RISK"
+      }
+    },
+    {
+      "id": "a15_contact_no_automatic_warp_permission",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "first_contact",
+        "appointment_active": true,
+        "warp_capable": true,
+        "contact_authorized": false
+      },
+      "expected": {
+        "decision": "REVIEW",
+        "code": "CONTACT_AUTHORIZATION_REQUIRED"
+      }
+    },
+    {
+      "id": "a16_hard_interlock_even_captain",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "non_overrideable",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "HARD_INTERLOCK"
+      }
+    },
+    {
+      "id": "a17_mission_order_conflict",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "first_contact",
+        "appointment_active": true,
+        "contact_authorized": true,
+        "higher_order_conflict": true
+      },
+      "expected": {
+        "decision": "REVIEW",
+        "code": "HIGHER_ORDER_CONFLICT"
+      }
+    },
+    {
+      "id": "a18_captain_proposal_unapproved",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": true,
+        "control_mode": "proposal_requires_approval"
+      },
+      "expected": {
+        "decision": "REVIEW",
+        "code": "PENDING_CAPTAIN_APPROVAL"
+      }
+    },
+    {
+      "id": "a19_captain_proposal_approved",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": true,
+        "control_mode": "proposal_requires_approval",
+        "proposal_approved": true
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "VALID_WATCH_POLICY"
+      }
+    },
+    {
+      "id": "a20_delegate_active",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "staffing_valid": true,
+        "now": 15,
+        "control_mode": "delegated_autonomous",
+        "delegation": {
+          "from_authorized_commander": true,
+          "to_actor": true,
+          "domain": "watch_policy",
+          "status": "active",
+          "starts_at": 10,
+          "ends_at": 20
+        }
+      },
+      "expected": {
+        "decision": "ALLOW",
+        "code": "VALID_WATCH_POLICY"
+      }
+    },
+    {
+      "id": "a21_delegate_expired",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "staffing_valid": true,
+        "now": 20,
+        "control_mode": "delegated_autonomous",
+        "delegation": {
+          "from_authorized_commander": true,
+          "to_actor": true,
+          "domain": "watch_policy",
+          "status": "active",
+          "starts_at": 10,
+          "ends_at": 20
+        }
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "COMMAND_APPOINTMENT_REQUIRED"
+      }
+    },
+    {
+      "id": "a22_delegate_revoked",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "change_watch_policy",
+        "staffing_valid": true,
+        "now": 15,
+        "control_mode": "delegated_autonomous",
+        "delegation": {
+          "from_authorized_commander": true,
+          "to_actor": true,
+          "domain": "watch_policy",
+          "status": "revoked",
+          "starts_at": 10,
+          "ends_at": 20
+        }
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "COMMAND_APPOINTMENT_REQUIRED"
+      }
+    },
+    {
+      "id": "a23_sick_captain_unfit",
+      "context": {
+        "actor_active": true,
+        "actor_fit": false,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "commanding_officer",
+        "action": "change_watch_policy",
+        "appointment_active": true,
+        "staffing_valid": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "UNAVAILABLE_ACTOR"
+      }
+    },
+    {
+      "id": "a24_civilian_no_sensor_qualification",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "civilian",
+        "action": "sensor_scan",
+        "station": "sensors",
+        "on_duty": true,
+        "assignment_active": true,
+        "qualified": false
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "SENSOR_STATION_OR_QUALIFICATION"
+      }
+    },
+    {
+      "id": "a25_technical_unavailable",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": false,
+        "safety_interlock": "none",
+        "position": "cadet",
+        "action": "sensor_scan",
+        "station": "sensors",
+        "on_duty": true,
+        "assignment_active": true,
+        "qualified": true
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "CAPABILITY_UNAVAILABLE"
+      }
+    },
+    {
+      "id": "a26_cmo_without_appointment",
+      "context": {
+        "actor_active": true,
+        "actor_fit": true,
+        "technical_available": true,
+        "safety_interlock": "none",
+        "position": "chief_medical_officer",
+        "action": "relieve_command_medically",
+        "professional_qualified": true,
+        "medical_judgement_documented": true,
+        "target_medically_unfit": true,
+        "appointment_active": false
+      },
+      "expected": {
+        "decision": "DENY",
+        "code": "MEDICAL_AUTHORITY_OR_EVIDENCE"
+      }
+    }
+  ],
+  "roster_cases": [
+    {
+      "id": "r01_filled",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {
+        "a": {
+          "is_duty_crew": true,
+          "aboard": true,
+          "fit": true,
+          "qualifications": [
+            "sensors"
+          ]
+        }
+      },
+      "assignments": [
+        {
+          "slot_id": "s1",
+          "character_id": "a"
+        }
+      ],
+      "expected_errors": []
+    },
+    {
+      "id": "r02_vacancy_visible",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {},
+      "assignments": [],
+      "expected_errors": [
+        "UNCOVERED_CONTINUOUS_SLOT:s1"
+      ]
+    },
+    {
+      "id": "r03_no_spawn",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {},
+      "assignments": [
+        {
+          "slot_id": "s1",
+          "character_id": "generated_unknown"
+        }
+      ],
+      "expected_errors": [
+        "NONEXISTENT_CREW:generated_unknown"
+      ]
+    },
+    {
+      "id": "r04_no_civilians",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {
+        "c": {
+          "is_duty_crew": false,
+          "aboard": true,
+          "fit": true,
+          "qualifications": [
+            "sensors"
+          ]
+        }
+      },
+      "assignments": [
+        {
+          "slot_id": "s1",
+          "character_id": "c"
+        }
+      ],
+      "expected_errors": [
+        "INELIGIBLE_CREW:c"
+      ]
+    },
+    {
+      "id": "r05_no_double_crew",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        },
+        {
+          "slot_id": "s2",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {
+        "a": {
+          "is_duty_crew": true,
+          "aboard": true,
+          "fit": true,
+          "qualifications": [
+            "sensors"
+          ]
+        }
+      },
+      "assignments": [
+        {
+          "slot_id": "s1",
+          "character_id": "a"
+        },
+        {
+          "slot_id": "s2",
+          "character_id": "a"
+        }
+      ],
+      "expected_errors": [
+        "DOUBLE_ASSIGNED_PERSON:a"
+      ]
+    },
+    {
+      "id": "r06_unfit",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": true
+        }
+      ],
+      "people": {
+        "a": {
+          "is_duty_crew": true,
+          "aboard": true,
+          "fit": false,
+          "qualifications": [
+            "sensors"
+          ]
+        }
+      },
+      "assignments": [
+        {
+          "slot_id": "s1",
+          "character_id": "a"
+        }
+      ],
+      "expected_errors": [
+        "INELIGIBLE_CREW:a"
+      ]
+    },
+    {
+      "id": "r07_day_slot_not_required",
+      "slots": [
+        {
+          "slot_id": "s1",
+          "qualification": "sensors",
+          "continuous": false
+        }
+      ],
+      "people": {},
+      "assignments": [],
+      "expected_errors": []
+    }
+  ],
+  "schedule_cases": [
+    {
+      "id": "s01_adjacent",
+      "items": [
+        {
+          "id": "duty",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 12,
+          "kind": "duty"
+        },
+        {
+          "id": "rest",
+          "character_id": "crew-a",
+          "start": 12,
+          "end": 16,
+          "kind": "rest"
+        }
+      ],
+      "expected_errors": []
+    },
+    {
+      "id": "s02_overlap_forbidden",
+      "items": [
+        {
+          "id": "duty",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 12,
+          "kind": "duty"
+        },
+        {
+          "id": "rest",
+          "character_id": "crew-a",
+          "start": 11,
+          "end": 15,
+          "kind": "rest"
+        }
+      ],
+      "expected_errors": [
+        "INCOMPATIBLE_OVERLAP:duty:rest"
+      ]
+    },
+    {
+      "id": "s03_emergency_trace",
+      "items": [
+        {
+          "id": "rest",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 14,
+          "kind": "rest",
+          "preempted_by": "alert",
+          "preemption_event_id": "event-12",
+          "fatigue_debt": 1
+        },
+        {
+          "id": "alert",
+          "character_id": "crew-a",
+          "start": 11,
+          "end": 12,
+          "kind": "emergency"
+        }
+      ],
+      "expected_errors": []
+    },
+    {
+      "id": "s04_untracked_override",
+      "items": [
+        {
+          "id": "rest",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 14,
+          "kind": "rest",
+          "preempted_by": "alert"
+        },
+        {
+          "id": "alert",
+          "character_id": "crew-a",
+          "start": 11,
+          "end": 12,
+          "kind": "emergency"
+        }
+      ],
+      "expected_errors": [
+        "INCOMPATIBLE_OVERLAP:alert:rest"
+      ]
+    },
+    {
+      "id": "s05_other_character",
+      "items": [
+        {
+          "id": "a",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 12,
+          "kind": "duty"
+        },
+        {
+          "id": "b",
+          "character_id": "other",
+          "start": 9,
+          "end": 13,
+          "kind": "duty"
+        }
+      ],
+      "expected_errors": []
+    },
+    {
+      "id": "s06_on_call_not_station",
+      "items": [
+        {
+          "id": "watch",
+          "character_id": "crew-a",
+          "start": 8,
+          "end": 12,
+          "kind": "duty"
+        },
+        {
+          "id": "oncall",
+          "character_id": "crew-a",
+          "start": 9,
+          "end": 10,
+          "kind": "on_call",
+          "exclusive": false
+        }
+      ],
+      "expected_errors": []
+    }
+  ]
+}
