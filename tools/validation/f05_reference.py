@@ -20,6 +20,41 @@ def assess(case: dict) -> dict:
     """Classify a hypothetical command. No input mutation, IO or authoritative effects."""
     if not isinstance(case, dict):
         return _out("REFUSE", "invalid_payload")
+    # Ninguna decisión incompleta puede producir ALLOW_REFERENCE.
+    if case.get("phase") not in PHASES or case.get("channel") not in CHANNELS:
+        return _out("REFUSE", "invalid_payload")
+    if type(case.get("knowledge_visible")) is not bool:
+        return _out("REFUSE", "incomplete_knowledge_evidence")
+    if case["channel"] == "actor":
+        if case.get("authority_verdict") not in AUTH:
+            return _out("REFUSE", "missing_authority_verdict")
+        required = ("appointment_active", "medical_fit")
+        if case["phase"] == "execute":
+            required += ("duty_active", "executor_qualified", "executor_authorized",
+                         "capability_available", "resources_available", "temporal_conflict")
+        if any(type(case.get(key)) is not bool for key in required):
+            return _out("REFUSE", "incomplete_actor_evidence")
+        if any(not isinstance(case.get(key), str) or not case[key].strip()
+               for key in ("actor_id", "action_id", "station_id")):
+            return _out("REFUSE", "missing_actor_action_station")
+        if type(case.get("state_revision")) is not int or case["state_revision"] < 0:
+            return _out("REFUSE", "invalid_state_revision")
+        # Prueba de *consistencia de referencia*, nunca autenticación criptográfica.
+        # Solo Core podrá emitir/verificar autorización realmente vinculante.
+        if case["authority_verdict"] == "allow":
+            b = case.get("authorization_binding")
+            if not isinstance(b, dict) or any(b.get(k) != case.get(v) for k, v in (
+                ("actor_id", "actor_id"), ("action_id", "action_id"),
+                ("station_id", "station_id"), ("state_revision", "state_revision")
+            )):
+                return _out("REFUSE", "authority_binding_invalid")
+            if b.get("source") != "F04_REFERENCE" or b.get("decision") != "ALLOW":
+                return _out("REFUSE", "authority_binding_invalid")
+            if (type(case.get("current_tick")) is not int or
+                type(b.get("issued_tick")) is not int or
+                type(b.get("expires_tick")) is not int or
+                not b["issued_tick"] <= case["current_tick"] < b["expires_tick"]):
+                return _out("REJECT_STALE", "authorization_expired_or_stale")
     if case.get("phase", "issue") not in PHASES or case.get("channel", "actor") not in CHANNELS:
         return _out("REFUSE", "invalid_payload")
     if case.get("authority_verdict", "allow") not in AUTH:
