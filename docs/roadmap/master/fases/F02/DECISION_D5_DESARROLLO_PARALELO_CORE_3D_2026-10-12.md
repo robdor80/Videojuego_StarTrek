@@ -76,3 +76,18 @@ No resuelve automáticamente las otras decisiones de autor D1, D2, D3, ni fusion
 6. No confundir "aparentemente entero" con "jugable": son puertas distintas (inspección de asset, importación, navegación/colisiones, superficies interactivas, rendimiento y test de guardia).
 
 **Sin cambios de autorización:** F07/F08 continúan pausadas formalmente y las PR se revisarán una a una; este addendum no ejecuta ni adelanta esos trabajos.
+
+
+## Identificación del tercer puente candidato — USS Sutherland (actualización 2026-10-12)
+
+**Fuente identificada por captura del autor:**
+[Star Trek: Sutherland Bridge](https://sketchfab.com/3d-models/star-trek-sutherland-bridge-7dcbb60473164f36a0a4f39df11b34c1), Sketchfab, perfil visible **Andrew Perdzock**.
+El modelo representado en Rob3D figura como `star_trek_sutherland_bridge_Validado_....glb`, sin que este documento certifique hash ni identidad bit a bit del fichero exportado.
+
+**Inspección visual comparada:** las capturas de Sketchfab muestran un puente de geometría aparentemente íntegra, con pasillos laterales, consolas simétricas, sillas, plataforma central, barandillas, puertas de turboascensor, pantalla principal y una pared de puestos LCARS. En Rob3D las texturas de pantallas están visibles pero los muros y techos se ven mucho más planos; **investigar iluminación, ambient occlusion, normales y materiales PBR antes de inferir pérdida de geometría**. No confundir captura renderizada con test UE5.
+
+**Proveniencia y licencia:** una fuente secundaria externa atribuye el activo a Andrew Perdzock con **Creative Commons Attribution** (https://www.outerspace-software.com/community/15436/work-in-progress). La página de Sketchfab no pudo verificarse automáticamente: **LICENCIA_ORIGINAL_PENDIENTE_DE_VERIFICAR**. Antes de publicar o redistribuir, obtener copia de la licencia exacta y los créditos; el fanart basado en Star Trek añade derechos de la franquicia que la licencia del artista no sustituye.
+
+**Siguiente puerta de revisión:** auditar GLB/mallas/materiales/orientación/medidas/colisiones y licencia; importar en UE5 con una cápsula de primera persona, caminar de la entrada a una consola lateral y examinar si cabe una interacción de Sensores. Si supera la prueba, puede sustituir al Kelvin como **escenario piloto de v0.0.1**, sin afectar a la futura nave Galaxy ni declarar F07/F08 iniciadas.
+
+**Estado:** IDENTIFICADO_VISUALMENTE · CANDIDATO · NO_VERIFICADO_FUNCIONALMENTE.
