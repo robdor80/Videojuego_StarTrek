@@ -55,3 +55,7 @@ Los cinco pasos **P01–P05** tienen ya entregables documentales inspeccionables
 ## Coordinación y auditoría — 2026-10-12
 
 [Ver matriz de interfaces y bloqueos reales para las PR #2–#7](MATRIZ_SINCRONIZACION_AUDITORIA_2026-10-12.md). Documenta el endurecimiento de referencia F04/F05/F06, el estado efectivo de Core `main` (4.4), sus 4.5/4.6–4.12 pendientes, y las condiciones de la prueba transversal después de fusionar. **No afirma integración Core/UE5 ni modifica el estado global.**
+
+## Decisión D5 — Paralelismo Core RPG / Star Trek 3D (12-10-2026)
+
+[Dirección técnica aprobada y punto de parada obligatorio de Core](DECISION_D5_DESARROLLO_PARALELO_CORE_3D_2026-10-12.md): Core puede avanzar por sus etapas 4.5→4.10 **solo hasta completar la capacidad mínima demostrable de la guardia de Sensores**; Blender/UE5 continúan con assets y pruebas visuales sin duplicar la simulación. Spike Core↔UE5 y comprobación NDK tempranos. F07/F08 siguen formalmente pausadas; PR y Core `main` sin fusión automática.
