@@ -41,7 +41,7 @@ Desde ese punto, priorizar su integración real en la guardia UE5. **No iniciar 
 - Auditar procedencia y derechos de los recursos *antes de distribución*, no afirmar que un asset es reutilizable por poder abrirlo.
 - Conservar originales, versiones/hash; reparar geometría, UV, materiales, colisiones, puertas, escalas y rutas de navegación.
 - Galaxy es la **base propuesta por el autor** en la sesión D1, a la espera de la confirmación/acta creativa; no fijar aún nombre final ni fecha de aparición de nueva clase.
-- Kelvin continúa como **puente técnico de prototipo**; la Galaxy será la base futura cuando sus interiores y accesos estén preparados.
+- **Puentes candidatos para v0.0.1:** Kelvin (ya probado), y un **tercer puente completo descargado** comunicado por el autor el 12-10-2026; el nuevo recurso tiene apariencia completa **pero su funcionalidad aún no está verificada**. No seleccionar puente definitivo sin revisar licencia/procedencia, malla, texturas, tamaño, transitabilidad, colisiones, accesos, consolas e integración UE5. La Galaxy es la base propuesta para la futura clase protagonista, no una dependencia del primer prototipo.
 - Prototipos UE5 pueden usar fixtures simulados únicamente para presentación, nunca como prueba de persistencia, IA, simulación o permisos auténticos.
 - El trabajo de Blender externo no implica reactivar formalmente F07/F08: siguen pausadas hasta revisión de las PR del repo.
 
@@ -60,3 +60,19 @@ Desde ese punto, priorizar su integración real en la guardia UE5. **No iniciar 
 
 Esta decisión **resuelve D5** del cuestionario del 2026-10-12. 
 No resuelve automáticamente las otras decisiones de autor D1, D2, D3, ni fusiona las PR #2–#7. El primer prototipo sigue siendo interno v0.0.1 Sensores; los datos de laboratorio no pasan automáticamente a la campaña.
+
+
+## Addendum operativo — Codex Cloud y puente alternativo (2026-10-12)
+
+**Aclaración del autor:** tras finalizar **NAP 2.0**, dedicará la capacidad de trabajo disponible de Codex a CoreRPG. Codex Cloud permite solicitar cambios desde móvil o fuera del MSI; ya no se requiere presencia física ante el ordenador para el desarrollo y pruebas que admitan infraestructura cloud. No iniciar este cambio de foco antes de que el autor comunique el cierre de NAP 2.0.
+
+**Método de ejecución coordinado:**
+
+1. Una unidad/PR de Core por objetivo verificable; partir del estado real de GitHub, comprobar cambios locales pendientes de Codex para 4.5 antes de reescribirlos.
+2. Codex Cloud crea código, tests, documentación y commits en ramas controladas; CI debe pasar antes de integrar. Al volver al MSI, sincronizar explícitamente ramas/commits, **sin machacar archivos locales de Blender/UE5 ni trabajo sin subir**.
+3. La construcción/enlace real de Core con el proyecto Unreal, la inspección de geometrías 3D y las mediciones del MSI **siguen necesitando pruebas en ese entorno**; una CI verde en cloud no las sustituye.
+4. La dirección técnica compara el avance por **capacidades demostradas**, no por cantidad de commits o fases iniciadas. Detiene el desarrollo de nuevas funciones de Core al alcanzar el umbral C2 y lo comunica expresamente al autor; antes, prioriza defectos, portabilidad y pruebas si una línea se adelanta.
+5. El prototipo **v0.0.1 no depende de terminar el puente Galaxy ni de rehacer Kelvin**: se elegirá el puente ya modelado que supere antes la auditoría de licencia y transitabilidad, haciendo las adaptaciones mínimas para operar la consola de Sensores.
+6. No confundir "aparentemente entero" con "jugable": son puertas distintas (inspección de asset, importación, navegación/colisiones, superficies interactivas, rendimiento y test de guardia).
+
+**Sin cambios de autorización:** F07/F08 continúan pausadas formalmente y las PR se revisarán una a una; este addendum no ejecuta ni adelanta esos trabajos.
