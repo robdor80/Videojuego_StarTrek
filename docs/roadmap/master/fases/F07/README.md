@@ -1,7 +1,7 @@
 # F07 — Pipeline 3D, Rob3D y puente piloto
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** PROTOTIPO_UE5_PROBADO.
+**Estado de la fase global:** **PLANIFICADA / PAUSADA**, tras reconciliar F00–F06 el 13-10-2026. Los ensayos previos de Blender/Rob3D/UE5 realizados fuera del repositorio no constituyen **evidencia F07 cerrada**; pueden inventariarse y recuperarse tras reactivación formal.
+**Nivel objetivo oficial:** `UE5_JUGABLE` para el **puente piloto técnico**, no para la futura nave Valhalla completa.
 
 ## Objetivo
 
@@ -28,7 +28,7 @@ Cadena reproducible de importación/modelado y una escena interactiva usable en 
 
 ## Dependencias y límites
 
-F01 para canon de nave final; F06 para operativa; pipeline puede prototiparse antes de integración Core.
+**F01 ya cerrada a nivel de visión/canon; F06 dispone de referencia probada**, no Core integrado. La selección de puente piloto `DEC-0003` y la viabilidad/licencias siguen pendientes; el pipeline puede preparar activos independientemente, pero F07/F08 continúan pausadas formalmente. [Acta de reconciliación](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md).
 
 ## Puerta de cierre
 
