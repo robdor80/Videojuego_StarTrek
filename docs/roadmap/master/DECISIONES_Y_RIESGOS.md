@@ -1,18 +1,21 @@
-# Registro de decisiones y riesgos — 11-10-2026
+# Registro de decisiones y riesgos — base 11-10-2026; actualizado 13-10-2026
 
 ## Decisiones de autor y de arquitectura (no tomar por la IA sin permiso)
 
 | ID | Estado | Decisión / frontera | Etapa | Observación |
 |---|---|---|---|---|
-| DEC-0001 | **NECESITA_AUTOR** | Elegir la Dama base entre Galaxy, Sovereign y Odyssey para el diseño de Clase Imperator | F01-P03 | Ninguna seleccionada a la fecha; las otras dos podrán ser naves NPC mientras no tengan interiores |
-| DEC-0002 | **NECESITA_AUTOR** | Cerrar alcance exacto de la primera experiencia UE5 y MVP | F01-P04 | F08 propone una guardia de Sensores, sin imponer toda la Academia como requisito del primer build |
+| DEC-0001 | **APROBADA 2026-10-13** | Galaxy/Enterprise-D como base artística para la **nueva Clase Valhalla**; deja de usarse «Imperator» como nombre vigente | F01-P03 | Clase propia, evolución exterior reconocible; **fecha de servicio pendiente**. Acta: `fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md` |
+| DEC-0002 | **APROBADA 2026-10-11** | v0.0.1 = prototipo interno exclusivamente de guardia de Sensores, antes del lanzamiento; prototipos sucesivos pueden ensayar Academia | F01-P04 | Política en `docs/decisions/prototype_validation_and_release_policy.md`; números FPS/VRAM pendientes de medición F07/F08, y los ensayos no son partes obligatorias del juego final |
 | DEC-0003 | **PENDIENTE_TECNICA** | Escoger puente piloto 3D según viabilidad y licencias | F07-P03 | No equivale a elegir Dama final; criterios de prototipo |
 | DEC-0004 | **FIJADA_PREVIAMENTE** | RPG Star Trek en 3D para PC y NPC persistentes fuera de escena | F01-P01 / F12 | No reabrir sin solicitud expresa |
-| DEC-0005 | **FIJADA_PREVIAMENTE** | Carrera profesional opcional, sin capitanía automática de alférez ni final obligatorio Imperator | F11 | Respetar rutas científica, táctica/operativa y exploración/mando; detalles en fase |
+| DEC-0005 | **FIJADA_PREVIAMENTE** | Carrera profesional opcional, sin capitanía automática de alférez ni final obligatorio Valhalla | F11 | «Imperator» es nombre histórico de trabajo. Rutas científica, táctica/operativa y exploración/mando |
 | DEC-0006 | **FIJADA_PREVIAMENTE** | Tres épocas jugables definidas en repositorio | F01-P02 | Revisar decisiones ya escritas, no extender con épocas nuevas por iniciativa propia |
 | DEC-0007 | **FIJADA_PREVIAMENTE** | Star Trek canon/rules ≠ Core RPG genérico ≠ UE5 presentación; IA remota no autoritativa | F02–F05 | No mover reglas Star Trek al Core |
 | DEC-0008 | **POR_VERIFICAR_EXTERNO** | Adaptadores reales, versiones y responsabilidades concretas Core/UE5 | F02 | Necesita lectura del estado externo; no fijar API hipotética |
 | DEC-0009 | **POR_VERIFICAR_EXTERNO** | Licencias y reutilización de mallas de terceros / pipeline Rob3D–UE5 | F07 | Sin incorporar originales a ciegas |
+| DEC-0010 | **APROBADA 2026-10-13** | Valhalla: separación de platillo regulada, dos secciones autónomas con hangares híbridos, defensa avanzada, mando NPC independiente y reacoplamiento asistido | F01; F04–F07/F11 | Detalles en acta Valhalla; sistemas sin implementar todavía |
+| DEC-0011 | **APROBADA 2026-10-13** | Libertad de continuidad propia: permitir cambios explícitos de cronología/eventos del canon de TV sin añadir época jugable nueva automáticamente | F01-P02 / F11 | Fecha de servicio Valhalla **no fijada**; registrar GAME_ADDITION y reglas de disponibilidad por campaña |
+| DEC-0012 | **APROBADA 2026-10-13** | Valhalla incluirá blindaje ablativo desplegable y torpedos transfásicos inspirados en Endgame | F01/F07/F09/F14 | Viabilidad geométrica, visual, balance, reglas y runtime pendientes |
 
 ## Riesgos y mitigación
 
@@ -34,4 +37,8 @@
 
 Cada nueva decisión: `DEC-XXXX` con fecha, alternativas, fundamento, autor/aprobación y archivos afectados. Cada riesgo: actualizar evaluación, plan de mitigación y evidencia de cierre. Los acuerdos ya canonizados **no** se convierten en pendientes por el mero hecho de crear un plan nuevo.
 
-F00 no intenta resolver DEC-0001/0002. El usuario autorizó organización y auditoría; **la selección de clase protagonista y el contenido creativo se decidirán en F01**.
+F00 no resolvió DEC-0001/0002. El autor aprobó **DEC-0002** (prueba interna Sensores) el 11-10-2026 y **DEC-0001** (Galaxy como referencia de la nueva Clase Valhalla) el 12–13-10-2026. La fecha de servicio sigue sin fijar. El expediente original conserva «Imperator» solo en su nombre de archivo histórico.
+
+## Seguimiento F01 (11-10-2026)
+
+F01-P01 y F01-P02 documentados/auditados; P04 aprobada documentalmente con DEC-0002. **P03 ya no está bloqueada por el autor**, pero necesita QA documental y cierre formal con PR. Odyssey sigue fuera del catálogo vigente hasta decisión explícita. Las tecnologías o naves nuevas se registrarán como GAME_ADDITION en la cronología propia; la autorización conceptual no implica disponibilidad en 2372 ni para Pike/Kirk. Expedientes en `docs/roadmap/master/fases/F01/`. **F01 permanece EN_CURSO; PR #2 sin fusionar**.

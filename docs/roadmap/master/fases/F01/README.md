@@ -1,36 +1,35 @@
 # F01 — Visión del producto y canon
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Estado global:** EN_CURSO (pendiente de revisión y cierre formal de fase). **Revisión:** 2026-10-13. **Madurez actual:** `DISENO_VALIDADO` en P01/P02/P04; P03 decisión creativa resuelta y en revisión; P05 traza ampliada, pendiente QA/cierre de PR.
 
 ## Objetivo
 
-Producto 3D para PC y criterios autorales estables; impedir decisiones improvisadas de alcance.
+Consolidar la visión del videojuego 3D para PC, verificar épocas/canon y cerrar el primer corte de alcance, **sin trasladar contratos originales ni inventar decisiones creativas**. F00 está cerrada por PR #1, commit `0f989948`.
 
-## Pasos y entregables
+## Pasos y evidencias
 
-- [ ] **F01-P01** — Confirmar visión del RPG 3D para MSI, progresión no obligatoria y autonomía del universo.
-- [ ] **F01-P02** — Auditar épocas y límites temporales existentes, sin reabrir el canon silenciosamente.
-- [ ] **F01-P03** — Resolver la selección de nave protagonista entre Galaxy/Sovereign/Odyssey y el diseño derivado de Imperator mediante decisión expresa.
-- [ ] **F01-P04** — Fijar alcance MVP, experiencia de juego inicial y presupuestos técnicos verificables.
-- [ ] **F01-P05** — Cerrar catálogo de decisiones adoptadas y no adoptadas, con sus fuentes.
+- [x] **F01-P01 — Visión 3D MSI, carrera libre, universo autónomo.** [Visión de producto](../../../../vision/VISION_PRODUCTO_RPG_3D_v0.1.md). Se reconcilian los acuerdos existentes y se declaran exclusiones; decisión original mantenida.
+- [x] **F01-P02 — Auditoría de épocas y canon.** [Auditoría de canon](AUDITORIA_EPOCAS_Y_CANON.md). Confirmadas tres épocas; continuidad emergente; extension Sovereign explícita y precaución Odyssey.
+- [ ] **F01-P03 — Nueva Clase Valhalla.** [Análisis de Damas y elección](ANALISIS_DAMAS_IMPERATOR.md) + [acta autoral](ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). `DEC-0001 APROBADA`: **Galaxy** como referencia; **Valhalla** clase nueva, rediseño exterior reconocible. Decisión documentada; paso pendiente de QA y formalización de cierre, no de autor.
+- [x] **F01-P04 — Primer corte técnico y presupuesto medible.** [Contrato aprobado de prototipo de Sensores](PROPUESTA_MVP_Y_PRESUPUESTO.md) y [política de prototipos internos](../../../../decisions/prototype_validation_and_release_policy.md). `DEC-0002 APROBADA`: v0.0.1 interna, solo guardia de Sensores; criterios funcionales fijados; métricas de rendimiento cuantitativas se instrumentarán y validarán en F07/F08, sin inventarlas.
+- [ ] **F01-P05 — Catálogo de decisiones y fuentes.** [Registro de decisiones](REGISTRO_DECISIONES_Y_TRAZABILIDAD.md). `DEC-0001/0002` registradas y acta Valhalla disponible; validar consistencia documental y la PR antes del cierre.
 
-## Material del repositorio que se aprovecha sin moverlo
+## Reutilización exacta
 
-- `docs/decisions/`
-- `sources/canon_policy.md`
-- `CONTENT_STATUS.md`
-- `lore/starships/`
-- `docs/roadmap/game_design_readiness_v0_2.md`
+- `docs/decisions/`, `sources/canon_policy.md`, `sources/provenance_policy.md` — fuentes y decisiones existentes.
+- `CONTENT_STATUS.md` — editorial sin modificaciones de estado.
+- `lore/starships/classes/core_starship_classes.json` y `core_catalog.md` — clases ya aprobadas para fecha.
+- `docs/roadmap/game_design_readiness_v0_2.md` — objetivos y fronteras.
+- `docs/roadmap/ship_console_vertical_slice_v0_0_1.md` — primer bucle jugable orientativo.
+- `gameplay/careers/academy_path/` y `gameplay/careers/starfleet_service/` — formación/carrera, sin duplicación.
+- `assets/ships/starfleet/galaxy_class/enterprise_d/` — referencia de arte, no prueba de puente 3D jugable.
 
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
+## Pruebas y límites del avance
 
-## Dependencias y límites
+**HECHO:** revisión documental de los archivos enlazados, reconciliación de criterios, inventario de decisiones; los cinco entregables son inspeccionables en rama/PR.
 
-F00; decisiones de autor pendientes para elección de Dama y objetivos de experiencia.
+**NO_EJECUTADO:** pruebas de Core RPG, compilación o sesión UE5, pruebas de rendimiento en MSI o licencia/importación de mallas. Es trabajo de visión, no runtime.
 
-## Puerta de cierre
+**Decisión creativa resuelta:** `DEC-0001` = **Galaxy → nueva Clase Valhalla**, y `DEC-0002` = prototipo interno Sensores. `DEC-0003` (puente piloto/licencias) se decidirá técnicamente en F07, sin imponer que sea de la Valhalla. **Pendiente real:** QA de documentos/estado y validaciones de gobierno necesarias para el cierre formal de F01; la fusión de la PR #2 es un paso independiente y no acredita runtime. No declarar F01 cerrada hasta registrar su cierre. La fecha de entrada en servicio de Valhalla se mantiene abierta expresamente.
 
-Documento de visión aprobada con límites de alcance, fechas/épocas y decisiones trazables. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
-
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+Consúltese [PLAN_MAESTRO](../../PLAN_MAESTRO.md), [DECISIONES_Y_RIESGOS](../../DECISIONES_Y_RIESGOS.md), [CRITERIOS_DE_CIERRE](../../CRITERIOS_DE_CIERRE.md) y [ESTADO_GLOBAL.json](../../ESTADO_GLOBAL.json).
