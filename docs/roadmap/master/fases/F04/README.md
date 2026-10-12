@@ -32,3 +32,19 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 **Condición para cierre real:** pruebas de matriz autorizativa y turnos integradas con Core versionado, restricciones negativas demostradas, conexión con guardia jugable y trazabilidad de la aceptación. No marcar `CERRADA` con documentación y Python únicamente.
 
 [Plan maestro](../../PLAN_MAESTRO.md) · [Criterios comunes](../../CRITERIOS_DE_CIERRE.md) · [Dependencias Core](../../DEPENDENCIAS_CORE_RPG.md)
+
+
+## Endurecimiento de auditoría — 2026-10-12
+
+A-02: `issue_reference_binding` emite únicamente un **comprobante de referencia**
+para F05 cuando `evaluate` responde ALLOW y coinciden `actor_id`,
+`action_id`, `station_id`, `state_revision` y ventana temporal.
+La identidad, revisión y tiempo deben proceder de una fuente confiable en la
+integración real. Este diccionario **no es un token firmado ni un permiso Core**;
+ni la UI ni una LLM pueden usarlo para autenticar una acción. La nueva prueba
+negativa comprueba denegación, acción cruzada y caducidad imposible.
+
+CI comprobada en el último código previo a este apunte:
+[Actions 38228139402](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228139402)
+SUCCESS, 39 escenarios de fixture y **17 tests unitarios**. La fase global
+permanece abierta; faltan Core/UE5 y pruebas transversales post-merge.
