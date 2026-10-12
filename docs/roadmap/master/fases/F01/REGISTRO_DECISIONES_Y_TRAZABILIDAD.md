@@ -1,6 +1,6 @@
 # F01-P05 — Matriz de decisiones, procedencia y alcance
 
-**Fecha base:** 2026-10-11 · **Actualización:** 2026-10-13 · **Estado:** EN_REVISION — DEC-0001 y DEC-0002 aprobadas; pendiente QA de expediente y cierre formal por PR.
+**Fecha base:** 2026-10-11 · **Cierre de gobierno:** 2026-10-13 · **Estado:** CERRADA en diseño F01-P05; DEC-0001/0002 aprobadas y QA de expediente verificada. [Acta de cierre](ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md).
 
 ## Aprobadas previamente (sin reinterpretación)
 
