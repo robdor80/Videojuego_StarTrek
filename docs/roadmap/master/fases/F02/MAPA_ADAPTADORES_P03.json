@@ -1,0 +1,366 @@
+{
+  "schema_version": "f02-p03-adapter-inventory-1.0",
+  "date": "2026-10-11",
+  "status": "DESIGN_ONLY_EXTERNAL_CONTRACT_UNVALIDATED",
+  "core_main_sha": "dcfcb83c9853e005b5450bd39e0ba693cb91e257",
+  "core_feature_4_5_sha": "2a3da891d8c56e9868c7bd67dbeb6041509df2ce",
+  "star_trek_main_baseline": "164be98ab02d81ac9580160e555e75a10e6d489f",
+  "purpose": "Matriz de trazabilidad, NO una ABI/API, esquema de mensajes ni implementación",
+  "invariants": [
+    "core_authoritative_single_world",
+    "actor_lifetime_independent_of_entity",
+    "content_definition_not_live_entity",
+    "world_truth_precedes_observation",
+    "ui_ai_only_observer_authorized_projection",
+    "no_direct_ia_mutation",
+    "timestamp_exact_campaign_authoritative",
+    "save_load_preserves_identity_and_causality",
+    "console_functionality_with_no_remote_ia",
+    "captain_authority_does_not_override_valid_hard_constraints"
+  ],
+  "adapters": [
+    {
+      "id": "ADP-01",
+      "domain": "identidad_y_ciclo_vida",
+      "ownership": "CoreRPG identifica objetos vivos; Star Trek conserva semántica; Host sólo asocia representación",
+      "verified_source_refs": [
+        "universe/generation/persistent_entity_identity_contract.json",
+        "gameplay/ship_operations/starship_state_model.json"
+      ],
+      "verified_core_main_capability_or_reference": [
+        "EntityId, WorldState.create_entity/contains/revision (Core main)"
+      ],
+      "required_future_core_capabilities": [
+        "DefinitionId→EntityId, alias Trek, vida/instancia rica, identidad tras save"
+      ],
+      "core_roadmap_windows": [
+        "4.5",
+        "4.7"
+      ],
+      "gap_refs": [
+        "P03-G01",
+        "P03-G04",
+        "P03-G09"
+      ],
+      "acceptance_test_refs": [
+        "F02-T01",
+        "F02-T05"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-02",
+      "domain": "contenido_y_definiciones",
+      "ownership": "Star Trek define propiedades; Core valida catálogo declarativo; Host resuelve assets",
+      "verified_source_refs": [
+        "gameplay/ship_operations/class_definition_contract.json",
+        "gameplay/ship_operations/individual_ship_definition_contract.json"
+      ],
+      "verified_core_main_capability_or_reference": [
+        "ContentCatalog y Content Contract JSON 0.1.0 sin payload Trek"
+      ],
+      "required_future_core_capabilities": [
+        "propiedades de dominio, instanciación validada, versionado payload"
+      ],
+      "core_roadmap_windows": [
+        "4.5",
+        "4.6"
+      ],
+      "gap_refs": [
+        "P03-G03",
+        "P03-G01"
+      ],
+      "acceptance_test_refs": [
+        "F02-T02"
+      ],
+      "first_internal_sensors_slice": "CAN_USE_FIXTURE_FOR_FIRST_SPIKE",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-03",
+      "domain": "tiempo_y_agenda",
+      "ownership": "Core tiempo vivo futuro; Star Trek turnos/fecha estelar; Host muestra",
+      "verified_source_refs": [
+        "gameplay/characters/activity_schedule_model.json",
+        "gameplay/duty_system/duty_watch_state.json",
+        "docs/decisions/universal_stardate_system.md"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "tiempo autoritativo, simultaneidad, turnos offscreen"
+      ],
+      "core_roadmap_windows": [
+        "4.8",
+        "4.10"
+      ],
+      "gap_refs": [
+        "P03-G02",
+        "P03-G04"
+      ],
+      "acceptance_test_refs": [
+        "F02-T05"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-04",
+      "domain": "ordenes_y_autorizacion",
+      "ownership": "Star Trek cadena de mando; Core acepta/rechaza mutación tras validar",
+      "verified_source_refs": [
+        "gameplay/orders/starship_order_contract.json",
+        "gameplay/chain_of_command/command_decision_delegation_state_v0.1.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "acción estructurada, autoridad contextual, revisiones y compromiso duradero"
+      ],
+      "core_roadmap_windows": [
+        "4.6",
+        "4.10"
+      ],
+      "gap_refs": [
+        "P03-G05",
+        "P03-G11"
+      ],
+      "acceptance_test_refs": [
+        "F02-T03",
+        "F02-T07"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-05",
+      "domain": "sensores_y_observaciones",
+      "ownership": "Star Trek detección; Core futuro estado autoritativo/validación",
+      "verified_source_refs": [
+        "gameplay/ship_operations/sensor_resolution/sensor_scan_request_contract.json",
+        "gameplay/ship_operations/sensor_resolution/sensor_result_contract.json"
+      ],
+      "verified_core_main_capability_or_reference": [
+        "simulador de referencia externo a Core; NO API Core"
+      ],
+      "required_future_core_capabilities": [
+        "resolver sobre mundo materializado y estado de sensores, observación persistente"
+      ],
+      "core_roadmap_windows": [
+        "4.9",
+        "4.10"
+      ],
+      "gap_refs": [
+        "P03-G06",
+        "P03-G08"
+      ],
+      "acceptance_test_refs": [
+        "F02-T04"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-06",
+      "domain": "eventos_y_causalidad",
+      "ownership": "Core futuro conserva hechos; Star Trek catálogo y alcance del evento",
+      "verified_source_refs": [
+        "gameplay/ship_operations/operational_event_log/operational_event_contract.json",
+        "gameplay/ship_operations/operational_event_log/visibility_projection_rules.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "append-only causal, resultado validado y consulta segura"
+      ],
+      "core_roadmap_windows": [
+        "4.7",
+        "4.10"
+      ],
+      "gap_refs": [
+        "P03-G06",
+        "P03-G07"
+      ],
+      "acceptance_test_refs": [
+        "F02-T05"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-07",
+      "domain": "conocimiento_por_observador",
+      "ownership": "Core futuro aplica límites; Star Trek define canales y umbrales",
+      "verified_source_refs": [
+        "gameplay/ship_operations/ship_memory/contact_dossier_model.json",
+        "gameplay/ship_operations/sensor_resolution/sensor_result_contract.json",
+        "gameplay/ship_operations/operational_event_log/visibility_projection_rules.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "proyección confiable sin fuga de ground_truth"
+      ],
+      "core_roadmap_windows": [
+        "4.9"
+      ],
+      "gap_refs": [
+        "P03-G06",
+        "P03-G08"
+      ],
+      "acceptance_test_refs": [
+        "F02-T04"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-08",
+      "domain": "persistencia_y_roundtrip",
+      "ownership": "Core futuro carga/guarda; Star Trek preserva historia, semilla, identidad",
+      "verified_source_refs": [
+        "gameplay/persistence/persistent_state_roundtrip_contract.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "save game versionado y restauración atómica"
+      ],
+      "core_roadmap_windows": [
+        "4.7"
+      ],
+      "gap_refs": [
+        "P03-G01",
+        "P03-G07",
+        "P03-G08"
+      ],
+      "acceptance_test_refs": [
+        "F02-T05"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-09",
+      "domain": "host_ue5_actor_bindings",
+      "ownership": "Host Windows UE5 controla actores y UI, nunca segunda verdad",
+      "verified_source_refs": [
+        "docs/roadmap/ship_console_vertical_slice_v0_0_1.md"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "toolchain+ABI/lifetime, binding EntityId temporal, thread ownership"
+      ],
+      "core_roadmap_windows": [
+        "4.14"
+      ],
+      "gap_refs": [
+        "P03-G04",
+        "P03-G09"
+      ],
+      "acceptance_test_refs": [
+        "F02-T01",
+        "F02-T08"
+      ],
+      "first_internal_sensors_slice": "MUST",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-10",
+      "domain": "intencion_ia",
+      "ownership": "Host red/proveedor; salida IA siempre no confiable; Core validador futuro",
+      "verified_source_refs": [
+        "ai/runtime_orchestration.md",
+        "gameplay/ship_operations/ship_computer/computer_request_contract.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "contexto autorizado, ejecución revalidada"
+      ],
+      "core_roadmap_windows": [
+        "4.10",
+        "4.12"
+      ],
+      "gap_refs": [
+        "P03-G06",
+        "P03-G11"
+      ],
+      "acceptance_test_refs": [
+        "F02-T06",
+        "F02-T07"
+      ],
+      "first_internal_sensors_slice": "OPTIONAL",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "ADP-11",
+      "domain": "transferencia_interconsolas",
+      "ownership": "Star Trek genera paquete con procedencia/permiso, Core conserva hechos",
+      "verified_source_refs": [
+        "gameplay/ship_operations/interconsole/interconsole_data_package_contract.json"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "intercambio de conocimiento sin filtraciones"
+      ],
+      "core_roadmap_windows": [
+        "4.9",
+        "4.10"
+      ],
+      "gap_refs": [
+        "P03-G06",
+        "P03-G08"
+      ],
+      "acceptance_test_refs": [
+        "F02-T04"
+      ],
+      "first_internal_sensors_slice": "OPTIONAL",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    },
+    {
+      "id": "EXT-01",
+      "domain": "academia_nap_companion",
+      "ownership": "Web y assets fuera del mundo autoritativo; Companion futura opcional",
+      "verified_source_refs": [
+        "docs/roadmap/ship_console_vertical_slice_v0_0_1.md"
+      ],
+      "verified_core_main_capability_or_reference": [],
+      "required_future_core_capabilities": [
+        "no hay adaptador runtime obligatorio de v0.0.1"
+      ],
+      "core_roadmap_windows": [],
+      "gap_refs": [
+        "P03-G10"
+      ],
+      "acceptance_test_refs": [],
+      "first_internal_sensors_slice": "OUT_OF_SCOPE_FIRST_SLICE",
+      "implementation_status": "DESIGN_ONLY_NOT_CORE_VALIDATED",
+      "prohibited": "no second WorldState; no direct AI/UI mutation; no API names inferred"
+    }
+  ],
+  "verification": {
+    "adapter_count": 12,
+    "mandatory_first_slice": 8,
+    "gaps_covered": [
+      "P03-G01",
+      "P03-G02",
+      "P03-G03",
+      "P03-G04",
+      "P03-G05",
+      "P03-G06",
+      "P03-G07",
+      "P03-G08",
+      "P03-G09",
+      "P03-G10",
+      "P03-G11"
+    ],
+    "backend_runtime_tests_executed": 0
+  }
+}
