@@ -10,6 +10,7 @@ import copy
 import hashlib
 import importlib.util
 import json
+import math
 from pathlib import Path
 from typing import Any
 
@@ -26,6 +27,27 @@ SIGNATURE_TYPES = {
     "artificial_transponder",
 }
 RANGE_COST = {"short": 0.12, "long": 0.28, "focused": 0.35}
+
+
+def finite_number(value: Any) -> bool:
+    return type(value) in (int, float) and math.isfinite(value)
+
+
+def authorization_binding_valid(request: dict[str, Any], context: dict[str, Any]) -> bool:
+    """Correlación de referencia; jamás acredita autorización Core/Host real."""
+    b = context.get("authorization_binding")
+    if not isinstance(b, dict):
+        return False
+    expected = {
+        "source": "F05_REFERENCE", "decision": "ALLOW_REFERENCE",
+        "actor_id": request.get("operator_id"), "action_id": "sensor_scan",
+        "station_id": context.get("station_id"), "ship_id": context.get("ship_id"),
+        "state_revision": context.get("state_revision"),
+    }
+    if any(b.get(k) != v for k, v in expected.items()):
+        return False
+    now, start, end = context.get("current_tick"), b.get("issued_tick"), b.get("expires_tick")
+    return all(type(x) is int for x in (now, start, end, context.get("state_revision"))) and start <= now < end
 
 
 def stable_id(prefix: str, *parts: str) -> str:
@@ -52,6 +74,8 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
         return "authorization_not_proven"
     if not context.get("authorization_ref") or not context.get("station_id"):
         return "authorization_or_station_missing"
+    if not authorization_binding_valid(request, context):
+        return "authorization_binding_invalid_or_stale"
     if context.get("occupied_station") is not True:
         return "station_not_occupied"
     if not request.get("scan_id") or not request.get("observer_id") or not request.get("operator_id"):
@@ -75,18 +99,26 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
     ):
         return "invalid_priority"
     try:
-        duration = float(request["scan_duration_s"])
+        duration = request["scan_duration_s"]
         profile = request["sensor_profile"]
         coords = request["origin_position_au"]
-        if len(coords) != 3 or any(not isinstance(x, (float, int)) for x in coords):
+        if not isinstance(coords, (list, tuple)) or len(coords) != 3:
             return "invalid_origin"
-        if not (0 < duration <= 7200):
+        if not all(finite_number(x) for x in coords):
+            return "invalid_origin"
+        if not finite_number(duration) or not 0 < duration <= 7200:
             return "invalid_duration"
-        if any(not (0 <= float(profile[k]) <= 1) for k in ("capability", "power", "integrity")):
+        if not isinstance(profile, dict) or not all(
+            k in profile and finite_number(profile[k]) and 0 <= profile[k] <= 1
+            for k in ("capability", "power", "integrity")
+        ):
             return "invalid_sensor_profile"
-        if float(context.get("available_power", 0)) < RANGE_COST[request["range_mode"]]:
+        power = context.get("available_power")
+        if not finite_number(power) or not 0 <= power <= 1:
+            return "invalid_available_power"
+        if power < RANGE_COST[request["range_mode"]]:
             return "insufficient_power"
-        if any(float(profile[k]) == 0 for k in ("capability", "power", "integrity")):
+        if any(profile[k] == 0 for k in ("capability", "power", "integrity")):
             return "sensors_unavailable"
     except (KeyError, TypeError, ValueError, OverflowError):
         return "invalid_numeric_parameters"
@@ -166,10 +198,19 @@ def run_reference_scan(world: dict[str, Any], request: dict[str, Any],
     reason = validate_request(request, context)
     if reason:
         return blocked(reason, request.get("scan_id"))
-    if not isinstance(world.get("entities"), list):
+    if not isinstance(world, dict) or not isinstance(world.get("entities"), list):
         return blocked("world_not_materialized", request["scan_id"])
-
-    result = sensor.resolve_scan(world, request)
+    # Contrato de entrada: no permitir magnitudes no finitas ni objetos rotos
+    # antes de invocar un motor de referencia que presupone entradas fiables.
+    try:
+        json.dumps(world, allow_nan=False)
+        if any(not isinstance(entity, dict) or not isinstance(entity.get("entity_id"), str)
+               or not entity["entity_id"] or not isinstance(entity.get("signatures", []), list)
+               for entity in world["entities"]):
+            return blocked("invalid_world", request["scan_id"])
+        result = sensor.resolve_scan(world, request)
+    except (ValueError, TypeError, KeyError, AttributeError, IndexError, OverflowError):
+        return blocked("invalid_world", request["scan_id"])
     partial_request = copy.deepcopy(request)
     partial_request["scan_duration_s"] = max(1.0, float(request["scan_duration_s"]) / 3)
     partial = sensor.resolve_scan(world, partial_request)
