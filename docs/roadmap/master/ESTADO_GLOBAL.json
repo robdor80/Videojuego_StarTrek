@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "date": "2026-10-11",
+  "date": "2026-10-13",
   "repo": "robdor80/Videojuego_StarTrek",
   "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
   "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
@@ -35,11 +35,11 @@
       "steps": {
         "P01": "CERRADA",
         "P02": "CERRADA",
-        "P03": "BLOQUEADA",
+        "P03": "EN_REVISION",
         "P04": "CERRADA",
         "P05": "EN_REVISION"
       },
-      "note": "F01-P01/P02 documentadas y auditadas; P04 cerrada en alcance de diseño: DEC-0002 aprobada, v0.0.1 prototipo interno de Sensores, benchmarks cuantitativos diferidos a F07/F08. P03 espera elección expresa DEC-0001: Sovereign E provisional, NO aprobada; P05 matriz preparada y pendiente de acta final. No cerrar fase ni fusionar PR hasta decisión de Dama.",
+      "note": "DEC-0001 APROBADA: Galaxy/Enterprise-D es la referencia de la nueva Clase Valhalla (no refit). P03 ya no bloqueada por el autor, pendiente QA y cierre documental; P05 EN_REVISION con acta creativa del 13-10-2026. DEC-0002 v0.0.1 interna de Sensores aprobada. La fecha de servicio Valhalla sigue sin fijar. F01 continúa EN_CURSO y PR #2 SIN FUSIONAR; Core/UE5 y otras PR requieren validaciones específicas.",
       "file": "fases/F01/README.md"
     },
     {
@@ -199,7 +199,7 @@
         "P04": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
         "P05": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR"
       },
-      "note": "Rutas progresivas; Imperator opcional; no hay capitanía automática.",
+      "note": "Rutas progresivas; Clase Valhalla como objetivo opcional de mando y nueva clase inspirada en Galaxy. Fecha/disponibilidad y ejecución jugable pendientes; no hay capitanía automática.",
       "file": "fases/F11/README.md"
     },
     {
