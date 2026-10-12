@@ -1,6 +1,6 @@
 # F02-P05 — Plan de integración y traspaso operativo a F03
 
-**Fecha:** 11-10-2026. **P05: PLAN DE EJECUCIÓN COMPLETADO, VALIDACIÓN EXTERNA PENDIENTE.** La planificación está aprobada para trabajo preparatorio por la luz verde del autor; **no** hay aprobación técnica de APIs por los responsables Core/Host, ni runtime validado. F02 sigue **EN_REVISION/BLOQUEADA_CORE** a su madurez objetivo `CONTRATO_VALIDADO`. La rama y la PR #3 permanecen sin fusionar.
+**Fecha:** 11-10-2026. **P05: PLAN DE EJECUCIÓN COMPLETADO, VALIDACIÓN EXTERNA PENDIENTE.** La planificación está aprobada para trabajo preparatorio por la luz verde del autor; **no** hay aprobación técnica de APIs por los responsables Core/Host, ni runtime validado. F02 sigue **EN_REVISION/BLOQUEADA_CORE** a su madurez objetivo `CONTRATO_VALIDADO`. Este documento conserva la foto técnica del 11-10-2026; la PR #3 sigue pendiente de fusión en la revisión del 13-10-2026.
 
 **Propósito:** convertir P01–P04 en trabajo verificable, sin crear un segundo Core, sin inventar llamadas C++ y sin marcar como jugable un conjunto de JSON/diagramas.
 
@@ -11,8 +11,8 @@
 | CoreRPG `main` | `dcfcb83c9853e005b5450bd39e0ba693cb91e257` | `WorldState` todavía mínimo; NO Actions, Knowledge ni Persistence de partida |
 | Core 4.5 `feat/generic-world-state` | `2a3da891d8c56e9868c7bd67dbeb6041509df2ce`, **no en main** | Permite preparar interfaces/contratos en papel; no se pueden certificar integraciones |
 | Star Trek `main` | `5d95b13fb7fef962c64f9b770bc45d8fc3fa35cd` | Se han añadido ideas desde creación de F02; no sustituir `main` ni sus cambios |
-| F01 | [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) **abierta, borrador**; DEC-0001 pendiente | No elegir Galaxy/Sovereign/Odyssey ni bautizar la Dama por inferencia |
-| F02 | [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) **abierta, borrador** | P01–P04 auditoría, contratos y QA estática; P05 diseño/handoff |
+| F01 (foto 11-10-2026) | [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) **estaba abierta en borrador**, con DEC-0001 pendiente | **Superado 13-10-2026:** PR #2 fusionada; Galaxy → nueva Clase Valhalla aprobada |
+| F02 (foto 11-10-2026) | [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) estaba en borrador; **13-10-2026: Ready for review** | P01–P04 auditoría, contratos y QA estática; P05 diseño/handoff; runtime sin validar |
 | QA documental | [F02 Actions run 38149428834](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38149428834) `completed/success` | Valida documentación en checkout real; **NO** compilación/integración de Core o UE5 |
 
 **Decisión de alcance ya tomada:** `v0.0.1` es una **prueba interna de una guardia en Sensores** como alférez que recibe órdenes de un capitán NPC. No es lanzamiento final ni obliga a elegir ya la clase definitiva. `v0.0.2+` podrá ensayar Academia u otros módulos posteriormente.
@@ -23,7 +23,7 @@ El registro [HOJA_RUTA_EJECUCION_P05.json](HOJA_RUTA_EJECUCION_P05.json) es la f
 
 | Paquete | Cuándo | Responsable propuesto | Entrega de aceptación | Situación |
 |---|---|---|---|---|
-| **INT-00** | F02-P05 | Star Trek + coordinación | Documentos de P01–P05 y referencias, sin resolver DEC-0001 por defecto | Documentado |
+| **INT-00** | F02-P05 | Star Trek + coordinación | Documentos P01–P05 y referencias; **DEC-0001 ya resuelta en F01** sin modificar el alcance de Sensores | Documentado |
 | **INT-01** | Core 4.5 | Equipo CoreRPG | Merge de `WorldState` extendido en `main` + ABI/API verificadas + CI | **BLOQUEO CRÍTICO** |
 | **INT-02** | F03-P01 | CoreRPG + Trek | Semilla/identidad/cronología/materialización persistente antes de ser observada | Diseño disponible; runtime bloqueado |
 | **INT-03** | F03-P02 | CoreRPG + Trek Sensores | Verdad del mundo separada de observaciones y datos vedados | Diseño disponible; requiere Core 4.9 |
@@ -92,7 +92,7 @@ Los casos no positivos también son obligatorios: guardia sin anomalías, orden 
 | **F03 integración runtime** | Reglas y API Core publicadas y pruebas de la fase | **NO-GO HASTA DEPENDENCIAS** |
 | **F08 v0.0.1 jugable** | Build en MSI + 13/13 escenarios y todos los bloqueos cerrados | **NO-GO: NO EJECUTADO** |
 
-**No se necesita decisión autoral adicional para iniciar F03-P01 documental**: la selección Galaxy/Sovereign/Odyssey/Imperator de F01 seguirá siendo una decisión independiente, sin presuposición ni modificación por parte de P05.
+**No se necesita decisión autoral adicional para continuar F03-P01 documental**: F01 **ya resolvió** la elección Galaxy → Clase Valhalla. Esta elección es independiente del primer puente de Sensores, y **no** acredita integración Core/UE5.
 
 ## 6. Gestión de cambios, seguridad y trazabilidad
 
@@ -101,7 +101,7 @@ Los casos no positivos también son obligatorios: guardia sin anomalías, orden 
 - UI/IA sólo reciben proyección autorizada; el texto de respuesta no aplica mutaciones, y un timeout no confirma fallo/éxito de la acción.
 - Cada futura prueba registra SHA Core, SHA Trek/Host, contexto del fixture, plataforma y logs. `PASS` de validación JSON no equivale a `CORE_INTEGRADO` ni `UE5_JUGABLE`.
 - Las líneas base de P02/03/04 no deben actualizarse automáticamente para ocultar cambios; toda incompatibilidad obliga a reauditar.
-- Se mantiene `ESTADO_GLOBAL.json` sin tocar. F01/DEC-0001 y PR #2 permanecen abiertas; F02 PR #3 continúa borrador.
+- Se mantiene `ESTADO_GLOBAL.json` sin tocar desde esta rama. **Actualización 13-10-2026:** F01/DEC-0001 ya aprobada e incorporada en `main` por PR #2; PR #3 pasó a revisión. F02 mantiene pendientes sus puertas de validación Core/Host y no se declara cerrada.
 
 ## Referencias
 
