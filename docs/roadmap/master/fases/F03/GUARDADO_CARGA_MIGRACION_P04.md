@@ -59,4 +59,4 @@ El validador P05 usa **snapshot sintético inerte** para detectar alteraciones, 
 
 ## Bloqueos de validación externa
 
-CoreRPG `main@dcfcb83c` y la rama 4.5 separada aún no proporcionan Persistence 4.7 ni Knowledge 4.9 / Actions 4.10 confirmados. No se modifica Core ni se publica serializador paralelo bajo `Videojuego_StarTrek`. F02 PR #3 y F01 PR #2 permanecen abiertas, por lo que no se altera unilateralmente `ESTADO_GLOBAL.json`.
+CoreRPG `main@dcfcb83c` y la rama 4.5 separada aún no proporcionan Persistence 4.7 ni Knowledge 4.9 / Actions 4.10 confirmados. No se modifica Core ni se publica serializador paralelo bajo `Videojuego_StarTrek`. F02 PR #3 y F01 PR #2 estaban abiertas **en el corte de auditoría del 11-10-2026**; **ambas quedaron fusionadas el 13-10-2026**. Esto no modifica el estado de Core ni convalida la persistencia. Por lo que no se altera unilateralmente `ESTADO_GLOBAL.json`.
