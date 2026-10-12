@@ -1,6 +1,6 @@
 # F02 — Arquitectura y contratos de integración
 
-**Estado global del programa (actualización 13-10-2026):** la [PR #2 de F01](https://github.com/robdor80/Videojuego_StarTrek/pull/2) ya fue **fusionada**; F01 permanece `EN_CURSO` en su registro hasta cierre formal documental. **F02: trabajo preparatorio iniciado el 11-10-2026**, en PR #3 separada, todavía **NO CERRADA a nivel `CONTRATO_VALIDADO` ni fusionada** al redactar esta nota. Merge documental ≠ integración Core/UE5.
+**Estado global tras reconciliación 13-10-2026:** **F01 CERRADA solo en diseño**; **F02 EN_CURSO y fase principal activa**, con [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) **fusionada**. P01 y P02 terminados como auditoría/inventario; P03–P05 documentados, pero **BLOQUEADOS para `CONTRATO_VALIDADO`** hasta verificar interfaces Core/Host reales. Evidencia en la [reconciliación post-merge](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md). Merge documental ≠ integración Core/UE5.
 **Madurez objetivo:** `CONTRATO_VALIDADO` respaldado por Core real, no meramente por documentos.
 
 ## Objetivo
@@ -19,7 +19,7 @@ Establecer fronteras firmes entre [CoreRPG](https://github.com/robdor80/CoreRPG)
 
 Los estados combinados `EN_REVISION/BLOQUEADA_CORE` indican avance documental con **puerta de validación bloqueada por dependencia externa**, no crean un estado nuevo en el JSON de gobierno.
 
-El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la existencia de campos en contratos Trek no significa que Core exponga interfaces para ellos. Los **11 gaps P03-G01…G11** tienen ya adaptadores y responsables propuestos en el mapa de P03, pero **no** están resueltos como API/runtime. P03 ha terminado su **especificación documental** y sigue **EN_REVISION/BLOQUEADA_CORE** para el nivel `CONTRATO_VALIDADO` hasta disponer de versiones/API reales y acuerdo Core/Host. La fase global activa registrada sigue siendo F01 mientras se tramita el cierre documental; **DEC-0001 ya está resuelta (Galaxy como inspiración para la nueva Clase Valhalla)**.
+El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la existencia de campos en contratos Trek no significa que Core exponga interfaces para ellos. Los **11 gaps P03-G01…G11** tienen ya adaptadores y responsables propuestos en el mapa de P03, pero **no** están resueltos como API/runtime. P03 ha terminado su **especificación documental** y sigue **EN_REVISION/BLOQUEADA_CORE** para el nivel `CONTRATO_VALIDADO` hasta disponer de versiones/API reales y acuerdo Core/Host. **F02 es la fase global principal activa**, con DEC-0001 resuelta y F01 cerrada al nivel `DISENO_VALIDADO`.
 
 ## Fuentes originales reutilizadas sin moverlas
 
@@ -34,7 +34,7 @@ El cierre de **P02** se limita a **inventario y trazabilidad comprobados**: la e
 - La **v0.0.1** es una prueba interna exclusivamente de guardia de Sensores. **DEC-0001 resuelta:** Galaxy/Enterprise-D inspira la **nueva Clase Valhalla** (no un refit ni una Sovereign), sin fecha de servicio fijada. Esta decisión **no** determina el puente piloto del prototipo.
 - **Corte auditado el 11–12-10-2026:** CoreRPG/main sólo mostraba WorldState mínimo, Catálogo de Content Packs e infraestructura determinista; 4.5 estaba en otra rama. Antes de integración, **reconsultar el estado vigente** de Core; no asumir versiones o API 4.6–4.12 sin comprobarlas.
 - No se modifica código UE5 ni Core por adivinación; no se crea un motor paralelo. Un manual, JSON, CI Core o un motor Python de referencia **no** constituyen v0.0.1 jugable.
-- Se conserva el estado global existente sin sobrescribirlo desde esta rama: **F01 ya está en `main` tras la fusión de PR #2**, y F02 debe sincronizarse mediante el procedimiento de cierre y madurez real, sin conflictos de gobierno.
+- **Estado global sincronizado en la PR de reconciliación:** F01 CERRADA documental; F02 EN_CURSO, P01/P02 CERRADAS como auditoría, P03–P05 BLOQUEADAS para las interfaces reales. No crear contratos Core por inferencia.
 
 ## Puerta de cierre de F02
 
@@ -50,7 +50,7 @@ La política P04 diferencia fallos seguros de presentación/IA de los fallos de 
 
 ## Traspaso a F03 tras P05
 
-Los cinco pasos **P01–P05** tienen ya entregables documentales inspeccionables en esta rama. **F02 NO se declara cerrada al nivel `CONTRATO_VALIDADO`** porque aún no se han verificado y aceptado las capacidades e interfaces Core/Host UE5 necesarias. El corte Core 4.5 fuera de `main` corresponde a la auditoría del 11–12-10-2026. Se permite iniciar en paralelo **F03-P01 de auditoría y diseño** sobre cronología, seeds y materialización, en **rama/PR independiente**, sin fingir ejecución Core. La elección de Valhalla (DEC-0001) ya está en `main` por PR #2; cualquier actualización de estado global F02 deberá hacerse según madurez y QA propios, **sin declarar integración Core/UE5 ficticia**. Fuente de entrada: [P05](PLAN_INTEGRACION_PRIMER_CORTE.md), hoja INT-00…INT-10 y [F03](../F03/README.md).
+Los cinco pasos **P01–P05** tienen ya entregables documentales inspeccionables **fusionados en `main`**. **F02 NO se declara cerrada al nivel `CONTRATO_VALIDADO`** porque aún no se han verificado y aceptado las capacidades e interfaces Core/Host UE5 necesarias. El corte Core 4.5 fuera de `main` corresponde a la auditoría del 11–12-10-2026. Se permite iniciar en paralelo **F03-P01 de auditoría y diseño** sobre cronología, seeds y materialización, en **rama/PR independiente**, sin fingir ejecución Core. La elección de Valhalla (DEC-0001) ya está en `main`; la regularización del estado F02 refleja trabajo documental verificado **sin declarar integración Core/UE5 ficticia**. Fuente de entrada: [P05](PLAN_INTEGRACION_PRIMER_CORTE.md), hoja INT-00…INT-10 y [F03](../F03/README.md).
 
 ## Coordinación y auditoría — 2026-10-12
 
