@@ -54,16 +54,10 @@ jobs:
       - name: F06 modelo, sensores, eventos y transferencias
         run: python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
 
-      - name: Contractual chain F04→F05→F06 (skipped until previous PR merge)
+      - name: Contractual chain F04→F05→F06 (3 tests required, no skips)
         run: python -m unittest discover -s tools/simulation -p 'test_f04_f05_f06_cross_phase.py' -v
-      - name: Cross-phase reference regression when branches are integrated
+      - name: Cross-phase reference regression (F03, F04, F05 required)
         run: |
-          if [ -f tools/validation/test_f04_reference.py ]; then
-            python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
-          fi
-          if [ -f tools/validation/test_f05_reference.py ]; then
-            python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
-          fi
-          if [ -f tools/validation/test_f03_reference.py ]; then
-            python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
-          fi
+          python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
+          python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
+          python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
