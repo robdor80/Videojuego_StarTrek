@@ -1,0 +1,1813 @@
+{
+  "schema_version": "0.1.0",
+  "fixture_id": "f05_orders_initiative_reference",
+  "date": "2026-10-11",
+  "scope": "pure_ref_policy_no_core_no_world_state",
+  "cases": [
+    {
+      "id": "F05-T01",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "issuer_role": "captain",
+        "mission": "contact_scan",
+        "actor_id": "test:actor:F05-T01",
+        "action_id": "contact_scan",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T01",
+          "action_id": "contact_scan",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T02",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "issuer_role": "captain",
+        "mission": "sensor_scan",
+        "actor_id": "test:actor:F05-T02",
+        "action_id": "sensor_scan",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T02",
+          "action_id": "sensor_scan",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T03",
+      "route": "player_captain_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "issuer_role": "captain",
+        "mission": "red_alert",
+        "actor_id": "test:actor:F05-T03",
+        "action_id": "red_alert",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T03",
+          "action_id": "red_alert",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T04",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "issue",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "issuer_role": "captain",
+        "actor_id": "test:actor:F05-T04",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T04",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T05",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "clarification_needed": true,
+        "actor_id": "test:actor:F05-T05",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T05",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "CLARIFY",
+        "reason": "missing_information"
+      }
+    },
+    {
+      "id": "F05-T06",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": false,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T06",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T06",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "CLARIFY",
+        "reason": "insufficient_knowledge"
+      }
+    },
+    {
+      "id": "F05-T07",
+      "route": "player_captain_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "deny",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T07",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "authority_denied"
+      }
+    },
+    {
+      "id": "F05-T08",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "review",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T08",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
+      },
+      "expected": {
+        "verdict": "REVIEW",
+        "reason": "contextual_review"
+      }
+    },
+    {
+      "id": "F05-T09",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "regulatory_review": true,
+        "actor_id": "test:actor:F05-T09",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T09",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REVIEW",
+        "reason": "contextual_review"
+      }
+    },
+    {
+      "id": "F05-T10",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": false,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T10",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T10",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "medical_unfit"
+      }
+    },
+    {
+      "id": "F05-T11",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": false,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T11",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T11",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "appointment_inactive"
+      }
+    },
+    {
+      "id": "F05-T12",
+      "route": "player_captain_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "legal_prohibition": true,
+        "actor_id": "test:actor:F05-T12",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T12",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "legal_constraint"
+      }
+    },
+    {
+      "id": "F05-T13",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "delegation_required": true,
+        "delegation_status": "active",
+        "actor_id": "test:actor:F05-T13",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T13",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T14",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "delegation_required": true,
+        "delegation_status": "revoked",
+        "actor_id": "test:actor:F05-T14",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T14",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "delegation_inactive"
+      }
+    },
+    {
+      "id": "F05-T15",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "delegation_required": true,
+        "delegation_status": "expired",
+        "actor_id": "test:actor:F05-T15",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T15",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "delegation_inactive"
+      }
+    },
+    {
+      "id": "F05-T16",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "delegation_required": true,
+        "delegation_status": "suspended",
+        "actor_id": "test:actor:F05-T16",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T16",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "delegation_inactive"
+      }
+    },
+    {
+      "id": "F05-T17",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "delegation_required": true,
+        "delegation_status": "active",
+        "within_delegation_scope": false,
+        "actor_id": "test:actor:F05-T17",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T17",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "delegation_scope"
+      }
+    },
+    {
+      "id": "F05-T18",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "manual",
+        "idempotency": "fresh",
+        "issuer_role": "xo",
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T18",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T18",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "WAIT_APPROVAL",
+        "reason": "captain_approval_required"
+      }
+    },
+    {
+      "id": "F05-T19",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "proposal_requires_approval",
+        "idempotency": "fresh",
+        "issuer_role": "xo",
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T19",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T19",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "WAIT_APPROVAL",
+        "reason": "captain_approval_required"
+      }
+    },
+    {
+      "id": "F05-T20",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "proposal_requires_approval",
+        "idempotency": "fresh",
+        "issuer_role": "xo",
+        "policy_change": true,
+        "captain_approved": true,
+        "actor_id": "test:actor:F05-T20",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T20",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T21",
+      "route": "player_captain_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "manual",
+        "idempotency": "fresh",
+        "issuer_role": "captain",
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T21",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T21",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T22",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "delegated_autonomous",
+        "idempotency": "fresh",
+        "issuer_role": "xo",
+        "policy_change": true,
+        "delegation_required": true,
+        "delegation_status": "active",
+        "actor_id": "test:actor:F05-T22",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T22",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T23",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "context_stale": true,
+        "actor_id": "test:actor:F05-T23",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T23",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REJECT_STALE",
+        "reason": "stale_context"
+      }
+    },
+    {
+      "id": "F05-T24",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "same",
+        "actor_id": "test:actor:F05-T24",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T24",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REPLAY",
+        "reason": "same_stored_result"
+      }
+    },
+    {
+      "id": "F05-T25",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "conflict",
+        "actor_id": "test:actor:F05-T25",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T25",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "idempotency_conflict"
+      }
+    },
+    {
+      "id": "F05-T26",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "player_unresponsive": true,
+        "actor_id": "test:actor:F05-T26",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T26",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "WAIT",
+        "reason": "player_response_pending"
+      }
+    },
+    {
+      "id": "F05-T27",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "temporal_conflict": true,
+        "actor_3d_loaded": false,
+        "actor_id": "test:actor:F05-T27",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T27",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "WAIT",
+        "reason": "occupation_conflict"
+      }
+    },
+    {
+      "id": "F05-T28",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": false,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T28",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T28",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "off_duty"
+      }
+    },
+    {
+      "id": "F05-T29",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": false,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T29",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T29",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "executor_unqualified"
+      }
+    },
+    {
+      "id": "F05-T30",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": false,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T30",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T30",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "executor_unauthorized"
+      }
+    },
+    {
+      "id": "F05-T31",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": false,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T31",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T31",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "unavailable_capability"
+      }
+    },
+    {
+      "id": "F05-T32",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": false,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T32",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T32",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "insufficient_resources"
+      }
+    },
+    {
+      "id": "F05-T33",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "deadline_expired": true,
+        "actor_id": "test:actor:F05-T33",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T33",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "deadline_expired"
+      }
+    },
+    {
+      "id": "F05-T34",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "deliberate_noncompliance": true,
+        "actor_id": "test:actor:F05-T34",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T34",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "deliberate_noncompliance"
+      }
+    },
+    {
+      "id": "F05-T35",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T35",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "PROPOSAL_ONLY",
+        "reason": "core_validation_required"
+      }
+    },
+    {
+      "id": "F05-T36",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "provider_status": "timeout",
+        "fallback_authorized": true,
+        "actor_id": "test:actor:F05-T36",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "FALLBACK",
+        "reason": "deterministic_only"
+      }
+    },
+    {
+      "id": "F05-T37",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "provider_status": "down",
+        "actor_id": "test:actor:F05-T37",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "CLARIFY",
+        "reason": "provider_unavailable"
+      }
+    },
+    {
+      "id": "F05-T38",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "provider_status": "malformed",
+        "actor_id": "test:actor:F05-T38",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "invalid_ai_response"
+      }
+    },
+    {
+      "id": "F05-T39",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "context_stale": true,
+        "actor_id": "test:actor:F05-T39",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "REJECT_STALE",
+        "reason": "stale_context"
+      }
+    },
+    {
+      "id": "F05-T40",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": false,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T40",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "CLARIFY",
+        "reason": "insufficient_knowledge"
+      }
+    },
+    {
+      "id": "F05-T41",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "direct_world_mutation": true,
+        "actor_id": "test:actor:F05-T41",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "direct_mutation_forbidden"
+      }
+    },
+    {
+      "id": "F05-T42",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "direct_world_mutation": true,
+        "actor_id": "test:actor:F05-T42",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T42",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "direct_mutation_forbidden"
+      }
+    },
+    {
+      "id": "F05-T43",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_3d_loaded": false,
+        "actor_id": "test:actor:F05-T43",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T43",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T44",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "deny",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "issuer_rank": "admiral",
+        "actor_id": "test:actor:F05-T44",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
+      },
+      "expected": {
+        "verdict": "REFUSE",
+        "reason": "authority_denied"
+      }
+    },
+    {
+      "id": "F05-T45",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "issue",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": false,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T45",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T45",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "CLARIFY",
+        "reason": "insufficient_knowledge"
+      }
+    },
+    {
+      "id": "F05-T46",
+      "route": "npc_to_npc",
+      "input": {
+        "phase": "ai_response",
+        "channel": "ai",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "fresh",
+        "provider_status": "down",
+        "fallback_authorized": true,
+        "actor_id": "test:actor:F05-T46",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
+      },
+      "expected": {
+        "verdict": "FALLBACK",
+        "reason": "deterministic_only"
+      }
+    },
+    {
+      "id": "F05-T47",
+      "route": "player_captain_to_npc",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "proposal_requires_approval",
+        "idempotency": "fresh",
+        "policy_change": true,
+        "issuer_role": "captain",
+        "actor_id": "test:actor:F05-T47",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T47",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "ALLOW_REFERENCE",
+        "reason": "rules_pass_for_reference_only"
+      }
+    },
+    {
+      "id": "F05-T48",
+      "route": "npc_to_player",
+      "input": {
+        "phase": "execute",
+        "channel": "actor",
+        "authority_verdict": "allow",
+        "appointment_active": true,
+        "medical_fit": true,
+        "knowledge_visible": true,
+        "duty_active": true,
+        "executor_qualified": true,
+        "executor_authorized": true,
+        "capability_available": true,
+        "resources_available": true,
+        "control_mode": "none",
+        "idempotency": "same",
+        "player_unresponsive": true,
+        "actor_id": "test:actor:F05-T48",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T48",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
+      },
+      "expected": {
+        "verdict": "REPLAY",
+        "reason": "same_stored_result"
+      }
+    }
+  ]
+}

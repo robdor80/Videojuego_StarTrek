@@ -1,0 +1,34 @@
+name: F05 Reference Orders and NPC Initiative
+on:
+  push:
+    branches: [docs/f05-orders-npc-initiative]
+    paths:
+      - 'docs/roadmap/master/fases/F05/**'
+      - 'tools/validation/f05_reference.py'
+      - 'tools/validation/test_f05_reference.py'
+      - 'validation/fixtures/f05/**'
+      - '.github/workflows/f05-reference-orders.yml'
+  pull_request:
+    paths:
+      - 'docs/roadmap/master/fases/F05/**'
+      - 'tools/validation/f05_reference.py'
+      - 'tools/validation/test_f05_reference.py'
+      - 'validation/fixtures/f05/**'
+      - '.github/workflows/f05-reference-orders.yml'
+  workflow_dispatch:
+jobs:
+  reference:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax
+        run: python -m py_compile tools/validation/f05_reference.py tools/validation/test_f05_reference.py
+      - name: Unit tests
+        run: python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
+      - name: Fixture cases
+        run: python tools/validation/f05_reference.py --fixture validation/fixtures/f05/order_initiative_reference_v0.1.json

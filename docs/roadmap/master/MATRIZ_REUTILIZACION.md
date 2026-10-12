@@ -24,6 +24,7 @@
 | `gameplay/careers/assignments/`, `promotions/`, `transfers/`, `service_record/` | Modelos de destino, expediente, ascenso y carrera | F11-P02/P03 | Conectar al runtime con decisiones opcionales y evidencias |
 | `gameplay/chain_of_command/README.md` y cinco contratos asociados | Puesto/servicio/delegación, modos del capitán; no solo rango | F04-P03/P04, F05-P01/P02 | Completar estados borde: mando interino, sustitución, revocaciones |
 | `gameplay/orders/starship_order_contract.json`, `subordinate_task_order.json`, `starship_order_pipeline.md` | Orden estructurada, validación, resultado, tarea y desobediencia posible | F05-P01/P02/P05 | Separar orden/solicitud/tarea y ejecución concurrente; coordinar con Core 4.10+ |
+| `docs/roadmap/master/fases/F05/`, `tools/validation/f05_reference.py`, `validation/fixtures/f05/` | P01–P04 diseño F05 de órdenes, autonomía NPC y LLM seguro; P05 **19 unittest + 48 casos** CI [run 38228304099](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228304099) | F05-P01…P05 | **REFERENCIA_PROBADA limitada:** no equivale a Actions/Core 4.10, persistencia, UE5 ni simulación autónoma real; PR #6 en revisión, sin integración Core |
 | `gameplay/ship_operations/operational_event_log/` | Contrato append-only, visibilidad, catálogo y ejemplo Sensores | F03-P03/P04, F05-P05, F06-P03 | Runtime genérico de eventos en Core; privacidad/observabilidad por Star Trek |
 | `gameplay/ship_operations/sensor_resolution/`, `tools/simulation/resolve_sensor_scan.py` | Detección observador-relativa con motor determinista y tests | F06-P01/P02/P05 | Integrar consola, eventos y 3D sin filtrar verdad oculta |
 | `gameplay/ship_operations/consoles/` | Catálogo de 16 familias funcionales, Sensores como primera | F06, F09 | Árbol operativo no implica implementación de todas las familias |
@@ -48,7 +49,7 @@
 - **Implementación de referencia**: scripts Python y fixtures que requieren ejecución/prueba propia; sus resultados no equivalen a conexión Core/UE5.
 - **Runtime pendiente**: abrir tarea específica e identificar capacidad Core faltante; no duplicarla en `gameplay/`.
 - **Presentación pendiente**: tareas UE5, assets y licencias; no confundir capturas, planos o materiales con mallas utilizables.
-- **Autoral pendiente**: no inventar reglas nuevas (Dama, MVP o nuevas épocas) para completar una celda.
+- **Decisiones autorales**: Galaxy → nueva Clase Valhalla y v0.0.1 interna Sensores **ya aprobadas** (F01); no inventar decisiones creativas, épocas ni capacidades posteriores para completar una celda.
 
 ## Observaciones sobre el inventario íntegro
 

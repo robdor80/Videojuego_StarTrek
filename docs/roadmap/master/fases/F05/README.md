@@ -1,37 +1,41 @@
-# F05 — Órdenes, iniciativa y delegación NPC
+# F05 — Órdenes, delegación e iniciativa NPC
 
-**Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** CONTRATO_VALIDADO o INTEGRACION_PROBADA según cada paso.
+**Estado global:** PLANIFICADA; **trabajo en rama:** P01–P05 desarrollados a nivel referencia, CI de referencia confirmada; integración pendiente.
+**Meta de fase del plan maestro:** CORE_INTEGRADO (**no alcanzada**).
 
-## Objetivo
+## Puntos
+- [x] **P01 diseño** — [Modelo de seis objetos y ownership](MODELO_ORDENES_P01.md), [contrato de referencia](CONTRATOS_P01_P02.json).
+- [x] **P02 diseño** — [Estados, negativas, caducidad y delegaciones](CICLOS_REVOCACION_P02.md).
+- [x] **P03 diseño** — [Iniciativa NPC, fuera de escena y cadena de mando](INICIATIVA_NPC_P03.md).
+- [x] **P04 diseño** — [Propuesta LLM, revalidación y fallback](IA_PROPUESTAS_Y_FALLBACK_P04.md).
+- [x] **P05 suite incorporada** — [48 escenarios y 19 pruebas unitarias de referencia](PRUEBAS_Y_COORDINACION_P05.md). **GitHub Actions verificada** tras el endurecimiento A-01/A-02: 19/19 pruebas y 48/48 escenarios (run 38228304099). No equivale a ejecución Core/UE5.
 
-El capitán y otros oficiales actúan por sí mismos dentro de sus capacidades y límites.
+Estos checks se refieren únicamente a los entregables independientes, **no** al cierre de P01–P05 a nivel `CORE_INTEGRADO`.
 
-## Pasos y entregables
+## Reutilización sin mover rutas
+`gameplay/orders/`, `gameplay/chain_of_command/`, `ai/captain_behavior/`, `ai/npc_behavior/`, `gameplay/ship_operations/operational_event_log/`, `gameplay/ship_operations/ship_computer/`, además de F02/F03/F04 (PR #3/#4/#5). Las fuentes aprobadas no se cambian por la propuesta.
 
-- [ ] **F05-P01** — Separar formalmente orden, solicitud, tarea/compromiso, acción, resultado y evento.
-- [ ] **F05-P02** — Cerrar ciclos de aceptación, aclaración, rechazo, desobediencia, caducidad y revocación de delegaciones.
-- [ ] **F05-P03** — Diseñar iniciativa del capitán NPC, oficiales y tareas NPC↔NPC aun cuando el jugador esté ausente.
-- [ ] **F05-P04** — Conectar propuestas y diálogo por IA remota sin mutación directa y con degradación ante latencia/caída.
-- [ ] **F05-P05** — Preparar pruebas NPC→NPC, NPC→jugador, jugador capitán→NPC y coordinación con Core RPG 4.10+.
+## Bloqueos y aceptación
+**Foto de Core auditada el 11–12-10-2026:** `main@dcfcb83` estaba previo a las capacidades requeridas de 4.7, 4.9, 4.10 y 4.12; **reconsultar el SHA y las APIs vigentes** antes de integrar. **Actualización 13-10-2026:** las PR F01 #2, F02 #3, F03 #4 y F04 #5 están **fusionadas**. DEC-0001 = Galaxy → nueva **Clase Valhalla**; DEC-0002 = v0.0.1 interna de Sensores. El estado `ESTADO_GLOBAL.json` no se modifica desde esta PR y F05 no se declara `CORE_INTEGRADO`. La iniciativa debe respetar cargo/guardia, conocimiento, recursos y responsabilidad; la IA nunca muta el World State.
 
-## Material del repositorio que se aprovecha sin moverlo
+[Plan maestro](../../PLAN_MAESTRO.md) · [Criterios de cierre](../../CRITERIOS_DE_CIERRE.md) · [Estado global](../../ESTADO_GLOBAL.json).
 
-- `gameplay/orders/`
-- `gameplay/chain_of_command/`
-- `ai/captain_behavior/`
-- `ai/npc_behavior/`
-- `gameplay/ship_operations/operational_event_log/`
-- `gameplay/ship_operations/ship_computer/`
 
-**Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
+## Endurecimiento de auditoría — 2026-10-12
 
-## Dependencias y límites
+A-01/A-02: `assess` ya no acepta `{}` como autorización y exige explícitamente
+fase, canal, decisión externa, identidad del actor, acción, puesto, revisión,
+datos de conocimiento/aptitud y, en ejecución, evidencia de guardia, recursos,
+capacidad y conflicto temporal. Un `ALLOW_REFERENCE` requiere un
+`authorization_binding` de referencia F04 ligado a actor, acción, puesto,
+revisión y plazo; una revocación/cambio invalida la solicitud.
 
-F04 y F02; 4.10+ solo evaluación e integración incremental de mecanismos comunes.
+Este binding **solo valida coherencia del fixture**; cualquier Host/IA podría
+fabricar el diccionario: por tanto no habilita efectos, y en producción deberá
+sustituirse por autorización validada y versionada dentro de Core. Las 48
+situaciones de referencia se migraron explícitamente para que sus resultados
+sigan siendo auditables, sin utilizar valores permisivos por omisión.
 
-## Puerta de cierre
-
-Cadena de órdenes y consecuencias trazables, autonomía sin omnisciencia, IA incapaz de escribir estado autoritativo. Registrar pruebas realmente ejecutadas, commit/PR, incidencias y decisiones de autor. Sin evidencias, no marcar `CERRADA`.
-
-Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+**CI validada:** [Actions 38227559253](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38227559253)
+SUCCESS: **19 unit tests / 48 fixtures**. `effects_applied=0` y
+`authoritative=false`; fase global y contrato Core siguen pendientes.

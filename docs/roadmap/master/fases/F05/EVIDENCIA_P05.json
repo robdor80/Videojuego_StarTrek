@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "F05",
+  "date": "2026-10-11",
+  "source_branch": "docs/f05-orders-npc-initiative",
+  "tested_commit": "9dc73e1366190bd1ba7956f329b11fe87b4f6892",
+  "pull_request": "https://github.com/robdor80/Videojuego_StarTrek/pull/6",
+  "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38178262402",
+  "workflow_run_id": 38178262402,
+  "workflow_conclusion": "success",
+  "unit_tests": {
+    "passed": 16,
+    "total": 16
+  },
+  "reference_cases": {
+    "passed": 48,
+    "total": 48
+  },
+  "validated": [
+    "python_compile",
+    "unittest_reference",
+    "fixture_reference"
+  ],
+  "not_validated": [
+    "core_actions_4_10",
+    "core_persistence_4_7",
+    "core_knowledge_4_9",
+    "llm_remote",
+    "ue5",
+    "end_to_end_save_load"
+  ],
+  "artifact_maturity": "REFERENCIA_PROBADA_PURE_GATE_ONLY",
+  "global_phase_closed": false,
+  "core_main_at_audit": "dcfcb83c9853e005b5450bd39e0ba693cb91e257",
+  "core_status": "4.4 main, 4.10+ unavailable as validated API"
+}
