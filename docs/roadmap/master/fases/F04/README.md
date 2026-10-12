@@ -1,6 +1,6 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
-**Auditoría y trabajo F04:** 2026-10-11. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA IMPLEMENTADA, su nivel de evidencia depende de CI. **F04 global no cerrada**: F01–F03 y Core/UE5 siguen pendientes de integración. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
+**Auditoría y trabajo F04:** 2026-10-11; **actualización de dependencias:** 2026-10-13. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA PROBADA en CI, solo para reglas de referencia. **F04 global no cerrada**: F01–F03 ya están fusionadas a nivel documental; Core/UE5 y las pruebas de integración siguen pendientes. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
 
 ## Objetivo
 
@@ -25,8 +25,8 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 - Core RPG: verdad, entidades, agendas, mutaciones y persistencia, si la versión realmente las ofrece.
 - Star Trek: clases, tripulación, puestos, guardias, restricciones de Flota y Primera Directriz.
 - UE5: actores y escenas interactivos, no fuente independiente de World State; IA aconseja sin ejecutar.
-- No mover contratos, no crear Core paralelo y no fijar la Dama de Imperator sin DEC-0001.
-- F01 [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2), F02 [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3), F03 [PR #4](https://github.com/robdor80/Videojuego_StarTrek/pull/4) siguen abiertas: la rama F04 deriva de `main@6069f6aa` de forma independiente, sin esconder estas dependencias.
+- No mover contratos ni crear un Core paralelo. **DEC-0001 ya está resuelta**: Galaxy/Enterprise-D es la inspiración de la nueva **Clase Valhalla**, no un refit; su año de servicio sigue sin definirse. Este acuerdo creativo no acredita naves runtime ni afecta al puente de prueba de Sensores.
+- **Actualización 2026-10-13:** F01 [PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2), F02 [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) y F03 [PR #4](https://github.com/robdor80/Videojuego_StarTrek/pull/4) **están fusionadas en `main`**. Esta rama F04 nació sobre un corte anterior (`main@6069f6aa`), pero no altera el registro global ni presupone integración Core/UE5. La validación transversal con F05/F06 sigue pendiente.
 - `docs/roadmap/master/ESTADO_GLOBAL.json` y plan maestro no se alteran para no falsear el estado principal.
 
 **Condición para cierre real:** pruebas de matriz autorizativa y turnos integradas con Core versionado, restricciones negativas demostradas, conexión con guardia jugable y trazabilidad de la aceptación. No marcar `CERRADA` con documentación y Python únicamente.
