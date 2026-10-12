@@ -1,6 +1,6 @@
 # F01-P05 — Matriz de decisiones, procedencia y alcance
 
-**Fecha:** 2026-10-11 · **Estado:** EN_REVISION — DEC-0002 aprobada; falta únicamente DEC-0001 y el acta de cierre.
+**Fecha base:** 2026-10-11 · **Actualización:** 2026-10-13 · **Estado:** EN_REVISION — DEC-0001 y DEC-0002 aprobadas; pendiente QA de expediente y cierre formal por PR.
 
 ## Aprobadas previamente (sin reinterpretación)
 
@@ -12,34 +12,37 @@
 | Simulación autoritativa previa a observación | VIGENTE | `docs/decisions/authoritative_observable_universe.md` | Core y Sensores, F03/F06 |
 | Academia jugable y formación real | VIGENTE | `docs/decisions/academy_playable_hub.md`, `gameplay/careers/academy_path/academy_career_v0_2.md` | Cuatro años, especializaciones, graduación |
 | Crecimiento sin barra de XP genérico | VIGENTE | `docs/decisions/character_growth_without_xp.md` | Evaluación profesional por evidencia |
-| Objetivos del personaje no garantizan acontecimientos | VIGENTE | `docs/decisions/player_objectives.md` | Ascenso/Imperator opcionales |
+| Objetivos del personaje no garantizan acontecimientos | VIGENTE | `docs/decisions/player_objectives.md` | Ascenso a mando de Valhalla opcional; «Imperator» es el nombre histórico provisional |
 | Separar rango, puesto, destino y consola | VIGENTE | `docs/decisions/personnel_model.md` | Mando no derivado solo de rango |
-| Clase, rol y nave individual diferentes | VIGENTE | `docs/decisions/starship_identity_model.md` | Imperator requiere identidad propia |
+| Clase, rol y nave individual diferentes | VIGENTE | `docs/decisions/starship_identity_model.md` | La nueva Clase Valhalla tendrá identidad propia distinta de la Enterprise-D |
 | Lore para reglas jugables, no enciclopedia | VIGENTE | `docs/decisions/lore_to_game_rule.md` | Contratos en siguientes fases |
 | Fuentes y añadidos etiquetados | VIGENTE | `sources/canon_policy.md`, `sources/provenance_policy.md` | Conflictos se registran; no canon artificial |
 | Primer corte **interno** v0.0.1, solo guardia Sensores | APROBADO para pruebas, no lanzamiento | `docs/decisions/prototype_validation_and_release_policy.md`, `docs/roadmap/ship_console_vertical_slice_v0_0_1.md` | F06–F08; código reutilizable, datos de laboratorio descartables |
 | RPG 3D en PC, carrera opcional, universo persistente | VIGENTE como decisión de producto | `docs/roadmap/master/PLAN_MAESTRO.md`, `docs/vision/VISION_PRODUCTO_RPG_3D_v0.1.md` | F01-P01 y sucesivas |
 | Prioridad Core genérico / Trek específico / UE5 visual | VIGENTE | `docs/roadmap/game_design_readiness_v0_2.md` | No duplicar runtime |
 
-## Pendientes expresas de autor
+## Decisiones del autor y pendientes técnicos
 
 | ID | Cuestión | Alternativas / material | Estado |
 |---|---|---|---|
-| DEC-0001 | Base de Clase Imperator | Galaxy / Sovereign / Odyssey; el autor considera E por ahora pero espera Codex | NECESITA_AUTOR; SIN ELEGIR |
+| DEC-0001 | Base e identidad de Clase Valhalla (antes «Imperator») | **Galaxy/Enterprise-D seleccionada** como inspiración de clase nueva, modernización exterior reconocible | **APROBADA 2026-10-13** |
 | DEC-0002 | Alcance primer prototipo interno | v0.0.1 guardia de Sensores, exclusivamente para validación; no forma parte automáticamente de campaña final; `PROPUESTA_MVP_Y_PRESUPUESTO.md` | APROBADA, 2026-10-11 |
-| DEC-0003 | Puente piloto / licencia | Selección técnica y licencias en F07, **no** resolver en F01 | PENDIENTE_TECNICA |
+| DEC-0003 | Puente piloto / licencia | Selección técnica y licencias en F07; **no** viene determinada por Galaxy/Valhalla | PENDIENTE_TECNICA |
+| DEC-0010 | Operativa Valhalla | Dos secciones con mando autónomo, separación/reacoplamiento, hangares y dotaciones | APROBADA, diseño; runtime pendiente |
+| DEC-0011 | Cronología propia | El autor puede alterar canon televisivo expresamente; **fecha servicio Valhalla no fijada** | APROBADA como política, fecha pendiente |
+| DEC-0012 | Tecnología avanzada Valhalla | Blindaje ablativo desplegable y torpedos transfásicos | APROBADA, diseño; viabilidad 3D pendiente |
 
 ## No aprobadas / límites
 
-- No se ha aprobado Odyssey como clase disponible en 2372; tampoco se ha elegido una Dama.
+- **La base creativa sí ha sido elegida: Galaxy**. No se ha aprobado Odyssey como clase disponible en 2372 ni la fecha de entrada en servicio de Valhalla.
 - Los prototipos `v0.0.x` **no son lanzamientos** ni las misiones y datos de laboratorio se incorporan automáticamente al juego definitivo. La posible `v0.0.2` de Academia está planteada, no comprometida.
 - No se ha aprobado un número concreto de FPS, de tripulantes simultáneos renderizados ni un rendimiento UE5 garantizado.
-- No se ha decidido un final obligatorio en Imperator, ni capitanía automática al graduarse.
-- No se ha aprobado ampliar cronología por asumir una nave futura ni reescribir conflictos de fuente.
+- No se ha decidido un final obligatorio en Valhalla (antes Imperator), ni capitanía automática al graduarse.
+- Se admite **continuidad de juego propia** y alteración temporal expresa de acontecimientos como la tecnología de «Endgame»; eso **no** equivale a desplegar tecnología futura en todas las épocas o a introducir Odyssey en 2372 automáticamente.
 - No se ha aprobado sustituir el estado autoritativo por resultados generados libremente por IA.
 
 ## Evidencias / límites
 
-Comparación de los documentos citados contra `main@0f989948c028792c2f8802996161ca98b26ec572` y rama de F01; no se han ejecutado suites, UE5 ni benchmarks. Cierre de fase supeditado a DEC-0001, validaciones documentales y PR fusionada.
+Comparación de los documentos citados contra `main@0f989948c028792c2f8802996161ca98b26ec572` y rama de F01; no se han ejecutado suites, UE5 ni benchmarks. **DEC-0001 está resuelta**. Cierre de fase pendiente de QA documental, validaciones de gobierno y PR #2 fusionada; no se afirma integración UE5/Core.
 
-**Proceso al terminar Codex y decidir el autor:** registrar fecha, Dama, época aplicable y justificación en `DECISIONES_Y_RIESGOS.md`; actualizar `ANALISIS_DAMAS_IMPERATOR.md`, esta matriz y estado global; después cumplir puerta de cierre F01.
+**Registro de resolución:** Galaxy → nueva Clase Valhalla; quedan pendientes la fecha de servicio y los resultados técnicos. Véase [acta creativa completa](ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Actualizar estado global sin fingir cierre, ejecutar QA documental y seguir el orden de fusión de PR previamente acordado.
