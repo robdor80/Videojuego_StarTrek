@@ -43,6 +43,6 @@
 
 ## Evidencias / límites
 
-Comparación de los documentos citados contra `main@0f989948c028792c2f8802996161ca98b26ec572` y rama de F01; no se han ejecutado suites, UE5 ni benchmarks. **DEC-0001 está resuelta**. Cierre de fase pendiente de QA documental, validaciones de gobierno y PR #2 fusionada; no se afirma integración UE5/Core.
+Comparación de los documentos citados contra `main@0f989948c028792c2f8802996161ca98b26ec572` y rama de F01; no se han ejecutado suites, UE5 ni benchmarks. **DEC-0001 está resuelta**. Cierre de fase pendiente de QA documental, validaciones de gobierno y acta de cierre; la fusión de PR #2 es un paso de integración documental independiente, sin afirmar UE5/Core integrados.
 
-**Registro de resolución:** Galaxy → nueva Clase Valhalla; quedan pendientes la fecha de servicio y los resultados técnicos. Véase [acta creativa completa](ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Actualizar estado global sin fingir cierre, ejecutar QA documental y seguir el orden de fusión de PR previamente acordado.
+**Registro de resolución:** Galaxy → nueva Clase Valhalla; quedan pendientes la fecha de servicio y los resultados técnicos. Véase [acta creativa completa](ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Actualizar estado global sin fingir cierre, mantener QA documental y seguir el orden de fusión de PR previamente acordado. El merge por sí solo no modifica la madurez técnica.
