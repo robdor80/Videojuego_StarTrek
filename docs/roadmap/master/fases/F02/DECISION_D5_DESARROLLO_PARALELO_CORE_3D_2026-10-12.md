@@ -90,4 +90,4 @@ El modelo representado en Rob3D figura como `star_trek_sutherland_bridge_Validad
 
 **Siguiente puerta de revisión:** auditar GLB/mallas/materiales/orientación/medidas/colisiones y licencia; importar en UE5 con una cápsula de primera persona, caminar de la entrada a una consola lateral y examinar si cabe una interacción de Sensores. Si supera la prueba, puede sustituir al Kelvin como **escenario piloto de v0.0.1**, sin afectar a la futura nave Galaxy ni declarar F07/F08 iniciadas.
 
-**Estado:** IDENTIFICADO_VISUALMENTE · CANDIDATO · NO_VERIFICADO_FUNCIONALMENTE.
+**Estado actualizado tras recibir GLB original:** [auditoría geométrica y material detallada](AUDITORIA_GLB_USS_SUTHERLAND_2026-10-12.md). Confirmadas 170 mallas, 19.501 triángulos, 17 imágenes integradas, **25 materiales KHR_materials_unlit**, cero animaciones y licencia declarada **CC-BY-4.0 en asset.extras del GLB**. No validado en UE5; derechos de franquicia aparte. Estado: AUDITADO_ESTATICAMENTE · CANDIDATO_PRIORITARIO · NO_VERIFICADO_FUNCIONALMENTE.
