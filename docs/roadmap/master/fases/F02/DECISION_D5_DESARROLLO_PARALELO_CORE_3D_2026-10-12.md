@@ -40,7 +40,7 @@ Desde ese punto, priorizar su integración real en la guardia UE5. **No iniciar 
 
 - Auditar procedencia y derechos de los recursos *antes de distribución*, no afirmar que un asset es reutilizable por poder abrirlo.
 - Conservar originales, versiones/hash; reparar geometría, UV, materiales, colisiones, puertas, escalas y rutas de navegación.
-- Galaxy es la **base propuesta por el autor** en la sesión D1, a la espera de la confirmación/acta creativa; no fijar aún nombre final ni fecha de aparición de nueva clase.
+- **Decisión posterior, 13-10-2026:** Galaxy/Enterprise-D es la referencia **ya aprobada** para la **nueva Clase Valhalla** (clase distinta de Galaxy, rediseño exterior reconocible); su **fecha de servicio permanece sin fijar**. Véase el acta creativa de F01 aprobada e integrada en `main` por PR #2.
 - **Puentes candidatos para v0.0.1:** Kelvin (ya probado), y un **tercer puente completo descargado** comunicado por el autor el 12-10-2026; el nuevo recurso tiene apariencia completa **pero su funcionalidad aún no está verificada**. No seleccionar puente definitivo sin revisar licencia/procedencia, malla, texturas, tamaño, transitabilidad, colisiones, accesos, consolas e integración UE5. La Galaxy es la base propuesta para la futura clase protagonista, no una dependencia del primer prototipo.
 - Prototipos UE5 pueden usar fixtures simulados únicamente para presentación, nunca como prueba de persistencia, IA, simulación o permisos auténticos.
 - El trabajo de Blender externo no implica reactivar formalmente F07/F08: siguen pausadas hasta revisión de las PR del repo.
@@ -59,7 +59,7 @@ Desde ese punto, priorizar su integración real en la guardia UE5. **No iniciar 
 ## Registro de alcance
 
 Esta decisión **resuelve D5** del cuestionario del 2026-10-12. 
-No resuelve automáticamente las otras decisiones de autor D1, D2, D3, ni fusiona las PR #2–#7. El primer prototipo sigue siendo interno v0.0.1 Sensores; los datos de laboratorio no pasan automáticamente a la campaña.
+**Nota de evolución:** al aprobar D5 el 12-10-2026, D1/D2/D3 aún no estaban formalizadas. Posteriormente se aprobaron Galaxy → Clase Valhalla, nombre Valhalla y fecha de servicio deliberadamente abierta. La decisión D5 sigue vigente; la revisión/fusión de las PR se realiza por separado. El primer prototipo sigue siendo interno v0.0.1 Sensores; los datos de laboratorio no pasan automáticamente a la campaña.
 
 
 ## Addendum operativo — Codex Cloud y puente alternativo (2026-10-12)
