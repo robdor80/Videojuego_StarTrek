@@ -1,20 +1,32 @@
-# F01-P03 — Análisis de Damas para Imperator (DEC-0001)
+# F01-P03 — Análisis de las tres Damas y decisión DEC-0001
 
-Fecha: 2026-10-11. Estado: BLOQUEADA POR DECISIÓN DE AUTOR. No hay elección aprobada. El autor ha indicado **inclinación provisional por Sovereign/Enterprise-E**, a falta de los resultados finales de Codex; **no es autorización para fijarla**.
+**Expediente original:** «Imperator» (denominación provisional, ya sustituida).  
+**Actualización:** 2026-10-13 · **Decisión creativa:** APROBADA · **Validación de activos/runtime:** PENDIENTE.
 
-## Candidatas
-| Base | Estado comprobado | Ventaja | Riesgo |
+## Comparativa histórica, conservada como evidencia
+| Candidata | Fuentes/bases consideradas | Ventaja | Limitación |
 |---|---|---|---|
-| Galaxy (Enterprise-D) | Clase existente en `core_starship_classes.json` y referencias de puente en `assets/ships/starfleet/galaxy_class/enterprise_d/` | Vida a bordo profunda; referencias aprovechables | Tamaño/dotación e interiores; imágenes no equivalen a malla 3D |
-| Sovereign (Enterprise-E) | Clase presente en catálogo; extensión cinematográfica tardía | Nave avanzada y potencial de mando | Disponibilidad por fecha (registrada para 2373); diseño/modelos por verificar |
-| Odyssey (Enterprise-F) | Ausente del catálogo de clases actual | Gran plataforma avanzada | Fuentes y fecha no incorporadas al alcance aprobado; necesita resolución expresa |
+| **Galaxy / Enterprise-D** | Clase existente en `core_starship_classes.json`; referencias en `assets/ships/starfleet/galaxy_class/enterprise_d/`; pruebas y modificaciones de separación de platillo efectuadas como prototipo Blender fuera de esta PR | Perfil de gran nave, interiores y separación del platillo como inspiración | Requiere una clase nueva completa; el prototipo Blender **no** acredita operación UE5 |
+| **Sovereign / Enterprise-E** | Clase del catálogo; trabajos M05/M07 de hangar y materiales realizados externamente | Arquitectura y casco modernizados, hangar de referencia | **No** elegida como inspiración principal de Valhalla; sus trabajos siguen aprovechables en su propia nave |
+| **Odyssey / Enterprise-F** | No incluida en el catálogo vigente de esta fase | Referencia posible y nave NPC futura | Tecnología/fecha/catálogo requieren definición específica; no insertarla retroactivamente en 2372 |
 
-La Clase Imperator será creación de juego, distinta de la Enterprise de referencia. Las otras dos Damas podrán existir como NPC y serán jugables solo cuando estén sus interiores. Ascender a capitán de la Imperator será opcional, por trayectoria y oportunidad real, nunca automático.
+## DEC-0001 — RESUELTA POR EL AUTOR
+1. La **Galaxy/Enterprise-D** queda seleccionada como **referencia de partida**.
+2. La nave nueva se denomina **Clase Valhalla** (no «Clase Imperator»).
+3. Valhalla será una **clase nueva derivada estéticamente de Galaxy**, **no** una actualización simple, subclase, ni cambio de matrícula de la Enterprise-D. Necesita identidad y ficha de clase independientes.
+4. Su rediseño exterior será **reconocible**: se conserva la silueta Galaxy y se modernizan formas, barquillas, deflector, casco, hangares y detalles conforme permita el modelado.
+5. Las otras Damas continuarán como potenciales naves NPC y visitas/misiones; su jugabilidad queda condicionada a puentes, interiores y pruebas reales.
+6. **Fecha de servicio de Valhalla: SIN FIJAR** hasta estudiar tecnología, modelos y continuidad propia del juego; el autor permite cambios explícitos respecto al calendario televisivo.
+7. Ser capitán de Valhalla es un **objetivo opcional de carrera**, sin ascenso automático y sin final forzado.
 
-La clase elegida para Imperator no determina el puente piloto de F07 ni puede saltarse los filtros cronológicos. Antes de fijar Odyssey deberán aprobarse época/fecha y fuentes; no se puede colar un nuevo canon en el catálogo por accidente.
+## Capacidades y límites ya elegidos
+La separación funcional del platillo, autonomía prolongada sin warp, combate autónomo de ambas secciones, hangares híbridos operativos por sección, delegación real a mandos NPC y reacoplamiento asistido **están aprobados a nivel de diseño**. También el blindaje ablativo desplegable y los torpedos transfásicos, pendientes de validación 3D y de reglas específicas. **No** se declara implementada ninguna de estas capacidades.
 
-Recomendación técnica provisional (no decisión): separar `imperator_reference_class`, `imperator` y `prototype_bridge_class`.
+**Acta fuente única:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md).
 
-**Decisión requerida:** Roberto selecciona Galaxy, Sovereign u Odyssey cuando finalice el análisis de Codex. No anticipar la elección ni solicitarla repetidamente mientras continúe dicha evaluación.
+## No confundir elecciones
+- **Base creativa de Valhalla (Galaxy)** ≠ **puente piloto de la v0.0.1 de Sensores**; F07 valida el mejor recurso lícito y realmente navegable, pudiendo utilizar Sutherland, Kelvin u otro tras pruebas.
+- **Clase** ≠ **nave individual**; nombre y matrícula de la unidad jugable no están fijados.
+- **Decisión autoral cerrada** ≠ **fase técnica cerrada**: F01 sigue EN_CURSO hasta validar documentos y fusionar PR #2; otros módulos se desarrollan en PR independientes.
 
-Fuentes: `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`, `docs/decisions/playable_eras.md`, `docs/decisions/starship_identity_model.md`, `lore/starships/classes/core_starship_classes.json`.
+Fuentes: `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`, `docs/decisions/playable_eras.md`, `docs/decisions/starship_identity_model.md`, `lore/starships/classes/core_starship_classes.json` y acta anterior.
