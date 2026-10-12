@@ -1,6 +1,6 @@
 # F01 — Visión del producto y canon
 
-**Estado global:** EN_CURSO (PR #2 abierta; no fusionada). **Revisión:** 2026-10-13. **Madurez actual:** `DISENO_VALIDADO` en P01/P02/P04; P03 decisión creativa resuelta y en revisión; P05 traza ampliada, pendiente QA/cierre de PR.
+**Estado global:** EN_CURSO (pendiente de revisión y cierre formal de fase). **Revisión:** 2026-10-13. **Madurez actual:** `DISENO_VALIDADO` en P01/P02/P04; P03 decisión creativa resuelta y en revisión; P05 traza ampliada, pendiente QA/cierre de PR.
 
 ## Objetivo
 
@@ -30,6 +30,6 @@ Consolidar la visión del videojuego 3D para PC, verificar épocas/canon y cerra
 
 **NO_EJECUTADO:** pruebas de Core RPG, compilación o sesión UE5, pruebas de rendimiento en MSI o licencia/importación de mallas. Es trabajo de visión, no runtime.
 
-**Decisión creativa resuelta:** `DEC-0001` = **Galaxy → nueva Clase Valhalla**, y `DEC-0002` = prototipo interno Sensores. `DEC-0003` (puente piloto/licencias) se decidirá técnicamente en F07, sin imponer que sea de la Valhalla. **Pendiente real:** QA de documentos/estado, validaciones requeridas y posterior fusión de PR #2. No declarar F01 cerrada antes. La fecha de entrada en servicio de Valhalla se mantiene abierta expresamente.
+**Decisión creativa resuelta:** `DEC-0001` = **Galaxy → nueva Clase Valhalla**, y `DEC-0002` = prototipo interno Sensores. `DEC-0003` (puente piloto/licencias) se decidirá técnicamente en F07, sin imponer que sea de la Valhalla. **Pendiente real:** QA de documentos/estado y validaciones de gobierno necesarias para el cierre formal de F01; la fusión de la PR #2 es un paso independiente y no acredita runtime. No declarar F01 cerrada hasta registrar su cierre. La fecha de entrada en servicio de Valhalla se mantiene abierta expresamente.
 
 Consúltese [PLAN_MAESTRO](../../PLAN_MAESTRO.md), [DECISIONES_Y_RIESGOS](../../DECISIONES_Y_RIESGOS.md), [CRITERIOS_DE_CIERRE](../../CRITERIOS_DE_CIERRE.md) y [ESTADO_GLOBAL.json](../../ESTADO_GLOBAL.json).
