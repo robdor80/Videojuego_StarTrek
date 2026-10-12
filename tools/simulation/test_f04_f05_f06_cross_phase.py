@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
-"""Prueba obligatoria F04 -> F05 -> F06 tras fusionar sus PR anteriores.
+"""Prueba F04 -> F05 -> F06: obligatoria en PR integrada con main.
 
-SOLO referencia: no simula Core, persistencia o UE5. Si faltan los módulos
-predecesores, las pruebas DEBEN FALLAR, nunca omitirse silenciosamente.
+En push de rama aislada se indica SKIPPED si faltan los módulos F04/F05.
+En pull_request el workflow comprueba explícitamente que ambos existen;
+las tres pruebas se ejecutan, no se aceptan skips. Solo referencia,
+no Core, persistencia o UE5.
 """
 from pathlib import Path
 import sys
@@ -10,10 +12,13 @@ import unittest
 
 ROOT = Path(__file__).resolve().parents[2]
 VALIDATION = ROOT / "tools" / "validation"
+REQUIRED = [VALIDATION / "f04_reference.py", VALIDATION / "f05_reference.py"]
 sys.path.insert(0, str(VALIDATION))
 from test_f06_reference import f06, request, context, WORLD
 
 
+@unittest.skipUnless(all(p.exists() for p in REQUIRED),
+                     "Push de rama aislada: F04/F05 solo están en main; PR integrada exige estos módulos")
 class CrossPhaseContractTests(unittest.TestCase):
     def _evaluate_chain(self, allow=True):
         from f04_reference import issue_reference_binding
