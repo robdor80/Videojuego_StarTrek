@@ -22,7 +22,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "issuer_role": "captain",
-        "mission": "contact_scan"
+        "mission": "contact_scan",
+        "actor_id": "test:actor:F05-T01",
+        "action_id": "contact_scan",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T01",
+          "action_id": "contact_scan",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -47,7 +63,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "issuer_role": "captain",
-        "mission": "sensor_scan"
+        "mission": "sensor_scan",
+        "actor_id": "test:actor:F05-T02",
+        "action_id": "sensor_scan",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T02",
+          "action_id": "sensor_scan",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -72,7 +104,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "issuer_role": "captain",
-        "mission": "red_alert"
+        "mission": "red_alert",
+        "actor_id": "test:actor:F05-T03",
+        "action_id": "red_alert",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T03",
+          "action_id": "red_alert",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -96,7 +144,22 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "issuer_role": "captain"
+        "issuer_role": "captain",
+        "actor_id": "test:actor:F05-T04",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T04",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -120,7 +183,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "clarification_needed": true
+        "clarification_needed": true,
+        "actor_id": "test:actor:F05-T05",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T05",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "CLARIFY",
@@ -143,7 +222,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T06",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T06",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "CLARIFY",
@@ -166,7 +261,13 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T07",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
       },
       "expected": {
         "verdict": "REFUSE",
@@ -189,7 +290,13 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T08",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
       },
       "expected": {
         "verdict": "REVIEW",
@@ -213,7 +320,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "regulatory_review": true
+        "regulatory_review": true,
+        "actor_id": "test:actor:F05-T09",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T09",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REVIEW",
@@ -236,7 +359,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T10",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T10",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -259,7 +398,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T11",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T11",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -283,7 +438,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "legal_prohibition": true
+        "legal_prohibition": true,
+        "actor_id": "test:actor:F05-T12",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T12",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -308,7 +479,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "delegation_required": true,
-        "delegation_status": "active"
+        "delegation_status": "active",
+        "actor_id": "test:actor:F05-T13",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T13",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -333,7 +520,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "delegation_required": true,
-        "delegation_status": "revoked"
+        "delegation_status": "revoked",
+        "actor_id": "test:actor:F05-T14",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T14",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -358,7 +561,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "delegation_required": true,
-        "delegation_status": "expired"
+        "delegation_status": "expired",
+        "actor_id": "test:actor:F05-T15",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T15",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -383,7 +602,23 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "delegation_required": true,
-        "delegation_status": "suspended"
+        "delegation_status": "suspended",
+        "actor_id": "test:actor:F05-T16",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T16",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -409,7 +644,23 @@
         "idempotency": "fresh",
         "delegation_required": true,
         "delegation_status": "active",
-        "within_delegation_scope": false
+        "within_delegation_scope": false,
+        "actor_id": "test:actor:F05-T17",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T17",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -434,7 +685,23 @@
         "control_mode": "manual",
         "idempotency": "fresh",
         "issuer_role": "xo",
-        "policy_change": true
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T18",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T18",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "WAIT_APPROVAL",
@@ -459,7 +726,23 @@
         "control_mode": "proposal_requires_approval",
         "idempotency": "fresh",
         "issuer_role": "xo",
-        "policy_change": true
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T19",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T19",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "WAIT_APPROVAL",
@@ -485,7 +768,23 @@
         "idempotency": "fresh",
         "issuer_role": "xo",
         "policy_change": true,
-        "captain_approved": true
+        "captain_approved": true,
+        "actor_id": "test:actor:F05-T20",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T20",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -510,7 +809,23 @@
         "control_mode": "manual",
         "idempotency": "fresh",
         "issuer_role": "captain",
-        "policy_change": true
+        "policy_change": true,
+        "actor_id": "test:actor:F05-T21",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T21",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -537,7 +852,23 @@
         "issuer_role": "xo",
         "policy_change": true,
         "delegation_required": true,
-        "delegation_status": "active"
+        "delegation_status": "active",
+        "actor_id": "test:actor:F05-T22",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T22",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -561,7 +892,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "context_stale": true
+        "context_stale": true,
+        "actor_id": "test:actor:F05-T23",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T23",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REJECT_STALE",
@@ -584,7 +931,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "same"
+        "idempotency": "same",
+        "actor_id": "test:actor:F05-T24",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T24",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REPLAY",
@@ -607,7 +970,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "conflict"
+        "idempotency": "conflict",
+        "actor_id": "test:actor:F05-T25",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T25",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -631,7 +1010,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "player_unresponsive": true
+        "player_unresponsive": true,
+        "actor_id": "test:actor:F05-T26",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T26",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "WAIT",
@@ -656,7 +1051,22 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "temporal_conflict": true,
-        "actor_3d_loaded": false
+        "actor_3d_loaded": false,
+        "actor_id": "test:actor:F05-T27",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T27",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "WAIT",
@@ -679,7 +1089,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T28",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T28",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -702,7 +1128,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T29",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T29",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -725,7 +1167,23 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T30",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T30",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -748,7 +1206,23 @@
         "capability_available": false,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T31",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T31",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -771,7 +1245,23 @@
         "capability_available": true,
         "resources_available": false,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T32",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T32",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -795,7 +1285,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "deadline_expired": true
+        "deadline_expired": true,
+        "actor_id": "test:actor:F05-T33",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T33",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -819,7 +1325,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "deliberate_noncompliance": true
+        "deliberate_noncompliance": true,
+        "actor_id": "test:actor:F05-T34",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T34",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -842,7 +1364,12 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T35",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "PROPOSAL_ONLY",
@@ -867,7 +1394,12 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "provider_status": "timeout",
-        "fallback_authorized": true
+        "fallback_authorized": true,
+        "actor_id": "test:actor:F05-T36",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "FALLBACK",
@@ -891,7 +1423,12 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "provider_status": "down"
+        "provider_status": "down",
+        "actor_id": "test:actor:F05-T37",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "CLARIFY",
@@ -915,7 +1452,12 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "provider_status": "malformed"
+        "provider_status": "malformed",
+        "actor_id": "test:actor:F05-T38",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "REFUSE",
@@ -939,7 +1481,12 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "context_stale": true
+        "context_stale": true,
+        "actor_id": "test:actor:F05-T39",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "REJECT_STALE",
@@ -962,7 +1509,12 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T40",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "CLARIFY",
@@ -986,7 +1538,12 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "direct_world_mutation": true
+        "direct_world_mutation": true,
+        "actor_id": "test:actor:F05-T41",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "REFUSE",
@@ -1010,7 +1567,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "direct_world_mutation": true
+        "direct_world_mutation": true,
+        "actor_id": "test:actor:F05-T42",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T42",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REFUSE",
@@ -1034,7 +1607,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "actor_3d_loaded": false
+        "actor_3d_loaded": false,
+        "actor_id": "test:actor:F05-T43",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T43",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -1058,7 +1647,13 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "fresh",
-        "issuer_rank": "admiral"
+        "issuer_rank": "admiral",
+        "actor_id": "test:actor:F05-T44",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false
       },
       "expected": {
         "verdict": "REFUSE",
@@ -1081,7 +1676,22 @@
         "capability_available": true,
         "resources_available": true,
         "control_mode": "none",
-        "idempotency": "fresh"
+        "idempotency": "fresh",
+        "actor_id": "test:actor:F05-T45",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T45",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "CLARIFY",
@@ -1106,7 +1716,12 @@
         "control_mode": "none",
         "idempotency": "fresh",
         "provider_status": "down",
-        "fallback_authorized": true
+        "fallback_authorized": true,
+        "actor_id": "test:actor:F05-T46",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100
       },
       "expected": {
         "verdict": "FALLBACK",
@@ -1131,7 +1746,23 @@
         "control_mode": "proposal_requires_approval",
         "idempotency": "fresh",
         "policy_change": true,
-        "issuer_role": "captain"
+        "issuer_role": "captain",
+        "actor_id": "test:actor:F05-T47",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T47",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "ALLOW_REFERENCE",
@@ -1155,7 +1786,23 @@
         "resources_available": true,
         "control_mode": "none",
         "idempotency": "same",
-        "player_unresponsive": true
+        "player_unresponsive": true,
+        "actor_id": "test:actor:F05-T48",
+        "action_id": "bridge_order",
+        "station_id": "test:bridge",
+        "state_revision": 3,
+        "current_tick": 100,
+        "temporal_conflict": false,
+        "authorization_binding": {
+          "source": "F04_REFERENCE",
+          "decision": "ALLOW",
+          "actor_id": "test:actor:F05-T48",
+          "action_id": "bridge_order",
+          "station_id": "test:bridge",
+          "state_revision": 3,
+          "issued_tick": 90,
+          "expires_tick": 110
+        }
       },
       "expected": {
         "verdict": "REPLAY",
