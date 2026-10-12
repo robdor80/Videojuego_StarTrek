@@ -19,3 +19,23 @@ Estos checks se refieren únicamente a los entregables independientes, **no** al
 CoreRPG `main@dcfcb83` sigue previo a las capacidades de 4.7, 4.9, 4.10 y 4.12. F01 PR #2 y F02–F04 están abiertas; DEC-0001 y DEC-0002 no se resuelven aquí. **No** se fusiona ni se modifica `ESTADO_GLOBAL.json` hasta los controles previos. La iniciativa debe respetar cargo/guardia, conocimiento, recursos y responsabilidad; la IA no muta World State.
 
 [Plan maestro](../../PLAN_MAESTRO.md) · [Criterios de cierre](../../CRITERIOS_DE_CIERRE.md) · [Estado global](../../ESTADO_GLOBAL.json).
+
+
+## Endurecimiento de auditoría — 2026-10-12
+
+A-01/A-02: `assess` ya no acepta `{}` como autorización y exige explícitamente
+fase, canal, decisión externa, identidad del actor, acción, puesto, revisión,
+datos de conocimiento/aptitud y, en ejecución, evidencia de guardia, recursos,
+capacidad y conflicto temporal. Un `ALLOW_REFERENCE` requiere un
+`authorization_binding` de referencia F04 ligado a actor, acción, puesto,
+revisión y plazo; una revocación/cambio invalida la solicitud.
+
+Este binding **solo valida coherencia del fixture**; cualquier Host/IA podría
+fabricar el diccionario: por tanto no habilita efectos, y en producción deberá
+sustituirse por autorización validada y versionada dentro de Core. Las 48
+situaciones de referencia se migraron explícitamente para que sus resultados
+sigan siendo auditables, sin utilizar valores permisivos por omisión.
+
+**CI validada:** [Actions 38227559253](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38227559253)
+SUCCESS: **19 unit tests / 48 fixtures**. `effects_applied=0` y
+`authoritative=false`; fase global y contrato Core siguen pendientes.
