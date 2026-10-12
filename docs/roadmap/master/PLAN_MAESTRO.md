@@ -1,12 +1,12 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **Fase F00: cerrada (organización)**. Fase global activa: **F01 (EN_CURSO; DEC-0001/0002 pendientes)**.
+**Versión organizativa:** 1.0 / 11-10-2026; decisiones revisadas 13-10-2026. **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00 cerrada**. Fase global activa: **F01 EN_CURSO** (DEC-0001/0002 resueltas; falta QA y fusión PR #2).
 
 ## Principios de producto conservados
 
 - RPG 3D para PC/MSI con universo persistente, NPC que actúan sin el jugador y Academia de cuatro años antes del servicio activo; la web academiaflota sigue siendo complemento educativo.
-- Carrera gradual y **opcional**; alférez nuevo ≠ capitán; quedarse en cualquier destino, cambiar de nave o aspirar a la Imperator debe tener consecuencias reales.
-- Tres clases candidatas para la futura Dama base (Galaxy, Sovereign, Odyssey) **todavía sin selección aprobada** (Sovereign/E inclinación provisional del autor mientras termina Codex); no confundir Clase Imperator final con puente piloto del vertical slice.
+- Carrera gradual y **opcional**; alférez nuevo ≠ capitán; quedarse en cualquier destino, cambiar de nave o aspirar al mando de una nave de **Clase Valhalla** debe tener consecuencias reales.
+- **DEC-0001 resuelta:** Galaxy/Enterprise-D como inspiración de la **nueva Clase Valhalla** (no un refit ni la Enterprise-D renombrada); exterior reconocible pero modernizado. Sovereign y Odyssey se conservan como otras Damas potencialmente NPC; no confundir nave final con **puente piloto** de la v0.0.1. **No hay año de servicio Valhalla fijado.**
 - Generar realidad antes de observarla. La IA remota propone y dialoga sin modificar World State por sí sola. La vida NPC persiste fuera de escena sin actores 3D cargados.
 - Una fuente por responsabilidad; no crear un Core RPG paralelo en Star Trek; no duplicar temarios de la web en código de juego.
 
@@ -17,7 +17,7 @@
 | Fase | Tema | Estado global | Entrega objetivo |
 |---|---|---|---|
 | [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | CERRADA | DOCUMENTACION_AUDITADA |
-| [F01](fases/F01/README.md) | Visión y canon del producto | EN_CURSO (solo Dama pendiente) | DISENO_VALIDADO |
+| [F01](fases/F01/README.md) | Visión y canon del producto | EN_CURSO (decisión Dama resuelta; QA/PR pendiente) | DISENO_VALIDADO |
 | [F02](fases/F02/README.md) | Arquitectura e integración | PLANIFICADA | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | PLANIFICADA | CORE_INTEGRADO |
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | PLANIFICADA | REFERENCIA_PROBADA |
@@ -78,4 +78,5 @@ Este diagrama es el **camino crítico orientativo**, no una prohibición de dise
 - Idea `IDEA-xxxx` → decisión `DEC-xxxx` cuando haga falta → fase/paso `Fnn-Pnn` → evidencia/prueba → cierre.
 - Todo `COMPLETE` previo se registra con **alcance declarado** (lore, contrato, simulador, CI o UE5), no como prueba de implementación general.
 - Una única fase principal activa; no iniciar otra por casualidad. Trabajo transversal compatible, en rama, con verificación y sin adelantarse a decisiones autorales.
-- Para modificaciones que cambian el canon principal, el alcance jugable o la arquitectura del Core, solicitar decisión del autor o coordinador antes de fijarlas.
+- Para modificaciones que cambian la continuidad del juego, el alcance jugable o la arquitectura del Core, respetar las decisiones creativas expresamente aprobadas por el autor. **La cronología de pantalla puede alterarse para este juego personal**, con anotación GAME_ADDITION, sin habilitar por defecto tecnologías futuras en todas las eras.
+- **Acta vigente de la nueva Clase Valhalla:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Blindaje ablativo y torpedos transfásicos aprobados como diseño; Blender/UE5 y Core pendientes de implementar y validar.
