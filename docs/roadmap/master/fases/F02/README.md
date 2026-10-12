@@ -51,3 +51,7 @@ La política P04 diferencia fallos seguros de presentación/IA de los fallos de 
 ## Traspaso a F03 tras P05
 
 Los cinco pasos **P01–P05** tienen ya entregables documentales inspeccionables en esta rama. **F02 NO se declara cerrada al nivel `CONTRATO_VALIDADO`** porque Core 4.5 no está en `main` y están sin validar APIs/Host UE5. Se permite iniciar en paralelo **F03-P01 de auditoría y diseño** sobre cronología, seeds y materialización, en **rama/PR independiente**, sin fingir ejecución Core. No modificar estado global sin reconciliar F01 (DEC-0001/PR #2) y F02 (PR #3). Fuente de entrada: [P05](PLAN_INTEGRACION_PRIMER_CORTE.md), hoja INT-00…INT-10 y [F03](../F03/README.md).
+
+## Coordinación y auditoría — 2026-10-12
+
+[Ver matriz de interfaces y bloqueos reales para las PR #2–#7](MATRIZ_SINCRONIZACION_AUDITORIA_2026-10-12.md). Documenta el endurecimiento de referencia F04/F05/F06, el estado efectivo de Core `main` (4.4), sus 4.5/4.6–4.12 pendientes, y las condiciones de la prueba transversal después de fusionar. **No afirma integración Core/UE5 ni modifica el estado global.**
