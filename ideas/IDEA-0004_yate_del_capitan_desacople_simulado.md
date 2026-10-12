@@ -6,7 +6,7 @@
 **Estado:** **IDEA-0004 · APROBADA CONCEPTUALMENTE; pendiente de diseño detallado e implementación**  
 **Destino:** `/ideas` del repositorio del videojuego Star Trek  
 **Nave de referencia inicial:** Clase **Sovereign**, basada en la Sovereign con hangar mejorada en M07.  
-**Evolución prevista:** La misma nave podrá convertirse en una **nueva clase propia**, cuyo nombre definitivo todavía **no se ha decidido**. La idea no depende de que esa futura clase se denomine *Imperator* ni de una matrícula concreta.
+**Actualización de continuidad (2026-10-13):** la nueva Gran Dama es **Clase Valhalla**, inspirada en **Galaxy**, y **no** una evolución de la Sovereign M07. Este yate nació como concepto para Sovereign; podrá evaluarse para Valhalla por separado, **sin confirmar** que ya exista un alojamiento de yate compatible.
 
 ---
 
@@ -14,7 +14,7 @@
 
 Incorporar al RPG un **yate del capitán** (*Captain's Yacht*): una embarcación auxiliar exclusiva, diferenciada de las lanzaderas convencionales, que el jugador pueda utilizar para visitas oficiales, desplazamientos, misiones diplomáticas, exploración y otras situaciones adecuadas.
 
-El yate estará asociado inicialmente a la **clase Sovereign** que estamos preparando. Si esa nave acaba transformándose en nuestra nueva clase original, el sistema deberá permitir **conservar o adaptar el concepto del yate** sin rehacer su funcionamiento. En el futuro podrá extenderse a otras naves que dispongan razonablemente de este tipo de vehículo.
+El concepto inicial del yate se ha preparado para la **clase Sovereign** y el modelo M07. La **Clase Valhalla es otra clase nueva, inspirada en Galaxy**; el sistema genérico del yate podrá adaptarse a esa nave u otras compatibles **si se aprueba y se comprueba su integración**, sin rehacer la persistencia y el control de accesos.
 
 **No será necesario modelar desde el principio una operación físicamente continua de desacople o acople entre el yate y el casco exterior de la nave nodriza.** Igual que con los hangares independientes, podremos representar el proceso mediante **acceso interior + secuencia cinematográfica + transición controlada al escenario espacial**.
 
@@ -203,11 +203,11 @@ Se propone separar tres responsabilidades:
 
 Esta es una **arquitectura conceptual**. Su encaje concreto con los módulos ya desarrollados de CoreRPG y Unreal se analizará durante las fases de implementación correspondientes; la aprobación de la idea no significa que esas funciones existan actualmente.
 
-## 13. Compatibilidad con la futura clase sucesora de Sovereign
+## 13. Compatibilidad con Valhalla (decisión creativa del 13-10-2026)
 
-La Sovereign M07 es **la base elegida** para el desarrollo de nuestra nave principal. Mientras no se ejecuten las modificaciones estructurales y estéticas previstas, **sigue siendo de clase Sovereign**.
+La Sovereign M07 es una **referencia artística propia de este proyecto de yate**, no la base de la nueva Gran Dama. La nave principal futura será de **Clase Valhalla**, clase nueva inspirada en Galaxy. **No está aprobada todavía la implantación de un yate en la Valhalla**, pero el sistema deberá ser adaptable si más adelante se decide incluirlo.
 
-Cuando se cree la **nueva clase original**, cuyo nombre inglés femenino está pendiente de elección:
+Si se incorpora el yate a Valhalla u otra clase:
 
 - El sistema del yate deberá seguir siendo utilizable.
 - El punto de acoplamiento y el aspecto del compartimento podrán cambiar.
@@ -215,7 +215,7 @@ Cuando se cree la **nueva clase original**, cuyo nombre inglés femenino está p
 - La identidad, autorizaciones y persistencia no dependerán del nombre de la clase ni de una matrícula específica.
 - La evolución artística de la nave no debe obligarnos a reprogramar desde cero el sistema de desacople.
 
-**No se fija todavía nombre, matrícula definitiva ni diseño de la nueva clase.**
+**El nombre de clase Valhalla ya está decidido.** Siguen pendientes el diseño definitivo de su alojamiento de yate, el nombre/matrícula de una nave individual y las comprobaciones en Blender/UE5.
 
 ## 14. Riesgos y límites
 
@@ -262,7 +262,7 @@ Se considerará funcional la primera versión de la idea cuando:
 7. El yate no se duplique ni aparezca simultáneamente acoplado y en vuelo como vehículo activo.
 8. Sus ocupantes, carga, autorizaciones, daños y estado operativo no se pierdan durante las transiciones.
 9. La experiencia pueda disfrutarse sin interior 3D completo, mediante cámara exterior o interfaz de vuelo.
-10. Las futuras mejoras artísticas y la evolución de la Sovereign hacia una clase propia puedan incorporarse sin rehacer la lógica central.
+10. Las mejoras artísticas de Sovereign M07 o una eventual adaptación a Valhalla puedan incorporarse sin rehacer la lógica central.
 
 El interior de lujo completamente transitable y el desacople físico real **son objetivos opcionales de evolución**, no requisitos para declarar funcional el primer sistema.
 
@@ -272,11 +272,11 @@ El interior de lujo completamente transitable y el desacople físico real **son 
 - **Sovereign M07:** base visual conservada; no modificar directamente el archivo aprobado sin trabajar sobre derivadas.
 - **Misión 08 Sovereign:** puertas del hangar de lanzaderas; trabajo independiente del yate del capitán.
 - **Sistema de carrera y mando del RPG:** determina quién puede autorizar, utilizar o mandar el yate.
-- **Futura nueva clase derivada de la Sovereign:** deberá poder heredar o adaptar la función de yate sin imponer un nombre de clase que todavía no se ha decidido.
+- **Clase Valhalla (base Galaxy):** candidata independiente a incorporar un yate si posteriormente se valida alojamiento, acceso, proporciones y diseño; no se da por aprobada la geometría.
 
 ## 18. Decisión de diseño
 
-**Se aprueba conceptualmente introducir un yate del capitán inicialmente vinculado a la clase Sovereign y adaptable a su futura evolución como nueva clase propia.**
+**Se aprueba conceptualmente introducir un yate del capitán inicialmente vinculado a la clase Sovereign M07, con arquitectura reutilizable para otras clases si corresponde.** La nueva **Clase Valhalla**, derivada artísticamente de Galaxy, **no** nace de Sovereign; su eventual yate exige decisión y estudio propios.
 
 El jugador podrá embarcar desde el interior de la nave y realizar viajes con él mediante **desacople/acoplamiento simulado**, transiciones cinematográficas controladas y un vehículo 3D exterior independiente. No será obligatorio reconstruir ni animar desde el principio toda la sección de acoplamiento del casco.
 
@@ -307,7 +307,7 @@ El yate tendrá **identidad única, ubicación y estado persistentes**, con regl
 
 ### Observación de canon y estado de la nave base
 
-El documento aportado afirma que **Sovereign M07 es la base elegida** de una futura clase propia. Sin embargo, el [Plan Maestro vigente en `main` al archivar](../docs/roadmap/master/PLAN_MAESTRO.md) y [F01-P03](../docs/roadmap/master/fases/F01/README.md) todavía indican que la elección final de la *Dama* entre Galaxy, Sovereign y Odyssey **está pendiente de resolución expresa**. Se conserva literalmente la declaración del documento como contexto del trabajo artístico M07, **pero la publicación de esta idea no resuelve esa discrepancia ni confirma por sí sola la nave definitiva/Imperator**. Cuando se sincronice la decisión del autor y las fases, se actualizarán las referencias procedentes sin cambiar la mecánica universal del yate.
+**Histórico:** al aportar esta idea, su borrador daba por elegida a la Sovereign M07 como base de una clase nueva. **Decisión autoral posterior (12–13-10-2026): la base elegida es Galaxy/Enterprise-D y la clase nueva se llama Valhalla.** Por tanto, toda mención de «futura sucesora de Sovereign» en anotaciones artísticas anteriores es histórica, no un requisito vigente. La ficha Sovereign M07 sigue siendo útil para desarrollar **su propio yate**; adaptar el sistema a Valhalla requiere estudiar su arquitectura por separado. La F01 PR #2 recoge la decisión en su acta.
 
 La identificación de la estructura ventral M07, los supuestos de geometría desmontable, los activos candidatos y el estado de la Misión 08 son antecedentes facilitados en el texto original, **no verificaciones técnicas nuevas realizadas al archivarlo**.
 
