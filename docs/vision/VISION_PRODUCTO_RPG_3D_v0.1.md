@@ -1,18 +1,18 @@
 # Visión de producto — Star Trek RPG 3D (F01-P01)
 
-**Versión:** 0.1 · **Fecha de auditoría:** 2026-10-11 · **Estado:** BASELINE_RECONCILIADA (principios aprobados y prototipo interno DEC-0002; Dama DEC-0001 pendiente) · **Madurez:** DISENO_VALIDADO del alcance ya fijado.
+**Versión:** 0.1 · **Fecha de auditoría:** 2026-10-11 · **Revisión:** 2026-10-13 · **Estado:** BASELINE_RECONCILIADA (DEC-0001 y DEC-0002 aprobadas; Clase Valhalla elegida) · **Madurez:** DISENO_VALIDADO del alcance documental, no del runtime.
 
 ## Promesa al jugador
 
-Vivir una trayectoria personal dentro de Star Trek: entrar en la Flota Estelar, formarse, adquirir experiencia, desarrollar relaciones, tomar decisiones operativas y habitar un universo que continúa funcionando cuando el jugador está en otro sitio. No es una secuencia obligatoria de episodios, ni un simulador de combate sin vida social, ni una carrera que culmine forzosamente en capitanear la Imperator.
+Vivir una trayectoria personal dentro de Star Trek: entrar en la Flota Estelar, formarse, adquirir experiencia, desarrollar relaciones, tomar decisiones operativas y habitar un universo que continúa funcionando cuando el jugador está en otro sitio. No es una secuencia obligatoria de episodios, ni un simulador de combate sin vida social, ni una carrera que culmine forzosamente en capitanear una Valhalla.
 
 ## Reglas de producto vigentes (REUTILIZAR; no son propuestas nuevas)
 
 1. **Plataforma de destino:** videojuego 3D para PC Windows, con el MSI Raider GE78 HX 14V como equipo de desarrollo/prueba (i9-14900HX, 32 GB, RTX 4070 portátil de 8 GB, 2560×1600). El hardware de prueba NO constituye un presupuesto de fotogramas medido; pendiente de F07/F08.
 2. **Tres épocas jugables** `pike`, `kirk`, `tng_ds9_voyager`, con tecnología, uniformes y disponibilidad filtrados por fecha; no hay siete universos duplicados.
-3. **Canon histórico hasta el inicio de la partida; futuro emergente** sin reproducir obligatoriamente la historia audiovisual posterior.
+3. **Tres épocas y continuidad propia:** el canon histórico es referencia de partida, con futuro emergente. El autor puede introducir cambios y anticipaciones temporales **expresamente aprobados** en este videojuego personal, registrados como GAME_ADDITION; no habilita toda tecnología futura por defecto.
 4. **Academia jugable:** ingreso, cuatro años × tres trimestres, vida de cadete, formación, especialización, graduación y destino como alférez. `academiaflota` publica estudio/formación; no es el mundo 3D.
-5. **Ascensos por evidencia y oportunidades reales:** sin XP genérico, sin capitanía inmediata al graduarse. El jugador puede seguir en su puesto, aceptar/solicitar destinos, progresar en distintas especialidades o perseguir el mando de la Imperator; no hay «final obligatorio».
+5. **Ascensos por evidencia y oportunidades reales:** sin XP genérico, sin capitanía inmediata al graduarse. El jugador puede seguir en su puesto, aceptar/solicitar destinos, progresar en distintas especialidades o perseguir el mando de una nave de Clase Valhalla; no hay «final obligatorio».
 6. **Universo preexistente al conocimiento del jugador:** mundo autoritativo, simulación determinista/persistente, memoria limitada de NPC, y simulación fuera de escena desacoplada de cargar actores 3D.
 7. **Relaciones y hábitos significativos**, sujetos a agendas, consentimiento/privacidad y consecuencias contextuales ya definidas; no adjudicar nuevos límites de contenido en F01 sin intervención de autor.
 8. **Operaciones reales:** consolas funcionales con operaciones y permisos independientes del aspecto visual; primer corte vertical es Sensores, con orden, resolución, resultado, registro y posible evaluación.
@@ -38,7 +38,7 @@ Fuente: `docs/decisions/prototype_validation_and_release_policy.md` (DEC-0002).
 - No transformar aprobaciones documentales de 120 capas / 20 pasos en validación de juego UE5.
 - No convertir «capitán» en una opción universal de anular cualquier ley física, autoridad, permisos o Primer Directriz; el control de decisiones de mando depende del puesto, delegación y reglas Trek.
 - No construir Core RPG paralelo ni segunda versión del currículo de la web.
-- No elegir clase base de Imperator por comodidad del prototipo, ni imponer un destino o final.
+- La base **Galaxy → nueva Clase Valhalla** ya está elegida y es independiente del puente piloto; no imponer ese destino ni un final.
 - Los perfiles temporales no autorizan por sí solos naves posteriores a la fecha de campaña.
 
 ## Fuente de verdad / trazabilidad
@@ -50,4 +50,4 @@ Fuente: `docs/decisions/prototype_validation_and_release_policy.md` (DEC-0002).
 - `gameplay/careers/starfleet_service/README.md`; `docs/roadmap/game_design_readiness_v0_2.md`.
 - `docs/roadmap/master/PLAN_MAESTRO.md`; `docs/roadmap/master/DECISIONES_Y_RIESGOS.md`.
 
-**Pendiente exclusivamente de autor:** `DEC-0001` (Dama/Imperator; Sovereign provisional pero no elegida). `DEC-0002` (primer prototipo) ya aprobada; los umbrales cuantitativos esperan perfilado técnico. Véanse los expedientes en `docs/roadmap/master/fases/F01/`.
+**Aprobado por el autor:** `DEC-0001` (Galaxy inspira la nueva Clase Valhalla) y `DEC-0002` (primer prototipo interno Sensores). `DEC-0010–0012`: separación funcional y operativa, sistemas avanzados y permiso de cronología propia. **Fecha de servicio de la Valhalla SIN FIJAR**; umbrales, modelos 3D y pruebas técnicas pendientes. [Acta Valhalla](../roadmap/master/fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md).
