@@ -7,6 +7,7 @@ on:
     paths:
       - "tools/simulation/f06_reference.py"
       - "tools/simulation/test_f06_reference.py"
+      - "tools/simulation/test_f04_f05_f06_cross_phase.py"
       - "tools/simulation/resolve_sensor_scan.py"
       - "tools/simulation/test_sensor_detection_v0_1.py"
       - "docs/roadmap/master/fases/F06/**"
@@ -21,6 +22,7 @@ on:
     paths:
       - "tools/simulation/f06_reference.py"
       - "tools/simulation/test_f06_reference.py"
+      - "tools/simulation/test_f04_f05_f06_cross_phase.py"
       - "tools/simulation/resolve_sensor_scan.py"
       - "tools/simulation/test_sensor_detection_v0_1.py"
       - "docs/roadmap/master/fases/F06/**"
@@ -52,6 +54,8 @@ jobs:
       - name: F06 modelo, sensores, eventos y transferencias
         run: python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
 
+      - name: Contractual chain F04→F05→F06 (skipped until previous PR merge)
+        run: python -m unittest discover -s tools/simulation -p 'test_f04_f05_f06_cross_phase.py' -v
       - name: Cross-phase reference regression when branches are integrated
         run: |
           if [ -f tools/validation/test_f04_reference.py ]; then
