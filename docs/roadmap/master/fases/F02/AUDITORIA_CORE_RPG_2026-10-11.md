@@ -11,7 +11,7 @@
 | [CoreRPG CI de main](https://github.com/robdor80/CoreRPG/actions/runs/38046482745) | main `dcfcb83`, 2026-10-10 | GitHub Actions `completed/success`; no sustituye build UE5 |
 | [CoreRPG CI de rama 4.5](https://github.com/robdor80/CoreRPG/actions/runs/37812440972) | rama `2a3da89`, 2026-10-08 | GitHub Actions `completed/success`; no acredita merge |
 | [Star Trek main](https://github.com/robdor80/Videojuego_StarTrek/tree/164be98ab02d81ac9580160e555e75a10e6d489f) | `164be98ab02d81ac9580160e555e75a10e6d489f` | Base al crear rama F02 |
-| [F01, PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) | rama `docs/f01-vision-canon-scope` | F01 abierta; elección de Dama pendiente |
+| [F01, PR #2](https://github.com/robdor80/Videojuego_StarTrek/pull/2) | rama `docs/f01-vision-canon-scope`, foto del 11-10-2026 | **Estado entonces:** abierta y Dama pendiente. **Actualización 13-10-2026:** fusionada, Dama Galaxy → nueva Clase Valhalla aprobada |
 
 ## Capacidades comprobadas en CoreRPG/main
 
