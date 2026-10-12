@@ -71,9 +71,18 @@ Formato para añadir una propuesta:
 - **Idea vinculada:** [IDEA-0003 — Hangares independientes](IDEA-0003_hangares_independientes_atraque_simulado.md); lógica común con anclaje específico del yate, no una plaza de lanzaderas estándar.
 - **Invariante:** entidad única, ubicación y ocupantes persistentes; no puede estar a la vez acoplado y en vuelo.
 - **Dependencias candidatas:** F02, F03, F04, F07, F09, F11, F14 y F15, sin asignación definitiva.
-- **Nota de canon:** el archivo indica Sovereign M07 como base elegida; el Plan Maestro vigente en `main` todavía señala pendiente la elección de Dama/Imperator. El archivo no resuelve por sí solo esta discrepancia.
+- **Nota de decisión posterior (13-10-2026):** Sovereign M07 fue una referencia artística original de este yate, **no** la base elegida de la nueva Gran Dama. La nueva Clase Valhalla está inspirada en Galaxy. Incorporar el yate a Valhalla sería una adaptación por evaluar, no un resultado automático. Véase el expediente F01 en PR #2.
 - **Decisión del autor:** documento aportado como idea conceptualmente aprobada, solicitado su archivo con el número 4.
 - **Ejecución:** ninguna iniciada por este registro; Misión 08 (puertas del hangar de lanzaderas) es un trabajo independiente.
+
+### IDEA-0005 — Blindaje ablativo desplegable y torpedos transfásicos de Valhalla
+- **Fecha de aprobación:** 2026-10-13.
+- **Estado:** APROBADA CONCEPTUALMENTE; implementación y pruebas pendientes.
+- **Propuesta:** blindaje ablativo desplegable y torpedos transfásicos en la nueva **Clase Valhalla** (inspirada en Galaxy), como adición tecnológica de la continuidad personal del videojuego.
+- **Ficha detallada:** [IDEA-0005_blindaje_ablativo_y_torpedos_transfasicos_valhalla.md](IDEA-0005_blindaje_ablativo_y_torpedos_transfasicos_valhalla.md).
+- **Decisión del autor:** aprobadas ambas tecnologías; acepta ajustar acontecimientos/fechas del canon de TV. **Año de servicio Valhalla no fijado.** Viabilidad gráfica en Blender/UE5 y reglas de juego aún por estudiar.
+- **Áreas candidatas:** Star Trek específico, Core genérico solo para mecanismos comunes, UE5/VFX, Blender/activos y pruebas F07+; sin alterar v0.0.1 Sensores.
+- **Ejecución:** NO_INICIADA; no autoriza el cierre de ninguna fase.
 
 ## Ideas planificadas
 
