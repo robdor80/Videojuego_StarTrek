@@ -44,7 +44,10 @@ def authorization_binding_valid(request: dict[str, Any], context: dict[str, Any]
         "station_id": context.get("station_id"), "ship_id": context.get("ship_id"),
         "state_revision": context.get("state_revision"),
     }
-    if any(b.get(k) != v for k, v in expected.items()):
+    if (type(context.get("state_revision")) is not int
+            or type(b.get("state_revision")) is not int
+            or context["state_revision"] < 0
+            or any(b.get(k) != v for k, v in expected.items())):
         return False
     now, start, end = context.get("current_tick"), b.get("issued_tick"), b.get("expires_tick")
     return all(type(x) is int for x in (now, start, end, context.get("state_revision"))) and start <= now < end
@@ -79,9 +82,11 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
         return "authorization_binding_invalid_or_stale"
     if context.get("occupied_station") is not True:
         return "station_not_occupied"
-    if not request.get("scan_id") or not request.get("observer_id") or not request.get("operator_id"):
+    if any(not isinstance(request.get(k), str) or not request[k].strip()
+           for k in ("scan_id", "observer_id", "operator_id")):
         return "missing_identity"
-    if not context.get("campaign_time") or not context.get("ship_id"):
+    if any(not isinstance(context.get(k), str) or not context[k].strip()
+           for k in ("campaign_time", "ship_id")):
         return "missing_time_or_ship"
     if request.get("range_mode") not in RANGE_COST:
         return "unsupported_range_mode"
@@ -131,7 +136,11 @@ def validate_request(request: dict[str, Any], context: dict[str, Any]) -> str | 
         return "unsupported_ship_capability"
     if request["range_mode"] == "focused":
         cid = request.get("target_contact_id")
-        if not cid or cid not in context.get("known_contact_ids", []):
+        known = context.get("known_contact_ids")
+        if (not isinstance(cid, str) or not cid.strip()
+                or not isinstance(known, (list, tuple, set))
+                or any(not isinstance(x, str) for x in known)
+                or cid not in known):
             return "focused_target_not_known"
     return None
 
