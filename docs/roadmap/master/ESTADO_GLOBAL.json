@@ -210,12 +210,12 @@
         "P04": "EN_REVISION",
         "P05": "BLOQUEADA"
       },
-      "note": "Preparación paralela F07 autorizada por autor 2026-10-13; Sutherland para v0.0.1, Kelvin excluido/reservado. Cierre P02/P03 solo diseño; sin prueba UE5, ni activos MSI inventariados, ni licencia completamente verificada. F02 sigue única fase principal EN_CURSO; F08 planificada/pausada.",
+      "note": "Preparación F07 autorizada 2026-10-13. P02 dispone de generador y auditor de GLB UV/PBR técnico con tests CI de referencia, NO conversión Sutherland ni blindaje definitivo; P03 selección Sutherland, Kelvin excluido. F07 no jugable ni cerrada: MSI, importación UE5, colisiones, licencias y packaging pendientes. F02 sigue única fase principal EN_CURSO.",
       "file": "fases/F07/README.md",
       "achieved_maturity": "DISENO_VALIDADO",
       "step_evidence_maturity": {
         "P01": "DOCUMENTACION_AUDITADA",
-        "P02": "DISENO_VALIDADO",
+        "P02": "REFERENCIA_PROBADA",
         "P03": "DISENO_VALIDADO",
         "P04": "DISENO_VALIDADO",
         "P05": "IDEA"
@@ -225,7 +225,11 @@
         "fases/F07/P01_AUDITORIA_INVENTARIO.md",
         "fases/F07/P02_PIPELINE_PBR_BLINDAJE.md",
         "fases/F07/P03_PUENTE_PILOTO_SUTHERLAND.md",
-        "fases/F07/EVIDENCIA_Y_PENDIENTES.json"
+        "fases/F07/EVIDENCIA_Y_PENDIENTES.json",
+        "tools/assets/f07_pbr_plate.py",
+        "tools/assets/f07_gltf_audit.py",
+        "tools/validation/test_f07_pbr_pipeline.py",
+        ".github/workflows/f07-pbr-reference.yml"
       ]
     },
     {

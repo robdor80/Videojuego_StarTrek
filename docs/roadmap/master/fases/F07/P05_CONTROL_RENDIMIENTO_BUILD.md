@@ -9,3 +9,7 @@ Tras abrir el mapa Sutherland, anotar driver, versión concreta de UE5/proyecto,
 En empaquetado registrar tiempo/procedimiento, warnings, hash del ejecutable, si abre sin editor, assets realmente incluidos y derechos verificados. **No publicar binarios o texturas de terceros sin comprobación de permisos y atribuciones**, independientemente de la prueba personal.
 
 Para cerrar F07: completar UE07-01…09 con evidencia real en MSI, sin bloqueantes de navegación/interacción, material/colisión probado y telemetría/build trazables. Para F08 se exigirá adicionalmente **integración real** Core↔UE5, orden, detección, eventos y save/load. Un catálogo JSON/CI verde no basta.
+
+## Utilidades listas sin ejecutar Unreal
+
+El ensayo PBR generable con Python y su auditor estructural permiten verificar **antes** de UE que hay GLB válido, UV0, imágenes incrustadas y materiales glTF lit. La CI `f07-pbr-reference.yml` verifica únicamente esa etapa de referencia; no verifica hardware, FPS ni integración con un proyecto .uproject. Al ejecutar pruebas MSI, cumplimentar `EVIDENCIA_Y_PENDIENTES.json` con rutas/versions/logs y no sustituir resultados medidos por datos sintéticos.

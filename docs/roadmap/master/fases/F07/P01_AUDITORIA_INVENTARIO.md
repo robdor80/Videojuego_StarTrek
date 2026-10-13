@@ -21,3 +21,11 @@ Campos: ID estable basado en ruta, original, nombre amigable (alias), ruta relat
 
 ## Pendientes de ejecución
 Listado local de muchos modelos (autor, sin fecha límite), revisión por lotes; hashes original y export Rob3D; permisos de uso/atribución antes de distribuir; pruebas UE5/Blender. Catálogo de decisiones ya conocidas: assets/scenes/bridges/f07_registry.json.
+
+## Auditor estructural local adicional (nueva herramienta F07)
+
+El analizador `tools/assets/f07_gltf_audit.py` comprueba, sin modificar, integridad del contenedor GLB 2.0, vistas de buffers, accesores, UV por primitiva, materiales, extensiones unlit, imágenes, triángulos y SHA-256. No es un importador UE5, ni afirma escala transformada mundial ni derechos. En el MSI puede auditar el original Sutherland verificando previamente el SHA indicado en F02:
+
+    python tools/assets/f07_gltf_audit.py --input "C:\\ruta\\star_trek_sutherland_bridge.glb" --expect-sha256 53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b --output "C:\\Temp\\sutherland_audit.json"
+
+Esto se ejecutará solo cuando se disponga del GLB local; no consta ejecutado en el MSI.

@@ -14,3 +14,25 @@ Preparar placa individual con ID, pivote, sección del casco, espesor geométric
 
 ## Puerta local pendiente
 Una placa de blindaje de prueba + una sección interior Sutherland, con capturas bajo luces variadas, normales/roughness/metallic correctos, dimensiones y consumo medidos. La aprobación del tratamiento artístico no equivale a modelado ni a blindaje funcional.
+
+## Implementación de referencia verificable (13-10-2026)
+
+En `tools/assets/f07_pbr_plate.py` se ha creado un generador **independiente de Blender** que produce un GLB glTF 2.0 determinista, sin dependencias Python externas. Su placa de **laboratorio** contiene geometría real, normales, UV0, texturas PNG incrustadas para BaseColor, normal y ORM, y dos materiales **PBR lit**. No representa la geometría definitiva de Valhalla, ni despliegue, ni efecto de daño.
+
+En `tools/assets/f07_gltf_audit.py` hay un inspector GLB de **solo lectura**, con validación de cabecera, segmentos BIN/JSON, accesores, UV y referencias de texturas. Detecta material `KHR_materials_unlit`, emite SHA-256 y registra explícitamente que **UE5 no está probado**.
+
+### Ejecutar en cualquier Python 3.10+ sin Blender
+
+```powershell
+python tools/assets/f07_pbr_plate.py --output "C:\Temp\F07_Plate_Demo.glb" --manifest "C:\Temp\F07_Plate_Demo.manifest.json"
+python tools/assets/f07_gltf_audit.py --input "C:\Temp\F07_Plate_Demo.glb" --require-pbr --output "C:\Temp\F07_Plate_Demo.audit.json"
+python tools/validation/test_f07_pbr_pipeline.py -v
+```
+
+Nunca sobreescribir los originales; el generador **rechaza sobrescrituras por defecto**. `--force` solo debe usarse con salidas generadas deliberadamente, jamás con un asset descargado. Guardar derivados fuera de las carpetas maestras.
+
+**Evidencia técnica limitada:** el test automatizado ejercita el generador, detección de unlit, integridad GLB y UV, reproducibilidad, protección contra sobrescritura y prohibición de confundir los metadatos con prueba de UE5. La CI correspondiente es `.github/workflows/f07-pbr-reference.yml`. Registrar en el PR y acciones el resultado real; su aprobación permite decir **REFERENCIA_PROBADA del ejemplo procedural**, no que los materiales del Sutherland o Valhalla estén ya modificados.
+
+### Primer paso posterior en MSI
+
+Abrir `F07_Plate_Demo.glb` en Blender y Unreal, comprobar ejes/unidades, aspecto real de rugosidad/metalness, normals y maps ORM; reemplazar por modelo canónico solo tras decisión de arte. La conversión lit de la arquitectura Sutherland y la importación real siguen P02/P04 pendientes de ejecución local.
