@@ -50,4 +50,9 @@ Los valores antiguos `conn_navigation` y `computer_database` del contrato de int
 
 ## Evidencias y ejecución
 
-Se incluyen `tools/validation/test_f09_interconsole_reference.py` y `.github/workflows/f09-console-reference.yml` para QA automatizada de catálogo y escenarios negativos. **Las pruebas de CI, si pasan, acreditan solo la referencia Python y rutas de archivos.** Sin conexión real CoreRPG/UE5 ni pruebas MSI: **NO_EJECUTADO** para P01–P05 a nivel jugable. Para cerrar F09 se necesitarán SHA/versión de Core, pruebas de acciones reales autorizadas, persistencia, recursos/daños y test de la escena UE5 de cada dominio.
+Se incluyen [22 casos P05 solo de metadatos](../../../../../validation/fixtures/f09/f09_interconsole_scenarios_v0.1.json) (avería, combate, misión, orden multitarea y privacidad), `tools/validation/test_f09_interconsole_reference.py` y `.github/workflows/f09-console-reference.yml` para QA automatizada de catálogo y escenarios negativos. **Las pruebas de CI, si pasan, acreditan solo la referencia Python y rutas de archivos.** Sin conexión real CoreRPG/UE5 ni pruebas MSI: **NO_EJECUTADO** para P01–P05 a nivel jugable. Para cerrar F09 se necesitarán SHA/versión de Core, pruebas de acciones reales autorizadas, persistencia, recursos/daños y test de la escena UE5 de cada dominio.
+
+
+## Límite de compatibilidad heredada
+
+El contrato fijo `interconsole_data_package_contract.json` todavía enumera valores agrupados `conn_navigation` y `computer_database`, pero **no** todas las 16 etiquetas canónicas (`sensors`, `navigation`, `conn`, `computer`) como receptor. La matriz F09 es una **propuesta de normalización**; no puede conectarse al contrato fijo sin una migración aditiva acordada y pruebas de compatibilidad. Las 22 situaciones son intercambios de **metadatos**, no ensayos reales de reparaciones, fuego, transporte ni ejecución de órdenes.

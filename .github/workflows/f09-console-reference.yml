@@ -9,6 +9,7 @@ on:
       - "tools/validation/f09_interconsole_reference.py"
       - "tools/validation/test_f09_interconsole_reference.py"
       - "docs/roadmap/master/fases/F09/**"
+      - "validation/fixtures/f09/**"
       - ".github/workflows/f09-console-reference.yml"
   pull_request:
     paths:
@@ -24,7 +25,7 @@ permissions:
 
 jobs:
   f09-reference:
-    name: 31 comprobaciones sin Core ni UE5
+    name: 32 pruebas + 22 casos P05 (no Core ni UE5)
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

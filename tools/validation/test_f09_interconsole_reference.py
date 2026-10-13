@@ -154,6 +154,29 @@ class F09ReferenceTests(unittest.TestCase):
         p["target_system"] = []
         self.assertEqual(self.decision(p, t), RESULT_DENY)
 
+    def test_p05_reference_scenario_fixture(self):
+        path = ROOT / "validation/fixtures/f09/f09_interconsole_scenarios_v0.1.json"
+        fixture = json.loads(path.read_text("utf-8"))
+        self.assertEqual(fixture["execution_level"], "reference_only")
+        self.assertEqual(fixture["case_count"], 22)
+        self.assertEqual(len(fixture["cases"]), 22)
+        self.assertEqual(set(c["scenario"] for c in fixture["cases"]),
+                         {"averia", "combate", "mision", "multitarea", "privacidad"})
+        seen = set()
+        for case in fixture["cases"]:
+            with self.subTest(case=case["case_id"]):
+                self.assertNotIn(case["case_id"], seen)
+                seen.add(case["case_id"])
+                actual = assess_handoff(
+                    case["packet"], case["trusted_reference_context"], self.matrix
+                )
+                self.assertEqual(actual["decision"], case["expected_decision"])
+                self.assertIn(actual["reason"], {
+                    "metadata_transfer_only", "unobserved_or_forbidden_refs",
+                    "route_not_authorized", "same_family_not_handoff",
+                    "route_not_designed", "ambiguous_legacy_target",
+                })
+
     def test_missing_fields_denied(self):
         p, t = self.sample()
         del p["provenance"]
