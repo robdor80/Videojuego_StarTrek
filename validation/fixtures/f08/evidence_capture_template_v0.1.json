@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "notice": "Plantilla sin ejecucion real",
+  "fixture_id": "sensors_vertical_slice_acceptance_v0_0_1",
+  "campaign_context": {
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-03-14",
+    "campaign_seed": "fixture_sensor_v0_0_1"
+  },
+  "execution_kind": "NO_EJECUTADO",
+  "environment": {},
+  "order": {},
+  "events": [],
+  "public_projection": {},
+  "save_load": {
+    "before": null,
+    "after": null
+  },
+  "artifacts": {},
+  "cases": {
+    "deterministic_world": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "reality_precedes_scan": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "persistent_identity": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "detection_not_truth_creation": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "hidden_information_gate": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "anti_leakage": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "observer_relative_contacts": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "system_state_matters": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "event_chain": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "knowledge_visibility": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "ai_boundary": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "save_load_roundtrip": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    },
+    "era_validity": {
+      "status": "NO_EJECUTADO",
+      "evidence_ids": []
+    }
+  }
+}

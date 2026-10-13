@@ -1,0 +1,48 @@
+name: F08 — contrato y evidencias de aceptación (NO UE5)
+
+on:
+  push:
+    branches:
+      - feat/f08-preparacion-guardia-sensores-v001
+    paths:
+      - "tools/validation/f08_acceptance_gate.py"
+      - "tools/validation/test_f08_acceptance_gate.py"
+      - "validation/fixtures/f08/**"
+      - "validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
+      - "docs/roadmap/master/fases/F08/**"
+      - ".github/workflows/f08-acceptance-contracts.yml"
+  pull_request:
+    paths:
+      - "tools/validation/f08_acceptance_gate.py"
+      - "tools/validation/test_f08_acceptance_gate.py"
+      - "validation/fixtures/f08/**"
+      - "validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
+      - "docs/roadmap/master/fases/F08/**"
+      - ".github/workflows/f08-acceptance-contracts.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  f08-reference-qa:
+    name: F08 — 20 tests auditor de evidencias (NO runtime)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sintaxis
+        run: python -m py_compile tools/validation/f08_acceptance_gate.py tools/validation/test_f08_acceptance_gate.py
+      - name: Validador de evidencias y negativos
+        run: python -m unittest discover -s tools/validation -p 'test_f08_acceptance_gate.py' -v
+      - name: La plantilla nunca debe superar aceptación
+        run: |
+          if python tools/validation/f08_acceptance_gate.py --capture validation/fixtures/f08/evidence_capture_template_v0.1.json --artifacts-dir validation/fixtures/f08/; then
+            echo "ERROR: plantilla NO_EJECUTADO aceptada";
+            exit 1;
+          else
+            echo "OK: la plantilla sin ejecución es rechazada";
+          fi

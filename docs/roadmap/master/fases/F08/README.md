@@ -25,6 +25,17 @@ Una guardia completa de Sensores en un puente 3D con órdenes, resultados y cont
 
 **Tratamiento:** auditar vigencia de archivos y subcontratos antes de afirmar que cada paso está cerrado; conservar rutas originales y referenciarlas en la [matriz de reutilización](../../MATRIZ_REUTILIZACION.md).
 
+
+## Preparación paralela autorizada el 13-10-2026 (sin cierre)
+
+Tras completar los preparativos autónomos posibles de F07 (PR #11 y #12 fusionadas), se ha autorizado **preparar** F08 sin ocultar las puertas de UE5/Core. Entregables de la rama:
+
+- [F08-P01 — escenario de guardia, identidades, orden y límites](P01_ESCENARIO_GUARDIA_PREPARACION.md): documentación de puesta en escena, **sin ejecución**.
+- [F08-P02…P05 — plan de pruebas y aceptación](PLAN_DE_ACEPTACION_P02_P05.md): secuencia, casos negativos, 13 invariantes y evidencias requeridas, todas **NO_EJECUTADO**.
+- [Validador y balance de ejecución](VALIDADOR_EVIDENCIAS_Y_ESTADO.md): **20 tests Python del auditor verificados en CI**, **NO** Core/UE5. Reutiliza fixtures F08 (`validation/fixtures/f08/`) y CLI de solo lectura (`tools/validation/f08_acceptance_gate.py`).
+
+La fase permanece **PLANIFICADA / PAUSADA para runtime**, sin alterar el estado global ni señalar P01–P05 como cerrados. F02 conserva su condición de única fase principal EN_CURSO. Para completar F08 hay que integrar Core↔UE5, importar y recorrer Sutherland en el MSI, ejecutar los casos y adjuntar build/logs verificables.
+
 ## Dependencias y límites
 
 F02–F07 y runtime Core RPG real siguen siendo dependencias. En particular, la [prueba de referencia integrada de Sensores](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021) **no** acredita save/load real ni un puente UE5 jugable. No cerrar por documentación únicamente.

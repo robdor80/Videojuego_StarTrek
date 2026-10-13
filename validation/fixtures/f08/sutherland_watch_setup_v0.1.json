@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.1.0",
+  "id": "f08_sutherland_watch_setup_v0_0_1",
+  "status": "PREPARACION_NO_CORE_NO_UE5",
+  "fixture_id": "sensors_vertical_slice_acceptance_v0_0_1",
+  "campaign_context": {
+    "era_id": "tng_ds9_voyager",
+    "campaign_date": "2372-03-14",
+    "campaign_seed": "fixture_sensor_v0_0_1"
+  },
+  "presentation": {
+    "bridge_asset": "USS Sutherland",
+    "excluded_bridge_asset": "Kelvin",
+    "proposed_level": "L_F07_Sutherland_Transit_Test",
+    "language": "es",
+    "controls": [
+      "move",
+      "look",
+      "interact",
+      "cancel"
+    ]
+  },
+  "required_bindings": {
+    "player": "alferez_on_duty_from_core",
+    "captain": "appointed_npc_from_core",
+    "order": "authorized_action_from_core",
+    "world": "materialized_before_scan",
+    "projection": "observer_only",
+    "history": "append_only",
+    "save_load": "round_trip_from_core"
+  },
+  "requires_runtime_validation": true
+}
