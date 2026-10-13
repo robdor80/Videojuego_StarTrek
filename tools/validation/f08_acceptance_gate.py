@@ -61,7 +61,6 @@ def _validate_events(record: dict, errors: list[str]) -> None:
         seen.add(eid)
         if not nonempty(etype):
             _issue(errors, "EVENT_TYPE_INVALID")
-        else:
         if "candidate_only" in event or "requires_core_confirmation" in event:
             _issue(errors, "CANDIDATE_EVENT_NOT_COMMITTED")
         provenance = event.get("provenance")
