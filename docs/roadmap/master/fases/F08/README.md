@@ -32,6 +32,7 @@ Tras completar los preparativos autónomos posibles de F07 (PR #11 y #12 fusiona
 
 - [F08-P01 — escenario de guardia, identidades, orden y límites](P01_ESCENARIO_GUARDIA_PREPARACION.md): documentación de puesta en escena, **sin ejecución**.
 - [F08-P02…P05 — plan de pruebas y aceptación](PLAN_DE_ACEPTACION_P02_P05.md): secuencia, casos negativos, 13 invariantes y evidencias requeridas, todas **NO_EJECUTADO**.
+- [Validador y balance de ejecución](VALIDADOR_EVIDENCIAS_Y_ESTADO.md): **20 tests Python del auditor verificados en CI**, **NO** Core/UE5. Reutiliza fixtures F08 (`validation/fixtures/f08/`) y CLI de solo lectura (`tools/validation/f08_acceptance_gate.py`).
 
 La fase permanece **PLANIFICADA / PAUSADA para runtime**, sin alterar el estado global ni señalar P01–P05 como cerrados. F02 conserva su condición de única fase principal EN_CURSO. Para completar F08 hay que integrar Core↔UE5, importar y recorrer Sutherland en el MSI, ejecutar los casos y adjuntar build/logs verificables.
 
