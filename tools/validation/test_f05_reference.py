@@ -162,5 +162,29 @@ class TestF05Reference(unittest.TestCase):
             self.assertNotEqual(assess_raw(invalid)["verdict"], "ALLOW_REFERENCE")
 
 
+    def test_textual_approval_does_not_override_captain(self):
+        outcome = assess(dict(phase="issue", control_mode="proposal_requires_approval",
+                              policy_change=True, issuer_role="xo",
+                              captain_approved="yes"))
+        self.assertEqual((outcome["verdict"], outcome["reason"]),
+                         ("WAIT_APPROVAL", "captain_approval_required"))
+
+    def test_textual_delegation_scope_does_not_grant_authority(self):
+        outcome = assess(dict(delegation_required=True, delegation_status="active",
+                              within_delegation_scope="false"))
+        self.assertEqual((outcome["verdict"], outcome["reason"]),
+                         ("REFUSE", "delegation_scope"))
+
+    def test_reference_binding_rejects_boolean_revision_as_one(self):
+        binding = dict(source="F04_REFERENCE", decision="ALLOW",
+                       actor_id="test:captain", action_id="bridge_order",
+                       station_id="test:bridge", state_revision=True,
+                       issued_tick=90, expires_tick=110)
+        outcome = assess({"state_revision": 1,
+                          "authorization_binding": binding})
+        self.assertEqual((outcome["verdict"], outcome["reason"]),
+                         ("REFUSE", "authority_binding_invalid"))
+
+
 if __name__ == "__main__":
     unittest.main()

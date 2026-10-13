@@ -50,7 +50,8 @@ def assess(case: dict) -> dict:
                 ("station_id", "station_id"), ("state_revision", "state_revision")
             )):
                 return _out("REFUSE", "authority_binding_invalid")
-            if b.get("source") != "F04_REFERENCE" or b.get("decision") != "ALLOW":
+            if (type(b.get("state_revision")) is not int
+                    or b.get("source") != "F04_REFERENCE" or b.get("decision") != "ALLOW"):
                 return _out("REFUSE", "authority_binding_invalid")
             if (type(case.get("current_tick")) is not int or
                 type(b.get("issued_tick")) is not int or
@@ -106,11 +107,11 @@ def assess(case: dict) -> dict:
 
     if case.get("delegation_required", False) and case.get("delegation_status", "none") != "active":
         return _out("REFUSE", "delegation_inactive")
-    if case.get("delegation_required", False) and not case.get("within_delegation_scope", True):
+    if case.get("delegation_required", False) and case.get("within_delegation_scope") is not True:
         return _out("REFUSE", "delegation_scope")
     mode = case.get("control_mode", "none")
     if case.get("policy_change", False) and mode in ("manual", "proposal_requires_approval"):
-        if not case.get("captain_approved", False) and case.get("issuer_role", "officer") != "captain":
+        if case.get("captain_approved") is not True and case.get("issuer_role", "officer") != "captain":
             return _out("WAIT_APPROVAL", "captain_approval_required")
 
     if case.get("phase", "issue") == "execute":
