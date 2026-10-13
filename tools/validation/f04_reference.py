@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import math
 from pathlib import Path
 
 ACTIONS = {
@@ -23,19 +24,19 @@ def result(decision: str, code: str, **extra: object) -> dict:
 def current_command(ctx: dict) -> bool:
     """Formal command appointment, or qualified and time-bound acting command."""
     if ctx.get("position") == "commanding_officer":
-        return bool(ctx.get("appointment_active"))
+        return ctx.get("appointment_active") is True
     return all((
-        ctx.get("acting_command"),
-        ctx.get("acting_appointment_active"),
-        ctx.get("command_qualified"),
+        ctx.get("acting_command") is True,
+        ctx.get("acting_appointment_active") is True,
+        ctx.get("command_qualified") is True,
     ))
 
 
 def valid_delegation(ctx: dict, domain: str) -> bool:
     d = ctx.get("delegation") or {}
     t = ctx.get("now")
-    if not (isinstance(t, int) and isinstance(d.get("starts_at"), int)
-            and isinstance(d.get("ends_at"), int)):
+    if not (type(t) is int and type(d.get("starts_at")) is int
+            and type(d.get("ends_at")) is int):
         return False
     return all((
         d.get("from_authorized_commander") is True,
@@ -142,6 +143,7 @@ def issue_reference_binding(ctx: dict, *, actor_id: str, action_id: str,
         or issued_tick >= expires_tick or ctx.get("action") != action_id
         or ctx.get("actor_id") != actor_id
         or ctx.get("station_id") != station_id
+        or type(ctx.get("state_revision")) is not int
         or ctx.get("state_revision") != state_revision):
         return None
     if evaluate(ctx)["decision"] != "ALLOW":
@@ -197,11 +199,17 @@ def check_schedule(items: list[dict]) -> list[str]:
         if ident in indexed:
             errors.append("DUPLICATED_ACTIVITY:" + ident)
         indexed[ident] = it
-        if not isinstance(it.get("start"), int) or not isinstance(it.get("end"), int) or it["start"] >= it["end"]:
+        if (type(it.get("start")) is not int or type(it.get("end")) is not int
+                or it["start"] >= it["end"]):
             errors.append("INVALID_WINDOW:" + ident)
     for n, a in enumerate(items):
         for b in items[n + 1:]:
             if a["character_id"] != b["character_id"]:
+                continue
+            # Bad time windows cannot justify an overlap exemption or raise TypeError.
+            if (type(a.get("start")) is not int or type(a.get("end")) is not int
+                    or type(b.get("start")) is not int or type(b.get("end")) is not int
+                    or a["start"] >= a["end"] or b["start"] >= b["end"]):
                 continue
             if not (a.get("exclusive", True) and b.get("exclusive", True)):
                 continue
@@ -213,8 +221,9 @@ def check_schedule(items: list[dict]) -> list[str]:
                 if all((
                     emergency.get("kind") == "emergency",
                     bool(interrupted.get("preemption_event_id")),
-                    isinstance(interrupted.get("fatigue_debt"), (int, float)),
-                    isinstance(interrupted.get("fatigue_debt"), (int, float))
+                    type(interrupted.get("fatigue_debt")) in (int, float),
+                    type(interrupted.get("fatigue_debt")) in (int, float)
+                    and math.isfinite(interrupted["fatigue_debt"])
                     and interrupted["fatigue_debt"] > 0,
                 )):
                     continue
