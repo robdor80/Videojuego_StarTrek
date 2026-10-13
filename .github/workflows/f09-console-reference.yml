@@ -1,0 +1,43 @@
+name: F09 — contratos de consolas (solo referencia)
+
+on:
+  push:
+    branches:
+      - feat/f09-console-contracts-reference-20261013
+    paths:
+      - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "tools/validation/f09_interconsole_reference.py"
+      - "tools/validation/test_f09_interconsole_reference.py"
+      - "docs/roadmap/master/fases/F09/**"
+      - "validation/fixtures/f09/**"
+      - ".github/workflows/f09-console-reference.yml"
+  pull_request:
+    paths:
+      - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "tools/validation/f09_interconsole_reference.py"
+      - "tools/validation/test_f09_interconsole_reference.py"
+      - "docs/roadmap/master/fases/F09/**"
+      - ".github/workflows/f09-console-reference.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  f09-reference:
+    name: 32 pruebas + 22 casos P05 (no Core ni UE5)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Comprobar sintaxis y JSON
+        run: |
+          python -m py_compile tools/validation/f09_interconsole_reference.py tools/validation/test_f09_interconsole_reference.py
+          python -m json.tool gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json > /dev/null
+      - name: Verificar catálogo de 16 familias
+        run: python tools/validation/f09_interconsole_reference.py
+      - name: Pruebas positivas, negativas y separación de autoridad
+        run: python -m unittest discover -s tools/validation -p 'test_f09_interconsole_reference.py' -v

@@ -1,0 +1,706 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "P05: situaciones referenciales de intercambio; NO avería/combate/misión/orden Core ejecutados",
+  "execution_level": "reference_only",
+  "case_count": 22,
+  "cases": [
+    {
+      "case_id": "fault_sensor_to_engineering",
+      "scenario": "averia",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-fault_sensor_to_engineering",
+        "source_system": "sensors",
+        "target_system": "engineering",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "diag-sens-001"
+        ],
+        "provenance": {
+          "source_refs": [
+            "diag-sens-001"
+          ],
+          "source_system": "sensors",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "diag-sens-001"
+        ],
+        "permitted_routes": [
+          "sensors->engineering"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "power_sensor_to_operations",
+      "scenario": "averia",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-power_sensor_to_operations",
+        "source_system": "sensors",
+        "target_system": "operations",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "obs-power-002"
+        ],
+        "provenance": {
+          "source_refs": [
+            "obs-power-002"
+          ],
+          "source_system": "sensors",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "obs-power-002"
+        ],
+        "permitted_routes": [
+          "sensors->operations"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "science_new_finding_to_command",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-science_new_finding_to_command",
+        "source_system": "science",
+        "target_system": "command",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "analysis-003"
+        ],
+        "provenance": {
+          "source_refs": [
+            "analysis-003"
+          ],
+          "source_system": "science",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "analysis-003"
+        ],
+        "permitted_routes": [
+          "science->command"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "navigation_solution_to_conn",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-navigation_solution_to_conn",
+        "source_system": "navigation",
+        "target_system": "conn",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "nav-004"
+        ],
+        "provenance": {
+          "source_refs": [
+            "nav-004"
+          ],
+          "source_system": "navigation",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "nav-004"
+        ],
+        "permitted_routes": [
+          "navigation->conn"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "conn_course_report_to_command",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-conn_course_report_to_command",
+        "source_system": "conn",
+        "target_system": "command",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "heading-005"
+        ],
+        "provenance": {
+          "source_refs": [
+            "heading-005"
+          ],
+          "source_system": "conn",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "heading-005"
+        ],
+        "permitted_routes": [
+          "conn->command"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "tactical_threat_to_command",
+      "scenario": "combate",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-tactical_threat_to_command",
+        "source_system": "tactical",
+        "target_system": "command",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "threat-006"
+        ],
+        "provenance": {
+          "source_refs": [
+            "threat-006"
+          ],
+          "source_system": "tactical",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "threat-006"
+        ],
+        "permitted_routes": [
+          "tactical->command"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "security_alert_to_tactical",
+      "scenario": "combate",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-security_alert_to_tactical",
+        "source_system": "security",
+        "target_system": "tactical",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "security-007"
+        ],
+        "provenance": {
+          "source_refs": [
+            "security-007"
+          ],
+          "source_system": "security",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "security-007"
+        ],
+        "permitted_routes": [
+          "security->tactical"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "engineering_damage_to_operations",
+      "scenario": "averia",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-engineering_damage_to_operations",
+        "source_system": "engineering",
+        "target_system": "operations",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "damage-008"
+        ],
+        "provenance": {
+          "source_refs": [
+            "damage-008"
+          ],
+          "source_system": "engineering",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "damage-008"
+        ],
+        "permitted_routes": [
+          "engineering->operations"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "comms_to_mission_ops",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-comms_to_mission_ops",
+        "source_system": "communications",
+        "target_system": "mission_ops",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "call-009"
+        ],
+        "provenance": {
+          "source_refs": [
+            "call-009"
+          ],
+          "source_system": "communications",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "call-009"
+        ],
+        "permitted_routes": [
+          "communications->mission_ops"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "mission_ops_to_transporter",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-mission_ops_to_transporter",
+        "source_system": "mission_ops",
+        "target_system": "transporter",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "mission-010"
+        ],
+        "provenance": {
+          "source_refs": [
+            "mission-010"
+          ],
+          "source_system": "mission_ops",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "mission-010"
+        ],
+        "permitted_routes": [
+          "mission_ops->transporter"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "transporter_to_medical",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-transporter_to_medical",
+        "source_system": "transporter",
+        "target_system": "medical",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "transport-011"
+        ],
+        "provenance": {
+          "source_refs": [
+            "transport-011"
+          ],
+          "source_system": "transporter",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "transport-011"
+        ],
+        "permitted_routes": [
+          "transporter->medical"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "medical_redacted_to_command",
+      "scenario": "privacidad",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-medical_redacted_to_command",
+        "source_system": "medical",
+        "target_system": "command",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "redacted-012"
+        ],
+        "provenance": {
+          "source_refs": [
+            "redacted-012"
+          ],
+          "source_system": "medical",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "redacted-012"
+        ],
+        "permitted_routes": [
+          "medical->command"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "environment_to_engineering",
+      "scenario": "averia",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-environment_to_engineering",
+        "source_system": "environmental",
+        "target_system": "engineering",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "pressure-013"
+        ],
+        "provenance": {
+          "source_refs": [
+            "pressure-013"
+          ],
+          "source_system": "environmental",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "pressure-013"
+        ],
+        "permitted_routes": [
+          "environmental->engineering"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "flight_deck_to_operations",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-flight_deck_to_operations",
+        "source_system": "flight_deck",
+        "target_system": "operations",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "bay-014"
+        ],
+        "provenance": {
+          "source_refs": [
+            "bay-014"
+          ],
+          "source_system": "flight_deck",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "bay-014"
+        ],
+        "permitted_routes": [
+          "flight_deck->operations"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "computer_to_science",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-computer_to_science",
+        "source_system": "computer",
+        "target_system": "science",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "db-summary-015"
+        ],
+        "provenance": {
+          "source_refs": [
+            "db-summary-015"
+          ],
+          "source_system": "computer",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "db-summary-015"
+        ],
+        "permitted_routes": [
+          "computer->science"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "captain_command_to_engineering",
+      "scenario": "multitarea",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-captain_command_to_engineering",
+        "source_system": "command",
+        "target_system": "engineering",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "order-016"
+        ],
+        "provenance": {
+          "source_refs": [
+            "order-016"
+          ],
+          "source_system": "command",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "order-016"
+        ],
+        "permitted_routes": [
+          "command->engineering"
+        ]
+      },
+      "expected_decision": "ACCEPT_DATA_ONLY"
+    },
+    {
+      "case_id": "unobserved_enemy_identity",
+      "scenario": "combate",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-unobserved_enemy_identity",
+        "source_system": "sensors",
+        "target_system": "tactical",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "secret-017"
+        ],
+        "provenance": {
+          "source_refs": [
+            "secret-017"
+          ],
+          "source_system": "sensors",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [],
+        "permitted_routes": [
+          "sensors->tactical"
+        ]
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "case_id": "unauthorized_medical_data",
+      "scenario": "privacidad",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-unauthorized_medical_data",
+        "source_system": "medical",
+        "target_system": "command",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "patient-018"
+        ],
+        "provenance": {
+          "source_refs": [
+            "patient-018"
+          ],
+          "source_system": "medical",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "patient-018"
+        ],
+        "permitted_routes": []
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "case_id": "unauthorized_captain_override",
+      "scenario": "multitarea",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-unauthorized_captain_override",
+        "source_system": "command",
+        "target_system": "transporter",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "directive-019"
+        ],
+        "provenance": {
+          "source_refs": [
+            "directive-019"
+          ],
+          "source_system": "command",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "directive-019"
+        ],
+        "permitted_routes": []
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "case_id": "unapproved_same_console",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-unapproved_same_console",
+        "source_system": "science",
+        "target_system": "science",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "analysis-020"
+        ],
+        "provenance": {
+          "source_refs": [
+            "analysis-020"
+          ],
+          "source_system": "science",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "analysis-020"
+        ],
+        "permitted_routes": [
+          "science->science"
+        ]
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "case_id": "nonexistent_route_to_sensor",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-nonexistent_route_to_sensor",
+        "source_system": "medical",
+        "target_system": "sensors",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "triage-021"
+        ],
+        "provenance": {
+          "source_refs": [
+            "triage-021"
+          ],
+          "source_system": "medical",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "triage-021"
+        ],
+        "permitted_routes": [
+          "medical->sensors"
+        ]
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "case_id": "legacy_ambiguous_destination",
+      "scenario": "mision",
+      "scope": "metadata_reference_only",
+      "packet": {
+        "package_id": "f09-legacy_ambiguous_destination",
+        "source_system": "navigation",
+        "target_system": "conn_navigation",
+        "created_at": "stardate:2372.1",
+        "priority": "normal",
+        "status": "queued",
+        "payload_refs": [
+          "nav-022"
+        ],
+        "provenance": {
+          "source_refs": [
+            "nav-022"
+          ],
+          "source_system": "navigation",
+          "confidence": "medium"
+        }
+      },
+      "trusted_reference_context": {
+        "known_refs": [
+          "nav-022"
+        ],
+        "permitted_routes": [
+          "navigation->conn_navigation"
+        ]
+      },
+      "expected_decision": "CLARIFY_TARGET"
+    }
+  ]
+}

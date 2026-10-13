@@ -32,3 +32,7 @@ F06 y F08 como patrón; F02–F05 para acciones y persistencia.
 ## Puerta de cierre
 
 Pruebas ejecutables por estación y operación integrada; el catálogo de 16 familias no acredita operación completa. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+## Preparación paralela F09 · 13-10-2026 (NO jugable)
+
+Se ha iniciado, con autorización del autor, el trabajo autónomo **P01–P05 a nivel de referencia**: [inventario, prioridades, contratos, pruebas y bloqueos](PREPARACION_P01_P05_REFERENCIA.md). [Matriz de las 16 familias](../../../../../gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json), [verificador puro de datos](../../../../../tools/validation/f09_interconsole_reference.py) y [tests](../../../../../tools/validation/test_f09_interconsole_reference.py). La CI de referencia verifica la estructura y casos negativos, **no** un puente UE5 ni acciones Core. F02 sigue siendo la única fase global EN_CURSO; F09 no adquiere estado CERRADA ni UE5_JUGABLE por esta preparación.
