@@ -84,6 +84,19 @@ Formato para añadir una propuesta:
 - **Áreas candidatas:** Star Trek específico, Core genérico solo para mecanismos comunes, UE5/VFX, Blender/activos y pruebas F07+; sin alterar v0.0.1 Sensores.
 - **Ejecución:** NO_INICIADA; no autoriza el cierre de ninguna fase.
 
+### IDEA-0006 — Sistema de temporadas narrativas y misiones episódicas
+- **Fecha de aprobación:** 2026-10-13.
+- **Estado:** APROBADA (diseño conceptual); planificación técnica e implementación pendientes.
+- **Propuesta:** temporadas con episodios/misiones conectadas por una trama común, ramificaciones y consecuencias persistentes; adecuación al tipo/capacidades de nave y al rango/puesto del jugador; órdenes oficiales por cadena de mando y periodos de vida libre entre capítulos.
+- **Contenido externo:** diseño de nuevas temporadas por el autor con ChatGPT e importación de **Season Packs** estructurados/versionados, sin recompilar cuando utilicen mecánicas y recursos ya soportados.
+- **Coexistencia:** misiones emergentes del universo, guardias ordinarias, ocio, exploración y NPC que actúan fuera de escena; los contenidos narrativos no crean arbitrariamente hechos ni resultados autoritativos.
+- **Ficha detallada:** [IDEA-0006_temporadas_narrativas_misiones_episodicas.md](IDEA-0006_temporadas_narrativas_misiones_episodicas.md).
+- **Relación con sistemas existentes:** `mission_state`, `mission_objective_state`, `starfleet_mission_tasking_order`, continuidad de campaña, autoridad/participación por rol y misiones emergentes desde World State.
+- **Fases candidatas:** F02, F03, F04–F05, F11–F15; principalmente F11 y F13. Asignación definitiva pendiente.
+- **Decisión del autor:** aprobada expresamente tras debate el 2026-10-13.
+- **Numeración:** registrada como 0006 porque el número 0005 ya pertenece a las tecnologías de la Clase Valhalla.
+- **Ejecución:** no iniciada por el registro; no modifica el alcance de la v0.0.1 de Sensores ni abre otra fase.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
