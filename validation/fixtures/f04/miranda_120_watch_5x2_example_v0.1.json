@@ -1,0 +1,135 @@
+{
+  "schema_version": "0.1.0",
+  "scenario_id": "f04_miranda_120_two_roster_patterns",
+  "status": "ILLUSTRATIVE_TEST_CASE_NOT_CANON",
+  "intent": "One 120-person Miranda patrol/exploration test population, 6 continuous stations, 5 workdays + 2 offdays, compare 3x8 versus 4x6; no automated UE5/Core roster",
+  "ship": {
+    "class_id": "miranda",
+    "mission_profile": "routine_patrol_exploration",
+    "crew_count": 120,
+    "crew_count_origin": "USER_APPROVED_EXAMPLE_NOT_CLASS_REFERENCE",
+    "civilians_excluded": true
+  },
+  "week_days": [
+    "monday",
+    "tuesday",
+    "wednesday",
+    "thursday",
+    "friday",
+    "saturday",
+    "sunday"
+  ],
+  "stations": [
+    "bridge_watch_officer",
+    "helm_navigation",
+    "sensors",
+    "operations_communications",
+    "engineering_watch",
+    "security_tactical"
+  ],
+  "pair_schedule_template": {
+    "member_a_off": [
+      5,
+      6
+    ],
+    "member_b_off": [
+      2,
+      3
+    ],
+    "pair_stagger_offset": "(station_index * watch_count + watch_index) % 7",
+    "work_days_per_week": 5,
+    "off_days_per_week": 2,
+    "overlap_workdays_used_for": "relief_handoff_training_support",
+    "unique_crew_ids_per_pair": true
+  },
+  "models": [
+    {
+      "id": "three_8h",
+      "watch_count": 3,
+      "watch_hours": 8,
+      "watches": [
+        {
+          "name": "alpha",
+          "start": 8,
+          "end": 16
+        },
+        {
+          "name": "beta",
+          "start": 16,
+          "end": 24
+        },
+        {
+          "name": "gamma",
+          "start": 0,
+          "end": 8
+        }
+      ],
+      "staff_per_station_watch": 2,
+      "station_staff_total": 36,
+      "other_staff": {
+        "engineering_maintenance": 19,
+        "security_patrol_response": 15,
+        "science_research": 13,
+        "medical": 9,
+        "hangar_logistics_supplies": 11,
+        "command_planning_administration": 8,
+        "services_wellbeing_training": 9
+      }
+    },
+    {
+      "id": "four_6h",
+      "watch_count": 4,
+      "watch_hours": 6,
+      "watches": [
+        {
+          "name": "alpha",
+          "start": 6,
+          "end": 12
+        },
+        {
+          "name": "beta",
+          "start": 12,
+          "end": 18
+        },
+        {
+          "name": "gamma",
+          "start": 18,
+          "end": 24
+        },
+        {
+          "name": "delta",
+          "start": 0,
+          "end": 6
+        }
+      ],
+      "staff_per_station_watch": 2,
+      "station_staff_total": 48,
+      "other_staff": {
+        "engineering_maintenance": 15,
+        "security_patrol_response": 11,
+        "science_research": 11,
+        "medical": 9,
+        "hangar_logistics_supplies": 10,
+        "command_planning_administration": 8,
+        "services_wellbeing_training": 8
+      }
+    }
+  ],
+  "important_limits": [
+    "Medical response is on-call/shift coverage and is NOT validated by the six continuous station roster",
+    "No vacations, sick leave, multi-week fairness, or simultaneous-casualty resilience proven",
+    "Handoff minutes, travel, sleep, biological differences, authorized command decisions and fatigue are extra constraints",
+    "Nominal work-days can include training or support rather than station occupancy",
+    "Unfilled station remains unfilled; no generated substitute NPC",
+    "Clinical, engineering, security and logistics support staffing is illustrative only and NOT validated as sufficient under casualty/alert state",
+    "No real persistent NPCs, CoreRPG schedule, WorldState, save/load or UE5"
+  ],
+  "expected": {
+    "ship_crew_total": 120,
+    "continuous_stations": 6,
+    "coverage_hours_per_day": 144,
+    "coverage_hours_per_week": 1008,
+    "weekly_staffing_hours_per_model": 1440,
+    "weekly_hours_outside_continuous_station_duty": 432
+  }
+}
