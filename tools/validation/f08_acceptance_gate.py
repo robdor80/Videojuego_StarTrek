@@ -50,7 +50,6 @@ def _validate_events(record: dict, errors: list[str]) -> None:
     seen: set[str] = set()
     sequence: list[str] = []
     named: dict[str, dict] = {}
-    event_types = set()
     for event in events:
         if not isinstance(event, dict):
             _issue(errors, "EVENT_MALFORMED")
@@ -63,8 +62,7 @@ def _validate_events(record: dict, errors: list[str]) -> None:
         if not nonempty(etype):
             _issue(errors, "EVENT_TYPE_INVALID")
         else:
-            event_types.add(etype)
-        if event.get("candidate_only") is not None or event.get("requires_core_confirmation") is not None:
+        if "candidate_only" in event or "requires_core_confirmation" in event:
             _issue(errors, "CANDIDATE_EVENT_NOT_COMMITTED")
         provenance = event.get("provenance")
         if not isinstance(provenance, dict) or not provenance:
@@ -99,6 +97,9 @@ def _validate_events(record: dict, errors: list[str]) -> None:
     action = named["ACTION_STARTED"].get("subject_refs", {})
     result = named["RESULT_CREATED"].get("subject_refs", {})
     report = named["REPORT_MADE"].get("subject_refs", {})
+    if not all(isinstance(x, dict) for x in (action, result, report)):
+        _issue(errors, "EVENT_SUBJECTS_MALFORMED")
+        return
     if (not nonempty(action.get("operation_id"))
             or result.get("operation_id") != action.get("operation_id")):
         _issue(errors, "OPERATION_REFERENCE_MISMATCH")
@@ -108,6 +109,9 @@ def _validate_events(record: dict, errors: list[str]) -> None:
     if (named["ORDER_ISSUED"]["event_id"]
             not in named["ORDER_ACKNOWLEDGED"].get("causal_refs", [])):
         _issue(errors, "ORDER_ACK_CAUSALITY_MISSING")
+    if (named["ORDER_ACKNOWLEDGED"]["event_id"]
+            not in named["ACTION_STARTED"].get("causal_refs", [])):
+        _issue(errors, "SCAN_START_CAUSALITY_MISSING")
     if (named["ACTION_STARTED"]["event_id"]
             not in named["RESULT_CREATED"].get("causal_refs", [])):
         _issue(errors, "SCAN_RESULT_CAUSALITY_MISSING")
@@ -211,7 +215,8 @@ def validate_capture(record: Any, *,
         for name in sorted(expected):
             case = cases[name]
             if (not isinstance(case, dict) or case.get("status") not in OUTCOMES
-                    or not isinstance(case.get("evidence_ids"), list)):
+                    or not isinstance(case.get("evidence_ids"), list)
+                    or any(not nonempty(ref) for ref in case.get("evidence_ids", []))):
                 _issue(errors, "ACCEPTANCE_CASE_INVALID:" + name)
                 continue
             if case["status"] == "PASS" and not case["evidence_ids"]:
@@ -256,7 +261,8 @@ def validate_capture(record: Any, *,
     if valid_case_evidence:
         for key, case in cases.items():
             if isinstance(case, dict) and case.get("status") == "PASS":
-                if any(ref not in record["artifacts"] for ref in case.get("evidence_ids", [])):
+                refs = case.get("evidence_ids", [])
+                if not isinstance(refs, list) or any(ref not in record["artifacts"] for ref in refs):
                     _issue(errors, "PASS_EVIDENCE_REFERENCE_UNKNOWN:" + key)
     all_pass = isinstance(cases, dict) and set(cases) == expected and all(
         isinstance(case, dict) and case.get("status") == "PASS"
