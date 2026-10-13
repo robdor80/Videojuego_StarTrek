@@ -66,5 +66,17 @@
   },
   "f08": {
     "e2e_core_ue5": "NO_EJECUTADO"
+  },
+  "p02_reference": {
+    "status": "HERRAMIENTAS_VERSIONADAS_VALIDACION_CI",
+    "generator": "tools/assets/f07_pbr_plate.py",
+    "auditor": "tools/assets/f07_gltf_audit.py",
+    "suite": "tools/validation/test_f07_pbr_pipeline.py",
+    "workflow": ".github/workflows/f07-pbr-reference.yml",
+    "scope": "GLB procedural de laboratorio con UV/PBR; CI no certifica Blender ni UE5",
+    "sutherland_materials_changed": false,
+    "valhalla_real_plate_created": false,
+    "ue5_material_review": "NO_EJECUTADO",
+    "blender_import": "NO_EJECUTADO"
   }
 }
