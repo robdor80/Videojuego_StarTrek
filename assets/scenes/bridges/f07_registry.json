@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-13",
+  "kind": "decision_registry_not_local_file_inventory",
+  "pending_msi_bulk_inventory": true,
+  "entries": [
+    {
+      "asset_id": "bridge-sutherland-original",
+      "name": "USS Sutherland — puente",
+      "original_filename": "star_trek_sutherland_bridge.glb",
+      "sha256": "53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b",
+      "category": "bridge",
+      "use": "v0.0.1 sensores",
+      "selection": "AUTOR_APROBADA_CON_VALIDACION_TECNICA_PENDIENTE",
+      "geometry_status": "INSPECCION_ESTATICA",
+      "ue5_status": "NO_EJECUTADO",
+      "source": "https://sketchfab.com/3d-models/star-trek-sutherland-bridge-7dcbb60473164f36a0a4f39df11b34c1",
+      "author_declared": "Andrew Perdzock",
+      "license_declared_in_glb": "CC-BY-4.0",
+      "rights_verified": false,
+      "local_path": null
+    },
+    {
+      "asset_id": "bridge-kelvin-reserved",
+      "name": "Puente Kelvin",
+      "original_filename": null,
+      "sha256": null,
+      "category": "bridge",
+      "use": "reservado para valorar adaptación futura Sovereign/Odyssey; EXCLUIDO v0.0.1",
+      "selection": "EXCLUIDO_PROTOTIPO",
+      "geometry_status": "PROTOTIPO_LOCAL_PREVIO_SIN_AUDITORIA_F07",
+      "ue5_status": "NO_VERIFICADO_EN_F07",
+      "source": null,
+      "rights_verified": false,
+      "local_path": null
+    }
+  ],
+  "renaming_policy": "alias_en_catalogo_originales_inmutables"
+}

@@ -200,18 +200,33 @@
     {
       "id": "F07",
       "title": "Pipeline 3D y puente piloto",
-      "status": "PLANIFICADA",
+      "status": "EN_REVISION",
       "target_maturity": "UE5_JUGABLE",
       "step_count": 5,
       "steps": {
-        "P01": "PLANIFICADA",
-        "P02": "PLANIFICADA",
-        "P03": "PLANIFICADA",
-        "P04": "PLANIFICADA",
-        "P05": "PLANIFICADA"
+        "P01": "EN_REVISION",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "EN_REVISION",
+        "P05": "BLOQUEADA"
       },
-      "note": "PLANIFICADA; pipeline/UE5 local existente como prototipos previos no auditados bajo F07. Pausa formal de fase hasta decisión de reactivación; sin tratar capturas o importaciones como escena integrada validada.",
-      "file": "fases/F07/README.md"
+      "note": "Preparación paralela F07 autorizada por autor 2026-10-13; Sutherland para v0.0.1, Kelvin excluido/reservado. Cierre P02/P03 solo diseño; sin prueba UE5, ni activos MSI inventariados, ni licencia completamente verificada. F02 sigue única fase principal EN_CURSO; F08 planificada/pausada.",
+      "file": "fases/F07/README.md",
+      "achieved_maturity": "DISENO_VALIDADO",
+      "step_evidence_maturity": {
+        "P01": "DOCUMENTACION_AUDITADA",
+        "P02": "DISENO_VALIDADO",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "IDEA"
+      },
+      "evidence_refs": [
+        "fases/F02/AUDITORIA_GLB_USS_SUTHERLAND_2026-10-12.md",
+        "fases/F07/P01_AUDITORIA_INVENTARIO.md",
+        "fases/F07/P02_PIPELINE_PBR_BLINDAJE.md",
+        "fases/F07/P03_PUENTE_PILOTO_SUTHERLAND.md",
+        "fases/F07/EVIDENCIA_Y_PENDIENTES.json"
+      ]
     },
     {
       "id": "F08",

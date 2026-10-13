@@ -23,7 +23,7 @@
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | **EN_REVISION** (referencia probada; validación de integración pendiente) | REFERENCIA_PROBADA |
 | [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_REVISION** (referencia probada; Core pendiente) | CORE_INTEGRADO |
 | [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
-| [F07](fases/F07/README.md) | Pipeline 3D y puente piloto | PLANIFICADA | UE5_JUGABLE |
+| [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
 | [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | PLANIFICADA | ACEPTACION_SUPERADA |
 | [F09](fases/F09/README.md) | Resto de consolas | PLANIFICADA | UE5_JUGABLE |
 | [F10](fases/F10/README.md) | Academia jugable | PLANIFICADA | UE5_JUGABLE |
@@ -79,6 +79,6 @@ Este diagrama es el **camino crítico orientativo**, no una prohibición de dise
 - F00 manda el control global; cada fase mantiene sus enlaces a **ubicaciones existentes**. Prohibido trasladar cientos de rutas para adaptarse al plan.
 - Idea `IDEA-xxxx` → decisión `DEC-xxxx` cuando haga falta → fase/paso `Fnn-Pnn` → evidencia/prueba → cierre.
 - Todo `COMPLETE` previo se registra con **alcance declarado** (lore, contrato, simulador, CI o UE5), no como prueba de implementación general.
-- Una única fase principal activa en el estado global (**F02**). F03–F06 constan **EN_REVISION** por haberse trabajado preparatoriamente, sin convertirse en una segunda fase principal activa. F07/F08 continúan formalmente planificadas/pausadas hasta autorización y evidencias de integración, aunque los activos de Blender/UE5 puedan seguir preparándose de forma independiente.
+- Una única fase principal EN_CURSO en el estado global (**F02**). F03–F06 constan **EN_REVISION** por haberse trabajado preparatoriamente, sin convertirse en una segunda fase principal activa. **F07** entra EN_REVISION en preparación técnica paralela por autorización del autor (13-10-2026), pero NO alcanza UE5_JUGABLE. **F08** sigue PLANIFICADA/PAUSADA hasta pruebas de puente y Core integrados.
 - Para modificaciones que cambian la continuidad del juego, el alcance jugable o la arquitectura del Core, respetar las decisiones creativas expresamente aprobadas por el autor. **La cronología de pantalla puede alterarse para este juego personal**, con anotación GAME_ADDITION, sin habilitar por defecto tecnologías futuras en todas las eras.
 - **Acta vigente de la nueva Clase Valhalla:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Blindaje ablativo y torpedos transfásicos aprobados como diseño; Blender/UE5 y Core pendientes de implementar y validar.

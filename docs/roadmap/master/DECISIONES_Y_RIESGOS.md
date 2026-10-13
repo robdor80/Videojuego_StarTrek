@@ -6,7 +6,7 @@
 |---|---|---|---|---|
 | DEC-0001 | **APROBADA 2026-10-13** | Galaxy/Enterprise-D como base artística para la **nueva Clase Valhalla**; deja de usarse «Imperator» como nombre vigente | F01-P03 | Clase propia, evolución exterior reconocible; **fecha de servicio pendiente**. Acta: `fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md` |
 | DEC-0002 | **APROBADA 2026-10-11** | v0.0.1 = prototipo interno exclusivamente de guardia de Sensores, antes del lanzamiento; prototipos sucesivos pueden ensayar Academia | F01-P04 | Política en `docs/decisions/prototype_validation_and_release_policy.md`; números FPS/VRAM pendientes de medición F07/F08, y los ensayos no son partes obligatorias del juego final |
-| DEC-0003 | **PENDIENTE_TECNICA** | Escoger puente piloto 3D según viabilidad y licencias | F07-P03 | No equivale a elegir Dama final; criterios de prototipo |
+| DEC-0003 | **ELECCION_AUTOR_APROBADA / VIABILIDAD_PENDIENTE 2026-10-13** | **USS Sutherland** seleccionado para puente piloto v0.0.1 (Sensores). **Kelvin EXCLUIDO de v0.0.1** y reservado para posibles adaptaciones posteriores Sovereign/Odyssey | F07-P03 | La selección no certifica transitabilidad, materiales ni licencias; no altera Valhalla/Galaxy. Detalle: F07/P03_PUENTE_PILOTO_SUTHERLAND.md |
 | DEC-0004 | **FIJADA_PREVIAMENTE** | RPG Star Trek en 3D para PC y NPC persistentes fuera de escena | F01-P01 / F12 | No reabrir sin solicitud expresa |
 | DEC-0005 | **FIJADA_PREVIAMENTE** | Carrera profesional opcional, sin capitanía automática de alférez ni final obligatorio Valhalla | F11 | «Imperator» es nombre histórico de trabajo. Rutas científica, táctica/operativa y exploración/mando |
 | DEC-0006 | **FIJADA_PREVIAMENTE** | Tres épocas jugables definidas en repositorio | F01-P02 | Revisar decisiones ya escritas, no extender con épocas nuevas por iniciativa propia |
@@ -42,3 +42,7 @@ F00 no resolvió DEC-0001/0002. El autor aprobó **DEC-0002** (prueba interna Se
 ## Seguimiento F01 (11-10-2026)
 
 F01-P01…P05 revisados en [acta de cierre documental de 13-10-2026](fases/F01/ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md). DEC-0001/0002 aprobadas; PR #2 **fusionada**. **F01 CERRADA / DISENO_VALIDADO** únicamente en diseño. Odyssey sigue fuera del catálogo vigente hasta decisión explícita. Tecnologías y naves nuevas requieren GAME_ADDITION y reglas temporales; la autorización conceptual no implica Valhalla disponible en 2372, ni para Pike/Kirk. **El desarrollo real Core/UE5 está pendiente**.
+
+## Actualización F07 — 13-10-2026
+
+El autor autorizó preparar F07 completa y designó USS Sutherland para el ensayo interno de Sensores; se auditaron documentalmente las fuentes ya existentes. Kelvin queda reservado para una futura adaptación Sovereign/Odyssey, sin usarlo en la v0.0.1. Inventario de modelos del MSI pendiente sin fecha; se generarán alias sin renombrar originales. Procedimiento UV/PBR incorporado para placas de blindaje ablativo Valhalla sin implementar daño ni despliegue. F07 EN_REVISION (solo preparación), F08 pausada y Core/UE5 real sin validar. Véase fases/F07/README.md.
