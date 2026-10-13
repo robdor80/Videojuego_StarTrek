@@ -16,6 +16,10 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 | F04-P04 | [Autoridad médica, profesional, Primera Directriz y normas](LIMITES_MEDICOS_NORMATIVOS_P04.md) | Límites y precedencia de ámbito; decisiones en Core NO_EJECUTADAS |
 | F04-P05 | [Pruebas de aceptación, matriz y transferencia](VALIDACION_Y_TRASPASO_P05.md) | **39 escenarios + 17 tests** de referencia verificados en CI, sin runtime Core/UE5 |
 
+## Caso de prueba adicional — Miranda-120 (13-10-2026)
+
+Se documenta [el ejemplo Miranda de 120 tripulantes, 3×8 frente a 4×6 y francos 5+2](EJEMPLO_MIRANDA_120_TURNOS_Y_FRANCOS.md), con [fixture ilustrativo](../../../../validation/fixtures/f04/miranda_120_watch_5x2_example_v0.1.json) y [pruebas automatizadas](../../../../../tools/validation/test_f04_miranda_example.py). **Es un ejercicio de cálculo semanal, no dotación Miranda canonizada ni régimen obligatorio de Flota.** Comprueba cobertura 24/7 de seis funciones y días francos sin duplicar NPC; **NO** prueba vacaciones, bajas simultáneas, cobertura sanitaria integral, equidad multisemanal ni integración con Core/UE5. No modifica el estado global F04 ni sustituye las 39 situaciones y 17 unit tests de referencia previas.
+
 ## Reutilización respetada
 
 `gameplay/chain_of_command/`, `gameplay/duty_system/`, `gameplay/ship_operations/`, `gameplay/characters/`, `lore/federation/starfleet/`, `lore/starships/classes/`, `universe/generation/` y `docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`. El plan previo **SB001–SB015 COMPLETE** solo significa cierre de contenido y generadores de referencia; no equivale a juego integrado.
