@@ -1,0 +1,30 @@
+name: F07 asset inventory contract (NOT UE5)
+on:
+  pull_request:
+    paths:
+      - "tools/assets/f07_inventory.py"
+      - "tools/validation/test_f07_asset_inventory.py"
+      - "assets/scenes/bridges/f07_registry.json"
+      - "docs/roadmap/master/fases/F07/**"
+      - ".github/workflows/f07-inventory-contracts.yml"
+  push:
+    branches: [main]
+    paths:
+      - "tools/assets/f07_inventory.py"
+      - "tools/validation/test_f07_asset_inventory.py"
+      - "assets/scenes/bridges/f07_registry.json"
+      - "docs/roadmap/master/fases/F07/**"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inventory-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m py_compile tools/assets/f07_inventory.py tools/validation/test_f07_asset_inventory.py
+      - run: python tools/validation/test_f07_asset_inventory.py -v

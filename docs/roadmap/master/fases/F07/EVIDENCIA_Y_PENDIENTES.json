@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-13",
+  "phase": "F07",
+  "scope": "Preparación técnica, NO prueba UE5",
+  "assets_msi": {
+    "status": "PENDIENTE_DE_LISTADO",
+    "blocking_preparatory_work": false,
+    "blocking_full_audit": true
+  },
+  "sutherland_original": {
+    "filename": "star_trek_sutherland_bridge.glb",
+    "sha256": "53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b",
+    "static_report": "docs/roadmap/master/fases/F02/AUDITORIA_GLB_USS_SUTHERLAND_2026-10-12.md",
+    "ue5_import": "NO_EJECUTADO",
+    "rights_clearance": "PENDIENTE",
+    "rob3d_export_comparison": "PENDIENTE"
+  },
+  "tests_ue5": {
+    "UE07-01": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-02": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-03": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-04": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-05": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-06": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-07": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-08": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    },
+    "UE07-09": {
+      "status": "NO_EJECUTADO",
+      "evidence": null
+    }
+  },
+  "package": {
+    "status": "NO_EJECUTADO",
+    "sha256": null
+  },
+  "metrics": {
+    "fps": null,
+    "ram_mb": null,
+    "vram_mb": null,
+    "draw_calls": null
+  },
+  "f08": {
+    "e2e_core_ue5": "NO_EJECUTADO"
+  }
+}
