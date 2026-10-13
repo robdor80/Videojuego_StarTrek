@@ -143,5 +143,49 @@ class F04ReferenceTests(unittest.TestCase):
             base, **{**kwargs, "expires_tick": 90}))
 
 
+    def test_command_requires_literal_boolean_evidence(self):
+        captain = context("change_watch_policy", position="commanding_officer",
+                          staffing_valid=True, appointment_active="yes")
+        self.assertEqual(evaluate(captain)["decision"], "DENY")
+        acting = context("change_watch_policy", staffing_valid=True, acting_command="true",
+                         acting_appointment_active=True, command_qualified=True)
+        self.assertEqual(evaluate(acting)["decision"], "DENY")
+
+    def test_delegation_rejects_boolean_tick_as_integer(self):
+        delegation = dict(from_authorized_commander=True, to_actor=True,
+                          domain="watch_policy", status="active",
+                          starts_at=0, ends_at=10)
+        ctx = context("change_watch_policy", staffing_valid=True,
+                      control_mode="delegated_autonomous",
+                      now=True, delegation=delegation)
+        self.assertEqual(evaluate(ctx)["decision"], "DENY")
+
+    def test_preemption_requires_finite_numeric_fatigue_not_boolean(self):
+        for debt in (True, float("nan"), float("inf"), 0):
+            rest = dict(id="rest", character_id="crew:1", start=0, end=12,
+                        preempted_by="alarm", preemption_event_id="alarm:1",
+                        fatigue_debt=debt)
+            alarm = dict(id="alarm", character_id="crew:1", start=5, end=8,
+                         kind="emergency")
+            self.assertEqual(check_schedule([rest, alarm]),
+                             ["INCOMPATIBLE_OVERLAP:alarm:rest"])
+
+    def test_invalid_boolean_window_is_error_not_valid_time(self):
+        rest = dict(id="rest", character_id="crew:1", start=True, end=4)
+        self.assertEqual(check_schedule([rest]),
+                         ["INVALID_WINDOW:rest"])
+
+    def test_reference_binding_rejects_boolean_world_revision(self):
+        ctx = context("sensor_scan", station="sensors", on_duty=True,
+                      assignment_active=True, qualified=True,
+                      actor_id="crew:1", station_id="sensors:1",
+                      state_revision=True)
+        evidence = issue_reference_binding(
+            ctx, actor_id="crew:1", action_id="sensor_scan",
+            station_id="sensors:1", state_revision=1,
+            issued_tick=10, expires_tick=20)
+        self.assertIsNone(evidence)
+
+
 if __name__ == "__main__":
     unittest.main()
