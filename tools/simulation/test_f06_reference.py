@@ -311,5 +311,42 @@ class F06Tests(unittest.TestCase):
                          [x["event_type"] for x in outcome["event_candidates"]])
 
 
+    def test_24_nontext_identifiers_are_blocked_before_hashing(self):
+        for field in ("scan_id", "observer_id", "operator_id"):
+            for invalid in (True, 42, ["forged"], {"id": "forged"}):
+                with self.subTest(field=field, invalid=repr(invalid)):
+                    answer = f06.run_reference_scan(
+                        WORLD, request(**{field: invalid}), context())
+                    self.assertEqual(answer["status"], "blocked")
+                    self.assertEqual(answer["events"], [])
+                    self.assertEqual(answer["event_candidates"], [])
+
+    def test_25_boolean_binding_revision_is_not_integer_one(self):
+        cx = context()
+        cx["state_revision"] = 1
+        cx["authorization_binding"] = {
+            **cx["authorization_binding"], "state_revision": True,
+        }
+        answer = f06.run_reference_scan(WORLD, request(), cx)
+        self.assertEqual(answer["status"], "blocked")
+        self.assertEqual(answer["reason"], "authorization_binding_invalid_or_stale")
+
+    def test_26_focused_known_contacts_must_be_a_collection(self):
+        cid = f06.sensor.contact_id("ship:imperator-training", "world-secret-1")
+        r = request(range_mode="focused", target_contact_id=cid)
+        for malformed in (cid, f"prefix:{cid}", {"id": cid}, True):
+            with self.subTest(known=repr(malformed)):
+                answer = f06.run_reference_scan(
+                    WORLD, r, context(known_contact_ids=malformed))
+                self.assertEqual(answer["status"], "blocked")
+                self.assertEqual(answer["reason"], "focused_target_not_known")
+
+    def test_27_nontext_campaign_time_and_ship_are_blocked(self):
+        for changed in ({"campaign_time": ["stolen"]}, {"ship_id": True}):
+            answer = f06.run_reference_scan(WORLD, request(), context(**changed))
+            self.assertEqual(answer["status"], "blocked")
+            self.assertEqual(answer["events"], [])
+
+
 if __name__ == "__main__":
     unittest.main()
