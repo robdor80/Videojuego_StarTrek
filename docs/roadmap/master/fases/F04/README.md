@@ -18,7 +18,7 @@ Una nave existe con puestos reales, oficiales activos, guardias causales, autori
 
 ## Caso de prueba adicional — Miranda-120 (13-10-2026)
 
-Se documenta [el ejemplo Miranda de 120 tripulantes, 3×8 frente a 4×6 y francos 5+2](EJEMPLO_MIRANDA_120_TURNOS_Y_FRANCOS.md), con [fixture ilustrativo](../../../../validation/fixtures/f04/miranda_120_watch_5x2_example_v0.1.json) y [pruebas automatizadas](../../../../../tools/validation/test_f04_miranda_example.py). **Es un ejercicio de cálculo semanal, no dotación Miranda canonizada ni régimen obligatorio de Flota.** Comprueba cobertura 24/7 de seis funciones y días francos sin duplicar NPC; **NO** prueba vacaciones, bajas simultáneas, cobertura sanitaria integral, equidad multisemanal ni integración con Core/UE5. No modifica el estado global F04 ni sustituye las 39 situaciones y 17 unit tests de referencia previas.
+Se documenta [el ejemplo Miranda de 120 tripulantes, 3×8 frente a 4×6 y francos 5+2](EJEMPLO_MIRANDA_120_TURNOS_Y_FRANCOS.md), con [fixture ilustrativo](../../../../../validation/fixtures/f04/miranda_120_watch_5x2_example_v0.1.json) y [pruebas automatizadas](../../../../../tools/validation/test_f04_miranda_example.py). **Es un ejercicio de cálculo semanal, no dotación Miranda canonizada ni régimen obligatorio de Flota.** Comprueba cobertura 24/7 de seis funciones y días francos sin duplicar NPC; **NO** prueba vacaciones, bajas simultáneas, cobertura sanitaria integral, equidad multisemanal ni integración con Core/UE5. No modifica el estado global F04 ni sustituye las 39 situaciones y 17 unit tests de referencia previas.
 
 ## Reutilización respetada
 
