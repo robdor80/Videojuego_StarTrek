@@ -1,0 +1,377 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "f09_console_operations_reference",
+  "status": "reference_only_not_runtime",
+  "scope": "P01-P03: mapa funcional provisional, NO acciones ejecutables ni distribución física UE5",
+  "family_count": 16,
+  "source_catalog": "gameplay/ship_operations/consoles/README.md",
+  "interconsole_contract": "gameplay/ship_operations/interconsole/interconsole_data_package_contract.json",
+  "priorities": [
+    "routine",
+    "normal",
+    "high",
+    "urgent"
+  ],
+  "legacy_target_values_requiring_explicit_resolution": [
+    "conn_navigation",
+    "computer_database"
+  ],
+  "families": [
+    {
+      "id": "command",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Revisar órdenes",
+        "Autorizar decisiones de mando"
+      ],
+      "existing_contract_refs": [
+        "gameplay/orders/starship_order_contract.json",
+        "gameplay/ship_operations/alert_state_model.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "conn",
+        "navigation",
+        "operations",
+        "sensors",
+        "science",
+        "tactical",
+        "security",
+        "engineering",
+        "communications",
+        "mission_ops",
+        "transporter",
+        "medical",
+        "environmental",
+        "flight_deck",
+        "computer"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "conn",
+      "step": "P01",
+      "operations_proposed_es": [
+        "Ejecutar maniobra validada",
+        "Mantener rumbo"
+      ],
+      "existing_contract_refs": [
+        "gameplay/navigation/navigation_order_contract.json",
+        "gameplay/navigation/navigation_state.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "navigation",
+        "operations",
+        "command",
+        "tactical"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "navigation",
+      "step": "P01",
+      "operations_proposed_es": [
+        "Calcular ruta",
+        "Examinar peligro conocido"
+      ],
+      "existing_contract_refs": [
+        "gameplay/navigation/navigation_order_contract.json",
+        "gameplay/navigation/route_context_model.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "conn",
+        "operations",
+        "command",
+        "sensors"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "operations",
+      "step": "P01",
+      "operations_proposed_es": [
+        "Evaluar solicitud de potencia",
+        "Coordinar recursos"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/power_allocation_model.json",
+        "gameplay/ship_operations/interconsole/sensor_to_operations_power_request.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "engineering",
+        "sensors",
+        "tactical",
+        "conn",
+        "command"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "sensors",
+      "step": "BASE",
+      "operations_proposed_es": [
+        "Observar contacto",
+        "Transferir lecturas"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json",
+        "gameplay/ship_operations/interconsole/sensor_to_science_analysis_handoff.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "science",
+        "operations",
+        "engineering",
+        "tactical",
+        "navigation",
+        "command",
+        "computer"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "science",
+      "step": "P01",
+      "operations_proposed_es": [
+        "Analizar observaciones",
+        "Solicitar más datos"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/consoles/science/incoming_analysis_task_contract.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "sensors",
+        "navigation",
+        "command",
+        "computer",
+        "medical"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "tactical",
+      "step": "P02",
+      "operations_proposed_es": [
+        "Evaluar amenaza",
+        "Preparar solución de tiro"
+      ],
+      "existing_contract_refs": [
+        "gameplay/tactical/tactical_state.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "sensors",
+        "security",
+        "conn",
+        "operations"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "security",
+      "step": "P02",
+      "operations_proposed_es": [
+        "Coordinar seguridad",
+        "Comunicar riesgo"
+      ],
+      "existing_contract_refs": [
+        "gameplay/security/README.md"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "tactical",
+        "medical",
+        "transporter"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "engineering",
+      "step": "P02",
+      "operations_proposed_es": [
+        "Diagnosticar avería",
+        "Programar reparación"
+      ],
+      "existing_contract_refs": [
+        "gameplay/engineering/engineering_loop.json",
+        "gameplay/ship_operations/interconsole/sensor_to_engineering_support_request.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "operations",
+        "conn",
+        "command",
+        "environmental",
+        "flight_deck",
+        "sensors"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "communications",
+      "step": "P02",
+      "operations_proposed_es": [
+        "Solicitar canal",
+        "Transmitir mensaje autorizado"
+      ],
+      "existing_contract_refs": [
+        "gameplay/communications/subspace_communication_contract.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "mission_ops",
+        "computer",
+        "security"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "mission_ops",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Coordinar misión",
+        "Distribuir tareas"
+      ],
+      "existing_contract_refs": [
+        "gameplay/missions/emergent_mission_from_world_state_contract.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "navigation",
+        "communications",
+        "transporter",
+        "flight_deck"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "transporter",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Solicitar fijación de patrón",
+        "Ejecutar transporte autorizado"
+      ],
+      "existing_contract_refs": [
+        "gameplay/transporters/transporter_operation_contract.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "security",
+        "medical",
+        "mission_ops",
+        "command"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "medical",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Registrar triaje autorizado",
+        "Solicitar transporte sanitario"
+      ],
+      "existing_contract_refs": [
+        "gameplay/medical/medical_state_model.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "environmental",
+        "transporter",
+        "security"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "environmental",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Diagnosticar soporte vital",
+        "Solicitar prioridad ambiental"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/system_state_model.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "engineering",
+        "medical",
+        "operations",
+        "command"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "flight_deck",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Gestionar solicitud de hangar",
+        "Coordinar salida lanzadera"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/consoles/flight_deck/README.md"
+      ],
+      "allowed_data_handoff_targets": [
+        "operations",
+        "engineering",
+        "conn",
+        "mission_ops"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    },
+    {
+      "id": "computer",
+      "step": "P03",
+      "operations_proposed_es": [
+        "Consultar datos autorizados",
+        "Proponer interpretación no vinculante"
+      ],
+      "existing_contract_refs": [
+        "gameplay/ship_operations/ship_computer/computer_request_contract.json",
+        "gameplay/ship_operations/ship_computer/access_control_rules.json"
+      ],
+      "allowed_data_handoff_targets": [
+        "command",
+        "science",
+        "sensors",
+        "navigation",
+        "communications"
+      ],
+      "execution_owner": "Core RPG / host autenticado (NO disponible en esta referencia)",
+      "graphics_owner": "UE5, pendiente",
+      "status": "design_reference"
+    }
+  ],
+  "invariants": [
+    "Una estación física puede exponer varias familias; no se presupone una consola 3D por familia.",
+    "El envío es de referencias observables, no de verdad oculta ni de objetos completos.",
+    "Enrutar datos nunca ejecuta la acción solicitada ni otorga autoridad al receptor.",
+    "El contexto de conocimiento/permisos lo suministra exclusivamente la capa de confianza Core/Host.",
+    "El capitán conserva autoridad de mando conforme a reglas Star Trek sin violar límites profesionales.",
+    "La IA remota no altera estado, privilegios ni ejecución por sí misma."
+  ]
+}
