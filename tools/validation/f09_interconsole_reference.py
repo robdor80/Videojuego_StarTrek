@@ -40,7 +40,7 @@ def catalog_errors(matrix: dict[str, Any], root: Path = ROOT) -> list[str]:
     if not isinstance(entries, list):
         return ["families debe ser una lista"]
     ids = [x.get("id") for x in entries if isinstance(x, dict)]
-    if len(entries) != 16 or len(ids) != 16 or set(ids) != set(CANONICAL):
+    if len(entries) != 16 or len(ids) != 16 or tuple(ids) != CANONICAL:
         errors.append("exactamente las 16 familias canónicas, sin duplicados")
     if matrix.get("family_count") != 16:
         errors.append("family_count debe ser 16")
@@ -66,7 +66,7 @@ def catalog_errors(matrix: dict[str, Any], root: Path = ROOT) -> list[str]:
         ):
             errors.append(f"{name}: referencia inexistente")
         targets = item.get("allowed_data_handoff_targets")
-        if not isinstance(targets, list) or not targets or len(set(targets)) != len(targets) or any(
+        if not isinstance(targets, list) or not targets or any(not isinstance(t, str) for t in targets) or len(set(targets)) != len(targets) or any(
             t not in CANONICAL or t == name for t in targets
         ):
             errors.append(f"{name}: destinos inválidos")
@@ -102,7 +102,7 @@ def assess_handoff(packet: Any, trust: Any, matrix: dict[str, Any]) -> dict[str,
     source, target = packet["source_system"], packet["target_system"]
     if target in matrix.get("legacy_target_values_requiring_explicit_resolution", []):
         return result(RESULT_CLARIFY, "ambiguous_legacy_target")
-    if source not in CANONICAL or target not in CANONICAL:
+    if not isinstance(source, str) or not isinstance(target, str) or source not in CANONICAL or target not in CANONICAL:
         return result(RESULT_DENY, "unknown_console")
     if source == target:
         return result(RESULT_DENY, "same_family_not_handoff")
@@ -112,9 +112,9 @@ def assess_handoff(packet: Any, trust: Any, matrix: dict[str, Any]) -> dict[str,
     if not all(isinstance(packet[key], str) and 0 < len(packet[key]) <= 128
                for key in ("package_id", "created_at")):
         return result(RESULT_DENY, "invalid_identity_or_time")
-    if packet.get("priority", "normal") not in PRIORITIES:
+    if not isinstance(packet.get("priority", "normal"), str) or packet.get("priority", "normal") not in PRIORITIES:
         return result(RESULT_DENY, "unknown_priority")
-    if packet.get("status", "queued") not in STATUSES:
+    if not isinstance(packet.get("status", "queued"), str) or packet.get("status", "queued") not in STATUSES:
         return result(RESULT_DENY, "unknown_status")
     refs = packet["payload_refs"]
     if (not isinstance(refs, list) or not 1 <= len(refs) <= 32 or
@@ -126,7 +126,7 @@ def assess_handoff(packet: Any, trust: Any, matrix: dict[str, Any]) -> dict[str,
         set(provenance) != {"source_refs", "source_system", "confidence"} or
         provenance["source_system"] != source or
         provenance["source_refs"] != refs or
-        provenance["confidence"] not in ("low", "medium", "high")):
+        not isinstance(provenance["confidence"], str) or provenance["confidence"] not in ("low", "medium", "high")):
         return result(RESULT_DENY, "invalid_provenance")
     known, permitted = trust.get("known_refs"), trust.get("permitted_routes")
     if (not isinstance(known, (list, tuple, set)) or

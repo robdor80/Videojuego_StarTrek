@@ -24,7 +24,7 @@ permissions:
 
 jobs:
   f09-reference:
-    name: 27 comprobaciones sin Core ni UE5
+    name: 31 comprobaciones sin Core ni UE5
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

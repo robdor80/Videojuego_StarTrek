@@ -17,23 +17,23 @@ No declarar que las funciones sean botones ya conectados a UE5. La autoridad dec
 
 ## F09-P02 · Avería, combate, seguridad y canales
 
-**Ingeniería** valida daños/reparaciones, **Táctica** evalúa objetivos con reglas de enfrentamiento, **Seguridad** administra incidentes y acceso, **Comunicaciones** gestiona canales, retardo y destinatario. **No** se deduce un éxito porque el paquete haya llegado. Referencias preexistentes: \`gameplay/engineering/engineering_loop.json\`, \`gameplay/tactical/tactical_state.json\`, \`gameplay/security/\`, \`gameplay/communications/subspace_communication_contract.json\`. Exigir resultados y restricciones de cada subsistema.
+**Ingeniería** valida daños/reparaciones, **Táctica** evalúa objetivos con reglas de enfrentamiento, **Seguridad** administra incidentes y acceso, **Comunicaciones** gestiona canales, retardo y destinatario. **No** se deduce un éxito porque el paquete haya llegado. Referencias preexistentes: `gameplay/engineering/engineering_loop.json`, `gameplay/tactical/tactical_state.json`, `gameplay/security/`, `gameplay/communications/subspace_communication_contract.json`. Exigir resultados y restricciones de cada subsistema.
 
 ## F09-P03 · Resto de dominios
 
 **Mando** (orden válida, delegación, alertas), **Misiones** (tareas y contexto), **Transportador** (fijación, interferencias, escudos y traslado real), **Médica** (privacidad, cuidados y triaje), **Ambiental** (soporte vital, fallos y cargas), **Hangar** (capacidad, tráfico, plaza de lanzadera, control), **Ordenador** (consulta permitida, respuestas con procedencia y IA únicamente propositiva).
 
-Son **familias funcionales**, no 15 modelos físicos nuevos. La estación de puente y las capacidades por clase siguen en \`gameplay/ship_operations/bridge_station_model.json\`; la UI y los materiales son responsabilidad UE5/NAP.
+Son **familias funcionales**, no 15 modelos físicos nuevos. La estación de puente y las capacidades por clase siguen en `gameplay/ship_operations/bridge_station_model.json`; la UI y los materiales son responsabilidad UE5/NAP.
 
-La matriz \`gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json\` registra las 16 familias, la prioridad, fuentes reales, operaciones sugeridas y rutas de **datos**, sin cambiar los modelos originales.
+La matriz `gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json` registra las 16 familias, la prioridad, fuentes reales, operaciones sugeridas y rutas de **datos**, sin cambiar los modelos originales.
 
 ## F09-P04 · Ensayo seguro entre consolas
 
 **Ruta de datos:** Sensores → Ciencia → Ordenador/Mando, o Navegación → CONN, con referencias conocidas y comprobación de permisos.
 
-La implementación pura \`tools/validation/f09_interconsole_reference.py\` acepta un paquete según \`interconsole_data_package_contract.json\` y una **instantánea confiable emitida por Core/Host** que delimita los datos conocidos y rutas autorizadas. Nunca se debe poblar esa instantánea con valores del paquete, con un formulario de usuario ni con la IA remota. Resultado \`ACCEPT_DATA_ONLY\`: únicamente admite metadatos para eventual entrega, **no crea una tarea, no muta el World State ni certifica que el receptor haya actuado**.
+La implementación pura `tools/validation/f09_interconsole_reference.py` acepta un paquete según `interconsole_data_package_contract.json` y una **instantánea confiable emitida por Core/Host** que delimita los datos conocidos y rutas autorizadas. Nunca se debe poblar esa instantánea con valores del paquete, con un formulario de usuario ni con la IA remota. Resultado `ACCEPT_DATA_ONLY`: únicamente admite metadatos para eventual entrega, **no crea una tarea, no muta el World State ni certifica que el receptor haya actuado**.
 
-Los valores antiguos \`conn_navigation\` y \`computer_database\` del contrato de intercambio son **ambiguos respecto a las familias canónicas**. Se devuelve \`CLARIFY_TARGET\` para que el adaptador resuelva la familia concreta; no se reescribe ni invalida el contrato histórico. Los campos nuevos no aprobados y datos completos inline se rechazan. Esta referencia **no autentica** identidad ni implementa funciones de Core.
+Los valores antiguos `conn_navigation` y `computer_database` del contrato de intercambio son **ambiguos respecto a las familias canónicas**. Se devuelve `CLARIFY_TARGET` para que el adaptador resuelva la familia concreta; no se reescribe ni invalida el contrato histórico. Los campos nuevos no aprobados y datos completos inline se rechazan. Esta referencia **no autentica** identidad ni implementa funciones de Core.
 
 ## F09-P05 · Escenarios a completar
 
@@ -50,4 +50,4 @@ Los valores antiguos \`conn_navigation\` y \`computer_database\` del contrato de
 
 ## Evidencias y ejecución
 
-Se incluyen \`tools/validation/test_f09_interconsole_reference.py\` y \`.github/workflows/f09-console-reference.yml\` para QA automatizada de catálogo y escenarios negativos. **Las pruebas de CI, si pasan, acreditan solo la referencia Python y rutas de archivos.** Sin conexión real CoreRPG/UE5 ni pruebas MSI: **NO_EJECUTADO** para P01–P05 a nivel jugable. Para cerrar F09 se necesitarán SHA/versión de Core, pruebas de acciones reales autorizadas, persistencia, recursos/daños y test de la escena UE5 de cada dominio.
+Se incluyen `tools/validation/test_f09_interconsole_reference.py` y `.github/workflows/f09-console-reference.yml` para QA automatizada de catálogo y escenarios negativos. **Las pruebas de CI, si pasan, acreditan solo la referencia Python y rutas de archivos.** Sin conexión real CoreRPG/UE5 ni pruebas MSI: **NO_EJECUTADO** para P01–P05 a nivel jugable. Para cerrar F09 se necesitarán SHA/versión de Core, pruebas de acciones reales autorizadas, persistencia, recursos/daños y test de la escena UE5 de cada dominio.

@@ -134,6 +134,26 @@ class F09ReferenceTests(unittest.TestCase):
         p["status"] = "executed_action"
         self.assertEqual(self.decision(p, t), RESULT_DENY)
 
+    def test_unhashable_priority_fails_closed(self):
+        p, t = self.sample()
+        p["priority"] = []
+        self.assertEqual(self.decision(p, t), RESULT_DENY)
+
+    def test_unhashable_status_fails_closed(self):
+        p, t = self.sample()
+        p["status"] = {"bad": 1}
+        self.assertEqual(self.decision(p, t), RESULT_DENY)
+
+    def test_unhashable_confidence_fails_closed(self):
+        p, t = self.sample()
+        p["provenance"]["confidence"] = []
+        self.assertEqual(self.decision(p, t), RESULT_DENY)
+
+    def test_unhashable_console_fails_closed(self):
+        p, t = self.sample()
+        p["target_system"] = []
+        self.assertEqual(self.decision(p, t), RESULT_DENY)
+
     def test_missing_fields_denied(self):
         p, t = self.sample()
         del p["provenance"]
