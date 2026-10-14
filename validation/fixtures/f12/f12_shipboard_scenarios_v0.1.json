@@ -1,0 +1,1032 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "OFFLINE_REFERENCE_ONLY_NO_AUTHORITY",
+  "world": {
+    "ships": {
+      "miranda": {
+        "locations": {
+          "mess": {
+            "capacity": 4,
+            "activities": [
+              "social_meal",
+              "friendship_social_visit",
+              "lounge_or_common_room"
+            ]
+          },
+          "bridge": {
+            "capacity": 5,
+            "activities": [
+              "training"
+            ]
+          },
+          "quarters": {
+            "capacity": 2,
+            "activities": [
+              "rest_or_sleep"
+            ]
+          }
+        }
+      },
+      "intrepid": {
+        "locations": {
+          "mess": {
+            "capacity": 3,
+            "activities": [
+              "social_meal",
+              "friendship_social_visit",
+              "lounge_or_common_room"
+            ]
+          },
+          "bridge": {
+            "capacity": 5,
+            "activities": [
+              "training"
+            ]
+          }
+        }
+      }
+    },
+    "characters": {
+      "alex": {
+        "character_id": "alex",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "player": false,
+        "lod": "B",
+        "blocks": [
+          {
+            "start": 480,
+            "end": 960,
+            "family": "duty_shift"
+          }
+        ]
+      },
+      "bea": {
+        "character_id": "bea",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "adult_equivalent": true,
+        "sex_category": "female",
+        "player": false,
+        "lod": "A",
+        "blocks": []
+      },
+      "cla": {
+        "character_id": "cla",
+        "ship_id": "intrepid",
+        "location_id": "mess",
+        "adult_equivalent": true,
+        "sex_category": "male",
+        "player": false,
+        "lod": "B",
+        "blocks": []
+      },
+      "dina": {
+        "character_id": "dina",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "adult_equivalent": true,
+        "sex_category": "female",
+        "player": true,
+        "lod": "A",
+        "blocks": []
+      },
+      "eli": {
+        "character_id": "eli",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "adult_equivalent": false,
+        "sex_category": "female",
+        "player": false,
+        "lod": "C",
+        "blocks": []
+      },
+      "far": {
+        "character_id": "far",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "adult_equivalent": true,
+        "sex_category": "other",
+        "player": false,
+        "lod": "C",
+        "blocks": []
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "A01-good",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "A02-duty",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 700,
+        "end": 720,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "schedule_conflict"
+    },
+    {
+      "id": "A03-no-consent",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_explicit_participant_acceptance"
+    },
+    {
+      "id": "A04-remote",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "cla"
+        ],
+        "accepted_participants": [
+          "alex",
+          "cla"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "participant_not_on_ship"
+    },
+    {
+      "id": "A05-no-holodeck",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "holodeck",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_ship_facility"
+    },
+    {
+      "id": "A06-no-facility",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "galley",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_ship_facility"
+    },
+    {
+      "id": "A07-no-physical-presence",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "bridge",
+        "activity_type": "training",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "travel_not_verified"
+    },
+    {
+      "id": "A08-overcapacity",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea",
+          "dina",
+          "eli",
+          "far"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea",
+          "dina",
+          "eli",
+          "far"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "facility_capacity"
+    },
+    {
+      "id": "A09-unknown",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "ghost"
+        ],
+        "accepted_participants": [
+          "alex",
+          "ghost"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "unknown_participant"
+    },
+    {
+      "id": "A10-bool-time",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": true,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_activity"
+    },
+    {
+      "id": "A11-reversed-time",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1300,
+        "end": 1200,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_activity"
+    },
+    {
+      "id": "A12-impossible-acceptance",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "cla"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_acceptance_record"
+    },
+    {
+      "id": "A13-unknown-ship",
+      "operation": "activity",
+      "input": {
+        "activity_id": "a1",
+        "ship_id": "unknown",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "unknown_ship"
+    },
+    {
+      "id": "A14-empty-name",
+      "operation": "activity",
+      "input": {
+        "activity_id": "",
+        "ship_id": "miranda",
+        "location_id": "mess",
+        "activity_type": "social_meal",
+        "start": 1200,
+        "end": 1260,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "accepted_participants": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_activity"
+    },
+    {
+      "id": "S01-work-event",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "S02-no-cause",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_event_provenance"
+    },
+    {
+      "id": "S03-no-pair",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_event_provenance"
+    },
+    {
+      "id": "S04-invalid-type",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "friendship_by_proximity",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_event_type"
+    },
+    {
+      "id": "S05-no-contact",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "cla"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "contact_not_plausible"
+    },
+    {
+      "id": "S06-minor",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "romantic_expression",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "eli"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "adults_only"
+    },
+    {
+      "id": "S07-same-sex",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "romantic_expression",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "far"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "project_romantic_pair_eligibility"
+    },
+    {
+      "id": "S08-player-no-action",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "romantic_expression",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "dina"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_player_action"
+    },
+    {
+      "id": "S09-no-intimacy-consent",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "consensual_intimacy",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_contextual_consent"
+    },
+    {
+      "id": "S10-player-no-commit",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "relationship_commitment",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "dina"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": [],
+        "explicit_consent_ids": [
+          "alex",
+          "dina"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_player_action"
+    },
+    {
+      "id": "S11-bool-minute",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": true,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "missing_event_provenance"
+    },
+    {
+      "id": "S12-unknown",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "ghost"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "unknown_participant"
+    },
+    {
+      "id": "S13-cross-ship-contact-evidence",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "successful_collaboration",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "cla"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": [],
+        "travel_or_contact_ref": "transport/confirmed-01"
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "S14-player-explicit-romance",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "romantic_expression",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "dina"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": [],
+        "explicit_player_action_ids": [
+          "dina"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "S15-intimacy-explicit-both",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "consensual_intimacy",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": [],
+        "explicit_consent_ids": [
+          "alex",
+          "bea"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "S16-no-automatic-hostility",
+      "operation": "social",
+      "input": {
+        "event_id": "e1",
+        "event_type": "romantic_rejection",
+        "minute": 1700,
+        "participants": [
+          "alex",
+          "bea"
+        ],
+        "cause_event_ref": "captured/task/17",
+        "shared_location_ref": "mess",
+        "witnesses": []
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "P01-participant",
+      "operation": "projection",
+      "input": {
+        "event": {
+          "event_id": "e1",
+          "event_type": "successful_collaboration",
+          "minute": 1700,
+          "participants": [
+            "alex",
+            "bea"
+          ],
+          "cause_event_ref": "captured/task/17",
+          "shared_location_ref": "mess",
+          "witnesses": []
+        },
+        "observer": "alex"
+      },
+      "expected_status": "VISIBLE"
+    },
+    {
+      "id": "P02-witness",
+      "operation": "projection",
+      "input": {
+        "event": {
+          "event_id": "e1",
+          "event_type": "successful_collaboration",
+          "minute": 1700,
+          "participants": [
+            "alex",
+            "bea"
+          ],
+          "cause_event_ref": "captured/task/17",
+          "shared_location_ref": "mess",
+          "witnesses": [
+            "far"
+          ]
+        },
+        "observer": "far"
+      },
+      "expected_status": "VISIBLE"
+    },
+    {
+      "id": "P03-outsider",
+      "operation": "projection",
+      "input": {
+        "event": {
+          "event_id": "e1",
+          "event_type": "successful_collaboration",
+          "minute": 1700,
+          "participants": [
+            "alex",
+            "bea"
+          ],
+          "cause_event_ref": "captured/task/17",
+          "shared_location_ref": "mess",
+          "witnesses": []
+        },
+        "observer": "cla"
+      },
+      "expected_status": "HIDDEN"
+    },
+    {
+      "id": "L01-budget",
+      "operation": "lod",
+      "input": {
+        "ship": "miranda",
+        "location": "mess",
+        "budget": 2
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "L02-zero-budget",
+      "operation": "lod",
+      "input": {
+        "ship": "miranda",
+        "location": "mess",
+        "budget": 0
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "L03-no-visible",
+      "operation": "lod",
+      "input": {
+        "ship": "intrepid",
+        "location": "bridge",
+        "budget": 10
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "L04-negative-budget",
+      "operation": "lod",
+      "input": {
+        "ship": "miranda",
+        "location": "mess",
+        "budget": -1
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_render_request"
+    },
+    {
+      "id": "R01-four-months",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "e1",
+            "event_type": "successful_collaboration",
+            "minute": 1700,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "captured/task/17",
+            "shared_location_ref": "mess",
+            "witnesses": []
+          },
+          {
+            "event_id": "t1",
+            "event_type": "transfer",
+            "minute": 50400,
+            "cause_event_ref": "orders/staffing-1",
+            "character_id": "bea",
+            "new_ship_id": "intrepid",
+            "new_location_id": "mess"
+          },
+          {
+            "event_id": "e2",
+            "event_type": "successful_collaboration",
+            "minute": 95040,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "record/family-holo-2",
+            "shared_location_ref": "mess",
+            "witnesses": [],
+            "travel_or_contact_ref": "transport/meeting-confirmed"
+          }
+        ],
+        "months": 4
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "R02-empty-months",
+      "operation": "replay",
+      "input": {
+        "events": [],
+        "months": 6
+      },
+      "expected_status": "REVIEW_REQUIRED"
+    },
+    {
+      "id": "R03-no-contact-after-transfer",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "e1",
+            "event_type": "successful_collaboration",
+            "minute": 1700,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "captured/task/17",
+            "shared_location_ref": "mess",
+            "witnesses": []
+          },
+          {
+            "event_id": "t1",
+            "event_type": "transfer",
+            "minute": 50400,
+            "cause_event_ref": "orders/staffing-1",
+            "character_id": "bea",
+            "new_ship_id": "intrepid",
+            "new_location_id": "mess"
+          },
+          {
+            "event_id": "e2",
+            "event_type": "successful_collaboration",
+            "minute": 95040,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "record/family-holo-2",
+            "shared_location_ref": "mess",
+            "witnesses": [],
+            "travel_or_contact_ref": ""
+          }
+        ],
+        "months": 4
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_social_event"
+    },
+    {
+      "id": "R04-no-cause-transfer",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "t1",
+            "event_type": "transfer",
+            "minute": 50400,
+            "cause_event_ref": "",
+            "character_id": "bea",
+            "new_ship_id": "intrepid",
+            "new_location_id": "mess"
+          }
+        ],
+        "months": 4
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "duplicate_or_disordered_or_unproven_event"
+    },
+    {
+      "id": "R05-duplicate",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "e1",
+            "event_type": "successful_collaboration",
+            "minute": 1700,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "captured/task/17",
+            "shared_location_ref": "mess",
+            "witnesses": []
+          },
+          {
+            "event_id": "e1",
+            "event_type": "successful_collaboration",
+            "minute": 1700,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "captured/task/17",
+            "shared_location_ref": "mess",
+            "witnesses": []
+          }
+        ],
+        "months": 4
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "duplicate_or_disordered_or_unproven_event"
+    },
+    {
+      "id": "R06-bool-months",
+      "operation": "replay",
+      "input": {
+        "events": [],
+        "months": true
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_horizon"
+    },
+    {
+      "id": "R07-event-outside-window",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "e1",
+            "event_type": "successful_collaboration",
+            "minute": 120000,
+            "participants": [
+              "alex",
+              "bea"
+            ],
+            "cause_event_ref": "captured/task/17",
+            "shared_location_ref": "mess",
+            "witnesses": []
+          }
+        ],
+        "months": 2
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "duplicate_or_disordered_or_unproven_event"
+    },
+    {
+      "id": "R08-unknown-new-ship",
+      "operation": "replay",
+      "input": {
+        "events": [
+          {
+            "event_id": "t1",
+            "event_type": "transfer",
+            "minute": 50400,
+            "cause_event_ref": "orders/staffing-1",
+            "character_id": "bea",
+            "new_ship_id": "never-built",
+            "new_location_id": "mess"
+          }
+        ],
+        "months": 4
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_transfer"
+    }
+  ]
+}
