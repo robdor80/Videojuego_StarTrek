@@ -21,6 +21,17 @@ VERSION = "f10_academy_continuity_reference_v0.1"
 STAGES = frozenset({"theory", "instructor_class", "real_system_practice", "continuous_evaluation"})
 PRACTICES = frozenset({"sensors_training", "kobayashi_maru"})
 CANDIDATE = "candidate"
+COMMAND_KEYS = {
+    "admit": frozenset({"action", "event_ref"}),
+    "lesson": frozenset({"action", "event_ref", "subject_id", "stage"}),
+    "practice": frozenset({"action", "event_ref", "scenario_id", "evidence_ref"}),
+    "social": frozenset({"action", "event_ref", "npc_ref"}),
+    "choose_specialization": frozenset({"action", "event_ref", "specialization_id"}),
+    "complete_year": frozenset({"action", "event_ref", "evidence_ref"}),
+    "graduate": frozenset({"action", "event_ref", "evidence_ref"}),
+    "commission": frozenset({"action", "event_ref"}),
+    "assign_first_post": frozenset({"action", "event_ref"})
+}
 
 
 def _module(relative_path: str, name: str):
@@ -62,6 +73,8 @@ def new_candidate(cadet_ref: str, player_profile_ref: str) -> dict:
 
 def _check_host(snapshot: dict, command: dict, host: dict) -> str:
     _require(isinstance(command, dict) and isinstance(host, dict), "invalid command or host")
+    _require(command.get("action") in COMMAND_KEYS and
+             set(command) == COMMAND_KEYS[command["action"]], "unknown or extra command fields")
     event_ref = command.get("event_ref")
     _require(_text(event_ref), "event_ref required")
     _require(host.get("trusted_origin") == "CORE_HOST_VERIFIED", "offline host stub not present")
