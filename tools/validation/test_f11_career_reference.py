@@ -72,6 +72,8 @@ class F11CareerReferenceTests(unittest.TestCase):
 
     def test_09_boolean_campaign_year_is_invalid(self):
         self.assertEqual(f11.BLOCKED, self.check(self.profile(campaign_year=True))["status"])
+        self.assertEqual(f11.BLOCKED, self.check(self.profile(era_profile=["pike"]))["status"])
+        self.assertFalse(f11.class_temporally_available("oberth", ["pike"], 2372, self.catalog))
 
     def test_10_boolean_vacancy_as_string_is_invalid(self):
         self.assertEqual(f11.BLOCKED, self.check(offer=self.offer_copy(vacancy="true"))["status"])
@@ -155,6 +157,9 @@ class F11CareerReferenceTests(unittest.TestCase):
 
     def test_28_partial_catalog_cannot_authorize(self):
         self.assertEqual(f11.BLOCKED, f11.screen_assignment(self.profile(), self.offer_copy(), {"classes": []}, self.routes)["status"])
+        corrupted = copy.deepcopy(self.catalog)
+        corrupted["classes"][0]["availability"]["retained_playable_profiles"] = None
+        self.assertFalse(f11.class_temporally_available("constitution", "pike", 2260, corrupted))
 
     def test_29_duplicate_evidence_ids_rejected(self):
         r = self.review({"action": "promotion", "target_rank": "lieutenant_junior_grade",
