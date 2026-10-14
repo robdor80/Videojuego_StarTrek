@@ -58,7 +58,7 @@ def class_temporally_available(class_id, era, year, catalog):
     confirmed_active_from_decade no autoriza el primer año de la década: solo
     consideramos segura una fecha a partir de la década siguiente.
     """
-    if era not in ERA_PROFILES or type(year) is not int or year < 2200 or year > 2999:
+    if not isinstance(era, str) or era not in ERA_PROFILES or type(year) is not int or year < 2200 or year > 2999:
         return False
     if not isinstance(catalog, dict) or not isinstance(catalog.get("classes"), list):
         return False
@@ -68,7 +68,8 @@ def class_temporally_available(class_id, era, year, catalog):
     availability = matches[0].get("availability")
     if not isinstance(availability, dict):
         return False
-    if era not in availability.get("retained_playable_profiles", []):
+    profiles = availability.get("retained_playable_profiles")
+    if not isinstance(profiles, list) or era not in profiles:
         return False
     for key in ("operational_class_from_year", "confirmed_active_by_year"):
         value = availability.get(key)
@@ -84,7 +85,7 @@ def _validate_profile(profile, routes):
         return ["invalid_profile"]
     if profile.get("rank") not in RANKS:
         reasons.append("invalid_rank")
-    if profile.get("era_profile") not in ERA_PROFILES:
+    if not isinstance(profile.get("era_profile"), str) or profile["era_profile"] not in ERA_PROFILES:
         reasons.append("invalid_era")
     if type(profile.get("campaign_year")) is not int or not 2200 <= profile["campaign_year"] <= 2999:
         reasons.append("invalid_year")
