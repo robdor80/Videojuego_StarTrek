@@ -162,11 +162,11 @@ def evaluate(proposal: object, trusted_context: object = None) -> dict:
     known = trusted_context.get("known_evidence_refs")
     if not isinstance(known, list) or not all(_ref(r) for r in known) or len(known) != len(set(known)):
         return deny("evidencias_core_no_validas")
-    if action not in {"choose_specialization"} and proposal.get("evidence_ref") not in known:
+    if action not in {"choose_specialization", "import_study_evidence"} and proposal.get("evidence_ref") not in known:
         return deny("evidencia_no_conocida_por_core")
     review = lambda reason: _result(DECISION_REVIEW, reason)
     if action == "import_study_evidence":
-        return review("importacion_externa_necesita_verificacion_sin_nota_automatica")
+        return review("importacion_externa_pendiente_verificacion_de_origen_integridad_y_autoria")
     if action == "choose_specialization":
         spec = _load(ACADEMY / "specializations.json")
         ids = {s["id"] for s in spec["specializations"]}
