@@ -1,0 +1,277 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "OFFLINE_QA_FIXTURE_NOT_REAL_CORE_VERIFICATION",
+  "cadet_ref": "cadet:alpha",
+  "player_profile_ref": "profile:alpha",
+  "steps": [
+    {
+      "command": {
+        "action": "admit",
+        "event_ref": "admission:1"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2370-09-01",
+        "admission_authorized": true
+      }
+    },
+    {
+      "command": {
+        "action": "lesson",
+        "event_ref": "lesson:y1",
+        "subject_id": "STF-401",
+        "stage": "theory"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2370-09-02",
+        "attendance_confirmed": true
+      }
+    },
+    {
+      "command": {
+        "action": "social",
+        "event_ref": "social:y1",
+        "npc_ref": "npc:cadet-02"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2370-09-03",
+        "social_event_confirmed": true
+      }
+    },
+    {
+      "command": {
+        "action": "practice",
+        "event_ref": "practice:sensors",
+        "scenario_id": "sensors_training",
+        "evidence_ref": "sim:sensors-01"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2370-09-04",
+        "simulation_resolved_in_core": true,
+        "practical_evaluation_confirmed": true,
+        "verified_evidence_refs": [
+          "sim:sensors-01"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "complete_year",
+        "event_ref": "year:1",
+        "evidence_ref": "evidence:y1"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2371-06-30",
+        "authorized_academic_review": true,
+        "consolidated_evidence": {
+          "period_complete": true,
+          "failed_required_modules": 0,
+          "remediation_open": 0,
+          "practical_requirements_complete": true,
+          "conduct_status": "good"
+        },
+        "verified_evidence_refs": [
+          "evidence:y1"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "lesson",
+        "event_ref": "lesson:y2",
+        "subject_id": "OPS-301",
+        "stage": "instructor_class"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2371-09-01",
+        "attendance_confirmed": true
+      }
+    },
+    {
+      "command": {
+        "action": "choose_specialization",
+        "event_ref": "specialization:y2",
+        "specialization_id": "science_sensors"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2372-06-28",
+        "selection_window_open": true,
+        "explicit_player_choice": true
+      }
+    },
+    {
+      "command": {
+        "action": "complete_year",
+        "event_ref": "year:2",
+        "evidence_ref": "evidence:y2"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2372-06-30",
+        "authorized_academic_review": true,
+        "explicit_player_choice": true,
+        "consolidated_evidence": {
+          "period_complete": true,
+          "failed_required_modules": 0,
+          "remediation_open": 0,
+          "practical_requirements_complete": true,
+          "conduct_status": "good"
+        },
+        "verified_evidence_refs": [
+          "evidence:y2"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "lesson",
+        "event_ref": "lesson:y3",
+        "subject_id": "BRN-201",
+        "stage": "real_system_practice"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2372-09-01",
+        "attendance_confirmed": true
+      }
+    },
+    {
+      "command": {
+        "action": "complete_year",
+        "event_ref": "year:3",
+        "evidence_ref": "evidence:y3"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2373-06-30",
+        "authorized_academic_review": true,
+        "consolidated_evidence": {
+          "period_complete": true,
+          "failed_required_modules": 0,
+          "remediation_open": 0,
+          "practical_requirements_complete": true,
+          "conduct_status": "good"
+        },
+        "verified_evidence_refs": [
+          "evidence:y3"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "lesson",
+        "event_ref": "lesson:y4",
+        "subject_id": "BRN-101",
+        "stage": "continuous_evaluation"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2373-09-01",
+        "attendance_confirmed": true
+      }
+    },
+    {
+      "command": {
+        "action": "practice",
+        "event_ref": "practice:km",
+        "scenario_id": "kobayashi_maru",
+        "evidence_ref": "sim:km-01"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2374-05-01",
+        "simulation_resolved_in_core": true,
+        "practical_evaluation_confirmed": true,
+        "verified_evidence_refs": [
+          "sim:km-01"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "complete_year",
+        "event_ref": "year:4",
+        "evidence_ref": "evidence:y4"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2374-06-30",
+        "authorized_academic_review": true,
+        "consolidated_evidence": {
+          "period_complete": true,
+          "failed_required_modules": 0,
+          "remediation_open": 0,
+          "practical_requirements_complete": true,
+          "conduct_status": "good"
+        },
+        "verified_evidence_refs": [
+          "evidence:y4"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "graduate",
+        "event_ref": "graduation:1",
+        "evidence_ref": "evidence:grad"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2374-07-01",
+        "graduation_eligible": true,
+        "authorized_academic_review": true,
+        "verified_evidence_refs": [
+          "evidence:grad"
+        ]
+      }
+    },
+    {
+      "command": {
+        "action": "commission",
+        "event_ref": "commission:1"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2374-07-02",
+        "commission_authorized": true,
+        "confirmed_graduation_event_ref": "graduation:1"
+      }
+    },
+    {
+      "command": {
+        "action": "assign_first_post",
+        "event_ref": "posting:1"
+      },
+      "trusted_host_fixture": {
+        "trusted_origin": "CORE_HOST_VERIFIED",
+        "character_ref": "cadet:alpha",
+        "effective_date": "2374-07-03",
+        "posting_authorized": true,
+        "vacancy_confirmed": true,
+        "confirmed_orders_ref": "order:starfleet-001",
+        "confirmed_position_ref": "position:science-junior-001"
+      }
+    }
+  ]
+}
