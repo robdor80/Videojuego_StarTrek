@@ -1,0 +1,63 @@
+name: F14 — Audiovisual + NAP reference (NO UE5/runtime)
+
+on:
+  push:
+    branches:
+      - feat/f14-audiovisual-nap-reference-20261014
+    paths:
+      - ".github/workflows/f14-audiovisual-reference.yml"
+      - "tools/validation/f14_*"
+      - "validation/fixtures/f14/**"
+      - "nap/profile/F14_*"
+      - "manifests/assets/f14_*"
+      - "manifests/presentation/f14_*"
+      - "docs/roadmap/master/fases/F14/**"
+  pull_request:
+    paths:
+      - ".github/workflows/f14-audiovisual-reference.yml"
+      - "tools/validation/f14_*"
+      - "validation/fixtures/f14/**"
+      - "nap/profile/F14_*"
+      - "manifests/assets/f14_*"
+      - "manifests/presentation/f14_*"
+      - "docs/roadmap/master/fases/F14/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: contratos, 43 escenarios y trazabilidad; sin certificar NAP/UE5
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sintaxis y JSON
+        run: |
+          python -m py_compile tools/validation/f14_audiovisual_reference.py tools/validation/test_f14_audiovisual_reference.py
+          python -m json.tool validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json >/dev/null
+          python -m json.tool nap/profile/F14_NAP2_COMPATIBILITY_SNAPSHOT_v0.1.json >/dev/null
+          python -m json.tool manifests/assets/f14_asset_priority_manifest_v0.1.json >/dev/null
+          python -m json.tool manifests/presentation/f14_presentation_priority_manifest_v0.1.json >/dev/null
+      - name: Escenarios y auditoría de repositorio
+        run: |
+          python tools/validation/f14_audiovisual_reference.py \
+            --scenario validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json \
+            --repo-root . \
+            --output validation/results/f14_audiovisual_offline_report.json
+      - name: Pruebas de regresión
+        run: |
+          python -m unittest discover -s tools/validation -p 'test_f14_*.py' -v
+      - name: Evidencia de ejecución (solo referencia)
+        uses: actions/upload-artifact@v4
+        with:
+          name: f14-offline-reference-evidence
+          path: validation/results/f14_audiovisual_offline_report.json
+          if-no-files-found: error
+          retention-days: 14
