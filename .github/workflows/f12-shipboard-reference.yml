@@ -1,0 +1,53 @@
+name: F12 — Vida a bordo (referencia offline; NO CoreRPG/UE5)
+
+on:
+  push:
+    branches:
+      - feat/f12-shipboard-social-reference-20261014
+    paths:
+      - ".github/workflows/f12-shipboard-reference.yml"
+      - "tools/validation/f12_*"
+      - "tools/validation/test_f12_*"
+      - "validation/fixtures/f12/**"
+      - "docs/roadmap/master/fases/F12/**"
+  pull_request:
+    paths:
+      - ".github/workflows/f12-shipboard-reference.yml"
+      - "tools/validation/f12_*"
+      - "tools/validation/test_f12_*"
+      - "validation/fixtures/f12/**"
+      - "docs/roadmap/master/fases/F12/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-reference:
+    name: 45 escenarios y regresiones; sin autoridad ni actores UE5
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sintaxis y fixture
+        run: |
+          python -m py_compile tools/validation/f12_shipboard_reference.py tools/validation/test_f12_shipboard_reference.py
+          python -m json.tool validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json >/dev/null
+      - name: Escenarios offline y huella reproducible
+        run: |
+          python tools/validation/f12_shipboard_reference.py --scenario validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json --output validation/results/f12_shipboard_offline_report.json
+      - name: Pruebas de regresión
+        run: |
+          python -m unittest discover -s tools/validation -p 'test_f12_*.py' -v
+      - name: Evidencia de ejecución (solo referencia)
+        uses: actions/upload-artifact@v4
+        with:
+          name: f12-offline-reference-evidence
+          path: validation/results/f12_shipboard_offline_report.json
+          if-no-files-found: error
+          retention-days: 14
