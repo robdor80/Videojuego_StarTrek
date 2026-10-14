@@ -1,0 +1,458 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "F10 metadata-only admission gate; trusted context here is a TEST STUB, not a real authenticated Core context",
+  "base_trusted_context": {
+    "trusted_origin": "CORE_HOST_VERIFIED",
+    "character_ref": "cadet:player-001",
+    "academic_year": 2,
+    "academy_status": "cadet_year_2",
+    "known_evidence_refs": [
+      "event:y2",
+      "web:theory-1",
+      "sim:km-1",
+      "event:grad-1",
+      "event:commission-1",
+      "event:posting-1"
+    ],
+    "authorized_academic_review": true,
+    "period_complete": true,
+    "selection_window_open": true,
+    "explicit_player_choice": true,
+    "selected_specialization": "science_sensors",
+    "simulation_resolved_in_core": true,
+    "graduation_eligible": false,
+    "commission_authorized": false,
+    "confirmed_graduation_event_ref": null,
+    "commission_confirmed": false,
+    "posting_authorized": false,
+    "vacancy_confirmed": false
+  },
+  "cases": [
+    {
+      "id": "study_local_read_only",
+      "proposal": {
+        "action": "study_progress",
+        "subject_id": "STF-401"
+      },
+      "context_patch": {
+        "trusted_origin": "UNTRUSTED"
+      },
+      "expected_decision": "READ_ONLY"
+    },
+    {
+      "id": "study_grade_injection",
+      "proposal": {
+        "action": "study_progress",
+        "subject_id": "STF-401",
+        "grade": 100
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "study_no_subject",
+      "proposal": {
+        "action": "study_progress"
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "web_evidence_review_only",
+      "proposal": {
+        "action": "import_study_evidence",
+        "evidence_ref": "web:theory-1"
+      },
+      "context_patch": {},
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "web_fake_grade",
+      "proposal": {
+        "action": "import_study_evidence",
+        "evidence_ref": "web:theory-1",
+        "score": 100
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "web_unknown_evidence",
+      "proposal": {
+        "action": "import_study_evidence",
+        "evidence_ref": "web:unknown"
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "web_claimed_authority",
+      "proposal": {
+        "action": "import_study_evidence",
+        "evidence_ref": "web:theory-1",
+        "authorized": true
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year2_transition_requires_core",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {},
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "year2_no_specialization",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "selected_specialization": null
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year2_instructor_only",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "explicit_player_choice": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year2_not_complete",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "period_complete": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year2_review_denied",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "authorized_academic_review": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year_boolean_not_integer",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "academic_year": true
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "year4_no_direct_graduation",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "cadet_year_4"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "branch_player_choice",
+      "proposal": {
+        "action": "choose_specialization",
+        "specialization_id": "engineering"
+      },
+      "context_patch": {},
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "branch_legacy_not_canonical",
+      "proposal": {
+        "action": "choose_specialization",
+        "specialization_id": "science"
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "branch_wrong_year",
+      "proposal": {
+        "action": "choose_specialization",
+        "specialization_id": "engineering"
+      },
+      "context_patch": {
+        "academic_year": 3,
+        "academy_status": "cadet_year_3"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "branch_choice_not_explicit",
+      "proposal": {
+        "action": "choose_specialization",
+        "specialization_id": "engineering"
+      },
+      "context_patch": {
+        "explicit_player_choice": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "branch_closed_window",
+      "proposal": {
+        "action": "choose_specialization",
+        "specialization_id": "engineering"
+      },
+      "context_patch": {
+        "selection_window_open": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "kobayashi_replay_review",
+      "proposal": {
+        "action": "review_simulation",
+        "scenario_id": "kobayashi_maru",
+        "evidence_ref": "sim:km-1"
+      },
+      "context_patch": {},
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "kobayashi_unresolved",
+      "proposal": {
+        "action": "review_simulation",
+        "scenario_id": "kobayashi_maru",
+        "evidence_ref": "sim:km-1"
+      },
+      "context_patch": {
+        "simulation_resolved_in_core": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "kobayashi_fake_pass",
+      "proposal": {
+        "action": "review_simulation",
+        "scenario_id": "kobayashi_maru",
+        "evidence_ref": "sim:km-1",
+        "passed": true
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "unknown_simulation",
+      "proposal": {
+        "action": "review_simulation",
+        "scenario_id": "fake_scenario",
+        "evidence_ref": "sim:km-1"
+      },
+      "context_patch": {},
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "graduation_gate",
+      "proposal": {
+        "action": "confirm_graduation",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduation_pending",
+        "graduation_eligible": true
+      },
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "graduation_not_eligible",
+      "proposal": {
+        "action": "confirm_graduation",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduation_pending"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "graduation_from_year4_direct",
+      "proposal": {
+        "action": "confirm_graduation",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "cadet_year_4",
+        "graduation_eligible": true
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "graduation_unknown_ref",
+      "proposal": {
+        "action": "confirm_graduation",
+        "evidence_ref": "event:forged"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduation_pending",
+        "graduation_eligible": true
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "commission_with_graduation_event",
+      "proposal": {
+        "action": "commission",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_authorized": true,
+        "confirmed_graduation_event_ref": "event:grad-1"
+      },
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "commission_prior_to_graduation",
+      "proposal": {
+        "action": "commission",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduation_pending",
+        "commission_authorized": true,
+        "confirmed_graduation_event_ref": "event:grad-1"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "commission_mismatched_event",
+      "proposal": {
+        "action": "commission",
+        "evidence_ref": "event:grad-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_authorized": true,
+        "confirmed_graduation_event_ref": "some:other"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "posting_with_vacancy",
+      "proposal": {
+        "action": "assign_first_post",
+        "evidence_ref": "event:posting-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_confirmed": true,
+        "posting_authorized": true,
+        "vacancy_confirmed": true
+      },
+      "expected_decision": "REQUIRES_CORE_REVIEW"
+    },
+    {
+      "id": "posting_without_vacancy",
+      "proposal": {
+        "action": "assign_first_post",
+        "evidence_ref": "event:posting-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_confirmed": true,
+        "posting_authorized": true,
+        "vacancy_confirmed": false
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "posting_without_commission",
+      "proposal": {
+        "action": "assign_first_post",
+        "evidence_ref": "event:posting-1"
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_confirmed": false,
+        "posting_authorized": true,
+        "vacancy_confirmed": true
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "untrusted_core_marker",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "trusted_origin": "WEB"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "invalid_evidence_collection",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "known_evidence_refs": "event:y2"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "mismatched_status_year",
+      "proposal": {
+        "action": "advance_year",
+        "evidence_ref": "event:y2"
+      },
+      "context_patch": {
+        "academy_status": "cadet_year_1"
+      },
+      "expected_decision": "DENY"
+    },
+    {
+      "id": "injected_worldstate",
+      "proposal": {
+        "action": "commission",
+        "evidence_ref": "event:grad-1",
+        "world_state": {
+          "rank": "captain"
+        }
+      },
+      "context_patch": {
+        "academic_year": 4,
+        "academy_status": "graduated",
+        "commission_authorized": true,
+        "confirmed_graduation_event_ref": "event:grad-1"
+      },
+      "expected_decision": "DENY"
+    }
+  ]
+}
