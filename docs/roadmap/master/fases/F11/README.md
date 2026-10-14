@@ -32,3 +32,14 @@ F04–F05, F10; F01 para **decisión de Dama ya aprobada**. La fecha de disponib
 ## Puerta de cierre
 
 Recorridos de carrera persistentes con alternativas reales, sin ascenso forzoso ni recompensa automática. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+## Avance autónomo de referencia — 14-10-2026
+
+Se ha implementado una **preparación verificable P01–P05**, con código de cribado de destinos y peticiones profesionales, un catálogo de rutas y prioridades por clase/época y una batería automatizada de **40 escenarios y 36 pruebas unitarias**. Véase la [auditoría y acta F11](ACTA_P01_P05_REFERENCIA_2026-10-14.md).
+
+- Reglas: `gameplay/careers/starfleet_service/f11_route_plan_v0.1.json`.
+- Ejecutor sin autoridad: `tools/validation/f11_career_reference.py`.
+- Evidencias offline: `validation/fixtures/f11/f11_career_scenarios_v0.1.json`.
+- Pruebas: `tools/validation/test_f11_career_reference.py`, workflow `.github/workflows/f11-career-reference.yml`.
+
+**Alcance del avance:** REFERENCIA_PROBADA si la CI final del HEAD es verde; jamás concesión real de rango, vacante, mando, acceso a la Valhalla ni partida UE5. Se mantiene sin cambios el estado maestro `PLANIFICADA` y los pasos oficiales sin marcar hasta validación CoreRPG/Host/UE5 y prueba presencial en MSI. La secuencia de la Fase 10 tiene igualmente bloqueos jugables pendientes.
