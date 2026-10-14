@@ -88,7 +88,7 @@ def _validate_profile(profile, routes):
         reasons.append("invalid_era")
     if type(profile.get("campaign_year")) is not int or not 2200 <= profile["campaign_year"] <= 2999:
         reasons.append("invalid_year")
-    if profile.get("route") not in routes.get("routes", {}):
+    if not isinstance(profile.get("route"), str) or profile["route"] not in routes.get("routes", {}):
         reasons.append("invalid_route")
     if not _strings(profile.get("qualifications")):
         reasons.append("invalid_qualifications")
@@ -164,7 +164,7 @@ def review_career_request(profile, request, offer=None, catalog=None, routes=Non
     if not isinstance(request, dict):
         return _result(BLOCKED, reasons + ["invalid_request"])
     action = request.get("action")
-    if action not in ACTIONS:
+    if not isinstance(action, str) or action not in ACTIONS:
         reasons.append("unsupported_action")
     if reasons:
         return _result(BLOCKED, reasons)
@@ -203,7 +203,7 @@ def review_career_request(profile, request, offer=None, catalog=None, routes=Non
         if not profile["ship_id"]:
             reasons.append("no_ship_assignment")
     elif action == "change_specialty":
-        if request.get("target_route") not in routes.get("routes", {}):
+        if not isinstance(request.get("target_route"), str) or request["target_route"] not in routes.get("routes", {}):
             reasons.append("invalid_target_route")
         if request.get("target_route") == profile["route"]:
             reasons.append("same_specialty")
