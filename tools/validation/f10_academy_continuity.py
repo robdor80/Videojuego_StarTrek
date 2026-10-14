@@ -293,9 +293,16 @@ def replay(payload: dict) -> dict:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--scenario", type=Path, required=True)
+    parser.add_argument("--output", type=Path, help="Optional fixture save output (not a CoreRPG save)")
     args = parser.parse_args()
     fixture = json.loads(args.scenario.read_text(encoding="utf-8"))
-    print(json.dumps(replay(fixture), indent=2, ensure_ascii=False, sort_keys=True))
+    envelope = replay(fixture)
+    rendered = json.dumps(envelope, indent=2, ensure_ascii=False, sort_keys=True) + "\n"
+    if args.output:
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(rendered, encoding="utf-8")
+    else:
+        print(rendered, end="")
     return 0
 
 
