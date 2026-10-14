@@ -77,13 +77,13 @@
       "expected_decision": "DENY"
     },
     {
-      "id": "web_unknown_evidence",
+      "id": "web_new_evidence_queued_for_verification",
       "proposal": {
         "action": "import_study_evidence",
         "evidence_ref": "web:unknown"
       },
       "context_patch": {},
-      "expected_decision": "DENY"
+      "expected_decision": "REQUIRES_CORE_REVIEW"
     },
     {
       "id": "web_claimed_authority",
