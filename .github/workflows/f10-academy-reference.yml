@@ -54,6 +54,13 @@ jobs:
       - name: Ejecutar 20 contratos Academy Life y su suite preexistente
         run: python tools/generation/run_academy_life_suite.py
       - name: Reproducir cadete, cuatro cursos, graduación y primer destino (offline)
-        run: python tools/validation/f10_academy_continuity.py --scenario validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json > /dev/null
+        run: python tools/validation/f10_academy_continuity.py --scenario validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json --output validation/results/f10_academy_lifecycle_snapshot.json
+      - name: Publicar snapshot de prueba (NO partida CoreRPG)
+        uses: actions/upload-artifact@v4
+        with:
+          name: f10-academy-offline-snapshot
+          path: validation/results/f10_academy_lifecycle_snapshot.json
+          if-no-files-found: error
+          retention-days: 14
       - name: Validar barreras, guardado/carga, web y regresiones
         run: python -m unittest discover -s tools/validation -p 'test_f10_*.py' -v
