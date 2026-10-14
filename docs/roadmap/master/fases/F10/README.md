@@ -33,3 +33,9 @@ F02–F05, F08 y F09 según práctica; repo externo academiaflota.
 ## Puerta de cierre
 
 Prueba académica reproducible y transición real al servicio; 20/20 life design no sustituye integración UE5. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+## Preparación P01–P05 de referencia (14-10-2026)
+
+Se ha añadido [el acta técnica de F10](ACTA_P01_P05_REFERENCIA_2026-10-14.md), la auditoría de currículo y web, un filtro de evidencia sin autoridad automática y un ensayo offline de los cuatro años hasta Alférez y primer destino. El replay reutiliza los pasos 18 y 19 de Academy Life; la suite comprueba además horarios/instructores y publica un snapshot de prueba.
+
+**Madurez demostrable:** `REFERENCIA_PROBADA` para pruebas Python y paridad estática, sujeta a CI verde. **Fase global todavía NO cerrada**: los P01–P05 solo se marcarán completados al nivel de su puerta cuando haya CoreRPG autoritativo, UE5 jugable, persistencia real y aceptación en MSI. No confundir el fixture de host con autenticación ni el snapshot offline con una partida real.
