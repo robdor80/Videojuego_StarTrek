@@ -36,3 +36,17 @@ F03–F05 y Core runtime; respetar bloque 4 antes del 5 en adelante sin duplicar
 ## Puerta de cierre
 
 Mundo con eventos reproducibles, vida persistente y misiones derivadas de estados existentes. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+
+## Avance autónomo de referencia — 14-10-2026
+
+Preparación **P01–P05** con auditoría de capas 001–120, puerta estricta de bloques dinámicos 4→10, economía/tráfico/recursos/disrupciones, Primera Directriz y primer contacto, derivación de misiones desde necesidades preexistentes y replay causal determinista **solo offline**. Ver [acta de evidencias y bloqueos](ACTA_P01_P05_REFERENCIA_2026-10-14.md).
+
+- Ejecutor sin autoridad Core: `tools/validation/f13_dynamic_universe_reference.py`.
+- **44 escenarios** sintéticos y no canónicos: `validation/fixtures/f13/f13_dynamic_universe_scenarios_v0.1.json`.
+- Pruebas unitarias: `tools/validation/test_f13_dynamic_universe_reference.py`.
+- CI: `.github/workflows/f13-dynamic-universe-reference.yml`.
+
+La preparación conserva 001–118 en su madurez declarada, 119 `PARTIAL`, 120 `BLOCKED_RUNTIME` y el **bloque 4 como siguiente bloque real**. No cierra el bloque 4 ni implementa 5–10; el uso del contrato de misión emergente solo valida la frontera causal y no adelanta el bloque 9.
+
+**No hay mutaciones de World State, integración CoreRPG, save/load real ni ejecución UE5/MSI.** F13 continúa globalmente `PLANIFICADA` y F02 sigue siendo la única fase principal `EN_CURSO`.
