@@ -24,9 +24,9 @@ permissions:
 
 jobs:
   academy-reference:
-    name: Auditoría, 37 escenarios y coherencia con academiaflota (NO Core/UE5)
+    name: Academia de referencia, trayectoria guardada y web (NO Core/UE5)
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - name: Checkout fuentes Star Trek
         uses: actions/checkout@v4
@@ -44,11 +44,16 @@ jobs:
           python-version: "3.12"
       - name: Comprobar sintaxis y JSON
         run: |
-          python -m py_compile tools/validation/f10_academy_reference.py tools/validation/f10_web_parity.py tools/validation/test_f10_academy_reference.py
+          python -m py_compile tools/validation/f10_academy_reference.py tools/validation/f10_web_parity.py tools/validation/f10_academy_continuity.py tools/validation/test_f10_academy_reference.py tools/validation/test_f10_academy_continuity.py
           python -m json.tool validation/fixtures/f10/f10_academy_scenarios_v0.1.json > /dev/null
+          python -m json.tool validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json > /dev/null
       - name: Auditoría de fuentes y estados académicos
         run: python tools/validation/f10_academy_reference.py
       - name: Comparar 60 cursos y 7 ramas con la web (solo datos)
         run: python tools/validation/f10_web_parity.py --web-root external/academiaflota
-      - name: Validar barreras y escenarios positivos/negativos
-        run: python -m unittest discover -s tools/validation -p 'test_f10_academy_reference.py' -v
+      - name: Ejecutar 20 contratos Academy Life y su suite preexistente
+        run: python tools/generation/run_academy_life_suite.py
+      - name: Reproducir cadete, cuatro cursos, graduación y primer destino (offline)
+        run: python tools/validation/f10_academy_continuity.py --scenario validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json > /dev/null
+      - name: Validar barreras, guardado/carga, web y regresiones
+        run: python -m unittest discover -s tools/validation -p 'test_f10_*.py' -v
