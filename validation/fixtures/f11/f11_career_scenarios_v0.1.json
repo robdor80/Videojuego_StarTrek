@@ -1,0 +1,1170 @@
+{
+  "schema": "f11_offline_scenarios_0.1",
+  "authority": "ALL_OFFLINE_DATA_UNAUTHENTICATED",
+  "scenarios": [
+    {
+      "id": "01_first_oberth",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "02_first_miranda",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "miranda",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "03_temporal_oberth_pike",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "pike",
+        "campaign_year": 2260,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "04_constitution_pike",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "pike",
+        "campaign_year": 2260,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "constitution",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "05_intrepid_too_early",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2369,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "intrepid",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "06_intrepid_valid",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "intrepid",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "07_galaxy_decade_uncertain",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2365,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "galaxy",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "08_galaxy_valid",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "galaxy",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "09_sovereign_too_early",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "sovereign",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "10_sovereign_valid_2373",
+      "kind": "assignment",
+      "expected_status": "CANDIDATE_FOR_AUTHORIZED_REVIEW",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2373,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "sovereign",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "11_valhalla_unavailable",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2390,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "valhalla",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "12_odyssey_unverified",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2390,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "odyssey",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "13_vacancy_closed",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": false,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "14_vacancy_bad_type",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": 1,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "15_ship_not_active",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": false
+      }
+    },
+    {
+      "id": "16_ensign_not_captain",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "ship_captain",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "17_qualification_missing",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "science_analysis"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "18_bool_year",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": true,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "19_lieutenant_incompatible",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "lieutenant",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "20_remain_same_ship",
+      "kind": "career",
+      "expected_status": "NO_CHANGE",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "remain"
+      }
+    },
+    {
+      "id": "21_decline_promotion",
+      "kind": "career",
+      "expected_status": "NO_CHANGE",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "decline_promotion"
+      }
+    },
+    {
+      "id": "22_ensign_promote_ljg",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "promotion",
+        "target_rank": "lieutenant_junior_grade",
+        "evidence_event_ids": [
+          "event-eval-001"
+        ]
+      }
+    },
+    {
+      "id": "23_promotion_jump",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "promotion",
+        "target_rank": "commander",
+        "evidence_event_ids": [
+          "event-eval-001"
+        ]
+      }
+    },
+    {
+      "id": "24_no_evidence",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "promotion",
+        "target_rank": "lieutenant_junior_grade",
+        "evidence_event_ids": []
+      }
+    },
+    {
+      "id": "25_captain_without_command_qual",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "commander",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "promotion",
+        "target_rank": "captain",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      }
+    },
+    {
+      "id": "26_eligible_captain_review",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "commander",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": true,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "promotion",
+        "target_rank": "captain",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      }
+    },
+    {
+      "id": "27_transfer_request",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "transfer",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "intrepid",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "28_transfer_same_assignment",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "transfer",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-001",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "29_permanent_command_as_ensign",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "permanent_command",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "galaxy",
+        "position_id": "ship_captain",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "30_captain_command_review",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "captain",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": true,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "permanent_command",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "galaxy",
+        "position_id": "ship_captain",
+        "accepted_ranks": [
+          "captain"
+        ],
+        "required_qualifications": [],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "31_temporary_command_without_order",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "commander",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": true,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "temporary_command",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      }
+    },
+    {
+      "id": "32_temporary_command_with_order",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "commander",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": true,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "temporary_command",
+        "evidence_event_ids": [
+          "eval-2"
+        ],
+        "operational_order_ref": "order-from-host-for-later-check"
+      }
+    },
+    {
+      "id": "33_specialty_retrain",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator",
+          "tactical_bridge_course"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "change_specialty",
+        "target_route": "tactical_operations",
+        "bridging_qualification": "tactical_bridge_course",
+        "evidence_event_ids": [
+          "training-1"
+        ]
+      }
+    },
+    {
+      "id": "34_specialty_without_retrain",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "change_specialty",
+        "target_route": "tactical_operations",
+        "bridging_qualification": "tactical_bridge_course",
+        "evidence_event_ids": [
+          "training-1"
+        ]
+      }
+    },
+    {
+      "id": "35_evaluation_missing_supervisor",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "evaluation",
+        "evidence_event_ids": [
+          "mission-1"
+        ]
+      }
+    },
+    {
+      "id": "36_evaluation_with_events",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "evaluation",
+        "evidence_event_ids": [
+          "mission-1"
+        ],
+        "supervisor_id": "npc-001"
+      }
+    },
+    {
+      "id": "37_transfer_no_vacancy",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "transfer",
+        "evidence_event_ids": [
+          "mission-1"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "intrepid",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": false,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "38_late_era_ship_not_pike",
+      "kind": "assignment",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "pike",
+        "campaign_year": 2390,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "intrepid",
+        "position_id": "sensors_operator",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [
+          "sensors_operator"
+        ],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    },
+    {
+      "id": "39_unsupported_action",
+      "kind": "career",
+      "expected_status": "BLOCKED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "teleport_to_valhalla",
+        "evidence_event_ids": [
+          "event"
+        ]
+      }
+    },
+    {
+      "id": "40_change_position_review",
+      "kind": "career",
+      "expected_status": "REVIEW_REQUIRED",
+      "profile": {
+        "rank": "ensign",
+        "era_profile": "tng_ds9_voyager",
+        "campaign_year": 2372,
+        "route": "science",
+        "qualifications": [
+          "sensors_operator"
+        ],
+        "command_qualified": false,
+        "assignment_id": "a-001",
+        "ship_id": "u-001"
+      },
+      "request": {
+        "action": "change_position",
+        "evidence_event_ids": [
+          "eval-2"
+        ]
+      },
+      "offer": {
+        "assignment_id": "a-002",
+        "ship_id": "u-002",
+        "class_id": "oberth",
+        "position_id": "junior_science_officer",
+        "accepted_ranks": [
+          "ensign"
+        ],
+        "required_qualifications": [],
+        "vacancy": true,
+        "ship_operational": true
+      }
+    }
+  ]
+}
