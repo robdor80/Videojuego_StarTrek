@@ -1,0 +1,66 @@
+name: F10 — Academia, continuidad y contraste web (referencia)
+
+on:
+  push:
+    branches:
+      - feat/f10-academy-continuity-reference-20261014
+    paths:
+      - "docs/roadmap/master/fases/F10/**"
+      - "tools/validation/f10_*"
+      - "tools/validation/test_f10_*"
+      - "validation/fixtures/f10/**"
+      - ".github/workflows/f10-academy-reference.yml"
+  pull_request:
+    paths:
+      - "docs/roadmap/master/fases/F10/**"
+      - "tools/validation/f10_*"
+      - "tools/validation/test_f10_*"
+      - "validation/fixtures/f10/**"
+      - ".github/workflows/f10-academy-reference.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  academy-reference:
+    name: Academia de referencia, trayectoria guardada y web (NO Core/UE5)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout fuentes Star Trek
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Checkout web pública en SHA auditado
+        uses: actions/checkout@v4
+        with:
+          repository: robdor80/academiaflota
+          ref: 0a46971059950bb234ec6fd5114cee03cb2c5984
+          path: external/academiaflota
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Comprobar sintaxis y JSON
+        run: |
+          python -m py_compile tools/validation/f10_academy_reference.py tools/validation/f10_web_parity.py tools/validation/f10_academy_continuity.py tools/validation/test_f10_academy_reference.py tools/validation/test_f10_academy_continuity.py
+          python -m json.tool validation/fixtures/f10/f10_academy_scenarios_v0.1.json > /dev/null
+          python -m json.tool validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json > /dev/null
+      - name: Auditoría de fuentes y estados académicos
+        run: python tools/validation/f10_academy_reference.py
+      - name: Comparar 60 cursos y 7 ramas con la web (solo datos)
+        run: python tools/validation/f10_web_parity.py --web-root external/academiaflota
+      - name: Ejecutar 20 contratos Academy Life y su suite preexistente
+        run: python tools/generation/run_academy_life_suite.py
+      - name: Reproducir cadete, cuatro cursos, graduación y primer destino (offline)
+        run: python tools/validation/f10_academy_continuity.py --scenario validation/fixtures/f10/f10_academy_lifecycle_offline_v0.1.json --output validation/results/f10_academy_lifecycle_snapshot.json
+      - name: Publicar snapshot de prueba (NO partida CoreRPG)
+        uses: actions/upload-artifact@v4
+        with:
+          name: f10-academy-offline-snapshot
+          path: validation/results/f10_academy_lifecycle_snapshot.json
+          if-no-files-found: error
+          retention-days: 14
+      - name: Validar barreras, guardado/carga, web y regresiones
+        run: python -m unittest discover -s tools/validation -p 'test_f10_*.py' -v
