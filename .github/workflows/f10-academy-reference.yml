@@ -7,12 +7,14 @@ on:
     paths:
       - "docs/roadmap/master/fases/F10/**"
       - "tools/validation/f10_*"
+      - "tools/validation/test_f10_*"
       - "validation/fixtures/f10/**"
       - ".github/workflows/f10-academy-reference.yml"
   pull_request:
     paths:
       - "docs/roadmap/master/fases/F10/**"
       - "tools/validation/f10_*"
+      - "tools/validation/test_f10_*"
       - "validation/fixtures/f10/**"
       - ".github/workflows/f10-academy-reference.yml"
   workflow_dispatch:
