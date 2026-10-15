@@ -3,7 +3,7 @@ name: F13 — Universo dinámico (referencia offline; NO CoreRPG/UE5)
 on:
   push:
     branches:
-      - feat/f13-dynamic-universe-reference-20261014
+      - main
     paths:
       - ".github/workflows/f13-dynamic-universe-reference.yml"
       - "tools/validation/f13_*"
