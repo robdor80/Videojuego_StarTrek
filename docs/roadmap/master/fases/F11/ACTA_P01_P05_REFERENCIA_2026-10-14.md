@@ -86,7 +86,7 @@ La asignación de naves también condiciona la narrativa: una Oberth científica
 - Comandante no recibe puesto de capitán por estar en el puente; Capitán cualificado tampoco recibe una nave sin vacante.
 - Valhalla y Odyssey no aparecen como ofertas aptas sin ficha verificable y disponibilidad temporal. El objetivo Valhalla sigue **opcional**, no recompensado automáticamente.
 
-**Artefactos:** `validation/fixtures/f11/f11_career_scenarios_v0.1.json` contiene 40 escenarios con resultados esperados, y `tools/validation/test_f11_career_reference.py` añade 36 pruebas unitarias. El ejecutor de escenarios genera una huella SHA-256 estable y un informe **offline**; no es una firma confiable ni un guardado de partida. Workflow: `.github/workflows/f11-career-reference.yml`.
+**Artefactos:** `validation/fixtures/f11/f11_career_scenarios_v0.1.json` contiene 40 escenarios con resultados esperados, y `tools/validation/test_f11_career_reference.py` añade 37 pruebas unitarias. El ejecutor de escenarios genera una huella SHA-256 estable y un informe **offline**; no es una firma confiable ni un guardado de partida. Workflow: `.github/workflows/f11-career-reference.yml`.
 
 ## 7. Puertas explícitas para continuación
 
