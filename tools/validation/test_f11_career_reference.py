@@ -196,6 +196,15 @@ class F11CareerReferenceTests(unittest.TestCase):
         self.assertEqual(f11.REVIEW, r["status"])
         self.assertEqual("OFFLINE_REFERENCE_ONLY_NO_WORLD_STATE_MUTATION", r["authority"])
 
+    def test_37_approved_route_priorities_remain_separated(self):
+        routes = self.routes["routes"]
+        self.assertEqual(["oberth", "intrepid", "nebula"], routes["science"]["class_priorities"])
+        self.assertEqual(["nova"], routes["science"]["class_candidates_to_verify"])
+        self.assertEqual(["miranda"], routes["tactical_operations"]["class_priorities"])
+        self.assertEqual(["saber", "akira", "steamrunner"], routes["tactical_operations"]["class_candidates_to_verify"])
+        self.assertEqual(["galaxy", "sovereign"], routes["exploration_command"]["class_priorities"])
+        self.assertEqual(["odyssey", "valhalla"], routes["exploration_command"]["class_candidates_to_verify"])
+
 
 if __name__ == "__main__":
     unittest.main()
