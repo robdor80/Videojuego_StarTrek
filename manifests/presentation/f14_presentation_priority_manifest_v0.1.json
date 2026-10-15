@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "date": "2026-10-14",
+  "phase": "F14-P03",
+  "status": "REFERENCE_PRIORITY_ONLY_NO_MEDIA_RUNTIME",
+  "families": [
+    {
+      "id": "sensors_ui_tng",
+      "family": "ui",
+      "era": "tng_ds9_voyager",
+      "priority": 0,
+      "source_refs": ["ui/academy/sensors_manual_experience.md", "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"],
+      "binary_status": "REFERENCE_FIXTURE_ONLY",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "interactive console surface in UE5 with functional F06/F08 handoff"
+    },
+    {
+      "id": "bridge_camera_povs",
+      "family": "camera",
+      "era": "tng_ds9_voyager",
+      "priority": 0,
+      "source_refs": ["presentation/pov_profiles/starship_bridge_povs.json"],
+      "binary_status": "DATA_REFERENCE_PRESENT",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "camera/interaction validation in pilot bridge"
+    },
+    {
+      "id": "starship_ambience_base",
+      "family": "ambience",
+      "era": "era_neutral",
+      "priority": 1,
+      "source_refs": ["audio/ambience/"],
+      "binary_status": "NO_PRODUCTION_BINARY_BASELINE",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "licensed/original loop set plus spatial/audio-mix test"
+    },
+    {
+      "id": "starship_sfx_base",
+      "family": "sfx",
+      "era": "era_neutral",
+      "priority": 1,
+      "source_refs": ["audio/sfx/"],
+      "binary_status": "NO_PRODUCTION_BINARY_BASELINE",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "licensed/original interaction and alert SFX plus runtime mix test"
+    },
+    {
+      "id": "computer_and_npc_voice_base",
+      "family": "voice",
+      "era": "era_neutral",
+      "priority": 1,
+      "source_refs": ["audio/voice/"],
+      "binary_status": "NO_PRODUCTION_BINARY_BASELINE",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "voice pipeline, provenance/consent policy and runtime playback"
+    },
+    {
+      "id": "music_context_families",
+      "family": "music",
+      "era": "era_neutral",
+      "priority": 2,
+      "source_refs": ["audio/music/"],
+      "binary_status": "NO_PRODUCTION_BINARY_BASELINE",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "licensed/original cues and context transition/mix validation"
+    },
+    {
+      "id": "era_visual_variants",
+      "family": "ui",
+      "era": "era_neutral",
+      "priority": 2,
+      "source_refs": ["art_direction/visual_bibles/eras/STAR_TREK_ERA_VISUAL_PROFILES_v0.1.json", "presentation/era_profiles/"],
+      "binary_status": "PROFILE_REFERENCE_PRESENT",
+      "runtime_status": "NO_EJECUTADO",
+      "next_gate": "approved per-era visual implementations without future-tech leakage"
+    }
+  ],
+  "guardrails": [
+    "Do not infer a production binary from a placeholder directory or design profile.",
+    "Do not claim actor/performer voice rights from a character or franchise reference.",
+    "Every distributable audio asset needs source/license or project-original provenance.",
+    "Era variants may specialize presentation but cannot silently change World State or technology availability.",
+    "Camera/UI reference data is not proof of an interactive UE5 implementation."
+  ]
+}
