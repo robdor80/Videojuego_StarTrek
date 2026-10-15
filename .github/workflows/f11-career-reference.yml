@@ -46,7 +46,7 @@ jobs:
       - name: Ejecutar 40 escenarios offline y emitir huella
         run: |
           python tools/validation/f11_career_reference.py --scenario validation/fixtures/f11/f11_career_scenarios_v0.1.json --output validation/results/f11_career_offline_report.json
-      - name: Validar 36 pruebas y barreras Core/Host
+      - name: Validar 37 pruebas y barreras Core/Host
         run: |
           python -m unittest discover -s tools/validation -p 'test_f11_*.py' -v
       - name: Guardar evidencia reproducible de referencia
