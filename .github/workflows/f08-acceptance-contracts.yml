@@ -3,7 +3,7 @@ name: F08 — contrato y evidencias de aceptación (NO UE5)
 on:
   push:
     branches:
-      - feat/f08-preparacion-guardia-sensores-v001
+      - main
     paths:
       - "tools/validation/f08_acceptance_gate.py"
       - "tools/validation/test_f08_acceptance_gate.py"
