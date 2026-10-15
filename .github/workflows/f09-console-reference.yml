@@ -3,7 +3,7 @@ name: F09 — contratos de consolas (solo referencia)
 on:
   push:
     branches:
-      - feat/f09-console-contracts-reference-20261013
+      - main
     paths:
       - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
       - "tools/validation/f09_interconsole_reference.py"
