@@ -3,7 +3,7 @@ name: F10 — Academia, continuidad y contraste web (referencia)
 on:
   push:
     branches:
-      - feat/f10-academy-continuity-reference-20261014
+      - main
     paths:
       - "docs/roadmap/master/fases/F10/**"
       - "tools/validation/f10_*"
