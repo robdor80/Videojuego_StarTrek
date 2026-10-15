@@ -3,7 +3,7 @@ name: F12 — Vida a bordo (referencia offline; NO CoreRPG/UE5)
 on:
   push:
     branches:
-      - feat/f12-shipboard-social-reference-20261014
+      - main
     paths:
       - ".github/workflows/f12-shipboard-reference.yml"
       - "tools/validation/f12_*"
