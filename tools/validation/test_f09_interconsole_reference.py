@@ -5,7 +5,8 @@ import json
 import unittest
 
 from f09_interconsole_reference import (
-    ROOT, MATRIX, CANONICAL, assess_handoff, catalog_errors, load_catalog,
+    ROOT, MATRIX, CANONICAL, REQUIRED, PRIORITIES, STATUSES,
+    assess_handoff, catalog_errors, load_catalog,
     RESULT_ACCEPT, RESULT_DENY, RESULT_CLARIFY,
 )
 
@@ -197,9 +198,9 @@ class F09ReferenceTests(unittest.TestCase):
         base = json.loads((ROOT / "gameplay/ship_operations/interconsole/"
                            "interconsole_data_package_contract.json").read_text("utf-8"))
         self.assertEqual(base["status"], "fixed")
-        self.assertTrue(set(("package_id", "source_system", "target_system",
-                             "created_at", "payload_refs", "provenance"))
-                        .issubset(set(base["required"])))
+        self.assertEqual(tuple(base["required"]), REQUIRED)
+        self.assertEqual(set(base["fields"]["priority"]), set(PRIORITIES))
+        self.assertEqual(set(base["fields"]["status"]), set(STATUSES))
 
     def test_catalog_rejects_missing_reference(self):
         broken = copy.deepcopy(self.matrix)
