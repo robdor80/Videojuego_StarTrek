@@ -10,6 +10,9 @@ on:
       - "tools/validation/test_f13_*"
       - "validation/fixtures/f13/**"
       - "docs/roadmap/master/fases/F13/**"
+      - "docs/roadmap/procedural_layers_status_v0.1.json"
+      - "docs/roadmap/procedural_layers_master_plan_v0.1.md"
+      - "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
   pull_request:
     paths:
       - ".github/workflows/f13-dynamic-universe-reference.yml"
@@ -17,6 +20,9 @@ on:
       - "tools/validation/test_f13_*"
       - "validation/fixtures/f13/**"
       - "docs/roadmap/master/fases/F13/**"
+      - "docs/roadmap/procedural_layers_status_v0.1.json"
+      - "docs/roadmap/procedural_layers_master_plan_v0.1.md"
+      - "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
   workflow_dispatch:
 
 permissions:
