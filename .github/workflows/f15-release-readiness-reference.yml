@@ -3,7 +3,7 @@ name: F15 — Release readiness reference (NO beta/runtime certification)
 on:
   push:
     branches:
-      - feat/f15-release-readiness-reference-20261015
+      - main
     paths:
       - ".github/workflows/f15-release-readiness-reference.yml"
       - "tools/validation/f15_*"
