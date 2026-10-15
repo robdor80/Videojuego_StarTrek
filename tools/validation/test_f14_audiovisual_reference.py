@@ -106,6 +106,13 @@ class F14ScenarioTests(unittest.TestCase):
         self.assertEqual(a["cases_failed"], 0)
         self.assertEqual(a, b)
 
+    def test_repository_audit_validates_real_priority_manifests(self):
+        root = HERE.parents[2]
+        result = f14.audit_repository(root)
+        self.assertEqual(f14.REVIEW, result["status"])
+        self.assertGreater(result["asset_priority_entries"], 0)
+        self.assertGreater(result["presentation_priority_families"], 0)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -3,12 +3,13 @@ name: F11 — Carrera y flota (referencia offline, NO Core ni UE5)
 on:
   push:
     branches:
-      - feat/f11-career-fleet-reference-20261014
+      - main
     paths:
       - ".github/workflows/f11-career-reference.yml"
       - "tools/validation/f11_*"
       - "tools/validation/test_f11_*"
       - "gameplay/careers/starfleet_service/f11_*"
+      - "gameplay/careers/**"
       - "validation/fixtures/f11/**"
       - "docs/roadmap/master/fases/F11/**"
       - "lore/starships/classes/core_starship_classes.json"
@@ -18,6 +19,7 @@ on:
       - "tools/validation/f11_*"
       - "tools/validation/test_f11_*"
       - "gameplay/careers/starfleet_service/f11_*"
+      - "gameplay/careers/**"
       - "validation/fixtures/f11/**"
       - "docs/roadmap/master/fases/F11/**"
       - "lore/starships/classes/core_starship_classes.json"
@@ -46,7 +48,7 @@ jobs:
       - name: Ejecutar 40 escenarios offline y emitir huella
         run: |
           python tools/validation/f11_career_reference.py --scenario validation/fixtures/f11/f11_career_scenarios_v0.1.json --output validation/results/f11_career_offline_report.json
-      - name: Validar 36 pruebas y barreras Core/Host
+      - name: Validar 38 pruebas y barreras Core/Host
         run: |
           python -m unittest discover -s tools/validation -p 'test_f11_*.py' -v
       - name: Guardar evidencia reproducible de referencia

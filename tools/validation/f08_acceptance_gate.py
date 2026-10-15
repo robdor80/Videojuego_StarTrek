@@ -163,6 +163,9 @@ def _validate_artifacts(record: dict, folder: Path | None, errors: list[str]) ->
         _issue(errors, "ARTIFACT_BASE_DIRECTORY_MISSING")
         return
     base = folder.resolve()
+    if not base.is_dir():
+        _issue(errors, "ARTIFACT_BASE_DIRECTORY_MISSING")
+        return
     for name in REQUIRED_ARTIFACTS:
         artifact = evidence[name]
         if not isinstance(artifact, dict):

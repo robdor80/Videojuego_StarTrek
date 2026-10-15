@@ -172,5 +172,13 @@ class F15ReleaseReadinessTests(unittest.TestCase):
             self.assertEqual(result["status"], BLOCKED)
             self.assertIn("repository_reference_files_missing", result["reasons"])
 
+    def test_repository_audit_accepts_current_reference_state(self):
+        here = Path(__file__).resolve().parents[2]
+        result = audit_repository(here)
+        self.assertEqual(result["status"], REVIEW)
+        self.assertEqual(result["f15_status"], "PLANIFICADA")
+        self.assertFalse(result["runtime_certified"])
+        self.assertFalse(result["release_certified"])
+
 if __name__ == "__main__":
     unittest.main()

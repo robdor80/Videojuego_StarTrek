@@ -1,7 +1,7 @@
 # F15 — QA integral, rendimiento, distribución y beta
 
 **Estado de la fase global:** PLANIFICADA (reconocimiento de trabajo previo no equivale a cierre de fase).
-**Nivel objetivo:** ACEPTACION_SUPERADA / BUILD_DISTRIBUIBLE.
+**Nivel objetivo oficial:** `ACEPTACION_SUPERADA`. `BUILD_DISTRIBUIBLE` es una condición/artefacto de aceptación de P05, no un nivel de madurez adicional del roadmap.
 
 ## Objetivo
 

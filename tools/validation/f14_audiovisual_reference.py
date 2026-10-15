@@ -285,10 +285,61 @@ def audit_repository(repo_root):
     if snapshot.get("external_nap", {}).get("verified_main_commit") != "30a0b199fcb3200ce9e4de97944d2ff9fd0c642c":
         return outcome(BLOCKED, "nap_snapshot_commit_mismatch")
 
+    with (root / "manifests/assets/f14_asset_priority_manifest_v0.1.json").open("r", encoding="utf-8") as fh:
+        assets = json.load(fh)
+    asset_entries = assets.get("entries")
+    if assets.get("status") != "REFERENCE_PRIORITY_ONLY_NO_ASSET_PRODUCTION" or not isinstance(asset_entries, list) or not asset_entries:
+        return outcome(BLOCKED, "asset_priority_manifest_invalid")
+    asset_ids = [item.get("asset_id") for item in asset_entries if isinstance(item, dict)]
+    if len(asset_ids) != len(asset_entries) or not all(nonblank(x) for x in asset_ids) or len(asset_ids) != len(set(asset_ids)):
+        return outcome(BLOCKED, "asset_priority_manifest_ids_invalid")
+    for item in asset_entries:
+        source_ref = item.get("source_ref")
+        if (
+            type(item.get("priority")) is not int
+            or not 0 <= item["priority"] <= 4
+            or item.get("source_state") not in SOURCE_STATES
+            or item.get("rights_state") not in RIGHTS_STATES
+            or item.get("ue5_state") != "NO_EJECUTADO"
+            or not nonblank(item.get("need_ref"))
+            or not nonblank(source_ref)
+            or not unique_nonblank_list(item.get("required_next_evidence"))
+        ):
+            return outcome(BLOCKED, "asset_priority_manifest_entry_invalid", asset_id=item.get("asset_id"))
+        if not (root / source_ref).exists():
+            return outcome(BLOCKED, "asset_priority_source_missing", asset_id=item["asset_id"], source_ref=source_ref)
+
+    with (root / "manifests/presentation/f14_presentation_priority_manifest_v0.1.json").open("r", encoding="utf-8") as fh:
+        presentation = json.load(fh)
+    families = presentation.get("families")
+    if presentation.get("status") != "REFERENCE_PRIORITY_ONLY_NO_MEDIA_RUNTIME" or not isinstance(families, list) or not families:
+        return outcome(BLOCKED, "presentation_priority_manifest_invalid")
+    family_ids = [item.get("id") for item in families if isinstance(item, dict)]
+    if len(family_ids) != len(families) or not all(nonblank(x) for x in family_ids) or len(family_ids) != len(set(family_ids)):
+        return outcome(BLOCKED, "presentation_priority_manifest_ids_invalid")
+    for item in families:
+        refs = item.get("source_refs")
+        if (
+            item.get("family") not in PRESENTATION_FAMILIES
+            or item.get("era") not in ERAS
+            or type(item.get("priority")) is not int
+            or not 0 <= item["priority"] <= 4
+            or item.get("runtime_status") != "NO_EJECUTADO"
+            or not unique_nonblank_list(refs)
+            or not nonblank(item.get("binary_status"))
+            or not nonblank(item.get("next_gate"))
+        ):
+            return outcome(BLOCKED, "presentation_priority_manifest_entry_invalid", family_id=item.get("id"))
+        missing_refs = [ref for ref in refs if not (root / ref).exists()]
+        if missing_refs:
+            return outcome(BLOCKED, "presentation_priority_source_missing", family_id=item["id"], missing=missing_refs)
+
     return outcome(
         REVIEW,
         "repository_reference_inventory_consistent",
         checked_files=len(required),
+        asset_priority_entries=len(asset_entries),
+        presentation_priority_families=len(families),
         sutherland_rights_verified=False,
         sutherland_ue5_certified=False,
     )

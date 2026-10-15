@@ -196,6 +196,26 @@ class F11CareerReferenceTests(unittest.TestCase):
         self.assertEqual(f11.REVIEW, r["status"])
         self.assertEqual("OFFLINE_REFERENCE_ONLY_NO_WORLD_STATE_MUTATION", r["authority"])
 
+    def test_37_approved_route_priorities_remain_separated(self):
+        routes = self.routes["routes"]
+        self.assertEqual(["oberth", "intrepid", "nebula"], routes["science"]["class_priorities"])
+        self.assertEqual(["nova"], routes["science"]["class_candidates_to_verify"])
+        self.assertEqual(["miranda"], routes["tactical_operations"]["class_priorities"])
+        self.assertEqual(["saber", "akira", "steamrunner"], routes["tactical_operations"]["class_candidates_to_verify"])
+        self.assertEqual(["galaxy", "sovereign"], routes["exploration_command"]["class_priorities"])
+        self.assertEqual(["odyssey", "valhalla"], routes["exploration_command"]["class_candidates_to_verify"])
+
+    def test_38_fixed_career_contracts_still_match_reference_guards(self):
+        progression = json.loads((ROOT / "gameplay/careers/starfleet_service/career_progression_rules.json").read_text(encoding="utf-8"))
+        promotion = json.loads((ROOT / "gameplay/careers/promotions/promotion_pipeline.json").read_text(encoding="utf-8"))
+        assignment = json.loads((ROOT / "gameplay/careers/assignments/assignment_transition.json").read_text(encoding="utf-8"))
+        self.assertEqual("foundation_fixed", progression["status"])
+        self.assertIn("available_billet", progression["transfer_inputs"])
+        self.assertFalse(promotion["xp_directly_promotes"])
+        self.assertTrue(promotion["promotion_can_occur_without_transfer"])
+        self.assertTrue(promotion["transfer_can_occur_without_promotion"])
+        self.assertTrue({"validate_vacancy", "validate_rank", "validate_qualification", "issue_orders"}.issubset(assignment["start_steps"]))
+
 
 if __name__ == "__main__":
     unittest.main()

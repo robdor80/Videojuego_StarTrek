@@ -196,7 +196,8 @@ class F08GateTests(unittest.TestCase):
         self.check_has("PASS_EVIDENCE_REFERENCE_UNKNOWN:event_chain")
 
     def test_19_missing_evidence_dir(self):
-        self.check_has("ARTIFACT_BASE_DIRECTORY_MISSING", folder=Path("/does-not-exist")) if False else None
+        missing = self.base / "does-not-exist"
+        self.check_has("ARTIFACT_BASE_DIRECTORY_MISSING", folder=missing)
         result = gate.validate_capture(self.example, fixture=FIXTURE)
         self.assertIn("ARTIFACT_BASE_DIRECTORY_MISSING", result["problems"])
 

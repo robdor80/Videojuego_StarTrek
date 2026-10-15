@@ -6,7 +6,6 @@
       "title": "Ciencia y sensores",
       "class_priorities": [
         "oberth",
-        "miranda",
         "intrepid",
         "nebula"
       ],
@@ -18,14 +17,12 @@
         "sensors_operator",
         "research_assistant"
       ],
-      "progression": "Oberth/Miranda → Intrepid/Nebula si época, plazas y cualificaciones lo permiten."
+      "progression": "Oberth/Nova → Intrepid/Nebula cuando época, plazas, cualificaciones y ficha de clase lo permitan."
     },
     "tactical_operations": {
       "title": "Táctica y operaciones",
       "class_priorities": [
-        "miranda",
-        "defiant",
-        "sovereign"
+        "miranda"
       ],
       "class_candidates_to_verify": [
         "saber",
@@ -37,15 +34,11 @@
         "tactical_assistant",
         "security_officer"
       ],
-      "progression": "Miranda → Saber/Akira/Steamrunner cuando existan fichas verificadas; Defiant/Sovereign según época y vacantes."
+      "progression": "Miranda/Saber → Akira/Steamrunner cuando existan fichas verificadas y la campaña lo permita."
     },
     "exploration_command": {
       "title": "Exploración y mando",
       "class_priorities": [
-        "miranda",
-        "oberth",
-        "intrepid",
-        "nebula",
         "galaxy",
         "sovereign"
       ],
@@ -58,7 +51,7 @@
         "sensors_operator",
         "flight_control_assistant"
       ],
-      "progression": "Incorporación supervisada en cualquier buque compatible; mando opcional en Galaxy/Sovereign/Odyssey/Valhalla si se acredita."
+      "progression": "Galaxy/Sovereign → Odyssey/Valhalla si época, vacantes, cualificaciones y cronología propia lo permiten."
     }
   },
   "technical_pilot_priorities": [

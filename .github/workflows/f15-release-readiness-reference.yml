@@ -3,18 +3,34 @@ name: F15 — Release readiness reference (NO beta/runtime certification)
 on:
   push:
     branches:
-      - feat/f15-release-readiness-reference-20261015
+      - main
     paths:
       - ".github/workflows/f15-release-readiness-reference.yml"
       - "tools/validation/f15_*"
       - "validation/fixtures/f15/**"
       - "docs/roadmap/master/fases/F15/**"
+      - "docs/roadmap/master/PLAN_MAESTRO.md"
+      - "docs/roadmap/master/ESTADO_GLOBAL.json"
+      - "docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
+      - "tools/validation/f08_acceptance_gate.py"
+      - "tools/validation/f14_audiovisual_reference.py"
+      - "docs/decisions/prototype_validation_and_release_policy.md"
+      - "localization/README.md"
+      - "ui/README.md"
   pull_request:
     paths:
       - ".github/workflows/f15-release-readiness-reference.yml"
       - "tools/validation/f15_*"
       - "validation/fixtures/f15/**"
       - "docs/roadmap/master/fases/F15/**"
+      - "docs/roadmap/master/PLAN_MAESTRO.md"
+      - "docs/roadmap/master/ESTADO_GLOBAL.json"
+      - "docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
+      - "tools/validation/f08_acceptance_gate.py"
+      - "tools/validation/f14_audiovisual_reference.py"
+      - "docs/decisions/prototype_validation_and_release_policy.md"
+      - "localization/README.md"
+      - "ui/README.md"
   workflow_dispatch:
 
 permissions:
@@ -22,7 +38,7 @@ permissions:
 
 jobs:
   offline-release-readiness:
-    name: 37 scenarios + 15 tests; reject NO_EJECUTADO template
+    name: 37 scenarios + 16 tests; reject NO_EJECUTADO template
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:

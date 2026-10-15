@@ -70,6 +70,14 @@ class TestF13DynamicUniverseReference(unittest.TestCase):
         self.assertEqual(f13.REVIEW, result["status"])
         self.assertEqual([120], result["runtime_blocked_layers"])
 
+    def test_canonical_roadmap_sources_are_the_real_f13_frontier(self):
+        result = f13.audit_repository(ROOT)
+        self.assertEqual(f13.REVIEW, result["status"])
+        self.assertEqual(118, result["complete_layers"])
+        self.assertEqual([119], result["partial_layers"])
+        self.assertEqual([120], result["runtime_blocked_layers"])
+        self.assertEqual(4, result["active_reference_block"])
+
     def test_layer_119_cannot_be_falsely_closed(self):
         self.layers["layer_119"] = "COMPLETE"
         self.assertEqual(f13.BLOCKED, f13.audit_layers(self.layers)["status"])

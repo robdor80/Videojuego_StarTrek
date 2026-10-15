@@ -26,11 +26,11 @@ Contrato de referencia: `gameplay/careers/starfleet_service/f11_route_plan_v0.1.
 
 | Ruta | Clases con ficha verificable y posibles destinos | Candidatas aún no verificadas en catálogo / pipeline |
 |---|---|---|
-| Ciencia/Sensores | Oberth, Miranda → Intrepid/Nebula | Nova |
-| Táctica/Operativa | Miranda → Defiant/Sovereign, según misión | Saber, Akira, Steamrunner |
-| Exploración/Mando | Miranda/Oberth → Intrepid/Nebula → Galaxy/Sovereign | Odyssey; **Valhalla** |
+| Ciencia/Sensores | Oberth → Intrepid/Nebula | Nova |
+| Táctica/Operativa | Miranda | Saber, Akira, Steamrunner |
+| Exploración/Mando | Galaxy/Sovereign | Odyssey; **Valhalla** |
 
-**Esto no es una asignación garantizada ni una escalera obligatoria.** Por ejemplo, un alférez podría entrar en una nave grande si su campaña y la plaza lo admiten; un científico puede cambiar de especialidad. Las prioridades expresan secuencia de producción y afinidad, no desbloqueos por XP.
+**Esto no es una asignación garantizada ni una escalera obligatoria.** Por ejemplo, un alférez podría entrar en una nave grande si su campaña y la plaza lo admiten; un científico puede cambiar de especialidad. Las prioridades conservan las tres rutas aprobadas (Ciencia: Oberth/Nova → Intrepid/Nebula; Táctica: Miranda/Saber → Akira/Steamrunner; Exploración/Mando: Galaxy/Sovereign → Odyssey/Valhalla). Son afinidades de carrera, no bloqueos: una plaza válida puede seguir siendo un destino cruzado.
 
 La disponibilidad se deriva del *catálogo de clases* y de los perfiles de época, nunca del deseo del jugador. La fecha desconocida de entrada en servicio de la nueva **Clase Valhalla** permanece desconocida: no debe asignarse silenciosamente `2372` ni ninguna otra. Las clases ausentes de la ficha canónica verificable se excluyen de la selección ejecutable por defecto. El motor offline trata `confirmed_active_from_decade` de modo conservador: la década indicada acredita presencia en algún momento de ella, por lo que un año anterior a la década siguiente exige comprobación específica.
 
@@ -86,7 +86,7 @@ La asignación de naves también condiciona la narrativa: una Oberth científica
 - Comandante no recibe puesto de capitán por estar en el puente; Capitán cualificado tampoco recibe una nave sin vacante.
 - Valhalla y Odyssey no aparecen como ofertas aptas sin ficha verificable y disponibilidad temporal. El objetivo Valhalla sigue **opcional**, no recompensado automáticamente.
 
-**Artefactos:** `validation/fixtures/f11/f11_career_scenarios_v0.1.json` contiene 40 escenarios con resultados esperados, y `tools/validation/test_f11_career_reference.py` añade 36 pruebas unitarias. El ejecutor de escenarios genera una huella SHA-256 estable y un informe **offline**; no es una firma confiable ni un guardado de partida. Workflow: `.github/workflows/f11-career-reference.yml`.
+**Artefactos:** `validation/fixtures/f11/f11_career_scenarios_v0.1.json` contiene 40 escenarios con resultados esperados, y `tools/validation/test_f11_career_reference.py` añade 38 pruebas unitarias. El ejecutor de escenarios genera una huella SHA-256 estable y un informe **offline**; no es una firma confiable ni un guardado de partida. Workflow: `.github/workflows/f11-career-reference.yml`.
 
 ## 7. Puertas explícitas para continuación
 

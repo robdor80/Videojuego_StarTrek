@@ -3,7 +3,7 @@ name: F14 — Audiovisual + NAP reference (NO UE5/runtime)
 on:
   push:
     branches:
-      - feat/f14-audiovisual-nap-reference-20261014
+      - main
     paths:
       - ".github/workflows/f14-audiovisual-reference.yml"
       - "tools/validation/f14_*"
@@ -12,6 +12,17 @@ on:
       - "manifests/assets/f14_*"
       - "manifests/presentation/f14_*"
       - "docs/roadmap/master/fases/F14/**"
+      - "art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
+      - "art_direction/**"
+      - "assets/**"
+      - "presentation/**"
+      - "audio/**"
+      - "docs/roadmap/master/fases/F01/**"
+      - "docs/roadmap/master/fases/F11/**"
+      - "art_direction/schemas/nap_asset_handoff.schema.json"
+      - "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
+      - "assets/scenes/bridges/f07_registry.json"
+      - "presentation/pov_profiles/starship_bridge_povs.json"
   pull_request:
     paths:
       - ".github/workflows/f14-audiovisual-reference.yml"
@@ -21,6 +32,17 @@ on:
       - "manifests/assets/f14_*"
       - "manifests/presentation/f14_*"
       - "docs/roadmap/master/fases/F14/**"
+      - "art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
+      - "art_direction/**"
+      - "assets/**"
+      - "presentation/**"
+      - "audio/**"
+      - "docs/roadmap/master/fases/F01/**"
+      - "docs/roadmap/master/fases/F11/**"
+      - "art_direction/schemas/nap_asset_handoff.schema.json"
+      - "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
+      - "assets/scenes/bridges/f07_registry.json"
+      - "presentation/pov_profiles/starship_bridge_povs.json"
   workflow_dispatch:
 
 permissions:

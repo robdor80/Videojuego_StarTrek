@@ -139,7 +139,15 @@ def screen_social_event(world, evt):
     if not a or not b:
         return outcome(BLOCKED, "unknown_participant")
     # Un encuentro fuera de escena exige una causa verificable, no proximidad o LOD.
-    if a["ship_id"] != b["ship_id"] and not nonblank(evt.get("travel_or_contact_ref")):
+    shared = evt["shared_location_ref"]
+    contact_ref = evt.get("travel_or_contact_ref")
+    if a["ship_id"] == b["ship_id"]:
+        locations = world["ships"][a["ship_id"]]["locations"]
+        if shared not in locations:
+            return outcome(BLOCKED, "unknown_shared_location")
+        if (a["location_id"] != shared or b["location_id"] != shared) and not nonblank(contact_ref):
+            return outcome(BLOCKED, "contact_not_plausible")
+    elif not nonblank(contact_ref):
         return outcome(BLOCKED, "contact_not_plausible")
     kind = evt["event_type"]
     if kind in ROMANTIC:

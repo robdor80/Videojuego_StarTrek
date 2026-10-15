@@ -90,6 +90,20 @@ class TestF12ShipboardReference(unittest.TestCase):
         self.social["cause_event_ref"] = ""
         self.assertEqual(f12.BLOCKED, f12.screen_social_event(self.world, self.social)["status"])
 
+    def test_same_ship_event_requires_real_shared_location_or_contact_evidence(self):
+        self.world["characters"]["bea"]["location_id"] = "bridge"
+        result = f12.screen_social_event(self.world, self.social)
+        self.assertEqual(f12.BLOCKED, result["status"])
+        self.assertIn("contact_not_plausible", result["reasons"])
+        self.social["travel_or_contact_ref"] = "comms:verified-1"
+        self.assertEqual(f12.REVIEW, f12.screen_social_event(self.world, self.social)["status"])
+
+    def test_unknown_shared_location_is_rejected(self):
+        self.social["shared_location_ref"] = "invented-room"
+        result = f12.screen_social_event(self.world, self.social)
+        self.assertEqual(f12.BLOCKED, result["status"])
+        self.assertIn("unknown_shared_location", result["reasons"])
+
     def test_romance_only_with_age_evidence(self):
         self.social["event_type"] = "romantic_expression"
         self.social["participants"] = ["alex", "eli"]

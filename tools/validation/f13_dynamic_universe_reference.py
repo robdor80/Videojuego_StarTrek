@@ -6,6 +6,7 @@ import argparse
 import copy
 import hashlib
 import json
+import re
 from pathlib import Path
 
 BLOCKED = "BLOCKED"
@@ -94,6 +95,49 @@ def gate_dynamic_blocks(states, requested_block):
     if requested_block == 4 and normalized[4] not in {"READY_TO_RESUME", "IN_PROGRESS"}:
         return outcome(BLOCKED, "block_4_not_ready")
     return outcome(REVIEW, "block_order_respected", active_reference_block=first_open)
+
+
+def audit_repository(root=None):
+    """Contrasta F13 con las fuentes canónicas del roadmap, no con una copia del fixture."""
+    base = Path(__file__).resolve().parents[2] if root is None else Path(root)
+    status_path = base / "docs/roadmap/procedural_layers_status_v0.1.json"
+    master_path = base / "docs/roadmap/procedural_layers_master_plan_v0.1.md"
+    blocks_path = base / "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+    if not all(p.is_file() for p in (status_path, master_path, blocks_path)):
+        return outcome(BLOCKED, "canonical_roadmap_sources_missing")
+    status = json.loads(status_path.read_text(encoding="utf-8"))
+    summary = status.get("summary")
+    expected_summary = {"total_layers": 120, "complete": 118, "partial": 1, "blocked_runtime": 1, "other": 0}
+    if summary != expected_summary:
+        return outcome(BLOCKED, "canonical_layer_summary_changed_review_required")
+    layers = status.get("layers")
+    if not isinstance(layers, list) or len(layers) != 120:
+        return outcome(BLOCKED, "canonical_layer_inventory_invalid")
+    expected_ids = [f"{i:03d}" for i in range(1, 121)]
+    if [item.get("layer_id") for item in layers if isinstance(item, dict)] != expected_ids:
+        return outcome(BLOCKED, "canonical_layer_ids_invalid")
+    if any(layers[i]["status"] != "COMPLETE" for i in range(118)):
+        return outcome(BLOCKED, "canonical_layers_001_118_changed_review_required")
+    if layers[118].get("status") != "PARTIAL" or layers[119].get("status") != "BLOCKED_RUNTIME":
+        return outcome(BLOCKED, "canonical_runtime_frontier_changed_review_required")
+    if status.get("plan_ref") != "docs/roadmap/procedural_layers_master_plan_v0.1.md":
+        return outcome(BLOCKED, "canonical_plan_reference_mismatch")
+    block_text = blocks_path.read_text(encoding="utf-8")
+    rows = re.findall(r"^\|\s*(\d+)\s*\|[^|]+\|\s*([A-Z_]+)\s*\|\s*$", block_text, re.MULTILINE)
+    states = {int(number): state for number, state in rows if 1 <= int(number) <= 10}
+    if set(states) != set(BLOCK_ORDER):
+        return outcome(BLOCKED, "dynamic_block_plan_unparseable")
+    gate = gate_dynamic_blocks(states, 4)
+    if gate["status"] != REVIEW or gate.get("active_reference_block") != 4:
+        return outcome(BLOCKED, "dynamic_block_frontier_changed_review_required")
+    return outcome(
+        REVIEW,
+        "canonical_roadmap_sources_consistent",
+        complete_layers=118,
+        partial_layers=[119],
+        runtime_blocked_layers=[120],
+        active_reference_block=4,
+    )
 
 
 def validate_world(world):
@@ -469,9 +513,12 @@ if __name__ == "__main__":
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     report = run_scenarios(args.scenario)
+    report["repository_audit"] = audit_repository()
     output = Path(args.output)
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"cases": report["scenario_count"], "passed": report["passed"], "sha256": report["sha256"]}))
+    if report["repository_audit"]["status"] == BLOCKED:
+        raise SystemExit("F13 canonical roadmap audit blocked: " + ", ".join(report["repository_audit"]["reasons"]))
     if report["failed_ids"]:
         raise SystemExit("F13 FAILED: " + ", ".join(report["failed_ids"]))
