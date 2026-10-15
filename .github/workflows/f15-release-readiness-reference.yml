@@ -1,0 +1,55 @@
+name: F15 — Release readiness reference (NO beta/runtime certification)
+
+on:
+  push:
+    branches:
+      - feat/f15-release-readiness-reference-20261015
+    paths:
+      - ".github/workflows/f15-release-readiness-reference.yml"
+      - "tools/validation/f15_*"
+      - "validation/fixtures/f15/**"
+      - "docs/roadmap/master/fases/F15/**"
+  pull_request:
+    paths:
+      - ".github/workflows/f15-release-readiness-reference.yml"
+      - "tools/validation/f15_*"
+      - "validation/fixtures/f15/**"
+      - "docs/roadmap/master/fases/F15/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline-release-readiness:
+    name: 37 scenarios + 15 tests; reject NO_EJECUTADO template
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Syntax and JSON
+        run: |
+          python -m py_compile tools/validation/f15_release_readiness.py tools/validation/test_f15_release_readiness.py
+          python -m json.tool validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json >/dev/null
+          python -m json.tool validation/fixtures/f15/f15_beta_capture_template_v0.1.json >/dev/null
+      - name: Scenarios, repository audit and blocked template
+        run: |
+          python tools/validation/f15_release_readiness.py \
+            --scenario validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json \
+            --capture-template validation/fixtures/f15/f15_beta_capture_template_v0.1.json \
+            --repo-root . \
+            --output validation/results/f15_release_readiness_reference.json
+      - name: Unit regressions
+        run: python -m unittest discover -s tools/validation -p 'test_f15_*.py' -v
+      - name: Upload reference evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: f15-offline-release-readiness
+          path: validation/results/f15_release_readiness_reference.json
+          if-no-files-found: error
+          retention-days: 14
