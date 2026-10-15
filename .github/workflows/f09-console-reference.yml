@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "gameplay/**"
       - "tools/validation/f09_interconsole_reference.py"
       - "tools/validation/test_f09_interconsole_reference.py"
       - "docs/roadmap/master/fases/F09/**"
@@ -14,6 +15,7 @@ on:
   pull_request:
     paths:
       - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "gameplay/**"
       - "tools/validation/f09_interconsole_reference.py"
       - "tools/validation/test_f09_interconsole_reference.py"
       - "docs/roadmap/master/fases/F09/**"
