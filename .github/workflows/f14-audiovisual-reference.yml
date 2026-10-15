@@ -3,7 +3,7 @@ name: F14 — Audiovisual + NAP reference (NO UE5/runtime)
 on:
   push:
     branches:
-      - feat/f14-audiovisual-nap-reference-20261014
+      - main
     paths:
       - ".github/workflows/f14-audiovisual-reference.yml"
       - "tools/validation/f14_*"
