@@ -97,11 +97,11 @@ Artefactos de F15:
 
 Prueba local previa a publicación:
 
-- **15/15 pruebas unitarias PASS**;
+- **16 pruebas unitarias previstas en la suite actual**; el resultado de la rama de auditoría se acredita por CI.
 - **37/37 escenarios del fixture PASS** mediante la prueba de regresión;
 - la plantilla `NO_EJECUTADO` resulta `BLOCKED`, como debe ser.
 
-La CI de la rama vuelve a ejecutar sintaxis, JSON, 37 escenarios, auditoría del repositorio, 15 unit tests y rechazo deliberado de la plantilla sin runtime.
+La CI de la rama vuelve a ejecutar sintaxis, JSON, 37 escenarios, auditoría del repositorio, 16 unit tests y rechazo deliberado de la plantilla sin runtime.
 
 ## 8. Estado real y bloqueos
 
