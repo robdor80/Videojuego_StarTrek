@@ -97,6 +97,19 @@ Formato para añadir una propuesta:
 - **Numeración:** registrada como 0006 porque el número 0005 ya pertenece a las tecnologías de la Clase Valhalla.
 - **Ejecución:** no iniciada por el registro; no modifica el alcance de la v0.0.1 de Sensores ni abre otra fase.
 
+### IDEA-0007 — Carrera por temporadas, acceso anticipado y mando de Valhalla
+- **Fecha de aprobación conceptual:** 2026-10-15.
+- **Estado:** APROBADA CONCEPTUALMENTE; implementación y planificación pendientes.
+- **Propuesta:** tres etapas (Academia, carrera en distintas naves y vida/mando prolongados en Clase Valhalla), con temporadas conectadas a evaluaciones y oportunidades profesionales sin ascenso automático.
+- **Acceso temprano:** opción de destino legítimo en Valhalla ya como teniente; posibilidad de permanecer y ascender allí sin desplazar automáticamente a su capitán NPC.
+- **Mando sin edad tardía obligatoria:** ofrecer una oportunidad justificada de capitanear Valhalla **en cuanto el jugador sea apto**, incluso sobre los 35–40 años o antes por trayectoria excepcional; no posponerlo al final de su carrera o cerca de la jubilación.
+- **Carreras disponibles:** guiada hacia Valhalla y libre, con posibilidad de ascensos extraordinarios por hechos verdaderamente excepcionales al estilo Kelvin; cualquier rango/nombramiento requiere revisión y decisión válida.
+- **Regla:** rango, puesto y mando titular son distintos; varios comandantes pueden servir a bordo. El capitán titular no se elimina ni sustituye sin una sucesión real y justificada.
+- **Ficha detallada:** [IDEA-0007_carrera_temporadas_llegada_y_mando_valhalla.md](IDEA-0007_carrera_temporadas_llegada_y_mando_valhalla.md).
+- **Vinculación:** [IDEA-0006 — Temporadas narrativas](IDEA-0006_temporadas_narrativas_misiones_episodicas.md); contratos existentes de carrera y ascensos en F11, continuidad, autoridad y Core RPG.
+- **Decisión del autor:** confirmada a lo largo de varias intervenciones el 2026-10-15, incluyendo acceso anticipado, promociones extraordinarias y corrección expresa del criterio de edad.
+- **Ejecución:** no iniciada; no implica ascensos concedidos, vacantes fabricadas ni modificación de fases.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
