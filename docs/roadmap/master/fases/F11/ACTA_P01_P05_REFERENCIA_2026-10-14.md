@@ -26,11 +26,11 @@ Contrato de referencia: `gameplay/careers/starfleet_service/f11_route_plan_v0.1.
 
 | Ruta | Clases con ficha verificable y posibles destinos | Candidatas aún no verificadas en catálogo / pipeline |
 |---|---|---|
-| Ciencia/Sensores | Oberth, Miranda → Intrepid/Nebula | Nova |
-| Táctica/Operativa | Miranda → Defiant/Sovereign, según misión | Saber, Akira, Steamrunner |
-| Exploración/Mando | Miranda/Oberth → Intrepid/Nebula → Galaxy/Sovereign | Odyssey; **Valhalla** |
+| Ciencia/Sensores | Oberth → Intrepid/Nebula | Nova |
+| Táctica/Operativa | Miranda | Saber, Akira, Steamrunner |
+| Exploración/Mando | Galaxy/Sovereign | Odyssey; **Valhalla** |
 
-**Esto no es una asignación garantizada ni una escalera obligatoria.** Por ejemplo, un alférez podría entrar en una nave grande si su campaña y la plaza lo admiten; un científico puede cambiar de especialidad. Las prioridades expresan secuencia de producción y afinidad, no desbloqueos por XP.
+**Esto no es una asignación garantizada ni una escalera obligatoria.** Por ejemplo, un alférez podría entrar en una nave grande si su campaña y la plaza lo admiten; un científico puede cambiar de especialidad. Las prioridades conservan las tres rutas aprobadas (Ciencia: Oberth/Nova → Intrepid/Nebula; Táctica: Miranda/Saber → Akira/Steamrunner; Exploración/Mando: Galaxy/Sovereign → Odyssey/Valhalla). Son afinidades de carrera, no bloqueos: una plaza válida puede seguir siendo un destino cruzado.
 
 La disponibilidad se deriva del *catálogo de clases* y de los perfiles de época, nunca del deseo del jugador. La fecha desconocida de entrada en servicio de la nueva **Clase Valhalla** permanece desconocida: no debe asignarse silenciosamente `2372` ni ninguna otra. Las clases ausentes de la ficha canónica verificable se excluyen de la selección ejecutable por defecto. El motor offline trata `confirmed_active_from_decade` de modo conservador: la década indicada acredita presencia en algún momento de ella, por lo que un año anterior a la década siguiente exige comprobación específica.
 
