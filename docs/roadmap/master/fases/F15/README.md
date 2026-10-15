@@ -33,3 +33,15 @@ Todas las fases; QA y optimización son también condiciones transversales desde
 ## Puerta de cierre
 
 Aceptación E2E, CI y build distribuible realmente ejecutados; no basta con validaciones documentales. Deben quedar registrados las pruebas realizadas, evidencias, commit/PR y decisiones de autor. Véanse [criterios de cierre](../../CRITERIOS_DE_CIERRE.md), [plan maestro](../../PLAN_MAESTRO.md) y [estado global](../../ESTADO_GLOBAL.json).
+
+## Avance autónomo de referencia — 15-10-2026
+
+Preparación **P01–P05** con un gate final fail-closed para QA transversal, recorrido E2E, rendimiento MSI, UX/castellano y candidato beta/distribuible. Véase [acta de preparación F15](ACTA_P01_P05_REFERENCIA_2026-10-15.md).
+
+- Validador: `tools/validation/f15_release_readiness.py`.
+- **37 escenarios**: `validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json`.
+- Plantilla deliberadamente bloqueada: `validation/fixtures/f15/f15_beta_capture_template_v0.1.json`.
+- Pruebas: `tools/validation/test_f15_release_readiness.py`.
+- CI: `.github/workflows/f15-release-readiness-reference.yml`.
+
+El gate nunca emite `ACEPTACION_SUPERADA` ni `BUILD_DISTRIBUIBLE`: como máximo deja una captura completa en `REVIEW_REQUIRED`. La plantilla actual es `NO_EJECUTADO` y debe fallar hasta que existan Core/UE5/MSI, E2E, rendimiento, migración/rollback y aceptación real. F15 continúa globalmente `PLANIFICADA`; P01–P05 permanecen sin marcar.
