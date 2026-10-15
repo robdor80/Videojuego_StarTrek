@@ -1,0 +1,680 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "F15",
+  "authority": "OFFLINE_REFERENCE_ONLY_NO_CORE_UE5_MSI_OR_RELEASE_AUTHORITY",
+  "cases": [
+    {
+      "id": "Q01",
+      "operation": "qa",
+      "input": {
+        "domain_ci": false,
+        "core_integration": false,
+        "ue5_automation": false,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "qa_layers_incomplete"
+    },
+    {
+      "id": "Q02",
+      "operation": "qa",
+      "input": {
+        "domain_ci": true,
+        "core_integration": false,
+        "ue5_automation": false,
+        "evidence_refs": [
+          "ci-run"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "qa_layers_incomplete"
+    },
+    {
+      "id": "Q03",
+      "operation": "qa",
+      "input": {
+        "domain_ci": true,
+        "core_integration": true,
+        "ue5_automation": true,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "qa_claim_without_evidence"
+    },
+    {
+      "id": "Q04",
+      "operation": "qa",
+      "input": {
+        "domain_ci": true,
+        "core_integration": true,
+        "ue5_automation": true,
+        "evidence_refs": [
+          "ci",
+          "core",
+          "ue5"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED",
+      "expected_reason": "qa_metadata_complete_requires_runtime_review"
+    },
+    {
+      "id": "Q05",
+      "operation": "qa",
+      "input": {
+        "domain_ci": "yes",
+        "core_integration": true,
+        "ue5_automation": true,
+        "evidence_refs": [
+          "x"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_qa_record"
+    },
+    {
+      "id": "Q06",
+      "operation": "qa",
+      "input": {
+        "domain_ci": true,
+        "core_integration": true,
+        "ue5_automation": true,
+        "evidence_refs": [
+          ""
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_qa_record"
+    },
+    {
+      "id": "J01",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": false,
+        "save_load_continuity": false,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "e2e_not_executed"
+    },
+    {
+      "id": "J02",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "mission"
+        ],
+        "executed": true,
+        "save_load_continuity": false,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "journey_stage_contract_mismatch"
+    },
+    {
+      "id": "J03",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": "yes",
+        "save_load_continuity": false,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_journey_record"
+    },
+    {
+      "id": "J04",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": true,
+        "save_load_continuity": true,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "e2e_execution_without_evidence"
+    },
+    {
+      "id": "J05",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": true,
+        "save_load_continuity": false,
+        "evidence_refs": [
+          "trace"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "e2e_save_load_continuity_failed"
+    },
+    {
+      "id": "J06",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": true,
+        "save_load_continuity": true,
+        "evidence_refs": [
+          "trace",
+          "save",
+          "load"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED",
+      "expected_reason": "e2e_capture_requires_manual_acceptance"
+    },
+    {
+      "id": "J07",
+      "operation": "journey",
+      "input": {
+        "stages": [
+          "academy",
+          "first_assignment",
+          "mission",
+          "career_decision",
+          "save",
+          "load"
+        ],
+        "executed": true,
+        "save_load_continuity": true,
+        "evidence_refs": [
+          ""
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_journey_record"
+    },
+    {
+      "id": "P01",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": false,
+        "provider_failure_recovered": false,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "msi_execution_not_confirmed"
+    },
+    {
+      "id": "P02",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": true,
+        "provider_failure_recovered": false,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "remote_provider_failure_not_recovered"
+    },
+    {
+      "id": "P03",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": true,
+        "provider_failure_recovered": true,
+        "metrics": {
+          "fps_avg": 60,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "performance_metrics_incomplete"
+    },
+    {
+      "id": "P04",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": true,
+        "provider_failure_recovered": true,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": ""
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "performance_evidence_missing"
+    },
+    {
+      "id": "P05",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": true,
+        "provider_failure_recovered": true,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "REVIEW_REQUIRED",
+      "expected_reason": "performance_measurements_present_threshold_acceptance_pending"
+    },
+    {
+      "id": "P06",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": "yes",
+        "provider_failure_recovered": true,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 120
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_performance_record"
+    },
+    {
+      "id": "P07",
+      "operation": "performance",
+      "input": {
+        "executed_on_msi": true,
+        "provider_failure_recovered": true,
+        "metrics": {
+          "fps_avg": 60,
+          "fps_1pct_low": 45,
+          "vram_mb_peak": 7200,
+          "ram_mb_peak": 18000,
+          "cpu_ms_avg": 8.5,
+          "session_minutes": 0
+        },
+        "evidence_ref": "perf.json"
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "performance_metrics_incomplete"
+    },
+    {
+      "id": "U01",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "NO_EJECUTADO",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "ux_acceptance_incomplete"
+    },
+    {
+      "id": "U02",
+      "operation": "ux",
+      "input": {
+        "locale": "en-US",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": [
+          "ux"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_ux_record"
+    },
+    {
+      "id": "U03",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": [
+          "ux"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "ux_checklist_incomplete"
+    },
+    {
+      "id": "U04",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "MAYBE",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": [
+          "ux"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "ux_check_status_invalid"
+    },
+    {
+      "id": "U05",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "ux_pass_without_evidence"
+    },
+    {
+      "id": "U06",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": [
+          "ux-report",
+          "migration-log"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED",
+      "expected_reason": "ux_evidence_complete_requires_human_review"
+    },
+    {
+      "id": "U07",
+      "operation": "ux",
+      "input": {
+        "locale": "es-ES",
+        "checks": {
+          "castellano": "PASS",
+          "controls": "PASS",
+          "accessibility": "PASS",
+          "ux": "PASS",
+          "logs": "PASS",
+          "migrations": "PASS",
+          "recoverable_errors": "PASS"
+        },
+        "evidence_refs": [
+          ""
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_ux_record"
+    },
+    {
+      "id": "R01",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": false,
+        "e2e_passed": false,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "build_not_executed"
+    },
+    {
+      "id": "R02",
+      "operation": "release",
+      "input": {
+        "version": "beta-one",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": false,
+        "e2e_passed": false,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_release_version"
+    },
+    {
+      "id": "R03",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "steam",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": false,
+        "e2e_passed": false,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_release_channel"
+    },
+    {
+      "id": "R04",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "bad",
+        "build_executed": false,
+        "e2e_passed": false,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_build_hash"
+    },
+    {
+      "id": "R05",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": false,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "release_e2e_not_passed"
+    },
+    {
+      "id": "R06",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": false,
+        "rollback_tested": false,
+        "blocker_count": 3,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "update_recovery_not_tested"
+    },
+    {
+      "id": "R07",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": 1,
+        "evidence_refs": [
+          "build"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "release_blockers_present"
+    },
+    {
+      "id": "R08",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": 0,
+        "evidence_refs": []
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "release_claim_without_evidence"
+    },
+    {
+      "id": "R09",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": 0,
+        "evidence_refs": [
+          "build",
+          "e2e",
+          "migration",
+          "rollback"
+        ]
+      },
+      "expected_status": "REVIEW_REQUIRED",
+      "expected_reason": "release_candidate_requires_manual_beta_acceptance"
+    },
+    {
+      "id": "R10",
+      "operation": "release",
+      "input": {
+        "version": "0.9.0-beta.1",
+        "channel": "internal_beta",
+        "artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+        "build_executed": true,
+        "e2e_passed": true,
+        "migration_tested": true,
+        "rollback_tested": true,
+        "blocker_count": true,
+        "evidence_refs": [
+          "build"
+        ]
+      },
+      "expected_status": "BLOCKED",
+      "expected_reason": "invalid_blocker_count"
+    }
+  ]
+}

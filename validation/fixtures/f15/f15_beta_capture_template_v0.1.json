@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "F15",
+  "status": "NO_EJECUTADO",
+  "authority": "TEMPLATE_ONLY",
+  "qa": {
+    "domain_ci": true,
+    "core_integration": false,
+    "ue5_automation": false,
+    "evidence_refs": []
+  },
+  "journey": {
+    "stages": [
+      "academy",
+      "first_assignment",
+      "mission",
+      "career_decision",
+      "save",
+      "load"
+    ],
+    "executed": false,
+    "save_load_continuity": false,
+    "evidence_refs": []
+  },
+  "performance": {
+    "executed_on_msi": false,
+    "provider_failure_recovered": false,
+    "metrics": {
+      "fps_avg": 0,
+      "fps_1pct_low": 0,
+      "vram_mb_peak": 0,
+      "ram_mb_peak": 0,
+      "cpu_ms_avg": 0,
+      "session_minutes": 0
+    },
+    "evidence_ref": ""
+  },
+  "ux": {
+    "locale": "es-ES",
+    "checks": {
+      "castellano": "NO_EJECUTADO",
+      "controls": "NO_EJECUTADO",
+      "accessibility": "NO_EJECUTADO",
+      "ux": "NO_EJECUTADO",
+      "logs": "NO_EJECUTADO",
+      "migrations": "NO_EJECUTADO",
+      "recoverable_errors": "NO_EJECUTADO"
+    },
+    "evidence_refs": []
+  },
+  "release": {
+    "version": "0.0.0-pre",
+    "channel": "internal_beta",
+    "artifact_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "build_executed": false,
+    "e2e_passed": false,
+    "migration_tested": false,
+    "rollback_tested": false,
+    "blocker_count": 1,
+    "evidence_refs": []
+  }
+}
