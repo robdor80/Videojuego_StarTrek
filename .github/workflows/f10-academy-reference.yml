@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "docs/roadmap/master/fases/F10/**"
+      - "gameplay/careers/academy_path/**"
+      - "tools/generation/*academy*"
       - "tools/validation/f10_*"
       - "tools/validation/test_f10_*"
       - "validation/fixtures/f10/**"
@@ -13,6 +15,8 @@ on:
   pull_request:
     paths:
       - "docs/roadmap/master/fases/F10/**"
+      - "gameplay/careers/academy_path/**"
+      - "tools/generation/*academy*"
       - "tools/validation/f10_*"
       - "tools/validation/test_f10_*"
       - "validation/fixtures/f10/**"
