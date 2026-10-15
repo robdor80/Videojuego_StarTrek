@@ -3,7 +3,7 @@ name: F11 — Carrera y flota (referencia offline, NO Core ni UE5)
 on:
   push:
     branches:
-      - feat/f11-career-fleet-reference-20261014
+      - main
     paths:
       - ".github/workflows/f11-career-reference.yml"
       - "tools/validation/f11_*"
