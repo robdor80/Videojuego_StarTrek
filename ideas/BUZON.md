@@ -123,6 +123,20 @@ Formato para añadir una propuesta:
 - **Exclusiones:** no se aprueban por esta ficha vuelos atmosféricos, física orbital completa ni nueva lógica de Core RPG; el sistema no está implementado.
 - **Ejecución:** no iniciada por este registro, sin interferir en las fases activas.
 
+### IDEA-0009 — Sistema universal de órdenes, protocolos y maniobras de naves
+- **Fecha de aprobación conceptual y registro:** 2026-10-16.
+- **Estado:** APROBADA CONCEPTUALMENTE; planificación, implementación y pruebas pendientes.
+- **Propuesta:** control de naves mediante órdenes de intención («orbite», «intercepte», «mantenga distancia») o protocolos explícitos de navegación, ataque, defensa y evasión, resueltos mediante planes dinámicos, nunca coreografías predeterminadas.
+- **Experiencia:** juego principalmente desde el interior de las naves; oficiales y sistemas ejecutan maniobras de forma autónoma según autoridad, información, clase, capacidades, recursos y situación; posibilidad de intervenir, cancelar o pilotar manualmente cuando corresponda.
+- **Universalidad:** mismo sistema de maniobra para naves del jugador, NPC, civiles, hostiles, lanzaderas y secciones separadas; perfiles por clase y sin simuladores duplicados por nave.
+- **Banco de pruebas propuesto:** primero Enterprise-D/Galaxy y Pájaro de Presa Romulano NPC; más adelante combate coordinado Valhalla + Sovereign + Odyssey contra Cubo Borg, sin asumir pruebas reales completadas.
+- **Implementación por etapas:** NAV-01 a NAV-10 en documento, con verificación de control universal, interpretación de órdenes, sensores, tácticas, maniobras de servicio, separación, coordinación y persistencia.
+- **Ficha detallada:** [IDEA-0009_ordenes_protocolos_maniobras_universales.md](IDEA-0009_ordenes_protocolos_maniobras_universales.md).
+- **Vinculaciones:** [IDEA-0008 — Entornos espaciales](IDEA-0008_entornos_espaciales_modulares.md), [IDEA-0003 — Hangares](IDEA-0003_hangares_independientes_atraque_simulado.md), [IDEA-0004 — Yate](IDEA-0004_yate_del_capitan_desacople_simulado.md), contratos actuales de órdenes, navegación, táctica, sensores y autoridad de mando.
+- **Fases candidatas:** F02–F07, F09, F13–F15; por planificar. CoreRPG solo para responsabilidad genérica, Star Trek para reglas concretas y UE5 para navegación/visualización.
+- **Decisión del autor:** archivo Markdown original aportado el 16-10-2026 con aprobación conceptual expresa y solicitud de incorporación como nueva idea.
+- **Ejecución:** NO INICIADA por este registro; no implica código UE5, CoreRPG, clases ni protocolos probados.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
