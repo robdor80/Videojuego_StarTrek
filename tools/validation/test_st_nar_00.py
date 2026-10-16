@@ -212,5 +212,18 @@ class NarrativeContractsTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "incomplete context coverage"):
                 export_bundle(value, Path(tmp) / "bad.zip")
 
+    def test_pending_plans_need_readable_synopsis(self):
+        value = context()
+        value["pending_season_plans"][0].pop("premise_es")
+        self.assertTrue(any("missing premise_es" in e for e in inspect_context(value)))
+
+    def test_export_includes_future_as_proposal_only(self):
+        value = context()
+        files = build_bundle_files(value)
+        summary = files["RESUMEN_CAMPAÑA.md"].decode("utf-8")
+        self.assertIn("NO son hechos canónicos futuros", summary)
+        self.assertIn("Premisa únicamente técnica", summary)
+        self.assertIn("Antecedente histórico de asimilación Borg", summary)
+
 if __name__ == "__main__":
     unittest.main()

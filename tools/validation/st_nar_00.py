@@ -289,9 +289,19 @@ def build_bundle_files(context):
     for event in context["history"]:
         summary.append("- " + event["occurred_at"] + " | " + event["event_id"] +
                        " | " + event["summary_es"] + " [" + event["visibility"] + "]")
+    summary += ["", "## Estado actual", context["current"]["world_summary_es"], "",
+               "## Entidades relevantes"]
+    for entity in context["current"]["relevant_entities"]:
+        summary.append("- " + entity["entity_id"] + ": " + entity["state_summary_es"] +
+                       " [conocido por jugador: " + str(entity["known_to_player"]) + "]")
+    summary += ["", "## Temporadas vividas o en curso"]
+    for season in context["installed_seasons"]:
+        summary.append("- " + season["season_id"] + ": " + season["actual_summary_es"])
     summary += ["", "## Temporadas previstas", "Las previsiones NO son hechos canónicos futuros."]
     for plan in context["pending_season_plans"]:
-        summary.append("- " + plan["season_id"] + ": " + ", ".join(plan["planned_chapter_ids"]))
+        summary.append("- " + plan["season_id"] + " | " + plan["premise_es"] +
+                       " | " + plan["planned_outline_es"] +
+                       " | desenlaces posibles: " + "; ".join(plan["possible_outcomes_es"]))
     files = {
         "LEEME.md": ("# ST-NAR-00 — Paquete externo de contexto\n\n" + warning +
                      "\n\nValidar cobertura y versión. No reimportar como save.\n").encode("utf-8"),

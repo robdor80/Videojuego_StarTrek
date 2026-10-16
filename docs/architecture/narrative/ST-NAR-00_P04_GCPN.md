@@ -43,3 +43,5 @@ La herramienta de referencia offline puede evaluar los JSON proporcionados pero 
 - Modificar el mundo entre exportación e importación: se exige revalidación.
 - Rollback ante fallo de importación y load posterior sin duplicación.
 - Pruebas UE5/MSI y del adaptador CoreRPG: bloqueadas hasta integración.
+## Contenido textual de los informes
+La exportación incorpora ahora world_summary_es y relevant_entities con estado actual, actual_summary_es de temporadas vividas y, en futuros paquetes, premise_es, planned_outline_es y possible_outcomes_es separados de los hechos históricos. El JSON garantiza referencias y el Markdown sirve para creación conjunta de nuevas temporadas sin tener que deducir el argumento de simples IDs.

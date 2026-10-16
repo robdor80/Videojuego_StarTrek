@@ -49,6 +49,19 @@
     "entity_state_refs": [
       "character.test",
       "ship.test"
+    ],
+    "world_summary_es": "Campaña de referencia: incidente Borg superado clínicamente; nuevo destino operativo activo; hechos del universo pendientes de evaluación.",
+    "relevant_entities": [
+      {
+        "entity_id": "character.test",
+        "state_summary_es": "Oficial recuperado y de servicio. Antecedente histórico de asimilación Borg.",
+        "known_to_player": true
+      },
+      {
+        "entity_id": "ship.test",
+        "state_summary_es": "Unidad del nuevo destino profesional del oficial.",
+        "known_to_player": true
+      }
     ]
   },
   "installed_seasons": [
@@ -59,7 +72,8 @@
       "state": "in_progress",
       "confirmed_outcome_ids": [
         "resolution_a"
-      ]
+      ],
+      "actual_summary_es": "Primer capítulo resuelto; participación y resultado de investigación confirmados por la historia sintética."
     }
   ],
   "pending_season_plans": [
@@ -70,7 +84,17 @@
       "planned_chapter_ids": [
         "chapter_demo_02"
       ],
-      "is_future_proposal": true
+      "is_future_proposal": true,
+      "premise_es": "Premisa únicamente técnica: posible investigación de una anomalía existente en el mundo.",
+      "planned_outline_es": "Capítulo técnico pendiente con variantes de cierre; su resultado no ha ocurrido todavía.",
+      "possible_outcomes_es": [
+        "Resolución por la unidad del jugador",
+        "Resolución por unidad NPC",
+        "Fracaso y continuidad causal"
+      ],
+      "key_character_refs": [
+        "character.test"
+      ]
     }
   ],
   "capability_ids": [
