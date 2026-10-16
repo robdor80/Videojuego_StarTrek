@@ -110,6 +110,19 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** confirmada a lo largo de varias intervenciones el 2026-10-15, incluyendo acceso anticipado, promociones extraordinarias y corrección expresa del criterio de edad.
 - **Ejecución:** no iniciada; no implica ascensos concedidos, vacantes fabricadas ni modificación de fases.
 
+### IDEA-0008 — Sistema modular de entornos espaciales
+- **Fecha de incorporación:** 2026-10-16.
+- **Estado:** APROBADA CONCEPTUALMENTE; implementación, validaciones y planificación pendientes.
+- **Propuesta:** escenarios espaciales universales y reutilizables por perfiles de sector: campo estelar/nebulosas de fondo, estrella e iluminación, planetas/lunas/asteroides 3D y naves/estaciones reales.
+- **Experiencia:** navegación dinámica común a nave del jugador y NPC, piloto automático, sensores, aproximación/orbita simplificada, combates y vistas coherentes desde puentes y cámaras exteriores.
+- **Rendimiento:** perfiles gráficos modulares, LOD/instanciación/culling, streaming, precisión y escala espacial; medir FPS, VRAM y materiales en MSI RTX 4070 Laptop 8 GB.
+- **Prototipo propuesto:** Enterprise-D (Galaxy) y Pájaro de Presa Romulano; demostrar al menos dos entornos sin duplicar su arquitectura. Modelos de planetas locales a auditar antes de usar.
+- **Ficha detallada:** [IDEA-0008_entornos_espaciales_modulares.md](IDEA-0008_entornos_espaciales_modulares.md).
+- **Relación con sistemas existentes:** F02, F03, F07, F09, F13, F14 y F15; universo persistente/CoreRPG, UE5 y [IDEA-0006 — Temporadas](IDEA-0006_temporadas_narrativas_misiones_episodicas.md). Asignación definitiva pendiente.
+- **Decisión del autor:** solicitada su incorporación desde un documento Markdown aportado el 2026-10-16.
+- **Exclusiones:** no se aprueban por esta ficha vuelos atmosféricos, física orbital completa ni nueva lógica de Core RPG; el sistema no está implementado.
+- **Ejecución:** no iniciada por este registro, sin interferir en las fases activas.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
