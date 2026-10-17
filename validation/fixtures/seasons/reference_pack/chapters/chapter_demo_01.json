@@ -1,0 +1,31 @@
+{
+  "schema_version": "0.1.0",
+  "chapter_id": "chapter_demo_01",
+  "title_es": "Ejemplo de observación técnica",
+  "depends_on": [],
+  "event_types": [
+    "scientific_anomaly"
+  ],
+  "available_player_roles": [
+    "station_or_specialist_officer"
+  ],
+  "npc_can_resolve": true,
+  "knowledge_gate": "observer_filtered",
+  "mission_template_refs": [],
+  "outcomes": [
+    {
+      "outcome_id": "resolution_a",
+      "kind": "resolved",
+      "next_chapter_ids": [
+        "chapter_demo_02"
+      ]
+    },
+    {
+      "outcome_id": "resolution_b",
+      "kind": "failed",
+      "next_chapter_ids": [
+        "chapter_demo_02"
+      ]
+    }
+  ]
+}

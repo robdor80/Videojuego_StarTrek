@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://robertodorado.es/schemas/authoring/st-nar-chapter-v0.1.schema.json",
+  "title": "ST-NAR-00 Chapter Definition — authoring reference v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "chapter_id",
+    "title_es",
+    "depends_on",
+    "event_types",
+    "available_player_roles",
+    "npc_can_resolve",
+    "knowledge_gate",
+    "mission_template_refs",
+    "outcomes"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1.0"
+    },
+    "chapter_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+    },
+    "title_es": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 300
+    },
+    "depends_on": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 128
+    },
+    "event_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 128
+    },
+    "available_player_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 128
+    },
+    "npc_can_resolve": {
+      "type": "boolean"
+    },
+    "knowledge_gate": {
+      "enum": [
+        "observer_filtered",
+        "restricted_by_authority"
+      ]
+    },
+    "mission_template_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+      },
+      "uniqueItems": true,
+      "maxItems": 128
+    },
+    "outcomes": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "outcome_id",
+          "kind",
+          "next_chapter_ids"
+        ],
+        "properties": {
+          "outcome_id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+          },
+          "kind": {
+            "enum": [
+              "resolved",
+              "partially_resolved",
+              "failed",
+              "expired",
+              "superseded"
+            ]
+          },
+          "next_chapter_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^[a-z][a-z0-9_.-]{2,79}$"
+            },
+            "uniqueItems": true,
+            "maxItems": 128
+          }
+        }
+      }
+    }
+  }
+}
