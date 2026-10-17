@@ -48,9 +48,13 @@
   },
   "era_variation": {
     "required": true,
-    "valid_from_year": 2364,
-    "valid_to_year": 2378,
-    "observed_first_date_not_culture_origin": true
+    "observed_first_date_not_culture_origin": true,
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2364,
+    "not_a_culture_birth_date": true
   },
   "cross_cultural_interaction": {
     "known_context_es": "Mordock y Mendon ofrecen ejemplos de contacto institucional, pero no una regla para la personalidad benzita.",

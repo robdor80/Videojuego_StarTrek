@@ -48,8 +48,12 @@
   },
   "era_variation": {
     "scope": "voyager_2371_2378",
-    "observed_from_year": 2371,
-    "observed_year_is_not_origin_date": true
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2371,
+    "not_a_culture_birth_date": true
   },
   "privacy_and_intimacy": {
     "not_inferred_from_species": true
