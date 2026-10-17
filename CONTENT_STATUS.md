@@ -550,6 +550,20 @@ Current status:
 The Sensors vertical slice remains preserved and ready for later UX/runtime continuation. Current priority has shifted to deep game-design readiness: Academy/career, social life, wellbeing, professional service, gameplay-required lore, AI/narrative, full procedural universe/population and the Starship Computer. The first architecture foundation pass for all eight pillars is complete. Design-depth pass 1 has also begun: Academy master curriculum, external study interoperability, social transitions, habit formation, lore contracts, procedural celestial/civilization requirements and Computer query/action catalogue are now in place. Next work adds deeper branch/course content and provenance-backed universe data without duplicating CoreRPG runtime responsibilities.
 
 
+
+## LORE-01 — Base Galáctica (TNG / DS9 / VOY)
+
+| Apartado | Estado al 17-10-2026 | Alcance real |
+|---|---|---|
+| A — Especies y culturas | 🟧 NEEDS_REVIEW | Auditoría + catálogo autoral de 25 especies (15 anteriores + 5 TNG principales + 5 solo DLC Delta); 10 culturas contextuales nuevas; 8 lenguas en catálogo; fuentes y tests `tools/validation/validate_lore01_tng.py`. **CI documental verde en rama; pendiente PR y fusión del propietario.** |
+| B — Civilizaciones/potencias | ⬜ TODO | No iniciado por regla secuencial. |
+| C — Cartografía/astrogeografía | ⬜ TODO | No iniciado. |
+| D — Relaciones diplomáticas | ⬜ TODO | No iniciado. |
+| E — Información operativa transversal | ⬜ TODO | No iniciado. |
+
+Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. La línea general de especies/culturas/lenguas continúa `IN_PROGRESS` hasta terminar los demás apartados de LORE-01.
+
+
 ## Procedural living-universe master plan
 
 Control documents:

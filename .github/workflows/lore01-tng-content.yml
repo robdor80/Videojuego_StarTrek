@@ -11,6 +11,12 @@ on:
       - "sources/source_registry/source_registry.json"
       - "universe/generation/lore01_tng_content_availability_v0.1.json"
       - "tools/validation/*lore01*"
+      - "docs/roadmap/lore_01*"
+      - "lore/species/README.md"
+      - "CONTENT_STATUS.md"
+      - "docs/roadmap/lore_01*"
+      - "lore/species/README.md"
+      - "CONTENT_STATUS.md"
   pull_request:
     paths:
       - ".github/workflows/lore01-tng-content.yml"
