@@ -44,3 +44,10 @@ En `lore/species/monographs/<species_id>_v0.2.md` existen **25 monografías legi
 `lore/species/LORE01_TNG_species_depth_index_v0.2.json` enlaza todas. Las afirmaciones están identificadas **por episodio o referencia**, no equivalen todavía a comprobación línea a línea de guiones ni a certificación runtime. Donde el canon calla, permanece un vacío explícito.
 
 Validación: `python tools/validation/validate_lore01_depth.py` y `python tools/validation/test_lore01_depth.py`.
+
+### Índices y condiciones de investigación v0.2
+
+- `lore/species/evidence_contract_v0.2.json`: contrato de estructura **uniforme** para los 25 libros de evidencia; ocho dominios estables, fuentes y anclajes por episodio.
+- `lore/species/languages_review_v0.2.json`: cobertura lingüística transparente para las 25 especies: **ocho lenguas catalogadas** y las restantes sin entrada acreditada; esto **no equivale a ocho gramáticas desarrolladas**.
+
+La profundidad máxima responsable respeta los silencios del canon: el trabajo de investigación es amplio, pero una ficha nunca recibe numerología biológica, idiomática o estadística que no se pueda sostener.

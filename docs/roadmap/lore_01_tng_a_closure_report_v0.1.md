@@ -52,3 +52,7 @@ Durante el trabajo apareció en `main` la idea autorizada `ideas/IDEA-0011_dlc_c
 **Criterio real de completitud:** investigación documental **lo máximo razonable con fuentes visibles de esta iteración**, no certificación enciclopédica exhaustiva de cada aparición en pantalla ni un sistema de NPC ya operando con los conocimientos. Para Aenar y algunos pueblos de escasa presencia TNG/DS9/VOY, el resultado correcto conserva explícitamente la falta de fuentes directas, sin importar el contenido de Enterprise excluida. Los números desconocidos y una lengua sin gramática disponible no se inventan. Si algún estudio requiere precisión línea a línea, exige futura comprobación audiovisual puntual y contraste con edición del episodio.
 
 **Control de ejecución:** mantener PR #25 abierta y pendiente de revisión/merge manual; no iniciar apartado B antes del visto bueno del propietario.
+
+## Contratos e índices definitivos de documentación v0.2
+
+Todos los registros de evidencias se han normalizado a `evidence` y a ocho campos `domains`: biología, ciclo vital, cultura, lengua, cronología, escenarios NPC, incógnitas y cautelas de canon. Se añaden `lore/species/evidence_contract_v0.2.json` y `lore/species/languages_review_v0.2.json`. La validación profunda pasó en el commit `9e66774ed0adfa2bc2cd6235364bec976a7c4f98` (GitHub Actions 39030591513). El resultado seguirá requiriendo revisión y fusión humanas; no hay certificación audiovisual fotograma a fotograma ni integración con motor.
