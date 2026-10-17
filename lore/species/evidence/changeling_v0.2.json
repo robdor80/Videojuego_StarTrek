@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "changeling",
+  "display_name_es": "Cambiantes",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/changeling_v0.1.json",
+  "monograph_ref": "lore/species/monographs/changeling_v0.2.md",
+  "research_scope": "TNG_DS9_VOY",
+  "verified_claims": [
+    {
+      "claim_id": "changeling_E01",
+      "source_id": "DS9_SEARCH_PART_I",
+      "domain": "origin",
+      "claim_es": "Se introduce el hogar colectivo y conflicto sobre la identidad de los Fundadores.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E02",
+      "source_id": "DS9_THE_SEARCH_II",
+      "domain": "culture",
+      "claim_es": "La unión al Gran Enlace y vínculo con Odo se presenta como experiencia identitaria específica.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E03",
+      "source_id": "DS9_THE_ADVERSARY",
+      "domain": "security",
+      "claim_es": "Un cambiante infiltrado demuestra suplantación física; la imitación no prueba acceso a recuerdos o poderes institucionales.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E04",
+      "source_id": "DS9_BROKEN_LINK",
+      "domain": "life",
+      "claim_es": "La pérdida/restricción de facultades de Odo muestra estado fisiológico impuesto por otros cambiantes.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E05",
+      "source_id": "DS9_CHIMERA",
+      "domain": "variation",
+      "claim_es": "La relación de Odo con Laas demuestra disparidad de prioridades entre individuos de la misma especie.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E06",
+      "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+      "domain": "history",
+      "claim_es": "Las decisiones finales de la guerra y enfermedad de Fundadores son hechos fechados y dependientes de personajes.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "changeling_E07",
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "domain": "institution",
+      "claim_es": "Referencia oficial a Fundadores como grupo director del Dominio, no función obligatoria de cualquier cambiante.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    }
+  ],
+  "domains": {
+    "biology_and_medical_specificity": "Organismos capaces de cambiar de forma; distinguir apariencia simulada, masa aparente, volumen observado, límites individuales y estado de salud. La capacidad de representar un uniforme, objeto o persona no concede acceso a sistemas, conocimiento, huellas biométricas exactas o mente de la persona suplantada.",
+    "lifecycle_identity_and_reproduction": "La reconstitución periódica de forma líquida y la pertenencia o distancia respecto al Gran Enlace deben manejarse como condiciones del individuo. Odo, Laas y Fundadores tienen historias diferentes. La enfermedad de Fundadores y la posibilidad de cura dependen de sucesos políticos/médicos fechados.",
+    "culture_social_structure_and_variation": "El Gran Enlace es institución/experiencia compartida, no programa informático de obediencia. Desconfianza hacia sólidos y aspiraciones de control caracterizan ciertos grupos; las diferencias de Odo, Laas y otros demuestran que no son mandatos universales.",
+    "linguistic_competence_translation_and_privacy": "La comunicación del Enlace no es licencia para leer cualquier mente ni compartir omnisciencia; determinar contacto, participación y alcance real. Las formas adoptadas no garantizan dominio lingüístico del actor imitado.",
+    "historical_chronology_and_contact": "Contacto y conocimiento sobre los Fundadores cambian a lo largo de DS9. Odo no debe conocer por defecto los planes del Dominio antes de los acontecimientos pertinentes. Infiltraciones exigen hechos persistidos y una trama válida.",
+    "operational_npc_cases": [
+      "Un cambiante infiltrado guarda una identidad real y alias visuales separados y trazables.",
+      "Un agente de seguridad no decide que cualquier persona sea Fundador por un parecido sospechoso.",
+      "Un cambiante independiente puede rechazar al Dominio sin negar su fisiología."
+    ],
+    "unresolved_biology_and_research": [
+      "Bioquímica detallada de forma líquida.",
+      "Límites precisos de imitación material y masa.",
+      "Reproducción, madurez y vida natural.",
+      "Universalidad de recuerdos compartidos en Enlace.",
+      "Capacidad de simular sistemas técnicos activos."
+    ],
+    "conflict_policy": "No atribuir guerra, tiranía o infiltración a la esencia biológica. Evitar suplantación perfecta de códigos, voz, mente y biometría sin validación."
+  },
+  "implementation_status": "AUTHORING_ONLY"
+}
