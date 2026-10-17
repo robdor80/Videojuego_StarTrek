@@ -1,0 +1,45 @@
+name: LORE-01 — TNG species & cultures (documental)
+on:
+  push:
+    branches: [main, "lore/01-tng-species-cultures"]
+    paths:
+      - ".github/workflows/lore01-tng-content.yml"
+      - "gameplay/species/profiles/**"
+      - "lore/cultures/profiles/**"
+      - "lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
+      - "gameplay/languages/initial_language_catalogue.json"
+      - "sources/source_registry/source_registry.json"
+      - "universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "tools/validation/*lore01*"
+  pull_request:
+    paths:
+      - ".github/workflows/lore01-tng-content.yml"
+      - "gameplay/species/profiles/**"
+      - "lore/cultures/profiles/**"
+      - "lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
+      - "gameplay/languages/initial_language_catalogue.json"
+      - "sources/source_registry/source_registry.json"
+      - "universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "tools/validation/*lore01*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  catalogue-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Sintaxis y contratos documentales
+        run: |
+          python -m py_compile tools/validation/validate_lore01_tng.py tools/validation/test_lore01_tng.py
+          python tools/validation/validate_lore01_tng.py
+      - name: Regresiones de DLC y catálogo
+        run: python tools/validation/test_lore01_tng.py
