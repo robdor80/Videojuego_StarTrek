@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.2.0",
+  "method": "screen_scene_anchored_plus_era_scoped_interpretation",
+  "research_cutoff": "2026-10-17",
+  "screen_scope": "TNG_DS9_VOY_WITH_EARLIER_RETAINED_HISTORICAL_REFERENCES",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "gate_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "species_id": "aenar",
+  "display_name_es": "Aenar",
+  "content_scope": "MAIN_GAME_EXISTING_NOT_AUTO_SPAWN_TNG",
+  "legacy_profile_ref": "gameplay/species/profiles/aenar_v0.1.json",
+  "narrative_profile_ref": "lore/species/monographs/aenar_v0.2.md",
+  "verified_claims": [
+    {
+      "claim_id": "aenar_E01",
+      "source_id": "MA_AENAR",
+      "domain": "origin",
+      "claim_es": "Fuente secundaria sobre una población relacionada con andorianos; no equivale a aparición directa en TNG/DS9/VOY.",
+      "authority": "RELIABLE_SECONDARY",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "aenar_E02",
+      "source_id": "ST_OFFICIAL_AENAR_101_2022",
+      "domain": "history",
+      "claim_es": "Página oficial sobre Aenar ligada a SNW: fuente fuera del foco de época TNG; apoyo contextual, no prueba de distribución en 2370.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "aenar_E03",
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "domain": "scope",
+      "claim_es": "Diplomacia andoriana mostrada; no prueba ni presencia ni rasgos personales de Aenar.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    }
+  ],
+  "domains": {
+    "physiology_and_morphology": "Población diferenciada y relacionada con Andorianos, descrita en material externo al trío TNG/DS9/VOY. El catálogo existente registra morfología y telepatía, pero el canon directo de las tres series no permite conceder habilidades psíquicas a todo NPC Aenar que aparezca.",
+    "lifecycle_family_reproduction": "El sistema de reproducción, parentesco, maduración y longevidad no se pueden completar con material de esta era sin extrapolación; mantener indeterminados y no copiar el ciclo andoriano.",
+    "culture_socialization": "La literatura y los episodios de otras épocas describen entornos culturales propios, pero el juego no debe inventar automáticamente enclaves Aenar, posturas políticas ni presencia naval en los años 2364–2378.",
+    "language_translation_names": "Una identidad lingüística Aenar separada o compartida con Andorianos no queda lo bastante acreditada en el corpus TNG; no autogenerar gramática, un dialecto ni aptitud telepática usada como traductor.",
+    "chronology_and_contact": "Brecha de pantalla declarada: sin evidencia primaria de presencia activa Aenar en TNG/DS9/VOY dentro del conjunto indexado. Disponibilidad en el inventario no implica autorización para poblar escenarios arbitrarios de TNG.",
+    "npc_worldstate_scenarios": [
+      "Una persona Aenar requiere causa de presencia, historia y registro previo; no crearla por cuota racial.",
+      "Cualquier interacción telepática necesita facultad individual confirmada y consentimiento.",
+      "No atribuir pacifismo universal ni vida en aislamiento por etiqueta genética."
+    ],
+    "unresolved_research": [
+      "Presencia cuantificable en TNG/DS9/VOY.",
+      "Estructura familiar durante 2370.",
+      "Idioma y alfabetización diferenciada.",
+      "Capacidades psíquicas específicas de un personaje concreto.",
+      "Esperanza de vida, morbilidad y obligaciones políticas."
+    ],
+    "do_not_canonize": "Perfil heredado ENT/SNW frente a contexto TNG: mantener como conocimiento de otras épocas y dato de autoría de baja confianza temporal, sin canonizarlo en TNG."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS"
+}
