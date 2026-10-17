@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_talaxian_behavior",
+  "species_index_key": "talaxian",
+  "display_name_es": "Talaxianos supervivientes, viajeros y colonos",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "DLC_DELTA_ONLY",
+  "culture_bindings": {
+    "profile_ref": "lore/cultures/profiles/TALAXIAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "lore/species/evidence/talaxian_v0.2.json",
+    "anchors": [
+      "VOY_JETREL",
+      "VOY_MORTAL_COIL",
+      "VOY_HOMESTEAD"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Guerras, exilio y comunidades de colonos ofrecen experiencias diferentes. Neelix no define el humor, oficio ni sociabilidad de toda la especie.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un comerciante con experiencia puede emplear simpatía y relatos para construir confianza.",
+      "Una superviviente de guerra puede expresarse con reservas; ambas formas son legítimas."
+    ],
+    "emotional_expression_es": [
+      "La pérdida de Rinax afecta a víctimas documentadas, no crea trauma en cada talaxiano.",
+      "El duelo y las creencias sobre muerte varían individualmente."
+    ],
+    "disagreement_and_conflict_es": [
+      "La memoria Haakoniana puede influir en decisiones políticas si la persona la conoce.",
+      "Una reacción hostil requiere experiencia propia, no herencia de especie."
+    ],
+    "authority_and_duty_es": [
+      "Ser guía regional no otorga representación de todos los refugiados.",
+      "La jefatura de una colonia requiere elección/historia."
+    ],
+    "relationships_and_daily_life_es": [
+      "La reconstrucción de hogares y redes sociales puede ser una prioridad para supervivientes.",
+      "Los vínculos de Neelix con Voyager son particulares de su historia."
+    ]
+  },
+  "variation_axes_es": [
+    "refugio y colonia",
+    "generaciones posguerra",
+    "oficios",
+    "rutas",
+    "creencias religiosas"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un cocinero quiere compartir platos y relatos; otra talaxiana evita hablar de una guerra que no vivió.",
+    "Un colonizador aprecia la estabilidad mientras su pariente sigue explorando nuevas rutas."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No volver a todos simpáticos cocineros.",
+    "No usar un duelo personal como carácter poblacional."
+  ],
+  "era_guard_es": "Comunidades de Homestead y acontecimientos relacionados tienen fechas de Voyager y pertenecen al DLC.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}
