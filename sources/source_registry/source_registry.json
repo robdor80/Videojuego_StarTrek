@@ -1,6 +1,6 @@
 {
   "registry_version": "0.36.0",
-  "last_updated": "2026-10-07",
+  "last_updated": "2026-10-17",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -2617,6 +2617,357 @@
       "url": "https://memory-alpha.fandom.com/wiki/Warp-capable_civilization",
       "accessed_at": "2026-10-07",
       "notes": "Cross-check for warp-capability as an important Federation/Starfleet contact threshold, without treating it as an automatic-contact command."
+    },
+    {
+      "source_id": "TNG_A_MATTER_OF_HONOR",
+      "source_type": "SCREEN_CANON",
+      "title": "A Matter of Honor",
+      "work": "Star Trek: The Next Generation",
+      "season": 2,
+      "episode": 8,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "TNG_SAMARITAN_SNARE",
+      "source_type": "SCREEN_CANON",
+      "title": "Samaritan Snare",
+      "work": "Star Trek: The Next Generation",
+      "season": 2,
+      "episode": 17,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "TNG_ALLEGIANCE",
+      "source_type": "SCREEN_CANON",
+      "title": "Allegiance",
+      "work": "Star Trek: The Next Generation",
+      "season": 3,
+      "episode": 18,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "TNG_ENSIGN_RO",
+      "source_type": "SCREEN_CANON",
+      "title": "Ensign Ro",
+      "work": "Star Trek: The Next Generation",
+      "season": 5,
+      "episode": 3,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "TNG_TIMES_ARROW",
+      "source_type": "SCREEN_CANON",
+      "title": "Time's Arrow",
+      "work": "Star Trek: The Next Generation",
+      "season": 5,
+      "episode": 26,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "DS9_RIVALS",
+      "source_type": "SCREEN_CANON",
+      "title": "Rivals",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 2,
+      "episode": 11,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "DS9_RECKONING",
+      "source_type": "SCREEN_CANON",
+      "title": "The Reckoning",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 6,
+      "episode": 21,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "DS9_FOR_THE_UNIFORM",
+      "source_type": "SCREEN_CANON",
+      "title": "For the Uniform",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 5,
+      "episode": 13,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "DS9_TIL_DEATH_DO_US_PART",
+      "source_type": "SCREEN_CANON",
+      "title": "'Til Death Do Us Part",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 7,
+      "episode": 18,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "DS9_THE_CHANGING_FACE_OF_EVIL",
+      "source_type": "SCREEN_CANON",
+      "title": "The Changing Face of Evil",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 7,
+      "episode": 20,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_PHAGE",
+      "source_type": "SCREEN_CANON",
+      "title": "Phage",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 5,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_INITIATIONS",
+      "source_type": "SCREEN_CANON",
+      "title": "Initiations",
+      "work": "Star Trek: Voyager",
+      "season": 2,
+      "episode": 2,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_ALLIANCES",
+      "source_type": "SCREEN_CANON",
+      "title": "Alliances",
+      "work": "Star Trek: Voyager",
+      "season": 2,
+      "episode": 14,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_COLD_FIRE",
+      "source_type": "SCREEN_CANON",
+      "title": "Cold Fire",
+      "work": "Star Trek: Voyager",
+      "season": 2,
+      "episode": 10,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_BEFORE_AND_AFTER",
+      "source_type": "SCREEN_CANON",
+      "title": "Before and After",
+      "work": "Star Trek: Voyager",
+      "season": 3,
+      "episode": 21,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_JETREL",
+      "source_type": "SCREEN_CANON",
+      "title": "Jetrel",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 15,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_HOMESTEAD",
+      "source_type": "SCREEN_CANON",
+      "title": "Homestead",
+      "work": "Star Trek: Voyager",
+      "season": 7,
+      "episode": 23,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_HUNTERS",
+      "source_type": "SCREEN_CANON",
+      "title": "Hunters",
+      "work": "Star Trek: Voyager",
+      "season": 4,
+      "episode": 15,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_PREY",
+      "source_type": "SCREEN_CANON",
+      "title": "Prey",
+      "work": "Star Trek: Voyager",
+      "season": 4,
+      "episode": 16,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_THE_KILLING_GAME",
+      "source_type": "SCREEN_CANON",
+      "title": "The Killing Game",
+      "work": "Star Trek: Voyager",
+      "season": 4,
+      "episode": 18,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_LIFESIGNS",
+      "source_type": "SCREEN_CANON",
+      "title": "Lifesigns",
+      "work": "Star Trek: Voyager",
+      "season": 2,
+      "episode": 19,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_FACES",
+      "source_type": "SCREEN_CANON",
+      "title": "Faces",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 14,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_DRAGONS_TEETH",
+      "source_type": "SCREEN_CANON",
+      "title": "Dragon's Teeth",
+      "work": "Star Trek: Voyager",
+      "season": 6,
+      "episode": 7,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "VOY_AUTHOR_AUTHOR",
+      "source_type": "SCREEN_CANON",
+      "title": "Author, Author",
+      "work": "Star Trek: Voyager",
+      "season": 7,
+      "episode": 20,
+      "notes": "Obra televisiva retenida. La cita del episodio identifica evidencia para una afirmación concreta; no respalda todos los posibles datos de la especie."
+    },
+    {
+      "source_id": "ST_OFFICIAL_EL_AURIANS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Listening to the Universe: The El-Aurians",
+      "url": "https://www.startrek.com/news/listening-to-the-universe-the-el-aurians",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "ST_OFFICIAL_BREEN_DOMINION_WAR",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Starships of the Dominion War",
+      "url": "https://www.startrek.com/news/the-starships-of-the-dominion-war",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "ST_OFFICIAL_VOYAGERS_JOURNEY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Voyager's Journey",
+      "url": "https://www.startrek.com/news/voyagers-journey",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "ST_OFFICIAL_SERVICE_STARFLEET",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "How Service Defines Starfleet",
+      "url": "https://www.startrek.com/news/how-service-defines-starfleet",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "ST_OFFICIAL_CHILDREN_DELTA",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Children of the Delta Quadrant, Ranked",
+      "url": "https://www.startrek.com/news/children-of-the-delta-quadrant",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_BOLIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bolian",
+      "url": "https://memory-alpha.fandom.com/wiki/Bolian",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_BENZITE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Benzite",
+      "url": "https://memory-alpha.fandom.com/wiki/Benzite",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_EL_AURIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "El-Aurian",
+      "url": "https://memory-alpha.fandom.com/wiki/El-Aurian",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_BREEN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Breen",
+      "url": "https://memory-alpha.fandom.com/wiki/Breen",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_PAKLED",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Pakled",
+      "url": "https://memory-alpha.fandom.com/wiki/Pakled",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_KAZON",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Kazon",
+      "url": "https://memory-alpha.fandom.com/wiki/Kazon",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_OCAMPA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ocampa",
+      "url": "https://memory-alpha.fandom.com/wiki/Ocampa",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_TALAXIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Talaxian",
+      "url": "https://memory-alpha.fandom.com/wiki/Talaxian",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_VIDIIAN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Vidiian",
+      "url": "https://memory-alpha.fandom.com/wiki/Vidiian",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "MA_HIROGEN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Hirogen",
+      "url": "https://memory-alpha.fandom.com/wiki/Hirogen",
+      "publisher": "Memory Alpha",
+      "accessed_at": "2026-10-17",
+      "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
     }
   ]
 }
