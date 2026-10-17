@@ -296,3 +296,5 @@ Las **etapas NAV-01 a NAV-10 del documento original** son una propuesta de desar
 9. **Rendimiento:** medir un enfrentamiento común de dos naves y, después, encuentros con varias; no asumir que toda la flota necesita estar instanciada en 3D ni fijar un límite arquitectónico de dos.
 
 **Resultado administrativo:** IDEA-0009 aprobada y documentada, **NO IMPLEMENTADA**. No modifica modelos, Unreal Engine, CoreRPG, fases, contratos ni la Guardia de Sensores por el solo hecho de registrarse.
+
+**Actualización 17-10-2026:** IDEA-0004 descartada y sustituida por [IDEA-0010](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md). Acceso a la auxiliar por turboascensor desde puente Valhalla, alojamiento/maniobra simulados.
