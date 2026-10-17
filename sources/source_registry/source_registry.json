@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.36.0",
+  "registry_version": "0.37.0",
   "last_updated": "2026-10-17",
   "sources": [
     {
@@ -2968,6 +2968,461 @@
       "publisher": "Memory Alpha",
       "accessed_at": "2026-10-17",
       "notes": "Referencias secundarias/oficiales de apoyo; contrastar afirmaciones jugables con episodios y alcance conservado."
+    },
+    {
+      "source_id": "TNG_HAVEN",
+      "source_type": "SCREEN_CANON",
+      "title": "Haven",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_THE_LOSS",
+      "source_type": "SCREEN_CANON",
+      "title": "The Loss",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_THE_HOST",
+      "source_type": "SCREEN_CANON",
+      "title": "The Host",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_UNIFICATION_I",
+      "source_type": "SCREEN_CANON",
+      "title": "Unification, Part I",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_UNIFICATION_II",
+      "source_type": "SCREEN_CANON",
+      "title": "Unification, Part II",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_FACE_OF_THE_ENEMY",
+      "source_type": "SCREEN_CANON",
+      "title": "Face of the Enemy",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_SINS_OF_THE_FATHER",
+      "source_type": "SCREEN_CANON",
+      "title": "Sins of the Father",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_REDEMPTION",
+      "source_type": "SCREEN_CANON",
+      "title": "Redemption",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_I_BORG",
+      "source_type": "SCREEN_CANON",
+      "title": "I, Borg",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_DESCENT",
+      "source_type": "SCREEN_CANON",
+      "title": "Descent",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_THE_CHASE",
+      "source_type": "SCREEN_CANON",
+      "title": "The Chase",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_GALAXYS_CHILD",
+      "source_type": "SCREEN_CANON",
+      "title": "Galaxy's Child",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "TNG_GAMBIT",
+      "source_type": "SCREEN_CANON",
+      "title": "Gambit",
+      "work": "Star Trek: The Next Generation",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_FAMILY_BUSINESS",
+      "source_type": "SCREEN_CANON",
+      "title": "Family Business",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_RULES_OF_ACQUISITION",
+      "source_type": "SCREEN_CANON",
+      "title": "Rules of Acquisition",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_PROFIT_AND_LACE",
+      "source_type": "SCREEN_CANON",
+      "title": "Profit and Lace",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_REJOINED",
+      "source_type": "SCREEN_CANON",
+      "title": "Rejoined",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_INVASIVE_PROCEDURES",
+      "source_type": "SCREEN_CANON",
+      "title": "Invasive Procedures",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_DAX",
+      "source_type": "SCREEN_CANON",
+      "title": "Dax",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_THE_DIE_IS_CAST",
+      "source_type": "SCREEN_CANON",
+      "title": "The Die Is Cast",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_BROKEN_LINK",
+      "source_type": "SCREEN_CANON",
+      "title": "Broken Link",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_TREACHERY_FAITH_AND_THE_GREAT_RIVER",
+      "source_type": "SCREEN_CANON",
+      "title": "Treachery, Faith and the Great River",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_HIPPOCRATIC_OATH",
+      "source_type": "SCREEN_CANON",
+      "title": "Hippocratic Oath",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_TO_THE_DEATH",
+      "source_type": "SCREEN_CANON",
+      "title": "To the Death",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_DUET",
+      "source_type": "SCREEN_CANON",
+      "title": "Duet",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_NECESSARY_EVIL",
+      "source_type": "SCREEN_CANON",
+      "title": "Necessary Evil",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_THE_MAQUIS_I",
+      "source_type": "SCREEN_CANON",
+      "title": "The Maquis, Part I",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_HOMEFRONT",
+      "source_type": "SCREEN_CANON",
+      "title": "Homefront",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_PARADISE_LOST",
+      "source_type": "SCREEN_CANON",
+      "title": "Paradise Lost",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_IMAGE_IN_THE_SAND",
+      "source_type": "SCREEN_CANON",
+      "title": "Image in the Sand",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_TACKING_INTO_THE_WIND",
+      "source_type": "SCREEN_CANON",
+      "title": "Tacking Into the Wind",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_THE_SEARCH_II",
+      "source_type": "SCREEN_CANON",
+      "title": "The Search, Part II",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_THE_ADVERSARY",
+      "source_type": "SCREEN_CANON",
+      "title": "The Adversary",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_CHIMERA",
+      "source_type": "SCREEN_CANON",
+      "title": "Chimera",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "DS9_BEHIND_THE_LINES",
+      "source_type": "SCREEN_CANON",
+      "title": "Behind the Lines",
+      "work": "Star Trek: Deep Space Nine",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_ELOGIUM",
+      "source_type": "SCREEN_CANON",
+      "title": "Elogium",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_MORTAL_COIL",
+      "source_type": "SCREEN_CANON",
+      "title": "Mortal Coil",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_ENDGAME",
+      "source_type": "SCREEN_CANON",
+      "title": "Endgame",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_ONE",
+      "source_type": "SCREEN_CANON",
+      "title": "One",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_DARKLING",
+      "source_type": "SCREEN_CANON",
+      "title": "Darkling",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_THE_GIFT",
+      "source_type": "SCREEN_CANON",
+      "title": "The Gift",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_FLASHBACK",
+      "source_type": "SCREEN_CANON",
+      "title": "Flashback",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_RESOLUTIONS",
+      "source_type": "SCREEN_CANON",
+      "title": "Resolutions",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_NEMESIS",
+      "source_type": "SCREEN_CANON",
+      "title": "Nemesis",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_CATAHEXiS",
+      "source_type": "SCREEN_CANON",
+      "title": "Cathexis",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_UNIMATRIX_ZERO",
+      "source_type": "SCREEN_CANON",
+      "title": "Unimatrix Zero",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "VOY_COURSE_OBLIVION",
+      "source_type": "SCREEN_CANON",
+      "title": "Course: Oblivion",
+      "work": "Star Trek: Voyager",
+      "notes": "Episodio del corpus retenido. La cita autoriza únicamente la afirmación concreta asociada, no una extrapolación universal."
+    },
+    {
+      "source_id": "ST_OFFICIAL_KAZON_101",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Kazon",
+      "url": "https://www.startrek.com/news/star-trek-101-kazon",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DELTA_REGIMES",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Delta Quadrant Regimes, Ranked",
+      "url": "https://www.startrek.com/news/delta-quadrant-regimes-ranked",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TRILL_HISTORY_DETAIL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Trill History",
+      "url": "https://www.startrek.com/news/trill-history-101",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ISHKA",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Ishka of Ferenginar: Mother of a Movement",
+      "url": "https://www.startrek.com/news/ishka-of-ferenginar-mother-of-a-movement",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_UNIFICATION_PRIMER",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Vulcans and Romulans: A Primer on Unification",
+      "url": "https://www.startrek.com/news/vulcans-and-romulans-a-primer-on-unification",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_FOES",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Federation Foes: The Dominion and Emerald Chain",
+      "url": "https://www.startrek.com/news/federation-foes-dominion-and-emerald-chain",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_MOT_WORKERS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Essential Workers Of Star Trek Show Some Things Never Change",
+      "url": "https://www.startrek.com/news/the-essential-workers-of-star-trek-show-some-things-never-change",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TALAXIAN_JETREL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Jetrel and the Destroyers of Worlds",
+      "url": "https://www.startrek.com/news/jetrel-and-the-destroyers-of-worlds",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DEANNA_MIXED",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Deanna Troi Paved the Way For Those of Us Who Never Felt Like We Belonged",
+      "url": "https://www.startrek.com/news/deanna-troi-paved-the-way-for-those-of-us-who-never-felt-like-we-belonged",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_PON_FARR_CONSENT",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Tuvok Was A Champion of Men's Mental Health",
+      "url": "https://www.startrek.com/news/tuvok-was-a-champion-of-mens-mental-health",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_VOY_CONTACTS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "10 First Contacts That Went Really, Really Wrong",
+      "url": "https://www.startrek.com/news/10-first-contacts-that-went-really-really-wrong",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_HIROGEN_HOLODECK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Intruder Alert: Invaders Have Taken Over the Ship",
+      "url": "https://www.startrek.com/news/intruder-alert-ship-invaders",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_TRILL_EZRI",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "17 Years Ago: Ezri Dax Made Her First DS9 Appearance",
+      "url": "https://www.startrek.com/news/17-years-ago-ezri-dax-made-her-first-ds9-appearance",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_WORF",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Wisdom of Worf",
+      "url": "https://www.startrek.com/news/wisdom-of-worf",
+      "publisher": "StarTrek.com",
+      "accessed_at": "2026-10-17",
+      "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
     }
   ]
 }
