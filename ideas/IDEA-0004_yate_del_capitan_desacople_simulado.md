@@ -3,7 +3,7 @@
 **Proyecto:** Videojuego Star Trek RPG 3D  
 **Área:** Naves capitales · Vehículos auxiliares · Puente/interiores · Vuelo espacial · Transiciones · Persistencia  
 **Fecha:** 11 de octubre de 2026  
-**Estado:** **IDEA-0004 · APROBADA CONCEPTUALMENTE; pendiente de diseño detallado e implementación**  
+**Estado vigente (17-10-2026):** **DESCARTADA / SUSTITUIDA por IDEA-0010**. La documentación antigua se conserva como archivo histórico y no constituye una propuesta activa de yate para ninguna nave.  
 **Destino:** `/ideas` del repositorio del videojuego Star Trek  
 **Nave de referencia inicial:** Clase **Sovereign**, basada en la Sovereign con hangar mejorada en M07.  
 **Actualización de continuidad (2026-10-13):** la nueva Gran Dama es **Clase Valhalla**, inspirada en **Galaxy**, y **no** una evolución de la Sovereign M07. Este yate nació como concepto para Sovereign; podrá evaluarse para Valhalla por separado, **sin confirmar** que ya exista un alojamiento de yate compatible.
@@ -321,3 +321,15 @@ La identificación de la estructura ventral M07, los supuestos de geometría des
 6. **Sin implementación anticipada:** registrar esta propuesta no modifica automáticamente Core RPG, UE5, modelos de Blender, ni la planificación de fases.
 
 **Estado final:** IDEA-0004 registrada como aprobada conceptualmente, **no implementada** y pendiente de planificación.
+
+---
+
+## 20. CIERRE DE IDEA-0004 — Descartada y sustituida (2026-10-17)
+
+**Decisión posterior y expresa del autor:** «descarta esa idea e implementa en su lugar esta del desafiante». Queda **sin efecto** la elección del **yate clásico del capitán**, tanto como equipamiento de la Clase Valhalla como propuesta de desarrollo activo general.
+
+**Sustitución aprobada:** [IDEA-0010 — Nave auxiliar táctica y furtiva de Valhalla](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md), nave de identidad original inspirada en Defiant y desarrollada a partir de los modelos 3D exterior y puente disponibles, pendientes de auditoría.
+
+Los 19 apartados previos quedan conservados para **trazabilidad histórica y aprovechamiento de principios técnicos generales** (identidad única del vehículo, transiciones, persistencia, autorizaciones y anclajes relativos), pero **NO** significan que el yate sea una opción viva a desarrollar por defecto en Sovereign o Valhalla. La eventual reapertura de un yate tradicional requerirá una nueva decisión del autor.
+
+**No confundir esta decisión documental con ejecución en Blender/UE5/CoreRPG:** no se ha modelado, sustituido físicamente ni instalado todavía la nave nueva.
