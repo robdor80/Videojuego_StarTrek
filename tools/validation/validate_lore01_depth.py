@@ -30,11 +30,7 @@ def ledger_evidence(dossier: dict) -> list[dict]:
     return dossier.get("evidence", dossier.get("verified_claims", []))
 
 def resolve_unknowns(dossier: dict) -> list[str]:
-    domains = dossier.get("domains", dossier.get("knowledge_domains", {}))
-    for key in UNKNOWN_FIELDS:
-        if key in domains:
-            return domains[key]
-    return []
+    return dossier.get("domains", {}).get("unknowns", [])
 
 def validate_dossier(dossier: dict, species_id: str, sources: dict) -> list[str]:
     errs = []
@@ -51,6 +47,14 @@ def validate_dossier(dossier: dict, species_id: str, sources: dict) -> list[str]
         errs.append(f"{species_id}: ruta de ficha operativa incorrecta")
     if dossier.get("monograph_ref") != f"lore/species/monographs/{species_id}_v0.2.md" and dossier.get("narrative_profile_ref") != f"lore/species/monographs/{species_id}_v0.2.md":
         errs.append(f"{species_id}: ruta de monografía incorrecta")
+    domains = dossier.get("domains", {})
+    required = {"biology","lifecycle","culture","language","chronology","npc_scenarios","unknowns","canon_cautions"}
+    if set(domains) != required:
+        errs.append(f"{species_id}: esquema de ocho dominios incumplido")
+    elif any(not domains[key] for key in required):
+        errs.append(f"{species_id}: dominio fundamental vacío")
+    if dossier.get("verification_status") != "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED":
+        errs.append(f"{species_id}: verificación de escenas falsa")
     e = ledger_evidence(dossier)
     if len(e) < 3:
         errs.append(f"{species_id}: menos de tres anclajes de evidencia")

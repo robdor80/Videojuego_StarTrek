@@ -36,7 +36,7 @@ class DeepLoreTests(unittest.TestCase):
     def test_missing_unknowns(self):
         x = copy.deepcopy(self.main)
         domain = x.get("domains", x.get("knowledge_domains"))
-        domain["missing_fields"] = []
+        domain["unknowns"] = []
         self.assertTrue(mod.validate_dossier(x, "bolian", self.sources))
 
     def test_dlc_leak(self):
