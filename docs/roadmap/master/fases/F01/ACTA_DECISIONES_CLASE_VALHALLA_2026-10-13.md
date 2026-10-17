@@ -28,6 +28,7 @@
 - **Hangares en ambas secciones**: principal de gran capacidad en el platillo y auxiliares operativos en la sección motriz; ambas mantienen operaciones de lanzaderas separadas.
 - Autorización de vuelo, asignación de plaza, maniobras, tripulación, vehículos, carga, daños y ubicación **persistentes**, sin duplicar entidades por transición.
 - La propuesta del yate del capitán sigue siendo **una idea aparte (IDEA-0004)** nacida sobre una Sovereign M07; su incorporación final, ubicación y forma en la Valhalla **no** se dan por decididas.
+- **Actualización decisoria (17-10-2026, prevalece sobre la nota histórica anterior):** el autor DESCARTA IDEA-0004 y la sustituye por [IDEA-0010 — nave auxiliar táctica furtiva inspirada en Defiant](../../../../ideas/IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md). **No habrá yate tradicional en Valhalla.** Su alojamiento y acceso serán **simulados**: turboascensor desde el puente principal a escena 3D independiente de la auxiliar, acoplamiento/desacoplamiento visual con anclaje virtual y persistencia autoritativa. No se exige cavidad física/hangar para una Defiant dentro del casco.
 
 ## Mando, tripulación y comunicaciones
 - **El capitán decide** en qué sección permanece durante la separación y designa a quien dirigirá la otra, conforme a cualificación, disponibilidad, reglas y cadena de mando.
