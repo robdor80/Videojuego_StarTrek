@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0",
+  "purpose": "Ejemplos de decisión editorial para futuros adaptadores de generación y diálogo; no tests de IA en ejecución.",
+  "scenarios": [
+    {
+      "case_id": "KLINGON_TWO_OFFICERS",
+      "species_id": "klingon",
+      "same_culture_possible": true,
+      "context": "Dos oficiales con tradición de Casa documentada, valores personales diferentes.",
+      "npc_a": {
+        "profession": "oficial táctico",
+        "personal_preference": "valora valor militar",
+        "possible_utterance_es": "Debemos asumir la responsabilidad y proteger a la tripulación."
+      },
+      "npc_b": {
+        "profession": "oficial diplomático",
+        "personal_preference": "valora cooperación pacífica",
+        "possible_utterance_es": "Honraremos a nuestras Casas evitando un combate sin propósito."
+      },
+      "assertion": "Ambas respuestas válidas; no inferir duelo.",
+      "forbidden": "Afirmar que compartir cultura klingon obliga a resolver conflictos por combate o deshonra al negociador."
+    },
+    {
+      "case_id": "FERENGI_OFFICER",
+      "species_id": "ferengi",
+      "context": "Oficial ferengi al servicio de la Flota, entrenado en normas de servicio.",
+      "individual_facts": [
+        "starfleet_service_confirmed",
+        "engineering_training_confirmed"
+      ],
+      "allowed": "Consulta procedimiento técnico antes de negociar nada.",
+      "forbidden": "Cobrar dinero por ayudar, deducido únicamente de especie."
+    },
+    {
+      "case_id": "VULCAN_CARE",
+      "species_id": "vulcan",
+      "context": "Paciente en enfermería y oficial vulcano con disciplina lógica documentada.",
+      "allowed": "Oficial mantiene tono claro y manifiesta preocupación profesional.",
+      "forbidden": "Ausencia de emociones, diagnóstico telepático y fusión mental sin consentimiento."
+    },
+    {
+      "case_id": "BAJORAN_DIFFERENT_FAITH",
+      "species_id": "bajoran",
+      "context": "Una persona devota y otra secular en servicio civil.",
+      "allowed": "Primera emplea una referencia a Profetas, segunda expresa preferencia secular.",
+      "forbidden": "Asignar religión o trauma automáticamente por especie."
+    },
+    {
+      "case_id": "AENAR_NO_CANON_BASE",
+      "species_id": "aenar",
+      "context": "Persona sin expediente cultural aparte de especie.",
+      "allowed": "Comportamiento deriva solo del perfil individual explícito.",
+      "forbidden": "Telepatía, pacifismo, aislamiento o vocabulario supuestamente universal Aenar."
+    },
+    {
+      "case_id": "BREEN_UNOBSERVED_CIVILIAN",
+      "species_id": "breen",
+      "context": "Población civil Breen no caracterizada en episodios retenidos.",
+      "allowed": "Interacción sin perfil colectivo hasta documentar crianza, biografía y contacto.",
+      "forbidden": "Suponer que la máscara indica secretismo o incapacidad emocional."
+    },
+    {
+      "case_id": "DLC_DELTA_GATE",
+      "species_id": "hirogen",
+      "context": "Campaña principal sin activación de DLC Delta.",
+      "content_enabled": false,
+      "allowed": "No crear NPC Hirogen ni encuentro por aparición procedural.",
+      "forbidden": "Generar caza Hirogen en cuadrante Alfa por contenido A.1."
+    },
+    {
+      "case_id": "MULTICULTURAL_HUMAN_KLINGON",
+      "species_id": "human",
+      "context": "Humano criado en hogar klingon; biología humana y educación cultural klingon.",
+      "culture_refs": [
+        "klingon_cultural_context"
+      ],
+      "allowed": "Puede emplear nociones de honor aprendidas sin tener anatomía klingon.",
+      "forbidden": "Restringir acceso cultural solo a personas biológicamente klingon."
+    },
+    {
+      "case_id": "BORG_NOT_SPECIES",
+      "species_id": "human",
+      "context": "Persona humana ex-Borg liberada; identidad/transformación persistente.",
+      "allowed": "Personalidad definida por historia antes y después de asimilación, no por 'raza Borg'.",
+      "forbidden": "Generar 'propensión Borg' como parámetro racial o usar portal hacia Alfa."
+    }
+  ]
+}

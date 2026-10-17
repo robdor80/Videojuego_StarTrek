@@ -2,7 +2,7 @@
   "document_id": "LORE01_TNG_SPECIES_DEPTH_INDEX_V02",
   "schema_version": "0.2.0",
   "as_of": "2026-10-17",
-  "branch": "lore/01-tng-species-cultures",
+  "branch": "main",
   "authority": "Documentation research and source anchors; runtime integration explicitly excluded",
   "base_index_ref": "lore/species/LORE01_TNG_species_coverage_audit_v0.1.json",
   "registered_sources_ref": "sources/source_registry/source_registry.json",
@@ -46,7 +46,7 @@
       "monograph_ref": "lore/species/monographs/human_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/human_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -55,7 +55,7 @@
       "monograph_ref": "lore/species/monographs/vulcan_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/vulcan_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -64,7 +64,7 @@
       "monograph_ref": "lore/species/monographs/andorian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/andorian_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -73,7 +73,7 @@
       "monograph_ref": "lore/species/monographs/aenar_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/aenar_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -82,7 +82,7 @@
       "monograph_ref": "lore/species/monographs/tellarite_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/tellarite_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -91,7 +91,7 @@
       "monograph_ref": "lore/species/monographs/klingon_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/klingon_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -100,7 +100,7 @@
       "monograph_ref": "lore/species/monographs/romulan_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/romulan_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -109,7 +109,7 @@
       "monograph_ref": "lore/species/monographs/cardassian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/cardassian_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -118,7 +118,7 @@
       "monograph_ref": "lore/species/monographs/bajoran_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/bajoran_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -127,7 +127,7 @@
       "monograph_ref": "lore/species/monographs/ferengi_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/ferengi_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -136,7 +136,7 @@
       "monograph_ref": "lore/species/monographs/trill_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/trill_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -145,7 +145,7 @@
       "monograph_ref": "lore/species/monographs/betazoid_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/betazoid_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -154,7 +154,7 @@
       "monograph_ref": "lore/species/monographs/changeling_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/changeling_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -163,7 +163,7 @@
       "monograph_ref": "lore/species/monographs/vorta_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/vorta_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -172,7 +172,7 @@
       "monograph_ref": "lore/species/monographs/jem_hadar_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/jem_hadar_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -181,7 +181,7 @@
       "monograph_ref": "lore/species/monographs/bolian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/bolian_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -190,7 +190,7 @@
       "monograph_ref": "lore/species/monographs/benzite_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/benzite_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -199,7 +199,7 @@
       "monograph_ref": "lore/species/monographs/el_aurian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/el_aurian_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -208,7 +208,7 @@
       "monograph_ref": "lore/species/monographs/breen_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/breen_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -217,7 +217,7 @@
       "monograph_ref": "lore/species/monographs/pakled_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/pakled_v0.2.json",
       "content_scope": "MAIN_GAME_CONTEXTUAL",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -226,7 +226,7 @@
       "monograph_ref": "lore/species/monographs/kazon_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/kazon_v0.2.json",
       "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -235,7 +235,7 @@
       "monograph_ref": "lore/species/monographs/ocampan_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/ocampan_v0.2.json",
       "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -244,7 +244,7 @@
       "monograph_ref": "lore/species/monographs/talaxian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/talaxian_v0.2.json",
       "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -253,7 +253,7 @@
       "monograph_ref": "lore/species/monographs/vidiian_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/vidiian_v0.2.json",
       "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     },
     {
@@ -262,8 +262,13 @@
       "monograph_ref": "lore/species/monographs/hirogen_v0.2.md",
       "evidence_ledger_ref": "lore/species/evidence/hirogen_v0.2.json",
       "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
-      "approval_status": "PENDING_PR_REVIEW_AND_MERGE",
+      "approval_status": "MERGED_MAIN_PR25",
       "last_audited": "2026-10-17"
     }
-  ]
+  ],
+  "source_branch": "lore/01-tng-species-cultures",
+  "approved_pr": 25,
+  "merge_commit_sha": "abcc4c77af37d0aaf8d5eb09b65b480c34c4042b",
+  "decision_state": "MERGED_MAIN_DOCUMENTARY",
+  "cultural_ai_behavior_extension_ref": "lore/cultures/ai_behavior/species_behavior_index_v0.1.json"
 }

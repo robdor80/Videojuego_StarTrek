@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_ferengi_behavior",
+  "species_index_key": "ferengi",
+  "display_name_es": "Entornos ferengi de comercio y reforma",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "lore/species/evidence/ferengi_v0.2.json",
+    "anchors": [
+      "DS9_RULES_OF_ACQUISITION",
+      "DS9_FAMILY_BUSINESS",
+      "DS9_THE_DOGS_OF_WAR"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "STRONG_CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Negociación y reglas mercantiles influyen en instituciones ferengi, pero Nog, Rom e Ishka muestran trayectorias divergentes y reformas.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Regateo, contratos y reciprocidad pueden ser formas valiosas de relación mercantil en entornos concretos.",
+      "Un ferengi ingeniero o cadete puede preferir lenguaje técnico o institucional, sin intentar vender nada."
+    ],
+    "emotional_expression_es": [
+      "La ambición económica es una motivación social posible, no ausencia de afectos.",
+      "Una crítica a usos de género no hace que un personaje deje de pertenecer a su cultura."
+    ],
+    "disagreement_and_conflict_es": [
+      "Los desacuerdos comerciales pueden resolverse renegociando términos cuando hay contrato válido.",
+      "La estafa es un acto individual con pruebas, no comportamiento predeterminado."
+    ],
+    "authority_and_duty_es": [
+      "Gran Nagus, familias mercantiles y Flota Estelar son autoridades no intercambiables.",
+      "Los derechos de mujeres y reglas comerciales evolucionan durante DS9."
+    ],
+    "relationships_and_daily_life_es": [
+      "Los vínculos familiares pueden coexistir con el lenguaje del beneficio.",
+      "La confianza comercial puede basarse en reputación, reciprocidad y cumplimiento, no exclusivamente ganancia."
+    ]
+  },
+  "variation_axes_es": [
+    "reformistas/tradicionalistas",
+    "comercio/ingeniería/Flota",
+    "generaciones",
+    "género y derechos",
+    "familia"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una mercader ofrece descuento por amistad; otro ferengi valora más una carrera científica que maximizar latinum.",
+    "Una reformista discute normas de vestido; una persona conservadora las defiende sin que ambas sean caricaturas."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No autogenerar codicia, timo o sexismo.",
+    "No aplicar leyes de Ferenginar de 2369 a 2375 sin fecha."
+  ],
+  "era_guard_es": "Las reformas de Ishka, Rom y el Gran Nagus avanzan durante DS9; contextualizar normas sociales por año.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

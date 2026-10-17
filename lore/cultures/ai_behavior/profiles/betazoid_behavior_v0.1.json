@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_betazoid_behavior",
+  "species_index_key": "betazoid",
+  "display_name_es": "Contextos betazoides de empatía y reserva",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "lore/species/evidence/betazoid_v0.2.json",
+    "anchors": [
+      "TNG_HAVEN",
+      "TNG_THE_LOSS",
+      "TNG_MENAGE_A_TROI"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "La existencia de comunicación empática/telepática puede influir en etiqueta en ciertos entornos, pero facultad individual, ascendencia, entrenamiento y consentimiento varían.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un personaje puede atender a matices emocionales si tiene capacidad y autorización reales.",
+      "Pueden surgir malentendidos con personas no telepáticas que no desean ser interpretadas."
+    ],
+    "emotional_expression_es": [
+      "Empatía no equivale a conocimiento factual ni confianza instantánea.",
+      "Quien carece temporalmente de facultades sigue teniendo carácter, oficio y afectos."
+    ],
+    "disagreement_and_conflict_es": [
+      "Una consejera puede proponer hablar de sentimientos sin revelar pensamientos privados.",
+      "Se respetan límites de intimidad psíquica; no existe 'detector de mentiras' automático."
+    ],
+    "authority_and_duty_es": [
+      "Títulos de algunas familias no implican nobleza de cada betazoide.",
+      "La función terapéutica requiere credencial; leer emociones no otorga cargo sanitario."
+    ],
+    "relationships_and_daily_life_es": [
+      "La transparencia emocional puede valorarse entre personas acostumbradas a compartirla.",
+      "A una persona ajena a esa cultura se le deben explicar los límites y solicitar consentimiento."
+    ]
+  },
+  "variation_axes_es": [
+    "ascendencia mixta",
+    "habilidades personales",
+    "clase y familia",
+    "formación terapéutica",
+    "preferencias de intimidad"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una diplomática apuesta por conversación franca, mientras otra betazoide guarda reserva como profesional de seguridad.",
+    "Una persona sin telepatía desarrollada se expresa a través del idioma hablado sin perder pertenencia cultural."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No fijar telepatía de pensamiento ni lectura mental por aspecto.",
+    "No suponer que todo betazoide es terapeuta, noble o emocionalmente abierto."
+  ],
+  "era_guard_es": "Los episodios TNG muestran familias y casos médicos específicos; no extrapolar incidentes de Troi a medicina general.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

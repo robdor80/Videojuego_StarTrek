@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0",
+  "contract_id": "LORE01_A1_NPC_CULTURAL_BEHAVIOR_CONTEXT",
+  "classification": "AUTHORING_ADAPTER_PROPOSAL_NOT_RUNTIME_CHANGE",
+  "description_es": "El motor de identidad persiste valores individuales; los contextos culturales solo aportan repertorio social condicionado, sin imponer personalidad.",
+  "no_species_personality_defaults": true,
+  "no_species_based_personality_weights": true,
+  "no_species_based_aggression_probability": true,
+  "no_species_auto_attach_culture": true,
+  "no_arbitrary_traits_for_sparse_canon": true,
+  "input_requirements": {
+    "person_entity_id": "ID de NPC persistido o plantilla de creación autorizada",
+    "species_id": "Solo valida biología y permite localizar bibliografía, no activa cultura ni atributos psíquicos",
+    "individual_personality_ref": "Prioridad máxima para estilo y decisiones. No se crea con especie como semilla.",
+    "upbringing_context_refs": "Procedencia, hogar, tutores, socialización histórica, si existen",
+    "culture_refs": "Cero, una o varias identidades culturales explícitas con procedencia",
+    "education_and_service_refs": "Academia, oficio, Flota, nave y protocolos realmente aprendidos",
+    "relationships_and_memories": "Experiencias y afectos documentados, acceso por observador",
+    "current_state": "Estado emocional/médico observable e internamente autoritativo, relación y circunstancia de escena",
+    "timeline_and_location": "Fecha, lugar, fronteras y conocimiento efectivo de cada personaje",
+    "content_entitlements": "Juego principal o DLC Delta habilitado. Sin autorización, perfiles Delta no se consultan ni producen NPC."
+  },
+  "priority_order": [
+    "0. Aplicar licencia/gates de contenido y cronología; los paquetes no instalados nunca generan población.",
+    "1. Resolver identidad, biología, historial personal, decisiones y memoria persistente desde CoreRPG.",
+    "2. Determinar culturas realmente adjuntas por crianza/educación/comunidad; prohibido hacerlo por especie.",
+    "3. Consultar monografías/culturas para posibles marcos de cortesía y normas contextuales, sujetos a fuente y variación.",
+    "4. Ante choque de un prior cultural con personalidad e historia conocida, prevalece la persona; no corregirla para encajar en el tópico.",
+    "5. Generar interpretaciones dialogadas situacionales, no editar hechos del mundo, permisos o relaciones.",
+    "6. Pasar intenciones con efectos a sistema autoritativo y narrar solo eventos confirmados.",
+    "7. Registrar novedades únicamente cuando exista evento aprobado; no inventar memoria en una frase."
+  ],
+  "per_scene_filter": [
+    "Existe un culture_ref unido al NPC y fuente de socialización.",
+    "El prior corresponde a esa comunidad y época; el perfil de especie no demuestra por sí solo comunidad.",
+    "Los conocimientos requeridos se han adquirido o son públicos para ese observador.",
+    "No entra en conflicto con personalidad, misión, salud, consentimiento o estado persistente.",
+    "Un prior poco respaldado no se usa como predicción; se puede elegir un estilo personal neutro."
+  ],
+  "culture_strength_semantics": {
+    "STRONG_CONTEXTUAL_NORMS": "El valor social puede ser destacado dentro de comunidades vinculadas, nunca acción obligatoria o probabilidad numérica.",
+    "CONTEXTUAL_NORMS": "Referencia social opcional solo en situación pertinente y con educación cultural acreditada.",
+    "LIMITED_CONTEXTUAL": "Material parcial/ejemplos de personajes; no inferir generalidades sin datos individuales.",
+    "UNKNOWN_NO_DEFAULT": "No aplicar tendencia colectiva alguna; solo contexto explícito del personaje.",
+    "NO_SPECIES_PRIOR": "No existe un único contexto de especie, construir cultura específica desde comunidad y educación."
+  },
+  "soft_dimensions_only": [
+    "communication_es",
+    "emotional_expression_es",
+    "disagreement_and_conflict_es",
+    "authority_and_duty_es",
+    "relationships_and_daily_life_es"
+  ],
+  "autonomy_rules": [
+    "La IA no decide permisos/nombramientos, identidades, rangos, afiliaciones, delitos, daños, beneficios, enfermedades ni hechos canónicos nuevos.",
+    "La IA no obtiene diagnósticos, pensamientos o secretos por especie/cultura ni transforma empatía en detector de mentiras.",
+    "No inferir hostilidad, agresividad, codicia, engaño, violencia, religiosidad, sexismo, intelecto ni moralidad desde la especie.",
+    "Las asociaciones de instituciones tales como Flota Estelar, Tal Shiar, Casas klingon, sectas Kazon, Dominio requieren procedencia.",
+    "El aprendizaje y la conducta pueden evolucionar; nunca sobrescribir memoria o personalidad persistidas por coincidencia cultural.",
+    "Identidad cultural puede ser mixta, adquirida, elegida, rechazada o ajena a la especie biológica.",
+    "La autorización DLC precede a cualquier lectura de perfiles Delta."
+  ],
+  "content_policy": {
+    "delta_species": [
+      "kazon",
+      "ocampan",
+      "talaxian",
+      "vidiian",
+      "hirogen"
+    ],
+    "main_game_spawn_allowed_for_delta": false,
+    "game_main_exceptions": [
+      "borg_existing_tng_world_context",
+      "el_aurian_diaspora"
+    ],
+    "transwarp_portal_idea_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
+    "borg_cannot_use_portal_to_enter_alpha": true,
+    "transwarp_not_implemented": true
+  },
+  "acceptance_criteria": [
+    "25 guías trazables a expedientes de especie y culturas, con fuentes registradas.",
+    "Comportamiento individual opuesto entre personajes de la misma especie permitido y documentado.",
+    "Ninguna especie dispara valores de personalidad, violencia, profesión, títulos, autoridad o idioma.",
+    "Borg permanece estado de personaje; no inventar 'personalidad de especie Borg'.",
+    "Filtros de cronología, conocimiento y DLC activos en el contrato documental.",
+    "Fixtures de aplicación contrastan situaciones positivas y negativas sin resolver resultados de CoreRPG."
+  ]
+}
