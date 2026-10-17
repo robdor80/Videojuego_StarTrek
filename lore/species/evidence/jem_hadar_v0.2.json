@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "jem_hadar",
+  "display_name_es": "Jem'Hadar",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/jem_hadar_v0.1.json",
+  "monograph_ref": "lore/species/monographs/jem_hadar_v0.2.md",
+  "research_scope": "TNG_DS9_VOY",
+  "domains": {
+    "biology": "Humanoides de crecimiento y maduración acelerados, construidos para función militar bajo ingeniería del Dominio. La invisibilidad o camuflaje personal requiere condiciones del individuo y capacidad registrada; el equipamiento no reemplaza fisiología. No asignar daño fijo por genética.",
+    "lifecycle": "La dependencia de ketracel-white exige inventario, dosis, continuidad logística y consecuencias médicas en estado persistente, no castigo arbitrario. La aceleración de desarrollo no significa que todos compartan una edad idéntica; tampoco significa ausencia absoluta de juicio propio.",
+    "culture": "Juramentos a Fundadores, rangos First/Second y disciplinas de unidad son educación y gobierno militar, no sustituto del carácter. Individuos como Goran'Agar cuestionan determinismo de dependencia y lealtad. Una compañía puede variar por líder, generación y circunstancias.",
+    "language": "El lenguaje militar y códigos jerárquicos son componentes de adiestramiento. Que un soldado hable con un Vorta no lo convierte en intérprete universal ni le otorga autorización diplomática.",
+    "chronology": "El conocimiento de Jem'Hadar para personajes alfa depende de contacto con Gamma y Dominio. Tras campañas de guerra y disponibilidad de white, su operación está vinculada a instalaciones y organizaciones de poder.",
+    "npc_scenarios": [
+      "Un oficial sanitario solo puede diagnosticar abstinencia con datos médicos válidos.",
+      "Una patrulla sin suministro puede emprender decisiones estratégicas diversas; la IA no sentencia cada resultado.",
+      "Un Jem'Hadar que rechaza órdenes necesita una motivación y un historial, no una 'excepción racial' fija."
+    ],
+    "unknowns": [
+      "Distribución de edades y supervivencia natural sin combate.",
+      "Parámetros clínicos precisos de white.",
+      "Reproducción espontánea frente a fabricación.",
+      "Prevalencia real de resistencia a dependencia.",
+      "Causas completas de camuflaje biológico o tecnológico."
+    ],
+    "canon_cautions": "Dependencia bioquímica no implica maldad intrínseca ni alineamiento forzado. No convertir a todos los Jem'Hadar en humanoides de vida extremadamente corta sin evidencias por cohorte."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
+    {
+      "claim_id": "jem_hadar_E01",
+      "source_id": "DS9_THE_JEMHADAR",
+      "domain": "military",
+      "claim_es": "Los Jem'Hadar se presentan como fuerza militar capaz de sacrificar una nave adversaria en defensa de su mando.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "jem_hadar_E02",
+      "source_id": "DS9_HIPPOCRATIC_OATH",
+      "domain": "biology",
+      "claim_es": "Goran'Agar muestra independencia de la dependencia a ketracel-white y preguntas morales de sus compañeros.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "jem_hadar_E03",
+      "source_id": "DS9_TO_THE_DEATH",
+      "domain": "culture",
+      "claim_es": "El código de combate, jerarquía y competición con otros Jem'Hadar se muestran en un contexto militar específico.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "jem_hadar_E04",
+      "source_id": "DS9_A_TIME_TO_STAND",
+      "domain": "history",
+      "claim_es": "La producción acelerada y estado de tropas forman parte de logística de guerra.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "jem_hadar_E05",
+      "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+      "domain": "chronology",
+      "claim_es": "La derrota y rendición afectan cadena de mando; no todos continúan combatiendo por naturaleza.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "jem_hadar_E06",
+      "source_id": "ST_OFFICIAL_DOMINION_FOES",
+      "domain": "medicine",
+      "claim_es": "El ketracel-white es dependencia diseñada y canalizada por el mando del Dominio.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

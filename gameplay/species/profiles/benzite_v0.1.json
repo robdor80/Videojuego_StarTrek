@@ -1,0 +1,98 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "benzite",
+  "display_name_es": "Benzita",
+  "status": "LORE01_A_AUTHORING_BASELINE_NOT_RUNTIME",
+  "scope": {
+    "playable_era": "tng_ds9_voyager",
+    "game_content": "MAIN_GAME",
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2364,
+    "episode_year_does_not_limit_species_existence": true
+  },
+  "identity": {
+    "common_homeworld_ref": "benzar",
+    "homeworld_location_is_astrography_subject": true,
+    "citizenship_implied": false,
+    "faction_membership_implied": false
+  },
+  "description_es": "Humanoides asociados a Benzar y a intercambios con la Flota Estelar; su modo de respiración debe resolverse individualmente.",
+  "morphology": {
+    "body_plan": "humanoid",
+    "screen_visible_markers": [
+      "humanoide",
+      "rasgos faciales y nasales característicos"
+    ],
+    "variation_required": true
+  },
+  "physiology": {
+    "supported_observations": [
+      "Algunos benzitas aparecen con un dispositivo de respiración; no imponer equipo idéntico a todo benzita.",
+      "Condiciones atmosféricas precisas y dependencia fisiológica universal quedan sin fijar."
+    ],
+    "exact_age_maturity_reproduction": null,
+    "unsupported_numbers_remain_unknown": true
+  },
+  "language": {
+    "language_id": null,
+    "individual_fluency_not_inferred": true,
+    "translator_state_is_world_owned": true,
+    "catalogue_status": "UNKNOWN_OR_NOT_CATALOGUED",
+    "no_auto_fluency_from_species": true
+  },
+  "culture_socialization": {
+    "contextual_profile_ref": "lore/cultures/profiles/BENZITE_CULTURAL_PROFILE_v0.1.json",
+    "culture_profile_id": "benzite_cultural_context",
+    "automatic_attachment_by_species": false,
+    "possible_norms_not_personality_traits": [
+      "Existe contexto de formación y programa de intercambio con la Flota.",
+      "No atribuir a todos el comportamiento de Mordock o Mendon."
+    ]
+  },
+  "generation_constraints": {
+    "main_game_spawn_policy": "CONTEXT_ONLY_NO_GLOBAL_QUOTA",
+    "requires_valid_location_and_population_context": true,
+    "requires_date_and_campaign_knowledge_gate": true,
+    "starfleet_service_must_be_proven_by_organization_state": true,
+    "population_density_from_species_catalogue": false,
+    "no_auto_character_traits": true
+  },
+  "computer_and_npc": {
+    "player_summary_es": "Humanoides asociados a Benzar y a intercambios con la Flota Estelar; su modo de respiración debe resolverse individualmente.",
+    "scene_use_es": "Mordock y Mendon ofrecen ejemplos de contacto institucional, pero no una regla para la personalidad benzita.",
+    "requires_observer_knowledge": true,
+    "may_state_unknowns": true,
+    "may_disclose_private_history_without_world_state": false
+  },
+  "unknowns": [
+    "ciclo vital",
+    "composición ambiental obligatoria",
+    "relación entre dispositivos y variación individual",
+    "normas de filiación"
+  ],
+  "ai_boundary": [
+    "No confundir especies con culturas ni ciudadanos con organizaciones.",
+    "No crear capacidades médicas o psíquicas sin prueba individual.",
+    "No atribuir la conducta de un personaje observado a toda su especie."
+  ],
+  "provenance": [
+    {
+      "source_id": "TNG_COMING_OF_AGE",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil benzite; no inferir rasgos universales"
+    },
+    {
+      "source_id": "TNG_A_MATTER_OF_HONOR",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil benzite; no inferir rasgos universales"
+    },
+    {
+      "source_id": "MA_BENZITE",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria de presencia y biología general"
+    }
+  ]
+}

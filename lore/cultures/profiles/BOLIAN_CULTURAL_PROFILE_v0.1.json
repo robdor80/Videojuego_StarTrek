@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "bolian_cultural_context",
+  "status": "LORE01_A_CONTEXTUAL_AUTHORING_NOT_AUTOMATIC",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "bolian",
+    "automatic_attachment_by_species": false,
+    "scope": "tng_ds9_voyager",
+    "principle": "La cultura es adquirida y puede convivir con otras; profesión y ciudadanía se registran por separado."
+  },
+  "historical_context": {
+    "summary_es": "Mot, profesional civil a bordo de la Enterprise, muestra que el personal no militar puede ser Boliano.",
+    "incident_does_not_define_entire_species": true
+  },
+  "values_and_norms": [
+    {
+      "norm_es": "Presencia en entornos profesionales y civiles de la Federación.",
+      "strength": "possible_norm",
+      "evidence_state": "screen_canon_or_official_supported",
+      "not_a_required_character_trait": true
+    },
+    {
+      "norm_es": "No existe en el corpus retenido un código cultural obligatorio que convierta a todos los bolianos en peluqueros o personas sociables.",
+      "strength": "possible_norm",
+      "evidence_state": "screen_canon_or_official_supported",
+      "not_a_required_character_trait": true
+    }
+  ],
+  "communication_and_conflict": {
+    "summary_es": "Mot, profesional civil a bordo de la Enterprise, muestra que el personal no militar puede ser Boliano.",
+    "never_infer_hostility_or_dishonesty_from_species": true
+  },
+  "authority_and_status": {
+    "species_does_not_confer_rank": true,
+    "explicit_world_state_required": true
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "familia",
+      "mundo de crianza",
+      "profesión",
+      "experiencia personal",
+      "fecha",
+      "afinidad cultural"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "observed_first_date_not_culture_origin": true,
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2360,
+    "not_a_culture_birth_date": true
+  },
+  "cross_cultural_interaction": {
+    "known_context_es": "Mot, profesional civil a bordo de la Enterprise, muestra que el personal no militar puede ser Boliano.",
+    "translation_is_not_cultural_understanding": true
+  },
+  "work_service_and_profession": {
+    "civilian_and_officer_pathways_may_coexist": true,
+    "profession_auto_assigned": false
+  },
+  "unknowns": [
+    "esperanza de vida genérica",
+    "normas culturales universales",
+    "parámetros clínicos precisos",
+    "lenguas o dialectos normalizados"
+  ],
+  "gameplay_hooks": [
+    "npc_contextual_dialogue",
+    "culture_affinity",
+    "professional_etiquette",
+    "observer_knowledge"
+  ],
+  "ai_guardrails": [
+    "No fijar una personalidad por especie.",
+    "No inventar parentescos, credos, instituciones o obligaciones.",
+    "Las notas culturales solo son visibles para NPC con experiencia y contexto."
+  ],
+  "provenance": [
+    {
+      "source_id": "TNG_ALLEGIANCE",
+      "confidence": "HIGH",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    },
+    {
+      "source_id": "TNG_ENSIGN_RO",
+      "confidence": "HIGH",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    },
+    {
+      "source_id": "ST_OFFICIAL_SERVICE_STARFLEET",
+      "confidence": "HIGH",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    },
+    {
+      "source_id": "MA_BOLIAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    }
+  ]
+}

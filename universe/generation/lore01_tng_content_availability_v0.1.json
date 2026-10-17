@@ -1,0 +1,86 @@
+{
+  "schema_version": "0.1.0",
+  "policy_id": "lore01_tng_content_availability",
+  "status": "DOCUMENTATION_ONLY_NO_RUNTIME_GATE_IMPLEMENTED",
+  "source_of_author_approval": "Usuario 2026-10-17: juego principal TNG/DS9, Delta en futuro DLC mediante portal transwarp Borg",
+  "main_game": {
+    "species_ids_existing": [
+      "human",
+      "vulcan",
+      "andorian",
+      "aenar",
+      "tellarite",
+      "klingon",
+      "romulan",
+      "cardassian",
+      "bajoran",
+      "ferengi",
+      "trill",
+      "betazoid",
+      "changeling",
+      "vorta",
+      "jem_hadar"
+    ],
+    "species_ids_added": [
+      "bolian",
+      "benzite",
+      "el_aurian",
+      "breen",
+      "pakled"
+    ],
+    "automatic_population_quota_from_catalogue": false,
+    "spawns_always_require_date_location_population_cause_and_permission": true
+  },
+  "delta_dlc": {
+    "content_id": "dlc_delta_transwarp",
+    "status": "FUTURE_NOT_IMPLEMENTED",
+    "species_ids": [
+      "kazon",
+      "ocampan",
+      "talaxian",
+      "vidiian",
+      "hirogen"
+    ],
+    "default_main_game_spawn_allowed": false,
+    "activation_requires": [
+      "explicit_dlc_or_expansion_enabled",
+      "valid_in_universe_delta_location_and_exploration_context",
+      "causal_local_population_or_specific_mission",
+      "campaign_history_and_actor_specific_contact_knowledge"
+    ],
+    "planned_travel": {
+      "kind": "BORG_TRANSWARP_PORTAL",
+      "classification": "GAME_ADDITION",
+      "user_has_3d_model": true,
+      "implementation_status": "NOT_IN_THIS_PHASE",
+      "route_coordinates": null,
+      "entry_system_id": null,
+      "destination_system_id": null,
+      "connection_requires_later_narrative_tech_art_approval": true,
+      "approved_idea_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
+      "borg_can_traverse_this_portal_toward_alpha": false,
+      "no_auto_borg_invasion_on_activation": true,
+      "normal_return_via_same_portal": true,
+      "return_may_be_interrupted_only_by_caused_world_events": true,
+      "return_policy": "OPTION_C_AUTHOR_APPROVED",
+      "technical_enforcement_status": "FUTURE_IMPLEMENTATION_REQUIRED"
+    },
+    "knowledge_rule": "En juego principal se puede registrar información obtenida con justificación, pero no materializar encuentros ni tripulantes Delta por generación corriente."
+  },
+  "exceptions": {
+    "el_aurian": {
+      "main_game_allowed": true,
+      "basis": "Diáspora de supervivientes en TNG y DS9; procedencia geográfica remota no excluye presencia en Alpha/Beta."
+    },
+    "borg": {
+      "main_game_allowed": true,
+      "basis": "Borg can exist in main game due to TNG canon; this does NOT authorize Borg to enter Alpha through IDEA-0011 portal."
+    }
+  },
+  "integration_boundary": {
+    "authoring_only": true,
+    "no_change_to_core_rpg": true,
+    "no_change_to_ue5": true,
+    "consumer_must_enforce_gate_later": true
+  }
+}

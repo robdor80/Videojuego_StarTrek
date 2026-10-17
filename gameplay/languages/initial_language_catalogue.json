@@ -51,11 +51,49 @@
       "source_refs": [
         "MA_TRILL"
       ]
+    },
+    {
+      "language_id": "breen",
+      "display_name_es": "Breen",
+      "associated_species_ids": [
+        "breen"
+      ],
+      "source_refs": [
+        "MA_BREEN"
+      ],
+      "lore01_notes": "Asociación lingüística de referencia, sin presunción de fluidez ni homogeneidad cultural.",
+      "availability_scope": "MAIN_GAME"
+    },
+    {
+      "language_id": "kazon",
+      "display_name_es": "Kazon",
+      "associated_species_ids": [
+        "kazon"
+      ],
+      "source_refs": [
+        "MA_KAZON"
+      ],
+      "lore01_notes": "Asociación lingüística de referencia, sin presunción de fluidez ni homogeneidad cultural.",
+      "availability_scope": "DLC_DELTA_FUTURE"
+    },
+    {
+      "language_id": "talaxian",
+      "display_name_es": "Talaxiano",
+      "associated_species_ids": [
+        "talaxian"
+      ],
+      "source_refs": [
+        "MA_TALAXIAN"
+      ],
+      "lore01_notes": "Asociación lingüística de referencia, sin presunción de fluidez ni homogeneidad cultural.",
+      "availability_scope": "DLC_DELTA_FUTURE"
     }
   ],
   "rules": [
     "Language association does not imply every member of a species speaks it.",
     "Homeworld language is not equivalent to faction citizenship.",
-    "Additional dialects and languages are added only when gameplay needs them and provenance exists."
+    "Additional dialects and languages are added only when gameplay needs them and provenance exists.",
+    "LORE-01: no se fabrica un idioma por especie cuando no hay evidencia suficiente.",
+    "LORE-01: las lenguas del futuro DLC Delta no habilitan aparición de NPC ni contacto en el juego principal."
   ]
 }

@@ -1,0 +1,75 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "el_aurian",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME_DIASPORA",
+  "legacy_profile_ref": "gameplay/species/profiles/el_aurian_v0.1.json",
+  "monograph_ref": "lore/species/monographs/el_aurian_v0.2.md",
+  "evidence": [
+    {
+      "claim_id": "el_aurian_E01",
+      "source_id": "TNG_Q_WHO",
+      "claim_es": "Guinan identifica y teme a los Borg debido a su experiencia histórica; memoria personal no significa conocimiento universal.",
+      "domain": "history",
+      "authority": "SCREEN_CANON",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "el_aurian_E02",
+      "source_id": "TNG_TIMES_ARROW",
+      "claim_es": "Guinan aparece en un contexto temporal antiguo, prueba de longevidad personal considerable.",
+      "domain": "life",
+      "authority": "SCREEN_CANON",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "el_aurian_E03",
+      "source_id": "DS9_RIVALS",
+      "claim_es": "Martus Mazur muestra ocupación y motivaciones distintas de Guinan; pueblo no equivale a profesión de escuchar.",
+      "domain": "variation",
+      "authority": "SCREEN_CANON",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "el_aurian_E04",
+      "source_id": "ST_OFFICIAL_EL_AURIANS",
+      "claim_es": "Referencia oficial a la diáspora y a El-aurianos que escuchan, con precaución sobre facultades atribuidas.",
+      "domain": "culture",
+      "authority": "OFFICIAL_REFERENCE",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "el_aurian_E05",
+      "source_id": "MA_EL_AURIAN",
+      "claim_es": "Fuente secundaria de origen y dispersión, a validar sin fijar mapas definitivos.",
+      "domain": "origin",
+      "authority": "RELIABLE_SECONDARY",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    }
+  ],
+  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "use_in_runtime": "NOT_AUTOMATIC",
+  "domains": {
+    "biology": "Humanoides con apariencia a menudo comparable a humana. Casos de longevidad y percepción inusual se asocian a individuos concretos; no otorgar a todos precognición, resistencia temporal, inmunidad a Q ni conocimiento preexistente de todo acontecimiento histórico.",
+    "lifecycle": "La vida de Guinan se extiende durante muchas décadas y más de un siglo según episodios, pero no existe valor universal validado de vida media y límites de natalidad. La dispersión de supervivientes Borg condiciona recuerdos, migraciones, pérdidas y familias, si están documentadas caso a caso.",
+    "culture": "Una identidad dispersa puede expresarse como memoria de catástrofe, redes comerciales, hospitalidad o estrategias de supervivencia. Guinan escucha como profesión y rasgo personal; Martus muestra un camino muy diferente. No crear una sociedad uniforme de sabios omniscientes.",
+    "language": "Existe identidad cultural y onomástica sin gramática plenamente codificada en esta base. El traductor no debe ampliar acceso a recuerdos de otro siglo; el archivo de Guinan depende de experiencias que ella haya tenido y quiera compartir.",
+    "chronology": "Estos supervivientes son una **excepción legítima de disponibilidad del juego principal**: TNG y DS9 los sitúan fuera de Delta. La geografía de origen y la fecha de destrucción de su mundo no autorizan eventos genéricos de viaje a Delta antes del DLC.",
+    "npc_scenarios": [
+      "Una civil el-auriana puede residir en estación de Alpha sin activar portal transwarp.",
+      "Un exiliado debe tener origen, trayecto y pérdidas biográficas registradas.",
+      "La intuición de Guinan no autoriza que todo el mundo el-auriano prediga misiones o engaños."
+    ],
+    "unknowns": [
+      "Promedio de longevidad y fertilidad.",
+      "Límite exacto de facultades perceptivas atípicas.",
+      "Densidad y distribución de diáspora por sector.",
+      "Vocabulario e instituciones políticas previas.",
+      "Pruebas de viajes a Delta por individuos del siglo XXIV."
+    ],
+    "canon_cautions": "No convertir experiencia temporal de una persona en telepatía de toda la especie; origen remoto no equivale a prohibición de existencia en Alfa."
+  },
+  "display_name_es": "El-aurianos",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

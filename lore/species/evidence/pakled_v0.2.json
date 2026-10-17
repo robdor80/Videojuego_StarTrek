@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "pakled",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME_CONTEXTUAL",
+  "legacy_profile_ref": "gameplay/species/profiles/pakled_v0.1.json",
+  "monograph_ref": "lore/species/monographs/pakled_v0.2.md",
+  "evidence": [
+    {
+      "claim_id": "pakled_E01",
+      "source_id": "TNG_SAMARITAN_SNARE",
+      "claim_es": "La tripulación Pakled del Mondor utiliza engaño para conseguir ayuda técnica y secuestrar a Geordi.",
+      "domain": "contact",
+      "authority": "SCREEN_CANON",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "pakled_E02",
+      "source_id": "MA_PAKLED",
+      "claim_es": "Fuente secundaria para la denominación de la especie y variaciones de representación.",
+      "domain": "biology",
+      "authority": "RELIABLE_SECONDARY",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    },
+    {
+      "claim_id": "pakled_E03",
+      "source_id": "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+      "claim_es": "Referencia general de contexto de relaciones entre pueblos en Star Trek, no testimonio directo de Pakled.",
+      "domain": "scope",
+      "authority": "OFFICIAL_REFERENCE",
+      "limitation": "Fuente no autoriza extrapolación a todos los individuos."
+    }
+  ],
+  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "use_in_runtime": "NOT_AUTOMATIC",
+  "domains": {
+    "biology": "Humanoides de complexiones variables, representados en TNG por una pequeña muestra de viajeros; no hay fundamento para asignar menor inteligencia innata a toda la especie. La habilidad de engaño de la tripulación del Mondor es precisamente una señal de que una apariencia simple no implica pensamiento simple.",
+    "lifecycle": "No constan suficientes datos del corpus para edad de madurez, reproducción, familia, longevidad, prácticas médicas o estructura demográfica. Es preferible un expediente biológico honesto con vacíos a usar una caricatura cognitiva como regla.",
+    "culture": "Los tripulantes del Mondor pueden practicar adquisición oportunista de tecnología, pero la conducta es atribuible a individuos y su nave. No extrapolar economía entera, sistema educativo o valores comunitarios; tampoco usar como evidencia producciones posteriores excluidas de TNG.",
+    "language": "Frases sencillas pronunciadas por un interlocutor concreto no son un indicio de limitación lingüística ni nivel cognitivo universal. No inferir dificultad con toda tecnología ni crear gramáticas Pakled sin corpus.",
+    "chronology": "El contacto conocido por la Enterprise es un evento específico de TNG, no un permiso para llenar todos los sectores de naves Pakled. El sistema de rutas y colonias deberá esperar al apartado C.",
+    "npc_scenarios": [
+      "Un capitán Pakled puede manejar una estrategia engañosa; no desactivar su agencia por estereotipo.",
+      "Una llamada de auxilio requiere validación de seguridad; no condena como fraude a cualquier Pakled.",
+      "El modelo de diálogo admite individuos elocuentes, técnicos y diplomáticos si existe biografía causal."
+    ],
+    "unknowns": [
+      "Mundo natal en la continuidad estudiada.",
+      "Lengua y alfabetización.",
+      "Instituciones de formación, gobernanza y comercio.",
+      "Parámetros de reproducción y longevidad.",
+      "Muestras fuera de Mondor representativas de su sociedad."
+    ],
+    "canon_cautions": "Lo mostrado en 'Samaritan Snare' es una tripulación, no un test de inteligencia de especie. No importar caricaturas posteriores."
+  },
+  "display_name_es": "Pakled",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

@@ -1,0 +1,45 @@
+{
+  "schema_version": "0.2.0",
+  "contract_id": "lore01_species_deep_evidence_contract",
+  "status": "AUTHORING_DATA_NOT_RUNTIME_SCHEMA",
+  "required_top_level": [
+    "schema_version",
+    "species_id",
+    "display_name_es",
+    "status",
+    "content_scope",
+    "legacy_profile_ref",
+    "monograph_ref",
+    "verification_status",
+    "authority_policy_ref",
+    "evidence",
+    "domains"
+  ],
+  "required_domains": [
+    "biology",
+    "lifecycle",
+    "culture",
+    "language",
+    "chronology",
+    "npc_scenarios",
+    "unknowns",
+    "canon_cautions"
+  ],
+  "required_claim_keys": [
+    "claim_id",
+    "source_id",
+    "claim_es",
+    "domain",
+    "authority"
+  ],
+  "authority_enum": [
+    "SCREEN_CANON",
+    "OFFICIAL_REFERENCE",
+    "RELIABLE_SECONDARY"
+  ],
+  "source_registry_ref": "sources/source_registry/source_registry.json",
+  "verification_status_constant": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "content_gate_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "integration_policy": "This is documented evidence and interpretative design, not certified scene-level canon or running CoreRPG/UE5 data. Preserve v0.1 profiles.",
+  "uncertainty_policy": "Null/unknown over made-up numbers for physiology, reproduction, linguistic grammar or unobserved societies."
+}

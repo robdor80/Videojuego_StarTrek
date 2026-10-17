@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "klingon",
+  "display_name_es": "Klingon",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/klingon_v0.1.json",
+  "monograph_ref": "lore/species/monographs/klingon_v0.2.md",
+  "research_scope": "TNG_DS9_VOY_WITH_RETAINED_TOS_HISTORICAL_CONTEXT",
+  "domains": {
+    "biology": "Humanoides de frente y crestas craneales variables en el corpus audiovisual, cuya representación requiere cronología y biblia visual, no un único molde. En algunas escenas se observan resistencia física y fisiología redundante; no extrapolar blindaje natural, inmunidad ni multiplicadores de fuerza fijos.",
+    "lifecycle": "Casas, parentesco, adopción, filiación y sucesión afectan la historia social; Worf criado entre humanos no tiene la misma socialización que un oficial nacido en Qo'noS. Ritos de emparejamiento, vínculos y luto requieren tradición concreta, parentesco válido y fecha. La longevidad global y la gestación no deben inventarse.",
+    "culture": "Honor es un vocabulario político, personal y familiar que admite desacuerdos. Religiosidad y referencias a Kahless coexisten con ambición y prácticas oportunistas, y no sustituyen leyes. Los civiles —artistas, científicos, comerciantes, médicos— son indispensables para una civilización, aunque el drama televisivo priorice guerreros y oficiales.",
+    "language": "El klingon tiene vocabulario y escritura de uso cultural verificable; no imponer a un personaje nivel nativo ni convertir palabras rituales en órdenes válidas. El traductor universal facilita diálogo, pero malinterpretar desafío/insulto puede tener consecuencias culturales contextuales.",
+    "chronology": "El Imperio participa en múltiples fases políticas. La alianza con Federación en TNG no borra la tensión del inicio de DS9 temporada 4 ni concede información anticipada de la guerra. Casas, cancilleres y declaraciones de hostilidad son registros fechados, no constantes raciales.",
+    "npc_scenarios": [
+      "Un capitán klingon puede ser fiel a su nave y contrario a una decisión de Gowron; son lealtades distintas.",
+      "La computadora exige documento familiar para responder a qué Casa pertenece un pasajero.",
+      "Una petición de duelo no inicia batalla sin participantes, ritual vigente, jurisdicción y aceptación."
+    ],
+    "unknowns": [
+      "Tabla médica universal de redundancia de órganos.",
+      "Parentesco y adopción en todas las Casas.",
+      "Cantidad y función de dialectos.",
+      "Evolución exacta de distribución de longevidad.",
+      "Exhaustividad de ritos funerarios y sus excepciones."
+    ],
+    "canon_cautions": "Distinguir representación cinematográfica de TOS, TNG y DS9; los cambios visuales no autorizan retcon biológico simplista. Evitar la guerra política transformada en enemistad innata."
+  },
+  "provenance_rule": "Do not assert unsourced universal biology; fact authority is scoped to source evidence.",
+  "gameplay": "DOCUMENTATION_NOT_MERGED_INTO_RUNTIME",
+  "evidence": [
+    {
+      "claim_id": "klingon_E01",
+      "source_id": "TNG_SINS_OF_THE_FATHER",
+      "domain": "society",
+      "claim_es": "Las Casas y la deshonra familiar afectan las instituciones políticas y la identidad de Worf.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E02",
+      "source_id": "TNG_REUNION",
+      "domain": "politics",
+      "claim_es": "La sucesión del canciller y la intervención de facciones muestran rivalidades políticas internas.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E03",
+      "source_id": "TNG_A_MATTER_OF_HONOR",
+      "domain": "service",
+      "claim_es": "Riker participa temporalmente en una nave klingon; jerarquía, prácticas navales y desconfianza varían por capitán.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E04",
+      "source_id": "DS9_THE_WAY_OF_THE_WARRIOR",
+      "domain": "chronology",
+      "claim_es": "Un cambio político desplaza la relación con Federación/Cardassia; la diplomacia depende de fecha.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E05",
+      "source_id": "DS9_SOLDIERS_OF_THE_EMPIRE",
+      "domain": "service",
+      "claim_es": "El mando de Martok ilustra moral de tripulación, prestigio y disciplina sin monopolio de una sola ética del honor.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E06",
+      "source_id": "DS9_TACKING_INTO_THE_WIND",
+      "domain": "politics",
+      "claim_es": "La crítica a Gowron y el papel de Martok muestran que honor y legitimidad son objeto de conflicto político.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "klingon_E07",
+      "source_id": "ST_OFFICIAL_KLINGON_WORF",
+      "domain": "culture",
+      "claim_es": "Análisis oficial del ideal personal de Worf y sus tensiones con los actos de otros klingon.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

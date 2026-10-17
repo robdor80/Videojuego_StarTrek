@@ -1,0 +1,107 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "trill",
+  "display_name_es": "Trill",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/trill_v0.1.json",
+  "monograph_ref": "lore/species/monographs/trill_v0.2.md",
+  "research_scope": "TNG_DS9_VOY",
+  "domains": {
+    "biology": "Especie huésped humanoide y simbionte son entidades biológicas y registros de identidad diferenciados; un huésped no unido sigue siendo Trill. DS9 muestra patrones de manchas que difieren de la caracterización inicial de TNG. El simbionte no es una 'segunda profesión' ni un implante genérico: tiene historia, fisiología, cuidados y memoria propios.",
+    "lifecycle": "La unión crea identidad compuesta y acceso a recuerdos sin borrar la individualidad actual. Separación, muerte y trasplante son sucesos clínicos serios; aptitud, permisos y compatibilidad no se reemplazan por probabilidades aleatorias. El tabú de reanudación afecta a vínculos anteriores, pero individuos pueden resistirse.",
+    "culture": "La Comisión de Simbiosis y el proceso de selección concentran autoridad; los Trill no unidos pueden tener carrera, cultura, familia y prestigio sin simbionte. El engaño institucional descubierto en 'Equilibrium' es secreto concreto y cambiante, no información pública automática de cada habitante.",
+    "language": "El idioma trill es entrada del catálogo inicial, sin gramática operativa cerrada. Nombres de huéspedes y de simbiontes se registran como identidades relacionadas, nunca concatenación reversible en un simple campo que destruya biografías.",
+    "chronology": "Cambios de huésped requieren fechas y continuidad. El personaje Dax en 2360, 2371 y 2375 no es la misma biografía individual aunque conserve memoria del simbionte. No crear un Jadzia vivo en cronologías donde falleció salvo continuidad divergente explícita.",
+    "npc_scenarios": [
+      "Un NPC unido reconoce hechos que su simbionte conoció, sujetos a integración y fiabilidad de recuerdos.",
+      "Investigador debe obtener acceso legítimo para estudiar datos secretos de la Comisión.",
+      "Médico protege tanto al huésped como al simbionte y registra el consentimiento de procedimientos."
+    ],
+    "unknowns": [
+      "Incidencia epidemiológica de compatibilidad.",
+      "Parámetros médicos detallados de simbiosis.",
+      "Edad mínima legal universal y vida media de huéspedes.",
+      "Variabilidad de manchas/biología entre TNG y DS9.",
+      "Lenguas y dialectos secundarios."
+    ],
+    "canon_cautions": "Incoherencias visuales y de compatibilidad de 'The Host' frente a DS9 quedan como conflicto de pantalla, no solución inventada. Evitar identidad y culpa heredadas como equivalencia automática."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
+    {
+      "claim_id": "trill_E01",
+      "source_id": "TNG_THE_HOST",
+      "domain": "biology",
+      "claim_es": "Un simbionte puede sobrevivir al huésped y pasar a otro individuo; el episodio presenta diferencias de representación frente a DS9.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E02",
+      "source_id": "DS9_DAX",
+      "domain": "identity",
+      "claim_es": "Jadzia guarda recuerdos de Curzon sin ser idéntica a la persona anterior; se discute responsabilidad de actos del huésped previo.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E03",
+      "source_id": "DS9_INVASIVE_PROCEDURES",
+      "domain": "medicine",
+      "claim_es": "El trasplante forzado de simbionte genera una crisis médica, legal y de consentimiento.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E04",
+      "source_id": "DS9_EQUILIBRIUM",
+      "domain": "society",
+      "claim_es": "La Comisión de Simbiosis oculta hechos acerca de la aptitud de candidatos; la escasez de simbiontes condiciona el acceso.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E05",
+      "source_id": "DS9_FACETS",
+      "domain": "ritual",
+      "claim_es": "El rito zhian'tara permite explorar las vidas de huéspedes previos de manera controlada.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E06",
+      "source_id": "DS9_REJOINED",
+      "domain": "culture",
+      "claim_es": "La prohibición social de reanudar vínculos de huéspedes anteriores genera conflicto cultural, no determinismo natural.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E07",
+      "source_id": "DS9_IMAGE_IN_THE_SAND",
+      "domain": "life",
+      "claim_es": "Ezri recibe a Dax sin entrenamiento previsto; los recuerdos compartidos no garantizan integración fácil.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "trill_E08",
+      "source_id": "ST_OFFICIAL_TRILL_HISTORY_101",
+      "domain": "review",
+      "claim_es": "Referencia oficial lista episodios nucleares y su continuidad.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

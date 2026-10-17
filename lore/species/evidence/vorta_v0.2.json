@@ -1,0 +1,89 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "vorta",
+  "display_name_es": "Vorta",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/vorta_v0.1.json",
+  "monograph_ref": "lore/species/monographs/vorta_v0.2.md",
+  "research_scope": "TNG_DS9_VOY",
+  "domains": {
+    "biology": "Humanoides vinculados a ingeniería y clonación del Dominio; un cuerpo Vorta es una identidad física y un número/versión de clon debe vincularse a una identidad biográfica definida por contratos, no un reseteo narrativo gratuito. No deducir visión/olfato/audición precisa sin episodio o prueba clínica.",
+    "lifecycle": "La sustitución por clones no es inmortalidad personal sin coste, ni prueba de memoria perfecta entre versiones. Los programas y relevos de clonación pertenecen a infraestructura política del Dominio y no a cualquier Vorta aleatorio.",
+    "culture": "Se observan funciones de representantes, negociadores, administradores y controladores de recursos; devoción a Fundadores es adoctrinamiento y diseño social/biotécnico que puede variar. Weyoun 6 constituye evidencia de disidencia y agencia individual.",
+    "language": "La capacidad diplomática de un Vorta concreto no concede traducción automática de todas las lenguas ni acceso a la mente de subordinados. Documentar códigos de mando como privilegios institucionales, separados de idioma.",
+    "chronology": "Dominio puede estar lejano o ser amenaza conocida según posición de campaña; la presencia de Vorta en Alfa está limitada por rutas, situación de guerra y fechas. Clones con el mismo nombre no pueden coexistir sin explicación de número y logística.",
+    "npc_scenarios": [
+      "Un representante Vorta necesita cadena de mando específica para ordenar a un contingente Jem'Hadar.",
+      "Una versión clonada hereda solo los recuerdos establecidos por el sistema de clonación real.",
+      "Una deserción puede nacer de divergencia individual, no requiere un deus ex machina."
+    ],
+    "unknowns": [
+      "Alcance biológico exacto de modificación genética.",
+      "Número de clones y memoria compartida para cada versión.",
+      "Edad de crecimiento y ciclo natural.",
+      "Capacidades perceptivas por individuo.",
+      "Porcentaje de disidentes y reglas de reproducción."
+    ],
+    "canon_cautions": "No fusionar Vorta biológico con agente del Dominio automáticamente; 'lealtad genética absoluta' contradice casos de disidencia."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
+    {
+      "claim_id": "vorta_E01",
+      "source_id": "DS9_THE_JEMHADAR",
+      "domain": "institutions",
+      "claim_es": "El Dominio se manifiesta como poder político en Gamma, no como una especie indistinta.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "vorta_E02",
+      "source_id": "DS9_TO_THE_DEATH",
+      "domain": "service",
+      "claim_es": "Weyoun participa en negociaciones y operaciones junto a Jem'Hadar; jerarquía y tensiones son organizativas.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "vorta_E03",
+      "source_id": "DS9_TREACHERY_FAITH_AND_THE_GREAT_RIVER",
+      "domain": "variation",
+      "claim_es": "La deserción y ética de Weyoun 6 contradicen obediencia uniforme y mecánica entre clones.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "vorta_E04",
+      "source_id": "DS9_THE_DOGS_OF_WAR",
+      "domain": "chronology",
+      "claim_es": "La acción de Weyoun depende del periodo bélico y estructura de mando.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "vorta_E05",
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "domain": "society",
+      "claim_es": "La estructura de Fundadores, Vorta y Jem'Hadar define roles muy diferentes.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    },
+    {
+      "claim_id": "vorta_E06",
+      "source_id": "ST_OFFICIAL_DOMINION_FOES",
+      "domain": "logistics",
+      "claim_es": "Referencia oficial a intermediación de Vorta y suministro de ketracel-white.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
+}

@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "talaxian_diaspora_context",
+  "status": "LORE01_DLC_AUTHORING_ONLY",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "talaxian",
+    "automatic_attachment_by_species": false,
+    "content_scope": "DLC_DELTA_ONLY",
+    "cultural_membership_requires_person_state": true
+  },
+  "historical_context": {
+    "summary_es": "Relaciones con otros pueblos y la historia del Talaxian Neelix pertenecen a identidades/eventos específicos.",
+    "no_auto_history_for_individuals": true
+  },
+  "values_and_norms": [
+    {
+      "norm_es": "Hay comunidades desplazadas y tradiciones familiares en el periodo de Voyager.",
+      "strength": "possible_norm",
+      "not_universal": true,
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm_es": "Una profesión de cocinero, comerciante o embajador no se asigna por especie.",
+      "strength": "possible_norm",
+      "not_universal": true,
+      "evidence_state": "screen_canon_or_official_supported"
+    }
+  ],
+  "communication_and_conflict": {
+    "description_es": "Relaciones con otros pueblos y la historia del Talaxian Neelix pertenecen a identidades/eventos específicos.",
+    "encounter_does_not_imply_hostility": true
+  },
+  "authority_and_status": {
+    "organizational_rank_not_species_trait": true,
+    "actual_membership_from_world_state": true
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "comunidad",
+      "ciclo vital",
+      "profesión",
+      "organización local",
+      "crianza",
+      "experiencia individual"
+    ]
+  },
+  "era_variation": {
+    "scope": "voyager_2371_2378",
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2371,
+    "not_a_culture_birth_date": true
+  },
+  "privacy_and_intimacy": {
+    "not_inferred_from_species": true
+  },
+  "unknowns": [
+    "expectativa de vida",
+    "normas homogéneas del exilio",
+    "distribución geográfica detallada",
+    "población exacta"
+  ],
+  "gameplay_hooks": [
+    "dlc_contact",
+    "observer_specific_knowledge",
+    "culture_affinity",
+    "local_community_membership"
+  ],
+  "ai_guardrails": [
+    "Nunca adjuntar cultura por especie automáticamente.",
+    "No asignar delitos, enemistad ni cargos a partir del perfil.",
+    "El contenido carece de permiso de generación en juego principal."
+  ],
+  "provenance": [
+    {
+      "source_id": "VOY_CARETAKER",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_JETREL",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_HOMESTEAD",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "MA_TALAXIAN",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria, no autoridad superior al episodio"
+    }
+  ]
+}
