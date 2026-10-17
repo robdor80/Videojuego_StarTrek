@@ -49,23 +49,43 @@ El jugador podría embarcar o mandar la misión si su rango, puesto, aptitud y d
 - **Dos perfiles gráficos:** Fluidez y Calidad, con mediciones reales en el MSI.
 - **Sin construcción inmediata:** este registro no afirma que los GLB/FBX, UE5 ni el puente sean jugables.
 
-## 4. Problema geométrico prioritario: NO cabe una Defiant completa en el alojamiento de un yate
+## 4. Decisión definitiva de arquitectura: alojamiento NO físico, transición simulada
 
-Se aprueba **la zona ventral prevista inicialmente para el yate como ubicación conceptual preferida**, pero **no se aprueba todavía una solución geométrica concreta**.
+**ACLARACIÓN EXPRESA DEL AUTOR (17-10-2026): el alojamiento de la auxiliar en Valhalla será SIMULADO, igual que el gran hangar y las cubiertas.** No hay que construir un hangar real ni encajar físicamente en el casco exterior el volumen del modelo Defiant. Esta regla **sustituye** las alternativas anteriores de miniaturizar, ampliar la bahía o construir un puerto capaz de contener físicamente toda la nave.
 
-Referencia de escala: el artículo de StarTrek.com sobre la Defiant describe una longitud aproximada de **170,68 m**, cuatro cubiertas y una tripulación de alrededor de 40. Como contraste, las referencias técnicas no oficiales de la nave auxiliar Cousteau sitúan el yate de la Enterprise-E en aproximadamente 33,5 m de largo. La Defiant no es una lanzadera de cuatro plazas y **no debe fingirse que entra físicamente en un hueco pensado para un yate**.
+### Ruta principal de acceso aprobada
 
-**Alternativas de estudio, todavía sin decidir:**
+```text
+PUENTE PRINCIPAL DE LA VALHALLA
+        ↓
+TURBOASCENSOR → destino «Nave auxiliar táctica»
+        ↓
+TRANSICIÓN / STREAMING DE ESCENA DISIMULADA
+        ↓
+INTERIOR 3D INDEPENDIENTE DE LA AUXILIAR
+(puente tipo Defiant como espacio principal inicial)
+        ↓
+ORDEN DE SALIDA Y DESACOPLE
+        ↓
+ESPACIO EXTERIOR: NAVE AUXILIAR OPERATIVA
+```
 
-| Alternativa | Descripción | Implicación |
-|---|---|---|
-| **A — Diseño compacto derivado** | Crear una nueva nave táctica, de escala físicamente compatible con una instalación ventral de Valhalla, inspirada en la Defiant, reaprovechando y adaptando mallas/puente si procede. | Puede perder las dimensiones exactas del activo original; hay que adaptar puente, volumen e interiores con coherencia. |
-| **B — Alojamiento/puerto mayor** | Diseñar en la Valhalla un hangar de operaciones especiales o estación de acople exterior capaz de recibir una nave de dimensiones Defiant. | Requiere revisar arquitectura ventral, profundidad, cubiertas, interferencias y operación de platillo separado. |
-| **C — Atraque exterior especializado** | Acoplamiento al casco en un puerto o pilón adecuado, sin encerrar toda la nave en un hueco. | Resuelve parte del conflicto geométrico pero cambia silueta, accesos y exposición visual; debe validarse. |
+- **Acceso directo** desde el puente principal de Valhalla a través de un turboascensor, sin atravesar un gran hangar, corredores intermedios ni pasarelas físicas modeladas que unan ambas mallas.
+- El turboascensor actuará como **puerta de cambio de escena/streaming**, conservando la identidad y posición de personajes y vehículo según la lógica del juego.
+- Una vez en la auxiliar, el jugador podrá desplazarse por el **puente 3D existente** y por interiores adicionales que lleguen a construirse; en la versión inicial no hay obligación de crear toda la nave.
+- El acceso se habilita **solo cuando la auxiliar está atracada y existen autorización, estado seguro y comunicación física de acceso lógica**; al desacoplar se bloquea ese trayecto. Un turboascensor de la Valhalla no «teletransporta» al jugador hacia una nave que ya está lejos.
+- La ruta de regreso funciona en sentido inverso tras el reacoplamiento validado; personas, carga y puesto de servicio conservan continuidad.
+- La auxiliar sigue siendo **una nave con tamaño y funcionamiento propios**, aunque su interior se cargue como escenario modular fuera de la geometría de Valhalla.
 
-El [sistema de hangares y atraque simulado — IDEA-0003](IDEA-0003_hangares_independientes_atraque_simulado.md) puede **ocultar la transición 3D**, pero **no altera el tamaño real ni autoriza interpenetrar cascos**. Distancias relativas, acceso interno, anclaje, maniobras y seguridad deben ser verosímiles.
+### Representación exterior sin bahía física
 
-**No elegir silenciosamente miniaturización ni agrandar el casco antes de revisar dimensiones de ambos modelos.** La selección definitiva de A/B/C queda pendiente de comprobación y aprobación artística del autor si modifica significativamente el exterior de Valhalla.
+El punto de salida, retorno y eventual imagen de la nave acoplada puede utilizar un **anclaje exterior virtual relativo al casco** y una **transición cinematográfica/híbrida**. No se modelará una cavidad que deba albergar la nave completa. El diseñador deberá evitar mostrar intersecciones imposibles o escalas contradictorias en planos donde ambas naves sean visibles, eligiendo cámaras/transiciones creíbles.
+
+La antigua preferencia por una zona ventral cercana al antiguo lugar del yate queda como **orientación artística provisional**, no una dimensión ni un compartimento físico aprobado. Si las vistas externas del acople revelan conflictos de escala, se resolverán por presentación/posición visual, no reconstruyendo por defecto el casco de Valhalla.
+
+El hecho de que una Defiant completa tenga un tamaño considerable **deja de ser un bloqueo de construcción de interiores** gracias a la transición simulada. No obstante, **tamaño exterior, distancia de seguridad, colisiones y maniobras aparentes** siguen necesitando consistencia en las escenas donde ambos modelos se ven a la vez.
+
+Esta elección hereda la filosofía de [IDEA-0003 — Hangares independientes y atraque simulado](IDEA-0003_hangares_independientes_atraque_simulado.md); se aplicará también a las cubiertas modulares de Valhalla.
 
 ## 5. Sistemas furtivos y armamento: capacidades condicionadas
 
@@ -95,13 +115,13 @@ Un buque furtivo no debe ser indetectable por decreto: el resultado depende de s
 
 Compartir [IDEA-0009 — Órdenes y maniobras universales](IDEA-0009_ordenes_protocolos_maniobras_universales.md) para:
 - autorizaciones, aproximación, preparación y salida;
-- punto de anclaje relativo al casco de Valhalla, velocidad y orientación coherentes;
-- piloto automático, evasión, persecución y navegación individual, sin secuencias fijas en el control normal;
-- entrada/salida cinematográfica si se usan entornos separados, sin duplicar la entidad;
+- **anclaje exterior virtual** relativo a Valhalla, con posición, velocidad y orientación coherentes durante las escenas vistas desde fuera;
+- piloto automático, evasión, persecución y navegación individual sin secuencias fijas durante las operaciones ordinarias;
+- **transición 3D simulada, no alojamiento físico:** turboascensor desde puente principal → interior independiente → salida cinematográfica/controlada a espacio exterior;
 - coordinación de fuego/autodefensa con nave nodriza, sin control remoto omnisciente cuando estén incomunicadas;
-- separación del platillo de Valhalla: determinar **en qué sección** se sitúa físicamente el puerto y cómo se comporta cuando las dos mitades operan separadas.
+- separación del platillo de Valhalla: definir a **qué sección pertenece el anclaje lógico y el acceso por turboascensor**; al separarse las secciones no se duplica el vehículo.
 
-El método de transición visual de [IDEA-0003](IDEA-0003_hangares_independientes_atraque_simulado.md) puede reutilizarse; el hecho del acoplamiento debe ser validado por el sistema autoritativo, no por una animación.
+La ruta del turboascensor entre Valhalla y la auxiliar se habilita **solo si está realmente acoplada**. Al desacoplarse se cierra, sin acceso directo remoto. El reacoplamiento exige condiciones válidas y restaura el recorrido. UE5 representa la transición, pero CoreRPG/Host y reglas Star Trek autorizan posición, ocupantes y estado. No duplicar vehículos/personajes ni forzar acople si la maniobra falla.
 
 ## 8. Integración con temporadas narrativas y carreras
 
@@ -126,11 +146,11 @@ Cada misión debe funcionar incluso si falla el camuflaje, se avería la nave o 
 ## 10. Plan incremental propuesto
 
 1. **AUX-01 — Inventario físico:** identificar archivos locales exactos del exterior y puente tipo Defiant; comprobar formatos, topología, licencias, materiales, dimensiones y posibilidad de reutilización.
-2. **AUX-02 — Estudio de integración Valhalla:** medir sección ventral, platillo, altura de cubiertas, colisiones, anclajes, separabilidad del platillo y alternativas A/B/C. Preparar comparación visual a escala antes de decisión artística.
+2. **AUX-02 — Alojamiento simulado y acceso directo:** diseñar la selección «Nave auxiliar táctica» en el turboascensor del puente principal de Valhalla, el cambio de escena y el anclaje exterior virtual sin cavidad física. Revisar vistas externas, colisiones aparentes y comportamiento al separar el platillo.
 3. **AUX-03 — Identidad y perfil:** definir nombre/clase/matrícula, dotación mínima, plantilla de tripulación, equipamiento, consumos, autonomía y límites de operación.
 4. **AUX-04 — Prototipo exterior 3D:** hacer copia de trabajo en Blender/UE5, PBR, pivotes, iluminación, LOD/colisiones y cámara exterior.
 5. **AUX-05 — Puente modular:** texturizar el puente blanco por etapas y conectar primero una consola funcional básica con el mismo sistema que las otras naves.
-6. **AUX-06 — Atraque y persistencia:** acceso interior, autorización, acoplamiento y desacople seguros, recuperables en save/load y con entidad única.
+6. **AUX-06 — Atraque, turboascensor y persistencia:** probar puente principal Valhalla → turboascensor → interior Defiant modular, autorización, bloqueo al desacoplar, regreso tras reacoplamiento y recuperación save/load sin duplicados.
 7. **AUX-07 — Operaciones especiales:** pruebas de aproximación silenciosa, detección, despliegue de equipo, regreso y efectos de fallo; solo después evaluar camuflaje avanzado, ablativo y combate en coordinación.
 8. **AUX-08 — Validación MSI:** pruebas de misión narrativa, NPCs, sectores espaciales, persistencia y rendimiento, incluyendo operación simultánea Valhalla/auxiliar.
 
@@ -141,9 +161,9 @@ Cada misión debe funcionar incluso si falla el camuflaje, se avería la nave o 
 ### Criterios mínimos de la primera versión jugable
 
 1. Activo exterior e interior de puente legalmente utilizables y técnicamente auditados en Blender/UE5.
-2. Tamaño y acoplamiento visual creíbles y aprobados sin fingir que cabe una Defiant de 170 m en un hueco de yate.
+2. Transición simulada válida desde el turboascensor del puente principal, **sin cavidad ni hangar físico**, con maniobra exterior coherente y sin mostrar penetraciones imposibles del casco.
 3. Nave auxiliar persistente independiente, con tripulantes y carga sin duplicados.
-4. Embarque desde Valhalla, salida con transición segura, navegación exterior y regreso completo cuando proceda.
+4. Acceso directo puente Valhalla → turboascensor → puente/interior de la auxiliar; salida con transición segura, navegación exterior, bloqueo del turboascensor durante el vuelo y regreso solo tras reacoplamiento.
 5. Al menos una misión de reconocimiento/infiltración que pruebe el valor de la auxiliar sin requerir camuflaje infalible.
 6. Límites efectivos de autonomía, daño y recursos para no sustituir a Valhalla.
 7. Órdenes, maniobras y sensores usan sistemas generales y no lógica exclusiva de Defiant.
@@ -153,12 +173,12 @@ Cada misión debe funcionar incluso si falla el camuflaje, se avería la nave o 
 ### Cuestiones todavía no aprobadas
 
 - Nombre, matrícula y clase definitivos de la auxiliar.
-- Elección entre variante compacta, alojamiento amplio o puerto externo.
+- Diseño del anclaje exterior visual y encuadres/cinemáticas que ocultarán la falta de alojamiento físico, manteniendo escala creíble en escenas compartidas.
 - Número **mínimo** de tripulantes y nivel de automatización.
 - Qué partes del puente blanco y del exterior permiten reutilización sin alterar escala/diseño.
 - Camuflaje completo o tecnologías furtivas menos extremas y qué restricciones legales/temporales aplican.
 - Armamento, blindaje específico, autonomía exacta y capacidad de desembarco/aterrizaje.
-- Ubicación final respecto al platillo y la sección motriz y efecto sobre su separación.
+- Asignación lógica del anclaje/turboascensor a platillo o sección motriz y efecto sobre la separación.
 
 ## 12. Vinculaciones y estado administrativo
 
