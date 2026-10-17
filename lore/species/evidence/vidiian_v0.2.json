@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "vidiian",
-  "name_es": "Vidianos",
   "status": "DLC_DEEP_DOCUMENTARY_AUTHORING_NOT_INSTALLED",
   "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_SPAWN",
   "dlc_id": "dlc_delta_transwarp",
@@ -43,26 +42,29 @@
     }
   ],
   "domains": {
-    "morphology_health": "Humanoides afectados por una enfermedad devastadora que puede exigir trasplantes y modificar visiblemente piel/órganos. El grado de afección debe existir en historial médico; no toda persona está enferma de forma idéntica, y no todo reemplazo de órgano es origen criminal.",
-    "life_family_and_reproduction": "Las tensiones familiares y comunitarias de una epidemia prolongada pueden alterar formación, parentesco y expectativas; estos efectos son sociomédicos, no procesos reproductivos propios de la especie. No fijar vida media sin enfermedad ni con Fago.",
-    "cultural_institutions_and_variation": "Instituciones clínicas y grupos desesperados recurren en pantalla a extracción forzada de órganos, pero Denara Pel muestra ética e individualidad. La crisis epidemiológica no reduce a todos a ladrones de cuerpos; víctimas y profesionales tienen decisiones distintas.",
-    "language_and_contact_translation": "No existe gramática vidiana validada en catálogo; la familiaridad médica de un personaje no implica competencias diplomáticas. Traductor, registro quirúrgico y consentimiento se mantienen separados.",
-    "period_contact_and_local_politics": "Los tratamientos y progresos médicos son acontecimientos fechados. Una posible cura no debe darse por disponible en todo espacio vidiano sin episodio/autorización y cronología; la crisis también cambia entre contactos de Voyager.",
+    "biology": "Humanoides afectados por una enfermedad devastadora que puede exigir trasplantes y modificar visiblemente piel/órganos. El grado de afección debe existir en historial médico; no toda persona está enferma de forma idéntica, y no todo reemplazo de órgano es origen criminal.",
+    "lifecycle": "Las tensiones familiares y comunitarias de una epidemia prolongada pueden alterar formación, parentesco y expectativas; estos efectos son sociomédicos, no procesos reproductivos propios de la especie. No fijar vida media sin enfermedad ni con Fago.",
+    "culture": "Instituciones clínicas y grupos desesperados recurren en pantalla a extracción forzada de órganos, pero Denara Pel muestra ética e individualidad. La crisis epidemiológica no reduce a todos a ladrones de cuerpos; víctimas y profesionales tienen decisiones distintas.",
+    "language": "No existe gramática vidiana validada en catálogo; la familiaridad médica de un personaje no implica competencias diplomáticas. Traductor, registro quirúrgico y consentimiento se mantienen separados.",
+    "chronology": "Los tratamientos y progresos médicos son acontecimientos fechados. Una posible cura no debe darse por disponible en todo espacio vidiano sin episodio/autorización y cronología; la crisis también cambia entre contactos de Voyager.",
     "npc_scenarios": [
       "Un médico vidiano en misión humanitaria tiene necesidades clínicas sin licencia para extraer órganos.",
       "Un paciente enfermo no es automáticamente hostil; su dolor y recursos dependen de historia.",
       "La computadora distingue síntomas detectados y rumores sobre el Fago; no revela un diagnóstico sin examen."
     ],
-    "unknown_information": [
+    "unknowns": [
       "Tasa epidemiológica real por fecha y comunidad.",
       "Mecanismo completo del Fago.",
       "Cura general confirmada y distribución clínica.",
       "Vida media natural y reproducción.",
       "Lenguas, nombres y estructura de gobierno sin crisis."
     ],
-    "conflicts_and_stereotype_barrier": "Evitar 'todos secuestran órganos' y 'todos padecen idénticamente Fago'; medicina y consentimiento deben regirse por eventos individuales."
+    "canon_cautions": "Evitar 'todos secuestran órganos' y 'todos padecen idénticamente Fago'; medicina y consentimiento deben regirse por eventos individuales."
   },
   "canon_scope": "VOYAGER_2371_TO_2378_HISTORICAL_NOT_MANDATORY_FUTURE",
   "portal_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
-  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME"
+  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME",
+  "display_name_es": "Vidianos",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

@@ -67,5 +67,5 @@ Son casos hipotéticos de validación causal, no una promesa de que el motor act
 ## 9. Exclusividad del DLC y reglas de acceso
 
 - Activación mediante el futuro DLC y presencia causal en el cuadrante Delta, según `universe/generation/lore01_tng_content_availability_v0.1.json`.
-- La [IDEA-0011](../../ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md) prevé portal Borg controlado, prohíbe que Borg lo use para entrar en Alfa y admite regreso autorizado normalmente por el mismo portal (opción C).
+- La [IDEA-0011](../../../ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md) prevé portal Borg controlado, prohíbe que Borg lo use para entrar en Alfa y admite regreso autorizado normalmente por el mismo portal (opción C).
 - **No existen aún** portal UE5, generación de población Delta en runtime, cartografía completa ni misiones descargables en esta PR.

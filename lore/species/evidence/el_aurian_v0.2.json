@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "el_aurian",
-  "name_es": "El-aurianos",
   "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
   "content_scope": "MAIN_GAME_DIASPORA",
   "legacy_profile_ref": "gameplay/species/profiles/el_aurian_v0.1.json",
@@ -48,26 +47,29 @@
       "limitation": "Fuente no autoriza extrapolación a todos los individuos."
     }
   ],
-  "knowledge_domains": {
-    "phenotype_medical_limits": "Humanoides con apariencia a menudo comparable a humana. Casos de longevidad y percepción inusual se asocian a individuos concretos; no otorgar a todos precognición, resistencia temporal, inmunidad a Q ni conocimiento preexistente de todo acontecimiento histórico.",
-    "life_reproduction_and_family": "La vida de Guinan se extiende durante muchas décadas y más de un siglo según episodios, pero no existe valor universal validado de vida media y límites de natalidad. La dispersión de supervivientes Borg condiciona recuerdos, migraciones, pérdidas y familias, si están documentadas caso a caso.",
-    "culture_and_internal_diversity": "Una identidad dispersa puede expresarse como memoria de catástrofe, redes comerciales, hospitalidad o estrategias de supervivencia. Guinan escucha como profesión y rasgo personal; Martus muestra un camino muy diferente. No crear una sociedad uniforme de sabios omniscientes.",
-    "language_translation_and_information_access": "Existe identidad cultural y onomástica sin gramática plenamente codificada en esta base. El traductor no debe ampliar acceso a recuerdos de otro siglo; el archivo de Guinan depende de experiencias que ella haya tenido y quiera compartir.",
-    "chronology_contact": "Estos supervivientes son una **excepción legítima de disponibilidad del juego principal**: TNG y DS9 los sitúan fuera de Delta. La geografía de origen y la fecha de destrucción de su mundo no autorizan eventos genéricos de viaje a Delta antes del DLC.",
+  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "use_in_runtime": "NOT_AUTOMATIC",
+  "domains": {
+    "biology": "Humanoides con apariencia a menudo comparable a humana. Casos de longevidad y percepción inusual se asocian a individuos concretos; no otorgar a todos precognición, resistencia temporal, inmunidad a Q ni conocimiento preexistente de todo acontecimiento histórico.",
+    "lifecycle": "La vida de Guinan se extiende durante muchas décadas y más de un siglo según episodios, pero no existe valor universal validado de vida media y límites de natalidad. La dispersión de supervivientes Borg condiciona recuerdos, migraciones, pérdidas y familias, si están documentadas caso a caso.",
+    "culture": "Una identidad dispersa puede expresarse como memoria de catástrofe, redes comerciales, hospitalidad o estrategias de supervivencia. Guinan escucha como profesión y rasgo personal; Martus muestra un camino muy diferente. No crear una sociedad uniforme de sabios omniscientes.",
+    "language": "Existe identidad cultural y onomástica sin gramática plenamente codificada en esta base. El traductor no debe ampliar acceso a recuerdos de otro siglo; el archivo de Guinan depende de experiencias que ella haya tenido y quiera compartir.",
+    "chronology": "Estos supervivientes son una **excepción legítima de disponibilidad del juego principal**: TNG y DS9 los sitúan fuera de Delta. La geografía de origen y la fecha de destrucción de su mundo no autorizan eventos genéricos de viaje a Delta antes del DLC.",
     "npc_scenarios": [
       "Una civil el-auriana puede residir en estación de Alpha sin activar portal transwarp.",
       "Un exiliado debe tener origen, trayecto y pérdidas biográficas registradas.",
       "La intuición de Guinan no autoriza que todo el mundo el-auriano prediga misiones o engaños."
     ],
-    "missing_fields": [
+    "unknowns": [
       "Promedio de longevidad y fertilidad.",
       "Límite exacto de facultades perceptivas atípicas.",
       "Densidad y distribución de diáspora por sector.",
       "Vocabulario e instituciones políticas previas.",
       "Pruebas de viajes a Delta por individuos del siglo XXIV."
     ],
-    "important_canon_caution": "No convertir experiencia temporal de una persona en telepatía de toda la especie; origen remoto no equivale a prohibición de existencia en Alfa."
+    "canon_cautions": "No convertir experiencia temporal de una persona en telepatía de toda la especie; origen remoto no equivale a prohibición de existencia en Alfa."
   },
-  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
-  "use_in_runtime": "NOT_AUTOMATIC"
+  "display_name_es": "El-aurianos",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "hirogen",
-  "name_es": "Hirogen",
   "status": "DLC_DEEP_DOCUMENTARY_AUTHORING_NOT_INSTALLED",
   "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_SPAWN",
   "dlc_id": "dlc_delta_transwarp",
@@ -59,26 +58,29 @@
     }
   ],
   "domains": {
-    "morphology_health": "Humanoides de gran talla y capacidad física importante en individuos observados. No asignar fuerza uniforme ni invulnerabilidad: armadura, equipamiento, habilidades de rastreo y sensores son componentes del equipo y del aprendizaje, no el mismo campo que anatomía.",
-    "life_family_and_reproduction": "La serie muestra clanes/partidas profesionales de cazadores, pero no permite universalizar crianza, adolescencia, fertilidad o vida media. Maestro/aprendiz y liderazgo deben provenir de grupo concreto; el estado 'alfa' no pertenece automáticamente a la especie.",
-    "cultural_institutions_and_variation": "La caza de grandes presas puede ser valor cultural prestigioso y profundamente problemático; el contacto con Voyager plantea debate sobre sustituir presas reales por simulaciones holográficas. Individuos y grupos pueden adherirse de forma diferente; no declarar a todos violentos sin posibilidad de evolución.",
-    "language_and_contact_translation": "La comunicación por traductor y radio no autoriza acceso a todos los códigos de la red ni constituye gramática completa. Honor, clasificación de presa y rango deben contextualizarse por cazador y partida.",
-    "period_contact_and_local_politics": "Los contactos con Voyager y tecnología holográfica en 2374 alteran posibilidades culturales; no distribuir datacores de holocubierta en todas las naves Hirogen de 2364. La red de comunicación requiere localización y causalidad futura del apartado C.",
+    "biology": "Humanoides de gran talla y capacidad física importante en individuos observados. No asignar fuerza uniforme ni invulnerabilidad: armadura, equipamiento, habilidades de rastreo y sensores son componentes del equipo y del aprendizaje, no el mismo campo que anatomía.",
+    "lifecycle": "La serie muestra clanes/partidas profesionales de cazadores, pero no permite universalizar crianza, adolescencia, fertilidad o vida media. Maestro/aprendiz y liderazgo deben provenir de grupo concreto; el estado 'alfa' no pertenece automáticamente a la especie.",
+    "culture": "La caza de grandes presas puede ser valor cultural prestigioso y profundamente problemático; el contacto con Voyager plantea debate sobre sustituir presas reales por simulaciones holográficas. Individuos y grupos pueden adherirse de forma diferente; no declarar a todos violentos sin posibilidad de evolución.",
+    "language": "La comunicación por traductor y radio no autoriza acceso a todos los códigos de la red ni constituye gramática completa. Honor, clasificación de presa y rango deben contextualizarse por cazador y partida.",
+    "chronology": "Los contactos con Voyager y tecnología holográfica en 2374 alteran posibilidades culturales; no distribuir datacores de holocubierta en todas las naves Hirogen de 2364. La red de comunicación requiere localización y causalidad futura del apartado C.",
     "npc_scenarios": [
       "Un cazador Hirogen debe tener presa objetivo, permiso/decisión y recursos antes de abrir fuego.",
       "Una partida puede tener líder alfa y jerarquía sin crear gobierno central de toda la especie.",
       "La adopción de simulaciones holográficas se registra por grupo y fecha, no como actualización automática del universo."
     ],
-    "unknown_information": [
+    "unknowns": [
       "Reproducción, estructura familiar y longevidad.",
       "Distribución de cazadores frente a civiles.",
       "Límite exacto de fuerza y nutrición.",
       "Gobiernos/regiones y densidad de población.",
       "Extensión temporal/espacial de datacores holográficos."
     ],
-    "conflicts_and_stereotype_barrier": "Representación de peligrosidad no es determinismo moral; el DLC no debe iniciar en combate obligatorio ni habilitar contactos Hirogen en Alfa."
+    "canon_cautions": "Representación de peligrosidad no es determinismo moral; el DLC no debe iniciar en combate obligatorio ni habilitar contactos Hirogen en Alfa."
   },
   "canon_scope": "VOYAGER_2371_TO_2378_HISTORICAL_NOT_MANDATORY_FUTURE",
   "portal_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
-  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME"
+  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME",
+  "display_name_es": "Hirogen",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

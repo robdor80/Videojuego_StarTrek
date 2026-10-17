@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "benzite",
-  "name_es": "Benzitas",
   "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
   "content_scope": "MAIN_GAME_CONTEXTUAL",
   "legacy_profile_ref": "gameplay/species/profiles/benzite_v0.1.json",
@@ -40,26 +39,29 @@
       "limitation": "Fuente no autoriza extrapolación a todos los individuos."
     }
   ],
-  "knowledge_domains": {
-    "phenotype_medical_limits": "Humanoides con rasgos nasales/faciales reconocibles; en personajes de TNG se observa equipamiento respiratorio. No concluir que cada benzita sin dicho accesorio sufrirá hipoxia, ni definir mezcla atmosférica estándar sin datos clínicos. Diferenciar equipo, necesidad y diseño escénico.",
-    "life_reproduction_and_family": "No se han acreditado con referencias primarias requisitos de reproducción, madurez o vida media; tampoco números universales de descanso y metabolismo. Todo dato médico irá marcado como no establecido hasta prueba individual.",
-    "culture_and_internal_diversity": "Mordock y Mendon demuestran contactos institucionales con la Federación y personas que tienen ambición y hábitos distintos. La insistencia de Mendon en procedimientos de reporte no es un carácter étnico obligatorio; se modela como socialización/experiencia profesional.",
-    "language_translation_and_information_access": "Aparecen interacciones comprensibles mediante medios de traducción, pero no está descrito un corpus completo del idioma benzita. No inferir conocimientos técnicos de toda la especie a partir de dos cadetes/oficiales.",
-    "chronology_contact": "A lo largo de TNG la cooperación educativa/intercambio se observa en momentos concretos; no se deduce ciudadanía federada universal, ni que todo Benzite pueda acceder sin cumplir requisitos. El planeta de origen necesita validación astrográfica independiente.",
+  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+  "use_in_runtime": "NOT_AUTOMATIC",
+  "domains": {
+    "biology": "Humanoides con rasgos nasales/faciales reconocibles; en personajes de TNG se observa equipamiento respiratorio. No concluir que cada benzita sin dicho accesorio sufrirá hipoxia, ni definir mezcla atmosférica estándar sin datos clínicos. Diferenciar equipo, necesidad y diseño escénico.",
+    "lifecycle": "No se han acreditado con referencias primarias requisitos de reproducción, madurez o vida media; tampoco números universales de descanso y metabolismo. Todo dato médico irá marcado como no establecido hasta prueba individual.",
+    "culture": "Mordock y Mendon demuestran contactos institucionales con la Federación y personas que tienen ambición y hábitos distintos. La insistencia de Mendon en procedimientos de reporte no es un carácter étnico obligatorio; se modela como socialización/experiencia profesional.",
+    "language": "Aparecen interacciones comprensibles mediante medios de traducción, pero no está descrito un corpus completo del idioma benzita. No inferir conocimientos técnicos de toda la especie a partir de dos cadetes/oficiales.",
+    "chronology": "A lo largo de TNG la cooperación educativa/intercambio se observa en momentos concretos; no se deduce ciudadanía federada universal, ni que todo Benzite pueda acceder sin cumplir requisitos. El planeta de origen necesita validación astrográfica independiente.",
     "npc_scenarios": [
       "Un oficial de intercambio tiene reglas de responsabilidad registradas y puede equivocarse por protocolo.",
       "Un médico inspecciona respirador, ambiente y registros antes de actuar.",
       "Un cadete no hereda el éxito de Mordock ni los fallos de Mendon por pertenencia a su especie."
     ],
-    "missing_fields": [
+    "unknowns": [
       "Necesidad fisiológica exacta de dispositivo respiratorio.",
       "Condiciones de atmósfera natal y uso bajo diversas presiones.",
       "Longevidad/reproducción.",
       "Idioma y nombres fuera de personajes conocidos.",
       "Organización política y vínculos completos con Federación."
     ],
-    "important_canon_caution": "Las apariciones con/sin respirador y diseño visual no deben uniformizarse en una biología universal no probada."
+    "canon_cautions": "Las apariciones con/sin respirador y diseño visual no deben uniformizarse en una biología universal no probada."
   },
-  "spawn_contract_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
-  "use_in_runtime": "NOT_AUTOMATIC"
+  "display_name_es": "Benzitas",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

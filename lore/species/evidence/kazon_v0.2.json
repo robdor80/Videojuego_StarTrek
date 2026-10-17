@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "kazon",
-  "name_es": "Kazon",
   "status": "DLC_DEEP_DOCUMENTARY_AUTHORING_NOT_INSTALLED",
   "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_SPAWN",
   "dlc_id": "dlc_delta_transwarp",
@@ -59,26 +58,29 @@
     }
   ],
   "domains": {
-    "morphology_health": "Humanoides de rasgos frontales y peinados observables variables según individuo. Los marcadores de apariencia no determinan agresividad, capacidad intelectual, supervivencia en ambientes sin agua o predisposición a la piratería.",
-    "life_family_and_reproduction": "La pertenencia sectaria puede estructurar ritos de madurez y obligaciones de jóvenes como Kar, pero no crea un único modelo de infancia, reproducción o esperanza de vida para toda la especie. Los vínculos adoptivos, huida de facción y exclusión social deben existir en biografías.",
-    "cultural_institutions_and_variation": "La historia de sometimiento bajo los Trabe explica conflictos y competencia tecnológica, sin justificar toda acción violenta futura. Las sectas Ogla, Nistrim y otras operan como organizaciones separadas; el ostracismo Goven puede tener consecuencias locales cuando realmente se aplique.",
-    "language_and_contact_translation": "Kazon aparece como lengua catalogada documentalmente; vocabulario sectorial, gritos ceremoniales y protocolos de mando necesitan fuentes propias. La ausencia de traductor inicial no es incapacidad verbal de ninguna persona.",
-    "period_contact_and_local_politics": "Las primeras interacciones Voyager se sitúan en torno a 2371 y las disputas evolucionan; el DLC no recreará automáticamente conflictos originales si la partida tiene otra cronología. La proximidad a Ocampa no significa que toda Delta sea territorio Kazon.",
+    "biology": "Humanoides de rasgos frontales y peinados observables variables según individuo. Los marcadores de apariencia no determinan agresividad, capacidad intelectual, supervivencia en ambientes sin agua o predisposición a la piratería.",
+    "lifecycle": "La pertenencia sectaria puede estructurar ritos de madurez y obligaciones de jóvenes como Kar, pero no crea un único modelo de infancia, reproducción o esperanza de vida para toda la especie. Los vínculos adoptivos, huida de facción y exclusión social deben existir en biografías.",
+    "culture": "La historia de sometimiento bajo los Trabe explica conflictos y competencia tecnológica, sin justificar toda acción violenta futura. Las sectas Ogla, Nistrim y otras operan como organizaciones separadas; el ostracismo Goven puede tener consecuencias locales cuando realmente se aplique.",
+    "language": "Kazon aparece como lengua catalogada documentalmente; vocabulario sectorial, gritos ceremoniales y protocolos de mando necesitan fuentes propias. La ausencia de traductor inicial no es incapacidad verbal de ninguna persona.",
+    "chronology": "Las primeras interacciones Voyager se sitúan en torno a 2371 y las disputas evolucionan; el DLC no recreará automáticamente conflictos originales si la partida tiene otra cronología. La proximidad a Ocampa no significa que toda Delta sea territorio Kazon.",
     "npc_scenarios": [
       "Una patrulla Ogla no obedece órdenes de una facción Nistrim sin vínculo de mando.",
       "Un exiliado Goven conserva origen y relaciones, aunque no tenga afiliación activa.",
       "El encuentro de primer contacto requiere posición espacial validada tras activar DLC, nunca en generación principal."
     ],
-    "unknown_information": [
+    "unknowns": [
       "Distribución demográfica real entre sectas.",
       "Idioma formal y sistema de escritura.",
       "Gestación, edades vitales y medicina.",
       "Localización y extensión de todas las áreas de influencia.",
       "Conducta de grupos civiles que no aparecen en Voyager."
     ],
-    "conflicts_and_stereotype_barrier": "No aplicar 'guerrero tribal' como tipo fijo de NPC; contacto, guerra y escasez derivan de contexto. La aparición en el DLC nunca autoriza incursión Borg hacia Alfa por IDEA-0011."
+    "canon_cautions": "No aplicar 'guerrero tribal' como tipo fijo de NPC; contacto, guerra y escasez derivan de contexto. La aparición en el DLC nunca autoriza incursión Borg hacia Alfa por IDEA-0011."
   },
   "canon_scope": "VOYAGER_2371_TO_2378_HISTORICAL_NOT_MANDATORY_FUTURE",
   "portal_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
-  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME"
+  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME",
+  "display_name_es": "Kazon",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

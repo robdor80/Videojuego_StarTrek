@@ -1,7 +1,6 @@
 {
   "schema_version": "0.2.0",
   "species_id": "talaxian",
-  "name_es": "Talaxianos",
   "status": "DLC_DEEP_DOCUMENTARY_AUTHORING_NOT_INSTALLED",
   "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_SPAWN",
   "dlc_id": "dlc_delta_transwarp",
@@ -59,26 +58,29 @@
     }
   ],
   "domains": {
-    "morphology_health": "Humanoides con manchas y pigmentación facial variables, sin que los rasgos de Neelix constituyan un molde obligatorio. La exposición a metreon en supervivientes de Rinax es antecedente clínico individual, no característica genética de cada talaxiano.",
-    "life_family_and_reproduction": "Familia y pérdida tienen un peso específico en supervivientes del conflicto con los Haakonianos. Migración, nuevas familias, uniones, adopción y arraigo deben estar vinculados a acontecimientos; no fijar esperanza de vida ni parámetros reproductivos de toda la especie.",
-    "cultural_institutions_and_variation": "Coexisten traders/viajeros, colonos, refugiados y personas marcadas por guerra. Neelix tiene facetas de comerciante, cocinero, asesor y amigo, no repertorio obligatorio. Las prácticas religiosas o de duelo que expresa no bastan para definir una teología talaxiana única.",
-    "language_and_contact_translation": "Lengua talaxiana catalogada como referencia de contacto, no sintaxis completa; Neelix puede interpretar algunos contextos regionales debido a experiencia personal y no porque su especie conozca cada planeta.",
-    "period_contact_and_local_politics": "La guerra con Haakonianos y la tragedia de Rinax son antecedentes específicos; el establecimiento de colonias de refugiados depende de fecha. Un DLC posterior puede encontrar comunidades diferentes sin repetir el destino de Neelix.",
+    "biology": "Humanoides con manchas y pigmentación facial variables, sin que los rasgos de Neelix constituyan un molde obligatorio. La exposición a metreon en supervivientes de Rinax es antecedente clínico individual, no característica genética de cada talaxiano.",
+    "lifecycle": "Familia y pérdida tienen un peso específico en supervivientes del conflicto con los Haakonianos. Migración, nuevas familias, uniones, adopción y arraigo deben estar vinculados a acontecimientos; no fijar esperanza de vida ni parámetros reproductivos de toda la especie.",
+    "culture": "Coexisten traders/viajeros, colonos, refugiados y personas marcadas por guerra. Neelix tiene facetas de comerciante, cocinero, asesor y amigo, no repertorio obligatorio. Las prácticas religiosas o de duelo que expresa no bastan para definir una teología talaxiana única.",
+    "language": "Lengua talaxiana catalogada como referencia de contacto, no sintaxis completa; Neelix puede interpretar algunos contextos regionales debido a experiencia personal y no porque su especie conozca cada planeta.",
+    "chronology": "La guerra con Haakonianos y la tragedia de Rinax son antecedentes específicos; el establecimiento de colonias de refugiados depende de fecha. Un DLC posterior puede encontrar comunidades diferentes sin repetir el destino de Neelix.",
     "npc_scenarios": [
       "Un mercader Talaxiano conoce rutas que recorrió; no todas las estaciones de Delta.",
       "Un superviviente de Rinax requiere historial clínico de exposición antes de diagnosticar metremia.",
       "Un colonizador puede rechazar retornar a su planeta natal por elección biográfica."
     ],
-    "unknown_information": [
+    "unknowns": [
       "Datos clínicos de longevidad y fertilidad.",
       "Censo de diáspora tras guerra.",
       "Lenguas y códigos de comercio completos.",
       "Geografía de colonias y rutas comerciales.",
       "Religiones regionales y prácticas funerarias universales."
     ],
-    "conflicts_and_stereotype_barrier": "La historia de Neelix sirve como ejemplo de profundidad de NPC, no como plantilla de todos los talaxianos; separar condición de refugiado y biología."
+    "canon_cautions": "La historia de Neelix sirve como ejemplo de profundidad de NPC, no como plantilla de todos los talaxianos; separar condición de refugiado y biología."
   },
   "canon_scope": "VOYAGER_2371_TO_2378_HISTORICAL_NOT_MANDATORY_FUTURE",
   "portal_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
-  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME"
+  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME",
+  "display_name_es": "Talaxianos",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }
