@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_andorian_behavior",
+  "species_index_key": "andorian",
+  "display_name_es": "Contextos andorianos documentados",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json",
+    "profile_subkey": "andorian",
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "lore/species/evidence/andorian_v0.2.json",
+    "anchors": [
+      "TOS_JOURNEY_TO_BABEL",
+      "MA_ANDORIAN"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "LIMITED_CONTEXTUAL",
+  "interpretation_scope_es": "La visibilidad diplomática está acreditada; estilos de franqueza o desafío provienen en buena medida de materiales anteriores fuera de la época TNG y no deben asignarse por defecto.",
+  "conditional_guidance": {
+    "communication_es": [
+      "La comunicación directa puede proponerse solo cuando la socialización individual o una comunidad concreta la respalde.",
+      "Sin contexto registrado, usar el estilo personal del NPC, no un tono permanentemente confrontativo."
+    ],
+    "emotional_expression_es": [
+      "No se conoce un patrón emocional andoriano universal de TNG.",
+      "Expresar enfado o entusiasmo exige circunstancias individuales, no pigmentación o antenas."
+    ],
+    "disagreement_and_conflict_es": [
+      "Un desafío formal requiere una tradición identificada y una situación real; no improvisar duelos.",
+      "La firmeza verbal puede significar negociación y no amenaza."
+    ],
+    "authority_and_duty_es": [
+      "Un embajador andoriano responde al mandato de su gobierno o institución.",
+      "La especie no crea rango, filiación clánica ni deber militar."
+    ],
+    "relationships_and_daily_life_es": [
+      "Familia, hogar y vínculos de confianza necesitan fuente o historia individual.",
+      "La solidaridad institucional federada no se presupone fuera de adscripción demostrada."
+    ]
+  },
+  "variation_axes_es": [
+    "diplomacia y vida civil",
+    "crianza fuera de Andoria",
+    "comunidad y época",
+    "educación militar o civil"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un enviado negocia con lenguaje protocolario; otro ciudadano andoriano evita la discusión porque no tiene esa formación.",
+    "Un oficial rechaza una provocación sin faltar a su comunidad."
+  ],
+  "anti_stereotype_warnings_es": [
+    "Evitar canonizar automáticamente duelos Ushaan o rasgos de ENT como hechos TNG.",
+    "No equiparar color azul con impulsividad."
+  ],
+  "era_guard_es": "Fuentes principales de retos andorianos pertenecen a Enterprise excluida del corpus; la evidencia TOS solo prueba individuos diplomáticos concretos.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}
