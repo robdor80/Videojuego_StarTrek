@@ -1,0 +1,42 @@
+name: LORE-01 A.1 — Comportamiento cultural NPC (documental)
+on:
+  push:
+    branches: [main, "lore/01-a1-npc-cultural-behavior"]
+    paths:
+      - "lore/cultures/ai_behavior/**"
+      - "tools/validation/validate_lore01_a1.py"
+      - "tools/validation/test_lore01_a1.py"
+      - ".github/workflows/lore01-a1-cultural-behavior.yml"
+  pull_request:
+    paths:
+      - "lore/cultures/ai_behavior/**"
+      - "tools/validation/validate_lore01_a1.py"
+      - "tools/validation/test_lore01_a1.py"
+      - ".github/workflows/lore01-a1-cultural-behavior.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  cultural-ai-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compilar validadores y comprobar guías de NPC
+        run: |
+          python -m py_compile tools/validation/validate_lore01_a1.py tools/validation/test_lore01_a1.py
+          python tools/validation/validate_lore01_a1.py
+          python tools/validation/test_lore01_a1.py
+      - name: Regresión de documentación anterior LORE-01 A
+        run: |
+          python tools/validation/validate_lore01_tng.py
+          python tools/validation/test_lore01_tng.py
+          python tools/validation/validate_lore01_depth.py
+          python tools/validation/test_lore01_depth.py
