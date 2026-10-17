@@ -104,8 +104,12 @@ def validate_repo(root: Path = ROOT) -> list[str]:
             except (OSError, ValueError) as exc:
                 errors.append(f"{ident}: cultura ilegible {exc}")
                 continue
-            if culture.get("identity_and_scope", {}).get("automatic_attachment_by_species") is not False:
-                errors.append(f"{ident}: cultura vinculada forzosamente a especie")
+            scope = culture.get("identity_and_scope", {})
+            if isinstance(culture.get("profiles"), dict):
+                scope = culture["profiles"].get(ident, {}).get("identity_and_scope", {})
+            auto = scope.get("automatic_attachment_by_species")
+            if auto is not False and scope.get("species_lock") is not False:
+                errors.append(f"{ident}: cultura sin garantía explícita de no adjunción automática")
         for claim in sp.get("provenance", []):
             src = claim.get("source_id")
             if src not in source_ids:
