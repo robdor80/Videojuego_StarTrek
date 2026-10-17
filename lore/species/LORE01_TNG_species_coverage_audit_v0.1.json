@@ -1,0 +1,272 @@
+{
+  "document_id": "lore01_tng_species_coverage_audit",
+  "schema_version": "0.1.0",
+  "status": "AUDIT_INDEX_NOT_RUNTIME_CONTENT",
+  "as_of": "2026-10-17",
+  "base_commit": "9edfcde1a4ac58aa7a66f9bfbc1ac2aa7e62f953",
+  "scope": "tng_ds9_voyager_late_24th_century",
+  "scope_years_inclusive": [
+    2364,
+    2378
+  ],
+  "source_policy_ref": "sources/canon_policy.md",
+  "audit_plan_ref": "docs/roadmap/lore_01_tng_a_species_cultures_audit_v0.1.md",
+  "existing_species": [
+    {
+      "species_id": "aenar",
+      "profile_ref": "gameplay/species/profiles/aenar_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "andorian",
+      "profile_ref": "gameplay/species/profiles/andorian_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "bajoran",
+      "profile_ref": "gameplay/species/profiles/bajoran_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "bajoran"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "betazoid",
+      "profile_ref": "gameplay/species/profiles/betazoid_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "cardassian",
+      "profile_ref": "gameplay/species/profiles/cardassian_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "changeling",
+      "profile_ref": "gameplay/species/profiles/changeling_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "ferengi",
+      "profile_ref": "gameplay/species/profiles/ferengi_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "ferengi"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "human",
+      "profile_ref": "gameplay/species/profiles/human_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "jem_hadar",
+      "profile_ref": "gameplay/species/profiles/jem_hadar_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "klingon",
+      "profile_ref": "gameplay/species/profiles/klingon_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "klingonese"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "romulan",
+      "profile_ref": "gameplay/species/profiles/romulan_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "romulan"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "tellarite",
+      "profile_ref": "gameplay/species/profiles/tellarite_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "trill",
+      "profile_ref": "gameplay/species/profiles/trill_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "trill"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "vorta",
+      "profile_ref": "gameplay/species/profiles/vorta_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    },
+    {
+      "species_id": "vulcan",
+      "profile_ref": "gameplay/species/profiles/vulcan_v0.1.json",
+      "contextual_culture_refs": [
+        "lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "EXISTING_BASELINE_NEEDS_TNG_AUDIT"
+    }
+  ],
+  "non_species_states": [
+    {
+      "state_id": "borg_assimilated_character",
+      "profile_ref": "gameplay/species/profiles/borg_assimilated_character_v0.1.json",
+      "origin_species_required": true
+    }
+  ],
+  "new_species_candidates": [
+    {
+      "species_id": "bolian",
+      "package_id": "A03",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "benzite",
+      "package_id": "A03",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "el_aurian",
+      "package_id": "A03",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "breen",
+      "package_id": "A03",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "pakled",
+      "package_id": "A03",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "kazon",
+      "package_id": "A04",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "ocampan",
+      "package_id": "A04",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "talaxian",
+      "package_id": "A04",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "vidiian",
+      "package_id": "A04",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    },
+    {
+      "species_id": "hirogen",
+      "package_id": "A04",
+      "profile_ref": null,
+      "cultural_profile_ref": null,
+      "status": "PROPOSED_NOT_APPROVED",
+      "note": "No world placement, cultural behavior or biological statistic is implied."
+    }
+  ],
+  "assertions": [
+    "Existing cultural profile paths are contextual links, not automatic memberships.",
+    "Languages listed here are catalogue associations, not universal individual fluency.",
+    "No new candidate entry is approved or eligible for runtime spawning.",
+    "Known canon characters and contextual presence are never generated solely because a species is listed.",
+    "Unknown details remain unknown until supported by evidence."
+  ]
+}
