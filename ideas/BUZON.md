@@ -135,6 +135,20 @@ Formato para añadir una propuesta:
 - **Vinculaciones:** [IDEA-0003 — Hangares/atraque simulado](IDEA-0003_hangares_independientes_atraque_simulado.md), [IDEA-0008 — Entornos espaciales](IDEA-0008_entornos_espaciales_modulares.md), [IDEA-0009 — Maniobras](IDEA-0009_ordenes_protocolos_maniobras_universales.md), [IDEA-0006 — Temporadas](IDEA-0006_temporadas_narrativas_misiones_episodicas.md).
 - **Hitos candidatos:** AUX-01–AUX-08; futura auditoría Blender/UE5 y CoreRPG. La aprobación del concepto no declara jugabilidad ya existente.
 
+### IDEA-0011 — DLC Cuadrante Delta: portal transwarp de acceso controlado
+- **Fecha de aprobación expresa:** 2026-10-17.
+- **Estado:** APROBADA CONCEPTUALMENTE; diseño técnico, contenido, integración y pruebas pendientes.
+- **Propuesta:** expansión/DLC opcional e independiente del juego base que permite a las naves autorizadas viajar desde el cuadrante Alfa hasta el Delta mediante un portal hexagonal verde de inspiración Borg. El autor dispone de un modelo 3D candidato, aún sin auditar ni integrar en UE5.
+- **Exploración:** nuevos sectores, civilizaciones de `Star Trek: Voyager`, expediciones y temporadas narrativas, con acercamiento progresivo al espacio Borg y continuidad de partida.
+- **Restricción Borg innegociable:** **ninguna nave Borg puede cruzar este portal hacia el cuadrante Alfa**, ni el DLC crea incursiones Borg automáticas en el juego principal. Cualquier llegada Borg futura a Alfa debe diseñarse aparte y sin este atajo.
+- **Regreso elegido por el autor — Opción C:** normalmente se vuelve **por el mismo portal con autorización**, pero daños, averías o sucesos narrativos reales pueden bloquearlo temporalmente y requerir misiones especiales para recuperar el acceso.
+- **DLC desactivado:** portal inoperativo/no accesible; el juego base y sus guardados no se alteran arbitrariamente. Se estudiará la instalación/activación y la compatibilidad de partidas.
+- **Ficha completa:** [IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md](IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md).
+- **Vínculos:** [IDEA-0006 — Temporadas](IDEA-0006_temporadas_narrativas_misiones_episodicas.md), [IDEA-0008 — Entornos espaciales](IDEA-0008_entornos_espaciales_modulares.md), [IDEA-0009 — Maniobras](IDEA-0009_ordenes_protocolos_maniobras_universales.md), persistencia/World State, UE5 y CoreRPG genérico.
+- **Etapas candidatas:** DELTA-01–DELTA-08 en la ficha; fases F02/F03, F07/F09, F11, F13–F15. Planificación pendiente.
+- **Decisión del autor:** elige y aprueba expresamente opción C y solicita registrar IDEA-0011.
+- **Ejecución:** NO INICIADA por este registro. No existe aún DLC, portal operativo ni cuadrante Delta jugable.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
