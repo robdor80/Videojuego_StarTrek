@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "bajoran",
+  "display_name_es": "Bajorianos",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "content_scope": "MAIN_GAME",
+  "legacy_profile_ref": "gameplay/species/profiles/bajoran_v0.1.json",
+  "monograph_ref": "lore/species/monographs/bajoran_v0.2.md",
+  "research_scope": "TNG_DS9_VOY_WITH_RETAINED_TOS_HISTORICAL_CONTEXT",
+  "verified_claims": [
+    {
+      "claim_id": "bajoran_E01",
+      "source_id": "DS9_EMISSARY",
+      "domain": "history",
+      "claim_es": "Salida de la ocupación, gobierno provisional y fe en los Profetas crean un contexto social frágil.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "bajoran_E02",
+      "source_id": "DS9_DUET",
+      "domain": "trauma",
+      "claim_es": "La memoria de los campos y la ocupación afecta a supervivientes de manera muy distinta.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "bajoran_E03",
+      "source_id": "DS9_RECKONING",
+      "domain": "religion",
+      "claim_es": "Religión, Kai y debate sobre los Profetas afectan política y percepciones de la población.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "bajoran_E04",
+      "source_id": "DS9_HEART_OF_STONE",
+      "domain": "service",
+      "claim_es": "Kira representa a una oficial con historia de Resistencia, pero no toda la sociedad tiene ese servicio.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "bajoran_E05",
+      "source_id": "DS9_NECESSARY_EVIL",
+      "domain": "chronology",
+      "claim_es": "Los registros de Terok Nor permiten distinguir una sociedad bajo control extranjero de la estación administrada por Bajor después.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    },
+    {
+      "claim_id": "bajoran_E06",
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_WORLDS",
+      "domain": "origin",
+      "claim_es": "Referencia oficial a Bajor como mundo significativo para el desarrollo político/cultural de DS9.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EPISODE_LEVEL_RESEARCH_ANCHOR",
+      "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
+    }
+  ],
+  "domains": {
+    "biology_and_medicine": "Humanoides diferenciados visualmente por pliegues o crestas nasales de variación individual. El uso religioso de oreja/pagh no establece que el sentido físico mida fe o virtud. El ciclo vital y la medicina requieren datos personales, sin características heroicas innatas por la ocupación.",
+    "development_family_and_reproduction": "Familias, pérdida, refugio, comunidades agrícolas y orfandad tras la ocupación son contextos vitales posibles. No forzar trauma a toda persona bajorana ni asignar participación en Resistencia por edad. La identidad religiosa de un hijo no viene determinada por nacimiento.",
+    "social_structure_and_internal_variation": "El culto a los Profetas, posiciones del Kai y Vedeks, prácticas de oración y festividades pueden ser centrales para muchos, pero también existen escépticos, políticos seculares y posturas divergentes. Su orden de nombre, comunidad, profesión y pertenencia a milicias se deben tratar como información específica.",
+    "language_naming_and_translation": "Bajorano figura en catálogo; la traducción de textos religiosos puede requerir interpretación cultural, no solo diccionario. Nombres y títulos no son una prueba automática de ideología. No inventar oraciones completas supuestamente canónicas.",
+    "historical_events_and_date_sensitivity": "Ocupación termina en 2369; reconstrucción, gobiernos y contactos con Federación se desarrollan en DS9. La función religiosa de Sisko como Emisario depende de eventos de DS9 y del conocimiento del personaje; no ha ocurrido para todo pasado del siglo XXIV.",
+    "operational_npc_scenarios": [
+      "Un agricultor podría querer autonomía agrícola sin estar afiliado a partido alguno.",
+      "Una antigua resistente puede desconfiar de un cardassiano concreto, pero no está obligada a atacar a cada cardassiano.",
+      "La computadora no revela una confesión pastoral ni el pasado clandestino de un feligrés."
+    ],
+    "known_unknowns": [
+      "Expectativa de vida general y fisiología reproductiva.",
+      "Diversidad de ritos entre comunidades.",
+      "Censo y territorios agrícolas posocupación.",
+      "Religiosidad de cada ciudadano.",
+      "Historia de participación individual en Resistencia."
+    ],
+    "contradiction_and_non_canonization_policy": "Profetas como entidad observada y creencia bajorana deben presentarse según observador; no etiquetar religión como capacidad biológica y no imponer fatalismo histórico."
+  },
+  "provenance_rule": "Do not assert unsourced universal biology; fact authority is scoped to source evidence.",
+  "gameplay": "DOCUMENTATION_NOT_MERGED_INTO_RUNTIME"
+}
