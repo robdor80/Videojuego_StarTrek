@@ -62,19 +62,6 @@ Formato para añadir una propuesta:
 - **Alcance excluido:** el yate del capitán será una idea/documento distinto.
 - **Ejecución:** no iniciada por este registro; no interrumpe la fase activa.
 
-### IDEA-0004 — Yate del capitán: acceso interior y desacople simulado
-- **Fecha de aprobación conceptual:** 2026-10-11.
-- **Estado:** APROBADA CONCEPTUALMENTE; diseño detallado e implementación pendientes.
-- **Propuesta:** yate del capitán diferenciado de lanzaderas normales, ligado inicialmente como referencia artística a Sovereign M07, accesible desde el interior, con desacople/acoplamiento simulados, vuelo, tripulación, carga, autorizaciones y persistencia reales.
-- **Objetivo:** disponer de vehículo auxiliar elegante y funcional para viajes oficiales, diplomacia y misiones, sin bloquear su jugabilidad hasta reconstruir el alojamiento ventral y un interior 3D completo.
-- **Ficha detallada:** [IDEA-0004_yate_del_capitan_desacople_simulado.md](IDEA-0004_yate_del_capitan_desacople_simulado.md).
-- **Idea vinculada:** [IDEA-0003 — Hangares independientes](IDEA-0003_hangares_independientes_atraque_simulado.md); lógica común con anclaje específico del yate, no una plaza de lanzaderas estándar.
-- **Invariante:** entidad única, ubicación y ocupantes persistentes; no puede estar a la vez acoplado y en vuelo.
-- **Dependencias candidatas:** F02, F03, F04, F07, F09, F11, F14 y F15, sin asignación definitiva.
-- **Nota de decisión posterior (13-10-2026):** Sovereign M07 fue una referencia artística original de este yate, **no** la base elegida de la nueva Gran Dama. La nueva Clase Valhalla está inspirada en Galaxy. Incorporar el yate a Valhalla sería una adaptación por evaluar, no un resultado automático. Véase el expediente F01 en PR #2.
-- **Decisión del autor:** documento aportado como idea conceptualmente aprobada, solicitado su archivo con el número 4.
-- **Ejecución:** ninguna iniciada por este registro; Misión 08 (puertas del hangar de lanzaderas) es un trabajo independiente.
-
 ### IDEA-0005 — Blindaje ablativo desplegable y torpedos transfásicos de Valhalla
 - **Fecha de aprobación:** 2026-10-13.
 - **Estado:** APROBADA CONCEPTUALMENTE; implementación y pruebas pendientes.
@@ -137,10 +124,27 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** archivo Markdown original aportado el 16-10-2026 con aprobación conceptual expresa y solicitud de incorporación como nueva idea.
 - **Ejecución:** NO INICIADA por este registro; no implica código UE5, CoreRPG, clases ni protocolos probados.
 
+### IDEA-0010 — Nave auxiliar táctica y furtiva integrada en Valhalla (tipo Defiant)
+- **Fecha de aprobación:** 2026-10-17.
+- **Estado:** APROBADA CONCEPTUALMENTE; sustituye de forma expresa a la IDEA-0004, ahora descartada. **No implementada**.
+- **Propuesta:** nave auxiliar original inspirada en Defiant, con exterior y puente 3D ya disponibles como activos candidatos, para infiltración, exploración discreta, incursiones, rescates y apoyo táctico junto a Valhalla.
+- **Decisión definitiva de alojamiento:** **NO físico**. Al igual que las cubiertas y el gran hangar, el interior de la auxiliar es una escena independiente. **Acceso directo desde el puente principal de Valhalla mediante turboascensor** con destino «Nave auxiliar táctica», sin corredores/hangares físicos de conexión.
+- **Maniobra de salida:** desacople y regreso representados por transición simulada y anclaje exterior virtual, manteniendo escala visual, autorización y entidad/ocupantes persistentes. El acceso desde Valhalla se bloquea mientras la nave vuela separada.
+- **Sistemas a estudiar:** furtividad y posible camuflaje bajo reglas de época/canon propio, blindaje ablativo, dotación operativa reducida pero coherente, armamento y autonomía equilibrados.
+- **Documentación oficial:** [IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md).
+- **Vinculaciones:** [IDEA-0003 — Hangares/atraque simulado](IDEA-0003_hangares_independientes_atraque_simulado.md), [IDEA-0008 — Entornos espaciales](IDEA-0008_entornos_espaciales_modulares.md), [IDEA-0009 — Maniobras](IDEA-0009_ordenes_protocolos_maniobras_universales.md), [IDEA-0006 — Temporadas](IDEA-0006_temporadas_narrativas_misiones_episodicas.md).
+- **Hitos candidatos:** AUX-01–AUX-08; futura auditoría Blender/UE5 y CoreRPG. La aprobación del concepto no declara jugabilidad ya existente.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
 
 ## Ideas integradas, aplazadas o descartadas
 
-*Todavía ninguna registrada en este buzón.*
+### IDEA-0004 — Yate del capitán [DESCARTADA / SUSTITUIDA]
+- **Fecha de descarte:** 2026-10-17.
+- **Estado:** DESCARTADA / SUSTITUIDA por [IDEA-0010 — Nave auxiliar táctica y furtiva de Valhalla](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md).
+- **Decisión expresa del autor:** no incorporar yate tradicional del capitán a Valhalla ni mantenerlo como propuesta activa general; se prefiere una nave tipo Defiant con puente 3D, misiones de infiltración y apoyo táctico.
+- **Documento histórico preservado:** [IDEA-0004_yate_del_capitan_desacople_simulado.md](IDEA-0004_yate_del_capitan_desacople_simulado.md).
+- **Reutilización:** persistencia, maniobras y transiciones se reaprovechan mediante IDEA-0003 e IDEA-0010, no como un yate vigente.
+- **Ejecución:** nunca implementada; no requiere desinstalación ni cambios en modelos 3D.
