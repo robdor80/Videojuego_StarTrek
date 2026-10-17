@@ -17,7 +17,8 @@
         "personal_preference": "valora cooperación pacífica",
         "possible_utterance_es": "Honraremos a nuestras Casas evitando un combate sin propósito."
       },
-      "assertion": "Ambas respuestas válidas; no inferir duelo."
+      "assertion": "Ambas respuestas válidas; no inferir duelo.",
+      "forbidden": "Afirmar que compartir cultura klingon obliga a resolver conflictos por combate o deshonra al negociador."
     },
     {
       "case_id": "FERENGI_OFFICER",

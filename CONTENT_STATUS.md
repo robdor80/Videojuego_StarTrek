@@ -555,7 +555,8 @@ The Sensors vertical slice remains preserved and ready for later UX/runtime cont
 
 | Apartado | Estado al 17-10-2026 | Alcance real |
 |---|---|---|
-| A — Especies y culturas | 🟧 NEEDS_REVIEW | Investigación v0.2 de 25 monografías y 25 libros de evidencias; auditoría + catálogo autoral de 25 especies (15 anteriores + 5 TNG principales + 5 solo DLC Delta); 10 culturas contextuales nuevas; 8 lenguas en catálogo; fuentes y tests `tools/validation/validate_lore01_tng.py`. **CI documental verde en rama; pendiente PR y fusión del propietario.** |
+| A — Especies y culturas | ✅ COMPLETE | PR #25 fusionada en `main` (2026-10-17), commit `abcc4c77`. 25 monografías, 25 libros de evidencias, 10 culturas adicionales y 8 lenguas catalogadas; alcance documental validado. Lagunas del canon y consumo runtime siguen explícitos. |
+| A.1 — Comportamiento cultural IA/NPC | 🟧 NEEDS_REVIEW | 25 guías contextuales, contrato antiestereotipos, filtros culturales, casos de NPC y CI propia en rama `lore/01-a1-npc-cultural-behavior`; **pendiente revisión y PR**. No reemplaza la personalidad individual ni actualiza CoreRPG/UE5. |
 | B — Civilizaciones/potencias | ⬜ TODO | No iniciado por regla secuencial. |
 | C — Cartografía/astrogeografía | ⬜ TODO | No iniciado. |
 | D — Relaciones diplomáticas | ⬜ TODO | No iniciado. |

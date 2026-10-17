@@ -49,3 +49,7 @@ Esos archivos son resúmenes para sistemas de interacción. La profundidad cultu
 - Los huecos de canon permanecen como `unknown`.
 - La IA puede expresar cultura conocida, pero no inventar matrimonios, Casas, cargos, parentesco, fe, obligaciones o autoridad.
 - El contenido cultural que afecta a formación de oficiales se deriva hacia Academia mediante `gameplay/careers/academy_path/cultural_operations_reference_v0.1.json`.
+
+## LORE-01 A.1 — Guías sociales para IA, pendientes de revisión
+
+`ai_behavior/README.md` documenta un contrato nuevo de **25 perfiles de comunicación y comportamiento contextual**, con dos contraejemplos personales por especie y referencias al canon. Son **opciones aprendidas**, no un promedio ni un generador de personalidad de especie. La política `species != culture != personality` prevalece en toda interpretación. Los datos son documentales: no existe todavía un adaptador runtime de diálogo.

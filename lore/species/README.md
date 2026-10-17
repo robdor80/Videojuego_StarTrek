@@ -51,3 +51,7 @@ Validación: `python tools/validation/validate_lore01_depth.py` y `python tools/
 - `lore/species/languages_review_v0.2.json`: cobertura lingüística transparente para las 25 especies: **ocho lenguas catalogadas** y las restantes sin entrada acreditada; esto **no equivale a ocho gramáticas desarrolladas**.
 
 La profundidad máxima responsable respeta los silencios del canon: el trabajo de investigación es amplio, pero una ficha nunca recibe numerología biológica, idiomática o estadística que no se pueda sostener.
+
+## LORE-01 A.1 — Comportamiento cultural para la IA
+
+Tras la fusión de la PR #25, se prepara el complemento `lore/cultures/ai_behavior/`: **25 guías** de interpretación social para NPC, indexadas por especie solo para descubrimiento. La IA **no** puede asignar personalidad a partir de especie; la cultura debe proceder de historia del personaje. Incluye ejemplos contrastados y condiciones de uso, incertidumbres y exclusión DLC. Su integración en CoreRPG/UE5 queda fuera de esta fase.
