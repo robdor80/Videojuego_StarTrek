@@ -30,7 +30,7 @@ class DeepLoreTests(unittest.TestCase):
 
     def test_fabricated_screen_canon(self):
         x = copy.deepcopy(self.main)
-        mod.ledger_evidence(x)[0]["authority"] = "SCREEN_CANON"
+        next(item for item in mod.ledger_evidence(x) if item["source_id"] == "MA_BOLIAN")["authority"] = "SCREEN_CANON"
         self.assertTrue(mod.validate_dossier(x, "bolian", self.sources))
 
     def test_missing_unknowns(self):

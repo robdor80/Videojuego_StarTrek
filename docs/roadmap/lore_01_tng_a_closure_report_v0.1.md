@@ -42,3 +42,13 @@ Excepciones **expresas y justificadas**: diáspora el-auriana y presencia Borg e
 ## Sincronización posterior con main (IDEA-0011)
 
 Durante el trabajo apareció en `main` la idea autorizada `ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md`. El contrato de disponibilidad ahora la referencia explícitamente. Incluye reserva documental de regreso por el mismo portal (opción C), interrupciones solo por hechos causales y prohibición categórica de entrada de Borg al cuadrante Alfa a través **de este portal**; no elimina Borg del canon TNG ni convierte el diseño en mecánica ejecutable. Tests de regresión lo verifican. El desarrollo técnico de la IDEA-0011 queda fuera de LORE-01.
+
+## Extensión de profundidad v0.2 — 17 de octubre de 2026
+
+**Estado:** 25/25 especies con monografía detallada y libro de evidencias estructuradas. Se registraron 61 referencias adicionales (registro de 333 a 394). Los documentos v0.2 cubren biología y medicina, ciclo vital, reproducción con límites, parentesco/cultura, diversidad, idiomas, historia fechada, situaciones de NPC y datos no confirmados. Ninguna de las 15 fichas biológicas existentes fue sobreescrita; no se cambió CoreRPG ni UE5.
+
+**Archivos:** `lore/species/monographs/` (25 Markdown), `lore/species/evidence/` (25 JSON) y `lore/species/LORE01_TNG_species_depth_index_v0.2.json` (índice). `tools/validation/validate_lore01_depth.py` comprueba IDs, enlaces, evidencias, autoridades y reserva DLC. `tools/validation/test_lore01_depth.py` incorpora pruebas de regresión.
+
+**Criterio real de completitud:** investigación documental **lo máximo razonable con fuentes visibles de esta iteración**, no certificación enciclopédica exhaustiva de cada aparición en pantalla ni un sistema de NPC ya operando con los conocimientos. Para Aenar y algunos pueblos de escasa presencia TNG/DS9/VOY, el resultado correcto conserva explícitamente la falta de fuentes directas, sin importar el contenido de Enterprise excluida. Los números desconocidos y una lengua sin gramática disponible no se inventan. Si algún estudio requiere precisión línea a línea, exige futura comprobación audiovisual puntual y contraste con edición del episodio.
+
+**Control de ejecución:** mantener PR #25 abierta y pendiente de revisión/merge manual; no iniciar apartado B antes del visto bueno del propietario.

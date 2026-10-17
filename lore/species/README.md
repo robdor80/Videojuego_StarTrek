@@ -32,3 +32,15 @@ Los **el-aurianos sí pueden aparecer en la partida principal** por su diáspora
 Validación: `python tools/validation/validate_lore01_tng.py` y `python tools/validation/test_lore01_tng.py`.
 
 La disponibilidad Delta se ajusta a la [IDEA-0011](../../ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md): los Borg **no** cruzan este portal hacia Alfa y el retorno del jugador usa normalmente el mismo enlace (opción C), salvo interrupciones justificadas. Estas son decisiones de **diseño**, no funcionalidades implementadas.
+
+## Expedientes profundizados de las 25 especies (v0.2)
+
+En `lore/species/monographs/<species_id>_v0.2.md` existen **25 monografías legibles**, una por especie. En `lore/species/evidence/<species_id>_v0.2.json` existen **25 registros estructurados de anclajes al canon**, campos biológicos, ciclo vital, cultura, idiomas, fecha, ejemplos NPC y lagunas reconocidas.
+
+- **15 anteriores**: amplían el conocimiento sin sobrescribir contratos ya consumidos por el RPG.
+- **5 principales nuevas**: desarrollan biología, sociedad, variación, lengua, contactos y escena de gameplay.
+- **5 DLC Delta**: idéntica disciplina documental, **sin habilitar población ni encuentro en el juego base**.
+
+`lore/species/LORE01_TNG_species_depth_index_v0.2.json` enlaza todas. Las afirmaciones están identificadas **por episodio o referencia**, no equivalen todavía a comprobación línea a línea de guiones ni a certificación runtime. Donde el canon calla, permanece un vacío explícito.
+
+Validación: `python tools/validation/validate_lore01_depth.py` y `python tools/validation/test_lore01_depth.py`.
