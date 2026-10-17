@@ -6,9 +6,12 @@
   "scope": {
     "playable_era": "tng_ds9_voyager",
     "game_content": "MAIN_GAME",
-    "observed_era_from_year": 2365,
-    "observed_era_to_year": 2378,
-    "observed_year_is_not_birth_or_discovery_date": true
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2365,
+    "episode_year_does_not_limit_species_existence": true
   },
   "identity": {
     "common_homeworld_ref": "el_aurian_homeworld",
@@ -33,9 +36,11 @@
     "unsupported_numbers_remain_unknown": true
   },
   "language": {
-    "language_id": "el_aurian",
+    "language_id": null,
     "individual_fluency_not_inferred": true,
-    "translator_state_is_world_owned": true
+    "translator_state_is_world_owned": true,
+    "catalogue_status": "UNKNOWN_OR_NOT_CATALOGUED",
+    "no_auto_fluency_from_species": true
   },
   "culture_socialization": {
     "contextual_profile_ref": "lore/cultures/profiles/EL_AURIAN_CULTURAL_PROFILE_v0.1.json",

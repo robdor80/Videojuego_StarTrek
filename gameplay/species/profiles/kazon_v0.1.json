@@ -12,8 +12,8 @@
     "requires_dlc_enablement": true,
     "requires_access_to_delta_context": true,
     "transwarp_borg_portal": "USER_APPROVED_FUTURE_DLC_CONCEPT_NOT_IMPLEMENTED",
-    "first_observed_reference_year": 2371,
-    "observed_year_not_species_origin": true
+    "episode_evidence_anchor_year": 2371,
+    "episode_date_not_species_origin_or_availability": true
   },
   "identity": {
     "common_homeworld_ref": null,
@@ -42,7 +42,9 @@
   "language": {
     "language_id": "kazon",
     "individual_fluency_not_implied": true,
-    "translation_matrix_depends_on_contact": true
+    "translation_matrix_depends_on_contact": true,
+    "catalogue_status": "KNOWN_AT_SOURCE_REGISTRY_LEVEL",
+    "no_auto_fluency_from_species": true
   },
   "culture_socialization": {
     "contextual_profile_ref": "lore/cultures/profiles/KAZON_CULTURAL_PROFILE_v0.1.json",
