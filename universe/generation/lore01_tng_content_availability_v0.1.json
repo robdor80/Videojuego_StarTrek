@@ -56,7 +56,14 @@
       "route_coordinates": null,
       "entry_system_id": null,
       "destination_system_id": null,
-      "connection_requires_later_narrative_tech_art_approval": true
+      "connection_requires_later_narrative_tech_art_approval": true,
+      "approved_idea_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
+      "borg_can_traverse_this_portal_toward_alpha": false,
+      "no_auto_borg_invasion_on_activation": true,
+      "normal_return_via_same_portal": true,
+      "return_may_be_interrupted_only_by_caused_world_events": true,
+      "return_policy": "OPTION_C_AUTHOR_APPROVED",
+      "technical_enforcement_status": "FUTURE_IMPLEMENTATION_REQUIRED"
     },
     "knowledge_rule": "En juego principal se puede registrar información obtenida con justificación, pero no materializar encuentros ni tripulantes Delta por generación corriente."
   },
@@ -67,7 +74,7 @@
     },
     "borg": {
       "main_game_allowed": true,
-      "basis": "Colectivo Borg y personas asimiladas existen en la época TNG fuera del futuro DLC."
+      "basis": "Borg can exist in main game due to TNG canon; this does NOT authorize Borg to enter Alpha through IDEA-0011 portal."
     }
   },
   "integration_boundary": {

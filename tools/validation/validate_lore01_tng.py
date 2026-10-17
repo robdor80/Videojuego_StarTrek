@@ -47,6 +47,16 @@ def validate_policy(gate: dict) -> list[str]:
     travel = delta.get("planned_travel", {})
     if travel.get("kind") != "BORG_TRANSWARP_PORTAL" or travel.get("implementation_status") != "NOT_IN_THIS_PHASE":
         errors.append("Portal no está documentado como concepto futuro")
+    if travel.get("approved_idea_ref") != "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md":
+        errors.append("Falta enlace a la idea 0011 ya aprobada")
+    if travel.get("borg_can_traverse_this_portal_toward_alpha") is not False:
+        errors.append("Portal permite entrada Borg hacia Alfa")
+    if travel.get("no_auto_borg_invasion_on_activation") is not True:
+        errors.append("Activar DLC provoca invasión Borg")
+    if travel.get("normal_return_via_same_portal") is not True:
+        errors.append("No preserva la opción C de regreso")
+    if travel.get("return_may_be_interrupted_only_by_caused_world_events") is not True:
+        errors.append("Interrupciones de regreso no exigen causas")
     if not gate.get("exceptions", {}).get("el_aurian", {}).get("main_game_allowed"):
         errors.append("La diáspora el-auriana quedó bloqueada incorrectamente")
     if not gate.get("exceptions", {}).get("borg", {}).get("main_game_allowed"):

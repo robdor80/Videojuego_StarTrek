@@ -30,3 +30,5 @@ Los **el-aurianos sí pueden aparecer en la partida principal** por su diáspora
 - `docs/roadmap/lore_01_tng_a_closure_report_v0.1.md` (resultado, pendientes y prueba)
 
 Validación: `python tools/validation/validate_lore01_tng.py` y `python tools/validation/test_lore01_tng.py`.
+
+La disponibilidad Delta se ajusta a la [IDEA-0011](../../ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md): los Borg **no** cruzan este portal hacia Alfa y el retorno del jugador usa normalmente el mismo enlace (opción C), salvo interrupciones justificadas. Estas son decisiones de **diseño**, no funcionalidades implementadas.

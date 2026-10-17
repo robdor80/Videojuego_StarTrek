@@ -38,3 +38,7 @@ Excepciones **expresas y justificadas**: diáspora el-auriana y presencia Borg e
 3. Fusionar PR a `main` únicamente por decisión del propietario.
 4. Verificar commit de fusión, contenido y validación de `main`.
 5. Actualizar estado definitivo en `CONTENT_STATUS.md`, autorizar borrado de la rama y solicitar autorización expresa del propietario **antes de iniciar el apartado B**.
+
+## Sincronización posterior con main (IDEA-0011)
+
+Durante el trabajo apareció en `main` la idea autorizada `ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md`. El contrato de disponibilidad ahora la referencia explícitamente. Incluye reserva documental de regreso por el mismo portal (opción C), interrupciones solo por hechos causales y prohibición categórica de entrada de Borg al cuadrante Alfa a través **de este portal**; no elimina Borg del canon TNG ni convierte el diseño en mecánica ejecutable. Tests de regresión lo verifican. El desarrollo técnico de la IDEA-0011 queda fuera de LORE-01.

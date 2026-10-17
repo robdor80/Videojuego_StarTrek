@@ -41,6 +41,16 @@ class Lore01Tests(unittest.TestCase):
         x["exceptions"]["el_aurian"]["main_game_allowed"] = False
         self.assertTrue(mod.validate_policy(x))
 
+    def test_no_borg_entry_through_dlc_portal(self):
+        x = copy.deepcopy(self.gate)
+        x["delta_dlc"]["planned_travel"]["borg_can_traverse_this_portal_toward_alpha"] = True
+        self.assertTrue(mod.validate_policy(x))
+
+    def test_approved_normal_return_option_c(self):
+        x = copy.deepcopy(self.gate)
+        x["delta_dlc"]["planned_travel"]["normal_return_via_same_portal"] = False
+        self.assertTrue(mod.validate_policy(x))
+
     def test_portal_not_implemented(self):
         x = copy.deepcopy(self.gate)
         x["delta_dlc"]["planned_travel"]["implementation_status"] = "IMPLEMENTED"
