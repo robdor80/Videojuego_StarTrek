@@ -1,0 +1,84 @@
+{
+  "schema_version": "0.2.0",
+  "species_id": "ocampan",
+  "name_es": "Ocampanos",
+  "status": "DLC_DEEP_DOCUMENTARY_AUTHORING_NOT_INSTALLED",
+  "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_SPAWN",
+  "dlc_id": "dlc_delta_transwarp",
+  "main_game_automatic_spawn_allowed": false,
+  "legacy_profile_ref": "gameplay/species/profiles/ocampan_v0.1.json",
+  "monograph_ref": "lore/species/monographs/ocampan_v0.2.md",
+  "evidence": [
+    {
+      "claim_id": "ocampan_E01",
+      "source_id": "VOY_CARETAKER",
+      "claim_es": "La comunidad ocampana subterránea depende de sistemas alimentados por el Guardián; existen presiones ecológicas locales.",
+      "domain": "habitat",
+      "authority": "SCREEN_CANON",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    },
+    {
+      "claim_id": "ocampan_E02",
+      "source_id": "VOY_ELOGIUM",
+      "claim_es": "Kes afronta una fase reproductiva, con consecuencias físicas y personales; no permite generalizar la misma edad/periodicidad a todos los ocampanos.",
+      "domain": "reproduction",
+      "authority": "SCREEN_CANON",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    },
+    {
+      "claim_id": "ocampan_E03",
+      "source_id": "VOY_COLD_FIRE",
+      "claim_es": "Se encuentra otra comunidad Ocampana con facultades y trayectoria social divergentes.",
+      "domain": "variation",
+      "authority": "SCREEN_CANON",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    },
+    {
+      "claim_id": "ocampan_E04",
+      "source_id": "VOY_BEFORE_AND_AFTER",
+      "claim_es": "La visión de un desarrollo vital acelerado y futuros potenciales de Kes documenta complejidad temporal, no cronología real obligatoria.",
+      "domain": "aging",
+      "authority": "SCREEN_CANON",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    },
+    {
+      "claim_id": "ocampan_E05",
+      "source_id": "VOY_THE_GIFT",
+      "claim_es": "El progreso de facultades psíquicas de Kes es individual y excepcional, no especie entera.",
+      "domain": "mind",
+      "authority": "SCREEN_CANON",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    },
+    {
+      "claim_id": "ocampan_E06",
+      "source_id": "MA_OCAMPA",
+      "claim_es": "Referencia secundaria de ciclo vital corto, con necesidad de distinguir promedio y edad individual.",
+      "domain": "biology",
+      "authority": "RELIABLE_SECONDARY",
+      "scope": "El caso narrado no se extiende automáticamente a todos los individuos."
+    }
+  ],
+  "domains": {
+    "morphology_health": "Humanoides con morfología auricular característica y desarrollo vital muy rápido comparado con humanos. La vida típica mencionada suele rondar nueve años, pero un valor narrativo no es muerte determinista al cumplir años: salud, ambiente y circunstancias importan. Capacidades mentales no son idénticas en todos.",
+    "life_family_and_reproduction": "El 'elogium' observado en Kes presenta cambios fisiológicos asociados a reproducción; no autoriza reglas universales detalladas de fecundidad, gestación, número de hijos o edad a partir de un solo caso. Desarrollo corporal, edad subjetiva, madurez legal, emocional y profesional deben estar separados.",
+    "cultural_institutions_and_variation": "La comunidad protegida bajo tierra del episodio piloto y los ocampanos asociados a Suspiria muestran diversidad social real; la dependencia del Guardián no convierte a todos en incapaces ni define su religión. Educación, autonomía y expansión a superficie dependen de estado local e historia.",
+    "language_and_contact_translation": "La lengua ocampana no está catalogada como sistema formal del proyecto; Kes puede hablar con Voyager gracias a aprendizaje/contacto y traducción, no porque toda persona posea conocimiento universal de Federación.",
+    "period_contact_and_local_politics": "La destrucción de la instalación del Guardián pertenece a Voyager en 2371 y la situación evoluciona. No aplicar un evento por adelantado en campañas anteriores ni fijar futuros alternativos de Kes como sucesos ciertos.",
+    "npc_scenarios": [
+      "Un niño ocampano de dos años no se equipara a niño humano de la misma edad.",
+      "Un médico pregunta fase vital y evidencia antes de inferir embarazo por edad.",
+      "Una comunidad no contactada queda fuera de acceso normal antes de activar el DLC."
+    ],
+    "unknown_information": [
+      "Distribución estadística real de longevidad y variación por comunidad.",
+      "Reglas endocrinas completas del elogium.",
+      "Tasas de natalidad y organización familiar.",
+      "Alcance psíquico común y formación.",
+      "Lengua y redes políticas fuera de Ocampa."
+    ],
+    "conflicts_and_stereotype_barrier": "El episodio temporal Before and After mezcla futuros posibles; prohibido convertirlos en historia global obligatoria. Kes no demuestra poderes universales ocampanos."
+  },
+  "canon_scope": "VOYAGER_2371_TO_2378_HISTORICAL_NOT_MANDATORY_FUTURE",
+  "portal_ref": "ideas/IDEA-0011_dlc_cuadrante_delta_portal_transwarp.md",
+  "integration_status": "AUTHORING_ONLY_NOT_RUNTIME"
+}
