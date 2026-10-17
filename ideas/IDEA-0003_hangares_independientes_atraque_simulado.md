@@ -252,3 +252,7 @@ Este enfoque libera el diseño artístico de los hangares, permite utilizar mode
 5. **Alcance:** el yate del capitán queda expresamente **fuera** de IDEA-0003 y deberá registrarse como idea independiente cuando se gestione.
 
 **Registro administrativo, no implementación:** IDEA-0003 aprobada conceptualmente. No se abren fases nuevas ni se altera el alcance de la Guardia de Sensores v0.0.1.
+
+## Actualización de dependencia — 2026-10-17
+
+La [IDEA-0004 — Yate del capitán](IDEA-0004_yate_del_capitan_desacople_simulado.md) está **DESCARTADA**. Su sustituta para Valhalla es [IDEA-0010 — Nave auxiliar táctica furtiva](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md), que reutiliza **este sistema de transición simulada**: no necesita cavidad física ni hangar real y se accede directamente desde el puente principal de Valhalla mediante turboascensor al interior 3D independiente de la nave tipo Defiant. La salida/reacoplamiento se representan por anclaje virtual con continuidad/persistencia, sin mezclar identidades de vehículos.
