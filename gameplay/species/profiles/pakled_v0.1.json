@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "pakled",
+  "display_name_es": "Pakled",
+  "status": "LORE01_A_AUTHORING_BASELINE_NOT_RUNTIME",
+  "scope": {
+    "playable_era": "tng_ds9_voyager",
+    "game_content": "MAIN_GAME",
+    "observed_era_from_year": 2365,
+    "observed_era_to_year": 2378,
+    "observed_year_is_not_birth_or_discovery_date": true
+  },
+  "identity": {
+    "common_homeworld_ref": null,
+    "homeworld_location_is_astrography_subject": true,
+    "citizenship_implied": false,
+    "faction_membership_implied": false
+  },
+  "description_es": "Humanoides conocidos por encuentros de adquisición de tecnología; las observaciones de la Enterprise no definen la inteligencia de toda la especie.",
+  "morphology": {
+    "body_plan": "humanoid",
+    "screen_visible_markers": [
+      "humanoide",
+      "morfología robusta observable en personajes canónicos"
+    ],
+    "variation_required": true
+  },
+  "physiology": {
+    "supported_observations": [
+      "No hay una escala cognitiva innata obligatoria que pueda deducirse del encuentro con la nave Mondor.",
+      "No extrapolar resistencia al vacío u otros hechos de series ajenas al corpus retenido."
+    ],
+    "exact_age_maturity_reproduction": null,
+    "unsupported_numbers_remain_unknown": true
+  },
+  "language": {
+    "language_id": "pakled",
+    "individual_fluency_not_inferred": true,
+    "translator_state_is_world_owned": true
+  },
+  "culture_socialization": {
+    "contextual_profile_ref": "lore/cultures/profiles/PAKLED_CULTURAL_PROFILE_v0.1.json",
+    "culture_profile_id": "pakled_contact_context",
+    "automatic_attachment_by_species": false,
+    "possible_norms_not_personality_traits": [
+      "El encuentro del Mondor demuestra tácticas de engaño y obtención de tecnología de aquella tripulación concreta.",
+      "No marcar a todos los Pakled como necios, ladrones o hostiles."
+    ]
+  },
+  "generation_constraints": {
+    "main_game_spawn_policy": "CONTEXT_ONLY_NO_GLOBAL_QUOTA",
+    "requires_valid_location_and_population_context": true,
+    "requires_date_and_campaign_knowledge_gate": true,
+    "starfleet_service_must_be_proven_by_organization_state": true,
+    "population_density_from_species_catalogue": false,
+    "no_auto_character_traits": true
+  },
+  "computer_and_npc": {
+    "player_summary_es": "Humanoides conocidos por encuentros de adquisición de tecnología; las observaciones de la Enterprise no definen la inteligencia de toda la especie.",
+    "scene_use_es": "Interpretar el caso Samaritan Snare como episodio de seguridad/intercambio, no como atributo de nacimiento.",
+    "requires_observer_knowledge": true,
+    "may_state_unknowns": true,
+    "may_disclose_private_history_without_world_state": false
+  },
+  "unknowns": [
+    "mundo natal verificado en pantalla dentro del alcance",
+    "vida media",
+    "cultura regional",
+    "lengua y educación formal"
+  ],
+  "ai_boundary": [
+    "No confundir especies con culturas ni ciudadanos con organizaciones.",
+    "No crear capacidades médicas o psíquicas sin prueba individual.",
+    "No atribuir la conducta de un personaje observado a toda su especie."
+  ],
+  "provenance": [
+    {
+      "source_id": "TNG_SAMARITAN_SNARE",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil pakled; no inferir rasgos universales"
+    },
+    {
+      "source_id": "MA_PAKLED",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria de presencia y biología general"
+    }
+  ]
+}

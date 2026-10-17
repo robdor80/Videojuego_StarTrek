@@ -1,0 +1,99 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "breen",
+  "display_name_es": "Breen",
+  "status": "LORE01_A_AUTHORING_BASELINE_NOT_RUNTIME",
+  "scope": {
+    "playable_era": "tng_ds9_voyager",
+    "game_content": "MAIN_GAME",
+    "observed_era_from_year": 2375,
+    "observed_era_to_year": 2378,
+    "observed_year_is_not_birth_or_discovery_date": true
+  },
+  "identity": {
+    "common_homeworld_ref": "breen_homeworld",
+    "homeworld_location_is_astrography_subject": true,
+    "citizenship_implied": false,
+    "faction_membership_implied": false
+  },
+  "description_es": "Pueblo cuya fisiología permanece en gran parte oculta por trajes cerrados; el conocimiento político de DS9 evoluciona durante 2375.",
+  "morphology": {
+    "body_plan": "humanoid",
+    "screen_visible_markers": [
+      "humanoide según observación en traje",
+      "anatomía corporal no confirmada bajo el equipo"
+    ],
+    "variation_required": true
+  },
+  "physiology": {
+    "supported_observations": [
+      "Uso frecuente de trajes protectores de rostro cubierto y vocalización difícil de interpretar.",
+      "No inventar temperatura corporal, anatomía, color de piel ni dependencia biológica de refrigeración."
+    ],
+    "exact_age_maturity_reproduction": null,
+    "unsupported_numbers_remain_unknown": true
+  },
+  "language": {
+    "language_id": "breen",
+    "individual_fluency_not_inferred": true,
+    "translator_state_is_world_owned": true
+  },
+  "culture_socialization": {
+    "contextual_profile_ref": "lore/cultures/profiles/BREEN_CULTURAL_PROFILE_v0.1.json",
+    "culture_profile_id": "breen_contact_context",
+    "automatic_attachment_by_species": false,
+    "possible_norms_not_personality_traits": [
+      "Contacto sometido a protocolos de identidad y traducción inciertos.",
+      "La afiliación de la Confederación Breen al Dominio se registra como hecho fechado en 2375, no como propiedad biológica ni predestino."
+    ]
+  },
+  "generation_constraints": {
+    "main_game_spawn_policy": "CONTEXT_ONLY_NO_GLOBAL_QUOTA",
+    "requires_valid_location_and_population_context": true,
+    "requires_date_and_campaign_knowledge_gate": true,
+    "starfleet_service_must_be_proven_by_organization_state": true,
+    "population_density_from_species_catalogue": false,
+    "no_auto_character_traits": true
+  },
+  "computer_and_npc": {
+    "player_summary_es": "Pueblo cuya fisiología permanece en gran parte oculta por trajes cerrados; el conocimiento político de DS9 evoluciona durante 2375.",
+    "scene_use_es": "La participación en la guerra del Dominio es un evento de campaña condicionado, no un guion obligatorio.",
+    "requires_observer_knowledge": true,
+    "may_state_unknowns": true,
+    "may_disclose_private_history_without_world_state": false
+  },
+  "unknowns": [
+    "aspecto sin uniforme",
+    "fisiología real",
+    "vida media",
+    "lengua detallada",
+    "motivaciones de individuos desconocidos"
+  ],
+  "ai_boundary": [
+    "No confundir especies con culturas ni ciudadanos con organizaciones.",
+    "No crear capacidades médicas o psíquicas sin prueba individual.",
+    "No atribuir la conducta de un personaje observado a toda su especie."
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_TIL_DEATH_DO_US_PART",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil breen; no inferir rasgos universales"
+    },
+    {
+      "source_id": "DS9_THE_CHANGING_FACE_OF_EVIL",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil breen; no inferir rasgos universales"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BREEN_DOMINION_WAR",
+      "confidence": "HIGH",
+      "claim_scope": "evidencia limitada del perfil breen; no inferir rasgos universales"
+    },
+    {
+      "source_id": "MA_BREEN",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria de presencia y biología general"
+    }
+  ]
+}
