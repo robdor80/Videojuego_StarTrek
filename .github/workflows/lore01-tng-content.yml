@@ -14,6 +14,10 @@ on:
       - "docs/roadmap/lore_01*"
       - "lore/species/README.md"
       - "CONTENT_STATUS.md"
+      - "lore/species/evidence/**"
+      - "lore/species/monographs/**"
+      - "lore/species/evidence/**"
+      - "lore/species/monographs/**"
   pull_request:
     paths:
       - ".github/workflows/lore01-tng-content.yml"
@@ -47,5 +51,8 @@ jobs:
         run: |
           python -m py_compile tools/validation/validate_lore01_tng.py tools/validation/test_lore01_tng.py
           python tools/validation/validate_lore01_tng.py
+          python tools/validation/validate_lore01_depth.py
       - name: Regresiones de DLC y catálogo
-        run: python tools/validation/test_lore01_tng.py
+        run: |
+          python tools/validation/test_lore01_tng.py
+          python tools/validation/test_lore01_depth.py
