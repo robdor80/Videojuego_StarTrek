@@ -1,0 +1,79 @@
+{
+  "schema_version": "0.1.0",
+  "policy_id": "lore01_tng_content_availability",
+  "status": "DOCUMENTATION_ONLY_NO_RUNTIME_GATE_IMPLEMENTED",
+  "source_of_author_approval": "Usuario 2026-10-17: juego principal TNG/DS9, Delta en futuro DLC mediante portal transwarp Borg",
+  "main_game": {
+    "species_ids_existing": [
+      "human",
+      "vulcan",
+      "andorian",
+      "aenar",
+      "tellarite",
+      "klingon",
+      "romulan",
+      "cardassian",
+      "bajoran",
+      "ferengi",
+      "trill",
+      "betazoid",
+      "changeling",
+      "vorta",
+      "jem_hadar"
+    ],
+    "species_ids_added": [
+      "bolian",
+      "benzite",
+      "el_aurian",
+      "breen",
+      "pakled"
+    ],
+    "automatic_population_quota_from_catalogue": false,
+    "spawns_always_require_date_location_population_cause_and_permission": true
+  },
+  "delta_dlc": {
+    "content_id": "dlc_delta_transwarp",
+    "status": "FUTURE_NOT_IMPLEMENTED",
+    "species_ids": [
+      "kazon",
+      "ocampan",
+      "talaxian",
+      "vidiian",
+      "hirogen"
+    ],
+    "default_main_game_spawn_allowed": false,
+    "activation_requires": [
+      "explicit_dlc_or_expansion_enabled",
+      "valid_in_universe_delta_location_and_exploration_context",
+      "causal_local_population_or_specific_mission",
+      "campaign_history_and_actor_specific_contact_knowledge"
+    ],
+    "planned_travel": {
+      "kind": "BORG_TRANSWARP_PORTAL",
+      "classification": "GAME_ADDITION",
+      "user_has_3d_model": true,
+      "implementation_status": "NOT_IN_THIS_PHASE",
+      "route_coordinates": null,
+      "entry_system_id": null,
+      "destination_system_id": null,
+      "connection_requires_later_narrative_tech_art_approval": true
+    },
+    "knowledge_rule": "En juego principal se puede registrar información obtenida con justificación, pero no materializar encuentros ni tripulantes Delta por generación corriente."
+  },
+  "exceptions": {
+    "el_aurian": {
+      "main_game_allowed": true,
+      "basis": "Diáspora de supervivientes en TNG y DS9; procedencia geográfica remota no excluye presencia en Alpha/Beta."
+    },
+    "borg": {
+      "main_game_allowed": true,
+      "basis": "Colectivo Borg y personas asimiladas existen en la época TNG fuera del futuro DLC."
+    }
+  },
+  "integration_boundary": {
+    "authoring_only": true,
+    "no_change_to_core_rpg": true,
+    "no_change_to_ue5": true,
+    "consumer_must_enforce_gate_later": true
+  }
+}
