@@ -9,8 +9,28 @@
   "display_name_es": "Tellaritas",
   "content_scope": "MAIN_GAME_EXISTING_LOW_TNG_EVIDENCE",
   "legacy_profile_ref": "gameplay/species/profiles/tellarite_v0.1.json",
-  "narrative_profile_ref": "lore/species/monographs/tellarite_v0.2.md",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides con rasgos faciales porcinos, complexión variable y características dermatológicas observables. No afirmar que todos poseen fortaleza o preferencias climáticas idénticas sin estudio del individuo.",
+    "lifecycle": "No se fija en la documentación retenida una edad de mayoría, años exactos de gestación o límites generales de vida. El cuidado médico debe empezar por el paciente, no por tabulaciones inventadas.",
+    "culture": "Hay participación en instituciones federadas y una tradición de debate asociada en referencias especializadas; la agresividad, el gusto por discutir o la confrontación ritual no son rasgos biológicos. Para una disputa diplomática exigir normas locales y hechos, no 'un tellarita siempre discute'.",
+    "language": "La presencia de traducción simultánea no demuestra el dominio del estándar federado ni de un idioma tellarita para toda la población. Etiqueta lingüística pendiente de corpus.",
+    "chronology": "Contexto TOS usado como origen histórico; no trasladar sin prueba rivalidades de negociaciones del siglo XXII directamente al XXIV.",
+    "npc_scenarios": [
+      "Embajador tellarita, oficial y comerciante se generan mediante sus instituciones, no por plantilla de discusión.",
+      "Variación de pelaje/rostro individual permitida sin inferencias culturales.",
+      "Una discrepancia verbal no inicia un combate ni modifica relaciones diplomáticas sin evento."
+    ],
+    "unknowns": [
+      "Parentesco y crianza.",
+      "Idioma y escritura documentados de forma primaria.",
+      "Longevidad/gestación.",
+      "Jerarquías culturales del siglo XXIV.",
+      "Capacidades sensoriales y valores clínicos exactos."
+    ],
+    "canon_cautions": "Documentos heredados usan episodios ENT para desafíos/debate; se citan como legado de otra era, no como evidencia TNG independiente."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS",
+  "evidence": [
     {
       "claim_id": "tellarite_E01",
       "source_id": "TOS_JOURNEY_TO_BABEL",
@@ -39,25 +59,7 @@
       "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
     }
   ],
-  "domains": {
-    "physiology_and_morphology": "Humanoides con rasgos faciales porcinos, complexión variable y características dermatológicas observables. No afirmar que todos poseen fortaleza o preferencias climáticas idénticas sin estudio del individuo.",
-    "lifecycle_family_reproduction": "No se fija en la documentación retenida una edad de mayoría, años exactos de gestación o límites generales de vida. El cuidado médico debe empezar por el paciente, no por tabulaciones inventadas.",
-    "culture_socialization": "Hay participación en instituciones federadas y una tradición de debate asociada en referencias especializadas; la agresividad, el gusto por discutir o la confrontación ritual no son rasgos biológicos. Para una disputa diplomática exigir normas locales y hechos, no 'un tellarita siempre discute'.",
-    "language_translation_names": "La presencia de traducción simultánea no demuestra el dominio del estándar federado ni de un idioma tellarita para toda la población. Etiqueta lingüística pendiente de corpus.",
-    "chronology_and_contact": "Contexto TOS usado como origen histórico; no trasladar sin prueba rivalidades de negociaciones del siglo XXII directamente al XXIV.",
-    "npc_worldstate_scenarios": [
-      "Embajador tellarita, oficial y comerciante se generan mediante sus instituciones, no por plantilla de discusión.",
-      "Variación de pelaje/rostro individual permitida sin inferencias culturales.",
-      "Una discrepancia verbal no inicia un combate ni modifica relaciones diplomáticas sin evento."
-    ],
-    "unresolved_research": [
-      "Parentesco y crianza.",
-      "Idioma y escritura documentados de forma primaria.",
-      "Longevidad/gestación.",
-      "Jerarquías culturales del siglo XXIV.",
-      "Capacidades sensoriales y valores clínicos exactos."
-    ],
-    "do_not_canonize": "Documentos heredados usan episodios ENT para desafíos/debate; se citan como legado de otra era, no como evidencia TNG independiente."
-  },
-  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS"
+  "monograph_ref": "lore/species/monographs/tellarite_v0.2.md",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

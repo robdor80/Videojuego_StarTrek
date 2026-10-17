@@ -7,7 +7,28 @@
   "legacy_profile_ref": "gameplay/species/profiles/vorta_v0.1.json",
   "monograph_ref": "lore/species/monographs/vorta_v0.2.md",
   "research_scope": "TNG_DS9_VOY",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides vinculados a ingeniería y clonación del Dominio; un cuerpo Vorta es una identidad física y un número/versión de clon debe vincularse a una identidad biográfica definida por contratos, no un reseteo narrativo gratuito. No deducir visión/olfato/audición precisa sin episodio o prueba clínica.",
+    "lifecycle": "La sustitución por clones no es inmortalidad personal sin coste, ni prueba de memoria perfecta entre versiones. Los programas y relevos de clonación pertenecen a infraestructura política del Dominio y no a cualquier Vorta aleatorio.",
+    "culture": "Se observan funciones de representantes, negociadores, administradores y controladores de recursos; devoción a Fundadores es adoctrinamiento y diseño social/biotécnico que puede variar. Weyoun 6 constituye evidencia de disidencia y agencia individual.",
+    "language": "La capacidad diplomática de un Vorta concreto no concede traducción automática de todas las lenguas ni acceso a la mente de subordinados. Documentar códigos de mando como privilegios institucionales, separados de idioma.",
+    "chronology": "Dominio puede estar lejano o ser amenaza conocida según posición de campaña; la presencia de Vorta en Alfa está limitada por rutas, situación de guerra y fechas. Clones con el mismo nombre no pueden coexistir sin explicación de número y logística.",
+    "npc_scenarios": [
+      "Un representante Vorta necesita cadena de mando específica para ordenar a un contingente Jem'Hadar.",
+      "Una versión clonada hereda solo los recuerdos establecidos por el sistema de clonación real.",
+      "Una deserción puede nacer de divergencia individual, no requiere un deus ex machina."
+    ],
+    "unknowns": [
+      "Alcance biológico exacto de modificación genética.",
+      "Número de clones y memoria compartida para cada versión.",
+      "Edad de crecimiento y ciclo natural.",
+      "Capacidades perceptivas por individuo.",
+      "Porcentaje de disidentes y reglas de reproducción."
+    ],
+    "canon_cautions": "No fusionar Vorta biológico con agente del Dominio automáticamente; 'lealtad genética absoluta' contradice casos de disidencia."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
     {
       "claim_id": "vorta_E01",
       "source_id": "DS9_THE_JEMHADAR",
@@ -63,25 +84,6 @@
       "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
     }
   ],
-  "domains": {
-    "biology_and_medical_specificity": "Humanoides vinculados a ingeniería y clonación del Dominio; un cuerpo Vorta es una identidad física y un número/versión de clon debe vincularse a una identidad biográfica definida por contratos, no un reseteo narrativo gratuito. No deducir visión/olfato/audición precisa sin episodio o prueba clínica.",
-    "lifecycle_identity_and_reproduction": "La sustitución por clones no es inmortalidad personal sin coste, ni prueba de memoria perfecta entre versiones. Los programas y relevos de clonación pertenecen a infraestructura política del Dominio y no a cualquier Vorta aleatorio.",
-    "culture_social_structure_and_variation": "Se observan funciones de representantes, negociadores, administradores y controladores de recursos; devoción a Fundadores es adoctrinamiento y diseño social/biotécnico que puede variar. Weyoun 6 constituye evidencia de disidencia y agencia individual.",
-    "linguistic_competence_translation_and_privacy": "La capacidad diplomática de un Vorta concreto no concede traducción automática de todas las lenguas ni acceso a la mente de subordinados. Documentar códigos de mando como privilegios institucionales, separados de idioma.",
-    "historical_chronology_and_contact": "Dominio puede estar lejano o ser amenaza conocida según posición de campaña; la presencia de Vorta en Alfa está limitada por rutas, situación de guerra y fechas. Clones con el mismo nombre no pueden coexistir sin explicación de número y logística.",
-    "operational_npc_cases": [
-      "Un representante Vorta necesita cadena de mando específica para ordenar a un contingente Jem'Hadar.",
-      "Una versión clonada hereda solo los recuerdos establecidos por el sistema de clonación real.",
-      "Una deserción puede nacer de divergencia individual, no requiere un deus ex machina."
-    ],
-    "unresolved_biology_and_research": [
-      "Alcance biológico exacto de modificación genética.",
-      "Número de clones y memoria compartida para cada versión.",
-      "Edad de crecimiento y ciclo natural.",
-      "Capacidades perceptivas por individuo.",
-      "Porcentaje de disidentes y reglas de reproducción."
-    ],
-    "conflict_policy": "No fusionar Vorta biológico con agente del Dominio automáticamente; 'lealtad genética absoluta' contradice casos de disidencia."
-  },
-  "implementation_status": "AUTHORING_ONLY"
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

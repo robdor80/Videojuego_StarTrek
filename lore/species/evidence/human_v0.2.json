@@ -9,8 +9,27 @@
   "display_name_es": "Humanos",
   "content_scope": "MAIN_GAME",
   "legacy_profile_ref": "gameplay/species/profiles/human_v0.1.json",
-  "narrative_profile_ref": "lore/species/monographs/human_v0.2.md",
-  "verified_claims": [
+  "domains": {
+    "biology": "Fisiología humanoide terrestre de referencia para medicina comparada, no patrón obligatorio de normalidad galáctica. Los fenotipos humanos son diversos; región de origen, patrimonio genético, edad y modificaciones individuales requieren registros separados.",
+    "lifecycle": "Embarazo, infancia, madurez, senescencia y muerte dependen de una biografía personal; no convertir la edad laboral o militar en límite reproductivo. Las relaciones familiares y la crianza incluyen contextos terrestres, coloniales y mixtos.",
+    "culture": "La Tierra, colonias humanas, familias mestizas y cultura cívica federada no forman una sola tradición. El estilo de liderazgo de Picard, Sisko o Janeway es personal y profesional; la Academia y la Flota son instituciones adquiridas, no cultura innata.",
+    "language": "El inglés terrestre es habitual en la interfaz audiovisual, pero no demuestra monolingüismo de toda la humanidad. Idiomas nacionales, comunidades coloniales y capacidad de traducción se resuelven en la biografía y registro de contacto, sin inventar un catálogo completo.",
+    "chronology": "La Flota y la Federación existen durante TNG, DS9 y Voyager, pero sus políticas de seguridad, diplomacia y defensa cambian; la invasión del Dominio no puede preexistir a su propia cronología.",
+    "npc_scenarios": [
+      "Una médica humana con familia en una colonia no conoce automáticamente información clasificada sobre ese mundo.",
+      "Un cadete humano puede haber nacido fuera de la Tierra; su ciudadanía y rango necesitan expediente.",
+      "Un oficial de la Flota no representa por defecto la postura de todos los civiles humanos."
+    ],
+    "unknowns": [
+      "Distribución de esperanza de vida humana a escala federada en 2370.",
+      "Impacto clínico universal de tratamientos avanzados sobre el envejecimiento.",
+      "Censo completo por planetas, lenguas y parentescos mixtos.",
+      "Normas de reproducción de cada cultura humana."
+    ],
+    "canon_cautions": "Distinguir capacidad médica de siglos XXIV y medias demográficas no demostradas; nunca deducir 'humanidad sin enfermedades' ni 'sin conflicto'."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS",
+  "evidence": [
     {
       "claim_id": "human_E01",
       "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
@@ -66,24 +85,7 @@
       "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
     }
   ],
-  "domains": {
-    "physiology_and_morphology": "Fisiología humanoide terrestre de referencia para medicina comparada, no patrón obligatorio de normalidad galáctica. Los fenotipos humanos son diversos; región de origen, patrimonio genético, edad y modificaciones individuales requieren registros separados.",
-    "lifecycle_family_reproduction": "Embarazo, infancia, madurez, senescencia y muerte dependen de una biografía personal; no convertir la edad laboral o militar en límite reproductivo. Las relaciones familiares y la crianza incluyen contextos terrestres, coloniales y mixtos.",
-    "culture_socialization": "La Tierra, colonias humanas, familias mestizas y cultura cívica federada no forman una sola tradición. El estilo de liderazgo de Picard, Sisko o Janeway es personal y profesional; la Academia y la Flota son instituciones adquiridas, no cultura innata.",
-    "language_translation_names": "El inglés terrestre es habitual en la interfaz audiovisual, pero no demuestra monolingüismo de toda la humanidad. Idiomas nacionales, comunidades coloniales y capacidad de traducción se resuelven en la biografía y registro de contacto, sin inventar un catálogo completo.",
-    "chronology_and_contact": "La Flota y la Federación existen durante TNG, DS9 y Voyager, pero sus políticas de seguridad, diplomacia y defensa cambian; la invasión del Dominio no puede preexistir a su propia cronología.",
-    "npc_worldstate_scenarios": [
-      "Una médica humana con familia en una colonia no conoce automáticamente información clasificada sobre ese mundo.",
-      "Un cadete humano puede haber nacido fuera de la Tierra; su ciudadanía y rango necesitan expediente.",
-      "Un oficial de la Flota no representa por defecto la postura de todos los civiles humanos."
-    ],
-    "unresolved_research": [
-      "Distribución de esperanza de vida humana a escala federada en 2370.",
-      "Impacto clínico universal de tratamientos avanzados sobre el envejecimiento.",
-      "Censo completo por planetas, lenguas y parentescos mixtos.",
-      "Normas de reproducción de cada cultura humana."
-    ],
-    "do_not_canonize": "Distinguir capacidad médica de siglos XXIV y medias demográficas no demostradas; nunca deducir 'humanidad sin enfermedades' ni 'sin conflicto'."
-  },
-  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS"
+  "monograph_ref": "lore/species/monographs/human_v0.2.md",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

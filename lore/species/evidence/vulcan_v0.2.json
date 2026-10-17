@@ -9,8 +9,27 @@
   "display_name_es": "Vulcanos",
   "content_scope": "MAIN_GAME",
   "legacy_profile_ref": "gameplay/species/profiles/vulcan_v0.1.json",
-  "narrative_profile_ref": "lore/species/monographs/vulcan_v0.2.md",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides de orejas puntiagudas y rasgos no idénticos a los humanos. La fisiología y la neurobiología tienen necesidades médicas específicas; no crear cifras universales de fuerza o temperatura. La fusión mental es una acción psíquica contextual, no un permiso para leer toda memoria.",
+    "lifecycle": "El pon farr puede generar necesidades médicas y presiones sociales; no se activa por un temporizador genérico del jugador ni tiene el mismo desarrollo para todo el mundo. Matrimonio, vínculo familiar, mentorazgo y celibato requieren biografía, consentimiento y circunstancias.",
+    "culture": "La disciplina lógica y la supresión/gestión emocional son prácticas culturales y filosóficas aprendidas. Existen variaciones, disidentes, matrimonios mixtos y diferencias entre individuos. La cortesía formal de un interlocutor no proporciona su afiliación religiosa o política.",
+    "language": "Existe lengua vulcana, pero no hay corpus completo normalizado en el proyecto: pronunciaciones, competencia nativa, escritura ceremonial y traductor deberán elaborarse bajo contrato lingüístico separado. No asociar automáticamente vulcanidad con habla de un solo idioma.",
+    "chronology": "Las evidencias TOS corresponden a una era anterior; Voyager y DS9 muestran supervivencia de costumbres sin convertir su ejecución en determinista. Las políticas y relaciones con romulanos tienen sus propias fechas.",
+    "npc_scenarios": [
+      "Un médico valida identidad y síntomas antes de proponer atención al pon farr; respeta privacidad.",
+      "La fusión mental exige capacidad, situación, autorización y consecuencias, nunca es un interrogatorio gratuito.",
+      "Un vulcano deportista puede ser competitivo sin dejar de ser vulcano."
+    ],
+    "unknowns": [
+      "Valores clínicos de referencia generales por edad y sexo.",
+      "Incidencia exacta y variedades de pon farr.",
+      "Capacidad telepática y formación de cada individuo.",
+      "Normas matrimoniales universales y esperanza de vida máxima estadística."
+    ],
+    "canon_cautions": "No extrapolar diálogos de Spock, Sarek o Tuvok a toda la especie; la telepatía no crea omnisciencia, ni el autocontrol elimina emociones."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS",
+  "evidence": [
     {
       "claim_id": "vulcan_E01",
       "source_id": "TOS_AMOK_TIME",
@@ -66,24 +85,7 @@
       "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
     }
   ],
-  "domains": {
-    "physiology_and_morphology": "Humanoides de orejas puntiagudas y rasgos no idénticos a los humanos. La fisiología y la neurobiología tienen necesidades médicas específicas; no crear cifras universales de fuerza o temperatura. La fusión mental es una acción psíquica contextual, no un permiso para leer toda memoria.",
-    "lifecycle_family_reproduction": "El pon farr puede generar necesidades médicas y presiones sociales; no se activa por un temporizador genérico del jugador ni tiene el mismo desarrollo para todo el mundo. Matrimonio, vínculo familiar, mentorazgo y celibato requieren biografía, consentimiento y circunstancias.",
-    "culture_socialization": "La disciplina lógica y la supresión/gestión emocional son prácticas culturales y filosóficas aprendidas. Existen variaciones, disidentes, matrimonios mixtos y diferencias entre individuos. La cortesía formal de un interlocutor no proporciona su afiliación religiosa o política.",
-    "language_translation_names": "Existe lengua vulcana, pero no hay corpus completo normalizado en el proyecto: pronunciaciones, competencia nativa, escritura ceremonial y traductor deberán elaborarse bajo contrato lingüístico separado. No asociar automáticamente vulcanidad con habla de un solo idioma.",
-    "chronology_and_contact": "Las evidencias TOS corresponden a una era anterior; Voyager y DS9 muestran supervivencia de costumbres sin convertir su ejecución en determinista. Las políticas y relaciones con romulanos tienen sus propias fechas.",
-    "npc_worldstate_scenarios": [
-      "Un médico valida identidad y síntomas antes de proponer atención al pon farr; respeta privacidad.",
-      "La fusión mental exige capacidad, situación, autorización y consecuencias, nunca es un interrogatorio gratuito.",
-      "Un vulcano deportista puede ser competitivo sin dejar de ser vulcano."
-    ],
-    "unresolved_research": [
-      "Valores clínicos de referencia generales por edad y sexo.",
-      "Incidencia exacta y variedades de pon farr.",
-      "Capacidad telepática y formación de cada individuo.",
-      "Normas matrimoniales universales y esperanza de vida máxima estadística."
-    ],
-    "do_not_canonize": "No extrapolar diálogos de Spock, Sarek o Tuvok a toda la especie; la telepatía no crea omnisciencia, ni el autocontrol elimina emociones."
-  },
-  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS"
+  "monograph_ref": "lore/species/monographs/vulcan_v0.2.md",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

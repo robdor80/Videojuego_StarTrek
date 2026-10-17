@@ -7,7 +7,29 @@
   "legacy_profile_ref": "gameplay/species/profiles/cardassian_v0.1.json",
   "monograph_ref": "lore/species/monographs/cardassian_v0.2.md",
   "research_scope": "TNG_DS9_VOY_WITH_RETAINED_TOS_HISTORICAL_CONTEXT",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides de crestas y placas craneocervicales características; pigmentación variable por individuo. Su fisiología no justifica resistencia a tortura, fuerza o metabolismo constantes sin fuente médica y caso individual.",
+    "lifecycle": "La familia, la obligación con hijos y la continuidad social se presentan como valores relevantes para personajes y discursos cardassianos. No fijar convivencia, filiación biológica, longevidad ni fertilidad generales por declaraciones de oficiales concretos.",
+    "culture": "La retórica del Estado y las instituciones militares, la Orden Obsidiana, académicos, comerciantes, familias y disidentes forman contextos divergentes. La ocupación de Bajor es un hecho histórico estructural, pero culpa criminal individual necesita hechos probados. Distinción entre vida civil en Cardassia y guarniciones exteriores.",
+    "language": "Cardassiano no consta desarrollado en el catálogo inicial; su existencia como lengua no permite inventar sintaxis militar, códigos o pronunciación. Los registros pueden incluir procedimientos de clasificación; conocer una lengua no concede claves de acceso.",
+    "chronology": "Fin de ocupación de Bajor anterior a la llegada de Sisko; tensiones fronterizas preceden a la guerra del Dominio; alianza cardassiana con Dominio en 2373, insurrección final en 2375. Ningún capítulo futuro se impone retrospectivamente.",
+    "npc_scenarios": [
+      "Exoficial de ocupación requiere historial específico antes de enfrentarse a testigos bajoranos.",
+      "Un comerciante cardassiano no controla la Orden Obsidiana por ciudadanía.",
+      "Pruebas judiciales e interrogatorio no se sustituyen por conocimiento del narrador sobre el canon."
+    ],
+    "unknowns": [
+      "Distribución de edades, natalidad y esperanza de vida.",
+      "Sistema de educación regional y dialectos.",
+      "Variabilidad médica de fenotipos y adaptación climática.",
+      "Censos civiles bajo cada gobierno.",
+      "Quién participó individualmente en abusos sin historial."
+    ],
+    "canon_cautions": "Evitar unir estado militar, población civil y etnia; evitar presentar liberación, guerra y ocupación como hechos idénticos simultáneos."
+  },
+  "provenance_rule": "Do not assert unsourced universal biology; fact authority is scoped to source evidence.",
+  "gameplay": "DOCUMENTATION_NOT_MERGED_INTO_RUNTIME",
+  "evidence": [
     {
       "claim_id": "cardassian_E01",
       "source_id": "TNG_THE_WOUNDED",
@@ -72,26 +94,6 @@
       "epistemic_limit": "Afirmación contextual al material citado: sin extrapolación numérica ni moral."
     }
   ],
-  "domains": {
-    "biology_and_medicine": "Humanoides de crestas y placas craneocervicales características; pigmentación variable por individuo. Su fisiología no justifica resistencia a tortura, fuerza o metabolismo constantes sin fuente médica y caso individual.",
-    "development_family_and_reproduction": "La familia, la obligación con hijos y la continuidad social se presentan como valores relevantes para personajes y discursos cardassianos. No fijar convivencia, filiación biológica, longevidad ni fertilidad generales por declaraciones de oficiales concretos.",
-    "social_structure_and_internal_variation": "La retórica del Estado y las instituciones militares, la Orden Obsidiana, académicos, comerciantes, familias y disidentes forman contextos divergentes. La ocupación de Bajor es un hecho histórico estructural, pero culpa criminal individual necesita hechos probados. Distinción entre vida civil en Cardassia y guarniciones exteriores.",
-    "language_naming_and_translation": "Cardassiano no consta desarrollado en el catálogo inicial; su existencia como lengua no permite inventar sintaxis militar, códigos o pronunciación. Los registros pueden incluir procedimientos de clasificación; conocer una lengua no concede claves de acceso.",
-    "historical_events_and_date_sensitivity": "Fin de ocupación de Bajor anterior a la llegada de Sisko; tensiones fronterizas preceden a la guerra del Dominio; alianza cardassiana con Dominio en 2373, insurrección final en 2375. Ningún capítulo futuro se impone retrospectivamente.",
-    "operational_npc_scenarios": [
-      "Exoficial de ocupación requiere historial específico antes de enfrentarse a testigos bajoranos.",
-      "Un comerciante cardassiano no controla la Orden Obsidiana por ciudadanía.",
-      "Pruebas judiciales e interrogatorio no se sustituyen por conocimiento del narrador sobre el canon."
-    ],
-    "known_unknowns": [
-      "Distribución de edades, natalidad y esperanza de vida.",
-      "Sistema de educación regional y dialectos.",
-      "Variabilidad médica de fenotipos y adaptación climática.",
-      "Censos civiles bajo cada gobierno.",
-      "Quién participó individualmente en abusos sin historial."
-    ],
-    "contradiction_and_non_canonization_policy": "Evitar unir estado militar, población civil y etnia; evitar presentar liberación, guerra y ocupación como hechos idénticos simultáneos."
-  },
-  "provenance_rule": "Do not assert unsourced universal biology; fact authority is scoped to source evidence.",
-  "gameplay": "DOCUMENTATION_NOT_MERGED_INTO_RUNTIME"
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

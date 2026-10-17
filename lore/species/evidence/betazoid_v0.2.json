@@ -7,7 +7,28 @@
   "legacy_profile_ref": "gameplay/species/profiles/betazoid_v0.1.json",
   "monograph_ref": "lore/species/monographs/betazoid_v0.2.md",
   "research_scope": "TNG_DS9_VOY",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides de apariencia próxima a humana; diversidad de ojos, edad y mezclas biológicas. Betazoides de ascendencia íntegra y personas de ascendencia mixta no se modelan con la misma eficacia psíquica forzosa. La empatía detecta estados afectivos bajo condiciones, no verdad factual ni pensamientos arbitrarios.",
+    "lifecycle": "Hogares, matrimonios, responsabilidades familiares y luto se describen mediante personajes concretos. La cultura de exposición ritual en bodas aparece como costumbre de entorno familiar/ceremonial, nunca obligación reproductiva o intimidad disponible automáticamente para un jugador.",
+    "culture": "Títulos tradicionales y genealogía de la familia Troi muestran contextos aristocráticos sin demostrar que toda persona betazoide pertenezca a nobleza. Consentimiento mental, respeto a interlocutores no telepáticos y diferencias entre madre e hija ofrecen variación social real.",
+    "language": "La telepatía no es un idioma universal ni elimina el problema de traducir símbolos y documentos. Registrar la comunicación mental como capacidad personal, el lenguaje hablado como aprendizaje y la privacidad como permiso separado.",
+    "chronology": "Lo observado de Lwaxana/Deanna en TNG debe vincularse al estado del personaje, entrenamiento y circunstancias; la pérdida temporal de empatía no decreta que toda la especie pueda perderla por el mismo motivo.",
+    "npc_scenarios": [
+      "Una consejera con empatía puede advertir nerviosismo sin descubrir quién cometió un crimen.",
+      "Una persona betazoide de ascendencia mixta requiere ficha de capacidades individuales.",
+      "La computadora no publica pensamientos supuestamente leídos ni diagnósticos privados sin autorización."
+    ],
+    "unknowns": [
+      "Alcance y precisión telepática por edad/ascendencia.",
+      "Condiciones médicas comparadas y agotamiento psíquico.",
+      "Vida media y ciclo reproductivo.",
+      "Normas de consentimiento por comunidades.",
+      "Idiomas y procedimientos de telepatía ritual."
+    ],
+    "canon_cautions": "La telepatía jamás sustituye investigación: sensibilidad a una emoción no prueba veracidad. La ficha anterior dependía en exceso de MA_BETAZOID; ahora se aportan anclajes de TNG."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
     {
       "claim_id": "betazoid_E01",
       "source_id": "TNG_HAVEN",
@@ -63,25 +84,6 @@
       "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
     }
   ],
-  "domains": {
-    "biology_and_medical_specificity": "Humanoides de apariencia próxima a humana; diversidad de ojos, edad y mezclas biológicas. Betazoides de ascendencia íntegra y personas de ascendencia mixta no se modelan con la misma eficacia psíquica forzosa. La empatía detecta estados afectivos bajo condiciones, no verdad factual ni pensamientos arbitrarios.",
-    "lifecycle_identity_and_reproduction": "Hogares, matrimonios, responsabilidades familiares y luto se describen mediante personajes concretos. La cultura de exposición ritual en bodas aparece como costumbre de entorno familiar/ceremonial, nunca obligación reproductiva o intimidad disponible automáticamente para un jugador.",
-    "culture_social_structure_and_variation": "Títulos tradicionales y genealogía de la familia Troi muestran contextos aristocráticos sin demostrar que toda persona betazoide pertenezca a nobleza. Consentimiento mental, respeto a interlocutores no telepáticos y diferencias entre madre e hija ofrecen variación social real.",
-    "linguistic_competence_translation_and_privacy": "La telepatía no es un idioma universal ni elimina el problema de traducir símbolos y documentos. Registrar la comunicación mental como capacidad personal, el lenguaje hablado como aprendizaje y la privacidad como permiso separado.",
-    "historical_chronology_and_contact": "Lo observado de Lwaxana/Deanna en TNG debe vincularse al estado del personaje, entrenamiento y circunstancias; la pérdida temporal de empatía no decreta que toda la especie pueda perderla por el mismo motivo.",
-    "operational_npc_cases": [
-      "Una consejera con empatía puede advertir nerviosismo sin descubrir quién cometió un crimen.",
-      "Una persona betazoide de ascendencia mixta requiere ficha de capacidades individuales.",
-      "La computadora no publica pensamientos supuestamente leídos ni diagnósticos privados sin autorización."
-    ],
-    "unresolved_biology_and_research": [
-      "Alcance y precisión telepática por edad/ascendencia.",
-      "Condiciones médicas comparadas y agotamiento psíquico.",
-      "Vida media y ciclo reproductivo.",
-      "Normas de consentimiento por comunidades.",
-      "Idiomas y procedimientos de telepatía ritual."
-    ],
-    "conflict_policy": "La telepatía jamás sustituye investigación: sensibilidad a una emoción no prueba veracidad. La ficha anterior dependía en exceso de MA_BETAZOID; ahora se aportan anclajes de TNG."
-  },
-  "implementation_status": "AUTHORING_ONLY"
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }

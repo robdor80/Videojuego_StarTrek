@@ -7,7 +7,28 @@
   "legacy_profile_ref": "gameplay/species/profiles/jem_hadar_v0.1.json",
   "monograph_ref": "lore/species/monographs/jem_hadar_v0.2.md",
   "research_scope": "TNG_DS9_VOY",
-  "verified_claims": [
+  "domains": {
+    "biology": "Humanoides de crecimiento y maduración acelerados, construidos para función militar bajo ingeniería del Dominio. La invisibilidad o camuflaje personal requiere condiciones del individuo y capacidad registrada; el equipamiento no reemplaza fisiología. No asignar daño fijo por genética.",
+    "lifecycle": "La dependencia de ketracel-white exige inventario, dosis, continuidad logística y consecuencias médicas en estado persistente, no castigo arbitrario. La aceleración de desarrollo no significa que todos compartan una edad idéntica; tampoco significa ausencia absoluta de juicio propio.",
+    "culture": "Juramentos a Fundadores, rangos First/Second y disciplinas de unidad son educación y gobierno militar, no sustituto del carácter. Individuos como Goran'Agar cuestionan determinismo de dependencia y lealtad. Una compañía puede variar por líder, generación y circunstancias.",
+    "language": "El lenguaje militar y códigos jerárquicos son componentes de adiestramiento. Que un soldado hable con un Vorta no lo convierte en intérprete universal ni le otorga autorización diplomática.",
+    "chronology": "El conocimiento de Jem'Hadar para personajes alfa depende de contacto con Gamma y Dominio. Tras campañas de guerra y disponibilidad de white, su operación está vinculada a instalaciones y organizaciones de poder.",
+    "npc_scenarios": [
+      "Un oficial sanitario solo puede diagnosticar abstinencia con datos médicos válidos.",
+      "Una patrulla sin suministro puede emprender decisiones estratégicas diversas; la IA no sentencia cada resultado.",
+      "Un Jem'Hadar que rechaza órdenes necesita una motivación y un historial, no una 'excepción racial' fija."
+    ],
+    "unknowns": [
+      "Distribución de edades y supervivencia natural sin combate.",
+      "Parámetros clínicos precisos de white.",
+      "Reproducción espontánea frente a fabricación.",
+      "Prevalencia real de resistencia a dependencia.",
+      "Causas completas de camuflaje biológico o tecnológico."
+    ],
+    "canon_cautions": "Dependencia bioquímica no implica maldad intrínseca ni alineamiento forzado. No convertir a todos los Jem'Hadar en humanoides de vida extremadamente corta sin evidencias por cohorte."
+  },
+  "implementation_status": "AUTHORING_ONLY",
+  "evidence": [
     {
       "claim_id": "jem_hadar_E01",
       "source_id": "DS9_THE_JEMHADAR",
@@ -63,25 +84,6 @@
       "scope_limit": "Describir la evidencia sin extrapolar una norma biológica o moral a toda la especie."
     }
   ],
-  "domains": {
-    "biology_and_medical_specificity": "Humanoides de crecimiento y maduración acelerados, construidos para función militar bajo ingeniería del Dominio. La invisibilidad o camuflaje personal requiere condiciones del individuo y capacidad registrada; el equipamiento no reemplaza fisiología. No asignar daño fijo por genética.",
-    "lifecycle_identity_and_reproduction": "La dependencia de ketracel-white exige inventario, dosis, continuidad logística y consecuencias médicas en estado persistente, no castigo arbitrario. La aceleración de desarrollo no significa que todos compartan una edad idéntica; tampoco significa ausencia absoluta de juicio propio.",
-    "culture_social_structure_and_variation": "Juramentos a Fundadores, rangos First/Second y disciplinas de unidad son educación y gobierno militar, no sustituto del carácter. Individuos como Goran'Agar cuestionan determinismo de dependencia y lealtad. Una compañía puede variar por líder, generación y circunstancias.",
-    "linguistic_competence_translation_and_privacy": "El lenguaje militar y códigos jerárquicos son componentes de adiestramiento. Que un soldado hable con un Vorta no lo convierte en intérprete universal ni le otorga autorización diplomática.",
-    "historical_chronology_and_contact": "El conocimiento de Jem'Hadar para personajes alfa depende de contacto con Gamma y Dominio. Tras campañas de guerra y disponibilidad de white, su operación está vinculada a instalaciones y organizaciones de poder.",
-    "operational_npc_cases": [
-      "Un oficial sanitario solo puede diagnosticar abstinencia con datos médicos válidos.",
-      "Una patrulla sin suministro puede emprender decisiones estratégicas diversas; la IA no sentencia cada resultado.",
-      "Un Jem'Hadar que rechaza órdenes necesita una motivación y un historial, no una 'excepción racial' fija."
-    ],
-    "unresolved_biology_and_research": [
-      "Distribución de edades y supervivencia natural sin combate.",
-      "Parámetros clínicos precisos de white.",
-      "Reproducción espontánea frente a fabricación.",
-      "Prevalencia real de resistencia a dependencia.",
-      "Causas completas de camuflaje biológico o tecnológico."
-    ],
-    "conflict_policy": "Dependencia bioquímica no implica maldad intrínseca ni alineamiento forzado. No convertir a todos los Jem'Hadar en humanoides de vida extremadamente corta sin evidencias por cohorte."
-  },
-  "implementation_status": "AUTHORING_ONLY"
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "sources/canon_policy.md"
 }
