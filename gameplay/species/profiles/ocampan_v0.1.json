@@ -1,0 +1,105 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "ocampan",
+  "display_name_es": "Ocampano",
+  "status": "LORE01_DLC_DELTA_DOCUMENTED_NOT_MAIN_GAME",
+  "content_availability": {
+    "content_id": "dlc_delta_transwarp",
+    "player_facing_product": "Futuro DLC Cuadrante Delta",
+    "gameplay_spawn_in_main": false,
+    "dlc_not_yet_implemented": true,
+    "gate_ref": "universe/generation/lore01_tng_content_availability_v0.1.json",
+    "requires_dlc_enablement": true,
+    "requires_access_to_delta_context": true,
+    "transwarp_borg_portal": "USER_APPROVED_FUTURE_DLC_CONCEPT_NOT_IMPLEMENTED",
+    "first_observed_reference_year": 2371,
+    "observed_year_not_species_origin": true
+  },
+  "identity": {
+    "common_homeworld_ref": "ocampa",
+    "homeworld_location_requires_astrography_validation": true,
+    "citizenship_and_organization_membership_not_inferred": true
+  },
+  "description_es": "Pueblo humanoide del cuadrante Delta de ciclo vital muy breve en comparación humana; su desarrollo individual no debe regirse por edades humanas.",
+  "morphology": {
+    "body_plan": "humanoid",
+    "observable_traits": [
+      "humanoide",
+      "morfología auricular distintiva según personaje"
+    ],
+    "individual_variation_required": true
+  },
+  "physiology": {
+    "supported_observations": [
+      "La duración vital típica descrita ronda nueve años; no imponer un plazo fatal determinista a cada personaje.",
+      "Algunos individuos muestran habilidades mentales, cuyo alcance no puede generalizarse a toda la especie."
+    ],
+    "development_and_aging": "unknown_unless_stated_in_supported_observation",
+    "reproduction": null,
+    "medical_resolution_is_individual": true
+  },
+  "language": {
+    "language_id": "ocampan",
+    "individual_fluency_not_implied": true,
+    "translation_matrix_depends_on_contact": true
+  },
+  "culture_socialization": {
+    "contextual_profile_ref": "lore/cultures/profiles/OCAMPAN_CULTURAL_PROFILE_v0.1.json",
+    "culture_profile_id": "ocampan_local_context",
+    "automatic_attachment_by_species": false,
+    "known_social_context": [
+      "Sociedades y entornos de cuidado locales condicionan la formación de los individuos.",
+      "No asumir que todo individuo comparte la tutela o educación particular de Kes."
+    ]
+  },
+  "generation_constraints": {
+    "general_main_game_population_eligible": false,
+    "main_game_encounter_spawn_eligible": false,
+    "only_dlc_delta_context": true,
+    "world_state_first": true,
+    "specific_location_source_required": true,
+    "no_border_or_routes_in_this_profile": true,
+    "canonical_individuals_must_remain_unique": true,
+    "character_personality_not_species_driven": true
+  },
+  "npc_and_computer": {
+    "summary_es": "Pueblo humanoide del cuadrante Delta de ciclo vital muy breve en comparación humana; su desarrollo individual no debe regirse por edades humanas.",
+    "context_es": "Cuidar la diferencia entre maduración, edad cronológica, longevidad y desarrollo de capacidades.",
+    "for_main_game": "ONLY_IF_OBSERVER_HAS_VALID_KNOWLEDGE",
+    "default_main_game_profile_exposure": "NOT_SPAWNABLE_WITHOUT_DLC",
+    "contact_information_must_be_acquired": true
+  },
+  "unknowns": [
+    "distribución estadística de longevidad",
+    "capacidades psíquicas por persona",
+    "detalle de desarrollo médico",
+    "costumbres uniformes de todas las comunidades"
+  ],
+  "ai_boundary": [
+    "No generar esta especie en partida principal por aparición aleatoria.",
+    "No convertir a todos los individuos en antagonistas ni dotar de capacidades no verificadas.",
+    "No improvisar viajes, portal transwarp ni infraestructura Borg: funcionalidad fuera de LORE-01."
+  ],
+  "provenance": [
+    {
+      "source_id": "VOY_CARETAKER",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_COLD_FIRE",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_BEFORE_AND_AFTER",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "MA_OCAMPA",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria, no autoridad superior al episodio"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "kazon_sect_context",
+  "status": "LORE01_DLC_AUTHORING_ONLY",
+  "contract_ref": "lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "kazon",
+    "automatic_attachment_by_species": false,
+    "content_scope": "DLC_DELTA_ONLY",
+    "cultural_membership_requires_person_state": true
+  },
+  "historical_context": {
+    "summary_es": "Kazon-Ogla y Kazon-Nistrim pueden mantener vínculos distintos; no crear una cultura monolítica.",
+    "no_auto_history_for_individuals": true
+  },
+  "values_and_norms": [
+    {
+      "norm_es": "Las sectas son organizaciones diferentes: membresía requiere identidad y procedencia.",
+      "strength": "possible_norm",
+      "not_universal": true,
+      "evidence_state": "screen_canon_or_official_supported"
+    },
+    {
+      "norm_es": "Algunos ritos de madurez o nombres son observables en grupos concretos, no automáticamente en toda la población.",
+      "strength": "possible_norm",
+      "not_universal": true,
+      "evidence_state": "screen_canon_or_official_supported"
+    }
+  ],
+  "communication_and_conflict": {
+    "description_es": "Kazon-Ogla y Kazon-Nistrim pueden mantener vínculos distintos; no crear una cultura monolítica.",
+    "encounter_does_not_imply_hostility": true
+  },
+  "authority_and_status": {
+    "organizational_rank_not_species_trait": true,
+    "actual_membership_from_world_state": true
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "comunidad",
+      "ciclo vital",
+      "profesión",
+      "organización local",
+      "crianza",
+      "experiencia individual"
+    ]
+  },
+  "era_variation": {
+    "scope": "voyager_2371_2378",
+    "observed_from_year": 2371,
+    "observed_year_is_not_origin_date": true
+  },
+  "privacy_and_intimacy": {
+    "not_inferred_from_species": true
+  },
+  "unknowns": [
+    "cultura compartida universal",
+    "cronología general de madurez",
+    "longevidad",
+    "filiación individual a secta sin evidencia"
+  ],
+  "gameplay_hooks": [
+    "dlc_contact",
+    "observer_specific_knowledge",
+    "culture_affinity",
+    "local_community_membership"
+  ],
+  "ai_guardrails": [
+    "Nunca adjuntar cultura por especie automáticamente.",
+    "No asignar delitos, enemistad ni cargos a partir del perfil.",
+    "El contenido carece de permiso de generación en juego principal."
+  ],
+  "provenance": [
+    {
+      "source_id": "VOY_CARETAKER",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_INITIATIONS",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_ALLIANCES",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "MA_KAZON",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria, no autoridad superior al episodio"
+    }
+  ]
+}
