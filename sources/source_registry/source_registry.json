@@ -1,6 +1,6 @@
 {
-  "registry_version": "0.37.0",
-  "last_updated": "2026-10-17",
+  "registry_version": "0.38.0",
+  "last_updated": "2026-10-18",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -3423,6 +3423,291 @@
       "publisher": "StarTrek.com",
       "accessed_at": "2026-10-17",
       "notes": "Fuente oficial de referencia e interpretación de episodios retenidos; no sustituye visionado y no deben trasladarse hechos de series excluidas."
+    },
+    {
+      "source_id": "TNG_THE_DRUMHEAD",
+      "source_type": "SCREEN_CANON",
+      "title": "The Drumhead",
+      "work": "The Next Generation",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "TNG_JOURNEYS_END",
+      "source_type": "SCREEN_CANON",
+      "title": "Journey's End",
+      "work": "The Next Generation",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_BY_INFERNOS_LIGHT",
+      "source_type": "SCREEN_CANON",
+      "title": "By Inferno's Light",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_STRANGE_BEDFELLOWS",
+      "source_type": "SCREEN_CANON",
+      "title": "Strange Bedfellows",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_INQUISITION",
+      "source_type": "SCREEN_CANON",
+      "title": "Inquisition",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_INTER_ARMA_ENIM_SILENT_LEGES",
+      "source_type": "SCREEN_CANON",
+      "title": "Inter Arma Enim Silent Leges",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_HONOR_AMONG_THIEVES",
+      "source_type": "SCREEN_CANON",
+      "title": "Honor Among Thieves",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_THE_NAGUS",
+      "source_type": "SCREEN_CANON",
+      "title": "The Nagus",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_BAR_ASSOCIATION",
+      "source_type": "SCREEN_CANON",
+      "title": "Bar Association",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_THE_CIRCLE",
+      "source_type": "SCREEN_CANON",
+      "title": "The Circle",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_THE_SIEGE",
+      "source_type": "SCREEN_CANON",
+      "title": "The Siege",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_RAPTURE",
+      "source_type": "SCREEN_CANON",
+      "title": "Rapture",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_THE_COLLABORATOR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Collaborator",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_SECOND_SKIN",
+      "source_type": "SCREEN_CANON",
+      "title": "Second Skin",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_CIVIL_DEFENSE",
+      "source_type": "SCREEN_CANON",
+      "title": "Civil Defense",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_FOR_THE_CAUSE",
+      "source_type": "SCREEN_CANON",
+      "title": "For the Cause",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_RETURN_TO_GRACE",
+      "source_type": "SCREEN_CANON",
+      "title": "Return to Grace",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_THE_SHIP",
+      "source_type": "SCREEN_CANON",
+      "title": "The Ship",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "DS9_BODY_PARTS",
+      "source_type": "SCREEN_CANON",
+      "title": "Body Parts",
+      "work": "Deep Space Nine",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "TOS_ARENA",
+      "source_type": "SCREEN_CANON",
+      "title": "Arena",
+      "work": "The Original Series",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "TOS_THE_THOLIAN_WEB",
+      "source_type": "SCREEN_CANON",
+      "title": "The Tholian Web",
+      "work": "The Original Series",
+      "season": null,
+      "episode": null,
+      "url": null,
+      "accessed_at": "2026-10-18",
+      "notes": "LORE-01 B: anclaje de investigación por episodio del corpus conservado, sin verificación escena-a-escena ni transcripción literal."
+    },
+    {
+      "source_id": "ST_OFFICIAL_SECTION31_INQUISITION",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "20 Years Later: DS9's Inquisition",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/20-years-later-ds9s-inquisition",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ORION_CRIME",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "One Trek Mind: Star Trek and the Worlds of Organized Crime",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/one-trek-mind-trek-organized-crime",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULAN_TAL_SHIAR",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Most Influential Tal Shiar Moments",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-most-influential-tal-shiar-moments-ranked",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_BREEN_EXPLAINER",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Who Are the Breen?",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-breen-explainer",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DS9_TURNING_POINT",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Deep Space Nine's Two-Part Turning Point",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/ds9s-two-part-turning-point",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_STARFLEET_INTELLIGENCE_OPERATIVES",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Starfleet Intelligence Operatives",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/starfleet-intelligence-operatives",
+      "accessed_at": "2026-10-18",
+      "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
     }
   ]
 }
