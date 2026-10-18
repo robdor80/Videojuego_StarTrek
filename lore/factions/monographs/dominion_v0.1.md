@@ -64,7 +64,7 @@ Escena: un mercante Karemma propone contrato comercial mientras un Vorta le exig
 | Fuente registrada | Afirmación contextual contrastable | Nivel |
 |---|---|---|
 | `DS9_THE_JEMHADAR` | El Dominio advierte violentamente contra la expansión desde el agujero de gusano. | SCREEN_CANON · HIGH |
-| `DS9_SEARCH_PART_I` | Los Fundadores y su control sobre el Dominio se vuelven parte del conocimiento de protagonistas. | SCREEN_CANON · HIGH |
+| `DS9_THE_SEARCH_II` | Los Fundadores y su control sobre el Dominio se vuelven parte del conocimiento de protagonistas. | SCREEN_CANON · HIGH |
 | `DS9_THE_SHIP` | El mando Vorta y Jem'Hadar aparece ligado a misión y cadena de obediencia. | SCREEN_CANON · HIGH |
 | `DS9_TREACHERY_FAITH_AND_THE_GREAT_RIVER` | Un Vorta puede mostrar divergencias individuales frente a órdenes del poder al que sirve. | SCREEN_CANON · HIGH |
 | `DS9_WHAT_YOU_LEAVE_BEHIND` | La conclusión de guerra altera la situación del Dominio y sus subordinados. | SCREEN_CANON · HIGH |

@@ -50,7 +50,6 @@ Conservar esta ficha extensa en incertidumbres, no rellenarla con nombres invent
 
 | Fecha | Contexto histórico | Fuente |
 |---|---|---|
-| 2369 | Referencia cultural o diplomática a Breen: no deducir régimen institucional completo. | `DS9_EMISSARY` |
 | 2375 | Acuerdo de alianza con Dominio y cambio militar trascendente. | `DS9_STRANGE_BEDFELLOWS` |
 | 2375 | Tecnología de disipación de energía afecta campaña de guerra. | `DS9_THE_CHANGING_FACE_OF_EVIL` |
 | 2375 | Final de guerra contra Dominio no aporta constitución detallada de Breen. | `DS9_WHAT_YOU_LEAVE_BEHIND` |

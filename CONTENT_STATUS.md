@@ -553,11 +553,11 @@ The Sensors vertical slice remains preserved and ready for later UX/runtime cont
 
 ## LORE-01 — Base Galáctica (TNG / DS9 / VOY)
 
-| Apartado | Estado al 17-10-2026 | Alcance real |
+| Apartado | Estado al 18-10-2026 | Alcance real |
 |---|---|---|
 | A — Especies y culturas | ✅ COMPLETE | PR #25 fusionada en `main` (2026-10-17), commit `abcc4c77`. 25 monografías, 25 libros de evidencias, 10 culturas adicionales y 8 lenguas catalogadas; alcance documental validado. Lagunas del canon y consumo runtime siguen explícitos. |
-| A.1 — Comportamiento cultural IA/NPC | 🟧 NEEDS_REVIEW | 25 guías contextuales, contrato antiestereotipos, filtros culturales, casos de NPC y CI propia en rama `lore/01-a1-npc-cultural-behavior`; **pendiente revisión y PR**. No reemplaza la personalidad individual ni actualiza CoreRPG/UE5. |
-| B — Civilizaciones/potencias | ⬜ TODO | No iniciado por regla secuencial. |
+| A.1 — Comportamiento cultural IA/NPC | ✅ COMPLETE | PR #26 fusionada en `main` (2026-10-18), commit `a25122fa`; 25 guías, contrato antiestereotipos, escenarios contrastados y CI. Es investigación/guía de autoría, **no** motor de personalidad ejecutable en UE5/CoreRPG. |
+| B — Civilizaciones/potencias | 🟧 NEEDS_REVIEW | 16 monografías político-institucionales y 16 libros de evidencias; índice temporal, casos NPC y auditoría de canon; revisión de PR pendiente. Los datos documentales **no** implementan gobiernos, leyes ni relaciones en CoreRPG/UE5. |
 | C — Cartografía/astrogeografía | ⬜ TODO | No iniciado. |
 | D — Relaciones diplomáticas | ⬜ TODO | No iniciado. |
 | E — Información operativa transversal | ⬜ TODO | No iniciado. |
