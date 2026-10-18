@@ -87,7 +87,7 @@ class Lore01BTests(unittest.TestCase):
 
     def test_false_coup_is_not_history(self):
         tr = v.read_json(v.ROOT / "lore/factions/evidence/tzenkethi_polity_v0.1.json")
-        self.assertIn("falsa", tr["domains"]["identidad_historia"].lower())
+        self.assertIn("falsedad", tr["domains"]["identidad_historia"].lower())
 
     def test_delta_excluded(self):
         self.assertFalse(set(e["civilization_id"] for e in self.index["main_game_entries"]) & v.DELTA)
