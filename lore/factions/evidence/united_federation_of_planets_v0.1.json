@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "united_federation_of_planets",
+  "display_name_es": "Federación Unida de Planetas",
+  "entity_kind": "estado_federal",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "gameplay/diplomacy/federation_political_state.json",
+  "monograph_ref": "lore/factions/monographs/united_federation_of_planets_v0.1.md",
+  "domains": {
+    "identidad_historia": "Federación política multiestatal surgida en 2161, no pueblo biológico ni sinónimo de Tierra. Durante TNG la exploración y la cooperación conviven con tensiones fronterizas y conflictos internos. En DS9, el tratado de la frontera cardassiana, el caso Maquis, la infiltración fundadora y la Guerra del Dominio someten a prueba sus principios; el momento de la campaña determina cuáles han sucedido.",
+    "gobierno_instituciones": "La presidencia y el Consejo de la Federación expresan autoridad civil; la Flota Estelar está subordinada institucionalmente pero no es el gobierno. Existen gobiernos y competencias de mundos miembros. La distribución exacta de escaños, procesos electorales, duración de mandatos y procedimientos de adhesión no quedan fijados por este dossier; `lore/federation/government/federation_government.json` conserva la base heredada y sus cautelas.",
+    "sociedad_ciudadania": "Federación, ciudadanía, procedencia, especie y afiliación a Flota son ejes distintos. Hay residentes no ciudadanos, miembros de mundos federados, colonos fronterizos y oficiales procedentes de culturas diferentes; la oposición al tratado cardassiano no convierte automáticamente a un habitante en Maquis. Un oficial ferengi como Nog no implica que la Alianza Ferengi sea miembro de la Federación.",
+    "ley_justicia": "Derechos, garantías y disciplina aparecen en decisiones concretas, como el examen de libertades y acusaciones en «The Drumhead» o medidas de excepción discutidas en «Homefront» y «Paradise Lost». No inferir un código penal único, jurisdicción ilimitada de capitanes ni garantías procesales universales basadas en esos casos. Investigar el estatuto aplicable antes de cualquier arresto, juicio, extradición o intervención.",
+    "economia": "Existe abundancia material relativa en ciertos servicios federales y uso extensivo de replicación; eso no demuestra ausencia universal de propiedad, comercio, crédito, escasez o contraprestaciones fuera de esos contextos. La economía de todos los mundos miembros no está cuantificada. El contacto comercial con ferengi y otros estados exige jurisdicción contractual y situación local.",
+    "defensa_seguridad": "La Flota Estelar tiene misiones de exploración, ciencia, auxilio y defensa. Inteligencia de la Flota y aparatos clandestinos no deben confundirse con la cadena de mando. La crisis de Leyton muestra el peligro de militarización interna; las amenazas reales no legitiman automáticamente poderes extraordinarios. Permisos y órdenes se verifican por puesto, misión, fecha y estado de excepción autorizado.",
+    "diplomacia": "Los Acuerdos de Khitomer sustentan la cooperación con Klingon durante TNG, pero el episodio «The Way of the Warrior» altera esa situación en 2372. La relación con Cardassia tras la ocupación de Bajor y el litigio Maquis no es idéntica a la guerra de 2373. La alianza romulana posterior tampoco retrocede a 2364. No convertir estas observaciones en reglas definitivas de LORE-01 D.",
+    "conflictos_internos": "Las discrepancias por reasentamientos, el movimiento Maquis y el intento de golpe de Leyton revelan oposición y abuso institucional sin negar la identidad federal. No asignar a cualquier colono, almirante o ciudadano opiniones predeterminadas. Los derechos de los individuos y la responsabilidad del poder político pueden chocar incluso dentro de la misma institución.",
+    "flota_estar": "Un capitán aplica órdenes legítimas de la Flota y limitaciones civiles, pero no puede firmar por sí solo un tratado federal. Jurisdicción de una colonia federada, instalación bajorana, mundo no alineado o zona pactada requiere verificación independiente. Ni la Directiva Primera ni el uniforme conceden inmunidad frente a la autoridad del territorio anfitrión.",
+    "videojuego": "Ejemplo: un delegado federal exige evacuar colonos mientras un oficial defiende sus derechos; registrar documento, autoridad, jurisdicción, motivaciones y conocimiento; la IA puede dialogar pero no promulga leyes ni desplaza poblaciones. El Consejo, las misiones navales y los acuerdos son entidades independientes de los deseos individuales. La cronología de 2373 no se aplica a partidas nacidas en 2364."
+  },
+  "chronology": [
+    {
+      "year": 2161,
+      "claim_es": "Fundación histórica; fuente retenida sobre fecha; sin utilizar como fuente primaria los episodios de Enterprise excluidos.",
+      "source_ids": [
+        "TNG_5X17_THE_OUTCAST"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2364,
+      "claim_es": "Alianza operativa con el Imperio Klingon propia de la época TNG, no guerra permanente.",
+      "source_ids": [
+        "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2370,
+      "claim_es": "Surgen conflictos fronterizos y Maquis tras acuerdos con Cardassia.",
+      "source_ids": [
+        "DS9_THE_MAQUIS_I"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2372,
+      "claim_es": "Crisis de seguridad y golpe frustrado de Leyton durante temor a infiltración.",
+      "source_ids": [
+        "DS9_PARADISE_LOST"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Inicio de guerra abierta con fuerzas del Dominio y Cardassia.",
+      "source_ids": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2374,
+      "claim_es": "Entrada romulana en coalición bélica tras la crisis de Vreenak.",
+      "source_ids": [
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Oficial humano nacido fuera de Tierra, con ciudadanía federal y desacuerdo legítimo con su almirante.",
+    "Comerciante no federado en una estación administrada por la Flota bajo soberanía ajena.",
+    "Colono crítico con el tratado fronterizo que no pertenece al Maquis."
+  ],
+  "unknowns": [
+    "Texto constitucional completo y reparto exacto de escaños del Consejo.",
+    "Sistema electoral y mandatos universales de los órganos federales.",
+    "Política económica homogénea y presupuesto de todos los miembros.",
+    "Mecanismos jurídicos completos de ciudadanía, extradición y adhesión."
+  ],
+  "evidence": [
+    {
+      "source_id": "TNG_THE_DRUMHEAD",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El procedimiento ante sospechas de infiltración ilustra frenos y riesgos de abuso de autoridad.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_HOMEFRONT",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Una amenaza de infiltración genera propuestas excepcionales de seguridad interior.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_PARADISE_LOST",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La crisis de Leyton demuestra que la jerarquía militar no sustituye la autoridad política.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_MAQUIS_I",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El conflicto de colonos y tratado fronterizo no representa a toda la Federación.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_CALL_TO_ARMS",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El estallido del conflicto bélico cambia obligaciones y objetivos de la Flota.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "sources/canon_policy.md",
+    "sources/provenance_policy.md",
+    "ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}

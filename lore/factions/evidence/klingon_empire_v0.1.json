@@ -1,0 +1,129 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "klingon_empire",
+  "display_name_es": "Imperio Klingon",
+  "entity_kind": "imperio_interestelar",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "gameplay/diplomacy/major_faction_catalogue.json",
+  "monograph_ref": "lore/factions/monographs/klingon_empire_v0.1.md",
+  "domains": {
+    "identidad_historia": "Potencia con instituciones y grandes Casas que anteceden a TNG. La sucesión tras la muerte de K'mpec, la guerra civil vinculada a Duras y la posterior rivalidad Gowron–Martok muestran una historia política concreta. Sus relaciones con la Federación se transforman en 2372 y durante la Guerra del Dominio; no extrapolar una «mentalidad klingon» fija de esos acontecimientos.",
+    "gobierno_instituciones": "Canciller, Alto Consejo y grandes Casas constituyen centros de poder que a veces discrepan. La designación del sucesor puede implicar árbitros, desafíos, legitimación política y autoridad de facciones; Worf y Martok no prueban un algoritmo sucesorio aplicable en cualquier circunstancia. El emperador simbólico Kahless en DS9 no reemplaza sin más la jefatura ejecutiva del canciller.",
+    "sociedad_ciudadania": "Linaje, adopción, casa, rango, honor y ciudadanía no son el mismo atributo. Worf, criado con humanos y oficial federado, es evidencia de identidad plural. Existen civiles y oficiales con posiciones encontradas sobre las guerras imperiales. No convertir honor en conducta garantizada, ni confundir una Casa con ciudadanía imperial o con la especie klingon.",
+    "ley_justicia": "Deshonra familiar, impugnaciones políticas, duelos y prácticas militares se observan en casos concretos. No derivar de ellos tribunal universal, penas estandarizadas ni autorización automática para asesinar a un adversario. Verificar si un desafío se reconoce en el foro, quién puede formularlo, qué autoridad lo acepta y qué hechos están establecidos.",
+    "economia": "El imperio dispone de flota, recursos, casas con patrimonio e intercambio; el canon retenido no documenta exhaustivamente impuestos, moneda común, propiedad de industrias ni clases sociales cuantificadas. Evitar convertir la guerra o la predilección de ciertos oficiales por el combate en ausencia de producción civil o comercio.",
+    "defensa_seguridad": "La Fuerza de Defensa Klingon opera bajo mandos militares y objetivos imperiales; las Casas pueden tener intereses propios. El capitán de una nave no goza de autoridad ilimitada sobre todo el Imperio. En «Soldiers of the Empire» se observan moral de tripulación, capacidad de mando y tensiones que no dependen de una estadística racial.",
+    "diplomacia": "Alianza habitual con Federación en TNG; guerra contra Cardassia y ruptura política con Federación en «The Way of the Warrior»; cooperación renovada frente al Dominio posteriormente. Las coaliciones no suprimen disputas de Casas ni significan que cada klingon admire a cada humano.",
+    "conflictos_internos": "La crisis Duras, el peso de Gowron y la pugna con Martok son hechos políticos de individuos y estructuras, no manifestaciones inevitables de una esencia de especie. La posición social de Martok y prejuicios aristocráticos aparecen en el canon; los intereses de las Casas no se alinean automáticamente con las necesidades del canciller.",
+    "flota_estar": "En un contacto naval, separar órdenes del Alto Consejo, instrucciones de capitán, asuntos de Casa y conducta de un individuo. Un oficial federado de especie klingon responde a su cadena de mando real. La Federación no puede intervenir libremente en un litigio interno por hablar klingon su interlocutor.",
+    "videojuego": "Posibles encargos: mediación solicitada entre Casas, verificación de un salvoconducto militar, salvamento conjunto y tensión por una orden de Gowron. Los eventos requieren fecha, representantes, documentos y jurisdicción. La IA puede representar discrepancias y honor; un desafío no cambia por sí solo la jefatura imperial."
+  },
+  "chronology": [
+    {
+      "year": 2367,
+      "claim_es": "Conflicto sucesorio y elección de Gowron en entorno del Alto Consejo.",
+      "source_ids": [
+        "TNG_REUNION"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2368,
+      "claim_es": "Guerra civil de Casas y apoyo externo romulano documentado.",
+      "source_ids": [
+        "TNG_REDEMPTION"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2372,
+      "claim_es": "Expansión contra Cardassia y deterioro de relación federada.",
+      "source_ids": [
+        "DS9_THE_WAY_OF_THE_WARRIOR"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Recomposición de alianza ante amenaza del Dominio, no restitución retroactiva.",
+      "source_ids": [
+        "DS9_BY_INFERNOS_LIGHT"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Gowron muere y Martok llega al cargo tras decisión y desafío de Worf.",
+      "source_ids": [
+        "DS9_TACKING_INTO_THE_WIND"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Guerrero leal a Martok pero crítico con Gowron antes de 2375.",
+    "Ciudadano klingon al servicio de la Flota Estelar, sin ciudadanía imperial acreditada.",
+    "Comerciante klingon ajeno a una disputa de Casas."
+  ],
+  "unknowns": [
+    "Constitución integral y atribuciones de cada Casa en todas las épocas.",
+    "Codificación y competencia de juzgados civiles comunes.",
+    "Moneda, presupuestos y régimen fiscal imperial.",
+    "Normas universales de desafío fuera de los sucesos observados."
+  ],
+  "evidence": [
+    {
+      "source_id": "TNG_SINS_OF_THE_FATHER",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La identidad, casas y sanciones políticas pueden afectar a toda una familia.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "TNG_REUNION",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La sucesión de K'mpec y el ascenso de Gowron requieren legitimación del Alto Consejo.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "TNG_REDEMPTION",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Los intereses de casas enfrentadas arrastran al Imperio a guerra civil.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_WAY_OF_THE_WARRIOR",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El gobierno imperial redefine su postura estratégica frente a Cardassia y Federación.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_TACKING_INTO_THE_WIND",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Una crisis de mando durante la guerra culmina en sustitución del canciller.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "sources/canon_policy.md",
+    "sources/provenance_policy.md",
+    "ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}
