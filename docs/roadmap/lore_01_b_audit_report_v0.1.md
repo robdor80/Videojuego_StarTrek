@@ -33,3 +33,19 @@ Los regímenes exactos de elecciones, tribunales, presupuestos, sucesión y grad
 Solo documentos Markdown, libros JSON, ejemplos autorales y validador CI. `CONTENT_STATUS.md` se regulariza por la fusión previa A.1. No se cambia código de generación del universo, CoreRPG, UE5 ni acuerdos de las ideas. No autorizar `COMPLETE` hasta revisión del propietario, comprobación CI, fusión manual y auditoría de `main`.
 
 **Antes de LORE-01 C**: obtener autorización expresa del propietario. Si se requieren datos puntuales de un tratado, proceso judicial o cronología por fecha exacta antes de hacer una misión, verificar escenas y registrar resultado con fuente primaria; la base actual es extensa pero no inspección fotograma por fotograma.
+
+## 6. Verificación CI reproducible (18-10-2026)
+
+**Primera ejecución de la nueva CI:** `39108683101` falló por una prueba demasiado literal: buscaba «falsa» cuando el expediente tzenkethi correctamente decía «falsedad». El **validador de expedientes ya pasaba**. Se corrigió el test, sin cambiar el hecho histórico.
+
+**Ejecuciones posteriores verdes verificadas para HEAD `8fad163ecf79f36d1df8961abcb4532ba590b7a7`:**
+
+- LORE-01 B PR: [GitHub Actions #39108736391](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39108736391), **SUCCESS**.
+- LORE-01 B push: [GitHub Actions #39108732447](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39108732447), **SUCCESS**.
+- LORE-01 A documental: [GitHub Actions #39108736375](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39108736375), **SUCCESS**.
+- `validate_lore01_b.py` -> 16 expedientes, referencias, ámbitos, identidades y guardas DLC coherentes.
+- `test_lore01_b.py`: **14/14**; las seis suites de validación/regresión ejecutadas bajo el workflow nuevo incluyen A básica **8/8**, A profunda **7/7**, A.1 **11/11**, total **40/40 tests**.
+- Fuentes `sources/source_registry/source_registry.json`: **421** después de añadir 27 sin borrar las 394 iniciales.
+- La PR #27 está en **NEEDS_REVIEW** hasta la revisión/fusión expresas del propietario. Aunque las pruebas documentales son verdes, ninguna compila UE5 ni prueba el comportamiento runtime de CoreRPG; tampoco es auditoría audiovisual escena a escena.
+
+En cada nuevo commit de la rama se repite CI antes del merge. La ejecución consignada corresponde al commit identificado y no certifica automáticamente futuros cambios.
