@@ -11,11 +11,11 @@
       "destination_location_id": "alpha_centauri",
       "original_distance_ly": 4.395,
       "derivation_type": "real_astronomy",
-      "source_ref": "real_star",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "real_star"
     },
     {
       "case_id": "L01C_EDGE_EARTH_VULCAN",
@@ -24,11 +24,11 @@
       "destination_location_id": "vulcan_system",
       "original_distance_ly": 16.454,
       "derivation_type": "real_astronomy",
-      "source_ref": "40_eridani_reference",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "40_eridani_reference"
     },
     {
       "case_id": "L01C_EDGE_EARTH_SIGMA_DRACONIS",
@@ -37,11 +37,11 @@
       "destination_location_id": "sigma_draconis",
       "original_distance_ly": 18.81,
       "derivation_type": "real_astronomy",
-      "source_ref": "real_star",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "real_star"
     },
     {
       "case_id": "L01C_EDGE_K7_KLINGON_BORDER",
@@ -50,11 +50,11 @@
       "destination_location_id": "klingon_border_near_k7",
       "original_distance_ly": 3.26,
       "derivation_type": "screen_direct",
-      "source_ref": "TOS_THE_TROUBLE_WITH_TRIBBLES",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "TOS_THE_TROUBLE_WITH_TRIBBLES"
     },
     {
       "case_id": "L01C_EDGE_GALORNDON_CORE_ROMULAN_NEUTRAL_ZONE",
@@ -63,11 +63,11 @@
       "destination_location_id": "romulan_neutral_zone_near_galorndon",
       "original_distance_ly": 0.5,
       "derivation_type": "screen_direct",
-      "source_ref": "TNG_THE_ENEMY",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "TNG_THE_ENEMY"
     },
     {
       "case_id": "L01C_EDGE_BAJOR_CARDASSIA_PRIME",
@@ -76,11 +76,11 @@
       "destination_location_id": "cardassia_prime",
       "original_distance_ly": 5.25,
       "derivation_type": "official_reference_direct",
-      "source_ref": "DS9_TECHNICAL_MANUAL",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "DS9_TECHNICAL_MANUAL"
     },
     {
       "case_id": "L01C_EDGE_BAJOR_BADLANDS",
@@ -89,11 +89,11 @@
       "destination_location_id": "badlands",
       "original_distance_ly": 0.449,
       "derivation_type": "warp_time_calculation",
-      "source_ref": "DS9_DEFIANT",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Baja confianza; no convertir a ETA fija."
+      "remarks": "Baja confianza; no convertir a ETA fija.",
+      "legacy_underlying_source": "DS9_DEFIANT"
     },
     {
       "case_id": "L01C_EDGE_BAJOR_FERENGINAR",
@@ -102,11 +102,11 @@
       "destination_location_id": "ferenginar",
       "original_distance_ly": 65.5,
       "derivation_type": "official_map",
-      "source_ref": "DS9_TECHNICAL_MANUAL",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "DS9_TECHNICAL_MANUAL"
     },
     {
       "case_id": "L01C_EDGE_BAJOR_TRILL",
@@ -115,11 +115,11 @@
       "destination_location_id": "trill",
       "original_distance_ly": 30,
       "derivation_type": "warp_time_calculation",
-      "source_ref": "DS9_EQUILIBRIUM",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Baja confianza; no convertir a ETA fija."
+      "remarks": "Baja confianza; no convertir a ETA fija.",
+      "legacy_underlying_source": "DS9_EQUILIBRIUM"
     },
     {
       "case_id": "L01C_EDGE_BAJOR_STARBASE_375",
@@ -128,11 +128,11 @@
       "destination_location_id": "starbase_375",
       "original_distance_ly": 30.8,
       "derivation_type": "official_map",
-      "source_ref": "DS9_TECHNICAL_MANUAL",
       "interpretation": "REFERENCE_DISTANCE_WITH_PROVENANCE",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Distancia solo en los términos de su fuente de origen."
+      "remarks": "Distancia solo en los términos de su fuente de origen.",
+      "legacy_underlying_source": "DS9_TECHNICAL_MANUAL"
     },
     {
       "case_id": "L01C_BAJORAN_WORMHOLE",
@@ -141,11 +141,11 @@
       "destination_location_id": "bajoran_wormhole_gamma",
       "original_distance_ly": null,
       "derivation_type": "SCREEN_ESTABLISHED_SPECIAL_TRAVERSAL",
-      "source_ref": "DS9_EMISSARY",
       "interpretation": "NON_WARP_GATED_SPECIAL_CONNECTION",
       "map_image_used_to_calculate_distance": false,
       "runtime_override_allowed": false,
-      "remarks": "Descubrimiento en 2369; la fecha, el conocimiento disponible y el estado del mundo deciden acceso."
+      "remarks": "Descubrimiento en 2369; la fecha, el conocimiento disponible y el estado del mundo deciden acceso.",
+      "legacy_underlying_source": "DS9_EMISSARY"
     }
   ],
   "prohibited_edges": [

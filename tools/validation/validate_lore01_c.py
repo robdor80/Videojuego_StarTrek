@@ -108,8 +108,8 @@ def validate():
         require(row["origin_location_id"] == old["origin_location_id"]
                 and row["destination_location_id"] == old["destination_location_id"], "Arista redirigida")
         require(row["map_image_used_to_calculate_distance"] is False, "Distancia falsa de píxeles")
-        require(row["source_ref"] == old["underlying_source"], "Procedencia de distancia alterada")
-        require(row["source_ref"] in registry or row["source_ref"] in {"real_star", "40_eridani_reference"},
+        require(row["legacy_underlying_source"] == old["underlying_source"], "Procedencia de distancia alterada")
+        require(row["legacy_underlying_source"] in registry or row["legacy_underlying_source"] in {"real_star", "40_eridani_reference"},
                 "Fuente heredada de distancia desconocida")
     wormhole = next(x for x in routes["cases"] if x["case_id"] == "L01C_BAJORAN_WORMHOLE")
     require(wormhole["original_distance_ly"] is None

@@ -37,8 +37,13 @@ La PR #27 de LORE-01 B figura **merged** en `main` mediante `b1c29b6d3ddda36e2b0
 ## Protección DLC y canon
 Un visor puede mostrar la Vía Láctea y la historia de Voyager sin otorgar al jugador conocimiento secreto ni acceso material al cuadrante Delta. La cronología solo inicializa la campaña; desde ese instante manda el estado emergente. No inventar gobiernos, rutas ocultas, límites ni guerras para “rellenar” el mapa.
 
-## Resultados de CI
-Rellenar únicamente tras comprobar las ejecuciones de GitHub Actions del HEAD final.
+## Resultados de CI documentados (HEAD auditado `70a61ccc36dedd1253e9316dbe798e779cb8244f`)
+- [Workflow C PR #39125179850](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39125179850): **SUCCESS**.
+- [Workflow C push #39125156967](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39125156967): **SUCCESS**.
+- [Workflow A PR #39125179804](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39125179804): **SUCCESS**.
+- [Workflow B PR #39125179890](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39125179890): **SUCCESS**.
+- Log C confirmado: **20/20 casos nuevos + 40/40 regresiones anteriores** (A 8, A profundidad 7, A.1 11, B 14); **60/60 pruebas** y validadores OK.
+- El commit final posterior solo normaliza la denominación `legacy_underlying_source` para evitar confundir una pista de astronomía con un ID de fuente registrada. **Revalidar CI del nuevo HEAD antes del merge.**
 
 ## Criterio de cierre
 Revisar los archivos, confirmar que CI y pruebas de A/A.1/B pasan, verificar derechos y fuentes y **fusionar únicamente por decisión del propietario**. No iniciar LORE-01 D en esta rama.
