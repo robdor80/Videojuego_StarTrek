@@ -1,0 +1,155 @@
+{
+  "schema_version": "0.1.0",
+  "policy": "OPEN_DISCREPANCIES_ARE_NOT_AUTOMATICALLY_RECONCILED",
+  "entries": [
+    {
+      "issue_id": "MAP_PROJECTION_VS_3D",
+      "topic": "Mapas 2D vs geometría espacial tridimensional",
+      "map_ids": [
+        "CHAT_MAP_01_FEDERATION_PANELS",
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "DO_NOT_DERIVE_COORDINATES",
+      "analysis": "No hay eje Z o proyección calibrada; prohibido calcular distancias por píxeles.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "SOL_ALPHA_BETA",
+      "topic": "Sol aparece cerca de frontera Alfa/Beta en mapas",
+      "map_ids": [
+        "CHAT_MAP_02_GALAXY_SCHEMATIC",
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "QUADRANT_UNRESOLVED",
+      "analysis": "No forzar pertenencia unilateral al cuadrante a falta de fuente de proyección y definición.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "POLITICAL_MAP_UNDATED",
+      "topic": "Colores de territorios sin una fecha política única",
+      "map_ids": [
+        "CHAT_MAP_01_FEDERATION_PANELS",
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "REQUIRE_TEMPORAL_POLITICAL_OVERLAY",
+      "analysis": "Khitomer, Bajor, DMZ y Guerra del Dominio no son simultáneos.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "REFERENCE_SECTOR_VS_FAN_GRID",
+      "topic": "Cuadrícula fan incompatible con esquema local Mandel 20 ly",
+      "map_ids": [
+        "CHAT_MAP_03_SECTOR_FAN_GRID"
+      ],
+      "disposition": "SEPARATE_SCHEMES",
+      "analysis": "Nunca convertir automáticamente sectores fan en designaciones 001-008.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "ALPHA_GAMMA_WORMHOLE",
+      "topic": "Diagrama del agujero de gusano implica atajo topológico, no escala",
+      "map_ids": [
+        "CHAT_MAP_02_GALAXY_SCHEMATIC"
+      ],
+      "disposition": "SPECIAL_CONNECTION_ONLY",
+      "analysis": "No convertir sus 70 000 años-luz rotulados en arista warp ordinaria.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "DELTA_LOCK",
+      "topic": "Voyager y espacio Borg representados en Delta",
+      "map_ids": [
+        "CHAT_MAP_02_GALAXY_SCHEMATIC"
+      ],
+      "disposition": "DLC_RESERVED",
+      "analysis": "La cartografía histórica no desbloquea generación, tránsito o encuentro genérico.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "DISTANCE_FACT_VS_ICON",
+      "topic": "Distancias de mapas y tamaños de iconos",
+      "map_ids": [
+        "CHAT_MAP_01_FEDERATION_PANELS",
+        "CHAT_MAP_02_GALAXY_SCHEMATIC"
+      ],
+      "disposition": "ONLY_EXPLICIT_EVIDENCE",
+      "analysis": "Las etiquetas de distancia requieren fuente propia; el tamaño de iconos es simbólico.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "FAN_POWER_GORN_THOLIAN_TZENKETHI",
+      "topic": "Límites políticos Gorn/Tholian/Tzenkethi dibujados",
+      "map_ids": [
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "UNVERIFIED_FAN_GEOMETRY",
+      "analysis": "La existencia de potencias en canon no valida polígonos fan.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "ROMULAN_NEUTRAL_ZONE_CHRONOLOGY",
+      "topic": "Zona Neutral Romulana vs contorno del Imperio",
+      "map_ids": [
+        "CHAT_MAP_01_FEDERATION_PANELS",
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "TEMPORAL_BORDER_WITH_JURISDICTION",
+      "analysis": "No fusionar Zona Neutral con soberanía, ni ignorar régimen de acceso.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "VULCAN_40_ERIDANI",
+      "topic": "Asociación Vulcano = 40 Eridani en distancias existentes",
+      "map_ids": [
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "LICENSED_OR_INFERRED_NOT_SCREEN_FACT",
+      "analysis": "El propio catálogo anterior advierte que la identificación no queda establecida en pantalla.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    },
+    {
+      "issue_id": "SOURCE_COPYRIGHT",
+      "topic": "Procedencia y derechos desconocidos de imágenes aportadas",
+      "map_ids": [
+        "CHAT_MAP_01_FEDERATION_PANELS",
+        "CHAT_MAP_02_GALAXY_SCHEMATIC",
+        "CHAT_MAP_03_SECTOR_FAN_GRID",
+        "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33"
+      ],
+      "disposition": "METADATA_ONLY",
+      "analysis": "No se versionan imágenes originales ni se presupone permiso de redistribución.",
+      "review_state": "DOCUMENTED_OPEN",
+      "coordinate_override_allowed": false,
+      "canon_promotion_allowed": false
+    }
+  ],
+  "resolution_priority": [
+    "SCREEN_CANON",
+    "OFFICIAL_REFERENCE",
+    "LICENSED_NOVEL_OR_COMIC",
+    "RELIABLE_SECONDARY",
+    "GENERAL_WEB",
+    "INFERRED",
+    "GAME_ADDITION"
+  ]
+}

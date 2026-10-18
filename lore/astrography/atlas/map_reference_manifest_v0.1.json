@@ -1,0 +1,124 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_C",
+  "created_at": "2026-10-18",
+  "original_images_in_public_repository": false,
+  "upload_policy": "METADATA_ONLY_UNTIL_RIGHTS_VERIFIED",
+  "reference_scope": "Mapas proporcionados por el usuario en conversación, no presunciones de titularidad o licencia.",
+  "file_access_note": "Original images available in conversation, not committed to public GitHub; do not use chat image storage paths as durable repository paths.",
+  "maps": [
+    {
+      "map_id": "CHAT_MAP_01_FEDERATION_PANELS",
+      "upload_order": 1,
+      "original_name": "1000013154.jpg",
+      "sha256": "7fc098518dfb9e55ba2c0eda03b3f2d2074cea487232c2d269766ca72fbb57b8",
+      "pixel_size": [
+        1536,
+        1031
+      ],
+      "byte_size": 578744,
+      "title_visible": "United Federation of Planets I / II / III / IV",
+      "creator": "UNKNOWN",
+      "publisher": "UNKNOWN",
+      "website_visible": null,
+      "license_status": "UNVERIFIED",
+      "reference_class": "USER_SUPPLIED_UNVERIFIED_MAP",
+      "geographical_utility": [
+        "member_system_names",
+        "federation_rome_klingon_cardassian_context",
+        "political_color_reference"
+      ],
+      "limitations": [
+        "federation_membership_list_unvalidated",
+        "political_borders_undated",
+        "projection_not_3d_metric"
+      ],
+      "transcription_level": "SELECTIVE_VISUAL_INSPECTION"
+    },
+    {
+      "map_id": "CHAT_MAP_02_GALAXY_SCHEMATIC",
+      "upload_order": 2,
+      "original_name": "1000013153.jpg",
+      "sha256": "49170446a62bd571d94d1257c66a833defc8aad150eb3e7b669db2e5d87715de",
+      "pixel_size": [
+        1536,
+        1152
+      ],
+      "byte_size": 346364,
+      "title_visible": "MILKY WAY GALAXY / STELLAR CARTOGRAPHY",
+      "creator": "UNKNOWN",
+      "publisher": "UNKNOWN",
+      "website_visible": "www.STinSN.com",
+      "license_status": "UNVERIFIED",
+      "reference_class": "USER_SUPPLIED_UNVERIFIED_MAP",
+      "geographical_utility": [
+        "quadrant_orientation",
+        "bajoran_wormhole_pictogram",
+        "voyager_historical_delta_context"
+      ],
+      "limitations": [
+        "voyager_distances_are_labels_not_newly_verified_claims",
+        "diagram_not_stellar_coordinates",
+        "delta_not_unlocked"
+      ],
+      "transcription_level": "SELECTIVE_VISUAL_INSPECTION"
+    },
+    {
+      "map_id": "CHAT_MAP_03_SECTOR_FAN_GRID",
+      "upload_order": 3,
+      "original_name": "1000013155.png",
+      "sha256": "5253cd437cc776fcfea39463816ffdd5f948ceec73de0b7daab909f12c3885fb",
+      "pixel_size": [
+        1904,
+        2269
+      ],
+      "byte_size": 6767699,
+      "title_visible": "Quadrant-symbol sector grid with invented-looking sector names",
+      "creator": "UNKNOWN",
+      "publisher": "UNKNOWN",
+      "website_visible": null,
+      "license_status": "UNVERIFIED",
+      "reference_class": "USER_SUPPLIED_UNVERIFIED_MAP",
+      "geographical_utility": [
+        "example_sector_grid_design",
+        "map_user_interface_ideas",
+        "research_leads_only"
+      ],
+      "limitations": [
+        "sector_names_do_not_become_canon",
+        "schematic_grid_is_not_mandel_20_ly_sector_scheme",
+        "no_automatic_import"
+      ],
+      "transcription_level": "SELECTIVE_VISUAL_INSPECTION"
+    },
+    {
+      "map_id": "CHAT_MAP_04_SHAKAAR_ALPHA_BETA_V33",
+      "upload_order": 4,
+      "original_name": "1000013152.jpg",
+      "sha256": "2a56d1cfc3cf2fb966093d3fd76d5e70f08c2c01856ee80ca3d94eeb404f7375",
+      "pixel_size": [
+        1536,
+        1206
+      ],
+      "byte_size": 533712,
+      "title_visible": "Shakaar's Alpha/Beta Map v3.3",
+      "creator": "Shakaar (attribution in map title; original creator permission not established)",
+      "publisher": "FAN_MAP",
+      "website_visible": "https://brilliantmaps.com/star-trek-map/",
+      "license_status": "UNVERIFIED",
+      "reference_class": "FAN_MAP_RESEARCH_LEAD",
+      "geographical_utility": [
+        "candidate_name_inventory",
+        "regional_visual_crosscheck",
+        "minor_power_discovery_leads"
+      ],
+      "limitations": [
+        "fan_composite_not_screen_canon",
+        "map_colors_not_temporal_government_states",
+        "system_positions_not_verified",
+        "unlicensed_copy_not_committed"
+      ],
+      "transcription_level": "SELECTIVE_VISUAL_INSPECTION"
+    }
+  ]
+}

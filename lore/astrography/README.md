@@ -1,5 +1,7 @@
 # Astrography — gameplay-first model
 
+> **LORE-01 C (TNG/DS9/VOY):** [Atlas documental y referencias comparadas](atlas/README.md). Este índice no reemplaza los contratos de navegación.
+
 Astrography exists to answer player-facing operational questions:
 
 - Where is the destination?

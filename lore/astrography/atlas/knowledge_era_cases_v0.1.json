@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "DOCUMENTARY_SCENARIOS_NOT_LIVE_EVENTS",
+  "baseline_state_ref": "gameplay/exploration/astrographic_knowledge_state.json",
+  "campaign_initializer_ref": "gameplay/exploration/campaign_astrography_initialization.json",
+  "cases": [
+    {
+      "case_id": "PIKE_BEFORE_WORMHOLE",
+      "era": "pike",
+      "temporal_window": "pre_2369",
+      "subject_location_id": "bajoran_wormhole_gamma",
+      "auto_visible": false,
+      "expected_behavior": "La tripulación no puede consultar un corredor estratégico descubierto décadas después.",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "KIRK_ROMULAN_NEUTRAL",
+      "era": "kirk",
+      "temporal_window": "2266_onwards",
+      "subject_location_id": "romulan_neutral_zone_near_galorndon",
+      "auto_visible": true,
+      "expected_behavior": "Acceso sujeto a carta y contexto de la misión; no a mapa político actual.",
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "KIRK_DELTA_RESERVED",
+      "era": "kirk",
+      "temporal_window": "all",
+      "subject_location_id": "delta_quadrant_caretaker_arrival_region",
+      "auto_visible": false,
+      "expected_behavior": "Reserva de DLC; la referencia cartográfica no habilita la ruta.",
+      "source_refs": [
+        "VOY_CARETAKER"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "TNG_2364_WORMHOLE_UNKNOWN",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "before_2369",
+      "subject_location_id": "bajoran_wormhole_gamma",
+      "auto_visible": false,
+      "expected_behavior": "No filtrar al jugador el hallazgo de DS9 antes de la cronología correspondiente.",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "DS9_POST_2369_KNOWLEDGE_DEPENDENT",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "2369_or_later",
+      "subject_location_id": "bajoran_wormhole_gamma",
+      "auto_visible": null,
+      "expected_behavior": "Puede estar catalogado, pero la base de datos, autorización y noticias disponibles siguen importando.",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "DS9_BAJOR_SOVEREIGNTY",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "2369_onwards",
+      "subject_location_id": "deep_space_9",
+      "auto_visible": null,
+      "expected_behavior": "Administración de la estación por Flota Estelar no cambia soberanía bajorana.",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "TNG_ROMULAN_NEUTRAL",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "2364_onwards",
+      "subject_location_id": "romulan_neutral_zone_near_galorndon",
+      "auto_visible": null,
+      "expected_behavior": "Frontera y acceso se interpretan en overlay de fecha y situación vivida.",
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "VOY_DELTA_NO_SHARED_OMNISCIENCE",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "post_2371",
+      "subject_location_id": "delta_quadrant_caretaker_arrival_region",
+      "auto_visible": false,
+      "expected_behavior": "La trayectoria de Voyager no está automáticamente en bases de datos de naves del cuadrante Alfa.",
+      "source_refs": [
+        "VOY_CARETAKER"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "BORG_ALPHA_NO_IDEA0011_GATE",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "2365_onwards",
+      "subject_location_id": "borg_transwarp_network_reference",
+      "auto_visible": false,
+      "expected_behavior": "Contactos Borg en Alfa pueden ser canónicos; no se infiere tránsito por portal bloqueado.",
+      "source_refs": [
+        "TNG_Q_WHO"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    },
+    {
+      "case_id": "POST_CAMPAIGN_CANON_NOT_APPLIED",
+      "era": "tng_ds9_voyager",
+      "temporal_window": "after_start",
+      "subject_location_id": "cardassia_prime",
+      "auto_visible": null,
+      "expected_behavior": "La guerra o futuras pérdidas territoriales no se imponen si partida divergió.",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "ai_may_bypass_gates": false,
+      "changes_world_state": false
+    }
+  ],
+  "rules": [
+    "Knowledge is per actor/ship/database, never global omniscience.",
+    "False/no visibility in a case does not delete physical truth.",
+    "Null visibility means consult source/current campaign state, not automatic authorization.",
+    "After campaign start the evolving world state is authoritative."
+  ]
+}
