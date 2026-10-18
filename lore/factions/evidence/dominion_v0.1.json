@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "dominion",
+  "display_name_es": "Dominio",
+  "entity_kind": "hegemonia_multiespecie",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "gameplay/diplomacy/major_faction_catalogue.json",
+  "monograph_ref": "lore/factions/monographs/dominion_v0.1.md",
+  "domains": {
+    "identidad_historia": "Hegemonía del cuadrante Gamma con Fundadores como autoridad suprema, administración Vorta y componente militar Jem'Hadar. Descubierto directamente desde DS9 en 2370, usa coerción, infiltración y alianzas interestelares; el Dominio no es sinónimo de «especie cambiante» ni convierte en iguales las posiciones de todas las poblaciones sometidas o comerciantes asociados.",
+    "gobierno_instituciones": "La Gran Conexión de los Fundadores es origen de autoridad. Vorta administran, negocian y dirigen misiones; Jem'Hadar obedecen una estructura de mando militar, con diferencias entre órdenes concretas y veneración cultural de los Fundadores. Los Karemma pueden comerciar como entidad subordinada sin ser genética ni políticamente Vorta. No inventar parlamento dominionista o sistema sucesorio cuantificado.",
+    "sociedad_ciudadania": "Fundadores, Vorta, Jem'Hadar, Karemma y estados subordinados están en posiciones muy distintas; afiliación impuesta, obligación militar y autonomía económica son relaciones individuales o de entidad. Una persona changeling de identidad no probada tampoco hereda autoridad de los Fundadores, y Odo constituye un caso de independencia respecto del colectivo dirigente.",
+    "ley_justicia": "Dominio usa castigo, amenazas y restricciones a contactos no consentidos, pero los procedimientos civiles, tribunales y garantías para cada estado miembro son desconocidos. No convertir una orden de Weyoun en ley aplicable universalmente ni autorizar ejecución o confiscación sin jurisdicción y poder auténtico.",
+    "economia": "Red de producción bélica, suministro de ketracel-blanco y relaciones comerciales indirectas con entidades subordinadas. La dependencia del blanco es una condición de logística y control sobre Jem'Hadar, no excusa para inventar reservas infinitas o consumo uniforme de otras especies. Los acuerdos con Karemma muestran margen para comercio dentro de estructura hegemónica.",
+    "defensa_seguridad": "Fuerzas Jem'Hadar, naves de combate y espionaje cambiante constituyen amenazas diferenciadas. La infiltración no se resuelve mediante chequeo automático de especie visible: depende de identidad, pruebas y conocimiento. Comandantes Vorta y fuerzas subordinadas requieren misión y atribuciones efectivas.",
+    "diplomacia": "El Dominio advierte a exploradores procedentes de Alfa tras «The Jem'Hadar». En 2373 Cardassia se alinea con él, el conflicto abierto con Federación y Klingon se desencadena, y en 2375 Breen se incorpora al lado dominionista. Pactos de no agresión con estados específicos no son alianza o ciudadanía dominionista.",
+    "conflictos_internos": "Odo confronta a los Fundadores, Weyoun sostiene estrategias y Damar rompe la subordinación cardassiana en 2375. La coerción y las lealtades operativas pueden fallar, sin hacer de un Jem'Hadar desobediente algo automáticamente posible por capricho del generador. Conocer identidad de infiltrado exige pruebas; jugador y NPC no obtienen secretos por lectura de dossier.",
+    "flota_estar": "La Flota puede proteger misiones, operar bajo objetivos del Consejo y tratar con representantes verificados, no dictar ley al Dominio. Un Vorta que propone una tregua no puede hacerla entrar en vigor sin autenticación de mandato y ratificación si procede. Medidas defensivas frente a infiltración deben proteger garantías de ciudadanos y civiles.",
+    "videojuego": "Escena: un mercante Karemma propone contrato comercial mientras un Vorta le exige subordinación. Mantener actores, gobierno local, control dominionista, órdenes y tiempo separados. Otro ejemplo: un Jem'Hadar pide asilo; posibilidad y consecuencias dependen de recursos, salud, orden recibida y estado persistente, no de la especie."
+  },
+  "chronology": [
+    {
+      "year": 2370,
+      "claim_es": "Primer enfrentamiento directo de DS9 con fuerzas dominionistas.",
+      "source_ids": [
+        "DS9_THE_JEMHADAR"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2371,
+      "claim_es": "Infiltración y derrota de ataque de inteligencias Cardassiana y Romulana.",
+      "source_ids": [
+        "DS9_THE_DIE_IS_CAST"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2372,
+      "claim_es": "Temor a infiltración genera crisis internas en Federación.",
+      "source_ids": [
+        "DS9_HOMEFRONT"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Cardassia se adhiere a alianza dominionista y empieza guerra abierta.",
+      "source_ids": [
+        "DS9_BY_INFERNOS_LIGHT"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Breen establece alianza militar con Dominio.",
+      "source_ids": [
+        "DS9_STRANGE_BEDFELLOWS"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Sometimiento cardassiano se quiebra y llega rendición final.",
+      "source_ids": [
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Vorta diplomático con mandato limitado que no controla todas las flotas.",
+    "Mercante Karemma bajo presión hegemónica con intereses comerciales propios.",
+    "Changeling que no es miembro autorizado del aparato político de los Fundadores."
+  ],
+  "unknowns": [
+    "Censo de estados subordinados, clases de ciudadanía y grados de autonomía.",
+    "Tribunales y código general del cuadrante Gamma.",
+    "Producción real y reservas logísticas del ketracel-blanco.",
+    "Reglas institucionales de sucesión o autoridad entre todos los Fundadores."
+  ],
+  "evidence": [
+    {
+      "source_id": "DS9_THE_JEMHADAR",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El Dominio advierte violentamente contra la expansión desde el agujero de gusano.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_SEARCH_II",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Los Fundadores y su control sobre el Dominio se vuelven parte del conocimiento de protagonistas.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_SHIP",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El mando Vorta y Jem'Hadar aparece ligado a misión y cadena de obediencia.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_TREACHERY_FAITH_AND_THE_GREAT_RIVER",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Un Vorta puede mostrar divergencias individuales frente a órdenes del poder al que sirve.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La conclusión de guerra altera la situación del Dominio y sus subordinados.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_DOMINION_101",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Síntesis oficial de jerarquía y alianzas, que debe contrastarse con episodios fechados.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "sources/canon_policy.md",
+    "sources/provenance_policy.md",
+    "ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}

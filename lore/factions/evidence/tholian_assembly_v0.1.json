@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "tholian_assembly",
+  "display_name_es": "Asamblea Tholiana",
+  "entity_kind": "potencia_interestelar_poco_documentada",
+  "content_scope": "MAIN_GAME_CONTEXT_NOT_AUTOSPAWN",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "culture_ids",
+    "citizenship",
+    "office",
+    "organization_memberships",
+    "individual_convictions"
+  ],
+  "monograph_ref": "lore/factions/monographs/tholian_assembly_v0.1.md",
+  "domains": {
+    "identidad_historia": "Potencia interestelar conocida desde TOS por encuentros de frontera y una tecnología de red energética. La continuidad TNG/DS9 incluye referencias políticas, pero hay poca información de vida civil durante el siglo XXIV. El contenido no importa el desarrollo posterior de novelas Typhon Pact como si fuera audiovisual.",
+    "gobierno_instituciones": "El nombre Asamblea no prueba un parlamento representativo con elecciones, escaños o legislación; se desconoce su organización interna, jefatura y sistema de sucesión. Los mandos de nave observados tampoco determinan relación constitucional completa con órganos políticos.",
+    "sociedad_ciudadania": "Desconocemos reglas de ciudadanía, estratificación, cultura doméstica y opiniones de individuos. No deducir uniformidad social, hostilidad esencial o funciones estatales a partir de sus necesidades biológicas.",
+    "ley_justicia": "Se observan exigencias territoriales y coerción en un encuentro de TOS, no un código legal integral. El trato futuro con capitanes tholianos se verifica en términos de hechos, localización y reglas de contacto específicas.",
+    "economia": "Economía, moneda y redes de producción civil no documentadas en los episodios investigados. Disponer de naves y tecnología avanzada no autoriza tablas industriales inventadas.",
+    "defensa_seguridad": "Flota y tecnología de red de captura se ven en «The Tholian Web». Su operación, alcance o eficacia en 2375 y otras clases exige fuentes o investigación posterior. Evitar que cada contacto lleve armamento idéntico.",
+    "diplomacia": "Las menciones en DS9 de pactos de no agresión con Dominio son contexto bélico, no alianza integral ni obediencia. No insertar como hecho 2364 un acuerdo de 2373. Los mapas y fronteras concretas corresponden a LORE-01 C.",
+    "conflictos_internos": "No se documentan disputas internas, movimientos de oposición ni cambios de jefatura suficientes para fundar personajes políticos canónicos. Una narración derivada debe etiquetarse como adición de juego y aprobarse si altera el sistema.",
+    "flota_estar": "Un oficial requiere saber si la nave que ve es tholiana, qué reglas de paso están acreditadas y qué fecha rige. El nombre Asamblea no confiere a cualquier capitán autoridad de embajador.",
+    "videojuego": "Encuentro fronterizo tenso con opciones de espera, comunicación y repliegue, sin hostilidad racial forzosa. Registrar lo desconocido y no crear rutas, leyes ni ejércitos no observados."
+  },
+  "chronology": [
+    {
+      "year": 2268,
+      "claim_es": "Incidente de flota Enterprise con naves tholianas y red energética.",
+      "source_ids": [
+        "TOS_THE_THOLIAN_WEB"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Contexto de pactos de no agresión alrededor de la Guerra del Dominio.",
+      "source_ids": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "unknowns": [
+    "Sistema institucional completo y valor constitucional del nombre Asamblea.",
+    "Ciudadanía, tribunales y derechos individuales.",
+    "Comercio, moneda y capacidad industrial civil.",
+    "Cronología completa de sus pactos y disputas internas."
+  ],
+  "evidence": [
+    {
+      "source_id": "TOS_THE_THOLIAN_WEB",
+      "authority": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "claim_es": "Las naves tholianas exhiben defensa territorial y una red energética en caso específico.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_CALL_TO_ARMS",
+      "authority": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "claim_es": "La diplomacia del Dominio hacia potencias no alineadas contextualiza decisiones de no agresión.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Referencia oficial política general; no emplear como prueba de estructura interna tholiana.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "sources/canon_policy.md",
+    "sources/provenance_policy.md"
+  ]
+}
