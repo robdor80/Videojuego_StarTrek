@@ -151,7 +151,7 @@ def validate():
     status = (ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
     require("B — Civilizaciones/potencias | ✅ COMPLETE" in status, "LORE-01 B no regularizada")
     require(any(marker in status for marker in ("C — Cartografía/astrogeografía | 🟧 NEEDS_REVIEW", "C — Cartografía/astrogeografía | ✅ COMPLETE")), "Estado C incorrecto")
-    require("D — Relaciones diplomáticas | ⬜ TODO" in status, "No avanzar D")
+    require(any(marker in status for marker in ("D — Relaciones diplomáticas | ⬜ TODO", "D — Relaciones diplomáticas | 🟧 NEEDS_REVIEW", "D — Relaciones diplomáticas | ✅ COMPLETE")), "Estado D desconocido")
     require("E — Información operativa transversal | ⬜ TODO" in status, "No avanzar E")
     return {
         "anchors": len(a), "regions": len(r), "maps": len(maps),
