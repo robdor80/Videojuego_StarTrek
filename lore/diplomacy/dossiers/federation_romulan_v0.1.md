@@ -28,7 +28,7 @@ Separar incidentes en la frontera, acciones del Tal Shiar y decisiones del Senad
 
 - Lectura diplomática: COBELLIGERENT; seguridad: JOINT_WAR_EFFORT.
 - Evidencia: DS9_IN_THE_PALE_MOONLIGHT; precisión: YEAR_APPROXIMATE.
-- Lectura causal: Roma... el Imperio Romulano se incorpora contra el Dominio.
+- Lectura causal: El Imperio Romulano se incorpora contra el Dominio.
 - No ejecutar transición por alcanzar el año; comprobar la ocurrencia del acontecimiento antes del inicio de la campaña.
 
 ## Fronteras, transitabilidad y conocimiento
