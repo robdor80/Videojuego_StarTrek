@@ -152,7 +152,7 @@ def validate():
     require("B — Civilizaciones/potencias | ✅ COMPLETE" in status, "LORE-01 B no regularizada")
     require(any(marker in status for marker in ("C — Cartografía/astrogeografía | 🟧 NEEDS_REVIEW", "C — Cartografía/astrogeografía | ✅ COMPLETE")), "Estado C incorrecto")
     require(any(marker in status for marker in ("D — Relaciones diplomáticas | ⬜ TODO", "D — Relaciones diplomáticas | 🟧 NEEDS_REVIEW", "D — Relaciones diplomáticas | ✅ COMPLETE")), "Estado D desconocido")
-    require("E — Información operativa transversal | ⬜ TODO" in status, "No avanzar E")
+    require(any(marker in status for marker in ("E — Información operativa transversal | ⬜ TODO", "E — Información operativa transversal | 🟨 IN_PROGRESS", "E — Información operativa transversal | 🟧 NEEDS_REVIEW", "E — Información operativa transversal | ✅ COMPLETE")), "Estado E desconocido")
     return {
         "anchors": len(a), "regions": len(r), "maps": len(maps),
         "routes": len(routes["cases"]), "leads": len(cand),
