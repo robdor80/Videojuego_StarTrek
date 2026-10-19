@@ -1,0 +1,1291 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_E_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "delta_dlc_enabled": false,
+  "source_policy_ref": "sources/canon_policy.md",
+  "provenance_policy_ref": "sources/provenance_policy.md",
+  "record_count": 32,
+  "records": [
+    {
+      "record_id": "OP-A01",
+      "area": "A",
+      "title_es": "Deep Space 9 y soberanía bajorana",
+      "documented_observation": "Tras la ocupación cardassiana, la estación pasa a operación federobajorana; antes fue Terok Nor y cambia de función en 2369.",
+      "operational_interpretation": "Separar propiedad/soberanía política, mando delegado de la estación y situación de cada visitante; la autoridad local no se deduce de una sola bandera.",
+      "prohibited_inference": "No suponer que Bajor se convirtió en miembro de la Federación ni que toda decisión civil sea competencia de Starfleet.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets",
+        "cardassian_union"
+      ],
+      "locations": [
+        "deep_space_9",
+        "bajor"
+      ],
+      "relations": [
+        "federation_bajor",
+        "cardassia_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "HIGH",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "ds9_joint_arrangement",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-A02",
+      "area": "A",
+      "title_es": "Bajor tras la ocupación",
+      "documented_observation": "La retirada cardassiana deja instituciones provisionales y consecuencias sociales de la ocupación.",
+      "operational_interpretation": "Las consultas sobre instalaciones, residentes, reclamaciones o seguridad precisan distinguir época de ocupación y etapa posterior.",
+      "prohibited_inference": "No inventar censos, emplazamientos de campos, poderes universales ni una autoridad sin disputas.",
+      "entities": [
+        "bajoran_provisional_government",
+        "cardassian_union"
+      ],
+      "locations": [
+        "bajor"
+      ],
+      "relations": [
+        "cardassia_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_DUET"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "cardassian_withdrawal_bajor",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-A03",
+      "area": "A",
+      "title_es": "Zona Neutral romulana",
+      "documented_observation": "Las fronteras y la Zona Neutral protagonizan incidentes históricos que afectan a las órdenes de la Flota.",
+      "operational_interpretation": "Una localización próxima a la zona exige fuente, fecha, misión y advertencia de incertidumbre territorial.",
+      "prohibited_inference": "No transformar mapas esquemáticos en polígonos, coordenadas exactas o derecho de acceso.",
+      "entities": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "locations": [
+        "romulan_neutral_zone_near_galorndon",
+        "galorndon_core"
+      ],
+      "relations": [
+        "federation_romulan"
+      ],
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE",
+        "TNG_THE_ENEMY"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2364,
+        "not_before_event_id": "romulan_return",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-A04",
+      "area": "A",
+      "title_es": "Territorios disputados y Maquis",
+      "documented_observation": "Los acuerdos fronterizos con Cardassia y las colonias afectadas constituyen trasfondo de los Maquis.",
+      "operational_interpretation": "Diferenciar colonia, residente, militancia, reclamación y control temporal; consultar expedientes de la región.",
+      "prohibited_inference": "El mapa no demuestra que toda colonia o persona de la zona pertenezca al Maquis.",
+      "entities": [
+        "united_federation_of_planets",
+        "cardassian_union",
+        "maquis"
+      ],
+      "locations": [
+        "badlands"
+      ],
+      "relations": [
+        "federation_cardassia",
+        "cardassia_maquis"
+      ],
+      "source_refs": [
+        "TNG_JOURNEYS_END",
+        "DS9_THE_MAQUIS_I"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2370,
+        "not_before_event_id": "maquis_emergence",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-B01",
+      "area": "B",
+      "title_es": "Estación K-7 como caso fronterizo",
+      "documented_observation": "En la época de Kirk, K-7 concentra actividad de frontera federoklingon y operaciones de estación.",
+      "operational_interpretation": "Un permiso o control local está condicionado por contexto y época de la estación, no por un reglamento galáctico supuesto.",
+      "prohibited_inference": "No extrapolar aduanas, aranceles o acreditación obligatoria a todas las estaciones.",
+      "entities": [
+        "united_federation_of_planets",
+        "klingon_empire"
+      ],
+      "locations": [
+        "deep_space_station_k7"
+      ],
+      "relations": [
+        "federation_klingon"
+      ],
+      "source_refs": [
+        "TOS_THE_TROUBLE_WITH_TRIBBLES"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-B02",
+      "area": "B",
+      "title_es": "Ingreso en espacio romulano",
+      "documented_observation": "La Zona Neutral y los incidentes romulanos exigen distinguir aproximación, entrada y contacto.",
+      "operational_interpretation": "Consulta recomendada: posición conocida, autorización verificable, canales oficiales y riesgo de escalada.",
+      "prohibited_inference": "Un pacto de cooperación contra terceros no concede tránsito ilimitado ni anula una zona restringida.",
+      "entities": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "locations": [
+        "romulan_neutral_zone_near_galorndon"
+      ],
+      "relations": [
+        "federation_romulan"
+      ],
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR",
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-B03",
+      "area": "B",
+      "title_es": "Atraque y escala en DS9",
+      "documented_observation": "Deep Space 9 recibe visitantes, operaciones civiles y actividad comercial junto a su papel estratégico.",
+      "operational_interpretation": "Verificar operador de atraque, servicios disponibles y situación de seguridad actual de la campaña.",
+      "prohibited_inference": "No inventar tasas, numeración de muelles, tamaño máximo de naves ni formularios universales.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets",
+        "ferengi_alliance"
+      ],
+      "locations": [
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_bajor",
+        "federation_ferengi"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "ds9_joint_arrangement",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-B04",
+      "area": "B",
+      "title_es": "Tránsito por el agujero de gusano bajorano",
+      "documented_observation": "La abertura de Bajor conecta Alfa y Gamma y convierte DS9 en enclave de exploración y defensa.",
+      "operational_interpretation": "Conexión física excepcional no equivale a ruta warp ordinaria ni a libertad diplomática de tránsito.",
+      "prohibited_inference": "No convertir el agujero de gusano en corredor automático a Delta ni anticipar conflicto futuro.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets",
+        "dominion"
+      ],
+      "locations": [
+        "bajoran_wormhole_alpha",
+        "bajoran_wormhole_gamma"
+      ],
+      "relations": [
+        "federation_dominion"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_THE_JEMHADAR"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "ds9_joint_arrangement",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-C01",
+      "area": "C",
+      "title_es": "Empresas y trato privado ferengi",
+      "documented_observation": "Las actividades de Quark en DS9 muestran iniciativa y negocios privados.",
+      "operational_interpretation": "Separar voluntad de comerciante, titularidad de establecimiento y posición oficial de la Alianza Ferengi.",
+      "prohibited_inference": "Una transacción comercial no constituye tratado ni prueba que todas las personas ferengi operen igual.",
+      "entities": [
+        "ferengi_alliance",
+        "bajoran_provisional_government",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_ferengi"
+      ],
+      "source_refs": [
+        "DS9_RULES_OF_ACQUISITION",
+        "DS9_THE_NAGUS"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-C02",
+      "area": "C",
+      "title_es": "Latinum e intercambios",
+      "documented_observation": "DS9 presenta intercambios comerciales y uso de latinum, junto a recursos no replicables ordinariamente.",
+      "operational_interpretation": "Documentar medio de intercambio allí donde consta sin imponer tipos de cambio o precios a la economía procedural.",
+      "prohibited_inference": "No asignar valor universal, impuesto estándar, inventario mágico o sistema monetario a toda potencia.",
+      "entities": [
+        "ferengi_alliance",
+        "bajoran_provisional_government"
+      ],
+      "locations": [
+        "deep_space_9"
+      ],
+      "relations": [],
+      "source_refs": [
+        "DS9_THE_NAGUS",
+        "DS9_RULES_OF_ACQUISITION"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-C03",
+      "area": "C",
+      "title_es": "Ketracel blanco: dependencia estratégica",
+      "documented_observation": "Los Jem'Hadar dependen de ketracel blanco y el Dominio controla su suministro.",
+      "operational_interpretation": "Una crisis de abastecimiento constituye información logística/médica sensible, con procedencia y conocimiento local.",
+      "prohibited_inference": "No crear inventario, producción, rutas o comercio autorizado sin hechos persistidos.",
+      "entities": [
+        "dominion"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_dominion"
+      ],
+      "source_refs": [
+        "DS9_HIPPOCRATIC_OATH",
+        "DS9_TO_THE_DEATH"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-C04",
+      "area": "C",
+      "title_es": "Comercio de posocupación bajorana",
+      "documented_observation": "Terok Nor fue instalación de procesamiento bajo ocupación y después se transformó en enclave civil de servicios.",
+      "operational_interpretation": "Una consulta económica distingue legado coercitivo, actividad privada presente y recuperación de infraestructura.",
+      "prohibited_inference": "No deducir cuotas de producción, cadenas de suministro exactas ni contratos de explotación actuales.",
+      "entities": [
+        "bajoran_provisional_government",
+        "cardassian_union",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "deep_space_9",
+        "bajor"
+      ],
+      "relations": [
+        "cardassia_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_NECESSARY_EVIL"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "cardassian_withdrawal_bajor",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-D01",
+      "area": "D",
+      "title_es": "Competencias en una estación compartida",
+      "documented_observation": "DS9 tiene mando de Starfleet y autoridades bajoranas en la continuidad de la reconstrucción.",
+      "operational_interpretation": "Investigar qué institución solicita y autoriza una acción concreta; comprobar misión, jurisdicción personal y territorial.",
+      "prohibited_inference": "El rango de Sisko no transfiere toda la legislación o soberanía bajorana a Starfleet.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_NECESSARY_EVIL"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "ds9_joint_arrangement",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-D02",
+      "area": "D",
+      "title_es": "Sospechas de colaboración con los Maquis",
+      "documented_observation": "La actividad Maquis genera incidentes políticos y de seguridad en la zona de colonias.",
+      "operational_interpretation": "Distinguir acusación, evidencia, derechos individuales, autoridad de detención y territorio.",
+      "prohibited_inference": "Una especie, ciudadanía o proximidad geográfica nunca basta para declarar culpabilidad.",
+      "entities": [
+        "maquis",
+        "united_federation_of_planets",
+        "cardassian_union"
+      ],
+      "locations": [
+        "badlands"
+      ],
+      "relations": [
+        "federation_maquis",
+        "cardassia_maquis"
+      ],
+      "source_refs": [
+        "DS9_THE_MAQUIS_I",
+        "DS9_FOR_THE_UNIFORM"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2370,
+        "not_before_event_id": "maquis_emergence",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-D03",
+      "area": "D",
+      "title_es": "Sección 31 y autoridad aparente",
+      "documented_observation": "La Sección 31 actúa clandestinamente y sus operaciones se revelan en DS9.",
+      "operational_interpretation": "Una orden autoproclamada secreta no equivale sin más a mandato válido de la Federación.",
+      "prohibited_inference": "No otorgar poderes legales automáticos al interlocutor por pertenencia o supuesto secreto de Estado.",
+      "entities": [
+        "section_31",
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_section31"
+      ],
+      "source_refs": [
+        "DS9_INQUISITION",
+        "DS9_INTER_ARMA_ENIM_SILENT_LEGES"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2374,
+        "not_before_event_id": "section31_revealed",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-D04",
+      "area": "D",
+      "title_es": "Tal Shiar, individuos y Estado",
+      "documented_observation": "El espionaje romulano aparece en operaciones encubiertas con resultados no siempre coincidentes con la política pública.",
+      "operational_interpretation": "Evaluar autor, competencia, fuente de inteligencia y verificabilidad; distinguir Estado, servicio y oficial.",
+      "prohibited_inference": "No atribuir a todo romulano los actos del Tal Shiar ni asumir permisos universales para contraintervenciones.",
+      "entities": [
+        "romulan_star_empire",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "romulus"
+      ],
+      "relations": [
+        "federation_romulan"
+      ],
+      "source_refs": [
+        "TNG_FACE_OF_THE_ENEMY",
+        "DS9_THE_DIE_IS_CAST"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-E01",
+      "area": "E",
+      "title_es": "Comunicación subespacial",
+      "documented_observation": "Las comunicaciones subespaciales forman parte de las operaciones de naves y estaciones.",
+      "operational_interpretation": "Comprobar conectividad efectiva, latencia, autenticidad, daños, privacidad y lo que el observador sabe.",
+      "prohibited_inference": "No afirmar instantaneidad perfecta, escucha universal ni latencias numéricas sin evidencia.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "MA_SUBSPACE_COMMUNICATION",
+        "TNG_CHAIN_OF_COMMAND_PART_I"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-E02",
+      "area": "E",
+      "title_es": "Información estratégica en DS9",
+      "documented_observation": "DS9 desempeña papel de defensa y comunicación operativa al aumentar el conflicto con el Dominio.",
+      "operational_interpretation": "Una alerta transmitida por una autoridad no hace que toda la galaxia la conozca simultáneamente.",
+      "prohibited_inference": "No revelar movimientos o tratados confidenciales a todos los NPC por el solo hecho de registrarse.",
+      "entities": [
+        "united_federation_of_planets",
+        "bajoran_provisional_government",
+        "dominion"
+      ],
+      "locations": [
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_dominion"
+      ],
+      "source_refs": [
+        "DS9_CALL_TO_ARMS",
+        "DS9_EMISSARY"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2373,
+        "not_before_event_id": "dominion_war_begins",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-E03",
+      "area": "E",
+      "title_es": "Información clasificada e investigación",
+      "documented_observation": "Las cadenas militares y operaciones de inteligencia distinguen información pública y restringida.",
+      "operational_interpretation": "Una consola debe recibir proyecciones autorizadas del estado y nunca consultar la verdad secreta completa.",
+      "prohibited_inference": "No inventar claves, excepciones de almirante, ni información interna del enemigo disponible para todos.",
+      "entities": [
+        "united_federation_of_planets",
+        "section_31"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_section31"
+      ],
+      "source_refs": [
+        "TNG_CHAIN_OF_COMMAND_PART_I",
+        "DS9_INQUISITION"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-E04",
+      "area": "E",
+      "title_es": "Rumores y manipulación informativa",
+      "documented_observation": "La entrada romulana en la guerra se relaciona con una operación de manipulación presentada en DS9.",
+      "operational_interpretation": "Separar hechos, falsos documentos, creencias del actor y propaganda; preservar trazabilidad de la fuente.",
+      "prohibited_inference": "Una afirmación atribuida al Dominio o a un intermediario no es verdad del mundo demostrada.",
+      "entities": [
+        "united_federation_of_planets",
+        "romulan_star_empire",
+        "dominion"
+      ],
+      "locations": [],
+      "relations": [
+        "romulan_dominion",
+        "federation_romulan"
+      ],
+      "source_refs": [
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2374,
+        "not_before_event_id": "romulan_enters_war",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-F01",
+      "area": "F",
+      "title_es": "Tecnología de ocultación y restricciones",
+      "documented_observation": "Naves romulanas utilizan ocultación; su presencia no implica que toda nave disponga de ella.",
+      "operational_interpretation": "Consultar disponibilidad específica, restricciones conocidas, observabilidad de sensores y fecha.",
+      "prohibited_inference": "No asignar porcentajes de detección, rendimiento ni tecnología de ocultación a toda una especie.",
+      "entities": [
+        "romulan_star_empire",
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_romulan"
+      ],
+      "source_refs": [
+        "TNG_THE_ENEMY",
+        "TNG_FACE_OF_THE_ENEMY"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-F02",
+      "area": "F",
+      "title_es": "Teletransporte y condiciones de utilización",
+      "documented_observation": "El teletransporte de la Flota es tecnología operativa documentada para naves e instalaciones.",
+      "operational_interpretation": "Distinguir existencia del equipo, situación técnica, destino, riesgo, autoridad y cooperación de terceros.",
+      "prohibited_inference": "No fabricar frecuencias, alcance, interoperabilidad ni capacidad de teletransporte ajena por analogía.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "MA_TRANSPORTER",
+        "TNG_ENCOUNTER_AT_FARPOINT"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-F03",
+      "area": "F",
+      "title_es": "Dependencia médico-industrial del Dominio",
+      "documented_observation": "Ketracel blanco condiciona bienestar, disciplina y logística Jem'Hadar.",
+      "operational_interpretation": "El mismo recurso puede ser conocimiento médico, capacidad industrial restringida y necesidad operativa.",
+      "prohibited_inference": "No deducir acceso legal al fármaco a partir de conocimiento científico.",
+      "entities": [
+        "dominion"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_dominion"
+      ],
+      "source_refs": [
+        "DS9_HIPPOCRATIC_OATH",
+        "MA_KETRACEL_WHITE"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-F04",
+      "area": "F",
+      "title_es": "Adaptación a amenazas Borg",
+      "documented_observation": "Los encuentros con el Colectivo Borg implican desafíos específicos de adaptación tecnológica.",
+      "operational_interpretation": "La respuesta depende de época, conocimiento adquirido y capacidades de la nave concreta.",
+      "prohibited_inference": "No transferir conocimientos de Voyager o del DLC Delta a un observador Alfa anterior.",
+      "entities": [
+        "borg_collective",
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [
+        "federation_borg"
+      ],
+      "source_refs": [
+        "TNG_Q_WHO",
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2365,
+        "not_before_event_id": "borg_first_encounter",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-G01",
+      "area": "G",
+      "title_es": "Observación cultural contaminada en Mintaka",
+      "documented_observation": "Un incidente de observación provoca consecuencias culturales en la población mintakana.",
+      "operational_interpretation": "La Primera Directriz exige evaluar contacto real, exposición, consentimiento, historia y cadena competente.",
+      "prohibited_inference": "No declarar irrelevantes las consecuencias ni asumir que prewarp significa contacto imposible sin excepciones.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "TNG_WHO_WATCHES_THE_WATCHERS",
+        "MA_PRIME_DIRECTIVE"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-G02",
+      "area": "G",
+      "title_es": "Primer contacto institucional desigual",
+      "documented_observation": "La civilización malcoriana afronta una propuesta de contacto cuyo desenlace depende de autoridades y sociedad.",
+      "operational_interpretation": "Contactar con un dirigente no significa que la sociedad entera esté preparada o autorice presencia.",
+      "prohibited_inference": "No automatizar el contacto al detectar capacidad warp ni usar rasgos culturales como permisos.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "TNG_FIRST_CONTACT",
+        "ST_OFFICIAL_PREWARP_IMPERSONATIONS"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-G03",
+      "area": "G",
+      "title_es": "Traducción universal y contexto",
+      "documented_observation": "El traductor universal permite comunicación en múltiples encuentros, pero la comprensión cultural es otro problema.",
+      "operational_interpretation": "Una traducción es una mediación contextual, no prueba de intención, equivalencia jurídica o verdad.",
+      "prohibited_inference": "No deducir fluidez perfecta de la primera comunicación ni eliminar malentendidos de NPC.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "MA_UNIVERSAL_TRANSLATOR",
+        "TNG_FIRST_CONTACT"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-G04",
+      "area": "G",
+      "title_es": "Creencias bajoranas y representación",
+      "documented_observation": "En DS9 conviven religión bajorana, autoridades civiles y agentes de la Federación.",
+      "operational_interpretation": "Separar ritual, creencia individual, decisión política y protocolo de visita según interlocutor.",
+      "prohibited_inference": "No convertir las prácticas de un personaje bajorano en obligación universal de su especie.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "bajor",
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_RAPTURE"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-H01",
+      "area": "H",
+      "title_es": "Reconstrucción civil tras ocupación",
+      "documented_observation": "Tras la retirada cardassiana DS9 actúa en la reconstrucción de Bajor.",
+      "operational_interpretation": "Un proyecto de asistencia requiere solicitante real, recursos, disponibilidad y gobierno anfitrión.",
+      "prohibited_inference": "No generar automáticamente convoyes, camas, almacenes o abastecimientos sin causa y capacidad.",
+      "entities": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets"
+      ],
+      "locations": [
+        "bajor",
+        "deep_space_9"
+      ],
+      "relations": [
+        "federation_bajor"
+      ],
+      "source_refs": [
+        "DS9_EMISSARY",
+        "ST_OFFICIAL_STARBASES_FEDERATION"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2369,
+        "not_before_event_id": "cardassian_withdrawal_bajor",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-H02",
+      "area": "H",
+      "title_es": "Evacuación y preservación cultural",
+      "documented_observation": "Homeward documenta conflicto entre rescate, protección de vidas y no interferencia cultural.",
+      "operational_interpretation": "Registrar autoridades, exposición, información de afectados y consecuencias, sin resolver moralmente por regla fija.",
+      "prohibited_inference": "No convertir una excepción dramática en autorización universal para trasladar sociedades prewarp.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "TNG_HOMEWARD",
+        "MA_PRIME_DIRECTIVE"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-H03",
+      "area": "H",
+      "title_es": "Exploración científica y riesgo político",
+      "documented_observation": "La investigación en torno a Gamma y el Dominio evoluciona hacia conflicto y restricciones operativas.",
+      "operational_interpretation": "Clasificar expedición y observador; misión científica no inmuniza frente a soberanía y seguridad.",
+      "prohibited_inference": "No asumir ruta segura, libre tránsito ni anticipar hostilidad dominionista antes del contacto documentado.",
+      "entities": [
+        "united_federation_of_planets",
+        "dominion"
+      ],
+      "locations": [
+        "bajoran_wormhole_gamma"
+      ],
+      "relations": [
+        "federation_dominion"
+      ],
+      "source_refs": [
+        "DS9_THE_JEMHADAR",
+        "DS9_SEARCH_PART_I"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": 2370,
+        "not_before_event_id": "dominion_first_warning",
+        "precision": "AFTER_NAMED_EVENT_WITHIN_YEAR"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    },
+    {
+      "record_id": "OP-H04",
+      "area": "H",
+      "title_es": "Emergencia médica y límites éticos",
+      "documented_observation": "La Flota realiza asistencia médica en civilizaciones y crisis, con riesgos personales y culturales.",
+      "operational_interpretation": "Una misión de ayuda diferencia diagnóstico, capacidad, consentimiento, autoridad y conocimiento local.",
+      "prohibited_inference": "No generar automáticamente curas, fármacos, suministros o excepciones de la Primera Directriz.",
+      "entities": [
+        "united_federation_of_planets"
+      ],
+      "locations": [],
+      "relations": [],
+      "source_refs": [
+        "TNG_PEN_PALS",
+        "TNG_HOMEWARD"
+      ],
+      "provenance_class": "SCREEN_CANON",
+      "interpretation_class": "INFERRED",
+      "confidence": "MEDIUM",
+      "temporal": {
+        "reference_year": null,
+        "not_before_event_id": null,
+        "precision": "DATE_NOT_FULLY_RESOLVED"
+      },
+      "knowledge": {
+        "is_universal_public_knowledge": false,
+        "requires_observer_projection": true,
+        "access_or_authority_must_be_checked_at_use": true
+      },
+      "runtime": {
+        "gameplay_activated": false,
+        "auto_transition": false,
+        "ai_can_execute": false,
+        "delta_dlc_unlock": false
+      }
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # LORE-01 D — Relaciones diplomáticas y geopolítica galáctica
 
-**Estado:** documental, pendiente de revisión. **No** es una máquina diplomática. Fecha: 19-10-2026.
+**Estado:** COMPLETE documental — PR #29 fusionada 19-10-2026 (`a1a261f6`). **No** es una máquina diplomática ni integración runtime.
 
 ## Lectura recomendada
 1. Identidades y clasificación: lore/factions/LORE01_B_civilizations_index_v0.1.json (16 entidades heterogéneas).

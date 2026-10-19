@@ -553,14 +553,14 @@ The Sensors vertical slice remains preserved and ready for later UX/runtime cont
 
 ## LORE-01 — Base Galáctica (TNG / DS9 / VOY)
 
-| Apartado | Estado al 18-10-2026 | Alcance real |
+| Apartado | Estado al 19-10-2026 | Alcance real |
 |---|---|---|
 | A — Especies y culturas | ✅ COMPLETE | PR #25 fusionada en `main` (2026-10-17), commit `abcc4c77`. 25 monografías, 25 libros de evidencias, 10 culturas adicionales y 8 lenguas catalogadas; alcance documental validado. Lagunas del canon y consumo runtime siguen explícitos. |
 | A.1 — Comportamiento cultural IA/NPC | ✅ COMPLETE | PR #26 fusionada en `main` (2026-10-18), commit `a25122fa`; 25 guías, contrato antiestereotipos, escenarios contrastados y CI. Es investigación/guía de autoría, **no** motor de personalidad ejecutable en UE5/CoreRPG. |
 | B — Civilizaciones/potencias | ✅ COMPLETE | PR #27 fusionada en `main` (2026-10-18), commit `b1c29b6d`; 16 monografías y libros de evidencias y validaciones. Cierre documental, no implementación CoreRPG/UE5. |
 | C — Cartografía/astrogeografía | ✅ COMPLETE | PR #28 fusionada (2026-10-18), commit `577fd1bf`; validación documental reportada en cierre de C. Atlas sin polígonos ni contratos de navegación modificados. |
-| D — Relaciones diplomáticas | 🟧 NEEDS_REVIEW | Documentación geopolítica en PR Draft #29: 27 expedientes, 40 hitos, tratados, conflictos y casos; 4 workflows satisfactorios en validación de 19-10-2026. Pendiente revisión humana y fusión. **No** es implementación runtime. |
-| E — Información operativa transversal | ⬜ TODO | No iniciado. |
+| D — Relaciones diplomáticas | ✅ COMPLETE | PR #29 fusionada en `main` (2026-10-19), commit `a1a261f6`; 27 expedientes, 40 hitos, tratados, conflictos y escenarios. Cuatro workflows satisfactorios antes de fusión. **No** es implementación runtime. |
+| E — Información operativa transversal | 🟧 NEEDS_REVIEW | PR #30 abierta para revisión sobre `feat/lore01-e-operational-context`; 32 fichas en 8 ámbitos, 12 escenarios, 18 incertidumbres, cruce A–E y auditoría global. Integridad y regresiones ejecutadas en GitHub Actions; pendiente aprobación humana y fusión. No es runtime CoreRPG/UE5. |
 
 Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. La línea general de especies/culturas/lenguas continúa `IN_PROGRESS` hasta terminar los demás apartados de LORE-01.
 

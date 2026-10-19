@@ -1,0 +1,442 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_E",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "case_count": 12,
+  "cases": [
+    {
+      "case_id": "ECASE_ROMULAN_BORDER_REQUEST",
+      "title_es": "Capitana de la Flota ante espacio romulano",
+      "operational_record_refs": [
+        "OP-A03",
+        "OP-B02",
+        "OP-F01"
+      ],
+      "user_role": "STARFLEET_CAPTAIN",
+      "request_example_es": "¿Podemos entrar en esta región y quién puede autorizarlo?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_BAJORAN_STATION_DETAIN",
+      "title_es": "Alférez de seguridad en DS9 y autoridad civil bajorana",
+      "operational_record_refs": [
+        "OP-A01",
+        "OP-D01",
+        "OP-E03"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Quién puede detener a una persona en la estación?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_MAQUIS_SUSPECT",
+      "title_es": "Oficial de frontera distingue rumor, sospecha y prueba",
+      "operational_record_refs": [
+        "OP-A04",
+        "OP-D02",
+        "OP-E04"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Qué sabemos realmente de este sospechoso?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_FERENGI_TRADE_QUERY",
+      "title_es": "Comerciante ferengi y consulta de mercado sin precio inventado",
+      "operational_record_refs": [
+        "OP-C01",
+        "OP-C02",
+        "OP-B03"
+      ],
+      "user_role": "PERSON_CIVILIAN",
+      "request_example_es": "¿En cuánto se vende este recurso y quién lo vende?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_WORMHOLE_SCIENTIFIC_CRUISE",
+      "title_es": "Solicitud de misión científica a través de Bajor",
+      "operational_record_refs": [
+        "OP-B04",
+        "OP-H03",
+        "OP-E02"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Está permitido atravesar el agujero de gusano?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_JEMHADAR_MEDICAL_REQUEST",
+      "title_es": "Médica considera dependencia de ketracel sin acceso garantizado",
+      "operational_record_refs": [
+        "OP-C03",
+        "OP-F03",
+        "OP-H04"
+      ],
+      "user_role": "STARFLEET_MEDICAL",
+      "request_example_es": "¿Tenemos capacidad y permiso para ayudar médicamente?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_SECTION31_CLAIMED_ORDER",
+      "title_es": "Oficial recibe supuesto mandato clandestino",
+      "operational_record_refs": [
+        "OP-D03",
+        "OP-E03",
+        "OP-D01"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Esta orden secreta es legítima?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_TRANSLATOR_INITIAL_CONTACT",
+      "title_es": "Traductor disponible sin resolver tensión intercultural",
+      "operational_record_refs": [
+        "OP-G02",
+        "OP-G03",
+        "OP-G01"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Podemos establecer contacto y entendernos?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_BAJOR_RELIEF_CONVOY",
+      "title_es": "Organización civil pide asistencia a Bajor tras la ocupación",
+      "operational_record_refs": [
+        "OP-H01",
+        "OP-A02",
+        "OP-C04"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Qué recursos existen para este convoy?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_BORG_HISTORICAL_REPORT",
+      "title_es": "Informe de contacto Borg sin apertura del DLC Delta",
+      "operational_record_refs": [
+        "OP-F04",
+        "OP-E03",
+        "OP-E01"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Qué sabíamos de los Borg en esta fecha?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_TRUSTED_INFORMATION",
+      "title_es": "Información manipulada en contexto de guerra con el Dominio",
+      "operational_record_refs": [
+        "OP-E04",
+        "OP-E02",
+        "OP-D04"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Cuándo es fiable este informe?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    },
+    {
+      "case_id": "ECASE_PREWARP_EVACUATION",
+      "title_es": "Capitán ante una evacuación potencialmente contraria a Primera Directriz",
+      "operational_record_refs": [
+        "OP-H02",
+        "OP-G01",
+        "OP-H04"
+      ],
+      "user_role": "ROLE_CONTEXTUAL",
+      "request_example_es": "¿Puede evacuar a la población sin provocar interferencia?",
+      "mandatory_context": [
+        "campaign_date_and_continuity",
+        "world_state_facts",
+        "actor_identity_role_and_assignment",
+        "observer_known_facts",
+        "authorized_records_projection",
+        "local_jurisdiction_and_political_state",
+        "mission_order_and_available_resources"
+      ],
+      "answer_requirements": [
+        "cite_documentary_provenance",
+        "identify_unknowns",
+        "state_legal_authority_as_unverified_until_runtime_check",
+        "distinguish_observation_from_actor_claim",
+        "request_authorized_action_only_when_available"
+      ],
+      "forbidden_outputs": [
+        "unearned_secret_knowledge",
+        "synthetic_treaty_or_access_pass",
+        "presumed_fixed_border_or_price",
+        "ai_direct_world_mutation",
+        "historical_future_forced_by_calendar",
+        "delta_dlc_activation"
+      ],
+      "result": "DOCUMENTARY_CONSULTATION_ONLY"
+    }
+  ]
+}

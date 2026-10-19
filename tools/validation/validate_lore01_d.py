@@ -79,7 +79,7 @@ def validate():
     check(len(questions["issues"]) >= 10, "Not enough uncertainties")
     status=(ROOT/"CONTENT_STATUS.md").read_text(encoding="utf-8")
     check("| C — Cartografía/astrogeografía | ✅ COMPLETE |" in status, "C closure missing")
-    check("| D — Relaciones diplomáticas | 🟧 NEEDS_REVIEW |" in status, "D prematurely closed")
+    check("| D — Relaciones diplomáticas | ✅ COMPLETE |" in status, "D merged closure missing")
     return {"relations":len(rels),"events":len(eventids),"agreements":len(other["agreements"]),"conflicts":len(other["conflicts"]),"cases":len(cases["cases"])}
 
 if __name__ == "__main__":
