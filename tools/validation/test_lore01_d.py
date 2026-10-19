@@ -20,7 +20,7 @@ class DocumentaryDiplomacyTests(unittest.TestCase):
         self.assertEqual(self.ev["breen_enter_war"]["reference_year"],2375)
     def test_bajoran_sovereignty_distinct(self):
         a=self.rels["federation_bajor"]
-        self.assertIn("soberanía",a["why"].lower())
+        self.assertIn("jurisdicción bajorana",a["mechanism"].lower())
     def test_false_tzenkethi_coup(self):
         self.assertEqual(self.ev["tzenkethi_false_coup_report"]["status"],"FALSE_CLAIM_NOT_HISTORICAL_EVENT")
     def test_no_future_treaty_spawns(self):
