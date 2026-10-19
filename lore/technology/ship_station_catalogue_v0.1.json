@@ -47,7 +47,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Movimiento interestelar mediante sistema warp instalado; la envolvente de vuelo segura depende de nave, entorno y estado."
       ],
@@ -85,7 +85,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_deflector_shields",
@@ -126,7 +127,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Protección operativa cuyo estado efectivo depende de potencia, integridad y configuración."
       ],
@@ -162,7 +163,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_ship_sensors",
@@ -203,7 +205,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Observación activa/pasiva y seguimiento con certeza limitada; los sensores alimentan, no sustituyen, análisis científico."
       ],
@@ -242,7 +244,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_personnel_transporter",
@@ -283,7 +286,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Traslado condicionado de entidades existentes, nunca replicación de individuos por una orden de IA."
       ],
@@ -322,7 +325,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_site_to_site_transport",
@@ -351,7 +355,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "available",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Variante disponible solo si tecnología/plataforma, sensores y procedimientos la admiten."
       ],
@@ -387,7 +391,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_replicators",
@@ -428,7 +433,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Producción de alimentos y objetos compatibles mediante patrones/autorizaciones y recursos disponibles."
       ],
@@ -466,7 +471,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_ship_holodeck",
@@ -507,7 +513,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "available",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Entorno holográfico de simulación, formación y ocio; no atribuirle automáticamente autoridad ni existencia física persistente."
       ],
@@ -544,7 +550,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_isolinear_computing",
@@ -573,7 +580,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Soporte informático característico de sistemas tardíos, sin imponer velocidad, capacidad o conciencia por defecto."
       ],
@@ -610,7 +617,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_bio_neural_computing",
@@ -651,7 +659,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "class_specific",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Variante documentada para ciertas plataformas de los años 2370; instalación clase-específica, no actualización general."
       ],
@@ -688,7 +696,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_phaser_arrays",
@@ -717,7 +726,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Sistema ofensivo/defensivo de nave condicionado por emisores, control táctico y órdenes legítimas."
       ],
@@ -754,7 +763,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_photon_torpedoes",
@@ -795,7 +805,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Munición embarcada de empleo táctico; puede coexistir con otras armas sin asumir equipamiento universal."
       ],
@@ -831,7 +841,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_quantum_torpedoes",
@@ -872,7 +883,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "available",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Arma tardía disponible para algunas unidades; distribución selectiva a partir del período tardío documentado."
       ],
@@ -908,7 +919,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_tractor_beam",
@@ -949,7 +961,7 @@
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
       "availability": "standard",
-      "availability_interpretation": "derived_2371_2378_matrix_upper_bound",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
       "capabilities": [
         "Control de sujeción/remolque de objetivos compatible con masa, geometría y potencia reales, sin números inventados."
       ],
@@ -986,7 +998,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "late_24c_2371_2378"
     },
     {
       "technology_id": "starfleet_food_synthesizer",
@@ -1018,8 +1031,8 @@
         ],
         "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
       },
-      "availability": "not_standard",
-      "availability_interpretation": "historical_23c_reference_not_a_late_24c_state",
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_kirk_films_2278_2293_upper_bound_not_installed_state",
       "capabilities": [
         "Equipo alimentario propio de configuraciones anteriores; distinto de replicación plena de objetos."
       ],
@@ -1055,7 +1068,8 @@
         "data_import_allowed": false,
         "ai_direct_world_mutation": false,
         "delta_dlc_unlock": false
-      }
+      },
+      "availability_profile_id": "kirk_films_2278_2293"
     }
   ],
   "research_backlog": [
