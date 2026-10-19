@@ -1,0 +1,627 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_D_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "source_policy_ref": "sources/canon_policy.md",
+  "provenance_policy_ref": "sources/provenance_policy.md",
+  "event_count": 40,
+  "events": [
+    {
+      "event_id": "romulan_neutral_zone_incident",
+      "display_name_es": "Crisis de la Zona Neutral Romulana",
+      "reference_year": 2266,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR"
+      ],
+      "relation_refs": [
+        "federation_romulan"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "La Zona Neutral y un incidente militar evidencian paz precaria."
+    },
+    {
+      "event_id": "cestus_incident",
+      "display_name_es": "Incidente territorial en Cestus III",
+      "reference_year": 2267,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TOS_ARENA"
+      ],
+      "relation_refs": [
+        "federation_gorn"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Incidente militar acotado; situación posterior desconocida."
+    },
+    {
+      "event_id": "organian_intervention",
+      "display_name_es": "Intervención de Organia y restricción de choque Federation-Klingon",
+      "reference_year": 2267,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TOS_ERRAND_OF_MERCY"
+      ],
+      "relation_refs": [
+        "federation_klingon"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Los Organianos frenan el choque directo; el tratado no borra hostilidad."
+    },
+    {
+      "event_id": "tholian_encounter",
+      "display_name_es": "Encuentro con fuerzas de la Asamblea Tholiana",
+      "reference_year": 2268,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TOS_THE_THOLIAN_WEB"
+      ],
+      "relation_refs": [
+        "federation_tholian"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Intercepción local cerca de un área en disputa."
+    },
+    {
+      "event_id": "khitomer_diplomacy",
+      "display_name_es": "Proceso de distensión klingon-federal en torno a Khitomer",
+      "reference_year": 2293,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "ST6_THE_UNDISCOVERED_COUNTRY"
+      ],
+      "relation_refs": [
+        "federation_klingon"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Las negociaciones simbolizan distensión y paz."
+    },
+    {
+      "event_id": "federation_ferengi_first_contact",
+      "display_name_es": "Primer contacto abierto con los ferengi",
+      "reference_year": 2364,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_THE_LAST_OUTPOST"
+      ],
+      "relation_refs": [
+        "federation_ferengi"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Primer contacto abierto con naves ferengi."
+    },
+    {
+      "event_id": "romulan_return",
+      "display_name_es": "Reanudación de contacto entre Romulanos y Federación",
+      "reference_year": 2364,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "relation_refs": [
+        "federation_romulan"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Se reanuda contacto directo, sin fijar una frontera geométrica."
+    },
+    {
+      "event_id": "tng_alliance",
+      "display_name_es": "Alianza operativa Federación–Imperio Klingon durante TNG",
+      "reference_year": 2364,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+      ],
+      "relation_refs": [
+        "federation_klingon",
+        "klingon_romulan"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Alianza funcional durante TNG."
+    },
+    {
+      "event_id": "borg_first_encounter",
+      "display_name_es": "Encuentro de Enterprise-D con los Borg",
+      "reference_year": 2365,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_Q_WHO"
+      ],
+      "relation_refs": [
+        "federation_borg"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Primer encuentro directo emblemático con cubo."
+    },
+    {
+      "event_id": "borg_earth_offensive",
+      "display_name_es": "Ofensiva Borg hacia la Tierra",
+      "reference_year": 2366,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ],
+      "relation_refs": [
+        "federation_borg"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Ofensiva hacia Tierra; distinguir año de emisión y fecha de escena."
+    },
+    {
+      "event_id": "cardassian_withdrawal_bajor",
+      "display_name_es": "Retirada cardassiana de Bajor",
+      "reference_year": 2369,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "relation_refs": [
+        "cardassia_bajor"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Termina la ocupación, comienza el Gobierno Provisional."
+    },
+    {
+      "event_id": "ds9_joint_arrangement",
+      "display_name_es": "Gestión de DS9 con cooperación federal y soberanía bajorana",
+      "reference_year": 2369,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "relation_refs": [
+        "federation_bajor"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "La presencia federal se realiza bajo soberanía bajorana."
+    },
+    {
+      "event_id": "post_cardassian_border_conflict",
+      "display_name_es": "Paz tensa tras conflicto con Cardassia",
+      "reference_year": 2369,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_THE_WOUNDED"
+      ],
+      "relation_refs": [
+        "federation_cardassia"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "El conflicto federal-cardassiano ha cesado, persisten tensiones."
+    },
+    {
+      "event_id": "dominion_first_warning",
+      "display_name_es": "Advertencia militar del Dominio en Gamma",
+      "reference_year": 2370,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_JEMHADAR"
+      ],
+      "relation_refs": [
+        "federation_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Advertencia militar del Dominio contra intrusos en Gamma."
+    },
+    {
+      "event_id": "federation_cardassian_border_settlement",
+      "display_name_es": "Ajustes de frontera y conflicto colonial",
+      "reference_year": 2370,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "TNG_JOURNEYS_END"
+      ],
+      "relation_refs": [
+        "federation_cardassia"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Ajustes de frontera alimentan crisis de colonos."
+    },
+    {
+      "event_id": "maquis_emergence",
+      "display_name_es": "Surgimiento de los Maquis tras disputas fronterizas",
+      "reference_year": 2370,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_MAQUIS_I"
+      ],
+      "relation_refs": [
+        "federation_maquis",
+        "cardassia_maquis"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Conflicto insurgente tras reasignaciones fronterizas."
+    },
+    {
+      "event_id": "omarion_ambush",
+      "display_name_es": "Emboscada en Nebulosa Omarion a Tal Shiar y Orden Obsidiana",
+      "reference_year": 2371,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_DIE_IS_CAST"
+      ],
+      "relation_refs": [
+        "romulan_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Desastre del Tal Shiar/Orden Obsidiana."
+    },
+    {
+      "event_id": "trill_commission_secret",
+      "display_name_es": "Actuaciones internas de la Comisión Trill",
+      "reference_year": 2371,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_EQUILIBRIUM"
+      ],
+      "relation_refs": [
+        "federation_trill_commission"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Institución especializada; no tiene tratado interestatal propio."
+    },
+    {
+      "event_id": "tzenkethi_false_coup_report",
+      "display_name_es": "Falsa noticia de golpe tzenkethi",
+      "reference_year": 2371,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_ADVERSARY"
+      ],
+      "relation_refs": [
+        "federation_tzenkethi"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "FALSE_CLAIM_NOT_HISTORICAL_EVENT",
+      "notes": "El supuesto golpe anunciado es una maniobra engañosa; NO ocurrió como hecho probado."
+    },
+    {
+      "event_id": "changeling_infiltration_discovered",
+      "display_name_es": "Exposición de infiltración que altera decisiones klingon",
+      "reference_year": 2372,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_APOCALYPSE_RISING"
+      ],
+      "relation_refs": [
+        "klingon_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "La amenaza cambia decisiones estratégicas."
+    },
+    {
+      "event_id": "klingon_cardassian_invasion",
+      "display_name_es": "Invasión klingon de Cardassia y choque diplomático federal",
+      "reference_year": 2372,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_WAY_OF_THE_WARRIOR"
+      ],
+      "relation_refs": [
+        "federation_klingon",
+        "klingon_cardassia"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Gowron ataca Cardassia, Federación se opone y colapsa cooperación."
+    },
+    {
+      "event_id": "bajoran_dominion_nonaggression",
+      "display_name_es": "Pacto de no agresión de Bajor con Dominio",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "relation_refs": [
+        "federation_bajor",
+        "bajor_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Bajor firma neutralidad con Dominio pese a cooperación con Federación."
+    },
+    {
+      "event_id": "bajoran_federation_membership_deferred",
+      "display_name_es": "Se pospone la adhesión bajorana a la Federación",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_RAPTURE"
+      ],
+      "relation_refs": [
+        "federation_bajor"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "La adhesión se posterga; Bajor retiene decisiones propias."
+    },
+    {
+      "event_id": "cardassian_dominion_accession",
+      "display_name_es": "Incorporación cardassiana al Dominio",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_BY_INFERNOS_LIGHT"
+      ],
+      "relation_refs": [
+        "federation_cardassia",
+        "cardassia_maquis",
+        "klingon_cardassia",
+        "cardassia_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Cardassia se alinea con el Dominio."
+    },
+    {
+      "event_id": "dominion_cardassian_war_bajor",
+      "display_name_es": "dominion_cardassian_war_bajor",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "relation_refs": [
+        "cardassia_bajor"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "No confundir neutralidad bajorana con afinidad cardassiana."
+    },
+    {
+      "event_id": "dominion_war_begins",
+      "display_name_es": "Estalla la Guerra del Dominio",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "relation_refs": [
+        "federation_dominion",
+        "klingon_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Se desencadena guerra abierta."
+    },
+    {
+      "event_id": "klingon_federation_reconciliation",
+      "display_name_es": "Cooperación recuperada entre Federación y Klingon",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "relation_refs": [
+        "federation_klingon"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Renovación de cooperación frente al Dominio."
+    },
+    {
+      "event_id": "maquis_pressure_war",
+      "display_name_es": "Escalada de confrontación Maquis y mando federal",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_FOR_THE_UNIFORM"
+      ],
+      "relation_refs": [
+        "federation_maquis"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Persisten actores Maquis pero no un estado reconocido."
+    },
+    {
+      "event_id": "orion_syndicate_infiltration",
+      "display_name_es": "Infiltración asociada al Sindicato de Orión",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_HONOR_AMONG_THIEVES"
+      ],
+      "relation_refs": [
+        "federation_orion_syndicate"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Contactos e infiltración no implican reconocimiento diplomático."
+    },
+    {
+      "event_id": "romulan_dominion_nonaggression",
+      "display_name_es": "Pacto romulano de no agresión con Dominio",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION"
+      ],
+      "relation_refs": [
+        "romulan_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Pacto de no agresión no es alianza."
+    },
+    {
+      "event_id": "thal_dominion_nonaggression",
+      "display_name_es": "Pacto tholiano de no agresión con Dominio",
+      "reference_year": 2373,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION"
+      ],
+      "relation_refs": [
+        "tholian_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Referencia oficial a pacto; no confundir con alianza."
+    },
+    {
+      "event_id": "romulan_enters_war",
+      "display_name_es": "Entrada del Imperio Romulano en la coalición contra Dominio",
+      "reference_year": 2374,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ],
+      "relation_refs": [
+        "federation_romulan",
+        "romulan_dominion",
+        "klingon_romulan"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "El Imperio Romulano se incorpora contra el Dominio."
+    },
+    {
+      "event_id": "section31_revealed",
+      "display_name_es": "Revelación de actividades clandestinas de Sección 31",
+      "reference_year": 2374,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_INQUISITION"
+      ],
+      "relation_refs": [
+        "federation_section31"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Aparece red clandestina; no crear 'tratado Federación–Sección 31'."
+    },
+    {
+      "event_id": "breen_enter_war",
+      "display_name_es": "Alianza bélica de Breen con Dominio",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_STRANGE_BEDFELLOWS"
+      ],
+      "relation_refs": [
+        "breen_dominion",
+        "federation_breen"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Los Breen refuerzan al Dominio en guerra."
+    },
+    {
+      "event_id": "cardassian_fleet_switches",
+      "display_name_es": "Cambio de bando de efectivos cardassianos",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ],
+      "relation_refs": [
+        "cardassia_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Elementos de la flota cambian de bando en combate final."
+    },
+    {
+      "event_id": "cardassian_resistance",
+      "display_name_es": "Resistencia cardassiana frente al Dominio",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_DOGS_OF_WAR"
+      ],
+      "relation_refs": [
+        "federation_cardassia"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Resistencia de Damar no significa capitulación estatal instantánea."
+    },
+    {
+      "event_id": "damar_rebellion",
+      "display_name_es": "Rebelión de Damar contra la subordinación dominionista",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_THE_DOGS_OF_WAR"
+      ],
+      "relation_refs": [
+        "cardassia_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Damar lidera insurgencia contra ocupación dominionista."
+    },
+    {
+      "event_id": "derna_hospital_dispute",
+      "display_name_es": "Disputa por instalación romulana en luna bajorana",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_IMAGE_IN_THE_SAND"
+      ],
+      "relation_refs": [
+        "romulan_bajor"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Intereses romulanos y control de Bajor entran en conflicto."
+    },
+    {
+      "event_id": "rom_becomes_nagus",
+      "display_name_es": "Rom accede al cargo de Gran Nagus",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "ST_OFFICIAL_ROM_GRAND_NAGUS"
+      ],
+      "relation_refs": [
+        "federation_ferengi"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Nuevo Gran Nagus; no proyectar reforma a años anteriores."
+    },
+    {
+      "event_id": "treaty_of_bajor",
+      "display_name_es": "Rendición y acuerdo de conclusión bélica en Bajor",
+      "reference_year": 2375,
+      "precision": "YEAR_APPROXIMATE",
+      "source_refs": [
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ],
+      "relation_refs": [
+        "federation_dominion",
+        "breen_dominion",
+        "federation_breen",
+        "bajor_dominion"
+      ],
+      "is_compulsory_future_script": false,
+      "status": "SCREEN_OR_OFFICIAL_ANCHOR",
+      "notes": "Rendición formal del Dominio y término de la guerra."
+    }
+  ]
+}
