@@ -2,7 +2,7 @@
 
 **Fecha:** 19 de octubre de 2026. **Rama:** `feat/lore01-e-operational-context`.
 **Alcance:** evidencias de repositorio y chequeos documentales; NO es auditoría visual ni gameplay, ni verificación escena a escena.
-**Situación:** preparado para PR y revisión humana. Los resultados CI definitivos se registrarán tras su ejecución.
+**Situación:** PR #30 publicada para revisión humana. Hay evidencia de GitHub Actions satisfactoria en el SHA documental inicial; no equivale a pruebas de CoreRPG/UE5.
 
 ## 1. Referencia Git comprobada
 - `Videojuego_StarTrek/main` en el momento de partir: `a1a261f6338c4342cbd454b09c2cffb6ad43faed`; PR #29 fusionada 19-10-2026.
@@ -68,6 +68,18 @@ El registro de fuentes conserva referencias audiovisuales `TNG_*`, `DS9_*`, `TOS
 - Auditoría de ID/fuentes/eventos/territorios/permiso temporal sin usar CoreRPG runtime.
 
 **Sin declarar éxito anticipado:** esta acta será completada con la evidencia real de CI en la PR. Las pruebas verifican integridad estructural y precauciones de diseño, no veracidad absoluta del canon ni ejecución UE5.
+
+### Evidencia GitHub Actions comprobada
+
+Checks documentales efectuados sobre `2344d87724b0fd30ef907840a6e1b6ae69501c96` (PR #30). Los cinco workflows de LORE-01 han finalizado **success**; el workflow E incluye ejecución real de validación E, tests de E y regresión A–D:
+
+- [LORE-01 E, run #39314863517](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39314863517): success; ambos pasos de Python E y regresión integral A–D exitosos.
+- [LORE-01 A / especies, run #39314863554](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39314863554): success.
+- [LORE-01 B, run #39314863521](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39314863521): success.
+- [LORE-01 C, run #39314863507](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39314863507): success.
+- [LORE-01 D, run #39314863567](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/39314863567): success.
+
+El cambio administrativo posterior al SHA auditado se deberá revalidar por GitHub Actions. Las fuentes no se consideran verificadas escena a escena.
 
 ## 9. Criterios de cierre y siguientes tareas
 El cierre documental de E podrá aprobarse tras verificar los datos JSON, integridad de referencias, regresión A–D y límites de fuente y DLC, además de la revisión humana de la PR. Permanecen como mejoras opcionales: verificación escena a escena focalizada; nuevas fuentes sobre normas locales, comercio y comunicaciones; precisión de orden de acontecimientos 2373/2375; ampliación progresiva de sistemas concretos al incorporar misiones.
