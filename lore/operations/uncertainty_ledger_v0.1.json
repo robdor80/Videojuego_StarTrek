@@ -1,0 +1,194 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_E",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "issues": [
+    {
+      "issue_id": "EU01",
+      "topic": "BORDERS_GEOMETRY",
+      "description": "No hay contornos oficiales exactos de las fronteras políticas en la mayoría de regiones.",
+      "reference": "lore/astrography/atlas/map_discrepancy_ledger_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU02",
+      "topic": "CUSTOMS",
+      "description": "Procedimientos aduaneros y tasas no están descritos como ley galáctica única.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-B01",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU03",
+      "topic": "TREATY_RIGHTS",
+      "description": "Desconocidas cláusulas de acceso de muchos pactos y su vigencia local.",
+      "reference": "lore/diplomacy/open_questions_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU04",
+      "topic": "STATION_LEGAL_JURISDICTION",
+      "description": "En DS9 existen competencias cruzadas; falta inventario jurídico escena a escena.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-D01",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU05",
+      "topic": "TRADE_PRICES",
+      "description": "No hay datos universales de precios/cambio/mercancías para inventario procedural.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-C02",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU06",
+      "topic": "FLEET_PERMITS",
+      "description": "No extrapolar un único régimen de permisos de tránsito para naves científicas y militares.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-B02",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU07",
+      "topic": "COMM_LATENCY",
+      "description": "Las comunicaciones subespaciales no permiten fijar latencias numéricas universales.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-E01",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU08",
+      "topic": "DATA_CLASSIFICATION",
+      "description": "La confidencialidad exacta depende del registro y autoridad de cada historia.",
+      "reference": "gameplay/ship_operations/ship_computer/access_control_rules.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU09",
+      "topic": "TRANS_TECH",
+      "description": "La compatibilidad de tecnologías ajenas no se deduce automáticamente.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-F02",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU10",
+      "topic": "INTERCULTURAL_SEMANTICS",
+      "description": "Traductor universal no resuelve por sí solo semántica, legitimidad, intención ni consentimiento.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-G03",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU11",
+      "topic": "CANON_EVENT_ORDER",
+      "description": "En 2373 y 2375 hay muchos sucesos cuyo orden no lo determina sólo el año.",
+      "reference": "lore/diplomacy/historical_events_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU12",
+      "topic": "OBSERVER_KNOWLEDGE",
+      "description": "Una fuente histórica no determina por sí sola cuándo una tripulación concreta conoce el dato.",
+      "reference": "lore/operations/query_scenarios_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU13",
+      "topic": "BORG_DELTA",
+      "description": "Borg conocidos en Alfa no habilitan la red transwarp ni la puerta IDEA-0011.",
+      "reference": "universe/generation/lore01_tng_content_availability_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU14",
+      "topic": "PREWARP_EXCEPTION",
+      "description": "Las circunstancias de intervención y sus consecuencias requieren autoridad y evaluación individual.",
+      "reference": "gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU15",
+      "topic": "LAW_EXTRADITION",
+      "description": "No inventar cláusulas generales sobre delitos interestelares, asilo, extradición o apresamientos.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-D02",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU16",
+      "topic": "HUMANITARIAN_CAPACITY",
+      "description": "No hay números canónicos por defecto de plazas, suministros, camas o personal en cada ayuda.",
+      "reference": "lore/operations/operational_evidence_v0.1.json#OP-H01",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU17",
+      "topic": "HISTORICAL_SOURCES",
+      "description": "Registro de episodio no acredita todos los párrafos por escena o minutaje; revisión focalizada posterior.",
+      "reference": "sources/provenance_policy.md",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    },
+    {
+      "issue_id": "EU18",
+      "topic": "CORE_4_13",
+      "description": "La revisión de CoreRPG se ancla a main verificado; fase 4.13 y el primer content pack continúan fuera del ámbito ejecutable de LORE-01 E.",
+      "reference": "docs/roadmap/master/DEPENDENCIAS_CORE_RPG.md",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "blocks_documentary_completion": false,
+      "requires_author_decision": false,
+      "mitigation": "CITE_UNCERTAINTY_AND_RUNTIME_RECHECK"
+    }
+  ],
+  "future_integrations": [
+    "CoreRPG actor-scoped knowledge projection and authoritative action-validation adapter",
+    "UE5 console queries, UX and provenance display",
+    "NPC AI prompt projection by actual role/classification",
+    "date/event-aware campaign bootstrap, no canonical episode replay",
+    "DLC Delta gating in eventual runtime"
+  ]
+}
