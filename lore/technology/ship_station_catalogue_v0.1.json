@@ -543,6 +543,24 @@
           "source_type": "RELIABLE_SECONDARY",
           "confidence": "MEDIUM",
           "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        },
+        {
+          "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        },
+        {
+          "source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        },
+        {
+          "source_id": "VOY_THE_KILLING_GAME",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
         }
       ],
       "interpretation_class": "INFERRED",
@@ -689,6 +707,12 @@
           "source_type": "RELIABLE_SECONDARY",
           "confidence": "MEDIUM",
           "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        },
+        {
+          "source_id": "VOY_CARETAKER",
+          "source_type": "SCREEN_CANON",
+          "confidence": "MEDIUM",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
         }
       ],
       "interpretation_class": "INFERRED",
