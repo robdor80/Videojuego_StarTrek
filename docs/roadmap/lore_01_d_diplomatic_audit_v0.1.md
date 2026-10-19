@@ -34,3 +34,17 @@ La integridad estructural se verifica programáticamente en la escritura inicial
 - Revisión de términos jurídicos y fuentes primarias completas de algunos pactos.
 - Identificar acuerdos comerciales adicionales si los acredita el canon.
 - LORE-01 E no iniciada.
+
+## Resultado CI tras correcciones (19-10-2026)
+
+Verificado sobre commit `dd5c3bf2eefbcbd27de10015475d84955a563cc6`, con cuatro workflows completados correctamente:
+
+- LORE-01 — catálogo especies y culturas: run #39296526526 — success.
+- LORE-01 B — civilizaciones: run #39296526528 — success.
+- LORE-01 C — atlas: run #39296526580 — success.
+- LORE-01 D — diplomacia + regresiones: run #39296526597 — success.
+
+- El validador nuevo informó 27 relaciones, 40 hitos, 7 acuerdos, 5 conflictos y 10 casos.
+- Las 15 pruebas unitarias de D resultaron satisfactorias; las regresiones A/A.1/B/C incluidas en workflow D también pasaron.
+- Se corrigió una aserción textual frágil de Bajor y se amplió el validador documental de C para admitir su cierre y posterior comienzo de D. No se modificaron contratos operativos.
+- Los resultados son de documentación/CI; no constituyen validación de UE5, ejecución en CoreRPG ni auditoría escena por escena de la serie.
