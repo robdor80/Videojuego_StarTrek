@@ -75,3 +75,13 @@ Generators must not use technology that is invalid for the date, culture or plat
 - weapons.
 
 Coverage remains progressive and should be driven by gameplay and procedural-universe needs.
+
+## LORE-02 A — tecnología de naves y estaciones (en investigación)
+
+- [Plan maestro A–E](../../docs/roadmap/lore_02_master_plan_v0.1.md).
+- [Notas de investigación 02-A](../../docs/roadmap/lore_02_a_research_notes_v0.1.md).
+- [Catálogo cualitativo inicial (14 sistemas)](ship_station_catalogue_v0.1.json): fuentes, disponibilidades derivadas de matriz, dependencias, fallos y restricciones, sin cifras inventadas.
+- [14 casos negativos](ship_station_cases_v0.1.json): cambios de época, sistema no instalado, observación parcial, acciones no autorizadas y DLC Delta reservado.
+- Validación: `python tools/validation/validate_lore02_a.py`; regresiones: `python tools/validation/test_lore02_a.py`.
+
+**Estado:** `IN_PROGRESS`; el conjunto es un primer corte de investigación para PR Draft. No altera contratos de gameplay, categorías CoreRPG ni equipos UE5. Faltan impulso/energía/comunicaciones/soporte vital y tecnología específica de estaciones y otras civilizaciones; no declarar fase A `COMPLETE` hasta resolver las lagunas.
