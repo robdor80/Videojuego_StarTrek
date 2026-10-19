@@ -560,9 +560,22 @@ The Sensors vertical slice remains preserved and ready for later UX/runtime cont
 | B — Civilizaciones/potencias | ✅ COMPLETE | PR #27 fusionada en `main` (2026-10-18), commit `b1c29b6d`; 16 monografías y libros de evidencias y validaciones. Cierre documental, no implementación CoreRPG/UE5. |
 | C — Cartografía/astrogeografía | ✅ COMPLETE | PR #28 fusionada (2026-10-18), commit `577fd1bf`; validación documental reportada en cierre de C. Atlas sin polígonos ni contratos de navegación modificados. |
 | D — Relaciones diplomáticas | ✅ COMPLETE | PR #29 fusionada en `main` (2026-10-19), commit `a1a261f6`; 27 expedientes, 40 hitos, tratados, conflictos y escenarios. Cuatro workflows satisfactorios antes de fusión. **No** es implementación runtime. |
-| E — Información operativa transversal | 🟧 NEEDS_REVIEW | PR #30 abierta para revisión sobre `feat/lore01-e-operational-context`; 32 fichas en 8 ámbitos, 12 escenarios, 18 incertidumbres, cruce A–E y auditoría global. Integridad y regresiones ejecutadas en GitHub Actions; pendiente aprobación humana y fusión. No es runtime CoreRPG/UE5. |
+| E — Información operativa transversal | ✅ COMPLETE | PR #30 fusionada el 2026-10-19 en `main`, commit `3479faefb9aa56980265c5b03aeab3ba3ddd083f`; rama eliminada. 32 fichas en 8 ámbitos, 12 escenarios, 18 incertidumbres, cruce A–E y auditoría documental. Cierre **documental**, no implementación runtime CoreRPG/UE5. |
 
-Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. La línea general de especies/culturas/lenguas continúa `IN_PROGRESS` hasta terminar los demás apartados de LORE-01.
+Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. El universo global continúa ampliándose mediante futuras fases LORE sin reabrir automáticamente la Base Galáctica A–E, documentalmente cerrada.
+
+
+## LORE-02 — Tecnología, Ciencia y Medicina (inicio 2026-10-19)
+
+| Apartado | Estado | Alcance y criterio de cierre |
+|---|---|---|
+| A — Tecnología de naves y estaciones | 🟨 IN_PROGRESS | Investigación documental nueva sobre contratos existentes; una PR abierta no acredita cierre. |
+| B — Equipamiento personal y especializado | ⬜ TODO | Equipos de campo, exploración, seguridad, ingeniería y medicina; variantes y restricciones. |
+| C — Medicina y xenobiología | ⬜ TODO | Diagnóstico, tratamientos y particularidades biológicas con cautelas clínicas explícitas. |
+| D — Ciencia y fenómenos | ⬜ TODO | Métodos científicos, anomalías, incertidumbre observacional y peligros. |
+| E — Integración y auditoría A–D | ⬜ TODO | Cruces documentales, fuentes, regresiones, lagunas y revisión humana. |
+
+Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. Los cinco apartados deberán fusionarse y verificarse en `main` antes de marcar LORE-02 `COMPLETE`.
 
 
 ## Procedural living-universe master plan
