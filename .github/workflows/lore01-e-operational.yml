@@ -1,0 +1,51 @@
+name: LORE-01 E — Información operativa transversal
+on:
+  push:
+    branches: [main, "feat/lore01-e-operational-context"]
+    paths:
+      - "lore/operations/**"
+      - "lore/diplomacy/**"
+      - "tools/validation/*lore01*"
+      - "docs/roadmap/lore_01_e_global_audit_v0.1.md"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore01-e-operational.yml"
+  pull_request:
+    paths:
+      - "lore/operations/**"
+      - "lore/diplomacy/**"
+      - "tools/validation/*lore01*"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore01-e-operational.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lore01-e-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: LORE-01 E — Compilación, integridad y pruebas
+        run: |
+          python -m py_compile tools/validation/validate_lore01_e.py tools/validation/test_lore01_e.py
+          python tools/validation/validate_lore01_e.py
+          python tools/validation/test_lore01_e.py
+      - name: Regresión integral LORE-01 A–D
+        run: |
+          python tools/validation/validate_lore01_tng.py
+          python tools/validation/test_lore01_tng.py
+          python tools/validation/validate_lore01_depth.py
+          python tools/validation/test_lore01_depth.py
+          python tools/validation/validate_lore01_a1.py
+          python tools/validation/test_lore01_a1.py
+          python tools/validation/validate_lore01_b.py
+          python tools/validation/test_lore01_b.py
+          python tools/validation/validate_lore01_c.py
+          python tools/validation/test_lore01_c.py
+          python tools/validation/validate_lore01_d.py
+          python tools/validation/test_lore01_d.py
