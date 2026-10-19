@@ -1,0 +1,212 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_D_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "source_policy_ref": "sources/canon_policy.md",
+  "provenance_policy_ref": "sources/provenance_policy.md",
+  "cases": [
+    {
+      "case_id": "CAPTAIN_NEUTRAL_ZONE",
+      "reference_year": 2364,
+      "participants": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "title": "Capitán ante contacto en Zona Neutral",
+      "expected_behavior": "La carta y mandato actual prevalecen sobre mapa abstracto; comunicaciones a mando, evaluación y autorización antes de cualquier ingreso.",
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "BORDER_OFFICER_COLONISTS",
+      "reference_year": 2370,
+      "participants": [
+        "united_federation_of_planets",
+        "maquis"
+      ],
+      "title": "Oficial de frontera con colonos y sospechosos Maquis",
+      "expected_behavior": "No confundir ciudadanía, propaganda, material probatorio y pertenencia; procedimiento legal y oficial al mando.",
+      "source_refs": [
+        "DS9_THE_MAQUIS_I"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "BAJOR_DS9_COMMAND",
+      "reference_year": 2369,
+      "participants": [
+        "united_federation_of_planets",
+        "bajoran_provisional_government"
+      ],
+      "title": "Estación con administración compartida",
+      "expected_behavior": "El oficial federal controla operación delegada; soberanía/autoridades civiles bajoranas conservan atribuciones.",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "SHIP_CARDASSIAN_TRANSIT",
+      "reference_year": 2370,
+      "participants": [
+        "united_federation_of_planets",
+        "cardassian_union"
+      ],
+      "title": "Nave solicita tránsito por territorio cardassiano",
+      "expected_behavior": "Consultar permiso, control efectivo, región y misión; neutralidad y cooperación no implican libre tránsito.",
+      "source_refs": [
+        "TNG_JOURNEYS_END"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "DIPLOMAT_DOMINION_PACT",
+      "reference_year": 2373,
+      "participants": [
+        "bajoran_provisional_government",
+        "dominion"
+      ],
+      "title": "Diplomático negocia no agresión",
+      "expected_behavior": "Sólo representante con autoridad válida puede pactar; IA explica/proyecta propuesta pero CoreRPG decide cambio.",
+      "source_refs": [
+        "DS9_CALL_TO_ARMS"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "FERENGI_MERCHANT",
+      "reference_year": 2371,
+      "participants": [
+        "ferengi_alliance",
+        "united_federation_of_planets"
+      ],
+      "title": "Comerciante en DS9",
+      "expected_behavior": "Negocios de Quark no son política gubernamental; impuestos y permisos locales no se deducen de la especie.",
+      "source_refs": [
+        "DS9_RULES_OF_ACQUISITION"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "ROMULAN_BAJOR_HOSPITAL",
+      "reference_year": 2375,
+      "participants": [
+        "romulan_star_empire",
+        "bajoran_provisional_government"
+      ],
+      "title": "Hospital romulano en luna bajorana",
+      "expected_behavior": "Hospital y material militar requieren trato diferenciado; no conceder base estratégica ilimitada por trámite sanitario.",
+      "source_refs": [
+        "DS9_IMAGE_IN_THE_SAND"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "CARDASSIAN_RESISTANCE",
+      "reference_year": 2375,
+      "participants": [
+        "cardassian_union",
+        "dominion"
+      ],
+      "title": "Ciudadano cardassiano critica al gobierno y se une a Damar",
+      "expected_behavior": "La opinión individual puede contradecir alianza oficial; riesgos, identidad, pruebas y redes personales cuentan.",
+      "source_refs": [
+        "DS9_THE_DOGS_OF_WAR"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "SECTION31_BOUNDED_AUTHORITY",
+      "reference_year": 2374,
+      "participants": [
+        "section_31",
+        "united_federation_of_planets"
+      ],
+      "title": "Agente clandestino exige autoridad",
+      "expected_behavior": "Una afirmación de Sección 31 no concede poderes diplomáticos al NPC ni altera gobierno.",
+      "source_refs": [
+        "DS9_INQUISITION"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "TNG_BORG_HISTORY_NO_DELTA",
+      "reference_year": 2366,
+      "participants": [
+        "united_federation_of_planets",
+        "borg_collective"
+      ],
+      "title": "Oficial estudia incursión Borg en Alfa",
+      "expected_behavior": "Incursión TNG puede ser conocida según su acceso; prohíbe generar exploración del DLC Delta o portal IDEA-0011.",
+      "source_refs": [
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ],
+      "required_authority": "VALIDATED_ROLE_AND_COMMAND_CHAIN",
+      "individual_knowledge_required": true,
+      "auto_create_treaty": false,
+      "auto_declare_war": false,
+      "auto_rewrite_border": false,
+      "ai_can_mutate_world_state": false,
+      "delta_dlc_unlock": false
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+name: LORE-01 D — Diplomacia documental
+on:
+  push:
+    branches: [main, "lore/01-d-diplomatic-geopolitics"]
+    paths:
+      - "lore/diplomacy/**"
+      - "tools/validation/*lore01*"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore01-d-diplomacy.yml"
+  pull_request:
+    paths:
+      - "lore/diplomacy/**"
+      - "tools/validation/*lore01*"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore01-d-diplomacy.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lore01-d-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: LORE-01 D integridad y pruebas
+        run: |
+          python -m py_compile tools/validation/validate_lore01_d.py tools/validation/test_lore01_d.py
+          python tools/validation/validate_lore01_d.py
+          python tools/validation/test_lore01_d.py
+      - name: Regresiones LORE-01 A A.1 B C
+        run: |
+          python tools/validation/validate_lore01_tng.py
+          python tools/validation/test_lore01_tng.py
+          python tools/validation/validate_lore01_depth.py
+          python tools/validation/test_lore01_depth.py
+          python tools/validation/validate_lore01_a1.py
+          python tools/validation/test_lore01_a1.py
+          python tools/validation/validate_lore01_b.py
+          python tools/validation/test_lore01_b.py
+          python tools/validation/validate_lore01_c.py
+          python tools/validation/test_lore01_c.py
