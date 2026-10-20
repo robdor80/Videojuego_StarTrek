@@ -80,6 +80,7 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 
 - [Plan maestro A–E](../../docs/roadmap/lore_02_master_plan_v0.1.md).
 - [Notas de investigación 02-A](../../docs/roadmap/lore_02_a_research_notes_v0.1.md).
+- [Dossier de las ocho lagunas A-G01–A-G08](../../docs/roadmap/lore_02_a_eight_gaps_dossier_v0.2.md): referencias externas consultadas, reglas cautelares, casos negativos y cuestiones todavía abiertas.
 - [Catálogo cualitativo inicial (14 sistemas)](ship_station_catalogue_v0.1.json): fuentes, disponibilidades derivadas de matriz, dependencias, fallos y restricciones, sin cifras inventadas.
 - [14 casos negativos](ship_station_cases_v0.1.json): cambios de época, sistema no instalado, observación parcial, acciones no autorizadas y DLC Delta reservado.
 - Validación: `python tools/validation/validate_lore02_a.py`; regresiones: `python tools/validation/test_lore02_a.py`.
