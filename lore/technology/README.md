@@ -85,3 +85,10 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 - Validación: `python tools/validation/validate_lore02_a.py`; regresiones: `python tools/validation/test_lore02_a.py`.
 
 **Estado:** `IN_PROGRESS`; el conjunto es un primer corte de investigación para PR Draft. No altera contratos de gameplay, categorías CoreRPG ni equipos UE5. Faltan impulso/energía/comunicaciones/soporte vital y tecnología específica de estaciones y otras civilizaciones; no declarar fase A `COMPLETE` hasta resolver las lagunas.
+
+### Clase Valhalla — decisiones de diseño aprobadas
+
+- [Perfil conceptual VAL-TEC-01 a VAL-TEC-16](valhalla_tech_profile_v0.1.md): 8 elecciones B expresas y 8 opciones B adoptadas por delegación creativa; restricciones y salvaguardas, incluido triple escudo + ablativo.
+- [Registro de aprobación y procedencia por decisión](valhalla_tech_decisions_v0.1.json): metadatos de diseño, **no** contrato de capacidades ni estado instalado.
+- Valhalla es **clase nueva inspirada en Galaxy**, no un refit oficial Galaxy. IDEA-0010 sustituye a IDEA-0004; no hay yate activo ni autorización automática de camuflaje, fechas, prestaciones o equipamiento de la nave auxiliar.
+- Este perfil **avanza A-G07 conceptualmente**, pero no declara cerradas las ocho lagunas ni sustituye la investigación y contraste del canon.
