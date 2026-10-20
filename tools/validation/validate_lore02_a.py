@@ -140,6 +140,32 @@ def validate() -> dict[str, int]:
         "docs/roadmap/lore_02_a_research_notes_v0.1.md",
         "lore/technology/ship_station_cases_v0.1.json",
     )), "Missing narrative report")
+    valhalla = load("lore/technology/valhalla_tech_decisions_v0.1.json")
+    require(valhalla["schema_version"] == "0.1.0"
+            and valhalla["record_id"] == "valhalla_technology_decisions"
+            and valhalla["runtime_implemented"] is False
+            and valhalla["authoritative_world_state"] == "CoreRPG_ONLY",
+            "Valhalla cannot become runtime authority")
+    require(valhalla["class_identity"] == "NEW_VALHALLA_CLASS_GALAXY_INSPIRED_NOT_GALAXY_REFIT"
+            and valhalla["auxiliary_yacht_active"] is False
+            and valhalla["auxiliary_project"] == "IDEA-0010"
+            and valhalla["year_of_commissioning"] is None,
+            "Valhalla identity, yacht or commission year contradicted")
+    choices = valhalla["decisions"]
+    require(len(choices) == 16
+            and [q["decision_id"] for q in choices]
+            == [f"VAL-TEC-{i:02}" for i in range(1, 17)], "Valhalla decision register incomplete")
+    for index, q in enumerate(choices):
+        require(q["selection"] == "B" and q["topic"]
+                and q["state"] == "APPROVED_DESIGN_NOT_RUNTIME"
+                and q["decision_basis"]
+                == ("AUTHOR_EXPLICIT_B" if index < 8 else "AUTHOR_DELEGATED_BALANCED_B"),
+                "Valhalla choice/provenance mismatch")
+    profile = (ROOT / valhalla["source_of_detail"]).read_text(encoding="utf-8")
+    for needed in ("primarios", "secundarios", "terciarios", "ablativo",
+                   "CoreRPG", "IDEA-0010", "sin fijar"):
+        require(needed in profile, "Missing Valhalla safeguard: " + needed)
+
     return {"technology_records": len(records),
             "research_gaps": len(gaps), "negative_scenarios": len(cases),
             "matrix_profiles": len(profiles), "provenance_ids": len(sources)}
