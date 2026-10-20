@@ -166,6 +166,15 @@ def validate() -> dict[str, int]:
                    "CoreRPG", "IDEA-0010", "sin fijar"):
         require(needed in profile, "Missing Valhalla safeguard: " + needed)
 
+    evidence_rel = "docs/roadmap/lore_02_a_eight_gaps_dossier_v0.2.md"
+    require(valid_path(evidence_rel), "Eight-gap research dossier missing")
+    evidence = (ROOT / evidence_rel).read_text(encoding="utf-8")
+    require("RESEARCH_IN_PROGRESS" in evidence
+            and "LORE-02 A permanece" in evidence
+            and "CoreRPG" in evidence, "Research dossier prematurely claims implementation")
+    for gap_id in (f"A-G{i:02}" for i in range(1, 9)):
+        require(gap_id in evidence, "Missing evidence discussion for " + gap_id)
+
     return {"technology_records": len(records),
             "research_gaps": len(gaps), "negative_scenarios": len(cases),
             "matrix_profiles": len(profiles), "provenance_ids": len(sources)}
