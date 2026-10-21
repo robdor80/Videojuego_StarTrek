@@ -1,0 +1,59 @@
+name: LORE-02 C — Medicina y xenobiología
+on:
+  push:
+    branches: [main, "feat/lore02-c-medicine-xenobiology"]
+    paths:
+      - "lore/medicine/**"
+      - "gameplay/medical/**"
+      - "docs/roadmap/lore_02_c_*"
+      - "CONTENT_STATUS.md"
+      - "sources/source_registry/source_registry.json"
+      - "tools/validation/*lore02*"
+      - ".github/workflows/lore02-c-medicine.yml"
+  pull_request:
+    paths:
+      - "lore/medicine/**"
+      - "gameplay/medical/**"
+      - "docs/roadmap/lore_02_c_*"
+      - "CONTENT_STATUS.md"
+      - "sources/source_registry/source_registry.json"
+      - "tools/validation/*lore02*"
+      - ".github/workflows/lore02-c-medicine.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lore02-c-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Xenomedicine catalogue / privacy / authority / adversarial tests
+        run: |
+          python -m py_compile tools/validation/validate_lore02_c.py tools/validation/test_lore02_c.py
+          python tools/validation/validate_lore02_c.py
+          python tools/validation/test_lore02_c.py -v
+  lore02-c-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regression LORE-02 B and A, LORE-01 E, governance
+        run: |
+          python tools/validation/validate_lore02_b.py
+          python tools/validation/test_lore02_b.py
+          python tools/validation/validate_lore02_a_completion.py
+          python tools/validation/test_lore02_a_completion.py
+          python tools/validation/validate_lore01_e.py
+          python tools/validation/test_lore01_e.py
+          python tools/validation/validate_roadmap_state.py
