@@ -4,7 +4,7 @@
   "status": "NEEDS_REVIEW",
   "mode": "EDITORIAL_NON_RUNTIME",
   "authority": "CoreRPG_WORLD_STATE_ONLY",
-  "record_count": 32,
+  "record_count": 38,
   "provenance_policy": "sources/provenance_policy.md",
   "catalogue": [
     {
@@ -720,6 +720,150 @@
       "information_gate": "OBSERVER_RESTRICTED",
       "world_state_authority": "CoreRPG_ONLY",
       "evidence_ids": []
+    },
+    {
+      "condition_id": "l02c_jemhadar_white_deprivation",
+      "display_name_es": "Privación de ketracel-white en Jem'Hadar",
+      "category": "species_specific",
+      "affected_scope": "jem_hadar_individual",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Signos de privación bioquímica, cambios conductuales y deterioro funcional en un individuo dependiente; raras excepciones genéticas documentadas.",
+      "diagnostic_differential_es": "No inferir la dependencia concreta o el estado de suministro sin historia y pruebas; diferenciación entre dependencia inducida, excepción genética y otros síntomas.",
+      "medical_response_es": "species_specialist_consult",
+      "procedure_ref": "l02c_proc_species_specialist_consult",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_KETRACEL_WHITE"
+      ]
+    },
+    {
+      "condition_id": "l02c_bolian_vulcan_blood_mismatch",
+      "display_name_es": "Incompatibilidad transfusional boliana-vulcana",
+      "category": "xenomedicine",
+      "affected_scope": "bolian_transfusion_recipient",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_BOLIAN_BLOOD"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Historia de transfusión interespecie y alteraciones tras exposición; peligro grave documentado para esa combinación.",
+      "diagnostic_differential_es": "Comprobar donante, receptor y naturaleza real de la sangre antes de aceptar una compatibilidad interespecie.",
+      "medical_response_es": "xenomedical_transfer_consult",
+      "procedure_ref": "l02c_proc_xenomedical_transfer_consult",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_BOLIAN_BLOOD"
+      ]
+    },
+    {
+      "condition_id": "l02c_orkett_disease",
+      "display_name_es": "Enfermedad de Orkett",
+      "category": "infectious",
+      "affected_scope": "historically_exposed_bajorans",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_ORKETT"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Infección pediátrica documentada en contexto de ocupación bajorana y posible historial de trasplante de médula.",
+      "diagnostic_differential_es": "En el caso Seska el supuesto antecedente se contradijo con marcadores genéticos; distinguir diagnóstico documentado de relato clínico falso.",
+      "medical_response_es": "isolation_and_analysis",
+      "procedure_ref": "l02c_proc_isolation_and_analysis",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_ORKETT"
+      ]
+    },
+    {
+      "condition_id": "l02c_morphogenic_virus",
+      "display_name_es": "Virus morfogénico de los Fundadores",
+      "category": "infectious",
+      "affected_scope": "affected_changelings",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_MORPHOGENIC"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Deterioro progresivo vinculado a agente diseñado en el conflicto del Dominio.",
+      "diagnostic_differential_es": "La cura, la transmisión por Vínculo y la manipulación por Sección 31 son contextuales; no generalizar infecciones a cualquier especie ni presentar el agente como universal.",
+      "medical_response_es": "isolation_and_analysis",
+      "procedure_ref": "l02c_proc_isolation_and_analysis",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_MORPHOGENIC"
+      ]
+    },
+    {
+      "condition_id": "l02c_barclay_protomorphosis",
+      "display_name_es": "Síndrome de protomorfosis de Barclay",
+      "category": "iatrogenic",
+      "affected_scope": "genetically_exposed_crew",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_BARCLAY"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Signos diversos seguidos de alteraciones biológicas extraordinarias en el caso TNG Genesis.",
+      "diagnostic_differential_es": "Diferenciar gripe original, intervención iatrogénica y agente mutado; no deducir que cualquier activación de intrones reproduce este resultado.",
+      "medical_response_es": "isolation_and_analysis",
+      "procedure_ref": "l02c_proc_isolation_and_analysis",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_BARCLAY"
+      ]
+    },
+    {
+      "condition_id": "l02c_irumodic_alternate_future",
+      "display_name_es": "Síndrome irumódico, escenario de futuro alternativo",
+      "category": "neurological",
+      "affected_scope": "neurological_patient_hypothetical",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_IRUMODIC"
+      ],
+      "scope_note_es": "Hecho descrito en episodio específico y reconstruido por fuente secundaria; no se convierte en universal ni cronología obligatoria.",
+      "observable_clues_es": "Manifestaciones neurodegenerativas descritas en el futuro alternativo de TNG All Good Things...",
+      "diagnostic_differential_es": "Una anomalía parietal o predisposición no es enfermedad confirmada; no convertir un futuro alternativo en destino inevitable de un NPC de nuestra continuidad.",
+      "medical_response_es": "neuropsychiatric_review",
+      "procedure_ref": "l02c_proc_neuropsychiatric_review",
+      "transmission": "NOT_ESTABLISHED_UNLESS_CASE_SPECIFIC",
+      "clinical_dose": null,
+      "canonical_recovery_time": null,
+      "requires_confirmed_diagnosis_for_definitive_care": true,
+      "information_gate": "OBSERVER_RESTRICTED",
+      "world_state_authority": "CoreRPG_ONLY",
+      "evidence_ids": [
+        "source:L02C_MA_IRUMODIC"
+      ]
     }
   ]
 }
