@@ -17,10 +17,11 @@ DOSSIER = "docs/roadmap/lore_02_c_medicine_research_dossier_v0.1.md"
 EQUIPMENT = "lore/equipment/lore02_b_equipment_catalogue_v0.1.json"
 AGENTS = "lore/medicine/lore02_c_medical_agents_v0.1.json"
 MATRIX = "lore/medicine/lore02_c_clinical_decision_matrix_v0.1.json"
+CULTURES = "lore/medicine/lore02_c_civilization_medical_profiles_v0.1.json"
 NAMES = (ATLAS, CONDITIONS, PROCEDURES, ORG, SCENARIOS, FLOW, REGISTRY, EQUIPMENT)
 STATE = "EDITORIAL_NON_RUNTIME"
 EXPECTED = {"species": 26, "conditions": 38, "procedures": 26, "agents": 13,
-            "facilities": 9, "roles": 12, "cases": 62}
+            "facilities": 9, "roles": 12, "cases": 62, "cultures": 13}
 
 def read(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
@@ -116,6 +117,37 @@ def validate_matrix(doc, conditions, procedures, agents):
                  and link.get("not_a_prescription") is True
                  and link.get("indication") == "NEEDS_SPECIFIC_PATIENT_TEST_AUTHORIZATION_AND_STOCK",
                  key + " auto prescribed or missing agent")
+    return errors
+
+def validate_cultures(doc, registry, check_paths=True):
+    """Culture never licenses unobserved medicine or automatic authority."""
+    errors = []
+    def need(ok, msg):
+        if not ok:
+            errors.append(msg)
+    sources = {x["source_id"] for x in registry.get("sources", [])}
+    records = doc.get("records", [])
+    need(doc.get("status") == "NEEDS_REVIEW"
+         and doc.get("mode") == "EDITORIAL_NON_RUNTIME"
+         and doc.get("authority") == "CoreRPG_WORLD_STATE_ONLY",
+         "intercultural medicine falsely implemented")
+    need(len(records) == doc.get("profile_count") == EXPECTED["cultures"]
+         and len({x.get("operator_id") for x in records}) == len(records),
+         "intercultural coverage or IDs")
+    for c in records:
+        key = c.get("operator_id", "?")
+        need(bool(c.get("clinical_context_es")) and bool(c.get("anti_generalisation_es")),
+             key + " medical stereotype")
+        need(c.get("technological_superiority") == "NOT_INFERRED"
+             and c.get("auto_faction_medical_capability") is False
+             and c.get("default_access") == "PATIENT_AUTHORIZED_ONLY",
+             key + " automatic medical faction advantage")
+        need(len(c.get("medical_intervention_requires", [])) >= 5
+             and c.get("era_and_facility_scope") == "PATIENT_INDIVIDUAL_AND_PROVIDER_CONTEXT",
+             key + " missing patient constraints")
+        need(set(c.get("source_ids", [])) <= sources, key + " unknown cultural medicine source")
+        if check_paths:
+            need(exists(c.get("species_or_regulatory_anchor")), key + " missing species anchor")
     return errors
 
 def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths=True):
@@ -261,7 +293,8 @@ def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths
     if check_paths:
         errors.extend(validate_agents(read(AGENTS), registry, eq))
         errors.extend(validate_matrix(read(MATRIX), cond, proc, read(AGENTS)))
-        for ref in (*NAMES, AGENTS, MATRIX, DOSSIER, "lore/medicine/README.md",
+        errors.extend(validate_cultures(read(CULTURES), registry))
+        for ref in (*NAMES, AGENTS, MATRIX, CULTURES, DOSSIER, "lore/medicine/README.md",
                     "gameplay/medical/medical_state_model.json",
                     "gameplay/medical/species_medical_hooks.json",
                     "gameplay/records_and_logs/access_and_privacy_rules.json",
