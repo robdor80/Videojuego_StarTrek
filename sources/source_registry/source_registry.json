@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.39.0",
+  "registry_version": "0.40.0",
   "last_updated": "2026-10-21",
   "sources": [
     {
@@ -4140,6 +4140,114 @@
       "url": "https://www.startrek.com/news/vision-of-the-future",
       "accessed_at": "2026-10-21",
       "notes": "Implantes oculares de Geordi y Seven; rehabilitación y especificidad de dispositivos."
+    },
+    {
+      "source_id": "L02C_MA_CORDRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Cordrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Cordrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Fármaco estimulante empleado en situaciones de reanimación; episodios citados y efectos adversos, sin dosis de referencia para videojuego."
+    },
+    {
+      "source_id": "L02C_MA_TRICORDRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tricordrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tricordrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Derivado de cordrazine; margen de riesgo y diferencias individuales, especialmente en contexto klingon."
+    },
+    {
+      "source_id": "L02C_MA_HYRONALIN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Hyronalin",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Hyronalin",
+      "accessed_at": "2026-10-21",
+      "notes": "Ejemplos de contraprotección radiológica en TOS, TNG, DS9 y Voyager; no antídoto universal."
+    },
+    {
+      "source_id": "L02C_MA_INAPROVALINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Inaprovaline",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Inaprovaline",
+      "accessed_at": "2026-10-21",
+      "notes": "Estimulante sináptico/cardiovascular documentado; indicación por episodio, no por nombre del síntoma."
+    },
+    {
+      "source_id": "L02C_MA_LECTRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Lectrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Lectrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Ejemplos de soporte cardiovascular y renal; episodio VOY Warlord apunta incompatibilidad individual."
+    },
+    {
+      "source_id": "L02C_MA_TRI_OX",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tri-ox compound",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tri-ox_compound",
+      "accessed_at": "2026-10-21",
+      "notes": "Soporte en ambientes pobres en oxígeno en episodios; no sustituye suministro ambiental en todas las especies."
+    },
+    {
+      "source_id": "L02C_MA_FELICIUM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ornaran plague",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ornaran_plague",
+      "accessed_at": "2026-10-21",
+      "notes": "Caso TNG Symbiosis: medicamento inicial y dependencia/explotación posterior; no remedio universal."
+    },
+    {
+      "source_id": "L02C_MA_ARITHRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "The Omega Directive",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/The_Omega_Directive_%28episode%29",
+      "accessed_at": "2026-10-21",
+      "notes": "Indicación de arithrazine en radiación grave y exigencia de supervisión médica; cita secundaria episodio."
+    },
+    {
+      "source_id": "L02C_MA_OSTEOGENIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Osteogenic stimulator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Osteogenic_stimulator",
+      "accessed_at": "2026-10-21",
+      "notes": "Reparación de fracturas; variantes móviles limitadas a lesiones menores, no sustituto hospitalario."
+    },
+    {
+      "source_id": "L02C_MA_DERMAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Dermal regenerator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Dermal_regenerator",
+      "accessed_at": "2026-10-21",
+      "notes": "Lesiones cutáneas menores, con variantes contextuales; no todas las regeneraciones tisulares."
+    },
+    {
+      "source_id": "L02C_MA_DRUG_CATEGORY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Drugs and treatments",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Drugs_and_treatments",
+      "accessed_at": "2026-10-21",
+      "notes": "Índice de descubrimiento de familias; sin detalles de dosificación ni eficacia."
+    },
+    {
+      "source_id": "L02C_MA_OSTEO_EXTRA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Medical device",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Medical_device",
+      "accessed_at": "2026-10-21",
+      "notes": "Inventario temático de instrumentos médicos; entrada secundaria de descubrimiento."
     }
   ]
 }
