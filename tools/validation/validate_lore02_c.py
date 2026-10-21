@@ -18,8 +18,8 @@ EQUIPMENT = "lore/equipment/lore02_b_equipment_catalogue_v0.1.json"
 AGENTS = "lore/medicine/lore02_c_medical_agents_v0.1.json"
 NAMES = (ATLAS, CONDITIONS, PROCEDURES, ORG, SCENARIOS, FLOW, REGISTRY, EQUIPMENT)
 STATE = "EDITORIAL_NON_RUNTIME"
-EXPECTED = {"species": 26, "conditions": 32, "procedures": 26, "agents": 12,
-            "facilities": 9, "roles": 12, "cases": 56}
+EXPECTED = {"species": 26, "conditions": 38, "procedures": 26, "agents": 13,
+            "facilities": 9, "roles": 12, "cases": 62}
 
 def read(path):
     return json.loads((ROOT / path).read_text(encoding="utf-8"))
