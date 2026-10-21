@@ -42,6 +42,8 @@ def validate() -> dict:
     require(registry["last_updated"] >= "2026-10-21", "Source registry stale")
     require(atlas["schema_version"] == profiles["schema_version"] == cases["schema_version"] == "0.2.0",
             "Wrong documentary schema version")
+    require(atlas["status"] == profiles["status"] == "NEEDS_REVIEW",
+            "Completed research must remain pending author approval")
     require(atlas["mode"] == "EDITORIAL_NON_RUNTIME"
             and cases["status"] == "EDITORIAL_NON_RUNTIME",
             "False runtime claim")
@@ -96,7 +98,7 @@ def validate() -> dict:
             require(item["platform_scope"] == "STATION_DESIGN_SPECIFIC",
                     "Station capabilities generalized: " + uid)
 
-    require(profiles["status"] == "RESEARCH_IN_PROGRESS"
+    require(profiles["status"] == "NEEDS_REVIEW"
             and profiles["facility_generation_allowed"] is False
             and profiles["delta_dlc_enabled"] is False, "Operator/facility atlas grants runtime powers")
     operators, facilities = profiles["operators"], profiles["facility_roles"]
