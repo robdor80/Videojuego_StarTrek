@@ -1,0 +1,13 @@
+componente,grado,justificacion
+Imágenes embebidas del GLB detallado,A,"49/49 decodificadas; datos reutilizables, sin afirmar calidad final PBR"
+OBJ original + MTL vigente,B como fuente / C como puente final,"630 grupos recuperables, UV y mapas conservados; requiere saneado y preparación"
+Puente detallado exportado GLB,B como referencia / C para interacción,Una malla con 102 primitivas; materiales legibles; organización fusionada
+Sillas y consolas OBJ separadas,B/C,"Geometría real y piezas independientes; pivotes, agrupación, ergonomía y PBR pendientes"
+Carcasa del puente de colección,C,Muy simplificada y fusionada; sin mobiliario ni arte de estaciones
+Sillas/LCARS ausentes de la colección,D: crear o tomar de otra fuente,No hay base suficiente en esta familia para esos elementos
+Pasillos rectos/curvos y cruces,B,"Secciones compatibles en muestras; falta ensamblaje, materiales y colisiones"
+Conductos Jefferies / mantenimiento,B,"Existen módulos; dimensiones de conducto, no circulación humana de pie"
+MAX convertido: floorfront,D para esta conversión,Recuperación preferible desde OBJ
+Resto de conversión MAX,C,"Más separación que GLB, pero escala, suelo y materiales problemáticos"
+MAX binario original,E,Inventariado; no abierto en 3ds Max ni certificado
+"Transitabilidad, NPC, rendimiento UE5",E,No se abrió Unreal; no hay prueba dinámica en esta misión

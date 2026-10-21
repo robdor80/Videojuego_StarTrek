@@ -1,0 +1,9 @@
+{
+  "collection_glb_raw_triangles": 67563,
+  "collection_duplicate_index_triplets": 15,
+  "collection_blender_triangles": 67548,
+  "original_OBJ_raw_triangles": 271911,
+  "OBJ_duplicate_index_triplets_within_group": 206,
+  "OBJ_validated_blender_triangles": 271705,
+  "methods": "Exact sorted index triplet counts within primitive/group; independently corroborated by imported face counts. See scripts and logs."
+}

@@ -1,0 +1,6860 @@
+{
+  "external_images": [
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\alumb_t.tga",
+      "bytes": 183474,
+      "sha256": "8dfb3d0ee40862c3f4e63dc18b741a06f9325107a60866b900226bdd2897c5b4",
+      "width": 312,
+      "height": 196,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\alumin.JPG",
+      "bytes": 89443,
+      "sha256": "b8e1a231dbab8e283bd2fe31e4040ff39a553e96a4fea49ae567862c423b9ae6",
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BM_DISP.tif",
+      "bytes": 1939728,
+      "sha256": "f87d74e5aafac030b54dd51e48b9ece12bdb87d77a1ccb081ed5adc49d8d4d5e",
+      "width": 800,
+      "height": 800,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BM_NRM.tif",
+      "bytes": 526623,
+      "sha256": "5f7007010987e72e1f040b075a0784d2645ddf1c306d8d8d0a973333222297ee",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BNC.png",
+      "bytes": 74507,
+      "sha256": "a61203602c75857deddf11abf99aabd3853e9389b82811ef2bea6a402334b7d2",
+      "width": 1022,
+      "height": 1650,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\BURLAP01.JPG",
+      "bytes": 123138,
+      "sha256": "cf141b6e607616bc00e871a8c7be5894d0bb8ddd8fed912e9c84193fdaea4ba8",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\DP_01.png",
+      "bytes": 69175,
+      "sha256": "50181bf297bc9a32cdb108b94e31178fe35bf11fe9a77f5f90802647c44d54b4",
+      "width": 571,
+      "height": 1711,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\LEATH01.JPG",
+      "bytes": 86019,
+      "sha256": "4664da12846f548bfebe69fbf48b44223bc2c3bece52e5e26790933915257b8e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Map__2_Gradient.tga",
+      "bytes": 804390,
+      "sha256": "abb0e3fe58a534f96bdc18111fe953411b87a2fe5e7a869a6c02dacadae8491b",
+      "width": 512,
+      "height": 512,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Metal_Al.jpg",
+      "bytes": 4240,
+      "sha256": "8558a6c74f912a94f323888be3490914311c75a70e89c025a0399011d6cc0116",
+      "width": 256,
+      "height": 256,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Metal_Co.jpg",
+      "bytes": 1591,
+      "sha256": "7f6956d352aec593cd5e6d606d41e03026fcb1746ac08081870cfbebb928243d",
+      "width": 128,
+      "height": 128,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\MVS.jpg",
+      "bytes": 451289,
+      "sha256": "29f25f0e76ead5717ec4d28bf334ac5c62e64d038b224d7baa8d5a5284adbfbd",
+      "width": 1600,
+      "height": 1200,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\n006.jpg",
+      "bytes": 4833,
+      "sha256": "ec28eca148087913b764a34d92849b7d0968ba618c2362f1b282b15b104c1cd7",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\n011.jpg",
+      "bytes": 3946,
+      "sha256": "c945013777c2d2e13dfd4d9fea5ec8156a7a964e81d51470dbd8e2703f30584c",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_1.png",
+      "bytes": 355270,
+      "sha256": "4e4a9bbfb3a5dacccf1e8cea9faf95dd3a8aa23f38fababdaa93508d356e31fe",
+      "width": 4066,
+      "height": 4264,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_1_i.png",
+      "bytes": 582257,
+      "sha256": "5d170336e4f676bb54018f29bde530b67681e6da526b14abd9ac35ee68ea0fa4",
+      "width": 976,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_2.png",
+      "bytes": 294112,
+      "sha256": "ad68f21c3f2cfd8242a61667081c4e7365cebec2c5d7fe1a75aacec085b985e5",
+      "width": 3997,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_2_i.png",
+      "bytes": 518845,
+      "sha256": "4cfa0608e43618f651103ffb42398bd8119fc6eb77727dd760fe0b048ff1580f",
+      "width": 960,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_3.png",
+      "bytes": 305001,
+      "sha256": "5a814c8b8166c80db98d7192b27bbe56ef9f27c01f3782d0b213475ce4ba8b11",
+      "width": 4266,
+      "height": 2704,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_3_i.png",
+      "bytes": 331950,
+      "sha256": "83f25c7f8310949c68bf91c43d0cf41dab6887974ddc1122be48d1dcd079b221",
+      "width": 1024,
+      "height": 649,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_4.png",
+      "bytes": 384503,
+      "sha256": "f3a6399adc0ef908624a511de1c7b6d860c6408784d3da87f76623a2afd0b11a",
+      "width": 4266,
+      "height": 2702,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_4_i.png",
+      "bytes": 357148,
+      "sha256": "885fd0530a33e4023dc21761dc653924d44fec8c25254653b99e42a0fc3e682c",
+      "width": 1024,
+      "height": 649,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_5.png",
+      "bytes": 202895,
+      "sha256": "db31f2aa025aa450e637606f4894608a574f8781333ac41e7428151c774c8ae0",
+      "width": 4229,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_5_i.png",
+      "bytes": 194520,
+      "sha256": "be8b359b43e8bda5457c2594f5fbc365d668f8abd85c453493454036027c10db",
+      "width": 1015,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_6.png",
+      "bytes": 371983,
+      "sha256": "575df1b7d97b551016da96a319bd0a144c52bb55245e24cb56120b51e978c3e7",
+      "width": 3954,
+      "height": 4264,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn10_6_i.png",
+      "bytes": 576321,
+      "sha256": "afcf1599f03d65210eabbbe0a0da317b5b825fdfb715440f8f587139d7c94bba",
+      "width": 949,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn12.png",
+      "bytes": 102122,
+      "sha256": "2d22f74a16f263e03a7adac7906df0dc245684a915ad560488345fa87fdb09a5",
+      "width": 683,
+      "height": 8532,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn12_RA.png",
+      "bytes": 56821,
+      "sha256": "1c89c2f9a16c283618946fad517a88b65bc9e81da69f11f446e6f88677c1e493",
+      "width": 342,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_1.png",
+      "bytes": 238972,
+      "sha256": "85481d027c3c2c35fa86f80897bd720678b16bdfc15bb2e39681c3b084591704",
+      "width": 4304,
+      "height": 1569,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_1_i.png",
+      "bytes": 137100,
+      "sha256": "d6fe3f374b39f5ed3f5aa239beb60f20b9bc3265e7a87b5d7240b14b15a00509",
+      "width": 1024,
+      "height": 374,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_2.png",
+      "bytes": 178669,
+      "sha256": "fcd8ae4bef1d4285e610fd34275aa684ade3652ff2c73c5559d5920c1ab20ac9",
+      "width": 2268,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_2_i.png",
+      "bytes": 213462,
+      "sha256": "7caecdb92aca7b8aa2c49a9a67c8dd03a7585210e5c2d58be2a1bf930dc65d9e",
+      "width": 545,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_3.png",
+      "bytes": 260765,
+      "sha256": "5e7548905b7300e534cab553ae1708383206643486f83793d021f3e1e21a943c",
+      "width": 3814,
+      "height": 2429,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_3_i.png",
+      "bytes": 342944,
+      "sha256": "58bdc9a356c608f3effa7f429b260d7c0d4fb091a838beb2a09b2ae8334096ad",
+      "width": 1024,
+      "height": 652,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_4.png",
+      "bytes": 282837,
+      "sha256": "962ddac109f060ed96a1e1712539d939c67c773a58a46b824d9e98df26f8da66",
+      "width": 2182,
+      "height": 2182,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_4_i.png",
+      "bytes": 328111,
+      "sha256": "7a474b7fa1debb0f8af6cfbdedbda6326351456b8fe4e33d900c09860a8d6c13",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_5.png",
+      "bytes": 1020305,
+      "sha256": "25c4e79e3de9aa64f2c05903856617a9079deee886f12f65b4ed000fe663e001",
+      "width": 3775,
+      "height": 4266,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_5_i.png",
+      "bytes": 189516,
+      "sha256": "6ee9e97c2eb48326512944e3b60685add2aee3fef773165b8a1efa34bcae00be",
+      "width": 906,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_6.png",
+      "bytes": 290843,
+      "sha256": "ef56a96560ce7a7cf968cc8d67ce6e1a369d843964fe6d464ff67dfcf79f685e",
+      "width": 4267,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_6_i.png",
+      "bytes": 216457,
+      "sha256": "8be2bda4d6c56abc6bd9db97be68c19fdcc01c84ec905a40543800db5bfbdb42",
+      "width": 1024,
+      "height": 410,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_7.png",
+      "bytes": 340806,
+      "sha256": "5a19c1cb7ef9516253841232e2caf9df5f01627daa2f06de761bc55f7868d2d5",
+      "width": 4267,
+      "height": 1944,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn1_7_i.png",
+      "bytes": 268326,
+      "sha256": "ca356fb45db77606c40dafbc479cf08ca3581e33b14263daff05ecad692ee8e3",
+      "width": 1024,
+      "height": 467,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_1.png",
+      "bytes": 141718,
+      "sha256": "9cf0d9f0a83ffba7577817bdb29a33e8cd511a66dd72740cdb449b69b0dc4ee0",
+      "width": 1456,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_1_i.png",
+      "bytes": 260800,
+      "sha256": "7aa020f577530dc417b2b330998eee9d4c75c379345d7e66f225913bdb1fe225",
+      "width": 551,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_3.png",
+      "bytes": 1421003,
+      "sha256": "75056e5b74c2535923eee714fefe5d9342e322ad0dbe47bc2c3cbc1822fab777",
+      "width": 6546,
+      "height": 5056,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_3_i.png",
+      "bytes": 255705,
+      "sha256": "2ef6d3bd8ab65bb56d5b8af1498d7a36de7130f0ebbefbda9901bc80237f31ff",
+      "width": 1024,
+      "height": 791,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_5.png",
+      "bytes": 61924,
+      "sha256": "776adfeb2c5a8453d068c607a6e7dbeda9d866e61a9657f4b3b3ba8d61b5e0b3",
+      "width": 1291,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_5_i.png",
+      "bytes": 196948,
+      "sha256": "1e890dd9e7c7b000db4d96411e1760a6202ccf3b61122efb8ff18d9cc74cf47d",
+      "width": 489,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_7.png",
+      "bytes": 388551,
+      "sha256": "249bcf69b32219d92f2cfbd253d479ffbfaa43349ad993d9cc8f82abec936d88",
+      "width": 5336,
+      "height": 1964,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_7_i.png",
+      "bytes": 100599,
+      "sha256": "f7255badeedd0e01994dca17214f716459076f6a6a3ae9425df0c8fe380ae8d4",
+      "width": 1024,
+      "height": 377,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_8.png",
+      "bytes": 73577,
+      "sha256": "201853729422ebca5c082ee278047a35f8389ac93a568633f925f1867e6022e0",
+      "width": 4266,
+      "height": 1248,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_8_i.png",
+      "bytes": 118121,
+      "sha256": "5b008429201d8bb5a6d37e7424647e90488b4269a182b4a9e29c512a5eb4e793",
+      "width": 1024,
+      "height": 300,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_9.png",
+      "bytes": 336124,
+      "sha256": "72d2a52902eb64195b50ad0dd2eb2625cb429fada736412d18b6c2dedf7daf00",
+      "width": 4268,
+      "height": 850,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn2_9_i.png",
+      "bytes": 98247,
+      "sha256": "141c1367d2d9bd5485c3ae72c0007a150a4a1c09d583c6df3c6d31cf0f8935fd",
+      "width": 1024,
+      "height": 204,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_1.png",
+      "bytes": 377092,
+      "sha256": "78b71093a9c81ff9861773be5b5ec4af003088c999560fecd6124ae60b44131f",
+      "width": 1661,
+      "height": 4267,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_2.png",
+      "bytes": 175682,
+      "sha256": "4a2758c63a368d6ac849d2d7c9329d1fbf1374e9c8bd9fb6c58f3b0228671c58",
+      "width": 3789,
+      "height": 4267,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_2_i.png",
+      "bytes": 532922,
+      "sha256": "1018c06eeabfa3bdc66b83c2c475bf59980b92e5338ca0d6f91fc99002b7c351",
+      "width": 910,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_3.png",
+      "bytes": 123831,
+      "sha256": "044f69505c7bf524a3d22cad74bcf22b88a40520927a510c6d61251c72080b89",
+      "width": 2173,
+      "height": 1458,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_3_i.png",
+      "bytes": 178619,
+      "sha256": "612fd71983638ea71f38305b0354b5e90d4b810cd0b890bdc29033d55d0548cb",
+      "width": 1044,
+      "height": 701,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_4.png",
+      "bytes": 262888,
+      "sha256": "ce2b781740f2b11428e7136b5cd9506332d831a047bff50b284dc9cf4abee7de",
+      "width": 4183,
+      "height": 1226,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn3_4_i.png",
+      "bytes": 172770,
+      "sha256": "408d3b00ea91d206b5015a266aac8b49d2e40df69c9ed77ed1919f4c899f7451",
+      "width": 1024,
+      "height": 300,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_1.png",
+      "bytes": 1555104,
+      "sha256": "368c86b73d7a35dca9a9adac439272903489044462b6c9723fe6b62b4a9f529d",
+      "width": 10933,
+      "height": 2917,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_1_i.png",
+      "bytes": 1538878,
+      "sha256": "be5e801ed4485d287cd916829e333b3b8bee438684d477b6e92787e1d04475c3",
+      "width": 10933,
+      "height": 2917,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_2.png",
+      "bytes": 332114,
+      "sha256": "fdf637766fb768a4059b4e3d4bee512aef1daa8d428dd945c85848753fabc717",
+      "width": 4268,
+      "height": 1796,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn4_2_i.png",
+      "bytes": 175835,
+      "sha256": "d5376df354cee8b091f19ec3edcbb5b046297fced2b060089856852ba2c5d935",
+      "width": 1024,
+      "height": 431,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn5_1.png",
+      "bytes": 112793,
+      "sha256": "096a3bbf58b94a7924f56e422fc79ccfd6bf27b979524226bf48f008087c9a50",
+      "width": 2173,
+      "height": 1458,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn5_1_i.png",
+      "bytes": 177871,
+      "sha256": "397c20527d9d028efe377e4f160609cf7c7a0d2a4db9a48db48921b6e000be69",
+      "width": 1044,
+      "height": 701,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_1.png",
+      "bytes": 337969,
+      "sha256": "e3b03917f99721bee45ddef78cb45f9a5acc265cb208034ffbe99a2c3d588723",
+      "width": 5336,
+      "height": 1964,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_1_i.png",
+      "bytes": 127347,
+      "sha256": "3b9bef71c598933cfb54b8177172d40a150fc13676deb31a3431e64ed98addfa",
+      "width": 1024,
+      "height": 377,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_2.png",
+      "bytes": 63921,
+      "sha256": "b2e5d20d9b8142668aa5178916d017774753f7630636da8727c6ec17f358d27c",
+      "width": 4266,
+      "height": 1248,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_4.png",
+      "bytes": 464454,
+      "sha256": "3bc5467b8ed532d12ec2f7fa8a4200e5a80b50b46353408e044a9cf57e7df0bd",
+      "width": 7536,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_4_i.png",
+      "bytes": 387072,
+      "sha256": "f255d860384d7c6eee863cafb7c3a23b9575910dfd04961657e86d9b502dc485",
+      "width": 1024,
+      "height": 687,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_5.png",
+      "bytes": 55337,
+      "sha256": "e8f975b0764c12517600f70961eb2b1b52383aa9d81d214f0ba6dff96bdc522f",
+      "width": 1291,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_5_i.png",
+      "bytes": 209545,
+      "sha256": "04b52ad9269dd302e6ad6cf0a60899ec983ead34eda54c5bbbfae20a1a3902b2",
+      "width": 489,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_6.png",
+      "bytes": 451737,
+      "sha256": "29c8f139481044e07ac0fa7342d5419eb0c82b2ac1e043f097b6a8b255085a93",
+      "width": 3792,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_6_i.png",
+      "bytes": 307429,
+      "sha256": "80cf8b07f51ba3c2d482a1c622fe157287e2e82c5d34ee469e481cc7a394c1a8",
+      "width": 747,
+      "height": 997,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_7.png",
+      "bytes": 654855,
+      "sha256": "b85a0c68a26e7e25e520d33f28bc3266794069de5ca9655fde41849fce2183e6",
+      "width": 6546,
+      "height": 5056,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_7_i.png",
+      "bytes": 261484,
+      "sha256": "74251f0fa8ec6341a779f2614b17d8ed83bcb6d8744551666277f5798586ed59",
+      "width": 1024,
+      "height": 791,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_8.png",
+      "bytes": 504912,
+      "sha256": "304c1b407632dbc35f331e6322e7fbe48b5fbc8c12ad6bc780eab54db86e55c4",
+      "width": 3792,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_8_i.png",
+      "bytes": 356828,
+      "sha256": "7161015c78e668c75411426368f3a60d3bdfa059e768090c47bfcb37f18fe2d5",
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_9.png",
+      "bytes": 143836,
+      "sha256": "518d22ad0d589d24933a30a71801ece16be1c33a357780de8d811e694995772c",
+      "width": 1456,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn6_9_i.png",
+      "bytes": 275757,
+      "sha256": "179665c3473c85e6119c6cd129d1b2ab5670fa8bad69364ff663822095f9f05a",
+      "width": 551,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_1.png",
+      "bytes": 240781,
+      "sha256": "e12d7754b8c47d62ff46a6420bd32d06ffb23a400e52eb823d9fa87c780abb16",
+      "width": 4304,
+      "height": 1569,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_1_i.png",
+      "bytes": 141220,
+      "sha256": "12193709da2933b5deafe222cf05a87fa854bc61b12a7f778cf4fd24aa071394",
+      "width": 1024,
+      "height": 374,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_2.png",
+      "bytes": 245915,
+      "sha256": "e8568fb06ac4f11acfa8a081eccae98530bc0eed4d8f7202c0f6bb54fed331de",
+      "width": 2268,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_2_i.png",
+      "bytes": 210441,
+      "sha256": "06ae331790153f71226d9b20b5001e99bb27aab0aa6bbd3db082e1b1864dcf16",
+      "width": 545,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_4.png",
+      "bytes": 272150,
+      "sha256": "6ef0978ebae47bfd5def91b9948006533040a0a6c62a85bc3458e2f78e07e014",
+      "width": 2242,
+      "height": 2250,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_4_i.png",
+      "bytes": 293853,
+      "sha256": "fd1428725d08f25c3cf6e2f9a141350950fc0a655ba2cf50b902f8dd88af9542",
+      "width": 1076,
+      "height": 1080,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_5.png",
+      "bytes": 294897,
+      "sha256": "3079819b4aeb5b3b996e4cf0afd9d17e83487d4a45bce75068a394297375e709",
+      "width": 3775,
+      "height": 4266,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_5_i.PNG",
+      "bytes": 180520,
+      "sha256": "9a8eed0123da4aa6d79fcb725ed76326b44e818023d0c6984c3425da46a583be",
+      "width": 906,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_6.png",
+      "bytes": 294189,
+      "sha256": "089f334c6da4d8672714dfb92d11c9e3c059e0b78b93d53ef02b3e1b06202079",
+      "width": 4267,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_6_i.png",
+      "bytes": 210588,
+      "sha256": "47fb961dce1a9e45ade69638c7e69f93358d249c1373604110ce1c3a84312693",
+      "width": 1024,
+      "height": 410,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_7.png",
+      "bytes": 220450,
+      "sha256": "37d60f44f6381e110f64c36d2a564bd8205175dbf78a79078717424b6e83d603",
+      "width": 3786,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn7_7_i.png",
+      "bytes": 269474,
+      "sha256": "a407cfb6eb62d8b97d6338d52af464d63420003e7358cf1118141d0289cdd92f",
+      "width": 1024,
+      "height": 462,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn8.png",
+      "bytes": 177345,
+      "sha256": "5c8fcf40142f3c25f6156919bed0c30231ae6fd8ed4a00921bd6d453aa669842",
+      "width": 4266,
+      "height": 1398,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn8_i.png",
+      "bytes": 167829,
+      "sha256": "d098c92b38bfb3519c009a1adccedb8cf4a80049116e238d5b623b21e2787875",
+      "width": 1024,
+      "height": 336,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn9.png",
+      "bytes": 227272,
+      "sha256": "f0abbbad8c036e1c44efcd2e8231aa085e6096773717e2f157f420333ee70369",
+      "width": 4266,
+      "height": 3589,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\scn9_i.png",
+      "bytes": 317139,
+      "sha256": "1ccb41286634ccdb353b2afcda1fb5fabd735c42772d5e3edbdd75eeb72ab893",
+      "width": 1024,
+      "height": 862,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\Voygray.jpg",
+      "bytes": 5377,
+      "sha256": "038d9bf0469855cdf81f1a85a4879a58b5bdfe548e637a6adee48a457f834d6b",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_bump.png",
+      "bytes": 179639,
+      "sha256": "9f2571bc6ef1dc43ab3984564b4de319fd62ef854164ee8e0c12a75def998d79",
+      "width": 2608,
+      "height": 1860,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_col.png",
+      "bytes": 108356,
+      "sha256": "72ddddc4e95213a7c89c1c0247a23a9f4c670131a26748431b01b51eeb822212",
+      "width": 1290,
+      "height": 928,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\VP_Spec.png",
+      "bytes": 282036,
+      "sha256": "8de7c60e43b5db77d211f21917f642fd138eb781b54f2556cc85d62187a40eb3",
+      "width": 2608,
+      "height": 1860,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\XYT.jpg",
+      "bytes": 158467,
+      "sha256": "8abc7e97eb1ffa4dd6d4f4b3051efa3649bc0c9002b5c9aee772da11feec0ff9",
+      "width": 1027,
+      "height": 1043,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_MAX\\VoyagerBridge\\yale8_desat.jpg",
+      "bytes": 217336,
+      "sha256": "06c611525b3589dc6185b072d9527a9df5e977b1e8b9908f191e6b55ecb50f4d",
+      "width": 2880,
+      "height": 1440,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumb_t.tga",
+      "bytes": 183474,
+      "sha256": "8dfb3d0ee40862c3f4e63dc18b741a06f9325107a60866b900226bdd2897c5b4",
+      "width": 312,
+      "height": 196,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumin.JPG",
+      "bytes": 89443,
+      "sha256": "b8e1a231dbab8e283bd2fe31e4040ff39a553e96a4fea49ae567862c423b9ae6",
+      "width": 640,
+      "height": 640,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_DISP.tif",
+      "bytes": 1939728,
+      "sha256": "f87d74e5aafac030b54dd51e48b9ece12bdb87d77a1ccb081ed5adc49d8d4d5e",
+      "width": 800,
+      "height": 800,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BM_NRM.tif",
+      "bytes": 526623,
+      "sha256": "5f7007010987e72e1f040b075a0784d2645ddf1c306d8d8d0a973333222297ee",
+      "width": 800,
+      "height": 800,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BNC.png",
+      "bytes": 74507,
+      "sha256": "a61203602c75857deddf11abf99aabd3853e9389b82811ef2bea6a402334b7d2",
+      "width": 1022,
+      "height": 1650,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+      "bytes": 123138,
+      "sha256": "cf141b6e607616bc00e871a8c7be5894d0bb8ddd8fed912e9c84193fdaea4ba8",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png",
+      "bytes": 69175,
+      "sha256": "50181bf297bc9a32cdb108b94e31178fe35bf11fe9a77f5f90802647c44d54b4",
+      "width": 571,
+      "height": 1711,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+      "bytes": 86019,
+      "sha256": "4664da12846f548bfebe69fbf48b44223bc2c3bece52e5e26790933915257b8e",
+      "width": 512,
+      "height": 512,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Al.jpg",
+      "bytes": 4240,
+      "sha256": "8558a6c74f912a94f323888be3490914311c75a70e89c025a0399011d6cc0116",
+      "width": 256,
+      "height": 256,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+      "bytes": 1591,
+      "sha256": "7f6956d352aec593cd5e6d606d41e03026fcb1746ac08081870cfbebb928243d",
+      "width": 128,
+      "height": 128,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\MVS.jpg",
+      "bytes": 451289,
+      "sha256": "29f25f0e76ead5717ec4d28bf334ac5c62e64d038b224d7baa8d5a5284adbfbd",
+      "width": 1600,
+      "height": 1200,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n006.jpg",
+      "bytes": 4833,
+      "sha256": "ec28eca148087913b764a34d92849b7d0968ba618c2362f1b282b15b104c1cd7",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg",
+      "bytes": 3946,
+      "sha256": "c945013777c2d2e13dfd4d9fea5ec8156a7a964e81d51470dbd8e2703f30584c",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1.png",
+      "bytes": 238972,
+      "sha256": "85481d027c3c2c35fa86f80897bd720678b16bdfc15bb2e39681c3b084591704",
+      "width": 4304,
+      "height": 1569,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1_i.png",
+      "bytes": 137100,
+      "sha256": "d6fe3f374b39f5ed3f5aa239beb60f20b9bc3265e7a87b5d7240b14b15a00509",
+      "width": 1024,
+      "height": 374,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+      "bytes": 178669,
+      "sha256": "fcd8ae4bef1d4285e610fd34275aa684ade3652ff2c73c5559d5920c1ab20ac9",
+      "width": 2268,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2_i.png",
+      "bytes": 213462,
+      "sha256": "7caecdb92aca7b8aa2c49a9a67c8dd03a7585210e5c2d58be2a1bf930dc65d9e",
+      "width": 545,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3.png",
+      "bytes": 260765,
+      "sha256": "5e7548905b7300e534cab553ae1708383206643486f83793d021f3e1e21a943c",
+      "width": 3814,
+      "height": 2429,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3_i.png",
+      "bytes": 342944,
+      "sha256": "58bdc9a356c608f3effa7f429b260d7c0d4fb091a838beb2a09b2ae8334096ad",
+      "width": 1024,
+      "height": 652,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4.png",
+      "bytes": 282837,
+      "sha256": "962ddac109f060ed96a1e1712539d939c67c773a58a46b824d9e98df26f8da66",
+      "width": 2182,
+      "height": 2182,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4_i.png",
+      "bytes": 328111,
+      "sha256": "7a474b7fa1debb0f8af6cfbdedbda6326351456b8fe4e33d900c09860a8d6c13",
+      "width": 1024,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5.png",
+      "bytes": 1020305,
+      "sha256": "25c4e79e3de9aa64f2c05903856617a9079deee886f12f65b4ed000fe663e001",
+      "width": 3775,
+      "height": 4266,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5_i.png",
+      "bytes": 189516,
+      "sha256": "6ee9e97c2eb48326512944e3b60685add2aee3fef773165b8a1efa34bcae00be",
+      "width": 906,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6.png",
+      "bytes": 290843,
+      "sha256": "ef56a96560ce7a7cf968cc8d67ce6e1a369d843964fe6d464ff67dfcf79f685e",
+      "width": 4267,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6_i.png",
+      "bytes": 216457,
+      "sha256": "8be2bda4d6c56abc6bd9db97be68c19fdcc01c84ec905a40543800db5bfbdb42",
+      "width": 1024,
+      "height": 410,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7.png",
+      "bytes": 340806,
+      "sha256": "5a19c1cb7ef9516253841232e2caf9df5f01627daa2f06de761bc55f7868d2d5",
+      "width": 4267,
+      "height": 1944,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7_i.png",
+      "bytes": 268326,
+      "sha256": "ca356fb45db77606c40dafbc479cf08ca3581e33b14263daff05ecad692ee8e3",
+      "width": 1024,
+      "height": 467,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1.png",
+      "bytes": 355270,
+      "sha256": "4e4a9bbfb3a5dacccf1e8cea9faf95dd3a8aa23f38fababdaa93508d356e31fe",
+      "width": 4066,
+      "height": 4264,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1_i.png",
+      "bytes": 582257,
+      "sha256": "5d170336e4f676bb54018f29bde530b67681e6da526b14abd9ac35ee68ea0fa4",
+      "width": 976,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2.png",
+      "bytes": 294112,
+      "sha256": "ad68f21c3f2cfd8242a61667081c4e7365cebec2c5d7fe1a75aacec085b985e5",
+      "width": 3997,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2_i.png",
+      "bytes": 518845,
+      "sha256": "4cfa0608e43618f651103ffb42398bd8119fc6eb77727dd760fe0b048ff1580f",
+      "width": 960,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3.png",
+      "bytes": 305001,
+      "sha256": "5a814c8b8166c80db98d7192b27bbe56ef9f27c01f3782d0b213475ce4ba8b11",
+      "width": 4266,
+      "height": 2704,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3_i.png",
+      "bytes": 331950,
+      "sha256": "83f25c7f8310949c68bf91c43d0cf41dab6887974ddc1122be48d1dcd079b221",
+      "width": 1024,
+      "height": 649,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4.png",
+      "bytes": 384503,
+      "sha256": "f3a6399adc0ef908624a511de1c7b6d860c6408784d3da87f76623a2afd0b11a",
+      "width": 4266,
+      "height": 2702,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4_i.png",
+      "bytes": 357148,
+      "sha256": "885fd0530a33e4023dc21761dc653924d44fec8c25254653b99e42a0fc3e682c",
+      "width": 1024,
+      "height": 649,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5.png",
+      "bytes": 202895,
+      "sha256": "db31f2aa025aa450e637606f4894608a574f8781333ac41e7428151c774c8ae0",
+      "width": 4229,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5_i.png",
+      "bytes": 194520,
+      "sha256": "be8b359b43e8bda5457c2594f5fbc365d668f8abd85c453493454036027c10db",
+      "width": 1015,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6.png",
+      "bytes": 371983,
+      "sha256": "575df1b7d97b551016da96a319bd0a144c52bb55245e24cb56120b51e978c3e7",
+      "width": 3954,
+      "height": 4264,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6_i.png",
+      "bytes": 576321,
+      "sha256": "afcf1599f03d65210eabbbe0a0da317b5b825fdfb715440f8f587139d7c94bba",
+      "width": 949,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12.png",
+      "bytes": 102122,
+      "sha256": "2d22f74a16f263e03a7adac7906df0dc245684a915ad560488345fa87fdb09a5",
+      "width": 683,
+      "height": 8532,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12_RA.png",
+      "bytes": 56821,
+      "sha256": "1c89c2f9a16c283618946fad517a88b65bc9e81da69f11f446e6f88677c1e493",
+      "width": 342,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1.png",
+      "bytes": 141718,
+      "sha256": "9cf0d9f0a83ffba7577817bdb29a33e8cd511a66dd72740cdb449b69b0dc4ee0",
+      "width": 1456,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1_i.png",
+      "bytes": 260800,
+      "sha256": "7aa020f577530dc417b2b330998eee9d4c75c379345d7e66f225913bdb1fe225",
+      "width": 551,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3.png",
+      "bytes": 1421003,
+      "sha256": "75056e5b74c2535923eee714fefe5d9342e322ad0dbe47bc2c3cbc1822fab777",
+      "width": 6546,
+      "height": 5056,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3_i.png",
+      "bytes": 255705,
+      "sha256": "2ef6d3bd8ab65bb56d5b8af1498d7a36de7130f0ebbefbda9901bc80237f31ff",
+      "width": 1024,
+      "height": 791,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5.png",
+      "bytes": 61924,
+      "sha256": "776adfeb2c5a8453d068c607a6e7dbeda9d866e61a9657f4b3b3ba8d61b5e0b3",
+      "width": 1291,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5_i.png",
+      "bytes": 196948,
+      "sha256": "1e890dd9e7c7b000db4d96411e1760a6202ccf3b61122efb8ff18d9cc74cf47d",
+      "width": 489,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7.png",
+      "bytes": 388551,
+      "sha256": "249bcf69b32219d92f2cfbd253d479ffbfaa43349ad993d9cc8f82abec936d88",
+      "width": 5336,
+      "height": 1964,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7_i.png",
+      "bytes": 100599,
+      "sha256": "f7255badeedd0e01994dca17214f716459076f6a6a3ae9425df0c8fe380ae8d4",
+      "width": 1024,
+      "height": 377,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8.png",
+      "bytes": 73577,
+      "sha256": "201853729422ebca5c082ee278047a35f8389ac93a568633f925f1867e6022e0",
+      "width": 4266,
+      "height": 1248,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8_i.png",
+      "bytes": 118121,
+      "sha256": "5b008429201d8bb5a6d37e7424647e90488b4269a182b4a9e29c512a5eb4e793",
+      "width": 1024,
+      "height": 300,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9.png",
+      "bytes": 336124,
+      "sha256": "72d2a52902eb64195b50ad0dd2eb2625cb429fada736412d18b6c2dedf7daf00",
+      "width": 4268,
+      "height": 850,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.9_i.png",
+      "bytes": 98247,
+      "sha256": "141c1367d2d9bd5485c3ae72c0007a150a4a1c09d583c6df3c6d31cf0f8935fd",
+      "width": 1024,
+      "height": 204,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.1.png",
+      "bytes": 377092,
+      "sha256": "78b71093a9c81ff9861773be5b5ec4af003088c999560fecd6124ae60b44131f",
+      "width": 1661,
+      "height": 4267,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2.png",
+      "bytes": 175682,
+      "sha256": "4a2758c63a368d6ac849d2d7c9329d1fbf1374e9c8bd9fb6c58f3b0228671c58",
+      "width": 3789,
+      "height": 4267,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2_i.png",
+      "bytes": 532922,
+      "sha256": "1018c06eeabfa3bdc66b83c2c475bf59980b92e5338ca0d6f91fc99002b7c351",
+      "width": 910,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3.png",
+      "bytes": 123831,
+      "sha256": "044f69505c7bf524a3d22cad74bcf22b88a40520927a510c6d61251c72080b89",
+      "width": 2173,
+      "height": 1458,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3_i.png",
+      "bytes": 178619,
+      "sha256": "612fd71983638ea71f38305b0354b5e90d4b810cd0b890bdc29033d55d0548cb",
+      "width": 1044,
+      "height": 701,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4.png",
+      "bytes": 262888,
+      "sha256": "ce2b781740f2b11428e7136b5cd9506332d831a047bff50b284dc9cf4abee7de",
+      "width": 4183,
+      "height": 1226,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4_i.png",
+      "bytes": 172770,
+      "sha256": "408d3b00ea91d206b5015a266aac8b49d2e40df69c9ed77ed1919f4c899f7451",
+      "width": 1024,
+      "height": 300,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+      "bytes": 1555104,
+      "sha256": "368c86b73d7a35dca9a9adac439272903489044462b6c9723fe6b62b4a9f529d",
+      "width": 10933,
+      "height": 2917,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1_i.png",
+      "bytes": 1538878,
+      "sha256": "be5e801ed4485d287cd916829e333b3b8bee438684d477b6e92787e1d04475c3",
+      "width": 10933,
+      "height": 2917,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2.png",
+      "bytes": 332114,
+      "sha256": "fdf637766fb768a4059b4e3d4bee512aef1daa8d428dd945c85848753fabc717",
+      "width": 4268,
+      "height": 1796,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2_i.png",
+      "bytes": 175835,
+      "sha256": "d5376df354cee8b091f19ec3edcbb5b046297fced2b060089856852ba2c5d935",
+      "width": 1024,
+      "height": 431,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1.png",
+      "bytes": 112793,
+      "sha256": "096a3bbf58b94a7924f56e422fc79ccfd6bf27b979524226bf48f008087c9a50",
+      "width": 2173,
+      "height": 1458,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1_i.png",
+      "bytes": 177871,
+      "sha256": "397c20527d9d028efe377e4f160609cf7c7a0d2a4db9a48db48921b6e000be69",
+      "width": 1044,
+      "height": 701,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1.png",
+      "bytes": 337969,
+      "sha256": "e3b03917f99721bee45ddef78cb45f9a5acc265cb208034ffbe99a2c3d588723",
+      "width": 5336,
+      "height": 1964,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1_i.png",
+      "bytes": 127347,
+      "sha256": "3b9bef71c598933cfb54b8177172d40a150fc13676deb31a3431e64ed98addfa",
+      "width": 1024,
+      "height": 377,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.2.png",
+      "bytes": 63921,
+      "sha256": "b2e5d20d9b8142668aa5178916d017774753f7630636da8727c6ec17f358d27c",
+      "width": 4266,
+      "height": 1248,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4.png",
+      "bytes": 464454,
+      "sha256": "3bc5467b8ed532d12ec2f7fa8a4200e5a80b50b46353408e044a9cf57e7df0bd",
+      "width": 7536,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4_i.png",
+      "bytes": 387072,
+      "sha256": "f255d860384d7c6eee863cafb7c3a23b9575910dfd04961657e86d9b502dc485",
+      "width": 1024,
+      "height": 687,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5.png",
+      "bytes": 55337,
+      "sha256": "e8f975b0764c12517600f70961eb2b1b52383aa9d81d214f0ba6dff96bdc522f",
+      "width": 1291,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5_i.png",
+      "bytes": 209545,
+      "sha256": "04b52ad9269dd302e6ad6cf0a60899ec983ead34eda54c5bbbfae20a1a3902b2",
+      "width": 489,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6.png",
+      "bytes": 451737,
+      "sha256": "29c8f139481044e07ac0fa7342d5419eb0c82b2ac1e043f097b6a8b255085a93",
+      "width": 3792,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6_i.png",
+      "bytes": 307429,
+      "sha256": "80cf8b07f51ba3c2d482a1c622fe157287e2e82c5d34ee469e481cc7a394c1a8",
+      "width": 747,
+      "height": 997,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7.png",
+      "bytes": 654855,
+      "sha256": "b85a0c68a26e7e25e520d33f28bc3266794069de5ca9655fde41849fce2183e6",
+      "width": 6546,
+      "height": 5056,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7_i.png",
+      "bytes": 261484,
+      "sha256": "74251f0fa8ec6341a779f2614b17d8ed83bcb6d8744551666277f5798586ed59",
+      "width": 1024,
+      "height": 791,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8.png",
+      "bytes": 504912,
+      "sha256": "304c1b407632dbc35f331e6322e7fbe48b5fbc8c12ad6bc780eab54db86e55c4",
+      "width": 3792,
+      "height": 5056,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8_i.png",
+      "bytes": 356828,
+      "sha256": "7161015c78e668c75411426368f3a60d3bdfa059e768090c47bfcb37f18fe2d5",
+      "width": 768,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9.png",
+      "bytes": 143836,
+      "sha256": "518d22ad0d589d24933a30a71801ece16be1c33a357780de8d811e694995772c",
+      "width": 1456,
+      "height": 2706,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9_i.png",
+      "bytes": 275757,
+      "sha256": "179665c3473c85e6119c6cd129d1b2ab5670fa8bad69364ff663822095f9f05a",
+      "width": 551,
+      "height": 1024,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1.png",
+      "bytes": 240781,
+      "sha256": "e12d7754b8c47d62ff46a6420bd32d06ffb23a400e52eb823d9fa87c780abb16",
+      "width": 4304,
+      "height": 1569,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1_i.png",
+      "bytes": 141220,
+      "sha256": "12193709da2933b5deafe222cf05a87fa854bc61b12a7f778cf4fd24aa071394",
+      "width": 1024,
+      "height": 374,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2.png",
+      "bytes": 245915,
+      "sha256": "e8568fb06ac4f11acfa8a081eccae98530bc0eed4d8f7202c0f6bb54fed331de",
+      "width": 2268,
+      "height": 4266,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2_i.png",
+      "bytes": 210441,
+      "sha256": "06ae331790153f71226d9b20b5001e99bb27aab0aa6bbd3db082e1b1864dcf16",
+      "width": 545,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4.png",
+      "bytes": 272150,
+      "sha256": "6ef0978ebae47bfd5def91b9948006533040a0a6c62a85bc3458e2f78e07e014",
+      "width": 2242,
+      "height": 2250,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4_i.png",
+      "bytes": 293853,
+      "sha256": "fd1428725d08f25c3cf6e2f9a141350950fc0a655ba2cf50b902f8dd88af9542",
+      "width": 1076,
+      "height": 1080,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5.png",
+      "bytes": 294897,
+      "sha256": "3079819b4aeb5b3b996e4cf0afd9d17e83487d4a45bce75068a394297375e709",
+      "width": 3775,
+      "height": 4266,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5_i.PNG",
+      "bytes": 180520,
+      "sha256": "9a8eed0123da4aa6d79fcb725ed76326b44e818023d0c6984c3425da46a583be",
+      "width": 906,
+      "height": 1024,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6.png",
+      "bytes": 294189,
+      "sha256": "089f334c6da4d8672714dfb92d11c9e3c059e0b78b93d53ef02b3e1b06202079",
+      "width": 4267,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6_i.png",
+      "bytes": 210588,
+      "sha256": "47fb961dce1a9e45ade69638c7e69f93358d249c1373604110ce1c3a84312693",
+      "width": 1024,
+      "height": 410,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7.png",
+      "bytes": 220450,
+      "sha256": "37d60f44f6381e110f64c36d2a564bd8205175dbf78a79078717424b6e83d603",
+      "width": 3786,
+      "height": 1708,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7_i.png",
+      "bytes": 269474,
+      "sha256": "a407cfb6eb62d8b97d6338d52af464d63420003e7358cf1118141d0289cdd92f",
+      "width": 1024,
+      "height": 462,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8.png",
+      "bytes": 177345,
+      "sha256": "5c8fcf40142f3c25f6156919bed0c30231ae6fd8ed4a00921bd6d453aa669842",
+      "width": 4266,
+      "height": 1398,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8_i.png",
+      "bytes": 167829,
+      "sha256": "d098c92b38bfb3519c009a1adccedb8cf4a80049116e238d5b623b21e2787875",
+      "width": 1024,
+      "height": 336,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9.png",
+      "bytes": 227272,
+      "sha256": "f0abbbad8c036e1c44efcd2e8231aa085e6096773717e2f157f420333ee70369",
+      "width": 4266,
+      "height": 3589,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9_i.png",
+      "bytes": 317139,
+      "sha256": "1ccb41286634ccdb353b2afcda1fb5fabd735c42772d5e3edbdd75eeb72ab893",
+      "width": 1024,
+      "height": 862,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+      "bytes": 5377,
+      "sha256": "038d9bf0469855cdf81f1a85a4879a58b5bdfe548e637a6adee48a457f834d6b",
+      "width": 96,
+      "height": 96,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_bump.png",
+      "bytes": 175710,
+      "sha256": "80279864c49d998e18d97ddff37c24ec4dd97088b0339ec34c62e04605b3158a",
+      "width": 2608,
+      "height": 1860,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png",
+      "bytes": 108356,
+      "sha256": "72ddddc4e95213a7c89c1c0247a23a9f4c670131a26748431b01b51eeb822212",
+      "width": 1290,
+      "height": 928,
+      "mode": "RGBA",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\XYT.jpg",
+      "bytes": 158467,
+      "sha256": "8abc7e97eb1ffa4dd6d4f4b3051efa3649bc0c9002b5c9aee772da11feec0ff9",
+      "width": 1027,
+      "height": 1043,
+      "mode": "RGB",
+      "decode": "OK"
+    },
+    {
+      "path": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\yale8_desat.jpg",
+      "bytes": 217336,
+      "sha256": "06c611525b3589dc6185b072d9527a9df5e977b1e8b9908f191e6b55ecb50f4d",
+      "width": 2880,
+      "height": 1440,
+      "mode": "RGB",
+      "decode": "OK"
+    }
+  ],
+  "recovery_image_candidates": [
+    {
+      "image": "alumb_t.tga",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\alumb_t.tga",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\alumb_t.tga",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumb_t.tga"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "BURLAP01.JPG",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\BURLAP01.JPG",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "DP_01.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\DP_01.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\DP_01.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "LEATH01.JPG",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\LEATH01.JPG",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "Metal_Co.jpg",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\Metal_Co.jpg",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "n011.jpg",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\n011.jpg",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\n011.jpg",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn12.png",
+        "FUENTE_MAX\\VoyagerBridge\\scn1_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn12.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.3.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.3.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_3.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.4.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.4.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_4.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.5.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.5.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_5.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.6.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.6.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_6.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn1.7.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn1.7.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn1_7.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.3.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.3.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_3.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.4.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.4.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_4.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.5.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.5.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_5.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn10.6.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn10.6.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn10_6.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn2.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn2.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn2_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn2.3.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn2.3.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn2_3.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn2.5.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn2.5.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn2_5.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn2.7.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn2.7.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn2_7.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn2.8.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn2.8.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn2_8.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn3.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn3.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn3_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn3.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn3.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn3_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn3.3.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn3.3.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn3_3.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn3.4.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn3.4.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn3_4.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn4.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn4_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn4.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn4.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn4_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn5.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn5.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn5_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.2.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.4.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.4.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_4.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.5.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.5.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_5.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.6.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.6.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_6.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.7.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.7.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_7.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.8.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.8.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_8.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn6.9.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn6.9.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn6_9.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.1.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.1.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_1.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.2.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.2.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_2.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.4.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.4.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_4.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.5.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.5.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_5.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.6.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.6.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_6.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn7.7.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn7.7.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn7_7.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn8.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn8.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn8.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "scn9.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\scn9.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\scn9.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "Voygray.jpg",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\Voygray.jpg",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    },
+    {
+      "image": "VP_col.png",
+      "declared_path": "//VOYBRIDGETEX-1\\Textures\\VP_col.png",
+      "original_path_exists": false,
+      "basename_candidates": [
+        "FUENTE_MAX\\VoyagerBridge\\VP_col.png",
+        "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png"
+      ],
+      "scope": "name similarity only; not proof of shader assignment"
+    }
+  ],
+  "mtl": [
+    {
+      "path": "FUENTE_OBJ\\VoyagerB.Mtl",
+      "materials": [
+        {
+          "material": "wire_196088225",
+          "maps": []
+        },
+        {
+          "material": "Voygray",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/Voygray.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg"
+            }
+          ]
+        },
+        {
+          "material": "DimGray",
+          "maps": []
+        },
+        {
+          "material": "wire_225088199",
+          "maps": []
+        },
+        {
+          "material": "Material__53",
+          "maps": []
+        },
+        {
+          "material": "Chairgray",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/n011.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg"
+            }
+          ]
+        },
+        {
+          "material": "Color_00",
+          "maps": []
+        },
+        {
+          "material": "Color_H1",
+          "maps": []
+        },
+        {
+          "material": "scrn4_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn4.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn4_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn4.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn2.7.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.7.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.3.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.3.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.4.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.4.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.5.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.5.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn3.3.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.3.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn3.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn5_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn5.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn5.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn3.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn3.4.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn3.4.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.5.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.5.png"
+            }
+          ]
+        },
+        {
+          "material": "Materi04",
+          "maps": []
+        },
+        {
+          "material": "LightGr",
+          "maps": []
+        },
+        {
+          "material": "Color_03",
+          "maps": []
+        },
+        {
+          "material": "wire_088177026",
+          "maps": []
+        },
+        {
+          "material": "Charcoal",
+          "maps": []
+        },
+        {
+          "material": "Light_TL",
+          "maps": []
+        },
+        {
+          "material": "Window",
+          "maps": []
+        },
+        {
+          "material": "Color_A0",
+          "maps": []
+        },
+        {
+          "material": "black2",
+          "maps": []
+        },
+        {
+          "material": "Mainscreen",
+          "maps": []
+        },
+        {
+          "material": "wire_224198087",
+          "maps": []
+        },
+        {
+          "material": "scrn12red",
+          "maps": []
+        },
+        {
+          "material": "Doorpanel01",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/DP_01.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png"
+            }
+          ]
+        },
+        {
+          "material": "wire_085028177",
+          "maps": []
+        },
+        {
+          "material": "Plaque",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/VP_col.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png"
+            }
+          ]
+        },
+        {
+          "material": "wire_229166215",
+          "maps": []
+        },
+        {
+          "material": "Burnt",
+          "maps": []
+        },
+        {
+          "material": "Color_C2",
+          "maps": []
+        },
+        {
+          "material": "wire_008008136",
+          "maps": []
+        },
+        {
+          "material": "Black1",
+          "maps": []
+        },
+        {
+          "material": "White",
+          "maps": []
+        },
+        {
+          "material": "light_white_on_to_off",
+          "maps": []
+        },
+        {
+          "material": "wire_177088026",
+          "maps": []
+        },
+        {
+          "material": "Lights",
+          "maps": []
+        },
+        {
+          "material": "wire_087224087",
+          "maps": []
+        },
+        {
+          "material": "wire_057008136",
+          "maps": []
+        },
+        {
+          "material": "Metal_Co",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/Metal_Co.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg"
+            }
+          ]
+        },
+        {
+          "material": "wire_224143087",
+          "maps": []
+        },
+        {
+          "material": "wire_006134113",
+          "maps": []
+        },
+        {
+          "material": "wire_184228153",
+          "maps": []
+        },
+        {
+          "material": "Metal_Steelplate",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/alumb_t.tga",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\alumb_t.tga"
+            }
+          ]
+        },
+        {
+          "material": "Material",
+          "maps": []
+        },
+        {
+          "material": "Leather",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/LEATH01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "wire_153228184",
+          "maps": []
+        },
+        {
+          "material": "wire_154185229",
+          "maps": []
+        },
+        {
+          "material": "wire_184155229",
+          "maps": []
+        },
+        {
+          "material": "wire_228153184",
+          "maps": []
+        },
+        {
+          "material": "Color_01",
+          "maps": []
+        },
+        {
+          "material": "Color_A1",
+          "maps": []
+        },
+        {
+          "material": "Color_04",
+          "maps": []
+        },
+        {
+          "material": "Color_06",
+          "maps": []
+        },
+        {
+          "material": "Color_05",
+          "maps": []
+        },
+        {
+          "material": "Color_07",
+          "maps": []
+        },
+        {
+          "material": "Leather2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/LEATH01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "fabric_brown",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/BURLAP01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "wire_061134006",
+          "maps": []
+        },
+        {
+          "material": "wire_141007058",
+          "maps": []
+        },
+        {
+          "material": "wire_138008110",
+          "maps": []
+        },
+        {
+          "material": "scrn6_9",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.9.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.9.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.4.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.4.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.4.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.4.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn2.5.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.5.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn2.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn9",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn9.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn9.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn2.8.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.8.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.6.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.6.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_3",
+          "maps": []
+        },
+        {
+          "material": "scrn7_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.5.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.5.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn8.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn8.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.6.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.6.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn7.7.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn7.7.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.7.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.7.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.8.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.8.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.6.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.6.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.4.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.4.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn6.5.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn6.5.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_2",
+          "maps": []
+        },
+        {
+          "material": "scrn2_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn2.3.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn2.3.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_4",
+          "maps": []
+        },
+        {
+          "material": "scrn2_6",
+          "maps": []
+        },
+        {
+          "material": "scrn1_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.7.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.7.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn1.3.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn1.3.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_3",
+          "maps": []
+        },
+        {
+          "material": "scrn10_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.2.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.2.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1/Textures/scn10.6.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn10.6.png"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "FUENTE_OBJ\\VoyagerB_original.Mtl",
+      "materials": [
+        {
+          "material": "wire_196088225",
+          "maps": []
+        },
+        {
+          "material": "Voygray",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\Voygray.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Voygray.jpg"
+            }
+          ]
+        },
+        {
+          "material": "DimGray",
+          "maps": []
+        },
+        {
+          "material": "wire_225088199",
+          "maps": []
+        },
+        {
+          "material": "Material__53",
+          "maps": []
+        },
+        {
+          "material": "Chairgray",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\n011.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\n011.jpg"
+            }
+          ]
+        },
+        {
+          "material": "Color_00",
+          "maps": []
+        },
+        {
+          "material": "Color_H1",
+          "maps": []
+        },
+        {
+          "material": "scrn4_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__251_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__251_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn4_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\scn4.1.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\scn4.1.png"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__201_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__201_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__213_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__213_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__214_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__214_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__215_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__215_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__244_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__244_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__30_Falloff.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__30_Falloff.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn5_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__252_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__252_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__245_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__245_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn3_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__249_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__249_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__188_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__188_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__203_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__203_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "Materi04",
+          "maps": []
+        },
+        {
+          "material": "LightGr",
+          "maps": []
+        },
+        {
+          "material": "Color_03",
+          "maps": []
+        },
+        {
+          "material": "wire_088177026",
+          "maps": []
+        },
+        {
+          "material": "Charcoal",
+          "maps": []
+        },
+        {
+          "material": "Light_TL",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__26_Gradient.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__26_Gradient.tga"
+            }
+          ]
+        },
+        {
+          "material": "Window",
+          "maps": []
+        },
+        {
+          "material": "Color_A0",
+          "maps": []
+        },
+        {
+          "material": "black2",
+          "maps": []
+        },
+        {
+          "material": "Mainscreen",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__260_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__260_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "wire_224198087",
+          "maps": []
+        },
+        {
+          "material": "scrn12red",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__30_Falloff.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__30_Falloff.tga"
+            }
+          ]
+        },
+        {
+          "material": "Doorpanel01",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\DP_01.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\DP_01.png"
+            }
+          ]
+        },
+        {
+          "material": "wire_085028177",
+          "maps": []
+        },
+        {
+          "material": "Plaque",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\VP_col.png",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\VP_col.png"
+            }
+          ]
+        },
+        {
+          "material": "wire_229166215",
+          "maps": []
+        },
+        {
+          "material": "Burnt",
+          "maps": []
+        },
+        {
+          "material": "Color_C2",
+          "maps": []
+        },
+        {
+          "material": "wire_008008136",
+          "maps": []
+        },
+        {
+          "material": "Black1",
+          "maps": []
+        },
+        {
+          "material": "White",
+          "maps": []
+        },
+        {
+          "material": "light_white_on_to_off",
+          "maps": []
+        },
+        {
+          "material": "wire_177088026",
+          "maps": []
+        },
+        {
+          "material": "Lights",
+          "maps": []
+        },
+        {
+          "material": "wire_087224087",
+          "maps": []
+        },
+        {
+          "material": "wire_057008136",
+          "maps": []
+        },
+        {
+          "material": "Metal_Co",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Metal_Co.jpg"
+            }
+          ]
+        },
+        {
+          "material": "wire_224143087",
+          "maps": []
+        },
+        {
+          "material": "wire_006134113",
+          "maps": []
+        },
+        {
+          "material": "wire_184228153",
+          "maps": []
+        },
+        {
+          "material": "Metal_Steelplate",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\Alumb_t.tga",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\Alumb_t.tga"
+            }
+          ]
+        },
+        {
+          "material": "Material",
+          "maps": []
+        },
+        {
+          "material": "Leather",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "wire_153228184",
+          "maps": []
+        },
+        {
+          "material": "wire_154185229",
+          "maps": []
+        },
+        {
+          "material": "wire_184155229",
+          "maps": []
+        },
+        {
+          "material": "wire_228153184",
+          "maps": []
+        },
+        {
+          "material": "Color_01",
+          "maps": []
+        },
+        {
+          "material": "Color_A1",
+          "maps": []
+        },
+        {
+          "material": "Color_04",
+          "maps": []
+        },
+        {
+          "material": "Color_06",
+          "maps": []
+        },
+        {
+          "material": "Color_05",
+          "maps": []
+        },
+        {
+          "material": "Color_07",
+          "maps": []
+        },
+        {
+          "material": "Leather2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\LEATH01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\LEATH01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "fabric_brown",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG",
+              "exists": true,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGETEX-1\\Textures\\BURLAP01.JPG"
+            }
+          ]
+        },
+        {
+          "material": "wire_061134006",
+          "maps": []
+        },
+        {
+          "material": "wire_141007058",
+          "maps": []
+        },
+        {
+          "material": "wire_138008110",
+          "maps": []
+        },
+        {
+          "material": "scrn6_9",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__234_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__234_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__222_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__222_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__194_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__194_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__193_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__193_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__206_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__206_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__256_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__256_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__253_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__253_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn9",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__217_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__217_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__202_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__202_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__209_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__209_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__190_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__190_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__191_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__191_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__194_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__194_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__220_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__220_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__195_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__195_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__217_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__217_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__195_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__195_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn7_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__195_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__195_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__224_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__224_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_8",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__225_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__225_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__227_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__227_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__229_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__229_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_5",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__231_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__231_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__253_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__253_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__253_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__253_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_4",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__253_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__253_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn2_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__253_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__253_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_7",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__205_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__205_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn1_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__204_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__204_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn6_3",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__189_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__189_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_1",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__211_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__211_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_2",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__212_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__212_RGB_Multiply.tga"
+            }
+          ]
+        },
+        {
+          "material": "scrn10_6",
+          "maps": [
+            {
+              "channel": "map_Kd",
+              "reference": "VOYBRIDGE-1\\Map__216_RGB_Multiply.tga",
+              "exists": false,
+              "resolved": "FUENTE_OBJ\\VOYBRIDGE-1\\Map__216_RGB_Multiply.tga"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "gltf_materials": [
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 0,
+      "name": "FrontColor",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 1,
+      "name": "cTerminal",
+      "baseColorFactor": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 2,
+      "name": "Airway___Upper_Struts",
+      "baseColorFactor": [
+        0.117647,
+        0.117647,
+        0.117647,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 3,
+      "name": "Ground_Skirting___Lighting",
+      "baseColorFactor": [
+        0.447059,
+        0.447059,
+        0.447059,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 4,
+      "name": "Upper_Border___Lower_Recess",
+      "baseColorFactor": [
+        0.227451,
+        0.227451,
+        0.227451,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 5,
+      "name": "Light_Detailing",
+      "baseColorFactor": [
+        0.4,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 6,
+      "name": "Color_E01",
+      "baseColorFactor": [
+        1.0,
+        1.0,
+        0.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "BIBLIOTECA_3D\\assets\\otros\\corridor\\Star Trek Voyager Collection\\voyager\\coleccion_de_pasillos_voyager\\star_trek_voyager_collection.glb",
+      "index": 7,
+      "name": "Color_H04",
+      "baseColorFactor": [
+        0.6,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic": 0.0,
+      "roughness": 0.552786,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {}
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 0,
+      "name": "wire_196088225",
+      "baseColorFactor": [
+        0.7686280012130737,
+        0.34509798884391785,
+        0.8823530077934265,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 1,
+      "name": "Voygray",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 0
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 2,
+      "name": "DimGray",
+      "baseColorFactor": [
+        0.2941179871559143,
+        0.2941179871559143,
+        0.2941179871559143,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5270580053329468
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 3,
+      "name": "wire_225088199",
+      "baseColorFactor": [
+        0.8823530077934265,
+        0.34509798884391785,
+        0.7803919911384583,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 4,
+      "name": "Material__53",
+      "baseColorFactor": [
+        0.09019599854946136,
+        0.09019599854946136,
+        0.09019599854946136,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8297061324119568,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5058820247650146
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 5,
+      "name": "Chairgray",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.9051316976547241,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 1
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.5388240218162537
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 6,
+      "name": "Color_00",
+      "baseColorFactor": [
+        0.22745099663734436,
+        0.22745099663734436,
+        0.22745099663734436,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8450806736946106,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.3162359893321991
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 7,
+      "name": "Color_H1",
+      "baseColorFactor": [
+        0.49803900718688965,
+        0.6000000238418579,
+        0.6000000238418579,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.6588240265846252
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 8,
+      "name": "scrn4_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 2
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 9,
+      "name": "scrn4_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 3
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 10,
+      "name": "scrn2_7",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 4
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 11,
+      "name": "scrn10_3",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 5
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 12,
+      "name": "scrn10_4",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 6
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 13,
+      "name": "scrn10_5",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 7
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 14,
+      "name": "scrn3_3",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 8
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 15,
+      "name": "scrn3_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 9
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 16,
+      "name": "scrn5_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 10
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 17,
+      "name": "scrn3_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 11
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 18,
+      "name": "scrn3_4",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 12
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 19,
+      "name": "scrn6_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8999999761581421,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 13
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 20,
+      "name": "scrn1_5",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 14
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 21,
+      "name": "Materi04",
+      "baseColorFactor": [
+        0.6274510025978088,
+        0.5607839822769165,
+        0.49803900718688965,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 22,
+      "name": "LightGr",
+      "baseColorFactor": [
+        0.6627449989318848,
+        0.6627449989318848,
+        0.6627449989318848,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 23,
+      "name": "Color_03",
+      "baseColorFactor": [
+        0.6666669845581055,
+        0.6666669845581055,
+        0.6666669845581055,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 24,
+      "name": "wire_088177026",
+      "baseColorFactor": [
+        0.34509798884391785,
+        0.6941180229187012,
+        0.10196100175380707,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 25,
+      "name": "Charcoal",
+      "baseColorFactor": [
+        0.137254998087883,
+        0.137254998087883,
+        0.137254998087883,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.9051316976547241,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 26,
+      "name": "Light_TL",
+      "baseColorFactor": [
+        0.6039220094680786,
+        0.282353013753891,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 27,
+      "name": "Window",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        0.20000000298023224
+      ],
+      "metallic": 0,
+      "roughness": 0.8999999761581421,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 28,
+      "name": "Color_A0",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.9051316976547241,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.06588199734687805
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 29,
+      "name": "black2",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1647060066461563
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 30,
+      "name": "Mainscreen",
+      "baseColorFactor": [
+        0.2549020051956177,
+        0.274509996175766,
+        0.36470600962638855,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 31,
+      "name": "wire_224198087",
+      "baseColorFactor": [
+        0.8784310221672058,
+        0.7764710187911987,
+        0.34117600321769714,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 32,
+      "name": "scrn12red",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 33,
+      "name": "Doorpanel01",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 15
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 34,
+      "name": "wire_085028177",
+      "baseColorFactor": [
+        0.33333298563957214,
+        0.10980399698019028,
+        0.6941180229187012,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 35,
+      "name": "Plaque",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8025158047676086,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 16
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.2599999904632568,
+            1.2599999904632568,
+            1.2599999904632568
+          ]
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 36,
+      "name": "wire_229166215",
+      "baseColorFactor": [
+        0.8980389833450317,
+        0.6509799957275391,
+        0.8431370258331299,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 37,
+      "name": "Burnt",
+      "baseColorFactor": [
+        0.02745099924504757,
+        0.01176500041037798,
+        0.007842999882996082,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 38,
+      "name": "Color_C2",
+      "baseColorFactor": [
+        0.20000000298023224,
+        0.1568630039691925,
+        0.11764699965715408,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8297061324119568,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.2635299861431122
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 39,
+      "name": "wire_008008136",
+      "baseColorFactor": [
+        0.031373001635074615,
+        0.031373001635074615,
+        0.5333330035209656,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 40,
+      "name": "Black1",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 41,
+      "name": "White",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 1,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 42,
+      "name": "light_white_on_to_off",
+      "baseColorFactor": [
+        0.5879999995231628,
+        0.5879999995231628,
+        0.5879999995231628,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8999999761581421,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 43,
+      "name": "wire_177088026",
+      "baseColorFactor": [
+        0.6941180229187012,
+        0.34509798884391785,
+        0.10196100175380707,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 44,
+      "name": "Lights",
+      "baseColorFactor": [
+        1,
+        0.9725490212440491,
+        0.9137259721755981,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8999999761581421,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 45,
+      "name": "wire_087224087",
+      "baseColorFactor": [
+        0.34117600321769714,
+        0.8784310221672058,
+        0.34117600321769714,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 46,
+      "name": "wire_057008136",
+      "baseColorFactor": [
+        0.22352899610996246,
+        0.031373001635074615,
+        0.5333330035209656,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 47,
+      "name": "Metal_Co",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8025158047676086,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 17
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.3294120132923126
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 48,
+      "name": "wire_224143087",
+      "baseColorFactor": [
+        0.8784310221672058,
+        0.5607839822769165,
+        0.34117600321769714,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 49,
+      "name": "wire_006134113",
+      "baseColorFactor": [
+        0.02352900058031082,
+        0.5254899859428406,
+        0.443136990070343,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 50,
+      "name": "wire_184228153",
+      "baseColorFactor": [
+        0.7215690016746521,
+        0.8941180109977722,
+        0.6000000238418579,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 51,
+      "name": "Metal_Steelplate",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8025158047676086,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 18
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.3294120132923126
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 52,
+      "name": "Material.001",
+      "baseColorFactor": [
+        0.800000011920929,
+        0.6941180229187012,
+        0.5529410243034363,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 53,
+      "name": "Leather",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 19
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 54,
+      "name": "wire_153228184",
+      "baseColorFactor": [
+        0.6000000238418579,
+        0.8941180109977722,
+        0.7215690016746521,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 55,
+      "name": "wire_154185229",
+      "baseColorFactor": [
+        0.6039220094680786,
+        0.7254899740219116,
+        0.8980389833450317,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 56,
+      "name": "wire_184155229",
+      "baseColorFactor": [
+        0.7215690016746521,
+        0.6078429818153381,
+        0.8980389833450317,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 57,
+      "name": "wire_228153184",
+      "baseColorFactor": [
+        0.8941180109977722,
+        0.6000000238418579,
+        0.7215690016746521,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 58,
+      "name": "Color_01",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 59,
+      "name": "Color_A1",
+      "baseColorFactor": [
+        0.4000000059604645,
+        0.23921599984169006,
+        0.23921599984169006,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 60,
+      "name": "Color_04",
+      "baseColorFactor": [
+        0.11764699965715408,
+        0.11764699965715408,
+        0.11764699965715408,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.1317639946937561
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 61,
+      "name": "Color_06",
+      "baseColorFactor": [
+        0.33725500106811523,
+        0.33725500106811523,
+        0.33725500106811523,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 62,
+      "name": "Color_05",
+      "baseColorFactor": [
+        0.556863009929657,
+        0.556863009929657,
+        0.556863009929657,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 63,
+      "name": "Color_07",
+      "baseColorFactor": [
+        0.7764710187911987,
+        0.7764710187911987,
+        0.7764710187911987,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.19764800369739532
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 64,
+      "name": "Leather2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8621594905853271,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 20
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.828000009059906
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 65,
+      "name": "fabric_brown",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8999999761581421,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 21
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.14399999380111694
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 66,
+      "name": "wire_061134006",
+      "baseColorFactor": [
+        0.23921599984169006,
+        0.5254899859428406,
+        0.02352900058031082,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 67,
+      "name": "wire_141007058",
+      "baseColorFactor": [
+        0.5529410243034363,
+        0.02745099924504757,
+        0.22745099663734436,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 68,
+      "name": "wire_138008110",
+      "baseColorFactor": [
+        0.5411760210990906,
+        0.031373001635074615,
+        0.4313730001449585,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.8239318132400513,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.699999988079071
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 69,
+      "name": "scrn6_9",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 22
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 70,
+      "name": "scrn7_4",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 23
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 71,
+      "name": "scrn7_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 24
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 72,
+      "name": "scrn1_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 25
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 73,
+      "name": "scrn1_4",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 26
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 74,
+      "name": "scrn2_5",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 27
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 75,
+      "name": "scrn2_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 28
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 76,
+      "name": "scrn9",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 29
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 77,
+      "name": "scrn2_8",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 30
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 78,
+      "name": "scrn6_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 31
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 79,
+      "name": "scrn1_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 32
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 80,
+      "name": "scrn1_6",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 33
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 81,
+      "name": "scrn7_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 34
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 82,
+      "name": "scrn7_3",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 83,
+      "name": "scrn7_5",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 35
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 84,
+      "name": "scrn8",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 36
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 85,
+      "name": "scrn7_6",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 37
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 86,
+      "name": "scrn7_7",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 38
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 87,
+      "name": "scrn6_7",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 39
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 88,
+      "name": "scrn6_8",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 40
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 89,
+      "name": "scrn6_6",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 41
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 90,
+      "name": "scrn6_4",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 42
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 91,
+      "name": "scrn6_5",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 43
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 92,
+      "name": "scrn2_2",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 93,
+      "name": "scrn2_3",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 44
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 94,
+      "name": "scrn2_4",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 95,
+      "name": "scrn2_6",
+      "baseColorFactor": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 96,
+      "name": "scrn1_7",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 45
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 97,
+      "name": "scrn1_3",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 46
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 98,
+      "name": "scrn6_3",
+      "baseColorFactor": [
+        0.00392200006172061,
+        0.00392200006172061,
+        0.00392200006172061,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {},
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 99,
+      "name": "scrn10_1",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 47
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 100,
+      "name": "scrn10_2",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 48
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    },
+    {
+      "source": "FUENTE_OBJ\\Voyager_Bridge_Trabajo.glb",
+      "index": 101,
+      "name": "scrn10_6",
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "metallic": 0,
+      "roughness": 0.7763931751251221,
+      "emissive": [
+        0,
+        0,
+        0
+      ],
+      "doubleSided": true,
+      "maps": {
+        "baseColorTexture": {
+          "index": 49
+        }
+      },
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularFactor": 0.8999999165534973
+        }
+      }
+    }
+  ]
+}
