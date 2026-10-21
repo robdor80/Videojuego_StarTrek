@@ -1,0 +1,1005 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore02_c_procedures",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "record_count": 26,
+  "canonical_capability_contract": "lore/medicine/medical_capability_contract.json",
+  "records": [
+    {
+      "procedure_id": "l02c_proc_neuropsychiatric_review",
+      "name_es": "Valoración neurológica y psicosocial",
+      "category": "diagnostic",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Especialista según caso; no inferir causa telepática ni diagnóstico por conversación aislada.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_species_specialist_consult",
+      "name_es": "Consulta de especialista en especie",
+      "category": "xenomedicine",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No tratar pon farr sin historia, consentimiento y competencia.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_specialist_referral",
+      "name_es": "Derivación clínica compleja",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_kit",
+        "l02b_evacuation_stretcher"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "La derivación no garantiza disponibilidad de otro hospital ni cura.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_isolation_and_analysis",
+      "name_es": "Aislamiento y estudio de agente",
+      "category": "biological_analysis",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [
+        "L02C_ST_QUICKENING"
+      ],
+      "equipment_refs": [
+        "l02b_field_quarantine_kit",
+        "l02b_medical_hand_scanner"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "La necesidad de aislamiento y su duración no se inventan por el nombre de la afección.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_environmental_decontamination",
+      "name_es": "Descontaminación y evaluación de exposición",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_kit",
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "La retirada de la fuente no es curación automática de daños preexistentes.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_xenomedical_transfer_consult",
+      "name_es": "Consulta xenobiológica y viabilidad de transferencia",
+      "category": "xenomedicine",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [
+        "L02C_ST_TRILL"
+      ],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "La transferencia de simbionte u órgano exige instalaciones, experiencia, idoneidad y consentimiento.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_surgical_referral",
+      "name_es": "Evaluación quirúrgica especializada",
+      "category": "surgery",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder",
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No presupone que una enfermería disponga de cirugía experimental.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_implant_specialist_review",
+      "name_es": "Revisión especializada de implantes",
+      "category": "xenomedicine",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder",
+        "l02b_medical_hand_scanner"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No retirar implantes ni nanoprobes mediante diálogo o por mero conocimiento de Borg.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_team_debrief",
+      "name_es": "Supervisión y debriefing profesional",
+      "category": "preventive",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No atribuir psicopatología humana ni autoridad ilimitada a un EMH.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_psychosocial_followup",
+      "name_es": "Acompañamiento y seguimiento psicosocial",
+      "category": "rehabilitation",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "El estado psicológico no se cura con una única respuesta del NPC.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_stabilize_and_triage",
+      "name_es": "Estabilización y triaje cualitativo",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_kit",
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Primero asegurar la escena; nivel de triaje depende de evidencias y recursos.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_life_support_and_evacuate",
+      "name_es": "Soporte vital y evacuación",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_evacuation_stretcher",
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No hay supervivencia garantizada ni teletransporte seguro por defecto.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_device_incident_consult",
+      "name_es": "Evaluación conjunta Medicina e Ingeniería",
+      "category": "diagnostic",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Telemetría y apariencia no equivalen a integridad biológica confirmada.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_recovery_monitoring",
+      "name_es": "Monitorización y control evolutivo",
+      "category": "rehabilitation",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Alta y reincorporación al servicio deben tener decisiones independientes.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_rehabilitation_review",
+      "name_es": "Plan individual de rehabilitación",
+      "category": "rehabilitation",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No hay tiempos fijados universalmente; revisar secuelas y limitaciones.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_mass_casualty_triage",
+      "name_es": "Triaje de múltiples afectados",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_kit",
+        "l02b_evacuation_stretcher"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No priorizar por rango; no duplicar stock, camas ni profesionales.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_facility_capacity_reassessment",
+      "name_es": "Reevaluación de capacidad asistencial",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Pérdida de energía/personas no se compensa con instalaciones inexistentes.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_consent_review",
+      "name_es": "Consentimiento y evaluación de capacidad",
+      "category": "preventive",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No sustituir voluntad capaz por orden de un capitán ni omitir límites de emergencia.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_clinical_history",
+      "name_es": "Entrevista y revisión de antecedentes",
+      "category": "diagnostic",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "La historia incompleta no autoriza a conocer diagnósticos ocultos.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_point_of_care_scan",
+      "name_es": "Exploración instrumental y toma de muestras",
+      "category": "diagnostic",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder",
+        "l02b_medical_hand_scanner"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Resultado condicionado por sensor, calibración, entorno y paciente.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_diagnostic_differential",
+      "name_es": "Hipótesis y diagnóstico diferencial",
+      "category": "diagnostic",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Una hipótesis probable no modifica la condición real.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_medication_authorization",
+      "name_es": "Administración controlada de medicación",
+      "category": "treatment",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_hypospray",
+        "l02b_hypo_cartridge"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Sin nombre de fármaco, compatibilidad, inventario, orden y dosis verificadas no procede administración.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_dermal_regeneration_review",
+      "name_es": "Evaluación de regeneración dérmica",
+      "category": "treatment",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_dermal_regenerator"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "No asumir regeneración de órganos ni tejidos incompatibles.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_advanced_surgery_review",
+      "name_es": "Valoración de cirugía avanzada",
+      "category": "surgery",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [
+        "L02C_ST_MED_ETHICS"
+      ],
+      "equipment_refs": [
+        "l02b_medical_tricorder"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Tecnología experimental y riesgo deben aprobarse caso a caso; no extrapolar Worf.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_medical_research_protocol",
+      "name_es": "Investigación de muestras y nuevas hipótesis",
+      "category": "biological_analysis",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_medical_hand_scanner"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "Respeto a bioseguridad, privacidad, revisión y acceso; ensayo no autorizado prohibido.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    },
+    {
+      "procedure_id": "l02c_proc_emergency_handoff",
+      "name_es": "Traspaso de paciente y registro",
+      "category": "emergency_care",
+      "classification": "GAME_ADDITION",
+      "canon_basis_sources": [],
+      "equipment_refs": [
+        "l02b_portable_patient_monitor"
+      ],
+      "qualifications_required": [
+        "task_specific_training",
+        "medical_authorization_for_patient"
+      ],
+      "preconditions": [
+        "patient_and_species_identification_when_possible",
+        "authenticated_actor_role_and_current_qualification",
+        "current_patient_observations_and_indication",
+        "actual_equipment_staff_supplies_and_facility",
+        "consent_or_documented_narrow_emergency_exception"
+      ],
+      "information_gates": [
+        "latest_known_results",
+        "observability_and_source_quality",
+        "alternative_hypotheses",
+        "patient_record_access_scope"
+      ],
+      "possible_outcomes": [
+        "UNRESOLVED",
+        "PROVISIONAL",
+        "REVIEW_NEEDED",
+        "CLINICALLY_STABLE_WITH_FOLLOWUP"
+      ],
+      "critical_limit_es": "El relevo debe comunicar riesgos e incertidumbre sin divulgar historial no autorizado.",
+      "real_world_dosing": null,
+      "canonical_time_to_effect": null,
+      "planned_core_action": "HOST_VALIDATES_THEN_CORERPG_ACTION",
+      "ue5_implemented": false
+    }
+  ]
+}
