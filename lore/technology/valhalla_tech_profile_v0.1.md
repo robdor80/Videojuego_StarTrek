@@ -1,5 +1,8 @@
 # VAL-TEC — Perfil tecnológico conceptual de la Clase Valhalla (v0.1)
 
+> **Actualización de autoridad creativa (21-10-2026):** prevalece [este addendum](valhalla_creative_addendum_2026-10-21.md), que fija continuidad propia sin año estricto, USS Enterprise (NCC-1701-G de trabajo), prestaciones mínimas Voyager/Intrepid, objetivos armamentísticos Sovereign/Odyssey, 3 hangares distribuidos entre anillo/platillo y sección de batalla, y auxiliar **clase Defiant con camuflaje romulano aprobado**. Las reservas anteriores incompatibles en este v0.1 son historia superada, no bloqueos.
+
+
 **Fecha de decisión:** 2026-10-20. **Estado:** aprobado a nivel creativo/documental; `NO_IMPLEMENTADO` en CoreRPG/UE5.  
 **Ámbito:** LORE-02 A, laguna A-G07 (tecnología excepcional y perfil de clase).  
 **Autoridad:** el autor eligió expresamente B para VAL-TEC-01, 02, 03, 04, 05, 06, 07 y 08; posteriormente aprobó **seleccionar automáticamente la opción B equilibrada para todas las decisiones pendientes** de la Valhalla sin continuar los cuestionarios. Por esta delegación se adoptan las especificaciones equilibradas de VAL-TEC-09 a 16. Los detalles no presentados no deben convertirse en especificaciones numéricas inventadas.
