@@ -177,7 +177,7 @@ def validate() -> dict:
         "total_systems": len(records) + len(initial["records"]),
         "operator_profiles": len(operators),
         "facility_role_profiles": len(facilities),
-        "adversarial_cases": len(cases) + 14,
+        "adversarial_cases": len(cases["cases"]) + 14,
         "research_source_ids": len(registered),
         "gaps": len(GAPS),
         "status": "NEEDS_REVIEW",
