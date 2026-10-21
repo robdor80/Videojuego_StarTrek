@@ -21,6 +21,7 @@
 | lore02_c_species_clinical_atlas_v0.1.json | 25 referencias de especies existentes + 1 perfil multiespecie de modificación Borg | Sin constantes vitales ni dosis universales |
 | lore02_c_conditions_v0.1.json | 32 condiciones/estados/situaciones, con señales, diferenciales, ámbito y procedencia | 17 grupos documentales y de diseño no constituyen prevalencia ni curva médica |
 | lore02_c_procedures_v0.1.json | 26 protocolos de diseño vinculados a material existente y requisitos | No son recetas reales ni procedimientos implementados |
+| lore02_c_medical_agents_v0.1.json | 12 medicamentos y tecnologías presentes en referencias Star Trek | Datos cualitativos: sin dosis, eficacia, compatibilidad universal ni disponibilidad automática |
 | lore02_c_facilities_staff_v0.1.json | 9 instalaciones + 12 roles | No crean camas, especialistas ni telemedicina |
 | gameplay/medical/lore02_c_diagnostic_workflow_v0.1.json | 11 tipos de pasos con límites epistémicos, consentimiento y autoridad | El Host y Core deberán implementar transiciones posteriormente |
 | lore02_c_adversarial_scenarios_v0.1.json | 56 casos con respuesta requerida/prohibida | Son pruebas documentales; no son partidas ejecutadas |
@@ -82,6 +83,17 @@ Las explicaciones de NPC pueden ser creativas en tono, pero su diagnóstico debe
 - Cirugía avanzada, trasplantes, asistencia a simbiontes y manipulación Borg requieren profesional, instalaciones y autorización específicos; se diseñan como **evaluaciones/derivaciones**, no actos disponibles desde el inventario de bolsillo.
 
 Los procedimientos registrados en el catálogo son **pasos jugables diseñados**. Ninguno prescribe práctica clínica real, ni afirma curación/dosis/cronómetros. No convertir consecuencias de episodios individuales en rendimiento reproducible.
+
+### Agentes médicos y tecnologías específicas
+
+El catálogo adicional documenta **cordrazina, tricordrazina, hironalin, inaprovalina, lectrazina, tri-ox, felicium, arithrazina, regenerador dérmico, estimulador osteogénico, replicador genetrónico y terapia extraordinaria mediante nanoprobes Borg**. Se incorporan doce fuentes secundarias especializadas al registro, que totaliza 481 referencias en su corte de 21-10-2026. El origen de la evidencia no se convierte en una autorización para prescribir.
+
+- **Medicamentos:** las referencias documentan indicaciones narrativas, efectos y contraejemplos; un nombre en el catálogo no certifica que una dosis o uso concretos sea seguro para cada especie, ni que el almacén de una nave contenga el fármaco. Por ejemplo, el caso **lectrazina** exige comprobar biología específica.
+- **Felicium:** el caso de TNG *Symbiosis* muestra que una enfermedad histórica, una dependencia farmacológica y el aprovechamiento social no deben confundirse.
+- **Regeneración / cirugía:** regenerador dérmico no equivale a replicador genetrónico. La tecnología del caso Worf fue **experimental** y su mera documentación no la hace disponible en Valhalla u otras enfermerías.
+- **Nanoprobes:** el caso extraordinario de Neelix no demuestra un tratamiento de reanimación repetible ni autoriza manipular nanoprobes sin permisos, especialistas y evaluación paciente-específica.
+
+El catálogo se separa del catálogo de procedimientos: **un agente es una referencia médica**, mientras un **procedimiento es una propuesta de interacción**. La futura simulación deberá vincular ambos con protocolos compatibles, efectos causalmente simulables y datos creados y versionados como GAME_ADDITION cuando no exista evidencia. El validador bloquea agentes sin procedencia, dosis o eficacia inventadas, disponibilidad automática, declaración de UE5 operativo y ampliación falsa de autoridad de fuentes.
 
 ## 7. Instalaciones, turnos y emergencias
 
