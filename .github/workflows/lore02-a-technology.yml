@@ -45,9 +45,11 @@ jobs:
           python-version: "3.12"
       - name: Validate LORE-02 A catalogue, sources and negative cases
         run: |
-          python -m py_compile tools/validation/validate_lore02_a.py tools/validation/test_lore02_a.py
+          python -m py_compile tools/validation/validate_lore02_a.py tools/validation/test_lore02_a.py tools/validation/validate_lore02_a_completion.py tools/validation/test_lore02_a_completion.py
           python tools/validation/validate_lore02_a.py
           python tools/validation/test_lore02_a.py
+          python tools/validation/validate_lore02_a_completion.py
+          python tools/validation/test_lore02_a_completion.py
       - name: Regression of completed LORE-01
         run: |
           python tools/validation/validate_lore01_e.py
