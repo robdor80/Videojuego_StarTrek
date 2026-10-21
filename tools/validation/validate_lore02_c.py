@@ -16,6 +16,7 @@ REGISTRY = "sources/source_registry/source_registry.json"
 DOSSIER = "docs/roadmap/lore_02_c_medicine_research_dossier_v0.1.md"
 EQUIPMENT = "lore/equipment/lore02_b_equipment_catalogue_v0.1.json"
 AGENTS = "lore/medicine/lore02_c_medical_agents_v0.1.json"
+MATRIX = "lore/medicine/lore02_c_clinical_decision_matrix_v0.1.json"
 NAMES = (ATLAS, CONDITIONS, PROCEDURES, ORG, SCENARIOS, FLOW, REGISTRY, EQUIPMENT)
 STATE = "EDITORIAL_NON_RUNTIME"
 EXPECTED = {"species": 26, "conditions": 38, "procedures": 26, "agents": 13,
@@ -70,6 +71,51 @@ def validate_agents(doc, registry, equipment):
              a.get("universal_efficacy", "MISSING") is None and
              a.get("time_to_effect", "MISSING") is None,
              name + " invented medical dose/efficacy/timer")
+    return errors
+
+def validate_matrix(doc, conditions, procedures, agents):
+    """Relational coverage of signals, differential, procedure and proposed agents."""
+    errors = []
+    def need(ok, msg):
+        if not ok:
+            errors.append(msg)
+    cd = {x["condition_id"]: x for x in conditions.get("catalogue", [])}
+    pd = {x["procedure_id"] for x in procedures.get("records", [])}
+    ad = {x["agent_id"] for x in agents.get("records", [])}
+    need(doc.get("schema_version") == "0.1.0"
+         and doc.get("status") == "NEEDS_REVIEW"
+         and doc.get("mode") == "EDITORIAL_NON_RUNTIME"
+         and doc.get("authority") == "CoreRPG_WORLD_STATE_ONLY",
+         "decision matrix falsely enabled")
+    rows = doc.get("records", [])
+    ids = [x.get("condition_ref") for x in rows]
+    need(len(rows) == doc.get("record_count") == len(cd) == EXPECTED["conditions"]
+         and len(set(ids)) == len(ids) and set(ids) == set(cd),
+         "decision matrix missing or duplicate condition")
+    accepted = {"EPISODIC_ASSOCIATION_ONLY", "PROPOSED_CONDITIONAL_CHECK",
+                "EXPERIMENTAL_CASE_ONLY", "HISTORICAL_EVENT_NOT_TREATMENT"}
+    for row in rows:
+        key = row.get("condition_ref", "?")
+        origin = cd.get(key)
+        need(bool(row.get("observational_signal_es"))
+             and bool(row.get("differential_question_es")),
+             key + " matrix has no differential")
+        need(row.get("initial_response_ref") in pd
+             and (origin is None or row.get("initial_response_ref") == origin.get("procedure_ref")),
+             key + " matrix broken procedure reference")
+        need(row.get("hypothesis_status") == "UNKNOWN_UNTIL_OBSERVER_HAS_EVIDENCE"
+             and row.get("recovery_status") == "NOT_DETERMINED_BY_CATALOGUE"
+             and row.get("cross_species_reuse") == "FORBIDDEN_WITHOUT_VALIDATION",
+             key + " matrix false certainty")
+        need(row.get("privacy") == "MEDICAL_AUTHORIZED_MINIMUM_NECESSARY",
+             key + " matrix privacy violation")
+        need(origin is None or row.get("source_ids") == origin.get("source_ids"),
+             key + " matrix evidence mismatch")
+        for link in row.get("possible_agent_links", []):
+            need(link.get("agent_ref") in ad and link.get("relation") in accepted
+                 and link.get("not_a_prescription") is True
+                 and link.get("indication") == "NEEDS_SPECIFIC_PATIENT_TEST_AUTHORIZATION_AND_STOCK",
+                 key + " auto prescribed or missing agent")
     return errors
 
 def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths=True):
@@ -214,7 +260,8 @@ def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths
              and ca.get("state_authority") == "CoreRPG_ONLY", key+" falsely playtested or mutated")
     if check_paths:
         errors.extend(validate_agents(read(AGENTS), registry, eq))
-        for ref in (*NAMES, AGENTS, DOSSIER, "lore/medicine/README.md",
+        errors.extend(validate_matrix(read(MATRIX), cond, proc, read(AGENTS)))
+        for ref in (*NAMES, AGENTS, MATRIX, DOSSIER, "lore/medicine/README.md",
                     "gameplay/medical/medical_state_model.json",
                     "gameplay/medical/species_medical_hooks.json",
                     "gameplay/records_and_logs/access_and_privacy_rules.json",
