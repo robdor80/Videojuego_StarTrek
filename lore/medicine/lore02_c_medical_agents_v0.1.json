@@ -386,7 +386,7 @@
       "agent_id": "l02c_agent_genetronic_replicator",
       "display_name_es": "Replicador genetrónico experimental",
       "kind": "experimental_technology",
-      "claim_class": "RELIABLE_SECONDARY",
+      "claim_class": "OFFICIAL_REFERENCE",
       "source_ids": [
         "L02C_ST_MED_ETHICS"
       ],
@@ -422,7 +422,7 @@
       "agent_id": "l02c_agent_borg_nanoprobe_therapy",
       "display_name_es": "Intervención extraordinaria mediante nanoprobes Borg",
       "kind": "specialized_technology",
-      "claim_class": "RELIABLE_SECONDARY",
+      "claim_class": "OFFICIAL_REFERENCE",
       "source_ids": [
         "L02C_ST_BORG"
       ],
