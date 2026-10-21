@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.38.0",
+  "registry_version": "0.39.0",
   "last_updated": "2026-10-21",
   "sources": [
     {
@@ -3996,6 +3996,150 @@
       "url": "https://memory-alpha.fandom.com/wiki/Nanoprobe",
       "accessed_at": "2026-10-21",
       "notes": "Contexto de nanoprobes Borg, sin recetas ni terapias reales."
+    },
+    {
+      "source_id": "L02C_ST_MED_ETHICS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "7 Times Doctor Beverly Crusher Became My Favorite Star Trek Doctor",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/7-times-doctor-beverly-crusher-became-my-favorite-star-trek-doctor",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG Ethics: lesión medular Worf, intervención experimental y conflictos de consentimiento/ética; no establece eficacia universal."
+    },
+    {
+      "source_id": "L02C_ST_ETHICS_DETAILS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Ethics Debuted 24 Years Ago",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/ethics-debuted-24-years-ago-today",
+      "accessed_at": "2026-10-21",
+      "notes": "Datos anatómicos klingon en caso Worf; no se pueden extender sin cautela a todos los individuos."
+    },
+    {
+      "source_id": "L02C_ST_QUICKENING",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Your Star Trek Pandemic-Themed Watch List",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/your-star-trek-pandemic-themed-watch-list",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9 The Quickening y VOY Macrocosm: enfermedad Teplan y macrovirus. La intervención inicial puede fracasar."
+    },
+    {
+      "source_id": "L02C_ST_BASHIR",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Good Doctor: 7 Standout Dr. Bashir Moments",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-good-doctor-standout-dr-bashir-moments",
+      "accessed_at": "2026-10-21",
+      "notes": "Ética y riesgos diagnósticos/terapéuticos de la enfermedad Teplan."
+    },
+    {
+      "source_id": "L02C_ST_BENDII",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Bendii Syndrome and the Mysteries of the Mind",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/bendii-syndrome-and-the-mysteries-of-the-mind",
+      "accessed_at": "2026-10-21",
+      "notes": "Síndrome Bendii en Sarek; no extrapolar prevalencias ni transmisión clínica."
+    },
+    {
+      "source_id": "L02C_ST_EMPATHY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Below Deck with Lower Decks: Checking Your Emotional Baggage",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/below-deck-with-lower-decks-405-emotional-baggage",
+      "accessed_at": "2026-10-21",
+      "notes": "Comparación de Zanthi en betazoides y Bendii en vulcanos, con efectos interpersonales."
+    },
+    {
+      "source_id": "L02C_ST_TRILL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Trill History",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/trill-history-101",
+      "accessed_at": "2026-10-21",
+      "notes": "Huésped, simbionte, trasplante y vínculo; compatibilidad y continuidad individual son específicas."
+    },
+    {
+      "source_id": "L02C_ST_DAX",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Acts of Dax",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/en-un/news/the-acts-of-trill-dax",
+      "accessed_at": "2026-10-21",
+      "notes": "Traslado urgente del simbionte Dax a Ezri y experiencia de adaptación del huésped."
+    },
+    {
+      "source_id": "L02C_ST_VIDIIAN",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Delta Quadrant Regimes, Ranked",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/delta-quadrant-regimes-ranked",
+      "accessed_at": "2026-10-21",
+      "notes": "Fago vidiiano e ingeniería de órganos: evidencia histórica, no capacidad universal de cualquier hospital."
+    },
+    {
+      "source_id": "L02C_ST_JETREL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Jetrel and the Destroyers of Worlds",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/jetrel-and-the-destroyers-of-worlds",
+      "accessed_at": "2026-10-21",
+      "notes": "Metremia por isótopos de metreon y Kalla-Nohra por exposición en campamentos."
+    },
+    {
+      "source_id": "L02C_ST_BORG",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "How Mortal Coil Tackles the Realities of Mental Health",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/how-mortal-coil-tackles-the-realities-of-mental-health",
+      "accessed_at": "2026-10-21",
+      "notes": "Intervención singular con nanoprobes de Borg y consecuencias psicológicas, sin prometer resurrección repetible."
+    },
+    {
+      "source_id": "L02C_ST_MACRO",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Intruder Alert: Invaders Have Taken Over the Ship",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/intruder-alert-ship-invaders",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Macrocosm: transmisión accidental y restricciones de biofiltrado, cuarentena y recursos."
+    },
+    {
+      "source_id": "L02C_ST_VID_LIFE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "In 'Lifesigns,' It's What's on the Inside That Counts",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/in-lifesigns-its-whats-on-the-inside-that-counts",
+      "accessed_at": "2026-10-21",
+      "notes": "Atención a paciente vidiiana, identidad, representación holográfica y angustia; no se confunde avatar con organismo."
+    },
+    {
+      "source_id": "L02C_ST_MED_CRITICAL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "One Trek Mind #37: Sick In Space",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/one-trek-mind-37-sick-in-space",
+      "accessed_at": "2026-10-21",
+      "notes": "Síndrome Bendii y virus cromático en contexto de desigualdad asistencial; ancla secundaria oficial de episodios."
+    },
+    {
+      "source_id": "L02C_ST_MENTAL_EMH",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Spock is Just One Piece of a Vast Spectrum",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/spock-is-just-one-piece-of-a-vast-spectrum",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Latent Image: dilema de triaje holográfico y cuidado emocional de profesional médico."
+    },
+    {
+      "source_id": "L02C_ST_MED_SCIENCE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek's Vision of the Future",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/vision-of-the-future",
+      "accessed_at": "2026-10-21",
+      "notes": "Implantes oculares de Geordi y Seven; rehabilitación y especificidad de dispositivos."
     }
   ]
 }
