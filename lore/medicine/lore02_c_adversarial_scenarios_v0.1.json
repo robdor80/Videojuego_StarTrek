@@ -4,7 +4,7 @@
   "phase": "LORE-02 C",
   "status": "NEEDS_REVIEW",
   "mode": "EDITORIAL_NON_RUNTIME",
-  "case_count": 56,
+  "case_count": 62,
   "cases": [
     {
       "case_id": "L02C_CASE_001",
@@ -1186,6 +1186,138 @@
       "test_mode": "NON_RUNTIME_DOCUMENTARY",
       "state_authority": "CoreRPG_ONLY",
       "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_057",
+      "family": "species_specific",
+      "condition_ref": "l02c_jemhadar_white_deprivation",
+      "scenario_es": "El equipo evalúa privación de ketracel-white en jem'hadar. Datos: Signos de privación bioquímica, cambios conductuales y deterioro funcional en un individuo dependiente; raras excepciones genéticas documentadas.. Alternativa: No inferir la dependencia concreta o el estado de suministro sin historia y pruebas; diferenciación entre dependencia inducida, excepción genética y otros síntomas.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_species_specialist_consult",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_058",
+      "family": "xenomedicine",
+      "condition_ref": "l02c_bolian_vulcan_blood_mismatch",
+      "scenario_es": "El equipo evalúa incompatibilidad transfusional boliana-vulcana. Datos: Historia de transfusión interespecie y alteraciones tras exposición; peligro grave documentado para esa combinación.. Alternativa: Comprobar donante, receptor y naturaleza real de la sangre antes de aceptar una compatibilidad interespecie.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_xenomedical_transfer_consult",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_BOLIAN_BLOOD"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_059",
+      "family": "infectious",
+      "condition_ref": "l02c_orkett_disease",
+      "scenario_es": "El equipo evalúa enfermedad de orkett. Datos: Infección pediátrica documentada en contexto de ocupación bajorana y posible historial de trasplante de médula.. Alternativa: En el caso Seska el supuesto antecedente se contradijo con marcadores genéticos; distinguir diagnóstico documentado de relato clínico falso.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_ORKETT"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_060",
+      "family": "infectious",
+      "condition_ref": "l02c_morphogenic_virus",
+      "scenario_es": "El equipo evalúa virus morfogénico de los fundadores. Datos: Deterioro progresivo vinculado a agente diseñado en el conflicto del Dominio.. Alternativa: La cura, la transmisión por Vínculo y la manipulación por Sección 31 son contextuales; no generalizar infecciones a cualquier especie ni presentar el agente como universal.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_MORPHOGENIC"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_061",
+      "family": "iatrogenic",
+      "condition_ref": "l02c_barclay_protomorphosis",
+      "scenario_es": "El equipo evalúa síndrome de protomorfosis de barclay. Datos: Signos diversos seguidos de alteraciones biológicas extraordinarias en el caso TNG Genesis.. Alternativa: Diferenciar gripe original, intervención iatrogénica y agente mutado; no deducir que cualquier activación de intrones reproduce este resultado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_BARCLAY"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_062",
+      "family": "neurological",
+      "condition_ref": "l02c_irumodic_alternate_future",
+      "scenario_es": "El equipo evalúa síndrome irumódico, escenario de futuro alternativo. Datos: Manifestaciones neurodegenerativas descritas en el futuro alternativo de TNG All Good Things.... Alternativa: Una anomalía parietal o predisposición no es enfermedad confirmada; no convertir un futuro alternativo en destino inevitable de un NPC de nuestra continuidad.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_neuropsychiatric_review",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_IRUMODIC"
+      ]
     }
   ]
 }
