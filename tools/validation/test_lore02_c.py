@@ -2,7 +2,7 @@
 """Positive/negative documentary tests; no clinical simulation or medicine advice."""
 import copy
 import unittest
-from validate_lore02_c import NAMES, EXPECTED, read, validate, validate_data
+from validate_lore02_c import NAMES, AGENTS, EXPECTED, read, validate, validate_data, validate_agents
 
 class Lore02C(unittest.TestCase):
     @classmethod
@@ -96,6 +96,35 @@ class Lore02C(unittest.TestCase):
 
     def test_no_detached_lore01_species_reference(self):
         self.expect("taxonomy evidence detached",lambda a,c,p,o,s,w,r,e: a["records"][0].update(evidence_ref="lore/species/evidence/human_v0.2.json"))
+
+    def agent_mutate(self, mutation):
+        agents = copy.deepcopy(read(AGENTS))
+        mutation(agents)
+        return validate_agents(agents, self.fixture[6], self.fixture[7])
+
+    def test_agent_count_and_scope(self):
+        self.assertEqual(len(read(AGENTS)["records"]), EXPECTED["agents"])
+        self.assertEqual(validate_agents(read(AGENTS), self.fixture[6], self.fixture[7]), [])
+
+    def test_agent_cannot_invent_dose(self):
+        problems = self.agent_mutate(lambda a: a["records"][0].update(dose="1 mL"))
+        self.assertTrue(any("invented medical dose" in x for x in problems), problems)
+
+    def test_agent_cannot_self_grant(self):
+        problems = self.agent_mutate(lambda a: a["records"][0].update(administerable_in_game_now=True))
+        self.assertTrue(any("agent auto-granted" in x for x in problems), problems)
+
+    def test_agent_cannot_falsely_upgrade_secondary_source(self):
+        problems = self.agent_mutate(lambda a: a["records"][0].update(claim_class="OFFICIAL_REFERENCE"))
+        self.assertTrue(any("source classification inflated" in x for x in problems), problems)
+
+    def test_agent_species_compatibility_not_universal(self):
+        problems = self.agent_mutate(lambda a: a["records"][0].update(species_compatibility="ALL_SPECIES"))
+        self.assertTrue(any("false universal species compatibility" in x for x in problems), problems)
+
+    def test_agent_cannot_reference_weapon(self):
+        problems = self.agent_mutate(lambda a: a["records"][0].update(equipment_ref="l02b_phaser_type_2"))
+        self.assertTrue(any("unregistered medical equipment" in x for x in problems), problems)
 
     def test_all_cases_account_for_finite_resources(self):
         for s in self.fixture[4]["cases"]:
