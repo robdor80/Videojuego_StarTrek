@@ -93,3 +93,16 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 - [Registro de aprobación y procedencia por decisión](valhalla_tech_decisions_v0.1.json): metadatos de diseño, **no** contrato de capacidades ni estado instalado.
 - Valhalla es **clase nueva inspirada en Galaxy**, no un refit oficial Galaxy. IDEA-0010 sustituye a IDEA-0004; no hay yate activo ni autorización automática de camuflaje, fechas, prestaciones o equipamiento de la nave auxiliar.
 - Este perfil **avanza A-G07 conceptualmente**, pero no declara cerradas las ocho lagunas ni sustituye la investigación y contraste del canon.
+
+## LORE-02 A — entrega documental para revisión (21-10-2026)
+
+**Estado editorial: `NEEDS_REVIEW`.** El corpus de primera iteración permanece intacto; las ampliaciones v0.2 lo complementan.
+
+- [Acta de cierre documental y auditoría de contradicciones](../../docs/roadmap/lore_02_a_cierre_documental_v1.md): resolución de A-G01–08, invariantes, límites y pendientes NO bloqueantes.
+- [Atlas cualitativo adicional v0.2](lore02_a_system_atlas_v0.2.json): 45 fichas añadidas a las 14 iniciales (**59 en total**).
+- [Perfiles por civilización/operador y tipo de estación](lore02_a_operator_facility_profiles_v0.2.json): 9 operadores y 14 funciones de estación compatibles con la gramática generativa vigente.
+- [Casos adversariales v0.2](lore02_a_adversarial_cases_v0.2.json): 36 casos nuevos (**50 sumando los 14 previos**).
+- [Addendum del autor — Valhalla y auxiliar Defiant](valhalla_creative_addendum_2026-10-21.md): cronología libre, matrícula de trabajo, blindaje, hangares, camuflaje e interiores jugables.
+- Pruebas de cierre: `python tools/validation/validate_lore02_a_completion.py` y `python tools/validation/test_lore02_a_completion.py`; se ejecutan junto a las pruebas documentales v0.1.
+
+**Importante:** el texto de primer corte que precede a esta sección describe el estado histórico de investigación. A-G01–08 ya tienen investigación cualitativa suficiente para revisión, no código UE5/CoreRPG. El autor autoriza la fusión; después se verificará `main` y se pondrá A `COMPLETE`.
