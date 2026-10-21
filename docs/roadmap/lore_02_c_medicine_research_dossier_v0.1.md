@@ -19,12 +19,12 @@
 | Archivo | Alcance | Limitación |
 | --- | --- | --- |
 | lore02_c_species_clinical_atlas_v0.1.json | 25 referencias de especies existentes + 1 perfil multiespecie de modificación Borg | Sin constantes vitales ni dosis universales |
-| lore02_c_conditions_v0.1.json | 32 condiciones/estados/situaciones, con señales, diferenciales, ámbito y procedencia | 17 grupos documentales y de diseño no constituyen prevalencia ni curva médica |
+| lore02_c_conditions_v0.1.json | 38 condiciones/estados/situaciones, con señales, diferenciales, ámbito y procedencia | 17 grupos documentales y de diseño no constituyen prevalencia ni curva médica |
 | lore02_c_procedures_v0.1.json | 26 protocolos de diseño vinculados a material existente y requisitos | No son recetas reales ni procedimientos implementados |
-| lore02_c_medical_agents_v0.1.json | 12 medicamentos y tecnologías presentes en referencias Star Trek | Datos cualitativos: sin dosis, eficacia, compatibilidad universal ni disponibilidad automática |
+| lore02_c_medical_agents_v0.1.json | 13 medicamentos y tecnologías presentes en referencias Star Trek | Datos cualitativos: sin dosis, eficacia, compatibilidad universal ni disponibilidad automática |
 | lore02_c_facilities_staff_v0.1.json | 9 instalaciones + 12 roles | No crean camas, especialistas ni telemedicina |
 | gameplay/medical/lore02_c_diagnostic_workflow_v0.1.json | 11 tipos de pasos con límites epistémicos, consentimiento y autoridad | El Host y Core deberán implementar transiciones posteriormente |
-| lore02_c_adversarial_scenarios_v0.1.json | 56 casos con respuesta requerida/prohibida | Son pruebas documentales; no son partidas ejecutadas |
+| lore02_c_adversarial_scenarios_v0.1.json | 62 casos con respuesta requerida/prohibida | Son pruebas documentales; no son partidas ejecutadas |
 
 Todos son **editoriales**, con estado de revisión y sin edición directa de los contratos fundamentales. Los arquetipos GAME_ADDITION (accidente, hipoxia, contaminación genérica, crisis de recursos) no se venden como nombres de enfermedades canónicas.
 
@@ -57,6 +57,17 @@ La evidencia de pantalla es de casos concretos y no siempre permite deducir fisi
 
 **Nunca:** toda afección universal en todas las especies; nanoescáner omnisciente; exposición = contagio probado; cirugía experimental sin riesgo; regenerador dérmico capaz de reconstruir cualquier órgano; fármaco sin compatibilidad ni autorización; curación con tiempo fijo de escena.
 
+### Casos ampliados de diagnóstico diferencial (TNG / DS9 / Voyager)
+
+- **Jem'Hadar y ketracel-white:** la privación del compuesto diseñado por el Dominio puede producir deterioro progresivo y pérdida funcional, pero existen casos genéticos documentados de individuos que generan la enzima faltante sin aporte externo. Para un personaje determinado, obtener su historial, análisis y suministro; evitar automatismos basados en su pertenencia al Dominio (fuente L02C_MA_KETRACEL_WHITE; DS9 *Hippocratic Oath* y *Rocks and Shoals*).
+- **Bolianos y vulcanos:** una transfusión con sangre de origen vulcano puede ser peligrosa para un receptor boliano según VOY *Prototype*. La compatibilidad depende de la pareja concreta, no de que ambas especies sean humanoides (L02C_MA_BOLIAN_BLOOD).
+- **Enfermedad de Orkett:** VOY *State of Flux* contiene un relato clínico atribuido por Seska a una enfermedad bajorana y supuesto trasplante de médula; los resultados del EMH lo contradicen. Diferenciar dato testimonial, marcadores medidos y causa real en NPC (L02C_MA_ORKETT).
+- **Virus morfogénico:** DS9 muestra un patógeno fabricado por Sección 31 contra Fundadores. La transmisión entre individuos metamorfos y la cura extraordinaria forman parte de un contexto político/ético concreto. No asumir transmisión interhumanoide universal (L02C_MA_MORPHOGENIC).
+- **Protomorfosis de Barclay:** TNG *Genesis* relata una intervención con linfocitos sintéticos que deriva en contagio iatrogénico. Distinguir condición primaria, error terapéutico, exposición del resto de la tripulación y medidas de investigación (L02C_MA_BARCLAY).
+- **Síndrome irumódico:** TNG *All Good Things…* plantea futuro alternativo y predisposición neurológica, no futuro determinista en nuestra campaña. Una anomalía no equivale a enfermedad presente, y nuestras decisiones de continuidad no se supeditan a cronologías hipotéticas (L02C_MA_IRUMODIC).
+
+Estos seis cuadros aportan una nueva comprobación adversarial cada uno. Procedencia **RELIABLE_SECONDARY** (reconstrucción del episodio por fuente especialista) y no instrucciones clínicas ejecutables. La causa oculta siempre se decide mediante el estado de CoreRPG.
+
 ## 5. Diagnóstico jugable: investigación, no respuesta escrita
 
 1. Instanciar paciente real en Core con estado oculto; el Host solo recibe proyección autorizada.
@@ -86,7 +97,7 @@ Los procedimientos registrados en el catálogo son **pasos jugables diseñados**
 
 ### Agentes médicos y tecnologías específicas
 
-El catálogo adicional documenta **cordrazina, tricordrazina, hironalin, inaprovalina, lectrazina, tri-ox, felicium, arithrazina, regenerador dérmico, estimulador osteogénico, replicador genetrónico y terapia extraordinaria mediante nanoprobes Borg**. Se incorporan doce fuentes secundarias especializadas al registro, que totaliza 481 referencias en su corte de 21-10-2026. El origen de la evidencia no se convierte en una autorización para prescribir.
+El catálogo adicional documenta **cordrazina, tricordrazina, hironalin, inaprovalina, lectrazina, tri-ox, felicium, arithrazina, regenerador dérmico, estimulador osteogénico, replicador genetrónico, terapia extraordinaria mediante nanoprobes Borg y ketracel-white como recurso bioquímico específico de Jem'Hadar**. Se incorporan dieciocho fuentes secundarias especializadas al registro, que totaliza 487 referencias en su corte de 21-10-2026. El origen de la evidencia no se convierte en una autorización para prescribir.
 
 - **Medicamentos:** las referencias documentan indicaciones narrativas, efectos y contraejemplos; un nombre en el catálogo no certifica que una dosis o uso concretos sea seguro para cada especie, ni que el almacén de una nave contenga el fármaco. Por ejemplo, el caso **lectrazina** exige comprobar biología específica.
 - **Felicium:** el caso de TNG *Symbiosis* muestra que una enfermedad histórica, una dependencia farmacológica y el aprovechamiento social no deben confundirse.
