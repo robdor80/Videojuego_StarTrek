@@ -1,6 +1,6 @@
 {
   "registry_version": "0.38.0",
-  "last_updated": "2026-10-18",
+  "last_updated": "2026-10-21",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -3708,6 +3708,159 @@
       "url": "https://www.startrek.com/news/starfleet-intelligence-operatives",
       "accessed_at": "2026-10-18",
       "notes": "Solo se emplean afirmaciones correspondientes a series retenidas TNG, DS9, Voyager o películas admitidas. El artículo puede contener menciones a series excluidas; esas menciones NO son canon del proyecto."
+    },
+    {
+      "source_id": "ST_OFFICIAL_24C_FLEET_CLASSES",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Fleet's In: 24th Century Federation Starships",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-fleets-in-24th-century-federation-starships",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia cualitativa para distinguir Galaxy, Sovereign y Defiant; no proporciona cifras normativas para Valhalla."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ENDGAME_JANEWAY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The (In)fallible Janeway",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-infallible-janeway",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia explícita a blindaje ablativo y torpedos transfásicos de la Janeway futura; no concede instalación universal ni fecha obligatoria en la continuidad del videojuego."
+    },
+    {
+      "source_id": "ST_OFFICIAL_BRIDGE_CREW_ENGINEERING",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Bridge Crew: Teaming Up on the Aegis and Enterprise",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/bridge-crew-teaming-up-on-the-aegis-and-enterprise",
+      "accessed_at": "2026-10-21",
+      "notes": "Artículo de un VIDEOJUEGO que ilustra coordinación de timón, energía y reparaciones; los parámetros de juego no son prestaciones de pantalla."
+    },
+    {
+      "source_id": "ST_OFFICIAL_SUBSPACE_RHAPSODY_RECAP",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "RECAP | Star Trek: Strange New Worlds 209 - Subspace Rhapsody",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/recap-209-subspace-rhapsody-strange-new-worlds",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia editorial verificable para latencia de mensajes, relés y procedimientos de comunicaciones; cotejar pantalla antes de elevar a SCREEN_CANON."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ROMULAN_VALDORE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Inside the Romulan Warbird Valdore",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/inside-the-romulan-warbird-valdore",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia visual y de clase romulana en Nemesis; no implica que cualquier clase romulana tenga los mismos subsistemas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_D7_FEATURE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Inside the Klingon D7 Class Battle Cruiser",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/inside-the-klingon-d7-class-battle-cruiser",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia de producción para clase D7; no extender armas o camuflaje a todos los operadores y épocas."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DEFIANT_SHIELDS_CLOAK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Fleet's In: 24th Century Federation Starships — Defiant section",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-fleets-in-24th-century-federation-starships",
+      "accessed_at": "2026-10-21",
+      "notes": "Contexto histórico de escudos, armamento y camuflaje de la Defiant de DS9; la nueva auxiliar del juego tiene decisiones independientes."
+    },
+    {
+      "source_id": "MA_IMPULSE_ENGINE_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Impulse engine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Impulse_engine",
+      "accessed_at": "2026-10-21",
+      "notes": "Investigación técnica secundaria de impulso; episodios mencionados requieren contraste para cifras o variación histórica."
+    },
+    {
+      "source_id": "MA_WARP_CORE_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Warp core",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Warp_core",
+      "accessed_at": "2026-10-21",
+      "notes": "Investigación secundaria de generación energía/propulsión; distingue reactores warp y auxiliares, no permite duplicación de fuentes de potencia."
+    },
+    {
+      "source_id": "MA_EPS_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Electro-plasma system",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Electro-plasma_system",
+      "accessed_at": "2026-10-21",
+      "notes": "Investigación secundaria de conductos EPS, distribución y puntos comunes de fallo; no especificación de toda civilización."
+    },
+    {
+      "source_id": "MA_NAV_DEFLECTOR_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Navigational deflector",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Navigational_deflector",
+      "accessed_at": "2026-10-21",
+      "notes": "Investigación secundaria para distinguir deflector de navegación y escudos tácticos."
+    },
+    {
+      "source_id": "MA_PLASMA_CONDUIT_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Plasma conduit",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Plasma_conduit",
+      "accessed_at": "2026-10-21",
+      "notes": "Investigación secundaria de averías en conductos y sistemas de transferencia de energía."
+    },
+    {
+      "source_id": "MA_LIFE_SUPPORT_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Life support system",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Life_support_system",
+      "accessed_at": "2026-10-21",
+      "notes": "Revisión secundaria; no inventa presiones, tiempos de supervivencia ni compatibilidad atmosférica universal."
+    },
+    {
+      "source_id": "MA_ARTIFICIAL_GRAVITY_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Artificial gravity generator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Artificial_gravity_generator",
+      "accessed_at": "2026-10-21",
+      "notes": "Revisión secundaria; gravedad artificial depende de infraestructura y estado instalado."
+    },
+    {
+      "source_id": "MA_TRACTOR_BEAM_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tractor beam",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tractor_beam",
+      "accessed_at": "2026-10-21",
+      "notes": "Revisión secundaria sobre remolque/sujeción, sin masa máxima ni fuerza ficticia."
+    },
+    {
+      "source_id": "MA_ROMULAN_SINGULARITY_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Artificial quantum singularity",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Artificial_quantum_singularity",
+      "accessed_at": "2026-10-21",
+      "notes": "Tecnología de clases romulanas particulares; no reasignar a todas las naves, períodos ni buques federales."
+    },
+    {
+      "source_id": "MA_CLOAKING_DEVICE_RESEARCH",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Cloaking device",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Cloaking_device",
+      "accessed_at": "2026-10-21",
+      "notes": "Camuflaje sujeto a instalación, configuración, política y contra-sensores; no invisibilidad universal."
     }
   ]
 }
