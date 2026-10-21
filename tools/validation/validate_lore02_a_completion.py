@@ -42,9 +42,9 @@ def validate() -> dict:
     require(registry["last_updated"] >= "2026-10-21", "Source registry stale")
     require(atlas["schema_version"] == profiles["schema_version"] == cases["schema_version"] == "0.2.0",
             "Wrong documentary schema version")
-    require(atlas["mode"] == profiles.get("status") == "EDITORIAL_NON_RUNTIME"
-            if False else atlas["mode"] == "EDITORIAL_NON_RUNTIME"
-            and cases["status"] == "EDITORIAL_NON_RUNTIME", "False runtime claim")
+    require(atlas["mode"] == "EDITORIAL_NON_RUNTIME"
+            and cases["status"] == "EDITORIAL_NON_RUNTIME",
+            "False runtime claim")
     require(atlas["authority"] == "CoreRPG_WORLD_STATE_ONLY"
             and profiles["authority"] == "CoreRPG_ONLY", "World-state authority leak")
     require(atlas["era_matrix"] == "gameplay/ship_operations/era_technology_matrix.json",
