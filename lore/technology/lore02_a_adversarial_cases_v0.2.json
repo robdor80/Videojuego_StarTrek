@@ -1,0 +1,730 @@
+{
+  "schema_version": "0.2.0",
+  "test_suite_id": "lore02_a_cross_domain_adversarial_cases",
+  "status": "EDITORIAL_NON_RUNTIME",
+  "source_catalogue": "lore/technology/lore02_a_system_atlas_v0.2.json",
+  "case_count": 36,
+  "cases": [
+    {
+      "case_id": "A2-SAUCER_WARP_ORDER",
+      "gap_id": "A-G01",
+      "technology_refs": [
+        "l02a_separated_section_flight"
+      ],
+      "scenario": "Platillo Valhalla separado recibe orden de factor warp",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Se rechaza el modo warp del platillo; se admite impulso dentro de recursos instalados.",
+      "forbidden_result": "No convertir el platillo en nave warp ni teletransportarlo.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DOCKING_FAILED_THRUSTERS",
+      "gap_id": "A-G01",
+      "technology_refs": [
+        "l02a_reaction_control_thrusters"
+      ],
+      "scenario": "Propulsores de actitud averiados en aproximación",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Se evalúan propulsores restantes, automatismo y riesgo; se aborta si no hay control.",
+      "forbidden_result": "No colocar el casco en una plaza sin maniobra segura.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-AUTOPILOT_NO_AUTHORITY",
+      "gap_id": "A-G01",
+      "technology_refs": [
+        "l02a_navigation_interlocks"
+      ],
+      "scenario": "NPC sin permiso ordena atraque automático en zona restringida",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Resolver acceso y mando antes de ejecutar; no conceder la orden.",
+      "forbidden_result": "No asumir que automatización concede autoridad.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-IMPULSE_NO_REACTOR",
+      "gap_id": "A-G01",
+      "technology_refs": [
+        "l02a_impulse_propulsion"
+      ],
+      "scenario": "Motor de impulso disponible pero sin energía segura",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Degradar o negar empuje y registrar diagnóstico, sin crear potencia.",
+      "forbidden_result": "No desplazar la nave por texto IA.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-WARP_CORE_LOSS",
+      "gap_id": "A-G02",
+      "technology_refs": [
+        "l02a_matter_antimatter_reactor"
+      ],
+      "scenario": "Reactor warp principal Valhalla desconectado con fusión auxiliar viva",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Deshabilitar warp; mantener solo consumidores cuya energía auxiliar realmente alcance.",
+      "forbidden_result": "No otorgar warp desde reservas auxiliares.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-EPS_CASCADE",
+      "gap_id": "A-G02",
+      "technology_refs": [
+        "l02a_eps_grid"
+      ],
+      "scenario": "Un fallo de EPS alimenta escudos, transportador y enfermería",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Aislar fallo común, redistribuir presupuestos válidos y degradar consumidores.",
+      "forbidden_result": "No tres sistemas redundantes mágicamente inmunes al mismo fallo.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-POWER_RESERVE_EXHAUSTION",
+      "gap_id": "A-G02",
+      "technology_refs": [
+        "l02a_reserve_power_buffers"
+      ],
+      "scenario": "La reserva se agota durante separación prolongada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Reconocer escasez, priorizar soporte vital y solicitar ayuda o reducir actividad.",
+      "forbidden_result": "No reponer baterías por narrativa.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-COOLANT_ESCAPE",
+      "gap_id": "A-G02",
+      "technology_refs": [
+        "l02a_cooling_damage_control"
+      ],
+      "scenario": "Fuga de refrigerante en ingeniería y escotillas cerradas",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Registrar riesgo de plasma, inaccesibilidad y requisito de equipo de intervención.",
+      "forbidden_result": "No reparar directamente sin acción autorizada y recursos.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-NAV_DEFLECTOR_DOWN",
+      "gap_id": "A-G03",
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "scenario": "Deflector de navegación sin potencia y escudos tácticos intactos",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Evaluar seguridad de ruta y velocidad; conservar escudos activos si alimentados.",
+      "forbidden_result": "No identificar ambos dispositivos como la misma barrera.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-SHIELDS_OFF_DEFLECTOR_OK",
+      "gap_id": "A-G03",
+      "technology_refs": [
+        "l02a_defensive_shields"
+      ],
+      "scenario": "Generador táctico averiado con deflector de navegación funcional",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Degradar defensa sin deshabilitar automáticamente limpieza de ruta.",
+      "forbidden_result": "No equiparar caída de escudos con ausencia de deflector.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-OVERSIZED_TOW",
+      "gap_id": "A-G03",
+      "technology_refs": [
+        "l02a_tractor_projector"
+      ],
+      "scenario": "Haz tractor intenta remolcar objeto incompatible",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Negar o limitar fijación y documentar energía, geometría y riesgo.",
+      "forbidden_result": "No permitir remolque ilimitado.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-ABLATIVE_WORN",
+      "gap_id": "A-G03",
+      "technology_refs": [
+        "l02a_ablative_hull_protection"
+      ],
+      "scenario": "Placas ablativas rotas tras combate con escudos aún parcialmente activos",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Respetar integridad de blindaje independiente y exigir reparación.",
+      "forbidden_result": "No restablecer blindaje al recuperar escudos.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-RELAY_LATENCY",
+      "gap_id": "A-G04",
+      "technology_refs": [
+        "l02a_subspace_relay_network"
+      ],
+      "scenario": "Mensaje enviado a cuadrante lejano con red de relés congestionada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Respetar latencia y confirmación; mostrar último informe realmente recibido.",
+      "forbidden_result": "No respuesta automática en tiempo cero.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DECRYPTED_NOT_AUTHORIZED",
+      "gap_id": "A-G04",
+      "technology_refs": [
+        "l02a_secure_hailing"
+      ],
+      "scenario": "Oficial capta un mensaje cifrado de acceso restringido",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Separar recepción, descifrado y derecho de lectura del actor.",
+      "forbidden_result": "No revelar secretos por acceso a la consola.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DEFIANT_LINK_LOST",
+      "gap_id": "A-G04",
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "scenario": "La auxiliar Defiant oculta pierde enlace con Valhalla",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "El mando separado usa sus datos reales; la Valhalla mantiene información desactualizada.",
+      "forbidden_result": "No telemetría omnisciente ni órdenes remotas recibidas.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DISTRESS_NO_RECEIVER",
+      "gap_id": "A-G04",
+      "technology_refs": [
+        "l02a_distress_beacon"
+      ],
+      "scenario": "SOS emitido durante fallo de cobertura",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Registrar transmisión y ausencia de acuse sin afirmar rescate garantizado.",
+      "forbidden_result": "No materializar nave de rescate al emitir la señal.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-SINGLE_DECK_BREACH",
+      "gap_id": "A-G05",
+      "technology_refs": [
+        "l02a_atmospheric_environment"
+      ],
+      "scenario": "Despresurización en una cubierta con otras selladas",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Aislar área, proteger tripulantes, verificar atmósfera y rutas de rescate.",
+      "forbidden_result": "No vaciar automáticamente toda la nave.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-LOCAL_GRAVITY_DOWN",
+      "gap_id": "A-G05",
+      "technology_refs": [
+        "l02a_artificial_gravity"
+      ],
+      "scenario": "Fallo de gravedad de una sección sin pérdida de atmósfera",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Cambiar locomoción y tareas locales manteniendo otros subsistemas.",
+      "forbidden_result": "No combinar por defecto gravedad cero y anoxia.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-QUARANTINE_ACCESS",
+      "gap_id": "A-G05",
+      "technology_refs": [
+        "l02a_medical_environment_isolation"
+      ],
+      "scenario": "Paciente aislado y visita NPC sin autorización sanitaria",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Bloquear entrada según protocolo y conservar privacidad.",
+      "forbidden_result": "No declarar curación ni abrir puerta sin autorización.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-MULTI_SPECIES_ENV",
+      "gap_id": "A-G05",
+      "technology_refs": [
+        "l02a_atmospheric_environment"
+      ],
+      "scenario": "Visitantes con requisitos ambientales distintos sin configuración preparada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Exigir condiciones específicas documentadas y zona compatible.",
+      "forbidden_result": "No asumir que todos respiran el mismo ambiente.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-ROMULAN_CLOAK_DETECTABLE",
+      "gap_id": "A-G06",
+      "technology_refs": [
+        "l02a_romulan_cloaking"
+      ],
+      "scenario": "Buque romulano camuflado ante sensores especializados en entorno favorable",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Resolver huellas, sensores y contexto antes de determinar detección.",
+      "forbidden_result": "No invisibilidad absoluta garantizada.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-BREEN_WEAPON_COUNTERED",
+      "gap_id": "A-G06",
+      "technology_refs": [
+        "l02a_breen_energy_dampening"
+      ],
+      "scenario": "Arma Breen enfrenta contramedida investigada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Evaluar efectos según objetivo/equipamiento y contexto, posible fallo del ataque.",
+      "forbidden_result": "No paralizar cualquier nave por definición.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-BORG_NOT_OMNISCIENT",
+      "gap_id": "A-G06",
+      "technology_refs": [
+        "l02a_borg_adaptive_systems"
+      ],
+      "scenario": "Colectivo Borg recibe ataque desconocido con información limitada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Resolver observación y adaptación condicionada; preservar incertidumbre.",
+      "forbidden_result": "No adaptación perfecta e instantánea.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-CARDASSIAN_WRONG_HULL",
+      "gap_id": "A-G06",
+      "technology_refs": [
+        "l02a_cardassian_patrol_warfare"
+      ],
+      "scenario": "Generador equipa Hideki con todo armamento de Galor",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Verificar clase, módulo y variante; rechazar transferencia automática.",
+      "forbidden_result": "No uniformar clases cardassianas.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-TRIPLE_SHIELDS_POWER_DEFICIT",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_valhalla_triple_shields"
+      ],
+      "scenario": "Capitán solicita primarios+secundarios+terciarios con energía insuficiente",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Permitir propuesta de reconfiguración o degradar sin crear energía.",
+      "forbidden_result": "No tres capas máximas gratis.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-TRANSPHASIC_EMPTY",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_valhalla_transphasic"
+      ],
+      "scenario": "Orden de disparar torpedo transfásico con inventario a cero",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Rechazar disparo, comunicar inventario y ofrecer alternativas autorizadas.",
+      "forbidden_result": "No recargar automáticamente por misión.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DEFIANT_CLOAK_BROKEN",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_defiant_auxiliary"
+      ],
+      "scenario": "Defiant tiene camuflaje aprobado pero generador averiado",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Declarar capacidad instalada fuera de servicio; valorar firma observable.",
+      "forbidden_result": "No camuflaje mágico por ficha de clase.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DEFIANT_UNDOCKED_ELEVATOR",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_defiant_auxiliary"
+      ],
+      "scenario": "Jugador elige turboascensor Defiant mientras auxiliar opera lejos",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Bloquear acceso y conservar ocupantes e identidad de la nave.",
+      "forbidden_result": "No duplicar Defiant ni teletransportar personas.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-VALHALLA_ERA_OWN",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_valhalla_ablative"
+      ],
+      "scenario": "Juego muestra juntas Enterprise de clases Galaxy, Sovereign, Odyssey y Valhalla",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Permitir coexistencia del canon propio; resolver equipamiento individual y contexto de campaña.",
+      "forbidden_result": "No rechazar Valhalla por una fecha de televisión.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DEFIANT_NO_INHERIT",
+      "gap_id": "A-G07",
+      "technology_refs": [
+        "l02a_defiant_auxiliary"
+      ],
+      "scenario": "Auxiliar tiene blindaje grueso pero no fichas de torpedos especiales",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Mantener blindaje propio y munición propia; no copiar cargamento Valhalla.",
+      "forbidden_result": "No autorizar transphásicos y ablativo desplegable por herencia.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-SHIPYARD_NO_PARTS",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_shipyard"
+      ],
+      "scenario": "Nave dañada solicita reparación en astillero sin recambios",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Crear o asignar trabajo solo con recursos, personal y tiempo disponible.",
+      "forbidden_result": "No reparar nave gratuitamente.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-DOCK_INCOMPATIBLE",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_repair_drydock"
+      ],
+      "scenario": "Buque capital intenta dique no compatible con su tamaño",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Rechazar o buscar alternativa; no cambiar de escala el buque.",
+      "forbidden_result": "No recortar distancias y casco por necesidad de jugador.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-RELAY_NOT_HOSPITAL",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_relay"
+      ],
+      "scenario": "Tripulación solicita cirugía completa en estación de repetición",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Comprobar módulos realmente instalados y derivar a centro habilitado.",
+      "forbidden_result": "No convertir relé en hospital por petición narrativa.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-STATION_NONEXISTENT",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_trade_port"
+      ],
+      "scenario": "Generador crea puerto espacial solo porque el jugador necesita combustible",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Validar causalidad de infraestructura previa y no materializar de la nada.",
+      "forbidden_result": "No estación comodín para resolver misiones.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-REFINERY_NO_OUTPUT",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_refinery"
+      ],
+      "scenario": "Planta minera sin insumos intenta servir material",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Registrar falta de producción y posibles retrasos logísticos.",
+      "forbidden_result": "No recursos ilimitados.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    },
+    {
+      "case_id": "A2-STATION_ROLE_CHANGE",
+      "gap_id": "A-G08",
+      "technology_refs": [
+        "l02a_station_refinery"
+      ],
+      "scenario": "Antigua refinería pasa a base de exploración tras reforma justificada",
+      "preconditions": [
+        "campaign_continuity",
+        "platform_class_and_installed_modules",
+        "real_power_damage_resources_and_staff",
+        "authenticated_actor_authority",
+        "observer_knowledge_timestamp"
+      ],
+      "required_response": "Conservar historial y comprobar nuevas instalaciones y personal antes de dar servicios.",
+      "forbidden_result": "No cambiar funciones sin inversión/refit.",
+      "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
+      "creates_world_state": false,
+      "unlocks_delta_dlc": false
+    }
+  ],
+  "acceptance_rule": "Los casos prueban coherencia documental y permiten planificar tests de simulación futuros; no afirman que exista runtime UE5/CoreRPG."
+}
