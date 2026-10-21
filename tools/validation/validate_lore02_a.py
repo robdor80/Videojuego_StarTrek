@@ -133,8 +133,8 @@ def validate() -> dict[str, int]:
     status = (ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
     require("| E — Información operativa transversal | ✅ COMPLETE |" in status,
             "LORE-01 E administration still stale")
-    require("| A — Tecnología de naves y estaciones | 🟨 IN_PROGRESS |" in status,
-            "LORE-02 A closed before validation and review")
+    require("| A — Tecnología de naves y estaciones | 🟧 NEEDS_REVIEW |" in status,
+            "LORE-02 A incorrectly marked COMPLETE or not presented for review")
     require(all(valid_path(x) for x in (
         "docs/roadmap/lore_02_master_plan_v0.1.md",
         "docs/roadmap/lore_02_a_research_notes_v0.1.md",
