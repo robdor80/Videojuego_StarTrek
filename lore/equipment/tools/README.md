@@ -1,3 +1,5 @@
-# Reserved
+# Herramientas y consumibles de campo
 
-Directory reserved by the Star Trek universe architecture. Content will be added progressively.
+Índice cruzado a ciencia, ingeniería, medicina y supervivencia del [catálogo LORE-02 B](../lore02_b_equipment_catalogue_v0.1.json). Evitar copiar un mismo aparato en múltiples catálogos.
+
+Objetos individualizados mantienen identidad conforme a `gameplay/inventory/persistent_unique_object_contract.json`; material fungible se controla como stock conforme a `gameplay/logistics/resource_inventory_state.json`.

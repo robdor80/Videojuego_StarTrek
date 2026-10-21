@@ -3861,6 +3861,141 @@
       "url": "https://memory-alpha.fandom.com/wiki/Cloaking_device",
       "accessed_at": "2026-10-21",
       "notes": "Camuflaje sujeto a instalación, configuración, política y contra-sensores; no invisibilidad universal."
+    },
+    {
+      "source_id": "L02B_MA_TRICORDER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Starfleet tricorder",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Starfleet_tricorder",
+      "accessed_at": "2026-10-21",
+      "notes": "Familias, variaciones y ejemplos de escaneos; detalles de modelos requieren contraste puntual."
+    },
+    {
+      "source_id": "L02B_MA_MED_TRICORDER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Medical tricorder",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Medical_tricorder",
+      "accessed_at": "2026-10-21",
+      "notes": "Diferencia equipo médico/sensor de mano. No prescribe diagnósticos ni terapias."
+    },
+    {
+      "source_id": "L02B_MA_PHASER",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Phaser",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Phaser",
+      "accessed_at": "2026-10-21",
+      "notes": "Clases de fáser portátil y modos genéricos. No fija potencia numérica."
+    },
+    {
+      "source_id": "L02B_MA_MEDKIT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Medkit",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Medkit",
+      "accessed_at": "2026-10-21",
+      "notes": "Kits de campo con variantes por serie; contenidos no universales."
+    },
+    {
+      "source_id": "L02B_MA_EV_SUIT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Environmental suit",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Environmental_suit",
+      "accessed_at": "2026-10-21",
+      "notes": "Exige separar trajes y capacidades por época y configuración; no aplicar autonomías globales."
+    },
+    {
+      "source_id": "L02B_MA_COMMS",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Communicator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Communicator",
+      "accessed_at": "2026-10-21",
+      "notes": "Variantes de comunicaciones personales; enlace real depende del entorno."
+    },
+    {
+      "source_id": "L02B_MA_HYPO",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Hypospray",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Hypospray",
+      "accessed_at": "2026-10-21",
+      "notes": "Instrumento de administración, no garantía médica."
+    },
+    {
+      "source_id": "L02B_ST_MED_PROPS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Factory Entertainment Unveils TNG Medical Set Prop Replicas",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/factory-entertainment-unveils-tng-medical-set-prop-replicas",
+      "accessed_at": "2026-10-21",
+      "notes": "Descripción oficial de accesorios de serie; se refiere a réplicas, no es manual de clínica."
+    },
+    {
+      "source_id": "L02B_ST_MED_EMERGENCY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Doctor to Sickbay! Medical Emergency!",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/doctor-to-sickbay-medical-emergency",
+      "accessed_at": "2026-10-21",
+      "notes": "Rol del comunicador en emergencias; texto editorial no garantiza teletransporte."
+    },
+    {
+      "source_id": "L02B_ST_HYPO",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "TREKNOSIS: Is There In Truth, No Hypospray?",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/treknosis-is-there-in-truth-no-hypospray",
+      "accessed_at": "2026-10-21",
+      "notes": "Divulgación del dispositivo, no ficha clínica ni especificación de dosis."
+    },
+    {
+      "source_id": "L02B_ST_TNG_PROPS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "EXO-6 Unveils Museum-Grade Collectible Captain Picard Figures from TNG",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/exo-6-next-generation-picard-collectible-figures",
+      "accessed_at": "2026-10-21",
+      "notes": "Anclas visuales de tricorder, fáser y PADD en TNG; producto coleccionable, no rendimiento físico."
+    },
+    {
+      "source_id": "L02B_ST_VOY_PROPS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "EXO-6 Unveils New 1:6 Captain Janeway Figure",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/exo-6-unveils-new-16-captain-janeway-figure",
+      "accessed_at": "2026-10-21",
+      "notes": "Anclas de equipamiento Voyager; imágenes de licencia no prueban reglas funcionales."
+    },
+    {
+      "source_id": "L02B_MA_BAJORAN_RIFLE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Bajoran phaser rifle",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Bajoran_phaser_rifle",
+      "accessed_at": "2026-10-21",
+      "notes": "Identificación de arma miliciana bajorana; prestaciones/manuales derivados no necesariamente canon."
+    },
+    {
+      "source_id": "L02B_MA_BORG_ASSIMILATION",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Assimilation",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Assimilation",
+      "accessed_at": "2026-10-21",
+      "notes": "Aparatos/amenazas Borg, sin reglas de daño automáticas."
+    },
+    {
+      "source_id": "L02B_MA_BORG_NANOPROBE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Nanoprobe",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Nanoprobe",
+      "accessed_at": "2026-10-21",
+      "notes": "Contexto de nanoprobes Borg, sin recetas ni terapias reales."
     }
   ]
 }
