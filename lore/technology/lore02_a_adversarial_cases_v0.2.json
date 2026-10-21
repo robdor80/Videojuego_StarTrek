@@ -500,7 +500,7 @@
         "observer_knowledge_timestamp"
       ],
       "required_response": "Permitir propuesta de reconfiguración o degradar sin crear energía.",
-      "forbidden_result": "No tres capas máximas gratis.",
+      "forbidden_result": "No se permiten tres capas de escudos máximas gratis ni energía ilimitada.",
       "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
       "creates_world_state": false,
       "unlocks_delta_dlc": false
@@ -700,7 +700,7 @@
         "observer_knowledge_timestamp"
       ],
       "required_response": "Registrar falta de producción y posibles retrasos logísticos.",
-      "forbidden_result": "No recursos ilimitados.",
+      "forbidden_result": "No se pueden crear recursos industriales ilimitados sin materias primas ni producción.",
       "expected_resolution": "HOST_AND_CORERPG_NOT_NARRATIVE_TEXT",
       "creates_world_state": false,
       "unlocks_delta_dlc": false
