@@ -132,7 +132,7 @@ def validate_data(cat, profiles, cases, registry, check_paths=True):
         section = status.split("## LORE-02 —", 1)[-1].split("## ", 1)[0]
         need("A — Tecnología de naves y estaciones | ✅ COMPLETE" in section,
              "merged A not regularized")
-        need("B — Equipamiento personal y especializado | 🟨 IN_PROGRESS" in section,
+        need("B — Equipamiento personal y especializado | 🟧 NEEDS_REVIEW" in section,
              "B wrongly closed or not tracked")
     return errors
 

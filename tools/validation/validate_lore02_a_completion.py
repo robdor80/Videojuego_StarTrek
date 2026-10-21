@@ -170,7 +170,7 @@ def validate() -> dict:
     status = (ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
     require("| A — Tecnología de naves y estaciones | ✅ COMPLETE |" in status,
             "LORE-02 A merged in PR #31 must be administratively COMPLETE")
-    require("| B — Equipamiento personal y especializado | 🟨 IN_PROGRESS |" in status
+    require("| B — Equipamiento personal y especializado | 🟧 NEEDS_REVIEW |" in status
             and "| C — Medicina y xenobiología | ⬜ TODO |" in status,
             "LORE-02 B must be active; unrelated blocks remain unopened")
     return {
