@@ -4,7 +4,7 @@
   "status": "NEEDS_REVIEW",
   "mode": "EDITORIAL_NON_RUNTIME",
   "authority": "CoreRPG_WORLD_STATE_ONLY",
-  "record_count": 12,
+  "record_count": 13,
   "source_registry": "sources/source_registry/source_registry.json",
   "equipment_catalogue": "lore/equipment/lore02_b_equipment_catalogue_v0.1.json",
   "records": [
@@ -430,6 +430,42 @@
       "clinical_limitation_es": "No resurrección reproducible, no acceso genérico a nanoprobes, no uso en especies sin evaluación individual y consentimiento.",
       "era_examples": [
         "VOY"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_ketracel_white",
+      "display_name_es": "Ketracel-white",
+      "kind": "engineered_biochemical_supply",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ],
+      "episodic_indication_es": "Compuesto necesario para la bioquímica de muchos Jem'Hadar diseñados por el Dominio; recurso de suministro controlado en DS9.",
+      "clinical_limitation_es": "Existen excepciones genéticas individuales. La necesidad no se deduce por cultura, y la disponibilidad no se presupone en una nave Starfleet ni el compuesto se replica mágicamente.",
+      "era_examples": [
+        "DS9"
       ],
       "equipment_ref": null,
       "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
