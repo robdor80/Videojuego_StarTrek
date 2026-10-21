@@ -2,7 +2,7 @@
 """Positive/negative documentary tests; no clinical simulation or medicine advice."""
 import copy
 import unittest
-from validate_lore02_c import NAMES, AGENTS, EXPECTED, read, validate, validate_data, validate_agents
+from validate_lore02_c import NAMES, AGENTS, MATRIX, EXPECTED, read, validate, validate_data, validate_agents, validate_matrix
 
 class Lore02C(unittest.TestCase):
     @classmethod
@@ -125,6 +125,26 @@ class Lore02C(unittest.TestCase):
     def test_agent_cannot_reference_weapon(self):
         problems = self.agent_mutate(lambda a: a["records"][0].update(equipment_ref="l02b_phaser_type_2"))
         self.assertTrue(any("unregistered medical equipment" in x for x in problems), problems)
+
+    def matrix_mutate(self, edit):
+        matrix = copy.deepcopy(read(MATRIX))
+        edit(matrix)
+        return validate_matrix(matrix, self.fixture[1], self.fixture[2], read(AGENTS))
+
+    def test_decision_matrix_positive(self):
+        self.assertEqual(validate_matrix(read(MATRIX), self.fixture[1], self.fixture[2], read(AGENTS)), [])
+
+    def test_matrix_rejects_missing_condition(self):
+        errors = self.matrix_mutate(lambda m: m["records"].pop())
+        self.assertTrue(any("matrix missing or duplicate condition" in x for x in errors), errors)
+
+    def test_matrix_rejects_auto_prescription(self):
+        errors = self.matrix_mutate(lambda m: next(x for x in m["records"] if x["possible_agent_links"])["possible_agent_links"][0].update(not_a_prescription=False))
+        self.assertTrue(any("auto prescribed" in x for x in errors), errors)
+
+    def test_matrix_rejects_secret_read(self):
+        errors = self.matrix_mutate(lambda m: m["records"][0].update(privacy="ALL_ACCESS"))
+        self.assertTrue(any("matrix privacy violation" in x for x in errors), errors)
 
     def test_all_cases_account_for_finite_resources(self):
         for s in self.fixture[4]["cases"]:
