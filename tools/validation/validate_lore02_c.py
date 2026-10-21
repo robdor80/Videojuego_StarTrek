@@ -15,9 +15,10 @@ FLOW = "gameplay/medical/lore02_c_diagnostic_workflow_v0.1.json"
 REGISTRY = "sources/source_registry/source_registry.json"
 DOSSIER = "docs/roadmap/lore_02_c_medicine_research_dossier_v0.1.md"
 EQUIPMENT = "lore/equipment/lore02_b_equipment_catalogue_v0.1.json"
+AGENTS = "lore/medicine/lore02_c_medical_agents_v0.1.json"
 NAMES = (ATLAS, CONDITIONS, PROCEDURES, ORG, SCENARIOS, FLOW, REGISTRY, EQUIPMENT)
 STATE = "EDITORIAL_NON_RUNTIME"
-EXPECTED = {"species": 26, "conditions": 32, "procedures": 26,
+EXPECTED = {"species": 26, "conditions": 32, "procedures": 26, "agents": 12,
             "facilities": 9, "roles": 12, "cases": 56}
 
 def read(path):
@@ -25,6 +26,51 @@ def read(path):
 
 def exists(rel):
     return isinstance(rel, str) and bool(rel) and not Path(rel).is_absolute() and ".." not in Path(rel).parts and (ROOT / rel).is_file()
+
+def validate_agents(doc, registry, equipment):
+    """Documentary checks for fictional medicines and specialist technologies."""
+    errors = []
+    def need(ok, msg):
+        if not ok:
+            errors.append(msg)
+    source_types = {x["source_id"]: x["source_type"] for x in registry.get("sources", [])}
+    med_eq = {x["equipment_id"] for x in equipment.get("records", [])
+              if x.get("family") == "medical"}
+    need(doc.get("schema_version") == "0.1.0" and
+         doc.get("status") == "NEEDS_REVIEW" and
+         doc.get("mode") == "EDITORIAL_NON_RUNTIME", "agent status falsely closed")
+    need(doc.get("authority") == "CoreRPG_WORLD_STATE_ONLY", "agent authority leak")
+    records = doc.get("records", [])
+    need(len(records) == doc.get("record_count") == EXPECTED["agents"], "agent coverage")
+    need(len({x.get("agent_id") for x in records}) == len(records), "duplicate agent")
+    for a in records:
+        name = a.get("agent_id", "?")
+        sources = a.get("source_ids", [])
+        need(bool(sources) and all(x in source_types for x in sources),
+             name + " unknown medicinal source")
+        classification = a.get("claim_class")
+        need(classification in ("RELIABLE_SECONDARY", "OFFICIAL_REFERENCE", "SCREEN_CANON"),
+             name + " invalid medicine authority")
+        if classification == "OFFICIAL_REFERENCE":
+            need(all(source_types.get(x) in ("OFFICIAL_REFERENCE", "SCREEN_CANON") for x in sources),
+                 name + " source classification inflated")
+        need(bool(a.get("episodic_indication_es")) and
+             bool(a.get("clinical_limitation_es")) and
+             len(a.get("required_evidence", [])) >= 6,
+             name + " lacks patient-specific clinical limitation")
+        need(a.get("species_compatibility") == "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+             name + " false universal species compatibility")
+        ref = a.get("equipment_ref")
+        need(ref is None or ref in med_eq, name + " unregistered medical equipment")
+        need(a.get("availability") == "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE"
+             and a.get("administerable_in_game_now") is False
+             and a.get("gameplay_treatment_status") == "RESEARCH_REFERENCE_ONLY",
+             name + " agent auto-granted or falsely implemented")
+        need(a.get("dose", "MISSING") is None and
+             a.get("universal_efficacy", "MISSING") is None and
+             a.get("time_to_effect", "MISSING") is None,
+             name + " invented medical dose/efficacy/timer")
+    return errors
 
 def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths=True):
     errors = []
@@ -167,7 +213,8 @@ def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths
              and ca.get("test_mode") == "NON_RUNTIME_DOCUMENTARY"
              and ca.get("state_authority") == "CoreRPG_ONLY", key+" falsely playtested or mutated")
     if check_paths:
-        for ref in (*NAMES, DOSSIER, "lore/medicine/README.md",
+        errors.extend(validate_agents(read(AGENTS), registry, eq))
+        for ref in (*NAMES, AGENTS, DOSSIER, "lore/medicine/README.md",
                     "gameplay/medical/medical_state_model.json",
                     "gameplay/medical/species_medical_hooks.json",
                     "gameplay/records_and_logs/access_and_privacy_rules.json",
