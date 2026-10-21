@@ -20,7 +20,7 @@ class Lore02C(unittest.TestCase):
 
     def test_positive_document_gate(self):
         self.assertEqual(validate()["conditions"], EXPECTED["conditions"])
-        self.assertEqual(validate()["cases"], 56)
+        self.assertEqual(validate()["cases"], EXPECTED["cases"])
 
     def test_provenance_no_unknown_source(self):
         self.expect("unknown provenance",lambda a,c,p,o,s,w,r,e: c["catalogue"][0].update(source_ids=["FAKE"]))
