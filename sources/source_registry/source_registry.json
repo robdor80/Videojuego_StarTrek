@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.40.0",
+  "registry_version": "0.41.0",
   "last_updated": "2026-10-21",
   "sources": [
     {
@@ -4248,6 +4248,60 @@
       "url": "https://memory-alpha.fandom.com/wiki/Medical_device",
       "accessed_at": "2026-10-21",
       "notes": "Inventario temático de instrumentos médicos; entrada secundaria de descubrimiento."
+    },
+    {
+      "source_id": "L02C_MA_KETRACEL_WHITE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ketracel-white",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ketracel-white",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9 The Abandoned, Hippocratic Oath, Rocks and Shoals: dependencia bioquímica Jem'Hadar creada por ingeniería, con excepciones individuales; no dosis de gameplay."
+    },
+    {
+      "source_id": "L02C_MA_BOLIAN_BLOOD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Blood (Bolian/Vulcan compatibility)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Blood",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Prototype: transfusión de sangre vulcana incompatible con boliana; no inferir equivalencia de sangre de demás especies."
+    },
+    {
+      "source_id": "L02C_MA_ORKETT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Orkett's disease",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Orkett%27s_disease",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY State of Flux: infección en campos bajoranos; explicación de Seska rechazada tras evaluación genética, ejemplo de diagnóstico diferencial."
+    },
+    {
+      "source_id": "L02C_MA_MORPHOGENIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Morphogenic virus",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Morphogenic_virus",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9: patógeno diseñado contra Fundadores y cura recuperada en circunstancias extraordinarias, éticamente controvertida."
+    },
+    {
+      "source_id": "L02C_MA_BARCLAY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Barclay's Protomorphosis Syndrome",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Barclay%27s_Protomorphosis_Syndrome",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG Genesis: intervención genética iatrogénica y contagio accidental; no usar transformación como enfermedad genérica."
+    },
+    {
+      "source_id": "L02C_MA_IRUMODIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Irumodic Syndrome",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Irumodic_Syndrome",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG All Good Things...: síndrome en futuro alternativo y predisposición no diagnóstica; no imponer el resultado al canon de juego."
     }
   ]
 }
