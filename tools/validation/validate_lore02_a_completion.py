@@ -171,8 +171,11 @@ def validate() -> dict:
     require("| A — Tecnología de naves y estaciones | ✅ COMPLETE |" in status,
             "LORE-02 A merged in PR #31 must be administratively COMPLETE")
     require("| B — Equipamiento personal y especializado | ✅ COMPLETE |" in status
-            and "| C — Medicina y xenobiología | 🟨 IN_PROGRESS |" in status,
-            "LORE-02 A regression: B merged, C active; D/E unopened")
+            and "| C — Medicina y xenobiología | ✅ COMPLETE |" in status,
+            "LORE-02 A regression: B/C must remain merged and administratively COMPLETE")
+    require("| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |" in status
+            and "| E — Integración y auditoría A–D | ⬜ TODO |" in status,
+            "LORE-02 A regression: D authoring, E not started")
     return {
         "legacy_systems": len(initial["records"]),
         "new_systems": len(records),
