@@ -1,0 +1,71 @@
+name: LORE-02 D — Ciencia, investigación y fenómenos
+
+on:
+  push:
+    branches: [main, "feat/lore02-d-science-phenomena"]
+    paths:
+      - "lore/science/**"
+      - "lore/medicine/**"
+      - "lore/equipment/lore02_b_*"
+      - "lore/technology/lore02_a_*"
+      - "CONTENT_STATUS.md"
+      - "sources/source_registry/source_registry.json"
+      - "docs/roadmap/lore_02_d_*"
+      - "tools/validation/validate_lore02_d.py"
+      - "tools/validation/test_lore02_d.py"
+      - ".github/workflows/lore02-d-science.yml"
+  pull_request:
+    paths:
+      - "lore/science/**"
+      - "lore/medicine/**"
+      - "lore/equipment/lore02_b_*"
+      - "lore/technology/lore02_a_*"
+      - "CONTENT_STATUS.md"
+      - "sources/source_registry/source_registry.json"
+      - "docs/roadmap/lore_02_d_*"
+      - "tools/validation/validate_lore02_d.py"
+      - "tools/validation/test_lore02_d.py"
+      - ".github/workflows/lore02-d-science.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  lore02-d-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile and validate scientific authoring
+        run: |
+          python -m py_compile tools/validation/validate_lore02_d.py tools/validation/test_lore02_d.py
+          python tools/validation/validate_lore02_d.py
+          python tools/validation/test_lore02_d.py
+
+  lore02-d-regression:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Regression LORE-02 A/B/C and LORE-01 E
+        run: |
+          python tools/validation/validate_lore02_a_completion.py
+          python tools/validation/test_lore02_a_completion.py
+          python tools/validation/validate_lore02_b.py
+          python tools/validation/test_lore02_b.py
+          python tools/validation/validate_lore02_c.py
+          python tools/validation/test_lore02_c.py
+          python tools/validation/validate_lore01_e.py
+          python tools/validation/test_lore01_e.py
+          python tools/validation/validate_roadmap_state.py
