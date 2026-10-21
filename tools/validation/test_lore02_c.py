@@ -2,7 +2,7 @@
 """Positive/negative documentary tests; no clinical simulation or medicine advice."""
 import copy
 import unittest
-from validate_lore02_c import NAMES, AGENTS, MATRIX, EXPECTED, read, validate, validate_data, validate_agents, validate_matrix
+from validate_lore02_c import NAMES, AGENTS, MATRIX, CULTURES, EXPECTED, read, validate, validate_data, validate_agents, validate_matrix, validate_cultures
 
 class Lore02C(unittest.TestCase):
     @classmethod
@@ -145,6 +145,22 @@ class Lore02C(unittest.TestCase):
     def test_matrix_rejects_secret_read(self):
         errors = self.matrix_mutate(lambda m: m["records"][0].update(privacy="ALL_ACCESS"))
         self.assertTrue(any("matrix privacy violation" in x for x in errors), errors)
+
+    def culture_mutate(self, edit):
+        cultures = copy.deepcopy(read(CULTURES))
+        edit(cultures)
+        return validate_cultures(cultures, self.fixture[6], check_paths=False)
+
+    def test_cultural_profiles_positive(self):
+        self.assertEqual(validate_cultures(read(CULTURES), self.fixture[6], check_paths=False), [])
+
+    def test_no_universal_faction_medicine(self):
+        errors = self.culture_mutate(lambda c: c["records"][0].update(auto_faction_medical_capability=True))
+        self.assertTrue(any("automatic medical faction advantage" in x for x in errors), errors)
+
+    def test_no_faction_medical_record_override(self):
+        errors = self.culture_mutate(lambda c: c["records"][0].update(default_access="FACTION_PUBLIC"))
+        self.assertTrue(any("automatic medical faction advantage" in x for x in errors), errors)
 
     def test_all_cases_account_for_finite_resources(self):
         for s in self.fixture[4]["cases"]:
