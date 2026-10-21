@@ -1,5 +1,8 @@
 # IDEA-0010 — Nave auxiliar táctica y furtiva integrada en la Clase Valhalla
 
+> **ACTUALIZACIÓN DE AUTOR (21-10-2026) — PREVALECE SOBRE EL TEXTO HISTÓRICO INFERIOR.** El autor ha decidido que la nave auxiliar será de **clase Defiant**, con nombre individual aún pendiente, dotación mínima, armamento y blindaje elevados para su tamaño y **camuflaje romulano excelente aprobado** (sujeto a fallos y contramedidas, no infalible). Coexiste con la Valhalla en la continuidad propia sin límite de año de canon televisivo. Véase [addendum de Valhalla y Defiant](../lore/technology/valhalla_creative_addendum_2026-10-21.md). Se mantiene cancelado el yate de IDEA-0004 y el atraque simulado sin hangar físico Defiant. Las secciones antiguas que hablen de «inspirada, no clase Defiant», de camuflaje por aprobar, o de identidad original incompatible son **históricas y supersedidas**, no decisiones vigentes.
+
+
 **Proyecto:** Videojuego Star Trek RPG 3D  
 **Fecha de decisión:** 2026-10-17  
 **Estado:** **APROBADA CONCEPTUALMENTE — PRIORIDAD PARA VALHALLA; NO IMPLEMENTADA**  

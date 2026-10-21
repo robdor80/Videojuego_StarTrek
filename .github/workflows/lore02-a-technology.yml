@@ -1,0 +1,58 @@
+name: LORE-02 A — Tecnología de naves y estaciones (investigación)
+on:
+  push:
+    branches: [main, "feat/lore02-a-technology-research"]
+    paths:
+      - "lore/technology/**"
+      - "gameplay/ship_operations/era_technology_matrix.json"
+      - "gameplay/transporters/**"
+      - "gameplay/technology/**"
+      - "gameplay/propulsion/**"
+      - "sources/source_registry/source_registry.json"
+      - "universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "docs/roadmap/lore_02_*.md"
+      - "CONTENT_STATUS.md"
+      - "tools/validation/*lore02*"
+      - "tools/validation/validate_lore01_e.py"
+      - ".github/workflows/lore02-a-technology.yml"
+  pull_request:
+    paths:
+      - "lore/technology/**"
+      - "gameplay/ship_operations/era_technology_matrix.json"
+      - "gameplay/transporters/**"
+      - "gameplay/technology/**"
+      - "gameplay/propulsion/**"
+      - "sources/source_registry/source_registry.json"
+      - "universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "docs/roadmap/lore_02_*.md"
+      - "CONTENT_STATUS.md"
+      - "tools/validation/*lore02*"
+      - "tools/validation/validate_lore01_e.py"
+      - ".github/workflows/lore02-a-technology.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lore02-a-evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Validate LORE-02 A catalogue, sources and negative cases
+        run: |
+          python -m py_compile tools/validation/validate_lore02_a.py tools/validation/test_lore02_a.py tools/validation/validate_lore02_a_completion.py tools/validation/test_lore02_a_completion.py
+          python tools/validation/validate_lore02_a.py
+          python tools/validation/test_lore02_a.py
+          python tools/validation/validate_lore02_a_completion.py
+          python tools/validation/test_lore02_a_completion.py
+      - name: Regression of completed LORE-01
+        run: |
+          python tools/validation/validate_lore01_e.py
+          python tools/validation/test_lore01_e.py
+          python tools/validation/validate_lore01_c.py
+          python tools/validation/validate_lore01_d.py

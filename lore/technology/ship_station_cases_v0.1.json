@@ -1,0 +1,305 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 A",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "case_count": 14,
+  "cases": [
+    {
+      "case_id": "A-CASE-01",
+      "title": "Holocubierta experimental durante Pike",
+      "technology_refs": [
+        "starfleet_ship_holodeck"
+      ],
+      "era_profile_id": "pike_2259_2264",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La investigación del periodo puede mencionar prototipos; la matriz marca holocubierta de nave como no estándar. Exigir instalación concreta acreditada.",
+      "forbidden_conclusion": "No crear holocubierta automáticamente en cualquier nave Pike.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-02",
+      "title": "Sintetizador de alimentos en una nave Kirk",
+      "technology_refs": [
+        "starfleet_food_synthesizer",
+        "starfleet_replicators"
+      ],
+      "era_profile_id": "kirk_tos_2265_2269",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "El sintetizador es estándar en matriz; el replicador completo no es estándar. No son equipos idénticos.",
+      "forbidden_conclusion": "No generar herramientas o medicinas con un sintetizador de alimentos.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-03",
+      "title": "Torpedos cuánticos en 2365",
+      "technology_refs": [
+        "starfleet_quantum_torpedoes"
+      ],
+      "era_profile_id": "tng_2364_2370",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La matriz marca unavailable; la rareza excepcional requeriría una fuente específica y un mecanismo de excepción autorizado.",
+      "forbidden_conclusion": "No instalar por defecto munición tardía en naves de 2365.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-04",
+      "title": "Torpedos cuánticos en 2372",
+      "technology_refs": [
+        "starfleet_quantum_torpedoes"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La disponibilidad general no demuestra que la clase, el casco individual o sus lanzadores los posean.",
+      "forbidden_conclusion": "No añadir torpedos por la sola llegada del año.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-05",
+      "title": "Circuitos bioneurales fuera de Intrepid",
+      "technology_refs": [
+        "starfleet_bio_neural_computing"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La tecnología class_specific exige evidencia de plataforma e instalación; una ficha de clase ajena no recibe el sistema.",
+      "forbidden_conclusion": "No asignar geles bioneurales a toda la flota por compartir fecha.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-06",
+      "title": "Barrido de sensores con interferencias",
+      "technology_refs": [
+        "starfleet_ship_sensors"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "Proyectar únicamente observaciones posibles según sensores, tiempo y ruido; hipótesis y desconocidos separados.",
+      "forbidden_conclusion": "No hacer que la IA conozca identidad oculta tras un contacto incierto.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-07",
+      "title": "Transportador bloqueado",
+      "technology_refs": [
+        "starfleet_personnel_transporter"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "Antes de confirmar, comprobar patrón, potencia, escudos, destino y permisos; un rechazo no mueve identidades.",
+      "forbidden_conclusion": "No declarar traslado completado solo por la intención verbal.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-08",
+      "title": "Transporte de punto a punto en Kirk",
+      "technology_refs": [
+        "starfleet_site_to_site_transport"
+      ],
+      "era_profile_id": "kirk_films_2278_2293",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La ausencia de clave en la matriz no constituye prohibición universal; requiere investigación específica de plataforma.",
+      "forbidden_conclusion": "No extrapolar el modo del siglo XXIV al siglo XXIII.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-09",
+      "title": "Warp con motor dañado",
+      "technology_refs": [
+        "starfleet_warp_drive",
+        "starfleet_deflector_shields"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "La disponibilidad general warp no sustituye la comprobación de integridad, ruta, potencia y envelope seguro de la nave.",
+      "forbidden_conclusion": "No fijar velocidad máxima o llegada garantizada.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-10",
+      "title": "Replicador sin recursos o sin autorización",
+      "technology_refs": [
+        "starfleet_replicators"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "Una petición solo pasa a resultado tras resolver patrón permitido, materiales, energía y estado del equipo.",
+      "forbidden_conclusion": "No fabricar material clasificado ni recursos ilimitados por diálogo.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-11",
+      "title": "Consulta clínica a la computadora",
+      "technology_refs": [
+        "starfleet_isolinear_computing"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "El conocimiento médico no equivale a expediente clínico visible; autenticar al actor y proyectar permisos.",
+      "forbidden_conclusion": "No extraer de contexto privilegiado diagnósticos privados.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-12",
+      "title": "Remolque de estación en crisis",
+      "technology_refs": [
+        "starfleet_tractor_beam",
+        "starfleet_deflector_shields"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "Debe existir emisor compatible con capacidad suficiente, energía, control de objetivo y condiciones estructurales.",
+      "forbidden_conclusion": "No convertir una capacidad genérica en remolque de masa arbitraria.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-13",
+      "title": "Propuesta de teletransporte con duplicación",
+      "technology_refs": [
+        "starfleet_personnel_transporter"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "Un transportador mueve entidades existentes tras resolución; excepciones narrativas precisan caso específico aprobado.",
+      "forbidden_conclusion": "No crear una copia persistente por interpretación de IA.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    },
+    {
+      "case_id": "A-CASE-14",
+      "title": "Portal transwarp Borg en Alfa",
+      "technology_refs": [
+        "starfleet_warp_drive"
+      ],
+      "era_profile_id": "late_24c_2371_2378",
+      "required_context": [
+        "campaign_date",
+        "operator",
+        "individual_installed_capabilities",
+        "power_damage_resource_state",
+        "authenticated_actor_and_authority",
+        "observer_visible_information"
+      ],
+      "expected_documentary_reasoning": "IDEA-0011 es reserva de contenido futuro: ninguna entrada en el catálogo activa el DLC Delta.",
+      "forbidden_conclusion": "No conceder acceso Delta, ruta ni aparición de especies reservadas.",
+      "result": "REQUIRES_HOST_AND_CORERPG_RESOLUTION",
+      "ai_direct_world_mutation": false,
+      "delta_dlc_unlock": false
+    }
+  ]
+}

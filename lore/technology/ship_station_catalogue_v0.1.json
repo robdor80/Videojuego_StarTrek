@@ -1,0 +1,1168 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 A",
+  "status": "RESEARCH_IN_PROGRESS",
+  "authority": "CoreRPG_World_State_ONLY",
+  "mode": "DOCUMENTARY_NOT_RUNTIME",
+  "era_source": "gameplay/ship_operations/era_technology_matrix.json",
+  "period_primary": "tng_ds9_voyager",
+  "records_count": 14,
+  "records": [
+    {
+      "technology_id": "starfleet_warp_drive",
+      "display_name": "Propulsión warp",
+      "category": "propulsion",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "warp_drive"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "warp_drive"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "warp_drive"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "warp_drive"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "warp_drive"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Movimiento interestelar mediante sistema warp instalado; la envolvente de vuelo segura depende de nave, entorno y estado."
+      ],
+      "dependencies": [
+        "Energía/combustible",
+        "control de motores",
+        "navegación",
+        "estructura",
+        "autorización de maniobra."
+      ],
+      "failure_modes": [
+        "Daño de campo o motor",
+        "alimentación limitada",
+        "ruta/entorno inseguro."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No heredar una velocidad de catálogo a toda clase ni deducir llegada instantánea.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/propulsion/propulsion_capability_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_WARP_DRIVE",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_deflector_shields",
+      "display_name": "Escudos defensivos",
+      "category": "defense",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "deflector_shields"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "deflector_shields"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "deflector_shields"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "deflector_shields"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "deflector_shields"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Protección operativa cuyo estado efectivo depende de potencia, integridad y configuración."
+      ],
+      "dependencies": [
+        "Generación y asignación de energía",
+        "emisores instalados",
+        "estado del casco/escudos."
+      ],
+      "failure_modes": [
+        "Caída de escudos",
+        "sobrecarga o degradación con daños",
+        "conflicto operativo con teletransporte."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "Escudo no equivale a protección perfecta ni a invulnerabilidad.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_DEFLECTOR_SHIELD",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_ship_sensors",
+      "display_name": "Sensores de largo alcance/avanzados",
+      "category": "science",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "long_range_sensors"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "long_range_sensors"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "long_range_sensors"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "advanced_sensors"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "advanced_sensors"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Observación activa/pasiva y seguimiento con certeza limitada; los sensores alimentan, no sustituyen, análisis científico."
+      ],
+      "dependencies": [
+        "Sistema y modos de escaneo instalados",
+        "potencia",
+        "tiempo",
+        "resolución",
+        "interferencias",
+        "autorización."
+      ],
+      "failure_modes": [
+        "Contactos perdidos",
+        "lecturas parciales",
+        "señal ambigua o engañosa."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "Detección no significa identificación, localización precisa ni conocimiento omnisciente.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/sensor_resolution/sensor_result_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_LONG_RANGE_SENSOR_SCAN",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_personnel_transporter",
+      "display_name": "Transportador de personal",
+      "category": "transport",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "personnel_transporter"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "personnel_transporter"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "personnel_transporter"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "personnel_transporter"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "personnel_transporter"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Traslado condicionado de entidades existentes, nunca replicación de individuos por una orden de IA."
+      ],
+      "dependencies": [
+        "Bloqueo de patrón",
+        "energía",
+        "escudos/campos",
+        "interferencia",
+        "coordenadas seguras",
+        "autorización."
+      ],
+      "failure_modes": [
+        "Bloqueo insuficiente",
+        "transferencia abortada",
+        "fallo parcial o inmovilización preventiva."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No garantizar teletransporte bajo cualquier campo ni afirmar duplicación por defecto.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/transporters/transporter_operation_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_TRANSPORTER",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_site_to_site_transport",
+      "display_name": "Transporte de punto a punto",
+      "category": "transport",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "site_to_site_transport"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "site_to_site_transport"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "available",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Variante disponible solo si tecnología/plataforma, sensores y procedimientos la admiten."
+      ],
+      "dependencies": [
+        "Transportador instalado y modo compatible",
+        "posición de origen/destino",
+        "bloqueo de patrón",
+        "permisos."
+      ],
+      "failure_modes": [
+        "Imposibilidad de fijar destino o exclusión por configuración",
+        "daño e interferencias."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No universalizar el modo a la era Pike/Kirk por analogía.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/transporters/transporter_operation_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_TRANSPORTER",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_replicators",
+      "display_name": "Replicadores",
+      "category": "support",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "full_replicator"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "full_replicator"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "full_replicator"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "replicators"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "replicators"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Producción de alimentos y objetos compatibles mediante patrones/autorizaciones y recursos disponibles."
+      ],
+      "dependencies": [
+        "Sistema instalado",
+        "patrón permitido",
+        "alimentación",
+        "materiales/procesamiento",
+        "restricciones de seguridad."
+      ],
+      "failure_modes": [
+        "Falta de recursos o patrón",
+        "equipo averiado",
+        "solicitud restringida."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No generar arbitrariamente cualquier medicina, tecnología clasificada, entidad viva o suministro ilimitado.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/technology/computation_holography_replication_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_REPLICATOR",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_ship_holodeck",
+      "display_name": "Holocubierta de nave",
+      "category": "holography",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "ship_holodeck"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "ship_holodeck"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "ship_holodeck"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "holodeck"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "holodeck"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "available",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Entorno holográfico de simulación, formación y ocio; no atribuirle automáticamente autoridad ni existencia física persistente."
+      ],
+      "dependencies": [
+        "Capacidad instalada",
+        "recursos de procesamiento/energía",
+        "programas permitidos",
+        "gestión de seguridad."
+      ],
+      "failure_modes": [
+        "Programa interrumpido",
+        "acceso restringido",
+        "fallo de seguridad de simulación."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No asumir holocubierta universal en siglo XXIII: investigación Pike distingue prototipo de dotación estándar.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/technology/computation_holography_replication_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_HOLODECK",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        },
+        {
+          "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        },
+        {
+          "source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        },
+        {
+          "source_id": "VOY_THE_KILLING_GAME",
+          "source_type": "SCREEN_CANON",
+          "confidence": "HIGH",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_isolinear_computing",
+      "display_name": "Computación isolineal",
+      "category": "computing",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "isolinear_computing"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "isolinear_computing"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Soporte informático característico de sistemas tardíos, sin imponer velocidad, capacidad o conciencia por defecto."
+      ],
+      "dependencies": [
+        "Equipo/computadoras existentes",
+        "datos almacenados",
+        "permisos",
+        "energía y conexiones."
+      ],
+      "failure_modes": [
+        "Nodos caídos",
+        "acceso denegado",
+        "información corrupta/incompleta."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "Consultar un ordenador no autoriza revelar datos secretos o hechos desconocidos.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/technology/computation_holography_replication_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_ENGINEER",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "LOW",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_bio_neural_computing",
+      "display_name": "Computación bioneural",
+      "category": "computing",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "bio_neural_computing"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "bio_neural_computing"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "bio_neural_computing"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "bio_neural_computing"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "bio_neural_computing"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "class_specific",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Variante documentada para ciertas plataformas de los años 2370; instalación clase-específica, no actualización general."
+      ],
+      "dependencies": [
+        "Módulos y mantenimiento especializados",
+        "compatibilidad de clase",
+        "alimentación",
+        "soporte técnico."
+      ],
+      "failure_modes": [
+        "Degradación",
+        "daño de componentes",
+        "falta de recambios compatibles."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No instalar gel packs bioneurales en todas las naves de una misma fecha.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/technology/computation_holography_replication_contract.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_BIONEURAL_GEL_PACK",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        },
+        {
+          "source_id": "VOY_CARETAKER",
+          "source_type": "SCREEN_CANON",
+          "confidence": "MEDIUM",
+          "claim_scope": "La obra retenida es ancla de existencia/uso narrativo y escenario específico, no especificación de rendimiento ni universalidad de instalación."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_phaser_arrays",
+      "display_name": "Baterías o matrices de fáseres de nave",
+      "category": "tactical",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "phaser_arrays"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "phaser_arrays"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Sistema ofensivo/defensivo de nave condicionado por emisores, control táctico y órdenes legítimas."
+      ],
+      "dependencies": [
+        "Emisores instalados",
+        "potencia",
+        "control de tiro",
+        "alineación y reglas de enfrentamiento."
+      ],
+      "failure_modes": [
+        "Emisor inutilizado",
+        "pérdida de seguimiento o potencia",
+        "autorización denegada."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No extrapolar el arma personal de la fase B ni inventar alcance o rendimiento numérico.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_TACTICAL_STATION",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_photon_torpedoes",
+      "display_name": "Torpedos fotónicos",
+      "category": "tactical",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "photon_torpedoes"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "photon_torpedoes"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "photon_torpedoes"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "photon_torpedoes"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "photon_torpedoes"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Munición embarcada de empleo táctico; puede coexistir con otras armas sin asumir equipamiento universal."
+      ],
+      "dependencies": [
+        "Lanzador compatible",
+        "existencia física de munición",
+        "tiro autorizado y solución de lanzamiento."
+      ],
+      "failure_modes": [
+        "Almacén agotado",
+        "lanzador averiado",
+        "bloqueo táctico insuficiente."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No convertir la disponibilidad de era en una carga exacta o daño fijo universal.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_TACTICAL_STATION",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_quantum_torpedoes",
+      "display_name": "Torpedos cuánticos",
+      "category": "tactical",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "quantum_torpedoes"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "quantum_torpedoes"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "quantum_torpedoes"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "quantum_torpedoes"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "quantum_torpedoes"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "available",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Arma tardía disponible para algunas unidades; distribución selectiva a partir del período tardío documentado."
+      ],
+      "dependencies": [
+        "Configuración y munición específicas",
+        "lanzador",
+        "autorización y logística de reposición."
+      ],
+      "failure_modes": [
+        "No instalado",
+        "reservas agotadas",
+        "plataforma incompatible."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "La mera presencia en una era no equivale a equipo estándar ni autorización.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/era_technology_matrix.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_QUANTUM_TORPEDO",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_tractor_beam",
+      "display_name": "Haz tractor",
+      "category": "ship_services",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "tractor_beam"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "tractor_beam"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "tractor_beam"
+          },
+          {
+            "profile_id": "tng_2364_2370",
+            "capability_key": "tractor_beam"
+          },
+          {
+            "profile_id": "late_24c_2371_2378",
+            "capability_key": "tractor_beam"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_late_24c_2371_2378_upper_bound_not_installed_state",
+      "capabilities": [
+        "Control de sujeción/remolque de objetivos compatible con masa, geometría y potencia reales, sin números inventados."
+      ],
+      "dependencies": [
+        "Emisor instalado",
+        "potencia",
+        "solución de objetivo",
+        "integridad del sistema."
+      ],
+      "failure_modes": [
+        "Pérdida de bloqueo",
+        "daño en emisor",
+        "esfuerzo fuera de capacidad conocida."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No declarar que todo objetivo puede remolcarse ni derivar fuerza universal.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_ENGINEER",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "late_24c_2371_2378"
+    },
+    {
+      "technology_id": "starfleet_food_synthesizer",
+      "display_name": "Sintetizador de alimentos",
+      "category": "support",
+      "operator_or_civilization_validity": [
+        "starfleet_reference_only",
+        "foreign_installations_require_independent_evidence"
+      ],
+      "platform_compatibility": [
+        "installed_ship_or_station_configuration_required",
+        "no_automatic_class_inheritance"
+      ],
+      "temporal_validity": {
+        "authority": "gameplay/ship_operations/era_technology_matrix.json",
+        "known_matrix_keys": [
+          {
+            "profile_id": "pike_2259_2264",
+            "capability_key": "food_synthesizer"
+          },
+          {
+            "profile_id": "kirk_tos_2265_2269",
+            "capability_key": "food_synthesizer"
+          },
+          {
+            "profile_id": "kirk_films_2278_2293",
+            "capability_key": "food_synthesizer"
+          }
+        ],
+        "unmapped_eras_mean": "NOT_RESEARCHED_NOT_UNAVAILABLE"
+      },
+      "availability": "standard",
+      "availability_interpretation": "derived_only_from_kirk_films_2278_2293_upper_bound_not_installed_state",
+      "capabilities": [
+        "Equipo alimentario propio de configuraciones anteriores; distinto de replicación plena de objetos."
+      ],
+      "dependencies": [
+        "Instalación de cocina compatible",
+        "insumos",
+        "energía y mantenimiento."
+      ],
+      "failure_modes": [
+        "Mal funcionamiento",
+        "falta de insumos",
+        "oferta limitada."
+      ],
+      "operational_constraints": [
+        "Autoridad y estado real deben verificarse antes de cualquier uso.",
+        "No se proporcionan cifras de alcance, daño, potencia, velocidad o capacidad por ausencia de base de clase."
+      ],
+      "prohibited_inference": "No etiquetar sintetizador del siglo XXIII como replicador universal del XXIV.",
+      "detectable_signature_refs": [],
+      "gameplay_consumer_refs": [
+        "gameplay/ship_operations/era_technology_matrix.json"
+      ],
+      "provenance": [
+        {
+          "source_id": "MA_FOOD_SYNTHESIZER",
+          "source_type": "RELIABLE_SECONDARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Antecedente de tecnología; la especificación operativa procede de contratos y es interpretación del videojuego, no cifra canónica."
+        }
+      ],
+      "interpretation_class": "INFERRED",
+      "runtime": {
+        "data_import_allowed": false,
+        "ai_direct_world_mutation": false,
+        "delta_dlc_unlock": false
+      },
+      "availability_profile_id": "kirk_films_2278_2293"
+    }
+  ],
+  "research_backlog": [
+    {
+      "id": "A-G01",
+      "subject": "Impulso, maniobra y RCS",
+      "missing": "Completar correspondencia temporal por época: la matriz avanzada no enumera explícitamente impulse_drive en todos los periodos.",
+      "references": [
+        "gameplay/propulsion/propulsion_capability_contract.json"
+      ]
+    },
+    {
+      "id": "A-G02",
+      "subject": "Generación de energía y sistemas de distribución",
+      "missing": "Contrastar clases de reactores, reservas de emergencia, redes y fallos; no imponer reactor único a toda estación.",
+      "references": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ]
+    },
+    {
+      "id": "A-G03",
+      "subject": "Deflector de navegación frente a escudos",
+      "missing": "Separar funciones y fuentes episódicas, no confundir escudos defensivos con deflector de navegación.",
+      "references": [
+        "lore/technology/shields/README.md"
+      ]
+    },
+    {
+      "id": "A-G04",
+      "subject": "Comunicaciones de voz/subespacio y latencia",
+      "missing": "Catalogar modos, interferencias, disponibilidad y privacidad sin cifras universales.",
+      "references": [
+        "lore/technology/communications/README.md"
+      ]
+    },
+    {
+      "id": "A-G05",
+      "subject": "Soporte vital, hábitat y estaciones",
+      "missing": "Distinguir instalaciones de nave/estación, redundancias y necesidades ambientales por especie.",
+      "references": [
+        "gameplay/ship_operations/power_allocation_model.json"
+      ]
+    },
+    {
+      "id": "A-G06",
+      "subject": "Tecnología de civilizaciones no federales",
+      "missing": "Crear perfiles por operador y época sin inferir interoperabilidad de representaciones visuales.",
+      "references": [
+        "lore/factions/LORE01_B_civilizations_index_v0.1.json"
+      ]
+    },
+    {
+      "id": "A-G07",
+      "subject": "Excepciones de la clase Valhalla y otras refits",
+      "missing": "No asignar blindaje ablativo, transphasic o sistemas futuros a ninguna era/clase sin decisiones específicas y fecha autorizada.",
+      "references": [
+        "docs/roadmap/master/fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md"
+      ]
+    },
+    {
+      "id": "A-G08",
+      "subject": "Escenarios negativos y casos industriales/civiles",
+      "missing": "Ampliar hasta cubrir puertos, astilleros, laboratorios y red de mantenimiento de estaciones.",
+      "references": [
+        "lore/technology/README.md"
+      ]
+    }
+  ],
+  "runtime_import_allowed": false,
+  "delta_dlc_enabled": false,
+  "provenance_note": "Los registros son fichas cualitativas de investigación; fuente MA = descubrimiento/corroboración secundaria, no prueba audiovisual escena a escena. Las disponibilidades de periodo avanzado se derivan y contrastan con la matriz existente; falta investigación primaria para cerrar A."
+}

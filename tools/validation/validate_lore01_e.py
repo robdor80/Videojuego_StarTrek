@@ -135,10 +135,8 @@ def validate():
                  "docs/roadmap/lore_01_e_global_audit_v0.1.md")), "Missing narrative documentation")
     status = (ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
     require("| D — Relaciones diplomáticas | ✅ COMPLETE |" in status, "D not administratively merged")
-    require(any(mark in status for mark in
-                ("E — Información operativa transversal | 🟨 IN_PROGRESS",
-                 "E — Información operativa transversal | 🟧 NEEDS_REVIEW")),
-            "E must await human merge")
+    require("| E — Información operativa transversal | ✅ COMPLETE |" in status,
+            "E already merged in PR #30: administrative closure missing")
     return {"phase_A_species":len(species["profiles"]),"phase_A1_guides":len(culture["profiles"]),
             "phase_B_powers":len(entities),"phase_C_anchors":len(locs),
             "phase_D_relations":len(relations),"phase_D_events":len(events),

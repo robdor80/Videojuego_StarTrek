@@ -1,4 +1,7 @@
 # Acta de decisiones creativas — Clase Valhalla
+
+> **Actualización posterior — 21-10-2026:** las decisiones creativas más recientes se consolidan en [addendum Valhalla/Defiant](../../../../lore/technology/valhalla_creative_addendum_2026-10-21.md); prevalece sobre las hipótesis anteriores del acta cuando difieran, manteniendo este documento como historial de F01.
+
 **Fecha de consolidación:** 2026-10-13  
 **Autoridad:** decisiones expresas del autor en conversaciones de diseño, 12–13 de octubre de 2026.  
 **Estado:** APROBADO A NIVEL DE DISEÑO; **no** implica que exista ya una nave jugable, que se haya validado Blender/UE5 ni que F01 esté formalmente cerrada.
