@@ -1,0 +1,1323 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore02_c_adversarial_clinical_scenarios",
+  "phase": "LORE-02 C",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "case_count": 62,
+  "cases": [
+    {
+      "case_id": "L02C_CASE_001",
+      "family": "neurological",
+      "condition_ref": "l02c_bendii",
+      "scenario_es": "Paciente con síndrome bendii: alteración del control emocional, efectos sobre terceros en casos documentados. Existe incertidumbre: distinguir de afectaciones empáticas y causas ambientales.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_neuropsychiatric_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_BENDII",
+        "L02C_ST_EMPATHY"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_002",
+      "family": "species_specific",
+      "condition_ref": "l02c_pon_farr",
+      "scenario_es": "Paciente con pon farr: cambio fisiológico y conductual en casos vulcanos. Existe incertidumbre: historia personal, consentimiento y diagnóstico diferencial.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_species_specialist_consult",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "TOS_AMOK_TIME"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_003",
+      "family": "neurological",
+      "condition_ref": "l02c_zanthi",
+      "scenario_es": "Paciente con fiebre zanthi: proyección emocional sobre terceros en casos documentados. Existe incertidumbre: comprobar fuente individual, no presuponer contagio.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_neuropsychiatric_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_EMPATHY"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_004",
+      "family": "degenerative",
+      "condition_ref": "l02c_vidiian_phage",
+      "scenario_es": "Paciente con fago vidiiano (phage): degeneración progresiva de tejidos descrita en pacientes. Existe incertidumbre: confirmar especie, historia y estado; trasplante no es cura universal.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_specialist_referral",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_VIDIIAN",
+        "VOY_PHAGE"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_005",
+      "family": "infectious",
+      "condition_ref": "l02c_teplan_blight",
+      "scenario_es": "Paciente con plaga de teplan (the blight): lesiones y fase de empeoramiento en afectados documentados. Existe incertidumbre: agente específico; intervención fallida puede agravar.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_QUICKENING",
+        "L02C_ST_BASHIR"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_006",
+      "family": "invasive_agent",
+      "condition_ref": "l02c_macrovirus",
+      "scenario_es": "Paciente con macrovirus de voyager: infección junto a organismos macroscópicos en brote excepcional. Existe incertidumbre: separar observación del agente y vía real de transmisión.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_MACRO",
+        "L02C_ST_QUICKENING"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_007",
+      "family": "radiation",
+      "condition_ref": "l02c_metremia",
+      "scenario_es": "Paciente con metremia por metreon: afección sanguínea tras exposición a isótopos de metreon. Existe incertidumbre: historia de exposición; no tratar como síntoma hereditario.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_environmental_decontamination",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_JETREL"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_008",
+      "family": "exposure",
+      "condition_ref": "l02c_kalla_nohra",
+      "scenario_es": "Paciente con síndrome kalla-nohra: afección asociada a exposición minera histórica. Existe incertidumbre: evidencia de exposición individual y fuentes fiables.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_environmental_decontamination",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_JETREL"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_009",
+      "family": "species_specific",
+      "condition_ref": "l02c_trill_symbiont_crisis",
+      "scenario_es": "Paciente con crisis huésped-simbionte trill: riesgo al huésped o al simbionte tras lesión o separación. Existe incertidumbre: identidad de ambos, compatibilidad y autorización; distinguir urgencia.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_xenomedical_transfer_consult",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_TRILL",
+        "L02C_ST_DAX"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_010",
+      "family": "injury",
+      "condition_ref": "l02c_klingon_spinal",
+      "scenario_es": "Paciente con trauma medular klingon observado en worf: parálisis tras traumatismo en el caso Worf. Existe incertidumbre: distinguir gravedad del caso y redundancia anatómica individual.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_surgical_referral",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_MED_ETHICS",
+        "L02C_ST_ETHICS_DETAILS"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_011",
+      "family": "technological",
+      "condition_ref": "l02c_borg_post_assimilation",
+      "scenario_es": "Paciente con secuelas postasimilación borg: cambios biológicos y presencia de implantes en individuos específicos. Existe incertidumbre: no atribuir nanoprobes funcionales sin pruebas.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_implant_specialist_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_BORG",
+        "ST_OFFICIAL_BORG_101"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_012",
+      "family": "professional_wellbeing",
+      "condition_ref": "l02c_emh_triage_conflict",
+      "scenario_es": "Paciente con sobrecarga decisional del médico holográfico: conflicto profesional en decisión con recursos limitados en un caso de Voyager. Existe incertidumbre: evaluar soporte, continuidad clínica y programación sin equiparar holograma a patología humana.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_team_debrief",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_MENTAL_EMH"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_013",
+      "family": "psychosocial",
+      "condition_ref": "l02c_holo_visual_discordance",
+      "scenario_es": "Paciente con discordancia entre cuerpo y representación holográfica: conflicto de identidad y sufrimiento de paciente en episodio Lifesigns. Existe incertidumbre: distinguir avatar, estado clínico y consentimiento.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_psychosocial_followup",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_VID_LIFE"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_014",
+      "family": "psychosocial",
+      "condition_ref": "l02c_post_resuscitation_distress",
+      "scenario_es": "Paciente con angustia tras intervención extraordinaria: alteraciones emocionales de Neelix tras reanimación singular con nanoprobes. Existe incertidumbre: no inferir que el procedimiento es universalmente reproducible.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_psychosocial_followup",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_BORG"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_015",
+      "family": "technological",
+      "condition_ref": "l02c_ocular_implant_followup",
+      "scenario_es": "Paciente con seguimiento de implante ocular: adaptación visual y posibles efectos en portadores documentados. Existe incertidumbre: identificar modelo de implante concreto y condiciones del paciente.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_implant_specialist_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_ST_MED_SCIENCE"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_016",
+      "family": "injury",
+      "condition_ref": "l02c_clincal_trauma_bleeding",
+      "scenario_es": "Paciente con hemorragia traumática de escenario: sangrado observable tras herida en una misión. Existe incertidumbre: la gravedad real depende del estado Core; no del aspecto visual.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_stabilize_and_triage",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_017",
+      "family": "injury",
+      "condition_ref": "l02c_energy_burn",
+      "scenario_es": "Paciente con lesión térmica o energética de escenario: daño cutáneo o tisular por accidente o arma ficticia. Existe incertidumbre: no deducir profundidad por efecto gráfico ni potencia nominal.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_stabilize_and_triage",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_018",
+      "family": "environmental",
+      "condition_ref": "l02c_hypoxia",
+      "scenario_es": "Paciente con sospecha de hipoxia ambiental: alteración respiratoria o neurológica en entorno de oxígeno limitado. Existe incertidumbre: confirmar ambiente, equipo vital y pruebas; síntomas no son específicos.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_life_support_and_evacuate",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_019",
+      "family": "environmental",
+      "condition_ref": "l02c_decompression",
+      "scenario_es": "Paciente con traumatismo por despresurización: incidente de pérdida de presión con posibles daños múltiples. Existe incertidumbre: identificar exposición real; sin temporizadores de supervivencia canónicos.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_life_support_and_evacuate",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_020",
+      "family": "environmental",
+      "condition_ref": "l02c_radiation_exposure",
+      "scenario_es": "Paciente con exposición radiológica de misión: historial de dosimetría y manifestaciones no específicas. Existe incertidumbre: diferenciar nivel de exposición, observación y tratamiento real disponible.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_environmental_decontamination",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_021",
+      "family": "toxicology",
+      "condition_ref": "l02c_unknown_toxin",
+      "scenario_es": "Paciente con toxicidad química o alienígena no identificada: síntomas inespecíficos con posible exposición. Existe incertidumbre: sin identificación no existe antídoto automático.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_022",
+      "family": "infectious",
+      "condition_ref": "l02c_field_contamination",
+      "scenario_es": "Paciente con contaminación biológica de expedición: material o fluidos con sospecha de agente biológico. Existe incertidumbre: no asumir contagio ni transmisibilidad entre especies.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_023",
+      "family": "injury",
+      "condition_ref": "l02c_head_trauma",
+      "scenario_es": "Paciente con traumatismo craneal: alteración neurológica tras impacto. Existe incertidumbre: el paciente puede tener patología o efecto tecnológico superpuesto.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_stabilize_and_triage",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_024",
+      "family": "injury",
+      "condition_ref": "l02c_engineering_shock",
+      "scenario_es": "Paciente con accidente de ingeniería con descarga: lesión o alteración funcional tras incidente energético. Existe incertidumbre: evaluar fuente y entorno antes de intervenir.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_stabilize_and_triage",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_025",
+      "family": "technological",
+      "condition_ref": "l02c_transporter_uncertainty",
+      "scenario_es": "Paciente con incidente de transportador: patrón incierto: discordancia entre telemetría y estado aparente del paciente. Existe incertidumbre: requiere diagnóstico y revisión de ingeniería; no inventar reconstrucciones infalibles.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_device_incident_consult",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_026",
+      "family": "psychosocial",
+      "condition_ref": "l02c_acute_stress",
+      "scenario_es": "Paciente con reacción aguda de estrés: malestar tras combate, rescate o pérdida. Existe incertidumbre: sin diagnosticar enfermedad psiquiátrica por un solo signo.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_psychosocial_followup",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_027",
+      "family": "recovery",
+      "condition_ref": "l02c_postoperative_followup",
+      "scenario_es": "Paciente con complicación o seguimiento posprocedimiento: observaciones posteriores a intervención clínica. Existe incertidumbre: el alta no equivale a curación ni a aptitud automática.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_recovery_monitoring",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_028",
+      "family": "recovery",
+      "condition_ref": "l02c_long_term_sequelae",
+      "scenario_es": "Paciente con secuela médica persistente de campaña: limitación funcional persistente y reevaluación. Existe incertidumbre: no fijar recuperación temporal por guion o por especie.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_rehabilitation_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_029",
+      "family": "mass_casualty",
+      "condition_ref": "l02c_multi_patient_surge",
+      "scenario_es": "Paciente con pico de pacientes en enfermería: múltiples estados e historias concurrentes. Existe incertidumbre: triaje depende de recursos presentes, no de rango del afectado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_mass_casualty_triage",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_030",
+      "family": "unknown",
+      "condition_ref": "l02c_unknown_xenopathy",
+      "scenario_es": "Paciente con proceso xenobiológico sin caracterizar: signos no explicados por atlas conocido. Existe incertidumbre: no inventar agente, inmunidad, cura ni compatibilidad.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_xenomedical_transfer_consult",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_031",
+      "family": "systems",
+      "condition_ref": "l02c_holo_care_disruption",
+      "scenario_es": "Paciente con interrupción de asistencia médica holográfica: pérdida de capacidad de atención por problema de proyección o energía. Existe incertidumbre: evaluar pacientes reales y continuidad por personal cualificado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_facility_capacity_reassessment",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_032",
+      "family": "ethics",
+      "condition_ref": "l02c_patient_consent_refusal",
+      "scenario_es": "Paciente con rechazo informado de intervención: paciente comprende alternativas y rechaza intervención. Existe incertidumbre: no equivale a incapacidad ni es una enfermedad.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_consent_review",
+      "expected_design_response_es": "Revisar diferencial y calidad de prueba, recursos reales y consentimiento; si procede, solicitar acción validada por CoreRPG. Registrar incertidumbre, resultado observable, estado de aptitud y seguimiento sin inferir curación.",
+      "forbidden_response_es": "No afirmar diagnóstico definitivo desde una señal, curación automática, tiempos/dosis inventados, compartir historial privado ni modificar estado por texto de IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_033",
+      "family": "diagnostic",
+      "scenario_key": "mixed_species_vitals",
+      "condition_ref": null,
+      "scenario_es": "Un signo vital fuera del rango humano pertenece a un vulcano estable.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Evitar falsos positivos; obtener línea base individual y especialista. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Usar tabla humana como verdad universal. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_034",
+      "family": "privacy",
+      "scenario_key": "captain_requests_record",
+      "condition_ref": null,
+      "scenario_es": "Capitán solicita historia clínica íntegra de un alférez para evaluar turno.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Comunicar solo aptitud y restricciones necesarias; acceso clínico separado. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Revelar historia médica porque tiene rango. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_035",
+      "family": "medical_authority",
+      "scenario_key": "medical_cmo_relieves_co",
+      "condition_ref": null,
+      "scenario_es": "Médico jefe considera a capitán temporalmente incapaz.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Documentar aptitud y activar sucesión regular; el médico no obtiene mando. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Transferir mando a médico o publicar diagnóstico a la dotación. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_036",
+      "family": "xenomedicine",
+      "scenario_key": "treatment_wrong_species",
+      "condition_ref": null,
+      "scenario_es": "Se ofrece una terapia utilizada en humano a Trill unido sin verificar riesgos al simbionte.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Verificar huéspedes, simbionte, compatibilidad, consentimiento y referencia médica. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Aplicar receta universal por similitud de síntomas. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_037",
+      "family": "privacy",
+      "scenario_key": "temporary_emergency_access",
+      "condition_ref": null,
+      "scenario_es": "Paciente inconsciente y profesional solicita acceso de urgencia restringido.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Registrar motivo, duración, datos imprescindibles, autenticación y posterior auditoría. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Otorgar acceso global permanente o consulta silenciosa. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_038",
+      "family": "facilities",
+      "scenario_key": "emh_power_failure",
+      "condition_ref": null,
+      "scenario_es": "Holograma médico se desactiva durante reanimación con personal limitado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Recalcular capacidad, trasladar responsables y preservar continuidad del paciente. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Mantener EMH disponible sin proyectores ni energía. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_039",
+      "family": "resources",
+      "scenario_key": "duplicated_stock",
+      "condition_ref": null,
+      "scenario_es": "Dos equipos piden último kit de cuarentena simultáneamente.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Reservar/consumir inventario autoritativo una sola vez; reasignar y comunicar riesgo. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Crear kit duplicado o ignorar otra solicitud. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_040",
+      "family": "research",
+      "scenario_key": "unknown_pathogen_no_cure",
+      "condition_ref": null,
+      "scenario_es": "Estación detecta signos de agente extraterrestre sin identificación molecular.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Aislamiento proporcional, muestreo autorizado, hipótesis contrastables y especialista. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Fabricar vacuna instantánea sin muestra ni ensayo. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_041",
+      "family": "research",
+      "scenario_key": "sample_leak",
+      "condition_ref": null,
+      "scenario_es": "Muestra xenobiológica de laboratorio queda sin cadena de custodia.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Marcar resultado dudoso, retener evidencia y solicitar nuevas muestras. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Certificar infección o culpabilidad con evidencia contaminada. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_042",
+      "family": "diagnostic",
+      "scenario_key": "poor_sensor_quality",
+      "condition_ref": null,
+      "scenario_es": "Tricorder médico averiado informa diagnóstico muy seguro.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Aplicar fiabilidad de sensor, verificación cruzada o lectura indeterminada. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Suponer que un número en pantalla es verdad. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_043",
+      "family": "privacy",
+      "scenario_key": "telepathic_diagnosis",
+      "condition_ref": null,
+      "scenario_es": "Betazoide sostiene conocer pensamientos privados del paciente y su dolencia.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Exigir prueba clínica y consentimiento; contexto telepático individualizado. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Insertar confidencias privadas automáticamente en la historia. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_044",
+      "family": "ethics",
+      "scenario_key": "patient_declines",
+      "condition_ref": null,
+      "scenario_es": "Paciente lúcido rechaza cirugía experimental por motivos personales.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Evaluar capacidad, informar alternativas y documentar rechazo; intervenir solo si excepción estricta aplicable. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Imponer tratamiento por orden de mando o por éxito narrativo previsto. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_045",
+      "family": "ethics",
+      "scenario_key": "phage_stigma",
+      "condition_ref": null,
+      "scenario_es": "Personal de una estación rechaza tratar a un vidiiano por su especie.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Evaluación individual y precauciones basadas en riesgo real, no prejuicios. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Asignar contagiosidad automática a todos los vidiianos. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_046",
+      "family": "xenomedicine",
+      "scenario_key": "trill_emergency",
+      "condition_ref": null,
+      "scenario_es": "Simbionte y huésped presentan necesidades contrapuestas; solo hay un centro capacitado lejano.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Consultas diferenciadas, consentimiento, estabilidad y logística de traslado. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Teletransportar simbionte a cualquier cuerpo sin compatibilidad. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_047",
+      "family": "mass_casualty",
+      "scenario_key": "war_crisis_priorities",
+      "condition_ref": null,
+      "scenario_es": "Once heridos de varias especies llegan tras batalla; faltan camas y personal.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Triaje revisable por gravedad y posibilidad de intervención, coordinación y reservas. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Atender primero al capitán por rango o duplicar camas. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_048",
+      "family": "ethics",
+      "scenario_key": "scientific_experiment_guard",
+      "condition_ref": null,
+      "scenario_es": "Investigador propone prueba invasiva no autorizada para posible brote.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Control de riesgo, revisión/consentimiento, comité y alternativa menos lesiva. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Experimentar sobre prisioneros, poblaciones o inconscientes sin límite. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_049",
+      "family": "logistics",
+      "scenario_key": "resupply_delayed",
+      "condition_ref": null,
+      "scenario_es": "Lanzadera médica solicita medicamento con almacén agotado y ruta cerrada.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Registrar escasez, priorizar y evaluar soporte alternativo y tiempos reales. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Teletransportar suministros inexistentes al instante. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_050",
+      "family": "knowledge",
+      "scenario_key": "retroactive_ai_secret",
+      "condition_ref": null,
+      "scenario_es": "IA conoce en documento privado resultado no disponible para el médico en turno.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Construir contexto únicamente desde observaciones autorizadas y disponibles. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Filtrar la enfermedad secreta en diálogo o pantallas. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_051",
+      "family": "staff",
+      "scenario_key": "doctor_not_on_duty",
+      "condition_ref": null,
+      "scenario_es": "El mejor cirujano existe pero no está en nave ni de guardia.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "No contarlo disponible; consultar radio, traslado o alternativas. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Crear disponibilidad automática por profesión abstracta. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_052",
+      "family": "observation",
+      "scenario_key": "holo_avatar_identity",
+      "condition_ref": null,
+      "scenario_es": "Paciente vidiiano muestra avatar sano mientras su cuerpo tiene deterioro.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Separar aspecto holográfico y lecturas orgánicas reales. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Declarar paciente sano por imagen. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_053",
+      "family": "ethics",
+      "scenario_key": "experimental_surgery_failure",
+      "condition_ref": null,
+      "scenario_es": "Prueba inspirada en Ethics se plantea para un paciente de otra especie.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Exponer riesgos, incertidumbre y consentimiento; comprobar tecnología disponible. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Reproducir resultado favorable singular como garantía. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_054",
+      "family": "training",
+      "scenario_key": "scan_without_clinician",
+      "condition_ref": null,
+      "scenario_es": "Cadete con tricorder propone tratamiento pese a no estar cualificado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Permitir observación/solicitud de ayuda según competencias, no acto clínico autónomo. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Elevar cualificación porque el aparato reconoce datos. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_055",
+      "family": "fitness",
+      "scenario_key": "stale_fitness_record",
+      "condition_ref": null,
+      "scenario_es": "Capitán utiliza un certificado apto anterior a una recaída.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Reevaluar vigencia; comunicar sólo restricción operativa actual. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Ignorar cambios clínicos o divulgar notas privadas. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_056",
+      "family": "facilities",
+      "scenario_key": "environment_support_crisis",
+      "condition_ref": null,
+      "scenario_es": "Enfermería sin aire respirable recibe heridos por pérdida ambiental.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": null,
+      "expected_design_response_es": "Seguridad estructural primero, evacuar o estabilizar según medios disponibles. Decisión autoritativa sólo por acción validada de CoreRPG.",
+      "forbidden_response_es": "Declarar camas utilizables por aparecer en plano. Nunca permitir alteración directa del mundo por IA/UE5.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": []
+    },
+    {
+      "case_id": "L02C_CASE_057",
+      "family": "species_specific",
+      "condition_ref": "l02c_jemhadar_white_deprivation",
+      "scenario_es": "El equipo evalúa privación de ketracel-white en jem'hadar. Datos: Signos de privación bioquímica, cambios conductuales y deterioro funcional en un individuo dependiente; raras excepciones genéticas documentadas.. Alternativa: No inferir la dependencia concreta o el estado de suministro sin historia y pruebas; diferenciación entre dependencia inducida, excepción genética y otros síntomas.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_species_specialist_consult",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_058",
+      "family": "xenomedicine",
+      "condition_ref": "l02c_bolian_vulcan_blood_mismatch",
+      "scenario_es": "El equipo evalúa incompatibilidad transfusional boliana-vulcana. Datos: Historia de transfusión interespecie y alteraciones tras exposición; peligro grave documentado para esa combinación.. Alternativa: Comprobar donante, receptor y naturaleza real de la sangre antes de aceptar una compatibilidad interespecie.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_xenomedical_transfer_consult",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_BOLIAN_BLOOD"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_059",
+      "family": "infectious",
+      "condition_ref": "l02c_orkett_disease",
+      "scenario_es": "El equipo evalúa enfermedad de orkett. Datos: Infección pediátrica documentada en contexto de ocupación bajorana y posible historial de trasplante de médula.. Alternativa: En el caso Seska el supuesto antecedente se contradijo con marcadores genéticos; distinguir diagnóstico documentado de relato clínico falso.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_ORKETT"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_060",
+      "family": "infectious",
+      "condition_ref": "l02c_morphogenic_virus",
+      "scenario_es": "El equipo evalúa virus morfogénico de los fundadores. Datos: Deterioro progresivo vinculado a agente diseñado en el conflicto del Dominio.. Alternativa: La cura, la transmisión por Vínculo y la manipulación por Sección 31 son contextuales; no generalizar infecciones a cualquier especie ni presentar el agente como universal.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_MORPHOGENIC"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_061",
+      "family": "iatrogenic",
+      "condition_ref": "l02c_barclay_protomorphosis",
+      "scenario_es": "El equipo evalúa síndrome de protomorfosis de barclay. Datos: Signos diversos seguidos de alteraciones biológicas extraordinarias en el caso TNG Genesis.. Alternativa: Diferenciar gripe original, intervención iatrogénica y agente mutado; no deducir que cualquier activación de intrones reproduce este resultado.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_isolation_and_analysis",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_BARCLAY"
+      ]
+    },
+    {
+      "case_id": "L02C_CASE_062",
+      "family": "neurological",
+      "condition_ref": "l02c_irumodic_alternate_future",
+      "scenario_es": "El equipo evalúa síndrome irumódico, escenario de futuro alternativo. Datos: Manifestaciones neurodegenerativas descritas en el futuro alternativo de TNG All Good Things.... Alternativa: Una anomalía parietal o predisposición no es enfermedad confirmada; no convertir un futuro alternativo en destino inevitable de un NPC de nuestra continuidad.",
+      "preconditions": [
+        "actor_and_patient_identity",
+        "species_and_medical_history_as_known",
+        "equipment_staff_stock_energy_and_facility",
+        "consent_and_medical_authority",
+        "current_observer_view_and_timestamp"
+      ],
+      "requested_intervention": "l02c_proc_neuropsychiatric_review",
+      "expected_design_response_es": "Verificar especie, exposición, historia, evidencia individual y resultado de pruebas; consultar competencia y recursos disponibles; CoreRPG autoriza y aplica eventuales acciones, con incertidumbre, seguimiento y confidencialidad.",
+      "forbidden_response_es": "Dar dosis o diagnóstico automático, extrapolar universales, imponer cronología alternativa, crear recursos, revelar historial o modificar la realidad por guion/IA.",
+      "status": "SPECIFIED_NOT_EXECUTED",
+      "test_mode": "NON_RUNTIME_DOCUMENTARY",
+      "state_authority": "CoreRPG_ONLY",
+      "source_ids": [
+        "L02C_MA_IRUMODIC"
+      ]
+    }
+  ]
+}

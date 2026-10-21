@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.38.0",
+  "registry_version": "0.41.0",
   "last_updated": "2026-10-21",
   "sources": [
     {
@@ -3996,6 +3996,312 @@
       "url": "https://memory-alpha.fandom.com/wiki/Nanoprobe",
       "accessed_at": "2026-10-21",
       "notes": "Contexto de nanoprobes Borg, sin recetas ni terapias reales."
+    },
+    {
+      "source_id": "L02C_ST_MED_ETHICS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "7 Times Doctor Beverly Crusher Became My Favorite Star Trek Doctor",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/7-times-doctor-beverly-crusher-became-my-favorite-star-trek-doctor",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG Ethics: lesión medular Worf, intervención experimental y conflictos de consentimiento/ética; no establece eficacia universal."
+    },
+    {
+      "source_id": "L02C_ST_ETHICS_DETAILS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Ethics Debuted 24 Years Ago",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/ethics-debuted-24-years-ago-today",
+      "accessed_at": "2026-10-21",
+      "notes": "Datos anatómicos klingon en caso Worf; no se pueden extender sin cautela a todos los individuos."
+    },
+    {
+      "source_id": "L02C_ST_QUICKENING",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Your Star Trek Pandemic-Themed Watch List",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/your-star-trek-pandemic-themed-watch-list",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9 The Quickening y VOY Macrocosm: enfermedad Teplan y macrovirus. La intervención inicial puede fracasar."
+    },
+    {
+      "source_id": "L02C_ST_BASHIR",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Good Doctor: 7 Standout Dr. Bashir Moments",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/the-good-doctor-standout-dr-bashir-moments",
+      "accessed_at": "2026-10-21",
+      "notes": "Ética y riesgos diagnósticos/terapéuticos de la enfermedad Teplan."
+    },
+    {
+      "source_id": "L02C_ST_BENDII",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Bendii Syndrome and the Mysteries of the Mind",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/bendii-syndrome-and-the-mysteries-of-the-mind",
+      "accessed_at": "2026-10-21",
+      "notes": "Síndrome Bendii en Sarek; no extrapolar prevalencias ni transmisión clínica."
+    },
+    {
+      "source_id": "L02C_ST_EMPATHY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Below Deck with Lower Decks: Checking Your Emotional Baggage",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/below-deck-with-lower-decks-405-emotional-baggage",
+      "accessed_at": "2026-10-21",
+      "notes": "Comparación de Zanthi en betazoides y Bendii en vulcanos, con efectos interpersonales."
+    },
+    {
+      "source_id": "L02C_ST_TRILL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Trill History",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/trill-history-101",
+      "accessed_at": "2026-10-21",
+      "notes": "Huésped, simbionte, trasplante y vínculo; compatibilidad y continuidad individual son específicas."
+    },
+    {
+      "source_id": "L02C_ST_DAX",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "The Acts of Dax",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/en-un/news/the-acts-of-trill-dax",
+      "accessed_at": "2026-10-21",
+      "notes": "Traslado urgente del simbionte Dax a Ezri y experiencia de adaptación del huésped."
+    },
+    {
+      "source_id": "L02C_ST_VIDIIAN",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Delta Quadrant Regimes, Ranked",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/delta-quadrant-regimes-ranked",
+      "accessed_at": "2026-10-21",
+      "notes": "Fago vidiiano e ingeniería de órganos: evidencia histórica, no capacidad universal de cualquier hospital."
+    },
+    {
+      "source_id": "L02C_ST_JETREL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Jetrel and the Destroyers of Worlds",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/jetrel-and-the-destroyers-of-worlds",
+      "accessed_at": "2026-10-21",
+      "notes": "Metremia por isótopos de metreon y Kalla-Nohra por exposición en campamentos."
+    },
+    {
+      "source_id": "L02C_ST_BORG",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "How Mortal Coil Tackles the Realities of Mental Health",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/how-mortal-coil-tackles-the-realities-of-mental-health",
+      "accessed_at": "2026-10-21",
+      "notes": "Intervención singular con nanoprobes de Borg y consecuencias psicológicas, sin prometer resurrección repetible."
+    },
+    {
+      "source_id": "L02C_ST_MACRO",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Intruder Alert: Invaders Have Taken Over the Ship",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/intruder-alert-ship-invaders",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Macrocosm: transmisión accidental y restricciones de biofiltrado, cuarentena y recursos."
+    },
+    {
+      "source_id": "L02C_ST_VID_LIFE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "In 'Lifesigns,' It's What's on the Inside That Counts",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/in-lifesigns-its-whats-on-the-inside-that-counts",
+      "accessed_at": "2026-10-21",
+      "notes": "Atención a paciente vidiiana, identidad, representación holográfica y angustia; no se confunde avatar con organismo."
+    },
+    {
+      "source_id": "L02C_ST_MED_CRITICAL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "One Trek Mind #37: Sick In Space",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/one-trek-mind-37-sick-in-space",
+      "accessed_at": "2026-10-21",
+      "notes": "Síndrome Bendii y virus cromático en contexto de desigualdad asistencial; ancla secundaria oficial de episodios."
+    },
+    {
+      "source_id": "L02C_ST_MENTAL_EMH",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Spock is Just One Piece of a Vast Spectrum",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/spock-is-just-one-piece-of-a-vast-spectrum",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Latent Image: dilema de triaje holográfico y cuidado emocional de profesional médico."
+    },
+    {
+      "source_id": "L02C_ST_MED_SCIENCE",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek's Vision of the Future",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/vision-of-the-future",
+      "accessed_at": "2026-10-21",
+      "notes": "Implantes oculares de Geordi y Seven; rehabilitación y especificidad de dispositivos."
+    },
+    {
+      "source_id": "L02C_MA_CORDRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Cordrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Cordrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Fármaco estimulante empleado en situaciones de reanimación; episodios citados y efectos adversos, sin dosis de referencia para videojuego."
+    },
+    {
+      "source_id": "L02C_MA_TRICORDRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tricordrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tricordrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Derivado de cordrazine; margen de riesgo y diferencias individuales, especialmente en contexto klingon."
+    },
+    {
+      "source_id": "L02C_MA_HYRONALIN",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Hyronalin",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Hyronalin",
+      "accessed_at": "2026-10-21",
+      "notes": "Ejemplos de contraprotección radiológica en TOS, TNG, DS9 y Voyager; no antídoto universal."
+    },
+    {
+      "source_id": "L02C_MA_INAPROVALINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Inaprovaline",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Inaprovaline",
+      "accessed_at": "2026-10-21",
+      "notes": "Estimulante sináptico/cardiovascular documentado; indicación por episodio, no por nombre del síntoma."
+    },
+    {
+      "source_id": "L02C_MA_LECTRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Lectrazine",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Lectrazine",
+      "accessed_at": "2026-10-21",
+      "notes": "Ejemplos de soporte cardiovascular y renal; episodio VOY Warlord apunta incompatibilidad individual."
+    },
+    {
+      "source_id": "L02C_MA_TRI_OX",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Tri-ox compound",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Tri-ox_compound",
+      "accessed_at": "2026-10-21",
+      "notes": "Soporte en ambientes pobres en oxígeno en episodios; no sustituye suministro ambiental en todas las especies."
+    },
+    {
+      "source_id": "L02C_MA_FELICIUM",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ornaran plague",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ornaran_plague",
+      "accessed_at": "2026-10-21",
+      "notes": "Caso TNG Symbiosis: medicamento inicial y dependencia/explotación posterior; no remedio universal."
+    },
+    {
+      "source_id": "L02C_MA_ARITHRAZINE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "The Omega Directive",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/The_Omega_Directive_%28episode%29",
+      "accessed_at": "2026-10-21",
+      "notes": "Indicación de arithrazine en radiación grave y exigencia de supervisión médica; cita secundaria episodio."
+    },
+    {
+      "source_id": "L02C_MA_OSTEOGENIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Osteogenic stimulator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Osteogenic_stimulator",
+      "accessed_at": "2026-10-21",
+      "notes": "Reparación de fracturas; variantes móviles limitadas a lesiones menores, no sustituto hospitalario."
+    },
+    {
+      "source_id": "L02C_MA_DERMAL",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Dermal regenerator",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Dermal_regenerator",
+      "accessed_at": "2026-10-21",
+      "notes": "Lesiones cutáneas menores, con variantes contextuales; no todas las regeneraciones tisulares."
+    },
+    {
+      "source_id": "L02C_MA_DRUG_CATEGORY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Drugs and treatments",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Drugs_and_treatments",
+      "accessed_at": "2026-10-21",
+      "notes": "Índice de descubrimiento de familias; sin detalles de dosificación ni eficacia."
+    },
+    {
+      "source_id": "L02C_MA_OSTEO_EXTRA",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Medical device",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Medical_device",
+      "accessed_at": "2026-10-21",
+      "notes": "Inventario temático de instrumentos médicos; entrada secundaria de descubrimiento."
+    },
+    {
+      "source_id": "L02C_MA_KETRACEL_WHITE",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Ketracel-white",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Ketracel-white",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9 The Abandoned, Hippocratic Oath, Rocks and Shoals: dependencia bioquímica Jem'Hadar creada por ingeniería, con excepciones individuales; no dosis de gameplay."
+    },
+    {
+      "source_id": "L02C_MA_BOLIAN_BLOOD",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Blood (Bolian/Vulcan compatibility)",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Blood",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY Prototype: transfusión de sangre vulcana incompatible con boliana; no inferir equivalencia de sangre de demás especies."
+    },
+    {
+      "source_id": "L02C_MA_ORKETT",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Orkett's disease",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Orkett%27s_disease",
+      "accessed_at": "2026-10-21",
+      "notes": "VOY State of Flux: infección en campos bajoranos; explicación de Seska rechazada tras evaluación genética, ejemplo de diagnóstico diferencial."
+    },
+    {
+      "source_id": "L02C_MA_MORPHOGENIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Morphogenic virus",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Morphogenic_virus",
+      "accessed_at": "2026-10-21",
+      "notes": "DS9: patógeno diseñado contra Fundadores y cura recuperada en circunstancias extraordinarias, éticamente controvertida."
+    },
+    {
+      "source_id": "L02C_MA_BARCLAY",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Barclay's Protomorphosis Syndrome",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Barclay%27s_Protomorphosis_Syndrome",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG Genesis: intervención genética iatrogénica y contagio accidental; no usar transformación como enfermedad genérica."
+    },
+    {
+      "source_id": "L02C_MA_IRUMODIC",
+      "source_type": "RELIABLE_SECONDARY",
+      "title": "Irumodic Syndrome",
+      "publisher": "Memory Alpha",
+      "url": "https://memory-alpha.fandom.com/wiki/Irumodic_Syndrome",
+      "accessed_at": "2026-10-21",
+      "notes": "TNG All Good Things...: síndrome en futuro alternativo y predisposición no diagnóstica; no imponer el resultado al canon de juego."
     }
   ]
 }

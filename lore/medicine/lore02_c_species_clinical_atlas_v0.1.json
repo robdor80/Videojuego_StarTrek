@@ -1,0 +1,584 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore02_c_xenobiological_clinical_atlas",
+  "phase": "LORE-02 C",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "species_count": 26,
+  "scope": "Datos cualitativos y grado de evidencia; ninguna ficha desbloquea diagnósticos ni fármacos.",
+  "taxonomy_ref": "lore/species/README.md",
+  "records": [
+    {
+      "profile_id": "l02c_species_aenar",
+      "species_id": "aenar",
+      "evidence_ref": "lore/species/evidence/aenar_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_andorian",
+      "species_id": "andorian",
+      "evidence_ref": "lore/species/evidence/andorian_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Los apéndices cefálicos tienen importancia en casos concretos de lesión y equilibrio según la documentación ya existente.",
+      "uncertainty_and_individual_variation_es": "La recuperación y la función individual requieren ficha del paciente, sin cronómetro regenerativo universal.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_bajoran",
+      "species_id": "bajoran",
+      "evidence_ref": "lore/species/evidence/bajoran_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Exposiciones históricas a Kalla-Nohra y casos de enfermedad de Orkett en campos de trabajo permiten estudiar infecciones, riesgos ocupacionales y diagnósticos genéticos diferenciales.",
+      "uncertainty_and_individual_variation_es": "El caso Seska demuestra que alegar una enfermedad y un injerto no sustituye pruebas genéticas. Ninguna patología corresponde a todos los bajoranos.",
+      "source_ids": [
+        "L02C_ST_JETREL",
+        "L02C_MA_ORKETT"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_benzite",
+      "species_id": "benzite",
+      "evidence_ref": "lore/species/evidence/benzite_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_betazoid",
+      "species_id": "betazoid",
+      "evidence_ref": "lore/species/evidence/betazoid_v0.2.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "El síndrome Zanthi está asociado a efectos empáticos interpersonales en casos documentados.",
+      "uncertainty_and_individual_variation_es": "No confundir transmisión emocional con contagio infeccioso ni suponer telepatía idéntica en todos.",
+      "source_ids": [
+        "L02C_ST_EMPATHY"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_bolian",
+      "species_id": "bolian",
+      "evidence_ref": "lore/species/evidence/bolian_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "VOY Prototype establece que la transfusión de sangre vulcana a un boliano tiene un riesgo incompatible grave; la sustitución de sangre entre especies exige validación específica.",
+      "uncertainty_and_individual_variation_es": "No aplicar donación universal ni basar compatibilidad sanguínea en aspecto o parentesco humanoide.",
+      "source_ids": [
+        "L02C_MA_BOLIAN_BLOOD"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_breen",
+      "species_id": "breen",
+      "evidence_ref": "lore/species/evidence/breen_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_cardassian",
+      "species_id": "cardassian",
+      "evidence_ref": "lore/species/evidence/cardassian_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Se documentan contextos de exposición y práctica médica variados en entornos cardassianos.",
+      "uncertainty_and_individual_variation_es": "No deducir biología por afiliación política o por función de un personaje.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_changeling",
+      "species_id": "changeling",
+      "evidence_ref": "lore/species/evidence/changeling_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "El virus morfogénico de DS9 afecta a Fundadores y otros individuos vinculados; la biología cambiante requiere análisis no humanoide.",
+      "uncertainty_and_individual_variation_es": "El mecanismo documentado dependió de condiciones históricas de transmisión y actuación de Sección 31; no declarar contagio de cualquier contacto ni anatomía fija.",
+      "source_ids": [
+        "L02C_MA_MORPHOGENIC"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_el_aurian",
+      "species_id": "el_aurian",
+      "evidence_ref": "lore/species/evidence/el_aurian_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_ferengi",
+      "species_id": "ferengi",
+      "evidence_ref": "lore/species/evidence/ferengi_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existen rasgos físicos distintivos; los rasgos culturales o su apariencia no implican dosis ni patología.",
+      "uncertainty_and_individual_variation_es": "No inferir personalidad, dolor, percepción o aptitud a partir de estereotipos.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_hirogen",
+      "species_id": "hirogen",
+      "evidence_ref": "lore/species/evidence/hirogen_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_human",
+      "species_id": "human",
+      "evidence_ref": "lore/species/evidence/human_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Base de referencia para comparación individual; no existe valor biológico universal extrapolable a los demás pueblos.",
+      "uncertainty_and_individual_variation_es": "No tratar datos humanos como patrón diagnóstico de otras especies.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_jem_hadar",
+      "species_id": "jem_hadar",
+      "evidence_ref": "lore/species/evidence/jem_hadar_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "El metabolismo de Jem'Hadar modificados por el Dominio requiere el compuesto ketracel-white en la mayoría de casos documentados; se conocen excepciones individuales con autosíntesis de la enzima ausente.",
+      "uncertainty_and_individual_variation_es": "La necesidad de suministro, estado de privación y tolerancia no se deduce del uniforme ni de su cargo. Adolescencia y edad adulta no se asumen equivalentes.",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_kazon",
+      "species_id": "kazon",
+      "evidence_ref": "lore/species/evidence/kazon_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_klingon",
+      "species_id": "klingon",
+      "evidence_ref": "lore/species/evidence/klingon_v0.2.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "En el caso de Worf se documentan órganos y circuitos redundantes; una lesión medular no se resuelve por ello automáticamente.",
+      "uncertainty_and_individual_variation_es": "La redundancia de Worf no garantiza supervivencia ni indica idéntica anatomía en todos los klingon.",
+      "source_ids": [
+        "L02C_ST_ETHICS_DETAILS",
+        "L02C_ST_MED_ETHICS"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_ocampan",
+      "species_id": "ocampan",
+      "evidence_ref": "lore/species/evidence/ocampan_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existen diferencias del ciclo vital en personajes documentados; no extrapolar cifras a cualquier individuo o población.",
+      "uncertainty_and_individual_variation_es": "No aplicar estadística humana a envejecimiento o desarrollo.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_pakled",
+      "species_id": "pakled",
+      "evidence_ref": "lore/species/evidence/pakled_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_romulan",
+      "species_id": "romulan",
+      "evidence_ref": "lore/species/evidence/romulan_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "La apariencia y parentesco cultural/histórico con vulcanos no establecen protocolos terapéuticos compartidos.",
+      "uncertainty_and_individual_variation_es": "Exigir antecedentes y datos romulanos explícitos antes de equiparar fisiología.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_talaxian",
+      "species_id": "talaxian",
+      "evidence_ref": "lore/species/evidence/talaxian_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_tellarite",
+      "species_id": "tellarite",
+      "evidence_ref": "lore/species/evidence/tellarite_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_trill",
+      "species_id": "trill",
+      "evidence_ref": "lore/species/evidence/trill_v0.2.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "Separar huésped Trill y simbionte unido; las intervenciones sobre el simbionte afectan identidad y continuidad de memoria.",
+      "uncertainty_and_individual_variation_es": "No todos los Trill están unidos; compatibilidad, consentimiento y urgencia deben individualizarse.",
+      "source_ids": [
+        "L02C_ST_TRILL",
+        "L02C_ST_DAX"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_vidiian",
+      "species_id": "vidiian",
+      "evidence_ref": "lore/species/evidence/vidiian_v0.2.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "La enfermedad denominada Phage/fago afectó gravemente a pacientes vidiianos; la tecnología de injerto de órganos fue utilizada como respuesta.",
+      "uncertainty_and_individual_variation_es": "No asumir que cualquier vidiiano actual está enfermo ni que un injerto fue consentido.",
+      "source_ids": [
+        "L02C_ST_VIDIIAN",
+        "L02C_ST_VID_LIFE"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_vorta",
+      "species_id": "vorta",
+      "evidence_ref": "lore/species/evidence/vorta_v0.2.json",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
+      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
+      "source_ids": [],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_species_vulcan",
+      "species_id": "vulcan",
+      "evidence_ref": "lore/species/evidence/vulcan_v0.2.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "Pon farr documentado; síndrome Bendii en determinados pacientes; contactos mentales con implicaciones neurológicas y de consentimiento.",
+      "uncertainty_and_individual_variation_es": "No asignar ciclo, riesgo ni diagnóstico sin historia clínica; las manifestaciones de Sarek no son universales.",
+      "source_ids": [
+        "TOS_AMOK_TIME",
+        "L02C_ST_BENDII"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "confirmed_identity",
+        "patient_baseline_and_history",
+        "observations_with_provenance",
+        "available_tests",
+        "clinician_qualification"
+      ]
+    },
+    {
+      "profile_id": "l02c_borg_augmented",
+      "species_id": null,
+      "entity_kind": "MULTISPECIES_AUGMENTATION_NOT_SPECIES",
+      "evidence_ref": "lore/equipment/lore02_b_equipment_catalogue_v0.1.json",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "documented_clinical_relevance_es": "Implantes, nanoprobes y adaptación ex Borg pueden requerir intervención específica; no son anatomía de una especie nueva.",
+      "uncertainty_and_individual_variation_es": "La tecnología y fisiología de origen difieren por individuo; la reversión no es automática.",
+      "source_ids": [
+        "L02C_ST_BORG"
+      ],
+      "allow_default_human_reference": false,
+      "normal_vitals": null,
+      "pharmacology": null,
+      "species_specific_doses": null,
+      "scope": "REFERENCE_NOT_INDIVIDUAL_DIAGNOSIS",
+      "required_inputs": [
+        "underlying_species",
+        "implant_inventory_actual",
+        "medical_history",
+        "authorized_diagnostics"
+      ]
+    }
+  ]
+}

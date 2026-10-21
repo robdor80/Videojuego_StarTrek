@@ -570,8 +570,8 @@ Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json
 | Apartado | Estado | Alcance y criterio de cierre |
 |---|---|---|
 | A — Tecnología de naves y estaciones | ✅ COMPLETE | PR #31 fusionada en `main` (2026-10-21; `d1ee2af3`): 59 fichas, 9 operadores, 14 familias de estación y 50 casos negativos. Cierre documental, no integración CoreRPG/UE5. |
-| B — Equipamiento personal y especializado | 🟧 NEEDS_REVIEW | Investigación y modelado documental terminados para el alcance actual en PR #33: 73 fichas, 15 perfiles de dotación, 6 plantillas de misión y 45 casos adversariales; 7 flujos CI satisfactorios (pendiente aprobación/fusión). No implementado en CoreRPG/UE5. |
-| C — Medicina y xenobiología | ⬜ TODO | Diagnóstico, tratamientos y particularidades biológicas con cautelas clínicas explícitas. |
+| B — Equipamiento personal y especializado | ✅ COMPLETE | PR #33 fusionada en `main` (2026-10-21; `2306becaf7f9`): 73 fichas, 15 perfiles de dotación, 6 plantillas de misión y 45 casos adversariales; 8 comprobaciones Actions satisfactorias después de la fusión. Cierre documental, no integración CoreRPG/UE5. |
+| C — Medicina y xenobiología | 🟨 IN_PROGRESS | Diagnóstico, tratamientos y particularidades biológicas con cautelas clínicas explícitas. |
 | D — Ciencia y fenómenos | ⬜ TODO | Métodos científicos, anomalías, incertidumbre observacional y peligros. |
 | E — Integración y auditoría A–D | ⬜ TODO | Cruces documentales, fuentes, regresiones, lagunas y revisión humana. |
 
