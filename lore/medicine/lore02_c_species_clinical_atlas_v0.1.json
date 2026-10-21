@@ -55,11 +55,12 @@
       "profile_id": "l02c_species_bajoran",
       "species_id": "bajoran",
       "evidence_ref": "lore/species/evidence/bajoran_v0.2.json",
-      "claim_class": "OFFICIAL_REFERENCE",
-      "documented_clinical_relevance_es": "Kalla-Nohra se vincula a determinadas exposiciones en campos de trabajo cardassianos, no a la genética bajorana.",
-      "uncertainty_and_individual_variation_es": "Historia ambiental no equivale a diagnóstico; evitar etiquetar a todos los bajoranos.",
+      "claim_class": "INFERRED",
+      "documented_clinical_relevance_es": "Exposiciones históricas a Kalla-Nohra y casos de enfermedad de Orkett en campos de trabajo permiten estudiar infecciones, riesgos ocupacionales y diagnósticos genéticos diferenciales.",
+      "uncertainty_and_individual_variation_es": "El caso Seska demuestra que alegar una enfermedad y un injerto no sustituye pruebas genéticas. Ninguna patología corresponde a todos los bajoranos.",
       "source_ids": [
-        "L02C_ST_JETREL"
+        "L02C_ST_JETREL",
+        "L02C_MA_ORKETT"
       ],
       "allow_default_human_reference": false,
       "normal_vitals": null,
@@ -123,9 +124,11 @@
       "species_id": "bolian",
       "evidence_ref": "lore/species/evidence/bolian_v0.2.json",
       "claim_class": "INFERRED",
-      "documented_clinical_relevance_es": "Existe documentación general de especie en LORE-01, pero no suficiente aquí para fijar constantes clínicas y tratamientos fiables.",
-      "uncertainty_and_individual_variation_es": "Sin pauta, dosis, rango de signos vitales ni susceptibilidad específica hasta disponer de evidencias directas.",
-      "source_ids": [],
+      "documented_clinical_relevance_es": "VOY Prototype establece que la transfusión de sangre vulcana a un boliano tiene un riesgo incompatible grave; la sustitución de sangre entre especies exige validación específica.",
+      "uncertainty_and_individual_variation_es": "No aplicar donación universal ni basar compatibilidad sanguínea en aspecto o parentesco humanoide.",
+      "source_ids": [
+        "L02C_MA_BOLIAN_BLOOD"
+      ],
       "allow_default_human_reference": false,
       "normal_vitals": null,
       "pharmacology": null,
@@ -186,9 +189,11 @@
       "species_id": "changeling",
       "evidence_ref": "lore/species/evidence/changeling_v0.2.json",
       "claim_class": "INFERRED",
-      "documented_clinical_relevance_es": "Los metamorfos requieren modelo biológico diferenciado; sus formas visibles no garantizan órganos humanoides.",
-      "uncertainty_and_individual_variation_es": "Nunca establecer anatomía de humanoide por apariencia transitoria ni universalizar tratamientos.",
-      "source_ids": [],
+      "documented_clinical_relevance_es": "El virus morfogénico de DS9 afecta a Fundadores y otros individuos vinculados; la biología cambiante requiere análisis no humanoide.",
+      "uncertainty_and_individual_variation_es": "El mecanismo documentado dependió de condiciones históricas de transmisión y actuación de Sección 31; no declarar contagio de cualquier contacto ni anatomía fija.",
+      "source_ids": [
+        "L02C_MA_MORPHOGENIC"
+      ],
       "allow_default_human_reference": false,
       "normal_vitals": null,
       "pharmacology": null,
@@ -291,9 +296,11 @@
       "species_id": "jem_hadar",
       "evidence_ref": "lore/species/evidence/jem_hadar_v0.2.json",
       "claim_class": "INFERRED",
-      "documented_clinical_relevance_es": "La fisiología y necesidades específicas aparecen en el corpus de especies de LORE-01; deben condicionarse a individuo y contexto.",
-      "uncertainty_and_individual_variation_es": "No convertir dependencia o jerarquía en receta terapéutica automática.",
-      "source_ids": [],
+      "documented_clinical_relevance_es": "El metabolismo de Jem'Hadar modificados por el Dominio requiere el compuesto ketracel-white en la mayoría de casos documentados; se conocen excepciones individuales con autosíntesis de la enzima ausente.",
+      "uncertainty_and_individual_variation_es": "La necesidad de suministro, estado de privación y tolerancia no se deduce del uniforme ni de su cargo. Adolescencia y edad adulta no se asumen equivalentes.",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ],
       "allow_default_human_reference": false,
       "normal_vitals": null,
       "pharmacology": null,
