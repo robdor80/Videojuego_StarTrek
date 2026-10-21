@@ -27,9 +27,7 @@
       "source_ids": [
         "ST_OFFICIAL_24C_FLEET_CLASSES"
       ],
-      "known_class_examples": [
-        "modernización documental por clase"
-      ],
+      "known_class_examples": [],
       "completeness": "REPRESENTATIVE_NOT_EXHAUSTIVE",
       "variant_rule": "INSTANCE_CLASS_ERA_REFIT_EVIDENCE_REQUIRED",
       "anti_generalisation": "La disponibilidad de una tecnología de flota no implica instalación en cualquier buque; época, clase y refit siempre mandan.",
