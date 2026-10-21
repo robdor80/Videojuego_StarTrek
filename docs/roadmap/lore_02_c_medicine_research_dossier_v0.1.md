@@ -23,7 +23,9 @@
 | lore02_c_procedures_v0.1.json | 26 protocolos de diseño vinculados a material existente y requisitos | No son recetas reales ni procedimientos implementados |
 | lore02_c_medical_agents_v0.1.json | 13 medicamentos y tecnologías presentes en referencias Star Trek | Datos cualitativos: sin dosis, eficacia, compatibilidad universal ni disponibilidad automática |
 | lore02_c_facilities_staff_v0.1.json | 9 instalaciones + 12 roles | No crean camas, especialistas ni telemedicina |
+| lore02_c_civilization_medical_profiles_v0.1.json | 13 perfiles interculturales de sanidad: Federación, vulcanos, klingon, bajoranos, cardassianos, romulanos, Trill, betazoides, vidiiianos, Dominio, cambiantes, andorianos y ferengi | Ningún perfil acredita superioridad o competencia automática de una facción |
 | gameplay/medical/lore02_c_diagnostic_workflow_v0.1.json | 11 tipos de pasos con límites epistémicos, consentimiento y autoridad | El Host y Core deberán implementar transiciones posteriormente |
+| lore02_c_clinical_decision_matrix_v0.1.json | 38 enlaces observación → diagnóstico diferencial → respuesta y ocho vínculos terapéuticos condicionados | Propuestas documentales; no prescripciones, ni stock, ni simulación clínica |
 | lore02_c_adversarial_scenarios_v0.1.json | 62 casos con respuesta requerida/prohibida | Son pruebas documentales; no son partidas ejecutadas |
 
 Todos son **editoriales**, con estado de revisión y sin edición directa de los contratos fundamentales. Los arquetipos GAME_ADDITION (accidente, hipoxia, contaminación genérica, crisis de recursos) no se venden como nombres de enfermedades canónicas.
@@ -125,6 +127,12 @@ La capacidad asistencial de una nave o estación se calcula con la intersección
 - Nunca deducir peligrosidad, contagio, competencia o medicina mejor/peor a partir de pertenencia klingon, romulana, cardassiana, borg, vidiiana o cualquier otra. Variantes de tratamientos quedan por operador, instalación, época, recursos y persona.
 - Los pacientes tienen vida privada y posibles secuelas emocionales; no patologizar desacuerdo, trauma o diversidad cultural sin valoración.
 - Población civil, prisioneros y poblaciones desconocidas requieren especial cautela frente a experimentación, muestras no consentidas y prejuicios.
+
+### 8.1. Perfiles interculturales sin extrapolaciones
+
+Se registran 13 perfiles por operador, institución o comunidad. Cada perfil enlaza especies o autoridad ya presente en LORE-01 y en contratos de mando, resume ejemplos concretos y explicita lo **no inferible**. No se equipara acceso a fármacos con una civilización determinada, ni se presupone que un médico klingon, romulano, cardassiano, vidiiiano, vulcano o ferengi actúe con una competencia o conducta fija.
+
+La matriz de decisiones asociada enlaza los **38 cuadros** con observaciones, diagnósticos diferenciales, procedimientos condicionados y, solo cuando la referencia lo justifica, **ocho relaciones propuestas** con agentes y tecnologías. Distingue vínculos episódicos, opciones que exigirán validación del paciente, experimentos aislados y referencias históricas expresamente no prescriptivas. La matriz no decide efectos de CoreRPG.
 
 ## 9. Frontera técnica y referencias cruzadas
 
