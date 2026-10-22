@@ -35,6 +35,22 @@ El autor aprueba específicamente el arco **investigación → validación → e
 - La investigación puede avanzar fuera de escena mediante NPC autorizados, sujeta a tiempo y recursos persistentes. No se simulan recursos infinitos.
 - **Omega** sigue fuera del circuito de desbloqueo tecnológico ordinario salvo nueva decisión expresa del autor.
 
+## Ampliación de autoría — Legado científico y reconocimiento duradero
+
+El autor propone el ejemplo de su oficial científico **Kazan Rise**, al que años después se recuerde por una innovación conocida como **«Sensores Rise»**. Este nombre es **ilustrativo y no presupone una tecnología existente ni un descubrimiento ya realizado**. Es una mecánica de **legado emergente**, no sólo una cinemática escrita a mano:
+
+- Las contribuciones científicas significativas —también de NPC y equipos— conservan identificador, evidencia, descubridores y colaboradores, fecha, organización y reconocimiento.
+- Una tecnología validada y autorizada puede recibir un **nombre oficial honorífico** que reconozca a quien la desarrolló (o al equipo). La denominación **no es automática** ni se otorga por cada hallazgo.
+- Una vez aprobada la denominación, los informes, registros históricos, manuales y conversaciones futuras pueden utilizarla, de acuerdo con el conocimiento individual de cada personaje, incluso **años después** y en naves distintas.
+- El equipo debe estar **realmente instalado, probado y activo** en la nave que afirma utilizarlo. Saber qué son los «Sensores Rise» no supone poseerlos.
+- El jugador puede cambiar de destino o ascender sin perder el crédito histórico de investigaciones anteriores.
+- La Flota puede adoptar mejoras progresivamente en diferentes clases compatibles, previa autorización, reforma en astillero y recursos; sin desbloqueo universal.
+- Los diálogos generados por IA no inventan autorías, prestaciones ni conocimiento que los NPC no posean.
+
+**Ejemplo futuro, no guion obligatorio:** «Capitán, los sensores Rise detectan una anomalía de largo alcance».
+
+Política estructurada: `lore/science/lore02_d_scientific_legacy_policy_v0.1.json`.
+
 ## Estado y frontera de implementación
 
 Estas son decisiones de autoría aprobadas; los esquemas LORE-02 D existentes continúan `NEEDS_REVIEW` hasta revisar su integración documental y completar el proceso de la PR. Esto **no** afirma que exista laboratorio funcional, una misión Omega implementada, progreso científico, nuevas tecnologías, astilleros interactivos ni soporte específico de CoreRPG/UE5. LORE-02 E auditará cruces entre A–D y el diseño del paso de LORE a datos utilizables; la implementación será una fase posterior.
