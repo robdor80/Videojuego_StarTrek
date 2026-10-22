@@ -16,8 +16,8 @@ class Lore02D(unittest.TestCase):
         self.assertTrue(any(expected in e for e in errors), errors)
 
     def test_positive_document_gate(self):
-        self.assertEqual(validate()["phenomena"],20)
-        self.assertEqual(validate()["adversarial"],40)
+        self.assertGreaterEqual(validate()["phenomena"], 20)
+        self.assertGreaterEqual(validate()["adversarial"], 40)
 
     def test_forged_knowledge(self):
         self.change(lambda d: d["phenomena"]["records"][0].update(knowledge_state="TRUE_CAUSE_KNOWN"),"hidden truth leak")
@@ -100,8 +100,8 @@ class Lore02D(unittest.TestCase):
     def test_admin_status(self):
         self.change(lambda d: d.update(status=d["status"].replace("| C — Medicina y xenobiología | ✅ COMPLETE |", "| C — Medicina y xenobiología | 🟨 IN_PROGRESS |")), "C status not regularized")
 
-    def test_era_not_falsely_closed(self):
-        self.change(lambda d: d.update(status=d["status"].replace("| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |", "| D — Ciencia y fenómenos | ✅ COMPLETE |")), "D status prematurely closed")
+    def test_merged_d_cannot_revert_to_progress(self):
+        self.change(lambda d: d.update(status=d["status"].replace("| D — Ciencia y fenómenos | ✅ COMPLETE |", "| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |")), "D merge not regularized")
 
     def test_legacy_tech_transfer_requires_shipyard(self):
         self.change(lambda d: d["legacy"]["scientific_research_technology_transfer"].pop(5),

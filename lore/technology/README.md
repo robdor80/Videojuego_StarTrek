@@ -76,7 +76,7 @@ Generators must not use technology that is invalid for the date, culture or plat
 
 Coverage remains progressive and should be driven by gameplay and procedural-universe needs.
 
-## LORE-02 A — tecnología de naves y estaciones (en investigación)
+## LORE-02 A — tecnología de naves y estaciones (cierre documental PR #31)
 
 - [Plan maestro A–E](../../docs/roadmap/lore_02_master_plan_v0.1.md).
 - [Notas de investigación 02-A](../../docs/roadmap/lore_02_a_research_notes_v0.1.md).
@@ -85,7 +85,7 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 - [14 casos negativos](ship_station_cases_v0.1.json): cambios de época, sistema no instalado, observación parcial, acciones no autorizadas y DLC Delta reservado.
 - Validación: `python tools/validation/validate_lore02_a.py`; regresiones: `python tools/validation/test_lore02_a.py`.
 
-**Estado:** `IN_PROGRESS`; el conjunto es un primer corte de investigación para PR Draft. No altera contratos de gameplay, categorías CoreRPG ni equipos UE5. Faltan impulso/energía/comunicaciones/soporte vital y tecnología específica de estaciones y otras civilizaciones; no declarar fase A `COMPLETE` hasta resolver las lagunas.
+**Estado de fase:** `COMPLETE` documental tras PR #31; 14 fichas iniciales + 45 fichas de ampliación (`lore02_a_system_atlas_v0.2.json`), 9 operadores, 14 familias de instalación y 50 casos negativos. La nota anterior describía el primer corte histórico. `NEEDS_REVIEW` en fichas JSON no significa autorización de importación/runtime. No altera CoreRPG ni UE5; quedan lagunas de canon y especificaciones por clase/época para implementación futura.
 
 ### Clase Valhalla — decisiones de diseño aprobadas
 
@@ -105,4 +105,4 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 - [Addendum del autor — Valhalla y auxiliar Defiant](valhalla_creative_addendum_2026-10-21.md): cronología libre, matrícula de trabajo, blindaje, hangares, camuflaje e interiores jugables.
 - Pruebas de cierre: `python tools/validation/validate_lore02_a_completion.py` y `python tools/validation/test_lore02_a_completion.py`; se ejecutan junto a las pruebas documentales v0.1.
 
-**Importante:** el texto de primer corte que precede a esta sección describe el estado histórico de investigación. A-G01–08 ya tienen investigación cualitativa suficiente para revisión, no código UE5/CoreRPG. El autor autoriza la fusión; después se verificará `main` y se pondrá A `COMPLETE`.
+**Importante:** el texto de primer corte que precede a esta sección describe el estado histórico de investigación. A-G01–08 ya tienen investigación cualitativa suficiente para revisión, no código UE5/CoreRPG. La PR #31 fue fusionada y verificada en `main`; A consta como `COMPLETE` **documental**, sin integración operativa. Se conserva el contexto histórico de la entrega original.
