@@ -14,6 +14,7 @@ FILES = {
     "methods": BASE + "lore02_d_research_methods_v0.1.json",
     "facilities": BASE + "lore02_d_facilities_roles_v0.1.json",
     "cases": BASE + "lore02_d_research_cases_v0.1.json",
+    "legacy": BASE + "lore02_d_scientific_legacy_policy_v0.1.json",
     "adversarial": BASE + "lore02_d_adversarial_scenarios_v0.1.json",
     "registry": "sources/source_registry/source_registry.json",
     "tech": "lore/technology/lore02_a_system_atlas_v0.2.json",
@@ -34,6 +35,7 @@ ANCHORS = ["lore/science/scientific_domain_contract.json",
            "lore/operations/cross_layer_reference_v0.1.json",
            "docs/roadmap/lore_02_d_science_research_dossier_v0.1.md",
            "docs/decisions/lore_to_game_rule.md",
+           "docs/decisions/lore_02_d_author_decisions_v0.1.md",
            "lore/medicine/lore02_c_conditions_v0.1.json",
            "gameplay/ship_operations/era_technology_matrix.json"]
 
@@ -53,7 +55,7 @@ def validate_data(d, *, check_paths=True):
     def need(ok, message):
         if not ok:
             errors.append(message)
-    for key in ("disciplines", "phenomena", "methods", "facilities", "cases", "adversarial"):
+    for key in ("disciplines", "phenomena", "methods", "facilities", "cases", "adversarial", "legacy"):
         doc = d[key]
         need(doc.get("schema_version") == "0.1.0", key + ": schema")
         need(doc.get("phase") == "LORE-02 D", key + ": wrong phase")
@@ -176,6 +178,65 @@ def validate_data(d, *, check_paths=True):
     wf=d["methods"].get("workflow_states",[])
     need(wf[:2]==["QUESTION","OBSERVATION_REQUESTED"] and "INCONCLUSIVE_OR_REVISED" in wf,
          "scientific workflow knowledge leap")
+    # Approved author decisions and future scientific legacy (not runtime).
+    legacy = d["legacy"]
+    choices = legacy.get("author_decisions", {})
+    need(choices.get("scientific_catalogue") == "EXTENSIBLE" and
+         choices.get("autonomous_science") == "YES" and
+         choices.get("consequences") == "PERSISTENT_PROPORTIONATE",
+         "legacy: author decisions")
+    access = legacy.get("player_accessibility", {})
+    need(access.get("captain_science_expertise_required") is False and
+         access.get("real_world_formulas_required") is False and
+         access.get("science_career_has_optional_depth") is True and
+         access.get("scientists_present_findings_in_clear_language") is True,
+         "legacy: required real-world science")
+    stages = legacy.get("scientific_research_technology_transfer", [])
+    stage_ids = [s.get("id") for s in stages]
+    required_stages = ["DISCOVERY", "SUSTAINED_RESEARCH", "INDEPENDENT_VALIDATION",
+                       "FLEET_EVALUATION", "ENGINEERING_ADAPTATION",
+                       "SHIPYARD_INSTALLATION", "POST_REFIT_TRIALS",
+                       "OPTIONAL_GRADUAL_FLEET_ADOPTION"]
+    need(stage_ids == required_stages and all(s.get("may_fail") is True for s in stages),
+         "legacy: incomplete shipyard transfer")
+    leg = legacy.get("scientific_legacy", {})
+    need(leg.get("can_name_after_discoverer") is True and
+         leg.get("naming_is_not_automatic") is True and
+         leg.get("official_name_requires_approval") is True and
+         leg.get("recognized_team_credits_possible") is True,
+         "legacy: automatic naming or missing attribution")
+    need(leg.get("names_survive_years_passed") is True and
+         leg.get("names_survive_character_career_change") is True and
+         leg.get("conversation_requires_actor_knowledge") is True and
+         leg.get("ship_must_have_commissioned_technology_to_claim_its_function") is True,
+         "legacy: fictional fame or uninstalled technology")
+    persistence = legacy.get("persistent_entities_future_contract", {})
+    need(all(k in persistence and len(persistence[k]) >= 3
+             for k in ("discovery", "technology", "ship_installation", "legacy")),
+         "legacy: missing persistence concepts")
+    exceptions = legacy.get("exception_rules", {})
+    need(exceptions.get("playable_time_travel_allowed") is False and
+         exceptions.get("time_travel_technology_unlock_allowed") is False,
+         "legacy: playable time travel")
+    omega = exceptions.get("omega", {})
+    need(omega.get("author_mandatory_special_mission") is True and
+         omega.get("minimum_authored_special_missions", 0) >= 1 and
+         omega.get("mission_automatically_triggered_by_every_omega_observation") is False and
+         omega.get("classified_information_access_required") is True and
+         omega.get("normal_tech_transfer_allowed") is False,
+         "legacy: omega mission or classification")
+    worm = exceptions.get("wormholes", {})
+    need(worm.get("traversal_allowed") is True and
+         worm.get("rarity") == "RARE" and
+         worm.get("routine_random_shortcuts_allowed") is False and
+         worm.get("requires_valid_astrography_link") is True,
+         "legacy: wormhole transit rarity")
+    core = legacy.get("core_and_presentation", {})
+    need(core.get("CoreRPG") == "sole_authority_for_knowledge_technology_ship_modifications_and_time" and
+         core.get("AI") == "dialogue_from_actor_permitted_knowledge_only",
+         "legacy: authority leak")
+    if check_paths:
+        need(file_exists(legacy.get("decision_ref")), "legacy: decision reference missing")
     st=d["status"]
     need("| C — Medicina y xenobiología | ✅ COMPLETE |" in st,"C status not regularized")
     need("| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |" in st,"D status prematurely closed")
