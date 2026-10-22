@@ -116,5 +116,28 @@ class Lore02ECrossAuditTests(unittest.TestCase):
             "catalogue count regression")
 
 
+    def test_legacy_technology_source_spoof(self):
+        self.mutate(lambda d: d["legacy_technology"]["records"][0]["provenance"][0].update(
+            source_id="FORGED_HISTORICAL_REFERENCE"), "unregistered provenance")
+
+    def _accepted_scientific_extension(self, table, identity):
+        value = copy.deepcopy(self.data)
+        collection = value[table]["records"]
+        extended = copy.deepcopy(collection[0])
+        extended[identity] = extended[identity] + "_additional"
+        collection.append(extended)
+        value[table]["record_count"] += 1
+        errors, _ = validate_data(value, check_paths=False)
+        self.assertFalse(errors, errors)
+
+    def test_scientific_disciplines_are_extensible(self):
+        self._accepted_scientific_extension("disciplines", "discipline_id")
+
+    def test_scientific_methods_are_extensible(self):
+        self._accepted_scientific_extension("methods", "method_id")
+
+    def test_scientific_phenomena_are_extensible(self):
+        self._accepted_scientific_extension("phenomena", "phenomenon_id")
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
