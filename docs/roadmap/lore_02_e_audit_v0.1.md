@@ -28,6 +28,18 @@
 
 **Discrepancias de canon que requieran reescritura inmediata de las decisiones del autor:** ninguna identificada en esta auditoría estructural. **Lagunas con incertidumbre:** persisten fuentes no primarias, requisitos cuantitativos sin certificar, acceso Omega y compatibilidades particulares. No se resuelven de forma silenciosa ni constituyen bloqueo de la **coherencia documental**; sí pueden bloquear una implementación específica.
 
+## 2 bis. Revisión independiente posterior al primer verde (2026-10-22)
+
+Tras contrastar los documentos de las cuatro áreas y los cambios de la PR #36 con el árbol de archivos real:
+
+- **E-LINK-08, corregido:** el dossier histórico `lore_02_a_eight_gaps_dossier_v0.2.md` contenía dos enlaces relativos a las decisiones de la nave Valhalla que resolvían dentro de `docs/roadmap/` en vez de `lore/technology/`. Se repararon ambos sin cambiar el contenido canónico.
+- **E-HIST-09, corregido:** textos anteriores al cierre de A mantenían referencias a una fusión futura y al estado de investigación del 20-10. Se añadió una nota temporal y se aclaró el índice vigente, conservando los informes históricos íntegros.
+- **E-EXT-10, corregido:** los validadores D/E exigían exactamente 14 disciplinas, 20 fenómenos y 9 métodos, contradiciendo el acuerdo de que esas cantidades son una base ampliable. Se interpretan como **mínimos de no-regresión**, preservando unicidad, fuente, esquema, referencias, decisiones de autoría y metadatos de recuento. D informa ahora los recuentos reales.
+- **E-SRC-11, corregido:** la inspección de procedencia del validador E no recorría la lista `provenance[]` del catálogo tecnológico inicial de 14 fichas. Queda incluida y dispone de prueba de inyección de fuente inexistente.
+- **Alcance y reserva:** este pase comprueba coherencia estructural, enlaces Markdown, documentación de decisiones y contratos. **No equivale** a una recertificación escena a escena del canon audiovisual, a pruebas de integración CoreRPG/UE5 ni a la revisión completa de todos los documentos históricos ajenos a LORE-02.
+
+La suite propia de E ahora dispone de **27 pruebas: 23 negativas y 4 positivas**, incluidas tres pruebas de crecimiento permitido de los catálogos científicos. Los resultados válidos serán los de GitHub Actions sobre el último commit, no los de un SHA anterior.
+
 ## 3. Contratos compartidos y fronteras
 
 | Dominio | Fuente documental | Titular de verdad futura | Control necesario antes de usar |
@@ -62,7 +74,7 @@
 ## 5. Pruebas y criterios de cierre
 
 1. Validador E: unicidad de IDs, cantidades registradas, integridad de referencias entre A/B/C/D, fuentes, rutas conocidas, privacidad/estado y preservación de decisiones D.
-2. Pruebas E de mutación: introducir orfandad, falsificar canon/fuentes, filtrar privacidad, permitir viajes temporales o Omega ordinario, premiar nombres automáticos, saltar astillero o cerrar E sin autorización debe ser rechazado.
+2. Pruebas E de mutación: introducir orfandad, falsificar canon/fuentes (también en catálogos iniciales), filtrar privacidad, permitir viajes temporales u Omega ordinario, premiar nombres automáticos, saltar astillero o cerrar E sin autorización debe ser rechazado. Adiciones científicas bien formadas sí deben admitirse.
 3. Regresiones en CI: validadores/test anteriores A–D, LORE-01 A1–E y tests de referencia F07–F15. Todos documentales/offline; no sustituyen pruebas de UE5 ni CoreRPG.
 4. Verificación de workflow/pr después de cada cambio; no dar CI como verde antes de ejecutar y consultar GitHub Actions. La rama E no equivale a fusión.
 5. **Aprobación humana y fusión posterior**: sólo el autor autoriza pasar E y LORE-02 a cierre completo. Entonces, y sólo tras verificar `main`, podrá elevarse estado e índice principal.
