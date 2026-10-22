@@ -1,6 +1,6 @@
 # LORE-02 C — Medicina y xenobiología
 
-Bloque documental **NEEDS_REVIEW**, no ejecución en UE5/CoreRPG.
+Fase C **cerrada documentalmente tras PR #34**, sin ejecución en UE5/CoreRPG. `NEEDS_REVIEW` identifica fichas no homologadas para importación, no revierte la fusión de la fase.
 
 ## Documentos
 
@@ -17,4 +17,4 @@ Bloque documental **NEEDS_REVIEW**, no ejecución en UE5/CoreRPG.
 
 Contratos heredados vigentes: [capacidad](medical_capability_contract.json), [estado médico](../../gameplay/medical/medical_state_model.json), [fisiología base](../../gameplay/medical/species_medical_hooks.json), [acceso clínico](../../gameplay/records_and_logs/access_and_privacy_rules.json).
 
-No están definidos diagnósticos infalibles, dosis, tratamientos automáticos, médicos siempre presentes ni parámetros fisiológicos inventados. **No publicar la palabra COMPLETE hasta revisión humana y fusión.**
+No están definidos diagnósticos infalibles, dosis, tratamientos automáticos, médicos siempre presentes ni parámetros fisiológicos inventados. **COMPLETE documental tras fusión**, no capacidad diagnóstica ya implementada; las decisiones clínicas individuales y las autorizaciones requieren estado real de CoreRPG.
