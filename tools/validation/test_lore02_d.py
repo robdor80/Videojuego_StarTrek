@@ -103,5 +103,53 @@ class Lore02D(unittest.TestCase):
     def test_era_not_falsely_closed(self):
         self.change(lambda d: d.update(status=d["status"].replace("| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |", "| D — Ciencia y fenómenos | ✅ COMPLETE |")), "D status prematurely closed")
 
+    def test_legacy_tech_transfer_requires_shipyard(self):
+        self.change(lambda d: d["legacy"]["scientific_research_technology_transfer"].pop(5),
+                    "legacy: incomplete shipyard transfer")
+
+    def test_legacy_no_automatic_naming(self):
+        self.change(lambda d: d["legacy"]["scientific_legacy"].update(naming_is_not_automatic=False),
+                    "legacy: automatic naming or missing attribution")
+
+    def test_legacy_official_name_requires_approval(self):
+        self.change(lambda d: d["legacy"]["scientific_legacy"].update(official_name_requires_approval=False),
+                    "legacy: automatic naming or missing attribution")
+
+    def test_legacy_credit_survives_years(self):
+        self.change(lambda d: d["legacy"]["scientific_legacy"].update(names_survive_years_passed=False),
+                    "legacy: fictional fame or uninstalled technology")
+
+    def test_legacy_npc_cannot_claim_uninstalled_tech(self):
+        self.change(lambda d: d["legacy"]["scientific_legacy"].update(
+                    ship_must_have_commissioned_technology_to_claim_its_function=False),
+                    "legacy: fictional fame or uninstalled technology")
+
+    def test_legacy_no_required_real_physics(self):
+        self.change(lambda d: d["legacy"]["player_accessibility"].update(real_world_formulas_required=True),
+                    "legacy: required real-world science")
+
+    def test_legacy_no_playable_time_travel(self):
+        self.change(lambda d: d["legacy"]["exception_rules"].update(playable_time_travel_allowed=True),
+                    "legacy: playable time travel")
+
+    def test_legacy_mandatory_omega_special_mission(self):
+        self.change(lambda d: d["legacy"]["exception_rules"]["omega"].update(
+                    author_mandatory_special_mission=False),
+                    "legacy: omega mission or classification")
+
+    def test_legacy_omega_classification(self):
+        self.change(lambda d: d["legacy"]["exception_rules"]["omega"].update(
+                    classified_information_access_required=False),
+                    "legacy: omega mission or classification")
+
+    def test_legacy_wormholes_must_remain_rare(self):
+        self.change(lambda d: d["legacy"]["exception_rules"]["wormholes"].update(rarity="COMMON"),
+                    "legacy: wormhole transit rarity")
+
+    def test_legacy_no_automatic_universal_refits(self):
+        self.change(lambda d: d["legacy"]["scientific_research_technology_transfer"][4].update(
+                    may_fail=False),
+                    "legacy: incomplete shipyard transfer")
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
