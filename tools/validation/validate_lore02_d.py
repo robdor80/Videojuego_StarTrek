@@ -239,8 +239,8 @@ def validate_data(d, *, check_paths=True):
         need(file_exists(legacy.get("decision_ref")), "legacy: decision reference missing")
     st=d["status"]
     need("| C — Medicina y xenobiología | ✅ COMPLETE |" in st,"C status not regularized")
-    need("| D — Ciencia y fenómenos | 🟨 IN_PROGRESS |" in st,"D status prematurely closed")
-    need("| E — Integración y auditoría A–D | ⬜ TODO |" in st,"E prematurely closed")
+    need("| D — Ciencia y fenómenos | ✅ COMPLETE |" in st,"D merge not regularized")
+    need("| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |" in st,"E requires ongoing author review")
     if check_paths:
         for anchor in ANCHORS:
             need(file_exists(anchor),"missing dependency: "+anchor)
