@@ -105,4 +105,4 @@ Coverage remains progressive and should be driven by gameplay and procedural-uni
 - [Addendum del autor — Valhalla y auxiliar Defiant](valhalla_creative_addendum_2026-10-21.md): cronología libre, matrícula de trabajo, blindaje, hangares, camuflaje e interiores jugables.
 - Pruebas de cierre: `python tools/validation/validate_lore02_a_completion.py` y `python tools/validation/test_lore02_a_completion.py`; se ejecutan junto a las pruebas documentales v0.1.
 
-**Importante:** el texto de primer corte que precede a esta sección describe el estado histórico de investigación. A-G01–08 ya tienen investigación cualitativa suficiente para revisión, no código UE5/CoreRPG. El autor autoriza la fusión; después se verificará `main` y se pondrá A `COMPLETE`.
+**Importante:** el texto de primer corte que precede a esta sección describe el estado histórico de investigación. A-G01–08 ya tienen investigación cualitativa suficiente para revisión, no código UE5/CoreRPG. La PR #31 fue fusionada y verificada en `main`; A consta como `COMPLETE` **documental**, sin integración operativa. Se conserva el contexto histórico de la entrega original.
