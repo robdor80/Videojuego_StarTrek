@@ -31,7 +31,7 @@ permissions:
 
 jobs:
   cross-domain:
-    name: Referencias cruzadas, decisiones de autoría y 23 pruebas negativas
+    name: Referencias cruzadas y 23 pruebas (22 negativas y 1 control)
     runs-on: ubuntu-latest
     timeout-minutes: 15
     steps:
