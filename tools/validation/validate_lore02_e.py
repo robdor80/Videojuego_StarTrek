@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import json
-from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -51,6 +50,8 @@ REQUIRED_ANCHORS = [
     ".github/workflows/lore02-c-medicine.yml",
     ".github/workflows/lore02-d-science.yml",
 ]
+# D1: baseline minimum, not a closed list of future scientific records.
+EXTENSIBLE = {"disciplines", "phenomena", "methods", "science_cases"}
 EXPECTED = {
     "technology": 45, "legacy_technology": 14, "equipment": 73,
     "loadouts": 15, "conditions": 38, "procedures": 26, "agents": 13,
@@ -84,7 +85,9 @@ def validate_data(data, *, check_paths=True):
         need(len(ids) == len(set(ids)) and all(isinstance(x, str) and bool(x) for x in ids),
              name + ": duplicate or empty identifier")
         if name in EXPECTED:
-            need(len(rows) == EXPECTED[name], name + ": catalogue count regression")
+            minimum = EXPECTED[name]
+            need(len(rows) >= minimum if name in EXTENSIBLE else len(rows) == minimum,
+                 name + ": catalogue count regression")
         return rows, set(ids)
     a, a_ids = records("technology", "records", "technology_id")
     a0, a0_ids = records("legacy_technology", "records", "technology_id")
@@ -108,7 +111,7 @@ def validate_data(data, *, check_paths=True):
     technology_ids = a_ids | a0_ids
     need(not (a_ids & a0_ids), "technology: duplicate between initial and extension")
     need(len(technology_ids) == 59, "technology: total count regression")
-    need(len(science_fac) == 6 and len(science_roles) == 10, "science facilities/roles count")
+    need(len(science_fac) >= 6 and len(science_roles) >= 10, "science facilities/roles count")
     need(len(med_fac) == 9 and len(med_roles) == 12, "medical facilities/roles count")
     need(len(operator_rows) == 9 and len(civil_rows) == 13,
          "technology/medicine: organizational profile regression")
@@ -192,23 +195,26 @@ def validate_data(data, *, check_paths=True):
     need(len(source_ids) == len(set(source_ids)) and len(sources) >= 501,
          "source registry: missing/duplicate sources")
     registry = set(source_ids)
-    for name in ("technology", "operators", "equipment", "conditions", "procedures",
-                 "agents", "medical_matrix", "species", "civilizations", "disciplines",
-                 "phenomena", "methods", "science_facilities", "science_cases"):
+    for name in ("legacy_technology", "technology", "operators", "equipment",
+                 "conditions", "procedures", "agents", "medical_matrix", "species",
+                 "civilizations", "disciplines", "phenomena", "methods",
+                 "science_facilities", "science_cases"):
         doc = data[name]
         rows = [v for v in doc.values() if isinstance(v, list)]
         for group in rows:
             for r in group:
                 if not isinstance(r, dict):
                     continue
-                p = r.get("provenance", {})
-                if not isinstance(p, dict):
-                    continue
+                provenance = r.get("provenance", {})
                 ids = list(r.get("source_ids", [])) + list(r.get("canon_basis_sources", []))
-                ids += list(p.get("source_ids", []))
+                if isinstance(provenance, dict):
+                    ids += list(provenance.get("source_ids", []))
+                elif isinstance(provenance, list):
+                    ids += [x.get("source_id") for x in provenance if isinstance(x, dict)]
                 for identifier in ids:
                     checked += 1
-                    need(identifier in registry, name + ": unregistered provenance " + str(identifier))
+                    need(isinstance(identifier, str) and identifier in registry,
+                         name + ": unregistered provenance " + str(identifier))
     for name in ("technology", "equipment", "conditions", "agents", "disciplines", "phenomena"):
         need(data[name].get("mode") == "EDITORIAL_NON_RUNTIME",
              name + ": runtime boundary breach")
