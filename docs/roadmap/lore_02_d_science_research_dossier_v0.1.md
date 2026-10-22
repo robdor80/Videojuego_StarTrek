@@ -42,6 +42,20 @@ Un pipeline posible tras aprobar todos los LORE es: instancia verdadera de fenó
 6. **Limitación de revisión:** no hay comprobación escena por escena con timecode; los capítulos y referencias contrastadas permiten auditoría posterior de detalles particulares.
 7. **CoreRPG pendiente:** integración concreta de esquema Star Trek, eventos físicos de fenómeno, autorización clínica/científica, persistencia específica y visualización UE5 se diseñarán sólo tras los LORE; no se implementan aquí.
 
+## Decisiones de autoría aprobadas (2026-10-22) — posterior a la auditoría inicial
+
+La aprobación **no cambia retroactivamente lo observado en pantalla**, pero sí fija restricciones y objetivos de diseño para el RPG. Fuente: `docs/decisions/lore_02_d_author_decisions_v0.1.md`.
+
+- **A:** catálogo inicial ampliable, ciencia autónoma, consecuencias proporcionales y persistentes.
+- **A+B:** profundidad investigadora accesible: el jugador como capitán no necesita física académica ni fórmulas. El jugador como oficial científico puede dedicar sesiones de juego a investigar, con ayuda de especialistas y herramientas.
+- **No hay viajes temporales jugables**, aunque se conserven antecedentes científicos en el archivo de fenómenos. Ningún registro de bucle, diferencial o fisura temporal concede movimiento temporal al jugador.
+- **Omega:** excepción a «ningún fenómeno fuerza misión»: el autor exige **al menos una misión especial diseñada deliberadamente para Omega** en la etapa narrativa futura. No se activa toda aparición de Omega como misión; se mantienen confidencialidad y autorizaciones.
+- **Agujeros de gusano:** tránsito permitido pero infrecuente, con vínculo astrográfico y seguridad/viabilidad; no es teletransporte ilimitado entre zonas.
+- **Investigación a tecnología:** una investigación significativa puede llevar a revisión, certificación, proyecto de ingeniería, instalación por astillero y pruebas de servicio de una mejora para naves compatibles. El mundo sólo cambia después de la decisión y operación validadas por CoreRPG.
+- **Legado científico:** una innovación importante puede recibir **nombre honorífico oficial** en reconocimiento a la autoría (incluidos equipos). El reconocimiento perdura en registros y diálogos de otros personajes años después, condicionado al conocimiento del NPC y a que la nave tenga realmente la mejora instalada. Ejemplo: **Kazan Rise → «Sensores Rise»**; ejemplo, no hecho inicial del mundo.
+
+Política estructurada: `lore/science/lore02_d_scientific_legacy_policy_v0.1.json`. Su posible implementación pertenece a la fase posterior de conversión de los LORE en contenido jugable; **la misión Omega, la investigación funcional, las mejoras y los astilleros 3D aún no existen como runtime**.
+
 ## Criterios de salida
 
 Validadores documentales, cruces de origen/IDs entre fases, pruebas adversariales, regresiones A/B/C/LORE-01/roadmap y GitHub Actions. Antes de la aprobación humana permanecen `NEEDS_REVIEW` y `LORE-02 D IN_PROGRESS`; `main` no cambia.
