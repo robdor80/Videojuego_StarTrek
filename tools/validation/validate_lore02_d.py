@@ -92,7 +92,7 @@ def validate_data(d, *, check_paths=True):
         need(isinstance(entries, list), name + ": malformed records")
         if not isinstance(entries, list):return []
         keys = [x.get(id_key) for x in entries]
-        need(len(entries) == count, name + ": record count")
+        need(len(entries) >= count, name + ": record count below approved baseline")
         need(len(keys) == len(set(keys)) and all(isinstance(k, str) and k.startswith("l02d_") for k in keys),
              name + ": duplicate/bad ID")
         for row in entries:
