@@ -249,10 +249,19 @@ def validate_data(d, *, check_paths=True):
     return errors
 
 def validate():
-    errors=validate_data(inputs())
+    d = inputs()
+    errors = validate_data(d)
     if errors:
         raise AssertionError("\n".join(errors))
-    return {k: EXPECTED[k] for k in EXPECTED}
+    return {
+        "disciplines": len(d["disciplines"]["records"]),
+        "phenomena": len(d["phenomena"]["records"]),
+        "methods": len(d["methods"]["records"]),
+        "facilities": len(d["facilities"]["facilities"]),
+        "roles": len(d["facilities"]["roles"]),
+        "cases": len(d["cases"]["records"]),
+        "adversarial": len(d["adversarial"]["records"]),
+    }
 
 if __name__ == "__main__":
     print("LORE02-D VALID:", validate())
