@@ -8,4 +8,4 @@ El mismo equipo puede ser usado por diferentes funciones sin duplicar fichas en 
 
 Definiciones documentales ≠ instancias físicas ≠ inventario asignado ≠ permisos del actor ≠ estado actual ≠ capacidades ejecutadas en UE5. El estado pertenece exclusivamente a CoreRPG; la capa de juego debe resolver las reglas particulares de Star Trek. Todos los datos nuevos son `EDITORIAL_NON_RUNTIME`, con fuente/inferencia/adición del juego diferenciadas y sin datos de rendimiento inventados.
 
-**Validación:** `python tools/validation/validate_lore02_b.py` y `python tools/validation/test_lore02_b.py`; CI `.github/workflows/lore02-b-equipment.yml`. Estado pendiente de revisión humana.
+**Validación:** `python tools/validation/validate_lore02_b.py` y `python tools/validation/test_lore02_b.py`; CI `.github/workflows/lore02-b-equipment.yml`. Fase B cerrada documentalmente con PR #33 fusionada; `NEEDS_REVIEW` es estado de las fichas editoriales, no permiso para importación al runtime. La implementación futura necesita inventario, permisos y adaptadores reales.
