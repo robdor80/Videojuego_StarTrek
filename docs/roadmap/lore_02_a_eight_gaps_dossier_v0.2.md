@@ -1,6 +1,6 @@
 # LORE-02 A — Dossier transversal de ocho lagunas (investigación v0.2)
 
-**Fecha:** 2026-10-20. **Estado:** `RESEARCH_IN_PROGRESS`; documento de evidencia y reglas cualitativas, **no** definición ejecutable, ficha clínica, especificación de clase ni cierre completo de A-G01–A-G08.  
+> Nota histórica (2026-10-22): este dossier conserva la fotografía de investigación de 20-10-2026. La fase A fue posteriormente cerrada documentalmente y fusionada mediante la PR #31; los estados IN_PROGRESS que aparecen más abajo se refieren a aquel corte, no al estado actual. Ver `CONTENT_STATUS.md` y `docs/roadmap/lore_02_a_cierre_documental_v1.md`.\n\n**Fecha:** 2026-10-20. **Estado:** `RESEARCH_IN_PROGRESS`; documento de evidencia y reglas cualitativas, **no** definición ejecutable, ficha clínica, especificación de clase ni cierre completo de A-G01–A-G08.  
 **Cobertura:** motores/maniobra, redes de energía, deflectores, comunicaciones, soporte vital, tecnología no federada, Clase Valhalla y estaciones/industria.  
 **Fuente de verdad temporal:** `gameplay/ship_operations/era_technology_matrix.json`. **Fuente de verdad del mundo:** CoreRPG.  
 **Tipos de afirmación:** `OFFICIAL_REFERENCE` (artículo en StarTrek.com; no equivale a un episodio visto), `RELIABLE_SECONDARY` (Memory Alpha y referencias técnicas secundarias) y `GAME_ADDITION` (decisiones expresas del juego).
@@ -93,7 +93,7 @@ fuente/reactor → contención y refrigeración → distribución primaria (EPS 
 
 ## A-G07 — Clase Valhalla, excepciones y nave auxiliar
 
-**Decisión primaria del propio juego:** [VAL-TEC-01–16](valhalla_tech_profile_v0.1.md) y [registro de aprobación](valhalla_tech_decisions_v0.1.json). La Clase Valhalla es **nueva**, inspirada en Galaxy, con arquitectura equilibrada Sovereign/Intrepid como referencia, no refit oficial.
+**Decisión primaria del propio juego:** [VAL-TEC-01–16](../../lore/technology/valhalla_tech_profile_v0.1.md) y [registro de aprobación](../../lore/technology/valhalla_tech_decisions_v0.1.json). La Clase Valhalla es **nueva**, inspirada en Galaxy, con arquitectura equilibrada Sovereign/Intrepid como referencia, no refit oficial.
 
 **Evidencia relevante:** [Star Trek: Voyager «Endgame»] como inspiración **de pantalla pendiente de cotejo escena por escena** de ablativo desplegable y torpedos transfásicos; [fuente oficial sobre la Defiant](https://www.startrek.com/gallery/most-powerful-star-trek-ships-ranked) distingue blindaje ablativo de la Defiant y la ocultación romulana histórica. El juego **aprueba** blindaje desplegable y munición transfásica para Valhalla mediante `GAME_ADDITION`; ello **no** instala esas capacidades en la nave auxiliar IDEA-0010.
 
