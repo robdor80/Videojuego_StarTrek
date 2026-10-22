@@ -1,5 +1,5 @@
 {
-  "registry_version": "0.41.0",
+  "registry_version": "0.42.0",
   "last_updated": "2026-10-21",
   "sources": [
     {
@@ -4302,6 +4302,132 @@
       "url": "https://memory-alpha.fandom.com/wiki/Irumodic_Syndrome",
       "accessed_at": "2026-10-21",
       "notes": "TNG All Good Things...: síndrome en futuro alternativo y predisposición no diagnóstica; no imponer el resultado al canon de juego."
+    },
+    {
+      "source_id": "TNG_CAUSE_AND_EFFECT",
+      "source_type": "SCREEN_CANON",
+      "title": "Cause and Effect",
+      "work": "Star Trek: The Next Generation",
+      "season": 5,
+      "episode": 18,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "TNG_PARALLELS",
+      "source_type": "SCREEN_CANON",
+      "title": "Parallels",
+      "work": "Star Trek: The Next Generation",
+      "season": 7,
+      "episode": 11,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "VOY_BLINK_OF_AN_EYE",
+      "source_type": "SCREEN_CANON",
+      "title": "Blink of an Eye",
+      "work": "Star Trek: Voyager",
+      "season": 6,
+      "episode": 12,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "VOY_THE_CLOUD",
+      "source_type": "SCREEN_CANON",
+      "title": "The Cloud",
+      "work": "Star Trek: Voyager",
+      "season": 1,
+      "episode": 6,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "VOY_ONE_SMALL_STEP",
+      "source_type": "SCREEN_CANON",
+      "title": "One Small Step",
+      "work": "Star Trek: Voyager",
+      "season": 6,
+      "episode": 8,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "TNG_TIMESCAPE",
+      "source_type": "SCREEN_CANON",
+      "title": "Timescape",
+      "work": "Star Trek: The Next Generation",
+      "season": 6,
+      "episode": 25,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "TNG_WHERE_NO_ONE_HAS_GONE_BEFORE",
+      "source_type": "SCREEN_CANON",
+      "title": "Where No One Has Gone Before",
+      "work": "Star Trek: The Next Generation",
+      "season": 1,
+      "episode": 6,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "VOY_OMEGA_DIRECTIVE",
+      "source_type": "SCREEN_CANON",
+      "title": "The Omega Directive",
+      "work": "Star Trek: Voyager",
+      "season": 4,
+      "episode": 21,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "TNG_REMEMBER_ME",
+      "source_type": "SCREEN_CANON",
+      "title": "Remember Me",
+      "work": "Star Trek: The Next Generation",
+      "season": 4,
+      "episode": 5,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "TNG_IDENTITY_CRISIS",
+      "source_type": "SCREEN_CANON",
+      "title": "Identity Crisis",
+      "work": "Star Trek: The Next Generation",
+      "season": 4,
+      "episode": 18,
+      "notes": "Referencia a episodio retenido. El caso documenta un suceso particular, nunca una ley física universal ni una capacidad de todo sensor."
+    },
+    {
+      "source_id": "L02D_ST_CAUSE_EFFECT",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "'Cause and Effect': The Star Trek Episode That Stuck with Me",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/cause-and-effect-the-star-trek-tng-episode-that-stuck-with-me",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia oficial secundaria a eventos mostrados en pantalla; no sustituye la escena original."
+    },
+    {
+      "source_id": "L02D_ST_PARALLELS",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "What the Helm: Star Trek's Astonishing Viewscreen Reveals",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/what-the-helm-astonishing-viewscreen-reveals",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia oficial secundaria a eventos mostrados en pantalla; no sustituye la escena original."
+    },
+    {
+      "source_id": "L02D_ST_BLINK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "From the Moon to the Delta Quadrant: NASA's Indelible Imprint on Star Trek: Voyager",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/moon-to-delta-quadrant-nasa-imprint-on-star-trek-voyager",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia oficial secundaria a eventos mostrados en pantalla; no sustituye la escena original."
+    },
+    {
+      "source_id": "L02D_ST_DS9_SCIENCE_FAITH",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Deep Space Nine Revealed a Modern Balance Between Science and Religion",
+      "publisher": "StarTrek.com",
+      "url": "https://www.startrek.com/news/deep-space-nine-modern-balance-science-religion",
+      "accessed_at": "2026-10-21",
+      "notes": "Referencia oficial secundaria a eventos mostrados en pantalla; no sustituye la escena original."
     }
   ]
 }

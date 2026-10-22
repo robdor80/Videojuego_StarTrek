@@ -571,8 +571,8 @@ Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json
 |---|---|---|
 | A — Tecnología de naves y estaciones | ✅ COMPLETE | PR #31 fusionada en `main` (2026-10-21; `d1ee2af3`): 59 fichas, 9 operadores, 14 familias de estación y 50 casos negativos. Cierre documental, no integración CoreRPG/UE5. |
 | B — Equipamiento personal y especializado | ✅ COMPLETE | PR #33 fusionada en `main` (2026-10-21; `2306becaf7f9`): 73 fichas, 15 perfiles de dotación, 6 plantillas de misión y 45 casos adversariales; 8 comprobaciones Actions satisfactorias después de la fusión. Cierre documental, no integración CoreRPG/UE5. |
-| C — Medicina y xenobiología | 🟨 IN_PROGRESS | Diagnóstico, tratamientos y particularidades biológicas con cautelas clínicas explícitas. |
-| D — Ciencia y fenómenos | ⬜ TODO | Métodos científicos, anomalías, incertidumbre observacional y peligros. |
+| C — Medicina y xenobiología | ✅ COMPLETE | PR #34 fusionada en `main` (2026-10-21; `1bf8f356`): atlas xenoclínico, condiciones, procedimientos, agentes, instalaciones y escenarios adversariales; cierre documental, no integración CoreRPG/UE5. |
+| D — Ciencia y fenómenos | 🟨 IN_PROGRESS | Rama `feat/lore02-d-science-phenomena`; disciplinas, fenómenos, experimentación y conocimiento parcial en revisión; no runtime. |
 | E — Integración y auditoría A–D | ⬜ TODO | Cruces documentales, fuentes, regresiones, lagunas y revisión humana. |
 
 Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. Los cinco apartados deberán fusionarse y verificarse en `main` antes de marcar LORE-02 `COMPLETE`.

@@ -1,0 +1,339 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 D",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "runtime_import_allowed": false,
+  "source_registry": "sources/source_registry/source_registry.json",
+  "dataset_id": "lore02_d_research_people_facilities",
+  "facility_count": 6,
+  "role_count": 10,
+  "facilities": [
+    {
+      "facility_id": "l02d_fac_ship_science_lab",
+      "display_name_es": "Laboratorio científico de nave",
+      "existing_ref": "lore/starships/interiors/laboratories/README.md",
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer",
+        "l02b_sample_container"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    },
+    {
+      "facility_id": "l02d_fac_station_research_center",
+      "display_name_es": "Centro de investigación de estación",
+      "existing_ref": "lore/stations_and_facilities/research_stations/README.md",
+      "technology_refs": [
+        "l02a_station_research"
+      ],
+      "equipment_refs": [
+        "l02b_sample_collector"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    },
+    {
+      "facility_id": "l02d_fac_ship_observation_console",
+      "display_name_es": "Consola de sensores a bordo",
+      "existing_ref": "gameplay/science/sensor_analysis_model.json",
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_deployable_sensor_beacon"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    },
+    {
+      "facility_id": "l02d_fac_planetary_field_team",
+      "display_name_es": "Equipo de campo planetario",
+      "existing_ref": "lore/equipment/scientific/README.md",
+      "technology_refs": [],
+      "equipment_refs": [
+        "l02b_tricorder_geology",
+        "l02b_sample_container"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    },
+    {
+      "facility_id": "l02d_fac_remote_probe_station",
+      "display_name_es": "Puesto de sondas y telemetría",
+      "existing_ref": "lore/equipment/lore02_b_equipment_catalogue_v0.1.json",
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "equipment_refs": [
+        "l02b_microprobe_field"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    },
+    {
+      "facility_id": "l02d_fac_astrocartography_workstation",
+      "display_name_es": "Mesa de astrocartografía",
+      "existing_ref": "lore/astrography/atlas/anchor_atlas_v0.1.json",
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "equipment_refs": [
+        "l02b_tricorder_general"
+      ],
+      "required_live_checks": [
+        "installed_configuration",
+        "power",
+        "integrity",
+        "personnel_present",
+        "safety_conditions",
+        "authorization",
+        "data_access"
+      ],
+      "not_auto_spawned": true,
+      "not_auto_operational": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Perfil funcional de investigación para referencia futura; no crea una instalación ni otorga inventario."
+      }
+    }
+  ],
+  "roles": [
+    {
+      "role_id": "l02d_role_chief_science_officer",
+      "display_name_es": "Responsable científico",
+      "responsibility_es": "priorización y revisión; mando valida maniobras y seguridad",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_astrophysicist",
+      "display_name_es": "Astrofísico",
+      "responsibility_es": "análisis estelar y gravitatorio",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_subspace_specialist",
+      "display_name_es": "Especialista subespacial",
+      "responsibility_es": "estudio de campos y comunicaciones",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_chrono_researcher",
+      "display_name_es": "Investigador temporal",
+      "responsibility_es": "consecuencias de modelos temporales; sin acceso privilegiado al futuro",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_exobiologist",
+      "display_name_es": "Exobiólogo",
+      "responsibility_es": "identificación de indicios de vida y respeto de ecosistemas",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_geologist",
+      "display_name_es": "Geólogo planetario",
+      "responsibility_es": "muestras mineralógicas y riesgos de terreno",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_laboratory_technician",
+      "display_name_es": "Técnico de laboratorio",
+      "responsibility_es": "calibración, custodia y seguridad material",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_sensor_operator",
+      "display_name_es": "Operador de sensores",
+      "responsibility_es": "observa sin atribuir causas no demostradas",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_research_coordinator",
+      "display_name_es": "Coordinador de investigación",
+      "responsibility_es": "documenta permisos, cronograma y comunicación",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    },
+    {
+      "role_id": "l02d_role_science_ethics_officer",
+      "display_name_es": "Revisor de ética científica",
+      "responsibility_es": "consentimiento, bioseguridad, primera directiva y comunicación",
+      "qualification_policy": "REQUIRES_ACTUAL_TRAINING_ASSIGNMENT_AND_ON_DUTY_CHECK",
+      "no_inherent_command_authority": true,
+      "access_policy": "OBSERVER_NEED_TO_KNOW",
+      "not_auto_staffed": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Función organizativa propuesta; no supone un puesto ni permiso universal de la Flota."
+      }
+    }
+  ],
+  "medical_handoff_ref": "lore/medicine/lore02_c_facilities_staff_v0.1.json",
+  "notes": [
+    "No duplicar salas, inventario ni dotación de A/B/C.",
+    "Cargo, titulación, autorización, horario y capacidad instalada se comprueban de forma independiente."
+  ]
+}

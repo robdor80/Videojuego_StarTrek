@@ -304,8 +304,8 @@ def validate_data(atlas, cond, proc, org, cases, flow, registry, eq, check_paths
         block = status.split("## LORE-02 —",1)[-1].split("## ",1)[0]
         need("B — Equipamiento personal y especializado | ✅ COMPLETE" in block,
              "LORE-02 B fusion not regularized")
-        need("C — Medicina y xenobiología | 🟨 IN_PROGRESS" in block,
-             "LORE-02 C falsely closed without author approval")
+        need("C — Medicina y xenobiología | ✅ COMPLETE" in block,
+             "LORE-02 C PR #34 merged, but documentary status not regularized")
     return errors
 
 def validate():
