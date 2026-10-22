@@ -1,0 +1,185 @@
+{
+  "variants": [
+    {
+      "variant": "glb",
+      "objects": 488,
+      "mesh_objects": 317,
+      "mesh_datablocks": 317,
+      "vertices": 99615,
+      "triangles_blender": 67548,
+      "zero_area_local_triangles": 1,
+      "materials_datablocks": 8,
+      "images_datablocks": 0,
+      "mesh_datablocks_with_uv": 317,
+      "world_bounds_visible": {
+        "min": [
+          -51.06459426879883,
+          -19.144371032714844,
+          -0.2600816488265991
+        ],
+        "max": [
+          102.1879653930664,
+          48.86548614501953,
+          6.16156530380249
+        ],
+        "size": [
+          153.25255966186523,
+          68.00985717773438,
+          6.421646952629089
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    },
+    {
+      "variant": "blend",
+      "objects": 189,
+      "mesh_objects": 83,
+      "mesh_datablocks": 83,
+      "vertices": 90891,
+      "triangles_blender": 71738,
+      "zero_area_local_triangles": 877,
+      "materials_datablocks": 9,
+      "images_datablocks": 1,
+      "mesh_datablocks_with_uv": 83,
+      "world_bounds_visible": {
+        "min": [
+          -51.06459426879883,
+          -19.144365310668945,
+          -0.26008477807044983
+        ],
+        "max": [
+          102.1879653930664,
+          48.865478515625,
+          6.161559104919434
+        ],
+        "size": [
+          153.25255966186523,
+          68.00984382629395,
+          6.421643882989883
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    },
+    {
+      "variant": "obj_export",
+      "objects": 1,
+      "mesh_objects": 1,
+      "mesh_datablocks": 1,
+      "vertices": 255754,
+      "triangles_blender": 271705,
+      "zero_area_local_triangles": 578,
+      "materials_datablocks": 102,
+      "images_datablocks": 49,
+      "mesh_datablocks_with_uv": 1,
+      "world_bounds_visible": {
+        "min": [
+          -6.574792861938477,
+          -6.50525426864624,
+          -8.740383350414049e-07
+        ],
+        "max": [
+          6.57479190826416,
+          6.505253791809082,
+          3.83990740776062
+        ],
+        "size": [
+          13.149584770202637,
+          13.010508060455322,
+          3.839908281798955
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    },
+    {
+      "variant": "obj_work",
+      "objects": 1,
+      "mesh_objects": 1,
+      "mesh_datablocks": 1,
+      "vertices": 254270,
+      "triangles_blender": 271705,
+      "zero_area_local_triangles": 578,
+      "materials_datablocks": 103,
+      "images_datablocks": 51,
+      "mesh_datablocks_with_uv": 1,
+      "world_bounds_visible": {
+        "min": [
+          -6.574792861938477,
+          -6.505252838134766,
+          -4.91132936986105e-07
+        ],
+        "max": [
+          6.57479190826416,
+          6.505253314971924,
+          3.8399064540863037
+        ],
+        "size": [
+          13.149584770202637,
+          13.01050615310669,
+          3.8399069452192407
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    },
+    {
+      "variant": "obj_split",
+      "objects": 630,
+      "mesh_objects": 630,
+      "mesh_datablocks": 630,
+      "vertices": 254270,
+      "triangles_blender": 271705,
+      "zero_area_local_triangles": 578,
+      "materials_datablocks": 102,
+      "images_datablocks": 49,
+      "mesh_datablocks_with_uv": 630,
+      "world_bounds_visible": {
+        "min": [
+          -6.574792861938477,
+          -6.505252838134766,
+          2.0725185834180593e-07
+        ],
+        "max": [
+          6.57479190826416,
+          6.505252838134766,
+          3.8399064540863037
+        ],
+        "size": [
+          13.149584770202637,
+          13.010505676269531,
+          3.8399062468344454
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    },
+    {
+      "variant": "recovery",
+      "objects": 643,
+      "mesh_objects": 632,
+      "mesh_datablocks": 632,
+      "vertices": 438967,
+      "triangles_blender": 533138,
+      "zero_area_local_triangles": 1455,
+      "materials_datablocks": 171,
+      "images_datablocks": 51,
+      "mesh_datablocks_with_uv": 591,
+      "world_bounds_visible": {
+        "min": [
+          -22.085926055908203,
+          -14.0003662109375,
+          -0.6153872609138489
+        ],
+        "max": [
+          9.80331802368164,
+          11.686371803283691,
+          17.993953704833984
+        ],
+        "size": [
+          31.889244079589844,
+          25.68673801422119,
+          18.609340965747833
+        ]
+      },
+      "blender": "5.2.2 LTS"
+    }
+  ],
+  "count_methods": "Recuentos Blender y glTF crudo diferenciados en 03_GEOMETRIA.md y conteos_validacion_importacion.json; las imágenes de visor no son texturas."
+}
