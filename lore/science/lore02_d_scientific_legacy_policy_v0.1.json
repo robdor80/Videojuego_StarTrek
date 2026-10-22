@@ -1,0 +1,169 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 D",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "runtime_import_allowed": false,
+  "dataset_id": "lore02_d_scientific_legacy_policy",
+  "approval_date": "2026-10-22",
+  "decision_ref": "docs/decisions/lore_02_d_author_decisions_v0.1.md",
+  "author_decisions": {
+    "scientific_catalogue": "EXTENSIBLE",
+    "autonomous_science": "YES",
+    "research_accessibility": "HYBRID_A_PLUS_B",
+    "extraordinary": "CONTROLLED_CANON_WITH_AUTHOR_EXCEPTIONS",
+    "consequences": "PERSISTENT_PROPORTIONATE"
+  },
+  "player_accessibility": {
+    "captain_science_expertise_required": false,
+    "real_world_formulas_required": false,
+    "science_career_has_optional_depth": true,
+    "scientists_present_findings_in_clear_language": true,
+    "player_can_prioritize_test_and_funding": true,
+    "first_pass_known_phenomena_can_be_recognized_if_evidence_sufficient": true
+  },
+  "scientific_research_technology_transfer": [
+    {
+      "id": "DISCOVERY",
+      "description_es": "Detección de indicios e hipótesis con autoría y procedencia.",
+      "may_fail": true
+    },
+    {
+      "id": "SUSTAINED_RESEARCH",
+      "description_es": "Dedicación de oficiales científicos, apoyo de NPC, tiempo y recursos persistentes.",
+      "may_fail": true
+    },
+    {
+      "id": "INDEPENDENT_VALIDATION",
+      "description_es": "Repetición, revisión y resolución gradual de discrepancias; resultados no garantizados.",
+      "may_fail": true
+    },
+    {
+      "id": "FLEET_EVALUATION",
+      "description_es": "Análisis institucional de viabilidad, riesgos, época, confidencialidad y autorización.",
+      "may_fail": true
+    },
+    {
+      "id": "ENGINEERING_ADAPTATION",
+      "description_es": "Diseño de mejora, compatibilidad por clase de nave, equipamiento y materiales necesarios.",
+      "may_fail": true
+    },
+    {
+      "id": "SHIPYARD_INSTALLATION",
+      "description_es": "Proyecto de reforma en astillero real, con disponibilidad, recursos y duración verificables.",
+      "may_fail": true
+    },
+    {
+      "id": "POST_REFIT_TRIALS",
+      "description_es": "Pruebas de la instalación; sólo queda operativa al certificarse y activarse en esa nave.",
+      "may_fail": true
+    },
+    {
+      "id": "OPTIONAL_GRADUAL_FLEET_ADOPTION",
+      "description_es": "Extensión posterior autorizada a otras naves compatibles, nunca global instantánea.",
+      "may_fail": true,
+      "optional": true
+    }
+  ],
+  "persistent_entities_future_contract": {
+    "discovery": [
+      "stable_discovery_id",
+      "evidence_history",
+      "source_and_observer_ids",
+      "hypotheses_and_confidence",
+      "scientific_contributors",
+      "date_and_location",
+      "classification"
+    ],
+    "technology": [
+      "stable_design_id",
+      "discovery_origin_ref",
+      "canonical_name_and_aliases",
+      "official_naming_approval",
+      "engineering_revision",
+      "safety_and_era_constraints",
+      "ship_class_compatibility",
+      "authorization_status"
+    ],
+    "ship_installation": [
+      "ship_id",
+      "technology_design_id",
+      "shipyard_id",
+      "resource_and_work_orders",
+      "commissioning_status",
+      "installation_and_maintenance_dates"
+    ],
+    "legacy": [
+      "discoverer_identity_and_team",
+      "institutional_attribution",
+      "date_of_credit",
+      "recognition_status",
+      "knowledge_visibility_by_actor",
+      "historical_naming_revisions"
+    ]
+  },
+  "scientific_legacy": {
+    "enabled_as_design": true,
+    "discovery_credit_persistent": true,
+    "can_name_after_discoverer": true,
+    "naming_is_not_automatic": true,
+    "recognized_team_credits_possible": true,
+    "official_name_requires_approval": true,
+    "technology_naming_origin_options": [
+      "DISCOVERER_SURNAME",
+      "TEAM_NAME",
+      "INSTITUTIONAL_DESIGNATION",
+      "PROJECT_CODE"
+    ],
+    "distinct_names_and_conflicts_reviewed": true,
+    "names_survive_character_career_change": true,
+    "names_survive_years_passed": true,
+    "conversation_requires_actor_knowledge": true,
+    "dialogue_may_use_official_designation": true,
+    "ship_must_have_commissioned_technology_to_claim_its_function": true,
+    "example_noncanonical": {
+      "discoverer": "Kazan Rise",
+      "approved_name_candidate": "Sensores Rise",
+      "example_future_dialogue_es": "Capitán, los sensores Rise detectan una anomalía de largo alcance.",
+      "meaning": "Ejemplo del tipo de persistencia y reconocimiento esperado; no se añade como tecnología canónica por defecto."
+    }
+  },
+  "exception_rules": {
+    "playable_time_travel_allowed": false,
+    "time_travel_technology_unlock_allowed": false,
+    "canon_temporal_phenomena_can_be_described_as_scientific_background": true,
+    "omega": {
+      "author_mandatory_special_mission": true,
+      "minimum_authored_special_missions": 1,
+      "mission_automatically_triggered_by_every_omega_observation": false,
+      "classified_information_access_required": true,
+      "normal_tech_transfer_allowed": false
+    },
+    "wormholes": {
+      "traversal_allowed": true,
+      "rarity": "RARE",
+      "routine_random_shortcuts_allowed": false,
+      "requires_valid_astrography_link": true,
+      "requires_navigation_safety_and_permissions": true
+    },
+    "new_original_anomalies_allowed": true
+  },
+  "core_and_presentation": {
+    "CoreRPG": "sole_authority_for_knowledge_technology_ship_modifications_and_time",
+    "Host": "permission_and_command_validation",
+    "AI": "dialogue_from_actor_permitted_knowledge_only",
+    "UE5": "display_shipyards_and_ship_modifications_without_state_authority"
+  },
+  "invariants": [
+    "NO_INSTANT_RESEARCH_REWARD",
+    "NO_AUTOMATIC_NAMING",
+    "NO_AUTOMATIC_UNIVERSAL_SHIP_RETROFIT",
+    "NO_OMEGA_GENERAL_UNLOCK",
+    "NO_PLAYABLE_TIME_TRAVEL",
+    "NO_REQUIRED_REAL_WORLD_PHYSICS",
+    "NO_PRIVILEGED_AI_KNOWLEDGE",
+    "NO_CREDIT_STEALING_FROM_NPC_TEAM",
+    "NO_CLAIM_OF_EXISTING_RUNTIME"
+  ]
+}
