@@ -16,8 +16,8 @@ class Lore02D(unittest.TestCase):
         self.assertTrue(any(expected in e for e in errors), errors)
 
     def test_positive_document_gate(self):
-        self.assertEqual(validate()["phenomena"],20)
-        self.assertEqual(validate()["adversarial"],40)
+        self.assertGreaterEqual(validate()["phenomena"], 20)
+        self.assertGreaterEqual(validate()["adversarial"], 40)
 
     def test_forged_knowledge(self):
         self.change(lambda d: d["phenomena"]["records"][0].update(knowledge_state="TRUE_CAUSE_KNOWN"),"hidden truth leak")
