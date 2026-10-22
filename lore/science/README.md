@@ -1,6 +1,6 @@
 # LORE-02 D — Ciencia, investigación y fenómenos
 
-**Estado:** NEEDS_REVIEW; autoría documental; ningún sistema en ejecución. Las referencias no son content packs CoreRPG ni objetos UE5.
+**Estado de fase:** COMPLETE documental tras PR #35 fusionada (2026-10-22). `NEEDS_REVIEW` permanece en los JSON para indicar fichas editoriales no homologadas/importables; ningún sistema científico está ejecutándose todavía. Las referencias no son content packs CoreRPG ni objetos UE5.
 
 ## Catálogos
 
