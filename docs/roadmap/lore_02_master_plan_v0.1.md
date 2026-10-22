@@ -2,7 +2,7 @@
 
 **Fecha de inicio:** 2026-10-19  
 **Repositorios inspeccionados:** `Videojuego_StarTrek/main` = `3479faefb9aa56980265c5b03aeab3ba3ddd083f` (LORE-01 E fusionada, PR #30); `CoreRPG/main` = `4f282863737bcd8f5add401202a9e1064c133672` (4.13 fusionada por PR #11).  
-**Estado:** `IN_PROGRESS`; alcance de investigación/autoría y coherencia, **no** runtime, content pack instalado ni integración UE5/Host.
+**Estado vigente (22-10-2026):** `COMPLETE` **documental** tras las PR #31, #33, #34, #35 y #36, y 11 workflows postfusión en verde. Este documento conserva los objetivos originales de investigación/autoría; **no** significa runtime, Content Pack Trek instalado ni integración UE5/Host.
 
 ## 1. Justificación y ajuste de alcance
 

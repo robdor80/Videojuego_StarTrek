@@ -101,11 +101,11 @@ class Lore02ECrossAuditTests(unittest.TestCase):
         self.mutate(lambda d: d["legacy_policy"]["exception_rules"]["wormholes"].update(
             rarity="COMMON"), "unrestricted wormholes")
 
-    def test_no_premature_lore02e_closure(self):
+    def test_no_reversion_after_approved_merge(self):
         self.mutate(lambda d: d.update(status=d["status"].replace(
-            "| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |",
-            "| E — Integración y auditoría A–D | ✅ COMPLETE |")),
-            "E wrongly closed before author approval")
+            "| E — Integración y auditoría A–D | ✅ COMPLETE |",
+            "| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |")),
+            "E documentary closure not regularized")
 
     def test_core_only_world_state(self):
         self.mutate(lambda d: d["legacy_policy"].update(authority="AI"),

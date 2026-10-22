@@ -2,7 +2,7 @@
 
 **Fecha:** 2026-10-22. **Repositorio:** `robdor80/Videojuego_StarTrek`. **Alcance:** diseño documental de LORE-02 A–D, sin runtime, sin cambios en CoreRPG o UE5.
 
-**Estado del expediente:** `IN_PROGRESS / DRAFT / PENDIENTE DE APROBACIÓN DEL AUTOR`. **No afirmar LORE-02 E ni todo LORE-02 como COMPLETE** antes de aprobación, fusión y verificaciones posteriores en `main`.
+**Estado vigente tras aprobación/fusión (2026-10-22):** `COMPLETE` **documental**. PR #36 fusionada en `main` mediante commit `97f4c8da899c3e1835f1e13ba374d30cca00b41d`; **11/11 workflows de GitHub Actions postfusión satisfactorios**. El cierre acredita consistencia de referencia, **no** validación runtime en CoreRPG/UE5 ni revisión audiovisual escena por escena.
 
 ## 1. Línea de base y trazabilidad
 
@@ -77,7 +77,7 @@ La suite propia de E ahora dispone de **27 pruebas: 23 negativas y 4 positivas**
 2. Pruebas E de mutación: introducir orfandad, falsificar canon/fuentes (también en catálogos iniciales), filtrar privacidad, permitir viajes temporales u Omega ordinario, premiar nombres automáticos, saltar astillero o cerrar E sin autorización debe ser rechazado. Adiciones científicas bien formadas sí deben admitirse.
 3. Regresiones en CI: validadores/test anteriores A–D, LORE-01 A1–E y tests de referencia F07–F15. Todos documentales/offline; no sustituyen pruebas de UE5 ni CoreRPG.
 4. Verificación de workflow/pr después de cada cambio; no dar CI como verde antes de ejecutar y consultar GitHub Actions. La rama E no equivale a fusión.
-5. **Aprobación humana y fusión posterior**: sólo el autor autoriza pasar E y LORE-02 a cierre completo. Entonces, y sólo tras verificar `main`, podrá elevarse estado e índice principal.
+5. **Aprobación humana y fusión:** el autor aprobó y fusionó la PR #36. `main` está verificada, por lo que se regulariza el cierre **documental** de E y LORE-02; no el runtime.
 
 ## 6. Pendientes explícitos fuera de alcance
 
@@ -88,4 +88,4 @@ La suite propia de E ahora dispone de **27 pruebas: 23 negativas y 4 positivas**
 - La revisión de episodios/fuentes primarias para cada detalle tecnológico y clínico cuantitativo sigue pendiente antes de codificar capacidades.
 - Las fichas `NEEDS_REVIEW` siguen siendo editoriales, aunque A–D hayan sido fusionadas.
 
-**Criterio de propuesta:** si CI está verde y no hay errores críticos de consistencia, presentar la PR Draft al autor para revisión. Su fusión requerirá autorización aparte.
+**Resultado del cierre documental:** el autor fusionó la PR #36, se verificó la presencia de los entregables en `main` y se comprobaron 11/11 workflows en verde. Las reservas técnicas y de canon recogidas en este expediente siguen vigentes para la futura implementación.

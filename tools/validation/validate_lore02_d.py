@@ -240,7 +240,7 @@ def validate_data(d, *, check_paths=True):
     st=d["status"]
     need("| C — Medicina y xenobiología | ✅ COMPLETE |" in st,"C status not regularized")
     need("| D — Ciencia y fenómenos | ✅ COMPLETE |" in st,"D merge not regularized")
-    need("| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |" in st,"E requires ongoing author review")
+    need("| E — Integración y auditoría A–D | ✅ COMPLETE |" in st,"E documentary closure not regularized")
     if check_paths:
         for anchor in ANCHORS:
             need(file_exists(anchor),"missing dependency: "+anchor)

@@ -174,8 +174,8 @@ def validate() -> dict:
             and "| C — Medicina y xenobiología | ✅ COMPLETE |" in status,
             "LORE-02 A regression: B/C must remain merged and administratively COMPLETE")
     require("| D — Ciencia y fenómenos | ✅ COMPLETE |" in status
-            and "| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |" in status,
-            "LORE-02 A regression: D merged, E awaiting approval")
+            and "| E — Integración y auditoría A–D | ✅ COMPLETE |" in status,
+            "LORE-02 A regression: E documentary merge not regularized")
     return {
         "legacy_systems": len(initial["records"]),
         "new_systems": len(records),

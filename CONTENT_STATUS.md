@@ -573,9 +573,9 @@ Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json
 | B — Equipamiento personal y especializado | ✅ COMPLETE | PR #33 fusionada en `main` (2026-10-21; `2306becaf7f9`): 73 fichas, 15 perfiles de dotación, 6 plantillas de misión y 45 casos adversariales; 8 comprobaciones Actions satisfactorias después de la fusión. Cierre documental, no integración CoreRPG/UE5. |
 | C — Medicina y xenobiología | ✅ COMPLETE | PR #34 fusionada en `main` (2026-10-21; `1bf8f356`): atlas xenoclínico, condiciones, procedimientos, agentes, instalaciones y escenarios adversariales; cierre documental, no integración CoreRPG/UE5. |
 | D — Ciencia y fenómenos | ✅ COMPLETE | PR #35 fusionada en `main` (2026-10-22; `2f5e2c15`): 14 disciplinas, 20 fenómenos, 9 métodos y legado científico aprobado; cierre documental sin implementación CoreRPG/UE5. |
-| E — Integración y auditoría A–D | 🟨 IN_PROGRESS | Rama `feat/lore02-e-cross-audit`; auditoría documental transversal, regresiones y PR Draft sujetas a revisión humana. No fusionada ni cerrada. |
+| E — Integración y auditoría A–D | ✅ COMPLETE | PR #36 fusionada en `main` (2026-10-22; `97f4c8da`); auditoría A–D, correcciones documentales, 27 pruebas E y 11 workflows postfusión satisfactorios. Cierre documental, sin runtime CoreRPG/UE5. |
 
-Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. Los cinco apartados deberán fusionarse y verificarse en `main` y obtener aprobación final del autor antes de marcar LORE-02 `COMPLETE`. Los `status: NEEDS_REVIEW` internos identifican fichas editoriales aún no homologadas como contenido importable; no contradicen el cierre documental de A–D.
+Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. **LORE-02 A–E: COMPLETE documental** tras la aprobación/fusión de PR #36, con los cinco apartados en `main` y 11 GitHub Actions posteriores satisfactorias. Los `status: NEEDS_REVIEW` internos identifican fichas editoriales aún no homologadas como contenido importable; no contradicen el cierre documental de A–D.
 
 
 ## Procedural living-universe master plan

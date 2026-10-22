@@ -259,9 +259,10 @@ def validate_data(data, *, check_paths=True):
     status = data["status"]
     need("| D — Ciencia y fenómenos | ✅ COMPLETE |" in status,
          "status: D merge not regularized")
-    need("| E — Integración y auditoría A–D | 🟨 IN_PROGRESS |" in status,
-         "status: E wrongly closed before author approval")
-    need("LORE-02 nunca es runtime por sí sola" in status,
+    need("| E — Integración y auditoría A–D | ✅ COMPLETE |" in status,
+         "status: E documentary closure not regularized")
+    need("LORE-02 A–E: COMPLETE documental" in status and
+         "LORE-02 nunca es runtime por sí sola" in status,
          "status: false runtime completion")
 
     if check_paths:
