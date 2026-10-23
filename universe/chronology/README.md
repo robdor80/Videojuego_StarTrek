@@ -13,11 +13,10 @@ The game uses two different concepts:
 
 Future canon is reference material, not destiny.
 
-## Playable eras
+## Playable era (author decision 2026-10-23)
 
-- `pike`
-- `kirk`
-- `tng_ds9_voyager`
+- `tng_ds9_voyager` — **the only selectable campaign era**, 2364–2378 reference window; precise campaign start date undecided.
+- `pike` and `kirk` — **retained historical profiles**, not playable. Their chronology and past sources remain available.
 
 ## Temporal validity
 
