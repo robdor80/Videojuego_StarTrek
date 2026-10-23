@@ -32,8 +32,9 @@ def classify_by_year(event, campaign_year):
 
 def validate_index(idx, diplomatic, registry, eras):
     """Input objects kept injectable for negative mutation tests."""
-    check(idx["status"] == "NEEDS_REVIEW_DOCUMENTARY", "A cannot be complete before author merge")
+    check(idx["status"] == "COMPLETE_DOCUMENTARY", "LORE-03 A administrative closure missing")
     check(idx["scope"] == "tng_ds9_voyager_only", "Wrong historical scope")
+    check(idx.get("closure",{}).get("pr_number") == 38 and idx["closure"].get("merge_commit_sha") == "d0efab2c9d4b2451ad678b651bd6ecf2283d8235" and idx["closure"].get("runtime_activated") is False, "LORE-03 A closure evidence mismatch")
     check(idx["authority"] == "CoreRPG_World_State_ONLY", "CoreRPG authority missing")
     for prop in ("gameplay_activated", "auto_bootstrap_future", "playable_time_travel"):
         check(idx[prop] is False, "Unapproved gameplay feature: " + prop)
@@ -138,7 +139,7 @@ def validate():
           for name in ("pike","kirk","tng_ds9_voyager")}
     stats=validate_index(idx,diplomatic,registry,eras)
     text=(ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
-    check("| A — Cronología y acontecimientos | 🟨 NEEDS_REVIEW |" in text, "Administrative gate not registered")
+    check("| A — Cronología y acontecimientos | ✅ COMPLETE |" in text, "Administrative closure not registered")
     check("| B — Conflictos, guerras y crisis | ⬜ TODO |" in text, "B started before approval")
     check("| C — Consecuencias y memoria histórica | ⬜ TODO |" in text,"C started without approval")
     check("| D — Continuidad/divergencia | ⬜ TODO |" in text,"D started without approval")
@@ -153,7 +154,7 @@ def validate():
     for id in MUST_BE_PRESENT:
         check(id in atlas,"Indexed event missing from atlas: " + id)
     check("UNRESOLVED_SAME_YEAR" in (ROOT/BOUNDARY).read_text(encoding="utf-8"), "Missing same-year examples")
-    check("NEEDS_REVIEW" in (ROOT/FINAL_REPORT).read_text(encoding="utf-8"), "Final audit absent")
+    check("COMPLETE" in (ROOT/FINAL_REPORT).read_text(encoding="utf-8"), "Final audit administrative closure absent")
     check((ROOT/"docs/roadmap/lore_03_master_plan_v0.1.md").is_file(), "Master plan missing")
     check((ROOT/"docs/decisions/lore03a_valhalla_2383_academy.md").is_file(), "Valhalla 2383 decision missing")
     return stats

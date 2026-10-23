@@ -1,14 +1,14 @@
 # LORE-03 A — Auditoría final documental v0.2
 
 **Fecha:** 2026-10-23 · **Base:** `main@867077e4` · **Rama/PR:** `lore/03-a-chronology-history` / #38.  
-**Dictamen:** **NEEDS_REVIEW**, lista para revisión del autor tras GitHub Actions; **no** fusionada, **no** certificada escena por escena ni importada a runtime.
+**Dictamen actualizado:** **COMPLETE — LORE-03 A fusionada y cerrada documentalmente** mediante PR #38 (2026-10-23, `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`). **No** certificada escena por escena ni importada a runtime. Las reservas históricas siguen abiertas.
 
 ## Evidencia producida
 
 - Decisión posterior de única época jugable TNG/DS9/Voyager registrada sin borrar tres perfiles históricos.
-- Índice con **40 referencias por ID** de LORE-01 D **no duplicadas** y **21 fichas nuevas** para cubrir anclas 2364–2378, con referencias por `source_id` y fechas de año aproximado.
-- Atlas continuo de **15 años** y antecedentes del siglo XXIII/primera mitad XXIV.
-- **6 referencias oficiales adicionales** añadidas al registro central de fuentes, por tanto **507 fuentes** tras el cambio, sin convertir artículos en pantalla primaria.
+- Índice con **40 referencias por ID** de LORE-01 D **no duplicadas** y **26 fichas nuevas** para cubrir anclas 2364–2383, con referencias por `source_id` y fechas de año aproximado.
+- Atlas continuo de **20 años** y antecedentes del siglo XXIII/primera mitad XXIV.
+- **12 referencias oficiales adicionales** añadidas al registro central de fuentes durante la PR #38, por tanto **513 fuentes** tras el cambio, sin convertir artículos en pantalla primaria.
 - Apartado de versiones/errores de fecha, histórico personal e institucional, anacronismos, escenarios de corte D, riesgos al filtrar por era, futuro no garantizado.
 - Validadores documentales y pruebas de mutación; regresiones LORE-01 D y LORE-02 E, y workflow exclusivo de LORE-03 A.
 
@@ -39,16 +39,25 @@
 
 | Condición | Evidencia | Estado |
 |---|---|---|
-| Corpus 2364–2378 y pasado histórico | Atlas completo 15 años + precedentes | Sí |
+| Corpus 2364–2383 y pasado histórico | Atlas de 20 años, incluyendo hito creativo Valhalla 2383, y precedentes | Sí |
 | Índices y fuentes sin duplicación | 40 IDs LORE-01 D por enlace + nuevas fichas distintas | Sí |
 | Evidencia/precisión y dudas | Referencias oficiales/episodios, rangos aproximados, reservas expresas | Sí, con reservas no bloqueantes |
 | Autoridad Core y no futuro obligado | Flags, contrato y pruebas de año D | Sí |
 | Coherencia de naves | Matrix D/E/Voyager/Defiant/Odyssey/Valhalla | Sí, sin fechas inventadas |
-| Validación documental | Validador + suite de mutaciones, workflow, regresiones | Pendiente de verificar último HEAD en Actions |
-| Revisión y fusión humana | PR #38 | **NO**: no autorizado fusionar |
+| Validación documental | Validador + 49 pruebas, regresiones y workflows PR #38 | **13/13 CI correctos en HEAD PR** |
+| Revisión y fusión humana | PR #38 · `d0efab2c9d4b2451ad678b651bd6ecf2283d8235` | **Sí, fusionada 2026-10-23** |
 
 **Alcance del dictamen:** suficiencia editorial para LORE-03 A, con puntos de precisión rastreados para B–E y futura conversión a datos de juego. **No** se presenta como exhaustividad del canon Star Trek ni compatibilidad automática con CoreRPG/UE5.
 
 ## Addendum — 2383–2387 y clase Valhalla
 
 Se añaden cinco hitos 2379–2382 al atlas, seis fuentes oficiales y un registro GAME_ADDITION para programa Valhalla tras Némesis: propuesta 2379 decisión, 2380 construcción, 2381–82 integración y 2383 servicio objetivo. El cadete comienza Academia en 2383 y se gradúa alrededor de 2387, pudiendo acceder a la clase como alférez. **2383 es preferido, no fecha exacta fijada.** El canon no obliga a la destrucción de Rómulo (2387) dentro de campañas iniciadas en 2383. Las fuentes oficiales afirman ascenso de Picard a almirante en 2381 y mando de Riker de Titan en 2379. Los 40 hechos heredados no se alteraron, y las reservas de precisión originales permanecen. 
+
+## Acta de cierre administrativo — 2026-10-23
+
+- **Estado documental:** `COMPLETE`, confirmado por fusión de [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38) a `main`.
+- **Commit real de fusión:** `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. Fusión registrada a las **21:29:38 UTC**.
+- **Evidencia CI:** en último commit de PR #38, **13/13 workflows GitHub Actions `success`**. El workflow LORE-03 A de `main` también completó con éxito tras la fusión.
+- **Alcance:** cierre **documental y administrativo**; no implica puesta en servicio real de la Valhalla en CoreRPG/UE5 ni disponibilidad por contrato runtime.
+- **Reservas:** fechas históricas y de comisión todavía aproximadas; se mantienen como advertencias de precisión sin reabrir LORE-03 A. El día/mes de inicio de campaña y la entrada en servicio de la clase Valhalla siguen sin ratificarse como fechas exactas.
+- **Fases B, C, D, E:** no iniciadas por esta acta. El próximo trabajo podrá iniciar B solo por iniciativa y autorización del autor.
