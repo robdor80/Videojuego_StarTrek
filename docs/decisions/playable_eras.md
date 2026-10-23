@@ -4,9 +4,13 @@
 
 > Este documento **sustituye** la elección histórica de tres épocas jugables descrita en su versión previa (2026-10-02) y en actas F01. No elimina la investigación, arte, canon ni perfiles de Pike y Kirk; cambia únicamente qué épocas pueden seleccionarse para una nueva campaña.
 
+## Addendum de diseño — academia y Valhalla (2026-10-23)
+
+El autor propone **2383** como comienzo preferente de campaña, con **cuatro años de Academia** y graduación de alférez aproximada en **2387**. No se traslada el comienzo a 2384. El programa de clase Valhalla surge tras *Némesis* de 2379, con fabricación prevista desde 2380 y **entrada en servicio objetivo en 2383**, para que el jugador pueda ser destinado a ella al graduarse; no es una fecha histórica de pantalla. Esto **extiende la investigación documental hasta 2383** y no crea época jugable adicional. Ver [addendum Valhalla/Academia](lore03a_valhalla_2383_academy.md).
+
 ## Única época jugable
 
-**`tng_ds9_voyager`** — segunda mitad del siglo XXIV, intervalo **2364–2378** como **ventana histórica de referencia**, no como año fijo de comienzo, límite forzoso del tiempo simulado ni guion de series.
+**`tng_ds9_voyager`** — segunda mitad del siglo XXIV, núcleo **2364–2378**, extendido documentalmente hasta **2383**, como **ventana histórica de referencia**, no como año fijo de comienzo, límite forzoso del tiempo simulado ni guion de series.
 
 Se estudian como un mismo universo histórico:
 - *Star Trek: The Next Generation*

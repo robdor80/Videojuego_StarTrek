@@ -18,9 +18,9 @@ class AChronologyTests(unittest.TestCase):
         with self.assertRaises(AssertionError):
             validate_index(d, self.dipl if dipl is None else dipl,self.registry,self.eras if eras is None else eras)
 
-    def test_01_full(self):self.assertEqual(validate()["years"],15)
-    def test_02_sources(self):self.assertGreaterEqual(validate()["sources"],507)
-    def test_03_anchor_count(self):self.assertGreaterEqual(validate()["additional_anchors"],20)
+    def test_01_full(self):self.assertEqual(validate()["years"],20)
+    def test_02_sources(self):self.assertGreaterEqual(validate()["sources"],513)
+    def test_03_anchor_count(self):self.assertGreaterEqual(validate()["additional_anchors"],26)
     def test_04_original_count(self):self.assertEqual(validate()["historical_refs"],40)
     def test_05_temporal_past(self):self.assertEqual(classify_by_year(self.d["additional_historical_anchors"][0],2365),"ESTABLISHED_BEFORE_D")
     def test_06_temporal_future(self):self.assertEqual(classify_by_year(self.d["additional_historical_anchors"][0],2364),"UNRESOLVED_SAME_YEAR")
@@ -74,6 +74,20 @@ class AChronologyTests(unittest.TestCase):
         copyd["tzenkethi_false_coup_report"]["status"]="SCREEN_OR_OFFICIAL_ANCHOR"
         with self.assertRaises(AssertionError):
             validate_index(self.d,copyd,self.registry,self.eras)
+
+    def test_44_valhalla_academy_2387(self):
+        self.assertEqual(self.d["reference_window"]["expected_ensign_year"],2387)
+    def test_45_reject_valhalla_late(self):
+        self.bad(lambda d:d["ship_temporal_reservations"][0].update(target_entry_year=2389))
+    def test_46_reject_romulus_past(self):
+        self.bad(lambda d:d["game_additions"][0].update(do_not_assume_romulus_destroyed_in_2383=False))
+    def test_47_reject_picard_captain(self):
+        self.bad(lambda d:d["npc_career_2383"][0].update(not_permanent_valhalla_captain=False))
+    def test_48_reject_valhalla_runtime(self):
+        self.bad(lambda d:d["game_additions"][0].update(gameplay_activated=True))
+    def test_49_nemesis_before_campaign(self):
+        event=next(e for e in self.d["additional_historical_anchors"] if e["event_id"]=="nemesis_shinzon_romulan_crisis")
+        self.assertEqual(classify_by_year(event,2383),"ESTABLISHED_BEFORE_D")
 
 if __name__=="__main__":
     unittest.main(verbosity=2)

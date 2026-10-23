@@ -4,6 +4,10 @@
 **Estado (2026-10-23):** PLAN DOCUMENTAL; **03-A NEEDS_REVIEW** (corpus y pruebas preparados, pendiente autorización del autor). B–E NO INICIADAS.  
 **Frontera:** no hay implementación CoreRPG/UE5/Host/IA ni Content Pack integrado por efecto de estos ficheros.
 
+## Addendum 2026-10-23 — Año 2383 con cuatro cursos de Academia
+
+El autor propone empezar en **2383**, graduarse alrededor de **2387** como alférez y poder servir en Valhalla. El desarrollo/construcción de esta clase se propone tras *Némesis* (2379–2383), con puesta en servicio objetivo en 2383, como GAME_ADDITION no canonizada. Las fechas exactas y desempeño posterior del programa requieren eventual aprobación. Referencia: docs/decisions/lore03a_valhalla_2383_academy.md.
+
 ## 1. Decisión marco aprobada
 
 La **única época jugable es TNG/DS9/Voyager**, con `2364–2378` como ventana **referencial** y fecha concreta de comienzo **sin determinar**. Pike/Kirk quedan en el catálogo histórico; su material no se borra. Los hechos de pantalla anteriores a fecha `D` dan forma a la historia de arranque, pero **desde `D` ninguna fecha futura fuerza guiones**. Las excepciones creativas anteriores a `D` exigen aprobación como `GAME_ADDITION`, preservando evidencia de pantalla. Viajes temporales **no jugables**.
@@ -74,8 +78,8 @@ La **única época jugable es TNG/DS9/Voyager**, con `2364–2378` como ventana 
 
 | Código | Riesgo / decisión | Tratamiento |
 |---|---|---|
-| DEC-03-01 | Año exacto de inicio | **Pendiente del autor. No fijar en una prueba o diseño como norma** |
-| DEC-03-02 | Entrada en servicio de **Clase Valhalla** | **Pendiente del autor**; referencia F01 y addendum posterior |
+| DEC-03-01 | Año inicial | **2383 preferido y propuesto**; día/mes no fijado, no hardcodear todavía |
+| DEC-03-02 | Clase Valhalla | **Objetivo de entrada en servicio 2383**, desarrollo tras Némesis y alféreces de la promoción 2387; fechas técnicas aún por consolidar |
 | DEC-03-03 | **Odyssey** y ejemplar Enterprise-F | Año y estatus **por acreditar**; no incorporar retroactivamente |
 | DEC-03-04 | Mecanismo de excepciones temporales creativas | Cada excepción concreta requiere aprobación y registro `GAME_ADDITION`, jamás por deducción |
 | R-03-05 | Epoch flags antiguos en Academia, naves, tecnología, cronologías | Mantener fuentes; auditar selectores antes de implementación; el histórico no es jugable |

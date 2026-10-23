@@ -580,11 +580,11 @@ Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por s
 
 ## LORE-03 — Historia, conflictos y continuidad galáctica (inicio 2026-10-23)
 
-**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager` (2364–2378 como intervalo de referencia, sin fecha exacta de comienzo fijada). Pike/Kirk permanecen exclusivamente históricos. Véase `docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
+**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
 
 | Apartado | Estado | Alcance actual |
 |---|---|---|
-| A — Cronología y acontecimientos | 🟨 NEEDS_REVIEW | PR #38: atlas cronológico 2364–2378 (15 años), 40 referencias por ID de LORE-01 D, 21 fichas históricas adicionales con fuentes, antecedentes y validadores. Auditoría editorial terminada **con reservas documentadas**; requiere aprobación, no fusionada y sin runtime. |
+| A — Cronología y acontecimientos | 🟨 NEEDS_REVIEW | PR #38: atlas cronológico 2364–2383 (20 años), 40 referencias por ID de LORE-01 D, 26 fichas históricas adicionales y Valhalla GAME_ADDITION con fuentes, antecedentes y validadores. Auditoría editorial terminada **con reservas documentadas**; requiere aprobación, no fusionada y sin runtime. |
 | B — Conflictos, guerras y crisis | ⬜ TODO | Reutilizar contratos existentes; no iniciar antes de aprobar A. |
 | C — Consecuencias y memoria histórica | ⬜ TODO | Conocimiento parcial y consecuencias; sin implementación. |
 | D — Continuidad/divergencia | ⬜ TODO | Estado inicial por fecha elegida, historia emergente; sin runtime. |

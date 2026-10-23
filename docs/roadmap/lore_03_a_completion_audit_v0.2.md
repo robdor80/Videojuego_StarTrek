@@ -48,3 +48,7 @@
 | Revisión y fusión humana | PR #38 | **NO**: no autorizado fusionar |
 
 **Alcance del dictamen:** suficiencia editorial para LORE-03 A, con puntos de precisión rastreados para B–E y futura conversión a datos de juego. **No** se presenta como exhaustividad del canon Star Trek ni compatibilidad automática con CoreRPG/UE5.
+
+## Addendum — 2383–2387 y clase Valhalla
+
+Se añaden cinco hitos 2379–2382 al atlas, seis fuentes oficiales y un registro GAME_ADDITION para programa Valhalla tras Némesis: propuesta 2379 decisión, 2380 construcción, 2381–82 integración y 2383 servicio objetivo. El cadete comienza Academia en 2383 y se gradúa alrededor de 2387, pudiendo acceder a la clase como alférez. **2383 es preferido, no fecha exacta fijada.** El canon no obliga a la destrucción de Rómulo (2387) dentro de campañas iniciadas en 2383. Las fuentes oficiales afirman ascenso de Picard a almirante en 2381 y mando de Riker de Titan en 2379. Los 40 hechos heredados no se alteraron, y las reservas de precisión originales permanecen. 

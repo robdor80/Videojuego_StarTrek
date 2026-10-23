@@ -22,7 +22,7 @@ def check(ok, reason):
 
 def classify_by_year(event, campaign_year):
     """Only a documentary example: NEVER used to mutate WorldState."""
-    check(type(campaign_year) is int and 2364 <= campaign_year <= 2378, "Campaign sample outside allowed reference window")
+    check(type(campaign_year) is int and 2364 <= campaign_year <= 2383, "Campaign sample outside allowed reference window")
     y = event["time_anchor"]["reference_year"]
     if y < campaign_year:
         return "ESTABLISHED_BEFORE_D"
@@ -41,7 +41,7 @@ def validate_index(idx, diplomatic, registry, eras):
     check(idx["prior_eras"] == {"pike":"HISTORICAL_REFERENCE_ONLY", "kirk":"HISTORICAL_REFERENCE_ONLY"},
           "Former campaigns no longer available; do not delete their history")
     w = idx["reference_window"]
-    check((w["start_year"], w["end_year"]) == (2364,2378), "Reference window changed")
+    check((w["start_year"], w["end_year"]) == (2364,2383), "Reference window changed")
     check(w["campaign_start_date"] is None and w["date_is_author_approved"] is False, "Start date was invented")
     check(idx["same_year_boundary_rule"] == "UNKNOWN_UNTIL_DATE_ORDER_EVIDENCED", "Same-year event assumed historical")
     check(idx["date_precision_rule"] == "YEARS_ARE_EDITORIAL_APPROXIMATIONS; EXACT_DAY_NOT_ALLOWED_WITHOUT_PRIMARY_EVIDENCE",
@@ -64,15 +64,15 @@ def validate_index(idx, diplomatic, registry, eras):
 
     new=idx["additional_historical_anchors"]
     ids=[x["event_id"] for x in new]
-    check(len(new) >= 20, "Insufficient chronology coverage")
+    check(len(new) >= 26, "Insufficient chronology coverage")
     check(MUST_BE_PRESENT <= set(ids), "Critical chronology anchor lost")
     check(len(ids) == len(set(ids)) and not (set(ids) & set(diplomatic)), "New event ID collision with LORE-01 D")
     covered={x["time_anchor"]["reference_year"] for x in new} | {e["reference_year"] for e in diplomatic.values()}
-    check(set(range(2364,2379)) <= covered, "A year of 2364–2378 lacks documentary coverage")
+    check(set(range(2364,2383)) <= covered, "A year of 2364–2382 lacks documentary coverage")
     allowed_hooks={"starfleet_career","political_state","ship_status","memory_history","science_research","navigation","civilian_culture"}
     for e in new:
         t=e["time_anchor"]
-        check(type(t["reference_year"]) is int and 2364 <= t["reference_year"] <= 2378, "Invalid event year")
+        check(type(t["reference_year"]) is int and 2364 <= t["reference_year"] <= 2383, "Invalid event year")
         check(t["precision"] == "YR_APPROXIMATE" and t["not_exact_date"] is True, "Invented exact historical date")
         check(e["bootstrap_condition"] == "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START", "Forced bootstrap")
         check(e["must_never_force_poststart"] is True and e["narrative_mandate"] is False, "Scripted television future")
@@ -115,7 +115,16 @@ def validate_index(idx, diplomatic, registry, eras):
         check(name in ships and ships[name]["service_entry_year"] is None and ships[name]["approved_year"] is False,
               "Unapproved ship appears in chronology")
     check(ships.get("sovereign",{}).get("do_not_backdate") is True,"Sovereign backdate guard removed")
-    return {"historical_refs":len(original_ids),"additional_anchors":len(new),"years":len(covered & set(range(2364,2379))),
+    check(w.get("campaign_start_year_proposed") == 2383 and w.get("expected_ensign_year") == 2387 and w.get("academy_duration_years") == 4,"Academy continuity 2383-2387 broken")
+    check(ships["valhalla"].get("target_entry_year") == 2383 and ships["valhalla"].get("operational_by_cadet_graduation_target_year") == 2387,"Valhalla must be accessible to graduating ensign")
+    ga=idx.get("game_additions",[])
+    check(len(ga)==1 and ga[0]["kind"]=="GAME_ADDITION" and ga[0]["construction_begins_target_year"] == 2380 and ga[0]["commissioning_target_year"] == 2383, "Historical Valhalla project decision lost")
+    check(ga[0]["player_can_serve_on_valhalla_as_ensign"] is True and ga[0]["do_not_assume_romulus_destroyed_in_2383"] is True,"Career or Romulus guard broken")
+    check(ga[0]["gameplay_activated"] is False,"Valhalla lore unexpectedly changes runtime")
+    npc={x["person"]:x for x in idx.get("npc_career_2383",[])}
+    check(npc.get("Jean-Luc Picard",{}).get("post")=="almirante" and npc["Jean-Luc Picard"].get("not_permanent_valhalla_captain") is True,"Picard's 2383 rank reversed")
+    check(npc.get("William Riker",{}).get("post")=="capitan_uss_titan","Riker's Titan captaincy lost")
+    return {"historical_refs":len(original_ids),"additional_anchors":len(new),"years":len(covered & set(range(2364,2384))),
             "predecessors":len(predecessors),"sources":len(registry)}
 
 def validate():
@@ -137,13 +146,14 @@ def validate():
     check("Only one playable era" in (ROOT/"sources/canon_policy.md").read_text(encoding="utf-8"),
           "Canon-policy reference not updated")
     atlas=(ROOT/TIMELINE).read_text(encoding="utf-8")
-    for year in range(2364,2379):
+    for year in range(2364,2384):
         check(f"| {year} |" in atlas,"Yearly atlas has a gap")
     for id in MUST_BE_PRESENT:
         check(id in atlas,"Indexed event missing from atlas: " + id)
     check("UNRESOLVED_SAME_YEAR" in (ROOT/BOUNDARY).read_text(encoding="utf-8"), "Missing same-year examples")
     check("NEEDS_REVIEW" in (ROOT/FINAL_REPORT).read_text(encoding="utf-8"), "Final audit absent")
     check((ROOT/"docs/roadmap/lore_03_master_plan_v0.1.md").is_file(), "Master plan missing")
+    check((ROOT/"docs/decisions/lore03a_valhalla_2383_academy.md").is_file(), "Valhalla 2383 decision missing")
     return stats
 
 if __name__=="__main__":

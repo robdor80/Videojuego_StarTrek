@@ -1,6 +1,6 @@
 # LORE-03 A — Atlas cronológico editorial, v0.2
 
-**Ámbito jugable:** 2364–2378 como intervalo de referencia, no fecha concreta de creación. **Estado:** preparado para revisión documental, nunca runtime. Se preservan Pike/Kirk como pasado histórico.
+**Ámbito jugable:** 2364–2383 como referencia histórica, 2383 año de ingreso preferente del cadete, sin día exacto. **Estado:** preparado para revisión documental, nunca runtime. Se preservan Pike/Kirk como pasado histórico.
 
 ## Uso: un único pasado hasta la fecha D
 
@@ -24,6 +24,12 @@ Los identificadores en la columna **LORE-01 D** apuntan a la definición origina
 | 2377 | — | `voyager_unimatrix_zero` | Conflicto de Unimatrix Zero; conocimientos fragmentados y no accesibles a todo personaje. |
 | 2378 | — | `voyager_talaxian_settlement`, `voyager_canonical_return` | Tramo final Voyager y regreso canónico, no retorno obligatorio de las partidas anteriores. |
 
+| 2379 | — | `nemesis_shinzon_romulan_crisis`, `riker_titan_captaincy` | Shinzon, pérdida de Data y transición de Riker a capitán de Titan; **inicio propuesto** del programa Valhalla GAME_ADDITION. |
+| 2380 | — | `cerritos_era_2380` | Era Cerritos; construcción prevista de Valhalla como adición del juego. |
+| 2381 | — | `picard_promoted_admiral` | Picard asciende a almirante; la construcción e integración Valhalla continúan según propuesta. |
+| 2382 | — | `protostar_delta_assignment` | Salida Protostar/Chakotay; pruebas finales previstas de Valhalla. |
+| 2383 | — | **GAME_ADDITION_VALHALLA_POST_NEMESIS** (no suceso de pantalla) | **Ingreso en Academia, D propuesto**, primera unidad Valhalla objetivo de comisión, día exacto sin determinar. |
+
 ## Antecedentes anteriores a 2364
 
 - **2293 aproximado:** proceso de Khitomer referenciado por `khitomer_diplomacy`. Es contexto político Klingon–Federación y memoria institucional, no época seleccionable.
@@ -42,6 +48,10 @@ Los identificadores en la columna **LORE-01 D** apuntan a la definición origina
 6. No se deducen clases/tecnologías de un GLB, la existencia de un episodio, ni de un personaje histórico. Clase ≠ unidad concreta ≠ assignment.
 7. **Sutherland**: su intervención en el contexto de guerra civil klingon de 2368 permite referencias históricas a una nave específica, no significa que el puente prototipo en UE5 reproduzca automáticamente su estado histórico.
 
+## Academia, personajes y Valhalla en 2383–2387
+
+El cadete entra en 2383 y completa cuatro años hasta graduarse aproximadamente en 2387. La clase Valhalla inicia su programa tras Némesis (2379), construcción desde 2380 y tiene comisión objetivo en 2383 (GAME_ADDITION propia), por lo que un alférez podría servir en ella en 2387. Picard ya es almirante (2381), Riker capitán de Titan (2379), Janeway almirante, Geordi sin destino 2383 verificado. Ninguno está congelado en un puesto de las series. Rómulo no está destruido en 2383, sino en 2387 en el referente de pantalla; su destrucción no se impone como futuro del guardado.
+
 ## Riesgos de anacronismo en las naves
 
 | Elemento | Estado editorial conservador |
@@ -51,7 +61,7 @@ Los identificadores en la columna **LORE-01 D** apuntan a la definición origina
 | Voyager / Intrepid | Viaje canónico 2371–2378; disponibilidad de Voyager y clase individual dependen de D, no de tener el modelo del puente |
 | USS Defiant | Desplegada en 2371, pérdida del casco original en 2375; otra nave rebautizada no hereda mágicamente matrícula/daños |
 | Odyssey / Enterprise-F | **NO asignar fecha ni presencia predeterminada**, a falta de decisión/evidencia aceptada |
-| Clase Valhalla | Diseño propio, entrada en servicio no decidida; armas especiales no equivalen a presencia automática en 2372 |
+| Clase Valhalla | Desarrollo después de Némesis; construcción desde 2380; **comisión objetivo 2383 (GAME_ADDITION)**; disponible para alférez 2387 si se cumple el programa de la campaña |
 
 ## Revisión y reservas
 

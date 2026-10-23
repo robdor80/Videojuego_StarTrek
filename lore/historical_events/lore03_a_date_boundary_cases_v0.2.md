@@ -1,6 +1,6 @@
 # LORE-03 A — Casos de corte de campaña D
 
-El año de inicio **no está elegido**. Los casos siguientes son ejemplos de pruebas, no selecciones aprobadas del videojuego.
+**2383** es el año preferente propuesto; día/mes no decidido. Los casos anteriores siguen siendo comparaciones documentales, no campañas adicionales. Los casos siguientes son ejemplos de pruebas, no selecciones aprobadas del videojuego.
 
 | Ejemplo de D (solo año) | Pasado que puede darse por anterior | En el mismo año | Qué no debe ocurrir |
 |---|---|---|---|
@@ -12,6 +12,7 @@ El año de inicio **no está elegido**. Los casos siguientes son ejemplos de pru
 | 2373 | Anclas anteriores a 2373 | Dominio/Borg Sector 001: `UNRESOLVED_SAME_YEAR` | Ejecutar inicio de guerra ni batalla |
 | 2375 | Operación Retorno 2374 | Tratado Bajor, caída Defiant, estatus Sisko: `UNRESOLVED_SAME_YEAR` | Dar por terminada guerra al comienzo de ese año |
 | 2378 | Anclas anteriores a 2378 | Voyager regresa: `UNRESOLVED_SAME_YEAR` | Forzar final de Voyager o cierre partida |
+| **2383, preferido** | Némesis 2379, Picard almirante 2381, Riker/Titan, Protostar 2382 | Programa Valhalla propuesto para su primer servicio: fecha exacta pendiente | Aplicar destrucción de Rómulo 2387 o dar por acabada Academia antes de 2387 |
 
 La comparación provisional está documentada en el validador como función *puramente editorial* `classify_by_year`: si el evento es anterior devuelve `ESTABLISHED_BEFORE_D`; si es posterior devuelve `NOT_YET_AT_D`; en el mismo año `UNRESOLVED_SAME_YEAR`. **No genera datos de partida ni muta CoreRPG**. Cuando una fecha intradiegética exacta esté certificada, se podrá sustituir esta comparación sin atribuir precisión retroactiva a todas las fuentes.
 

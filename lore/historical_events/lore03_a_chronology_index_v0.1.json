@@ -5,9 +5,14 @@
   "scope": "tng_ds9_voyager_only",
   "reference_window": {
     "start_year": 2364,
-    "end_year": 2378,
+    "end_year": 2383,
     "campaign_start_date": null,
-    "date_is_author_approved": false
+    "date_is_author_approved": false,
+    "campaign_start_year_proposed": 2383,
+    "campaign_start_year_status": "PREFERRED_AUTHOR_PROPOSAL_NOT_FIXED_DAY",
+    "academy_first_year": 2383,
+    "academy_duration_years": 4,
+    "expected_ensign_year": 2387
   },
   "authority": "CoreRPG_World_State_ONLY",
   "gameplay_activated": false,
@@ -862,13 +867,191 @@
       "runtime_state_change": false,
       "source_era": "tng_ds9_voyager",
       "narrative_mandate": false
+    },
+    {
+      "event_id": "nemesis_shinzon_romulan_crisis",
+      "time_anchor": {
+        "reference_year": 2379,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "romulan_political_crisis",
+      "summary": "En el incidente Shinzon de Némesis, la Enterprise-E y Picard enfrentan un desafío romulano y Data se sacrifica; crisis anterior a la fundación del programa Valhalla.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_NEMESIS_EFFECT_2023",
+          "confidence": "MEDIUM",
+          "claim_scope": "Referencia oficial para el evento, datación en año aproximado"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Imperio Romulano",
+          "Shinzon",
+          "Picard",
+          "Enterprise-E",
+          "Data"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "riker_titan_captaincy",
+      "time_anchor": {
+        "reference_year": 2379,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "career_transition",
+      "summary": "Riker acepta el mando de la USS Titan en 2379; un eventual traslado a Odyssey o Sovereign requerirá una decisión posterior, no se atribuye por defecto.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_RIKER_TITAN_2017",
+          "confidence": "MEDIUM",
+          "claim_scope": "Referencia oficial para el evento, datación en año aproximado"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "William Riker",
+          "USS Titan",
+          "Deanna Troi"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "starfleet_career"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "cerritos_era_2380",
+      "time_anchor": {
+        "reference_year": 2380,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "fleet_operational_context",
+      "summary": "La era Lower Decks contextualiza operaciones de la USS Cerritos en 2380, sin asumir que su destino futuro es obligatorio en la campaña iniciada en 2383.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_LOWER_DECKS_2380",
+          "confidence": "MEDIUM",
+          "claim_scope": "Referencia oficial para el evento, datación en año aproximado"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "USS Cerritos",
+          "Flota Estelar"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "picard_promoted_admiral",
+      "time_anchor": {
+        "reference_year": 2381,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "career_transition",
+      "summary": "Picard asciende a almirante en 2381 según referencia oficial StarTrek.com; en 2383 ya no debe presentarse como capitán permanente de Enterprise o Valhalla.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_PICARD_ADMIRAL_2381",
+          "confidence": "MEDIUM",
+          "claim_scope": "Referencia oficial para el evento, datación en año aproximado"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Jean-Luc Picard",
+          "Flota Estelar"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "starfleet_career"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "protostar_delta_assignment",
+      "time_anchor": {
+        "reference_year": 2382,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "ship_assignment",
+      "summary": "La USS Protostar sale hacia el cuadrante Delta en 2382 bajo mando de Chakotay; los sucesos posteriores de Prodigy y saltos temporales no son mecánicas jugables.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_PROTOSTAR_JOURNEY",
+          "confidence": "MEDIUM",
+          "claim_scope": "Referencia oficial para el evento, datación en año aproximado"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Chakotay",
+          "USS Protostar",
+          "almirante Janeway"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
     }
   ],
   "ship_temporal_reservations": [
     {
       "class_id": "valhalla",
       "service_entry_year": null,
-      "approved_year": false
+      "approved_year": false,
+      "development_from_year": 2379,
+      "target_entry_year": 2383,
+      "operational_by_cadet_graduation_target_year": 2387
     },
     {
       "class_id": "odyssey",
@@ -882,15 +1065,17 @@
     }
   ],
   "open_questions": [
-    "EXACT_CAMPAIGN_START_YEAR",
     "VALHALLA_SERVICE_ENTRY",
     "ODYSSEY_CHRONOLOGICAL_STATUS",
     "LEGACY_CONSUMER_FILTERS",
     "BORG_OFFENSIVE_2366_VS_BATTLE_2367",
     "BAJOR_OCCUPATION_START_PRECISION",
-    "DIPLO_EVENT_PRECISION_CROSSCHECK"
+    "DIPLO_EVENT_PRECISION_CROSSCHECK",
+    "DAY_MONTH_OF_2383_ENROLLMENT",
+    "VALHALLA_EXACT_COMMISSIONING_DATE_WITHIN_2383",
+    "GEORDI_2383_OFFICIAL_ASSIGNMENT"
   ],
-  "note": "LORE-03A editorial listo para revisión humana. Las fechas expresan años aproximados, sin imponer pantalla posterior a D, sin contenido CoreRPG/UE5 importable. Pendientes puntuales documentados no generan runtime.",
+  "note": "El autor prefiere campaña inicial 2383 con cuatro años de Academia y alférez sobre 2387. Valhalla se diseña/construye después de Nemesis (2379), con puesta en servicio OBJETIVO en 2383, no como canon televisivo; disponible en 2387 para destino de alférez. Romulus 2387 es futuro de pantalla, no pasado de 2383. Sin runtime.",
   "completion_evidence_ref": "docs/roadmap/lore_03_a_completion_audit_v0.2.md",
   "canonical_sources_audited": [
     "TNG",
@@ -966,6 +1151,53 @@
       "source_event_id": "derna_hospital_dispute",
       "issue": "LORE-01 D asigna 2375 a una crisis descrita en Image in the Sand; contrastar emisión/tiempo interno y conservar procedencia de LORE-01.",
       "status": "REQUIRES_PRECISION_CHECK"
+    }
+  ],
+  "game_additions": [
+    {
+      "id": "GAME_ADDITION_VALHALLA_POST_NEMESIS",
+      "kind": "GAME_ADDITION",
+      "author_decision": "AUTHOR_REQUESTED_DIRECTION",
+      "historical_trigger": "nemesis_shinzon_romulan_crisis",
+      "design_decision_year": 2379,
+      "construction_begins_target_year": 2380,
+      "commissioning_target_year": 2383,
+      "commissioning_year_finalized": false,
+      "ship_commissioned_during_reference_2383": "TARGET_NOT_HISTORICAL_FACT",
+      "premise": "Tras Némesis, la Flota impulsa la clase Valhalla a partir de experiencia Borg, Guerra del Dominio e inestabilidad romulana de Shinzon.",
+      "academy_player_enrollment_year": 2383,
+      "expected_player_ensign_year": 2387,
+      "player_can_serve_on_valhalla_as_ensign": true,
+      "gameplay_activated": false,
+      "do_not_assume_romulus_destroyed_in_2383": true,
+      "roman_supernova_canon_reference_year": 2387,
+      "source_document": "docs/decisions/lore03a_valhalla_2383_academy.md"
+    }
+  ],
+  "npc_career_2383": [
+    {
+      "person": "Jean-Luc Picard",
+      "post": "almirante",
+      "reference": "ST_OFFICIAL_PICARD_ADMIRAL_2381",
+      "not_permanent_valhalla_captain": true
+    },
+    {
+      "person": "William Riker",
+      "post": "capitan_uss_titan",
+      "reference": "ST_OFFICIAL_RIKER_TITAN_2017",
+      "other_command_requires_author_addition": true
+    },
+    {
+      "person": "Kathryn Janeway",
+      "post": "almirante",
+      "reference": "ST_OFFICIAL_PROTOSTAR_JOURNEY",
+      "not_permanent_valhalla_captain": true
+    },
+    {
+      "person": "Geordi La Forge",
+      "post": "ingeniero_veterano_destino_concreto_no_certificado",
+      "reference": "ST_OFFICIAL_NEMESIS_EFFECT_2023",
+      "optional_valhalla_consultant_not_assigned": true
     }
   ]
 }
