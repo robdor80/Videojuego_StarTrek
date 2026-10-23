@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
-  "date": "2026-10-13",
+  "date": "2026-10-23",
   "phase": "F07",
-  "scope": "Preparación técnica, NO prueba UE5",
+  "scope": "Reconciliación documental de ejecución reportada en MSI; evidencias locales primarias pendientes. NO implica UE5_JUGABLE.",
   "assets_msi": {
-    "status": "PENDIENTE_DE_LISTADO",
+    "status": "INVENTARIO_LOCAL_PENDIENTE_DE_ADJUNTAR",
     "blocking_preparatory_work": false,
     "blocking_full_audit": true
   },
@@ -12,57 +12,68 @@
     "filename": "star_trek_sutherland_bridge.glb",
     "sha256": "53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b",
     "static_report": "docs/roadmap/master/fases/F02/AUDITORIA_GLB_USS_SUTHERLAND_2026-10-12.md",
-    "ue5_import": "NO_EJECUTADO",
+    "ue5_import": "REPORTADO_REALIZADO_PENDIENTE_COTEJO",
     "rights_clearance": "PENDIENTE",
     "rob3d_export_comparison": "PENDIENTE"
   },
   "tests_ue5": {
     "UE07-01": {
-      "status": "NO_EJECUTADO",
-      "evidence": null
+      "status": "REPORTADO_PENDIENTE_COTEJO",
+      "evidence": null,
+      "note": "Importación UE5 del Sutherland comunicada; faltan escena, parámetros, versión y hash del derivado."
     },
     "UE07-02": {
-      "status": "NO_EJECUTADO",
-      "evidence": null
+      "status": "REPORTADO_PARCIAL_PENDIENTE_COTEJO",
+      "evidence": null,
+      "note": "Personaje recorrió puente; faltan mediciones explícitas y test formal de escala humana."
     },
     "UE07-03": {
-      "status": "NO_EJECUTADO",
-      "evidence": null
+      "status": "REPORTADO_PARCIAL_PENDIENTE_COTEJO",
+      "evidence": null,
+      "note": "Hubo recorridos reales; falta demostrar ruta completa de criterios oficiales."
     },
     "UE07-04": {
-      "status": "NO_EJECUTADO",
-      "evidence": null
+      "status": "REPORTADO_PARCIAL_PENDIENTE_COTEJO",
+      "evidence": null,
+      "note": "Laboratorios de puertas y colisiones comunicados; falta comprobación de evidencia local y del mapa de aceptación."
     },
     "UE07-05": {
       "status": "NO_EJECUTADO",
-      "evidence": null
+      "evidence": null,
+      "note": "No consta ensayo documentado de activación de consola de Sensores."
     },
     "UE07-06": {
       "status": "NO_EJECUTADO",
-      "evidence": null
+      "evidence": null,
+      "note": "No consta prueba documentada de salida/restauración de entrada."
     },
     "UE07-07": {
       "status": "NO_EJECUTADO",
-      "evidence": null
+      "evidence": null,
+      "note": "No consta prueba oficial específica de independencia de IA remota."
     },
     "UE07-08": {
       "status": "NO_EJECUTADO",
-      "evidence": null
+      "evidence": null,
+      "note": "Se editaron materiales en Blender, pero no consta validación específica de materiales/LCARS en UE5."
     },
     "UE07-09": {
       "status": "NO_EJECUTADO",
-      "evidence": null
+      "evidence": null,
+      "note": "No constan tres reinicios reproducibles registrados para el plan."
     }
   },
   "package": {
     "status": "NO_EJECUTADO",
-    "sha256": null
+    "sha256": null,
+    "note": "La ejecución de PIE/escena no equivale a build empaquetada; sin evidencia cotejada de packaging."
   },
   "metrics": {
     "fps": null,
     "ram_mb": null,
     "vram_mb": null,
-    "draw_calls": null
+    "draw_calls": null,
+    "note": "No se han suministrado cifras medidas verificables; mantener null."
   },
   "f08": {
     "e2e_core_ue5": "NO_EJECUTADO"
@@ -74,9 +85,51 @@
     "suite": "tools/validation/test_f07_pbr_pipeline.py",
     "workflow": ".github/workflows/f07-pbr-reference.yml",
     "scope": "GLB procedural de laboratorio con UV/PBR; CI no certifica Blender ni UE5",
-    "sutherland_materials_changed": false,
+    "sutherland_materials_changed": "EDICION_EN_COPIA_BLENDER_REPORTADA_PENDIENTE_COTEJO",
     "valhalla_real_plate_created": false,
     "ue5_material_review": "NO_EJECUTADO",
-    "blender_import": "NO_EJECUTADO"
-  }
+    "blender_import": "REPORTADO_REALIZADO_EN_COPIA_ARTISTICA_PENDIENTE_COTEJO"
+  },
+  "reconciliation": {
+    "previous_cutoff": "2026-10-13",
+    "updated": "2026-10-23",
+    "record": "docs/roadmap/master/fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md",
+    "source_type": "SEGUIMIENTO_USUARIO_Y_RESUMENES_DE_LABORATORIO_SIN_LOGS_ADJUNTOS",
+    "evidence_primary_status": "PENDIENTE_DE_COTEJAR_MSI",
+    "policy": "Los estados REPORTADO no son PASS ni sustituyen logs, hashes, mapas ni aceptación final."
+  },
+  "laboratorios_locales_reportados": [
+    {
+      "id": "F07-CHAIR-02",
+      "state": "RESULTADOS_FAVORABLES_REPORTADOS_PENDIENTE_COTEJO",
+      "scope": "Seis bases; silla adelantable y retráctil; 59/59 comprobaciones de sillas reportadas",
+      "movement": {
+        "retreat_cm": 27,
+        "forward_cm": 57,
+        "duration_s": 1.9
+      },
+      "related_reported_counts": {
+        "doors": "50/50",
+        "collision_circulation": "44/44"
+      },
+      "primary_logs": "PENDIENTE_DE_ADJUNTAR"
+    },
+    {
+      "id": "F07-SEAT-01",
+      "state": "NO_APROBADO_REPORTADO",
+      "path_hint": "C:\\Users\\andro\\Documents\\StarTrek_3D\\F07_SEAT_01_Lab",
+      "finding": "Once poses muestreadas presentan intersección muslos/asiento; sentado funcional no validado",
+      "primary_logs": "PENDIENTE_DE_ADJUNTAR"
+    },
+    {
+      "id": "F07-CHAIR-SELECT",
+      "state": "ENCARGO_PREPARADO_SIN_RESULTADO_COTEJADO",
+      "finding": "Comparación de cuatro GLB candidatos; no anticipar ganadora ni aprobación."
+    },
+    {
+      "id": "F07-PBR-ART",
+      "state": "TRABAJO_BLENDER_REPORTADO_PENDIENTE_COTEJO",
+      "finding": "Materiales artísticos locales Sutherland; no demuestra import UE5 ni QA de iluminación."
+    }
+  ]
 }
