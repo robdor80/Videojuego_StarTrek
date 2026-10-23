@@ -1,4 +1,4 @@
-# Master Timeline v0.1 — Minimal Backbone
+> **Nota de alcance posterior (2026-10-23):** todos los hitos del siglo XXIII, incluso los etiquetados históricamente como `pike` o `kirk`, son **antecedentes históricos NO jugables**. El único perfil seleccionable ahora es `tng_ds9_voyager` (2364–2378 como referencia); los términos "start anchor" inferiores describen la decisión antigua, no una campaña vigente. No se borran registros para mantener proveniencia. Fecha exacta de comienzo pendiente del autor.\n\n# Master Timeline v0.1 — Minimal Backbone
 
 This is intentionally **not** a complete Star Trek chronology. Its purpose is to provide enough temporal structure for later lore blocks to place characters, ships, technology and institutions safely.
 
