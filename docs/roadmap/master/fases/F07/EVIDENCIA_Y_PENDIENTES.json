@@ -85,10 +85,15 @@
     "suite": "tools/validation/test_f07_pbr_pipeline.py",
     "workflow": ".github/workflows/f07-pbr-reference.yml",
     "scope": "GLB procedural de laboratorio con UV/PBR; CI no certifica Blender ni UE5",
-    "sutherland_materials_changed": "EDICION_EN_COPIA_BLENDER_REPORTADA_PENDIENTE_COTEJO",
+    "sutherland_materials_changed": false,
     "valhalla_real_plate_created": false,
     "ue5_material_review": "NO_EJECUTADO",
-    "blender_import": "REPORTADO_REALIZADO_EN_COPIA_ARTISTICA_PENDIENTE_COTEJO"
+    "blender_import": "NO_EJECUTADO",
+    "sutherland_artistic_copy_in_blender": {
+      "status": "EDICION_REPORTADA_PENDIENTE_COTEJO",
+      "note": "Mantener false en sutherland_materials_changed porque representa conversión del asset original/versionado, no materiales de una copia artística local."
+    },
+    "blender_local_art_reported": true
   },
   "reconciliation": {
     "previous_cutoff": "2026-10-13",
