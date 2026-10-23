@@ -1,7 +1,7 @@
 # LORE-03 — Plan maestro: Historia, conflictos y continuidad galáctica
 
 **Fecha:** 2026-10-23. **Base auditada:** `main@867077e4a0108f5ae71485ba668c0419ee29aa2f`.  
-**Estado (2026-10-23):** PLAN DOCUMENTAL; **03-A NEEDS_REVIEW** (corpus y pruebas preparados, pendiente autorización del autor). B–E NO INICIADAS.  
+**Estado actualizado 2026-10-23:** PLAN DOCUMENTAL; **03-A COMPLETE** tras [fusión PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38) (`d0efab2c9d4b2451ad678b651bd6ecf2283d8235`). B–E NO INICIADAS.  
 **Frontera:** no hay implementación CoreRPG/UE5/Host/IA ni Content Pack integrado por efecto de estos ficheros.
 
 ## Addendum 2026-10-23 — Año 2383 con cuatro cursos de Academia
@@ -90,4 +90,4 @@ La **única época jugable es TNG/DS9/Voyager**, con `2364–2378` como ventana 
 
 ## 6. Aprobación y siguiente puerta
 
-LORE-03 A se completa editorialmente con `docs/roadmap/lore_03_a_baseline_audit_v0.1.md` y `lore/historical_events/lore03_a_chronology_index_v0.1.json` como línea base más el atlas y la auditoría final v0.2; sigue **NEEDS_REVIEW** hasta revisión/fusión. No avanzar a B hasta PR A aceptada por el autor.
+LORE-03 A se completa editorialmente con `docs/roadmap/lore_03_a_baseline_audit_v0.1.md` y `lore/historical_events/lore03_a_chronology_index_v0.1.json` como línea base más el atlas y la auditoría final v0.2; consta **COMPLETE** tras fusión de PR #38 y validaciones documentales. La condición administrativa previa para **preparar B** queda satisfecha, sin iniciarse B automáticamente.

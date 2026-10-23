@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "index_id": "lore03_a_chronology_index",
-  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "status": "COMPLETE_DOCUMENTARY",
   "scope": "tng_ds9_voyager_only",
   "reference_window": {
     "start_year": 2364,
@@ -1199,5 +1199,15 @@
       "reference": "ST_OFFICIAL_NEMESIS_EFFECT_2023",
       "optional_valhalla_consultant_not_assigned": true
     }
-  ]
+  ],
+  "closure": {
+    "pr_number": 38,
+    "merged_at": "2026-10-23T21:29:38Z",
+    "merge_commit_sha": "d0efab2c9d4b2451ad678b651bd6ecf2283d8235",
+    "checks_on_pr_head": "13/13 success",
+    "scope": "DOCUMENTARY_ONLY",
+    "runtime_activated": false,
+    "open_reservations_preserved": true,
+    "administrative_status_corrected_in_separate_pr": true
+  }
 }
