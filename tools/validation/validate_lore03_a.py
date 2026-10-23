@@ -69,7 +69,7 @@ def validate():
     decisions = (ROOT / "docs/decisions/playable_eras.md").read_text(encoding="utf-8")
     canon = (ROOT / "sources/canon_policy.md").read_text(encoding="utf-8")
     status = (ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
-    check("2026-10-23" in decisions and "única época jugable" in decisions, "Decision not registered")
+    check("2026-10-23" in decisions and "única época jugable" in decisions.lower(), "Decision not registered")
     check("Only one playable era" in canon, "Canon policy scope not synced")
     check("LORE-03" in status and "IN_PROGRESS" in status, "A progress not registered")
     check((ROOT / "docs/roadmap/lore_03_master_plan_v0.1.md").is_file(), "Master plan missing")
