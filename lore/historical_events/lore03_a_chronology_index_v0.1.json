@@ -1,0 +1,193 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "lore03_a_chronology_index",
+  "status": "IN_PROGRESS_DOCUMENTARY",
+  "scope": "tng_ds9_voyager_only",
+  "reference_window": {
+    "start_year": 2364,
+    "end_year": 2378,
+    "campaign_start_date": null,
+    "date_is_author_approved": false
+  },
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "playable_time_travel": false,
+  "prior_eras": {
+    "pike": "HISTORICAL_REFERENCE_ONLY",
+    "kirk": "HISTORICAL_REFERENCE_ONLY"
+  },
+  "contracts": {
+    "event": "lore/historical_events/historical_event_contract.json",
+    "historical_conflict": "lore/conflicts/conflict_definition_contract.json",
+    "live_conflict": "gameplay/conflict/conflict_war_index_v0.1.json",
+    "source_registry": "sources/source_registry/source_registry.json",
+    "continuity": "docs/decisions/campaign_continuity.md"
+  },
+  "reused_catalogues": [
+    {
+      "path": "lore/diplomacy/historical_events_v0.1.json",
+      "expected_minimum": 40,
+      "usage": "READ_BY_REFERENCE_ONLY",
+      "retained_event_ids": [
+        "romulan_neutral_zone_incident",
+        "cestus_incident",
+        "organian_intervention",
+        "tholian_encounter",
+        "khitomer_diplomacy",
+        "federation_ferengi_first_contact",
+        "romulan_return",
+        "tng_alliance",
+        "borg_first_encounter",
+        "borg_earth_offensive",
+        "cardassian_withdrawal_bajor",
+        "ds9_joint_arrangement",
+        "post_cardassian_border_conflict",
+        "dominion_first_warning",
+        "federation_cardassian_border_settlement",
+        "maquis_emergence",
+        "omarion_ambush",
+        "trill_commission_secret",
+        "tzenkethi_false_coup_report",
+        "changeling_infiltration_discovered",
+        "klingon_cardassian_invasion",
+        "bajoran_dominion_nonaggression",
+        "bajoran_federation_membership_deferred",
+        "cardassian_dominion_accession",
+        "dominion_cardassian_war_bajor",
+        "dominion_war_begins",
+        "klingon_federation_reconciliation",
+        "maquis_pressure_war",
+        "orion_syndicate_infiltration",
+        "romulan_dominion_nonaggression",
+        "thal_dominion_nonaggression",
+        "romulan_enters_war",
+        "section31_revealed",
+        "breen_enter_war",
+        "cardassian_fleet_switches",
+        "cardassian_resistance",
+        "damar_rebellion",
+        "derna_hospital_dispute",
+        "rom_becomes_nagus",
+        "treaty_of_bajor"
+      ],
+      "false_claim_event_ids": [
+        "tzenkethi_false_coup_report"
+      ],
+      "source_of_truth": "LORE_01_D"
+    }
+  ],
+  "additional_historical_anchors": [
+    {
+      "event_id": "wolf_359_battle",
+      "time_anchor": {
+        "reference_year": 2367,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "borg_incursion",
+      "summary": "Batalla de Wolf 359; daños, pérdidas y memorias relevantes. La ofensiva iniciada en 2366 figura ya en LORE-01 D.",
+      "provenance": [
+        {
+          "source_id": "TNG_BEST_OF_BOTH_WORLDS",
+          "confidence": "MEDIUM",
+          "claim_scope": "event occurrence; year approximate"
+        }
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false
+    },
+    {
+      "event_id": "bajoran_wormhole_discovery",
+      "time_anchor": {
+        "reference_year": 2369,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "astrographic_discovery",
+      "summary": "Descubrimiento del corredor estable Bajor–Gamma en el contexto de DS9; no supone frontera o titularidad automática.",
+      "provenance": [
+        {
+          "source_id": "DS9_EMISSARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "event occurrence; year approximate"
+        }
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false
+    },
+    {
+      "event_id": "voyager_delta_displacement",
+      "time_anchor": {
+        "reference_year": 2371,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "ship_displacement",
+      "summary": "Voyager queda desplazada al cuadrante Delta. Un hecho posterior al inicio de partida no es destino predeterminado.",
+      "provenance": [
+        {
+          "source_id": "VOY_CARETAKER",
+          "confidence": "MEDIUM",
+          "claim_scope": "event occurrence; year approximate"
+        }
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false
+    },
+    {
+      "event_id": "voyager_canonical_return",
+      "time_anchor": {
+        "reference_year": 2378,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "ship_return",
+      "summary": "Regreso documentado en el canon de pantalla. Se incorpora sólo si antecede a D; no se impone como evento futuro ni autoriza viaje temporal jugable.",
+      "provenance": [
+        {
+          "source_id": "VOY_ENDGAME",
+          "confidence": "MEDIUM",
+          "claim_scope": "event occurrence; year approximate"
+        }
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false
+    }
+  ],
+  "ship_temporal_reservations": [
+    {
+      "class_id": "valhalla",
+      "service_entry_year": null,
+      "approved_year": false
+    },
+    {
+      "class_id": "odyssey",
+      "service_entry_year": null,
+      "approved_year": false
+    },
+    {
+      "class_id": "sovereign",
+      "temporal_catalogue_ref": "lore/starships/classes/core_starship_classes.json",
+      "do_not_backdate": true
+    }
+  ],
+  "open_questions": [
+    "EXACT_CAMPAIGN_START_YEAR",
+    "VALHALLA_SERVICE_ENTRY",
+    "ODYSSEY_CHRONOLOGICAL_STATUS",
+    "WOLF_359_YEAR_PROVENANCE_RECHECK",
+    "BAJOR_OCCUPATION_DATE_SPAN",
+    "LEGACY_CONSUMER_FILTERS",
+    "HISTORICAL_SOURCE_REVIEW"
+  ],
+  "note": "Documentary authoring data; no CoreRPG content pack, UE5 entity, AI event schedule, automatic mission or future-canon activation."
+}
