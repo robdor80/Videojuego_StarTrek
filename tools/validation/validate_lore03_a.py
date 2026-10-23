@@ -68,6 +68,8 @@ def validate_index(idx, diplomatic, registry, eras):
     check(MUST_BE_PRESENT <= set(ids), "Critical chronology anchor lost")
     check(len(ids) == len(set(ids)) and not (set(ids) & set(diplomatic)), "New event ID collision with LORE-01 D")
     covered={x["time_anchor"]["reference_year"] for x in new} | {e["reference_year"] for e in diplomatic.values()}
+    # 2383 tiene un hito GAME_ADDITION propio, no se declara canon de pantalla.
+    covered.update(x["commissioning_target_year"] for x in idx.get("game_additions",[]))
     check(set(range(2364,2383)) <= covered, "A year of 2364–2382 lacks documentary coverage")
     allowed_hooks={"starfleet_career","political_state","ship_status","memory_history","science_research","navigation","civilian_culture"}
     for e in new:
