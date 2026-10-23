@@ -1,7 +1,7 @@
 # LORE-03 — Plan maestro: Historia, conflictos y continuidad galáctica
 
 **Fecha:** 2026-10-23. **Base auditada:** `main@867077e4a0108f5ae71485ba668c0419ee29aa2f`.  
-**Estado:** PLAN DOCUMENTAL; **03-A IN_PROGRESS** (entrega de arranque, NO cierre). B–E NO INICIADAS.  
+**Estado (2026-10-23):** PLAN DOCUMENTAL; **03-A NEEDS_REVIEW** (corpus y pruebas preparados, pendiente autorización del autor). B–E NO INICIADAS.  
 **Frontera:** no hay implementación CoreRPG/UE5/Host/IA ni Content Pack integrado por efecto de estos ficheros.
 
 ## 1. Decisión marco aprobada
@@ -86,4 +86,4 @@ La **única época jugable es TNG/DS9/Voyager**, con `2364–2378` como ventana 
 
 ## 6. Aprobación y siguiente puerta
 
-LORE-03 A comienza con `docs/roadmap/lore_03_a_baseline_audit_v0.1.md` y `lore/historical_events/lore03_a_chronology_index_v0.1.json` como **primer corte**. Antes de declararla cerrada se ampliará y contrastará el corpus. No avanzar a B hasta PR A aceptada por el autor.
+LORE-03 A se completa editorialmente con `docs/roadmap/lore_03_a_baseline_audit_v0.1.md` y `lore/historical_events/lore03_a_chronology_index_v0.1.json` como línea base más el atlas y la auditoría final v0.2; sigue **NEEDS_REVIEW** hasta revisión/fusión. No avanzar a B hasta PR A aceptada por el autor.

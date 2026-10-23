@@ -1,6 +1,6 @@
 {
-  "registry_version": "0.42.0",
-  "last_updated": "2026-10-21",
+  "registry_version": "0.43.0",
+  "last_updated": "2026-10-23",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -4428,6 +4428,60 @@
       "url": "https://www.startrek.com/news/deep-space-nine-modern-balance-science-religion",
       "accessed_at": "2026-10-21",
       "notes": "Referencia oficial secundaria a eventos mostrados en pantalla; no sustituye la escena original."
+    },
+    {
+      "source_id": "ST_OFFICIAL_HISTORICAL_BATTLES_2020",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek's Most Breathtaking and Consequential Battles",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/star-treks-most-breathtaking-and-consequential-battles",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
+    },
+    {
+      "source_id": "ST_OFFICIAL_ENTERPRISE_D_LEGACY_2014",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Celebrating the Ships of The Line: USS Enterprise NCC-1701-D",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/celebrating-the-ships-of-the-line-uss-enterprise-ncc-1701-d",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
+    },
+    {
+      "source_id": "ST_OFFICIAL_SECTOR_001_FLEET_2017",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Sector 001: Federation Starships of First Contact",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/sector-001-federation-starships-of-first-contact",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
+    },
+    {
+      "source_id": "ST_OFFICIAL_VOYAGER_HISTORY_2014",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Celebrating the Ships of The Line: USS Voyager NCC-74656",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/celebrating-the-ships-of-the-line-uss-voyager-ncc-74656",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
+    },
+    {
+      "source_id": "ST_OFFICIAL_KLINGON_WAR_SUTHERLAND",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Inside the Nebula Class Starship",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/inside-the-nebula-class-starship",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
+    },
+    {
+      "source_id": "ST_OFFICIAL_DS9_TURNING_POINT_2023",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek: Deep Space Nine's Two-Part Turning Point",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/ds9s-two-part-turning-point",
+      "accessed_at": "2026-10-23",
+      "notes": "LORE-03 A: referencia oficial interpretativa secundaria a episodios/películas; no sustituye canon audiovisual."
     }
   ]
 }

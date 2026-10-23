@@ -1,6 +1,6 @@
 # LORE-03 A — Auditoría de arranque y matriz de migración (v0.1)
 
-**Fecha:** 2026-10-23. **Base:** `main@867077e4a0108f5ae71485ba668c0419ee29aa2f`. **Estado:** IN_PROGRESS / primer corte.
+**Fecha:** 2026-10-23. **Base:** `main@867077e4a0108f5ae71485ba668c0419ee29aa2f`. **Estado histórico del documento:** auditoría de arranque, superada por expediente final `lore_03_a_completion_audit_v0.2.md`. Conservar como registro de inicio.
 
 ## Resultado de inspección
 

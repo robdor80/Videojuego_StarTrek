@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "index_id": "lore03_a_chronology_index",
-  "status": "IN_PROGRESS_DOCUMENTARY",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
   "scope": "tng_ds9_voyager_only",
   "reference_window": {
     "start_year": 2364,
@@ -79,6 +79,41 @@
   ],
   "additional_historical_anchors": [
     {
+      "event_id": "enterprise_d_farpoint",
+      "time_anchor": {
+        "reference_year": 2364,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "exploration_milestone",
+      "summary": "Misión de la Enterprise-D en Farpoint, referencia del inicio TNG.",
+      "provenance": [
+        {
+          "source_id": "TNG_ENCOUNTER_AT_FARPOINT",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Federación",
+          "Enterprise-D",
+          "Jean-Luc Picard"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "starfleet_career"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
       "event_id": "wolf_359_battle",
       "time_anchor": {
         "reference_year": 2367,
@@ -86,18 +121,122 @@
         "not_exact_date": true
       },
       "event_type": "borg_incursion",
-      "summary": "Batalla de Wolf 359; daños, pérdidas y memorias relevantes. La ofensiva iniciada en 2366 figura ya en LORE-01 D.",
+      "summary": "Desastre de la Flota en Wolf 359 y trauma duradero; Sisko participa en el contexto histórico. La datación 2366 de la ofensiva en LORE-01 D requiere conciliación.",
       "provenance": [
         {
           "source_id": "TNG_BEST_OF_BOTH_WORLDS",
           "confidence": "MEDIUM",
-          "claim_scope": "event occurrence; year approximate"
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "DS9_EMISSARY",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_HISTORICAL_BATTLES_2020",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
         }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Federación",
+          "Borg",
+          "Benjamin Sisko",
+          "Jean-Luc Picard"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "memory_history"
       ],
       "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
       "must_never_force_poststart": true,
       "knowledge_not_universal": true,
-      "runtime_state_change": false
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "klingon_civil_war_crisis",
+      "time_anchor": {
+        "reference_year": 2368,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "internal_civil_conflict",
+      "summary": "Guerra civil klingon y actividades encubiertas romulanas; repercusiones diplomáticas, no actitud esencial de cada klingon.",
+      "provenance": [
+        {
+          "source_id": "TNG_REDEMPTION",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_KLINGON_WAR_SUTHERLAND",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Imperio Klingon",
+          "Romulanos",
+          "Federación",
+          "Gowron",
+          "Worf",
+          "Sutherland"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "romulan_unification_contacts",
+      "time_anchor": {
+        "reference_year": 2368,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "political_contact",
+      "summary": "Contactos sobre reunificación entre vulcanos y romulanos; no se decreta reunificación histórica.",
+      "provenance": [
+        {
+          "source_id": "TNG_UNIFICATION_II",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Spock",
+          "Picard",
+          "Imperio Romulano",
+          "Vulcano"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
     },
     {
       "event_id": "bajoran_wormhole_discovery",
@@ -107,18 +246,143 @@
         "not_exact_date": true
       },
       "event_type": "astrographic_discovery",
-      "summary": "Descubrimiento del corredor estable Bajor–Gamma en el contexto de DS9; no supone frontera o titularidad automática.",
+      "summary": "Identificación del agujero de gusano bajorano estable hacia Gamma y relevancia estratégica de DS9.",
       "provenance": [
         {
           "source_id": "DS9_EMISSARY",
           "confidence": "MEDIUM",
-          "claim_scope": "event occurrence; year approximate"
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
         }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Bajor",
+          "Federación",
+          "Sisko",
+          "DS9"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "navigation"
       ],
       "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
       "must_never_force_poststart": true,
       "knowledge_not_universal": true,
-      "runtime_state_change": false
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "bajoran_circle_coup_defeated",
+      "time_anchor": {
+        "reference_year": 2370,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "domestic_political_crisis",
+      "summary": "Fracaso de la operación política conocida como el Círculo; no se convierte en propensión universal bajorana.",
+      "provenance": [
+        {
+          "source_id": "DS9_THE_SIEGE",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Bajor",
+          "DS9",
+          "Gobierno Provisional"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "defiant_ds9_entry",
+      "time_anchor": {
+        "reference_year": 2371,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "fleet_assignment",
+      "summary": "Introducción operativa de USS Defiant en el entorno de DS9; no asumir que cualquier Defiant existe antes.",
+      "provenance": [
+        {
+          "source_id": "DS9_SEARCH_PART_I",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Federación",
+          "Sisko",
+          "USS Defiant"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "enterprise_d_veridian_loss",
+      "time_anchor": {
+        "reference_year": 2371,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "ship_loss",
+      "summary": "Pérdida de la Enterprise-D en Veridian III en el pasado canónico sólo para campañas cuyo inicio sea posterior al acontecimiento.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_ENTERPRISE_D_LEGACY_2014",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_HISTORICAL_BATTLES_2020",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Enterprise-D",
+          "Picard",
+          "Veridian III"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
     },
     {
       "event_id": "voyager_delta_displacement",
@@ -128,18 +392,435 @@
         "not_exact_date": true
       },
       "event_type": "ship_displacement",
-      "summary": "Voyager queda desplazada al cuadrante Delta. Un hecho posterior al inicio de partida no es destino predeterminado.",
+      "summary": "La Voyager es desplazada al cuadrante Delta en el relato histórico de pantalla; no activa exploración Delta para cualquier jugador.",
       "provenance": [
         {
           "source_id": "VOY_CARETAKER",
           "confidence": "MEDIUM",
-          "claim_scope": "event occurrence; year approximate"
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_VOYAGER_HISTORY_2014",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
         }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "USS Voyager",
+          "Janeway",
+          "Chakotay",
+          "Cuadrante Delta"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
       ],
       "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
       "must_never_force_poststart": true,
       "knowledge_not_universal": true,
-      "runtime_state_change": false
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_maquis_starfleet_crew",
+      "time_anchor": {
+        "reference_year": 2371,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "crew_composition",
+      "summary": "Tripulación mixta a bordo de Voyager tras el incidente del Guardián; los historiales individuales no se trasladan a toda la Flota.",
+      "provenance": [
+        {
+          "source_id": "VOY_CARETAKER",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "USS Voyager",
+          "Janeway",
+          "Chakotay",
+          "Maquis"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "starfleet_career"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "leyton_star_fleet_coup_attempt",
+      "time_anchor": {
+        "reference_year": 2372,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "security_political_crisis",
+      "summary": "Intento de golpe político-militar del almirante Leyton, frustrado; sospecha de infiltración no equivale a infiltración probada.",
+      "provenance": [
+        {
+          "source_id": "DS9_PARADISE_LOST",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Tierra",
+          "Flota Estelar",
+          "Leyton",
+          "Sisko"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "sector_001_borg_invasion",
+      "time_anchor": {
+        "reference_year": 2373,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "borg_incursion",
+      "summary": "Nuevo ataque Borg y batalla del Sector 001; referencia de hechos de pantalla sin autorizar viajes temporales jugables.",
+      "provenance": [
+        {
+          "source_id": "ST8_FIRST_CONTACT",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_SECTOR_001_FLEET_2017",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Federación",
+          "Borg",
+          "Enterprise-E"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_borg_8472_contact",
+      "time_anchor": {
+        "reference_year": 2374,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "interstellar_crisis",
+      "summary": "Encuentro y crisis relacionada con Borg y especie 8472 en la trayectoria histórica de Voyager; datación anual editorial sujeta a matiz de episodios multipartes.",
+      "provenance": [
+        {
+          "source_id": "VOY_SCORPION",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Borg",
+          "especie 8472"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "science_research"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "ds9_operation_return",
+      "time_anchor": {
+        "reference_year": 2374,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "station_control_change",
+      "summary": "Recuperación de Deep Space 9 por fuerzas federales y aliadas; se registra el hito, no una resolución estratégica ejecutable.",
+      "provenance": [
+        {
+          "source_id": "ST_OFFICIAL_HISTORICAL_BATTLES_2020",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "DS9_CALL_TO_ARMS",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "DS9",
+          "Federación",
+          "Imperio Klingon",
+          "Dominio"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "political_state"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_hirogen_crisis",
+      "time_anchor": {
+        "reference_year": 2374,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "shipboard_crisis",
+      "summary": "Encuentro de la Voyager con operaciones hirogen de caza y holografía; no implica expansión jugable Delta.",
+      "provenance": [
+        {
+          "source_id": "VOY_THE_KILLING_GAME",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Hirogen"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "memory_history"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "defiant_chintoka_loss",
+      "time_anchor": {
+        "reference_year": 2375,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "ship_loss",
+      "summary": "Destrucción de USS Defiant original en la segunda batalla de Chin'toka; existencia de otras naves similares no equivale a ese casco.",
+      "provenance": [
+        {
+          "source_id": "DS9_THE_CHANGING_FACE_OF_EVIL",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "USS Defiant",
+          "Federación",
+          "Dominio",
+          "Breen"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "sisko_joins_prophets",
+      "time_anchor": {
+        "reference_year": 2375,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "individual_status_transition",
+      "summary": "Desaparición/transición de Sisko al final del conflicto del Dominio; destino canon no forzado después del inicio de partida.",
+      "provenance": [
+        {
+          "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Benjamin Sisko",
+          "Bajor",
+          "DS9"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "starfleet_career"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_vaadwaur_encounter",
+      "time_anchor": {
+        "reference_year": 2376,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "exploration_encounter",
+      "summary": "Contacto histórico de Voyager con los Vaadwaur; no supone un encuentro automáticamente accesible desde Alfa.",
+      "provenance": [
+        {
+          "source_id": "VOY_DRAGONS_TEETH",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Vaadwaur"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "science_research"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_unimatrix_zero",
+      "time_anchor": {
+        "reference_year": 2377,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "borg_encounter",
+      "summary": "Hechos relacionados con Unimatrix Zero y sus participantes; información no necesariamente pública para cualquier NPC.",
+      "provenance": [
+        {
+          "source_id": "VOY_UNIMATRIX_ZERO",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Borg",
+          "Seven of Nine"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "memory_history"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
+    },
+    {
+      "event_id": "voyager_talaxian_settlement",
+      "time_anchor": {
+        "reference_year": 2378,
+        "precision": "YR_APPROXIMATE",
+        "not_exact_date": true
+      },
+      "event_type": "civilian_cultural_event",
+      "summary": "Encuentro de Voyager con comunidad talaxiana en el tramo final del viaje; no desbloquea automáticamente Delta.",
+      "provenance": [
+        {
+          "source_id": "VOY_HOMESTEAD",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Neelix",
+          "Talaxianos"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "civilian_culture"
+      ],
+      "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
+      "must_never_force_poststart": true,
+      "knowledge_not_universal": true,
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
     },
     {
       "event_id": "voyager_canonical_return",
@@ -149,18 +830,38 @@
         "not_exact_date": true
       },
       "event_type": "ship_return",
-      "summary": "Regreso documentado en el canon de pantalla. Se incorpora sólo si antecede a D; no se impone como evento futuro ni autoriza viaje temporal jugable.",
+      "summary": "Regreso televisivo de Voyager a la región de la Tierra, referencia histórica posterior a D sólo si ocurrió antes de iniciar campaña.",
       "provenance": [
         {
           "source_id": "VOY_ENDGAME",
           "confidence": "MEDIUM",
-          "claim_scope": "event occurrence; year approximate"
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
+        },
+        {
+          "source_id": "ST_OFFICIAL_VOYAGER_HISTORY_2014",
+          "confidence": "MEDIUM",
+          "claim_scope": "hecho narrativo; asignación de año editorial aproximada, no fecha exacta"
         }
+      ],
+      "historical_context": {
+        "named_subjects": [
+          "Voyager",
+          "Janeway",
+          "Tierra",
+          "Borg"
+        ],
+        "subject_names_are_ids": false,
+        "identity_resolution": "EDITORIAL_ONLY"
+      },
+      "possible_consequence_hooks": [
+        "ship_status"
       ],
       "bootstrap_condition": "ONLY_IF_EVENT_PRECEDES_CAMPAIGN_START",
       "must_never_force_poststart": true,
       "knowledge_not_universal": true,
-      "runtime_state_change": false
+      "runtime_state_change": false,
+      "source_era": "tng_ds9_voyager",
+      "narrative_mandate": false
     }
   ],
   "ship_temporal_reservations": [
@@ -184,10 +885,87 @@
     "EXACT_CAMPAIGN_START_YEAR",
     "VALHALLA_SERVICE_ENTRY",
     "ODYSSEY_CHRONOLOGICAL_STATUS",
-    "WOLF_359_YEAR_PROVENANCE_RECHECK",
-    "BAJOR_OCCUPATION_DATE_SPAN",
     "LEGACY_CONSUMER_FILTERS",
-    "HISTORICAL_SOURCE_REVIEW"
+    "BORG_OFFENSIVE_2366_VS_BATTLE_2367",
+    "BAJOR_OCCUPATION_START_PRECISION",
+    "DIPLO_EVENT_PRECISION_CROSSCHECK"
   ],
-  "note": "Documentary authoring data; no CoreRPG content pack, UE5 entity, AI event schedule, automatic mission or future-canon activation."
+  "note": "LORE-03A editorial listo para revisión humana. Las fechas expresan años aproximados, sin imponer pantalla posterior a D, sin contenido CoreRPG/UE5 importable. Pendientes puntuales documentados no generan runtime.",
+  "completion_evidence_ref": "docs/roadmap/lore_03_a_completion_audit_v0.2.md",
+  "canonical_sources_audited": [
+    "TNG",
+    "DS9",
+    "VOY",
+    "retained_films_as_late_24c_context"
+  ],
+  "date_precision_rule": "YEARS_ARE_EDITORIAL_APPROXIMATIONS; EXACT_DAY_NOT_ALLOWED_WITHOUT_PRIMARY_EVIDENCE",
+  "same_year_boundary_rule": "UNKNOWN_UNTIL_DATE_ORDER_EVIDENCED",
+  "historical_precedents": [
+    {
+      "precedent_id": "khitomer_peace_2293",
+      "temporal_note": "2293 aproximado",
+      "source_event_id": "khitomer_diplomacy",
+      "origin_ref": "lore/diplomacy/historical_events_v0.1.json",
+      "interpretation": "Acuerdos Klingon–Federación y legado institucional; antecedente no seleccionable como época."
+    },
+    {
+      "precedent_id": "bajoran_occupation_background",
+      "temporal_note": "Primera mitad del siglo XXIV; inicio impreciso, en torno a 2319/2328 según definición de presencia/anexión",
+      "source_ids": [
+        "DS9_DUET",
+        "TNG_ENSIGN_RO"
+      ],
+      "interpretation": "Separar llegada militar, anexión y retirada 2369. Evitar año inicial rígido sin fuentes primarias adicionales."
+    },
+    {
+      "precedent_id": "federation_cardassia_prior_tensions",
+      "temporal_note": "Antes de las tensiones mostradas en 2369–2370, sin día inicial certificado",
+      "source_ids": [
+        "TNG_THE_WOUNDED",
+        "TNG_JOURNEYS_END"
+      ],
+      "interpretation": "Hostilidades previas y tratado fronterizo no son una fecha de inicio de una guerra automáticamente declarada."
+    },
+    {
+      "precedent_id": "veteran_starship_classes",
+      "temporal_note": "Antes y durante 2364–2378, variación por casco y refit",
+      "source_ids": [
+        "MA_MIRANDA_CLASS",
+        "MA_OBERTH_CLASS",
+        "MA_EXCELSIOR_CLASS"
+      ],
+      "interpretation": "Nave antigua en servicio dentro de TNG no transforma Kirk en época jugable."
+    },
+    {
+      "precedent_id": "federation_borg_precontact_context",
+      "temporal_note": "Antes de Wolf 359; información disponible para actores depende de fecha y acceso",
+      "source_ids": [
+        "TNG_Q_WHO",
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ],
+      "interpretation": "Separar conocimiento estratégico y testimonio individual de la verdad histórica."
+    }
+  ],
+  "cross_reference_reservations": [
+    {
+      "source_event_id": "borg_earth_offensive",
+      "issue": "LORE-01 D año 2366 frente a Wolf 359 habitualmente 2367; mismo ciclo de amenaza Borg podría atravesar transición de año. No duplicar invasiones ni reescribir LORE-01 sin auditoría específica.",
+      "status": "REQUIRES_PRECISION_CHECK"
+    },
+    {
+      "source_event_id": "tzenkethi_false_coup_report",
+      "issue": "Información deliberadamente falsa; existe el informe, no el golpe descrito.",
+      "status": "FALSE_ASSERTION_PROTECTED"
+    },
+    {
+      "source_event_id": "dominion_cardassian_war_bajor",
+      "issue": "Título inicial poco discriminante respecto a dominion_war_begins, frontera DS9 y alianzas; enlazar, no suponer guerra independiente.",
+      "status": "ALIAS_OR_SCOPE_PENDING_B"
+    },
+    {
+      "source_event_id": "derna_hospital_dispute",
+      "issue": "LORE-01 D asigna 2375 a una crisis descrita en Image in the Sand; contrastar emisión/tiempo interno y conservar procedencia de LORE-01.",
+      "status": "REQUIRES_PRECISION_CHECK"
+    }
+  ]
 }

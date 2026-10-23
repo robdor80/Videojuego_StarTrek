@@ -1,14 +1,13 @@
-# Acontecimientos históricos — LORE-03
+# Acontecimientos históricos — LORE-03 A
 
-**Decisión autoral de época única: 2026-10-23** · **LORE-03 A en desarrollo**, no aprobada ni incorporada como contenido runtime.
+**Estado:** `NEEDS_REVIEW` · PR #38 · documental, sin runtime.
 
-- [Índice inicial de cronología](lore03_a_chronology_index_v0.1.json): **40 IDs de LORE-01 D por referencia**, 4 anclas nuevas de comienzo; no reescribe acontecimientos diplomáticos.
+- [Atlas 2364–2378](lore03_a_yearly_atlas_v0.2.md) — 15 años más antecedentes, ordenados por año aproximado.
+- [Índice de fuentes y anclas](lore03_a_chronology_index_v0.1.json) — 40 referencias conservadas de LORE-01 D y 21 nuevas fichas con fuentes en el registro central.
+- [Casos de arranque D](lore03_a_date_boundary_cases_v0.2.md) — año anterior, igual y posterior sin activar futuro.
+- [Auditoría final de A](../../docs/roadmap/lore_03_a_completion_audit_v0.2.md).
 - [Plan maestro A–E](../../docs/roadmap/lore_03_master_plan_v0.1.md).
-- [Auditoría de arranque A](../../docs/roadmap/lore_03_a_baseline_audit_v0.1.md).
-- Contrato ya aprobado: [historical_event_contract.json](historical_event_contract.json).
-- Fuentes: `sources/source_registry/source_registry.json`; política de canon/procedencia en `sources/`.
-- Los perfiles Pike/Kirk siguen preservados **sólo como pasado**; TNG/DS9/Voyager es jugable.
-- Fecha `D` de campaña: **pendiente del autor**. Un suceso futuro del canon **no** se ejecuta automáticamente.
-- CoreRPG conserva autoridad sobre hechos ocurridos, conocimiento observado y mutaciones.
+- [Contrato histórico ya existente](historical_event_contract.json).
+- [Documento de arranque A, preservado](../../docs/roadmap/lore_03_a_baseline_audit_v0.1.md).
 
-La integridad de estas referencias **no** certifica recensión audiovisual completa de la serie ni implementación UE5.
+Pike/Kirk quedan como fuentes históricas, no campañas. Las fechas del atlas **no** son fechas obligatorias de partida ni motores de narrativa. La pérdida de una nave o la victoria de un conflicto que pertenece al futuro televisivo **no** son hechos del guardado después de D. Sólo CoreRPG podrá registrar lo que realmente ocurrió, durante la futura implementación.
