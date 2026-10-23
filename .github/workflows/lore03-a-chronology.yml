@@ -5,8 +5,10 @@ on:
     paths:
       - "docs/decisions/playable_eras.md"
       - "sources/canon_policy.md"
+      - "sources/source_registry/**"
       - "universe/chronology/**"
       - "lore/historical_events/**"
+      - "lore/diplomacy/historical_events_v0.1.json"
       - "docs/roadmap/lore_03*"
       - "tools/validation/*lore03*"
       - "CONTENT_STATUS.md"
@@ -15,8 +17,10 @@ on:
     paths:
       - "docs/decisions/playable_eras.md"
       - "sources/canon_policy.md"
+      - "sources/source_registry/**"
       - "universe/chronology/**"
       - "lore/historical_events/**"
+      - "lore/diplomacy/historical_events_v0.1.json"
       - "docs/roadmap/lore_03*"
       - "tools/validation/*lore03*"
       - "CONTENT_STATUS.md"
@@ -27,7 +31,7 @@ permissions:
 jobs:
   lore03-a-documentary:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
         with:
@@ -35,14 +39,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compilación e integridad LORE-03 A
+      - name: Compilación, validación y 43 casos de prueba
         run: |
           python -m py_compile tools/validation/validate_lore03_a.py tools/validation/test_lore03_a.py
           python tools/validation/validate_lore03_a.py
           python tools/validation/test_lore03_a.py
-      - name: Regresiones de cronología LORE-01 D y LORE-02 E
+      - name: Regresiones LORE-01 D y LORE-02 E y roadmap
         run: |
           python tools/validation/validate_lore01_d.py
           python tools/validation/test_lore01_d.py
           python tools/validation/validate_lore02_e.py
           python tools/validation/test_lore02_e.py
+          python tools/validation/validate_roadmap_state.py
