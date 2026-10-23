@@ -1,3 +1,5 @@
+> **ACTUALIZACIÓN POSTERIOR DE ALCANCE (2026-10-23):** La decisión de tres épocas jugables registrada aquí era válida en F01 pero ha sido **sustituida** por la decisión autoral de **una sola época jugable, TNG/DS9/Voyager**. Véase `docs/decisions/playable_eras.md`. Este acta se conserva como evidencia histórica: no se borran sus análisis de Valhalla, fuentes, tecnología ni continuidad propia.
+
 # F01-P02 — Auditoría de épocas y canon
 
 Fecha de auditoría: 2026-10-11. Actualización de decisiones autorales: 2026-10-13. Estado: CONFORME (auditoría documental con política de continuidad propia explícita).
