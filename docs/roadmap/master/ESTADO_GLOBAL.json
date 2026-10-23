@@ -210,7 +210,7 @@
         "P04": "EN_REVISION",
         "P05": "BLOQUEADA"
       },
-      "note": "Preparación F07 autorizada 2026-10-13. P02 dispone de generador y auditor de GLB UV/PBR técnico con tests CI de referencia, NO conversión Sutherland ni blindaje definitivo; P03 selección Sutherland, Kelvin excluido. F07 no jugable ni cerrada: MSI, importación UE5, colisiones, licencias y packaging pendientes. F02 sigue única fase principal EN_CURSO.",
+      "note": "F07 EN_REVISION. Corte documental 13-10-2026: referencia PBR/UV con CI y elección Sutherland. Reconciliación 23-10-2026: se reportan desde MSI importación UE5, recorridos, puertas, colisiones y mecanismo de sillas; evidencia primaria todavía fuera del repo (logs/mapas/hashes). F07 NO UE5_JUGABLE: UE07-05..09, interacción Sensores, validación visual/materiales UE5, telemetría, build y procedencia por cotejar. Sentado F07-SEAT-01 no aprobado. F02 sigue única fase principal EN_CURSO.",
       "file": "fases/F07/README.md",
       "achieved_maturity": "DISENO_VALIDADO",
       "step_evidence_maturity": {
@@ -229,7 +229,8 @@
         "tools/assets/f07_pbr_plate.py",
         "tools/assets/f07_gltf_audit.py",
         "tools/validation/test_f07_pbr_pipeline.py",
-        ".github/workflows/f07-pbr-reference.yml"
+        ".github/workflows/f07-pbr-reference.yml",
+        "fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md"
       ]
     },
     {
@@ -380,5 +381,12 @@
     "legacy_status": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
     "new_status": "PLANIFICADA",
     "meaning": "Estado de planificación válido para pasos futuros todavía no verificados; NO acredita que no existan prototipos/contratos previos. Requiere auditoría específica al reactivar cada fase."
+  },
+  "f07_evidence_reconciliation": {
+    "date": "2026-10-23",
+    "scope": "Actualización documental del avance UE5 reportado en MSI; pendientes evidencias primarias y aceptación completa.",
+    "record": "fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md",
+    "phase_status_preserved": "EN_REVISION",
+    "achieved_maturity_preserved": "DISENO_VALIDADO"
   }
 }

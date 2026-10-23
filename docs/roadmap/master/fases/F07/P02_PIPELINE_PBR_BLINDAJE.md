@@ -36,3 +36,13 @@ Nunca sobreescribir los originales; el generador **rechaza sobrescrituras por de
 ### Primer paso posterior en MSI
 
 Abrir `F07_Plate_Demo.glb` en Blender y Unreal, comprobar ejes/unidades, aspecto real de rugosidad/metalness, normals y maps ORM; reemplazar por modelo canónico solo tras decisión de arte. La conversión lit de la arquitectura Sutherland y la importación real siguen P02/P04 pendientes de ejecución local.
+
+## Reconciliación posterior — trabajo artístico local (23-10-2026)
+
+El encabezado «Ni Blender ni UE5 se han ejecutado aquí» se refiere al **alcance de la especificación de 13-10-2026**, no al historial completo posterior del proyecto. Desde entonces se ha comunicado trabajo de texturizado PBR de Sutherland **en una copia artística de Blender** (suelo, techo, puertas, iluminación y algunos elementos de mobiliario). Estos archivos locales todavía no están cotejados ni exportados como prueba oficial desde este repositorio.
+
+Por tanto, mantener dos carriles sin mezclarlos:
+- **Referencia P02 versionada:** generador PBR, auditor GLB y test/CI; sigue cerrada a nivel REFERENCIA_PROBADA.
+- **Proyecto artístico del Sutherland:** ejecución local Blender **reportada**; comprobar ruta/copia, materiales, textura y visualización real en UE5 antes de aprobar la conversión.
+
+El blindaje de Valhalla **no** se considera desplegable por disponer del ejemplo de placa procedural; sigue siendo una tarea de modelado/integración específica separada. Ver [acta de evidencia F07](RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md).

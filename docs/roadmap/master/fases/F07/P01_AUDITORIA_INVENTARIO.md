@@ -29,3 +29,11 @@ El analizador `tools/assets/f07_gltf_audit.py` comprueba, sin modificar, integri
     python tools/assets/f07_gltf_audit.py --input "C:\\ruta\\star_trek_sutherland_bridge.glb" --expect-sha256 53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b --output "C:\\Temp\\sutherland_audit.json"
 
 Esto se ejecutará solo cuando se disponga del GLB local; no consta ejecutado en el MSI.
+
+## Reconciliación posterior — 23-10-2026
+
+El párrafo inicial y los pendientes anteriores describen **el estado histórico de 13-10-2026**. Después hubo pruebas locales UE5 del Sutherland, por lo que ya no debe interpretarse que nunca se trabajó con el original/derivados en el MSI.
+
+**Siguen pendientes de incorporarse a este expediente:** inventario completo del disco, ruta exacta del derivado importado, comparación SHA/GLB y procedencia de variantes. No asumir que el hash original anterior corresponde automáticamente al archivo realmente usado en UE5.
+
+Véase [reconciliación F07 del 23-10-2026](RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md). Esta actualización **no implica** haber accedido al MSI desde GitHub ni haber cerrado la revisión de procedencia.
