@@ -1,0 +1,48 @@
+name: LORE-03 A — Cronología documental
+on:
+  push:
+    branches: [main, "lore/03-a-chronology-history"]
+    paths:
+      - "docs/decisions/playable_eras.md"
+      - "sources/canon_policy.md"
+      - "universe/chronology/**"
+      - "lore/historical_events/**"
+      - "docs/roadmap/lore_03*"
+      - "tools/validation/*lore03*"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore03-a-chronology.yml"
+  pull_request:
+    paths:
+      - "docs/decisions/playable_eras.md"
+      - "sources/canon_policy.md"
+      - "universe/chronology/**"
+      - "lore/historical_events/**"
+      - "docs/roadmap/lore_03*"
+      - "tools/validation/*lore03*"
+      - "CONTENT_STATUS.md"
+      - ".github/workflows/lore03-a-chronology.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  lore03-a-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compilación e integridad LORE-03 A
+        run: |
+          python -m py_compile tools/validation/validate_lore03_a.py tools/validation/test_lore03_a.py
+          python tools/validation/validate_lore03_a.py
+          python tools/validation/test_lore03_a.py
+      - name: Regresiones de cronología LORE-01 D y LORE-02 E
+        run: |
+          python tools/validation/validate_lore01_d.py
+          python tools/validation/test_lore01_d.py
+          python tools/validation/validate_lore02_e.py
+          python tools/validation/test_lore02_e.py
