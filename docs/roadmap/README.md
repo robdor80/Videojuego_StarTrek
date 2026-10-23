@@ -14,6 +14,8 @@ Este directorio conserva los roadmaps especializados **sin trasladar ni renumera
 - [Vida a bordo y generación de nave 15/15](shipboard_life_and_procedural_starship_generation_plan_v0.1.md): contrato/referencia, integración posterior.
 - [Manual de Sensores](sensors_operator_manual_plan.md) y [preparación de lore jugable](gameplay_lore_readiness.md).
 
+- [LORE-03 — Historia, conflictos y continuidad](lore_03_master_plan_v0.1.md): marco TNG/DS9/Voyager exclusivo; fase A iniciada documentalmente, B–E pendientes; sin runtime.
+
 ## Regla de gestión
 
 La ejecución de una tarea se cierra **solo contra su criterio de entrega**, con pruebas/commit/enlaces. No marcar una función de runtime completa solo por existir su diseño. Al cambiar un subplan se actualizan su estado y el plan maestro cuando cambien prioridades o alcance; `CONTENT_STATUS.md` se modifica únicamente si cambió el contenido/estado editorial que representa.
