@@ -2,11 +2,13 @@
 
 Era profiles are temporal filters over the single Star Trek knowledge base. They do not duplicate characters, ships, technology or institutions.
 
-## Current profiles
+## Current profiles — 2026-10-23 decision
 
-- `pike`
-- `kirk`
-- `tng_ds9_voyager`
+- `tng_ds9_voyager`: **playable**. Historical reference window 2364–2378; start year is **not decided**.
+- `pike`: **historical only**, preserved for documentation and earlier history.
+- `kirk`: **historical only**, preserved for documentation and earlier history.
+
+These identifiers stay stable. Older Academy, class and technology catalogues may still mention all three profiles as **historical availability context**, not an authorization to select them. LORE-03 will audit those references without silently deleting source data.
 
 ## Important distinction
 

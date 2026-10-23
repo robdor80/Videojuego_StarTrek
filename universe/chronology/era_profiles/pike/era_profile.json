@@ -3,7 +3,7 @@
   "era_id": "pike",
   "display_name": "Pike / Strange New Worlds",
   "continuity": "prime",
-  "playable": true,
+  "playable": false,
   "reference_start_year": 2259,
   "reference_end_year": 2265,
   "date_precision": "year",
@@ -21,6 +21,7 @@
   "notes": [
     "2259 is a firm series-era anchor.",
     "2265 is used as the broad handover boundary into the Kirk reference window.",
-    "Exact dates override broad era boundaries when known."
+    "Exact dates override broad era boundaries when known.",
+    "Historical reference profile only since author decision 2026-10-23; retained for background and provenance, not a selectable campaign era."
   ]
 }

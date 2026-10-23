@@ -3,7 +3,7 @@
   "era_id": "kirk",
   "display_name": "Kirk / TOS + films",
   "continuity": "prime",
-  "playable": true,
+  "playable": false,
   "reference_start_year": 2265,
   "reference_end_year": 2293,
   "date_precision": "year",
@@ -23,6 +23,7 @@
   "notes": [
     "2265 is the Kirk-command / five-year-mission anchor.",
     "2293 is the terminal reference anchor for the retained Kirk-film period.",
-    "This broad profile contains substantial internal technological, uniform and ship evolution; exact date must always be consulted."
+    "This broad profile contains substantial internal technological, uniform and ship evolution; exact date must always be consulted.",
+    "Historical reference profile only since author decision 2026-10-23; retained for background and provenance, not a selectable campaign era."
   ]
 }

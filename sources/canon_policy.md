@@ -6,17 +6,15 @@ This document defines how information is admitted into the Star Trek knowledge b
 
 The project models one historically continuous Star Trek universe while preserving separate continuities/timelines where the retained screen material itself requires them. Era profiles are temporal filters, not duplicate universes.
 
-## Project screen scope
+## Project screen scope — author decision 2026-10-23
 
-Playable-era research is restricted by design to:
+**Only one playable era:** **The Next Generation + Deep Space Nine + Voyager**, a shared late-24th-century setting with a **2364–2378 reference window**; campaign start date is not fixed.
 
-1. **Pike / Strange New Worlds**
-2. **Kirk / The Original Series + films centred on Kirk/original crew**
-3. **The Next Generation + Deep Space Nine + Voyager**
+**Pike / Strange New Worlds** and **Kirk / The Original Series + associated films** remain available as **historical evidence and background**, not selectable playable eras. Retain their registered sources, profiles and existing art; do not silently purge earlier research.
 
-The television series `Picard`, `Discovery` and `Enterprise` are outside the planned playable scope.
+The television series `Picard`, `Discovery` and `Enterprise` are outside the **current playable setting**. This does not prohibit legitimate earlier history or established TNG-era people, e.g. Jean-Luc Picard.
 
-Excluding the series `Picard` does not exclude Jean-Luc Picard: the character is a central TNG-era figure.
+Previous documents that refer to three selectable eras are historical records superseded **only on playable scope** by `docs/decisions/playable_eras.md`. Source authority, evidence of past events and provenance categories remain unchanged.
 
 ## Research order
 

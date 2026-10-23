@@ -1,78 +1,50 @@
-# Playable Eras
+# Playable Eras — Decisión vigente
 
-Status: **APPROVED**
+**Estado:** APROBADO · **Decisión autoral:** 2026-10-23 · **Proyecto:** Star Trek RPG.
 
-This document fixes the playable-era scope of the project.
+> Este documento **sustituye** la elección histórica de tres épocas jugables descrita en su versión previa (2026-10-02) y en actas F01. No elimina la investigación, arte, canon ni perfiles de Pike y Kirk; cambia únicamente qué épocas pueden seleccionarse para una nueva campaña.
 
-## Playable eras
+## Addendum de diseño — academia y Valhalla (2026-10-23)
 
-### 1. Pike / Strange New Worlds
+El autor propone **2383** como comienzo preferente de campaña, con **cuatro años de Academia** y graduación de alférez aproximada en **2387**. No se traslada el comienzo a 2384. El programa de clase Valhalla surge tras *Némesis* de 2379, con fabricación prevista desde 2380 y **entrada en servicio objetivo en 2383**, para que el jugador pueda ser destinado a ella al graduarse; no es una fecha histórica de pantalla. Esto **extiende la investigación documental hasta 2383** y no crea época jugable adicional. Ver [addendum Valhalla/Academia](lore03a_valhalla_2383_academy.md).
 
-Primary screen scope:
-- `Star Trek: Strange New Worlds`
+## Única época jugable
 
-Anchor:
-- Christopher Pike
-- USS Enterprise NCC-1701
+**`tng_ds9_voyager`** — segunda mitad del siglo XXIV, núcleo **2364–2378**, extendido documentalmente hasta **2383**, como **ventana histórica de referencia**, no como año fijo de comienzo, límite forzoso del tiempo simulado ni guion de series.
 
-### 2. Kirk / TOS + films
+Se estudian como un mismo universo histórico:
+- *Star Trek: The Next Generation*
+- *Star Trek: Deep Space Nine*
+- *Star Trek: Voyager*
 
-Primary screen scope:
-- `Star Trek: The Original Series`
-- films centred on Kirk and the original crew
+La selección de campaña puede especificar un año/fecha dentro de la ventana cuando lo decida el autor; **el año inicial concreto permanece pendiente**. Un hecho, nave, personaje, tecnología o institución requiere validez **en la fecha elegida**, no basta con pertenecer a esta época.
 
-Anchor:
-- James T. Kirk
-- USS Enterprise NCC-1701
-- USS Enterprise NCC-1701-A when chronologically applicable
+## Perfiles preservados pero NO jugables
 
-### 3. TNG + DS9 + Voyager
+- `pike` — *Strange New Worlds*: antecedentes históricos, patrimonio documental/arte y posibles referencias culturales.
+- `kirk` — *The Original Series* y películas asociadas: antecedentes, biografías, naves veteranas, tratados y legado.
 
-One shared late-24th-century playable period with three major branches:
+Se preservan identificadores y documentación para que las referencias ya existentes no se rompan. Su existencia **no** habilita menús, academias ni campañas en esos periodos. El dato `playable: false` de los perfiles es la señal de selección; **no** debe interpretarse como prohibición de consultar pasado o utilizar naves antiguas todavía operativas en 2364–2378.
 
-- **TNG** → Jean-Luc Picard
-- **DS9** → Benjamin Sisko
-- **Voyager** → Kathryn Janeway
+## Política histórica y continuidad
 
-These are not separate universes. Characters, ships, stations and events coexist only when the selected campaign date makes them temporally valid.
+1. El canon anterior al inicio de la campaña aporta el estado inicial, con fuentes y precisión temporal; no impone un destino futuro.
+2. Desde el comienzo, la continuidad **real del guardado** es autoridad exclusiva de CoreRPG sobre el estado de mundo; IA y Host no pueden decretar hechos.
+3. Los episodios, campañas militares, encuentros, regresos o fallecimientos televisivos posteriores al inicio **no se disparan automáticamente**.
+4. Se permite continuidad creativa propia, incluido un cambio excepcional del pasado, **solo por aprobación y registro expreso como GAME_ADDITION**, con impactos/fecha analizados. No se reescribe `SCREEN_CANON`.
+5. No habrá **viajes temporales jugables**. La documentación de hechos históricos de pantalla que contengan viajes en el tiempo no es una autorización de mecánicas jugables.
+6. Las clases Miranda, Intrepid, Sovereign, Odyssey y Valhalla y los ejemplares Enterprise-D/E/F requieren auditoría y disponibilidad temporal individual. La existencia de modelos 3D no implica alta de nave en la historia.
+7. Valhalla es clase propia, **sin año de servicio fijado**. Odyssey no se presupone disponible en 2364–2378; cualquier aparición exige acreditación temporal o excepción creativa aprobada.
+8. El jugador puede saltar Academia conforme a las decisiones de carrera ya aprobadas; eso no cambia el filtro de época.
+9. No se crean universos independientes por serie ni se exige proximidad espacial entre personajes que coinciden en el tiempo.
 
-## Explicitly outside playable scope
+## Trazabilidad
 
-The following television series are excluded by project decision:
+- Decisión anterior: tres perfiles jugables; preservada en el historial Git y actas históricas F01.
+- Decisión posterior prevalente: **2026-10-23, único perfil jugable TNG/DS9/Voyager**.
+- Contratos relacionados: `docs/decisions/campaign_continuity.md`, `sources/canon_policy.md`, `universe/chronology/era_profiles/` y `docs/roadmap/lore_03_master_plan_v0.1.md`.
+- Cambio de alcance **documental**: no declara filtros ejecutables en UE5 ni CoreRPG ni elimina assets.
 
-- `Star Trek: Picard`
-- `Star Trek: Discovery`
-- `Star Trek: Enterprise`
+## Control de cambios
 
-Jean-Luc Picard remains fully in scope as the TNG-era character/captain.
-
-## Critical campaign rule
-
-The screen material defines the **starting historical state**, not a mandatory storyline.
-
-Selecting:
-- Pike does not mean replaying Strange New Worlds episodes;
-- Kirk does not mean replaying TOS or the films;
-- TNG does not mean replaying Picard's television adventures;
-- DS9 does not mean replaying Sisko's television story;
-- Voyager does not mean replaying Voyager season by season or inevitably returning to the Alpha Quadrant in the canonical way.
-
-Once the campaign begins, its own world state and history become authoritative.
-
-See: `docs/decisions/campaign_continuity.md`.
-
-## Architecture rule
-
-There are exactly three playable era profiles:
-
-```text
-pike
-kirk
-tng_ds9_voyager
-```
-
-An era profile is a temporal filter over one Star Trek knowledge base. It is not a duplicate universe.
-
-## Change control
-
-Changing this list is a project design decision and requires explicit approval from Roberto.
+Nuevas épocas jugables y cambios de fecha inicial necesitan decisión expresa del autor y PR propia/revisable.

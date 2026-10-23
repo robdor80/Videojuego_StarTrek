@@ -578,6 +578,20 @@ Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json
 Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. **LORE-02 A–E: COMPLETE documental** tras la aprobación/fusión de PR #36, con los cinco apartados en `main` y 11 GitHub Actions posteriores satisfactorias. Los `status: NEEDS_REVIEW` internos identifican fichas editoriales aún no homologadas como contenido importable; no contradicen el cierre documental de A–D.
 
 
+## LORE-03 — Historia, conflictos y continuidad galáctica (inicio 2026-10-23)
+
+**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
+
+| Apartado | Estado | Alcance actual |
+|---|---|---|
+| A — Cronología y acontecimientos | 🟨 NEEDS_REVIEW | PR #38: atlas cronológico 2364–2383 (20 años), 40 referencias por ID de LORE-01 D, 26 fichas históricas adicionales y Valhalla GAME_ADDITION con fuentes, antecedentes y validadores. Auditoría editorial terminada **con reservas documentadas**; requiere aprobación, no fusionada y sin runtime. |
+| B — Conflictos, guerras y crisis | ⬜ TODO | Reutilizar contratos existentes; no iniciar antes de aprobar A. |
+| C — Consecuencias y memoria histórica | ⬜ TODO | Conocimiento parcial y consecuencias; sin implementación. |
+| D — Continuidad/divergencia | ⬜ TODO | Estado inicial por fecha elegida, historia emergente; sin runtime. |
+| E — Auditoría global | ⬜ TODO | Verificación cruzada A–D y autorización humana final. |
+
+Plan: `docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A preparada para revisión, pero no cerrada ni fusionada**. CoreRPG/UE5 no reciben datos runtime de esta fase.
+
 ## Procedural living-universe master plan
 
 Control documents:

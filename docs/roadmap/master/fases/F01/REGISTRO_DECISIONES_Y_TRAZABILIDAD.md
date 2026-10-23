@@ -1,3 +1,5 @@
+> **Actualización autoral 2026-10-23:** La primera fila de esta matriz, que considera **vigentes tres épocas jugables**, refleja exclusivamente la decisión F01 anterior. Prevalece desde esta fecha **TNG/DS9/Voyager como única época jugable** (véase `docs/decisions/playable_eras.md`). Los antecedentes Pike/Kirk no se eliminan.
+
 # F01-P05 — Matriz de decisiones, procedencia y alcance
 
 **Fecha base:** 2026-10-11 · **Cierre de gobierno:** 2026-10-13 · **Estado:** CERRADA en diseño F01-P05; DEC-0001/0002 aprobadas y QA de expediente verificada. [Acta de cierre](ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md).
