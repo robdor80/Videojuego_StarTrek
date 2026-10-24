@@ -149,6 +149,22 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** elige y aprueba expresamente opción C y solicita registrar IDEA-0011.
 - **Ejecución:** NO INICIADA por este registro. No existe aún DLC, portal operativo ni cuadrante Delta jugable.
 
+### IDEA-0012 — Ajedrez clásico 3D con NPC, aprendizaje y vida social
+- **Fecha de aprobación expresa:** 2026-10-24.
+- **Estado:** APROBADA CONCEPTUALMENTE; diseño documental registrado, implementación UE5/CoreRPG y pruebas pendientes.
+- **Propuesta:** minijuego funcional de ajedrez **clásico 8×8** para jugar con NPC amigos o compañeros en bar, camarote o espacio compatible de Academia, estaciones y naves, especialmente Valhalla.
+- **Referente Star Trek:** alternativa práctica al ajedrez tridimensional de varios tableros de las series; **no se obliga al jugador a aprender esa variante** ni se borra su existencia cultural del universo.
+- **Activos:** el autor ha descargado un **tablero de madera 3D** y modelos de **piezas blancas y negras 3D** para futura auditoría e importación al MSI/UE5.
+- **Interacción aprobada:** acercarse a NPC, quedar y sentarse si procede, activar cámara de primer plano casi a pantalla completa desde la perspectiva del jugador, seleccionar/mover piezas con ratón; el motor mueve las piezas del NPC automáticamente **sin animaciones de manos/brazos obligatorias**.
+- **Accesibilidad:** tutorial desde cero, niveles de dificultad realmente suaves, casillas legales resaltadas, ayudas y juego sin límite de tiempo; motor de ajedrez local reutilizable a seleccionar.
+- **Convivencia y amistad:** actividad con agenda, lugar, personajes y resultados persistentes; puede reforzar historia compartida, afinidad y amistad **solo según las reglas sociales existentes**, no por ganar ni sumar puntos fijos automáticos.
+- **Persistencia:** partida aplazable y reanudable, incluso tras emergencia/cambio de guardia; estado del tablero y turnos coherentes con guardado y carga.
+- **Ficha detallada:** [IDEA-0012_ajedrez_clasico_3d_con_npc.md](IDEA-0012_ajedrez_clasico_3d_con_npc.md).
+- **Integración existente:** actividad `games_cards_chess` ya contemplada en `gameplay/ship_operations/off_duty_activity_catalog_v0.1.json`, reglas sociales, calendarios de NPC y F12; visualización F07/F14 y pruebas F15. No se creará un sistema social paralelo.
+- **Hitos candidatos:** CHESS-01–CHESS-07, del inventario 3D al tablero, rival, dificultades, persistencia y juego social.
+- **Decisión del autor:** inscripción solicitada expresamente después de discutir la viabilidad técnica y precisar el uso exclusivamente personal del juego y la simplificación de las animaciones corporales.
+- **Ejecución:** no iniciada por este registro; la aprobación conceptual no certifica ajedrez funcional ya programado.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
