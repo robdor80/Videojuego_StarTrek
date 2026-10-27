@@ -24,8 +24,13 @@ def check_web_parity(web_root: Path, game_root: Path = ROOT) -> dict:
     web = _json(web_root / "data/curriculum.json")
     if web.get("sourceRepository") != "robdor80/Videojuego_StarTrek":
         raise ValueError("La web no identifica la fuente autoritativa")
-    expected_ref = "sistemas/gameplay/careers/academy_path/curriculum/curriculum_manifest_v1_0.json"
-    if web.get("sourceManifest") != expected_ref:
+    # The pinned web revision predates the repository reorganization.
+    # Accept its historical provenance path while still comparing local content.
+    expected_refs = {
+        "gameplay/careers/academy_path/curriculum/curriculum_manifest_v1_0.json",
+        "sistemas/gameplay/careers/academy_path/curriculum/curriculum_manifest_v1_0.json",
+    }
+    if web.get("sourceManifest") not in expected_refs:
         raise ValueError("El manifiesto publicado no apunta a la fuente")
     if len(web.get("years", [])) != 4:
         raise ValueError("Web: deben existir cuatro años")

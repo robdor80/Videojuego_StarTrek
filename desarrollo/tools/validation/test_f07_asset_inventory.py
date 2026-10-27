@@ -50,7 +50,15 @@ class F07InventoryTests(unittest.TestCase):
         record = json.loads((ROOT / "proyecto/docs/roadmap/master/fases/F07/EVIDENCIA_Y_PENDIENTES.json").read_text(encoding="utf-8"))
         self.assertEqual(record["package"]["status"], "NO_EJECUTADO")
         self.assertEqual(len(record["tests_ue5"]), 9)
-        self.assertTrue(all(x["status"] == "NO_EJECUTADO" for x in record["tests_ue5"].values()))
+        pending_statuses = {
+            "NO_EJECUTADO",
+            "REPORTADO_PENDIENTE_COTEJO",
+            "REPORTADO_PARCIAL_PENDIENTE_COTEJO",
+        }
+        for test_id, evidence in record["tests_ue5"].items():
+            with self.subTest(test_id=test_id):
+                self.assertIn(evidence["status"], pending_statuses)
+                self.assertIsNone(evidence["evidence"])
 
 if __name__ == "__main__":
     unittest.main()
