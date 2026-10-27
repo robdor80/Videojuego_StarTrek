@@ -1,0 +1,49 @@
+name: LORE-03E — Auditoría transversal (documental)
+on:
+  push:
+    branches: [main, "lore/03-e-global-integration-audit"]
+    paths:
+      - "proyecto/docs/roadmap/lore_03_e/**"
+      - "desarrollo/tools/validation/*lore03_e*"
+      - ".github/workflows/lore03-e-audit.yml"
+      - "CONTENT_STATUS.md"
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/lore_03_e/**"
+      - "desarrollo/tools/validation/*lore03_e*"
+      - ".github/workflows/lore03-e-audit.yml"
+      - "CONTENT_STATUS.md"
+permissions:
+  contents: read
+jobs:
+  documentary-cross-phase-audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: E01-E08 gate and hostile editorial mutation tests
+        run: |
+          python -m py_compile desarrollo/tools/validation/validate_lore03_e.py desarrollo/tools/validation/test_lore03_e.py
+          python desarrollo/tools/validation/validate_lore03_e.py
+          python desarrollo/tools/validation/test_lore03_e.py
+      - name: Regression LORE-03 A through D
+        run: |
+          python desarrollo/tools/validation/validate_lore03_a.py
+          python desarrollo/tools/validation/test_lore03_a.py
+          python desarrollo/tools/validation/validate_lore03_b.py
+          python desarrollo/tools/validation/test_lore03_b.py
+          python desarrollo/tools/validation/validate_lore03_c.py
+          python desarrollo/tools/validation/test_lore03_c.py
+          python desarrollo/tools/validation/validate_lore03_d.py
+          python desarrollo/tools/validation/test_lore03_d.py
+      - name: Regression LORE-01D and LORE-02E
+        run: |
+          python desarrollo/tools/validation/validate_lore01_d.py
+          python desarrollo/tools/validation/test_lore01_d.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py
