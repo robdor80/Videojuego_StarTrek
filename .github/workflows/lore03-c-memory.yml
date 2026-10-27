@@ -1,0 +1,45 @@
+name: LORE-03 C — Memoria historica (documental)
+on:
+  push:
+    branches: [main, "lore/03-c-historical-memory"]
+    paths:
+      - "mundo/lore/historical_events/lore03c_*"
+      - "proyecto/docs/roadmap/lore_03_c/**"
+      - "desarrollo/tools/validation/*lore03_c*"
+      - ".github/workflows/lore03-c-memory.yml"
+  pull_request:
+    paths:
+      - "mundo/lore/historical_events/lore03c_*"
+      - "proyecto/docs/roadmap/lore_03_c/**"
+      - "desarrollo/tools/validation/*lore03_c*"
+      - ".github/workflows/lore03-c-memory.yml"
+permissions:
+  contents: read
+jobs:
+  documentary-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: LORE-03C — comprobaciones y mutaciones
+        run: |
+          python -m py_compile desarrollo/tools/validation/validate_lore03_c.py desarrollo/tools/validation/test_lore03_c.py
+          python desarrollo/tools/validation/validate_lore03_c.py
+          python desarrollo/tools/validation/test_lore03_c.py
+      - name: Regresiones LORE-03A y LORE-03B
+        run: |
+          python desarrollo/tools/validation/validate_lore03_a.py
+          python desarrollo/tools/validation/test_lore03_a.py
+          python desarrollo/tools/validation/validate_lore03_b.py
+          python desarrollo/tools/validation/test_lore03_b.py
+      - name: Regresiones LORE-01D y LORE-02E
+        run: |
+          python desarrollo/tools/validation/validate_lore01_d.py
+          python desarrollo/tools/validation/test_lore01_d.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py

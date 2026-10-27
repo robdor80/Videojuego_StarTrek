@@ -1,0 +1,371 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore03c_memory_casebook",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "mode": "NON_RUNTIME_DOCUMENTARY_EXAMPLES",
+  "world_state_authority": "CoreRPG_ONLY",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "creates_canonical_characters": false,
+  "creates_new_historical_events": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "source_references": {
+    "events_a": "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json",
+    "events_legacy": "mundo/lore/diplomacy/historical_events_v0.1.json",
+    "conflicts_b": "mundo/lore/conflicts/lore03b_dossier_index_v0.1.json",
+    "memory": "sistemas/ai/memory/character_memory_contract.json",
+    "knowledge": "sistemas/gameplay/knowledge/character_knowledge_state.json",
+    "people": "sistemas/gameplay/characters/generated_character_rules.json"
+  },
+  "rules": [
+    "All actors are hypothetical, never imported or instantiated.",
+    "Direct participation requires validated individual provenance before being accepted as live history.",
+    "An actor born after an event cannot have first-hand memory of it.",
+    "Uncertain date in the same year must not be assumed before campaign D.",
+    "Historical event truth and personal beliefs/rumors remain separate.",
+    "Classified knowledge requires actual clearance and need-to-know before use.",
+    "No automatic trauma, personality, political opinion, kinship or friendship.",
+    "False tzenkethi coup remains false."
+  ],
+  "cases": [
+    {
+      "case_id": "wolf_veteran_01",
+      "title": "Testimonio directo hipotético de Wolf 359",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "wolf_359_battle",
+      "conflict_ref": "borg_wolf359_2366_2367",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2341,
+        "assignment_provenance": "ILLUSTRATIVE_SERVICE_REQUIRES_VALIDATION",
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "direct_participation",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "firsthand",
+      "claim_status": "TRUE_EVENT_PERSONAL_INTERPRETATION",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Una oficial ficticia recuerda la retirada; para afirmarla como testigo se deberá validar su destino y participación."
+    },
+    {
+      "case_id": "wolf_veteran_02",
+      "title": "Recuerdo divergente de un participante",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "wolf_359_battle",
+      "conflict_ref": "borg_wolf359_2366_2367",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2338,
+        "assignment_provenance": "ILLUSTRATIVE_SERVICE_REQUIRES_VALIDATION",
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "direct_participation",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "firsthand",
+      "claim_status": "TRUE_EVENT_PERSONAL_INTERPRETATION",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Otro veterano hipotético recuerda ayudas y pérdidas de forma distinta; no implica enemistad ni amistad con el primero."
+    },
+    {
+      "case_id": "wolf_archive_student",
+      "title": "Alumno que conoce Wolf 359 por archivos",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "wolf_359_battle",
+      "conflict_ref": "borg_wolf359_2366_2367",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2370,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "trained",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Un cadete nacido después de la batalla conoce documentación histórica; nunca asegura haber estado presente."
+    },
+    {
+      "case_id": "bajor_family_account",
+      "title": "Relato intergeneracional de Bajor",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "cardassian_withdrawal_bajor",
+      "conflict_ref": "cardassian_occupation_bajor",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2377,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "explicit_disclosure",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Una persona ficticia nacida tras la retirada conoce relatos familiares; no recuerda directamente la ocupación."
+    },
+    {
+      "case_id": "dominion_resistance_veteran",
+      "title": "Participación hipotética en la resistencia cardassiana",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "cardassian_resistance",
+      "conflict_ref": "cardassian_resistance_2375",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2346,
+        "assignment_provenance": "ILLUSTRATIVE_SERVICE_REQUIRES_VALIDATION",
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "direct_participation",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "firsthand",
+      "claim_status": "TRUE_EVENT_PERSONAL_INTERPRETATION",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Un cardassiano ficticio pudo participar en la resistencia si su presencia individual queda acreditada; la guerra no define su moral."
+    },
+    {
+      "case_id": "dominion_postwar_officer",
+      "title": "Lectura del tratado por oficial",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "treaty_of_bajor",
+      "conflict_ref": "dominion_war",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2351,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "formal_report",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "El oficial lee el fin formal de la guerra; entiende que la reconstrucción y la reconciliación no fueron instantáneas."
+    },
+    {
+      "case_id": "dominion_family_loss",
+      "title": "Pérdida familiar sin duelo predeterminado",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "defiant_chintoka_loss",
+      "conflict_ref": "dominion_war",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2378,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "explicit_disclosure",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Un descendiente oye hablar de la pérdida de una nave; no se declara fallecido ningún familiar ficticio real."
+    },
+    {
+      "case_id": "maquis_later_student",
+      "title": "El Maquis en material educativo",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "maquis_emergence",
+      "conflict_ref": "maquis_border_insurgency",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2376,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "trained",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Estudiante conoce la aparición del Maquis por formación y puede sostener una opinión individual, no de especie."
+    },
+    {
+      "case_id": "tzenkethi_rumor",
+      "title": "Rumor engañoso del golpe tzenkethi",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "tzenkethi_false_coup_report",
+      "conflict_ref": "tzenkethi_border_provocation_2372",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2348,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "rumor",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "FALSE_REPORT_BELIEVED",
+      "world_event_claim": "REPORT_NOT_ACTUAL_COUP",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Recibió la noticia falsa y pudo creerla; no se afirma que ocurriera un golpe tzenkethi."
+    },
+    {
+      "case_id": "tzenkethi_correction",
+      "title": "Corrección posterior del rumor tzenkethi",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "tzenkethi_false_coup_report",
+      "conflict_ref": "tzenkethi_border_provocation_2372",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2348,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "formal_report",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "FALSE_REPORT_CORRECTED",
+      "world_event_claim": "REPORT_NOT_ACTUAL_COUP",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Conoce un informe posterior que identifica la falsedad y recuerda que su valoración anterior fue errónea."
+    },
+    {
+      "case_id": "romulus_2383_history",
+      "title": "Crisis Shinzon como antecedente",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "nemesis_shinzon_romulan_crisis",
+      "conflict_ref": "romulan_shinzon_crisis_2379",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2342,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "formal_report",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Conoce la crisis de 2379; Rómulo sigue existiendo al inicio propuesto de 2383."
+    },
+    {
+      "case_id": "section31_restricted",
+      "title": "Investigación clasificada sobre Sección 31",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "section31_revealed",
+      "conflict_ref": "section31_covert_interference",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2343,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "authorized_record_access",
+        "information_class": "classified",
+        "authorization_evidence": "HYPOTHETICAL_NEED_TO_KNOW_REQUIRES_CORE_VALIDATION"
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Solo podría consultar un expediente determinado con autorización y necesidad operativa; no permite contar datos a terceros."
+    },
+    {
+      "case_id": "klingon_cadet_training",
+      "title": "Guerra civil klingon estudiada por cadete",
+      "case_kind": "DOCUMENTARY_HYPOTHETICAL_NOT_INSTANTIATED",
+      "event_ref": "klingon_civil_war_crisis",
+      "conflict_ref": "klingon_civil_war_2367_2368",
+      "actor": {
+        "identity_type": "generated_hypothetical",
+        "birth_year": 2374,
+        "assignment_provenance": null,
+        "canonical_identity_asserted": false
+      },
+      "access": {
+        "channel": "trained",
+        "information_class": "public",
+        "authorization_evidence": null
+      },
+      "remembered_as": "learned",
+      "claim_status": "TRUE_EVENT_REPORTED",
+      "world_event_claim": "REFERENCES_SOURCE_FACT",
+      "automatic_trauma": false,
+      "automatic_relationship": false,
+      "runtime_state_mutation": false,
+      "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
+      "example_es": "Un cadete puede estudiarla sin haber presenciado la guerra ni asumir actitudes propias de los klingon."
+    }
+  ]
+}
