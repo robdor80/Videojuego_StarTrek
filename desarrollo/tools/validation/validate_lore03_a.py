@@ -140,7 +140,21 @@ def validate():
     stats=validate_index(idx,diplomatic,registry,eras)
     text=(ROOT / "CONTENT_STATUS.md").read_text(encoding="utf-8")
     check("| A — Cronología y acontecimientos | ✅ COMPLETE |" in text, "Administrative closure not registered")
-    check("| B — Conflictos, guerras y crisis | ⬜ TODO |" in text, "B started before approval")
+    # LORE-03A must not freeze LORE-03B at TODO after an authorized merge.
+    # Accept B as COMPLETE only when its documentary index records the real merge.
+    b_todo = "| B — Conflictos, guerras y crisis | ⬜ TODO |" in text
+    b_complete = "| B — Conflictos, guerras y crisis | ✅ COMPLETE |" in text
+    check(b_todo or b_complete, "LORE-03B has an unknown administrative state")
+    if b_complete:
+        b = load("mundo/lore/conflicts/lore03b_dossier_index_v0.1.json")
+        evidence = b.get("closure", {})
+        check(b["status"] == "COMPLETE_DOCUMENTARY" and
+              evidence.get("pr_number") == 41 and
+              evidence.get("merge_commit_sha") == "2b1447d4469fb8f52c98486342be61c9a069b90a" and
+              evidence.get("scope") == "DOCUMENTARY_ONLY" and
+              evidence.get("runtime_activated") is False and
+              b.get("gameplay_activated") is False,
+              "LORE-03B marked COMPLETE without authoritative merge evidence")
     check("| C — Consecuencias y memoria histórica | ⬜ TODO |" in text,"C started without approval")
     check("| D — Continuidad/divergencia | ⬜ TODO |" in text,"D started without approval")
     check("| E — Auditoría global | ⬜ TODO |" in text,"E started without approval")

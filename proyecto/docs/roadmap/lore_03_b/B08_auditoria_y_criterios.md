@@ -2,7 +2,7 @@
 
 **Fecha de integración:** 27-10-2026 · **Base:** `main@9cc9c240` · **Rama:** `lore/03-b-conflicts-crises` · **PR:** [#41](https://github.com/robdor80/Videojuego_StarTrek/pull/41), Draft.
 
-**Dictamen vigente: `NEEDS_REVIEW` — documentación y CI de la rama correctos; pendiente revisión y autorización humana para fusionar.** ST-ORG-01 quedó expresamente desbloqueada por el autor el 27-10-2026. Este expediente no certifica reorganización local del MSI ni validación audiovisual integral.
+**Dictamen histórico previo a la fusión: `NEEDS_REVIEW` — documentación y CI de la rama correctos; entonces pendiente revisión y autorización humana para fusionar.** ST-ORG-01 quedó expresamente desbloqueada por el autor el 27-10-2026. Este expediente no certifica reorganización local del MSI ni validación audiovisual integral.
 
 ## Entregado
 
@@ -29,8 +29,18 @@
 
 ## Pendiente para cierre formal
 
-- [ ] Revisión humana del contenido y reservas históricas, sin necesidad de reabrir LORE-03A.
-- [ ] Fusión autorizada expresamente de la PR #41 en `main`.
-- [ ] Verificación posterior al merge y acta administrativa de cierre `COMPLETE`, sin borrado de rama salvo autorización.
+- [x] Revisión y aceptación del alcance documental mediante fusión autorizada de PR #41; reservas históricas continúan documentadas.
+- [x] Fusión autorizada de PR #41 en `main` el 27-10-2026 (`2b1447d4`).
+- [x] Verificación tras fusión: LORE-03B y LORE-03A en GitHub Actions `success`; rama original eliminada por el autor. Acta administrativa preparada en PR independiente.
 
 **Principio:** el canon establece antecedentes anteriores al inicio de campaña; después el estado del universo evoluciona exclusivamente bajo CoreRPG. Paz, negociación y soluciones parciales tienen plena legitimidad; no hay guerras por conveniencia del jugador.
+
+## Acta de cierre administrativo — 27-10-2026
+
+- **Estado:** `COMPLETE_DOCUMENTARY` tras la fusión de la PR [#41](https://github.com/robdor80/Videojuego_StarTrek/pull/41).
+- **Commit de fusión:** `2b1447d4469fb8f52c98486342be61c9a069b90a`; **fecha:** 2026-10-27T11:23:39Z (UTC).
+- **Rama de desarrollo:** `lore/03-b-conflicts-crises`, eliminada tras fusión.
+- **Pruebas posteriores al merge:** LORE-03B [40495811165](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40495811165) = `success`; regresión LORE-03A [40495811218](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40495811218) = `success`.
+- **Alcance:** cierre documental B01–B08 y 22 dossiers + 12 escenarios; no hay runtime de CoreRPG ni UE5 activado.
+- **Reservas:** se preservan sin inventar canon, fechas de batalla o resultados futuros.
+- **Siguiente fase:** LORE-03C podrá iniciarse tras integrar esta regularización, sin iniciar desarrollo automáticamente.

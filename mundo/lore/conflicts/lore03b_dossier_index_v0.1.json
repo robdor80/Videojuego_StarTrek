@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "index_id": "lore03b_historical_conflicts",
-  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "status": "COMPLETE_DOCUMENTARY",
   "authority": "CoreRPG_ONLY",
   "source_contract": "mundo/lore/conflicts/conflict_definition_contract.json",
   "runtime_reference": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
@@ -146,5 +146,19 @@
       "classification": "SHIPBOARD_ARMED_CRISIS"
     }
   ],
-  "warning": "Historical families, incursions and political crises, not 22 separate wars; no WorldState mutation."
+  "warning": "Historical families, incursions and political crises, not 22 separate wars; no WorldState mutation.",
+  "closure": {
+    "pr_number": 41,
+    "merged_at": "2026-10-27T11:23:39Z",
+    "merge_commit_sha": "2b1447d4469fb8f52c98486342be61c9a069b90a",
+    "checks_on_main": [
+      "LORE-03B success",
+      "LORE-03A success"
+    ],
+    "scope": "DOCUMENTARY_ONLY",
+    "runtime_activated": false,
+    "branch_deleted": true,
+    "open_reservations_preserved": true,
+    "administrative_status_corrected_in_separate_pr": true
+  }
 }

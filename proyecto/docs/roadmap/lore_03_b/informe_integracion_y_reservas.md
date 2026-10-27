@@ -1,3 +1,5 @@
+> **Cierre administrativo posterior (27-10-2026):** PR #41 fusionada en `main` con commit `2b1447d4469fb8f52c98486342be61c9a069b90a`. Rama borrada, LORE-03B `COMPLETE_DOCUMENTARY`, acciones de B y A posteriores `success`. Los apartados que siguen conservan el estado previo a la fusión como historia. Ningún sistema de ejecución se ha activado.
+
 # LORE-03B — Informe de integración y reservas (27-10-2026)
 
 **Rama:** `lore/03-b-conflicts-crises` · **Estado:** `NEEDS_REVIEW` sujeto a CI y autorización de fusión.

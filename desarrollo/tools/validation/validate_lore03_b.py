@@ -67,7 +67,17 @@ def validate_dossier(d, context):
     return did
 
 def validate_index(idx, scenarios, dossiers, context):
-    demand(idx["status"] == "NEEDS_REVIEW_DOCUMENTARY", "Unapproved final status")
+    demand(idx["status"] == "COMPLETE_DOCUMENTARY", "LORE-03B not administratively closed")
+    closure = idx.get("closure", {})
+    demand(closure.get("pr_number") == 41 and
+           closure.get("merge_commit_sha") == "2b1447d4469fb8f52c98486342be61c9a069b90a" and
+           closure.get("merged_at") == "2026-10-27T11:23:39Z", "Missing/incorrect closure evidence")
+    demand(closure.get("scope") == "DOCUMENTARY_ONLY" and
+           closure.get("runtime_activated") is False and
+           closure.get("branch_deleted") is True and
+           closure.get("open_reservations_preserved") is True and
+           closure.get("administrative_status_corrected_in_separate_pr") is True,
+           "Closure overstates runtime or omits reservations")
     demand(idx["authority"] == "CoreRPG_ONLY", "Index authority")
     demand(idx["campaign_start_year_proposed"] == 2383 and
            idx["campaign_start_exact_date"] is None, "Campaign date invented")
@@ -149,7 +159,7 @@ def validate(root=ROOT):
                  "B08_auditoria_y_criterios.md"):
         demand((root/"proyecto/docs/roadmap/lore_03_b"/file).is_file(), f"Missing subphase {file}")
     return {"dossiers":len(dossiers), "scenarios":len(scenarios["scenarios"]),
-            "prior_events":context["counts"], "status":"NEEDS_REVIEW_DOCUMENTARY"}
+            "prior_events":context["counts"], "status":"COMPLETE_DOCUMENTARY"}
 
 if __name__ == "__main__":
     print(json.dumps(validate(), ensure_ascii=False, indent=2))

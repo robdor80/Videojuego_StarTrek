@@ -7,6 +7,6 @@ Documentación de investigación B01–B08 incorporada desde el paquete preparat
 - Runtime de referencia (sin cambios): `sistemas/gameplay/conflict/conflict_war_index_v0.1.json`.
 - No se crea ni redefine ningún tratado, guerra ni evento canónico de LORE-01/03A.
 - Inicio 2383 propuesto; fecha de campaña pendiente. Rómulo no destruido en 2383 y futuro no obligatorio.
-- Estado de esta rama/PR: `NEEDS_REVIEW` solo tras CI y comprobaciones; nunca COMPLETE antes de la fusión aprobada.
+- **Estado vigente: `COMPLETE_DOCUMENTARY`**, PR #41 fusionada en `main` el 27-10-2026 (`2b1447d4469fb8f52c98486342be61c9a069b90a`), rama original borrada; sin certificación runtime.
 
 Criterios de cierre y reservas en `B08_auditoria_y_criterios.md`. La plantilla original menciona ST-ORG-01 porque fue escrita durante su suspensión; el autor levantó expresamente el bloqueo el 27-10-2026.

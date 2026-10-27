@@ -1,3 +1,5 @@
+> **Cierre de LORE-03B — 27-10-2026:** PR [#41](https://github.com/robdor80/Videojuego_StarTrek/pull/41) fusionada en `main`, commit `2b1447d4469fb8f52c98486342be61c9a069b90a`, rama eliminada, CI de LORE-03B y LORE-03A posterior al merge en `success`. Estado documental: **COMPLETE** con reservas históricas trazadas; CoreRPG/UE5 no se han implementado. Esta actualización prevalece sobre los informes anteriores que indicaban B pendiente. **LORE-03C, D y E todavía no están iniciadas.**
+
 > **Actualización LORE-03B (27-10-2026; PR #41 pendiente):** ST-ORG-01 completó la reorganización de carpetas y el autor levantó su suspensión. LORE-03B ha preparado 22 expedientes, 12 escenarios y validadores en las rutas actuales: `mundo/`, `proyecto/` y `desarrollo/`. Su estado es `NEEDS_REVIEW`, no `COMPLETE`; únicamente CoreRPG tendrá autoridad sobre el WorldState. Esta anotación mantiene intacta la historia de las decisiones anteriores; no se fusionará sin autorización.
 
 # LORE-03 — Plan maestro: Historia, conflictos y continuidad galáctica
