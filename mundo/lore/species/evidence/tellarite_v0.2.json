@@ -1,0 +1,65 @@
+{
+  "schema_version": "0.2.0",
+  "method": "screen_scene_anchored_plus_era_scoped_interpretation",
+  "research_cutoff": "2026-10-17",
+  "screen_scope": "TNG_DS9_VOY_WITH_EARLIER_RETAINED_HISTORICAL_REFERENCES",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+  "species_id": "tellarite",
+  "display_name_es": "Tellaritas",
+  "content_scope": "MAIN_GAME_EXISTING_LOW_TNG_EVIDENCE",
+  "legacy_profile_ref": "sistemas/gameplay/species/profiles/tellarite_v0.1.json",
+  "domains": {
+    "biology": "Humanoides con rasgos faciales porcinos, complexión variable y características dermatológicas observables. No afirmar que todos poseen fortaleza o preferencias climáticas idénticas sin estudio del individuo.",
+    "lifecycle": "No se fija en la documentación retenida una edad de mayoría, años exactos de gestación o límites generales de vida. El cuidado médico debe empezar por el paciente, no por tabulaciones inventadas.",
+    "culture": "Hay participación en instituciones federadas y una tradición de debate asociada en referencias especializadas; la agresividad, el gusto por discutir o la confrontación ritual no son rasgos biológicos. Para una disputa diplomática exigir normas locales y hechos, no 'un tellarita siempre discute'.",
+    "language": "La presencia de traducción simultánea no demuestra el dominio del estándar federado ni de un idioma tellarita para toda la población. Etiqueta lingüística pendiente de corpus.",
+    "chronology": "Contexto TOS usado como origen histórico; no trasladar sin prueba rivalidades de negociaciones del siglo XXII directamente al XXIV.",
+    "npc_scenarios": [
+      "Embajador tellarita, oficial y comerciante se generan mediante sus instituciones, no por plantilla de discusión.",
+      "Variación de pelaje/rostro individual permitida sin inferencias culturales.",
+      "Una discrepancia verbal no inicia un combate ni modifica relaciones diplomáticas sin evento."
+    ],
+    "unknowns": [
+      "Parentesco y crianza.",
+      "Idioma y escritura documentados de forma primaria.",
+      "Longevidad/gestación.",
+      "Jerarquías culturales del siglo XXIV.",
+      "Capacidades sensoriales y valores clínicos exactos."
+    ],
+    "canon_cautions": "Documentos heredados usan episodios ENT para desafíos/debate; se citan como legado de otra era, no como evidencia TNG independiente."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS",
+  "evidence": [
+    {
+      "claim_id": "tellarite_E01",
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "domain": "institutions",
+      "claim_es": "El representante tellarita participa en una conferencia de embajadores; es evidencia de cultura diplomática y pluralidad de posiciones.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "tellarite_E02",
+      "source_id": "MA_TELLARITE",
+      "domain": "biology",
+      "claim_es": "Compilación secundaria de aspecto físico, fisiología y tradiciones; no evidencia suficiente para multiplicadores numéricos.",
+      "authority": "RELIABLE_SECONDARY",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "tellarite_E03",
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "domain": "institutions",
+      "claim_es": "Referencia oficial que sitúa a los tellaritas entre los pueblos del marco federado; ninguna ciudadanía universal nace del dato.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    }
+  ],
+  "monograph_ref": "mundo/lore/species/monographs/tellarite_v0.2.md",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "mundo/sources/canon_policy.md"
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_aenar_behavior",
+  "species_index_key": "aenar",
+  "display_name_es": "Entornos Aenar (evidencia TNG insuficiente)",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME_WITH_STRICT_HISTORICAL_CAUSALITY",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json",
+    "profile_subkey": "aenar",
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/aenar_v0.2.json",
+    "anchors": [
+      "MA_AENAR",
+      "ST_OFFICIAL_AENAR_101_2022"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "UNKNOWN_NO_DEFAULT",
+  "interpretation_scope_es": "No existe evidencia primaria específica TNG/DS9/VOY suficiente para fijar un estilo psicológico aenar. Se conserva identidad y variación posibles sin inventar temperamento colectivo.",
+  "conditional_guidance": {
+    "communication_es": [
+      "No deducir lenguaje telepático ni preferencia por silencio en un NPC sin capacidad y aprendizaje registrado.",
+      "El habla, la reserva y cortesía deben venir de biografía o fuente específica, no del nombre Aenar."
+    ],
+    "emotional_expression_es": [
+      "No atribuir pacifismo o serenidad innatos.",
+      "El miedo, la curiosidad o el afecto se derivan del individuo y experiencia."
+    ],
+    "disagreement_and_conflict_es": [
+      "No presuponer rechazo absoluto a defensa propia.",
+      "Un encuentro con un Aenar requiere historial de ubicación y socialización, no una profecía."
+    ],
+    "authority_and_duty_es": [
+      "La participación o no en instituciones andorianas requiere documentación individual.",
+      "Sin fuente válida, autoridad social y decisiones de comunidad quedan indeterminadas."
+    ],
+    "relationships_and_daily_life_es": [
+      "No inferir telepatía compartida ni vínculos comunitarios por ascendencia.",
+      "Parentescos documentados se guardan como relaciones reales de CoreRPG cuando proceda."
+    ]
+  },
+  "variation_axes_es": [
+    "procedencia familiar",
+    "crianza",
+    "exposición a Andoria/Federación",
+    "capacidades demostradas"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un individuo Aenar aprende protocolos de la Flota; otro permanece dedicado a una profesión civil no especificada.",
+    "Dos personas con capacidades sensoriales distintas pueden comprender la misma situación de formas diferentes."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No escribir una caricatura de sabio pacifista telépata.",
+    "No importar cultura de ENT/SNW como observación directa de 2370."
+  ],
+  "era_guard_es": "Perfil fuera de evidencia directa TNG/DS9/VOY; toda aparición y práctica significativa necesita procedencia temporal.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

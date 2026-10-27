@@ -6,23 +6,23 @@ on:
       - main
     paths:
       - ".github/workflows/f13-dynamic-universe-reference.yml"
-      - "tools/validation/f13_*"
-      - "tools/validation/test_f13_*"
-      - "validation/fixtures/f13/**"
-      - "docs/roadmap/master/fases/F13/**"
-      - "docs/roadmap/procedural_layers_status_v0.1.json"
-      - "docs/roadmap/procedural_layers_master_plan_v0.1.md"
-      - "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+      - "desarrollo/tools/validation/f13_*"
+      - "desarrollo/tools/validation/test_f13_*"
+      - "desarrollo/validation/fixtures/f13/**"
+      - "proyecto/docs/roadmap/master/fases/F13/**"
+      - "proyecto/docs/roadmap/procedural_layers_status_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_layers_master_plan_v0.1.md"
+      - "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
   pull_request:
     paths:
       - ".github/workflows/f13-dynamic-universe-reference.yml"
-      - "tools/validation/f13_*"
-      - "tools/validation/test_f13_*"
-      - "validation/fixtures/f13/**"
-      - "docs/roadmap/master/fases/F13/**"
-      - "docs/roadmap/procedural_layers_status_v0.1.json"
-      - "docs/roadmap/procedural_layers_master_plan_v0.1.md"
-      - "docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
+      - "desarrollo/tools/validation/f13_*"
+      - "desarrollo/tools/validation/test_f13_*"
+      - "desarrollo/validation/fixtures/f13/**"
+      - "proyecto/docs/roadmap/master/fases/F13/**"
+      - "proyecto/docs/roadmap/procedural_layers_status_v0.1.json"
+      - "proyecto/docs/roadmap/procedural_layers_master_plan_v0.1.md"
+      - "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md"
   workflow_dispatch:
 
 permissions:
@@ -42,18 +42,18 @@ jobs:
           python-version: "3.12"
       - name: Sintaxis y fixture
         run: |
-          python -m py_compile tools/validation/f13_dynamic_universe_reference.py tools/validation/test_f13_dynamic_universe_reference.py
-          python -m json.tool validation/fixtures/f13/f13_dynamic_universe_scenarios_v0.1.json >/dev/null
+          python -m py_compile desarrollo/tools/validation/f13_dynamic_universe_reference.py desarrollo/tools/validation/test_f13_dynamic_universe_reference.py
+          python -m json.tool desarrollo/validation/fixtures/f13/f13_dynamic_universe_scenarios_v0.1.json >/dev/null
       - name: Escenarios offline y huella reproducible
         run: |
-          python tools/validation/f13_dynamic_universe_reference.py --scenario validation/fixtures/f13/f13_dynamic_universe_scenarios_v0.1.json --output validation/results/f13_dynamic_universe_offline_report.json
+          python desarrollo/tools/validation/f13_dynamic_universe_reference.py --scenario desarrollo/validation/fixtures/f13/f13_dynamic_universe_scenarios_v0.1.json --output desarrollo/validation/results/f13_dynamic_universe_offline_report.json
       - name: Pruebas de regresión
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f13_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f13_*.py' -v
       - name: Evidencia de ejecución (solo referencia)
         uses: actions/upload-artifact@v4
         with:
           name: f13-offline-reference-evidence
-          path: validation/results/f13_dynamic_universe_offline_report.json
+          path: desarrollo/validation/results/f13_dynamic_universe_offline_report.json
           if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_6369439e50e4",
+  "display_name": "sovereign class",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/sovereign/sovereign_class",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "sovereign",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave clase Sovereign (era TNG tardía).",
+  "proposed_game_use": "F11/F14: modelo de crucero; comparar versiones con hangar.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/calss sovereign/star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb",
+      "kind": "file",
+      "name": "star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 13767460,
+    "files": [
+      {
+        "path": "star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb",
+        "extension": ".glb",
+        "size_bytes": 13767460
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/sovereign/sovereign_class",
+  "directory_root": "assets/"
+}

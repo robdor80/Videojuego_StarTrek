@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_73b2d3301a9d",
+  "display_name": "sushi real 3dmodel",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/sushi/sushi_real_3dmodel",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Sushi realista o escaneado.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/sushi/sushi-real-3dmodel.glb",
+      "kind": "file",
+      "name": "sushi-real-3dmodel.glb"
+    },
+    {
+      "source": "objects/food/sushi/sushi-real-3dmodel.zip",
+      "kind": "file",
+      "name": "sushi-real-3dmodel.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 5003557,
+    "files": [
+      {
+        "path": "sushi-real-3dmodel.glb",
+        "extension": ".glb",
+        "size_bytes": 3192968
+      },
+      {
+        "path": "sushi-real-3dmodel.zip",
+        "extension": ".zip",
+        "size_bytes": 1810589
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/sushi/sushi_real_3dmodel",
+  "directory_root": "assets/"
+}

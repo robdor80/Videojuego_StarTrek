@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "SYS-403",
+  "status": "editorially_aligned_with_developed_manual",
+  "source_manual": "sistemas/gameplay/careers/academy_path/study_materials/fourth_class/SYS-403/MANUAL_v1_0.md",
+  "question_count": 24,
+  "rule": "No question may require knowledge that is not explicitly taught in SYS-403 or established prerequisites.",
+  "questions": [
+    {
+      "id": "SYS-403-Q001",
+      "unit_id": "SYS-403-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué una nave debe entenderse como una red de sistemas?",
+      "answer_key_es": [
+        "dependencias",
+        "recursos compartidos",
+        "fallos pueden propagarse"
+      ]
+    },
+    {
+      "id": "SYS-403-Q002",
+      "unit_id": "SYS-403-U01",
+      "type": "compare",
+      "prompt_es": "Diferencia fuente, distribución y carga.",
+      "answer_key_es": [
+        "fuente aporta energía",
+        "distribución la entrega/prioriza",
+        "carga consume"
+      ]
+    },
+    {
+      "id": "SYS-403-Q003",
+      "unit_id": "SYS-403-U01",
+      "type": "judgment",
+      "prompt_es": "¿Puede una consola intacta dejar de funcionar?",
+      "answer_key_es": [
+        "sí",
+        "energía/red/sistema remoto/autorización"
+      ]
+    },
+    {
+      "id": "SYS-403-Q004",
+      "unit_id": "SYS-403-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué la prioridad energética depende del contexto?",
+      "answer_key_es": [
+        "misión",
+        "vidas",
+        "daños",
+        "autoridad",
+        "capacidad restante"
+      ]
+    },
+    {
+      "id": "SYS-403-Q005",
+      "unit_id": "SYS-403-U02",
+      "type": "short_answer",
+      "prompt_es": "¿Qué función general cumple la propulsión de impulso?",
+      "answer_key_es": [
+        "movimiento subluz",
+        "maniobras locales"
+      ]
+    },
+    {
+      "id": "SYS-403-Q006",
+      "unit_id": "SYS-403-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Qué significa régimen subluz?",
+      "answer_key_es": [
+        "por debajo de velocidad de la luz en modelo del juego"
+      ]
+    },
+    {
+      "id": "SYS-403-Q007",
+      "unit_id": "SYS-403-U02",
+      "type": "compare",
+      "prompt_es": "¿Qué diferencia existe entre Propulsión y Navegación?",
+      "answer_key_es": [
+        "propulsión aporta capacidad",
+        "navegación define/ejecuta solución de movimiento"
+      ]
+    },
+    {
+      "id": "SYS-403-Q008",
+      "unit_id": "SYS-403-U02",
+      "type": "knowledge",
+      "prompt_es": "Nombra tres factores que pueden limitar impulso.",
+      "answer_key_es": [
+        "daño",
+        "energía",
+        "maniobra",
+        "seguridad",
+        "condiciones locales"
+      ]
+    },
+    {
+      "id": "SYS-403-Q009",
+      "unit_id": "SYS-403-U03",
+      "type": "short_answer",
+      "prompt_es": "¿Qué función cumple warp?",
+      "answer_key_es": [
+        "viaje superlumínico",
+        "navegación interestelar"
+      ]
+    },
+    {
+      "id": "SYS-403-Q010",
+      "unit_id": "SYS-403-U03",
+      "type": "judgment",
+      "prompt_es": "¿Por qué no existe una única conversión universal de factor warp a velocidad?",
+      "answer_key_es": [
+        "eras/naves/condiciones diferentes",
+        "regla del proyecto"
+      ]
+    },
+    {
+      "id": "SYS-403-Q011",
+      "unit_id": "SYS-403-U03",
+      "type": "compare",
+      "prompt_es": "Diferencia capacidad máxima y sostenible.",
+      "answer_key_es": [
+        "pico permitido",
+        "capacidad mantenible en el tiempo"
+      ]
+    },
+    {
+      "id": "SYS-403-Q012",
+      "unit_id": "SYS-403-U03",
+      "type": "knowledge",
+      "prompt_es": "Nombra cuatro factores que condicionan viaje warp.",
+      "answer_key_es": [
+        "daño",
+        "energía",
+        "navegación",
+        "subespacio",
+        "peligros",
+        "restricciones"
+      ]
+    },
+    {
+      "id": "SYS-403-Q013",
+      "unit_id": "SYS-403-U04",
+      "type": "short_answer",
+      "prompt_es": "¿Qué función general cumple soporte vital?",
+      "answer_key_es": [
+        "mantener condiciones habitables",
+        "atmósfera/temperatura/ambiente"
+      ]
+    },
+    {
+      "id": "SYS-403-Q014",
+      "unit_id": "SYS-403-U04",
+      "type": "compare",
+      "prompt_es": "Diferencia sintetizador de alimentos y replicador del siglo XXIV.",
+      "answer_key_es": [
+        "tecnologías/eras distintas",
+        "no retrotraer replicador completo"
+      ]
+    },
+    {
+      "id": "SYS-403-Q015",
+      "unit_id": "SYS-403-U04",
+      "type": "knowledge",
+      "prompt_es": "¿Qué puede limitar un replicador?",
+      "answer_key_es": [
+        "energía",
+        "patrones",
+        "reservas",
+        "seguridad"
+      ]
+    },
+    {
+      "id": "SYS-403-Q016",
+      "unit_id": "SYS-403-U04",
+      "type": "judgment",
+      "prompt_es": "¿Qué se exige saber del transportador en 4.ª clase?",
+      "answer_key_es": [
+        "función",
+        "dependencias",
+        "límites generales",
+        "no operación/mantenimiento avanzado"
+      ]
+    },
+    {
+      "id": "SYS-403-Q017",
+      "unit_id": "SYS-403-U05",
+      "type": "knowledge",
+      "prompt_es": "Nombra cuatro sistemas que pueden contribuir a defensa.",
+      "answer_key_es": [
+        "escudos",
+        "armamento",
+        "sensores",
+        "maniobra",
+        "comunicaciones",
+        "control de daños"
+      ]
+    },
+    {
+      "id": "SYS-403-Q018",
+      "unit_id": "SYS-403-U05",
+      "type": "judgment",
+      "prompt_es": "¿Tener armamento disponible concede permiso para usarlo?",
+      "answer_key_es": [
+        "no",
+        "requiere autoridad/contexto"
+      ]
+    },
+    {
+      "id": "SYS-403-Q019",
+      "unit_id": "SYS-403-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué Sensores es consumidor y proveedor?",
+      "answer_key_es": [
+        "consume energía/capacidad",
+        "produce conocimiento para otras estaciones"
+      ]
+    },
+    {
+      "id": "SYS-403-Q020",
+      "unit_id": "SYS-403-U05",
+      "type": "judgment",
+      "prompt_es": "¿Por qué no puede asumirse holodeck en todas las eras?",
+      "answer_key_es": [
+        "tecnología depende de era/nave"
+      ]
+    },
+    {
+      "id": "SYS-403-Q021",
+      "unit_id": "SYS-403-U06",
+      "type": "short_answer",
+      "prompt_es": "¿Qué significa sistema degradado?",
+      "answer_key_es": [
+        "funciona con menos capacidad/restricciones/riesgo"
+      ]
+    },
+    {
+      "id": "SYS-403-Q022",
+      "unit_id": "SYS-403-U06",
+      "type": "compare",
+      "prompt_es": "Diferencia sistema primario y respaldo.",
+      "answer_key_es": [
+        "principal",
+        "alternativa parcial/no necesariamente equivalente"
+      ]
+    },
+    {
+      "id": "SYS-403-Q023",
+      "unit_id": "SYS-403-U06",
+      "type": "short_answer",
+      "prompt_es": "¿Qué es un efecto cascada?",
+      "answer_key_es": [
+        "fallo inicial afecta sistemas dependientes",
+        "consecuencias indirectas"
+      ]
+    },
+    {
+      "id": "SYS-403-Q024",
+      "unit_id": "SYS-403-U06",
+      "type": "judgment",
+      "prompt_es": "¿Por qué un síntoma no demuestra automáticamente la causa?",
+      "answer_key_es": [
+        "causas múltiples",
+        "requiere diagnóstico",
+        "separar observación de explicación"
+      ]
+    }
+  ]
+}

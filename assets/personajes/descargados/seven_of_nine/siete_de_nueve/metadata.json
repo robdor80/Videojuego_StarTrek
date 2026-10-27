@@ -1,0 +1,260 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_58c316fd0ff3",
+  "display_name": "Siete de Nueve",
+  "category": "npc",
+  "relative_directory": "personajes/descargados/seven_of_nine/siete_de_nueve",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Personaje Seven of Nine, ex-Borg de Voyager.",
+  "proposed_game_use": "NPC narrativo; verificar rig, licencia y época.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "NPC/7 de 9/seven-of-nine",
+      "kind": "directory",
+      "name": "seven-of-nine"
+    },
+    {
+      "source": "NPC/7 de 9/seven-of-nine.zip",
+      "kind": "file",
+      "name": "seven-of-nine.zip"
+    },
+    {
+      "source": "NPC/7 de 9/seven_of_nine",
+      "kind": "directory",
+      "name": "seven_of_nine"
+    },
+    {
+      "source": "NPC/7 de 9/seven_of_nine.glb",
+      "kind": "file",
+      "name": "seven_of_nine.glb"
+    },
+    {
+      "source": "NPC/7 de 9/seven_of_nine.zip",
+      "kind": "file",
+      "name": "seven_of_nine.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 38,
+    "size_bytes": 176437921,
+    "files": [
+      {
+        "path": "seven-of-nine/source/7of9_sketchfab.fbx",
+        "extension": ".fbx",
+        "size_bytes": 2714284
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Body_albedo.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2189380
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Body_AO.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1504073
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Body_metallic.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 175852
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Body_normal.png",
+        "extension": ".png",
+        "size_bytes": 5255333
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Body_roughness.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2349808
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Eyelashes_normal.png",
+        "extension": ".png",
+        "size_bytes": 113794
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Eyelashes_opacity.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 74380
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Hair_albedo.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2956143
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Hair_AO.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1583698
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Hair_normal.png",
+        "extension": ".png",
+        "size_bytes": 4604339
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Hair_opacity.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 226761
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Hair_roughness.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1342329
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Head_albedo.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 861699
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Head_AO.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 906163
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Head_normal.png",
+        "extension": ".png",
+        "size_bytes": 4623247
+      },
+      {
+        "path": "seven-of-nine/textures/7of9Head_roughness.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1696795
+      },
+      {
+        "path": "seven-of-nine/textures/eye_albedo.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 327523
+      },
+      {
+        "path": "seven-of-nine/textures/Mough_albedo.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 305464
+      },
+      {
+        "path": "seven-of-nine.zip",
+        "extension": ".zip",
+        "size_bytes": 33813623
+      },
+      {
+        "path": "seven_of_nine/license.txt",
+        "extension": ".txt",
+        "size_bytes": 678
+      },
+      {
+        "path": "seven_of_nine/scene.bin",
+        "extension": ".bin",
+        "size_bytes": 1778572
+      },
+      {
+        "path": "seven_of_nine/scene.gltf",
+        "extension": ".gltf",
+        "size_bytes": 137605
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Body_baseColor.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1366559
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Body_metallicRoughness.png",
+        "extension": ".png",
+        "size_bytes": 5356434
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Body_normal.png",
+        "extension": ".png",
+        "size_bytes": 4851306
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Eyelashes_baseColor.png",
+        "extension": ".png",
+        "size_bytes": 54513
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Eyelashes_normal.png",
+        "extension": ".png",
+        "size_bytes": 105911
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Hair_baseColor.png",
+        "extension": ".png",
+        "size_bytes": 5485934
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Hair_metallicRoughness.png",
+        "extension": ".png",
+        "size_bytes": 4143632
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Hair_normal.png",
+        "extension": ".png",
+        "size_bytes": 4384410
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Head_baseColor.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 523995
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Head_metallicRoughness.png",
+        "extension": ".png",
+        "size_bytes": 3811507
+      },
+      {
+        "path": "seven_of_nine/textures/7of9Head_normal.png",
+        "extension": ".png",
+        "size_bytes": 4325641
+      },
+      {
+        "path": "seven_of_nine/textures/material_baseColor.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 181431
+      },
+      {
+        "path": "seven_of_nine/textures/Mough_baseColor.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 168990
+      },
+      {
+        "path": "seven_of_nine.glb",
+        "extension": ".glb",
+        "size_bytes": 36617688
+      },
+      {
+        "path": "seven_of_nine.zip",
+        "extension": ".zip",
+        "size_bytes": 35518427
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+  "historical_relative_directory": "npc/seven_of_nine/siete_de_nueve",
+  "directory_root": "assets/"
+}

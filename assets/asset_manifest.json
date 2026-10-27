@@ -1,0 +1,2544 @@
+{
+  "schema": "star_trek_asset_inventory_v1",
+  "version": "2026-10-15",
+  "root_semantics": "Place BAT, PY and JSON in the existing collection root. Source paths relative to that root.",
+  "source_file": "estructura.txt",
+  "source_file_count": 356,
+  "assets": [
+    {
+      "id": "asset_442cfdf361b1",
+      "title": "Puente USS Ascendant",
+      "destination": "bridges/uss_ascendant/puente_uss_ascendant",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "Puente de mando identificado por el nombre del archivo; diseño concreto por verificar.",
+      "usage": "Escenarios de mando y estudio de consolas.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Ascendant bridge/uss-ascendant-bridge",
+          "kind": "directory",
+          "name": "uss-ascendant-bridge"
+        },
+        {
+          "source": "bridges/USS Ascendant bridge/uss_ascendant_bridge.glb",
+          "kind": "file",
+          "name": "uss_ascendant_bridge.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "puentes/starfleet/uss_ascendant/puente_uss_ascendant"
+      ]
+    },
+    {
+      "id": "asset_9766d36f9800",
+      "title": "Puente USS Enterprise-E",
+      "destination": "bridges/enterprise_e/puente_uss_enterprise_e",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "Puente atribuido a la Enterprise-E, nave de clase Sovereign en Star Trek.",
+      "usage": "Referencia para mando de nave de era TNG tardía.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Enterprise E/uss-enterprise-e-bridge.zip",
+          "kind": "file",
+          "name": "uss-enterprise-e-bridge.zip"
+        },
+        {
+          "source": "bridges/USS Enterprise E/uss_enterprise_-_e_bridge.glb",
+          "kind": "file",
+          "name": "uss_enterprise_-_e_bridge.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "puentes/starfleet/enterprise_e/puente_uss_enterprise_e"
+      ]
+    },
+    {
+      "id": "asset_f122b2a76db6",
+      "title": "Puente Enterprise-D / Galaxy",
+      "destination": "bridges/galaxy/puente_enterprise_d_galaxy",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "El nombre del fichero apunta a la Enterprise-D y a la clase Galaxy.",
+      "usage": "Referencia artística Galaxy/Valhalla, pendiente de licencia y validación.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Galaxy class/henry_enterprise_d.glb",
+          "kind": "file",
+          "name": "henry_enterprise_d.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "puentes/starfleet/galaxy/puente_enterprise_d_galaxy"
+      ]
+    },
+    {
+      "id": "asset_0cff1690021e",
+      "title": "Puente USS Ross / Galaxy",
+      "destination": "bridges/ross/puente_uss_ross_galaxy",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "Paquete denominado USS Ross Galaxy Class; su apariencia y adscripción precisas requieren revisión.",
+      "usage": "Estudio de distribución de puestos, materiales y consolas.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss-ross-galaxy-class-starship-bridge-command",
+          "kind": "directory",
+          "name": "uss-ross-galaxy-class-starship-bridge-command"
+        },
+        {
+          "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss-ross-galaxy-class-starship-bridge-command.zip",
+          "kind": "file",
+          "name": "uss-ross-galaxy-class-starship-bridge-command.zip"
+        },
+        {
+          "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss_ross_galaxy_class_starship_bridge_command.glb",
+          "kind": "file",
+          "name": "uss_ross_galaxy_class_starship_bridge_command.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "puentes/starfleet/ross/puente_uss_ross_galaxy"
+      ]
+    },
+    {
+      "id": "asset_6daa4e0f26ae",
+      "title": "Puente USS Sutherland",
+      "destination": "bridges/sutherland/puente_uss_sutherland",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "Paquete Sutherland: fuente Blender y texturas identificadas en el árbol.",
+      "usage": "PRIORIDAD F07: puente piloto de prueba para la guardia de Sensores; requiere exportación, importación y transitabilidad en UE5.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Suntherland/star-trek-sutherland-bridge",
+          "kind": "directory",
+          "name": "star-trek-sutherland-bridge"
+        },
+        {
+          "source": "bridges/USS Suntherland/star-trek-sutherland-bridge.zip",
+          "kind": "file",
+          "name": "star-trek-sutherland-bridge.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario"
+    },
+    {
+      "id": "asset_927df8dd8489",
+      "title": "Puente USS Vengeance",
+      "destination": "bridges/vengeance/puente_uss_vengeance",
+      "category": "bridge",
+      "context": "Interior / puente de mando",
+      "identification": "Puente referido como Vengeance; probable vínculo con la nave de la línea Kelvin, pendiente de verificar el modelo.",
+      "usage": "Referencia de interfaz/escenarios de puente alternativos.",
+      "features": "",
+      "review_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+      "items": [
+        {
+          "source": "bridges/USS Vengance bridge/uss-vengance-bridge",
+          "kind": "directory",
+          "name": "uss-vengance-bridge"
+        },
+        {
+          "source": "bridges/USS Vengance bridge/uss-vengance-bridge.zip",
+          "kind": "file",
+          "name": "uss-vengance-bridge.zip"
+        },
+        {
+          "source": "bridges/USS Vengance bridge/uss_vengance_bridge.glb",
+          "kind": "file",
+          "name": "uss_vengance_bridge.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "puentes/starfleet/vengeance/puente_uss_vengeance"
+      ]
+    },
+    {
+      "id": "asset_356768420af7",
+      "title": "Pasillo Enterprise",
+      "destination": "corridor/general/pasillo_enterprise",
+      "category": "corridor",
+      "context": "",
+      "identification": "Módulo de pasillo denominado Enterprise; serie/modelo exacto por verificar.",
+      "usage": "Construcción de corredores modulares y estudio de conectividad.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/enterprise-corridor.zip",
+          "kind": "file",
+          "name": "enterprise-corridor.zip"
+        },
+        {
+          "source": "corridor/enterprise_corridor.glb",
+          "kind": "file",
+          "name": "enterprise_corridor.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/general/pasillo_enterprise"
+      ]
+    },
+    {
+      "id": "asset_21c39b5b6808",
+      "title": "Pasillo modular Star Trek",
+      "destination": "corridor/general/pasillo_modular_star_trek",
+      "category": "corridor",
+      "context": "",
+      "identification": "Paquete ZIP de pasillo modular sin GLB suelto identificado en el árbol.",
+      "usage": "Comprobar número de módulos y uniones compatibles.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/modular-star-trek-corridor.zip",
+          "kind": "file",
+          "name": "modular-star-trek-corridor.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/general/pasillo_modular_star_trek"
+      ]
+    },
+    {
+      "id": "asset_641861b4d5cb",
+      "title": "Hangar Star Trek",
+      "destination": "corridor/hangar/hangar_star_trek",
+      "category": "hangar",
+      "context": "",
+      "identification": "Entorno o elemento de hangar denominado Star Trek.",
+      "usage": "Pruebas de instalaciones interiores y operativa de lanzaderas.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/star_trek_hangar.glb",
+          "kind": "file",
+          "name": "star_trek_hangar.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/hangar/hangar_star_trek"
+      ]
+    },
+    {
+      "id": "asset_69120f6a6c4b",
+      "title": "Pasillo low poly Star Trek",
+      "destination": "corridor/low_poly/pasillo_low_poly_star_trek",
+      "category": "corridor",
+      "context": "",
+      "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+      "usage": "Prototipado de navegación y comparación de variante PBR; se mantienen ambas versiones GLB juntas.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/Low Poly Corridor - [Star Trek]/low-poly-corridor-star-trek.zip",
+          "kind": "file",
+          "name": "low-poly-corridor-star-trek.zip"
+        },
+        {
+          "source": "corridor/Low Poly Corridor - [Star Trek]/low_poly_corridor_-_star_trek.glb",
+          "kind": "file",
+          "name": "low_poly_corridor_-_star_trek.glb"
+        },
+        {
+          "source": "corridor/Low Poly Corridor - [Star Trek]/low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb",
+          "kind": "file",
+          "name": "low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/low_poly/pasillo_low_poly_star_trek"
+      ]
+    },
+    {
+      "id": "asset_60097882699d",
+      "title": "Pasillo clase NX",
+      "destination": "corridor/nx_class/pasillo_clase_nx",
+      "category": "corridor",
+      "context": "",
+      "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+      "usage": "Ambientaciones históricas del siglo XXII y estudio modular.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/NX Class/nx-class-starship-corridor",
+          "kind": "directory",
+          "name": "nx-class-starship-corridor"
+        },
+        {
+          "source": "corridor/NX Class/nx-class-starship-corridor.zip",
+          "kind": "file",
+          "name": "nx-class-starship-corridor.zip"
+        },
+        {
+          "source": "corridor/NX Class/nx_class_starship_corridor.glb",
+          "kind": "file",
+          "name": "nx_class_starship_corridor.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/nx_class/pasillo_clase_nx"
+      ]
+    },
+    {
+      "id": "asset_e64862da7c18",
+      "title": "Colección de pasillos Voyager",
+      "destination": "corridor/voyager/coleccion_de_pasillos_voyager",
+      "category": "corridor",
+      "context": "",
+      "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+      "usage": "PRIORIDAD F12: comprobar qué módulos de la colección pueden combinarse y formar una red transitable.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "corridor/Star Trek Voyager Collection/star-trek-voyager-collection",
+          "kind": "directory",
+          "name": "star-trek-voyager-collection"
+        },
+        {
+          "source": "corridor/Star Trek Voyager Collection/star-trek-voyager-collection.zip",
+          "kind": "file",
+          "name": "star-trek-voyager-collection.zip"
+        },
+        {
+          "source": "corridor/Star Trek Voyager Collection/star_trek_voyager_collection.glb",
+          "kind": "file",
+          "name": "star_trek_voyager_collection.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "pasillos/Star Trek Voyager Collection/voyager/coleccion_de_pasillos_voyager"
+      ]
+    },
+    {
+      "id": "asset_4def1ee3c50a",
+      "title": "Cabina de runabout Danube / Rio Grande",
+      "destination": "interiors/runabout/cabina_de_runabout_danube_rio_grande",
+      "category": "cockpit",
+      "context": "",
+      "identification": "Cabina interior de lanzadera Danube, asociada en nombre al Rio Grande de DS9.",
+      "usage": "Prototipo de cockpit/vehículo o entrenamiento en holocubierta.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "Danube simulador/star-trek-ds9-danube-runabout-rio-grande-cockpit.zip",
+          "kind": "file",
+          "name": "star-trek-ds9-danube-runabout-rio-grande-cockpit.zip"
+        },
+        {
+          "source": "Danube simulador/star_trek_ds9_danube_runabout_rio_grande_cockpit.glb",
+          "kind": "file",
+          "name": "star_trek_ds9_danube_runabout_rio_grande_cockpit.glb"
+        },
+        {
+          "source": "Danube simulador/star_trek_ds9_danube_runabout_rio_grande_cockpit.zip",
+          "kind": "file",
+          "name": "star_trek_ds9_danube_runabout_rio_grande_cockpit.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "interiores/runabout/cabina_de_runabout_danube_rio_grande"
+      ]
+    },
+    {
+      "id": "asset_e015e8768b59",
+      "title": "Ten Forward (TNG)",
+      "destination": "interiors/shipboard/ten_forward_tng",
+      "category": "room",
+      "context": "",
+      "identification": "Sala Ten Forward, espacio de reunión y ocio asociado a la Enterprise-D (TNG).",
+      "usage": "F12: convivencia, diálogos, ocio y socialización a bordo.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "estancias/two-forward-tng",
+          "kind": "directory",
+          "name": "two-forward-tng"
+        },
+        {
+          "source": "estancias/two_forward_tng.glb",
+          "kind": "file",
+          "name": "two_forward_tng.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "interiores/shipboard/ten_forward_tng"
+      ]
+    },
+    {
+      "id": "asset_58c316fd0ff3",
+      "title": "Siete de Nueve",
+      "destination": "npc/seven_of_nine/siete_de_nueve",
+      "category": "npc",
+      "context": "",
+      "identification": "Personaje Seven of Nine, ex-Borg de Voyager.",
+      "usage": "NPC narrativo; verificar rig, licencia y época.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/7 de 9/seven-of-nine",
+          "kind": "directory",
+          "name": "seven-of-nine"
+        },
+        {
+          "source": "NPC/7 de 9/seven-of-nine.zip",
+          "kind": "file",
+          "name": "seven-of-nine.zip"
+        },
+        {
+          "source": "NPC/7 de 9/seven_of_nine",
+          "kind": "directory",
+          "name": "seven_of_nine"
+        },
+        {
+          "source": "NPC/7 de 9/seven_of_nine.glb",
+          "kind": "file",
+          "name": "seven_of_nine.glb"
+        },
+        {
+          "source": "NPC/7 de 9/seven_of_nine.zip",
+          "kind": "file",
+          "name": "seven_of_nine.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/seven_of_nine/siete_de_nueve"
+      ]
+    },
+    {
+      "id": "asset_720c347283c0",
+      "title": "Data",
+      "destination": "npc/data/data",
+      "category": "npc",
+      "context": "",
+      "identification": "Oficial androide de la Flota Estelar en TNG.",
+      "usage": "NPC narrativo; verificar correspondencia del modelo, rig y derechos.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Data/ava-data-mashup.zip",
+          "kind": "file",
+          "name": "ava-data-mashup.zip"
+        },
+        {
+          "source": "NPC/Data/ava__data_mashup.glb",
+          "kind": "file",
+          "name": "ava__data_mashup.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/Data/data"
+      ]
+    },
+    {
+      "id": "asset_8bf160f5ce41",
+      "title": "Geordi La Forge / visor",
+      "destination": "npc/geordi_visor/geordi_la_forge_visor",
+      "category": "npc",
+      "context": "",
+      "identification": "Paquete identificado como visor de Geordi La Forge; podría ser accesorio en lugar de personaje completo.",
+      "usage": "Accesorio/cosmético; comprobar qué representa el GLB antes de catalogarlo como NPC.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Geordi La Forge Visor/geordi-la-forge-visor.zip",
+          "kind": "file",
+          "name": "geordi-la-forge-visor.zip"
+        },
+        {
+          "source": "NPC/Geordi La Forge Visor/geordi_la_forge_visor.glb",
+          "kind": "file",
+          "name": "geordi_la_forge_visor.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/geordi_visor/geordi_la_forge_visor"
+      ]
+    },
+    {
+      "id": "asset_1d5020ff1da5",
+      "title": "Jean-Luc Picard",
+      "destination": "npc/picard/jean_luc_picard",
+      "category": "npc",
+      "context": "",
+      "identification": "Paquete con nombre Patrick Stewart / Star Trek; la atribución exacta del asset debe verificarse.",
+      "usage": "NPC de referencia; validar apariencia, rig y derechos.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Piccard/patrick-stewart-star-trek.zip",
+          "kind": "file",
+          "name": "patrick-stewart-star-trek.zip"
+        },
+        {
+          "source": "NPC/Piccard/patrick_stewart_star_trek.glb",
+          "kind": "file",
+          "name": "patrick_stewart_star_trek.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/picard/jean_luc_picard"
+      ]
+    },
+    {
+      "id": "asset_4c1744cffc21",
+      "title": "Saru",
+      "destination": "npc/saru/saru",
+      "category": "npc",
+      "context": "",
+      "identification": "Personaje Saru de Star Trek: Discovery.",
+      "usage": "NPC narrativo; revisar compatibilidad temporal y animación.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Saru/commander-saru.zip",
+          "kind": "file",
+          "name": "commander-saru.zip"
+        },
+        {
+          "source": "NPC/Saru/commander_saru.glb",
+          "kind": "file",
+          "name": "commander_saru.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/Saru/saru"
+      ]
+    },
+    {
+      "id": "asset_ed51855a7ba3",
+      "title": "Leonard McCoy (Bones)",
+      "destination": "npc/mccoy/leonard_mccoy_bones",
+      "category": "npc",
+      "context": "",
+      "identification": "Paquete ZIP llamado Bones; probable personaje McCoy, pendiente de abrir.",
+      "usage": "Personaje histórico y/o holocubierta.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Star trek BONES/star-trek-bones.zip",
+          "kind": "file",
+          "name": "star-trek-bones.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/mccoy/leonard_mccoy_bones"
+      ]
+    },
+    {
+      "id": "asset_4cb27f9800ce",
+      "title": "Montgomery Scott (Scotty)",
+      "destination": "npc/scotty/montgomery_scott_scotty",
+      "category": "npc",
+      "context": "",
+      "identification": "Paquete ZIP llamado Scotty; comprobar contenido.",
+      "usage": "Personaje histórico y/o holocubierta.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Star Trek SCOTTY/star-trek-scotty.zip",
+          "kind": "file",
+          "name": "star-trek-scotty.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/scotty/montgomery_scott_scotty"
+      ]
+    },
+    {
+      "id": "asset_ac869b38a575",
+      "title": "Worf",
+      "destination": "npc/worf/worf",
+      "category": "npc",
+      "context": "",
+      "identification": "Klingon de la Flota Estelar y personaje de TNG/DS9; modelo rotulado First Contact.",
+      "usage": "NPC narrativo, referencias de vestuario y holocubierta.",
+      "features": "",
+      "review_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+      "items": [
+        {
+          "source": "NPC/Worf/star-trek-first-contact-worf.zip",
+          "kind": "file",
+          "name": "star-trek-first-contact-worf.zip"
+        },
+        {
+          "source": "NPC/Worf/star_trek_first_contact__worf.glb",
+          "kind": "file",
+          "name": "star_trek_first_contact__worf.glb"
+        },
+        {
+          "source": "NPC/Worf/star_trek_first_contact__worf.zip",
+          "kind": "file",
+          "name": "star_trek_first_contact__worf.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "personajes/descargados/Worf/worf"
+      ]
+    },
+    {
+      "id": "asset_23da3e1bf5e8",
+      "title": "coffee cup with plate",
+      "destination": "objects/drinks/coffee/coffee_cup_with_plate",
+      "category": "prop",
+      "context": "",
+      "identification": "Taza con plato; objeto de servicio asociado a café.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/coffe/coffee-cup-with-plate.zip",
+          "kind": "file",
+          "name": "coffee-cup-with-plate.zip"
+        },
+        {
+          "source": "objects/drinks/coffe/coffee_cup_with_plate.glb",
+          "kind": "file",
+          "name": "coffee_cup_with_plate.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/coffee/coffee_cup_with_plate"
+      ]
+    },
+    {
+      "id": "asset_6d8cd8aaefb5",
+      "title": "cup of coffee",
+      "destination": "objects/drinks/coffee/cup_of_coffee",
+      "category": "prop",
+      "context": "",
+      "identification": "Taza de café como objeto de consumo.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/coffe/cup-of-coffee.zip",
+          "kind": "file",
+          "name": "cup-of-coffee.zip"
+        },
+        {
+          "source": "objects/drinks/coffe/cup_of_coffee.glb",
+          "kind": "file",
+          "name": "cup_of_coffee.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/coffee/cup_of_coffee"
+      ]
+    },
+    {
+      "id": "asset_07e8c19a3a42",
+      "title": "cocktail martini",
+      "destination": "objects/drinks/cocktails/cocktail_martini",
+      "category": "prop",
+      "context": "",
+      "identification": "Copa/cóctel martini; atrezo de bar.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/coktails/cocktail-martini.zip",
+          "kind": "file",
+          "name": "cocktail-martini.zip"
+        },
+        {
+          "source": "objects/drinks/coktails/cocktail_martini.glb",
+          "kind": "file",
+          "name": "cocktail_martini.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/cocktails/cocktail_martini"
+      ]
+    },
+    {
+      "id": "asset_f016fbfcbf27",
+      "title": "glass set",
+      "destination": "objects/drinks/various_glasses/glass_set",
+      "category": "prop",
+      "context": "",
+      "identification": "Conjunto de vasos/copas para mesas o servicio.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/various glasses/glass-set.zip",
+          "kind": "file",
+          "name": "glass-set.zip"
+        },
+        {
+          "source": "objects/drinks/various glasses/glass_set.glb",
+          "kind": "file",
+          "name": "glass_set.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/various_glasses/glass_set"
+      ]
+    },
+    {
+      "id": "asset_0f0a78384a93",
+      "title": "water cup",
+      "destination": "objects/drinks/water/water_cup",
+      "category": "prop",
+      "context": "",
+      "identification": "Vaso de agua; atrezo de mesa.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/water/water_cup.glb",
+          "kind": "file",
+          "name": "water_cup.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/water/water_cup"
+      ]
+    },
+    {
+      "id": "asset_2e652d10108a",
+      "title": "whiskey glass",
+      "destination": "objects/drinks/whiskey/whiskey_glass",
+      "category": "prop",
+      "context": "",
+      "identification": "Vaso de whisky; atrezo de bar.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/whiskey/whiskey-glass.zip",
+          "kind": "file",
+          "name": "whiskey-glass.zip"
+        },
+        {
+          "source": "objects/drinks/whiskey/whiskey_glass.glb",
+          "kind": "file",
+          "name": "whiskey_glass.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/whiskey/whiskey_glass"
+      ]
+    },
+    {
+      "id": "asset_3de552f9514e",
+      "title": "red wine glass",
+      "destination": "objects/drinks/wine/red_wine_glass",
+      "category": "prop",
+      "context": "",
+      "identification": "Copa de vino tinto; atrezo de bar o comedor.",
+      "usage": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/drinks/wine/red-wine-glass.zip",
+          "kind": "file",
+          "name": "red-wine-glass.zip"
+        },
+        {
+          "source": "objects/drinks/wine/red_wine_glass.glb",
+          "kind": "file",
+          "name": "red_wine_glass.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/drinks/wine/red_wine_glass"
+      ]
+    },
+    {
+      "id": "asset_d2e361f75877",
+      "title": "florence steak fiorentina bistecca",
+      "destination": "objects/food/carne/florence_steak_fiorentina_bistecca",
+      "category": "prop",
+      "context": "",
+      "identification": "Bistecca alla fiorentina; comida replicable.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/carne/florence-steak-fiorentina-bistecca.zip",
+          "kind": "file",
+          "name": "florence-steak-fiorentina-bistecca.zip"
+        },
+        {
+          "source": "objects/food/carne/florence_steak_-_fiorentina_bistecca.glb",
+          "kind": "file",
+          "name": "florence_steak_-_fiorentina_bistecca.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/carne/florence_steak_fiorentina_bistecca"
+      ]
+    },
+    {
+      "id": "asset_663c5f91dadf",
+      "title": "steak and rice scaniverse",
+      "destination": "objects/food/carne/steak_and_rice_scaniverse",
+      "category": "prop",
+      "context": "",
+      "identification": "Plato de carne con arroz.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/carne/steak-and-rice-scaniverse.zip",
+          "kind": "file",
+          "name": "steak-and-rice-scaniverse.zip"
+        },
+        {
+          "source": "objects/food/carne/steak_and_rice_scaniverse.glb",
+          "kind": "file",
+          "name": "steak_and_rice_scaniverse.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/carne/steak_and_rice_scaniverse"
+      ]
+    },
+    {
+      "id": "asset_3b3a2e96e772",
+      "title": "steak tartare from bistrot rougemont",
+      "destination": "objects/food/carne/steak_tartare_from_bistrot_rougemont",
+      "category": "prop",
+      "context": "",
+      "identification": "Steak tartar, plato frío de carne.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/carne/steak-tartare-from-bistrot-rougemont.zip",
+          "kind": "file",
+          "name": "steak-tartare-from-bistrot-rougemont.zip"
+        },
+        {
+          "source": "objects/food/carne/steak_tartare_from_bistrot_rougemont.glb",
+          "kind": "file",
+          "name": "steak_tartare_from_bistrot_rougemont.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/carne/steak_tartare_from_bistrot_rougemont"
+      ]
+    },
+    {
+      "id": "asset_5927aebb9033",
+      "title": "steak potatoes scaniverse",
+      "destination": "objects/food/carne/steak_potatoes_scaniverse",
+      "category": "prop",
+      "context": "",
+      "identification": "Plato de carne con patatas.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/carne/steak-potatoes-scaniverse.zip",
+          "kind": "file",
+          "name": "steak-potatoes-scaniverse.zip"
+        },
+        {
+          "source": "objects/food/carne/steak__potatoes_scaniverse.glb",
+          "kind": "file",
+          "name": "steak__potatoes_scaniverse.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/carne/steak_potatoes_scaniverse"
+      ]
+    },
+    {
+      "id": "asset_1dfde0062be7",
+      "title": "another cheese board",
+      "destination": "objects/food/cheese/another_cheese_board",
+      "category": "prop",
+      "context": "",
+      "identification": "Tabla de quesos; presentación de buffet.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/cheese/another-cheese-board.zip",
+          "kind": "file",
+          "name": "another-cheese-board.zip"
+        },
+        {
+          "source": "objects/food/cheese/another_cheese_board.glb",
+          "kind": "file",
+          "name": "another_cheese_board.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/cheese/another_cheese_board"
+      ]
+    },
+    {
+      "id": "asset_7a456cbaf4e0",
+      "title": "dumplings",
+      "destination": "objects/food/china/dumplings",
+      "category": "prop",
+      "context": "",
+      "identification": "Dumplings; comida para comedor o replicador.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/china/dumplings.glb",
+          "kind": "file",
+          "name": "dumplings.glb"
+        },
+        {
+          "source": "objects/food/china/dumplings.zip",
+          "kind": "file",
+          "name": "dumplings.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/china/dumplings"
+      ]
+    },
+    {
+      "id": "asset_80c7a34f8d47",
+      "title": "vegan hainanese chicken rice scaniverse",
+      "destination": "objects/food/china/vegan_hainanese_chicken_rice_scaniverse",
+      "category": "prop",
+      "context": "",
+      "identification": "Plato vegano inspirado en arroz con pollo de Hainan.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/china/vegan-hainanese-chicken-rice-scaniverse.zip",
+          "kind": "file",
+          "name": "vegan-hainanese-chicken-rice-scaniverse.zip"
+        },
+        {
+          "source": "objects/food/china/vegan_hainanese_chicken_rice_scaniverse.glb",
+          "kind": "file",
+          "name": "vegan_hainanese_chicken_rice_scaniverse.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/china/vegan_hainanese_chicken_rice_scaniverse"
+      ]
+    },
+    {
+      "id": "asset_938f3dcc412f",
+      "title": "fast food set",
+      "destination": "objects/food/fast_food/fast_food_set",
+      "category": "prop",
+      "context": "",
+      "identification": "Conjunto de comida rápida, varios objetos.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/fast food/fast-food-set.zip",
+          "kind": "file",
+          "name": "fast-food-set.zip"
+        },
+        {
+          "source": "objects/food/fast food/fast_food_set.glb",
+          "kind": "file",
+          "name": "fast_food_set.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/fast_food/fast_food_set"
+      ]
+    },
+    {
+      "id": "asset_38d94fafdc79",
+      "title": "food",
+      "destination": "objects/food/fast_food/food",
+      "category": "prop",
+      "context": "",
+      "identification": "Objeto alimenticio genérico; verificar contenido.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/fast food/food.glb",
+          "kind": "file",
+          "name": "food.glb"
+        },
+        {
+          "source": "objects/food/fast food/food.zip",
+          "kind": "file",
+          "name": "food.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/fast_food/food"
+      ]
+    },
+    {
+      "id": "asset_69a219164441",
+      "title": "stylized ice cream dessert game ready asset",
+      "destination": "objects/food/icecream/stylized_ice_cream_dessert_game_ready_asset",
+      "category": "prop",
+      "context": "",
+      "identification": "Postre de helado estilizado.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/icecream/stylized-ice-cream-dessert-game-ready-asset.zip",
+          "kind": "file",
+          "name": "stylized-ice-cream-dessert-game-ready-asset.zip"
+        },
+        {
+          "source": "objects/food/icecream/stylized_ice_cream_dessert_-_game_ready_asset.glb",
+          "kind": "file",
+          "name": "stylized_ice_cream_dessert_-_game_ready_asset.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/icecream/stylized_ice_cream_dessert_game_ready_asset"
+      ]
+    },
+    {
+      "id": "asset_630b95571b2d",
+      "title": "day 317 paella",
+      "destination": "objects/food/paella/day_317_paella",
+      "category": "prop",
+      "context": "",
+      "identification": "Plato de paella.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/paella/day-317-paella.zip",
+          "kind": "file",
+          "name": "day-317-paella.zip"
+        },
+        {
+          "source": "objects/food/paella/day_317_paella.glb",
+          "kind": "file",
+          "name": "day_317_paella.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/paella/day_317_paella"
+      ]
+    },
+    {
+      "id": "asset_3c53a211a1c5",
+      "title": "pasta bowl polycam",
+      "destination": "objects/food/pasta/pasta_bowl_polycam",
+      "category": "prop",
+      "context": "",
+      "identification": "Cuenco de pasta.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/pasta/pasta-bowl-polycam.zip",
+          "kind": "file",
+          "name": "pasta-bowl-polycam.zip"
+        },
+        {
+          "source": "objects/food/pasta/pasta_bowl_-_polycam.glb",
+          "kind": "file",
+          "name": "pasta_bowl_-_polycam.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/pasta/pasta_bowl_polycam"
+      ]
+    },
+    {
+      "id": "asset_9a87ae0df5c2",
+      "title": "pasta with meatballs and sausage",
+      "destination": "objects/food/pasta/pasta_with_meatballs_and_sausage",
+      "category": "prop",
+      "context": "",
+      "identification": "Pasta con albóndigas y salchicha.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/pasta/pasta-with-meatballs-and-sausage.zip",
+          "kind": "file",
+          "name": "pasta-with-meatballs-and-sausage.zip"
+        },
+        {
+          "source": "objects/food/pasta/pasta_with_meatballs_and_sausage.glb",
+          "kind": "file",
+          "name": "pasta_with_meatballs_and_sausage.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/pasta/pasta_with_meatballs_and_sausage"
+      ]
+    },
+    {
+      "id": "asset_451d8c4a4338",
+      "title": "pizza (1)",
+      "destination": "objects/food/pizza/pizza_1",
+      "category": "prop",
+      "context": "",
+      "identification": "Pizza como comida replicable.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/pizza/pizza (1).glb",
+          "kind": "file",
+          "name": "pizza (1).glb"
+        },
+        {
+          "source": "objects/food/pizza/pizza (1).zip",
+          "kind": "file",
+          "name": "pizza (1).zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/pizza/pizza_1"
+      ]
+    },
+    {
+      "id": "asset_46872fdc9389",
+      "title": "pizza",
+      "destination": "objects/food/pizza/pizza",
+      "category": "prop",
+      "context": "",
+      "identification": "Pizza como comida replicable.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/pizza/pizza.glb",
+          "kind": "file",
+          "name": "pizza.glb"
+        },
+        {
+          "source": "objects/food/pizza/pizza.zip",
+          "kind": "file",
+          "name": "pizza.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/pizza/pizza"
+      ]
+    },
+    {
+      "id": "asset_e14c463932bd",
+      "title": "pizza bigboss pancho",
+      "destination": "objects/food/pizza/pizza_bigboss_pancho",
+      "category": "prop",
+      "context": "",
+      "identification": "Pizza denominada Bigboss Pancho.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/pizza/pizza-bigboss-pancho.zip",
+          "kind": "file",
+          "name": "pizza-bigboss-pancho.zip"
+        },
+        {
+          "source": "objects/food/pizza/pizza_bigboss_pancho.glb",
+          "kind": "file",
+          "name": "pizza_bigboss_pancho.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/pizza/pizza_bigboss_pancho"
+      ]
+    },
+    {
+      "id": "asset_0e35d92efff5",
+      "title": "spicy ramen noodle",
+      "destination": "objects/food/ramen/spicy_ramen_noodle",
+      "category": "prop",
+      "context": "",
+      "identification": "Ramen picante.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/ramen/spicy-ramen-noodle.zip",
+          "kind": "file",
+          "name": "spicy-ramen-noodle.zip"
+        },
+        {
+          "source": "objects/food/ramen/spicy_ramen_noodle.glb",
+          "kind": "file",
+          "name": "spicy_ramen_noodle.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/ramen/spicy_ramen_noodle"
+      ]
+    },
+    {
+      "id": "asset_58bf5529ab46",
+      "title": "stylized sushi",
+      "destination": "objects/food/sushi/stylized_sushi",
+      "category": "prop",
+      "context": "",
+      "identification": "Sushi estilizado.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/stylized-sushi.zip",
+          "kind": "file",
+          "name": "stylized-sushi.zip"
+        },
+        {
+          "source": "objects/food/sushi/stylized_sushi.glb",
+          "kind": "file",
+          "name": "stylized_sushi.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/stylized_sushi"
+      ]
+    },
+    {
+      "id": "asset_73b2d3301a9d",
+      "title": "sushi real 3dmodel",
+      "destination": "objects/food/sushi/sushi_real_3dmodel",
+      "category": "prop",
+      "context": "",
+      "identification": "Sushi realista o escaneado.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/sushi-real-3dmodel.glb",
+          "kind": "file",
+          "name": "sushi-real-3dmodel.glb"
+        },
+        {
+          "source": "objects/food/sushi/sushi-real-3dmodel.zip",
+          "kind": "file",
+          "name": "sushi-real-3dmodel.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/sushi_real_3dmodel"
+      ]
+    },
+    {
+      "id": "asset_1d856673ec2b",
+      "title": "sushi",
+      "destination": "objects/food/sushi/sushi",
+      "category": "prop",
+      "context": "",
+      "identification": "Sushi genérico.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/sushi.glb",
+          "kind": "file",
+          "name": "sushi.glb"
+        },
+        {
+          "source": "objects/food/sushi/sushi.zip",
+          "kind": "file",
+          "name": "sushi.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/sushi"
+      ]
+    },
+    {
+      "id": "asset_90706d6c94aa",
+      "title": "sushihibiya",
+      "destination": "objects/food/sushi/sushihibiya",
+      "category": "prop",
+      "context": "",
+      "identification": "Sushi identificado por proveedor/nombre Hibiya.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/sushihibiya.glb",
+          "kind": "file",
+          "name": "sushihibiya.glb"
+        },
+        {
+          "source": "objects/food/sushi/sushihibiya.zip",
+          "kind": "file",
+          "name": "sushihibiya.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/sushihibiya"
+      ]
+    },
+    {
+      "id": "asset_3a9713279a98",
+      "title": "sushi boat nigiri (1)",
+      "destination": "objects/food/sushi/sushi_boat_nigiri_1",
+      "category": "prop",
+      "context": "",
+      "identification": "Barca de sushi/nigiri.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/sushi_boat_nigiri (1).glb",
+          "kind": "file",
+          "name": "sushi_boat_nigiri (1).glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/sushi_boat_nigiri_1"
+      ]
+    },
+    {
+      "id": "asset_cd2721f1288e",
+      "title": "sushi boat nigiri",
+      "destination": "objects/food/sushi/sushi_boat_nigiri",
+      "category": "prop",
+      "context": "",
+      "identification": "Barca de sushi/nigiri.",
+      "usage": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/food/sushi/sushi-boat-nigiri.zip",
+          "kind": "file",
+          "name": "sushi-boat-nigiri.zip"
+        },
+        {
+          "source": "objects/food/sushi/sushi_boat_nigiri.glb",
+          "kind": "file",
+          "name": "sushi_boat_nigiri.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/food/sushi/sushi_boat_nigiri"
+      ]
+    },
+    {
+      "id": "asset_dbe8a27e56fa",
+      "title": "henry star trek tng replicator",
+      "destination": "objects/replicator/henry_star_trek_tng_replicator",
+      "category": "replicator",
+      "context": "",
+      "identification": "Replicador TNG; dispositivo que materializa alimentos y objetos en Star Trek.",
+      "usage": "F12/F14: terminal de replicación de voz/UI; revisar escala e interacción.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "objects/replicator/henry_star_trek_tng_replicator.glb",
+          "kind": "file",
+          "name": "henry_star_trek_tng_replicator.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "objetos/descargados/replicator/henry_star_trek_tng_replicator"
+      ]
+    },
+    {
+      "id": "asset_491da023c02e",
+      "title": "andorian cruiser",
+      "destination": "ships/andorian/crucero_andoriano/andorian_cruiser",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de origen andoriano; su diseño concreto y época deben confirmarse con el modelo.",
+      "usage": "F13: tráfico y encuentros alienígenas.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Andorian/star_trek_-_andorian_cruiser_e03144851b704fa7ba2dd9eb3d431599.glb",
+          "kind": "file",
+          "name": "star_trek_-_andorian_cruiser_e03144851b704fa7ba2dd9eb3d431599.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Andorian/crucero_andoriano/andorian_cruiser"
+      ]
+    },
+    {
+      "id": "asset_ce5c884253fb",
+      "title": "arkonian military vessel",
+      "destination": "ships/arkonian/nave_militar_arkoniana/arkonian_military_vessel",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave militar arkoniana asociable a Enterprise (siglo XXII); verificar versión y licencia.",
+      "usage": "F13: encuentros o simulaciones históricas.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Arkonian/star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb",
+          "kind": "file",
+          "name": "star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Arkonian/nave_militar_arkoniana/arkonian_military_vessel"
+      ]
+    },
+    {
+      "id": "asset_7735bde75cca",
+      "title": "bajoran freighter",
+      "destination": "ships/bajorian/carguero_bajorano/bajoran_freighter",
+      "category": "ship",
+      "context": "",
+      "identification": "Carguero klingon",
+      "usage": "F13: transporte civil y rutas comerciales.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Bajorian/star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb",
+          "kind": "file",
+          "name": "star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Bajorian/carguero_bajorano/bajoran_freighter"
+      ]
+    },
+    {
+      "id": "asset_2c8fef161820",
+      "title": "borg cube",
+      "destination": "ships/borg/cubo_borg/borg_cube",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave cúbica característica del Colectivo Borg.",
+      "usage": "F13: amenazas/encuentros Borg; rendimiento a evaluar.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Borg/borg_cube_ec8e1dca683b4ba0ba589907666faed6.glb",
+          "kind": "file",
+          "name": "borg_cube_ec8e1dca683b4ba0ba589907666faed6.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Borg/cubo_borg/borg_cube"
+      ]
+    },
+    {
+      "id": "asset_f8ac487e585d",
+      "title": "b 1 blas rika bird of prey",
+      "destination": "ships/klingon/mixed/b_1_blas_rika_bird_of_prey",
+      "category": "ship",
+      "context": "",
+      "identification": "Ave de presa klingon (variante por determinar)",
+      "usage": "F13: facciones y encuentros tácticos.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Klingon/b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb",
+          "kind": "file",
+          "name": "b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Klingon/mixed/b_1_blas_rika_bird_of_prey"
+      ]
+    },
+    {
+      "id": "asset_8122a5344fba",
+      "title": "bird of prey enterprise",
+      "destination": "ships/klingon/mixed/bird_of_prey_enterprise",
+      "category": "ship",
+      "context": "",
+      "identification": "Ave de presa klingon (variante por determinar)",
+      "usage": "F13: facciones y encuentros tácticos.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Klingon/star_trek_-_bird_of_prey_enterprise_615bb97eafd24be180d91aff724508ac.glb",
+          "kind": "file",
+          "name": "star_trek_-_bird_of_prey_enterprise_615bb97eafd24be180d91aff724508ac.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Klingon/mixed/bird_of_prey_enterprise"
+      ]
+    },
+    {
+      "id": "asset_bb295e0d16b2",
+      "title": "klingon d5 class",
+      "destination": "ships/klingon/mixed/klingon_d5_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave klingon clase D5",
+      "usage": "F13: facciones y encuentros tácticos.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Klingon/star_trek_-_klingon_d5_class_88cc858cf5a24ed1955d4018af84b3a9.glb",
+          "kind": "file",
+          "name": "star_trek_-_klingon_d5_class_88cc858cf5a24ed1955d4018af84b3a9.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Klingon/mixed/klingon_d5_class"
+      ]
+    },
+    {
+      "id": "asset_17de213938ac",
+      "title": "klingon freighter",
+      "destination": "ships/klingon/mixed/klingon_freighter",
+      "category": "ship",
+      "context": "",
+      "identification": "Carguero klingon",
+      "usage": "F13: facciones y encuentros tácticos.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Klingon/star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb",
+          "kind": "file",
+          "name": "star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Klingon/mixed/klingon_freighter"
+      ]
+    },
+    {
+      "id": "asset_58f45b94ec1e",
+      "title": "dderidex class warbird",
+      "destination": "ships/romulan/ave_de_guerra_dderidex/dderidex_class_warbird",
+      "category": "ship",
+      "context": "",
+      "identification": "Diseño de ave de guerra romulana de clase D’deridex (TNG).",
+      "usage": "F13: presencia romulana en universo dinámico.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Romulan/star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb",
+          "kind": "file",
+          "name": "star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/Romulan/ave_de_guerra_dderidex/dderidex_class_warbird"
+      ]
+    },
+    {
+      "id": "asset_595e261e910f",
+      "title": "species 8472 bioship",
+      "destination": "ships/species_8472/bionave_especie_8472/species_8472_bioship",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave orgánica de la especie 8472, asociada a Voyager.",
+      "usage": "F13: encuentros excepcionales y escenarios de simulación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Species 8472/star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb",
+          "kind": "file",
+          "name": "star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/species_8472/bionave_especie_8472/species_8472_bioship"
+      ]
+    },
+    {
+      "id": "asset_b2b248c5efdd",
+      "title": "dkyr class",
+      "destination": "ships/vulcan/dkyr_vulcana/dkyr_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave vulcana clase D’Kyr, conocida en la era Enterprise del siglo XXII.",
+      "usage": "F13: tráfico/encuentros vulcanos históricos.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Vulcano/star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb",
+          "kind": "file",
+          "name": "star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/vulcan/dkyr_vulcana/dkyr_class"
+      ]
+    },
+    {
+      "id": "asset_6369439e50e4",
+      "title": "sovereign class",
+      "destination": "ships/starfleet/sovereign/sovereign_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave clase Sovereign (era TNG tardía).",
+      "usage": "F11/F14: modelo de crucero; comparar versiones con hangar.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/calss sovereign/star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb",
+          "kind": "file",
+          "name": "star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/sovereign/sovereign_class"
+      ]
+    },
+    {
+      "id": "asset_3154f6646296",
+      "title": "akira class",
+      "destination": "ships/starfleet/akira/akira_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de Flota Estelar clase Akira.",
+      "usage": "F11: ruta operativa (candidata), comprobar calidad para uso NPC/jugable.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class akira/star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb",
+          "kind": "file",
+          "name": "star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/akira/akira_class"
+      ]
+    },
+    {
+      "id": "asset_56b005e0ac1d",
+      "title": "dsc enterprise",
+      "destination": "ships/starfleet/constitution/dsc_enterprise",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de Flota Estelar denominada DSC Enterprise, diseño de era Discovery/Constitution.",
+      "usage": "F13: época histórica, holocubierta o NPC.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class constitution/star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb",
+          "kind": "file",
+          "name": "star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/constitution/dsc_enterprise"
+      ]
+    },
+    {
+      "id": "asset_22ff264313a0",
+      "title": "danube class",
+      "destination": "ships/starfleet/danube/danube_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Runabout de clase Danube, conocido en Deep Space Nine.",
+      "usage": "F11/F12: lanzadera y vuelos de servicio.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class danube/star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb",
+          "kind": "file",
+          "name": "star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/danube/danube_class"
+      ]
+    },
+    {
+      "id": "asset_c9ff4e2982ec",
+      "title": "defiant",
+      "destination": "ships/starfleet/defiant/defiant_002",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de la clase Defiant (DS9), enfocada en misiones tácticas.",
+      "usage": "F11/F13: NPC de flota y escenarios de combate.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class defiant/defiant_1d21c0c29f25458a9044344645f36a2c.glb",
+          "kind": "file",
+          "name": "defiant_1d21c0c29f25458a9044344645f36a2c.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/defiant/defiant_002"
+      ]
+    },
+    {
+      "id": "asset_3e917a32aa61",
+      "title": "defiant",
+      "destination": "ships/starfleet/defiant/defiant_001",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de la clase Defiant (DS9), enfocada en misiones tácticas.",
+      "usage": "F11/F13: NPC de flota y escenarios de combate.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class defiant/defiant_42239f2b45f24650b1900bd98c71f93c.glb",
+          "kind": "file",
+          "name": "defiant_42239f2b45f24650b1900bd98c71f93c.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/defiant/defiant_001"
+      ]
+    },
+    {
+      "id": "asset_6b8402420c56",
+      "title": "galaxy class",
+      "destination": "ships/starfleet/galaxy/galaxy_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Crucero de exploración clase Galaxy, era TNG.",
+      "usage": "F11: rama de mando; referencia exterior de Valhalla.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class galaxy/star_trek_-_galaxy_class_2b45cb2241694848b1250df739ede732.glb",
+          "kind": "file",
+          "name": "star_trek_-_galaxy_class_2b45cb2241694848b1250df739ede732.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/galaxy/galaxy_class"
+      ]
+    },
+    {
+      "id": "asset_bfc5425c225a",
+      "title": "tng galaxy class model",
+      "destination": "ships/starfleet/galaxy/tng_galaxy_class_model",
+      "category": "ship",
+      "context": "",
+      "identification": "Crucero de exploración clase Galaxy, era TNG.",
+      "usage": "F11: rama de mando; referencia exterior de Valhalla.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class galaxy/star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb",
+          "kind": "file",
+          "name": "star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/galaxy/tng_galaxy_class_model"
+      ]
+    },
+    {
+      "id": "asset_e08be45ce937",
+      "title": "miranda class (1)",
+      "destination": "ships/starfleet/miranda/miranda_class_1",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave de la clase Miranda de la Flota Estelar.",
+      "usage": "F11: primer destino operativo; evaluar modelo para tripulación y maniobras.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class miranda/star-trek-miranda-class (1).zip",
+          "kind": "file",
+          "name": "star-trek-miranda-class (1).zip"
+        },
+        {
+          "source": "ships/Starfleet/class miranda/star_trek_-_miranda_class (1).glb",
+          "kind": "file",
+          "name": "star_trek_-_miranda_class (1).glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/miranda/miranda_class_1"
+      ]
+    },
+    {
+      "id": "asset_bc0caa2b3275",
+      "title": "online odessey class enterprise f",
+      "destination": "ships/starfleet/odyssey/online_odessey_class_enterprise_f",
+      "category": "ship",
+      "context": "",
+      "identification": "Modelo rotulado Enterprise-F clase Odyssey, con posible influencia de Star Trek Online.",
+      "usage": "F11: rama de mando; NPC de gran escala.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class odissey/star-trek-online-odessey-class-enterprise-f.zip",
+          "kind": "file",
+          "name": "star-trek-online-odessey-class-enterprise-f.zip"
+        },
+        {
+          "source": "ships/Starfleet/class odissey/star_trek_online__odessey_class__enterprise_f.glb",
+          "kind": "file",
+          "name": "star_trek_online__odessey_class__enterprise_f.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/odyssey/online_odessey_class_enterprise_f"
+      ]
+    },
+    {
+      "id": "asset_6528f7300ca3",
+      "title": "olympic class",
+      "destination": "ships/starfleet/olympic/olympic_class",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave médica clase Olympic asociada a la USS Pasteur (TNG, futuro alternativo).",
+      "usage": "F13: emergencias médicas, rescate y tráfico sanitario.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class olympic/star_trek_-_olympic_class_ac868ef2149640d3946c004a9ff0b829.glb",
+          "kind": "file",
+          "name": "star_trek_-_olympic_class_ac868ef2149640d3946c004a9ff0b829.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/olympic/olympic_class"
+      ]
+    },
+    {
+      "id": "asset_4afb2c9ac62a",
+      "title": "Sovereign - versión con fuente FBX",
+      "destination": "ships/starfleet/sovereign/sovereign_version_con_fuente_fbx",
+      "category": "ship",
+      "context": "",
+      "identification": "Nave clase Sovereign (era TNG tardía).",
+      "usage": "F11/F14: modelo de crucero; comparar versiones con hangar.",
+      "features": "",
+      "review_notes": "Conservar la carpeta source/ y textures/ original; sin alterar nombres.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class sovereign/star-trek-sovereign-class",
+          "kind": "directory",
+          "name": "star-trek-sovereign-class"
+        },
+        {
+          "source": "ships/Starfleet/class sovereign/star-trek-sovereign-class.zip",
+          "kind": "file",
+          "name": "star-trek-sovereign-class.zip"
+        },
+        {
+          "source": "ships/Starfleet/class sovereign/star_trek_-_sovereign_class (1).glb",
+          "kind": "file",
+          "name": "star_trek_-_sovereign_class (1).glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/sovereign/sovereign_version_con_fuente_fbx"
+      ]
+    },
+    {
+      "id": "asset_2d482406d5f9",
+      "title": "Sovereign - versión con hangar",
+      "destination": "ships/starfleet/sovereign/sovereign_version_con_hangar",
+      "category": "ship",
+      "context": "",
+      "identification": "Modelo rotulado Sovereign with shuttlebay, con hangar visible.",
+      "usage": "F11/F14: candidato para evaluar maniobras de hangar; cotejar con versiones Blender M05–M08.",
+      "features": "",
+      "review_notes": "No asumir puertas animadas, escala, colisiones ni funcionamiento del hangar.",
+      "items": [
+        {
+          "source": "ships/Starfleet/class sovereign/class sovereign with hangar/star-trek-sovereign-class-with-shuttlebay.zip",
+          "kind": "file",
+          "name": "star-trek-sovereign-class-with-shuttlebay.zip"
+        },
+        {
+          "source": "ships/Starfleet/class sovereign/class sovereign with hangar/star_trek_sovereign_class_with_shuttlebay.glb",
+          "kind": "file",
+          "name": "star_trek_sovereign_class_with_shuttlebay.glb"
+        },
+        {
+          "source": "ships/Starfleet/class sovereign/class sovereign with hangar/star_trek_sovereign_class_with_shuttlebay.zip",
+          "kind": "file",
+          "name": "star_trek_sovereign_class_with_shuttlebay.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/sovereign/sovereign_version_con_hangar"
+      ]
+    },
+    {
+      "id": "asset_8324cfa91f64",
+      "title": "type 6 shuttle",
+      "destination": "ships/starfleet/shuttle/type_6_shuttle",
+      "category": "ship",
+      "context": "",
+      "identification": "Lanzadera de tipo 6 de la Flota Estelar.",
+      "usage": "F12: hangares, tráfico auxiliar, transporte.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "ships/Starfleet/shuttle/star_trek_-_type_6_shuttle_e986bb89f0004d2eadcd19e383d5c5a6.glb",
+          "kind": "file",
+          "name": "star_trek_-_type_6_shuttle_e986bb89f0004d2eadcd19e383d5c5a6.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "naves/starfleet/shuttle/type_6_shuttle"
+      ]
+    },
+    {
+      "id": "asset_adb0b5460f32",
+      "title": "Prominencia solar",
+      "destination": "sistemas/universe/stars/prominencia_solar",
+      "category": "space_environment",
+      "context": "",
+      "identification": "Efecto o visualización astronómica identificado por nombre.",
+      "usage": "F13/F14: entorno estelar y representación del sistema solar; validar precisión astronómica solo si se requiere.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "sistemas/universe/stars/solar-prominence",
+          "kind": "directory",
+          "name": "solar-prominence"
+        },
+        {
+          "source": "sistemas/universe/stars/solar_prominence.glb",
+          "kind": "file",
+          "name": "solar_prominence.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/estrellas/prominencia_solar"
+      ]
+    },
+    {
+      "id": "asset_e6f49197d876",
+      "title": "Sistema solar animado",
+      "destination": "sistemas/universe/stars/sistema_solar_animado",
+      "category": "space_environment",
+      "context": "",
+      "identification": "Efecto o visualización astronómica identificado por nombre.",
+      "usage": "F13/F14: entorno estelar y representación del sistema solar; validar precisión astronómica solo si se requiere.",
+      "features": "",
+      "review_notes": "",
+      "items": [
+        {
+          "source": "sistemas/universe/stars/solar-system-animation",
+          "kind": "directory",
+          "name": "solar-system-animation"
+        },
+        {
+          "source": "sistemas/universe/stars/solar_system_animation.glb",
+          "kind": "file",
+          "name": "solar_system_animation.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "stars/sistema_solar_animado"
+      ]
+    },
+    {
+      "id": "asset_7e6b7892a40e",
+      "title": "earth spacedock",
+      "destination": "space_stations/starfleet/earth_spacedock",
+      "category": "space_station",
+      "context": "",
+      "identification": "Base espacial terrestre de la Flota Estelar (Earth Spacedock) identificada por nombre.",
+      "usage": "F13: base orbital, atraque y misiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "space stations/star-trek-earth-spacedock (1).zip",
+          "kind": "file",
+          "name": "star-trek-earth-spacedock (1).zip"
+        },
+        {
+          "source": "space stations/star_trek_earth_spacedock.glb",
+          "kind": "file",
+          "name": "star_trek_earth_spacedock.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "estaciones/descargadas/starfleet/earth_spacedock"
+      ]
+    },
+    {
+      "id": "asset_75dca7bcb7a4",
+      "title": "deep space 12 ds9 star trek zeo",
+      "destination": "space_stations/bajoran_system/deep_space_12_ds9_star_trek_zeo_001",
+      "category": "space_station",
+      "context": "",
+      "identification": "Modelo rotulado Deep Space 12 / DS9; nombre ambiguo, confirmar si realmente es Deep Space Nine u otra estación.",
+      "usage": "F13: estación, escenario de comercio/tránsito; cotejar versiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "space stations/DS9/deep-space-12-ds9-star-trek-zeo.zip",
+          "kind": "file",
+          "name": "deep-space-12-ds9-star-trek-zeo.zip"
+        },
+        {
+          "source": "space stations/DS9/deep_space_12_-_ds9_-_star_trek_zeo.glb",
+          "kind": "file",
+          "name": "deep_space_12_-_ds9_-_star_trek_zeo.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "estaciones/descargadas/bajoran_system/deep_space_12_ds9_star_trek_zeo_001"
+      ]
+    },
+    {
+      "id": "asset_e7b4fab25973",
+      "title": "deep space 12 ds9 star trek zeo",
+      "destination": "space_stations/bajoran_system/deep_space_12_ds9_star_trek_zeo_002",
+      "category": "space_station",
+      "context": "",
+      "identification": "Modelo rotulado Deep Space 12 / DS9; nombre ambiguo, confirmar si realmente es Deep Space Nine u otra estación.",
+      "usage": "F13: estación, escenario de comercio/tránsito; cotejar versiones.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "space stations/DS9/deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb",
+          "kind": "file",
+          "name": "deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "estaciones/descargadas/bajoran_system/deep_space_12_ds9_star_trek_zeo_002"
+      ]
+    },
+    {
+      "id": "asset_a15926a850d1",
+      "title": "asteroid",
+      "destination": "sistemas/universe/asteroids/asteroid",
+      "category": "asteroid",
+      "context": "",
+      "identification": "Asteroide 3D; variante regular o low-poly según nombre.",
+      "usage": "F13: campo de asteroides, objetos de navegación y escenarios espaciales.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/asteroids/asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb",
+          "kind": "file",
+          "name": "asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/asteroides/asteroid"
+      ]
+    },
+    {
+      "id": "asset_244ff1c35d86",
+      "title": "asteroid low poly",
+      "destination": "sistemas/universe/asteroids/asteroid_low_poly",
+      "category": "asteroid",
+      "context": "",
+      "identification": "Asteroide 3D; variante regular o low-poly según nombre.",
+      "usage": "F13: campo de asteroides, objetos de navegación y escenarios espaciales.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/asteroids/asteroid_low_poly_ef955548bb5f4bc6a71c8970b1de2c7b.glb",
+          "kind": "file",
+          "name": "asteroid_low_poly_ef955548bb5f4bc6a71c8970b1de2c7b.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/asteroides/asteroid_low_poly"
+      ]
+    },
+    {
+      "id": "asset_6f269729033a",
+      "title": "alien space nebula 1 skybox",
+      "destination": "sistemas/universe/planets/alien_space_nebula_1_skybox",
+      "category": "planet",
+      "context": "",
+      "identification": "Skybox de nebulosa; NO es un planeta pese a estar bajo planets/.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/alien_space_nebula_1_skybox_b365bdbc52b74d19920f7ffbc78e8b10.glb",
+          "kind": "file",
+          "name": "alien_space_nebula_1_skybox_b365bdbc52b74d19920f7ffbc78e8b10.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/alien_space_nebula_1_skybox"
+      ]
+    },
+    {
+      "id": "asset_852bd35fb385",
+      "title": "green planet",
+      "destination": "sistemas/universe/planets/green_planet",
+      "category": "planet",
+      "context": "",
+      "identification": "Planeta verde ficticio; sin nombre ni canon inferibles.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/green-planet.zip",
+          "kind": "file",
+          "name": "green-planet.zip"
+        },
+        {
+          "source": "sistemas/universe/planets/green_planet.glb",
+          "kind": "file",
+          "name": "green_planet.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/green_planet"
+      ]
+    },
+    {
+      "id": "asset_3db09d077e6b",
+      "title": "planet earth (2)",
+      "destination": "sistemas/universe/planets/planet_earth_2",
+      "category": "planet",
+      "context": "",
+      "identification": "Tierra, planeta del sistema solar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/planet_earth (2).glb",
+          "kind": "file",
+          "name": "planet_earth (2).glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/planet_earth_2"
+      ]
+    },
+    {
+      "id": "asset_7fd1357710d6",
+      "title": "planet earth",
+      "destination": "sistemas/universe/planets/planet_earth",
+      "category": "planet",
+      "context": "",
+      "identification": "Tierra, planeta del sistema solar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/planet-earth.zip",
+          "kind": "file",
+          "name": "planet-earth.zip"
+        },
+        {
+          "source": "sistemas/universe/planets/planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb",
+          "kind": "file",
+          "name": "planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/planet_earth"
+      ]
+    },
+    {
+      "id": "asset_868f054721dc",
+      "title": "planet venus",
+      "destination": "sistemas/universe/planets/planet_venus",
+      "category": "planet",
+      "context": "",
+      "identification": "Venus, planeta del sistema solar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/planet-venus.zip",
+          "kind": "file",
+          "name": "planet-venus.zip"
+        },
+        {
+          "source": "sistemas/universe/planets/planet_venus.glb",
+          "kind": "file",
+          "name": "planet_venus.glb"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/planet_venus"
+      ]
+    },
+    {
+      "id": "asset_7b22c5485825",
+      "title": "jupiter free downloadable model",
+      "destination": "sistemas/universe/planets/jupiter_free_downloadable_model",
+      "category": "planet",
+      "context": "",
+      "identification": "Solo figura un archivo ZIP en el árbol; contenido y formatos aún sin inspeccionar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Primero inspeccionar el ZIP sin borrar ni sobrescribir originales.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/jupiter-free-downloadable-model.zip",
+          "kind": "file",
+          "name": "jupiter-free-downloadable-model.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/jupiter_free_downloadable_model"
+      ]
+    },
+    {
+      "id": "asset_94b19b7cd548",
+      "title": "photorealistic moon",
+      "destination": "sistemas/universe/planets/photorealistic_moon",
+      "category": "planet",
+      "context": "",
+      "identification": "Solo figura un archivo ZIP en el árbol; contenido y formatos aún sin inspeccionar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Primero inspeccionar el ZIP sin borrar ni sobrescribir originales.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/photorealistic-moon.zip",
+          "kind": "file",
+          "name": "photorealistic-moon.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/photorealistic_moon"
+      ]
+    },
+    {
+      "id": "asset_ac74183c4873",
+      "title": "saturn planet",
+      "destination": "sistemas/universe/planets/saturn_planet",
+      "category": "planet",
+      "context": "",
+      "identification": "Solo figura un archivo ZIP en el árbol; contenido y formatos aún sin inspeccionar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Primero inspeccionar el ZIP sin borrar ni sobrescribir originales.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/saturn-planet.zip",
+          "kind": "file",
+          "name": "saturn-planet.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/saturn_planet"
+      ]
+    },
+    {
+      "id": "asset_de3a34b5831f",
+      "title": "various planets",
+      "destination": "sistemas/universe/planets/various_planets",
+      "category": "planet",
+      "context": "",
+      "identification": "Solo figura un archivo ZIP en el árbol; contenido y formatos aún sin inspeccionar.",
+      "usage": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+      "features": "",
+      "review_notes": "Primero inspeccionar el ZIP sin borrar ni sobrescribir originales.",
+      "items": [
+        {
+          "source": "sistemas/universe/planets/various-planets.zip",
+          "kind": "file",
+          "name": "various-planets.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "planetas/various_planets"
+      ]
+    },
+    {
+      "id": "asset_0415a0eb9c51",
+      "title": "argo ii type rover star trek zeo",
+      "destination": "vehicles/rover/argo_ii_type_rover_star_trek_zeo",
+      "category": "ground_vehicle",
+      "context": "",
+      "identification": "Rover Argo II inspirado en Star Trek; comprobar canon y versión exactos.",
+      "usage": "F12/F13: operaciones en superficie, vehículo terrestre y misiones planetarias.",
+      "features": "",
+      "review_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+      "items": [
+        {
+          "source": "vehicles/rover/argo-ii-type-rover-star-trek-zeo.zip",
+          "kind": "file",
+          "name": "argo-ii-type-rover-star-trek-zeo.zip"
+        },
+        {
+          "source": "vehicles/rover/argo_ii_type_rover_star_trek_zeo.glb",
+          "kind": "file",
+          "name": "argo_ii_type_rover_star_trek_zeo.glb"
+        },
+        {
+          "source": "vehicles/rover/argo_ii_type_rover_star_trek_zeo.zip",
+          "kind": "file",
+          "name": "argo_ii_type_rover_star_trek_zeo.zip"
+        }
+      ],
+      "origin": "estructura.txt (15-10-2026)",
+      "verification": "identificación inferida por nombres; no verificada mediante inspección del binario",
+      "current_directories_under_assets": [
+        "vehiculos/rover/argo_ii_type_rover_star_trek_zeo"
+      ]
+    }
+  ],
+  "catalog_status": "HISTORICAL_SOURCE_CATALOG_NOT_CURRENT_FILESYSTEM_INDEX",
+  "current_filesystem_inventory": "desarrollo/manifests/reorganizacion_20261027/inventario_integridad.jsonl",
+  "migration_note": "source/destination originales conservados como procedencia; usar path del inventario actual para acceder a archivos locales."
+}

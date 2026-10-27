@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_1d5020ff1da5",
+  "display_name": "Jean-Luc Picard",
+  "category": "npc",
+  "relative_directory": "personajes/descargados/picard/jean_luc_picard",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Paquete con nombre Patrick Stewart / Star Trek; la atribución exacta del asset debe verificarse.",
+  "proposed_game_use": "NPC de referencia; validar apariencia, rig y derechos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "NPC/Piccard/patrick-stewart-star-trek.zip",
+      "kind": "file",
+      "name": "patrick-stewart-star-trek.zip"
+    },
+    {
+      "source": "NPC/Piccard/patrick_stewart_star_trek.glb",
+      "kind": "file",
+      "name": "patrick_stewart_star_trek.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 26644524,
+    "files": [
+      {
+        "path": "patrick-stewart-star-trek.zip",
+        "extension": ".zip",
+        "size_bytes": 18886500
+      },
+      {
+        "path": "patrick_stewart_star_trek.glb",
+        "extension": ".glb",
+        "size_bytes": 7758024
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+  "historical_relative_directory": "npc/picard/jean_luc_picard",
+  "directory_root": "assets/"
+}

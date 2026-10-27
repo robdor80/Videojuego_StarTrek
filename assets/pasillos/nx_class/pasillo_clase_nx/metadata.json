@@ -1,0 +1,180 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_60097882699d",
+  "display_name": "Pasillo clase NX",
+  "category": "corridor",
+  "relative_directory": "pasillos/nx_class/pasillo_clase_nx",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXII (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+  "proposed_game_use": "Ambientaciones históricas del siglo XXII y estudio modular.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/NX Class/nx-class-starship-corridor",
+      "kind": "directory",
+      "name": "nx-class-starship-corridor"
+    },
+    {
+      "source": "corridor/NX Class/nx-class-starship-corridor.zip",
+      "kind": "file",
+      "name": "nx-class-starship-corridor.zip"
+    },
+    {
+      "source": "corridor/NX Class/nx_class_starship_corridor.glb",
+      "kind": "file",
+      "name": "nx_class_starship_corridor.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 24,
+    "size_bytes": 127076278,
+    "files": [
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/Blinds_Wood_White.jpg",
+        "extension": ".jpg",
+        "size_bytes": 3023
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/material_3.png",
+        "extension": ".png",
+        "size_bytes": 14746
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/material_34.jpg",
+        "extension": ".jpg",
+        "size_bytes": 8175
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/material_57.png",
+        "extension": ".png",
+        "size_bytes": 10038
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/Metal_Aluminum_Anodized.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2508
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/texture.png",
+        "extension": ".png",
+        "size_bytes": 491243
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/texture_0.png",
+        "extension": ".png",
+        "size_bytes": 294067
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/texture_1.png",
+        "extension": ".png",
+        "size_bytes": 270986
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model/texture_2.png",
+        "extension": ".png",
+        "size_bytes": 404109
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2/model.dae",
+        "extension": ".dae",
+        "size_bytes": 82918565
+      },
+      {
+        "path": "nx-class-starship-corridor/source/corridor+nx+2.zip",
+        "extension": ".zip",
+        "size_bytes": 8075822
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/Blinds_Wood_White.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 3023
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/material_3.inline_conv_generated.png",
+        "extension": ".png",
+        "size_bytes": 3593
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/material_3.png",
+        "extension": ".png",
+        "size_bytes": 14713
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/material_34.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 8175
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/material_57.inline_conv_generated.png",
+        "extension": ".png",
+        "size_bytes": 1196
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/material_57.png",
+        "extension": ".png",
+        "size_bytes": 9985
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/Metal_Aluminum_Anodized.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 3695
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/texture.png",
+        "extension": ".png",
+        "size_bytes": 490514
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/texture_0.png",
+        "extension": ".png",
+        "size_bytes": 293626
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/texture_1.png",
+        "extension": ".png",
+        "size_bytes": 270569
+      },
+      {
+        "path": "nx-class-starship-corridor/textures/texture_2.png",
+        "extension": ".png",
+        "size_bytes": 403500
+      },
+      {
+        "path": "nx-class-starship-corridor.zip",
+        "extension": ".zip",
+        "size_bytes": 9580027
+      },
+      {
+        "path": "nx_class_starship_corridor.glb",
+        "extension": ".glb",
+        "size_bytes": 23500380
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/nx_class/pasillo_clase_nx",
+  "directory_root": "assets/"
+}

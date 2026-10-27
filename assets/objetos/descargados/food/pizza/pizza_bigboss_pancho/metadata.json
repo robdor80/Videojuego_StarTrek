@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e14c463932bd",
+  "display_name": "pizza bigboss pancho",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/pizza/pizza_bigboss_pancho",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Pizza denominada Bigboss Pancho.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/pizza/pizza-bigboss-pancho.zip",
+      "kind": "file",
+      "name": "pizza-bigboss-pancho.zip"
+    },
+    {
+      "source": "objects/food/pizza/pizza_bigboss_pancho.glb",
+      "kind": "file",
+      "name": "pizza_bigboss_pancho.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 27081039,
+    "files": [
+      {
+        "path": "pizza-bigboss-pancho.zip",
+        "extension": ".zip",
+        "size_bytes": 10050963
+      },
+      {
+        "path": "pizza_bigboss_pancho.glb",
+        "extension": ".glb",
+        "size_bytes": 17030076
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/pizza/pizza_bigboss_pancho",
+  "directory_root": "assets/"
+}

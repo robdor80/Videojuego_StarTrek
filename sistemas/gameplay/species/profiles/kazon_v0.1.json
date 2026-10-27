@@ -1,0 +1,108 @@
+{
+  "schema_version": "0.1.0",
+  "species_id": "kazon",
+  "display_name_es": "Kazon",
+  "status": "LORE01_DLC_DELTA_DOCUMENTED_NOT_MAIN_GAME",
+  "content_availability": {
+    "content_id": "dlc_delta_transwarp",
+    "player_facing_product": "Futuro DLC Cuadrante Delta",
+    "gameplay_spawn_in_main": false,
+    "dlc_not_yet_implemented": true,
+    "gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+    "requires_dlc_enablement": true,
+    "requires_access_to_delta_context": true,
+    "transwarp_borg_portal": "USER_APPROVED_FUTURE_DLC_CONCEPT_NOT_IMPLEMENTED",
+    "episode_evidence_anchor_year": 2371,
+    "episode_date_not_species_origin_or_availability": true
+  },
+  "identity": {
+    "common_homeworld_ref": null,
+    "homeworld_location_requires_astrography_validation": true,
+    "citizenship_and_organization_membership_not_inferred": true
+  },
+  "description_es": "Humanoides del cuadrante Delta organizados en sectas con relaciones variables; Voyager encuentra grupos concretos a partir de 2371.",
+  "morphology": {
+    "body_plan": "humanoid",
+    "observable_traits": [
+      "humanoides",
+      "crestas cutáneas en la frente",
+      "cabello agrupado observable en algunos individuos"
+    ],
+    "individual_variation_required": true
+  },
+  "physiology": {
+    "supported_observations": [
+      "No se establece una fuerza, capacidad intelectual ni resistencia universal.",
+      "Sin valores de vida media o ambiente natal numéricos."
+    ],
+    "development_and_aging": "unknown_unless_stated_in_supported_observation",
+    "reproduction": null,
+    "medical_resolution_is_individual": true
+  },
+  "language": {
+    "language_id": "kazon",
+    "individual_fluency_not_implied": true,
+    "translation_matrix_depends_on_contact": true,
+    "catalogue_status": "KNOWN_AT_SOURCE_REGISTRY_LEVEL",
+    "no_auto_fluency_from_species": true
+  },
+  "culture_socialization": {
+    "contextual_profile_ref": "mundo/lore/cultures/profiles/KAZON_CULTURAL_PROFILE_v0.1.json",
+    "culture_profile_id": "kazon_sect_context",
+    "automatic_attachment_by_species": false,
+    "known_social_context": [
+      "Las sectas son organizaciones diferentes: membresía requiere identidad y procedencia.",
+      "Algunos ritos de madurez o nombres son observables en grupos concretos, no automáticamente en toda la población."
+    ]
+  },
+  "generation_constraints": {
+    "general_main_game_population_eligible": false,
+    "main_game_encounter_spawn_eligible": false,
+    "only_dlc_delta_context": true,
+    "world_state_first": true,
+    "specific_location_source_required": true,
+    "no_border_or_routes_in_this_profile": true,
+    "canonical_individuals_must_remain_unique": true,
+    "character_personality_not_species_driven": true
+  },
+  "npc_and_computer": {
+    "summary_es": "Humanoides del cuadrante Delta organizados en sectas con relaciones variables; Voyager encuentra grupos concretos a partir de 2371.",
+    "context_es": "Kazon-Ogla y Kazon-Nistrim pueden mantener vínculos distintos; no crear una cultura monolítica.",
+    "for_main_game": "ONLY_IF_OBSERVER_HAS_VALID_KNOWLEDGE",
+    "default_main_game_profile_exposure": "NOT_SPAWNABLE_WITHOUT_DLC",
+    "contact_information_must_be_acquired": true
+  },
+  "unknowns": [
+    "cultura compartida universal",
+    "cronología general de madurez",
+    "longevidad",
+    "filiación individual a secta sin evidencia"
+  ],
+  "ai_boundary": [
+    "No generar esta especie en partida principal por aparición aleatoria.",
+    "No convertir a todos los individuos en antagonistas ni dotar de capacidades no verificadas.",
+    "No improvisar viajes, portal transwarp ni infraestructura Borg: funcionalidad fuera de LORE-01."
+  ],
+  "provenance": [
+    {
+      "source_id": "VOY_CARETAKER",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_INITIATIONS",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "VOY_ALLIANCES",
+      "confidence": "HIGH",
+      "claim_scope": "afirmaciones limitadas al episodio, no extrapolación a todos los individuos"
+    },
+    {
+      "source_id": "MA_KAZON",
+      "confidence": "MEDIUM",
+      "claim_scope": "comprobación secundaria, no autoridad superior al episodio"
+    }
+  ]
+}

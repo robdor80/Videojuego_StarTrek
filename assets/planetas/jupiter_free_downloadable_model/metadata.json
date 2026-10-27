@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_7b22c5485825",
+  "display_name": "jupiter free downloadable model",
+  "category": "planet",
+  "relative_directory": "planetas/jupiter_free_downloadable_model",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Solo figura un archivo ZIP en el árbol; contenido y formatos aún sin inspeccionar.",
+  "proposed_game_use": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/planets/jupiter-free-downloadable-model.zip",
+      "kind": "file",
+      "name": "jupiter-free-downloadable-model.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 6539134,
+    "files": [
+      {
+        "path": "jupiter-free-downloadable-model.zip",
+        "extension": ".zip",
+        "size_bytes": 6539134
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Primero inspeccionar el ZIP sin borrar ni sobrescribir originales.",
+  "historical_relative_directory": "universe/planets/jupiter_free_downloadable_model",
+  "directory_root": "assets/"
+}

@@ -1,0 +1,139 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_D_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "source_policy_ref": "mundo/sources/canon_policy.md",
+  "provenance_policy_ref": "mundo/sources/provenance_policy.md",
+  "reference_only": true,
+  "baseline_political_space_ref": "sistemas/gameplay/navigation/political_space_state_anchors.json",
+  "physical_atlas_ref": "mundo/lore/astrography/atlas/anchor_atlas_v0.1.json",
+  "no_political_polygons": true,
+  "layers": [
+    {
+      "location_id": "romulan_neutral_zone",
+      "participants": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "layer": "ZONE_NEUTRAL",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "No existen polígonos absolutos autorizados; prohibido equiparar reclamaciones con control efectivo",
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR",
+        "TNG_THE_NEUTRAL_ZONE"
+      ],
+      "automatic_world_state_mutation": false
+    },
+    {
+      "location_id": "klingon_frontier",
+      "participants": [
+        "united_federation_of_planets",
+        "klingon_empire"
+      ],
+      "layer": "FRONTIER_DYNAMIC",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "Las restricciones y derechos de paso cambian con hostilidad y paz; no abrir frontera por una única alianza",
+      "source_refs": [
+        "TOS_ERRAND_OF_MERCY",
+        "ST6_THE_UNDISCOVERED_COUNTRY"
+      ],
+      "automatic_world_state_mutation": false
+    },
+    {
+      "location_id": "bajoran_space",
+      "participants": [
+        "bajoran_provisional_government",
+        "cardassian_union"
+      ],
+      "layer": "SOVEREIGNTY_AND_PAST_OCCUPATION",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "Gobierno bajorano y memoria de ocupación separados; DS9 cooperativa no Federación soberana",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "automatic_world_state_mutation": false
+    },
+    {
+      "location_id": "deep_space_9",
+      "participants": [
+        "bajoran_provisional_government",
+        "united_federation_of_planets"
+      ],
+      "layer": "STATION_ADMINISTRATION",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "Soberanía bajorana / operación por Flota; no identificar jurisdicción con oficial de guardia",
+      "source_refs": [
+        "DS9_EMISSARY"
+      ],
+      "automatic_world_state_mutation": false
+    },
+    {
+      "location_id": "cardassian_space",
+      "participants": [
+        "cardassian_union",
+        "dominion"
+      ],
+      "layer": "STATE_AND_COALITION",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "Alianza con Dominio no transfiere automáticamente titularidad legal del territorio",
+      "source_refs": [
+        "DS9_BY_INFERNOS_LIGHT"
+      ],
+      "automatic_world_state_mutation": false
+    },
+    {
+      "location_id": "bajoran_wormhole_gamma",
+      "participants": [
+        "bajoran_provisional_government",
+        "dominion"
+      ],
+      "layer": "STRATEGIC_ACCESS",
+      "legal_sovereignty": "NOT_INFERRED_FROM_MAP",
+      "effective_control": "TEMPORAL_OBSERVER_DEPENDENT",
+      "claims": "NOT_INFERRED_FROM_MAP",
+      "transit_rights": "CASE_DEPENDENT_UNKNOWN_UNLESS_TREATY",
+      "military_posture": "TEMPORAL_CONTEXT_ONLY",
+      "observer_knowledge": "SEPARATE_PROJECTION",
+      "geometry": null,
+      "notes": "Agujero de gusano accesible tras conocimiento y autorización; no corredor warp geométrico",
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_THE_JEMHADAR"
+      ],
+      "automatic_world_state_mutation": false
+    }
+  ]
+}

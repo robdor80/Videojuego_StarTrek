@@ -1,0 +1,144 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "cardassian_union",
+  "display_name_es": "Unión Cardassiana",
+  "entity_kind": "estado_interestelar_centralizado",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+  "monograph_ref": "mundo/lore/factions/monographs/cardassian_union_v0.1.md",
+  "domains": {
+    "identidad_historia": "Estado cardassiano caracterizado en DS9 por el recuerdo de la ocupación de Bajor, las guerras fronterizas y la evolución política del mando militar. El liderazgo cambia cuando el orden de poder militar/inteligencia se erosiona, el gobierno civil recupera peso y Dukat orienta Cardassia hacia el Dominio en 2373. La resistencia de Damar en 2375 demuestra evolución no reducible a un estereotipo.",
+    "gobierno_instituciones": "Comando Central, Consejo Detapa y Orden Obsidiana deben identificarse por separado. El orden político fluctúa: autoridad militar en época de ocupación, mayor influencia civil tras crisis de 2371 y subordinación del régimen aliado al Dominio desde 2373. Un gul, un legate o un funcionario Detapa no poseen automáticamente el mismo ámbito de decisión.",
+    "sociedad_ciudadania": "Cardassianos pueden ser militares, científicos, dirigentes civiles, disidentes, exiliados, colaboradores de la ocupación o resistentes al Dominio. La verdad de un personaje sobre la ocupación de Bajor depende de biografía y pruebas, nunca solo de la especie. La documentación de víctimas y testigos no debe confundirse con culpabilidad colectiva.",
+    "ley_justicia": "Los procedimientos públicos cardassianos presentan fuertes sesgos institucionales en representaciones de juicios, pero no autoriza redactar un código penal global a partir de un episodio. La vigilancia de la Orden Obsidiana y los métodos de la ocupación no equivalen a facultades legítimas de cualquier guardia. Custodia, procesamiento y delitos requieren fuentes específicas.",
+    "economia": "La reconstrucción posterior a conflictos y la dependencia política-militar son visibles; presupuesto, modelo monetario, condiciones de clase de todo el Imperio y capacidad industrial exacta permanecen desconocidos. El auge de una potencia no autoriza inventar producción o rutas.",
+    "defensa_seguridad": "Fuerzas del Comando Central y Orden Obsidiana tienen ámbitos diferentes; «The Die Is Cast» diezma la operación encubierta, afectando equilibrio de poder. La militarización y la vigilancia influyen en misiones. En 2375 hay unidades y civiles que se unen a la resistencia; sus riesgos necesitan causalidad y contactos, no creación aleatoria de leales o traidores.",
+    "diplomacia": "El fin de la ocupación de Bajor en 2369 y el tratado fronterizo con Federación preceden a nuevas tensiones con Klingon en 2372. La adhesión al Dominio a comienzos de 2373 modifica el estatuto estratégico; el alzamiento de Damar en 2375 vuelve a alterarlo. Ningún acuerdo futuro debe imponerse automáticamente a campañas alternativas.",
+    "conflictos_internos": "Detapa, Dukat, Damar, Garak y la disidencia reflejan proyectos contradictorios. El atentado contra poder civil y la oposición al Dominio ejemplifican que una institución puede dividirse. Los abusos de ocupación son hechos históricos y sus responsables requieren atribución personal documentada.",
+    "flota_estar": "Demandas de extradición, intercambios de prisioneros, control fronterizo y protección de Bajor dependen de tratados, jurisdicción y fecha. Un oficial de Flota no administra Cardassia; tampoco es autoridad para juzgar a todo ciudadano cardassiano por la ocupación. Para la computadora naval, secretos de Garak o Damar requieren acceso permitido y momento válido.",
+    "videojuego": "Misión ejemplo: un cardassiano solicita asilo contra una orden del régimen, mientras otro oficial pretende extraditarlo. Separar documentos, autoridad solicitante, estatus de guerra y memoria de víctimas. Core decide legitimidad, seguridad, ciudadanía y consecuencias; el NPC no crea adhesión al Dominio por diálogo."
+  },
+  "chronology": [
+    {
+      "year": 2369,
+      "claim_es": "Cardassia se retira de Bajor; disputa de posocupación permanece.",
+      "source_ids": [
+        "DS9_EMISSARY"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2370,
+      "claim_es": "Se intensifican cuestiones de colonos y frontera federada.",
+      "source_ids": [
+        "DS9_THE_MAQUIS_I"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2371,
+      "claim_es": "Fracaso de la Orden Obsidiana en misión contra Fundadores.",
+      "source_ids": [
+        "DS9_THE_DIE_IS_CAST"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2372,
+      "claim_es": "Ascenso del Consejo Detapa y agresión klingon a Cardassia.",
+      "source_ids": [
+        "DS9_THE_WAY_OF_THE_WARRIOR"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Dukat alinea Cardassia con Dominio.",
+      "source_ids": [
+        "DS9_BY_INFERNOS_LIGHT"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Damar impulsa resistencia y el Dominio ordena represalias masivas.",
+      "source_ids": [
+        "DS9_THE_DOGS_OF_WAR"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Veterano de la ocupación que rechaza órdenes posteriores del Dominio.",
+    "Funcionaria civil del Consejo Detapa sin mando naval.",
+    "Cardassiano expatriado sin legitimación para negociar por todo su mundo."
+  ],
+  "unknowns": [
+    "Procedimiento electoral y atribuciones exactas del Consejo Detapa.",
+    "Código procesal completo y garantías en tribunales cardassianos.",
+    "Tasa exacta de apoyo ciudadano a cada régimen.",
+    "Sistema comercial y fiscal por periodo, especialmente tras la guerra."
+  ],
+  "evidence": [
+    {
+      "source_id": "TNG_THE_WOUNDED",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La hostilidad fronteriza y la memoria de guerra afectan interpretaciones de capitanes y oficiales.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_DUET",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La ocupación de Bajor posee víctimas, responsables y testigos diferentes; ninguna colectividad es culpable por especie.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_DIE_IS_CAST",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La Orden Obsidiana participa en una operación de inteligencia fallida decisiva.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_WAY_OF_THE_WARRIOR",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "El equilibrio civil y militar cardassiano varía durante la crisis klingon.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_BY_INFERNOS_LIGHT",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La alineación gubernamental con Dominio redefine el marco interestelar.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_DOGS_OF_WAR",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Damar y sus seguidores se enfrentan al poder dominionista en 2375.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "mundo/sources/canon_policy.md",
+    "mundo/sources/provenance_policy.md",
+    "sistemas/ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}

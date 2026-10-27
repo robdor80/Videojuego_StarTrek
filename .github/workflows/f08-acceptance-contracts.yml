@@ -5,19 +5,19 @@ on:
     branches:
       - main
     paths:
-      - "tools/validation/f08_acceptance_gate.py"
-      - "tools/validation/test_f08_acceptance_gate.py"
-      - "validation/fixtures/f08/**"
-      - "validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
-      - "docs/roadmap/master/fases/F08/**"
+      - "desarrollo/tools/validation/f08_acceptance_gate.py"
+      - "desarrollo/tools/validation/test_f08_acceptance_gate.py"
+      - "desarrollo/validation/fixtures/f08/**"
+      - "desarrollo/validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
+      - "proyecto/docs/roadmap/master/fases/F08/**"
       - ".github/workflows/f08-acceptance-contracts.yml"
   pull_request:
     paths:
-      - "tools/validation/f08_acceptance_gate.py"
-      - "tools/validation/test_f08_acceptance_gate.py"
-      - "validation/fixtures/f08/**"
-      - "validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
-      - "docs/roadmap/master/fases/F08/**"
+      - "desarrollo/tools/validation/f08_acceptance_gate.py"
+      - "desarrollo/tools/validation/test_f08_acceptance_gate.py"
+      - "desarrollo/validation/fixtures/f08/**"
+      - "desarrollo/validation/fixtures/sensors_vertical_slice_acceptance_v0.0.1.json"
+      - "proyecto/docs/roadmap/master/fases/F08/**"
       - ".github/workflows/f08-acceptance-contracts.yml"
   workflow_dispatch:
 
@@ -35,12 +35,12 @@ jobs:
         with:
           python-version: "3.12"
       - name: Sintaxis
-        run: python -m py_compile tools/validation/f08_acceptance_gate.py tools/validation/test_f08_acceptance_gate.py
+        run: python -m py_compile desarrollo/tools/validation/f08_acceptance_gate.py desarrollo/tools/validation/test_f08_acceptance_gate.py
       - name: Validador de evidencias y negativos
-        run: python -m unittest discover -s tools/validation -p 'test_f08_acceptance_gate.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f08_acceptance_gate.py' -v
       - name: La plantilla nunca debe superar aceptación
         run: |
-          if python tools/validation/f08_acceptance_gate.py --capture validation/fixtures/f08/evidence_capture_template_v0.1.json --artifacts-dir validation/fixtures/f08/; then
+          if python desarrollo/tools/validation/f08_acceptance_gate.py --capture desarrollo/validation/fixtures/f08/evidence_capture_template_v0.1.json --artifacts-dir desarrollo/validation/fixtures/f08/; then
             echo "ERROR: plantilla NO_EJECUTADO aceptada";
             exit 1;
           else

@@ -1,0 +1,80 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_adb0b5460f32",
+  "display_name": "Prominencia solar",
+  "category": "space_environment",
+  "relative_directory": "planetas/estrellas/prominencia_solar",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Efecto o visualización astronómica identificado por nombre.",
+  "proposed_game_use": "F13/F14: entorno estelar y representación del sistema solar; validar precisión astronómica solo si se requiere.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/stars/solar-prominence",
+      "kind": "directory",
+      "name": "solar-prominence"
+    },
+    {
+      "source": "universe/stars/solar_prominence.glb",
+      "kind": "file",
+      "name": "solar_prominence.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 5,
+    "size_bytes": 213025197,
+    "files": [
+      {
+        "path": "solar-prominence/source/0000000.blend",
+        "extension": ".blend",
+        "size_bytes": 144532616
+      },
+      {
+        "path": "solar-prominence/textures/500_(4).jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 98758
+      },
+      {
+        "path": "solar-prominence/textures/500_(7).jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 77473
+      },
+      {
+        "path": "solar-prominence/textures/86133191-abstract-halftone-random-white-do.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1132378
+      },
+      {
+        "path": "solar_prominence.glb",
+        "extension": ".glb",
+        "size_bytes": 67183972
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "universe/stars/prominencia_solar",
+  "directory_root": "assets/"
+}

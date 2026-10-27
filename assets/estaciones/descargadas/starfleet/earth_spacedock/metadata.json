@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_7e6b7892a40e",
+  "display_name": "earth spacedock",
+  "category": "space_station",
+  "relative_directory": "estaciones/descargadas/starfleet/earth_spacedock",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Base espacial terrestre de la Flota Estelar (Earth Spacedock) identificada por nombre.",
+  "proposed_game_use": "F13: base orbital, atraque y misiones.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "space stations/star-trek-earth-spacedock (1).zip",
+      "kind": "file",
+      "name": "star-trek-earth-spacedock (1).zip"
+    },
+    {
+      "source": "space stations/star_trek_earth_spacedock.glb",
+      "kind": "file",
+      "name": "star_trek_earth_spacedock.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 54885082,
+    "files": [
+      {
+        "path": "star-trek-earth-spacedock (1).zip",
+        "extension": ".zip",
+        "size_bytes": 35677958
+      },
+      {
+        "path": "star_trek_earth_spacedock.glb",
+        "extension": ".glb",
+        "size_bytes": 19207124
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "space_stations/starfleet/earth_spacedock",
+  "directory_root": "assets/"
+}

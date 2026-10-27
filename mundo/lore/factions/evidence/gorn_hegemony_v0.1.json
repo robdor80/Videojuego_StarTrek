@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "gorn_hegemony",
+  "display_name_es": "Hegemonía Gorn",
+  "entity_kind": "potencia_interestelar_poco_documentada",
+  "content_scope": "MAIN_GAME_CONTEXT_NOT_AUTOSPAWN",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "culture_ids",
+    "citizenship",
+    "office",
+    "organization_memberships",
+    "individual_convictions"
+  ],
+  "monograph_ref": "mundo/lore/factions/monographs/gorn_hegemony_v0.1.md",
+  "domains": {
+    "identidad_historia": "Potencia identificada por la denominación Hegemonía Gorn; el episodio «Arena» es precedente retenido, y su representación directa en TNG/DS9/VOY es limitada. No usar novelas posteriores ni Star Trek Online para rellenar automáticamente su sistema de gobierno.",
+    "gobierno_instituciones": "«Hegemonía» es una denominación política, pero no acredita emperador, consejo o legislatura concreta. El capitán gorn encontrado por Kirk no representa documentalmente toda la estructura del poder. Cargos, sucesión y administración permanecen desconocidos.",
+    "sociedad_ciudadania": "Individuos gorn pueden ejercer roles dispares; el material retenido no prueba una mentalidad biológica, comportamiento idéntico ni adscripción inevitable a fuerzas armadas. No inferir ciudadanía a partir de especie.",
+    "ley_justicia": "Hay desacuerdo y conflicto territorial en «Arena», sin código penal, procedimiento judicial ni leyes de tránsito interestelar explicitadas. Evitar crear derechos o sanciones por analogía con imperios humanos.",
+    "economia": "Faltan datos consistentes sobre moneda, comercio, industrias, recursos y producción civil; se documenta esta ausencia sin transformarla en estadísticas inventadas.",
+    "defensa_seguridad": "Capacidad militar de una nave y un incidente concreto no justifican inventarios de flota completos ni tácticas universales de una civilización. Separar componentes canónicos de detalles extraídos de juegos/novelas.",
+    "diplomacia": "Antecedente de contacto con Enterprise en época Kirk; no concluir guerra permanente con Federación en siglo XXIV ni alianza dominionista por hablar de conflicto histórico. Requiere estado diplomático fechado o se usa «desconocido».",
+    "conflictos_internos": "El canon de referencia no permite afirmar familias dominantes, partidos, oposición o un golpe interno. La falta de pruebas se mantiene expresamente.",
+    "flota_estar": "La tripulación primero identifica, solicita contacto y comprueba jurisdicción. La especie no autoriza disparar ni dar por aceptado un tratado o un ultimátum. La información de épocas previas debe restringirse a lo legítimamente conocido.",
+    "videojuego": "Misión exploratoria con contacto escaso y opciones de no hostilidad. No habilitar gobierno autogenerado como canon; toda ampliación política original precisa propuesta identificada para autorización."
+  },
+  "chronology": [
+    {
+      "year": 2267,
+      "claim_es": "Encuentro Enterprise con capitán gorn, en conflicto territorial mediado por metrones.",
+      "source_ids": [
+        "TOS_ARENA"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "unknowns": [
+    "Régimen constitucional y composición de la Hegemonía.",
+    "Fecha y naturaleza de todos los acuerdos con Federación.",
+    "Economía, judicatura, ciudadanía y sucesión.",
+    "Estructura naval y facciones políticas del siglo XXIV."
+  ],
+  "evidence": [
+    {
+      "source_id": "TOS_ARENA",
+      "authority": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "claim_es": "Un incidente territorial con una nave gorn existe, pero no documenta sistema jurídico completo.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_INTERSTELLAR_POLITICS",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Fuente oficial general puede orientar investigación pero no fija órganos gorn concretos.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "mundo/sources/canon_policy.md",
+    "mundo/sources/provenance_policy.md"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_f8ac487e585d",
+  "display_name": "b 1 blas rika bird of prey",
+  "category": "ship",
+  "relative_directory": "naves/Klingon/mixed/b_1_blas_rika_bird_of_prey",
+  "taxonomy": {
+    "faction_inferred": "Imperio Klingon",
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Ave de presa klingon (variante por determinar)",
+  "proposed_game_use": "F13: facciones y encuentros tácticos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Klingon/b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb",
+      "kind": "file",
+      "name": "b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 5562572,
+    "files": [
+      {
+        "path": "b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb",
+        "extension": ".glb",
+        "size_bytes": 5562572
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/klingon/mixed/b_1_blas_rika_bird_of_prey",
+  "directory_root": "assets/"
+}

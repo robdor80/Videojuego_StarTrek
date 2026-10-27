@@ -1,28 +1,28 @@
 name: LORE-03 A — Cronología documental
 on:
   push:
-    branches: [main, "lore/03-a-chronology-history"]
+    branches: [main, "mundo/lore/03-a-chronology-history"]
     paths:
-      - "docs/decisions/playable_eras.md"
-      - "sources/canon_policy.md"
-      - "sources/source_registry/**"
-      - "universe/chronology/**"
-      - "lore/historical_events/**"
-      - "lore/diplomacy/historical_events_v0.1.json"
-      - "docs/roadmap/lore_03*"
-      - "tools/validation/*lore03*"
+      - "proyecto/docs/decisions/playable_eras.md"
+      - "mundo/sources/canon_policy.md"
+      - "mundo/sources/source_registry/**"
+      - "sistemas/universe/chronology/**"
+      - "mundo/lore/historical_events/**"
+      - "mundo/lore/diplomacy/historical_events_v0.1.json"
+      - "proyecto/docs/roadmap/lore_03*"
+      - "desarrollo/tools/validation/*lore03*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore03-a-chronology.yml"
   pull_request:
     paths:
-      - "docs/decisions/playable_eras.md"
-      - "sources/canon_policy.md"
-      - "sources/source_registry/**"
-      - "universe/chronology/**"
-      - "lore/historical_events/**"
-      - "lore/diplomacy/historical_events_v0.1.json"
-      - "docs/roadmap/lore_03*"
-      - "tools/validation/*lore03*"
+      - "proyecto/docs/decisions/playable_eras.md"
+      - "mundo/sources/canon_policy.md"
+      - "mundo/sources/source_registry/**"
+      - "sistemas/universe/chronology/**"
+      - "mundo/lore/historical_events/**"
+      - "mundo/lore/diplomacy/historical_events_v0.1.json"
+      - "proyecto/docs/roadmap/lore_03*"
+      - "desarrollo/tools/validation/*lore03*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore03-a-chronology.yml"
   workflow_dispatch:
@@ -41,13 +41,13 @@ jobs:
           python-version: "3.12"
       - name: Compilación, validación y 49 casos de prueba
         run: |
-          python -m py_compile tools/validation/validate_lore03_a.py tools/validation/test_lore03_a.py
-          python tools/validation/validate_lore03_a.py
-          python tools/validation/test_lore03_a.py
+          python -m py_compile desarrollo/tools/validation/validate_lore03_a.py desarrollo/tools/validation/test_lore03_a.py
+          python desarrollo/tools/validation/validate_lore03_a.py
+          python desarrollo/tools/validation/test_lore03_a.py
       - name: Regresiones LORE-01 D y LORE-02 E y roadmap
         run: |
-          python tools/validation/validate_lore01_d.py
-          python tools/validation/test_lore01_d.py
-          python tools/validation/validate_lore02_e.py
-          python tools/validation/test_lore02_e.py
-          python tools/validation/validate_roadmap_state.py
+          python desarrollo/tools/validation/validate_lore01_d.py
+          python desarrollo/tools/validation/test_lore01_d.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py
+          python desarrollo/tools/validation/validate_roadmap_state.py

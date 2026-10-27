@@ -1,0 +1,494 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore02_c_medical_agents_and_technology",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "record_count": 13,
+  "source_registry": "mundo/sources/source_registry/source_registry.json",
+  "equipment_catalogue": "mundo/lore/equipment/lore02_b_equipment_catalogue_v0.1.json",
+  "records": [
+    {
+      "agent_id": "l02c_agent_cordrazine",
+      "display_name_es": "Cordrazina",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_CORDRAZINE"
+      ],
+      "episodic_indication_es": "reanimación o estimulación cardiovascular en casos documentados",
+      "clinical_limitation_es": "Efectos adversos de sobredosificación descritos; el episodio no establece seguridad de uso para todas las especies.",
+      "era_examples": [
+        "TOS",
+        "TNG",
+        "DS9",
+        "VOY"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_tricordrazine",
+      "display_name_es": "Tricordrazina",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_TRICORDRAZINE",
+        "L02C_ST_MED_ETHICS"
+      ],
+      "episodic_indication_es": "estimulante potente y determinadas situaciones de reanimación",
+      "clinical_limitation_es": "Cuidado especial en pacientes klingon; no extrapolar administraciones observadas ni inventar umbrales.",
+      "era_examples": [
+        "TNG"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_hyronalin",
+      "display_name_es": "Hironalin",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_HYRONALIN"
+      ],
+      "episodic_indication_es": "contramedida frente a determinados escenarios de exposición radiológica",
+      "clinical_limitation_es": "Efecto documentado dependiente de fuente, especie, tiempo y contexto; no reemplaza protección contra radiación.",
+      "era_examples": [
+        "TOS",
+        "TNG",
+        "DS9",
+        "VOY"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_inaprovaline",
+      "display_name_es": "Inaprovalina",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_INAPROVALINE"
+      ],
+      "episodic_indication_es": "soporte sináptico/cardiovascular en casos documentados",
+      "clinical_limitation_es": "No prescribir por mero pulso bajo ni deducir eficacia interespecie; no universales.",
+      "era_examples": [
+        "ENT",
+        "TNG",
+        "VOY"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_lectrazine",
+      "display_name_es": "Lectrazina",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_LECTRAZINE"
+      ],
+      "episodic_indication_es": "estabilización cardiovascular y renal en episodios de Voyager",
+      "clinical_limitation_es": "VOY Warlord ejemplifica incompatibilidad bioquímica de un paciente; prueba específica obligatoria.",
+      "era_examples": [
+        "VOY"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_tri_ox",
+      "display_name_es": "Compuesto tri-ox",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_TRI_OX",
+        "TOS_AMOK_TIME"
+      ],
+      "episodic_indication_es": "ayuda respiratoria en determinadas atmósferas y rescates",
+      "clinical_limitation_es": "No produce oxígeno ilimitado ni sustituye soporte ambiental; McCoy engañó sobre su uso en un caso.",
+      "era_examples": [
+        "TOS",
+        "DS9",
+        "VOY"
+      ],
+      "equipment_ref": "l02b_hypo_cartridge",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_felicium",
+      "display_name_es": "Felicium",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_FELICIUM"
+      ],
+      "episodic_indication_es": "tratamiento histórico de una plaga ornaran y posterior dependencia farmacológica",
+      "clinical_limitation_es": "El síndrome de abstinencia pudo confundirse con enfermedad persistente. No convertir en medicamento inocuo ni en cura válida para otras culturas.",
+      "era_examples": [
+        "TNG"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_arithrazine",
+      "display_name_es": "Arithrazina",
+      "kind": "drug",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_ARITHRAZINE"
+      ],
+      "episodic_indication_es": "contramedida avanzada para exposición radiológica grave en caso Voyager",
+      "clinical_limitation_es": "Ejemplo de supervisión médica y conflicto con orden de mando; no se fija dosis ni stock común.",
+      "era_examples": [
+        "VOY"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_dermal_regenerator",
+      "display_name_es": "Regenerador dérmico",
+      "kind": "device",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_DERMAL"
+      ],
+      "episodic_indication_es": "reparación de heridas cutáneas menores de ciertos tipos",
+      "clinical_limitation_es": "No regenera órganos ni todas las quemaduras. Las variantes deben existir físicamente en inventario.",
+      "era_examples": [
+        "TNG",
+        "VOY"
+      ],
+      "equipment_ref": "l02b_dermal_regenerator",
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_osteogenic_stimulator",
+      "display_name_es": "Estimulador osteogénico",
+      "kind": "device",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_OSTEOGENIC"
+      ],
+      "episodic_indication_es": "intervención para determinadas fracturas",
+      "clinical_limitation_es": "En algunas lanzaderas sólo cubre lesiones menores; su presencia en un botiquín debe comprobarse.",
+      "era_examples": [
+        "DS9",
+        "VOY"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_genetronic_replicator",
+      "display_name_es": "Replicador genetrónico experimental",
+      "kind": "experimental_technology",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "source_ids": [
+        "L02C_ST_MED_ETHICS"
+      ],
+      "episodic_indication_es": "intervención experimental en daño medular del caso Worf",
+      "clinical_limitation_es": "Riesgos éticos y resultados excepcionales; NO se habilita en enfermería, kit ni hospital sin decisión y validación expresa.",
+      "era_examples": [
+        "TNG"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_borg_nanoprobe_therapy",
+      "display_name_es": "Intervención extraordinaria mediante nanoprobes Borg",
+      "kind": "specialized_technology",
+      "claim_class": "OFFICIAL_REFERENCE",
+      "source_ids": [
+        "L02C_ST_BORG"
+      ],
+      "episodic_indication_es": "reanimación singular de Neelix tras un accidente",
+      "clinical_limitation_es": "No resurrección reproducible, no acceso genérico a nanoprobes, no uso en especies sin evaluación individual y consentimiento.",
+      "era_examples": [
+        "VOY"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    },
+    {
+      "agent_id": "l02c_agent_ketracel_white",
+      "display_name_es": "Ketracel-white",
+      "kind": "engineered_biochemical_supply",
+      "claim_class": "RELIABLE_SECONDARY",
+      "source_ids": [
+        "L02C_MA_KETRACEL_WHITE"
+      ],
+      "episodic_indication_es": "Compuesto necesario para la bioquímica de muchos Jem'Hadar diseñados por el Dominio; recurso de suministro controlado en DS9.",
+      "clinical_limitation_es": "Existen excepciones genéticas individuales. La necesidad no se deduce por cultura, y la disponibilidad no se presupone en una nave Starfleet ni el compuesto se replica mágicamente.",
+      "era_examples": [
+        "DS9"
+      ],
+      "equipment_ref": null,
+      "availability": "CONTEXTUAL_NOT_GRANTED_BY_CATALOGUE",
+      "staff_requirement": "patient_specific_qualified_prescriber_or_interventionist",
+      "species_compatibility": "UNKNOWN_UNTIL_PATIENT_ASSESSED",
+      "required_evidence": [
+        "individual_species_and_current_condition",
+        "actual_stock_and_device_condition",
+        "documented_clinical_indication",
+        "consent_or_narrow_emergency_exception",
+        "professional_authority",
+        "appropriate_facility_and_observation"
+      ],
+      "administerable_in_game_now": false,
+      "dose": null,
+      "universal_efficacy": null,
+      "time_to_effect": null,
+      "gameplay_treatment_status": "RESEARCH_REFERENCE_ONLY",
+      "prohibited_claims": [
+        "no_automatic_patient_cure",
+        "no_stock_creation",
+        "no_cross_species_blanket_effect"
+      ]
+    }
+  ]
+}

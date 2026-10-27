@@ -1,0 +1,295 @@
+{
+  "document_id": "lore01_tng_species_coverage_audit",
+  "schema_version": "0.1.0",
+  "status": "A01_A05_AUTHORING_COMPLETE_PENDING_REVIEW_AND_PR_MERGE",
+  "as_of": "2026-10-17",
+  "base_commit": "9edfcde1a4ac58aa7a66f9bfbc1ac2aa7e62f953",
+  "scope": "tng_ds9_voyager_late_24th_century",
+  "scope_years_inclusive": [
+    2364,
+    2378
+  ],
+  "source_policy_ref": "mundo/sources/canon_policy.md",
+  "audit_plan_ref": "proyecto/docs/roadmap/lore_01_tng_a_species_cultures_audit_v0.1.md",
+  "existing_species": [
+    {
+      "species_id": "aenar",
+      "profile_ref": "sistemas/gameplay/species/profiles/aenar_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "andorian",
+      "profile_ref": "sistemas/gameplay/species/profiles/andorian_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/ANDORIAN_AENAR_CULTURAL_PROFILES_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "bajoran",
+      "profile_ref": "sistemas/gameplay/species/profiles/bajoran_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/BAJORAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "bajoran"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "betazoid",
+      "profile_ref": "sistemas/gameplay/species/profiles/betazoid_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/BETAZOID_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "cardassian",
+      "profile_ref": "sistemas/gameplay/species/profiles/cardassian_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "changeling",
+      "profile_ref": "sistemas/gameplay/species/profiles/changeling_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "ferengi",
+      "profile_ref": "sistemas/gameplay/species/profiles/ferengi_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/FERENGI_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "ferengi"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "human",
+      "profile_ref": "sistemas/gameplay/species/profiles/human_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/HUMAN_FEDERATION_CULTURAL_COMPOSITION_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "jem_hadar",
+      "profile_ref": "sistemas/gameplay/species/profiles/jem_hadar_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "klingon",
+      "profile_ref": "sistemas/gameplay/species/profiles/klingon_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/KLINGON_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "klingonese"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "romulan",
+      "profile_ref": "sistemas/gameplay/species/profiles/romulan_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "romulan"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "tellarite",
+      "profile_ref": "sistemas/gameplay/species/profiles/tellarite_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "trill",
+      "profile_ref": "sistemas/gameplay/species/profiles/trill_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [
+        "trill"
+      ],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "vorta",
+      "profile_ref": "sistemas/gameplay/species/profiles/vorta_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    },
+    {
+      "species_id": "vulcan",
+      "profile_ref": "sistemas/gameplay/species/profiles/vulcan_v0.1.json",
+      "contextual_culture_refs": [
+        "mundo/lore/cultures/profiles/VULCAN_CULTURAL_PROFILE_v0.1.json"
+      ],
+      "known_language_catalogue_ids": [],
+      "culture_applies_automatically": false,
+      "review_status": "A02_AUDITED_EXISTING_PROFILE_RETAINED"
+    }
+  ],
+  "non_species_states": [
+    {
+      "state_id": "borg_assimilated_character",
+      "profile_ref": "sistemas/gameplay/species/profiles/borg_assimilated_character_v0.1.json",
+      "origin_species_required": true
+    }
+  ],
+  "assertions": [
+    "Existing cultural profile paths are contextual links, not automatic memberships.",
+    "Languages listed here are catalogue associations, not universal individual fluency.",
+    "No new candidate entry is approved or eligible for runtime spawning.",
+    "Known canon characters and contextual presence are never generated solely because a species is listed.",
+    "Unknown details remain unknown until supported by evidence.",
+    "Inclusion in catalogue does not authorize random population or main game spawning.",
+    "El-Aurian diaspora is eligible in main game; Borg remains present independently of Delta DLC."
+  ],
+  "content_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+  "approved_species_additions": [
+    {
+      "species_id": "bolian",
+      "package_id": "A03",
+      "profile_ref": "sistemas/gameplay/species/profiles/bolian_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/BOLIAN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "MAIN_GAME_TNG_CONTEXTUAL",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "benzite",
+      "package_id": "A03",
+      "profile_ref": "sistemas/gameplay/species/profiles/benzite_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/BENZITE_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "MAIN_GAME_TNG_CONTEXTUAL",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "el_aurian",
+      "package_id": "A03",
+      "profile_ref": "sistemas/gameplay/species/profiles/el_aurian_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/EL_AURIAN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "MAIN_GAME_TNG_CONTEXTUAL",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "breen",
+      "package_id": "A03",
+      "profile_ref": "sistemas/gameplay/species/profiles/breen_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/BREEN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "MAIN_GAME_TNG_CONTEXTUAL",
+      "language_catalogue_id": "breen",
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "pakled",
+      "package_id": "A03",
+      "profile_ref": "sistemas/gameplay/species/profiles/pakled_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/PAKLED_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "MAIN_GAME_TNG_CONTEXTUAL",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "kazon",
+      "package_id": "A04",
+      "profile_ref": "sistemas/gameplay/species/profiles/kazon_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/KAZON_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "language_catalogue_id": "kazon",
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "ocampan",
+      "package_id": "A04",
+      "profile_ref": "sistemas/gameplay/species/profiles/ocampan_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/OCAMPAN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "talaxian",
+      "package_id": "A04",
+      "profile_ref": "sistemas/gameplay/species/profiles/talaxian_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/TALAXIAN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "language_catalogue_id": "talaxian",
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "vidiian",
+      "package_id": "A04",
+      "profile_ref": "sistemas/gameplay/species/profiles/vidiian_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/VIDIIAN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    },
+    {
+      "species_id": "hirogen",
+      "package_id": "A04",
+      "profile_ref": "sistemas/gameplay/species/profiles/hirogen_v0.1.json",
+      "cultural_profile_ref": "mundo/lore/cultures/profiles/HIROGEN_CULTURAL_PROFILE_v0.1.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "language_catalogue_id": null,
+      "status": "DOCUMENTED_PENDING_PR_MERGE",
+      "generation_gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    }
+  ]
+}

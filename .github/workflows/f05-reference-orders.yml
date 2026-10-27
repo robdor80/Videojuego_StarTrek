@@ -1,19 +1,19 @@
 name: F05 Reference Orders and NPC Initiative
 on:
   push:
-    branches: [docs/f05-orders-npc-initiative]
+    branches: [proyecto/docs/f05-orders-npc-initiative]
     paths:
-      - 'docs/roadmap/master/fases/F05/**'
-      - 'tools/validation/f05_reference.py'
-      - 'tools/validation/test_f05_reference.py'
-      - 'validation/fixtures/f05/**'
+      - 'proyecto/docs/roadmap/master/fases/F05/**'
+      - 'desarrollo/tools/validation/f05_reference.py'
+      - 'desarrollo/tools/validation/test_f05_reference.py'
+      - 'desarrollo/validation/fixtures/f05/**'
       - '.github/workflows/f05-reference-orders.yml'
   pull_request:
     paths:
-      - 'docs/roadmap/master/fases/F05/**'
-      - 'tools/validation/f05_reference.py'
-      - 'tools/validation/test_f05_reference.py'
-      - 'validation/fixtures/f05/**'
+      - 'proyecto/docs/roadmap/master/fases/F05/**'
+      - 'desarrollo/tools/validation/f05_reference.py'
+      - 'desarrollo/tools/validation/test_f05_reference.py'
+      - 'desarrollo/validation/fixtures/f05/**'
       - '.github/workflows/f05-reference-orders.yml'
   workflow_dispatch:
 jobs:
@@ -27,8 +27,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Syntax
-        run: python -m py_compile tools/validation/f05_reference.py tools/validation/test_f05_reference.py
+        run: python -m py_compile desarrollo/tools/validation/f05_reference.py desarrollo/tools/validation/test_f05_reference.py
       - name: Unit tests
-        run: python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f05_reference.py' -v
       - name: Fixture cases
-        run: python tools/validation/f05_reference.py --fixture validation/fixtures/f05/order_initiative_reference_v0.1.json
+        run: python desarrollo/tools/validation/f05_reference.py --fixture desarrollo/validation/fixtures/f05/order_initiative_reference_v0.1.json

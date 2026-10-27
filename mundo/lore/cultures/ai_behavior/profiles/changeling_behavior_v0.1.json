@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_changeling_behavior",
+  "species_index_key": "changeling",
+  "display_name_es": "Cambiantes (Gran Enlace y vida independiente)",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/changeling_v0.2.json",
+    "anchors": [
+      "DS9_THE_SEARCH_II",
+      "DS9_CHIMERA",
+      "DS9_BROKEN_LINK"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Pertenecer al Gran Enlace, dirigir el Dominio o vivir en aislamiento son situaciones biográficas y culturales distintas. Odo y Laas muestran respuestas divergentes a los sólidos.",
+  "conditional_guidance": {
+    "communication_es": [
+      "El Enlace puede ser referente de memoria y experiencia para quien haya participado; no da acceso ilimitado a toda información.",
+      "Un cambiante criado entre sólidos puede preferir discurso hablado y convivencia individual."
+    ],
+    "emotional_expression_es": [
+      "El deseo de pertenencia, la soledad o resentimiento son experiencias contextualizadas, no compulsión genética.",
+      "La transformación física no dicta actitud ética ni preferencias íntimas."
+    ],
+    "disagreement_and_conflict_es": [
+      "Algunas personas ligadas al Dominio pueden desconfiar de sólidos; no trasladarlo a Odo ni a todos.",
+      "Los conflictos de identidad y pertenencia admiten cooperación o ruptura según historia."
+    ],
+    "authority_and_duty_es": [
+      "Fundador, ciudadano, agente infiltrado y cambiante no afiliado son identidades distintas.",
+      "Un cambiante independiente no accede a órdenes del Dominio solo por biología."
+    ],
+    "relationships_and_daily_life_es": [
+      "Participar en Gran Enlace puede cambiar vínculos y experiencias sin borrar relaciones con individuos.",
+      "Confianza con sólidos exige historia; una forma copiada no convierte al impostor en el original."
+    ]
+  },
+  "variation_axes_es": [
+    "contacto con Gran Enlace",
+    "crianza entre sólidos",
+    "afiliación al Dominio",
+    "experiencias de rechazo",
+    "posición moral"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un cambiante unido al Enlace teme que los sólidos lo dañen; otro educado en la estación protege a compañeros sólidos.",
+    "Un individuo se interesa por conocer a otros de su especie; otro prefiere conservar una identidad social autónoma."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No convertir metamorfismo en impulso criminal o autoritarismo.",
+    "No dar acceso a recuerdos ajenos ni al plan secreto de Fundadores."
+  ],
+  "era_guard_es": "Dominio y conocimiento de Fundadores avanzan a lo largo de DS9; 2375 no está fijado en 2369.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_b2b248c5efdd",
+  "display_name": "dkyr class",
+  "category": "ship",
+  "relative_directory": "naves/vulcan/dkyr_vulcana/dkyr_class",
+  "taxonomy": {
+    "faction_inferred": "Vulcano",
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXII (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave vulcana clase D’Kyr, conocida en la era Enterprise del siglo XXII.",
+  "proposed_game_use": "F13: tráfico/encuentros vulcanos históricos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Vulcano/star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb",
+      "kind": "file",
+      "name": "star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 2191004,
+    "files": [
+      {
+        "path": "star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb",
+        "extension": ".glb",
+        "size_bytes": 2191004
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/vulcan/dkyr_vulcana/dkyr_class",
+  "directory_root": "assets/"
+}

@@ -1,24 +1,24 @@
 name: LORE-01 B — Civilizaciones y potencias (documental)
 on:
   push:
-    branches: [main, "lore/01-b-civilizations-powers"]
+    branches: [main, "mundo/lore/01-b-civilizations-powers"]
     paths:
-      - "lore/factions/**"
-      - "lore/organizations/README.md"
-      - "lore/federation/README.md"
-      - "docs/roadmap/lore_01_b_*"
-      - "tools/validation/*lore01*"
-      - "sources/source_registry/source_registry.json"
+      - "mundo/lore/factions/**"
+      - "mundo/lore/organizations/README.md"
+      - "mundo/lore/federation/README.md"
+      - "proyecto/docs/roadmap/lore_01_b_*"
+      - "desarrollo/tools/validation/*lore01*"
+      - "mundo/sources/source_registry/source_registry.json"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-b-civilizations.yml"
   pull_request:
     paths:
-      - "lore/factions/**"
-      - "lore/organizations/README.md"
-      - "lore/federation/README.md"
-      - "docs/roadmap/lore_01_b_*"
-      - "tools/validation/*lore01*"
-      - "sources/source_registry/source_registry.json"
+      - "mundo/lore/factions/**"
+      - "mundo/lore/organizations/README.md"
+      - "mundo/lore/federation/README.md"
+      - "proyecto/docs/roadmap/lore_01_b_*"
+      - "desarrollo/tools/validation/*lore01*"
+      - "mundo/sources/source_registry/source_registry.json"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-b-civilizations.yml"
   workflow_dispatch:
@@ -39,14 +39,14 @@ jobs:
           python-version: "3.12"
       - name: Validar sintaxis, expedientes, instituciones, cronología, IA y reserva Delta
         run: |
-          python -m py_compile tools/validation/validate_lore01_b.py tools/validation/test_lore01_b.py
-          python tools/validation/validate_lore01_b.py
-          python tools/validation/test_lore01_b.py
+          python -m py_compile desarrollo/tools/validation/validate_lore01_b.py desarrollo/tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py
       - name: Regresión LORE-01 A y A.1
         run: |
-          python tools/validation/validate_lore01_tng.py
-          python tools/validation/test_lore01_tng.py
-          python tools/validation/validate_lore01_depth.py
-          python tools/validation/test_lore01_depth.py
-          python tools/validation/validate_lore01_a1.py
-          python tools/validation/test_lore01_a1.py
+          python desarrollo/tools/validation/validate_lore01_tng.py
+          python desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_depth.py
+          python desarrollo/tools/validation/test_lore01_depth.py
+          python desarrollo/tools/validation/validate_lore01_a1.py
+          python desarrollo/tools/validation/test_lore01_a1.py

@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_80c7a34f8d47",
+  "display_name": "vegan hainanese chicken rice scaniverse",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/china/vegan_hainanese_chicken_rice_scaniverse",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Plato vegano inspirado en arroz con pollo de Hainan.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/china/vegan-hainanese-chicken-rice-scaniverse.zip",
+      "kind": "file",
+      "name": "vegan-hainanese-chicken-rice-scaniverse.zip"
+    },
+    {
+      "source": "objects/food/china/vegan_hainanese_chicken_rice_scaniverse.glb",
+      "kind": "file",
+      "name": "vegan_hainanese_chicken_rice_scaniverse.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 46189739,
+    "files": [
+      {
+        "path": "vegan-hainanese-chicken-rice-scaniverse.zip",
+        "extension": ".zip",
+        "size_bytes": 25460879
+      },
+      {
+        "path": "vegan_hainanese_chicken_rice_scaniverse.glb",
+        "extension": ".glb",
+        "size_bytes": 20728860
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/china/vegan_hainanese_chicken_rice_scaniverse",
+  "directory_root": "assets/"
+}

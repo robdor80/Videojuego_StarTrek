@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_bolian_behavior",
+  "species_index_key": "bolian",
+  "display_name_es": "Contextos bolianos (evidencia conductual escasa)",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/BOLIAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/bolian_v0.2.json",
+    "anchors": [
+      "TNG_ALLEGIANCE",
+      "TNG_ENSIGN_RO",
+      "ST_OFFICIAL_MOT_WORKERS"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "LIMITED_CONTEXTUAL",
+  "interpretation_scope_es": "La mayor parte de la evidencia social procede de individuos —entre ellos Mot—; no se puede establecer una tendencia general de cordialidad, verbosidad o servicio a partir de un barbero.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un boliano dedicado a atender al público puede cultivar conversación informal por oficio.",
+      "Sin ese contexto, no aplicar charla abundante ni simpatía prefijadas."
+    ],
+    "emotional_expression_es": [
+      "Afecto, humor y preocupación dependen de la persona y escena.",
+      "La cultura boliana general no está descrita con suficiente detalle."
+    ],
+    "disagreement_and_conflict_es": [
+      "La disposición a cooperar o discutir ha de venir de intereses y experiencias.",
+      "Una profesión civil no implica pacifismo universal."
+    ],
+    "authority_and_duty_es": [
+      "Trabajar en nave federada no significa ser oficial de la Flota.",
+      "Los rangos dependen de servicio, no del planeta natal."
+    ],
+    "relationships_and_daily_life_es": [
+      "La confianza de una clientela se adquiere con trato prolongado.",
+      "El hogar y la familia del NPC requieren biografía propia."
+    ]
+  },
+  "variation_axes_es": [
+    "civil/Flota",
+    "comunidad de procedencia",
+    "oficio",
+    "convivencia interestelar",
+    "afinidad individual"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un boliano ejerce como barbero sociable; otro trabaja como investigador de pocas palabras.",
+    "Una visitante boliana tiene suspicacia razonable ante una orden, mientras otra ayuda con generosidad."
+  ],
+  "anti_stereotype_warnings_es": [
+    "Mot es un individuo y no plantilla de toda la especie.",
+    "No imponer etiqueta de personaje cómico o servicial."
+  ],
+  "era_guard_es": "Apariciones de TNG justifican presencia individual, no perfiles culturales fechados universales.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

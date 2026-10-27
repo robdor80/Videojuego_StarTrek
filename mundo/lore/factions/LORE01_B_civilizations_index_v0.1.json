@@ -1,0 +1,204 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_B_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_AUTHORING_NOT_INTEGRATED",
+  "authority": "CoreRPG_World_State_ONLY",
+  "classification_not_species": true,
+  "main_game_entries": [
+    {
+      "civilization_id": "united_federation_of_planets",
+      "display_name_es": "Federación Unida de Planetas",
+      "classification": "FEDERAL_POLITY",
+      "legacy_major_faction_id": "united_federation_of_planets",
+      "monograph_ref": "mundo/lore/factions/monographs/united_federation_of_planets_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/united_federation_of_planets_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "klingon_empire",
+      "display_name_es": "Imperio Klingon",
+      "classification": "INTERSTELLAR_POLITY",
+      "legacy_major_faction_id": "klingon_empire",
+      "monograph_ref": "mundo/lore/factions/monographs/klingon_empire_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/klingon_empire_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "romulan_star_empire",
+      "display_name_es": "Imperio Estelar Romulano",
+      "classification": "INTERSTELLAR_POLITY",
+      "legacy_major_faction_id": "romulan_star_empire",
+      "monograph_ref": "mundo/lore/factions/monographs/romulan_star_empire_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/romulan_star_empire_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "cardassian_union",
+      "display_name_es": "Unión Cardassiana",
+      "classification": "INTERSTELLAR_POLITY",
+      "legacy_major_faction_id": "cardassian_union",
+      "monograph_ref": "mundo/lore/factions/monographs/cardassian_union_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/cardassian_union_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "ferengi_alliance",
+      "display_name_es": "Alianza Ferengi",
+      "classification": "INTERSTELLAR_POLITY",
+      "legacy_major_faction_id": "ferengi_alliance",
+      "monograph_ref": "mundo/lore/factions/monographs/ferengi_alliance_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/ferengi_alliance_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "bajoran_provisional_government",
+      "display_name_es": "Bajor / Gobierno Provisional",
+      "classification": "SOVEREIGN_POLITY",
+      "legacy_major_faction_id": "bajoran_provisional_government",
+      "monograph_ref": "mundo/lore/factions/monographs/bajoran_provisional_government_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/bajoran_provisional_government_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "dominion",
+      "display_name_es": "Dominio",
+      "classification": "INTERSTELLAR_HEGEMONY",
+      "legacy_major_faction_id": "dominion",
+      "monograph_ref": "mundo/lore/factions/monographs/dominion_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/dominion_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "breen_confederacy",
+      "display_name_es": "Confederación Breen",
+      "classification": "INTERSTELLAR_POLITY",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/breen_confederacy_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/breen_confederacy_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "borg_collective",
+      "display_name_es": "Colectividad Borg",
+      "classification": "TECHNO_COLLECTIVE",
+      "legacy_major_faction_id": "borg_collective",
+      "monograph_ref": "mundo/lore/factions/monographs/borg_collective_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/borg_collective_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "maquis",
+      "display_name_es": "Maquis",
+      "classification": "NONSTATE_INSURGENCY",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/maquis_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/maquis_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "section_31",
+      "display_name_es": "Sección 31",
+      "classification": "CLANDESTINE_NETWORK",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/section_31_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/section_31_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "orion_syndicate",
+      "display_name_es": "Sindicato de Orión",
+      "classification": "CRIMINAL_NETWORK",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/orion_syndicate_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/orion_syndicate_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "tholian_assembly",
+      "display_name_es": "Asamblea Tholiana",
+      "classification": "LIMITED_EVIDENCE_POLITY",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/tholian_assembly_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/tholian_assembly_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "gorn_hegemony",
+      "display_name_es": "Hegemonía Gorn",
+      "classification": "LIMITED_EVIDENCE_POLITY",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/gorn_hegemony_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/gorn_hegemony_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "tzenkethi_polity",
+      "display_name_es": "Entidad política tzenkethi",
+      "classification": "LIMITED_EVIDENCE_POLITY",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/tzenkethi_polity_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/tzenkethi_polity_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    },
+    {
+      "civilization_id": "trill_symbiosis_commission",
+      "display_name_es": "Comisión de Simbiosis de Trill",
+      "classification": "SPECIALIZED_NONSTATE_ORGANIZATION",
+      "legacy_major_faction_id": null,
+      "monograph_ref": "mundo/lore/factions/monographs/trill_symbiosis_commission_v0.1.md",
+      "evidence_ref": "mundo/lore/factions/evidence/trill_symbiosis_commission_v0.1.json",
+      "availability": "MAIN_GAME_LORE_CONTEXT",
+      "automatic_generation_enabled": false
+    }
+  ],
+  "coverage_not_exhaustive": true,
+  "deliberately_not_main_game": [
+    {
+      "region": "DELTA_QUADRANT_DLC",
+      "species_ids": [
+        "kazon",
+        "ocampan",
+        "talaxian",
+        "vidiian",
+        "hirogen"
+      ],
+      "civilization_generation_enabled": false,
+      "territory_generation_enabled": false,
+      "encounter_generation_enabled": false,
+      "policy_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+    }
+  ],
+  "borg_exception": {
+    "main_game_canonical_tng_contact": true,
+    "classification": "TECHNO_COLLECTIVE_NOT_BIOLOGICAL_SPECIES",
+    "idea_0011_portal_implemented": false,
+    "borg_may_use_portal_to_enter_alpha": false
+  },
+  "related_contracts": [
+    "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+    "sistemas/gameplay/diplomacy/faction_runtime_model.json",
+    "sistemas/gameplay/organizations/organization_runtime_contract.json",
+    "sistemas/ai/npc_behavior/faction_authority_guardrails.md",
+    "mundo/lore/cultures/ai_behavior/behavior_context_contract_v0.1.json"
+  ],
+  "next_phases": [
+    "LORE_01_C_ASTROGRAPHY",
+    "LORE_01_D_LIVE_DIPLOMACY",
+    "LORE_01_E_OPERATIONAL_INTEGRATION"
+  ]
+}

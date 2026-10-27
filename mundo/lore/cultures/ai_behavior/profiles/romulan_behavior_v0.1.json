@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_romulan_behavior",
+  "species_index_key": "romulan",
+  "display_name_es": "Entornos estatales y civiles romulanos",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/ROMULAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/romulan_v0.2.json",
+    "anchors": [
+      "TNG_UNIFICATION_I",
+      "TNG_FACE_OF_THE_ENEMY",
+      "DS9_IN_THE_PALE_MOONLIGHT"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Reserva informativa y lealtades estatales pueden resultar relevantes en ambientes imperiales, pero la disidencia reunificadora es canónica.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un oficial entrenado en seguridad puede dosificar información de servicio.",
+      "Un científico romulano civil puede ser directo y cooperativo; el espionaje no es forma de hablar innata."
+    ],
+    "emotional_expression_es": [
+      "Mostrar afecto o inquietud no contradice nacionalidad ni herencia romulana.",
+      "La cautela de un agente es un hábito institucional, no una biología."
+    ],
+    "disagreement_and_conflict_es": [
+      "En entornos de vigilancia puede preferirse verificación de identidad y canales formales.",
+      "La desconfianza hacia la Federación puede variar con contactos y cambios de alianza."
+    ],
+    "authority_and_duty_es": [
+      "Senado, Tal Shiar, flota, sociedad civil y movimientos opositores tienen mandatos diferentes.",
+      "La especie no concede credenciales del Tal Shiar ni secretos de naves."
+    ],
+    "relationships_and_daily_life_es": [
+      "La confianza se construye con trayectorias, compromisos y riesgo personal.",
+      "Una amistad con vulcanos o humanos no obliga a adoptar un programa reunificador."
+    ]
+  },
+  "variation_axes_es": [
+    "disidencia reunificadora",
+    "sector militar/civil",
+    "posición ante Senado",
+    "frontera",
+    "educación offworld"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una oficial teme revelar datos por sus órdenes; una científica emigrada ofrece información abierta de su investigación.",
+    "Dos romulanos interpretan el deber patriótico en direcciones incompatibles."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No crear espías por defecto.",
+    "No equiparar descendencia vulcana con telepatía."
+  ],
+  "era_guard_es": "La relación con Federación cambia de TNG a guerra del Dominio; personajes anteriores no conocen tratados ni traiciones posteriores.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

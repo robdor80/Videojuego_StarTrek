@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_3154f6646296",
+  "display_name": "akira class",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/akira/akira_class",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "akira",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave de Flota Estelar clase Akira.",
+  "proposed_game_use": "F11: ruta operativa (candidata), comprobar calidad para uso NPC/jugable.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class akira/star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb",
+      "kind": "file",
+      "name": "star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 1605748,
+    "files": [
+      {
+        "path": "star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb",
+        "extension": ".glb",
+        "size_bytes": 1605748
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/akira/akira_class",
+  "directory_root": "assets/"
+}

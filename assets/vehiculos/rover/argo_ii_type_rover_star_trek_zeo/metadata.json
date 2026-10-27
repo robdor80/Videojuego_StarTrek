@@ -1,0 +1,75 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_0415a0eb9c51",
+  "display_name": "argo ii type rover star trek zeo",
+  "category": "ground_vehicle",
+  "relative_directory": "vehiculos/rover/argo_ii_type_rover_star_trek_zeo",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Rover Argo II inspirado en Star Trek; comprobar canon y versión exactos.",
+  "proposed_game_use": "F12/F13: operaciones en superficie, vehículo terrestre y misiones planetarias.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "vehicles/rover/argo-ii-type-rover-star-trek-zeo.zip",
+      "kind": "file",
+      "name": "argo-ii-type-rover-star-trek-zeo.zip"
+    },
+    {
+      "source": "vehicles/rover/argo_ii_type_rover_star_trek_zeo.glb",
+      "kind": "file",
+      "name": "argo_ii_type_rover_star_trek_zeo.glb"
+    },
+    {
+      "source": "vehicles/rover/argo_ii_type_rover_star_trek_zeo.zip",
+      "kind": "file",
+      "name": "argo_ii_type_rover_star_trek_zeo.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 3,
+    "size_bytes": 220251999,
+    "files": [
+      {
+        "path": "argo-ii-type-rover-star-trek-zeo.zip",
+        "extension": ".zip",
+        "size_bytes": 71403650
+      },
+      {
+        "path": "argo_ii_type_rover_star_trek_zeo.glb",
+        "extension": ".glb",
+        "size_bytes": 92734984
+      },
+      {
+        "path": "argo_ii_type_rover_star_trek_zeo.zip",
+        "extension": ".zip",
+        "size_bytes": 56113365
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "vehicles/rover/argo_ii_type_rover_star_trek_zeo",
+  "directory_root": "assets/"
+}

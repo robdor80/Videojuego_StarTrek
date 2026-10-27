@@ -1,18 +1,18 @@
 name: LORE-01 C — Atlas galáctico documental
 on:
   push:
-    branches: [main, "lore/01-c-galactic-astrography"]
+    branches: [main, "mundo/lore/01-c-galactic-astrography"]
     paths:
-      - "lore/astrography/**"
-      - "tools/validation/*lore01*"
-      - "docs/roadmap/lore_01_c_*"
+      - "mundo/lore/astrography/**"
+      - "desarrollo/tools/validation/*lore01*"
+      - "proyecto/docs/roadmap/lore_01_c_*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-c-astrography.yml"
   pull_request:
     paths:
-      - "lore/astrography/**"
-      - "tools/validation/*lore01*"
-      - "docs/roadmap/lore_01_c_*"
+      - "mundo/lore/astrography/**"
+      - "desarrollo/tools/validation/*lore01*"
+      - "proyecto/docs/roadmap/lore_01_c_*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-c-astrography.yml"
   workflow_dispatch:
@@ -33,16 +33,16 @@ jobs:
           python-version: "3.12"
       - name: Validar atlas, mapas, cuadrantes, rutas, derechos y DLC
         run: |
-          python -m py_compile tools/validation/validate_lore01_c.py tools/validation/test_lore01_c.py
-          python tools/validation/validate_lore01_c.py
-          python tools/validation/test_lore01_c.py
+          python -m py_compile desarrollo/tools/validation/validate_lore01_c.py desarrollo/tools/validation/test_lore01_c.py
+          python desarrollo/tools/validation/validate_lore01_c.py
+          python desarrollo/tools/validation/test_lore01_c.py
       - name: Regresión documental LORE-01 A, A.1 y B
         run: |
-          python tools/validation/validate_lore01_tng.py
-          python tools/validation/test_lore01_tng.py
-          python tools/validation/validate_lore01_depth.py
-          python tools/validation/test_lore01_depth.py
-          python tools/validation/validate_lore01_a1.py
-          python tools/validation/test_lore01_a1.py
-          python tools/validation/validate_lore01_b.py
-          python tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore01_tng.py
+          python desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_depth.py
+          python desarrollo/tools/validation/test_lore01_depth.py
+          python desarrollo/tools/validation/validate_lore01_a1.py
+          python desarrollo/tools/validation/test_lore01_a1.py
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py

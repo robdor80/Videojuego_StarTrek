@@ -1,0 +1,590 @@
+{
+  "gltf_previously_resolving_dependencies_checked": 18,
+  "gltf_preexisting_missing": [],
+  "new_gltf_missing": [],
+  "blender_files_opened_before_and_after": 11,
+  "blender_after": [
+    {
+      "blend": "assets/pasillos/Star Trek Voyager Collection/voyager/coleccion_de_pasillos_voyager/star-trek-voyager-collection/source/StarTrekVoyagerCollection.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/planetas/estrellas/prominencia_solar/solar-prominence/source/0000000.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/blender/analisis/ascendant_v1/ascendant_dae_analisis.blend",
+      "dependencies": [
+        {
+          "kind": "image",
+          "path": "//textures\\_0e3a929217289.560caa6605fe9.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\_0e3a929217289.560caa6605fe9.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\_58cd499217289.560ca8b44d983.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\_58cd499217289.560ca8b44d983.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\GRATE_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\GRATE_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\HONEYCOMB_GLOW_2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\HONEYCOMB_GLOW_2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Honeycomb_Grate.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\Honeycomb_Grate.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\iso_web_yellow2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\iso_web_yellow2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\NewTrekLCARS.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\NewTrekLCARS.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\VIEWSCREEN_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\analisis\\ascendant_v1\\textures\\VIEWSCREEN_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        }
+      ]
+    },
+    {
+      "blend": "assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/blender/analisis/ascendant_v1/ascendant_glb_analisis.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/blender/principal/enterprise_importacion_inicial.blend",
+      "dependencies": [
+        {
+          "kind": "image",
+          "path": "//textures\\_58cd499217289.560ca8b44d983.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\_58cd499217289.560ca8b44d983.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\__.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\__.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Aluminum.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\Aluminum.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\GRATE_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\GRATE_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\HONEYCOMB_GLOW_2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\HONEYCOMB_GLOW_2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\iso_web_yellow2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\iso_web_yellow2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_28.png",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_28.png",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3_0.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3_0.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3_1.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3_1.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_4.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_4.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_43.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_43.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_44.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_44.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_46.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_46.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_48.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_48.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_54.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_54.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_7.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_7.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\NewTrekLCARS.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\NewTrekLCARS.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\VIEWSCREEN_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\VIEWSCREEN_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        }
+      ]
+    },
+    {
+      "blend": "assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/blender/principal/theurgy_trabajo_v0_1.blend",
+      "dependencies": [
+        {
+          "kind": "image",
+          "path": "//textures\\_58cd499217289.560ca8b44d983.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\_58cd499217289.560ca8b44d983.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\__.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\__.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Aluminum.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\Aluminum.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\Blinds_Roman_Hobbled_Blue.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\GRATE_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\GRATE_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\HONEYCOMB_GLOW_2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\HONEYCOMB_GLOW_2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\iso_web_yellow2.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\iso_web_yellow2.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_28.png",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_28.png",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3_0.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3_0.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_3_1.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_3_1.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_4.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_4.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_43.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_43.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_44.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_44.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_46.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_46.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_48.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_48.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_54.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_54.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\material_7.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\material_7.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\NewTrekLCARS.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\NewTrekLCARS.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\VIEWSCREEN_GLOW.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\puentes\\starfleet\\uss_ascendant\\puente_uss_ascendant\\blender\\principal\\textures\\VIEWSCREEN_GLOW.jpg",
+          "packed": true,
+          "exists": false
+        }
+      ]
+    },
+    {
+      "blend": "assets/ships/starfleet/bridges/USS Suntherland/Sutherland_Consolas_Modificacion_v01.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/ships/starfleet/bridges/USS Suntherland/Sutherland_PBR_Lab_v01.blend",
+      "dependencies": [
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\moqueta\\Fabric023_2K-JPG\\Fabric023_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\moqueta\\Fabric023_2K-JPG\\Fabric023_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather asiento y respaldo\\Leather021_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather asiento y respaldo\\Leather021_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_Color.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_NormalDX.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_NormalDX.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_Roughness.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\sillas\\Leather023_2K-JPG\\Leather023_2K-JPG_Roughness.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather laterales y reposabrazos\\Leather027_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather laterales y reposabrazos\\Leather027_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Metal pie cilindrico\\Metal009_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Metal pie cilindrico\\Metal009_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\barandilla\\Metal011_2K-JPG\\Metal011_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\barandilla\\Metal011_2K-JPG\\Metal011_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\estructura_techo_luz\\Metal011_2K-JPG\\Metal011_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\estructura_techo_luz\\Metal011_2K-JPG\\Metal011_2K-JPG_Color.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\estructura_techo_luz\\Metal027_2K-JPG\\Metal027_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\estructura_techo_luz\\Metal027_2K-JPG\\Metal027_2K-JPG_Color.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Metal bajo reposabrazos\\Metal059A_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Metal bajo reposabrazos\\Metal059A_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\mamparos\\Plastic010_2K-JPG\\Plastic010_2K-JPG_Color.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\ships\\starfleet\\bridges\\USS Suntherland\\..\\..\\..\\..\\..\\..\\StarTrek_3D\\Sutherland_PBR_Lab\\textures\\fabric23\\mamparos\\Plastic010_2K-JPG\\Plastic010_2K-JPG_Color.jpg",
+          "packed": true,
+          "exists": false
+        }
+      ]
+    },
+    {
+      "blend": "assets/ships/starfleet/bridges/USS Suntherland/Sutherland_Plataforma_Corredera_v01.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/ships/starfleet/bridges/USS Suntherland/Sutherland_test_sillas_consolas_v01.blend",
+      "dependencies": []
+    },
+    {
+      "blend": "assets/stars/sistema_solar_animado/solar-system-animation/source/Solar System.blend",
+      "dependencies": [
+        {
+          "kind": "image",
+          "path": "//textures\\2k_earth_daymap.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_earth_daymap.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_earth_normal_map.tif",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_earth_normal_map.tif",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_earth_specular_map.tif",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_earth_specular_map.tif",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_jupiter.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_jupiter.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_mars.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_mars.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_mercury.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_mercury.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_moon.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_moon.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_neptune.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_neptune.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_saturn.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_saturn.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_saturn_ring_alpha.png",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_saturn_ring_alpha.png",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_sun.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_sun.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_uranus.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_uranus.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\2k_venus_surface.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\2k_venus_surface.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\8k_mercury_NRM.jpg",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\8k_mercury_NRM.jpg",
+          "packed": false,
+          "exists": false
+        },
+        {
+          "kind": "image",
+          "path": "//textures\\8k_stars_milky_way.hdr",
+          "resolved": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\assets\\stars\\sistema_solar_animado\\solar-system-animation\\source\\textures\\8k_stars_milky_way.hdr",
+          "packed": false,
+          "exists": false
+        }
+      ]
+    }
+  ],
+  "note": "No model saved or edited. Twenty unpacked missing texture references in two retained bundles were already unresolved before migration. Unreal editor validation pending."
+}

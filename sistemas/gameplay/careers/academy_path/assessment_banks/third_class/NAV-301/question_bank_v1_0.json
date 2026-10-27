@@ -1,0 +1,292 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "NAV-301",
+  "status": "editorially_aligned_with_developed_manual",
+  "source_manual": "sistemas/gameplay/careers/academy_path/study_materials/third_class/NAV-301/MANUAL_v1_0.md",
+  "question_count": 24,
+  "rule": "No question may require knowledge that is not explicitly taught in NAV-301 or established prerequisites.",
+  "questions": [
+    {
+      "id": "NAV-301-Q001",
+      "unit_id": "NAV-301-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Qué controla la estación de vuelo?",
+      "answer_key_es": [
+        "rumbo",
+        "velocidad",
+        "propulsión",
+        "maniobra",
+        "ejecución"
+      ]
+    },
+    {
+      "id": "NAV-301-Q002",
+      "unit_id": "NAV-301-U01",
+      "type": "knowledge",
+      "prompt_es": "Nombra cuatro acciones funcionales mínimas.",
+      "answer_key_es": [
+        "fijar rumbo",
+        "velocidad",
+        "warp",
+        "interceptar",
+        "órbita",
+        "atracar",
+        "abortar"
+      ]
+    },
+    {
+      "id": "NAV-301-Q003",
+      "unit_id": "NAV-301-U01",
+      "type": "compare",
+      "prompt_es": "Diferencia orden válida y ejecutable.",
+      "answer_key_es": [
+        "intención válida",
+        "capacidad actual suficiente"
+      ]
+    },
+    {
+      "id": "NAV-301-Q004",
+      "unit_id": "NAV-301-U01",
+      "type": "scenario",
+      "prompt_es": "La nave no puede cumplir la velocidad ordenada. ¿Qué haces?",
+      "answer_key_es": [
+        "informar limitación",
+        "proponer alternativa"
+      ]
+    },
+    {
+      "id": "NAV-301-Q005",
+      "unit_id": "NAV-301-U02",
+      "type": "short_answer",
+      "prompt_es": "¿Qué significa plotting?",
+      "answer_key_es": [
+        "construir solución de ruta"
+      ]
+    },
+    {
+      "id": "NAV-301-Q006",
+      "unit_id": "NAV-301-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Para qué sirve waypoint?",
+      "answer_key_es": [
+        "punto intermedio",
+        "evitar zona",
+        "apoyo",
+        "cumplir ruta"
+      ]
+    },
+    {
+      "id": "NAV-301-Q007",
+      "unit_id": "NAV-301-U02",
+      "type": "judgment",
+      "prompt_es": "¿Por qué ruta corta no siempre es mejor?",
+      "answer_key_es": [
+        "riesgo",
+        "legalidad",
+        "soporte",
+        "incertidumbre"
+      ]
+    },
+    {
+      "id": "NAV-301-Q008",
+      "unit_id": "NAV-301-U02",
+      "type": "compare",
+      "prompt_es": "Diferencia posibilidad física y legalidad.",
+      "answer_key_es": [
+        "puede recorrerse",
+        "puede estar restringida"
+      ]
+    },
+    {
+      "id": "NAV-301-Q009",
+      "unit_id": "NAV-301-U03",
+      "type": "knowledge",
+      "prompt_es": "Nombra tres maniobras a impulso.",
+      "answer_key_es": [
+        "rumbo",
+        "velocidad",
+        "aproximación",
+        "separación",
+        "formación"
+      ]
+    },
+    {
+      "id": "NAV-301-Q010",
+      "unit_id": "NAV-301-U03",
+      "type": "judgment",
+      "prompt_es": "¿Qué puede empeorar al aumentar velocidad?",
+      "answer_key_es": [
+        "margen reacción",
+        "seguridad",
+        "aproximación"
+      ]
+    },
+    {
+      "id": "NAV-301-Q011",
+      "unit_id": "NAV-301-U03",
+      "type": "short_answer",
+      "prompt_es": "¿De qué dependen márgenes de aproximación?",
+      "answer_key_es": [
+        "objetivo",
+        "movimiento relativo",
+        "misión",
+        "instrucciones"
+      ]
+    },
+    {
+      "id": "NAV-301-Q012",
+      "unit_id": "NAV-301-U03",
+      "type": "judgment",
+      "prompt_es": "¿Por qué una maniobra debe poder cancelarse?",
+      "answer_key_es": [
+        "estado puede cambiar",
+        "seguridad"
+      ]
+    },
+    {
+      "id": "NAV-301-Q013",
+      "unit_id": "NAV-301-U04",
+      "type": "procedure",
+      "prompt_es": "¿Qué se comprueba antes de warp?",
+      "answer_key_es": [
+        "destino",
+        "ruta",
+        "factor",
+        "capacidad",
+        "energía",
+        "daño",
+        "autorización"
+      ]
+    },
+    {
+      "id": "NAV-301-Q014",
+      "unit_id": "NAV-301-U04",
+      "type": "judgment",
+      "prompt_es": "¿Entrar en warp completa el viaje?",
+      "answer_key_es": [
+        "no",
+        "tránsito persistente"
+      ]
+    },
+    {
+      "id": "NAV-301-Q015",
+      "unit_id": "NAV-301-U04",
+      "type": "knowledge",
+      "prompt_es": "¿Qué se monitoriza en tránsito?",
+      "answer_key_es": [
+        "progreso",
+        "ETA",
+        "propulsión",
+        "condiciones",
+        "ruta"
+      ]
+    },
+    {
+      "id": "NAV-301-Q016",
+      "unit_id": "NAV-301-U04",
+      "type": "knowledge",
+      "prompt_es": "Nombra tres causas de replanificación.",
+      "answer_key_es": [
+        "daño",
+        "energía",
+        "subespacio",
+        "frontera",
+        "misión"
+      ]
+    },
+    {
+      "id": "NAV-301-Q017",
+      "unit_id": "NAV-301-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué datos requiere interceptar?",
+      "answer_key_es": [
+        "posición",
+        "vector",
+        "velocidad",
+        "contacto",
+        "capacidad"
+      ]
+    },
+    {
+      "id": "NAV-301-Q018",
+      "unit_id": "NAV-301-U05",
+      "type": "knowledge",
+      "prompt_es": "¿Qué controla una aproximación?",
+      "answer_key_es": [
+        "velocidad relativa",
+        "separación",
+        "orientación",
+        "tráfico"
+      ]
+    },
+    {
+      "id": "NAV-301-Q019",
+      "unit_id": "NAV-301-U05",
+      "type": "judgment",
+      "prompt_es": "¿Qué añade el acoplamiento?",
+      "answer_key_es": [
+        "puerto",
+        "autorización",
+        "aproximación segura"
+      ]
+    },
+    {
+      "id": "NAV-301-Q020",
+      "unit_id": "NAV-301-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Para qué sirven márgenes?",
+      "answer_key_es": [
+        "incertidumbre",
+        "error",
+        "movimiento",
+        "demora"
+      ]
+    },
+    {
+      "id": "NAV-301-Q021",
+      "unit_id": "NAV-301-U06",
+      "type": "knowledge",
+      "prompt_es": "Nombra tres causas de desviación.",
+      "answer_key_es": [
+        "daño",
+        "error",
+        "nueva información",
+        "condiciones",
+        "obstáculo"
+      ]
+    },
+    {
+      "id": "NAV-301-Q022",
+      "unit_id": "NAV-301-U06",
+      "type": "procedure",
+      "prompt_es": "¿Cómo actúas con datos incompletos?",
+      "answer_key_es": [
+        "reducir confianza",
+        "ampliar margen",
+        "pedir información"
+      ]
+    },
+    {
+      "id": "NAV-301-Q023",
+      "unit_id": "NAV-301-U06",
+      "type": "judgment",
+      "prompt_es": "¿Abortar es siempre fracaso?",
+      "answer_key_es": [
+        "no",
+        "puede ser decisión segura/profesional"
+      ]
+    },
+    {
+      "id": "NAV-301-Q024",
+      "unit_id": "NAV-301-U06",
+      "type": "short_answer",
+      "prompt_es": "¿Qué incluye reporte de anomalía?",
+      "answer_key_es": [
+        "cambio",
+        "impacto",
+        "opción segura",
+        "ETA/ruta revisada"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_a15926a850d1",
+  "display_name": "asteroid",
+  "category": "asteroid",
+  "relative_directory": "planetas/asteroides/asteroid",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Asteroide 3D; variante regular o low-poly según nombre.",
+  "proposed_game_use": "F13: campo de asteroides, objetos de navegación y escenarios espaciales.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/asteroids/asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb",
+      "kind": "file",
+      "name": "asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 57866024,
+    "files": [
+      {
+        "path": "asteroid_201ccb91e7ef4b02af2e855c3dae5603.glb",
+        "extension": ".glb",
+        "size_bytes": 57866024
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "universe/asteroids/asteroid",
+  "directory_root": "assets/"
+}

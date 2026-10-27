@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_21c39b5b6808",
+  "display_name": "Pasillo modular Star Trek",
+  "category": "corridor",
+  "relative_directory": "pasillos/general/pasillo_modular_star_trek",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Paquete ZIP de pasillo modular sin GLB suelto identificado en el árbol.",
+  "proposed_game_use": "Comprobar número de módulos y uniones compatibles.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/modular-star-trek-corridor.zip",
+      "kind": "file",
+      "name": "modular-star-trek-corridor.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 3372116,
+    "files": [
+      {
+        "path": "modular-star-trek-corridor.zip",
+        "extension": ".zip",
+        "size_bytes": 3372116
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/general/pasillo_modular_star_trek",
+  "directory_root": "assets/"
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e7b4fab25973",
+  "display_name": "deep space 12 ds9 star trek zeo",
+  "category": "space_station",
+  "relative_directory": "estaciones/descargadas/bajoran_system/deep_space_12_ds9_star_trek_zeo_002",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Modelo rotulado Deep Space 12 / DS9; nombre ambiguo, confirmar si realmente es Deep Space Nine u otra estación.",
+  "proposed_game_use": "F13: estación, escenario de comercio/tránsito; cotejar versiones.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "space stations/DS9/deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb",
+      "kind": "file",
+      "name": "deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 397690816,
+    "files": [
+      {
+        "path": "deep_space_12_-_ds9_-_star_trek_zeo_0e3d44a8a82e47959200a9d8d9633e84.glb",
+        "extension": ".glb",
+        "size_bytes": 397690816
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "space_stations/bajoran_system/deep_space_12_ds9_star_trek_zeo_002",
+  "directory_root": "assets/"
+}

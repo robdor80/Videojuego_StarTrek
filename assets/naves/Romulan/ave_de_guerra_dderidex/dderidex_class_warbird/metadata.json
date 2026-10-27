@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_58f45b94ec1e",
+  "display_name": "dderidex class warbird",
+  "category": "ship",
+  "relative_directory": "naves/Romulan/ave_de_guerra_dderidex/dderidex_class_warbird",
+  "taxonomy": {
+    "faction_inferred": "Imperio Romulano",
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Diseño de ave de guerra romulana de clase D’deridex (TNG).",
+  "proposed_game_use": "F13: presencia romulana en universo dinámico.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Romulan/star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb",
+      "kind": "file",
+      "name": "star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 5148168,
+    "files": [
+      {
+        "path": "star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb",
+        "extension": ".glb",
+        "size_bytes": 5148168
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/romulan/ave_de_guerra_dderidex/dderidex_class_warbird",
+  "directory_root": "assets/"
+}

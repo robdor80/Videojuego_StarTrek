@@ -1,0 +1,1151 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 D",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "runtime_import_allowed": false,
+  "source_registry": "mundo/sources/source_registry/source_registry.json",
+  "dataset_id": "lore02_d_phenomena_atlas",
+  "record_count": 20,
+  "records": [
+    {
+      "phenomenon_id": "l02d_nebulosa_no_caracterizada",
+      "display_name_es": "Nebulosa de composición indeterminada",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_astrofisica_estelar"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "spectral_profile",
+        "signal_attenuation",
+        "particle_flux"
+      ],
+      "possible_hazards_es": [
+        "interferencia de sensores",
+        "variación de comunicaciones"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SCIENCE_STATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_pulsar_variable",
+      "display_name_es": "Púlsar y emisión periódica",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_astrofisica_estelar"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "periodic_radiation",
+        "timing_sequence",
+        "spectral_profile"
+      ],
+      "possible_hazards_es": [
+        "exposición radiativa según distancia y blindaje"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SCIENCE_STATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_singularidad_gravitacional",
+      "display_name_es": "Fuente compacta de gradiente gravitatorio",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_fisica_gravitacional"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "gravity_gradient",
+        "lens_distortion",
+        "orbital_change"
+      ],
+      "possible_hazards_es": [
+        "efectos de marea y trayectoria según proximidad"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "VOY_BLINK_OF_AN_EYE"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_tormenta_ionizada",
+      "display_name_es": "Tormenta de partículas o ionización",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_ciencias_atmosfericas"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "particle_flux",
+        "radio_noise",
+        "field_variation"
+      ],
+      "possible_hazards_es": [
+        "interferencia, radiación o descarga en un caso concreto"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_THE_ENEMY"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_interferencia_subespacial",
+      "display_name_es": "Perturbación de propagación subespacial",
+      "family": "subspace",
+      "discipline_refs": [
+        "l02d_ciencias_subespaciales"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "signal_latency",
+        "subspace_noise",
+        "signal_dropouts"
+      ],
+      "possible_hazards_es": [
+        "enlaces degradados, estimación de posición incierta"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SUBSPACE_COMMUNICATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_agujero_gusano_bajor",
+      "display_name_es": "Agujero de gusano bajorano",
+      "family": "subspace",
+      "discipline_refs": [
+        "l02d_ciencias_subespaciales"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "aperture_transients",
+        "spatial_displacement",
+        "traffic_record"
+      ],
+      "possible_hazards_es": [
+        "interacción diplomática y tránsito condicionado"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "DS9_EMISSARY"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_protouniverso_en_formacion",
+      "display_name_es": "Fenómeno de universo incipiente",
+      "family": "extraordinary",
+      "discipline_refs": [
+        "l02d_cosmologia"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "energy_gradient",
+        "containment_behavior",
+        "size_change"
+      ],
+      "possible_hazards_es": [
+        "efectos desconocidos y responsabilidades de contención"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "DS9_PLAYING_GOD"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_forma_vida_espacial",
+      "display_name_es": "Organismo espacial no reconocido inicialmente",
+      "family": "biological",
+      "discipline_refs": [
+        "l02d_ecologia_espacial"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "bioelectric_response",
+        "energy_absorption",
+        "movement_pattern"
+      ],
+      "possible_hazards_es": [
+        "daño accidental a organismo por interpretación errónea"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations",
+        "medicine",
+        "diplomacy"
+      ],
+      "technology_refs": [
+        "l02a_station_research"
+      ],
+      "equipment_refs": [
+        "l02b_tricorder_specialized_biology"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_GALAXYS_CHILD"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_ecosistema_oceanico",
+      "display_name_es": "Ecosistema planetario de sensibilidad elevada",
+      "family": "planetary",
+      "discipline_refs": [
+        "l02d_exobiologia"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "biosignature",
+        "chemical_variation",
+        "local_biological_response"
+      ],
+      "possible_hazards_es": [
+        "alteración ecológica por extracción o tecnología"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_tricorder_geology"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "VOY_THIRTY_DAYS_REFERENCE"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "Generalización cautelosa de una familia de observaciones; propiedades exactas dependen del caso, no valen universalmente."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_desfase_temporal_planeta",
+      "display_name_es": "Diferencial temporal entre planeta y órbita",
+      "family": "temporal",
+      "discipline_refs": [
+        "l02d_cronodinamica"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "clock_drift",
+        "observation_rate_discrepancy",
+        "gravity_gradient"
+      ],
+      "possible_hazards_es": [
+        "contacto no intencionado y alteración cultural"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations",
+        "chronology",
+        "first_contact"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "VOY_BLINK_OF_AN_EYE",
+          "L02D_ST_BLINK"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_bucle_causal_temporal",
+      "display_name_es": "Bucle de causalidad temporal",
+      "family": "temporal",
+      "discipline_refs": [
+        "l02d_cronodinamica"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "sequence_disagreement",
+        "recurrent_signal",
+        "deja_vu_report"
+      ],
+      "possible_hazards_es": [
+        "eventos repetidos con información incompleta"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations",
+        "chronology",
+        "first_contact"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_CAUSE_AND_EFFECT",
+          "L02D_ST_CAUSE_EFFECT"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_fisura_cuantica",
+      "display_name_es": "Fisura asociada a realidades paralelas",
+      "family": "extraordinary",
+      "discipline_refs": [
+        "l02d_fisica_cuantica"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "phase_signature",
+        "identity_discrepancy",
+        "spatial_signature"
+      ],
+      "possible_hazards_es": [
+        "cruce de realidades en caso particular"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_PARALLELS",
+          "L02D_ST_PARALLELS"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_burbuja_realidad",
+      "display_name_es": "Burbuja de realidad experimental",
+      "family": "extraordinary",
+      "discipline_refs": [
+        "l02d_fisica_cuantica"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "observation_disagreement",
+        "subject_report",
+        "field_boundary"
+      ],
+      "possible_hazards_es": [
+        "información del observador desalineada"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_REMEMBER_ME"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_campo_temporal_local",
+      "display_name_es": "Campo de dilatación temporal localizado",
+      "family": "temporal",
+      "discipline_refs": [
+        "l02d_cronodinamica"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "clock_drift",
+        "spatial_boundary",
+        "material_state_discrepancy"
+      ],
+      "possible_hazards_es": [
+        "riesgo de interpretación de secuencia causal"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations",
+        "chronology",
+        "first_contact"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_TIMESCAPE"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_elipse_gravitonica",
+      "display_name_es": "Elipse de graviton o fenómeno gravitónico transitorio",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_fisica_gravitacional"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "gravity_gradient",
+        "electromagnetic_response",
+        "trajectory_deviation"
+      ],
+      "possible_hazards_es": [
+        "trayectorias no convencionales y riesgo de sonda"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "VOY_ONE_SMALL_STEP"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_alteracion_dinamica_omega",
+      "display_name_es": "Perturbación excepcional del subespacio vinculada a Omega",
+      "family": "subspace",
+      "discipline_refs": [
+        "l02d_ciencias_subespaciales"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "subspace_instability",
+        "sensor_saturation",
+        "navigation_disruption"
+      ],
+      "possible_hazards_es": [
+        "restricciones y confidencialidad condicionadas a autoridad"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_subspace_transceiver"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "VOY_OMEGA_DIRECTIVE"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_nube_viviente",
+      "display_name_es": "Fenómeno nebuloso posteriormente interpretado como organismo",
+      "family": "biological",
+      "discipline_refs": [
+        "l02d_exobiologia"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "gas_spectrum",
+        "bioelectric_response",
+        "energy_transfer"
+      ],
+      "possible_hazards_es": [
+        "daños accidentales por muestreo inadecuado"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations",
+        "medicine",
+        "diplomacy"
+      ],
+      "technology_refs": [
+        "l02a_station_research"
+      ],
+      "equipment_refs": [
+        "l02b_tricorder_specialized_biology"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "VOY_THE_CLOUD"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_salto_espacial_experimental",
+      "display_name_es": "Desplazamiento espacial extremo no reproducible",
+      "family": "extraordinary",
+      "discipline_refs": [
+        "l02d_cosmologia"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "coordinate_discrepancy",
+        "flight_log_mismatch",
+        "energy_pattern"
+      ],
+      "possible_hazards_es": [
+        "falta de coordenadas y retorno no garantizado"
+      ],
+      "default_disposition": "context_dependent",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "TNG_WHERE_NO_ONE_HAS_GONE_BEFORE"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_exposicion_metodologia_oculta",
+      "display_name_es": "Alteraciones fisiológicas derivadas de experimentación no consentida",
+      "family": "artificial",
+      "discipline_refs": [
+        "l02d_metrologia_instrumental"
+      ],
+      "canonical_exemplar": "CASE_SPECIFIC",
+      "observables": [
+        "unexplained_symptoms",
+        "interference_pattern",
+        "hidden_emitter"
+      ],
+      "possible_hazards_es": [
+        "consentimiento, privacidad, bioseguridad"
+      ],
+      "default_disposition": "hazard_if_confirmed",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "SCREEN_CANON",
+        "source_ids": [
+          "VOY_SCIENTIFIC_METHOD"
+        ],
+        "confidence": "HIGH",
+        "claim_scope_es": "Sólo la existencia y descripción del fenómeno en los episodios citados; clasificación, señales propuestas y simulación son inferencias de diseño."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    },
+    {
+      "phenomenon_id": "l02d_nube_composicion_desconocida",
+      "display_name_es": "Nube estelar con propiedades no concluyentes",
+      "family": "astronomical",
+      "discipline_refs": [
+        "l02d_quimica_analitica"
+      ],
+      "canonical_exemplar": "NO_CANONICAL_UNIVERSAL_PROPERTIES",
+      "observables": [
+        "particle_flux",
+        "chemical_signature",
+        "spectral_profile"
+      ],
+      "possible_hazards_es": [
+        "ninguno predeterminado; contaminación al tomar muestra"
+      ],
+      "default_disposition": "not_intrinsically_hostile",
+      "presence_rule": "CAN_EXIST_WITHOUT_PLAYER_INTERACTION",
+      "encounter_rule": "NO_FORCED_MISSION_OR_THREAT",
+      "knowledge_state": "UNKNOWN_UNTIL_EVIDENCE",
+      "measurement_requirements": [
+        "sensor_installed_and_working",
+        "time_window_and_resolution",
+        "calibration_and_environment",
+        "observer_authorization",
+        "provenance_and_uncertainty"
+      ],
+      "hypothesis_alternatives": [
+        "instrumental_artifact",
+        "known_natural_process",
+        "uncharacterized_process"
+      ],
+      "cross_domain_effects": [
+        "science",
+        "navigation",
+        "ship_operations"
+      ],
+      "technology_refs": [
+        "l02a_navigational_deflector"
+      ],
+      "equipment_refs": [
+        "l02b_field_spectrometer"
+      ],
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Plantilla creada para investigación procedural; no presentada como evento canónico."
+      },
+      "mechanics_status": "PROPOSAL_ONLY_NOT_EXECUTABLE",
+      "numeric_strength": null,
+      "guaranteed_resolution": null,
+      "source_bound_notice": "Las hipótesis y observables son opciones de autoría, no mediciones reales ni pruebas concluyentes."
+    }
+  ],
+  "principles": [
+    "El mismo fenómeno puede ser benigno, desconocido o peligroso según condiciones reales.",
+    "Un sensor puede detectar síntomas, no necesariamente su causa.",
+    "La existencia de un ejemplo de pantalla no habilita contenido reservado del Cuadrante Delta.",
+    "Sin intervención del jugador el fenómeno puede persistir, evolucionar o terminar sólo mediante reglas futuras de CoreRPG."
+  ]
+}

@@ -28,15 +28,15 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 
 | Area | Status | Notes |
 |---|---|---|
-| `sources/canon_policy.md` | ✅ COMPLETE | Source authority and conflict rules fixed. |
-| `sources/provenance_policy.md` | ✅ COMPLETE | Provenance and confidence model fixed. |
-| `sources/source_registry/` | ✅ COMPLETE | Living registry established. |
-| `docs/workflows/content_research_workflow.md` | ✅ COMPLETE | Standard research-to-commit workflow fixed. |
-| `docs/decisions/playable_eras.md` | ✅ COMPLETE | Three playable eras fixed by Roberto. |
-| `docs/decisions/campaign_continuity.md` | ✅ COMPLETE | Canon sets the starting state; campaign future is emergent. |
-| `docs/decisions/universal_rank_insignia.md` | ✅ COMPLETE | TNG-style pips standardised across all playable eras by design. |
-| `docs/decisions/player_facing_language.md` | ✅ COMPLETE | Internal IDs may be English; all normal player-facing text is es-ES. |
-| `docs/decisions/lore_to_game_rule.md` | ✅ COMPLETE | Lore is input; gameplay/data/runtime usability is the required output. |
+| `mundo/sources/canon_policy.md` | ✅ COMPLETE | Source authority and conflict rules fixed. |
+| `mundo/sources/provenance_policy.md` | ✅ COMPLETE | Provenance and confidence model fixed. |
+| `mundo/sources/source_registry/` | ✅ COMPLETE | Living registry established. |
+| `proyecto/docs/workflows/content_research_workflow.md` | ✅ COMPLETE | Standard research-to-commit workflow fixed. |
+| `proyecto/docs/decisions/playable_eras.md` | ✅ COMPLETE | Three playable eras fixed by Roberto. |
+| `proyecto/docs/decisions/campaign_continuity.md` | ✅ COMPLETE | Canon sets the starting state; campaign future is emergent. |
+| `proyecto/docs/decisions/universal_rank_insignia.md` | ✅ COMPLETE | TNG-style pips standardised across all playable eras by design. |
+| `proyecto/docs/decisions/player_facing_language.md` | ✅ COMPLETE | Internal IDs may be English; all normal player-facing text is es-ES. |
+| `proyecto/docs/decisions/lore_to_game_rule.md` | ✅ COMPLETE | Lore is input; sistemas/gameplay/data/runtime usability is the required output. |
 
 ## Playable era scope
 
@@ -52,12 +52,12 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 
 | Area | Status | Notes |
 |---|---|---|
-| `universe/chronology/master_timeline/` | ✅ COMPLETE | Minimal backbone for current scope. |
-| `universe/chronology/temporal_anchors/` | ✅ COMPLETE | Initial era/branch anchors fixed. |
-| `universe/chronology/era_profiles/pike/` | ✅ COMPLETE | Reference profile established. |
-| `universe/chronology/era_profiles/kirk/` | ✅ COMPLETE | TOS + Kirk-film reference profile established. |
-| `universe/chronology/era_profiles/tng_ds9_voyager/` | ✅ COMPLETE | Shared late-24th-century profile established. |
-| `universe/chronology/historical_events/` | ⬜ TODO | Filled progressively as later domains require events. |
+| `sistemas/universe/chronology/master_timeline/` | ✅ COMPLETE | Minimal backbone for current scope. |
+| `sistemas/universe/chronology/temporal_anchors/` | ✅ COMPLETE | Initial era/branch anchors fixed. |
+| `sistemas/universe/chronology/era_profiles/pike/` | ✅ COMPLETE | Reference profile established. |
+| `sistemas/universe/chronology/era_profiles/kirk/` | ✅ COMPLETE | TOS + Kirk-film reference profile established. |
+| `sistemas/universe/chronology/era_profiles/tng_ds9_voyager/` | ✅ COMPLETE | Shared late-24th-century profile established. |
+| `sistemas/universe/chronology/historical_events/` | ⬜ TODO | Filled progressively as later domains require events. |
 
 ## Federation / Starfleet
 
@@ -103,7 +103,7 @@ Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
 | Interiors / bridge stations / crew complements | ✅ COMPLETE | Bridge station permissions/POVs, interior location state and live crew/shift manifest models established. |
 | Orders / alerts / power / damage | ✅ COMPLETE | Natural-language order pipeline, authority validation, alert states, power allocation, localized damage and timed repairs established. |
 | Playable ship duty loops | ✅ COMPLETE | Navigation, Tactical, Engineering, Science, Communications and Medical loops share authoritative ship/world state. |
-| Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
+| Functional console catalogue v0.1 | ✅ COMPLETE | Sixteen reusable console families fixed under `sistemas/gameplay/ship_operations/consoles/`; functional console is separated from physical station and UX. |
 | Observable universe core | ✅ COMPLETE | Authoritative world truth, observable-entity/signature contracts, deterministic seeded v0.0.1 generator and deterministic sensor-detection resolution are implemented for the current vertical-slice scope. |
 | Operational event log v0.1 | ✅ COMPLETE | Cross-console append-only event contract, event vocabulary, visibility projection and Sensors worked example established; evaluation remains a separate consumer. |
 | Records and logs foundation | ✅ COMPLETE | Captain's, personal, department, duty and restricted-log foundations established with privacy/access and AI-assisted drafting boundaries. |
@@ -124,13 +124,13 @@ The project is using the CoreRPG lead time to complete eight game-facing design 
 | Procedural universe and population | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 | Starship Computer | ✅ ESTABLISHED | 🟨 IN_PROGRESS |
 
-Control document: `docs/roadmap/game_design_readiness_v0_2.md`.
+Control document: `proyecto/docs/roadmap/game_design_readiness_v0_2.md`.
 
 ## Procedural content-depth baseline
 
 Control documents:
-- `docs/roadmap/procedural_content_depth_plan_v0.1.md`
-- `docs/roadmap/procedural_content_depth_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_content_depth_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_content_depth_status_v0.1.json`
 
 Current defined baseline:
 - **63 / 63 packages COMPLETE**;
@@ -145,8 +145,8 @@ This means the currently defined depth pass has coherent source/provenance, game
 ## Shipboard life & procedural starship generation v0.1
 
 Control documents:
-- `docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`
-- `docs/roadmap/shipboard_life_and_procedural_starship_generation_status_v0.1.json`
+- `proyecto/docs/roadmap/shipboard_life_and_procedural_starship_generation_plan_v0.1.md`
+- `proyecto/docs/roadmap/shipboard_life_and_procedural_starship_generation_status_v0.1.json`
 
 Current baseline:
 - **15 / 15 packages COMPLETE**;
@@ -163,13 +163,13 @@ Current baseline:
 - manual / proposal-with-approval / delegated-autonomous command modes;
 - mandatory registry for future automated command decisions.
 
-**Runtime boundary:** content/contracts/reference implementation are complete for v0.1, but authoritative live World State, schedule arbitration and off-screen catch-up remain dependent on CoreRPG 4.5+.
+**Runtime boundary:** sistemas/content/contracts/reference implementation are complete for v0.1, but authoritative live World State, schedule arbitration and off-screen catch-up remain dependent on CoreRPG 4.5+.
 
 ## Procedural facilities & station life v0.1
 
 Control documents:
-- `docs/roadmap/procedural_facilities_and_station_life_plan_v0.1.md`
-- `docs/roadmap/procedural_facilities_and_station_life_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_facilities_and_station_life_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_facilities_and_station_life_status_v0.1.json`
 
 Current baseline:
 - **15 / 15 packages COMPLETE**;
@@ -189,13 +189,13 @@ Current baseline:
 - locked positive Relay Station 47-type fixture;
 - locked negative fixture proving `player_needs_repairs` cannot create a station.
 
-**Runtime boundary:** content/contracts/reference implementation are complete for v0.1. Authoritative live construction catch-up, facility population simulation, queues, traffic and persistence remain dependent on CoreRPG 4.5+.
+**Runtime boundary:** sistemas/content/contracts/reference implementation are complete for v0.1. Authoritative live construction catch-up, facility population simulation, queues, traffic and persistence remain dependent on CoreRPG 4.5+.
 
 ## Procedural worlds, settlements, civilizations & First Contact v0.1
 
 Control documents:
-- `docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_plan_v0.1.md`
-- `docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_worlds_settlements_civilizations_first_contact_status_v0.1.json`
 
 Current baseline:
 - **18 / 18 packages COMPLETE**;
@@ -222,9 +222,9 @@ Current baseline:
 ## Procedural Civilization Evolution & Galactic Interaction v0.1
 
 Control documents:
-- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
-- `docs/roadmap/procedural_civilization_evolution_galactic_interaction_plan_v0.1.md`
-- `docs/roadmap/procedural_civilization_evolution_galactic_interaction_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_civilization_evolution_galactic_interaction_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_civilization_evolution_galactic_interaction_status_v0.1.json`
 
 Current baseline:
 - **Block 1 COMPLETE — CE001–CE015: 15/15**;
@@ -248,9 +248,9 @@ Current baseline:
 ## Procedural Colonization, Expansion & Borders v0.1
 
 Control documents:
-- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
-- `docs/roadmap/procedural_colonization_expansion_borders_plan_v0.1.md`
-- `docs/roadmap/procedural_colonization_expansion_borders_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_colonization_expansion_borders_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_colonization_expansion_borders_status_v0.1.json`
 
 Current baseline:
 - **Block 2 COMPLETE — CX001–CX016: 16/16**;
@@ -275,9 +275,9 @@ Current baseline:
 ## Procedural Conflict & War v0.1
 
 Control documents:
-- `docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
-- `docs/roadmap/procedural_conflict_war_plan_v0.1.md`
-- `docs/roadmap/procedural_conflict_war_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_conflict_war_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_conflict_war_status_v0.1.json`
 
 Current baseline:
 - **Block 3 COMPLETE — CW001–CW018: 18/18**;
@@ -304,8 +304,8 @@ Current baseline:
 ## Academy Life & Social Simulation v0.1
 
 Control documents:
-- `docs/roadmap/academy_life_social_simulation_plan_v0.1.md`
-- `docs/roadmap/academy_life_social_simulation_status_v0.1.json`
+- `proyecto/docs/roadmap/academy_life_social_simulation_plan_v0.1.md`
+- `proyecto/docs/roadmap/academy_life_social_simulation_status_v0.1.json`
 
 Current status:
 - **Steps 1–20/20 COMPLETE — Academy population + procedural cadets + academic grouping + quarters/roommates + personal schedules + free time + extracurricular activities + academic enrichment + social life + romance/dating + NPC↔NPC relationships + mentors/instructors + wellbeing/balance + obligations/consequences + campus events + off-screen life + Social LOD + year progression/continuity + Academy record + final closure**;
@@ -562,7 +562,7 @@ The Sensors vertical slice remains preserved and ready for later UX/runtime cont
 | D — Relaciones diplomáticas | ✅ COMPLETE | PR #29 fusionada en `main` (2026-10-19), commit `a1a261f6`; 27 expedientes, 40 hitos, tratados, conflictos y escenarios. Cuatro workflows satisfactorios antes de fusión. **No** es implementación runtime. |
 | E — Información operativa transversal | ✅ COMPLETE | PR #30 fusionada el 2026-10-19 en `main`, commit `3479faefb9aa56980265c5b03aeab3ba3ddd083f`; rama eliminada. 32 fichas en 8 ámbitos, 12 escenarios, 18 incertidumbres, cruce A–E y auditoría documental. Cierre **documental**, no implementación runtime CoreRPG/UE5. |
 
-Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. El universo global continúa ampliándose mediante futuras fases LORE sin reabrir automáticamente la Base Galáctica A–E, documentalmente cerrada.
+Reserva aprobada: `sistemas/universe/generation/lore01_tng_content_availability_v0.1.json` separa cinco especies del futuro DLC Delta; el portal transwarp Borg sigue siendo **concepto no implementado**. Este avance no implica ejecución en CoreRPG/UE5. El universo global continúa ampliándose mediante futuras fases LORE sin reabrir automáticamente la Base Galáctica A–E, documentalmente cerrada.
 
 
 ## LORE-02 — Tecnología, Ciencia y Medicina (inicio 2026-10-19)
@@ -575,12 +575,12 @@ Reserva aprobada: `universe/generation/lore01_tng_content_availability_v0.1.json
 | D — Ciencia y fenómenos | ✅ COMPLETE | PR #35 fusionada en `main` (2026-10-22; `2f5e2c15`): 14 disciplinas, 20 fenómenos, 9 métodos y legado científico aprobado; cierre documental sin implementación CoreRPG/UE5. |
 | E — Integración y auditoría A–D | ✅ COMPLETE | PR #36 fusionada en `main` (2026-10-22; `97f4c8da`); auditoría A–D, correcciones documentales, 27 pruebas E y 11 workflows postfusión satisfactorios. Cierre documental, sin runtime CoreRPG/UE5. |
 
-Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. **LORE-02 A–E: COMPLETE documental** tras la aprobación/fusión de PR #36, con los cinco apartados en `main` y 11 GitHub Actions posteriores satisfactorias. Los `status: NEEDS_REVIEW` internos identifican fichas editoriales aún no homologadas como contenido importable; no contradicen el cierre documental de A–D.
+Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por sí sola. **LORE-02 A–E: COMPLETE documental** tras la aprobación/fusión de PR #36, con los cinco apartados en `main` y 11 GitHub Actions posteriores satisfactorias. Los `status: NEEDS_REVIEW` internos identifican fichas editoriales aún no homologadas como contenido importable; no contradicen el cierre documental de A–D.
 
 
 ## LORE-03 — Historia, conflictos y continuidad galáctica (inicio 2026-10-23)
 
-**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
+**Decisión de alcance aprobada 23-10-2026:** única época jugable `tng_ds9_voyager`, ampliada en historia al 2383 propuesto como comienzo de Academia; cuatro años hasta alférez ~2387. Pike/Kirk permanecen exclusivamente históricos. Véase `proyecto/docs/decisions/playable_eras.md`. Esta decisión posterior prevalece sobre la selección antigua de tres épocas en documentos F01.
 
 | Apartado | Estado | Alcance actual |
 |---|---|---|
@@ -590,15 +590,15 @@ Plan: `docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runtime por s
 | D — Continuidad/divergencia | ⬜ TODO | Estado inicial por fecha elegida, historia emergente; sin runtime. |
 | E — Auditoría global | ⬜ TODO | Verificación cruzada A–D y autorización humana final. |
 
-Plan: `docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A CERRADA Y FUSIONADA** mediante [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38), commit `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. La regularización administrativa de este estado se propone en PR independiente. **B–E permanecen sin iniciar.** CoreRPG/UE5 no reciben datos runtime de esta fase.
+Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A CERRADA Y FUSIONADA** mediante [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38), commit `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. La regularización administrativa de este estado se propone en PR independiente. **B–E permanecen sin iniciar.** CoreRPG/UE5 no reciben datos runtime de esta fase.
 
 ## Procedural living-universe master plan
 
 Control documents:
-- `docs/roadmap/procedural_layers_master_plan_v0.1.md`
-- `docs/roadmap/procedural_layers_status_v0.1.json`
-- `docs/roadmap/procedural_runtime_readiness_v0.1.md`
-- `docs/roadmap/nimroel_to_star_trek_procedural_reuse_matrix_v0.1.md`
+- `proyecto/docs/roadmap/procedural_layers_master_plan_v0.1.md`
+- `proyecto/docs/roadmap/procedural_layers_status_v0.1.json`
+- `proyecto/docs/roadmap/procedural_runtime_readiness_v0.1.md`
+- `proyecto/docs/roadmap/nimroel_to_star_trek_procedural_reuse_matrix_v0.1.md`
 
 Current layer status:
 - **118 / 120 COMPLETE** at Star Trek design/contract/validation-foundation level;

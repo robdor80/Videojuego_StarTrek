@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_d2e361f75877",
+  "display_name": "florence steak fiorentina bistecca",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/carne/florence_steak_fiorentina_bistecca",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Bistecca alla fiorentina; comida replicable.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/carne/florence-steak-fiorentina-bistecca.zip",
+      "kind": "file",
+      "name": "florence-steak-fiorentina-bistecca.zip"
+    },
+    {
+      "source": "objects/food/carne/florence_steak_-_fiorentina_bistecca.glb",
+      "kind": "file",
+      "name": "florence_steak_-_fiorentina_bistecca.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 30889088,
+    "files": [
+      {
+        "path": "florence-steak-fiorentina-bistecca.zip",
+        "extension": ".zip",
+        "size_bytes": 19481036
+      },
+      {
+        "path": "florence_steak_-_fiorentina_bistecca.glb",
+        "extension": ".glb",
+        "size_bytes": 11408052
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/carne/florence_steak_fiorentina_bistecca",
+  "directory_root": "assets/"
+}

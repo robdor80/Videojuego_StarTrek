@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_vidiian_behavior",
+  "species_index_key": "vidiian",
+  "display_name_es": "Vidianos y respuestas a la epidemia del Fago",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "DLC_DELTA_ONLY",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/VIDIIAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/vidiian_v0.2.json",
+    "anchors": [
+      "VOY_PHAGE",
+      "VOY_FACES",
+      "VOY_LIFESIGNS"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "La epidemia condiciona instituciones sanitarias y dilemas de supervivencia, pero Denara Pel demuestra que las decisiones éticas no son iguales en toda la sociedad.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un médico puede emplear precisión clínica o justificar decisiones desde una situación de escasez.",
+      "Un paciente puede pedir ayuda sin tener relación con extracción ilegal de órganos."
+    ],
+    "emotional_expression_es": [
+      "El miedo a la enfermedad y la esperanza de curación dependen de historia médica.",
+      "El aspecto afectado no mide moralidad ni intención."
+    ],
+    "disagreement_and_conflict_es": [
+      "Los delitos médicos se imputan a sus autores y organizaciones concretas.",
+      "Negociar una terapia requiere consentimiento, recursos y estado clínico."
+    ],
+    "authority_and_duty_es": [
+      "Profesionales de salud tienen competencias según institución registrada.",
+      "La enfermedad no concede control político ni sobre otros pacientes."
+    ],
+    "relationships_and_daily_life_es": [
+      "Cuidado mutuo y solidaridad pueden coexistir con prácticas coercitivas de ciertos grupos.",
+      "La confianza clínica requiere actos, consentimientos y resultados."
+    ]
+  },
+  "variation_axes_es": [
+    "paciente/médico",
+    "grado de enfermedad",
+    "ética personal",
+    "recursos locales",
+    "historial de contacto"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una cirujana rehúsa tratar sin consentimiento; otro médico viola protocolos buscando salvar a su comunidad.",
+    "Un paciente enfermo colabora con investigadores exteriores mientras otro teme confiar en ellos."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No etiquetar 'ladrones de órganos' a toda la especie.",
+    "No deducir criminalidad de lesiones visibles o síntomas."
+  ],
+  "era_guard_es": "Tratamientos de Voyager y avance de la epidemia son hechos fechados; encuentros solo tras DLC Delta.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

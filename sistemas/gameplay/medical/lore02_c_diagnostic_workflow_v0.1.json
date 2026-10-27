@@ -1,0 +1,137 @@
+{
+  "schema_version": "0.1.0",
+  "model_id": "lore02_c_diagnostic_workflow",
+  "status": "REFERENCE_NOT_EXECUTABLE",
+  "runtime_implemented": false,
+  "world_state_authority": "CoreRPG_ONLY",
+  "medical_source_of_truth": "sistemas/gameplay/medical/medical_state_model.json",
+  "privacy_source_of_truth": "sistemas/gameplay/records_and_logs/access_and_privacy_rules.json",
+  "medical_fitness_source_of_truth": "mundo/lore/federation/starfleet/regulations/medical_authority.json",
+  "equipment_source_of_truth": "mundo/lore/equipment/lore02_b_equipment_catalogue_v0.1.json",
+  "core_contracts": [
+    "WorldState",
+    "Knowledge",
+    "Visibility",
+    "ActionEngine",
+    "Persistence",
+    "ContextBuilder"
+  ],
+  "clinical_state_categories": [
+    "condition_ground_truth",
+    "observable_symptoms",
+    "test_evidence",
+    "patient_history",
+    "clinician_hypotheses",
+    "diagnoses_known",
+    "interventions_ordered",
+    "treatment_outcomes",
+    "duty_fitness",
+    "longitudinal_followup"
+  ],
+  "epistemic_rules": [
+    "No direct causality reveal from patient dialogue or UI",
+    "An absent reading does not prove absence of disease",
+    "Species baseline never inferred from visual morphology",
+    "Patient can have concurrent conditions and false positive observations",
+    "A clinician can be wrong or lack qualification and must record uncertainty",
+    "Knowledge from a previous campaign date may be stale",
+    "Diagnosis is separate from actual condition and from treatment effect",
+    "An NPC opinion cannot bypass clinical access or action validation"
+  ],
+  "workflow": [
+    {
+      "step_id": "observe_patient",
+      "label_es": "Leer signos observables y antecedentes autorizados",
+      "mode": "read_only",
+      "limit_es": "Nunca leer la causa real no observable ni síntoma no presente.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "request_test",
+      "label_es": "Solicitar prueba",
+      "mode": "authorized_request",
+      "limit_es": "Exige permiso, consumibles, equipo y posibilidad; resultado puede ser inconcluyente.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "submit_hypothesis",
+      "label_es": "Registrar hipótesis",
+      "mode": "hypothesis_write",
+      "limit_es": "Una hipótesis de médico no modifica enfermedad real.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "provisional_diagnosis",
+      "label_es": "Emitir diagnóstico provisional",
+      "mode": "knowledge_write",
+      "limit_es": "Distinto de confirmación; admite falsa hipótesis revisable.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "confirm_diagnosis",
+      "label_es": "Confirmar diagnóstico con criterio",
+      "mode": "knowledge_write",
+      "limit_es": "Evidencia suficiente según conocimientos, pruebas e incertidumbre declarada.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "order_treatment",
+      "label_es": "Prescribir o indicar tratamiento",
+      "mode": "authorization",
+      "limit_es": "Debe existir indicación y especie compatible; no ejecutar sólo por narración.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "perform_intervention",
+      "label_es": "Realizar procedimiento",
+      "mode": "state_mutation_request",
+      "limit_es": "CoreRPG acepta o rechaza mutación; registrar recursos consumidos.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "monitor_recovery",
+      "label_es": "Seguimiento longitudinal",
+      "mode": "knowledge_and_time",
+      "limit_es": "Observación nueva puede mostrar empeoramiento; no sanación por episodio.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "update_fitness",
+      "label_es": "Reevaluar aptitud",
+      "mode": "medical_authority",
+      "limit_es": "Médico jefe puede relevar por aptitud; mando sucede normalmente sin acceso al diagnóstico privado.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "share_minimal_duty_impact",
+      "label_es": "Comunicar limitación laboral mínima",
+      "mode": "scoped_read",
+      "limit_es": "Compartir solo aptitud/restricciones pertinentes, sin volcar historial.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    },
+    {
+      "step_id": "emergency_break_glass",
+      "label_es": "Acceso de emergencia extraordinario",
+      "mode": "audited_temporary_access",
+      "limit_es": "Auditar identidad, contexto, urgencia, alcance, caducidad y revisión posterior.",
+      "requires_current_context": true,
+      "result_is_not_arbitrary_ai_decision": true
+    }
+  ],
+  "triage_levels_ref": "sistemas/gameplay/medical/medical_state_model.json",
+  "patient_record_access": "medical_authorized",
+  "captain_visibility": "minimum_fitness_and_operational_impact_only",
+  "ai_context_policy": "HOST_AUTHORIZED_CONTEXT_ONLY",
+  "case_simulation_status": "DESIGN_NOT_EXECUTED",
+  "no_universal_dose_or_timers": true
+}
