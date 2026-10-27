@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_6d8cd8aaefb5",
+  "display_name": "cup of coffee",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/drinks/coffee/cup_of_coffee",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Taza de café como objeto de consumo.",
+  "proposed_game_use": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/drinks/coffe/cup-of-coffee.zip",
+      "kind": "file",
+      "name": "cup-of-coffee.zip"
+    },
+    {
+      "source": "objects/drinks/coffe/cup_of_coffee.glb",
+      "kind": "file",
+      "name": "cup_of_coffee.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 47144586,
+    "files": [
+      {
+        "path": "cup-of-coffee.zip",
+        "extension": ".zip",
+        "size_bytes": 43370062
+      },
+      {
+        "path": "cup_of_coffee.glb",
+        "extension": ".glb",
+        "size_bytes": 3774524
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/drinks/coffee/cup_of_coffee",
+  "directory_root": "assets/"
+}

@@ -1,17 +1,17 @@
 name: LORE-01 A.1 — Comportamiento cultural NPC (documental)
 on:
   push:
-    branches: [main, "lore/01-a1-npc-cultural-behavior"]
+    branches: [main, "mundo/lore/01-a1-npc-cultural-behavior"]
     paths:
-      - "lore/cultures/ai_behavior/**"
-      - "tools/validation/validate_lore01_a1.py"
-      - "tools/validation/test_lore01_a1.py"
+      - "mundo/lore/cultures/ai_behavior/**"
+      - "desarrollo/tools/validation/validate_lore01_a1.py"
+      - "desarrollo/tools/validation/test_lore01_a1.py"
       - ".github/workflows/lore01-a1-cultural-behavior.yml"
   pull_request:
     paths:
-      - "lore/cultures/ai_behavior/**"
-      - "tools/validation/validate_lore01_a1.py"
-      - "tools/validation/test_lore01_a1.py"
+      - "mundo/lore/cultures/ai_behavior/**"
+      - "desarrollo/tools/validation/validate_lore01_a1.py"
+      - "desarrollo/tools/validation/test_lore01_a1.py"
       - ".github/workflows/lore01-a1-cultural-behavior.yml"
   workflow_dispatch:
 
@@ -31,12 +31,12 @@ jobs:
           python-version: "3.12"
       - name: Compilar validadores y comprobar guías de NPC
         run: |
-          python -m py_compile tools/validation/validate_lore01_a1.py tools/validation/test_lore01_a1.py
-          python tools/validation/validate_lore01_a1.py
-          python tools/validation/test_lore01_a1.py
+          python -m py_compile desarrollo/tools/validation/validate_lore01_a1.py desarrollo/tools/validation/test_lore01_a1.py
+          python desarrollo/tools/validation/validate_lore01_a1.py
+          python desarrollo/tools/validation/test_lore01_a1.py
       - name: Regresión de documentación anterior LORE-01 A
         run: |
-          python tools/validation/validate_lore01_tng.py
-          python tools/validation/test_lore01_tng.py
-          python tools/validation/validate_lore01_depth.py
-          python tools/validation/test_lore01_depth.py
+          python desarrollo/tools/validation/validate_lore01_tng.py
+          python desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_depth.py
+          python desarrollo/tools/validation/test_lore01_depth.py

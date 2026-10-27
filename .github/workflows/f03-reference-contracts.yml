@@ -4,15 +4,15 @@ on:
     branches:
       - docs/f03-world-knowledge-persistence
     paths:
-      - 'docs/roadmap/master/fases/F03/**'
-      - 'validation/fixtures/f03/**'
-      - 'tools/validation/*f03*'
+      - 'proyecto/docs/roadmap/master/fases/F03/**'
+      - 'desarrollo/validation/fixtures/f03/**'
+      - 'desarrollo/tools/validation/*f03*'
       - '.github/workflows/f03-reference-contracts.yml'
   pull_request:
     paths:
-      - 'docs/roadmap/master/fases/F03/**'
-      - 'validation/fixtures/f03/**'
-      - 'tools/validation/*f03*'
+      - 'proyecto/docs/roadmap/master/fases/F03/**'
+      - 'desarrollo/validation/fixtures/f03/**'
+      - 'desarrollo/tools/validation/*f03*'
       - '.github/workflows/f03-reference-contracts.yml'
   workflow_dispatch:
 jobs:
@@ -26,6 +26,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Validate F03 static fixture and original sources
-        run: python tools/validation/validate_f03_reference.py
+        run: python desarrollo/tools/validation/validate_f03_reference.py
       - name: Run F03 negative/positive tests (not Core E2E)
-        run: python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f03_reference.py' -v

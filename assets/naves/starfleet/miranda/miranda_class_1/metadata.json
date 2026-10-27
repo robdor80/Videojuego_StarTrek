@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e08be45ce937",
+  "display_name": "miranda class (1)",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/miranda/miranda_class_1",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "miranda",
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Nave de la clase Miranda de la Flota Estelar.",
+  "proposed_game_use": "F11: primer destino operativo; evaluar modelo para tripulación y maniobras.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class miranda/star-trek-miranda-class (1).zip",
+      "kind": "file",
+      "name": "star-trek-miranda-class (1).zip"
+    },
+    {
+      "source": "ships/Starfleet/class miranda/star_trek_-_miranda_class (1).glb",
+      "kind": "file",
+      "name": "star_trek_-_miranda_class (1).glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 15744177,
+    "files": [
+      {
+        "path": "star-trek-miranda-class (1).zip",
+        "extension": ".zip",
+        "size_bytes": 10544109
+      },
+      {
+        "path": "star_trek_-_miranda_class (1).glb",
+        "extension": ".glb",
+        "size_bytes": 5200068
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/miranda/miranda_class_1",
+  "directory_root": "assets/"
+}

@@ -1,0 +1,370 @@
+{
+  "units": [
+    [
+      "gameplay",
+      "sistemas/gameplay"
+    ],
+    [
+      "ai",
+      "sistemas/ai"
+    ],
+    [
+      "universe",
+      "sistemas/universe"
+    ],
+    [
+      "narrative",
+      "sistemas/narrative"
+    ],
+    [
+      "content",
+      "sistemas/content"
+    ],
+    [
+      "lore",
+      "mundo/lore"
+    ],
+    [
+      "sources",
+      "mundo/sources"
+    ],
+    [
+      "research",
+      "mundo/research"
+    ],
+    [
+      "art_direction",
+      "audiovisual/art_direction"
+    ],
+    [
+      "presentation",
+      "audiovisual/presentation"
+    ],
+    [
+      "ui",
+      "audiovisual/ui"
+    ],
+    [
+      "audio",
+      "audiovisual/audio"
+    ],
+    [
+      "localization",
+      "audiovisual/localization"
+    ],
+    [
+      "tools",
+      "desarrollo/tools"
+    ],
+    [
+      "validation",
+      "desarrollo/validation"
+    ],
+    [
+      "schemas",
+      "desarrollo/schemas"
+    ],
+    [
+      "manifests",
+      "desarrollo/manifests"
+    ],
+    [
+      "nap",
+      "desarrollo/nap"
+    ],
+    [
+      "docs",
+      "proyecto/docs"
+    ],
+    [
+      "ideas",
+      "proyecto/ideas"
+    ],
+    [
+      "assets/characters",
+      "assets/personajes"
+    ],
+    [
+      "assets/corridor",
+      "assets/pasillos"
+    ],
+    [
+      "assets/interiors",
+      "assets/interiores"
+    ],
+    [
+      "assets/planets",
+      "assets/planetas"
+    ],
+    [
+      "assets/stations",
+      "assets/estaciones"
+    ],
+    [
+      "assets/vehicles",
+      "assets/vehiculos"
+    ],
+    [
+      "assets/NPC",
+      "assets/personajes/descargados"
+    ],
+    [
+      "assets/objects",
+      "assets/objetos/descargados"
+    ],
+    [
+      "assets/equipment",
+      "assets/objetos/equipamiento"
+    ],
+    [
+      "assets/props",
+      "assets/objetos/utileria"
+    ],
+    [
+      "assets/asteroids",
+      "assets/planetas/asteroides"
+    ],
+    [
+      "assets/space_stations",
+      "assets/estaciones/descargadas"
+    ],
+    [
+      "assets/cartography",
+      "assets/otros/cartografia"
+    ],
+    [
+      "assets/icons",
+      "assets/otros/iconos"
+    ],
+    [
+      "assets/portraits",
+      "assets/personajes/retratos"
+    ],
+    [
+      "assets/prompts",
+      "assets/otros/prompts"
+    ],
+    [
+      "assets/scenes",
+      "assets/otros/escenas"
+    ],
+    [
+      "assets/ui",
+      "assets/otros/ui"
+    ],
+    [
+      "assets/uniforms",
+      "assets/personajes/uniformes"
+    ],
+    [
+      "assets/vfx",
+      "assets/otros/vfx"
+    ],
+    [
+      "assets/ships/Andorian",
+      "assets/naves/Andorian"
+    ],
+    [
+      "assets/ships/Arkonian",
+      "assets/naves/Arkonian"
+    ],
+    [
+      "assets/ships/Bajorian",
+      "assets/naves/Bajorian"
+    ],
+    [
+      "assets/ships/Borg",
+      "assets/naves/Borg"
+    ],
+    [
+      "assets/ships/Klingon",
+      "assets/naves/Klingon"
+    ],
+    [
+      "assets/ships/README.md",
+      "assets/naves/README.md"
+    ],
+    [
+      "assets/ships/Romulan",
+      "assets/naves/Romulan"
+    ],
+    [
+      "assets/ships/Species 8472",
+      "assets/naves/Species 8472"
+    ],
+    [
+      "assets/ships/species_8472",
+      "assets/naves/species_8472"
+    ],
+    [
+      "assets/ships/vulcan",
+      "assets/naves/vulcan"
+    ],
+    [
+      "assets/ships/Vulcano",
+      "assets/naves/Vulcano"
+    ],
+    [
+      "assets/ships/starfleet/akira",
+      "assets/naves/starfleet/akira"
+    ],
+    [
+      "assets/ships/starfleet/bridges/enterprise_e",
+      "assets/puentes/starfleet/enterprise_e"
+    ],
+    [
+      "assets/ships/starfleet/bridges/galaxy",
+      "assets/puentes/starfleet/galaxy"
+    ],
+    [
+      "assets/ships/starfleet/bridges/ross",
+      "assets/puentes/starfleet/ross"
+    ],
+    [
+      "assets/ships/starfleet/bridges/USS Ascendant bridge",
+      "assets/puentes/starfleet/USS Ascendant bridge"
+    ],
+    [
+      "assets/ships/starfleet/bridges/USS Enterprise E",
+      "assets/puentes/starfleet/USS Enterprise E"
+    ],
+    [
+      "assets/ships/starfleet/bridges/USS Galaxy class",
+      "assets/puentes/starfleet/USS Galaxy class"
+    ],
+    [
+      "assets/ships/starfleet/bridges/USS Ross Galaxy Class Starship Bridge command",
+      "assets/puentes/starfleet/USS Ross Galaxy Class Starship Bridge command"
+    ],
+    [
+      "assets/ships/starfleet/bridges/USS Vengance bridge",
+      "assets/puentes/starfleet/USS Vengance bridge"
+    ],
+    [
+      "assets/ships/starfleet/bridges/uss_ascendant",
+      "assets/puentes/starfleet/uss_ascendant"
+    ],
+    [
+      "assets/ships/starfleet/bridges/vengeance",
+      "assets/puentes/starfleet/vengeance"
+    ],
+    [
+      "assets/ships/starfleet/calss sovereign",
+      "assets/naves/starfleet/calss sovereign"
+    ],
+    [
+      "assets/ships/starfleet/class akira",
+      "assets/naves/starfleet/class akira"
+    ],
+    [
+      "assets/ships/starfleet/class constitution",
+      "assets/naves/starfleet/class constitution"
+    ],
+    [
+      "assets/ships/starfleet/class danube",
+      "assets/naves/starfleet/class danube"
+    ],
+    [
+      "assets/ships/starfleet/class defiant",
+      "assets/naves/starfleet/class defiant"
+    ],
+    [
+      "assets/ships/starfleet/class galaxy",
+      "assets/naves/starfleet/class galaxy"
+    ],
+    [
+      "assets/ships/starfleet/class miranda",
+      "assets/naves/starfleet/class miranda"
+    ],
+    [
+      "assets/ships/starfleet/class odissey",
+      "assets/naves/starfleet/class odissey"
+    ],
+    [
+      "assets/ships/starfleet/class olympic",
+      "assets/naves/starfleet/class olympic"
+    ],
+    [
+      "assets/ships/starfleet/class sovereign",
+      "assets/naves/starfleet/class sovereign"
+    ],
+    [
+      "assets/ships/starfleet/classs intrepid",
+      "assets/naves/starfleet/classs intrepid"
+    ],
+    [
+      "assets/ships/starfleet/constitution",
+      "assets/naves/starfleet/constitution"
+    ],
+    [
+      "assets/ships/starfleet/constitution_class",
+      "assets/naves/starfleet/constitution_class"
+    ],
+    [
+      "assets/ships/starfleet/danube",
+      "assets/naves/starfleet/danube"
+    ],
+    [
+      "assets/ships/starfleet/defiant",
+      "assets/naves/starfleet/defiant"
+    ],
+    [
+      "assets/ships/starfleet/galaxy",
+      "assets/naves/starfleet/galaxy"
+    ],
+    [
+      "assets/ships/starfleet/galaxy_class",
+      "assets/naves/starfleet/galaxy_class"
+    ],
+    [
+      "assets/ships/starfleet/Gran Dama NCC1701-D",
+      "assets/naves/starfleet/Gran Dama NCC1701-D"
+    ],
+    [
+      "assets/ships/starfleet/miranda",
+      "assets/naves/starfleet/miranda"
+    ],
+    [
+      "assets/ships/starfleet/miranda_class",
+      "assets/naves/starfleet/miranda_class"
+    ],
+    [
+      "assets/ships/starfleet/odyssey",
+      "assets/naves/starfleet/odyssey"
+    ],
+    [
+      "assets/ships/starfleet/olympic",
+      "assets/naves/starfleet/olympic"
+    ],
+    [
+      "assets/ships/starfleet/shuttle",
+      "assets/naves/starfleet/shuttle"
+    ],
+    [
+      "assets/ships/starfleet/sovereign",
+      "assets/naves/starfleet/sovereign"
+    ],
+    [
+      "assets/ships/starfleet/uss_theurgy",
+      "assets/naves/starfleet/uss_theurgy"
+    ],
+    [
+      "assets/stars/prominencia_solar",
+      "assets/planetas/estrellas/prominencia_solar"
+    ],
+    [
+      "Visor_StarTrek_3D_v2.html",
+      "desarrollo/tools/visor_3d/Visor_StarTrek_3D_v2.html"
+    ]
+  ],
+  "blocked": [
+    "TABULA RASA COPIA SEGURIDAD",
+    "3D Star Trek",
+    "Auditorias_3D_VOYAGER",
+    "Sutherland_PBR_Lab",
+    "assets/ships/starfleet/bridges/USS Suntherland",
+    "assets/stars/sistema_solar_animado"
+  ],
+  "backup_root": "C:\\Users\\andro\\Documents\\StarTrek_Respaldo_Reorganizacion_20261027",
+  "rollback": "C:\\Users\\andro\\Documents\\StarTrek_Respaldo_Reorganizacion_20261027\\REVERSIÓN.txt"
+}

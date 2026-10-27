@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "SEN-301",
+  "status": "editorially_aligned_with_developed_manual",
+  "source_manual": "sistemas/gameplay/careers/academy_path/study_materials/third_class/SEN-301/MANUAL_v1_0.md",
+  "question_count": 24,
+  "rule": "No question may require knowledge that is not explicitly taught in SEN-301 or established prerequisites.",
+  "questions": [
+    {
+      "id": "SEN-301-Q001",
+      "unit_id": "SEN-301-U01",
+      "type": "knowledge",
+      "prompt_es": "¿Qué se comprueba antes de operar?",
+      "answer_key_es": [
+        "estado",
+        "matrices",
+        "alcance",
+        "resolución",
+        "potencia",
+        "daños",
+        "interferencia"
+      ]
+    },
+    {
+      "id": "SEN-301-Q002",
+      "unit_id": "SEN-301-U01",
+      "type": "compare",
+      "prompt_es": "Diferencia alcance nominal y efectivo.",
+      "answer_key_es": [
+        "perfil teórico",
+        "condiciones reales"
+      ]
+    },
+    {
+      "id": "SEN-301-Q003",
+      "unit_id": "SEN-301-U01",
+      "type": "judgment",
+      "prompt_es": "¿Puede Sensores apropiarse de energía de otros sistemas?",
+      "answer_key_es": [
+        "no",
+        "solicita a Operaciones"
+      ]
+    },
+    {
+      "id": "SEN-301-Q004",
+      "unit_id": "SEN-301-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué importa operación en curso?",
+      "answer_key_es": [
+        "recursos",
+        "compatibilidad",
+        "cancelación/espera"
+      ]
+    },
+    {
+      "id": "SEN-301-Q005",
+      "unit_id": "SEN-301-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Qué tres tipos de scan existen?",
+      "answer_key_es": [
+        "corto",
+        "largo",
+        "focalizado"
+      ]
+    },
+    {
+      "id": "SEN-301-Q006",
+      "unit_id": "SEN-301-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Qué parámetros se configuran?",
+      "answer_key_es": [
+        "modo",
+        "objetivo",
+        "resolución",
+        "filtros",
+        "prioridad",
+        "duración"
+      ]
+    },
+    {
+      "id": "SEN-301-Q007",
+      "unit_id": "SEN-301-U02",
+      "type": "short_answer",
+      "prompt_es": "¿Qué exige focalizado?",
+      "answer_key_es": [
+        "objetivo concreto"
+      ]
+    },
+    {
+      "id": "SEN-301-Q008",
+      "unit_id": "SEN-301-U02",
+      "type": "compare",
+      "prompt_es": "Diferencia traza y resuelto.",
+      "answer_key_es": [
+        "detección mínima",
+        "clasificación/detalle superior"
+      ]
+    },
+    {
+      "id": "SEN-301-Q009",
+      "unit_id": "SEN-301-U03",
+      "type": "compare",
+      "prompt_es": "Diferencia barrido y búsqueda.",
+      "answer_key_es": [
+        "observar zona",
+        "buscar candidato compatible"
+      ]
+    },
+    {
+      "id": "SEN-301-Q010",
+      "unit_id": "SEN-301-U03",
+      "type": "knowledge",
+      "prompt_es": "Nombra cinco objetivos de búsqueda.",
+      "answer_key_es": [
+        "nave",
+        "lanzadera",
+        "baliza",
+        "vida",
+        "energía",
+        "warp",
+        "transpondedor"
+      ]
+    },
+    {
+      "id": "SEN-301-Q011",
+      "unit_id": "SEN-301-U03",
+      "type": "judgment",
+      "prompt_es": "¿Qué coste tiene sensibilidad alta?",
+      "answer_key_es": [
+        "ruido",
+        "falsos positivos",
+        "candidatos dudosos"
+      ]
+    },
+    {
+      "id": "SEN-301-Q012",
+      "unit_id": "SEN-301-U03",
+      "type": "judgment",
+      "prompt_es": "¿Una búsqueda garantiza identidad?",
+      "answer_key_es": [
+        "no",
+        "solo candidatos compatibles"
+      ]
+    },
+    {
+      "id": "SEN-301-Q013",
+      "unit_id": "SEN-301-U04",
+      "type": "short_answer",
+      "prompt_es": "¿Qué representa un contacto?",
+      "answer_key_es": [
+        "ficha observacional persistente"
+      ]
+    },
+    {
+      "id": "SEN-301-Q014",
+      "unit_id": "SEN-301-U04",
+      "type": "knowledge",
+      "prompt_es": "Nombra cuatro campos de contacto.",
+      "answer_key_es": [
+        "posición",
+        "distancia",
+        "vector",
+        "velocidad",
+        "firmas",
+        "confianza"
+      ]
+    },
+    {
+      "id": "SEN-301-Q015",
+      "unit_id": "SEN-301-U04",
+      "type": "judgment",
+      "prompt_es": "¿Por qué persiste identidad tras pérdida?",
+      "answer_key_es": [
+        "historial",
+        "trayectoria",
+        "firmas compatibles"
+      ]
+    },
+    {
+      "id": "SEN-301-Q016",
+      "unit_id": "SEN-301-U04",
+      "type": "short_answer",
+      "prompt_es": "¿Qué se conserva al perder contacto?",
+      "answer_key_es": [
+        "última posición",
+        "rumbo",
+        "velocidad",
+        "firmas",
+        "hora"
+      ]
+    },
+    {
+      "id": "SEN-301-Q017",
+      "unit_id": "SEN-301-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué mejora tracking?",
+      "answer_key_es": [
+        "posición",
+        "rumbo",
+        "velocidad",
+        "trayectoria"
+      ]
+    },
+    {
+      "id": "SEN-301-Q018",
+      "unit_id": "SEN-301-U05",
+      "type": "judgment",
+      "prompt_es": "¿Por qué capacidad de tracking es finita?",
+      "answer_key_es": [
+        "recursos",
+        "matrices",
+        "potencia",
+        "daños"
+      ]
+    },
+    {
+      "id": "SEN-301-Q019",
+      "unit_id": "SEN-301-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué coste tiene priorizar contacto?",
+      "answer_key_es": [
+        "más recursos",
+        "menos para otros"
+      ]
+    },
+    {
+      "id": "SEN-301-Q020",
+      "unit_id": "SEN-301-U05",
+      "type": "judgment",
+      "prompt_es": "¿Por qué predicción no es certeza?",
+      "answer_key_es": [
+        "incertidumbre crece",
+        "contacto puede maniobrar"
+      ]
+    },
+    {
+      "id": "SEN-301-Q021",
+      "unit_id": "SEN-301-U06",
+      "type": "compare",
+      "prompt_es": "Diferencia interferencia ambiental y deliberada.",
+      "answer_key_es": [
+        "natural/entorno",
+        "contramedida intencionada"
+      ]
+    },
+    {
+      "id": "SEN-301-Q022",
+      "unit_id": "SEN-301-U06",
+      "type": "knowledge",
+      "prompt_es": "Nombra cuatro compensaciones.",
+      "answer_key_es": [
+        "automática",
+        "banda",
+        "potencia",
+        "resolución",
+        "integración",
+        "recuperar"
+      ]
+    },
+    {
+      "id": "SEN-301-Q023",
+      "unit_id": "SEN-301-U06",
+      "type": "knowledge",
+      "prompt_es": "¿Qué costes puede tener compensar?",
+      "answer_key_es": [
+        "energía",
+        "tiempo",
+        "resolución",
+        "cobertura",
+        "tracking"
+      ]
+    },
+    {
+      "id": "SEN-301-Q024",
+      "unit_id": "SEN-301-U06",
+      "type": "judgment",
+      "prompt_es": "¿Compensar elimina la causa?",
+      "answer_key_es": [
+        "no",
+        "reduce efecto"
+      ]
+    }
+  ]
+}

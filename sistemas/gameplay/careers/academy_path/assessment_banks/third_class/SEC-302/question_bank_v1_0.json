@@ -1,0 +1,281 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "SEC-302",
+  "status": "editorially_aligned_with_developed_manual",
+  "source_manual": "sistemas/gameplay/careers/academy_path/study_materials/third_class/SEC-302/MANUAL_v1_0.md",
+  "question_count": 24,
+  "rule": "No question may require knowledge that is not explicitly taught in SEC-302 or established prerequisites.",
+  "questions": [
+    {
+      "id": "SEC-302-Q001",
+      "unit_id": "SEC-302-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Qué significa conciencia de amenaza?",
+      "answer_key_es": [
+        "observar cambios relevantes"
+      ]
+    },
+    {
+      "id": "SEC-302-Q002",
+      "unit_id": "SEC-302-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Para qué sirve baseline?",
+      "answer_key_es": [
+        "distinguir normal de anomalía"
+      ]
+    },
+    {
+      "id": "SEC-302-Q003",
+      "unit_id": "SEC-302-U01",
+      "type": "judgment",
+      "prompt_es": "¿Una señal aislada demuestra hostilidad?",
+      "answer_key_es": [
+        "no"
+      ]
+    },
+    {
+      "id": "SEC-302-Q004",
+      "unit_id": "SEC-302-U01",
+      "type": "knowledge",
+      "prompt_es": "¿Qué conviene identificar antes de operar?",
+      "answer_key_es": [
+        "salidas",
+        "reunión",
+        "zonas protegidas",
+        "comunicaciones"
+      ]
+    },
+    {
+      "id": "SEC-302-Q005",
+      "unit_id": "SEC-302-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Qué limita uso de phaser?",
+      "answer_key_es": [
+        "autoridad",
+        "entrenamiento",
+        "configuración",
+        "contexto"
+      ]
+    },
+    {
+      "id": "SEC-302-Q006",
+      "unit_id": "SEC-302-U02",
+      "type": "judgment",
+      "prompt_es": "¿Acceso físico equivale a autoridad?",
+      "answer_key_es": [
+        "no"
+      ]
+    },
+    {
+      "id": "SEC-302-Q007",
+      "unit_id": "SEC-302-U02",
+      "type": "short_answer",
+      "prompt_es": "¿Qué significa proporcionalidad?",
+      "answer_key_es": [
+        "respuesta acorde al riesgo"
+      ]
+    },
+    {
+      "id": "SEC-302-Q008",
+      "unit_id": "SEC-302-U02",
+      "type": "judgment",
+      "prompt_es": "¿Por qué el uso debe ser trazable?",
+      "answer_key_es": [
+        "responsabilidad",
+        "registro",
+        "evaluación"
+      ]
+    },
+    {
+      "id": "SEC-302-Q009",
+      "unit_id": "SEC-302-U03",
+      "type": "knowledge",
+      "prompt_es": "¿Qué forma seguridad a bordo?",
+      "answer_key_es": [
+        "acceso",
+        "zonas",
+        "identidad",
+        "incidentes",
+        "coordinación"
+      ]
+    },
+    {
+      "id": "SEC-302-Q010",
+      "unit_id": "SEC-302-U03",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué restringir una zona?",
+      "answer_key_es": [
+        "clasificación",
+        "riesgo",
+        "privacidad",
+        "emergencia",
+        "investigación"
+      ]
+    },
+    {
+      "id": "SEC-302-Q011",
+      "unit_id": "SEC-302-U03",
+      "type": "procedure",
+      "prompt_es": "¿Qué haces ante intrusión?",
+      "answer_key_es": [
+        "confirmar",
+        "informar",
+        "proteger",
+        "seguir instrucciones"
+      ]
+    },
+    {
+      "id": "SEC-302-Q012",
+      "unit_id": "SEC-302-U03",
+      "type": "judgment",
+      "prompt_es": "¿Por qué preservar información importa?",
+      "answer_key_es": [
+        "evidencia",
+        "registros",
+        "trazabilidad"
+      ]
+    },
+    {
+      "id": "SEC-302-Q013",
+      "unit_id": "SEC-302-U04",
+      "type": "short_answer",
+      "prompt_es": "¿De qué depende loadout?",
+      "answer_key_es": [
+        "objetivo",
+        "entorno",
+        "duración",
+        "rol",
+        "riesgo",
+        "comunicaciones"
+      ]
+    },
+    {
+      "id": "SEC-302-Q014",
+      "unit_id": "SEC-302-U04",
+      "type": "judgment",
+      "prompt_es": "¿Por qué roles llevan equipo distinto?",
+      "answer_key_es": [
+        "funciones diferentes"
+      ]
+    },
+    {
+      "id": "SEC-302-Q015",
+      "unit_id": "SEC-302-U04",
+      "type": "knowledge",
+      "prompt_es": "¿Qué incluye plan de comunicaciones?",
+      "answer_key_es": [
+        "canal",
+        "check-in",
+        "emergencia",
+        "pérdida contacto"
+      ]
+    },
+    {
+      "id": "SEC-302-Q016",
+      "unit_id": "SEC-302-U04",
+      "type": "judgment",
+      "prompt_es": "¿Por qué más equipo no siempre es mejor?",
+      "answer_key_es": [
+        "carga",
+        "complejidad",
+        "tiempo",
+        "pérdida"
+      ]
+    },
+    {
+      "id": "SEC-302-Q017",
+      "unit_id": "SEC-302-U05",
+      "type": "knowledge",
+      "prompt_es": "Nombra prioridades de supervivencia.",
+      "answer_key_es": [
+        "seguridad",
+        "refugio",
+        "recursos",
+        "orientación",
+        "comunicación"
+      ]
+    },
+    {
+      "id": "SEC-302-Q018",
+      "unit_id": "SEC-302-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué debe proporcionar refugio?",
+      "answer_key_es": [
+        "protección entorno"
+      ]
+    },
+    {
+      "id": "SEC-302-Q019",
+      "unit_id": "SEC-302-U05",
+      "type": "knowledge",
+      "prompt_es": "¿Qué recursos deben controlarse?",
+      "answer_key_es": [
+        "agua",
+        "alimentos",
+        "energía",
+        "suministros",
+        "herramientas"
+      ]
+    },
+    {
+      "id": "SEC-302-Q020",
+      "unit_id": "SEC-302-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué hace útil una señal de rescate?",
+      "answer_key_es": [
+        "detectable",
+        "persistente",
+        "compatible",
+        "segura"
+      ]
+    },
+    {
+      "id": "SEC-302-Q021",
+      "unit_id": "SEC-302-U06",
+      "type": "short_answer",
+      "prompt_es": "¿De qué depende formación?",
+      "answer_key_es": [
+        "terreno",
+        "misión",
+        "visibilidad",
+        "riesgo",
+        "equipo"
+      ]
+    },
+    {
+      "id": "SEC-302-Q022",
+      "unit_id": "SEC-302-U06",
+      "type": "judgment",
+      "prompt_es": "¿Cuándo retirarse puede ser correcto?",
+      "answer_key_es": [
+        "riesgo",
+        "pérdida apoyo",
+        "herido",
+        "capacidad superada"
+      ]
+    },
+    {
+      "id": "SEC-302-Q023",
+      "unit_id": "SEC-302-U06",
+      "type": "short_answer",
+      "prompt_es": "¿Cómo cambia la misión un herido?",
+      "answer_key_es": [
+        "ritmo",
+        "movilidad",
+        "recursos",
+        "prioridad"
+      ]
+    },
+    {
+      "id": "SEC-302-Q024",
+      "unit_id": "SEC-302-U06",
+      "type": "judgment",
+      "prompt_es": "¿Por qué cohesión importa?",
+      "answer_key_es": [
+        "evitar aislamiento",
+        "comunicación",
+        "apoyo"
+      ]
+    }
+  ]
+}

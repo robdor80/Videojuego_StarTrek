@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_56b005e0ac1d",
+  "display_name": "dsc enterprise",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/constitution/dsc_enterprise",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "constitution",
+    "era_suggested": "Siglo XXIII (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave de Flota Estelar denominada DSC Enterprise, diseño de era Discovery/Constitution.",
+  "proposed_game_use": "F13: época histórica, holocubierta o NPC.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class constitution/star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb",
+      "kind": "file",
+      "name": "star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 5431924,
+    "files": [
+      {
+        "path": "star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb",
+        "extension": ".glb",
+        "size_bytes": 5431924
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/constitution/dsc_enterprise",
+  "directory_root": "assets/"
+}

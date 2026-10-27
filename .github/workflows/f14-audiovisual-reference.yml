@@ -6,43 +6,43 @@ on:
       - main
     paths:
       - ".github/workflows/f14-audiovisual-reference.yml"
-      - "tools/validation/f14_*"
-      - "validation/fixtures/f14/**"
-      - "nap/profile/F14_*"
-      - "manifests/assets/f14_*"
-      - "manifests/presentation/f14_*"
-      - "docs/roadmap/master/fases/F14/**"
-      - "art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
-      - "art_direction/**"
+      - "desarrollo/tools/validation/f14_*"
+      - "desarrollo/validation/fixtures/f14/**"
+      - "desarrollo/nap/profile/F14_*"
+      - "desarrollo/manifests/assets/f14_*"
+      - "desarrollo/manifests/presentation/f14_*"
+      - "proyecto/docs/roadmap/master/fases/F14/**"
+      - "audiovisual/art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
+      - "audiovisual/art_direction/**"
       - "assets/**"
-      - "presentation/**"
-      - "audio/**"
-      - "docs/roadmap/master/fases/F01/**"
-      - "docs/roadmap/master/fases/F11/**"
-      - "art_direction/schemas/nap_asset_handoff.schema.json"
-      - "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
-      - "assets/scenes/bridges/f07_registry.json"
-      - "presentation/pov_profiles/starship_bridge_povs.json"
+      - "audiovisual/presentation/**"
+      - "audiovisual/audio/**"
+      - "proyecto/docs/roadmap/master/fases/F01/**"
+      - "proyecto/docs/roadmap/master/fases/F11/**"
+      - "audiovisual/art_direction/schemas/nap_asset_handoff.schema.json"
+      - "desarrollo/validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
+      - "assets/otros/escenas/bridges/f07_registry.json"
+      - "audiovisual/presentation/pov_profiles/starship_bridge_povs.json"
   pull_request:
     paths:
       - ".github/workflows/f14-audiovisual-reference.yml"
-      - "tools/validation/f14_*"
-      - "validation/fixtures/f14/**"
-      - "nap/profile/F14_*"
-      - "manifests/assets/f14_*"
-      - "manifests/presentation/f14_*"
-      - "docs/roadmap/master/fases/F14/**"
-      - "art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
-      - "art_direction/**"
+      - "desarrollo/tools/validation/f14_*"
+      - "desarrollo/validation/fixtures/f14/**"
+      - "desarrollo/nap/profile/F14_*"
+      - "desarrollo/manifests/assets/f14_*"
+      - "desarrollo/manifests/presentation/f14_*"
+      - "proyecto/docs/roadmap/master/fases/F14/**"
+      - "audiovisual/art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md"
+      - "audiovisual/art_direction/**"
       - "assets/**"
-      - "presentation/**"
-      - "audio/**"
-      - "docs/roadmap/master/fases/F01/**"
-      - "docs/roadmap/master/fases/F11/**"
-      - "art_direction/schemas/nap_asset_handoff.schema.json"
-      - "validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
-      - "assets/scenes/bridges/f07_registry.json"
-      - "presentation/pov_profiles/starship_bridge_povs.json"
+      - "audiovisual/presentation/**"
+      - "audiovisual/audio/**"
+      - "proyecto/docs/roadmap/master/fases/F01/**"
+      - "proyecto/docs/roadmap/master/fases/F11/**"
+      - "audiovisual/art_direction/schemas/nap_asset_handoff.schema.json"
+      - "desarrollo/validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json"
+      - "assets/otros/escenas/bridges/f07_registry.json"
+      - "audiovisual/presentation/pov_profiles/starship_bridge_povs.json"
   workflow_dispatch:
 
 permissions:
@@ -62,24 +62,24 @@ jobs:
           python-version: "3.12"
       - name: Sintaxis y JSON
         run: |
-          python -m py_compile tools/validation/f14_audiovisual_reference.py tools/validation/test_f14_audiovisual_reference.py
-          python -m json.tool validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json >/dev/null
-          python -m json.tool nap/profile/F14_NAP2_COMPATIBILITY_SNAPSHOT_v0.1.json >/dev/null
-          python -m json.tool manifests/assets/f14_asset_priority_manifest_v0.1.json >/dev/null
-          python -m json.tool manifests/presentation/f14_presentation_priority_manifest_v0.1.json >/dev/null
+          python -m py_compile desarrollo/tools/validation/f14_audiovisual_reference.py desarrollo/tools/validation/test_f14_audiovisual_reference.py
+          python -m json.tool desarrollo/validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json >/dev/null
+          python -m json.tool desarrollo/nap/profile/F14_NAP2_COMPATIBILITY_SNAPSHOT_v0.1.json >/dev/null
+          python -m json.tool desarrollo/manifests/assets/f14_asset_priority_manifest_v0.1.json >/dev/null
+          python -m json.tool desarrollo/manifests/presentation/f14_presentation_priority_manifest_v0.1.json >/dev/null
       - name: Escenarios y auditoría de repositorio
         run: |
-          python tools/validation/f14_audiovisual_reference.py \
-            --scenario validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json \
+          python desarrollo/tools/validation/f14_audiovisual_reference.py \
+            --scenario desarrollo/validation/fixtures/f14/f14_audiovisual_scenarios_v0.1.json \
             --repo-root . \
-            --output validation/results/f14_audiovisual_offline_report.json
+            --output desarrollo/validation/results/f14_audiovisual_offline_report.json
       - name: Pruebas de regresión
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f14_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f14_*.py' -v
       - name: Evidencia de ejecución (solo referencia)
         uses: actions/upload-artifact@v4
         with:
           name: f14-offline-reference-evidence
-          path: validation/results/f14_audiovisual_offline_report.json
+          path: desarrollo/validation/results/f14_audiovisual_offline_report.json
           if-no-files-found: error
           retention-days: 14

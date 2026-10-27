@@ -1,0 +1,75 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e64862da7c18",
+  "display_name": "Colección de pasillos Voyager",
+  "category": "corridor",
+  "relative_directory": "pasillos/Star Trek Voyager Collection/voyager/coleccion_de_pasillos_voyager",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+  "proposed_game_use": "PRIORIDAD F12: comprobar qué módulos de la colección pueden combinarse y formar una red transitable.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/Star Trek Voyager Collection/star-trek-voyager-collection",
+      "kind": "directory",
+      "name": "star-trek-voyager-collection"
+    },
+    {
+      "source": "corridor/Star Trek Voyager Collection/star-trek-voyager-collection.zip",
+      "kind": "file",
+      "name": "star-trek-voyager-collection.zip"
+    },
+    {
+      "source": "corridor/Star Trek Voyager Collection/star_trek_voyager_collection.glb",
+      "kind": "file",
+      "name": "star_trek_voyager_collection.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 3,
+    "size_bytes": 20014294,
+    "files": [
+      {
+        "path": "star-trek-voyager-collection/source/StarTrekVoyagerCollection.blend",
+        "extension": ".blend",
+        "size_bytes": 7875980
+      },
+      {
+        "path": "star-trek-voyager-collection.zip",
+        "extension": ".zip",
+        "size_bytes": 7876154
+      },
+      {
+        "path": "star_trek_voyager_collection.glb",
+        "extension": ".glb",
+        "size_bytes": 4262160
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/voyager/coleccion_de_pasillos_voyager",
+  "directory_root": "assets/"
+}

@@ -1,0 +1,73 @@
+{
+  "schema_version": "0.2.0",
+  "method": "screen_scene_anchored_plus_era_scoped_interpretation",
+  "research_cutoff": "2026-10-17",
+  "screen_scope": "TNG_DS9_VOY_WITH_EARLIER_RETAINED_HISTORICAL_REFERENCES",
+  "status": "DEEP_DOCUMENTARY_AUTHORING_NO_RUNTIME_CERTIFICATION",
+  "gate_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+  "species_id": "andorian",
+  "display_name_es": "Andorianos",
+  "content_scope": "MAIN_GAME_EXISTING_LOW_TNG_EVIDENCE",
+  "legacy_profile_ref": "sistemas/gameplay/species/profiles/andorian_v0.1.json",
+  "domains": {
+    "biology": "El fenotipo reconocible incluye pigmentación azul y antenas craneales; una función sensorial precisa de las antenas y sus consecuencias clínicas NO queda demostrada suficientemente con fuentes TNG/DS9/VOY actualmente asociadas. No modelar daño de antenas como pérdida automática de equilibrio sin respaldo de alcance.",
+    "lifecycle": "La estructura reproductiva, gestación, maduración y parentescos complejos descritos fuera del corpus TNG se mantienen separados; la ficha actual no permite fijar herencia, número de progenitores ni edades médicas universales.",
+    "culture": "El orgullo institucional de la Federación y la figura de diplomáticos andorianos sí caben en el contexto retenido. Ideas sobre desafíos, duelos y estructuras familiares proceden en parte de Enterprise excluida; etiquetarlas como referencias externas que exigen otra decisión si se quisieran trasladar.",
+    "language": "Andoriano/andorii como denominación de trabajo no constituyen en sí mismos un diccionario ni una gramática. Mantener lengua y escritura como no normalizadas hasta autorización documentada.",
+    "chronology": "La especie es conocida en la Federación antes de TNG; no inventar conflictos de 2370. El hecho de que haya Andorianos no significa que los Aenar sean visibles o conocidos individualmente.",
+    "npc_scenarios": [
+      "Oficial andoriano federado: conservar profesión y ciudadanía como hechos personales.",
+      "Un daño visual en una antena no autoriza automáticamente un efecto clínico numérico.",
+      "En un diálogo diplomático no convertir franqueza individual en obligación de duelo."
+    ],
+    "unknowns": [
+      "Fisiología exacta de antenas bajo corpus retenido.",
+      "Longevidad y reproducción.",
+      "Culturas regionales de Andoria documentadas en TNG.",
+      "Lenguas, escritura y normas de parentesco canónicas retenidas."
+    ],
+    "canon_cautions": "Parte del legado cita ENT_UNITED/ENT_BABEL_ONE; Enterprise está fuera del corpus seleccionado. El material anterior se conserva marcado, no se reafirma como canon TNG."
+  },
+  "runtime_contract": "DOCUMENTARY_ONLY_NO_DIRECT_STATS_OR_SPAWNS",
+  "evidence": [
+    {
+      "claim_id": "andorian_E01",
+      "source_id": "TOS_JOURNEY_TO_BABEL",
+      "domain": "institutions",
+      "claim_es": "Representantes andorianos participan en la diplomacia de la Federación; el cuerpo diplomático no describe por sí solo la sociedad.",
+      "authority": "SCREEN_CANON",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "andorian_E02",
+      "source_id": "MA_ANDORIAN",
+      "domain": "biology",
+      "claim_es": "Referencia secundaria para morfología pigmentada y antenas; los detalles funcionales necesitan episodios retenidos de apoyo.",
+      "authority": "RELIABLE_SECONDARY",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "andorian_E03",
+      "source_id": "MA_ANDORIA",
+      "domain": "origin",
+      "claim_es": "Ancla secundaria para planeta Andoria; no justifica emplazamientos o ecología sin contraste.",
+      "authority": "RELIABLE_SECONDARY",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    },
+    {
+      "claim_id": "andorian_E04",
+      "source_id": "ST_OFFICIAL_GET_TO_KNOW_FEDERATION",
+      "domain": "institutions",
+      "claim_es": "La pertenencia histórica al marco federado es un contexto político general, no ciudadanía de cada individuo.",
+      "authority": "OFFICIAL_REFERENCE",
+      "review_state": "EVIDENCE_ANCHOR_FOR_AUTHORING",
+      "scope_note": "Cita limitada a episodio/página; requiere escena concreta antes de convertirla en regla automática."
+    }
+  ],
+  "monograph_ref": "mundo/lore/species/monographs/andorian_v0.2.md",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "authority_policy_ref": "mundo/sources/canon_policy.md"
+}

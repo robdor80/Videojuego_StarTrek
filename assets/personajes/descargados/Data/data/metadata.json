@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_720c347283c0",
+  "display_name": "Data",
+  "category": "npc",
+  "relative_directory": "personajes/descargados/Data/data",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Oficial androide de la Flota Estelar en TNG.",
+  "proposed_game_use": "NPC narrativo; verificar correspondencia del modelo, rig y derechos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "NPC/Data/ava-data-mashup.zip",
+      "kind": "file",
+      "name": "ava-data-mashup.zip"
+    },
+    {
+      "source": "NPC/Data/ava__data_mashup.glb",
+      "kind": "file",
+      "name": "ava__data_mashup.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 202923857,
+    "files": [
+      {
+        "path": "ava-data-mashup.zip",
+        "extension": ".zip",
+        "size_bytes": 121009493
+      },
+      {
+        "path": "ava__data_mashup.glb",
+        "extension": ".glb",
+        "size_bytes": 81914364
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+  "historical_relative_directory": "npc/data/data",
+  "directory_root": "assets/"
+}

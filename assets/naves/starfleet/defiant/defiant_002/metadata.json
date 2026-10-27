@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_c9ff4e2982ec",
+  "display_name": "defiant",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/defiant/defiant_002",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "defiant",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave de la clase Defiant (DS9), enfocada en misiones tácticas.",
+  "proposed_game_use": "F11/F13: NPC de flota y escenarios de combate.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class defiant/defiant_1d21c0c29f25458a9044344645f36a2c.glb",
+      "kind": "file",
+      "name": "defiant_1d21c0c29f25458a9044344645f36a2c.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 36207628,
+    "files": [
+      {
+        "path": "defiant_1d21c0c29f25458a9044344645f36a2c.glb",
+        "extension": ".glb",
+        "size_bytes": 36207628
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/defiant/defiant_002",
+  "directory_root": "assets/"
+}

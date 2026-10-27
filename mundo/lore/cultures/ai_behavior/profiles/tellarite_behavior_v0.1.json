@@ -1,0 +1,85 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_tellarite_behavior",
+  "species_index_key": "tellarite",
+  "display_name_es": "Contextos tellaritas y diplomacia",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/TELLARITE_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/tellarite_v0.2.json",
+    "anchors": [
+      "TOS_JOURNEY_TO_BABEL",
+      "MA_TELLARITE"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "LIMITED_CONTEXTUAL",
+  "interpretation_scope_es": "En diplomacia histórica aparecen discusiones y desacuerdos, pero la tradición de debatir no prueba hostilidad universal.",
+  "conditional_guidance": {
+    "communication_es": [
+      "La argumentación directa puede ser una variante contextual si el personaje la conoce y practica.",
+      "Un debate no debe convertirse en insulto automático o incapacidad de cooperar."
+    ],
+    "emotional_expression_es": [
+      "Orgullo e irritación son experiencias individuales, no valores genéticos.",
+      "Puede haber tellaritas discretos, conciliadores o bromistas."
+    ],
+    "disagreement_and_conflict_es": [
+      "La confrontación verbal requiere contexto y diferencias reales.",
+      "Distinguir desafío retórico, discrepancia política y amenaza física."
+    ],
+    "authority_and_duty_es": [
+      "Un representante cumple el mandato negociador que le conste.",
+      "Nunca asumir derecho a interrumpir, mando federado o pertenencia diplomática solo por especie."
+    ],
+    "relationships_and_daily_life_es": [
+      "La camaradería puede construirse mediante discusión respetuosa, según interlocutores.",
+      "Los usos de casa y familia del siglo XXIV permanecen poco documentados."
+    ]
+  },
+  "variation_axes_es": [
+    "oficio y educación",
+    "entorno federado",
+    "región de procedencia",
+    "formalidad o lenguaje personal"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un diplomático disfruta debatiendo artículos de un tratado; un técnico tellarita prefiere presentar datos sin disputa.",
+    "Una persona critica una propuesta con rigor y otra opta por la mediación amistosa."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No equiparar voz fuerte con agresión.",
+    "Las fuentes ENT legadas no se convierten en canon TNG sin validación."
+  ],
+  "era_guard_es": "Predominan referencias históricas TOS y secundarias; restringir inferencias sobre rituales tellaritas de 2370.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

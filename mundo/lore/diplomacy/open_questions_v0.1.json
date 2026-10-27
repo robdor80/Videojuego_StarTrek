@@ -1,0 +1,96 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_D_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "source_policy_ref": "mundo/sources/canon_policy.md",
+  "provenance_policy_ref": "mundo/sources/provenance_policy.md",
+  "issues": [
+    {
+      "issue_id": "GEO_MAP_PRECISION",
+      "problem": "No hay coordenadas oficiales ni polígonos de soberanía exactos para mayoría de fronteras.",
+      "mitigation": "NO_EXACT_POLYGONS",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "KHITOMER_LEGAL_CONTENT",
+      "problem": "Diferenciar distensión de Khitomer y contenido jurídico exacto de todos los acuerdos posteriores.",
+      "mitigation": "NO_INVENTED_ARTICLES",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "FED_CARDASSIAN_BORDER_DATES",
+      "problem": "Año y alcance local de la adjudicación de colonias requieren revisión escena a escena.",
+      "mitigation": "QUALIFIED_DATING",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "BAJOR_NONAGGRESSION_SCOPE",
+      "problem": "Se desconoce texto completo, cláusulas y garantías del acuerdo Bajor–Dominio.",
+      "mitigation": "UNKNOWN_CLAUSES",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "THOLIAN_DOMINION_SIGNING",
+      "problem": "Fuentes oficiales enumeran pacto, no fecha y texto precisos.",
+      "mitigation": "NO_EXACT_DATE",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "TZENKETHI_FALSE_COUP",
+      "problem": "Un reporte en The Adversary es engaño de infiltrado.",
+      "mitigation": "FALSE_CLAIM",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "ROMULAN_ENTRY_CAUSALITY",
+      "problem": "Desinformación en In the Pale Moonlight; propaganda no prueba ataque dominionista real.",
+      "mitigation": "ACTOR_CLAIM_NOT_WORLD_TRUTH",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "SECTION31_LEGITIMACY",
+      "problem": "Red clandestina no puede ser autoridad extranjera ni mandato del gobierno global.",
+      "mitigation": "NO_AUTO_AUTHORITY",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "BREEN_PROMISED_WORLDS",
+      "problem": "Promesas dominionistas no equivalen a transferencia de soberanía.",
+      "mitigation": "NO_AUTOMATIC_SOVEREIGNTY",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "FERENGI_TRADE_TREATIES",
+      "problem": "Quark y representantes privados no prueban tratados firmados por Gran Nagus.",
+      "mitigation": "PERSON_NOT_GOVERNMENT",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "BORG_ALPHA_DELTA",
+      "problem": "Presencia Borg TNG Alfa no desbloquea DLC Delta ni portal transwarp IDEA-0011.",
+      "mitigation": "DLC_LOCK",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    },
+    {
+      "issue_id": "PLAYER_START_IN_YEAR",
+      "problem": "El año solo no define orden exacto de todos los hitos en 2373 o 2375.",
+      "mitigation": "EVENT_ORDER_NEEDED",
+      "status": "OPEN_DOCUMENTARY_LIMITATION",
+      "requires_roberto_decision": false
+    }
+  ]
+}

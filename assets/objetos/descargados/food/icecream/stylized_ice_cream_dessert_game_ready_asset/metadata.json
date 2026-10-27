@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_69a219164441",
+  "display_name": "stylized ice cream dessert game ready asset",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/icecream/stylized_ice_cream_dessert_game_ready_asset",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Postre de helado estilizado.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/icecream/stylized-ice-cream-dessert-game-ready-asset.zip",
+      "kind": "file",
+      "name": "stylized-ice-cream-dessert-game-ready-asset.zip"
+    },
+    {
+      "source": "objects/food/icecream/stylized_ice_cream_dessert_-_game_ready_asset.glb",
+      "kind": "file",
+      "name": "stylized_ice_cream_dessert_-_game_ready_asset.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 23155797,
+    "files": [
+      {
+        "path": "stylized-ice-cream-dessert-game-ready-asset.zip",
+        "extension": ".zip",
+        "size_bytes": 11700985
+      },
+      {
+        "path": "stylized_ice_cream_dessert_-_game_ready_asset.glb",
+        "extension": ".glb",
+        "size_bytes": 11454812
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/icecream/stylized_ice_cream_dessert_game_ready_asset",
+  "directory_root": "assets/"
+}

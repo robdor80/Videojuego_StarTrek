@@ -6,17 +6,17 @@ on:
       - main
     paths:
       - ".github/workflows/f12-shipboard-reference.yml"
-      - "tools/validation/f12_*"
-      - "tools/validation/test_f12_*"
-      - "validation/fixtures/f12/**"
-      - "docs/roadmap/master/fases/F12/**"
+      - "desarrollo/tools/validation/f12_*"
+      - "desarrollo/tools/validation/test_f12_*"
+      - "desarrollo/validation/fixtures/f12/**"
+      - "proyecto/docs/roadmap/master/fases/F12/**"
   pull_request:
     paths:
       - ".github/workflows/f12-shipboard-reference.yml"
-      - "tools/validation/f12_*"
-      - "tools/validation/test_f12_*"
-      - "validation/fixtures/f12/**"
-      - "docs/roadmap/master/fases/F12/**"
+      - "desarrollo/tools/validation/f12_*"
+      - "desarrollo/tools/validation/test_f12_*"
+      - "desarrollo/validation/fixtures/f12/**"
+      - "proyecto/docs/roadmap/master/fases/F12/**"
   workflow_dispatch:
 
 permissions:
@@ -36,18 +36,18 @@ jobs:
           python-version: "3.12"
       - name: Sintaxis y fixture
         run: |
-          python -m py_compile tools/validation/f12_shipboard_reference.py tools/validation/test_f12_shipboard_reference.py
-          python -m json.tool validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json >/dev/null
+          python -m py_compile desarrollo/tools/validation/f12_shipboard_reference.py desarrollo/tools/validation/test_f12_shipboard_reference.py
+          python -m json.tool desarrollo/validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json >/dev/null
       - name: Escenarios offline y huella reproducible
         run: |
-          python tools/validation/f12_shipboard_reference.py --scenario validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json --output validation/results/f12_shipboard_offline_report.json
+          python desarrollo/tools/validation/f12_shipboard_reference.py --scenario desarrollo/validation/fixtures/f12/f12_shipboard_scenarios_v0.1.json --output desarrollo/validation/results/f12_shipboard_offline_report.json
       - name: Pruebas de regresión
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f12_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f12_*.py' -v
       - name: Evidencia de ejecución (solo referencia)
         uses: actions/upload-artifact@v4
         with:
           name: f12-offline-reference-evidence
-          path: validation/results/f12_shipboard_offline_report.json
+          path: desarrollo/validation/results/f12_shipboard_offline_report.json
           if-no-files-found: error
           retention-days: 14

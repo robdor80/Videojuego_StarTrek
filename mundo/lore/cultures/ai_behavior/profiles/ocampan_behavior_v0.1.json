@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_ocampan_behavior",
+  "species_index_key": "ocampan",
+  "display_name_es": "Comunidades ocampanas diversas",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "DLC_DELTA_ONLY",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/OCAMPAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/ocampan_v0.2.json",
+    "anchors": [
+      "VOY_CARETAKER",
+      "VOY_COLD_FIRE",
+      "VOY_ELOGIUM"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Las comunidades protegidas por el Guardián y el grupo asociado a Suspiria difieren. Las facultades de Kes o Tanis no definen a todos los Ocampanos.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Una persona criada bajo tutela puede expresarse con normas que priorizan seguridad comunitaria.",
+      "Otra criada en entorno diferente puede mostrar independencia y una forma comunicativa divergente."
+    ],
+    "emotional_expression_es": [
+      "La vida corta no convierte a un individuo en ingenuo o infantil.",
+      "La madurez, curiosidad y experiencia deben modelarse de acuerdo al ciclo individual."
+    ],
+    "disagreement_and_conflict_es": [
+      "La cautela ante el exterior puede reflejar educación y contexto de protección.",
+      "La negociación de autonomía frente a tutores o poderes externos admite variedad."
+    ],
+    "authority_and_duty_es": [
+      "El Guardián es parte del entorno histórico de algunos grupos; no mando universal.",
+      "Capacidades psíquicas no dan autoridad social por sí solas."
+    ],
+    "relationships_and_daily_life_es": [
+      "Vínculos familiares y de comunidad tienen ciclos temporales diferentes a los humanos.",
+      "No forzar una única regla de emparejamiento ni conducta de reproducción."
+    ]
+  },
+  "variation_axes_es": [
+    "comunidad",
+    "contacto exterior",
+    "edad y madurez",
+    "entrenamiento mental",
+    "experiencia con Voyager"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una ocampana joven desea explorar fuera de su hogar; otra trabaja para preservar recursos de la comunidad.",
+    "Un miembro de una colonia se muestra reservado, mientras otro aprende con facilidad protocolos de visitantes."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No infantilizar por edad cronológica.",
+    "No hacer telepáticos poderosos a todos ni activar automáticamente elogium."
+  ],
+  "era_guard_es": "La crisis del Guardián y hechos futuros de Kes no existen anticipadamente; solo DLC Delta.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

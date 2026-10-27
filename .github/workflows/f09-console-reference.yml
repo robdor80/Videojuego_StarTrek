@@ -5,20 +5,20 @@ on:
     branches:
       - main
     paths:
-      - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
-      - "gameplay/**"
-      - "tools/validation/f09_interconsole_reference.py"
-      - "tools/validation/test_f09_interconsole_reference.py"
-      - "docs/roadmap/master/fases/F09/**"
-      - "validation/fixtures/f09/**"
+      - "sistemas/gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "sistemas/gameplay/**"
+      - "desarrollo/tools/validation/f09_interconsole_reference.py"
+      - "desarrollo/tools/validation/test_f09_interconsole_reference.py"
+      - "proyecto/docs/roadmap/master/fases/F09/**"
+      - "desarrollo/validation/fixtures/f09/**"
       - ".github/workflows/f09-console-reference.yml"
   pull_request:
     paths:
-      - "gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
-      - "gameplay/**"
-      - "tools/validation/f09_interconsole_reference.py"
-      - "tools/validation/test_f09_interconsole_reference.py"
-      - "docs/roadmap/master/fases/F09/**"
+      - "sistemas/gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json"
+      - "sistemas/gameplay/**"
+      - "desarrollo/tools/validation/f09_interconsole_reference.py"
+      - "desarrollo/tools/validation/test_f09_interconsole_reference.py"
+      - "proyecto/docs/roadmap/master/fases/F09/**"
       - ".github/workflows/f09-console-reference.yml"
   workflow_dispatch:
 
@@ -37,9 +37,9 @@ jobs:
           python-version: "3.12"
       - name: Comprobar sintaxis y JSON
         run: |
-          python -m py_compile tools/validation/f09_interconsole_reference.py tools/validation/test_f09_interconsole_reference.py
-          python -m json.tool gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json > /dev/null
+          python -m py_compile desarrollo/tools/validation/f09_interconsole_reference.py desarrollo/tools/validation/test_f09_interconsole_reference.py
+          python -m json.tool sistemas/gameplay/ship_operations/consoles/f09_reference_matrix_v0.1.json > /dev/null
       - name: Verificar catálogo de 16 familias
-        run: python tools/validation/f09_interconsole_reference.py
+        run: python desarrollo/tools/validation/f09_interconsole_reference.py
       - name: Pruebas positivas, negativas y separación de autoridad
-        run: python -m unittest discover -s tools/validation -p 'test_f09_interconsole_reference.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f09_interconsole_reference.py' -v

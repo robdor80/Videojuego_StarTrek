@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_bfc5425c225a",
+  "display_name": "tng galaxy class model",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/galaxy/tng_galaxy_class_model",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "galaxy",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Crucero de exploración clase Galaxy, era TNG.",
+  "proposed_game_use": "F11: rama de mando; referencia exterior de Valhalla.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class galaxy/star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb",
+      "kind": "file",
+      "name": "star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 9470884,
+    "files": [
+      {
+        "path": "star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb",
+        "extension": ".glb",
+        "size_bytes": 9470884
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/galaxy/tng_galaxy_class_model",
+  "directory_root": "assets/"
+}

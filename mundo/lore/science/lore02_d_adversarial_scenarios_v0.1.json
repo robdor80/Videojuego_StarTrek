@@ -1,0 +1,573 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 D",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "runtime_import_allowed": false,
+  "source_registry": "mundo/sources/source_registry/source_registry.json",
+  "dataset_id": "lore02_d_adversarial_scenarios",
+  "record_count": 40,
+  "records": [
+    {
+      "scenario_id": "l02d_adv_unknown_source",
+      "description_es": "Fuente inexistente",
+      "injected_fault": "unknown_source",
+      "expected_guardrail": "reject_provenance",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_inflated_canon",
+      "description_es": "Inferencia presentada como canon",
+      "injected_fault": "inflated_canon",
+      "expected_guardrail": "reject_claim_class",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_duplicate_identifier",
+      "description_es": "Dos fenómenos con igual ID",
+      "injected_fault": "duplicate_identifier",
+      "expected_guardrail": "reject_duplicate",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_orphan_method",
+      "description_es": "Método sin entrada",
+      "injected_fault": "orphan_method",
+      "expected_guardrail": "reject_missing_ref",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_orphan_equipment",
+      "description_es": "Instrumento sin catálogo",
+      "injected_fault": "orphan_equipment",
+      "expected_guardrail": "reject_missing_ref",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_orphan_technology",
+      "description_es": "Sistema de A inexistente",
+      "injected_fault": "orphan_technology",
+      "expected_guardrail": "reject_missing_ref",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_orphan_discipline",
+      "description_es": "Especialidad desconocida",
+      "injected_fault": "orphan_discipline",
+      "expected_guardrail": "reject_missing_ref",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_hidden_truth_in_observer",
+      "description_es": "Verdad del mundo enviada al observador",
+      "injected_fault": "hidden_truth_in_observer",
+      "expected_guardrail": "reject_world_truth_leak",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_ai_mutates_world",
+      "description_es": "La IA cambia físicamente una variable",
+      "injected_fault": "ai_mutates_world",
+      "expected_guardrail": "reject_authority_leak",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_ai_invents_measurement",
+      "description_es": "La IA escribe lecturas de sensores no tomadas",
+      "injected_fault": "ai_invents_measurement",
+      "expected_guardrail": "reject_measurement_fabrication",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_danger_by_category",
+      "description_es": "Nebulosa declarada enemiga por ser anomalía",
+      "injected_fault": "danger_by_category",
+      "expected_guardrail": "reject_forced_hostility",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_mission_by_category",
+      "description_es": "Fenómeno no observado dispara misión obligatoria",
+      "injected_fault": "mission_by_category",
+      "expected_guardrail": "reject_forced_quest",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_auto_spawn_probe",
+      "description_es": "Referencia de sonda crea un objeto en mundo",
+      "injected_fault": "auto_spawn_probe",
+      "expected_guardrail": "reject_runtime_creation",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_cross_era_unlock",
+      "description_es": "Equipamiento TNG habilitado en Pike sin prueba",
+      "injected_fault": "cross_era_unlock",
+      "expected_guardrail": "reject_era_unlock",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_deltacontent_unlock",
+      "description_es": "Omega o Viajes Delta habilitados por conocimiento",
+      "injected_fault": "deltacontent_unlock",
+      "expected_guardrail": "reject_reserved_content_unlock",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_unauthorized_scan",
+      "description_es": "Un cadete accede a archivo reservado",
+      "injected_fault": "unauthorized_scan",
+      "expected_guardrail": "reject_authorization",
+      "threat_model": "STATIC_INTEGRITY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_stale_scan",
+      "description_es": "Lectura caducada aplicada a posición actual",
+      "injected_fault": "stale_scan",
+      "expected_guardrail": "require_refresh",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_sensor_calibration",
+      "description_es": "Sensor sin calibrar afirma tipo de partícula",
+      "injected_fault": "sensor_calibration",
+      "expected_guardrail": "downgrade_confidence",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_sensor_damage",
+      "description_es": "Sensor averiado produce certeza absoluta",
+      "injected_fault": "sensor_damage",
+      "expected_guardrail": "downgrade_confidence",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_sensor_saturation",
+      "description_es": "Saturación no señalada como límite",
+      "injected_fault": "sensor_saturation",
+      "expected_guardrail": "reject_overconfidence",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_interference_alias",
+      "description_es": "Interferencia imita señal natural",
+      "injected_fault": "interference_alias",
+      "expected_guardrail": "keep_competing_hypotheses",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_source_deception",
+      "description_es": "Sonda falsa imita firma de agujero de gusano",
+      "injected_fault": "source_deception",
+      "expected_guardrail": "require_replication",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_cross_sensor_correlated",
+      "description_es": "Lecturas con sesgo común contadas como independientes",
+      "injected_fault": "cross_sensor_correlated",
+      "expected_guardrail": "downgrade_confidence",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_missing_sample_chain",
+      "description_es": "Muestra sin custodia usada como prueba irrefutable",
+      "injected_fault": "missing_sample_chain",
+      "expected_guardrail": "reject_definitive_claim",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_contaminated_sample",
+      "description_es": "Muestra contaminada no excluida",
+      "injected_fault": "contaminated_sample",
+      "expected_guardrail": "reject_definitive_claim",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_duplicate_observation",
+      "description_es": "Duplicado computado como prueba independiente",
+      "injected_fault": "duplicate_observation",
+      "expected_guardrail": "reject_double_count",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_negative_evidence",
+      "description_es": "No detectado se interpreta como inexistente",
+      "injected_fault": "negative_evidence",
+      "expected_guardrail": "reject_absence_claim",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_privacy_medical",
+      "description_es": "Informe privado médico divulgado en ciencia",
+      "injected_fault": "privacy_medical",
+      "expected_guardrail": "reject_privacy_leak",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_prime_directive",
+      "description_es": "Extracción sin revisar cultura prewarp",
+      "injected_fault": "prime_directive",
+      "expected_guardrail": "require_ethics_review",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_ecosystem_disruption",
+      "description_es": "Sonda activa destruye vida no detectada",
+      "injected_fault": "ecosystem_disruption",
+      "expected_guardrail": "stop_and_review",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_no_staff",
+      "description_es": "Laboratorio vacío procesa muestras solo",
+      "injected_fault": "no_staff",
+      "expected_guardrail": "reject_operation",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_no_power",
+      "description_es": "Laboratorio apagado informa análisis terminado",
+      "injected_fault": "no_power",
+      "expected_guardrail": "reject_operation",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_failed_experiment",
+      "description_es": "Hipótesis refutada se sigue declarando cierta",
+      "injected_fault": "failed_experiment",
+      "expected_guardrail": "mark_rejected_or_revision",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_contradiction_unresolved",
+      "description_es": "Dos resultados incompatibles se fusionan sin aviso",
+      "injected_fault": "contradiction_unresolved",
+      "expected_guardrail": "report_contradiction",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_temporal_foreknowledge",
+      "description_es": "El investigador sabe el futuro por etiqueta temporal",
+      "injected_fault": "temporal_foreknowledge",
+      "expected_guardrail": "reject_future_omniscience",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_parallel_universe_omniscience",
+      "description_es": "La fisura revela todas las realidades",
+      "injected_fault": "parallel_universe_omniscience",
+      "expected_guardrail": "reject_omniscience",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_automatic_cure",
+      "description_es": "Fenómeno bio produce receta o cura garantizada",
+      "injected_fault": "automatic_cure",
+      "expected_guardrail": "reject_medical_cross_domain",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_npc_role_grant",
+      "description_es": "Puesto científico concede permiso de capitán",
+      "injected_fault": "npc_role_grant",
+      "expected_guardrail": "reject_command_escalation",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_offscreen_freeze",
+      "description_es": "Fenómeno congelado si jugador no mira",
+      "injected_fault": "offscreen_freeze",
+      "expected_guardrail": "reject_player_dependency",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    },
+    {
+      "scenario_id": "l02d_adv_forced_collision",
+      "description_es": "La sonda obliga a impacto dramático",
+      "injected_fault": "forced_collision",
+      "expected_guardrail": "require_world_state_causality",
+      "threat_model": "EPISTEMIC_OR_RUNTIME_BOUNDARY",
+      "no_simulation_claim": true,
+      "provenance": {
+        "claim_class": "GAME_ADDITION",
+        "source_ids": [],
+        "confidence": "HIGH",
+        "claim_scope_es": "Caso negativo diseñado para validación documental y contrato futuro."
+      }
+    }
+  ]
+}

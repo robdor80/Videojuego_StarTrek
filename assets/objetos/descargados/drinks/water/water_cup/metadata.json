@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_0f0a78384a93",
+  "display_name": "water cup",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/drinks/water/water_cup",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Vaso de agua; atrezo de mesa.",
+  "proposed_game_use": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/drinks/water/water_cup.glb",
+      "kind": "file",
+      "name": "water_cup.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 96480,
+    "files": [
+      {
+        "path": "water_cup.glb",
+        "extension": ".glb",
+        "size_bytes": 96480
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/drinks/water/water_cup",
+  "directory_root": "assets/"
+}

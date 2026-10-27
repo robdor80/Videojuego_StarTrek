@@ -3,32 +3,32 @@ on:
   push:
     branches: [main]
     paths:
-      - 'gameplay/careers/academy_path/**'
-      - 'gameplay/careers/service_record/**'
-      - 'gameplay/careers/post_academy/**'
-      - 'gameplay/social/**'
-      - 'gameplay/characters/wellbeing/**'
-      - 'gameplay/simulation/**'
-      - 'lore/federation/starfleet/disciplinary_system/**'
-      - 'tools/generation/*academy*.py'
-      - 'tools/generation/*cadet*.py'
-      - 'tools/generation/*step*.py'
-      - 'validation/fixtures/academy_life/**'
-      - 'validation/consistency/academy_*'
-      - 'docs/roadmap/academy_*'
-      - 'docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md'
+      - 'sistemas/gameplay/careers/academy_path/**'
+      - 'sistemas/gameplay/careers/service_record/**'
+      - 'sistemas/gameplay/careers/post_academy/**'
+      - 'sistemas/gameplay/social/**'
+      - 'sistemas/gameplay/characters/wellbeing/**'
+      - 'sistemas/gameplay/simulation/**'
+      - 'mundo/lore/federation/starfleet/disciplinary_system/**'
+      - 'desarrollo/tools/generation/*academy*.py'
+      - 'desarrollo/tools/generation/*cadet*.py'
+      - 'desarrollo/tools/generation/*step*.py'
+      - 'desarrollo/validation/fixtures/academy_life/**'
+      - 'desarrollo/validation/consistency/academy_*'
+      - 'proyecto/docs/roadmap/academy_*'
+      - 'proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md'
       - 'CONTENT_STATUS.md'
       - '.github/workflows/academy-life-closure.yml'
   pull_request:
     paths:
-      - 'gameplay/careers/academy_path/**'
-      - 'gameplay/careers/service_record/**'
-      - 'gameplay/social/**'
-      - 'gameplay/characters/wellbeing/**'
-      - 'tools/generation/*academy*.py'
-      - 'tools/generation/*cadet*.py'
-      - 'validation/fixtures/academy_life/**'
-      - 'validation/consistency/academy_*'
+      - 'sistemas/gameplay/careers/academy_path/**'
+      - 'sistemas/gameplay/careers/service_record/**'
+      - 'sistemas/gameplay/social/**'
+      - 'sistemas/gameplay/characters/wellbeing/**'
+      - 'desarrollo/tools/generation/*academy*.py'
+      - 'desarrollo/tools/generation/*cadet*.py'
+      - 'desarrollo/validation/fixtures/academy_life/**'
+      - 'desarrollo/validation/consistency/academy_*'
       - '.github/workflows/academy-life-closure.yml'
   workflow_dispatch:
 permissions:
@@ -42,6 +42,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Audit Academy Life repository closure
-        run: python tools/generation/validate_academy_life_final_step20.py
+        run: python desarrollo/tools/generation/validate_academy_life_final_step20.py
       - name: Run Academy Life manifest suite
-        run: python tools/generation/run_academy_life_suite.py
+        run: python desarrollo/tools/generation/run_academy_life_suite.py

@@ -6,31 +6,31 @@ on:
       - main
     paths:
       - ".github/workflows/f15-release-readiness-reference.yml"
-      - "tools/validation/f15_*"
-      - "validation/fixtures/f15/**"
-      - "docs/roadmap/master/fases/F15/**"
-      - "docs/roadmap/master/PLAN_MAESTRO.md"
-      - "docs/roadmap/master/ESTADO_GLOBAL.json"
-      - "docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
-      - "tools/validation/f08_acceptance_gate.py"
-      - "tools/validation/f14_audiovisual_reference.py"
-      - "docs/decisions/prototype_validation_and_release_policy.md"
-      - "localization/README.md"
-      - "ui/README.md"
+      - "desarrollo/tools/validation/f15_*"
+      - "desarrollo/validation/fixtures/f15/**"
+      - "proyecto/docs/roadmap/master/fases/F15/**"
+      - "proyecto/docs/roadmap/master/PLAN_MAESTRO.md"
+      - "proyecto/docs/roadmap/master/ESTADO_GLOBAL.json"
+      - "proyecto/docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
+      - "desarrollo/tools/validation/f08_acceptance_gate.py"
+      - "desarrollo/tools/validation/f14_audiovisual_reference.py"
+      - "proyecto/docs/decisions/prototype_validation_and_release_policy.md"
+      - "audiovisual/localization/README.md"
+      - "audiovisual/ui/README.md"
   pull_request:
     paths:
       - ".github/workflows/f15-release-readiness-reference.yml"
-      - "tools/validation/f15_*"
-      - "validation/fixtures/f15/**"
-      - "docs/roadmap/master/fases/F15/**"
-      - "docs/roadmap/master/PLAN_MAESTRO.md"
-      - "docs/roadmap/master/ESTADO_GLOBAL.json"
-      - "docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
-      - "tools/validation/f08_acceptance_gate.py"
-      - "tools/validation/f14_audiovisual_reference.py"
-      - "docs/decisions/prototype_validation_and_release_policy.md"
-      - "localization/README.md"
-      - "ui/README.md"
+      - "desarrollo/tools/validation/f15_*"
+      - "desarrollo/validation/fixtures/f15/**"
+      - "proyecto/docs/roadmap/master/fases/F15/**"
+      - "proyecto/docs/roadmap/master/PLAN_MAESTRO.md"
+      - "proyecto/docs/roadmap/master/ESTADO_GLOBAL.json"
+      - "proyecto/docs/roadmap/master/CRITERIOS_DE_CIERRE.md"
+      - "desarrollo/tools/validation/f08_acceptance_gate.py"
+      - "desarrollo/tools/validation/f14_audiovisual_reference.py"
+      - "proyecto/docs/decisions/prototype_validation_and_release_policy.md"
+      - "audiovisual/localization/README.md"
+      - "audiovisual/ui/README.md"
   workflow_dispatch:
 
 permissions:
@@ -50,22 +50,22 @@ jobs:
           python-version: "3.12"
       - name: Syntax and JSON
         run: |
-          python -m py_compile tools/validation/f15_release_readiness.py tools/validation/test_f15_release_readiness.py
-          python -m json.tool validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json >/dev/null
-          python -m json.tool validation/fixtures/f15/f15_beta_capture_template_v0.1.json >/dev/null
+          python -m py_compile desarrollo/tools/validation/f15_release_readiness.py desarrollo/tools/validation/test_f15_release_readiness.py
+          python -m json.tool desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json >/dev/null
+          python -m json.tool desarrollo/validation/fixtures/f15/f15_beta_capture_template_v0.1.json >/dev/null
       - name: Scenarios, repository audit and blocked template
         run: |
-          python tools/validation/f15_release_readiness.py \
-            --scenario validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json \
-            --capture-template validation/fixtures/f15/f15_beta_capture_template_v0.1.json \
+          python desarrollo/tools/validation/f15_release_readiness.py \
+            --scenario desarrollo/validation/fixtures/f15/f15_release_readiness_scenarios_v0.1.json \
+            --capture-template desarrollo/validation/fixtures/f15/f15_beta_capture_template_v0.1.json \
             --repo-root . \
-            --output validation/results/f15_release_readiness_reference.json
+            --output desarrollo/validation/results/f15_release_readiness_reference.json
       - name: Unit regressions
-        run: python -m unittest discover -s tools/validation -p 'test_f15_*.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f15_*.py' -v
       - name: Upload reference evidence
         uses: actions/upload-artifact@v4
         with:
           name: f15-offline-release-readiness
-          path: validation/results/f15_release_readiness_reference.json
+          path: desarrollo/validation/results/f15_release_readiness_reference.json
           if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_356768420af7",
+  "display_name": "Pasillo Enterprise",
+  "category": "corridor",
+  "relative_directory": "pasillos/general/pasillo_enterprise",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Módulo de pasillo denominado Enterprise; serie/modelo exacto por verificar.",
+  "proposed_game_use": "Construcción de corredores modulares y estudio de conectividad.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/enterprise-corridor.zip",
+      "kind": "file",
+      "name": "enterprise-corridor.zip"
+    },
+    {
+      "source": "corridor/enterprise_corridor.glb",
+      "kind": "file",
+      "name": "enterprise_corridor.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 3185938,
+    "files": [
+      {
+        "path": "enterprise-corridor.zip",
+        "extension": ".zip",
+        "size_bytes": 1050962
+      },
+      {
+        "path": "enterprise_corridor.glb",
+        "extension": ".glb",
+        "size_bytes": 2134976
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/general/pasillo_enterprise",
+  "directory_root": "assets/"
+}

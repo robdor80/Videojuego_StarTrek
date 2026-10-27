@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_58bf5529ab46",
+  "display_name": "stylized sushi",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/sushi/stylized_sushi",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Sushi estilizado.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/sushi/stylized-sushi.zip",
+      "kind": "file",
+      "name": "stylized-sushi.zip"
+    },
+    {
+      "source": "objects/food/sushi/stylized_sushi.glb",
+      "kind": "file",
+      "name": "stylized_sushi.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 8726706,
+    "files": [
+      {
+        "path": "stylized-sushi.zip",
+        "extension": ".zip",
+        "size_bytes": 4440894
+      },
+      {
+        "path": "stylized_sushi.glb",
+        "extension": ".glb",
+        "size_bytes": 4285812
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/sushi/stylized_sushi",
+  "directory_root": "assets/"
+}

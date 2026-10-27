@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_3c53a211a1c5",
+  "display_name": "pasta bowl polycam",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/pasta/pasta_bowl_polycam",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Cuenco de pasta.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/pasta/pasta-bowl-polycam.zip",
+      "kind": "file",
+      "name": "pasta-bowl-polycam.zip"
+    },
+    {
+      "source": "objects/food/pasta/pasta_bowl_-_polycam.glb",
+      "kind": "file",
+      "name": "pasta_bowl_-_polycam.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 57839743,
+    "files": [
+      {
+        "path": "pasta-bowl-polycam.zip",
+        "extension": ".zip",
+        "size_bytes": 37776175
+      },
+      {
+        "path": "pasta_bowl_-_polycam.glb",
+        "extension": ".glb",
+        "size_bytes": 20063568
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/pasta/pasta_bowl_polycam",
+  "directory_root": "assets/"
+}

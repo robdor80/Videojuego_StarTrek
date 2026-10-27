@@ -1,0 +1,92 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_A_TO_E",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "runtime_import_allowed": false,
+  "layers": [
+    {
+      "phase": "A",
+      "meaning": "Especies y rasgos culturales; no equivalen a afiliación política ni personalidad",
+      "stable_refs": [
+        "mundo/lore/species/LORE01_TNG_species_depth_index_v0.2.json",
+        "mundo/lore/species/LORE01_TNG_species_coverage_audit_v0.1.json",
+        "mundo/lore/cultures/README.md"
+      ],
+      "cardinality": "25 dossiers; cobertura no exhaustiva"
+    },
+    {
+      "phase": "A.1",
+      "meaning": "Contexto cultural probabilístico, no comportamiento obligatorio",
+      "stable_refs": [
+        "mundo/lore/cultures/ai_behavior/species_behavior_index_v0.1.json",
+        "mundo/lore/cultures/ai_behavior/behavior_context_contract_v0.1.json"
+      ],
+      "cardinality": "25 perfiles de comportamiento"
+    },
+    {
+      "phase": "B",
+      "meaning": "Potencias, gobiernos y organismos heterogéneos: NO confundir red/Comisión con Estado",
+      "stable_refs": [
+        "mundo/lore/factions/LORE01_B_civilizations_index_v0.1.json"
+      ],
+      "cardinality": "16 identidades"
+    },
+    {
+      "phase": "C",
+      "meaning": "Lugares físicos, rutas de referencia, origen de mapas, sin propietario político geométrico fijo",
+      "stable_refs": [
+        "mundo/lore/astrography/atlas/anchor_atlas_v0.1.json",
+        "mundo/lore/astrography/atlas/quadrants_regions_v0.1.json"
+      ],
+      "cardinality": "30 anclajes"
+    },
+    {
+      "phase": "D",
+      "meaning": "Relaciones, hechos, tratados, información atribuida; anclas de sucesos no transición futura forzada",
+      "stable_refs": [
+        "mundo/lore/diplomacy/relation_index_v0.1.json",
+        "mundo/lore/diplomacy/relation_evidence_v0.1.json",
+        "mundo/lore/diplomacy/historical_events_v0.1.json"
+      ],
+      "cardinality": "27 relaciones, 40 eventos"
+    },
+    {
+      "phase": "E",
+      "meaning": "Interpretaciones operativas y ejemplos; siempre dependen del estado de campaña, actor, permiso y conocimiento",
+      "stable_refs": [
+        "mundo/lore/operations/operational_evidence_v0.1.json",
+        "mundo/lore/operations/query_scenarios_v0.1.json"
+      ],
+      "cardinality": "32 fichas, 12 escenarios"
+    }
+  ],
+  "contracts_not_to_mutate": [
+    "sistemas/gameplay/diplomacy/diplomatic_state_contract.json",
+    "sistemas/gameplay/economy/civilian_trade_operator_contract.json",
+    "sistemas/gameplay/first_contact/prime_directive_operational_protocol_v0.1.json",
+    "sistemas/gameplay/ship_operations/ship_computer/access_control_rules.json",
+    "sistemas/gameplay/ship_operations/ship_computer/computer_request_contract.json",
+    "sistemas/gameplay/navigation/astrography_location_model.json",
+    "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+    "desarrollo/validation/consistency/movement_logistics_economy_diplomacy_invariants_v0.1.json",
+    "sistemas/ai/navigation/astrography_knowledge_guardrails.md",
+    "proyecto/docs/decisions/campaign_continuity.md"
+  ],
+  "core_reference": [
+    "https://github.com/robdor80/CoreRPG/blob/main/docs/adr/0004-observer-knowledge-projections.md",
+    "https://github.com/robdor80/CoreRPG/blob/main/docs/adr/0005-actions-explicit-simulation.md",
+    "https://github.com/robdor80/CoreRPG/blob/main/docs/adr/0007-authorized-context-builder-ai.md"
+  ],
+  "layering_query_order": [
+    "1:identify_requested_fact",
+    "2:resolve_campaign_date_and_world_version",
+    "3:resolve_location_identity_without_guessing_border",
+    "4:lookup_polity_and_local_jurisdiction",
+    "5:resolve_historical_relation_and_event_order",
+    "6:project_actor_and_institution_knowledge",
+    "7:evaluate_actual_permissions_and_available_capabilities_in_runtime",
+    "8:present_answer_or_ask_command_authority_to_decide"
+  ],
+  "disclaimer": "La consulta documental no proporciona hechos de estado persistente, clasificación en tiempo real, o autorización ejecutiva."
+}

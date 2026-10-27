@@ -1,0 +1,106 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "breen_confederacy",
+  "display_name_es": "Confederación Breen",
+  "entity_kind": "confederacion_opaca",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "sistemas/gameplay/diplomacy/major_faction_catalogue.json",
+  "monograph_ref": "mundo/lore/factions/monographs/breen_confederacy_v0.1.md",
+  "domains": {
+    "identidad_historia": "Potencia reconocida en el marco político de DS9, con presencia militar especialmente importante en 2375. La denominación Confederación no autoriza describir entidades federadas, parlamento o régimen electoral: el material retenido no lo establece. Su entrada en la Guerra del Dominio marca un cambio de posición internacional.",
+    "gobierno_instituciones": "Hay representantes militares con título «Thot», incluido Thot Gor, pero los órganos de gobierno civil, sucesión, elección de dirigentes y jerarquías completas siguen desconocidos para el alcance TNG/DS9/VOY. No importar estructuras, fisiología o política explicadas en Discovery ni en novelas como si fueran hechos del canon audiovisual admitido.",
+    "sociedad_ciudadania": "La variedad de perspectivas, identidades y estatutos jurídicos de personas breen queda mayoritariamente indeterminada. La protección corporal observable no demuestra organización doméstica, sexo biológico, opinión política ni compromiso individual con sus líderes. Describir a un oficial breen solo por función efectivamente observada.",
+    "ley_justicia": "No hay material suficiente para declarar delitos, derechos de ciudadanía, proceso penal ni competencias judiciales exactas de la Confederación en la época retenida. Una petición de detención o traslado formulada por un agente breen se trata como exigencia pendiente de validar, no como mandato legal universal.",
+    "economia": "Se evidencia capacidad de movilización bélica y de operación naval, pero no se conocen volumen comercial, divisa general, especializaciones de producción civil ni sistema fiscal. En el juego las rutas y recursos se decidirán solo con pruebas del universo y después en LORE-01 C/E.",
+    "defensa_seguridad": "Flota breen y armamento de disipación energética transforman condiciones militares de 2375. La capacidad no se atribuye a todos los barcos o años y exige evaluación tecnológica específica. No inventar mando estratégico global completo basándose en el título de un oficial y un encuentro.",
+    "diplomacia": "Alianza con Dominio en 2375, ataque a instalaciones federadas y guerra contra coalición. Antes de esta adhesión no equiparar automáticamente a la Confederación con un socio dominionista, ni atribuir neutralidad universal permanente. La rendición final del Dominio no establece automáticamente nuevo tratado breen.",
+    "conflictos_internos": "No se conocen de manera suficiente facciones opositoras, procesos sucesorios ni conflictos domésticos. La ausencia de datos no es prueba de unanimidad. Cualquier disidente breen creado para una trama será propuesta `GAME_ADDITION` separada y sometida a aprobación si altera el orden político.",
+    "flota_estar": "Tensión estratégica y protocolos de detección y alerta dependen del momento; el uniforme cerrado no autoriza descubrimiento de secretos biológicos ni lealtad personal. Un contacto en 2369 no presupone conocer el arma breen de 2375. Las órdenes de negociación no producen automáticamente un tratado.",
+    "videojuego": "Conservar esta ficha extensa en incertidumbres, no rellenarla con nombres inventados. Escenario: transmisión breen sin identificación fiable; IA puede solicitar verificación y advertir de posibilidades conocidas a fecha, pero CoreRPG controla detección, hostilidad, poderes diplomáticos y reacción de guerra."
+  },
+  "chronology": [
+    {
+      "year": 2375,
+      "claim_es": "Acuerdo de alianza con Dominio y cambio militar trascendente.",
+      "source_ids": [
+        "DS9_STRANGE_BEDFELLOWS"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Tecnología de disipación de energía afecta campaña de guerra.",
+      "source_ids": [
+        "DS9_THE_CHANGING_FACE_OF_EVIL"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2375,
+      "claim_es": "Final de guerra contra Dominio no aporta constitución detallada de Breen.",
+      "source_ids": [
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Representante militar breen identificado por rango, no por biología inferida.",
+    "Mercante de otra especie trabajando para empresa de territorio breen; ciudadanía sin presuponer.",
+    "Contactos previos a 2375 sin información de armamento revelado posteriormente."
+  ],
+  "unknowns": [
+    "Forma jurídica y significado preciso de la Confederación en esta época.",
+    "Líder civil supremo, sistema de sucesión y territorio controlado.",
+    "Derechos de ciudadanía, tribunales, moneda y fiscalidad.",
+    "Funcionamiento interno de la sociedad breen y preferencias personales."
+  ],
+  "evidence": [
+    {
+      "source_id": "DS9_STRANGE_BEDFELLOWS",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La Confederación se incorpora a alianza de guerra del Dominio en 2375.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_THE_CHANGING_FACE_OF_EVIL",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Las fuerzas breen despliegan capacidad militar que altera resultados de una ofensiva.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BREEN_DOMINION_WAR",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Referencia oficial sobre participación breen en el conflicto; no establece leyes internas.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BREEN_EXPLAINER",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Artículo oficial mezcla periodos de la franquicia: usar exclusivamente su sección DS9 de 2375.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "mundo/sources/canon_policy.md",
+    "mundo/sources/provenance_policy.md",
+    "sistemas/ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}

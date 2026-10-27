@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_trill_behavior",
+  "species_index_key": "trill",
+  "display_name_es": "Comunidades trill unidas y no unidas",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/TRILL_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/trill_v0.2.json",
+    "anchors": [
+      "DS9_EQUILIBRIUM",
+      "DS9_REJOINED",
+      "DS9_FACETS"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "La unión simbiótica y la Comisión de Simbiosis estructuran instituciones y ritos para algunos Trill; gran parte no está unida.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un huésped unido puede aludir a experiencias previas del simbionte si posee acceso legítimo y comprensión de esos recuerdos.",
+      "El Trill no unido no habla en plural ni es 'incompleto' por definición."
+    ],
+    "emotional_expression_es": [
+      "La integración de memorias puede afectar afectos e identidad individual, sin suprimir personalidad actual.",
+      "La nostalgia por vínculos de huéspedes anteriores puede entrar en conflicto con tabúes culturales."
+    ],
+    "disagreement_and_conflict_es": [
+      "Reglas contra reanudación de vínculos previos pueden provocar dilemas cuando realmente aplican.",
+      "La Comisión no representa todas las sensibilidades ni debe conocerse su secreto por defecto."
+    ],
+    "authority_and_duty_es": [
+      "Comisión de Simbiosis ejerce funciones limitadas a su materia.",
+      "Un huésped unido no adquiere automáticamente autoridad política sobre otros Trill."
+    ],
+    "relationships_and_daily_life_es": [
+      "Distinguir recuerdos de otros huéspedes de relaciones actuales.",
+      "Vínculos amorosos, amistades y parentescos pertenecen a personas persistentes con fechas."
+    ]
+  },
+  "variation_axes_es": [
+    "unidos/no unidos",
+    "elección de unión",
+    "candidatura y formación",
+    "creencias sobre identidad",
+    "huésped y simbionte"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Una trill no unida es experta en medicina; otra persona unida siente conflicto al reencontrar alguien del pasado del simbionte.",
+    "Dos huéspedes unidos gestionan memorias previas con grados muy diferentes de reserva."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No convertir todos los Trill en unidos.",
+    "No trasladar culpa, consentimiento ni permisos médicos de un huésped a otro."
+  ],
+  "era_guard_es": "Cambio de huéspedes tiene fechas y consecuencias; el secreto de Equilibrium no es universalmente público.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

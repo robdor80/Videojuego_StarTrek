@@ -1,0 +1,67 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "tzenkethi_polity",
+  "display_name_es": "Poder político tzenkethi (denominación incompleta)",
+  "entity_kind": "estado_exterior_de_instituciones_incompletas",
+  "content_scope": "MAIN_GAME_CONTEXT_NOT_AUTOSPAWN",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "culture_ids",
+    "citizenship",
+    "office",
+    "organization_memberships",
+    "individual_convictions"
+  ],
+  "monograph_ref": "mundo/lore/factions/monographs/tzenkethi_polity_v0.1.md",
+  "domains": {
+    "identidad_historia": "Potencia adversaria histórica de la Federación, mencionada en DS9. Su gobernante se denomina Autarca; fuentes complementarias emplean «Coalición Tzenkethi», pero el alcance constitucional del término no debe elevarse a canon audiovisual sin soporte del episodio. En «The Adversary» la noticia de un golpe es FALSEDAD difundida por un infiltrado, no hecho histórico.",
+    "gobierno_instituciones": "El cargo Autarca aparece como título ejecutivo, sin reglamento sucesorio confirmado. El falso embajador Krajensky afirma depuesto al gobernante para atraer a Defiant, pero la propia trama revela la manipulación; el dossier no crea régimen de emergencia ni sustituto real en 2371.",
+    "sociedad_ciudadania": "No se sabe quién es ciudadano, qué grupos internos existen, ni cuáles son las costumbres de sus individuos. Los antecedentes de confrontación estatal no justifican que todo tzenkethi actúe como agente hostil.",
+    "ley_justicia": "El corpus no define código penal, tribunales o competencias judiciales de la potencia. No autenticar decretos gubernamentales transmitidos por terceros sin comprobación de identidad.",
+    "economia": "La capacidad industrial y presupuesto no están documentados. No inventar recursos, moneda o comercio por analogía con la Federación.",
+    "defensa_seguridad": "Conflictos fronterizos anteriores al 2371 muestran capacidad de presión; la falsa bandera podría haber producido guerra si la tripulación no interviene. Ni embajador impostor ni informe de inteligencia son evidencia de ataque tzenkethi real.",
+    "diplomacia": "En 2371 el intento dominionista de provocar guerra contra Federación no debe registrarse como guerra iniciada por Tzenkethi. El estado diplomático más exacto debe seguir el historial real y las decisiones posteriores autorizadas por CoreRPG.",
+    "conflictos_internos": "La supuesta crisis palaciega no puede figurar en las fichas de rivalidades internas confirmadas. No hay información contrastada suficiente de oposición, reformas o una insurrección real.",
+    "flota_estar": "En contacto con presuntas órdenes del embajador, autenticar la identidad y cadena de mando antes de actuar. Un informe de posible golpe es noticia no comprobada hasta contrastarlo; la IA no atribuye a jugador conocimiento de la suplantación antes de su descubrimiento.",
+    "videojuego": "Prueba narrativa prioritaria: entrada de rumor falso de derrocamiento del Autarca. La IA muestra incertidumbre; CoreRPG registra fuente y verificación, impide provocar guerra por consecuencia de rumor solamente."
+  },
+  "chronology": [
+    {
+      "year": 2371,
+      "claim_es": "Infiltrado cambiaformas difunde noticia falsa de golpe tzenkethi; al final se desmiente.",
+      "source_ids": [
+        "DS9_THE_ADVERSARY"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "unknowns": [
+    "Nombre constitucional oficial y vigencia del término «Coalición».",
+    "Composición del gobierno, sucesión y oposición al Autarca.",
+    "Ciudadanía, derecho interno, economía y cultura.",
+    "Fecha exacta de guerras anteriores y tratados formales."
+  ],
+  "evidence": [
+    {
+      "source_id": "DS9_THE_ADVERSARY",
+      "authority": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "claim_es": "Se cita al Autarca y al conflicto previo, pero la supuesta noticia de golpe es una falsedad de un impostor.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "DS9_PARADISE_LOST",
+      "authority": "SCREEN_CANON",
+      "confidence": "MEDIUM",
+      "claim_es": "Antecedentes del capitán Leyton/Sisko ofrecen contexto de conflictos fronterizos pasados, sin fecha exacta inventada.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "mundo/sources/canon_policy.md",
+    "mundo/sources/provenance_policy.md"
+  ]
+}

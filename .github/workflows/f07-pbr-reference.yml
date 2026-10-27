@@ -3,17 +3,17 @@ name: F07 procedural GLB / UV-PBR reference QA (NOT UE5)
 on:
   pull_request:
     paths:
-      - "tools/assets/f07_pbr_plate.py"
-      - "tools/assets/f07_gltf_audit.py"
-      - "tools/validation/test_f07_pbr_pipeline.py"
-      - "docs/roadmap/master/fases/F07/**"
+      - "desarrollo/tools/assets/f07_pbr_plate.py"
+      - "desarrollo/tools/assets/f07_gltf_audit.py"
+      - "desarrollo/tools/validation/test_f07_pbr_pipeline.py"
+      - "proyecto/docs/roadmap/master/fases/F07/**"
       - ".github/workflows/f07-pbr-reference.yml"
   push:
     branches: [main]
     paths:
-      - "tools/assets/f07_pbr_plate.py"
-      - "tools/assets/f07_gltf_audit.py"
-      - "tools/validation/test_f07_pbr_pipeline.py"
+      - "desarrollo/tools/assets/f07_pbr_plate.py"
+      - "desarrollo/tools/assets/f07_gltf_audit.py"
+      - "desarrollo/tools/validation/test_f07_pbr_pipeline.py"
       - ".github/workflows/f07-pbr-reference.yml"
   workflow_dispatch:
 
@@ -30,10 +30,10 @@ jobs:
         with:
           python-version: "3.12"
       - name: Compile Python tools
-        run: python -m py_compile tools/assets/f07_pbr_plate.py tools/assets/f07_gltf_audit.py tools/validation/test_f07_pbr_pipeline.py
+        run: python -m py_compile desarrollo/tools/assets/f07_pbr_plate.py desarrollo/tools/assets/f07_gltf_audit.py desarrollo/tools/validation/test_f07_pbr_pipeline.py
       - name: Verify sample material contracts and guardrails
-        run: python tools/validation/test_f07_pbr_pipeline.py -v
+        run: python desarrollo/tools/validation/test_f07_pbr_pipeline.py -v
       - name: Generate GLB with procedural PBR/UV (not UE5)
-        run: python tools/assets/f07_pbr_plate.py --output /tmp/f07_armor_plate.glb --manifest /tmp/f07_armor_plate.json
+        run: python desarrollo/tools/assets/f07_pbr_plate.py --output /tmp/f07_armor_plate.glb --manifest /tmp/f07_armor_plate.json
       - name: Independently audit GLB structure
-        run: python tools/assets/f07_gltf_audit.py --input /tmp/f07_armor_plate.glb --require-pbr --output /tmp/f07_glb_audit.json
+        run: python desarrollo/tools/assets/f07_gltf_audit.py --input /tmp/f07_armor_plate.glb --require-pbr --output /tmp/f07_glb_audit.json

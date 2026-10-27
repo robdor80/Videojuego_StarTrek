@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_3a9713279a98",
+  "display_name": "sushi boat nigiri (1)",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/sushi/sushi_boat_nigiri_1",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Barca de sushi/nigiri.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/sushi/sushi_boat_nigiri (1).glb",
+      "kind": "file",
+      "name": "sushi_boat_nigiri (1).glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 7606832,
+    "files": [
+      {
+        "path": "sushi_boat_nigiri (1).glb",
+        "extension": ".glb",
+        "size_bytes": 7606832
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/sushi/sushi_boat_nigiri_1",
+  "directory_root": "assets/"
+}

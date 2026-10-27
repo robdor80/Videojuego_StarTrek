@@ -1,0 +1,38 @@
+{
+  "schema_version": "0.2.0",
+  "requirements_id": "civilization_generation_requirements",
+  "status": "baseline_content_complete",
+  "generation_dimensions": [
+    "homeworld_or_origin",
+    "species_or_multi_species_population",
+    "population_scale",
+    "technology_level",
+    "spaceflight_capability",
+    "warp_status",
+    "political_structure",
+    "economic_and_resource_profile",
+    "settlement_distribution",
+    "orbital_infrastructure",
+    "language_context",
+    "culture_profile",
+    "contact_status",
+    "relationship_to_nearby_powers",
+    "known_to_starfleet_by_era"
+  ],
+  "rules": [
+    "Generated civilizations need not belong to a major canonical faction.",
+    "Pre-warp contact status constrains Starfleet interaction.",
+    "Technology level constrains generated ships, facilities and detectable signatures.",
+    "Culture influences institutions and norms but does not prescribe every individual's personality.",
+    "Political alignment and species identity are separate.",
+    "Once materialized, civilization identity and history persist and evolve through campaign events.",
+    "Warp threshold triggers contact-readiness assessment rather than automatic contact.",
+    "Generated names, morphology, languages, governments and settlements materialize deterministically and persist.",
+    "Contact with one polity does not imply planet-wide recognition on politically divided worlds."
+  ],
+  "content_work_needed": [],
+  "index_ref": "sistemas/universe/generation/procedural_worlds_civilizations_first_contact_index_v0.1.json",
+  "materialization_pipeline_ref": "sistemas/universe/generation/civilization_latent_observed_materialized_pipeline_v0.1.json",
+  "first_contact_protocol_ref": "sistemas/gameplay/first_contact/starfleet_first_contact_operational_protocol_v0.1.json",
+  "prime_directive_protocol_ref": "sistemas/gameplay/first_contact/prime_directive_operational_protocol_v0.1.json"
+}

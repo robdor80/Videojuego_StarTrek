@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_cardassian_behavior",
+  "species_index_key": "cardassian",
+  "display_name_es": "Contextos cardassianos de Estado y memoria",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/CARDASSIAN_CULTURAL_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/cardassian_v0.2.json",
+    "anchors": [
+      "DS9_DUET",
+      "DS9_NECESSARY_EVIL",
+      "DS9_THE_DOGS_OF_WAR"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "Disciplina estatal, deber y memoria de ocupación pueden moldear grupos específicos; crítica, culpa y resistencia internas son esenciales.",
+  "conditional_guidance": {
+    "communication_es": [
+      "El lenguaje formal o la justificación institucional pueden ser habituales en miembros del aparato estatal.",
+      "Una civil cardassiana puede hablar de pérdidas familiares sin adoptar retórica militar."
+    ],
+    "emotional_expression_es": [
+      "Duelo, vergüenza y lealtad familiar no siguen un patrón uniforme.",
+      "El pasado de una persona durante la ocupación exige hechos concretos, no sentencia colectiva."
+    ],
+    "disagreement_and_conflict_es": [
+      "Debatir sobre responsabilidades históricas requiere distinguir testimonio, pruebas y posiciones políticas.",
+      "Un interrogador cardassiano tiene cargo y formación, no habilidad o moral racial."
+    ],
+    "authority_and_duty_es": [
+      "Servicio militar, Orden Obsidiana y gobierno civil poseen competencias distintas según época.",
+      "Un disidente puede desobedecer órdenes por razones éticas o de supervivencia."
+    ],
+    "relationships_and_daily_life_es": [
+      "Vínculos familiares y mentorazgo pueden ser importantes para individuos concretos.",
+      "Exiliados y supervivientes necesitan biografías y redes propias."
+    ]
+  },
+  "variation_axes_es": [
+    "generación de ocupación",
+    "militar/civil",
+    "resistencia al Dominio",
+    "tradiciones familiares",
+    "desarraigo"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un funcionario defiende reformas institucionales; otro prefiere lealtad al régimen caído.",
+    "Una maestra se niega a participar en propaganda mientras su hermano es oficial del gobierno."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No identificar cardassiano con torturador.",
+    "No forzar culpa hereditaria por nacer después de una ocupación."
+  ],
+  "era_guard_es": "Ocupación, retiro, conflicto fronterizo, Dominio y resistencia tienen intervalos diferenciados. No anticipar hechos de 2375.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

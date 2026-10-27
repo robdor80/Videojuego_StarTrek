@@ -1,0 +1,78 @@
+{
+  "schema_version": "1.0.0",
+  "phase": "F06",
+  "scope": "non_authoritative_sensor_reference",
+  "date": "2026-10-11",
+  "branch": "feat/f06-sensors-functional-reference",
+  "verified_commit": "70412bc6e01ea64a8a646e91d34e93299306c4c2",
+  "workflow_run_id": 38179039670,
+  "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38179039670",
+  "workflow_status": "completed",
+  "workflow_conclusion": "success",
+  "environment": "GitHub Actions ubuntu-latest / CPython 3.12.15",
+  "commands": [
+    "python -m py_compile desarrollo/tools/simulation/resolve_sensor_scan.py desarrollo/tools/simulation/f06_reference.py desarrollo/tools/simulation/test_f06_reference.py",
+    "python -m unittest discover -s desarrollo/tools/simulation -p 'test_sensor_detection_v0_1.py' -v",
+    "python -m unittest discover -s desarrollo/tools/simulation -p 'test_f06_reference.py' -v"
+  ],
+  "result": {
+    "compilation": "passed",
+    "legacy_sensor_tests": {
+      "run": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "f06_tests": {
+      "run": 18,
+      "passed": 18,
+      "failed": 0
+    }
+  },
+  "evidence_kind": "REFERENCE_PROBADA",
+  "authoritative": false,
+  "effects_applied": 0,
+  "limits": [
+    "No Core RPG contract tested",
+    "No UE5 build or controller tested",
+    "No real resource reservation, time scheduler or World State mutation",
+    "No save/load or actual Science delivery",
+    "Manual PDF located but binary page review not performed"
+  ],
+  "security_hardening": [
+    "No counts of undetected entities/signatures in public results",
+    "Malformed filter/priority/context rejected before producing results",
+    "Science handoff rejects invalid priority"
+  ],
+  "audit_hardening_2026_10_12": {
+    "verified_commit": "a6ef6895208a448c235c60ffced522560ce86a8a",
+    "workflow_run_id": 38228217392,
+    "workflow_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228217392",
+    "workflow_status": "completed",
+    "workflow_conclusion": "success",
+    "legacy_sensor_tests": {
+      "run": 8,
+      "passed": 8
+    },
+    "f06_tests": {
+      "run": 23,
+      "passed": 23
+    },
+    "interphase_f04_f05_f06": {
+      "cases": 3,
+      "status": "SKIPPED_F04_F05_NOT_MERGED",
+      "executed": 0
+    },
+    "security_fixes": [
+      "A-02 scoped reference binding",
+      "A-03 raw scan no undetected counts",
+      "A-04 finite numeric and malformed world validation",
+      "A-05 CI watching contracts",
+      "A-06 uncommitted event candidates only"
+    ],
+    "limits": [
+      "No signed/authoritative Core authorization",
+      "No actual WorldState commit, persistence or UE5",
+      "Manual PDF visual inspection pending"
+    ]
+  }
+}

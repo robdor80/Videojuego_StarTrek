@@ -1,0 +1,170 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_927df8dd8489",
+  "display_name": "Puente USS Vengeance",
+  "category": "bridge",
+  "relative_directory": "puentes/starfleet/vengeance/puente_uss_vengeance",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Puente referido como Vengeance; probable vínculo con la nave de la línea Kelvin, pendiente de verificar el modelo.",
+  "proposed_game_use": "Referencia de interfaz/escenarios de puente alternativos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "bridges/USS Vengance bridge/uss-vengance-bridge",
+      "kind": "directory",
+      "name": "uss-vengance-bridge"
+    },
+    {
+      "source": "bridges/USS Vengance bridge/uss-vengance-bridge.zip",
+      "kind": "file",
+      "name": "uss-vengance-bridge.zip"
+    },
+    {
+      "source": "bridges/USS Vengance bridge/uss_vengance_bridge.glb",
+      "kind": "file",
+      "name": "uss_vengance_bridge.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 22,
+    "size_bytes": 47781223,
+    "files": [
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/Black_Dots_4.png",
+        "extension": ".png",
+        "size_bytes": 340
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/HullPlates2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 46705
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/iso_web_yellow2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 34913
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/Lcars2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 121515
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/material_4.jpg",
+        "extension": ".jpg",
+        "size_bytes": 36190
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/material_8.bmp",
+        "extension": ".bmp",
+        "size_bytes": 5760054
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/Metal_Corrogated_Shiny.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1826
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/NewTrekLCARS.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2726355
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model/Tile_Hexagon_White.jpg",
+        "extension": ".jpg",
+        "size_bytes": 8426
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae/model.dae",
+        "extension": ".dae",
+        "size_bytes": 7371167
+      },
+      {
+        "path": "uss-vengance-bridge/source/USS+Vengance+bridge_dae.zip",
+        "extension": ".zip",
+        "size_bytes": 6352524
+      },
+      {
+        "path": "uss-vengance-bridge/textures/Black_Dots_4.png",
+        "extension": ".png",
+        "size_bytes": 197
+      },
+      {
+        "path": "uss-vengance-bridge/textures/HullPlates2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 46705
+      },
+      {
+        "path": "uss-vengance-bridge/textures/iso_web_yellow2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 34913
+      },
+      {
+        "path": "uss-vengance-bridge/textures/Lcars2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 121515
+      },
+      {
+        "path": "uss-vengance-bridge/textures/material_4.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 37312
+      },
+      {
+        "path": "uss-vengance-bridge/textures/material_8.png",
+        "extension": ".png",
+        "size_bytes": 2454248
+      },
+      {
+        "path": "uss-vengance-bridge/textures/Metal_Corrogated_Shiny.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1826
+      },
+      {
+        "path": "uss-vengance-bridge/textures/NewTrekLCARS.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2726251
+      },
+      {
+        "path": "uss-vengance-bridge/textures/Tile_Hexagon_White.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 8426
+      },
+      {
+        "path": "uss-vengance-bridge.zip",
+        "extension": ".zip",
+        "size_bytes": 11785247
+      },
+      {
+        "path": "uss_vengance_bridge.glb",
+        "extension": ".glb",
+        "size_bytes": 8104568
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+  "historical_relative_directory": "bridges/vengeance/puente_uss_vengeance",
+  "directory_root": "assets/"
+}

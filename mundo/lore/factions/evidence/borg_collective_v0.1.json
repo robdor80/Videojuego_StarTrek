@@ -1,0 +1,136 @@
+{
+  "schema_version": "0.1.0",
+  "civilization_id": "borg_collective",
+  "display_name_es": "Colectividad Borg (entidad político-tecnológica)",
+  "entity_kind": "red_colectiva_tecnopolitica",
+  "content_scope": "MAIN_GAME",
+  "authoring_status": "DOCUMENTARY_NOT_RUNTIME",
+  "identity_axes": [
+    "species_id",
+    "socialization_culture_ids",
+    "citizenship_state",
+    "government_affiliation_ids",
+    "organization_memberships",
+    "office_assignment",
+    "personal_beliefs"
+  ],
+  "legacy_contract_ref": "sistemas/gameplay/species/borg_assimilation_state.json",
+  "monograph_ref": "mundo/lore/factions/monographs/borg_collective_v0.1.md",
+  "domains": {
+    "identidad_historia": "La Colectividad Borg es una organización cognitiva y tecnológica que asimila personas de distintas especies. No representa una especie biológica; Locutus, Hugh y Siete de Nueve demuestran que la identidad biográfica y la condición de conexión pueden cambiar. La amenaza se observa en TNG y el espacio Delta de Voyager no es un territorio ordinario habilitado en la campaña principal.",
+    "gobierno_instituciones": "Una voz colectiva y, según fecha y obra, una Reina Borg participan en procesos de decisión; no se debe equiparar la estructura a un parlamento, gobierno de especie o cadena de mando militar humana. La arquitectura exacta de decisión compartida y el acceso de cada dron a conocimiento global quedan desconocidos y dependen de estado de conectividad.",
+    "sociedad_ciudadania": "Los drones proceden de especies y sociedades diferentes y pueden ser liberados o desconectados. Un individuo ex-Borg conserva origen biológico y biografía; no se debe inferir ciudadanía, culpabilidad o obediencia contemporánea a la Colectividad por implantes. La condición de asimilación no concede derecho de acceso a datos personales no disponibles.",
+    "ley_justicia": "Las asimilaciones y coerción no constituyen un sistema judicial comparable al de estados convencionales. No inventar tratados, derecho penal Borg ni un proceso legal de «naturalización como dron». El rescate de una persona asimilada depende de estado médico, seguridad y autonomía, no de un prejuicio genérico.",
+    "economia": "Adquisición y transformación de tecnología/materiales por asimilación y operaciones de cubos; no hay evidencia retenida para construir mercados, presupuesto monetario o sistema comercial Borg equiparables a Alianza Ferengi. La adaptación y recursos materiales son lógica específica futura de CoreRPG.",
+    "defensa_seguridad": "Naves cúbicas y otros activos adaptan respuestas; el primer enfrentamiento «Q Who?» y Wolf 359 en «Best of Both Worlds» son hechos antes o después de campaña según fecha. No permitir al narrador garantizar derrota o adaptación automática: CoreRPG determina recursos, efectos, visibilidad y resistencia.",
+    "diplomacia": "El contacto normal no funciona como negociación entre estados. En «Scorpion» se dan condiciones de cooperación táctica limitada, sin convertir la Colectividad en aliado convencional. La intervención Borg en Alfa se justifica por hechos canónicos TNG y no por el futuro portal IDEA-0011, cuyo acceso a Alfa para Borg está prohibido por diseño.",
+    "conflictos_internos": "Hugh, colectivos desconectados y Siete muestran posibilidades diferentes al mando central, sujetas a fechas y hechos. La resistencia o individualidad no se asigna a todos los drones. La Colectividad no debe adquirir voluntad moral individual comparable a la de un ciudadano por comodidad narrativa.",
+    "flota_estar": "Las alertas se basan en detección e identificación verificadas; Flota diferencia amenaza, persona rescatada e información de investigación. Un piloto que fue dron no pasa a ser agente Borg automáticamente. No se revela estado oculto de un dron ni estrategia futura de Colectividad al jugador sin conocimientos acreditados.",
+    "videojuego": "Entrada de un cubo en sector Alfa solo desde estado causal y temporal autorizado de TNG, nunca por portal IDEA-0011. Escena con ex-dron precisa ficha biológica original, conectividad, daños, memoria conocida y derechos de persona. Un pacto contra amenaza común en Delta no crea tratado permanente ni desbloquea DLC."
+  },
+  "chronology": [
+    {
+      "year": 2365,
+      "claim_es": "Primer contacto decisivo de Enterprise-D con Borg.",
+      "source_ids": [
+        "TNG_Q_WHO"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2366,
+      "claim_es": "Ataque de Locutus y desastre de Wolf 359.",
+      "source_ids": [
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2368,
+      "claim_es": "Hugh evidencia individualidad frente a conexión.",
+      "source_ids": [
+        "TNG_I_BORG"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2373,
+      "claim_es": "Encuentro en Voyager genera cooperación táctica excepcional contra especie 8472.",
+      "source_ids": [
+        "VOY_SCORPION"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    },
+    {
+      "year": 2377,
+      "claim_es": "Unimatrix Zero y disidencia conectada aparecen en contexto de Voyager.",
+      "source_ids": [
+        "VOY_UNIMATRIX_ZERO"
+      ],
+      "event_relation": "PRE_CAMPAIGN_ONLY_IF_DATE_VALID"
+    }
+  ],
+  "npc_cases": [
+    "Ex-dron que ejerce su personalidad individual y no representa al colectivo.",
+    "Dron activo sin permiso para afirmar datos de su época futura.",
+    "Comandante que detecta un cubo en Alfa por razones canónicas, sin intervención del portal DLC."
+  ],
+  "unknowns": [
+    "Constitución o reglas exactas de coordinación cognitiva global.",
+    "Procedencia biológica originaria de la Colectividad.",
+    "Inventario mundial y recursos de todas las naves y unimatices.",
+    "Procedimiento general de liberación aplicable a cualquier dron sin excepciones."
+  ],
+  "evidence": [
+    {
+      "source_id": "TNG_Q_WHO",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Los Borg son descubiertos como amenaza asimiladora no ordinaria en TNG.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "TNG_BEST_OF_BOTH_WORLDS",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Locutus demuestra control forzado y la necesidad de distinguir identidad anterior.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "TNG_I_BORG",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "Hugh muestra que conciencia individual puede ser considerada separadamente.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "VOY_SCORPION",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La cooperación contra amenaza excepcional es táctica, no relación diplomática general.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "VOY_UNIMATRIX_ZERO",
+      "authority": "SCREEN_CANON",
+      "confidence": "HIGH",
+      "claim_es": "La conectividad y la disidencia de miembros requieren estados personales diferenciados.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    },
+    {
+      "source_id": "ST_OFFICIAL_BORG_101",
+      "authority": "OFFICIAL_REFERENCE",
+      "confidence": "MEDIUM",
+      "claim_es": "Referencia oficial general; no sustituye los episodios en la cronología del juego.",
+      "verification": "EPISODE_LEVEL_NOT_SCENE_BY_SCENE"
+    }
+  ],
+  "canon_scope": "TNG_DS9_VOY_AND_RETAINED_HISTORICAL_PRECEDENTS",
+  "verification_status": "EPISODE_OR_OFFICIAL_REFERENCE_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED",
+  "core_mutations_allowed": false,
+  "policy_refs": [
+    "mundo/sources/canon_policy.md",
+    "mundo/sources/provenance_policy.md",
+    "sistemas/ai/npc_behavior/faction_authority_guardrails.md"
+  ]
+}

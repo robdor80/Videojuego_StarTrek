@@ -1,0 +1,87 @@
+{
+  "original_files_checked": 15656,
+  "ignored_files": 13271,
+  "ignored_bytes": 18670412024,
+  "binary_files_by_format": 7683,
+  "binary_bytes_by_format": 15908535833,
+  "model_leaks": [],
+  "texture_leaks": [],
+  "matrix": [
+    {
+      "path": "juego/Valhalla/nave/model.FBX",
+      "expected_ignored": true,
+      "ignored": true
+    },
+    {
+      "path": "juego/Valhalla/nave/source.BLEND1",
+      "expected_ignored": true,
+      "ignored": true
+    },
+    {
+      "path": "assets/naves/example.png",
+      "expected_ignored": true,
+      "ignored": true
+    },
+    {
+      "path": "assets/naves/index.json",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "assets/naves/LICENSE",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "laboratorios/UE5/code.py",
+      "expected_ignored": true,
+      "ignored": true
+    },
+    {
+      "path": "laboratorios/README.md",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Source/Game.cpp",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Config/DefaultEngine.ini",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Plugins/Plugin/Source/Module.cpp",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Plugins/Plugin/Binaries/Win64/Plugin.dll",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Content/StarTrek/BP.uasset",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Content/StarTrek/Level.umap",
+      "expected_ignored": false,
+      "ignored": false
+    },
+    {
+      "path": "juego/UE5/StarTrekRPG/Saved/log.txt",
+      "expected_ignored": true,
+      "ignored": true
+    },
+    {
+      "path": "3D Star Trek/example.txt",
+      "expected_ignored": true,
+      "ignored": true
+    }
+  ],
+  "binary_classification": "Known binary, model and archive formats; remaining files sampled for NUL bytes in first 8192 bytes."
+}

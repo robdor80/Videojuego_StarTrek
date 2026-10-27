@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_22ff264313a0",
+  "display_name": "danube class",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/danube/danube_class",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "danube",
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Runabout de clase Danube, conocido en Deep Space Nine.",
+  "proposed_game_use": "F11/F12: lanzadera y vuelos de servicio.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class danube/star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb",
+      "kind": "file",
+      "name": "star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 2531976,
+    "files": [
+      {
+        "path": "star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb",
+        "extension": ".glb",
+        "size_bytes": 2531976
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/starfleet/danube/danube_class",
+  "directory_root": "assets/"
+}

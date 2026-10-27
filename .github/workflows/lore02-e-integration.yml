@@ -4,25 +4,25 @@ on:
   pull_request:
     paths:
       - "CONTENT_STATUS.md"
-      - "lore/technology/**"
-      - "lore/equipment/**"
-      - "lore/medicine/**"
-      - "lore/science/**"
-      - "docs/decisions/lore_02_d_*"
-      - "docs/roadmap/lore_02_e_*"
-      - "tools/validation/*lore02*"
+      - "mundo/lore/technology/**"
+      - "mundo/lore/equipment/**"
+      - "mundo/lore/medicine/**"
+      - "mundo/lore/science/**"
+      - "proyecto/docs/decisions/lore_02_d_*"
+      - "proyecto/docs/roadmap/lore_02_e_*"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-e-integration.yml"
   push:
     branches: [main, "feat/lore02-e-cross-audit"]
     paths:
       - "CONTENT_STATUS.md"
-      - "lore/technology/**"
-      - "lore/equipment/**"
-      - "lore/medicine/**"
-      - "lore/science/**"
-      - "docs/decisions/lore_02_d_*"
-      - "docs/roadmap/lore_02_e_*"
-      - "tools/validation/*lore02*"
+      - "mundo/lore/technology/**"
+      - "mundo/lore/equipment/**"
+      - "mundo/lore/medicine/**"
+      - "mundo/lore/science/**"
+      - "proyecto/docs/decisions/lore_02_d_*"
+      - "proyecto/docs/roadmap/lore_02_e_*"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-e-integration.yml"
   workflow_dispatch:
 
@@ -43,9 +43,9 @@ jobs:
           python-version: "3.12"
       - name: Auditoría transversal A–D
         run: |
-          python -m py_compile tools/validation/validate_lore02_e.py tools/validation/test_lore02_e.py
-          python tools/validation/validate_lore02_e.py
-          python tools/validation/test_lore02_e.py
+          python -m py_compile desarrollo/tools/validation/validate_lore02_e.py desarrollo/tools/validation/test_lore02_e.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py
 
   prior-lore:
     name: Regresión LORE-02 A–D y LORE-01 A–E
@@ -60,27 +60,27 @@ jobs:
           python-version: "3.12"
       - name: Bloques A–D
         run: |
-          python tools/validation/validate_lore02_a_completion.py
-          python tools/validation/test_lore02_a_completion.py
-          python tools/validation/validate_lore02_b.py
-          python tools/validation/test_lore02_b.py
-          python tools/validation/validate_lore02_c.py
-          python tools/validation/test_lore02_c.py
-          python tools/validation/validate_lore02_d.py
-          python tools/validation/test_lore02_d.py
+          python desarrollo/tools/validation/validate_lore02_a_completion.py
+          python desarrollo/tools/validation/test_lore02_a_completion.py
+          python desarrollo/tools/validation/validate_lore02_b.py
+          python desarrollo/tools/validation/test_lore02_b.py
+          python desarrollo/tools/validation/validate_lore02_c.py
+          python desarrollo/tools/validation/test_lore02_c.py
+          python desarrollo/tools/validation/validate_lore02_d.py
+          python desarrollo/tools/validation/test_lore02_d.py
       - name: Base galáctica LORE-01
         run: |
-          python tools/validation/validate_lore01_a1.py
-          python tools/validation/test_lore01_a1.py
-          python tools/validation/validate_lore01_b.py
-          python tools/validation/test_lore01_b.py
-          python tools/validation/validate_lore01_c.py
-          python tools/validation/test_lore01_c.py
-          python tools/validation/validate_lore01_d.py
-          python tools/validation/test_lore01_d.py
-          python tools/validation/validate_lore01_e.py
-          python tools/validation/test_lore01_e.py
-          python tools/validation/validate_roadmap_state.py
+          python desarrollo/tools/validation/validate_lore01_a1.py
+          python desarrollo/tools/validation/test_lore01_a1.py
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore01_c.py
+          python desarrollo/tools/validation/test_lore01_c.py
+          python desarrollo/tools/validation/validate_lore01_d.py
+          python desarrollo/tools/validation/test_lore01_d.py
+          python desarrollo/tools/validation/validate_lore01_e.py
+          python desarrollo/tools/validation/test_lore01_e.py
+          python desarrollo/tools/validation/validate_roadmap_state.py
 
   prior-gameplay:
     name: Regresión de contratos F07–F15 (documental, no UE5)
@@ -95,7 +95,7 @@ jobs:
           python-version: "3.12"
       - name: Tests de referencia existentes F07–F15
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f07_*.py' -v
-          python -m unittest discover -s tools/validation -p 'test_f08_*.py' -v
-          python -m unittest discover -s tools/validation -p 'test_f09_*.py' -v
-          python -m unittest discover -s tools/validation -p 'test_f1*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f07_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f08_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f09_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f1*.py' -v

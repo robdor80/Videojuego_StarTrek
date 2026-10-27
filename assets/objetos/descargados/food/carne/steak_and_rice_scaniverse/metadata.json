@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_663c5f91dadf",
+  "display_name": "steak and rice scaniverse",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/food/carne/steak_and_rice_scaniverse",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Plato de carne con arroz.",
+  "proposed_game_use": "F12/F14: comida de replicador, servicio de comedor y objeto visual interactuable (sin atribuir propiedades jugables hasta implementarlas).",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/food/carne/steak-and-rice-scaniverse.zip",
+      "kind": "file",
+      "name": "steak-and-rice-scaniverse.zip"
+    },
+    {
+      "source": "objects/food/carne/steak_and_rice_scaniverse.glb",
+      "kind": "file",
+      "name": "steak_and_rice_scaniverse.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 43885177,
+    "files": [
+      {
+        "path": "steak-and-rice-scaniverse.zip",
+        "extension": ".zip",
+        "size_bytes": 23312221
+      },
+      {
+        "path": "steak_and_rice_scaniverse.glb",
+        "extension": ".glb",
+        "size_bytes": 20572956
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/food/carne/steak_and_rice_scaniverse",
+  "directory_root": "assets/"
+}
