@@ -1,0 +1,43 @@
+name: LORE-03 B — Conflictos, guerras y crisis (documental)
+on:
+  push:
+    branches: [main, "lore/03-b-conflicts-crises"]
+    paths:
+      - "lore/conflicts/**"
+      - "docs/roadmap/lore_03_b/**"
+      - "tools/validation/*lore03_b*"
+      - ".github/workflows/lore03-b-conflicts.yml"
+  pull_request:
+    paths:
+      - "lore/conflicts/**"
+      - "docs/roadmap/lore_03_b/**"
+      - "tools/validation/*lore03_b*"
+      - ".github/workflows/lore03-b-conflicts.yml"
+permissions:
+  contents: read
+jobs:
+  documentary-integrity:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: LORE-03B — reference validator and negative mutations
+        run: |
+          python -m py_compile tools/validation/validate_lore03_b.py tools/validation/test_lore03_b.py
+          python tools/validation/validate_lore03_b.py
+          python tools/validation/test_lore03_b.py
+      - name: Regresiones LORE-01D y LORE-03A
+        run: |
+          python tools/validation/validate_lore01_d.py
+          python tools/validation/test_lore01_d.py
+          python tools/validation/validate_lore03_a.py
+          python tools/validation/test_lore03_a.py
+      - name: Regresión documental LORE-02E
+        run: |
+          python tools/validation/validate_lore02_e.py
+          python tools/validation/test_lore02_e.py
