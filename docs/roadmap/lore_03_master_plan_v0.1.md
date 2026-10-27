@@ -1,3 +1,5 @@
+> **Actualización de seguimiento, 27-10-2026 (rama LORE-03B, pendiente de fusión):** suspendida inicialmente por ST-ORG-01, el autor levantó expresamente la suspensión. Los bloques B01–B08 se han integrado en la PR Draft [#41](https://github.com/robdor80/Videojuego_StarTrek/pull/41): 22 expedientes históricos, 12 escenarios documentales y validador/CI. La primera ejecución propia y las regresiones de la PR han resultado correctas. Estado provisional **NEEDS_REVIEW**, nunca COMPLETE antes de aprobación y merge. Los textos cronológicos anteriores de este plan conservan su valor como instantánea de 23-10-2026.
+
 # LORE-03 — Plan maestro: Historia, conflictos y continuidad galáctica
 
 **Fecha:** 2026-10-23. **Base auditada:** `main@867077e4a0108f5ae71485ba668c0419ee29aa2f`.  
