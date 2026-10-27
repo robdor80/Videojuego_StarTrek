@@ -12,6 +12,7 @@ PATTERNS = "mundo/lore/historical_events/lore03c_institutional_patterns_v0.1.jso
 D = "proyecto/docs/roadmap/lore_03_d/D_escenarios_documentales_v0.1.json"
 DOCS = "proyecto/docs/roadmap/lore_03_e"
 SOURCE = "mundo/sources/source_registry/source_registry.json"
+CLOSURE = "proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json"
 REQUIRED = [
     "proyecto/docs/decisions/playable_eras.md",
     "proyecto/docs/decisions/campaign_continuity.md",
@@ -37,7 +38,7 @@ REQUIRED += [f"{DOCS}/E0{i}_{s}.md" for i,s in enumerate([
     "integridad_estructural","cronologia_canon","personajes_naves",
     "integracion_lore01_lore02","universo_dinamico","contratos_persistencia",
     "pruebas_y_regresiones","dictamen_y_cierre"], start=1)]
-REQUIRED += [f"{DOCS}/README.md",f"{DOCS}/matriz_transversal.md"]
+REQUIRED += [f"{DOCS}/README.md",f"{DOCS}/matriz_transversal.md", CLOSURE]
 
 class CrossAuditError(AssertionError):
     pass
@@ -99,7 +100,7 @@ def validate_memories(casebook, patterns, events, conflicts):
              p["requires_authorized_institutional_event"] is True,
              "Institutional pattern bypasses authority")
 
-def validate_boundary(a, d, eras, status):
+def validate_boundary(a, d, eras, status, closure=None):
     w=a["reference_window"]
     need(a["status"]=="COMPLETE_DOCUMENTARY" and
          (w["start_year"],w["end_year"])==(2364,2383), "Invalid A baseline")
@@ -120,8 +121,32 @@ def validate_boundary(a, d, eras, status):
          "Automatic future or runtime authority leaked")
     ids=[s["id"] for s in d["scenarios"]]
     need(len(set(ids))==35, "Duplicate D scenario IDs")
-    need("| E — Auditoría global | ⬜ TODO |" in status,
-         "E must remain TODO until author-approved fusion/admin update")
+    need("| E — Auditoría global | ✅ COMPLETE |" in status
+         and "| E — Auditoría global | ⬜ TODO |" not in status,
+         "LORE-03E administrative state must match verified PR #49 merge")
+    if closure is None:
+        closure = read_json(CLOSURE)
+    checks = closure.get("post_merge_checks", [])
+    need(closure.get("schema_version") == "0.1.0"
+         and closure.get("phase_id") == "LORE-03E"
+         and closure.get("aggregate_id") == "LORE-03"
+         and closure.get("status") == "COMPLETE_DOCUMENTARY"
+         and closure.get("aggregate_status") == "COMPLETE_DOCUMENTARY"
+         and closure.get("scope") == "DOCUMENTARY_ONLY"
+         and closure.get("merged_pr") == 49
+         and closure.get("merged_at") == "2026-10-27T18:40:47Z"
+         and closure.get("merge_commit_sha") == "22b7e7db7a0fab138879927d6fb05ce7a43e16e7"
+         and closure.get("source_head_sha") == "e0b1397530974cdb0c98a8dca251447f87d04e21"
+         and closure.get("source_branch_deleted") is True
+         and closure.get("author_approved_merge") is True
+         and closure.get("core_rpg_world_state_owner") == "CoreRPG_ONLY"
+         and closure.get("gameplay_activated") is False
+         and closure.get("runtime_verified") is False
+         and len(checks) == 2
+         and {x.get("run_id") for x in checks} == {40562209896,40562209868}
+         and all(x.get("head_sha") == closure["merge_commit_sha"] and
+                 x.get("conclusion") == "success" for x in checks),
+         "LORE-03E COMPLETE without reliable evidence of PR #49 merge/checks")
     return len(ids)
 
 def validate(root=ROOT):
@@ -134,15 +159,15 @@ def validate(root=ROOT):
     eras={x:read_json(f"sistemas/universe/chronology/era_profiles/{x}/era_profile.json",root)
           for x in ("pike","kirk","tng_ds9_voyager")}
     text=(root/"CONTENT_STATUS.md").read_text(encoding="utf-8")
-    count=validate_boundary(a,d,eras,text)
+    count=validate_boundary(a,d,eras,text,read_json(CLOSURE,root))
     need("Only one playable era" in (root/"mundo/sources/canon_policy.md").read_text(encoding="utf-8"),
          "Canon policy lost single-era priority")
     for phase in ["A — Cronología y acontecimientos", "B — Conflictos, guerras y crisis",
                   "C — Consecuencias y memoria histórica", "D — Continuidad/divergencia"]:
         need(f"| {phase} | ✅ COMPLETE |" in text, "LORE-03 predecessor incomplete: "+phase)
-    return {"status":"AUDIT_DOCUMENTARY_IN_REVIEW","events":len(events),
+    return {"status":"COMPLETE_DOCUMENTARY","events":len(events),
             "conflicts":len(conflicts),"memory_cases":len(c["cases"]),
             "institutional_patterns":len(p["patterns"]),"d_scenarios":count,
-            "runtime_verified":False,"merge_authorized":False}
+            "runtime_verified":False,"merge_authorized":True}
 if __name__=="__main__":
     print("LORE-03E EDITORIAL CROSS-PHASE AUDIT:",validate())

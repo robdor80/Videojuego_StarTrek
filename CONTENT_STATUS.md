@@ -32,21 +32,21 @@ A folder not explicitly listed here inherits `TODO`. `COMPLETE` is not permanent
 | `mundo/sources/provenance_policy.md` | ✅ COMPLETE | Provenance and confidence model fixed. |
 | `mundo/sources/source_registry/` | ✅ COMPLETE | Living registry established. |
 | `proyecto/docs/workflows/content_research_workflow.md` | ✅ COMPLETE | Standard research-to-commit workflow fixed. |
-| `proyecto/docs/decisions/playable_eras.md` | ✅ COMPLETE | Three playable eras fixed by Roberto. |
+| `proyecto/docs/decisions/playable_eras.md` | ✅ COMPLETE | Decisión vigente del 2026-10-23: solo `tng_ds9_voyager` jugable; Pike/Kirk se conservan como referencias históricas. |
 | `proyecto/docs/decisions/campaign_continuity.md` | ✅ COMPLETE | Canon sets the starting state; campaign future is emergent. |
 | `proyecto/docs/decisions/universal_rank_insignia.md` | ✅ COMPLETE | TNG-style pips standardised across all playable eras by design. |
 | `proyecto/docs/decisions/player_facing_language.md` | ✅ COMPLETE | Internal IDs may be English; all normal player-facing text is es-ES. |
 | `proyecto/docs/decisions/lore_to_game_rule.md` | ✅ COMPLETE | Lore is input; sistemas/gameplay/data/runtime usability is the required output. |
 
-## Playable era scope
+## Playable era scope (decisión vigente 2026-10-23)
 
 | Era | Status | Anchor |
 |---|---|---|
-| Pike / Strange New Worlds | ✅ SCOPE FIXED | Christopher Pike / NCC-1701 |
-| Kirk / TOS + films | ✅ SCOPE FIXED | James T. Kirk / NCC-1701 and NCC-1701-A as date allows |
-| TNG + DS9 + Voyager | ✅ SCOPE FIXED | Picard / Sisko / Janeway |
+| TNG + DS9 + Voyager y su continuación histórica | ✅ ÚNICA ÉPOCA JUGABLE | Ventana documental 2364–2383; Academia propuesta para 2383, día/mes pendientes |
+| Pike / Strange New Worlds | 📚 SOLO REFERENCIA HISTÓRICA | Christopher Pike / NCC-1701; perfil conservado y `playable: false` |
+| Kirk / TOS + films | 📚 SOLO REFERENCIA HISTÓRICA | James T. Kirk / NCC-1701/A; perfil conservado y `playable: false` |
 
-Excluded from playable scope: `Picard` (series), `Discovery`, `Enterprise`.
+La tabla anterior de tres épocas era una decisión superada el 2026-10-23. No borrar los catálogos antiguos. Quedan fuera del alcance jugable `Picard` (serie), `Discovery` y `Enterprise`; sus acontecimientos futuros tampoco obligan a la partida.
 
 ## Universe / chronology
 
@@ -588,9 +588,9 @@ Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runt
 | B — Conflictos, guerras y crisis | ✅ COMPLETE | PR #41 fusionada el 2026-10-27 (`2b1447d4`); 22 expedientes históricos, 12 escenarios narrativos, B01–B08, validación y CI posteriores `success`. Cierre **documental**, no implementación CoreRPG/UE5. Reservas canónicas trazadas. |
 | C — Consecuencias y memoria histórica | ✅ COMPLETE | PR #44 fusionada el 2026-10-27 (`56abff20c46d4614fb309e4258a44ed0eb9c33b9`); C01–C08, 13 casos y 6 patrones de memoria histórica, validación de 167/167 pruebas y 2/2 checks en `main` tras fusión. Cierre exclusivamente documental; sin activar CoreRPG/UE5. |
 | D — Continuidad/divergencia | ✅ COMPLETE | PR #46 fusionada el 2026-10-27 (`6aafca0ef74787184c840c82a92386ff05f532f4`); D01–D08, 35 escenarios, 45 pruebas documentales y 2/2 CI posteriores en `success`. Cierre documental: sin implementación CoreRPG/UE5. |
-| E — Auditoría global | ⬜ TODO | Verificación cruzada A–D y autorización humana final. |
+| E — Auditoría global | ✅ COMPLETE | **PR #49 fusionada el 2026-10-27** (`22b7e7db7a0fab138879927d6fb05ce7a43e16e7`), rama eliminada y GitHub Actions posteriores LORE-03E #40562209896 / LORE-03A #40562209868 en `success`. E01–E08, auditoría independiente y regresiones documentales. Sin runtime. |
 
-Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A CERRADA Y FUSIONADA** mediante [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38), commit `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. La regularización administrativa de este estado se propone en PR independiente. **B, C y D COMPLETADAS documentalmente mediante PR #41, PR #44 y PR #46 respectivamente; solo E continúa pendiente.** CoreRPG/UE5 no reciben datos runtime de esta fase.
+Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. Registro de cierre A–E: `proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json`. La regularización global se consolida mediante PR administrativa posterior a la fusión verificada #49. **LORE-03 A–E COMPLETADAS documentalmente:** PR #38, #41, #44, #46 y #49 fusionadas; evidencias de E en `proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json`. **Cierre global exclusivamente DOCUMENTAL**; quedan pendientes las futuras integraciones CoreRPG/UE5/IA y decisiones explícitas de autor, que no invalidan el cierre de LORE-03. CoreRPG/UE5 no reciben datos runtime de esta fase.
 
 ## Procedural living-universe master plan
 

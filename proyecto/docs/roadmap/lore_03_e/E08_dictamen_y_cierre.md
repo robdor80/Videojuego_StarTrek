@@ -1,3 +1,5 @@
+> **Acta posterior a fusión, 2026-10-27.** PR #49 fusionada y autorizada; fecha real `2026-10-27T18:40:47Z`, commit `22b7e7db7a0fab138879927d6fb05ce7a43e16e7`, rama fuente eliminada. GitHub Actions sobre el commit de fusión: [LORE-03E #40562209896](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40562209896) y [LORE-03A #40562209868](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40562209868), ambos `success`. **Dictamen final de E01–E08: COMPLETE_DOCUMENTARY, ninguna prueba runtime.** El acta de evidencias es [lore03_global_closure_evidence_v0.1.json](lore03_global_closure_evidence_v0.1.json). La sección inferior sobre PR Draft contiene el estado histórico *previo* a la fusión y no se debe tomar como vigente. El cierre administrativo en CONTENT_STATUS y el gate actualizado se proponen por la presente PR separada; su propia fusión no se presume.
+
 # E08 — Dictamen transversal y cierre condicionado
 **Situación actual: AUDIT_DOCUMENTARY_IN_REVIEW, sin fusión autorizada.**
 
