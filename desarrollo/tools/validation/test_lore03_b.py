@@ -67,8 +67,18 @@ class Lore03BTests(unittest.TestCase):
     def test_reject_index_runtime(self):
         ix=copy.deepcopy(self.index);ix["gameplay_activated"]=True
         with self.assertRaises(v.InvalidLore03B):v.validate_index(ix,self.scenarios,self.dossiers,self.context)
-    def test_reject_index_status_complete(self):
-        ix=copy.deepcopy(self.index);ix["status"]="COMPLETE"
+    def test_reject_unreviewed_index(self):
+        ix=copy.deepcopy(self.index);ix["status"]="NEEDS_REVIEW_DOCUMENTARY"
+        with self.assertRaises(v.InvalidLore03B):v.validate_index(ix,self.scenarios,self.dossiers,self.context)
+    def test_closure_is_documentary(self):
+        self.assertEqual(self.index["status"],"COMPLETE_DOCUMENTARY")
+        self.assertEqual(self.index["closure"]["pr_number"],41)
+        self.assertFalse(self.index["closure"]["runtime_activated"])
+    def test_reject_falsified_merge_commit(self):
+        ix=copy.deepcopy(self.index);ix["closure"]["merge_commit_sha"]="deadbeef"
+        with self.assertRaises(v.InvalidLore03B):v.validate_index(ix,self.scenarios,self.dossiers,self.context)
+    def test_reject_claimed_runtime_activation(self):
+        ix=copy.deepcopy(self.index);ix["closure"]["runtime_activated"]=True
         with self.assertRaises(v.InvalidLore03B):v.validate_index(ix,self.scenarios,self.dossiers,self.context)
 
 if __name__=="__main__":unittest.main(verbosity=2)
