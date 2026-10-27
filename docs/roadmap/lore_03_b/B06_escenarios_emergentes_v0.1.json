@@ -1,0 +1,189 @@
+{
+  "schema_version": "0.1.0",
+  "status": "DOCUMENTARY_EXAMPLES_ONLY",
+  "authority": "CORE_RPG_ONLY",
+  "auto_trigger": false,
+  "new_missions_created": false,
+  "scenario_count": 12,
+  "scenarios": [
+    {
+      "seed_id": "CRISIS-01",
+      "title": "Disputa por explotación de una nebulosa",
+      "cause_family": "territorial_dispute",
+      "preconditions": [
+        "reclamaciones rivales",
+        "acceso acreditado"
+      ],
+      "peaceful_route": "Arbitraje y uso compartido",
+      "other_possible_route": "Escaramuza limitada solo con decisión política",
+      "persistent_domains": "tránsito y reputación",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-02",
+      "title": "Incidente de patrulla fronteriza",
+      "cause_family": "border_incident",
+      "preconditions": [
+        "patrullas preexistentes",
+        "posiciones contrastadas"
+      ],
+      "peaceful_route": "Comunicación y retirada simultánea",
+      "other_possible_route": "Incidente armado por identificación errónea",
+      "persistent_domains": "daños e investigación",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-03",
+      "title": "Refugiados en corredor disputado",
+      "cause_family": "displacement_and_access",
+      "preconditions": [
+        "población desplazada",
+        "jurisdicción y transporte disponibles"
+      ],
+      "peaceful_route": "Corredor humanitario vigilado",
+      "other_possible_route": "Cierre temporal con sanciones",
+      "persistent_domains": "acogida y abastecimiento",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-04",
+      "title": "Sanciones por suministro restringido",
+      "cause_family": "resource_or_access_dispute",
+      "preconditions": [
+        "dependencia económica y autoridad acreditadas"
+      ],
+      "peaceful_route": "Negociación de cuotas y observadores",
+      "other_possible_route": "Sanciones prolongadas sin disparos",
+      "persistent_domains": "rutas y disponibilidad",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-05",
+      "title": "Casa klingon desafía nombramiento",
+      "cause_family": "secession_or_internal_power_struggle",
+      "preconditions": [
+        "Casas reales",
+        "apoyos y medios definidos"
+      ],
+      "peaceful_route": "Arbitraje de honor y acuerdo político",
+      "other_possible_route": "Insurrección sólo con facciones armadas reales",
+      "persistent_domains": "sucesión y alianzas",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-06",
+      "title": "Proyecto cardassiano de reconciliación",
+      "cause_family": "law_and_accountability",
+      "preconditions": [
+        "denuncias fundamentadas",
+        "autoridad judicial"
+      ],
+      "peaceful_route": "Tribunal y reparaciones con garantías",
+      "other_possible_route": "Protestas o sabotaje demostrado",
+      "persistent_domains": "confianza y justicia",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-07",
+      "title": "Señal de socorro con versiones contradictorias",
+      "cause_family": "false_information",
+      "preconditions": [
+        "testimonios divergentes",
+        "medios de verificación"
+      ],
+      "peaceful_route": "Inspección neutral",
+      "other_possible_route": "Acción limitada con pruebas y autoridad",
+      "persistent_domains": "inteligencia y rectificación",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-08",
+      "title": "Neutralidad ante ultimátum regional",
+      "cause_family": "coercive_demand",
+      "preconditions": [
+        "gobiernos identificados",
+        "ultimátum real"
+      ],
+      "peaceful_route": "Mediación y garantías",
+      "other_possible_route": "Movilización sin guerra forzosa",
+      "persistent_domains": "tratados y postura diplomática",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-09",
+      "title": "Bloqueo de estación civil",
+      "cause_family": "blockade",
+      "preconditions": [
+        "estación existente",
+        "competencia de control"
+      ],
+      "peaceful_route": "Supervisión internacional de mercancías",
+      "other_possible_route": "Bloqueo con impacto civil y posible retirada",
+      "persistent_domains": "salud y suministros",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-10",
+      "title": "Investigación de operación encubierta",
+      "cause_family": "covert_operation",
+      "preconditions": [
+        "cadena de mando",
+        "indicios verificables"
+      ],
+      "peaceful_route": "Comisión e intercambio de información",
+      "other_possible_route": "Expulsión diplomática o detenciones legales",
+      "persistent_domains": "conocimiento restringido",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-11",
+      "title": "Colonia atacada por piratas",
+      "cause_family": "armed_attack",
+      "preconditions": [
+        "colonia real",
+        "ataque probado"
+      ],
+      "peaceful_route": "Escolta y cooperación judicial",
+      "other_possible_route": "Choque con atacantes concretos, no su especie",
+      "persistent_domains": "daños, detenidos y justicia",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    },
+    {
+      "seed_id": "CRISIS-12",
+      "title": "Incumplimiento real o aparente de tratado",
+      "cause_family": "treaty_breach",
+      "preconditions": [
+        "tratado vigente",
+        "acto confirmado"
+      ],
+      "peaceful_route": "Reparación y observadores",
+      "other_possible_route": "Sanción proporcionada y autorizada",
+      "persistent_domains": "credibilidad y agravios",
+      "not_canon": true,
+      "worldstate_mutation": false,
+      "automatic_war": false
+    }
+  ]
+}
