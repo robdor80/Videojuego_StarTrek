@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1.0",
+  "dataset_id": "lore03c_institutional_patterns",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "mode": "EDITORIAL_PATTERNS_NO_INSTANTIATION",
+  "world_state_authority": "CoreRPG_ONLY",
+  "gameplay_activated": false,
+  "creates_memorials": false,
+  "creates_policies": false,
+  "patterns": [
+    {
+      "pattern_id": "wolf_memorial",
+      "event_ref": "wolf_359_battle",
+      "institutional_context": "Starfleet",
+      "pattern_type": "commemoration",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "institution_defined",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "La Flota podría celebrar un recuerdo de su personal perdido sin asignar una reacción emocional universal a asistentes."
+    },
+    {
+      "pattern_id": "bajor_reconstruction",
+      "event_ref": "cardassian_withdrawal_bajor",
+      "institutional_context": "Bajor",
+      "pattern_type": "reconstruction_archive",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "institution_defined",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "Un archivo de reconstrucción puede registrar reparaciones y desplazamientos cuando existan costes, trabajo y fechas representados."
+    },
+    {
+      "pattern_id": "dominion_aftercare",
+      "event_ref": "treaty_of_bajor",
+      "institutional_context": "Federation and former belligerents",
+      "pattern_type": "postwar_institutional_review",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "institution_defined",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "Tras un tratado podrían existir comisiones sobre reconstrucción, antiguos combatientes y restitución sin reconciliación automática."
+    },
+    {
+      "pattern_id": "shinzon_archives",
+      "event_ref": "nemesis_shinzon_romulan_crisis",
+      "institutional_context": "Romulan and Federation institutions",
+      "pattern_type": "political_history_archive",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "institution_defined",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "Versiones institucionales diferentes sobre la crisis no destruyen Rómulo en 2383 ni convierten versiones oficiales en verdad."
+    },
+    {
+      "pattern_id": "tzenkethi_report",
+      "event_ref": "tzenkethi_false_coup_report",
+      "institutional_context": "Starfleet",
+      "pattern_type": "disinformation_review",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "institution_defined",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "La institución podría estudiar cómo prosperó un falso informe; nunca conmemorar un golpe real inexistente."
+    },
+    {
+      "pattern_id": "section31_sealed",
+      "event_ref": "section31_revealed",
+      "institutional_context": "Starfleet authorized records",
+      "pattern_type": "restricted_archive",
+      "creation_status": "CONDITIONAL_EDITORIAL_NOT_CREATED",
+      "source_truth_preserved": true,
+      "requires_authorized_institutional_event": true,
+      "runtime_state_mutation": false,
+      "access_policy": "classified_need_to_know",
+      "assert_tzenkethi_coup_happened": false,
+      "description_es": "Un expediente restringido no se vuelve público por existir ni por la narración generativa."
+    }
+  ]
+}
