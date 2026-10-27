@@ -186,7 +186,26 @@ def validate():
               and d.get("gameplay_activated") is False
               and d.get("auto_schedules_future_canon") is False,
               "LORE-03D marked COMPLETE without authorized merge evidence")
-    check("| E — Auditoría global | ⬜ TODO |" in text,"E started without approval")
+    e_todo = "| E — Auditoría global | ⬜ TODO |" in text
+    e_complete = "| E — Auditoría global | ✅ COMPLETE |" in text
+    check(e_complete and not e_todo, "LORE-03E must be administratively COMPLETE after PR #49")
+    e = load("proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json")
+    checks = e.get("post_merge_checks", [])
+    check(e.get("phase_id") == "LORE-03E" and e.get("aggregate_id") == "LORE-03"
+          and e.get("status") == "COMPLETE_DOCUMENTARY"
+          and e.get("aggregate_status") == "COMPLETE_DOCUMENTARY"
+          and e.get("merged_pr") == 49
+          and e.get("merge_commit_sha") == "22b7e7db7a0fab138879927d6fb05ce7a43e16e7"
+          and e.get("merged_at") == "2026-10-27T18:40:47Z"
+          and e.get("author_approved_merge") is True
+          and e.get("source_branch_deleted") is True
+          and e.get("scope") == "DOCUMENTARY_ONLY"
+          and e.get("runtime_verified") is False
+          and e.get("gameplay_activated") is False
+          and {row.get("run_id") for row in checks} == {40562209896, 40562209868}
+          and all(row.get("head_sha") == e["merge_commit_sha"] and
+                  row.get("conclusion") == "success" for row in checks),
+          "LORE-03E closure lacks verified merger and post-merge CI evidence")
     decisions=(ROOT / "proyecto/docs/decisions/playable_eras.md").read_text(encoding="utf-8")
     check("2026-10-23" in decisions and "única época jugable" in decisions.lower(), "Author decision not registered")
     check("Only one playable era" in (ROOT/"mundo/sources/canon_policy.md").read_text(encoding="utf-8"),
