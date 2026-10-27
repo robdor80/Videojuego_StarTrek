@@ -32,3 +32,8 @@ El contraste independiente del CoreRPG (main@4f282863737bcd8f5add401202a9e1064c1
 
 ## Puerta de regularización futura identificada
 El validador existente desarrollo/tools/validation/validate_lore03_a.py exige explícitamente la fila «E — Auditoría global | TODO» en CONTENT_STATUS.md (condición de su estado anterior). **Tras la fusión autorizada**, la PR administrativa tendrá que actualizar de forma trazable esta condición para aceptar E COMPLETE solo con referencia verificada al merge, y entonces actualizar CONTENT_STATUS. No cambiar esa puerta durante la PR de desarrollo ni simular prematuramente la fusión.
+
+## Matriz de madurez real y dependencias críticas
+La lectura de F00–F15 confirma que F02–F06 conservan límites de integración; F08–F15 siguen pendientes de aceptación como fase real, aunque sus referencias estén preparadas. La ejecución operativa de Academia F10, carrera F11, población social F12 y universo dinámico F13 depende de futuros sistemas específicos y no queda certificada al cerrar LORE-03. Los bloques dinámicos 4–10 no están declarados como simulación productiva. Véase E04 para la clasificación completa.
+
+**Cierre administrativo en dos pasos:** (1) el autor autoriza fusionar la PR #49 una vez verificadas todas las pruebas sobre su último HEAD; (2) tras fusionar y validar main, otro cambio de regularización actualiza el validador A —que hoy exige E TODO—, el estado de E y la declaración global con evidencia del merge, sin anticipar ninguna fecha ni decisión creativa. La rama no se elimina sin permiso.
