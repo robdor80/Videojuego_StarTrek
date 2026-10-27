@@ -1,0 +1,98 @@
+# Content Research Workflow
+
+Standard operating procedure for adding Star Trek knowledge to the repository.
+
+## 1. Select one bounded block
+
+Work on one coherent subject at a time.
+
+Examples:
+- Starfleet ranks,
+- Academy admissions,
+- Constitution-class,
+- Vulcan culture.
+
+Do not open unrelated lore fronts during the same pass unless a dependency requires it.
+
+## 2. Define the questions
+
+Before browsing, identify what the game needs to know and which claims are chronology-sensitive.
+
+## 3. Research in project order
+
+1. Series and films.
+2. Licensed novels and comics.
+3. Internet research:
+   - official Star Trek / Paramount references,
+   - specialist reliable secondary sources,
+   - broader web only as needed.
+
+## 4. Capture provenance
+
+Register every source that materially supports retained information.
+
+Do not retain an unattributed fact just because several websites repeat it.
+
+## 5. Resolve or expose conflicts
+
+Apply `mundo/sources/canon_policy.md`.
+
+Unresolved contradictions go to `mundo/sources/unresolved_conflicts/`; they are not silently averaged together.
+
+## 6. Separate fact from interpretation
+
+Classify material as:
+- canon/reference fact,
+- licensed expansion,
+- inference,
+- game addition.
+
+## 7. Convert research into game-usable design
+
+Lore is input, not the final deliverable.
+
+Each research block must produce, as appropriate:
+- player-visible concepts,
+- gameplay rules,
+- structured data,
+- state fields,
+- validations,
+- AI knowledge/authority constraints,
+- progression hooks,
+- content-generation constraints.
+
+Markdown remains useful for explanation, nuance, sources and unresolved questions.
+
+Create JSON when structured data adds real value or a schema is sufficiently understood. Do not prematurely freeze runtime schemas.
+
+## 8. Validate temporal consistency
+
+For chronology-sensitive material, check:
+- era availability,
+- character age/status,
+- assignments,
+- ship service dates,
+- technology availability,
+- political state.
+
+## 9. Escalate only true design decisions
+
+Use `NEEDS_ROBERTO` only when research cannot decide the matter and a project choice affects the game.
+
+Routine research choices are handled without escalation.
+
+## 10. Update CONTENT_STATUS.md
+
+A block reaches `COMPLETE` only when:
+- current research scope is satisfied,
+- provenance is recorded,
+- known contradictions are resolved or explicitly logged,
+- structure is coherent,
+- relevant validation has passed,
+- the block has been translated into game-usable rules/data/content where applicable.
+
+## 11. Commit coherently
+
+Prefer one commit per completed research block or tightly related set of foundation changes.
+
+Commit messages should describe the domain, not the browsing process.

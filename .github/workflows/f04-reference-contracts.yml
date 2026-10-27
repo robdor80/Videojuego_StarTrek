@@ -5,19 +5,19 @@ on:
     branches:
       - 'docs/f04-*'
     paths:
-      - 'docs/roadmap/master/fases/F04/**'
-      - 'tools/validation/f04_reference.py'
-      - 'tools/validation/test_f04_reference.py'
-      - 'tools/validation/test_f04_miranda_example.py'
-      - 'validation/fixtures/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F04/**'
+      - 'desarrollo/tools/validation/f04_reference.py'
+      - 'desarrollo/tools/validation/test_f04_reference.py'
+      - 'desarrollo/tools/validation/test_f04_miranda_example.py'
+      - 'desarrollo/validation/fixtures/f04/**'
       - '.github/workflows/f04-reference-contracts.yml'
   pull_request:
     paths:
-      - 'docs/roadmap/master/fases/F04/**'
-      - 'tools/validation/f04_reference.py'
-      - 'tools/validation/test_f04_reference.py'
-      - 'tools/validation/test_f04_miranda_example.py'
-      - 'validation/fixtures/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F04/**'
+      - 'desarrollo/tools/validation/f04_reference.py'
+      - 'desarrollo/tools/validation/test_f04_reference.py'
+      - 'desarrollo/tools/validation/test_f04_miranda_example.py'
+      - 'desarrollo/validation/fixtures/f04/**'
       - '.github/workflows/f04-reference-contracts.yml'
 
 permissions:
@@ -35,10 +35,10 @@ jobs:
         with:
           python-version: '3.12'
       - name: Compile reference tools
-        run: python -m py_compile tools/validation/f04_reference.py tools/validation/test_f04_reference.py tools/validation/test_f04_miranda_example.py
+        run: python -m py_compile desarrollo/tools/validation/f04_reference.py desarrollo/tools/validation/test_f04_reference.py desarrollo/tools/validation/test_f04_miranda_example.py
       - name: Unit tests and canonical source checks
-        run: python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f04_reference.py' -v
       - name: Fixture acceptance cases
-        run: python tools/validation/f04_reference.py --fixture validation/fixtures/f04/authority_watch_acceptance_v0.1.json
+        run: python desarrollo/tools/validation/f04_reference.py --fixture desarrollo/validation/fixtures/f04/authority_watch_acceptance_v0.1.json
       - name: Miranda-120 demonstration (3x8, 4x6, 5+2; NOT Core/UE5)
-        run: python -m unittest discover -s tools/validation -p 'test_f04_miranda_example.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_f04_miranda_example.py' -v

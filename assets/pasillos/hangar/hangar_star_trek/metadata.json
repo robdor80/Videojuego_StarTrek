@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_641861b4d5cb",
+  "display_name": "Hangar Star Trek",
+  "category": "hangar",
+  "relative_directory": "pasillos/hangar/hangar_star_trek",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Entorno o elemento de hangar denominado Star Trek.",
+  "proposed_game_use": "Pruebas de instalaciones interiores y operativa de lanzaderas.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/star_trek_hangar.glb",
+      "kind": "file",
+      "name": "star_trek_hangar.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 4682108,
+    "files": [
+      {
+        "path": "star_trek_hangar.glb",
+        "extension": ".glb",
+        "size_bytes": 4682108
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/hangar/hangar_star_trek",
+  "directory_root": "assets/"
+}

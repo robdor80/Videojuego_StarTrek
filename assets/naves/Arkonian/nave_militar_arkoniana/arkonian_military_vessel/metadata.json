@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_ce5c884253fb",
+  "display_name": "arkonian military vessel",
+  "category": "ship",
+  "relative_directory": "naves/Arkonian/nave_militar_arkoniana/arkonian_military_vessel",
+  "taxonomy": {
+    "faction_inferred": "Arkonianos",
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXII (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave militar arkoniana asociable a Enterprise (siglo XXII); verificar versión y licencia.",
+  "proposed_game_use": "F13: encuentros o simulaciones históricas.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Arkonian/star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb",
+      "kind": "file",
+      "name": "star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 3473988,
+    "files": [
+      {
+        "path": "star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb",
+        "extension": ".glb",
+        "size_bytes": 3473988
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/arkonian/nave_militar_arkoniana/arkonian_military_vessel",
+  "directory_root": "assets/"
+}

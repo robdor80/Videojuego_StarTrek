@@ -1,0 +1,268 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "JDG-303",
+  "status": "editorially_aligned_with_developed_manual",
+  "source_manual": "sistemas/gameplay/careers/academy_path/study_materials/third_class/JDG-303/MANUAL_v1_0.md",
+  "question_count": 24,
+  "rule": "No question may require knowledge that is not explicitly taught in JDG-303 or established prerequisites.",
+  "questions": [
+    {
+      "id": "JDG-303-Q001",
+      "unit_id": "JDG-303-U01",
+      "type": "compare",
+      "prompt_es": "Diferencia hecho e inferencia.",
+      "answer_key_es": [
+        "observado/registrado",
+        "conclusión razonada"
+      ]
+    },
+    {
+      "id": "JDG-303-Q002",
+      "unit_id": "JDG-303-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Qué es supuesto?",
+      "answer_key_es": [
+        "idea adoptada sin evidencia suficiente"
+      ]
+    },
+    {
+      "id": "JDG-303-Q003",
+      "unit_id": "JDG-303-U01",
+      "type": "short_answer",
+      "prompt_es": "¿Qué distingue hipótesis?",
+      "answer_key_es": [
+        "contrastable",
+        "puede ganar/perder apoyo"
+      ]
+    },
+    {
+      "id": "JDG-303-Q004",
+      "unit_id": "JDG-303-U01",
+      "type": "knowledge",
+      "prompt_es": "Nombra fuentes de sesgo.",
+      "answer_key_es": [
+        "expectativa",
+        "experiencia",
+        "preferencia",
+        "presión",
+        "información incompleta"
+      ]
+    },
+    {
+      "id": "JDG-303-Q005",
+      "unit_id": "JDG-303-U02",
+      "type": "knowledge",
+      "prompt_es": "¿Qué forma riesgo contextual?",
+      "answer_key_es": [
+        "probabilidad",
+        "impacto",
+        "exposición",
+        "tiempo",
+        "respuesta",
+        "incertidumbre"
+      ]
+    },
+    {
+      "id": "JDG-303-Q006",
+      "unit_id": "JDG-303-U02",
+      "type": "judgment",
+      "prompt_es": "¿Por qué no inventar precisión?",
+      "answer_key_es": [
+        "falsa certeza"
+      ]
+    },
+    {
+      "id": "JDG-303-Q007",
+      "unit_id": "JDG-303-U02",
+      "type": "compare",
+      "prompt_es": "Diferencia urgencia y gravedad.",
+      "answer_key_es": [
+        "tiempo",
+        "impacto"
+      ]
+    },
+    {
+      "id": "JDG-303-Q008",
+      "unit_id": "JDG-303-U02",
+      "type": "judgment",
+      "prompt_es": "¿Por qué importa reversibilidad?",
+      "answer_key_es": [
+        "opciones de corrección",
+        "cautela"
+      ]
+    },
+    {
+      "id": "JDG-303-Q009",
+      "unit_id": "JDG-303-U03",
+      "type": "short_answer",
+      "prompt_es": "¿Qué costes tiene esperar?",
+      "answer_key_es": [
+        "tiempo",
+        "riesgo",
+        "oportunidad"
+      ]
+    },
+    {
+      "id": "JDG-303-Q010",
+      "unit_id": "JDG-303-U03",
+      "type": "short_answer",
+      "prompt_es": "¿Qué es umbral de decisión?",
+      "answer_key_es": [
+        "información/urgencia suficiente para actuar"
+      ]
+    },
+    {
+      "id": "JDG-303-Q011",
+      "unit_id": "JDG-303-U03",
+      "type": "knowledge",
+      "prompt_es": "¿Qué consultas reducen incertidumbre?",
+      "answer_key_es": [
+        "scan",
+        "opinión técnica",
+        "aclaración",
+        "informe",
+        "autoridad"
+      ]
+    },
+    {
+      "id": "JDG-303-Q012",
+      "unit_id": "JDG-303-U03",
+      "type": "judgment",
+      "prompt_es": "¿Cuándo esperar es correcto?",
+      "answer_key_es": [
+        "mejora información sin riesgo desproporcionado"
+      ]
+    },
+    {
+      "id": "JDG-303-Q013",
+      "unit_id": "JDG-303-U04",
+      "type": "knowledge",
+      "prompt_es": "¿Qué cuatro elementos contiene informe?",
+      "answer_key_es": [
+        "hechos",
+        "acciones",
+        "resultado",
+        "pendientes"
+      ]
+    },
+    {
+      "id": "JDG-303-Q014",
+      "unit_id": "JDG-303-U04",
+      "type": "short_answer",
+      "prompt_es": "¿Qué se registra de una acción?",
+      "answer_key_es": [
+        "qué",
+        "quién",
+        "autoridad",
+        "cuándo"
+      ]
+    },
+    {
+      "id": "JDG-303-Q015",
+      "unit_id": "JDG-303-U04",
+      "type": "knowledge",
+      "prompt_es": "¿Qué estados de resultado existen?",
+      "answer_key_es": [
+        "completado",
+        "parcial",
+        "fallido",
+        "cancelado",
+        "pendiente"
+      ]
+    },
+    {
+      "id": "JDG-303-Q016",
+      "unit_id": "JDG-303-U04",
+      "type": "short_answer",
+      "prompt_es": "¿Qué debe tener pendiente?",
+      "answer_key_es": [
+        "responsable",
+        "prioridad",
+        "siguiente acción"
+      ]
+    },
+    {
+      "id": "JDG-303-Q017",
+      "unit_id": "JDG-303-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Qué es hindsight bias?",
+      "answer_key_es": [
+        "juzgar con conocimiento futuro"
+      ]
+    },
+    {
+      "id": "JDG-303-Q018",
+      "unit_id": "JDG-303-U05",
+      "type": "judgment",
+      "prompt_es": "¿Evitar hindsight elimina responsabilidad?",
+      "answer_key_es": [
+        "no"
+      ]
+    },
+    {
+      "id": "JDG-303-Q019",
+      "unit_id": "JDG-303-U05",
+      "type": "short_answer",
+      "prompt_es": "¿Para qué analizar alternativas?",
+      "answer_key_es": [
+        "comparar costes",
+        "riesgos",
+        "aprendizaje"
+      ]
+    },
+    {
+      "id": "JDG-303-Q020",
+      "unit_id": "JDG-303-U05",
+      "type": "judgment",
+      "prompt_es": "¿Qué hace útil una lección?",
+      "answer_key_es": [
+        "accionable",
+        "específica"
+      ]
+    },
+    {
+      "id": "JDG-303-Q021",
+      "unit_id": "JDG-303-U06",
+      "type": "knowledge",
+      "prompt_es": "¿Qué combina caso integrado?",
+      "answer_key_es": [
+        "información",
+        "riesgo",
+        "autoridad",
+        "decisión",
+        "consecuencia",
+        "documentación"
+      ]
+    },
+    {
+      "id": "JDG-303-Q022",
+      "unit_id": "JDG-303-U06",
+      "type": "short_answer",
+      "prompt_es": "¿Por qué ordenar línea temporal?",
+      "answer_key_es": [
+        "saber qué información existía"
+      ]
+    },
+    {
+      "id": "JDG-303-Q023",
+      "unit_id": "JDG-303-U06",
+      "type": "judgment",
+      "prompt_es": "¿Resultado bueno implica decisión buena?",
+      "answer_key_es": [
+        "no"
+      ]
+    },
+    {
+      "id": "JDG-303-Q024",
+      "unit_id": "JDG-303-U06",
+      "type": "knowledge",
+      "prompt_es": "¿Qué se revisa en documentación?",
+      "answer_key_es": [
+        "log",
+        "inferencias",
+        "debrief",
+        "historia"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,217 @@
+# DEB-102 — Análisis operativo y debriefing avanzado
+
+**Material de estudio v2.0 — Cadete de 1.ª clase**
+
+## Finalidad
+
+Analizar decisiones con rigor, distinguiendo información disponible, proceso y resultado.
+
+## Enfoque de último año
+
+El cadete trabaja ya con un estándar próximo al servicio: **autonomía dentro de autoridad, continuidad, comunicación profesional y responsabilidad por las decisiones**.
+
+## DEB-102-U01 — Reconstrucción factual
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Reconstrucción factual** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **timeline**: secuencia temporal reconstruida a partir de fuentes para distinguir qué ocurrió y cuándo.
+- **fuentes**: orígenes independientes de información que deben conservarse para comparar fiabilidad y contradicciones.
+- **acciones**: intervenciones ejecutadas, asociadas a responsable, momento, motivo y efecto observado.
+- **resultados**: efectos observados de las acciones, separados de la intención y del proceso de decisión.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Reconstruir misión.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## DEB-102-U02 — Información disponible entonces
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Información disponible entonces** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **conocimiento**: información que estaba realmente disponible en el momento de decidir, no la descubierta después.
+- **incertidumbre**: parte relevante de la situación que no está confirmada; debe declararse en lugar de rellenarse con suposiciones.
+- **supuestos**: proposiciones no confirmadas utilizadas provisionalmente; deben quedar explícitas para poder revisarlas.
+- **señales**: indicios que pueden apoyar una hipótesis sin equivaler por sí solos a una conclusión.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Separar hindsight.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Caso. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## DEB-102-U03 — Calidad de decisión
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Calidad de decisión** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **proceso**: forma en que se obtuvieron datos, se compararon opciones, se decidió y se verificó el resultado.
+- **riesgo**: combinación de probabilidad, impacto y exposición; se compara con misión, alternativas, autoridad y reversibilidad.
+- **reglas**: normas y restricciones aplicables que continúan vigentes incluso bajo presión.
+- **alternativas**: cursos de acción distintos que permiten comparar riesgo, coste, tiempo y reversibilidad.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Evaluar decisión sin confundirla con resultado.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Debate. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## DEB-102-U04 — Responsabilidad
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Responsabilidad** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **acción propia**: parte de la actuación bajo responsabilidad directa de quien realiza el debrief.
+- **equipo**: personas coordinadas mediante roles, comunicación y objetivos compartidos.
+- **mando**: autoridad que integra información y decide prioridades cuando los conflictos superan el ámbito de un puesto.
+- **registro**: constancia factual de evento, fuente, acción, decisión y resultado que sostiene continuidad y auditoría.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Asumir y explicar decisiones.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Evaluación. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## DEB-102-U05 — Lecciones y cambio
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Lecciones y cambio** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **procedimiento**: secuencia definida para realizar una tarea de forma segura y repetible, adaptable solo dentro de márgenes permitidos.
+- **hábito**: conducta repetida que puede reforzar fiabilidad o introducir sesgos y debe revisarse con evidencia.
+- **entrenamiento**: práctica diseñada para convertir conocimiento en desempeño repetible y corregir brechas concretas.
+- **sistema**: conjunto de personas, reglas y medios cuyo diseño puede facilitar o provocar determinados resultados.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Proponer mejora.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Revisión. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## DEB-102-U06 — Debrief de prácticum
+
+### Objetivo operativo
+
+Al completar esta unidad, el cadete debe integrar los elementos de **Debrief de prácticum** sin perder seguridad, prioridades ni continuidad.
+
+### Contenidos
+
+- **evidencia**: registro verificable de contexto, información disponible, actuación, resultado y feedback.
+- **feedback**: información específica sobre desempeño que debe vincular observación con mejora concreta.
+- **trayectoria**: evolución del desempeño a lo largo del tiempo, más informativa que una actuación aislada.
+- **preparación**: grado en que conocimiento, práctica, juicio y conducta permiten asumir la siguiente responsabilidad.
+
+### Aplicación profesional
+
+Antes de actuar se distingue lo confirmado de lo incierto, se comprueban límites y responsables, se ejecuta la opción proporcionada y se conserva lo necesario para seguimiento, relevo y debrief.
+
+### Práctica
+
+Sesión final.
+
+### Criterio de servicio
+
+La profesionalidad consiste en conservar una picture compartida, decisiones trazables y continuidad entre turnos y departamentos.
+
+### Evaluación
+
+Registro profesional. Se valora el proceso con la información disponible entonces, no solo el resultado conocido después.
+
+### Repaso interactivo
+
+El repaso dinámico utiliza únicamente conceptos enseñados en esta unidad.
+
+## Referencias internas
+
+- `sistemas/gameplay/careers/academy_path/course_resolution.md`
+- `sistemas/gameplay/careers/academy_path/evaluation_model.json`
+- `sistemas/gameplay/careers/academy_path/academy_era_profiles.json`
+- `sistemas/gameplay/careers/starfleet_service/professional_evidence_model.json`
+- `sistemas/gameplay/ship_operations/operational_event_log/README.md`

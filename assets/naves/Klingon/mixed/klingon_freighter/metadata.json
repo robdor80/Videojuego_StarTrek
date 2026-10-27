@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_17de213938ac",
+  "display_name": "klingon freighter",
+  "category": "ship",
+  "relative_directory": "naves/Klingon/mixed/klingon_freighter",
+  "taxonomy": {
+    "faction_inferred": "Imperio Klingon",
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Carguero klingon",
+  "proposed_game_use": "F13: facciones y encuentros tácticos.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Klingon/star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb",
+      "kind": "file",
+      "name": "star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 6276232,
+    "files": [
+      {
+        "path": "star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb",
+        "extension": ".glb",
+        "size_bytes": 6276232
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/klingon/mixed/klingon_freighter",
+  "directory_root": "assets/"
+}

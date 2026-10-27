@@ -1,0 +1,277 @@
+{
+  "schema_version": "0.2.0",
+  "document_id": "LORE01_TNG_LANGUAGES_AND_SPECIES_COVERAGE",
+  "date": "2026-10-17",
+  "catalogue_ref": "sistemas/gameplay/languages/initial_language_catalogue.json",
+  "species_count": 25,
+  "registered_language_count": 8,
+  "warning": "A language catalogue entry is NOT a detailed grammar, vocabulary, universal native fluency, or an automatic translator model.",
+  "records": [
+    {
+      "species_id": "human",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "vulcan",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "andorian",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "aenar",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "tellarite",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "klingon",
+      "scope": "MAIN_GAME",
+      "language_id": "klingonese",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_KLINGON"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "romulan",
+      "scope": "MAIN_GAME",
+      "language_id": "romulan",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_ROMULAN"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "cardassian",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "bajoran",
+      "scope": "MAIN_GAME",
+      "language_id": "bajoran",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_BAJORAN"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "ferengi",
+      "scope": "MAIN_GAME",
+      "language_id": "ferengi",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_FERENGI"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "trill",
+      "scope": "MAIN_GAME",
+      "language_id": "trill",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_TRILL"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "betazoid",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "changeling",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "vorta",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "jem_hadar",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "bolian",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "benzite",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "el_aurian",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "breen",
+      "scope": "MAIN_GAME",
+      "language_id": "breen",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_BREEN"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "pakled",
+      "scope": "MAIN_GAME",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "kazon",
+      "scope": "DLC_DELTA_FUTURE",
+      "language_id": "kazon",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_KAZON"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "ocampan",
+      "scope": "DLC_DELTA_FUTURE",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "talaxian",
+      "scope": "DLC_DELTA_FUTURE",
+      "language_id": "talaxian",
+      "catalogue_status": "REFERENCE_CATALOGUED_NOT_GRAMMAR_COMPLETE",
+      "source_ids": [
+        "MA_TALAXIAN"
+      ],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "vidiian",
+      "scope": "DLC_DELTA_FUTURE",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    },
+    {
+      "species_id": "hirogen",
+      "scope": "DLC_DELTA_FUTURE",
+      "language_id": null,
+      "catalogue_status": "UNKNOWN_OR_UNCATALOGUED",
+      "source_ids": [],
+      "named_character_fluency_must_be_proven": true,
+      "spoken_vs_written_dialect_not_inferred": true,
+      "universal_translator_cannot_grant_consent_or_secret_knowledge": true
+    }
+  ]
+}

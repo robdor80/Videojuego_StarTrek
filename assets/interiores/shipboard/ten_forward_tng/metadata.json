@@ -1,0 +1,150 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e015e8768b59",
+  "display_name": "Ten Forward (TNG)",
+  "category": "room",
+  "relative_directory": "interiores/shipboard/ten_forward_tng",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Sala Ten Forward, espacio de reunión y ocio asociado a la Enterprise-D (TNG).",
+  "proposed_game_use": "F12: convivencia, diálogos, ocio y socialización a bordo.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "estancias/two-forward-tng",
+      "kind": "directory",
+      "name": "two-forward-tng"
+    },
+    {
+      "source": "estancias/two_forward_tng.glb",
+      "kind": "file",
+      "name": "two_forward_tng.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 19,
+    "size_bytes": 52408584,
+    "files": [
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/LCARS_Replicador.jpg",
+        "extension": ".jpg",
+        "size_bytes": 271266
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 16979
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_16.jpg",
+        "extension": ".jpg",
+        "size_bytes": 17615
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_19.jpg",
+        "extension": ".jpg",
+        "size_bytes": 16062
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_22.jpg",
+        "extension": ".jpg",
+        "size_bytes": 16579
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_44.jpg",
+        "extension": ".jpg",
+        "size_bytes": 32116
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/material_44_1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 32116
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model/Wood_Cherry_Original.jpg",
+        "extension": ".jpg",
+        "size_bytes": 10294
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward/model.dae",
+        "extension": ".dae",
+        "size_bytes": 23349299
+      },
+      {
+        "path": "two-forward-tng/source/Two+Forward.zip",
+        "extension": ".zip",
+        "size_bytes": 4627775
+      },
+      {
+        "path": "two-forward-tng/textures/LCARS_Replicador.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 299443
+      },
+      {
+        "path": "two-forward-tng/textures/material_1.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 16979
+      },
+      {
+        "path": "two-forward-tng/textures/material_16.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 17615
+      },
+      {
+        "path": "two-forward-tng/textures/material_19.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 16062
+      },
+      {
+        "path": "two-forward-tng/textures/material_22.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 16579
+      },
+      {
+        "path": "two-forward-tng/textures/material_44.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 32116
+      },
+      {
+        "path": "two-forward-tng/textures/material_44_1.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 32116
+      },
+      {
+        "path": "two-forward-tng/textures/Wood_Cherry_Original.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 10277
+      },
+      {
+        "path": "two_forward_tng.glb",
+        "extension": ".glb",
+        "size_bytes": 23577296
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "interiors/shipboard/ten_forward_tng",
+  "directory_root": "assets/"
+}

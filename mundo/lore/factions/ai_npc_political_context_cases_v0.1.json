@@ -1,0 +1,178 @@
+{
+  "schema_version": "0.1.0",
+  "context_kind": "NPC_AUTHORITY_AND_IDENTITY_AUTHORING_CASES",
+  "not_runtime_fixtures": true,
+  "identity_axes_independent": true,
+  "prerequisite": "mundo/lore/cultures/ai_behavior/behavior_context_contract_v0.1.json",
+  "cases": [
+    {
+      "id": "klingon_federation_citizen",
+      "profile": {
+        "species_id": "klingon",
+        "culture_ids": [
+          "earth_raised"
+        ],
+        "citizenship": "federation",
+        "organization_memberships": [
+          "starfleet"
+        ],
+        "office": "starfleet_officer",
+        "personal_belief": "critica_a_politicas_imperiales"
+      },
+      "conditional_ai": "Hablar desde deber profesional asignado y creencias acreditadas, sin asumir servicio imperial.",
+      "forbidden": "dar órdenes del canciller como cadena militar propia",
+      "core_required": [
+        "citizenship_record",
+        "duty_assignment",
+        "knowledge_at_date"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "romulan_opposes_tal_shiar",
+      "profile": {
+        "species_id": "romulan",
+        "culture_ids": [
+          "romulan_context_if_socialized"
+        ],
+        "citizenship": "unknown",
+        "organization_memberships": [],
+        "office": null,
+        "personal_belief": "oposicion_a_tal_shiar_si_consta"
+      },
+      "conditional_ai": "Puede recelar de Tal Shiar y otros aparatos, sin representarlos.",
+      "forbidden": "marcar desertor o espía por especie",
+      "core_required": [
+        "biography",
+        "evidence",
+        "disclosure_permission"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "cardassian_dissent",
+      "profile": {
+        "species_id": "cardassian",
+        "culture_ids": [],
+        "citizenship": "unknown",
+        "organization_memberships": [],
+        "office": null,
+        "personal_belief": "rechazo_a_ocupacion_compatible_con_historial"
+      },
+      "conditional_ai": "Distinguir responsabilidades personales sobre ocupación y decisiones de Dukat.",
+      "forbidden": "culpa colectiva o lealtad automática al Dominio",
+      "core_required": [
+        "event_history",
+        "citizenship",
+        "reputation_evidence"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "ferengi_starfleet_nog",
+      "profile": {
+        "species_id": "ferengi",
+        "culture_ids": [
+          "individual_socialization"
+        ],
+        "citizenship": "unknown",
+        "organization_memberships": [
+          "starfleet"
+        ],
+        "office": "officer_if_date_and_qualification_allow",
+        "personal_belief": "independent"
+      },
+      "conditional_ai": "Nog en DS9 demuestra diferenciación entre organismo de servicio y patria/especie.",
+      "forbidden": "asignar autoridad de Gran Nagus o FCA al oficial",
+      "core_required": [
+        "promotion_history",
+        "appointment",
+        "campaign_start_time"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "bajoran_religious_disagreement",
+      "profile": {
+        "species_id": "bajoran",
+        "culture_ids": [
+          "bajoran_context_if_socialized"
+        ],
+        "citizenship": "bajoran_if_documented",
+        "organization_memberships": [
+          "bajoran_militia_if_assigned"
+        ],
+        "office": "unknown",
+        "personal_belief": "desacuerdo_con_kai_si_consta"
+      },
+      "conditional_ai": "Mostrar discrepancias entre cargo religioso y civil, sin atribuir prejuicios innatos.",
+      "forbidden": "conceder mando militar al Vedek ni delito por opinión",
+      "core_required": [
+        "authority_registry",
+        "religious_role",
+        "individual_opinions"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "borg_liberated_person",
+      "profile": {
+        "species_id": "original_biological_species_preserved",
+        "culture_ids": [],
+        "citizenship": "requires_evidence",
+        "organization_memberships": [],
+        "office": null,
+        "personal_belief": "individual"
+      },
+      "conditional_ai": "Separar drone status, conectividad y memoria de persona liberada.",
+      "forbidden": "clasificar especie como Borg, o acceso omnisciente al colectivo",
+      "core_required": [
+        "original_species_id",
+        "assimilation_state",
+        "privacy_authorization"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "tzenkethi_false_coup",
+      "profile": {
+        "species_id": "unspecified",
+        "culture_ids": [],
+        "citizenship": "unknown",
+        "organization_memberships": [],
+        "office": "source_claiming_to_be_ambassador",
+        "personal_belief": "unknown"
+      },
+      "conditional_ai": "Comunicar golpe como rumor no verificado hasta que se confirme que fue falsificado.",
+      "forbidden": "cambiar gobierno tzenkethi basándose en noticia del impostor",
+      "core_required": [
+        "claim_source",
+        "verification",
+        "actor_identity",
+        "campaign_date"
+      ],
+      "core_controls_world_mutations": true
+    },
+    {
+      "id": "dominion_subordinate_merchant",
+      "profile": {
+        "species_id": "not_deducible_from_employment",
+        "culture_ids": [],
+        "citizenship": "subordinate_state_citizenship_if_known",
+        "organization_memberships": [
+          "commerce_entity_if_documented"
+        ],
+        "office": "merchant",
+        "personal_belief": "private"
+      },
+      "conditional_ai": "Separar presión dominionista del consentimiento y competencias comerciales.",
+      "forbidden": "convertir Karemma automáticamente en Vorta o miembro de ejército Jem'Hadar",
+      "core_required": [
+        "trade_contract",
+        "organizational_membership",
+        "political_authority"
+      ],
+      "core_controls_world_mutations": true
+    }
+  ]
+}

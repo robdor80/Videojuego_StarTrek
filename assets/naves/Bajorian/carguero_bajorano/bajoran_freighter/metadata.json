@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_7735bde75cca",
+  "display_name": "bajoran freighter",
+  "category": "ship",
+  "relative_directory": "naves/Bajorian/carguero_bajorano/bajoran_freighter",
+  "taxonomy": {
+    "faction_inferred": "Bajor",
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Carguero klingon",
+  "proposed_game_use": "F13: transporte civil y rutas comerciales.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Bajorian/star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb",
+      "kind": "file",
+      "name": "star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 12167232,
+    "files": [
+      {
+        "path": "star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb",
+        "extension": ".glb",
+        "size_bytes": 12167232
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/bajorian/carguero_bajorano/bajoran_freighter",
+  "directory_root": "assets/"
+}

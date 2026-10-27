@@ -1,0 +1,87 @@
+{
+  "schema_version": "0.1.0",
+  "profile_id": "lore01_a1_vorta_behavior",
+  "species_index_key": "vorta",
+  "display_name_es": "Vorta en y fuera de las instituciones del Dominio",
+  "status": "AUTHORING_CULTURAL_AI_GUIDANCE_NOT_PERSONALITY",
+  "content_gate": "MAIN_GAME",
+  "culture_bindings": {
+    "profile_ref": "mundo/lore/cultures/profiles/DOMINION_CULTURAL_HIERARCHY_PROFILE_v0.1.json",
+    "profile_subkey": null,
+    "attachment_policy": "REQUIRES_EXPLICIT_CULTURE_REF_OR_DOCUMENTED_SOCIALIZATION",
+    "species_auto_attachment": false,
+    "allowed_for_other_species_when_socialized": true,
+    "multiple_cultures_can_coexist": true
+  },
+  "source_basis": {
+    "ledger_ref": "mundo/lore/species/evidence/vorta_v0.2.json",
+    "anchors": [
+      "DS9_TO_THE_DEATH",
+      "DS9_TREACHERY_FAITH_AND_THE_GREAT_RIVER",
+      "ST_OFFICIAL_DOMINION_101"
+    ],
+    "research_status": "EPISODE_LEVEL_ANCHORS_NOT_SCENE_BY_SCENE_VERIFIED"
+  },
+  "prior_strength": "CONTEXTUAL_NORMS",
+  "interpretation_scope_es": "La cortesía negociadora y adhesión ritual a Fundadores son prácticas enseñadas en la estructura del Dominio; la deserción de Weyoun 6 prueba capacidad de disenso.",
+  "conditional_guidance": {
+    "communication_es": [
+      "Un enviado formado por el Dominio puede emplear fórmulas diplomáticas y hablar por la cadena de mando.",
+      "Un Vorta sin ese puesto no posee automáticamente experiencia de negociación."
+    ],
+    "emotional_expression_es": [
+      "La reverencia hacia Fundadores puede ser convicción, adoctrinamiento o deber institucional, según personaje.",
+      "Un clon puede discrepar de versiones anteriores; las emociones no se replican desde una plantilla obligatoria."
+    ],
+    "disagreement_and_conflict_es": [
+      "Un mediador puede buscar concesiones compatibles con órdenes conocidas.",
+      "La amenaza o castigo militar debe requerir poder real, tropa y autorización."
+    ],
+    "authority_and_duty_es": [
+      "La estructura Fundadores/Vorta/Jem'Hadar se adjunta por organización.",
+      "La especie no concede mando efectivo sobre Jem'Hadar si no existe puesto."
+    ],
+    "relationships_and_daily_life_es": [
+      "Clones con historial compartido conservan identidades persistentes según contrato.",
+      "La confianza con un desertor se construye con actos, no con supuestas garantías biológicas."
+    ]
+  },
+  "variation_axes_es": [
+    "clon concreto",
+    "órdenes recibidas",
+    "acceso a archivos",
+    "grado de adhesión",
+    "experiencias con otras especies"
+  ],
+  "distinct_individual_outcomes_es": [
+    "Un representante Vorta rechaza un acuerdo por orden de mando; otro arriesga su vida para denunciar abusos.",
+    "Una administradora prioriza logística y otra evita tácticas militares por criterio personal."
+  ],
+  "anti_stereotype_warnings_es": [
+    "No hacer que todo Vorta mienta o sea obediente hasta la muerte.",
+    "No convertir clonación en omnisciencia ni continuidad de recuerdos automática."
+  ],
+  "era_guard_es": "Distinguir presencia en Gamma, infiltración en Alfa y situación durante guerra; la variante 6 de Weyoun tiene un intervalo específico.",
+  "ai_application": {
+    "character_personality_source": "PERSISTENT_PERSONAL_PROFILE_NOT_SPECIES",
+    "may_use_only_if_relevant_culture_confirmed": true,
+    "rule": "Los indicios culturales son opciones de interpretación de una biografía, no valores de personalidad ni instrucciones obligatorias.",
+    "no_default_trait_probabilities": true,
+    "no_generated_personality_scores": true,
+    "decision_authority": "CoreRPG / estado persistente",
+    "dialogue_authority": "AI_INTERPRETATION_ONLY",
+    "invalid_inferences": [
+      "hostilidad",
+      "honestidad",
+      "profesión",
+      "rango",
+      "ideología",
+      "fe",
+      "relación",
+      "secreto",
+      "culpabilidad",
+      "moralidad"
+    ],
+    "privacy_rule": "No inferir diagnósticos, recuerdos ni pensamientos protegidos por especie o cultura."
+  }
+}

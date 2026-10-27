@@ -1,0 +1,75 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_69120f6a6c4b",
+  "display_name": "Pasillo low poly Star Trek",
+  "category": "corridor",
+  "relative_directory": "pasillos/low_poly/pasillo_low_poly_star_trek",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Conjunto identificado por carpeta y nombres locales; contenido específico sin verificar.",
+  "proposed_game_use": "Prototipado de navegación y comparación de variante PBR; se mantienen ambas versiones GLB juntas.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "corridor/Low Poly Corridor - [Star Trek]/low-poly-corridor-star-trek.zip",
+      "kind": "file",
+      "name": "low-poly-corridor-star-trek.zip"
+    },
+    {
+      "source": "corridor/Low Poly Corridor - [Star Trek]/low_poly_corridor_-_star_trek.glb",
+      "kind": "file",
+      "name": "low_poly_corridor_-_star_trek.glb"
+    },
+    {
+      "source": "corridor/Low Poly Corridor - [Star Trek]/low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb",
+      "kind": "file",
+      "name": "low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 3,
+    "size_bytes": 3482812,
+    "files": [
+      {
+        "path": "low-poly-corridor-star-trek.zip",
+        "extension": ".zip",
+        "size_bytes": 1335524
+      },
+      {
+        "path": "low_poly_corridor_-_star_trek.glb",
+        "extension": ".glb",
+        "size_bytes": 1073456
+      },
+      {
+        "path": "low_poly_corridor_-_star_trek_PBR_Compat_6997a32b7a8d44a8a250f9332cb2f180.glb",
+        "extension": ".glb",
+        "size_bytes": 1073832
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "corridor/low_poly/pasillo_low_poly_star_trek",
+  "directory_root": "assets/"
+}

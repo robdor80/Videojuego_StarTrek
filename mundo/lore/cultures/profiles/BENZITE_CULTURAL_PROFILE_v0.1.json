@@ -1,0 +1,101 @@
+{
+  "schema_version": "0.1.0",
+  "culture_profile_id": "benzite_cultural_context",
+  "status": "LORE01_A_CONTEXTUAL_AUTHORING_NOT_AUTOMATIC",
+  "contract_ref": "mundo/lore/cultures/cultural_profile_contract_v0.1.json",
+  "identity_and_scope": {
+    "species_association": "benzite",
+    "automatic_attachment_by_species": false,
+    "scope": "tng_ds9_voyager",
+    "principle": "La cultura es adquirida y puede convivir con otras; profesión y ciudadanía se registran por separado."
+  },
+  "historical_context": {
+    "summary_es": "Mordock y Mendon ofrecen ejemplos de contacto institucional, pero no una regla para la personalidad benzita.",
+    "incident_does_not_define_entire_species": true
+  },
+  "values_and_norms": [
+    {
+      "norm_es": "Existe contexto de formación y programa de intercambio con la Flota.",
+      "strength": "possible_norm",
+      "evidence_state": "screen_canon_or_official_supported",
+      "not_a_required_character_trait": true
+    },
+    {
+      "norm_es": "No atribuir a todos el comportamiento de Mordock o Mendon.",
+      "strength": "possible_norm",
+      "evidence_state": "screen_canon_or_official_supported",
+      "not_a_required_character_trait": true
+    }
+  ],
+  "communication_and_conflict": {
+    "summary_es": "Mordock y Mendon ofrecen ejemplos de contacto institucional, pero no una regla para la personalidad benzita.",
+    "never_infer_hostility_or_dishonesty_from_species": true
+  },
+  "authority_and_status": {
+    "species_does_not_confer_rank": true,
+    "explicit_world_state_required": true
+  },
+  "internal_variation": {
+    "required": true,
+    "dimensions": [
+      "familia",
+      "mundo de crianza",
+      "profesión",
+      "experiencia personal",
+      "fecha",
+      "afinidad cultural"
+    ]
+  },
+  "era_variation": {
+    "required": true,
+    "observed_first_date_not_culture_origin": true,
+    "covered_era_years_inclusive": [
+      2364,
+      2378
+    ],
+    "episode_evidence_anchor_year": 2364,
+    "not_a_culture_birth_date": true
+  },
+  "cross_cultural_interaction": {
+    "known_context_es": "Mordock y Mendon ofrecen ejemplos de contacto institucional, pero no una regla para la personalidad benzita.",
+    "translation_is_not_cultural_understanding": true
+  },
+  "work_service_and_profession": {
+    "civilian_and_officer_pathways_may_coexist": true,
+    "profession_auto_assigned": false
+  },
+  "unknowns": [
+    "ciclo vital",
+    "composición ambiental obligatoria",
+    "relación entre dispositivos y variación individual",
+    "normas de filiación"
+  ],
+  "gameplay_hooks": [
+    "npc_contextual_dialogue",
+    "culture_affinity",
+    "professional_etiquette",
+    "observer_knowledge"
+  ],
+  "ai_guardrails": [
+    "No fijar una personalidad por especie.",
+    "No inventar parentescos, credos, instituciones o obligaciones.",
+    "Las notas culturales solo son visibles para NPC con experiencia y contexto."
+  ],
+  "provenance": [
+    {
+      "source_id": "TNG_COMING_OF_AGE",
+      "confidence": "HIGH",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    },
+    {
+      "source_id": "TNG_A_MATTER_OF_HONOR",
+      "confidence": "HIGH",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    },
+    {
+      "source_id": "MA_BENZITE",
+      "confidence": "MEDIUM",
+      "claim_scope": "referencia cultural circunscrita al evento y personajes observados"
+    }
+  ]
+}

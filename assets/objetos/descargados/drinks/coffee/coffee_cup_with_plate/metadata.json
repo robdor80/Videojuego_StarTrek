@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_23da3e1bf5e8",
+  "display_name": "coffee cup with plate",
+  "category": "prop",
+  "relative_directory": "objetos/descargados/drinks/coffee/coffee_cup_with_plate",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Taza con plato; objeto de servicio asociado a café.",
+  "proposed_game_use": "F12/F14: consumo en Ten Forward/camarote, escena social y objetos de mesa; comprobar agarre, tamaño y colisiones.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "objects/drinks/coffe/coffee-cup-with-plate.zip",
+      "kind": "file",
+      "name": "coffee-cup-with-plate.zip"
+    },
+    {
+      "source": "objects/drinks/coffe/coffee_cup_with_plate.glb",
+      "kind": "file",
+      "name": "coffee_cup_with_plate.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 22513235,
+    "files": [
+      {
+        "path": "coffee-cup-with-plate.zip",
+        "extension": ".zip",
+        "size_bytes": 12296439
+      },
+      {
+        "path": "coffee_cup_with_plate.glb",
+        "extension": ".glb",
+        "size_bytes": 10216796
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "objects/drinks/coffee/coffee_cup_with_plate",
+  "directory_root": "assets/"
+}

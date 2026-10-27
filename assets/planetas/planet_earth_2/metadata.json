@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_3db09d077e6b",
+  "display_name": "planet earth (2)",
+  "category": "planet",
+  "relative_directory": "planetas/planet_earth_2",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Tierra, planeta del sistema solar.",
+  "proposed_game_use": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/planets/planet_earth (2).glb",
+      "kind": "file",
+      "name": "planet_earth (2).glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 18402500,
+    "files": [
+      {
+        "path": "planet_earth (2).glb",
+        "extension": ".glb",
+        "size_bytes": 18402500
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "universe/planets/planet_earth_2",
+  "directory_root": "assets/"
+}

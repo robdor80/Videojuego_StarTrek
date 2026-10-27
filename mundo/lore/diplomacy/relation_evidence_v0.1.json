@@ -1,0 +1,1262 @@
+{
+  "schema_version": "0.1.0",
+  "scope": "LORE_01_D_TNG_DS9_VOY",
+  "status": "DOCUMENTARY_NOT_RUNTIME",
+  "authority": "CoreRPG_World_State_ONLY",
+  "gameplay_activated": false,
+  "autonomous_future_script": false,
+  "source_policy_ref": "mundo/sources/canon_policy.md",
+  "provenance_policy_ref": "mundo/sources/provenance_policy.md",
+  "relation_count": 27,
+  "relations": [
+    {
+      "relation_id": "federation_klingon",
+      "participants": [
+        "united_federation_of_planets",
+        "klingon_empire"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "De antagonismo de la era Kirk a cooperación duradera tras Khitomer, rota por la intervención de Gowron en Cardassia y restablecida frente al Dominio.",
+      "mechanism": "Tratados, decisiones del Canciller/Alto Consejo y la respuesta federal a la guerra cardassiana; las Casas y los oficiales no son un bloque político uniforme.",
+      "uncertainty": "No equiparar la paz de Khitomer con una unión militar universal e inmutable; el año 2373 contiene varios hitos.",
+      "anchors": [
+        {
+          "reference_year": 2267,
+          "effective_after_event_id": "organian_intervention",
+          "relation": "HOSTILE_CONSTRAINED",
+          "security": "ARMED_STANDOFF",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TOS_ERRAND_OF_MERCY"
+          ],
+          "explanation": "Los Organianos frenan el choque directo; el tratado no borra hostilidad.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2293,
+          "effective_after_event_id": "khitomer_diplomacy",
+          "relation": "COOPERATIVE",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "ST6_THE_UNDISCOVERED_COUNTRY"
+          ],
+          "explanation": "Las negociaciones simbolizan distensión y paz.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2364,
+          "effective_after_event_id": "tng_alliance",
+          "relation": "ALLIED",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP"
+          ],
+          "explanation": "Alianza funcional durante TNG.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2372,
+          "effective_after_event_id": "klingon_cardassian_invasion",
+          "relation": "HOSTILE",
+          "security": "ARMED_CONFLICT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_WAY_OF_THE_WARRIOR"
+          ],
+          "explanation": "Gowron ataca Cardassia, Federación se opone y colapsa cooperación.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "klingon_federation_reconciliation",
+          "relation": "ALLIED",
+          "security": "COBELLIGERENT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "Renovación de cooperación frente al Dominio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "klingon_frontier"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TOS_ERRAND_OF_MERCY",
+        "ST6_THE_UNDISCOVERED_COUNTRY",
+        "ST_OFFICIAL_KLINGON_FEDERATION_RELATIONSHIP",
+        "DS9_THE_WAY_OF_THE_WARRIOR",
+        "DS9_CALL_TO_ARMS"
+      ]
+    },
+    {
+      "relation_id": "federation_romulan",
+      "participants": [
+        "united_federation_of_planets",
+        "romulan_star_empire"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La Zona Neutral limita hostilidades sin eliminar espionaje o intereses contrapuestos; la guerra fuerza una coalición temporal.",
+      "mechanism": "Separar incidentes en la frontera, acciones del Tal Shiar y decisiones del Senado; la entrada en la guerra de 2374 es posterior a un pacto de neutralidad romulano con el Dominio.",
+      "uncertainty": "La alianza militar de 2374 no demuestra apertura general de fronteras ni un tratado de unión bilateral.",
+      "anchors": [
+        {
+          "reference_year": 2266,
+          "effective_after_event_id": "romulan_neutral_zone_incident",
+          "relation": "COLD_PEACE",
+          "security": "ARMED_STANDOFF",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TOS_BALANCE_OF_TERROR"
+          ],
+          "explanation": "La Zona Neutral y un incidente militar evidencian paz precaria.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2364,
+          "effective_after_event_id": "romulan_return",
+          "relation": "COLD_PEACE",
+          "security": "DETERRENCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_THE_NEUTRAL_ZONE"
+          ],
+          "explanation": "Se reanuda contacto directo, sin fijar una frontera geométrica.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2374,
+          "effective_after_event_id": "romulan_enters_war",
+          "relation": "COBELLIGERENT",
+          "security": "JOINT_WAR_EFFORT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_IN_THE_PALE_MOONLIGHT"
+          ],
+          "explanation": "El Imperio Romulano se incorpora contra el Dominio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "romulan_neutral_zone"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TOS_BALANCE_OF_TERROR",
+        "TNG_THE_NEUTRAL_ZONE",
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ]
+    },
+    {
+      "relation_id": "federation_cardassia",
+      "participants": [
+        "united_federation_of_planets",
+        "cardassian_union"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La paz tras choques fronterizos exige reasignaciones coloniales y genera oposición de colonos; la alineación con el Dominio convierte la tensión en guerra.",
+      "mechanism": "Tratado/ajuste territorial no equivale a aceptación social; Damar y los disidentes cardassianos tampoco representan la postura formal inicial del gobierno.",
+      "uncertainty": "Año exacto y alcance jurídico de cada acuerdo fronterizo deben consultarse por episodio, nunca deducirse de mapas.",
+      "anchors": [
+        {
+          "reference_year": 2369,
+          "effective_after_event_id": "post_cardassian_border_conflict",
+          "relation": "GUARDED_PEACE",
+          "security": "CEASEFIRE_CONTEXT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_THE_WOUNDED"
+          ],
+          "explanation": "El conflicto federal-cardassiano ha cesado, persisten tensiones.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2370,
+          "effective_after_event_id": "federation_cardassian_border_settlement",
+          "relation": "TENSE_DIPLOMACY",
+          "security": "LOCAL_DISPUTES",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_JOURNEYS_END"
+          ],
+          "explanation": "Ajustes de frontera alimentan crisis de colonos.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "cardassian_dominion_accession",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_BY_INFERNOS_LIGHT"
+          ],
+          "explanation": "Cardassia se alinea con el Dominio.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "cardassian_resistance",
+          "relation": "SPLIT_ACTORS",
+          "security": "WAR_AND_INSURGENCY",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_DOGS_OF_WAR"
+          ],
+          "explanation": "Resistencia de Damar no significa capitulación estatal instantánea.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TNG_THE_WOUNDED",
+        "TNG_JOURNEYS_END",
+        "DS9_BY_INFERNOS_LIGHT",
+        "DS9_THE_DOGS_OF_WAR"
+      ]
+    },
+    {
+      "relation_id": "cardassia_bajor",
+      "participants": [
+        "cardassian_union",
+        "bajoran_provisional_government"
+      ],
+      "relation_category": "OCCUPATION_LEGACY",
+      "why": "Décadas de ocupación militar y extracción generan trauma colectivo, resistencia y demandas de justicia; la retirada no recompone la confianza.",
+      "mechanism": "Bajor conserva soberanía tras la retirada; DS9 es antigua infraestructura cardassiana administrada después con apoyo federal.",
+      "uncertainty": "Fechas y derechos de reparación precisos no se reconstruyen inventando tratados.",
+      "anchors": [
+        {
+          "reference_year": 2369,
+          "effective_after_event_id": "cardassian_withdrawal_bajor",
+          "relation": "POST_OCCUPATION_HOSTILITY",
+          "security": "OCCUPATION_ENDED",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_EMISSARY"
+          ],
+          "explanation": "Termina la ocupación, comienza el Gobierno Provisional.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "dominion_cardassian_war_bajor",
+          "relation": "NONAGGRESSION_BY_BAJOR",
+          "security": "REGIONAL_WAR_RISK",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "No confundir neutralidad bajorana con afinidad cardassiana.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "bajoran_space",
+        "deep_space_9"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_CALL_TO_ARMS"
+      ]
+    },
+    {
+      "relation_id": "federation_bajor",
+      "participants": [
+        "united_federation_of_planets",
+        "bajoran_provisional_government"
+      ],
+      "relation_category": "INTERSTATE_AND_STATION_ADMINISTRATION",
+      "why": "Tras la ocupación, la Federación apoya la administración de DS9 por invitación; Bajor no se convierte por ello en miembro federado.",
+      "mechanism": "Jurisdicción bajorana, personal de Flota, Milicia y autoridades civiles y religiosas son esferas distintas. La adhesión federal se debate sin ejecución automática.",
+      "uncertainty": "No atribuir a Sisko soberanía civil ni a la Milicia todas las facultades de mando federadas.",
+      "anchors": [
+        {
+          "reference_year": 2369,
+          "effective_after_event_id": "ds9_joint_arrangement",
+          "relation": "COOPERATIVE",
+          "security": "STATION_CO_MANAGEMENT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_EMISSARY"
+          ],
+          "explanation": "La presencia federal se realiza bajo soberanía bajorana.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "bajoran_federation_membership_deferred",
+          "relation": "COOPERATIVE_AUTONOMOUS",
+          "security": "NEUTRALITY_OPTION",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_RAPTURE"
+          ],
+          "explanation": "La adhesión se posterga; Bajor retiene decisiones propias.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "bajoran_dominion_nonaggression",
+          "relation": "COOPERATIVE_DISTINCT_POLICIES",
+          "security": "NEUTRALITY",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "Bajor firma neutralidad con Dominio pese a cooperación con Federación.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "bajoran_space",
+        "deep_space_9"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_EMISSARY",
+        "DS9_RAPTURE",
+        "DS9_CALL_TO_ARMS"
+      ]
+    },
+    {
+      "relation_id": "federation_maquis",
+      "participants": [
+        "united_federation_of_planets",
+        "maquis"
+      ],
+      "relation_category": "STATE_TO_INSURGENCY",
+      "why": "Colonos afectados por el arreglo territorial desafían la política oficial federal; Starfleet debe distinguir ciudadanos, simpatizantes y militantes.",
+      "mechanism": "Los Maquis no son gobierno soberano; su resistencia no transforma automáticamente a la Federación en beligerante oficial contra Cardassia.",
+      "uncertainty": "No etiquetar toda población de la zona desmilitarizada como insurgente.",
+      "anchors": [
+        {
+          "reference_year": 2370,
+          "effective_after_event_id": "maquis_emergence",
+          "relation": "INTERNAL_SECURITY_CONFLICT",
+          "security": "IRREGULAR_OPERATIONS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_MAQUIS_I"
+          ],
+          "explanation": "Conflicto insurgente tras reasignaciones fronterizas.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "maquis_pressure_war",
+          "relation": "DEPLETED_MOVEMENT",
+          "security": "WAR_RISK",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_FOR_THE_UNIFORM"
+          ],
+          "explanation": "Persisten actores Maquis pero no un estado reconocido.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_MAQUIS_I",
+        "DS9_FOR_THE_UNIFORM"
+      ]
+    },
+    {
+      "relation_id": "cardassia_maquis",
+      "participants": [
+        "cardassian_union",
+        "maquis"
+      ],
+      "relation_category": "STATE_TO_INSURGENCY",
+      "why": "Los colonos Maquis atacan o resisten a autoridades cardassianas en una frontera controvertida; acciones de seguridad y represalias alimentan el ciclo.",
+      "mechanism": "No inferir estatuto jurídico individual ni legitimidad de cada acción por su pertenencia a una especie.",
+      "uncertainty": "El grado de control de cada colonia depende de lugar y fecha, no de una etiqueta binaria.",
+      "anchors": [
+        {
+          "reference_year": 2370,
+          "effective_after_event_id": "maquis_emergence",
+          "relation": "HOSTILE",
+          "security": "IRREGULAR_OPERATIONS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_MAQUIS_I"
+          ],
+          "explanation": "Maquis combate el orden fronterizo y Cardassia trata de desarticularlo.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "cardassian_dominion_accession",
+          "relation": "HOSTILE",
+          "security": "FORCE_IMBALANCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_BY_INFERNOS_LIGHT"
+          ],
+          "explanation": "El nuevo alineamiento altera drásticamente la seguridad local.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_MAQUIS_I",
+        "DS9_BY_INFERNOS_LIGHT"
+      ]
+    },
+    {
+      "relation_id": "federation_dominion",
+      "participants": [
+        "united_federation_of_planets",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "El encuentro en Gamma desvela una hegemonía que considera intrusión la exploración alfa; infiltración, rearme y guerra elevan antagonismo.",
+      "mechanism": "El conflicto arranca como contactos y amenazas, no guerra retroactiva antes del primer contacto documentado. Rendición 2375 no borra daños ni reduce política a especies.",
+      "uncertainty": "Distinguir alerta de Inteligencia, conocimiento público y saber de cada tripulación.",
+      "anchors": [
+        {
+          "reference_year": 2370,
+          "effective_after_event_id": "dominion_first_warning",
+          "relation": "HOSTILE_CONTACT",
+          "security": "DEMONSTRATION_OF_FORCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_JEMHADAR"
+          ],
+          "explanation": "Advertencia militar del Dominio contra intrusos en Gamma.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "dominion_war_begins",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "Se desencadena guerra abierta.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "treaty_of_bajor",
+          "relation": "POSTWAR_CEASEFIRE_AND_SURRENDER",
+          "security": "WAR_ENDS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_WHAT_YOU_LEAVE_BEHIND"
+          ],
+          "explanation": "Rendición formal del Dominio y término de la guerra.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "bajoran_wormhole_gamma",
+        "deep_space_9"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_JEMHADAR",
+        "DS9_CALL_TO_ARMS",
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ]
+    },
+    {
+      "relation_id": "klingon_cardassia",
+      "participants": [
+        "klingon_empire",
+        "cardassian_union"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "Temor klingon a infiltración changeling sirve de justificación política a ofensiva sobre Cardassia; intereses de Gowron importan.",
+      "mechanism": "La invasión rompe cooperación previa con Federación, no significa que todos los klingon apoyen a Gowron.",
+      "uncertainty": "La inteligencia alegada por la facción gobernante no es hecho comprobado.",
+      "anchors": [
+        {
+          "reference_year": 2372,
+          "effective_after_event_id": "klingon_cardassian_invasion",
+          "relation": "WAR_OPPONENTS",
+          "security": "INVASION",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_WAY_OF_THE_WARRIOR"
+          ],
+          "explanation": "Ofensiva contra Cardassia por el imperio klingon.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "cardassian_dominion_accession",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_BY_INFERNOS_LIGHT"
+          ],
+          "explanation": "Bandos contrarios en guerra del Dominio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_WAY_OF_THE_WARRIOR",
+        "DS9_BY_INFERNOS_LIGHT"
+      ]
+    },
+    {
+      "relation_id": "klingon_dominion",
+      "participants": [
+        "klingon_empire",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "Infiltración cambiante y avance dominionista inducen crisis; tras reconciliación con Federación, Imperio combate a Dominio.",
+      "mechanism": "Los incidentes de espionaje no prueban que cada orden klingon derive directamente del Dominio.",
+      "uncertainty": "Precisar hitos de 2372 y 2373 sin fechas inventadas.",
+      "anchors": [
+        {
+          "reference_year": 2372,
+          "effective_after_event_id": "changeling_infiltration_discovered",
+          "relation": "THREAT_PERCEPTION",
+          "security": "COUNTERINTELLIGENCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_APOCALYPSE_RISING"
+          ],
+          "explanation": "La amenaza cambia decisiones estratégicas.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "dominion_war_begins",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "Klingon interviene con Federación contra Dominio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_APOCALYPSE_RISING",
+        "DS9_CALL_TO_ARMS"
+      ]
+    },
+    {
+      "relation_id": "romulan_dominion",
+      "participants": [
+        "romulan_star_empire",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La destrucción de una expedición del Tal Shiar y pacto de no agresión romulano preceden el cambio de bando de 2374.",
+      "mechanism": "La operación clandestina no equivale a declaración estatal de guerra; el Imperio conserva independencia formal antes de entrar en coalición.",
+      "uncertainty": "El detonante directo de la entrada romulana se documenta en DS9; no equivale a prueba genuina de ataque dominionista.",
+      "anchors": [
+        {
+          "reference_year": 2371,
+          "effective_after_event_id": "omarion_ambush",
+          "relation": "SECRET_HOSTILITY",
+          "security": "INTELLIGENCE_OPERATION",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_DIE_IS_CAST"
+          ],
+          "explanation": "Desastre del Tal Shiar/Orden Obsidiana.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "romulan_dominion_nonaggression",
+          "relation": "FORMAL_NONAGGRESSION",
+          "security": "NEUTRAL",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION"
+          ],
+          "explanation": "Pacto de no agresión no es alianza.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2374,
+          "effective_after_event_id": "romulan_enters_war",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_IN_THE_PALE_MOONLIGHT"
+          ],
+          "explanation": "El Imperio Romulano entra en conflicto contra Dominio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "romulan_neutral_zone"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_DIE_IS_CAST",
+        "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION",
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ]
+    },
+    {
+      "relation_id": "cardassia_dominion",
+      "participants": [
+        "cardassian_union",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE_SUBORDINATION",
+      "why": "Dukat incorpora Cardassia a estructura militar dominionista buscando poder y revancha; subordinación y costes internos conducen a rebelión de Damar.",
+      "mechanism": "La resistencia no es ruptura inmediata y unánime de todo el aparato cardassiano; distinguir gobierno, flota, ocupantes y civiles.",
+      "uncertainty": "Términos jurídicos del acuerdo de incorporación no están exhaustivamente documentados.",
+      "anchors": [
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "cardassian_dominion_accession",
+          "relation": "ASYMMETRIC_ALLIANCE",
+          "security": "COBELLIGERENT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_BY_INFERNOS_LIGHT"
+          ],
+          "explanation": "Cardassia se une a fuerzas del Dominio.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "damar_rebellion",
+          "relation": "INTERNAL_SPLIT",
+          "security": "INSURGENCY",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_DOGS_OF_WAR"
+          ],
+          "explanation": "Damar lidera insurgencia contra ocupación dominionista.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "cardassian_fleet_switches",
+          "relation": "HOSTILITY_FROM_FACTIONS",
+          "security": "BATTLE_TURN",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_WHAT_YOU_LEAVE_BEHIND"
+          ],
+          "explanation": "Elementos de la flota cambian de bando en combate final.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_BY_INFERNOS_LIGHT",
+        "DS9_THE_DOGS_OF_WAR",
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ]
+    },
+    {
+      "relation_id": "breen_dominion",
+      "participants": [
+        "breen_confederacy",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La alianza de 2375 altera equilibrio militar y agravios cardassianos; intercambio estratégico no prueba integración institucional breen.",
+      "mechanism": "Distinguir promesas de dirigentes dominionistas, capacidad real de ceder planetas y soberanía efectiva.",
+      "uncertainty": "No establecer cesiones de Tierra o Rómulo como realizadas.",
+      "anchors": [
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "breen_enter_war",
+          "relation": "COBELLIGERENT",
+          "security": "WAR_ALLIANCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_STRANGE_BEDFELLOWS"
+          ],
+          "explanation": "Los Breen refuerzan al Dominio en guerra.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "treaty_of_bajor",
+          "relation": "DEFEATED_PARTNER",
+          "security": "WAR_ENDS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_WHAT_YOU_LEAVE_BEHIND"
+          ],
+          "explanation": "Coalición derrotada, acuerdos posteriores no se presumen.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "cardassian_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_STRANGE_BEDFELLOWS",
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ]
+    },
+    {
+      "relation_id": "federation_breen",
+      "participants": [
+        "united_federation_of_planets",
+        "breen_confederacy"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La entrada bélica Breen es tardía; ataques a la Federación no deben extrapolarse a toda TNG.",
+      "mechanism": "La represalia y contrainteligencia dependen de gobierno/mandos y momento.",
+      "uncertainty": "Los acuerdos anteriores y fronteras exactas siguen inciertos.",
+      "anchors": [
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "breen_enter_war",
+          "relation": "WAR_OPPONENTS",
+          "security": "WAR",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_STRANGE_BEDFELLOWS"
+          ],
+          "explanation": "Breen se suma a campaña militar dominionista.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "treaty_of_bajor",
+          "relation": "POSTWAR_UNRESOLVED",
+          "security": "WAR_ENDS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_WHAT_YOU_LEAVE_BEHIND"
+          ],
+          "explanation": "No inferir paz bilateral formal no vista en pantalla.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_STRANGE_BEDFELLOWS",
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ]
+    },
+    {
+      "relation_id": "bajor_dominion",
+      "participants": [
+        "bajoran_provisional_government",
+        "dominion"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "Bajor firma pacto de no agresión para sobrevivir a la guerra; neutralidad táctica no implica sumisión ideológica.",
+      "mechanism": "Sisko orienta decisión, pero autoridad gubernamental bajorana conserva su papel.",
+      "uncertainty": "No inventar cláusulas secretas ni duración exacta del pacto.",
+      "anchors": [
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "bajoran_dominion_nonaggression",
+          "relation": "FORMAL_NONAGGRESSION",
+          "security": "NEUTRAL",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_CALL_TO_ARMS"
+          ],
+          "explanation": "Neutralidad formal durante primer tramo de guerra.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "treaty_of_bajor",
+          "relation": "POSTWAR_DIPLOMACY",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_WHAT_YOU_LEAVE_BEHIND"
+          ],
+          "explanation": "Bajor es escenario de la conclusión diplomática.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "bajoran_space",
+        "deep_space_9"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_CALL_TO_ARMS",
+        "DS9_WHAT_YOU_LEAVE_BEHIND"
+      ]
+    },
+    {
+      "relation_id": "romulan_bajor",
+      "participants": [
+        "romulan_star_empire",
+        "bajoran_provisional_government"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "La cooperación en instalaciones de socorro de época bélica suscita tensiones sobre militarización de suelo bajorano.",
+      "mechanism": "La autorización de hospital no concede derechos irrestrictos de bases militares; Bajor mantiene voz propia.",
+      "uncertainty": "Derechos exactos de uso de Derna no establecidos como tratado general.",
+      "anchors": [
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "derna_hospital_dispute",
+          "relation": "COOPERATION_WITH_DISPUTE",
+          "security": "LOCALIZED_CRISIS",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_IMAGE_IN_THE_SAND"
+          ],
+          "explanation": "Intereses romulanos y control de Bajor entran en conflicto.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "bajoran_space"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_IMAGE_IN_THE_SAND"
+      ]
+    },
+    {
+      "relation_id": "klingon_romulan",
+      "participants": [
+        "klingon_empire",
+        "romulan_star_empire"
+      ],
+      "relation_category": "INTERSTATE",
+      "why": "Potencias con larga desconfianza cooperan en la coalición contra Dominio sin anular sus tensiones históricas.",
+      "mechanism": "Coalición tripartita con Federación no implica soberanía común o acceso irrestricto.",
+      "uncertainty": "No imponer tratado militar bilateral no documentado.",
+      "anchors": [
+        {
+          "reference_year": 2364,
+          "effective_after_event_id": "tng_alliance",
+          "relation": "STRATEGIC_DISTRUST",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_THE_NEUTRAL_ZONE"
+          ],
+          "explanation": "Relaciones tensas aunque ambas interactúan con Federación.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2374,
+          "effective_after_event_id": "romulan_enters_war",
+          "relation": "COBELLIGERENT",
+          "security": "JOINT_CAMPAIGN",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_IN_THE_PALE_MOONLIGHT"
+          ],
+          "explanation": "Cooperación militar circunstancial contra enemigo común.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TNG_THE_NEUTRAL_ZONE",
+        "DS9_IN_THE_PALE_MOONLIGHT"
+      ]
+    },
+    {
+      "relation_id": "federation_ferengi",
+      "participants": [
+        "united_federation_of_planets",
+        "ferengi_alliance"
+      ],
+      "relation_category": "INTERSTATE_AND_TRADE",
+      "why": "Tras primer encuentro abierto, agentes mercantiles ferengi y autoridades federadas mantienen contactos y comercio. Quark y Rom no equivalen a la política del Gran Nagus.",
+      "mechanism": "Alianzas comerciales privadas no crean tratados interestatales oficiales; cambios políticos de 2375 deben situarse en tiempo.",
+      "uncertainty": "Acuerdos arancelarios precisos y embajadas no documentados suficientemente.",
+      "anchors": [
+        {
+          "reference_year": 2364,
+          "effective_after_event_id": "federation_ferengi_first_contact",
+          "relation": "CONTACT",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_THE_LAST_OUTPOST"
+          ],
+          "explanation": "Primer contacto abierto con naves ferengi.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2375,
+          "effective_after_event_id": "rom_becomes_nagus",
+          "relation": "CONTACT_AND_TRADE",
+          "security": "PEACE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "ST_OFFICIAL_ROM_GRAND_NAGUS"
+          ],
+          "explanation": "Nuevo Gran Nagus; no proyectar reforma a años anteriores.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TNG_THE_LAST_OUTPOST",
+        "ST_OFFICIAL_ROM_GRAND_NAGUS"
+      ]
+    },
+    {
+      "relation_id": "federation_borg",
+      "participants": [
+        "united_federation_of_planets",
+        "borg_collective"
+      ],
+      "relation_category": "COLLECTIVE_CONTACT",
+      "why": "La amenaza procede de la Colectividad asimiladora y enfrentamientos concretos, no de una diplomacia interestatal convencional.",
+      "mechanism": "No trasladar contactos de Voyager/Delta a disponibilidad jugable Alfa; Borg no actúa como especie ni todos los ex-Borg representan al colectivo.",
+      "uncertainty": "No inventar tratado, embajada o portal Borg Alfa.",
+      "anchors": [
+        {
+          "reference_year": 2365,
+          "effective_after_event_id": "borg_first_encounter",
+          "relation": "HOSTILE_CONTACT",
+          "security": "THREAT",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_Q_WHO"
+          ],
+          "explanation": "Primer encuentro directo emblemático con cubo.",
+          "automatic_future_transition": false
+        },
+        {
+          "reference_year": 2366,
+          "effective_after_event_id": "borg_earth_offensive",
+          "relation": "HOSTILE",
+          "security": "INVASION",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TNG_BEST_OF_BOTH_WORLDS"
+          ],
+          "explanation": "Ofensiva hacia Tierra; distinguir año de emisión y fecha de escena.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [
+        "sol_system"
+      ],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TNG_Q_WHO",
+        "TNG_BEST_OF_BOTH_WORLDS"
+      ]
+    },
+    {
+      "relation_id": "federation_gorn",
+      "participants": [
+        "united_federation_of_planets",
+        "gorn_hegemony"
+      ],
+      "relation_category": "LIMITED_EVIDENCE_INTERSTATE",
+      "why": "Incidente de Cestus III y confrontación de Kirk generan precedentes históricos, pero no justifican una alianza o guerra permanente en TNG.",
+      "mechanism": "El episodio TOS muestra choque concreto, no catálogo de tratados siglos después.",
+      "uncertainty": "Estado diplomático 2364–2375 sin prueba suficiente: UNKNOWN en vez de hostilidad eterna.",
+      "anchors": [
+        {
+          "reference_year": 2267,
+          "effective_after_event_id": "cestus_incident",
+          "relation": "HOSTILE_INCIDENT",
+          "security": "LOCAL_CLASH",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TOS_ARENA"
+          ],
+          "explanation": "Incidente militar acotado; situación posterior desconocida.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TOS_ARENA"
+      ]
+    },
+    {
+      "relation_id": "federation_tholian",
+      "participants": [
+        "united_federation_of_planets",
+        "tholian_assembly"
+      ],
+      "relation_category": "LIMITED_EVIDENCE_INTERSTATE",
+      "why": "El encuentro de TOS evidencia jurisdicción reivindicada por tholianos; no se conoce extensión cartográfica exacta.",
+      "mechanism": "Distinguir contacto histórico federal de pacto Dominio-Tholiano posterior.",
+      "uncertainty": "No deducir relación bilateral actual solo por la fuente de TOS.",
+      "anchors": [
+        {
+          "reference_year": 2268,
+          "effective_after_event_id": "tholian_encounter",
+          "relation": "CONFRONTATION",
+          "security": "LOCAL_CLASH",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "TOS_THE_THOLIAN_WEB"
+          ],
+          "explanation": "Intercepción local cerca de un área en disputa.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "TOS_THE_THOLIAN_WEB"
+      ]
+    },
+    {
+      "relation_id": "tholian_dominion",
+      "participants": [
+        "tholian_assembly",
+        "dominion"
+      ],
+      "relation_category": "LIMITED_EVIDENCE_INTERSTATE",
+      "why": "Fuentes oficiales recopilan pactos de no agresión del Dominio con potencias alfa como la Asamblea Tholiana.",
+      "mechanism": "Un pacto de no agresión no es adhesión al Dominio ni compromiso de participar en combate.",
+      "uncertainty": "La precisión del momento y cláusulas del pacto no constan de forma detallada.",
+      "anchors": [
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "thal_dominion_nonaggression",
+          "relation": "FORMAL_NONAGGRESSION",
+          "security": "NEUTRAL",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION"
+          ],
+          "explanation": "Referencia oficial a pacto; no confundir con alianza.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "ST_OFFICIAL_GALACTIC_POLITICS_FEDERATION_DOMINION"
+      ]
+    },
+    {
+      "relation_id": "federation_tzenkethi",
+      "participants": [
+        "united_federation_of_planets",
+        "tzenkethi_polity"
+      ],
+      "relation_category": "LIMITED_EVIDENCE_INTERSTATE",
+      "why": "Se mencionan enfrentamientos históricos con Tzenkethi, pero un rumor de golpe de estado en DS9 resulta parte de una operación encubierta.",
+      "mechanism": "Los diálogos del antagonista infiltrado son información no verificada y no pueden fundar un cambio de gobierno.",
+      "uncertainty": "No fijar fecha de guerra, tratado de paz o régimen resultante sin anclaje explícito.",
+      "anchors": [
+        {
+          "reference_year": 2371,
+          "effective_after_event_id": "tzenkethi_false_coup_report",
+          "relation": "UNKNOWN",
+          "security": "UNCONFIRMED",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_THE_ADVERSARY"
+          ],
+          "explanation": "El supuesto golpe anunciado es una maniobra engañosa; NO ocurrió como hecho probado.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_THE_ADVERSARY"
+      ]
+    },
+    {
+      "relation_id": "federation_section31",
+      "participants": [
+        "united_federation_of_planets",
+        "section_31"
+      ],
+      "relation_category": "INTERNAL_COVERT_NETWORK",
+      "why": "Sección 31 actúa clandestinamente alegando defensa federal pero no ostenta mandato diplomático transparente de toda la Federación.",
+      "mechanism": "Sus actos no deben imputarse automáticamente a autoridad civil o a cada oficial de Starfleet.",
+      "uncertainty": "Naturaleza jurídica e instrucciones específicas permanecen disputadas.",
+      "anchors": [
+        {
+          "reference_year": 2374,
+          "effective_after_event_id": "section31_revealed",
+          "relation": "CLANDESTINE_INTERNAL",
+          "security": "INTELLIGENCE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_INQUISITION"
+          ],
+          "explanation": "Aparece red clandestina; no crear 'tratado Federación–Sección 31'.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_INQUISITION"
+      ]
+    },
+    {
+      "relation_id": "federation_orion_syndicate",
+      "participants": [
+        "united_federation_of_planets",
+        "orion_syndicate"
+      ],
+      "relation_category": "STATE_TO_CRIMINAL_NETWORK",
+      "why": "Una red delictiva transregional puede infiltrarse en instituciones y negociar con personas, pero no es una nación reconocida.",
+      "mechanism": "Un soborno, trato ilícito o agente infiltrado no equivale a la postura oficial de un gobierno.",
+      "uncertainty": "No determinar un tratado de comercio con el Sindicato sin pruebas.",
+      "anchors": [
+        {
+          "reference_year": 2373,
+          "effective_after_event_id": "orion_syndicate_infiltration",
+          "relation": "LAW_ENFORCEMENT_INTEREST",
+          "security": "COVERT_CRIME",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_HONOR_AMONG_THIEVES"
+          ],
+          "explanation": "Contactos e infiltración no implican reconocimiento diplomático.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_HONOR_AMONG_THIEVES"
+      ]
+    },
+    {
+      "relation_id": "federation_trill_commission",
+      "participants": [
+        "united_federation_of_planets",
+        "trill_symbiosis_commission"
+      ],
+      "relation_category": "INSTITUTIONAL_CONTACT_NOT_FOREIGN_STATE",
+      "why": "La Comisión de Simbiosis Trill regula acceso y secretos vinculados a la unión huésped-simbionte; no se debe convertir en cancillería soberana.",
+      "mechanism": "Regulación médico-cultural no confiere poderes bélicos, diplomáticos ni soberanía propios.",
+      "uncertainty": "Su posición exacta dentro del gobierno Trill requiere evidencia adicional.",
+      "anchors": [
+        {
+          "reference_year": 2371,
+          "effective_after_event_id": "trill_commission_secret",
+          "relation": "INSTITUTIONAL",
+          "security": "NONE",
+          "precision": "YEAR_APPROXIMATE",
+          "source_refs": [
+            "DS9_EQUILIBRIUM"
+          ],
+          "explanation": "Institución especializada; no tiene tratado interestatal propio.",
+          "automatic_future_transition": false
+        }
+      ],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": [
+        "DS9_EQUILIBRIUM"
+      ]
+    },
+    {
+      "relation_id": "dominion_orion_syndicate",
+      "participants": [
+        "dominion",
+        "orion_syndicate"
+      ],
+      "relation_category": "UNKNOWN_ORGANIZATION_CONTACT",
+      "why": "La existencia contemporánea de ambas entidades no prueba contactos oficiales documentados.",
+      "mechanism": "No rellenar con rutas de contrabando ficticias ni acuerdos entre dirigentes que la pantalla no atestigua.",
+      "uncertainty": "Relación desconocida; no se afirma hostilidad ni comercio.",
+      "anchors": [],
+      "geographic_context_refs": [],
+      "individuals_not_collective_proxy": true,
+      "canonical_future_not_guaranteed": true,
+      "gameplay_activated": false,
+      "source_refs": []
+    }
+  ]
+}

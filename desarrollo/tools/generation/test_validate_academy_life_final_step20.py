@@ -1,0 +1,27 @@
+import importlib.util,unittest
+from pathlib import Path
+H=Path(__file__).resolve().parent;ROOT=H.parents[2];M=H/"validate_academy_life_final_step20.py"
+s=importlib.util.spec_from_file_location("m",M);m=importlib.util.module_from_spec(s);s.loader.exec_module(m)
+def report():return m.audit_repo(ROOT)
+class AcademyLifeFinalRepositoryAuditTests(unittest.TestCase):
+ def test_01_status_20_of_20(self):self.assertTrue(report()["status_ok"])
+ def test_02_all_json_parses(self):self.assertEqual(report()["json_parse_errors"],[])
+ def test_03_no_broken_file_refs(self):self.assertEqual(report()["broken_file_refs"],[])
+ def test_04_all_step_anchors_exist(self):self.assertEqual(report()["missing_step_anchors"],[])
+ def test_05_relationship_canon_locked(self):self.assertTrue(report()["canon_ok"])
+ def test_06_academy_state_finalized(self):self.assertTrue(report()["academy_state_ok"])
+ def test_07_record_model_append_only_and_source_family_safe(self):self.assertTrue(report()["record_model_ok"])
+ def test_08_record_contract_canonical_families(self):self.assertTrue(report()["record_family_contract_ok"])
+ def test_09_record_resolver_matches_contract(self):self.assertTrue(report()["record_resolver_family_ok"])
+ def test_10_progression_contains_graduation_pending(self):self.assertTrue(report()["progression_ok"])
+ def test_11_service_record_bridge_complete(self):self.assertTrue(report()["service_record_bridge_ok"])
+ def test_12_manifest_has_twenty_scripts(self):self.assertEqual(report()["manifest_test_script_count"],20)
+ def test_13_manifest_test_count_matches_repo(self):self.assertTrue(report()["manifest_ok"]);self.assertEqual(report()["defined_test_count"],482)
+ def test_14_no_missing_test_scripts(self):self.assertEqual(report()["missing_test_scripts"],[])
+ def test_15_academy_python_syntax_clean(self):self.assertEqual(report()["python_syntax_errors"],[])
+ def test_16_ci_wired_to_real_audit_and_runner(self):self.assertTrue(report()["workflow_ok"])
+ def test_17_dynamic_universe_gate_consistent(self):self.assertTrue(report()["dynamic_universe_gate_ok"])
+ def test_18_no_obsolete_readme_closure_wording(self):self.assertTrue(report()["docs_ok"])
+ def test_19_final_runtime_boundary_intact(self):self.assertTrue(report()["closure_ok"])
+ def test_20_entire_repository_audit_clean(self):self.assertTrue(report()["ok"],report()["errors"])
+if __name__=="__main__":unittest.main()

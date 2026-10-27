@@ -1,0 +1,120 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_4afb2c9ac62a",
+  "display_name": "Sovereign - versión con fuente FBX",
+  "category": "ship",
+  "relative_directory": "naves/starfleet/sovereign/sovereign_version_con_fuente_fbx",
+  "taxonomy": {
+    "faction_inferred": "Flota Estelar",
+    "ship_class_inferred": "sovereign",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Nave clase Sovereign (era TNG tardía).",
+  "proposed_game_use": "F11/F14: modelo de crucero; comparar versiones con hangar.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Starfleet/class sovereign/star-trek-sovereign-class",
+      "kind": "directory",
+      "name": "star-trek-sovereign-class"
+    },
+    {
+      "source": "ships/Starfleet/class sovereign/star-trek-sovereign-class.zip",
+      "kind": "file",
+      "name": "star-trek-sovereign-class.zip"
+    },
+    {
+      "source": "ships/Starfleet/class sovereign/star_trek_-_sovereign_class (1).glb",
+      "kind": "file",
+      "name": "star_trek_-_sovereign_class (1).glb"
+    }
+  ],
+  "technical": {
+    "file_count": 12,
+    "size_bytes": 68403442,
+    "files": [
+      {
+        "path": "star-trek-sovereign-class/source/Sovereign Class.fbx",
+        "extension": ".fbx",
+        "size_bytes": 13526208
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_decals.png",
+        "extension": ".png",
+        "size_bytes": 41221
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_diffuse_1.png",
+        "extension": ".png",
+        "size_bytes": 3444529
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_diffuse_2.png",
+        "extension": ".png",
+        "size_bytes": 3462523
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_diffuse_3.png",
+        "extension": ".png",
+        "size_bytes": 150712
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_lum_1.png",
+        "extension": ".png",
+        "size_bytes": 145464
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_lum_2.png",
+        "extension": ".png",
+        "size_bytes": 136171
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_lum_3.png",
+        "extension": ".png",
+        "size_bytes": 88623
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_spec_1.png",
+        "extension": ".png",
+        "size_bytes": 3101883
+      },
+      {
+        "path": "star-trek-sovereign-class/textures/Sovereign_Class_spec_2.png",
+        "extension": ".png",
+        "size_bytes": 3219919
+      },
+      {
+        "path": "star-trek-sovereign-class.zip",
+        "extension": ".zip",
+        "size_bytes": 27318729
+      },
+      {
+        "path": "star_trek_-_sovereign_class (1).glb",
+        "extension": ".glb",
+        "size_bytes": 13767460
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Conservar la carpeta source/ y textures/ original; sin alterar nombres.",
+  "historical_relative_directory": "ships/starfleet/sovereign/sovereign_version_con_fuente_fbx",
+  "directory_root": "assets/"
+}

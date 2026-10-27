@@ -1,0 +1,406 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "LORE-02 D",
+  "status": "NEEDS_REVIEW",
+  "mode": "EDITORIAL_NON_RUNTIME",
+  "authority": "CoreRPG_WORLD_STATE_ONLY",
+  "runtime_import_allowed": false,
+  "source_registry": "mundo/sources/source_registry/source_registry.json",
+  "dataset_id": "lore02_d_scientific_disciplines",
+  "record_count": 14,
+  "records": [
+    {
+      "discipline_id": "l02d_astrofisica_estelar",
+      "display_name_es": "Astrofísica estelar",
+      "scope_es": "Distribuciones de energía, ciclos estelares, espectros y variabilidad",
+      "observables": [
+        "radiation",
+        "spectral_profile",
+        "temporal_variation"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SCIENCE_STATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_astronomia_observacional",
+      "display_name_es": "Astronomía observacional",
+      "scope_es": "Cartografía celeste, astrometría y observaciones de largo alcance",
+      "observables": [
+        "position_estimate",
+        "motion_vector",
+        "spectral_profile"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_LONG_RANGE_SENSOR_SCAN"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_cosmologia",
+      "display_name_es": "Cosmología",
+      "scope_es": "Estructuras a gran escala, horizontes observacionales y límites de los modelos",
+      "observables": [
+        "distance_estimate",
+        "background_signal"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SCIENCE_STATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_fisica_gravitacional",
+      "display_name_es": "Física gravitacional",
+      "scope_es": "Gradientes, mareas, órbitas y singularidades",
+      "observables": [
+        "gravity_gradient",
+        "orbital_change",
+        "lens_distortion"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "VOY_BLINK_OF_AN_EYE"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_ciencias_subespaciales",
+      "display_name_es": "Ciencias subespaciales",
+      "scope_es": "Propagación, interferencias y perturbaciones del subespacio",
+      "observables": [
+        "subspace_noise",
+        "field_phase",
+        "signal_latency"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SUBSPACE_COMMUNICATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_cronodinamica",
+      "display_name_es": "Investigación temporal",
+      "scope_es": "Mediciones temporales, causalidad, desfases y consistencia histórica",
+      "observables": [
+        "clock_drift",
+        "sequence_disagreement",
+        "temporal_echo"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_CAUSE_AND_EFFECT"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_fisica_cuantica",
+      "display_name_es": "Física cuántica y realidades alternativas",
+      "scope_es": "Interpretación prudente de discontinuidades observacionales",
+      "observables": [
+        "phase_signature",
+        "identity_discrepancy"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_PARALLELS"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_quimica_analitica",
+      "display_name_es": "Química analítica",
+      "scope_es": "Composición de muestras, espectros, contaminación y reactividad",
+      "observables": [
+        "chemical_signature",
+        "sample_composition"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "MA_SCIENCE_STATION"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_geologia_planetaria",
+      "display_name_es": "Geología planetaria",
+      "scope_es": "Estratos, sismología, composición mineral y actividad tectónica",
+      "observables": [
+        "seismic_trace",
+        "mineral_spectrum",
+        "surface_change"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "VOY_THIRTY_DAYS_REFERENCE"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_exobiologia",
+      "display_name_es": "Exobiología",
+      "scope_es": "Indicios de vida, interacciones con ecosistemas, protocolos de no contaminación",
+      "observables": [
+        "biosignature",
+        "metabolic_indicators",
+        "population_distribution"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_GALAXYS_CHILD"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_ecologia_espacial",
+      "display_name_es": "Ecología espacial",
+      "scope_es": "Entidades biológicas espaciales, hábitat y efecto de naves en organismos",
+      "observables": [
+        "bioelectric_response",
+        "movement_pattern",
+        "energy_absorption"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_GALAXYS_CHILD"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_arqueometria",
+      "display_name_es": "Arqueometría y ciencia de materiales",
+      "scope_es": "Objetos, trazas antiguas, autenticidad y custodia de hallazgos",
+      "observables": [
+        "material_age_estimate",
+        "toolmark_pattern"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_THE_CHASE"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_metrologia_instrumental",
+      "display_name_es": "Metrología e instrumentación",
+      "scope_es": "Calibración, sesgos, ruido, deriva y comparación entre sistemas",
+      "observables": [
+        "calibration_drift",
+        "signal_to_noise",
+        "cross_instrument_disagreement"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "VOY_SCIENTIFIC_METHOD"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    },
+    {
+      "discipline_id": "l02d_ciencias_atmosfericas",
+      "display_name_es": "Ciencias atmosféricas planetarias",
+      "scope_es": "Tormentas, capas, aerosoles e interacción con sensores y aterrizajes",
+      "observables": [
+        "atmospheric_density",
+        "radiation",
+        "particle_flux"
+      ],
+      "epistemic_limit_es": "Interpretación condicionada por calidad, resolución, disponibilidad y acceso a datos; ningún resultado revela verdad oculta.",
+      "practices": [
+        "observation",
+        "control_baseline",
+        "alternative_hypotheses",
+        "reproducibility_review"
+      ],
+      "provenance": {
+        "claim_class": "INFERRED",
+        "source_ids": [
+          "TNG_THE_ENEMY"
+        ],
+        "confidence": "MEDIUM",
+        "claim_scope_es": "La disciplina y su campo de trabajo se derivan de prácticas científicas vistas en pantalla o documentación técnica; taxonomía de proyecto."
+      },
+      "gameplay_role": "RESEARCH_AUTHORING_ONLY",
+      "academy_or_staff_training": "QUALIFICATION_CHECK_FUTURE",
+      "runtime_enabled": false
+    }
+  ],
+  "notes": [
+    "Los departamentos no se traducen automáticamente en habilitaciones individuales.",
+    "La exobiología no duplica los perfiles clínicos de LORE-02 C; remite a medicina ante daño o infección.",
+    "Los equipos se enlazan al catálogo de LORE-02 B mediante instalaciones y procedimientos."
+  ]
+}

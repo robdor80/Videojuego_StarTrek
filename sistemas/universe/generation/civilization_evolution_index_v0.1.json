@@ -1,0 +1,28 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "civilization_evolution_index",
+  "status": "FOUNDATION_FIXED",
+  "parent_refs": [
+    "sistemas/universe/generation/civilization_runtime_state_contract.json",
+    "sistemas/universe/generation/civilization_economy_governance_history_contract.json",
+    "sistemas/universe/generation/planetary_offscreen_simulation_contract.json",
+    "sistemas/gameplay/diplomacy/diplomatic_state_contract.json",
+    "sistemas/gameplay/consequences/world_event_consequence_contract.json"
+  ],
+  "contracts": [
+    "sistemas/universe/generation/civilization_evolution_state_contract_v0.1.json",
+    "sistemas/universe/generation/civilization_demographic_evolution_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_governance_transition_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_internal_cohesion_fragmentation_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_internal_economy_resilience_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_capability_maturation_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_continuity_lineage_rules_v0.1.json",
+    "sistemas/universe/generation/civilization_offscreen_evolution_contract_v0.1.json",
+    "sistemas/gameplay/diplomacy/civilization_relation_evolution_rules_v0.1.json",
+    "sistemas/gameplay/consequences/civilization_evolution_event_contract_v0.1.json"
+  ],
+  "reference_implementation": "desarrollo/tools/generation/simulate_civilization_evolution.py",
+  "validation_ref": "desarrollo/validation/consistency/civilization_evolution_invariants_v0.1.json",
+  "fixture_root": "desarrollo/validation/fixtures/civilization_evolution",
+  "principle": "Elapsed time evolves pre-existing civilization state; it never licenses retroactive reality generation."
+}

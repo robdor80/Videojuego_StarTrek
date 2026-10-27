@@ -1,35 +1,35 @@
 name: LORE-01 — TNG species & cultures (documental)
 on:
   push:
-    branches: [main, "lore/01-tng-species-cultures"]
+    branches: [main, "mundo/lore/01-tng-species-cultures"]
     paths:
       - ".github/workflows/lore01-tng-content.yml"
-      - "gameplay/species/profiles/**"
-      - "lore/cultures/profiles/**"
-      - "lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
-      - "gameplay/languages/initial_language_catalogue.json"
-      - "sources/source_registry/source_registry.json"
-      - "universe/generation/lore01_tng_content_availability_v0.1.json"
-      - "tools/validation/*lore01*"
-      - "docs/roadmap/lore_01*"
-      - "lore/species/README.md"
+      - "sistemas/gameplay/species/profiles/**"
+      - "mundo/lore/cultures/profiles/**"
+      - "mundo/lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
+      - "sistemas/gameplay/languages/initial_language_catalogue.json"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "desarrollo/tools/validation/*lore01*"
+      - "proyecto/docs/roadmap/lore_01*"
+      - "mundo/lore/species/README.md"
       - "CONTENT_STATUS.md"
-      - "lore/species/evidence/**"
-      - "lore/species/monographs/**"
-      - "lore/species/evidence/**"
-      - "lore/species/monographs/**"
+      - "mundo/lore/species/evidence/**"
+      - "mundo/lore/species/monographs/**"
+      - "mundo/lore/species/evidence/**"
+      - "mundo/lore/species/monographs/**"
   pull_request:
     paths:
       - ".github/workflows/lore01-tng-content.yml"
-      - "gameplay/species/profiles/**"
-      - "lore/cultures/profiles/**"
-      - "lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
-      - "gameplay/languages/initial_language_catalogue.json"
-      - "sources/source_registry/source_registry.json"
-      - "universe/generation/lore01_tng_content_availability_v0.1.json"
-      - "tools/validation/*lore01*"
-      - "docs/roadmap/lore_01*"
-      - "lore/species/README.md"
+      - "sistemas/gameplay/species/profiles/**"
+      - "mundo/lore/cultures/profiles/**"
+      - "mundo/lore/species/LORE01_TNG_species_coverage_audit_v0.1.json"
+      - "sistemas/gameplay/languages/initial_language_catalogue.json"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json"
+      - "desarrollo/tools/validation/*lore01*"
+      - "proyecto/docs/roadmap/lore_01*"
+      - "mundo/lore/species/README.md"
       - "CONTENT_STATUS.md"
   workflow_dispatch:
 
@@ -49,10 +49,10 @@ jobs:
           python-version: "3.12"
       - name: Sintaxis y contratos documentales
         run: |
-          python -m py_compile tools/validation/validate_lore01_tng.py tools/validation/test_lore01_tng.py
-          python tools/validation/validate_lore01_tng.py
-          python tools/validation/validate_lore01_depth.py
+          python -m py_compile desarrollo/tools/validation/validate_lore01_tng.py desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_depth.py
       - name: Regresiones de DLC y catálogo
         run: |
-          python tools/validation/test_lore01_tng.py
-          python tools/validation/test_lore01_depth.py
+          python desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/test_lore01_depth.py

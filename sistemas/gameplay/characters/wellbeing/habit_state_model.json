@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1.1",
+  "model_id": "character_habit_state",
+  "status": "foundation_fixed",
+  "observation_windows": [
+    {
+      "id": "acute",
+      "duration_hours": 24
+    },
+    {
+      "id": "weekly",
+      "duration_days": 7
+    },
+    {
+      "id": "monthly",
+      "duration_days": 30
+    }
+  ],
+  "tracked_domains": [
+    "sleep",
+    "duty_load",
+    "recovery_time",
+    "nutrition_routine",
+    "exercise",
+    "leisure",
+    "social_connection",
+    "intimacy",
+    "study_load",
+    "exceptional_stressors"
+  ],
+  "derived_state": [
+    "acute_fatigue",
+    "accumulated_fatigue",
+    "stress_load",
+    "recovery_capacity",
+    "concentration_readiness",
+    "sustained_attention_capacity",
+    "learning_readiness",
+    "physical_readiness",
+    "social_energy"
+  ],
+  "rules": [
+    "One isolated bad event has limited long-term effect unless severe.",
+    "Repeated behavior may form a stable observed routine.",
+    "One positive activity does not instantly erase accumulated strain.",
+    "Character preferences modify the recovery value of leisure/social activities.",
+    "Positive balance maintains normal capacity rather than creating superhuman bonuses.",
+    "Derived state never changes authoritative world truth.",
+    "Derived state never forces player dialogue or moral choices.",
+    "Individual physiology/preferences are consumed from explicit character wellbeing profiles rather than inferred from species_id.",
+    "Academy Step 13 may derive wellbeing snapshots but formal obligation/academic/disciplinary consequences remain separate."
+  ],
+  "profile_contract_ref": "sistemas/gameplay/careers/academy_path/life/academy_wellbeing_profile_contract_v0.1.json",
+  "academy_integration_ref": "sistemas/gameplay/careers/academy_path/life/academy_wellbeing_balance_contract_v0.1.json"
+}

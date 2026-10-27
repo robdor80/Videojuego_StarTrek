@@ -1,16 +1,16 @@
 name: LORE-01 D — Diplomacia documental
 on:
   push:
-    branches: [main, "lore/01-d-diplomatic-geopolitics"]
+    branches: [main, "mundo/lore/01-d-diplomatic-geopolitics"]
     paths:
-      - "lore/diplomacy/**"
-      - "tools/validation/*lore01*"
+      - "mundo/lore/diplomacy/**"
+      - "desarrollo/tools/validation/*lore01*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-d-diplomacy.yml"
   pull_request:
     paths:
-      - "lore/diplomacy/**"
-      - "tools/validation/*lore01*"
+      - "mundo/lore/diplomacy/**"
+      - "desarrollo/tools/validation/*lore01*"
       - "CONTENT_STATUS.md"
       - ".github/workflows/lore01-d-diplomacy.yml"
   workflow_dispatch:
@@ -29,18 +29,18 @@ jobs:
           python-version: "3.12"
       - name: LORE-01 D integridad y pruebas
         run: |
-          python -m py_compile tools/validation/validate_lore01_d.py tools/validation/test_lore01_d.py
-          python tools/validation/validate_lore01_d.py
-          python tools/validation/test_lore01_d.py
+          python -m py_compile desarrollo/tools/validation/validate_lore01_d.py desarrollo/tools/validation/test_lore01_d.py
+          python desarrollo/tools/validation/validate_lore01_d.py
+          python desarrollo/tools/validation/test_lore01_d.py
       - name: Regresiones LORE-01 A A.1 B C
         run: |
-          python tools/validation/validate_lore01_tng.py
-          python tools/validation/test_lore01_tng.py
-          python tools/validation/validate_lore01_depth.py
-          python tools/validation/test_lore01_depth.py
-          python tools/validation/validate_lore01_a1.py
-          python tools/validation/test_lore01_a1.py
-          python tools/validation/validate_lore01_b.py
-          python tools/validation/test_lore01_b.py
-          python tools/validation/validate_lore01_c.py
-          python tools/validation/test_lore01_c.py
+          python desarrollo/tools/validation/validate_lore01_tng.py
+          python desarrollo/tools/validation/test_lore01_tng.py
+          python desarrollo/tools/validation/validate_lore01_depth.py
+          python desarrollo/tools/validation/test_lore01_depth.py
+          python desarrollo/tools/validation/validate_lore01_a1.py
+          python desarrollo/tools/validation/test_lore01_a1.py
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore01_c.py
+          python desarrollo/tools/validation/test_lore01_c.py

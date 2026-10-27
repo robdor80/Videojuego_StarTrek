@@ -3,19 +3,19 @@ name: F02 — documental contract audit
 on:
   pull_request:
     paths:
-      - 'docs/roadmap/master/fases/F02/**'
-      - 'tools/validation/validate_f02_contracts.py'
-      - 'tools/validation/test_validate_f02_contracts.py'
-      - 'tools/validation/validate_f02_p05_plan.py'
+      - 'proyecto/docs/roadmap/master/fases/F02/**'
+      - 'desarrollo/tools/validation/validate_f02_contracts.py'
+      - 'desarrollo/tools/validation/test_validate_f02_contracts.py'
+      - 'desarrollo/tools/validation/validate_f02_p05_plan.py'
       - '.github/workflows/f02-contracts.yml'
   push:
     branches:
       - docs/f02-core-integration-contracts
     paths:
-      - 'docs/roadmap/master/fases/F02/**'
-      - 'tools/validation/validate_f02_contracts.py'
-      - 'tools/validation/test_validate_f02_contracts.py'
-      - 'tools/validation/validate_f02_p05_plan.py'
+      - 'proyecto/docs/roadmap/master/fases/F02/**'
+      - 'desarrollo/tools/validation/validate_f02_contracts.py'
+      - 'desarrollo/tools/validation/test_validate_f02_contracts.py'
+      - 'desarrollo/tools/validation/validate_f02_p05_plan.py'
       - '.github/workflows/f02-contracts.yml'
   workflow_dispatch:
 
@@ -35,8 +35,8 @@ jobs:
         with:
           python-version: '3.12'
       - name: Verify P02 / P03 / P04 traceability
-        run: python tools/validation/validate_f02_contracts.py
+        run: python desarrollo/tools/validation/validate_f02_contracts.py
       - name: Run hermetic validation-unit tests
-        run: python -m unittest discover -s tools/validation -p 'test_validate_f02_contracts.py' -v
+        run: python -m unittest discover -s desarrollo/tools/validation -p 'test_validate_f02_contracts.py' -v
       - name: Verify P05 integration handoff and 13 fixture requirements
-        run: python tools/validation/validate_f02_p05_plan.py
+        run: python desarrollo/tools/validation/validate_f02_p05_plan.py

@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_595e261e910f",
+  "display_name": "species 8472 bioship",
+  "category": "ship",
+  "relative_directory": "naves/species_8472/bionave_especie_8472/species_8472_bioship",
+  "taxonomy": {
+    "faction_inferred": "Especie 8472",
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Nave orgánica de la especie 8472, asociada a Voyager.",
+  "proposed_game_use": "F13: encuentros excepcionales y escenarios de simulación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "ships/Species 8472/star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb",
+      "kind": "file",
+      "name": "star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 4469120,
+    "files": [
+      {
+        "path": "star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb",
+        "extension": ".glb",
+        "size_bytes": 4469120
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "ships/species_8472/bionave_especie_8472/species_8472_bioship",
+  "directory_root": "assets/"
+}

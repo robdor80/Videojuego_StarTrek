@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_7fd1357710d6",
+  "display_name": "planet earth",
+  "category": "planet",
+  "relative_directory": "planetas/planet_earth",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Tierra, planeta del sistema solar.",
+  "proposed_game_use": "F13/F14: representación espacial, cartografía visual y fondos; revisar escala, shader e iluminación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/planets/planet-earth.zip",
+      "kind": "file",
+      "name": "planet-earth.zip"
+    },
+    {
+      "source": "universe/planets/planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb",
+      "kind": "file",
+      "name": "planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 49872547,
+    "files": [
+      {
+        "path": "planet-earth.zip",
+        "extension": ".zip",
+        "size_bytes": 47371179
+      },
+      {
+        "path": "planet_earth_857c94f549b848e7a6a147aeb3d214b2.glb",
+        "extension": ".glb",
+        "size_bytes": 2501368
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "Comprobar origen/licencia, escala, materiales, geometría y LOD; no presupone importación exitosa.",
+  "historical_relative_directory": "universe/planets/planet_earth",
+  "directory_root": "assets/"
+}

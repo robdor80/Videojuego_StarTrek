@@ -1,0 +1,392 @@
+{
+  "schema_version": "1.0.0",
+  "date": "2026-10-13",
+  "repo": "robdor80/Videojuego_StarTrek",
+  "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
+  "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
+  "management": "Estado de planificación independiente de madurez/evidencia. CERRADA en un paso significa cierre únicamente al alcance indicado en step_evidence_maturity y note, nunca runtime por inferencia. PR fusionada no equivale a fase cerrada. Los pasos futuros F07-F15 con PLANIFICADA son una normalización del marcador histórico de trabajo aún no auditado, NO una certificación de ausencia de trabajo previo.",
+  "current_global_phase": "F02",
+  "completed_management_phase": "F01",
+  "phase_count": 16,
+  "step_count": 80,
+  "phases": [
+    {
+      "id": "F00",
+      "title": "Auditoría, inventario y gobierno",
+      "status": "CERRADA",
+      "target_maturity": "DOCUMENTACION_AUDITADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "CERRADA",
+        "P05": "CERRADA"
+      },
+      "note": "Fase de organización; queda evidencia en los registros del directorio.",
+      "file": "fases/F00/README.md",
+      "achieved_maturity": "DOCUMENTACION_AUDITADA"
+    },
+    {
+      "id": "F01",
+      "title": "Visión y canon del producto",
+      "status": "CERRADA",
+      "target_maturity": "DISENO_VALIDADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "CERRADA",
+        "P05": "CERRADA"
+      },
+      "note": "CERRADA SOLO EN VISIÓN/CANON Y ALCANCE DE DISEÑO, tras revisión de decisiones y trazabilidad F01-P01…P05. DEC-0001 Galaxy→nueva Valhalla, DEC-0002 prototipo interno Sensores; DEC-0010–0012 aprobadas como diseño. Año de servicio y puente piloto aún sin fijar; no equivale a modelo UE5 ni Core ejecutable.",
+      "file": "fases/F01/README.md",
+      "achieved_maturity": "DISENO_VALIDADO",
+      "step_evidence_maturity": {
+        "P01": "DISENO_VALIDADO",
+        "P02": "DISENO_VALIDADO",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "DISENO_VALIDADO"
+      },
+      "evidence_refs": [
+        "PR #2 (merge f3bba78aac76d15f0e34672e18bd91d0ebaa2248)",
+        "fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md",
+        "fases/F01/ACTA_CIERRE_DOCUMENTAL_F01_2026-10-13.md"
+      ]
+    },
+    {
+      "id": "F02",
+      "title": "Arquitectura e integración",
+      "status": "EN_CURSO",
+      "target_maturity": "CONTRATO_VALIDADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "BLOQUEADA",
+        "P04": "BLOQUEADA",
+        "P05": "BLOQUEADA"
+      },
+      "note": "Principal fase activa. P01 auditoría Core y P02 inventario finalizados a su propio nivel; P03–P05 entregables y QA de referencia documentados, bloqueados para madurez CONTRATO_VALIDADO por falta de confirmación de interfaces reales Core/Host. CoreRPG/main verificado en dcfcb83 (4.4) el 13-10-2026. Sin integración Core/UE5.",
+      "file": "fases/F02/README.md",
+      "achieved_maturity": "DISENO_VALIDADO",
+      "step_evidence_maturity": {
+        "P01": "DOCUMENTACION_AUDITADA",
+        "P02": "DOCUMENTACION_AUDITADA",
+        "P03": "DISENO_VALIDADO",
+        "P04": "REFERENCIA_PROBADA",
+        "P05": "DISENO_VALIDADO"
+      },
+      "evidence_refs": [
+        "PR #3 (merge 2610be5197e3bcf789fb154023fc4ad8c8d2c9c4)",
+        "fases/F02/PLAN_INTEGRACION_PRIMER_CORTE.md"
+      ]
+    },
+    {
+      "id": "F03",
+      "title": "Mundo autoritativo y persistencia",
+      "status": "EN_REVISION",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "BLOQUEADA",
+        "P02": "BLOQUEADA",
+        "P03": "BLOQUEADA",
+        "P04": "BLOQUEADA",
+        "P05": "CERRADA"
+      },
+      "note": "P01–P04 diseño auditado, pero acciones reales de identidad, conocimiento, tiempo y persistencia BLOQUEADAS por Core; P05 validación de fixture de referencia cerrada (26 tests CI). Objetivo CORE_INTEGRADO NO alcanzado; no hay save/load real ni E2E UE5.",
+      "file": "fases/F03/README.md",
+      "achieved_maturity": "REFERENCIA_PROBADA",
+      "step_evidence_maturity": {
+        "P01": "DISENO_VALIDADO",
+        "P02": "DISENO_VALIDADO",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "REFERENCIA_PROBADA"
+      },
+      "evidence_refs": [
+        "PR #4 (merge 3d353871b5e014eb14ed3f8504547adb08a9fe3f)",
+        "fases/F03/VALIDACION_Y_BLOQUEOS_P05.md"
+      ]
+    },
+    {
+      "id": "F04",
+      "title": "Naves, dotación y autoridad",
+      "status": "EN_REVISION",
+      "target_maturity": "REFERENCIA_PROBADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "CERRADA",
+        "P05": "CERRADA"
+      },
+      "note": "Los cinco pasos CERRADOS ÚNICAMENTE a nivel documental/reglas de referencia; 39 escenarios + 17 unit tests verificados en CI. La fase global sigue EN_REVISION por sus puertas declaradas de operación sobre Core, nombramientos/guardias vivos y validación transversal/UE5; nunca implica dotación jugable.",
+      "file": "fases/F04/README.md",
+      "achieved_maturity": "REFERENCIA_PROBADA",
+      "step_evidence_maturity": {
+        "P01": "DISENO_VALIDADO",
+        "P02": "DISENO_VALIDADO",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "REFERENCIA_PROBADA"
+      },
+      "evidence_refs": [
+        "PR #5 (merge c19356ad61d740c2054843ff91448f0ff00ac02b)",
+        "fases/F04/VALIDACION_Y_TRASPASO_P05.md"
+      ]
+    },
+    {
+      "id": "F05",
+      "title": "Órdenes, delegación e iniciativa NPC",
+      "status": "EN_REVISION",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "BLOQUEADA",
+        "P02": "BLOQUEADA",
+        "P03": "BLOQUEADA",
+        "P04": "BLOQUEADA",
+        "P05": "CERRADA"
+      },
+      "note": "P01–P04 modelos y políticas especificados; implementación de órdenes, agentes y persistencia bloqueada hasta Core/Host reales. P05 suite de referencia cerrada: 48 escenarios y 19 pruebas unitarias, sin efectos autoritativos. Objetivo CORE_INTEGRADO no alcanzado.",
+      "file": "fases/F05/README.md",
+      "achieved_maturity": "REFERENCIA_PROBADA",
+      "step_evidence_maturity": {
+        "P01": "DISENO_VALIDADO",
+        "P02": "DISENO_VALIDADO",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "REFERENCIA_PROBADA"
+      },
+      "evidence_refs": [
+        "PR #6 (merge ddfd728712d12cd240ccd1ecc5ddf352d5f9576a)",
+        "fases/F05/PRUEBAS_Y_COORDINACION_P05.md"
+      ]
+    },
+    {
+      "id": "F06",
+      "title": "Sensores funcionales",
+      "status": "EN_REVISION",
+      "target_maturity": "REFERENCIA_PROBADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "EN_REVISION",
+        "P02": "BLOQUEADA",
+        "P03": "BLOQUEADA",
+        "P04": "BLOQUEADA",
+        "P05": "CERRADA"
+      },
+      "note": "Árbol de 10 ramas documentado; P01 EN_REVISION por inspección visual pendiente del PDF. P02–P04 con referencia/diseño, bloqueados en operación real Core/Host; P05 pruebas de referencia cerradas: 8 legadas +23 F06 +3 transversales realmente ejecutadas en PR integrada, más 26 F03/17 F04/19 F05, todos PASS (96 tests). No hay consola UE5 jugable, save/load ni handoff Ciencia real.",
+      "file": "fases/F06/README.md",
+      "achieved_maturity": "REFERENCIA_PROBADA",
+      "step_evidence_maturity": {
+        "P01": "DISENO_VALIDADO",
+        "P02": "REFERENCIA_PROBADA",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "REFERENCIA_PROBADA"
+      },
+      "evidence_refs": [
+        "PR #7 (merge dfe2ef57458056a130b49a0b87dc41e90726bfff)",
+        "fases/F06/PRUEBAS_UE5_Y_CIERRE_P05.md",
+        "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021"
+      ]
+    },
+    {
+      "id": "F07",
+      "title": "Pipeline 3D y puente piloto",
+      "status": "EN_REVISION",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "EN_REVISION",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "EN_REVISION",
+        "P05": "BLOQUEADA"
+      },
+      "note": "F07 EN_REVISION. Corte documental 13-10-2026: referencia PBR/UV con CI y elección Sutherland. Reconciliación 23-10-2026: se reportan desde MSI importación UE5, recorridos, puertas, colisiones y mecanismo de sillas; evidencia primaria todavía fuera del repo (logs/mapas/hashes). F07 NO UE5_JUGABLE: UE07-05..09, interacción Sensores, validación visual/materiales UE5, telemetría, build y procedencia por cotejar. Sentado F07-SEAT-01 no aprobado. F02 sigue única fase principal EN_CURSO.",
+      "file": "fases/F07/README.md",
+      "achieved_maturity": "DISENO_VALIDADO",
+      "step_evidence_maturity": {
+        "P01": "DOCUMENTACION_AUDITADA",
+        "P02": "REFERENCIA_PROBADA",
+        "P03": "DISENO_VALIDADO",
+        "P04": "DISENO_VALIDADO",
+        "P05": "IDEA"
+      },
+      "evidence_refs": [
+        "fases/F02/AUDITORIA_GLB_USS_SUTHERLAND_2026-10-12.md",
+        "fases/F07/P01_AUDITORIA_INVENTARIO.md",
+        "fases/F07/P02_PIPELINE_PBR_BLINDAJE.md",
+        "fases/F07/P03_PUENTE_PILOTO_SUTHERLAND.md",
+        "fases/F07/EVIDENCIA_Y_PENDIENTES.json",
+        "desarrollo/tools/assets/f07_pbr_plate.py",
+        "desarrollo/tools/assets/f07_gltf_audit.py",
+        "desarrollo/tools/validation/test_f07_pbr_pipeline.py",
+        ".github/workflows/f07-pbr-reference.yml",
+        "fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md"
+      ]
+    },
+    {
+      "id": "F08",
+      "title": "Primera guardia jugable v0.0.1",
+      "status": "PLANIFICADA",
+      "target_maturity": "ACEPTACION_SUPERADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "PLANIFICADA y PAUSADA formalmente para el corte v0.0.1; depende de Core, F06 y puente piloto probado F07. Fixture 2372 es laboratorio, no juego UE5 jugable.",
+      "file": "fases/F08/README.md"
+    },
+    {
+      "id": "F09",
+      "title": "Resto de consolas",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "Catálogo de 16 familias existente; verificar cada operación.",
+      "file": "fases/F09/README.md"
+    },
+    {
+      "id": "F10",
+      "title": "Academia jugable",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "20/20 vida Academia y material web son referencias a reutilizar.",
+      "file": "fases/F10/README.md"
+    },
+    {
+      "id": "F11",
+      "title": "Carrera y flota jugable",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "Rutas progresivas; Clase Valhalla como objetivo opcional de mando y nueva clase inspirada en Galaxy. Fecha/disponibilidad y ejecución jugable pendientes; no hay capitanía automática.",
+      "file": "fases/F11/README.md"
+    },
+    {
+      "id": "F12",
+      "title": "Vida a bordo y relaciones",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "Contratos sociales previos; NPC simulados independientemente de 3D.",
+      "file": "fases/F12/README.md"
+    },
+    {
+      "id": "F13",
+      "title": "Universo dinámico",
+      "status": "PLANIFICADA",
+      "target_maturity": "CORE_INTEGRADO",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "Capas 001-118 y bloques 1-3 cerrados solo a su nivel, bloque 4 pendiente.",
+      "file": "fases/F13/README.md"
+    },
+    {
+      "id": "F14",
+      "title": "Recursos audiovisuales y NAP",
+      "status": "PLANIFICADA",
+      "target_maturity": "UE5_JUGABLE",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "Pipeline visual y repos externos; trazabilidad y licencias.",
+      "file": "fases/F14/README.md"
+    },
+    {
+      "id": "F15",
+      "title": "QA, beta y distribución",
+      "status": "PLANIFICADA",
+      "target_maturity": "ACEPTACION_SUPERADA",
+      "step_count": 5,
+      "steps": {
+        "P01": "PLANIFICADA",
+        "P02": "PLANIFICADA",
+        "P03": "PLANIFICADA",
+        "P04": "PLANIFICADA",
+        "P05": "PLANIFICADA"
+      },
+      "note": "QA transversal desde cada fase; F15 es cierre integral.",
+      "file": "fases/F15/README.md"
+    }
+  ],
+  "governance_review": {
+    "date": "2026-10-13",
+    "source_main_commit": "dfe2ef57458056a130b49a0b87dc41e90726bfff",
+    "merged_prs": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "scope": "Reconciliación documental F01–F06 después de PR; sin certificar Core/UE5 ni modificar gameplay"
+  },
+  "future_step_migration": {
+    "date": "2026-10-13",
+    "affected_phases": "F07-F15",
+    "legacy_status": "PENDIENTE_DE_VERIFICAR_O_DESARROLLAR",
+    "new_status": "PLANIFICADA",
+    "meaning": "Estado de planificación válido para pasos futuros todavía no verificados; NO acredita que no existan prototipos/contratos previos. Requiere auditoría específica al reactivar cada fase."
+  },
+  "f07_evidence_reconciliation": {
+    "date": "2026-10-23",
+    "scope": "Actualización documental del avance UE5 reportado en MSI; pendientes evidencias primarias y aceptación completa.",
+    "record": "fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md",
+    "phase_status_preserved": "EN_REVISION",
+    "achieved_maturity_preserved": "DISENO_VALIDADO"
+  }
+}

@@ -6,23 +6,23 @@ on:
       - main
     paths:
       - ".github/workflows/f11-career-reference.yml"
-      - "tools/validation/f11_*"
-      - "tools/validation/test_f11_*"
-      - "gameplay/careers/starfleet_service/f11_*"
-      - "gameplay/careers/**"
-      - "validation/fixtures/f11/**"
-      - "docs/roadmap/master/fases/F11/**"
-      - "lore/starships/classes/core_starship_classes.json"
+      - "desarrollo/tools/validation/f11_*"
+      - "desarrollo/tools/validation/test_f11_*"
+      - "sistemas/gameplay/careers/starfleet_service/f11_*"
+      - "sistemas/gameplay/careers/**"
+      - "desarrollo/validation/fixtures/f11/**"
+      - "proyecto/docs/roadmap/master/fases/F11/**"
+      - "mundo/lore/starships/classes/core_starship_classes.json"
   pull_request:
     paths:
       - ".github/workflows/f11-career-reference.yml"
-      - "tools/validation/f11_*"
-      - "tools/validation/test_f11_*"
-      - "gameplay/careers/starfleet_service/f11_*"
-      - "gameplay/careers/**"
-      - "validation/fixtures/f11/**"
-      - "docs/roadmap/master/fases/F11/**"
-      - "lore/starships/classes/core_starship_classes.json"
+      - "desarrollo/tools/validation/f11_*"
+      - "desarrollo/tools/validation/test_f11_*"
+      - "sistemas/gameplay/careers/starfleet_service/f11_*"
+      - "sistemas/gameplay/careers/**"
+      - "desarrollo/validation/fixtures/f11/**"
+      - "proyecto/docs/roadmap/master/fases/F11/**"
+      - "mundo/lore/starships/classes/core_starship_classes.json"
   workflow_dispatch:
 
 permissions:
@@ -42,19 +42,19 @@ jobs:
           python-version: "3.12"
       - name: Comprobar sintaxis y JSON
         run: |
-          python -m py_compile tools/validation/f11_career_reference.py tools/validation/test_f11_career_reference.py
-          python -m json.tool gameplay/careers/starfleet_service/f11_route_plan_v0.1.json > /dev/null
-          python -m json.tool validation/fixtures/f11/f11_career_scenarios_v0.1.json > /dev/null
+          python -m py_compile desarrollo/tools/validation/f11_career_reference.py desarrollo/tools/validation/test_f11_career_reference.py
+          python -m json.tool sistemas/gameplay/careers/starfleet_service/f11_route_plan_v0.1.json > /dev/null
+          python -m json.tool desarrollo/validation/fixtures/f11/f11_career_scenarios_v0.1.json > /dev/null
       - name: Ejecutar 40 escenarios offline y emitir huella
         run: |
-          python tools/validation/f11_career_reference.py --scenario validation/fixtures/f11/f11_career_scenarios_v0.1.json --output validation/results/f11_career_offline_report.json
+          python desarrollo/tools/validation/f11_career_reference.py --scenario desarrollo/validation/fixtures/f11/f11_career_scenarios_v0.1.json --output desarrollo/validation/results/f11_career_offline_report.json
       - name: Validar 38 pruebas y barreras Core/Host
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f11_*.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f11_*.py' -v
       - name: Guardar evidencia reproducible de referencia
         uses: actions/upload-artifact@v4
         with:
           name: f11-career-offline-evidence
-          path: validation/results/f11_career_offline_report.json
+          path: desarrollo/validation/results/f11_career_offline_report.json
           if-no-files-found: error
           retention-days: 14

@@ -1,0 +1,65 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_4c1744cffc21",
+  "display_name": "Saru",
+  "category": "npc",
+  "relative_directory": "personajes/descargados/Saru/saru",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Personaje Saru de Star Trek: Discovery.",
+  "proposed_game_use": "NPC narrativo; revisar compatibilidad temporal y animación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "NPC/Saru/commander-saru.zip",
+      "kind": "file",
+      "name": "commander-saru.zip"
+    },
+    {
+      "source": "NPC/Saru/commander_saru.glb",
+      "kind": "file",
+      "name": "commander_saru.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 2,
+    "size_bytes": 59692887,
+    "files": [
+      {
+        "path": "commander-saru.zip",
+        "extension": ".zip",
+        "size_bytes": 28147163
+      },
+      {
+        "path": "commander_saru.glb",
+        "extension": ".glb",
+        "size_bytes": 31545724
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+  "historical_relative_directory": "npc/saru/saru",
+  "directory_root": "assets/"
+}

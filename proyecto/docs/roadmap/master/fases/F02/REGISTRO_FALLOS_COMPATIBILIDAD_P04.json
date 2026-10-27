@@ -1,0 +1,436 @@
+{
+  "schema_version": "f02-p04-policy-audit-1.0",
+  "classification": "DESIGN_AND_STATIC_VALIDATION_ONLY",
+  "created_on": "2026-10-11",
+  "source_core_main": "dcfcb83c9853e005b5450bd39e0ba693cb91e257",
+  "source_trek_p02": "proyecto/docs/roadmap/master/fases/F02/INVENTARIO_INTERCAMBIO_P02.json",
+  "source_trek_p03": "proyecto/docs/roadmap/master/fases/F02/MAPA_ADAPTADORES_P03.json",
+  "warning": "No es una API, save format, esquema Core ni implementación de migración",
+  "compatibility_axes": [
+    {
+      "id": "CORE_RPG_BUILD",
+      "purpose": "SHA/versión de CoreRPG compilada",
+      "known_reference": "dcfcb83c9853e005b5450bd39e0ba693cb91e257",
+      "readiness": "BASELINE_AUDIT_ONLY_NOT_VALIDATED_HOST_ABI",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    },
+    {
+      "id": "CORE_CONTENT_CONTRACT",
+      "purpose": "Content Contract de CoreRPG",
+      "known_reference": "0.1.0",
+      "readiness": "CURRENT_FORMAT_KNOWN_NO_TREK_PAYLOAD",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    },
+    {
+      "id": "TREK_CONTENT_PACK",
+      "purpose": "Versión pack Star Trek futuro",
+      "known_reference": null,
+      "readiness": "NOT_DEFINED_YET",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    },
+    {
+      "id": "SAVEGAME_FORMAT",
+      "purpose": "Versión del guardado autoritativo futuro",
+      "known_reference": null,
+      "readiness": "NOT_IMPLEMENTED",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    },
+    {
+      "id": "HOST_CORE_ADAPTER",
+      "purpose": "Versión/ABI del adaptador y protocolo acordado",
+      "known_reference": null,
+      "readiness": "NOT_IMPLEMENTED",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    },
+    {
+      "id": "PRESENTATION_ASSETS",
+      "purpose": "Versión UE5, Sensores, assets, web Academia y companion",
+      "known_reference": null,
+      "readiness": "MULTIPLE_INDEPENDENT_NON_AUTHORITATIVE",
+      "compatibility_rule": "COMPATIBILITY_MUST_BE_EVIDENCED_NOT_INFERRED"
+    }
+  ],
+  "compatibility_decisions": [
+    {
+      "id": "COMP-01",
+      "condition": "CORE_BUILD_EXACT_MATCH",
+      "decision": "BASELINE_MATCH_ONLY",
+      "explanation": "Permite preparar prueba, no implica ABI UE5 ni comportamiento equivalente"
+    },
+    {
+      "id": "COMP-02",
+      "condition": "CORE_BUILD_CHANGED_WITHOUT_REVIEW",
+      "decision": "BLOCK_UNTIL_RETEST",
+      "explanation": "Nueva versión/SHA obliga comparar API, dependencias y pruebas de Host y ambos consumidores"
+    },
+    {
+      "id": "COMP-03",
+      "condition": "UNKNOWN_CORE_CONTENT_CONTRACT",
+      "decision": "REJECT",
+      "explanation": "No leer referencias no reconocidas por analogía"
+    },
+    {
+      "id": "COMP-04",
+      "condition": "TREK_PACK_VERSION_CHANGED",
+      "decision": "REVIEW_REQUIRED",
+      "explanation": "Validar dependencias/manifests; sin migrador implícito"
+    },
+    {
+      "id": "COMP-05",
+      "condition": "UNKNOWN_SAVE_VERSION",
+      "decision": "REJECT_AND_PRESERVE",
+      "explanation": "No intentar regenerar WorldState ni convertir el guardado por cast"
+    },
+    {
+      "id": "COMP-06",
+      "condition": "CORRUPT_OR_PARTIAL_SAVE",
+      "decision": "REJECT_AND_PRESERVE",
+      "explanation": "No reemplazar original ni mutar partida antes de completar preflight"
+    },
+    {
+      "id": "COMP-07",
+      "condition": "HOST_ADAPTER_ABI_UNPROVEN",
+      "decision": "NO_RUNTIME_LINK_CERTIFICATION",
+      "explanation": "Un include compilado no acredita ejecución UE5; sin promesa ABI estable"
+    },
+    {
+      "id": "COMP-08",
+      "condition": "ASSET_OR_UE5_VISUAL_CHANGED",
+      "decision": "PRESENTATION_REVIEW",
+      "explanation": "Reimportar representación si compatible; jamás reidentificar NPC por textura"
+    },
+    {
+      "id": "COMP-09",
+      "condition": "IA_PROVIDER_OR_MODEL_CHANGED",
+      "decision": "NON_AUTHORITATIVE_REVALIDATION",
+      "explanation": "IA sigue retornando texto/candidato; permisos y efectos en Core"
+    },
+    {
+      "id": "COMP-10",
+      "condition": "UNKNOWN_FUTURE_MIGRATION",
+      "decision": "REJECT_UNTIL_EXPLICIT_PLAN",
+      "explanation": "Probar copia, originales intactos, validación, publicación atómica o rechazo"
+    }
+  ],
+  "failures": [
+    {
+      "id": "F02-E01",
+      "code": "AI_UNAVAILABLE",
+      "trigger": "IA remota caída o tiempo agotado",
+      "decision": "DEGRADED_NON_AUTHORITATIVE",
+      "operator_behavior": "La consola sigue por vía determinista; no aceptar mutación de IA",
+      "retry_policy": "EXPLICIT_ONLY_AFTER_FRESH_VALIDATION",
+      "test_refs": [
+        "F02-T06"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E02",
+      "code": "AI_MALFORMED_OR_UNTRUSTED",
+      "trigger": "Intención inválida, contradictoria o que incorpora secretos",
+      "decision": "REJECT_CANDIDATE",
+      "operator_behavior": "No ejecutar ni aceptar datos ajenos a una proyección autorizada",
+      "retry_policy": "NO_AUTOMATIC_SIDE_EFFECT_RETRY",
+      "test_refs": [
+        "F02-T06",
+        "F02-T07"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E03",
+      "code": "STALE_REQUEST",
+      "trigger": "Respuesta tardía tras daño, cambio de guardia o revocación",
+      "decision": "REVALIDATE_OR_REJECT",
+      "operator_behavior": "Reexaminar contexto vigente antes de comprometer efectos",
+      "retry_policy": "NO_BLIND_REPLAY",
+      "test_refs": [
+        "F02-T07"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E04",
+      "code": "ACTION_TIMEOUT_UNKNOWN",
+      "trigger": "Timeout tras enviar acción sin confirmación autoritativa",
+      "decision": "UNKNOWN_UNTIL_RECONCILED",
+      "operator_behavior": "No anunciar éxito/fracaso, consultar por correlación cuando Core disponga de mecanismo",
+      "retry_policy": "NEVER_REPLAY_EFFECT_WITHOUT_PROVEN_DEDUPLICATION",
+      "test_refs": [
+        "F02-T07",
+        "F02-T15"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E05",
+      "code": "CORE_UNAVAILABLE",
+      "trigger": "Core ausente, versión/ABI incompatible o fallo crítico",
+      "decision": "STOP_AUTHORITATIVE_ACTIONS",
+      "operator_behavior": "No usar WorldState local de emergencia; comunicar error recuperable y preservar guardados",
+      "retry_policy": "BLOCK_UNTIL_RESTORED",
+      "test_refs": [
+        "F02-T08"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E06",
+      "code": "SENSOR_PARTIAL_OR_MISSING",
+      "trigger": "Daño o interferencia sin detecciones suficientes",
+      "decision": "OBSERVATION_ONLY",
+      "operator_behavior": "Mostrar parcial, incierto o nada; no generar nuevos objetos para crear respuesta",
+      "retry_policy": "NEW_SCAN_AFTER_VALIDATION",
+      "test_refs": [
+        "F02-T04"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E07",
+      "code": "LOST_CONTACT",
+      "trigger": "Señal desaparecida sin causa demostrada",
+      "decision": "KEEP_HISTORICAL_ONLY",
+      "operator_behavior": "No inferir destrucción, camuflaje o warp; no habilitar acción viva sin reacquisición",
+      "retry_policy": "NO_LIVE_ACTION_UNTIL_REACQUIRED",
+      "test_refs": [
+        "F02-T04"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E08",
+      "code": "UNLOADED_3D_ACTOR",
+      "trigger": "Actor UE5 descartado por cambio de cubierta/LOD",
+      "decision": "PRESENTATION_ONLY",
+      "operator_behavior": "No destruir entidad, agenda, puesto ni historial lógico",
+      "retry_policy": "RECREATE_VISUAL_ONLY",
+      "test_refs": [
+        "F02-T01"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E09",
+      "code": "SAVE_CORRUPT_OR_INCOMPATIBLE",
+      "trigger": "Versión desconocida, dato truncado, hash/campos incoherentes",
+      "decision": "REJECT_LOAD_ATOMICALLY",
+      "operator_behavior": "Preservar bytes originales y partida activa; no regenerar identificadores",
+      "retry_policy": "NO_REPAIR_BY_REROLL",
+      "test_refs": [
+        "F02-T05",
+        "F02-T16"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E10",
+      "code": "KNOWLEDGE_LEAK",
+      "trigger": "Proyección no autorizada incluye verdad/identidad interna",
+      "decision": "FAIL_CLOSED_BEFORE_UI",
+      "operator_behavior": "No entregar esos campos al Host, IA o Companion",
+      "retry_policy": "REJECT_AND_DIAGNOSE",
+      "test_refs": [
+        "F02-T04",
+        "F02-T12"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E11",
+      "code": "COMPANION_OFFLINE",
+      "trigger": "Tablet opcional se desconecta",
+      "decision": "KEEP_LOCAL_PLAY",
+      "operator_behavior": "Controles y partida Windows continúan completos",
+      "retry_policy": "RECONNECT_AS_NEW_AUTHORIZED_CLIENT",
+      "test_refs": [
+        "F02-T06"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E12",
+      "code": "VERSION_DRIFT",
+      "trigger": "Core, contenido, Host o contrato difiere de baseline certificado",
+      "decision": "INCOMPATIBLE_UNTIL_REVIEW",
+      "operator_behavior": "Comparar matriz de compatibilidad y pruebas; no asumir equivalencia semver",
+      "retry_policy": "NO_SILENT_FALLBACK",
+      "test_refs": [
+        "F02-T13",
+        "F02-T14"
+      ],
+      "implemented_in_core_main": false
+    },
+    {
+      "id": "F02-E13",
+      "code": "CLOCK_OR_ORDER_INCONSISTENT",
+      "trigger": "Marca de tiempo de campaña ausente o eventos no ordenables",
+      "decision": "REJECT_AUTHORITATIVE_EVENT",
+      "operator_behavior": "No usar stardate de pantalla para resolver causalidad",
+      "retry_policy": "REVALIDATE_WITH_CORE_TIME",
+      "test_refs": [
+        "F02-T05",
+        "F02-T14"
+      ],
+      "implemented_in_core_main": false
+    }
+  ],
+  "tests": [
+    {
+      "id": "F02-T01",
+      "goal": "Identidad: Actor UE5 baja/alta sin nueva EntityId",
+      "status": "BLOCKED_UE5_CORE",
+      "execution_gate": "UE5 F07 y estado/identidad Core",
+      "adapter_ref": "ADP-01",
+      "evidence": null
+    },
+    {
+      "id": "F02-T02",
+      "goal": "Content Pack cargado/referencia rota rechazada con Core JSON 0.1.0",
+      "status": "NO_EXECUTED_CORE_AVAILABLE_PARTIAL",
+      "execution_gate": "Harness y pack real en Core",
+      "adapter_ref": "ADP-02",
+      "evidence": null
+    },
+    {
+      "id": "F02-T03",
+      "goal": "Orden no autorizada rechazada sin efecto",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "Core Actions/permisos 4.10",
+      "adapter_ref": "ADP-04",
+      "evidence": null
+    },
+    {
+      "id": "F02-T04",
+      "goal": "Sensores + Knowledge sin fuga de verdad",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "Core Observations/Knowledge 4.9",
+      "adapter_ref": "ADP-05",
+      "evidence": null
+    },
+    {
+      "id": "F02-T05",
+      "goal": "Save/load preserva identidad/historia",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "Core Persistence 4.7",
+      "adapter_ref": "ADP-08",
+      "evidence": null
+    },
+    {
+      "id": "F02-T06",
+      "goal": "Caída IA sin bloquear consola manual",
+      "status": "NO_EXECUTED_HOST",
+      "execution_gate": "Host UE5 con ruta determinista",
+      "adapter_ref": "ADP-10",
+      "evidence": null
+    },
+    {
+      "id": "F02-T07",
+      "goal": "IA tardía y autoridad revocada no ejecuta",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "Core Actions/Host",
+      "adapter_ref": "ADP-04",
+      "evidence": null
+    },
+    {
+      "id": "F02-T08",
+      "goal": "UE5 enlace real con CoreRPG mismo SHA",
+      "status": "BLOCKED_UE5_CORE",
+      "execution_gate": "Toolchain UE5/Windows",
+      "adapter_ref": "ADP-09",
+      "evidence": null
+    },
+    {
+      "id": "F02-T09",
+      "goal": "CI Core consultada, NO E2E",
+      "status": "EVIDENCE_REMOTE_CI_2026_10_11",
+      "execution_gate": "Consultadas acciones publicadas; NO suplanta otros tests",
+      "adapter_ref": "ADP-01",
+      "evidence": null
+    },
+    {
+      "id": "F02-T10",
+      "goal": "Consistencia estática P02/P03/P04 contra archivos y referencias",
+      "status": "DESIGNED_RUNNER_NOT_YET_EXECUTED",
+      "execution_gate": "python desarrollo/tools/validation/validate_f02_contracts.py",
+      "adapter_ref": "ADP-01",
+      "evidence": null
+    },
+    {
+      "id": "F02-T11",
+      "goal": "Validator rechaza duplicados, campos perdidos y test_refs rotos",
+      "status": "DESIGNED_RUNNER_NOT_YET_EXECUTED",
+      "execution_gate": "unittest sintético mínimo independiente de Core",
+      "adapter_ref": "ADP-01",
+      "evidence": null
+    },
+    {
+      "id": "F02-T12",
+      "goal": "Campos vedados explícitos en resultado sensor",
+      "status": "DESIGNED_STATIC_NOT_RUNTIME",
+      "execution_gate": "source JSON forbidden_player_fields; anti-filtración runtime T04 pendiente",
+      "adapter_ref": "ADP-07",
+      "evidence": null
+    },
+    {
+      "id": "F02-T13",
+      "goal": "Drift en fuentes P02 por Git blob SHA",
+      "status": "DESIGNED_RUNNER_NOT_YET_EXECUTED",
+      "execution_gate": "git blob SHA verificable o señalización drift",
+      "adapter_ref": "ADP-02",
+      "evidence": null
+    },
+    {
+      "id": "F02-T14",
+      "goal": "6 ejes y políticas incompatibilidad sin suponer save/ABI",
+      "status": "DESIGNED_RUNNER_NOT_YET_EXECUTED",
+      "execution_gate": "registro JSON validado + revisiones de Core/Host",
+      "adapter_ref": "ADP-08",
+      "evidence": null
+    },
+    {
+      "id": "F02-T15",
+      "goal": "Timeout desconocido: no confirmar ni reintentar efecto a ciegas",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "query/reconciliación después de Actions Core",
+      "adapter_ref": "ADP-04",
+      "evidence": null
+    },
+    {
+      "id": "F02-T16",
+      "goal": "Save corrupto: rechazo atómico y original conservado",
+      "status": "BLOCKED_CORE",
+      "execution_gate": "Core 4.7 y migrador real",
+      "adapter_ref": "ADP-08",
+      "evidence": null
+    }
+  ],
+  "migration_preflight": [
+    "preserve_original_bytes",
+    "snapshot_current_session_if_applicable",
+    "read_manifest_and_versions_without_mutating_world",
+    "verify_supported_origin_and_target_versions",
+    "validate_integrity_and_all_cross_references",
+    "prepare_target_state_without_publishing",
+    "run_invariants_identity_history_knowledge",
+    "commit_atomically_only_after_success",
+    "record_migration_provenance",
+    "on_failure_leave_original_and_live_session_unchanged"
+  ],
+  "forbidden_shortcuts": [
+    "regenerate_missing_entities",
+    "derive_authoritative_time_from_display_stardate",
+    "apply_ai_intent_directly",
+    "blind_replay_after_timeout",
+    "load_incompatible_save_partially",
+    "treat_actor_id_as_core_entity_id",
+    "silence_migration_failure"
+  ],
+  "baseline_evidence": {
+    "core_main_ci_run": "https://github.com/robdor80/CoreRPG/actions/runs/38046482745",
+    "core_feature_ci_run": "https://github.com/robdor80/CoreRPG/actions/runs/37812440972",
+    "ci_observation_only": true,
+    "core_ue5_e2e_executed": false
+  }
+}

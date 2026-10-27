@@ -1,0 +1,274 @@
+{
+  "document_id": "LORE01_TNG_SPECIES_DEPTH_INDEX_V02",
+  "schema_version": "0.2.0",
+  "as_of": "2026-10-17",
+  "branch": "main",
+  "authority": "Documentation research and source anchors; runtime integration explicitly excluded",
+  "base_index_ref": "mundo/lore/species/LORE01_TNG_species_coverage_audit_v0.1.json",
+  "registered_sources_ref": "mundo/sources/source_registry/source_registry.json",
+  "main_game_species_ids": [
+    "human",
+    "vulcan",
+    "andorian",
+    "aenar",
+    "tellarite",
+    "klingon",
+    "romulan",
+    "cardassian",
+    "bajoran",
+    "ferengi",
+    "trill",
+    "betazoid",
+    "changeling",
+    "vorta",
+    "jem_hadar",
+    "bolian",
+    "benzite",
+    "el_aurian",
+    "breen",
+    "pakled"
+  ],
+  "delta_dlc_species_ids": [
+    "kazon",
+    "ocampan",
+    "talaxian",
+    "vidiian",
+    "hirogen"
+  ],
+  "assimilated_borg_state_is_not_species": true,
+  "content_availability_policy_ref": "sistemas/universe/generation/lore01_tng_content_availability_v0.1.json",
+  "exhaustive_scene_verification": false,
+  "uncertainties_can_remain_explicit": true,
+  "profiles": [
+    {
+      "species_id": "human",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/human_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/human_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/human_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "vulcan",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/vulcan_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/vulcan_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/vulcan_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "andorian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/andorian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/andorian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/andorian_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "aenar",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/aenar_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/aenar_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/aenar_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "tellarite",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/tellarite_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/tellarite_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/tellarite_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "klingon",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/klingon_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/klingon_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/klingon_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "romulan",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/romulan_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/romulan_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/romulan_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "cardassian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/cardassian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/cardassian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/cardassian_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "bajoran",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/bajoran_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/bajoran_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/bajoran_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "ferengi",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/ferengi_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/ferengi_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/ferengi_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "trill",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/trill_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/trill_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/trill_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "betazoid",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/betazoid_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/betazoid_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/betazoid_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "changeling",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/changeling_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/changeling_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/changeling_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "vorta",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/vorta_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/vorta_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/vorta_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "jem_hadar",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/jem_hadar_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/jem_hadar_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/jem_hadar_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "bolian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/bolian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/bolian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/bolian_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "benzite",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/benzite_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/benzite_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/benzite_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "el_aurian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/el_aurian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/el_aurian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/el_aurian_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "breen",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/breen_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/breen_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/breen_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "pakled",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/pakled_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/pakled_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/pakled_v0.2.json",
+      "content_scope": "MAIN_GAME_CONTEXTUAL",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "kazon",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/kazon_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/kazon_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/kazon_v0.2.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "ocampan",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/ocampan_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/ocampan_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/ocampan_v0.2.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "talaxian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/talaxian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/talaxian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/talaxian_v0.2.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "vidiian",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/vidiian_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/vidiian_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/vidiian_v0.2.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    },
+    {
+      "species_id": "hirogen",
+      "baseline_profile_ref": "sistemas/gameplay/species/profiles/hirogen_v0.1.json",
+      "monograph_ref": "mundo/lore/species/monographs/hirogen_v0.2.md",
+      "evidence_ledger_ref": "mundo/lore/species/evidence/hirogen_v0.2.json",
+      "content_scope": "DLC_DELTA_FUTURE_NO_MAIN_GAME_SPAWN",
+      "approval_status": "MERGED_MAIN_PR25",
+      "last_audited": "2026-10-17"
+    }
+  ],
+  "source_branch": "mundo/lore/01-tng-species-cultures",
+  "approved_pr": 25,
+  "merge_commit_sha": "abcc4c77af37d0aaf8d5eb09b65b480c34c4042b",
+  "decision_state": "MERGED_MAIN_DOCUMENTARY",
+  "cultural_ai_behavior_extension_ref": "mundo/lore/cultures/ai_behavior/species_behavior_index_v0.1.json"
+}

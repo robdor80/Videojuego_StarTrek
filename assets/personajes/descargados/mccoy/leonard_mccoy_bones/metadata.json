@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_ed51855a7ba3",
+  "display_name": "Leonard McCoy (Bones)",
+  "category": "npc",
+  "relative_directory": "personajes/descargados/mccoy/leonard_mccoy_bones",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Paquete ZIP llamado Bones; probable personaje McCoy, pendiente de abrir.",
+  "proposed_game_use": "Personaje histórico y/o holocubierta.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "NPC/Star trek BONES/star-trek-bones.zip",
+      "kind": "file",
+      "name": "star-trek-bones.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 4614324,
+    "files": [
+      {
+        "path": "star-trek-bones.zip",
+        "extension": ".zip",
+        "size_bytes": 4614324
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No se ha revisado esqueleto, animaciones, texturas ni licencia.",
+  "historical_relative_directory": "npc/mccoy/leonard_mccoy_bones",
+  "directory_root": "assets/"
+}

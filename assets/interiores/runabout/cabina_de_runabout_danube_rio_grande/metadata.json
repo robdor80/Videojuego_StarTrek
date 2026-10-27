@@ -1,0 +1,75 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_4def1ee3c50a",
+  "display_name": "Cabina de runabout Danube / Rio Grande",
+  "category": "cockpit",
+  "relative_directory": "interiores/runabout/cabina_de_runabout_danube_rio_grande",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Cabina interior de lanzadera Danube, asociada en nombre al Rio Grande de DS9.",
+  "proposed_game_use": "Prototipo de cockpit/vehículo o entrenamiento en holocubierta.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "Danube simulador/star-trek-ds9-danube-runabout-rio-grande-cockpit.zip",
+      "kind": "file",
+      "name": "star-trek-ds9-danube-runabout-rio-grande-cockpit.zip"
+    },
+    {
+      "source": "Danube simulador/star_trek_ds9_danube_runabout_rio_grande_cockpit.glb",
+      "kind": "file",
+      "name": "star_trek_ds9_danube_runabout_rio_grande_cockpit.glb"
+    },
+    {
+      "source": "Danube simulador/star_trek_ds9_danube_runabout_rio_grande_cockpit.zip",
+      "kind": "file",
+      "name": "star_trek_ds9_danube_runabout_rio_grande_cockpit.zip"
+    }
+  ],
+  "technical": {
+    "file_count": 3,
+    "size_bytes": 64377940,
+    "files": [
+      {
+        "path": "star-trek-ds9-danube-runabout-rio-grande-cockpit.zip",
+        "extension": ".zip",
+        "size_bytes": 29627139
+      },
+      {
+        "path": "star_trek_ds9_danube_runabout_rio_grande_cockpit.glb",
+        "extension": ".glb",
+        "size_bytes": 18045284
+      },
+      {
+        "path": "star_trek_ds9_danube_runabout_rio_grande_cockpit.zip",
+        "extension": ".zip",
+        "size_bytes": 16705517
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "interiors/runabout/cabina_de_runabout_danube_rio_grande",
+  "directory_root": "assets/"
+}

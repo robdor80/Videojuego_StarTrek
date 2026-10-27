@@ -1,0 +1,270 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_0cff1690021e",
+  "display_name": "Puente USS Ross / Galaxy",
+  "category": "bridge",
+  "relative_directory": "puentes/starfleet/ross/puente_uss_ross_galaxy",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "Paquete denominado USS Ross Galaxy Class; su apariencia y adscripción precisas requieren revisión.",
+  "proposed_game_use": "Estudio de distribución de puestos, materiales y consolas.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss-ross-galaxy-class-starship-bridge-command",
+      "kind": "directory",
+      "name": "uss-ross-galaxy-class-starship-bridge-command"
+    },
+    {
+      "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss-ross-galaxy-class-starship-bridge-command.zip",
+      "kind": "file",
+      "name": "uss-ross-galaxy-class-starship-bridge-command.zip"
+    },
+    {
+      "source": "bridges/USS Ross Galaxy Class Starship Bridge command/uss_ross_galaxy_class_starship_bridge_command.glb",
+      "kind": "file",
+      "name": "uss_ross_galaxy_class_starship_bridge_command.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 42,
+    "size_bytes": 17355869,
+    "files": [
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/__Metal_Aluminum_Anodized_2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2508
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/material_29.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 319136
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/material_2_10.jpg",
+        "extension": ".jpg",
+        "size_bytes": 36190
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/material_30.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 301519
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/material_51.jpg",
+        "extension": ".jpg",
+        "size_bytes": 266979
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/Metal_Rough.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1963
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/Metal_Seamed.jpg",
+        "extension": ".jpg",
+        "size_bytes": 920
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/Naamloos_1.jpg",
+        "extension": ".jpg",
+        "size_bytes": 9326
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/Naamloos_2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 11480
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture.png",
+        "extension": ".png",
+        "size_bytes": 61073
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_0.png",
+        "extension": ".png",
+        "size_bytes": 89855
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_1.png",
+        "extension": ".png",
+        "size_bytes": 98559
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_2.png",
+        "extension": ".png",
+        "size_bytes": 79191
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_3.png",
+        "extension": ".png",
+        "size_bytes": 112295
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_4.png",
+        "extension": ".png",
+        "size_bytes": 136449
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_5.png",
+        "extension": ".png",
+        "size_bytes": 56347
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_6.png",
+        "extension": ".png",
+        "size_bytes": 63130
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_7.png",
+        "extension": ".png",
+        "size_bytes": 81259
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model/texture_8.png",
+        "extension": ".png",
+        "size_bytes": 80566
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy/model.dae",
+        "extension": ".dae",
+        "size_bytes": 4135246
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/source/Copy+of+Copy+of+uss_enterprise_d_bridge+-+Copy.zip",
+        "extension": ".zip",
+        "size_bytes": 2164696
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/__Metal_Aluminum_Anodized_2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 3695
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/material_29.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 319136
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/material_2_10.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 37312
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/material_30.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 301519
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/material_51.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 266955
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/Metal_Rough.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1963
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/Metal_Seamed.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1385
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/Naamloos_1.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 9326
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/Naamloos_2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 11480
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture.png",
+        "extension": ".png",
+        "size_bytes": 60968
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_0.png",
+        "extension": ".png",
+        "size_bytes": 89714
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_1.png",
+        "extension": ".png",
+        "size_bytes": 98394
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_2.png",
+        "extension": ".png",
+        "size_bytes": 79062
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_3.png",
+        "extension": ".png",
+        "size_bytes": 112118
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_4.png",
+        "extension": ".png",
+        "size_bytes": 136236
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_5.png",
+        "extension": ".png",
+        "size_bytes": 56254
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_6.png",
+        "extension": ".png",
+        "size_bytes": 63025
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_7.png",
+        "extension": ".png",
+        "size_bytes": 81130
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command/textures/texture_8.png",
+        "extension": ".png",
+        "size_bytes": 45741
+      },
+      {
+        "path": "uss-ross-galaxy-class-starship-bridge-command.zip",
+        "extension": ".zip",
+        "size_bytes": 3942685
+      },
+      {
+        "path": "uss_ross_galaxy_class_starship_bridge_command.glb",
+        "extension": ".glb",
+        "size_bytes": 3529084
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+  "historical_relative_directory": "bridges/ross/puente_uss_ross_galaxy",
+  "directory_root": "assets/"
+}

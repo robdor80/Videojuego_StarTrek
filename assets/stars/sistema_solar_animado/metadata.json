@@ -1,0 +1,120 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_e6f49197d876",
+  "display_name": "Sistema solar animado",
+  "category": "space_environment",
+  "relative_directory": "stars/sistema_solar_animado",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Efecto o visualización astronómica identificado por nombre.",
+  "proposed_game_use": "F13/F14: entorno estelar y representación del sistema solar; validar precisión astronómica solo si se requiere.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "universe/stars/solar-system-animation",
+      "kind": "directory",
+      "name": "solar-system-animation"
+    },
+    {
+      "source": "universe/stars/solar_system_animation.glb",
+      "kind": "file",
+      "name": "solar_system_animation.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 13,
+    "size_bytes": 21164028,
+    "files": [
+      {
+        "path": "solar-system-animation/source/Solar System.blend",
+        "extension": ".blend",
+        "size_bytes": 4648554
+      },
+      {
+        "path": "solar-system-animation/textures/2k_earth_daymap.jpg",
+        "extension": ".jpg",
+        "size_bytes": 463087
+      },
+      {
+        "path": "solar-system-animation/textures/2k_jupiter.jpg",
+        "extension": ".jpg",
+        "size_bytes": 498976
+      },
+      {
+        "path": "solar-system-animation/textures/2k_mars.jpg",
+        "extension": ".jpg",
+        "size_bytes": 750547
+      },
+      {
+        "path": "solar-system-animation/textures/2k_mercury.jpg",
+        "extension": ".jpg",
+        "size_bytes": 872555
+      },
+      {
+        "path": "solar-system-animation/textures/2k_moon.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1053869
+      },
+      {
+        "path": "solar-system-animation/textures/2k_neptune.jpg",
+        "extension": ".jpg",
+        "size_bytes": 241580
+      },
+      {
+        "path": "solar-system-animation/textures/2k_saturn.jpg",
+        "extension": ".jpg",
+        "size_bytes": 199916
+      },
+      {
+        "path": "solar-system-animation/textures/2k_saturn_ring_alpha.png",
+        "extension": ".png",
+        "size_bytes": 12119
+      },
+      {
+        "path": "solar-system-animation/textures/2k_sun.jpg",
+        "extension": ".jpg",
+        "size_bytes": 822427
+      },
+      {
+        "path": "solar-system-animation/textures/2k_uranus.jpg",
+        "extension": ".jpg",
+        "size_bytes": 77751
+      },
+      {
+        "path": "solar-system-animation/textures/2k_venus_surface.jpg",
+        "extension": ".jpg",
+        "size_bytes": 885075
+      },
+      {
+        "path": "solar_system_animation.glb",
+        "extension": ".glb",
+        "size_bytes": 10637572
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "",
+  "historical_relative_directory": "universe/stars/sistema_solar_animado",
+  "directory_root": "assets/"
+}

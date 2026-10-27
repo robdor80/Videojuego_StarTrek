@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1.0",
+  "date": "2026-10-14",
+  "phase": "F14",
+  "status": "REFERENCE_MAPPING_NOT_INSTALLED_PROFILE",
+  "purpose": "Freeze the NAP 2.0 contract surface observed by Star Trek F14 without claiming an installed or executed Star Trek Universe Profile.",
+  "external_nap": {
+    "repo": "robdor80/NAP",
+    "branch": "main",
+    "verified_main_commit": "30a0b199fcb3200ce9e4de97944d2ff9fd0c642c",
+    "contracts": {
+      "manifest": "Manifest v2",
+      "universe_profile": "Universe Profile v4",
+      "package": "Package Contract v1",
+      "routing": "Routing Contract v1",
+      "integrity": "SHA-256 / duplicate analysis / durable jobs",
+      "storage": "ArchiveRoot + ProductionRoot + verified completion",
+      "publication": "explicit ProductionRoot Git workflow"
+    }
+  },
+  "star_trek": {
+    "candidate_universe_id": "star_trek",
+    "installed_in_nap": false,
+    "runtime_validation_evidence_ref": null,
+    "source_contract": "audiovisual/art_direction/nap/STAR_TREK_VISUAL_SYSTEM_NAP_CONTRACT_v0.1.md",
+    "handoff_schema": "audiovisual/art_direction/schemas/nap_asset_handoff.schema.json",
+    "representative_fixture": "desarrollo/validation/fixtures/nap/sensors_console_tng_v0.1/manifest.json",
+    "candidate_classification_dimensions": [
+      "era",
+      "species",
+      "culture",
+      "affiliation",
+      "organization",
+      "asset_category",
+      "role",
+      "division",
+      "rank",
+      "location"
+    ]
+  },
+  "capability_assessment": [
+    {
+      "family": "image_reference_and_ui_texture",
+      "state": "CONTRACT_MAPPABLE_REFERENCE_ONLY",
+      "note": "The existing Star Trek fixture proves traceability structure only; it is explicitly not production art."
+    },
+    {
+      "family": "glb_3d_models",
+      "state": "NO_STAR_TREK_NAP_RUNTIME_VALIDATION",
+      "note": "F07 can audit GLB structurally, but NAP v4 evidence reviewed here does not establish a Star Trek GLB production profile."
+    },
+    {
+      "family": "voice_ambience_music_sfx",
+      "state": "NO_STAR_TREK_NAP_RUNTIME_VALIDATION",
+      "note": "Do not infer audio package/conversion support from the generic package model."
+    },
+    {
+      "family": "ue5_assets_and_builds",
+      "state": "OUTSIDE_THIS_REFERENCE_VALIDATION",
+      "note": "UE5 import, cooking, LOD, streaming and in-build operation require execution on the MSI and independent evidence."
+    }
+  ],
+  "guardrails": [
+    "Do not copy Nimroel classification or routing rules into Star Trek by analogy.",
+    "Do not call a Star Trek NAP profile installed until NAP contains and validates that profile.",
+    "Do not claim a media format is supported because Package Contract v1 accepts a syntactically safe extension.",
+    "Preserve original binaries and hashes; derivatives require separate identity/provenance records.",
+    "Rights metadata is not distribution permission.",
+    "NAP completion does not prove UE5 functionality; UE5 evidence is a separate gate."
+  ]
+}

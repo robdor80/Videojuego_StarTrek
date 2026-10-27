@@ -1,0 +1,160 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_442cfdf361b1",
+  "display_name": "Puente USS Ascendant",
+  "category": "bridge",
+  "relative_directory": "puentes/starfleet/uss_ascendant/puente_uss_ascendant",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": null,
+    "era_suggested": null,
+    "taxonomy_verified": false
+  },
+  "identification": "Puente de mando identificado por el nombre del archivo; diseño concreto por verificar.",
+  "proposed_game_use": "Escenarios de mando y estudio de consolas.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "bridges/USS Ascendant bridge/uss-ascendant-bridge",
+      "kind": "directory",
+      "name": "uss-ascendant-bridge"
+    },
+    {
+      "source": "bridges/USS Ascendant bridge/uss_ascendant_bridge.glb",
+      "kind": "file",
+      "name": "uss_ascendant_bridge.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 21,
+    "size_bytes": 240533569,
+    "files": [
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/_0e3a929217289.560caa6605fe9.jpg",
+        "extension": ".jpg",
+        "size_bytes": 244400
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/_58cd499217289.560ca8b44d983.jpg",
+        "extension": ".jpg",
+        "size_bytes": 234545
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/Blinds_Roman_Hobbled_Blue.jpg",
+        "extension": ".jpg",
+        "size_bytes": 4097
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/GRATE_GLOW.jpg",
+        "extension": ".jpg",
+        "size_bytes": 192060
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/HONEYCOMB_GLOW_2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2419513
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/Honeycomb_Grate.jpg",
+        "extension": ".jpg",
+        "size_bytes": 1316493
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/iso_web_yellow2.jpg",
+        "extension": ".jpg",
+        "size_bytes": 34913
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/NewTrekLCARS.jpg",
+        "extension": ".jpg",
+        "size_bytes": 2726355
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model/VIEWSCREEN_GLOW.jpg",
+        "extension": ".jpg",
+        "size_bytes": 99265
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL/model.dae",
+        "extension": ".dae",
+        "size_bytes": 95037334
+      },
+      {
+        "path": "uss-ascendant-bridge/source/USS+ASCENDANT+BRIDGE+FINAL.zip",
+        "extension": ".zip",
+        "size_bytes": 20805427
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/_0e3a929217289.560caa6605fe9.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 244296
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/_58cd499217289.560ca8b44d983.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 234441
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/Blinds_Roman_Hobbled_Blue.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 4935
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/GRATE_GLOW.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 191956
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/HONEYCOMB_GLOW_2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2419409
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/Honeycomb_Grate.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 1316389
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/iso_web_yellow2.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 34913
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/NewTrekLCARS.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 2726251
+      },
+      {
+        "path": "uss-ascendant-bridge/textures/VIEWSCREEN_GLOW.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 99161
+      },
+      {
+        "path": "uss_ascendant_bridge.glb",
+        "extension": ".glb",
+        "size_bytes": 110147416
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+  "historical_relative_directory": "bridges/uss_ascendant/puente_uss_ascendant",
+  "directory_root": "assets/"
+}

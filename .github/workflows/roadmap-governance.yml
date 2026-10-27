@@ -3,15 +3,15 @@ name: Roadmap governance — F00-F15
 on:
   pull_request:
     paths:
-      - "docs/roadmap/master/**"
-      - "docs/decisions/prototype_validation_and_release_policy.md"
-      - "tools/validation/validate_roadmap_state.py"
+      - "proyecto/docs/roadmap/master/**"
+      - "proyecto/docs/decisions/prototype_validation_and_release_policy.md"
+      - "desarrollo/tools/validation/validate_roadmap_state.py"
       - ".github/workflows/roadmap-governance.yml"
   push:
     branches: [main]
     paths:
-      - "docs/roadmap/master/**"
-      - "tools/validation/validate_roadmap_state.py"
+      - "proyecto/docs/roadmap/master/**"
+      - "desarrollo/tools/validation/validate_roadmap_state.py"
       - ".github/workflows/roadmap-governance.yml"
   workflow_dispatch:
 
@@ -29,6 +29,6 @@ jobs:
         with:
           python-version: "3.12"
       - name: Validate syntax
-        run: python -m py_compile tools/validation/validate_roadmap_state.py
+        run: python -m py_compile desarrollo/tools/validation/validate_roadmap_state.py
       - name: Verify 16 phases / 80 steps and state-plan reconciliation
-        run: python tools/validation/validate_roadmap_state.py
+        run: python desarrollo/tools/validation/validate_roadmap_state.py

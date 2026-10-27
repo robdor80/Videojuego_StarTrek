@@ -5,33 +5,33 @@ on:
     branches:
       - feat/f06-sensors-functional-reference
     paths:
-      - "tools/simulation/f06_reference.py"
-      - "tools/simulation/test_f06_reference.py"
-      - "tools/simulation/test_f04_f05_f06_cross_phase.py"
-      - "tools/simulation/resolve_sensor_scan.py"
-      - "tools/simulation/test_sensor_detection_v0_1.py"
-      - "docs/roadmap/master/fases/F06/**"
-      - "gameplay/ship_operations/sensor_resolution/**"
-      - "gameplay/ship_operations/consoles/sensors/**"
-      - "gameplay/ship_operations/interconsole/**"
-      - "gameplay/ship_operations/operational_event_log/**"
-      - "tools/validation/f04_reference.py"
-      - "tools/validation/f05_reference.py"
+      - "desarrollo/tools/simulation/f06_reference.py"
+      - "desarrollo/tools/simulation/test_f06_reference.py"
+      - "desarrollo/tools/simulation/test_f04_f05_f06_cross_phase.py"
+      - "desarrollo/tools/simulation/resolve_sensor_scan.py"
+      - "desarrollo/tools/simulation/test_sensor_detection_v0_1.py"
+      - "proyecto/docs/roadmap/master/fases/F06/**"
+      - "sistemas/gameplay/ship_operations/sensor_resolution/**"
+      - "sistemas/gameplay/ship_operations/consoles/sensors/**"
+      - "sistemas/gameplay/ship_operations/interconsole/**"
+      - "sistemas/gameplay/ship_operations/operational_event_log/**"
+      - "desarrollo/tools/validation/f04_reference.py"
+      - "desarrollo/tools/validation/f05_reference.py"
       - ".github/workflows/f06-sensors-reference.yml"
   pull_request:
     paths:
-      - "tools/simulation/f06_reference.py"
-      - "tools/simulation/test_f06_reference.py"
-      - "tools/simulation/test_f04_f05_f06_cross_phase.py"
-      - "tools/simulation/resolve_sensor_scan.py"
-      - "tools/simulation/test_sensor_detection_v0_1.py"
-      - "docs/roadmap/master/fases/F06/**"
-      - "gameplay/ship_operations/sensor_resolution/**"
-      - "gameplay/ship_operations/consoles/sensors/**"
-      - "gameplay/ship_operations/interconsole/**"
-      - "gameplay/ship_operations/operational_event_log/**"
-      - "tools/validation/f04_reference.py"
-      - "tools/validation/f05_reference.py"
+      - "desarrollo/tools/simulation/f06_reference.py"
+      - "desarrollo/tools/simulation/test_f06_reference.py"
+      - "desarrollo/tools/simulation/test_f04_f05_f06_cross_phase.py"
+      - "desarrollo/tools/simulation/resolve_sensor_scan.py"
+      - "desarrollo/tools/simulation/test_sensor_detection_v0_1.py"
+      - "proyecto/docs/roadmap/master/fases/F06/**"
+      - "sistemas/gameplay/ship_operations/sensor_resolution/**"
+      - "sistemas/gameplay/ship_operations/consoles/sensors/**"
+      - "sistemas/gameplay/ship_operations/interconsole/**"
+      - "sistemas/gameplay/ship_operations/operational_event_log/**"
+      - "desarrollo/tools/validation/f04_reference.py"
+      - "desarrollo/tools/validation/f05_reference.py"
       - ".github/workflows/f06-sensors-reference.yml"
   workflow_dispatch:
 
@@ -48,25 +48,25 @@ jobs:
         with:
           python-version: "3.12"
       - name: Verificar sintaxis
-        run: python -m py_compile tools/simulation/resolve_sensor_scan.py tools/simulation/f06_reference.py tools/simulation/test_f06_reference.py
+        run: python -m py_compile desarrollo/tools/simulation/resolve_sensor_scan.py desarrollo/tools/simulation/f06_reference.py desarrollo/tools/simulation/test_f06_reference.py
       - name: Regression motor v0.1
-        run: python -m unittest discover -s tools/simulation -p 'test_sensor_detection_v0_1.py' -v
+        run: python -m unittest discover -s desarrollo/tools/simulation -p 'test_sensor_detection_v0_1.py' -v
       - name: F06 modelo, sensores, eventos y transferencias
-        run: python -m unittest discover -s tools/simulation -p 'test_f06_reference.py' -v
+        run: python -m unittest discover -s desarrollo/tools/simulation -p 'test_f06_reference.py' -v
 
       - name: Exigir predecesoras para PR integrada (sin omisiones)
         if: github.event_name == 'pull_request'
         run: |
-          test -f tools/validation/f04_reference.py
-          test -f tools/validation/f05_reference.py
-          test -f tools/validation/test_f03_reference.py
-          test -f tools/validation/test_f04_reference.py
-          test -f tools/validation/test_f05_reference.py
+          test -f desarrollo/tools/validation/f04_reference.py
+          test -f desarrollo/tools/validation/f05_reference.py
+          test -f desarrollo/tools/validation/test_f03_reference.py
+          test -f desarrollo/tools/validation/test_f04_reference.py
+          test -f desarrollo/tools/validation/test_f05_reference.py
       - name: Contractual chain F04→F05→F06 (3 tests required on PR)
-        run: python -m unittest discover -s tools/simulation -p 'test_f04_f05_f06_cross_phase.py' -v
+        run: python -m unittest discover -s desarrollo/tools/simulation -p 'test_f04_f05_f06_cross_phase.py' -v
       - name: Cross-phase reference regression (F03, F04, F05 required in PR)
         if: github.event_name == 'pull_request'
         run: |
-          python -m unittest discover -s tools/validation -p 'test_f03_reference.py' -v
-          python -m unittest discover -s tools/validation -p 'test_f04_reference.py' -v
-          python -m unittest discover -s tools/validation -p 'test_f05_reference.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f03_reference.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f04_reference.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f05_reference.py' -v

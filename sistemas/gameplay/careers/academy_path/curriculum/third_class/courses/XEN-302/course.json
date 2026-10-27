@@ -1,0 +1,140 @@
+{
+  "schema_version": "1.1.0",
+  "course_id": "XEN-302",
+  "title_es": "Relaciones interespecies y contacto",
+  "status": "operational_culture_content_complete",
+  "sequence_year": 2,
+  "cadet_class_id": "cadet_third_class",
+  "trimester": 2,
+  "course_type": "core",
+  "purpose_es": "Trabajar con personas y culturas distintas sin suponer patrones humanos universales, aplicando perfiles culturales reales del universo del juego a comunicación, protocolo, traducción, Primer Contacto y diplomacia.",
+  "prerequisites": [
+    "FED-401",
+    "REG-302"
+  ],
+  "player_knowledge_policy": "explicitly_taught_professional_knowledge_may_be_tested; no untaught franchise trivia",
+  "learning_cycle": [
+    "theory",
+    "instructor_class",
+    "real_system_practice",
+    "continuous_evaluation"
+  ],
+  "units": [
+    {
+      "unit_id": "XEN-302-U01",
+      "title_es": "Diferencia biológica y cultural",
+      "core_content_es": [
+        "biología",
+        "cultura",
+        "costumbre",
+        "individuo",
+        "especie ≠ cultura ≠ ciudadanía ≠ personalidad",
+        "casos fundadores: vulcanos, andorianos, Aenar y tellaritas"
+      ],
+      "practice_es": "Separar hechos, cultura e individuo usando casos reales de especies fundadoras.",
+      "assessment_es": "Ejercicio."
+    },
+    {
+      "unit_id": "XEN-302-U02",
+      "title_es": "Comunicación intercultural",
+      "core_content_es": [
+        "contexto",
+        "tono",
+        "tabúes",
+        "malentendidos",
+        "telepatía y consentimiento",
+        "límites de lectura mental",
+        "directividad tellarita y andoriana"
+      ],
+      "practice_es": "Resolver una conversación donde tono, telepatía o contexto pueden inducir una interpretación errónea.",
+      "assessment_es": "Evaluación de comunicación."
+    },
+    {
+      "unit_id": "XEN-302-U03",
+      "title_es": "Protocolo básico",
+      "core_content_es": [
+        "presentación",
+        "hospitalidad",
+        "símbolos",
+        "espacio personal contextual",
+        "Klingon: honor/Casas",
+        "Romulano: reserva/seguridad",
+        "Cardassiano: jerarquía/ocupación",
+        "Bajorano: religión/soberanía",
+        "Ferengi: comercio/contratos",
+        "Trill: identidad unida"
+      ],
+      "practice_es": "Preparar encuentros formales con dossiers culturales incompletos sin convertirlos en estereotipos.",
+      "assessment_es": "Caso práctico."
+    },
+    {
+      "unit_id": "XEN-302-U04",
+      "title_es": "Traductor Universal y límites",
+      "core_content_es": [
+        "traducción",
+        "ambigüedad",
+        "conceptos no equivalentes",
+        "fallo",
+        "lenguaje culturalmente cargado",
+        "traducir palabras no equivale a transferir cultura"
+      ],
+      "practice_es": "Resolver un malentendido donde la traducción literal es correcta pero la interpretación cultural no.",
+      "assessment_es": "Práctica."
+    },
+    {
+      "unit_id": "XEN-302-U05",
+      "title_es": "Primer Contacto: fundamentos",
+      "core_content_es": [
+        "observación",
+        "autoridad",
+        "preparación",
+        "riesgo cultural",
+        "incertidumbre",
+        "no proyectar culturas conocidas sobre una especie desconocida"
+      ],
+      "practice_es": "Planificar contacto supervisado con información cultural limitada y marcar hipótesis frente a hechos.",
+      "assessment_es": "Evaluación de criterio."
+    },
+    {
+      "unit_id": "XEN-302-U06",
+      "title_es": "Diplomacia básica",
+      "core_content_es": [
+        "intereses",
+        "posición",
+        "escucha",
+        "desescalada",
+        "Klingon/Romulano/Ferengi como casos de negociación",
+        "Dominion: jerarquía y autoridad diferenciadas"
+      ],
+      "practice_es": "Negociación controlada con diferencias culturales relevantes y límites de autoridad reales.",
+      "assessment_es": "Debrief."
+    }
+  ],
+  "evaluation_evidence": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "teamwork",
+    "communication",
+    "discipline"
+  ],
+  "outputs": [
+    "game",
+    "academy_web",
+    "pdf"
+  ],
+  "era_handling": "stable_core_with_era_specific_examples_interfaces_and_equipment",
+  "provenance": "GAME_ADDITION_CONSTRAINED_BY_VALIDATED_LORE",
+  "source_refs": [
+    "sistemas/gameplay/careers/academy_path/course_resolution.md",
+    "sistemas/gameplay/careers/academy_path/evaluation_model.json",
+    "sistemas/gameplay/careers/academy_path/academy_era_profiles.json",
+    "mundo/lore/federation/member_worlds/founding_members.json",
+    "audiovisual/localization/terminology/starfleet_terms.json",
+    "sistemas/gameplay/careers/academy_path/cultural_operations_reference_v0.1.json",
+    "mundo/lore/cultures/founding_species_interaction_profiles.json",
+    "mundo/lore/cultures/major_species_interaction_profiles.json",
+    "sistemas/gameplay/species/culture_socialization_contract.json"
+  ],
+  "source_ref_policy": "Internal validated mundo/lore/gameplay references constrain factual content; pedagogy and scenario packaging may be GAME_ADDITION."
+}

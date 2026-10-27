@@ -3,19 +3,19 @@ on:
   push:
     branches: [main, "feat/lore02-b-personal-equipment"]
     paths:
-      - "lore/equipment/**"
-      - "docs/roadmap/lore_02_b_*"
+      - "mundo/lore/equipment/**"
+      - "proyecto/docs/roadmap/lore_02_b_*"
       - "CONTENT_STATUS.md"
-      - "sources/source_registry/source_registry.json"
-      - "tools/validation/*lore02*"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-b-equipment.yml"
   pull_request:
     paths:
-      - "lore/equipment/**"
-      - "docs/roadmap/lore_02_b_*"
+      - "mundo/lore/equipment/**"
+      - "proyecto/docs/roadmap/lore_02_b_*"
       - "CONTENT_STATUS.md"
-      - "sources/source_registry/source_registry.json"
-      - "tools/validation/*lore02*"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-b-equipment.yml"
   workflow_dispatch:
 permissions:
@@ -33,9 +33,9 @@ jobs:
           python-version: "3.12"
       - name: Validate equipment catalogue, provenance and negative design scenarios
         run: |
-          python -m py_compile tools/validation/validate_lore02_b.py tools/validation/test_lore02_b.py
-          python tools/validation/validate_lore02_b.py
-          python tools/validation/test_lore02_b.py -v
+          python -m py_compile desarrollo/tools/validation/validate_lore02_b.py desarrollo/tools/validation/test_lore02_b.py
+          python desarrollo/tools/validation/validate_lore02_b.py
+          python desarrollo/tools/validation/test_lore02_b.py -v
   lore02-b-regression:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -48,10 +48,10 @@ jobs:
           python-version: "3.12"
       - name: Regression LORE-02 A, LORE-01 and roadmap
         run: |
-          python tools/validation/validate_lore02_a.py
-          python tools/validation/test_lore02_a.py
-          python tools/validation/validate_lore02_a_completion.py
-          python tools/validation/test_lore02_a_completion.py
-          python tools/validation/validate_lore01_e.py
-          python tools/validation/test_lore01_e.py
-          python tools/validation/validate_roadmap_state.py
+          python desarrollo/tools/validation/validate_lore02_a.py
+          python desarrollo/tools/validation/test_lore02_a.py
+          python desarrollo/tools/validation/validate_lore02_a_completion.py
+          python desarrollo/tools/validation/test_lore02_a_completion.py
+          python desarrollo/tools/validation/validate_lore01_e.py
+          python desarrollo/tools/validation/test_lore01_e.py
+          python desarrollo/tools/validation/validate_roadmap_state.py

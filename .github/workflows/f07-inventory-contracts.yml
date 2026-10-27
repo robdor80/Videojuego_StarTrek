@@ -2,18 +2,18 @@ name: F07 asset inventory contract (NOT UE5)
 on:
   pull_request:
     paths:
-      - "tools/assets/f07_inventory.py"
-      - "tools/validation/test_f07_asset_inventory.py"
-      - "assets/scenes/bridges/f07_registry.json"
-      - "docs/roadmap/master/fases/F07/**"
+      - "desarrollo/tools/assets/f07_inventory.py"
+      - "desarrollo/tools/validation/test_f07_asset_inventory.py"
+      - "assets/otros/escenas/bridges/f07_registry.json"
+      - "proyecto/docs/roadmap/master/fases/F07/**"
       - ".github/workflows/f07-inventory-contracts.yml"
   push:
     branches: [main]
     paths:
-      - "tools/assets/f07_inventory.py"
-      - "tools/validation/test_f07_asset_inventory.py"
-      - "assets/scenes/bridges/f07_registry.json"
-      - "docs/roadmap/master/fases/F07/**"
+      - "desarrollo/tools/assets/f07_inventory.py"
+      - "desarrollo/tools/validation/test_f07_asset_inventory.py"
+      - "assets/otros/escenas/bridges/f07_registry.json"
+      - "proyecto/docs/roadmap/master/fases/F07/**"
   workflow_dispatch:
 permissions:
   contents: read
@@ -26,5 +26,5 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python -m py_compile tools/assets/f07_inventory.py tools/validation/test_f07_asset_inventory.py
-      - run: python tools/validation/test_f07_asset_inventory.py -v
+      - run: python -m py_compile desarrollo/tools/assets/f07_inventory.py desarrollo/tools/validation/test_f07_asset_inventory.py
+      - run: python desarrollo/tools/validation/test_f07_asset_inventory.py -v

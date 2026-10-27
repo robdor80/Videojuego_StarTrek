@@ -1,0 +1,82 @@
+{
+  "schema_version": "0.2.1",
+  "internal_score_range": [
+    0,
+    100
+  ],
+  "player_facing_bands": [
+    {
+      "id": "excellent",
+      "display_es": "Excelente",
+      "min": 90
+    },
+    {
+      "id": "good",
+      "display_es": "Notable",
+      "min": 75
+    },
+    {
+      "id": "pass",
+      "display_es": "Apto",
+      "min": 60
+    },
+    {
+      "id": "remediation",
+      "display_es": "En recuperación",
+      "min": 40
+    },
+    {
+      "id": "fail",
+      "display_es": "No apto",
+      "min": 0
+    }
+  ],
+  "dimensions": [
+    "knowledge",
+    "practical_execution",
+    "judgment",
+    "leadership",
+    "teamwork",
+    "communication",
+    "integrity",
+    "preparation",
+    "discipline",
+    "pressure_control"
+  ],
+  "weights_are_activity_specific": true,
+  "conduct_can_override_academic_score": true,
+  "automatic_game_over_on_failure": false,
+  "record_persistence": true,
+  "design_provenance": "GAME_ADDITION",
+  "theory_assessment": {
+    "source": "concept_banks_v2",
+    "allowed_formats": [
+      "multiple_choice",
+      "short_answer"
+    ],
+    "multiple_choice_target_ratio": 0.8,
+    "short_answer_target_ratio": 0.2,
+    "correction": "deterministic",
+    "same_question_instances_in_web_and_game": false,
+    "shared_between_web_and_game": [
+      "concepts",
+      "correct_answers",
+      "accepted_short_answers",
+      "source_units"
+    ],
+    "generated_per_interface": [
+      "wording",
+      "question_selection",
+      "option_order",
+      "distractors"
+    ],
+    "rule": "If a question cannot be answered unambiguously from taught material, it is invalid.",
+    "complex_competence_assessment": "gameplay_practice_or_simulation"
+  },
+  "obligation_consequence_integration_ref": "sistemas/gameplay/careers/academy_path/life/academy_obligation_consequence_contract_v0.1.json",
+  "rules": [
+    "A missed/incomplete required evaluation may create remediation or make-up requirements through Step 14.",
+    "Remediation is not itself a misconduct finding.",
+    "Disciplinary findings cannot fabricate or directly replace academic score evidence."
+  ]
+}

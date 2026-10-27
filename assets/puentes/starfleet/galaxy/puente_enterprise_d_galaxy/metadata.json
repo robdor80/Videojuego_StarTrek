@@ -1,0 +1,55 @@
+{
+  "schema": "star_trek_asset_metadata_v1",
+  "asset_id": "asset_f122b2a76db6",
+  "display_name": "Puente Enterprise-D / Galaxy",
+  "category": "bridge",
+  "relative_directory": "puentes/starfleet/galaxy/puente_enterprise_d_galaxy",
+  "taxonomy": {
+    "faction_inferred": null,
+    "ship_class_inferred": "Galaxy",
+    "era_suggested": "Siglo XXIV (referencia tentativa de franquicia)",
+    "taxonomy_verified": false
+  },
+  "identification": "El nombre del fichero apunta a la Enterprise-D y a la clase Galaxy.",
+  "proposed_game_use": "Referencia artística Galaxy/Valhalla, pendiente de licencia y validación.",
+  "identification_basis": "nombres de carpetas y archivos del tree recibido; no es inspección 3D",
+  "original_sources": [
+    {
+      "source": "bridges/USS Galaxy class/henry_enterprise_d.glb",
+      "kind": "file",
+      "name": "henry_enterprise_d.glb"
+    }
+  ],
+  "technical": {
+    "file_count": 1,
+    "size_bytes": 1950888,
+    "files": [
+      {
+        "path": "henry_enterprise_d.glb",
+        "extension": ".glb",
+        "size_bytes": 1950888
+      }
+    ],
+    "triangles": null,
+    "materials": null,
+    "textures_verified": false,
+    "ue5_imported": false,
+    "ue5_validation": "NO_EJECUTADO"
+  },
+  "provenance": {
+    "input_tree": "estructura.txt (15-10-2026)",
+    "original_download_url": null,
+    "creator": null,
+    "license": null,
+    "license_verified": false,
+    "redistribution_authorized": null
+  },
+  "canon": {
+    "identity_verified": false,
+    "era_verified": false
+  },
+  "status": "INVENTARIADO_PENDIENTE_DE_VALIDACION",
+  "additional_notes": "No marcar transitable ni funcional hasta abrirlo en UE5.",
+  "historical_relative_directory": "bridges/galaxy/puente_enterprise_d_galaxy",
+  "directory_root": "assets/"
+}

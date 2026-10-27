@@ -3,21 +3,21 @@ on:
   push:
     branches: [main, "feat/lore02-c-medicine-xenobiology"]
     paths:
-      - "lore/medicine/**"
-      - "gameplay/medical/**"
-      - "docs/roadmap/lore_02_c_*"
+      - "mundo/lore/medicine/**"
+      - "sistemas/gameplay/medical/**"
+      - "proyecto/docs/roadmap/lore_02_c_*"
       - "CONTENT_STATUS.md"
-      - "sources/source_registry/source_registry.json"
-      - "tools/validation/*lore02*"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-c-medicine.yml"
   pull_request:
     paths:
-      - "lore/medicine/**"
-      - "gameplay/medical/**"
-      - "docs/roadmap/lore_02_c_*"
+      - "mundo/lore/medicine/**"
+      - "sistemas/gameplay/medical/**"
+      - "proyecto/docs/roadmap/lore_02_c_*"
       - "CONTENT_STATUS.md"
-      - "sources/source_registry/source_registry.json"
-      - "tools/validation/*lore02*"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/tools/validation/*lore02*"
       - ".github/workflows/lore02-c-medicine.yml"
   workflow_dispatch:
 permissions:
@@ -35,9 +35,9 @@ jobs:
           python-version: "3.12"
       - name: Xenomedicine catalogue / privacy / authority / adversarial tests
         run: |
-          python -m py_compile tools/validation/validate_lore02_c.py tools/validation/test_lore02_c.py
-          python tools/validation/validate_lore02_c.py
-          python tools/validation/test_lore02_c.py -v
+          python -m py_compile desarrollo/tools/validation/validate_lore02_c.py desarrollo/tools/validation/test_lore02_c.py
+          python desarrollo/tools/validation/validate_lore02_c.py
+          python desarrollo/tools/validation/test_lore02_c.py -v
   lore02-c-regression:
     runs-on: ubuntu-latest
     timeout-minutes: 15
@@ -50,10 +50,10 @@ jobs:
           python-version: "3.12"
       - name: Regression LORE-02 B and A, LORE-01 E, governance
         run: |
-          python tools/validation/validate_lore02_b.py
-          python tools/validation/test_lore02_b.py
-          python tools/validation/validate_lore02_a_completion.py
-          python tools/validation/test_lore02_a_completion.py
-          python tools/validation/validate_lore01_e.py
-          python tools/validation/test_lore01_e.py
-          python tools/validation/validate_roadmap_state.py
+          python desarrollo/tools/validation/validate_lore02_b.py
+          python desarrollo/tools/validation/test_lore02_b.py
+          python desarrollo/tools/validation/validate_lore02_a_completion.py
+          python desarrollo/tools/validation/test_lore02_a_completion.py
+          python desarrollo/tools/validation/validate_lore01_e.py
+          python desarrollo/tools/validation/test_lore01_e.py
+          python desarrollo/tools/validation/validate_roadmap_state.py
