@@ -1,0 +1,66 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "section31_covert_interference",
+  "display_name": "Operaciones encubiertas de Sección 31",
+  "classification": "COVERT_OPERATIONS",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2374,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2375,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "section_31",
+    "united_federation_of_planets",
+    "romulan_star_empire",
+    "dominion"
+  ],
+  "major_event_refs": [
+    "section31_revealed"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "DS9_INQUISITION",
+    "DS9_INTER_ARMA_ENIM_SILENT_LEGES",
+    "ST_OFFICIAL_SECTION31_INQUISITION"
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_INQUISITION",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_INTER_ARMA_ENIM_SILENT_LEGES",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "ST_OFFICIAL_SECTION31_INQUISITION",
+      "source_class": "OFFICIAL_REFERENCE",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "La guerra y percepción de amenaza facilitan iniciativas clandestinas fuera de control habitual.",
+  "historical_development": "Se conocen operaciones encubiertas vinculadas al Dominio y a la política romulana, de consecuencias éticas persistentes.",
+  "uncertainty_and_canon_limits": "Sección 31 no es la postura pública de la Federación; los NPC no conocen secretos por omnisciencia.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Investigación de abusos, vigilancia y responsabilidad política.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "mundo/lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "mundo/lore/diplomacy/historical_events_v0.1.json",
+    "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ]
+}

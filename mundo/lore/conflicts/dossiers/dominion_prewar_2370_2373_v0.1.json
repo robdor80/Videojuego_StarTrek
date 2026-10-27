@@ -1,0 +1,76 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "dominion_prewar_2370_2373",
+  "display_name": "Escalada previa a la Guerra del Dominio",
+  "classification": "DIPLOMATIC_AND_COVERT_CRISIS",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2370,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2373,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "dominion",
+    "united_federation_of_planets",
+    "romulan_star_empire",
+    "cardassian_union",
+    "klingon_empire"
+  ],
+  "major_event_refs": [
+    "dominion_first_warning",
+    "omarion_ambush",
+    "changeling_infiltration_discovered",
+    "cardassian_dominion_accession"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "DS9_THE_JEMHADAR",
+    "DS9_THE_DIE_IS_CAST",
+    "DS9_THE_SEARCH_II",
+    "DS9_BY_INFERNOS_LIGHT"
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_THE_JEMHADAR",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_THE_DIE_IS_CAST",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_THE_SEARCH_II",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_BY_INFERNOS_LIGHT",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "La apertura del acceso al Gamma enfrenta intereses exploratorios federales y control del Dominio.",
+  "historical_development": "Amenazas, operaciones encubiertas, infiltraciones y adhesión cardassiana elevan la crisis hacia la guerra abierta en 2373.",
+  "uncertainty_and_canon_limits": "Las operaciones previas no deben reclasificarse automáticamente como guerra declarada en 2370.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Contrainteligencia y mediación preventiva.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "mundo/lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "mundo/lore/diplomacy/historical_events_v0.1.json",
+    "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ]
+}

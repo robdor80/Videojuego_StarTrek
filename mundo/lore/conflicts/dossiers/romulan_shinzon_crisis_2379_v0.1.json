@@ -1,0 +1,52 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "romulan_shinzon_crisis_2379",
+  "display_name": "Crisis política romulana de Shinzon",
+  "classification": "COUP_AND_REGIME_CRISIS",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2379,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2379,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "romulan_star_empire",
+    "united_federation_of_planets"
+  ],
+  "major_event_refs": [
+    "nemesis_shinzon_romulan_crisis"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "ST_OFFICIAL_NEMESIS_EFFECT_2023"
+  ],
+  "provenance": [
+    {
+      "source_id": "ST_OFFICIAL_NEMESIS_EFFECT_2023",
+      "source_class": "OFFICIAL_REFERENCE",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "Las tensiones internas romulanas y el liderazgo de Shinzon alimentan golpe y amenazas exteriores.",
+  "historical_development": "La crisis narrada en Nemesis sacude a las autoridades del Imperio e implica actores remanos y romulanos con intereses diversos.",
+  "uncertainty_and_canon_limits": "Rómulo NO está destruido en 2383; su destrucción canónica futura de 2387 no motiva Valhalla en 2379.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Misiones diplomáticas y comprobación de estabilidad institucional.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "mundo/lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "mundo/lore/diplomacy/historical_events_v0.1.json",
+    "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ]
+}

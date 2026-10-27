@@ -1,0 +1,150 @@
+{
+  "schema_version": "0.1.0",
+  "index_id": "lore03b_historical_conflicts",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "authority": "CoreRPG_ONLY",
+  "source_contract": "mundo/lore/conflicts/conflict_definition_contract.json",
+  "runtime_reference": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "original_conflict_registry": "mundo/lore/diplomacy/agreements_conflicts_v0.1.json",
+  "gameplay_activated": false,
+  "auto_start_conflicts": false,
+  "auto_bootstrap_future": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "expected_dossiers": 22,
+  "dossiers": [
+    {
+      "conflict_id": "bajoran_circle_coup_2370",
+      "ref": "mundo/lore/conflicts/dossiers/bajoran_circle_coup_2370_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/bajoran_circle_coup_2370_v0.1.md",
+      "classification": "COUP_ATTEMPT"
+    },
+    {
+      "conflict_id": "bajoran_derna_dispute_2375",
+      "ref": "mundo/lore/conflicts/dossiers/bajoran_derna_dispute_2375_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/bajoran_derna_dispute_2375_v0.1.md",
+      "classification": "LOCALIZED_POLITICAL_CRISIS"
+    },
+    {
+      "conflict_id": "borg_sector001_2373",
+      "ref": "mundo/lore/conflicts/dossiers/borg_sector001_2373_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/borg_sector001_2373_v0.1.md",
+      "classification": "EXISTENTIAL_INCURSION"
+    },
+    {
+      "conflict_id": "borg_species8472_delta_conflict",
+      "ref": "mundo/lore/conflicts/dossiers/borg_species8472_delta_conflict_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/borg_species8472_delta_conflict_v0.1.md",
+      "classification": "EXTERNAL_DELTA_CONFLICT"
+    },
+    {
+      "conflict_id": "borg_wolf359_2366_2367",
+      "ref": "mundo/lore/conflicts/dossiers/borg_wolf359_2366_2367_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/borg_wolf359_2366_2367_v0.1.md",
+      "classification": "EXISTENTIAL_INCURSION"
+    },
+    {
+      "conflict_id": "cardassian_occupation_bajor",
+      "ref": "mundo/lore/conflicts/dossiers/cardassian_occupation_bajor_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/cardassian_occupation_bajor_v0.1.md",
+      "classification": "OCCUPATION"
+    },
+    {
+      "conflict_id": "cardassian_resistance_2375",
+      "ref": "mundo/lore/conflicts/dossiers/cardassian_resistance_2375_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/cardassian_resistance_2375_v0.1.md",
+      "classification": "INTERNAL_REBELLION_WITH_WAR_LINK"
+    },
+    {
+      "conflict_id": "dominion_prewar_2370_2373",
+      "ref": "mundo/lore/conflicts/dossiers/dominion_prewar_2370_2373_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/dominion_prewar_2370_2373_v0.1.md",
+      "classification": "DIPLOMATIC_AND_COVERT_CRISIS"
+    },
+    {
+      "conflict_id": "dominion_war",
+      "ref": "mundo/lore/conflicts/dossiers/dominion_war_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/dominion_war_v0.1.md",
+      "classification": "MULTILATERAL_WAR"
+    },
+    {
+      "conflict_id": "federation_cardassian_border_war_pre2370",
+      "ref": "mundo/lore/conflicts/dossiers/federation_cardassian_border_war_pre2370_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/federation_cardassian_border_war_pre2370_v0.1.md",
+      "classification": "BORDER_CONFLICT"
+    },
+    {
+      "conflict_id": "federation_klingon_rupture_2372",
+      "ref": "mundo/lore/conflicts/dossiers/federation_klingon_rupture_2372_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/federation_klingon_rupture_2372_v0.1.md",
+      "classification": "LIMITED_CONFLICT"
+    },
+    {
+      "conflict_id": "federation_tzenkethi_prior_war",
+      "ref": "mundo/lore/conflicts/dossiers/federation_tzenkethi_prior_war_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/federation_tzenkethi_prior_war_v0.1.md",
+      "classification": "HISTORICAL_REFERENCED_WAR"
+    },
+    {
+      "conflict_id": "klingon_cardassian_war",
+      "ref": "mundo/lore/conflicts/dossiers/klingon_cardassian_war_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/klingon_cardassian_war_v0.1.md",
+      "classification": "INTERSTATE_WAR"
+    },
+    {
+      "conflict_id": "klingon_civil_war_2367_2368",
+      "ref": "mundo/lore/conflicts/dossiers/klingon_civil_war_2367_2368_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/klingon_civil_war_2367_2368_v0.1.md",
+      "classification": "CIVIL_WAR"
+    },
+    {
+      "conflict_id": "leyton_coup_attempt_2372",
+      "ref": "mundo/lore/conflicts/dossiers/leyton_coup_attempt_2372_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/leyton_coup_attempt_2372_v0.1.md",
+      "classification": "COUP_ATTEMPT"
+    },
+    {
+      "conflict_id": "maquis_border_insurgency",
+      "ref": "mundo/lore/conflicts/dossiers/maquis_border_insurgency_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/maquis_border_insurgency_v0.1.md",
+      "classification": "INSURGENCY"
+    },
+    {
+      "conflict_id": "romulan_neutral_zone_incidents",
+      "ref": "mundo/lore/conflicts/dossiers/romulan_neutral_zone_incidents_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/romulan_neutral_zone_incidents_v0.1.md",
+      "classification": "BORDER_CRISIS"
+    },
+    {
+      "conflict_id": "romulan_shinzon_crisis_2379",
+      "ref": "mundo/lore/conflicts/dossiers/romulan_shinzon_crisis_2379_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/romulan_shinzon_crisis_2379_v0.1.md",
+      "classification": "COUP_AND_REGIME_CRISIS"
+    },
+    {
+      "conflict_id": "romulan_unification_plot_2368",
+      "ref": "mundo/lore/conflicts/dossiers/romulan_unification_plot_2368_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/romulan_unification_plot_2368_v0.1.md",
+      "classification": "COVERT_POLITICAL_CRISIS"
+    },
+    {
+      "conflict_id": "section31_covert_interference",
+      "ref": "mundo/lore/conflicts/dossiers/section31_covert_interference_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/section31_covert_interference_v0.1.md",
+      "classification": "COVERT_OPERATIONS"
+    },
+    {
+      "conflict_id": "tzenkethi_border_provocation_2372",
+      "ref": "mundo/lore/conflicts/dossiers/tzenkethi_border_provocation_2372_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/tzenkethi_border_provocation_2372_v0.1.md",
+      "classification": "FALSE_REPORT_AND_SABOTAGE"
+    },
+    {
+      "conflict_id": "voyager_hirogen_crisis_2374",
+      "ref": "mundo/lore/conflicts/dossiers/voyager_hirogen_crisis_2374_v0.1.json",
+      "document_ref": "mundo/lore/conflicts/dossiers/voyager_hirogen_crisis_2374_v0.1.md",
+      "classification": "SHIPBOARD_ARMED_CRISIS"
+    }
+  ],
+  "warning": "Historical families, incursions and political crises, not 22 separate wars; no WorldState mutation."
+}

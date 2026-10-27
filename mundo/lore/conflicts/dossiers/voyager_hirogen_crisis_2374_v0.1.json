@@ -1,0 +1,58 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "voyager_hirogen_crisis_2374",
+  "display_name": "Crisis de Voyager y los hirogen",
+  "classification": "SHIPBOARD_ARMED_CRISIS",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2374,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2374,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "united_federation_of_planets"
+  ],
+  "major_event_refs": [
+    "voyager_hirogen_crisis"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "VOY_THE_KILLING_GAME",
+    "ST_OFFICIAL_HIROGEN_HOLODECK"
+  ],
+  "provenance": [
+    {
+      "source_id": "VOY_THE_KILLING_GAME",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "ST_OFFICIAL_HIROGEN_HOLODECK",
+      "source_class": "OFFICIAL_REFERENCE",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "Grupos hirogen practican caza de presas e interfieren con la seguridad de Voyager.",
+  "historical_development": "La captura y explotación de la holocubierta provoca un conflicto localizado entre cautores y tripulación.",
+  "uncertainty_and_canon_limits": "Los hirogen no son un Estado registrado en LORE-01; no convertir incidente aislado en guerra con toda especie.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Seguridad de holocubiertas, cautiverio y recuperación de control.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "mundo/lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "sistemas/gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "mundo/lore/diplomacy/historical_events_v0.1.json",
+    "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ],
+  "unregistered_actor_name": "Hirogen"
+}
