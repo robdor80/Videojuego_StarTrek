@@ -586,11 +586,11 @@ Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runt
 |---|---|---|
 | A — Cronología y acontecimientos | ✅ COMPLETE | **PR #38 fusionada el 2026-10-23** (`d0efab2c9d4b2451ad678b651bd6ecf2283d8235`). Atlas 2364–2383 (20 años), 40 referencias de LORE-01 D, 26 fichas adicionales y GAME_ADDITION Valhalla. **13/13 CI correctos en la PR**; revisión documental terminada, reservas históricas trazadas. Sin runtime. |
 | B — Conflictos, guerras y crisis | ✅ COMPLETE | PR #41 fusionada el 2026-10-27 (`2b1447d4`); 22 expedientes históricos, 12 escenarios narrativos, B01–B08, validación y CI posteriores `success`. Cierre **documental**, no implementación CoreRPG/UE5. Reservas canónicas trazadas. |
-| C — Consecuencias y memoria histórica | ⬜ TODO | Conocimiento parcial y consecuencias; sin implementación. |
+| C — Consecuencias y memoria histórica | ✅ COMPLETE | PR #44 fusionada el 2026-10-27 (`56abff20c46d4614fb309e4258a44ed0eb9c33b9`); C01–C08, 13 casos y 6 patrones de memoria histórica, validación de 167/167 pruebas y 2/2 checks en `main` tras fusión. Cierre exclusivamente documental; sin activar CoreRPG/UE5. |
 | D — Continuidad/divergencia | ⬜ TODO | Estado inicial por fecha elegida, historia emergente; sin runtime. |
 | E — Auditoría global | ⬜ TODO | Verificación cruzada A–D y autorización humana final. |
 
-Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A CERRADA Y FUSIONADA** mediante [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38), commit `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. La regularización administrativa de este estado se propone en PR independiente. **B COMPLETADA documentalmente mediante PR #41; C–E permanecen sin iniciar.** CoreRPG/UE5 no reciben datos runtime de esta fase.
+Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. **LORE-03 A CERRADA Y FUSIONADA** mediante [PR #38](https://github.com/robdor80/Videojuego_StarTrek/pull/38), commit `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`. La regularización administrativa de este estado se propone en PR independiente. **B y C COMPLETADAS documentalmente mediante PR #41 y PR #44 respectivamente; D y E siguen pendientes.** CoreRPG/UE5 no reciben datos runtime de esta fase.
 
 ## Procedural living-universe master plan
 
