@@ -101,8 +101,23 @@ def validate_pattern(p, refs):
     return pid
 
 def validate_sets(casebook, patterns, refs):
-    check(casebook.get("status") == "NEEDS_REVIEW_DOCUMENTARY"
-          and patterns.get("status") == "NEEDS_REVIEW_DOCUMENTARY", "Premature administrative COMPLETE")
+    check(casebook.get("status") == "COMPLETE_DOCUMENTARY"
+          and patterns.get("status") == "COMPLETE_DOCUMENTARY", "LORE-03C documentary closure not recorded")
+    for obj in (casebook, patterns):
+        closure = obj.get("closure", {})
+        check(closure.get("pr_number") == 44
+              and closure.get("merge_commit_sha") == "56abff20c46d4614fb309e4258a44ed0eb9c33b9"
+              and closure.get("merged_at") == "2026-10-27T12:04:17Z"
+              and closure.get("merged_to") == "main"
+              and closure.get("scope") == "DOCUMENTARY_ONLY"
+              and closure.get("author_approved_merge") is True
+              and closure.get("branch_deleted") is False
+              and closure.get("runtime_activated") is False
+              and closure.get("checks_after_merge") == "success"
+              and closure.get("tests_prior_to_merge") == 167,
+              "Administrative merge evidence missing or altered")
+    check(casebook["closure"] == patterns["closure"],
+          "Historical memory records disagree on closure")
     for obj in (casebook, patterns):
         check(obj.get("world_state_authority") == "CoreRPG_ONLY"
               and obj.get("gameplay_activated") is False, "Runtime/world authority breach")
@@ -128,7 +143,7 @@ def validate_sets(casebook, patterns, refs):
     check(any(x["event_ref"]==FALSE_REPORT and x["claim_status"]=="FALSE_REPORT_CORRECTED" for x in cases), "Correction missing")
     wolf = [x for x in cases if x["event_ref"]=="wolf_359_battle" and x["remembered_as"]=="firsthand"]
     check(len(wolf)>=2, "Shared event with different witnesses absent")
-    return {"cases":len(cases),"institutional_patterns":len(pats),"historical_events_reused":len(refs["events"]),"conflict_dossiers_reused":len(refs["dossiers"]),"status":"NEEDS_REVIEW_DOCUMENTARY"}
+    return {"cases":len(cases),"institutional_patterns":len(pats),"historical_events_reused":len(refs["events"]),"conflict_dossiers_reused":len(refs["dossiers"]),"status":"COMPLETE_DOCUMENTARY"}
 
 def validate(root=ROOT):
     refs = context(root)

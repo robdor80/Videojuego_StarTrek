@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1.0",
   "dataset_id": "lore03c_memory_casebook",
-  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "status": "COMPLETE_DOCUMENTARY",
   "mode": "NON_RUNTIME_DOCUMENTARY_EXAMPLES",
   "world_state_authority": "CoreRPG_ONLY",
   "gameplay_activated": false,
@@ -367,5 +367,17 @@
       "personal_consequence": "CONDITIONAL_ON_AUTHORIZED_EVENTS",
       "example_es": "Un cadete puede estudiarla sin haber presenciado la guerra ni asumir actitudes propias de los klingon."
     }
-  ]
+  ],
+  "closure": {
+    "pr_number": 44,
+    "merged_at": "2026-10-27T12:04:17Z",
+    "merge_commit_sha": "56abff20c46d4614fb309e4258a44ed0eb9c33b9",
+    "merged_to": "main",
+    "scope": "DOCUMENTARY_ONLY",
+    "runtime_activated": false,
+    "branch_deleted": false,
+    "author_approved_merge": true,
+    "checks_after_merge": "success",
+    "tests_prior_to_merge": 167
+  }
 }

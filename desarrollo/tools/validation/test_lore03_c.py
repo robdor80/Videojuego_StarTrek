@@ -63,7 +63,7 @@ class Lore03CMemoryTests(unittest.TestCase):
     def test_28_reject_create_canon_npc(self): self.mut_case("wolf_veteran_02",lambda x:x["actor"].update(canonical_identity_asserted=True))
     def test_29_reject_book_bootstrap(self): self.mut_book(lambda x:x.update(auto_bootstrap_future=True))
     def test_30_reject_exact_D(self): self.mut_book(lambda x:x.update(campaign_start_exact_date="2383-01-01"))
-    def test_31_reject_book_complete(self): self.mut_book(lambda x:x.update(status="COMPLETE_DOCUMENTARY"))
+    def test_31_reject_book_unreviewed(self): self.mut_book(lambda x:x.update(status="NEEDS_REVIEW_DOCUMENTARY"))
     def test_32_reject_duplicates(self): self.mut_book(lambda x:x["cases"][0].update(case_id=x["cases"][1]["case_id"]))
     def test_33_reject_new_world_true_event(self): self.mut_book(lambda x:x.update(creates_new_historical_events=True))
     def test_34_reject_memorial_instantiation(self):
@@ -75,6 +75,16 @@ class Lore03CMemoryTests(unittest.TestCase):
     def test_38_reject_missing_pattern_source(self):self.mut_pat("wolf_memorial",lambda x:x.update(event_ref="fake_memory"))
     def test_39_reject_false_coup_assertion(self):self.mut_pat("tzenkethi_report",lambda x:x.update(assert_tzenkethi_coup_happened=True))
     def test_40_reject_relabelled_real_event(self):self.mut_case("wolf_veteran_01",lambda x:x.update(claim_status="FALSE_REPORT_BELIEVED"))
+
+    def test_41_reject_fake_merge(self): self.mut_book(lambda x:x["closure"].update(merge_commit_sha="deadbeef"))
+    def test_42_reject_runtime_claim(self): self.mut_book(lambda x:x["closure"].update(runtime_activated=True))
+    def test_43_reject_false_branch_deletion(self): self.mut_book(lambda x:x["closure"].update(branch_deleted=True))
+    def test_44_reject_pattern_unreviewed(self):
+        p=copy.deepcopy(self.pats);p["status"]="NEEDS_REVIEW_DOCUMENTARY"
+        with self.assertRaises(v.InvalidLore03C):v.validate_sets(self.book,p,self.refs)
+    def test_45_reject_mismatched_closure(self):
+        p=copy.deepcopy(self.pats);p["closure"]["checks_after_merge"]="failure"
+        with self.assertRaises(v.InvalidLore03C):v.validate_sets(self.book,p,self.refs)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

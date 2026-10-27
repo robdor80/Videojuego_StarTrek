@@ -155,7 +155,19 @@ def validate():
               evidence.get("runtime_activated") is False and
               b.get("gameplay_activated") is False,
               "LORE-03B marked COMPLETE without authoritative merge evidence")
-    check("| C — Consecuencias y memoria histórica | ⬜ TODO |" in text,"C started without approval")
+    # LORE-03C may now be complete after PR #44; preserve an evidence-gated transition.
+    c_todo = "| C — Consecuencias y memoria histórica | ⬜ TODO |" in text
+    c_complete = "| C — Consecuencias y memoria histórica | ✅ COMPLETE |" in text
+    check(c_todo != c_complete, "Unknown or ambiguous LORE-03C administrative state")
+    if c_complete:
+        c = load("mundo/lore/historical_events/lore03c_memory_casebook_v0.1.json")
+        evidence = c.get("closure", {})
+        check(c.get("status") == "COMPLETE_DOCUMENTARY"
+              and evidence.get("pr_number") == 44
+              and evidence.get("merge_commit_sha") == "56abff20c46d4614fb309e4258a44ed0eb9c33b9"
+              and evidence.get("scope") == "DOCUMENTARY_ONLY"
+              and evidence.get("runtime_activated") is False,
+              "LORE-03C marked COMPLETE without valid GitHub merge evidence")
     check("| D — Continuidad/divergencia | ⬜ TODO |" in text,"D started without approval")
     check("| E — Auditoría global | ⬜ TODO |" in text,"E started without approval")
     decisions=(ROOT / "proyecto/docs/decisions/playable_eras.md").read_text(encoding="utf-8")

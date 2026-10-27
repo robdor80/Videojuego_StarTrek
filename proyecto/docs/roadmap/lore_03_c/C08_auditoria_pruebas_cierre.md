@@ -1,3 +1,8 @@
+# Acta administrativa posterior a la fusión — 2026-10-27
+PR #44 fusionada en `main` el **2026-10-27 12:04:17 UTC**, commit real `56abff20c46d4614fb309e4258a44ed0eb9c33b9`. Las dos comprobaciones observadas sobre el commit de fusión finalizaron en `success` (LORE-03A y integridad documental). **Estado documental: COMPLETE_DOCUMENTARY.** La rama de desarrollo de C se conserva por falta de autorización expresa para eliminarla. El capítulo que comienza con «Estado antes de fusión» refleja su condición original y no es el estado vigente. Las 167 pruebas originales siguen siendo evidencia de validación de la PR, no de compatibilidad de CoreRPG/UE5. La fase LORE-03D no se inicia con este cierre.
+
+---
+
 # C08 — Auditoría transversal y criterios de aceptación
 **Estado antes de fusión:** NEEDS_REVIEW_DOCUMENTARY. No afirmar cierre COMPLETE, merge, eliminación de rama o integración CoreRPG.
 
