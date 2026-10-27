@@ -1,5 +1,5 @@
 # LORE-03D — Continuidad y divergencia histórica
-**Fecha:** 2026-10-27 · **rama:** `lore/03-d-continuity-divergence` · **estado:** NEEDS_REVIEW_DOCUMENTARY; no fusionado.
+**Fecha:** 2026-10-27 · **rama de desarrollo:** `lore/03-d-continuity-divergence` · **estado documental:** COMPLETE_DOCUMENTARY tras PR #46 (fusión verificada).
 **Base auditada:** `main@32f4a018bc75b37ff0a4e10fb466ffac6963c381` tras PR #44 y #45.
 
 ## Propósito
@@ -20,4 +20,4 @@ El canon consolidado establece el pasado de la campaña. Desde el instante efect
 
 **Decisiones de autor preservadas:** 2383 propuesto sin día/mes; Academia ~4 años hasta ~2387; Rómulo íntegro al inicio; Picard almirante, Riker capitán de USS Titan; posibilidad (no garantía de asignación) Valhalla; TNG/DS9/Voyager y posteriores como única época jugable; no viajes temporales jugables. LORE-03A/B/C y LORE-01/02 intactas.
 
-**Gobierno:** pendiente de aprobación humana para fusión. `COMPLETE` exclusivamente tras fusión autorizada y evidencia de CI. LORE-03E sigue pendiente; no se dan por validados Host, CoreRPG, UE5 ni actuaciones de NPC reales.
+**Gobierno actualizado:** PR #46 fusionada con autorización humana; cierre documental respaldado por evidencia en `D08_auditoria_y_cierre.md`. Esta regularización administrativa se propone en una PR independiente y no se fusiona automáticamente. LORE-03E sigue pendiente; no se dan por validados Host, CoreRPG, UE5 ni actuaciones de NPC reales. La rama fuente todavía aparecía en GitHub en la comprobación posterior al merge.

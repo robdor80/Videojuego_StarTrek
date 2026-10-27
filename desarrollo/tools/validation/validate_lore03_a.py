@@ -168,7 +168,24 @@ def validate():
               and evidence.get("scope") == "DOCUMENTARY_ONLY"
               and evidence.get("runtime_activated") is False,
               "LORE-03C marked COMPLETE without valid GitHub merge evidence")
-    check("| D — Continuidad/divergencia | ⬜ TODO |" in text,"D started without approval")
+    # LORE-03D may be COMPLETE only after a documented, authorized PR #46 merge.
+    d_todo = "| D — Continuidad/divergencia | ⬜ TODO |" in text
+    d_complete = "| D — Continuidad/divergencia | ✅ COMPLETE |" in text
+    check(d_todo != d_complete, "Unknown or ambiguous LORE-03D administrative state")
+    if d_complete:
+        d = load("proyecto/docs/roadmap/lore_03_d/D_escenarios_documentales_v0.1.json")
+        closure = d.get("closure", {})
+        check(d.get("status") == "COMPLETE_DOCUMENTARY"
+              and closure.get("pr_number") == 46
+              and closure.get("merge_commit_sha") == "6aafca0ef74787184c840c82a92386ff05f532f4"
+              and closure.get("merged_at") == "2026-10-27T12:41:51Z"
+              and closure.get("scope") == "DOCUMENTARY_ONLY"
+              and closure.get("approved_merge") is True
+              and closure.get("runtime_activated") is False
+              and closure.get("checks_after_merge") == "success"
+              and d.get("gameplay_activated") is False
+              and d.get("auto_schedules_future_canon") is False,
+              "LORE-03D marked COMPLETE without authorized merge evidence")
     check("| E — Auditoría global | ⬜ TODO |" in text,"E started without approval")
     decisions=(ROOT / "proyecto/docs/decisions/playable_eras.md").read_text(encoding="utf-8")
     check("2026-10-23" in decisions and "única época jugable" in decisions.lower(), "Author decision not registered")

@@ -111,9 +111,30 @@ def validate_scenario(s):
     demand(result == s["expected_decision"], s["id"]+": expected "+s["expected_decision"]+", got "+result)
     return result
 
+def validate_closure(pack):
+    """Validate immutable documentary merge evidence, not live GitHub state."""
+    e=pack.get("closure", {})
+    demand(pack.get("status") == "COMPLETE_DOCUMENTARY", "D is not administratively closed")
+    demand(e.get("pr_number") == 46 and e.get("merged_to") == "main"
+           and e.get("merged_at") == "2026-10-27T12:41:51Z"
+           and e.get("merge_commit_sha") == "6aafca0ef74787184c840c82a92386ff05f532f4"
+           and e.get("source_head_sha") == "4db0dc7d3ccdb468594d9fde6789beae83ddfe7f",
+           "LORE-03D merge identity was fabricated")
+    demand(e.get("scope") == "DOCUMENTARY_ONLY"
+           and e.get("approved_merge") is True
+           and e.get("runtime_activated") is False
+           and e.get("branch_deleted_at_audit") is False
+           and e.get("checks_after_merge") == "success"
+           and e.get("check_run_ids") == [40505811905, 40505812149]
+           and e.get("tests_documentary") == 45
+           and e.get("scenario_count") == 35,
+           "LORE-03D closure misstates scope, CI, tests or branch deletion")
+    return e
+
 def validate(root=ROOT):
     pack=load(CASEBOOK,root)
-    demand(pack["status"] == "NEEDS_REVIEW_DOCUMENTARY" and
+    validate_closure(pack)
+    demand(pack["status"] == "COMPLETE_DOCUMENTARY" and
            pack["scope"] == "EDITORIAL_REFERENCE_ONLY" and
            pack["world_state_authority"] == "CoreRPG_ONLY", "Invalid authority or status")
     demand(pack["campaign_start_year_proposed"] == 2383 and
@@ -152,7 +173,7 @@ def validate(root=ROOT):
     demand(classification(2383)=="UNRESOLVED_SAME_YEAR"
            and classification(2378)=="PAST_YEAR"
            and classification(2387)=="FUTURE_YEAR", "Temporal cutoff regression")
-    return {"status":"NEEDS_REVIEW_DOCUMENTARY","cases":len(scenarios),
+    return {"status":"COMPLETE_DOCUMENTARY","cases":len(scenarios),
             "rejected":outcomes.count("REJECT"),"allowed":outcomes.count("ALLOW"),
             "unresolved":outcomes.count("UNRESOLVED"),"earlier_dossiers":22,
             "authority":"CoreRPG_ONLY","runtime_verified":False}
