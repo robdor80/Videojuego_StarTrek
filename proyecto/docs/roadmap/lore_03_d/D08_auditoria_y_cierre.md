@@ -27,12 +27,12 @@ Se ha comprobado documentalmente la existencia de la estructura ST-ORG-01, el ci
 
 La colección `D_escenarios_documentales_v0.1.json` aporta casos positivos/negativos que ejercitan estas puertas **como validación editorial**, no como pruebas reales de un motor CoreRPG.
 
-## 3. Revisión independiente prevista/real
-- Releer cada D0X por consistencia causal, fecha y autoridad, sin sustituir el control de CI.
-- Ejecutar `validate_lore03_d.py`, `test_lore03_d.py` y regresiones A/B/C, LORE-01D y 02E en CI. Registrar resultados reales antes de declarar **verde**.
-- Revisar `compare main...rama` para verificar exclusión absoluta de LORE-03A/B/C, sistemas propietarios y todo ejecutable UE5.
-- Clasificar incidencias: errores documentales bloqueantes; migraciones runtime explícitamente **no probadas**; decisiones de autor reservadas.
-- Estado de esta PR: **NEEDS_REVIEW**, no `COMPLETE`. Esta acta no certifica ejecución de simulación, guardado/carga de CoreRPG, UE5, pantalla o IA.
+## 3. Auditoría independiente y evidencia verificable
+- **Diff auditado:** PR #46 contra `main@32f4a018bc75b37ff0a4e10fb466ffac6963c381`: únicamente documentación LORE-03D, validador/test nuevos, workflow y nota de plan maestro. `CONTENT_STATUS.md` se ha restaurado al original para mantener la invariante pre-merge de LORE-03A. Ningún contrato propietario ni fichero de LORE-03A/B/C modificado.
+- **CI previa verificada:** workflow LORE-03D [run 40504585803](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40504585803), `SUCCESS`, incluye compilación, validador y 45 pruebas D y regresiones LORE-03A/B/C y LORE-01D/02E. Workflow LORE-03A [run 40504585702](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40504585702), `SUCCESS`. Ambas sobre commit `e4b24c77af2d97829a35ceb4261edf4d1bf21a4f`.
+- **Incidencia encontrada y resuelta:** el validador previo de LORE-03A exige que la fila D siga `TODO` hasta autorización/fusión; marcar anticipadamente `NEEDS_REVIEW` en `CONTENT_STATUS.md` provocó fallo verificable [run 40504418752](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40504418752). Se restauró íntegramente el archivo sin alterar el validador A. La PR y el índice de D reflejan `NEEDS_REVIEW_DOCUMENTARY` hasta aprobación.
+- **Puerta final:** toda revisión de este acta genera un nuevo HEAD y requiere comprobar también las nuevas ejecuciones de CI; la evidencia anterior no se atribuye falsamente a un SHA diferente.
+- **Limitación de alcance:** estas son pruebas de integridad referencial/puertas documentales; **no** hay prueba de simulación, persistencia, migración, Host, UE5 o IA reales, ni revisión audiovisual exhaustiva. El cierre sigue `NEEDS_REVIEW`, no `COMPLETE`.
 
 ## 4. Decisiones de autor realmente pendientes
 1. **Día/mes exactos del inicio de 2383** y criterios para resolver hechos del mismo año cuando sean relevantes.

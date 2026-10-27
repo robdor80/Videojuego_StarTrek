@@ -322,7 +322,7 @@
       "id": "T22",
       "kind": "same_year",
       "expected_decision": "ALLOW",
-      "title": "Orden intranual respaldado por fechas",
+      "title": "Comparación de fechas exclusivamente ficticias del test",
       "input": {
         "event_year": 2383,
         "start_year": 2383,
@@ -330,7 +330,8 @@
         "cutoff_exact_date": "2383-10-01",
         "order_evidence": true
       },
-      "non_runtime_hypothetical": true
+      "non_runtime_hypothetical": true,
+      "test_dates_are_synthetic_not_canon": true
     },
     {
       "id": "T23",
@@ -488,7 +489,8 @@
         "cutoff_exact_date": "2383-10-01",
         "order_evidence": false
       },
-      "non_runtime_hypothetical": true
+      "non_runtime_hypothetical": true,
+      "test_dates_are_synthetic_not_canon": true
     }
   ]
 }

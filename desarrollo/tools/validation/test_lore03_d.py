@@ -14,12 +14,6 @@ class Lore03DTests(unittest.TestCase):
         item=copy.deepcopy(self.sc[id])
         if change: change(item["input"])
         return v.judge(item)
-    def reject_mutated_pack(self, mutation):
-        pack=copy.deepcopy(self.pack)
-        mutation(pack)
-        with self.assertRaises(v.InvalidLore03D): v.validate_scenario(pack["scenarios"][0]) if not mutation else self.assert_pack_invariants(pack)
-    def assert_pack_invariants(self, pack):
-        for c in pack["scenarios"]: v.validate_scenario(c)
     def test_01_integrity(self):
         result=v.validate()
         self.assertEqual(result["status"],"NEEDS_REVIEW_DOCUMENTARY")
