@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "bajoran_derna_dispute_2375",
+  "display_name": "Controversia bajorano-romulana de Derna",
+  "classification": "LOCALIZED_POLITICAL_CRISIS",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2375,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2375,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "bajoran_provisional_government",
+    "romulan_star_empire",
+    "united_federation_of_planets"
+  ],
+  "major_event_refs": [
+    "derna_hospital_dispute"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "DS9_SHADOWS_AND_SYMBOLS"
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_SHADOWS_AND_SYMBOLS",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "Una asistencia médica romulana sobre Derna genera dudas sobre el uso de una instalación aparentemente humanitaria.",
+  "historical_development": "La controversia en torno a su posible empleo militar eleva la tensión con Bajor y la Federación, sin abrir una guerra interestatal.",
+  "uncertainty_and_canon_limits": "Requiere contraste adicional de escenas y cronología de detalles. Ayuda médica no equivale a autorización militar indefinida.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Inspecciones acordadas de instalaciones civiles de doble uso.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "lore/diplomacy/historical_events_v0.1.json",
+    "lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ]
+}

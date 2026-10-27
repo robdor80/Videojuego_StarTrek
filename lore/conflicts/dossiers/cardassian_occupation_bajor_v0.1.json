@@ -1,0 +1,59 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "cardassian_occupation_bajor",
+  "display_name": "Ocupación cardassiana de Bajor",
+  "classification": "OCCUPATION",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": null,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2369,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "cardassian_union",
+    "bajoran_provisional_government"
+  ],
+  "major_event_refs": [
+    "cardassian_withdrawal_bajor",
+    "ds9_joint_arrangement"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "DS9_EMISSARY",
+    "DS9_DUET"
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_EMISSARY",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_DUET",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "La explotación y represión cardassianas provocan décadas de resistencia bajorana.",
+  "historical_development": "La retirada en torno a 2369 acaba con el control militar formal; DS9 pasa a gestión vinculada a la soberanía bajorana con apoyo federal.",
+  "uncertainty_and_canon_limits": "El comienzo ~2319/~2328 depende de presencia, anexión y control. El ID de Gobierno Provisional representa actor bajorano de referencia, no gobierno existente durante toda la ocupación.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Justicia transicional, desaparecidos y recuperación de archivos.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "lore/diplomacy/historical_events_v0.1.json",
+    "lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ]
+}

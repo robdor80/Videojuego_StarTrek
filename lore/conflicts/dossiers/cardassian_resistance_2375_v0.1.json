@@ -1,0 +1,62 @@
+{
+  "schema_version": "0.1.0",
+  "conflict_id": "cardassian_resistance_2375",
+  "display_name": "Resistencia cardassiana contra el Dominio",
+  "classification": "INTERNAL_REBELLION_WITH_WAR_LINK",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "start_date_or_range": {
+    "reference_year": 2375,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "end_date_or_range": {
+    "reference_year": 2375,
+    "precision": "YEAR_APPROXIMATE_OR_UNKNOWN"
+  },
+  "participant_refs": [
+    "cardassian_union",
+    "dominion",
+    "united_federation_of_planets"
+  ],
+  "major_event_refs": [
+    "damar_rebellion",
+    "cardassian_resistance",
+    "cardassian_fleet_switches"
+  ],
+  "treaty_refs": [],
+  "source_refs": [
+    "DS9_THE_DOGS_OF_WAR",
+    "DS9_WHAT_YOU_LEAVE_BEHIND"
+  ],
+  "provenance": [
+    {
+      "source_id": "DS9_THE_DOGS_OF_WAR",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    },
+    {
+      "source_id": "DS9_WHAT_YOU_LEAVE_BEHIND",
+      "source_class": "SCREEN_CANON",
+      "claim_scope": "Recorded source for historical context; interpretive details may remain inferred"
+    }
+  ],
+  "origin_and_causes": "La dominación del Dominio y los costes de la guerra aumentan el rechazo de sectores cardassianos.",
+  "historical_development": "Surge resistencia organizada y algunas unidades cambian de bando; la derrota del Dominio deja una Cardassia devastada.",
+  "uncertainty_and_canon_limits": "Subconflicto vinculado a dominion_war; no duplicar una guerra principal ni imponer una sola posición a toda Cardassia.",
+  "consequences_2383_context": "Historical effects may inform biographies, memory, damaged infrastructure, territorial claims and diplomacy, only when temporally and causally justified.",
+  "game_addition_example": "Reconstrucción civil y reconciliación de antiguos adversarios.",
+  "gameplay_activated": false,
+  "auto_bootstrap_future": false,
+  "auto_start_conflict": false,
+  "is_compulsory_future_script": false,
+  "runtime_state_mutation": false,
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "world_state_authority": "CoreRPG_ONLY",
+  "historical_contract_ref": "lore/conflicts/conflict_definition_contract.json",
+  "runtime_design_ref": "gameplay/conflict/conflict_war_index_v0.1.json",
+  "source_event_registries": [
+    "lore/diplomacy/historical_events_v0.1.json",
+    "lore/historical_events/lore03_a_chronology_index_v0.1.json"
+  ],
+  "parent_conflict_id": "dominion_war"
+}
