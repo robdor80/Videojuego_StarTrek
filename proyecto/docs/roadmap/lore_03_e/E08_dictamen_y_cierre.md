@@ -24,3 +24,11 @@ No se afirman contradicciones canónicas resueltas donde la evidencia admite má
 5. Tras fusión autorizada, verificar commit de merge, checks posteriores y regularizar estado mediante PR administrativa, **nunca antes**.
 
 **Dictamen propuesto:** base histórica **documentalmente preparada con reservas explícitas**; no implementación certificada ni cierre administrativo definitivo de LORE-03. Esta propuesta permanece sujeta a pruebas/CI/PR y autorización de merge.
+
+## Evidencia Git y CoreRPG independiente
+En base main@5dfaa63167ccaf300e4d2bf52d97577e16d19654 se confirmaron fusiones de PR #46/#47, eliminación de ambas ramas y 13 workflows exitosos. La PR Draft de E es #49 (sin fusionar); primera publicación 34f117c2d214bd39ddad01dd30a81addeb8ac56b, con dos ejecuciones E satisfactorias y una de A sobre ese commit, y diff de trece archivos añadidos exclusivamente de E.
+
+El contraste independiente del CoreRPG (main@4f282863737bcd8f5add401202a9e1064c133672) confirma primitives de WorldState, Knowledge, Persistence v3, ActionEngine/Simulation 4.10 y ContextBuilder 4.12. Sin embargo, no existe todavía planificador de tiempo/colas, engine autónomo de historia galáctica ni prueba de Star Trek Content Pack y UE5. **La ausencia de esa integración sigue siendo deuda técnica y NO impide un cierre exclusivamente documental.**
+
+## Puerta de regularización futura identificada
+El validador existente desarrollo/tools/validation/validate_lore03_a.py exige explícitamente la fila «E — Auditoría global | TODO» en CONTENT_STATUS.md (condición de su estado anterior). **Tras la fusión autorizada**, la PR administrativa tendrá que actualizar de forma trazable esta condición para aceptar E COMPLETE solo con referencia verificada al merge, y entonces actualizar CONTENT_STATUS. No cambiar esa puerta durante la PR de desarrollo ni simular prematuramente la fusión.
