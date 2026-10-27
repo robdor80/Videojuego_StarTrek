@@ -16,7 +16,7 @@ class Lore03DTests(unittest.TestCase):
         return v.judge(item)
     def test_01_integrity(self):
         result=v.validate()
-        self.assertEqual(result["status"],"NEEDS_REVIEW_DOCUMENTARY")
+        self.assertEqual(result["status"],"COMPLETE_DOCUMENTARY")
         self.assertGreaterEqual(result["cases"],30)
         self.assertIs(result["runtime_verified"],False)
     def test_02_canonical_eras_and_future(self):
@@ -100,6 +100,33 @@ class Lore03DTests(unittest.TestCase):
     def test_45_fake_status_is_invalid(self):
         x=copy.deepcopy(self.sc["T13"]);x["non_runtime_hypothetical"]=False
         with self.assertRaises(v.InvalidLore03D):v.validate_scenario(x)
+
+    def test_46_authorized_documentary_closure(self):
+        self.assertEqual(v.validate_closure(self.pack)["pr_number"],46)
+    def test_47_reject_forged_merge_sha(self):
+        x=copy.deepcopy(self.pack);x["closure"]["merge_commit_sha"]="sha-false"
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_48_reject_forged_merge_date(self):
+        x=copy.deepcopy(self.pack);x["closure"]["merged_at"]="2026-10-27T00:00:00Z"
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_49_reject_runtime_claim(self):
+        x=copy.deepcopy(self.pack);x["closure"]["runtime_activated"]=True
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_50_reject_incorrect_branch_deletion_claim(self):
+        x=copy.deepcopy(self.pack);x["closure"]["branch_deleted_at_audit"]=True
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_51_reject_forged_checks(self):
+        x=copy.deepcopy(self.pack);x["closure"]["check_run_ids"]=[123,456]
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_52_reject_unauthorized_closure(self):
+        x=copy.deepcopy(self.pack);x["closure"]["approved_merge"]=False
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_53_reject_forged_scope(self):
+        x=copy.deepcopy(self.pack);x["closure"]["scope"]="RUNTIME_DEPLOYED"
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
+    def test_54_reject_wrong_status(self):
+        x=copy.deepcopy(self.pack);x["status"]="NEEDS_REVIEW_DOCUMENTARY"
+        with self.assertRaises(v.InvalidLore03D): v.validate_closure(x)
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1.0",
-  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "status": "COMPLETE_DOCUMENTARY",
   "scope": "EDITORIAL_REFERENCE_ONLY",
   "world_state_authority": "CoreRPG_ONLY",
   "campaign_start_year_proposed": 2383,
@@ -492,5 +492,23 @@
       "non_runtime_hypothetical": true,
       "test_dates_are_synthetic_not_canon": true
     }
-  ]
+  ],
+  "closure": {
+    "pr_number": 46,
+    "merged_to": "main",
+    "merged_at": "2026-10-27T12:41:51Z",
+    "merge_commit_sha": "6aafca0ef74787184c840c82a92386ff05f532f4",
+    "approved_merge": true,
+    "source_head_sha": "4db0dc7d3ccdb468594d9fde6789beae83ddfe7f",
+    "scope": "DOCUMENTARY_ONLY",
+    "runtime_activated": false,
+    "branch_deleted_at_audit": false,
+    "checks_after_merge": "success",
+    "check_run_ids": [
+      40505811905,
+      40505812149
+    ],
+    "tests_documentary": 45,
+    "scenario_count": 35
+  }
 }
