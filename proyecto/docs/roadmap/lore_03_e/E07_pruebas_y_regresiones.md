@@ -21,3 +21,8 @@ Comprobar diff completo; confirmar ninguna modificación de main ni de sistemas 
 | IA cambia WorldState | REJECT |
 | Testigo nacido después del suceso | REJECT |
 | Campañas aisladas divergentes bajo CoreRPG | ALLOW conceptual; NO_RUNTIME_VERIFIED |
+
+## Evidencia efectiva en GitHub — HEAD inicial de E
+Commit de la PR: 34f117c2d214bd39ddad01dd30a81addeb8ac56b. GitHub Actions completó satisfactoriamente las ejecuciones #40510231491 (E, push), #40510324035 (E, pull request) y #40510324022 (regresión de LORE-03A). En los dos jobs E aparecen como success: compilación + validador + tests de mutaciones E, regresión A–D y regresión LORE-01D/02E. Diff entre la base 5dfaa63167ccaf300e4d2bf52d97577e16d19654 y dicho HEAD: exactamente trece archivos agregados; cero modificaciones/eliminaciones de documentación o runtime previo.
+
+**Condición:** la evidencia es específica de ese SHA. Toda ampliación posterior de la PR cambia HEAD y requiere nuevos checks; la presente actualización amplía precisamente la evidencia de CoreRPG. No declarar CI del nuevo HEAD como verde hasta observarla.
