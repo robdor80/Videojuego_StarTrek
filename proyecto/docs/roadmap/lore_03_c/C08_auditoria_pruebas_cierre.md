@@ -29,3 +29,20 @@
 
 ## Procedimiento de cierre administrativo posterior
 Con PR revisada, CI verde y autorización expresa del autor: fusionar, verificar HEAD, actualizar estado de C con PR/SHA reales en otro cambio administrativo si el validador de A lo necesita, y eliminar rama solo con permiso. Nunca registrar pruebas futuras como ya ejecutadas.
+
+## Evidencia técnica preliminar en PR #44 (2026-10-27)
+**Commit ensayado:** `85a194006ae75bf156063b6309527c94c0e49d02`. **GitHub Actions:** [ejecución #40500182006](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40500182006), job `documentary-integrity`, resultado `success`.
+
+| Prueba | Resultado obtenido |
+|---|---|
+| LORE-03C — validador y 40 casos/test de mutación | 40/40 `OK` |
+| LORE-03A — regresión documental | 49/49 `OK` |
+| LORE-03B — regresión documental | 36/36 `OK` |
+| LORE-01D — regresión documental | 15/15 `OK` |
+| LORE-02E — regresión documental | 27/27 `OK` |
+| **Total verificable** | **167/167** |
+
+También se verificó el éxito de los pasos `py_compile`, validadores 03A/B/01D/02E y referencias de la batería. El resultado corresponde al commit anterior y **no constituye evidencia de un futuro merge** ni de ejecución CoreRPG/UE5; cualquier cambio posterior requiere nueva comprobación de CI. Se conserva el estado `NEEDS_REVIEW_DOCUMENTARY` hasta autorización y cierre administrativo con evidencia real.
+
+### Dictamen limitado
+Los 13 casos y seis patrones son consistentes con las referencias locales y con los invariantes probados. No se certifica un muestreo exhaustivo del canon episodio por episodio, calidad de diálogo IA en producción ni integridad de estados vivos; quedan fuera de alcance. No se encontraron bloqueos documentales en la muestra automatizada. La PR se puede someter a revisión humana **sin** activar auto-merge.
