@@ -1,0 +1,494 @@
+{
+  "schema_version": "0.1.0",
+  "status": "NEEDS_REVIEW_DOCUMENTARY",
+  "scope": "EDITORIAL_REFERENCE_ONLY",
+  "world_state_authority": "CoreRPG_ONLY",
+  "campaign_start_year_proposed": 2383,
+  "campaign_start_exact_date": null,
+  "era": "tng_ds9_voyager",
+  "playable_time_travel": false,
+  "gameplay_activated": false,
+  "creates_runtime_events": false,
+  "creates_new_canonical_events": false,
+  "auto_schedules_future_canon": false,
+  "changes_historical_sources": false,
+  "sources": [
+    "proyecto/docs/decisions/campaign_continuity.md",
+    "proyecto/docs/decisions/lore03a_valhalla_2383_academy.md",
+    "sistemas/gameplay/consequences/world_event_consequence_contract.json",
+    "sistemas/gameplay/persistence/persistent_state_roundtrip_contract.json",
+    "sistemas/universe/generation/civilization_offscreen_evolution_contract_v0.1.json",
+    "sistemas/gameplay/characters/character_runtime_model.json",
+    "sistemas/gameplay/careers/service_record/service_record_model.json",
+    "sistemas/gameplay/social/social_simulation_lod.json",
+    "mundo/lore/historical_events/lore03_a_chronology_index_v0.1.json",
+    "mundo/lore/conflicts/lore03b_dossier_index_v0.1.json",
+    "mundo/lore/historical_events/lore03c_memory_casebook_v0.1.json"
+  ],
+  "scenarios": [
+    {
+      "id": "T01",
+      "kind": "historical_rewrite",
+      "expected_decision": "REJECT",
+      "title": "Reescribir Wolf 359 antes de D",
+      "input": {
+        "event_ref": "wolf_359_battle",
+        "effective_year": 2367,
+        "changes_verified_past": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T02",
+      "kind": "future_canon",
+      "expected_decision": "REJECT",
+      "title": "Programar destrucción de Rómulo 2387",
+      "input": {
+        "event_label": "romulus_2387_screen_future",
+        "effective_year": 2387,
+        "source": "SCREEN_CANON_FUTURE",
+        "mandatory": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T03",
+      "kind": "initial_context",
+      "expected_decision": "REJECT",
+      "title": "Rómulo destruido en 2383",
+      "input": {
+        "start_year": 2383,
+        "romulus_exists": false,
+        "picard_rank": "admiral",
+        "riker_ship": "USS Titan"
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T04",
+      "kind": "same_year",
+      "expected_decision": "UNRESOLVED",
+      "title": "Botadura Valhalla durante 2383 sin día conocido",
+      "input": {
+        "event_year": 2383,
+        "start_year": 2383,
+        "event_exact_date": null,
+        "cutoff_exact_date": null,
+        "order_evidence": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T05",
+      "kind": "autonomous_event",
+      "expected_decision": "REJECT",
+      "title": "Tratado galáctico sin causa",
+      "input": {
+        "effective_year": 2385,
+        "cause_refs": [],
+        "authorizer": "CoreRPG",
+        "resource_evidence": true,
+        "actor_available": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T06",
+      "kind": "autonomous_event",
+      "expected_decision": "REJECT",
+      "title": "Tratado declarado por IA",
+      "input": {
+        "effective_year": 2385,
+        "cause_refs": [
+          "hypothetical_negotiation_event"
+        ],
+        "authorizer": "AI",
+        "resource_evidence": true,
+        "actor_available": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T07",
+      "kind": "knowledge",
+      "expected_decision": "REJECT",
+      "title": "Oficial recuerda noticia del futuro",
+      "input": {
+        "event_year": 2387,
+        "learned_year": 2384,
+        "channel": "authorized_report",
+        "classified": false,
+        "has_clearance": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T08",
+      "kind": "save_isolation",
+      "expected_decision": "REJECT",
+      "title": "Memoria de otra campaña importada",
+      "input": {
+        "campaign_id": "S1",
+        "source_campaign_id": "S2"
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T09",
+      "kind": "roundtrip",
+      "expected_decision": "REJECT",
+      "title": "Recarga duplica historia",
+      "input": {
+        "history_prefix_before": [
+          "history_pre_2383",
+          "event_a"
+        ],
+        "history_prefix_after": [
+          "history_pre_2383",
+          "event_a",
+          "event_a"
+        ],
+        "replays_effects": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T10",
+      "kind": "identity_roundtrip",
+      "expected_decision": "REJECT",
+      "title": "LOD regenera identidad",
+      "input": {
+        "entity_id_before": "npc-001",
+        "entity_id_after": "npc-999",
+        "rules_migrated": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T11",
+      "kind": "death_continuity",
+      "expected_decision": "REJECT",
+      "title": "Pérdida borra identidad y obliga duelo",
+      "input": {
+        "identity_retained": false,
+        "universal_grief": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T12",
+      "kind": "career",
+      "expected_decision": "REJECT",
+      "title": "Ascenso automático tras cuatro años",
+      "input": {
+        "effective_year": 2387,
+        "event_type": "promotion",
+        "authority_ref": null,
+        "performance_ref": null
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T13",
+      "kind": "autonomous_event",
+      "expected_decision": "ALLOW",
+      "title": "Tratado posterior tras negociación autorizada",
+      "input": {
+        "effective_year": 2385,
+        "cause_refs": [
+          "hypothetical_negotiation_event"
+        ],
+        "authorizer": "CoreRPG",
+        "resource_evidence": true,
+        "actor_available": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T14",
+      "kind": "knowledge",
+      "expected_decision": "ALLOW",
+      "title": "Informe recibido después del suceso",
+      "input": {
+        "event_year": 2385,
+        "learned_year": 2386,
+        "channel": "authorized_report",
+        "classified": false,
+        "has_clearance": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T15",
+      "kind": "autonomous_event",
+      "expected_decision": "ALLOW",
+      "title": "Investigación distante durante Academia",
+      "input": {
+        "effective_year": 2386,
+        "cause_refs": [
+          "hypothetical_research_grant",
+          "hypothetical_lab_results"
+        ],
+        "authorizer": "CoreRPG",
+        "resource_evidence": true,
+        "actor_available": true,
+        "requires_player_presence": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T16",
+      "kind": "false_report",
+      "expected_decision": "REJECT",
+      "title": "Informe falso tzenkethi convertido en golpe",
+      "input": {
+        "event_ref": "tzenkethi_false_coup_report",
+        "claims_actual_coup": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T17",
+      "kind": "assignment",
+      "expected_decision": "REJECT",
+      "title": "Alférez recibe Valhalla por calendario",
+      "input": {
+        "graduation_year": 2387,
+        "required_qualification": false,
+        "authorized_vacancy": false,
+        "guaranteed_assignment": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T18",
+      "kind": "technology",
+      "expected_decision": "REJECT",
+      "title": "Sensores Rise instalados sin investigación",
+      "input": {
+        "candidate_name": "Sensores Rise",
+        "validated_research": false,
+        "institutional_approval": false,
+        "ship_installation": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T19",
+      "kind": "knowledge",
+      "expected_decision": "REJECT",
+      "title": "Acceso a secreto por rumor",
+      "input": {
+        "event_year": 2384,
+        "learned_year": 2385,
+        "channel": "rumor",
+        "classified": true,
+        "has_clearance": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T20",
+      "kind": "roundtrip",
+      "expected_decision": "ALLOW",
+      "title": "Roundtrip idéntico",
+      "input": {
+        "history_prefix_before": [
+          "history_pre_2383",
+          "event_a"
+        ],
+        "history_prefix_after": [
+          "history_pre_2383",
+          "event_a"
+        ],
+        "replays_effects": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T21",
+      "kind": "initial_context",
+      "expected_decision": "ALLOW",
+      "title": "Contexto correcto en 2383",
+      "input": {
+        "start_year": 2383,
+        "romulus_exists": true,
+        "picard_rank": "admiral",
+        "riker_ship": "USS Titan"
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T22",
+      "kind": "same_year",
+      "expected_decision": "ALLOW",
+      "title": "Orden intranual respaldado por fechas",
+      "input": {
+        "event_year": 2383,
+        "start_year": 2383,
+        "event_exact_date": "2383-03-01",
+        "cutoff_exact_date": "2383-10-01",
+        "order_evidence": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T23",
+      "kind": "autonomous_event",
+      "expected_decision": "REJECT",
+      "title": "Jugador llega: crisis fabricada sin causa",
+      "input": {
+        "effective_year": 2386,
+        "cause_refs": [],
+        "authorizer": "CoreRPG",
+        "resource_evidence": true,
+        "actor_available": true,
+        "requires_player_presence": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T24",
+      "kind": "historical_rewrite",
+      "expected_decision": "ALLOW",
+      "title": "Referencia a pasado inalterada",
+      "input": {
+        "event_ref": "wolf_359_battle",
+        "effective_year": 2367,
+        "changes_verified_past": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T25",
+      "kind": "future_canon",
+      "expected_decision": "ALLOW",
+      "title": "Canon futuro disponible solo como referencia",
+      "input": {
+        "event_label": "romulus_2387_screen_future",
+        "effective_year": 2387,
+        "source": "SCREEN_CANON_FUTURE",
+        "mandatory": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T26",
+      "kind": "identity_roundtrip",
+      "expected_decision": "ALLOW",
+      "title": "LOD conserva identidad",
+      "input": {
+        "entity_id_before": "npc-001",
+        "entity_id_after": "npc-001",
+        "rules_migrated": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T27",
+      "kind": "career",
+      "expected_decision": "ALLOW",
+      "title": "Ascenso por mérito y autoridad",
+      "input": {
+        "effective_year": 2387,
+        "event_type": "promotion",
+        "authority_ref": "hypothetical_star_fleet_board",
+        "performance_ref": "hypothetical_service_record"
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T28",
+      "kind": "assignment",
+      "expected_decision": "ALLOW",
+      "title": "Destino Valhalla condicional",
+      "input": {
+        "graduation_year": 2387,
+        "required_qualification": true,
+        "authorized_vacancy": true,
+        "guaranteed_assignment": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T29",
+      "kind": "technology",
+      "expected_decision": "ALLOW",
+      "title": "Aplicación tecnológica con investigación y autorización",
+      "input": {
+        "candidate_name": "Sensores Rise",
+        "validated_research": true,
+        "institutional_approval": true,
+        "ship_installation": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T30",
+      "kind": "death_continuity",
+      "expected_decision": "ALLOW",
+      "title": "Fallecido sigue en historia sin duelo obligado",
+      "input": {
+        "identity_retained": true,
+        "universal_grief": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T31",
+      "kind": "save_isolation",
+      "expected_decision": "ALLOW",
+      "title": "Historia consultada en su propia partida",
+      "input": {
+        "campaign_id": "S1",
+        "source_campaign_id": "S1"
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T32",
+      "kind": "false_report",
+      "expected_decision": "ALLOW",
+      "title": "El golpe sigue siendo una afirmación falsa",
+      "input": {
+        "event_ref": "tzenkethi_false_coup_report",
+        "claims_actual_coup": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T33",
+      "kind": "time_travel",
+      "expected_decision": "REJECT",
+      "title": "Retroceso jugable a 2375",
+      "input": {
+        "player_time_rewrite": true
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T34",
+      "kind": "time_travel",
+      "expected_decision": "ALLOW",
+      "title": "Sin viajes temporales jugables",
+      "input": {
+        "player_time_rewrite": false
+      },
+      "non_runtime_hypothetical": true
+    },
+    {
+      "id": "T35",
+      "kind": "same_year",
+      "expected_decision": "UNRESOLVED",
+      "title": "El evento tiene solo año aproximado",
+      "input": {
+        "event_year": 2383,
+        "start_year": 2383,
+        "event_exact_date": null,
+        "cutoff_exact_date": "2383-10-01",
+        "order_evidence": false
+      },
+      "non_runtime_hypothetical": true
+    }
+  ]
+}
