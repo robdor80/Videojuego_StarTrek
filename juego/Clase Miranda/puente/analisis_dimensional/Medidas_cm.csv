@@ -1,0 +1,27 @@
+﻿id;elemento;medida_cm;metodo;evidencia;incertidumbre
+D1_W_0.1;Puerta turbo: anchura de marco a Z=10.0;143.748;distancia entre impactos, hojas excluidas;portal_turbo_o0_z0.1_s+/-1;"muestreo; no barrido de colisión"
+D1_W_1.5;Puerta turbo: anchura de marco a Z=150.0;143.748;distancia entre impactos, hojas excluidas;portal_turbo_o0_z1.5_s+/-1;"muestreo; no barrido de colisión"
+D1_W_2.5;Puerta turbo: anchura de marco a Z=250.0;143.748;distancia entre impactos, hojas excluidas;portal_turbo_o0_z2.5_s+/-1;"muestreo; no barrido de colisión"
+D1_W_3.7;Puerta turbo: anchura de marco a Z=370.0;143.748;distancia entre impactos, hojas excluidas;portal_turbo_o0_z3.7_s+/-1;"muestreo; no barrido de colisión"
+D1_W_3.8;Puerta turbo: anchura de marco a Z=380.0;137.705;distancia entre impactos, hojas excluidas;portal_turbo_o0_z3.8_s+/-1;"muestreo; no barrido de colisión"
+D1_H;Puerta turbo: dintel central;388.434;rayo vertical menos suelo;"dintel_turbo_o0_s0; turbo_centro";suelo de cabina +0.1001 cm
+D2_W;Puertas +Y: anchura;163.64;impactos a 250 cm sobre suelo +60 cm;portal_Ypos_x6.49_z3.1_s+/-1;"lado X positivo medido; opuesto similar"
+D2_H;Puertas +Y: altura central;386.939;rayo vertical menos suelo;dintel_Ypos_x6.49;lado opuesto presenta ~1 cm de diferencia en hojas
+T1;Techo turbo central;424.807;primer impacto vertical sobre la zona;turbo_centro;"medida local; techo estratificado"
+T2;Techo turbo fuera de luminaria;468.326;primer impacto vertical sobre la zona;vertical_-7_-9;"medida local; techo estratificado"
+T3;Techo lateral;505.444;primer impacto vertical sobre la zona;vertical_5.3_-3.7;"medida local; techo estratificado"
+T4;Techo franja -Y;505.444;primer impacto vertical sobre la zona;vertical_0_-8.5;"medida local; techo estratificado"
+T5;Techo plataforma +Y;434.5;primer impacto vertical sobre la zona;vertical_0_0.6;"medida local; techo estratificado"
+T6;Techo lateral plataforma +Y;409.536;primer impacto vertical sobre la zona;vertical_5.5_0.6;"medida local; techo estratificado"
+C1_MIN;Consola central: superficie mínimo Z;143.933;extremos de vértices mundiales;superficie_central;identificación por geometría/material
+C1_MAX;Consola central: superficie máximo Z;143.934;extremos de vértices mundiales;superficie_central;identificación por geometría/material
+C2_MIN;Consola central: panel turbolcar mínimo Z;144.328;extremos de vértices mundiales;controles_centrales;identificación por geometría/material
+C2_MAX;Consola central: panel turbolcar máximo Z;177.224;extremos de vértices mundiales;controles_centrales;identificación por geometría/material
+L1_MIN;Consola lateral: superficie de control lcardtype mínimo Z;113.264;extremos de vértices mundiales;superficie_lateral;identificación por geometría/material
+L1_MAX;Consola lateral: superficie de control lcardtype máximo Z;117.72;extremos de vértices mundiales;superficie_lateral;identificación por geometría/material
+L2_MIN;Consola lateral: soporte gris bajo controles mínimo Z;108.462;extremos de vértices mundiales;soporte_lateral;identificación por geometría/material
+L2_MAX;Consola lateral: soporte gris bajo controles máximo Z;116.645;extremos de vértices mundiales;soporte_lateral;identificación por geometría/material
+S1;Capitán: asiento sobre podio;62.797;superficie superior en X=0 Y=-180 cm;mueble_0_-1.8;"punto local del cojín; curvatura"
+S2;Capitán: apoyabrazos superior sobre podio;84.896;máximo mundial menos suelo del podio;apoyabrazos_capitan;superficie inclinada
+S3;Silla lateral: asiento sobre suelo;77.476;rayo sobre cojín;mueble_4.7_-3.7;"punto representativo; seis sillas"
+P1;Paso entre consola central y base silla derecha;119.266;corte horizontal Z=10 cm Y=-370 cm;pasillo_d/i_y-3.7_z0.1;"sección local; no anchura mínima global"

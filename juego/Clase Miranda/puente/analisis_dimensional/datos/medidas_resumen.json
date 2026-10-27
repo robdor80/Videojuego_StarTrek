@@ -1,0 +1,210 @@
+[
+  {
+    "id": "D1_W_0.1",
+    "elemento": "Puerta turbo: anchura de marco a Z=10.0",
+    "medida_cm": 143.748,
+    "metodo": "distancia entre impactos, hojas excluidas",
+    "evidencia": "portal_turbo_o0_z0.1_s+/-1",
+    "incertidumbre": "muestreo; no barrido de colisión"
+  },
+  {
+    "id": "D1_W_1.5",
+    "elemento": "Puerta turbo: anchura de marco a Z=150.0",
+    "medida_cm": 143.748,
+    "metodo": "distancia entre impactos, hojas excluidas",
+    "evidencia": "portal_turbo_o0_z1.5_s+/-1",
+    "incertidumbre": "muestreo; no barrido de colisión"
+  },
+  {
+    "id": "D1_W_2.5",
+    "elemento": "Puerta turbo: anchura de marco a Z=250.0",
+    "medida_cm": 143.748,
+    "metodo": "distancia entre impactos, hojas excluidas",
+    "evidencia": "portal_turbo_o0_z2.5_s+/-1",
+    "incertidumbre": "muestreo; no barrido de colisión"
+  },
+  {
+    "id": "D1_W_3.7",
+    "elemento": "Puerta turbo: anchura de marco a Z=370.0",
+    "medida_cm": 143.748,
+    "metodo": "distancia entre impactos, hojas excluidas",
+    "evidencia": "portal_turbo_o0_z3.7_s+/-1",
+    "incertidumbre": "muestreo; no barrido de colisión"
+  },
+  {
+    "id": "D1_W_3.8",
+    "elemento": "Puerta turbo: anchura de marco a Z=380.0",
+    "medida_cm": 137.705,
+    "metodo": "distancia entre impactos, hojas excluidas",
+    "evidencia": "portal_turbo_o0_z3.8_s+/-1",
+    "incertidumbre": "muestreo; no barrido de colisión"
+  },
+  {
+    "id": "D1_H",
+    "elemento": "Puerta turbo: dintel central",
+    "medida_cm": 388.434,
+    "metodo": "rayo vertical menos suelo",
+    "evidencia": "dintel_turbo_o0_s0; turbo_centro",
+    "incertidumbre": "suelo de cabina +0.1001 cm"
+  },
+  {
+    "id": "D2_W",
+    "elemento": "Puertas +Y: anchura",
+    "medida_cm": 163.64,
+    "metodo": "impactos a 250 cm sobre suelo +60 cm",
+    "evidencia": "portal_Ypos_x6.49_z3.1_s+/-1",
+    "incertidumbre": "lado X positivo medido; opuesto similar"
+  },
+  {
+    "id": "D2_H",
+    "elemento": "Puertas +Y: altura central",
+    "medida_cm": 386.939,
+    "metodo": "rayo vertical menos suelo",
+    "evidencia": "dintel_Ypos_x6.49",
+    "incertidumbre": "lado opuesto presenta ~1 cm de diferencia en hojas"
+  },
+  {
+    "id": "T1",
+    "elemento": "Techo turbo central",
+    "medida_cm": 424.807,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "turbo_centro",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "T2",
+    "elemento": "Techo turbo fuera de luminaria",
+    "medida_cm": 468.326,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "vertical_-7_-9",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "T3",
+    "elemento": "Techo lateral",
+    "medida_cm": 505.444,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "vertical_5.3_-3.7",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "T4",
+    "elemento": "Techo franja -Y",
+    "medida_cm": 505.444,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "vertical_0_-8.5",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "T5",
+    "elemento": "Techo plataforma +Y",
+    "medida_cm": 434.5,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "vertical_0_0.6",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "T6",
+    "elemento": "Techo lateral plataforma +Y",
+    "medida_cm": 409.536,
+    "metodo": "primer impacto vertical sobre la zona",
+    "evidencia": "vertical_5.5_0.6",
+    "incertidumbre": "medida local; techo estratificado"
+  },
+  {
+    "id": "C1_MIN",
+    "elemento": "Consola central: superficie mínimo Z",
+    "medida_cm": 143.933,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "superficie_central",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "C1_MAX",
+    "elemento": "Consola central: superficie máximo Z",
+    "medida_cm": 143.934,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "superficie_central",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "C2_MIN",
+    "elemento": "Consola central: panel turbolcar mínimo Z",
+    "medida_cm": 144.328,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "controles_centrales",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "C2_MAX",
+    "elemento": "Consola central: panel turbolcar máximo Z",
+    "medida_cm": 177.224,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "controles_centrales",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "L1_MIN",
+    "elemento": "Consola lateral: superficie de control lcardtype mínimo Z",
+    "medida_cm": 113.264,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "superficie_lateral",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "L1_MAX",
+    "elemento": "Consola lateral: superficie de control lcardtype máximo Z",
+    "medida_cm": 117.72,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "superficie_lateral",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "L2_MIN",
+    "elemento": "Consola lateral: soporte gris bajo controles mínimo Z",
+    "medida_cm": 108.462,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "soporte_lateral",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "L2_MAX",
+    "elemento": "Consola lateral: soporte gris bajo controles máximo Z",
+    "medida_cm": 116.645,
+    "metodo": "extremos de vértices mundiales",
+    "evidencia": "soporte_lateral",
+    "incertidumbre": "identificación por geometría/material"
+  },
+  {
+    "id": "S1",
+    "elemento": "Capitán: asiento sobre podio",
+    "medida_cm": 62.797,
+    "metodo": "superficie superior en X=0 Y=-180 cm",
+    "evidencia": "mueble_0_-1.8",
+    "incertidumbre": "punto local del cojín; curvatura"
+  },
+  {
+    "id": "S2",
+    "elemento": "Capitán: apoyabrazos superior sobre podio",
+    "medida_cm": 84.896,
+    "metodo": "máximo mundial menos suelo del podio",
+    "evidencia": "apoyabrazos_capitan",
+    "incertidumbre": "superficie inclinada"
+  },
+  {
+    "id": "S3",
+    "elemento": "Silla lateral: asiento sobre suelo",
+    "medida_cm": 77.476,
+    "metodo": "rayo sobre cojín",
+    "evidencia": "mueble_4.7_-3.7",
+    "incertidumbre": "punto representativo; seis sillas"
+  },
+  {
+    "id": "P1",
+    "elemento": "Paso entre consola central y base silla derecha",
+    "medida_cm": 119.266,
+    "metodo": "corte horizontal Z=10 cm Y=-370 cm",
+    "evidencia": "pasillo_d/i_y-3.7_z0.1",
+    "incertidumbre": "sección local; no anchura mínima global"
+  }
+]

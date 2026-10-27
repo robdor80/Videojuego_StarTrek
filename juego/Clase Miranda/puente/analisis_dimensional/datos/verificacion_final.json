@@ -1,0 +1,76 @@
+{
+  "analysis_file": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Analisis.blend",
+  "base_sha256": "ce09283234a7678a1275d6aab828c1a51a8360e0757b6d8beebd63f446f43671",
+  "glb_sha256": "53ac9b52fe9fb4b19c5488d7265f6f7471383ae89071204fd3fc62232ca3889b",
+  "base_unchanged": true,
+  "glb_unchanged": true,
+  "original_objects_checked": 345,
+  "original_objects_changed": [],
+  "references_checked": [
+    {
+      "id": "capitan_Quinn",
+      "height_cm": 177.3000031709671,
+      "error_cm": 3.1709671475255163e-06
+    },
+    {
+      "id": "capitan_Alto",
+      "height_cm": 250.00000298023224,
+      "error_cm": 2.9802322387695312e-06
+    },
+    {
+      "id": "central_Quinn",
+      "height_cm": 177.30000019073486,
+      "error_cm": 1.9073488033427566e-07
+    },
+    {
+      "id": "central_Alto",
+      "height_cm": 250.0,
+      "error_cm": 0.0
+    },
+    {
+      "id": "lateral_Quinn",
+      "height_cm": 177.30000019073486,
+      "error_cm": 1.9073488033427566e-07
+    },
+    {
+      "id": "lateral_Alto",
+      "height_cm": 250.0,
+      "error_cm": 0.0
+    },
+    {
+      "id": "puerta_turbo_Quinn",
+      "height_cm": 177.30000019073486,
+      "error_cm": 1.9073488033427566e-07
+    },
+    {
+      "id": "puerta_turbo_Alto",
+      "height_cm": 250.0,
+      "error_cm": 0.0
+    },
+    {
+      "id": "cabina_Quinn",
+      "height_cm": 177.30000022565946,
+      "error_cm": 2.256594768823561e-07
+    },
+    {
+      "id": "cabina_Alto",
+      "height_cm": 249.99998811399564,
+      "error_cm": -1.1886004358530045e-05
+    },
+    {
+      "id": "puerta_Ypos_Quinn",
+      "height_cm": 177.2999882698059,
+      "error_cm": -1.173019404632214e-05
+    },
+    {
+      "id": "puerta_Ypos_Alto",
+      "height_cm": 250.00001192092896,
+      "error_cm": 1.1920928955078125e-05
+    }
+  ],
+  "units": {
+    "system": "METRIC",
+    "scale_length": 1.0
+  },
+  "passed": true
+}

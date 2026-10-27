@@ -1,0 +1,134 @@
+[
+  {
+    "id": "capitan_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      -94.9999988079071,
+      -270.0000047683716,
+      29.899999499320984
+    ],
+    "head_top_world_cm": 207.19999949932094,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "capitan_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      94.9999988079071,
+      -270.0000047683716,
+      29.899999499320984
+    ],
+    "head_top_world_cm": 279.899999499321,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "central_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      -200.0,
+      -525.0,
+      0.0
+    ],
+    "head_top_world_cm": 177.29999999999998,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "central_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      200.0,
+      -525.0,
+      0.0
+    ],
+    "head_top_world_cm": 250.0,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "lateral_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      528.000020980835,
+      -469.9999809265137,
+      0.0
+    ],
+    "head_top_world_cm": 177.29999999999998,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "lateral_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      528.000020980835,
+      -270.0000047683716,
+      0.0
+    ],
+    "head_top_world_cm": 250.0,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "puerta_turbo_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      -490.00000953674316,
+      -894.9999809265137,
+      0.0
+    ],
+    "head_top_world_cm": 177.29999999999998,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "puerta_turbo_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      -490.00000953674316,
+      -759.9999904632568,
+      0.0
+    ],
+    "head_top_world_cm": 250.0,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "cabina_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      -814.9999618530273,
+      -955.0000190734863,
+      0.10010000551119447
+    ],
+    "head_top_world_cm": 177.40010000551118,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "cabina_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      -814.9999618530273,
+      -790.0000095367432,
+      0.10010000551119447
+    ],
+    "head_top_world_cm": 250.1001000055112,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "puerta_Ypos_Quinn",
+    "height_cm": 177.29999999999998,
+    "feet_world_cm": [
+      580.0000190734863,
+      30.000001192092896,
+      60.00000238418579
+    ],
+    "head_top_world_cm": 237.30000238418575,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  },
+  {
+    "id": "puerta_Ypos_Alto",
+    "height_cm": 250.0,
+    "feet_world_cm": [
+      580.0000190734863,
+      125.0,
+      60.00000238418579
+    ],
+    "head_top_world_cm": 310.0000023841858,
+    "note": "Altura exacta pies-cabeza. Silueta esquematica; anchura y postura no antropometricas."
+  }
+]
