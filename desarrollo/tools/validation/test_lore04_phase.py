@@ -39,6 +39,6 @@ class AuditTests(unittest.TestCase):
     def test_24_no_main_write(self):self.assertNotIn("main",self.data.get("write_targets",[]))
     def test_25_phase_specific(self):
         if P=="B":self.reject(lambda d:d.update(preserved_block_4="COMPLETE"))
-        elif P=="E":self.reject(lambda d:d.update(prior_prs_fused=True))
+        elif P=="E":self.reject(lambda d:d.update(prior_prs_fused=False))
         else:self.assertEqual(validate(P)["status"],STATUS)
 if __name__=="__main__":unittest.main(verbosity=2)
