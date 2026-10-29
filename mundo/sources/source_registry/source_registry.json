@@ -1,6 +1,6 @@
 {
-  "registry_version": "0.43.0",
-  "last_updated": "2026-10-23",
+  "registry_version": "0.44.0",
+  "last_updated": "2026-10-29",
   "sources": [
     {
       "source_id": "ST_OFFICIAL_SERIES_MOVIES",
@@ -4536,6 +4536,164 @@
       "url": "https://www.startrek.com/news/everything-you-need-to-know-about-nero",
       "accessed_at": "2026-10-23",
       "notes": "LORE-03 A, horizonte 2379-2387. Referencia interpretativa, no guion de campaña."
+    },
+    {
+      "source_id": "TNG_DATA_DAY",
+      "source_type": "SCREEN_CANON",
+      "title": "Data's Day",
+      "work": "Star Trek: The Next Generation",
+      "season": 4,
+      "episode": 11,
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A: ancla de episodio y contexto civil corroborado con referencia editorial oficial; revisión de secuencia y minutaje detallado pendiente. No implica que toda la sociedad adopte la misma norma."
+    },
+    {
+      "source_id": "DS9_IN_THE_HANDS_OF_THE_PROPHETS",
+      "source_type": "SCREEN_CANON",
+      "title": "In the Hands of the Prophets",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 1,
+      "episode": 20,
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A: ancla de episodio y contexto civil corroborado con referencia editorial oficial; revisión de secuencia y minutaje detallado pendiente. No implica que toda la sociedad adopte la misma norma."
+    },
+    {
+      "source_id": "DS9_HOUSE_OF_QUARK",
+      "source_type": "SCREEN_CANON",
+      "title": "The House of Quark",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 3,
+      "episode": 3,
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A: ancla de episodio y contexto civil corroborado con referencia editorial oficial; revisión de secuencia y minutaje detallado pendiente. No implica que toda la sociedad adopte la misma norma."
+    },
+    {
+      "source_id": "DS9_THE_VISITOR",
+      "source_type": "SCREEN_CANON",
+      "title": "The Visitor",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 4,
+      "episode": 3,
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A: ancla de episodio y contexto civil corroborado con referencia editorial oficial; revisión de secuencia y minutaje detallado pendiente. No implica que toda la sociedad adopte la misma norma."
+    },
+    {
+      "source_id": "DS9_PROGRESS",
+      "source_type": "SCREEN_CANON",
+      "title": "Progress",
+      "work": "Star Trek: Deep Space Nine",
+      "season": 1,
+      "episode": 15,
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A: ancla de episodio y contexto civil corroborado con referencia editorial oficial; revisión de secuencia y minutaje detallado pendiente. No implica que toda la sociedad adopte la misma norma."
+    },
+    {
+      "source_id": "L04A_ST_FAMILY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek Picard watch guide: Family",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/your-ultimate-star-trek-picard-watch-guide",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_DATA_DAY",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "10 family-centered Star Trek episodes",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/10-family-centered-star-trek-episodes-for-the-holidays",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_SCHOOL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek DS9 modern balance science and religion",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/deep-space-nine-modern-balance-science-religion",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_HOUSE_QUARK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Best of Quark Episodes",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/best-of-quark-episodes",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_VISITOR",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Sisko one of the greatest fathers in TV history",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/benjamin-sisko-is-one-of-the-greatest-fathers-in-tv-history",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_MULLIBOK",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Kira Nerys' Finest Hours",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/kira-nerys-finest-hours",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_FERENGI_REFORM",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Ishka of Ferenginar: Mother of a Movement",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/ishka-of-ferenginar-mother-of-a-movement",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_BASEBALL",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek DS9 shows baseball is a game worth playing",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/game-worth-playing-deep-space-nine-baseball",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_DUET",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Everything You Need to Know About Cardassians",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/everything-you-need-to-know-cardassians",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_HOMEFRONT",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Guide to Star Trek's Bad Admirals",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/a-guide-to-star-treks-bad-admirals",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_REJOINED",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek Star-Crossed Romances",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/star-trek-star-crossed-romances",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
+    },
+    {
+      "source_id": "L04A_ST_LATINUM",
+      "source_type": "OFFICIAL_REFERENCE",
+      "title": "Star Trek 101: Latinum",
+      "publisher": "StarTrek.com / Paramount",
+      "url": "https://www.startrek.com/news/star-trek-101-latinum",
+      "accessed_at": "2026-10-29",
+      "notes": "LORE-04A cross-check: review of audiovisual scene remains the final authority. Not independent SCREEN_CANON."
     }
   ]
 }

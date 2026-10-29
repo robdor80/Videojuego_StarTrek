@@ -1,0 +1,48 @@
+name: LORE-04A — Sociedad y vida civil (documental)
+on:
+  push:
+    branches: [main, "docs/lore04a-vida-civil-20261029"]
+    paths:
+      - "proyecto/docs/roadmap/lore_04_a/**"
+      - "proyecto/docs/roadmap/lore_04_master_plan_v0.1.md"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/validation/consistency/lore04a*"
+      - "desarrollo/tools/validation/*lore04_a*"
+      - ".github/workflows/lore04-a-civil-life.yml"
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/lore_04_a/**"
+      - "proyecto/docs/roadmap/lore_04_master_plan_v0.1.md"
+      - "mundo/sources/source_registry/source_registry.json"
+      - "desarrollo/validation/consistency/lore04a*"
+      - "desarrollo/tools/validation/*lore04_a*"
+      - ".github/workflows/lore04-a-civil-life.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  documentary-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: LORE-04A compile, validation and 40 mutation tests
+        run: |
+          python -m py_compile desarrollo/tools/validation/validate_lore04_a.py desarrollo/tools/validation/test_lore04_a.py
+          python desarrollo/tools/validation/validate_lore04_a.py
+          python desarrollo/tools/validation/test_lore04_a.py
+      - name: Regression of existing LORE-01, LORE-02 and LORE-03 contracts
+        run: |
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py
+          python desarrollo/tools/validation/validate_lore03_a.py
+          python desarrollo/tools/validation/test_lore03_a.py
+          python desarrollo/tools/validation/validate_lore03_e.py
+          python desarrollo/tools/validation/test_lore03_e.py

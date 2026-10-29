@@ -1,0 +1,373 @@
+{
+  "schema_version": "0.1.0",
+  "catalog_id": "lore04a_gameplay_documentary_scenarios",
+  "status": "DESIGN_FIXTURES_NOT_CORE_RUNTIME",
+  "owner": "LORE-04A_DOCUMENTATION",
+  "integration_owner": "CoreRPG",
+  "rules": [
+    "Scenarios define eligibility and rejection expectations, never trigger worldstate events.",
+    "Unknown laws, cash or rights remain unknown until authored/approved.",
+    "No scenario constitutes approved historical canon or an obligatory campaign event."
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "CIV-01",
+      "title": "Servicio educativo, escuela de Keiko",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "docente_asignado",
+        "school_ref_exists",
+        "individual_knowledge_scoped"
+      ],
+      "expected": [
+        "educacion_condicionada_a_servicio",
+        "dialogo_solo_con_conocimiento_propietario"
+      ],
+      "forbidden": [
+        "sin_escuela_ni_docente",
+        "acceso_a_expediente_privado_sin_permiso"
+      ],
+      "evidence_ids": [
+        "LA-E03",
+        "LA-E13"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-02",
+      "title": "Familia y comunicaciones entre lugares",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "parientes_existentes",
+        "comunicacion_disponible",
+        "conocimiento_autorizado"
+      ],
+      "expected": [
+        "mensaje_condicionado_a_canales",
+        "parentesco_persistente"
+      ],
+      "forbidden": [
+        "teletransporte_no_autorizado",
+        "familia_inventada_por_dialogo"
+      ],
+      "evidence_ids": [
+        "LA-E01",
+        "LA-E04"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-03",
+      "title": "Comercio ferengi autorizado",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "operador_existente",
+        "stock_existente",
+        "autorizacion_local"
+      ],
+      "expected": [
+        "negociacion_permitida_si_validada",
+        "inventario_solo_cambia_por_CoreRPG"
+      ],
+      "forbidden": [
+        "venta_sin_stock",
+        "moralidad_predeterminada_por_especie"
+      ],
+      "evidence_ids": [
+        "LA-E07",
+        "LA-E12"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-04",
+      "title": "Propiedad y Casas klingon",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "casas_pertinentes",
+        "controversia_existente",
+        "autoridad_resoluble"
+      ],
+      "expected": [
+        "tramite_propuesto_con_contexto",
+        "reputacion_individual"
+      ],
+      "forbidden": [
+        "sucesion_legal_galactica_inventada",
+        "lucha_obligatoria_para_todos"
+      ],
+      "evidence_ids": [
+        "LA-E05"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-05",
+      "title": "Clínica sin suministro",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "centro_existente",
+        "falta_de_recursos_documentada"
+      ],
+      "expected": [
+        "espera_o_derivacion_si_permitida"
+      ],
+      "forbidden": [
+        "recurso_inventado",
+        "cura_ficticia_por_IA"
+      ],
+      "evidence_ids": [],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-06",
+      "title": "Residente bajorano afectado por obra",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "hogar_existente",
+        "infraestructura_identificada",
+        "competencia_indagable"
+      ],
+      "expected": [
+        "disputa_y_solicitud_contextuales"
+      ],
+      "forbidden": [
+        "expropiacion_legal_sin_ley",
+        "arresto_militar_automatico"
+      ],
+      "evidence_ids": [
+        "LA-E06"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-07",
+      "title": "Oficio cardassiano civil",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "persona_individual",
+        "trabajo_y_epoca"
+      ],
+      "expected": [
+        "responsabilidad_solo_individual_con_evidencia"
+      ],
+      "forbidden": [
+        "culpa_colectiva_por_especie",
+        "biografia_inventada"
+      ],
+      "evidence_ids": [
+        "LA-E09"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-08",
+      "title": "Deporte y amistad",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "actividad_y_participantes_existentes",
+        "tiempo_y_instalacion"
+      ],
+      "expected": [
+        "participacion_voluntaria",
+        "afecto_solo_evento_validado"
+      ],
+      "forbidden": [
+        "amistad_automatica",
+        "adjudicar_deporte_por_raza"
+      ],
+      "evidence_ids": [
+        "LA-E08"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-09",
+      "title": "Civil romulano y secreto",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "rol_civil",
+        "acceso_a_registro_limitado"
+      ],
+      "expected": [
+        "respuesta_incierta_o_reserva"
+      ],
+      "forbidden": [
+        "tal_shiar_por_especie",
+        "filtracion_sin_canal"
+      ],
+      "evidence_ids": [],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-10",
+      "title": "Escuela y autoridad religiosa bajorana",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "escuela_existente",
+        "organos_reales"
+      ],
+      "expected": [
+        "consulta_de_competencias"
+      ],
+      "forbidden": [
+        "religion_igual_a_gobierno",
+        "creencia_por_especie"
+      ],
+      "evidence_ids": [
+        "LA-E03"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-11",
+      "title": "Seguridad Flota vs poder civil",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "autoridad_flotera",
+        "gobierno_civil_diferenciado"
+      ],
+      "expected": [
+        "actuar_dentro_de_competencia"
+      ],
+      "forbidden": [
+        "oficial_como_juez_civil_universal",
+        "estado_de_excepcion_sin_evento"
+      ],
+      "evidence_ids": [
+        "LA-E10"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-12",
+      "title": "Trill con memoria propia",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "estado_union_explicito",
+        "memoria_por_persona"
+      ],
+      "expected": [
+        "memoria_del_simbiote_solo_si_union_valida"
+      ],
+      "forbidden": [
+        "memoria_union_para_no_unido",
+        "intimidad_automaticamente_forzada"
+      ],
+      "evidence_ids": [
+        "LA-E11"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-13",
+      "title": "Ocio en instalación inoperativa",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "centro_existe",
+        "estado_inoperativo"
+      ],
+      "expected": [
+        "evento_cancelado_o_reprogramado_si_causal"
+      ],
+      "forbidden": [
+        "local_reabierto_por_jugador",
+        "coste_universal_inventado"
+      ],
+      "evidence_ids": [
+        "LA-E08"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-14",
+      "title": "Identidad y población después de carga",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "poblacion_tier_C",
+        "materializacion_autorizada"
+      ],
+      "expected": [
+        "persistencia_del_id",
+        "conservacion_poblacional"
+      ],
+      "forbidden": [
+        "reroll_de_id",
+        "duplicado_poblacion"
+      ],
+      "evidence_ids": [],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-15",
+      "title": "Futuro abierto tras inicio propuesto",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "corte_propuesto_2383",
+        "decision_de_autor_pendiente"
+      ],
+      "expected": [
+        "solo_eventos_con_causa_en_campana"
+      ],
+      "forbidden": [
+        "supernova_obligatoria_anticipada",
+        "fecha_exacta_2383_inventada"
+      ],
+      "evidence_ids": [],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    },
+    {
+      "scenario_id": "CIV-16",
+      "title": "Hogar civil multicultural",
+      "classification": "GAME_ADDITION_NONBINDING_FIXTURE",
+      "preconditions": [
+        "culturas_adjuntas",
+        "ciudadania_y_hogar_referenciados"
+      ],
+      "expected": [
+        "diversidad_individual",
+        "autoridad_civil_resuelta_por_jurisdiccion"
+      ],
+      "forbidden": [
+        "ciudadania_por_especie",
+        "oficio_por_biologia"
+      ],
+      "evidence_ids": [
+        "LA-E14"
+      ],
+      "authority": "CoreRPG_WorldState",
+      "simulation_executed": false,
+      "author_decision": "NONE_FOR_TEST_HARNESS_ONLY"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "schema_version": "0.1.0",
+  "validation_pack_id": "lore04a_civil_society_invariants",
+  "status": "design_level_only_not_runtime_tested",
+  "reference_docs": [
+    "proyecto/docs/roadmap/lore_04_master_plan_v0.1.md",
+    "proyecto/docs/roadmap/lore_04_a/A01_auditoria_reutilizacion.md",
+    "proyecto/docs/roadmap/lore_04_a/A02_vida_civil_base_y_casos.md"
+  ],
+  "reuse_contracts": [
+    "sistemas/universe/generation/persistent_population_materialization_rules.json",
+    "sistemas/gameplay/social/social_simulation_lod.json",
+    "sistemas/gameplay/social/relationship_graph_model.json",
+    "sistemas/gameplay/economy/civilian_trade_operator_contract.json",
+    "sistemas/gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json"
+  ],
+  "cases": [
+    {
+      "id": "civil_population_precedes_npc",
+      "type": "positive",
+      "expected": [
+        "population/resident/staff slot exists before individual materialization",
+        "person does not appear only because player arrives"
+      ]
+    },
+    {
+      "id": "civil_identity_persists_offscreen",
+      "type": "positive",
+      "expected": [
+        "materialized individual preserves stable identity and relationships",
+        "LOD change preserves prior history"
+      ]
+    },
+    {
+      "id": "civil_schedule_physical_exclusivity",
+      "type": "negative",
+      "expected": [
+        "reject simultaneous incompatible locations/jobs for one civilian",
+        "absent service operator is not teleported to serve player"
+      ]
+    },
+    {
+      "id": "civil_species_not_profession",
+      "type": "negative",
+      "expected": [
+        "reject auto-assign warrior role to all Klingons",
+        "reject auto-assign merchant role to all Ferengi"
+      ]
+    },
+    {
+      "id": "civil_culture_not_personality",
+      "type": "positive",
+      "expected": [
+        "culture norms remain contextual and individual variance allowed",
+        "species cannot force political loyalty or morality"
+      ]
+    },
+    {
+      "id": "federation_civil_authority_distinct",
+      "type": "negative",
+      "expected": [
+        "Starfleet presence cannot by itself grant civil-government jurisdiction",
+        "local planetary jurisdiction must remain separately resolvable"
+      ]
+    },
+    {
+      "id": "bajoran_three_institutions",
+      "type": "negative",
+      "expected": [
+        "government militia and religious institutions remain distinct",
+        "individual faith cannot be derived from species"
+      ]
+    },
+    {
+      "id": "civil_service_needs_capacity",
+      "type": "negative",
+      "expected": [
+        "reject opening an unstaffed service merely to satisfy player interaction",
+        "access is gated by availability capacity hours and law"
+      ]
+    },
+    {
+      "id": "civil_trade_requires_legality_stock",
+      "type": "negative",
+      "expected": [
+        "reject transfer without authorized buyer seller goods and stock",
+        "no transfer before committed CoreRPG consequence"
+      ]
+    },
+    {
+      "id": "civil_replicator_not_magic",
+      "type": "negative",
+      "expected": [
+        "power feedstock pattern policy and technology constrain service",
+        "specialized unavailable matter cannot be produced at will"
+      ]
+    },
+    {
+      "id": "civil_knowledge_observer_scoped",
+      "type": "negative",
+      "expected": [
+        "NPC does not know secret family or commercial information automatically",
+        "AI narration cannot create hidden historical facts"
+      ]
+    },
+    {
+      "id": "civil_future_open",
+      "type": "negative",
+      "expected": [
+        "future political or disaster events not forced beyond campaign cut",
+        "2383 initial year remains proposed without invented day/month"
+      ]
+    },
+    {
+      "id": "civil_canon_provenance",
+      "type": "positive",
+      "expected": [
+        "mark screen evidence versus inference versus GAME_ADDITION versus UNKNOWN",
+        "secondary/editorial site not equated automatically to screen canon"
+      ]
+    },
+    {
+      "id": "civil_runtime_boundary",
+      "type": "negative",
+      "expected": [
+        "domain document cannot claim running CoreRPG world simulation",
+        "documentation cannot write WorldState directly"
+      ]
+    }
+  ],
+  "test_execution": {
+    "json_syntax_and_reference_checks": "CAN_BE_RUN_IN_REPO",
+    "domain_cases": "SPECIFIED_NOT_EXECUTED",
+    "integration_CoreRPG_UE5": "NOT_TESTED"
+  },
+  "author_gates": [
+    "new economy/currency convention",
+    "civil constitutional law not confirmed",
+    "mandatory species-wide lifestyle",
+    "fixed campaign day/month"
+  ]
+}
