@@ -117,7 +117,9 @@ Los logs de los fallos se conservan junto a los finales. El recuento de la tabla
 
 ## 8. Publicación GitHub
 
-Commits de desarrollo: `02ba20c` (integración), `59c528a` (harness/toolchain/CI), `c842b60` (ciclo/recuperación/captura). Los commits de entrega añaden auditoría, resultados, manifiestos y enlaces. Rama específica publicada; PR **Draft a main**, sin fusión ni borrado de rama. La URL concreta se registra en el README F02 y en el mensaje de entrega al quedar creada.
+Commits de desarrollo: `02ba20c` (integración), `59c528a` (harness/toolchain/CI), `c842b60` (ciclo/recuperación/captura). `f17120f` añade auditoría, resultados y manifiestos; un commit posterior registra los enlaces de publicación. Rama específica publicada; [PR #60 **Draft a main**](https://github.com/robdor80/Videojuego_StarTrek/pull/60), verificada abierta y sin conflictos, sin fusión ni borrado de rama.
+
+Validación adicional independiente de Windows: [GitHub Actions, integración nativa real, run 40894930154](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/40894930154), **success** sobre `f17120fb911adee9e746c0b8c4b94b2f5fca6325`. Esa CI compila el Core fijado y ejecuta los 15 tests del Host en Linux. No sustituye las pruebas UE5 ejecutadas en MSI ni se suma otra vez al recuento de casos.
 
 Se conservan directamente en GitHub fuentes, configuración, scripts, tests, inventario, XML/JSON resumidos y captura de 51 KB. Los paquetes binarios y logs se publican en Drive para mantener la política de almacenamiento. El guardarraíl Git se ejecuta antes de cada commit y no presenta infracciones.
 
