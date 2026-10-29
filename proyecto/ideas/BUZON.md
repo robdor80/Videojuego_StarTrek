@@ -165,6 +165,20 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** inscripción solicitada expresamente después de discutir la viabilidad técnica y precisar el uso exclusivamente personal del juego y la simplificación de las animaciones corporales.
 - **Ejecución:** no iniciada por este registro; la aprobación conceptual no certifica ajedrez funcional ya programado.
 
+### IDEA-0013 — Homenaje a Sir Patrick Stewart y Jean-Luc Picard eterno
+- **Fecha de aprobación expresa:** 2026-10-29.
+- **Estado:** APROBADA CONCEPTUALMENTE; planificación, integración y pruebas pendientes.
+- **Origen:** fallecimiento de **Sir Patrick Stewart (1940–2026)** el 28-10-2026, anunciado el 29-10-2026; el autor desea rendir homenaje a quien interpretó a su personaje favorito.
+- **Compromiso A — Homenaje general del videojuego:** dedicatoria permanente y discreta al actor, visible en presentación y/o créditos. La muerte real del actor no afecta al destino ficticio de Picard.
+- **Compromiso B — Sala de reuniones de Valhalla:** retrato, placa e información interactiva opcional sobre **el legado de Jean-Luc Picard**, visitables dentro de una sala que sigue siendo funcional; homenaje a su trayectoria, **no funeral del personaje**.
+- **Compromiso C — PICARD ETERNO:** el almirante Picard continúa **vivo y presente** en el canon propio; nunca morirá ni desaparecerá automáticamente por edad, acontecimientos aleatorios, simulación, canon televisivo ni por la muerte de Patrick Stewart. La protección solo podrá revisarse por nueva decisión expresa del autor.
+- **Límites narrativos:** continuidad y ubicación coherentes, sin convertir al NPC en omnisciente, omnipresente ni cambiar arbitrariamente el rango o destino de otros personajes.
+- **Ficha detallada:** [IDEA-0013_homenaje_sir_patrick_stewart_picard_eterno.md](IDEA-0013_homenaje_sir_patrick_stewart_picard_eterno.md).
+- **Integración:** presentación y créditos, diseño de la sala de reuniones, lore de personajes, World State y pruebas de protección narrativa. Se conserva la separación entre CoreRPG genérico y reglas particulares Star Trek.
+- **Hitos candidatos:** PICARD-01–PICARD-07; ejecución UE5/Blender/CoreRPG/QA aún no iniciada.
+- **Decisión del autor:** aprueba expresamente las tres propuestas (general, sala de reuniones y Picard eterno) el 29-10-2026.
+- **Ejecución:** NO INICIADA por este registro; no se confunde documentación con elemento jugable ya implementado.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
