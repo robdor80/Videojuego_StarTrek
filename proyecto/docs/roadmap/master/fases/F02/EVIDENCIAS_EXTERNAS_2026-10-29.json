@@ -315,5 +315,8 @@
       "drive_file_id": "1FwmLhe6yiqt1uiMoBHWT-cMvos6Fnuvi",
       "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
     }
+  ],
+  "follow_up_indices": [
+    "EVIDENCIAS_REVISION_PR60_2026-10-29.json"
   ]
 }

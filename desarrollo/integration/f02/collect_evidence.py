@@ -128,7 +128,7 @@ logs += [(p,'documentary/'+p.name) for p in sorted(publish.glob('documentary-*.t
 logs += [(p,p.parent.name+'/'+p.name) for p in reports]
 logs += [(native/'original_files_verification.json','original_files_verification.json')]
 archive('F02-logs-and-results-20261029.zip',logs,'All build/test attempts, including initial failures and final successes',
-        'Core suite / native 15 / UE 5 / documentary 9','03_Logs')
+        'Core suite / native 15 / UE 6 / documentary 9','03_Logs')
 binary=[]
 for name in ('TrekF02Bridge.dll','TrekF02Bridge.lib','f02_tests.exe'):
     binary.append((native/'bridge-build/Release'/name,'native/'+name))

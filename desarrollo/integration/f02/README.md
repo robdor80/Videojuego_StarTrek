@@ -54,4 +54,6 @@ ctest --test-dir build/f02 -C Release --output-on-failure
 
 [Informe de ejecución](../../../proyecto/docs/roadmap/master/fases/F02/INFORME_EJECUCION_REAL_2026-10-29.md) · [Auditoría actual](../../../proyecto/docs/roadmap/master/fases/F02/AUDITORIA_OPERATIVA_2026-10-29.md).
 
+[Corrección posterior a auditoría PR #60](../../../proyecto/docs/roadmap/master/fases/F02/INFORME_REVISION_PR60_2026-10-29.md): una representación viva por identidad del fixture **y UWorld**; distintos mundos simultáneos comparten identidad Core y mantienen Actors distintos. La nueva regresión verifica reutilización, recreación, restore y cierre sin mutar el Core.
+
 No hay reloj de campaña, agenda persistente, bitácora causal, catálogo Trek de producción, proveedor IA, red, consola de Sensores ni distribución empaquetada. La recuperación probada cubre cierre/reapertura de sesión y un save válido, no la durabilidad frente a corte eléctrico o muerte del proceso durante una escritura. Cambiar el SHA de Core exige reauditar y repetir los tests. La certificación de ABI queda limitada a esta combinación de versiones y Win64; la CI Linux sólo verifica el Host nativo.

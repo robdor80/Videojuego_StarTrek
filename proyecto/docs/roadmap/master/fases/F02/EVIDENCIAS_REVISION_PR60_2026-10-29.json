@@ -1,0 +1,231 @@
+{
+  "index_version": 1,
+  "previous_index": "EVIDENCIAS_EXTERNAS_2026-10-29.json",
+  "drive_root": "https://drive.google.com/drive/folders/1mNjcJrP0JIyqATyYo56zoJG0NVYCUL5D",
+  "privacy": "Restricted, no public sharing",
+  "artifacts": [
+    {
+      "name": "F02-PR60-Represent-logs-20261029-1600.zip",
+      "purpose": "Regression reproduced before correction and final green suite; build/native/documentary/demo logs and protected metadata",
+      "date": "2026-10-29",
+      "size": 595254,
+      "sha256": "82615c7db4ffcbac2093a872ee656f00b7c722b1217abd371437c0c07907740f",
+      "platform": "Windows 11 MSI / UE 5.8.2 CL 56702186 / MSVC 19.51",
+      "test": "WorldScopedRepresentation red/green and all applicable tests",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\publish\\F02-PR60-Represent-logs-20261029-1600.zip",
+      "drive_folder": "03_Logs",
+      "drive_url": "https://drive.google.com/file/d/1OKnJ2eAaZiTJ7giue_gMexD7ISBx9O8P/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "members": [
+        {
+          "name": "logs/20261029-160016-unreal-build.log",
+          "size": 18407,
+          "sha256": "b034f6d526e72f8a98d3db83728fb7733170e0db0d3f89026eb58047f5e2e3b8"
+        },
+        {
+          "name": "logs/20261029-160057-unreal-tests.log",
+          "size": 267863,
+          "sha256": "0bd8a95950969908a23f38ba2e6967eed117a019f1da606ac243bd5e23068d60"
+        },
+        {
+          "name": "logs/20261029-160145-unreal-build.log",
+          "size": 2514,
+          "sha256": "e90bfae161111e0f3ee7f5a81c9df86c5c67de6f3bb9012f4be016cfffdea81b"
+        },
+        {
+          "name": "logs/20261029-160149-unreal-tests.log",
+          "size": 266313,
+          "sha256": "8ca7d049b72828ff52a0d3632a4ab65a15104e83c51dcfcb20f60641775ed9d7"
+        },
+        {
+          "name": "logs/20261029-160227-build.log",
+          "size": 888,
+          "sha256": "dfad0fc529e82cdae5f5ed370ecba580cc38dd370b8159e0d91dc5231403b4cb"
+        },
+        {
+          "name": "logs/20261029-160227-configure.log",
+          "size": 255,
+          "sha256": "b5dba0e69139e019cad93ef42eeec34b5b7f7e449df4b559b2faa03e2634c0e4"
+        },
+        {
+          "name": "logs/20261029-160227-test.log",
+          "size": 1707,
+          "sha256": "7084d8850f3daf0080878f984e66c49a2f3c592f8ac0983763f3c0e5cebaa789"
+        },
+        {
+          "name": "logs/20261029-160229-unreal-demo.log",
+          "size": 190202,
+          "sha256": "68a024d31fc7f25fabac1bd953d0d9b16447f7c2a5ffda57e209e8d7baebed03"
+        },
+        {
+          "name": "documentary/documentary-contracts.txt",
+          "size": 244,
+          "sha256": "d73b70daa88ad0671fad0d866722cde748ecd1898fd5e842cbc1ee0d2c8c1570"
+        },
+        {
+          "name": "documentary/documentary-p05.txt",
+          "size": 149,
+          "sha256": "cfa8065a8507b03c705b37bc1b0341fc3b75e6d8e6562019efb81681d6fb5f5e"
+        },
+        {
+          "name": "documentary/documentary-unit.txt",
+          "size": 790,
+          "sha256": "c83e11d01a3c8ad61083ee1df9d3027fdaf974f97553d3c44db18fb0ba7d0784"
+        },
+        {
+          "name": "20261029-160057-ue-report/index.json",
+          "size": 3766,
+          "sha256": "3da45ffda4a8c30a7eb1fa6417dabc93b3a6547275a22d8ec86214871543f59a"
+        },
+        {
+          "name": "20261029-160149-ue-report/index.json",
+          "size": 2898,
+          "sha256": "7fe593522302f38f90c33018abd3f693349823ed90104b9cd4b590f0f8df8efe"
+        },
+        {
+          "name": "native-tests.xml",
+          "size": 2622,
+          "sha256": "cca23c0b785af619e562013acaff9d7e18fc900f4a7a2c624d56cc504bec4348"
+        },
+        {
+          "name": "red-source.patch",
+          "size": 5903,
+          "sha256": "92863d48f1159a18dc33194bb20250f3db7c168dc422477ec5982e6fadb270b0"
+        },
+        {
+          "name": "git_status_before.txt",
+          "size": 1708,
+          "sha256": "c957a4b803abbc0f004816a788e3d692f0cf2c8e181eadd41fb3a5c6b392ad01"
+        },
+        {
+          "name": "ignored_before.txt",
+          "size": 1794504,
+          "sha256": "482cf5c6f513c3245f2a61632bb209813e8b3ff2e9afd84be6e3fc7b8fdf15a2"
+        },
+        {
+          "name": "original_files_before.json",
+          "size": 2865631,
+          "sha256": "f42d8f044267542036143109d6b5c3e813765ab86529eba767cde67e3d40d276"
+        },
+        {
+          "name": "tracked_before.txt",
+          "size": 171622,
+          "sha256": "1c4bb6d340e2e16273aa01202e650ac5f94edd37bc51c71fd2b9e5b46fff6137"
+        },
+        {
+          "name": "untracked_before.txt",
+          "size": 273469,
+          "sha256": "53aa6a49d9eea3e26d0a4127cad8f5b8c36272599c2ebe6edeac3b582dbc24a6"
+        },
+        {
+          "name": "original_files_verification.json",
+          "size": 185,
+          "sha256": "5fa5ec91d7c567b0ba300759ef5df379aeadb4d671a4c234ea1922bbc115e5d9"
+        },
+        {
+          "name": "source_manifest.json",
+          "size": 566,
+          "sha256": "f665ff7fae2638bece123c73a32bd8ab0d0561c6bf8245e357d058986587ffc4"
+        },
+        {
+          "name": "package_review_evidence.py",
+          "size": 7074,
+          "sha256": "bce852388690e66febfb60b4c17ab48ddc8bbd6dcf5f0eaf0a05c12e7e26ea28"
+        }
+      ],
+      "drive_file_id": "1OKnJ2eAaZiTJ7giue_gMexD7ISBx9O8P",
+      "verification": "Upload and metadata readback confirmed name, size, destination and owner-only permissions. SHA-256 is local; connector does not expose remote SHA-256."
+    },
+    {
+      "name": "F02-PR60-Represent-binaries-20261029-1600.zip",
+      "purpose": "Updated F02 module and existing native boundary; synthetic saves only, no engine or artistic content",
+      "date": "2026-10-29",
+      "size": 157063,
+      "sha256": "8a3064d3d3a4641a1201e9b3ba12fd67f1af2afd7983ccf30f11e77e4456751e",
+      "platform": "Windows 11 MSI / UE 5.8.2 CL 56702186 / MSVC 19.51",
+      "test": "UE 5.8.2 corrected Host runtime",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\publish\\F02-PR60-Represent-binaries-20261029-1600.zip",
+      "drive_folder": "04_Compilaciones",
+      "drive_url": "https://drive.google.com/file/d/1HbzuN3FbxfL_D2IOpZ3u95zae3w0ANto/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "members": [
+        {
+          "name": "ue/Binaries/Win64/UnrealEditor-F02CoreLab.dll",
+          "size": 239104,
+          "sha256": "cdbedb2d1e302bcf08f56f6c7870e86032bec9523aa6615e4d17a1b7ee51b6ed"
+        },
+        {
+          "name": "ue/Binaries/Win64/UnrealEditor.modules",
+          "size": 98,
+          "sha256": "3eb0ea5fde0dc700d8b0f5c04d331acba8108c2ca0313a024d704d998dcb8124"
+        },
+        {
+          "name": "ue/Binaries/Win64/TrekF02Bridge.dll",
+          "size": 91648,
+          "sha256": "b2a6b3f785a48cd18807b6df15319a79cf06ab83ea9938c89f1583f2b46bd285"
+        },
+        {
+          "name": "native/TrekF02Bridge.lib",
+          "size": 4102,
+          "sha256": "40d9765a743d004e4541ecaa0aa14543736955c31f8dd2aa2bc2043161804859"
+        },
+        {
+          "name": "native/f02_tests.exe",
+          "size": 53760,
+          "sha256": "e8edb1a228b4d81081cac81344aa9019c42741c8344f84b9f63146758747503b"
+        },
+        {
+          "name": "synthetic-saves/4B6055ED4A6468B3B3D9BC8BFB633481.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "synthetic-saves/78814130499DB164693584869FAD7F00.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "synthetic-saves/C4A7B23947A8ACFD3CEE92A4E4B5418D.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        }
+      ],
+      "drive_file_id": "1HbzuN3FbxfL_D2IOpZ3u95zae3w0ANto",
+      "verification": "Upload and metadata readback confirmed name, size, destination and owner-only permissions. SHA-256 is local; connector does not expose remote SHA-256."
+    },
+    {
+      "name": "F02-PR60-Represent-DX11-20261029-1600.png",
+      "purpose": "Real DX11 demo after corrected Host compilation",
+      "date": "2026-10-29",
+      "size": 51275,
+      "sha256": "8cb8c95ce4da96401c35f7b606fd485ce15333f074237810c81bb1ab2c262909",
+      "platform": "Windows 11 MSI / UE 5.8.2 CL 56702186 / MSVC 19.51",
+      "test": "Graphical demo",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\publish\\F02-PR60-Represent-DX11-20261029-1600.png",
+      "drive_folder": "01_Capturas",
+      "drive_url": "https://drive.google.com/file/d/16R-0yHs_Xl_vxZ_tkKnjJ1nxymeKaW1-/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "drive_file_id": "16R-0yHs_Xl_vxZ_tkKnjJ1nxymeKaW1-",
+      "verification": "Upload and metadata readback confirmed name, size, destination and owner-only permissions. SHA-256 is local; connector does not expose remote SHA-256."
+    },
+    {
+      "name": "F02-PR60-Represent-results-20261029-1600.json",
+      "purpose": "Current revision counts and code references; original full Core run kept historical",
+      "date": "2026-10-29",
+      "size": 2341,
+      "sha256": "c0529e1be8240dfd4fc7cb3593e96b940e09854c70ae61634c07e30384c66372",
+      "platform": "Windows 11 MSI / UE 5.8.2 CL 56702186 / MSVC 19.51",
+      "test": "Audit follow-up",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\publish\\F02-PR60-Represent-results-20261029-1600.json",
+      "drive_folder": "05_Informes",
+      "drive_url": "https://drive.google.com/file/d/1ZUCXCAOzxsf_rVge2dSE2EJXMdVfUOgQ/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "drive_file_id": "1ZUCXCAOzxsf_rVge2dSE2EJXMdVfUOgQ",
+      "verification": "Upload and metadata readback confirmed name, size, destination and owner-only permissions. SHA-256 is local; connector does not expose remote SHA-256."
+    }
+  ]
+}

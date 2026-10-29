@@ -99,7 +99,15 @@
     },
     {
       "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/EVIDENCIAS_REVISION_PR60_2026-10-29.json"
+    },
+    {
+      "status": "A",
       "path": "proyecto/docs/roadmap/master/fases/F02/INFORME_EJECUCION_REAL_2026-10-29.md"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/INFORME_REVISION_PR60_2026-10-29.md"
     },
     {
       "status": "M",
@@ -136,7 +144,39 @@
     {
       "status": "A",
       "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/unreal-tests.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/Core-EntityId-1.png"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/drive_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/native-tests.xml"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/original_files_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/results.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/source_manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/unreal-after.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/unreal-before.json"
     }
   ],
-  "count": 34
+  "count": 44
 }

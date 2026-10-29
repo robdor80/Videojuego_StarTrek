@@ -1,5 +1,7 @@
 # F02: entrega técnica para auditoría independiente
 
+> **Actualización tras auditoría independiente:** la revisión del binding por mundo, su regresión y las nuevas pruebas se documentan en el [informe de corrección de PR #60](INFORME_REVISION_PR60_2026-10-29.md). Las cifras inferiores conservan la primera entrega; la nueva revisión ejecuta seis casos UE y treinta casos en total, con evidencia separada.
+
 Fecha: **29 de octubre de 2026, Europe/Madrid**. Rama: `codex/f02-core-ue5-integration-20261029`. Repositorio: `robdor80/Videojuego_StarTrek`.
 
 ## 1. Estado de F02
