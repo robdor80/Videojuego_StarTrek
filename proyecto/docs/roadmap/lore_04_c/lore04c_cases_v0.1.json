@@ -1,0 +1,244 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "C",
+  "status": "COMPLETE_DOCUMENTARY_CANDIDATE_PENDING_AUTHOR_MERGE",
+  "world_state_owner": "CoreRPG",
+  "runtime_implemented": false,
+  "dependencies": [
+    "proyecto/docs/roadmap/lore_04_b/lore04b_cases_v0.1.json",
+    "sistemas/universe/generation/traffic_activity_model.json",
+    "sistemas/gameplay/facilities/facility_service_berth_throughput_generation_contract_v0.1.json",
+    "sistemas/universe/generation/settlement_infrastructure_contract.json"
+  ],
+  "packages": [
+    {
+      "id": "C01",
+      "path": "proyecto/docs/roadmap/lore_04_c/C01_auditoria_activos.md"
+    },
+    {
+      "id": "C02",
+      "path": "proyecto/docs/roadmap/lore_04_c/C02_servicios_asentamientos.md"
+    },
+    {
+      "id": "C03",
+      "path": "proyecto/docs/roadmap/lore_04_c/C03_transporte_comercio.md"
+    },
+    {
+      "id": "C04",
+      "path": "proyecto/docs/roadmap/lore_04_c/C04_mantenimiento.md"
+    },
+    {
+      "id": "C05",
+      "path": "proyecto/docs/roadmap/lore_04_c/C05_offscreen_persistencia.md"
+    },
+    {
+      "id": "C06",
+      "path": "proyecto/docs/roadmap/lore_04_c/C06_auditoria.md"
+    }
+  ],
+  "cases": [
+    {
+      "id": "INF-01",
+      "context": "Clínica sin capacidad",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "clinic_real",
+        "full_capacity"
+      ],
+      "expected": [
+        "queue_or_referral"
+      ],
+      "forbidden": [
+        "create_new_medical_bed"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-02",
+      "context": "Centro sin comunicaciones",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "station_real",
+        "antenna_down"
+      ],
+      "expected": [
+        "no_communication"
+      ],
+      "forbidden": [
+        "fake_link"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-03",
+      "context": "Mercante pide muelle",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "real_ship",
+        "berth_matching"
+      ],
+      "expected": [
+        "capacity_checked"
+      ],
+      "forbidden": [
+        "new_berth_on_demand"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-04",
+      "context": "Ruta agrícola",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "cargo_exists",
+        "ship_and_route"
+      ],
+      "expected": [
+        "causal_arrival"
+      ],
+      "forbidden": [
+        "instant_cargo_duplication"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-05",
+      "context": "Pasajero retrasado",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "passenger_at_origin",
+        "blockade"
+      ],
+      "expected": [
+        "remain_in_origin"
+      ],
+      "forbidden": [
+        "duplicate_at_destination"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-06",
+      "context": "Urgencia sanitaria",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "emergency_valid",
+        "authorized_priority"
+      ],
+      "expected": [
+        "queue_reordered"
+      ],
+      "forbidden": [
+        "spawn_medical_ship"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-07",
+      "context": "Reparación sin pieza",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "broken_facility",
+        "stock_zero"
+      ],
+      "expected": [
+        "repair_deferred"
+      ],
+      "forbidden": [
+        "fabricate_unavailable_part"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-08",
+      "context": "Convoy cortado",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "convoy_route",
+        "dated_disruption"
+      ],
+      "expected": [
+        "future_supply_affected"
+      ],
+      "forbidden": [
+        "rewrite_past_delivery"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-09",
+      "context": "Petición de apoyo",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "medical_need",
+        "support_request"
+      ],
+      "expected": [
+        "candidate_only"
+      ],
+      "forbidden": [
+        "guarantee_hospital"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-10",
+      "context": "Tráfico fuera de pantalla",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "persistent_traffic",
+        "lod_reduced"
+      ],
+      "expected": [
+        "causal_continuation"
+      ],
+      "forbidden": [
+        "respawn_for_player"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-11",
+      "context": "Visitante en estación",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "transient_population",
+        "real_slot"
+      ],
+      "expected": [
+        "population_conserved"
+      ],
+      "forbidden": [
+        "new_resident_count_by_visit"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INF-12",
+      "context": "Incidente secreto",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "hidden_event",
+        "observer_lacks_channel"
+      ],
+      "expected": [
+        "uncertain_knowledge"
+      ],
+      "forbidden": [
+        "omniscient_npc"
+      ],
+      "executed_in_corerpg": false
+    }
+  ],
+  "author_gates": [
+    "unapproved_colony_locations",
+    "transport_tariffs_unverified",
+    "new_civil_port_authority"
+  ],
+  "review_flags": [
+    "NO_SPAWN_FOR_PLAYER",
+    "NO_CARGO_DUPLICATION",
+    "LOD_PRESERVES_EXISTENCE",
+    "NO_UNVERIFIED_RUNTIME"
+  ]
+}
