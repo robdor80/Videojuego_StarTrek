@@ -15,3 +15,5 @@
 - Compatible documentalmente con A, LORE-01/02/03, ST-ORG, F00–F15 y patrones CoreRPG. No constituye integración UE5.
 - Validación transversal y regressiones en workflow `lore04-e-crossphase.yml`.
 - Decisiones autorales y fusiones reservadas; no actualizar main ni `CONTENT_STATUS.md` anticipadamente.
+
+**Protocolo administrativo:** sin merge ni borrado de rama por iniciativa del asistente; las PR Draft se revisan y se fusionan secuencialmente solo tras autorización expresa del autor.
