@@ -1,0 +1,36 @@
+name: F02 real CoreRPG integration
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f02/**'
+      - '.github/workflows/f02-native-integration.yml'
+  push:
+    branches: [codex/f02-core-ue5-integration-20261029]
+    paths:
+      - 'desarrollo/integration/f02/**'
+      - '.github/workflows/f02-native-integration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real-core-native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 4f282863737bcd8f5add401202a9e1064c133672
+          path: external/CoreRPG
+      - name: Compile the real CoreRPG library and Host DLL boundary
+        run: |
+          cmake -S desarrollo/integration/f02 -B build/f02 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/external/CoreRPG"
+          cmake --build build/f02 --parallel 4
+      - name: Native integration tests (Unreal is validated separately on MSI)
+        run: ctest --test-dir build/f02 --output-on-failure --output-junit native-tests.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f02-native-tests
+          path: build/f02/native-tests.xml

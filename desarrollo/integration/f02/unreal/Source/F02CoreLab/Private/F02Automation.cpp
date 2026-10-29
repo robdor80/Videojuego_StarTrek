@@ -13,10 +13,11 @@ struct FLab {
     UGameInstance* Game=nullptr;
     UF02CampaignSubsystem* Host=nullptr;
     FLab() {
-        World=UWorld::CreateWorld(EWorldType::Game,false);
-        World->InitializeNewWorld(UWorld::InitializationValues().AllowAudioPlayback(false)
+        const auto Values=UWorld::InitializationValues().AllowAudioPlayback(false)
             .RequiresHitProxies(false).CreatePhysicsScene(false).CreateNavigation(false)
-            .CreateAISystem(false).ShouldSimulatePhysics(false).SetTransactional(false));
+            .CreateAISystem(false).ShouldSimulatePhysics(false).SetTransactional(false);
+        World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,
+            ERHIFeatureLevel::Num,&Values);
         Game=NewObject<UGameInstance>(); Game->AddToRoot();
         Host=NewObject<UF02CampaignSubsystem>(Game); Host->AddToRoot(); Host->OpenLab();
     }

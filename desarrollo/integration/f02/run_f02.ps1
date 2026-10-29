@@ -2,12 +2,16 @@ param(
     [ValidateSet('Native','Stage','Unreal','TestUnreal','Demo','All')][string]$Stage='All',
     [Parameter(Mandatory=$true)][string]$CoreSource,
     [Parameter(Mandatory=$true)][string]$BuildRoot,
+    [string]$NativeBuild='',
     [string]$EngineRoot='C:\Program Files\Epic Games\UE_5.8',
     [string]$Generator='Visual Studio 18 2026'
 )
 $ErrorActionPreference='Stop'
 $SourceRoot=$PSScriptRoot
 $BuildRoot=[IO.Path]::GetFullPath($BuildRoot)
+if ($Stage -in @('Stage','Unreal','TestUnreal','Demo','All') -and $BuildRoot -match '[^\x00-\x7F]') {
+    throw 'Use an ASCII BuildRoot: UE 5.8.2 UBA/MSVC response paths failed on accented directory names in the MSI audit'
+}
 $CoreSource=(Resolve-Path -LiteralPath $CoreSource).Path
 if ($BuildRoot.StartsWith($CoreSource+[IO.Path]::DirectorySeparatorChar,[StringComparison]::OrdinalIgnoreCase)) {
     throw 'BuildRoot must be outside CoreRPG to preserve its original checkout'
@@ -22,7 +26,7 @@ function Invoke-Logged([string]$Name,[string]$Exe,[string[]]$Arguments) {
     & $Exe @Arguments 2>&1 | Tee-Object -FilePath $Log
     if ($LASTEXITCODE -ne 0) { throw "$Name failed: exit $LASTEXITCODE; see $Log" }
 }
-$Native=Join-Path $BuildRoot 'native'
+$Native=if ($NativeBuild) { [IO.Path]::GetFullPath($NativeBuild) } else { Join-Path $BuildRoot 'native' }
 $Lab=Join-Path $BuildRoot 'ue'
 if ($Stage -in @('Native','All')) {
     Invoke-Logged 'configure' 'cmake' @('-S',$SourceRoot,'-B',$Native,'-G',$Generator,'-A','x64',"-DCORERPG_SOURCE_DIR=$CoreSource")

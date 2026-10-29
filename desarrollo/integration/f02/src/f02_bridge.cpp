@@ -54,7 +54,7 @@ uint32_t action(F02Session* s, F02Ref actor, corerpg::ActionOperation operation,
                 uint64_t revision, F02ActionResult* out) {
     if (!out) return F02_ARGUMENT;
     *out = {};
-    return call(s, [&]() -> uint32_t {
+    const auto status = call(s, [&]() -> uint32_t {
         if (!s->allowed || !s->valid(actor) || actor.id != s->subject.value())
             return out->status = F02_DENIED;
         const auto result = corerpg::ActionEngine::process(s->world, s->random,
@@ -67,6 +67,8 @@ uint32_t action(F02Session* s, F02Ref actor, corerpg::ActionOperation operation,
         return out->status = result.outcome == corerpg::ActionOutcome::rejected
                                 ? F02_CORE_REJECTED : F02_OK;
     });
+    out->status = status;
+    return status;
 }
 }
 uint32_t f02_abi_version() { return 1; }
