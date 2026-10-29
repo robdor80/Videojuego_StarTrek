@@ -1,0 +1,266 @@
+{
+  "index_version": 1,
+  "drive_root": "https://drive.google.com/drive/folders/1mNjcJrP0JIyqATyYo56zoJG0NVYCUL5D",
+  "privacy": "Restricted; no public sharing enabled",
+  "video_status": "NOT_RECORDED; folder intentionally empty",
+  "artifacts": [
+    {
+      "name": "F02-logs-and-results-20261029.zip",
+      "purpose": "All build/test attempts, including initial failures and final successes",
+      "date": "2026-10-29",
+      "size": 286854,
+      "sha256": "318446a396f0a6392a88be4c3ef91d9dab30c20e611ec9537be333985935d1af",
+      "platform": "Windows 11 MSI / UE 5.8.2 / MSVC 19.51",
+      "test": "Core suite / native 15 / UE 5 / documentary 9",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\publish\\F02-logs-and-results-20261029.zip",
+      "drive_folder": "03_Logs",
+      "drive_url": "https://drive.google.com/file/d/1ZLa17bFC1yARxn_baR8pFuloJ1bJGjG_/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "members": [
+        {
+          "name": "native/bridge-build.log",
+          "size": 1766,
+          "sha256": "cc16f4c61702ff3356255be87702caa341f97ed08c017392532b9aca69223bbe"
+        },
+        {
+          "name": "native/bridge-configure.log",
+          "size": 618,
+          "sha256": "a331364bc345bb103ef7cd595e5679078ee5a8f8a1118ea37fe4c1ca732c3bbc"
+        },
+        {
+          "name": "native/bridge-final-build.log",
+          "size": 739,
+          "sha256": "ffb1f2db7b2575ebb27b0a3f6a0f24e78fb2951dc1eefc9f98476746fdb72184"
+        },
+        {
+          "name": "native/bridge-rebuild.log",
+          "size": 739,
+          "sha256": "ffb1f2db7b2575ebb27b0a3f6a0f24e78fb2951dc1eefc9f98476746fdb72184"
+        },
+        {
+          "name": "native/bridge-tests.log",
+          "size": 1707,
+          "sha256": "f2b45f024f48113894dc947501dcf6cc563fe70ef04ca7a4644c5b54f5b08795"
+        },
+        {
+          "name": "native/core-build.log",
+          "size": 5926,
+          "sha256": "1084b86608ebe2b3b49a0a82894714ba24b4197072e1b398cfcce946f38d684f"
+        },
+        {
+          "name": "native/core-configure.log",
+          "size": 1303,
+          "sha256": "c98cc7dfa3c163e53b6d9fb8f33403a08914021cb5cde9202bc02cfc1a3df7f3"
+        },
+        {
+          "name": "native/core-tests.log",
+          "size": 120111,
+          "sha256": "9cb785ebf467204e11f32746169478be8973453443c9689be919c7a6b86a815a"
+        },
+        {
+          "name": "native/core-tests.xml",
+          "size": 440514,
+          "sha256": "7d6952a65766abb14ba60548fa47cf18f66dc5be0c9984312de1a265c624f5fc"
+        },
+        {
+          "name": "native/bridge-tests.xml",
+          "size": 2623,
+          "sha256": "20cc469d8d34342481575618605cc9bedb28d6203c9b03dff89df8c9110e08f7"
+        },
+        {
+          "name": "unreal/20261029-152924-unreal-build.log",
+          "size": 18382,
+          "sha256": "a55ff6e855b9234bf9eb18dce9297b6230b79e0e4f0ddcebac2cd40edc46b9fe"
+        },
+        {
+          "name": "unreal/20261029-153033-unreal-tests.log",
+          "size": 263458,
+          "sha256": "6585e2a06ce48ace27345112c70da62ce646b0091a9279b7fbaae82435e9377e"
+        },
+        {
+          "name": "unreal/20261029-153234-unreal-build.log",
+          "size": 2483,
+          "sha256": "6a672e4ccfc4a1a3d582ef1760770110d1a7341581c6294e9323e0d2eedacbbf"
+        },
+        {
+          "name": "unreal/20261029-153241-unreal-tests.log",
+          "size": 267301,
+          "sha256": "aaf23f80b8436739a6f27c4944c5f90e42d7b14f5f964bab27a75e17d33a02d2"
+        },
+        {
+          "name": "unreal/20261029-153307-unreal-demo.log",
+          "size": 191251,
+          "sha256": "e06b679740c9abdb0dbdebb854b90f5e0f63f9f3cf31d2b0a33b2178460b3c0d"
+        },
+        {
+          "name": "unreal/20261029-153405-unreal-build.log",
+          "size": 2692,
+          "sha256": "1629902b20b25a56f5229cbe08cb38983ed38d22a9052ed12c8bc37d8ae894f0"
+        },
+        {
+          "name": "unreal/20261029-153411-unreal-tests.log",
+          "size": 264250,
+          "sha256": "b9720021a3cf6dfe5c290c7a7e1ef878a831f61ec06de4e275c5fb0bd51553b6"
+        },
+        {
+          "name": "unreal/20261029-153509-unreal-demo.log",
+          "size": 189996,
+          "sha256": "f9874f50883df6e4f0226b409a7e7efd0e18950be3ac03b64e0b3cabc38a3f38"
+        },
+        {
+          "name": "unreal/20261029-153708-unreal-tests.log",
+          "size": 264581,
+          "sha256": "59c097c5aa66baca3efef8e7a1036a6b9634c2f872c20e9cbc93799c5c91427d"
+        },
+        {
+          "name": "unreal/20261029-153723-unreal-demo.log",
+          "size": 190206,
+          "sha256": "f2056659f8f7a2717e7c0fca073775cbd40bb5b7872d00b66ebc9e595d03f0d9"
+        },
+        {
+          "name": "documentary/documentary-1.txt",
+          "size": 315,
+          "sha256": "6caf2bd7ad6ec5ded0bf5a1ace92999a453aba3b33220bb32d1b8e14270487f4"
+        },
+        {
+          "name": "documentary/documentary-2.txt",
+          "size": 896,
+          "sha256": "a519b66fdbb92183b9e373dcb12cf155781a8ef890da932b30e102e8b2de30da"
+        },
+        {
+          "name": "documentary/documentary-3.txt",
+          "size": 219,
+          "sha256": "5f5b3ca3220cbaef6ec304da316359447e0dac6e1105d8d17532b231f4fc117b"
+        },
+        {
+          "name": "20261029-153241-ue-report/index.json",
+          "size": 5319,
+          "sha256": "31aef0cb1fbc31f9894950ea41eaad057ff165c6c03821ddd0c0736e529fae44"
+        },
+        {
+          "name": "20261029-153411-ue-report/index.json",
+          "size": 2514,
+          "sha256": "fe662d88b55a47449f6ef28652485276386ad7b8b34b3863513f2420f500db6d"
+        },
+        {
+          "name": "20261029-153708-ue-report/index.json",
+          "size": 2513,
+          "sha256": "89dc2673329efb7503b63fc3221cfbb30301148977ea64cbde4b557463a8c174"
+        },
+        {
+          "name": "original_files_verification.json",
+          "size": 185,
+          "sha256": "5fa5ec91d7c567b0ba300759ef5df379aeadb4d671a4c234ea1922bbc115e5d9"
+        }
+      ],
+      "drive_file_id": "1ZLa17bFC1yARxn_baR8pFuloJ1bJGjG_",
+      "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+    },
+    {
+      "name": "F02-own-binaries-and-fixture-saves-20261029.zip",
+      "purpose": "Only generated F02 binaries and synthetic saves; requires installed UE 5.8.2; no engine/art redistribution",
+      "date": "2026-10-29",
+      "size": 156054,
+      "sha256": "7ec03d36e6762ae88986a8113b3176364cda5ce6e7748215386e7009609cf974",
+      "platform": "Windows 11 MSI / UE 5.8.2 / MSVC 19.51",
+      "test": "Native DLL linking / UE module / persistence",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\publish\\F02-own-binaries-and-fixture-saves-20261029.zip",
+      "drive_folder": "04_Compilaciones",
+      "drive_url": "https://drive.google.com/file/d/1erySGTvx9HB0cyZBltskDFbC5Qnlho5x/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "members": [
+        {
+          "name": "native/TrekF02Bridge.dll",
+          "size": 91648,
+          "sha256": "b2a6b3f785a48cd18807b6df15319a79cf06ab83ea9938c89f1583f2b46bd285"
+        },
+        {
+          "name": "native/TrekF02Bridge.lib",
+          "size": 4102,
+          "sha256": "40d9765a743d004e4541ecaa0aa14543736955c31f8dd2aa2bc2043161804859"
+        },
+        {
+          "name": "native/f02_tests.exe",
+          "size": 53760,
+          "sha256": "e8edb1a228b4d81081cac81344aa9019c42741c8344f84b9f63146758747503b"
+        },
+        {
+          "name": "ue/Binaries/Win64/UnrealEditor-F02CoreLab.dll",
+          "size": 231936,
+          "sha256": "39c69f28632f827cd2913cc133b447b76d506bf236f892bcb7e23a18b125338a"
+        },
+        {
+          "name": "ue/Binaries/Win64/UnrealEditor.modules",
+          "size": 98,
+          "sha256": "3eb0ea5fde0dc700d8b0f5c04d331acba8108c2ca0313a024d704d998dcb8124"
+        },
+        {
+          "name": "fixture-saves/2E07BA944EF015B53F359CAA06951A22.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "fixture-saves/35746A4C452115A2AD0A9EA59076F083.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "fixture-saves/52CFE1A54FD6E072A5E1E5B47F31993E.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "fixture-saves/5CAF1DEF40A102A1A89C68A96D9B4C8E.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "fixture-saves/94A1CA6445053B0AC5032CAD39A05A88.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        },
+        {
+          "name": "fixture-saves/A22DE0E54223DC7E9C5EB999B369F293.save",
+          "size": 240,
+          "sha256": "69d69f2b67920a68e58be8aac6d4d0f334a66cc22c6cc8188b6c8cc181ec5aa4"
+        }
+      ],
+      "drive_file_id": "1erySGTvx9HB0cyZBltskDFbC5Qnlho5x",
+      "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+    },
+    {
+      "name": "F02-Core-EntityId-1.png",
+      "purpose": "Real DX11 screenshot after Actor recreation and disk restore",
+      "date": "2026-10-29",
+      "size": 51509,
+      "sha256": "00b2be748446bc5c3576fa3a30950a38a29423484e889de0d0f9dcfb9aea741b",
+      "platform": "Windows 11 MSI / UE 5.8.2 / MSVC 19.51",
+      "test": "UE graphical demo",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\publish\\F02-Core-EntityId-1.png",
+      "drive_folder": "01_Capturas",
+      "drive_url": "https://drive.google.com/file/d/14naGEm4Xh45C_EMTPsJtmOZKootaiwoI/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "drive_file_id": "14naGEm4Xh45C_EMTPsJtmOZKootaiwoI",
+      "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+    },
+    {
+      "name": "F02-results-20261029.json",
+      "purpose": "Executed counts and references",
+      "date": "2026-10-29",
+      "size": 2334,
+      "sha256": "6835ff36bac34ce431a0bbd6b812dd8eb0c3f9ab94c3dc84287c98043ed18948",
+      "platform": "Windows 11 MSI / UE 5.8.2 / MSVC 19.51",
+      "test": "F02-P01..P05",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\publish\\F02-results-20261029.json",
+      "drive_folder": "05_Informes",
+      "drive_url": "https://drive.google.com/file/d/1DzdQ4zED1TDsXMtpNpYOses6NeZ_8cEn/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "drive_file_id": "1DzdQ4zED1TDsXMtpNpYOses6NeZ_8cEn",
+      "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+    }
+  ]
+}

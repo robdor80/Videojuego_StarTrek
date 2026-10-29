@@ -1,5 +1,7 @@
 # F02 — Arquitectura y contratos de integración
 
+> **Actualización operativa 29-10-2026:** ya existe una integración real compilada y ejecutada CoreRPG/UE 5.8.2 en laboratorio aislado. [Informe para auditoría](INFORME_EJECUCION_REAL_2026-10-29.md), [auditoría actual](AUDITORIA_OPERATIVA_2026-10-29.md), [evidencias externas](EVIDENCIAS_EXTERNAS_2026-10-29.json) y [código/reproducción](../../../../../../desarrollo/integration/f02/README.md). **461 casos superados, 0 fallidos y 4 omitidos** en la batería final. F02 continúa abierta para revisión; los apartados inferiores conservan el corte histórico documental y no describen el estado operativo actual.
+
 **Estado global tras reconciliación 13-10-2026:** **F01 CERRADA solo en diseño**; **F02 EN_CURSO y fase principal activa**, con [PR #3](https://github.com/robdor80/Videojuego_StarTrek/pull/3) **fusionada**. P01 y P02 terminados como auditoría/inventario; P03–P05 documentados, pero **BLOQUEADOS para `CONTRATO_VALIDADO`** hasta verificar interfaces Core/Host reales. Evidencia en la [reconciliación post-merge](../../ACTA_RECONCILIACION_F00_F06_2026-10-13.md). Merge documental ≠ integración Core/UE5.
 **Madurez objetivo:** `CONTRATO_VALIDADO` respaldado por Core real, no meramente por documentos.
 

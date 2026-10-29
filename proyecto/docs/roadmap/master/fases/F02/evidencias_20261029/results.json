@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Europe/Madrid",
+  "collected_at": "2026-10-29T14:41:18.872817+00:00",
+  "classification": "REAL_CORE_AND_UE_LAB_NOT_SENSORS_GAME",
+  "source_commit": "c842b602ccf2776101302d9ca4ccfb2a74105901",
+  "core_sha": "4f282863737bcd8f5add401202a9e1064c133672",
+  "trek_remote_main_baseline": "00822e24ecd2333988e5b6369be1ae9e3089de01",
+  "trek_original_local_head": "7ee52d59427ba9f1e027dd78200b938c37687f86",
+  "core_tests": {
+    "total": 436,
+    "passed": 432,
+    "failed": 0,
+    "skipped": 4
+  },
+  "native_integration_tests": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "ue_tests": {
+    "passed": 5,
+    "succeeded_with_warnings": 0,
+    "failed": 0,
+    "skipped": 0
+  },
+  "documentary_unittests": {
+    "passed": 9,
+    "failed": 0,
+    "skipped": 0
+  },
+  "documentary_checks": [
+    {
+      "command": [
+        "python",
+        "desarrollo/tools/validation/validate_f02_contracts.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "desarrollo/tools/validation",
+        "-p",
+        "test_validate_f02_contracts.py",
+        "-v"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "python",
+        "desarrollo/tools/validation/validate_f02_p05_plan.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "graphical_demo": {
+    "passed_stages": 4,
+    "log": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\logs\\20261029-153723-unreal-demo.log",
+    "screenshot": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\ue\\Saved\\F02Evidence\\F02-Core-UE5-FA3E32D84CC39A7FE24645BABFACB056.png"
+  },
+  "protected_originals": {
+    "before_count": 19030,
+    "after_count": 19030,
+    "missing_or_changed": [],
+    "new": [],
+    "method": "relative path, size and nanosecond mtime; not a full content hash audit"
+  },
+  "limitations": [
+    "F02 closure requires independent audit",
+    "No campaign clock or persistent agendas",
+    "No Trek command hierarchy/sensors/event store",
+    "No power-loss durability or packaged distribution test"
+  ],
+  "final_test_totals": {
+    "passed": 461,
+    "failed": 0,
+    "skipped": 4
+  }
+}
