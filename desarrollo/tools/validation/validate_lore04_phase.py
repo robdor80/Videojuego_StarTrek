@@ -65,7 +65,7 @@ def validate_manifest(phase, data, file_exists=None, read_text=None):
         require(data.get("preserved_block_4")=="READY_TO_RESUME","Economy Block-4 falsely closed")
     if phase=="E":
         require(data.get("integrated_phases")==["A","B","C","D"],"Missing transversal phases")
-        require(data.get("prior_prs_fused") is False,"No authority to claim prior merges")
+        require(data.get("prior_prs_fused") is True,"Phase A/B/C/D must already be merged before E")
     return {"phase":phase,"packages":len(packages),"scenarios":len(cases),"status":STATUS}
 def validate(phase):
     phase=phase.upper()
