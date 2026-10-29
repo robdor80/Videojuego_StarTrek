@@ -41,8 +41,10 @@ void UF02CampaignSubsystem::CloseLab() {
 }
 AF02LogicalMarker* UF02CampaignSubsystem::Represent(UWorld* World) {
     if (!IsInGameThread() || !Session || !IsValid(World) || !Exists() || !VerifyProjection()) return nullptr;
-    // One live representation per fixture identity. Never create a logical entity here.
-    for (auto& Visual:Visuals) if (Visual.IsValid()) return Visual.Get();
+    // One live representation per fixture identity and visual world.
+    // Overlapping worlds share Core identity, never their temporary Actors.
+    for (auto& Visual:Visuals)
+        if (Visual.IsValid() && Visual->GetWorld()==World) return Visual.Get();
     auto* Actor=World->SpawnActor<AF02LogicalMarker>(FVector(0,0,80),FRotator::ZeroRotator);
     if (Actor) { Actor->Bind(Handles.subject.id); Visuals.Add(Actor); }
     return Actor;

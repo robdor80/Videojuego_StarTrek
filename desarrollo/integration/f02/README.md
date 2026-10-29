@@ -17,7 +17,7 @@ Requisitos comprobados en MSI: CMake 4.4.3; Visual Studio Community 2026 18.9.1;
   -BuildRoot C:/Users/andro/Documents/ChatGPT/F02_reproduction
 ```
 
-`All` compila Core y el puente, ejecuta 15 tests nativos, prepara exclusivamente Source/Config y binarios propios en un laboratorio marcado, compila el módulo Editor y ejecuta cinco tests Unreal. `Demo` abre una ventana gráfica DX11, reproduce el ciclo, guarda una captura única y sale. La captura y los saves quedan en `ue/Saved/F02Evidence`; cada comando conserva su log con fecha. No se sobrescriben saves existentes ni se copian proyectos artísticos. No usar la misma carpeta de laboratorio desde dos ejecuciones simultáneas.
+`All` compila Core y el puente, ejecuta 15 tests nativos, prepara exclusivamente Source/Config y binarios propios en un laboratorio marcado, compila el módulo Editor y ejecuta seis tests Unreal, incluida la regresión de dos mundos visuales simultáneos. `Demo` abre una ventana gráfica DX11, reproduce el ciclo, guarda una captura única y sale. La captura y los saves quedan en `ue/Saved/F02Evidence`; cada comando conserva su log con fecha. No se sobrescriben saves existentes ni se copian proyectos artísticos. No usar la misma carpeta de laboratorio desde dos ejecuciones simultáneas.
 
 Para examinar el laboratorio: abrir `BuildRoot/ue/F02CoreLab.uproject`, o lanzar `UnrealEditor.exe <uproject> /Engine/Maps/Entry -game -dx11`. El proyecto utiliza solamente el cubo y el mapa Entry del motor instalado.
 

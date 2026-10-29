@@ -52,8 +52,9 @@ reports=sorted(ue.glob('*-ue-report/index.json'))
 if not reports: raise SystemExit('No Unreal report')
 report=reports[-1]
 ue_result=json.loads(report.read_text(encoding='utf-8-sig'))
+ue_passed=ue_result['succeeded']+ue_result['succeededWithWarnings']
 if (ue_result['failed'] or ue_result['notRun'] or
-    ue_result['succeeded']+ue_result['succeededWithWarnings'] != 5):
+    ue_passed != 6):
     raise SystemExit('Latest Unreal report is not a complete passing suite')
 demo=sorted((ue/'logs').glob('*-unreal-demo.log'))[-1]
 demo_text=demo.read_text(encoding='utf-8-sig')
@@ -95,7 +96,7 @@ summary={
     'limitations':['F02 closure requires independent audit','No campaign clock or persistent agendas',
                   'No Trek command hierarchy/sensors/event store','No power-loss durability or packaged distribution test'],
 }
-summary['final_test_totals']=dict(passed=core['passed']+bridge['passed']+5+9,
+summary['final_test_totals']=dict(passed=core['passed']+bridge['passed']+ue_passed+9,
     failed=core['failed']+bridge['failed']+ue_result['failed'],skipped=core['skipped'])
 write(small/'results.json',summary)
 shutil.copy2(native/'core-tests.xml',small/'core-tests.xml')

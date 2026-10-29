@@ -61,8 +61,8 @@ if ($Stage -in @('TestUnreal','All')) {
     if (!(Test-Path -LiteralPath $Index)) { throw 'No Unreal automation report produced' }
     $Result=Get-Content -LiteralPath $Index -Raw | ConvertFrom-Json
     if ($Result.failed -gt 0 -or $Result.notRun -gt 0 -or
-        ($Result.succeeded+$Result.succeededWithWarnings) -ne 5) {
-        throw 'Unreal automation suite did not pass all five tests'
+        ($Result.succeeded+$Result.succeededWithWarnings) -ne 6) {
+        throw 'Unreal automation suite did not pass all six tests'
     }
 }
 if ($Stage -eq 'Demo') {
