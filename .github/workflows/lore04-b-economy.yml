@@ -1,0 +1,28 @@
+name: LORE-04B — Economía galáctica documental
+on:
+  push:
+    branches: ["docs/lore04b-economia-20261029"]
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/lore_04_b/**"
+      - "desarrollo/tools/validation/*lore04_phase.py"
+      - ".github/workflows/lore04-b-economy.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  economic-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: B01-B06 audit, 25 mutation cases, previous social regressions
+        run: |
+          python -m py_compile desarrollo/tools/validation/validate_lore04_phase.py desarrollo/tools/validation/test_lore04_phase.py
+          python desarrollo/tools/validation/validate_lore04_phase.py B
+          python desarrollo/tools/validation/test_lore04_phase.py B
+          python desarrollo/tools/validation/validate_lore04_a.py
+          python desarrollo/tools/validation/test_lore04_a.py
