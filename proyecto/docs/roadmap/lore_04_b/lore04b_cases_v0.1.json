@@ -1,0 +1,210 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "B",
+  "status": "COMPLETE_DOCUMENTARY_CANDIDATE_PENDING_AUTHOR_MERGE",
+  "world_state_owner": "CoreRPG",
+  "runtime_implemented": false,
+  "dependencies": [
+    "proyecto/docs/roadmap/lore_04_master_plan_v0.1.md",
+    "proyecto/docs/roadmap/procedural_dynamic_universe_10_block_plan_v0.1.md",
+    "sistemas/gameplay/economy/replicator_post_scarcity_contract.json",
+    "sistemas/gameplay/economy/civilian_trade_operator_contract.json"
+  ],
+  "preserved_block_4": "READY_TO_RESUME",
+  "packages": [
+    {
+      "id": "B01",
+      "path": "proyecto/docs/roadmap/lore_04_b/B01_inventario.md"
+    },
+    {
+      "id": "B02",
+      "path": "proyecto/docs/roadmap/lore_04_b/B02_produccion_replicacion.md"
+    },
+    {
+      "id": "B03",
+      "path": "proyecto/docs/roadmap/lore_04_b/B03_intercambio_latinio.md"
+    },
+    {
+      "id": "B04",
+      "path": "proyecto/docs/roadmap/lore_04_b/B04_trabajo_propiedad.md"
+    },
+    {
+      "id": "B05",
+      "path": "proyecto/docs/roadmap/lore_04_b/B05_escenarios.md"
+    },
+    {
+      "id": "B06",
+      "path": "proyecto/docs/roadmap/lore_04_b/B06_auditoria.md"
+    }
+  ],
+  "cases": [
+    {
+      "id": "ECO-01",
+      "context": "repuesto de colonia",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "facility_failure",
+        "stock_exists",
+        "operator_and_route"
+      ],
+      "expected": [
+        "trade_event_candidate"
+      ],
+      "forbidden": [
+        "invent_goods_if_missing",
+        "ignore_jurisdiction"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-02",
+      "context": "pasaje interplanetario",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "operator_exists",
+        "passenger_demand",
+        "route_and_fuel"
+      ],
+      "expected": [
+        "scheduled_activity"
+      ],
+      "forbidden": [
+        "teleport_without_transport"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-03",
+      "context": "latinio ferengi",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "compatible_payment",
+        "law_and_stock"
+      ],
+      "expected": [
+        "negotiable_exchange"
+      ],
+      "forbidden": [
+        "fixed_galactic_exchange_rate"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-04",
+      "context": "trabajo sin salario universal",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "role_and_site_exist"
+      ],
+      "expected": [
+        "professional_service"
+      ],
+      "forbidden": [
+        "all_workers_paid_federation_credits"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-05",
+      "context": "vendedor sin bienes",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "stock_zero"
+      ],
+      "expected": [
+        "rejected_or_deferred"
+      ],
+      "forbidden": [
+        "sold_and_transferred"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-06",
+      "context": "replicador sin energía",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "power_off"
+      ],
+      "expected": [
+        "fabrication_unavailable"
+      ],
+      "forbidden": [
+        "created_anything"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-07",
+      "context": "frontera bloqueada",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "route_denied"
+      ],
+      "expected": [
+        "delivery_rejected"
+      ],
+      "forbidden": [
+        "cargo_arrived_instantly"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-08",
+      "context": "rumor de escasez",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "unverified_rumor"
+      ],
+      "expected": [
+        "actor_knowledge_uncertain"
+      ],
+      "forbidden": [
+        "stock_reduced_without_event"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-09",
+      "context": "Flota aplica arancel local",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "no_civil_competence"
+      ],
+      "expected": [
+        "authority_denied"
+      ],
+      "forbidden": [
+        "starfleet_becomes_civil_government"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "ECO-10",
+      "context": "canon futuro económico forzado",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "campaign_open_after_start"
+      ],
+      "expected": [
+        "no_auto_event"
+      ],
+      "forbidden": [
+        "future_script_triggered"
+      ],
+      "executed_in_corerpg": false
+    }
+  ],
+  "author_gates": [
+    "universal_federation_currency",
+    "exact_exchange_rates",
+    "pay_scale",
+    "binding_property_law"
+  ],
+  "review_flags": [
+    "NO_SIMULATION_CLAIM",
+    "NO_FIXED_FUTURE",
+    "NO_SPECIES_ECONOMY_DETERMINISM",
+    "OFFICIAL_REFERENCE_NOT_SCREEN_CANON"
+  ]
+}
