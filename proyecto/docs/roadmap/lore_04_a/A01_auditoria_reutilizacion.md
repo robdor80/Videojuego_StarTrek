@@ -41,3 +41,9 @@
 **Autorizado como trabajo técnico:** indexar, investigar, clasificar, proponer casos, anotar fuentes, redactar criterios e invariantes de diseño. **Reservado al autor:** fijar nuevas instituciones/derechos, sistema monetario interno no demostrado, obligaciones universales, elecciones precisas, ciudad/colonia original prioritaria o fecha exacta de campaña. Estos huecos no bloquean A02 documental, pero impedirían marcar sus propuestas creativas como aprobadas.
 
 **Resultado A01:** inventario y frontera localizados; LORE-04A puede iniciar documentación sin alteraciones a contratos, `CONTENT_STATUS.md` o `main`.
+
+## 5. Resultado final A01 y procedencia concreta (auditoría del corpus)
+
+Se incorporan por referencia **cinco anclas de episodios nuevas** y **doce referencias editoriales oficiales** al registro central `mundo/sources/source_registry/source_registry.json`, sin duplicar las fuentes ya presentes. El inventario verificado pasa a 530 entradas; las 14 afirmaciones/casos de investigación constan en `lore04a_evidence_ledger_v0.1.json`. El registro identifica episodios, pero sus minutajes siguen **pendientes** y los artículos oficiales no adquieren carácter de `SCREEN_CANON`.
+
+La separación entre los tres niveles es obligatoria: **existencia poblacional A/B/C** ≠ **detalle social LOD A/B/C** ≠ **documentación lore A01–A08**. A01 no modifica ninguno de los contratos existentes ni implementa reglas nuevas en CoreRPG. `A03`–`A07` amplían investigación y casos, mientras `A08` audita restricciones. A01 es `COMPLETE_DOCUMENTARY_CANDIDATE`, sujeto a CI, revisión y fusión autorizada. No introduce decisiones materiales vinculantes.

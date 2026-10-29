@@ -1,6 +1,6 @@
 # LORE-04A / A02 — Marco inicial de sociedad y vida cotidiana
 
-**Estado:** `INITIAL_DOCUMENTARY_PROPOSAL`, no canon nuevo aprobado ni implementación. **Ámbito:** sociedad civil durante TNG/DS9/Voyager y continuidad abierta. **Procedencia:** referencias al canon existente, perfiles de LORE-01 y contratos ya vigentes. Lo desconocido permanece `UNKNOWN`.
+**Estado:** `COMPLETE_DOCUMENTARY_CANDIDATE_IN_DRAFT`, no canon nuevo aprobado ni implementación. **Ámbito:** sociedad civil durante TNG/DS9/Voyager y continuidad abierta. **Procedencia:** referencias al canon existente, perfiles de LORE-01 y contratos ya vigentes. Lo desconocido permanece `UNKNOWN`.
 
 ## 1. Qué existe antes de que llegue el jugador
 
@@ -53,10 +53,16 @@ Estos casos son `GAME_ADDITION` **propuesta de escenarios de prueba**, sin nombr
 ## 6. Fuentes de verificación y pendientes
 
 - Canónicos a contrastar en episodios/películas: *Star Trek: First Contact* (conversación de Picard sobre dinero en su sociedad), escenas de bar/latinio y vida civil en *Deep Space Nine*, episodios TNG/DS9 sobre familias y gobiernos. **No atribuir a esas escenas detalles no pronunciados**.
-- Apoyo editorial (no `SCREEN_CANON` por sí solo): [Star Trek 101: Latinum](https://www.startrek.com/news/star-trek-101-latinum), [A Look at Money in Star Trek](https://www.startrek.com/news/a-look-at-money-in-star-trek-italian-style), [Post-Scarcity and Culinary Traditions](https://www.startrek.com/news/post-scarcity-earthlings-culinary-traditions).
+- Apoyo editorial verificado (no `SCREEN_CANON` por sí solo): `L04A_ST_LATINUM` (https://www.startrek.com/news/star-trek-101-latinum); `L04A_ST_FAMILY` (https://www.startrek.com/news/your-ultimate-star-trek-picard-watch-guide); `L04A_ST_SCHOOL` (https://www.startrek.com/news/deep-space-nine-modern-balance-science-religion).
 - Pendientes de A03–A07: fichas por servicio y jurisdicción, fuentes audiovisuales granulares, escenarios de ausencia/inaccesibilidad, educación civil fuera de Academia, métricas de densidad social sin cifras inventadas, cobertura de otras culturas.
 - **Gate del autor:** no fijar todavía moneda/ingreso universal, derecho de vivienda, ritual obligatorio, oficio único o modelo constitucional no acreditado.
 
 ## 7. Criterios de cierre de A02
 
 La capa es una **base documental inicial**, no el cierre de toda A. Se revisarán los escenarios contra A01, la política de canon y los invariantes de `lore04a_civil_society_invariants_v0.1.json` antes de elevar cualquier estado a `COMPLETE_DOCUMENTARY`.
+
+## 8. Evidencia contrastada y cierre de paquete
+
+Las afirmaciones y sus restricciones están trazadas en `lore04a_evidence_ledger_v0.1.json`: LA-E01 (familia Picard), LA-E02 (bodas y ocio), LA-E03 (educación de Keiko), LA-E05 (Casas klingon), LA-E07 (cambios sociales ferengi), LA-E09 (responsabilidad cardassiana). Las referencias de StarTrek.com corroboran el contexto de los episodios, **sin certificar su minutaje ni justificar normas sociológicas universales**. La distinción `SCREEN_CANON` / `OFFICIAL_REFERENCE` / `INFERRED` / `GAME_ADDITION` es obligatoria.
+
+El documento, con el resto de A01–A08, queda **preparado como candidato documental**. No se extiende el motor de relaciones, ni la Academia, ni la economía de Bloque 4, ni se declara la simulación ejecutada. La revisión del autor y la fusión siguen pendientes.

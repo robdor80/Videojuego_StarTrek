@@ -1,6 +1,6 @@
 # LORE-04 — Plan maestro de vida civil, economía e instituciones galácticas v0.1
 
-**Fecha:** 2026-10-29. **Estado:** PLANIFICADO / revisión pendiente del autor; LORE-04A en inicio documental. **Rama de trabajo:** `docs/lore04a-vida-civil-20261029`.
+**Fecha:** 2026-10-29. **Estado:** PLANIFICADO / revisión pendiente del autor; LORE-04A A01–A08 desarrollados como candidato documental en PR Draft #51 (sin fusión). **Rama de trabajo:** `docs/lore04a-vida-civil-20261029`.
 **Alcance jugable:** TNG/DS9/Voyager y continuidad; 2383 como **año de entrada a Academia propuesto**, no día cerrado. Corte temporal abierto; las secuelas futuras de otras series no se imponen.
 **Cierre de referencia:** LORE-03 PR #50, `main@289a1074b9b2767692823bfe5b8b94662af72a98`.
 
@@ -60,3 +60,7 @@ La matriz de hallazgos y huecos está en `lore_04_a/A01_auditoria_reutilizacion.
 El plan de desarrollo procedural del universo contiene el Bloque 4 de economía viva pendiente; LORE-04B aportará sus evidencias y reglas contextuales, **no creará ni marcará COMPLETE** ese bloque. ST-ORG-01, F00–F15 y CoreRPG son dependencias de compatibilidad y auditoría, no autorizaciones para modificarlos. No se certificará integración runtime sin prueba independiente. La auditoría E revisará esta distinción.
 
 **Estado del presente documento:** planificación propuesta, lista para revisión; no aprobación creativa ni cierre de LORE-04.
+
+## 7. Estado de ejecución de LORE-04A (2026-10-29)
+
+A01–A08 publicados en rama independiente y auditables con `desarrollo/tools/validation/validate_lore04_a.py`, `test_lore04_a.py` y `.github/workflows/lore04-a-civil-life.yml`. Matriz de 16 escenarios documentales y 14 anclas/afirmaciones con trazabilidad. Los archivos constituyen candidato **COMPLETE_DOCUMENTARY_PENDING_AUTHOR_MERGE** únicamente si superan CI/regresiones; no existe implementación runtime verificada. La PR permanece Draft y ningún criterio de cierre de las fases 04B–E se satisface por esta publicación.

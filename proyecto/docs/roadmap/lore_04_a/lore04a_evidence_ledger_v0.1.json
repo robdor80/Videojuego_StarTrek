@@ -18,7 +18,7 @@
     {
       "id": "LA-E01",
       "claim": "El hogar de Robert Picard y la relación con Jean-Luc ilustran vida familiar, viñedo y diferencias individuales en la Tierra.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "TNG_FAMILY",
       "official_source_id": "L04A_ST_FAMILY",
       "confidence": "HIGH",
@@ -28,7 +28,7 @@
     {
       "id": "LA-E02",
       "claim": "En la Enterprise de TNG existen ceremonia matrimonial y actividades sociales observables en Data's Day.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "TNG_DATA_DAY",
       "official_source_id": "L04A_ST_DATA_DAY",
       "confidence": "HIGH",
@@ -38,7 +38,7 @@
     {
       "id": "LA-E03",
       "claim": "La escuela de Keiko en DS9 funciona en un contexto de diferencias educativas, religiosas y jurisdiccionales.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_IN_THE_HANDS_OF_THE_PROPHETS",
       "official_source_id": "L04A_ST_SCHOOL",
       "confidence": "HIGH",
@@ -48,7 +48,7 @@
     {
       "id": "LA-E04",
       "claim": "La relación padre-hijo de Benjamin y Jake Sisko y la posibilidad de vocación civil son materia narrativa.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_THE_VISITOR",
       "official_source_id": "L04A_ST_VISITOR",
       "confidence": "MEDIUM",
@@ -58,7 +58,7 @@
     {
       "id": "LA-E05",
       "claim": "La propiedad, deuda, reputación y Casas klingon se entrecruzan en el episodio The House of Quark.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_HOUSE_OF_QUARK",
       "official_source_id": "L04A_ST_HOUSE_QUARK",
       "confidence": "HIGH",
@@ -68,7 +68,7 @@
     {
       "id": "LA-E06",
       "claim": "Mullibok y su residencia muestran tensión entre comunidad civil, desarrollo e intereses públicos en Bajor.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_PROGRESS",
       "official_source_id": "L04A_ST_MULLIBOK",
       "confidence": "HIGH",
@@ -78,7 +78,7 @@
     {
       "id": "LA-E07",
       "claim": "Las reformas ferengi cambian expectativas sociales durante DS9; normas antiguas no deben congelarse automáticamente en 2383.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_PROFIT_AND_LACE",
       "additional_screen_source_ids": [
         "DS9_THE_DOGS_OF_WAR"
@@ -91,7 +91,7 @@
     {
       "id": "LA-E08",
       "claim": "El partido de béisbol de Take Me Out to the Holosuite proporciona un ejemplo de ocio voluntario multicultural.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_TAKE_ME_OUT_TO_THE_HOLOSUITE",
       "official_source_id": "L04A_ST_BASEBALL",
       "confidence": "HIGH",
@@ -101,7 +101,7 @@
     {
       "id": "LA-E09",
       "claim": "La experiencia del cardassiano Marritza en Duet distingue individuo, función civil y responsabilidad histórica.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_DUET",
       "official_source_id": "L04A_ST_DUET",
       "confidence": "HIGH",
@@ -111,7 +111,7 @@
     {
       "id": "LA-E10",
       "claim": "Homefront/Paradise Lost expone tensión entre seguridad de Flota y autoridad civil federal.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_HOMEFRONT",
       "official_source_id": "L04A_ST_HOMEFRONT",
       "confidence": "HIGH",
@@ -121,7 +121,7 @@
     {
       "id": "LA-E11",
       "claim": "Las costumbres Trill sobre la reasociación pueden chocar con decisiones personales, como muestra Rejoined.",
-      "classification": "SCREEN_CANON_EPISODE_ANCHOR",
+      "classification": "SCREEN_CANON",
       "screen_source_id": "DS9_REJOINED",
       "official_source_id": "L04A_ST_REJOINED",
       "confidence": "HIGH",
@@ -161,5 +161,6 @@
       ],
       "author_approval": "NOT_REQUIRED_FOR_NONBINDING_TEST_SCENARIO"
     }
-  ]
+  ],
+  "integration_owner": "CoreRPG"
 }
