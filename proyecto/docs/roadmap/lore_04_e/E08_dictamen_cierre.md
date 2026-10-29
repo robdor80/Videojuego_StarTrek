@@ -1,5 +1,7 @@
 # LORE-04E08 — Dictamen y cierre documental condicionado
 
+> **Actualización posfusión:** superado el gate de E y fusionada PR #58 (`fb1a6deb346a19bced7d31f2f4ccd65a2bf9c5a4`). La fase está cerrada documentalmente junto con A–D. Acta definitiva: [ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md](ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md). Los apartados siguientes registran la evaluación previa a la fusión.
+
 **Estado:** E01–E08 documentadas, LORE-04A/B/C/D fusionadas, E pendiente de su propia PR; no certificación runtime.
 
 ## 1. Dictamen actualizado

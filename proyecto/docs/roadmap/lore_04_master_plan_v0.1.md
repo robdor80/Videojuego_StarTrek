@@ -1,6 +1,6 @@
 # LORE-04 — Plan maestro de vida civil, economía e instituciones galácticas v0.1
 
-**Fecha:** 2026-10-29. **Estado:** PLANIFICADO / revisión pendiente del autor; LORE-04A A01–A08 desarrollados como candidato documental en PR Draft #51 (sin fusión). **Rama de trabajo:** `docs/lore04a-vida-civil-20261029`.
+**Fecha:** 2026-10-29. **Estado vigente posfusión: ✅ LORE-04 A–E COMPLETE DOCUMENTAL**. PR #51, #52, #56, #57 y #58 fusionadas y verificadas; acta definitiva en `lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md`. Se conserva el contenido histórico de planificación como registro, sin certificar CoreRPG/UE5.
 **Alcance jugable:** TNG/DS9/Voyager y continuidad; 2383 como **año de entrada a Academia propuesto**, no día cerrado. Corte temporal abierto; las secuelas futuras de otras series no se imponen.
 **Cierre de referencia:** LORE-03 PR #50, `main@289a1074b9b2767692823bfe5b8b94662af72a98`.
 
@@ -59,8 +59,16 @@ La matriz de hallazgos y huecos está en `lore_04_a/A01_auditoria_reutilizacion.
 
 El plan de desarrollo procedural del universo contiene el Bloque 4 de economía viva pendiente; LORE-04B aportará sus evidencias y reglas contextuales, **no creará ni marcará COMPLETE** ese bloque. ST-ORG-01, F00–F15 y CoreRPG son dependencias de compatibilidad y auditoría, no autorizaciones para modificarlos. No se certificará integración runtime sin prueba independiente. La auditoría E revisará esta distinción.
 
-**Estado del presente documento:** planificación propuesta, lista para revisión; no aprobación creativa ni cierre de LORE-04.
+**Estado del presente documento (actualizado posfusión):** plan ejecutado A–E, cierre exclusivamente documental. Las reservas de autor, el Bloque 4 de economía viva y toda integración runtime permanecen abiertas.
 
 ## 7. Estado de ejecución de LORE-04A (2026-10-29)
 
-A01–A08 publicados en rama independiente y auditables con `desarrollo/tools/validation/validate_lore04_a.py`, `test_lore04_a.py` y `.github/workflows/lore04-a-civil-life.yml`. Matriz de 16 escenarios documentales y 14 anclas/afirmaciones con trazabilidad. Los archivos constituyen candidato **COMPLETE_DOCUMENTARY_PENDING_AUTHOR_MERGE** únicamente si superan CI/regresiones; no existe implementación runtime verificada. La PR permanece Draft y ningún criterio de cierre de las fases 04B–E se satisface por esta publicación.
+A01–A08 publicados en rama independiente y auditables con `desarrollo/tools/validation/validate_lore04_a.py`, `test_lore04_a.py` y `.github/workflows/lore04-a-civil-life.yml`. Matriz de 16 escenarios documentales y 14 anclas/afirmaciones con trazabilidad. Los archivos constituyen candidato **COMPLETE_DOCUMENTARY_PENDING_AUTHOR_MERGE** únicamente si superan CI/regresiones; no existe implementación runtime verificada. **Nota histórica de A:** la afirmación anterior describía la fotografía de PR #51 antes de su integración; actualmente A–E están fusionadas según el acta definitiva.
+
+## 8. Reconciliación y cierre global posfusión (2026-10-29)
+
+Confirmados en `main` los paquetes A01–A08, B01–B06, C01–C06, D01–D06 y E01–E08: **34/34**. Se revisaron los cinco directorios y el diff de cada PR efectiva; C y D fueron trasladadas sobre `main` por blobs originales, evitando duplicaciones tras la pérdida de la rama de B.
+
+PR efectivas: **#51 → #52 → #56 → #57 → #58**, todas fusionadas. CI de C, D y E satisfactoria, con pruebas de E transversal y regresiones; `main@fb1a6deb346a19bced7d31f2f4ccd65a2bf9c5a4` después de E. Las PR antiguas #53/#54/#55 no constituyen merges efectivos. La fase queda **COMPLETE_DOCUMENTARY**, sin código de economía viva, sin políticas civiles inventadas y sin pruebas de integración Unreal/WorldState/IA ejecutada.
+
+Acta: [Cierre documental LORE-04](lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md).

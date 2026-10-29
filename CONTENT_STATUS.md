@@ -592,6 +592,23 @@ Plan: `proyecto/docs/roadmap/lore_02_master_plan_v0.1.md`. LORE-02 nunca es runt
 
 Plan: `proyecto/docs/roadmap/lore_03_master_plan_v0.1.md`. Registro de cierre A–E: `proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json`. La regularización global se consolida mediante PR administrativa posterior a la fusión verificada #49. **LORE-03 A–E COMPLETADAS documentalmente:** PR #38, #41, #44, #46 y #49 fusionadas; evidencias de E en `proyecto/docs/roadmap/lore_03_e/lore03_global_closure_evidence_v0.1.json`. **Cierre global exclusivamente DOCUMENTAL**; quedan pendientes las futuras integraciones CoreRPG/UE5/IA y decisiones explícitas de autor, que no invalidan el cierre de LORE-03. CoreRPG/UE5 no reciben datos runtime de esta fase.
 
+## LORE-04 — Vida civil, economía, logística e instituciones galácticas (cierre documental 2026-10-29)
+
+**Estado global: ✅ COMPLETE DOCUMENTAL.** Las fases **A–E están fusionadas** en `main`; la certificación se limita a investigación, contratos reutilizados, escenarios de diseño, validadores y regresiones. **No hay implementación ni simulación integrada CoreRPG/UE5 acreditada**.
+
+| Apartado | Estado documental | Evidencia de fusión y alcance |
+|---|---|---|
+| A — Vida civil | ✅ COMPLETE | PR #51 fusionada en `main` (`1eea14b8`); A01–A08, 16 casos, 14 referencias/afirmaciones, pruebas. |
+| B — Economía contextual | ✅ COMPLETE | PR #52 fusionada (`265b926d`); B01–B06, 10 casos, latinio/comercio/escasez/trabajo. **Economía viva Bloque 4 permanece READY_TO_RESUME**. |
+| C — Infraestructura y logística | ✅ COMPLETE | PR **#56** fusionada (`9d79f6b9`); C01–C06 y 12 casos, recuperación exacta de PR #53 cerrada sin fusionar por eliminación de su rama base. |
+| D — Gobiernos, justicia y jurisdicciones | ✅ COMPLETE | PR **#57** fusionada (`982ae247`); D01–D06 y 12 casos, reemplaza PR apilada #54 cerrada sin fusionar. |
+| E — Auditoría transversal A–D | ✅ COMPLETE | PR **#58** fusionada (`fb1a6deb`); E01–E08, 18 casos, acta de reconciliación y validaciones globales. La PR apilada #55 se cerró sin fusionar para evitar duplicación. |
+
+**Evidencia de CI:** PR C #56 run `40864293831` SUCCESS; D #57 run `40864463722` SUCCESS; E #58 run `40864985169` SUCCESS y regresión B run `40864985119` SUCCESS. La auditoría transversal de E incluye 164 pruebas documentales nominales entre 04A y las suites B/C/D/E, y regresiones históricas; **no** pruebas runtime de mercado o IA real.
+
+Acta definitiva: `proyecto/docs/roadmap/lore_04_e/ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md`. Los documentos con etiquetas `CANDIDATE_PENDING_MERGE` son **fotografías de sus PR anteriores**; este índice y el acta posfusión registran el estado administrativo vigente. Las ramas históricas no se eliminan automáticamente.
+
+
 ## Procedural living-universe master plan
 
 Control documents:
