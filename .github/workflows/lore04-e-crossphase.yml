@@ -1,0 +1,43 @@
+name: LORE-04E — Auditoría transversal B–E documental
+on:
+  push:
+    branches: ["docs/lore04e-auditoria-cierre-20261029"]
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/lore_04_e/**"
+      - "desarrollo/tools/validation/*lore04_e_crossphase*"
+      - ".github/workflows/lore04-e-crossphase.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  crossphase-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: All A–E validation, 100 phase mutations and 24 crossphase negatives
+        run: |
+          python -m py_compile desarrollo/tools/validation/validate_lore04_phase.py desarrollo/tools/validation/test_lore04_phase.py desarrollo/tools/validation/validate_lore04_e_crossphase.py desarrollo/tools/validation/test_lore04_e_crossphase.py
+          python desarrollo/tools/validation/validate_lore04_a.py
+          python desarrollo/tools/validation/test_lore04_a.py
+          python desarrollo/tools/validation/validate_lore04_phase.py B C D E
+          python desarrollo/tools/validation/test_lore04_phase.py B
+          python desarrollo/tools/validation/test_lore04_phase.py C
+          python desarrollo/tools/validation/test_lore04_phase.py D
+          python desarrollo/tools/validation/test_lore04_phase.py E
+          python desarrollo/tools/validation/validate_lore04_e_crossphase.py
+          python desarrollo/tools/validation/test_lore04_e_crossphase.py
+      - name: Historical and universe-documentary regression
+        run: |
+          python desarrollo/tools/validation/validate_lore01_b.py
+          python desarrollo/tools/validation/test_lore01_b.py
+          python desarrollo/tools/validation/validate_lore02_e.py
+          python desarrollo/tools/validation/test_lore02_e.py
+          python desarrollo/tools/validation/validate_lore03_a.py
+          python desarrollo/tools/validation/test_lore03_a.py
+          python desarrollo/tools/validation/validate_lore03_e.py
+          python desarrollo/tools/validation/test_lore03_e.py
