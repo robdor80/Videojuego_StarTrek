@@ -1,0 +1,244 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "D",
+  "status": "COMPLETE_DOCUMENTARY_CANDIDATE_PENDING_AUTHOR_MERGE",
+  "world_state_owner": "CoreRPG",
+  "runtime_implemented": false,
+  "dependencies": [
+    "proyecto/docs/roadmap/lore_04_c/lore04c_cases_v0.1.json",
+    "sistemas/gameplay/organizations/organization_runtime_contract.json",
+    "sistemas/gameplay/organizations/profiles/FEDERATION_INSTITUTIONS_v0.1.json",
+    "mundo/lore/federation/government/federation_government.json"
+  ],
+  "packages": [
+    {
+      "id": "D01",
+      "path": "proyecto/docs/roadmap/lore_04_d/D01_mapa_competencias.md"
+    },
+    {
+      "id": "D02",
+      "path": "proyecto/docs/roadmap/lore_04_d/D02_federacion_y_flota.md"
+    },
+    {
+      "id": "D03",
+      "path": "proyecto/docs/roadmap/lore_04_d/D03_gobiernos_civilizaciones.md"
+    },
+    {
+      "id": "D04",
+      "path": "proyecto/docs/roadmap/lore_04_d/D04_justicia_seguridad.md"
+    },
+    {
+      "id": "D05",
+      "path": "proyecto/docs/roadmap/lore_04_d/D05_conflictos_jurisdiccion.md"
+    },
+    {
+      "id": "D06",
+      "path": "proyecto/docs/roadmap/lore_04_d/D06_auditoria.md"
+    }
+  ],
+  "cases": [
+    {
+      "id": "INS-01",
+      "context": "asistencia en DS9",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "operator_exists",
+        "legal_authority_resolved"
+      ],
+      "expected": [
+        "proper_referral"
+      ],
+      "forbidden": [
+        "starfleet_officer_as_civil_judge"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-02",
+      "context": "Tal Shiar y comercio",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "romulan_role",
+        "mandate_or_unknown"
+      ],
+      "expected": [
+        "scoped_authority"
+      ],
+      "forbidden": [
+        "universal_search_power"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-03",
+      "context": "campo bajorano",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "tenure_known",
+        "actual_dispute"
+      ],
+      "expected": [
+        "lawful_competence_or_unknown"
+      ],
+      "forbidden": [
+        "made_up_expropriation_law"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-04",
+      "context": "almirante legisla",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "starfleet_rank",
+        "local_criminal_law"
+      ],
+      "expected": [
+        "deny_out_of_scope"
+      ],
+      "forbidden": [
+        "admiral_enacts_civil_law"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-05",
+      "context": "rumor de delito",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "rumor_only",
+        "no_evidence"
+      ],
+      "expected": [
+        "presumption_not_verdict"
+      ],
+      "forbidden": [
+        "automated_conviction"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-06",
+      "context": "ciudadanía por hogar",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "residence_exists"
+      ],
+      "expected": [
+        "citizenship_independently_resolved"
+      ],
+      "forbidden": [
+        "citizenship_auto_by_house"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-07",
+      "context": "rol Tal Shiar por especie",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "romulan_individual",
+        "no_membership_record"
+      ],
+      "expected": [
+        "unknown_affiliation"
+      ],
+      "forbidden": [
+        "intel_role_by_species"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-08",
+      "context": "mercado y licencia desconocida",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "market_exists",
+        "law_unknown"
+      ],
+      "expected": [
+        "unknown_is_preserved"
+      ],
+      "forbidden": [
+        "invented_license"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-09",
+      "context": "Kai frente al ejecutivo",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "bajoran_religious_role",
+        "civil_government_distinct"
+      ],
+      "expected": [
+        "role_scoped"
+      ],
+      "forbidden": [
+        "religion_auto_sovereign"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-10",
+      "context": "Casa klingon y mando militar",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "house_affiliation",
+        "military_rank_unknown"
+      ],
+      "expected": [
+        "separate_authorities"
+      ],
+      "forbidden": [
+        "military_command_from_house"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-11",
+      "context": "juez civil de otro mundo",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "foreign_visitor",
+        "host_jurisdiction"
+      ],
+      "expected": [
+        "competence_check"
+      ],
+      "forbidden": [
+        "universal_court_power"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "INS-12",
+      "context": "futuro constitucional",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "campaign_after_cut",
+        "no_event"
+      ],
+      "expected": [
+        "no_auto_reform"
+      ],
+      "forbidden": [
+        "mandatory_future_constitution"
+      ],
+      "executed_in_corerpg": false
+    }
+  ],
+  "author_gates": [
+    "unverified_federation_constitution",
+    "new_criminal_code",
+    "fixed_local_jurisdiction_without_sources",
+    "political_future_after_campaign_start"
+  ],
+  "review_flags": [
+    "CIVIL_STARFLEET_DISTINCTION",
+    "NO_JURISDICTION_INVENTION",
+    "NO_SPECIES_POLITICAL_LOYALTY",
+    "PROCEDURAL_GOVERNMENT_REUSE"
+  ]
+}
