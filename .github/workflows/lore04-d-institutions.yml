@@ -1,0 +1,28 @@
+name: LORE-04D — Instituciones y jurisdicción documental
+on:
+  push:
+    branches: ["docs/lore04d-instituciones-20261029"]
+  pull_request:
+    paths:
+      - "proyecto/docs/roadmap/lore_04_d/**"
+      - ".github/workflows/lore04-d-institutions.yml"
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  institutional-documentary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: B C D audit and 75 mutation cases
+        run: |
+          python desarrollo/tools/validation/validate_lore04_phase.py B C D
+          python desarrollo/tools/validation/test_lore04_phase.py B
+          python desarrollo/tools/validation/test_lore04_phase.py C
+          python desarrollo/tools/validation/test_lore04_phase.py D
+          python desarrollo/tools/validation/validate_lore04_a.py
+          python desarrollo/tools/validation/validate_lore03_e.py
