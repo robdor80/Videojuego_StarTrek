@@ -15,7 +15,7 @@ Se comprobaron ramas locales y remotas antes de crearla: no existía una rama ho
 
 Inventario previo: **19.030 archivos originales**, incluyendo versionados, ignorados y no versionados. Se registraron por separado `git ls-files`, archivos ignorados, no versionados y estado Git. Se localizaron Blender/PBR/Unreal en `juego/Clase Miranda`, recursos de USS Sutherland y Valhalla en `assets`/`3D Star Trek`, y `TABULA RASA COPIA SEGURIDAD`, con sus proyectos experimentales. No se abrieron editores de esos recursos ni se ejecutaron sus scripts.
 
-La comparación final de rutas, tamaños y mtime en nanosegundos confirma **19.030 antes / 19.030 después, cero archivos nuevos, ausentes o cambiados** en el checkout original. Es una comprobación de metadatos y aislamiento, no un hash completo de todos los assets. Las listas detalladas permanecen locales; su resumen y hash están en el índice de evidencias. `main` local, sus archivos no publicados y CoreRPG permanecen intactos. Sólo el fetch actualiza referencias remotas Git.
+La comparación final de rutas, tamaños y mtime en nanosegundos confirma **19.030 antes / 19.030 después, cero archivos nuevos, ausentes o cambiados** en el checkout original. Es una comprobación de metadatos y aislamiento, no un hash completo de todos los assets. Las listas detalladas permanecen locales y se conservan además en un ZIP privado de Drive, con sus hashes individuales en el índice de evidencias; no incluye los contenidos artísticos. `main` local, sus archivos no publicados y CoreRPG permanecen intactos. Sólo el fetch actualiza referencias remotas Git.
 
 ## Capacidades comprobadas en headers, implementación y tests
 

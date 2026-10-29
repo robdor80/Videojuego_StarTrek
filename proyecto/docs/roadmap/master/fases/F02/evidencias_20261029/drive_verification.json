@@ -66,5 +66,22 @@
       }
     ],
     "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+  },
+  {
+    "name": "F02-original-resource-inventory-20261029.zip",
+    "id": "1FwmLhe6yiqt1uiMoBHWT-cMvos6Fnuvi",
+    "url": "https://drive.google.com/file/d/1FwmLhe6yiqt1uiMoBHWT-cMvos6Fnuvi/view?usp=drivesdk",
+    "size": 479677,
+    "parent_ids": [
+      "1jpRbI-cG0YXp2fXrSPpd7QXHQZsxNzJ9"
+    ],
+    "shared": false,
+    "permissions": [
+      {
+        "type": "user",
+        "role": "owner"
+      }
+    ],
+    "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
   }
 ]

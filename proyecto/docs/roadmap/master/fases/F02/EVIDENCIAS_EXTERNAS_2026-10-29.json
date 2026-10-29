@@ -261,6 +261,59 @@
       "access_status": "OWNER_ONLY_SHARED_FALSE",
       "drive_file_id": "1DzdQ4zED1TDsXMtpNpYOses6NeZ_8cEn",
       "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
+    },
+    {
+      "name": "F02-original-resource-inventory-20261029.zip",
+      "purpose": "Read-only baseline of original file metadata and Git classification; no artistic payloads",
+      "date": "2026-10-29",
+      "size": 479677,
+      "sha256": "4119835d4e96ff484acb7db32912cdd27ec273a0466bc384ddf81eae6f7fca97",
+      "platform": "Windows 11 MSI",
+      "test": "Protection of 19030 original resources",
+      "local_path": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Run_20261029\\publish\\F02-original-resource-inventory-20261029.zip",
+      "drive_folder": "03_Logs",
+      "drive_url": "https://drive.google.com/file/d/1FwmLhe6yiqt1uiMoBHWT-cMvos6Fnuvi/view?usp=drivesdk",
+      "upload_status": "UPLOADED_METADATA_READBACK_CONFIRMED",
+      "access_status": "OWNER_ONLY_SHARED_FALSE",
+      "members": [
+        {
+          "name": "original_files_before.json",
+          "size": 2865631,
+          "sha256": "2addde876f3b6494df45b47b160451a8cae5a48da75cc838f8ab426a0c8ce4b4"
+        },
+        {
+          "name": "original_files_verification.json",
+          "size": 185,
+          "sha256": "5fa5ec91d7c567b0ba300759ef5df379aeadb4d671a4c234ea1922bbc115e5d9"
+        },
+        {
+          "name": "git_status_before.txt",
+          "size": 1708,
+          "sha256": "c957a4b803abbc0f004816a788e3d692f0cf2c8e181eadd41fb3a5c6b392ad01"
+        },
+        {
+          "name": "tracked_before.txt",
+          "size": 171622,
+          "sha256": "1c4bb6d340e2e16273aa01202e650ac5f94edd37bc51c71fd2b9e5b46fff6137"
+        },
+        {
+          "name": "ignored_before.txt",
+          "size": 1794504,
+          "sha256": "482cf5c6f513c3245f2a61632bb209813e8b3ff2e9afd84be6e3fc7b8fdf15a2"
+        },
+        {
+          "name": "untracked_before.txt",
+          "size": 273469,
+          "sha256": "53aa6a49d9eea3e26d0a4127cad8f5b8c36272599c2ebe6edeac3b582dbc24a6"
+        },
+        {
+          "name": "audit_protection.py",
+          "size": 1974,
+          "sha256": "24e54019a4d6101141e6eae73597550011870ffbf77cf5165a130ae32c020f24"
+        }
+      ],
+      "drive_file_id": "1FwmLhe6yiqt1uiMoBHWT-cMvos6Fnuvi",
+      "verification": "Upload succeeded; metadata readback confirms name, size, destination and owner-only permissions. SHA-256 recorded locally; connector did not return remote checksum."
     }
   ]
 }
