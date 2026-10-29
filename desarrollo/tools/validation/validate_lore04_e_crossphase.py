@@ -2,7 +2,7 @@
 """Crossphase LORE-04 editorial-integrity gate; not a live CoreRPG/UE5 test."""
 from pathlib import Path
 import json
-from validate_lore04_phase import ROOT,validate,load,BASE,require
+from validate_lore04_phase import ROOT,validate as validate_phase,load,BASE,require
 PHASES=("B","C","D","E")
 DEPS={"B":"sistemas/gameplay/economy/replicator_post_scarcity_contract.json",
       "C":"sistemas/universe/generation/traffic_activity_model.json",
@@ -46,7 +46,7 @@ def audit_crossphase(manifests:dict):
     return {"cases_by_phase":info,"total_design_cases":sum(info.values()),"runtime":"NOT_TESTED","author_merge":"REQUIRED"}
 def validate():
     items={p:load(BASE+p.lower()+f"/lore04{p.lower()}_cases_v0.1.json") for p in PHASES}
-    results=[validate(p) for p in PHASES]
+    results=[validate_phase(p) for p in PHASES]
     x=audit_crossphase(items)
     x["validated_phases"]=[r["phase"] for r in results]
     x["A_in_main"]=True
