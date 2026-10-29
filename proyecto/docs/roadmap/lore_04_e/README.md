@@ -1,5 +1,7 @@
 # LORE-04E — Auditoría global e integración documental
 
+**Actualización administrativa posterior (2026-10-29):** E fue fusionada mediante PR #58, tras A/B/C/D. Véase [acta de cierre definitivo](ACTA_CIERRE_DOCUMENTAL_LORE04_20261029.md). Las referencias a E pendiente en las líneas siguientes son la fotografía de auditoría pre-fusión; **no** el estado administrativo vigente.
+
 **Estado:** COMPLETE_DOCUMENTARY_CANDIDATE_PENDING_AUTHOR_MERGE. PR de E dirigida a main ya consolidada con A (#51), B (#52), C (#56) y D (#57); E aún sin merge en este corte documental.
 
 - [E01](E01_integridad_estructura.md) — Integridad del corpus, identidad y estructura
