@@ -2,6 +2,7 @@
 #if WITH_DEV_AUTOMATION_TESTS
 #include "Misc/AutomationTest.h"
 #include "Engine/GameInstance.h"
+#include "Engine/Engine.h"
 #include "Engine/World.h"
 #include "HAL/FileManager.h"
 #include "Misc/Paths.h"
@@ -18,12 +19,14 @@ struct FLab {
             .CreateAISystem(false).ShouldSimulatePhysics(false).SetTransactional(false);
         World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,
             ERHIFeatureLevel::Num,&Values);
+        GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
         Game=NewObject<UGameInstance>(); Game->AddToRoot();
+        World->SetGameInstance(Game);
         Host=NewObject<UF02CampaignSubsystem>(Game); Host->AddToRoot(); Host->OpenLab();
     }
     ~FLab() {
         Host->CloseLab(); Host->RemoveFromRoot();
-        World->DestroyWorld(false); Game->RemoveFromRoot();
+        World->DestroyWorld(false); GEngine->DestroyWorldContext(World); Game->RemoveFromRoot();
     }
 };
 constexpr auto Flags=EAutomationTestFlags::EditorContext | EAutomationTestFlags::EngineFilter;

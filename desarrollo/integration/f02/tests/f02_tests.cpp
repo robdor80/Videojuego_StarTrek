@@ -106,6 +106,11 @@ void run(const std::string& name) {
         CHECK(f02_abi_version()==1);
         CHECK(std::string(f02_core_sha())=="4f282863737bcd8f5add401202a9e1064c133672");
         F02Session* bad=nullptr; CHECK(f02_create(99,1,&bad)==F02_VERSION && !bad);
+        const auto before=s.save(); auto unsupported=before;
+        // Audited Core save header: eight-byte magic then little-endian uint32 version.
+        CHECK(unsupported.size()>12); unsupported[8]=99;
+        CHECK(f02_load(s.p,unsupported.data(),unsupported.size())==F02_SAVE_REJECTED);
+        CHECK(s.save()==before);
     } else if (name == "scope") {
         Session other; F02ActionResult r{}; auto before=other.save();
         CHECK(f02_place(other.p,h.subject,other.handles().room,other.revision(),&r)==F02_DENIED);
@@ -116,12 +121,15 @@ void run(const std::string& name) {
         CHECK(s.save()==bytes);
     } else if (name == "thread") {
         auto before=s.save(); uint32_t read=0,write=0,destroy=0;
+        uint32_t result_status=0;
         std::thread worker([&] {
             uint64_t rev{}; read=f02_revision(s.p,&rev);
             F02ActionResult r{}; write=f02_roll(s.p,h.subject,1,6,0,&r);
+            result_status=r.status;
             destroy=f02_destroy(s.p);
         }); worker.join();
         CHECK(read==F02_THREAD && write==F02_THREAD && destroy==F02_THREAD);
+        CHECK(result_status==F02_THREAD);
         CHECK(before==s.save());
     } else if (name == "buffers") {
         auto before=s.save(); uint64_t n{}; std::array<uint8_t,2> buffer{0xaa,0xbb};

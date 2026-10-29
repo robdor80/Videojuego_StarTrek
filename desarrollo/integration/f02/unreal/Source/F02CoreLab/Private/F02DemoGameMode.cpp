@@ -13,6 +13,7 @@
 #include "UnrealClient.h"
 #include "TimerManager.h"
 
+AF02DemoGameMode::AF02DemoGameMode() { DefaultPawnClass=nullptr; }
 void AF02DemoGameMode::BeginPlay() {
     Super::BeginPlay();
     Host=GetGameInstance()->GetSubsystem<UF02CampaignSubsystem>();
@@ -50,7 +51,8 @@ void AF02DemoGameMode::Advance() {
         Message=TEXT("F02 demonstration finished | EntityId = ")+InitialId;
         const FString Dir=FPaths::Combine(FPaths::ProjectSavedDir(),TEXT("F02Evidence"));
         IFileManager::Get().MakeDirectory(*Dir,true);
-        FScreenshotRequest::RequestScreenshot(FPaths::Combine(Dir,TEXT("F02-Core-UE5.png")),false,false);
+        FScreenshotRequest::RequestScreenshot(FPaths::Combine(Dir,
+            TEXT("F02-Core-UE5-")+FGuid::NewGuid().ToString()+TEXT(".png")),false,false);
     } else if (Step==6) {
         GetWorldTimerManager().ClearTimer(DemoTimer);
         if (FParse::Param(FCommandLine::Get(),TEXT("F02AutoQuit")))

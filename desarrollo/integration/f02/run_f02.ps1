@@ -60,8 +60,16 @@ if ($Stage -in @('TestUnreal','All')) {
     $Index=Join-Path $Report 'index.json'
     if (!(Test-Path -LiteralPath $Index)) { throw 'No Unreal automation report produced' }
     $Result=Get-Content -LiteralPath $Index -Raw | ConvertFrom-Json
-    if ($Result.failed -gt 0 -or $Result.succeeded -ne 5) { throw 'Unreal automation suite did not pass all five tests' }
+    if ($Result.failed -gt 0 -or $Result.notRun -gt 0 -or
+        ($Result.succeeded+$Result.succeededWithWarnings) -ne 5) {
+        throw 'Unreal automation suite did not pass all five tests'
+    }
 }
 if ($Stage -eq 'Demo') {
     Invoke-Logged 'unreal-demo' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor.exe') @($Project,'/Engine/Maps/Entry','-game','-windowed','-ResX=1280','-ResY=720','-dx11','-nosound','-NoLiveCoding','-F02AutoQuit','-unattended','-stdout','-FullStdOutLogOutput')
+    $DemoLog=Get-Content -LiteralPath (Join-Path $LogDir ($Run+'-unreal-demo.log')) -Raw
+    if ($DemoLog -match 'F02 DEMO step=\d+ pass=0' -or
+        ([regex]::Matches($DemoLog,'F02 DEMO step=[1-4] pass=1').Count -ne 4)) {
+        throw 'The graphical demonstration did not pass all four stages'
+    }
 }

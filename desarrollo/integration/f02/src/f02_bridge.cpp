@@ -104,7 +104,7 @@ uint32_t f02_place(F02Session* s, F02Ref actor, F02Ref room,
                    uint64_t revision, F02ActionResult* out) {
     if (!out) return F02_ARGUMENT;
     *out = {};
-    if (auto status = guard(s); status != F02_OK) return status;
+    if (auto status = guard(s); status != F02_OK) return out->status = status;
     if (!s->valid(room) || room.id != s->room.value()) return out->status = F02_DENIED;
     return action(s, actor, corerpg::PlaceEntityAction{s->subject, s->room}, revision, out);
 }

@@ -49,6 +49,7 @@ UCLASS()
 class F02CORELAB_API AF02DemoGameMode : public AGameModeBase {
     GENERATED_BODY()
 public:
+    AF02DemoGameMode();
     virtual void BeginPlay() override;
 private:
     UPROPERTY() TObjectPtr<UF02CampaignSubsystem> Host;
