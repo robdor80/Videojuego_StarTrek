@@ -1,0 +1,344 @@
+{
+  "schema_version": "0.1.0",
+  "phase": "E",
+  "status": "COMPLETE_DOCUMENTARY_CANDIDATE_PENDING_AUTHOR_MERGE",
+  "world_state_owner": "CoreRPG",
+  "runtime_implemented": false,
+  "integrated_phases": [
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "prior_prs_fused": false,
+  "checked_trek_main_sha": "1eea14b8257811c0a06e4f3e08c2032eed9c5d1f",
+  "checked_corerpg_main_sha": "4f282863737bcd8f5add401202a9e1064c133672",
+  "dependencies": [
+    "proyecto/docs/roadmap/lore_04_master_plan_v0.1.md",
+    "proyecto/docs/roadmap/lore_04_a/A08_auditoria_pruebas_cierre.md",
+    "proyecto/docs/roadmap/lore_04_b/lore04b_cases_v0.1.json",
+    "proyecto/docs/roadmap/lore_04_c/lore04c_cases_v0.1.json",
+    "proyecto/docs/roadmap/lore_04_d/lore04d_cases_v0.1.json"
+  ],
+  "packages": [
+    {
+      "id": "E01",
+      "path": "proyecto/docs/roadmap/lore_04_e/E01_integridad_estructura.md"
+    },
+    {
+      "id": "E02",
+      "path": "proyecto/docs/roadmap/lore_04_e/E02_canon_cronologia.md"
+    },
+    {
+      "id": "E03",
+      "path": "proyecto/docs/roadmap/lore_04_e/E03_sociedad_economia_logistica.md"
+    },
+    {
+      "id": "E04",
+      "path": "proyecto/docs/roadmap/lore_04_e/E04_jurisdiccion.md"
+    },
+    {
+      "id": "E05",
+      "path": "proyecto/docs/roadmap/lore_04_e/E05_corerpg_ia_runtime.md"
+    },
+    {
+      "id": "E06",
+      "path": "proyecto/docs/roadmap/lore_04_e/E06_storg_f00_f15.md"
+    },
+    {
+      "id": "E07",
+      "path": "proyecto/docs/roadmap/lore_04_e/E07_validaciones_regresiones.md"
+    },
+    {
+      "id": "E08",
+      "path": "proyecto/docs/roadmap/lore_04_e/E08_dictamen_cierre.md"
+    }
+  ],
+  "cases": [
+    {
+      "id": "AUD-01",
+      "context": "canon editorial no escena",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "official_reference_only"
+      ],
+      "expected": [
+        "preserve_official_level"
+      ],
+      "forbidden": [
+        "promote_to_screen"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-02",
+      "context": "futuro abierto",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "post_start_future"
+      ],
+      "expected": [
+        "require_campaign_event"
+      ],
+      "forbidden": [
+        "obligatory_future_event"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-03",
+      "context": "Pike/TOS solo histórico",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "retained_history"
+      ],
+      "expected": [
+        "single_playable_era"
+      ],
+      "forbidden": [
+        "reactivate_pike"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-04",
+      "context": "vendedor sin stock",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "no_inventory"
+      ],
+      "expected": [
+        "trade_denied"
+      ],
+      "forbidden": [
+        "goods_created"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-05",
+      "context": "pasajero bloqueado",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "closed_route"
+      ],
+      "expected": [
+        "remain_at_origin"
+      ],
+      "forbidden": [
+        "instant_destination"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-06",
+      "context": "sin muelles",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "capacity_zero"
+      ],
+      "expected": [
+        "reject_docking"
+      ],
+      "forbidden": [
+        "magical_berth"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-07",
+      "context": "LOD persiste",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "materialized_character"
+      ],
+      "expected": [
+        "stable_id"
+      ],
+      "forbidden": [
+        "reroll_person"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-08",
+      "context": "almirante sin competencia civil",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "starfleet_role",
+        "civil_dispute"
+      ],
+      "expected": [
+        "jurisdiction_check"
+      ],
+      "forbidden": [
+        "automatic_civil_judge"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-09",
+      "context": "Kai de Bajor",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "religious_office"
+      ],
+      "expected": [
+        "distinct_civil_government"
+      ],
+      "forbidden": [
+        "theocracy_auto"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-10",
+      "context": "romulano y espionaje",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "species_romulan"
+      ],
+      "expected": [
+        "no_intel_assignment"
+      ],
+      "forbidden": [
+        "tal_shiar_by_biology"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-11",
+      "context": "norma local desconocida",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "law_unknown"
+      ],
+      "expected": [
+        "unknown_preserved"
+      ],
+      "forbidden": [
+        "fabricate_civil_code"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-12",
+      "context": "replicador sin energía",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "power_off"
+      ],
+      "expected": [
+        "fabrication_rejected"
+      ],
+      "forbidden": [
+        "free_rare_component"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-13",
+      "context": "moneda federación",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "federation_citizenship"
+      ],
+      "expected": [
+        "payment_context_deferred"
+      ],
+      "forbidden": [
+        "universal_credit_rate"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-14",
+      "context": "rumor y conocimiento",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "rumor_only"
+      ],
+      "expected": [
+        "observer_uncertain"
+      ],
+      "forbidden": [
+        "truth_rewritten"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-15",
+      "context": "CoreRPG autoridad",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "ai_suggests"
+      ],
+      "expected": [
+        "corerpg_validates"
+      ],
+      "forbidden": [
+        "ai_mutates_worldstate"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-16",
+      "context": "economía bloque procedural",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "dynamic_universe_block4_ready"
+      ],
+      "expected": [
+        "not_implemented"
+      ],
+      "forbidden": [
+        "block4_closed_in_lore"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-17",
+      "context": "PR apiladas",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "bcd_unmerged"
+      ],
+      "expected": [
+        "draft_review_chain"
+      ],
+      "forbidden": [
+        "claim_fused_without_author"
+      ],
+      "executed_in_corerpg": false
+    },
+    {
+      "id": "AUD-18",
+      "context": "institución en territorio ajeno",
+      "classification": "GAME_ADDITION_NONBINDING_TEST",
+      "preconditions": [
+        "foreign_government"
+      ],
+      "expected": [
+        "verify_treaty"
+      ],
+      "forbidden": [
+        "extraterritorial_power_auto"
+      ],
+      "executed_in_corerpg": false
+    }
+  ],
+  "author_gates": [
+    "any_merge_or_branch_deletion",
+    "exact_2383_date",
+    "binding_economic_model",
+    "new_laws",
+    "runtime_certification"
+  ],
+  "review_flags": [
+    "NO_PREMATURE_CLOSURE",
+    "CANON_PROVENANCE",
+    "CROSSPHASE_COMPATIBILITY",
+    "NO_RUNTIME_CLAIM",
+    "CORE_WORLDSTATE_ONLY"
+  ]
+}
