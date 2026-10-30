@@ -1,0 +1,22 @@
+{
+  "scenario": "sensor sickness and legitimate temporary cover after load at tick 86399",
+  "absence_ms": 21.335500001441687,
+  "candidate_query_ms": 1.8419999978505075,
+  "cover_ms": 27.056300001277123,
+  "real_candidates": 18,
+  "outgoing": 480,
+  "incoming": 481,
+  "crew_after": 1600,
+  "coverage_restored": true,
+  "historical_gaps": [
+    {
+      "id": 4369,
+      "start": 86399,
+      "end": 86400,
+      "department": 1,
+      "station": 4,
+      "missing": 1,
+      "plan": 3298
+    }
+  ]
+}

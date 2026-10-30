@@ -58,3 +58,13 @@ CI comprobada en el último código previo a este apunte:
 [Actions 38228139402](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38228139402)
 SUCCESS, 39 escenarios de fixture y **17 tests unitarios**. La fase global
 permanece abierta; faltan Core/UE5 y pruebas transversales post-merge.
+
+## F04-ODYSSEY-01 — Implementación para auditoría
+
+[Organización y tres guardias](F04-ODYSSEY-01_ORGANIZACION_Y_TRES_GUARDIAS.md):
+1.600 personas y plazas, siete departamentos, 72 secciones; día exacto
+500 Alpha / 330 Beta / 205 Gamma / 565 fuera. Reutiliza el planificador de
+Sovereign; [plantilla completa](F04-ODYSSEY-01_PLANTILLA_1600.md) y
+[evidencias](evidence/F04-ODYSSEY-01/RESULTADOS.md). Odyssey operativa en 2383
+como GAME_ADDITION, flujo cuántico experimental sin instalación automática.
+F04 permanece EN_CURSO; Draft sin fusionar.

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="25"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="0"
+	timestamp="2026-10-30T20:14:21"
+	>
+	<testcase name="f03.identity" classname="f03.identity" time="0.0084813" status="run">
+		<properties/>
+		<system-out>PASS identity Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.determinism" classname="f03.determinism" time="0.013888" status="run">
+		<properties/>
+		<system-out>PASS determinism Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.observers" classname="f03.observers" time="0.006115" status="run">
+		<properties/>
+		<system-out>PASS observers Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.hidden" classname="f03.hidden" time="0.0058752" status="run">
+		<properties/>
+		<system-out>PASS hidden Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.acquire" classname="f03.acquire" time="0.0062444" status="run">
+		<properties/>
+		<system-out>PASS acquire Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.report" classname="f03.report" time="0.0066576" status="run">
+		<properties/>
+		<system-out>PASS report Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.denied" classname="f03.denied" time="0.0058996" status="run">
+		<properties/>
+		<system-out>PASS denied Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.readonly" classname="f03.readonly" time="0.0058917" status="run">
+		<properties/>
+		<system-out>PASS readonly Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.offscreen" classname="f03.offscreen" time="0.0068378" status="run">
+		<properties/>
+		<system-out>PASS offscreen Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.order" classname="f03.order" time="0.0057433" status="run">
+		<properties/>
+		<system-out>PASS order Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.bounded" classname="f03.bounded" time="0.0059649" status="run">
+		<properties/>
+		<system-out>PASS bounded Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.duplicate" classname="f03.duplicate" time="0.0057826" status="run">
+		<properties/>
+		<system-out>PASS duplicate Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.backwards" classname="f03.backwards" time="0.0059517" status="run">
+		<properties/>
+		<system-out>PASS backwards Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.roundtrip" classname="f03.roundtrip" time="0.0058939" status="run">
+		<properties/>
+		<system-out>PASS roundtrip Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.rng" classname="f03.rng" time="0.0203815" status="run">
+		<properties/>
+		<system-out>PASS rng Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.corrupt" classname="f03.corrupt" time="0.0323552" status="run">
+		<properties/>
+		<system-out>PASS corrupt Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.incompatible" classname="f03.incompatible" time="0.005667" status="run">
+		<properties/>
+		<system-out>PASS incompatible Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.scope" classname="f03.scope" time="0.0096544" status="run">
+		<properties/>
+		<system-out>PASS scope Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.thread" classname="f03.thread" time="0.0073012" status="run">
+		<properties/>
+		<system-out>PASS thread Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.buffers" classname="f03.buffers" time="0.0077251" status="run">
+		<properties/>
+		<system-out>PASS buffers Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.stale" classname="f03.stale" time="0.0061725" status="run">
+		<properties/>
+		<system-out>PASS stale Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.calendar" classname="f03.calendar" time="0.0057562" status="run">
+		<properties/>
+		<system-out>PASS calendar Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.tampered" classname="f03.tampered" time="0.0256303" status="run">
+		<properties/>
+		<system-out>PASS tampered Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.process_save" classname="f03.process_save" time="0.0064154" status="run">
+		<properties/>
+		<system-out>campaign written; pending=2 tick=20 entities=8
+PASS process_save Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+	<testcase name="f03.process_load" classname="f03.process_load" time="0.0124098" status="run">
+		<properties/>
+		<system-out>new process restored campaign; finished=4 tick=100 entities=8
+PASS process_load Core=9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+</system-out>
+	</testcase>
+</testsuite>

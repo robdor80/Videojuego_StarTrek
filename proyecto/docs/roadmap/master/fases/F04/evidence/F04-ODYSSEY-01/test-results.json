@@ -1,0 +1,38 @@
+{
+  "native": {
+    "total": 168,
+    "failed": 0,
+    "skipped": 0,
+    "passed": 168
+  },
+  "contracts": {
+    "total": 1,
+    "failed": 0,
+    "skipped": 0,
+    "passed": 1
+  },
+  "core": {
+    "total": 451,
+    "failed": 0,
+    "skipped": 4,
+    "passed": 447
+  },
+  "f02": {
+    "total": 15,
+    "failed": 0,
+    "skipped": 0,
+    "passed": 15
+  },
+  "f03": {
+    "total": 25,
+    "failed": 0,
+    "skipped": 0,
+    "passed": 25
+  },
+  "unreal": {
+    "succeeded": 21,
+    "succeededWithWarnings": 1,
+    "failed": 0,
+    "notRun": 0
+  }
+}
