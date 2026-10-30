@@ -33,6 +33,7 @@ void run(const std::string& name,const std::string& path) {
   F04PopulationStats population{};check(f04_population_stats(l.s,&population)==F04_OK && population.assigned==160 && !population.residents,"EMH not a 161st person");
   F04SectionSpec sections[34]{};U n=0;check(f04_template_sections(2,sections,34,&n)==F04_OK && n==34,"section descriptors");
   for(auto& s:sections)check(s.name && s.responsibilities && s.equipment,"documented groups");
+  for(const auto& s:sections)check(std::string(s.equipment).find("barra superior")==std::string::npos,"Intrepid must not inherit Miranda torpedo rollbar");
  }
  else if(name=="vacant") {
   check(l.org().vacant==160 && !l.org().assigned && l.stats().crew==160,"installation creates vacancies only");
