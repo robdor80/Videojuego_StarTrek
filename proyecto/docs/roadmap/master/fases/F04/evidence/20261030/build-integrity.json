@@ -1,0 +1,24 @@
+{
+  "code_commit": "96d37c6697623085c1f711ada2d39cc017439705",
+  "core_commit": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+  "unreal_version": "5.8.2",
+  "unreal_changelist": 56702186,
+  "native_and_staged_bridge_sha256": "ee733dfce2d33191ab8d5e52ea812f3d4e06594ca670328032c5c8219739f44d",
+  "identical_native_and_staged_bridge": true,
+  "source_sha256": {
+    "desarrollo/integration/f04/CMakeLists.txt": "b8b9595939dfe13a07e7584b363df7080365fe514c6d5ed5841a1886333bb2aa",
+    "desarrollo/integration/f04/collect_evidence.py": "56983c5acdad5ae6960c98c8732a83236370932387b73c9f904d7998d7c01e05",
+    "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+    "desarrollo/integration/f04/generate_catalog.py": "d0f7f4f490c2ae16e77c94db3d9c76e57e63ebd1d1e9f391301708c5c6c2e262",
+    "desarrollo/integration/f04/run_f04.ps1": "316e5952b011cfd3375c7e240fff6c65e482ce63559e91cb7ad09f4ad100ca74",
+    "desarrollo/integration/f04/include/f04_bridge.h": "9d15605081f62169f71643e045d32799128caff2100f3fb331b91fb8b79dab05",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "57b4c5acb43c8cabffc2bc89604bfbaf95fe7c81229356f128149d206d98c7c0",
+    "desarrollo/integration/f04/tests/f04_tests.cpp": "b8be7a35ecf7dce2fce07e1e4cc3fd1819d32ed71d96c0158d2b6c5fa8dc8314",
+    "desarrollo/integration/f04/unreal/F02CoreLab.Build.cs": "453c2f6a4abd587d0393c3405a0f0f8f61da7de95837b48a4b50e823ffedb73e",
+    "desarrollo/integration/f04/unreal/F02CoreLab.cpp": "938580242d3e7cf8d1dc48cc2775dc197d0e2f431620cab812f3033967121d76",
+    "desarrollo/integration/f04/unreal/F04Automation.cpp": "db96db8c850c0a3fc2d2a515652e7bc39e2f5eb7f5897b5cc89cb318a6060e4f",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.cpp": "8e92d9bc26c30a2a9f4db3a0f3a53b5ef6d674b1decd67d2a8437c92c588c762",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.h": "8d3fcaa0d8272981abf6a5e05bd662d731a91b240ba2ce93029b5e23410a4392"
+  },
+  "unreal_nullrhi_only": true
+}
