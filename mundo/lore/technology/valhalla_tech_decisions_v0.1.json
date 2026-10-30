@@ -6,10 +6,26 @@
   "source_of_detail": "mundo/lore/technology/valhalla_tech_profile_v0.1.md",
   "authoritative_world_state": "CoreRPG_ONLY",
   "runtime_implemented": false,
-  "year_of_commissioning": null,
+  "year_of_commissioning": 2387,
+  "year_of_commissioning_is_author_approved_target": true,
+  "exact_commissioning_date_pending": true,
+  "latest_author_decision_date": "2026-10-30",
   "auxiliary_yacht_active": false,
   "auxiliary_project": "IDEA-0010",
   "class_identity": "NEW_VALHALLA_CLASS_GALAXY_INSPIRED_NOT_GALAXY_REFIT",
+  "quantum_slipstream_program": {
+    "status": "APPROVED_FUTURE_RESEARCH_CANDIDATE",
+    "prototype_platform_class": "odyssey",
+    "prototype_research_from_year": 2383,
+    "installed_on_all_odyssey": false,
+    "target_platform_class": "valhalla",
+    "installed_on_first_valhalla_at_2387_by_default": false,
+    "requires_additional_tests": true,
+    "possible_mission_arc": true,
+    "no_guaranteed_success_or_automatic_unlock": true,
+    "source_decision": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md",
+    "runtime_implemented": false
+  },
   "decisions": [
     {
       "decision_id": "VAL-TEC-01",
