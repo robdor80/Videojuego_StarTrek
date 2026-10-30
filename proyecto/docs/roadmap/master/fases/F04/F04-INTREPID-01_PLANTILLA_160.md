@@ -38,7 +38,7 @@ Generada desde las consultas de la DLL validada. Clave: `perfil:sección*100+ord
 | 21. Sistemas bioneurales y ordenadores | 5 | 7 | 3 | Administración y diagnóstico bioneural; coordinación técnica con Ingeniería | Ordenadores y paquetes bioneurales |
 | 22. Coordinación de recursos y holocubiertas | 5 | 4 | 2 | Reservas y prioridades de recursos; instalaciones lógicas configurables | Recursos y holocubiertas; contrato mínimo sin 3D |
 | 23. Jefe de seguridad y adjunto | 6 | 2 | 1 | Dirección de seguridad y táctica; consola táctica si está habilitado | Fáseres, torpedos, escudos y seguridad |
-| 24. Especialistas tácticos | 6 | 5 | 2 | Operación táctica; apoyo o relevo del jefe de servicio | Fáseres y torpedos en barra superior; escudos |
+| 24. Especialistas tácticos | 6 | 5 | 2 | Operación táctica; apoyo o relevo del jefe de servicio | Matrices fáser, lanzadores de torpedos integrados en el casco y escudos |
 | 25. Seguridad interior | 6 | 8 | 3 | Protección interior | Instalaciones de seguridad |
 | 26. Respuesta a emergencias y abordajes | 6 | 3 | 1 | Intervención en emergencias y abordajes | Instalaciones de seguridad |
 | 27. Jefe de sección | 7 | 1 | 1 | Coordinación de servicios auxiliares | Hangares posteriores y almacenes |
