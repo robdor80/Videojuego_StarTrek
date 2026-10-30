@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación post-merge:** 30-10-2026 (cierre F02, PR #60). **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00 y F01 cerradas a su nivel documental; F02 CERRADA en CONTRATO_VALIDADO** por integración C++/Unreal probada (PR #60, merge `bb77c98d`). Fase principal actual: **F03 EN_CURSO**, pendiente de su propia validación `CORE_INTEGRADO`. La [reconciliación del 13-10](ACTA_RECONCILIACION_F00_F06_2026-10-13.md) queda como antecedente histórico.
+**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación post-merge:** 30-10-2026 (F02 PR #60; F03 PR #62 con CoreRPG PR #12). **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00/F01 cerradas a su nivel; F02 CERRADA en CONTRATO_VALIDADO; F03 CERRADA en CORE_INTEGRADO** tras auditoría y fusiones normales con SHA Core fijado. Siguiente fase principal: **F04 EN_CURSO**, sin atribuir jugabilidad ni sistemas galácticos completos a F03. La [reconciliación del 13-10](ACTA_RECONCILIACION_F00_F06_2026-10-13.md) queda como antecedente histórico.
 
 ## Principios de producto conservados
 
@@ -19,8 +19,8 @@
 | [F00](fases/F00/README.md) | Auditoría, inventario y gobierno | CERRADA | DOCUMENTACION_AUDITADA |
 | [F01](fases/F01/README.md) | Visión y canon del producto | **CERRADA en diseño** (PR #2, acta F01) | DISENO_VALIDADO |
 | [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** (PR #60; laboratorio CoreRPG/UE5 validado) | CONTRATO_VALIDADO |
-| [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **EN_CURSO** (fase principal; integración de dominio aún pendiente) | CORE_INTEGRADO |
-| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **EN_REVISION** (referencia probada; validación de integración pendiente) | REFERENCIA_PROBADA |
+| [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** (CoreRPG PR #12 + Trek PR #62; corte vertical integrado y auditado) | CORE_INTEGRADO |
+| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **EN_CURSO** (fase principal; la referencia probada requiere validación operativa adicional) | REFERENCIA_PROBADA |
 | [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_REVISION** (referencia probada; Core pendiente) | CORE_INTEGRADO |
 | [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
 | [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
@@ -33,7 +33,7 @@
 | [F14](fases/F14/README.md) | Recursos audiovisuales y NAP | PLANIFICADA | UE5_JUGABLE |
 | [F15](fases/F15/README.md) | QA, beta y distribución | PLANIFICADA | ACEPTACION_SUPERADA |
 
-Cada fase contiene cinco pasos `Fnn-P01`…`Fnn-P05`; **80 pasos** en total. Los de **F00 y F01 están cerrados únicamente a su madurez documental**. Los entregables documentales de F02–F06 están incorporados (PR #3–#7); la **F02** añade la integración real de laboratorio mediante **PR #60**, fusionada y auditada, con cierre limitado a `CONTRATO_VALIDADO`. Las puertas de **F03–F08**, incluida la guardia de Sensores completa, se mantienen independientes. Un paso cerrado a nivel referencia **no** equivale a su integración ejecutable.
+Cada fase contiene cinco pasos `Fnn-P01`…`Fnn-P05`; **80 pasos** en total. Los de **F00 y F01 están cerrados únicamente a su madurez documental**. Los entregables documentales de F02–F06 están incorporados (PR #3–#7); la **F02** añade la integración real de laboratorio mediante **PR #60**, fusionada y auditada, con cierre limitado a `CONTRATO_VALIDADO`. Las puertas de **F04–F08**, incluida la guardia de Sensores completa, se mantienen independientes. Un paso cerrado a nivel referencia **no** equivale a su integración ejecutable.
 
 ## Flujo principal y dependencias
 
@@ -79,6 +79,6 @@ Este diagrama es el **camino crítico orientativo**, no una prohibición de dise
 - F00 manda el control global; cada fase mantiene sus enlaces a **ubicaciones existentes**. Prohibido trasladar cientos de rutas para adaptarse al plan.
 - Idea `IDEA-xxxx` → decisión `DEC-xxxx` cuando haga falta → fase/paso `Fnn-Pnn` → evidencia/prueba → cierre.
 - Todo `COMPLETE` previo se registra con **alcance declarado** (lore, contrato, simulador, CI o UE5), no como prueba de implementación general.
-- Una única fase principal EN_CURSO en el estado global (**F03** desde el 30-10-2026). F03–F06 constan **EN_REVISION** por haberse trabajado preparatoriamente, sin convertirse en una segunda fase principal activa. **F07** entra EN_REVISION en preparación técnica paralela por autorización del autor (13-10-2026), pero NO alcanza UE5_JUGABLE. **F08** sigue PLANIFICADA/PAUSADA hasta pruebas de puente y Core integrados.
+- Una única fase principal EN_CURSO en el estado global (**F04** desde el cierre F03 del 30-10-2026). **F03 está CERRADA únicamente a CORE_INTEGRADO**; F05–F06 conservan **EN_REVISION** como preparación documental, sin convertirse en fases principales activas. **F07** entra EN_REVISION en preparación técnica paralela por autorización del autor (13-10-2026), pero NO alcanza UE5_JUGABLE. **F08** sigue PLANIFICADA/PAUSADA hasta pruebas de puente y Core integrados.
 - Para modificaciones que cambian la continuidad del juego, el alcance jugable o la arquitectura del Core, respetar las decisiones creativas expresamente aprobadas por el autor. **La cronología de pantalla puede alterarse para este juego personal**, con anotación GAME_ADDITION, sin habilitar por defecto tecnologías futuras en todas las eras.
 - **Acta vigente de la nueva Clase Valhalla:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Blindaje ablativo y torpedos transfásicos aprobados como diseño; Blender/UE5 y Core pendientes de implementar y validar.
