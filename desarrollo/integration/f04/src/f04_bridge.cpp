@@ -128,7 +128,7 @@ bool command_authority(const WorldState& w,U p,U domain,U t) {
   const U origin=ref(w,d,ORIGIN), issuer=ref(w,d,ISSUER);
   if(ref(w,d,PERSON)==p && val(w,d,D_DOMAIN)==domain && window(w,d,t) &&
    issuer==commander(w,t) && type(w,origin,"appointment") && window(w,origin,t) &&
-   ref(w,origin,PERSON)==issuer && qualified(w,p,F04_COMMAND,t)) return true;
+   ref(w,origin,PERSON)==issuer && (val(w,origin,ROLE)==F04_CAPTAIN || (val(w,origin,ROLE)>=F04_FIRST && val(w,origin,ROLE)<=F04_SUCCESSOR)) && qualified(w,p,F04_COMMAND,t)) return true;
  }
  return false;
 }
@@ -424,7 +424,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   cmd();person(target);times();need(r.value==F04_POLICY && r.cause);
   need(qualified(c.world,target,F04_COMMAND,r.end-1),F04_QUALIFICATION);
   U origin=0;for(U a:all(c.world,"appointment")) if(ref(c.world,a,PERSON)==p && window(c.world,a,t) &&
-   (val(c.world,a,ROLE)==F04_CAPTAIN || val(c.world,a,ROLE)>=F04_FIRST) && r.end<=val(c.world,a,END)) {origin=a;break;}
+   (val(c.world,a,ROLE)==F04_CAPTAIN || (val(c.world,a,ROLE)>=F04_FIRST && val(c.world,a,ROLE)<=F04_SUCCESSOR)) && r.end<=val(c.world,a,END)) {origin=a;break;}
   need(origin,F04_EXPIRED);const U d=make(c,cat,"delegation");link(c,d,SHIP,1);link(c,d,PERSON,target);link(c,d,ISSUER,p);link(c,d,ORIGIN,origin);
   temporal(c,d,r.start,r.end);set(c,d,D_DOMAIN,r.value);set(c,d,CAUSE,r.cause);return d;
  }
