@@ -1,0 +1,21 @@
+{
+  "template_id": 5,
+  "authority": "CoreRPG_ONLY",
+  "level": "LOGICAL_ORGANIZATION_PREPARATION",
+  "areas": [
+    {"key": 1, "name": "Platillo", "capabilities": ["impulse", "independent_command_required", "shields_and_defense", "main_hangar", "civil_residences"], "dedicated_section_ids": [73]},
+    {"key": 2, "name": "Sección motriz", "capabilities": ["warp", "battle_bridge", "independent_command_required", "shields_and_defense", "two_auxiliary_hangars"], "dedicated_section_ids": [14, 16, 17, 23, 74]},
+    {"key": 3, "name": "Servicios comunes Valhalla", "capabilities": ["assign_before_separation_without_cloning"], "dedicated_section_ids": [5]},
+    {"key": 4, "name": "Defiant acoplada", "capabilities": ["persistent_unique_vessel", "dedicated_naval_operators"], "dedicated_section_ids": [12, 26, 51, 62, 90]},
+    {"key": 5, "name": "Hijos de Odín", "capabilities": ["special_operations", "military_detachment_command_only"], "dedicated_section_ids": [63, 64, 65, 66, 67, 68, 69, 70]}
+  ],
+  "integration_reserved": "F04-INTEGRACION-04",
+  "separation_executable": false,
+  "embarkation_transfers_executable": false,
+  "defiant_independent_watch_coverage_certified": false,
+  "defiant_docking_anchor_section": null,
+  "physical_scenes_modified": false,
+  "quantum_slipstream_installed_at_2387": false,
+  "cloak_executable": false,
+  "combat_executable": false
+}

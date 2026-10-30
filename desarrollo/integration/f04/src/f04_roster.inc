@@ -45,6 +45,7 @@ bool role_through(const WorldState& w,U p,U role,U dept,U start,U end) {
  return false;
 }
 bool service_skill(const WorldState& w,const PlannerPerson& p,U station,U end) {
+ if(!primary_operator(w,p.id))return false;
  if(!(p.stations&station) || end>p.expiry || !slot_qualified(w,p.id,p.slot,end-1))return false;
  if(station==F04_ST_COMMAND)return (p.mask&(1ULL<<F04_COMMAND))!=0;
  if(station==F04_ST_TACTICAL)return (p.mask&(1ULL<<F04_Q_TACTICAL))!=0;

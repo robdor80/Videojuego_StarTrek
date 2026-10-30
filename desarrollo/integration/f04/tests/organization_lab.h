@@ -15,8 +15,8 @@ constexpr U forever=(1ULL<<48)-1;
 void check(bool b,const char* m){if(!b)throw std::runtime_error(m);}
 struct Lab {
  F04Session* s=nullptr;F04Ref observer{};
- Lab(bool seed=true,U crew=130,const char* cls="miranda",bool install=true,uint32_t profile=F04_SUTHERLAND_SCIENCE) {
-  F04PopulationConfig cfg{65001,404,crew,0,0,0};check(f04_create_population(1,cls,&cfg,&s)==F04_OK,"population");refresh();
+ Lab(bool seed=true,U crew=130,const char* cls="miranda",bool install=true,uint32_t profile=F04_SUTHERLAND_SCIENCE,U residents=0) {
+  F04PopulationConfig cfg{65001,404,crew,residents,0,0};check(f04_create_population(1,cls,&cfg,&s)==F04_OK,"population");refresh();
   if(install){F04TemplateSpec spec{};check(f04_template_spec(profile,&spec)==F04_OK,"profile");op(F04_INSTALL_TEMPLATE,0,spec.required_equipment,0,0,profile);if(seed)op(F04_BOOTSTRAP_TEMPLATE);}
  }
  ~Lab(){f04_destroy(s);}

@@ -3,6 +3,7 @@ bool organization(const WorldState& w) {return (val(w,1,SCHEMA)==3 || val(w,1,SC
 bool station_active(const WorldState& w,U f,U tick) {
  if(!window(w,f,tick))return false;
  const U p=ref(w,f,PERSON),slot=ref(w,f,SLOT),station=val(w,f,STATIONS);
+ if(!primary_operator(w,p))return false;
  const U q=station==F04_ST_TACTICAL?F04_Q_TACTICAL:val(w,slot,QUAL);
  if(val(w,1,SCHEMA)==4) {
   if(station==F04_ST_COMMAND && !active_role(w,p,F04_WATCH,tick))return false;
@@ -31,6 +32,9 @@ U install_template(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
  }
  set(c,1,SCHEMA,3);set(c,1,TEMPLATE,spec.id);set(c,1,EQUIPMENT,r.aux);set(c,1,SEEDED,0);
  set(c,1,ALPHA_START,0);set(c,1,ALPHA_END,0);
+ if(spec.id==F04_VALHALLA_FLAGSHIP) {
+  const U auxiliary=make(c,cat,"auxiliary_defiant");link(c,auxiliary,SHIP,1);set(c,auxiliary,SHIP_ID,auxiliary);set(c,auxiliary,STATE,ACTIVE);
+ }
  std::map<U,U> departments;
  for(const auto& section:definition->sections)if(!departments.contains(section.department)) {
   const U id=make(c,cat,"department");link(c,id,SHIP,1);set(c,id,DEPT,section.department);departments[section.department]=id;
@@ -69,7 +73,7 @@ U bootstrap_template(Campaign& c,const ContentCatalog& cat,const F04Request& r) 
   set(c,p,DEPT,dept);set(c,p,QUAL,val(c.world,slot,QUAL_MASK));set(c,p,UNTIL,FOREVER);link(c,slot,PERSON,p);
   if(role && role!=F04_CAPTAIN)appointment(c,cat,p,role,dept,c.time.now(),FOREVER,r.actor.id,r.cause);
  }
- set(c,1,SEEDED,1);return 1;
+ seed_valhalla(c,cat);set(c,1,SEEDED,1);return 1;
 }
 bool organization_schema(const WorldState& w) {
  if(!organization(w))return all(w,"department").empty() && all(w,"section").empty() && all(w,"function").empty();

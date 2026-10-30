@@ -30,6 +30,17 @@ bool UF04CampaignSubsystem::Positions(TArray<F04Position>& Out)const{
  Out.SetNumUninitialized(static_cast<int32>(Total));return f04_positions_page(Session,Handles.captain,0,Out.GetData(),Total,&Written,&Total)==F04_OK;
 }
 void UF04CampaignSubsystem::ClearVisuals(){for(auto V:Visuals)if(V.IsValid())V->Destroy();Visuals.Empty();}
+bool UF04CampaignSubsystem::Residents(TArray<F04Resident>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Written=0,Total=0;
+ if(f04_residents_page(Session,Handles.captain,0,nullptr,0,&Written,&Total)!=F04_OK || Total>MAX_int32)return false;
+ Out.SetNumUninitialized(static_cast<int32>(Total));return f04_residents_page(Session,Handles.captain,0,Out.GetData(),Total,&Written,&Total)==F04_OK;
+}
+bool UF04CampaignSubsystem::Specialists(TArray<F04Specialist>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Written=0,Total=0;
+ if(f04_specialists_page(Session,Handles.captain,0,nullptr,0,&Written,&Total)!=F04_OK || Total>MAX_int32)return false;
+ Out.SetNumUninitialized(static_cast<int32>(Total));return f04_specialists_page(Session,Handles.captain,0,Out.GetData(),Total,&Written,&Total)==F04_OK;
+}
+bool UF04CampaignSubsystem::Auxiliary(F04Auxiliary& Out)const{return IsInGameThread() && Session && f04_auxiliary(Session,Handles.captain,&Out)==F04_OK;}
 void UF04CampaignSubsystem::CloseLab(){if(!IsInGameThread())return;ClearVisuals();if(Session){f04_destroy(Session);Session=nullptr;}}
 bool UF04CampaignSubsystem::Stats(F04Stats& Out)const{return IsInGameThread() && Session && f04_stats(Session,&Out)==F04_OK;}
 uint32 UF04CampaignSubsystem::Intent(uint32 Person,uint32 Op,uint64 Target,uint64 Aux,uint64 Start,uint64 End,uint32 Value,uint64 Cause,uint64* Record){

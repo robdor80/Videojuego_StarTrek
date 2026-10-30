@@ -103,3 +103,16 @@ add_test(NAME f04.odyssey_process_load COMMAND f04_odyssey_tests process_load "$
 set_tests_properties(f04.odyssey_process_load PROPERTIES FIXTURES_REQUIRED odyssey_roster)
 
 add_test(NAME f04.odyssey_contracts COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/odyssey_contract_tests.py")
+
+add_executable(f04_valhalla_tests tests/valhalla_tests.cpp)
+target_link_libraries(f04_valhalla_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
+target_compile_features(f04_valhalla_tests PRIVATE cxx_std_20)
+target_compile_definitions(f04_valhalla_tests PRIVATE F04_FIXTURE_DIR="${CMAKE_CURRENT_SOURCE_DIR}/tests/fixtures")
+foreach(case IN ITEMS structure reference 7 14 28 specialists civilians authority absence deficit rest partial roundtrip corrupt limits buffers)
+ add_test(NAME f04.valhalla_${case} COMMAND f04_valhalla_tests ${case})
+endforeach()
+add_test(NAME f04.valhalla_process_save COMMAND f04_valhalla_tests process_save "${CMAKE_CURRENT_BINARY_DIR}/valhalla-roster.f04")
+set_tests_properties(f04.valhalla_process_save PROPERTIES FIXTURES_SETUP valhalla_roster)
+add_test(NAME f04.valhalla_process_load COMMAND f04_valhalla_tests process_load "${CMAKE_CURRENT_BINARY_DIR}/valhalla-roster.f04")
+set_tests_properties(f04.valhalla_process_load PROPERTIES FIXTURES_REQUIRED valhalla_roster)
+add_test(NAME f04.valhalla_contracts COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/valhalla_contract_tests.py")

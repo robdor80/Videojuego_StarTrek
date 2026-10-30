@@ -30,6 +30,9 @@ public:
  bool ServiceCoverage(uint64 Start,uint64 End,TArray<F04ServiceCoverage>&) const;
  bool Organization(F04OrganizationStats&) const;
  bool Positions(TArray<F04Position>&) const;
+ bool Residents(TArray<F04Resident>&) const;
+ bool Specialists(TArray<F04Specialist>&) const;
+ bool Auxiliary(F04Auxiliary&) const;
  void CloseLab();
  bool Stats(F04Stats&) const;
  uint32 Intent(uint32 Person,uint32 Op,uint64 Target=0,uint64 Aux=0,uint64 Start=0,uint64 End=0,uint32 Value=0,uint64 Cause=42,uint64* Record=nullptr);
