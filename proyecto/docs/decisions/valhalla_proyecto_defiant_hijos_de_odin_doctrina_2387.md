@@ -6,6 +6,8 @@
 
 El **Proyecto Defiant de la clase Valhalla es una combinación inseparable en su concepto militar: (1) una nave de clase Defiant especializada en combate, guerra furtiva y operaciones autónomas, y (2) un destacamento de soldados de Flota Estelar llamado formalmente «Hijos de Odín»**. No consiste en un yate diplomático ni en una lanzadera decorativa; sustituye al antiguo yate del capitán.
 
+**Separación funcional definitiva (aclaración expresa del autor):** la **Valhalla es la nave nodriza que transporta al destacamento**. La **Defiant, operada por tripulantes de Flota Estelar destinados en Valhalla y especialistas de la propia Defiant, es la plataforma que los aproxima al objetivo**. Los **Marines no pilotan ni gobiernan la Valhalla o la Defiant, no desempeñan puestos de timón, puente, propulsión o sistemas de vuelo por pertenecer al destacamento, y no integran la plantilla naval especializada**. En la analogía del autor: tripulación de submarino ≠ equipo Navy SEAL transportado. Toda eventual formación extraordinaria individual requeriría un nombramiento ajeno a la función Marine, pero **NO diseñar dualidad piloto/Marine en F04**.
+
 **«Hijos de Odín» son Marines / soldados de combate de Flota Estelar.** No se les denominará artificiosamente «personal de seguridad», «inspectores» o «exploradores tácticos» para disimular su condición militar. Entrenamiento y roles de misión pueden incluir reconocimiento, desembarco, infiltración, abordaje, rescate, protección, combate e intervenciones operativas. Sus capacidades se ajustarán a la misión, dotación y reglas militares del juego. La denominación «Marines de Flota Estelar» y el propio destacamento son **GAME_ADDITION del universo del videojuego**, no afirmaciones de canon televisivo.
 
 **Dos colectivos distintos**:
@@ -14,7 +16,7 @@ El **Proyecto Defiant de la clase Valhalla es una combinación inseparable en su
 
 El comandante de la Defiant ejerce mando naval legítimo sobre su nave; el responsable de los Hijos de Odín ejerce mando sobre el destacamento. La coordinación de una operación conjunta, responsabilidad en tránsito, cadena de autorizaciones y distribución de autoridad en objetivos se deben fijar explícitamente, no inferirse solo de rango o proximidad física.
 
-La **Defiant tiene su propia tripulación especializada**, no se improvisa reclutando a quien esté libre ni se confunde la tripulación mínima con los equipos de Marines. Cuando opera fuera de Valhalla, sus personas y recursos siguen teniendo identidad, ubicación, estados, guardias y consecuencias de CoreRPG únicos.
+La **Defiant tiene su propia tripulación especializada**, no se improvisa reclutando a quien esté libre ni se confunde la tripulación mínima con los equipos de Marines. Cuando opera fuera de Valhalla, sus oficiales y técnicos **de Flota destacados desde Valhalla** y sus recursos siguen teniendo identidad, ubicación, estados, guardias y consecuencias de CoreRPG únicos.
 
 ## DEC-0018 — Doctrina de la Federación y Flota en la continuidad propia
 
