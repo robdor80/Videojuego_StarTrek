@@ -1,0 +1,914 @@
+[
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/.gitignore",
+    "bytes": 18,
+    "sha256": "b963079531cb75b6c600fac2868fb054a06ec93f7f8114955a5c69d2d00f8e3d"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/CMakeLists.txt",
+    "bytes": 2077,
+    "sha256": "da3d0ea070bf824146a247de1ef6f89fddd615ec0a80e24682a94e7909eba1ef"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/README.md",
+    "bytes": 6513,
+    "sha256": "d1629982fc50c6c5d88eb66bb2567e24f58b41eee2fe2b4b5bf9e62308866311"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/audit_originals.py",
+    "bytes": 2349,
+    "sha256": "d11af0a1486aea915b36b3fc622b5287e4f57dd55761cb48104a26b588009370"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/collect_evidence.py",
+    "bytes": 8826,
+    "sha256": "6701d0d73cc77445d4bd396d34fe4a5184f0368dd3601f4ddda95629d2500f53"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/include/f02_bridge.h",
+    "bytes": 2774,
+    "sha256": "773ef20fbacefcec925e35777519a13114d4f45124582942ed53261733f4255f"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/run_f02.ps1",
+    "bytes": 5148,
+    "sha256": "36670317fa3d2d1395d3d61e03620c5eccffea6a72b451b4e0a42300adf7402a"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/src/f02_bridge.cpp",
+    "bytes": 8444,
+    "sha256": "a74ac7db828257165132c55d850621a14c19c43dadf8d0e683b007a8890cb02e"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/tests/f02_tests.cpp",
+    "bytes": 8304,
+    "sha256": "86450696316aa10f1b7d5cd0a72d8e5641ce08302d102768c8733ebe8a0d3f3d"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/.gitignore",
+    "bytes": 78,
+    "sha256": "01938b8754cfb006da27ced77ed93ffedf306b602d52ea92e118ff45c5e845c6"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Config/DefaultEngine.ini",
+    "bytes": 442,
+    "sha256": "3446182b93b9c07fb6ed498a0cf0daefb72c27d409ff6825606c2b6c3117f961"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/F02CoreLab.uproject",
+    "bytes": 292,
+    "sha256": "b02b2cfa94549c95db900ecf91e2d9f9bace0fa126c726044c8245cd8264bce2"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab.Target.cs",
+    "bytes": 385,
+    "sha256": "23d921c1cb803bff0f54836cb7c014bc557b6b8bfb92c689c45ef95510397779"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/F02CoreLab.Build.cs",
+    "bytes": 1132,
+    "sha256": "19d3d7f17f0a54bc22d02abba4540a568c7e4c0a0424c19cb5ed81159540458f"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02Automation.cpp",
+    "bytes": 10586,
+    "sha256": "6ac3fded4d3bbc2cf372094457d764e238687fd52e098f900a10eff875c3a835"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CampaignSubsystem.cpp",
+    "bytes": 5261,
+    "sha256": "3c2ae886d9e8ec88a7f59b8aa6fce98ad4c4e1ac8a818e175ee10d92f8e975ba"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CoreLab.cpp",
+    "bytes": 1395,
+    "sha256": "c16230f880c5296600fe09332afacd2d97318fc20679cda1eca49f78b4e67708"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02DemoGameMode.cpp",
+    "bytes": 3555,
+    "sha256": "7b9da630ac7d4f41e6cd30219cfd162bfe524d6e9baf58dcc72349a9d4119d39"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Public/F02CampaignSubsystem.h",
+    "bytes": 1960,
+    "sha256": "852fd07938701bf37db89f023f5dff4fc3d59c8bb106481f30a182f9f4e26db1"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f02/unreal/Source/F02CoreLabEditor.Target.cs",
+    "bytes": 399,
+    "sha256": "839e3fdf24a8d8a43672c1f29e32f35bfa3c43df9f2ad16d56aa6c2c8afce5f6"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/CMakeLists.txt",
+    "bytes": 2392,
+    "sha256": "de935f62102034f2e38f874b5e6b912af47e6ef6255db612161d3bc6eb18c626"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/README.md",
+    "bytes": 6012,
+    "sha256": "383da48aba4fc27aae8ca747f320ab571f364901ce30259603215f256b54786c"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/collect_evidence.py",
+    "bytes": 7364,
+    "sha256": "9e88fb896da64716d6a878e1058ffb65c472d9fd1085fedea7b13e1a632b563a"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/core-revision.txt",
+    "bytes": 42,
+    "sha256": "cf079211218355728303c3036592003f63983f3fee09b5369a1f96cc976bd528"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/include/f03_bridge.h",
+    "bytes": 2788,
+    "sha256": "da42296546c29742c2e15d5ceef6a8df26bc3ed49deb6404b766d09624ccd948"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/run_f03.ps1",
+    "bytes": 4708,
+    "sha256": "923e129418759d9c1d5639010d4cf556238f2bf7a12ad05f8fd6d97a295f693b"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/src/f03_bridge.cpp",
+    "bytes": 16459,
+    "sha256": "49fc608bad788280f283d06a13a4525b7b6e3acd9cfc04457ed984d9786c5605"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/tests/f03_tests.cpp",
+    "bytes": 11678,
+    "sha256": "f06c76d128df365d4dc831a9754a98ccdbe037d26eec1d674ed1d51500ec853f"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/unreal/F02CoreLab.Build.cs",
+    "bytes": 1000,
+    "sha256": "2ebcb5f4e37c3ba6320d7703e0142caa799f68b2a2beb8fdf24d1c4637492456"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/unreal/Private/F02CoreLab.cpp",
+    "bytes": 1792,
+    "sha256": "ba2660e4ffe6b3cb1f0c5b716c6876e212b9736377a71b9b40d8977e15b5c260"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/unreal/Private/F03Automation.cpp",
+    "bytes": 9575,
+    "sha256": "c877d954614cf8b479d8f709266a3bd21b77b1b619b81a4fcb06a9e885a136cb"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/unreal/Private/F03CampaignSubsystem.cpp",
+    "bytes": 5957,
+    "sha256": "e4f96df17d976af124814a9177d186b9382b5d7b35c9a195ea45a66ed71f81d2"
+  },
+  {
+    "repository": "StarTrek",
+    "path": "desarrollo/integration/f03/unreal/Public/F03CampaignSubsystem.h",
+    "bytes": 1808,
+    "sha256": "18cac9e55c1fb02d418d89a0200cfccfedbbcf03fc4ba5355e8e36c8d0890c9c"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "CMakeLists.txt",
+    "bytes": 7142,
+    "sha256": "771fa55e3bc28ca614cfe25f1da60859f720306bfcc67f29bf214c2b20e59bfd"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/action.hpp",
+    "bytes": 3876,
+    "sha256": "404d39feaa12c1fc79ad919794aea0e308332da568f94b2c97b1d16cfc8f21d9"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/campaign_persistence.hpp",
+    "bytes": 2322,
+    "sha256": "7875c0821dec6f0bb323f9dac54255361c6584e3b9ddf3490e84d16fb139ea36"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_catalog.hpp",
+    "bytes": 1634,
+    "sha256": "7703ec6d295273daad039eb763e69c73c2b0bc601f9f7c6a129c7f6e636a2607"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_compatibility.hpp",
+    "bytes": 924,
+    "sha256": "baa30059ade23429cb2cf521dd527e01c93351505cae37a2e5ca03fe18c758a9"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_definition_input.hpp",
+    "bytes": 811,
+    "sha256": "a7afa89d1b657eb9538773f20d24e39d52fda13f0da2e2c0c6c26c77d9353d67"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_diagnostic.hpp",
+    "bytes": 4513,
+    "sha256": "80579d060981743bdfbc0af3c70ed7a0ee79c416fe215de73153da0bea666c81"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_json/content_catalog_loader.hpp",
+    "bytes": 2089,
+    "sha256": "9c0f3489b8c740308d093acdbdb9620fda0302ae01445fc8a0bb9d1dbef03ec8"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_json/content_document_decoder.hpp",
+    "bytes": 3753,
+    "sha256": "80730020b98e1ad1063a48584b689fa0bbe201695d72b65ec5ac64b1084a4384"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_json/content_pack_loader.hpp",
+    "bytes": 4034,
+    "sha256": "17627491953e54b2ba69cd7c4b2dc6e59f8f65915636b7ffd6e3596f1d3a7d44"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_json/json_document_reader.hpp",
+    "bytes": 2741,
+    "sha256": "524fcc17cc595a50f9afdf379341c411de2148190834a7513ef7c472aef584d6"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_json/json_schema_validator.hpp",
+    "bytes": 2057,
+    "sha256": "3bf677fa5d099381688667d991c50315430e81f038ad9abf164a9a0cd62b9948"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_manifest.hpp",
+    "bytes": 2173,
+    "sha256": "7a4ff495d27cf7ea0b51b1ed76e5f3871fa3a58f2bafd2f68eea5fcf53a4217d"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/content_pack_input.hpp",
+    "bytes": 788,
+    "sha256": "bf78cf318a6c16116c35f35e3233724c1a476eab6a61438a9d41f46271da841c"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/context_builder.hpp",
+    "bytes": 3289,
+    "sha256": "0c62a1e5182236a36c52b7da923720f06da8784bd0c4946ecc255a4cbd94810c"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/definition_id.hpp",
+    "bytes": 1340,
+    "sha256": "953944080c411e5635441b81879b542d572971772aa37f788c32f0c3275d67be"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/definition_reference.hpp",
+    "bytes": 656,
+    "sha256": "198850219948267e6859dde899dbee35775649f292d528f209431fa833ebf298"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/entity_id.hpp",
+    "bytes": 672,
+    "sha256": "9a57cdbd716b40a298c873f89ef65848f138d6fd11d8a208a5b7cacef682c6ae"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/entity_structure.hpp",
+    "bytes": 2670,
+    "sha256": "cbde7bacfb8315ee7cd8b124d850a6581fea85e5a70ccc1777eb45be2ca27eba"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/inspector.hpp",
+    "bytes": 6029,
+    "sha256": "731c209dd6cbcad94b88901d4f5830ac377017e625a762c3a973bcdeb041e9b4"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/knowledge.hpp",
+    "bytes": 2031,
+    "sha256": "0c5e28dd12db2420c53eb2f90bc69c839e4ab7ad451c62894a2cd3afdfa61966"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/pack_dependency.hpp",
+    "bytes": 682,
+    "sha256": "a5099e0b7afa0fadff1c3fa01928091e3306c9d51929ea55d5b03f0e1a15fc40"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/pack_id.hpp",
+    "bytes": 615,
+    "sha256": "59c8a3d3e2e77c25a8fa005d4093334238a1851ed476b3923ca9da59bc42caf8"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/persistence.hpp",
+    "bytes": 7943,
+    "sha256": "989c47930889e2d769e9fdd5049f0a265b60cfbd28364126a57a704cf5f4f057"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/random.hpp",
+    "bytes": 830,
+    "sha256": "a74152680f5cd8104df50d8933571feb0558c68753a950a4d0498230b5c51d57"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/random_streams.hpp",
+    "bytes": 1810,
+    "sha256": "9bb64c439ad6a3c01a7e4b9d982c6f3d5d9d13b5d25e01ffd26880c50f6e2e0f"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/resource_definition.hpp",
+    "bytes": 576,
+    "sha256": "952b74a7e33a0d8a1827035303f109ed2e8aadfca8fabf5f79b9bdd1acbf131d"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/resource_kind.hpp",
+    "bytes": 497,
+    "sha256": "cdfa2f26d83a660b49c152378156459c06c7fd515d50f46c6fbf46cef4c64e38"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/roll_action.hpp",
+    "bytes": 863,
+    "sha256": "2c2934a65f65879d89f4af553f0ae0661930b2b1552b22e31742df2017f2d462"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/rule_check.hpp",
+    "bytes": 1928,
+    "sha256": "35352e175dcce36fd7a0e24e787577a72c8c7a362a8da5de6beee3e35a264eea"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/semantic_version.hpp",
+    "bytes": 1174,
+    "sha256": "380a47ef16976fa738ce4ede9fc0d77da9c9d67b12fe827bdaa66b84a345cae5"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/simulation.hpp",
+    "bytes": 1644,
+    "sha256": "b7307b272b6c1e8e5a35743535cbb08837e729c94c60f35c2320fb4c6840b4ce"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/timeline.hpp",
+    "bytes": 3190,
+    "sha256": "fa6fdb3fa9fa3a9232d6d7e75f640979947863843b27861da6f81f8db3fee586"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/version.hpp",
+    "bytes": 405,
+    "sha256": "c13b6c68b7ed588f210490c2057b575291a64bd13632ac54b00088e48f4f2be8"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/version_requirement.hpp",
+    "bytes": 1177,
+    "sha256": "6bf6703764ce5ad0013e3eeda7f145947db0c073bc9059cc25a9d01f67fdb9e1"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/visibility.hpp",
+    "bytes": 3772,
+    "sha256": "d36f2848f43aff5a0eef9c421249fe84b480cc4c42e80add0d62e3264cc79705"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "include/corerpg/world_state.hpp",
+    "bytes": 6948,
+    "sha256": "478243790c7138b0ff6b5400b0fc5c14c228e8915713f3d7e400a65dcd4ca165"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/action.cpp",
+    "bytes": 6852,
+    "sha256": "5df26961069f9ae6df4735e569af0faca98a9a57ef1b176302f9e8a8ccff1088"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/campaign_persistence.cpp",
+    "bytes": 7001,
+    "sha256": "fac227098275ef9935bf68046d6702afcbc0556213d914d98f9451acb56c5401"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_catalog.cpp",
+    "bytes": 15874,
+    "sha256": "f29231ae7a0451918aab0fd1494e1c4cb01233a5ae62b67f6e2a763b31963a89"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_catalog_loader.cpp",
+    "bytes": 2661,
+    "sha256": "380ccd94e4ec347d520852f2794fa79983a8b091d2cc552779a38547596bff11"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_compatibility.cpp",
+    "bytes": 1793,
+    "sha256": "d7167a9a03348462aafb6458900172d485bce9bfb0de1358b59706ba389eec00"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_diagnostic.cpp",
+    "bytes": 8070,
+    "sha256": "ec471c282006c03670b9ac677634bc2973314f668dbaa062b4defd7683f659a3"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_id.cpp",
+    "bytes": 3088,
+    "sha256": "ec0174c2e26dedf72d7f3ae21fa12ffe14788339ad7f5c6c5270f1d630c055ce"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_json_backend.cpp",
+    "bytes": 9411,
+    "sha256": "a66b2b30b892ad2a067e344b021c0ae5e9d0663178e658af7c61e241a8106132"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_json_document_decoder.cpp",
+    "bytes": 12195,
+    "sha256": "9252bc4d60951416b0649c02e7bf75fab607feceba678a17f3d847f484994583"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_json_document_internal.hpp",
+    "bytes": 560,
+    "sha256": "ceb24332c4ba4ef331df09f704262d1854c7a81338cc832871d00e672f23c67b"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_json_schema_validator.cpp",
+    "bytes": 10258,
+    "sha256": "7e8dcdd82cba00eeb5ae53000e9f249988ac89bc105c41cc9fc70c5557966e19"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/content_pack_loader.cpp",
+    "bytes": 16531,
+    "sha256": "12f29965aeb45f5e54dd845f2d4a24fa80eb805380b3fde54ba3e13c21cbf9d4"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/context_builder.cpp",
+    "bytes": 3116,
+    "sha256": "69fe5b0340bf1c8f3e6379b6888362f88445ebb27720d16cf8d60c13a5509fa1"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/entity_structure.cpp",
+    "bytes": 4457,
+    "sha256": "b47302a50356f0f60a10509784a782a88cf8bcbf753b768c755d3be0371482d2"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/inspector.cpp",
+    "bytes": 7573,
+    "sha256": "812d0eb6d1c81eb4cdd37506a0806d282cfd4c351e5073c2a06a9a9415e63142"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/knowledge.cpp",
+    "bytes": 4801,
+    "sha256": "488c08fe90f6bc097fc8c453b5b0b6dcdfe2f6096ae56097e2d7a42ed6d35408"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/knowledge_internal.hpp",
+    "bytes": 4133,
+    "sha256": "578dbb115b41ab891e6ac9129c65fad4e44851906176b11635e9c41250a868b7"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/persistence.cpp",
+    "bytes": 20621,
+    "sha256": "af6ce168f707ea1c5a93ece6119d61650a813e88272f02eab69862fb7e8d7880"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/persistence_internal.hpp",
+    "bytes": 6202,
+    "sha256": "d5e6bb24ad3bbf9729e631f40138b0f43a4914aa8c423c7406cd53bf38875661"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/population.cpp",
+    "bytes": 4339,
+    "sha256": "c7d33178c10f828f7b6daf6e0db7dd6d9f44924acf1529cd2c537e0f41e0ad3b"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/random.cpp",
+    "bytes": 1133,
+    "sha256": "9bb604962ead69829379ff1a9af54b44ae7c1514a195fb45aa8ba7ecd79ed9fb"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/random_streams.cpp",
+    "bytes": 1490,
+    "sha256": "d4b7757d3801d7622379600d936d9dcef83a957e617ede9e71b948d50cbdf654"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/resource_kind.cpp",
+    "bytes": 1159,
+    "sha256": "9f40da9982c0c6080720eca7908e5976a76b1e96f36dd9d3dcc7b07a7aa51b10"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/roll_action.cpp",
+    "bytes": 646,
+    "sha256": "92857b196ddf2e1e30a31865286a4142281ea4a61ccf1a6295d0d48ea85b8d78"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/rule_check.cpp",
+    "bytes": 2346,
+    "sha256": "1600732fea50f7e22518a72849bf2106af3624241484ec6619a3deb50efff4b1"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/semantic_version.cpp",
+    "bytes": 1872,
+    "sha256": "74daef4ab67d525e886efb291211dd49942c1e115caeea54967bae9b3ca88976"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/simulation.cpp",
+    "bytes": 1243,
+    "sha256": "2a66937ac5bcdb413dc592e557013eaee3c6cd6564c33158604c94f4c21ba996"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/timeline.cpp",
+    "bytes": 6335,
+    "sha256": "55f14192ac63a547c434b1bf5c7786cbd35c8008af796e70df396048fe73e369"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/timeline_internal.hpp",
+    "bytes": 1710,
+    "sha256": "f2e2edb858f5b327756e78b71f964170af02f78bc79b2b36149f0495e404bc63"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/version.cpp",
+    "bytes": 279,
+    "sha256": "3fd579328ead3ebbea1f78805505d5696ee8fd5926e83b2fd3801e702faaf570"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/version_requirement.cpp",
+    "bytes": 756,
+    "sha256": "c4a3fe4cd3f0384092efee112b3f90a5227a99381af6699c89706e6fea38d3e0"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/visibility.cpp",
+    "bytes": 2462,
+    "sha256": "f774e079de01007b672004b6d7db6507c931226ec4be2f0ab486e9a493294663"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/world_state.cpp",
+    "bytes": 1009,
+    "sha256": "4ac9bcee4d8993e2bcd450b93e4fb33d6bd9473add2272eaf939a770262d1997"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/world_state_internal.hpp",
+    "bytes": 4129,
+    "sha256": "9283f13655e9a2866593c8e61fce1681b0c83aff1bd6d19b76dabe97d07d65b9"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "src/world_validation_internal.hpp",
+    "bytes": 9110,
+    "sha256": "65a5584712a8c3bb28e637116e3add815b7db7e4009b88a24a67fb5587c2bd25"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/CMakeLists.txt",
+    "bytes": 10894,
+    "sha256": "2d252456b076e4649b302994c9a2a7b2bd8357807c1c96a2ebfb546ec1fe4e87"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/action_allocation_test.cpp",
+    "bytes": 12029,
+    "sha256": "504e2caf6751326a8dcb774307f51765cb1892e9adfc784b84846ab41300f778"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/action_determinism_test.cpp",
+    "bytes": 4573,
+    "sha256": "535c8f97890bf285e4426bbc0fc2c2df95927ec3037d448479759cdec8987ba4"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/action_persistence_test.cpp",
+    "bytes": 10344,
+    "sha256": "dee005707921be06d406662058936b41c8a75918d9fffb868a61363ce8aeced8"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/action_test.cpp",
+    "bytes": 12749,
+    "sha256": "568790566a297123fad14868e732419daccc6125e1d5c39a8317ae822046eb58"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_catalog_loader_test.cpp",
+    "bytes": 14163,
+    "sha256": "79db611aa10842bf078186947e4bffbb4ba7a1431b27e7b59dba9b14d5b45c43"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_catalog_test.cpp",
+    "bytes": 23009,
+    "sha256": "e1a4a15175bea7a6e4066bd08f13b6a066711e8df7ad20c2bb3f49b53456c184"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_compatibility_test.cpp",
+    "bytes": 11307,
+    "sha256": "674b18287fc6f428503155da42c243265a89517ef228e3186ce41b0e17235b80"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_id_test.cpp",
+    "bytes": 6700,
+    "sha256": "1711a01a5eed4f941ff6b3f71e6c781a13188a65eb35ab8a485e2191db048ab1"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_json_document_decoder_test.cpp",
+    "bytes": 9573,
+    "sha256": "44133da4c57217a1c627b4216b5658b8b73b032ddea8a8b7e04b5cbcdef1bd1d"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_json_document_reader_test.cpp",
+    "bytes": 8806,
+    "sha256": "fdfd036da79d9c7852be7ad9a09a24cce334cfb852392a8c180951243b86d71f"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_json_schema_validator_test.cpp",
+    "bytes": 15393,
+    "sha256": "1854275ec669dc264003c7d1ff6034277330149cab2ff74b734beea77ab118d1"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_manifest_test.cpp",
+    "bytes": 7740,
+    "sha256": "d51d1eea23b306c26337a1c9649bd76a8604823ee0c695cf7506338bd9820c2b"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_pack_loader_test.cpp",
+    "bytes": 20204,
+    "sha256": "7945a8af75ce6da82edce391f677c9d4471106339466c0ee1ac6a63810eb0b90"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/content_pack_validation_test.cpp",
+    "bytes": 15400,
+    "sha256": "467fabae700d1a5fee404153d7cff3861b77a7990523624aad47b22468541a93"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/context_allocation_test.cpp",
+    "bytes": 8766,
+    "sha256": "d43f5c5d3a51f91e674b2b4041249c96506c97978fbd4e15f309cc032cfd0714"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/context_builder_test.cpp",
+    "bytes": 12418,
+    "sha256": "89f679993b13edd750eaaba41a5e7ff5a53791ba2340fcc298ad58d6629686db"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/context_security_test.cpp",
+    "bytes": 17915,
+    "sha256": "f4742da14e29aaf473c74e3d9029c75253e370f205d56190a94fe281428be310"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/entity_structure_allocation_test.cpp",
+    "bytes": 10121,
+    "sha256": "1fb82b705736da38db04b388e09b01326f0b69805aa74358083280c73bfc769f"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/entity_structure_helpers.hpp",
+    "bytes": 807,
+    "sha256": "276811894443a1fa56bd17e570c92edae04ddddebde3baa02ef1f13fcae52e20"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/entity_structure_test.cpp",
+    "bytes": 9473,
+    "sha256": "eb350a60c3e9304d20ecaa30213f898ad51fc89c3f350f17b07e7d033ea94710"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/external_content_restore_test.cpp",
+    "bytes": 3150,
+    "sha256": "ee9a503e473f363e83944b95eb97000a0dac8d3fd16927db503d60ebdbef7bba"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/fixtures/actions_simulation_reference.py",
+    "bytes": 1789,
+    "sha256": "16fa70e7d5545a37100a4d5a0abed0da1be2c20cac994a811e21ebff216a5938"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/inspector_allocation_test.cpp",
+    "bytes": 6692,
+    "sha256": "fe6cccf67cff8d62f6063fd567987c10549b93cf3369ccc9e846601fb5d93eb6"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/inspector_diagnostic_test.cpp",
+    "bytes": 8409,
+    "sha256": "42e3f0f509e5e5fe1129fabbe405b0163d0e488f81621492963b3244307c1be7"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/inspector_integration_test.cpp",
+    "bytes": 10732,
+    "sha256": "09605a9fab2f0d4a9016aa0824bc4e253b9a8ac5b606747bd53952179c876746"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/inspector_test.cpp",
+    "bytes": 13712,
+    "sha256": "bef2375c49fcba8c7b9646a2f3814049efaaf642044de49fb3ed71179768925a"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/knowledge_allocation_test.cpp",
+    "bytes": 10285,
+    "sha256": "e586ada4af749fd99ec883ec6ed1dc179e05e8d7def743f508a61bd7f64e0755"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/knowledge_persistence_test.cpp",
+    "bytes": 16106,
+    "sha256": "0ab929ef4809f2b86a5e0307c82243ab24b2198b6b8967e69c43f2b5d52c6fa8"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/knowledge_test.cpp",
+    "bytes": 8422,
+    "sha256": "32f2d0b247b3138aaa710084b28944615aa17b4978647d86319b30f2c7235e4a"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/nimroel_content_pack_test.cpp",
+    "bytes": 24360,
+    "sha256": "cf87587f352417e5e17fd21fc99446b3bc1c5c4dc0006dde0d2f8161ef488720"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/persistence_allocation_test.cpp",
+    "bytes": 7537,
+    "sha256": "adef6447629992ae5d0b19900abd2ac5d3827fae14c81d789609b4c2e3ee1d75"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/persistence_test.cpp",
+    "bytes": 22946,
+    "sha256": "418d1ef2324f66094a3d5b0928e5606786e3fcf25c55f28c9deeb687f0a22137"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/population_persistence_test.cpp",
+    "bytes": 17582,
+    "sha256": "bf61972e8700bce9ebcdb62eb524155201ed1fdddc6a96b2182fd0948bfc960e"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/population_test.cpp",
+    "bytes": 10263,
+    "sha256": "29e8d3c80ed5da6322cc5e5f1d77b67be6bd66486bfbfdc315f183f4ac6efdb7"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/random_streams_test.cpp",
+    "bytes": 4707,
+    "sha256": "bb3177a957e9b8e38343f96ef113d91e7e0ec7f6e04b1e067d7fd64deec4a381"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/random_test.cpp",
+    "bytes": 3014,
+    "sha256": "c655a8a4c3f177d0133fb0d19611ebc93ca171ccbfec3113ae07bbd444f8833f"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/roll_action_test.cpp",
+    "bytes": 4398,
+    "sha256": "2fbedc3d7fb8e95e93ae952aa5d4426d4ada5c276c109b76372ec4d8130fa7c7"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/rule_check_test.cpp",
+    "bytes": 5645,
+    "sha256": "420baa470e2388c4a6c3aaac80b0cf352c4b2101e1d6d845f3dc7112168bf8dd"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/simulation_test.cpp",
+    "bytes": 9705,
+    "sha256": "bf91e854d2b78afaa0758a34840a85453606ccca3630509c1a96e8e0b04fccd3"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/smoke_test.cpp",
+    "bytes": 586,
+    "sha256": "83dcdb236906817695e2722fb77807831a8e4a0c342febc73ce567db3e42b86a"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/timeline_allocation_test.cpp",
+    "bytes": 7092,
+    "sha256": "ade77eee7ea4828bd40b6c6000b31ee578d541f39728e9b94cc61c8ecc6ec08f"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/timeline_test.cpp",
+    "bytes": 10198,
+    "sha256": "23c1e4c8d3fc4ef41f3ad542aa2a7ad3e27109bc7908e1c3ead629d996608aaf"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/visibility_test.cpp",
+    "bytes": 9419,
+    "sha256": "30b79b452419695eccbd5883deb65146cbc85bcbe9d297d0504239e66957b655"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/world_state_allocation_test.cpp",
+    "bytes": 7480,
+    "sha256": "fbc2e55e70b3263d63fffce6d3ba80d72b3a24b5cb52e9da367f19410bb938ea"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/world_state_integration_test.cpp",
+    "bytes": 8542,
+    "sha256": "ddb69d2635847bbfb03e22d201f98d75e7d7fa8bc0750529b306d4fef6416192"
+  },
+  {
+    "repository": "CoreRPG",
+    "path": "tests/world_state_test.cpp",
+    "bytes": 22909,
+    "sha256": "78f6cf379cc4a50f5a3c92f54cd050fd94f7e6ac588ad06eb990f32b8d733610"
+  }
+]

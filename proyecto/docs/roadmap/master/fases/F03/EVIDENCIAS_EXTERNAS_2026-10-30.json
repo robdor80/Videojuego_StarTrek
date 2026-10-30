@@ -1,0 +1,398 @@
+{
+  "date": "2026-10-30",
+  "folder_url": "https://drive.google.com/drive/folders/1vQUk7qr8V7Zh2gHSTBg76HKTow340jgy",
+  "folder_shared": false,
+  "artifacts": [
+    {
+      "name": "F03-logs-and-results.zip",
+      "location": "C:\\F03\\publication-20261030-01\\F03-logs-and-results.zip",
+      "bytes": 528448,
+      "sha256": "7468aef0a1f03088fe7c54505c42e06778598887675206c8864ccee3369a004a",
+      "date_utc": "2026-10-30T10:28:44.745991+00:00",
+      "publication_status": "PUBLISHED_PRIVATE_METADATA_VERIFIED",
+      "description": "Sanitized build/test logs, failures and saves",
+      "members": [
+        {
+          "name": "20261030-111757-890-ue-report/index.json",
+          "bytes": 6375
+        },
+        {
+          "name": "20261030-112115-090-ue-report/index.json",
+          "bytes": 7940
+        },
+        {
+          "name": "20261030-112245-606-ue-report/index.json",
+          "bytes": 4815
+        },
+        {
+          "name": "20261030-112540-525-ue-report/index.json",
+          "bytes": 4815
+        },
+        {
+          "name": "evidence/logs/core-build-final.log",
+          "bytes": 1590
+        },
+        {
+          "name": "evidence/logs/core-build-golden.log",
+          "bytes": 1626
+        },
+        {
+          "name": "evidence/logs/core-build-memoryfix.log",
+          "bytes": 1691
+        },
+        {
+          "name": "evidence/logs/core-build-second.log",
+          "bytes": 1952
+        },
+        {
+          "name": "evidence/logs/core-build.log",
+          "bytes": 9047
+        },
+        {
+          "name": "evidence/logs/core-configure.log",
+          "bytes": 1214
+        },
+        {
+          "name": "evidence/logs/core-debug-build.log",
+          "bytes": 2479
+        },
+        {
+          "name": "evidence/logs/core-debug-final-build.log",
+          "bytes": 719
+        },
+        {
+          "name": "evidence/logs/core-debug-fix-build.log",
+          "bytes": 450
+        },
+        {
+          "name": "evidence/logs/core-tests-final.log",
+          "bytes": 122601
+        },
+        {
+          "name": "evidence/logs/core-tests-golden.log",
+          "bytes": 123134
+        },
+        {
+          "name": "evidence/logs/core-tests-memoryfix.log",
+          "bytes": 122601
+        },
+        {
+          "name": "evidence/logs/core-tests.log",
+          "bytes": 122601
+        },
+        {
+          "name": "evidence/logs/core-timeline-allocation-debug-final.log",
+          "bytes": 1065
+        },
+        {
+          "name": "evidence/logs/core-timeline-allocation-debug-fixed.log",
+          "bytes": 886
+        },
+        {
+          "name": "evidence/logs/core-timeline-allocation-debug.log",
+          "bytes": 467
+        },
+        {
+          "name": "evidence/logs/core-timeline-debug-final.log",
+          "bytes": 2186
+        },
+        {
+          "name": "evidence/logs/core-timeline-debug.log",
+          "bytes": 1946
+        },
+        {
+          "name": "evidence/logs/core-timeline-first.log",
+          "bytes": 54
+        },
+        {
+          "name": "evidence/logs/f02-documentary-tests.log",
+          "bytes": 776
+        },
+        {
+          "name": "evidence/logs/f02-regression-run.log",
+          "bytes": 287428
+        },
+        {
+          "name": "evidence/logs/f03-build-first.log",
+          "bytes": 1387
+        },
+        {
+          "name": "evidence/logs/f03-build-second.log",
+          "bytes": 809
+        },
+        {
+          "name": "evidence/logs/f03-configure-second.log",
+          "bytes": 180
+        },
+        {
+          "name": "evidence/logs/f03-configure.log",
+          "bytes": 537
+        },
+        {
+          "name": "evidence/logs/f03-documentary-tests.log",
+          "bytes": 2347
+        },
+        {
+          "name": "evidence/logs/f03-final-run.log",
+          "bytes": 275195
+        },
+        {
+          "name": "evidence/logs/f03-full-run.log",
+          "bytes": 276530
+        },
+        {
+          "name": "evidence/logs/f03-native-first.log",
+          "bytes": 2410
+        },
+        {
+          "name": "evidence/logs/f03-native-second.log",
+          "bytes": 2511
+        },
+        {
+          "name": "evidence/logs/f03-stage-first.log",
+          "bytes": 0
+        },
+        {
+          "name": "evidence/logs/f03-stage-pinfix.log",
+          "bytes": 0
+        },
+        {
+          "name": "evidence/logs/f03-stage-second.log",
+          "bytes": 0
+        },
+        {
+          "name": "evidence/logs/f03-unreal-build-first.log",
+          "bytes": 18423
+        },
+        {
+          "name": "evidence/logs/f03-unreal-build-pinfix.log",
+          "bytes": 2932
+        },
+        {
+          "name": "evidence/logs/f03-unreal-build-second.log",
+          "bytes": 2677
+        },
+        {
+          "name": "evidence/logs/f03-unreal-tests-first.log",
+          "bytes": 271586
+        },
+        {
+          "name": "evidence/logs/f03-unreal-tests-pinfix.log",
+          "bytes": 269158
+        },
+        {
+          "name": "evidence/logs/validate-f02-contracts.log",
+          "bytes": 242
+        },
+        {
+          "name": "evidence/logs/validate-f02-p05.log",
+          "bytes": 147
+        },
+        {
+          "name": "evidence/logs/validate-f03-reference.log",
+          "bytes": 172
+        },
+        {
+          "name": "f02-regression/logs/20261030-111315-build.log",
+          "bytes": 1444
+        },
+        {
+          "name": "f02-regression/logs/20261030-111315-configure.log",
+          "bytes": 552
+        },
+        {
+          "name": "f02-regression/logs/20261030-111315-test.log",
+          "bytes": 1616
+        },
+        {
+          "name": "f02-regression/logs/20261030-111315-unreal-build.log",
+          "bytes": 18157
+        },
+        {
+          "name": "f02-regression/logs/20261030-111315-unreal-tests.log",
+          "bytes": 264635
+        },
+        {
+          "name": "logs/20261030-111649-480-unreal-build.log",
+          "bytes": 18230
+        },
+        {
+          "name": "logs/20261030-111757-890-unreal-tests.log",
+          "bytes": 271259
+        },
+        {
+          "name": "logs/20261030-112013-290-unreal-build.log",
+          "bytes": 2484
+        },
+        {
+          "name": "logs/20261030-112115-090-build.log",
+          "bytes": 458
+        },
+        {
+          "name": "logs/20261030-112115-090-configure.log",
+          "bytes": 180
+        },
+        {
+          "name": "logs/20261030-112115-090-tests.log",
+          "bytes": 2612
+        },
+        {
+          "name": "logs/20261030-112115-090-unreal-build.log",
+          "bytes": 1955
+        },
+        {
+          "name": "logs/20261030-112115-090-unreal-tests.log",
+          "bytes": 270417
+        },
+        {
+          "name": "logs/20261030-112227-455-unreal-build.log",
+          "bytes": 2739
+        },
+        {
+          "name": "logs/20261030-112245-606-unreal-tests.log",
+          "bytes": 268831
+        },
+        {
+          "name": "logs/20261030-112540-525-build.log",
+          "bytes": 377
+        },
+        {
+          "name": "logs/20261030-112540-525-configure.log",
+          "bytes": 180
+        },
+        {
+          "name": "logs/20261030-112540-525-tests.log",
+          "bytes": 2612
+        },
+        {
+          "name": "logs/20261030-112540-525-unreal-build.log",
+          "bytes": 2317
+        },
+        {
+          "name": "logs/20261030-112540-525-unreal-tests.log",
+          "bytes": 268801
+        },
+        {
+          "name": "review/core-tests.xml",
+          "bytes": 425449
+        },
+        {
+          "name": "review/core-timeline-allocation-debug.xml",
+          "bytes": 1464
+        },
+        {
+          "name": "review/core-timeline-debug.xml",
+          "bytes": 3022
+        },
+        {
+          "name": "review/f02-native-tests.xml",
+          "bytes": 2620
+        },
+        {
+          "name": "review/f02-unreal-tests.json",
+          "bytes": 2880
+        },
+        {
+          "name": "review/native-tests.xml",
+          "bytes": 5519
+        },
+        {
+          "name": "review/original-files-verification.json",
+          "bytes": 185
+        },
+        {
+          "name": "review/results.json",
+          "bytes": 889
+        },
+        {
+          "name": "review/source-manifest.json",
+          "bytes": 29777
+        },
+        {
+          "name": "review/staged-source-manifest.json",
+          "bytes": 2384
+        },
+        {
+          "name": "review/unreal-tests.json",
+          "bytes": 5023
+        },
+        {
+          "name": "saves/190180BE4E0BDD8C3B1B0FAAA225A071.f03",
+          "bytes": 1803
+        },
+        {
+          "name": "saves/847927B04A084990950299ACF9A66636.f03",
+          "bytes": 1803
+        },
+        {
+          "name": "saves/99D8B8FB44B4268D58AE07AE8B7883E9.f03",
+          "bytes": 1803
+        },
+        {
+          "name": "saves/process-campaign.f03",
+          "bytes": 1819
+        }
+      ],
+      "drive_id": "1KzAtNJJRNk4iHGEWS63079bO3i6sebBy",
+      "drive_url": "https://drive.google.com/file/d/1KzAtNJJRNk4iHGEWS63079bO3i6sebBy/view?usp=drivesdk",
+      "shared": false,
+      "permissions": "owner only",
+      "remote_verification": "size and owner-only permissions; remote checksum not exposed by connector"
+    },
+    {
+      "name": "F03-own-binaries.zip",
+      "location": "C:\\F03\\publication-20261030-01\\F03-own-binaries.zip",
+      "bytes": 400100,
+      "sha256": "0caafc47aa409218edb8438dc02a8b21a8456dce2a03e078c2708769b47ee868",
+      "date_utc": "2026-10-30T10:28:44.745991+00:00",
+      "publication_status": "PUBLISHED_PRIVATE_METADATA_VERIFIED",
+      "description": "Own Win64 lab binaries, no UE engine or art",
+      "members": [
+        {
+          "name": "native/Release/TrekF03Bridge.dll",
+          "bytes": 215040
+        },
+        {
+          "name": "native/Release/TrekF03Bridge.lib",
+          "bytes": 4716
+        },
+        {
+          "name": "native/Release/f03_tests.exe",
+          "bytes": 122880
+        },
+        {
+          "name": "ue/Binaries/Win64/TrekF02Bridge.dll",
+          "bytes": 91648
+        },
+        {
+          "name": "ue/Binaries/Win64/TrekF03Bridge.dll",
+          "bytes": 215040
+        },
+        {
+          "name": "ue/Binaries/Win64/UnrealEditor-F02CoreLab.dll",
+          "bytes": 294400
+        },
+        {
+          "name": "ue/ThirdParty/Win64/TrekF02Bridge.lib",
+          "bytes": 4102
+        },
+        {
+          "name": "ue/ThirdParty/Win64/TrekF03Bridge.lib",
+          "bytes": 4716
+        }
+      ],
+      "drive_id": "1V11GEAeTI8-UhW4y8hkyRq39FboRvxM6",
+      "drive_url": "https://drive.google.com/file/d/1V11GEAeTI8-UhW4y8hkyRq39FboRvxM6/view?usp=drivesdk",
+      "shared": false,
+      "permissions": "owner only",
+      "remote_verification": "size and owner-only permissions; remote checksum not exposed by connector"
+    }
+  ],
+  "local_raw_evidence": "C:/F03/evidence",
+  "local_raw_status": "PRESERVED_LOCAL_ONLY",
+  "notes": [
+    "Local original logs retained; publication redacts user profile and computer name.",
+    "SHA-256 calculated locally over exact uploaded ZIP bytes.",
+    "No Core or Unreal engine binaries, art, personal saves or large debug PDBs in Git."
+  ]
+}

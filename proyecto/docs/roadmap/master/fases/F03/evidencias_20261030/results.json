@@ -1,0 +1,33 @@
+{
+  "date_utc": "2026-10-30T10:28:44.745991+00:00",
+  "star_trek_source_commit": "09fad79ee4277b9630ec201f4c176c1198aece1b",
+  "star_trek_base": "9b33f32caab21ce0eb1ecb74cd38739b45d2f035",
+  "core_commit": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+  "core_base": "4f282863737bcd8f5add401202a9e1064c133672",
+  "native": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "skipped": 0
+  },
+  "core": {
+    "total": 451,
+    "passed": 447,
+    "failed": 0,
+    "skipped": 4
+  },
+  "f02_native": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "unreal": {
+    "succeeded": 12,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0
+  },
+  "unreal_report_source": "20261030-112540-525-ue-report\\index.json",
+  "scope": "CORE_INTEGRADO in isolated branches only; Core PR dependency not merged; F03 not closed"
+}
