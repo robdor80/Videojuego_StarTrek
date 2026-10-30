@@ -2,6 +2,10 @@
 
 **Versión organizativa:** 1.0 / 11-10-2026; **reconciliación post-merge:** 30-10-2026 (F02 PR #60; F03 PR #62 con CoreRPG PR #12). **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00/F01 cerradas a su nivel; F02 CERRADA en CONTRATO_VALIDADO; F03 CERRADA en CORE_INTEGRADO** tras auditoría y fusiones normales con SHA Core fijado. Siguiente fase principal: **F04 EN_CURSO**, sin atribuir jugabilidad ni sistemas galácticos completos a F03. La [reconciliación del 13-10](ACTA_RECONCILIACION_F00_F06_2026-10-13.md) queda como antecedente histórico.
 
+## Decisión autoral transversal 2026-10-30 — cronología y propulsión
+
+**Vigencia actual:** año inicial Academia **2383**; **clase Odyssey ya en servicio y punta de lanza** al comenzar la campaña; **programa Valhalla iniciado tras Nemesis (2379), con siete años de construcción/desarrollo desde 2380 y primera unidad objetivo 2387**, que la releva como máximo exponente tecnológico. **Flujo cuántico experimental en unidades Odyssey de pruebas** y candidato a perfeccionamiento/implantación posterior en Valhalla; **no estándar ni necesariamente instalado al entrar Valhalla en servicio**. Fecha exacta de comisiones, destino del jugador y éxito de pruebas no garantizados. **DEC-0013–0016**, [acta de autoridad](../../decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md). Sustituye únicamente reservas históricas incompatibles; no cierra F04 ni implementa sistemas.
+
 ## Principios de producto conservados
 
 - RPG 3D para PC/MSI con universo persistente, NPC que actúan sin el jugador y Academia de cuatro años antes del servicio activo; la web academiaflota sigue siendo complemento educativo.
