@@ -6,6 +6,10 @@ bool UF04CampaignSubsystem::OpenLab(){
  if(!IsInGameThread() || !F04BridgeReady())return false;
  CloseLab();return f04_create(1,"miranda",&Session)==F04_OK && f04_handles(Session,&Handles)==F04_OK;
 }
+bool UF04CampaignSubsystem::OpenPopulation(const char* ClassId,const F04PopulationConfig& Config){
+ if(!IsInGameThread() || !F04BridgeReady())return false;
+ CloseLab();return f04_create_population(1,ClassId,&Config,&Session)==F04_OK && f04_handles(Session,&Handles)==F04_OK;
+}
 void UF04CampaignSubsystem::ClearVisuals(){for(auto V:Visuals)if(V.IsValid())V->Destroy();Visuals.Empty();}
 void UF04CampaignSubsystem::CloseLab(){if(!IsInGameThread())return;ClearVisuals();if(Session){f04_destroy(Session);Session=nullptr;}}
 bool UF04CampaignSubsystem::Stats(F04Stats& Out)const{return IsInGameThread() && Session && f04_stats(Session,&Out)==F04_OK;}
@@ -26,18 +30,18 @@ bool UF04CampaignSubsystem::Load(const TArray<uint8>& Bytes){
  ClearVisuals();return f04_handles(Session,&Handles)==F04_OK;
 }
 void UF04CampaignSubsystem::Refresh(){
- if(!Session)return;F04Person People[9]{};uint64 Count=0;
- if(f04_manifest(Session,Handles.captain,People,9,&Count)!=F04_OK)return;
- for(auto V:Visuals)if(V.IsValid())for(uint64 I=0;I<Count;++I)if(V->LogicalId==FString::Printf(TEXT("F04:%llu"),People[I].id)){
-  V->OnDuty=People[I].on_duty!=0;V->Available=People[I].available!=0;
+ if(!Session)return;
+ f04_handles(Session,&Handles);
+ for(auto V:Visuals)if(V.IsValid()) {F04Person Person{};
+  if(f04_person(Session,Handles.captain,V->CorePersonId,&Person)!=F04_OK){V->Destroy();continue;}
+  V->OnDuty=Person.on_duty!=0;V->Available=Person.available!=0;
  }
 }
 AF04CrewMarker* UF04CampaignSubsystem::Represent(UWorld* World,uint32 Person){
  if(!IsInGameThread() || !World || !Session)return nullptr;
- F04Person People[9]{};uint64 Count=0;if(f04_manifest(Session,Handles.captain,People,9,&Count)!=F04_OK)return nullptr;
- bool Found=false;for(uint64 I=0;I<Count;++I)Found|=People[I].id==Person;if(!Found)return nullptr;
+ F04Person View{};if(f04_person(Session,Handles.captain,Person,&View)!=F04_OK)return nullptr;
  const FString Id=FString::Printf(TEXT("F04:%u"),Person);
  for(auto V:Visuals)if(V.IsValid() && V->GetWorld()==World && V->LogicalId==Id)return V.Get();
- auto* Actor=World->SpawnActor<AF04CrewMarker>();if(!Actor)return nullptr;Actor->LogicalId=Id;Visuals.Add(Actor);Refresh();return Actor;
+ auto* Actor=World->SpawnActor<AF04CrewMarker>();if(!Actor)return nullptr;Actor->LogicalId=Id;Actor->CorePersonId=Person;Visuals.Add(Actor);Refresh();return Actor;
 }
 void UF04CampaignSubsystem::Dematerialize(UWorld* World){if(!IsInGameThread())return;for(auto V:Visuals)if(V.IsValid() && V->GetWorld()==World)V->Destroy();Visuals.RemoveAll([](auto V){return !V.IsValid();});}

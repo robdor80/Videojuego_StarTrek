@@ -17,9 +17,9 @@ ctest --test-dir C:/F04/native -C Release --no-tests=error --output-on-failure
 ```
 
 Para Linux: Ninja, `-DCMAKE_BUILD_TYPE=Release`, sin `-A x64` ni `-C Release`.
-El generador compila los IDs del catálogo JSON existente; no copia sus cifras
-de tripulación al estado vivo. Cada checkout Core debe estar limpio y en su SHA.
-Los 52 tests incluyen dos procesos CTest distintos para guardar y recuperar
+El generador compila los IDs y dotaciones nominales del catálogo JSON existente;
+las cantidades reales se configuran explícitamente. Cada checkout Core debe estar limpio y en su SHA.
+Las 52 pruebas originales incluyen dos procesos CTest distintos para guardar y recuperar
 un archivo, comparando byte a byte el futuro reproducido. No son pruebas de UI.
 
 ## Laboratorio Unreal
@@ -35,7 +35,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 17 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 5.
+El comando ejecuta 18 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 6.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.
@@ -127,7 +127,12 @@ exige mando/delegación y cobertura durante el siguiente ciclo completo.
 
 ## Límites del corte
 
-No incluye: editor de flotas o creador arbitrario de personal; rotaciones
+La ampliación de dotaciones está descrita en [DOTACIONES.md](DOTACIONES.md).
+La creación general, altas/bajas, plazas y consulta individual/paginada sustituyen
+la limitación de nueve personas para campañas nuevas. La muestra ABI 1 sigue
+existiendo con sus handles y archivo SCHEMA=1. F04 permanece EN_CURSO.
+
+No incluye: editor visual de flotas; rotaciones
 personalizadas más allá de 3×8/4×6; planificación biológica de fatiga por especie;
 equidad multisemanal; movimiento por interiores; traspaso completo de conocimiento
 durante relevos; motor clínico; totalidad de sistemas técnicos; adjudicación

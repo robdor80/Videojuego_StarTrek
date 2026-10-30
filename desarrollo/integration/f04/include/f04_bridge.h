@@ -19,7 +19,8 @@ enum F04Code { F04_OK, F04_ARGUMENT, F04_DENIED, F04_QUALIFICATION, F04_UNAVAILA
  F04_REVIEW, F04_STALE, F04_THREAD, F04_SAVE, F04_CAPACITY, F04_INTERNAL };
 enum F04Op { F04_ASSIGN=1,F04_DUTY,F04_REST,F04_ONCALL,F04_ABSENCE,F04_RELIEF,
  F04_APPOINT,F04_DELEGATE,F04_REVOKE,F04_MEDICAL,F04_POLICY,F04_SCAN,F04_BRIDGE,
- F04_IMPOSSIBLE,F04_CONTACT,F04_QUEUE,F04_RECALL,F04_SUPERIOR,F04_MOVE,F04_PROPOSE,F04_CONTACT_REVIEW };
+ F04_IMPOSSIBLE,F04_CONTACT,F04_QUEUE,F04_RECALL,F04_SUPERIOR,F04_MOVE,F04_PROPOSE,F04_CONTACT_REVIEW,
+ F04_EMBARK,F04_DEPART,F04_CREATE_SLOT };
 enum F04Role { F04_CAPTAIN=1,F04_HEAD,F04_WATCH,F04_DOCTOR,F04_FIRST,F04_SECOND,F04_SUCCESSOR };
 enum F04Dept { F04_SENSORS=1,F04_ENGINEERING=2,F04_COMMAND=3,F04_MEDICINE=4 };
 enum F04Absence { F04_LEAVE=1,F04_SICK=2,F04_SUSPENDED=3 };
@@ -40,6 +41,17 @@ typedef struct { uint64_t start,end; uint32_t count,label; } F04WatchWindow;
 F04_API const char* f04_core_sha(void);
 /* Synthetic test scenario. class_id is validated against the existing catalog. */
 F04_API uint32_t f04_create(uint32_t abi,const char* class_id,F04Session** out);
+/* Additive ABI 1 extension: trusted host bootstrap. Zero maximum means unspecified,
+ * never the nominal complement. Counts describe real individuals, not slots.
+ * ship_identity is a stable campaign ID supplied by the host; seed persists in Core. */
+typedef struct { uint64_t ship_identity,seed,crew,residents,passengers,maximum; } F04PopulationConfig;
+typedef struct { uint64_t ship_identity,nominal_crew,nominal_residents,maximum,
+ assigned,present,residents,passengers,departed,nominal_vacancies; } F04PopulationStats;
+F04_API uint32_t f04_create_population(uint32_t abi,const char* class_id,const F04PopulationConfig*,F04Session**);
+F04_API uint32_t f04_population_stats(F04Session*,F04PopulationStats*);
+/* Paged manifest returns current members only, total and written independently. */
+F04_API uint32_t f04_manifest_page(F04Session*,F04Ref,uint64_t offset,F04Person*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f04_person(F04Session*,F04Ref observer,uint64_t id,F04Person*);
 F04_API uint32_t f04_destroy(F04Session*);
 F04_API uint32_t f04_handles(F04Session*,F04Handles*);
 F04_API uint32_t f04_stats(F04Session*,F04Stats*);

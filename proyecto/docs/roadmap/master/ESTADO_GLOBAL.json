@@ -134,7 +134,7 @@
         "P04": "CERRADA",
         "P05": "CERRADA"
       },
-      "note": "ACTIVADA como siguiente fase principal tras el cierre F03 (30-10-2026). Los cinco pasos CERRADOS conservan exclusivamente su alcance documental/reglas de referencia (39 escenarios y 17 unit tests); no implican dotación jugable ni autoridad Core operativa. Antes de ampliar o cerrar F04, auditar integración CoreRPG F03 y las puertas de nombramientos/guardias, validación transversal y UE5. La madurez de referencia no aumenta por la activación.",
+      "note": "EN_CURSO. Tras PR #64 (F04 nativa P01-P05), ampliación de dotaciones 30-10-2026 para auditoría: cinco clases, identidades Core persistentes hasta Valhalla 1800+400, altas/bajas, consulta paginada y representación selectiva. Core fijado en c147d81ed069da2e09149613ab02cbc3ebe95a4a. Evidencia y límites: desarrollo/integration/f04/DOTACIONES.md. Los pasos documentales cerrados no equivalen al cierre de fase ni a UE5 jugable; cierre sujeto a auditoría independiente.",
       "file": "fases/F04/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
