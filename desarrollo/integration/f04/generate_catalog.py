@@ -2,6 +2,10 @@
 import json, pathlib, sys
 source=pathlib.Path(__file__).resolve().parents[3]/'mundo/lore/starships/classes/core_starship_classes.json'
 classes=json.loads(source.read_text(encoding='utf-8'))['classes']
+contract=json.loads((pathlib.Path(__file__).resolve().parents[3]/'sistemas/gameplay/ship_operations/class_definition_contract.json').read_text(encoding='utf-8'))
+# Every generated class must satisfy the class-definition contract, even if
+# its author-approved configuration is deliberately minimal or date-pending.
+assert all(all(field in c and c[field] for field in contract['required_fields']) for c in classes)
 ids=[c['class_id'] for c in classes]
 assert len(ids)==len(set(ids)) and 'miranda' in ids
 assert all(s.replace('_','').isalnum() and s.isascii() for s in ids)
