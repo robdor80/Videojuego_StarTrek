@@ -37,7 +37,13 @@ int main(int argc,char** argv){try{
   U entities=s.stats().entities;U slot=s.op(F04_CREATE_SLOT,0,F04_COMMAND).record;check(s.stats().entities==entities+2 && s.population().assigned==127,"vacancy does not spawn person");
   s.op(F04_ASSIGN,slot,0,3);s.op(F04_DUTY,3,0,slot);s.op(F04_ABSENCE,3,F04_LEAVE);check(s.population().present==126,"temporary absence");U processed=0;check(f04_advance(s.s,1000,4096,&processed)==F04_OK,"absence expiry");
   auto newcomer=s.op(F04_EMBARK,0,1).record;check(newcomer>129,"new identity");s.op(F04_EMBARK,newcomer,1,0,F04_OVERLAP);
-  s.op(F04_DEPART,newcomer);check(s.population().departed==1,"departure retained identity");F04Person view{};check(f04_person(s.s,s.h.captain,newcomer,&view)==F04_SCOPE,"departed not representable");
+  s.op(F04_DEPART,newcomer);check(s.population().departed==1,"departure retained identity");
+  // A departed crewmember retains a historical ship link but must not receive
+  // fresh assignments, duties, absences or appointments from the current captain.
+  s.op(F04_REST,newcomer,0,0,F04_DENIED);
+  s.op(F04_APPOINT,newcomer,F04_FIRST,0,F04_DENIED);
+  s.op(F04_ASSIGN,slot,0,newcomer,F04_DENIED);
+  F04Person view{};check(f04_person(s.s,s.h.captain,newcomer,&view)==F04_SCOPE,"departed not representable");
   s.op(F04_EMBARK,newcomer,1);check(s.population().departed==0,"return same identity");
   auto civilian=s.op(F04_EMBARK,0,2).record;auto passenger=s.op(F04_EMBARK,0,3).record;check(s.population().residents==1 && s.population().passengers==3,"categories");s.op(F04_DEPART,civilian);s.op(F04_DEPART,passenger);
   s.op(F04_EMBARK,0,1,0,F04_STALE,3,0);s.op(F04_EMBARK,0,1,0,F04_DENIED,4);
