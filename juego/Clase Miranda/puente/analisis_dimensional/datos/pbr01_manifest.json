@@ -1,0 +1,1646 @@
+{
+  "source": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\DERIVADOS_EXISTENTES\\Blender_Integracion_Final\\Referencia_Visual02.blend",
+  "original": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Ergonomia_04.blend",
+  "output": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_PBR_01.blend",
+  "original_sha256": {
+    "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\DERIVADOS_EXISTENTES\\Blender_Integracion_Final\\Referencia_Visual02.blend": "3819352d7fc2f8eec7e834a11999e0d8596c42447173f884699129124a146e4a",
+    "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Ergonomia_04.blend": "c6a0422e6c4ecb7cd288b34cf254be45fd9216b01b12a4ca4a5e38cb41511bf9"
+  },
+  "preflight": "pbr01_preflight.json",
+  "mode": "applied",
+  "protected_chair_meshes": [
+    "Cube.002_0",
+    "Cube_0",
+    "Cylinder_0",
+    "Mesh.453_0",
+    "Mesh.587_0",
+    "Mesh.587_0.001",
+    "Mesh.587_0.002",
+    "Mesh.587_0.003",
+    "Mesh.587_0.004",
+    "Mesh.587_0.005",
+    "Mesh.588_0",
+    "Mesh.588_0.001",
+    "Mesh.588_0.002",
+    "Mesh.588_0.003",
+    "Mesh.588_0.004",
+    "Mesh.588_0.005",
+    "Mesh.589_0",
+    "Mesh.589_0.001",
+    "Mesh.589_0.002",
+    "Mesh.589_0.003",
+    "Mesh.589_0.004",
+    "Mesh.589_0.005",
+    "Mesh.590_0",
+    "Mesh.590_0.001",
+    "Mesh.590_0.002",
+    "Mesh.590_0.003",
+    "Mesh.590_0.004",
+    "Mesh.590_0.005",
+    "Mesh.591_0",
+    "Mesh.591_0.001",
+    "Mesh.591_0.002",
+    "Mesh.591_0.003",
+    "Mesh.591_0.004",
+    "Mesh.591_0.005",
+    "Mesh.592_0",
+    "Mesh.592_0.001",
+    "Mesh.592_0.002",
+    "Mesh.592_0.003",
+    "Mesh.592_0.004",
+    "Mesh.592_0.005",
+    "Mesh.593_0",
+    "Mesh.593_0.001",
+    "Mesh.593_0.002",
+    "Mesh.593_0.003",
+    "Mesh.593_0.004",
+    "Mesh.593_0.005",
+    "Mesh.594_0",
+    "Mesh.594_0.001",
+    "Mesh.594_0.002",
+    "Mesh.594_0.003",
+    "Mesh.594_0.004",
+    "Mesh.594_0.005",
+    "Mesh.595_0",
+    "Mesh.595_0.001",
+    "Mesh.595_0.002",
+    "Mesh.595_0.003",
+    "Mesh.595_0.004",
+    "Mesh.595_0.005",
+    "Mesh.596_0",
+    "Mesh.596_0.001",
+    "Mesh.596_0.002",
+    "Mesh.596_0.003",
+    "Mesh.596_0.004",
+    "Mesh.596_0.005",
+    "Mesh.597_0",
+    "Mesh.597_0.001",
+    "Mesh.597_0.002",
+    "Mesh.597_0.003",
+    "Mesh.597_0.004",
+    "Mesh.597_0.005",
+    "Mesh.598_0",
+    "Mesh.598_0.001",
+    "Mesh.598_0.002",
+    "Mesh.598_0.003",
+    "Mesh.598_0.004",
+    "Mesh.598_0.005",
+    "Mesh.599_0",
+    "Mesh.599_0.001",
+    "Mesh.599_0.002",
+    "Mesh.599_0.003",
+    "Mesh.599_0.004",
+    "Mesh.599_0.005",
+    "Mesh.600_0",
+    "Mesh.600_0.001",
+    "Mesh.600_0.002",
+    "Mesh.600_0.003",
+    "Mesh.600_0.004",
+    "Mesh.600_0.005",
+    "Mesh.601_0",
+    "Mesh.601_0.001",
+    "Mesh.601_0.002",
+    "Mesh.601_0.003",
+    "Mesh.601_0.004",
+    "Mesh.601_0.005",
+    "Mesh.602_0",
+    "Mesh.602_0.001",
+    "Mesh.602_0.002",
+    "Mesh.602_0.003",
+    "Mesh.602_0.004",
+    "Mesh.602_0.005",
+    "Sphere.001_0"
+  ],
+  "plans": [
+    {
+      "object": "Circle.001_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Circle.001_0",
+          "from": "grey",
+          "to": "PBR_Puente_Plataforma_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        },
+        {
+          "source_object": "Circle.001_0",
+          "from": "grey",
+          "to": "Marcos_Ascensor_Negro",
+          "ranges": [
+            [
+              4,
+              4,
+              32
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Circle.002_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Circle.002_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              0,
+              0,
+              16
+            ],
+            [
+              20,
+              20,
+              24
+            ],
+            [
+              52,
+              52,
+              12
+            ]
+          ]
+        },
+        {
+          "source_object": "Circle.002_0",
+          "from": "grey",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              16,
+              16,
+              4
+            ],
+            [
+              44,
+              44,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Circle.002_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              64,
+              64,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Circle_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Circle_0",
+          "from": "floor",
+          "to": "PBR_Moqueta_Capitan",
+          "ranges": [
+            [
+              0,
+              0,
+              16
+            ],
+            [
+              26,
+              26,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Circle_0",
+          "from": "floor",
+          "to": "PBR_Moqueta_Puente",
+          "ranges": [
+            [
+              16,
+              16,
+              10
+            ],
+            [
+              34,
+              34,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Cube.000_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Cube.000_0",
+          "from": "cream",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              0,
+              0,
+              20
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Cube.001_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Cube.001_0",
+          "from": "cream",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              0,
+              0,
+              20
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Cylinder.002_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Cylinder.002_0",
+          "from": "captainschair",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              1224
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Editable Mesh_Mat.004_0",
+      "method": "paired original sides, normalized topology and per-corner current UV",
+      "groups": [
+        {
+          "source_object": "Editable Mesh_Mat.004_0",
+          "from": "BLUE",
+          "to": "Luz_Azul_Suave_Consola",
+          "ranges": [
+            [
+              2,
+              2,
+              16
+            ]
+          ]
+        },
+        {
+          "source_object": "Editable Mesh_Mat.004_0.001",
+          "from": "BLUE",
+          "to": "Luz_Azul_Suave_Consola",
+          "ranges": [
+            [
+              18,
+              0,
+              18
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Editable Mesh_Mat.005_0",
+      "method": "paired original sides, normalized topology and per-corner current UV",
+      "groups": [
+        {
+          "source_object": "Editable Mesh_Mat.005_0",
+          "from": "captainschair",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Editable Mesh_Mat.005_0.001",
+          "from": "captainschair",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              8,
+              0,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Editable Mesh_Mat.006_0",
+      "method": "paired original sides, normalized topology and per-corner current UV",
+      "groups": [
+        {
+          "source_object": "Editable Mesh_Mat.006_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Editable Mesh_Mat.006_0.001",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              8,
+              0,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.001_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.001_0",
+          "from": "door",
+          "to": "PBR_Puertas_Burdeos_ConTexto",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.002_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.002_0",
+          "from": "grey",
+          "to": "PBR_Puente_Plataforma_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.003_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.003_0",
+          "from": "grey",
+          "to": "PBR_Puente_Plataforma_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              6
+            ],
+            [
+              10,
+              10,
+              2
+            ],
+            [
+              13,
+              13,
+              9
+            ],
+            [
+              26,
+              26,
+              3
+            ],
+            [
+              30,
+              30,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.003_0",
+          "from": "grey",
+          "to": "Marcos_Ascensor_Negro",
+          "ranges": [
+            [
+              6,
+              6,
+              4
+            ],
+            [
+              12,
+              12,
+              1
+            ],
+            [
+              22,
+              22,
+              4
+            ],
+            [
+              29,
+              29,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.004_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.004_0",
+          "from": "captainschair",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              12
+            ],
+            [
+              20,
+              20,
+              4
+            ],
+            [
+              28,
+              28,
+              12
+            ],
+            [
+              48,
+              48,
+              4
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.004_0",
+          "from": "captainschair",
+          "to": "Marcos_Ascensor_Negro",
+          "ranges": [
+            [
+              12,
+              12,
+              8
+            ],
+            [
+              24,
+              24,
+              4
+            ],
+            [
+              40,
+              40,
+              8
+            ],
+            [
+              52,
+              52,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.005_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.005_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              240
+            ],
+            [
+              242,
+              242,
+              240
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.005_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              240,
+              240,
+              2
+            ],
+            [
+              482,
+              482,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.007_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.007_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.009_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.009_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              0,
+              0,
+              432
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.010_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.010_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.011_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.011_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              26
+            ],
+            [
+              28,
+              28,
+              28
+            ],
+            [
+              58,
+              58,
+              2
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.011_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              26,
+              26,
+              2
+            ],
+            [
+              56,
+              56,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.012_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.012_0",
+          "from": "ceiling",
+          "to": "PBR_Capitan_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              588
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.013_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.013_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              12
+            ],
+            [
+              20,
+              20,
+              4
+            ],
+            [
+              28,
+              28,
+              12
+            ],
+            [
+              48,
+              48,
+              4
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.013_0",
+          "from": "grey",
+          "to": "Marcos_Ascensor_Negro",
+          "ranges": [
+            [
+              12,
+              12,
+              8
+            ],
+            [
+              24,
+              24,
+              4
+            ],
+            [
+              40,
+              40,
+              8
+            ],
+            [
+              52,
+              52,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.014_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.014_0",
+          "from": "grey",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              0,
+              0,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.015_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.015_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              0,
+              0,
+              4
+            ],
+            [
+              6,
+              6,
+              2
+            ],
+            [
+              10,
+              10,
+              2
+            ],
+            [
+              14,
+              14,
+              2
+            ],
+            [
+              17,
+              17,
+              1
+            ],
+            [
+              22,
+              22,
+              4
+            ],
+            [
+              28,
+              28,
+              2
+            ],
+            [
+              32,
+              32,
+              2
+            ],
+            [
+              36,
+              36,
+              4
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.015_0",
+          "from": "cream",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              4,
+              4,
+              2
+            ],
+            [
+              8,
+              8,
+              2
+            ],
+            [
+              12,
+              12,
+              2
+            ],
+            [
+              16,
+              16,
+              1
+            ],
+            [
+              18,
+              18,
+              4
+            ],
+            [
+              26,
+              26,
+              2
+            ],
+            [
+              30,
+              30,
+              2
+            ],
+            [
+              34,
+              34,
+              2
+            ],
+            [
+              40,
+              40,
+              4
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.016_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.016_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              8
+            ],
+            [
+              12,
+              12,
+              4
+            ],
+            [
+              20,
+              20,
+              4
+            ],
+            [
+              28,
+              28,
+              8
+            ],
+            [
+              44,
+              44,
+              8
+            ],
+            [
+              56,
+              56,
+              4
+            ],
+            [
+              64,
+              64,
+              4
+            ],
+            [
+              72,
+              72,
+              8
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.016_0",
+          "from": "grey",
+          "to": "Marcos_Ascensor_Negro",
+          "ranges": [
+            [
+              8,
+              8,
+              4
+            ],
+            [
+              16,
+              16,
+              4
+            ],
+            [
+              24,
+              24,
+              4
+            ],
+            [
+              36,
+              36,
+              8
+            ],
+            [
+              52,
+              52,
+              4
+            ],
+            [
+              60,
+              60,
+              4
+            ],
+            [
+              68,
+              68,
+              4
+            ],
+            [
+              80,
+              80,
+              8
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.017_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.017_0",
+          "from": "door",
+          "to": "PBR_Puertas_Burdeos_ConTexto",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.018_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.018_0",
+          "from": "door",
+          "to": "PBR_Puertas_Burdeos_ConTexto",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.019_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.019_0",
+          "from": "door",
+          "to": "PBR_Puertas_Burdeos_ConTexto",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.020_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.020_0",
+          "from": "ceiling",
+          "to": "PBR_Capitan_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              20
+            ],
+            [
+              64,
+              64,
+              40
+            ],
+            [
+              192,
+              192,
+              40
+            ],
+            [
+              320,
+              320,
+              40
+            ],
+            [
+              652,
+              652,
+              1
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.020_0",
+          "from": "ceiling",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              20,
+              20,
+              10
+            ],
+            [
+              38,
+              38,
+              6
+            ],
+            [
+              104,
+              104,
+              20
+            ],
+            [
+              140,
+              140,
+              12
+            ],
+            [
+              232,
+              232,
+              20
+            ],
+            [
+              268,
+              268,
+              12
+            ],
+            [
+              360,
+              360,
+              20
+            ],
+            [
+              396,
+              396,
+              12
+            ],
+            [
+              464,
+              464,
+              1
+            ],
+            [
+              467,
+              467,
+              1
+            ],
+            [
+              469,
+              469,
+              1
+            ],
+            [
+              480,
+              480,
+              6
+            ],
+            [
+              487,
+              487,
+              41
+            ],
+            [
+              544,
+              544,
+              1
+            ],
+            [
+              547,
+              547,
+              1
+            ],
+            [
+              560,
+              560,
+              48
+            ],
+            [
+              624,
+              624,
+              1
+            ],
+            [
+              627,
+              627,
+              1
+            ],
+            [
+              640,
+              640,
+              12
+            ],
+            [
+              653,
+              653,
+              35
+            ],
+            [
+              697,
+              697,
+              2
+            ],
+            [
+              704,
+              704,
+              2
+            ],
+            [
+              707,
+              707,
+              161
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.020_0",
+          "from": "ceiling",
+          "to": "PBR_Techo_Faldones_Gunmetal",
+          "ranges": [
+            [
+              30,
+              30,
+              8
+            ],
+            [
+              44,
+              44,
+              20
+            ],
+            [
+              124,
+              124,
+              16
+            ],
+            [
+              152,
+              152,
+              40
+            ],
+            [
+              252,
+              252,
+              16
+            ],
+            [
+              280,
+              280,
+              40
+            ],
+            [
+              380,
+              380,
+              16
+            ],
+            [
+              408,
+              408,
+              40
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.020_0",
+          "from": "ceiling",
+          "to": "PBR_Techo_Acero_Cepillado_Claro",
+          "ranges": [
+            [
+              448,
+              448,
+              16
+            ],
+            [
+              465,
+              465,
+              2
+            ],
+            [
+              468,
+              468,
+              1
+            ],
+            [
+              470,
+              470,
+              10
+            ],
+            [
+              486,
+              486,
+              1
+            ],
+            [
+              528,
+              528,
+              16
+            ],
+            [
+              545,
+              545,
+              2
+            ],
+            [
+              548,
+              548,
+              1
+            ],
+            [
+              550,
+              550,
+              10
+            ],
+            [
+              608,
+              608,
+              16
+            ],
+            [
+              625,
+              625,
+              2
+            ],
+            [
+              628,
+              628,
+              12
+            ],
+            [
+              688,
+              688,
+              9
+            ],
+            [
+              699,
+              699,
+              5
+            ],
+            [
+              706,
+              706,
+              1
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane.020_0",
+          "from": "ceiling",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              549,
+              549,
+              1
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.022_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.022_0",
+          "from": "Material__13",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              511
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.028_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.028_0",
+          "from": "grey",
+          "to": "PBR_Puente_Barandillas_AceroCepillado",
+          "ranges": [
+            [
+              0,
+              0,
+              208
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.044_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.044_0",
+          "from": "ceiling",
+          "to": "PBR_Capitan_Titanio",
+          "ranges": [
+            [
+              0,
+              0,
+              112
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane.046_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane.046_0",
+          "from": "light.001",
+          "to": "PBR_Luz_Sutherland_Fria",
+          "ranges": [
+            [
+              0,
+              0,
+              80
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "Plane_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "Plane_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Claro",
+          "ranges": [
+            [
+              0,
+              0,
+              24
+            ],
+            [
+              25,
+              25,
+              25
+            ],
+            [
+              51,
+              51,
+              41
+            ],
+            [
+              94,
+              94,
+              52
+            ],
+            [
+              148,
+              148,
+              12
+            ]
+          ]
+        },
+        {
+          "source_object": "Plane_0",
+          "from": "grey",
+          "to": "PBR_Paneles_Composite_Hueso",
+          "ranges": [
+            [
+              24,
+              24,
+              1
+            ],
+            [
+              50,
+              50,
+              1
+            ],
+            [
+              92,
+              92,
+              2
+            ],
+            [
+              146,
+              146,
+              2
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "object": "ceiling_0",
+      "method": "same topology, polygon order and current UV",
+      "groups": [
+        {
+          "source_object": "ceiling_0",
+          "from": "ceiling",
+          "to": "PBR_Mamparos_Composite_Oscuro",
+          "ranges": [
+            [
+              0,
+              0,
+              48
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "exceptions": [
+    {
+      "object": "Editable Mesh_Mat.003_0",
+      "reason": "no verified topology + UV correspondence; current materials preserved"
+    },
+    {
+      "object": "Editable Mesh_Mat.003_0.001",
+      "reason": "no verified topology + UV correspondence; current materials preserved"
+    },
+    {
+      "object": "Editable Mesh_Mat.004_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 2,
+      "source_materials": {
+        "BLUE": 2
+      }
+    },
+    {
+      "object": "Editable Mesh_Mat.007_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 32,
+      "source_materials": {
+        "PBR_Paneles_Composite_Claro": 32
+      }
+    },
+    {
+      "object": "Editable Mesh_Mat.010_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 80,
+      "source_materials": {
+        "PBR_Paneles_Composite_Claro": 80
+      }
+    },
+    {
+      "object": "Editable Mesh_Mat.011_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 36,
+      "source_materials": {
+        "PBR_Paneles_Composite_Claro": 36
+      }
+    },
+    {
+      "object": "Plane.008_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 168,
+      "source_materials": {
+        "PBR_Paneles_Composite_Claro": 168
+      }
+    },
+    {
+      "object": "Plane.023_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 64,
+      "source_materials": {
+        "grey": 64
+      }
+    },
+    {
+      "object": "Plane.025_0",
+      "reason": "current BLUE protected from opaque original materials",
+      "faces": 32,
+      "source_materials": {
+        "grey": 32
+      }
+    }
+  ],
+  "materials": [
+    "Luz_Azul_Suave_Consola",
+    "Marcos_Ascensor_Negro",
+    "PBR_Capitan_Titanio",
+    "PBR_Luz_Sutherland_Fria",
+    "PBR_Mamparos_Composite_Oscuro",
+    "PBR_Moqueta_Capitan",
+    "PBR_Moqueta_Puente",
+    "PBR_Paneles_Composite_Claro",
+    "PBR_Paneles_Composite_Hueso",
+    "PBR_Puente_Barandillas_AceroCepillado",
+    "PBR_Puente_Plataforma_Titanio",
+    "PBR_Puertas_Burdeos_ConTexto",
+    "PBR_Techo_Acero_Cepillado_Claro",
+    "PBR_Techo_Faldones_Gunmetal"
+  ],
+  "source_graphs": {
+    "Luz_Azul_Suave_Consola": "238a00409343cd1d005bda24439f3d639c266db292b2b4d38a5bfa293e079592",
+    "Marcos_Ascensor_Negro": "d9c803e0c10212f64db08ca50678c71ae251a0a93957cc04786699bd81413a2b",
+    "PBR_Capitan_Titanio": "f55b531c70a094c3297f3629ac2936cb6526ee005b03f15d01920932a70b57dd",
+    "PBR_Luz_Sutherland_Fria": "779b8eb977a6adf7419cccd7af439fc49e4972e070b33082fc81124d0fcfbafa",
+    "PBR_Mamparos_Composite_Oscuro": "188ffb4d7831108939f31bde6ee2729b024482752eb28a8b7003d7816d14fc6c",
+    "PBR_Moqueta_Capitan": "e4cd7bef0294faf3436b66160e71c9f8b8e47d8f32d6514989e3ea2f81d6ef74",
+    "PBR_Moqueta_Puente": "b9891758389ba994045be3db3fb0bef9a3d490507349e0b4bab970fe9cdf1614",
+    "PBR_Paneles_Composite_Claro": "e5150261f5c91deb313b3a6a21d78784524567e317869340cfd477735ebbfe60",
+    "PBR_Paneles_Composite_Hueso": "f7d21b75ea8a44d21b98269da62adc39eac5f111b7d06e02aec5eafd4ec4f817",
+    "PBR_Puente_Barandillas_AceroCepillado": "71f60c88164e1a6d7d96986b4cd49df98a69dfe42bb98d706e832f87e1438f02",
+    "PBR_Puente_Plataforma_Titanio": "ef858bc8fe80cce6d44fe297815aa2e9fb5fb80934526c28ceb138f0c9a06018",
+    "PBR_Puertas_Burdeos_ConTexto": "3730695206c2c0b5d5ad43bb05a7926b61a60007de6e69585da81e1a32178036",
+    "PBR_Techo_Acero_Cepillado_Claro": "24e845f1e124b4d965305fc962475abf9f48b3a2eeb69deb918b44135fef4f62",
+    "PBR_Techo_Faldones_Gunmetal": "1a5b51bf8168ddc83930700301db16630f6e2ac8616793b7e4116e17564d34f1"
+  },
+  "counts": {
+    "objects_before": 346,
+    "mesh_datablocks": 171,
+    "objects_assigned": 33,
+    "faces_assigned": 5435,
+    "protected_chair_meshes": 101
+  },
+  "gray_variant_applied": false,
+  "baseline_digests": {
+    "objects": "9b75998b526a731c18095c85140e100ee707cb92e8c690aefbb9c42cac62d66c",
+    "meshes": "cd2e8997acf8ddc1dd1e2183063c3b6a9f28cd38a2c135afda2458ccca87726d",
+    "chair_assignments": "ee9d92f5f99bc704fe8e4a06732003f92d34ec12b1c2a71041951d1613690d7c",
+    "materials": "f1176a732e9ff55caf5f242a54dfc86062149c3dbd673eec8a473581cbeaff04",
+    "images": "3daa1952cbe6daeb15f243c3766c85fa04d511fb5ae02d4ede10353df2391617"
+  },
+  "material_datablocks": {
+    "Luz_Azul_Suave_Consola": "Luz_Azul_Suave_Consola",
+    "Marcos_Ascensor_Negro": "Marcos_Ascensor_Negro",
+    "PBR_Capitan_Titanio": "PBR_Capitan_Titanio",
+    "PBR_Luz_Sutherland_Fria": "PBR_Luz_Sutherland_Fria",
+    "PBR_Mamparos_Composite_Oscuro": "PBR_Mamparos_Composite_Oscuro",
+    "PBR_Moqueta_Capitan": "PBR_Moqueta_Capitan",
+    "PBR_Moqueta_Puente": "PBR_Moqueta_Puente",
+    "PBR_Paneles_Composite_Claro": "PBR_Paneles_Composite_Claro",
+    "PBR_Paneles_Composite_Hueso": "PBR_Paneles_Composite_Hueso",
+    "PBR_Puente_Barandillas_AceroCepillado": "PBR_Puente_Barandillas_AceroCepillado",
+    "PBR_Puente_Plataforma_Titanio": "PBR_Puente_Plataforma_Titanio",
+    "PBR_Puertas_Burdeos_ConTexto": "PBR_Puertas_Burdeos_ConTexto",
+    "PBR_Techo_Acero_Cepillado_Claro": "PBR_Techo_Acero_Cepillado_Claro",
+    "PBR_Techo_Faldones_Gunmetal": "PBR_Techo_Faldones_Gunmetal"
+  },
+  "memory_integrity_passed": true,
+  "output_sha256": "f989eee68fff8f3adf794136a29d8bfe0c5390b34006c7999c490ec5711c3539",
+  "range_encoding": "Each [target_face_start, source_face_start, count] uses zero-based polygon indices, increasing both indices by one per face.",
+  "visual_check": {
+    "application": "Blender 5.2.2 LTS",
+    "mode": "Material Preview; exterior, top and oblique interior views",
+    "observed": [
+      "two distinct carpets",
+      "burgundy doors and existing LCARS atlases",
+      "six lateral chairs and captain chair",
+      "both isolated consoles with blue/pale-blue strips"
+    ],
+    "limitations": "Light viewport check only; no heavy render, no artistic approval or UE5 test. Viewport changes were not saved."
+  }
+}

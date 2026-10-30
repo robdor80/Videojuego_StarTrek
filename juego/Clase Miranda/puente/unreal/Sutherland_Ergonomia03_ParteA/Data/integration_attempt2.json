@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "visual": [],
+  "collisions": [],
+  "doors": [],
+  "captain_marker_changes": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Scripts/07_integrate.py\", line 45, in <module>\n    assert c.get_collision_enabled()==u.CollisionEnabled.NO_COLLISION\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

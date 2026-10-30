@@ -1,0 +1,6703 @@
+{
+  "ok": true,
+  "old": "C:\\Users\\andro\\ST_ORG_01_FASE_3C_09\\2026-10-25_02-17-38\\RECUPERACION\\P-e4252915fcf5\\Blender\\Sutherland_PBR_Recovered.blend",
+  "target": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Ergonomia_03.blend",
+  "old_units": {
+    "system": "METRIC",
+    "scale": 1.0
+  },
+  "target_units": {
+    "system": "METRIC",
+    "scale": 1.0
+  },
+  "old_count": 181,
+  "new_count": 170,
+  "removed": [
+    "Editable Mesh_Mat.003_0.002",
+    "Editable Mesh_Mat.004_0.001",
+    "Editable Mesh_Mat.005_0.001",
+    "Editable Mesh_Mat.006_0.001",
+    "Editable Mesh_Mat.007_0.002",
+    "Editable Mesh_Mat.008_0.001",
+    "Editable Mesh_Mat.009_0.001",
+    "Editable Mesh_Mat.010_0.002",
+    "Editable Mesh_Mat.011_0.001",
+    "SM_Sutherland_Chair01_ArmFrame_L",
+    "SM_Sutherland_Chair01_ArmFrame_R",
+    "SM_Sutherland_Chair01_ArmSupportCrossbar",
+    "SM_Sutherland_Chair01_Armrest_L",
+    "SM_Sutherland_Chair01_Armrest_R",
+    "SM_Sutherland_Chair01_Backrest",
+    "SM_Sutherland_Chair01_BackrestSupport",
+    "SM_Sutherland_Chair01_CrossbarStop_Lower_L",
+    "SM_Sutherland_Chair01_CrossbarStop_Lower_R",
+    "SM_Sutherland_Chair01_CrossbarStop_Upper_L",
+    "SM_Sutherland_Chair01_CrossbarStop_Upper_R",
+    "SM_Sutherland_Chair01_Seat",
+    "SM_Sutherland_Chair01_SeatConnector",
+    "SM_Sutherland_Chair01_SeatMount",
+    "SM_Sutherland_ChairRail_Base",
+    "SM_Sutherland_ChairStem_Movable"
+  ],
+  "objects": [
+    {
+      "name": "Editable Mesh_Mat.026_0",
+      "old_vertices": 348,
+      "vertices": 348,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material.000e26"
+      ],
+      "materials": [
+        "Material.000e26"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          398.6611843109131,
+          -72.48895168304443,
+          244.9282169342041
+        ],
+        "max": [
+          482.98401832580566,
+          -36.152321100234985,
+          297.1179008483887
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          398.6611843109131,
+          -72.48895168304443,
+          244.9282169342041
+        ],
+        "max": [
+          482.98401832580566,
+          -36.152321100234985,
+          297.1179008483887
+        ]
+      },
+      "array": 0
+    },
+    {
+      "name": "Mesh.453_0",
+      "old_vertices": 912,
+      "vertices": 912,
+      "delta_cm": 14.80000615119934,
+      "old_materials": [
+        "captainschair",
+        "PBR_Capitan_Titanio"
+      ],
+      "materials": [
+        "captainschair"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -65.73370099067688,
+          -237.2185468673706,
+          79.26181554794312
+        ],
+        "max": [
+          65.75374603271484,
+          -136.68001890182495,
+          106.25616312026978
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -65.73370099067688,
+          -237.2185468673706,
+          64.46181535720825
+        ],
+        "max": [
+          65.75374603271484,
+          -136.68001890182495,
+          91.45615696907043
+        ]
+      },
+      "array": 1
+    },
+    {
+      "name": "ceiling_0",
+      "old_vertices": 96,
+      "vertices": 96,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro"
+      ],
+      "materials": [
+        "ceiling"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -637.663984298706,
+          -1.0349370539188385,
+          469.52404975891113
+        ],
+        "max": [
+          656.7920207977295,
+          175.47608613967896,
+          495.05906105041504
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -637.663984298706,
+          -1.0349370539188385,
+          469.52404975891113
+        ],
+        "max": [
+          656.7920207977295,
+          175.47608613967896,
+          495.05906105041504
+        ]
+      },
+      "array": 2
+    },
+    {
+      "name": "Plane_0",
+      "old_vertices": 372,
+      "vertices": 372,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Paneles_Composite_Hueso"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -329.2920112609863,
+          -25.661998987197876,
+          27.02200412750244
+        ],
+        "max": [
+          329.2920112609863,
+          -1.341936457902193,
+          474.13506507873535
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -329.2920112609863,
+          -25.661998987197876,
+          27.02200412750244
+        ],
+        "max": [
+          329.2920112609863,
+          -1.341936457902193,
+          474.13506507873535
+        ]
+      },
+      "array": 3
+    },
+    {
+      "name": "Plane.002_0",
+      "old_vertices": 48,
+      "vertices": 48,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Puente_Plataforma_Titanio",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -323.0649948120117,
+          -83.65001082420349,
+          8.142146956657825e-08
+        ],
+        "max": [
+          323.0649948120117,
+          -0.6059960462152958,
+          30.00001609325409
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -323.0649948120117,
+          -83.65001082420349,
+          8.142146956657825e-08
+        ],
+        "max": [
+          323.0649948120117,
+          -0.6059960462152958,
+          30.00001609325409
+        ]
+      },
+      "array": 4
+    },
+    {
+      "name": "Plane.003_0",
+      "old_vertices": 82,
+      "vertices": 82,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Puente_Plataforma_Titanio",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -639.6389961242676,
+          -69.20800805091858,
+          -2.2660695719878277e-05
+        ],
+        "max": [
+          639.6389961242676,
+          168.65803003311157,
+          60.000020265579224
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -639.6389961242676,
+          -69.20800805091858,
+          -2.2660695719878277e-05
+        ],
+        "max": [
+          639.6389961242676,
+          168.65803003311157,
+          60.000020265579224
+        ]
+      },
+      "array": 5
+    },
+    {
+      "name": "Circle_0",
+      "old_vertices": 94,
+      "vertices": 94,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "floor",
+        "PBR_Moqueta_Capitan",
+        "PBR_Moqueta_Puente"
+      ],
+      "materials": [
+        "floor"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -715.7440185546875,
+          -1055.4290771484375,
+          -5.052685878581542e-05
+        ],
+        "max": [
+          715.7430171966553,
+          376.05905532836914,
+          60.000020265579224
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -715.7440185546875,
+          -1055.4290771484375,
+          -5.052685878581542e-05
+        ],
+        "max": [
+          715.7430171966553,
+          376.05905532836914,
+          60.000020265579224
+        ]
+      },
+      "array": 6
+    },
+    {
+      "name": "Cube.000_0",
+      "old_vertices": 40,
+      "vertices": 40,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -255.7420015335083,
+          148.03473949432373,
+          -3.255380818245612e-05
+        ],
+        "max": [
+          255.7420015335083,
+          242.2900915145874,
+          474.10006523132324
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -255.7420015335083,
+          148.03473949432373,
+          -3.255380818245612e-05
+        ],
+        "max": [
+          255.7420015335083,
+          242.2900915145874,
+          474.10006523132324
+        ]
+      },
+      "array": 7
+    },
+    {
+      "name": "Cube.001_0",
+      "old_vertices": 40,
+      "vertices": 40,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -127.74200439453125,
+          148.03473949432373,
+          -3.255380818245612e-05
+        ],
+        "max": [
+          127.74200439453125,
+          242.2900915145874,
+          474.10006523132324
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -127.74200439453125,
+          148.03473949432373,
+          -3.255380818245612e-05
+        ],
+        "max": [
+          127.74200439453125,
+          242.2900915145874,
+          474.10006523132324
+        ]
+      },
+      "array": 8
+    },
+    {
+      "name": "Plane.005_0",
+      "old_vertices": 968,
+      "vertices": 968,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Paneles_Composite_Hueso"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -615.746021270752,
+          -99.8069703578949,
+          -0.03799655823968351
+        ],
+        "max": [
+          615.746021270752,
+          -21.317945420742035,
+          474.10006523132324
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -615.746021270752,
+          -99.8069703578949,
+          -0.03799655823968351
+        ],
+        "max": [
+          615.746021270752,
+          -21.317945420742035,
+          474.10006523132324
+        ]
+      },
+      "array": 9
+    },
+    {
+      "name": "Plane.004_0",
+      "old_vertices": 112,
+      "vertices": 112,
+      "delta_cm": 88.5349988937378,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "cream",
+        "captainschair"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -595.3400135040283,
+          -922.9800224304199,
+          9.832058367464924e-05
+        ],
+        "max": [
+          595.3400135040283,
+          -731.7760944366455,
+          474.2471694946289
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -595.3400135040283,
+          -922.9801177978516,
+          9.832058367464924e-05
+        ],
+        "max": [
+          595.3400135040283,
+          -731.7760944366455,
+          474.2471694946289
+        ]
+      },
+      "array": 10
+    },
+    {
+      "name": "Plane.006_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "light",
+        "PBR_Luz_Sutherland_Fria"
+      ],
+      "materials": [
+        "light"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -481.49499893188477,
+          16.708068549633026,
+          494.5000648498535
+        ],
+        "max": [
+          481.49499893188477,
+          144.32908296585083,
+          494.5000648498535
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -481.49499893188477,
+          16.708068549633026,
+          494.5000648498535
+        ],
+        "max": [
+          481.49499893188477,
+          144.32908296585083,
+          494.5000648498535
+        ]
+      },
+      "array": 11
+    },
+    {
+      "name": "Plane.007_0",
+      "old_vertices": 8,
+      "vertices": 8,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -615.3279781341553,
+          -661.4151000976562,
+          1.3303139212439419e-05
+        ],
+        "max": [
+          615.3279781341553,
+          -99.0119457244873,
+          474.1001605987549
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -615.3279781341553,
+          -661.4151000976562,
+          1.3303139212439419e-05
+        ],
+        "max": [
+          615.3279781341553,
+          -99.0119457244873,
+          474.1001605987549
+        ]
+      },
+      "array": 12
+    },
+    {
+      "name": "Circle.001_0",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey",
+        "PBR_Puente_Plataforma_Titanio",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -151.1199951171875,
+          -475.43506622314453,
+          4.687242949330539e-06
+        ],
+        "max": [
+          151.1199951171875,
+          -34.88599956035614,
+          29.900065064430237
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -151.1199951171875,
+          -475.43506622314453,
+          4.687242949330539e-06
+        ],
+        "max": [
+          151.1199951171875,
+          -34.88599956035614,
+          29.900065064430237
+        ]
+      },
+      "array": 13
+    },
+    {
+      "name": "Sphere.001_0",
+      "old_vertices": 8520,
+      "vertices": 8520,
+      "delta_cm": 14.800012111663818,
+      "old_materials": [
+        "PBR_Capitan_Cuero_Marron",
+        "PBR_Capitan_Cuero_Negro"
+      ],
+      "materials": [
+        "captainschair"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -63.70300054550171,
+          -213.58702182769775,
+          81.03402853012085
+        ],
+        "max": [
+          63.70300054550171,
+          -112.89398670196533,
+          203.00602912902832
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -63.70300054550171,
+          -213.58702182769775,
+          66.23402237892151
+        ],
+        "max": [
+          63.70300054550171,
+          -112.89398670196533,
+          188.20602893829346
+        ]
+      },
+      "array": 14
+    },
+    {
+      "name": "Cube_0",
+      "old_vertices": 8,
+      "vertices": 8,
+      "delta_cm": 14.800000190734863,
+      "old_materials": [
+        "captainschair.001"
+      ],
+      "materials": [
+        "captainschair.001"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -58.779001235961914,
+          -234.01799201965332,
+          107.85404443740845
+        ],
+        "max": [
+          58.779001235961914,
+          -219.95599269866943,
+          114.79604244232178
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -58.779001235961914,
+          -234.01799201965332,
+          93.05404424667358
+        ],
+        "max": [
+          58.779001235961914,
+          -219.95599269866943,
+          99.99604225158691
+        ]
+      },
+      "array": 15
+    },
+    {
+      "name": "Cylinder_0",
+      "old_vertices": 128,
+      "vertices": 128,
+      "delta_cm": 14.800001680850983,
+      "old_materials": [
+        "grey",
+        "PBR_Capitan_Titanio",
+        "PBR_Pedestal_Capitan_Acero"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -24.164000153541565,
+          -205.15203475952148,
+          -18.316981196403503
+        ],
+        "max": [
+          24.164000153541565,
+          -156.8250060081482,
+          86.6930365562439
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -24.164000153541565,
+          -205.15203475952148,
+          -33.11698138713837
+        ],
+        "max": [
+          24.164000153541565,
+          -156.8250060081482,
+          71.89303636550903
+        ]
+      },
+      "array": 16
+    },
+    {
+      "name": "Plane.008_0",
+      "old_vertices": 336,
+      "vertices": 336,
+      "delta_cm": 9.000003337860107,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -617.2200202941895,
+          -637.251091003418,
+          108.46202373504639
+        ],
+        "max": [
+          617.2200202941895,
+          -106.63100481033325,
+          116.64509773254395
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -617.2200202941895,
+          -637.251091003418,
+          99.46202635765076
+        ],
+        "max": [
+          617.2200202941895,
+          -106.63100481033325,
+          107.64509439468384
+        ]
+      },
+      "array": 17
+    },
+    {
+      "name": "Cylinder.002_0",
+      "old_vertices": 2448,
+      "vertices": 2448,
+      "delta_cm": 9.000003337860107,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "captainschair"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -618.7900066375732,
+          -622.4411010742188,
+          66.8370246887207
+        ],
+        "max": [
+          618.7900066375732,
+          -122.20699787139893,
+          109.24409627914429
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -618.7900066375732,
+          -622.4411010742188,
+          57.837021350860596
+        ],
+        "max": [
+          618.7900066375732,
+          -122.20699787139893,
+          100.24409294128418
+        ]
+      },
+      "array": 18
+    },
+    {
+      "name": "Plane.009_0",
+      "old_vertices": 864,
+      "vertices": 864,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey",
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Mamparos_Composite_Oscuro",
+        "PBR_Paneles_Composite_Hueso"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -627.9210090637207,
+          -635.8231067657471,
+          14.722016453742981
+        ],
+        "max": [
+          627.9210090637207,
+          177.30708122253418,
+          459.1451644897461
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -627.9210090637207,
+          -635.8231067657471,
+          14.722016453742981
+        ],
+        "max": [
+          627.9210090637207,
+          177.30708122253418,
+          459.1451644897461
+        ]
+      },
+      "array": 19
+    },
+    {
+      "name": "Plane.010_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -661.3019943237305,
+          174.8170256614685,
+          -2.348821226405562e-05
+        ],
+        "max": [
+          661.3019943237305,
+          174.81708526611328,
+          474.10006523132324
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -661.3019943237305,
+          174.8170256614685,
+          -2.348821226405562e-05
+        ],
+        "max": [
+          661.3019943237305,
+          174.81708526611328,
+          474.10006523132324
+        ]
+      },
+      "array": 20
+    },
+    {
+      "name": "Plane.013_0",
+      "old_vertices": 112,
+      "vertices": 112,
+      "delta_cm": 86.93995475769043,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -654.580020904541,
+          -23.294995725154877,
+          58.89798402786255
+        ],
+        "max": [
+          654.580020904541,
+          197.7220892906189,
+          474.267053604126
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -654.580020904541,
+          -23.294995725154877,
+          58.89798402786255
+        ],
+        "max": [
+          654.580020904541,
+          197.7220892906189,
+          474.267053604126
+        ]
+      },
+      "array": 21
+    },
+    {
+      "name": "Plane.014_0",
+      "old_vertices": 16,
+      "vertices": 16,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -636.8959903717041,
+          -17.816996574401855,
+          31.68400228023529
+        ],
+        "max": [
+          636.8959903717041,
+          2.369064651429653,
+          478.78403663635254
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -636.8959903717041,
+          -17.816996574401855,
+          31.68400228023529
+        ],
+        "max": [
+          636.8959903717041,
+          2.369064651429653,
+          478.78403663635254
+        ]
+      },
+      "array": 22
+    },
+    {
+      "name": "Plane.015_0",
+      "old_vertices": 88,
+      "vertices": 88,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Paneles_Composite_Hueso"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -245.09398937225342,
+          -1008.3279609680176,
+          0.00013283469115776825
+        ],
+        "max": [
+          245.09398937225342,
+          -988.6561393737793,
+          474.2881774902344
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -245.09398937225342,
+          -1008.3279609680176,
+          0.00013283469115776825
+        ],
+        "max": [
+          245.09398937225342,
+          -988.6561393737793,
+          474.2881774902344
+        ]
+      },
+      "array": 23
+    },
+    {
+      "name": "Plane.016_0",
+      "old_vertices": 176,
+      "vertices": 176,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "Marcos_Ascensor_Negro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -245.09398937225342,
+          -1024.8610496520996,
+          -0.19986496772617102
+        ],
+        "max": [
+          245.09398937225342,
+          -1005.1891326904297,
+          474.3001937866211
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -245.09398937225342,
+          -1024.8610496520996,
+          -0.19986496772617102
+        ],
+        "max": [
+          245.09398937225342,
+          -1005.1891326904297,
+          474.3001937866211
+        ]
+      },
+      "array": 24
+    },
+    {
+      "name": "Circle.002_0",
+      "old_vertices": 132,
+      "vertices": 132,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro",
+        "PBR_Paneles_Composite_Hueso",
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -409.69600677490234,
+          -1006.4901351928711,
+          0.0001349709918940789
+        ],
+        "max": [
+          398.33500385284424,
+          -1001.6851425170898,
+          50.20814538002014
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -409.69600677490234,
+          -1006.4901351928711,
+          0.0001349709918940789
+        ],
+        "max": [
+          398.33500385284424,
+          -1001.6851425170898,
+          50.20814538002014
+        ]
+      },
+      "array": 25
+    },
+    {
+      "name": "Plane.020_0",
+      "old_vertices": 1736,
+      "vertices": 1736,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Mamparos_Composite_Oscuro",
+        "PBR_Capitan_Titanio",
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Techo_Acero_Cepillado_Claro",
+        "PBR_Techo_Faldones_Gunmetal"
+      ],
+      "materials": [
+        "ceiling"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -341.70682430267334,
+          -820.7029342651367,
+          428.11927795410156
+        ],
+        "max": [
+          341.70682430267334,
+          -158.8027000427246,
+          720.0001239776611
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -341.70682430267334,
+          -820.7029342651367,
+          428.11927795410156
+        ],
+        "max": [
+          341.70682430267334,
+          -158.8027000427246,
+          720.0001239776611
+        ]
+      },
+      "array": 26
+    },
+    {
+      "name": "Plane.022_0",
+      "old_vertices": 1025,
+      "vertices": 1025,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "upperwall.001",
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -622.5780010223389,
+          -1010.906982421875,
+          473.6480712890625
+        ],
+        "max": [
+          622.5780010223389,
+          -1.3419132679700851,
+          646.5592384338379
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -622.5780010223389,
+          -1010.906982421875,
+          473.6480712890625
+        ],
+        "max": [
+          622.5780010223389,
+          -1.3419132679700851,
+          646.5592384338379
+        ]
+      },
+      "array": 27
+    },
+    {
+      "name": "Mesh.602_0",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          451.3251304626465,
+          -185.7777714729309,
+          57.923245429992676
+        ],
+        "max": [
+          487.432861328125,
+          -161.9822382926941,
+          71.07872366905212
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          451.3251304626465,
+          -185.7777714729309,
+          57.923245429992676
+        ],
+        "max": [
+          487.432861328125,
+          -161.9822382926941,
+          71.07872366905212
+        ]
+      },
+      "array": 28
+    },
+    {
+      "name": "Mesh.601_0",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          425.93393325805664,
+          -225.87847709655762,
+          65.09230136871338
+        ],
+        "max": [
+          467.92707443237305,
+          -217.7903652191162,
+          111.70949935913086
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          425.93393325805664,
+          -225.87847709655762,
+          65.09230136871338
+        ],
+        "max": [
+          467.92707443237305,
+          -217.7903652191162,
+          111.70949935913086
+        ]
+      },
+      "array": 29
+    },
+    {
+      "name": "Mesh.600_0",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.8640537261963,
+          -223.0579137802124,
+          92.5546407699585
+        ],
+        "max": [
+          495.31264305114746,
+          -215.34335613250732,
+          113.55798244476318
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.8640537261963,
+          -223.0579137802124,
+          92.5546407699585
+        ],
+        "max": [
+          495.31264305114746,
+          -215.34335613250732,
+          113.55798244476318
+        ]
+      },
+      "array": 30
+    },
+    {
+      "name": "Mesh.599_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.11836433410645,
+          -128.55132818222046,
+          62.97581195831299
+        ],
+        "max": [
+          469.43840980529785,
+          -119.86939907073975,
+          71.29325866699219
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.11836433410645,
+          -128.55132818222046,
+          62.97581195831299
+        ],
+        "max": [
+          469.43840980529785,
+          -119.86939907073975,
+          71.29325866699219
+        ]
+      },
+      "array": 31
+    },
+    {
+      "name": "Mesh.598_0",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          425.90646743774414,
+          -129.56985235214233,
+          65.09228944778442
+        ],
+        "max": [
+          467.89655685424805,
+          -121.46426439285278,
+          111.7094874382019
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          425.90646743774414,
+          -129.56985235214233,
+          65.09228944778442
+        ],
+        "max": [
+          467.89655685424805,
+          -121.46426439285278,
+          111.7094874382019
+        ]
+      },
+      "array": 32
+    },
+    {
+      "name": "Mesh.597_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.1481189727783,
+          -227.46899127960205,
+          62.97582387924194
+        ],
+        "max": [
+          469.4681644439697,
+          -218.78705024719238,
+          71.29327058792114
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.1481189727783,
+          -227.46899127960205,
+          62.97582387924194
+        ],
+        "max": [
+          469.4681644439697,
+          -218.78705024719238,
+          71.29327058792114
+        ]
+      },
+      "array": 33
+    },
+    {
+      "name": "Mesh.596_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          462.02049255371094,
+          -223.46391677856445,
+          63.656288385391235
+        ],
+        "max": [
+          468.88880729675293,
+          -128.19498777389526,
+          70.49623131752014
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          462.02049255371094,
+          -223.46391677856445,
+          63.656288385391235
+        ],
+        "max": [
+          468.88880729675293,
+          -128.19498777389526,
+          70.49623131752014
+        ]
+      },
+      "array": 34
+    },
+    {
+      "name": "Mesh.595_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -180.40828704833984,
+          12.998417019844055
+        ],
+        "max": [
+          474.78089332580566,
+          -167.24218130111694,
+          45.06765902042389
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -180.40828704833984,
+          12.998417019844055
+        ],
+        "max": [
+          474.78089332580566,
+          -167.24218130111694,
+          45.06765902042389
+        ]
+      },
+      "array": 35
+    },
+    {
+      "name": "Mesh.594_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__12"
+      ],
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          462.7735137939453,
+          -179.24959659576416,
+          39.50963020324707
+        ],
+        "max": [
+          473.62189292907715,
+          -168.40087175369263,
+          63.64964842796326
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          462.7735137939453,
+          -179.24959659576416,
+          39.50963020324707
+        ],
+        "max": [
+          473.62189292907715,
+          -168.40087175369263,
+          63.64964842796326
+        ]
+      },
+      "array": 36
+    },
+    {
+      "name": "Mesh.593_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.68860244750977,
+          -222.06103801727295,
+          105.91667890548706
+        ],
+        "max": [
+          432.32383728027344,
+          -213.37900161743164,
+          114.54930305480957
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.68860244750977,
+          -222.06103801727295,
+          105.91667890548706
+        ],
+        "max": [
+          432.32383728027344,
+          -213.37900161743164,
+          114.54930305480957
+        ]
+      },
+      "array": 37
+    },
+    {
+      "name": "Mesh.592_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.747896194458,
+          -219.14653778076172,
+          106.57556056976318
+        ],
+        "max": [
+          431.5577983856201,
+          -131.31167888641357,
+          113.3587121963501
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.747896194458,
+          -219.14653778076172,
+          106.57556056976318
+        ],
+        "max": [
+          431.5577983856201,
+          -131.31167888641357,
+          113.3587121963501
+        ]
+      },
+      "array": 38
+    },
+    {
+      "name": "Mesh.591_0",
+      "old_vertices": 216,
+      "vertices": 216,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "02___Default"
+      ],
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          420.79524993896484,
+          -216.73145294189453,
+          91.27903580665588
+        ],
+        "max": [
+          441.6155815124512,
+          -130.78877925872803,
+          151.1493682861328
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          420.79524993896484,
+          -216.73145294189453,
+          91.27903580665588
+        ],
+        "max": [
+          441.6155815124512,
+          -130.78877925872803,
+          151.1493682861328
+        ]
+      },
+      "array": 39
+    },
+    {
+      "name": "Mesh.590_0",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.6620903015137,
+          -133.98181200027466,
+          105.9166669845581
+        ],
+        "max": [
+          432.29732513427734,
+          -125.29977560043335,
+          114.54929113388062
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.6620903015137,
+          -133.98181200027466,
+          105.9166669845581
+        ],
+        "max": [
+          432.29732513427734,
+          -125.29977560043335,
+          114.54929113388062
+        ]
+      },
+      "array": 40
+    },
+    {
+      "name": "Mesh.589_0",
+      "old_vertices": 218,
+      "vertices": 218,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__11"
+      ],
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          429.83975410461426,
+          -219.60206031799316,
+          70.5892026424408
+        ],
+        "max": [
+          515.4584884643555,
+          -128.5644769668579,
+          77.47597694396973
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          429.83975410461426,
+          -219.60206031799316,
+          70.5892026424408
+        ],
+        "max": [
+          515.4584884643555,
+          -128.5644769668579,
+          77.47597694396973
+        ]
+      },
+      "array": 41
+    },
+    {
+      "name": "Mesh.588_0",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.8366355895996,
+          -131.99642896652222,
+          92.55462884902954
+        ],
+        "max": [
+          495.2852725982666,
+          -124.2811918258667,
+          113.55795860290527
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.8366355895996,
+          -131.99642896652222,
+          92.55462884902954
+        ],
+        "max": [
+          495.2852725982666,
+          -124.2811918258667,
+          113.55795860290527
+        ]
+      },
+      "array": 42
+    },
+    {
+      "name": "Cube.002_0",
+      "old_vertices": 136,
+      "vertices": 136,
+      "delta_cm": 14.800000190734863,
+      "old_materials": [
+        "PBR_Capitan_Cuero_Negro"
+      ],
+      "materials": [
+        "captainschair"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -60.89100241661072,
+          -235.26999950408936,
+          93.1090235710144
+        ],
+        "max": [
+          60.89100241661072,
+          -153.27000617980957,
+          114.79604244232178
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -60.89100241661072,
+          -235.26999950408936,
+          78.30902338027954
+        ],
+        "max": [
+          60.89100241661072,
+          -153.27000617980957,
+          99.99604225158691
+        ]
+      },
+      "array": 43
+    },
+    {
+      "name": "Plane.019_0",
+      "old_vertices": 48,
+      "vertices": 48,
+      "delta_cm": 88.5350227355957,
+      "old_materials": [
+        "PBR_Puertas_Burdeos_ConTexto"
+      ],
+      "materials": [
+        "door"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -584.7469806671143,
+          -913.8199806213379,
+          -2.3588884621858597
+        ],
+        "max": [
+          584.7469806671143,
+          -832.6081275939941,
+          389.12317752838135
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -584.7469806671143,
+          -913.8200759887695,
+          -2.3588884621858597
+        ],
+        "max": [
+          584.7469806671143,
+          -832.6081275939941,
+          300.72319507598877
+        ]
+      },
+      "array": 44
+    },
+    {
+      "name": "Plane.012_0",
+      "old_vertices": 1176,
+      "vertices": 1176,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Capitan_Titanio"
+      ],
+      "materials": [
+        "ceiling"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -924.2939949035645,
+          -1089.466953277588,
+          500.9190082550049
+        ],
+        "max": [
+          924.2939949035645,
+          360.99910736083984,
+          601.5762329101562
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -924.2939949035645,
+          -1089.466953277588,
+          500.9190082550049
+        ],
+        "max": [
+          924.2939949035645,
+          360.99910736083984,
+          601.5762329101562
+        ]
+      },
+      "array": 45
+    },
+    {
+      "name": "Plane.028_0",
+      "old_vertices": 416,
+      "vertices": 416,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Puente_Barandillas_AceroCepillado"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -186.87599897384644,
+          -98.92300963401794,
+          1.1314090642144947e-05
+        ],
+        "max": [
+          186.87599897384644,
+          -56.15497827529907,
+          234.9600315093994
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -186.87599897384644,
+          -98.92300963401794,
+          1.1314090642144947e-05
+        ],
+        "max": [
+          186.87599897384644,
+          -56.15497827529907,
+          234.9600315093994
+        ]
+      },
+      "array": 46
+    },
+    {
+      "name": "Plane.039_0",
+      "old_vertices": 56,
+      "vertices": 56,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "cream"
+      ],
+      "materials": [
+        "cream",
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -616.7139530181885,
+          -928.99169921875,
+          9.912846508086659e-05
+        ],
+        "max": [
+          -570.3651428222656,
+          -737.7874374389648,
+          474.2471694946289
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -616.7139530181885,
+          -928.99169921875,
+          9.912846508086659e-05
+        ],
+        "max": [
+          -570.3651428222656,
+          -737.7874374389648,
+          474.2471694946289
+        ]
+      },
+      "array": 47
+    },
+    {
+      "name": "Plane.038_0",
+      "old_vertices": 208,
+      "vertices": 208,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1004.7717094421387,
+          -1062.7606391906738,
+          76.16310119628906
+        ],
+        "max": [
+          -620.7722663879395,
+          -680.3915500640869,
+          345.58818340301514
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1004.7717094421387,
+          -1062.7606391906738,
+          76.16310119628906
+        ],
+        "max": [
+          -620.7722663879395,
+          -680.3915500640869,
+          345.58818340301514
+        ]
+      },
+      "array": 48
+    },
+    {
+      "name": "Plane.031_0",
+      "old_vertices": 16,
+      "vertices": 16,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "light"
+      ],
+      "materials": [
+        "light"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -994.1761016845703,
+          -1052.1641731262207,
+          89.93210792541504
+        ],
+        "max": [
+          -631.3679218292236,
+          -690.98801612854,
+          331.81920051574707
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -994.1761016845703,
+          -1052.1641731262207,
+          89.93210792541504
+        ],
+        "max": [
+          -631.3679218292236,
+          -690.98801612854,
+          331.81920051574707
+        ]
+      },
+      "array": 49
+    },
+    {
+      "name": "Sphere_0",
+      "old_vertices": 193,
+      "vertices": 193,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "light"
+      ],
+      "materials": [
+        "light"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -844.9701309204102,
+          -903.7738800048828,
+          424.9066352844238
+        ],
+        "max": [
+          -780.5741310119629,
+          -839.3782615661621,
+          446.4256286621094
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -844.9701309204102,
+          -903.7738800048828,
+          424.9066352844238
+        ],
+        "max": [
+          -780.5741310119629,
+          -839.3782615661621,
+          446.4256286621094
+        ]
+      },
+      "array": 50
+    },
+    {
+      "name": "Plane.037_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Plane.037_0"
+      ],
+      "materials": [
+        "Plane.037_0"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1063.6295318603516,
+          -1122.4336624145508,
+          468.42613220214844
+        ],
+        "max": [
+          -561.9143962860107,
+          -620.7184791564941,
+          468.42617988586426
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1063.6295318603516,
+          -1122.4336624145508,
+          468.42613220214844
+        ],
+        "max": [
+          -561.9143962860107,
+          -620.7184791564941,
+          468.42617988586426
+        ]
+      },
+      "array": 51
+    },
+    {
+      "name": "Circle.004_0",
+      "old_vertices": 202,
+      "vertices": 202,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -848.1596946716309,
+          -906.9639205932617,
+          440.61713218688965
+        ],
+        "max": [
+          -777.3842811584473,
+          -836.1883163452148,
+          440.6181812286377
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -848.1596946716309,
+          -906.9639205932617,
+          440.61713218688965
+        ],
+        "max": [
+          -777.3842811584473,
+          -836.1883163452148,
+          440.6181812286377
+        ]
+      },
+      "array": 52
+    },
+    {
+      "name": "Circle.003_0",
+      "old_vertices": 128,
+      "vertices": 128,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -856.1310768127441,
+          -914.9352073669434,
+          440.6181335449219
+        ],
+        "max": [
+          -769.4128513336182,
+          -828.2169342041016,
+          468.9541816711426
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -856.1310768127441,
+          -914.9352073669434,
+          440.6181335449219
+        ],
+        "max": [
+          -769.4128513336182,
+          -828.2169342041016,
+          468.9541816711426
+        ]
+      },
+      "array": 53
+    },
+    {
+      "name": "Plane.036_0",
+      "old_vertices": 168,
+      "vertices": 168,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -861.5486145019531,
+          -1054.638957977295,
+          441.2931442260742
+        ],
+        "max": [
+          -773.8213062286377,
+          -685.5900287628174,
+          468.92223358154297
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -861.5486145019531,
+          -1054.638957977295,
+          441.2931442260742
+        ],
+        "max": [
+          -773.8213062286377,
+          -685.5900287628174,
+          468.92223358154297
+        ]
+      },
+      "array": 54
+    },
+    {
+      "name": "Plane.035_0",
+      "old_vertices": 162,
+      "vertices": 162,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1004.0685653686523,
+          -916.6342735290527,
+          441.2351608276367
+        ],
+        "max": [
+          -635.0194931030273,
+          -828.9060592651367,
+          468.86420249938965
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1004.0685653686523,
+          -916.6342735290527,
+          441.2351608276367
+        ],
+        "max": [
+          -635.0194931030273,
+          -828.9060592651367,
+          468.86420249938965
+        ]
+      },
+      "array": 55
+    },
+    {
+      "name": "Plane.034_0",
+      "old_vertices": 128,
+      "vertices": 128,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1041.7036056518555,
+          -1100.2867698669434,
+          420.2600955963135
+        ],
+        "max": [
+          -583.8403224945068,
+          -642.7532196044922,
+          468.99518966674805
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1041.7036056518555,
+          -1100.2867698669434,
+          420.2600955963135
+        ],
+        "max": [
+          -583.8403224945068,
+          -642.7532196044922,
+          468.99518966674805
+        ]
+      },
+      "array": 56
+    },
+    {
+      "name": "Plane.033_0",
+      "old_vertices": 192,
+      "vertices": 192,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1046.3443756103516,
+          -1004.7293663024902,
+          0.00010895168998104054
+        ],
+        "max": [
+          -990.2376174926758,
+          -810.9005928039551,
+          421.1631774902344
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1046.3443756103516,
+          -1004.7293663024902,
+          0.00010895168998104054
+        ],
+        "max": [
+          -990.2376174926758,
+          -810.9005928039551,
+          421.1631774902344
+        ]
+      },
+      "array": 57
+    },
+    {
+      "name": "Plane.032_0",
+      "old_vertices": 12,
+      "vertices": 12,
+      "delta_cm": 20.000004768371582,
+      "old_materials": [
+        "turbolcar"
+      ],
+      "materials": [
+        "turbolcar"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -1032.7766418457031,
+          -1091.5807723999023,
+          242.41011142730713
+        ],
+        "max": [
+          -678.488302230835,
+          -651.5714168548584,
+          291.92216396331787
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1032.7766418457031,
+          -1091.5807723999023,
+          222.41010665893555
+        ],
+        "max": [
+          -678.488302230835,
+          -651.5714168548584,
+          271.9221591949463
+        ]
+      },
+      "array": 58
+    },
+    {
+      "name": "Plane.030_0",
+      "old_vertices": 384,
+      "vertices": 384,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -946.546745300293,
+          -1104.5281410217285,
+          8.88813133315125e-05
+        ],
+        "max": [
+          -680.5049896240234,
+          -638.8898849487305,
+          421.1631774902344
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -946.546745300293,
+          -1104.5281410217285,
+          8.88813133315125e-05
+        ],
+        "max": [
+          -680.5049896240234,
+          -638.8898849487305,
+          421.1631774902344
+        ]
+      },
+      "array": 59
+    },
+    {
+      "name": "Plane.027_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1043.5171127319336,
+          -1004.2309761047363,
+          75.77012181282043
+        ],
+        "max": [
+          -1010.0440979003906,
+          -814.3918991088867,
+          356.48419857025146
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1043.5171127319336,
+          -1004.2309761047363,
+          75.77012181282043
+        ],
+        "max": [
+          -1010.0440979003906,
+          -814.3918991088867,
+          356.48419857025146
+        ]
+      },
+      "array": 60
+    },
+    {
+      "name": "Plane.029_0",
+      "old_vertices": 44,
+      "vertices": 44,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1027.1978378295898,
+          -989.7684097290039,
+          167.01114177703857
+        ],
+        "max": [
+          -991.6043281555176,
+          -822.7264404296875,
+          181.78316354751587
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1027.1978378295898,
+          -989.7684097290039,
+          167.01114177703857
+        ],
+        "max": [
+          -991.6043281555176,
+          -822.7264404296875,
+          181.78316354751587
+        ]
+      },
+      "array": 61
+    },
+    {
+      "name": "Plane.026_0",
+      "old_vertices": 96,
+      "vertices": 96,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "cream"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1042.3442840576172,
+          -1101.0468482971191,
+          8.627253578197269e-05
+        ],
+        "max": [
+          -583.1997394561768,
+          -642.1053409576416,
+          421.75121307373047
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1042.3442840576172,
+          -1101.0468482971191,
+          8.627253578197269e-05
+        ],
+        "max": [
+          -583.1997394561768,
+          -642.1053409576416,
+          421.75121307373047
+        ]
+      },
+      "array": 62
+    },
+    {
+      "name": "Plane.025_0",
+      "old_vertices": 64,
+      "vertices": 64,
+      "delta_cm": 20.000004768371582,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -1043.7740325927734,
+          -1007.798957824707,
+          231.24213218688965
+        ],
+        "max": [
+          -998.0205535888672,
+          -808.750057220459,
+          303.0901908874512
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1043.7740325927734,
+          -1007.798957824707,
+          211.24212741851807
+        ],
+        "max": [
+          -998.0205535888672,
+          -808.750057220459,
+          283.0901861190796
+        ]
+      },
+      "array": 63
+    },
+    {
+      "name": "Plane.024_0",
+      "old_vertices": 8,
+      "vertices": 8,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -946.0481643676758,
+          -1101.700782775879,
+          75.77009797096252
+        ],
+        "max": [
+          -681.0035705566406,
+          -641.7172908782959,
+          356.48419857025146
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -946.0481643676758,
+          -1101.700782775879,
+          75.77009797096252
+        ],
+        "max": [
+          -681.0035705566406,
+          -641.7172908782959,
+          356.48419857025146
+        ]
+      },
+      "array": 64
+    },
+    {
+      "name": "Plane.023_0",
+      "old_vertices": 128,
+      "vertices": 128,
+      "delta_cm": 20.000004768371582,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -948.9948272705078,
+          -1102.5781631469727,
+          231.24210834503174
+        ],
+        "max": [
+          -676.5491485595703,
+          -640.5740261077881,
+          303.0901908874512
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -948.9948272705078,
+          -1102.5781631469727,
+          211.24210357666016
+        ],
+        "max": [
+          -676.5491485595703,
+          -640.5740261077881,
+          283.0901861190796
+        ]
+      },
+      "array": 65
+    },
+    {
+      "name": "Plane.021_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "floor"
+      ],
+      "materials": [
+        "floor"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -1063.6295318603516,
+          -1122.4337577819824,
+          0.10008341632783413
+        ],
+        "max": [
+          -561.9143962860107,
+          -620.71852684021,
+          0.10015082079917192
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -1063.6295318603516,
+          -1122.4337577819824,
+          0.10008341632783413
+        ],
+        "max": [
+          -561.9143962860107,
+          -620.71852684021,
+          0.10015082079917192
+        ]
+      },
+      "array": 66
+    },
+    {
+      "name": "Mesh.587_0",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -218.7140703201294,
+          -0.6802563555538654
+        ],
+        "max": [
+          513.0855083465576,
+          -128.93670797348022,
+          16.115310788154602
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -218.7140703201294,
+          -0.6802563555538654
+        ],
+        "max": [
+          513.0855083465576,
+          -128.93670797348022,
+          16.115310788154602
+        ]
+      },
+      "array": 67
+    },
+    {
+      "name": "Mesh.587_0.001",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -417.7051067352295,
+          -0.680229626595974
+        ],
+        "max": [
+          513.0855083465576,
+          -327.9277563095093,
+          16.11533761024475
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -417.7051067352295,
+          -0.680229626595974
+        ],
+        "max": [
+          513.0855083465576,
+          -327.9277563095093,
+          16.11533761024475
+        ]
+      },
+      "array": 68
+    },
+    {
+      "name": "Mesh.588_0.001",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.8366355895996,
+          -330.98745346069336,
+          92.55465269088745
+        ],
+        "max": [
+          495.2852725982666,
+          -323.2722282409668,
+          113.55799436569214
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.8366355895996,
+          -330.98745346069336,
+          92.55465269088745
+        ],
+        "max": [
+          495.2852725982666,
+          -323.2722282409668,
+          113.55799436569214
+        ]
+      },
+      "array": 69
+    },
+    {
+      "name": "Mesh.589_0.001",
+      "old_vertices": 218,
+      "vertices": 218,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__11"
+      ],
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          429.83975410461426,
+          -418.5931205749512,
+          70.5892264842987
+        ],
+        "max": [
+          515.4584884643555,
+          -327.555513381958,
+          77.47600078582764
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          429.83975410461426,
+          -418.5931205749512,
+          70.5892264842987
+        ],
+        "max": [
+          515.4584884643555,
+          -327.555513381958,
+          77.47600078582764
+        ]
+      },
+      "array": 70
+    },
+    {
+      "name": "Mesh.590_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.6620903015137,
+          -332.9728364944458,
+          105.91670274734497
+        ],
+        "max": [
+          432.29732513427734,
+          -324.2908000946045,
+          114.54931497573853
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.6620903015137,
+          -332.9728364944458,
+          105.91670274734497
+        ],
+        "max": [
+          432.29732513427734,
+          -324.2908000946045,
+          114.54931497573853
+        ]
+      },
+      "array": 71
+    },
+    {
+      "name": "Mesh.591_0.001",
+      "old_vertices": 216,
+      "vertices": 216,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "02___Default"
+      ],
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          420.79524993896484,
+          -415.7224655151367,
+          91.27906560897827
+        ],
+        "max": [
+          441.6155815124512,
+          -329.7798156738281,
+          151.14940404891968
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          420.79524993896484,
+          -415.7224655151367,
+          91.27906560897827
+        ],
+        "max": [
+          441.6155815124512,
+          -329.7798156738281,
+          151.14940404891968
+        ]
+      },
+      "array": 72
+    },
+    {
+      "name": "Mesh.592_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.747896194458,
+          -418.1375980377197,
+          106.57559633255005
+        ],
+        "max": [
+          431.5577983856201,
+          -330.3027153015137,
+          113.35874795913696
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.747896194458,
+          -418.1375980377197,
+          106.57559633255005
+        ],
+        "max": [
+          431.5577983856201,
+          -330.3027153015137,
+          113.35874795913696
+        ]
+      },
+      "array": 73
+    },
+    {
+      "name": "Mesh.593_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.68860244750977,
+          -421.05207443237305,
+          105.91671466827393
+        ],
+        "max": [
+          432.32383728027344,
+          -412.37006187438965,
+          114.54932689666748
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.68860244750977,
+          -421.05207443237305,
+          105.91671466827393
+        ],
+        "max": [
+          432.32383728027344,
+          -412.37006187438965,
+          114.54932689666748
+        ]
+      },
+      "array": 74
+    },
+    {
+      "name": "Mesh.594_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__12"
+      ],
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          462.7735137939453,
+          -378.24063301086426,
+          39.50965702533722
+        ],
+        "max": [
+          473.62189292907715,
+          -367.3919200897217,
+          63.649678230285645
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          462.7735137939453,
+          -378.24063301086426,
+          39.50965702533722
+        ],
+        "max": [
+          473.62189292907715,
+          -367.3919200897217,
+          63.649678230285645
+        ]
+      },
+      "array": 75
+    },
+    {
+      "name": "Mesh.595_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -379.39932346343994,
+          12.998443841934204
+        ],
+        "max": [
+          474.78089332580566,
+          -366.233229637146,
+          45.06768584251404
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -379.39932346343994,
+          12.998443841934204
+        ],
+        "max": [
+          474.78089332580566,
+          -366.233229637146,
+          45.06768584251404
+        ]
+      },
+      "array": 76
+    },
+    {
+      "name": "Mesh.596_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          462.02049255371094,
+          -422.45497703552246,
+          63.656312227249146
+        ],
+        "max": [
+          468.88880729675293,
+          -327.1860122680664,
+          70.49626111984253
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          462.02049255371094,
+          -422.45497703552246,
+          63.656312227249146
+        ],
+        "max": [
+          468.88880729675293,
+          -327.1860122680664,
+          70.49626111984253
+        ]
+      },
+      "array": 77
+    },
+    {
+      "name": "Mesh.597_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.1481189727783,
+          -426.46002769470215,
+          62.97584772109985
+        ],
+        "max": [
+          469.4681644439697,
+          -417.77806282043457,
+          71.29330039024353
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.1481189727783,
+          -426.46002769470215,
+          62.97584772109985
+        ],
+        "max": [
+          469.4681644439697,
+          -417.77806282043457,
+          71.29330039024353
+        ]
+      },
+      "array": 78
+    },
+    {
+      "name": "Mesh.598_0.001",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          425.90646743774414,
+          -328.5608768463135,
+          65.09231328964233
+        ],
+        "max": [
+          467.89655685424805,
+          -320.45531272888184,
+          111.70952320098877
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          425.90646743774414,
+          -328.5608768463135,
+          65.09231328964233
+        ],
+        "max": [
+          467.89655685424805,
+          -320.45531272888184,
+          111.70952320098877
+        ]
+      },
+      "array": 79
+    },
+    {
+      "name": "Mesh.599_0.001",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.11836433410645,
+          -327.5423765182495,
+          62.9758358001709
+        ],
+        "max": [
+          469.43840980529785,
+          -318.86043548583984,
+          71.2932825088501
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.11836433410645,
+          -327.5423765182495,
+          62.9758358001709
+        ],
+        "max": [
+          469.43840980529785,
+          -318.86043548583984,
+          71.2932825088501
+        ]
+      },
+      "array": 80
+    },
+    {
+      "name": "Mesh.600_0.001",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          424.8640537261963,
+          -422.0489501953125,
+          92.5546646118164
+        ],
+        "max": [
+          495.31264305114746,
+          -414.3343925476074,
+          113.5580062866211
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          424.8640537261963,
+          -422.0489501953125,
+          92.5546646118164
+        ],
+        "max": [
+          495.31264305114746,
+          -414.3343925476074,
+          113.5580062866211
+        ]
+      },
+      "array": 81
+    },
+    {
+      "name": "Mesh.601_0.001",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          425.93393325805664,
+          -424.8695373535156,
+          65.09233117103577
+        ],
+        "max": [
+          467.92707443237305,
+          -416.7814254760742,
+          111.70953512191772
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          425.93393325805664,
+          -424.8695373535156,
+          65.09233117103577
+        ],
+        "max": [
+          467.92707443237305,
+          -416.7814254760742,
+          111.70953512191772
+        ]
+      },
+      "array": 82
+    },
+    {
+      "name": "Mesh.602_0.001",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          451.3251304626465,
+          -384.76881980895996,
+          57.923269271850586
+        ],
+        "max": [
+          487.432861328125,
+          -360.97326278686523,
+          71.07875347137451
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          451.3251304626465,
+          -384.76881980895996,
+          57.923269271850586
+        ],
+        "max": [
+          487.432861328125,
+          -360.97326278686523,
+          71.07875347137451
+        ]
+      },
+      "array": 83
+    },
+    {
+      "name": "Mesh.602_0.002",
+      "old_vertices": null,
+      "vertices": 24,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          451.3251304626465,
+          -563.2568359375,
+          57.923293113708496
+        ],
+        "max": [
+          487.432861328125,
+          -539.4612789154053,
+          71.07877731323242
+        ]
+      },
+      "array": 84
+    },
+    {
+      "name": "Mesh.601_0.002",
+      "old_vertices": null,
+      "vertices": 72,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          425.93393325805664,
+          -603.3575534820557,
+          65.09235501289368
+        ],
+        "max": [
+          467.92707443237305,
+          -595.2694416046143,
+          111.70955896377563
+        ]
+      },
+      "array": 85
+    },
+    {
+      "name": "Mesh.600_0.002",
+      "old_vertices": null,
+      "vertices": 284,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          424.8640537261963,
+          -600.5369663238525,
+          92.55468845367432
+        ],
+        "max": [
+          495.31264305114746,
+          -592.8224086761475,
+          113.558030128479
+        ]
+      },
+      "array": 86
+    },
+    {
+      "name": "Mesh.599_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          461.11836433410645,
+          -506.03036880493164,
+          62.97585964202881
+        ],
+        "max": [
+          469.43840980529785,
+          -497.3484516143799,
+          71.29330635070801
+        ]
+      },
+      "array": 87
+    },
+    {
+      "name": "Mesh.598_0.002",
+      "old_vertices": null,
+      "vertices": 72,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          425.90646743774414,
+          -507.0488929748535,
+          65.09233713150024
+        ],
+        "max": [
+          467.89655685424805,
+          -498.9433288574219,
+          111.70954704284668
+        ]
+      },
+      "array": 88
+    },
+    {
+      "name": "Mesh.597_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          461.1481189727783,
+          -604.9480438232422,
+          62.975871562957764
+        ],
+        "max": [
+          469.4681644439697,
+          -596.2660789489746,
+          71.29332423210144
+        ]
+      },
+      "array": 89
+    },
+    {
+      "name": "Mesh.596_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          462.02049255371094,
+          -600.9429931640625,
+          63.656336069107056
+        ],
+        "max": [
+          468.88880729675293,
+          -505.67402839660645,
+          70.49628496170044
+        ]
+      },
+      "array": 90
+    },
+    {
+      "name": "Mesh.595_0.002",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -557.8873634338379,
+          12.998467683792114
+        ],
+        "max": [
+          474.78089332580566,
+          -544.7212219238281,
+          45.06770968437195
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          461.6147994995117,
+          -557.8873634338379,
+          12.998467683792114
+        ],
+        "max": [
+          474.78089332580566,
+          -544.7212219238281,
+          45.06770968437195
+        ]
+      },
+      "array": 91
+    },
+    {
+      "name": "Mesh.594_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          462.7735137939453,
+          -556.7286491394043,
+          39.50968086719513
+        ],
+        "max": [
+          473.62189292907715,
+          -545.8799362182617,
+          63.649702072143555
+        ]
+      },
+      "array": 92
+    },
+    {
+      "name": "Mesh.593_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          423.68860244750977,
+          -599.5400905609131,
+          105.91673851013184
+        ],
+        "max": [
+          432.32383728027344,
+          -590.8580780029297,
+          114.54935073852539
+        ]
+      },
+      "array": 93
+    },
+    {
+      "name": "Mesh.592_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          424.747896194458,
+          -596.6256141662598,
+          106.57562017440796
+        ],
+        "max": [
+          431.5577983856201,
+          -508.7907314300537,
+          113.35877180099487
+        ]
+      },
+      "array": 94
+    },
+    {
+      "name": "Mesh.591_0.002",
+      "old_vertices": null,
+      "vertices": 216,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          420.79524993896484,
+          -594.2104816436768,
+          91.27908945083618
+        ],
+        "max": [
+          441.6155815124512,
+          -508.26783180236816,
+          151.1494278907776
+        ]
+      },
+      "array": 95
+    },
+    {
+      "name": "Mesh.590_0.002",
+      "old_vertices": null,
+      "vertices": 60,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          423.6620903015137,
+          -511.46087646484375,
+          105.91672658920288
+        ],
+        "max": [
+          432.29732513427734,
+          -502.77881622314453,
+          114.54933881759644
+        ]
+      },
+      "array": 96
+    },
+    {
+      "name": "Mesh.589_0.002",
+      "old_vertices": null,
+      "vertices": 218,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          429.83975410461426,
+          -597.0811367034912,
+          70.58925032615662
+        ],
+        "max": [
+          515.4584884643555,
+          -506.04352951049805,
+          77.47602462768555
+        ]
+      },
+      "array": 97
+    },
+    {
+      "name": "Mesh.588_0.002",
+      "old_vertices": null,
+      "vertices": 284,
+      "delta_cm": null,
+      "old_materials": null,
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": null,
+      "bounds_cm": {
+        "min": [
+          424.8366355895996,
+          -509.4754695892334,
+          92.55467653274536
+        ],
+        "max": [
+          495.2852725982666,
+          -501.76024436950684,
+          113.55801820755005
+        ]
+      },
+      "array": 98
+    },
+    {
+      "name": "Mesh.587_0.002",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -596.1931228637695,
+          -0.6802056450396776
+        ],
+        "max": [
+          513.0855083465576,
+          -506.4157485961914,
+          16.11536145210266
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          423.3097553253174,
+          -596.1931228637695,
+          -0.6802056450396776
+        ],
+        "max": [
+          513.0855083465576,
+          -506.4157485961914,
+          16.11536145210266
+        ]
+      },
+      "array": 99
+    },
+    {
+      "name": "Mesh.587_0.003",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -514.0725135803223,
+          -225.7843255996704,
+          -0.6802554242312908
+        ],
+        "max": [
+          -424.29676055908203,
+          -136.0069751739502,
+          16.11531227827072
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -514.0725135803223,
+          -225.7843255996704,
+          -0.6802554242312908
+        ],
+        "max": [
+          -424.29676055908203,
+          -136.0069751739502,
+          16.11531227827072
+        ]
+      },
+      "array": 100
+    },
+    {
+      "name": "Mesh.588_0.003",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.27227783203125,
+          -230.43982982635498,
+          92.5546407699585
+        ],
+        "max": [
+          -425.82364082336426,
+          -222.7245807647705,
+          113.55798244476318
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.27227783203125,
+          -230.43982982635498,
+          92.5546407699585
+        ],
+        "max": [
+          -425.82364082336426,
+          -222.7245807647705,
+          113.55798244476318
+        ]
+      },
+      "array": 101
+    },
+    {
+      "name": "Mesh.589_0.003",
+      "old_vertices": 218,
+      "vertices": 218,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__11"
+      ],
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -516.4454936981201,
+          -226.15654468536377,
+          70.5892026424408
+        ],
+        "max": [
+          -430.8267593383789,
+          -135.11896133422852,
+          77.47597694396973
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -516.4454936981201,
+          -226.15654468536377,
+          70.5892026424408
+        ],
+        "max": [
+          -430.8267593383789,
+          -135.11896133422852,
+          77.47597694396973
+        ]
+      },
+      "array": 102
+    },
+    {
+      "name": "Plane.011_0",
+      "old_vertices": 120,
+      "vertices": 120,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro",
+        "PBR_Paneles_Composite_Hueso"
+      ],
+      "materials": [
+        "cream"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -622.5780010223389,
+          -1010.9070777893066,
+          8.617723210591066e-05
+        ],
+        "max": [
+          622.5780010223389,
+          -641.3960456848145,
+          474.1002082824707
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -622.5780010223389,
+          -1010.9070777893066,
+          8.617723210591066e-05
+        ],
+        "max": [
+          622.5780010223389,
+          -641.3960456848145,
+          474.1002082824707
+        ]
+      },
+      "array": 103
+    },
+    {
+      "name": "Mesh.591_0.003",
+      "old_vertices": 216,
+      "vertices": 216,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "02___Default"
+      ],
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -442.6025867462158,
+          -223.93221855163574,
+          91.27903580665588
+        ],
+        "max": [
+          -421.7822074890137,
+          -137.9895567893982,
+          151.1493682861328
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -442.6025867462158,
+          -223.93221855163574,
+          91.27903580665588
+        ],
+        "max": [
+          -421.7822074890137,
+          -137.9895567893982,
+          151.1493682861328
+        ]
+      },
+      "array": 104
+    },
+    {
+      "name": "Mesh.592_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -432.54480361938477,
+          -223.4093427658081,
+          106.57557249069214
+        ],
+        "max": [
+          -425.73485374450684,
+          -135.574471950531,
+          113.35872411727905
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -432.54480361938477,
+          -223.4093427658081,
+          106.57557249069214
+        ],
+        "max": [
+          -425.73485374450684,
+          -135.574471950531,
+          113.35872411727905
+        ]
+      },
+      "array": 105
+    },
+    {
+      "name": "Mesh.593_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.3108425140381,
+          -141.34199619293213,
+          105.9166669845581
+        ],
+        "max": [
+          -424.6756076812744,
+          -132.65997171401978,
+          114.54929113388062
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.3108425140381,
+          -141.34199619293213,
+          105.9166669845581
+        ],
+        "max": [
+          -424.6756076812744,
+          -132.65997171401978,
+          114.54929113388062
+        ]
+      },
+      "array": 106
+    },
+    {
+      "name": "Mesh.594_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__12"
+      ],
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -474.6088981628418,
+          -186.32014989852905,
+          39.50963020324707
+        ],
+        "max": [
+          -463.76051902770996,
+          -175.47143697738647,
+          63.64964842796326
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -474.6088981628418,
+          -186.32014989852905,
+          39.50963020324707
+        ],
+        "max": [
+          -463.76051902770996,
+          -175.47143697738647,
+          63.64964842796326
+        ]
+      },
+      "array": 107
+    },
+    {
+      "name": "Mesh.595_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -475.7678985595703,
+          -187.4788522720337,
+          12.998418509960175
+        ],
+        "max": [
+          -462.60180473327637,
+          -174.3127465248108,
+          45.06765902042389
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -475.7678985595703,
+          -187.4788522720337,
+          12.998418509960175
+        ],
+        "max": [
+          -462.60180473327637,
+          -174.3127465248108,
+          45.06765902042389
+        ]
+      },
+      "array": 108
+    },
+    {
+      "name": "Mesh.596_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -469.8758125305176,
+          -226.52604579925537,
+          63.656288385391235
+        ],
+        "max": [
+          -463.0074977874756,
+          -131.25710487365723,
+          70.49623131752014
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -469.8758125305176,
+          -226.52604579925537,
+          63.656288385391235
+        ],
+        "max": [
+          -463.0074977874756,
+          -131.25710487365723,
+          70.49623131752014
+        ]
+      },
+      "array": 109
+    },
+    {
+      "name": "Mesh.597_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4551696777344,
+          -135.93398332595825,
+          62.97581195831299
+        ],
+        "max": [
+          -462.13512420654297,
+          -127.25204229354858,
+          71.29325866699219
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4551696777344,
+          -135.93398332595825,
+          62.97581195831299
+        ],
+        "max": [
+          -462.13512420654297,
+          -127.25204229354858,
+          71.29325866699219
+        ]
+      },
+      "array": 110
+    },
+    {
+      "name": "Mesh.598_0.003",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.8835620880127,
+          -233.25676918029785,
+          65.09230136871338
+        ],
+        "max": [
+          -426.8934726715088,
+          -225.1511573791504,
+          111.70951128005981
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.8835620880127,
+          -233.25676918029785,
+          65.09230136871338
+        ],
+        "max": [
+          -426.8934726715088,
+          -225.1511573791504,
+          111.70951128005981
+        ]
+      },
+      "array": 111
+    },
+    {
+      "name": "Mesh.599_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4254150390625,
+          -234.85162258148193,
+          62.97582387924194
+        ],
+        "max": [
+          -462.1053695678711,
+          -226.16970539093018,
+          71.29327058792114
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4254150390625,
+          -234.85162258148193,
+          62.97582387924194
+        ],
+        "max": [
+          -462.1053695678711,
+          -226.16970539093018,
+          71.29327058792114
+        ]
+      },
+      "array": 112
+    },
+    {
+      "name": "Mesh.600_0.003",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.29969596862793,
+          -139.3776774406433,
+          92.55462884902954
+        ],
+        "max": [
+          -425.85105895996094,
+          -131.66309595108032,
+          113.55797052383423
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.29969596862793,
+          -139.3776774406433,
+          92.55462884902954
+        ],
+        "max": [
+          -425.85105895996094,
+          -131.66309595108032,
+          113.55797052383423
+        ]
+      },
+      "array": 113
+    },
+    {
+      "name": "Mesh.601_0.003",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.9140796661377,
+          -136.93063259124756,
+          65.09228944778442
+        ],
+        "max": [
+          -426.9209384918213,
+          -128.8425326347351,
+          111.70949935913086
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.9140796661377,
+          -136.93063259124756,
+          65.09228944778442
+        ],
+        "max": [
+          -426.9209384918213,
+          -128.8425326347351,
+          111.70949935913086
+        ]
+      },
+      "array": 114
+    },
+    {
+      "name": "Mesh.602_0.003",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -488.41986656188965,
+          -192.73879528045654,
+          57.923245429992676
+        ],
+        "max": [
+          -452.31213569641113,
+          -168.94325017929077,
+          71.07872366905212
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -488.41986656188965,
+          -192.73879528045654,
+          57.923245429992676
+        ],
+        "max": [
+          -452.31213569641113,
+          -168.94325017929077,
+          71.07872366905212
+        ]
+      },
+      "array": 115
+    },
+    {
+      "name": "Mesh.602_0.004",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -488.4208679199219,
+          -371.2268114089966,
+          57.923269271850586
+        ],
+        "max": [
+          -452.31313705444336,
+          -347.43127822875977,
+          71.07874751091003
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -488.4208679199219,
+          -371.2268114089966,
+          57.923269271850586
+        ],
+        "max": [
+          -452.31313705444336,
+          -347.43127822875977,
+          71.07874751091003
+        ]
+      },
+      "array": 116
+    },
+    {
+      "name": "Mesh.601_0.004",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.9150810241699,
+          -315.4186487197876,
+          65.09231328964233
+        ],
+        "max": [
+          -426.9219398498535,
+          -307.3305606842041,
+          111.70952320098877
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.9150810241699,
+          -315.4186487197876,
+          65.09231328964233
+        ],
+        "max": [
+          -426.9219398498535,
+          -307.3305606842041,
+          111.70952320098877
+        ]
+      },
+      "array": 117
+    },
+    {
+      "name": "Mesh.600_0.004",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.30069732666016,
+          -317.8656816482544,
+          92.55465269088745
+        ],
+        "max": [
+          -425.85206031799316,
+          -310.1511001586914,
+          113.55799436569214
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.30069732666016,
+          -317.8656816482544,
+          92.55465269088745
+        ],
+        "max": [
+          -425.85206031799316,
+          -310.1511001586914,
+          113.55799436569214
+        ]
+      },
+      "array": 118
+    },
+    {
+      "name": "Mesh.599_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4264163970947,
+          -413.3396625518799,
+          62.97584772109985
+        ],
+        "max": [
+          -462.1063709259033,
+          -404.6576976776123,
+          71.29329442977905
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4264163970947,
+          -413.3396625518799,
+          62.97584772109985
+        ],
+        "max": [
+          -462.1063709259033,
+          -404.6576976776123,
+          71.29329442977905
+        ]
+      },
+      "array": 119
+    },
+    {
+      "name": "Mesh.598_0.004",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.8845634460449,
+          -411.7447853088379,
+          65.09232521057129
+        ],
+        "max": [
+          -426.894474029541,
+          -403.63917350769043,
+          111.70953512191772
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.8845634460449,
+          -411.7447853088379,
+          65.09232521057129
+        ],
+        "max": [
+          -426.894474029541,
+          -403.63917350769043,
+          111.70953512191772
+        ]
+      },
+      "array": 120
+    },
+    {
+      "name": "Mesh.597_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4561710357666,
+          -314.42198753356934,
+          62.9758358001709
+        ],
+        "max": [
+          -462.1361255645752,
+          -305.74004650115967,
+          71.2932825088501
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4561710357666,
+          -314.42198753356934,
+          62.9758358001709
+        ],
+        "max": [
+          -462.1361255645752,
+          -305.74004650115967,
+          71.2932825088501
+        ]
+      },
+      "array": 121
+    },
+    {
+      "name": "Mesh.596_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -469.8768138885498,
+          -405.0140380859375,
+          63.656312227249146
+        ],
+        "max": [
+          -463.0084991455078,
+          -309.74512100219727,
+          70.49625515937805
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -469.8768138885498,
+          -405.0140380859375,
+          63.656312227249146
+        ],
+        "max": [
+          -463.0084991455078,
+          -309.74512100219727,
+          70.49625515937805
+        ]
+      },
+      "array": 122
+    },
+    {
+      "name": "Mesh.595_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -475.76889991760254,
+          -365.96686840057373,
+          12.998442351818085
+        ],
+        "max": [
+          -462.6028060913086,
+          -352.8007507324219,
+          45.0676828622818
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -475.76889991760254,
+          -365.96686840057373,
+          12.998442351818085
+        ],
+        "max": [
+          -462.6028060913086,
+          -352.8007507324219,
+          45.0676828622818
+        ]
+      },
+      "array": 123
+    },
+    {
+      "name": "Mesh.594_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__12"
+      ],
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -474.609899520874,
+          -364.80817794799805,
+          39.50965404510498
+        ],
+        "max": [
+          -463.7615203857422,
+          -353.95946502685547,
+          63.64967226982117
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -474.609899520874,
+          -364.80817794799805,
+          39.50965404510498
+        ],
+        "max": [
+          -463.7615203857422,
+          -353.95946502685547,
+          63.64967226982117
+        ]
+      },
+      "array": 124
+    },
+    {
+      "name": "Mesh.593_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.3118438720703,
+          -319.83001232147217,
+          105.91670274734497
+        ],
+        "max": [
+          -424.67660903930664,
+          -311.14797592163086,
+          114.54931497573853
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.3118438720703,
+          -319.83001232147217,
+          105.91670274734497
+        ],
+        "max": [
+          -424.67660903930664,
+          -311.14797592163086,
+          114.54931497573853
+        ]
+      },
+      "array": 125
+    },
+    {
+      "name": "Mesh.592_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -432.545804977417,
+          -401.89733505249023,
+          106.57559633255005
+        ],
+        "max": [
+          -425.73585510253906,
+          -314.0624761581421,
+          113.35874795913696
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -432.545804977417,
+          -401.89733505249023,
+          106.57559633255005
+        ],
+        "max": [
+          -425.73585510253906,
+          -314.0624761581421,
+          113.35874795913696
+        ]
+      },
+      "array": 126
+    },
+    {
+      "name": "Mesh.591_0.004",
+      "old_vertices": 216,
+      "vertices": 216,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "02___Default"
+      ],
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -442.60358810424805,
+          -402.4202346801758,
+          91.2790596485138
+        ],
+        "max": [
+          -421.7832088470459,
+          -316.4775848388672,
+          151.14939212799072
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -442.60358810424805,
+          -402.4202346801758,
+          91.2790596485138
+        ],
+        "max": [
+          -421.7832088470459,
+          -316.4775848388672,
+          151.14939212799072
+        ]
+      },
+      "array": 127
+    },
+    {
+      "name": "Mesh.590_0.003",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.2853317260742,
+          -407.9092502593994,
+          105.91670274734497
+        ],
+        "max": [
+          -424.65009689331055,
+          -399.2272138595581,
+          114.54932689666748
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.2853317260742,
+          -407.9092502593994,
+          105.91670274734497
+        ],
+        "max": [
+          -424.65009689331055,
+          -399.2272138595581,
+          114.54932689666748
+        ]
+      },
+      "array": 128
+    },
+    {
+      "name": "Mesh.589_0.004",
+      "old_vertices": 218,
+      "vertices": 218,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__11"
+      ],
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -516.4464950561523,
+          -404.6445846557617,
+          70.5892264842987
+        ],
+        "max": [
+          -430.82776069641113,
+          -313.60697746276855,
+          77.47600078582764
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -516.4464950561523,
+          -404.6445846557617,
+          70.5892264842987
+        ],
+        "max": [
+          -430.82776069641113,
+          -313.60697746276855,
+          77.47600078582764
+        ]
+      },
+      "array": 129
+    },
+    {
+      "name": "Mesh.588_0.004",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.2732791900635,
+          -408.92786979675293,
+          92.5546646118164
+        ],
+        "max": [
+          -425.8246421813965,
+          -401.21259689331055,
+          113.5580062866211
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.2732791900635,
+          -408.92786979675293,
+          92.5546646118164
+        ],
+        "max": [
+          -425.8246421813965,
+          -401.21259689331055,
+          113.5580062866211
+        ]
+      },
+      "array": 130
+    },
+    {
+      "name": "Mesh.587_0.004",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -514.0735149383545,
+          -404.27236557006836,
+          -0.6802314426749945
+        ],
+        "max": [
+          -424.29776191711426,
+          -314.49499130249023,
+          16.11533612012863
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -514.0735149383545,
+          -404.27236557006836,
+          -0.6802314426749945
+        ],
+        "max": [
+          -424.29776191711426,
+          -314.49499130249023,
+          16.11533612012863
+        ]
+      },
+      "array": 131
+    },
+    {
+      "name": "Mesh.587_0.005",
+      "old_vertices": 214,
+      "vertices": 214,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -514.0735149383545,
+          -603.2623767852783,
+          -0.6802046671509743
+        ],
+        "max": [
+          -424.29776191711426,
+          -513.4850025177002,
+          16.11536294221878
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -514.0735149383545,
+          -603.2623767852783,
+          -0.6802046671509743
+        ],
+        "max": [
+          -424.29776191711426,
+          -513.4850025177002,
+          16.11536294221878
+        ]
+      },
+      "array": 132
+    },
+    {
+      "name": "Mesh.588_0.005",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.2732791900635,
+          -607.9178810119629,
+          92.5546944141388
+        ],
+        "max": [
+          -425.8246421813965,
+          -600.2026081085205,
+          113.558030128479
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.2732791900635,
+          -607.9178810119629,
+          92.5546944141388
+        ],
+        "max": [
+          -425.8246421813965,
+          -600.2026081085205,
+          113.558030128479
+        ]
+      },
+      "array": 133
+    },
+    {
+      "name": "Mesh.589_0.005",
+      "old_vertices": 218,
+      "vertices": 218,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__11"
+      ],
+      "materials": [
+        "Material__11"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -516.4464950561523,
+          -603.6345958709717,
+          70.5892562866211
+        ],
+        "max": [
+          -430.82776069641113,
+          -512.5969886779785,
+          77.47603058815002
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -516.4464950561523,
+          -603.6345958709717,
+          70.5892562866211
+        ],
+        "max": [
+          -430.82776069641113,
+          -512.5969886779785,
+          77.47603058815002
+        ]
+      },
+      "array": 134
+    },
+    {
+      "name": "Mesh.590_0.004",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.2853317260742,
+          -606.8992614746094,
+          105.91673851013184
+        ],
+        "max": [
+          -424.65009689331055,
+          -598.217248916626,
+          114.54935073852539
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.2853317260742,
+          -606.8992614746094,
+          105.91673851013184
+        ],
+        "max": [
+          -424.65009689331055,
+          -598.217248916626,
+          114.54935073852539
+        ]
+      },
+      "array": 135
+    },
+    {
+      "name": "Mesh.590_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.284330368042,
+          -229.42123413085938,
+          105.91667890548706
+        ],
+        "max": [
+          -424.6490955352783,
+          -220.73919773101807,
+          114.54930305480957
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.284330368042,
+          -229.42123413085938,
+          105.91667890548706
+        ],
+        "max": [
+          -424.6490955352783,
+          -220.73919773101807,
+          114.54930305480957
+        ]
+      },
+      "array": 136
+    },
+    {
+      "name": "Mesh.591_0.005",
+      "old_vertices": 216,
+      "vertices": 216,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "02___Default"
+      ],
+      "materials": [
+        "02___Default"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -442.60358810424805,
+          -601.4102458953857,
+          91.27908945083618
+        ],
+        "max": [
+          -421.7832088470459,
+          -515.4675960540771,
+          151.1494278907776
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -442.60358810424805,
+          -601.4102458953857,
+          91.27908945083618
+        ],
+        "max": [
+          -421.7832088470459,
+          -515.4675960540771,
+          151.1494278907776
+        ]
+      },
+      "array": 137
+    },
+    {
+      "name": "Mesh.592_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -432.545804977417,
+          -600.8873462677002,
+          106.57562017440796
+        ],
+        "max": [
+          -425.73585510253906,
+          -513.05251121521,
+          113.35877180099487
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -432.545804977417,
+          -600.8873462677002,
+          106.57562017440796
+        ],
+        "max": [
+          -425.73585510253906,
+          -513.05251121521,
+          113.35877180099487
+        ]
+      },
+      "array": 138
+    },
+    {
+      "name": "Mesh.593_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -433.3118438720703,
+          -518.82004737854,
+          105.91672658920288
+        ],
+        "max": [
+          -424.67660903930664,
+          -510.1379871368408,
+          114.54933881759644
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -433.3118438720703,
+          -518.82004737854,
+          105.91672658920288
+        ],
+        "max": [
+          -424.67660903930664,
+          -510.1379871368408,
+          114.54933881759644
+        ]
+      },
+      "array": 139
+    },
+    {
+      "name": "Mesh.594_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__12"
+      ],
+      "materials": [
+        "Material__12"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -474.609899520874,
+          -563.798189163208,
+          39.50968086719513
+        ],
+        "max": [
+          -463.7615203857422,
+          -552.9494762420654,
+          63.649702072143555
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -474.609899520874,
+          -563.798189163208,
+          39.50968086719513
+        ],
+        "max": [
+          -463.7615203857422,
+          -552.9494762420654,
+          63.649702072143555
+        ]
+      },
+      "array": 140
+    },
+    {
+      "name": "Mesh.595_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -475.76889991760254,
+          -564.9569034576416,
+          12.998469173908234
+        ],
+        "max": [
+          -462.6028060913086,
+          -551.7907619476318,
+          45.06770968437195
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -475.76889991760254,
+          -564.9569034576416,
+          12.998469173908234
+        ],
+        "max": [
+          -462.6028060913086,
+          -551.7907619476318,
+          45.06770968437195
+        ]
+      },
+      "array": 141
+    },
+    {
+      "name": "Mesh.596_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__1"
+      ],
+      "materials": [
+        "Material__1"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -469.8768138885498,
+          -604.0040493011475,
+          63.656336069107056
+        ],
+        "max": [
+          -463.0084991455078,
+          -508.7351322174072,
+          70.49628496170044
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -469.8768138885498,
+          -604.0040493011475,
+          63.656336069107056
+        ],
+        "max": [
+          -463.0084991455078,
+          -508.7351322174072,
+          70.49628496170044
+        ]
+      },
+      "array": 142
+    },
+    {
+      "name": "Mesh.597_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4561710357666,
+          -513.4119987487793,
+          62.97585964202881
+        ],
+        "max": [
+          -462.1361255645752,
+          -504.73008155822754,
+          71.29331231117249
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4561710357666,
+          -513.4119987487793,
+          62.97585964202881
+        ],
+        "max": [
+          -462.1361255645752,
+          -504.73008155822754,
+          71.29331231117249
+        ]
+      },
+      "array": 143
+    },
+    {
+      "name": "Mesh.598_0.005",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.8845634460449,
+          -610.7347965240479,
+          65.09235501289368
+        ],
+        "max": [
+          -426.894474029541,
+          -602.6291847229004,
+          111.70955896377563
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.8845634460449,
+          -610.7347965240479,
+          65.09235501289368
+        ],
+        "max": [
+          -426.894474029541,
+          -602.6291847229004,
+          111.70955896377563
+        ]
+      },
+      "array": 144
+    },
+    {
+      "name": "Mesh.599_0.005",
+      "old_vertices": 60,
+      "vertices": 60,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -470.4264163970947,
+          -612.3296737670898,
+          62.97587752342224
+        ],
+        "max": [
+          -462.1063709259033,
+          -603.6477088928223,
+          71.29332423210144
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -470.4264163970947,
+          -612.3296737670898,
+          62.97587752342224
+        ],
+        "max": [
+          -462.1063709259033,
+          -603.6477088928223,
+          71.29332423210144
+        ]
+      },
+      "array": 145
+    },
+    {
+      "name": "Mesh.600_0.005",
+      "old_vertices": 284,
+      "vertices": 284,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -496.30069732666016,
+          -516.8557167053223,
+          92.55467653274536
+        ],
+        "max": [
+          -425.85206031799316,
+          -509.14111137390137,
+          113.55801820755005
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -496.30069732666016,
+          -516.8557167053223,
+          92.55467653274536
+        ],
+        "max": [
+          -425.85206031799316,
+          -509.14111137390137,
+          113.55801820755005
+        ]
+      },
+      "array": 146
+    },
+    {
+      "name": "Mesh.601_0.005",
+      "old_vertices": 72,
+      "vertices": 72,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -468.9150810241699,
+          -514.4086837768555,
+          65.09233713150024
+        ],
+        "max": [
+          -426.9219398498535,
+          -506.32057189941406,
+          111.70954704284668
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -468.9150810241699,
+          -514.4086837768555,
+          65.09233713150024
+        ],
+        "max": [
+          -426.9219398498535,
+          -506.32057189941406,
+          111.70954704284668
+        ]
+      },
+      "array": 147
+    },
+    {
+      "name": "Mesh.602_0.005",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "Material__13"
+      ],
+      "materials": [
+        "Material__13"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -488.4208679199219,
+          -570.2167987823486,
+          57.923293113708496
+        ],
+        "max": [
+          -452.31313705444336,
+          -546.4212894439697,
+          71.07877731323242
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -488.4208679199219,
+          -570.2167987823486,
+          57.923293113708496
+        ],
+        "max": [
+          -452.31313705444336,
+          -546.4212894439697,
+          71.07877731323242
+        ]
+      },
+      "array": 148
+    },
+    {
+      "name": "Plane.040_0",
+      "old_vertices": 816,
+      "vertices": 816,
+      "delta_cm": 9.000003337860107,
+      "old_materials": [
+        "lcardtype"
+      ],
+      "materials": [
+        "lcardtype"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          -614.9290084838867,
+          -620.2041149139404,
+          113.26402425765991
+        ],
+        "max": [
+          614.9290084838867,
+          -123.78000020980835,
+          117.72009134292603
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -614.9290084838867,
+          -620.2041149139404,
+          104.26403284072876
+        ],
+        "max": [
+          614.9290084838867,
+          -123.78000020980835,
+          108.72008800506592
+        ]
+      },
+      "array": 149
+    },
+    {
+      "name": "Plane.041_0",
+      "old_vertices": 932,
+      "vertices": 932,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "lcarkey"
+      ],
+      "materials": [
+        "lcarkey"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -618.44801902771,
+          -990.8761024475098,
+          144.46405172348022
+        ],
+        "max": [
+          618.44801902771,
+          -243.9199924468994,
+          215.7921552658081
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -618.44801902771,
+          -990.8761024475098,
+          144.46405172348022
+        ],
+        "max": [
+          618.44801902771,
+          -243.9199924468994,
+          215.7921552658081
+        ]
+      },
+      "array": 150
+    },
+    {
+      "name": "Plane.042_0",
+      "old_vertices": 816,
+      "vertices": 816,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "lcarsdisplay"
+      ],
+      "materials": [
+        "lcarsdisplay"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -618.44801902771,
+          -599.2360591888428,
+          123.07702302932739
+        ],
+        "max": [
+          618.44801902771,
+          -107.03698396682739,
+          172.4241018295288
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -618.44801902771,
+          -599.2360591888428,
+          123.07702302932739
+        ],
+        "max": [
+          618.44801902771,
+          -107.03698396682739,
+          172.4241018295288
+        ]
+      },
+      "array": 151
+    },
+    {
+      "name": "Editable Mesh_Mat.003_0",
+      "old_vertices": 32,
+      "vertices": 64,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          -2.160630375146866
+        ],
+        "max": [
+          285.7147693634033,
+          -294.5718288421631,
+          92.36843585968018
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.4787883758545,
+          -46.060627698898315
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59819507598877,
+          92.36843585968018
+        ]
+      },
+      "array": 152
+    },
+    {
+      "name": "Editable Mesh_Mat.004_0",
+      "old_vertices": 36,
+      "vertices": 72,
+      "delta_cm": null,
+      "old_materials": [
+        "BLUE",
+        "Luz_Azul_Suave_Consola"
+      ],
+      "materials": [
+        "BLUE"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          238.07437419891357,
+          -464.6024227142334,
+          92.36775040626526
+        ],
+        "max": [
+          277.0024538040161,
+          -303.34692001342773,
+          106.74493312835693
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -298.1433153152466,
+          -470.70369720458984,
+          48.46775233745575
+        ],
+        "max": [
+          298.1433153152466,
+          -309.4481945037842,
+          62.844932079315186
+        ]
+      },
+      "array": 153
+    },
+    {
+      "name": "Editable Mesh_Mat.005_0",
+      "old_vertices": 24,
+      "vertices": 48,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "captainschair"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          92.36774444580078
+        ],
+        "max": [
+          285.7147693634033,
+          -294.5719242095947,
+          92.36843585968018
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.47869300842285,
+          48.46774637699127
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59819507598877,
+          48.46843779087067
+        ]
+      },
+      "array": 154
+    },
+    {
+      "name": "Editable Mesh_Mat.006_0",
+      "old_vertices": 24,
+      "vertices": 48,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          105.35131692886353
+        ],
+        "max": [
+          285.7147693634033,
+          -294.5719242095947,
+          105.35200834274292
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.47869300842285,
+          61.45131587982178
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59819507598877,
+          61.45200729370117
+        ]
+      },
+      "array": 155
+    },
+    {
+      "name": "Editable Mesh_Mat.007_0",
+      "old_vertices": 32,
+      "vertices": 64,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          105.35131692886353
+        ],
+        "max": [
+          285.7147693634033,
+          -294.5719242095947,
+          143.91881227493286
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.47869300842285,
+          61.45131587982178
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59817123413086,
+          100.01881122589111
+        ]
+      },
+      "array": 156
+    },
+    {
+      "name": "Editable Mesh_Mat.008_0",
+      "old_vertices": 43,
+      "vertices": 86,
+      "delta_cm": null,
+      "old_materials": [
+        "grey"
+      ],
+      "materials": [
+        "grey"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          143.9329743385315
+        ],
+        "max": [
+          285.7147693634033,
+          -294.5719242095947,
+          143.9337134361267
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.47869300842285,
+          100.03297328948975
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59817123413086,
+          100.03371238708496
+        ]
+      },
+      "array": 157
+    },
+    {
+      "name": "Editable Mesh_Mat.009_0",
+      "old_vertices": 15,
+      "vertices": 30,
+      "delta_cm": null,
+      "old_materials": [
+        "turbolcar"
+      ],
+      "materials": [
+        "turbolcar"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.56678676605225,
+          -476.4524459838867,
+          144.32848691940308
+        ],
+        "max": [
+          274.61044788360596,
+          -294.5719242095947,
+          177.22434997558594
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.6509027481079,
+          -479.47869300842285,
+          100.42848587036133
+        ],
+        "max": [
+          304.6509027481079,
+          -297.59817123413086,
+          133.3243489265442
+        ]
+      },
+      "array": 158
+    },
+    {
+      "name": "Editable Mesh_Mat.010_0",
+      "old_vertices": 80,
+      "vertices": 160,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          266.00096225738525,
+          -473.67773056030273,
+          143.9329743385315
+        ],
+        "max": [
+          285.7147693634033,
+          -297.29676246643066,
+          177.22434997558594
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -270.2167272567749,
+          -476.7538547515869,
+          100.03297328948975
+        ],
+        "max": [
+          270.2167272567749,
+          -300.37291049957275,
+          133.3243489265442
+        ]
+      },
+      "array": 159
+    },
+    {
+      "name": "Editable Mesh_Mat.011_0",
+      "old_vertices": 48,
+      "vertices": 96,
+      "delta_cm": null,
+      "old_materials": [
+        "PBR_Paneles_Composite_Claro"
+      ],
+      "materials": [
+        "grey",
+        "BLUE"
+      ],
+      "topology_equal": false,
+      "uv_equal": false,
+      "matrix_equal": false,
+      "old_bounds_cm": {
+        "min": [
+          231.5401792526245,
+          -476.4524459838867,
+          143.9329743385315
+        ],
+        "max": [
+          275.6645917892456,
+          -294.5719242095947,
+          170.89617252349854
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -304.67751026153564,
+          -479.47869300842285,
+          100.03297328948975
+        ],
+        "max": [
+          304.67751026153564,
+          -297.59817123413086,
+          126.99617147445679
+        ]
+      },
+      "array": 160
+    },
+    {
+      "name": "Plane.043_0",
+      "old_vertices": 112,
+      "vertices": 112,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "light",
+        "PBR_Luz_Sutherland_Fria"
+      ],
+      "materials": [
+        "light"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -770.7827091217041,
+          -1237.1936798095703,
+          643.8644409179688
+        ],
+        "max": [
+          770.7827091217041,
+          259.15660858154297,
+          720.0001239776611
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -770.7827091217041,
+          -1237.1936798095703,
+          643.8644409179688
+        ],
+        "max": [
+          770.7827091217041,
+          259.15660858154297,
+          720.0001239776611
+        ]
+      },
+      "array": 161
+    },
+    {
+      "name": "Plane.044_0",
+      "old_vertices": 224,
+      "vertices": 224,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Capitan_Titanio"
+      ],
+      "materials": [
+        "ceiling"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -206.5148115158081,
+          -697.0512866973877,
+          680.9064865112305
+        ],
+        "max": [
+          206.51330947875977,
+          -296.13757133483887,
+          719.4594860076904
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -206.5148115158081,
+          -697.0512866973877,
+          680.9064865112305
+        ],
+        "max": [
+          206.51330947875977,
+          -296.13757133483887,
+          719.4594860076904
+        ]
+      },
+      "array": 162
+    },
+    {
+      "name": "Plane.045_0",
+      "old_vertices": 4,
+      "vertices": 4,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "space"
+      ],
+      "materials": [
+        "space"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -200.00300407409668,
+          -692.1170234680176,
+          726.2941360473633
+        ],
+        "max": [
+          200.00300407409668,
+          -292.1109199523926,
+          726.2941837310791
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -200.00300407409668,
+          -692.1170234680176,
+          726.2941360473633
+        ],
+        "max": [
+          200.00300407409668,
+          -292.1109199523926,
+          726.2941837310791
+        ]
+      },
+      "array": 163
+    },
+    {
+      "name": "Cube.003_0",
+      "old_vertices": 24,
+      "vertices": 24,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "plaque"
+      ],
+      "materials": [
+        "plaque"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -481.4310073852539,
+          -62.87997364997864,
+          237.71703243255615
+        ],
+        "max": [
+          -399.55999851226807,
+          -37.620967626571655,
+          294.97101306915283
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -481.4310073852539,
+          -62.87997364997864,
+          237.71703243255615
+        ],
+        "max": [
+          -399.55999851226807,
+          -37.620967626571655,
+          294.97101306915283
+        ]
+      },
+      "array": 164
+    },
+    {
+      "name": "Plane.046_0",
+      "old_vertices": 81,
+      "vertices": 81,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "PBR_Luz_Sutherland_Fria"
+      ],
+      "materials": [
+        "light.001"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -305.8297395706177,
+          -793.599271774292,
+          439.4014835357666
+        ],
+        "max": [
+          305.8297395706177,
+          -200.58441162109375,
+          439.4015312194824
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -305.8297395706177,
+          -793.599271774292,
+          439.4014835357666
+        ],
+        "max": [
+          305.8297395706177,
+          -200.58441162109375,
+          439.4015312194824
+        ]
+      },
+      "array": 165
+    },
+    {
+      "name": "Plane.047_0",
+      "old_vertices": 1632,
+      "vertices": 1632,
+      "delta_cm": 0.0,
+      "old_materials": [
+        "lcarsdisplay.001"
+      ],
+      "materials": [
+        "lcarsdisplay.001"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -234.2639923095703,
+          146.19604349136353,
+          83.84999632835388
+        ],
+        "max": [
+          235.91599464416504,
+          153.5530686378479,
+          445.84503173828125
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -234.2639923095703,
+          146.19604349136353,
+          83.84999632835388
+        ],
+        "max": [
+          235.91599464416504,
+          153.5530686378479,
+          445.84503173828125
+        ]
+      },
+      "array": 166
+    },
+    {
+      "name": "Plane.018_0",
+      "old_vertices": 48,
+      "vertices": 48,
+      "delta_cm": 88.5350227355957,
+      "old_materials": [
+        "PBR_Puertas_Burdeos_ConTexto"
+      ],
+      "materials": [
+        "door"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -598.9610195159912,
+          -833.3260536193848,
+          -2.358899265527725
+        ],
+        "max": [
+          598.9610195159912,
+          -752.1150588989258,
+          389.12317752838135
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -598.9610195159912,
+          -833.3260536193848,
+          -2.358899265527725
+        ],
+        "max": [
+          598.9610195159912,
+          -752.1150588989258,
+          300.72319507598877
+        ]
+      },
+      "array": 167
+    },
+    {
+      "name": "Plane.001_0",
+      "old_vertices": 48,
+      "vertices": 48,
+      "delta_cm": 87.99488544464192,
+      "old_materials": [
+        "PBR_Puertas_Burdeos_ConTexto"
+      ],
+      "materials": [
+        "door"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -653.0340194702148,
+          87.20903992652893,
+          57.0999801158905
+        ],
+        "max": [
+          650.6609916687012,
+          169.0850853919983,
+          448.5830307006836
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -653.0340194702148,
+          87.20903992652893,
+          57.0999801158905
+        ],
+        "max": [
+          650.6609916687012,
+          169.08507347106934,
+          360.5881452560425
+        ]
+      },
+      "array": 168
+    },
+    {
+      "name": "Plane.017_0",
+      "old_vertices": 48,
+      "vertices": 48,
+      "delta_cm": 86.98589801788413,
+      "old_materials": [
+        "PBR_Puertas_Burdeos_ConTexto"
+      ],
+      "materials": [
+        "door"
+      ],
+      "topology_equal": true,
+      "uv_equal": true,
+      "matrix_equal": true,
+      "old_bounds_cm": {
+        "min": [
+          -653.1199932098389,
+          5.342066660523415,
+          56.09199404716492
+        ],
+        "max": [
+          650.5879878997803,
+          87.13207840919495,
+          447.5740432739258
+        ]
+      },
+      "bounds_cm": {
+        "min": [
+          -653.1199932098389,
+          5.342055112123489,
+          56.09199404716492
+        ],
+        "max": [
+          650.5879878997803,
+          87.13207840919495,
+          360.5881452560425
+        ]
+      },
+      "array": 169
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "materials": [],
+  "objects": [],
+  "lights": [],
+  "removed_from_new_map_only": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 70, in <module>\n    mat.set_editor_property('shading_model',u.MaterialShadingModel.MSM_UNLIT);n=build(mat,r['channels']['Emission']);n=custom(mat,f'return C*{r[\"strength\"]:.10f};',{'C':n});assert ML.connect_material_property(n,'',u.MaterialProperty.MP_EMISSIVE_COLOR)\n                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 42, in build\n    connect(uvn,node,'Coordinates')\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 16, in connect\n    def connect(a,b,pin):assert ML.connect_material_expressions(a,'',b,pin),(a,b,pin)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: (<Object '/Game/SutherlandPBR01/Materials/M_02___Default.M_02___Default:MaterialExpressionCustom_0' (0x000001DB60495280) Class 'MaterialExpressionCustom'>, <Object '/Game/SutherlandPBR01/Materials/M_02___Default.M_02___Default:MaterialExpressionTextureSample_0' (0x000001DB602AEB00) Class 'MaterialExpressionTextureSample'>, 'Coordinates')\n"
+}

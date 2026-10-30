@@ -1,0 +1,449 @@
+{
+  "ok": true,
+  "collision_groups": [
+    {
+      "actor": "SM_COLL_Console_Chair01",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Console_Chair02",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Console_Chair03",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Console_Chair04",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Console_Chair05",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Console_Chair06",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Mesh_453_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Mesh_453_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_03",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_04",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_05",
+      "reused_shapes": 6,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_06",
+      "reused_shapes": 11,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_07",
+      "reused_shapes": 5,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_08",
+      "reused_shapes": 11,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_09",
+      "reused_shapes": 11,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Cube_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Cube_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Cylinder_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 3.814697265625e-06,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Cube_002_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Cube_002_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_03",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_025_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_025_0_02",
+      "reused_shapes": 4,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_02",
+      "reused_shapes": 3,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_03",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_04",
+      "reused_shapes": 4,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_003_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 1.1920928955078125e-06,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_003_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 1.1920928955078125e-06,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_004_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_004_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_005_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_005_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_006_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_006_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_03",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_04",
+      "reused_shapes": 6,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_008_0_01",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_008_0_02",
+      "reused_shapes": 1,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_009_0_01",
+      "reused_shapes": 0,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_009_0_02",
+      "reused_shapes": 0,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_010_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_010_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_011_0_01",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_011_0_02",
+      "reused_shapes": 8,
+      "ancestry_drift_cm": 0.0,
+      "method": "Retained each old primitive hull, displaced by barycentric source-to-Ergonomia03 surface correspondence; exported UCX without global regeneration."
+    }
+  ],
+  "doors": [
+    {
+      "actor": "P03FG_D002",
+      "component": "LeftLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9516406776034803,
+          -40.8897157861342,
+          -198.19992709755897
+        ],
+        "max": [
+          1.9516407339679063,
+          40.88971578646592,
+          104.7471269607544
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D002",
+      "component": "RightLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9511034860061773,
+          -40.88991688470099,
+          -198.19992169588804
+        ],
+        "max": [
+          1.9511034296427967,
+          40.88991688467581,
+          104.74712155908347
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D003",
+      "component": "LeftLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -2.0414140786979336,
+          -40.893645039080155,
+          -195.74102461338043
+        ],
+        "max": [
+          2.04141872689274,
+          40.89367447224535,
+          108.75512659549713
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D003",
+      "component": "RightLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9736061052761869,
+          -40.89083755350808,
+          -195.74152529239655
+        ],
+        "max": [
+          1.9736014488849056,
+          40.890861396712125,
+          107.74663984775543
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D004",
+      "component": "LeftLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9511714025091136,
+          -40.88987365437771,
+          -198.29992169588803
+        ],
+        "max": [
+          1.9511868109191965,
+          40.889886713701934,
+          104.78216184228665
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D004",
+      "component": "RightLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9511978837937916,
+          -40.88977210279633,
+          -198.29992709755896
+        ],
+        "max": [
+          1.9512155621021279,
+          40.88966511569807,
+          104.78216724395759
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D001",
+      "component": "LeftLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.9498444854210322,
+          -40.88924288334498,
+          -195.74152529239655
+        ],
+        "max": [
+          1.9498444879270087,
+          40.88925044813136,
+          107.74663984775543
+        ]
+      }
+    },
+    {
+      "actor": "P03FG_D001",
+      "component": "RightLeaf",
+      "reused_shapes": 1,
+      "new_local_hull_bounds_cm": {
+        "min": [
+          -1.94984448193011,
+          -40.88936432780742,
+          -195.74102461338043
+        ],
+        "max": [
+          1.9498444777712802,
+          40.889336015601444,
+          108.75512659549713
+        ]
+      }
+    }
+  ]
+}

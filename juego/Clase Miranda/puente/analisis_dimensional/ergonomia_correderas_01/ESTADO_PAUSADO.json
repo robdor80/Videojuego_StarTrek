@@ -1,0 +1,17 @@
+{
+  "status": "PAUSADO_POR_EL_USUARIO",
+  "date": "2026-10-29T22:21:49.910839+01:00",
+  "source": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_PBR_Manual_01_Seis_Sillas_Hueco_Cerrado_01.blend",
+  "source_sha256": "f2f9b900546c79cc5ca84081d9e4995657c51160ab0c7130733029baf9b077c8",
+  "measured_source_sha256": "fd9106aa663e37fc278cc03be7f68c0ca0d179cf6822b260af71c225d7885e18",
+  "measurements_saved": true,
+  "implementation_done": false,
+  "pending": [
+    "Completar lectura del esqueleto real de Quinn; el intento de exportación UE no produjo una validación terminada",
+    "Calcular holguras de cápsula, extremos de recorrido y apoyo del pie sobre la plataforma",
+    "Evaluar las seis estaciones, postura y alcance; separar hechos de hipótesis de animación",
+    "Preparar tabla de posiciones y recorridos propuestos, informe y evidencias",
+    "Verificar integridad final contra integridad_ue_antes.json"
+  ],
+  "user_intent": "X amarilla = posición retraída de acceso; X roja = posición adelantada de trabajo. Si no basta, estudiar acercar TODO el conjunto plataforma+silla a la consola. Solo análisis, sin mover ni implementar."
+}

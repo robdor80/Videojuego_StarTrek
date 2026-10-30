@@ -1,0 +1,560 @@
+{
+  "ok": true,
+  "checks": {
+    "objects_identical": true,
+    "meshes_uv_custom_normals_identical": true,
+    "all_101_chair_parts_and_material_assignments_identical": true,
+    "all_original_material_graphs_identical": true,
+    "all_original_images_identical": true,
+    "source_and_original_files_unchanged": true,
+    "output_sha256_matches_saved": true,
+    "recovered_graphs_complete": true,
+    "gray_variant_absent": true,
+    "baseline_reproducible": true,
+    "only_manifest_faces_reassigned": true,
+    "original_slots_preserved": true,
+    "all_lcars_faces_unchanged": true,
+    "both_blue_strips_original_emission": true,
+    "all_used_images_available": true,
+    "all_used_images_packed": true,
+    "no_linked_blend_dependencies": true
+  },
+  "counts": {
+    "objects_before": 346,
+    "mesh_datablocks": 171,
+    "objects_assigned": 33,
+    "faces_assigned": 5435,
+    "protected_chair_meshes": 101
+  },
+  "objects_after": 346,
+  "protected_lcars_faces": 2198,
+  "blue_strips": {
+    "left": {
+      "Luz_Azul_Suave_Consola": 18
+    },
+    "right": {
+      "BLUE": 2,
+      "Luz_Azul_Suave_Consola": 16
+    }
+  },
+  "doors": {
+    "Plane.001_0": {
+      "dimensions_cm": [
+        1303.695011138916,
+        81.8760335445404,
+        303.488165140152
+      ],
+      "materials": {
+        "PBR_Puertas_Burdeos_ConTexto": 24
+      }
+    },
+    "Plane.017_0": {
+      "dimensions_cm": [
+        1303.7079811096191,
+        81.79002329707146,
+        304.49615120887756
+      ],
+      "materials": {
+        "PBR_Puertas_Burdeos_ConTexto": 24
+      }
+    },
+    "Plane.018_0": {
+      "dimensions_cm": [
+        1197.9220390319824,
+        81.21099472045898,
+        303.0820943415165
+      ],
+      "materials": {
+        "PBR_Puertas_Burdeos_ConTexto": 24
+      }
+    },
+    "Plane.019_0": {
+      "dimensions_cm": [
+        1169.4939613342285,
+        81.21194839477539,
+        303.08208353817463
+      ],
+      "materials": {
+        "PBR_Puertas_Burdeos_ConTexto": 24
+      }
+    }
+  },
+  "dependencies": [
+    {
+      "image": "Fabric023_2K-JPG_Color.jpg.001",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_0",
+      "packed": true,
+      "size": [
+        256,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_0.001",
+      "packed": true,
+      "size": [
+        256,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_1",
+      "packed": true,
+      "size": [
+        2048,
+        1024
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_10",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_11",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_12",
+      "packed": true,
+      "size": [
+        512,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_13",
+      "packed": true,
+      "size": [
+        1024,
+        1024
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_14",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_15",
+      "packed": true,
+      "size": [
+        64,
+        64
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_16",
+      "packed": true,
+      "size": [
+        512,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_2",
+      "packed": true,
+      "size": [
+        128,
+        128
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_2.001",
+      "packed": true,
+      "size": [
+        128,
+        128
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_3",
+      "packed": true,
+      "size": [
+        4096,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_4",
+      "packed": true,
+      "size": [
+        256,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_5",
+      "packed": true,
+      "size": [
+        2048,
+        1024
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_6",
+      "packed": true,
+      "size": [
+        512,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_6.001",
+      "packed": true,
+      "size": [
+        512,
+        512
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_7",
+      "packed": true,
+      "size": [
+        2048,
+        1024
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_8",
+      "packed": true,
+      "size": [
+        2048,
+        1024
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Image_9",
+      "packed": true,
+      "size": [
+        256,
+        256
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Metal011_2K-JPG_Color.jpg",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Metal011_2K-JPG_Color.jpg.001",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Metal027_2K-JPG_Color.jpg",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Metal059A_2K-JPG_Color.jpg",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    },
+    {
+      "image": "Plastic010_2K-JPG_Color.jpg",
+      "packed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "available": true,
+      "source": "FILE",
+      "colorspace": "sRGB"
+    }
+  ],
+  "packed_used_images": 26,
+  "geometry_object_hashes": {
+    "objects": "9b75998b526a731c18095c85140e100ee707cb92e8c690aefbb9c42cac62d66c",
+    "meshes": "cd2e8997acf8ddc1dd1e2183063c3b6a9f28cd38a2c135afda2458ccca87726d",
+    "chair_assignments": "ee9d92f5f99bc704fe8e4a06732003f92d34ec12b1c2a71041951d1613690d7c"
+  },
+  "per_mesh_geometry_sha256": {
+    "ceiling_0": "9fc877a4f1cd49ea60912fb7d5819bf089c3390f1c43607a1e572cd7c8a1b002",
+    "Circle.001_0": "f1148616073b8f41475137172844270f7507df43324e29a2a35096ac5c5ce2f8",
+    "Circle.002_0": "1ef31c1f53f49a3bc3fc97e7d6c1429ce6690e89d20f4691b4e565384bd660d8",
+    "Circle.003_0": "e7e160be9ed44712dd76e53b49d4f23f81d504cdb5578621676feba0ebc64baf",
+    "Circle.004_0": "95ce1c2ee444b54a5956563dd8fc61cc9a975abfed43999683d7bceee9b9ac05",
+    "Circle_0": "248765d3157fcf3419db2021ea1b198c1594ef2919ec0393ec7bca941d7f4f84",
+    "Cube.000_0": "ee618f8ceaa222ab4a8985d19da9408b87d03d923720fddbaff3d9de1c0fbbf8",
+    "Cube.001_0": "bb7a518a67cec1cb3f58ddd37000b3b92be6a295b57cc3d8468beae55e50d450",
+    "Cube.002_0": "bfbc36b70539e8c19c58b1454403b202dce899e07ce541f0a2e9914e045a2ada",
+    "Cube.003_0": "21798cf34e4be6ce0aab25901f0b0356b2c373235421b3f7c99fc5d2b1c94da6",
+    "Cube_0": "fea7db413834a6565cc5295d735ba38bc32f1a05d0e74d18a9ec7d55e1ef2e89",
+    "Cylinder.002_0": "7738de7e6f8b3f0974ed57a41094b15c15ba57dd8ef076b6a0a14ffce1394cd0",
+    "Cylinder_0": "9ef24415d8b62f30b4d822597c251b97b7213f2e1a02ab269156e15768b25cff",
+    "Editable Mesh_Mat.003_0": "1ee73b63db309e11c65f3886368ce1255d7626048d4f68739e5a8e8dc7e7a327",
+    "Editable Mesh_Mat.003_0.001": "50ac18a3bbf9197ae3b90410a45116b6d7b619380f40a1dd2f7475bde2e329be",
+    "Editable Mesh_Mat.004_0": "8ff99f9181b679cf099f273bb5b5e6069c543221201c5218f58f5c72e80f71e8",
+    "Editable Mesh_Mat.005_0": "6b5ad7d974ff715638c6d7406b785cd5e7932471c0d56f94a693e8a8439f3e3d",
+    "Editable Mesh_Mat.006_0": "9d4751355128c86751260aca3b029bc1e179b4bda3d58f34acf7701d5d0e8127",
+    "Editable Mesh_Mat.007_0": "6f027eb7623912f13df2607da4f9cb871edd3b59ba205588cd83cdceda985a46",
+    "Editable Mesh_Mat.008_0": "700322dd27b16594e9005b1c9087fcb8dedee8b9dbdad9bcc31a4283d79006e2",
+    "Editable Mesh_Mat.009_0": "84a8243d3dbf4f785dffd6d59979b23a24907abae5310cb51a832e60ed2ef0cc",
+    "Editable Mesh_Mat.010_0": "8379b64ee31ce22dae5a9f890b18a76e42537a5ae562c95e17ab0012c87cfcb6",
+    "Editable Mesh_Mat.011_0": "ad9a2003cf86bf4543183ffc63656d22ab560bc5182b4d2c4694a81c56323cbf",
+    "Editable Mesh_Mat.026_0": "81f70d7221b6fd62d54119fe2d1649f5da15ea00ab4ce248500c55ae2359520f",
+    "Mesh.453_0": "d7f6779b4dc96f08de98280050529f70fe4bb60ecc6ad2fa723561440aa8ed9f",
+    "Mesh.587_0": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.587_0.001": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.587_0.002": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.587_0.003": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.587_0.004": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.587_0.005": "41d6a4d7d03781701f49d6a1393be519dd61db3e92b79620e549e32cdfde97b0",
+    "Mesh.588_0": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.588_0.001": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.588_0.002": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.588_0.003": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.588_0.004": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.588_0.005": "d489fbe5034e50616e64eef8477fa0662fd593c77de24b4ba056ba4674ee23fc",
+    "Mesh.589_0": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.589_0.001": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.589_0.002": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.589_0.003": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.589_0.004": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.589_0.005": "354a5668fb863c80e1e1c5f62b4b2f4c5023890fb9f14429f6d6d68a24097c7c",
+    "Mesh.590_0": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.590_0.001": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.590_0.002": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.590_0.003": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.590_0.004": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.590_0.005": "d987dc08444ed645e7e603595154fb67aa8e7b8949d4e31109fd14d5e165b8cf",
+    "Mesh.591_0": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.591_0.001": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.591_0.002": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.591_0.003": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.591_0.004": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.591_0.005": "7119f9d01851ee3e5bbe66fd2b3199c58cdd7088a24f063c5743972429cf2dc9",
+    "Mesh.592_0": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.592_0.001": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.592_0.002": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.592_0.003": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.592_0.004": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.592_0.005": "c0b926acbe68330bb8c679617bced5a117497d59f94f423821cc2aaceece50dd",
+    "Mesh.593_0": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.593_0.001": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.593_0.002": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.593_0.003": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.593_0.004": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.593_0.005": "94c3beab1263ed83c79c4d46a631ae83c3fbfc45e73b60414f077ad618d921bc",
+    "Mesh.594_0": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.594_0.001": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.594_0.002": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.594_0.003": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.594_0.004": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.594_0.005": "4f05c25450301127b4313629d9cfd839e3987ab03fdcd7bc86ccbc68c3e7ea8b",
+    "Mesh.595_0": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.595_0.001": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.595_0.002": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.595_0.003": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.595_0.004": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.595_0.005": "0a92a012d86c5809a8104a7f99ec813741e4f0a62f5c36dc5cfc18d8d474f321",
+    "Mesh.596_0": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.596_0.001": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.596_0.002": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.596_0.003": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.596_0.004": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.596_0.005": "227abcf4af5874c753b85b3592380caeaad1c21048f8a0b5ee217532e19abc68",
+    "Mesh.597_0": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.597_0.001": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.597_0.002": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.597_0.003": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.597_0.004": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.597_0.005": "e7b89e140a1647825bbe75cf7333370df2d1dcf7cef02b4ddda86d91cbdeb354",
+    "Mesh.598_0": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.598_0.001": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.598_0.002": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.598_0.003": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.598_0.004": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.598_0.005": "af4fa8a770c0650931d659a6d07a9174d61a298c13eb9f001a6ea313fa977d9d",
+    "Mesh.599_0": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.599_0.001": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.599_0.002": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.599_0.003": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.599_0.004": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.599_0.005": "49c14199ca2ad018693b011e9fcfc93ffba8b8beeed25ed9a0d827b9cfedee89",
+    "Mesh.600_0": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.600_0.001": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.600_0.002": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.600_0.003": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.600_0.004": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.600_0.005": "ab57b7ae6e478034791e0328e98991dd34b7f6f77eb6e3e6aad3f93c4243e306",
+    "Mesh.601_0": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.601_0.001": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.601_0.002": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.601_0.003": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.601_0.004": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.601_0.005": "57c759e281e9cc417c01fba26e972f7c622c75654d2af95f298d6171511a3256",
+    "Mesh.602_0": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Mesh.602_0.001": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Mesh.602_0.002": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Mesh.602_0.003": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Mesh.602_0.004": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Mesh.602_0.005": "854ddda267bdd46d171e81b5fe978983f0aa868bb2c6d461ec4b608893ecbcb3",
+    "Plane.001_0": "08f945cb73dc765ec55abc020c76a395f380631680b00b0b7a50c75d2fea46ab",
+    "Plane.002_0": "2ce9a6281d4ec95981c06e62a3d2b6437f4f807d04a1ee2950eef5f09ea21643",
+    "Plane.003_0": "f4858b4fc30cf0846225e1a43f475e9dd0c70c8e0ae7c9506049d44b57960f54",
+    "Plane.004_0": "701770eb0f50a54771e2b7ea70e9b11998bbb94d1aca73157156e05815bd395c",
+    "Plane.005_0": "cd5e47c33405e8bc328c0a313e3560c2752d3824b61e11a3423870add8489f0e",
+    "Plane.006_0": "79f44199745cebd5311c24fb116e3c0ba1b8c2ab61cd488930e22803d938d838",
+    "Plane.007_0": "f3275a585bedaad8bd6a12226c2d4f36a71434c277086fbcf60b4ff599246043",
+    "Plane.008_0": "7579bb53feeb36dd95f69c10bce8f6ade5271c8c126b273b1e7f5b633208b4cd",
+    "Plane.009_0": "1ef9e1911ca3f95003e394556f67930b03ed26680c355056c9874c63112bf51e",
+    "Plane.010_0": "3c243fbf831f4f2f639f2306ad39dbb0d60529449e1ef25545b00ef31ccbd2f4",
+    "Plane.011_0": "b82669dc871c58630a73786ebda144da53a6c9a272509137e79d4a0043e43c45",
+    "Plane.012_0": "3d85cfd3831bffe92258e5d756dce85b6cbc025a892d8e0f11a48abc096c84f1",
+    "Plane.013_0": "11544b89301845eb27f69789d92616ef10ee144b1d9f8f3fedb8e66e6865ab7b",
+    "Plane.014_0": "e7c6bd2a4d548de04b5a4bb3ac259d2e3eaef0933150654cc4107397a92de7e5",
+    "Plane.015_0": "0b2d772a18f636f941ce8c4d41ec64cf78cb679bd34bae0efefa876145835957",
+    "Plane.016_0": "addab8f4226b0cbde873edd8e7db7b531cd56e57ddcceba34c00218e6a510d27",
+    "Plane.017_0": "fac357b22174f0b994bebb9b44840b594896885bed7a83ffc27cb8dac0872305",
+    "Plane.018_0": "7d4ced757258247d68bc8edaa8cca434cc4e8c404195a9916c992e70932d9dff",
+    "Plane.019_0": "0cb6e779963febcfc7900f3a5881847c7f7295fe6c618f82cf0df3fe139e85b0",
+    "Plane.020_0": "896e3893f5d55ee231b18533894bf4490a25fba5c089250cfb95e67a0683a074",
+    "Plane.021_0": "5c6a3079247773f538ef773ce602488dce68ab6169f18f0f11e7501ae5c7ae5c",
+    "Plane.022_0": "0d47bad1d48ec332066874ac0dc88eeaeadd66045f23352af05cfa6beb9cc326",
+    "Plane.023_0": "967758367b4180ff868287591d8bbad602ef8f71741b087d1e1e497c7a3a3c90",
+    "Plane.024_0": "5e2fdcd3f651cc43fee1f5e8855775e66ffd46dfc93dd063ac16485c24957192",
+    "Plane.025_0": "986a580d68a40be8e80519532159ad880b800b296648b4c75cfb049193de1d8e",
+    "Plane.026_0": "c6126ea609a14029104a580b09d4714cab90b1c8caf3dbdcb2d07b6bc00aa3a2",
+    "Plane.027_0": "a2bdbcf2602b7b5882d904951c532f3afe6d3adb5462acb5d4732722666f65d4",
+    "Plane.028_0": "43625d1c40de525a00505f44cf79d261eaf35ed25832684222b1a5c011ca6289",
+    "Plane.029_0": "48954c4cc74af055ef46e41e1b98c192c3b053ce0099d9c54375676ae34e2fe8",
+    "Plane.030_0": "7a290012450b7e0e5adfb0bc926aef5060eb0bc3aba7cfb7afe6101461c09871",
+    "Plane.031_0": "2030a5c7d809c5c19605400db492074788ce5d923724358ca386c34be3f0eabe",
+    "Plane.032_0": "0bdb37a38086e0d5afa14db7504fca288888f6ca5de3a47930d586a84595154d",
+    "Plane.033_0": "bd665a6f048711b0f79a713b49be779a2b159f1f8ba89d64855442397ff69e83",
+    "Plane.034_0": "cdc185c489a369c2907e85827aa5b713e28cb0671feb1735c382c3642f60f503",
+    "Plane.035_0": "36a260feafe6e78095ee54e689f105e2a5d7049dd1185024f4a0505b341ad0a1",
+    "Plane.036_0": "a84c49bb69b4b4acb65963c967e8b5641034dca8ab22fa160be6ddce0238190a",
+    "Plane.037_0": "25289baea023756f0909f38978f3b154b2a9d5a219e16ee02007cdbf1ed89ff3",
+    "Plane.038_0": "ba2be24b2e7bf4c0c0055e6330520d183836d301aabf9ee97e6d1790b0a93a3e",
+    "Plane.039_0": "d7df5e930e604df50917fe0fe1a18d36c643a3b91164291f9b43014db6893028",
+    "Plane.040_0": "dd89b0e6a2344a113555ca9c22233c185feeb91e04f2f1a9e4a503f3868a52b3",
+    "Plane.041_0": "80b28535ca8bc1a170c892562d88161b4cda870a6229aa4c2144d4f12bc8ab60",
+    "Plane.042_0": "e08497ef4506bad64ab4946bef5d848d3991a3ed1ff3c34e80ddffc729ea5db1",
+    "Plane.043_0": "4d7300d994feada1ee27ddefec6a482a372c91b1a29c8aa13cd211e8444ac983",
+    "Plane.044_0": "430cc5ee171c2ba98578f5780d5bd8154bff515ccc1a91ebdb34a5a75f1d6e82",
+    "Plane.045_0": "5e5421008921c3a7267b57246d0c5af6e001693731c7b751739f7d05128f5ecf",
+    "Plane.046_0": "9308720ceecc2158e34bfb18602d14c25fc898508412e93f7fc876237ffe7736",
+    "Plane.047_0": "b25eda9989af3cd427a4a6dd51b13963583a75afb8673e030a57b76ba999f34e",
+    "Plane_0": "ff42bb0126e0123b9851ef7a7832dc380fb3451ce3f539d113b7289d503fa808",
+    "Sphere.001_0": "41a5736ed17281a9b2f6836152443867b457af6be2e1bd9b48921b3c8a2e745d",
+    "Sphere_0": "0972039d01457dc2765f72986700a409143304df17875285799590557baa8d01"
+  },
+  "visual_check": {
+    "application": "Blender 5.2.2 LTS",
+    "mode": "Material Preview; exterior, top and oblique interior views",
+    "observed": [
+      "two distinct carpets",
+      "burgundy doors and existing LCARS atlases",
+      "six lateral chairs and captain chair",
+      "both isolated consoles with blue/pale-blue strips"
+    ],
+    "limitations": "Light viewport check only; no heavy render, no artistic approval or UE5 test. Viewport changes were not saved."
+  }
+}

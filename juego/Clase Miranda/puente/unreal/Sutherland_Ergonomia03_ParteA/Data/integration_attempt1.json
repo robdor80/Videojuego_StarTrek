@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "visual": [],
+  "collisions": [],
+  "doors": [],
+  "captain_marker_changes": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Scripts/07_integrate.py\", line 41, in <module>\n    actor=actors['VIS_'+row['actor_source']];c=actor.static_mesh_component;before=c.static_mesh.get_path_name();mesh=import_mesh(row,DEST+'/Visual',before.rsplit('.',1)[-1],False)\n                                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Scripts/07_integrate.py\", line 11, in import_mesh\n    md=opt.static_mesh_import_data;md.combine_meshes=True;md.auto_generate_collision=False;md.import_collision=collision;md.one_convex_hull_per_ucx=True;md.generate_lightmap_u_vs=False;md.convert_scene=True;md.convert_scene_unit=True;md.normal_import_method=u.FBXNormalImportMethod.FBXNIM_IMPORT_NORMALS_AND_TANGENTS;task.options=opt\n                                                                                           ^^^^^^^^^^^^^^^^^^^\nAttributeError: 'FbxStaticMeshImportData' object has no attribute 'import_collision'\n"
+}

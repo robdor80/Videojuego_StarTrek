@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "date": "2026-10-28 Europe/Madrid",
+  "scope": "Doors only",
+  "source_checked": 2821,
+  "blends_checked": 7,
+  "working_baseline_checked": 1837,
+  "derived_checked": 90,
+  "modified_assets": [
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.uasset",
+      "before": "e544519501d1ec11a24a012e82d326632997c6dbe942373d98986011de8879fc",
+      "after": "1a5cfc303cbc5145e8ab4956d809c79d11b0dc3cf6dc3fa693c58112c850a8e2",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.uasset",
+      "before": "b8f07c5ded57e25b8f8717551a364f43c8a6195643e4ef443815adb1da4ff5cb",
+      "after": "ea23970f02cdc1d384ef016dec80a86732fdda30bb8de2ccc45dcd8c9c834438",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.uasset",
+      "before": "2328e835c6d0893260c6591d1ea73516e49b3741e2974eeced718074a3df138c",
+      "after": "728ff160035105c995740365cbc50a5d015cb29e1ece3d502c52bb4f1dbb233a",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.uasset",
+      "before": "7eb52bab001793380cd3e835dbc56353c1deccf15672a5158298c21a27edf757",
+      "after": "fec6e864ae2c46979a3b95c9f3185afa494fd4ed3268c433afd7f8419913eae4",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.uasset",
+      "before": "74852c85a034e46e729db29af6598522575258997a17507968079441a76a9ee0",
+      "after": "47a7dcaffb336f3f4342c078f2b2ea94918672d90bc1e716162ad429067dc4df",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.uasset",
+      "before": "b6ffad480310b76149324c14da8ada09b58ca2b052f2a1a122373957eadca019",
+      "after": "8a68947b703d1f320663750ade2f1523fef9a61ba9c0198bca8bd8a3b02349ae",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.uasset",
+      "before": "4d94df4e954999fc7626e8217fe6f25db7939d7904050b8e20c75c8b890a17a8",
+      "after": "eefe7f820e003cdf242c42bb748051ba6b00f7a367925923a5ce45426c2cbecd",
+      "render_uv_material_unchanged": true
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.uasset",
+      "before": "aedb29fa3eff468b2a0e6eed3c9b071b4bca4a71e133ab29f60d24344f5bf9a3",
+      "after": "be72c8cf805849c5ad99eabfd8b18a49f96556f2100287fbc7bf467301122249",
+      "render_uv_material_unchanged": true
+    }
+  ],
+  "unexpected_changes": [],
+  "map_sha256": "cff10a2af8d8926d85951834d63b31117d0fe3420bb50007ae24ed8be9792d29"
+}

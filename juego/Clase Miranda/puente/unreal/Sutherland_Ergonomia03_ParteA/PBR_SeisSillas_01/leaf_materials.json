@@ -1,0 +1,77 @@
+{
+  "ok": true,
+  "leaves": [
+    {
+      "actor": "SM_PBR_P03FG_D002_LeftLeaf",
+      "door": "P03FG_D002",
+      "parent_component": "LeftLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D002_RightLeaf",
+      "door": "P03FG_D002",
+      "parent_component": "RightLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D003_LeftLeaf",
+      "door": "P03FG_D003",
+      "parent_component": "LeftLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D003_RightLeaf",
+      "door": "P03FG_D003",
+      "parent_component": "RightLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D004_LeftLeaf",
+      "door": "P03FG_D004",
+      "parent_component": "LeftLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D004_RightLeaf",
+      "door": "P03FG_D004",
+      "parent_component": "RightLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D001_LeftLeaf",
+      "door": "P03FG_D001",
+      "parent_component": "LeftLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf"
+    },
+    {
+      "actor": "SM_PBR_P03FG_D001_RightLeaf",
+      "door": "P03FG_D001",
+      "parent_component": "RightLeaf",
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_door.M_door"
+      ],
+      "collision_reused": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "materials": [],
+  "objects": [],
+  "lights": [],
+  "removed_from_new_map_only": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 70, in <module>\n    mat.set_shading_model(u.MaterialShadingModel.MSM_UNLIT);n=build(mat,r['channels']['Emission']);n=custom(mat,f'return C*{r[\"strength\"]:.10f};',{'C':n});assert ML.connect_material_property(n,'',u.MaterialProperty.MP_EMISSIVE_COLOR)\n    ^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'Material' object has no attribute 'set_shading_model'\n"
+}

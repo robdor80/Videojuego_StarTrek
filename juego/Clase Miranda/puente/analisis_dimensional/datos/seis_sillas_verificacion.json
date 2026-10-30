@@ -1,0 +1,958 @@
+{
+  "ok": true,
+  "errors": [],
+  "input_sha256": "72e081d39d419c8fb7351ff7c4dcd1da5302c12442850ecb3a34e414047390b1",
+  "output_sha256": "706e576389015b2e28012bc93ebaf3b61128ef5b06971d0503d6ff930eb6f218",
+  "original_objects": 357,
+  "result_objects": 513,
+  "retained_mesh_datablocks_unchanged": true,
+  "materials_unchanged": true,
+  "images_unchanged": true,
+  "missing_images": [],
+  "existing_object_differences": {
+    "Cilindro": [
+      "world",
+      "local",
+      "basis",
+      "location",
+      "collections"
+    ],
+    "Floor": [
+      "collections"
+    ],
+    "Floor_aiWireframe1_0": [
+      "collections"
+    ],
+    "Mesh.000": [
+      "collections"
+    ],
+    "Mesh.003": [
+      "collections"
+    ],
+    "Mesh.004": [
+      "collections"
+    ],
+    "Mesh.005": [
+      "collections"
+    ],
+    "Mesh.006": [
+      "collections"
+    ],
+    "Mesh.007": [
+      "collections"
+    ],
+    "Mesh.008": [
+      "collections"
+    ],
+    "Mesh.009": [
+      "collections"
+    ],
+    "Mesh.010": [
+      "collections"
+    ],
+    "Mesh.011": [
+      "collections"
+    ],
+    "Mesh.012": [
+      "collections"
+    ],
+    "Mesh.013": [
+      "collections"
+    ],
+    "Mesh.014": [
+      "collections"
+    ],
+    "Mesh.015": [
+      "collections"
+    ],
+    "Mesh.016": [
+      "collections"
+    ],
+    "Mesh.017": [
+      "collections"
+    ],
+    "Mesh.018": [
+      "collections"
+    ],
+    "Mesh.019": [
+      "collections"
+    ],
+    "Mesh.020": [
+      "collections"
+    ],
+    "Mesh.021": [
+      "collections"
+    ],
+    "Mesh.022": [
+      "collections"
+    ],
+    "Mesh.023": [
+      "collections"
+    ],
+    "Mesh.024": [
+      "collections"
+    ],
+    "Mesh.025": [
+      "collections"
+    ],
+    "Mesh.027": [
+      "collections"
+    ],
+    "Mesh.028": [
+      "collections"
+    ],
+    "Mesh.029": [
+      "collections"
+    ],
+    "Mesh.030": [
+      "collections"
+    ],
+    "Mesh.031": [
+      "collections"
+    ],
+    "Mesh.527": [
+      "collections"
+    ],
+    "Mesh.528": [
+      "collections"
+    ],
+    "Mesh.529": [
+      "collections"
+    ],
+    "Mesh.530": [
+      "collections"
+    ],
+    "Mesh.531": [
+      "collections"
+    ],
+    "Mesh.532": [
+      "collections"
+    ],
+    "Mesh.533": [
+      "collections"
+    ],
+    "Mesh.534": [
+      "collections"
+    ],
+    "Mesh.535": [
+      "collections"
+    ],
+    "Mesh.536": [
+      "collections"
+    ],
+    "Mesh.538": [
+      "collections"
+    ],
+    "Mesh.540": [
+      "collections"
+    ],
+    "Mesh.541": [
+      "collections"
+    ],
+    "Mesh.543": [
+      "collections"
+    ],
+    "Mesh.547": [
+      "collections"
+    ],
+    "Mesh.548": [
+      "collections"
+    ],
+    "Mesh.549": [
+      "collections"
+    ],
+    "Mesh.553": [
+      "collections"
+    ],
+    "Mesh.554": [
+      "collections"
+    ],
+    "Mesh.555": [
+      "collections"
+    ],
+    "Mesh.556": [
+      "collections"
+    ],
+    "Mesh.557": [
+      "collections"
+    ],
+    "Mesh.558": [
+      "collections"
+    ],
+    "Mesh.559": [
+      "collections"
+    ],
+    "Mesh.560": [
+      "collections"
+    ],
+    "Mesh.561": [
+      "collections"
+    ],
+    "Mesh.562": [
+      "collections"
+    ],
+    "Mesh.563": [
+      "collections"
+    ],
+    "Mesh.564": [
+      "collections"
+    ],
+    "Mesh.565": [
+      "collections"
+    ],
+    "Mesh.566": [
+      "collections"
+    ],
+    "Mesh.567": [
+      "collections"
+    ],
+    "Mesh.568": [
+      "collections"
+    ],
+    "Mesh.569": [
+      "collections"
+    ],
+    "Mesh.570": [
+      "collections"
+    ],
+    "Mesh.571": [
+      "collections"
+    ],
+    "Mesh.572": [
+      "collections"
+    ],
+    "Mesh.573": [
+      "collections"
+    ],
+    "Mesh.574": [
+      "collections"
+    ],
+    "Mesh.575": [
+      "collections"
+    ],
+    "Mesh.576": [
+      "collections"
+    ],
+    "Mesh.577": [
+      "collections"
+    ],
+    "Mesh.578": [
+      "collections"
+    ],
+    "Mesh.579": [
+      "collections"
+    ],
+    "Mesh.580": [
+      "collections"
+    ],
+    "Mesh.581": [
+      "collections"
+    ],
+    "Mesh.582": [
+      "collections"
+    ],
+    "Mesh.583": [
+      "collections"
+    ],
+    "Mesh.584": [
+      "collections"
+    ],
+    "Mesh.587": [
+      "collections"
+    ],
+    "Mesh.587_0": [
+      "collections"
+    ],
+    "Mesh.587_0.001": [
+      "collections"
+    ],
+    "Mesh.587_0.003": [
+      "collections"
+    ],
+    "Mesh.587_0.004": [
+      "collections"
+    ],
+    "Mesh.587_0.005": [
+      "collections"
+    ],
+    "Mesh.588": [
+      "collections"
+    ],
+    "Mesh.588_0": [
+      "collections"
+    ],
+    "Mesh.588_0.001": [
+      "collections"
+    ],
+    "Mesh.588_0.002": [
+      "collections"
+    ],
+    "Mesh.588_0.003": [
+      "collections"
+    ],
+    "Mesh.588_0.004": [
+      "collections"
+    ],
+    "Mesh.588_0.005": [
+      "collections"
+    ],
+    "Mesh.589": [
+      "collections"
+    ],
+    "Mesh.589_0": [
+      "collections"
+    ],
+    "Mesh.589_0.001": [
+      "collections"
+    ],
+    "Mesh.589_0.002": [
+      "collections"
+    ],
+    "Mesh.589_0.003": [
+      "collections"
+    ],
+    "Mesh.589_0.004": [
+      "collections"
+    ],
+    "Mesh.589_0.005": [
+      "collections"
+    ],
+    "Mesh.590": [
+      "collections"
+    ],
+    "Mesh.590_0": [
+      "collections"
+    ],
+    "Mesh.590_0.001": [
+      "collections"
+    ],
+    "Mesh.590_0.002": [
+      "collections"
+    ],
+    "Mesh.590_0.003": [
+      "collections"
+    ],
+    "Mesh.590_0.004": [
+      "collections"
+    ],
+    "Mesh.590_0.005": [
+      "collections"
+    ],
+    "Mesh.591": [
+      "collections"
+    ],
+    "Mesh.591_0": [
+      "collections"
+    ],
+    "Mesh.591_0.001": [
+      "collections"
+    ],
+    "Mesh.591_0.002": [
+      "collections"
+    ],
+    "Mesh.591_0.003": [
+      "collections"
+    ],
+    "Mesh.591_0.004": [
+      "collections"
+    ],
+    "Mesh.591_0.005": [
+      "collections"
+    ],
+    "Mesh.592": [
+      "collections"
+    ],
+    "Mesh.592_0": [
+      "collections"
+    ],
+    "Mesh.592_0.001": [
+      "collections"
+    ],
+    "Mesh.592_0.002": [
+      "collections"
+    ],
+    "Mesh.592_0.003": [
+      "collections"
+    ],
+    "Mesh.592_0.004": [
+      "collections"
+    ],
+    "Mesh.592_0.005": [
+      "collections"
+    ],
+    "Mesh.593": [
+      "collections"
+    ],
+    "Mesh.593_0": [
+      "collections"
+    ],
+    "Mesh.593_0.001": [
+      "collections"
+    ],
+    "Mesh.593_0.002": [
+      "collections"
+    ],
+    "Mesh.593_0.003": [
+      "collections"
+    ],
+    "Mesh.593_0.004": [
+      "collections"
+    ],
+    "Mesh.593_0.005": [
+      "collections"
+    ],
+    "Mesh.594": [
+      "collections"
+    ],
+    "Mesh.594_0": [
+      "collections"
+    ],
+    "Mesh.594_0.001": [
+      "collections"
+    ],
+    "Mesh.594_0.002": [
+      "collections"
+    ],
+    "Mesh.594_0.003": [
+      "collections"
+    ],
+    "Mesh.594_0.004": [
+      "collections"
+    ],
+    "Mesh.594_0.005": [
+      "collections"
+    ],
+    "Mesh.595": [
+      "collections"
+    ],
+    "Mesh.595_0": [
+      "collections"
+    ],
+    "Mesh.595_0.001": [
+      "collections"
+    ],
+    "Mesh.595_0.003": [
+      "collections"
+    ],
+    "Mesh.595_0.004": [
+      "collections"
+    ],
+    "Mesh.595_0.005": [
+      "collections"
+    ],
+    "Mesh.596": [
+      "collections"
+    ],
+    "Mesh.596_0": [
+      "collections"
+    ],
+    "Mesh.596_0.001": [
+      "collections"
+    ],
+    "Mesh.596_0.002": [
+      "collections"
+    ],
+    "Mesh.596_0.003": [
+      "collections"
+    ],
+    "Mesh.596_0.004": [
+      "collections"
+    ],
+    "Mesh.596_0.005": [
+      "collections"
+    ],
+    "Mesh.597": [
+      "collections"
+    ],
+    "Mesh.597_0": [
+      "collections"
+    ],
+    "Mesh.597_0.001": [
+      "collections"
+    ],
+    "Mesh.597_0.002": [
+      "collections"
+    ],
+    "Mesh.597_0.003": [
+      "collections"
+    ],
+    "Mesh.597_0.004": [
+      "collections"
+    ],
+    "Mesh.597_0.005": [
+      "collections"
+    ],
+    "Mesh.598": [
+      "collections"
+    ],
+    "Mesh.598_0": [
+      "collections"
+    ],
+    "Mesh.598_0.001": [
+      "collections"
+    ],
+    "Mesh.598_0.002": [
+      "collections"
+    ],
+    "Mesh.598_0.003": [
+      "collections"
+    ],
+    "Mesh.598_0.004": [
+      "collections"
+    ],
+    "Mesh.598_0.005": [
+      "collections"
+    ],
+    "Mesh.599": [
+      "collections"
+    ],
+    "Mesh.599_0": [
+      "collections"
+    ],
+    "Mesh.599_0.001": [
+      "collections"
+    ],
+    "Mesh.599_0.002": [
+      "collections"
+    ],
+    "Mesh.599_0.003": [
+      "collections"
+    ],
+    "Mesh.599_0.004": [
+      "collections"
+    ],
+    "Mesh.599_0.005": [
+      "collections"
+    ],
+    "Mesh.600": [
+      "collections"
+    ],
+    "Mesh.600_0": [
+      "collections"
+    ],
+    "Mesh.600_0.001": [
+      "collections"
+    ],
+    "Mesh.600_0.002": [
+      "collections"
+    ],
+    "Mesh.600_0.003": [
+      "collections"
+    ],
+    "Mesh.600_0.004": [
+      "collections"
+    ],
+    "Mesh.600_0.005": [
+      "collections"
+    ],
+    "Mesh.601": [
+      "collections"
+    ],
+    "Mesh.601_0": [
+      "collections"
+    ],
+    "Mesh.601_0.001": [
+      "collections"
+    ],
+    "Mesh.601_0.002": [
+      "collections"
+    ],
+    "Mesh.601_0.003": [
+      "collections"
+    ],
+    "Mesh.601_0.004": [
+      "collections"
+    ],
+    "Mesh.601_0.005": [
+      "collections"
+    ],
+    "Mesh.602": [
+      "collections"
+    ],
+    "Mesh.602_0": [
+      "collections"
+    ],
+    "Mesh.602_0.001": [
+      "collections"
+    ],
+    "Mesh.602_0.002": [
+      "collections"
+    ],
+    "Mesh.602_0.003": [
+      "collections"
+    ],
+    "Mesh.602_0.004": [
+      "collections"
+    ],
+    "Mesh.602_0.005": [
+      "collections"
+    ]
+  },
+  "stations": [
+    {
+      "station": "P01_Maestra",
+      "yaw_relative_deg": 0.0,
+      "bounds_m": [
+        [
+          4.207911014556885,
+          -6.049480438232422,
+          7.629395781805215e-07
+        ],
+        [
+          5.154669761657715,
+          -4.973484516143799,
+          1.5114942789077759
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467587471008301,
+        1.075995922088623,
+        1.5114935159681977
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          4.305379867553711,
+          -5.764220237731934,
+          7.599592208862305e-07
+        ],
+        [
+          5.055379867553711,
+          -5.764220237731934,
+          7.748603820800781e-07
+        ],
+        [
+          5.055379867553711,
+          -5.264220237731934,
+          7.152557373046875e-07
+        ],
+        [
+          4.305379867553711,
+          -5.264220237731934,
+          7.152557373046875e-07
+        ],
+        [
+          4.680379867553711,
+          -5.514220714569092,
+          7.599592208862305e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": -1.1920803899556631e-08,
+      "foot_to_platform_gap_at_axis_m": 1.4901161193847656e-08,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 38
+        }
+      ]
+    },
+    {
+      "station": "P02_Xpos_Y-3.72934",
+      "yaw_relative_deg": 0.0,
+      "bounds_m": [
+        [
+          4.207911014556885,
+          -4.2646002769470215,
+          5.231250952419941e-07
+        ],
+        [
+          5.154669761657715,
+          -3.1886043548583984,
+          1.5114941596984863
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467587471008301,
+        1.075995922088623,
+        1.511493636573391
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          4.305379867553711,
+          -3.979340076446533,
+          5.513429641723633e-07
+        ],
+        [
+          5.055379867553711,
+          -3.979340076446533,
+          5.364418029785156e-07
+        ],
+        [
+          5.055379867553711,
+          -3.479340076446533,
+          4.76837158203125e-07
+        ],
+        [
+          4.305379867553711,
+          -3.479340076446533,
+          4.76837158203125e-07
+        ],
+        [
+          4.680379867553711,
+          -3.7293405532836914,
+          5.066394805908203e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": -2.821786893036915e-08,
+      "foot_to_platform_gap_at_axis_m": 1.4901161193847656e-08,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "SS_P02_Xpos_Y-3.72934__Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 38
+        }
+      ]
+    },
+    {
+      "station": "P03_Xpos_Y-1.73943",
+      "yaw_relative_deg": 0.0,
+      "bounds_m": [
+        [
+          4.207911014556885,
+          -2.2746899127960205,
+          2.5576304096830427e-07
+        ],
+        [
+          5.154669761657715,
+          -1.198693871498108,
+          1.5114938020706177
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467587471008301,
+        1.0759960412979126,
+        1.5114935463075767
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          4.305379867553711,
+          -1.9894297122955322,
+          2.5331974029541016e-07
+        ],
+        [
+          5.055379867553711,
+          -1.9894297122955322,
+          2.5331974029541016e-07
+        ],
+        [
+          5.055379867553711,
+          -1.4894297122955322,
+          1.9371509552001953e-07
+        ],
+        [
+          4.305379867553711,
+          -1.4894297122955322,
+          1.9371509552001953e-07
+        ],
+        [
+          4.680379867553711,
+          -1.7394301891326904,
+          2.2351741790771484e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": 2.443300672894111e-09,
+      "foot_to_platform_gap_at_axis_m": 2.9802322387695312e-08,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "SS_P03_Xpos_Y-1.73943__Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 38
+        }
+      ]
+    },
+    {
+      "station": "P04_Xneg_Y-1.80778",
+      "yaw_relative_deg": -179.99998633962167,
+      "bounds_m": [
+        [
+          -5.164539813995361,
+          -2.3485164642333984,
+          1.9044080090679927e-07
+        ],
+        [
+          -4.217780590057373,
+          -1.2725205421447754,
+          1.5114939212799072
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467592239379883,
+        1.075995922088623,
+        1.5114937308391063
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          -5.065249919891357,
+          -2.0577807426452637,
+          2.8312206268310547e-07
+        ],
+        [
+          -4.315249919891357,
+          -2.0577807426452637,
+          2.8312206268310547e-07
+        ],
+        [
+          -4.315249919891357,
+          -1.5577806234359741,
+          2.086162567138672e-07
+        ],
+        [
+          -5.065249919891357,
+          -1.5577806234359741,
+          2.086162567138672e-07
+        ],
+        [
+          -4.690249919891357,
+          -1.807780385017395,
+          2.5331974029541016e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": -9.26812617763062e-08,
+      "foot_to_platform_gap_at_axis_m": 1.4901161193847656e-08,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "SS_P04_Xneg_Y-1.80778__Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 49
+        }
+      ]
+    },
+    {
+      "station": "P05_Xneg_Y-3.59266",
+      "yaw_relative_deg": -179.99998633962167,
+      "bounds_m": [
+        [
+          -5.164549827575684,
+          -4.133396625518799,
+          4.3025522700190777e-07
+        ],
+        [
+          -4.217790603637695,
+          -3.057400703430176,
+          1.5114941596984863
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467592239379883,
+        1.075995922088623,
+        1.5114937294432593
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          -5.06525993347168,
+          -3.842660903930664,
+          5.066394805908203e-07
+        ],
+        [
+          -4.31525993347168,
+          -3.842660903930664,
+          5.066394805908203e-07
+        ],
+        [
+          -4.31525993347168,
+          -3.342660903930664,
+          4.3213367462158203e-07
+        ],
+        [
+          -5.06525993347168,
+          -3.342660903930664,
+          4.3213367462158203e-07
+        ],
+        [
+          -4.69025993347168,
+          -3.592660665512085,
+          4.76837158203125e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": -7.638425358891254e-08,
+      "foot_to_platform_gap_at_axis_m": 0.0,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "SS_P05_Xneg_Y-3.59266__Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 49
+        }
+      ]
+    },
+    {
+      "station": "P06_Xneg_Y-5.58256",
+      "yaw_relative_deg": -179.99998633962167,
+      "bounds_m": [
+        [
+          -5.164549827575684,
+          -6.12329626083374,
+          6.976159738769638e-07
+        ],
+        [
+          -4.217790603637695,
+          -5.047300338745117,
+          1.5114943981170654
+        ]
+      ],
+      "dimensions_world_m": [
+        0.9467592239379883,
+        1.075995922088623,
+        1.5114937005010916
+      ],
+      "mesh_count": 16,
+      "floor_samples_m": [
+        [
+          -5.06525993347168,
+          -5.8325605392456055,
+          7.897615432739258e-07
+        ],
+        [
+          -4.31525993347168,
+          -5.8325605392456055,
+          7.748603820800781e-07
+        ],
+        [
+          -4.31525993347168,
+          -5.3325605392456055,
+          7.152557373046875e-07
+        ],
+        [
+          -5.06525993347168,
+          -5.3325605392456055,
+          7.003545761108398e-07
+        ],
+        [
+          -4.69025993347168,
+          -5.582560062408447,
+          7.301568984985352e-07
+        ]
+      ],
+      "minimum_ground_clearance_m": -9.214556939696195e-08,
+      "foot_to_platform_gap_at_axis_m": 0.0,
+      "environment_surface_intersections": [],
+      "floor_surface_contacts_within_tolerance": [
+        {
+          "chair_component": "SS_P06_Xneg_Y-5.58256__Floor_aiWireframe1_0",
+          "environment": "Circle_0",
+          "intersecting_face_pairs": 49
+        }
+      ]
+    }
+  ],
+  "collision_method": "Evaluated world-space BVH triangle surface overlap against every visible environment mesh; floor rays at four platform corners and axis. Intended internal assembly overlaps excluded. Does not certify ergonomics or watertight solid containment.",
+  "removed_objects": [
+    "FloorRail01_aiWireframe1_0",
+    "FloorRail02_aiWireframe1_0",
+    "FloorRail01",
+    "FloorRail02"
+  ],
+  "removed_mesh_datablocks": [
+    "FloorRail01_aiWireframe1_0",
+    "FloorRail02_aiWireframe1_0"
+  ]
+}

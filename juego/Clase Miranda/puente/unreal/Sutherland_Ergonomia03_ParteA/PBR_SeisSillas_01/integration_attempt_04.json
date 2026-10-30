@@ -1,0 +1,1728 @@
+{
+  "ok": false,
+  "materials": [
+    {
+      "source": "02___Default",
+      "asset": "/Game/SutherlandPBR01/Materials/M_02___Default.M_02___Default",
+      "source_hash": "c02946e7faf92ec6ddcae5f8cfff1764e69d82d15b53057f1ddabdb36df8f54f"
+    },
+    {
+      "source": "BLUE",
+      "asset": "/Game/SutherlandPBR01/Materials/M_BLUE.M_BLUE",
+      "source_hash": "44ffc0ffa66e0c0c6e678ed79affbbe4b8aa3e9aa4c94d980ac14d4f3a35d62f"
+    },
+    {
+      "source": "Material.000e26",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Material_000e26.M_Material_000e26",
+      "source_hash": "90a5555a1a49b1c2eb0c3d1f5069ddbe2241f59df86eb4237aba8ba7679cd78c"
+    },
+    {
+      "source": "Material__1",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Material__1.M_Material__1",
+      "source_hash": "f2f7d6ddc8b814e1cacbe561eba17c433e1bcbf2e9f1cb8b69b4861c431fce9b"
+    },
+    {
+      "source": "Material__11",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Material__11.M_Material__11",
+      "source_hash": "6daf7afbaa56d4a5a1e35615db0e17efe6df49d919f30ebe7f8a09c3e1fe88b3"
+    },
+    {
+      "source": "Material__12",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Material__12.M_Material__12",
+      "source_hash": "8fbd4ab8c703d0ae6d1deb44b19c8e305edbc40d9466fb4386c309074ef7439b"
+    },
+    {
+      "source": "Material__13",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Material__13.M_Material__13",
+      "source_hash": "9dfd5350ff62db3bd5a05b6c04ac57df2095feec9e217540f33dea97d2c270c2"
+    },
+    {
+      "source": "PBR_Blanco_Hueso",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso",
+      "source_hash": "4e5fa2a64f8787815099162eafef75be85b9fd02065cb7629fe8250f91e96562"
+    },
+    {
+      "source": "PBR_Blanco_Hueso_Consolas",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas",
+      "source_hash": "a4a7c29c6885e3b62bf91835608a2505e94a0bfe32f9ffe52508df3d2e6ed1f0"
+    },
+    {
+      "source": "PBR_Mamparos_Gris_Claro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro",
+      "source_hash": "8e641ef5854f7152523dd45c9103da11c7bbb23483b6be52de4b3409cf53b6ad"
+    },
+    {
+      "source": "PBR_Mamparos_Gris_Oscuro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro",
+      "source_hash": "cb6a28015c7abc2a6d85cb292216e88287ea1feb8b571c3ec2cc5f72a9f4d7e4"
+    },
+    {
+      "source": "PBR_Metal_Sillas_6",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6",
+      "source_hash": "8f5415e6ef8b95fbc2050fd420dbb15739934b1bf6440c3b5a0bdc98038cfcd1"
+    },
+    {
+      "source": "PBR_Moqueta azul",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_azul.M_PBR_Moqueta_azul",
+      "source_hash": "06c879094acd46158f162bb8a1683344fe696a44b51bdbef9327d9d6f3504e51"
+    },
+    {
+      "source": "PBR_Moqueta roja",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_roja.M_PBR_Moqueta_roja",
+      "source_hash": "7687f3c7efde2918805d476a2211eb66062a468be1e6d1b3ed424dd43602c3f8"
+    },
+    {
+      "source": "PBR_Piano",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Piano.M_PBR_Piano",
+      "source_hash": "6ac4d64a449ea4fe74d83dbb26e36c9072ebacc1d4997b7ef8b3d911802aff0a"
+    },
+    {
+      "source": "PBR_Puertas",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Puertas.M_PBR_Puertas",
+      "source_hash": "2dc6546c9dd353fba1d2382dc51cc02a15d52444f5da61c0cafff45058c0202c"
+    },
+    {
+      "source": "PBR_Silla_Capitan_Cabezal_Negro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cabezal_Negro.M_PBR_Silla_Capitan_Cabezal_Negro",
+      "source_hash": "9ba1e61016b400df0057745d54093486718dad9bb0015b2124a9546455ae3a5f"
+    },
+    {
+      "source": "PBR_Silla_Capitan_Cuero_Marron",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Marron.M_PBR_Silla_Capitan_Cuero_Marron",
+      "source_hash": "0923e3cad5e39a1410819c0cef735a7dd8400566d2dc45bd4aead3a9243fb968"
+    },
+    {
+      "source": "PBR_Silla_Capitan_Cuero_Negro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro",
+      "source_hash": "fc937080a50262ea100ac47477c0f04f6a47255acc814119dd7a7cff77832872"
+    },
+    {
+      "source": "PBR_Silla_Capitan_Pie_Titanio",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio",
+      "source_hash": "23934ad42917545fea06d207a7a9ca9fd99086fda25773570c44498a74ea370e"
+    },
+    {
+      "source": "PBR_Techo_Acero.001",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Acero_001.M_PBR_Techo_Acero_001",
+      "source_hash": "14e37731989849b396ad8248cb490299f9f863c756e04c7ad86554be7766ff55"
+    },
+    {
+      "source": "PBR_Techo_Titanio_Claro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Claro.M_PBR_Techo_Titanio_Claro",
+      "source_hash": "af4022d2373c6318f82958d1bf3e8983a66f3a27ec4d9c4afc314833449edab8"
+    },
+    {
+      "source": "PBR_Techo_Titanio_Oscuro",
+      "asset": "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro",
+      "source_hash": "23934ad42917545fea06d207a7a9ca9fd99086fda25773570c44498a74ea370e"
+    },
+    {
+      "source": "Plane.037_0",
+      "asset": "/Game/SutherlandPBR01/Materials/M_Plane_037_0.M_Plane_037_0",
+      "source_hash": "fd946879a56f2d0750aa3d42033ee7c89e9200a260af7713e19d272a91bb06b4"
+    },
+    {
+      "source": "aiWireframe1",
+      "asset": "/Game/SutherlandPBR01/Materials/M_aiWireframe1.M_aiWireframe1",
+      "source_hash": "6dde7c773f7f1d3f6a8a21b7a662dc346e7528e47e88c6a73a40b772ebb41960"
+    },
+    {
+      "source": "captainschair",
+      "asset": "/Game/SutherlandPBR01/Materials/M_captainschair.M_captainschair",
+      "source_hash": "ec16ba3d02f2e6cfa2adbc06c1dc2232b16c92512b748770ece3b63e705a4625"
+    },
+    {
+      "source": "captainschair.001",
+      "asset": "/Game/SutherlandPBR01/Materials/M_captainschair_001.M_captainschair_001",
+      "source_hash": "dda2424fdc87fa901ec26a215c1847d8d4788382dbcf758135cefcb0c5da2b92"
+    },
+    {
+      "source": "ceiling",
+      "asset": "/Game/SutherlandPBR01/Materials/M_ceiling.M_ceiling",
+      "source_hash": "315093d0caf2c023c8f79971ee4ec1c1ad9a58f2b109feef951dadec1391b45b"
+    },
+    {
+      "source": "cream",
+      "asset": "/Game/SutherlandPBR01/Materials/M_cream.M_cream",
+      "source_hash": "502c8c4ba6e14208e2ca07b75d37fe7a4088dc2ac024400be677326a46af5282"
+    },
+    {
+      "source": "door",
+      "asset": "/Game/SutherlandPBR01/Materials/M_door.M_door",
+      "source_hash": "ef641acb35a254616f67b552f443b217b80e02c37b33f770204b753e3bd85516"
+    },
+    {
+      "source": "floor",
+      "asset": "/Game/SutherlandPBR01/Materials/M_floor.M_floor",
+      "source_hash": "40d379f35d112facd19029c994f69573bafbc02c4a76d1dc9b32b4e448ca4b69"
+    },
+    {
+      "source": "grey",
+      "asset": "/Game/SutherlandPBR01/Materials/M_grey.M_grey",
+      "source_hash": "555b7aeeaaa11b4ab0fc34133f91ea509bf8b756a6f9ed2d82ec7784af58b21e"
+    },
+    {
+      "source": "lcardtype",
+      "asset": "/Game/SutherlandPBR01/Materials/M_lcardtype.M_lcardtype",
+      "source_hash": "544aafc104ee59a6edc0e21bb48f38736c9f5af9505659ab2619dca4cd51d6b5"
+    },
+    {
+      "source": "lcarkey",
+      "asset": "/Game/SutherlandPBR01/Materials/M_lcarkey.M_lcarkey",
+      "source_hash": "dda2424fdc87fa901ec26a215c1847d8d4788382dbcf758135cefcb0c5da2b92"
+    },
+    {
+      "source": "lcarsdisplay",
+      "asset": "/Game/SutherlandPBR01/Materials/M_lcarsdisplay.M_lcarsdisplay",
+      "source_hash": "544aafc104ee59a6edc0e21bb48f38736c9f5af9505659ab2619dca4cd51d6b5"
+    },
+    {
+      "source": "lcarsdisplay.001",
+      "asset": "/Game/SutherlandPBR01/Materials/M_lcarsdisplay_001.M_lcarsdisplay_001",
+      "source_hash": "66b1833972cd8902f1179d229910a4aafe40780f9b89ea8c283ea3637eb29219"
+    },
+    {
+      "source": "light",
+      "asset": "/Game/SutherlandPBR01/Materials/M_light.M_light",
+      "source_hash": "9361ba9384f4d6ff73d6bf289162d9ec59cbba62f423eca3744bfb0390521662"
+    },
+    {
+      "source": "light.001",
+      "asset": "/Game/SutherlandPBR01/Materials/M_light_001.M_light_001",
+      "source_hash": "d0139e5e5b564255cc03bbbbde8b2e944323afe0257d1c9bce98b6d439464584"
+    },
+    {
+      "source": "plaque",
+      "asset": "/Game/SutherlandPBR01/Materials/M_plaque.M_plaque",
+      "source_hash": "32566c97ae123ae77a3a5b84ae0479bf55a638fc28740373fdda9479e2ce5609"
+    },
+    {
+      "source": "space",
+      "asset": "/Game/SutherlandPBR01/Materials/M_space.M_space",
+      "source_hash": "592be3ab8ea0bb6908ebb411b17393ec2ec3e30ee57b934e9aa7a49c982ff9df"
+    },
+    {
+      "source": "turbolcar",
+      "asset": "/Game/SutherlandPBR01/Materials/M_turbolcar.M_turbolcar",
+      "source_hash": "a88549cb4ad35ec2dc92580992d139845d0154e3e839c52ed75007e7203d956a"
+    },
+    {
+      "source": "upperwall.001",
+      "asset": "/Game/SutherlandPBR01/Materials/M_upperwall_001.M_upperwall_001",
+      "source_hash": "502c8c4ba6e14208e2ca07b75d37fe7a4088dc2ac024400be677326a46af5282"
+    }
+  ],
+  "objects": [
+    {
+      "source": "Editable Mesh_Mat.026_0",
+      "actor": "PBR_Editable Mesh_Mat.026_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_026_0.SM_PBR_Editable_Mesh_Mat_026_0",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "Mesh.453_0",
+      "actor": "PBR_Mesh.453_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_453_0.SM_PBR_Mesh_453_0",
+      "bounds_error_cm": 5.245208740234375e-06
+    },
+    {
+      "source": "ceiling_0",
+      "actor": "PBR_ceiling_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_ceiling_0.SM_PBR_ceiling_0",
+      "bounds_error_cm": 5.8978796005249023e-05
+    },
+    {
+      "source": "Plane_0",
+      "actor": "PBR_Plane_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_0.SM_PBR_Plane_0",
+      "bounds_error_cm": 2.8897076845169067e-05
+    },
+    {
+      "source": "Plane.002_0",
+      "actor": "PBR_Plane.002_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_002_0.SM_PBR_Plane_002_0",
+      "bounds_error_cm": 1.4066696166992188e-05
+    },
+    {
+      "source": "Plane.003_0",
+      "actor": "PBR_Plane.003_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_003_0.SM_PBR_Plane_003_0",
+      "bounds_error_cm": 5.5909156799316406e-05
+    },
+    {
+      "source": "Circle_0",
+      "actor": "PBR_Circle_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Circle_0.SM_PBR_Circle_0",
+      "bounds_error_cm": 7.343292236328125e-05
+    },
+    {
+      "source": "Cube.000_0",
+      "actor": "PBR_Cube.000_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cube_000_0.SM_PBR_Cube_000_0",
+      "bounds_error_cm": 2.09808349609375e-05
+    },
+    {
+      "source": "Cube.001_0",
+      "actor": "PBR_Cube.001_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cube_001_0.SM_PBR_Cube_001_0",
+      "bounds_error_cm": 9.5367431640625e-06
+    },
+    {
+      "source": "Plane.005_0",
+      "actor": "PBR_Plane.005_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_005_0.SM_PBR_Plane_005_0",
+      "bounds_error_cm": 5.316734313964844e-05
+    },
+    {
+      "source": "Plane.004_0",
+      "actor": "PBR_Plane.004_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_004_0.SM_PBR_Plane_004_0",
+      "bounds_error_cm": 4.76837158203125e-05
+    },
+    {
+      "source": "Plane.006_0",
+      "actor": "PBR_Plane.006_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_006_0.SM_PBR_Plane_006_0",
+      "bounds_error_cm": 4.190206527709961e-05
+    },
+    {
+      "source": "Plane.007_0",
+      "actor": "PBR_Plane.007_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_007_0.SM_PBR_Plane_007_0",
+      "bounds_error_cm": 5.245208740234375e-05
+    },
+    {
+      "source": "Circle.001_0",
+      "actor": "PBR_Circle.001_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Circle_001_0.SM_PBR_Circle_001_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Sphere.001_0",
+      "actor": "PBR_Sphere.001_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Sphere_001_0.SM_PBR_Sphere_001_0",
+      "bounds_error_cm": 2.384185791015625e-06
+    },
+    {
+      "source": "Cube_0",
+      "actor": "PBR_Cube_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cube_0.SM_PBR_Cube_0",
+      "bounds_error_cm": 4.291534423828125e-06
+    },
+    {
+      "source": "Cylinder_0",
+      "actor": "PBR_Cylinder_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cylinder_0.SM_PBR_Cylinder_0",
+      "bounds_error_cm": 2.5033950805664062e-06
+    },
+    {
+      "source": "Plane.008_0",
+      "actor": "PBR_Plane.008_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_008_0.SM_PBR_Plane_008_0",
+      "bounds_error_cm": 5.1975250244140625e-05
+    },
+    {
+      "source": "Cylinder.002_0",
+      "actor": "PBR_Cylinder.002_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cylinder_002_0.SM_PBR_Cylinder_002_0",
+      "bounds_error_cm": 5.626678466796875e-05
+    },
+    {
+      "source": "Plane.009_0",
+      "actor": "PBR_Plane.009_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_009_0.SM_PBR_Plane_009_0",
+      "bounds_error_cm": 6.103515625e-05
+    },
+    {
+      "source": "Plane.010_0",
+      "actor": "PBR_Plane.010_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_010_0.SM_PBR_Plane_010_0",
+      "bounds_error_cm": 5.78128601773642e-05
+    },
+    {
+      "source": "Plane.013_0",
+      "actor": "PBR_Plane.013_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_013_0.SM_PBR_Plane_013_0",
+      "bounds_error_cm": 4.89354133605957e-05
+    },
+    {
+      "source": "Plane.014_0",
+      "actor": "PBR_Plane.014_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_014_0.SM_PBR_Plane_014_0",
+      "bounds_error_cm": 5.630403757095337e-05
+    },
+    {
+      "source": "Plane.015_0",
+      "actor": "PBR_Plane.015_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_015_0.SM_PBR_Plane_015_0",
+      "bounds_error_cm": 2.09808349609375e-05
+    },
+    {
+      "source": "Plane.016_0",
+      "actor": "PBR_Plane.016_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_016_0.SM_PBR_Plane_016_0",
+      "bounds_error_cm": 2.09808349609375e-05
+    },
+    {
+      "source": "Circle.002_0",
+      "actor": "PBR_Circle.002_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Circle_002_0.SM_PBR_Circle_002_0",
+      "bounds_error_cm": 3.528594970703125e-05
+    },
+    {
+      "source": "Plane.020_0",
+      "actor": "PBR_Plane.020_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_020_0.SM_PBR_Plane_020_0",
+      "bounds_error_cm": 1.33514404296875e-05
+    },
+    {
+      "source": "Plane.022_0",
+      "actor": "PBR_Plane.022_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_022_0.SM_PBR_Plane_022_0",
+      "bounds_error_cm": 2.86102294921875e-05
+    },
+    {
+      "source": "Cube.002_0",
+      "actor": "PBR_Cube.002_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cube_002_0.SM_PBR_Cube_002_0",
+      "bounds_error_cm": 4.76837158203125e-06
+    },
+    {
+      "source": "Plane.012_0",
+      "actor": "PBR_Plane.012_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_012_0.SM_PBR_Plane_012_0",
+      "bounds_error_cm": 6.29425048828125e-05
+    },
+    {
+      "source": "Plane.028_0",
+      "actor": "PBR_Plane.028_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_028_0.SM_PBR_Plane_028_0",
+      "bounds_error_cm": 1.6450881958007812e-05
+    },
+    {
+      "source": "Plane.039_0",
+      "actor": "PBR_Plane.039_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_039_0.SM_PBR_Plane_039_0",
+      "bounds_error_cm": 1.043675365508534e-05
+    },
+    {
+      "source": "Plane.038_0",
+      "actor": "PBR_Plane.038_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_038_0.SM_PBR_Plane_038_0",
+      "bounds_error_cm": 7.867813110351562e-06
+    },
+    {
+      "source": "Plane.031_0",
+      "actor": "PBR_Plane.031_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_031_0.SM_PBR_Plane_031_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Sphere_0",
+      "actor": "PBR_Sphere_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Sphere_0.SM_PBR_Sphere_0",
+      "bounds_error_cm": 0.0
+    },
+    {
+      "source": "Plane.037_0",
+      "actor": "PBR_Plane.037_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_037_0.SM_PBR_Plane_037_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Circle.004_0",
+      "actor": "PBR_Circle.004_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Circle_004_0.SM_PBR_Circle_004_0",
+      "bounds_error_cm": 0.0
+    },
+    {
+      "source": "Circle.003_0",
+      "actor": "PBR_Circle.003_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Circle_003_0.SM_PBR_Circle_003_0",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "Plane.036_0",
+      "actor": "PBR_Plane.036_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_036_0.SM_PBR_Plane_036_0",
+      "bounds_error_cm": 1.71661376953125e-05
+    },
+    {
+      "source": "Plane.035_0",
+      "actor": "PBR_Plane.035_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_035_0.SM_PBR_Plane_035_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Plane.034_0",
+      "actor": "PBR_Plane.034_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_034_0.SM_PBR_Plane_034_0",
+      "bounds_error_cm": 7.62939453125e-06
+    },
+    {
+      "source": "Plane.033_0",
+      "actor": "PBR_Plane.033_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_033_0.SM_PBR_Plane_033_0",
+      "bounds_error_cm": 7.62939453125e-06
+    },
+    {
+      "source": "Plane.032_0",
+      "actor": "PBR_Plane.032_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_032_0.SM_PBR_Plane_032_0",
+      "bounds_error_cm": 1.71661376953125e-05
+    },
+    {
+      "source": "Plane.030_0",
+      "actor": "PBR_Plane.030_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_030_0.SM_PBR_Plane_030_0",
+      "bounds_error_cm": 1.1444091796875e-05
+    },
+    {
+      "source": "Plane.027_0",
+      "actor": "PBR_Plane.027_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_027_0.SM_PBR_Plane_027_0",
+      "bounds_error_cm": 7.62939453125e-06
+    },
+    {
+      "source": "Plane.029_0",
+      "actor": "PBR_Plane.029_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_029_0.SM_PBR_Plane_029_0",
+      "bounds_error_cm": 7.62939453125e-06
+    },
+    {
+      "source": "Plane.026_0",
+      "actor": "PBR_Plane.026_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_026_0.SM_PBR_Plane_026_0",
+      "bounds_error_cm": 5.7220458984375e-06
+    },
+    {
+      "source": "Plane.025_0",
+      "actor": "PBR_Plane.025_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_025_0.SM_PBR_Plane_025_0",
+      "bounds_error_cm": 7.62939453125e-06
+    },
+    {
+      "source": "Plane.024_0",
+      "actor": "PBR_Plane.024_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_024_0.SM_PBR_Plane_024_0",
+      "bounds_error_cm": 1.1444091796875e-05
+    },
+    {
+      "source": "Plane.023_0",
+      "actor": "PBR_Plane.023_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_023_0.SM_PBR_Plane_023_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Plane.021_0",
+      "actor": "PBR_Plane.021_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_021_0.SM_PBR_Plane_021_0",
+      "bounds_error_cm": 1.52587890625e-05
+    },
+    {
+      "source": "Plane.011_0",
+      "actor": "PBR_Plane.011_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_011_0.SM_PBR_Plane_011_0",
+      "bounds_error_cm": 5.340576171875e-05
+    },
+    {
+      "source": "Plane.040_0",
+      "actor": "PBR_Plane.040_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_040_0.SM_PBR_Plane_040_0",
+      "bounds_error_cm": 6.103515625e-05
+    },
+    {
+      "source": "Plane.041_0",
+      "actor": "PBR_Plane.041_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_041_0.SM_PBR_Plane_041_0",
+      "bounds_error_cm": 4.00543212890625e-05
+    },
+    {
+      "source": "Plane.042_0",
+      "actor": "PBR_Plane.042_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_042_0.SM_PBR_Plane_042_0",
+      "bounds_error_cm": 5.054473876953125e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.003_0",
+      "actor": "PBR_Editable Mesh_Mat.003_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_003_0.SM_PBR_Editable_Mesh_Mat_003_0",
+      "bounds_error_cm": 8.58306884765625e-06
+    },
+    {
+      "source": "Editable Mesh_Mat.004_0",
+      "actor": "PBR_Editable Mesh_Mat.004_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_004_0.SM_PBR_Editable_Mesh_Mat_004_0",
+      "bounds_error_cm": 2.574920654296875e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.005_0",
+      "actor": "PBR_Editable Mesh_Mat.005_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_005_0.SM_PBR_Editable_Mesh_Mat_005_0",
+      "bounds_error_cm": 2.47955322265625e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.006_0",
+      "actor": "PBR_Editable Mesh_Mat.006_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_006_0.SM_PBR_Editable_Mesh_Mat_006_0",
+      "bounds_error_cm": 2.47955322265625e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.007_0",
+      "actor": "PBR_Editable Mesh_Mat.007_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_007_0.SM_PBR_Editable_Mesh_Mat_007_0",
+      "bounds_error_cm": 2.384185791015625e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.008_0",
+      "actor": "PBR_Editable Mesh_Mat.008_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_008_0.SM_PBR_Editable_Mesh_Mat_008_0",
+      "bounds_error_cm": 2.384185791015625e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.009_0",
+      "actor": "PBR_Editable Mesh_Mat.009_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_009_0.SM_PBR_Editable_Mesh_Mat_009_0",
+      "bounds_error_cm": 2.384185791015625e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.010_0",
+      "actor": "PBR_Editable Mesh_Mat.010_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_010_0.SM_PBR_Editable_Mesh_Mat_010_0",
+      "bounds_error_cm": 2.288818359375e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.011_0",
+      "actor": "PBR_Editable Mesh_Mat.011_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_011_0.SM_PBR_Editable_Mesh_Mat_011_0",
+      "bounds_error_cm": 2.384185791015625e-05
+    },
+    {
+      "source": "Plane.043_0",
+      "actor": "PBR_Plane.043_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_043_0.SM_PBR_Plane_043_0",
+      "bounds_error_cm": 2.6702880859375e-05
+    },
+    {
+      "source": "Plane.044_0",
+      "actor": "PBR_Plane.044_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_044_0.SM_PBR_Plane_044_0",
+      "bounds_error_cm": 2.3365020751953125e-05
+    },
+    {
+      "source": "Plane.045_0",
+      "actor": "PBR_Plane.045_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_045_0.SM_PBR_Plane_045_0",
+      "bounds_error_cm": 1.71661376953125e-05
+    },
+    {
+      "source": "Cube.003_0",
+      "actor": "PBR_Cube.003_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cube_003_0.SM_PBR_Cube_003_0",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "Plane.046_0",
+      "actor": "PBR_Plane.046_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_046_0.SM_PBR_Plane_046_0",
+      "bounds_error_cm": 9.5367431640625e-06
+    },
+    {
+      "source": "Plane.047_0",
+      "actor": "PBR_Plane.047_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Plane_047_0.SM_PBR_Plane_047_0",
+      "bounds_error_cm": 2.0503997802734375e-05
+    },
+    {
+      "source": "Editable Mesh_Mat.003_0.001",
+      "actor": "PBR_Editable Mesh_Mat.003_0.001",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_003_0_001.SM_PBR_Editable_Mesh_Mat_003_0_001",
+      "bounds_error_cm": 8.58306884765625e-06
+    },
+    {
+      "source": "Mesh.588_0.002",
+      "actor": "PBR_Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_588_0_002.SM_PBR_Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "Mesh.589_0.002",
+      "actor": "PBR_Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_589_0_002.SM_PBR_Mesh_589_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "Mesh.590_0.002",
+      "actor": "PBR_Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_590_0_002.SM_PBR_Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "Mesh.591_0.002",
+      "actor": "PBR_Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_591_0_002.SM_PBR_Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "Mesh.592_0.002",
+      "actor": "PBR_Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_592_0_002.SM_PBR_Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "Mesh.593_0.002",
+      "actor": "PBR_Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_593_0_002.SM_PBR_Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "Mesh.594_0.002",
+      "actor": "PBR_Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_594_0_002.SM_PBR_Mesh_594_0_002",
+      "bounds_error_cm": 2.384185791015625e-07
+    },
+    {
+      "source": "Mesh.596_0.002",
+      "actor": "PBR_Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_596_0_002.SM_PBR_Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "Mesh.597_0.002",
+      "actor": "PBR_Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_597_0_002.SM_PBR_Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "Mesh.598_0.002",
+      "actor": "PBR_Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_598_0_002.SM_PBR_Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "Mesh.599_0.002",
+      "actor": "PBR_Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_599_0_002.SM_PBR_Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "Mesh.600_0.002",
+      "actor": "PBR_Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_600_0_002.SM_PBR_Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "Mesh.601_0.002",
+      "actor": "PBR_Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_601_0_002.SM_PBR_Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "Mesh.602_0.002",
+      "actor": "PBR_Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Mesh_602_0_002.SM_PBR_Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "Floor_aiWireframe1_0",
+      "actor": "PBR_Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Floor_aiWireframe1_0.SM_PBR_Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "Cilindro",
+      "actor": "PBR_Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_Cilindro.SM_PBR_Cilindro",
+      "bounds_error_cm": 9.5367431640625e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.588_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_588_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.589_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_589_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_589_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.590_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_590_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.591_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_591_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.592_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_592_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.593_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_593_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.594_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_594_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_594_0_002",
+      "bounds_error_cm": 2.384185791015625e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.596_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_596_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.597_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_597_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.598_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_598_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.599_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_599_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.600_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_600_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.601_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_601_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.602_0.002",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_602_0_002.SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Floor_aiWireframe1_0",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Floor_aiWireframe1_0.SM_PBR_SS_P02_Xpos_Y_3_72934__Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Cilindro",
+      "actor": "PBR_SS_P02_Xpos_Y-3.72934__Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Cilindro.SM_PBR_SS_P02_Xpos_Y_3_72934__Cilindro",
+      "bounds_error_cm": 9.5367431640625e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.588_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_588_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.589_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_589_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_589_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.590_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_590_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.591_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_591_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.592_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_592_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.593_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_593_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.594_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_594_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_594_0_002",
+      "bounds_error_cm": 2.384185791015625e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.596_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_596_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.597_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_597_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.598_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_598_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.599_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_599_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.600_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_600_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.601_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_601_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.602_0.002",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_602_0_002.SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Floor_aiWireframe1_0",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Floor_aiWireframe1_0.SM_PBR_SS_P03_Xpos_Y_1_73943__Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Cilindro",
+      "actor": "PBR_SS_P03_Xpos_Y-1.73943__Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Cilindro.SM_PBR_SS_P03_Xpos_Y_1_73943__Cilindro",
+      "bounds_error_cm": 5.364418029785156e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.588_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_588_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.589_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_589_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_589_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.590_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_590_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.591_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_591_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.592_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_592_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.593_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_593_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.594_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_594_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_594_0_002",
+      "bounds_error_cm": 2.384185791015625e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.596_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_596_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.597_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_597_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.598_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_598_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.599_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_599_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.600_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_600_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.601_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_601_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.602_0.002",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_602_0_002.SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Floor_aiWireframe1_0",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Floor_aiWireframe1_0.SM_PBR_SS_P04_Xneg_Y_1_80778__Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Cilindro",
+      "actor": "PBR_SS_P04_Xneg_Y-1.80778__Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Cilindro.SM_PBR_SS_P04_Xneg_Y_1_80778__Cilindro",
+      "bounds_error_cm": 1.1920928955078125e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.588_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_588_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.589_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_589_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_589_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.590_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_590_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.591_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_591_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.592_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_592_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.593_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_593_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.594_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_594_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_594_0_002",
+      "bounds_error_cm": 2.384185791015625e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.596_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_596_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.597_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_597_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.598_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_598_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.599_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_599_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.600_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_600_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.601_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_601_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.602_0.002",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_602_0_002.SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Floor_aiWireframe1_0",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Floor_aiWireframe1_0.SM_PBR_SS_P05_Xneg_Y_3_59266__Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Cilindro",
+      "actor": "PBR_SS_P05_Xneg_Y-3.59266__Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Cilindro.SM_PBR_SS_P05_Xneg_Y_3_59266__Cilindro",
+      "bounds_error_cm": 1.1920928955078125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.588_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.588_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_588_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_588_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.589_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.589_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_589_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_589_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.590_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.590_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_590_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_590_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.591_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.591_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_591_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_591_0_002",
+      "bounds_error_cm": 2.86102294921875e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.592_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.592_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_592_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_592_0_002",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.593_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.593_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_593_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_593_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.594_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.594_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_594_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_594_0_002",
+      "bounds_error_cm": 1.1920928955078125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.596_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.596_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_596_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_596_0_002",
+      "bounds_error_cm": 4.0531158447265625e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.597_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.597_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_597_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_597_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.598_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.598_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_598_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_598_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.599_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.599_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_599_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_599_0_002",
+      "bounds_error_cm": 4.76837158203125e-07
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.600_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.600_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_600_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_600_0_002",
+      "bounds_error_cm": 3.0994415283203125e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.601_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.601_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_601_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_601_0_002",
+      "bounds_error_cm": 1.430511474609375e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.602_0.002",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Mesh.602_0.002",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_602_0_002.SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_602_0_002",
+      "bounds_error_cm": 1.9073486328125e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Floor_aiWireframe1_0",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Floor_aiWireframe1_0",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Floor_aiWireframe1_0.SM_PBR_SS_P06_Xneg_Y_5_58256__Floor_aiWireframe1_0",
+      "bounds_error_cm": 3.814697265625e-06
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Cilindro",
+      "actor": "PBR_SS_P06_Xneg_Y-5.58256__Cilindro",
+      "asset": "/Game/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Cilindro.SM_PBR_SS_P06_Xneg_Y_5_58256__Cilindro",
+      "bounds_error_cm": 9.5367431640625e-07
+    }
+  ],
+  "lights": [],
+  "removed_from_new_map_only": [
+    "SM_COLL_Console_Chair01",
+    "SM_COLL_Console_Chair02",
+    "SM_COLL_Console_Chair03",
+    "SM_COLL_Console_Chair04",
+    "SM_COLL_Console_Chair05",
+    "SM_COLL_Console_Chair06",
+    "SM_COLL_Editable_Mesh_Mat_026_0_01",
+    "SM_COLL_Mesh_453_0_01",
+    "SM_COLL_Mesh_453_0_02",
+    "SM_COLL_ceiling_0_01",
+    "SM_COLL_Plane_0_01",
+    "SM_COLL_Plane_0_02",
+    "SM_COLL_Plane_0_03",
+    "SM_COLL_Plane_0_04",
+    "SM_COLL_Plane_002_0_01",
+    "SM_COLL_Plane_002_0_02",
+    "SM_COLL_Plane_003_0_01",
+    "SM_COLL_Circle_0_01",
+    "SM_COLL_Circle_0_02",
+    "SM_COLL_Circle_0_03",
+    "SM_COLL_Circle_0_04",
+    "SM_COLL_Circle_0_05",
+    "SM_COLL_Cube_000_0_01",
+    "SM_COLL_Cube_000_0_02",
+    "SM_COLL_Cube_001_0_01",
+    "SM_COLL_Cube_001_0_02",
+    "SM_COLL_Plane_005_0_01",
+    "SM_COLL_Plane_005_0_02",
+    "SM_COLL_Plane_005_0_03",
+    "SM_COLL_Plane_005_0_04",
+    "SM_COLL_Plane_005_0_05",
+    "SM_COLL_Plane_005_0_06",
+    "SM_COLL_Plane_005_0_07",
+    "SM_COLL_Plane_005_0_08",
+    "SM_COLL_Plane_005_0_09",
+    "SM_COLL_Plane_005_0_10",
+    "SM_COLL_Plane_005_0_11",
+    "SM_COLL_Plane_005_0_12",
+    "SM_COLL_Plane_006_0_01",
+    "SM_COLL_Plane_007_0_01",
+    "SM_COLL_Plane_007_0_02",
+    "SM_COLL_Circle_001_0_01",
+    "SM_COLL_Sphere_001_0_01",
+    "SM_COLL_Sphere_001_0_02",
+    "SM_COLL_Sphere_001_0_03",
+    "SM_COLL_Sphere_001_0_04",
+    "SM_COLL_Sphere_001_0_05",
+    "SM_COLL_Sphere_001_0_06",
+    "SM_COLL_Sphere_001_0_07",
+    "SM_COLL_Sphere_001_0_08",
+    "SM_COLL_Sphere_001_0_09",
+    "SM_COLL_Cube_0_01",
+    "SM_COLL_Cube_0_02",
+    "SM_COLL_Cylinder_0_01",
+    "SM_COLL_Plane_009_0_01",
+    "SM_COLL_Plane_009_0_02",
+    "SM_COLL_Plane_009_0_03",
+    "SM_COLL_Plane_009_0_04",
+    "SM_COLL_Plane_009_0_05",
+    "SM_COLL_Plane_009_0_06",
+    "SM_COLL_Plane_009_0_07",
+    "SM_COLL_Plane_009_0_08",
+    "SM_COLL_Plane_009_0_09",
+    "SM_COLL_Plane_009_0_10",
+    "SM_COLL_Plane_009_0_11",
+    "SM_COLL_Plane_009_0_12",
+    "SM_COLL_Plane_009_0_13",
+    "SM_COLL_Plane_009_0_14",
+    "SM_COLL_Plane_009_0_15",
+    "SM_COLL_Plane_009_0_16",
+    "SM_COLL_Plane_009_0_17",
+    "SM_COLL_Plane_009_0_18",
+    "SM_COLL_Plane_009_0_19",
+    "SM_COLL_Plane_009_0_20",
+    "SM_COLL_Plane_009_0_21",
+    "SM_COLL_Plane_009_0_22",
+    "SM_COLL_Plane_009_0_23",
+    "SM_COLL_Plane_009_0_24",
+    "SM_COLL_Plane_009_0_25",
+    "SM_COLL_Plane_009_0_26",
+    "SM_COLL_Plane_009_0_27",
+    "SM_COLL_Plane_009_0_28",
+    "SM_COLL_Plane_009_0_29",
+    "SM_COLL_Plane_009_0_30",
+    "SM_COLL_Plane_009_0_31",
+    "SM_COLL_Plane_009_0_32",
+    "SM_COLL_Plane_009_0_33",
+    "SM_COLL_Plane_009_0_34",
+    "SM_COLL_Plane_009_0_35",
+    "SM_COLL_Plane_009_0_36",
+    "SM_COLL_Plane_014_0_01",
+    "SM_COLL_Plane_014_0_02",
+    "SM_COLL_Plane_015_0_01",
+    "SM_COLL_Plane_016_0_01",
+    "SM_COLL_Circle_002_0_01",
+    "SM_COLL_Circle_002_0_02",
+    "SM_COLL_Circle_002_0_03",
+    "SM_COLL_Plane_020_0_01",
+    "SM_COLL_Plane_020_0_02",
+    "SM_COLL_Plane_020_0_03",
+    "SM_COLL_Plane_020_0_04",
+    "SM_COLL_Plane_020_0_05",
+    "SM_COLL_Plane_020_0_06",
+    "SM_COLL_Plane_020_0_07",
+    "SM_COLL_Plane_022_0_01",
+    "SM_COLL_Plane_022_0_02",
+    "SM_COLL_Plane_022_0_03",
+    "SM_COLL_Plane_022_0_04",
+    "SM_COLL_Plane_022_0_05",
+    "SM_COLL_Plane_022_0_06",
+    "SM_COLL_Plane_022_0_07",
+    "SM_COLL_Plane_022_0_08",
+    "SM_COLL_Plane_022_0_09",
+    "SM_COLL_Plane_022_0_10",
+    "SM_COLL_Plane_022_0_11",
+    "SM_COLL_Plane_022_0_12",
+    "SM_COLL_Plane_022_0_13",
+    "SM_COLL_Plane_022_0_14",
+    "SM_COLL_Cube_002_0_01",
+    "SM_COLL_Cube_002_0_02",
+    "SM_COLL_Plane_012_0_01",
+    "SM_COLL_Plane_012_0_02",
+    "SM_COLL_Plane_012_0_03",
+    "SM_COLL_Plane_012_0_04",
+    "SM_COLL_Plane_012_0_05",
+    "SM_COLL_Plane_012_0_06",
+    "SM_COLL_Plane_012_0_07",
+    "SM_COLL_Plane_012_0_08",
+    "SM_COLL_Plane_012_0_09",
+    "SM_COLL_Plane_012_0_10",
+    "SM_COLL_Plane_012_0_11",
+    "SM_COLL_Plane_012_0_12",
+    "SM_COLL_Plane_012_0_13",
+    "SM_COLL_Plane_012_0_14",
+    "SM_COLL_Plane_012_0_15",
+    "SM_COLL_Plane_012_0_16",
+    "SM_COLL_Plane_012_0_17",
+    "SM_COLL_Plane_012_0_18",
+    "SM_COLL_Plane_012_0_19",
+    "SM_COLL_Plane_012_0_20",
+    "SM_COLL_Plane_012_0_21",
+    "SM_COLL_Plane_028_0_01",
+    "SM_COLL_Plane_028_0_02",
+    "SM_COLL_Plane_028_0_03",
+    "SM_COLL_Plane_028_0_04",
+    "SM_COLL_Plane_028_0_05",
+    "SM_COLL_Plane_038_0_01",
+    "SM_COLL_Plane_038_0_02",
+    "SM_COLL_Plane_038_0_03",
+    "SM_COLL_Plane_038_0_04",
+    "SM_COLL_Plane_031_0_01",
+    "SM_COLL_Plane_031_0_02",
+    "SM_COLL_Plane_031_0_03",
+    "SM_COLL_Plane_031_0_04",
+    "SM_COLL_Sphere_0_01",
+    "SM_COLL_Plane_037_0_01",
+    "SM_COLL_Circle_004_0_01",
+    "SM_COLL_Circle_003_0_01",
+    "SM_COLL_Plane_036_0_01",
+    "SM_COLL_Plane_036_0_02",
+    "SM_COLL_Plane_036_0_03",
+    "SM_COLL_Plane_035_0_01",
+    "SM_COLL_Plane_035_0_02",
+    "SM_COLL_Plane_035_0_03",
+    "SM_COLL_Plane_034_0_01",
+    "SM_COLL_Plane_033_0_01",
+    "SM_COLL_Plane_033_0_02",
+    "SM_COLL_Plane_033_0_03",
+    "SM_COLL_Plane_033_0_04",
+    "SM_COLL_Plane_033_0_05",
+    "SM_COLL_Plane_033_0_06",
+    "SM_COLL_Plane_033_0_07",
+    "SM_COLL_Plane_033_0_08",
+    "SM_COLL_Plane_032_0_01",
+    "SM_COLL_Plane_032_0_02",
+    "SM_COLL_Plane_032_0_03",
+    "SM_COLL_Plane_030_0_01",
+    "SM_COLL_Plane_030_0_02",
+    "SM_COLL_Plane_030_0_03",
+    "SM_COLL_Plane_030_0_04",
+    "SM_COLL_Plane_030_0_05",
+    "SM_COLL_Plane_030_0_06",
+    "SM_COLL_Plane_030_0_07",
+    "SM_COLL_Plane_030_0_08",
+    "SM_COLL_Plane_030_0_09",
+    "SM_COLL_Plane_030_0_10",
+    "SM_COLL_Plane_030_0_11",
+    "SM_COLL_Plane_030_0_12",
+    "SM_COLL_Plane_030_0_13",
+    "SM_COLL_Plane_030_0_14",
+    "SM_COLL_Plane_030_0_15",
+    "SM_COLL_Plane_030_0_16",
+    "SM_COLL_Plane_027_0_01",
+    "SM_COLL_Plane_029_0_01",
+    "SM_COLL_Plane_026_0_01",
+    "SM_COLL_Plane_026_0_02",
+    "SM_COLL_Plane_026_0_03",
+    "SM_COLL_Plane_026_0_04",
+    "SM_COLL_Plane_025_0_01",
+    "SM_COLL_Plane_025_0_02",
+    "SM_COLL_Plane_024_0_01",
+    "SM_COLL_Plane_024_0_02",
+    "SM_COLL_Plane_023_0_01",
+    "SM_COLL_Plane_023_0_02",
+    "SM_COLL_Plane_023_0_03",
+    "SM_COLL_Plane_023_0_04",
+    "SM_COLL_Plane_021_0_01",
+    "SM_COLL_Plane_041_0_01",
+    "SM_COLL_Plane_041_0_02",
+    "SM_COLL_Plane_041_0_03",
+    "SM_COLL_Plane_041_0_04",
+    "SM_COLL_Plane_041_0_05",
+    "SM_COLL_Plane_041_0_06",
+    "SM_COLL_Plane_041_0_07",
+    "SM_COLL_Plane_041_0_08",
+    "SM_COLL_Editable_Mesh_Mat_003_0_01",
+    "SM_COLL_Editable_Mesh_Mat_003_0_02",
+    "SM_COLL_Editable_Mesh_Mat_004_0_01",
+    "SM_COLL_Editable_Mesh_Mat_004_0_02",
+    "SM_COLL_Editable_Mesh_Mat_005_0_01",
+    "SM_COLL_Editable_Mesh_Mat_005_0_02",
+    "SM_COLL_Editable_Mesh_Mat_006_0_01",
+    "SM_COLL_Editable_Mesh_Mat_006_0_02",
+    "SM_COLL_Editable_Mesh_Mat_007_0_01",
+    "SM_COLL_Editable_Mesh_Mat_007_0_02",
+    "SM_COLL_Editable_Mesh_Mat_007_0_03",
+    "SM_COLL_Editable_Mesh_Mat_007_0_04",
+    "SM_COLL_Editable_Mesh_Mat_008_0_01",
+    "SM_COLL_Editable_Mesh_Mat_008_0_02",
+    "SM_COLL_Editable_Mesh_Mat_009_0_01",
+    "SM_COLL_Editable_Mesh_Mat_009_0_02",
+    "SM_COLL_Editable_Mesh_Mat_010_0_01",
+    "SM_COLL_Editable_Mesh_Mat_010_0_02",
+    "SM_COLL_Editable_Mesh_Mat_011_0_01",
+    "SM_COLL_Editable_Mesh_Mat_011_0_02",
+    "SM_COLL_Plane_043_0_01",
+    "SM_COLL_Plane_043_0_02",
+    "SM_COLL_Plane_043_0_03",
+    "SM_COLL_Plane_043_0_04",
+    "SM_COLL_Plane_043_0_05",
+    "SM_COLL_Plane_043_0_06",
+    "SM_COLL_Plane_043_0_07",
+    "SM_COLL_Plane_044_0_01",
+    "SM_COLL_Plane_044_0_02",
+    "SM_COLL_Plane_044_0_03",
+    "SM_COLL_Plane_044_0_04",
+    "SM_COLL_Plane_044_0_05",
+    "SM_COLL_Plane_044_0_06",
+    "SM_COLL_Plane_044_0_07",
+    "SM_COLL_Plane_045_0_01",
+    "SM_COLL_Cube_003_0_01",
+    "SM_COLL_Plane_046_0_01",
+    "SM_COLL_Plane_046_0_02",
+    "SM_COLL_Plane_046_0_03",
+    "SM_COLL_Plane_046_0_04",
+    "SM_COLL_Plane_046_0_05",
+    "SM_COLL_Plane_046_0_06",
+    "SM_COLL_Plane_046_0_07",
+    "SM_COLL_Plane_047_0_01",
+    "SM_COLL_Plane_047_0_02",
+    "SM_COLL_Plane_047_0_03",
+    "SM_COLL_Plane_047_0_04",
+    "SM_COLL_Plane_047_0_05",
+    "SM_COLL_Plane_047_0_06",
+    "SM_COLL_Plane_047_0_07",
+    "SM_COLL_Plane_047_0_08",
+    "SM_COLL_Plane_047_0_09",
+    "SM_COLL_Plane_047_0_10",
+    "SM_COLL_Plane_047_0_11",
+    "SM_COLL_Plane_047_0_12",
+    "SM_COLL_P03C_PocketShell_01",
+    "SM_COLL_P03C_UpperReturn_01",
+    "SM_COLL_P03C_LowerReturn_01",
+    "SM_COLL_P03D_LeftPocketShell_01",
+    "SM_COLL_P03D_LeftUpperReturn_01",
+    "SM_COLL_P03D_LeftLowerReturn_01",
+    "SM_COLL_P03F_D01_FrameFront_01",
+    "SM_COLL_P03F_D01_FrameRear_01",
+    "SM_COLL_P03G_D02_LeftPocketShell_01",
+    "SM_COLL_P03G_D02_LeftTrackFront_01",
+    "SM_COLL_P03G_D02_LeftTrackRear_01",
+    "SM_COLL_P03G_D02_LeftUpperReturn_01",
+    "SM_COLL_P03G_D02_LeftLowerReturn_01",
+    "SM_COLL_P03G_D02_RightPocketShell_01",
+    "SM_COLL_P03G_D02_RightTrackFront_01",
+    "SM_COLL_P03G_D02_RightTrackRear_01",
+    "SM_COLL_P03G_D02_RightUpperReturn_01",
+    "SM_COLL_P03G_D02_RightLowerReturn_01",
+    "SM_COLL_P03G_D02_FrameFront_01",
+    "SM_COLL_P03G_D02_FrameRear_01",
+    "SM_COLL_P03G_P013_DOOR_F07_003_01",
+    "SM_COLL_P03G_P013_DOOR_F07_003_02",
+    "SM_COLL_P03G_P013_DOOR_F07_003_03",
+    "SM_COLL_P03G_P013_DOOR_F07_003_04",
+    "SM_COLL_P03G_P010_DOOR_F07_003_01",
+    "SM_COLL_P03G_D03_LeftPocketShell_01",
+    "SM_COLL_P03G_D03_LeftTrackFront_01",
+    "SM_COLL_P03G_D03_LeftTrackRear_01",
+    "SM_COLL_P03G_D03_LeftUpperReturn_01",
+    "SM_COLL_P03G_D03_LeftLowerReturn_01",
+    "SM_COLL_P03G_D03_RightPocketShell_01",
+    "SM_COLL_P03G_D03_RightTrackFront_01",
+    "SM_COLL_P03G_D03_RightTrackRear_01",
+    "SM_COLL_P03G_D03_RightUpperReturn_01",
+    "SM_COLL_P03G_D03_RightLowerReturn_01",
+    "SM_COLL_P03G_D03_FrameFront_01",
+    "SM_COLL_P03G_D03_FrameRear_01",
+    "SM_COLL_P03G_P004_DOOR_F07_004_01",
+    "SM_COLL_P03G_P004_DOOR_F07_004_02",
+    "SM_COLL_P03G_P011_DOOR_F07_004_01",
+    "SM_COLL_P03G_P011_DOOR_F07_004_02",
+    "SM_COLL_P03G_P011_DOOR_F07_004_03",
+    "SM_COLL_P03G_P011_DOOR_F07_004_04",
+    "SM_COLL_P03G_P039_DOOR_F07_004_01",
+    "SM_COLL_P03G_D04_LeftPocketShell_01",
+    "SM_COLL_P03G_D04_LeftTrackFront_01",
+    "SM_COLL_P03G_D04_LeftTrackRear_01",
+    "SM_COLL_P03G_D04_LeftUpperReturn_01",
+    "SM_COLL_P03G_D04_LeftLowerReturn_01",
+    "SM_COLL_P03G_D04_RightPocketShell_01",
+    "SM_COLL_P03G_D04_RightTrackFront_01",
+    "SM_COLL_P03G_D04_RightTrackRear_01",
+    "SM_COLL_P03G_D04_RightUpperReturn_01",
+    "SM_COLL_P03G_D04_RightLowerReturn_01",
+    "SM_COLL_P03G_D04_FrameFront_01",
+    "SM_COLL_P03G_D04_FrameRear_01",
+    "SM_COLL_P03G_D01_LeftTrackFront_01",
+    "SM_COLL_P03G_D01_LeftTrackRear_01",
+    "SM_COLL_P03G_D01_RightTrackFront_01",
+    "SM_COLL_P03G_D01_RightTrackRear_01",
+    "Chair01",
+    "Chair02",
+    "Chair03",
+    "Chair04",
+    "Chair05",
+    "Chair06",
+    "VIS_Editable Mesh_Mat.026_0",
+    "VIS_Mesh.453_0",
+    "VIS_ceiling_0",
+    "VIS_Plane_0",
+    "VIS_Plane.002_0",
+    "VIS_Plane.003_0",
+    "VIS_Circle_0",
+    "VIS_Cube.000_0",
+    "VIS_Cube.001_0",
+    "VIS_Plane.005_0",
+    "VIS_Plane.004_0",
+    "VIS_Plane.006_0",
+    "VIS_Plane.007_0",
+    "VIS_Circle.001_0",
+    "VIS_Sphere.001_0",
+    "VIS_Cube_0",
+    "VIS_Cylinder_0",
+    "VIS_Plane.008_0",
+    "VIS_Cylinder.002_0",
+    "VIS_Plane.009_0",
+    "VIS_Plane.010_0",
+    "VIS_Plane.013_0",
+    "VIS_Plane.014_0",
+    "VIS_Plane.015_0",
+    "VIS_Plane.016_0",
+    "VIS_Circle.002_0",
+    "VIS_Plane.020_0",
+    "VIS_Plane.022_0",
+    "VIS_Cube.002_0",
+    "VIS_Plane.012_0",
+    "VIS_Plane.028_0",
+    "VIS_Plane.039_0",
+    "VIS_Plane.038_0",
+    "VIS_Plane.031_0",
+    "VIS_Sphere_0",
+    "VIS_Plane.037_0",
+    "VIS_Circle.004_0",
+    "VIS_Circle.003_0",
+    "VIS_Plane.036_0",
+    "VIS_Plane.035_0",
+    "VIS_Plane.034_0",
+    "VIS_Plane.033_0",
+    "VIS_Plane.032_0",
+    "VIS_Plane.030_0",
+    "VIS_Plane.027_0",
+    "VIS_Plane.029_0",
+    "VIS_Plane.026_0",
+    "VIS_Plane.025_0",
+    "VIS_Plane.024_0",
+    "VIS_Plane.023_0",
+    "VIS_Plane.021_0",
+    "VIS_Plane.011_0",
+    "VIS_Plane.040_0",
+    "VIS_Plane.041_0",
+    "VIS_Plane.042_0",
+    "VIS_Editable Mesh_Mat.003_0",
+    "VIS_Editable Mesh_Mat.004_0",
+    "VIS_Editable Mesh_Mat.005_0",
+    "VIS_Editable Mesh_Mat.006_0",
+    "VIS_Editable Mesh_Mat.007_0",
+    "VIS_Editable Mesh_Mat.008_0",
+    "VIS_Editable Mesh_Mat.009_0",
+    "VIS_Editable Mesh_Mat.010_0",
+    "VIS_Editable Mesh_Mat.011_0",
+    "VIS_Plane.043_0",
+    "VIS_Plane.044_0",
+    "VIS_Plane.045_0",
+    "VIS_Cube.003_0",
+    "VIS_Plane.046_0",
+    "VIS_Plane.047_0",
+    "VIS_Editable Mesh_Mat.009_0.001",
+    "VIS_Editable Mesh_Mat.004_0.001",
+    "VIS_Editable Mesh_Mat.011_0.001",
+    "VIS_Editable Mesh_Mat.003_0.002",
+    "VIS_Editable Mesh_Mat.007_0.002",
+    "VIS_Editable Mesh_Mat.010_0.002",
+    "VIS_Editable Mesh_Mat.005_0.001",
+    "VIS_Editable Mesh_Mat.006_0.001",
+    "VIS_Editable Mesh_Mat.008_0.001",
+    "Starfleet_Practical_00",
+    "Starfleet_Practical_01",
+    "Starfleet_Practical_02",
+    "Starfleet_Practical_03",
+    "Starfleet_Practical_04",
+    "Starfleet_Practical_05",
+    "VIS_Mesh.602_0",
+    "VIS_Mesh.601_0",
+    "VIS_Mesh.600_0",
+    "VIS_Mesh.599_0",
+    "VIS_Mesh.598_0",
+    "VIS_Mesh.597_0",
+    "VIS_Mesh.596_0",
+    "VIS_Mesh.594_0",
+    "VIS_Mesh.593_0",
+    "VIS_Mesh.592_0",
+    "VIS_Mesh.591_0",
+    "VIS_Mesh.590_0",
+    "VIS_Mesh.589_0",
+    "VIS_Mesh.588_0",
+    "VIS_Mesh.588_0.001",
+    "VIS_Mesh.589_0.001",
+    "VIS_Mesh.590_0.001",
+    "VIS_Mesh.591_0.001",
+    "VIS_Mesh.592_0.001",
+    "VIS_Mesh.593_0.001",
+    "VIS_Mesh.594_0.001",
+    "VIS_Mesh.596_0.001",
+    "VIS_Mesh.597_0.001",
+    "VIS_Mesh.598_0.001",
+    "VIS_Mesh.599_0.001",
+    "VIS_Mesh.600_0.001",
+    "VIS_Mesh.601_0.001",
+    "VIS_Mesh.602_0.001",
+    "VIS_SM_Sutherland_Chair01_SeatMount",
+    "VIS_SM_Sutherland_Chair01_ArmFrame_R",
+    "VIS_SM_Sutherland_Chair01_Armrest_R",
+    "VIS_SM_Sutherland_Chair01_CrossbarStop_Lower_L",
+    "VIS_SM_Sutherland_Chair01_ArmFrame_L",
+    "VIS_SM_Sutherland_Chair01_CrossbarStop_Lower_R",
+    "VIS_SM_Sutherland_Chair01_ArmSupportCrossbar",
+    "VIS_SM_Sutherland_Chair01_SeatConnector",
+    "VIS_SM_Sutherland_Chair01_CrossbarStop_Upper_R",
+    "VIS_SM_Sutherland_Chair01_BackrestSupport",
+    "VIS_SM_Sutherland_Chair01_Backrest",
+    "VIS_SM_Sutherland_Chair01_CrossbarStop_Upper_L",
+    "VIS_SM_Sutherland_Chair01_Seat",
+    "VIS_SM_Sutherland_Chair01_Armrest_L",
+    "VIS_Mesh.588_0.003",
+    "VIS_Mesh.589_0.003",
+    "VIS_Mesh.591_0.003",
+    "VIS_Mesh.592_0.003",
+    "VIS_Mesh.593_0.003",
+    "VIS_Mesh.594_0.003",
+    "VIS_Mesh.596_0.003",
+    "VIS_Mesh.597_0.003",
+    "VIS_Mesh.598_0.003",
+    "VIS_Mesh.599_0.003",
+    "VIS_Mesh.600_0.003",
+    "VIS_Mesh.601_0.003",
+    "VIS_Mesh.602_0.003",
+    "VIS_Mesh.602_0.004",
+    "VIS_Mesh.601_0.004",
+    "VIS_Mesh.600_0.004",
+    "VIS_Mesh.599_0.004",
+    "VIS_Mesh.598_0.004",
+    "VIS_Mesh.597_0.004",
+    "VIS_Mesh.596_0.004",
+    "VIS_Mesh.594_0.004",
+    "VIS_Mesh.593_0.004",
+    "VIS_Mesh.592_0.004",
+    "VIS_Mesh.591_0.004",
+    "VIS_Mesh.590_0.003",
+    "VIS_Mesh.589_0.004",
+    "VIS_Mesh.588_0.004",
+    "VIS_Mesh.588_0.005",
+    "VIS_Mesh.589_0.005",
+    "VIS_Mesh.590_0.004",
+    "VIS_Mesh.590_0.005",
+    "VIS_Mesh.591_0.005",
+    "VIS_Mesh.592_0.005",
+    "VIS_Mesh.593_0.005",
+    "VIS_Mesh.594_0.005",
+    "VIS_Mesh.596_0.005",
+    "VIS_Mesh.597_0.005",
+    "VIS_Mesh.598_0.005",
+    "VIS_Mesh.599_0.005",
+    "VIS_Mesh.600_0.005",
+    "VIS_Mesh.601_0.005",
+    "VIS_Mesh.602_0.005"
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 108, in <module>\n    assert seat.chair_collision_actors,'Captain seat collision references missing'\nAssertionError: Captain seat collision references missing\n"
+}

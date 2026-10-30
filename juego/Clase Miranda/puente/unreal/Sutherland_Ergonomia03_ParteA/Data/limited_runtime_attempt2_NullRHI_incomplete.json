@@ -1,0 +1,16 @@
+{
+  "phase": "door_setup",
+  "wall_start": 204548.14,
+  "checks": [
+    {
+      "name": "Real PlayerController possesses the actual Quinn Character",
+      "passed": true,
+      "mesh": "/Game/Characters/Mannequins/Meshes/SKM_Quinn_Simple.SKM_Quinn_Simple",
+      "viewport": "viewport=0x0 screenPercentage=100.0"
+    }
+  ],
+  "samples": [],
+  "ok": false,
+  "release": {},
+  "stage": 0.0
+}

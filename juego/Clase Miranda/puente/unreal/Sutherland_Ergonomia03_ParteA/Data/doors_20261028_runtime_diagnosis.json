@@ -1,0 +1,460 @@
+{
+  "ok": true,
+  "phase": "done",
+  "started": 246284.828,
+  "doors": [
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                0.03062974147633213,
+                -41.65408206863755,
+                196.74950635433208
+              ],
+              "actual": [
+                0.030629741476308463,
+                -41.65408206863755,
+                196.74950635433208
+              ],
+              "hit": {
+                "blocking": false,
+                "initial_overlap": false,
+                "time": 1.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "actor": null,
+                "component": null,
+                "mesh": null
+              }
+            },
+            {
+              "step": 16,
+              "target": [
+                0.03062974147622285,
+                -139.3263585655247,
+                196.74950635433208
+              ],
+              "actual": [
+                0.030629741476268638,
+                -131.39903186960075,
+                196.74950635433208
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": false,
+                "time": 0.3151913583278656,
+                "distance_cm": 4.660223007202148,
+                "impact": [
+                  649.3750633327071,
+                  -260.46707912449165,
+                  158.22161388397222
+                ],
+                "normal": [
+                  -0.00013060734546121828,
+                  0.9999999914708606,
+                  -1.2793817435794001e-08
+                ],
+                "actor": "SM_COLL_P03D_LeftPocketShell_01",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_P03D_LeftPocketShell_01.SM_COLL_P03D_LeftPocketShell_01"
+              }
+            }
+          ]
+        },
+        {
+          "side": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                -0.03066028148782607,
+                41.65392175630187,
+                195.74101960659038
+              ],
+              "actual": [
+                -0.030660281487863678,
+                41.65392175630187,
+                195.74101960659038
+              ],
+              "hit": {
+                "blocking": false,
+                "initial_overlap": false,
+                "time": 1.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "actor": null,
+                "component": null,
+                "mesh": null
+              }
+            },
+            {
+              "step": 16,
+              "target": [
+                -0.030660281487778066,
+                139.32619825318906,
+                195.74101960659038
+              ],
+              "actual": [
+                -0.0306602814877914,
+                131.39884913285695,
+                195.74101960659038
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": false,
+                "time": 0.3151894211769104,
+                "distance_cm": 4.660200595855713,
+                "impact": [
+                  646.8048627694751,
+                  86.13196189804263,
+                  136.44071483612072
+                ],
+                "normal": [
+                  0.00013060658754615945,
+                  -0.999999991470939,
+                  -2.0366188181039624e-07
+                ],
+                "actor": "SM_COLL_P03C_PocketShell_01",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_P03C_PocketShell_01.SM_COLL_P03C_PocketShell_01"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                0.016985670761792165,
+                -41.59274187350623,
+                195.74113909900188
+              ],
+              "actual": [
+                0.016985670761792165,
+                -40.86974675123246,
+                195.74113909900188
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": true,
+                "time": 0.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  594.154473070898,
+                  761.9154900285419,
+                  4.55922105402351e-05
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "actor": "SM_COLL_Circle_0_05",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_Circle_0_05.SM_COLL_Circle_0_05"
+              }
+            }
+          ]
+        },
+        {
+          "side": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                -0.017646867193763516,
+                41.592319327353565,
+                195.74114450067282
+              ],
+              "actual": [
+                -0.017646867193763516,
+                40.8693242050798,
+                195.74114450067282
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": true,
+                "time": 0.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  580.4171748136979,
+                  837.3219853406173,
+                  4.55922105402351e-05
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "actor": "SM_COLL_Circle_0_05",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_Circle_0_05.SM_COLL_Circle_0_05"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                0.029660759815677482,
+                -41.700327824842184,
+                195.74101960659027
+              ],
+              "actual": [
+                0.029660759815708482,
+                -41.70032782484219,
+                195.74101960659027
+              ],
+              "hit": {
+                "blocking": false,
+                "initial_overlap": false,
+                "time": 1.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "actor": null,
+                "component": null,
+                "mesh": null
+              }
+            },
+            {
+              "step": 16,
+              "target": [
+                0.029660759815646198,
+                -139.4307975285165,
+                195.74101960659027
+              ],
+              "actual": [
+                0.02966075981564631,
+                -131.3945018531036,
+                195.74101960659027
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": false,
+                "time": 0.3061913549900055,
+                "distance_cm": 4.558157920837402,
+                "impact": [
+                  -652.7998217015386,
+                  86.08755923528996,
+                  360.5881366729735
+                ],
+                "normal": [
+                  -0.0007153248023935112,
+                  -0.9999997441548568,
+                  8.051038092890174e-07
+                ],
+                "actor": "SM_COLL_P03G_D03_LeftPocketShell_01",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_P03G_D03_LeftPocketShell_01.SM_COLL_P03G_D03_LeftPocketShell_01"
+              }
+            }
+          ]
+        },
+        {
+          "side": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                0.011369827928170873,
+                41.70602700963043,
+                196.74950635433197
+              ],
+              "actual": [
+                0.011369827928139883,
+                41.70602700963043,
+                196.74950635433197
+              ],
+              "hit": {
+                "blocking": false,
+                "initial_overlap": false,
+                "time": 1.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "actor": null,
+                "component": null,
+                "mesh": null
+              }
+            },
+            {
+              "step": 16,
+              "target": [
+                0.011369827928202264,
+                139.43649671330468,
+                196.74950635433197
+              ],
+              "actual": [
+                0.011369827928235238,
+                131.39678842588273,
+                196.74950635433197
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": false,
+                "time": 0.30589672923088074,
+                "distance_cm": 4.554745197296143,
+                "impact": [
+                  -653.0293354274157,
+                  -260.5112855442779,
+                  105.30186653137224
+                ],
+                "normal": [
+                  0.0005918113962124824,
+                  0.9999998248795815,
+                  -2.7930064802829946e-07
+                ],
+                "actor": "SM_COLL_P03G_D03_RightPocketShell_01",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_P03G_D03_RightPocketShell_01.SM_COLL_P03G_D03_RightPocketShell_01"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                -0.017713673499976323,
+                -41.59228523591577,
+                195.74114450067282
+              ],
+              "actual": [
+                -0.017713673499976323,
+                -40.86929081300317,
+                195.74114450067282
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": true,
+                "time": 0.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  -582.674847928288,
+                  832.9182159160279,
+                  -0.5048938095569615
+                ],
+                "normal": [
+                  -0.9848393576114247,
+                  0.1734688435988333,
+                  3.3306690738754706e-16
+                ],
+                "actor": "SM_COLL_P03G_D04_RightLowerReturn_01",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_P03G_D04_RightLowerReturn_01.SM_COLL_P03G_D04_RightLowerReturn_01"
+              }
+            }
+          ]
+        },
+        {
+          "side": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf",
+          "samples": [
+            {
+              "step": 1,
+              "target": [
+                0.01754556668673324,
+                41.592794271318354,
+                195.74113909900188
+              ],
+              "actual": [
+                0.01754556668673324,
+                40.869799848405755,
+                195.74113909900188
+              ],
+              "hit": {
+                "blocking": true,
+                "initial_overlap": true,
+                "time": 0.0,
+                "distance_cm": 0.0,
+                "impact": [
+                  -594.1544258548971,
+                  761.915377738711,
+                  4.55922105402351e-05
+                ],
+                "normal": [
+                  0.0,
+                  0.0,
+                  1.0
+                ],
+                "actor": "SM_COLL_Circle_0_05",
+                "component": "StaticMeshComponent0",
+                "mesh": "/Game/F07COLL01/Meshes/SM_COLL_Circle_0_05.SM_COLL_Circle_0_05"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "ended": 246285.875
+}

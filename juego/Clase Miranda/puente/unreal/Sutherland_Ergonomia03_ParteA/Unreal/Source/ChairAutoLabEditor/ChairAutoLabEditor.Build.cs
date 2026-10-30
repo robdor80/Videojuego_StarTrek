@@ -1,0 +1,2 @@
+using UnrealBuildTool;
+public class ChairAutoLabEditor : ModuleRules { public ChairAutoLabEditor(ReadOnlyTargetRules Target):base(Target){ PCHUsage=PCHUsageMode.UseExplicitOrSharedPCHs; PublicDependencyModuleNames.AddRange(new[]{"Core","CoreUObject","Engine","ChairAutoLab"}); PrivateDependencyModuleNames.AddRange(new[]{"UnrealEd","InputCore","MeshDescription","StaticMeshDescription","PhysicsCore","Json","JsonUtilities","StaticMeshEditor","JsonUtilities","StaticMeshEditor"}); } }

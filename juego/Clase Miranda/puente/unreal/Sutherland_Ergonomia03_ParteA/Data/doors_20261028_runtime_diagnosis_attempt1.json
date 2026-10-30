@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "phase": "done",
+  "started": 246198.25,
+  "doors": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Scripts/14_door_runtime_diagnose.py\", line 29, in tick\n    target=closed+u.Vector(0,(-1 if side=='LeftLeaf' else 1)*door.travel_distance*i/120.,0);h=c.set_relative_location(target,True,False);v=hitrow(h)\n                                                                                                                                           ^^^^^^^^^\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Scripts/14_door_runtime_diagnose.py\", line 9, in hitrow\n    b=u.GameplayStatics.break_hit_result(h);a=b[9];c=b[10]\n      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'GameplayStatics' has no attribute 'break_hit_result'\n",
+  "ended": 246200.031
+}
