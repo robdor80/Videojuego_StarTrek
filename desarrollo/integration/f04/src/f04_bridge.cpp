@@ -270,7 +270,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  auto cmd=[&]() { need(commander(c.world,t)==p,F04_DENIED); };
  auto manage=[&](U dept) { need(commander(c.world,t)==p || head(c.world,p,dept,t),F04_SCOPE); };
  auto times=[&]() { need(r.start>=t && r.start<r.end && r.end<=FOREVER); };
- auto person=[&](U who) { need(type(c.world,who,"person") && val(c.world,who,CATEGORY)==1 && ref(c.world,who,SHIP)==1,F04_DENIED); };
+ auto person=[&](U who) { need(type(c.world,who,"person") && val(c.world,who,CATEGORY)==1 && member(c.world,who),F04_DENIED); };
  switch(r.op) {
  case F04_CREATE_SLOT: {
   cmd();need(val(c.world,1,SCHEMA)==2 && r.value>=1 && r.value<=4 && r.cause);
