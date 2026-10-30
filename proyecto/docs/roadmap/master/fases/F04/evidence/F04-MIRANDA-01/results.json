@@ -1,0 +1,178 @@
+{
+  "f04": {
+    "total": 86,
+    "passed": 86,
+    "failed": 0,
+    "skipped": []
+  },
+  "core": {
+    "total": 451,
+    "passed": 447,
+    "failed": 0,
+    "skipped": [
+      "ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported"
+    ]
+  },
+  "f02": {
+    "total": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": []
+  },
+  "f03": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "skipped": []
+  },
+  "unreal": {
+    "engine": "5.8.2",
+    "command_line": "-NullRHI -unattended -nosound",
+    "report": "C:\\F04-Miranda01\\20261030-173730-403-ue-report\\index.json",
+    "succeeded": 19,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0,
+    "tests": [
+      {
+        "name": "F02.Core.ActorLifecycle",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F02.Core.CorruptLoad",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F02.Core.HostRecovery",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F02.Core.Projection",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F02.Core.ThreadAffinity",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F02.Core.WorldScopedRepresentation",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.IdentityLodWorlds",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.Knowledge",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.Offscreen",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.Recovery",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.SafeFailure",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F03.Core.ThreadAuthority",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.AbsenceReliefOffscreen",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.AuthorityAndMedical",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.LargePopulationSelectiveActors",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.NewSessionRecovery",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.RealWorldsActors",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.SafeLoadAndThread",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      },
+      {
+        "name": "F04.Core.SutherlandOrganizationSelectiveActors",
+        "state": "Success",
+        "warnings": 0,
+        "errors": 0
+      }
+    ]
+  },
+  "protection": {
+    "method": "Path, size, mtime_ns; metadata comparison, not full content hashing",
+    "protected_file_count": 20051,
+    "after_count": 20061,
+    "changed": [],
+    "missing": [],
+    "new": [
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037.png",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG.blend",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG.mtlx",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG.tres",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG.usdc",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG_Color.jpg",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG_Displacement.jpg",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG_NormalDX.jpg",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG_NormalGL.jpg",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\TABULA RASA COPIA SEGURIDAD\\01_TEXTURAS_PBR_SUTHERLAND\\ORIGINALES_DESCARGADOS\\Sutherland_PBR_Lab\\textures\\fabric23\\silla capitan\\Leather cuero rojo\\Leather037_2K-JPG_Roughness.jpg"
+    ],
+    "git_local_exclude_sha256_before": "787c5ed322fafe42048e0755984eb86b3d6c1070d127b11517dfdb01e5e9c82f",
+    "git_local_exclude_sha256_after": "787c5ed322fafe42048e0755984eb86b3d6c1070d127b11517dfdb01e5e9c82f",
+    "new_files_note": "Ten additions observed in original TABULA RASA texture backup during this task; outside task write paths; left untouched. No existing protected file changed or disappeared."
+  }
+}

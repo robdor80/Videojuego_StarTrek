@@ -1,5 +1,10 @@
 # F04 — organización operativa sobre CoreRPG
 
+La ampliación [F04-MIRANDA-01 — Organización de la USS Sutherland](../../../proyecto/docs/roadmap/master/fases/F04/F04-MIRANDA-01_ORGANIZACION_USS_SUTHERLAND.md)
+añade un perfil explícito de 130 plazas, siete departamentos, 32 secciones y
+Alpha de 53 personas, con SCHEMA=3 compatible con los archivos anteriores.
+Incluye [las 130 plazas identificadas](../../../proyecto/docs/roadmap/master/fases/F04/F04-MIRANDA-01_PLANTILLA_130.md).
+
 Corte nativo real, con ABI C y laboratorio Unreal 5.8.2. Core posee todos los
 datos persistentes; las reglas Trek interpretan entidades y relaciones. Los
 Actors son proyecciones prescindibles. No modifica F02/F03 ni sus dependencias.
@@ -35,7 +40,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 18 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 6.
+El comando ejecuta 19 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 7.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.

@@ -1,0 +1,35 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" F02CoreLabEditor Win64 Development -Project=C:\F04-Miranda01\ue\F02CoreLab.uproject -WaitMutex -NoHotReload -MaxParallelActions=4
+Log file: C:\Users\andro\AppData\Local\UnrealBuildTool\Log.txt
+Executing up to 4 actions based on MaxProcessorCount override
+UbaServer - Listening on 0.0.0.0:1345
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+Building F02CoreLabEditor...
+===== Toolchain Information =====
+Using ISPC compiler (C:\Program Files\Epic Games\UE_5.8\Engine\Source\ThirdParty\Intel\ISPC\bin\Windows\ispc.exe)
+  Intel(r) Implicit SPMD Program Compiler (Intel(r) ISPC), 1.24.0 (build commit  @ 20250404, LLVM 18.1.2)
+Using Visual Studio 14.51.36256 toolchain (C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231) and Windows 10.0.26100.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+Warning: Visual Studio compiler 14.51.36256 is not a preferred version
+=================================
+Using Unreal Build Accelerator local executor to run 7 action(s)
+  CPU 24 physical cores, 32 logical cores
+  Memory 31.77 GB physical, 23.25 GB/35.77 GB committed
+  UBA Storage capacity 40 GB
+[1/7] Compile [x64] F04CampaignSubsystem.cpp
+[2/7] Compile [x64] F02CoreLab.cpp
+[3/7] Compile [x64] F04Automation.cpp
+[4/7] Compile [x64] Module.F02CoreLab.gen.cpp
+[5/7] Link [x64] UnrealEditor-F02CoreLab.lib
+   Creando biblioteca C:/F04-Miranda01/ue/Intermediate/Build/Win64/x64/UnrealEditor/Development/F02CoreLab/UnrealEditor-F02CoreLab.lib y objeto C:/F04-Miranda01/ue/Intermediate/Build/Win64/x64/UnrealEditor/Development/F02CoreLab/UnrealEditor-F02CoreLab.exp
+[6/7] Link [x64] UnrealEditor-F02CoreLab.dll
+[7/7] WriteMetadata F02CoreLabEditor.target [NoUba]
+
+Total time in Unreal Build Accelerator local executor: 4.36 seconds
+Output binary: C:\Program Files\Epic Games\UE_5.8\Engine\Binaries\Win64\UnrealEditor.exe
+
+Result: Succeeded
+Total execution time: 5.11 seconds
+Trace written to file C:\Users\andro\AppData\Local\UnrealBuildTool\Trace.uba with size 6.4kb

@@ -1,0 +1,9 @@
+Versión de MSBuild 18.9.1+a81b43525 para .NET Framework
+
+  CoreRPG.vcxproj -> C:\F04-Miranda01\native\corerpg\Release\CoreRPG.lib
+  f04_bridge.cpp
+     Creando biblioteca C:/F04-Miranda01/native/Release/TrekF04Bridge.lib y objeto C:/F04-Miranda01/native/Release/TrekF04Bridge.exp
+  TrekF04Bridge.vcxproj -> C:\F04-Miranda01\native\Release\TrekF04Bridge.dll
+  f04_tests.vcxproj -> C:\F04-Miranda01\native\Release\f04_tests.exe
+  f04_organization_tests.vcxproj -> C:\F04-Miranda01\native\Release\f04_organization_tests.exe
+  f04_population_tests.vcxproj -> C:\F04-Miranda01\native\Release\f04_population_tests.exe

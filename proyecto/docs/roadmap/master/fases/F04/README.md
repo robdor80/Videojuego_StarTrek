@@ -1,5 +1,11 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
+**Actualización 2026-10-30: F04 EN_CURSO.**
+[F04-MIRANDA-01 — Organización de la USS Sutherland](F04-MIRANDA-01_ORGANIZACION_USS_SUTHERLAND.md):
+130 plazas, siete departamentos, 32 secciones y Alpha ilustrativa de 53 personas,
+persistidas en CoreRPG. [Plantilla completa](F04-MIRANDA-01_PLANTILLA_130.md).
+La fase permanece abierta; las notas de revisión siguientes son antecedentes.
+
 **Auditoría y trabajo F04:** 2026-10-11; **actualización de dependencias:** 2026-10-13. **Estado en esta rama:** P01–P04 DOCUMENTADOS; P05 MATRIZ DE REFERENCIA PROBADA en CI, solo para reglas de referencia. **F04 global EN_REVISION**: F01–F03 ya fusionadas; **F04 PR #5 fusionada** y suite de 39 casos de fixture + 17 unit tests superada, pero Core/UE5 y validación operativa siguen pendientes. **Madurez objetivo:** `REFERENCIA_PROBADA` con límites expresos.
 
 ## Objetivo

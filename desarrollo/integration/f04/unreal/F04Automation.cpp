@@ -82,4 +82,30 @@ bool FF04Population::RunTest(const FString&){
  TArray<uint8> Before,After;L.Host->Save(Before);TestTrue(TEXT("Restore large campaign"),L.Host->Load(Before));L.Host->Save(After);
  TestTrue(TEXT("Identities persist"),Before==After);TestNotNull(TEXT("Represent after recovery"),L.Host->Represent(A.W,2202));return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Sutherland,"F04.Core.SutherlandOrganizationSelectiveActors",Flags)
+bool FF04Sutherland::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{65001,404,130,0,0,0};
+ TestTrue(TEXT("130 persistent identities"),L.Host->OpenPopulation("miranda",Config));
+ TestTrue(TEXT("Explicit equipment-specific profile"),L.Host->InstallOrganization(F04_SUTHERLAND_SCIENCE,F04_SUTHERLAND_EQUIPMENT));
+ F04OrganizationStats Organization{};L.Host->Organization(Organization);
+ TestEqual(TEXT("130 vacant posts; no invented crew"),Organization.vacant,uint64(130));
+ TestTrue(TEXT("Explicit synthetic fixture on existing people"),L.Host->BootstrapOrganizationFixture());
+ TestTrue(TEXT("Alpha reference"),L.Host->PlanAlpha(28800));TestTrue(TEXT("Core clock"),L.Host->Advance(28800));
+ L.Host->Organization(Organization);TestEqual(TEXT("Seven departments"),Organization.departments,uint64(7));
+ TestEqual(TEXT("32 sections"),Organization.sections,uint64(32));TestEqual(TEXT("53 actual workers"),Organization.on_duty,uint64(53));
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;
+ TestEqual(TEXT("Organization does not create 130 Actors"),Count,0);
+ TArray<F04Position> Positions;TestTrue(TEXT("Core relation projection"),L.Host->Positions(Positions));
+ uint32 First=0,Security=0;for(const auto& Position:Positions){if(Position.section==2)First=static_cast<uint32>(Position.person);if(Position.section==21 && Position.ordinal==1)Security=static_cast<uint32>(Position.person);}
+ auto* FirstActor=L.Host->Represent(A.W,First);auto* SecurityActor=L.Host->Represent(A.W,Security);
+ if(!TestNotNull(TEXT("First officer"),FirstActor)||!TestNotNull(TEXT("Security chief"),SecurityActor))return false;
+ TestTrue(TEXT("Two identities, both on duty"),FirstActor!=SecurityActor && FirstActor->OnDuty && SecurityActor->OnDuty);
+ TestEqual(TEXT("First officer also watch officer"),L.Host->Intent(First,F04_BRIDGE,0,0,0,0,2),uint32(F04_OK));
+ TestEqual(TEXT("Tactical console does not confer ship command"),L.Host->Intent(Security,F04_BRIDGE),uint32(F04_DENIED));
+ TArray<uint8> Before,After;L.Host->Save(Before);L.Host->Dematerialize(A.W);L.Host->Save(After);
+ TestTrue(TEXT("Actor removal preserves organization"),Before==After);TestTrue(TEXT("Load complete organization"),L.Host->Load(Before));
+ L.Host->Save(After);TestTrue(TEXT("Exact archive"),Before==After);auto* Recovered=L.Host->Represent(B.W,Security);
+ if(!TestNotNull(TEXT("Selective recovery in another world"),Recovered))return false;
+ TestTrue(TEXT("Same identity and watch"),Recovered->CorePersonId==Security && Recovered->OnDuty);return true;
+}
 #endif
