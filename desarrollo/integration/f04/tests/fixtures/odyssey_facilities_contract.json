@@ -1,0 +1,44 @@
+{
+  "contract_id": "f04_odyssey_facilities_v1",
+  "status": "DATA_CONTRACT_ONLY",
+  "template_id": 4,
+  "contract_ref": "desarrollo/integration/f04/tests/fixtures/intrepid_facilities_contract.json",
+  "authority": "CoreRPG.WorldState",
+  "clock": "CoreRPG.Timeline",
+  "reference_configuration": {
+    "class_id": "odyssey",
+    "facility_count": null,
+    "configurable": true,
+    "manager_section": 42,
+    "facilities": [],
+    "capabilities": {
+      "emh": {
+        "installed": "ship_configurable",
+        "counts_as_fleet_crew": false,
+        "person_ref": null
+      },
+      "auxiliary_craft": {
+        "count": null,
+        "configuration": "ship_specific"
+      },
+      "diplomatic_facilities": {
+        "installed": "ship_configurable"
+      },
+      "photon_and_quantum_torpedoes": {
+        "loadout": "ship_equipment_profile"
+      },
+      "aquarius": {
+        "installed_by_default": false,
+        "crew_source": "existing_authorized_assignments_or_future_author_approved_additional_complement",
+        "creates_people_on_deployment": false
+      }
+    }
+  },
+  "runtime_reservations_implemented": false,
+  "runtime_facilities_instantiated": false,
+  "rules": [
+    "Reuse the referenced field contract and rules for player and NPC equally.",
+    "No quantity, capacity, Aquarius or experimental propulsion is a class default.",
+    "Future facility use advances on the same Core Timeline while external simulation continues."
+  ]
+}

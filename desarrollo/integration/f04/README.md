@@ -19,6 +19,14 @@ traslado. Migra explícitamente SCHEMA 3→4 al planificar; conserva 1/2/3.
 Los planes multisemana registran la reducción de actividad no crítica y no
 prometen cobertura ilimitada. CoreRPG sigue sin modificaciones.
 
+[F04-ODYSSEY-01 — Organización de 1.600 tripulantes y tres guardias](../../../proyecto/docs/roadmap/master/fases/F04/F04-ODYSSEY-01_ORGANIZACION_Y_TRES_GUARDIAS.md)
+añade `F04_ODYSSEY_MULTIMISSION=4`: 1.600 plazas, siete departamentos, 72 secciones,
+500 Alpha / 330 Beta / 205 Gamma / 565 fuera. Reutiliza el planificador Sovereign,
+ABI 1 y SCHEMA 3→4, sin modificar Core ni los perfiles anteriores. La cronología
+2383 es GAME_ADDITION; el flujo cuántico solo tiene compatibilidad organizativa
+experimental y no se instala automáticamente. El historial acumulado sigue
+limitado a 65.536 entidades y 64 MiB: no hay retención ilimitada.
+
 Corte nativo real, con ABI C y laboratorio Unreal 5.8.2. Core posee todos los
 datos persistentes; las reglas Trek interpretan entidades y relaciones. Los
 Actors son proyecciones prescindibles. No modifica F02/F03 ni sus dependencias.
@@ -54,7 +62,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 21 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 9.
+El comando ejecuta 22 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 10.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.

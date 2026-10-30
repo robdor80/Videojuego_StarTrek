@@ -239,7 +239,7 @@ bool roster_schema(const WorldState& w) {
  }
  for(U id:all(w,"roster_gap")) {
   const U plan=ref(w,id,PLAN),station=val(w,id,STATIONS);
-  if(!plan || !val(w,id,VALUE) || val(w,id,VALUE)>700 || val(w,id,DEPT)<1 || val(w,id,DEPT)>7 ||
+  if(!plan || !val(w,id,VALUE) || val(w,id,VALUE)>profile->spec.nominal_crew || val(w,id,DEPT)<1 || val(w,id,DEPT)>7 ||
    val(w,id,START)<val(w,plan,START) || val(w,id,END)>val(w,plan,END) ||
    (station && std::find(profile->continuous_stations.begin(),profile->continuous_stations.end(),station)==profile->continuous_stations.end()))return false;
  }

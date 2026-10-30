@@ -1,0 +1,434 @@
+[
+  {
+    "id": 9349,
+    "start": 489600,
+    "end": 518400,
+    "department": 3,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 9350,
+    "start": 489600,
+    "end": 518400,
+    "department": 4,
+    "station": 0,
+    "missing": 1,
+    "plan": 3298
+  },
+  {
+    "id": 9351,
+    "start": 489600,
+    "end": 518400,
+    "department": 5,
+    "station": 0,
+    "missing": 10,
+    "plan": 3298
+  },
+  {
+    "id": 10404,
+    "start": 576000,
+    "end": 604800,
+    "department": 1,
+    "station": 0,
+    "missing": 3,
+    "plan": 3298
+  },
+  {
+    "id": 10405,
+    "start": 576000,
+    "end": 604800,
+    "department": 2,
+    "station": 0,
+    "missing": 13,
+    "plan": 3298
+  },
+  {
+    "id": 10406,
+    "start": 576000,
+    "end": 604800,
+    "department": 3,
+    "station": 0,
+    "missing": 5,
+    "plan": 3298
+  },
+  {
+    "id": 10407,
+    "start": 576000,
+    "end": 604800,
+    "department": 4,
+    "station": 0,
+    "missing": 8,
+    "plan": 3298
+  },
+  {
+    "id": 10408,
+    "start": 576000,
+    "end": 604800,
+    "department": 5,
+    "station": 0,
+    "missing": 22,
+    "plan": 3298
+  },
+  {
+    "id": 10409,
+    "start": 576000,
+    "end": 604800,
+    "department": 6,
+    "station": 0,
+    "missing": 10,
+    "plan": 3298
+  },
+  {
+    "id": 10904,
+    "start": 633600,
+    "end": 662400,
+    "department": 4,
+    "station": 0,
+    "missing": 3,
+    "plan": 3298
+  },
+  {
+    "id": 11412,
+    "start": 662400,
+    "end": 691200,
+    "department": 3,
+    "station": 0,
+    "missing": 4,
+    "plan": 3298
+  },
+  {
+    "id": 11413,
+    "start": 662400,
+    "end": 691200,
+    "department": 4,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 11414,
+    "start": 662400,
+    "end": 691200,
+    "department": 5,
+    "station": 0,
+    "missing": 6,
+    "plan": 3298
+  },
+  {
+    "id": 11415,
+    "start": 662400,
+    "end": 691200,
+    "department": 6,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 12467,
+    "start": 748800,
+    "end": 777600,
+    "department": 3,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 12468,
+    "start": 748800,
+    "end": 777600,
+    "department": 5,
+    "station": 0,
+    "missing": 6,
+    "plan": 3298
+  },
+  {
+    "id": 12469,
+    "start": 748800,
+    "end": 777600,
+    "department": 6,
+    "station": 0,
+    "missing": 3,
+    "plan": 3298
+  },
+  {
+    "id": 18849,
+    "start": 1267200,
+    "end": 1296000,
+    "department": 3,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 18850,
+    "start": 1267200,
+    "end": 1296000,
+    "department": 4,
+    "station": 0,
+    "missing": 6,
+    "plan": 3298
+  },
+  {
+    "id": 18851,
+    "start": 1267200,
+    "end": 1296000,
+    "department": 5,
+    "station": 0,
+    "missing": 14,
+    "plan": 3298
+  },
+  {
+    "id": 19170,
+    "start": 1296000,
+    "end": 1324800,
+    "department": 2,
+    "station": 0,
+    "missing": 4,
+    "plan": 3298
+  },
+  {
+    "id": 19171,
+    "start": 1296000,
+    "end": 1324800,
+    "department": 4,
+    "station": 0,
+    "missing": 2,
+    "plan": 3298
+  },
+  {
+    "id": 19172,
+    "start": 1296000,
+    "end": 1324800,
+    "department": 5,
+    "station": 0,
+    "missing": 7,
+    "plan": 3298
+  },
+  {
+    "id": 19173,
+    "start": 1296000,
+    "end": 1324800,
+    "department": 6,
+    "station": 0,
+    "missing": 4,
+    "plan": 3298
+  },
+  {
+    "id": 19372,
+    "start": 1324800,
+    "end": 1353600,
+    "department": 1,
+    "station": 0,
+    "missing": 20,
+    "plan": 3298
+  },
+  {
+    "id": 19373,
+    "start": 1324800,
+    "end": 1353600,
+    "department": 2,
+    "station": 0,
+    "missing": 15,
+    "plan": 3298
+  },
+  {
+    "id": 19374,
+    "start": 1324800,
+    "end": 1353600,
+    "department": 3,
+    "station": 0,
+    "missing": 3,
+    "plan": 3298
+  },
+  {
+    "id": 19375,
+    "start": 1324800,
+    "end": 1353600,
+    "department": 5,
+    "station": 0,
+    "missing": 8,
+    "plan": 3298
+  },
+  {
+    "id": 19376,
+    "start": 1324800,
+    "end": 1353600,
+    "department": 6,
+    "station": 0,
+    "missing": 5,
+    "plan": 3298
+  },
+  {
+    "id": 19836,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 1,
+    "station": 0,
+    "missing": 8,
+    "plan": 3298
+  },
+  {
+    "id": 19837,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 2,
+    "station": 0,
+    "missing": 26,
+    "plan": 3298
+  },
+  {
+    "id": 19838,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 3,
+    "station": 0,
+    "missing": 10,
+    "plan": 3298
+  },
+  {
+    "id": 19839,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 4,
+    "station": 0,
+    "missing": 10,
+    "plan": 3298
+  },
+  {
+    "id": 19840,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 5,
+    "station": 0,
+    "missing": 24,
+    "plan": 3298
+  },
+  {
+    "id": 19841,
+    "start": 1353600,
+    "end": 1382400,
+    "department": 6,
+    "station": 0,
+    "missing": 23,
+    "plan": 3298
+  },
+  {
+    "id": 26471,
+    "start": 1900800,
+    "end": 1929600,
+    "department": 4,
+    "station": 0,
+    "missing": 3,
+    "plan": 3298
+  },
+  {
+    "id": 26472,
+    "start": 1900800,
+    "end": 1929600,
+    "department": 5,
+    "station": 0,
+    "missing": 11,
+    "plan": 3298
+  },
+  {
+    "id": 26674,
+    "start": 1929600,
+    "end": 1958400,
+    "department": 2,
+    "station": 0,
+    "missing": 26,
+    "plan": 3298
+  },
+  {
+    "id": 26675,
+    "start": 1929600,
+    "end": 1958400,
+    "department": 3,
+    "station": 0,
+    "missing": 13,
+    "plan": 3298
+  },
+  {
+    "id": 26676,
+    "start": 1929600,
+    "end": 1958400,
+    "department": 4,
+    "station": 0,
+    "missing": 11,
+    "plan": 3298
+  },
+  {
+    "id": 26677,
+    "start": 1929600,
+    "end": 1958400,
+    "department": 5,
+    "station": 0,
+    "missing": 27,
+    "plan": 3298
+  },
+  {
+    "id": 26678,
+    "start": 1929600,
+    "end": 1958400,
+    "department": 6,
+    "station": 0,
+    "missing": 22,
+    "plan": 3298
+  },
+  {
+    "id": 27090,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 1,
+    "station": 0,
+    "missing": 27,
+    "plan": 3298
+  },
+  {
+    "id": 27091,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 2,
+    "station": 0,
+    "missing": 31,
+    "plan": 3298
+  },
+  {
+    "id": 27092,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 3,
+    "station": 0,
+    "missing": 7,
+    "plan": 3298
+  },
+  {
+    "id": 27093,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 4,
+    "station": 0,
+    "missing": 6,
+    "plan": 3298
+  },
+  {
+    "id": 27094,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 5,
+    "station": 0,
+    "missing": 21,
+    "plan": 3298
+  },
+  {
+    "id": 27095,
+    "start": 1958400,
+    "end": 1987200,
+    "department": 6,
+    "station": 0,
+    "missing": 23,
+    "plan": 3298
+  }
+]

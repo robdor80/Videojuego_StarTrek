@@ -1,0 +1,66 @@
+{
+  "contract_id": "f04_odyssey_experimental_program_v1",
+  "status": "ORGANIZATIONAL_COMPATIBILITY_ONLY",
+  "template_id": 4,
+  "authority": "CoreRPG.WorldState",
+  "classification": "GAME_ADDITION_AUTHOR_APPROVED_NOT_SCREEN_CANON",
+  "class_operational_by_year": 2383,
+  "exact_hull_commission_date": null,
+  "individual_hull_identity": null,
+  "capability_id": "quantum_slipstream_drive",
+  "contract_ref": "mundo/lore/technology/experimental/quantum_slipstream_odyssey_valhalla_v0.1.json",
+  "decision_ref": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md",
+  "general_capability_contract": "sistemas/gameplay/technology/technology_capability_contract.json",
+  "runtime_implemented": false,
+  "installed_by_default": false,
+  "conventional_warp_retained": true,
+  "additional_departments": 0,
+  "additional_sections": 0,
+  "potential_specialist_sections": {
+    "engineering": [
+      11,
+      12,
+      14,
+      15,
+      19,
+      21,
+      22
+    ],
+    "science": [
+      23,
+      24,
+      25,
+      32,
+      33
+    ],
+    "navigation": [
+      4
+    ],
+    "command": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ]
+  },
+  "assignment_requirements": [
+    "existing_person_identity",
+    "valid_qualification",
+    "authorized_post_or_temporary_commission",
+    "rest_and_critical_service_coverage",
+    "specific_designated_experimental_hull",
+    "approved_technology_state_and_permissions"
+  ],
+  "coordination": [
+    "engineering_technical_safety_and_damage",
+    "science_measurement_and_exotic_phenomena",
+    "navigation_trajectory_and_risk",
+    "command_authorization_and_fleet_coordination"
+  ],
+  "valhalla_first_service_target_year": 2387,
+  "valhalla_slipstream_installed_at_commissioning": false,
+  "quantum_torpedoes_are_distinct": true,
+  "player_participation_required": false,
+  "automatic_future_events": false
+}

@@ -1,0 +1,137 @@
+{
+  "f04-reference": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "desarrollo/tools/validation",
+      "-p",
+      "test_f04_reference.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 22 tests in 0.026s",
+      "",
+      "OK"
+    ]
+  },
+  "miranda-reference": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "desarrollo/tools/validation",
+      "-p",
+      "test_f04_miranda_example.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 4 tests in 0.015s",
+      "",
+      "OK"
+    ]
+  },
+  "f03-reference": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "desarrollo/tools/validation",
+      "-p",
+      "test_f03_reference.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 26 tests in 0.047s",
+      "",
+      "OK"
+    ]
+  },
+  "f02-reference": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "desarrollo/tools/validation",
+      "-p",
+      "test_validate_f02_contracts.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 9 tests in 0.411s",
+      "",
+      "OK"
+    ]
+  },
+  "f04-fixture": {
+    "command": [
+      "python",
+      "desarrollo/tools/validation/f04_reference.py",
+      "--fixture",
+      "desarrollo/validation/fixtures/f04/authority_watch_acceptance_v0.1.json"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "F04 reference fixture: PASS"
+    ]
+  },
+  "roadmap": {
+    "command": [
+      "python",
+      "desarrollo/tools/validation/validate_roadmap_state.py"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de dise\u00f1o, F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO y F04 principal; plan sincronizado. Esto NO valida Core RPG ni UE5."
+    ]
+  },
+  "lore03-chronology": {
+    "command": [
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "desarrollo/tools/validation",
+      "-p",
+      "test_lore03_a.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 56 tests in 0.124s",
+      "",
+      "OK"
+    ]
+  },
+  "references": {
+    "command": [
+      "python",
+      "desarrollo/tools/validation/validate_internal_references.py"
+    ],
+    "exit_code": 1,
+    "tail": [
+      " - desarrollo\\validation\\fixtures\\nap\\sensors_console_tng_v0.1\\resolved_visual_context.json $.provenance.source_refs: unknown source id 'sistemas/gameplay/ship_operations/consoles/sensors/sensor_menu_tree.json'",
+      " - desarrollo\\validation\\fixtures\\nap\\sensors_console_tng_v0.1\\resolved_visual_context.json $.provenance.source_refs: unknown source id 'sistemas/gameplay/ship_operations/consoles/sensors/sensor_console_interaction_model.json'",
+      " - desarrollo\\validation\\fixtures\\nap\\sensors_console_tng_v0.1\\resolved_visual_context.json $.provenance.source_refs: unknown source id 'audiovisual/art_direction/visual_bibles/interiors/STAR_TREK_INTERIOR_ERA_OPERATOR_VISUAL_PROFILES_v0.1.json'",
+      " - desarrollo\\validation\\fixtures\\nap\\sensors_console_tng_v0.1\\resolved_visual_context.json $.provenance.source_refs: unknown source id 'proyecto/docs/roadmap/ship_console_vertical_slice_v0_0_1.md'"
+    ]
+  }
+}

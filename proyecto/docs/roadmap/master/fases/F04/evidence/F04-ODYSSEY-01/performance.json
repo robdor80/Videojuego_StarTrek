@@ -1,0 +1,58 @@
+[
+  {
+    "days": 1,
+    "create_people_and_positions_ms": 630.1328999979887,
+    "create_people_ms": 3.6063000006834045,
+    "install_positions_ms": 10.407499998109415,
+    "bootstrap_assignments_ms": 616.1190999991959,
+    "manifest_ms": 1.0877000022446737,
+    "plan_ms": 21.222200000920566,
+    "coverage_ms": 1.004300000204239,
+    "save_ms": 50.060599998687394,
+    "load_ms": 39.27459999977145,
+    "advance_ms": 16.579999999521533,
+    "archive_bytes": 1252261
+  },
+  {
+    "days": 7,
+    "create_people_and_positions_ms": 655.527599999914,
+    "create_people_ms": 4.01639999836334,
+    "install_positions_ms": 11.664900001051137,
+    "bootstrap_assignments_ms": 639.8463000004995,
+    "manifest_ms": 0.8788000013737474,
+    "plan_ms": 119.01279999801773,
+    "coverage_ms": 4.955700002028607,
+    "save_ms": 111.33730000074138,
+    "load_ms": 97.31939999983297,
+    "advance_ms": 95.27429999798187,
+    "archive_bytes": 3244020
+  },
+  {
+    "days": 14,
+    "create_people_and_positions_ms": 632.3357000001124,
+    "create_people_ms": 3.780300001380965,
+    "install_positions_ms": 9.502499997324776,
+    "bootstrap_assignments_ms": 619.0529000014067,
+    "manifest_ms": 0.8682999978191219,
+    "plan_ms": 335.72800000183634,
+    "coverage_ms": 12.690499999735039,
+    "save_ms": 196.42989999920246,
+    "load_ms": 216.102200000023,
+    "advance_ms": 414.55640000276617,
+    "archive_bytes": 5585553
+  },
+  {
+    "days": 28,
+    "create_people_and_positions_ms": 233.1134000014572,
+    "create_people_ms": 6.9977999992261175,
+    "install_positions_ms": 15.117200000531739,
+    "bootstrap_assignments_ms": 210.99840000169934,
+    "manifest_ms": 0.8958999969763681,
+    "plan_ms": 849.7662000008859,
+    "coverage_ms": 43.61649999918882,
+    "save_ms": 394.77370000167866,
+    "load_ms": 442.7008999991813,
+    "advance_ms": 1256.661899999017,
+    "archive_bytes": 10157613
+  }
+]
