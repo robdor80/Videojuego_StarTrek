@@ -1,0 +1,52 @@
+{
+  "trek_commit": "e85c11f1e730bdbb1ae13123025bfa59aa9bc4f1",
+  "core_commit": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+  "trek": {
+    "workflow_runs": [
+      {
+        "id": 41041233315,
+        "name": "Roadmap governance — F00-F15",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 82,
+        "jobs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233315/jobs",
+        "logs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233315/logs",
+        "workflow_id": 382656857
+      },
+      {
+        "id": 41041233221,
+        "name": "F03 Reference Contracts",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 18,
+        "jobs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233221/jobs",
+        "logs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233221/logs",
+        "workflow_id": 381381455
+      },
+      {
+        "id": 41041233210,
+        "name": "F03 authoritative campaign integration",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 3,
+        "jobs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233210/jobs",
+        "logs_url": "https://api.github.com/repos/robdor80/Videojuego_StarTrek/actions/runs/41041233210/logs",
+        "workflow_id": 401623012
+      }
+    ]
+  },
+  "core": {
+    "workflow_runs": [
+      {
+        "id": 41040471499,
+        "name": "CI",
+        "status": "completed",
+        "conclusion": "success",
+        "run_number": 108,
+        "jobs_url": "https://api.github.com/repos/robdor80/CoreRPG/actions/runs/41040471499/jobs",
+        "logs_url": "https://api.github.com/repos/robdor80/CoreRPG/actions/runs/41040471499/logs",
+        "workflow_id": 363997578
+      }
+    ]
+  }
+}

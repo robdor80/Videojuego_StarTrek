@@ -1,5 +1,4 @@
 {
-  "checked_utc": "2026-10-30T10:30:00Z",
   "folder": {
     "id": "1vQUk7qr8V7Zh2gHSTBg76HKTow340jgy",
     "shared": false
@@ -64,5 +63,6 @@
       "source_visibility_status": "permission_metadata_available"
     }
   ],
-  "note": "Metadata readback verifies sizes, parent and owner-only permissions. Connector response does not expose requested remote checksums. SHA-256 in external index is calculated locally."
+  "note": "Metadata readback verifies sizes, parent and owner-only permissions. Connector response does not expose requested remote checksums. SHA-256 in external index is calculated locally.",
+  "recorded_at_utc": "2026-10-30T10:30:17.839977+00:00"
 }

@@ -6,6 +6,10 @@ abierta: depende de [CoreRPG Draft #12](https://github.com/robdor80/CoreRPG/pull
 todavía sin fusionar. No se declara integración final en `main`, cierre oficial ni
 `UE5_JUGABLE`. No se modifica `ESTADO_GLOBAL.json` ni la historia aprobada de F02.
 
+Entrega publicada: [Star Trek Draft #62](https://github.com/robdor80/Videojuego_StarTrek/pull/62)
+y [CoreRPG Draft #12](https://github.com/robdor80/CoreRPG/pull/12), ambas abiertas,
+sin fusionar. La aprobación independiente todavía no se ha solicitado como cierre.
+
 ## Referencias y arquitectura entregada
 
 Star Trek parte de `9b33f32caab21ce0eb1ecb74cd38739b45d2f035`, cierre F02
@@ -137,6 +141,17 @@ nombre de equipo y cabeceras de autorización; los logs originales permanecen lo
 No se suben binarios UE, Intermediate, PDB gigantes ni arte a GitHub.
 
 ## Protección y límites para la auditoría
+
+CI remota comprobada en `e85c11f1e730bdbb1ae13123025bfa59aa9bc4f1`:
+[integración nativa F03](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41041233210),
+[referencia documental](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41041233221)
+y [gobierno de roadmap](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41041233315),
+los tres `completed/success`. Core en `9c53a337`:
+[CI 41040471499](https://github.com/robdor80/CoreRPG/actions/runs/41040471499),
+seis jobs `completed/success`: Windows/Linux, Core-only y sanitizers ASan/UBSan,
+incluida integración con paquete externo de pruebas. UE se valida localmente,
+no en GitHub-hosted. [Lectura verificable de CI](evidencias_20261030/ci-verification.json).
+Los commits posteriores a ese corte añaden únicamente metadatos/documentación.
 
 Inventario real previo/posterior del checkout artístico: **19.691/19.691 archivos**,
 cero nuevos, ausentes o cambios de tamaño/mtime. Es una comprobación de metadatos,
