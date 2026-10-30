@@ -88,6 +88,24 @@ void run(const std::string& name,const std::string& path) {
   l.op(F04_ABSENCE,l.post(7).person,0,28800,30000,F04_LEAVE,F04_SCOPE,chief.person);
   l.op(F04_MEDICAL,3,0,28800,28900,F04_SICK,F04_OK,doctor.person);check(l.stats().commander==first.person,"normal succession");l.advance(28900);check(l.stats().commander==3,"captain restored");
  }
+ else if(name=="authority_boundary") {
+  // A departmental deputy is not a command succession role or an origin for POLICY delegation.
+  l.alpha();auto deputy=l.post(21,2),first=l.post(2),doctor=l.post(29);
+  l.op(F04_CREDENTIAL,deputy.person,l.credentials(deputy.person)|(1ULL<<F04_COMMAND),0,forever);
+  l.op(F04_APPOINT,deputy.person,F04_COMMAND,28800,forever,F04_SECOND);
+  l.op(F04_MEDICAL,3,0,28800,28900,F04_SICK,F04_OK,doctor.person);
+  l.op(F04_MEDICAL,first.person,0,28800,28900,F04_SICK,F04_OK,doctor.person);
+  check(l.stats().commander==deputy.person,"only explicit SECOND appoints successor");
+  const U delegation=l.op(F04_DELEGATE,l.post(3).person,0,28800,28890,F04_POLICY,F04_OK,deputy.person).record;
+  const auto archive=corerpg::CampaignPersistence::deserialize(l.save());check(archive.snapshot.has_value(),"decode delegation");
+  U origin=0,role=0;
+  for(const auto& r:archive.snapshot->campaign.relations)
+   if(r.source.value()==delegation && r.kind.value()==6)origin=r.target.value();
+  check(origin!=0,"delegation origin is an appointment");
+  for(const auto& r:archive.snapshot->campaign.relations)
+   if(r.source.value()==origin && (r.kind.value()>>48)==0xF000+11)role=r.kind.value()&forever;
+  check(role==F04_SECOND,"delegation must originate in command succession, not departmental deputy");
+ }
  else if(name=="alpha") {l.alpha();auto s=l.org();check(s.on_duty==53 && s.alpha_present==53 && s.alpha_deficit==0 && s.continuous_covered==6 && !s.coverage_validated,"53 active distinct people; coverage not certified");std::set<U> active;for(const auto& p:l.positions())if(p.on_duty)check(active.insert(p.person).second,"no duplicated duty");check(active.size()==53,"53 unique");auto functions=l.functions();check(functions.size()==1 && functions[0].person==l.post(21).person && functions[0].active,"chief is tactical operator");l.advance(57600);check(l.org().on_duty==0 && l.org().continuous_covered==0,"Alpha is not 24h coverage");}
  else if(name=="alpha_deficit") {auto sensor=l.post(12);l.op(F04_ASSIGN,sensor.id);check(l.op(F04_PLAN_ALPHA,0,1,28800,57600).record==1,"Alpha with vacancy recorded");l.advance(28800);check(l.org().alpha_present==52 && l.org().alpha_deficit==1 && l.org().vacant==1,"real missing worker");l.op(F04_ABSENCE,l.post(12,2).person,0,28800,30000,F04_SICK);check(l.org().alpha_deficit==2,"absence adds deficit");l.op(F04_POLICY,0,0,0,0,4,F04_VACANT);check(l.stats().pattern==3,"cannot claim complete next cycle");}
  else if(name=="functions") {l.alpha();auto chief=l.post(21),tactical=l.post(22);check(l.functions()[0].person==chief.person,"single chief identity");l.op(F04_FUNCTION,tactical.person,tactical.id,28800,57600,F04_ST_TACTICAL,F04_OVERLAP);l.op(F04_ABSENCE,chief.person,0,28800,30000,F04_SICK);check(!l.functions()[0].active,"absence disables console function");l.advance(30000);check(l.functions()[0].active,"function resumes on return");l.op(F04_CREDENTIAL,chief.person,1ULL<<F04_SECURITY,0,forever);check(!l.functions()[0].active && !l.post(21).on_duty,"missing tactical qualification disables coverage");}
