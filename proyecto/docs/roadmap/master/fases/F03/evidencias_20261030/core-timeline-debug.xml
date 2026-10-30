@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="11" failures="0" disabled="0" errors="0" time="0.003" timestamp="2026-10-30T11:24:00.265" name="AllTests">
+  <testsuite name="TimelineTest" tests="10" failures="0" disabled="0" skipped="0" errors="0" time="0.003" timestamp="2026-10-30T11:24:00.265">
+    <testcase name="OffscreenOrderAndIdempotency" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="20" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.265" classname="TimelineTest" />
+    <testcase name="BoundedResumeDoesNotAdvancePastUnprocessedActions" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="34" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.265" classname="TimelineTest" />
+    <testcase name="RejectedParentBlocksChildWithoutRollOrRetry" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="48" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.265" classname="TimelineTest" />
+    <testcase name="InvalidSchedulesAndBackwardsTimePreserveState" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="59" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.265" classname="TimelineTest" />
+    <testcase name="AllOperationTypesPersistAndExecute" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="75" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.265" classname="TimelineTest" />
+    <testcase name="KnowledgeAndFutureRngSurviveNewSession" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="93" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.266" classname="TimelineTest" />
+    <testcase name="EveryTruncationCorruptionAndFutureVersionFailSafely" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="104" status="run" result="completed" time="0.001" timestamp="2026-10-30T11:24:00.266" classname="TimelineTest" />
+    <testcase name="SemanticCandidatesCannotDestroyValidCampaign" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="118" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.267" classname="TimelineTest" />
+    <testcase name="MaximumTickDoesNotOverflowAndRecordBudgetIsEnforced" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="132" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.267" classname="TimelineTest" />
+    <testcase name="LegacyPersistenceStillRejectsTimelineArchiveAndKeepsWireFormat" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="140" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.268" classname="TimelineTest" />
+  </testsuite>
+  <testsuite name="TimelineWire" tests="1" failures="0" disabled="0" skipped="0" errors="0" time="0." timestamp="2026-10-30T11:24:00.268">
+    <testcase name="IndependentLittleEndianGoldenArchive" file="C:\F03\CoreRPG\tests\timeline_test.cpp" line="146" status="run" result="completed" time="0." timestamp="2026-10-30T11:24:00.268" classname="TimelineWire" />
+  </testsuite>
+</testsuites>

@@ -1,0 +1,119 @@
+{
+	"devices": [
+		{
+			"deviceName": "<MSI>",
+			"instance": "2A3EE81B4376F9279F514EACF170DDEF",
+			"instanceName": "<MSI>-10140",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "Intel(R) Core(TM) i9-14900HX",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.30-10.15.16",
+	"succeeded": 6,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.19969139993190765,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "ActorLifecycle",
+			"fullTestPath": "F02.Core.ActorLifecycle",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.027349598705768585,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CorruptLoad",
+			"fullTestPath": "F02.Core.CorruptLoad",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.031093399971723557,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "HostRecovery",
+			"fullTestPath": "F02.Core.HostRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.02344910055398941,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Projection",
+			"fullTestPath": "F02.Core.Projection",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.039802297949790955,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ThreadAffinity",
+			"fullTestPath": "F02.Core.ThreadAffinity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.044395998120307922,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WorldScopedRepresentation",
+			"fullTestPath": "F02.Core.WorldScopedRepresentation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2A3EE81B4376F9279F514EACF170DDEF"
+			],
+			"duration": 0.033600997179746628,
+			"dateTime": "2026.10.30-10.15.16",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

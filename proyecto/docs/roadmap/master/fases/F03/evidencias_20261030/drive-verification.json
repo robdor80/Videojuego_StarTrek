@@ -1,0 +1,68 @@
+{
+  "folder": {
+    "id": "1vQUk7qr8V7Zh2gHSTBg76HKTow340jgy",
+    "shared": false
+  },
+  "files": [
+    {
+      "id": "1KzAtNJJRNk4iHGEWS63079bO3i6sebBy",
+      "title": "F03-logs-and-results-20261030.zip",
+      "mime_type": "application/zip",
+      "size": "528448",
+      "url": "https://drive.google.com/file/d/1KzAtNJJRNk4iHGEWS63079bO3i6sebBy/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1KzAtNJJRNk4iHGEWS63079bO3i6sebBy/view?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1vQUk7qr8V7Zh2gHSTBg76HKTow340jgy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": false,
+      "permissions": [
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": null,
+          "domain": null,
+          "displayName": null,
+          "allowFileDiscovery": null
+        }
+      ],
+      "source_visibility_status": "permission_metadata_available"
+    },
+    {
+      "id": "1V11GEAeTI8-UhW4y8hkyRq39FboRvxM6",
+      "title": "F03-own-binaries-20261030.zip",
+      "mime_type": "application/zip",
+      "size": "400100",
+      "url": "https://drive.google.com/file/d/1V11GEAeTI8-UhW4y8hkyRq39FboRvxM6/view?usp=drivesdk",
+      "display_url": "https://drive.google.com/file/d/1V11GEAeTI8-UhW4y8hkyRq39FboRvxM6/view?usp=drivesdk",
+      "file_or_folder": "file",
+      "created_time": null,
+      "modified_time": null,
+      "parent_ids": [
+        "1vQUk7qr8V7Zh2gHSTBg76HKTow340jgy"
+      ],
+      "drive_id": null,
+      "current_user_can_share": null,
+      "has_augmented_permissions": null,
+      "shared": false,
+      "permissions": [
+        {
+          "type": "user",
+          "role": "owner",
+          "emailAddress": null,
+          "domain": null,
+          "displayName": null,
+          "allowFileDiscovery": null
+        }
+      ],
+      "source_visibility_status": "permission_metadata_available"
+    }
+  ],
+  "note": "Metadata readback verifies sizes, parent and owner-only permissions. Connector response does not expose requested remote checksums. SHA-256 in external index is calculated locally.",
+  "recorded_at_utc": "2026-10-30T10:30:17.839977+00:00"
+}

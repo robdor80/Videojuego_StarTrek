@@ -1,0 +1,42 @@
+name: F03 authoritative campaign integration
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f03/**'
+      - 'proyecto/docs/roadmap/master/fases/F03/**'
+      - '.github/workflows/f03-native-integration.yml'
+  push:
+    branches: [codex/f03-mundo-autoritativo-persistencia-20261030]
+    paths:
+      - 'desarrollo/integration/f03/**'
+      - '.github/workflows/f03-native-integration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read exact audited Core revision
+        id: core
+        run: echo "sha=$(cat desarrollo/integration/f03/core-revision.txt)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: external/CoreRPG
+      - name: Compile real Core and C ABI Host
+        run: |
+          cmake -S desarrollo/integration/f03 -B build/f03 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/external/CoreRPG"
+          cmake --build build/f03 --parallel 4
+      - name: Campaign tests including separate save and restore processes
+        run: ctest --test-dir build/f03 --no-tests=error --output-on-failure --output-junit native-tests.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f03-native-evidence
+          path: |
+            build/f03/native-tests.xml
+            build/f03/process-campaign.f03
