@@ -99,7 +99,7 @@ inline constexpr std::array<F04SectionSpec,34> intrepid_sections{{
  {21,F04_OPERATIONS,7,3,F04_Q_COMPUTING,F04_ST_COMPUTER,F04_DAY_ACTIVITY,"Sistemas bioneurales y ordenadores","Administración y diagnóstico bioneural; coordinación técnica con Ingeniería","Ordenadores y paquetes bioneurales"},
  {22,F04_OPERATIONS,4,2,F04_OPERATIONS,F04_ST_COMPUTER,F04_DAY_ACTIVITY,"Coordinación de recursos y holocubiertas","Reservas y prioridades de recursos; instalaciones lógicas configurables","Recursos y holocubiertas; contrato mínimo sin 3D"},
  {23,F04_SECURITY,2,1,F04_SECURITY,F04_ST_TACTICAL|F04_ST_SECURITY,F04_CONTINUOUS_CANDIDATE,"Jefe de seguridad y adjunto","Dirección de seguridad y táctica; consola táctica si está habilitado","Fáseres, torpedos, escudos y seguridad"},
- {24,F04_SECURITY,5,2,F04_Q_TACTICAL,F04_ST_TACTICAL,F04_CONTINUOUS_CANDIDATE,"Especialistas tácticos","Operación táctica; apoyo o relevo del jefe de servicio","Fáseres y torpedos en barra superior; escudos"},
+ {24,F04_SECURITY,5,2,F04_Q_TACTICAL,F04_ST_TACTICAL,F04_CONTINUOUS_CANDIDATE,"Especialistas tácticos","Operación táctica; apoyo o relevo del jefe de servicio","Matrices fáser, lanzadores de torpedos integrados en el casco y escudos"},
  {25,F04_SECURITY,8,3,F04_Q_INTERIOR_SECURITY,F04_ST_SECURITY,F04_DAY_ACTIVITY,"Seguridad interior","Protección interior","Instalaciones de seguridad"},
  {26,F04_SECURITY,3,1,F04_Q_EMERGENCY,F04_ST_SECURITY,F04_DAY_ACTIVITY,"Respuesta a emergencias y abordajes","Intervención en emergencias y abordajes","Instalaciones de seguridad"},
  {27,F04_LOGISTICS,1,1,F04_LOGISTICS,F04_ST_HANGAR|F04_ST_CARGO,F04_DAY_ACTIVITY,"Jefe de sección","Coordinación de servicios auxiliares","Hangares posteriores y almacenes"},
