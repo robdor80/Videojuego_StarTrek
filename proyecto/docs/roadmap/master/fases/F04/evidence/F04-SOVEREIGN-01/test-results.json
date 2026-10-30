@@ -1,0 +1,31 @@
+{
+  "native": {
+    "defined": 136,
+    "passed": 136,
+    "failed": [],
+    "skipped": []
+  },
+  "f02": {
+    "defined": 15,
+    "passed": 15,
+    "failed": [],
+    "skipped": []
+  },
+  "f03": {
+    "defined": 25,
+    "passed": 25,
+    "failed": [],
+    "skipped": []
+  },
+  "core": {
+    "defined": 451,
+    "passed": 447,
+    "failed": [],
+    "skipped": [
+      "ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported"
+    ]
+  }
+}

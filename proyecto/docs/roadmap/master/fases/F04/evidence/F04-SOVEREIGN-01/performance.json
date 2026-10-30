@@ -1,0 +1,46 @@
+[
+  {
+    "days": 1,
+    "create_people_and_positions_ms": 131.4806000009412,
+    "manifest_ms": 0.41479999890725594,
+    "plan_ms": 9.865100000752136,
+    "coverage_ms": 0.5397999993874691,
+    "save_ms": 20.703099999082042,
+    "load_ms": 16.801800000393996,
+    "advance_ms": 6.7983000008098315,
+    "archive_bytes": 567116
+  },
+  {
+    "days": 7,
+    "create_people_and_positions_ms": 132.46500000059314,
+    "manifest_ms": 0.39060000017343555,
+    "plan_ms": 54.14299999938521,
+    "coverage_ms": 2.9032000002189307,
+    "save_ms": 53.271200000381214,
+    "load_ms": 45.054499998514075,
+    "advance_ms": 44.246299999940675,
+    "archive_bytes": 1476893
+  },
+  {
+    "days": 14,
+    "create_people_and_positions_ms": 132.57659999908356,
+    "manifest_ms": 0.3882000000885455,
+    "plan_ms": 128.6030999999639,
+    "coverage_ms": 7.711300000664778,
+    "save_ms": 91.2757000005513,
+    "load_ms": 78.51800000025833,
+    "advance_ms": 125.64959999872372,
+    "archive_bytes": 2563761
+  },
+  {
+    "days": 28,
+    "create_people_and_positions_ms": 131.88930000069377,
+    "manifest_ms": 0.3754999997909181,
+    "plan_ms": 323.9137999989907,
+    "coverage_ms": 27.107200001410092,
+    "save_ms": 168.9159000015934,
+    "load_ms": 145.08999999998196,
+    "advance_ms": 415.7685999998648,
+    "archive_bytes": 4671275
+  }
+]

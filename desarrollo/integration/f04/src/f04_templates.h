@@ -67,6 +67,7 @@ struct Profile {
  uint64_t (*qualification_mask)(const F04SectionSpec&);
  uint64_t (*post_responsibility)(uint64_t,uint64_t);
  std::span<const uint64_t> continuous_stations;
+ std::span<const F04WatchDemand> watch_demands{};
 };
 inline constexpr uint64_t sutherland_continuous[]={F04_ST_COMMAND,F04_ST_HELM,
  F04_ST_SENSORS,F04_ST_COMMUNICATIONS,F04_ST_ENGINEERING,F04_ST_TACTICAL};
@@ -131,9 +132,12 @@ inline uint64_t intrepid_qualifications(const F04SectionSpec& s) {
 inline constexpr uint64_t intrepid_continuous[]={F04_ST_COMMAND,F04_ST_HELM,
  F04_ST_SENSORS,F04_ST_COMPUTER,F04_ST_COMMUNICATIONS,F04_ST_ENGINEERING,F04_ST_TACTICAL};
 
+#include "f04_sovereign.h"
+
 inline const Profile* profile(uint64_t id) {
  static const Profile registry[]={{sutherland,sections,qualifications,responsibility,sutherland_continuous},
-  {intrepid,intrepid_sections,intrepid_qualifications,intrepid_responsibility,intrepid_continuous}};
+  {intrepid,intrepid_sections,intrepid_qualifications,intrepid_responsibility,intrepid_continuous},
+  {sovereign,sovereign_sections,sovereign_qualifications,sovereign_responsibility,sovereign_continuous,sovereign_demands}};
  for(const auto& p:registry)if(p.spec.id==id)return &p;
  return nullptr;
 }

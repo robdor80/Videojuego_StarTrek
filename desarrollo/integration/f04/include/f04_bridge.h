@@ -22,8 +22,9 @@ enum F04Op { F04_ASSIGN=1,F04_DUTY,F04_REST,F04_ONCALL,F04_ABSENCE,F04_RELIEF,
  F04_IMPOSSIBLE,F04_CONTACT,F04_QUEUE,F04_RECALL,F04_SUPERIOR,F04_MOVE,F04_PROPOSE,F04_CONTACT_REVIEW,
  F04_EMBARK,F04_DEPART,F04_CREATE_SLOT,
  F04_INSTALL_TEMPLATE,F04_BOOTSTRAP_TEMPLATE,F04_CREDENTIAL,F04_TRANSFER,
- F04_FUNCTION,F04_PLAN_ALPHA };
-enum F04Role { F04_CAPTAIN=1,F04_HEAD,F04_WATCH,F04_DOCTOR,F04_FIRST,F04_SECOND,F04_SUCCESSOR,F04_DEPUTY };
+ F04_FUNCTION,F04_PLAN_ALPHA,
+ F04_PLAN_WATCHES,F04_COVER_DUTY,F04_CANCEL_DUTY };
+enum F04Role { F04_CAPTAIN=1,F04_HEAD,F04_WATCH,F04_DOCTOR,F04_FIRST,F04_SECOND,F04_SUCCESSOR,F04_DEPUTY,F04_DUTY_HEAD };
 /* Existing department and qualification IDs 1..4 never change. */
 enum F04Dept { F04_SENSORS=1,F04_ENGINEERING=2,F04_COMMAND=3,F04_MEDICINE=4,
  F04_OPERATIONS=5,F04_SECURITY=6,F04_LOGISTICS=7 };
@@ -31,16 +32,18 @@ enum F04Qualification { F04_Q_HELM=8,F04_Q_MISSION,F04_Q_PROPULSION,F04_Q_POWER,
  F04_Q_LIFE_SUPPORT,F04_Q_REPAIR,F04_Q_ASTROMETRY,F04_Q_PHYSICS,F04_Q_BIOLOGY,
  F04_Q_GEOLOGY,F04_Q_LAB,F04_Q_COMMUNICATIONS,F04_Q_TRANSPORTER,F04_Q_COMPUTING,
  F04_Q_TACTICAL,F04_Q_INTERIOR_SECURITY,F04_Q_EMERGENCY,F04_Q_SHUTTLE,
- F04_Q_HANGAR,F04_Q_CARGO,F04_Q_CLINICAL,F04_Q_NURSING,F04_Q_DIAGNOSTICS };
+ F04_Q_HANGAR,F04_Q_CARGO,F04_Q_CLINICAL,F04_Q_NURSING,F04_Q_DIAGNOSTICS,
+ F04_Q_PSYCHOLOGY,F04_Q_DIPLOMACY,F04_Q_XENOLINGUISTICS,F04_Q_CRYPTOGRAPHY,F04_Q_SURGERY };
 enum F04Station { F04_ST_COMMAND=1,F04_ST_HELM=2,F04_ST_SENSORS=4,
  F04_ST_ENGINEERING=8,F04_ST_COMMUNICATIONS=16,F04_ST_TRANSPORTER=32,
  F04_ST_COMPUTER=64,F04_ST_TACTICAL=128,F04_ST_HANGAR=256,F04_ST_MEDICAL=512,
  F04_ST_LAB=1024,F04_ST_CARGO=2048,F04_ST_SECURITY=4096 };
 enum F04Coverage { F04_DAY_ACTIVITY=1,F04_CONTINUOUS_CANDIDATE,F04_URGENT_PENDING };
-enum F04Template { F04_SUTHERLAND_SCIENCE=1, F04_INTREPID_EXPLORATION=2 };
+enum F04Template { F04_SUTHERLAND_SCIENCE=1, F04_INTREPID_EXPLORATION=2, F04_SOVEREIGN_MULTIMISSION=3 };
 #define F04_SUTHERLAND_EQUIPMENT UINT64_C(8191)
 /* Functional system references; counts and special technology remain configurable. */
 #define F04_INTREPID_EQUIPMENT UINT64_C(8191)
+#define F04_SOVEREIGN_EQUIPMENT UINT64_C(8191)
 enum F04Absence { F04_LEAVE=1,F04_SICK=2,F04_SUSPENDED=3 };
 /* Host authenticates actor; all operations are intentions, never permissions.
  * target/aux depend on operation. revision must equal the current world revision.
@@ -108,6 +111,37 @@ F04_API uint32_t f04_organization_stats(F04Session*,F04Ref,F04OrganizationStats*
 F04_API uint32_t f04_positions_page(F04Session*,F04Ref,uint64_t offset,F04Position*,uint64_t capacity,uint64_t* written,uint64_t* total);
 F04_API uint32_t f04_person_credentials(F04Session*,F04Ref,uint64_t person,uint64_t* mask,uint64_t* expiry);
 F04_API uint32_t f04_functions(F04Session*,F04Ref,F04FunctionView*,uint64_t capacity,uint64_t* count);
+/* Additive ABI 1 / explicit Trek SCHEMA 3 -> 4 migration on PLAN_WATCHES.
+ * start/end: midnight-aligned horizon of 1..28 days, pattern 3 only.
+ * value=REFERENCE uses the exact single approved day; ROTATING uses daily
+ * departmental targets with critical services first, never fabricates skills.
+ * aux=1 seeds first day with REFERENCE before rotating. No implicit recurrence.
+ * COVER_DUTY: target=duty, aux=existing person, start/end=subinterval;
+ * ordinary limits remain enforced; nominal slot/person/department never change.
+ * CANCEL_DUTY: target=duty; preserves history, stops its future service now.
+ * All three require commander and nonzero documented cause.
+ */
+enum F04RosterMode { F04_REFERENCE=1,F04_ROTATING=2 };
+typedef struct { uint64_t section,alpha,beta,gamma,off; } F04WatchDemand;
+typedef struct { uint64_t id,person,slot,start,end,stopped_at,plan,cause;
+ uint32_t ordinary,temporary,state,reserved; } F04DutyView;
+typedef struct { uint64_t station,start,end,first_gap,person;
+ uint32_t covered,reserved; } F04ServiceCoverage;
+typedef struct { uint64_t id,start,end,department,station,missing,plan; } F04RosterGap;
+F04_API uint32_t f04_template_watch_demands(uint64_t,F04WatchDemand*,uint64_t,uint64_t*);
+/* Queries include history; page order is stable Core entity ID order. */
+F04_API uint32_t f04_duties_page(F04Session*,F04Ref,uint64_t offset,F04DutyView*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f04_roster_gaps_page(F04Session*,F04Ref,uint64_t offset,F04RosterGap*,uint64_t capacity,uint64_t* written,uint64_t* total);
+/* Entire interval is checked at every relevant boundary, including expiry.
+ * person is an initial provider, zero when uncovered at interval start.
+ * first_gap=end when fully covered. Results reflect current Core state.
+ */
+typedef struct { uint64_t person,nominal_slot; } F04ReliefCandidate;
+/* Qualified existing people only; protects ordinary limits, absences and rest.
+ * This read-only proposal does not appoint, transfer or assign anyone.
+ */
+F04_API uint32_t f04_relief_candidates_page(F04Session*,F04Ref,uint64_t duty,uint64_t start,uint64_t end,uint64_t offset,F04ReliefCandidate*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f04_service_coverage(F04Session*,F04Ref,uint64_t start,uint64_t end,F04ServiceCoverage*,uint64_t capacity,uint64_t* count);
 #ifdef __cplusplus
 }
 #endif

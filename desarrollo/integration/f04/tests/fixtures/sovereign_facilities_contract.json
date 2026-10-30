@@ -1,0 +1,29 @@
+{
+  "contract_id": "f04_sovereign_facilities_v1",
+  "status": "DATA_CONTRACT_ONLY",
+  "template_id": 3,
+  "contract_ref": "desarrollo/integration/f04/tests/fixtures/intrepid_facilities_contract.json",
+  "authority": "CoreRPG.WorldState",
+  "clock": "CoreRPG.Timeline",
+  "reference_configuration": {
+    "class_id": "sovereign",
+    "facility_count": null,
+    "configurable": true,
+    "manager_section": 34,
+    "facilities": [],
+    "capabilities": {
+      "emh": {"installed": "ship_configurable", "counts_as_fleet_crew": false, "person_ref": null},
+      "captains_yacht": {"installed_by_default": false, "name": null},
+      "auxiliary_craft": {"count": null, "configuration": "ship_specific"},
+      "diplomatic_facilities": {"installed": "ship_configurable"},
+      "photon_and_quantum_torpedoes": {"loadout": "ship_equipment_profile"}
+    }
+  },
+  "runtime_reservations_implemented": false,
+  "runtime_facilities_instantiated": false,
+  "rules": [
+    "Reuse the referenced field contract and rules for player and NPC equally.",
+    "No quantity, capacity, individual auxiliary craft or Enterprise-E modification is a class default.",
+    "Future facility use advances on the same Core Timeline while external simulation continues."
+  ]
+}
