@@ -5,6 +5,7 @@
 #include "Engine/Engine.h"
 #include "Engine/World.h"
 #include "Async/Async.h"
+#include "EngineUtils.h"
 namespace {
 constexpr auto Flags=EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter;
 struct Lab {
@@ -65,5 +66,20 @@ bool FF04Failure::RunTest(const FString&){
  Lab L;World W(L);auto* Actor=L.Host->Represent(W.W,5);TArray<uint8> Before,After,Bad;L.Host->Save(Before);Bad=Before;Bad.Last()^=128;
  TestFalse(TEXT("Bad load"),L.Host->Load(Bad));L.Host->Save(After);TestTrue(TEXT("Atomic load failure"),Before==After);TestTrue(TEXT("Actor preserved"),IsValid(Actor));
  const bool Denied=Async(EAsyncExecution::Thread,[Host=L.Host](){F04Stats S{};return !Host->Stats(S) && Host->Intent(3,F04_BRIDGE)==F04_THREAD && !Host->Advance(20);}).Get();TestTrue(TEXT("Owner thread authority"),Denied);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Population,"F04.Core.LargePopulationSelectiveActors",Flags)
+bool FF04Population::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{65001,404,1800,400,0,0};
+ TestTrue(TEXT("Valhalla Core population"),L.Host->OpenPopulation("valhalla",Config));
+ F04Stats S{};L.Host->Stats(S);TestEqual(TEXT("Fleet"),S.crew,uint64(1800));TestEqual(TEXT("Residents"),S.civilians,uint64(400));
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;
+ TestEqual(TEXT("No automatic crew Actors"),Count,0);
+ auto* One=L.Host->Represent(A.W,2202);auto* Two=L.Host->Represent(B.W,2202);
+ if(!TestNotNull(TEXT("Last civilian identity"),One)||!TestNotNull(TEXT("Second world"),Two))return false;
+ TestEqual(TEXT("Core identity"),One->CorePersonId,uint64(2202));TestTrue(TEXT("World isolation"),One!=Two);
+ L.Host->Dematerialize(A.W);TestFalse(TEXT("Actor released"),IsValid(One));L.Host->Stats(S);
+ TestEqual(TEXT("Logical civilian retained"),S.civilians,uint64(400));
+ TArray<uint8> Before,After;L.Host->Save(Before);TestTrue(TEXT("Restore large campaign"),L.Host->Load(Before));L.Host->Save(After);
+ TestTrue(TEXT("Identities persist"),Before==After);TestNotNull(TEXT("Represent after recovery"),L.Host->Represent(A.W,2202));return true;
 }
 #endif

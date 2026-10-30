@@ -10,6 +10,7 @@ class F02CORELAB_API AF04CrewMarker : public AActor {
  GENERATED_BODY()
 public:
  UPROPERTY(VisibleAnywhere,Category="F04 diagnostic") FString LogicalId;
+ uint64 CorePersonId=0;
  UPROPERTY(VisibleAnywhere,Category="F04 diagnostic") bool OnDuty=false;
  UPROPERTY(VisibleAnywhere,Category="F04 diagnostic") bool Available=false;
 };
@@ -21,6 +22,7 @@ public:
  virtual void Deinitialize() override;
  virtual void BeginDestroy() override;
  bool OpenLab();
+ bool OpenPopulation(const char* ClassId,const F04PopulationConfig& Config);
  void CloseLab();
  bool Stats(F04Stats&) const;
  uint32 Intent(uint32 Person,uint32 Op,uint64 Target=0,uint64 Aux=0,uint64 Start=0,uint64 End=0,uint32 Value=0,uint64 Cause=42,uint64* Record=nullptr);
