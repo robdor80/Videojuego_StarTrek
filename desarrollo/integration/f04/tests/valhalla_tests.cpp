@@ -70,8 +70,9 @@ void run(const std::string& name,const std::string& path) {
   l.plan();for(auto c:l.coverage(0,day))check(members.at(c.person).group==1,"no remote coverage");
   auto before=l.save();l.load(before);F04Auxiliary after{};check(f04_auxiliary(l.s,l.observer,&after)==F04_OK && aux.entity==after.entity && l.save()==before,"auxiliary survives load without duplicate people");
  } else if(name=="civilians") {
-  auto rows=l.residents();check(rows.size()==400,"400 residents");std::array<U,7> counts{};std::set<U> homes;
-  for(auto r:rows){++counts[r.category];check(r.present && r.residence && homes.insert(r.residence).second && r.area==1,"unique logical residence");check(!l.credentials(r.person) && l.person(r.person).department==0 && !l.person(r.person).on_duty,"no military occupation");check(r.agenda_end-r.agenda_start==7200,"civil optional reservation, not 3x8");if(r.category==2)check(r.related_person && r.agenda_kind==2,"student and household contact");}
+  auto rows=l.residents();check(rows.size()==400,"400 residents");std::array<U,7> counts{};std::set<U> homes,minor_contacts,adult_ids;
+  for(auto r:rows)if(r.category==1)adult_ids.insert(r.person);
+  for(auto r:rows){++counts[r.category];check(r.present && r.residence && homes.insert(r.residence).second && r.area==1,"unique logical residence");check(!l.credentials(r.person) && l.person(r.person).department==0 && !l.person(r.person).on_duty,"no military occupation");check(r.agenda_end-r.agenda_start==7200,"civil optional reservation, not 3x8");if(r.category==2){check(r.related_person && adult_ids.contains(r.related_person) && r.agenda_kind==2,"student linked to existing adult contact");check(minor_contacts.insert(r.related_person).second,"synthetic student contacts distributed among adults");}}
   check(counts==std::array<U,7>{0,130,90,65,50,35,30},"exact primary census");
   U p=rows.front().person;l.op(F04_CIVIL_PRESENCE,p,0,0,0,0);check(!l.residents()[0].present,"real absence");auto before=l.save();l.load(before);check(!l.residents()[0].present && l.save()==before,"absence persists");
   l.op(F04_CIVIL_PRESENCE,p,0,0,0,1);l.advance(rows.front().agenda_start);check(l.residents()[0].agenda_active,"agenda active without Actor");l.advance(rows.front().agenda_end);check(!l.residents()[0].agenda_active,"agenda ends");
