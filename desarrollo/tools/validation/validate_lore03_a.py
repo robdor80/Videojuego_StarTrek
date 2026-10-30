@@ -70,7 +70,13 @@ def validate_index(idx, diplomatic, registry, eras):
     check(len(ids) == len(set(ids)) and not (set(ids) & set(diplomatic)), "New event ID collision with LORE-01 D")
     covered={x["time_anchor"]["reference_year"] for x in new} | {e["reference_year"] for e in diplomatic.values()}
     # 2383 tiene un hito GAME_ADDITION propio, no se declara canon de pantalla.
-    covered.update(x["commissioning_target_year"] for x in idx.get("game_additions",[]))
+    for addition in idx.get("game_additions", []):
+        # Game additions may describe a technology programme rather than a hull.
+        # Only real dated ship milestones contribute to historical-year coverage.
+        for field in ("commissioning_target_year", "class_operational_by_year"):
+            year = addition.get(field)
+            if type(year) is int:
+                covered.add(year)
     check(set(range(2364,2383)) <= covered, "A year of 2364–2382 lacks documentary coverage")
     allowed_hooks={"starfleet_career","political_state","ship_status","memory_history","science_research","navigation","civilian_culture"}
     for e in new:
@@ -114,16 +120,62 @@ def validate_index(idx, diplomatic, registry, eras):
           "Tzenkethi false report reclassified")
 
     ships={s["class_id"]:s for s in idx["ship_temporal_reservations"]}
-    for name in ("valhalla","odyssey"):
-        check(name in ships and ships[name]["service_entry_year"] is None and ships[name]["approved_year"] is False,
-              "Unapproved ship appears in chronology")
+    check(set(ships) >= {"valhalla","odyssey","sovereign"}, "Required ship class reservation lost")
+    check(ships["odyssey"].get("service_entry_year") == 2383
+          and ships["odyssey"].get("approved_year") is True
+          and ships["odyssey"].get("operational_at_academy_start") is True
+          and ships["odyssey"].get("exact_commissioning_date_pending") is True
+          and ships["odyssey"].get("quantum_slipstream_default_equipment") is False,
+          "Author-approved Odyssey 2383 or experimental technology boundary contradicted")
+    check(ships["valhalla"].get("service_entry_year") == 2387
+          and ships["valhalla"].get("approved_year") is True
+          and ships["valhalla"].get("target_entry_year") == 2387
+          and ships["valhalla"].get("construction_start_year") == 2380
+          and ships["valhalla"].get("available_in_2383") is False
+          and ships["valhalla"].get("exact_commissioning_date_pending") is True
+          and ships["valhalla"].get("operational_by_cadet_graduation_target_year") == 2387,
+          "Valhalla construction or commissioning target changed without author decision")
     check(ships.get("sovereign",{}).get("do_not_backdate") is True,"Sovereign backdate guard removed")
-    check(w.get("campaign_start_year_proposed") == 2383 and w.get("expected_ensign_year") == 2387 and w.get("academy_duration_years") == 4,"Academy continuity 2383-2387 broken")
-    check(ships["valhalla"].get("target_entry_year") == 2383 and ships["valhalla"].get("operational_by_cadet_graduation_target_year") == 2387,"Valhalla must be accessible to graduating ensign")
+    check(w.get("campaign_start_year_proposed") == 2383
+          and w.get("campaign_start_year_approved") == 2383
+          and w.get("campaign_start_year_status") == "AUTHOR_APPROVED_YEAR_EXACT_DAY_PENDING"
+          and w.get("expected_ensign_year") == 2387
+          and w.get("academy_duration_years") == 4,
+          "Academy continuity 2383-2387 or approved-year boundary broken")
     ga=idx.get("game_additions",[])
-    check(len(ga)==1 and ga[0]["kind"]=="GAME_ADDITION" and ga[0]["construction_begins_target_year"] == 2380 and ga[0]["commissioning_target_year"] == 2383, "Historical Valhalla project decision lost")
-    check(ga[0]["player_can_serve_on_valhalla_as_ensign"] is True and ga[0]["do_not_assume_romulus_destroyed_in_2383"] is True,"Career or Romulus guard broken")
-    check(ga[0]["gameplay_activated"] is False,"Valhalla lore unexpectedly changes runtime")
+    additions={x.get("id"):x for x in ga}
+    check(len(ga)==len(additions)==3
+          and set(additions)=={"GAME_ADDITION_VALHALLA_POST_NEMESIS",
+                              "GAME_ADDITION_ODYSSEY_2383",
+                              "GAME_ADDITION_QUANTUM_SLIPSTREAM_ODYSSEY_VALHALLA"}
+          and all(x.get("kind") == "GAME_ADDITION"
+                  and x.get("gameplay_activated") is False for x in ga),
+          "Unapproved game addition or premature runtime activation")
+    val=additions["GAME_ADDITION_VALHALLA_POST_NEMESIS"]
+    ody=additions["GAME_ADDITION_ODYSSEY_2383"]
+    slip=additions["GAME_ADDITION_QUANTUM_SLIPSTREAM_ODYSSEY_VALHALLA"]
+    check(val.get("construction_begins_target_year")==2380
+          and val.get("commissioning_target_year")==2387
+          and val.get("development_years_from_construction_start")==7
+          and val.get("ship_commissioned_during_reference_2383")=="NO_NOT_YET_IN_SERVICE"
+          and val.get("player_can_serve_on_valhalla_as_ensign") is True
+          and val.get("do_not_assume_romulus_destroyed_in_2383") is True
+          and val.get("quantum_slipstream_default_at_commissioning") is False,
+          "Valhalla 2387 game addition, career or Romulus guard broken")
+    check(ody.get("class_operational_by_year")==2383
+          and ody.get("active_at_academy_start") is True
+          and ody.get("enterprise_f_identity_not_inferred") is True
+          and ody.get("quantum_slipstream_standard_on_all_ships") is False
+          and ody.get("quantum_slipstream_experimental_on_selected_test_ships") is True,
+          "Odyssey 2383 must not imply Enterprise-F or default slipstream")
+    check(slip.get("prototype_odyssey_from_year")==2383
+          and slip.get("valhalla_candidate_target_year")==2387
+          and slip.get("valhalla_installed_at_commissioning_by_default") is False
+          and slip.get("success_not_guaranteed") is True
+          and slip.get("mission_arc_candidate") is True,
+          "Experimental slipstream programme cannot be auto-installed or guaranteed")
+    check((ROOT/"proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md").is_file(),
+          "General author-decision record missing")
     npc={x["person"]:x for x in idx.get("npc_career_2383",[])}
     check(npc.get("Jean-Luc Picard",{}).get("post")=="almirante" and npc["Jean-Luc Picard"].get("not_permanent_valhalla_captain") is True,"Picard's 2383 rank reversed")
     check(npc.get("William Riker",{}).get("post")=="capitan_uss_titan","Riker's Titan captaincy lost")

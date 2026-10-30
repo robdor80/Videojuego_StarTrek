@@ -348,13 +348,18 @@
       "operator": "starfleet",
       "availability": {
         "gameplay_era": "post_nemesis",
-        "entry_into_service": "pending_author_decision"
+        "entry_into_service": "author_approved_2383_game_addition",
+        "entry_into_service_year": 2383,
+        "in_service_at_academy_start_2383": true,
+        "date_precision": "YEAR_ONLY",
+        "provenance": "GAME_ADDITION_AUTHOR_APPROVED_20261030"
       },
       "classifications": ["multi_mission"],
       "primary_gameplay_roles": ["general_service"],
       "nominal_complement": {"starfleet": 1600, "residents": 0},
+      "experimental_technology_programs": [{"capability_id": "quantum_slipstream_drive", "research_from_year": 2383, "installation_scope": "EXPLICIT_TEST_HULLS_ONLY", "default_installed_on_class": false, "operational_certification": "PENDING_TESTS", "classification": "GAME_ADDITION"}],
       "source_ids": ["PROJECT_AUTHOR_APPROVAL_20261030"],
-      "notes": ["Author-approved game design complement; exact service dates and equipment remain undefined; not a physical capacity."]
+      "notes": ["Odyssey leads Starfleet technology at the Academy starting point 2383 by explicit GAME_ADDITION.", "Nominal complement is author-approved, not a capacity limit; exact commissioning day/month and individual ship identities remain open.", "Quantum slipstream is an experimental program on specifically configured Odyssey test ships, not standard class equipment."]
     },
     {
       "class_id": "valhalla",
@@ -362,13 +367,20 @@
       "operator": "starfleet",
       "availability": {
         "gameplay_era": "post_nemesis",
-        "entry_into_service": "pending_author_decision"
+        "entry_into_service": "author_approved_target_2387_game_addition",
+        "entry_into_service_target_year": 2387,
+        "construction_start_year": 2380,
+        "development_initiated_year": 2379,
+        "not_in_service_at_academy_start_2383": true,
+        "date_precision": "YEAR_ONLY",
+        "provenance": "GAME_ADDITION_AUTHOR_APPROVED_20261030"
       },
       "classifications": ["multi_mission"],
       "primary_gameplay_roles": ["general_service"],
       "nominal_complement": {"starfleet": 1800, "residents": 400},
+      "future_technology_candidates": [{"capability_id": "quantum_slipstream_drive", "target": "POSSIBLE_AFTER_FURTHER_TESTS", "installed_at_2387_commissioning_by_default": false, "classification": "GAME_ADDITION"}],
       "source_ids": ["PROJECT_AUTHOR_APPROVAL_20261030"],
-      "notes": ["Author-approved USS Enterprise-G class; residents developed further in F12. Exact equipment remains undefined. Not a physical capacity."]
+      "notes": ["Valhalla is a new Galaxy-inspired class, construction/development from 2380; first service objective 2387 after seven years.", "Valhalla supersedes Odyssey as Starfleet spearhead when its first vessel effectively enters service.", "USS Enterprise / NCC-1701-G is a separate individual-ship creative identity, not every Valhalla hull.", "Residents developed further in F12; nominal complement is not a physical capacity."]
     }
   ]
 }

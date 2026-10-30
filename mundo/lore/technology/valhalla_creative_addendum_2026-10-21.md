@@ -1,5 +1,8 @@
 # Addendum de autoridad creativa — Valhalla y nave auxiliar Defiant
 
+> **PRECEDENCIA ACTUALIZADA 2026-10-30:** este addendum sigue gobernando diseño, hangares, separación y auxiliar Defiant, pero sus frases «no se fija año» quedan **superadas** por [DEC-0013–0016](../../../proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md): programa 2379, construcción 2380–2387, primera Valhalla objetivo 2387; Odyssey punta de lanza en 2383; flujo cuántico experimental en Odyssey, candidato a integración posterior de Valhalla. **No se revocan las demás decisiones creativas de 21-10.**
+
+
 **Fecha de consolidación:** 2026-10-21. **Ámbito:** LORE-02 A / A-G07.  
 **Estado:** decisiones del autor posteriores a VAL-TEC-01–16; **prevalecen** sobre las formulaciones históricas incompatibles de F01, IDEA-0010 o VAL-TEC v0.1. **No** implica geometría, código UE5 ni Content Pack operativo.
 

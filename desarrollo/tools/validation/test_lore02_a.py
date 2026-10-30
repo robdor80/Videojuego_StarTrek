@@ -14,6 +14,14 @@ class Lore02ATests(unittest.TestCase):
         cls.matrix = {p["id"]:p["capabilities"] for p in load(
             "sistemas/gameplay/ship_operations/era_technology_matrix.json")["profiles"]}
 
+    def test_slipstream_program_not_default_or_certified(self):
+        program=load("mundo/lore/technology/experimental/quantum_slipstream_odyssey_valhalla_v0.1.json")
+        self.assertFalse(program["runtime_implemented"])
+        self.assertFalse(program["program"]["odyssey_test_phase"]["class_wide_default"])
+        self.assertFalse(program["program"]["valhalla_transfer_phase"]["default_installed_at_first_commissioning"])
+        self.assertTrue(program["program"]["valhalla_transfer_phase"]["requires_further_tests"])
+        self.assertTrue(program["technology_constraints"]["distinct_from_quantum_torpedoes"])
+
     def test_dimensions_present(self):
         self.assertEqual(self.summary["technology_records"], 14)
         self.assertEqual(self.summary["negative_scenarios"], 14)

@@ -1,5 +1,8 @@
 # VAL-TEC — Perfil tecnológico conceptual de la Clase Valhalla (v0.1)
 
+> **DECISIÓN POSTERIOR VIGENTE (30-10-2026, DEC-0013–0016):** el año de primera entrada en servicio de Valhalla queda como **objetivo aprobado 2387** tras construcción/desarrollo desde **2380 (siete años)**. Odyssey ya opera en **2383** con **flujo cuántico experimental sólo en unidades de prueba**. Su posible instalación futura en Valhalla exige más ensayos; **no es equipo instalado por defecto en la primera Valhalla de 2387**. Ver [acta transversal](../../../proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md). Las menciones inferiores de «año sin fijar» son reservas históricas superadas; las prestaciones warp normales VAL-TEC-03 siguen vigentes.
+
+
 > **Actualización de autoridad creativa (21-10-2026):** prevalece [este addendum](valhalla_creative_addendum_2026-10-21.md), que fija continuidad propia sin año estricto, USS Enterprise (NCC-1701-G de trabajo), prestaciones mínimas Voyager/Intrepid, objetivos armamentísticos Sovereign/Odyssey, 3 hangares distribuidos entre anillo/platillo y sección de batalla, y auxiliar **clase Defiant con camuflaje romulano aprobado**. Las reservas anteriores incompatibles en este v0.1 son historia superada, no bloqueos.
 
 
@@ -67,7 +70,7 @@ Se conserva IDEA-0003: **tres hangares independientes** según dirección creati
 
 ## Decisiones de diseño que NO se fuerzan mediante «B»
 
-La delegación para escoger lo equilibrado **no asigna valores ficticios ni revoca acuerdos previos**. Permanecen abiertos: **año exacto de entrada en servicio**, identidad/matrícula de la auxiliar, concesión legal de *cloaking*, cantidades de torpedos, potencia real de armas/reactores, factor warp específico, plazas de hangares, dimensiones físicas y localización exacta del anclaje Defiant. Se tratarán como ingeniería/investigación pendiente o como decisiones creativas sustantivas si dejan de ser detalles ordinarios.
+La delegación para escoger lo equilibrado **no asigna valores ficticios ni revoca acuerdos previos**. Permanecen abiertos: **día/mes exactos de entrada en servicio (año objetivo 2387 aprobado)**, identidad/matrícula de la auxiliar, concesión legal de *cloaking*, cantidades de torpedos, potencia real de armas/reactores, factor warp específico, plazas de hangares, dimensiones físicas y localización exacta del anclaje Defiant. Se tratarán como ingeniería/investigación pendiente o como decisiones creativas sustantivas si dejan de ser detalles ordinarios.
 
 ## Relaciones y evidencias
 
