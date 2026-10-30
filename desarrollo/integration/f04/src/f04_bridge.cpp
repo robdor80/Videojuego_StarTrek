@@ -388,7 +388,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   temporal(c,f,r.start,r.end);set(c,f,STATIONS,r.value);set(c,f,CAUSE,r.cause);return f;
  }
  case F04_PLAN_ALPHA: {
-  cmd();times();need(organization(c.world) && r.cause && r.aux<=1 && r.start%86400==28800 && r.end==r.start+28800 && val(c.world,1,PATTERN)==3);
+  cmd();need(val(c.world,1,SCHEMA)==3,F04_REVIEW);times();need(organization(c.world) && r.cause && r.aux<=1 && r.start%86400==28800 && r.end==r.start+28800 && val(c.world,1,PATTERN)==3);
   need(!val(c.world,1,ALPHA_END) || r.start>=val(c.world,1,ALPHA_END),F04_OVERLAP);
   U first=0,watch=0,security=0,security_slot=0;
   for(U slot:all(c.world,"slot"))if(val(c.world,slot,ALPHA)) {
