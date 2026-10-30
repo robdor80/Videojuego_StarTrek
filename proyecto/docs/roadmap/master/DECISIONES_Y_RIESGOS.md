@@ -16,6 +16,10 @@
 | DEC-0010 | **APROBADA 2026-10-13** | Valhalla: separación de platillo regulada, dos secciones autónomas con hangares híbridos, defensa avanzada, mando NPC independiente y reacoplamiento asistido | F01; F04–F07/F11 | Detalles en acta Valhalla; sistemas sin implementar todavía |
 | DEC-0011 | **APROBADA 2026-10-13** | Libertad de continuidad propia: permitir cambios explícitos de cronología/eventos del canon de TV sin añadir época jugable nueva automáticamente | F01-P02 / F11 | Fecha de servicio Valhalla **no fijada**; registrar GAME_ADDITION y reglas de disponibilidad por campaña |
 | DEC-0012 | **APROBADA 2026-10-13** | Valhalla incluirá blindaje ablativo desplegable y torpedos transfásicos inspirados en Endgame | F01/F07/F09/F14 | Viabilidad geométrica, visual, balance, reglas y runtime pendientes |
+| DEC-0013 | **APROBADA 2026-10-30** | Inicio de la ruta de Academia en **2383**, con cuatro cursos y graduación aproximada en 2387 | F01/F10/F11/LORE-03 | Día/mes abierto; rutas que omiten Academia permanecen válidas. Ver `proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md` |
+| DEC-0014 | **APROBADA 2026-10-30 — GAME_ADDITION** | **Odyssey en servicio y punta de lanza al comenzar Academia (2383)** | F01/F04/LORE-03 | Año aprobado; no implica que Enterprise-F sea automáticamente una nave de 2383. Dotación 1.600 Flota |
+| DEC-0015 | **APROBADA 2026-10-30 — GAME_ADDITION** | Programa Valhalla tras Nemesis 2379, **construcción/desarrollo 2380–2387 (7 años)**; primera unidad objetivo 2387 y relevo tecnológico de Odyssey | F01/F04/LORE-03/F11 | **SUSTITUYE** el antiguo objetivo Valhalla 2383. Botadura exacta y coincidencia con graduación abiertas; 1.800 Flota + 400 civiles |
+| DEC-0016 | **APROBADA 2026-10-30 — GAME_ADDITION** | Flujo cuántico experimental en Odyssey de ensayos desde 2383; evolución y posible instalación posterior en Valhalla | F04/LORE-02/F05/F11 | **No estándar en todas las Odyssey ni obligatorio en Valhalla en 2387**; permitir misión de pruebas, incidentes, fallos y resultados causales. Detalle en acta DEC-0013–0016 |
 
 ## Riesgos y mitigación
 
@@ -46,3 +50,7 @@ F01-P01…P05 revisados en [acta de cierre documental de 13-10-2026](fases/F01/A
 ## Actualización F07 — 13-10-2026
 
 El autor autorizó preparar F07 completa y designó USS Sutherland para el ensayo interno de Sensores; se auditaron documentalmente las fuentes ya existentes. Kelvin queda reservado para una futura adaptación Sovereign/Odyssey, sin usarlo en la v0.0.1. Inventario de modelos del MSI pendiente sin fecha; se generarán alias sin renombrar originales. Procedimiento UV/PBR incorporado para placas de blindaje ablativo Valhalla sin implementar daño ni despliegue. F07 EN_REVISION (solo preparación), F08 pausada y Core/UE5 real sin validar. Véase fases/F07/README.md.
+
+## Actualización vigente 2026-10-30 — precedencia temporal
+
+Las decisiones **DEC-0013–0016** son posteriores a los documentos que proponían Valhalla operativa en 2383 o dejaban sin año Odyssey/Valhalla; prevalecen solo para esos aspectos. El registro histórico anterior se conserva sin interpretarlo como autorización para generar una Valhalla de servicio en 2383. La línea tecnológica completa, las autorizaciones y las limitaciones siguen en [el acta transversal](../../decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md). F04 sigue **EN_CURSO**; el diseño no equivale a integración en CoreRPG/UE5.
