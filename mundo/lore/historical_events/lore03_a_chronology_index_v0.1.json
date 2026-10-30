@@ -9,7 +9,8 @@
     "campaign_start_date": null,
     "date_is_author_approved": false,
     "campaign_start_year_proposed": 2383,
-    "campaign_start_year_status": "PREFERRED_AUTHOR_PROPOSAL_NOT_FIXED_DAY",
+    "campaign_start_year_status": "AUTHOR_APPROVED_YEAR_EXACT_DAY_PENDING",
+    "campaign_start_year_approved": 2383,
     "academy_first_year": 2383,
     "academy_duration_years": 4,
     "expected_ensign_year": 2387
@@ -1047,16 +1048,23 @@
   "ship_temporal_reservations": [
     {
       "class_id": "valhalla",
-      "service_entry_year": null,
-      "approved_year": false,
+      "service_entry_year": 2387,
+      "approved_year": true,
       "development_from_year": 2379,
-      "target_entry_year": 2383,
-      "operational_by_cadet_graduation_target_year": 2387
+      "target_entry_year": 2387,
+      "operational_by_cadet_graduation_target_year": 2387,
+      "construction_start_year": 2380,
+      "exact_commissioning_date_pending": true,
+      "available_in_2383": false
     },
     {
       "class_id": "odyssey",
-      "service_entry_year": null,
-      "approved_year": false
+      "service_entry_year": 2383,
+      "approved_year": true,
+      "operational_at_academy_start": true,
+      "exact_commissioning_date_pending": true,
+      "quantum_slipstream_default_equipment": false,
+      "quantum_slipstream_test_hull_option": true
     },
     {
       "class_id": "sovereign",
@@ -1065,17 +1073,17 @@
     }
   ],
   "open_questions": [
-    "VALHALLA_SERVICE_ENTRY",
-    "ODYSSEY_CHRONOLOGICAL_STATUS",
     "LEGACY_CONSUMER_FILTERS",
     "BORG_OFFENSIVE_2366_VS_BATTLE_2367",
     "BAJOR_OCCUPATION_START_PRECISION",
     "DIPLO_EVENT_PRECISION_CROSSCHECK",
     "DAY_MONTH_OF_2383_ENROLLMENT",
-    "VALHALLA_EXACT_COMMISSIONING_DATE_WITHIN_2383",
-    "GEORDI_2383_OFFICIAL_ASSIGNMENT"
+    "GEORDI_2383_OFFICIAL_ASSIGNMENT",
+    "VALHALLA_EXACT_COMMISSIONING_DATE_WITHIN_2387",
+    "ODYSSEY_EXACT_COMMISSIONING_DATE_WITHIN_2383",
+    "QUANTUM_SLIPSTREAM_TEST_HULLS_AND_SAFETY_CERTIFICATION"
   ],
-  "note": "El autor prefiere campaña inicial 2383 con cuatro años de Academia y alférez sobre 2387. Valhalla se diseña/construye después de Nemesis (2379), con puesta en servicio OBJETIVO en 2383, no como canon televisivo; disponible en 2387 para destino de alférez. Romulus 2387 es futuro de pantalla, no pasado de 2383. Sin runtime.",
+  "note": "AUTHOR APPROVED 2026-10-30: Academia start year 2383 (day/month pending); Odyssey in service and Starfleet spearhead at campaign start; first Valhalla service objective 2387 after development/construction since 2380 (seven years). Quantum slipstream experimental in explicitly configured Odyssey test hulls and candidate for Valhalla only after further tests. GAME_ADDITION, not SCREEN_CANON; no future event forced in campaign; no runtime.",
   "completion_evidence_ref": "proyecto/docs/roadmap/lore_03_a_completion_audit_v0.2.md",
   "canonical_sources_audited": [
     "TNG",
@@ -1161,9 +1169,9 @@
       "historical_trigger": "nemesis_shinzon_romulan_crisis",
       "design_decision_year": 2379,
       "construction_begins_target_year": 2380,
-      "commissioning_target_year": 2383,
-      "commissioning_year_finalized": false,
-      "ship_commissioned_during_reference_2383": "TARGET_NOT_HISTORICAL_FACT",
+      "commissioning_target_year": 2387,
+      "commissioning_year_finalized": true,
+      "ship_commissioned_during_reference_2383": "NO_NOT_YET_IN_SERVICE",
       "premise": "Tras Némesis, la Flota impulsa la clase Valhalla a partir de experiencia Borg, Guerra del Dominio e inestabilidad romulana de Shinzon.",
       "academy_player_enrollment_year": 2383,
       "expected_player_ensign_year": 2387,
@@ -1171,7 +1179,40 @@
       "gameplay_activated": false,
       "do_not_assume_romulus_destroyed_in_2383": true,
       "roman_supernova_canon_reference_year": 2387,
-      "source_document": "proyecto/docs/decisions/lore03a_valhalla_2383_academy.md"
+      "source_document": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md",
+      "construction_end_target_year": 2387,
+      "development_years_from_construction_start": 7,
+      "reference_odyssey_spearhead_year": 2383,
+      "quantum_slipstream_default_at_commissioning": false,
+      "quantum_slipstream_possible_after_tests": true
+    },
+    {
+      "id": "GAME_ADDITION_ODYSSEY_2383",
+      "kind": "GAME_ADDITION",
+      "author_decision": "AUTHOR_APPROVED_20261030",
+      "class_id": "odyssey",
+      "class_operational_by_year": 2383,
+      "active_at_academy_start": true,
+      "starfleet_spearhead_at_start": true,
+      "exact_commissioning_date_pending": true,
+      "enterprise_f_identity_not_inferred": true,
+      "quantum_slipstream_standard_on_all_ships": false,
+      "quantum_slipstream_experimental_on_selected_test_ships": true,
+      "gameplay_activated": false,
+      "source_document": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md"
+    },
+    {
+      "id": "GAME_ADDITION_QUANTUM_SLIPSTREAM_ODYSSEY_VALHALLA",
+      "kind": "GAME_ADDITION",
+      "author_decision": "AUTHOR_APPROVED_20261030",
+      "capability_id": "quantum_slipstream_drive",
+      "prototype_odyssey_from_year": 2383,
+      "valhalla_candidate_target_year": 2387,
+      "valhalla_installed_at_commissioning_by_default": false,
+      "success_not_guaranteed": true,
+      "mission_arc_candidate": true,
+      "gameplay_activated": false,
+      "source_document": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md"
     }
   ],
   "npc_career_2383": [
