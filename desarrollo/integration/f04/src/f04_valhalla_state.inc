@@ -13,7 +13,7 @@ void seed_valhalla(Campaign& c,const ContentCatalog&) {
    if(superior)link(c,p,SUPERIOR,superior);
   }
  }
- U ordinal=0,first_adult=0;
+ U ordinal=0;std::vector<U> adult_contacts;
  for(U p:all(c.world,"person"))if(member(c.world,p) && val(c.world,p,CATEGORY)==2) {
   need(++ordinal<=400,F04_CAPACITY);
   const U category=ordinal<=130?1:ordinal<=220?2:ordinal<=285?3:ordinal<=335?4:ordinal<=370?5:6;
@@ -21,8 +21,11 @@ void seed_valhalla(Campaign& c,const ContentCatalog&) {
   // A two-hour, optional logical reservation, with individual offsets. Adults
   // in the family category get community time, never an assumed job.
   set(c,p,AGENDA_KIND,category);set(c,p,AGENDA_START,32400+(ordinal%4)*1800);set(c,p,AGENDA_END,39600+(ordinal%4)*1800);
-  if(!first_adult)first_adult=p;
-  if(category==2)link(c,p,KIN,first_adult); // Explicit synthetic household contact.
+  if(category==1)adult_contacts.push_back(p);
+  if(category==2) {
+   need(!adult_contacts.empty(),F04_REVIEW);
+   link(c,p,KIN,adult_contacts[(ordinal-131)%adult_contacts.size()]); // Distinct synthetic adult contacts, not 90 children linked to one resident.
+  }
  }
 }
 bool valhalla_schema(const WorldState& w) {
