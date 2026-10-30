@@ -1,0 +1,41 @@
+{
+  "commit": "96d37c6697623085c1f711ada2d39cc017439705",
+  "runs": [
+    {
+      "name": "Roadmap governance — F00-F15",
+      "id": 41049813133,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41049813133"
+    },
+    {
+      "name": "F04 reference contracts",
+      "id": 41049813117,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41049813117"
+    },
+    {
+      "name": "F04 authoritative ship operations",
+      "id": 41049813307,
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41049813307"
+    }
+  ],
+  "native_job": 124042790772,
+  "log_summary": [
+    "2026-10-30T11:42:40.9809805Z 100% tests passed, 0 tests failed out of 451",
+    "2026-10-30T11:42:40.9810664Z Total Test time (real) =   1.55 sec",
+    "2026-10-30T11:42:52.3934932Z 100% tests passed, 0 tests failed out of 52",
+    "2026-10-30T11:42:52.3935595Z Total Test time (real) =   0.16 sec",
+    "2026-10-30T11:43:01.5273111Z 100% tests passed, 0 tests failed out of 15",
+    "2026-10-30T11:43:01.5273774Z Total Test time (real) =   0.03 sec",
+    "2026-10-30T11:43:12.9093276Z 100% tests passed, 0 tests failed out of 25",
+    "2026-10-30T11:43:12.9093876Z Total Test time (real) =   0.07 sec",
+    "2026-10-30T11:43:12.9816375Z Ran 22 tests in 0.002s",
+    "2026-10-30T11:43:13.0743995Z Ran 4 tests in 0.003s",
+    "2026-10-30T11:43:13.1421713Z Ran 26 tests in 0.010s",
+    "2026-10-30T11:43:13.2694464Z Ran 9 tests in 0.066s"
+  ]
+}

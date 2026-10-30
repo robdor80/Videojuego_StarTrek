@@ -1,0 +1,65 @@
+{
+  "core": {
+    "defined": 451,
+    "passed": 447,
+    "failed": 0,
+    "skipped": 4
+  },
+  "f04": {
+    "defined": 52,
+    "passed": 52,
+    "failed": 0,
+    "skipped": 0
+  },
+  "f02": {
+    "defined": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0
+  },
+  "f03": {
+    "defined": 25,
+    "passed": 25,
+    "failed": 0,
+    "skipped": 0
+  },
+  "unreal": {
+    "succeeded": 17,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0
+  },
+  "reference_unittests": {
+    "f04-reference": {
+      "tests": 22,
+      "success": true
+    },
+    "miranda": {
+      "tests": 4,
+      "success": true
+    },
+    "f03-reference": {
+      "tests": 26,
+      "success": true
+    },
+    "f02-reference": {
+      "tests": 9,
+      "success": true
+    }
+  },
+  "f04_scenarios": 39,
+  "general_reference_validator": {
+    "success": false,
+    "issues": 564,
+    "baseline_issues": 564,
+    "byte_identical_output": true
+  },
+  "protection": {
+    "before": 41827,
+    "after": 41827,
+    "method": "path, size, mtime_ns; metadata audit, not content hash",
+    "missing": 0,
+    "changed": 0,
+    "new": 0
+  }
+}

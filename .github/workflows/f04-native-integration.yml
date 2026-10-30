@@ -1,0 +1,68 @@
+name: F04 authoritative ship operations
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F04/**'
+      - '.github/workflows/f04-native-integration.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read independent F04 dependency pin
+        id: core
+        run: echo "sha=$(cat desarrollo/integration/f04/core-revision.txt)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: external/CoreRPG
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 4f282863737bcd8f5add401202a9e1064c133672
+          path: external/core-f02
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: 9c53a33787de13d91eb2abe4da07033ee0fa1dc1
+          path: external/core-f03
+      - name: Compile Core full suite including content JSON
+        run: |
+          cmake -S external/CoreRPG -B build/core -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_BUILD_CONTENT_JSON=ON -DBUILD_TESTING=ON
+          cmake --build build/core --parallel 4
+          ctest --test-dir build/core --no-tests=error --output-on-failure --output-junit core.xml
+      - name: Build and test F04 against real Core, including different processes
+        run: |
+          cmake -S desarrollo/integration/f04 -B build/f04 -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/external/CoreRPG"
+          cmake --build build/f04 --parallel 4
+          ctest --test-dir build/f04 --no-tests=error --output-on-failure --output-junit f04.xml
+      - name: Preserve F02 and F03 original dependency revisions
+        run: |
+          for phase in f02 f03; do
+            cmake -S desarrollo/integration/$phase -B build/$phase -G Ninja -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/external/core-$phase"
+            cmake --build build/$phase --parallel 4
+            ctest --test-dir build/$phase --no-tests=error --output-on-failure --output-junit $phase.xml
+          done
+      - name: Documentary regressions (not runtime)
+        run: |
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f04_reference.py' -v
+          python desarrollo/tools/validation/f04_reference.py --fixture desarrollo/validation/fixtures/f04/authority_watch_acceptance_v0.1.json
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f04_miranda_example.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_f03_reference.py' -v
+          python -m unittest discover -s desarrollo/tools/validation -p 'test_validate_f02_contracts.py' -v
+          python desarrollo/tools/validation/validate_roadmap_state.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f04-core-and-native-evidence
+          path: |
+            build/**/core.xml
+            build/**/f04.xml
+            build/**/f02.xml
+            build/**/f03.xml

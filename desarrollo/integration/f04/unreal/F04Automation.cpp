@@ -1,0 +1,69 @@
+#include "F04CampaignSubsystem.h"
+#if WITH_DEV_AUTOMATION_TESTS
+#include "Misc/AutomationTest.h"
+#include "Engine/GameInstance.h"
+#include "Engine/Engine.h"
+#include "Engine/World.h"
+#include "Async/Async.h"
+namespace {
+constexpr auto Flags=EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter;
+struct Lab {
+ UGameInstance* Game=NewObject<UGameInstance>();UF04CampaignSubsystem* Host=nullptr;
+ Lab(){Game->AddToRoot();Host=NewObject<UF04CampaignSubsystem>(Game);Host->AddToRoot();Host->OpenLab();}
+ ~Lab(){Host->CloseLab();Host->RemoveFromRoot();Game->RemoveFromRoot();}
+ bool Duty(){return Host->Intent(4,F04_ASSIGN,12,5)==F04_OK && Host->Intent(4,F04_DUTY,5,12,0,28800)==F04_OK;}
+};
+struct World {
+ UWorld* W=nullptr;UF04CampaignSubsystem* Host=nullptr;
+ World(Lab& L):Host(L.Host){const auto V=UWorld::InitializationValues().AllowAudioPlayback(false).RequiresHitProxies(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false).ShouldSimulatePhysics(false).SetTransactional(false);
+ W=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,ERHIFeatureLevel::Num,&V);GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(W);W->SetGameInstance(L.Game);}
+ ~World(){Host->Dematerialize(W);W->DestroyWorld(false);GEngine->DestroyWorldContext(W);}
+};
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Actors,"F04.Core.RealWorldsActors",Flags)
+bool FF04Actors::RunTest(const FString&){
+ Lab L;World A(L),B(L);TestTrue(TEXT("Core watch"),L.Duty());TArray<uint8> Before,After;L.Host->Save(Before);
+ auto* One=L.Host->Represent(A.W,5);auto* Two=L.Host->Represent(B.W,5);
+ if(!TestNotNull(TEXT("First real Actor"),One)||!TestNotNull(TEXT("Second real Actor"),Two))return false;
+ TestTrue(TEXT("World isolation"),One!=Two && One->GetWorld()==A.W && Two->GetWorld()==B.W);
+ TestEqual(TEXT("Same stable identity"),One->LogicalId,Two->LogicalId);TestTrue(TEXT("Core watch projection"),One->OnDuty);
+ TestTrue(TEXT("Reuse"),One==L.Host->Represent(A.W,5));TestNull(TEXT("Unknown identity"),L.Host->Represent(A.W,999));
+ L.Host->Dematerialize(A.W);TestFalse(TEXT("Unloaded Actor"),IsValid(One));One=L.Host->Represent(A.W,5);TestNotNull(TEXT("Recreated"),One);
+ L.Host->Save(After);TestTrue(TEXT("Visual lifecycle does not mutate Core"),Before==After);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Recovery,"F04.Core.NewSessionRecovery",Flags)
+bool FF04Recovery::RunTest(const FString&){
+ Lab L;World W(L);TestTrue(TEXT("Duty"),L.Duty());TestEqual(TEXT("Move intention"),L.Host->Intent(5,F04_MOVE,12),uint32(F04_OK));
+ TestEqual(TEXT("Pending task"),L.Host->Intent(5,F04_QUEUE,0,0,10,20,F04_SCAN),uint32(F04_OK));
+ auto* Old=L.Host->Represent(W.W,5);if(!TestNotNull(TEXT("Old Actor"),Old))return false;
+ const FString Id=Old->LogicalId;TArray<uint8> Before,Future,Restored;L.Host->Save(Before);L.Host->Advance(100);L.Host->Save(Future);
+ L.Host->CloseLab();TestFalse(TEXT("Destroyed session bindings"),IsValid(Old));TestTrue(TEXT("New session"),L.Host->OpenLab());TestTrue(TEXT("Load"),L.Host->Load(Before));L.Host->Save(Restored);TestTrue(TEXT("Archive preserved"),Restored==Before);
+ auto* New=L.Host->Represent(W.W,5);if(!TestNotNull(TEXT("New Actor"),New))return false;TestEqual(TEXT("Persistent identity"),New->LogicalId,Id);
+ TestTrue(TEXT("Resume no Actors required"),L.Host->Advance(100));L.Host->Save(Restored);TestTrue(TEXT("Deterministic future"),Restored==Future);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Authority,"F04.Core.AuthorityAndMedical",Flags)
+bool FF04Authority::RunTest(const FString&){
+ Lab L;TestTrue(TEXT("Duty"),L.Duty());TestEqual(TEXT("No captain technical privilege"),L.Host->Intent(3,F04_SCAN),uint32(F04_QUALIFICATION));
+ TestEqual(TEXT("Ensign no command"),L.Host->Intent(5,F04_BRIDGE),uint32(F04_DENIED));TestEqual(TEXT("Head own department"),L.Host->Intent(4,F04_ASSIGN,12,5),uint32(F04_OK));
+ TestEqual(TEXT("Head other department denied"),L.Host->Intent(4,F04_ASSIGN,13,11),uint32(F04_SCOPE));TestEqual(TEXT("Watch authority changes alert"),L.Host->Intent(6,F04_BRIDGE,0,0,0,0,2),uint32(F04_OK));
+ F04Stats Alert{};L.Host->Stats(Alert);TestEqual(TEXT("Authoritative yellow alert"),Alert.alert,uint64(2));
+ TestEqual(TEXT("Captain safety limit"),L.Host->Intent(3,F04_IMPOSSIBLE),uint32(F04_SAFETY));TestEqual(TEXT("Medical relief"),L.Host->Intent(7,F04_MEDICAL,3,0,0,100,F04_SICK),uint32(F04_OK));
+ F04Stats S{};L.Host->Stats(S);TestEqual(TEXT("Normal succession"),S.commander,uint64(6));TestEqual(TEXT("Doctor no command"),L.Host->Intent(7,F04_BRIDGE),uint32(F04_DENIED));
+ L.Host->Advance(100);L.Host->Stats(S);TestEqual(TEXT("Captain recovers"),S.commander,uint64(3));return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Vacancy,"F04.Core.AbsenceReliefOffscreen",Flags)
+bool FF04Vacancy::RunTest(const FString&){
+ Lab L;World W(L);TestTrue(TEXT("Duty"),L.Duty());uint64 Duty=0; // Locate the created duty through its returned record in a fresh scenario.
+ L.Host->CloseLab();L.Host->OpenLab();L.Host->Intent(4,F04_ASSIGN,12,5);L.Host->Intent(4,F04_DUTY,5,12,0,28800,0,42,&Duty);
+ auto* Actor=L.Host->Represent(W.W,5);if(!TestNotNull(TEXT("Actor"),Actor))return false;
+ L.Host->Intent(4,F04_ABSENCE,5,0,0,200,F04_SICK);TestFalse(TEXT("Authoritative unavailable"),Actor->Available);F04Stats S{};L.Host->Stats(S);TestEqual(TEXT("Recognized gap"),S.vacancies,uint64(3));
+ L.Host->Dematerialize(W.W);TestEqual(TEXT("Existing relief"),L.Host->Intent(4,F04_RELIEF,Duty,8),uint32(F04_OK));L.Host->Advance(100);
+ auto* Relief=L.Host->Represent(W.W,8);if(!TestNotNull(TEXT("Represent existing relief"),Relief))return false;TestTrue(TEXT("Offscreen state projected"),Relief->OnDuty);L.Host->Stats(S);TestEqual(TEXT("No synthetic crew"),S.crew,uint64(7));return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Failure,"F04.Core.SafeLoadAndThread",Flags)
+bool FF04Failure::RunTest(const FString&){
+ Lab L;World W(L);auto* Actor=L.Host->Represent(W.W,5);TArray<uint8> Before,After,Bad;L.Host->Save(Before);Bad=Before;Bad.Last()^=128;
+ TestFalse(TEXT("Bad load"),L.Host->Load(Bad));L.Host->Save(After);TestTrue(TEXT("Atomic load failure"),Before==After);TestTrue(TEXT("Actor preserved"),IsValid(Actor));
+ const bool Denied=Async(EAsyncExecution::Thread,[Host=L.Host](){F04Stats S{};return !Host->Stats(S) && Host->Intent(3,F04_BRIDGE)==F04_THREAD && !Host->Advance(20);}).Get();TestTrue(TEXT("Owner thread authority"),Denied);return true;
+}
+#endif
