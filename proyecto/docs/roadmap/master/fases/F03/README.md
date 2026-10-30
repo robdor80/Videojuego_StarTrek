@@ -1,12 +1,12 @@
 # F03 — Mundo autoritativo, conocimiento y persistencia
 
-> **Actualización de ejecución 30-10-2026:** P01–P05 tienen un mínimo vertical
-> implementado y probado en Core/Host/UE5. Véanse la [auditoría técnica actual](AUDITORIA_TECNICA_2026-10-30.md),
-> el [informe ejecutado](INFORME_EJECUCION_2026-10-30.md) y las [instrucciones](../../../../../../desarrollo/integration/f03/README.md).
-> Depende de CoreRPG Draft #12 todavía sin fusionar; F03 sigue abierta y no se
-> declara integración en `main`. El contenido siguiente conserva el corte documental histórico.
+> **CIERRE FORMAL — 30-10-2026:** F03-P01–P05 **CERRADAS al nivel `CORE_INTEGRADO`** en su corte vertical verificable. [CoreRPG PR #12](https://github.com/robdor80/CoreRPG/pull/12) y [Star Trek PR #62](https://github.com/robdor80/Videojuego_StarTrek/pull/62) fusionadas mediante commits de merge `c147d81ed069da2e09149613ab02cbc3ebe95a4a` y `fe6460c4e037fffa1e4f5ded9b2617af1fe846e2`. El Core fijado `9c53a33787de13d91eb2abe4da07033ee0fa1dc1` permanece accesible en el historial de `main`. Ver [informe de ejecución](INFORME_EJECUCION_2026-10-30.md), [auditoría](AUDITORIA_TECNICA_2026-10-30.md) y [evidencias](evidencias_20261030/results.json).
+>
+> **Límites:** únicamente fixture sintético de identidad, conocimiento autorizado, agenda/reloj y persistencia; Unreal validado en `-NullRHI`. **No** significa `UE5_JUGABLE`, sensores completos, simulación galáctica, migraciones generales ni validez del año 2372 para la cronología narrativa. Siguiente fase principal: F04, pendiente de su propia reauditoría de integración.
 
-> **ACTIVACIÓN — 30-10-2026:** F03 es la fase principal **`EN_CURSO`** tras la [PR #60 fusionada](https://github.com/robdor80/Videojuego_StarTrek/pull/60). Existe integración mínima real CoreRPG↔UE5 a reutilizar; **no** implica que F03 haya alcanzado `CORE_INTEGRADO`. La planificación P01–P04 y sus bloqueos anteriores deben reevaluarse con CoreRPG `4f282863`, antes de implementar tiempo, acontecimientos, conocimiento y persistencia de campaña. La descripción de octubre 11–13 que sigue es histórica.
+## Antecedentes históricos (11–30 de octubre, superados por el cierre)
+
+Los párrafos y etiquetas de estado que siguen registran el trabajo anterior a las fusiones; las menciones a PR «Draft», F03 «EN_CURSO/EN_REVISION/BLOQUEADA» o integración «pendiente» se conservan únicamente como antecedentes y **no representan el estado vigente**. Para el estado oficial consultar `../../ESTADO_GLOBAL.json`.
 
 **Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 es ahora **`EN_REVISION`**, por pruebas de referencia superadas, con P01–P04 **BLOQUEADAS** en ejecución Core y P05 cerrada solo como QA de fixture. **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
 

@@ -5,8 +5,8 @@
   "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
   "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
   "management": "Estado de planificación independiente de madurez/evidencia. CERRADA en un paso significa cierre únicamente al alcance indicado en step_evidence_maturity y note, nunca runtime por inferencia. PR fusionada no equivale a fase cerrada. Los pasos futuros F07-F15 con PLANIFICADA son una normalización del marcador histórico de trabajo aún no auditado, NO una certificación de ausencia de trabajo previo.",
-  "current_global_phase": "F03",
-  "completed_management_phase": "F02",
+  "current_global_phase": "F04",
+  "completed_management_phase": "F03",
   "phase_count": 16,
   "step_count": 80,
   "phases": [
@@ -91,35 +91,40 @@
     {
       "id": "F03",
       "title": "Mundo autoritativo y persistencia",
-      "status": "EN_CURSO",
+      "status": "CERRADA",
       "target_maturity": "CORE_INTEGRADO",
       "step_count": 5,
       "steps": {
-        "P01": "BLOQUEADA",
-        "P02": "BLOQUEADA",
-        "P03": "BLOQUEADA",
-        "P04": "BLOQUEADA",
+        "P01": "CERRADA",
+        "P02": "CERRADA",
+        "P03": "CERRADA",
+        "P04": "CERRADA",
         "P05": "CERRADA"
       },
-      "note": "Fase principal activada tras el cierre técnico/administrativo F02 (30-10-2026); madurez F03 sigue REFERENCIA_PROBADA, objetivo CORE_INTEGRADO pendiente. P01–P04 conservan bloqueos históricos sujetos a reauditoría explícita de Core 4.13, adaptadores y alcance F03; no se consideran resueltos ni ejecutados automáticamente por el laboratorio F02. P05 cerrado solo como QA de referencia. Empezar auditando el estado real y reutilizando los contratos existentes.",
+      "note": "CERRADA el 30-10-2026 exclusivamente al alcance CORE_INTEGRADO del corte vertical F03-P01–P05: identidad/LOD por UWorld, conocimiento filtrado por observador, eventos causales fuera de escena, reloj y persistencia/reanudación CoreRPG. Integración revisada y fusionada: CoreRPG PR #12 (merge c147d81ed069da2e09149613ab02cbc3ebe95a4a), Star Trek PR #62 (merge fe6460c4e037fffa1e4f5ded9b2617af1fe846e2); SHA de Core fijado 9c53a33787de13d91eb2abe4da07033ee0fa1dc1 conservado como antecesor de CoreRPG main. CI verde; tests MSI Core 447 PASS/4 skips, F03 nativo 25/25, F02 15/15, UE5 -NullRHI 12/12, documentales 35/35. Fixture sintético en sectores con época 2372: NO simulador galáctico, ruta warp, sensores completos, migraciones universales, guardado duradero ante corte eléctrico ni UE5_JUGABLE. La madurez no se extrapola a otras fases.",
       "file": "fases/F03/README.md",
-      "achieved_maturity": "REFERENCIA_PROBADA",
+      "achieved_maturity": "CORE_INTEGRADO",
       "step_evidence_maturity": {
-        "P01": "DISENO_VALIDADO",
-        "P02": "DISENO_VALIDADO",
-        "P03": "DISENO_VALIDADO",
-        "P04": "DISENO_VALIDADO",
-        "P05": "REFERENCIA_PROBADA"
+        "P01": "CORE_INTEGRADO",
+        "P02": "CORE_INTEGRADO",
+        "P03": "CORE_INTEGRADO",
+        "P04": "CORE_INTEGRADO",
+        "P05": "CORE_INTEGRADO"
       },
       "evidence_refs": [
         "PR #4 (merge 3d353871b5e014eb14ed3f8504547adb08a9fe3f)",
-        "fases/F03/VALIDACION_Y_BLOQUEOS_P05.md"
+        "fases/F03/VALIDACION_Y_BLOQUEOS_P05.md",
+        "CoreRPG PR #12 (merge c147d81ed069da2e09149613ab02cbc3ebe95a4a; Core pin 9c53a33787de13d91eb2abe4da07033ee0fa1dc1)",
+        "Star Trek PR #62 (merge fe6460c4e037fffa1e4f5ded9b2617af1fe846e2)",
+        "fases/F03/AUDITORIA_TECNICA_2026-10-30.md",
+        "fases/F03/INFORME_EJECUCION_2026-10-30.md",
+        "fases/F03/evidencias_20261030/results.json"
       ]
     },
     {
       "id": "F04",
       "title": "Naves, dotación y autoridad",
-      "status": "EN_REVISION",
+      "status": "EN_CURSO",
       "target_maturity": "REFERENCIA_PROBADA",
       "step_count": 5,
       "steps": {
@@ -129,7 +134,7 @@
         "P04": "CERRADA",
         "P05": "CERRADA"
       },
-      "note": "Los cinco pasos CERRADOS ÚNICAMENTE a nivel documental/reglas de referencia; 39 escenarios + 17 unit tests verificados en CI. La fase global sigue EN_REVISION por sus puertas declaradas de operación sobre Core, nombramientos/guardias vivos y validación transversal/UE5; nunca implica dotación jugable.",
+      "note": "ACTIVADA como siguiente fase principal tras el cierre F03 (30-10-2026). Los cinco pasos CERRADOS conservan exclusivamente su alcance documental/reglas de referencia (39 escenarios y 17 unit tests); no implican dotación jugable ni autoridad Core operativa. Antes de ampliar o cerrar F04, auditar integración CoreRPG F03 y las puertas de nombramientos/guardias, validación transversal y UE5. La madurez de referencia no aumenta por la activación.",
       "file": "fases/F04/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
@@ -401,5 +406,17 @@
     "merge_commit": "bb77c98d0e806f91eb296cce4b7d391fb81a0f7c",
     "core_commit": "4f282863737bcd8f5add401202a9e1064c133672",
     "followup": "F03 activa para auditoría y desarrollo específico, sin atribuirle automáticamente el runtime F02"
+  },
+  "f03_closure": {
+    "date": "2026-10-30",
+    "status": "CERRADA",
+    "scope": "CORE_INTEGRADO: corte vertical sintético F03-P01-P05 en Core/Host/UE5 -NullRHI, sin UE5_JUGABLE",
+    "star_trek_pr": 62,
+    "star_trek_merge_commit": "fe6460c4e037fffa1e4f5ded9b2617af1fe846e2",
+    "core_pr": 12,
+    "core_merge_commit": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+    "core_pinned_commit": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+    "next_phase": "F04",
+    "evidence": "fases/F03/INFORME_EJECUCION_2026-10-30.md"
   }
 }
