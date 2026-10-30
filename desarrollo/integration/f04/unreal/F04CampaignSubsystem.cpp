@@ -10,6 +10,17 @@ bool UF04CampaignSubsystem::OpenPopulation(const char* ClassId,const F04Populati
  if(!IsInGameThread() || !F04BridgeReady())return false;
  CloseLab();return f04_create_population(1,ClassId,&Config,&Session)==F04_OK && f04_handles(Session,&Handles)==F04_OK;
 }
+bool UF04CampaignSubsystem::InstallOrganization(uint32 TemplateId,uint64 InstalledEquipment){
+ return Intent(static_cast<uint32>(Handles.captain.id),F04_INSTALL_TEMPLATE,0,InstalledEquipment,0,0,TemplateId)==F04_OK;
+}
+bool UF04CampaignSubsystem::BootstrapOrganizationFixture(){return Intent(static_cast<uint32>(Handles.captain.id),F04_BOOTSTRAP_TEMPLATE)==F04_OK;}
+bool UF04CampaignSubsystem::PlanAlpha(uint64 Start,bool FirstOfficerWatch){return Intent(static_cast<uint32>(Handles.captain.id),F04_PLAN_ALPHA,0,FirstOfficerWatch?1:0,Start,Start+28800)==F04_OK;}
+bool UF04CampaignSubsystem::Organization(F04OrganizationStats& Out)const{return IsInGameThread() && Session && f04_organization_stats(Session,Handles.captain,&Out)==F04_OK;}
+bool UF04CampaignSubsystem::Positions(TArray<F04Position>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Written=0,Total=0;
+ if(f04_positions_page(Session,Handles.captain,0,nullptr,0,&Written,&Total)!=F04_OK || Total>MAX_int32)return false;
+ Out.SetNumUninitialized(static_cast<int32>(Total));return f04_positions_page(Session,Handles.captain,0,Out.GetData(),Total,&Written,&Total)==F04_OK;
+}
 void UF04CampaignSubsystem::ClearVisuals(){for(auto V:Visuals)if(V.IsValid())V->Destroy();Visuals.Empty();}
 void UF04CampaignSubsystem::CloseLab(){if(!IsInGameThread())return;ClearVisuals();if(Session){f04_destroy(Session);Session=nullptr;}}
 bool UF04CampaignSubsystem::Stats(F04Stats& Out)const{return IsInGameThread() && Session && f04_stats(Session,&Out)==F04_OK;}

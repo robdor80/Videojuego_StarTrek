@@ -1,0 +1,23 @@
+{
+  "f02": {
+    "build_root": "C:\\F04\\f02-native",
+    "source_root": "C:\\Users\\andro\\Documents\\ChatGPT\\Planificaci\u00f3n 1\\f04-integration\\desarrollo\\integration\\f02",
+    "current_source_matches": true,
+    "core_sha_reported_by_binary": "4f282863737bcd8f5add401202a9e1064c133672",
+    "bridge_dll_sha256": "723df50061f979d59e8a277e5c8d892d1ac0ab220a96d213be1db96a57fd3de0"
+  },
+  "f03": {
+    "build_root": "C:\\F04\\f03-native",
+    "source_root": "C:\\Users\\andro\\Documents\\ChatGPT\\Planificaci\u00f3n 1\\f04-integration\\desarrollo\\integration\\f03",
+    "current_source_matches": true,
+    "core_sha_reported_by_binary": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+    "bridge_dll_sha256": "3d1a5bf805c82bdfca45bd558ce2134aeaa1e25aea94119bcbf48ee3ea0ab9e1"
+  },
+  "f04": {
+    "build_root": "C:\\F04-Miranda01\\native",
+    "source_root": "C:\\F04\\Miranda01\\desarrollo\\integration\\f04",
+    "current_source_matches": true,
+    "core_sha_reported_by_binary": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+    "bridge_dll_sha256": "8143575effb0ff103688fdb5bfbc0e915ea876bc5fae6ef253843b994f3d6a96"
+  }
+}

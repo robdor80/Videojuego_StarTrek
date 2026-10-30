@@ -23,6 +23,11 @@ public:
  virtual void BeginDestroy() override;
  bool OpenLab();
  bool OpenPopulation(const char* ClassId,const F04PopulationConfig& Config);
+ bool InstallOrganization(uint32 TemplateId,uint64 InstalledEquipment);
+ bool BootstrapOrganizationFixture();
+ bool PlanAlpha(uint64 Start,bool FirstOfficerWatch=true);
+ bool Organization(F04OrganizationStats&) const;
+ bool Positions(TArray<F04Position>&) const;
  void CloseLab();
  bool Stats(F04Stats&) const;
  uint32 Intent(uint32 Person,uint32 Op,uint64 Target=0,uint64 Aux=0,uint64 Start=0,uint64 End=0,uint32 Value=0,uint64 Cause=42,uint64* Record=nullptr);
