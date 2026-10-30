@@ -1,0 +1,8 @@
+{
+  "ok": false,
+  "materials": [],
+  "objects": [],
+  "lights": [],
+  "removed_from_new_map_only": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 70, in <module>\n    mat.set_editor_property('shading_model',u.MaterialShadingModel.MSM_UNLIT);n=build(mat,r['channels']['Emission']);n=custom(mat,f'return C*{r[\"strength\"]:.10f};',{'C':n});assert ML.connect_material_property(n,'',u.MaterialProperty.MP_EMISSIVE_COLOR)\n                                                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 41, in build\n    uvn=custom(mat,f'return float3(UV.x*{s[0]:.10f}+{t[0]:.10f},UV.y*{s[1]:.10f}+{1-s[1]-t[1]:.10f},0);',{'UV':uv})\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/integrate_pending.py\", line 21, in custom\n    ci=u.CustomInput();ci.input_name=name;ins.append(ci)\n                       ^^^^^^^^^^^^^\nAttributeError: 'CustomInput' object has no attribute 'input_name'\n"
+}

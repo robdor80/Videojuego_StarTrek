@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "walls": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/configure_leaf_pockets.py\", line 10, in <module>\n    a=actors['PBR_'+n];c=a.static_mesh_component;c.set_collision_response_to_channel(u.CollisionChannel.ECC_WORLD_DYNAMIC,u.CollisionResponse.IGNORE)\n                                                                                                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: type object 'CollisionResponse' has no attribute 'IGNORE'\n"
+}

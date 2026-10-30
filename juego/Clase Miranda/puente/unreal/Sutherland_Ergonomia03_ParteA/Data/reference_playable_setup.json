@@ -1,0 +1,32 @@
+{
+  "ok": true,
+  "map": "/Game/SutherlandPlayable01/Maps/L_Sutherland_Playable01",
+  "project": "C:\\Users\\andro\\Documents\\StarTrek_3D\\SUTHERLAND_PLAYABLE_01\\Unreal\\SutherlandPlayable01.uproject",
+  "seat_ignored_own_furniture_only": [
+    "SM_COLL_Mesh_453_0_01",
+    "SM_COLL_Mesh_453_0_02",
+    "SM_COLL_Sphere_001_0_01",
+    "SM_COLL_Sphere_001_0_02",
+    "SM_COLL_Sphere_001_0_03",
+    "SM_COLL_Sphere_001_0_04",
+    "SM_COLL_Sphere_001_0_05",
+    "SM_COLL_Sphere_001_0_06",
+    "SM_COLL_Sphere_001_0_07",
+    "SM_COLL_Sphere_001_0_08",
+    "SM_COLL_Sphere_001_0_09",
+    "SM_COLL_Cube_0_01",
+    "SM_COLL_Cube_0_02",
+    "SM_COLL_Cylinder_0_01",
+    "SM_COLL_Cube_002_0_01",
+    "SM_COLL_Cube_002_0_02"
+  ],
+  "seat_floor_cm": 30,
+  "seat_cushion_approx_cm": 93,
+  "seat_pelvis_target_cm": 105,
+  "animations": {
+    "Sit": "/Game/SutherlandPlayable01/Animations/A_Captain_Sit_Authored.A_Captain_Sit_Authored",
+    "Seated": "/Game/SutherlandPlayable01/Animations/A_Captain_Seated_Authored.A_Captain_Seated_Authored",
+    "Stand": "/Game/SutherlandPlayable01/Animations/A_Captain_Stand_Authored.A_Captain_Stand_Authored"
+  },
+  "quality": "Epic, Lumen software ray tracing, VSM, TSR native 2560x1600. No DLSS plugin found in installed engine."
+}

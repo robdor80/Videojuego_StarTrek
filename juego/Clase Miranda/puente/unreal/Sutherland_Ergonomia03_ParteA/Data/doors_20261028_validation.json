@@ -1,0 +1,489 @@
+{
+  "ok": true,
+  "phase": "done",
+  "started": 247035.953,
+  "mechanical": [
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 4.238970285896926e-14,
+          "collision_follow_error_cm": 2.712564724388395e-13,
+          "closed_error_cm": 4.7328835826171925e-14,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.470833591410315e-14,
+          "collision_follow_error_cm": 5.1036070336753225e-14,
+          "closed_error_cm": 5.617034615212901e-15,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 1.5992145117921237e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 9.059419880941277e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105428204633899e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.229505547547966e-14,
+          "collision_follow_error_cm": 1.4500900480385326e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.753312400962914e-14,
+          "collision_follow_error_cm": 5.753312400962914e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 1.707613964003266e-13,
+          "collision_follow_error_cm": 1.707613964003266e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    }
+  ],
+  "cycles": [
+    {
+      "cycle": 1,
+      "automatic_open": true,
+      "automatic_close": true,
+      "cabina_access": true
+    },
+    {
+      "cycle": 2,
+      "automatic_open": true,
+      "automatic_close": true,
+      "cabina_access": false
+    },
+    {
+      "cycle": 3,
+      "automatic_open": true,
+      "automatic_close": true,
+      "cabina_access": false
+    }
+  ],
+  "checks": [
+    {
+      "name": "Actual possessed Quinn",
+      "pass": true
+    },
+    {
+      "name": "Eight leaves sweep full opposite travel and return",
+      "pass": true
+    },
+    {
+      "name": "D01-D03 retain destination safety",
+      "pass": true
+    },
+    {
+      "name": "Leaf collision passage closed",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.3463573455810547,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-576.656 Y=857.269 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.346375435590744,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-580.997 Y=832.649 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.34696027636528015,
+            "actor": "P03FG_D004",
+            "component": "RightLeaf",
+            "impact": "X=-585.472 Y=808.052 Z=165.251",
+            "normal": "X=0.985 Y=-0.174 Z=-0.001"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Automatic Quinn approach opens D04 cycle 1",
+      "pass": true,
+      "fraction": 1.0,
+      "player_local": [
+        -105.40971432506068,
+        -4.472723354354002e-06,
+        92.0
+      ]
+    },
+    {
+      "name": "Leaf collision passage open",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Quinn walks into existing cabin",
+      "pass": true,
+      "position": [
+        -661.7488858765289,
+        846.8666044088682,
+        92.19988873302937
+      ],
+      "movement": "<MovementMode.MOVE_WALKING: 1>"
+    },
+    {
+      "name": "Cabin floor supports Quinn",
+      "pass": true,
+      "local": [
+        83.17439075688719,
+        -8.80739112574247e-06,
+        92.0
+      ]
+    },
+    {
+      "name": "Automatic D04 closure cycle 1",
+      "pass": true,
+      "fraction": 0.0
+    },
+    {
+      "name": "Leaf collision passage closed",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.3463573455810547,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-576.656 Y=857.269 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.346375435590744,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-580.997 Y=832.649 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.34696027636528015,
+            "actor": "P03FG_D004",
+            "component": "RightLeaf",
+            "impact": "X=-585.472 Y=808.052 Z=165.251",
+            "normal": "X=0.985 Y=-0.174 Z=-0.001"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Automatic Quinn approach opens D04 cycle 2",
+      "pass": true,
+      "fraction": 1.0,
+      "player_local": [
+        -105.69284709230567,
+        0.00010789628981200394,
+        92.0
+      ]
+    },
+    {
+      "name": "Leaf collision passage open",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Automatic D04 closure cycle 2",
+      "pass": true,
+      "fraction": 0.0
+    },
+    {
+      "name": "Leaf collision passage closed",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.3463573455810547,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-576.656 Y=857.269 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.346375435590744,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-580.997 Y=832.649 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.34696027636528015,
+            "actor": "P03FG_D004",
+            "component": "RightLeaf",
+            "impact": "X=-585.472 Y=808.052 Z=165.251",
+            "normal": "X=0.985 Y=-0.174 Z=-0.001"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Automatic Quinn approach opens D04 cycle 3",
+      "pass": true,
+      "fraction": 1.0,
+      "player_local": [
+        -105.99895628647087,
+        0.00016542069808878068,
+        92.0
+      ]
+    },
+    {
+      "name": "Leaf collision passage open",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": false,
+            "start_penetrating": false,
+            "time": 1,
+            "actor": "None",
+            "component": "None",
+            "impact": "X=0.000 Y=0.000 Z=0.000",
+            "normal": "X=0.000 Y=0.000 Z=0.000"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Automatic D04 closure cycle 3",
+      "pass": true,
+      "fraction": 0.0
+    },
+    {
+      "name": "Leaf collision passage closed",
+      "pass": true,
+      "probes": [
+        {
+          "lane_y": -25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.3463573455810547,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-576.656 Y=857.269 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 0,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.346375435590744,
+            "actor": "P03FG_D004",
+            "component": "LeftLeaf",
+            "impact": "X=-580.997 Y=832.649 Z=55.148",
+            "normal": "X=0.985 Y=-0.174 Z=0.001"
+          }
+        },
+        {
+          "lane_y": 25,
+          "probe": {
+            "hit": true,
+            "start_penetrating": false,
+            "time": 0.34696027636528015,
+            "actor": "P03FG_D004",
+            "component": "RightLeaf",
+            "impact": "X=-585.472 Y=808.052 Z=165.251",
+            "normal": "X=0.985 Y=-0.174 Z=-0.001"
+          }
+        }
+      ]
+    }
+  ],
+  "stage": 13.062396194785833,
+  "ended": 247050.812
+}

@@ -1,0 +1,300 @@
+{
+  "ok": true,
+  "phase": "done",
+  "started": 247207.64,
+  "mechanical": [
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 4.238970285896926e-14,
+          "collision_follow_error_cm": 2.712564724388395e-13,
+          "closed_error_cm": 4.7328835826171925e-14,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.470833591410315e-14,
+          "collision_follow_error_cm": 5.1036070336753225e-14,
+          "closed_error_cm": 5.617034615212901e-15,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 1
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 1.5992145117921237e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 9.059419880941277e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 1
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105428204633899e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.229505547547966e-14,
+          "collision_follow_error_cm": 1.4500900480385326e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 1
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.753312400962914e-14,
+          "collision_follow_error_cm": 5.753312400962914e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 1.707613964003266e-13,
+          "collision_follow_error_cm": 1.707613964003266e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 1
+    },
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 4.238970285896926e-14,
+          "collision_follow_error_cm": 2.712564724388395e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.470833591410315e-14,
+          "collision_follow_error_cm": 5.1036070336753225e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 2
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 1.5992145117921237e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 9.059419880941277e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 2
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105430745731983e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.229505547547966e-14,
+          "collision_follow_error_cm": 1.4500900480385326e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 2
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.753312400962914e-14,
+          "collision_follow_error_cm": 5.753312400962914e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 1.707613964003266e-13,
+          "collision_follow_error_cm": 1.707613964003266e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 2
+    },
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 4.238970285896926e-14,
+          "collision_follow_error_cm": 2.712564724388395e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.470833591410315e-14,
+          "collision_follow_error_cm": 5.1036070336753225e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 3
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 1.5992145117921237e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 9.059419880941277e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 3
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105428204633899e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.229505547547966e-14,
+          "collision_follow_error_cm": 1.4500900480385326e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 3
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.753312400962914e-14,
+          "collision_follow_error_cm": 5.753312400962914e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 1.707613964003266e-13,
+          "collision_follow_error_cm": 1.707613964003266e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true,
+      "round": 3
+    }
+  ],
+  "cycles": [],
+  "checks": [
+    {
+      "name": "Quinn and controlled test world present",
+      "pass": true
+    },
+    {
+      "name": "All four mechanisms complete three consecutive swept round trips",
+      "pass": true
+    },
+    {
+      "name": "Unbuilt destinations never unlocked",
+      "pass": true
+    }
+  ],
+  "mechanisms_only": true,
+  "ended": 247208.843
+}

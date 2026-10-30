@@ -1,0 +1,128 @@
+{
+  "ok": false,
+  "phase": "done",
+  "started": 379912.078,
+  "mechanical": [
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 4.238970285896926e-14,
+          "collision_follow_error_cm": 2.712564724388395e-13,
+          "closed_error_cm": 4.7328835826171925e-14,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.470833591410315e-14,
+          "collision_follow_error_cm": 5.1036070336753225e-14,
+          "closed_error_cm": 5.617034615212901e-15,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": false,
+              "time": 0.4678509831428528,
+              "actor": "PBR_Plane.011_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.42116069408824,
+          "collision_follow_error_cm": 86.42116069408824,
+          "closed_error_cm": 0.338253978763305,
+          "pass": false
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 5.4375092393193706e-14,
+          "collision_follow_error_cm": 9.059419880941277e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": false
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105428204633899e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [],
+          "travel_error_cm": 4.229505547547966e-14,
+          "collision_follow_error_cm": 1.4500900480385326e-13,
+          "closed_error_cm": 0.0,
+          "pass": true
+        }
+      ],
+      "pass": true
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 5.753312400962914e-14,
+          "collision_follow_error_cm": 5.753312400962914e-14,
+          "closed_error_cm": 0.0,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": false,
+              "time": 0.4677038788795471,
+              "actor": "PBR_Plane.011_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.42118345350717,
+          "collision_follow_error_cm": 86.42118345350707,
+          "closed_error_cm": 0.3381472960045002,
+          "pass": false
+        }
+      ],
+      "pass": false
+    }
+  ],
+  "cycles": [],
+  "checks": [
+    {
+      "name": "Actual possessed Quinn",
+      "pass": true
+    },
+    {
+      "name": "Eight leaves sweep full opposite travel and return",
+      "pass": false
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\unreal\\Sutherland_Ergonomia03_ParteA\\PBR_SeisSillas_01\\runtime_doors.py\", line 56, in tick\n    check('Eight leaves sweep full opposite travel and return',len(doors)==4 and all(x['pass'] for x in S['mechanical']))\n  File \"C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\unreal\\Sutherland_Ergonomia03_ParteA\\PBR_SeisSillas_01\\runtime_doors.py\", line 5, in check\n    def check(name,passed,**data):S['checks'].append({'name':name,'pass':bool(passed),**data});save();assert passed,name\n                                                                                                      ^^^^^^^^^^^^^^^^^^\nAssertionError: Eight leaves sweep full opposite travel and return\n",
+  "ended": 379913.109
+}

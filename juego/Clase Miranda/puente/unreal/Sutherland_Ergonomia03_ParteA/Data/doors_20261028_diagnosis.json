@@ -1,0 +1,553 @@
+{
+  "ok": true,
+  "doors": [
+    {
+      "id": "DOOR_F07_001",
+      "label": "P03FG_D001",
+      "class": "/Game/F07P03FG/Blueprints/BP_ST_AutomaticDoor_Sutherland.BP_ST_AutomaticDoor_Sutherland_C",
+      "travel": 86.8198013305664,
+      "opening_height": 303.9079895019531,
+      "destination_constructed": false,
+      "locked": true,
+      "leaves": [
+        {
+          "component": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+          "location": [
+            648.7169981007336,
+            -128.0980706214904,
+            252.84150540828705
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_001_Left_Convex.SM_DOOR_F07_001_Left_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf",
+          "location": [
+            648.6439943314136,
+            -46.237073093652725,
+            251.83301866054535
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_001_Right_Convex.SM_DOOR_F07_001_Right_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_002",
+      "label": "P03FG_D002",
+      "class": "/Game/F07P03FG/Blueprints/BP_ST_AutomaticDoor_Sutherland.BP_ST_AutomaticDoor_Sutherland_C",
+      "travel": 86.75941467285156,
+      "opening_height": 299.9001159667969,
+      "destination_constructed": false,
+      "locked": true,
+      "leaves": [
+        {
+          "component": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+          "location": [
+            589.9459598791044,
+            792.7203270709908,
+            195.84102783203124
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_002_Left_Convex.SM_DOOR_F07_002_Left_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf",
+          "location": [
+            575.7324783617656,
+            873.2141396491636,
+            195.84103323370218
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_002_Right_Convex.SM_DOOR_F07_002_Right_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_003",
+      "label": "P03FG_D003",
+      "class": "/Game/F07P03FG/Blueprints/BP_ST_AutomaticDoor_Sutherland.BP_ST_AutomaticDoor_Sutherland_C",
+      "travel": 86.87152862548828,
+      "opening_height": 303.9079895019531,
+      "destination_constructed": false,
+      "locked": true,
+      "leaves": [
+        {
+          "component": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+          "location": [
+            -651.0489917295857,
+            -46.23707253485879,
+            251.83301866054535
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_003_Left_Convex.SM_DOOR_F07_003_Left_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf",
+          "location": [
+            -651.0900043970189,
+            -128.19556033839967,
+            252.84150540828705
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_003_Right_Convex.SM_DOOR_F07_003_Right_Convex",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "DOOR_F07_004",
+      "label": "P03FG_D004",
+      "class": "/Game/F07P03FG/Blueprints/BP_ST_AutomaticDoor_Sutherland.BP_ST_AutomaticDoor_Sutherland_C",
+      "travel": 86.75933074951172,
+      "opening_height": 299.93511962890625,
+      "destination_constructed": true,
+      "locked": false,
+      "leaves": [
+        {
+          "component": "LeftLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+          "location": [
+            -575.7324846804727,
+            873.2141068856041,
+            195.94103323370217
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P03FG/Leaves/SM_D04_Left_ExactSlices1.SM_D04_Left_ExactSlices1",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "component": "RightLeaf",
+          "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf",
+          "location": [
+            -589.9464541767759,
+            792.7203601935398,
+            195.94102783203124
+          ],
+          "variants": [
+            {
+              "name": "integrated",
+              "mesh": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            },
+            {
+              "name": "historical_leaf_memory_only",
+              "mesh": "/Game/F07P03FG/Leaves/SM_D04_Right_ExactSlices1.SM_D04_Right_ExactSlices1",
+              "overlaps": [
+                {
+                  "fraction": 0.0,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.001,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.01,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 0.5,
+                  "blocking_candidates": []
+                },
+                {
+                  "fraction": 1.0,
+                  "blocking_candidates": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

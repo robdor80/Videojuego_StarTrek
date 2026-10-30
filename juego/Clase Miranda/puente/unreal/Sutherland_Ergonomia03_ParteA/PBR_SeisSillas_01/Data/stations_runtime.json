@@ -1,0 +1,132 @@
+{
+  "ok": true,
+  "phase": "done",
+  "checks": [
+    {
+      "name": "Possessed Quinn in PBR map",
+      "pass": true
+    },
+    {
+      "name": "Normal Play spawn supported by floor",
+      "pass": true,
+      "position": [
+        350.0,
+        450.0,
+        92.15005874633789
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P01",
+      "pass": true,
+      "start": [
+        340.0,
+        641.422,
+        92.0
+      ],
+      "end": [
+        340.0000021115501,
+        467.88830247039857,
+        92.0
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P02",
+      "pass": true,
+      "start": [
+        340.00000001507794,
+        461.6948442352581,
+        92.0
+      ],
+      "end": [
+        340.0000021369501,
+        287.3130402617745,
+        92.0
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P03",
+      "pass": true,
+      "start": [
+        340.00000001507806,
+        262.70384423525803,
+        92.0
+      ],
+      "end": [
+        340.00000212663764,
+        89.16960687718358,
+        92.0
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P04",
+      "pass": true,
+      "start": [
+        -339.99999998492194,
+        269.5388445730402,
+        92.0
+      ],
+      "end": [
+        -339.9999978733719,
+        96.00514704343863,
+        92.0
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P05",
+      "pass": true,
+      "start": [
+        -339.99999998492206,
+        448.0268442352582,
+        92.0
+      ],
+      "end": [
+        -339.9999978733598,
+        274.4924083352365,
+        92.0
+      ]
+    },
+    {
+      "name": "Walk aisle beside station P06",
+      "pass": true,
+      "start": [
+        -339.9999999849239,
+        647.0170032584456,
+        92.0
+      ],
+      "end": [
+        -339.9999978732645,
+        473.4743236814055,
+        92.0
+      ]
+    }
+  ],
+  "stations": [
+    {
+      "station": 1,
+      "passed": true
+    },
+    {
+      "station": 2,
+      "passed": true
+    },
+    {
+      "station": 3,
+      "passed": true
+    },
+    {
+      "station": 4,
+      "passed": true
+    },
+    {
+      "station": 5,
+      "passed": true
+    },
+    {
+      "station": 6,
+      "passed": true
+    }
+  ],
+  "started": 380071.812,
+  "stage": 12.878613498061895,
+  "ended": 380085.671
+}

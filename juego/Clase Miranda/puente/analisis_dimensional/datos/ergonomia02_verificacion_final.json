@@ -1,0 +1,128 @@
+{
+  "saved_copy_reopened": true,
+  "object_hashes_match": true,
+  "original_object_count": 345,
+  "unchanged_objects_count": 339,
+  "changed_objects": [
+    "Plane.004_0",
+    "Plane.018_0",
+    "Plane.019_0",
+    "Plane.013_0",
+    "Plane.001_0",
+    "Plane.017_0"
+  ],
+  "protected_files_unchanged": {
+    "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Analisis.blend": true,
+    "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Base.blend": true,
+    "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\blender\\Miranda_Puente_Sutherland_Ergonomia_01.blend": true
+  },
+  "materials_unchanged": true,
+  "uv_unchanged": true,
+  "image_references_unchanged": true,
+  "floor_samples": {
+    "D1_referencia_turbo": {
+      "sample_world_cm": [
+        -525.8569946289062,
+        -827.3790283203125,
+        0.00011101365089416504
+      ],
+      "floor_cm": 0.0
+    },
+    "D2_opuesta_Yneg": {
+      "sample_world_cm": [
+        525.8569946289062,
+        -827.3790283203125,
+        0.00011026859283447266
+      ],
+      "floor_cm": 0.0
+    },
+    "D3_Xpos_Ypos": {
+      "sample_world_cm": [
+        594.916015625,
+        87.21410369873047,
+        59.999996185302734
+      ],
+      "floor_cm": 60.0
+    },
+    "D4_Xneg_Ypos": {
+      "sample_world_cm": [
+        -594.916015625,
+        87.21410369873047,
+        59.999996185302734
+      ],
+      "floor_cm": 60.0
+    }
+  },
+  "seams": {
+    "Plane.004_0": {
+      "coincident_pairs_tested": 102,
+      "maximum_new_opening_cm": 0.0
+    },
+    "Plane.018_0": {
+      "coincident_pairs_tested": 48,
+      "maximum_new_opening_cm": 0.0
+    },
+    "Plane.019_0": {
+      "coincident_pairs_tested": 48,
+      "maximum_new_opening_cm": 0.0
+    },
+    "Plane.013_0": {
+      "coincident_pairs_tested": 102,
+      "maximum_new_opening_cm": 0.0
+    },
+    "Plane.001_0": {
+      "coincident_pairs_tested": 48,
+      "maximum_new_opening_cm": 0.0
+    },
+    "Plane.017_0": {
+      "coincident_pairs_tested": 48,
+      "maximum_new_opening_cm": 0.0
+    }
+  },
+  "geometry": {
+    "Plane.004_0": {
+      "max_xy_change_cm": 0.0,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    },
+    "Plane.018_0": {
+      "max_xy_change_cm": 0.0,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    },
+    "Plane.019_0": {
+      "max_xy_change_cm": 0.0,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    },
+    "Plane.013_0": {
+      "max_xy_change_cm": 0.0,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    },
+    "Plane.001_0": {
+      "max_xy_change_cm": 1.1920928955078125e-05,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    },
+    "Plane.017_0": {
+      "max_xy_change_cm": 1.1920928955078125e-05,
+      "new_degenerate_triangles": 0,
+      "flipped_triangles": 0
+    }
+  },
+  "central_clear_height_target_cm": 300,
+  "bevel_lower_edges_above_floor_cm": {
+    "D1_referencia_turbo": 287.36114501953125,
+    "D2_opuesta_Yneg": 287.22615242004395,
+    "D3_Xpos_Ypos": 285.4580783843994,
+    "D4_Xneg_Ypos": 285.4580783843994
+  },
+  "passed": true,
+  "limitations": [
+    "Altura objetivo medida al dintel central; los biseles conservan cotas inferiores junto a las jambas.",
+    "Cobertura del revestimiento comprobada con 2911 rayos por puerta, 95% central del ancho; no certifica volumen estanco ni colisiones de Unreal.",
+    "La puerta de referencia se mantiene tal como fue entregada, con altura central de 300.135 cm sobre suelo del puente.",
+    "UV sin cambios: las zonas acortadas o alargadas redistribuyen visualmente la textura. Validación visual final por el usuario."
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "part_a_complete": false,
+  "status": "DOORS_FIXED_OTHER_WORK_NOT_ASSESSED",
+  "safe_checkpoint": true,
+  "six_lateral_chairs_preserved": true,
+  "six_chair_mechanisms_tested": true,
+  "runtime_passed": 18,
+  "runtime_total": 18,
+  "map_sha256": "cff10a2af8d8926d85951834d63b31117d0fe3420bb50007ae24ed8be9792d29",
+  "original_integrity_ok": true,
+  "previous_status_20261027": {
+    "part_a_complete": false,
+    "status": "BLOCKED_D04_OPENING",
+    "safe_checkpoint": true,
+    "six_lateral_chairs_preserved": true,
+    "six_chair_mechanisms_tested": true,
+    "runtime_passed": 12,
+    "runtime_total": 13,
+    "map_sha256": "cff10a2af8d8926d85951834d63b31117d0fe3420bb50007ae24ed8be9792d29",
+    "original_integrity_ok": true
+  },
+  "doors_correction_complete": true,
+  "doors_validation_passed": 18,
+  "doors_validation_total": 18,
+  "doors_three_mechanical_cycles_per_door": true,
+  "current_report": "INFORME_PUERTAS_20261028.md",
+  "runtime_scope": "doors_only_20261028"
+}

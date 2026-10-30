@@ -1,0 +1,1230 @@
+{
+  "ok": false,
+  "objects": [
+    {
+      "source": "Editable Mesh_Mat.026_0",
+      "world_vertex_error_cm": 4.5876220237955705e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_Material_000e26.M_Material_000e26"
+      ]
+    },
+    {
+      "source": "Mesh.453_0",
+      "world_vertex_error_cm": 8.197751639821145e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "ceiling_0",
+      "world_vertex_error_cm": 6.922289164423057e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane_0",
+      "world_vertex_error_cm": 3.317109937350501e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane.002_0",
+      "world_vertex_error_cm": 2.9708508646926913e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_roja.M_PBR_Moqueta_roja",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Piano.M_PBR_Piano"
+      ]
+    },
+    {
+      "source": "Plane.003_0",
+      "world_vertex_error_cm": 6.31821482503722e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_grey.M_grey",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Piano.M_PBR_Piano"
+      ]
+    },
+    {
+      "source": "Circle_0",
+      "world_vertex_error_cm": 9.98823756639649e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_azul.M_PBR_Moqueta_azul",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_roja.M_PBR_Moqueta_roja"
+      ]
+    },
+    {
+      "source": "Cube.000_0",
+      "world_vertex_error_cm": 2.5678466830894966e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso"
+      ]
+    },
+    {
+      "source": "Cube.001_0",
+      "world_vertex_error_cm": 1.564142176328347e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso"
+      ]
+    },
+    {
+      "source": "Plane.005_0",
+      "world_vertex_error_cm": 6.388372328324776e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane.004_0",
+      "world_vertex_error_cm": 6.52766338127404e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.006_0",
+      "world_vertex_error_cm": 4.372950324319318e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_light.M_light"
+      ]
+    },
+    {
+      "source": "Plane.007_0",
+      "world_vertex_error_cm": 7.19818165995845e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Circle.001_0",
+      "world_vertex_error_cm": 2.3057446486202695e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_grey.M_grey",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Piano.M_PBR_Piano"
+      ]
+    },
+    {
+      "source": "Sphere.001_0",
+      "world_vertex_error_cm": 6.793883728396896e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_captainschair.M_captainschair",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Marron.M_PBR_Silla_Capitan_Cuero_Marron",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cabezal_Negro.M_PBR_Silla_Capitan_Cabezal_Negro"
+      ]
+    },
+    {
+      "source": "Cube_0",
+      "world_vertex_error_cm": 4.317944115704259e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_captainschair_001.M_captainschair_001"
+      ]
+    },
+    {
+      "source": "Cylinder_0",
+      "world_vertex_error_cm": 4.121349790826447e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Plane.008_0",
+      "world_vertex_error_cm": 8.192861693425353e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso"
+      ]
+    },
+    {
+      "source": "Cylinder.002_0",
+      "world_vertex_error_cm": 8.087873708364395e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso"
+      ]
+    },
+    {
+      "source": "Plane.009_0",
+      "world_vertex_error_cm": 8.826125704045107e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane.010_0",
+      "world_vertex_error_cm": 5.876624017784942e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.013_0",
+      "world_vertex_error_cm": 7.701953428875913e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.014_0",
+      "world_vertex_error_cm": 5.7325207231770404e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.015_0",
+      "world_vertex_error_cm": 2.621979919739095e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.016_0",
+      "world_vertex_error_cm": 2.252771722987693e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Circle.002_0",
+      "world_vertex_error_cm": 4.1272857020637556e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Plane.020_0",
+      "world_vertex_error_cm": 4.0819043272080794e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_ceiling.M_ceiling",
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.022_0",
+      "world_vertex_error_cm": 9.007553627104472e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Cube.002_0",
+      "world_vertex_error_cm": 6.7477091303276566e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "Plane.012_0",
+      "world_vertex_error_cm": 0.00011377138742070571,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Plane.028_0",
+      "world_vertex_error_cm": 1.7960756775106107e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Plane.039_0",
+      "world_vertex_error_cm": 1.5034121106251642e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.038_0",
+      "world_vertex_error_cm": 2.450033679707552e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane.031_0",
+      "world_vertex_error_cm": 2.450033679707552e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_light.M_light"
+      ]
+    },
+    {
+      "source": "Sphere_0",
+      "world_vertex_error_cm": 3.4385216478958026e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_light.M_light"
+      ]
+    },
+    {
+      "source": "Plane.037_0",
+      "world_vertex_error_cm": 3.0755072587198445e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_Plane_037_0.M_Plane_037_0"
+      ]
+    },
+    {
+      "source": "Circle.004_0",
+      "world_vertex_error_cm": 3.4385216478958026e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Claro.M_PBR_Techo_Titanio_Claro"
+      ]
+    },
+    {
+      "source": "Circle.003_0",
+      "world_vertex_error_cm": 5.3947966093944364e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Claro.M_PBR_Techo_Titanio_Claro"
+      ]
+    },
+    {
+      "source": "Plane.036_0",
+      "world_vertex_error_cm": 1.8785205463020523e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.035_0",
+      "world_vertex_error_cm": 1.7993891014207083e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.034_0",
+      "world_vertex_error_cm": 2.2967518956741897e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Acero_001.M_PBR_Techo_Acero_001"
+      ]
+    },
+    {
+      "source": "Plane.033_0",
+      "world_vertex_error_cm": 1.499006453477683e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.032_0",
+      "world_vertex_error_cm": 2.5960269143707655e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_turbolcar.M_turbolcar"
+      ]
+    },
+    {
+      "source": "Plane.030_0",
+      "world_vertex_error_cm": 2.558199134829974e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.027_0",
+      "world_vertex_error_cm": 9.548656651735681e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.029_0",
+      "world_vertex_error_cm": 8.529922399520072e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.M_PBR_Mamparos_Gris_Claro"
+      ]
+    },
+    {
+      "source": "Plane.026_0",
+      "world_vertex_error_cm": 2.710851746282939e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.025_0",
+      "world_vertex_error_cm": 1.0446978712180445e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Plane.024_0",
+      "world_vertex_error_cm": 2.2451891645419224e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.023_0",
+      "world_vertex_error_cm": 2.9854728398320253e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Plane.021_0",
+      "world_vertex_error_cm": 3.0755072587198445e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Moqueta_azul.M_PBR_Moqueta_azul"
+      ]
+    },
+    {
+      "source": "Plane.011_0",
+      "world_vertex_error_cm": 6.113400354822118e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.M_PBR_Mamparos_Gris_Oscuro"
+      ]
+    },
+    {
+      "source": "Plane.040_0",
+      "world_vertex_error_cm": 7.591301472151344e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_lcardtype.M_lcardtype"
+      ]
+    },
+    {
+      "source": "Plane.041_0",
+      "world_vertex_error_cm": 8.578431678179996e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_lcarkey.M_lcarkey"
+      ]
+    },
+    {
+      "source": "Plane.042_0",
+      "world_vertex_error_cm": 8.252038660748843e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_lcarsdisplay.M_lcarsdisplay"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.003_0",
+      "world_vertex_error_cm": 9.584308262940302e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.M_PBR_Blanco_Hueso"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.004_0",
+      "world_vertex_error_cm": 3.227116788944682e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_BLUE.M_BLUE"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.005_0",
+      "world_vertex_error_cm": 3.187327378667527e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.006_0",
+      "world_vertex_error_cm": 3.187327378667527e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_grey.M_grey"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.007_0",
+      "world_vertex_error_cm": 3.2494974207688943e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.008_0",
+      "world_vertex_error_cm": 3.175892983502715e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_grey.M_grey"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.009_0",
+      "world_vertex_error_cm": 3.284297057671082e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_turbolcar.M_turbolcar"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.010_0",
+      "world_vertex_error_cm": 3.1876840426174675e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.011_0",
+      "world_vertex_error_cm": 3.284297057671082e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Plane.043_0",
+      "world_vertex_error_cm": 9.022465944317804e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_light.M_light"
+      ]
+    },
+    {
+      "source": "Plane.044_0",
+      "world_vertex_error_cm": 3.016159935163206e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Acero_001.M_PBR_Techo_Acero_001"
+      ]
+    },
+    {
+      "source": "Plane.045_0",
+      "world_vertex_error_cm": 2.2967518956741897e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_space.M_space"
+      ]
+    },
+    {
+      "source": "Cube.003_0",
+      "world_vertex_error_cm": 3.960906917056119e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_plaque.M_plaque"
+      ]
+    },
+    {
+      "source": "Plane.046_0",
+      "world_vertex_error_cm": 3.5092104898403354e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_light_001.M_light_001"
+      ]
+    },
+    {
+      "source": "Plane.047_0",
+      "world_vertex_error_cm": 2.37714203802653e-05,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_lcarsdisplay_001.M_lcarsdisplay_001"
+      ]
+    },
+    {
+      "source": "Editable Mesh_Mat.003_0.001",
+      "world_vertex_error_cm": 9.648038717700708e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.M_PBR_Blanco_Hueso_Consolas"
+      ]
+    },
+    {
+      "source": "Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "Mesh.589_0.002",
+      "world_vertex_error_cm": 5.3947966093944364e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Mesh.591_0.002",
+      "world_vertex_error_cm": 4.291534423828125e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Mesh.594_0.002",
+      "world_vertex_error_cm": 5.30726625141671e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "Mesh.596_0.002",
+      "world_vertex_error_cm": 4.580000222594269e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Mesh.598_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "Mesh.601_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "Mesh.602_0.002",
+      "world_vertex_error_cm": 2.707914517307412e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.395196608940676e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "Cilindro",
+      "world_vertex_error_cm": 1.1680077279964342e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6393016630348557e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.589_0.002",
+      "world_vertex_error_cm": 6.106495129998063e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.591_0.002",
+      "world_vertex_error_cm": 4.271620003502111e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.594_0.002",
+      "world_vertex_error_cm": 5.30726625141671e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.596_0.002",
+      "world_vertex_error_cm": 4.580000222594269e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.598_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6393016630348557e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.601_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Mesh.602_0.002",
+      "world_vertex_error_cm": 2.6973983046972182e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.394900792187576e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P02_Xpos_Y-3.72934__Cilindro",
+      "world_vertex_error_cm": 1.1680077279964342e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6393016630348557e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.589_0.002",
+      "world_vertex_error_cm": 6.485686544769022e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.591_0.002",
+      "world_vertex_error_cm": 4.271620003502111e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.594_0.002",
+      "world_vertex_error_cm": 5.30726625141671e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.596_0.002",
+      "world_vertex_error_cm": 4.479478413595184e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.598_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6393016630348557e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.601_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Mesh.602_0.002",
+      "world_vertex_error_cm": 2.6973983046972182e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.394900792187576e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P03_Xpos_Y-1.73943__Cilindro",
+      "world_vertex_error_cm": 8.616943535090066e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.589_0.002",
+      "world_vertex_error_cm": 6.106495129998063e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.591_0.002",
+      "world_vertex_error_cm": 4.523674478771752e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.594_0.002",
+      "world_vertex_error_cm": 5.30726625141671e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.596_0.002",
+      "world_vertex_error_cm": 4.479478413595184e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.598_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.601_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Mesh.602_0.002",
+      "world_vertex_error_cm": 2.6973983046972182e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.394952239738406e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P04_Xneg_Y-1.80778__Cilindro",
+      "world_vertex_error_cm": 1.1680077279964342e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.589_0.002",
+      "world_vertex_error_cm": 5.3947966093944364e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.591_0.002",
+      "world_vertex_error_cm": 4.291534423828125e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.594_0.002",
+      "world_vertex_error_cm": 5.30726625141671e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.596_0.002",
+      "world_vertex_error_cm": 4.580000222594269e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.598_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.601_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Mesh.602_0.002",
+      "world_vertex_error_cm": 2.6973983046972182e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.39505947569654e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P05_Xneg_Y-3.59266__Cilindro",
+      "world_vertex_error_cm": 1.1680077279964342e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.588_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.589_0.002",
+      "world_vertex_error_cm": 5.3947966093944364e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.590_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.591_0.002",
+      "world_vertex_error_cm": 4.291534423828125e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.592_0.002",
+      "world_vertex_error_cm": 4.264961199760036e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.593_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.594_0.002",
+      "world_vertex_error_cm": 4.889153162753871e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.596_0.002",
+      "world_vertex_error_cm": 4.580000222594269e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.597_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.598_0.002",
+      "world_vertex_error_cm": 1.966049969490843e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.599_0.002",
+      "world_vertex_error_cm": 6.743495761743046e-07,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.600_0.002",
+      "world_vertex_error_cm": 3.6471029617257965e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.M_PBR_Silla_Capitan_Cuero_Negro"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.601_0.002",
+      "world_vertex_error_cm": 2.037049232797034e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.M_PBR_Metal_Sillas_6"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Mesh.602_0.002",
+      "world_vertex_error_cm": 2.6973983046972182e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Floor_aiWireframe1_0",
+      "world_vertex_error_cm": 5.395489188454932e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.M_PBR_Silla_Capitan_Pie_Titanio"
+      ]
+    },
+    {
+      "source": "SS_P06_Xneg_Y-5.58256__Cilindro",
+      "world_vertex_error_cm": 1.1680077279964342e-06,
+      "materials": [
+        "/Game/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.M_PBR_Techo_Titanio_Oscuro"
+      ]
+    }
+  ],
+  "chair_components": {
+    "P01": 16,
+    "P02": 16,
+    "P03": 16,
+    "P04": 16,
+    "P05": 16,
+    "P06": 16
+  },
+  "old_visual_actor_count": 0,
+  "doors": [
+    {
+      "id": "DOOR_F07_002",
+      "destination_constructed": false,
+      "leaves": [
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf"
+      ]
+    },
+    {
+      "id": "DOOR_F07_003",
+      "destination_constructed": false,
+      "leaves": [
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf"
+      ]
+    },
+    {
+      "id": "DOOR_F07_004",
+      "destination_constructed": true,
+      "leaves": [
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf"
+      ]
+    },
+    {
+      "id": "DOOR_F07_001",
+      "destination_constructed": false,
+      "leaves": [
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+        "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf"
+      ]
+    }
+  ],
+  "leaf_visuals": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/verify_saved.py\", line 27, in <module>\n    a=actors[row['asset']];c=a.static_mesh_component;err=compare(row['points_cm'],points(c),.005);assert c.get_collision_enabled()==u.CollisionEnabled.NO_COLLISION\n                                                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

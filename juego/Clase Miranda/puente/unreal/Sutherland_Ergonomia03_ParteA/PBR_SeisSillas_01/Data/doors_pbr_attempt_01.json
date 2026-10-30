@@ -1,0 +1,178 @@
+{
+  "ok": false,
+  "phase": "done",
+  "started": 379696.796,
+  "mechanical": [
+    {
+      "id": "DOOR_F07_001",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.013_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.81980133056639,
+          "collision_follow_error_cm": 86.81980133056639,
+          "closed_error_cm": 0.0,
+          "pass": false
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.013_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.81980133056639,
+          "collision_follow_error_cm": 86.81980133056639,
+          "closed_error_cm": 0.0,
+          "pass": false
+        }
+      ],
+      "pass": false
+    },
+    {
+      "id": "DOOR_F07_002",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.004_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.75941467285156,
+          "collision_follow_error_cm": 86.75941467285156,
+          "closed_error_cm": 0.0,
+          "pass": false
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.325,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.004_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 59.28560002644857,
+          "collision_follow_error_cm": 59.28560002644848,
+          "closed_error_cm": 27.473814646402992,
+          "pass": false
+        }
+      ],
+      "pass": false
+    },
+    {
+      "id": "DOOR_F07_003",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [],
+          "travel_error_cm": 3.132216708223723e-14,
+          "collision_follow_error_cm": 3.132216708223723e-14,
+          "closed_error_cm": 7.105428204633899e-15,
+          "pass": true
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.06666666666666667,
+              "blocking": true,
+              "initial_overlap": false,
+              "time": 0.7786895036697388,
+              "actor": "PBR_Plane.010_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 81.24030655976463,
+          "collision_follow_error_cm": 81.2403065597646,
+          "closed_error_cm": 5.63122206572362,
+          "pass": false
+        }
+      ],
+      "pass": false
+    },
+    {
+      "id": "DOOR_F07_004",
+      "leaves": [
+        {
+          "side": "LeftLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.039_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.75933074951168,
+          "collision_follow_error_cm": 86.75933074951168,
+          "closed_error_cm": 0.0,
+          "pass": false
+        },
+        {
+          "side": "RightLeaf",
+          "hits": [
+            {
+              "pass": 0,
+              "fraction": 0.008333333333333333,
+              "blocking": true,
+              "initial_overlap": true,
+              "time": 0.0,
+              "actor": "PBR_Plane.004_0",
+              "component": "StaticMeshComponent0"
+            }
+          ],
+          "travel_error_cm": 86.75933074951168,
+          "collision_follow_error_cm": 86.75933074951168,
+          "closed_error_cm": 0.0,
+          "pass": false
+        }
+      ],
+      "pass": false
+    }
+  ],
+  "cycles": [],
+  "checks": [
+    {
+      "name": "Actual possessed Quinn",
+      "pass": true
+    },
+    {
+      "name": "Eight leaves sweep full opposite travel and return",
+      "pass": false
+    }
+  ],
+  "error": "Traceback (most recent call last):\n  File \"C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\unreal\\Sutherland_Ergonomia03_ParteA\\PBR_SeisSillas_01\\runtime_doors.py\", line 56, in tick\n    check('Eight leaves sweep full opposite travel and return',len(doors)==4 and all(x['pass'] for x in S['mechanical']))\n  File \"C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\juego\\Clase Miranda\\puente\\unreal\\Sutherland_Ergonomia03_ParteA\\PBR_SeisSillas_01\\runtime_doors.py\", line 5, in check\n    def check(name,passed,**data):S['checks'].append({'name':name,'pass':bool(passed),**data});save();assert passed,name\n                                                                                                      ^^^^^^^^^^^^^^^^^^\nAssertionError: Eight leaves sweep full opposite travel and return\n",
+  "ended": 379697.765
+}

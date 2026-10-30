@@ -1,0 +1,5 @@
+{
+  "ok": false,
+  "exports": [],
+  "error": "Traceback (most recent call last):\n  File \"C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/juego/Clase Miranda/puente/analisis_dimensional/scripts/correderas01_quinn_lectura_ue.py\", line 7, in <module>\n    out['capsule']={'radius_cm':c.capsule_component.get_unscaled_capsule_radius(),'half_height_cm':c.capsule_component.get_unscaled_capsule_half_height(),'scale':list(c.capsule_component.get_relative_scale3d().to_tuple())}\n                                                                                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'CapsuleComponent' object has no attribute 'get_relative_scale3d'\n"
+}

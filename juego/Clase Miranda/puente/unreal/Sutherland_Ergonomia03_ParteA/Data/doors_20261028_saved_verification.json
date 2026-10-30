@@ -1,0 +1,207 @@
+{
+  "ok": true,
+  "leaves": [
+    {
+      "door": "DOOR_F07_001",
+      "side": "LeftLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        60.19999999999999,
+        360.58814084529877
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "LeftLeaf",
+        "position": "X=648.717 Y=-128.098 Z=252.842",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=646.761 Y=-168.988 Z=57.100), Max=(X=650.673 Y=-87.209 Z=360.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_001",
+      "side": "RightLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        60.19999999999996,
+        360.58814561367035
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "RightLeaf",
+        "position": "X=648.644 Y=-46.237 Z=251.833",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=646.688 Y=-87.127 Z=56.092), Max=(X=650.600 Y=-5.347 Z=360.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_002",
+      "side": "LeftLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        0.20000000000001705,
+        300.5881591796875
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "LeftLeaf",
+        "position": "X=589.946 Y=792.720 Z=195.841",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=580.931 Y=752.112 Z=-2.359), Max=(X=598.961 Y=833.329 Z=300.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_002",
+      "side": "RightLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        0.19999999999998863,
+        300.5881493225694
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "RightLeaf",
+        "position": "X=575.732 Y=873.214 Z=195.841",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=566.718 Y=832.606 Z=-2.359), Max=(X=584.747 Y=913.823 Z=300.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_003",
+      "side": "LeftLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        60.19999999999996,
+        360.58814561367035
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "LeftLeaf",
+        "position": "X=-651.049 Y=-46.237 Z=251.833",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=-653.120 Y=-87.132 Z=56.092), Max=(X=-648.978 Y=-5.342 Z=360.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_003",
+      "side": "RightLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        60.19999999999999,
+        360.58814084529877
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "RightLeaf",
+        "position": "X=-651.090 Y=-128.196 Z=252.842",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=-653.093 Y=-169.088 Z=57.100), Max=(X=-649.087 Y=-87.303 Z=360.588)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_004",
+      "side": "LeftLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        0.30000000000001137,
+        300.7231987610459
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "LeftLeaf",
+        "position": "X=-575.732 Y=873.214 Z=195.941",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=-584.747 Y=832.606 Z=-2.359), Max=(X=-566.718 Y=913.823 Z=300.723)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    },
+    {
+      "door": "DOOR_F07_004",
+      "side": "RightLeaf",
+      "render_material_uv_unchanged": true,
+      "collision_bounds_z_cm": [
+        0.29999999999998295,
+        300.723193359375
+      ],
+      "body": {
+        "asset": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf",
+        "boxes": 0,
+        "convexes": 1,
+        "spheres": 0,
+        "capsules": 0,
+        "complexity_enum": 1,
+        "box_shapes": [],
+        "component": "RightLeaf",
+        "position": "X=-589.946 Y=792.720 Z=195.941",
+        "scale": "X=1.000 Y=1.000 Z=1.000",
+        "world_bounds": "IsValid=true, Min=(X=-598.961 Y=752.112 Z=-2.359), Max=(X=-580.932 Y=833.329 Z=300.723)",
+        "collision_enabled_enum": 3,
+        "pawn_response_enum": 2,
+        "profile": "BlockAllDynamic"
+      }
+    }
+  ],
+  "six_chairs_quinn_references_unchanged": true,
+  "map_unchanged": true
+}

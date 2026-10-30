@@ -1,0 +1,2 @@
+using UnrealBuildTool;
+public class ChairAutoLab : ModuleRules { public ChairAutoLab(ReadOnlyTargetRules Target):base(Target){ PCHUsage=PCHUsageMode.UseExplicitOrSharedPCHs; PublicDependencyModuleNames.AddRange(new[]{"Core","CoreUObject","Engine","InputCore"}); } }

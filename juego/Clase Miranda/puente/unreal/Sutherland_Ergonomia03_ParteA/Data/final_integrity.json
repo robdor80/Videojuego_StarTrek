@@ -1,0 +1,463 @@
+{
+  "ok": true,
+  "original_project_files_checked": 2821,
+  "original_project_differences": [],
+  "original_blends_checked": 7,
+  "original_blend_differences": [],
+  "work_baseline_content_differences": [
+    "Content/SutherlandPlayable01/Maps/L_Sutherland_Playable01.umap"
+  ],
+  "saved_map_sha256": "cff10a2af8d8926d85951834d63b31117d0fe3420bb50007ae24ed8be9792d29",
+  "derived_assets": [
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair01.uasset",
+      "size": 24032,
+      "sha256": "d6839f22ded91bfb8deafdc4cb2ca3b805dc6fc4169705c3248737103a523541"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair02.uasset",
+      "size": 23925,
+      "sha256": "91f643c4b7b4be86a83b4219255d0b1e50570afbfd5b93e2b360ef8961cade20"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair03.uasset",
+      "size": 24089,
+      "sha256": "20e2a38c7e0242e032eb16d5c771aae9a74c696bc7cdaa7a94f8d6b3cf6384db"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair04.uasset",
+      "size": 24193,
+      "sha256": "fbbf5d9fbe80cbaabf6d3c643e1d8a18d34c94dfea38b4556013c9ca87a00bb8"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair05.uasset",
+      "size": 24092,
+      "sha256": "ff671f9a65647add41ba34746cd04ab20bb86dc0eaf0cba06a21cc74c1644338"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair06.uasset",
+      "size": 24244,
+      "sha256": "3a50789a052dbbe8e1bd26f356eccf4b15133129d59965157cb8fbbabc11a8e7"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_01.uasset",
+      "size": 22156,
+      "sha256": "a680c83f54ccfc0606160b700881189146f0db02842ece76bc0f0a221b8490a6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_02.uasset",
+      "size": 22152,
+      "sha256": "c74207443086f44dafa4847545999056d10719b0cfc01e3df5b5297b3679ad02"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_01.uasset",
+      "size": 13679,
+      "sha256": "aa93a7a9c2bfef5b6320054914fd43b66f9611307c47b97b0434939e6ccebd34"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_02.uasset",
+      "size": 13679,
+      "sha256": "6cd19158782edc41c7a2eb4784d5c3e15da565f8f24870e40d617d5da654826a"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cylinder_0_01.uasset",
+      "size": 23287,
+      "sha256": "e5897749e307c82e43f92babf3c70b02dc30cf8fea9957d4bcdf8bbfac73ee48"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_01.uasset",
+      "size": 21286,
+      "sha256": "ff0849d6afe8425137d44927f6898c01d7f1f8f2cb74358e569abee558eeb226"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_02.uasset",
+      "size": 21292,
+      "sha256": "4b9c54c5f886fa35456d68b74e09dcd730766b405fd960c021d922a31cf8392c"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_01.uasset",
+      "size": 21296,
+      "sha256": "4422b721c79dba66b28b141b465982ad37b92b02be064c25acdc5545d02f50a0"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_02.uasset",
+      "size": 21282,
+      "sha256": "6ed34c1a73f5a697a6696906e886406482f6a2be30e6b97be9b06712f40d29a6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_01.uasset",
+      "size": 14050,
+      "sha256": "474220817d3d3fe37b273e2c87a2e99889fcf722325e243e5bf94d0b87b50af2"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_02.uasset",
+      "size": 14046,
+      "sha256": "7370ac751831bf353349a2a4d54b1dcebfa3a0a14cb393f94fb57b6c290a5ecf"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_01.uasset",
+      "size": 14053,
+      "sha256": "8e58705d93ea55eba7b694fc4010be05264b84b99e48136253f7bf360c01e575"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_02.uasset",
+      "size": 14047,
+      "sha256": "89e1f9943151920601abddbf26fd7cbc34727c66859814b3480ec8208ae2ba21"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_01.uasset",
+      "size": 13802,
+      "sha256": "206e0b2d5232c3193b9832ee60c16476792892c9d36ab0b6210c4245e1870251"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_02.uasset",
+      "size": 20598,
+      "sha256": "40b34c08cc97c227d77efa9432ce79afefd665f8395edf216a6b3d0dabb71bbb"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_03.uasset",
+      "size": 13803,
+      "sha256": "30f6d52fa70cabd9e5e5faa770c65f8725bd5601dee3ef831143803b432aadda"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_04.uasset",
+      "size": 18689,
+      "sha256": "53d5e64f57f429a2f5c412a57a4e444745d81cde0fdf741e5c2bc934830476f4"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_01.uasset",
+      "size": 14279,
+      "sha256": "14c4178d56f6b05d7188006f78394c57b25916e149208573de98c04e567c1001"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_02.uasset",
+      "size": 14284,
+      "sha256": "6ed878940a23534bb74c8f60c474f1871716abc49483a4f7336504e124de0755"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_01.uasset",
+      "size": 12492,
+      "sha256": "daf5889e59318e033671e0757cdad75586e372ed75b3849cb2d31aafa862cd27"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_02.uasset",
+      "size": 12487,
+      "sha256": "933adfa895b180c6bf35ae888cb1216fc42d5f3326afbe87e8b255969b6c7b55"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_01.uasset",
+      "size": 23103,
+      "sha256": "bf98c6f6ae4905bf5a20561866cb54a1fb18b11de6a915d699b0b4455684c4b9"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_02.uasset",
+      "size": 23002,
+      "sha256": "a23f188c234b35b5fbdf66c34a73dbfbe2cd0df6c940697bf75194ecdd475d52"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_01.uasset",
+      "size": 20289,
+      "sha256": "440235d012823dd82f85ebfcb4c6273ad9600867ab45e1e8d94ddf5315dec845"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_02.uasset",
+      "size": 20296,
+      "sha256": "b887d3790b0681a01de16aaa3887bb30e5c9c87294274454632d96b57c4771b3"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_01.uasset",
+      "size": 18151,
+      "sha256": "b4e38d5ecdba941e6a417872d683b808d6756ff42e841eb342d1de4d22abc72e"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_02.uasset",
+      "size": 18168,
+      "sha256": "f562e6261e4deec89173bad99fc5cad787dcaab95a07d939455348aa499d6607"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_01.uasset",
+      "size": 14234,
+      "sha256": "715cd01380cd938d2ed4d38b7f8d1713ece14f4ce5b3ccfc49eb37b1f5e9c9b6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_02.uasset",
+      "size": 15973,
+      "sha256": "40854ba273ddde09eeea7b84e90a187e0208a99806528b55958ce070cb76a1f4"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_03.uasset",
+      "size": 14201,
+      "sha256": "e24bbea3e5f6a472aa0949ed60631a16142800fdd30e2dbabc465c40a15b36e4"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_04.uasset",
+      "size": 17003,
+      "sha256": "25d670ebc155326541f50e21b428aa2a54255235d3600c3f2607aaadbc048263"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_01.uasset",
+      "size": 14261,
+      "sha256": "a245f5c0a381a796b4ad600c597e900660e4f4690bbbefe0dccaec051fa74322"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_02.uasset",
+      "size": 17280,
+      "sha256": "e88d6609d5cd0d748ed2e0f1901fe2efdb6a1cc20ec47a62b5386b5294ab6304"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_01.uasset",
+      "size": 13710,
+      "sha256": "876768002041abdab45a7edc2896cd406b61312bbf6180e2e13e4cb1add9e9af"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_02.uasset",
+      "size": 13706,
+      "sha256": "1f0c900936195b63fa02793df86a36627898d803bc7bac812fe42ec22b8d28e6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_03.uasset",
+      "size": 13713,
+      "sha256": "3f154caf8e11fe5c543e97608a9fd2da5434b9902675cf5f6d7cb2d583b7cf5a"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_01.uasset",
+      "size": 44770,
+      "sha256": "45868ec7e0a3477b608376aef62b1bc7d3ae949a6296fb067521053cbd673b68"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_02.uasset",
+      "size": 44714,
+      "sha256": "38b6de32b96476037b0f91e321fec6a24d934f2bf686390e54029e921eb72a47"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_03.uasset",
+      "size": 44527,
+      "sha256": "f771aac18a46488933c4aadafd9826c69bb345168f3c346b68180c9e857a1fee"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_04.uasset",
+      "size": 24814,
+      "sha256": "61562fdc3b562d9cb5e48f6e71894818efe72a22754c491ee2b84cc1ef9e72df"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_05.uasset",
+      "size": 19013,
+      "sha256": "5d42c4f815621553b33b0c626f68a8b5ce1eec217082a6a82d0a84a9d22cfd6e"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_06.uasset",
+      "size": 24382,
+      "sha256": "c91269df045b10c4332c6d648e8c59cfdaa5af577624401e23135657e3421cd7"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_07.uasset",
+      "size": 18839,
+      "sha256": "c29d90deac9b52848dd93e19a948e393a63b6b6ae3b4b6b7e185756fef70dd34"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_08.uasset",
+      "size": 24406,
+      "sha256": "d97dfc997c895b5e82393acbdb025063c308fe27ad1d76223273567939becadb"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_09.uasset",
+      "size": 24427,
+      "sha256": "938dd83ca3fe52d50925acafb8fd3f87272aeba31aed2da43ee06109d828f6c8"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.uasset",
+      "size": 14745,
+      "sha256": "e544519501d1ec11a24a012e82d326632997c6dbe942373d98986011de8879fc"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.uasset",
+      "size": 14767,
+      "sha256": "b8f07c5ded57e25b8f8717551a364f43c8a6195643e4ef443815adb1da4ff5cb"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.uasset",
+      "size": 14814,
+      "sha256": "2328e835c6d0893260c6591d1ea73516e49b3741e2974eeced718074a3df138c"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.uasset",
+      "size": 14861,
+      "sha256": "7eb52bab001793380cd3e835dbc56353c1deccf15672a5158298c21a27edf757"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.uasset",
+      "size": 14830,
+      "sha256": "74852c85a034e46e729db29af6598522575258997a17507968079441a76a9ee0"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.uasset",
+      "size": 14798,
+      "sha256": "b6ffad480310b76149324c14da8ada09b58ca2b052f2a1a122373957eadca019"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.uasset",
+      "size": 14862,
+      "sha256": "4d94df4e954999fc7626e8217fe6f25db7939d7904050b8e20c75c8b890a17a8"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.uasset",
+      "size": 14840,
+      "sha256": "aedb29fa3eff468b2a0e6eed3c9b071b4bca4a71e133ab29f60d24344f5bf9a3"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Cube_0.uasset",
+      "size": 12312,
+      "sha256": "5bfc3559000198592e483c221456444ebd117e46ca2ec45dd93cb84b609717ee"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Cube_002_0.uasset",
+      "size": 15167,
+      "sha256": "97d089bed267286da13c2dcc3f387342e6c5f1c1db441361d5d8b274584c1bab"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Cylinder_0.uasset",
+      "size": 16461,
+      "sha256": "8691adeda6fb32d96f792e5bd27198717348863e74f3b528013d8fdd196cba36"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Cylinder_002_0.uasset",
+      "size": 58540,
+      "sha256": "f81434ef02ae477aa5ffdf1218d68083eb5e84a45f973d1a2f65431a0c8ed3a6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_003_0.uasset",
+      "size": 13578,
+      "sha256": "05cf9ac7219eba25072bdc34db7a92b4a27c9bd6e8966011f1354b22ede5eae1"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_003_0_002.uasset",
+      "size": 13624,
+      "sha256": "b0c33c55b084b8a2bef2d9a344cd6b8be828aee0930674829bac0b504a448532"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_004_0.uasset",
+      "size": 14686,
+      "sha256": "03916aebe921270489a57008748a66595e70a654d3629ac975fd3412f570b693"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_004_0_001.uasset",
+      "size": 13722,
+      "sha256": "7b122356930f0305da00b000633c523b8985468b985178e4142c9df65e9a94ab"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_005_0.uasset",
+      "size": 12952,
+      "sha256": "e12823d76216d77e4d70391e01b25af27d38c92f845de20cf6ef6ab557514405"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_005_0_001.uasset",
+      "size": 12979,
+      "sha256": "9e02587ad39d244d49bff5333b2184c94ae17822d6c0196641bbfc86eb9a67a5"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_006_0.uasset",
+      "size": 12956,
+      "sha256": "d929ed5f4a7e9d0f53ee29766a6b27377921cfad6c0d264ac0b9b5c2e6ccaa29"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_006_0_001.uasset",
+      "size": 12995,
+      "sha256": "6e86099cc412a83f0f816138519ab7f00b77188f881013ff932e397f180ef4f6"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_007_0.uasset",
+      "size": 13536,
+      "sha256": "b495be313f4effa5d97ac0228be548190459115f5d0af388694f916cec1cc74b"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_007_0_002.uasset",
+      "size": 13605,
+      "sha256": "2acc1d628f3ffc6e80c9c04604a8c34c3274117b79017014e4c79399dcad46cc"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_008_0.uasset",
+      "size": 13600,
+      "sha256": "1daabebb49a05afabf0afde54a26baf1c9ced31bd63a382963883742f1ed7dfe"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_008_0_001.uasset",
+      "size": 13643,
+      "sha256": "758e517fbc6d2177787c7fbe0ad489855286200f37ca960402c656869372bfba"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_009_0.uasset",
+      "size": 12698,
+      "sha256": "cacddf431ce742e81da3c888a10d05bf06ad4d41b316a9306adcb58090b32008"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_009_0_001.uasset",
+      "size": 12710,
+      "sha256": "05092faadbfa5af1f0186f812c03da99909f4650c54b3b484e01c0f27c78a222"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_010_0.uasset",
+      "size": 15847,
+      "sha256": "49f39331d81dcf62c5247fcc1ad4dde41d09deec838b66dbd4bfdb623b2763df"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_010_0_002.uasset",
+      "size": 15828,
+      "sha256": "0327737ab426bddb22079af204ba3460bdd9037efc2fcb4b3dbf5998655cb342"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_011_0.uasset",
+      "size": 13786,
+      "sha256": "c79e27c3d952abdd52a55421a05a50a51189608fe0ae03c8c2eb0dfc7e5ba003"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_011_0_001.uasset",
+      "size": 13819,
+      "sha256": "db72d1c2d4fa33536fff64e1ecc422b1260928eaa366a1156e53db68c43828a2"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Mesh_453_0.uasset",
+      "size": 29441,
+      "sha256": "80f334481dcf2e793522992d3733a9bdf051d803afd07542c594094df6fc311c"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_004_0.uasset",
+      "size": 16635,
+      "sha256": "3f07ebd3b59da4149f4c9e3e9741dfd5e538abf8b08207c2aad331e28d411569"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_008_0.uasset",
+      "size": 19022,
+      "sha256": "37021241c02ad17d1b0f132368816ce74fd0cf5e207b201255fc299960f8d0d1"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_013_0.uasset",
+      "size": 16419,
+      "sha256": "3ad6b149b567e6553af0e7dfd4137c077253d96394dec1cafa0fafd86139cc97"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_023_0.uasset",
+      "size": 16593,
+      "sha256": "7e8da0bd29775c45e509a818633eea3a0d932495dcb963dda546f8a95f114fa4"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_025_0.uasset",
+      "size": 14521,
+      "sha256": "40427afcd2b81240f3ab5c7ad315fd110f1cfe3dbdd9f13f88028fd8a8c6c80a"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_032_0.uasset",
+      "size": 12412,
+      "sha256": "7a2719b53a2ece03e22e930d36baf5b2da6f5bbcd90415522cf1c0cace3bf873"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_040_0.uasset",
+      "size": 28628,
+      "sha256": "d8fb0b175c00d68b9787ce3c1727424c1c462161b96f947ce187bdd1a331b45e"
+    },
+    {
+      "path": "Unreal/Content/F07COLL01/Ergonomia03/Visual/SM_VIS_Sphere_001_0.uasset",
+      "size": 298134,
+      "sha256": "876732fc6adee582b56dd4963215d18fbc3de16dcc807e0413b3ea4a4e5c9be0"
+    }
+  ]
+}

@@ -1,0 +1,1551 @@
+{
+  "ok": true,
+  "date": "2026-10-29T20:40:33.635233+01:00",
+  "baseline_checked": 1569,
+  "baseline_changes": [],
+  "source_sha256": "2b248a66c37bc8b0626cbbec95952c272380ef4c77570c58ef62f176a50e99a6",
+  "source_matches_frozen_copy": true,
+  "map_sha256": "b1f3638820f594d1625a89da9b781d2c7a2e5f4a6aa2f93a1d7ec9009f6ef569",
+  "new_assets": [
+    {
+      "path": "Content/SutherlandPBR01/Maps/L_Sutherland_PBR_SeisSillas_01.umap",
+      "bytes": 797189,
+      "sha256": "b1f3638820f594d1625a89da9b781d2c7a2e5f4a6aa2f93a1d7ec9009f6ef569"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_02___Default.uasset",
+      "bytes": 7157,
+      "sha256": "caab11f198ef1bec4881fc48507a362b5206b1172188a587cba6e91cb3e370a9"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_aiWireframe1.uasset",
+      "bytes": 5698,
+      "sha256": "b7ebfd2722979f5fd501bd5875de94c84d302f95771ac7641c14d7fe588e5f64"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_BLUE.uasset",
+      "bytes": 5748,
+      "sha256": "6c06019ffece1077af23cfeeb6ba690feb76c3f862b8e3adff42db27ff38ee76"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_captainschair.uasset",
+      "bytes": 7162,
+      "sha256": "94852b84951c0e6dc77def2e595686aeb34fee926b63339cc8556ec08e83d79a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_captainschair_001.uasset",
+      "bytes": 7182,
+      "sha256": "bbcaef164355202dd625a4efce2999cfe0e034f02d16ceee5257311d5820782e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_ceiling.uasset",
+      "bytes": 7132,
+      "sha256": "63ae9d2e44168976ea3b08d412e7ac19be29e747868bf837894379a1282c9258"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_cream.uasset",
+      "bytes": 7122,
+      "sha256": "95f8411064f6dea5ee724500858a9644a2e353d79fc2d0e2e60d488906a04a1a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_door.uasset",
+      "bytes": 8254,
+      "sha256": "07136f91fcc4581c54ada7a65994eed5b483833e2a8966d95d450ff9ac5bf6e3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_floor.uasset",
+      "bytes": 7122,
+      "sha256": "07e20a2072fa33044ff37ea75f721e21a2b37770df6280cd2e3a2259f4af961f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_grey.uasset",
+      "bytes": 7117,
+      "sha256": "5a0f2a3540240d850da88f3f90f00cf98b93ad52277c56da9b39e494d6e863a8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_lcardtype.uasset",
+      "bytes": 7142,
+      "sha256": "164dd101ba66773e1f5f1ce420ef053209fcc61bc7c81b8d5171ec7f9252995d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_lcarkey.uasset",
+      "bytes": 7132,
+      "sha256": "45751e7ca54ebc1a3c6c30c133e14486902f52f013d117ab89fb5f25a2e808e5"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_lcarsdisplay.uasset",
+      "bytes": 7157,
+      "sha256": "a94a1ff41a03df7821b2b15e8c34c722c162f980dd0c08ceac73f95228fa4183"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_lcarsdisplay_001.uasset",
+      "bytes": 7177,
+      "sha256": "9817f5363f9fcde210d3161c7e1546659020036637629a1d4a38ace3d6b30072"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_light.uasset",
+      "bytes": 5753,
+      "sha256": "4058aa94ccae5cf36e1e8d7aed75f1c8b070071e4c6b3ff08d01687219407807"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_light_001.uasset",
+      "bytes": 7142,
+      "sha256": "045d2ffbaef9d2a6a3beb07db739d615a10442b2cea681f397cdfe36e9ad37c8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Material_000e26.uasset",
+      "bytes": 7172,
+      "sha256": "fc8c4788bffafbd14db737ba0898cfe16976fb9b9ff3378eaa36a878417ad349"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Material__1.uasset",
+      "bytes": 7148,
+      "sha256": "a049412d4f0c73d9e6bdb27f7bc6e48e8eb3089c2a33f4875bfbee887e3473b0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Material__11.uasset",
+      "bytes": 7151,
+      "sha256": "8e42cb2d52fe16428c84fe18334c70f05642c7a72c19b66fdbdf55db8158a18d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Material__12.uasset",
+      "bytes": 7151,
+      "sha256": "9db86a418ce27eff0e973911671ec6513f72c2a18481af8bd6be68ee2c83cedb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Material__13.uasset",
+      "bytes": 7151,
+      "sha256": "0cec3e2f1aa540fc4e98b5de35fcf297fcc53f2833455c17ef79a3afbb6642b3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso.uasset",
+      "bytes": 13354,
+      "sha256": "928f435d8c8d97220c417faded7088e87a64d5304cc090d74af5d6119eb7bb15"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Blanco_Hueso_Consolas.uasset",
+      "bytes": 13399,
+      "sha256": "9508e6e9d7a7631d47e9822ca628d1938afd7d46d67dfb647ecc24dcff344486"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Claro.uasset",
+      "bytes": 13389,
+      "sha256": "ecaa3f2ba660a00550566d6dbc502e24e52e9e126155e1f418220cd7b8c66dac"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Mamparos_Gris_Oscuro.uasset",
+      "bytes": 13391,
+      "sha256": "9466d0d4498c48a3954c97e79782ce462eda298ca85e4580fffde8aaa1554e90"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Metal_Sillas_6.uasset",
+      "bytes": 13618,
+      "sha256": "c626c8047d65f206cbbbdebf1ecad46ca1c0aea70cb820f59f6f60d5be26d187"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Moqueta_azul.uasset",
+      "bytes": 10968,
+      "sha256": "1e8305a4a8935a0e69e2e90ddc05571017312b087958cc0d109b67f867a6baad"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Moqueta_roja.uasset",
+      "bytes": 10968,
+      "sha256": "2be7928347a0a76e2d08ee403cb4289adbbc8dadceecd789e962a63ab3c7519b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Piano.uasset",
+      "bytes": 10934,
+      "sha256": "4fbc64cec5e04a31aeefb2e8f113acf6a11eab903a9ced74501b977c98ca7cb8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Puertas.uasset",
+      "bytes": 8289,
+      "sha256": "6ad82ca7b0be8c55aa38b53bbac43bf274c7e78220e5ac1224d208fa2bfcf33e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cabezal_Negro.uasset",
+      "bytes": 11840,
+      "sha256": "5f1765e0363da803b13f591e99f515e99cbe42d3d6550e90fe2fbb778cfc9d40"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Marron.uasset",
+      "bytes": 11835,
+      "sha256": "64c328fe4a64683f7a52661d36e13bc37ae46a75c3ca21183b62af9b11b7ffa0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Cuero_Negro.uasset",
+      "bytes": 12895,
+      "sha256": "bd6c3fef7da99c241548ff84ad078aa1154d6cf5b9018607fe2159a1a9877bfe"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Silla_Capitan_Pie_Titanio.uasset",
+      "bytes": 14664,
+      "sha256": "284fa2d289474b8902576aa0979a8872510076fb81a61c52b64b5959709f5725"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Techo_Acero_001.uasset",
+      "bytes": 14615,
+      "sha256": "a0e25c76fcebdfbe000d9966c8cc2a71f8d06b8e1bbec6a7a26115a22d2e3dd2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Claro.uasset",
+      "bytes": 14634,
+      "sha256": "9471f2cb2c1814514a4bb3d5103b5e14cbfeaececd3046f15bd71ee9cd2757ce"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_PBR_Techo_Titanio_Oscuro.uasset",
+      "bytes": 14639,
+      "sha256": "c9df9773204747b0ee3d3dc7e1f271dcd1d550bc654aaa9b54d2c3a2f9d2c5ec"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_Plane_037_0.uasset",
+      "bytes": 5779,
+      "sha256": "836a0be9fff5c3a12187d99faec54bab10434d5e30f4d524aae3f6f09e73369f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_plaque.uasset",
+      "bytes": 7127,
+      "sha256": "ba397d678bcc86113b63ddfbe20fc845e0cc91713400e6f102f93b06fb155c2f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_space.uasset",
+      "bytes": 5753,
+      "sha256": "c31e534c3f87130c24967d3be06f397dac5eec525fb90ae451ea8cc4f50f0273"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_turbolcar.uasset",
+      "bytes": 7142,
+      "sha256": "3c2e767382c115fde9523864cba138a7992f7afbe17a289e0ff8776e698d80fc"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Materials/M_upperwall_001.uasset",
+      "bytes": 7162,
+      "sha256": "c32da9bb51be8b9246f7806bf091a3838ebbde8d45a7c551d414534147d9c3f3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_ceiling_0.uasset",
+      "bytes": 14961,
+      "sha256": "1de6cb610b1e8b87b52d6f94faef222ba761ec5f424a7a475bfe60a2ce43ab9a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cilindro.uasset",
+      "bytes": 14918,
+      "sha256": "da4cf06329d0e4c202e6c9ed106d24aa6e3e06f09ac6db7b4f2b75eaa6851ca3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Circle_0.uasset",
+      "bytes": 16153,
+      "sha256": "da04f43af1ec0148d37ab767b6d4aea206a9771283ea8e334b34229735a21ce6"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Circle_001_0.uasset",
+      "bytes": 15859,
+      "sha256": "6669303afc6bf67223c45be8ea81cd46a72d9388d111d7632b0a0c29da65b185"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Circle_002_0.uasset",
+      "bytes": 17954,
+      "sha256": "c05b2f8feb4f954ce22cf2398008de4c02cf6b2d72d41e2b7c916c3fbe53a610"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Circle_003_0.uasset",
+      "bytes": 17031,
+      "sha256": "910899271e19dbc7590bc2c93b69df72571b7d04eb997abf3a594b65fd7de921"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Circle_004_0.uasset",
+      "bytes": 16122,
+      "sha256": "186fc09d5a3ab7270f7a50d5009f42d0878115921daf8e2d19ccc9e20037a1df"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cube_0.uasset",
+      "bytes": 12328,
+      "sha256": "63b90e159f050544416ea431e51bd187358b81c8d8bdd3a879b142bbd1f08e82"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cube_000_0.uasset",
+      "bytes": 13351,
+      "sha256": "55b95a128451e9ce88b749826342f2735e45749daffed4f30f572e3d32ec45cd"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cube_001_0.uasset",
+      "bytes": 13333,
+      "sha256": "371c4c45d56a5260f72b59ab1d8d35d2d7422a76f2ce2585c9fa67fffba1340f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cube_002_0.uasset",
+      "bytes": 15314,
+      "sha256": "052cf027e12d98269b0b75d88dea34456188db049ddecf9ab292bb26843682fb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cube_003_0.uasset",
+      "bytes": 12828,
+      "sha256": "0115b434a36cd0cc5d2cf91046b54c723e5e2f342c5a4b3ad2baa3904b03aacd"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cylinder_0.uasset",
+      "bytes": 16610,
+      "sha256": "2781a10e6f497c1f643c3dd3f724a224db263cca7e27fb55396ad3eaa73e9e6b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Cylinder_002_0.uasset",
+      "bytes": 58769,
+      "sha256": "5299aa45bd68155bf46ce2c2c0ec66d68a326088dbbdeb60768488a331b02a26"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_003_0.uasset",
+      "bytes": 13638,
+      "sha256": "190c2b3f99d36b6cd956d1d856a27b72b886337ec4d2e8dd80b533caccb3ad78"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_003_0_001.uasset",
+      "bytes": 13700,
+      "sha256": "ac52a68f716ed786111e6518690880f381aee68aa2b6b00c1655d29fb2be7911"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_004_0.uasset",
+      "bytes": 15075,
+      "sha256": "ead8cd49d075cd5679832b98a10d80d1f1354a882949903d4ab802e9b9842151"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_005_0.uasset",
+      "bytes": 13518,
+      "sha256": "b911bbded6dcdbd1b89686d426cb7de8c7e106396335be0d1cd50a823a0d9484"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_006_0.uasset",
+      "bytes": 13380,
+      "sha256": "85ca9fae0119332a7ef228df59948e4b190920a01747403b539ca2a02000e91e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_007_0.uasset",
+      "bytes": 14806,
+      "sha256": "b3ccf7a0f5c6ef0486324856a64cb26c836bffcc0dde67356253a91f3a363047"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_008_0.uasset",
+      "bytes": 14888,
+      "sha256": "64958144ab61ed1d64e595ce6c8f7a8972f058b08e35a5ec8873a964746396aa"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_009_0.uasset",
+      "bytes": 13206,
+      "sha256": "9d17d7cc72668575ec9ee0a43e65c15df40e4b394298e839271dfbbbd528bf07"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_010_0.uasset",
+      "bytes": 18947,
+      "sha256": "1cc65201a437254ee520a4591c872ab682a1509f4d22d2fd2051542e88c941ae"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_011_0.uasset",
+      "bytes": 15030,
+      "sha256": "4b2ce0b7e3952bf347db2127f79aa20ddb4360fc4fe013dece6c06f6f62c15ff"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Editable_Mesh_Mat_026_0.uasset",
+      "bytes": 23397,
+      "sha256": "9b36f66bc4452f855dd1947c67e14b3df924fadba4303d40ad50dc79a3299e36"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Floor_aiWireframe1_0.uasset",
+      "bytes": 26157,
+      "sha256": "d9a7314f4e203a79c670f267324940fc927100322f040dd695768259a997af4a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_453_0.uasset",
+      "bytes": 29631,
+      "sha256": "ec083f94ed888078f9a6333194f16206c45cec122a8a11de148cf5f7217d4b72"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_588_0_002.uasset",
+      "bytes": 24873,
+      "sha256": "77c245b02e5e3d527d66c0c7fd64214b86318ce213335615ee0cf58c6c6605a4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_589_0_002.uasset",
+      "bytes": 20617,
+      "sha256": "2b1652b1bd4e085c6290f3efb91a953dd0154d2a1f780c2fb1c9e54b4186b1bc"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_590_0_002.uasset",
+      "bytes": 14784,
+      "sha256": "058a1e1559eee0e25d56f44e8bd53c852e62833262b6cfba31080c0578ede0ed"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_591_0_002.uasset",
+      "bytes": 20995,
+      "sha256": "7dba684216d36ba1654dd366afb9e2443d6459c93c39161894ed2744979d6dd8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_592_0_002.uasset",
+      "bytes": 14775,
+      "sha256": "8bc5c0a31488a13c82dadeb0fac32005bf8b725d409607b648bf1f8eece3ed09"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_593_0_002.uasset",
+      "bytes": 14764,
+      "sha256": "65a289cd195c30b6e455637d4e167d27fa294646e1bcea1950ca228615cdada7"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_594_0_002.uasset",
+      "bytes": 14585,
+      "sha256": "81c80311bed1537b794e92645bb2e783a499cbd738a4b2654b944885edd524d9"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_596_0_002.uasset",
+      "bytes": 14794,
+      "sha256": "833ab6881f05a107e1e93ebd24c6842efb15cb52df3779537e6d94c56996b82d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_597_0_002.uasset",
+      "bytes": 14637,
+      "sha256": "8b87e877812f7356e715310bf8ac63b95b911195093d02b457c6709901cef5f7"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_598_0_002.uasset",
+      "bytes": 15599,
+      "sha256": "0ee77cff46b695c6679399254ace3bf5180085f3ee3d5ae1e703d1c7f2173f26"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_599_0_002.uasset",
+      "bytes": 14774,
+      "sha256": "64551ba3bbf9520a1280ac26603fe4b0c6b87b8775f18bebadd48b05fc673e7f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_600_0_002.uasset",
+      "bytes": 24900,
+      "sha256": "c9e9cafc1ffc7ca0ce0d59cd3f465b145565f6cf72719b9c34f9baa165801975"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_601_0_002.uasset",
+      "bytes": 15705,
+      "sha256": "54353e12d1fb742e6c290099aa34ad39774001ca41a9d45965ad0b5e2a20a22e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Mesh_602_0_002.uasset",
+      "bytes": 13332,
+      "sha256": "76acea19f6eea110a790387b55920eb4a0f62434a04da4c55b0a5ab4ce29015b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D001_LeftLeaf.uasset",
+      "bytes": 12615,
+      "sha256": "a29d65a5a6fd6c30037665f36eb27cc99e1fe9bcac1caa74f84f4a72c4214b89"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D001_RightLeaf.uasset",
+      "bytes": 12606,
+      "sha256": "17e84ad8ae0fe84ade2891233cd719bd0055d87834e849bc8208fbb6cfdc8917"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D002_LeftLeaf.uasset",
+      "bytes": 12822,
+      "sha256": "b0aa5c4e274d9d64e6c10db4308fd98cd3fbf3074ab5371c23890324a4d281d6"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D002_RightLeaf.uasset",
+      "bytes": 12853,
+      "sha256": "82d1bef1f7a2d9a097ecda9526fc102bc80d6decac39f151a294ac8ea39a7fcc"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D003_LeftLeaf.uasset",
+      "bytes": 12816,
+      "sha256": "1e6e3265016945c9e03d73f82f532666ae3cb48c1ced38e8a23d210913c3775c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D003_RightLeaf.uasset",
+      "bytes": 12663,
+      "sha256": "209741b56c57b510532ce7b074cf128d309f1e68606ba140de2b7491ba0ed9c8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D004_LeftLeaf.uasset",
+      "bytes": 12825,
+      "sha256": "a66ddcc0ba078c41def175bd44f71df3897ccc69ca4946b00bbd1976618e710b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_P03FG_D004_RightLeaf.uasset",
+      "bytes": 12836,
+      "sha256": "11025001c9eaef89878f473a2eee973abb25fea716d4188525b479c2c647e775"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_0.uasset",
+      "bytes": 21574,
+      "sha256": "d03491f84b1de3dc2d3d3ef083b68ede1a573ae0f40979b6c2d0c7c26a837165"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_002_0.uasset",
+      "bytes": 14519,
+      "sha256": "70664afbbd055e2c160866aab98bf25df5a8d7590c4d389ae332f9ca90822bd0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_003_0.uasset",
+      "bytes": 15156,
+      "sha256": "739a775a27b74a2c5f12c81b8c20ac9b0d8e0d2b0ccfcdc2f6ad86cce671e6ab"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_004_0.uasset",
+      "bytes": 15590,
+      "sha256": "ea157d355371db09a97f243b9ea315d895713a2c3d3673474ae2bfecd9a571a5"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_005_0.uasset",
+      "bytes": 39987,
+      "sha256": "434027a07154def87cb7ef5825776527975a50f67dcf9a8fbb5b170850063f81"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_006_0.uasset",
+      "bytes": 11998,
+      "sha256": "546a3656d8eef29bd3b452eac8e986012639e30dbfc87835c1bf714744164f85"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_007_0.uasset",
+      "bytes": 12475,
+      "sha256": "4eca8d286dc4c1bb1e25399c4c7d12f9d876a463609d56f178e7588db35195fa"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_008_0.uasset",
+      "bytes": 18991,
+      "sha256": "c2a19e2d7c3532abeb6f0cd973c46b921496ece47a715a11e98a283bf3fcc36d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_009_0.uasset",
+      "bytes": 26526,
+      "sha256": "8a1c314eee2251d5826186ccc946f01274b72ae2eb8adb2ce25bf9d2908739d4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_010_0.uasset",
+      "bytes": 12339,
+      "sha256": "8d46124eb44a4c93deb0c8fca6681f12ad25b836f422bdb34cbc966884c04931"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_011_0.uasset",
+      "bytes": 15357,
+      "sha256": "4de7b5cbec14bec75a71ff36ea82727913919a9cbab292fc9ae5f6ec3e31aca0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_012_0.uasset",
+      "bytes": 37309,
+      "sha256": "35972815187c88b95d87bc62be1aaa5bd4af34e79c7def54cab2c39ff415331e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_013_0.uasset",
+      "bytes": 15411,
+      "sha256": "8cd5f430a2eeb09ba550fc20ab848ab4b317527e3cd73f111c1860f2076aedaa"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_014_0.uasset",
+      "bytes": 12696,
+      "sha256": "4f5b82c40f70bb5d122c02cff842e5aa498cd2ce43139039b91ab5c4b64cad4a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_015_0.uasset",
+      "bytes": 14756,
+      "sha256": "135a636f9192874c24e000d198baacd5886caa7ad338f42092f06cc01c32a713"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_016_0.uasset",
+      "bytes": 17221,
+      "sha256": "be4121c0583948f2090d26aabb181761d560626df8dc54d08d270adeaf226bda"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_020_0.uasset",
+      "bytes": 57257,
+      "sha256": "82972c9ddc1bd3c85a528d5484e2c674f6fa4b4d19fdcb0421c312ed11012eba"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_021_0.uasset",
+      "bytes": 12364,
+      "sha256": "26f9b2316784e915a3f2e96c7614d068ae65900f9ce43fb1f3b8f0af395021fa"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_022_0.uasset",
+      "bytes": 44317,
+      "sha256": "37d81505b9debcddb63cd5e02f0b76d06ead9759fadd3592bfd4533bdf13905e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_023_0.uasset",
+      "bytes": 16847,
+      "sha256": "7a29179d6c9051bb41550e9b585f656a45aa1752b92ea2269a6aee1855d6f67b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_024_0.uasset",
+      "bytes": 12492,
+      "sha256": "0b1a9f49e4ea30c0095a521e1f1ad91057b6d1c08cedb5d7c0f5ed4bd43114e2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_025_0.uasset",
+      "bytes": 14763,
+      "sha256": "863d4adc055da9fc6e32d2680599bb163d0a299ab68210e6cc1506133ff1b803"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_026_0.uasset",
+      "bytes": 14826,
+      "sha256": "d4cffec15ece3586eba4882fe7e1e25906cc9218826cb9eb5eb89163b0d45fd2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_027_0.uasset",
+      "bytes": 12354,
+      "sha256": "f8ae2a49376e52c1b0b7f129d572cfca787d0d4df1bc3ab1535606db7724c62b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_028_0.uasset",
+      "bytes": 22843,
+      "sha256": "ebc092c5137c84c7a305dd4aa02cada2574c8994397ce8999508689c41a4a77c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_029_0.uasset",
+      "bytes": 13325,
+      "sha256": "a2fb92f1a5fdad9574da61468783e70fa5edd6546c31a324ca515d42c0855850"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_030_0.uasset",
+      "bytes": 21315,
+      "sha256": "75808aa5202ef83681063d0baecc07c51e388106127cdc24afa22848a8fc1f92"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_031_0.uasset",
+      "bytes": 12269,
+      "sha256": "9e5cecca30996b61024f5a5f31f6265e3974d2a1a79168e3475dfb790d53efc2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_032_0.uasset",
+      "bytes": 12507,
+      "sha256": "bf22f683184d566e6900c3e1e795d6172170568054403c586c8eda7ca8298d07"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_033_0.uasset",
+      "bytes": 16881,
+      "sha256": "3ea41fdc8972dc0166ad85886c5a9a6c824c2f8164218c9b9882e04aca7783dd"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_034_0.uasset",
+      "bytes": 15571,
+      "sha256": "a8cc275df9669a4c8af6129c90d634269eec58f43c9100de68be414bfc7f8103"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_035_0.uasset",
+      "bytes": 15615,
+      "sha256": "62525360999ffb577c90ca26d9a9317f235c61ec3bf6b585eee0246354cec4b9"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_036_0.uasset",
+      "bytes": 15896,
+      "sha256": "d5caeb928d9847b80c3085d67c918dcd7661df33aa78a4da281ba086abb54e89"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_037_0.uasset",
+      "bytes": 12053,
+      "sha256": "0edf26c10a52ac7422068a375bc043d5ae5f79dd69e7d84bc28d9124658276b1"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_038_0.uasset",
+      "bytes": 17686,
+      "sha256": "4636fadaffb598fb33c30e3cf7db354925f92fc9a67cc7f5ac7794b86ab2673e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_039_0.uasset",
+      "bytes": 13965,
+      "sha256": "f0c09a380ed698dd1b5ea7e2fabdd3b1728f63cab2b213f42058a7f91dd80da6"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_040_0.uasset",
+      "bytes": 28495,
+      "sha256": "f3eca4f43d8747f1490e3ddf1ef75be267c04f012edb3afec56d1a2c79a7e11a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_041_0.uasset",
+      "bytes": 27303,
+      "sha256": "ca0a38978e47b8a2aceaba3478ec1cb702e55e62395a5eff892792fb62a5041e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_042_0.uasset",
+      "bytes": 31962,
+      "sha256": "dad40f5c1c28c1532708a578148e5522ff30d90d42cec59488784791a0c19a69"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_043_0.uasset",
+      "bytes": 13582,
+      "sha256": "580c7fc41ffcdf06e50f605f276c241d6ce13ee288e87e36aba26e6563711e2e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_044_0.uasset",
+      "bytes": 17324,
+      "sha256": "4bfc79871652feb6ba071beaf32b1524d0570918cfb70e3f0e94cbc92e3a849d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_045_0.uasset",
+      "bytes": 12103,
+      "sha256": "307a7edeb72dda384a67d432921d1c31821d13073404a1c12059c7168fb42b6a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_046_0.uasset",
+      "bytes": 16101,
+      "sha256": "14769b7fb5566db2c4c4c9e562993eb66ad6239e6ee4511e9d229479466dfb17"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Plane_047_0.uasset",
+      "bytes": 45254,
+      "sha256": "ba0fd0631f3f326cdf8327f9095c19404bd67025e2794c8f39702ae35f8a2ad7"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Sphere_0.uasset",
+      "bytes": 19915,
+      "sha256": "e52f2ac37554136c644c1af563423d2f66c872684b0fb4e26d0b492f30113b50"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_Sphere_001_0.uasset",
+      "bytes": 301463,
+      "sha256": "5ff7736a9e3b4ebced29a29a48e315017f0b3add56b6009239462d1a0ce166f5"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Cilindro.uasset",
+      "bytes": 15012,
+      "sha256": "1ef974147b991d974d4b94808340a0590e2a9a9215a17dd7abf6bcca3b73cbde"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Floor_aiWireframe1_0.uasset",
+      "bytes": 26261,
+      "sha256": "e440ddacfa46b67e9b8d54ca5c4f52a9f2ced94b33df074f5dfcaacfe3548e4d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_588_0_002.uasset",
+      "bytes": 24924,
+      "sha256": "cf46cc2aaf98f3adebc84c34972dcbc2178f3a0180138c04d64558b2c197bd6f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_589_0_002.uasset",
+      "bytes": 20724,
+      "sha256": "ab72b66963e2707e70ed2380fe6223f7fbd26e010e5ffe9dd1cbb6c454573c54"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_590_0_002.uasset",
+      "bytes": 14891,
+      "sha256": "cdc23912d87ef8ad6c9f575d317adb84bf680cf5e4d65094f8a087e07ee819e1"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_591_0_002.uasset",
+      "bytes": 21132,
+      "sha256": "e571f7f87e5f4fa2699bdd8cb096b66ab891db32fe99490cc7bd3cb2e5022f9d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_592_0_002.uasset",
+      "bytes": 14891,
+      "sha256": "202fea55205864da859fb274da1f41f6396f102016b67b1885bc983d7eb9cb64"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_593_0_002.uasset",
+      "bytes": 14857,
+      "sha256": "2e184726dee8efadbaecafa42229c058f8722d937b687dcb931dcec7ea450237"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_594_0_002.uasset",
+      "bytes": 14703,
+      "sha256": "9ab9762fe8bd76b446820289621ef522b580f99f695ff8f77e7e6c2c28e9227c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_596_0_002.uasset",
+      "bytes": 14913,
+      "sha256": "7e956b84a69c9c45dd1f567318e5574882131b9e71183a4c19d9e56f08d5d964"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_597_0_002.uasset",
+      "bytes": 14892,
+      "sha256": "5c6dbfc6a7f41126a32c6aa28f4bed1f62b7d8d800e27a93c5eea098ad2d5caf"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_598_0_002.uasset",
+      "bytes": 15849,
+      "sha256": "827b1c7c40c5a72d434c9e8906303421531e8b048cc7d3bc2ebdd56e82922f12"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_599_0_002.uasset",
+      "bytes": 14919,
+      "sha256": "86f1d242692ad15d5e6024cc674ad5744fb988634b6d4b2c46907e3ff3256231"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_600_0_002.uasset",
+      "bytes": 24979,
+      "sha256": "cd26fed92fa88e98a3877bf44b7d2ec96829092d971954ec795a4332869e3e52"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_601_0_002.uasset",
+      "bytes": 15834,
+      "sha256": "4d5c968c97351ba550934f7ef9dab58b32073aecc25a6c4c466172e652558b9c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P02_Xpos_Y_3_72934__Mesh_602_0_002.uasset",
+      "bytes": 13497,
+      "sha256": "7b73b3c06cc2817ebc42ef65e210069c7df412563deb270e11e33fe56e4b92d0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Cilindro.uasset",
+      "bytes": 15018,
+      "sha256": "22a37f871002d8bdbb973cae33f8f2e1590ac4bc27832fdb30b56e4e7ae02b1e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Floor_aiWireframe1_0.uasset",
+      "bytes": 26334,
+      "sha256": "307fde2823f38c703943998910b6ac0381aadb471c598332074d53bf502a0a0a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_588_0_002.uasset",
+      "bytes": 24939,
+      "sha256": "ec46d82063bcd4e6979d2b35941b8713be4d4e14fd64378e26c048f46628b6d3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_589_0_002.uasset",
+      "bytes": 20701,
+      "sha256": "df83b5c6a4b8ffed437045eee1bf46f58170a9db545607b9881d44275c8d1c29"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_590_0_002.uasset",
+      "bytes": 14801,
+      "sha256": "82a15fa6f3547cc0265dfcfa7477e469d525c8e0b723d926dab0833fa7387f5a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_591_0_002.uasset",
+      "bytes": 21141,
+      "sha256": "6b9e62871569759e3c4d4528e19c38926de479c428b12fac4b1af3e6cafe7a33"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_592_0_002.uasset",
+      "bytes": 14916,
+      "sha256": "e4781e6f0ea6560112fd7ff7e518e1dbf5c36f058b087743854ca2ae09853d2c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_593_0_002.uasset",
+      "bytes": 14833,
+      "sha256": "a421dd6e617512948a7756c9ddd15664224256d8553b0deedc7cab295a38b236"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_594_0_002.uasset",
+      "bytes": 14746,
+      "sha256": "3fd00dfc278cbffcc206186e766e872a2ff13903a33590afe282d0572dc2d587"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_596_0_002.uasset",
+      "bytes": 14941,
+      "sha256": "53351b6760462eea337eff331f0fa94cffadf9a54dea65737571a418f734ed4d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_597_0_002.uasset",
+      "bytes": 14918,
+      "sha256": "f60e63c4abfc7b2614b7e58e95da7c8c19c1c8f3978c77aa603f50a083e2c109"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_598_0_002.uasset",
+      "bytes": 15842,
+      "sha256": "61f7e13627e65fb95539c889981787fd44f92b024319224d4bd5a4fc59c06655"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_599_0_002.uasset",
+      "bytes": 14962,
+      "sha256": "556f6e54960a2fcc8f170ac61bf8f37afd8160c8005651f57e1b4c0f3c50a1f8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_600_0_002.uasset",
+      "bytes": 24995,
+      "sha256": "f40066ce3fcd71cee0ea8e6b76e22857ee68b8a4964e68d278bdc125b96bc157"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_601_0_002.uasset",
+      "bytes": 15838,
+      "sha256": "61843ee7f3bdf0053757a28920713369bfb707a3f239df32bf58bc21ef70aa28"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P03_Xpos_Y_1_73943__Mesh_602_0_002.uasset",
+      "bytes": 13377,
+      "sha256": "ac45d3d38295d6ef7315d5c2282df35c3367b0f2ff870c52e505d3dcf5ab2999"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Cilindro.uasset",
+      "bytes": 15213,
+      "sha256": "ffa996b507f91c9ed9f062e2ccfdaad16a83536429e7fe254f2ae8dcdc95c41b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Floor_aiWireframe1_0.uasset",
+      "bytes": 29306,
+      "sha256": "38e1ff985f65b00faf729a4f71303d5e2331a22e7568ba1eb2a3d9bda4f7bd96"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_588_0_002.uasset",
+      "bytes": 24950,
+      "sha256": "3330169cf830ef413fbfc907c50cb22ce3cc7bf0b7914b5e8d4f327dd9f4485c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_589_0_002.uasset",
+      "bytes": 20818,
+      "sha256": "2859e4b8727e2d888675a4e5a03a24b4cf6e1bc43aed243438f5257a1ca8d9ca"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_590_0_002.uasset",
+      "bytes": 14864,
+      "sha256": "ce32ead8e148ba664fb39fe6ffdc6315982653d5b50c3d9c1f85c5e2c2ece52e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_591_0_002.uasset",
+      "bytes": 21038,
+      "sha256": "cf651d3b9dc4d59863f83a73c8f8042855c3dfb86cd09b874f398bed4e65cbeb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_592_0_002.uasset",
+      "bytes": 14868,
+      "sha256": "7934fa0ed3bf5a41586030f24ecb41d92aca52958ba7484e63785c900d6bdf52"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_593_0_002.uasset",
+      "bytes": 14765,
+      "sha256": "275cc3d3ce8b6018b112e20ee678b6212c39eb9164dee6fbf1e560a4170cb137"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_594_0_002.uasset",
+      "bytes": 14715,
+      "sha256": "45b1b7781e87ffd7eb74402ac0eb795e4e3f5e4136ff571cc3c071c2cfa52908"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_596_0_002.uasset",
+      "bytes": 14899,
+      "sha256": "70d84dc6115b3778b659f50c7c012163fc76c300bbfec2fc99defc2ded0dfd4c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_597_0_002.uasset",
+      "bytes": 14950,
+      "sha256": "61584ab89cf094f25507c5d58cbed5cfc0391f5c1caab036e44826e0be1804fa"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_598_0_002.uasset",
+      "bytes": 15862,
+      "sha256": "dfa9edbbdee61c7bd5625a5f2064d0c98fc3ffdf0af01dfd3d6ae3027f8fb5da"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_599_0_002.uasset",
+      "bytes": 14955,
+      "sha256": "2e838de7976d5935e3a3fab7bb775f2e5b927027d6ee1f5ab0eb0d14aa77d4cb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_600_0_002.uasset",
+      "bytes": 24959,
+      "sha256": "89ca60de8f5ab2398c8837ac26a3583bc7e3cde8f84524d9ae17e4602e86df56"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_601_0_002.uasset",
+      "bytes": 15831,
+      "sha256": "975ebab1e9486f3975a9b580d6dddae6323d3060fa06d3ae22db04975bbfda9a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P04_Xneg_Y_1_80778__Mesh_602_0_002.uasset",
+      "bytes": 13466,
+      "sha256": "b2ba4412b2e5cba0dde17e4c6bf1603f5f3d9c9829ddf9dee89b5bd392a3f056"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Cilindro.uasset",
+      "bytes": 14990,
+      "sha256": "8a62b656378d232438985634f5053a0aa0acc8eeb28782fbb339f722b9497c9e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Floor_aiWireframe1_0.uasset",
+      "bytes": 28798,
+      "sha256": "f6d1ea30102a1656c4168bc39fa0f07f2c79b6a5c6873246f764acde16c2b195"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_588_0_002.uasset",
+      "bytes": 24925,
+      "sha256": "caade698497846f436bb59c1cb04e175df9f2bb4a02f8061cb32ff4032ddebba"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_589_0_002.uasset",
+      "bytes": 20767,
+      "sha256": "17350621855c399a72bbe52e81a61b91df5ccea696b8aade2bc97f1c76566ca2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_590_0_002.uasset",
+      "bytes": 14766,
+      "sha256": "300af4621d4af769ec00b1d66c2e72f81eccbc4d1fb950d8a5e2dc8fe861dc9a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_591_0_002.uasset",
+      "bytes": 21033,
+      "sha256": "f35f128a4f2892c6e0dff8160e4fd5b69513dd3c7764cdf816b2836c171552a5"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_592_0_002.uasset",
+      "bytes": 14911,
+      "sha256": "4498009966dffaee66f1bc37d437712bc0075053be55c4526a176c9bfbbfeac4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_593_0_002.uasset",
+      "bytes": 14789,
+      "sha256": "e34f8fbaec15ea37e189fc9dba3f6c8870c726ac7cf4090e6ac0b81689268eb4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_594_0_002.uasset",
+      "bytes": 14694,
+      "sha256": "5e3d98a8f4355ad7ab744a766b4ad6f85d9a73aeb9297278cd3aa07f67eebc2a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_596_0_002.uasset",
+      "bytes": 14945,
+      "sha256": "158a095b1b791c492c8cfb5c2fcd59fa384e6e16a0bdd608b6be33dfca25c8ed"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_597_0_002.uasset",
+      "bytes": 14884,
+      "sha256": "015ee3a4f07df959ea40627f3c5ec471b2aa4e258eae0d6628c806895e07e4c4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_598_0_002.uasset",
+      "bytes": 15777,
+      "sha256": "a34e8323f46a050d6ef7d9fe4aeb0be5c702299b9380172a1b036e26ae99918b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_599_0_002.uasset",
+      "bytes": 14941,
+      "sha256": "ac84302f842dc0fb24d893f2c3f8754a675f720e14a049990dd1d9c4947bc841"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_600_0_002.uasset",
+      "bytes": 24984,
+      "sha256": "21396a61bfe6cd5bbce8cd4af3929e7cb8c55b0b9db93aefb9a29024106d7482"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_601_0_002.uasset",
+      "bytes": 15850,
+      "sha256": "5ff9ab123fadf383a7fe0638bfdd5d5bcb125a037f2917c90b7abd677cbe9cb6"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P05_Xneg_Y_3_59266__Mesh_602_0_002.uasset",
+      "bytes": 13487,
+      "sha256": "0e6bd1ba0f174560584cbc081eee47ce6f5bbf3ceebca3d70b9683e809b378ad"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Cilindro.uasset",
+      "bytes": 15094,
+      "sha256": "de1b167e9ce31f0e8aec3888d1e0ac1be4ad3076fdf8c7dae67f687431e25811"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Floor_aiWireframe1_0.uasset",
+      "bytes": 28619,
+      "sha256": "0e73925300c9aff749d9d630dff69e9e4663631ba9e4ee9d53db495512efab11"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_588_0_002.uasset",
+      "bytes": 24920,
+      "sha256": "71c62b41a768df1c473e3e6c02cc0da41521f39607fe81bd06b1d83fef745197"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_589_0_002.uasset",
+      "bytes": 20822,
+      "sha256": "8e0bcb684267e0b80eab04c580255140fc5d5c753bd1e5d0a08800042a3a3ad6"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_590_0_002.uasset",
+      "bytes": 14892,
+      "sha256": "ed2533ca9250b514924ba20aaf99de2bc48200cd15d92dd8f063a94339b6d5c4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_591_0_002.uasset",
+      "bytes": 21101,
+      "sha256": "86e29eb76b45d992c618d0faaf835efde49fe55d04d3d27a1e34d5d9b0a77679"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_592_0_002.uasset",
+      "bytes": 14898,
+      "sha256": "13e00e452aac6feadd515c3f80d568e944291bb8c506cc02d2ce90c6301907e2"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_593_0_002.uasset",
+      "bytes": 14808,
+      "sha256": "6c0cbf6d15cba27a08e8480547b48575e87eb7706257960d282b2b5345c2938b"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_594_0_002.uasset",
+      "bytes": 14662,
+      "sha256": "be389a94148566ba2e32a2ede852f2bd31a30265c614715ed4028e8f22e8c4ae"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_596_0_002.uasset",
+      "bytes": 14909,
+      "sha256": "465079e5e4b59816b1544021d301c52db9c20a00f69c5a49130e47747a7a3820"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_597_0_002.uasset",
+      "bytes": 14902,
+      "sha256": "2dac1696c2512282c95e4b13f56a485db2569ef99210e18005646ce87a3d7bae"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_598_0_002.uasset",
+      "bytes": 15842,
+      "sha256": "3d2f4f20da60962a4ec89538f1f46c8ff6e329bd8bcf757bc7d6a7eee6c9faa0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_599_0_002.uasset",
+      "bytes": 14944,
+      "sha256": "76aad2f8cdbbc6b0aacd4c40f80f49b4c105800da9fa5559853db3ca3aed5ba5"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_600_0_002.uasset",
+      "bytes": 24990,
+      "sha256": "f609c488b58cb4628daa53342d38cd5176cae08aaae95137473547e8a51ee41f"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_601_0_002.uasset",
+      "bytes": 15828,
+      "sha256": "d9d93e86e5e9b65c204cb5d1634fbc3e01cec12efb6b8e1c19f035680bb00fdb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Meshes/SM_PBR_SS_P06_Xneg_Y_5_58256__Mesh_602_0_002.uasset",
+      "bytes": 13375,
+      "sha256": "07feaa5851ebad29ffaf5e541bcadaaf5ab564afe8751ca018181fe2552a086a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Carpet016_2K_JPG_Color_jpg.uasset",
+      "bytes": 4464003,
+      "sha256": "db4c08bc8b8b1aab3910dedbd3358f317352108711711158e6927cbaf44eadb0"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Fabric023_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 2592734,
+      "sha256": "6fe4ad04b5c0e026b09864c6f515c47f337e64171fe83d6bbc400c367342c75e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_0.uasset",
+      "bytes": 82372,
+      "sha256": "b0e58e389ffc36c8ecbfe7e515ad39567e25c848fc3dda63608b844527284436"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_1.uasset",
+      "bytes": 610571,
+      "sha256": "f2a657ba6db5897727c5ce7402047043efb1287700422e57f6149128f5b1cccd"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_10.uasset",
+      "bytes": 11278,
+      "sha256": "5a6ef68557bedccbb055a0802a1fb05c0f5d9bbcd863a28fc6b4e001496e7217"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_11.uasset",
+      "bytes": 39137,
+      "sha256": "dd07703de05485627dc6b87a40d1e1c58d5e091dd78dc4520507db77c2990554"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_12.uasset",
+      "bytes": 128011,
+      "sha256": "17b84b8a42d48ea5a1074977e8f2d9b80c740c60f3479f83a8ee799525bca588"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_13.uasset",
+      "bytes": 12738,
+      "sha256": "bf98d169eca0f4f1bce08ada3fbcbd7fd1a3c93681655dbc32fd3cb13bc24403"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_14.uasset",
+      "bytes": 113055,
+      "sha256": "4ac701f93910d7a7e0dce7b8df5721ea83496235562ecd62ec7d23d2dcce093d"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_15.uasset",
+      "bytes": 13691,
+      "sha256": "50c6304cbee672974ac7ee7be96139752a00eb5fedd1b2014a9aa5d807818533"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_16.uasset",
+      "bytes": 173228,
+      "sha256": "740eda3de6d4451f9bc02bc06b41a5f93f113de8fb1efdc4a0380fb2e7b4c4cf"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_2.uasset",
+      "bytes": 43624,
+      "sha256": "2525af7b41d813475e2bc5b81970694210504e76c791e1417e8c75ef284065a4"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_3.uasset",
+      "bytes": 10711897,
+      "sha256": "e0a90a826d4f21e1f5d351cc624e4d5c58e90ed1737e8966ae6ce7d47f3795ee"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_4.uasset",
+      "bytes": 13173,
+      "sha256": "04f5a02b26b46f267258472298b054cdc94aa0bb75f86a5fc0815de52f721933"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_5.uasset",
+      "bytes": 252837,
+      "sha256": "23382fa83346d38b36315d2d8aca5a1917a892bb5e15af36dce85b58c0894020"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_6.uasset",
+      "bytes": 209175,
+      "sha256": "5a11c0688f5ed329342f83cd740bac739824cc06c15d68e3ee9bc899fee526af"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_7.uasset",
+      "bytes": 562032,
+      "sha256": "77aea91085530b4ab009107c880e2c6c409b519a69a8104c270e5d3bd79d7fb3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_8.uasset",
+      "bytes": 286345,
+      "sha256": "3b054e99f7eb74da3c3a87a65952908aea90084cb3a4c5a029c431af5d9e527a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Image_9.uasset",
+      "bytes": 11188,
+      "sha256": "cfc771f70f5906eaba7e68be5656382fe27b8fe950fcd1377fb4ffac89b50503"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather021_2K_JPG_Color_jpg.uasset",
+      "bytes": 3083036,
+      "sha256": "45ded8c3162cbabf746c642d2fd337e8cee27628dfd1356b948a82b0cb71f5c8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather021_2K_JPG_NormalGL_jpg_Normal.uasset",
+      "bytes": 7296697,
+      "sha256": "c020a59fdf5ffff035b9dec9a06d6f54b842c4a2bafe810594018ee17fd1031c"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather021_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 2788885,
+      "sha256": "5494ee5c594797c61c81faa20bd6697d8ab19819250061f648147635972c2883"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather027_2K_JPG_Color_jpg.uasset",
+      "bytes": 1840037,
+      "sha256": "2306118fed71e725160a5cbf0bf13d918861db78d5cf8308825366611255f57a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather027_2K_JPG_NormalGL_jpg_Normal.uasset",
+      "bytes": 7311010,
+      "sha256": "3fe9e714520895527d9a92e0dca8564daf86984ca15e1952a1da473cddc8b989"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Leather027_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 2230048,
+      "sha256": "494d75fdb708e871f1e66752b22276b09fccb07a2e6fa8a88dbaa8f0a85a8555"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal009_2K_JPG_Color_jpg.uasset",
+      "bytes": 2450831,
+      "sha256": "33c31fbf3aff6a030d5d8d14ed18a34220d9f9d81506c46cd27a4012b5e89f75"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal009_2K_JPG_Metalness_jpg.uasset",
+      "bytes": 28225,
+      "sha256": "0d513823bccffcb3d3b1b160c93fcf2cf952b47c9c1dc8779b7e67b1e355347a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal009_2K_JPG_NormalGL_jpg_Normal.uasset",
+      "bytes": 4132569,
+      "sha256": "93e3fb8abc1114530cf20c30d920dd0b1c05455d881ccdebf184c40aaf67c0a8"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal009_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 1903287,
+      "sha256": "d9a14eba8ffae87563c99cd89f901a95b2b51509ba77b60101f7dd6eb4d00b5e"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal011_2K_JPG_Color_jpg.uasset",
+      "bytes": 2517116,
+      "sha256": "03dc4427e13f2e66f55a5b475943f7f14042dfbb694b7c250a8e04fbaa6c09a3"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal011_2K_JPG_Metalness_jpg.uasset",
+      "bytes": 28224,
+      "sha256": "17e61ed96ae7faa0840e053463ec77345cfc5efddd873c59d1fbff919cfd0939"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal011_2K_JPG_NormalGL_jpg_Normal.uasset",
+      "bytes": 3520155,
+      "sha256": "c294d1d71c214ab32390faaeaaa074a1ee6ceb08a5ffda5b2de456d0e0e21118"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Metal011_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 1671874,
+      "sha256": "50d5c5ad2d28dbaa6cc4cfe5b05914e293d6f59904daa204f0cb0428482fe93a"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Plastic010_2K_JPG_Color_jpg.uasset",
+      "bytes": 650380,
+      "sha256": "1e31eb63498e743f966834850f24bd94e1f1d6967e8c847c5844682999179256"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Plastic010_2K_JPG_NormalGL_jpg_Normal.uasset",
+      "bytes": 3233128,
+      "sha256": "49eb3f886db9086b0ddf5eefe7675b77977fcbdb7ad69382c52857d8698c95cb"
+    },
+    {
+      "path": "Content/SutherlandPBR01/Textures/T_Plastic010_2K_JPG_Roughness_jpg.uasset",
+      "bytes": 2023028,
+      "sha256": "fadedb62db6abdcb6157cc4abe642cd71a353226704ddb54b0fd9c8f488f4c46"
+    }
+  ],
+  "tests": [
+    {
+      "job": "runtime_quinn.py",
+      "ok": true,
+      "checks": 13,
+      "error": null
+    },
+    {
+      "job": "runtime_doors.py",
+      "ok": true,
+      "checks": 18,
+      "error": null
+    },
+    {
+      "job": "runtime_stations.py",
+      "ok": true,
+      "checks": 8,
+      "error": null
+    }
+  ],
+  "new_asset_count": 254,
+  "mesh_count": 175,
+  "lights": 16,
+  "backups_verified": [
+    {
+      "path": "Backups/Fuente_PBR_SeisSillas_20261029.blend",
+      "bytes": 65742617,
+      "sha256": "2b248a66c37bc8b0626cbbec95952c272380ef4c77570c58ef62f176a50e99a6"
+    },
+    {
+      "path": "Backups/L_PBR_AntesColisionAlojamientos.umap",
+      "bytes": 764038,
+      "sha256": "ae97cac655108457646e75220aff1efd5803b8aa50e9b20424f7e14b6297a31d"
+    },
+    {
+      "path": "Backups/L_PBR_AntesMaterialesHojas.umap",
+      "bytes": 765295,
+      "sha256": "6582ecc773980a5902f045b4939024d97d3b5d412b95e2d450dee88cc5d2ae9f"
+    },
+    {
+      "path": "Backups/L_PBR_AntesRevisionLuzSuave.umap",
+      "bytes": 783598,
+      "sha256": "86feb511f527bb7f21dc8bd00af8667f54d4d6d9057017352c6dffff7c26750b"
+    },
+    {
+      "path": "Backups/SutherlandPlayable01.uproject",
+      "bytes": 1032,
+      "sha256": "8febafea2264a6752016c6800d63f39e7d5f827a2f56e7e9da37e1602f13e1aa"
+    },
+    {
+      "path": "Backups/Config/DefaultEditor.ini",
+      "bytes": 58482,
+      "sha256": "25920e87560682479062a06afef5e0046d23789e72200634d852becbe1db407b"
+    },
+    {
+      "path": "Backups/Config/DefaultEngine.ini",
+      "bytes": 3332,
+      "sha256": "9e410a34c4716a103f4ece39cebba587ffb08b2aeeb2d8cb61392c57fce9b39c"
+    },
+    {
+      "path": "Backups/Config/DefaultGame.ini",
+      "bytes": 357,
+      "sha256": "b6fb58051697147ec9ed556338c713da3e127592ec04db8609bcec57b27ca2b5"
+    },
+    {
+      "path": "Backups/Config/DefaultGameUserSettings.ini",
+      "bytes": 559,
+      "sha256": "ea0cc5b779a75fdc0f66c9790aaba2d6a2ff9fd435838475d5478904837b4ac1"
+    },
+    {
+      "path": "Backups/Config/DefaultInput.ini",
+      "bytes": 10575,
+      "sha256": "8f2f2777a0763dda2e7c2ecd1eafc9f14cef38744e1204570e76af565849ac28"
+    },
+    {
+      "path": "Backups/Content/SutherlandPlayable01/Maps/L_Sutherland_Playable01.umap",
+      "bytes": 1459593,
+      "sha256": "cff10a2af8d8926d85951834d63b31117d0fe3420bb50007ae24ed8be9792d29"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_02___Default.uasset",
+      "bytes": 7029,
+      "sha256": "c8c169f683f7ea42592f30083b77e5428b49f0b3cd7ec0397bcad8979f1cb30f"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_captainschair.uasset",
+      "bytes": 7034,
+      "sha256": "7fbe3904a9bea38a4554674586a00471fcf8c3ab5e8c98562159dddf6b031e1b"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_captainschair_001.uasset",
+      "bytes": 7054,
+      "sha256": "8d32444b6a83cef088ce8ce172e61c2fb7e96509e3dbca0e4d5cf75e6cc8f2cf"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_ceiling.uasset",
+      "bytes": 7004,
+      "sha256": "ef0072d0754024cfe592d083ad3e22bfb49d602798f8b69782f27c1a1cbfe49b"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_cream.uasset",
+      "bytes": 6994,
+      "sha256": "47dd75c60eb2bd953c617402cdcd5ee01b7758e0a8df7e006704fd720071f9dc"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_door.uasset",
+      "bytes": 8105,
+      "sha256": "e74a6d2f2d39fbc74293ad205c30b029118a671fc3818cd665a008df19615d65"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_floor.uasset",
+      "bytes": 6994,
+      "sha256": "1287240d1caea862fb46d85efc93f8fef6dfc2bd9c8c15217fc8f1d15844b456"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_grey.uasset",
+      "bytes": 6989,
+      "sha256": "6959b1341687b44b2598133c651f8196f293710e89bc3e3c7f34224b0ff7ab05"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_lcardtype.uasset",
+      "bytes": 7014,
+      "sha256": "e83191f8d7722492dca38b297ce6124e6309498e4457fec6cbf4ca803b66b5ed"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_lcarkey.uasset",
+      "bytes": 7004,
+      "sha256": "a64ed0135b2690ff8d4c032cafd5bf6a0445a00ca4e463db5007b26ff3788099"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_lcarsdisplay.uasset",
+      "bytes": 7029,
+      "sha256": "98e76e56aeb1f7a1b8148c13d2a1b4ba70a31fbb05ef54e8fb24631bbbc6d29e"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_lcarsdisplay_001.uasset",
+      "bytes": 7049,
+      "sha256": "bb106400f47cd3241cc0c625f23259f39eb48e292b774926b420ac809cd8a52b"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_light_001.uasset",
+      "bytes": 7014,
+      "sha256": "964d9478e3675b60390f3366bcec48c197c782b03d8a0f8c7818ec4195acfcc9"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_Material_000e26.uasset",
+      "bytes": 7044,
+      "sha256": "b87f60585c0fc28f0fd7a51848e478c8453038d920c8149fc6fd1d5ccbececea"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_Material__1.uasset",
+      "bytes": 7020,
+      "sha256": "41f8c1c2ec406184e59640718d86a713942f55c66ea6772f53ef8049ea4edad0"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_Material__11.uasset",
+      "bytes": 7023,
+      "sha256": "fb1096548c6c07fef375e920758266ea1a8391ef57e3e7c50de7358b966d546f"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_Material__12.uasset",
+      "bytes": 7023,
+      "sha256": "fa278087d2f16fc44a47a6d76fd64573560f64c4e68003189b6e9d1c98d7ba9e"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_Material__13.uasset",
+      "bytes": 7023,
+      "sha256": "230b4f81cb730a6135c9a0f305ef5c898825b14b5522750de820000ce0d76189"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Blanco_Hueso.uasset",
+      "bytes": 13169,
+      "sha256": "9755c951e66f8096cc885ed924fa504579e085669a8908b625d18bf2a11b7073"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Blanco_Hueso_Consolas.uasset",
+      "bytes": 13214,
+      "sha256": "1b7b782fcc94acdac73ad0e0729d72cde5b0c3da8727c13074a192ad2c440e03"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Mamparos_Gris_Claro.uasset",
+      "bytes": 13204,
+      "sha256": "6ef030e9140944bdbeac332a27c29d3f1c630eb0eddc13c3b29e24827455933a"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Mamparos_Gris_Oscuro.uasset",
+      "bytes": 13206,
+      "sha256": "34a4c52bfd61bada7ce5107113875300aaff5027ec5adf73c88bc4005bca0050"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Metal_Sillas_6.uasset",
+      "bytes": 13378,
+      "sha256": "2bd77cb8b2cf091305cfed21c168374b4a1051ef53da1b13040af3e969e876b5"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Moqueta_azul.uasset",
+      "bytes": 10838,
+      "sha256": "051f82941513c38d8a698120a531a35395f500b6d86db92d1451e985065cbee9"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Moqueta_roja.uasset",
+      "bytes": 10838,
+      "sha256": "12a521d1d1a05a5a6535aef7ac58b12771f38b5b26e2492de1721712ab766659"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Piano.uasset",
+      "bytes": 10804,
+      "sha256": "9a1719a6f2424cf0c581548f5ec6f2927e200f58bdc68e24756fcf1db769999c"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Puertas.uasset",
+      "bytes": 8140,
+      "sha256": "bb74d2aaf8c3407ce78266c9081ca3a7a0905ad482034c9aa22b21aa440cfb80"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Silla_Capitan_Cabezal_Negro.uasset",
+      "bytes": 11655,
+      "sha256": "095bdc9760bf985351483d9f91c1b3c41e3629d28bb00ac19c81801a802decac"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Silla_Capitan_Cuero_Marron.uasset",
+      "bytes": 11650,
+      "sha256": "df300a392381ebc4563ad8fe1b72039834682a9be65fd1641ceda4fb17413a0f"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Silla_Capitan_Cuero_Negro.uasset",
+      "bytes": 12710,
+      "sha256": "e61ce3c7373617e4dc054a1565ce1268efe1f3698124c312042f9b35fdbdad46"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Silla_Capitan_Pie_Titanio.uasset",
+      "bytes": 14424,
+      "sha256": "4eae38178555f3b74bcd13ea11a6437adf3b8812b0d9ee30379f9bbca28665b2"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Techo_Acero_001.uasset",
+      "bytes": 14375,
+      "sha256": "1652a536e99c89ae35cd0e43a8dd94edf3c70b46cda8d7cdd56423aa13562998"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Techo_Titanio_Claro.uasset",
+      "bytes": 14394,
+      "sha256": "decc8b66c9b0c7951f5d6ee8d3a1e4783a0136d782caf73a02bf94fd4a8a9083"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_PBR_Techo_Titanio_Oscuro.uasset",
+      "bytes": 14399,
+      "sha256": "8de1fd390a01282c89419f56965e2d9d9265064f737a1da1118d333079ff6c03"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_plaque.uasset",
+      "bytes": 6999,
+      "sha256": "d23dffbeb6036def0c543e4347c26f942f935cabc27d65d5c8645624a8ce8c0c"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_turbolcar.uasset",
+      "bytes": 7014,
+      "sha256": "e60d57fba4b0f15d070cac1aacedbb4561fd0a3407bdd893eb29d99c639a0e15"
+    },
+    {
+      "path": "Backups/Materiales_AntesCorreccionUV/M_upperwall_001.uasset",
+      "bytes": 7034,
+      "sha256": "3de64adcb6dc638b76dd16b9c4a83214cfc338a6b018c77a6d02dd2e252a87ce"
+    },
+    {
+      "path": "Backups/Resultado_Validado_20261029/L_Sutherland_PBR_SeisSillas_01.umap",
+      "bytes": 797189,
+      "sha256": "b1f3638820f594d1625a89da9b781d2c7a2e5f4a6aa2f93a1d7ec9009f6ef569"
+    }
+  ]
+}

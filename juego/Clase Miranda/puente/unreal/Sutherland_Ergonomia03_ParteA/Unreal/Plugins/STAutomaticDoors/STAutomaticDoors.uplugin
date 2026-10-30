@@ -1,0 +1,8 @@
+{
+ "FileVersion":3,"Version":1,"VersionName":"0.1-P02",
+ "FriendlyName":"Sutherland Automatic Door Prototype",
+ "Description":"Isolated F07-P02 prototype; policy hooks without CoreRPG dependency.",
+ "Category":"Prototype","CanContainContent":true,"EnabledByDefault":false,
+ "Modules":[{"Name":"STAutomaticDoors","Type":"Runtime","LoadingPhase":"Default"},
+            {"Name":"STAutomaticDoorsEditor","Type":"Editor","LoadingPhase":"Default"}]
+}

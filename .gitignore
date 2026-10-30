@@ -119,3 +119,27 @@ node_modules/
 *.log
 .DS_Store
 Thumbs.db
+
+# USS Sutherland: evidencias y resultados experimentales conservados solo localmente.
+/juego/Clase Miranda/puente/analisis_dimensional/capturas/seis_sillas/
+/juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/capturas/
+/juego/Clase Miranda/puente/analisis_dimensional/datos/ergonomia02_inspeccion.json
+/juego/Clase Miranda/puente/analisis_dimensional/datos/seis_sillas_antes.json
+/juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion.json
+/juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion_primera_lectura.json
+/juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion_modo_edicion.json
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Backups/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Backup_F07_Sutherland/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Intermediate/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Saved/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/DerivedDataCache/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Binaries/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Content/**/*.uasset
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Content/**/*.umap
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/**/*.pdb
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/**/*.dll
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Exports/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Backups/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Capturas/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/__pycache__/
+/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/*.log

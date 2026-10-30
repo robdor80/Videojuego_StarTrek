@@ -1,0 +1,33 @@
+{
+  "ok": false,
+  "errors": [
+    "image_paths"
+  ],
+  "source_sha256_unchanged": true,
+  "output_sha256": "a6a4040ee9558dba917fad5285282be235accad028c603bab651a07e8e6e2e54",
+  "snapshot_differences": [
+    "image_paths"
+  ],
+  "objects": 513,
+  "modified_objects": [
+    "Plane.039_0"
+  ],
+  "created_objects": [],
+  "six_chair_objects_and_meshes_unchanged": true,
+  "materials_images_uv_assignments_unchanged": false,
+  "closure_rays": {
+    "puente": {
+      "rays": 1089,
+      "closed_with_outward_normal": 1089,
+      "pass": true
+    },
+    "cabina": {
+      "rays": 1089,
+      "closed_with_outward_normal": 1089,
+      "pass": true
+    }
+  },
+  "door_clearance_m": 0.000499725341796875,
+  "flipped_faces": [],
+  "degenerate_faces": []
+}

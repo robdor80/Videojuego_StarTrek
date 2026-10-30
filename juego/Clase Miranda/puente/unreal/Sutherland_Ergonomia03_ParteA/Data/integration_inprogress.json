@@ -1,0 +1,1746 @@
+{
+  "ok": false,
+  "visual": [
+    {
+      "actor": "VIS_Cube.002_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Cube_002_0.SM_VIS_Cube_002_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Cube_002_0.SM_VIS_Cube_002_0",
+      "max_vertex_error_cm": 1.0467532783224815e-05
+    },
+    {
+      "actor": "VIS_Cube_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Cube_0.SM_VIS_Cube_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Cube_0.SM_VIS_Cube_0",
+      "max_vertex_error_cm": 8.70146159691556e-06
+    },
+    {
+      "actor": "VIS_Cylinder.002_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Cylinder_002_0.SM_VIS_Cylinder_002_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Cylinder_002_0.SM_VIS_Cylinder_002_0",
+      "max_vertex_error_cm": 8.218389058970175e-05
+    },
+    {
+      "actor": "VIS_Cylinder_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Cylinder_0.SM_VIS_Cylinder_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Cylinder_0.SM_VIS_Cylinder_0",
+      "max_vertex_error_cm": 2.5340496936522766e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.003_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_003_0.SM_VIS_Editable_Mesh_Mat_003_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_003_0.SM_VIS_Editable_Mesh_Mat_003_0",
+      "max_vertex_error_cm": 1.1212094036292576e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.003_0.002",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_003_0_002.SM_VIS_Editable_Mesh_Mat_003_0_002",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_003_0_002.SM_VIS_Editable_Mesh_Mat_003_0_002",
+      "max_vertex_error_cm": 1.0137697041258478e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.004_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_004_0.SM_VIS_Editable_Mesh_Mat_004_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_004_0.SM_VIS_Editable_Mesh_Mat_004_0",
+      "max_vertex_error_cm": 9.016667889285413e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.004_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_004_0_001.SM_VIS_Editable_Mesh_Mat_004_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_004_0_001.SM_VIS_Editable_Mesh_Mat_004_0_001",
+      "max_vertex_error_cm": 1.0227712430382561e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.005_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_005_0.SM_VIS_Editable_Mesh_Mat_005_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_005_0.SM_VIS_Editable_Mesh_Mat_005_0",
+      "max_vertex_error_cm": 8.702278137207031e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.005_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_005_0_001.SM_VIS_Editable_Mesh_Mat_005_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_005_0_001.SM_VIS_Editable_Mesh_Mat_005_0_001",
+      "max_vertex_error_cm": 8.924787990686795e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.006_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_006_0.SM_VIS_Editable_Mesh_Mat_006_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_006_0.SM_VIS_Editable_Mesh_Mat_006_0",
+      "max_vertex_error_cm": 8.753566623061094e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.006_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_006_0_001.SM_VIS_Editable_Mesh_Mat_006_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_006_0_001.SM_VIS_Editable_Mesh_Mat_006_0_001",
+      "max_vertex_error_cm": 8.795674679611547e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.007_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_007_0.SM_VIS_Editable_Mesh_Mat_007_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_007_0.SM_VIS_Editable_Mesh_Mat_007_0",
+      "max_vertex_error_cm": 8.844011779304222e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.007_0.002",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_007_0_002.SM_VIS_Editable_Mesh_Mat_007_0_002",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_007_0_002.SM_VIS_Editable_Mesh_Mat_007_0_002",
+      "max_vertex_error_cm": 8.996945507103542e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.008_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_008_0.SM_VIS_Editable_Mesh_Mat_008_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_008_0.SM_VIS_Editable_Mesh_Mat_008_0",
+      "max_vertex_error_cm": 8.688386515754985e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.008_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_008_0_001.SM_VIS_Editable_Mesh_Mat_008_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_008_0_001.SM_VIS_Editable_Mesh_Mat_008_0_001",
+      "max_vertex_error_cm": 8.844011779304222e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.009_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_009_0.SM_VIS_Editable_Mesh_Mat_009_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_009_0.SM_VIS_Editable_Mesh_Mat_009_0",
+      "max_vertex_error_cm": 1.005889087187242e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.009_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_009_0_001.SM_VIS_Editable_Mesh_Mat_009_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_009_0_001.SM_VIS_Editable_Mesh_Mat_009_0_001",
+      "max_vertex_error_cm": 1.0370523057428144e-05
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.010_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_010_0.SM_VIS_Editable_Mesh_Mat_010_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_010_0.SM_VIS_Editable_Mesh_Mat_010_0",
+      "max_vertex_error_cm": 8.908053251394942e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.010_0.002",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_010_0_002.SM_VIS_Editable_Mesh_Mat_010_0_002",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_010_0_002.SM_VIS_Editable_Mesh_Mat_010_0_002",
+      "max_vertex_error_cm": 8.908053251394942e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.011_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_011_0.SM_VIS_Editable_Mesh_Mat_011_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_011_0.SM_VIS_Editable_Mesh_Mat_011_0",
+      "max_vertex_error_cm": 9.690476147127903e-06
+    },
+    {
+      "actor": "VIS_Editable Mesh_Mat.011_0.001",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Editable_Mesh_Mat_011_0_001.SM_VIS_Editable_Mesh_Mat_011_0_001",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Editable_Mesh_Mat_011_0_001.SM_VIS_Editable_Mesh_Mat_011_0_001",
+      "max_vertex_error_cm": 1.1213279739670607e-05
+    },
+    {
+      "actor": "VIS_Mesh.453_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Mesh_453_0.SM_VIS_Mesh_453_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Mesh_453_0.SM_VIS_Mesh_453_0",
+      "max_vertex_error_cm": 1.1371997653095829e-05
+    },
+    {
+      "actor": "VIS_Plane.004_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_004_0.SM_VIS_Plane_004_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_004_0.SM_VIS_Plane_004_0",
+      "max_vertex_error_cm": 7.300685764576941e-05
+    },
+    {
+      "actor": "VIS_Plane.008_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_008_0.SM_VIS_Plane_008_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_008_0.SM_VIS_Plane_008_0",
+      "max_vertex_error_cm": 7.979439224304442e-05
+    },
+    {
+      "actor": "VIS_Plane.013_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_013_0.SM_VIS_Plane_013_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_013_0.SM_VIS_Plane_013_0",
+      "max_vertex_error_cm": 7.777124880356118e-05
+    },
+    {
+      "actor": "VIS_Plane.023_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_023_0.SM_VIS_Plane_023_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_023_0.SM_VIS_Plane_023_0",
+      "max_vertex_error_cm": 0.00011863953811709585
+    },
+    {
+      "actor": "VIS_Plane.025_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_025_0.SM_VIS_Plane_025_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_025_0.SM_VIS_Plane_025_0",
+      "max_vertex_error_cm": 9.491335533559465e-05
+    },
+    {
+      "actor": "VIS_Plane.032_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_032_0.SM_VIS_Plane_032_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_032_0.SM_VIS_Plane_032_0",
+      "max_vertex_error_cm": 4.35778032638392e-05
+    },
+    {
+      "actor": "VIS_Plane.040_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Plane_040_0.SM_VIS_Plane_040_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Plane_040_0.SM_VIS_Plane_040_0",
+      "max_vertex_error_cm": 8.242803024211279e-05
+    },
+    {
+      "actor": "VIS_Sphere.001_0",
+      "before": "/Game/SutherlandPlayable01/Meshes/SM_VIS_Sphere_001_0.SM_VIS_Sphere_001_0",
+      "after": "/Game/F07COLL01/Ergonomia03/Visual/SM_VIS_Sphere_001_0.SM_VIS_Sphere_001_0",
+      "max_vertex_error_cm": 1.8050664168117237e-05
+    }
+  ],
+  "collisions": [
+    {
+      "actor": "SM_COLL_Console_Chair01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair01.SM_COLL_Console_Chair01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair01.ERG_SM_COLL_Console_Chair01",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair01.ERG_SM_COLL_Console_Chair01",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=595.040 Y=553.568 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=572.860 Y=469.675 Z=57.837), Max=(X=618.790 Y=637.251 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Console_Chair02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair02.SM_COLL_Console_Chair02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair02.ERG_SM_COLL_Console_Chair02",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair02.ERG_SM_COLL_Console_Chair02",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=595.040 Y=371.941 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=572.860 Y=288.258 Z=57.837), Max=(X=618.790 Y=455.624 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Console_Chair03",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair03.SM_COLL_Console_Chair03",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair03.ERG_SM_COLL_Console_Chair03",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair03",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair03.ERG_SM_COLL_Console_Chair03",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=595.040 Y=190.314 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=572.860 Y=106.631 Z=57.837), Max=(X=618.790 Y=273.997 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Console_Chair04",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair04.SM_COLL_Console_Chair04",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair04.ERG_SM_COLL_Console_Chair04",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair04",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair04.ERG_SM_COLL_Console_Chair04",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-595.040 Y=553.568 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-618.790 Y=469.885 Z=57.837), Max=(X=-572.860 Y=637.251 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Console_Chair05",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair05.SM_COLL_Console_Chair05",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair05.ERG_SM_COLL_Console_Chair05",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair05",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair05.ERG_SM_COLL_Console_Chair05",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-595.040 Y=371.941 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-618.790 Y=288.258 Z=57.837), Max=(X=-572.860 Y=455.624 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Console_Chair06",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Console_Chair06.SM_COLL_Console_Chair06",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair06.ERG_SM_COLL_Console_Chair06",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Console_Chair06",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Console_Chair06.ERG_SM_COLL_Console_Chair06",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-595.040 Y=190.314 Z=112.554",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-618.790 Y=106.631 Z=57.837), Max=(X=-572.860 Y=273.997 Z=172.424)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Mesh_453_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Mesh_453_0_01.SM_COLL_Mesh_453_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_01.ERG_SM_COLL_Mesh_453_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Mesh_453_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_01.ERG_SM_COLL_Mesh_453_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-50.570 Y=186.953 Z=92.759",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-65.734 Y=136.687 Z=64.462), Max=(X=-35.405 Y=237.219 Z=91.456)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Mesh_453_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Mesh_453_0_02.SM_COLL_Mesh_453_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_02.ERG_SM_COLL_Mesh_453_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Mesh_453_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Mesh_453_0_02.ERG_SM_COLL_Mesh_453_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=50.592 Y=186.946 Z=92.759",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=35.431 Y=136.680 Z=64.462), Max=(X=65.754 Y=237.212 Z=91.456)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_01.SM_COLL_Sphere_001_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_01.ERG_SM_COLL_Sphere_001_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_01.ERG_SM_COLL_Sphere_001_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-45.671 Y=140.198 Z=139.037",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-63.703 Y=114.696 Z=76.235), Max=(X=-27.640 Y=165.700 Z=172.239)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_02.SM_COLL_Sphere_001_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_02.ERG_SM_COLL_Sphere_001_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_02.ERG_SM_COLL_Sphere_001_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=45.671 Y=140.198 Z=139.037",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=27.640 Y=114.696 Z=76.235), Max=(X=63.703 Y=165.700 Z=172.239)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_03",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_03.SM_COLL_Sphere_001_0_03",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_03.ERG_SM_COLL_Sphere_001_0_03",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_03",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_03.ERG_SM_COLL_Sphere_001_0_03",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=0.000 Y=120.218 Z=193.487",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-24.881 Y=112.894 Z=169.167), Max=(X=24.881 Y=127.542 Z=188.206)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_04",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_04.SM_COLL_Sphere_001_0_04",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_04.ERG_SM_COLL_Sphere_001_0_04",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_04",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_04.ERG_SM_COLL_Sphere_001_0_04",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-0.027 Y=137.422 Z=137.790",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-35.476 Y=117.753 Z=75.050), Max=(X=35.423 Y=157.091 Z=170.929)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_05",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_05.SM_COLL_Sphere_001_0_05",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_05.ERG_SM_COLL_Sphere_001_0_05",
+      "retained_shape_count": 6,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_05",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_05.ERG_SM_COLL_Sphere_001_0_05",
+            "boxes": 0,
+            "convexes": 6,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=0.000 Y=184.701 Z=86.202",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-37.922 Y=155.899 Z=66.234), Max=(X=37.922 Y=213.503 Z=76.570)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_06",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_06.SM_COLL_Sphere_001_0_06",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_06.ERG_SM_COLL_Sphere_001_0_06",
+      "retained_shape_count": 11,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_06",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_06.ERG_SM_COLL_Sphere_001_0_06",
+            "boxes": 0,
+            "convexes": 11,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-0.027 Y=163.197 Z=92.017",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-35.476 Y=155.919 Z=76.537), Max=(X=35.423 Y=170.474 Z=77.897)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_07",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_07.SM_COLL_Sphere_001_0_07",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_07.ERG_SM_COLL_Sphere_001_0_07",
+      "retained_shape_count": 5,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_07",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_07.ERG_SM_COLL_Sphere_001_0_07",
+            "boxes": 0,
+            "convexes": 5,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-0.027 Y=177.626 Z=92.017",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-35.476 Y=170.348 Z=76.537), Max=(X=35.423 Y=184.903 Z=77.897)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_08",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_08.SM_COLL_Sphere_001_0_08",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_08.ERG_SM_COLL_Sphere_001_0_08",
+      "retained_shape_count": 11,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_08",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_08.ERG_SM_COLL_Sphere_001_0_08",
+            "boxes": 0,
+            "convexes": 11,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-0.027 Y=191.968 Z=92.017",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-35.476 Y=184.690 Z=76.537), Max=(X=35.423 Y=199.245 Z=77.897)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Sphere_001_0_09",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Sphere_001_0_09.SM_COLL_Sphere_001_0_09",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_09.ERG_SM_COLL_Sphere_001_0_09",
+      "retained_shape_count": 11,
+      "body": {
+        "actor": "SM_COLL_Sphere_001_0_09",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Sphere_001_0_09.ERG_SM_COLL_Sphere_001_0_09",
+            "boxes": 0,
+            "convexes": 11,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-0.027 Y=206.310 Z=92.017",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-35.476 Y=199.032 Z=76.537), Max=(X=35.423 Y=213.587 Z=77.897)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Cube_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Cube_0_01.SM_COLL_Cube_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_01.ERG_SM_COLL_Cube_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Cube_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_01.ERG_SM_COLL_Cube_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=50.087 Y=226.987 Z=111.325",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=41.396 Y=219.956 Z=93.054), Max=(X=58.779 Y=234.018 Z=99.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Cube_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Cube_0_02.SM_COLL_Cube_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_02.ERG_SM_COLL_Cube_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Cube_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_0_02.ERG_SM_COLL_Cube_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-50.087 Y=226.987 Z=111.325",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-58.779 Y=219.956 Z=93.054), Max=(X=-41.396 Y=234.018 Z=99.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Cylinder_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Cylinder_0_01.SM_COLL_Cylinder_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cylinder_0_01.ERG_SM_COLL_Cylinder_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Cylinder_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cylinder_0_01.ERG_SM_COLL_Cylinder_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=0.000 Y=180.989 Z=34.188",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-24.164 Y=156.825 Z=-33.117), Max=(X=24.164 Y=205.152 Z=71.893)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Cube_002_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Cube_002_0_01.SM_COLL_Cube_002_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_01.ERG_SM_COLL_Cube_002_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Cube_002_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_01.ERG_SM_COLL_Cube_002_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=50.087 Y=194.270 Z=103.953",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=39.284 Y=153.270 Z=78.309), Max=(X=60.891 Y=235.270 Z=99.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Cube_002_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Cube_002_0_02.SM_COLL_Cube_002_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_02.ERG_SM_COLL_Cube_002_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Cube_002_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Cube_002_0_02.ERG_SM_COLL_Cube_002_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-50.087 Y=194.270 Z=103.953",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-60.891 Y=153.270 Z=78.309), Max=(X=-39.284 Y=235.270 Z=99.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_032_0_01.SM_COLL_Plane_032_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_01.ERG_SM_COLL_Plane_032_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_032_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_01.ERG_SM_COLL_Plane_032_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-1015.399 Y=907.305 Z=267.166",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-1032.777 Y=808.750 Z=222.410), Max=(X=-998.021 Y=1005.860 Z=271.922)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_032_0_02.SM_COLL_Plane_032_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_02.ERG_SM_COLL_Plane_032_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_032_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_02.ERG_SM_COLL_Plane_032_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-777.043 Y=1074.203 Z=267.166",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-875.598 Y=1056.825 Z=222.410), Max=(X=-678.488 Y=1091.581 Z=271.922)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_032_0_03",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_032_0_03.SM_COLL_Plane_032_0_03",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_03.ERG_SM_COLL_Plane_032_0_03",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_032_0_03",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_032_0_03.ERG_SM_COLL_Plane_032_0_03",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-848.501 Y=668.949 Z=267.166",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-947.056 Y=651.571 Z=222.410), Max=(X=-749.946 Y=686.328 Z=271.922)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_025_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_025_0_01.SM_COLL_Plane_025_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_01.ERG_SM_COLL_Plane_025_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_025_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_01.ERG_SM_COLL_Plane_025_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-1020.897 Y=908.274 Z=297.506",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-1043.774 Y=808.750 Z=271.922), Max=(X=-998.021 Y=1007.799 Z=283.090)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_025_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_025_0_02.SM_COLL_Plane_025_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_02.ERG_SM_COLL_Plane_025_0_02",
+      "retained_shape_count": 4,
+      "body": {
+        "actor": "SM_COLL_Plane_025_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_025_0_02.ERG_SM_COLL_Plane_025_0_02",
+            "boxes": 0,
+            "convexes": 4,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-1020.897 Y=908.274 Z=236.826",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-1043.774 Y=808.750 Z=211.242), Max=(X=-998.021 Y=1007.799 Z=222.410)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_023_0_01.SM_COLL_Plane_023_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_01.ERG_SM_COLL_Plane_023_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_023_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_01.ERG_SM_COLL_Plane_023_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-776.074 Y=1079.701 Z=297.506",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-875.598 Y=1056.825 Z=271.922), Max=(X=-676.549 Y=1102.578 Z=283.090)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_023_0_02.SM_COLL_Plane_023_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_02.ERG_SM_COLL_Plane_023_0_02",
+      "retained_shape_count": 3,
+      "body": {
+        "actor": "SM_COLL_Plane_023_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_02.ERG_SM_COLL_Plane_023_0_02",
+            "boxes": 0,
+            "convexes": 3,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-776.074 Y=1079.701 Z=236.826",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-875.598 Y=1056.825 Z=211.242), Max=(X=-676.549 Y=1102.578 Z=222.410)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_03",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_023_0_03.SM_COLL_Plane_023_0_03",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_03.ERG_SM_COLL_Plane_023_0_03",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Plane_023_0_03",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_03.ERG_SM_COLL_Plane_023_0_03",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-849.470 Y=663.451 Z=297.506",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-948.995 Y=640.574 Z=271.922), Max=(X=-749.946 Y=686.327 Z=283.090)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Plane_023_0_04",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Plane_023_0_04.SM_COLL_Plane_023_0_04",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_04.ERG_SM_COLL_Plane_023_0_04",
+      "retained_shape_count": 4,
+      "body": {
+        "actor": "SM_COLL_Plane_023_0_04",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Plane_023_0_04.ERG_SM_COLL_Plane_023_0_04",
+            "boxes": 0,
+            "convexes": 4,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-849.470 Y=663.451 Z=236.826",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-948.995 Y=640.574 Z=211.242), Max=(X=-749.946 Y=686.328 Z=222.410)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_003_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_003_0_01.SM_COLL_Editable_Mesh_Mat_003_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_01.ERG_SM_COLL_Editable_Mesh_Mat_003_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_003_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_01.ERG_SM_COLL_Editable_Mesh_Mat_003_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=277.590 Y=388.539 Z=45.104",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=297.598 Z=-2.161), Max=(X=304.678 Y=479.479 Z=92.368)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_003_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_003_0_02.SM_COLL_Editable_Mesh_Mat_003_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_02.ERG_SM_COLL_Editable_Mesh_Mat_003_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_003_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_003_0_02.ERG_SM_COLL_Editable_Mesh_Mat_003_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-277.590 Y=388.539 Z=45.104",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=-46.061), Max=(X=-250.503 Y=479.479 Z=48.468)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_004_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_004_0_01.SM_COLL_Editable_Mesh_Mat_004_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_01.ERG_SM_COLL_Editable_Mesh_Mat_004_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_004_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_01.ERG_SM_COLL_Editable_Mesh_Mat_004_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=278.679 Y=390.076 Z=99.556",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=259.215 Y=309.448 Z=48.468), Max=(X=298.143 Y=470.704 Z=62.845)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_004_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_004_0_02.SM_COLL_Editable_Mesh_Mat_004_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_02.ERG_SM_COLL_Editable_Mesh_Mat_004_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_004_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_004_0_02.ERG_SM_COLL_Editable_Mesh_Mat_004_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-278.679 Y=390.076 Z=99.556",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-298.143 Y=309.448 Z=48.468), Max=(X=-259.215 Y=470.704 Z=62.845)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_005_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_005_0_01.SM_COLL_Editable_Mesh_Mat_005_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_01.ERG_SM_COLL_Editable_Mesh_Mat_005_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_005_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_01.ERG_SM_COLL_Editable_Mesh_Mat_005_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=277.590 Y=388.538 Z=92.368",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=297.598 Z=48.468), Max=(X=304.678 Y=479.479 Z=48.468)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_005_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_005_0_02.SM_COLL_Editable_Mesh_Mat_005_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_02.ERG_SM_COLL_Editable_Mesh_Mat_005_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_005_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_005_0_02.ERG_SM_COLL_Editable_Mesh_Mat_005_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-277.590 Y=388.538 Z=92.368",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=48.468), Max=(X=-250.503 Y=479.479 Z=48.468)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_006_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_006_0_01.SM_COLL_Editable_Mesh_Mat_006_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_01.ERG_SM_COLL_Editable_Mesh_Mat_006_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_006_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_01.ERG_SM_COLL_Editable_Mesh_Mat_006_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=277.590 Y=388.538 Z=105.352",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=297.598 Z=61.451), Max=(X=304.678 Y=479.479 Z=61.452)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_006_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_006_0_02.SM_COLL_Editable_Mesh_Mat_006_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_02.ERG_SM_COLL_Editable_Mesh_Mat_006_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_006_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_006_0_02.ERG_SM_COLL_Editable_Mesh_Mat_006_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-277.590 Y=388.538 Z=105.352",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=61.451), Max=(X=-250.503 Y=479.479 Z=61.452)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_007_0_01.SM_COLL_Editable_Mesh_Mat_007_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_01.ERG_SM_COLL_Editable_Mesh_Mat_007_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_007_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_01.ERG_SM_COLL_Editable_Mesh_Mat_007_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=304.638 Y=388.538 Z=124.635",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=304.599 Y=297.598 Z=61.451), Max=(X=304.678 Y=479.479 Z=100.019)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_007_0_02.SM_COLL_Editable_Mesh_Mat_007_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_02.ERG_SM_COLL_Editable_Mesh_Mat_007_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_007_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_02.ERG_SM_COLL_Editable_Mesh_Mat_007_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=277.590 Y=388.538 Z=124.635",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=297.598 Z=61.451), Max=(X=304.678 Y=479.479 Z=100.019)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_03",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_007_0_03.SM_COLL_Editable_Mesh_Mat_007_0_03",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_03.ERG_SM_COLL_Editable_Mesh_Mat_007_0_03",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_007_0_03",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_03.ERG_SM_COLL_Editable_Mesh_Mat_007_0_03",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-304.638 Y=388.538 Z=124.635",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=61.451), Max=(X=-304.599 Y=479.479 Z=100.019)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_007_0_04",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_007_0_04.SM_COLL_Editable_Mesh_Mat_007_0_04",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_04.ERG_SM_COLL_Editable_Mesh_Mat_007_0_04",
+      "retained_shape_count": 6,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_007_0_04",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_007_0_04.ERG_SM_COLL_Editable_Mesh_Mat_007_0_04",
+            "boxes": 0,
+            "convexes": 6,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-277.590 Y=388.538 Z=124.635",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=61.451), Max=(X=-250.503 Y=479.479 Z=100.019)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_008_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_008_0_01.SM_COLL_Editable_Mesh_Mat_008_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_01.ERG_SM_COLL_Editable_Mesh_Mat_008_0_01",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_008_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_01.ERG_SM_COLL_Editable_Mesh_Mat_008_0_01",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=277.590 Y=388.538 Z=143.933",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=297.598 Z=100.033), Max=(X=304.678 Y=479.479 Z=100.034)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_008_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_008_0_02.SM_COLL_Editable_Mesh_Mat_008_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_02.ERG_SM_COLL_Editable_Mesh_Mat_008_0_02",
+      "retained_shape_count": 1,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_008_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_008_0_02.ERG_SM_COLL_Editable_Mesh_Mat_008_0_02",
+            "boxes": 0,
+            "convexes": 1,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-277.590 Y=388.538 Z=143.933",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=100.033), Max=(X=-250.503 Y=479.479 Z=100.034)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_009_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_009_0_01.SM_COLL_Editable_Mesh_Mat_009_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_01.ERG_SM_COLL_Editable_Mesh_Mat_009_0_01",
+      "retained_shape_count": 0,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_009_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_01.ERG_SM_COLL_Editable_Mesh_Mat_009_0_01",
+            "boxes": 0,
+            "convexes": 0,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=283.129 Y=388.538 Z=160.776",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=261.607 Y=297.598 Z=100.428), Max=(X=304.651 Y=479.479 Z=133.324)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_009_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_009_0_02.SM_COLL_Editable_Mesh_Mat_009_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_02.ERG_SM_COLL_Editable_Mesh_Mat_009_0_02",
+      "retained_shape_count": 0,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_009_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_009_0_02.ERG_SM_COLL_Editable_Mesh_Mat_009_0_02",
+            "boxes": 0,
+            "convexes": 0,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-283.129 Y=388.538 Z=160.776",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.651 Y=297.598 Z=100.428), Max=(X=-261.607 Y=479.479 Z=133.324)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_010_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_010_0_01.SM_COLL_Editable_Mesh_Mat_010_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_01.ERG_SM_COLL_Editable_Mesh_Mat_010_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_010_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_01.ERG_SM_COLL_Editable_Mesh_Mat_010_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=260.360 Y=388.563 Z=160.579",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=250.503 Y=300.373 Z=100.033), Max=(X=270.217 Y=476.754 Z=133.324)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_010_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_010_0_02.SM_COLL_Editable_Mesh_Mat_010_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_02.ERG_SM_COLL_Editable_Mesh_Mat_010_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_010_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_010_0_02.ERG_SM_COLL_Editable_Mesh_Mat_010_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-260.360 Y=388.563 Z=160.579",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-270.217 Y=300.373 Z=100.033), Max=(X=-250.503 Y=476.754 Z=133.324)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_011_0_01",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_011_0_01.SM_COLL_Editable_Mesh_Mat_011_0_01",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_01.ERG_SM_COLL_Editable_Mesh_Mat_011_0_01",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_011_0_01",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_01.ERG_SM_COLL_Editable_Mesh_Mat_011_0_01",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=282.615 Y=388.538 Z=157.415",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=260.553 Y=297.598 Z=100.033), Max=(X=304.678 Y=479.479 Z=126.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    },
+    {
+      "actor": "SM_COLL_Editable_Mesh_Mat_011_0_02",
+      "before": "/Game/F07COLL01/Meshes/SM_COLL_Editable_Mesh_Mat_011_0_02.SM_COLL_Editable_Mesh_Mat_011_0_02",
+      "after": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_02.ERG_SM_COLL_Editable_Mesh_Mat_011_0_02",
+      "retained_shape_count": 8,
+      "body": {
+        "actor": "SM_COLL_Editable_Mesh_Mat_011_0_02",
+        "class": "/Script/Engine.StaticMeshActor",
+        "components": [
+          {
+            "asset": "/Game/F07COLL01/Ergonomia03/Collision/ERG_SM_COLL_Editable_Mesh_Mat_011_0_02.ERG_SM_COLL_Editable_Mesh_Mat_011_0_02",
+            "boxes": 0,
+            "convexes": 8,
+            "spheres": 0,
+            "capsules": 0,
+            "complexity_enum": 1,
+            "box_shapes": [],
+            "component": "StaticMeshComponent0",
+            "position": "X=-282.615 Y=388.538 Z=157.415",
+            "scale": "X=1.000 Y=1.000 Z=1.000",
+            "world_bounds": "IsValid=true, Min=(X=-304.678 Y=297.598 Z=100.033), Max=(X=-260.553 Y=479.479 Z=126.996)",
+            "collision_enabled_enum": 3,
+            "pawn_response_enum": 2,
+            "profile": "BlockAll"
+          }
+        ]
+      }
+    }
+  ],
+  "doors": [
+    {
+      "actor": "P03FG_D002",
+      "component": "LeftLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_002_Left_Convex.SM_DOOR_F07_002_Left_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_LeftLeaf.ERG_DOOR_F07_002_LeftLeaf",
+      "max_vertex_error_cm": 7.479012221891225e-06
+    },
+    {
+      "actor": "P03FG_D002",
+      "component": "RightLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_002_Right_Convex.SM_DOOR_F07_002_Right_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_002_RightLeaf.ERG_DOOR_F07_002_RightLeaf",
+      "max_vertex_error_cm": 1.0469975591607561e-05
+    },
+    {
+      "actor": "P03FG_D003",
+      "component": "LeftLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_003_Left_Convex.SM_DOOR_F07_003_Left_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_LeftLeaf.ERG_DOOR_F07_003_LeftLeaf",
+      "max_vertex_error_cm": 4.994469847076466e-06
+    },
+    {
+      "actor": "P03FG_D003",
+      "component": "RightLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_003_Right_Convex.SM_DOOR_F07_003_Right_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_003_RightLeaf.ERG_DOOR_F07_003_RightLeaf",
+      "max_vertex_error_cm": 9.891327939875297e-06
+    },
+    {
+      "actor": "P03FG_D004",
+      "component": "LeftLeaf",
+      "before": "/Game/F07P03FG/Leaves/SM_D04_Left_ExactSlices1.SM_D04_Left_ExactSlices1",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_LeftLeaf.ERG_DOOR_F07_004_LeftLeaf",
+      "max_vertex_error_cm": 6.485188283785361e-06
+    },
+    {
+      "actor": "P03FG_D004",
+      "component": "RightLeaf",
+      "before": "/Game/F07P03FG/Leaves/SM_D04_Right_ExactSlices1.SM_D04_Right_ExactSlices1",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_004_RightLeaf.ERG_DOOR_F07_004_RightLeaf",
+      "max_vertex_error_cm": 1.1319921890130111e-05
+    },
+    {
+      "actor": "P03FG_D001",
+      "component": "LeftLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_001_Left_Convex.SM_DOOR_F07_001_Left_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_LeftLeaf.ERG_DOOR_F07_001_LeftLeaf",
+      "max_vertex_error_cm": 9.961000665086257e-06
+    },
+    {
+      "actor": "P03FG_D001",
+      "component": "RightLeaf",
+      "before": "/Game/F07P02/P03B/Leaves/SM_DOOR_F07_001_Right_Convex.SM_DOOR_F07_001_Right_Convex",
+      "after": "/Game/F07COLL01/Ergonomia03/Leaves/ERG_DOOR_F07_001_RightLeaf.ERG_DOOR_F07_001_RightLeaf",
+      "max_vertex_error_cm": 5.584442664415275e-06
+    }
+  ],
+  "captain_marker_changes": [
+    {
+      "marker": "seated_capsule",
+      "before": [
+        0.0,
+        180.0,
+        140.0
+      ],
+      "after": [
+        0.0,
+        180.0,
+        140.0
+      ]
+    },
+    {
+      "marker": "pelvis",
+      "before": [
+        0.0,
+        180.0,
+        105.0
+      ],
+      "after": [
+        0.0,
+        180.0,
+        105.0
+      ]
+    },
+    {
+      "marker": "back",
+      "before": [
+        -7.105427357601002e-15,
+        155.0,
+        140.0
+      ],
+      "after": [
+        -7.105427357601002e-15,
+        155.0,
+        140.0
+      ]
+    },
+    {
+      "marker": "left_foot",
+      "before": [
+        15.000000000000007,
+        222.0,
+        62.0
+      ],
+      "after": [
+        15.000000000000007,
+        222.0,
+        62.0
+      ]
+    },
+    {
+      "marker": "right_foot",
+      "before": [
+        -14.999999999999993,
+        222.0,
+        62.0
+      ],
+      "after": [
+        -14.999999999999993,
+        222.0,
+        62.0
+      ]
+    }
+  ]
+}
