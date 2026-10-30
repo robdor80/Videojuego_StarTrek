@@ -21,13 +21,13 @@ ALLOWED_MATURITY = {
     "CORE_INTEGRADO", "UE5_JUGABLE", "ACEPTACION_SUPERADA",
 }
 EXPECTED_STATUS = {
-    "F00": "CERRADA", "F01": "CERRADA", "F02": "EN_CURSO",
-    "F03": "EN_REVISION", "F04": "EN_REVISION",
+    "F00": "CERRADA", "F01": "CERRADA", "F02": "CERRADA",
+    "F03": "EN_CURSO", "F04": "EN_REVISION",
     "F05": "EN_REVISION", "F06": "EN_REVISION",
 }
 EXPECTED_MATURITY = {
     "F00": "DOCUMENTACION_AUDITADA", "F01": "DISENO_VALIDADO",
-    "F02": "DISENO_VALIDADO", "F03": "REFERENCIA_PROBADA",
+    "F02": "CONTRATO_VALIDADO", "F03": "REFERENCIA_PROBADA",
     "F04": "REFERENCIA_PROBADA", "F05": "REFERENCIA_PROBADA",
     "F06": "REFERENCIA_PROBADA",
 }
@@ -53,8 +53,8 @@ def check() -> list[str]:
     current = state.get("current_global_phase")
     if active != [current]:
         errors.append(f"única fase principal: actual {current!r}, EN_CURSO={active!r}")
-    if state.get("completed_management_phase") != "F01":
-        errors.append("completed_management_phase != F01")
+    if state.get("completed_management_phase") != "F02":
+        errors.append("completed_management_phase != F02")
 
     pr = state.get("governance_review", {})
     if pr.get("merged_prs") != [2, 3, 4, 5, 6, 7]:
@@ -123,5 +123,5 @@ if __name__ == "__main__":
             print(f"ERROR: {problem}", file=sys.stderr)
         raise SystemExit(1)
     print("PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de diseño, "
-          "F02 principal y F03-F06 en revisión; plan sincronizado. "
+          "F02 cerrada en CONTRATO_VALIDADO y F03 principal; plan sincronizado. "
           "Esto NO valida Core RPG ni UE5.")

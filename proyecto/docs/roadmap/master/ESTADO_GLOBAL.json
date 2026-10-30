@@ -1,12 +1,12 @@
 {
   "schema_version": "1.0.0",
-  "date": "2026-10-13",
+  "date": "2026-10-30",
   "repo": "robdor80/Videojuego_StarTrek",
   "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
   "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
   "management": "Estado de planificación independiente de madurez/evidencia. CERRADA en un paso significa cierre únicamente al alcance indicado en step_evidence_maturity y note, nunca runtime por inferencia. PR fusionada no equivale a fase cerrada. Los pasos futuros F07-F15 con PLANIFICADA son una normalización del marcador histórico de trabajo aún no auditado, NO una certificación de ausencia de trabajo previo.",
-  "current_global_phase": "F02",
-  "completed_management_phase": "F01",
+  "current_global_phase": "F03",
+  "completed_management_phase": "F02",
   "phase_count": 16,
   "step_count": 80,
   "phases": [
@@ -59,35 +59,39 @@
     {
       "id": "F02",
       "title": "Arquitectura e integración",
-      "status": "EN_CURSO",
+      "status": "CERRADA",
       "target_maturity": "CONTRATO_VALIDADO",
       "step_count": 5,
       "steps": {
         "P01": "CERRADA",
         "P02": "CERRADA",
-        "P03": "BLOQUEADA",
-        "P04": "BLOQUEADA",
-        "P05": "BLOQUEADA"
+        "P03": "CERRADA",
+        "P04": "CERRADA",
+        "P05": "CERRADA"
       },
-      "note": "Principal fase activa. P01 auditoría Core y P02 inventario finalizados a su propio nivel; P03–P05 entregables y QA de referencia documentados, bloqueados para madurez CONTRATO_VALIDADO por falta de confirmación de interfaces reales Core/Host. CoreRPG/main verificado en dcfcb83 (4.4) el 13-10-2026. Sin integración Core/UE5.",
+      "note": "CERRADA a madurez CONTRATO_VALIDADO por integración mínima real CoreRPG↔UE5 (laboratorio aislado, no videojuego jugable). Auditoría independiente favorable y PR #60 fusionada 30-10-2026 (bb77c98d0e806f91eb296cce4b7d391fb81a0f7c). Ver informe ejecutable y revisión de regresión multi-UWorld. Se posponen a F03-F08 reloj/agendas, eventos causales, jerarquía Trek y Sensores; no se consideran implementados por el laboratorio. Las fuentes/validadores documentales de 11–13/10 preservan su significado histórico.",
       "file": "fases/F02/README.md",
-      "achieved_maturity": "DISENO_VALIDADO",
+      "achieved_maturity": "CONTRATO_VALIDADO",
       "step_evidence_maturity": {
-        "P01": "DOCUMENTACION_AUDITADA",
+        "P01": "REFERENCIA_PROBADA",
         "P02": "DOCUMENTACION_AUDITADA",
-        "P03": "DISENO_VALIDADO",
+        "P03": "CONTRATO_VALIDADO",
         "P04": "REFERENCIA_PROBADA",
-        "P05": "DISENO_VALIDADO"
+        "P05": "CONTRATO_VALIDADO"
       },
       "evidence_refs": [
         "PR #3 (merge 2610be5197e3bcf789fb154023fc4ad8c8d2c9c4)",
-        "fases/F02/PLAN_INTEGRACION_PRIMER_CORTE.md"
+        "fases/F02/PLAN_INTEGRACION_PRIMER_CORTE.md",
+        "PR #60 (merge bb77c98d0e806f91eb296cce4b7d391fb81a0f7c)",
+        "fases/F02/INFORME_EJECUCION_REAL_2026-10-29.md",
+        "fases/F02/INFORME_REVISION_PR60_2026-10-29.md",
+        "fases/F02/EVIDENCIAS_REVISION_PR60_2026-10-29.json"
       ]
     },
     {
       "id": "F03",
       "title": "Mundo autoritativo y persistencia",
-      "status": "EN_REVISION",
+      "status": "EN_CURSO",
       "target_maturity": "CORE_INTEGRADO",
       "step_count": 5,
       "steps": {
@@ -97,7 +101,7 @@
         "P04": "BLOQUEADA",
         "P05": "CERRADA"
       },
-      "note": "P01–P04 diseño auditado, pero acciones reales de identidad, conocimiento, tiempo y persistencia BLOQUEADAS por Core; P05 validación de fixture de referencia cerrada (26 tests CI). Objetivo CORE_INTEGRADO NO alcanzado; no hay save/load real ni E2E UE5.",
+      "note": "Fase principal activada tras el cierre técnico/administrativo F02 (30-10-2026); madurez F03 sigue REFERENCIA_PROBADA, objetivo CORE_INTEGRADO pendiente. P01–P04 conservan bloqueos históricos sujetos a reauditoría explícita de Core 4.13, adaptadores y alcance F03; no se consideran resueltos ni ejecutados automáticamente por el laboratorio F02. P05 cerrado solo como QA de referencia. Empezar auditando el estado real y reutilizando los contratos existentes.",
       "file": "fases/F03/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
@@ -388,5 +392,14 @@
     "record": "fases/F07/RECONCILIACION_EVIDENCIAS_MSI_2026-10-23.md",
     "phase_status_preserved": "EN_REVISION",
     "achieved_maturity_preserved": "DISENO_VALIDADO"
+  },
+  "f02_closure": {
+    "date": "2026-10-30",
+    "status": "CERRADA",
+    "scope": "CONTRATO_VALIDADO: contrato Core/Host y spike C++/UE5 real, no juego ni sensores jugables",
+    "pr": 60,
+    "merge_commit": "bb77c98d0e806f91eb296cce4b7d391fb81a0f7c",
+    "core_commit": "4f282863737bcd8f5add401202a9e1064c133672",
+    "followup": "F03 activa para auditoría y desarrollo específico, sin atribuirle automáticamente el runtime F02"
   }
 }

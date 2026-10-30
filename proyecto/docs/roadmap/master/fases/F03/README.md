@@ -1,5 +1,7 @@
 # F03 — Mundo autoritativo, conocimiento y persistencia
 
+> **ACTIVACIÓN — 30-10-2026:** F03 es la fase principal **`EN_CURSO`** tras la [PR #60 fusionada](https://github.com/robdor80/Videojuego_StarTrek/pull/60). Existe integración mínima real CoreRPG↔UE5 a reutilizar; **no** implica que F03 haya alcanzado `CORE_INTEGRADO`. La planificación P01–P04 y sus bloqueos anteriores deben reevaluarse con CoreRPG `4f282863`, antes de implementar tiempo, acontecimientos, conocimiento y persistencia de campaña. La descripción de octubre 11–13 que sigue es histórica.
+
 **Auditoría y desarrollo documental:** 2026-10-11; **sincronización de PR anteriores:** 2026-10-13. **Estado de trabajo:** CINCO PASOS DOCUMENTADOS / VALIDACIÓN DE REFERENCIA EN CI / **INTEGRACIÓN CORE PENDIENTE**. El estado global de F03 es ahora **`EN_REVISION`**, por pruebas de referencia superadas, con P01–P04 **BLOQUEADAS** en ejecución Core y P05 cerrada solo como QA de fixture. **F03 no se declara CERRADA**. **Madurez objetivo:** `CORE_INTEGRADO`.
 
 ## Objetivo
