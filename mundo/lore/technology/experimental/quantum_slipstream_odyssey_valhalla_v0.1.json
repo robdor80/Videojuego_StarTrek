@@ -1,0 +1,57 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "GAME_ADDITION_QUANTUM_SLIPSTREAM_ODYSSEY_VALHALLA",
+  "classification": "GAME_ADDITION_AUTHOR_APPROVED_NOT_SCREEN_CANON",
+  "author_decision_date": "2026-10-30",
+  "capability_id": "quantum_slipstream_drive",
+  "domain": "propulsion",
+  "authority": "CoreRPG_World_State_ONLY",
+  "runtime_implemented": false,
+  "configuration_required": true,
+  "program": {
+    "odyssey_test_phase": {
+      "from_year": 2383,
+      "availability_state": "experimental",
+      "class_id": "odyssey",
+      "installation_scope": "SPECIFIC_ASSIGNED_TEST_SHIPS_ONLY",
+      "class_wide_default": false,
+      "exact_test_ship_identity_pending": true,
+      "results_persistent": true
+    },
+    "valhalla_transfer_phase": {
+      "class_id": "valhalla",
+      "first_ship_service_target_year": 2387,
+      "availability_state": "research_candidate",
+      "requires_further_tests": true,
+      "default_installed_at_first_commissioning": false,
+      "installation_date_pending": true,
+      "success_guaranteed": false
+    }
+  },
+  "technology_constraints": {
+    "conventional_warp_retained": true,
+    "authorization_required": true,
+    "navigation_and_corridor_stability_required": true,
+    "resources_and_materials_pending_research": true,
+    "failure_modes_pending_research": true,
+    "no_numeric_performance_assumed": true,
+    "no_unconditional_ai_grant": true,
+    "distinct_from_quantum_torpedoes": true
+  },
+  "mission_hooks": [
+    "Experimental calibration and corridor stability trials",
+    "Competing engineering, navigation, science and command assessments",
+    "Emergency interruption, incident investigation and rescue if supported by causal campaign state",
+    "Safety certification, development setbacks, authorization and controlled deployment",
+    "Follow-on Valhalla adaptation and verification after 2387 if required"
+  ],
+  "continuity_rules": [
+    "Experimental activity after the campaign start is a possibility, never a guaranteed scripted event.",
+    "Failure/success, modifications, incidents, ship condition and permissions persist in CoreRPG.",
+    "Research progress is not granted by the calendar alone.",
+    "Odyssey class availability in 2383 does not imply that USS Enterprise-F is a playable or present individual ship.",
+    "Valhalla class commissioning target 2387 does not imply that quantum slipstream is ready on that date."
+  ],
+  "decision_reference": "proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md",
+  "general_capability_contract": "sistemas/gameplay/technology/technology_capability_contract.json"
+}
