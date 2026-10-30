@@ -1,5 +1,8 @@
 # Addendum de autoridad creativa — Valhalla y nave auxiliar Defiant
 
+> **ACTUALIZACIÓN POSTERIOR 31-10-2026 — [DEC-0017–0019](../../../proyecto/docs/decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md):** el Proyecto Defiant reúne **nave de combate furtiva de clase Defiant con dotación naval especializada** y **destacamento de soldados/Marines «Hijos de Odín»**. No disimular su naturaleza militar bajo la etiqueta «Seguridad». Ambas dotaciones forman parte de los 1.800 efectivos de Flota en Valhalla; los 400 civiles se cuentan aparte. 60 Marines y 40 dotación Defiant siguen como **propuesta numérica pendiente de ratificación**, no plantilla operativa obligatoria. La doctrina de Federación de esta campaña combina exploración y diplomacia con fuerza militar y disuasión extrema bajo control. La actualización no altera el camuflaje romulano ya aprobado ni el atraque/acceso simulado, ni impone una fecha de servicio distinta de 2387.
+
+
 > **PRECEDENCIA ACTUALIZADA 2026-10-30:** este addendum sigue gobernando diseño, hangares, separación y auxiliar Defiant, pero sus frases «no se fija año» quedan **superadas** por [DEC-0013–0016](../../../proyecto/docs/decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md): programa 2379, construcción 2380–2387, primera Valhalla objetivo 2387; Odyssey punta de lanza en 2383; flujo cuántico experimental en Odyssey, candidato a integración posterior de Valhalla. **No se revocan las demás decisiones creativas de 21-10.**
 
 
