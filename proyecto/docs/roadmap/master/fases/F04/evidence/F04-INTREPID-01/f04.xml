@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="107"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="5"
+	timestamp="2026-10-30T18:42:54"
+	>
+	<testcase name="f04.intrepid_structure" classname="f04.intrepid_structure" time="0.124724" status="run">
+		<properties/>
+		<system-out>intrepid structure passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_profile" classname="f04.intrepid_profile" time="0.0253575" status="run">
+		<properties/>
+		<system-out>intrepid profile passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_vacant" classname="f04.intrepid_vacant" time="0.0229363" status="run">
+		<properties/>
+		<system-out>intrepid vacant passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_partial" classname="f04.intrepid_partial" time="0.0353549" status="run">
+		<properties/>
+		<system-out>intrepid partial passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_assignment" classname="f04.intrepid_assignment" time="0.0407304" status="run">
+		<properties/>
+		<system-out>intrepid assignment passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_qualifications" classname="f04.intrepid_qualifications" time="0.10098" status="run">
+		<properties/>
+		<system-out>intrepid qualifications passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_alpha" classname="f04.intrepid_alpha" time="0.0694901" status="run">
+		<properties/>
+		<system-out>intrepid alpha passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_authority" classname="f04.intrepid_authority" time="0.133837" status="run">
+		<properties/>
+		<system-out>intrepid authority passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_watch_fallback" classname="f04.intrepid_watch_fallback" time="0.0932659" status="run">
+		<properties/>
+		<system-out>intrepid watch_fallback passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_functions" classname="f04.intrepid_functions" time="0.0769547" status="run">
+		<properties/>
+		<system-out>intrepid functions passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_deficit_relief" classname="f04.intrepid_deficit_relief" time="0.141184" status="run">
+		<properties/>
+		<system-out>intrepid deficit_relief passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_transfer" classname="f04.intrepid_transfer" time="0.113085" status="run">
+		<properties/>
+		<system-out>intrepid transfer passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_lifecycle" classname="f04.intrepid_lifecycle" time="0.112267" status="run">
+		<properties/>
+		<system-out>intrepid lifecycle passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_rest" classname="f04.intrepid_rest" time="0.0352327" status="run">
+		<properties/>
+		<system-out>intrepid rest passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_beta_gamma" classname="f04.intrepid_beta_gamma" time="0.495374" status="run">
+		<properties/>
+		<system-out>intrepid beta_gamma passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_patterns" classname="f04.intrepid_patterns" time="0.456193" status="run">
+		<properties/>
+		<system-out>intrepid patterns passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_roundtrip" classname="f04.intrepid_roundtrip" time="0.0964979" status="run">
+		<properties/>
+		<system-out>intrepid roundtrip passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_corrupt" classname="f04.intrepid_corrupt" time="0.130698" status="run">
+		<properties/>
+		<system-out>intrepid corrupt passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_process_save" classname="f04.intrepid_process_save" time="0.0901707" status="run">
+		<properties/>
+		<system-out>intrepid process_save passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_process_load" classname="f04.intrepid_process_load" time="0.0763901" status="run">
+		<properties/>
+		<system-out>intrepid process_load passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_structure" classname="f04.organization_structure" time="0.0750421" status="run">
+		<properties/>
+		<system-out>structure passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_vacant" classname="f04.organization_vacant" time="0.0155361" status="run">
+		<properties/>
+		<system-out>vacant passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_profile" classname="f04.organization_profile" time="0.0095238" status="run">
+		<properties/>
+		<system-out>profile passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_bootstrap" classname="f04.organization_bootstrap" time="0.0372217" status="run">
+		<properties/>
+		<system-out>bootstrap passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_assignment" classname="f04.organization_assignment" time="0.0253468" status="run">
+		<properties/>
+		<system-out>assignment passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_qualifications" classname="f04.organization_qualifications" time="0.0407867" status="run">
+		<properties/>
+		<system-out>qualifications passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_authority" classname="f04.organization_authority" time="0.117205" status="run">
+		<properties/>
+		<system-out>authority passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_authority_boundary" classname="f04.organization_authority_boundary" time="0.0870023" status="run">
+		<properties/>
+		<system-out>authority_boundary passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_alpha" classname="f04.organization_alpha" time="0.0494159" status="run">
+		<properties/>
+		<system-out>alpha passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_alpha_deficit" classname="f04.organization_alpha_deficit" time="0.0646537" status="run">
+		<properties/>
+		<system-out>alpha_deficit passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_functions" classname="f04.organization_functions" time="0.0563567" status="run">
+		<properties/>
+		<system-out>functions passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_beta_gamma" classname="f04.organization_beta_gamma" time="0.246161" status="run">
+		<properties/>
+		<system-out>beta_gamma passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_transfer" classname="f04.organization_transfer" time="0.0753902" status="run">
+		<properties/>
+		<system-out>transfer passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_relief" classname="f04.organization_relief" time="0.103583" status="run">
+		<properties/>
+		<system-out>relief passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_lifecycle" classname="f04.organization_lifecycle" time="0.0993552" status="run">
+		<properties/>
+		<system-out>lifecycle passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_rest" classname="f04.organization_rest" time="0.0392744" status="run">
+		<properties/>
+		<system-out>rest passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_roundtrip" classname="f04.organization_roundtrip" time="0.0791933" status="run">
+		<properties/>
+		<system-out>roundtrip passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_determinism" classname="f04.organization_determinism" time="0.0720322" status="run">
+		<properties/>
+		<system-out>determinism passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_corrupt" classname="f04.organization_corrupt" time="0.103878" status="run">
+		<properties/>
+		<system-out>corrupt passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_legacy" classname="f04.organization_legacy" time="0.011651" status="run">
+		<properties/>
+		<system-out>legacy passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_buffers" classname="f04.organization_buffers" time="0.0152406" status="run">
+		<properties/>
+		<system-out>buffers passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_process_save" classname="f04.organization_process_save" time="0.0723101" status="run">
+		<properties/>
+		<system-out>process_save passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_process_load" classname="f04.organization_process_load" time="0.0555168" status="run">
+		<properties/>
+		<system-out>process_load passed
+</system-out>
+	</testcase>
+	<testcase name="f04.population_miranda" classname="f04.population_miranda" time="0.0197292" status="run">
+		<properties/>
+		<system-out>miranda people=130 create_ms=0.4412 manifest_ms=0.0809 lookup_1000_ms=0.2827 update_ms=0.4315 save_ms=1.131 load_ms=0.8052 archive_bytes=31127 peak_working_set_bytes=5001216
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_miranda" classname="f04.population_process_miranda" time="0.0174804" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_intrepid" classname="f04.population_intrepid" time="0.0206928" status="run">
+		<properties/>
+		<system-out>intrepid people=160 create_ms=0.491 manifest_ms=0.0982 lookup_1000_ms=0.3033 update_ms=0.5196 save_ms=1.3953 load_ms=1.0478 archive_bytes=37938 peak_working_set_bytes=4988928
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_intrepid" classname="f04.population_process_intrepid" time="0.0324858" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_sovereign" classname="f04.population_sovereign" time="0.069375" status="run">
+		<properties/>
+		<system-out>sovereign people=700 create_ms=1.8626 manifest_ms=0.3781 lookup_1000_ms=0.2857 update_ms=2.3346 save_ms=5.6439 load_ms=4.2321 archive_bytes=160519 peak_working_set_bytes=6107136
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_sovereign" classname="f04.population_process_sovereign" time="0.0377335" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_odyssey" classname="f04.population_odyssey" time="0.138716" status="run">
+		<properties/>
+		<system-out>odyssey people=1600 create_ms=4.5262 manifest_ms=1.0545 lookup_1000_ms=0.3375 update_ms=5.0817 save_ms=12.7066 load_ms=9.7585 archive_bytes=364817 peak_working_set_bytes=7880704
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_odyssey" classname="f04.population_process_odyssey" time="0.0646488" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_valhalla" classname="f04.population_valhalla" time="0.195153" status="run">
+		<properties/>
+		<system-out>valhalla people=2200 create_ms=5.7511 manifest_ms=1.3571 lookup_1000_ms=0.3454 update_ms=7.4608 save_ms=16.9253 load_ms=13.7883 archive_bytes=501018 peak_working_set_bytes=9076736
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_valhalla" classname="f04.population_process_valhalla" time="0.0912577" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_dynamic" classname="f04.population_dynamic" time="0.0247033" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_budget" classname="f04.population_budget" time="0.0962658" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.identity" classname="f04.identity" time="0.0092663" status="run">
+		<properties/>
+		<system-out>identity: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.class" classname="f04.class" time="0.0096967" status="run">
+		<properties/>
+		<system-out>class: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.vacancy" classname="f04.vacancy" time="0.0060843" status="run">
+		<properties/>
+		<system-out>vacancy: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.manifest" classname="f04.manifest" time="0.0101908" status="run">
+		<properties/>
+		<system-out>manifest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.qualification" classname="f04.qualification" time="0.0057452" status="run">
+		<properties/>
+		<system-out>qualification: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.assignment" classname="f04.assignment" time="0.0081647" status="run">
+		<properties/>
+		<system-out>assignment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.overlap" classname="f04.overlap" time="0.0053542" status="run">
+		<properties/>
+		<system-out>overlap: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.adjacent" classname="f04.adjacent" time="0.0075705" status="run">
+		<properties/>
+		<system-out>adjacent: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.rest" classname="f04.rest" time="0.0152519" status="run">
+		<properties/>
+		<system-out>rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.oncall" classname="f04.oncall" time="0.0088046" status="run">
+		<properties/>
+		<system-out>oncall: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.absence" classname="f04.absence" time="0.0095675" status="run">
+		<properties/>
+		<system-out>absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.relief" classname="f04.relief" time="0.0101321" status="run">
+		<properties/>
+		<system-out>relief: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.coverage" classname="f04.coverage" time="0.0060284" status="run">
+		<properties/>
+		<system-out>coverage: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.policy" classname="f04.policy" time="0.0057461" status="run">
+		<properties/>
+		<system-out>policy: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.roles" classname="f04.roles" time="0.0067091" status="run">
+		<properties/>
+		<system-out>roles: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.watch" classname="f04.watch" time="0.0082615" status="run">
+		<properties/>
+		<system-out>watch: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.appointment" classname="f04.appointment" time="0.0094203" status="run">
+		<properties/>
+		<system-out>appointment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.succession" classname="f04.succession" time="0.011571" status="run">
+		<properties/>
+		<system-out>succession: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.medical" classname="f04.medical" time="0.0167361" status="run">
+		<properties/>
+		<system-out>medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.delegation" classname="f04.delegation" time="0.0079053" status="run">
+		<properties/>
+		<system-out>delegation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.revoke" classname="f04.revoke" time="0.006378" status="run">
+		<properties/>
+		<system-out>revoke: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.expiry" classname="f04.expiry" time="0.0085728" status="run">
+		<properties/>
+		<system-out>expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.origin" classname="f04.origin" time="0.0067712" status="run">
+		<properties/>
+		<system-out>origin: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.technical" classname="f04.technical" time="0.0060004" status="run">
+		<properties/>
+		<system-out>technical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.safety" classname="f04.safety" time="0.0224716" status="run">
+		<properties/>
+		<system-out>safety: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.contact" classname="f04.contact" time="0.0085354" status="run">
+		<properties/>
+		<system-out>contact: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.superior" classname="f04.superior" time="0.0103513" status="run">
+		<properties/>
+		<system-out>superior: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.ai" classname="f04.ai" time="0.0155407" status="run">
+		<properties/>
+		<system-out>ai: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.stale" classname="f04.stale" time="0.0070489" status="run">
+		<properties/>
+		<system-out>stale: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.queued" classname="f04.queued" time="0.0074865" status="run">
+		<properties/>
+		<system-out>queued: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.offscreen" classname="f04.offscreen" time="0.0072833" status="run">
+		<properties/>
+		<system-out>offscreen: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.roundtrip" classname="f04.roundtrip" time="0.0083629" status="run">
+		<properties/>
+		<system-out>roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.determinism" classname="f04.determinism" time="0.011858" status="run">
+		<properties/>
+		<system-out>determinism: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.corrupt" classname="f04.corrupt" time="0.0071769" status="run">
+		<properties/>
+		<system-out>corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.schema" classname="f04.schema" time="0.0076384" status="run">
+		<properties/>
+		<system-out>schema: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.thread" classname="f04.thread" time="0.007311" status="run">
+		<properties/>
+		<system-out>thread: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.scope" classname="f04.scope" time="0.0058961" status="run">
+		<properties/>
+		<system-out>scope: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.buffers" classname="f04.buffers" time="0.0234071" status="run">
+		<properties/>
+		<system-out>buffers: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.bounded" classname="f04.bounded" time="0.0101221" status="run">
+		<properties/>
+		<system-out>bounded: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.backwards" classname="f04.backwards" time="0.0062935" status="run">
+		<properties/>
+		<system-out>backwards: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.integrated" classname="f04.integrated" time="0.0089306" status="run">
+		<properties/>
+		<system-out>integrated: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.recall" classname="f04.recall" time="0.0062528" status="run">
+		<properties/>
+		<system-out>recall: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.rotation" classname="f04.rotation" time="0.0064516" status="run">
+		<properties/>
+		<system-out>rotation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.credential_expiry" classname="f04.credential_expiry" time="0.0056757" status="run">
+		<properties/>
+		<system-out>credential_expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.succession_boundaries" classname="f04.succession_boundaries" time="0.0068843" status="run">
+		<properties/>
+		<system-out>succession_boundaries: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.context_review" classname="f04.context_review" time="0.0075409" status="run">
+		<properties/>
+		<system-out>context_review: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.order_expiry" classname="f04.order_expiry" time="0.006911" status="run">
+		<properties/>
+		<system-out>order_expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.origin_reappointment" classname="f04.origin_reappointment" time="0.0090815" status="run">
+		<properties/>
+		<system-out>origin_reappointment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.pending_credential" classname="f04.pending_credential" time="0.0200643" status="run">
+		<properties/>
+		<system-out>pending_credential: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.authorized_posts" classname="f04.authorized_posts" time="0.0062472" status="run">
+		<properties/>
+		<system-out>authorized_posts: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.process_save" classname="f04.process_save" time="0.0076787" status="run">
+		<properties/>
+		<system-out>process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.process_load" classname="f04.process_load" time="0.0072013" status="run">
+		<properties/>
+		<system-out>process_load: PASS
+</system-out>
+	</testcase>
+</testsuite>
