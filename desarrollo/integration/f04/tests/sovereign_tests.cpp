@@ -176,7 +176,9 @@ void run(const std::string& name,const std::string& file) {
  }
  else if(name=="invalid") {
   auto before=l.save();l.op(F04_PLAN_WATCHES,0,0,0,29*day,F04_ROTATING,F04_ARGUMENT);check(l.duties().empty(),"invalid plan atomic");
-  l.plan();l.op(F04_POLICY,0,0,0,0,4,F04_REVIEW,l.actor());l.op(F04_PLAN_WATCHES,0,0,0,day,F04_REFERENCE,F04_OVERLAP,l.actor());
+  l.plan();l.op(F04_POLICY,0,0,0,0,4,F04_REVIEW,l.actor());
+  l.op(F04_PLAN_ALPHA,0,0,28800,57600,0,F04_REVIEW,l.actor()); // Legacy Alpha must not mix with SCHEMA 4
+  l.op(F04_PLAN_WATCHES,0,0,0,day,F04_REFERENCE,F04_OVERLAP,l.actor());
   l.op(F04_PLAN_WATCHES,0,0,day,2*day,F04_REFERENCE,F04_DENIED,l.post(37).person);
   check(l.stats().crew==700,"no unauthorized state change");
  }
