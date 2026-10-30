@@ -45,7 +45,8 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Authority,"F04.Core.AuthorityAndMedical",Fl
 bool FF04Authority::RunTest(const FString&){
  Lab L;TestTrue(TEXT("Duty"),L.Duty());TestEqual(TEXT("No captain technical privilege"),L.Host->Intent(3,F04_SCAN),uint32(F04_QUALIFICATION));
  TestEqual(TEXT("Ensign no command"),L.Host->Intent(5,F04_BRIDGE),uint32(F04_DENIED));TestEqual(TEXT("Head own department"),L.Host->Intent(4,F04_ASSIGN,12,5),uint32(F04_OK));
- TestEqual(TEXT("Head other department denied"),L.Host->Intent(4,F04_ASSIGN,13,11),uint32(F04_SCOPE));TestEqual(TEXT("Watch authority"),L.Host->Intent(6,F04_BRIDGE),uint32(F04_OK));
+ TestEqual(TEXT("Head other department denied"),L.Host->Intent(4,F04_ASSIGN,13,11),uint32(F04_SCOPE));TestEqual(TEXT("Watch authority changes alert"),L.Host->Intent(6,F04_BRIDGE,0,0,0,0,2),uint32(F04_OK));
+ F04Stats Alert{};L.Host->Stats(Alert);TestEqual(TEXT("Authoritative yellow alert"),Alert.alert,uint64(2));
  TestEqual(TEXT("Captain safety limit"),L.Host->Intent(3,F04_IMPOSSIBLE),uint32(F04_SAFETY));TestEqual(TEXT("Medical relief"),L.Host->Intent(7,F04_MEDICAL,3,0,0,100,F04_SICK),uint32(F04_OK));
  F04Stats S{};L.Host->Stats(S);TestEqual(TEXT("Normal succession"),S.commander,uint64(6));TestEqual(TEXT("Doctor no command"),L.Host->Intent(7,F04_BRIDGE),uint32(F04_DENIED));
  L.Host->Advance(100);L.Host->Stats(S);TestEqual(TEXT("Captain recovers"),S.commander,uint64(3));return true;

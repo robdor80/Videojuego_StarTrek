@@ -20,7 +20,7 @@ constexpr U FOREVER=(1ULL<<48)-1;
 // references use fixed kinds. Core owns both, without interpreting domain data.
 enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
- ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE };
+ ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -128,7 +128,7 @@ U event(Campaign& c,const ContentCatalog& cat,U actor,U op,U code,U cause,U targ
 }
 void initialize(Campaign& c,const ContentCatalog& cat,const char* cls) {
  bool found=false; for(const auto* s:class_ids) found|=std::strcmp(cls,s)==0;need(found);
- const std::string def=std::string("class_")+cls;need(make(c,cat,def.c_str())==1);set(c,1,SCHEMA,1);set(c,1,PATTERN,3);
+ const std::string def=std::string("class_")+cls;need(make(c,cat,def.c_str())==1);set(c,1,SCHEMA,1);set(c,1,PATTERN,3);set(c,1,ALERT,1);
  need(make(c,cat,"population")==2);need(c.world.declare_population(EntityId{2},9)==PopulationChange::applied);
  need(c.world.materialize_population(EntityId{2},9).status==MaterializationStatus::applied);
  for(U p=3;p<=11;++p) {
@@ -157,11 +157,11 @@ void initialize(Campaign& c,const ContentCatalog& cat,const char* cls) {
 bool schema(const Campaign& c) {
  const auto& w=c.world;
  if(w.entity_count()<19 || w.entity_count()>4096 || val(w,1,SCHEMA)!=1 || !w.definition_of(EntityId{1}) ||
-    val(w,1,PATTERN)<3 || val(w,1,PATTERN)>4 || c.time.now()>FOREVER || !c.time.records().empty()) return false;
+    val(w,1,PATTERN)<3 || val(w,1,PATTERN)>4 || val(w,1,ALERT)<1 || val(w,1,ALERT)>3 || c.time.now()>FOREVER || !c.time.records().empty()) return false;
  bool cls=false;for(auto* s:class_ids) cls|=type(w,1,(std::string("class_")+s).c_str());if(!cls)return false;
  for(U id=1;id<=w.entity_count();++id) {
   std::set<U> fields,refs; std::set<U> allowed,required,ar,rr;
-  if(id==1) { allowed={SCHEMA,PATTERN};required=allowed; }
+  if(id==1) { allowed={SCHEMA,PATTERN,ALERT};required=allowed; }
   else if(type(w,id,"population")) { if(id!=2)return false; }
   else if(type(w,id,"person")) { allowed={CATEGORY,RANK,DEPT,QUAL,UNTIL};required=allowed;ar={SHIP};rr=ar; }
   else if(type(w,id,"slot")) { allowed={DEPT,QUAL,REQUIRED};required=allowed;ar={SHIP,PERSON};rr={SHIP}; }
@@ -331,7 +331,8 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   action(c,p,PlaceEntityAction{EntityId{p},EntityId{target}});return target;
  }
  case F04_BRIDGE: {
-  need(commander(c.world,t)==p || (active_role(c.world,p,F04_WATCH,t) && qualified(c.world,p,F04_COMMAND,t)),F04_DENIED);return 0;
+  need(commander(c.world,t)==p || (active_role(c.world,p,F04_WATCH,t) && qualified(c.world,p,F04_COMMAND,t)),F04_DENIED);
+  need(r.value<=3);set(c,1,ALERT,r.value?r.value:1);return 1;
  }
  case F04_IMPOSSIBLE: cmd();need(false,F04_SAFETY);return 0;
  case F04_CONTACT: {
@@ -401,7 +402,7 @@ uint32_t f04_stats(F04Session* s,F04Stats* out) {
   for(U p:all(c.world,"person")) {const U k=val(c.world,p,CATEGORY);if(k==1)++out->crew;else if(k==2)++out->civilians;else ++out->passengers;}
   for(U a:all(c.world,"slot")){++out->slots;if(!duty(c.world,ref(c.world,a,PERSON),a,c.time.now()))++out->vacancies;}
   for(U a:all(c.world,"task"))if(val(c.world,a,STATE)==ACTIVE)++out->pending;
-  out->events=all(c.world,"event").size();out->commander=commander(c.world,c.time.now());out->pattern=val(c.world,1,PATTERN);return F04_OK;
+  out->events=all(c.world,"event").size();out->commander=commander(c.world,c.time.now());out->pattern=val(c.world,1,PATTERN);out->alert=val(c.world,1,ALERT);return F04_OK;
  });
 }
 uint32_t f04_execute(F04Session* s,const F04Request* r,F04Result* out) {

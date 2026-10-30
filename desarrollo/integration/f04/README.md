@@ -91,6 +91,32 @@ de reloj: presupuesto agotado publica progreso acotado y devuelve CAPACITY;
 reanudar con el mismo horizonte conserva determinismo. Se registran también
 los cambios de mando al atravesar comienzos/finales sin Actors.
 
+| Intención | Parámetros específicos |
+| --- | --- |
+| ASSIGN | target=plaza, aux=persona existente (0 desasigna) |
+| DUTY | target=persona, aux=plaza asignada, start/end |
+| REST / ONCALL | target=persona, start/end; REST también representa franco protegido |
+| ABSENCE | target=persona, start/end, value=LEAVE/SICK/SUSPENDED |
+| RELIEF | target=actividad DUTY saliente, aux=persona entrante; desde ahora hasta fin vigente |
+| APPOINT | target=persona, value=rol, aux=departamento, start/end |
+| DELEGATE | target=persona, value=POLICY, start/end |
+| REVOKE | target=nombramiento/delegación/orden; autoridad vigente o emisor externo según tipo |
+| MEDICAL | target=persona, value=SICK, start/end, cause=juicio documentado |
+| POLICY | value=3 o 4; exige cobertura del siguiente ciclo |
+| BRIDGE | value=alerta 1 verde / 2 amarilla / 3 roja (0 equivale a 1) |
+| MOVE | target=consola de la guardia propia; ubicación diagnóstica, sin simular viaje |
+| SCAN | estación Sensores propia, guardia/aptitud/cualificación/presencia válidas |
+| CONTACT_REVIEW | value=bits de revisión descritos arriba, start/end, cause=evidencia |
+| CONTACT | target=revisión persistida vigente del comandante actual |
+| SUPERIOR | actor con mandato externo, value=dominio, start/end, cause=documento |
+| QUEUE | value=SCAN, start=instante de ejecución, end=caducidad, cause |
+| RECALL | target=descanso activo, value=deuda positiva, cause=emergencia |
+| PROPOSE | Solo registra sugerencia; no aplica su política |
+
+El diagnóstico SCAN persiste RNG y evento; no sustituye la simulación completa
+de sensores F06. BRIDGE modifica la alerta en WorldState y permite comprobar
+una consecuencia operativa real del oficial de guardia.
+
 El manifiesto distingue disponibilidad, guardia, localización y consola física.
 Las plazas distinguen requerida, asignada y cubierta, e indican si el observador
 está habilitado actualmente. Ausencias invalidan cobertura sin borrar la plaza;

@@ -32,7 +32,7 @@ typedef struct { uint32_t code,reserved; uint64_t record,revision; } F04Result;
 typedef struct { F04Ref ship,captain,head,ensign,watch,doctor,relief,civilian,passenger,admiral;
  uint64_t sensors,engineering,bridge; } F04Handles;
 typedef struct { uint64_t entities,revision,now,crew,civilians,passengers,slots,vacancies,
- commander,pending,events,pattern; } F04Stats;
+ commander,pending,events,pattern,alert; } F04Stats;
 typedef struct { uint64_t id,person,department,qualification; uint32_t required,covered,authorized,reserved; } F04Slot;
 typedef struct { uint64_t id,category,rank,department; uint32_t available,on_duty,localized,at_console; } F04Person;
 /* label: 0 Alpha, 1 Beta, 2 Gamma, 3 Delta; seconds on Core campaign clock. */

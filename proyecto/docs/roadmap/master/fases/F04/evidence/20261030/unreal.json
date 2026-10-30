@@ -9,119 +9,119 @@
     {
       "name": "F02.Core.ActorLifecycle",
       "state": "Success",
-      "duration": 0.03937600180506706,
+      "duration": 0.023771800100803375,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F02.Core.CorruptLoad",
       "state": "Success",
-      "duration": 0.04462989792227745,
+      "duration": 0.026961199939250946,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F02.Core.HostRecovery",
       "state": "Success",
-      "duration": 0.025807801634073257,
+      "duration": 0.037316400557756424,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F02.Core.Projection",
       "state": "Success",
-      "duration": 0.024698302149772644,
+      "duration": 0.03257180005311966,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F02.Core.ThreadAffinity",
       "state": "Success",
-      "duration": 0.024474799633026123,
+      "duration": 0.020126700401306152,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F02.Core.WorldScopedRepresentation",
       "state": "Success",
-      "duration": 0.018399298191070557,
+      "duration": 0.01945580169558525,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.IdentityLodWorlds",
       "state": "Success",
-      "duration": 0.02662929892539978,
+      "duration": 0.024429798126220703,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.Knowledge",
       "state": "Success",
-      "duration": 0.03151160106062889,
+      "duration": 0.016706101596355438,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.Offscreen",
       "state": "Success",
-      "duration": 0.039950400590896606,
+      "duration": 0.02156129851937294,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.Recovery",
       "state": "Success",
-      "duration": 0.019848201423883438,
+      "duration": 0.03128740191459656,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.SafeFailure",
       "state": "Success",
-      "duration": 0.020123999565839767,
+      "duration": 0.036044299602508545,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F03.Core.ThreadAuthority",
       "state": "Success",
-      "duration": 0.01698239892721176,
+      "duration": 0.02885190024971962,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F04.Core.AbsenceReliefOffscreen",
       "state": "Success",
-      "duration": 0.022702500224113464,
+      "duration": 0.014806002378463745,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F04.Core.AuthorityAndMedical",
       "state": "Success",
-      "duration": 0.013747498393058777,
+      "duration": 0.018262699246406555,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F04.Core.NewSessionRecovery",
       "state": "Success",
-      "duration": 0.028125301003456116,
+      "duration": 0.022767499089241028,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F04.Core.RealWorldsActors",
       "state": "Success",
-      "duration": 0.018210798501968384,
+      "duration": 0.019405700266361237,
       "warnings": 0,
       "errors": 0
     },
     {
       "name": "F04.Core.SafeLoadAndThread",
       "state": "Success",
-      "duration": 0.03624069690704346,
+      "duration": 0.021183103322982788,
       "warnings": 0,
       "errors": 0
     }
