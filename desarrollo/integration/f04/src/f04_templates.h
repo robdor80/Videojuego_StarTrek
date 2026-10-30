@@ -134,12 +134,14 @@ inline constexpr uint64_t intrepid_continuous[]={F04_ST_COMMAND,F04_ST_HELM,
 
 #include "f04_sovereign.h"
 #include "f04_odyssey.h"
+#include "f04_valhalla.h"
 
 inline const Profile* profile(uint64_t id) {
  static const Profile registry[]={{sutherland,sections,qualifications,responsibility,sutherland_continuous},
   {intrepid,intrepid_sections,intrepid_qualifications,intrepid_responsibility,intrepid_continuous},
   {sovereign,sovereign_sections,sovereign_qualifications,sovereign_responsibility,sovereign_continuous,sovereign_demands},
-  {odyssey,odyssey_sections,odyssey_qualifications,odyssey_responsibility,odyssey_continuous,odyssey_demands}};
+  {odyssey,odyssey_sections,odyssey_qualifications,odyssey_responsibility,odyssey_continuous,odyssey_demands},
+  {valhalla,valhalla_sections,valhalla_qualifications,valhalla_responsibility,valhalla_continuous,valhalla_demands}};
  for(const auto& p:registry)if(p.spec.id==id)return &p;
  return nullptr;
 }

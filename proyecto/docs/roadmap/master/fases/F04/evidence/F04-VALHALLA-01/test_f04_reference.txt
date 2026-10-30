@@ -1,0 +1,27 @@
+test_all_39_fixture_cases (test_f04_reference.F04ReferenceTests) ... ok
+test_bound_f04_evidence_requires_actual_allow (test_f04_reference.F04ReferenceTests) ... ok
+test_captain_can_reject_engine_preference (test_f04_reference.F04ReferenceTests) ... ok
+test_captain_must_have_appointment (test_f04_reference.F04ReferenceTests) ... ok
+test_command_requires_literal_boolean_evidence (test_f04_reference.F04ReferenceTests) ... ok
+test_contiguous_half_open_windows (test_f04_reference.F04ReferenceTests) ... ok
+test_delegate_cannot_extend_origin_permission (test_f04_reference.F04ReferenceTests) ... ok
+test_delegate_domain_confined (test_f04_reference.F04ReferenceTests) ... ok
+test_delegation_rejects_boolean_tick_as_integer (test_f04_reference.F04ReferenceTests) ... ok
+test_invalid_boolean_window_is_error_not_valid_time (test_f04_reference.F04ReferenceTests) ... ok
+test_medical_removal_does_not_grant_command (test_f04_reference.F04ReferenceTests) ... ok
+test_no_unqualified_fallback_spawn (test_f04_reference.F04ReferenceTests) ... ok
+test_preemption_requires_finite_numeric_fatigue_not_boolean (test_f04_reference.F04ReferenceTests) ... ok
+test_prime_directive_review_not_automatic_hard_block (test_f04_reference.F04ReferenceTests) ... ok
+test_rank_cannot_confer_command (test_f04_reference.F04ReferenceTests) ... ok
+test_reference_binding_rejects_boolean_world_revision (test_f04_reference.F04ReferenceTests) ... ok
+test_repository_inputs_match_canonical_semantics (test_f04_reference.F04ReferenceTests) ... ok
+test_technical_capability_required_for_sensor (test_f04_reference.F04ReferenceTests) ... ok
+test_two_characters_can_cover_two_slots (test_f04_reference.F04ReferenceTests) ... ok
+test_unknown_action_fails_closed (test_f04_reference.F04ReferenceTests) ... ok
+test_untraced_override_rejected (test_f04_reference.F04ReferenceTests) ... ok
+test_worse_choice_cannot_break_hard_safety (test_f04_reference.F04ReferenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.074s
+
+OK

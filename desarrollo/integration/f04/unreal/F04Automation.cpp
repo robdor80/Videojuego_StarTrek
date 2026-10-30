@@ -181,4 +181,35 @@ bool FF04Odyssey::RunTest(const FString&){
  TestTrue(TEXT("Same watch"),Recovered->OnDuty);L.Host->Dematerialize(B.W);L.Host->Advance(28*86400-1);L.Host->Save(After);
  TestTrue(TEXT("Same offscreen future"),After==Future);return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Valhalla,"F04.Core.ValhallaCommunityAndSpecialistsOffscreen",Flags)
+bool FF04Valhalla::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{69001,404,1800,400,0,0};
+ if(!TestTrue(TEXT("2200 Core people"),L.Host->OpenPopulation("valhalla",Config)))return false;
+ if(!TestTrue(TEXT("Valhalla profile5"),L.Host->InstallOrganization(F04_VALHALLA_FLAGSHIP,F04_VALHALLA_EQUIPMENT)))return false;
+ if(!TestTrue(TEXT("Existing identities fixture"),L.Host->BootstrapOrganizationFixture()))return false;
+ TArray<F04Resident> Residents;TArray<F04Specialist> Specialists;F04Auxiliary Auxiliary{};
+ TestTrue(TEXT("Core census"),L.Host->Residents(Residents));TestEqual(TEXT("400 residents"),Residents.Num(),400);
+ TestTrue(TEXT("Core specialists"),L.Host->Specialists(Specialists));TestEqual(TEXT("1800 unique fleet"),Specialists.Num(),1800);
+ TestTrue(TEXT("Persistent Defiant"),L.Host->Auxiliary(Auxiliary));uint32 Marine=0,Naval=0,MarineCount=0,NavalCount=0;
+ for(const auto& P:Specialists){if(P.group==F04_ODIN_MARINE){Marine=static_cast<uint32>(P.person);++MarineCount;}if(P.group==F04_DEFIANT_NAVAL){Naval=static_cast<uint32>(P.person);++NavalCount;TestEqual(TEXT("Same auxiliary"),P.operational_ship,Auxiliary.entity);}}
+ TestEqual(TEXT("40 naval"),NavalCount,uint32(40));TestEqual(TEXT("60 Marines"),MarineCount,uint32(60));
+ if(!TestTrue(TEXT("28 days"),L.Host->PlanWatches(0,28*86400,false,true)))return false;
+ TArray<F04ServiceCoverage> Coverage;TestTrue(TEXT("Full coverage query"),L.Host->ServiceCoverage(0,28*86400,Coverage));
+ TestEqual(TEXT("8 services"),Coverage.Num(),8);for(const auto& C:Coverage)TestTrue(TEXT("No critical gap"),C.covered==1);
+ F04OrganizationStats Org{};L.Host->Organization(Org);TestEqual(TEXT("90 sections"),Org.sections,uint64(90));TestEqual(TEXT("Gamma255"),Org.on_duty,uint64(255));
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;TestEqual(TEXT("No 2200 automatic Actors"),Count,0);
+ F04Stats State{};L.Host->Stats(State);const uint32 Commander=static_cast<uint32>(State.commander);
+ TestEqual(TEXT("Marine cannot gain pilot qualification"),L.Host->Intent(Commander,F04_CREDENTIAL,Marine,1ULL<<F04_Q_DEFIANT_BRIDGE,0,(1ULL<<48)-1),uint32(F04_QUALIFICATION));
+ TestEqual(TEXT("Marine does not govern ship"),L.Host->Intent(Marine,F04_BRIDGE),uint32(F04_DENIED));
+ TestEqual(TEXT("Naval specialist has no Valhalla command"),L.Host->Intent(Naval,F04_BRIDGE),uint32(F04_DENIED));
+ if(Residents.Num()!=400)return false;const uint32 Civil=static_cast<uint32>(Residents[0].person);
+ TestEqual(TEXT("Civil cannot command"),L.Host->Intent(Civil,F04_BRIDGE),uint32(F04_UNAVAILABLE));
+ TestEqual(TEXT("Resident absent"),L.Host->Intent(Commander,F04_CIVIL_PRESENCE,Civil),uint32(F04_OK));
+ auto* Marker=L.Host->Represent(A.W,Civil);if(!TestNotNull(TEXT("One optional civilian Actor"),Marker))return false;
+ TestFalse(TEXT("Civilian never on military duty"),Marker->OnDuty);L.Host->Dematerialize(A.W);
+ TArray<uint8> Before,After,Future;L.Host->Save(Before);L.Host->Advance(28*86400-1);L.Host->Save(Future);
+ TestTrue(TEXT("Restore community"),L.Host->Load(Before));L.Host->Residents(Residents);TestTrue(TEXT("Absence persisted"),Residents.Num()==400 && !Residents[0].present);
+ L.Host->Save(After);TestTrue(TEXT("Exact archive"),Before==After);TestNotNull(TEXT("Selective recovery"),L.Host->Represent(B.W,Civil));L.Host->Dematerialize(B.W);
+ L.Host->Advance(28*86400-1);L.Host->Save(After);TestTrue(TEXT("Same future without Actors"),Future==After);return true;
+}
 #endif

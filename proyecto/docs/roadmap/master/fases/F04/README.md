@@ -2,7 +2,13 @@
 
 ## Plan operativo de cierre, 31-10-2026
 
-- [F04-VALHALLA-01 — plantilla de 1.800 Flota, 400 civiles y 90 secciones, 550/380/255/615 en día de referencia](F04-VALHALLA-01_PLANTILLA_1800_Y_CIVILES_400.md). La dotación de Defiant (40 especialistas navales) y Marines Hijos de Odín (60 soldados, no pilotos) se cuenta dentro de los 1.800. Solo diseño por ahora.
+[F04-VALHALLA-01 — implementación para auditoría](F04-VALHALLA-01_ORGANIZACION_GRAN_NAVE.md):
+1.800 Flota + 400 civiles, 90 secciones, Defiant 40 y Marines 60 diferenciados.
+Referencia exacta y horizontes 1/7/14/28 probados; 672/672 ventanas críticas a
+28 días y 720 carencias no críticas. F04 permanece **EN_CURSO**, sin iniciar
+GUARDIAS-02. La auditoría/fusión de la PR sigue pendiente.
+
+- [F04-VALHALLA-01 — plantilla de 1.800 Flota, 400 civiles y 90 secciones, 550/380/255/615 en día de referencia](F04-VALHALLA-01_PLANTILLA_1800_Y_CIVILES_400.md). La dotación de Defiant (40 especialistas navales) y Marines Hijos de Odín (60 soldados, no pilotos) se cuenta dentro de los 1.800. Fuente de diseño; implementación enlazada arriba, pendiente de auditoría.
 - [Secuencia de cinco entregas para cerrar F04](PLAN_CIERRE_F04_2026-10-31.md): Valhalla, Guardia Miranda/Intrepid, Historial largo, Integración secciones/Defiant y Auditoría final. Cada subfase precisa PR Draft y auditoría independiente.
 - Decisiones de autor vinculantes: [DEC-0017–0019](../../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md). F04 **EN_CURSO** hasta pruebas, auditoría y acta real.
 

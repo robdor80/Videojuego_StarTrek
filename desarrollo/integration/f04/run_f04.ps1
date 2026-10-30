@@ -55,5 +55,5 @@ if($Stage -in @('TestUnreal','All')){
  $Report=Join-Path $BuildRoot ($Run+'-ue-report')
  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') @($Project,'-unattended','-nop4','-nosplash','-NullRHI','-nosound','-NoLiveCoding','-ExecCmds=Automation RunTests F0','-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')
  $Result=Get-Content -LiteralPath (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
- if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne 22){throw 'Expected 22 passing F02/F03/F04 Actor and UWorld tests'}
+ if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne 23){throw 'Expected 23 passing F02/F03/F04 Actor and UWorld tests'}
 }

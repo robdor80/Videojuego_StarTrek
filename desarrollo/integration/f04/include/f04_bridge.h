@@ -23,7 +23,7 @@ enum F04Op { F04_ASSIGN=1,F04_DUTY,F04_REST,F04_ONCALL,F04_ABSENCE,F04_RELIEF,
  F04_EMBARK,F04_DEPART,F04_CREATE_SLOT,
  F04_INSTALL_TEMPLATE,F04_BOOTSTRAP_TEMPLATE,F04_CREDENTIAL,F04_TRANSFER,
  F04_FUNCTION,F04_PLAN_ALPHA,
- F04_PLAN_WATCHES,F04_COVER_DUTY,F04_CANCEL_DUTY };
+ F04_PLAN_WATCHES,F04_COVER_DUTY,F04_CANCEL_DUTY,F04_CIVIL_PRESENCE };
 enum F04Role { F04_CAPTAIN=1,F04_HEAD,F04_WATCH,F04_DOCTOR,F04_FIRST,F04_SECOND,F04_SUCCESSOR,F04_DEPUTY,F04_DUTY_HEAD };
 /* Existing department and qualification IDs 1..4 never change. */
 enum F04Dept { F04_SENSORS=1,F04_ENGINEERING=2,F04_COMMAND=3,F04_MEDICINE=4,
@@ -33,18 +33,23 @@ enum F04Qualification { F04_Q_HELM=8,F04_Q_MISSION,F04_Q_PROPULSION,F04_Q_POWER,
  F04_Q_GEOLOGY,F04_Q_LAB,F04_Q_COMMUNICATIONS,F04_Q_TRANSPORTER,F04_Q_COMPUTING,
  F04_Q_TACTICAL,F04_Q_INTERIOR_SECURITY,F04_Q_EMERGENCY,F04_Q_SHUTTLE,
  F04_Q_HANGAR,F04_Q_CARGO,F04_Q_CLINICAL,F04_Q_NURSING,F04_Q_DIAGNOSTICS,
- F04_Q_PSYCHOLOGY,F04_Q_DIPLOMACY,F04_Q_XENOLINGUISTICS,F04_Q_CRYPTOGRAPHY,F04_Q_SURGERY };
+ F04_Q_PSYCHOLOGY,F04_Q_DIPLOMACY,F04_Q_XENOLINGUISTICS,F04_Q_CRYPTOGRAPHY,F04_Q_SURGERY,
+ F04_Q_DEFIANT_BRIDGE,F04_Q_DEFIANT_ENGINEERING,F04_Q_DEFIANT_SENSORS,
+ F04_Q_DEFIANT_TACTICAL,F04_Q_DEFIANT_MEDICAL,F04_Q_MARINE_COMMAND,
+ F04_Q_MARINE_SPECIAL_OPERATIONS,F04_Q_MARINE_INTELLIGENCE,
+ F04_Q_MARINE_TECHNICAL,F04_Q_MARINE_RECOVERY };
 enum F04Station { F04_ST_COMMAND=1,F04_ST_HELM=2,F04_ST_SENSORS=4,
  F04_ST_ENGINEERING=8,F04_ST_COMMUNICATIONS=16,F04_ST_TRANSPORTER=32,
  F04_ST_COMPUTER=64,F04_ST_TACTICAL=128,F04_ST_HANGAR=256,F04_ST_MEDICAL=512,
  F04_ST_LAB=1024,F04_ST_CARGO=2048,F04_ST_SECURITY=4096 };
 enum F04Coverage { F04_DAY_ACTIVITY=1,F04_CONTINUOUS_CANDIDATE,F04_URGENT_PENDING };
-enum F04Template { F04_SUTHERLAND_SCIENCE=1, F04_INTREPID_EXPLORATION=2, F04_SOVEREIGN_MULTIMISSION=3, F04_ODYSSEY_MULTIMISSION=4 };
+enum F04Template { F04_SUTHERLAND_SCIENCE=1, F04_INTREPID_EXPLORATION=2, F04_SOVEREIGN_MULTIMISSION=3, F04_ODYSSEY_MULTIMISSION=4, F04_VALHALLA_FLAGSHIP=5 };
 #define F04_SUTHERLAND_EQUIPMENT UINT64_C(8191)
 /* Functional system references; counts and special technology remain configurable. */
 #define F04_INTREPID_EQUIPMENT UINT64_C(8191)
 #define F04_SOVEREIGN_EQUIPMENT UINT64_C(8191)
 #define F04_ODYSSEY_EQUIPMENT UINT64_C(8191)
+#define F04_VALHALLA_EQUIPMENT UINT64_C(8191)
 enum F04Absence { F04_LEAVE=1,F04_SICK=2,F04_SUSPENDED=3 };
 /* Host authenticates actor; all operations are intentions, never permissions.
  * target/aux depend on operation. revision must equal the current world revision.
@@ -143,6 +148,24 @@ typedef struct { uint64_t person,nominal_slot; } F04ReliefCandidate;
  */
 F04_API uint32_t f04_relief_candidates_page(F04Session*,F04Ref,uint64_t duty,uint64_t start,uint64_t end,uint64_t offset,F04ReliefCandidate*,uint64_t capacity,uint64_t* written,uint64_t* total);
 F04_API uint32_t f04_service_coverage(F04Session*,F04Ref,uint64_t start,uint64_t end,F04ServiceCoverage*,uint64_t capacity,uint64_t* count);
+/* Additive ABI1/SCHEMA4 Valhalla vocabulary; all fields project Core state.
+ * Group is organization, not a rank/authority. Auxiliary operators retain one
+ * Valhalla administrative slot and operate the single persistent docked vessel.
+ * Marine superior is detachment/team command only; never ship command.
+ * Civil agenda is a minimal recurring optional reservation, not military duty.
+ * CIVIL_PRESENCE: commander, target=existing resident, value=0 away/1 aboard.
+ */
+enum F04ServiceGroup { F04_VALHALLA_NAVAL=1,F04_DEFIANT_NAVAL,F04_ODIN_MARINE };
+enum F04CivilCategory { F04_CIVIL_FAMILY=1,F04_CIVIL_STUDENT,F04_CIVIL_RESEARCH,
+ F04_CIVIL_COMMUNITY,F04_CIVIL_SERVICES,F04_CIVIL_ADMINISTRATION };
+typedef struct { uint64_t person,group,section,administrative_ship,operational_ship,superior;
+ uint32_t available,on_duty; } F04Specialist;
+typedef struct { uint64_t person,category,residence,area,related_person,agenda_kind,agenda_start,agenda_end;
+ uint32_t present,agenda_active; } F04Resident;
+typedef struct { uint64_t entity,parent,identity; uint32_t docked,reserved; } F04Auxiliary;
+F04_API uint32_t f04_specialists_page(F04Session*,F04Ref,uint64_t offset,F04Specialist*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f04_residents_page(F04Session*,F04Ref,uint64_t offset,F04Resident*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f04_auxiliary(F04Session*,F04Ref,F04Auxiliary*);
 #ifdef __cplusplus
 }
 #endif

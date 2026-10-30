@@ -1,0 +1,13 @@
+{
+  "retained_days": 28,
+  "rejected_end_day": 56,
+  "code": "F04_CAPACITY",
+  "entities_before_rejection": 37553,
+  "entities_after_rejection": 37554,
+  "archive_bytes_retained": 11805987,
+  "archive_bytes_after_rejection": 11806157,
+  "duties_retained": 32460,
+  "partial_duties_published": 0,
+  "limit_entities": 65536,
+  "limit_archive_bytes": 67108864
+}

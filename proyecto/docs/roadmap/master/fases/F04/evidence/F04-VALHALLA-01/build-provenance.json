@@ -1,0 +1,58 @@
+{
+  "base": "78fa53f99c384f4111f42d61d71fa2510b56f6b5",
+  "branch": "codex/f04-valhalla-01-gran-nave-2200",
+  "cores": {
+    "C:\\F04\\CoreRPG": {
+      "sha": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+      "status": ""
+    },
+    "C:\\F04\\core-f02": {
+      "sha": "4f282863737bcd8f5add401202a9e1064c133672",
+      "status": ""
+    },
+    "C:\\F04\\core-f03": {
+      "sha": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+      "status": ""
+    }
+  },
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "compiler": "MSVC 19.51.36256 / Visual Studio 18 2026 / x64 Release",
+  "native_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+  "unreal_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+  "source_sha256": {
+    "desarrollo/integration/f04/include/f04_bridge.h": "f24a2520dd435b651ddef55ba2ed2f88a338a6d98991c94a44f310901c282f45",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "db27093d23b765798c0ecd210bbd16199799655a0e4e37b686b9fa657b9cf069",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "8ffcf0df93d70a5cf8b5f8de18799742d772a2e1b882d200e6e7e36b13c63047",
+    "desarrollo/integration/f04/src/f04_organization.inc": "d5b3a1e12836955e78a59360443368b636bd445a3dfee7a3a78ee0f57fe6d980",
+    "desarrollo/integration/f04/src/f04_roster.inc": "a2bc9b8509d8bd0dccb38fbb332300eb3b72a973555b28cdbb7e92e064faba00",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "bf2428844a3dcfddf626b458a6c07aa56b4e3779543c7099255d4a7328f7742f",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "1a05ff3d3c410117ff73d02b49067a4780cb3d120f22790f1a2d43d9dc4f3abe",
+    "desarrollo/integration/f04/src/f04_templates.h": "4f63b8b0796f6ea6dff0fc22742b426238178f6d736b35285913c62b40c91f8f",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "1573f84bcebf87cd4c933abd472d6d9681f0b4ea1e6ee8cc9626afa8e71bef33",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "50e218a4b42e058dde7235e86d40833535fbcae5ea69745ae0babedb55cdfc19",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "7e9f7a7fae47641af93f681754fa01b70e7f4c1fe3dcca630016b67b96f88de9",
+    "desarrollo/integration/f04/tests/f04_tests.cpp": "b8be7a35ecf7dce2fce07e1e4cc3fd1819d32ed71d96c0158d2b6c5fa8dc8314",
+    "desarrollo/integration/f04/tests/intrepid_tests.cpp": "7c050ae207abe3e2ea671046d94ac380e1b4744f7b542dc95496e3890a90c1c3",
+    "desarrollo/integration/f04/tests/odyssey_tests.cpp": "9f803a96f7ecf4d268c5f8d9069c3b11df8bfbf58a80c369968943df9cad2074",
+    "desarrollo/integration/f04/tests/organization_lab.h": "af3d387b3957a8515970ee73f0745166e4d4a1915bf321140dca86bf1d9f7ceb",
+    "desarrollo/integration/f04/tests/organization_tests.cpp": "009fcee876b2efdd8db0202e3450b5c36a385690c4fcc9cfca8bf34298df87eb",
+    "desarrollo/integration/f04/tests/population_tests.cpp": "2336a3385884843e1cf5cd435b637b0b2b1c9ae34e1c489810f48c6df3a014ac",
+    "desarrollo/integration/f04/tests/sovereign_tests.cpp": "ce642cd4cab760e86406f1778df68071998fbc462af52864ff2553a9f0336ef3",
+    "desarrollo/integration/f04/tests/valhalla_tests.cpp": "edcf2beef8bb478e949e157fbd6f5cbb3a5bb97b4597a3a5072925d47cc0b040",
+    "desarrollo/integration/f04/unreal/F02CoreLab.cpp": "1d5cad0dfb0603907ca8427c0545b5bfd99287053994adc93f2577252ea1b69d",
+    "desarrollo/integration/f04/unreal/F04Automation.cpp": "47d51a4ab56d8179ca214aa7fedcc036caf486a93baeadac675196e972a5d7da",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.cpp": "157c512c866f98cfa355af51ffa46bf43a5df448ba1dffc0e8abb7b6618b6092",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.h": "e7bf08f8550c78d23728c6dc4b1ad3a5c1cbfe563a8292f75a58a8ac67574a09"
+  },
+  "main_status": "",
+  "scope": "Only F04 integration code, tests and F04 documentation/evidence. No Core/3D/art/backups changes."
+}

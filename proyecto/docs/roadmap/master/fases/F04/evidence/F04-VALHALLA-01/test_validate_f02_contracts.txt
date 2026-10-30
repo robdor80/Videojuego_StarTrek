@@ -1,0 +1,14 @@
+test_blob_sha_drift (test_validate_f02_contracts.ValidatorTests) ... ok
+test_broken_test_ref (test_validate_f02_contracts.ValidatorTests) ... ok
+test_duplicate_adapter (test_validate_f02_contracts.ValidatorTests) ... ok
+test_leaked_sensor_field_requirement (test_validate_f02_contracts.ValidatorTests) ... ok
+test_missing_gap (test_validate_f02_contracts.ValidatorTests) ... ok
+test_missing_p02_selector (test_validate_f02_contracts.ValidatorTests) ... ok
+test_missing_source (test_validate_f02_contracts.ValidatorTests) ... ok
+test_valid_fixture (test_validate_f02_contracts.ValidatorTests) ... ok
+test_windows_crlf_checkout (test_validate_f02_contracts.ValidatorTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.517s
+
+OK

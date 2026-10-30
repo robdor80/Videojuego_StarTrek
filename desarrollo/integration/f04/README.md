@@ -1,5 +1,15 @@
 # F04 — organización operativa sobre CoreRPG
 
+[F04-VALHALLA-01 — La gran nave](../../../proyecto/docs/roadmap/master/fases/F04/F04-VALHALLA-01_ORGANIZACION_GRAN_NAVE.md)
+añade `F04_VALHALLA_FLAGSHIP=5`: 1.800 plazas, 90 secciones y 400 civiles
+persistentes; referencia 550/380/255/615. Incluye 40 navales Defiant y 60 Marines
+con competencias independientes, censo/residencias y agendas civiles mínimas.
+Reutiliza ABI 1/SCHEMA 4 y el planificador existente. Los 28 días cubren 672/672
+ventanas críticas, con 720 carencias de demanda no crítica. Acumular otro bloque
+hasta día 56 devuelve CAPACITY sin guardias parciales; deuda para PERSISTENCIA-03.
+Separación física/lógica ejecutable entre secciones y traslado Defiant siguen en
+INTEGRACION-04. No se modifican CoreRPG ni recursos artísticos.
+
 La ampliación [F04-MIRANDA-01 — Organización de la USS Sutherland](../../../proyecto/docs/roadmap/master/fases/F04/F04-MIRANDA-01_ORGANIZACION_USS_SUTHERLAND.md)
 añade un perfil explícito de 130 plazas, siete departamentos, 32 secciones y
 Alpha de 53 personas, con SCHEMA=3 compatible con los archivos anteriores.
@@ -62,7 +72,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 22 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 10.
+El comando ejecuta 23 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 11.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.

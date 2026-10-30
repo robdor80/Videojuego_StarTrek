@@ -21,12 +21,13 @@ using U=uint64_t;
 constexpr U FOREVER=(1ULL<<48)-1;
 // Versioned Trek relation-label vocabulary. Scalar values are self-edges;
 // references use fixed kinds. Core owns both, without interpreting domain data.
-enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN };
+enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
  TEMPLATE,EQUIPMENT,SECTION_KEY,STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,
- STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP };
+ STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP,
+ SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -104,7 +105,7 @@ void link(Campaign& c,U id,Ref field,U target) {
 CatalogBuildResult catalog() {
  const auto p=*PackId::parse("trek.f04"); const auto v=*SemanticVersion::parse("0.1.0");
  std::vector<ContentDefinitionInput> defs;
- for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function","roster_plan","roster_gap"})
+ for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function","roster_plan","roster_gap","auxiliary_defiant"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
  for(const char* t:class_ids) defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:class_")+t),*ResourceKind::parse("structural")});
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
@@ -118,9 +119,16 @@ U make(Campaign& c,const ContentCatalog& cat,const char* name) {
  return id.value();
 }
 void temporal(Campaign& c,U id,U start,U end) { need(start<end && end<=FOREVER); set(c,id,START,start);set(c,id,END,end);set(c,id,STATE,ACTIVE); }
-constexpr U QUALIFICATIONS=(1ULL<<36)-2;
-bool qualified(const WorldState& w,U p,U q,U t) { return q>=1 && q<=35 && (val(w,p,QUAL)&(1ULL<<q)) && t<val(w,p,UNTIL); }
+constexpr U QUALIFICATIONS=(1ULL<<46)-2;
+bool primary_operator(const WorldState& w,U p) {
+ return !has(w,p,SERVICE_GROUP) || (val(w,p,SERVICE_GROUP)!=F04_DEFIANT_NAVAL && val(w,p,SERVICE_GROUP)!=F04_ODIN_MARINE);
+}
+bool qualified(const WorldState& w,U p,U q,U t) { return q>=1 && q<=45 && (val(w,p,QUAL)&(1ULL<<q)) && t<val(w,p,UNTIL); }
 bool slot_qualified(const WorldState& w,U p,U slot,U t) {
+ if(has(w,p,SERVICE_GROUP)) {
+  const U section=val(w,ref(w,slot,SECTION),SECTION_KEY);
+  if(val(w,p,SERVICE_GROUP)!=trek_templates::valhalla_group(section))return false;
+ }
  const U mask=has(w,slot,QUAL_MASK)?val(w,slot,QUAL_MASK):1ULL<<val(w,slot,QUAL);
  return (val(w,p,QUAL)&mask)==mask && t<val(w,p,UNTIL);
 }
@@ -152,7 +160,7 @@ U commander(const WorldState& w,U t) {
  for(U role:{U(F04_CAPTAIN),U(F04_FIRST),U(F04_SECOND),U(F04_SUCCESSOR),U(F04_WATCH)}) {
   if(!roster && role==F04_WATCH)break;
   for(U a:all(w,"appointment")) { const U p=ref(w,a,PERSON);
-   if(val(w,a,ROLE)==role && window(w,a,t) && available(w,p,t) && qualified(w,p,F04_COMMAND,t) &&
+   if(val(w,a,ROLE)==role && window(w,a,t) && primary_operator(w,p) && available(w,p,t) && qualified(w,p,F04_COMMAND,t) &&
     (!roster || scheduled(w,p,t))) return p;
   }
  }
@@ -246,6 +254,7 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
  }
  appointment(c,cat,3,F04_CAPTAIN,F04_COMMAND,0,FOREVER,3,1);
 }
+#include "f04_valhalla_state.inc"
 #include "f04_organization.inc"
 bool roster_schema(const WorldState& w);
 // Strict relational schema. It rejects undeclared labels/fields and duplicate
@@ -260,7 +269,9 @@ bool schema(const Campaign& c) {
   std::set<U> fields,refs; std::set<U> allowed,required,ar,rr;
   if(id==1) { allowed={SCHEMA,PATTERN,ALERT};if(general)allowed.insert({SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL});if(org)allowed.insert({TEMPLATE,EQUIPMENT,SEEDED,ALPHA_START,ALPHA_END});required=allowed; }
   else if(type(w,id,"population")) { if(id!=2)return false; }
-  else if(type(w,id,"person")) { allowed={CATEGORY,RANK,DEPT,QUAL,UNTIL};if(general)allowed.insert(MEMBER);required=allowed;ar={SHIP};rr=ar; }
+  else if(type(w,id,"person")) { allowed={CATEGORY,RANK,DEPT,QUAL,UNTIL};if(general)allowed.insert(MEMBER);required=allowed;ar={SHIP};rr=ar;
+   if(val(w,1,TEMPLATE)==5) {allowed.insert({SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END});ar.insert({OPERATING_SHIP,SUPERIOR,KIN});} }
+  else if(type(w,id,"auxiliary_defiant") && val(w,1,TEMPLATE)==5) {allowed={SHIP_ID,STATE};required=allowed;ar={SHIP};rr=ar;}
   else if(type(w,id,"slot")) { allowed={DEPT,QUAL,REQUIRED};if(org)allowed.insert({STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,STATIONS,COVERAGE,ALPHA});required=allowed;ar={SHIP,PERSON};rr={SHIP};if(org){ar.insert(SECTION);rr.insert(SECTION);} }
   else if(type(w,id,"department") && org) {allowed={DEPT};required=allowed;ar={SHIP};rr=ar;}
   else if(type(w,id,"section") && org) {allowed={DEPT,SECTION_KEY};required=allowed;ar={SHIP,DEPARTMENT};rr=ar;}
@@ -294,7 +305,7 @@ bool schema(const Campaign& c) {
   if(refs.contains(PLAN) && !type(w,ref(w,id,PLAN),"roster_plan"))return false;
   if(fields.contains(START) && (val(w,id,START)>=val(w,id,END) || val(w,id,STATE)>DONE)) return false;
   if(type(w,id,"person") && (id<3 || (!general && id>11) || val(w,id,CATEGORY)<1 || val(w,id,CATEGORY)>3 || (!general && val(w,id,DEPT)<1) || val(w,id,DEPT)>(org?7U:4U) || (org?(val(w,id,QUAL)&~QUALIFICATIONS):(val(w,id,QUAL)>30)) || (general && val(w,id,MEMBER)>1))) return false;
-  if(type(w,id,"slot") && (val(w,id,QUAL)<1 || val(w,id,QUAL)>(org?35U:4U) || val(w,id,DEPT)<1 || val(w,id,DEPT)>(org?7U:4U) || val(w,id,REQUIRED)>1)) return false;
+  if(type(w,id,"slot") && (val(w,id,QUAL)<1 || val(w,id,QUAL)>(org?45U:4U) || val(w,id,DEPT)<1 || val(w,id,DEPT)>(org?7U:4U) || val(w,id,REQUIRED)>1)) return false;
   if(type(w,id,"activity") && val(w,id,VALUE)!=F04_DUTY && val(w,id,VALUE)!=F04_REST && val(w,id,VALUE)!=F04_ONCALL && val(w,id,VALUE)!=F04_ABSENCE) return false;
   if(type(w,id,"appointment") && (val(w,id,ROLE)<1 || val(w,id,ROLE)>(val(w,1,SCHEMA)==4?F04_DUTY_HEAD:org?F04_DEPUTY:F04_SUCCESSOR))) return false;
   if(org && type(w,id,"appointment") && (val(w,id,DEPT)<1 || val(w,id,DEPT)>7))return false;
@@ -332,7 +343,7 @@ bool schema(const Campaign& c) {
  for(auto& entry:intervals) {auto& list=entry.second;std::sort(list.begin(),list.end());
   for(size_t i=1;i<list.size();++i)if(list[i].first<list[i-1].second)return false;
  }
- return organization_schema(w) && roster_schema(w);
+ return organization_schema(w) && roster_schema(w) && valhalla_schema(w);
 }
 #include "f04_roster.inc"
 U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=false) {
@@ -348,6 +359,10 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  auto times=[&]() { need(r.start>=t && r.start<r.end && r.end<=FOREVER); };
  auto person=[&](U who) { need(type(c.world,who,"person") && val(c.world,who,CATEGORY)==1 && member(c.world,who),F04_DENIED); };
  switch(r.op) {
+ case F04_CIVIL_PRESENCE: {
+  cmd();need(val(c.world,1,TEMPLATE)==5 && type(c.world,target,"person") && has(c.world,target,RESIDENCE) && member(c.world,target) && r.value<=1 && r.cause);
+  set(c,target,AWAY,r.value?0:1);return target;
+ }
  case F04_PLAN_WATCHES:cmd();return plan_watches(c,cat,r);
  case F04_COVER_DUTY:cmd();return cover_duty(c,cat,r);
  case F04_CANCEL_DUTY:cmd();return stop_duty(c,r);
@@ -355,6 +370,8 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  case F04_BOOTSTRAP_TEMPLATE:cmd();need(r.cause);return bootstrap_template(c,cat,r);
  case F04_CREDENTIAL: {
   cmd();person(target);need(organization(c.world) && r.cause && r.end>t && r.aux && !(r.aux&~QUALIFICATIONS));
+  if(val(c.world,target,SERVICE_GROUP)==F04_ODIN_MARINE)need(!(r.aux&((1ULL<<41)-2)),F04_QUALIFICATION);
+  if(val(c.world,target,SERVICE_GROUP)==F04_DEFIANT_NAVAL)need(!(r.aux&((1ULL<<36)-2)),F04_QUALIFICATION);
   set(c,target,QUAL,r.aux);set(c,target,UNTIL,r.end);return target;
  }
  case F04_TRANSFER: {
@@ -373,6 +390,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  }
  case F04_FUNCTION: {
   person(target);need(organization(c.world) && type(c.world,r.aux,"slot"));manage(val(c.world,r.aux,DEPT));times();need(r.cause);
+  need(primary_operator(c.world,target),F04_SCOPE);
   need(r.value && !(r.value&(r.value-1)) && (val(c.world,r.aux,STATIONS)&r.value),F04_SCOPE);
   need(duty(c.world,target,r.aux,r.start) && duty(c.world,target,r.aux,r.end-1),F04_UNAVAILABLE);
   if(val(c.world,1,SCHEMA)==4 && r.value==F04_ST_COMMAND)need(role_through(c.world,target,F04_WATCH,F04_COMMAND,r.start,r.end),F04_DENIED);
@@ -413,7 +431,10 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   cmd();need(val(c.world,1,SCHEMA)>=2);need(r.cause && r.value>=1 && r.value<=3 && r.aux<=(organization(c.world)?7U:4U));
   U count=0;for(U id:all(c.world,"person"))count+=member(c.world,id)?1:0;
   const U max=val(c.world,1,MAXIMUM);need(count<8192 && (!max || count<max),F04_CAPACITY);
-  if(target){need(type(c.world,target,"person") && !member(c.world,target),F04_OVERLAP);set(c,target,MEMBER,1);set(c,target,CATEGORY,r.value);action(c,target,PlaceEntityAction{EntityId{target},EntityId{1}});return target;}
+  if(target){need(type(c.world,target,"person") && !member(c.world,target),F04_OVERLAP);
+   if(has(c.world,target,SERVICE_GROUP))need(r.value==1,F04_SCOPE);
+   if(has(c.world,target,RESIDENCE))need(r.value==2,F04_SCOPE);
+   set(c,target,MEMBER,1);set(c,target,CATEGORY,r.value);action(c,target,PlaceEntityAction{EntityId{target},EntityId{1}});return target;}
   const U id=make(c,cat,"person");link(c,id,SHIP,1);set(c,id,MEMBER,1);set(c,id,CATEGORY,r.value);set(c,id,RANK,0);set(c,id,DEPT,r.aux);set(c,id,QUAL,0);set(c,id,UNTIL,FOREVER);
   action(c,id,PlaceEntityAction{EntityId{id},EntityId{1}});return id;
  }
@@ -491,6 +512,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  }
  case F04_APPOINT: {
   cmd();person(target);times();need(r.cause && r.value>=F04_CAPTAIN && r.value<=static_cast<uint32_t>(val(c.world,1,SCHEMA)==4?F04_DUTY_HEAD:organization(c.world)?F04_DEPUTY:F04_SUCCESSOR));
+  need(primary_operator(c.world,target),F04_SCOPE);
   const bool departmental=r.value==F04_HEAD || r.value==F04_DEPUTY || r.value==F04_DUTY_HEAD;
   if(departmental && organization(c.world))need(r.aux>=1 && r.aux<=7);
   const U q=r.value==F04_DOCTOR?F04_MEDICINE:departmental?r.aux:F04_COMMAND;
@@ -810,3 +832,4 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
  });
 }
 #include "f04_roster_queries.inc"
+#include "f04_valhalla_queries.inc"
