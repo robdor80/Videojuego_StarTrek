@@ -1,0 +1,68 @@
+{
+  "contract_id": "f04_intrepid_facilities_v1",
+  "status": "DATA_CONTRACT_ONLY",
+  "template_id": 2,
+  "authority": "CoreRPG.WorldState",
+  "clock": "CoreRPG.Timeline",
+  "time_unit": "campaign_seconds",
+  "interval": "[start,end)",
+  "references": {
+    "activity_catalog": "sistemas/gameplay/ship_operations/off_duty_activity_catalog_v0.1.json",
+    "technology_contract": "sistemas/gameplay/technology/computation_holography_replication_contract.json",
+    "computer_actions": "sistemas/gameplay/ship_operations/ship_computer/computer_query_action_catalog.json"
+  },
+  "facility_fields": {
+    "id": "stable key within ship; future Core entity reference",
+    "ship_identity": "existing persistent ship identity, bound explicitly by host",
+    "logical_location": "stable logical location key; no Actor or 3D scene required",
+    "operational_state": ["unconfigured", "operational", "maintenance", "offline", "emergency_locked"],
+    "availability": ["unavailable", "available", "reserved", "occupied"],
+    "occupant_refs": "unique existing Core person references; player and NPC use identical rules",
+    "capacity": "positive integer, or null until configured; null never means unlimited",
+    "limitations": "configuration-owned constraints; no invented physical capacities",
+    "current_activity_ref": "existing Core activity reference or null"
+  },
+  "reservation_fields": {
+    "id": "stable reservation identity",
+    "facility_ref": "existing facility on the same ship",
+    "participant_refs": "unique existing person references; no implicit person creation",
+    "activity_ref": "activity identity and duration on authoritative Core timeline",
+    "start": "campaign_seconds integer >= current Core time when created",
+    "end": "campaign_seconds integer > start; duration=end-start",
+    "state": ["reserved", "active", "completed", "cancelled", "interrupted"],
+    "interruptible": true,
+    "interruption_event_ref": "Core emergency/event reference or null",
+    "actual_end": "Core tick at completion/interruption or null; never moves the world clock backwards"
+  },
+  "rules": [
+    "Bind ship identity, location and capacity before making a facility available.",
+    "Unavailable, offline, unconfigured or emergency-locked facilities cannot accept use.",
+    "Occupancy cannot exceed configured capacity; duplicate identities are rejected.",
+    "A facility is exclusive per session: overlapping active/reserved intervals are rejected; adjacent intervals are allowed.",
+    "Validate participants against duty, absence and rest agendas; reservations do not grant leave or override authority.",
+    "A two-hour session uses end=start+7200 on Core Timeline; all external simulation continues.",
+    "External emergency events may interrupt active sessions and cancel conflicting future reservations under authoritative rules.",
+    "Recheck availability at activation and each relevant Core event; no player-presence or rendering condition.",
+    "Future persistence must store these references in Core; this file is not a mutable campaign state store."
+  ],
+  "reference_configuration": {
+    "class_id": "intrepid",
+    "facility_count": 2,
+    "configurable": true,
+    "manager_section": 22,
+    "facilities": [
+      {"id": "holodeck_1", "ship_identity": null, "logical_location": "holodeck_1", "operational_state": "unconfigured", "availability": "unavailable", "capacity": null, "limitations": [], "occupant_refs": [], "current_activity_ref": null},
+      {"id": "holodeck_2", "ship_identity": null, "logical_location": "holodeck_2", "operational_state": "unconfigured", "availability": "unavailable", "capacity": null, "limitations": [], "occupant_refs": [], "current_activity_ref": null}
+    ],
+    "capabilities": {
+      "emh": {"installed": "ship_configurable", "counts_as_fleet_crew": false, "person_ref": null},
+      "voyager_modified_astrometrics": {"installed_by_default": false},
+      "delta_flyer": {"installed_by_default": false},
+      "auxiliary_craft": {"count": null, "configuration": "ship_specific"},
+      "planetary_landing": {"requires_procedures_and_qualifications": true, "extra_department": false}
+    }
+  },
+  "runtime_reservations_implemented": false,
+  "runtime_facilities_instantiated": false,
+  "deferred": ["F12 booking execution and leisure activities", "F11 training and XP", "3D holodeck scenarios", "advanced NPC social behavior"]
+}

@@ -37,8 +37,10 @@ enum F04Station { F04_ST_COMMAND=1,F04_ST_HELM=2,F04_ST_SENSORS=4,
  F04_ST_COMPUTER=64,F04_ST_TACTICAL=128,F04_ST_HANGAR=256,F04_ST_MEDICAL=512,
  F04_ST_LAB=1024,F04_ST_CARGO=2048,F04_ST_SECURITY=4096 };
 enum F04Coverage { F04_DAY_ACTIVITY=1,F04_CONTINUOUS_CANDIDATE,F04_URGENT_PENDING };
-enum F04Template { F04_SUTHERLAND_SCIENCE=1 };
+enum F04Template { F04_SUTHERLAND_SCIENCE=1, F04_INTREPID_EXPLORATION=2 };
 #define F04_SUTHERLAND_EQUIPMENT UINT64_C(8191)
+/* Functional system references; counts and special technology remain configurable. */
+#define F04_INTREPID_EQUIPMENT UINT64_C(8191)
 enum F04Absence { F04_LEAVE=1,F04_SICK=2,F04_SUSPENDED=3 };
 /* Host authenticates actor; all operations are intentions, never permissions.
  * target/aux depend on operation. revision must equal the current world revision.

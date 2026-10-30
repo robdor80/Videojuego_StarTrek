@@ -1,0 +1,42 @@
+{
+  "core_sha": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+  "dll_sha256": "49a98ec1923f8b93e79b5b830c393343b8e05c150e11c4abd120abd87450451c",
+  "native": {
+    "f04": {
+      "defined": 107,
+      "passed": 107,
+      "failed": 0,
+      "skipped": []
+    },
+    "f02": {
+      "defined": 15,
+      "passed": 15,
+      "failed": 0,
+      "skipped": []
+    },
+    "f03": {
+      "defined": 25,
+      "passed": 25,
+      "failed": 0,
+      "skipped": []
+    },
+    "core": {
+      "defined": 451,
+      "passed": 447,
+      "failed": 0,
+      "skipped": [
+        "ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+        "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+        "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+        "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported"
+      ]
+    }
+  },
+  "unreal": {
+    "succeeded": 20,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0
+  },
+  "facilities_contract": "JSON parsed; references and safe unconfigured defaults checked; runtime not implemented"
+}

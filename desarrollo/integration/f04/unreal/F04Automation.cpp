@@ -108,4 +108,31 @@ bool FF04Sutherland::RunTest(const FString&){
  if(!TestNotNull(TEXT("Selective recovery in another world"),Recovered))return false;
  TestTrue(TEXT("Same identity and watch"),Recovered->CorePersonId==Security && Recovered->OnDuty);return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Intrepid,"F04.Core.IntrepidOrganizationOffscreen",Flags)
+bool FF04Intrepid::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{66001,404,160,0,0,0};
+ TestTrue(TEXT("160 persistent people"),L.Host->OpenPopulation("intrepid",Config));
+ TestTrue(TEXT("Install reusable profile"),L.Host->InstallOrganization(F04_INTREPID_EXPLORATION,F04_INTREPID_EQUIPMENT));
+ TestTrue(TEXT("Existing identities only"),L.Host->BootstrapOrganizationFixture());
+ TestTrue(TEXT("Alpha"),L.Host->PlanAlpha(28800));TestTrue(TEXT("Core time without player"),L.Host->Advance(28800));
+ F04OrganizationStats Org{};L.Host->Organization(Org);
+ TestEqual(TEXT("160 posts"),Org.positions,uint64(160));TestEqual(TEXT("7 departments"),Org.departments,uint64(7));
+ TestEqual(TEXT("34 sections"),Org.sections,uint64(34));TestEqual(TEXT("64 workers"),Org.on_duty,uint64(64));
+ TestEqual(TEXT("No Alpha gaps"),Org.alpha_deficit,uint64(0));TestEqual(TEXT("Separate operations and communications"),Org.continuous_covered,uint64(7));
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;TestEqual(TEXT("No 160 automatic Actors"),Count,0);
+ TArray<F04Position> Positions;L.Host->Positions(Positions);uint32 First=0,Security=0;
+ for(const auto& P:Positions){if(P.section==2)First=static_cast<uint32>(P.person);if(P.section==23 && P.ordinal==1)Security=static_cast<uint32>(P.person);}
+ TestEqual(TEXT("First is also watch officer"),L.Host->Intent(First,F04_BRIDGE,0,0,0,0,2),uint32(F04_OK));
+ TestEqual(TEXT("Tactical function grants no command"),L.Host->Intent(Security,F04_BRIDGE),uint32(F04_DENIED));
+ auto* Marker=L.Host->Represent(A.W,Security);if(!TestNotNull(TEXT("One selective Actor"),Marker))return false;
+ TestTrue(TEXT("Same identity on duty"),Marker->CorePersonId==Security && Marker->OnDuty);
+ TArray<uint8> Before,After,Future;L.Host->Save(Before);L.Host->Dematerialize(A.W);L.Host->Save(After);
+ TestTrue(TEXT("No visual authority"),Before==After);L.Host->Advance(57600);L.Host->Save(Future);
+ L.Host->CloseLab();L.Host->OpenLab();TestTrue(TEXT("Restore complete Intrepid in new session"),L.Host->Load(Before));L.Host->Save(After);
+ TestTrue(TEXT("Exact archive"),Before==After);auto* Recovered=L.Host->Represent(B.W,Security);
+ if(!TestNotNull(TEXT("New UWorld projection"),Recovered))return false;
+ TestTrue(TEXT("Identity and duty persist"),Recovered->CorePersonId==Security && Recovered->OnDuty);
+ L.Host->Dematerialize(B.W);L.Host->Advance(57600);L.Host->Save(After);TestTrue(TEXT("Same future without player or Actors"),After==Future);
+ L.Host->Organization(Org);TestEqual(TEXT("Duty ended on Core clock"),Org.on_duty,uint64(0));return true;
+}
 #endif
