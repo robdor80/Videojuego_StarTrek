@@ -1,6 +1,6 @@
 # F04-VALHALLA-01 — Plantilla aprobada para implementación
 
-**Fecha:** 31-10-2026. **Nivel:** diseño para Codex local, todavía no implementado ni auditado como runtime. **Fuente:** [DEC-0017–0019](../../../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md), IDEA-0010 y cronología 2383/2387. La distribución corresponde al **día de referencia**, no a un patrón idéntico repetido toda la semana. Las actividades y las rotaciones posteriores deben respetar aptitud, ausencia, autoridad y descanso.
+**Fecha:** 31-10-2026. **Nivel:** diseño para Codex local, todavía no implementado ni auditado como runtime. **Fuente:** [DEC-0017–0019](../../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md), IDEA-0010 y cronología 2383/2387. La distribución corresponde al **día de referencia**, no a un patrón idéntico repetido toda la semana. Las actividades y las rotaciones posteriores deben respetar aptitud, ausencia, autoridad y descanso.
 
 ## Resumen
 
