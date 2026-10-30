@@ -4,6 +4,7 @@
 #include <corerpg/context_builder.hpp>
 #include <array>
 #include <atomic>
+#include <chrono>
 #include <cstring>
 #include <limits>
 #include <memory>
@@ -34,6 +35,9 @@ struct Campaign {
     Timeline time;
     explicit Campaign(uint64_t seed):random(seed) {}
 };
+constexpr auto epoch=std::chrono::sys_days{std::chrono::year{2372}/3/14}+std::chrono::hours{10}+std::chrono::minutes{42};
+constexpr uint64_t max_tick=static_cast<uint64_t>((std::chrono::sys_days{std::chrono::year{9999}/12/31}+
+    std::chrono::hours{23}+std::chrono::minutes{59}+std::chrono::seconds{59}-epoch).count());
 void require(bool value) { if(!value) throw std::runtime_error("F03 fixture rejected"); }
 uint64_t contact(EntityId observer,EntityId entity) {
     if(!entity.is_valid()) return 0;
@@ -89,19 +93,44 @@ bool fixture(const CampaignArchiveSnapshot& s,const ContentCatalog& content) {
     if(w.last_entity_id!=8 || w.definitions.size()!=6 || w.populations.size()!=1 ||
        w.populations[0]!=PopulationRecord{EntityId{6},3,1} || w.population_memberships.size()!=2 ||
        w.population_memberships[0]!=PopulationMembership{EntityId{7},EntityId{6}} ||
-       w.population_memberships[1]!=PopulationMembership{EntityId{8},EntityId{6}} || !w.relations.empty()) return false;
+       w.population_memberships[1]!=PopulationMembership{EntityId{8},EntityId{6}} || !w.relations.empty() || s.timeline.now>max_tick) return false;
     for(size_t i=0;i<w.definitions.size();++i) {
         const auto& d=w.definitions[i];
         const auto* expected=i<2 ? "trek.f03:starfleet_ship" : i==2 ? "trek.f03:romulan_ship" : i<5 ? "trek.f03:sector" : "trek.f03:crew";
         if(d.entity!=EntityId{i+1} || d.definition_id!=expected || !content.find_by_value(d.definition_id)) return false;
+    }
+    if(s.timeline.records.size()!=0 && s.timeline.records.size()!=4) return false;
+    const std::array<uint64_t,4> due{10,20,21,40}, parent{0,1,2,3};
+    for(size_t i=0;i<s.timeline.records.size();++i) {
+        const auto& a=s.timeline.records[i].action;
+        if(a.id!=i+1 || a.due!=due[i] || a.parent!=parent[i] || a.actor!=EntityId{2}) return false;
+        if(i==0) { const auto* op=std::get_if<RemoveContainmentAction>(&a.operation); if(!op || op->entity!=EntityId{2}) return false; }
+        if(i==1 || i==3) { const auto* op=std::get_if<PlaceEntityAction>(&a.operation);
+            if(!op || op->entity!=EntityId{2} || op->container!=EntityId{i==1?5ULL:4ULL}) return false; }
+        if(i==2) { const auto* op=std::get_if<StreamRollAction>(&a.operation);
+            if(!op || op->stream_id!=0xF0303 || op->minimum!=1 || op->maximum!=1000000) return false; }
     }
     // No imported observer, relation, population or private crew knowledge.
     for(const auto& k:w.knowledge) {
         const auto id=k.fact.key.subject.value(); const auto who=k.observer.value();
         if((who!=1 && who!=2) || id<1 || id>5 || !k.fact.present ||
             (k.fact.key.kind!=FactKind::existence && k.fact.key.kind!=FactKind::definition && k.fact.key.kind!=FactKind::containment) ||
-            (who==1 && ((id==3 && k.fact.key.kind!=FactKind::existence) || id==5))) return false;
+            (who==1 && ((id==3 && k.fact.key.kind!=FactKind::existence) || id==5)) ||
+            (k.fact.key.kind==FactKind::definition && id!=who && !(who==2 && id==3)) ||
+            (k.fact.key.kind==FactKind::containment && !(who==2 && id==3))) return false;
     }
+    for(uint64_t who:{1ULL,2ULL}) {
+        for(uint64_t id:{1ULL,2ULL,4ULL}) {
+            bool found=false; for(const auto& k:w.knowledge)
+                found|=k.observer==EntityId{who} && k.fact.key==FactKey{EntityId{id}};
+            if(!found) return false;
+        }
+        bool definition=false; for(const auto& k:w.knowledge)
+            definition|=k.observer==EntityId{who} && k.fact.key==FactKey{EntityId{who},FactKind::definition};
+        if(!definition) return false;
+    }
+    bool destination=false; for(const auto& k:w.knowledge) destination|=k.observer==EntityId{2} && k.fact.key==FactKey{EntityId{5}};
+    if(!destination) return false;
     return true;
 }
 }
@@ -150,6 +179,7 @@ uint32_t f03_advance(F03Session* s,uint64_t horizon,uint64_t max,uint64_t* proce
     if(!processed || max>Timeline::max_records) return F03_ARGUMENT; *processed=0;
     return call(s,[&]() -> uint32_t {
         if(!s->allowed) return F03_DENIED;
+        if(horizon>max_tick) return F03_REJECTED;
         auto& c=*s->campaign; const auto result=c.time.advance(c.world,c.random,horizon,static_cast<size_t>(max));
         *processed=result.processed;
         return result.status==TimelineStatus::completed ? F03_OK : result.status==TimelineStatus::action_limit ? F03_MORE : F03_REJECTED;
@@ -160,7 +190,8 @@ uint32_t f03_acquire(F03Session* s,F03Ref observer,uint32_t channel) {
         if(!s->allowed || !s->observer(observer)) return F03_DENIED;
         auto& c=*s->campaign;
         if(channel==1) {
-            if(observer.id!=2 || c.world.container_of(EntityId{2}).container!=EntityId{5}) return F03_DENIED;
+            if(observer.id!=2 || c.world.container_of(EntityId{2}).container!=EntityId{5} ||
+                c.world.container_of(EntityId{3}).container!=EntityId{5}) return F03_DENIED;
         } else if(channel==2) {
             if(observer.id!=1 || !Visibility::project(c.world,EntityId{2}).knows(EntityId{3})) return F03_DENIED;
         } else return F03_DENIED;
@@ -216,6 +247,22 @@ uint32_t f03_roll(F03Session* s,F03Ref ref,uint64_t revision,uint64_t* out) {
         const auto* roll=std::get_if<RollConsequence>(&result.consequence);
         if(!roll || result.outcome==ActionOutcome::rejected) return F03_REJECTED;
         *out=roll->value; return F03_OK;
+    });
+}
+uint32_t f03_calendar(F03Session* s,F03Calendar* out) {
+    if(!out) return F03_ARGUMENT; *out={};
+    return call(s,[&]() -> uint32_t {
+        using namespace std::chrono;
+        const auto instant=epoch+seconds{static_cast<int64_t>(s->campaign->time.now())};
+        const auto day=floor<days>(instant); const year_month_day date{day}; const hh_mm_ss clock{instant-day};
+        const auto start=sys_days{date.year()/1/1}; const auto end=sys_days{(date.year()+years{1})/1/1};
+        const auto origin=sys_days{year{2372}/1/1}; const auto next=sys_days{year{2373}/1/1};
+        const double fraction=duration<double>(instant-start).count()/duration<double>(end-start).count();
+        const double base=duration<double>(epoch-origin).count()/duration<double>(next-origin).count();
+        *out={static_cast<uint32_t>(int(date.year())),unsigned(date.month()),unsigned(date.day()),
+            static_cast<uint32_t>(clock.hours().count()),static_cast<uint32_t>(clock.minutes().count()),
+            static_cast<uint32_t>(clock.seconds().count()),1000.0*(int(date.year())-2372+fraction-base)};
+        return F03_OK;
     });
 }
 uint32_t f03_save(F03Session* s,uint8_t* out,uint64_t capacity,uint64_t* size) {

@@ -28,12 +28,16 @@ typedef struct F03Fact {
     uint32_t kind,present,classification,provenance;
 } F03Fact;
 typedef struct F03MarkerState { uint64_t identity; uint32_t location; uint32_t reserved; } F03MarkerState;
+/* Fixture epoch: 2372-03-14T10:42:00; one Core tick = one second.
+ * Stardate is an elapsed presentation offset, 1000 per calendar year; no invented absolute anchor. */
+typedef struct F03Calendar { uint32_t year,month,day,hour,minute,second; double stardate_elapsed; } F03Calendar;
 F03_API uint32_t f03_abi_version(void);
 F03_API const char* f03_core_sha(void);
 F03_API uint32_t f03_create(uint32_t abi,uint64_t seed,F03Session** out);
 F03_API uint32_t f03_destroy(F03Session*);
 F03_API uint32_t f03_handles(F03Session*,F03Handles*);
 F03_API uint32_t f03_stats(F03Session*,F03Stats*);
+F03_API uint32_t f03_calendar(F03Session*,F03Calendar*);
 F03_API uint32_t f03_set_permission(F03Session*,uint32_t allowed);
 F03_API uint32_t f03_schedule_route(F03Session*);
 F03_API uint32_t f03_advance(F03Session*,uint64_t horizon,uint64_t max_actions,uint64_t* processed);

@@ -1,4 +1,5 @@
 #include "f03_bridge.h"
+#include <corerpg/campaign_persistence.hpp>
 #include <algorithm>
 #include <array>
 #include <filesystem>
@@ -130,6 +131,30 @@ void run(const std::string& name,const std::string& file) {
     } else if(name=="stale") {
         const auto revision=s.stats().revision; s.route(); s.advance(20); const auto before=s.save(); uint64_t r{};
         CHECK(f03_roll(s.p,h.primary,revision,&r)==F03_REJECTED); CHECK(s.save()==before);
+    } else if(name=="calendar") {
+        F03Calendar c{}; CHECK(f03_calendar(s.p,&c)==F03_OK);
+        CHECK(c.year==2372 && c.month==3 && c.day==14 && c.hour==10 && c.minute==42 && c.second==0 && c.stardate_elapsed==0);
+        s.advance(47); CHECK(f03_calendar(s.p,&c)==F03_OK); CHECK(c.second==47 && c.minute==42);
+        s.advance(86400); CHECK(f03_calendar(s.p,&c)==F03_OK); CHECK(c.day==15 && c.hour==10 && c.minute==42);
+        const auto bytes=s.save(); Session restored; restored.load(bytes); F03Calendar other{}; CHECK(f03_calendar(restored.p,&other)==F03_OK);
+        CHECK(c.day==other.day && c.stardate_elapsed==other.stardate_elapsed);
+        uint64_t n{}; CHECK(f03_advance(s.p,UINT64_MAX,64,&n)==F03_REJECTED); CHECK(s.save()==bytes);
+    } else if(name=="tampered") {
+        using namespace corerpg;
+        integrated(s); const auto before=s.save();
+        const auto decoded=CampaignPersistence::deserialize(before); CHECK(decoded.snapshot.has_value());
+        auto bad=*decoded.snapshot; bad.timeline.records[3].action.actor=EntityId{3};
+        auto encoded=CampaignPersistence::serialize(bad); CHECK(encoded.status==CampaignArchiveStatus::success);
+        CHECK(f03_load(s.p,encoded.bytes.data(),encoded.bytes.size())==F03_SAVE_REJECTED);
+        bad=*decoded.snapshot;
+        KnownFact secret; secret.key={EntityId{3},FactKind::definition}; secret.definition=std::make_shared<const std::string>("trek.f03:romulan_ship");
+        bad.campaign.knowledge.push_back({EntityId{1},secret});
+        std::sort(bad.campaign.knowledge.begin(),bad.campaign.knowledge.end(),[](const auto& a,const auto& b) {
+            return a.observer<b.observer || (a.observer==b.observer && a.fact.key<b.fact.key);
+        });
+        encoded=CampaignPersistence::serialize(bad); CHECK(encoded.status==CampaignArchiveStatus::success);
+        CHECK(f03_load(s.p,encoded.bytes.data(),encoded.bytes.size())==F03_SAVE_REJECTED);
+        CHECK(s.save()==before);
     } else if(name=="process_save") {
         integrated(s); const auto bytes=s.save();
         // Test-owned deterministic path in the isolated build, never a personal save.
