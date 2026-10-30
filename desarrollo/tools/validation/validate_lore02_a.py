@@ -149,8 +149,32 @@ def validate() -> dict[str, int]:
     require(valhalla["class_identity"] == "NEW_VALHALLA_CLASS_GALAXY_INSPIRED_NOT_GALAXY_REFIT"
             and valhalla["auxiliary_yacht_active"] is False
             and valhalla["auxiliary_project"] == "IDEA-0010"
-            and valhalla["year_of_commissioning"] is None,
-            "Valhalla identity, yacht or commission year contradicted")
+            and valhalla["year_of_commissioning"] == 2387
+            and valhalla["year_of_commissioning_is_author_approved_target"] is True
+            and valhalla["exact_commissioning_date_pending"] is True,
+            "Valhalla identity, yacht or approved 2387 target contradicted")
+    slip=valhalla["quantum_slipstream_program"]
+    require(slip["status"] == "APPROVED_FUTURE_RESEARCH_CANDIDATE"
+            and slip["prototype_platform_class"] == "odyssey"
+            and slip["prototype_research_from_year"] == 2383
+            and slip["installed_on_all_odyssey"] is False
+            and slip["target_platform_class"] == "valhalla"
+            and slip["installed_on_first_valhalla_at_2387_by_default"] is False
+            and slip["requires_additional_tests"] is True
+            and slip["no_guaranteed_success_or_automatic_unlock"] is True
+            and slip["runtime_implemented"] is False,
+            "Experimental quantum slipstream cannot be made standard/guaranteed")
+    experimental=load("mundo/lore/technology/experimental/quantum_slipstream_odyssey_valhalla_v0.1.json")
+    require(experimental["capability_id"] == "quantum_slipstream_drive"
+            and experimental["classification"] == "GAME_ADDITION_AUTHOR_APPROVED_NOT_SCREEN_CANON"
+            and experimental["runtime_implemented"] is False
+            and experimental["program"]["odyssey_test_phase"]["from_year"] == 2383
+            and experimental["program"]["odyssey_test_phase"]["class_wide_default"] is False
+            and experimental["program"]["valhalla_transfer_phase"]["first_ship_service_target_year"] == 2387
+            and experimental["program"]["valhalla_transfer_phase"]["default_installed_at_first_commissioning"] is False
+            and experimental["program"]["valhalla_transfer_phase"]["requires_further_tests"] is True
+            and experimental["technology_constraints"]["distinct_from_quantum_torpedoes"] is True,
+            "Slipstream experimental programme contradicts individual installation/era rules")
     choices = valhalla["decisions"]
     require(len(choices) == 16
             and [q["decision_id"] for q in choices]
