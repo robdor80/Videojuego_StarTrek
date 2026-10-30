@@ -135,4 +135,27 @@ bool FF04Intrepid::RunTest(const FString&){
  L.Host->Dematerialize(B.W);L.Host->Advance(57600);L.Host->Save(After);TestTrue(TEXT("Same future without player or Actors"),After==Future);
  L.Host->Organization(Org);TestEqual(TEXT("Duty ended on Core clock"),Org.on_duty,uint64(0));return true;
 }
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04Sovereign,"F04.Core.SovereignThreeWatchesOffscreen",Flags)
+bool FF04Sovereign::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{67001,404,700,0,0,0};
+ TestTrue(TEXT("700 Core identities"),L.Host->OpenPopulation("sovereign",Config));
+ TestTrue(TEXT("Sovereign profile3"),L.Host->InstallOrganization(F04_SOVEREIGN_MULTIMISSION,F04_SOVEREIGN_EQUIPMENT));
+ TestTrue(TEXT("Explicit existing people fixture"),L.Host->BootstrapOrganizationFixture());
+ TestTrue(TEXT("28 days, reference then rotation"),L.Host->PlanWatches(0,28*86400,false,true));
+ TArray<F04ServiceCoverage> Coverage;TestTrue(TEXT("Entire horizon coverage query"),L.Host->ServiceCoverage(0,28*86400,Coverage));
+ TestEqual(TEXT("Eight independent services"),Coverage.Num(),8);for(const auto& C:Coverage)TestTrue(TEXT("No critical gap in entire horizon"),C.covered==1);
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;TestEqual(TEXT("No 700 automatic Actors"),Count,0);
+ F04OrganizationStats Org{};L.Host->Organization(Org);TestEqual(TEXT("Gamma100"),Org.on_duty,uint64(100));
+ F04Stats State{};L.Host->Stats(State);TestTrue(TEXT("Captain legitimately relieved"),State.commander!=3 && State.commander!=0);
+ auto* Officer=L.Host->Represent(A.W,static_cast<uint32>(State.commander));if(!TestNotNull(TEXT("One selective guard Actor"),Officer))return false;
+ TestTrue(TEXT("Actual guard is on duty"),Officer->OnDuty);TestTrue(TEXT("Alpha boundary"),L.Host->Advance(28800));
+ L.Host->Organization(Org);TestEqual(TEXT("Alpha230"),Org.on_duty,uint64(230));L.Host->Stats(State);TestEqual(TEXT("Captain Alpha"),State.commander,uint64(3));
+ TestTrue(TEXT("Beta boundary"),L.Host->Advance(57600));L.Host->Organization(Org);TestEqual(TEXT("Beta150"),Org.on_duty,uint64(150));
+ L.Host->Dematerialize(A.W);TArray<uint8> Before,Future,After;L.Host->Save(Before);
+ TestTrue(TEXT("Universe continues without player or Actors"),L.Host->Advance(28*86400-1));L.Host->Save(Future);
+ TestTrue(TEXT("Schema4 recovery"),L.Host->Load(Before));L.Host->Save(After);TestTrue(TEXT("Exact archive"),After==Before);
+ L.Host->Stats(State);auto* Recovered=L.Host->Represent(B.W,static_cast<uint32>(State.commander));if(!TestNotNull(TEXT("Reconstructed selective Actor"),Recovered))return false;
+ TestTrue(TEXT("Same watch"),Recovered->OnDuty);L.Host->Dematerialize(B.W);L.Host->Advance(28*86400-1);L.Host->Save(After);
+ TestTrue(TEXT("Same offscreen future"),After==Future);return true;
+}
 #endif

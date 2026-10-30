@@ -1,0 +1,18 @@
+{
+  "f02": {
+    "source_files_identical": 20
+  },
+  "f03": {
+    "source_files_identical": 13
+  },
+  "miranda": {
+    "producer_sha256": "7f95f79fbf804fdc783ad8e5d21f28d1b3385e440288dff566a83f887c05ee11",
+    "old_archive_sha256": "74293b73a94c0823b2ac43a9db1e17afef2156213f0a48df038a6514ca5f9738",
+    "new_reader": "process_load passed"
+  },
+  "intrepid": {
+    "producer_sha256": "155f5c99ca6f6fdb72a9784dd0c1d558f65a3b1a37706f2ac4be14231e389b28",
+    "old_archive_sha256": "3be4182e3d2332982ccf67eeee145ebbee337ac0474ae5e50605cf4f9c7d34f1",
+    "new_reader": "intrepid process_load passed"
+  }
+}

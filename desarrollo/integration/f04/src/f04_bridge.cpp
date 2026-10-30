@@ -21,12 +21,12 @@ using U=uint64_t;
 constexpr U FOREVER=(1ULL<<48)-1;
 // Versioned Trek relation-label vocabulary. Scalar values are self-edges;
 // references use fixed kinds. Core owns both, without interpreting domain data.
-enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION };
+enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
  TEMPLATE,EQUIPMENT,SECTION_KEY,STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,
- STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END };
+ STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -50,12 +50,40 @@ bool type(const WorldState& w,U id,const char* name) {
  const auto* d=w.definition_of(EntityId{id}); return d && *d==it->second;
 }
 bool member(const WorldState& w,U p) { return ref(w,p,SHIP)==1 && (val(w,1,SCHEMA)==1 || val(w,p,MEMBER)==1); }
+// Disposable, revision-scoped projections. Core WorldState remains the sole
+// authority. Invalidate at every mutation and API boundary (including load).
+struct ReadIndex {
+ const WorldState* world=nullptr;U revision=UINT64_MAX;
+ std::map<std::string,std::vector<U>> kinds;
+ std::map<std::pair<std::string,U>,std::vector<U>> people;
+};
+thread_local ReadIndex read_index;
+void invalidate_index(){read_index.world=nullptr;}
+const ReadIndex& indexed(const WorldState& w) {
+ if(read_index.world==&w && read_index.revision==w.revision())return read_index;
+ read_index={};read_index.world=&w;read_index.revision=w.revision();
+ for(U id=1;id<=w.entity_count();++id) {
+  const auto* def=w.definition_of(EntityId{id});if(!def)continue;
+  const auto name=std::string(def->value());
+  const auto colon=name.find(':');const auto kind=name.substr(colon+1);
+  read_index.kinds[kind].push_back(id);
+  if(kind=="activity" || kind=="appointment" || kind=="function")
+   read_index.people[{kind,ref(w,id,PERSON)}].push_back(id);
+ }
+ return read_index;
+}
 std::vector<U> all(const WorldState& w,const char* name) {
- std::vector<U> ids; for(U id=1;id<=w.entity_count();++id) if(type(w,id,name)) ids.push_back(id); return ids;
+ const auto& index=indexed(w);const auto it=index.kinds.find(name);
+ return it==index.kinds.end()?std::vector<U>{}:it->second;
+}
+std::vector<U> person_records(const WorldState& w,const char* kind,U p) {
+ const auto& index=indexed(w);const auto it=index.people.find({kind,p});
+ return it==index.people.end()?std::vector<U>{}:it->second;
 }
 bool window(const WorldState& w,U id,U t) { return val(w,id,STATE)==ACTIVE && val(w,id,START)<=t && t<val(w,id,END); }
 bool overlaps(U a,U b,U c,U d) { return a<d && c<b; }
 void action(Campaign& c,U actor,ActionOperation op) {
+ invalidate_index();
  const auto r=ActionEngine::process(c.world,c.random,{EntityId{actor},std::move(op),c.world.revision()});
  need(r.outcome!=ActionOutcome::rejected,F04_INTERNAL);
 }
@@ -76,7 +104,7 @@ void link(Campaign& c,U id,Ref field,U target) {
 CatalogBuildResult catalog() {
  const auto p=*PackId::parse("trek.f04"); const auto v=*SemanticVersion::parse("0.1.0");
  std::vector<ContentDefinitionInput> defs;
- for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function"})
+ for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function","roster_plan","roster_gap"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
  for(const char* t:class_ids) defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:class_")+t),*ResourceKind::parse("structural")});
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
@@ -90,35 +118,53 @@ U make(Campaign& c,const ContentCatalog& cat,const char* name) {
  return id.value();
 }
 void temporal(Campaign& c,U id,U start,U end) { need(start<end && end<=FOREVER); set(c,id,START,start);set(c,id,END,end);set(c,id,STATE,ACTIVE); }
-constexpr U QUALIFICATIONS=(1ULL<<31)-2;
-bool qualified(const WorldState& w,U p,U q,U t) { return q>=1 && q<=30 && (val(w,p,QUAL)&(1ULL<<q)) && t<val(w,p,UNTIL); }
+constexpr U QUALIFICATIONS=(1ULL<<36)-2;
+bool qualified(const WorldState& w,U p,U q,U t) { return q>=1 && q<=35 && (val(w,p,QUAL)&(1ULL<<q)) && t<val(w,p,UNTIL); }
 bool slot_qualified(const WorldState& w,U p,U slot,U t) {
  const U mask=has(w,slot,QUAL_MASK)?val(w,slot,QUAL_MASK):1ULL<<val(w,slot,QUAL);
  return (val(w,p,QUAL)&mask)==mask && t<val(w,p,UNTIL);
 }
 bool available(const WorldState& w,U p,U t) {
  if(!type(w,p,"person") || val(w,p,CATEGORY)!=1 || !member(w,p)) return false;
- for(U a:all(w,"activity")) if(ref(w,a,PERSON)==p && window(w,a,t) &&
+ for(U a:person_records(w,"activity",p)) if(window(w,a,t) &&
   (val(w,a,VALUE)==F04_ABSENCE || val(w,a,VALUE)==F04_REST)) return false;
  return true;
 }
 bool active_role(const WorldState& w,U p,U role,U t,U dept=0) {
  if(!member(w,p))return false;
- for(U a:all(w,"appointment")) if(ref(w,a,PERSON)==p && val(w,a,ROLE)==role && window(w,a,t) && (!dept || val(w,a,DEPT)==dept)) return true;
+ for(U a:person_records(w,"appointment",p)) if(val(w,a,ROLE)==role && window(w,a,t) && (!dept || val(w,a,DEPT)==dept)) return true;
+ return false;
+}
+U effective_end(const WorldState& w,U a) {
+ return has(w,a,STOP)?std::min(val(w,a,STOP),val(w,a,END)):val(w,a,END);
+}
+bool scheduled(const WorldState& w,U p,U t) {
+ for(U a:person_records(w,"activity",p))if(val(w,a,VALUE)==F04_DUTY &&
+  val(w,a,START)<=t && t<effective_end(w,a) && (val(w,a,STATE)==ACTIVE || has(w,a,STOP))) {
+   const U slot=ref(w,a,SLOT),role=val(w,slot,RESPONSIBILITY);
+   if(slot_qualified(w,p,slot,t) && (ref(w,slot,PERSON)==p || val(w,a,TEMPORARY)) &&
+    (!role || active_role(w,p,role,t,val(w,slot,DEPT))))return true;
+  }
  return false;
 }
 U commander(const WorldState& w,U t) {
- for(U role:{U(F04_CAPTAIN),U(F04_FIRST),U(F04_SECOND),U(F04_SUCCESSOR)})
+ const bool roster=val(w,1,SCHEMA)==4;
+ for(U role:{U(F04_CAPTAIN),U(F04_FIRST),U(F04_SECOND),U(F04_SUCCESSOR),U(F04_WATCH)}) {
+  if(!roster && role==F04_WATCH)break;
   for(U a:all(w,"appointment")) { const U p=ref(w,a,PERSON);
-   if(val(w,a,ROLE)==role && window(w,a,t) && available(w,p,t) && qualified(w,p,F04_COMMAND,t)) return p;
+   if(val(w,a,ROLE)==role && window(w,a,t) && available(w,p,t) && qualified(w,p,F04_COMMAND,t) &&
+    (!roster || scheduled(w,p,t))) return p;
   }
+ }
  return 0;
 }
 bool duty(const WorldState& w,U p,U slot,U t) {
- if(!available(w,p,t) || ref(w,slot,PERSON)!=p || !slot_qualified(w,p,slot,t)) return false;
+ if(!available(w,p,t) || !slot_qualified(w,p,slot,t)) return false;
  const U role=val(w,slot,RESPONSIBILITY);
  if(role && !active_role(w,p,role,t,val(w,slot,DEPT)))return false;
- for(U a:all(w,"activity")) if(ref(w,a,PERSON)==p && ref(w,a,SLOT)==slot && val(w,a,VALUE)==F04_DUTY && window(w,a,t)) return true;
+ for(U a:person_records(w,"activity",p))if(ref(w,a,SLOT)==slot && val(w,a,VALUE)==F04_DUTY &&
+  val(w,a,START)<=t && t<effective_end(w,a) && (val(w,a,STATE)==ACTIVE || has(w,a,STOP)) &&
+  (ref(w,slot,PERSON)==p || (val(w,1,SCHEMA)==4 && val(w,a,TEMPORARY))))return true;
  return false;
 }
 bool command_authority(const WorldState& w,U p,U domain,U t) {
@@ -138,7 +184,10 @@ bool external_authority(const WorldState& w,U p,U domain,U t) {
  return false;
 }
 bool head(const WorldState& w,U p,U dept,U t) {
- return (active_role(w,p,F04_HEAD,t,dept) || (val(w,1,SCHEMA)==3 && dept==F04_MEDICINE && active_role(w,p,F04_DOCTOR,t))) && qualified(w,p,dept,t);
+ if(val(w,1,SCHEMA)==4 && active_role(w,p,F04_DUTY_HEAD,t,dept) && val(w,p,DEPT)==dept && scheduled(w,p,t)) {
+  for(U slot:all(w,"slot"))if(ref(w,slot,PERSON)==p && slot_qualified(w,p,slot,t))return true;
+ }
+ return (active_role(w,p,F04_HEAD,t,dept) || (val(w,1,SCHEMA)>=3 && dept==F04_MEDICINE && active_role(w,p,F04_DOCTOR,t))) && qualified(w,p,dept,t);
 }
 U appointment(Campaign& c,const ContentCatalog& cat,U p,U role,U dept,U start,U end,U issuer,U cause) {
  const U id=make(c,cat,"appointment");link(c,id,SHIP,1);link(c,id,PERSON,p);link(c,id,ISSUER,issuer);
@@ -198,12 +247,13 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
  appointment(c,cat,3,F04_CAPTAIN,F04_COMMAND,0,FOREVER,3,1);
 }
 #include "f04_organization.inc"
+bool roster_schema(const WorldState& w);
 // Strict relational schema. It rejects undeclared labels/fields and duplicate
 // scalar/reference fields before any restored graph becomes live.
 bool schema(const Campaign& c) {
  const auto& w=c.world;
  const bool org=organization(w),general=val(w,1,SCHEMA)>=2;const U initial=general?val(w,1,INITIAL):9;
- if(w.entity_count()<(general?4U:19U) || w.entity_count()>65536 || val(w,1,SCHEMA)<1 || val(w,1,SCHEMA)>3 || !w.definition_of(EntityId{1}) ||
+ if(w.entity_count()<(general?4U:19U) || w.entity_count()>65536 || val(w,1,SCHEMA)<1 || val(w,1,SCHEMA)>4 || !w.definition_of(EntityId{1}) ||
     val(w,1,PATTERN)<3 || val(w,1,PATTERN)>4 || val(w,1,ALERT)<1 || val(w,1,ALERT)>3 || c.time.now()>FOREVER || !c.time.records().empty()) return false;
  bool cls=false;for(auto* s:class_ids) cls|=type(w,1,(std::string("class_")+s).c_str());if(!cls)return false;
  for(U id=1;id<=w.entity_count();++id) {
@@ -215,7 +265,10 @@ bool schema(const Campaign& c) {
   else if(type(w,id,"department") && org) {allowed={DEPT};required=allowed;ar={SHIP};rr=ar;}
   else if(type(w,id,"section") && org) {allowed={DEPT,SECTION_KEY};required=allowed;ar={SHIP,DEPARTMENT};rr=ar;}
   else if(type(w,id,"function") && org) {allowed={START,END,STATE,STATIONS,CAUSE};required=allowed;ar={SHIP,PERSON,SLOT,ISSUER};rr=ar;}
-  else if(type(w,id,"activity")) { allowed={START,END,STATE,VALUE,CAUSE,DEBT,CODE}; required={START,END,STATE,VALUE,CAUSE};ar={SHIP,PERSON,SLOT,ISSUER,ACTIVITY};rr={SHIP,PERSON,ISSUER}; }
+  else if(type(w,id,"activity")) { allowed={START,END,STATE,VALUE,CAUSE,DEBT,CODE}; required={START,END,STATE,VALUE,CAUSE};ar={SHIP,PERSON,SLOT,ISSUER,ACTIVITY};rr={SHIP,PERSON,ISSUER};
+   if(val(w,1,SCHEMA)==4){allowed.insert({ORDINARY,TEMPORARY,STOP});ar.insert(PLAN);} }
+  else if(type(w,id,"roster_plan") && val(w,1,SCHEMA)==4) {allowed={START,END,STATE,VALUE,CAUSE};required=allowed;ar={SHIP,ISSUER};rr=ar;}
+  else if(type(w,id,"roster_gap") && val(w,1,SCHEMA)==4) {allowed={START,END,STATE,DEPT,STATIONS,VALUE,CAUSE};required=allowed;ar={SHIP,ISSUER,PLAN};rr=ar;}
   else if(type(w,id,"appointment")) { allowed={START,END,STATE,ROLE,DEPT,CAUSE};required=allowed;ar={SHIP,PERSON,ISSUER};rr=ar; }
   else if(type(w,id,"delegation")) { allowed={START,END,STATE,D_DOMAIN,CAUSE};required=allowed;ar={SHIP,PERSON,ISSUER,ORIGIN};rr=ar; }
   else if(type(w,id,"task")) { allowed={START,END,STATE,OP,CODE,CAUSE};required={START,END,STATE,OP,CAUSE};ar={SHIP,PERSON};rr=ar; }
@@ -238,11 +291,12 @@ bool schema(const Campaign& c) {
   if(refs.contains(SLOT) && !type(w,ref(w,id,SLOT),"slot")) return false;
   if(refs.contains(ORIGIN) && !type(w,ref(w,id,ORIGIN),"appointment")) return false;
   if(refs.contains(ACTIVITY) && !type(w,ref(w,id,ACTIVITY),"activity")) return false;
+  if(refs.contains(PLAN) && !type(w,ref(w,id,PLAN),"roster_plan"))return false;
   if(fields.contains(START) && (val(w,id,START)>=val(w,id,END) || val(w,id,STATE)>DONE)) return false;
   if(type(w,id,"person") && (id<3 || (!general && id>11) || val(w,id,CATEGORY)<1 || val(w,id,CATEGORY)>3 || (!general && val(w,id,DEPT)<1) || val(w,id,DEPT)>(org?7U:4U) || (org?(val(w,id,QUAL)&~QUALIFICATIONS):(val(w,id,QUAL)>30)) || (general && val(w,id,MEMBER)>1))) return false;
-  if(type(w,id,"slot") && (val(w,id,QUAL)<1 || val(w,id,QUAL)>(org?30U:4U) || val(w,id,DEPT)<1 || val(w,id,DEPT)>(org?7U:4U) || val(w,id,REQUIRED)>1)) return false;
+  if(type(w,id,"slot") && (val(w,id,QUAL)<1 || val(w,id,QUAL)>(org?35U:4U) || val(w,id,DEPT)<1 || val(w,id,DEPT)>(org?7U:4U) || val(w,id,REQUIRED)>1)) return false;
   if(type(w,id,"activity") && val(w,id,VALUE)!=F04_DUTY && val(w,id,VALUE)!=F04_REST && val(w,id,VALUE)!=F04_ONCALL && val(w,id,VALUE)!=F04_ABSENCE) return false;
-  if(type(w,id,"appointment") && (val(w,id,ROLE)<1 || val(w,id,ROLE)>(org?F04_DEPUTY:F04_SUCCESSOR))) return false;
+  if(type(w,id,"appointment") && (val(w,id,ROLE)<1 || val(w,id,ROLE)>(val(w,1,SCHEMA)==4?F04_DUTY_HEAD:org?F04_DEPUTY:F04_SUCCESSOR))) return false;
   if(org && type(w,id,"appointment") && (val(w,id,DEPT)<1 || val(w,id,DEPT)>7))return false;
   if(type(w,id,"delegation") && val(w,id,D_DOMAIN)!=F04_POLICY) return false;
   if(type(w,id,"mandate") && (ref(w,id,PERSON)!=10 || val(w,id,D_DOMAIN)!=F04_CONTACT || val(w,id,CAUSE)!=40401))return false;
@@ -268,9 +322,9 @@ bool schema(const Campaign& c) {
  // Validate disjoint intervals within a person/role, not all pairs of the crew.
  std::map<std::pair<U,U>,std::vector<std::pair<U,U>>> intervals;
  for(U a:all(w,"activity"))if(val(w,a,STATE)==ACTIVE && val(w,a,VALUE)!=F04_ONCALL && val(w,a,VALUE)!=F04_ABSENCE)
-  intervals[{0,ref(w,a,PERSON)}].push_back({val(w,a,START),val(w,a,END)});
+  if(val(w,a,START)<effective_end(w,a))intervals[{0,ref(w,a,PERSON)}].push_back({val(w,a,START),effective_end(w,a)});
  for(U a:all(w,"appointment"))if(val(w,a,STATE)==ACTIVE)
-  intervals[{val(w,a,ROLE),(val(w,a,ROLE)==F04_HEAD || val(w,a,ROLE)==F04_DEPUTY)?val(w,a,DEPT):0}].push_back({val(w,a,START),val(w,a,END)});
+  intervals[{val(w,a,ROLE),(val(w,a,ROLE)==F04_HEAD || val(w,a,ROLE)==F04_DEPUTY || val(w,a,ROLE)==F04_DUTY_HEAD)?val(w,a,DEPT):0}].push_back({val(w,a,START),val(w,a,END)});
  for(U f:all(w,"function"))if(val(w,f,STATE)==ACTIVE)
   intervals[{100+val(w,f,STATIONS),0}].push_back({val(w,f,START),val(w,f,END)});
  for(U f:all(w,"function"))if(val(w,f,STATE)==ACTIVE)
@@ -278,8 +332,9 @@ bool schema(const Campaign& c) {
  for(auto& entry:intervals) {auto& list=entry.second;std::sort(list.begin(),list.end());
   for(size_t i=1;i<list.size();++i)if(list[i].first<list[i-1].second)return false;
  }
- return organization_schema(w);
+ return organization_schema(w) && roster_schema(w);
 }
+#include "f04_roster.inc"
 U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=false) {
  const U p=r.actor.id,t=c.time.now(),target=r.target;
  need(type(c.world,p,"person"),F04_DENIED);
@@ -293,6 +348,9 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  auto times=[&]() { need(r.start>=t && r.start<r.end && r.end<=FOREVER); };
  auto person=[&](U who) { need(type(c.world,who,"person") && val(c.world,who,CATEGORY)==1 && member(c.world,who),F04_DENIED); };
  switch(r.op) {
+ case F04_PLAN_WATCHES:cmd();return plan_watches(c,cat,r);
+ case F04_COVER_DUTY:cmd();return cover_duty(c,cat,r);
+ case F04_CANCEL_DUTY:cmd();return stop_duty(c,r);
  case F04_INSTALL_TEMPLATE:cmd();need(r.cause);return install_template(c,cat,r);
  case F04_BOOTSTRAP_TEMPLATE:cmd();need(r.cause);return bootstrap_template(c,cat,r);
  case F04_CREDENTIAL: {
@@ -306,13 +364,20 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   if(ref(c.world,target,PERSON)==r.aux)return target;
   cancel_post(c,r.aux);
   for(U a:all(c.world,"appointment"))if(ref(c.world,a,PERSON)==r.aux &&
-    (val(c.world,a,ROLE)==F04_HEAD || val(c.world,a,ROLE)==F04_DEPUTY || val(c.world,a,ROLE)==F04_DOCTOR))set(c,a,STATE,CANCELLED);
+    (val(c.world,a,ROLE)==F04_HEAD || val(c.world,a,ROLE)==F04_DEPUTY || val(c.world,a,ROLE)==F04_DOCTOR ||
+     (val(c.world,1,SCHEMA)==4 && (val(c.world,a,ROLE)==F04_WATCH || val(c.world,a,ROLE)==F04_DUTY_HEAD)))) {
+   if(val(c.world,1,SCHEMA)==4 && val(c.world,a,START)<t && t<val(c.world,a,END))set(c,a,END,t);
+   else if(val(c.world,a,END)>t)set(c,a,STATE,CANCELLED);
+  }
   set(c,r.aux,DEPT,val(c.world,target,DEPT));link(c,target,PERSON,r.aux);return target;
  }
  case F04_FUNCTION: {
   person(target);need(organization(c.world) && type(c.world,r.aux,"slot"));manage(val(c.world,r.aux,DEPT));times();need(r.cause);
   need(r.value && !(r.value&(r.value-1)) && (val(c.world,r.aux,STATIONS)&r.value),F04_SCOPE);
   need(duty(c.world,target,r.aux,r.start) && duty(c.world,target,r.aux,r.end-1),F04_UNAVAILABLE);
+  if(val(c.world,1,SCHEMA)==4 && r.value==F04_ST_COMMAND)need(role_through(c.world,target,F04_WATCH,F04_COMMAND,r.start,r.end),F04_DENIED);
+  if(val(c.world,1,SCHEMA)==4 && r.value==F04_ST_ENGINEERING)need(role_through(c.world,target,F04_DUTY_HEAD,F04_ENGINEERING,r.start,r.end),F04_DENIED);
+  if(val(c.world,1,SCHEMA)==4 && r.value==F04_ST_MEDICAL)need(qualified(c.world,target,F04_Q_CLINICAL,r.end-1) || qualified(c.world,target,F04_Q_NURSING,r.end-1),F04_QUALIFICATION);
   if(r.value==F04_ST_TACTICAL)need(qualified(c.world,target,F04_Q_TACTICAL,r.end-1),F04_QUALIFICATION);
   // Every boundary is checked; endpoints alone can hide an absence inside.
   for(const char* kind:{"activity","appointment"})for(U a:all(c.world,kind))for(U b:{val(c.world,a,START),val(c.world,a,END)})
@@ -355,8 +420,16 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  case F04_DEPART: {
   cmd();need(val(c.world,1,SCHEMA)>=2 && type(c.world,target,"person") && member(c.world,target));need(r.cause);
   for(U slot:all(c.world,"slot"))if(ref(c.world,slot,PERSON)==target)link(c,slot,PERSON,0);
-  for(const char* kind:{"activity","appointment","delegation","task","mandate","order","review","function"})for(U id:all(c.world,kind))
-   if(ref(c.world,id,PERSON)==target || ref(c.world,id,ISSUER)==target)set(c,id,STATE,CANCELLED);
+  for(const char* kind:{"activity","appointment","delegation","task","mandate","order","review","function"})for(U id:all(c.world,kind)) {
+   const bool own=ref(c.world,id,PERSON)==target;
+   const bool issued=ref(c.world,id,ISSUER)==target && (val(c.world,1,SCHEMA)!=4 ||
+    (!type(c.world,id,"activity") && !type(c.world,id,"appointment") && !type(c.world,id,"function")));
+   if(own || issued) {
+    if(type(c.world,id,"activity") && val(c.world,id,VALUE)==F04_DUTY && val(c.world,1,SCHEMA)==4)
+     set(c,id,STOP,std::clamp(t,val(c.world,id,START),val(c.world,id,END)));
+    set(c,id,STATE,CANCELLED);
+   }
+  }
   set(c,target,MEMBER,0);action(c,target,RemoveContainmentAction{EntityId{target}});return target;
  }
  case F04_ASSIGN: {
@@ -374,6 +447,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   person(target);manage(val(c.world,target,DEPT));times();need(r.cause!=0);
   if(r.op==F04_ABSENCE) need(r.value>=F04_LEAVE && r.value<=F04_SUSPENDED);
   if(r.op==F04_DUTY) {
+   if(val(c.world,1,SCHEMA)==4)ordinary_allowed(c.world,target,r.start,r.end);
    need(type(c.world,r.aux,"slot") && ref(c.world,r.aux,PERSON)==target,F04_VACANT);
    need(slot_qualified(c.world,target,r.aux,r.end-1),F04_QUALIFICATION);
    const U role=val(c.world,r.aux,RESPONSIBILITY);
@@ -389,6 +463,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   U a=make(c,cat,"activity");link(c,a,SHIP,1);link(c,a,PERSON,target);link(c,a,ISSUER,p);
   if(r.op==F04_DUTY) link(c,a,SLOT,r.aux);
   temporal(c,a,r.start,r.end);set(c,a,VALUE,r.op);set(c,a,CAUSE,r.cause);
+  if(r.op==F04_DUTY && val(c.world,1,SCHEMA)==4){set(c,a,ORDINARY,1);set(c,a,TEMPORARY,0);}
   if(r.op==F04_ABSENCE)set(c,a,CODE,r.value);
   return a;
  }
@@ -399,6 +474,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   const U role=val(c.world,slot,RESPONSIBILITY);if(role)need(active_role(c.world,r.aux,role,t,val(c.world,slot,DEPT)) && active_role(c.world,r.aux,role,val(c.world,target,END)-1,val(c.world,slot,DEPT)),F04_DENIED);
   need(val(c.world,r.aux,DEPT)==val(c.world,slot,DEPT),F04_SCOPE);
   need(available(c.world,r.aux,t),F04_UNAVAILABLE);
+  if(val(c.world,1,SCHEMA)==4)need(ordinary_fits(planner_person(c.world,r.aux,slot),t,val(c.world,target,END)),F04_OVERLAP);
   for(U s:all(c.world,"slot"))need(s==slot || ref(c.world,s,PERSON)!=r.aux,F04_OVERLAP);
   for(U a:all(c.world,"activity")) if(ref(c.world,a,PERSON)==r.aux && val(c.world,a,STATE)==ACTIVE && val(c.world,a,VALUE)!=F04_ONCALL)
    need(!overlaps(t,val(c.world,target,END),val(c.world,a,START),val(c.world,a,END)),F04_OVERLAP);
@@ -408,14 +484,21 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
    for(U f:all(c.world,"function"))if(ref(c.world,f,SLOT)==slot && val(c.world,f,STATE)==ACTIVE)set(c,f,STATE,CANCELLED);
    action(c,ref(c.world,slot,PERSON),PlaceEntityAction{EntityId{ref(c.world,slot,PERSON)},EntityId{1}});
   }
+  if(val(c.world,1,SCHEMA)==4) {
+   set(c,target,STOP,t);set(c,a,ORDINARY,1);set(c,a,TEMPORARY,0);if(ref(c.world,target,PLAN))link(c,a,PLAN,ref(c.world,target,PLAN));
+  }
   set(c,target,STATE,CANCELLED);link(c,slot,PERSON,r.aux);return a;
  }
  case F04_APPOINT: {
-  cmd();person(target);times();need(r.cause && r.value>=F04_CAPTAIN && r.value<=static_cast<uint32_t>(organization(c.world)?F04_DEPUTY:F04_SUCCESSOR));
-  const bool departmental=r.value==F04_HEAD || r.value==F04_DEPUTY;
+  cmd();person(target);times();need(r.cause && r.value>=F04_CAPTAIN && r.value<=static_cast<uint32_t>(val(c.world,1,SCHEMA)==4?F04_DUTY_HEAD:organization(c.world)?F04_DEPUTY:F04_SUCCESSOR));
+  const bool departmental=r.value==F04_HEAD || r.value==F04_DEPUTY || r.value==F04_DUTY_HEAD;
   if(departmental && organization(c.world))need(r.aux>=1 && r.aux<=7);
   const U q=r.value==F04_DOCTOR?F04_MEDICINE:departmental?r.aux:F04_COMMAND;
-  need(qualified(c.world,target,q,r.end-1),F04_QUALIFICATION);
+  if(r.value==F04_DUTY_HEAD) {
+   need(val(c.world,1,SCHEMA)==4 && val(c.world,target,DEPT)==r.aux,F04_SCOPE);
+   bool skilled=false;for(U slot:all(c.world,"slot"))if(ref(c.world,slot,PERSON)==target && slot_qualified(c.world,target,slot,r.end-1))skilled=true;
+   need(skilled && scheduled(c.world,target,r.start) && scheduled(c.world,target,r.end-1),F04_QUALIFICATION);
+  } else need(qualified(c.world,target,q,r.end-1),F04_QUALIFICATION);
   for(U a:all(c.world,"appointment")) if(val(c.world,a,ROLE)==r.value && (!departmental || val(c.world,a,DEPT)==r.aux) && val(c.world,a,STATE)==ACTIVE)
    need(!overlaps(r.start,r.end,val(c.world,a,START),val(c.world,a,END)),F04_OVERLAP);
   return appointment(c,cat,target,r.value,organization(c.world) && !departmental?q:r.aux,r.start,r.end,p,r.cause);
@@ -442,6 +525,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
  }
  case F04_POLICY: {
   need(command_authority(c.world,p,F04_POLICY,t),F04_DENIED);need(r.value==3 || r.value==4);
+  if(val(c.world,1,SCHEMA)==4)need(r.value==3,F04_REVIEW);
   if(organization(c.world)) {
    std::set<U> boundaries{t};
    for(const char* kind:{"activity","appointment"})for(U a:all(c.world,kind))
@@ -526,7 +610,7 @@ struct F04Session {
  }
 };
 namespace {
-uint32_t guard(F04Session* s) {return !s?F04_ARGUMENT:s->owner!=std::this_thread::get_id()?F04_THREAD:F04_OK;}
+uint32_t guard(F04Session* s) {invalidate_index();return !s?F04_ARGUMENT:s->owner!=std::this_thread::get_id()?F04_THREAD:F04_OK;}
 template<class F> uint32_t call(F04Session* s,F&& f) noexcept {
  if(auto r=guard(s);r)return r;
  try{return f();}catch(const Denial& e){return e.code;}catch(...){return F04_INTERNAL;}
@@ -561,7 +645,7 @@ uint32_t f04_execute(F04Session* s,const F04Request* r,F04Result* out) {
  return call(s,[&]() -> uint32_t {
   need(r->actor.scope==s->scope,F04_SCOPE);
   auto next=std::make_unique<Campaign>(*s->c);uint32_t code=F04_OK;U record=0;
-  try {need(r->revision==s->c->world.revision(),F04_STALE);record=perform(*next,*s->content.catalog(),*r);}
+  try {need(r->revision==s->c->world.revision(),F04_STALE);record=perform(*next,*s->content.catalog(),*r);record_incident_gaps(*next,*s->content.catalog(),*r);}
   catch(const Denial& e) {code=e.code;next=std::make_unique<Campaign>(*s->c);}
   const U audit=event(*next,*s->content.catalog(),r->actor.id,r->op,code,r->cause<=FOREVER?r->cause:0,r->target);
   const U previous=commander(s->c->world,s->c->time.now()),current=commander(next->world,next->time.now());
@@ -580,6 +664,9 @@ uint32_t f04_advance(F04Session* s,U horizon,U budget,U* processed) {
    std::set<U> boundaries{until};
    for(const char* kind:{"activity","appointment","delegation","order","mandate","review"}) for(U a:all(next->world,kind))
     for(U b:{val(next->world,a,START),val(next->world,a,END)}) if(next->time.now()<b && b<=until)boundaries.insert(b);
+   for(U person_id:all(next->world,"person")) {
+    const U expires=val(next->world,person_id,UNTIL);if(next->time.now()<expires && expires<=until)boundaries.insert(expires);
+   }
    for(U b:boundaries) {
     const U before=commander(next->world,next->time.now());
     need(next->time.advance(next->world,next->random,b).status==TimelineStatus::completed,F04_INTERNAL);
@@ -677,7 +764,7 @@ uint32_t f04_positions_page(F04Session* s,F04Ref who,U offset,F04Position* out,U
   auto slots=all(w,"slot");*total=slots.size();need(offset<=*total);*written=std::min(capacity,*total-offset);
   for(U i=0;i<*written;++i) {
    const U slot=slots[static_cast<size_t>(offset+i)],p=ref(w,slot,PERSON);bool stationed=false;U duty_record=0;
-   for(U a:all(w,"activity"))if(ref(w,a,PERSON)==p && ref(w,a,SLOT)==slot && val(w,a,VALUE)==F04_DUTY && window(w,a,s->c->time.now()))duty_record=a;
+   for(U a:person_records(w,"activity",p))if(ref(w,a,SLOT)==slot && val(w,a,VALUE)==F04_DUTY && window(w,a,s->c->time.now()) && s->c->time.now()<effective_end(w,a))duty_record=a;
    for(U f:all(w,"function"))if(ref(w,f,SLOT)==slot && station_active(w,f,s->c->time.now()))stationed=true;
    out[i]={slot,val(w,slot,STABLE_ID),val(w,slot,DEPT),val(w,ref(w,slot,SECTION),SECTION_KEY),val(w,slot,ORDINAL),p,
     val(w,slot,QUAL),val(w,slot,QUAL_MASK),val(w,slot,RESPONSIBILITY),val(w,slot,STATIONS),val(w,slot,COVERAGE),val(w,slot,ALPHA),duty_record,
@@ -712,9 +799,14 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
    U p=ref(w,a,PERSON);if(val(w,p,DEPT)==F04_MEDICINE && available(w,p,tick) &&
     (qualified(w,p,F04_MEDICINE,tick) || qualified(w,p,F04_Q_CLINICAL,tick)))out->urgent_response=2;
   }
+  if(val(w,1,SCHEMA)==4) {
+   std::set<U> workers;for(U a:all(w,"activity"))if(val(w,a,VALUE)==F04_DUTY && duty(w,ref(w,a,PERSON),ref(w,a,SLOT),tick))workers.insert(ref(w,a,PERSON));
+   out->on_duty=workers.size();
+  }
   out->alpha_deficit=out->alpha_expected-out->alpha_present;
   const auto stations=trek_templates::profile(val(w,1,TEMPLATE))->continuous_stations;
   out->continuous_required=stations.size();for(U station:stations)out->continuous_covered+=service_covered(w,station,tick);
   return F04_OK;
  });
 }
+#include "f04_roster_queries.inc"
