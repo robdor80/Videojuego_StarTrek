@@ -1,6 +1,6 @@
 # LORE-03 A — Auditoría final documental v0.2
 
-> **NOTA DE POSTERIORIDAD 2026-10-30:** este informe conserva su conclusión documental histórica de octubre 23. Su reserva «Valhalla servicio en 2383» y la falta de decisión para Odyssey han sido **sustituidas** por el [acta autoral DEC-0013–0016](../../decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md): Odyssey operativa en 2383, Valhalla objetivo 2387 tras siete años desde 2380, flujo cuántico en pruebas. No altera retrospectivamente las pruebas de LORE-03A ni acredita runtime.
+> **NOTA DE POSTERIORIDAD 2026-10-30:** este informe conserva su conclusión documental histórica de octubre 23. Su reserva «Valhalla servicio en 2383» y la falta de decisión para Odyssey han sido **sustituidas** por el [acta autoral DEC-0013–0016](../decisions/odyssey_valhalla_program_2383_2387_quantum_slipstream.md): Odyssey operativa en 2383, Valhalla objetivo 2387 tras siete años desde 2380, flujo cuántico en pruebas. No altera retrospectivamente las pruebas de LORE-03A ni acredita runtime.
 
 **Fecha:** 2026-10-23 · **Base:** `main@867077e4` · **Rama/PR:** `lore/03-a-chronology-history` / #38.  
 **Dictamen actualizado:** **COMPLETE — LORE-03 A fusionada y cerrada documentalmente** mediante PR #38 (2026-10-23, `d0efab2c9d4b2451ad678b651bd6ecf2283d8235`). **No** certificada escena por escena ni importada a runtime. Las reservas históricas siguen abiertas.
