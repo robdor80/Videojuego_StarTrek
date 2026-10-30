@@ -341,8 +341,34 @@
         "STVIII_FIRST_CONTACT",
         "MA_SOVEREIGN_CLASS"
       ]
+    },
+    {
+      "class_id": "odyssey",
+      "display_name": "Odyssey",
+      "operator": "starfleet",
+      "availability": {
+        "gameplay_era": "post_nemesis",
+        "entry_into_service": "pending_author_decision"
+      },
+      "classifications": ["multi_mission"],
+      "primary_gameplay_roles": ["general_service"],
+      "nominal_complement": {"starfleet": 1600, "residents": 0},
+      "source_ids": ["PROJECT_AUTHOR_APPROVAL_20261030"],
+      "notes": ["Author-approved game design complement; exact service dates and equipment remain undefined; not a physical capacity."]
+    },
+    {
+      "class_id": "valhalla",
+      "display_name": "Valhalla",
+      "operator": "starfleet",
+      "availability": {
+        "gameplay_era": "post_nemesis",
+        "entry_into_service": "pending_author_decision"
+      },
+      "classifications": ["multi_mission"],
+      "primary_gameplay_roles": ["general_service"],
+      "nominal_complement": {"starfleet": 1800, "residents": 400},
+      "source_ids": ["PROJECT_AUTHOR_APPROVAL_20261030"],
+      "notes": ["Author-approved USS Enterprise-G class; residents developed further in F12. Exact equipment remains undefined. Not a physical capacity."]
     }
-    ,{"class_id": "odyssey", "display_name": "Odyssey", "operator": "starfleet", "nominal_complement": {"starfleet": 1600, "residents": 0}, "notes": ["Author-approved game design complement; not a physical capacity."]},
-    {"class_id": "valhalla", "display_name": "Valhalla", "operator": "starfleet", "nominal_complement": {"starfleet": 1800, "residents": 400}, "notes": ["Author-approved USS Enterprise-G class; residents developed further in F12. Not a physical capacity."]}
   ]
 }
