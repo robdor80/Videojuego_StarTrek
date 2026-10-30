@@ -1,0 +1,182 @@
+{
+  "base": "00822e24ecd2333988e5b6369be1ae9e3089de01",
+  "files": [
+    {
+      "status": "A",
+      "path": ".github/workflows/f02-native-integration.yml"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/.gitignore"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/CMakeLists.txt"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/README.md"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/audit_originals.py"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/collect_evidence.py"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/include/f02_bridge.h"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/run_f02.ps1"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/src/f02_bridge.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/tests/f02_tests.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/.gitignore"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Config/DefaultEngine.ini"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/F02CoreLab.uproject"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab.Target.cs"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/F02CoreLab.Build.cs"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02Automation.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CampaignSubsystem.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CoreLab.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02DemoGameMode.cpp"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Public/F02CampaignSubsystem.h"
+    },
+    {
+      "status": "A",
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLabEditor.Target.cs"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/ARCHIVOS_ENTREGA_2026-10-29.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/AUDITORIA_OPERATIVA_2026-10-29.md"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/EVIDENCIAS_EXTERNAS_2026-10-29.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/EVIDENCIAS_REVISION_PR60_2026-10-29.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/INFORME_EJECUCION_REAL_2026-10-29.md"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/INFORME_REVISION_PR60_2026-10-29.md"
+    },
+    {
+      "status": "M",
+      "path": "proyecto/docs/roadmap/master/fases/F02/README.md"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/Core-EntityId-1.png"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/core-tests.xml"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/drive_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/input_inventory.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/native-tests.xml"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/original_files_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/results.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_20261029/unreal-tests.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/Core-EntityId-1.png"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/drive_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/native-tests.xml"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/original_files_verification.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/results.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/source_manifest.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/unreal-after.json"
+    },
+    {
+      "status": "A",
+      "path": "proyecto/docs/roadmap/master/fases/F02/evidencias_revision_20261029/unreal-before.json"
+    }
+  ],
+  "count": 44
+}

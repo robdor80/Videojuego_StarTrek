@@ -1,0 +1,7 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.8",
+  "Category": "F02 isolated integration laboratory",
+  "Description": "Real CoreRPG identity and persistence; no artistic project dependencies",
+  "Modules": [{ "Name": "F02CoreLab", "Type": "Runtime", "LoadingPhase": "Default" }]
+}

@@ -1,0 +1,144 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "FATIROBERMSI",
+			"instance": "5F0ED24741F20796FEFE489050204334",
+			"instanceName": "FATIROBERMSI-32432",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "Intel(R) Core(TM) i9-14900HX",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.29-15.01.13",
+	"succeeded": 5,
+	"succeededWithWarnings": 0,
+	"failed": 1,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.20129179954528809,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "ActorLifecycle",
+			"fullTestPath": "F02.Core.ActorLifecycle",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.016209099441766739,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CorruptLoad",
+			"fullTestPath": "F02.Core.CorruptLoad",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.019133798778057098,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "HostRecovery",
+			"fullTestPath": "F02.Core.HostRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.029589999467134476,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Projection",
+			"fullTestPath": "F02.Core.Projection",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.015450898557901382,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ThreadAffinity",
+			"fullTestPath": "F02.Core.ThreadAffinity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.032065600156784058,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WorldScopedRepresentation",
+			"fullTestPath": "F02.Core.WorldScopedRepresentation",
+			"tags": [],
+			"state": "Fail",
+			"deviceInstance": [
+				"5F0ED24741F20796FEFE489050204334"
+			],
+			"duration": 0.088842406868934631,
+			"dateTime": "2026.10.29-15.01.13",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'Overlapping worlds have distinct Actors' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\ue\\Source\\F02CoreLab\\Private\\F02Automation.cpp",
+					"lineNumber": 60,
+					"timestamp": "2026.10.29-15.01.13"
+				},
+				{
+					"event":
+					{
+						"type": "Error",
+						"message": "Expected 'Requested second world owns returned Actor' to be true.",
+						"context": "",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "C:\\Users\\andro\\Documents\\ChatGPT\\F02_Review_20261029_1600\\ue\\Source\\F02CoreLab\\Private\\F02Automation.cpp",
+					"lineNumber": 62,
+					"timestamp": "2026.10.29-15.01.13"
+				}
+			],
+			"warnings": 0,
+			"errors": 2,
+			"artifacts": []
+		}
+	]
+}

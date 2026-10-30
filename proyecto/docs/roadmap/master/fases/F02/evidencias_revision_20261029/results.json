@@ -1,0 +1,67 @@
+{
+  "date": "2026-10-29",
+  "timezone": "Europe/Madrid",
+  "collected_at": "2026-10-29T15:05:01.254434+00:00",
+  "audit_comment": "https://github.com/robdor80/Videojuego_StarTrek/pull/60#issuecomment-6500133155",
+  "previous_pr_head": "a135f82b517ac450cc2f2ed709f6b45b0d8bd34c",
+  "tested_runtime_commit": "f5ef4181a8a844f626bf2523843f12fce6f0a730",
+  "core_sha": "4f282863737bcd8f5add401202a9e1064c133672",
+  "red_reproduction": {
+    "passed": 5,
+    "failed": 1,
+    "skipped": 0,
+    "failed_case": "F02.Core.WorldScopedRepresentation",
+    "assertion_failures": [
+      "Expected 'Overlapping worlds have distinct Actors' to be true.",
+      "Expected 'Requested second world owns returned Actor' to be true."
+    ]
+  },
+  "final_revision_tests": {
+    "native": {
+      "passed": 15,
+      "failed": 0,
+      "skipped": 0
+    },
+    "unreal": {
+      "passed": 6,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 0
+    },
+    "documentary_unittest": {
+      "passed": 9,
+      "failed": 0,
+      "skipped": 0
+    },
+    "total": {
+      "passed": 30,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "additional_checks": {
+    "documentary_validators": 2,
+    "graphical_demo_stages_passed": 4
+  },
+  "historical_core_suite": "432 passed / 4 skipped in original delivery; not rerun for this Host-only correction",
+  "protection": {
+    "before_count": 19030,
+    "after_count": 19030,
+    "missing_or_changed": [],
+    "new": [],
+    "method": "relative path, size and nanosecond mtime; not a full content hash audit"
+  },
+  "compiled_runtime_source_hashes": [
+    {
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CampaignSubsystem.cpp",
+      "sha256": "3954d50b3595082c81a17e2bb9c6da652f3cf6e0b6c6cf1805266fc80b37bbb1",
+      "staged_sha256": "3954d50b3595082c81a17e2bb9c6da652f3cf6e0b6c6cf1805266fc80b37bbb1"
+    },
+    {
+      "path": "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02Automation.cpp",
+      "sha256": "3be4f20f9f06b483810df84a3224bd30197ebd6f788c6cd066809ec90235df56",
+      "staged_sha256": "3be4f20f9f06b483810df84a3224bd30197ebd6f788c6cd066809ec90235df56"
+    }
+  ],
+  "scope": "One Core session; one live Actor per fixture entity and UWorld; no Core/artistic changes; PR remains Draft"
+}
