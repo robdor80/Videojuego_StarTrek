@@ -1,0 +1,129 @@
+{
+  "summary": {
+    "succeeded": 17,
+    "succeededWithWarnings": 0,
+    "failed": 0,
+    "notRun": 0
+  },
+  "tests": [
+    {
+      "name": "F02.Core.ActorLifecycle",
+      "state": "Success",
+      "duration": 0.02036130055785179,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F02.Core.CorruptLoad",
+      "state": "Success",
+      "duration": 0.040274400264024734,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F02.Core.HostRecovery",
+      "state": "Success",
+      "duration": 0.037690598517656326,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F02.Core.Projection",
+      "state": "Success",
+      "duration": 0.023808501660823822,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F02.Core.ThreadAffinity",
+      "state": "Success",
+      "duration": 0.028208602219820023,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F02.Core.WorldScopedRepresentation",
+      "state": "Success",
+      "duration": 0.03665110096335411,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.IdentityLodWorlds",
+      "state": "Success",
+      "duration": 0.019281499087810516,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.Knowledge",
+      "state": "Success",
+      "duration": 0.029686398804187775,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.Offscreen",
+      "state": "Success",
+      "duration": 0.033861201256513596,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.Recovery",
+      "state": "Success",
+      "duration": 0.018192600458860397,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.SafeFailure",
+      "state": "Success",
+      "duration": 0.037216100841760635,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F03.Core.ThreadAuthority",
+      "state": "Success",
+      "duration": 0.016751103103160858,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F04.Core.AbsenceReliefOffscreen",
+      "state": "Success",
+      "duration": 0.024337399750947952,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F04.Core.AuthorityAndMedical",
+      "state": "Success",
+      "duration": 0.013144299387931824,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F04.Core.NewSessionRecovery",
+      "state": "Success",
+      "duration": 0.021062899380922318,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F04.Core.RealWorldsActors",
+      "state": "Success",
+      "duration": 0.028753899037837982,
+      "warnings": 0,
+      "errors": 0
+    },
+    {
+      "name": "F04.Core.SafeLoadAndThread",
+      "state": "Success",
+      "duration": 0.03170020133256912,
+      "warnings": 0,
+      "errors": 0
+    }
+  ]
+}
