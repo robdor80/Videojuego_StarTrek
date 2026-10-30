@@ -85,6 +85,21 @@ class AChronologyTests(unittest.TestCase):
         self.bad(lambda d:d["npc_career_2383"][0].update(not_permanent_valhalla_captain=False))
     def test_48_reject_valhalla_runtime(self):
         self.bad(lambda d:d["game_additions"][0].update(gameplay_activated=True))
+    def test_50_reject_odyssey_not_operational_at_start(self):
+        self.bad(lambda d:d["ship_temporal_reservations"][1].update(operational_at_academy_start=False))
+    def test_51_reject_odyssey_slipstream_as_standard(self):
+        self.bad(lambda d:d["game_additions"][1].update(quantum_slipstream_standard_on_all_ships=True))
+    def test_52_reject_valhalla_slipstream_on_launch(self):
+        self.bad(lambda d:d["game_additions"][2].update(valhalla_installed_at_commissioning_by_default=True))
+    def test_53_reject_guaranteed_future_tech(self):
+        self.bad(lambda d:d["game_additions"][2].update(success_not_guaranteed=False))
+    def test_54_reject_unapproved_academy_year(self):
+        self.bad(lambda d:d["reference_window"].update(campaign_start_year_approved=2384))
+    def test_55_reject_valhalla_early_availability(self):
+        self.bad(lambda d:d["ship_temporal_reservations"][0].update(available_in_2383=True))
+    def test_56_reject_game_addition_runtime(self):
+        self.bad(lambda d:d["game_additions"][1].update(gameplay_activated=True))
+
     def test_49_nemesis_before_campaign(self):
         event=next(e for e in self.d["additional_historical_anchors"] if e["event_id"]=="nemesis_shinzon_romulan_crisis")
         self.assertEqual(classify_by_year(event,2383),"ESTABLISHED_BEFORE_D")
