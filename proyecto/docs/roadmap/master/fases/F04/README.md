@@ -68,3 +68,11 @@ Sovereign; [plantilla completa](F04-ODYSSEY-01_PLANTILLA_1600.md) y
 [evidencias](evidence/F04-ODYSSEY-01/RESULTADOS.md). Odyssey operativa en 2383
 como GAME_ADDITION, flujo cuántico experimental sin instalación automática.
 F04 permanece EN_CURSO; Draft sin fusionar.
+
+## F04-VALHALLA-01 — Nueva doctrina militar del Proyecto Defiant (2026-10-31)
+
+**Separación de funciones sin excepciones por defecto:** solo la tripulación de Flota especializada gobierna y pilota la Defiant; los Marines Hijos de Odín se embarcan como fuerza de operaciones especiales y **NO desempeñan puestos navales ni pilotan la Valhalla o la Defiant**. El equivalente es submarino y equipo SEAL. No duplicar identidades, cualificaciones o puestos para darles funciones navales.
+
+**El autor aprueba** [DEC-0017–0019](../../../../decisions/valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md): la Valhalla de 1.800 tripulantes de Flota + 400 civiles incluye una **Defiant de guerra furtiva con tripulación naval especializada** y el destacamento de Marines de Flota **«Hijos de Odín»**, explícitamente soldados, no personal de seguridad disfrazado. **60 Marines + 40 tripulantes especializados** es únicamente una **hipótesis cuantitativa** pendiente de ratificación al validar espacios, turnos y misión; forman parte de los 1.800 de Flota, no son personas adicionales.
+
+**Contexto:** Federación exploradora y diplomática, pero con capacidad militar de disuasión y operaciones ofensivas bajo mandos, permisos y consecuencias reales. Integración F04-VALHALLA-01 todavía no implementada; no fabricar plantillas, rangos, dotaciones de Defiant ni misión en CoreRPG por esta sola actualización documental. F04 permanece **EN_CURSO**.

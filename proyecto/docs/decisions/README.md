@@ -2,6 +2,10 @@
 
 Las decisiones aprobadas prevalecen sobre propuestas anteriores sólo en los aspectos que modifican expresamente. Conservar siempre el historial anterior y separar `GAME_ADDITION` de `SCREEN_CANON` y de implementación CoreRPG/Unreal.
 
+## Decisión transversal vigente 2026-10-31
+
+- [DEC-0017–0019 — Proyecto Defiant, Marines Hijos de Odín, tripulación especializada y doctrina militar de Valhalla](valhalla_proyecto_defiant_hijos_de_odin_doctrina_2387.md).
+
 ## Decisión transversal vigente 2026-10-30
 
 - [DEC-0013–0016 — Programa Odyssey → Valhalla (2383–2387), siete años de construcción y flujo cuántico experimental](odyssey_valhalla_program_2383_2387_quantum_slipstream.md).
