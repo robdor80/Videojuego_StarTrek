@@ -11,6 +11,14 @@ departamentos, 34 grupos y 64 personas Alpha. Reutiliza el mismo motor y esquema
 con [holocubiertas como contrato mínimo de datos](tests/fixtures/intrepid_facilities_contract.json),
 sin ejecutar reservas ni crear escenarios 3D. No modifica la distribución Miranda.
 
+[F04-SOVEREIGN-01 — Organización y tres guardias](../../../proyecto/docs/roadmap/master/fases/F04/F04-SOVEREIGN-01_ORGANIZACION_Y_TRES_GUARDIAS.md)
+añade `F04_SOVEREIGN_MULTIMISSION=3`: 700 plazas, 59 secciones y día exacto
+230 Alpha / 150 Beta / 100 Gamma / 220 fuera. Amplía la ABI 1 con planificación
+3×8 de 1–28 días, consulta de cobertura/candidatos y suplencia temporal sin
+traslado. Migra explícitamente SCHEMA 3→4 al planificar; conserva 1/2/3.
+Los planes multisemana registran la reducción de actividad no crítica y no
+prometen cobertura ilimitada. CoreRPG sigue sin modificaciones.
+
 Corte nativo real, con ABI C y laboratorio Unreal 5.8.2. Core posee todos los
 datos persistentes; las reglas Trek interpretan entidades y relaciones. Los
 Actors son proyecciones prescindibles. No modifica F02/F03 ni sus dependencias.
@@ -46,7 +54,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 20 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 8.
+El comando ejecuta 21 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 9.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.
@@ -143,9 +151,9 @@ La creación general, altas/bajas, plazas y consulta individual/paginada sustitu
 la limitación de nueve personas para campañas nuevas. La muestra ABI 1 sigue
 existiendo con sus handles y archivo SCHEMA=1. F04 permanece EN_CURSO.
 
-No incluye: editor visual de flotas; rotaciones
-personalizadas más allá de 3×8/4×6; planificación biológica de fatiga por especie;
-equidad multisemanal; movimiento por interiores; traspaso completo de conocimiento
+No incluye: editor visual de flotas; optimización exhaustiva de cuadrantes;
+planificación biológica de fatiga por especie;
+equidad multisemanal demostrada para cualquier configuración; movimiento por interiores; traspaso completo de conocimiento
 durante relevos; motor clínico; totalidad de sistemas técnicos; adjudicación
 jurídica de conflictos; iniciativa NPC/órdenes completas F05; UI gráfica jugable.
 La prueba de cobertura de 24 h usa agendas sintéticas prolongadas para comprobar

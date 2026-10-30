@@ -1,0 +1,92 @@
+{
+  "base": "ff975c8b9d4b02ba8fe2a3f36d2b184f95a6ecee",
+  "sources": {
+    "f02": {
+      "core_sha": "4f282863737bcd8f5add401202a9e1064c133672",
+      "core_status": "",
+      "source_sha256": {
+        "desarrollo\\integration\\f02\\.gitignore": "b963079531cb75b6c600fac2868fb054a06ec93f7f8114955a5c69d2d00f8e3d",
+        "desarrollo\\integration\\f02\\audit_originals.py": "d11af0a1486aea915b36b3fc622b5287e4f57dd55761cb48104a26b588009370",
+        "desarrollo\\integration\\f02\\CMakeLists.txt": "da3d0ea070bf824146a247de1ef6f89fddd615ec0a80e24682a94e7909eba1ef",
+        "desarrollo\\integration\\f02\\collect_evidence.py": "6701d0d73cc77445d4bd396d34fe4a5184f0368dd3601f4ddda95629d2500f53",
+        "desarrollo\\integration\\f02\\README.md": "d1629982fc50c6c5d88eb66bb2567e24f58b41eee2fe2b4b5bf9e62308866311",
+        "desarrollo\\integration\\f02\\run_f02.ps1": "36670317fa3d2d1395d3d61e03620c5eccffea6a72b451b4e0a42300adf7402a",
+        "desarrollo\\integration\\f02\\include\\f02_bridge.h": "773ef20fbacefcec925e35777519a13114d4f45124582942ed53261733f4255f",
+        "desarrollo\\integration\\f02\\src\\f02_bridge.cpp": "a74ac7db828257165132c55d850621a14c19c43dadf8d0e683b007a8890cb02e",
+        "desarrollo\\integration\\f02\\tests\\f02_tests.cpp": "86450696316aa10f1b7d5cd0a72d8e5641ce08302d102768c8733ebe8a0d3f3d",
+        "desarrollo\\integration\\f02\\unreal\\.gitignore": "01938b8754cfb006da27ced77ed93ffedf306b602d52ea92e118ff45c5e845c6",
+        "desarrollo\\integration\\f02\\unreal\\F02CoreLab.uproject": "b02b2cfa94549c95db900ecf91e2d9f9bace0fa126c726044c8245cd8264bce2",
+        "desarrollo\\integration\\f02\\unreal\\Config\\DefaultEngine.ini": "3446182b93b9c07fb6ed498a0cf0daefb72c27d409ff6825606c2b6c3117f961",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab.Target.cs": "23d921c1cb803bff0f54836cb7c014bc557b6b8bfb92c689c45ef95510397779",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLabEditor.Target.cs": "839e3fdf24a8d8a43672c1f29e32f35bfa3c43df9f2ad16d56aa6c2c8afce5f6",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\F02CoreLab.Build.cs": "19d3d7f17f0a54bc22d02abba4540a568c7e4c0a0424c19cb5ed81159540458f",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\Private\\F02Automation.cpp": "6ac3fded4d3bbc2cf372094457d764e238687fd52e098f900a10eff875c3a835",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\Private\\F02CampaignSubsystem.cpp": "3c2ae886d9e8ec88a7f59b8aa6fce98ad4c4e1ac8a818e175ee10d92f8e975ba",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\Private\\F02CoreLab.cpp": "c16230f880c5296600fe09332afacd2d97318fc20679cda1eca49f78b4e67708",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\Private\\F02DemoGameMode.cpp": "7b9da630ac7d4f41e6cd30219cfd162bfe524d6e9baf58dcc72349a9d4119d39",
+        "desarrollo\\integration\\f02\\unreal\\Source\\F02CoreLab\\Public\\F02CampaignSubsystem.h": "852fd07938701bf37db89f023f5dff4fc3d59c8bb106481f30a182f9f4e26db1"
+      }
+    },
+    "f03": {
+      "core_sha": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+      "core_status": "",
+      "source_sha256": {
+        "desarrollo\\integration\\f03\\CMakeLists.txt": "67fee50a441269fbab5b84f6da0ce4cdf3238b5beae9a476c4ff340b629f2325",
+        "desarrollo\\integration\\f03\\collect_evidence.py": "e417477b424fc1d1ffca4aa88445963550aa7a88a95a927184cef4b6c0853a60",
+        "desarrollo\\integration\\f03\\core-revision.txt": "cf079211218355728303c3036592003f63983f3fee09b5369a1f96cc976bd528",
+        "desarrollo\\integration\\f03\\README.md": "6b051022c6a37b2ea92e32eafd717159baa0bc544f55c0aaba356689e711af2c",
+        "desarrollo\\integration\\f03\\run_f03.ps1": "ef78c7342bfa642c5876b2845cc0436e2ebb7d878c2480ebe08635a3548a176c",
+        "desarrollo\\integration\\f03\\include\\f03_bridge.h": "e592f85633aaaea443d7950cc68a9d82397915c66c8f14d0182750c633b6e6e6",
+        "desarrollo\\integration\\f03\\src\\f03_bridge.cpp": "b03a554f9ec9d83cf47288837bf151b23be42348ae5fbb6292d7463b52351ae8",
+        "desarrollo\\integration\\f03\\tests\\f03_tests.cpp": "a98e7a646629d88c4e681d5432b598d7f06c2daf21e7c7e555f1ee02d254fe85",
+        "desarrollo\\integration\\f03\\unreal\\F02CoreLab.Build.cs": "a725630c65d968dce7a6d26b0a6ffe9df84269e31ba1b7b1e023692691534d65",
+        "desarrollo\\integration\\f03\\unreal\\Private\\F02CoreLab.cpp": "e8f7a25e778f11335cdc107e45aaf83f7badcb1e6a87880405c8c1508f528632",
+        "desarrollo\\integration\\f03\\unreal\\Private\\F03Automation.cpp": "eeb4ac7f1b66cb7fa3d891489e8939fea7bc8ed3ae8c5f8867682197d68bf84b",
+        "desarrollo\\integration\\f03\\unreal\\Private\\F03CampaignSubsystem.cpp": "aed9e9ab037af0b526cb92a0bbe57d31a76babdf9547a61d90fb56d392c90802",
+        "desarrollo\\integration\\f03\\unreal\\Public\\F03CampaignSubsystem.h": "cd29d0b275acb063b08768bb636d9d89d2dd9750fa719fe4f1139fb2b034c250"
+      }
+    },
+    "f04": {
+      "core_sha": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+      "core_status": "",
+      "source_sha256": {
+        "desarrollo\\integration\\f04\\CMakeLists.txt": "8f973a830d053e8bb5ed3de36fcc4d2d61462b84701449ef56b0db2cb8ba6515",
+        "desarrollo\\integration\\f04\\collect_evidence.py": "125b558085b9ed72d61c10bedacc462a7c1592c954bbb6f4a81e0bcaedddb810",
+        "desarrollo\\integration\\f04\\collect_intrepid_evidence.py": "5e3ff117e8cc93d2d009914de5aa21e15b277cb08b12d559fbf69bb937c93237",
+        "desarrollo\\integration\\f04\\collect_sovereign_evidence.py": "6def0e994ebf0d21428a31ed2ac24551a121c0a5e914fb8617ffaf2fcae4d547",
+        "desarrollo\\integration\\f04\\core-revision.txt": "b678bb8e1089def094de0096abbd00f8bb8b054fec1a9124cb30097759ceee32",
+        "desarrollo\\integration\\f04\\DOTACIONES.md": "14a742e603bd8fcf73d8fd17aaea613ecdafe8af228d86f4d93db529d0ebe1e2",
+        "desarrollo\\integration\\f04\\generate_catalog.py": "4e983b063882941aff2e8d85f295b9a96cae7ece6cc111708ee679304c134b0c",
+        "desarrollo\\integration\\f04\\README.md": "a70c6999db26f2d4f8e5d30f431de7717e35257184b422b8d8119d50e33dda62",
+        "desarrollo\\integration\\f04\\run_f04.ps1": "f1ef2e198f6b2bf5f1c0b5393f9c62906f238cbc3444e7106478ec97cfedbe75",
+        "desarrollo\\integration\\f04\\include\\f04_bridge.h": "c2da9802e1f9e7ea960d6c168ac8c47df77eeafc8f23614c38ae1d47031098cc",
+        "desarrollo\\integration\\f04\\src\\f04_bridge.cpp": "801e482efb99ffb4966b36787a646a80813d8e478987745c45932da04e055ce2",
+        "desarrollo\\integration\\f04\\src\\f04_organization.inc": "d8b727b0c348ef77aa1ace32090c5fe7de7c4a18201d73c62a4f0aa812d02098",
+        "desarrollo\\integration\\f04\\src\\f04_roster.inc": "330020d7b9b9db0222da9ec4a4dc5b013bb27a3f1af4b91a0e8550fb2ce17c5b",
+        "desarrollo\\integration\\f04\\src\\f04_roster_queries.inc": "ec99f328faf0f765e295bbbb42260c39577ee423a469f691b4c16de21889f9f5",
+        "desarrollo\\integration\\f04\\src\\f04_sovereign.h": "1a05ff3d3c410117ff73d02b49067a4780cb3d120f22790f1a2d43d9dc4f3abe",
+        "desarrollo\\integration\\f04\\src\\f04_templates.h": "23dc0e8daf59f457562de47956343a8fa086797c82140b2583a7ce8328ea1265",
+        "desarrollo\\integration\\f04\\tests\\f04_tests.cpp": "b8be7a35ecf7dce2fce07e1e4cc3fd1819d32ed71d96c0158d2b6c5fa8dc8314",
+        "desarrollo\\integration\\f04\\tests\\intrepid_tests.cpp": "7c050ae207abe3e2ea671046d94ac380e1b4744f7b542dc95496e3890a90c1c3",
+        "desarrollo\\integration\\f04\\tests\\organization_lab.h": "9f0920de212abe6cdd81cd1300b1dc5ea25b6c16c34da1e5fe14abfb13299dad",
+        "desarrollo\\integration\\f04\\tests\\organization_tests.cpp": "009fcee876b2efdd8db0202e3450b5c36a385690c4fcc9cfca8bf34298df87eb",
+        "desarrollo\\integration\\f04\\tests\\population_tests.cpp": "2336a3385884843e1cf5cd435b637b0b2b1c9ae34e1c489810f48c6df3a014ac",
+        "desarrollo\\integration\\f04\\tests\\sovereign_tests.cpp": "2a9a21c817367e48a87ce720e2a6e2dacb0aab5779d395abbfda088d827e1b2c",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\intrepid_facilities_contract.json": "5e0088195d385a3d85016bbd7829442c4f707bd1f77e56ed0042a760abc6f056",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\README.md": "03d09b3884dfd42ac05f6b4d661f13e2aeeefaa801600ecbda423a8e21f60065",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\schema1.hex": "34c967ca0590428c8981921243076dc53cfdd47619f695d9b54f2cc464f30376",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\schema2.hex": "3fb84ede3e0d71b685f37436152c212c5ea6ff083b19cf213ea8be6fe69301a2",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\sovereign_approved.tsv": "7ef6a134b22ebb96304f828591d71150e18b52bb1568dd80e96ac3f94a589a18",
+        "desarrollo\\integration\\f04\\tests\\fixtures\\sovereign_facilities_contract.json": "afd63517bc5893972a7abfc44780aaec2ea433904dbc6b22b6e02d7d8ee9bc8f",
+        "desarrollo\\integration\\f04\\unreal\\F02CoreLab.Build.cs": "a0851f0c3f9c65f0b0a4d5b1b4ee2a4f6935fa7edc1229a3139e47de2dac6416",
+        "desarrollo\\integration\\f04\\unreal\\F02CoreLab.cpp": "1d5cad0dfb0603907ca8427c0545b5bfd99287053994adc93f2577252ea1b69d",
+        "desarrollo\\integration\\f04\\unreal\\F04Automation.cpp": "ccde71b65dedb0d432e67cf6a178f406462b7807e99049dd390de444a7428283",
+        "desarrollo\\integration\\f04\\unreal\\F04CampaignSubsystem.cpp": "c893a364819284fbf3a59aad3f89d47407ac5e201bd0aa2de4f2b479734aa811",
+        "desarrollo\\integration\\f04\\unreal\\F04CampaignSubsystem.h": "20b7fd43780170911339685c27c4a8fe37e09e4181b51ab36c7f01253f807fb3"
+      }
+    }
+  },
+  "native\\Release\\TrekF04Bridge.dll": "79f588a70d5b3e91ccc5daa74232f92a93105f4fb068baa2f47da1dfd95775ec",
+  "ue\\ThirdParty\\Win64\\TrekF04Bridge.dll": "79f588a70d5b3e91ccc5daa74232f92a93105f4fb068baa2f47da1dfd95775ec",
+  "ue\\Binaries\\Win64\\TrekF04Bridge.dll": "79f588a70d5b3e91ccc5daa74232f92a93105f4fb068baa2f47da1dfd95775ec"
+}

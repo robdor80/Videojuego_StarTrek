@@ -15,6 +15,14 @@ bool UF04CampaignSubsystem::InstallOrganization(uint32 TemplateId,uint64 Install
 }
 bool UF04CampaignSubsystem::BootstrapOrganizationFixture(){return Intent(static_cast<uint32>(Handles.captain.id),F04_BOOTSTRAP_TEMPLATE)==F04_OK;}
 bool UF04CampaignSubsystem::PlanAlpha(uint64 Start,bool FirstOfficerWatch){return Intent(static_cast<uint32>(Handles.captain.id),F04_PLAN_ALPHA,0,FirstOfficerWatch?1:0,Start,Start+28800)==F04_OK;}
+bool UF04CampaignSubsystem::PlanWatches(uint64 Start,uint64 End,bool ReferenceDay,bool SeedReference){
+ return Intent(static_cast<uint32>(Handles.captain.id),F04_PLAN_WATCHES,0,SeedReference?1:0,Start,End,ReferenceDay?F04_REFERENCE:F04_ROTATING)==F04_OK;
+}
+bool UF04CampaignSubsystem::ServiceCoverage(uint64 Start,uint64 End,TArray<F04ServiceCoverage>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Count=0;
+ if(f04_service_coverage(Session,Handles.captain,Start,End,nullptr,0,&Count)!=F04_CAPACITY || Count>MAX_int32)return false;
+ Out.SetNumUninitialized(static_cast<int32>(Count));return f04_service_coverage(Session,Handles.captain,Start,End,Out.GetData(),Count,&Count)==F04_OK;
+}
 bool UF04CampaignSubsystem::Organization(F04OrganizationStats& Out)const{return IsInGameThread() && Session && f04_organization_stats(Session,Handles.captain,&Out)==F04_OK;}
 bool UF04CampaignSubsystem::Positions(TArray<F04Position>& Out)const{
  Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Written=0,Total=0;

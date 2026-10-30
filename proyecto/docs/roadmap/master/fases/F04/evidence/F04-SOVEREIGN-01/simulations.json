@@ -1,0 +1,386 @@
+[
+  {
+    "days": 1,
+    "shifts": 480,
+    "target_shifts": 480,
+    "quota_missing": 0,
+    "critical_gap_records": 0,
+    "critical_service_windows": 24,
+    "critical_coverage": [
+      {
+        "station": 1,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 10,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 2,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 20,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 4,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 254,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 64,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 437,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 16,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 380,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 8,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 77,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 128,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 491,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 512,
+        "start": 0,
+        "end": 86400,
+        "first_gap": 86400,
+        "person": 673,
+        "covered": 1,
+        "reserved": 0
+      }
+    ],
+    "max_rolling7": 1,
+    "min_gap_seconds": null,
+    "people_changing_watch": 0,
+    "person_days_without_duty": 220,
+    "captain_shifts": 1,
+    "gaps_by_department": {
+      "3": 0,
+      "2": 0,
+      "1": 0,
+      "5": 0,
+      "6": 0,
+      "7": 0,
+      "4": 0
+    }
+  },
+  {
+    "days": 7,
+    "shifts": 3184,
+    "target_shifts": 3360,
+    "quota_missing": 176,
+    "critical_gap_records": 0,
+    "critical_service_windows": 168,
+    "critical_coverage": [
+      {
+        "station": 1,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 10,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 2,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 20,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 4,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 254,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 64,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 437,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 16,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 380,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 8,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 77,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 128,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 491,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 512,
+        "start": 0,
+        "end": 604800,
+        "first_gap": 604800,
+        "person": 673,
+        "covered": 1,
+        "reserved": 0
+      }
+    ],
+    "max_rolling7": 5,
+    "min_gap_seconds": 57600,
+    "people_changing_watch": 505,
+    "person_days_without_duty": 1716,
+    "captain_shifts": 5,
+    "gaps_by_department": {
+      "3": 29,
+      "2": 28,
+      "1": 30,
+      "5": 39,
+      "6": 37,
+      "7": 0,
+      "4": 13
+    }
+  },
+  {
+    "days": 14,
+    "shifts": 6414,
+    "target_shifts": 6720,
+    "quota_missing": 306,
+    "critical_gap_records": 0,
+    "critical_service_windows": 336,
+    "critical_coverage": [
+      {
+        "station": 1,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 10,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 2,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 20,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 4,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 254,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 64,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 437,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 16,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 380,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 8,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 77,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 128,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 491,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 512,
+        "start": 0,
+        "end": 1209600,
+        "first_gap": 1209600,
+        "person": 673,
+        "covered": 1,
+        "reserved": 0
+      }
+    ],
+    "max_rolling7": 5,
+    "min_gap_seconds": 57600,
+    "people_changing_watch": 621,
+    "person_days_without_duty": 3386,
+    "captain_shifts": 10,
+    "gaps_by_department": {
+      "3": 58,
+      "2": 47,
+      "1": 47,
+      "5": 72,
+      "6": 58,
+      "7": 0,
+      "4": 24
+    }
+  },
+  {
+    "days": 28,
+    "shifts": 12648,
+    "target_shifts": 13440,
+    "quota_missing": 792,
+    "critical_gap_records": 0,
+    "critical_service_windows": 672,
+    "critical_coverage": [
+      {
+        "station": 1,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 10,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 2,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 20,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 4,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 254,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 64,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 437,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 16,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 380,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 8,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 77,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 128,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 491,
+        "covered": 1,
+        "reserved": 0
+      },
+      {
+        "station": 512,
+        "start": 0,
+        "end": 2419200,
+        "first_gap": 2419200,
+        "person": 673,
+        "covered": 1,
+        "reserved": 0
+      }
+    ],
+    "max_rolling7": 5,
+    "min_gap_seconds": 57600,
+    "people_changing_watch": 675,
+    "person_days_without_duty": 6952,
+    "captain_shifts": 20,
+    "gaps_by_department": {
+      "3": 128,
+      "2": 145,
+      "1": 133,
+      "5": 175,
+      "6": 151,
+      "7": 0,
+      "4": 60
+    }
+  }
+]

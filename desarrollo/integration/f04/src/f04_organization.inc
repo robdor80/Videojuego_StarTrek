@@ -1,15 +1,20 @@
 // Included inside the bridge's private namespace. All mutable state is in Core.
-bool organization(const WorldState& w) {return val(w,1,SCHEMA)==3;}
+bool organization(const WorldState& w) {return (val(w,1,SCHEMA)==3 || val(w,1,SCHEMA)==4);}
 bool station_active(const WorldState& w,U f,U tick) {
  if(!window(w,f,tick))return false;
  const U p=ref(w,f,PERSON),slot=ref(w,f,SLOT),station=val(w,f,STATIONS);
  const U q=station==F04_ST_TACTICAL?F04_Q_TACTICAL:val(w,slot,QUAL);
+ if(val(w,1,SCHEMA)==4) {
+  if(station==F04_ST_COMMAND && !active_role(w,p,F04_WATCH,tick))return false;
+  if(station==F04_ST_MEDICAL && !qualified(w,p,F04_Q_CLINICAL,tick) && !qualified(w,p,F04_Q_NURSING,tick))return false;
+  if(station==F04_ST_ENGINEERING && !active_role(w,p,F04_DUTY_HEAD,tick,F04_ENGINEERING))return false;
+ }
  return duty(w,p,slot,tick) && qualified(w,p,q,tick);
 }
 void cancel_post(Campaign& c,U p) {
  for(U slot:all(c.world,"slot"))if(ref(c.world,slot,PERSON)==p)link(c,slot,PERSON,0);
  for(const char* kind:{"activity","function"})for(U id:all(c.world,kind))
-  if(ref(c.world,id,PERSON)==p && (type(c.world,id,"function") || val(c.world,id,VALUE)==F04_DUTY))set(c,id,STATE,CANCELLED);
+  if(ref(c.world,id,PERSON)==p && (type(c.world,id,"function") || val(c.world,id,VALUE)==F04_DUTY)){if(type(c.world,id,"activity") && val(c.world,1,SCHEMA)==4)set(c,id,STOP,std::clamp(c.time.now(),val(c.world,id,START),val(c.world,id,END)));set(c,id,STATE,CANCELLED);}
  action(c,p,PlaceEntityAction{EntityId{p},EntityId{1}});
 }
 U install_template(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
@@ -105,6 +110,10 @@ bool organization_schema(const WorldState& w) {
 }
 // A preliminary study of six service groups, not certification of a work regime.
 bool service_covered(const WorldState& w,U station,U tick) {
+ if(val(w,1,SCHEMA)==4) {
+  for(U f:all(w,"function"))if(val(w,f,STATIONS)==station && station_active(w,f,tick))return true;
+  return false;
+ }
  for(U slot:all(w,"slot"))if((val(w,slot,STATIONS)&station) && duty(w,ref(w,slot,PERSON),slot,tick)) {
   const U p=ref(w,slot,PERSON);
   if(station==F04_ST_COMMAND && !active_role(w,p,F04_WATCH,tick) && !active_role(w,p,F04_CAPTAIN,tick) && !active_role(w,p,F04_FIRST,tick))continue;

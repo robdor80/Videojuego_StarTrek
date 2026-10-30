@@ -26,6 +26,8 @@ public:
  bool InstallOrganization(uint32 TemplateId,uint64 InstalledEquipment);
  bool BootstrapOrganizationFixture();
  bool PlanAlpha(uint64 Start,bool FirstOfficerWatch=true);
+ bool PlanWatches(uint64 Start,uint64 End,bool ReferenceDay,bool SeedReference=false);
+ bool ServiceCoverage(uint64 Start,uint64 End,TArray<F04ServiceCoverage>&) const;
  bool Organization(F04OrganizationStats&) const;
  bool Positions(TArray<F04Position>&) const;
  void CloseLab();
