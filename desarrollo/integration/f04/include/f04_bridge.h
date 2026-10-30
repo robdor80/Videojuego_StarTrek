@@ -29,7 +29,7 @@ enum F04Absence { F04_LEAVE=1,F04_SICK=2,F04_SUSPENDED=3 };
 typedef struct { F04Ref actor; uint64_t revision; uint32_t op,value;
  uint64_t target,aux,start,end,cause; } F04Request;
 typedef struct { uint32_t code,reserved; uint64_t record,revision; } F04Result;
-typedef struct { F04Ref ship,captain,head,ensign,watch,doctor,relief,passenger,admiral;
+typedef struct { F04Ref ship,captain,head,ensign,watch,doctor,relief,civilian,passenger,admiral;
  uint64_t sensors,engineering,bridge; } F04Handles;
 typedef struct { uint64_t entities,revision,now,crew,civilians,passengers,slots,vacancies,
  commander,pending,events,pattern; } F04Stats;

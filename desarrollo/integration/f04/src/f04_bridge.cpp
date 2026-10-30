@@ -133,7 +133,7 @@ void initialize(Campaign& c,const ContentCatalog& cat,const char* cls) {
  need(c.world.materialize_population(EntityId{2},9).status==MaterializationStatus::applied);
  for(U p=3;p<=11;++p) {
   need(c.world.bind_definition(EntityId{p},cat,*DefinitionId::parse("trek.f04:person"))==DefinitionBindingChange::applied);
-  link(c,p,SHIP,1);set(c,p,CATEGORY,p==9?3:p==10?2:1);set(c,p,RANK,p==10?10:p==3?8:1);
+  link(c,p,SHIP,1);set(c,p,CATEGORY,p==9?2:p==10?3:1);set(c,p,RANK,p==10?10:p==3?8:1);
   const U dept=p==5 || p==4 || p==8?F04_SENSORS:p==7?F04_MEDICINE:p==11?F04_ENGINEERING:F04_COMMAND;
   set(c,p,DEPT,dept);set(c,p,QUAL,1ULL<<dept);set(c,p,UNTIL,p==8?86400:FOREVER);
   action(c,p,PlaceEntityAction{EntityId{p},EntityId{1}});
@@ -393,7 +393,7 @@ uint32_t f04_create(uint32_t abi,const char* cls,F04Session** out) {
 uint32_t f04_destroy(F04Session* s) {if(auto r=guard(s);r)return r;delete s;return F04_OK;}
 uint32_t f04_handles(F04Session* s,F04Handles* out) {
  if(!out)return F04_ARGUMENT;
- return call(s,[&]() -> uint32_t {auto h=[&](U id){return F04Ref{s->scope,id};};*out={h(1),h(3),h(4),h(5),h(6),h(7),h(8),h(9),h(10),12,13,14};return F04_OK;});
+ return call(s,[&]() -> uint32_t {auto h=[&](U id){return F04Ref{s->scope,id};};*out={h(1),h(3),h(4),h(5),h(6),h(7),h(8),h(9),h(10),h(10),12,13,14};return F04_OK;});
 }
 uint32_t f04_stats(F04Session* s,F04Stats* out) {
  if(!out)return F04_ARGUMENT;*out={};

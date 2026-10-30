@@ -43,8 +43,9 @@ de campaña generados permanecen fuera de Git.
 ## Escenario y frontera de confianza
 
 `f04_create(1,"miranda",...)` abre una **muestra sintética**, no Sutherland
-canónica: nave 1, población 2, siete tripulantes (3–8,11), pasajero 9 y visitante
-10, plazas 12–14. Las personas son entidades Core individualizadas una sola
+canónica: nave 1, población 2, siete tripulantes (3–8,11), civil 9 y almirante
+visitante 10 (pasajero, no dotación), plazas 12–14. `passenger` y `admiral`
+son dos alias del mismo ID 10, nunca dos personas. Las personas son entidades Core individualizadas una sola
 vez por bootstrap; no hay generación al descubrir vacantes. Cada persona tiene
 categoría, departamento, rango y cualificación separadas. El relevo 8 tiene
 habilitación temporal hasta tick 86400 para probar caducidad.
