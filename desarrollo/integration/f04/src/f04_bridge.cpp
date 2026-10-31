@@ -231,9 +231,19 @@ U appointment(Campaign& c,const ContentCatalog& cat,U p,U role,U dept,U start,U 
  temporal(c,id,start,end);set(c,id,ROLE,role);set(c,id,DEPT,dept);set(c,id,CAUSE,cause);return id;
 }
 U event(Campaign& c,const ContentCatalog& cat,U actor,U op,U code,U cause,U target) {
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+ // Oracle only: an appended event changes neither existing type membership nor
+ // person-record membership. Preserve the exact complete-history read index
+ // instead of rebuilding it after every clock-boundary audit event.
+ const bool extend_index=read_index.world==&c.world && read_index.revision==c.world.revision();
+#endif
  const U id=make(c,cat,"event");link(c,id,SHIP,1); if(actor && c.world.contains(EntityId{actor})) link(c,id,PERSON,actor);
  if(target && c.world.contains(EntityId{target})) link(c,id,TARGET,target);
- set(c,id,OP,op);set(c,id,CODE,code);set(c,id,CAUSE,cause);set(c,id,TICK,c.time.now());return id;
+ set(c,id,OP,op);set(c,id,CODE,code);set(c,id,CAUSE,cause);set(c,id,TICK,c.time.now());
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+ if(extend_index){read_index.kinds["event"].push_back(id);read_index.world=&c.world;read_index.revision=c.world.revision();}
+#endif
+ return id;
 }
 void initialize(Campaign& c,const ContentCatalog& cat,const char* cls) {
  bool found=false; for(const auto* s:class_ids) found|=std::strcmp(cls,s)==0;need(found);
@@ -729,6 +739,13 @@ uint32_t f04_advance(F04Session* s,U horizon,U budget,U* processed) {
   std::sort(tasks.begin(),tasks.end(),[&](U a,U b){return std::pair(val(next->world,a,START),a)<std::pair(val(next->world,b,START),b);});
   auto clock_to=[&](U until) {
    std::set<U> boundaries{until};
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+   // Exact first-by-ID cause, derived from the complete original activity table
+   // once per advance. Activities do not mutate while this clock span executes.
+   std::map<U,U> reference_causes;
+   for(U a:all(next->world,"activity"))for(U b:{val(next->world,a,START),val(next->world,a,END)})
+    if(next->time.now()<b && b<=until)reference_causes.try_emplace(b,val(next->world,a,CAUSE));
+#endif
    for(const char* kind:{"activity","appointment","delegation","order","mandate","review"}) for(U a:all(next->world,kind))
     for(U b:{val(next->world,a,START),val(next->world,a,END)}) if(next->time.now()<b && b<=until)boundaries.insert(b);
    for(U person_id:all(next->world,"person")) {
@@ -739,7 +756,12 @@ uint32_t f04_advance(F04Session* s,U horizon,U budget,U* processed) {
     need(next->time.advance(next->world,next->random,b).status==TimelineStatus::completed,F04_INTERNAL);
     const U after=commander(next->world,b);
     if(before!=after) {
-     U cause=0;for(U a:all(next->world,"activity")) if(val(next->world,a,START)==b || val(next->world,a,END)==b) {cause=val(next->world,a,CAUSE);break;}
+     U cause=0;
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+     if(const auto found=reference_causes.find(b);found!=reference_causes.end())cause=found->second;
+#else
+     for(U a:all(next->world,"activity")) if(val(next->world,a,START)==b || val(next->world,a,END)==b) {cause=val(next->world,a,CAUSE);break;}
+#endif
      event(*next,*s->content.catalog(),before,100,F04_OK,cause,after);
     }
    }

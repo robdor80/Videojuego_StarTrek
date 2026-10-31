@@ -1,14 +1,12 @@
 # F04-PERSISTENCIA-03 — Persistencia histórica autoritativa
 
-31-10-2026. **Implementación autorizada y disponible en dos PR Draft. Validación de
-730 días todavía en ejecución; PERSISTENCIA-03 no se declara terminada.** F04 sigue
-EN_CURSO. No se inicia INTEGRACION-04 ni CIERRE-05. Ninguna PR se fusiona aquí.
+31-10-2026. **Implementación y aceptación de PERSISTENCIA-03 completadas: 365 días en las cinco clases y 730 días en Valhalla, con guardias reales y auditoría íntegra. Pendiente auditoría independiente de ambas PR Draft.** F04 sigue EN_CURSO. No se inicia INTEGRACION-04 ni CIERRE-05. Ninguna PR se fusiona aquí.
 
 Base Star Trek: `45f7816c9aa996bfd678b11b4f9fa1a4b9632021`.
 Rama existente: `codex/f04-persistencia-03-campanas-largas`, PR #76.
 Core propuesto: [PR Draft #13](https://github.com/robdor80/CoreRPG/pull/13), rama
 `codex/core-history-segments-authoritative`, revisión exacta
-`63d2401edaf85960b4baaf6b537ae571ba52a439`, desde
+`89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98`, desde
 `c147d81ed069da2e09149613ab02cbc3ebe95a4a`.
 
 La [autorización expresa](https://github.com/robdor80/Videojuego_StarTrek/pull/76#issuecomment-6536894218)
@@ -101,7 +99,7 @@ La migración es explícita: cargar el guardado anterior, validar y producir un
 activos, identidad, reloj/RNG y continuación en un proceso nuevo para las cinco
 clases. Los lectores anteriores rechazan el nuevo contenedor claramente.
 
-Tras optar por segmentos, `f04_save` y las antiguas consultas de historial completo
+Tras optar por segmentos, `f04_save`/`f04_load` y las antiguas consultas de historial completo
 DUTY/gaps/functions devuelven F04_SAVE para impedir exportaciones incompletas.
 Se usan las nuevas APIs de persistencia y consulta. El comportamiento monolítico
 anterior permanece intacto. La cobertura previa a la frontera no se infiere de
@@ -125,14 +123,14 @@ los hashes originales de referencia. No se limita a consultar una muestra.
 
 | Clase | Días completos | Máximo residente | IDs finales | Hechos archivados finales | Pico working set del proceso |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| Miranda | 365 | 1.926 | 41.438 | 40.309 | 12.161.024 B |
-| Intrepid | 365 | 2.234 | 47.877 | 46.556 | 13.164.544 B |
-| Sovereign | 365 | 8.492 | 179.181 | 174.137 | 31.629.312 B |
-| Odyssey | 365 | 18.348 | 385.384 | 374.435 | 55.689.216 B |
-| Valhalla | 365 | 21.218 | 437.731 | 424.908 | 64.782.336 B |
-| Valhalla | 730 | EN EJECUCIÓN | pendiente | pendiente | pendiente |
+| Miranda | 365 | 1.926 | 41.438 | 40.309 | 12.091.392 B |
+| Intrepid | 365 | 2.234 | 47.877 | 46.556 | 13.012.992 B |
+| Sovereign | 365 | 8.492 | 179.181 | 174.137 | 30.961.664 B |
+| Odyssey | 365 | 18.348 | 385.384 | 374.435 | 56.401.920 B |
+| Valhalla | 365 | 21.218 | 437.731 | 424.908 | 64.196.608 B |
+| Valhalla | 730 | 21.218 | 870.964 | 858.295 | 65.495.040 B |
 
-Las cinco primeras campañas verifican 1.082.023 hechos posteriores al bootstrap.
+Los seis recorridos verifican 1.948.872 hechos posteriores al bootstrap; 866.849 pertenecen al recorrido de 730 días.
 El máximo residente incluye el estado previo a consolidar; el pico de memoria
 incluye el ejecutable, copias transaccionales y buffers del laboratorio. El
 historial total en disco crece y conserva checkpoints anteriores. No se promete
@@ -148,12 +146,12 @@ carga completa, pero excluye de la ventana temporal de cálculo los intervalos
 terminados al menos siete días antes. No pueden afectar una ventana futura ni
 sus descansos. El validador sigue comprobando todo el historial original. La
 identidad de hashes original/optimizado se verificó también en Miranda 365 días.
-Esta optimización no se compila en el comportamiento productivo.
+La referencia optimizada difiere las comprobaciones globales de tipos/referencias a validaciones completas al final de ambos horizontes; el validador histórico de guardias sigue comprobándose en cada plan. El producto valida cada transacción completa como antes. Esta optimización no se compila en el comportamiento productivo.
 
 ## 6. Validación y entrega
 
-- Core completo + Content JSON: **478 PASS**, cuatro omisiones de plataforma,
-  cero fallos, 482 entradas. CI del mismo SHA: Windows, Linux y sanitizadores,
+- Core completo + Content JSON: **479 PASS**, cuatro omisiones de plataforma,
+  cero fallos, 483 entradas. CI del mismo SHA: Windows, Linux y sanitizadores,
   seis jobs satisfactorios.
 - F04 con Core propuesto: **271/271** (270 anteriores más fallos históricos).
 - F02/F03 contra el Core propuesto: **15/15 y 25/25**. Se usaron copias de laboratorio
@@ -167,12 +165,11 @@ Esta optimización no se compila en el comportamiento productivo.
 
 [Contratos y reproducción](../../../../../../desarrollo/integration/f04/HISTORY.md).
 [Evidencia de aceptación](evidence/F04-PERSISTENCIA-03-HISTORY/acceptance.json).
-[Resultados y métricas](evidence/F04-PERSISTENCIA-03-HISTORY/campaigns.json).
+[Resultados y métricas](evidence/F04-PERSISTENCIA-03-HISTORY/RESULTADOS.md).
 [Inventario de fuentes](evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json).
 [Hashes de evidencias](evidence/F04-PERSISTENCIA-03-HISTORY/evidence-sha256.json).
-[CI Core del SHA propuesto](https://github.com/robdor80/CoreRPG/actions/runs/41155489859).
+[CI Core del SHA propuesto](https://github.com/robdor80/CoreRPG/actions/runs/41195928200).
 
-**Pendiente únicamente de demostrar el recorrido 730 y su auditoría antes de
-marcar la aceptación completa.** Después, ambas PR permanecen Draft para auditoría
-independiente. No se fusionan, no se actualiza el pin estable y no se inicia la
-siguiente subfase.
+**Aceptación completa de PERSISTENCIA-03 demostrada.** Ambas PR permanecen Draft para auditoría independiente. No se fusionan, no se actualiza el pin estable y no se inicia INTEGRACION-04 ni CIERRE-05.
+
+Los oráculos completos se generaron con Core `63d2401`. La validación final vuelve a ejecutar las seis campañas consolidadas sobre `89a0e4f` contra esos fixtures de hashes congelados: ningún estado de campaña se carga desde ellos. Cada aceptación registra la revisión ejecutada y el SHA-256 de la referencia. La CI puede regenerar los oráculos omitiendo la opción de fixtures.

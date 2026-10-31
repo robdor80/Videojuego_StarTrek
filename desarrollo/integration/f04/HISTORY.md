@@ -53,13 +53,14 @@ history operations. The new directory container has its own version 1.
 After opt-in, old full-save/load and full-history duties/gaps/functions queries explicitly
 return F04_SAVE. They cannot silently export an active projection as a complete
 campaign. Use the versioned directory and historical APIs. Live person, position,
-To branch from a legacy backup, explicitly create a fresh session and migrate to
-a new campaign directory/identity; legacy load cannot reset an opted-in session.
 specialist and resident projections remain available. Service coverage before
 the consolidation frontier is rejected rather than inferred from missing data.
 `f04_history_export_active` is a privileged diagnostic checkpoint, not a full save.
 `F04Stats.entities` retains its issued-ID meaning; new `F04HistoryStats` separates
 issued/resident/archived counts. No previous ABI field changes its meaning.
+
+To branch from a legacy backup, explicitly create a fresh session and migrate to
+a new campaign directory/identity; legacy load cannot reset an opted-in session.
 
 Core I/O/conflict or post-publication loss may leave commit outcome uncertain.
 F04 blocks subsequent session use until a complete `history_open` succeeds.
@@ -99,8 +100,25 @@ The optimized oracle additionally defers repeated global type/reference schema
 checks to complete explicit validations at both final horizons. The complete
 historical roster validator still runs at every plan. The product bridge continues
 to run its full active-domain validator at every transaction without this deferral.
+The oracle also appends clock events to its disposable complete-history read
+index when that is the only indexed change. No original record is excluded or
+rewritten by that cache optimization; the authoritative WorldState remains intact.
+It also derives a first-by-ID activity-cause lookup once per clock span, preserving
+the original cause selection instead of rescanning all old activities at each
+boundary. This lookup is disposable and never persisted as campaign authority.
 The original/optimized oracle's Miranda 365-day hashes are independently identical.
+Valhalla's original and event-index-optimized 365-day hashes are also identical.
 The product bridge always uses Core-derived authoritative counts and the fixed cap.
+
+The final proposal replay additionally uses the frozen original oracle hash files
+through `F04_HISTORY_REFERENCE_FIXTURES`. It still generates every watch and every
+fact, performs actual Core consolidation, verifies each original block hash,
+continues in another process and audits all persisted payload. No campaign state
+is loaded from those hash fixtures. Their original producer used Core `63d2401`;
+the final campaigns run Core `89a0e4f`, whose additional change rejects uninitialized
+history operations before I/O. Both exact revisions and fixture checksums are
+recorded in each acceptance file. With the fixtures option omitted, CI regenerates
+the full complete-history oracle before running the consolidated campaign.
 
 For old-save migration and prior phases, see `tests/check_legacy_history.py`,
 `check_guardias_compatibility.py` and `tests/verify_history_regressions.py`. The

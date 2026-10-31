@@ -1,0 +1,55 @@
+Test project C:/F04/HistoryBuild/regressions-final/f03
+      Start  1: f03.identity
+ 1/25 Test  #1: f03.identity .....................   Passed    0.05 sec
+      Start  2: f03.determinism
+ 2/25 Test  #2: f03.determinism ..................   Passed    0.01 sec
+      Start  3: f03.observers
+ 3/25 Test  #3: f03.observers ....................   Passed    0.01 sec
+      Start  4: f03.hidden
+ 4/25 Test  #4: f03.hidden .......................   Passed    0.01 sec
+      Start  5: f03.acquire
+ 5/25 Test  #5: f03.acquire ......................   Passed    0.01 sec
+      Start  6: f03.report
+ 6/25 Test  #6: f03.report .......................   Passed    0.01 sec
+      Start  7: f03.denied
+ 7/25 Test  #7: f03.denied .......................   Passed    0.01 sec
+      Start  8: f03.readonly
+ 8/25 Test  #8: f03.readonly .....................   Passed    0.01 sec
+      Start  9: f03.offscreen
+ 9/25 Test  #9: f03.offscreen ....................   Passed    0.01 sec
+      Start 10: f03.order
+10/25 Test #10: f03.order ........................   Passed    0.01 sec
+      Start 11: f03.bounded
+11/25 Test #11: f03.bounded ......................   Passed    0.01 sec
+      Start 12: f03.duplicate
+12/25 Test #12: f03.duplicate ....................   Passed    0.01 sec
+      Start 13: f03.backwards
+13/25 Test #13: f03.backwards ....................   Passed    0.01 sec
+      Start 14: f03.roundtrip
+14/25 Test #14: f03.roundtrip ....................   Passed    0.01 sec
+      Start 15: f03.rng
+15/25 Test #15: f03.rng ..........................   Passed    0.01 sec
+      Start 16: f03.corrupt
+16/25 Test #16: f03.corrupt ......................   Passed    0.04 sec
+      Start 17: f03.incompatible
+17/25 Test #17: f03.incompatible .................   Passed    0.01 sec
+      Start 18: f03.scope
+18/25 Test #18: f03.scope ........................   Passed    0.03 sec
+      Start 19: f03.thread
+19/25 Test #19: f03.thread .......................   Passed    0.01 sec
+      Start 20: f03.buffers
+20/25 Test #20: f03.buffers ......................   Passed    0.01 sec
+      Start 21: f03.stale
+21/25 Test #21: f03.stale ........................   Passed    0.01 sec
+      Start 22: f03.calendar
+22/25 Test #22: f03.calendar .....................   Passed    0.01 sec
+      Start 23: f03.tampered
+23/25 Test #23: f03.tampered .....................   Passed    0.01 sec
+      Start 24: f03.process_save
+24/25 Test #24: f03.process_save .................   Passed    0.01 sec
+      Start 25: f03.process_load
+25/25 Test #25: f03.process_load .................   Passed    0.01 sec
+
+100% tests passed out of 25
+
+Total Test time (real) =   0.33 sec

@@ -1,8 +1,17 @@
 {
-  "contract": "generic-segmented-campaign-draft-1",
-  "status": "PROPOSED_NOT_IMPLEMENTED_NOT_EXECUTED",
-  "requires": "explicit authorization to change generic CoreRPG",
-  "reference": "F04-PERSISTENCIA-03_CAMPANAS_LARGAS.md section 5",
+  "contract": "generic-segmented-campaign-1",
+  "status": "IMPLEMENTED_ACCEPTANCE_PASSED_PENDING_INDEPENDENT_REVIEW",
+  "requires": "authorization granted in PR #76 comment 6536894218; Core PR #13 and F04 PR #76 remain Draft",
+  "reference": "F04-PERSISTENCIA-03_CAMPANAS_LARGAS.md and desarrollo/integration/f04/HISTORY.md",
+  "execution_evidence": {
+    "core": "CoreRPG 89a0e4f: HistoryTest, HistoryHash, HistoryBoundary and HistoryProcess (18 + 14 cases); full Core and Content JSON suite",
+    "f04": "f04.history_faults: six publication boundaries, actual Win32 replacement IO failure, torn orphan, corrupt segment/root, recovery, old-load boundary, debt/absence and archived revocation",
+    "legacy": "check_guardias_compatibility.py and tests/check_legacy_history.py: all five classes, non-destructive migration, old-reader rejection, fresh-process identical future",
+    "continuity": "f04.history_campaign_* and f04_history_audit: every original post-bootstrap fact reconstructed and hashed against complete-history reference",
+    "allocation_scope": "Pre-publication staging preserves allocation-exception semantics; new archive-specific exhaustive bad_alloc injection is not claimed",
+    "terminal_medical_scope": "Departed identities remain resident; terminal medical/death model is not present in this phase and is not claimed as tested",
+    "remaining": "Implementation acceptance passed, including five real 365-day campaigns and Valhalla 730; both Draft PRs await independent audit, no merge"
+  },
   "common_invariants": [
     "Exactly one complete authoritative generation is published",
     "Entity identities are never reissued and facts are never regenerated",
@@ -20,7 +29,7 @@
     {"id": "LOAD_02", "inject": "truncated segment or incomplete manifest", "expect": "reject candidate; preserve previous durable generation"},
     {"id": "LOAD_03", "inject": "segment byte changed without updating hash", "expect": "integrity failure; no partial state publication"},
     {"id": "LOAD_04", "inject": "unknown manifest or record version", "expect": "explicit unsupported version; original files unmodified"},
-    {"id": "LOAD_05", "inject": "reordered or overlapping segment boundaries with recomputed outer checksum", "expect": "temporal or chain validation failure"},
+    {"id": "LOAD_05", "inject": "broken descriptor chain, duplicate ID ownership or inconsistent declared record interval with recomputed manifest hash", "expect": "chain, identity or interval validation failure; bounding time overlap alone is allowed for previously pinned late-closing facts"},
     {"id": "LOAD_06", "inject": "duplicate entity identity between active checkpoint and archive", "expect": "identity validation failure; no duplicate person or duty"},
     {"id": "LOAD_07", "inject": "unresolved causal reference to another segment", "expect": "reference validation failure"},
     {"id": "LOAD_08", "inject": "revoked appointment included in historical segment", "expect": "queryable historical revocation; never restored as active authority"},

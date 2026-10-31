@@ -16,10 +16,28 @@ struct HistoryLab:Lab {
  void recover(){check(f04_history_open(s,path.c_str())==F04_OK,"recover");refresh();}
  void plan(U start,U days){auto st=stats();op(F04_PLAN_WATCHES,0,start==0?1:0,start*day,(start+days)*day,F04_ROTATING,F04_OK,st.commander);}
 };
-int main(){try{
+int main(int argc,char** argv){try{
+#ifdef _WIN32
+ if(argc==3 && std::string(argv[1])=="hold-lock"){
+  const auto directory=std::filesystem::path(argv[2]);HANDLE lock=CreateFileW((directory/L"writer.lock").c_str(),GENERIC_READ|GENERIC_WRITE,0,nullptr,OPEN_ALWAYS,FILE_ATTRIBUTE_NORMAL,nullptr);
+  check(lock!=INVALID_HANDLE_VALUE,"child holds real OS writer lock");{std::ofstream ready(directory/"child-lock-ready");ready<<"ready\n";check(bool(ready),"child ready");}
+  Sleep(INFINITE);return 2;
+ }
+#else
+ (void)argc;(void)argv;
+#endif
  HistoryLab l;const auto legacy=l.save();l.migrate();check(l.active()==legacy,"migration preserves exact original bytes");
  check(f04_load(l.s,legacy.data(),legacy.size())==F04_SAVE && l.active()==legacy,"cannot silently leave history mode and reset issued identities through legacy load");
- l.plan(0,14);l.advance(14*day-1);check(f04_history_publish(l.s,0)==F04_OK,"publish real pre-archive campaign");auto original=l.active();const auto initial=l.history();
+ l.plan(0,14);l.advance(14*day-1);check(f04_history_publish(l.s,0)==F04_OK,"publish real pre-archive campaign");auto original=l.active();
+#ifdef _WIN32
+ wchar_t executable[32768]{};check(GetModuleFileNameW(nullptr,executable,32768)>0,"test executable path");
+ std::wstring command=L"\""+std::wstring(executable)+L"\" hold-lock \""+std::filesystem::path(l.path).wstring()+L"\"";STARTUPINFOW startup{};startup.cb=sizeof(startup);PROCESS_INFORMATION process{};
+ check(CreateProcessW(nullptr,command.data(),nullptr,nullptr,FALSE,CREATE_NO_WINDOW,nullptr,nullptr,&startup,&process)!=0,"spawn lock holder without desktop window");
+ bool ready=false;for(unsigned i=0;i<500;++i){if(std::filesystem::exists(std::filesystem::path(l.path)/"child-lock-ready")){ready=true;break;}Sleep(10);}
+ const auto writer_status=ready?f04_history_publish(l.s,0):F04_INTERNAL;TerminateProcess(process.hProcess,0);WaitForSingleObject(process.hProcess,5000);CloseHandle(process.hThread);CloseHandle(process.hProcess);
+ check(ready && writer_status==F04_SAVE,"second process excludes a real writer");l.recover();check(l.active()==original,"hard process loss does not change generation contents");check(f04_history_publish(l.s,0)==F04_OK,"OS releases abandoned lock after hard process termination");
+#endif
+ const auto initial=l.history();
  for(uint32_t fault=1;fault<=5;++fault){check(f04_history_consolidate(l.s,7*day-1,fault)==F04_SAVE,"injected failure");check(l.active()==original && l.history().generation==initial.generation,"prepublish failure keeps complete live state and root");l.recover();check(l.active()==original,"prepublish recovery same generation");}
 #ifdef _WIN32
  // Real OS storage failure after preparation: allow reading CURRENT but deny

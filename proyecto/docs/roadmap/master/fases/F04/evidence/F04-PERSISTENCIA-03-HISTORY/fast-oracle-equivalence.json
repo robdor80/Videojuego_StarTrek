@@ -2,5 +2,7 @@
   "profile": 1,
   "days": 365,
   "all_original_and_fast_oracle_hashes_identical": true,
-  "complete_global_final_validation": true
+  "complete_global_final_validation": true,
+  "exact_complete_history_event_index": true,
+  "exact_first_activity_cause_index": true
 }

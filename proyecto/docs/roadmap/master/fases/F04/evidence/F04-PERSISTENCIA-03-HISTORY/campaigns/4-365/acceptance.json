@@ -5,12 +5,15 @@
   "completed": 365,
   "maximum_resident": 18348,
   "maximum_active_bytes": 5649296,
-  "elapsed_ms": 137550,
+  "elapsed_ms": 175768,
   "real_watches": true,
   "all_blocks_equal_complete_history": true,
-  "working_set": 19603456,
-  "peak_working_set": 55689216,
+  "working_set": 21774336,
+  "peak_working_set": 56401920,
   "storage_bytes_retaining_previous_generations": 306161850,
-  "phases_elapsed_seconds": 898.3328938999985,
-  "core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439"
+  "phases_elapsed_seconds": 238.68290629998955,
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "reference_fixture_sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+  "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "reference_origin": "Five original 365-day full-history runs; completed 730-day full-history oracle with complete final schema validation"
 }

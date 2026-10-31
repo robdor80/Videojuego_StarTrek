@@ -6,79 +6,79 @@
 	skipped="0"
 	hostname=""
 	time="0"
-	timestamp="2026-10-31T02:37:25"
+	timestamp="2026-10-31T12:20:15"
 	>
-	<testcase name="f02.identity" classname="f02.identity" time="0.101353" status="run">
+	<testcase name="f02.identity" classname="f02.identity" time="0.0674864" status="run">
 		<properties/>
 		<system-out>PASS identity
 </system-out>
 	</testcase>
-	<testcase name="f02.placement" classname="f02.placement" time="0.0075943" status="run">
+	<testcase name="f02.placement" classname="f02.placement" time="0.0074177" status="run">
 		<properties/>
 		<system-out>PASS placement
 </system-out>
 	</testcase>
-	<testcase name="f02.invalid" classname="f02.invalid" time="0.008704" status="run">
+	<testcase name="f02.invalid" classname="f02.invalid" time="0.0064609" status="run">
 		<properties/>
 		<system-out>PASS invalid
 </system-out>
 	</testcase>
-	<testcase name="f02.stale" classname="f02.stale" time="0.0062017" status="run">
+	<testcase name="f02.stale" classname="f02.stale" time="0.0064849" status="run">
 		<properties/>
 		<system-out>PASS stale
 </system-out>
 	</testcase>
-	<testcase name="f02.denied" classname="f02.denied" time="0.0081087" status="run">
+	<testcase name="f02.denied" classname="f02.denied" time="0.0066916" status="run">
 		<properties/>
 		<system-out>PASS denied
 </system-out>
 	</testcase>
-	<testcase name="f02.visibility" classname="f02.visibility" time="0.0076383" status="run">
+	<testcase name="f02.visibility" classname="f02.visibility" time="0.0065877" status="run">
 		<properties/>
 		<system-out>PASS visibility
 </system-out>
 	</testcase>
-	<testcase name="f02.context" classname="f02.context" time="0.0074394" status="run">
+	<testcase name="f02.context" classname="f02.context" time="0.0058923" status="run">
 		<properties/>
 		<system-out>PASS context
 </system-out>
 	</testcase>
-	<testcase name="f02.roundtrip" classname="f02.roundtrip" time="0.0177227" status="run">
+	<testcase name="f02.roundtrip" classname="f02.roundtrip" time="0.0134065" status="run">
 		<properties/>
 		<system-out>PASS roundtrip
 </system-out>
 	</testcase>
-	<testcase name="f02.rng" classname="f02.rng" time="0.0089237" status="run">
+	<testcase name="f02.rng" classname="f02.rng" time="0.0067995" status="run">
 		<properties/>
 		<system-out>PASS rng
 </system-out>
 	</testcase>
-	<testcase name="f02.corrupt" classname="f02.corrupt" time="0.0063629" status="run">
+	<testcase name="f02.corrupt" classname="f02.corrupt" time="0.0069108" status="run">
 		<properties/>
 		<system-out>PASS corrupt
 </system-out>
 	</testcase>
-	<testcase name="f02.incompatible" classname="f02.incompatible" time="0.0084103" status="run">
+	<testcase name="f02.incompatible" classname="f02.incompatible" time="0.0060619" status="run">
 		<properties/>
 		<system-out>PASS incompatible
 </system-out>
 	</testcase>
-	<testcase name="f02.scope" classname="f02.scope" time="0.006532" status="run">
+	<testcase name="f02.scope" classname="f02.scope" time="0.0090186" status="run">
 		<properties/>
 		<system-out>PASS scope
 </system-out>
 	</testcase>
-	<testcase name="f02.thread" classname="f02.thread" time="0.0073548" status="run">
+	<testcase name="f02.thread" classname="f02.thread" time="0.0078587" status="run">
 		<properties/>
 		<system-out>PASS thread
 </system-out>
 	</testcase>
-	<testcase name="f02.buffers" classname="f02.buffers" time="0.008763" status="run">
+	<testcase name="f02.buffers" classname="f02.buffers" time="0.006951" status="run">
 		<properties/>
 		<system-out>PASS buffers
 </system-out>
 	</testcase>
-	<testcase name="f02.host_failure" classname="f02.host_failure" time="0.0073396" status="run">
+	<testcase name="f02.host_failure" classname="f02.host_failure" time="0.0067585" status="run">
 		<properties/>
 		<system-out>PASS host_failure
 </system-out>

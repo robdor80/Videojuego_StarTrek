@@ -2,8 +2,8 @@
 	"devices": [
 		{
 			"deviceName": "FATIROBERMSI",
-			"instance": "EE0D8CE04361D2A4818179AAEEC37BBD",
-			"instanceName": "FATIROBERMSI-26752",
+			"instance": "FC697327459A9217581CFCAF21B25F11",
+			"instanceName": "FATIROBERMSI-33948",
 			"platform": "WindowsEditor",
 			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
 			"model": "Default",
@@ -15,13 +15,13 @@
 			"appInstanceLog": ""
 		}
 	],
-	"reportCreatedOn": "2026.10.31-10.05.41",
+	"reportCreatedOn": "2026.10.31-11.21.07",
 	"succeeded": 26,
 	"succeededWithWarnings": 0,
 	"failed": 0,
 	"notRun": 0,
 	"inProcess": 0,
-	"totalDuration": 16.525321960449219,
+	"totalDuration": 30.123363494873047,
 	"comparisonExported": false,
 	"comparisonExportDirectory": "",
 	"tests": [
@@ -31,10 +31,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.014870200306177139,
-			"dateTime": "2026.10.31-10.05.23",
+			"duration": 0.017662700265645981,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -46,10 +46,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018533200025558472,
-			"dateTime": "2026.10.31-10.05.23",
+			"duration": 0.026073500514030457,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -61,10 +61,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.016256701201200485,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.023476298898458481,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -76,10 +76,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018971197307109833,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.019294198602437973,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -91,10 +91,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018580302596092224,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.018480397760868073,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -106,10 +106,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.01903349906206131,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.031309600919485092,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -121,10 +121,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018297899514436722,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.027710098773241043,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -136,10 +136,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.017177198082208633,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.016767896711826324,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -151,10 +151,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018184900283813477,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.019726797938346863,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -166,10 +166,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018527399748563766,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.019519202411174774,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -181,10 +181,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018273100256919861,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.032670699059963226,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -196,10 +196,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.016966197639703751,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.016648098826408386,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -211,10 +211,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.017560400068759918,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.020218599587678909,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -226,10 +226,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.01621830090880394,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.017156500369310379,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -241,10 +241,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.29715061187744141,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.46351981163024902,
+			"dateTime": "2026.10.31-11.20.36",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -256,10 +256,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.044276997447013855,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 0.06928899884223938,
+			"dateTime": "2026.10.31-11.20.37",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -271,10 +271,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.59762090444564819,
-			"dateTime": "2026.10.31-10.05.24",
+			"duration": 1.0012942552566528,
+			"dateTime": "2026.10.31-11.20.37",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -286,10 +286,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.060311701148748398,
-			"dateTime": "2026.10.31-10.05.25",
+			"duration": 0.094031795859336853,
+			"dateTime": "2026.10.31-11.20.38",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -301,10 +301,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.5051569938659668,
-			"dateTime": "2026.10.31-10.05.25",
+			"duration": 0.82019048929214478,
+			"dateTime": "2026.10.31-11.20.38",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -316,10 +316,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.017671298235654831,
-			"dateTime": "2026.10.31-10.05.26",
+			"duration": 0.027496401220560074,
+			"dateTime": "2026.10.31-11.20.39",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -331,10 +331,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 5.4483866691589355,
-			"dateTime": "2026.10.31-10.05.26",
+			"duration": 10.625006675720215,
+			"dateTime": "2026.10.31-11.20.39",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -346,10 +346,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018436599522829056,
-			"dateTime": "2026.10.31-10.05.31",
+			"duration": 0.019919998943805695,
+			"dateTime": "2026.10.31-11.20.50",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -361,10 +361,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.018440000712871552,
-			"dateTime": "2026.10.31-10.05.31",
+			"duration": 0.027591999620199203,
+			"dateTime": "2026.10.31-11.20.50",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -376,10 +376,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 2.4574284553527832,
-			"dateTime": "2026.10.31-10.05.31",
+			"duration": 4.3973226547241211,
+			"dateTime": "2026.10.31-11.20.50",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -391,10 +391,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 0.03094099834561348,
-			"dateTime": "2026.10.31-10.05.34",
+			"duration": 0.052806098014116287,
+			"dateTime": "2026.10.31-11.20.54",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
@@ -406,10 +406,10 @@
 			"tags": [],
 			"state": "Success",
 			"deviceInstance": [
-				"EE0D8CE04361D2A4818179AAEEC37BBD"
+				"FC697327459A9217581CFCAF21B25F11"
 			],
-			"duration": 6.7820520401000977,
-			"dateTime": "2026.10.31-10.05.34",
+			"duration": 12.218177795410156,
+			"dateTime": "2026.10.31-11.20.54",
 			"entries": [],
 			"warnings": 0,
 			"errors": 0,
