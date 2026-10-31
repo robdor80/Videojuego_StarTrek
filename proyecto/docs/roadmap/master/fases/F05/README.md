@@ -1,5 +1,13 @@
 # F05 — Órdenes, delegación e iniciativa NPC
 
+## Apertura operativa — 31-10-2026
+
+**Estado vigente:** F05 **EN_CURSO**, con **P01 EN_CURSO solo como apertura administrativa** para desarrollar el primer flujo real de órdenes en CoreRPG y Star Trek. F04 se cierra en su corte probado mediante el [acta administrativa](../F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md); CoreRPG PR #13 ya está fusionada. La meta F05 **CORE_INTEGRADO continúa NO ALCANZADA**. P02–P04 requieren implementación posterior; las 19 pruebas y 48 escenarios de P05 acreditan únicamente la referencia histórica.
+
+**Nota histórica:** las descripciones `EN_REVISION`, `BLOQUEADA` y `Core pendiente` que siguen reflejan el corte del 11–13/10/2026, antes de las nuevas integraciones, y no sustituyen al estado vigente del Plan Maestro. Las APIs y gates se deben volver a comprobar en el HEAD concreto de ambos repositorios.
+
+---
+
 **Estado global reconciliado:** **EN_REVISION**, con P01–P04 BLOQUEADAS para sus capacidades Core reales y P05 CERRADA solo como suite de referencia. **PR #6 fusionada en `main`**; 19 unit tests y 48 fixtures verificados, y regresión F04→F05→F06 superada en [CI integrada](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/38321712021). No equivale a implementación de iniciativa NPC.
 **Meta de fase del plan maestro:** CORE_INTEGRADO (**no alcanzada**).
 
