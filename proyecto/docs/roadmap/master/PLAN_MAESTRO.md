@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación post-merge:** 30-10-2026 (F02 PR #60; F03 PR #62 con CoreRPG PR #12). **Objetivo:** dirección secuencial del producto, sin sustituir los sistemas técnicos ni sus roadmaps. **F00/F01 cerradas a su nivel; F02 CERRADA en CONTRATO_VALIDADO; F03 CERRADA en CORE_INTEGRADO** tras auditoría y fusiones normales con SHA Core fijado. Siguiente fase principal: **F04 EN_CURSO**, sin atribuir jugabilidad ni sistemas galácticos completos a F03. La [reconciliación del 13-10](ACTA_RECONCILIACION_F00_F06_2026-10-13.md) queda como antecedente histórico.
+**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01 abierto para implementación real sobre CoreRPG.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
 
 ## Decisión autoral transversal 2026-10-30 — cronología y propulsión
 
@@ -24,8 +24,8 @@
 | [F01](fases/F01/README.md) | Visión y canon del producto | **CERRADA en diseño** (PR #2, acta F01) | DISENO_VALIDADO |
 | [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** (PR #60; laboratorio CoreRPG/UE5 validado) | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** (CoreRPG PR #12 + Trek PR #62; corte vertical integrado y auditado) | CORE_INTEGRADO |
-| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **EN_CURSO** (fase principal; la referencia probada requiere validación operativa adicional) | REFERENCIA_PROBADA |
-| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_REVISION** (referencia probada; Core pendiente) | CORE_INTEGRADO |
+| [F04](fases/F04/README.md) | Naves, dotación y autoridad | **CERRADA** (corte operativo auditado; deuda avanzada explícita en acta) | REFERENCIA_PROBADA |
+| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01 apertura; integración Core pendiente de implementación) | CORE_INTEGRADO |
 | [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
 | [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
 | [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | PLANIFICADA | ACEPTACION_SUPERADA |
