@@ -69,13 +69,20 @@ older checkpoint with newer segments/RNG/time, and no valid campaign is deleted.
 
 ## Reproduction
 
-Use an isolated build directory and clean Core checkout at the explicit proposal:
+Supply an isolated runtime output root and a clean Core checkout at the explicit
+proposal. Choose local output locations according to the current repository work
+policy before invoking these commands; no machine-specific directory is assumed:
 
 ```powershell
-cmake -S desarrollo/integration/f04 -B C:/F04/HistoryBuild/history -A x64 -DCORERPG_SOURCE_DIR=C:/F04/CoreHistory -DF04_ENABLE_HISTORY=ON
-cmake --build C:/F04/HistoryBuild/history --config Release --parallel 4
-ctest --test-dir C:/F04/HistoryBuild/history -C Release -E history_campaign_ --output-on-failure -j 4
-ctest --test-dir C:/F04/HistoryBuild/history -C Release -L history_acceptance --output-on-failure -j 2
+if (-not $env:F04_WORK_ROOT -or -not $env:F04_CORE_SOURCE) { throw 'Configure F04_WORK_ROOT and F04_CORE_SOURCE first' }
+$env:F04_TEST_TEMP_ROOT = Join-Path $env:F04_WORK_ROOT 'reference-tests'
+$env:TEMP = $env:TMP = $env:TMPDIR = Join-Path $env:F04_WORK_ROOT 'system-temp'
+New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
+$env:PYTHONDONTWRITEBYTECODE = '1'
+cmake -S desarrollo/integration/f04 -B "$env:F04_WORK_ROOT/build" -A x64 "-DCORERPG_SOURCE_DIR=$env:F04_CORE_SOURCE" -DF04_ENABLE_HISTORY=ON
+cmake --build "$env:F04_WORK_ROOT/build" --config Release --parallel 4
+ctest --test-dir "$env:F04_WORK_ROOT/build" -C Release -E history_campaign_ --output-on-failure -j 4
+ctest --test-dir "$env:F04_WORK_ROOT/build" -C Release -L history_acceptance --output-on-failure -j 2
 ```
 
 The campaign runner requires completed 365/730-day actual-watch campaigns; a
@@ -150,7 +157,7 @@ reviewed repository provenance, not a cryptographic signature from a third party
 
 `history_reference.py` verifies those bindings and every oracle row (block days,
 strictly growing identity watermarks, 64-digit digests and final seven-day future).
-It stages an exclusive-created copy under the existing ignored laboratory tree.
+It stages an exclusive-created copy in the caller-supplied disposable output root.
 The existing `F04_HISTORY_REFERENCE_FIXTURES` / `--reference-fixtures` path verifies
 again before use and after the run. Missing, corrupt or incompatible fixtures fail
 explicitly; no fallback hides a bad fixture by generating another reference.
@@ -167,15 +174,20 @@ Fast jobs other than the first do not build the unused reference DLL/executable
 or regressions already run in the first matrix job. Productive phase timeouts
 remain 3,300s. The first job still compiles all targets and runs all regressions.
 
-Reproduce locally from the repository root using a **new** laboratory directory:
+Reproduce from the repository root after choosing a **new**, policy-compliant
+runtime output directory and setting `F04_WORK_ROOT` and `F04_CORE_SOURCE`:
 
 ```powershell
-$lab = "laboratorios/PruebasTecnicas/f04-ci-history/replay-$([guid]::NewGuid().ToString('N'))"
-python desarrollo/integration/f04/tests/history_reference.py --profile 5 --days 730 --directory "$lab/references"
-cmake -S desarrollo/integration/f04 -B "$lab/build" -A x64 -DCORERPG_SOURCE_DIR=C:/F04/CoreHistory -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON "-DF04_HISTORY_REFERENCE_FIXTURES=$((Get-Location).Path)/$lab/references"
-cmake --build "$lab/build" --config Release --parallel 4
-ctest --test-dir "$lab/build" -C Release -R '^f04.history_reference_contract$' --no-tests=error --output-on-failure
-ctest --test-dir "$lab/build" -C Release -R '^f04.history_campaign_valhalla_730$' --no-tests=error --output-on-failure
+if (-not $env:F04_WORK_ROOT -or -not $env:F04_CORE_SOURCE) { throw 'Configure F04_WORK_ROOT and F04_CORE_SOURCE first' }
+$env:F04_TEST_TEMP_ROOT = Join-Path $env:F04_WORK_ROOT 'reference-tests'
+$env:TEMP = $env:TMP = $env:TMPDIR = Join-Path $env:F04_WORK_ROOT 'system-temp'
+New-Item -ItemType Directory -Force -Path $env:TEMP | Out-Null
+$env:PYTHONDONTWRITEBYTECODE = '1'
+python desarrollo/integration/f04/tests/history_reference.py --profile 5 --days 730 --directory "$env:F04_WORK_ROOT/references"
+cmake -S desarrollo/integration/f04 -B "$env:F04_WORK_ROOT/build" -A x64 "-DCORERPG_SOURCE_DIR=$env:F04_CORE_SOURCE" -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON "-DF04_HISTORY_REFERENCE_FIXTURES=$env:F04_WORK_ROOT/references"
+cmake --build "$env:F04_WORK_ROOT/build" --config Release --parallel 4
+ctest --test-dir "$env:F04_WORK_ROOT/build" -C Release -R '^f04.history_reference_contract$' --no-tests=error --output-on-failure
+ctest --test-dir "$env:F04_WORK_ROOT/build" -C Release -R '^f04.history_campaign_valhalla_730$' --no-tests=error --output-on-failure
 ```
 
 For a deep independent audit, configure a **separate fresh build** without
@@ -193,6 +205,26 @@ incompatible revisions/contracts/schema, provenance tampering, original and back
 preservation, and a genuine seven-day native campaign that fails on an intentionally
 wrong expected digest. CTest runs this mandatory native case in the proposed-Core
 regression job. A Python-only invocation explicitly skips that one native case.
+
+### Disposable output paths (FASE 04 BIS 2)
+
+The history workflow derives `F04_WORK_ROOT` from GitHub's job-local `runner.temp`
+and the matrix case. Verified reference copies, build products, XML, campaign
+saves, logs and audits all live below that ephemeral root. Artifact upload reads
+that same root. `F04_TEST_TEMP_ROOT` supplies the reference tests' scratch directory;
+an unset value fails explicitly instead of inventing a fixed project directory.
+`TEMP`, `TMP` and `TMPDIR` also point below the root, including native storage-fault
+tests that request the system temporary directory without naming a project path.
+Python bytecode writes are disabled for this job. Local runs supply their own
+authorized output root through these variables, following the current work policy.
+
+Source, permanent audited oracle originals and pinned Core checkouts are inputs.
+No product, CMake configuration or integration contract gains a dependency on a
+named local experiment. Removing disposable outputs after the run leaves those
+inputs intact; another fresh root reproduces the same tests. This changes only
+output routing: test cases, native commands, expected hashes, revisions, acceptance
+gates and timeouts are unchanged. Existing evidence packages are historical records
+and are not relocated or rewritten by this correction.
 
 New CI measurements and raw evidence are added separately from the original
 acceptance package. The first correction's actual 730-day pipeline took 966.6s

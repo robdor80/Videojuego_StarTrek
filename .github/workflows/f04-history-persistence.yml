@@ -17,6 +17,8 @@ jobs:
   real-campaign:
     runs-on: windows-latest
     timeout-minutes: ${{ inputs.regenerate_oracles && 360 || 120 }}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     strategy:
       fail-fast: false
       matrix:
@@ -29,6 +31,17 @@ jobs:
           - {profile: 5, days: 730, case: 'valhalla_730'}
     steps:
       - uses: actions/checkout@v4
+      - name: Initialize disposable runner output root
+        shell: pwsh
+        run: |
+          $workRoot = Join-Path $env:RUNNER_TEMP 'Videojuego_StarTrek/f04-history-${{ matrix.case }}'
+          $systemTemp = Join-Path $workRoot 'system-temp'
+          New-Item -ItemType Directory -Force -Path $systemTemp | Out-Null
+          "F04_WORK_ROOT=$workRoot" >> $env:GITHUB_ENV
+          "F04_TEST_TEMP_ROOT=$workRoot/reference-tests" >> $env:GITHUB_ENV
+          "TEMP=$systemTemp" >> $env:GITHUB_ENV
+          "TMP=$systemTemp" >> $env:GITHUB_ENV
+          "TMPDIR=$systemTemp" >> $env:GITHUB_ENV
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -50,18 +63,18 @@ jobs:
         run: >-
           python desarrollo/integration/f04/tests/history_reference.py
           --profile ${{ matrix.profile }} --days ${{ matrix.days }}
-          --directory "${{ github.workspace }}/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
+          --directory "${{ env.F04_WORK_ROOT }}/reference-fixtures"
       - name: Configure proposed integration and separate complete-history oracle
         shell: pwsh
         run: |
           $options = @()
           if ('${{ inputs.regenerate_oracles }}' -ne 'true') {
-            $options += "-DF04_HISTORY_REFERENCE_FIXTURES=$env:GITHUB_WORKSPACE/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
+            $options += "-DF04_HISTORY_REFERENCE_FIXTURES=$env:F04_WORK_ROOT/reference-fixtures"
           }
           if ('${{ inputs.regenerate_oracles }}' -eq 'true') {
             $options += '-DF04_HISTORY_ORACLE_TIMEOUT_SECONDS=18000'
           }
-          cmake -S desarrollo/integration/f04 -B build/history -A x64 -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG" -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON @options
+          cmake -S desarrollo/integration/f04 -B "$env:F04_WORK_ROOT/build" -A x64 -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG" -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON @options
       - name: Build
         shell: pwsh
         run: |
@@ -69,20 +82,20 @@ jobs:
           if ('${{ matrix.profile }}' -ne '1' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
             $targets = @('--target', 'f04_history_campaign', 'f04_history_audit')
           }
-          cmake --build build/history --config Release --parallel 4 @targets
+          cmake --build "$env:F04_WORK_ROOT/build" --config Release --parallel 4 @targets
       - name: Proposed-Core regressions and injected faults
         if: matrix.profile == 1
-        run: ctest --test-dir build/history -C Release -E history_campaign_ --output-on-failure --output-junit "${{ github.workspace }}/build/history/regressions.xml" -j 2
+        run: ctest --test-dir "${{ env.F04_WORK_ROOT }}/build" -C Release -E history_campaign_ --output-on-failure --output-junit "${{ env.F04_WORK_ROOT }}/build/regressions.xml" -j 2
       - name: Actual watches, consolidation, complete-history equivalence, process recovery and all-payload audit
-        run: ctest --test-dir build/history -C Release -R "^f04.history_campaign_${{ matrix.case }}$" --no-tests=error --output-on-failure --output-junit "${{ github.workspace }}/build/history/campaign.xml"
+        run: ctest --test-dir "${{ env.F04_WORK_ROOT }}/build" -C Release -R "^f04.history_campaign_${{ matrix.case }}$" --no-tests=error --output-on-failure --output-junit "${{ env.F04_WORK_ROOT }}/build/campaign.xml"
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: f04-history-${{ matrix.profile }}-${{ matrix.days }}
           path: |
-            build/history/campaign.xml
-            build/history/regressions.xml
-            build/history/history-runs/**/*.json
-            build/history/history-runs/**/*.log
-            build/history/history-runs/**/*.oracle
-            build/history/history-runs/**/*.resume
+            ${{ env.F04_WORK_ROOT }}/build/campaign.xml
+            ${{ env.F04_WORK_ROOT }}/build/regressions.xml
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.json
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.log
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.oracle
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.resume

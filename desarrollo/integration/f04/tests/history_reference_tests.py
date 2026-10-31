@@ -1,6 +1,7 @@
 """Integrity, provenance, compatibility and real campaign divergence tests."""
 import argparse
 import json
+import os
 from pathlib import Path
 import shutil
 import subprocess
@@ -15,9 +16,12 @@ BIN = None
 
 class ReferenceTests(unittest.TestCase):
     def setUp(self):
-        lab = reference.REPO / 'laboratorios/PruebasTecnicas/f04-ci-history/reference-tests'
-        lab.mkdir(parents=True, exist_ok=True)
-        self.temp = tempfile.TemporaryDirectory(dir=lab)
+        scratch = os.environ.get('F04_TEST_TEMP_ROOT')
+        if not scratch:
+            raise RuntimeError('Set F04_TEST_TEMP_ROOT to a disposable output directory before running tests')
+        scratch = Path(scratch)
+        scratch.mkdir(parents=True, exist_ok=True)
+        self.temp = tempfile.TemporaryDirectory(dir=scratch)
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         manifest = json.loads((reference.REPO / reference.MANIFEST).read_bytes())
