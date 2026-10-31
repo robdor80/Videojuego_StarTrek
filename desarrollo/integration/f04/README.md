@@ -1,5 +1,14 @@
 # F04 — organización operativa sobre CoreRPG
 
+[F04-GUARDIAS-02 — Miranda e Intrepid: tres guardias](../../../proyecto/docs/roadmap/master/fases/F04/F04-GUARDIAS-02_MIRANDA_INTREPID_TRES_GUARDIAS.md)
+completa las demandas de los perfiles 1/2 sin alterar sus secciones ni plazas.
+Referencia Miranda 53/18/13/46; Intrepid 64/23/16/57 (Alpha/Beta/Gamma/Fuera).
+Usa el mismo planificador y migración explícita SCHEMA 3→4; las ocho funciones
+críticas se mantienen en 1/7/14/28 días, con déficits de actividad no crítica
+registrados. SCHEMA 3 conserva sus consultas históricas de seis/siete servicios.
+Incluye relevo tras cancelación sin restaurar funciones revocadas expresamente.
+
+
 [F04-VALHALLA-01 — La gran nave](../../../proyecto/docs/roadmap/master/fases/F04/F04-VALHALLA-01_ORGANIZACION_GRAN_NAVE.md)
 añade `F04_VALHALLA_FLAGSHIP=5`: 1.800 plazas, 90 secciones y 400 civiles
 persistentes; referencia 550/380/255/615. Incluye 40 navales Defiant y 60 Marines
@@ -72,7 +81,7 @@ preexistente ajeno. No se usa ningún proyecto artístico como destino.
   -F02CoreSource C:/F04/core-f02
 ```
 
-El comando ejecuta 23 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 11.
+El comando ejecuta 25 pruebas reales de UWorld/Actors: F02 6, F03 6, F04 13.
 `-NullRHI` valida integración lógica y ciclo de representación; no acredita
 una escena gráficamente jugable. El proyecto, DLL, compilaciones y archivos
 de campaña generados permanecen fuera de Git.

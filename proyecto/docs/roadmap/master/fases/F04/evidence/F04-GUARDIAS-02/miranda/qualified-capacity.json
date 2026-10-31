@@ -1,0 +1,66 @@
+[
+  {
+    "station": 1,
+    "qualified_people": 5,
+    "max_shifts_per_rolling7": 25,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 2,
+    "qualified_people": 5,
+    "max_shifts_per_rolling7": 25,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 4,
+    "qualified_people": 10,
+    "max_shifts_per_rolling7": 50,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 64,
+    "qualified_people": 8,
+    "max_shifts_per_rolling7": 40,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 16,
+    "qualified_people": 5,
+    "max_shifts_per_rolling7": 25,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 8,
+    "qualified_people": 32,
+    "max_shifts_per_rolling7": 160,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 128,
+    "qualified_people": 7,
+    "max_shifts_per_rolling7": 35,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  },
+  {
+    "station": 512,
+    "qualified_people": 8,
+    "max_shifts_per_rolling7": 40,
+    "required_shifts_per7": 21,
+    "necessary_minimum_people": 5,
+    "capacity_sufficient": true
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "base": "4436bb444bcfae17941edc84d856d756ac5f6929",
+  "preserved_source_sha256": {
+    "desarrollo/integration/f04/src/f04_sovereign.h": {
+      "git_content_sha256": "42b2498992a72f092f9e60193ca5f750c8f4b6dda457efcd2fd27f4e8426353e",
+      "worktree_sha256": "1a05ff3d3c410117ff73d02b49067a4780cb3d120f22790f1a2d43d9dc4f3abe",
+      "content_equal_ignoring_checkout_line_endings": true
+    },
+    "desarrollo/integration/f04/src/f04_odyssey.h": {
+      "git_content_sha256": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
+      "worktree_sha256": "8ffcf0df93d70a5cf8b5f8de18799742d772a2e1b882d200e6e7e36b13c63047",
+      "content_equal_ignoring_checkout_line_endings": true
+    },
+    "desarrollo/integration/f04/src/f04_valhalla.h": {
+      "git_content_sha256": "4cc6d52cd5b6f9da830f2955e26c4f177d56f09a97cd7a5ca0fc71d8128ab821",
+      "worktree_sha256": "1573f84bcebf87cd4c933abd472d6d9681f0b4ea1e6ee8cc9626afa8e71bef33",
+      "content_equal_ignoring_checkout_line_endings": true
+    },
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": {
+      "git_content_sha256": "0a80ddd12f0595156cf243e08470622995cff002e0c163c584f761bafc0ff898",
+      "worktree_sha256": "d49912e78b6d772a9cbc6bb116f64f4724f454111fbf7aa1f4d9e0678aa388e5",
+      "content_equal_ignoring_checkout_line_endings": true
+    },
+    "desarrollo/integration/f04/include/f04_bridge.h": {
+      "git_content_sha256": "025adfaada8ed64065db5db6f0274cf6ee9ee51a46cd93a356ad991bb1e6f2ea",
+      "worktree_sha256": "f24a2520dd435b651ddef55ba2ed2f88a338a6d98991c94a44f310901c282f45",
+      "content_equal_ignoring_checkout_line_endings": true
+    },
+    "desarrollo/integration/f04/core-revision.txt": {
+      "git_content_sha256": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+      "worktree_sha256": "b678bb8e1089def094de0096abbd00f8bb8b054fec1a9124cb30097759ceee32",
+      "content_equal_ignoring_checkout_line_endings": true
+    }
+  },
+  "small_nominal_definitions_and_skills_unchanged": true,
+  "generic_core_unchanged": true,
+  "original_schema_and_ABI_unchanged": true,
+  "art_resources_modified": false,
+  "method": "Exact base/source comparison for definitions and Git-scoped changes; no inventory claim about unrelated external resources."
+}

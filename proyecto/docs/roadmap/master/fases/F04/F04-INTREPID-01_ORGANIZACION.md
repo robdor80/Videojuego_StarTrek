@@ -1,5 +1,7 @@
 # F04-INTREPID-01 — Organización de clase Intrepid
 
+> Actualización 31-10-2026: [F04-GUARDIAS-02](F04-GUARDIAS-02_MIRANDA_INTREPID_TRES_GUARDIAS.md) completa Beta/Gamma con el planificador común y migración explícita SCHEMA 3→4. Las cifras y contratos históricos siguientes conservan su alcance original.
+
 Fecha: 2026-10-30. F04 permanece **EN_CURSO**. Implementación para auditoría independiente mediante **PR Draft contra main**, sin fusionar.
 
 Base verificada después de `git fetch origin`: `main` y `origin/main` en `9e5f46eb1ff364f66e41d913cb64ce5ce232b4c2`, fusión de F04-MIRANDA-01 (PR #67). Rama exclusiva: `codex/f04-intrepid-organizacion`.
