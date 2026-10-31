@@ -1,0 +1,19 @@
+{
+  "absence_ms": 1.8338000008952804,
+  "candidate_query_ms": 0.10930000280495733,
+  "cover_ms": 1.971199999388773,
+  "candidates": 3,
+  "crew": 130,
+  "permanent_destinations_preserved": true,
+  "historical_gaps": [
+    {
+      "id": 436,
+      "start": 86399,
+      "end": 86400,
+      "department": 1,
+      "station": 4,
+      "missing": 1,
+      "plan": 316
+    }
+  ]
+}

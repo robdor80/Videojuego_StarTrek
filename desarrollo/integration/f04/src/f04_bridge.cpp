@@ -826,7 +826,7 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
    out->on_duty=workers.size();
   }
   out->alpha_deficit=out->alpha_expected-out->alpha_present;
-  const auto stations=trek_templates::profile(val(w,1,TEMPLATE))->continuous_stations;
+  const auto stations=organization_services(w);
   out->continuous_required=stations.size();for(U station:stations)out->continuous_covered+=service_covered(w,station,tick);
   return F04_OK;
  });

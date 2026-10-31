@@ -1,5 +1,9 @@
 // Included inside the bridge's private namespace. All mutable state is in Core.
 bool organization(const WorldState& w) {return (val(w,1,SCHEMA)==3 || val(w,1,SCHEMA)==4);}
+std::span<const uint64_t> organization_services(const WorldState& w) {
+ const auto* p=trek_templates::profile(val(w,1,TEMPLATE));
+ return val(w,1,SCHEMA)==4?trek_templates::roster_services(*p):p->continuous_stations;
+}
 bool station_active(const WorldState& w,U f,U tick) {
  if(!window(w,f,tick))return false;
  const U p=ref(w,f,PERSON),slot=ref(w,f,SLOT),station=val(w,f,STATIONS);

@@ -1,0 +1,58 @@
+[
+  {
+    "days": 1,
+    "shifts": 84,
+    "target_shifts": 84,
+    "quota_missing": 0,
+    "critical_windows_verified": 24,
+    "critical_windows_expected": 24,
+    "critical_gap_records": 0,
+    "max_rolling7": 1,
+    "min_rest_seconds": null,
+    "people_changing_watch": 0,
+    "captain_shifts": 1,
+    "core_entities_after_plan": 432
+  },
+  {
+    "days": 7,
+    "shifts": 532,
+    "target_shifts": 588,
+    "quota_missing": 56,
+    "critical_windows_verified": 168,
+    "critical_windows_expected": 168,
+    "critical_gap_records": 0,
+    "max_rolling7": 5,
+    "min_rest_seconds": 57600,
+    "people_changing_watch": 81,
+    "captain_shifts": 3,
+    "core_entities_after_plan": 1089
+  },
+  {
+    "days": 14,
+    "shifts": 1051,
+    "target_shifts": 1176,
+    "quota_missing": 125,
+    "critical_windows_verified": 336,
+    "critical_windows_expected": 336,
+    "critical_gap_records": 0,
+    "max_rolling7": 5,
+    "min_rest_seconds": 57600,
+    "people_changing_watch": 100,
+    "captain_shifts": 6,
+    "core_entities_after_plan": 1857
+  },
+  {
+    "days": 28,
+    "shifts": 2074,
+    "target_shifts": 2352,
+    "quota_missing": 278,
+    "critical_windows_verified": 672,
+    "critical_windows_expected": 672,
+    "critical_gap_records": 0,
+    "max_rolling7": 5,
+    "min_rest_seconds": 57600,
+    "people_changing_watch": 109,
+    "captain_shifts": 13,
+    "core_entities_after_plan": 3380
+  }
+]

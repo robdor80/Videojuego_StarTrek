@@ -1,0 +1,47 @@
+{
+  "miranda": {
+    "archive_bytes": 95346,
+    "archive_sha256": "74293b73a94c0823b2ac43a9db1e17afef2156213f0a48df038a6514ca5f9738",
+    "producer_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+    "reader_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+    "producer": "process_save passed",
+    "new_reader": "process_load passed",
+    "same_future": true
+  },
+  "intrepid": {
+    "archive_bytes": 115210,
+    "archive_sha256": "3be4182e3d2332982ccf67eeee145ebbee337ac0474ae5e50605cf4f9c7d34f1",
+    "producer_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+    "reader_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+    "producer": "intrepid process_save passed",
+    "new_reader": "intrepid process_load passed",
+    "same_future": true
+  },
+  "sovereign": {
+    "archive_bytes": 2563761,
+    "archive_sha256": "48627fbec27b94db886796ad9f05b1a3d6845f36450786b7e50ff8861afe98cd",
+    "producer_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+    "reader_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+    "producer": "process_save: PASS",
+    "new_reader": "process_load: PASS",
+    "same_future": true
+  },
+  "odyssey": {
+    "archive_bytes": 5585553,
+    "archive_sha256": "d67ab588cbf751b88c57d125935dc1451e6a4618916dd57ff9166a9dd811dd5e",
+    "producer_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+    "reader_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+    "producer": "process_save: PASS",
+    "new_reader": "process_load: PASS",
+    "same_future": true
+  },
+  "valhalla": {
+    "archive_bytes": 6593698,
+    "archive_sha256": "2299c88ef5e25d56f62207e0a2cd0489b6d6014a1a7c8ad82f7ea51ed4299808",
+    "producer_dll_sha256": "6805de4a5b08c89421dd51add3c19271db97a5afa8567793dc708abaf84d5c86",
+    "reader_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+    "producer": "process_save: PASS",
+    "new_reader": "process_load: PASS",
+    "same_future": true
+  }
+}

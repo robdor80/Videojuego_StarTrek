@@ -90,7 +90,7 @@ U plan_watches(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
  // A greedy departmental fill otherwise spends every sensor/operator's weekly
  // capacity early and leaves the sixth day uncovered despite ample total crew.
  std::map<size_t,U> reserved;
- for(U station:profile->continuous_stations) {
+ for(U station:trek_templates::roster_services(*profile)) {
   std::vector<size_t> candidates;
   for(size_t i=0;i<people.size();++i)if(!reserved.contains(i) && service_skill(c.world,people[i],station,r.end))candidates.push_back(i);
   std::stable_sort(candidates.begin(),candidates.end(),[&](size_t a,size_t b){
@@ -107,10 +107,10 @@ U plan_watches(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
   const U start=day+window_index*28800,end=start+28800,label=(window_index+2)%3;
   const bool reference=r.value==F04_REFERENCE || (r.aux==1 && day==r.start);
   std::set<size_t> selected;std::map<U,size_t> services;std::map<U,U> actual;
-  auto eligible=[&](size_t i) {
+  auto eligible=[&](size_t i,bool essential=false) {
    const auto& p=people[i];const U date=day/86400;
    const bool free_day=(date+p.id*5+date/7)%7>=5;
-   return (reference || !free_day) && !selected.contains(i) && ordinary_fits(p,start,end) &&
+   return (reference || essential || !free_day) && !selected.contains(i) && ordinary_fits(p,start,end) &&
     slot_qualified(c.world,p.id,p.slot,end-1) && role_through(c.world,p.id,p.role,p.department,start,end);
   };
   auto add=[&](size_t i) {selected.insert(i);++actual[people[i].department];};
@@ -128,11 +128,19 @@ U plan_watches(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
     return std::array<U,4>{recent,U(p.work.size()),(label+3-(p.id+day/604800)%3)%3,p.id};
    };return score(people[a])<score(people[b]);
   };
-  for(U station:profile->continuous_stations) {
+  for(U station:trek_templates::roster_services(*profile)) {
    std::vector<size_t> candidates;
    for(size_t i=0;i<people.size();++i)if((reference?selected.contains(i):eligible(i)) && service_skill(c.world,people[i],station,end)) {
     bool used=false;for(auto [s,j]:services){(void)s;used|=j==i;}if(!used)candidates.push_back(i);
    }
+   // Staggered elective off-days are a workload preference. Before declaring a
+   // critical deficit, consider real qualified crew whose legal rest and rolling
+   // limits permit work today; never bypass protected REST/ABSENCE or fatigue.
+   if(candidates.empty() && !reference)for(size_t i=0;i<people.size();++i)
+    if(eligible(i,true) && service_skill(c.world,people[i],station,end)) {
+     bool used=false;for(auto [s,j]:services){(void)s;used|=j==i;}
+     if(!used)candidates.push_back(i);
+    }
    std::sort(candidates.begin(),candidates.end(),[&](size_t a,size_t b){
     const bool ra=reserved.contains(a) && reserved.at(a)==station,rb=reserved.contains(b) && reserved.at(b)==station;
     if(ra!=rb)return ra;
@@ -174,6 +182,26 @@ U stop_duty(Campaign& c,const F04Request& r) {
  stop_related(c,ref(c.world,r.target,PERSON),ref(c.world,r.target,SLOT),at,effective_end(c.world,r.target));
  set(c,r.target,STOP,at);return r.target;
 }
+// Recover only services attached to this duty, including those stopped by an
+// explicit CANCEL_DUTY. An independently revoked function stays revoked. This
+// uses existing Core history, not new fields or a second service assignment.
+std::vector<U> duty_services(const WorldState& w,U activity,U start,U end) {
+ const U person=ref(w,activity,PERSON),slot=ref(w,activity,SLOT);
+ U cancellation=0;std::set<U> revoked;
+ for(U e:all(w,"event"))if(val(w,e,CODE)==F04_OK) {
+  if(val(w,e,OP)==F04_CANCEL_DUTY && ref(w,e,TARGET)==activity)cancellation=e;
+  if(val(w,e,OP)==F04_REVOKE)revoked.insert(ref(w,e,TARGET));
+ }
+ std::set<U> stations;
+ for(U f:person_records(w,"function",person))if(ref(w,f,SLOT)==slot && !revoked.contains(f)) {
+  const bool live=val(w,f,STATE)==ACTIVE && val(w,f,START)<=start && end<=val(w,f,END);
+  const bool cancelled=cancellation && f<cancellation && has(w,activity,STOP) &&
+   effective_end(w,activity)<=start && val(w,f,START)==val(w,activity,START) &&
+   (val(w,f,END)==val(w,activity,END) || val(w,f,END)==effective_end(w,activity));
+  if(live || cancelled)stations.insert(val(w,f,STATIONS));
+ }
+ return {stations.begin(),stations.end()};
+}
 U cover_duty(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
  need(val(c.world,1,SCHEMA)==4 && r.cause && type(c.world,r.target,"activity") && val(c.world,r.target,VALUE)==F04_DUTY);
  const U old=r.target,slot=ref(c.world,old,SLOT),outgoing=ref(c.world,old,PERSON),person=r.aux;
@@ -186,9 +214,7 @@ U cover_duty(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
  for(U a:all(c.world,"activity"))if(a!=old && ref(c.world,a,SLOT)==slot && val(c.world,a,VALUE)==F04_DUTY &&
   val(c.world,a,STATE)==ACTIVE && val(c.world,a,START)<effective_end(c.world,a))
   need(!overlaps(r.start,r.end,val(c.world,a,START),effective_end(c.world,a)),F04_OVERLAP);
- std::vector<U> stations;
- for(U f:person_records(c.world,"function",outgoing))if(ref(c.world,f,SLOT)==slot && val(c.world,f,STATE)==ACTIVE &&
-  val(c.world,f,START)<=r.start && r.end<=val(c.world,f,END))stations.push_back(val(c.world,f,STATIONS));
+ const auto stations=duty_services(c.world,old,r.start,r.end);
  for(U station:stations)need(service_skill(c.world,planner_person(c.world,person,slot),station,r.end),F04_QUALIFICATION);
  stop_related(c,outgoing,slot,r.start,r.end);set(c,old,STOP,std::min(effective_end(c.world,old),r.start));
  const U result=add_duty(c,cat,r,person,slot,r.start,r.end,ref(c.world,old,PLAN),true,old);
@@ -242,7 +268,7 @@ bool roster_schema(const WorldState& w) {
   const U plan=ref(w,id,PLAN),station=val(w,id,STATIONS);
   if(!plan || !val(w,id,VALUE) || val(w,id,VALUE)>profile->spec.nominal_crew || val(w,id,DEPT)<1 || val(w,id,DEPT)>7 ||
    val(w,id,START)<val(w,plan,START) || val(w,id,END)>val(w,plan,END) ||
-   (station && std::find(profile->continuous_stations.begin(),profile->continuous_stations.end(),station)==profile->continuous_stations.end()))return false;
+   (station && std::find(trek_templates::roster_services(*profile).begin(),trek_templates::roster_services(*profile).end(),station)==trek_templates::roster_services(*profile).end()))return false;
  }
  return true;
 }
@@ -269,7 +295,7 @@ void record_incident_gaps(Campaign& c,const ContentCatalog& cat,const F04Request
   for(const char* kind:{"activity","appointment","function"})for(U a:all(c.world,kind))
    for(U b:{val(c.world,a,START),val(c.world,a,END),effective_end(c.world,a)})if(start<b && b<end)boundaries.insert(b);
   for(U p:all(c.world,"person")){U b=val(c.world,p,UNTIL);if(start<b && b<end)boundaries.insert(b);}
-  for(U station:profile->continuous_stations) {
+  for(U station:trek_templates::roster_services(*profile)) {
    const U dept=station==F04_ST_COMMAND||station==F04_ST_HELM?U(F04_COMMAND):station==F04_ST_SENSORS?U(F04_SENSORS):
     station==F04_ST_ENGINEERING?U(F04_ENGINEERING):station==F04_ST_TACTICAL?U(F04_SECURITY):station==F04_ST_MEDICAL?U(F04_MEDICINE):U(F04_OPERATIONS);
    U gap_start=end;

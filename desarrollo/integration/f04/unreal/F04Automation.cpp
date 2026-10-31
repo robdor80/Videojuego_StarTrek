@@ -212,4 +212,29 @@ bool FF04Valhalla::RunTest(const FString&){
  L.Host->Save(After);TestTrue(TEXT("Exact archive"),Before==After);TestNotNull(TEXT("Selective recovery"),L.Host->Represent(B.W,Civil));L.Host->Dematerialize(B.W);
  L.Host->Advance(28*86400-1);L.Host->Save(After);TestTrue(TEXT("Same future without Actors"),Future==After);return true;
 }
+
+namespace {
+bool SmallWatches(FAutomationTestBase& Test,uint32 Profile,const char* Class,uint64 Crew,uint64 Alpha,uint64 Gamma){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{70001,404,Crew,0,0,0};
+ if(!Test.TestTrue(TEXT("Existing Core population"),L.Host->OpenPopulation(Class,Config)) ||
+    !Test.TestTrue(TEXT("Explicit existing profile"),L.Host->InstallOrganization(Profile,8191)) ||
+    !Test.TestTrue(TEXT("Fixture without new identities"),L.Host->BootstrapOrganizationFixture()) ||
+    !Test.TestTrue(TEXT("Common planner 28 days"),L.Host->PlanWatches(0,28*86400,false,true)))return false;
+ TArray<F04ServiceCoverage> Coverage;Test.TestTrue(TEXT("Entire horizon"),L.Host->ServiceCoverage(0,28*86400,Coverage));
+ Test.TestEqual(TEXT("Eight critical services"),Coverage.Num(),8);for(const auto& C:Coverage)Test.TestTrue(TEXT("Continuous coverage"),C.covered==1);
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;Test.TestEqual(TEXT("No automatic crew Actors"),Count,0);
+ F04OrganizationStats Org{};L.Host->Organization(Org);Test.TestEqual(TEXT("Gamma actual staff"),Org.on_duty,Gamma);
+ Test.TestTrue(TEXT("Alpha Core time"),L.Host->Advance(28800));L.Host->Organization(Org);Test.TestEqual(TEXT("Approved Alpha"),Org.on_duty,Alpha);
+ TArray<uint8> Before,After,Future;L.Host->Save(Before);F04Stats State{};L.Host->Stats(State);
+ auto* Actor=L.Host->Represent(A.W,static_cast<uint32>(State.commander));if(!Test.TestNotNull(TEXT("Selective commander Actor"),Actor))return false;
+ Test.TestTrue(TEXT("Duty from Core"),Actor->OnDuty);L.Host->Dematerialize(A.W);L.Host->Save(After);Test.TestTrue(TEXT("Actor lifecycle has no authority"),Before==After);
+ L.Host->Advance(28*86400-1);L.Host->Save(Future);L.Host->CloseLab();L.Host->OpenLab();Test.TestTrue(TEXT("New session restore"),L.Host->Load(Before));L.Host->Save(After);Test.TestTrue(TEXT("Exact restore"),Before==After);
+ L.Host->Stats(State);Test.TestNotNull(TEXT("New UWorld representation"),L.Host->Represent(B.W,static_cast<uint32>(State.commander)));L.Host->Dematerialize(B.W);
+ L.Host->Advance(28*86400-1);L.Host->Save(After);Test.TestTrue(TEXT("Deterministic future offscreen"),Future==After);return true;
+}
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04MirandaWatches,"F04.Core.MirandaThreeWatches28Days",Flags)
+bool FF04MirandaWatches::RunTest(const FString&){return SmallWatches(*this,F04_SUTHERLAND_SCIENCE,"miranda",130,53,13);}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04IntrepidWatches,"F04.Core.IntrepidThreeWatches28Days",Flags)
+bool FF04IntrepidWatches::RunTest(const FString&){return SmallWatches(*this,F04_INTREPID_EXPLORATION,"intrepid",160,64,16);}
 #endif

@@ -1,0 +1,404 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "FATIROBERMSI",
+			"instance": "098CB3EC410FA30AA12881AECD7841D1",
+			"instanceName": "FATIROBERMSI-31564",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "Intel(R) Core(TM) i9-14900HX",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.10.31-00.14.08",
+	"succeeded": 25,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 16.84977912902832,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "ActorLifecycle",
+			"fullTestPath": "F02.Core.ActorLifecycle",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.019329499453306198,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "CorruptLoad",
+			"fullTestPath": "F02.Core.CorruptLoad",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018866200000047684,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "HostRecovery",
+			"fullTestPath": "F02.Core.HostRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018992099910974503,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Projection",
+			"fullTestPath": "F02.Core.Projection",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.016213599592447281,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ThreadAffinity",
+			"fullTestPath": "F02.Core.ThreadAffinity",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.017188102006912231,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WorldScopedRepresentation",
+			"fullTestPath": "F02.Core.WorldScopedRepresentation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018973898142576218,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IdentityLodWorlds",
+			"fullTestPath": "F03.Core.IdentityLodWorlds",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018803298473358154,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Knowledge",
+			"fullTestPath": "F03.Core.Knowledge",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.01654990017414093,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Offscreen",
+			"fullTestPath": "F03.Core.Offscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018455799669027328,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Recovery",
+			"fullTestPath": "F03.Core.Recovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018563799560070038,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SafeFailure",
+			"fullTestPath": "F03.Core.SafeFailure",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.01815430074930191,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ThreadAuthority",
+			"fullTestPath": "F03.Core.ThreadAuthority",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.016762200742959976,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AbsenceReliefOffscreen",
+			"fullTestPath": "F04.Core.AbsenceReliefOffscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018471099436283112,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuthorityAndMedical",
+			"fullTestPath": "F04.Core.AuthorityAndMedical",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.016229700297117233,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IntrepidOrganizationOffscreen",
+			"fullTestPath": "F04.Core.IntrepidOrganizationOffscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.048806898295879364,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "IntrepidThreeWatches28Days",
+			"fullTestPath": "F04.Core.IntrepidThreeWatches28Days",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.66887968778610229,
+			"dateTime": "2026.10.31-00.13.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "LargePopulationSelectiveActors",
+			"fullTestPath": "F04.Core.LargePopulationSelectiveActors",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.063200399279594421,
+			"dateTime": "2026.10.31-00.13.52",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "MirandaThreeWatches28Days",
+			"fullTestPath": "F04.Core.MirandaThreeWatches28Days",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.57979691028594971,
+			"dateTime": "2026.10.31-00.13.52",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NewSessionRecovery",
+			"fullTestPath": "F04.Core.NewSessionRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.017819300293922424,
+			"dateTime": "2026.10.31-00.13.53",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OdysseyThreeWatchesOffscreen",
+			"fullTestPath": "F04.Core.OdysseyThreeWatchesOffscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 5.7982678413391113,
+			"dateTime": "2026.10.31-00.13.53",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "RealWorldsActors",
+			"fullTestPath": "F04.Core.RealWorldsActors",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.019039399921894073,
+			"dateTime": "2026.10.31-00.13.59",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SafeLoadAndThread",
+			"fullTestPath": "F04.Core.SafeLoadAndThread",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.018146201968193054,
+			"dateTime": "2026.10.31-00.13.59",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SovereignThreeWatchesOffscreen",
+			"fullTestPath": "F04.Core.SovereignThreeWatchesOffscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 2.4420945644378662,
+			"dateTime": "2026.10.31-00.13.59",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "SutherlandOrganizationSelectiveActors",
+			"fullTestPath": "F04.Core.SutherlandOrganizationSelectiveActors",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 0.028562601655721664,
+			"dateTime": "2026.10.31-00.14.01",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ValhallaCommunityAndSpecialistsOffscreen",
+			"fullTestPath": "F04.Core.ValhallaCommunityAndSpecialistsOffscreen",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"098CB3EC410FA30AA12881AECD7841D1"
+			],
+			"duration": 6.9136114120483398,
+			"dateTime": "2026.10.31-00.14.01",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}

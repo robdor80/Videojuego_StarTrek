@@ -68,6 +68,7 @@ struct Profile {
  uint64_t (*post_responsibility)(uint64_t,uint64_t);
  std::span<const uint64_t> continuous_stations;
  std::span<const F04WatchDemand> watch_demands{};
+ std::span<const uint64_t> roster_stations{};
 };
 inline constexpr uint64_t sutherland_continuous[]={F04_ST_COMMAND,F04_ST_HELM,
  F04_ST_SENSORS,F04_ST_COMMUNICATIONS,F04_ST_ENGINEERING,F04_ST_TACTICAL};
@@ -132,19 +133,94 @@ inline uint64_t intrepid_qualifications(const F04SectionSpec& s) {
 inline constexpr uint64_t intrepid_continuous[]={F04_ST_COMMAND,F04_ST_HELM,
  F04_ST_SENSORS,F04_ST_COMPUTER,F04_ST_COMMUNICATIONS,F04_ST_ENGINEERING,F04_ST_TACTICAL};
 
+// Full roster service contract applies only after explicit SCHEMA 3 -> 4.
+inline constexpr uint64_t small_roster_stations[]={F04_ST_COMMAND,F04_ST_HELM,
+ F04_ST_SENSORS,F04_ST_COMPUTER,F04_ST_COMMUNICATIONS,F04_ST_ENGINEERING,F04_ST_TACTICAL,F04_ST_MEDICAL};
+inline constexpr F04WatchDemand sutherland_demands[]={
+ {1,1,0,0,0},
+ {2,1,0,0,0},
+ {3,1,1,1,0},
+ {4,2,1,1,1},
+ {5,1,0,0,1},
+ {6,1,0,0,1},
+ {7,3,2,1,2},
+ {8,2,1,1,2},
+ {9,2,1,1,3},
+ {10,3,2,1,3},
+ {11,1,0,0,1},
+ {12,3,1,1,3},
+ {13,3,1,0,2},
+ {14,2,1,0,2},
+ {15,2,0,0,2},
+ {16,3,0,0,2},
+ {17,1,0,0,1},
+ {18,2,1,1,1},
+ {19,1,1,1,2},
+ {20,2,1,1,2},
+ {21,1,0,0,1},
+ {22,1,1,1,2},
+ {23,2,1,1,2},
+ {24,1,0,0,2},
+ {25,1,0,0,0},
+ {26,1,0,0,2},
+ {27,2,0,0,2},
+ {28,2,1,0,1},
+ {29,1,0,0,0},
+ {30,1,0,0,1},
+ {31,2,1,1,1},
+ {32,1,0,0,1},
+};
+inline constexpr F04WatchDemand intrepid_demands[]={
+ {1,1,0,0,0},
+ {2,1,0,0,0},
+ {3,1,1,1,1},
+ {4,3,1,1,2},
+ {5,1,0,0,2},
+ {6,1,0,0,1},
+ {7,3,2,2,2},
+ {8,3,2,1,2},
+ {9,2,1,1,2},
+ {10,3,1,1,2},
+ {11,1,1,0,2},
+ {12,1,0,0,1},
+ {13,4,2,1,3},
+ {14,3,1,0,3},
+ {15,2,1,0,3},
+ {16,2,0,0,2},
+ {17,2,0,0,3},
+ {18,1,0,0,1},
+ {19,2,1,1,2},
+ {20,2,1,1,2},
+ {21,3,1,1,2},
+ {22,2,1,0,1},
+ {23,1,0,0,1},
+ {24,2,1,1,1},
+ {25,3,1,1,3},
+ {26,1,0,0,2},
+ {27,1,0,0,0},
+ {28,2,0,0,2},
+ {29,2,1,1,3},
+ {30,2,1,0,2},
+ {31,1,0,0,0},
+ {32,1,1,1,0},
+ {33,3,1,1,2},
+ {34,1,0,0,2},
+};
+
 #include "f04_sovereign.h"
 #include "f04_odyssey.h"
 #include "f04_valhalla.h"
 
 inline const Profile* profile(uint64_t id) {
- static const Profile registry[]={{sutherland,sections,qualifications,responsibility,sutherland_continuous},
-  {intrepid,intrepid_sections,intrepid_qualifications,intrepid_responsibility,intrepid_continuous},
+ static const Profile registry[]={{sutherland,sections,qualifications,responsibility,sutherland_continuous,sutherland_demands,small_roster_stations},
+  {intrepid,intrepid_sections,intrepid_qualifications,intrepid_responsibility,intrepid_continuous,intrepid_demands,small_roster_stations},
   {sovereign,sovereign_sections,sovereign_qualifications,sovereign_responsibility,sovereign_continuous,sovereign_demands},
   {odyssey,odyssey_sections,odyssey_qualifications,odyssey_responsibility,odyssey_continuous,odyssey_demands},
   {valhalla,valhalla_sections,valhalla_qualifications,valhalla_responsibility,valhalla_continuous,valhalla_demands}};
  for(const auto& p:registry)if(p.spec.id==id)return &p;
  return nullptr;
 }
+inline std::span<const uint64_t> roster_services(const Profile& p) {return p.roster_stations.empty()?p.continuous_stations:p.roster_stations;}
 inline const F04TemplateSpec* find(uint64_t id) {const auto* p=profile(id);return p?&p->spec:nullptr;}
 inline const F04SectionSpec* section(const Profile& p,uint64_t id) {
  for(const auto& s:p.sections)if(s.id==id)return &s;

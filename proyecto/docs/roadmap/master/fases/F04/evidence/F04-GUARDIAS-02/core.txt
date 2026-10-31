@@ -1,0 +1,913 @@
+Test project C:/F04/core-build
+        Start 451: ContextHostExample
+        Start 448: ContextAllocationTest.SelectionNeverAllocatesEvenWhenReplacingOwnedTextOrRejectingCapacity
+        Start 308: EntityStructureAllocationTest.DefinitionBindingCopiesAndInsertionAreAtomic
+        Start 435: ContentPackLoaderResourceTest.EnforcesResourceSizeLimit
+  1/451 Test #448: ContextAllocationTest.SelectionNeverAllocatesEvenWhenReplacingOwnedTextOrRejectingCapacity ......................................................   Passed    0.02 sec
+        Start 293: TimelineAllocation.AdvanceFailureLeavesPendingActionAndRngUntouched
+  2/451 Test #451: ContextHostExample ..............................................................................................................................   Passed    0.03 sec
+        Start 337: ContentCatalogLoaderFixtureTest.ExampleAddonLoadsExactly
+  3/451 Test #308: EntityStructureAllocationTest.DefinitionBindingCopiesAndInsertionAreAtomic ......................................................................   Passed    0.02 sec
+        Start 446: InspectorAllocationTest.AllQueriesAndBudgetRejectionAllocateNothing
+  4/451 Test #337: ContentCatalogLoaderFixtureTest.ExampleAddonLoadsExactly ........................................................................................   Passed    0.01 sec
+        Start 178: ContextBuilderTest.ValidationRejectsBeforeWritingAndHasStablePrecedence
+  5/451 Test #293: TimelineAllocation.AdvanceFailureLeavesPendingActionAndRngUntouched .............................................................................   Passed    0.02 sec
+        Start 182: ContextBuilderScaleTest.SingleSubjectStillHonorsDefaultAndMaximumExaminationBudgets
+  6/451 Test #178: ContextBuilderTest.ValidationRejectsBeforeWritingAndHasStablePrecedence .........................................................................   Passed    0.01 sec
+        Start 205: PopulationPersistenceTest.ContinuationMatchesUninterruptedIdentityPopulationAndRng
+  7/451 Test #435: ContentPackLoaderResourceTest.EnforcesResourceSizeLimit .........................................................................................   Passed    0.03 sec
+        Start 433: ContentPackLoaderResourceTest.PreservesSchemaFailure
+  8/451 Test #446: InspectorAllocationTest.AllQueriesAndBudgetRejectionAllocateNothing .............................................................................   Passed    0.02 sec
+        Start 302: PersistenceAllocationTest.CapturePreservesSourceAtEveryAllocationFailure
+  9/451 Test #182: ContextBuilderScaleTest.SingleSubjectStillHonorsDefaultAndMaximumExaminationBudgets .............................................................   Passed    0.02 sec
+        Start 197: PopulationTest.HostRepresentationsNeverControlExistenceOrIdentity
+ 10/451 Test #205: PopulationPersistenceTest.ContinuationMatchesUninterruptedIdentityPopulationAndRng ..............................................................   Passed    0.02 sec
+        Start  77: ContentPackValidationTest.DefinitionMustBelongToItsManifestPack
+ 11/451 Test #197: PopulationTest.HostRepresentationsNeverControlExistenceOrIdentity ...............................................................................   Passed    0.01 sec
+        Start  40: ContentCompatibilityTest.DiagnosticsAreCanonicalAcrossPackPermutations
+ 12/451 Test  #77: ContentPackValidationTest.DefinitionMustBelongToItsManifestPack .................................................................................   Passed    0.01 sec
+        Start 170: VisibilityTest.ProvenanceDistinguishesEqualCurrentGrantsFromPersistedMemories
+ 13/451 Test #433: ContentPackLoaderResourceTest.PreservesSchemaFailure ............................................................................................   Passed    0.03 sec
+ 14/451 Test  #40: ContentCompatibilityTest.DiagnosticsAreCanonicalAcrossPackPermutations ..........................................................................   Passed    0.01 sec
+ 15/451 Test #302: PersistenceAllocationTest.CapturePreservesSourceAtEveryAllocationFailure ........................................................................   Passed    0.02 sec
+        Start 436: ContentPackLoaderAtomicityTest.SecondResourceFailureReturnsNoPartialPack
+        Start 297: WorldStateAllocationTest.FailedFirstAssociationPreservesTheEntireWorld
+        Start 444: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("content_contract_version", "/content_contract_version")
+ 16/451 Test #170: VisibilityTest.ProvenanceDistinguishesEqualCurrentGrantsFromPersistedMemories ...................................................................   Passed    0.02 sec
+        Start 339: ContentCatalogLoaderTest.ReversingRootsProducesEquivalentObservableCatalog
+ 17/451 Test #444: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("content_contract_version", "/content_contract_version") ...   Passed    0.01 sec
+        Start 370: JsonDocumentReaderTest.RejectsDuplicateKeyInNestedObject
+ 18/451 Test #297: WorldStateAllocationTest.FailedFirstAssociationPreservesTheEntireWorld ..........................................................................   Passed    0.02 sec
+        Start 445: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("minimum_core_version", "/minimum_core_version")
+ 19/451 Test #339: ContentCatalogLoaderTest.ReversingRootsProducesEquivalentObservableCatalog ......................................................................   Passed    0.01 sec
+        Start 162: KnowledgePersistenceTest.ContinuityPreservesRngAndBothObserversOverOneHundredSteps
+ 20/451 Test #370: JsonDocumentReaderTest.RejectsDuplicateKeyInNestedObject ........................................................................................   Passed    0.01 sec
+        Start 394: JsonSchemaValidatorManifestTest.RejectsUnknownField
+ 21/451 Test #436: ContentPackLoaderAtomicityTest.SecondResourceFailureReturnsNoPartialPack ........................................................................   Passed    0.03 sec
+        Start 319: ActionAllocationTest.ContainmentInsertionPreservesEntireWorldAndRngAtEveryFailure
+ 22/451 Test #445: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("minimum_core_version", "/minimum_core_version") ...........   Passed    0.01 sec
+        Start 325: KnowledgeAllocationTest.LearningExistencePreservesAllStateAndReferencesAtEveryFailure
+ 23/451 Test #394: JsonSchemaValidatorManifestTest.RejectsUnknownField .............................................................................................   Passed    0.01 sec
+        Start 427: ContentPackLoaderManifestTest.PreservesSchemaFailure
+ 24/451 Test #162: KnowledgePersistenceTest.ContinuityPreservesRngAndBothObserversOverOneHundredSteps ..............................................................   Passed    0.02 sec
+        Start 312: EntityStructureAllocationTest.WholeWorldCopyAssignmentPreservesTheDestination
+ 25/451 Test #427: ContentPackLoaderManifestTest.PreservesSchemaFailure ............................................................................................   Passed    0.02 sec
+        Start 336: KnowledgeAllocationTest.QueriesNoOpsAndRevocationNeedNoAllocationOrRng
+ 26/451 Test #312: EntityStructureAllocationTest.WholeWorldCopyAssignmentPreservesTheDestination ...................................................................   Passed    0.01 sec
+        Start 163: VisibilityTest.UnknownAndUninformedObserversHaveIdenticalEmptyViews
+ 27/451 Test #325: KnowledgeAllocationTest.LearningExistencePreservesAllStateAndReferencesAtEveryFailure ...........................................................   Passed    0.03 sec
+        Start 362: JsonDocumentReaderTest.ParsesExampleResourceBPhysically
+ 28/451 Test #336: KnowledgeAllocationTest.QueriesNoOpsAndRevocationNeedNoAllocationOrRng ..........................................................................   Passed    0.01 sec
+        Start 245: RuleCheckTest.OrderedAllOfFindsFirstUnmetAndAnEmptyBatchSucceeds
+ 29/451 Test #163: VisibilityTest.UnknownAndUninformedObserversHaveIdenticalEmptyViews .............................................................................   Passed    0.01 sec
+        Start  18: ActionTest.StaleRevisionIsCheckedBeforePreconditionsOrRng
+ 30/451 Test #362: JsonDocumentReaderTest.ParsesExampleResourceBPhysically .........................................................................................   Passed    0.01 sec
+        Start 428: ContentPackLoaderManifestTest.PreservesMappingFailure
+ 31/451 Test #319: ActionAllocationTest.ContainmentInsertionPreservesEntireWorldAndRngAtEveryFailure ...............................................................   Passed    0.04 sec
+ 32/451 Test #245: RuleCheckTest.OrderedAllOfFindsFirstUnmetAndAnEmptyBatchSucceeds ................................................................................   Passed    0.01 sec
+        Start  98: SemanticVersionTest.ExposesComponentsAndCanonicalRepresentation
+        Start 158: KnowledgePersistenceTest.EveryTruncationAndSingleByteCorruptionPreservesDestinations
+ 33/451 Test  #18: ActionTest.StaleRevisionIsCheckedBeforePreconditionsOrRng .......................................................................................   Passed    0.01 sec
+        Start 190: ContextSecurityTest.OversizedAuthorizedTextCannotOverflowOrBypassTheContentCeiling
+ 34/451 Test  #98: SemanticVersionTest.ExposesComponentsAndCanonicalRepresentation .................................................................................   Passed    0.01 sec
+        Start 187: ContextSecurityTest.DirectedLookupReachesSubjectBeyondTheExaminationCeiling
+ 35/451 Test #158: KnowledgePersistenceTest.EveryTruncationAndSingleByteCorruptionPreservesDestinations ............................................................   Passed    0.01 sec
+        Start 344: ContentCatalogLoaderTest.CoreRejectsCrossPackReferenceWithoutDependency
+ 36/451 Test #190: ContextSecurityTest.OversizedAuthorizedTextCannotOverflowOrBypassTheContentCeiling ..............................................................   Passed    0.01 sec
+        Start 378: JsonDocumentReaderTest.RejectsHighSurrogateFollowedByNonLowSurrogate
+ 37/451 Test #428: ContentPackLoaderManifestTest.PreservesMappingFailure ...........................................................................................   Passed    0.03 sec
+        Start 387: JsonSchemaValidatorTest.ExampleManifestIsValidForManifestRole
+ 38/451 Test #187: ContextSecurityTest.DirectedLookupReachesSubjectBeyondTheExaminationCeiling .....................................................................   Passed    0.02 sec
+        Start 395: JsonSchemaValidatorManifestTest.RejectsIncorrectSchemaProperty
+ 39/451 Test #378: JsonDocumentReaderTest.RejectsHighSurrogateFollowedByNonLowSurrogate ............................................................................   Passed    0.01 sec
+        Start 438: ContentPackLoaderSchemaBoundaryTest.DuplicateLocatorFailsAsSchemaError
+ 40/451 Test #387: JsonSchemaValidatorTest.ExampleManifestIsValidForManifestRole ...................................................................................   Passed    0.01 sec
+        Start 363: JsonDocumentReaderTest.RejectsMalformedJson
+ 41/451 Test #395: JsonSchemaValidatorManifestTest.RejectsIncorrectSchemaProperty ..................................................................................   Passed    0.01 sec
+        Start 419: ContentPackLoaderTest.LoadsExamplePackExactly
+ 42/451 Test #344: ContentCatalogLoaderTest.CoreRejectsCrossPackReferenceWithoutDependency .........................................................................   Passed    0.03 sec
+        Start 225: PersistenceValidationTest.DeepChainsAndSharedAncestorsAreIterativeAndSparse
+ 43/451 Test #363: JsonDocumentReaderTest.RejectsMalformedJson .....................................................................................................   Passed    0.01 sec
+        Start 106: ContentManifestTest.OwnsNormativeFieldsIndependently
+ 44/451 Test #438: ContentPackLoaderSchemaBoundaryTest.DuplicateLocatorFailsAsSchemaError ..........................................................................   Passed    0.02 sec
+ 45/451 Test #419: ContentPackLoaderTest.LoadsExamplePackExactly ...................................................................................................   Passed    0.01 sec
+        Start 386: JsonDocumentReaderTest.PublicHeaderDoesNotExposeJsoncons
+        Start 442: ContentPackLoaderCoreBoundaryTest.LeavesDefinitionOwnershipValidationToCore
+ 46/451 Test #106: ContentManifestTest.OwnsNormativeFieldsIndependently ............................................................................................   Passed    0.01 sec
+ 47/451 Test #386: JsonDocumentReaderTest.PublicHeaderDoesNotExposeJsoncons ........................................................................................   Passed    0.01 sec
+ 48/451 Test #225: PersistenceValidationTest.DeepChainsAndSharedAncestorsAreIterativeAndSparse .....................................................................   Passed    0.02 sec
+        Start 430: ContentPackLoaderResourceTest.RejectsMissingDeclaredResource
+        Start 343: ContentCatalogLoaderTest.CoreReportsDependencyVersionMismatch
+        Start 341: ContentCatalogLoaderTest.DoesNotAutoLoadSiblingDependency
+ 49/451 Test #430: ContentPackLoaderResourceTest.RejectsMissingDeclaredResource ....................................................................................   Passed    0.02 sec
+        Start 346: ContentCatalogLoaderTest.PublicHeaderDoesNotExposeJsoncons
+ 50/451 Test #442: ContentPackLoaderCoreBoundaryTest.LeavesDefinitionOwnershipValidationToCore .....................................................................   Passed    0.02 sec
+        Start 243: RuleCheckTest.ExistenceDistinguishesUnsatisfiedAndMalformedInput
+ 51/451 Test #341: ContentCatalogLoaderTest.DoesNotAutoLoadSiblingDependency .......................................................................................   Passed    0.01 sec
+        Start 356: ContentJsonDocumentDecoderTest.PublicDecoderHeaderDoesNotExposeJsoncons
+ 52/451 Test #346: ContentCatalogLoaderTest.PublicHeaderDoesNotExposeJsoncons ......................................................................................   Passed    0.01 sec
+        Start 414: JsonSchemaValidatorRoleTest.ManifestFailsWhenValidatedAsResource
+ 53/451 Test #243: RuleCheckTest.ExistenceDistinguishesUnsatisfiedAndMalformedInput ................................................................................   Passed    0.01 sec
+        Start 410: JsonSchemaValidatorResourceTest.RejectsDuplicateReferences
+ 54/451 Test #356: ContentJsonDocumentDecoderTest.PublicDecoderHeaderDoesNotExposeJsoncons .........................................................................   Passed    0.01 sec
+ 55/451 Test #343: ContentCatalogLoaderTest.CoreReportsDependencyVersionMismatch ...................................................................................   Passed    0.02 sec
+        Start 314: EntityStructureAllocationTest.SerializePreservesCompleteSnapshotAtEveryFailure
+        Start 348: ContentCatalogLoaderPhysicalFailureTest.PreservesDocumentDiagnosticWithoutPartialCatalog
+ 56/451 Test #414: JsonSchemaValidatorRoleTest.ManifestFailsWhenValidatedAsResource ................................................................................   Passed    0.01 sec
+ 57/451 Test #410: JsonSchemaValidatorResourceTest.RejectsDuplicateReferences ......................................................................................   Passed    0.01 sec
+        Start 415: JsonSchemaValidatorSecurityTest.ExternalSchemaPropertyIsDataNotAResolverInput
+        Start 437: ContentPackLoaderIndexTest.IgnoresUnlistedJsonAndLoadsExactlyDeclaredFiles
+ 58/451 Test #314: EntityStructureAllocationTest.SerializePreservesCompleteSnapshotAtEveryFailure ..................................................................   Passed    0.01 sec
+        Start 133: InspectorIntegrationTest.PrivilegedInspectionCannotRefreshMemoriesOrRevealSecretsToObserverView
+ 59/451 Test #348: ContentCatalogLoaderPhysicalFailureTest.PreservesDocumentDiagnosticWithoutPartialCatalog ........................................................   Passed    0.01 sec
+        Start 402: JsonSchemaValidatorResourceTest.RejectsInvalidDefinitionId
+ 60/451 Test #415: JsonSchemaValidatorSecurityTest.ExternalSchemaPropertyIsDataNotAResolverInput ...................................................................   Passed    0.02 sec
+        Start  17: ActionTest.RelationsRejectMissingEndpointsAndZeroKind
+ 61/451 Test #133: InspectorIntegrationTest.PrivilegedInspectionCannotRefreshMemoriesOrRevealSecretsToObserverView .................................................   Passed    0.01 sec
+ 62/451 Test #437: ContentPackLoaderIndexTest.IgnoresUnlistedJsonAndLoadsExactlyDeclaredFiles ......................................................................   Passed    0.02 sec
+        Start 405: JsonSchemaValidatorResourceTest.RejectsUnknownField
+        Start  52: ContentCatalogTest.DefinitionWithoutReferencesSucceeds
+ 63/451 Test  #17: ActionTest.RelationsRejectMissingEndpointsAndZeroKind ...........................................................................................   Passed    0.01 sec
+        Start 431: ContentPackLoaderResourceTest.RejectsDeclaredResourceThatIsADirectory
+ 64/451 Test #402: JsonSchemaValidatorResourceTest.RejectsInvalidDefinitionId ......................................................................................   Passed    0.02 sec
+        Start  38: ContentCompatibilityTest.PackVersionDoesNotAffectCompatibility
+ 65/451 Test #405: JsonSchemaValidatorResourceTest.RejectsUnknownField .............................................................................................   Passed    0.01 sec
+ 66/451 Test  #52: ContentCatalogTest.DefinitionWithoutReferencesSucceeds ..........................................................................................   Passed    0.01 sec
+        Start 420: ContentPackLoaderTest.PublicHeaderDoesNotExposeJsoncons
+        Start 294: TimelineAllocation.RestoreIsAtomicAtEveryAllocationFailure
+ 67/451 Test  #38: ContentCompatibilityTest.PackVersionDoesNotAffectCompatibility ..................................................................................   Passed    0.01 sec
+ 68/451 Test #431: ContentPackLoaderResourceTest.RejectsDeclaredResourceThatIsADirectory ...........................................................................   Passed    0.01 sec
+        Start 207: PopulationPersistenceTest.BadReferencesDuplicatesOrderingAndConservationAreRejected
+        Start 398: JsonSchemaValidatorManifestTest.RejectsInvalidResourceLocator
+ 69/451 Test #420: ContentPackLoaderTest.PublicHeaderDoesNotExposeJsoncons .........................................................................................   Passed    0.01 sec
+        Start  69: ContentCatalogTest.MutualReferenceCycleIsValid
+ 70/451 Test #294: TimelineAllocation.RestoreIsAtomicAtEveryAllocationFailure ......................................................................................   Passed    0.01 sec
+ 71/451 Test #207: PopulationPersistenceTest.BadReferencesDuplicatesOrderingAndConservationAreRejected .............................................................   Passed    0.01 sec
+        Start 397: JsonSchemaValidatorManifestTest.RejectsInvalidSemanticVersion
+        Start 400: JsonSchemaValidatorManifestTest.RejectsIncorrectDependenciesType
+ 72/451 Test #398: JsonSchemaValidatorManifestTest.RejectsInvalidResourceLocator ...................................................................................   Passed    0.01 sec
+ 73/451 Test  #69: ContentCatalogTest.MutualReferenceCycleIsValid ..................................................................................................   Passed    0.01 sec
+        Start 103: VersionRequirementTest.PreservesStructuredBounds
+        Start   6: TimelineTest.KnowledgeAndFutureRngSurviveNewSession
+ 74/451 Test #397: JsonSchemaValidatorManifestTest.RejectsInvalidSemanticVersion ...................................................................................   Passed    0.01 sec
+        Start  96: SemanticVersionTest.AcceptsStableThreeComponentVersions
+ 75/451 Test #400: JsonSchemaValidatorManifestTest.RejectsIncorrectDependenciesType ................................................................................   Passed    0.02 sec
+ 76/451 Test #103: VersionRequirementTest.PreservesStructuredBounds ................................................................................................   Passed    0.01 sec
+        Start 174: ContextBuilderTest.SubjectBudgetsCountOnlyItsRecordsIncludingKindMismatches
+        Start 340: ContentCatalogLoaderTest.LoadsExampleTestAlone
+ 77/451 Test   #6: TimelineTest.KnowledgeAndFutureRngSurviveNewSession .............................................................................................   Passed    0.02 sec
+        Start 450: ContextAllocationTest.EveryProjectionAllocationFailurePreservesPublishedContextAndWorld
+ 78/451 Test  #96: SemanticVersionTest.AcceptsStableThreeComponentVersions .........................................................................................   Passed    0.02 sec
+ 79/451 Test #174: ContextBuilderTest.SubjectBudgetsCountOnlyItsRecordsIncludingKindMismatches .....................................................................   Passed    0.02 sec
+        Start 417: JsonSchemaValidatorResultTest.FailureContainsDiagnosticsOnly
+        Start 209: PopulationPersistenceTest.LimitsAndNumericExhaustionPreserveBothValues
+ 80/451 Test #340: ContentCatalogLoaderTest.LoadsExampleTestAlone ..................................................................................................   Passed    0.02 sec
+ 81/451 Test #450: ContextAllocationTest.EveryProjectionAllocationFailurePreservesPublishedContextAndWorld .........................................................   Passed    0.02 sec
+        Start  95: ContentPackValidationTest.DependencyDiagnosticsAreCanonicalAcrossPermutations
+        Start 351: ContentJsonDocumentDecoderTest.DecodesExampleResourceAExactly
+ 82/451 Test #417: JsonSchemaValidatorResultTest.FailureContainsDiagnosticsOnly ....................................................................................   Passed    0.02 sec
+ 83/451 Test #209: PopulationPersistenceTest.LimitsAndNumericExhaustionPreserveBothValues ..........................................................................   Passed    0.01 sec
+        Start 255: CoreRPGSmokeTest.SemanticCoreVersionMatchesLibraryVersion
+        Start 353: ContentJsonDocumentDecoderTest.ManifestDecoderRejectsResourceAtSchemaLayer
+ 84/451 Test  #95: ContentPackValidationTest.DependencyDiagnosticsAreCanonicalAcrossPermutations ...................................................................   Passed    0.02 sec
+        Start 392: JsonSchemaValidatorTest.PublicSchemaHeaderDoesNotExposeJsoncons
+ 85/451 Test #351: ContentJsonDocumentDecoderTest.DecodesExampleResourceAExactly ...................................................................................   Passed    0.02 sec
+ 86/451 Test #255: CoreRPGSmokeTest.SemanticCoreVersionMatchesLibraryVersion .......................................................................................   Passed    0.02 sec
+        Start  99: SemanticVersionTest.SupportsEqualityAndSemanticOrdering
+        Start 154: KnowledgePersistenceTest.LegacyLoadsClearKnowledgeAndNeverInferIt
+ 87/451 Test #353: ContentJsonDocumentDecoderTest.ManifestDecoderRejectsResourceAtSchemaLayer ......................................................................   Passed    0.03 sec
+ 88/451 Test #392: JsonSchemaValidatorTest.PublicSchemaHeaderDoesNotExposeJsoncons .................................................................................   Passed    0.02 sec
+        Start 389: JsonSchemaValidatorTest.ExampleResourceBIsValidForResourceRole
+        Start  82: ContentPackValidationTest.VersionEqualToExclusiveMaximumIsRejected
+ 89/451 Test  #99: SemanticVersionTest.SupportsEqualityAndSemanticOrdering .........................................................................................   Passed    0.02 sec
+        Start 244: RuleCheckTest.DirectContainmentIsNotTransitiveAndReportsMissingEntities
+ 90/451 Test #154: KnowledgePersistenceTest.LegacyLoadsClearKnowledgeAndNeverInferIt ...............................................................................   Passed    0.02 sec
+ 91/451 Test #389: JsonSchemaValidatorTest.ExampleResourceBIsValidForResourceRole ..................................................................................   Passed    0.01 sec
+        Start 403: JsonSchemaValidatorResourceTest.RejectsInvalidKind
+        Start 354: ContentJsonDocumentDecoderTest.ResourceDecoderRejectsManifestAtSchemaLayer
+ 92/451 Test  #82: ContentPackValidationTest.VersionEqualToExclusiveMaximumIsRejected ..............................................................................   Passed    0.02 sec
+        Start 355: ContentJsonDocumentDecoderTest.RejectsLogicallyInvalidVersionRequirement
+ 93/451 Test #244: RuleCheckTest.DirectContainmentIsNotTransitiveAndReportsMissingEntities .........................................................................   Passed    0.02 sec
+        Start 407: JsonSchemaValidatorResourceTest.RejectsIncorrectReferencesType
+ 94/451 Test #403: JsonSchemaValidatorResourceTest.RejectsInvalidKind ..............................................................................................   Passed    0.02 sec
+        Start 159: KnowledgePersistenceTest.RecomputedCrcCannotHideMalformedCountsFlagsOrLengths
+ 95/451 Test #354: ContentJsonDocumentDecoderTest.ResourceDecoderRejectsManifestAtSchemaLayer ......................................................................   Passed    0.02 sec
+        Start  31: ContentCompatibilityTest.MatchingContractAndEqualMinimumCoreAreCompatible
+ 96/451 Test #355: ContentJsonDocumentDecoderTest.RejectsLogicallyInvalidVersionRequirement ........................................................................   Passed    0.02 sec
+        Start 318: EntityStructureAllocationTest.QueriesAndNoOpsDoNotAllocateOrConsumeState
+ 97/451 Test #407: JsonSchemaValidatorResourceTest.RejectsIncorrectReferencesType ..................................................................................   Passed    0.02 sec
+ 98/451 Test #159: KnowledgePersistenceTest.RecomputedCrcCannotHideMalformedCountsFlagsOrLengths ...................................................................   Passed    0.02 sec
+        Start 275: WorldStateTest.RevisionChangesOnlyAfterMutations
+        Start 144: KnowledgeTest.ValidatesObserversSubjectsAndClosedKeys
+ 99/451 Test  #31: ContentCompatibilityTest.MatchingContractAndEqualMinimumCoreAreCompatible .......................................................................   Passed    0.02 sec
+        Start 399: JsonSchemaValidatorManifestTest.RejectsDuplicateResources
+100/451 Test #318: EntityStructureAllocationTest.QueriesAndNoOpsDoNotAllocateOrConsumeState ........................................................................   Passed    0.02 sec
+101/451 Test #275: WorldStateTest.RevisionChangesOnlyAfterMutations ................................................................................................   Passed    0.01 sec
+        Start 413: JsonSchemaValidatorRoleTest.ResourceFailsWhenValidatedAsManifest
+        Start   2: TimelineTest.BoundedResumeDoesNotAdvancePastUnprocessedActions
+102/451 Test #144: KnowledgeTest.ValidatesObserversSubjectsAndClosedKeys ...........................................................................................   Passed    0.01 sec
+        Start 412: JsonSchemaValidatorBoundaryTest.DoesNotResolveLogicalReferences
+103/451 Test #399: JsonSchemaValidatorManifestTest.RejectsDuplicateResources .......................................................................................   Passed    0.01 sec
+        Start 432: ContentPackLoaderResourceTest.PreservesStrictJsonFailureAndLocator
+104/451 Test #413: JsonSchemaValidatorRoleTest.ResourceFailsWhenValidatedAsManifest ................................................................................   Passed    0.01 sec
+105/451 Test   #2: TimelineTest.BoundedResumeDoesNotAdvancePastUnprocessedActions ..................................................................................   Passed    0.01 sec
+        Start 404: JsonSchemaValidatorResourceTest.RejectsMissingRequiredField
+        Start 384: JsonDocumentReaderTest.EnforcesCallerProvidedMaximumSize
+106/451 Test #412: JsonSchemaValidatorBoundaryTest.DoesNotResolveLogicalReferences .................................................................................   Passed    0.01 sec
+        Start   8: TimelineTest.SemanticCandidatesCannotDestroyValidCampaign
+107/451 Test #432: ContentPackLoaderResourceTest.PreservesStrictJsonFailureAndLocator ..............................................................................   Passed    0.01 sec
+        Start  66: ContentCatalogTest.PermutingReferencesDoesNotChangeDiagnostics
+108/451 Test #384: JsonDocumentReaderTest.EnforcesCallerProvidedMaximumSize ........................................................................................   Passed    0.01 sec
+109/451 Test #404: JsonSchemaValidatorResourceTest.RejectsMissingRequiredField .....................................................................................   Passed    0.01 sec
+        Start 352: ContentJsonDocumentDecoderTest.DecodesExampleResourceBExactly
+        Start 128: ExternalContentRestoreTest.MatchingMetadataUsesRealAtomicPersistenceAndLimits
+110/451 Test   #8: TimelineTest.SemanticCandidatesCannotDestroyValidCampaign .......................................................................................   Passed    0.02 sec
+        Start 388: JsonSchemaValidatorTest.ExampleResourceAIsValidForResourceRole
+111/451 Test  #66: ContentCatalogTest.PermutingReferencesDoesNotChangeDiagnostics ..................................................................................   Passed    0.02 sec
+        Start  49: DefinitionReferenceTest.OwnsTargetAndExpectedKind
+112/451 Test #352: ContentJsonDocumentDecoderTest.DecodesExampleResourceBExactly ...................................................................................   Passed    0.02 sec
+113/451 Test #128: ExternalContentRestoreTest.MatchingMetadataUsesRealAtomicPersistenceAndLimits ...................................................................   Passed    0.01 sec
+        Start 366: JsonDocumentReaderTest.RejectsLineComment
+        Start 393: JsonSchemaValidatorManifestTest.RejectsMissingRequiredField
+114/451 Test #388: JsonSchemaValidatorTest.ExampleResourceAIsValidForResourceRole ..................................................................................   Passed    0.01 sec
+115/451 Test  #49: DefinitionReferenceTest.OwnsTargetAndExpectedKind ...............................................................................................   Passed    0.01 sec
+        Start 168: VisibilityTest.DetachedCopiesOutliveRevocationAndWorldDestruction
+        Start 222: PersistenceValidationTest.EveryTruncationAndSingleByteCorruptionPreservesDestinations
+116/451 Test #366: JsonDocumentReaderTest.RejectsLineComment .......................................................................................................   Passed    0.01 sec
+        Start  62: ContentCatalogTest.MissingTargetProducesStructuredExclusiveFailure
+117/451 Test #393: JsonSchemaValidatorManifestTest.RejectsMissingRequiredField .....................................................................................   Passed    0.01 sec
+118/451 Test #168: VisibilityTest.DetachedCopiesOutliveRevocationAndWorldDestruction ...............................................................................   Passed    0.01 sec
+        Start 401: JsonSchemaValidatorManifestTest.RejectsInvalidDependencyStructure
+        Start 111: PackIdTest.SupportsValueEqualityAndInequality
+119/451 Test #222: PersistenceValidationTest.EveryTruncationAndSingleByteCorruptionPreservesDestinations ...........................................................   Passed    0.01 sec
+        Start 347: ContentCatalogLoaderPhysicalFailureTest.PreservesFailingRootAndLoadDiagnostic
+120/451 Test  #62: ContentCatalogTest.MissingTargetProducesStructuredExclusiveFailure ..............................................................................   Passed    0.01 sec
+        Start 280: WorldStateCreationTest.ExhaustedIdOrRevisionRejectsWithoutChangingEitherCounter
+121/451 Test #401: JsonSchemaValidatorManifestTest.RejectsInvalidDependencyStructure ...............................................................................   Passed    0.01 sec
+122/451 Test #111: PackIdTest.SupportsValueEqualityAndInequality ...................................................................................................   Passed    0.01 sec
+        Start  80: ContentPackValidationTest.VersionBelowMinimumIsRejectedWithStructuredData
+        Start 283: WorldStateContainmentTest.CreatedEntitiesHaveNoAutomaticLinks
+123/451 Test #280: WorldStateCreationTest.ExhaustedIdOrRevisionRejectsWithoutChangingEitherCounter .................................................................   Passed    0.01 sec
+124/451 Test #347: ContentCatalogLoaderPhysicalFailureTest.PreservesFailingRootAndLoadDiagnostic ...................................................................   Passed    0.01 sec
+        Start 409: JsonSchemaValidatorResourceTest.RejectsInvalidExpectedKind
+        Start 196: PopulationTest.MaximumReserveIsConstantSizeUntilExplicitIndividualization
+125/451 Test  #80: ContentPackValidationTest.VersionBelowMinimumIsRejectedWithStructuredData .......................................................................   Passed    0.01 sec
+        Start 282: WorldStateContainmentQueryTest.IndependentWorldsProduceCanonicalLinksForTheSameOperations
+126/451 Test #283: WorldStateContainmentTest.CreatedEntitiesHaveNoAutomaticLinks ...................................................................................   Passed    0.01 sec
+        Start 203: PopulationPersistenceTest.RequiredCatalogIsCheckedBeforePublishingEitherDestination
+127/451 Test #196: PopulationTest.MaximumReserveIsConstantSizeUntilExplicitIndividualization .......................................................................   Passed    0.01 sec
+128/451 Test #409: JsonSchemaValidatorResourceTest.RejectsInvalidExpectedKind ......................................................................................   Passed    0.01 sec
+        Start 411: JsonSchemaValidatorBoundaryTest.AllowsSemanticallyDuplicateDependencies
+        Start  10: TimelineTest.LegacyPersistenceStillRejectsTimelineArchiveAndKeepsWireFormat
+129/451 Test #282: WorldStateContainmentQueryTest.IndependentWorldsProduceCanonicalLinksForTheSameOperations .......................................................   Passed    0.01 sec
+        Start 220: PersistenceRestoreTest.NumericBoundariesPreserveExhaustionWithoutWraparound
+130/451 Test #203: PopulationPersistenceTest.RequiredCatalogIsCheckedBeforePublishingEitherDestination .............................................................   Passed    0.01 sec
+        Start 377: JsonDocumentReaderTest.RejectsUnpairedLowSurrogate
+131/451 Test  #10: TimelineTest.LegacyPersistenceStillRejectsTimelineArchiveAndKeepsWireFormat .....................................................................   Passed    0.01 sec
+132/451 Test #411: JsonSchemaValidatorBoundaryTest.AllowsSemanticallyDuplicateDependencies .........................................................................   Passed    0.01 sec
+        Start 350: ContentJsonDocumentDecoderTest.BuildsDependenciesThroughCoreTypes
+        Start  89: ContentPackValidationTest.SamePackReferenceNeedsNoDependency
+133/451 Test #220: PersistenceRestoreTest.NumericBoundariesPreserveExhaustionWithoutWraparound .....................................................................   Passed    0.01 sec
+        Start 246: RuleCheckTest.EvaluationIsReadOnlyAndDoesNotTouchRngOrCopies
+134/451 Test #377: JsonDocumentReaderTest.RejectsUnpairedLowSurrogate ..............................................................................................   Passed    0.01 sec
+        Start 125: EntityAssociationTest.NonAllocatingDefinitionValidationMatchesExistingGrammar
+135/451 Test #350: ContentJsonDocumentDecoderTest.BuildsDependenciesThroughCoreTypes ...............................................................................   Passed    0.01 sec
+136/451 Test  #89: ContentPackValidationTest.SamePackReferenceNeedsNoDependency ....................................................................................   Passed    0.01 sec
+        Start 269: WorldStateTest.NewWorldIsEmpty
+        Start 206: PopulationPersistenceTest.AllTruncationsAndSingleOctetCorruptionAreAtomic
+137/451 Test #246: RuleCheckTest.EvaluationIsReadOnlyAndDoesNotTouchRngOrCopies ....................................................................................   Passed    0.01 sec
+        Start 418: JsonSchemaValidatorResultTest.CollectsMultipleViolationsDeterministically
+138/451 Test #125: EntityAssociationTest.NonAllocatingDefinitionValidationMatchesExistingGrammar ...................................................................   Passed    0.01 sec
+139/451 Test #269: WorldStateTest.NewWorldIsEmpty ..................................................................................................................   Passed    0.01 sec
+        Start  78: ContentPackValidationTest.PresentCompatibleDependencyIsValid
+        Start  84: ContentPackValidationTest.DuplicateDependencyIsRejectedWithoutMergingRanges
+140/451 Test #206: PopulationPersistenceTest.AllTruncationsAndSingleOctetCorruptionAreAtomic .......................................................................   Passed    0.01 sec
+        Start 416: JsonSchemaValidatorResultTest.SuccessContainsNoDiagnostics
+141/451 Test #418: JsonSchemaValidatorResultTest.CollectsMultipleViolationsDeterministically .......................................................................   Passed    0.02 sec
+142/451 Test  #78: ContentPackValidationTest.PresentCompatibleDependencyIsValid ....................................................................................   Passed    0.01 sec
+        Start 184: ContextSecurityTest.KnownAbsenceUnknownAndStaleMemoryAreNotConflatedWithCurrentGrant
+        Start 156: KnowledgePersistenceTest.LimitsAndRevisionExhaustionAreCheckedBeforeMutation
+143/451 Test  #84: ContentPackValidationTest.DuplicateDependencyIsRejectedWithoutMergingRanges .....................................................................   Passed    0.01 sec
+        Start  68: ContentCatalogTest.CrossPackReferenceResolvesWithDirectDependency
+144/451 Test #416: JsonSchemaValidatorResultTest.SuccessContainsNoDiagnostics ......................................................................................   Passed    0.01 sec
+145/451 Test #184: ContextSecurityTest.KnownAbsenceUnknownAndStaleMemoryAreNotConflatedWithCurrentGrant ............................................................   Passed    0.01 sec
+        Start 230: DeterministicRandomTest.DifferentSeedsProduceDifferentSequences
+        Start 342: ContentCatalogLoaderTest.DuplicateRootReachesCoreAsDuplicatePack
+146/451 Test #156: KnowledgePersistenceTest.LimitsAndRevisionExhaustionAreCheckedBeforeMutation ....................................................................   Passed    0.01 sec
+        Start 367: JsonDocumentReaderTest.RejectsBlockComment
+147/451 Test  #68: ContentCatalogTest.CrossPackReferenceResolvesWithDirectDependency ...............................................................................   Passed    0.01 sec
+148/451 Test #230: DeterministicRandomTest.DifferentSeedsProduceDifferentSequences .................................................................................   Passed    0.01 sec
+        Start 161: KnowledgePersistenceTest.RestoringClonesCallerOwnedMutableStringAliases
+        Start 279: WorldStateCreationTest.EachCounterCanReachItsMaximumWithoutWrapping
+149/451 Test #367: JsonDocumentReaderTest.RejectsBlockComment ......................................................................................................   Passed    0.01 sec
+        Start 101: VersionRequirementTest.IncludesMinimumAndRejectsLowerVersions
+150/451 Test #342: ContentCatalogLoaderTest.DuplicateRootReachesCoreAsDuplicatePack ................................................................................   Passed    0.01 sec
+151/451 Test #161: KnowledgePersistenceTest.RestoringClonesCallerOwnedMutableStringAliases .........................................................................   Passed    0.01 sec
+        Start 199: PopulationTest.NestedCollectivesHaveOriginsWithoutHumanOrSpatialAssumptions
+        Start  36: ContentCompatibilityTest.ContractDiagnosticPreservesStructuredVersions
+152/451 Test #279: WorldStateCreationTest.EachCounterCanReachItsMaximumWithoutWrapping .............................................................................   Passed    0.03 sec
+        Start 241: RandomStreamsTest.ReferenceStaysValidWhenNewStreamsAreAdded
+153/451 Test #101: VersionRequirementTest.IncludesMinimumAndRejectsLowerVersions ...................................................................................   Passed    0.03 sec
+154/451 Test #199: PopulationTest.NestedCollectivesHaveOriginsWithoutHumanOrSpatialAssumptions .....................................................................   Passed    0.02 sec
+        Start 324: ActionAllocationTest.BudgetAndOutputFailuresRequireNoAllocationOrMutation
+        Start 208: PopulationPersistenceTest.RecomputedChecksumStillRequiresValidLengthsAndInvariants
+155/451 Test  #36: ContentCompatibilityTest.ContractDiagnosticPreservesStructuredVersions ..........................................................................   Passed    0.01 sec
+        Start 313: EntityStructureAllocationTest.CapturePreservesBindingsRelationsPopulationAndRng
+156/451 Test #241: RandomStreamsTest.ReferenceStaysValidWhenNewStreamsAreAdded .....................................................................................   Passed    0.01 sec
+157/451 Test #324: ActionAllocationTest.BudgetAndOutputFailuresRequireNoAllocationOrMutation .......................................................................   Passed    0.01 sec
+        Start 202: PopulationPersistenceTest.V1ReadingClearsAllNewStateAndReencodesExactly
+        Start 423: ContentPackLoaderFilesystemTest.RejectsMissingManifest
+158/451 Test #208: PopulationPersistenceTest.RecomputedChecksumStillRequiresValidLengthsAndInvariants ..............................................................   Passed    0.01 sec
+        Start 292: WorldStateContainmentTransitionTest.EachMutationCanReachMaximumRevisionThenRejectsChanges
+159/451 Test #313: EntityStructureAllocationTest.CapturePreservesBindingsRelationsPopulationAndRng .................................................................   Passed    0.01 sec
+        Start  21: ActionTest.PreconditionBudgetIsCheckedBeforeExaminingInputFacts
+160/451 Test #202: PopulationPersistenceTest.V1ReadingClearsAllNewStateAndReencodesExactly .........................................................................   Passed    0.01 sec
+161/451 Test #423: ContentPackLoaderFilesystemTest.RejectsMissingManifest ..........................................................................................   Passed    0.01 sec
+        Start 369: JsonDocumentReaderTest.RejectsDuplicateKeyAtRoot
+        Start 267: WorldStateIntegrationTest.MultilevelCopiesKeepLinksRevisionsAndFutureIdentitiesIndependent
+162/451 Test #292: WorldStateContainmentTransitionTest.EachMutationCanReachMaximumRevisionThenRejectsChanges .......................................................   Passed    0.01 sec
+        Start  75: ContentPackValidationTest.DuplicatePackIdIsRejected
+163/451 Test  #21: ActionTest.PreconditionBudgetIsCheckedBeforeExaminingInputFacts .................................................................................   Passed    0.01 sec
+164/451 Test #369: JsonDocumentReaderTest.RejectsDuplicateKeyAtRoot ................................................................................................   Passed    0.01 sec
+        Start 268: WorldStateIntegrationTest.RollActionIgnoresContainmentAndPreservesPersistentFacts
+        Start 135: InspectorIntegrationTest.OnlyDefinitiveSimulationPrefixIsInspectedAndWorldReplacementRestartsPaging
+165/451 Test #267: WorldStateIntegrationTest.MultilevelCopiesKeepLinksRevisionsAndFutureIdentitiesIndependent ......................................................   Passed    0.01 sec
+        Start 175: ContextBuilderTest.SubjectAndKindKeepRelationKindAndTargetOrder
+166/451 Test  #75: ContentPackValidationTest.DuplicatePackIdIsRejected .............................................................................................   Passed    0.02 sec
+167/451 Test #268: WorldStateIntegrationTest.RollActionIgnoresContainmentAndPreservesPersistentFacts ...............................................................   Passed    0.01 sec
+        Start 349: ContentJsonDocumentDecoderTest.DecodesExampleManifestExactly
+        Start 171: ContextBuilderTest.CompleteCanonicalSelectionMatchesEveryAuthorizedValue
+168/451 Test #135: InspectorIntegrationTest.OnlyDefinitiveSimulationPrefixIsInspectedAndWorldReplacementRestartsPaging .............................................   Passed    0.01 sec
+        Start  57: ContentCatalogTest.ReportsEveryDuplicateIdentityInCanonicalOrder
+169/451 Test #175: ContextBuilderTest.SubjectAndKindKeepRelationKindAndTargetOrder .................................................................................   Passed    0.01 sec
+        Start 443: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("pack_version", "/pack_version")
+170/451 Test #171: ContextBuilderTest.CompleteCanonicalSelectionMatchesEveryAuthorizedValue ........................................................................   Passed    0.01 sec
+171/451 Test #349: ContentJsonDocumentDecoderTest.DecodesExampleManifestExactly ....................................................................................   Passed    0.01 sec
+        Start 217: PersistenceExportTest.MaximumImplicitIdentityRangeNeedsNoEntityAllocation
+        Start 115: DefinitionIdTest.RejectsInvalidLocalPaths
+172/451 Test  #57: ContentCatalogTest.ReportsEveryDuplicateIdentityInCanonicalOrder ................................................................................   Passed    0.01 sec
+        Start 173: ContextBuilderTest.ExaminationBudgetBoundsWorkEvenWhenNothingMatches
+173/451 Test #443: ManifestVersions/SemanticVersionOverflowTest.ReportsConversionFailureAtVersionField/("pack_version", "/pack_version") ...........................   Passed    0.01 sec
+174/451 Test #217: PersistenceExportTest.MaximumImplicitIdentityRangeNeedsNoEntityAllocation .......................................................................   Passed    0.01 sec
+        Start 233: DeterministicRandomTest.FixedRangeDoesNotAdvanceState
+        Start 311: EntityStructureAllocationTest.MaterializationFailureCannotEmitPartialIdentities
+175/451 Test #115: DefinitionIdTest.RejectsInvalidLocalPaths .......................................................................................................   Passed    0.01 sec
+        Start 148: KnowledgeTest.ExactRelationsIncludeKnownAbsenceWithoutInferringOtherEdges
+176/451 Test #173: ContextBuilderTest.ExaminationBudgetBoundsWorkEvenWhenNothingMatches ............................................................................   Passed    0.01 sec
+177/451 Test #233: DeterministicRandomTest.FixedRangeDoesNotAdvanceState ...........................................................................................   Passed    0.01 sec
+        Start  39: ContentCompatibilityTest.InformativeMetadataDoesNotAffectCompatibility
+        Start 258: SimulationTest.NoOpDoesNotInvalidateFollowingRevisionGuard
+178/451 Test #311: EntityStructureAllocationTest.MaterializationFailureCannotEmitPartialIdentities .................................................................   Passed    0.01 sec
+        Start  53: ContentCatalogTest.MultipleDefinitionsAreExposedInCanonicalIdentityOrder
+179/451 Test #148: KnowledgeTest.ExactRelationsIncludeKnownAbsenceWithoutInferringOtherEdges .......................................................................   Passed    0.01 sec
+        Start  70: ContentCatalogTest.SelfReferenceIsValid
+180/451 Test  #39: ContentCompatibilityTest.InformativeMetadataDoesNotAffectCompatibility ..........................................................................   Passed    0.02 sec
+181/451 Test #258: SimulationTest.NoOpDoesNotInvalidateFollowingRevisionGuard ......................................................................................   Passed    0.01 sec
+        Start  23: ActionTest.InvalidAndSingletonRollsDoNotOpenOrAdvanceStreams
+        Start  63: ContentCatalogTest.KindMismatchPreservesSourceTargetExpectedAndActual
+182/451 Test  #53: ContentCatalogTest.MultipleDefinitionsAreExposedInCanonicalIdentityOrder ........................................................................   Passed    0.02 sec
+        Start 129: InspectorDiagnosticTest.ValidEmptyLiveAndCandidateAndExplicitResourceLimits
+183/451 Test  #70: ContentCatalogTest.SelfReferenceIsValid .........................................................................................................   Passed    0.02 sec
+184/451 Test  #23: ActionTest.InvalidAndSingletonRollsDoNotOpenOrAdvanceStreams ....................................................................................   Passed    0.01 sec
+        Start  29: ActionDeterminismTest.FixedTraceMatchesIndependentRngAndCanonicalSaveAcrossPlatforms
+        Start  85: ContentPackValidationTest.SelfDependencyIsRejected
+185/451 Test  #63: ContentCatalogTest.KindMismatchPreservesSourceTargetExpectedAndActual ...........................................................................   Passed    0.01 sec
+        Start 211: PersistenceContractTest.CandidateOwnsCopiesAndFullWidthUnsignedValues
+186/451 Test #129: InspectorDiagnosticTest.ValidEmptyLiveAndCandidateAndExplicitResourceLimits .....................................................................   Passed    0.01 sec
+187/451 Test  #29: ActionDeterminismTest.FixedTraceMatchesIndependentRngAndCanonicalSaveAcrossPlatforms ............................................................   Passed    0.01 sec
+        Start 126: EntityAssociationTest.DistinctTypesBetweenSameEntitiesDoNotImplyReverseMembership
+        Start 380: JsonDocumentReaderTest.AcceptsValidSurrogatePair
+188/451 Test  #85: ContentPackValidationTest.SelfDependencyIsRejected ..............................................................................................   Passed    0.01 sec
+        Start 338: ContentCatalogLoaderTest.LoadsExplicitBaseAndAddonIntoValidatedCatalog
+189/451 Test #211: PersistenceContractTest.CandidateOwnsCopiesAndFullWidthUnsignedValues ...........................................................................   Passed    0.01 sec
+190/451 Test #126: EntityAssociationTest.DistinctTypesBetweenSameEntitiesDoNotImplyReverseMembership ...............................................................   Passed    0.01 sec
+        Start 124: EntityAssociationTest.SnapshotNeverSilentlyDiscardsNewAuthoritativeFields
+        Start 131: InspectorDiagnosticTest.LiveAdapterRejectsNullBindingAndMalformedTablesWithoutUnsafeLookup
+191/451 Test #380: JsonDocumentReaderTest.AcceptsValidSurrogatePair ................................................................................................   Passed    0.02 sec
+        Start 151: KnowledgeTest.CanonicalOrderDoesNotDependOnInsertionOrderOrConsumeRng
+192/451 Test #338: ContentCatalogLoaderTest.LoadsExplicitBaseAndAddonIntoValidatedCatalog ..........................................................................   Passed    0.02 sec
+193/451 Test #124: EntityAssociationTest.SnapshotNeverSilentlyDiscardsNewAuthoritativeFields .......................................................................   Passed    0.01 sec
+        Start 107: ContentManifestTest.OwnsInformativeMetadata
+        Start 278: WorldStateTest.EquivalentWorldsEnumerateEquallyAndQueriesObserveLaterCreations
+194/451 Test #131: InspectorDiagnosticTest.LiveAdapterRejectsNullBindingAndMalformedTablesWithoutUnsafeLookup ......................................................   Passed    0.02 sec
+        Start  30: ContentCompatibilityTest.CurrentPolicySupportsInitialContract
+195/451 Test #151: KnowledgeTest.CanonicalOrderDoesNotDependOnInsertionOrderOrConsumeRng ...........................................................................   Passed    0.01 sec
+196/451 Test #107: ContentManifestTest.OwnsInformativeMetadata .....................................................................................................   Passed    0.01 sec
+        Start 179: ContextBuilderTest.OnlyReportedPrefixChangesAndEmptyViewIsCompleteAtZeroLimits
+        Start 104: VersionRequirementTest.RejectsEmptyOrReversedRanges
+197/451 Test #278: WorldStateTest.EquivalentWorldsEnumerateEquallyAndQueriesObserveLaterCreations ..................................................................   Passed    0.01 sec
+        Start  76: ContentPackValidationTest.DuplicatePackIdWithDifferentVersionsIsRejected
+198/451 Test  #30: ContentCompatibilityTest.CurrentPolicySupportsInitialContract ...................................................................................   Passed    0.01 sec
+199/451 Test #179: ContextBuilderTest.OnlyReportedPrefixChangesAndEmptyViewIsCompleteAtZeroLimits ..................................................................   Passed    0.01 sec
+        Start 109: PackIdTest.AcceptsValidCanonicalIds
+        Start 304: PersistenceAllocationTest.DeserializePublishesNothingAtEveryAllocationFailure
+200/451 Test #104: VersionRequirementTest.RejectsEmptyOrReversedRanges .............................................................................................   Passed    0.01 sec
+        Start 264: SimulationTest.LogicalCohortContinuesWithNoHostRepresentations
+201/451 Test  #76: ContentPackValidationTest.DuplicatePackIdWithDifferentVersionsIsRejected ........................................................................   Passed    0.01 sec
+202/451 Test #109: PackIdTest.AcceptsValidCanonicalIds .............................................................................................................   Passed    0.01 sec
+        Start 226: PersistenceValidationTest.GoldenInputDecodesAndReencodesWithoutNativeLayoutAssumptions
+        Start 358: JsonDocumentReaderTest.AcceptsArray
+203/451 Test #304: PersistenceAllocationTest.DeserializePublishesNothingAtEveryAllocationFailure ...................................................................   Passed    0.01 sec
+        Start 185: ContextSecurityTest.ObserverIsolationRevocationAndSurvivingOwnedText
+204/451 Test #264: SimulationTest.LogicalCohortContinuesWithNoHostRepresentations ..................................................................................   Passed    0.01 sec
+205/451 Test #226: PersistenceValidationTest.GoldenInputDecodesAndReencodesWithoutNativeLayoutAssumptions ..........................................................   Passed    0.01 sec
+        Start  65: ContentCatalogTest.PermutingInputsDoesNotChangeDiagnostics
+        Start 424: ContentPackLoaderFilesystemTest.RejectsManifestThatIsADirectory
+206/451 Test #358: JsonDocumentReaderTest.AcceptsArray .............................................................................................................   Passed    0.01 sec
+        Start  64: ContentCatalogTest.MultipleReferenceErrorsUseCanonicalOrder
+207/451 Test #185: ContextSecurityTest.ObserverIsolationRevocationAndSurvivingOwnedText ............................................................................   Passed    0.01 sec
+208/451 Test  #65: ContentCatalogTest.PermutingInputsDoesNotChangeDiagnostics ......................................................................................   Passed    0.01 sec
+        Start 426: ContentPackLoaderManifestTest.PreservesStrictJsonFailure
+        Start 157: KnowledgePersistenceTest.InvalidPayloadsAndTextLimitsAreRejectedWithoutNormalizing
+209/451 Test #424: ContentPackLoaderFilesystemTest.RejectsManifestThatIsADirectory .................................................................................   Passed    0.01 sec
+        Start 307: PersistenceAllocationTest.ExternalMetadataAndLoadPreserveDestinationsAtEveryAllocationFailure
+210/451 Test  #64: ContentCatalogTest.MultipleReferenceErrorsUseCanonicalOrder .....................................................................................   Passed    0.01 sec
+        Start 333: KnowledgeAllocationTest.LoadPreservesWorldAndRngAtEveryFailure
+211/451 Test #426: ContentPackLoaderManifestTest.PreservesStrictJsonFailure ........................................................................................   Passed    0.01 sec
+212/451 Test #157: KnowledgePersistenceTest.InvalidPayloadsAndTextLimitsAreRejectedWithoutNormalizing ..............................................................   Passed    0.01 sec
+        Start 172: ContextBuilderTest.ExplicitFiltersAreConjunctiveAndPreserveCanonicalOrder
+        Start 272: WorldStateTest.ContainsRecognizesOnlyCreatedEntities
+213/451 Test #307: PersistenceAllocationTest.ExternalMetadataAndLoadPreserveDestinationsAtEveryAllocationFailure ...................................................   Passed    0.02 sec
+        Start 276: WorldStateTest.EmptyWorldHasNoNextEntityForAnyCursor
+214/451 Test #333: KnowledgeAllocationTest.LoadPreservesWorldAndRngAtEveryFailure ..................................................................................   Passed    0.02 sec
+215/451 Test #172: ContextBuilderTest.ExplicitFiltersAreConjunctiveAndPreserveCanonicalOrder .......................................................................   Passed    0.01 sec
+        Start 260: SimulationTest.EmptyAndZeroBudgetStepsDoNotInventTimeOrMutateState
+        Start 122: EntityAssociationTest.InvalidEdgesDuplicatesAndRemovalsPreserveOtherState
+216/451 Test #272: WorldStateTest.ContainsRecognizesOnlyCreatedEntities ............................................................................................   Passed    0.02 sec
+        Start 286: WorldStateContainmentTest.InvalidPlacementHasStablePrecedenceAndPreservesLinks
+217/451 Test #276: WorldStateTest.EmptyWorldHasNoNextEntityForAnyCursor ............................................................................................   Passed    0.02 sec
+218/451 Test #260: SimulationTest.EmptyAndZeroBudgetStepsDoNotInventTimeOrMutateState ..............................................................................   Passed    0.01 sec
+        Start 136: InspectorTest.EmptyAndMissingEntities
+        Start 317: EntityStructureAllocationTest.LoadPreservesAllTablesAndRngAtEveryFailure
+219/451 Test #122: EntityAssociationTest.InvalidEdgesDuplicatesAndRemovalsPreserveOtherState .......................................................................   Passed    0.02 sec
+        Start  14: ActionTest.ActorIsLogicalOriginAndMayDifferFromOperationSubject
+220/451 Test #286: WorldStateContainmentTest.InvalidPlacementHasStablePrecedenceAndPreservesLinks ..................................................................   Passed    0.02 sec
+221/451 Test #136: InspectorTest.EmptyAndMissingEntities ...........................................................................................................   Passed    0.01 sec
+        Start  26: ActionPersistenceTest.SavingAndRestoringConservesConsequencesIndependentMemoriesAndRng
+        Start 406: JsonSchemaValidatorResourceTest.RejectsIncorrectSchemaProperty
+222/451 Test #317: EntityStructureAllocationTest.LoadPreservesAllTablesAndRngAtEveryFailure ........................................................................   Passed    0.01 sec
+        Start 193: PopulationTest.DeclarationIsExplicitImmutableAndHasNoImplicitIndividuals
+223/451 Test  #14: ActionTest.ActorIsLogicalOriginAndMayDifferFromOperationSubject .................................................................................   Passed    0.02 sec
+        Start 251: RollActionTest.SameInputsProduceSameResultAndFinalRandomState
+224/451 Test #406: JsonSchemaValidatorResourceTest.RejectsIncorrectSchemaProperty ..................................................................................   Passed    0.01 sec
+225/451 Test  #26: ActionPersistenceTest.SavingAndRestoringConservesConsequencesIndependentMemoriesAndRng ..........................................................   Passed    0.01 sec
+        Start 396: JsonSchemaValidatorManifestTest.RejectsUppercasePackId
+        Start 250: RollActionTest.FixedRangeSucceedsWithoutConsumingRandomness
+226/451 Test #193: PopulationTest.DeclarationIsExplicitImmutableAndHasNoImplicitIndividuals ........................................................................   Passed    0.02 sec
+        Start 449: ContextAllocationTest.DirectedLookupNeverAllocatesOrMutatesViewWorldOrRng
+227/451 Test #251: RollActionTest.SameInputsProduceSameResultAndFinalRandomState ...................................................................................   Passed    0.02 sec
+228/451 Test #396: JsonSchemaValidatorManifestTest.RejectsUppercasePackId ..........................................................................................   Passed    0.02 sec
+        Start 381: JsonDocumentReaderTest.AcceptsValidUtf8UnicodeInString
+        Start 372: JsonDocumentReaderTest.AllowsSameKeyInSiblingObjects
+229/451 Test #250: RollActionTest.FixedRangeSucceedsWithoutConsumingRandomness .....................................................................................   Passed    0.02 sec
+        Start 368: JsonDocumentReaderTest.RejectsTrailingComma
+230/451 Test #449: ContextAllocationTest.DirectedLookupNeverAllocatesOrMutatesViewWorldOrRng .......................................................................   Passed    0.02 sec
+231/451 Test #381: JsonDocumentReaderTest.AcceptsValidUtf8UnicodeInString ..........................................................................................   Passed    0.01 sec
+        Start  81: ContentPackValidationTest.VersionEqualToMinimumIsValid
+        Start 100: SemanticVersionTest.AcceptsComponentMaximumAndRejectsOverflow
+232/451 Test #372: JsonDocumentReaderTest.AllowsSameKeyInSiblingObjects ............................................................................................   Passed    0.01 sec
+        Start 300: WorldStateAllocationTest.FailedCopyAssignmentPreservesBothCompleteWorlds
+233/451 Test #368: JsonDocumentReaderTest.RejectsTrailingComma .....................................................................................................   Passed    0.01 sec
+234/451 Test  #81: ContentPackValidationTest.VersionEqualToMinimumIsValid ..........................................................................................   Passed    0.01 sec
+        Start 281: WorldStateContainmentQueryTest.EmptyWorldDistinguishesMissingEntities
+        Start 123: EntityAssociationTest.CopiesAndAssignmentsHaveIndependentAssociations
+235/451 Test #100: SemanticVersionTest.AcceptsComponentMaximumAndRejectsOverflow ...................................................................................   Passed    0.01 sec
+        Start 110: PackIdTest.RejectsInvalidIds
+236/451 Test #300: WorldStateAllocationTest.FailedCopyAssignmentPreservesBothCompleteWorlds ........................................................................   Passed    0.01 sec
+237/451 Test #281: WorldStateContainmentQueryTest.EmptyWorldDistinguishesMissingEntities ...........................................................................   Passed    0.01 sec
+        Start 383: JsonDocumentReaderTest.FailureContainsOnlyDiagnostic
+        Start 215: PersistenceExportTest.PopulatedSnapshotMatchesIndependentPortableGoldenBytes
+238/451 Test #123: EntityAssociationTest.CopiesAndAssignmentsHaveIndependentAssociations ...........................................................................   Passed    0.02 sec
+        Start 382: JsonDocumentReaderTest.SuccessContainsOnlyDocument
+239/451 Test #110: PackIdTest.RejectsInvalidIds ....................................................................................................................   Passed    0.02 sec
+240/451 Test #383: JsonDocumentReaderTest.FailureContainsOnlyDiagnostic ............................................................................................   Passed    0.01 sec
+        Start 183: ContextSecurityTest.DifferentHiddenWorldsAndRepeatedProbesProduceIdenticalContexts
+        Start 299: WorldStateAllocationTest.ReassociationAndWithdrawalDoNotAllocate
+241/451 Test #215: PersistenceExportTest.PopulatedSnapshotMatchesIndependentPortableGoldenBytes ....................................................................   Passed    0.02 sec
+        Start 160: KnowledgePersistenceTest.MissingCatalogForRememberedDefinitionIsAtomic
+242/451 Test #183: ContextSecurityTest.DifferentHiddenWorldsAndRepeatedProbesProduceIdenticalContexts ..............................................................   Passed    0.01 sec
+243/451 Test #382: JsonDocumentReaderTest.SuccessContainsOnlyDocument ..............................................................................................   Passed    0.02 sec
+        Start 364: JsonDocumentReaderTest.RejectsTrailingGarbage
+        Start 365: JsonDocumentReaderTest.RejectsUtf8BomBeforeParsing
+244/451 Test #299: WorldStateAllocationTest.ReassociationAndWithdrawalDoNotAllocate ................................................................................   Passed    0.02 sec
+        Start 121: EntityAssociationTest.RelationsHaveCanonicalOrderIndependentOfInsertion
+245/451 Test #160: KnowledgePersistenceTest.MissingCatalogForRememberedDefinitionIsAtomic ..........................................................................   Passed    0.02 sec
+246/451 Test #364: JsonDocumentReaderTest.RejectsTrailingGarbage ...................................................................................................   Passed    0.01 sec
+        Start 326: KnowledgeAllocationTest.RefreshingDefinitionStagesTextBeforeReplacingMemory
+        Start 309: EntityStructureAllocationTest.RelationInsertionPreservesEveryOtherTable
+247/451 Test #365: JsonDocumentReaderTest.RejectsUtf8BomBeforeParsing ..............................................................................................   Passed    0.02 sec
+        Start 390: JsonSchemaValidatorTest.ManifestWithoutSchemaPropertyIsValid
+248/451 Test #121: EntityAssociationTest.RelationsHaveCanonicalOrderIndependentOfInsertion .........................................................................   Passed    0.02 sec
+249/451 Test #326: KnowledgeAllocationTest.RefreshingDefinitionStagesTextBeforeReplacingMemory .....................................................................   Passed    0.01 sec
+        Start  60: ContentCatalogTest.InputOrderDoesNotAffectCatalogOrderOrLookup
+        Start   1: TimelineTest.OffscreenOrderAndIdempotency
+250/451 Test #309: EntityStructureAllocationTest.RelationInsertionPreservesEveryOtherTable .........................................................................   Passed    0.01 sec
+        Start 105: PackDependencyTest.OwnsPackIdAndRequirement
+251/451 Test #390: JsonSchemaValidatorTest.ManifestWithoutSchemaPropertyIsValid ....................................................................................   Passed    0.01 sec
+252/451 Test  #60: ContentCatalogTest.InputOrderDoesNotAffectCatalogOrderOrLookup ..................................................................................   Passed    0.01 sec
+        Start  50: ContentDefinitionInputTest.OwnsDefinitionAndReferences
+        Start 150: KnowledgeTest.CopiesAndAssignmentsAreIndependentAndRevokeAllIsOneRevision
+253/451 Test   #1: TimelineTest.OffscreenOrderAndIdempotency .......................................................................................................   Passed    0.01 sec
+        Start  37: ContentCompatibilityTest.IndependentFailuresProduceBothDiagnostics
+254/451 Test #105: PackDependencyTest.OwnsPackIdAndRequirement .....................................................................................................   Passed    0.01 sec
+255/451 Test  #50: ContentDefinitionInputTest.OwnsDefinitionAndReferences ..........................................................................................   Passed    0.01 sec
+        Start 379: JsonDocumentReaderTest.AllowsEscapedTextThatLooksLikeLowSurrogate
+        Start 263: SimulationTest.ExplicitRepeatsAreNoOpsForLinksAndNewDrawsForRolls
+256/451 Test #150: KnowledgeTest.CopiesAndAssignmentsAreIndependentAndRevokeAllIsOneRevision .......................................................................   Passed    0.01 sec
+        Start 138: InspectorTest.PopulationReserveMaterializationAndImmutableOrigin
+257/451 Test  #37: ContentCompatibilityTest.IndependentFailuresProduceBothDiagnostics ..............................................................................   Passed    0.01 sec
+258/451 Test #379: JsonDocumentReaderTest.AllowsEscapedTextThatLooksLikeLowSurrogate ...............................................................................   Passed    0.01 sec
+        Start 434: ContentPackLoaderResourceTest.DocumentFailurePreservesMappingDiagnosticAndLocator
+        Start   4: TimelineTest.InvalidSchedulesAndBackwardsTimePreserveState
+259/451 Test #263: SimulationTest.ExplicitRepeatsAreNoOpsForLinksAndNewDrawsForRolls ...............................................................................   Passed    0.01 sec
+        Start 305: PersistenceAllocationTest.RestorePreservesBothDestinationsAtEveryAllocationFailure
+260/451 Test #138: InspectorTest.PopulationReserveMaterializationAndImmutableOrigin ................................................................................   Passed    0.01 sec
+261/451 Test #434: ContentPackLoaderResourceTest.DocumentFailurePreservesMappingDiagnosticAndLocator ...............................................................   Passed    0.01 sec
+        Start  48: ResourceDefinitionTest.OwnsIndependentIdentityAndKindValues
+        Start 212: PersistenceExportTest.CaptureIsCompleteCanonicalAndDoesNotConsumeOrMutate
+262/451 Test   #4: TimelineTest.InvalidSchedulesAndBackwardsTimePreserveState ......................................................................................   Passed    0.01 sec
+        Start 214: PersistenceExportTest.EmptySnapshotMatchesPortableGoldenBytes
+263/451 Test #305: PersistenceAllocationTest.RestorePreservesBothDestinationsAtEveryAllocationFailure ..............................................................   Passed    0.01 sec
+264/451 Test  #48: ResourceDefinitionTest.OwnsIndependentIdentityAndKindValues .....................................................................................   Passed    0.01 sec
+        Start 274: WorldStateTest.EntityIdsAreScopedToWorldAndIndependentWorldsMayReuseValues
+        Start 316: EntityStructureAllocationTest.RestorePreservesAllTablesAndRngAtEveryFailure
+265/451 Test #212: PersistenceExportTest.CaptureIsCompleteCanonicalAndDoesNotConsumeOrMutate .......................................................................   Passed    0.01 sec
+        Start 227: PersistenceContinuityTest.SaveLoadAndUninterruptedExecutionHaveIdenticalFuture
+266/451 Test #214: PersistenceExportTest.EmptySnapshotMatchesPortableGoldenBytes ...................................................................................   Passed    0.01 sec
+267/451 Test #274: WorldStateTest.EntityIdsAreScopedToWorldAndIndependentWorldsMayReuseValues ......................................................................   Passed    0.01 sec
+        Start 198: PopulationTest.CopiesAndMultipleNonHumanCompatibleGroupsRemainIndependent
+        Start 295: TimelineAllocation.ScheduleFailurePreservesIdempotencyLedger
+268/451 Test #316: EntityStructureAllocationTest.RestorePreservesAllTablesAndRngAtEveryFailure .....................................................................   Passed    0.02 sec
+        Start 180: ContextBuilderTest.RepeatedBuildsAreIdenticalAndDoNotMutateWorldKnowledgeOrRng
+269/451 Test #227: PersistenceContinuityTest.SaveLoadAndUninterruptedExecutionHaveIdenticalFuture ..................................................................   Passed    0.02 sec
+270/451 Test #198: PopulationTest.CopiesAndMultipleNonHumanCompatibleGroupsRemainIndependent .......................................................................   Passed    0.01 sec
+        Start  33: ContentCompatibilityTest.MinimumCoreAboveCurrentCorePreservesRequirement
+        Start   7: TimelineTest.EveryTruncationCorruptionAndFutureVersionFailSafely
+271/451 Test #295: TimelineAllocation.ScheduleFailurePreservesIdempotencyLedger ....................................................................................   Passed    0.01 sec
+        Start 287: WorldStateContainmentTest.DirectAndIndirectCyclesAreRejectedAtomically
+272/451 Test #180: ContextBuilderTest.RepeatedBuildsAreIdenticalAndDoNotMutateWorldKnowledgeOrRng ..................................................................   Passed    0.01 sec
+273/451 Test  #33: ContentCompatibilityTest.MinimumCoreAboveCurrentCorePreservesRequirement ........................................................................   Passed    0.01 sec
+        Start 112: PackIdTest.OrdersByCanonicalBytes
+        Start  86: ContentPackValidationTest.TwoPackDependencyCycleIsRejected
+274/451 Test   #7: TimelineTest.EveryTruncationCorruptionAndFutureVersionFailSafely ................................................................................   Passed    0.02 sec
+        Start  32: ContentCompatibilityTest.MinimumCoreBelowCurrentCoreIsCompatible
+275/451 Test #287: WorldStateContainmentTest.DirectAndIndirectCyclesAreRejectedAtomically ..........................................................................   Passed    0.02 sec
+276/451 Test #112: PackIdTest.OrdersByCanonicalBytes ...............................................................................................................   Passed    0.01 sec
+        Start  79: ContentPackValidationTest.MissingDependencyIsRejected
+        Start 270: WorldStateTest.FirstEntityReceivesFirstValidId
+277/451 Test  #86: ContentPackValidationTest.TwoPackDependencyCycleIsRejected ......................................................................................   Passed    0.01 sec
+        Start 223: PersistenceValidationTest.ResourceLimitsAreExplicitAndEnforcedBeforeRecords
+278/451 Test  #32: ContentCompatibilityTest.MinimumCoreBelowCurrentCoreIsCompatible ................................................................................   Passed    0.01 sec
+279/451 Test  #79: ContentPackValidationTest.MissingDependencyIsRejected ...........................................................................................   Passed    0.01 sec
+        Start 391: JsonSchemaValidatorTest.ResourceWithoutSchemaPropertyIsValid
+        Start 204: PopulationPersistenceTest.NewFieldsCannotBeDowngradedIntoV1
+280/451 Test #270: WorldStateTest.FirstEntityReceivesFirstValidId ..................................................................................................   Passed    0.01 sec
+        Start 181: ContextBuilderScaleTest.DefaultLimitsReachSubjectAfterMoreThan4096AuthorizedRecords
+281/451 Test #223: PersistenceValidationTest.ResourceLimitsAreExplicitAndEnforcedBeforeRecords .....................................................................   Passed    0.01 sec
+        Start 262: SimulationTest.BatchPartitionDoesNotAlterCausalityOrRng
+282/451 Test #391: JsonSchemaValidatorTest.ResourceWithoutSchemaPropertyIsValid ....................................................................................   Passed    0.01 sec
+283/451 Test #204: PopulationPersistenceTest.NewFieldsCannotBeDowngradedIntoV1 .....................................................................................   Passed    0.01 sec
+        Start 332: KnowledgeAllocationTest.RestorePreservesWorldAndRngAtEveryFailure
+        Start 422: ContentPackLoaderFilesystemTest.RejectsPackRootThatIsAFile
+284/451 Test #181: ContextBuilderScaleTest.DefaultLimitsReachSubjectAfterMoreThan4096AuthorizedRecords .............................................................   Passed    0.01 sec
+        Start 137: InspectorTest.EntitiesDefinitionsNestedContainmentAndDirectedTypedRelations
+285/451 Test #262: SimulationTest.BatchPartitionDoesNotAlterCausalityOrRng .........................................................................................   Passed    0.01 sec
+286/451 Test #332: KnowledgeAllocationTest.RestorePreservesWorldAndRngAtEveryFailure ...............................................................................   Passed    0.01 sec
+        Start 285: WorldStateContainmentTest.WithdrawalRemovesOnlyTheDirectLink
+        Start 114: DefinitionIdTest.RejectsMissingSeparatorAndInvalidPackIds
+287/451 Test #422: ContentPackLoaderFilesystemTest.RejectsPackRootThatIsAFile ......................................................................................   Passed    0.01 sec
+        Start  44: ContentCompatibilityTest.FailedBuildDoesNotModifyExistingCatalog
+288/451 Test #137: InspectorTest.EntitiesDefinitionsNestedContainmentAndDirectedTypedRelations .....................................................................   Passed    0.01 sec
+289/451 Test #285: WorldStateContainmentTest.WithdrawalRemovesOnlyTheDirectLink ....................................................................................   Passed    0.01 sec
+        Start 421: ContentPackLoaderFilesystemTest.RejectsMissingPackRoot
+        Start   9: TimelineTest.MaximumTickDoesNotOverflowAndRecordBudgetIsEnforced
+290/451 Test #114: DefinitionIdTest.RejectsMissingSeparatorAndInvalidPackIds .......................................................................................   Passed    0.01 sec
+        Start 130: InspectorDiagnosticTest.FirstFailureIsSharedWithPersistenceAndNeverRepairsCandidate
+291/451 Test  #44: ContentCompatibilityTest.FailedBuildDoesNotModifyExistingCatalog ................................................................................   Passed    0.01 sec
+292/451 Test #421: ContentPackLoaderFilesystemTest.RejectsMissingPackRoot ..........................................................................................   Passed    0.01 sec
+        Start   3: TimelineTest.RejectedParentBlocksChildWithoutRollOrRetry
+        Start 256: SimulationTest.ActionsObserveEarlierConsequencesInExplicitInputOrder
+293/451 Test   #9: TimelineTest.MaximumTickDoesNotOverflowAndRecordBudgetIsEnforced ................................................................................   Passed    0.01 sec
+        Start  41: ContentCompatibilityTest.DuplicatePackPhasePrecedesCompatibility
+294/451 Test #130: InspectorDiagnosticTest.FirstFailureIsSharedWithPersistenceAndNeverRepairsCandidate .............................................................   Passed    0.02 sec
+295/451 Test   #3: TimelineTest.RejectedParentBlocksChildWithoutRollOrRetry ........................................................................................   Passed    0.01 sec
+        Start 322: ActionAllocationTest.RejectionsNoOpsReassignmentRemovalAndExistingRollDoNotAllocate
+        Start 141: InspectorTest.PageFailurePrecedenceAndWorldReplacementAreExplicit
+296/451 Test #256: SimulationTest.ActionsObserveEarlierConsequencesInExplicitInputOrder ............................................................................   Passed    0.02 sec
+        Start 429: ContentPackLoaderManifestTest.EnforcesManifestSizeLimitWithoutUnboundedRead
+297/451 Test  #41: ContentCompatibilityTest.DuplicatePackPhasePrecedesCompatibility ................................................................................   Passed    0.02 sec
+298/451 Test #322: ActionAllocationTest.RejectionsNoOpsReassignmentRemovalAndExistingRollDoNotAllocate .............................................................   Passed    0.02 sec
+        Start  73: ContentPackValidationTest.OnePackWithoutDependenciesIsValid
+        Start 408: JsonSchemaValidatorResourceTest.RejectsInvalidReferenceTarget
+299/451 Test #141: InspectorTest.PageFailurePrecedenceAndWorldReplacementAreExplicit ...............................................................................   Passed    0.02 sec
+        Start 221: PersistenceValidationTest.RejectsInvalidWorldsLinksCyclesAndOrderingAtomically
+300/451 Test  #73: ContentPackValidationTest.OnePackWithoutDependenciesIsValid .....................................................................................   Passed    0.01 sec
+        Start  87: ContentPackValidationTest.ThreePackDependencyCycleIsRejected
+301/451 Test #429: ContentPackLoaderManifestTest.EnforcesManifestSizeLimitWithoutUnboundedRead .....................................................................   Passed    0.02 sec
+        Start  94: ContentPackValidationTest.DependencyOrderHasNoPriorityOrLoadOrderMeaning
+302/451 Test #408: JsonSchemaValidatorResourceTest.RejectsInvalidReferenceTarget ...................................................................................   Passed    0.02 sec
+303/451 Test #221: PersistenceValidationTest.RejectsInvalidWorldsLinksCyclesAndOrderingAtomically ..................................................................   Passed    0.01 sec
+        Start 247: RollActionTest.ExistingEntityProducesValueInsideRange
+        Start 232: DeterministicRandomTest.UniformClosedStaysInsideRange
+304/451 Test  #87: ContentPackValidationTest.ThreePackDependencyCycleIsRejected ....................................................................................   Passed    0.02 sec
+        Start 169: VisibilityTest.ThreeObserversCanDetectIdentifyAndKnowAdditionalFactsIndependently
+305/451 Test  #94: ContentPackValidationTest.DependencyOrderHasNoPriorityOrLoadOrderMeaning ........................................................................   Passed    0.01 sec
+306/451 Test #247: RollActionTest.ExistingEntityProducesValueInsideRange ...........................................................................................   Passed    0.01 sec
+        Start 177: ContextBuilderTest.ContentUsesLogicalFixedWidthsAndActualDefinitionBytes
+        Start  35: ContentCompatibilityTest.NewerContentContractIsRejected
+307/451 Test #232: DeterministicRandomTest.UniformClosedStaysInsideRange ...........................................................................................   Passed    0.02 sec
+        Start 273: WorldStateTest.EntityCountTracksCreations
+308/451 Test #169: VisibilityTest.ThreeObserversCanDetectIdentifyAndKnowAdditionalFactsIndependently ...............................................................   Passed    0.02 sec
+309/451 Test #177: ContextBuilderTest.ContentUsesLogicalFixedWidthsAndActualDefinitionBytes ........................................................................   Passed    0.01 sec
+        Start 192: ContextHostSecurityTest.CoreRevalidatesStalenessConditionsAndStructuralValidityAfterHostAuthorization
+        Start 189: ContextSecurityTest.AdversarialEnumAndVersionValuesRejectWithoutWriting
+310/451 Test  #35: ContentCompatibilityTest.NewerContentContractIsRejected .........................................................................................   Passed    0.02 sec
+        Start 447: InspectorAllocationTest.EveryLiveAndCandidateScratchFailureIsInconclusiveAndNonDestructive
+311/451 Test #273: WorldStateTest.EntityCountTracksCreations .......................................................................................................   Passed    0.01 sec
+312/451 Test #192: ContextHostSecurityTest.CoreRevalidatesStalenessConditionsAndStructuralValidityAfterHostAuthorization ...........................................   Passed    0.01 sec
+        Start  59: ContentCatalogTest.SameLocalPathCanExistUnderDifferentPacks
+        Start  91: ContentPackValidationTest.TransitiveDependencyDoesNotAuthorizeReference
+313/451 Test #189: ContextSecurityTest.AdversarialEnumAndVersionValuesRejectWithoutWriting .........................................................................   Passed    0.01 sec
+        Start  46: ResourceKindTest.RejectsValuesOutsideItsGrammar
+314/451 Test #447: InspectorAllocationTest.EveryLiveAndCandidateScratchFailureIsInconclusiveAndNonDestructive ......................................................   Passed    0.01 sec
+315/451 Test  #59: ContentCatalogTest.SameLocalPathCanExistUnderDifferentPacks .....................................................................................   Passed    0.01 sec
+        Start 240: RandomStreamsTest.CopiesPreserveThenIndependentlyAdvanceAllStates
+        Start  56: ContentCatalogTest.RejectsDuplicateIdentityEvenWhenKindsDiffer
+316/451 Test  #91: ContentPackValidationTest.TransitiveDependencyDoesNotAuthorizeReference .........................................................................   Passed    0.01 sec
+        Start 248: RollActionTest.MissingEntityFailsWithoutConsumingRandomness
+317/451 Test  #46: ResourceKindTest.RejectsValuesOutsideItsGrammar .................................................................................................   Passed    0.01 sec
+318/451 Test #240: RandomStreamsTest.CopiesPreserveThenIndependentlyAdvanceAllStates ...............................................................................   Passed    0.01 sec
+        Start 228: PersistenceContinuityTest.RestoredWorldAndPoolCopiesRemainIndependent
+        Start 201: PopulationPersistenceTest.V2MatchesIndependentGoldenAndRestoresEveryField
+319/451 Test  #56: ContentCatalogTest.RejectsDuplicateIdentityEvenWhenKindsDiffer ..................................................................................   Passed    0.02 sec
+        Start 108: ContentManifestTest.MetadataAndPackVersionDoNotChangePackIdentity
+320/451 Test #248: RollActionTest.MissingEntityFailsWithoutConsumingRandomness .....................................................................................   Passed    0.02 sec
+321/451 Test #228: PersistenceContinuityTest.RestoredWorldAndPoolCopiesRemainIndependent ...........................................................................   Passed    0.01 sec
+        Start 360: JsonDocumentReaderTest.ParsesExampleManifestPhysically
+        Start  55: ContentCatalogTest.RejectsDuplicateIdentityWithTheSameKind
+322/451 Test #201: PopulationPersistenceTest.V2MatchesIndependentGoldenAndRestoresEveryField .......................................................................   Passed    0.01 sec
+        Start 289: WorldStateContainmentTest.QueriesAndMutationsRemainIndependentOfRandomAndContent
+323/451 Test #108: ContentManifestTest.MetadataAndPackVersionDoNotChangePackIdentity ...............................................................................   Passed    0.01 sec
+324/451 Test #360: JsonDocumentReaderTest.ParsesExampleManifestPhysically ..........................................................................................   Passed    0.01 sec
+        Start 298: WorldStateAllocationTest.FailedInsertionPreservesAllExistingLinksAndRevision
+        Start  28: ActionLegacyPersistenceTest.V1AndV2ContinueThroughSameExecutorWithoutInventingSimulationState
+325/451 Test  #55: ContentCatalogTest.RejectsDuplicateIdentityWithTheSameKind ......................................................................................   Passed    0.01 sec
+        Start 271: WorldStateTest.CreatedIdsAreDistinctAndMonotonic
+326/451 Test #289: WorldStateContainmentTest.QueriesAndMutationsRemainIndependentOfRandomAndContent ................................................................   Passed    0.01 sec
+327/451 Test #298: WorldStateAllocationTest.FailedInsertionPreservesAllExistingLinksAndRevision ....................................................................   Passed    0.01 sec
+        Start 315: EntityStructureAllocationTest.DeserializeNeverPublishesAPartialV2Candidate
+        Start 216: PersistenceExportTest.RejectsInvalidCandidatesInsteadOfSerializingThem
+328/451 Test  #28: ActionLegacyPersistenceTest.V1AndV2ContinueThroughSameExecutorWithoutInventingSimulationState ...................................................   Passed    0.01 sec
+        Start  15: ActionTest.InvalidContainmentReferencesSelfAndCyclesAreRejectedAtomically
+329/451 Test #271: WorldStateTest.CreatedIdsAreDistinctAndMonotonic ................................................................................................   Passed    0.01 sec
+330/451 Test #315: EntityStructureAllocationTest.DeserializeNeverPublishesAPartialV2Candidate ......................................................................   Passed    0.01 sec
+        Start 166: VisibilityTest.GrantsDoNotImplyExistenceOrRevealUnknownReferences
+        Start 235: DeterministicRandomTest.FullRangeConsumesExactlyOneValue
+331/451 Test #216: PersistenceExportTest.RejectsInvalidCandidatesInsteadOfSerializingThem ..........................................................................   Passed    0.02 sec
+        Start 288: WorldStateContainmentTest.MovingAContainerPreservesAllItsDirectContents
+332/451 Test  #15: ActionTest.InvalidContainmentReferencesSelfAndCyclesAreRejectedAtomically .......................................................................   Passed    0.02 sec
+333/451 Test #166: VisibilityTest.GrantsDoNotImplyExistenceOrRevealUnknownReferences ...............................................................................   Passed    0.02 sec
+        Start 277: WorldStateTest.EnumerationReturnsCreatedEntitiesInStrictAscendingOrder
+        Start  72: ContentCatalogTest.CreatingFromAnLvalueDoesNotModifyInputs
+334/451 Test #235: DeterministicRandomTest.FullRangeConsumesExactlyOneValue ........................................................................................   Passed    0.02 sec
+        Start 259: SimulationTest.OversizedBatchAndShortOutputRejectWholeStepBeforeAnyAction
+335/451 Test #288: WorldStateContainmentTest.MovingAContainerPreservesAllItsDirectContents .........................................................................   Passed    0.02 sec
+336/451 Test #277: WorldStateTest.EnumerationReturnsCreatedEntitiesInStrictAscendingOrder ..........................................................................   Passed    0.01 sec
+        Start  51: ContentCatalogTest.EmptyCatalogIsAValidExclusiveSuccess
+        Start 385: JsonDocumentReaderTest.AcceptsDocumentAtCallerProvidedMaximumSize
+337/451 Test  #72: ContentCatalogTest.CreatingFromAnLvalueDoesNotModifyInputs ......................................................................................   Passed    0.01 sec
+        Start 200: PopulationTest.NeutralRosterSettlementAndNonHumanColonyUseTheSameContracts
+338/451 Test #259: SimulationTest.OversizedBatchAndShortOutputRejectWholeStepBeforeAnyAction .......................................................................   Passed    0.01 sec
+339/451 Test  #51: ContentCatalogTest.EmptyCatalogIsAValidExclusiveSuccess .........................................................................................   Passed    0.01 sec
+        Start 134: InspectorIntegrationTest.InspectionBetweenActionsPreservesResultsOrderRngAndSnapshotsV1V2V3
+        Start 323: ActionAllocationTest.EveryInterruptedStepPublishesExactPrefixAndResumesWithoutDuplicates
+340/451 Test #385: JsonDocumentReaderTest.AcceptsDocumentAtCallerProvidedMaximumSize ...............................................................................   Passed    0.01 sec
+        Start 139: InspectorTest.PageBoundariesRevisionChangesAndRepeatability
+341/451 Test #200: PopulationTest.NeutralRosterSettlementAndNonHumanColonyUseTheSameContracts ......................................................................   Passed    0.01 sec
+342/451 Test #134: InspectorIntegrationTest.InspectionBetweenActionsPreservesResultsOrderRngAndSnapshotsV1V2V3 .....................................................   Passed    0.01 sec
+        Start  93: ContentPackValidationTest.PackOrderDoesNotAffectResult
+        Start  92: ContentPackValidationTest.ExplicitDirectDependencyAuthorizesReference
+343/451 Test #323: ActionAllocationTest.EveryInterruptedStepPublishesExactPrefixAndResumesWithoutDuplicates ........................................................   Passed    0.01 sec
+        Start 147: KnowledgeTest.ReferencesRequireKnownExistenceAndRevocationCascadesOnlyForObserver
+344/451 Test #139: InspectorTest.PageBoundariesRevisionChangesAndRepeatability .....................................................................................   Passed    0.01 sec
+345/451 Test  #93: ContentPackValidationTest.PackOrderDoesNotAffectResult ..........................................................................................   Passed    0.01 sec
+        Start 117: DefinitionIdTest.OrdersByCanonicalBytes
+        Start  74: ContentPackValidationTest.IndependentPacksAreValid
+346/451 Test  #92: ContentPackValidationTest.ExplicitDirectDependencyAuthorizesReference ...........................................................................   Passed    0.01 sec
+        Start 320: ActionAllocationTest.RelationInsertionPreservesEntireWorldAndRngAtEveryFailure
+347/451 Test #147: KnowledgeTest.ReferencesRequireKnownExistenceAndRevocationCascadesOnlyForObserver ...............................................................   Passed    0.01 sec
+348/451 Test #117: DefinitionIdTest.OrdersByCanonicalBytes .........................................................................................................   Passed    0.01 sec
+        Start 102: VersionRequirementTest.EnforcesExclusiveMaximum
+        Start 334: KnowledgeAllocationTest.ProjectionAssignmentPreservesPreviousViewAndWorldAtEveryFailure
+349/451 Test  #74: ContentPackValidationTest.IndependentPacksAreValid ..............................................................................................   Passed    0.01 sec
+        Start  42: ContentCompatibilityTest.OwnershipPhasePrecedesCompatibility
+350/451 Test #320: ActionAllocationTest.RelationInsertionPreservesEntireWorldAndRngAtEveryFailure ..................................................................   Passed    0.01 sec
+351/451 Test #102: VersionRequirementTest.EnforcesExclusiveMaximum .................................................................................................   Passed    0.01 sec
+        Start 113: DefinitionIdTest.AcceptsValidCanonicalIdsAndExposesComponents
+        Start 143: KnowledgeTest.ExistenceDoesNotGrantAnyOtherFactOrOtherObserver
+352/451 Test #334: KnowledgeAllocationTest.ProjectionAssignmentPreservesPreviousViewAndWorldAtEveryFailure .........................................................   Passed    0.01 sec
+        Start 345: ContentCatalogLoaderTest.EmptyExplicitRootSetProducesEmptyCatalog
+353/451 Test  #42: ContentCompatibilityTest.OwnershipPhasePrecedesCompatibility ....................................................................................   Passed    0.01 sec
+354/451 Test #113: DefinitionIdTest.AcceptsValidCanonicalIdsAndExposesComponents ...................................................................................   Passed    0.01 sec
+        Start  47: ResourceKindTest.EqualityAndOrderingUseCanonicalBytes
+        Start 374: JsonDocumentReaderTest.RejectsInvalidUtf8ContinuationByte
+355/451 Test #143: KnowledgeTest.ExistenceDoesNotGrantAnyOtherFactOrOtherObserver ..................................................................................   Passed    0.01 sec
+        Start 376: JsonDocumentReaderTest.RejectsUnpairedHighSurrogate
+356/451 Test #345: ContentCatalogLoaderTest.EmptyExplicitRootSetProducesEmptyCatalog ...............................................................................   Passed    0.01 sec
+357/451 Test  #47: ResourceKindTest.EqualityAndOrderingUseCanonicalBytes ...........................................................................................   Passed    0.01 sec
+        Start  25: ActionPersistenceTest.InternalConsequencesNeverRefreshMemoriesOrGrantHiddenFacts
+        Start  22: ActionTest.StreamRollMatchesLegacyPrimitiveAndNeverMutatesWorld
+358/451 Test #374: JsonDocumentReaderTest.RejectsInvalidUtf8ContinuationByte .......................................................................................   Passed    0.01 sec
+        Start 252: RollActionTest.EquivalentWorldsProduceSameResult
+359/451 Test #376: JsonDocumentReaderTest.RejectsUnpairedHighSurrogate .............................................................................................   Passed    0.01 sec
+360/451 Test  #25: ActionPersistenceTest.InternalConsequencesNeverRefreshMemoriesOrGrantHiddenFacts ................................................................   Passed    0.01 sec
+        Start 301: WorldStateAllocationTest.FailedCopyConstructionPreservesTheSource
+        Start  71: ContentCatalogTest.FailedCandidateDoesNotModifyExistingCatalog
+361/451 Test  #22: ActionTest.StreamRollMatchesLegacyPrimitiveAndNeverMutatesWorld .................................................................................   Passed    0.02 sec
+        Start 191: ContextHostSecurityTest.DomainDenialUnknownReferencesAndSessionReplacementNeverExecute
+362/451 Test #252: RollActionTest.EquivalentWorldsProduceSameResult ................................................................................................   Passed    0.01 sec
+363/451 Test #301: WorldStateAllocationTest.FailedCopyConstructionPreservesTheSource ...............................................................................   Passed    0.01 sec
+        Start 229: DeterministicRandomTest.SameSeedProducesSameSequence
+        Start 127: ExternalContentRestoreTest.SameDefinitionsDoNotAuthorizeChangedPublication
+364/451 Test  #71: ContentCatalogTest.FailedCandidateDoesNotModifyExistingCatalog ..................................................................................   Passed    0.01 sec
+        Start 265: SimulationTest.DistantInhabitantsKeepIdentityAndConsequencesAcrossSteps
+365/451 Test #191: ContextHostSecurityTest.DomainDenialUnknownReferencesAndSessionReplacementNeverExecute ..........................................................   Passed    0.01 sec
+366/451 Test #229: DeterministicRandomTest.SameSeedProducesSameSequence ............................................................................................   Passed    0.01 sec
+        Start 219: PersistenceRestoreTest.EmptyWorldAndNoStreamsReplaceBothDestinations
+        Start 238: RandomStreamsTest.StreamsDoNotDependOnCreationOrderOrOtherDraws
+367/451 Test #127: ExternalContentRestoreTest.SameDefinitionsDoNotAuthorizeChangedPublication ......................................................................   Passed    0.02 sec
+        Start 357: JsonDocumentReaderTest.AcceptsEmptyObject
+368/451 Test #265: SimulationTest.DistantInhabitantsKeepIdentityAndConsequencesAcrossSteps .........................................................................   Passed    0.02 sec
+369/451 Test #219: PersistenceRestoreTest.EmptyWorldAndNoStreamsReplaceBothDestinations ............................................................................   Passed    0.01 sec
+        Start 254: CoreRPGSmokeTest.PublicApiReportsLibraryVersion
+        Start 237: RandomStreamsTest.CanonicalInitialStatesIncludeZeroAndUnsignedLimits
+370/451 Test #238: RandomStreamsTest.StreamsDoNotDependOnCreationOrderOrOtherDraws .................................................................................   Passed    0.02 sec
+        Start 119: EntityStructureContractTest.RelationOrderingAndPopulationHaveNoHumanFields
+371/451 Test #357: JsonDocumentReaderTest.AcceptsEmptyObject .......................................................................................................   Passed    0.01 sec
+372/451 Test #254: CoreRPGSmokeTest.PublicApiReportsLibraryVersion .................................................................................................   Passed    0.01 sec
+        Start  12: ActionTest.PlacementAndRemovalPublishExactlyOneTypedConsequence
+        Start 253: RollActionTest.SuccessfulRollDoesNotChangeWorldRevision
+373/451 Test #237: RandomStreamsTest.CanonicalInitialStatesIncludeZeroAndUnsignedLimits ............................................................................   Passed    0.01 sec
+        Start 303: PersistenceAllocationTest.SerializePreservesInputsAtEveryAllocationFailure
+374/451 Test #119: EntityStructureContractTest.RelationOrderingAndPopulationHaveNoHumanFields ......................................................................   Passed    0.02 sec
+375/451 Test  #12: ActionTest.PlacementAndRemovalPublishExactlyOneTypedConsequence .................................................................................   Passed    0.01 sec
+        Start  13: ActionTest.RepeatedStructuralOperationsAreNoOpsWithoutConsequences
+        Start 155: KnowledgePersistenceTest.RejectsDowngradeDuplicatesOrderAndUnknownReferencesAtomically
+376/451 Test #253: RollActionTest.SuccessfulRollDoesNotChangeWorldRevision .........................................................................................   Passed    0.02 sec
+        Start 140: InspectorTest.EverySparseTablePagesWithoutCopiesAndHasUniformBoundaryRules
+377/451 Test  #13: ActionTest.RepeatedStructuralOperationsAreNoOpsWithoutConsequences ..............................................................................   Passed    0.01 sec
+378/451 Test #303: PersistenceAllocationTest.SerializePreservesInputsAtEveryAllocationFailure ......................................................................   Passed    0.01 sec
+        Start  97: SemanticVersionTest.RejectsInvalidVersions
+        Start  67: ContentCatalogTest.RepeatedIdenticalReferencesProduceOneDiagnostic
+379/451 Test #155: KnowledgePersistenceTest.RejectsDowngradeDuplicatesOrderAndUnknownReferencesAtomically ..........................................................   Passed    0.02 sec
+        Start  61: ContentCatalogTest.ExistingReferenceWithExpectedKindSucceeds
+380/451 Test #140: InspectorTest.EverySparseTablePagesWithoutCopiesAndHasUniformBoundaryRules ......................................................................   Passed    0.02 sec
+381/451 Test  #97: SemanticVersionTest.RejectsInvalidVersions ......................................................................................................   Passed    0.01 sec
+        Start 153: KnowledgePersistenceTest.AllFactKindsRoundTripWithoutRefreshingMemories
+        Start 167: VisibilityTest.MemoriesOnlyRefreshWithExplicitAuthorization
+382/451 Test  #67: ContentCatalogTest.RepeatedIdenticalReferencesProduceOneDiagnostic ..............................................................................   Passed    0.01 sec
+        Start  24: ActionTest.RevisionExhaustionRejectsMutationsButAllowsNoOpsAndRolls
+383/451 Test  #61: ContentCatalogTest.ExistingReferenceWithExpectedKindSucceeds ....................................................................................   Passed    0.01 sec
+384/451 Test #153: KnowledgePersistenceTest.AllFactKindsRoundTripWithoutRefreshingMemories .........................................................................   Passed    0.01 sec
+        Start 224: PersistenceValidationTest.ValidChecksumDoesNotBypassSemanticValidation
+        Start 257: SimulationTest.SameRevisionRequestsConflictAfterFirstEffectiveChange
+385/451 Test #167: VisibilityTest.MemoriesOnlyRefreshWithExplicitAuthorization .....................................................................................   Passed    0.01 sec
+        Start  27: ActionPersistenceTest.RejectedAndNoOpRequestsLeaveCanonicalSaveBytesUnchanged
+386/451 Test  #24: ActionTest.RevisionExhaustionRejectsMutationsButAllowsNoOpsAndRolls .............................................................................   Passed    0.01 sec
+387/451 Test #224: PersistenceValidationTest.ValidChecksumDoesNotBypassSemanticValidation ..........................................................................   Passed    0.01 sec
+        Start 371: JsonDocumentReaderTest.RejectsDuplicateKeyInObjectInsideArray
+        Start 132: InspectorDiagnosticTest.DeepContainmentAndHugeImplicitIdRangeUseOnlySparseScratch
+388/451 Test #257: SimulationTest.SameRevisionRequestsConflictAfterFirstEffectiveChange ............................................................................   Passed    0.01 sec
+        Start 231: DeterministicRandomTest.SeedZeroMatchesGoldenVector
+389/451 Test  #27: ActionPersistenceTest.RejectedAndNoOpRequestsLeaveCanonicalSaveBytesUnchanged ...................................................................   Passed    0.01 sec
+390/451 Test #371: JsonDocumentReaderTest.RejectsDuplicateKeyInObjectInsideArray ...................................................................................   Passed    0.01 sec
+        Start  34: ContentCompatibilityTest.OlderContentContractIsRejected
+        Start 142: InspectorTest.LastPossibleEntityIdPagesWithoutOverflowOrDenseAllocation
+391/451 Test #132: InspectorDiagnosticTest.DeepContainmentAndHugeImplicitIdRangeUseOnlySparseScratch ...............................................................   Passed    0.02 sec
+        Start  11: TimelineWire.IndependentLittleEndianGoldenArchive
+392/451 Test #231: DeterministicRandomTest.SeedZeroMatchesGoldenVector .............................................................................................   Passed    0.02 sec
+393/451 Test  #34: ContentCompatibilityTest.OlderContentContractIsRejected .........................................................................................   Passed    0.01 sec
+        Start   5: TimelineTest.AllOperationTypesPersistAndExecute
+        Start  43: ContentCompatibilityTest.CompatibilityFailureStopsLaterValidation
+394/451 Test #142: InspectorTest.LastPossibleEntityIdPagesWithoutOverflowOrDenseAllocation .........................................................................   Passed    0.02 sec
+        Start 186: ContextSecurityTest.EverySupportedKindAndMaximumScalarsHaveStableTypedRepresentation
+395/451 Test  #11: TimelineWire.IndependentLittleEndianGoldenArchive ...............................................................................................   Passed    0.01 sec
+396/451 Test   #5: TimelineTest.AllOperationTypesPersistAndExecute .................................................................................................   Passed    0.01 sec
+        Start 291: WorldStateContainmentTransitionTest.ExhaustedRevisionPreservesLinksAndErrorPrecedence
+        Start 145: KnowledgeTest.KnownAbsenceIsDifferentFromUnknownAndRequiresExplicitRefresh
+397/451 Test  #43: ContentCompatibilityTest.CompatibilityFailureStopsLaterValidation ...............................................................................   Passed    0.01 sec
+        Start 118: EntityStructureContractTest.RelationKindsAreStrongStableFullWidthLabels
+398/451 Test #186: ContextSecurityTest.EverySupportedKindAndMaximumScalarsHaveStableTypedRepresentation ............................................................   Passed    0.01 sec
+399/451 Test #291: WorldStateContainmentTransitionTest.ExhaustedRevisionPreservesLinksAndErrorPrecedence ...........................................................   Passed    0.01 sec
+        Start 266: WorldStateIntegrationTest.NestedContainmentReassociationCyclesAndWithdrawalPreserveState
+        Start 373: JsonDocumentReaderTest.TreatsEscapedAndLiteralEquivalentKeysAsDuplicates
+400/451 Test #145: KnowledgeTest.KnownAbsenceIsDifferentFromUnknownAndRequiresExplicitRefresh ......................................................................   Passed    0.01 sec
+        Start 116: DefinitionIdTest.SupportsValueEqualityAndInequality
+401/451 Test #118: EntityStructureContractTest.RelationKindsAreStrongStableFullWidthLabels .........................................................................   Passed    0.01 sec
+402/451 Test #266: WorldStateIntegrationTest.NestedContainmentReassociationCyclesAndWithdrawalPreserveState ........................................................   Passed    0.01 sec
+        Start 152: KnowledgePersistenceTest.IndependentGoldenV3HasExactBytesAndKnownAbsence
+        Start 361: JsonDocumentReaderTest.ParsesExampleResourceAPhysically
+403/451 Test #373: JsonDocumentReaderTest.TreatsEscapedAndLiteralEquivalentKeysAsDuplicates ........................................................................   Passed    0.02 sec
+        Start 242: RandomStreamsTest.RollActionConsumesOnlyItsExplicitStream
+404/451 Test #116: DefinitionIdTest.SupportsValueEqualityAndInequality .............................................................................................   Passed    0.02 sec
+405/451 Test #152: KnowledgePersistenceTest.IndependentGoldenV3HasExactBytesAndKnownAbsence ........................................................................   Passed    0.01 sec
+        Start 146: KnowledgeTest.DefinitionIdentityIsExplicitAndImmutableByValue
+        Start 306: PersistenceAllocationTest.LoadPreservesBothDestinationsAtEveryAllocationFailure
+406/451 Test #361: JsonDocumentReaderTest.ParsesExampleResourceAPhysically .........................................................................................   Passed    0.01 sec
+        Start  16: ActionTest.RelationChangesUseExactTriplesWithoutSocialSemantics
+407/451 Test #242: RandomStreamsTest.RollActionConsumesOnlyItsExplicitStream .......................................................................................   Passed    0.01 sec
+408/451 Test #146: KnowledgeTest.DefinitionIdentityIsExplicitAndImmutableByValue ...................................................................................   Passed    0.01 sec
+        Start 321: ActionAllocationTest.OpeningRollStreamNeverPublishesAStreamWithoutItsResult
+        Start 327: KnowledgeAllocationTest.NewDefinitionAndTableInsertionPublishTogetherAtEveryFailure
+409/451 Test #306: PersistenceAllocationTest.LoadPreservesBothDestinationsAtEveryAllocationFailure .................................................................   Passed    0.01 sec
+        Start 165: VisibilityTest.TemporaryGrantsAreNonPersistentAndOrderIndependent
+410/451 Test  #16: ActionTest.RelationChangesUseExactTriplesWithoutSocialSemantics .................................................................................   Passed    0.01 sec
+411/451 Test #321: ActionAllocationTest.OpeningRollStreamNeverPublishesAStreamWithoutItsResult .....................................................................   Passed    0.01 sec
+        Start 375: JsonDocumentReaderTest.RejectsTruncatedUtf8Sequence
+        Start  90: ContentPackValidationTest.CrossPackReferenceWithoutDependencyIsRejected
+412/451 Test #327: KnowledgeAllocationTest.NewDefinitionAndTableInsertionPublishTogetherAtEveryFailure .............................................................   Passed    0.01 sec
+        Start 330: KnowledgeAllocationTest.SerializePreservesSnapshotAtEveryFailure
+413/451 Test #165: VisibilityTest.TemporaryGrantsAreNonPersistentAndOrderIndependent ...............................................................................   Passed    0.02 sec
+414/451 Test #375: JsonDocumentReaderTest.RejectsTruncatedUtf8Sequence .............................................................................................   Passed    0.01 sec
+        Start 188: ContextSecurityTest.HistoricalFormatsKeepMemoriesAndNeverPersistGrantsOrContext
+        Start 359: JsonDocumentReaderTest.AcceptsEveryJsonPrimitiveAtDocumentRoot
+415/451 Test  #90: ContentPackValidationTest.CrossPackReferenceWithoutDependencyIsRejected .........................................................................   Passed    0.02 sec
+        Start 210: PersistenceContractTest.EmptyCandidateHasExplicitIndependentVersions
+416/451 Test #330: KnowledgeAllocationTest.SerializePreservesSnapshotAtEveryFailure ................................................................................   Passed    0.02 sec
+417/451 Test #188: ContextSecurityTest.HistoricalFormatsKeepMemoriesAndNeverPersistGrantsOrContext .................................................................   Passed    0.01 sec
+        Start  83: ContentPackValidationTest.VersionInsideBoundedRequirementIsValid
+        Start 236: DeterministicRandomTest.SavedStateCanResumeSequence
+418/451 Test #359: JsonDocumentReaderTest.AcceptsEveryJsonPrimitiveAtDocumentRoot ..................................................................................   Passed    0.01 sec
+        Start  88: ContentPackValidationTest.AcyclicDependencyGraphIsValid
+419/451 Test #210: PersistenceContractTest.EmptyCandidateHasExplicitIndependentVersions ............................................................................   Passed    0.01 sec
+420/451 Test  #83: ContentPackValidationTest.VersionInsideBoundedRequirementIsValid ................................................................................   Passed    0.01 sec
+        Start 176: ContextBuilderTest.SelectionAndCapacityReportTruncationOnlyWhenAnotherMatchIsBlocked
+        Start 284: WorldStateContainmentTest.AssociationReassociationAndNoOpPreserveIdentity
+421/451 Test #236: DeterministicRandomTest.SavedStateCanResumeSequence .............................................................................................   Passed    0.01 sec
+        Start 261: SimulationTest.PerActionBudgetRejectsOneRequestAndContinuesTheBatch
+422/451 Test  #88: ContentPackValidationTest.AcyclicDependencyGraphIsValid .........................................................................................   Passed    0.01 sec
+423/451 Test #176: ContextBuilderTest.SelectionAndCapacityReportTruncationOnlyWhenAnotherMatchIsBlocked ............................................................   Passed    0.01 sec
+        Start 310: EntityStructureAllocationTest.PopulationDeclarationPreservesEveryOtherTable
+        Start 329: KnowledgeAllocationTest.CapturePreservesSourceAtEveryFailure
+424/451 Test #284: WorldStateContainmentTest.AssociationReassociationAndNoOpPreserveIdentity .......................................................................   Passed    0.01 sec
+        Start 120: EntityAssociationTest.DefinitionsAreValidatedImmutableAndDoNotChangeIdentity
+425/451 Test #261: SimulationTest.PerActionBudgetRejectsOneRequestAndContinuesTheBatch .............................................................................   Passed    0.01 sec
+426/451 Test #310: EntityStructureAllocationTest.PopulationDeclarationPreservesEveryOtherTable .....................................................................   Passed    0.01 sec
+        Start 164: VisibilityTest.HiddenMutationsDoNotChangeEnumerationFactsOrMetadata
+        Start 149: KnowledgeTest.PopulationOriginAndReserveAreIndependentRememberedFacts
+427/451 Test #329: KnowledgeAllocationTest.CapturePreservesSourceAtEveryFailure ....................................................................................   Passed    0.02 sec
+        Start  20: ActionTest.MalformedAndMissingPreconditionsRemainDiagnosableWithoutEffects
+428/451 Test #120: EntityAssociationTest.DefinitionsAreValidatedImmutableAndDoNotChangeIdentity ....................................................................   Passed    0.02 sec
+429/451 Test #164: VisibilityTest.HiddenMutationsDoNotChangeEnumerationFactsOrMetadata .............................................................................   Passed    0.01 sec
+        Start 290: WorldStateContainmentTest.CopyConstructionAndAssignmentHaveIndependentValueSemantics
+        Start  58: ContentCatalogTest.DuplicatePhaseDoesNotAttemptReferenceResolution
+430/451 Test #149: KnowledgeTest.PopulationOriginAndReserveAreIndependentRememberedFacts ...........................................................................   Passed    0.05 sec
+        Start 335: KnowledgeAllocationTest.ViewCopyAssignmentHasStrongExceptionGuarantee
+431/451 Test  #20: ActionTest.MalformedAndMissingPreconditionsRemainDiagnosableWithoutEffects ......................................................................   Passed    0.04 sec
+432/451 Test #290: WorldStateContainmentTest.CopyConstructionAndAssignmentHaveIndependentValueSemantics ............................................................   Passed    0.04 sec
+        Start 213: PersistenceExportTest.ChecksumMatchesIndependentCastagnoliVector
+        Start 331: KnowledgeAllocationTest.DeserializeNeverPublishesPartialKnowledge
+433/451 Test  #58: ContentCatalogTest.DuplicatePhaseDoesNotAttemptReferenceResolution ..............................................................................   Passed    0.04 sec
+        Start 328: KnowledgeAllocationTest.CopyAssignmentPreservesBothWorldsAtEveryFailure
+434/451 Test #335: KnowledgeAllocationTest.ViewCopyAssignmentHasStrongExceptionGuarantee ...........................................................................   Passed    0.01 sec
+435/451 Test #213: PersistenceExportTest.ChecksumMatchesIndependentCastagnoliVector ................................................................................   Passed    0.01 sec
+        Start 249: RollActionTest.InvalidRangeFailsWithoutConsumingRandomness
+        Start 296: TimelineAllocation.CompletedPrefixSurvivesFailureAndResumesWithoutReplay
+436/451 Test #331: KnowledgeAllocationTest.DeserializeNeverPublishesPartialKnowledge ...............................................................................   Passed    0.01 sec
+        Start  54: ContentCatalogTest.LookupOfAnAbsentIdentityReturnsNull
+437/451 Test #328: KnowledgeAllocationTest.CopyAssignmentPreservesBothWorldsAtEveryFailure .........................................................................   Passed    0.01 sec
+438/451 Test #249: RollActionTest.InvalidRangeFailsWithoutConsumingRandomness ......................................................................................   Passed    0.01 sec
+        Start 195: PopulationTest.InvalidBatchesAreRejectedAsWholeWithoutConsumingRng
+        Start 234: DeterministicRandomTest.InvalidRangeDoesNotAdvanceState
+439/451 Test #296: TimelineAllocation.CompletedPrefixSurvivesFailureAndResumesWithoutReplay ........................................................................   Passed    0.01 sec
+        Start  19: ActionTest.PreconditionsAreOrderedAndEvaluatedAgainstCurrentReality
+440/451 Test  #54: ContentCatalogTest.LookupOfAnAbsentIdentityReturnsNull ..........................................................................................   Passed    0.01 sec
+441/451 Test #195: PopulationTest.InvalidBatchesAreRejectedAsWholeWithoutConsumingRng ..............................................................................   Passed    0.01 sec
+        Start  45: ResourceKindTest.AcceptsCanonicalKinds
+        Start 239: RandomStreamsTest.ObservingAnAbsentStreamNeverCreatesOrConsumesIt
+442/451 Test #234: DeterministicRandomTest.InvalidRangeDoesNotAdvanceState .........................................................................................   Passed    0.02 sec
+        Start 218: PersistenceRestoreTest.RoundTripRestoresExactWorldAllocatorRevisionAndStreams
+443/451 Test  #19: ActionTest.PreconditionsAreOrderedAndEvaluatedAgainstCurrentReality .............................................................................   Passed    0.02 sec
+444/451 Test  #45: ResourceKindTest.AcceptsCanonicalKinds ..........................................................................................................   Passed    0.02 sec
+        Start 194: PopulationTest.MaterializationConservesReserveAndEmitsStableContiguousIds
+        Start 425: ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt
+445/451 Test #239: RandomStreamsTest.ObservingAnAbsentStreamNeverCreatesOrConsumesIt ...............................................................................   Passed    0.02 sec
+        Start 439: ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported
+446/451 Test #218: PersistenceRestoreTest.RoundTripRestoresExactWorldAllocatorRevisionAndStreams ...................................................................   Passed    0.02 sec
+447/451 Test #194: PopulationTest.MaterializationConservesReserveAndEmitsStableContiguousIds .......................................................................   Passed    0.01 sec
+        Start 440: ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported
+        Start 441: ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported
+448/451 Test #425: ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt .................................................................***Skipped   0.02 sec
+449/451 Test #439: ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported ................................................................***Skipped   0.01 sec
+450/451 Test #440: ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported ................................................................***Skipped   0.01 sec
+451/451 Test #441: ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported .................................................................................***Skipped   0.01 sec
+
+100% tests passed out of 451
+
+Total Test time (real) =   1.78 sec
+
+The following tests did not run:
+	425 - ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt (Skipped)
+	439 - ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported (Skipped)
+	440 - ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported (Skipped)
+	441 - ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported (Skipped)

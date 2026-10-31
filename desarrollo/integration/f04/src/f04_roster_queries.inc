@@ -6,8 +6,7 @@ uint32_t f04_relief_candidates_page(F04Session* s,F04Ref who,U activity,U start,
   need(val(w,1,SCHEMA)==4 && type(w,activity,"activity") && val(w,activity,VALUE)==F04_DUTY &&
    start>=s->c->time.now() && val(w,activity,START)<=start && start<end && end==val(w,activity,END));
   const U slot=ref(w,activity,SLOT),original=ref(w,activity,PERSON);std::vector<F04ReliefCandidate> candidates;
-  std::vector<U> services;for(U f:person_records(w,"function",original))if(ref(w,f,SLOT)==slot && val(w,f,STATE)==ACTIVE &&
-   val(w,f,START)<=start && end<=val(w,f,END))services.push_back(val(w,f,STATIONS));
+  const auto services=duty_services(w,activity,start,end);
   for(U own:all(w,"slot")) {
    U p=ref(w,own,PERSON);if(!p || p==original || !member(w,p) || val(w,p,CATEGORY)!=1 || !slot_qualified(w,p,slot,end-1) ||
     !role_through(w,p,val(w,slot,RESPONSIBILITY),val(w,slot,DEPT),start,end))continue;
@@ -52,7 +51,7 @@ uint32_t f04_service_coverage(F04Session* s,F04Ref who,U start,U end,F04ServiceC
  if(!count || (!out && capacity))return F04_ARGUMENT;*count=0;
  return call(s,[&]()->uint32_t {
   need(observer(s,who),F04_DENIED);const auto& w=s->c->world;need(organization(w) && start<end && end<=FOREVER && end-start<=28*86400);
-  const auto stations=trek_templates::profile(val(w,1,TEMPLATE))->continuous_stations;
+  const auto stations=organization_services(w);
   *count=stations.size();need(capacity>=*count,F04_CAPACITY);
   std::set<U> boundaries{start};
   for(const char* kind:{"activity","appointment","function"})for(U a:all(w,kind))

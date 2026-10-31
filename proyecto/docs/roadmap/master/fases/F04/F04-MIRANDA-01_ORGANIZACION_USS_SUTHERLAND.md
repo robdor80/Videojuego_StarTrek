@@ -1,5 +1,7 @@
 # F04-MIRANDA-01 — Organización de la USS Sutherland
 
+> Actualización 31-10-2026: [F04-GUARDIAS-02](F04-GUARDIAS-02_MIRANDA_INTREPID_TRES_GUARDIAS.md) completa Beta/Gamma con el planificador común y migración explícita SCHEMA 3→4. Las cifras y contratos históricos siguientes conservan su alcance original.
+
 Fecha: 2026-10-30. Estado F04: **EN_CURSO**. Entrega para auditoría mediante PR Draft, sin fusión.
 
 La configuración científica polivalente modernizada de la USS Sutherland dispone de **130 plazas nominales**, distribuidas en **siete departamentos y 32 secciones**. Su Alpha ilustrativa de 08:00 a 16:00 emplea **53 personas distintas**. El perfil se instala explícitamente; crear una Miranda genérica o cualquier otra clase conserva la dotación genérica de la PR #66 y no aplica esta organización.

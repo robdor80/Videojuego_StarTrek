@@ -1,0 +1,59 @@
+{
+  "base": "4436bb444bcfae17941edc84d856d756ac5f6929",
+  "branch": "codex/f04-guardias-02-miranda-intrepid",
+  "cores": {
+    "C:\\F04\\CoreRPG": {
+      "sha": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+      "status": ""
+    },
+    "C:\\F04\\core-f02": {
+      "sha": "4f282863737bcd8f5add401202a9e1064c133672",
+      "status": ""
+    },
+    "C:\\F04\\core-f03": {
+      "sha": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+      "status": ""
+    }
+  },
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "compiler": "MSVC 19.51.36256 / Visual Studio 18 2026 / x64 Release",
+  "native_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+  "unreal_dll_sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+  "source_sha256": {
+    "desarrollo/integration/f04/include/f04_bridge.h": "f24a2520dd435b651ddef55ba2ed2f88a338a6d98991c94a44f310901c282f45",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "9f8254cbdfcfd6200eb6f19a45c5e177df019d83d1b2cea5ca5fb2397dafe415",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "8ffcf0df93d70a5cf8b5f8de18799742d772a2e1b882d200e6e7e36b13c63047",
+    "desarrollo/integration/f04/src/f04_organization.inc": "48ff03e75ff2e2af8f47a148dca1154b67fcb5f45df6d71c99cf180251fce48b",
+    "desarrollo/integration/f04/src/f04_roster.inc": "83fe7ceb0d5b5398f7108a223a5c8252ed0b998e1f6481d19ebb78a6e61e19a2",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "5a350afb008c867f24180e58ff0f9669a042fbbe2e2dc608c6ee3d9bbb3573ae",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "1a05ff3d3c410117ff73d02b49067a4780cb3d120f22790f1a2d43d9dc4f3abe",
+    "desarrollo/integration/f04/src/f04_templates.h": "43c48d26bafa5c0ce5719060fcddd817c13f543914d4a6f5909eb65fad9b82e2",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "1573f84bcebf87cd4c933abd472d6d9681f0b4ea1e6ee8cc9626afa8e71bef33",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "bcaf326344a5bcc1c113b6c4ba437abdbbf9f9cf2dd6768029f0b9cceddb1029",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "d49912e78b6d772a9cbc6bb116f64f4724f454111fbf7aa1f4d9e0678aa388e5",
+    "desarrollo/integration/f04/tests/f04_tests.cpp": "b8be7a35ecf7dce2fce07e1e4cc3fd1819d32ed71d96c0158d2b6c5fa8dc8314",
+    "desarrollo/integration/f04/tests/guardias_tests.cpp": "43ef052c7f73e367cd10967d1f8bb0e2a3803e9b94f14c563a249097908ff046",
+    "desarrollo/integration/f04/tests/intrepid_tests.cpp": "7c050ae207abe3e2ea671046d94ac380e1b4744f7b542dc95496e3890a90c1c3",
+    "desarrollo/integration/f04/tests/odyssey_tests.cpp": "9f803a96f7ecf4d268c5f8d9069c3b11df8bfbf58a80c369968943df9cad2074",
+    "desarrollo/integration/f04/tests/organization_lab.h": "af3d387b3957a8515970ee73f0745166e4d4a1915bf321140dca86bf1d9f7ceb",
+    "desarrollo/integration/f04/tests/organization_tests.cpp": "009fcee876b2efdd8db0202e3450b5c36a385690c4fcc9cfca8bf34298df87eb",
+    "desarrollo/integration/f04/tests/population_tests.cpp": "2336a3385884843e1cf5cd435b637b0b2b1c9ae34e1c489810f48c6df3a014ac",
+    "desarrollo/integration/f04/tests/sovereign_tests.cpp": "ce642cd4cab760e86406f1778df68071998fbc462af52864ff2553a9f0336ef3",
+    "desarrollo/integration/f04/tests/valhalla_tests.cpp": "8fc88bb0866ee2898bd108fe4ea30508194763410177b4e51b63bc80bd8ca00b",
+    "desarrollo/integration/f04/unreal/F02CoreLab.cpp": "1d5cad0dfb0603907ca8427c0545b5bfd99287053994adc93f2577252ea1b69d",
+    "desarrollo/integration/f04/unreal/F04Automation.cpp": "7d072bc9a8a87eba2f29fdcc50fdedfaa9fe6571bb4b67642836a6c83542f765",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.cpp": "157c512c866f98cfa355af51ffa46bf43a5df448ba1dffc0e8abb7b6618b6092",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.h": "e7bf08f8550c78d23728c6dc4b1ad3a5c1cbfe563a8292f75a58a8ac67574a09"
+  },
+  "main_status": "",
+  "scope": "Only F04 integration code, tests and F04 documentation/evidence. No Core/3D/art/backups changes."
+}

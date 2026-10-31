@@ -1,0 +1,4 @@
+{
+  "sha256": "d0bb939d45ec496d3bfe3bc196dddcaba1c5d2d68b30228395570a4283728354",
+  "measurement": "single MSI run; process memory includes Python/ctypes and transient transactions, not isolated Core allocation"
+}
