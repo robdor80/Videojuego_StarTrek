@@ -1,0 +1,471 @@
+Start testing: Oct 31 01:42 Hora estándar romance
+----------------------------------------------------------
+19/270 Testing: f04.persistence_core_boundary
+19/270 Test: f04.persistence_core_boundary
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "core_boundary"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_core_boundary" start time: Oct 31 01:42 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"core_boundary","payload_removal_reclaims_identity":false,"checkpoint_truncation_reuses_identity":true}
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_core_boundary" end time: Oct 31 01:42 Hora estándar romance
+"f04.persistence_core_boundary" time elapsed: 00:00:00
+----------------------------------------------------------
+
+20/270 Testing: f04.persistence_measure_1_1
+20/270 Test: f04.persistence_measure_1_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "1" "1"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_1_1" start time: Oct 31 01:42 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":1,"days":1,"initial_entities":315,"entities":428,"added":113,"bytes":114760,"plan_ms":2.7196,"save_two_calls_ms":4.1588,"load_ms":3.1602,"types":{"trek.f04:activity":75,"trek.f04:appointment":18,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":5,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":4115,"working_set_bytes":5423104,"process_peak_working_set_bytes":5574656}
+<end of output>
+Test time =   0.03 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_1_1" end time: Oct 31 01:42 Hora estándar romance
+"f04.persistence_measure_1_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+21/270 Testing: f04.persistence_measure_1_7
+21/270 Test: f04.persistence_measure_1_7
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "1" "7"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_1_7" start time: Oct 31 01:42 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":1,"days":7,"initial_entities":315,"entities":1089,"added":774,"bytes":310341,"plan_ms":10.7805,"save_two_calls_ms":10.7727,"load_ms":9.6047,"types":{"trek.f04:activity":532,"trek.f04:appointment":54,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":29,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":11459,"working_set_bytes":6266880,"process_peak_working_set_bytes":6975488}
+<end of output>
+Test time =   0.07 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_1_7" end time: Oct 31 01:42 Hora estándar romance
+"f04.persistence_measure_1_7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+22/270 Testing: f04.persistence_measure_1_28
+22/270 Test: f04.persistence_measure_1_28
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "1" "28"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_1_28" start time: Oct 31 01:42 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":1,"days":28,"initial_entities":315,"entities":3380,"added":3065,"bytes":986132,"plan_ms":65.6302,"save_two_calls_ms":34.3484,"load_ms":30.9329,"types":{"trek.f04:activity":2074,"trek.f04:appointment":180,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":148,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":36823,"working_set_bytes":9129984,"process_peak_working_set_bytes":11853824}
+<end of output>
+Test time =   0.23 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_1_28" end time: Oct 31 01:42 Hora estándar romance
+"f04.persistence_measure_1_28" time elapsed: 00:00:00
+----------------------------------------------------------
+
+23/270 Testing: f04.persistence_baseline_1_365
+23/270 Test: f04.persistence_baseline_1_365
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "1" "365" "C:/F04/PersistenciaBuild/native/persistence-1.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_1_365" start time: Oct 31 01:42 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":1,"completed_days":28,"entities":3463,"bytes":1002234,"plan_ms":66.9957}
+{"kind":"block","profile":1,"completed_days":56,"entities":6601,"bytes":1919370,"plan_ms":148.852}
+{"kind":"block","profile":1,"completed_days":84,"entities":9734,"bytes":2834783,"plan_ms":239.194}
+{"kind":"block","profile":1,"completed_days":112,"entities":12874,"bytes":3752369,"plan_ms":410.166}
+{"kind":"block","profile":1,"completed_days":140,"entities":16013,"bytes":4669684,"plan_ms":535.941}
+{"kind":"block","profile":1,"completed_days":168,"entities":19154,"bytes":5587449,"plan_ms":567.805}
+{"kind":"block","profile":1,"completed_days":196,"entities":22293,"bytes":6504764,"plan_ms":628.4}
+{"kind":"block","profile":1,"completed_days":224,"entities":25426,"bytes":7420269,"plan_ms":840.04}
+{"kind":"block","profile":1,"completed_days":252,"entities":28568,"bytes":8338765,"plan_ms":1139.53}
+{"kind":"block","profile":1,"completed_days":280,"entities":31709,"bytes":9256576,"plan_ms":1041.92}
+{"kind":"block","profile":1,"completed_days":308,"entities":34847,"bytes":10173712,"plan_ms":1215.84}
+{"kind":"block","profile":1,"completed_days":336,"entities":37984,"bytes":11090577,"plan_ms":1030.72}
+{"kind":"block","profile":1,"completed_days":364,"entities":41115,"bytes":12005586,"plan_ms":1835.99}
+{"kind":"block","profile":1,"completed_days":365,"entities":41230,"bytes":12039036,"plan_ms":482.389}
+{"kind":"baseline_outcome","profile":1,"requested_days":365,"completed_days":365,"code":0,"acceptance_achieved":false,"entities":41230,"bytes":12039036,"elapsed_ms":68345.1,"types":{"trek.f04:activity":26831,"trek.f04:appointment":2202,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":1111,"trek.f04:function":8760,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":2011,"trek.f04:roster_plan":14,"trek.f04:section":32,"trek.f04:slot":130},"relations":451354,"working_set_bytes":44032000,"process_peak_working_set_bytes":128577536}
+<end of output>
+Test time =  68.36 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_1_365" end time: Oct 31 01:44 Hora estándar romance
+"f04.persistence_baseline_1_365" time elapsed: 00:01:08
+----------------------------------------------------------
+
+24/270 Testing: f04.persistence_resume_1
+24/270 Test: f04.persistence_resume_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "resume" "C:/F04/PersistenciaBuild/native/persistence-1.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_resume_1" start time: Oct 31 01:44 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"process_resume","profile":1,"code":0,"equal_future":true}
+<end of output>
+Test time =   1.88 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_resume_1" end time: Oct 31 01:44 Hora estándar romance
+"f04.persistence_resume_1" time elapsed: 00:00:01
+----------------------------------------------------------
+
+25/270 Testing: f04.persistence_measure_2_1
+25/270 Test: f04.persistence_measure_2_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "2" "1"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_2_1" start time: Oct 31 01:44 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":2,"days":1,"initial_entities":377,"entities":508,"added":131,"bytes":137589,"plan_ms":3.5185,"save_two_calls_ms":5.0095,"load_ms":4.0858,"types":{"trek.f04:activity":92,"trek.f04:appointment":18,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":6,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":4937,"working_set_bytes":5513216,"process_peak_working_set_bytes":5726208}
+<end of output>
+Test time =   0.04 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_2_1" end time: Oct 31 01:44 Hora estándar romance
+"f04.persistence_measure_2_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+26/270 Testing: f04.persistence_measure_2_7
+26/270 Test: f04.persistence_measure_2_7
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "2" "7"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_2_7" start time: Oct 31 01:44 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":2,"days":7,"initial_entities":377,"entities":1279,"added":902,"bytes":367672,"plan_ms":13.0887,"save_two_calls_ms":12.3821,"load_ms":10.7562,"types":{"trek.f04:activity":651,"trek.f04:appointment":54,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":38,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":13585,"working_set_bytes":6594560,"process_peak_working_set_bytes":7426048}
+<end of output>
+Test time =   0.08 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_2_7" end time: Oct 31 01:44 Hora estándar romance
+"f04.persistence_measure_2_7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+27/270 Testing: f04.persistence_measure_2_28
+27/270 Test: f04.persistence_measure_2_28
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "2" "28"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_2_28" start time: Oct 31 01:44 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":2,"days":28,"initial_entities":377,"entities":3938,"added":3561,"bytes":1158923,"plan_ms":81.48,"save_two_calls_ms":40.9703,"load_ms":35.3466,"types":{"trek.f04:activity":2535,"trek.f04:appointment":180,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":183,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":43313,"working_set_bytes":10010624,"process_peak_working_set_bytes":13111296}
+<end of output>
+Test time =   0.27 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_2_28" end time: Oct 31 01:44 Hora estándar romance
+"f04.persistence_measure_2_28" time elapsed: 00:00:00
+----------------------------------------------------------
+
+28/270 Testing: f04.persistence_baseline_2_365
+28/270 Test: f04.persistence_baseline_2_365
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "2" "365" "C:/F04/PersistenciaBuild/native/persistence-2.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_2_365" start time: Oct 31 01:44 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":2,"completed_days":28,"entities":4021,"bytes":1175025,"plan_ms":77.9735}
+{"kind":"block","profile":2,"completed_days":56,"entities":7645,"bytes":2244797,"plan_ms":177.801}
+{"kind":"block","profile":2,"completed_days":84,"entities":11266,"bytes":3313480,"plan_ms":281.035}
+{"kind":"block","profile":2,"completed_days":112,"entities":14891,"bytes":4383523,"plan_ms":444.622}
+{"kind":"block","profile":2,"completed_days":140,"entities":18520,"bytes":5454420,"plan_ms":870.524}
+{"kind":"block","profile":2,"completed_days":168,"entities":22147,"bytes":6525051,"plan_ms":686.908}
+{"kind":"block","profile":2,"completed_days":196,"entities":25775,"bytes":7595769,"plan_ms":932.229}
+{"kind":"block","profile":2,"completed_days":224,"entities":29402,"bytes":8666262,"plan_ms":874.597}
+{"kind":"block","profile":2,"completed_days":252,"entities":33027,"bytes":9736305,"plan_ms":1064.63}
+{"kind":"block","profile":2,"completed_days":280,"entities":36654,"bytes":10806706,"plan_ms":1478.69}
+{"kind":"block","profile":2,"completed_days":308,"entities":40279,"bytes":11876795,"plan_ms":1620.9}
+{"kind":"block","profile":2,"completed_days":336,"entities":43908,"bytes":12947646,"plan_ms":1392.28}
+{"kind":"block","profile":2,"completed_days":364,"entities":47537,"bytes":14018819,"plan_ms":1654.77}
+{"kind":"block","profile":2,"completed_days":365,"entities":47669,"bytes":14057612,"plan_ms":513.683}
+{"kind":"baseline_outcome","profile":2,"requested_days":365,"completed_days":365,"code":0,"acceptance_achieved":false,"entities":47669,"bytes":14057612,"elapsed_ms":78170.4,"types":{"trek.f04:activity":32771,"trek.f04:appointment":2202,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":1111,"trek.f04:function":8760,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":2448,"trek.f04:roster_plan":14,"trek.f04:section":34,"trek.f04:slot":160},"relations":527612,"working_set_bytes":51040256,"process_peak_working_set_bytes":149987328}
+<end of output>
+Test time =  78.20 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_2_365" end time: Oct 31 01:45 Hora estándar romance
+"f04.persistence_baseline_2_365" time elapsed: 00:01:18
+----------------------------------------------------------
+
+29/270 Testing: f04.persistence_resume_2
+29/270 Test: f04.persistence_resume_2
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "resume" "C:/F04/PersistenciaBuild/native/persistence-2.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_resume_2" start time: Oct 31 01:45 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"process_resume","profile":2,"code":0,"equal_future":true}
+<end of output>
+Test time =   2.17 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_resume_2" end time: Oct 31 01:45 Hora estándar romance
+"f04.persistence_resume_2" time elapsed: 00:00:02
+----------------------------------------------------------
+
+30/270 Testing: f04.persistence_measure_3_1
+30/270 Test: f04.persistence_measure_3_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "3" "1"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_3_1" start time: Oct 31 01:45 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":3,"days":1,"initial_entities":1484,"entities":1991,"added":507,"bytes":565030,"plan_ms":14.0058,"save_two_calls_ms":20.4341,"load_ms":16.5801,"types":{"trek.f04:activity":470,"trek.f04:appointment":20,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":4,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":20371,"working_set_bytes":7274496,"process_peak_working_set_bytes":8675328}
+<end of output>
+Test time =   0.15 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_3_1" end time: Oct 31 01:45 Hora estándar romance
+"f04.persistence_measure_3_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+31/270 Testing: f04.persistence_measure_3_7
+31/270 Test: f04.persistence_measure_3_7
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "3" "7"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_3_7" start time: Oct 31 01:45 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":3,"days":7,"initial_entities":1484,"entities":4912,"added":3428,"bytes":1476893,"plan_ms":53.8715,"save_two_calls_ms":49.0096,"load_ms":43.5103,"types":{"trek.f04:activity":3184,"trek.f04:appointment":56,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":31,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":54829,"working_set_bytes":11100160,"process_peak_working_set_bytes":15290368}
+<end of output>
+Test time =   0.30 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_3_7" end time: Oct 31 01:45 Hora estándar romance
+"f04.persistence_measure_3_7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+32/270 Testing: f04.persistence_measure_3_28
+32/270 Test: f04.persistence_measure_3_28
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "3" "28"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_3_28" start time: Oct 31 01:45 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":3,"days":28,"initial_entities":1484,"entities":15152,"added":13668,"bytes":4671275,"plan_ms":326.66,"save_two_calls_ms":156.156,"load_ms":148.808,"types":{"trek.f04:activity":12648,"trek.f04:appointment":182,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":177,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":175527,"working_set_bytes":23764992,"process_peak_working_set_bytes":37466112}
+<end of output>
+Test time =   1.06 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_3_28" end time: Oct 31 01:45 Hora estándar romance
+"f04.persistence_measure_3_28" time elapsed: 00:00:01
+----------------------------------------------------------
+
+33/270 Testing: f04.persistence_baseline_3_365
+33/270 Test: f04.persistence_baseline_3_365
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "3" "365" "C:/F04/PersistenciaBuild/native/persistence-3.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_3_365" start time: Oct 31 01:45 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":3,"completed_days":28,"entities":15235,"bytes":4687377,"plan_ms":326.682}
+{"kind":"block","profile":3,"completed_days":56,"entities":28829,"bytes":8917777,"plan_ms":730.55}
+{"kind":"block","profile":3,"completed_days":84,"entities":42436,"bytes":13151930,"plan_ms":1298.6}
+{"kind":"block","profile":3,"completed_days":112,"entities":56041,"bytes":17385863,"plan_ms":1952.26}
+{"kind":"baseline_outcome","profile":3,"requested_days":365,"completed_days":112,"code":15,"acceptance_achieved":false,"entities":56042,"bytes":17386033,"elapsed_ms":39714.6,"types":{"trek.f04:activity":50126,"trek.f04:appointment":686,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":343,"trek.f04:function":2688,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":727,"trek.f04:roster_plan":4,"trek.f04:section":59,"trek.f04:slot":700},"relations":655833,"working_set_bytes":62357504,"process_peak_working_set_bytes":184532992}
+<end of output>
+Test time =  39.79 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_3_365" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_baseline_3_365" time elapsed: 00:00:39
+----------------------------------------------------------
+
+34/270 Testing: f04.persistence_resume_3
+34/270 Test: f04.persistence_resume_3
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "resume" "C:/F04/PersistenciaBuild/native/persistence-3.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_resume_3" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"process_resume","profile":3,"code":15,"equal_future":true}
+<end of output>
+Test time =   5.08 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_resume_3" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_resume_3" time elapsed: 00:00:05
+----------------------------------------------------------
+
+35/270 Testing: f04.persistence_measure_4_1
+35/270 Test: f04.persistence_measure_4_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "4" "1"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_4_1" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":4,"days":1,"initial_entities":3297,"entities":4365,"added":1068,"bytes":1252261,"plan_ms":31.4503,"save_two_calls_ms":43.8062,"load_ms":34.7892,"types":{"trek.f04:activity":1035,"trek.f04:appointment":20,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":45163,"working_set_bytes":10067968,"process_peak_working_set_bytes":13582336}
+<end of output>
+Test time =   0.33 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_4_1" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_4_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+36/270 Testing: f04.persistence_measure_4_7
+36/270 Test: f04.persistence_measure_4_7
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "4" "7"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_4_7" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":4,"days":7,"initial_entities":3297,"entities":10690,"added":7393,"bytes":3244020,"plan_ms":121.67,"save_two_calls_ms":106.668,"load_ms":95.0468,"types":{"trek.f04:activity":7171,"trek.f04:appointment":56,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":9,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":120505,"working_set_bytes":18059264,"process_peak_working_set_bytes":27602944}
+<end of output>
+Test time =   0.70 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_4_7" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_4_7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+37/270 Testing: f04.persistence_measure_4_28
+37/270 Test: f04.persistence_measure_4_28
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "4" "28"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_4_28" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":4,"days":28,"initial_entities":3297,"entities":32647,"added":29350,"bytes":10157613,"plan_ms":777.592,"save_two_calls_ms":347.626,"load_ms":311.964,"types":{"trek.f04:activity":28459,"trek.f04:appointment":182,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":48,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":382021,"working_set_bytes":45912064,"process_peak_working_set_bytes":74678272}
+<end of output>
+Test time =   2.40 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_4_28" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_4_28" time elapsed: 00:00:02
+----------------------------------------------------------
+
+38/270 Testing: f04.persistence_baseline_4_365
+38/270 Test: f04.persistence_baseline_4_365
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "4" "365" "C:/F04/PersistenciaBuild/native/persistence-4.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_4_365" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":4,"completed_days":28,"entities":32730,"bytes":10173715,"plan_ms":729.373}
+{"kind":"block","profile":4,"completed_days":56,"entities":62003,"bytes":19380752,"plan_ms":2030.92}
+{"kind":"baseline_outcome","profile":4,"requested_days":365,"completed_days":56,"code":15,"acceptance_achieved":false,"entities":62004,"bytes":19380922,"elapsed_ms":28804.9,"types":{"trek.f04:activity":56764,"trek.f04:appointment":350,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":173,"trek.f04:function":1344,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":90,"trek.f04:roster_plan":2,"trek.f04:section":72,"trek.f04:slot":1600},"relations":730849,"working_set_bytes":66514944,"process_peak_working_set_bytes":207478784}
+<end of output>
+Test time =  28.98 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_4_365" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_baseline_4_365" time elapsed: 00:00:28
+----------------------------------------------------------
+
+39/270 Testing: f04.persistence_resume_4
+39/270 Test: f04.persistence_resume_4
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "resume" "C:/F04/PersistenciaBuild/native/persistence-4.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_resume_4" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"process_resume","profile":4,"code":15,"equal_future":true}
+<end of output>
+Test time =   4.94 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_resume_4" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_resume_4" time elapsed: 00:00:04
+----------------------------------------------------------
+
+40/270 Testing: f04.persistence_measure_5_1
+40/270 Test: f04.persistence_measure_5_1
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "5" "1"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_5_1" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":5,"days":1,"initial_entities":4115,"entities":5333,"added":1218,"bytes":1662682,"plan_ms":43.9887,"save_two_calls_ms":56.6874,"load_ms":46.6646,"types":{"trek.f04:activity":1185,"trek.f04:appointment":19,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":60378,"working_set_bytes":11436032,"process_peak_working_set_bytes":16171008}
+<end of output>
+Test time =   0.49 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_5_1" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_5_1" time elapsed: 00:00:00
+----------------------------------------------------------
+
+41/270 Testing: f04.persistence_measure_5_7
+41/270 Test: f04.persistence_measure_5_7
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "5" "7"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_5_7" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":5,"days":7,"initial_entities":4115,"entities":12512,"added":8397,"bytes":3925205,"plan_ms":173.745,"save_two_calls_ms":133.755,"load_ms":122.062,"types":{"trek.f04:activity":8176,"trek.f04:appointment":55,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":8,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":145970,"working_set_bytes":20471808,"process_peak_working_set_bytes":31895552}
+<end of output>
+Test time =   0.96 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_5_7" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_5_7" time elapsed: 00:00:00
+----------------------------------------------------------
+
+42/270 Testing: f04.persistence_measure_5_28
+42/270 Test: f04.persistence_measure_5_28
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "measure" "5" "28"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_measure_5_28" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"measurement","profile":5,"days":28,"initial_entities":4115,"entities":37470,"added":33355,"bytes":11789885,"plan_ms":917.253,"save_two_calls_ms":391.042,"load_ms":363.185,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":443488,"working_set_bytes":50778112,"process_peak_working_set_bytes":85368832}
+<end of output>
+Test time =   2.88 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_measure_5_28" end time: Oct 31 01:46 Hora estándar romance
+"f04.persistence_measure_5_28" time elapsed: 00:00:02
+----------------------------------------------------------
+
+43/270 Testing: f04.persistence_baseline_5_365
+43/270 Test: f04.persistence_baseline_5_365
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "5" "365" "C:/F04/PersistenciaBuild/native/persistence-5.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_5_365" start time: Oct 31 01:46 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":5,"completed_days":28,"entities":37553,"bytes":11805987,"plan_ms":910.083}
+{"kind":"baseline_outcome","profile":5,"requested_days":365,"completed_days":28,"code":15,"acceptance_achieved":false,"entities":37554,"bytes":11806157,"elapsed_ms":14080.5,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":88,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":444075,"working_set_bytes":43126784,"process_peak_working_set_bytes":125972480}
+<end of output>
+Test time =  14.34 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_5_365" end time: Oct 31 01:47 Hora estándar romance
+"f04.persistence_baseline_5_365" time elapsed: 00:00:14
+----------------------------------------------------------
+
+44/270 Testing: f04.persistence_resume_5
+44/270 Test: f04.persistence_resume_5
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "resume" "C:/F04/PersistenciaBuild/native/persistence-5.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_resume_5" start time: Oct 31 01:47 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"process_resume","profile":5,"code":15,"equal_future":true}
+<end of output>
+Test time =   4.29 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_resume_5" end time: Oct 31 01:47 Hora estándar romance
+"f04.persistence_resume_5" time elapsed: 00:00:04
+----------------------------------------------------------
+
+45/270 Testing: f04.persistence_baseline_valhalla_730
+45/270 Test: f04.persistence_baseline_valhalla_730
+Command: "C:/F04/PersistenciaBuild/native/Release/f04_persistence_audit.exe" "campaign" "5" "730" "C:/F04/PersistenciaBuild/native/persistence-730.f04"
+Directory: C:/F04/PersistenciaBuild/native
+"f04.persistence_baseline_valhalla_730" start time: Oct 31 01:47 Hora estándar romance
+Output:
+----------------------------------------------------------
+{"kind":"block","profile":5,"completed_days":28,"entities":37553,"bytes":11805987,"plan_ms":977.954}
+{"kind":"baseline_outcome","profile":5,"requested_days":730,"completed_days":28,"code":15,"acceptance_achieved":false,"entities":37554,"bytes":11806157,"elapsed_ms":15242.6,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":88,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":444075,"working_set_bytes":43364352,"process_peak_working_set_bytes":130998272}
+<end of output>
+Test time =  15.52 sec
+----------------------------------------------------------
+Test Passed.
+"f04.persistence_baseline_valhalla_730" end time: Oct 31 01:47 Hora estándar romance
+"f04.persistence_baseline_valhalla_730" time elapsed: 00:00:15
+----------------------------------------------------------
+
+End testing: Oct 31 01:47 Hora estándar romance

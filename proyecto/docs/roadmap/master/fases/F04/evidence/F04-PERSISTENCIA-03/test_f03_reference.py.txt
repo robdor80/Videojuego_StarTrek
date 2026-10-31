@@ -1,0 +1,31 @@
+test_01_valid_reference (test_f03_reference.F03ReferenceTests) ... ok
+test_02_canonical_json_roundtrip_only (test_f03_reference.F03ReferenceTests) ... ok
+test_03_duplicate_entity_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_04_new_entity_after_observation_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_05_duplicate_slot_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_06_population_inflation_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_07_promotion_without_slot_identity_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_08_player_truth_leak_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_09_player_entity_id_leak_nested_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_10_premature_classification_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_11_premature_properties_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_12_hidden_property_without_evidence_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_13_unknown_truth_entity_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_14_missing_observer_mapping_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_15_duplicate_contact_per_observer_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_16_invalid_confidence_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_17_future_observation_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_18_wrong_causal_parent_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_19_event_order_regression_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_20_duplicate_idempotency_key_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_21_completed_order_without_result_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_22_overlapping_exclusive_shifts_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_23_foreign_contact_in_knowledge_blocked (test_f03_reference.F03ReferenceTests) ... ok
+test_24_future_schema_is_rejected_without_mutating_original (test_f03_reference.F03ReferenceTests) ... ok
+test_25_clock_cannot_reverse (test_f03_reference.F03ReferenceTests) ... ok
+test_26_13_original_invariants_and_source_contracts (test_f03_reference.F03ReferenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.023s
+
+OK
