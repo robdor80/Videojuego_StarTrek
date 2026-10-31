@@ -28,7 +28,7 @@ uint32_t f04_template_watch_demands(U id,F04WatchDemand* out,U capacity,U* count
 uint32_t f04_duties_page(F04Session* s,F04Ref who,U offset,F04DutyView* out,U capacity,U* written,U* total) {
  if(!written || !total || (!out && capacity))return F04_ARGUMENT;*written=*total=0;
  return call(s,[&]()->uint32_t {
-  need(observer(s,who),F04_DENIED);const auto& w=s->c->world;std::vector<U> duties;
+  need(observer(s,who),F04_DENIED);need(!segmented(*s->c),F04_SAVE);const auto& w=s->c->world;std::vector<U> duties;
   for(U a:all(w,"activity"))if(val(w,a,VALUE)==F04_DUTY)duties.push_back(a);
   *total=duties.size();need(offset<=*total);*written=std::min(capacity,*total-offset);
   for(U i=0;i<*written;++i) {
@@ -41,7 +41,7 @@ uint32_t f04_duties_page(F04Session* s,F04Ref who,U offset,F04DutyView* out,U ca
 uint32_t f04_roster_gaps_page(F04Session* s,F04Ref who,U offset,F04RosterGap* out,U capacity,U* written,U* total) {
  if(!written || !total || (!out && capacity))return F04_ARGUMENT;*written=*total=0;
  return call(s,[&]()->uint32_t {
-  need(observer(s,who),F04_DENIED);const auto& w=s->c->world;const auto gaps=all(w,"roster_gap");
+  need(observer(s,who),F04_DENIED);need(!segmented(*s->c),F04_SAVE);const auto& w=s->c->world;const auto gaps=all(w,"roster_gap");
   *total=gaps.size();need(offset<=*total);*written=std::min(capacity,*total-offset);
   for(U i=0;i<*written;++i){const U g=gaps[static_cast<size_t>(offset+i)];out[i]={g,val(w,g,START),val(w,g,END),val(w,g,DEPT),val(w,g,STATIONS),val(w,g,VALUE),ref(w,g,PLAN)};}
   return F04_OK;
@@ -51,6 +51,9 @@ uint32_t f04_service_coverage(F04Session* s,F04Ref who,U start,U end,F04ServiceC
  if(!count || (!out && capacity))return F04_ARGUMENT;*count=0;
  return call(s,[&]()->uint32_t {
   need(observer(s,who),F04_DENIED);const auto& w=s->c->world;need(organization(w) && start<end && end<=FOREVER && end-start<=28*86400);
+#ifdef F04_HISTORY_CORE
+  if(s->c->history)need(start>=s->c->history->frontier(),F04_SAVE);
+#endif
   const auto stations=organization_services(w);
   *count=stations.size();need(capacity>=*count,F04_CAPACITY);
   std::set<U> boundaries{start};

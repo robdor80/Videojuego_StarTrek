@@ -59,6 +59,32 @@ bool UF04CampaignSubsystem::Load(const TArray<uint8>& Bytes){
  if(!IsInGameThread() || !Session || f04_load(Session,Bytes.GetData(),Bytes.Num())!=F04_OK)return false;
  ClearVisuals();return f04_handles(Session,&Handles)==F04_OK;
 }
+bool UF04CampaignSubsystem::MigrateHistory(const FString& Directory){
+ if(!IsInGameThread() || !Session)return false;const FGuid Id=FGuid::NewGuid();uint8 Bytes[16];static_assert(sizeof(Id)==sizeof(Bytes));FMemory::Memcpy(Bytes,&Id,sizeof(Bytes));
+ return f04_history_migrate(Session,TCHAR_TO_UTF8(*Directory),Bytes,16)==F04_OK;
+}
+bool UF04CampaignSubsystem::OpenHistory(const FString& Directory){
+ if(!IsInGameThread() || !Session || f04_history_open(Session,TCHAR_TO_UTF8(*Directory))!=F04_OK)return false;
+ ClearVisuals();return f04_handles(Session,&Handles)==F04_OK;
+}
+bool UF04CampaignSubsystem::PublishHistory(){return IsInGameThread() && Session && f04_history_publish(Session,0)==F04_OK;}
+bool UF04CampaignSubsystem::ConsolidateHistory(uint64 Cutoff){return IsInGameThread() && Session && f04_history_consolidate(Session,Cutoff,0)==F04_OK;}
+bool UF04CampaignSubsystem::HistoryStats(F04HistoryStats& Out)const{return IsInGameThread() && Session && f04_history_stats(Session,&Out)==F04_OK;}
+bool UF04CampaignSubsystem::HistoryPage(uint64 Generation,uint64 After,TArray<F04HistoryFact>& Out,bool& More)const{
+ Out.Empty();More=false;if(!IsInGameThread() || !Session)return false;F04HistoryFact Page[256]{};uint64 Written=0;uint32 HasMore=0;
+ if(f04_history_page(Session,Handles.captain,Generation,After,Page,256,&Written,&HasMore)!=F04_OK)return false;
+ Out.Append(Page,static_cast<int32>(Written));More=HasMore!=0;return true;
+}
+bool UF04CampaignSubsystem::HistoryRelations(uint64 Generation,uint64 Entity,TArray<F04HistoryRelation>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;F04HistoryRelation Page[256]{};uint64 Written=0,Total=0;
+ if(f04_history_relations(Session,Handles.captain,Generation,Entity,0,Page,256,&Written,&Total)!=F04_OK || Written!=Total)return false;
+ Out.Append(Page,static_cast<int32>(Written));return true;
+}
+bool UF04CampaignSubsystem::ActiveHistoryCheckpoint(TArray<uint8>& Out)const{
+ Out.Empty();if(!IsInGameThread() || !Session)return false;uint64 Size=0;
+ if(f04_history_export_active(Session,nullptr,0,&Size)!=F04_CAPACITY || Size>MAX_int32)return false;
+ Out.SetNumUninitialized(static_cast<int32>(Size));return f04_history_export_active(Session,Out.GetData(),Size,&Size)==F04_OK;
+}
 void UF04CampaignSubsystem::Refresh(){
  if(!Session)return;
  f04_handles(Session,&Handles);

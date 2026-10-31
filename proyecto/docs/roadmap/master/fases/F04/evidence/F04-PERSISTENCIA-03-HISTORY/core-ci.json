@@ -1,0 +1,16 @@
+{
+  "repository": "robdor80/CoreRPG",
+  "revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "run_id": 41155489859,
+  "url": "https://github.com/robdor80/CoreRPG/actions/runs/41155489859",
+  "status": "completed",
+  "conclusion": "success",
+  "jobs": [
+    {"name": "Windows / MSVC", "conclusion": "success"},
+    {"name": "Linux / GCC", "conclusion": "success"},
+    {"name": "Core-only Release / Windows MSVC", "conclusion": "success"},
+    {"name": "Core-only Release / Linux GCC", "conclusion": "success"},
+    {"name": "Linux GCC / ASan + UBSan", "conclusion": "success"},
+    {"name": "Linux GCC / ContentJson external pack ASan + UBSan", "conclusion": "success"}
+  ]
+}

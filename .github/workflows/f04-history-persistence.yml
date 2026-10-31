@@ -1,0 +1,65 @@
+name: F04 proposed historical persistence
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F04/**'
+      - '.github/workflows/f04-history-persistence.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real-campaign:
+    runs-on: windows-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {profile: 1, days: 365, case: '1_365'}
+          - {profile: 2, days: 365, case: '2_365'}
+          - {profile: 3, days: 365, case: '3_365'}
+          - {profile: 4, days: 365, case: '4_365'}
+          - {profile: 5, days: 365, case: '5_365'}
+          - {profile: 5, days: 730, case: 'valhalla_730'}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read explicit proposed revision; stable pin remains unchanged
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f04/core-history-revision.txt -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid proposed SHA'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: external/CoreRPG
+      - name: Configure proposed integration and separate complete-history oracle
+        shell: pwsh
+        run: >-
+          cmake -S desarrollo/integration/f04 -B build/history -A x64
+          -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG"
+          -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON
+      - name: Build
+        run: cmake --build build/history --config Release --parallel 4
+      - name: Proposed-Core regressions and injected faults
+        if: matrix.profile == 1
+        run: ctest --test-dir build/history -C Release -E history_campaign_ --output-on-failure --output-junit "${{ github.workspace }}/build/history/regressions.xml" -j 2
+      - name: Actual watches, consolidation, complete-history equivalence, process recovery and all-payload audit
+        run: ctest --test-dir build/history -C Release -R "^f04.history_campaign_${{ matrix.case }}$" --no-tests=error --output-on-failure --output-junit "${{ github.workspace }}/build/history/campaign.xml"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f04-history-${{ matrix.profile }}-${{ matrix.days }}
+          path: |
+            build/history/campaign.xml
+            build/history/regressions.xml
+            build/history/history-runs/**/*.json
+            build/history/history-runs/**/*.log
+            build/history/history-runs/**/*.oracle
+            build/history/history-runs/**/*.resume

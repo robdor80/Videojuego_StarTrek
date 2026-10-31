@@ -1,0 +1,16 @@
+{
+  "kind": "acceptance",
+  "profile": 3,
+  "days": 365,
+  "completed": 365,
+  "maximum_resident": 8492,
+  "maximum_active_bytes": 2587327,
+  "elapsed_ms": 64478,
+  "real_watches": true,
+  "all_blocks_equal_complete_history": true,
+  "working_set": 12369920,
+  "peak_working_set": 31629312,
+  "storage_bytes_retaining_previous_generations": 140155276,
+  "phases_elapsed_seconds": 332.6241178000055,
+  "core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439"
+}

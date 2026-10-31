@@ -166,6 +166,28 @@ typedef struct { uint64_t entity,parent,identity; uint32_t docked,reserved; } F0
 F04_API uint32_t f04_specialists_page(F04Session*,F04Ref,uint64_t offset,F04Specialist*,uint64_t capacity,uint64_t* written,uint64_t* total);
 F04_API uint32_t f04_residents_page(F04Session*,F04Ref,uint64_t offset,F04Resident*,uint64_t capacity,uint64_t* written,uint64_t* total);
 F04_API uint32_t f04_auxiliary(F04Session*,F04Ref,F04Auxiliary*);
+/* Explicit optional Core history storage v1. Requires F04_ENABLE_HISTORY build.
+ * Existing monolithic save/load remain unchanged. After migration, full persistence
+ * uses a Core generation directory. Old full-history/save queries return F04_SAVE;
+ * use history_page/relations and the explicit active-only diagnostic export instead.
+ * Keep seven days, all future and live dependencies; cutoff <= now-604800.
+ * fault=0 normally; 1..7 are Core test injection boundaries, never gameplay flags.
+ * Paths are UTF-8. Migration requires a new destination and nonzero 16-byte UUID.
+ */
+typedef struct { uint64_t version,generation,issued,resident,archived,segments,frontier,relations; } F04HistoryStats;
+typedef struct { uint64_t id,begin,end,container,relations; char definition[64]; } F04HistoryFact;
+typedef struct { uint64_t source,kind,target; } F04HistoryRelation;
+F04_API uint32_t f04_history_migrate(F04Session*,const char* directory,const uint8_t* campaign_id,uint64_t size);
+F04_API uint32_t f04_history_open(F04Session*,const char* directory);
+F04_API uint32_t f04_history_consolidate(F04Session*,uint64_t cutoff,uint32_t fault);
+F04_API uint32_t f04_history_publish(F04Session*,uint32_t fault);
+F04_API uint32_t f04_history_stats(F04Session*,F04HistoryStats*);
+F04_API uint32_t f04_history_count(F04Session*,F04Ref,uint64_t person,uint64_t* shifts);
+F04_API uint32_t f04_history_page(F04Session*,F04Ref,uint64_t generation,uint64_t after,F04HistoryFact*,uint64_t capacity,uint64_t* written,uint32_t* more);
+F04_API uint32_t f04_history_relations(F04Session*,F04Ref,uint64_t generation,uint64_t entity,uint64_t offset,F04HistoryRelation*,uint64_t capacity,uint64_t* written,uint64_t* total);
+/* Privileged diagnostic checkpoint of ACTIVE projection only, not a full save.
+ * It must not be passed to f04_load as a substitute for history_open. */
+F04_API uint32_t f04_history_export_active(F04Session*,uint8_t*,uint64_t capacity,uint64_t* size);
 #ifdef __cplusplus
 }
 #endif

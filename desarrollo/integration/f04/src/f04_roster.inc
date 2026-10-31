@@ -3,6 +3,7 @@ struct Span {U start,end;};
 struct PlannerPerson {
  U id,slot,department,section,ordinal,role,mask,expiry,stations;
  std::vector<Span> work,blocked;bool debt=false;
+ U historical=0;
 };
 bool ordinary_fits(const PlannerPerson& p,U start,U end) {
  if(p.debt || start>=end || end-start>28800 || end>p.expiry)return false;
@@ -84,7 +85,19 @@ U plan_watches(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
  }
  for(U slot:all(c.world,"slot")) {
   const U p=ref(c.world,slot,PERSON);
-  if(p && member(c.world,p) && val(c.world,p,CATEGORY)==1)people.push_back(planner_person(c.world,p,slot));
+  if(p && member(c.world,p) && val(c.world,p,CATEGORY)==1){auto person=planner_person(c.world,p,slot);
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+   // Test oracle only: retain every original record in WorldState and derive
+   // lifetime count afresh. A closed work interval ending >=7 days before now
+   // cannot overlap a future request, affect 12h rest or any future 168h window.
+   // Full-history schema validation still checks every historical interval.
+   if(c.time.now()>=604800){const U cutoff=c.time.now()-604800;
+    std::erase_if(person.work,[&](const Span& span){if(span.end<=cutoff){++person.historical;return true;}return false;});}
+#endif
+#ifdef F04_HISTORY_CORE
+   if(c.history)person.historical=c.history->count(1,EntityId{p});
+#endif
+   people.push_back(std::move(person));}
  }
  // Protect a small real qualified relief pool from discretionary workloads.
  // A greedy departmental fill otherwise spends every sensor/operator's weekly
@@ -125,7 +138,7 @@ U plan_watches(Campaign& c,const ContentCatalog& cat,const F04Request& r) {
    const auto score=[&](const PlannerPerson& p) {
     U recent=0;for(const auto& x:p.work)if(x.start<=start && start-x.start<604800)++recent;
     // Prefer fewer lifetime shifts, then rotate shift preference weekly.
-    return std::array<U,4>{recent,U(p.work.size()),(label+3-(p.id+day/604800)%3)%3,p.id};
+    return std::array<U,4>{recent,p.historical+U(p.work.size()),(label+3-(p.id+day/604800)%3)%3,p.id};
    };return score(people[a])<score(people[b]);
   };
   for(U station:trek_templates::roster_services(*profile)) {

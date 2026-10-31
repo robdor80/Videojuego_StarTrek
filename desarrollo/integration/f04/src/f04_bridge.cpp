@@ -3,6 +3,9 @@
 #include "f04_templates.h"
 #include <corerpg/campaign_persistence.hpp>
 #include <corerpg/content_catalog.hpp>
+#ifdef F04_HISTORY_CORE
+#include <corerpg/history.hpp>
+#endif
 #include <algorithm>
 #include <array>
 #include <atomic>
@@ -31,7 +34,31 @@ enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
-struct Campaign { WorldState world; RandomStreams random{404}; Timeline time; };
+struct Campaign { WorldState world; RandomStreams random{404}; Timeline time;
+#ifdef F04_HISTORY_CORE
+ std::optional<HistoryArchive> history;
+#endif
+};
+U resident(const Campaign& c) {
+#ifdef F04_HISTORY_CORE
+ if(c.history)return c.history->resident_count(c.world);
+#endif
+ return c.world.entity_count();
+}
+bool segmented(const Campaign& c) {
+#ifdef F04_HISTORY_CORE
+ return c.history.has_value();
+#else
+ (void)c;return false;
+#endif
+}
+std::vector<EntityId> projected_ids(const WorldState& w) {
+#ifdef F04_HISTORY_CORE
+ return HistoryPersistence::bound_entities(w);
+#else
+ std::vector<EntityId> ids;ids.reserve(static_cast<size_t>(w.entity_count()));for(U id=1;id<=w.entity_count();++id)ids.emplace_back(id);return ids;
+#endif
+}
 U ref(const WorldState& w,U id,Ref field) {
  for(const auto& r:w.relations_from(EntityId{id})) if(r.kind.value()==field) return r.target.value();
  return 0;
@@ -63,7 +90,7 @@ void invalidate_index(){read_index.world=nullptr;}
 const ReadIndex& indexed(const WorldState& w) {
  if(read_index.world==&w && read_index.revision==w.revision())return read_index;
  read_index={};read_index.world=&w;read_index.revision=w.revision();
- for(U id=1;id<=w.entity_count();++id) {
+ for(auto entity:projected_ids(w)) {const U id=entity.value();
   const auto* def=w.definition_of(EntityId{id});if(!def)continue;
   const auto name=std::string(def->value());
   const auto colon=name.find(':');const auto kind=name.substr(colon+1);
@@ -113,7 +140,9 @@ CatalogBuildResult catalog() {
 U make(Campaign& c,const ContentCatalog& cat,const char* name) {
  // Technical archive/work budget, not a physical ship capacity: 2200 people
  // plus up to ~29 operational records per person within the 64 MiB loader cap.
- need(c.world.entity_count()<65536,F04_CAPACITY);
+#ifndef F04_HISTORY_REFERENCE
+ need(resident(c)<65536,F04_CAPACITY);
+#endif
  const auto id=c.world.create_entity(); need(id.is_valid(),F04_INTERNAL);
  need(c.world.bind_definition(id,cat,*DefinitionId::parse(std::string("trek.f04:")+name))==DefinitionBindingChange::applied,F04_INTERNAL);
  return id.value();
@@ -259,13 +288,25 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
 bool roster_schema(const WorldState& w);
 // Strict relational schema. It rejects undeclared labels/fields and duplicate
 // scalar/reference fields before any restored graph becomes live.
-bool schema(const Campaign& c) {
+bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
  const auto& w=c.world;
+#if defined(F04_HISTORY_REFERENCE) && defined(F04_FAST_HISTORY_ORACLE)
+ // Oracle-only optimization. The product always runs this complete validator.
+ // The oracle keeps all original facts, still checks the complete roster at
+ // every plan, and runs this global validator explicitly at both final horizons.
+ if(!exhaustive && c.time.now()>0)return true;
+#else
+ (void)exhaustive;
+#endif
  const bool org=organization(w),general=val(w,1,SCHEMA)>=2;const U initial=general?val(w,1,INITIAL):9;
- if(w.entity_count()<(general?4U:19U) || w.entity_count()>65536 || val(w,1,SCHEMA)<1 || val(w,1,SCHEMA)>4 || !w.definition_of(EntityId{1}) ||
+ if(w.entity_count()<(general?4U:19U) ||
+#ifndef F04_HISTORY_REFERENCE
+    resident(c)-retiring>65536 ||
+#endif
+    projected_ids(w).size()!=resident(c)-retiring || val(w,1,SCHEMA)<1 || val(w,1,SCHEMA)>4 || !w.definition_of(EntityId{1}) ||
     val(w,1,PATTERN)<3 || val(w,1,PATTERN)>4 || val(w,1,ALERT)<1 || val(w,1,ALERT)>3 || c.time.now()>FOREVER || !c.time.records().empty()) return false;
  bool cls=false;for(auto* s:class_ids) cls|=type(w,1,(std::string("class_")+s).c_str());if(!cls)return false;
- for(U id=1;id<=w.entity_count();++id) {
+ for(auto entity:projected_ids(w)) {const U id=entity.value();
   std::set<U> fields,refs; std::set<U> allowed,required,ar,rr;
   if(id==1) { allowed={SCHEMA,PATTERN,ALERT};if(general)allowed.insert({SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL});if(org)allowed.insert({TEMPLATE,EQUIPMENT,SEEDED,ALPHA_START,ALPHA_END});required=allowed; }
   else if(type(w,id,"population")) { if(id!=2)return false; }
@@ -343,6 +384,9 @@ bool schema(const Campaign& c) {
  for(auto& entry:intervals) {auto& list=entry.second;std::sort(list.begin(),list.end());
   for(size_t i=1;i<list.size();++i)if(list[i].first<list[i-1].second)return false;
  }
+#ifdef F04_HISTORY_CORE
+ if(c.history && HistoryPersistence::validate_active(*c.history,CampaignPersistence::capture(c.world,c.random,c.time))!=HistoryStatus::success)return false;
+#endif
  return organization_schema(w) && roster_schema(w) && valhalla_schema(w);
 }
 #include "f04_roster.inc"
@@ -621,6 +665,7 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
 std::atomic<U> scopes{1};
 }
 struct F04Session {
+ bool storage_uncertain=false;
  const std::thread::id owner{std::this_thread::get_id()};
  CatalogBuildResult content{catalog()};std::unique_ptr<Campaign> c{std::make_unique<Campaign>()};U scope{scopes.fetch_add(1)};
  explicit F04Session(const char* cls) {need(content.succeeded(),F04_INTERNAL);initialize(*c,*content.catalog(),cls);need(schema(*c),F04_INTERNAL);}
@@ -633,9 +678,9 @@ struct F04Session {
 };
 namespace {
 uint32_t guard(F04Session* s) {invalidate_index();return !s?F04_ARGUMENT:s->owner!=std::this_thread::get_id()?F04_THREAD:F04_OK;}
-template<class F> uint32_t call(F04Session* s,F&& f) noexcept {
+template<class F> uint32_t call(F04Session* s,F&& f,bool recovering=false) noexcept {
  if(auto r=guard(s);r)return r;
- try{return f();}catch(const Denial& e){return e.code;}catch(...){return F04_INTERNAL;}
+ try{need(!s->storage_uncertain || recovering,F04_SAVE);return f();}catch(const Denial& e){return e.code;}catch(...){return F04_INTERNAL;}
 }
 bool observer(F04Session* s,F04Ref p) { return p.scope==s->scope && type(s->c->world,p.id,"person") && member(s->c->world,p.id) && val(s->c->world,p.id,CATEGORY)==1; }
 }
@@ -755,7 +800,7 @@ uint32_t f04_slots(F04Session* s,F04Ref who,F04Slot* out,U capacity,U* count) {
 }
 uint32_t f04_save(F04Session* s,uint8_t* out,U capacity,U* size) {
  if(!size || (!out && capacity))return F04_ARGUMENT;*size=0;
- return call(s,[&]() -> uint32_t {const auto& c=*s->c;const auto saved=CampaignPersistence::serialize(CampaignPersistence::capture(c.world,c.random,c.time));need(saved.status==CampaignArchiveStatus::success,F04_SAVE);*size=saved.bytes.size();need(capacity>=*size,F04_CAPACITY);std::memcpy(out,saved.bytes.data(),saved.bytes.size());return F04_OK;});
+ return call(s,[&]() -> uint32_t {const auto& c=*s->c;need(!segmented(c),F04_SAVE);const auto saved=CampaignPersistence::serialize(CampaignPersistence::capture(c.world,c.random,c.time));need(saved.status==CampaignArchiveStatus::success,F04_SAVE);*size=saved.bytes.size();need(capacity>=*size,F04_CAPACITY);std::memcpy(out,saved.bytes.data(),saved.bytes.size());return F04_OK;});
 }
 uint32_t f04_watch_window(F04Session* s,U tick,F04WatchWindow* out) {
  if(!out)return F04_ARGUMENT;*out={};
@@ -768,7 +813,7 @@ uint32_t f04_watch_window(F04Session* s,U tick,F04WatchWindow* out) {
 }
 uint32_t f04_load(F04Session* s,const uint8_t* bytes,U size) {
  if(!bytes || !size || size>64ULL*1024*1024)return F04_ARGUMENT;
- return call(s,[&]() -> uint32_t {auto next=std::make_unique<Campaign>();need(CampaignPersistence::load({bytes,static_cast<size_t>(size)},next->world,next->random,next->time,{},s->content.catalog())==CampaignArchiveStatus::success,F04_SAVE);need(schema(*next),F04_SAVE);s->c.swap(next);s->scope=scopes.fetch_add(1);s->index_revision=UINT64_MAX;return F04_OK;});
+ return call(s,[&]() -> uint32_t {need(!segmented(*s->c),F04_SAVE);auto next=std::make_unique<Campaign>();need(CampaignPersistence::load({bytes,static_cast<size_t>(size)},next->world,next->random,next->time,{},s->content.catalog())==CampaignArchiveStatus::success,F04_SAVE);need(schema(*next),F04_SAVE);s->c.swap(next);s->scope=scopes.fetch_add(1);s->index_revision=UINT64_MAX;return F04_OK;});
 }
 uint32_t f04_template_spec(U id,F04TemplateSpec* out) {
  if(!out)return F04_ARGUMENT;*out={};const auto* definition=trek_templates::find(id);if(!definition)return F04_ARGUMENT;
@@ -803,7 +848,7 @@ uint32_t f04_person_credentials(F04Session* s,F04Ref who,U person,U* mask,U* exp
 uint32_t f04_functions(F04Session* s,F04Ref who,F04FunctionView* out,U capacity,U* count) {
  if(!count || (!out && capacity))return F04_ARGUMENT;*count=0;
  return call(s,[&]()->uint32_t {need(observer(s,who),F04_DENIED);const auto& w=s->c->world;need(organization(w));
-  auto functions=all(w,"function");*count=functions.size();need(capacity>=*count,F04_CAPACITY);
+  need(!segmented(*s->c),F04_SAVE);auto functions=all(w,"function");*count=functions.size();need(capacity>=*count,F04_CAPACITY);
   for(size_t i=0;i<functions.size();++i){U f=functions[i];out[i]={ref(w,f,PERSON),ref(w,f,SLOT),val(w,f,STATIONS),val(w,f,START),val(w,f,END),station_active(w,f,s->c->time.now())?1U:0U,0};}return F04_OK;});
 }
 uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* out) {
@@ -833,3 +878,4 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
 }
 #include "f04_roster_queries.inc"
 #include "f04_valhalla_queries.inc"
+#include "f04_history.inc"

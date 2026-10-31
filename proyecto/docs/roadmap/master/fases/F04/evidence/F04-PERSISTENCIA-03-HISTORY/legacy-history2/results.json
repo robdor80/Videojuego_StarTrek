@@ -1,0 +1,52 @@
+{
+  "miranda": {
+    "source_sha256": "74293b73a94c0823b2ac43a9db1e17afef2156213f0a48df038a6514ca5f9738",
+    "future_sha256": "55e78d943d68b1afaaf3d080f9c0bd09d9b1e2bec21d205f93d37ea890b69955",
+    "future_tick": 57600,
+    "source_unchanged": true,
+    "active_projection_identical": true,
+    "fresh_process_future_identical": true,
+    "old_reader_rejects_history_without_mutation": true,
+    "resume": "fresh process migration future PASS"
+  },
+  "intrepid": {
+    "source_sha256": "3be4182e3d2332982ccf67eeee145ebbee337ac0474ae5e50605cf4f9c7d34f1",
+    "future_sha256": "9578ceb68f5ba586f9d9cc37aa58260ac0a528aed6e36ca7ff7f510af9cea2e7",
+    "future_tick": 57600,
+    "source_unchanged": true,
+    "active_projection_identical": true,
+    "fresh_process_future_identical": true,
+    "old_reader_rejects_history_without_mutation": true,
+    "resume": "fresh process migration future PASS"
+  },
+  "sovereign": {
+    "source_sha256": "48627fbec27b94db886796ad9f05b1a3d6845f36450786b7e50ff8861afe98cd",
+    "future_sha256": "3de088c2e4a4506b653745c85386702b78318db05b83ec0db54f815cdbf06785",
+    "future_tick": 1209599,
+    "source_unchanged": true,
+    "active_projection_identical": true,
+    "fresh_process_future_identical": true,
+    "old_reader_rejects_history_without_mutation": true,
+    "resume": "fresh process migration future PASS"
+  },
+  "odyssey": {
+    "source_sha256": "d67ab588cbf751b88c57d125935dc1451e6a4618916dd57ff9166a9dd811dd5e",
+    "future_sha256": "6760e664ece690614c3567926591e6fad6f555e4dd7dcd177e2ac0925c627d95",
+    "future_tick": 1209599,
+    "source_unchanged": true,
+    "active_projection_identical": true,
+    "fresh_process_future_identical": true,
+    "old_reader_rejects_history_without_mutation": true,
+    "resume": "fresh process migration future PASS"
+  },
+  "valhalla": {
+    "source_sha256": "25e6e0db562475b8e0cd82d94b0984039c6aef0a3fca0480b69f03db969aeba5",
+    "future_sha256": "655da920b680f03d29e1cc484473402675ad594a1aef668a2ee262fac1147be2",
+    "future_tick": 1209599,
+    "source_unchanged": true,
+    "active_projection_identical": true,
+    "fresh_process_future_identical": true,
+    "old_reader_rejects_history_without_mutation": true,
+    "resume": "fresh process migration future PASS"
+  }
+}

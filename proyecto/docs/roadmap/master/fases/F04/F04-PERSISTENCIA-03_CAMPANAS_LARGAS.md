@@ -1,282 +1,178 @@
-# F04-PERSISTENCIA-03 — Persistencia de campañas largas
+# F04-PERSISTENCIA-03 — Persistencia histórica autoritativa
 
-Fecha: 31-10-2026. **INCOMPLETA: bloqueo de arquitectura pendiente de autorización
-para ampliar CoreRPG genérico.** Esta entrega diagnostica el problema y añade
-pruebas reproducibles; no implementa archivo, compactación ni campañas ilimitadas.
-No inicia INTEGRACION-04 ni CIERRE-05. F04 permanece EN_CURSO.
+31-10-2026. **Implementación autorizada y disponible en dos PR Draft. Validación de
+730 días todavía en ejecución; PERSISTENCIA-03 no se declara terminada.** F04 sigue
+EN_CURSO. No se inicia INTEGRACION-04 ni CIERRE-05. Ninguna PR se fusiona aquí.
 
-Base exacta: `45f7816c9aa996bfd678b11b4f9fa1a4b9632021` (PR #75 incorporada).
-Rama: `codex/f04-persistencia-03-campanas-largas`.
-Repositorio: `robdor80/Videojuego_StarTrek`.
+Base Star Trek: `45f7816c9aa996bfd678b11b4f9fa1a4b9632021`.
+Rama existente: `codex/f04-persistencia-03-campanas-largas`, PR #76.
+Core propuesto: [PR Draft #13](https://github.com/robdor80/CoreRPG/pull/13), rama
+`codex/core-history-segments-authoritative`, revisión exacta
+`63d2401edaf85960b4baaf6b537ae571ba52a439`, desde
+`c147d81ed069da2e09149613ab02cbc3ebe95a4a`.
 
-## 1. Precondiciones y aislamiento
+La [autorización expresa](https://github.com/robdor80/Videojuego_StarTrek/pull/76#issuecomment-6536894218)
+aprueba la ampliación genérica antes propuesta en el apartado 5. El
+[diagnóstico previo](F04-PERSISTENCIA-03_DIAGNOSTICO_PREVIO.md) se conserva como
+registro de la entrega anterior; sus resultados de saturación no son la aceptación
+actual. No se han cambiado recursos 3D, Blender, texturas ni otros proyectos.
 
-Se actualizó main mediante fetch y fast-forward a la base obligatoria. El checkout
-principal **no estaba limpio**: dos bajas en
-`assets/interiores/shipboard/ten_forward_tng/` y un directorio nuevo
-`assets/interiores/ten_forward_tng/`, cambios ajenos a F04. Se conservaron y se
-usó un worktree nuevo y limpio `C:/F04/Persistencia03`. No se restauraron ni
-incluyeron esos recursos en commits. Laboratorio externo: `C:/F04/PersistenciaBuild`.
+## 1. Separación de responsabilidades y compatibilidad
 
-Pins comprobados, sin modificarlos:
+CoreRPG administra `HistoryArchive`/`HistoryPersistence`: identidades emitidas,
+localización residente/archivada, payload original inmutable, índices comprobados,
+SHA-256, cadena de segmentos, manifiesto, checkpoint, reducciones, publicación y
+recuperación. No conoce naves, guardias, Marines, civiles ni reglas de Star Trek.
 
-| Integración | CoreRPG |
-| --- | --- |
-| F04 | `c147d81ed069da2e09149613ab02cbc3ebe95a4a` |
-| F03 | `9c53a33787de13d91eb2abe4da07033ee0fa1dc1` |
-| F02 | `4f282863737bcd8f5add401202a9e1064c133672` |
+Las firmas, disposición y semántica monolítica de WorldState, Persistence,
+CampaignPersistence y Timeline se conservan. SAVE v1/v2/v3 y CRPGTIME v1 siguen
+vigentes. Las clases anteriores solo reciben declaraciones friend sin cambio de
+layout. El contenedor histórico tiene magic y versión propios, optativos.
+`contains` y `entity_count` conservan el significado de IDs emitidos; la residencia
+se consulta expresamente con APIs nuevas. Archivar no borra una identidad ni
+permite volver a emitirla. No ha sido necesario un cambio incompatible de ABI.
 
-`Engine/Build/Build.version` local confirma Unreal **5.8.2**, changelist
-56702186. Se revisaron las entregas de Odyssey, Valhalla y GUARDIAS-02, sus
-límites y el código vigente. No se usa Computer Use ni se modifica otro proyecto,
-el repositorio CoreRPG, fuentes Unreal, recursos artísticos o archivos ignorados
-del checkout. Las compilaciones y partidas sintéticas se generan fuera de él.
+F04 adopta esa proyección activa mediante APIs adicionales ABI 1. La política de
+retención y autorización sigue en F04. El presupuesto productivo permanece en
+65.536 entidades **residentes**. No se eleva el techo, no se renumeran IDs, no se
+regeneran hechos desde semillas y no existe un almacén autoritativo alternativo.
 
-## 2. Auditoría del modelo y causa exacta
+El pin estable `desarrollo/integration/f04/core-revision.txt` permanece en
+`c147d81ed069da2e09149613ab02cbc3ebe95a4a`. La integración propuesta exige
+`F04_ENABLE_HISTORY=ON` y verifica el SHA independiente de
+`core-history-revision.txt`. El modo predeterminado conserva el pin estable.
 
-Core `WorldState` representa todas las identidades emitidas mediante el intervalo
-denso `[1,last_entity_id]`. `contains(id)` comprueba ese intervalo;
-`entity_count()` devuelve el máximo emitido, no un recuento de registros vigentes.
-`create_entity()` incrementa identidad y revisión. No existen borrado de entidad,
-desvinculación de definición, archivo, localizador de entidades externas ni
-consulta de segmentos. Las definiciones quedan asociadas de forma inmutable.
-Las relaciones, contenciones, poblaciones, membresías y conocimiento son tablas
-canónicas residentes. Quitar relaciones no libera identidades.
+## 2. Consolidación y determinismo
 
-**65.536 es el presupuesto explícito de F04**, en `make()` y `schema()` de
-`src/f04_bridge.cpp`; no es el máximo nativo de IDs de CoreRPG. Core utiliza IDs
-de 64 bits. Su `PersistenceLimits` predeterminado impone **64 MiB** y otros límites
-independientes: un millón de relaciones, definiciones, enlaces, etc. Ningún límite
-se cambia en esta entrega. Los escenarios de capacidad observados tropiezan con
-F04_CAPACITY antes de agotar 64 MiB; no deben confundirse ambos techos.
+F04 conserva presente, futuro, siete días operativos anteriores, REST con deuda,
+ABSENCE que cruza la frontera, tareas pendientes y las dependencias transitivas
+de todos los registros retenidos. No basta la antigüedad para cerrar un hecho.
+Se mantienen personas, plazas, competencias, censo, residencia y grupos.
+Los hechos cerrados conservan exactamente definición, relaciones, contención,
+emisor, persona, plaza, causa, PLAN/ACTIVITY/origen, STOP, suplencias y revocaciones.
 
-Los generadores `RandomStreams`, su semilla y cada estado se capturan con el
-mundo. `CampaignPersistence` incluye el reloj y registros Timeline. F04 guarda
-tareas/eventos en WorldState; su validador exige Timeline sin registros. El techo
-genérico Timeline de 4.096 registros no es la causa de este fallo F04.
+Core deriva el acumulador de equidad por persona de los hechos originales:
+DUTY con `(STATE==ACTIVE || STOP existe)` y
+`START < min(END, STOP si existe)`. F04 puntúa el número archivado más
+`p.work.size()` residente. Las ventanas recientes de 168 h, la restricción diaria,
+las 12 h de descanso y las ausencias siguen usando los intervalos reales.
+Core vuelve a calcular el acumulador durante recuperación y exige igualdad con
+el manifiesto. No se sustituyen los hechos consultables por un resumen.
+No se añade SCHEMA 5: la reducción pertenece al manifiesto Core versionado.
 
-### Registros generados y estado presente
+La selección F04 retiene los objetivos de referencias de cualquier registro vivo,
+incluidos planes y actividades origen. La validación semántica F04 de la proyección
+resultante se ejecuta antes de la publicación Core. Consolidar aumenta una revisión
+técnica, conserva el high-water mark y no consume RNG ni avanza el reloj.
 
-| Hecho F04 | Representación actual | Dependencia que impide descartarlo sin más |
-| --- | --- | --- |
-| Plan por solicitud | `roster_plan`, nave, emisor, causa, intervalo, modo | Referencias de actividades y carencias; exclusión de planes |
-| Servicio ordinario | `activity` DUTY por persona/turno | Persona, plaza, emisor, PLAN, causa, intervalo, STOP, suplencia |
-| Cobertura crítica | Ocho `function` por turno cuando hay proveedores | Proveedor real, plaza, responsable, intervalo y estación |
-| Mando/ingeniería de guardia | Dos `appointment` por turno si cubiertos | Sucesión y autoridad temporal |
-| Carencia crítica/no crítica | `roster_gap` por departamento/estación/intervalo | Déficit original e incidencias posteriores, incluso resueltas |
-| Descanso/franco protegido | `activity` REST | Intervalo y deuda tras RECALL; no se elimina al vencer |
-| Ausencia/vacaciones/baja | `activity` ABSENCE, código y causa | Disponibilidad, recuperación por fin de intervalo, causalidad |
-| Suplencia/cancelación | Nueva DUTY con ACTIVITY origen, STOP y cambios de estado; funciones/nombramientos | Referencias entre IDs y funciones revocadas explícitamente |
-| Nombramiento/revocación | `appointment`, estado y evento | No restaurar autoridad cancelada |
-| Cambio de mando | `event` op 100 al cruzar fronteras temporales | Responsable previo, destino, causa y tick |
-| Traslado/salida | Persona y plaza existentes modificadas, actividades canceladas y evento | MEMBER, destino y continuidad de identidad |
-| Incidente/orden/revisión/tarea | Actividad y/o `event`, `order`, `review`, `task`, `delegation`, `mandate` | Resultado, causa, emisor, origen y vencimiento |
-| Censo/agenda civil | Campos y referencias en la persona; no DUTY diaria militar | Domicilio, categoría, contacto, presencia y reserva de agenda |
+## 3. Publicación, fallo y recuperación
 
-El mayor crecimiento es DUTY; hay además 24 funciones y seis nombramientos por
-día, carencias y eventos. El reloj no convierte automáticamente el pasado en
-registros pequeños: los intervalos vencidos siguen presentes con sus relaciones.
-No hay una simulación clínica completa de muerte/secuelas/méritos en este corte;
-no se atribuye a estas pruebas una capacidad narrativa futura inexistente.
+Core prepara segmento/checkpoint/manifiesto, comprueba los objetos y sincroniza
+sus escrituras. Publica una generación mediante reemplazo atómico de CURRENT.
+Windows usa FlushFileBuffers y MoveFileExW con WRITE_THROUGH; Linux usa fsync,
+rename y sincronización del directorio. Un bloqueo de proceso y la comparación
+del root/generación impiden que un escritor obsoleto reemplace otro commit.
+Se conservan las generaciones anteriores y los originales de migración.
 
-### Transacciones e integridad existentes
+La recuperación valida la generación completa, cada segmento, sus índices,
+propiedad de IDs, referencias, reducciones, reloj y RNG antes del intercambio.
+No mezcla generaciones ni hace rollback silencioso ante una raíz confirmada
+corrupta. Los objetos incompletos no referenciados no adquieren autoridad.
+Un resultado de commit incierto bloquea el uso de la sesión F04 hasta recuperar.
+Los hashes comprueban integridad; no autentican a quien sustituya la raíz confiable.
 
-`f04_execute` prepara una copia de Campaign, aplica operaciones y valida el
-grafo antes del swap. Ante denegación descarta la copia y añade un evento sobre
-el estado anterior. En la saturación reproducida queda espacio para ese evento;
-no se promete registrar rechazos si ya no queda ni una entidad. `f04_advance`
-también prepara copia. Una carga se publica solo después de validación Core y
-F04 y renueva el scope. Un fallo deja la sesión previa intacta.
+Las pruebas incluyen las seis fronteras de publicación entre procesos,
+lectura fallida, objetos ausentes/truncados/modificados, manifiestos desconocidos,
+cadena y acumulador falsificados con hash válido, rechazo de payload histórico
+reintroducido y de escritores obsoletos. La integración F04 añade un fallo real de
+reemplazo de CURRENT por bloqueo de almacenamiento Win32, un segmento preparado
+parcial, raíz truncada, cursor obsoleto y conservación de REST/deuda más ABSENCE
+abierta a través de consolidación y recuperación.
 
-Core valida estructura, orden canónico, referencias, RNG y Timeline y usa
-checksum contra corrupción accidental. **No tiene autenticación criptográfica
-contra un atacante que regenere checksums.** Los validadores F04 rechazan algunas
-alteraciones semánticas con checksum correcto, no toda falsificación histórica.
-`f04_save` devuelve bytes; no implementa escritura atómica al sistema de archivos.
-La integridad de un conjunto de segmentos no puede obtenerse envolviendo estos
-bytes con un índice externo sin validación y autoridad adicional del motor.
+## 4. Consultas y migración
 
-## 3. Medición y reproducción
+`f04_history_page` devuelve páginas de hechos originales por ID y generación.
+`f04_history_relations` devuelve sus relaciones originales. Un error de integridad
+se comunica como F04_SAVE, nunca como historial vacío. No se reactivan actividades
+ni se crean Actors históricos. Una generación incorrecta devuelve F04_STALE.
 
-Los resultados completos están en [evidencias](evidence/F04-PERSISTENCIA-03/RESULTADOS.md).
-Se miden perfiles completos en 1, 7 y 28 días, con estados tipados, relaciones,
-tamaño serializado, planificación, guardado/carga y memoria del proceso.
-Los tiempos de save incluyen sus dos llamadas ABI (tamaño y escritura).
-Las mediciones son muestras locales, no percentiles ni garantías de latencia.
-Memoria significa working set de todo el proceso, incluyendo copias y buffers.
+La migración es explícita: cargar el guardado anterior, validar y producir un
+**directorio nuevo**. El original no se modifica. Se verifica igualdad de bytes
+activos, identidad, reloj/RNG y continuación en un proceso nuevo para las cinco
+clases. Los lectores anteriores rechazan el nuevo contenedor claramente.
 
-Un recorrido adicional intenta 365 días por clase y 730 en Valhalla mediante
-bloques de hasta 28 días, con actividades reales, avance y recarga periódica.
-Al fallar un bloque se conserva el último horizonte completo y se informa del
-rechazo. Un diagnóstico que pasa al reproducir F04_CAPACITY **no equivale a que
-la campaña haya alcanzado el horizonte solicitado**. El historial se mantiene
-íntegro en memoria activa: en esta entrega el historial archivado es cero.
+Tras optar por segmentos, `f04_save` y las antiguas consultas de historial completo
+DUTY/gaps/functions devuelven F04_SAVE para impedir exportaciones incompletas.
+Se usan las nuevas APIs de persistencia y consulta. El comportamiento monolítico
+anterior permanece intacto. La cobertura previa a la frontera no se infiere de
+registros ausentes. La exportación activa es solo un diagnóstico explícito.
+Las interfaces de personas, puestos, especialistas y residentes siguen disponibles.
 
-## 4. Alternativas evaluadas
+## 5. Campañas reales y auditoría de hechos
 
-| Alternativa | Evaluación con las APIs/pins actuales | Decisión |
-| --- | --- | --- |
-| A. Compactación autoritativa | Quitar payload no disminuye `entity_count`; el binding es inmutable. Reutilizar una entidad cambia el significado de IDs publicados. Un resumen con hash pierde quién hizo qué. | No resuelve el techo manteniendo contratos |
-| B. Segmentos temporales | Se pueden guardar snapshots completos independientes, pero Core no valida un manifiesto conjunto, pertenencia, referencias cruzadas, precedencias ni publicación multisegmento. | Requiere ampliación genérica |
-| C. Ventana activa + archivo | Adecuada si Core administra ambos. Con el motor actual se perdería información o el adaptador tendría que ser autoridad de segmentos y referencias. | Arquitectura propuesta, no implementada |
-| D. Intervalos/referencias compartidas | Reducen duplicación y bytes, pero la selección diaria de personas cambia y existen suplencias, cancelaciones y causas distintas. Bajo límites fijos solo aplazan la saturación si toda la historia sigue residente. | Optimización complementaria futura |
+Cada campaña genera guardias reales en bloques de siete días, procesa fronteras
+de autoridad y combina ausencias, descansos, cancelaciones y suplencias. La
+planificación siguiente debe coincidir con un proceso de referencia que conserva
+todo el historial original. El proceso consolidado utiliza siempre la biblioteca
+productiva con el presupuesto fijo. Un rechazo por capacidad es un fallo.
 
-Modificar snapshots públicos no abre una excepción: retirar un registro interior
-de sus tablas deja la identidad existente; reducir `last_entity_id` trunca el
-mundo y vuelve a emitir IDs históricos. El test `persistence_core_boundary`
-demuestra ambos comportamientos. Reconstruir un mundo renumerando entidades rompe
-IDs de actividades, planes y referencias externas. Guardar snapshots completos
-como exportaciones es válido; usarlos como una campaña segmentada exige definir
-y validar esa nueva frontera autoritativa en Core.
+Se comparan todos los nuevos hechos, IDs, estados RNG/reloj y asignaciones de
+cada bloque. Se verifica en cada bloque el grafo estático de personas, puestos,
+competencias, grupos y censo. Un proceso nuevo abre la última generación y debe
+producir exactamente el mismo futuro. Después, otro auditor reconstruye **todos**
+los bloques desde segmentos más checkpoint y compara sus bytes canónicos contra
+los hashes originales de referencia. No se limita a consultar una muestra.
 
-Ni el simple aumento de límites ni comprimir el archivo de salida reduce el
-grafo residente y sus copias transaccionales. Codificar indefinidamente hechos
-en RelationKind también termina en el millón de relaciones/64 MiB y exige un
-nuevo contrato de consulta. No se declara imposible cualquier optimización
-finita; falta la capacidad estructural para una retención escalable sin descarte.
+| Clase | Días completos | Máximo residente | IDs finales | Hechos archivados finales | Pico working set del proceso |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Miranda | 365 | 1.926 | 41.438 | 40.309 | 12.161.024 B |
+| Intrepid | 365 | 2.234 | 47.877 | 46.556 | 13.164.544 B |
+| Sovereign | 365 | 8.492 | 179.181 | 174.137 | 31.629.312 B |
+| Odyssey | 365 | 18.348 | 385.384 | 374.435 | 55.689.216 B |
+| Valhalla | 365 | 21.218 | 437.731 | 424.908 | 64.782.336 B |
+| Valhalla | 730 | EN EJECUCIÓN | pendiente | pendiente | pendiente |
 
-## 5. Ampliación genérica mínima propuesta — PENDIENTE DE AUTORIZACIÓN
+Las cinco primeras campañas verifican 1.082.023 hechos posteriores al bootstrap.
+El máximo residente incluye el estado previo a consolidar; el pico de memoria
+incluye el ejecutable, copias transaccionales y buffers del laboratorio. El
+historial total en disco crece y conserva checkpoints anteriores. No se promete
+espacio histórico constante ni latencias independientes de la duración: publicar
+y recuperar validan los segmentos del conjunto. Métricas por bloque, tamaños,
+consultas, recuperación e inventarios SHA-256 están en las evidencias.
 
-**Elegida para proponer:** archivo inmutable de entidades operativas cerradas,
-con ventana activa y localización histórica gestionadas por CoreRPG. No hay
-código genérico modificado ni prototipo que actúe como segunda autoridad.
-El motor no conocerá naves, rangos ni guardias. F04 decide qué registros han
-terminado y qué hechos deben permanecer íntegros; Core valida identidad,
-referencias, temporalidad declarada, integridad y atomicidad del conjunto.
+La DLL de referencia es un objetivo exclusivo de pruebas y no se distribuye a
+Unreal. Solo ella omite el presupuesto residente para retener toda la historia.
+Las cinco comparaciones de 365 días usaron el cálculo histórico original íntegro.
+Para 730 días, una opción de prueba conserva todos los originales y recalcula la
+carga completa, pero excluye de la ventana temporal de cálculo los intervalos
+terminados al menos siete días antes. No pueden afectar una ventana futura ni
+sus descansos. El validador sigue comprobando todo el historial original. La
+identidad de hashes original/optimizado se verificó también en Miranda 365 días.
+Esta optimización no se compila en el comportamiento productivo.
 
-### Capacidades y contratos que faltan
+## 6. Validación y entrega
 
-1. Separar máximo de identidad emitida, existencia lógica y registros residentes.
-   IDs globales de campaña de 64 bits, monotónicos y **nunca reutilizados**.
-   Localizador persistente que distinga activo/archivado/inexistente y permita
-   referencias entre ubicaciones. Archivar no equivale a borrar una persona.
-2. Segmentos genéricos inmutables, acotados por bytes/registros e intervalo
-   `[inicio,fin)`, con UUID de campaña, secuencia, versión, longitud, hash fuerte,
-   vínculo al segmento previo e índice de ID/tipo/tiempo/participantes.
-   Los índices deben derivarse y comprobarse contra los registros originales.
-3. Manifiesto autoritativo con checkpoint activo, high-water mark, revisión,
-   semilla/streams, Timeline, frontera de consolidación y descriptores de todos
-   los segmentos. Validar conjunto completo y dependencias antes de publicar.
-   Hashes verifican integridad; no sustituyen el payload consultable ni garantizan
-   autenticidad si un atacante puede sustituir también la raíz confiable.
-4. Preparar/validar/publicar consolidación sin cambiar hechos ni orden de IDs.
-   Prohibir solapamientos, IDs duplicados, referencias rotas y modificación de
-   segmentos confirmados. Un fallo de preparación no altera mundo ni manifiesto.
-5. Consultas históricas paginadas que resuelvan IDs sin reactivar actividades ni
-   copiar toda la historia al mundo activo. Un fallo de lectura se informa como
-   error de integridad; nunca se interpreta como ausencia de servicio/persona.
-6. Nuevo contenedor **optativo y versionado**, conservando lectores SAVE v1/v2/v3
-   y CRPGTIME v1. APIs anteriores mantienen sus garantías en modo monolítico;
-   la semántica residente/archivada usa APIs nuevas explícitas. No cambiar en
-   silencio `definition_of` o `contains` para aparentar que un archivo no existe.
-   Diseñar y revisar por separado ABI y adaptación de consumidores genéricos.
+- Core completo + Content JSON: **478 PASS**, cuatro omisiones de plataforma,
+  cero fallos, 482 entradas. CI del mismo SHA: Windows, Linux y sanitizadores,
+  seis jobs satisfactorios.
+- F04 con Core propuesto: **271/271** (270 anteriores más fallos históricos).
+- F02/F03 contra el Core propuesto: **15/15 y 25/25**. Se usaron copias de laboratorio
+  con solo las comprobaciones literales del SHA ajustadas; sus pins estables y
+  fuentes del repositorio permanecen intactos.
+- Compatibilidad monolítica de DLL anterior y migración histórica no destructiva:
+  cinco clases, mismo futuro, incluidos procesos nuevos.
+- Unreal **5.8.2**, changelist 56702186, Win64 **NullRHI: 26/26**, cero warnings de test.
+  Incluye recuperación, consulta paginada y futuro determinista sin Actors históricos.
+- Documentales F02/F03/F04, LORE-03 A, autoridad y gobierno del roadmap: PASS.
 
-El detalle binario y firmas C++ se fijarán con la aprobación y revisión de Core;
-no se presenta un formato público nuevo como ya aprobado. El alcance mínimo es
-identidad/localización, persistencia conjunta, transacción y lectura histórica:
-un borrado de entidades aislado no basta.
+[Contratos y reproducción](../../../../../../desarrollo/integration/f04/HISTORY.md).
+[Evidencia de aceptación](evidence/F04-PERSISTENCIA-03-HISTORY/acceptance.json).
+[Resultados y métricas](evidence/F04-PERSISTENCIA-03-HISTORY/campaigns.json).
+[Inventario de fuentes](evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json).
+[Hashes de evidencias](evidence/F04-PERSISTENCIA-03-HISTORY/evidence-sha256.json).
+[CI Core del SHA propuesto](https://github.com/robdor80/CoreRPG/actions/runs/41155489859).
 
-### Retención y determinismo F04 previstos
-
-Conservar activos presente, futuro, siete días operativos anteriores y cualquier
-REST/ABSENCE/deuda, suplencia, orden, incidente o referencia que aún pueda influir.
-Antes de consolidar, comprobar cierre temporal y dependencias causales; no asumir
-que todo dato viejo ha terminado. El margen de siete días cubre las ventanas de
-168 h y 12 h; deudas y ausencias abiertas no vencen por antigüedad.
-
-La equidad del planificador también usa **`p.work.size()` de toda la vida**, además
-de ventanas recientes. No basta conservar siete días: se necesita un acumulador
-autoritativo por persona equivalente al número exacto de DUTY anteriores que el
-algoritmo cuenta, incluidos STOP y suplencias según el contrato actual. La
-consolidación debe derivarlo de hechos verificables, preservar su revisión y
-compararlo con una ejecución íntegra. Cambiar la puntuación cambiaría el futuro.
-
-Conservar íntegros persona, nave, plaza, emisor/autoridad, intervalo efectivo,
-actividad, causa, PLAN, ACTIVITY origen, cancelaciones, suplencias, funciones,
-nombramientos/revocaciones, carencias y sus resoluciones. No regenerar turnos
-pasados desde una semilla. Solo eliminar redundancia sintáctica demostrable:
-diccionarios e intervalos compartidos con equivalencia exacta. Un hecho relevante
-para misiones conserva sus relaciones completas. Marines, navales Defiant y
-civiles mantienen sus IDs, competencias, residencia y cadena de mando.
-
-### Publicación en disco y recuperación previstas
-
-El host realiza E/S a petición de Core; no decide cuál versión del mundo manda.
-Preparar nuevos segmentos/checkpoint temporales; cerrar, sincronizar y comprobar
-lectura íntegra; preparar manifiesto generación N+1; publicar por reemplazo
-atómico del puntero de generación tras asegurar durabilidad. Conservar N y sus
-archivos hasta confirmar N+1. El protocolo debe especificar fsync/FlushFileBuffers,
-reemplazo y barreras de directorio por plataforma; no asumir garantías de rename
-uniformes. Recuperación elige una generación **completa y validada**, nunca mezcla
-checkpoints, RNG o segmentos de generaciones distintas. Huérfanos temporales se
-ignoran y se limpian solo después de validar referencias. Sin borrado automático
-de una campaña válida durante recuperación.
-
-## 6. Migración y compatibilidad
-
-Esta PR no migra ni reescribe partidas, no cambia SCHEMA 3/4, ABI 1, pins, formato
-Core ni contratos productivos F04. La migración futura será explícita: leer el
-original sin alterarlo, validar, producir un conjunto nuevo, verificar equivalencia
-de hechos/IDs/RNG/reloj y futuro, y conservar el original para rollback. El
-contenedor tendrá versión propia; solo se propondrá SCHEMA 5 si cambian los
-campos semánticos F04 (por ejemplo acumuladores), con justificación y conversión
-reproducible. Un lector antiguo debe rechazar el contenedor nuevo claramente;
-no se promete lectura inversa de archivos segmentados por DLL antiguas.
-
-## 7. Pruebas existentes, nuevas y pendientes
-
-`tests/persistence_audit.cpp` usa las APIs de producción sin alterarlas. Añade
-27 entradas CTest: 15 medidas, cinco recorridos hasta 365 días o rechazo, cinco
-continuaciones en proceso distinto, una reproducción 730 Valhalla y la prueba
-de límite de identidad. Mantiene las 243 entradas F04 anteriores.
-
-En cada bloque publicado se comparan el futuro sin interrupción y el obtenido
-tras cargar, **byte a byte**, con RNG/reloj incluidos; se validan 5/7, una
-guardia/día, descanso y referencias de personas/plazas. Se compara el grafo
-estático de identidades, competencias, grupos y censo contra el original.
-El último checkpoint se continúa en un ejecutable distinto y se compara con el
-futuro de A. El rechazo por capacidad se normaliza quitando exclusivamente su
-evento y revisión y se exige igualdad de todos los bytes previos.
-
-Las cargas negativas ejercen truncado, magic, checksum, versión desconocida y
-un intervalo F04 corrupto dentro de un contenedor Core válido; conservan estado
-y handles existentes. Las regresiones existentes cubren bajas, relevos, deuda,
-salidas, revocaciones, corrupciones de competencias Marine y migración 3→4.
-
-**Pendiente de implementación genérica:** fallos antes de iniciar archivo,
-durante preparación, antes de publicación, entre escritura y confirmación y
-durante recuperación; segmento faltante/truncado/reordenado, ID duplicado,
-dependencia cruzada inválida, manipulación, manifiesto desconocido, fallo de
-durabilidad y rollback. Esos casos son contratos previstos, no pruebas superadas.
-Los [vectores de contrato](../../../../../../desarrollo/integration/f04/tests/fixtures/persistence_contract_vectors.json)
-enumeran precondiciones, inyecciones y resultados esperados y llevan el estado
-`PROPOSED_NOT_IMPLEMENTED_NOT_EXECUTED`; no están registrados como éxitos CTest.
-Tampoco se certifica recuperación de historial consolidado, ausente todavía.
-
-Tras autorizar e implementar, exigir 365 días completos por las cinco clases y
-730 Valhalla con actividades reales, incidentes, cargas/cierre entre procesos,
-consultas antiguas y ventana residente acotada. Comparar hechos y futuro contra
-la referencia sin consolidación, además de bytes cuando coincida el formato.
-Medir archivos acumulados, consulta, recuperación, archivo y memoria. Las
-medidas de consolidación/segmentación actuales son **no aplicables**, no cero ms.
-
-## 8. Unreal y riesgos pendientes
-
-Se conserva Unreal como proyección. Las 25 pruebas Win64 NullRHI verifican el
-contrato actual; no hay APIs ni escenas nuevas de archivo. Una integración
-futura deberá exponer lectura histórica paginada con errores claros sin Actors
-históricos ni cargas gráficas masivas. No hay validación artística nueva.
-
-Riesgos a resolver en Core: referencias cíclicas entre archivo y activo,
-conocimiento de observadores, dependencias Timeline, caches, conservación de
-revocaciones y transferencias, determinismo de acumuladores, retención de
-identidades a décadas y coste del índice de segmentos. El almacenamiento
-histórico total seguirá creciendo; el requisito es acotar residencia y trabajo
-por operación, conservando la información. No se cifra ni autentica todo el
-universo por añadir hashes. Fases clínicas, narrativas y misiones futuras no se
-implementan en esta subfase.
-
-**Autorización requerida:** modificar CoreRPG genérico para las capacidades
-enumeradas en el apartado 5 y sus pruebas/migración, manteniendo el contenido
-Star Trek en F04. Hasta entonces no se cumplen los criterios A–H de aceptación
-completa ni se declara terminada PERSISTENCIA-03.
+**Pendiente únicamente de demostrar el recorrido 730 y su auditoría antes de
+marcar la aceptación completa.** Después, ambas PR permanecen Draft para auditoría
+independiente. No se fusionan, no se actualiza el pin estable y no se inicia la
+siguiente subfase.

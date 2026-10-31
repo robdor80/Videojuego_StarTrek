@@ -39,6 +39,14 @@ public:
  bool Advance(uint64 Tick);
  bool Save(TArray<uint8>&) const;
  bool Load(const TArray<uint8>&);
+ bool MigrateHistory(const FString& Directory);
+ bool OpenHistory(const FString& Directory);
+ bool PublishHistory();
+ bool ConsolidateHistory(uint64 Cutoff);
+ bool HistoryStats(F04HistoryStats&) const;
+ bool HistoryPage(uint64 Generation,uint64 After,TArray<F04HistoryFact>&,bool& More) const;
+ bool HistoryRelations(uint64 Generation,uint64 Entity,TArray<F04HistoryRelation>&) const;
+ bool ActiveHistoryCheckpoint(TArray<uint8>&) const;
  AF04CrewMarker* Represent(UWorld*,uint32 Person);
  void Dematerialize(UWorld*);
 private:
