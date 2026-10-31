@@ -22,4 +22,4 @@
 
 Se reconcilian `ESTADO_GLOBAL.json`, `PLAN_MAESTRO.md` y el índice F04. F05 pasa a EN_CURSO **solo como apertura administrativa** y P01 EN_CURSO; P02–P04 siguen sin implementación certificada, y P05 conserva únicamente sus pruebas de referencia previas. F05 **no** es `CORE_INTEGRADO` ni `CERRADA` hasta pruebas de runtime y auditoría independientes.
 
-**Control de cambios:** documentación únicamente, en PR separada; la fusión está sujeta a revisión, CI y autorización del director técnico. No se modifican activos 3D, Blender, CoreRPG, UE5, scripts de producción ni resultados de laboratorio.
+**Control de cambios:** documentación y ajuste mínimo del validador de gobierno del roadmap para reconocer el estado actualizado, en PR separada. La fusión queda sujeta a revisión, CI y autorización del director técnico. No se modifican activos 3D, Blender, CoreRPG, UE5, scripts de producción ni resultados de laboratorio.
