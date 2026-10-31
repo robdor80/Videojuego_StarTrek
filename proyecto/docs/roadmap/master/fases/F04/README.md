@@ -1,5 +1,14 @@
 # F04 — Naves, dotaciones, turnos y cadena de mando
 
+## Estado actual: CERRADA (31-10-2026)
+
+Cierre administrativo **en el alcance efectivamente probado**: cinco perfiles organizativos, reglas de autoridad/guardia, historial CoreRPG y campañas verificadas de 365 días (cinco clases) y 730 días (Valhalla). GitHub Star Trek PR #76 y CoreRPG PR #13 fusionadas y CI verde. Objetivo de Plan Maestro: **REFERENCIA_PROBADA**; no se certifica `UE5_JUGABLE` ni mando autónomo de secciones separadas, operaciones completas de Defiant/Marines o combate. Consultar el [acta de cierre administrativo](ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md) para evidencia y deuda no certificada.
+
+**Nota de lectura:** los apartados fechados que siguen describen estados históricos `EN_CURSO` y PR Draft en el momento de su redacción; no sustituyen al acta. El plan F04-INTEGRACION-04 conserva los escenarios ampliados aún pendientes de validar, sin presentarlos como entregados.
+
+---
+
+
 ## Plan operativo de cierre, 31-10-2026
 
 [F04-VALHALLA-01 — implementación para auditoría](F04-VALHALLA-01_ORGANIZACION_GRAN_NAVE.md):
