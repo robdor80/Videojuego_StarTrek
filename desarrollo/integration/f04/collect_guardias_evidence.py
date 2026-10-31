@@ -110,4 +110,3 @@ def main():
     dump('simulations.json',summaries);dump('performance.json',perf);dump('dll-provenance.json',{'sha256':hashlib.sha256(dll.read_bytes()).hexdigest(),'measurement':'single MSI run; process memory includes Python/ctypes and transient transactions, not isolated Core allocation'})
 
 if __name__=='__main__':main()
-
