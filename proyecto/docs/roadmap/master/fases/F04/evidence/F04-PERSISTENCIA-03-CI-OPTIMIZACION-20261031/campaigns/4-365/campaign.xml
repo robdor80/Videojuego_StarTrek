@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="1172"
+	timestamp="2026-10-31T14:00:05"
+	>
+	<testcase name="f04.history_campaign_4_365" classname="f04.history_campaign_4_365" time="1172.7" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>oracle: profile=4 days=365 evidence=D:\a\Videojuego_StarTrek\Videojuego_StarTrek\build\history\history-runs\20261031-140006-ad244c01
+campaign: profile=4 days=365 evidence=D:\a\Videojuego_StarTrek\Videojuego_StarTrek\build\history\history-runs\20261031-140006-ad244c01
+resume: profile=4 days=365 evidence=D:\a\Videojuego_StarTrek\Videojuego_StarTrek\build\history\history-runs\20261031-140006-ad244c01
+audit: profile=4 days=365 evidence=D:\a\Videojuego_StarTrek\Videojuego_StarTrek\build\history\history-runs\20261031-140006-ad244c01
+{"kind": "acceptance", "profile": 4, "days": 365, "completed": 365, "maximum_resident": 18348, "maximum_active_bytes": 5649296, "elapsed_ms": 185986, "real_watches": true, "all_blocks_equal_complete_history": true, "working_set": 17940480, "peak_working_set": 55103488, "storage_bytes_retaining_previous_generations": 306161850, "phases_elapsed_seconds": 1171.7891793, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_mode": "regenerated", "phase_seconds": {"oracle": ...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

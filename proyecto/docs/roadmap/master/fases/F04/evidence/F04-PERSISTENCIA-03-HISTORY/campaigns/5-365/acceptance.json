@@ -1,0 +1,19 @@
+{
+  "kind": "acceptance",
+  "profile": 5,
+  "days": 365,
+  "completed": 365,
+  "maximum_resident": 21218,
+  "maximum_active_bytes": 6662421,
+  "elapsed_ms": 203248,
+  "real_watches": true,
+  "all_blocks_equal_complete_history": true,
+  "working_set": 21872640,
+  "peak_working_set": 64196608,
+  "storage_bytes_retaining_previous_generations": 360642331,
+  "phases_elapsed_seconds": 281.14395389999845,
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "reference_fixture_sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+  "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "reference_origin": "Five original 365-day full-history runs; completed 730-day full-history oracle with complete final schema validation"
+}

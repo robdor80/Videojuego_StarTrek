@@ -1,0 +1,59 @@
+Test project C:/F04/PersistenciaBuild/native
+      Start 19: f04.persistence_core_boundary
+ 1/27 Test #19: f04.persistence_core_boundary ...........   Passed    0.10 sec
+      Start 20: f04.persistence_measure_1_1
+ 2/27 Test #20: f04.persistence_measure_1_1 .............   Passed    0.03 sec
+      Start 21: f04.persistence_measure_1_7
+ 3/27 Test #21: f04.persistence_measure_1_7 .............   Passed    0.07 sec
+      Start 22: f04.persistence_measure_1_28
+ 4/27 Test #22: f04.persistence_measure_1_28 ............   Passed    0.23 sec
+      Start 23: f04.persistence_baseline_1_365
+ 5/27 Test #23: f04.persistence_baseline_1_365 ..........   Passed   68.36 sec
+      Start 24: f04.persistence_resume_1
+ 6/27 Test #24: f04.persistence_resume_1 ................   Passed    1.88 sec
+      Start 25: f04.persistence_measure_2_1
+ 7/27 Test #25: f04.persistence_measure_2_1 .............   Passed    0.04 sec
+      Start 26: f04.persistence_measure_2_7
+ 8/27 Test #26: f04.persistence_measure_2_7 .............   Passed    0.08 sec
+      Start 27: f04.persistence_measure_2_28
+ 9/27 Test #27: f04.persistence_measure_2_28 ............   Passed    0.27 sec
+      Start 28: f04.persistence_baseline_2_365
+10/27 Test #28: f04.persistence_baseline_2_365 ..........   Passed   78.20 sec
+      Start 29: f04.persistence_resume_2
+11/27 Test #29: f04.persistence_resume_2 ................   Passed    2.17 sec
+      Start 30: f04.persistence_measure_3_1
+12/27 Test #30: f04.persistence_measure_3_1 .............   Passed    0.15 sec
+      Start 31: f04.persistence_measure_3_7
+13/27 Test #31: f04.persistence_measure_3_7 .............   Passed    0.30 sec
+      Start 32: f04.persistence_measure_3_28
+14/27 Test #32: f04.persistence_measure_3_28 ............   Passed    1.06 sec
+      Start 33: f04.persistence_baseline_3_365
+15/27 Test #33: f04.persistence_baseline_3_365 ..........   Passed   39.79 sec
+      Start 34: f04.persistence_resume_3
+16/27 Test #34: f04.persistence_resume_3 ................   Passed    5.08 sec
+      Start 35: f04.persistence_measure_4_1
+17/27 Test #35: f04.persistence_measure_4_1 .............   Passed    0.33 sec
+      Start 36: f04.persistence_measure_4_7
+18/27 Test #36: f04.persistence_measure_4_7 .............   Passed    0.70 sec
+      Start 37: f04.persistence_measure_4_28
+19/27 Test #37: f04.persistence_measure_4_28 ............   Passed    2.40 sec
+      Start 38: f04.persistence_baseline_4_365
+20/27 Test #38: f04.persistence_baseline_4_365 ..........   Passed   28.98 sec
+      Start 39: f04.persistence_resume_4
+21/27 Test #39: f04.persistence_resume_4 ................   Passed    4.94 sec
+      Start 40: f04.persistence_measure_5_1
+22/27 Test #40: f04.persistence_measure_5_1 .............   Passed    0.49 sec
+      Start 41: f04.persistence_measure_5_7
+23/27 Test #41: f04.persistence_measure_5_7 .............   Passed    0.96 sec
+      Start 42: f04.persistence_measure_5_28
+24/27 Test #42: f04.persistence_measure_5_28 ............   Passed    2.88 sec
+      Start 43: f04.persistence_baseline_5_365
+25/27 Test #43: f04.persistence_baseline_5_365 ..........   Passed   14.34 sec
+      Start 44: f04.persistence_resume_5
+26/27 Test #44: f04.persistence_resume_5 ................   Passed    4.29 sec
+      Start 45: f04.persistence_baseline_valhalla_730
+27/27 Test #45: f04.persistence_baseline_valhalla_730 ...   Passed   15.52 sec
+
+100% tests passed out of 27
+
+Total Test time (real) = 273.73 sec

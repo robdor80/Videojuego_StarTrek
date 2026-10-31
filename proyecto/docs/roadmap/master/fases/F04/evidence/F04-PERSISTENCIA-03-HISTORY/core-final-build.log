@@ -1,0 +1,20 @@
+Versión de MSBuild 18.9.1+a81b43525 para .NET Framework
+
+  gtest.vcxproj -> C:\F04\HistoryBuild\core\lib\Release\gtest.lib
+  gtest_main.vcxproj -> C:\F04\HistoryBuild\core\lib\Release\gtest_main.lib
+  history.cpp
+  CoreRPG.vcxproj -> C:\F04\HistoryBuild\core\Release\CoreRPG.lib
+  CoreRPGContentJson.vcxproj -> C:\F04\HistoryBuild\core\Release\CoreRPGContentJson.lib
+  corerpg_context_host_example.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_context_host_example.exe
+  corerpg_world_state_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_world_state_allocation_tests.exe
+  corerpg_history_process.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_history_process.exe
+  corerpg_entity_structure_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_entity_structure_allocation_tests.exe
+  corerpg_inspector_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_inspector_allocation_tests.exe
+  corerpg_action_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_action_allocation_tests.exe
+  corerpg_persistence_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_persistence_allocation_tests.exe
+  corerpg_knowledge_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_knowledge_allocation_tests.exe
+  history_test.cpp
+  corerpg_context_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_context_allocation_tests.exe
+  corerpg_timeline_allocation_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_timeline_allocation_tests.exe
+  corerpg_content_json_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_content_json_tests.exe
+  corerpg_tests.vcxproj -> C:\F04\HistoryBuild\core\tests\Release\corerpg_tests.exe

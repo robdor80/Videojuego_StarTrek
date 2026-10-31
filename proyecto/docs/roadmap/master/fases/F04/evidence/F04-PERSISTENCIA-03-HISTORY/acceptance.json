@@ -1,0 +1,105 @@
+{
+  "status": "IMPLEMENTED_ACCEPTANCE_PASSED_PENDING_INDEPENDENT_REVIEW",
+  "complete": true,
+  "missing_campaigns": [],
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "stable_f04_core_pin_unchanged": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+  "suites": {
+    "core": {
+      "name": "Win32-MSBuild",
+      "tests": "483",
+      "failures": "0",
+      "disabled": "0",
+      "skipped": "4",
+      "hostname": "FatiRoberMSI",
+      "time": "2",
+      "timestamp": "2026-10-31T12:12:44"
+    },
+    "f04": {
+      "name": "(empty)",
+      "tests": "271",
+      "failures": "0",
+      "disabled": "0",
+      "skipped": "0",
+      "hostname": "",
+      "time": "93",
+      "timestamp": "2026-10-31T12:33:43"
+    },
+    "long-campaigns": {
+      "name": "(empty)",
+      "tests": "6",
+      "failures": "0",
+      "disabled": "0",
+      "skipped": "0",
+      "hostname": "",
+      "time": "819",
+      "timestamp": "2026-10-31T12:17:53"
+    },
+    "f02": {
+      "name": "(empty)",
+      "tests": "15",
+      "failures": "0",
+      "disabled": "0",
+      "skipped": "0",
+      "hostname": "",
+      "time": "0",
+      "timestamp": "2026-10-31T12:20:15"
+    },
+    "f03": {
+      "name": "(empty)",
+      "tests": "25",
+      "failures": "0",
+      "disabled": "0",
+      "skipped": "0",
+      "hostname": "",
+      "time": "0",
+      "timestamp": "2026-10-31T12:20:44"
+    }
+  },
+  "unreal": {
+    "passed": 26,
+    "warnings": 0,
+    "failed": 0,
+    "notRun": 0
+  },
+  "campaigns": [
+    {
+      "profile": 1,
+      "days": 365,
+      "completed": 365,
+      "facts_verified": 41123
+    },
+    {
+      "profile": 2,
+      "days": 365,
+      "completed": 365,
+      "facts_verified": 47500
+    },
+    {
+      "profile": 3,
+      "days": 365,
+      "completed": 365,
+      "facts_verified": 177697
+    },
+    {
+      "profile": 4,
+      "days": 365,
+      "completed": 365,
+      "facts_verified": 382087
+    },
+    {
+      "profile": 5,
+      "days": 365,
+      "completed": 365,
+      "facts_verified": 433616
+    },
+    {
+      "profile": 5,
+      "days": 730,
+      "completed": 730,
+      "facts_verified": 866849
+    }
+  ],
+  "no_merge": true,
+  "no_integration04_or_closure05": true
+}

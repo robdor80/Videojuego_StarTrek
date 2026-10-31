@@ -1,4 +1,5 @@
 #include "F04CampaignSubsystem.h"
+#include "f04_core_revision.h"
 #if WITH_DEV_AUTOMATION_TESTS
 #include "Misc/AutomationTest.h"
 #include "Engine/GameInstance.h"
@@ -237,4 +238,27 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04MirandaWatches,"F04.Core.MirandaThreeWatche
 bool FF04MirandaWatches::RunTest(const FString&){return SmallWatches(*this,F04_SUTHERLAND_SCIENCE,"miranda",130,53,13);}
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04IntrepidWatches,"F04.Core.IntrepidThreeWatches28Days",Flags)
 bool FF04IntrepidWatches::RunTest(const FString&){return SmallWatches(*this,F04_INTREPID_EXPLORATION,"intrepid",160,64,16);}
+#if F04_HISTORY_ENABLED
+#include "Misc/Paths.h"
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF04HistoricalSegments,"F04.Core.HistoricalSegmentsWithoutActors",Flags)
+bool FF04HistoricalSegments::RunTest(const FString&){
+ Lab L;World A(L),B(L);F04PopulationConfig Config{77001,404,130,0,0,0};
+ if(!TestTrue(TEXT("Population"),L.Host->OpenPopulation("miranda",Config)) || !TestTrue(TEXT("Organization"),L.Host->InstallOrganization(1,8191)) || !TestTrue(TEXT("Bootstrap"),L.Host->BootstrapOrganizationFixture()))return false;
+ const FString Directory=FPaths::Combine(FPaths::ProjectSavedDir(),TEXT("History-" )+FGuid::NewGuid().ToString());
+ if(!TestTrue(TEXT("Explicit non-destructive Core migration"),L.Host->MigrateHistory(Directory)))return false;
+ for(uint64 Day=0;Day<14;Day+=7){if(!TestTrue(TEXT("Real seven-day watch plan"),L.Host->PlanWatches(Day*86400,(Day+7)*86400,false,Day==0)) || !TestTrue(TEXT("Real watch boundaries"),L.Host->Advance((Day+7)*86400-1)))return false;}
+ if(!TestTrue(TEXT("Transactional consolidation"),L.Host->ConsolidateHistory(7*86400-1)))return false;
+ F04HistoryStats Before{};L.Host->HistoryStats(Before);TestTrue(TEXT("Original history archived"),Before.archived>0);TestTrue(TEXT("Bounded residents"),Before.resident<65536);
+ TArray<F04HistoryFact> Facts;bool More=false;if(!TestTrue(TEXT("Historical page"),L.Host->HistoryPage(Before.generation,0,Facts,More)) || Facts.IsEmpty())return false;
+ TArray<F04HistoryRelation> Relations;TestTrue(TEXT("Original causal relationships"),L.Host->HistoryRelations(Before.generation,Facts[0].id,Relations));TestTrue(TEXT("Historical payload"),Relations.Num()>0);
+ TestNull(TEXT("Historical facts cannot materialize people"),L.Host->Represent(A.W,static_cast<uint32>(Facts[0].id)));
+ int32 Count=0;for(TActorIterator<AF04CrewMarker> It(A.W);It;++It)++Count;TestEqual(TEXT("No historical Actors"),Count,0);
+ TArray<uint8> Projection,Restored,Future;TestTrue(TEXT("Explicit active diagnostic"),L.Host->ActiveHistoryCheckpoint(Projection));TestFalse(TEXT("Projection cannot masquerade as full save"),L.Host->Save(Restored));
+ TestTrue(TEXT("Future watch plan"),L.Host->PlanWatches(14*86400,21*86400,false));L.Host->Advance(21*86400-1);L.Host->ActiveHistoryCheckpoint(Future);
+ L.Host->CloseLab();L.Host->OpenLab();if(!TestTrue(TEXT("New session complete generation"),L.Host->OpenHistory(Directory)))return false;
+ L.Host->ActiveHistoryCheckpoint(Restored);TestTrue(TEXT("Exact Core checkpoint/RNG/time recovery"),Projection==Restored);
+ TestTrue(TEXT("Same future plan using authoritative lifetime workload"),L.Host->PlanWatches(14*86400,21*86400,false));L.Host->Advance(21*86400-1);L.Host->ActiveHistoryCheckpoint(Restored);TestTrue(TEXT("Deterministic future after history recovery"),Future==Restored);
+ return true;
+}
+#endif
 #endif

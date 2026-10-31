@@ -1,0 +1,1440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="272"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="218"
+	timestamp="2026-10-31T13:59:45"
+	>
+	<testcase name="f04.history_faults" classname="f04.history_faults" time="2.2155" status="run">
+		<properties/>
+		<system-out>F04 history faults, recovery, migration, cursor, full-save boundary, open debt/absence and revoked history PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_structure" classname="f04.intrepid_structure" time="0.0112712" status="run">
+		<properties/>
+		<system-out>intrepid structure passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_profile" classname="f04.intrepid_profile" time="0.0077827" status="run">
+		<properties/>
+		<system-out>intrepid profile passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_vacant" classname="f04.intrepid_vacant" time="0.0217593" status="run">
+		<properties/>
+		<system-out>intrepid vacant passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_partial" classname="f04.intrepid_partial" time="0.0166566" status="run">
+		<properties/>
+		<system-out>intrepid partial passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_assignment" classname="f04.intrepid_assignment" time="0.0120476" status="run">
+		<properties/>
+		<system-out>intrepid assignment passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_qualifications" classname="f04.intrepid_qualifications" time="0.0132307" status="run">
+		<properties/>
+		<system-out>intrepid qualifications passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_alpha" classname="f04.intrepid_alpha" time="0.0177975" status="run">
+		<properties/>
+		<system-out>intrepid alpha passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_authority" classname="f04.intrepid_authority" time="0.0304627" status="run">
+		<properties/>
+		<system-out>intrepid authority passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_watch_fallback" classname="f04.intrepid_watch_fallback" time="0.0211001" status="run">
+		<properties/>
+		<system-out>intrepid watch_fallback passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_functions" classname="f04.intrepid_functions" time="0.0213483" status="run">
+		<properties/>
+		<system-out>intrepid functions passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_deficit_relief" classname="f04.intrepid_deficit_relief" time="0.0356164" status="run">
+		<properties/>
+		<system-out>intrepid deficit_relief passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_transfer" classname="f04.intrepid_transfer" time="0.0362116" status="run">
+		<properties/>
+		<system-out>intrepid transfer passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_lifecycle" classname="f04.intrepid_lifecycle" time="0.038775" status="run">
+		<properties/>
+		<system-out>intrepid lifecycle passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_rest" classname="f04.intrepid_rest" time="0.0182439" status="run">
+		<properties/>
+		<system-out>intrepid rest passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_beta_gamma" classname="f04.intrepid_beta_gamma" time="0.0684214" status="run">
+		<properties/>
+		<system-out>intrepid beta_gamma passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_patterns" classname="f04.intrepid_patterns" time="0.0694449" status="run">
+		<properties/>
+		<system-out>intrepid patterns passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_roundtrip" classname="f04.intrepid_roundtrip" time="0.0639517" status="run">
+		<properties/>
+		<system-out>intrepid roundtrip passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_corrupt" classname="f04.intrepid_corrupt" time="0.0873899" status="run">
+		<properties/>
+		<system-out>intrepid corrupt passed
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_core_boundary" classname="f04.persistence_core_boundary" time="0.0044227" status="run">
+		<properties/>
+		<system-out>{"kind":"core_boundary","payload_removal_reclaims_identity":false,"checkpoint_truncation_reuses_identity":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_1_1" classname="f04.persistence_measure_1_1" time="0.0314344" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":1,"days":1,"initial_entities":315,"entities":428,"added":113,"bytes":114760,"plan_ms":2.841,"save_two_calls_ms":4.7602,"load_ms":3.7884,"types":{"trek.f04:activity":75,"trek.f04:appointment":18,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":5,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":4115,"working_set_bytes":5246976,"process_peak_working_set_bytes":5451776}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_1_7" classname="f04.persistence_measure_1_7" time="0.081671" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":1,"days":7,"initial_entities":315,"entities":1089,"added":774,"bytes":310341,"plan_ms":14.9635,"save_two_calls_ms":12.6514,"load_ms":10.8535,"types":{"trek.f04:activity":532,"trek.f04:appointment":54,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":29,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":11459,"working_set_bytes":6103040,"process_peak_working_set_bytes":6844416}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_1_28" classname="f04.persistence_measure_1_28" time="0.254432" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":1,"days":28,"initial_entities":315,"entities":3380,"added":3065,"bytes":986132,"plan_ms":67.8884,"save_two_calls_ms":39.4035,"load_ms":33.9439,"types":{"trek.f04:activity":2074,"trek.f04:appointment":180,"trek.f04:class_miranda":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":130,"trek.f04:population":1,"trek.f04:roster_gap":148,"trek.f04:roster_plan":1,"trek.f04:section":32,"trek.f04:slot":130},"relations":36823,"working_set_bytes":9146368,"process_peak_working_set_bytes":11776000}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_1_365" classname="f04.persistence_baseline_1_365" time="71.0249" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":1,"completed_days":28,"entities":3463,"bytes":1002234,"plan_ms":83.9451}
+{"kind":"block","profile":1,"completed_days":56,"entities":6601,"bytes":1919370,"plan_ms":161.899}
+{"kind":"block","profile":1,"completed_days":84,"entities":9734,"bytes":2834783,"plan_ms":251.959}
+{"kind":"block","profile":1,"completed_days":112,"entities":12874,"bytes":3752369,"plan_ms":338.523}
+{"kind":"block","profile":1,"completed_days":140,"entities":16013,"bytes":4669684,"plan_ms":526.244}
+{"kind":"block","profile":1,"completed_days":168,"entities":19154,"bytes":5587449,"plan_ms":671.475}
+{"kind":"block","profile":1,"completed_days":196,"entities":22293,"bytes":6504764,"plan_ms":965.432}
+{"kind":"block","profile":1,"completed_days":224,"entities":25426,"bytes":7420269,"plan_ms":820.602}
+{"kind":"block","profile":1,"completed_days":252,"entities":28568,"bytes":8338765,"plan_ms":1131.09}
+{"kind":"block","profile":1,"completed_days":280,"entities":31709,"bytes":9256576,"plan_ms":1235}
+{"kind":"block","profil...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_resume_1" classname="f04.persistence_resume_1" time="2.26807" status="run">
+		<properties/>
+		<system-out>{"kind":"process_resume","profile":1,"code":0,"equal_future":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_2_1" classname="f04.persistence_measure_2_1" time="0.0399917" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":2,"days":1,"initial_entities":377,"entities":508,"added":131,"bytes":137589,"plan_ms":4.3781,"save_two_calls_ms":6.0164,"load_ms":4.6107,"types":{"trek.f04:activity":92,"trek.f04:appointment":18,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":6,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":4937,"working_set_bytes":5308416,"process_peak_working_set_bytes":5578752}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_2_7" classname="f04.persistence_measure_2_7" time="0.0876013" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":2,"days":7,"initial_entities":377,"entities":1279,"added":902,"bytes":367672,"plan_ms":14.0165,"save_two_calls_ms":14.5807,"load_ms":12.449,"types":{"trek.f04:activity":651,"trek.f04:appointment":54,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":38,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":13585,"working_set_bytes":6377472,"process_peak_working_set_bytes":7290880}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_2_28" classname="f04.persistence_measure_2_28" time="0.304766" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":2,"days":28,"initial_entities":377,"entities":3938,"added":3561,"bytes":1158923,"plan_ms":89.5752,"save_two_calls_ms":46.2125,"load_ms":40.0739,"types":{"trek.f04:activity":2535,"trek.f04:appointment":180,"trek.f04:class_intrepid":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":160,"trek.f04:population":1,"trek.f04:roster_gap":183,"trek.f04:roster_plan":1,"trek.f04:section":34,"trek.f04:slot":160},"relations":43313,"working_set_bytes":9568256,"process_peak_working_set_bytes":12795904}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_2_365" classname="f04.persistence_baseline_2_365" time="84.0107" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":2,"completed_days":28,"entities":4021,"bytes":1175025,"plan_ms":95.8504}
+{"kind":"block","profile":2,"completed_days":56,"entities":7645,"bytes":2244797,"plan_ms":207.681}
+{"kind":"block","profile":2,"completed_days":84,"entities":11266,"bytes":3313480,"plan_ms":298.647}
+{"kind":"block","profile":2,"completed_days":112,"entities":14891,"bytes":4383523,"plan_ms":412.66}
+{"kind":"block","profile":2,"completed_days":140,"entities":18520,"bytes":5454420,"plan_ms":612.596}
+{"kind":"block","profile":2,"completed_days":168,"entities":22147,"bytes":6525051,"plan_ms":904.32}
+{"kind":"block","profile":2,"completed_days":196,"entities":25775,"bytes":7595769,"plan_ms":947.872}
+{"kind":"block","profile":2,"completed_days":224,"entities":29402,"bytes":8666262,"plan_ms":1235.56}
+{"kind":"block","profile":2,"completed_days":252,"entities":33027,"bytes":9736305,"plan_ms":1099.66}
+{"kind":"block","profile":2,"completed_days":280,"entities":36654,"bytes":10806706,"plan_ms":1333}
+{"kind":"block","profil...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_resume_2" classname="f04.persistence_resume_2" time="2.71917" status="run">
+		<properties/>
+		<system-out>{"kind":"process_resume","profile":2,"code":0,"equal_future":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_3_1" classname="f04.persistence_measure_3_1" time="0.150368" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":3,"days":1,"initial_entities":1484,"entities":1991,"added":507,"bytes":565030,"plan_ms":14.232,"save_two_calls_ms":22.9775,"load_ms":22.0894,"types":{"trek.f04:activity":470,"trek.f04:appointment":20,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":4,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":20371,"working_set_bytes":7036928,"process_peak_working_set_bytes":8589312}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_3_7" classname="f04.persistence_measure_3_7" time="0.358244" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":3,"days":7,"initial_entities":1484,"entities":4912,"added":3428,"bytes":1476893,"plan_ms":59.4491,"save_two_calls_ms":61.2358,"load_ms":52.5152,"types":{"trek.f04:activity":3184,"trek.f04:appointment":56,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":31,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":54829,"working_set_bytes":10907648,"process_peak_working_set_bytes":15142912}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_3_28" classname="f04.persistence_measure_3_28" time="1.23945" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":3,"days":28,"initial_entities":1484,"entities":15152,"added":13668,"bytes":4671275,"plan_ms":364.758,"save_two_calls_ms":187.83,"load_ms":169.008,"types":{"trek.f04:activity":12648,"trek.f04:appointment":182,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":177,"trek.f04:roster_plan":1,"trek.f04:section":59,"trek.f04:slot":700},"relations":175527,"working_set_bytes":23601152,"process_peak_working_set_bytes":37416960}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_3_365" classname="f04.persistence_baseline_3_365" time="45.2557" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":3,"completed_days":28,"entities":15235,"bytes":4687377,"plan_ms":361.834}
+{"kind":"block","profile":3,"completed_days":56,"entities":28829,"bytes":8917777,"plan_ms":858.898}
+{"kind":"block","profile":3,"completed_days":84,"entities":42436,"bytes":13151930,"plan_ms":1494.43}
+{"kind":"block","profile":3,"completed_days":112,"entities":56041,"bytes":17385863,"plan_ms":2437.19}
+{"kind":"baseline_outcome","profile":3,"requested_days":365,"completed_days":112,"code":15,"acceptance_achieved":false,"entities":56042,"bytes":17386033,"elapsed_ms":45185,"types":{"trek.f04:activity":50126,"trek.f04:appointment":686,"trek.f04:class_sovereign":1,"trek.f04:department":7,"trek.f04:event":343,"trek.f04:function":2688,"trek.f04:person":700,"trek.f04:population":1,"trek.f04:roster_gap":727,"trek.f04:roster_plan":4,"trek.f04:section":59,"trek.f04:slot":700},"relations":655833,"working_set_bytes":60579840,"process_peak_working_set_bytes":182255616}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_resume_3" classname="f04.persistence_resume_3" time="6.51032" status="run">
+		<properties/>
+		<system-out>{"kind":"process_resume","profile":3,"code":15,"equal_future":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_4_1" classname="f04.persistence_measure_4_1" time="0.352235" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":4,"days":1,"initial_entities":3297,"entities":4365,"added":1068,"bytes":1252261,"plan_ms":32.588,"save_two_calls_ms":49.5679,"load_ms":44.3501,"types":{"trek.f04:activity":1035,"trek.f04:appointment":20,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":45163,"working_set_bytes":9920512,"process_peak_working_set_bytes":13508608}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_4_7" classname="f04.persistence_measure_4_7" time="0.814136" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":4,"days":7,"initial_entities":3297,"entities":10690,"added":7393,"bytes":3244020,"plan_ms":138.339,"save_two_calls_ms":130.719,"load_ms":115.512,"types":{"trek.f04:activity":7171,"trek.f04:appointment":56,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":9,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":120505,"working_set_bytes":17907712,"process_peak_working_set_bytes":27504640}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_4_28" classname="f04.persistence_measure_4_28" time="2.9639" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":4,"days":28,"initial_entities":3297,"entities":32647,"added":29350,"bytes":10157613,"plan_ms":1009.56,"save_two_calls_ms":409.534,"load_ms":386.898,"types":{"trek.f04:activity":28459,"trek.f04:appointment":182,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":48,"trek.f04:roster_plan":1,"trek.f04:section":72,"trek.f04:slot":1600},"relations":382021,"working_set_bytes":44417024,"process_peak_working_set_bytes":74698752}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_4_365" classname="f04.persistence_baseline_4_365" time="35.906" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":4,"completed_days":28,"entities":32730,"bytes":10173715,"plan_ms":1007.47}
+{"kind":"block","profile":4,"completed_days":56,"entities":62003,"bytes":19380752,"plan_ms":2800.39}
+{"kind":"baseline_outcome","profile":4,"requested_days":365,"completed_days":56,"code":15,"acceptance_achieved":false,"entities":62004,"bytes":19380922,"elapsed_ms":35732.6,"types":{"trek.f04:activity":56764,"trek.f04:appointment":350,"trek.f04:class_odyssey":1,"trek.f04:department":7,"trek.f04:event":173,"trek.f04:function":1344,"trek.f04:person":1600,"trek.f04:population":1,"trek.f04:roster_gap":90,"trek.f04:roster_plan":2,"trek.f04:section":72,"trek.f04:slot":1600},"relations":730849,"working_set_bytes":66543616,"process_peak_working_set_bytes":201940992}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_resume_4" classname="f04.persistence_resume_4" time="5.69012" status="run">
+		<properties/>
+		<system-out>{"kind":"process_resume","profile":4,"code":15,"equal_future":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_5_1" classname="f04.persistence_measure_5_1" time="0.537875" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":5,"days":1,"initial_entities":4115,"entities":5333,"added":1218,"bytes":1662682,"plan_ms":49.4753,"save_two_calls_ms":65.9424,"load_ms":53.5676,"types":{"trek.f04:activity":1185,"trek.f04:appointment":19,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":24,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":60378,"working_set_bytes":11235328,"process_peak_working_set_bytes":16064512}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_5_7" classname="f04.persistence_measure_5_7" time="1.10244" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":5,"days":7,"initial_entities":4115,"entities":12512,"added":8397,"bytes":3925205,"plan_ms":190.092,"save_two_calls_ms":159.381,"load_ms":146.554,"types":{"trek.f04:activity":8176,"trek.f04:appointment":55,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":168,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":8,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":145970,"working_set_bytes":20688896,"process_peak_working_set_bytes":32325632}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_measure_5_28" classname="f04.persistence_measure_5_28" time="3.5739" status="run">
+		<properties/>
+		<system-out>{"kind":"measurement","profile":5,"days":28,"initial_entities":4115,"entities":37470,"added":33355,"bytes":11789885,"plan_ms":1203.68,"save_two_calls_ms":480.805,"load_ms":452.65,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":4,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":443488,"working_set_bytes":51630080,"process_peak_working_set_bytes":85995520}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_5_365" classname="f04.persistence_baseline_5_365" time="17.4495" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":5,"completed_days":28,"entities":37553,"bytes":11805987,"plan_ms":1200.21}
+{"kind":"baseline_outcome","profile":5,"requested_days":365,"completed_days":28,"code":15,"acceptance_achieved":false,"entities":37554,"bytes":11806157,"elapsed_ms":17171.6,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":88,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":444075,"working_set_bytes":45817856,"process_peak_working_set_bytes":128712704}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_resume_5" classname="f04.persistence_resume_5" time="5.58834" status="run">
+		<properties/>
+		<system-out>{"kind":"process_resume","profile":5,"code":15,"equal_future":true}
+</system-out>
+	</testcase>
+	<testcase name="f04.persistence_baseline_valhalla_730" classname="f04.persistence_baseline_valhalla_730" time="18.4814" status="run">
+		<properties/>
+		<system-out>{"kind":"block","profile":5,"completed_days":28,"entities":37553,"bytes":11805987,"plan_ms":1384.43}
+{"kind":"baseline_outcome","profile":5,"requested_days":730,"completed_days":28,"code":15,"acceptance_achieved":false,"entities":37554,"bytes":11806157,"elapsed_ms":18200.5,"types":{"trek.f04:activity":32460,"trek.f04:appointment":181,"trek.f04:auxiliary_defiant":1,"trek.f04:class_valhalla":1,"trek.f04:department":7,"trek.f04:event":88,"trek.f04:function":672,"trek.f04:person":2200,"trek.f04:population":1,"trek.f04:roster_gap":52,"trek.f04:roster_plan":1,"trek.f04:section":90,"trek.f04:slot":1800},"relations":444075,"working_set_bytes":43196416,"process_peak_working_set_bytes":125796352}
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_process_save" classname="f04.intrepid_process_save" time="0.0728224" status="run">
+		<properties/>
+		<system-out>intrepid process_save passed
+</system-out>
+	</testcase>
+	<testcase name="f04.intrepid_process_load" classname="f04.intrepid_process_load" time="0.0490734" status="run">
+		<properties/>
+		<system-out>intrepid process_load passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_structure" classname="f04.organization_structure" time="0.0094696" status="run">
+		<properties/>
+		<system-out>structure passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_vacant" classname="f04.organization_vacant" time="0.0144819" status="run">
+		<properties/>
+		<system-out>vacant passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_profile" classname="f04.organization_profile" time="0.0090942" status="run">
+		<properties/>
+		<system-out>profile passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_bootstrap" classname="f04.organization_bootstrap" time="0.0132549" status="run">
+		<properties/>
+		<system-out>bootstrap passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_assignment" classname="f04.organization_assignment" time="0.0129368" status="run">
+		<properties/>
+		<system-out>assignment passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_qualifications" classname="f04.organization_qualifications" time="0.0153097" status="run">
+		<properties/>
+		<system-out>qualifications passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_authority" classname="f04.organization_authority" time="0.0316582" status="run">
+		<properties/>
+		<system-out>authority passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_authority_boundary" classname="f04.organization_authority_boundary" time="0.0366933" status="run">
+		<properties/>
+		<system-out>authority_boundary passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_alpha" classname="f04.organization_alpha" time="0.0209095" status="run">
+		<properties/>
+		<system-out>alpha passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_alpha_deficit" classname="f04.organization_alpha_deficit" time="0.0378422" status="run">
+		<properties/>
+		<system-out>alpha_deficit passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_functions" classname="f04.organization_functions" time="0.0202971" status="run">
+		<properties/>
+		<system-out>functions passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_beta_gamma" classname="f04.organization_beta_gamma" time="0.0514499" status="run">
+		<properties/>
+		<system-out>beta_gamma passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_transfer" classname="f04.organization_transfer" time="0.0318206" status="run">
+		<properties/>
+		<system-out>transfer passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_relief" classname="f04.organization_relief" time="0.0359515" status="run">
+		<properties/>
+		<system-out>relief passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_lifecycle" classname="f04.organization_lifecycle" time="0.0377281" status="run">
+		<properties/>
+		<system-out>lifecycle passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_rest" classname="f04.organization_rest" time="0.0198409" status="run">
+		<properties/>
+		<system-out>rest passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_roundtrip" classname="f04.organization_roundtrip" time="0.0461188" status="run">
+		<properties/>
+		<system-out>roundtrip passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_determinism" classname="f04.organization_determinism" time="0.0461618" status="run">
+		<properties/>
+		<system-out>determinism passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_corrupt" classname="f04.organization_corrupt" time="0.110183" status="run">
+		<properties/>
+		<system-out>corrupt passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_legacy" classname="f04.organization_legacy" time="0.0098314" status="run">
+		<properties/>
+		<system-out>legacy passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_buffers" classname="f04.organization_buffers" time="0.0161848" status="run">
+		<properties/>
+		<system-out>buffers passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_process_save" classname="f04.organization_process_save" time="0.0533395" status="run">
+		<properties/>
+		<system-out>process_save passed
+</system-out>
+	</testcase>
+	<testcase name="f04.organization_process_load" classname="f04.organization_process_load" time="0.0410958" status="run">
+		<properties/>
+		<system-out>process_load passed
+</system-out>
+	</testcase>
+	<testcase name="f04.population_miranda" classname="f04.population_miranda" time="0.021324" status="run">
+		<properties/>
+		<system-out>miranda people=130 create_ms=0.4681 manifest_ms=0.0681 lookup_1000_ms=0.2441 update_ms=0.3902 save_ms=1.3566 load_ms=0.9591 archive_bytes=31127 peak_working_set_bytes=5353472
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_miranda" classname="f04.population_process_miranda" time="0.0110466" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_intrepid" classname="f04.population_intrepid" time="0.0230052" status="run">
+		<properties/>
+		<system-out>intrepid people=160 create_ms=0.7264 manifest_ms=0.1058 lookup_1000_ms=0.4282 update_ms=0.5834 save_ms=1.7892 load_ms=1.3674 archive_bytes=37938 peak_working_set_bytes=4943872
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_intrepid" classname="f04.population_process_intrepid" time="0.0121267" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_sovereign" classname="f04.population_sovereign" time="0.068023" status="run">
+		<properties/>
+		<system-out>sovereign people=700 create_ms=2.6209 manifest_ms=0.3707 lookup_1000_ms=0.2749 update_ms=1.7016 save_ms=6.8968 load_ms=4.8617 archive_bytes=160519 peak_working_set_bytes=6025216
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_sovereign" classname="f04.population_process_sovereign" time="0.0307728" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_odyssey" classname="f04.population_odyssey" time="0.151915" status="run">
+		<properties/>
+		<system-out>odyssey people=1600 create_ms=5.9586 manifest_ms=0.8405 lookup_1000_ms=0.2869 update_ms=3.806 save_ms=15.0387 load_ms=10.6723 archive_bytes=364817 peak_working_set_bytes=7782400
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_odyssey" classname="f04.population_process_odyssey" time="0.0584744" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_valhalla" classname="f04.population_valhalla" time="0.229066" status="run">
+		<properties/>
+		<system-out>valhalla people=2200 create_ms=8.9891 manifest_ms=2.0411 lookup_1000_ms=0.2884 update_ms=5.272 save_ms=24.683 load_ms=24.1255 archive_bytes=501018 peak_working_set_bytes=9080832
+</system-out>
+	</testcase>
+	<testcase name="f04.population_process_valhalla" classname="f04.population_process_valhalla" time="0.0764095" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_dynamic" classname="f04.population_dynamic" time="0.022847" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.population_budget" classname="f04.population_budget" time="0.0998764" status="run">
+		<properties/>
+		<system-out></system-out>
+	</testcase>
+	<testcase name="f04.identity" classname="f04.identity" time="0.0053847" status="run">
+		<properties/>
+		<system-out>identity: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.class" classname="f04.class" time="0.0049092" status="run">
+		<properties/>
+		<system-out>class: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.vacancy" classname="f04.vacancy" time="0.0046509" status="run">
+		<properties/>
+		<system-out>vacancy: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.manifest" classname="f04.manifest" time="0.0050085" status="run">
+		<properties/>
+		<system-out>manifest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.qualification" classname="f04.qualification" time="0.0047776" status="run">
+		<properties/>
+		<system-out>qualification: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.assignment" classname="f04.assignment" time="0.0048855" status="run">
+		<properties/>
+		<system-out>assignment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.overlap" classname="f04.overlap" time="0.0048625" status="run">
+		<properties/>
+		<system-out>overlap: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.adjacent" classname="f04.adjacent" time="0.0049611" status="run">
+		<properties/>
+		<system-out>adjacent: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.rest" classname="f04.rest" time="0.0051877" status="run">
+		<properties/>
+		<system-out>rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.oncall" classname="f04.oncall" time="0.0049167" status="run">
+		<properties/>
+		<system-out>oncall: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.absence" classname="f04.absence" time="0.0050765" status="run">
+		<properties/>
+		<system-out>absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.relief" classname="f04.relief" time="0.0052794" status="run">
+		<properties/>
+		<system-out>relief: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.coverage" classname="f04.coverage" time="0.0055178" status="run">
+		<properties/>
+		<system-out>coverage: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.policy" classname="f04.policy" time="0.0057485" status="run">
+		<properties/>
+		<system-out>policy: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.roles" classname="f04.roles" time="0.005179" status="run">
+		<properties/>
+		<system-out>roles: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.watch" classname="f04.watch" time="0.0046361" status="run">
+		<properties/>
+		<system-out>watch: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.appointment" classname="f04.appointment" time="0.0054145" status="run">
+		<properties/>
+		<system-out>appointment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.succession" classname="f04.succession" time="0.0050474" status="run">
+		<properties/>
+		<system-out>succession: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.medical" classname="f04.medical" time="0.0052916" status="run">
+		<properties/>
+		<system-out>medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.delegation" classname="f04.delegation" time="0.0056101" status="run">
+		<properties/>
+		<system-out>delegation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.revoke" classname="f04.revoke" time="0.006275" status="run">
+		<properties/>
+		<system-out>revoke: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.expiry" classname="f04.expiry" time="0.0055124" status="run">
+		<properties/>
+		<system-out>expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.origin" classname="f04.origin" time="0.0056947" status="run">
+		<properties/>
+		<system-out>origin: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.technical" classname="f04.technical" time="0.0052595" status="run">
+		<properties/>
+		<system-out>technical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.safety" classname="f04.safety" time="0.0047692" status="run">
+		<properties/>
+		<system-out>safety: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.contact" classname="f04.contact" time="0.0049251" status="run">
+		<properties/>
+		<system-out>contact: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.superior" classname="f04.superior" time="0.0052205" status="run">
+		<properties/>
+		<system-out>superior: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.ai" classname="f04.ai" time="0.0046821" status="run">
+		<properties/>
+		<system-out>ai: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.stale" classname="f04.stale" time="0.0046796" status="run">
+		<properties/>
+		<system-out>stale: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.queued" classname="f04.queued" time="0.0059459" status="run">
+		<properties/>
+		<system-out>queued: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.offscreen" classname="f04.offscreen" time="0.0058749" status="run">
+		<properties/>
+		<system-out>offscreen: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.roundtrip" classname="f04.roundtrip" time="0.0060513" status="run">
+		<properties/>
+		<system-out>roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.determinism" classname="f04.determinism" time="0.0063015" status="run">
+		<properties/>
+		<system-out>determinism: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.corrupt" classname="f04.corrupt" time="0.0056965" status="run">
+		<properties/>
+		<system-out>corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.schema" classname="f04.schema" time="0.005354" status="run">
+		<properties/>
+		<system-out>schema: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.thread" classname="f04.thread" time="0.0049912" status="run">
+		<properties/>
+		<system-out>thread: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.scope" classname="f04.scope" time="0.0048934" status="run">
+		<properties/>
+		<system-out>scope: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.buffers" classname="f04.buffers" time="0.0047091" status="run">
+		<properties/>
+		<system-out>buffers: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.bounded" classname="f04.bounded" time="0.0063057" status="run">
+		<properties/>
+		<system-out>bounded: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.backwards" classname="f04.backwards" time="0.0050517" status="run">
+		<properties/>
+		<system-out>backwards: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.integrated" classname="f04.integrated" time="0.0093318" status="run">
+		<properties/>
+		<system-out>integrated: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.recall" classname="f04.recall" time="0.0052721" status="run">
+		<properties/>
+		<system-out>recall: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.rotation" classname="f04.rotation" time="0.0055967" status="run">
+		<properties/>
+		<system-out>rotation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.credential_expiry" classname="f04.credential_expiry" time="0.0053315" status="run">
+		<properties/>
+		<system-out>credential_expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.succession_boundaries" classname="f04.succession_boundaries" time="0.0065255" status="run">
+		<properties/>
+		<system-out>succession_boundaries: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.context_review" classname="f04.context_review" time="0.0051281" status="run">
+		<properties/>
+		<system-out>context_review: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.order_expiry" classname="f04.order_expiry" time="0.0052414" status="run">
+		<properties/>
+		<system-out>order_expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.origin_reappointment" classname="f04.origin_reappointment" time="0.0070459" status="run">
+		<properties/>
+		<system-out>origin_reappointment: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.pending_credential" classname="f04.pending_credential" time="0.0059416" status="run">
+		<properties/>
+		<system-out>pending_credential: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.authorized_posts" classname="f04.authorized_posts" time="0.0056475" status="run">
+		<properties/>
+		<system-out>authorized_posts: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.process_save" classname="f04.process_save" time="0.0118496" status="run">
+		<properties/>
+		<system-out>process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.process_load" classname="f04.process_load" time="0.0053978" status="run">
+		<properties/>
+		<system-out>process_load: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_structure" classname="f04.sovereign_structure" time="0.0396091" status="run">
+		<properties/>
+		<system-out>structure: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_reference" classname="f04.sovereign_reference" time="0.102418" status="run">
+		<properties/>
+		<system-out>METRICS days=1 shifts=480 critical_gaps=0 quota_missing=0 max_rolling7=1 min_gap_seconds=18446744073709551615 off_days=0 changed_shift_people=0
+reference: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_7" classname="f04.sovereign_7" time="0.285677" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=3184 critical_gaps=0 quota_missing=176 max_rolling7=5 min_gap_seconds=57600 off_days=1716 changed_shift_people=505
+7: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_14" classname="f04.sovereign_14" time="0.656345" status="run">
+		<properties/>
+		<system-out>METRICS days=14 shifts=6414 critical_gaps=0 quota_missing=306 max_rolling7=5 min_gap_seconds=57600 off_days=3386 changed_shift_people=621
+14: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_28" classname="f04.sovereign_28" time="1.87516" status="run">
+		<properties/>
+		<system-out>METRICS days=28 shifts=12648 critical_gaps=0 quota_missing=792 max_rolling7=5 min_gap_seconds=57600 off_days=6952 changed_shift_people=675
+28: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_temporal" classname="f04.sovereign_temporal" time="0.140873" status="run">
+		<properties/>
+		<system-out>temporal: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_authority" classname="f04.sovereign_authority" time="0.15838" status="run">
+		<properties/>
+		<system-out>authority: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_absence" classname="f04.sovereign_absence" time="0.127382" status="run">
+		<properties/>
+		<system-out>absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_leave" classname="f04.sovereign_leave" time="0.127943" status="run">
+		<properties/>
+		<system-out>leave: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_cover" classname="f04.sovereign_cover" time="0.120246" status="run">
+		<properties/>
+		<system-out>cover: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_deficit" classname="f04.sovereign_deficit" time="0.448055" status="run">
+		<properties/>
+		<system-out>SENSOR GAPS=21
+METRICS days=7 shifts=3141 critical_gaps=21 quota_missing=219 max_rolling7=5 min_gap_seconds=57600 off_days=1528 changed_shift_people=438
+deficit: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_partial" classname="f04.sovereign_partial" time="0.0426454" status="run">
+		<properties/>
+		<system-out>partial: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_rest" classname="f04.sovereign_rest" time="0.225302" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=3282 critical_gaps=0 quota_missing=78 max_rolling7=5 min_gap_seconds=57600 off_days=1611 changed_shift_people=469
+rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_fatigue" classname="f04.sovereign_fatigue" time="0.231741" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=3282 critical_gaps=0 quota_missing=78 max_rolling7=5 min_gap_seconds=57600 off_days=1611 changed_shift_people=469
+fatigue: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_medical" classname="f04.sovereign_medical" time="0.0549423" status="run">
+		<properties/>
+		<system-out>medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_lifecycle" classname="f04.sovereign_lifecycle" time="0.0801601" status="run">
+		<properties/>
+		<system-out>lifecycle: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_mid_absence" classname="f04.sovereign_mid_absence" time="0.0524086" status="run">
+		<properties/>
+		<system-out>mid_absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_migration" classname="f04.sovereign_migration" time="1.00502" status="run">
+		<properties/>
+		<system-out>migration: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_roundtrip" classname="f04.sovereign_roundtrip" time="0.98305" status="run">
+		<properties/>
+		<system-out>roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_corrupt" classname="f04.sovereign_corrupt" time="0.138474" status="run">
+		<properties/>
+		<system-out>corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_buffers" classname="f04.sovereign_buffers" time="0.0895886" status="run">
+		<properties/>
+		<system-out>buffers: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_transfer" classname="f04.sovereign_transfer" time="0.192361" status="run">
+		<properties/>
+		<system-out>transfer: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_cancel" classname="f04.sovereign_cancel" time="0.0675446" status="run">
+		<properties/>
+		<system-out>cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_debt" classname="f04.sovereign_debt" time="0.294407" status="run">
+		<properties/>
+		<system-out>debt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_expiry" classname="f04.sovereign_expiry" time="0.0709653" status="run">
+		<properties/>
+		<system-out>expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_invalid" classname="f04.sovereign_invalid" time="0.134613" status="run">
+		<properties/>
+		<system-out>invalid: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_benchmark" classname="f04.sovereign_benchmark" time="1.37252" status="run">
+		<properties/>
+		<system-out>PERF create700_ms=25.9115 manifest_ms=0.4196 plan28_ms=403.26 coverage28_ms=26.004 save_ms=203.367 load_ms=173.676 advance28_ms=503.284 bytes=4671275
+benchmark: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_process_save" classname="f04.sovereign_process_save" time="0.552442" status="run">
+		<properties/>
+		<system-out>process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.sovereign_process_load" classname="f04.sovereign_process_load" time="0.410898" status="run">
+		<properties/>
+		<system-out>process_load: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_structure" classname="f04.odyssey_structure" time="0.133273" status="run">
+		<properties/>
+		<system-out>structure: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_reference" classname="f04.odyssey_reference" time="0.316073" status="run">
+		<properties/>
+		<system-out>METRICS days=1 shifts=1035 critical_gaps=0 quota_missing=0 max_rolling7=1 min_gap_seconds=18446744073709551615 off_days=0 changed_shift_people=0
+reference: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_7" classname="f04.odyssey_7" time="0.889077" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=7171 critical_gaps=0 quota_missing=74 max_rolling7=5 min_gap_seconds=57600 off_days=4029 changed_shift_people=1267
+7: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_14" classname="f04.odyssey_14" time="2.15527" status="run">
+		<properties/>
+		<system-out>METRICS days=14 shifts=14388 critical_gaps=0 quota_missing=102 max_rolling7=5 min_gap_seconds=57600 off_days=8012 changed_shift_people=1535
+14: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_28" classname="f04.odyssey_28" time="5.66589" status="run">
+		<properties/>
+		<system-out>METRICS days=28 shifts=28459 critical_gaps=0 quota_missing=521 max_rolling7=5 min_gap_seconds=57600 off_days=16341 changed_shift_people=1598
+28: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_temporal" classname="f04.odyssey_temporal" time="0.359121" status="run">
+		<properties/>
+		<system-out>temporal: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_authority" classname="f04.odyssey_authority" time="0.760004" status="run">
+		<properties/>
+		<system-out>authority: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_absence" classname="f04.odyssey_absence" time="0.560186" status="run">
+		<properties/>
+		<system-out>absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_leave" classname="f04.odyssey_leave" time="0.559085" status="run">
+		<properties/>
+		<system-out>leave: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_cover" classname="f04.odyssey_cover" time="0.570172" status="run">
+		<properties/>
+		<system-out>cover: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_deficit" classname="f04.odyssey_deficit" time="1.93902" status="run">
+		<properties/>
+		<system-out>SENSOR GAPS=21
+METRICS days=7 shifts=7133 critical_gaps=21 quota_missing=112 max_rolling7=5 min_gap_seconds=57600 off_days=3689 changed_shift_people=1057
+deficit: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_engineering" classname="f04.odyssey_engineering" time="0.235885" status="run">
+		<properties/>
+		<system-out>engineering: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_partial" classname="f04.odyssey_partial" time="0.126075" status="run">
+		<properties/>
+		<system-out>partial: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_rest" classname="f04.odyssey_rest" time="0.708205" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=7245 critical_gaps=0 quota_missing=0 max_rolling7=5 min_gap_seconds=57600 off_days=3955 changed_shift_people=1113
+rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_fatigue" classname="f04.odyssey_fatigue" time="0.710141" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=7245 critical_gaps=0 quota_missing=0 max_rolling7=5 min_gap_seconds=57600 off_days=3955 changed_shift_people=1113
+fatigue: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_medical" classname="f04.odyssey_medical" time="0.154959" status="run">
+		<properties/>
+		<system-out>medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_lifecycle" classname="f04.odyssey_lifecycle" time="0.214123" status="run">
+		<properties/>
+		<system-out>lifecycle: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_mid_absence" classname="f04.odyssey_mid_absence" time="0.148878" status="run">
+		<properties/>
+		<system-out>mid_absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_migration" classname="f04.odyssey_migration" time="2.37594" status="run">
+		<properties/>
+		<system-out>migration: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_roundtrip" classname="f04.odyssey_roundtrip" time="2.372" status="run">
+		<properties/>
+		<system-out>roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_corrupt" classname="f04.odyssey_corrupt" time="0.340138" status="run">
+		<properties/>
+		<system-out>corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_buffers" classname="f04.odyssey_buffers" time="0.237064" status="run">
+		<properties/>
+		<system-out>buffers: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_transfer" classname="f04.odyssey_transfer" time="0.535305" status="run">
+		<properties/>
+		<system-out>transfer: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_cancel" classname="f04.odyssey_cancel" time="0.211781" status="run">
+		<properties/>
+		<system-out>cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_debt" classname="f04.odyssey_debt" time="0.698818" status="run">
+		<properties/>
+		<system-out>debt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_expiry" classname="f04.odyssey_expiry" time="0.17095" status="run">
+		<properties/>
+		<system-out>expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_invalid" classname="f04.odyssey_invalid" time="0.318729" status="run">
+		<properties/>
+		<system-out>invalid: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_limits" classname="f04.odyssey_limits" time="7.35093" status="run">
+		<properties/>
+		<system-out>LIMITS entities_after56=61919 archive_bytes=19364456 third_horizon=CAPACITY duties=56764
+limits: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_benchmark" classname="f04.odyssey_benchmark" time="3.50464" status="run">
+		<properties/>
+		<system-out>PERF create1600_ms=89.3289 manifest_ms=0.8867 plan28_ms=1007.75 coverage28_ms=34.2932 save_ms=417.323 load_ms=398.054 advance28_ms=1455.19 bytes=10157613
+benchmark: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_process_save" classname="f04.odyssey_process_save" time="1.29508" status="run">
+		<properties/>
+		<system-out>process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_process_load" classname="f04.odyssey_process_load" time="0.923274" status="run">
+		<properties/>
+		<system-out>process_load: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.odyssey_contracts" classname="f04.odyssey_contracts" time="0.275764" status="run">
+		<properties/>
+		<system-out>...
+----------------------------------------------------------------------
+Ran 3 tests in 0.002s
+
+OK
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_structure" classname="f04.valhalla_structure" time="0.232814" status="run">
+		<properties/>
+		<system-out>structure: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_reference" classname="f04.valhalla_reference" time="0.534847" status="run">
+		<properties/>
+		<system-out>METRICS days=1 shifts=1185 critical=24/24 quota_missing=0 critical_gaps=0 max7=1 min_rest=18446744073709551615 changed=0
+reference: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_7" classname="f04.valhalla_7" time="1.34473" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=8176 critical=168/168 quota_missing=119 critical_gaps=0 max7=5 min_rest=57600 changed=1434
+7: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_14" classname="f04.valhalla_14" time="3.40183" status="run">
+		<properties/>
+		<system-out>METRICS days=14 shifts=16421 critical=336/336 quota_missing=169 critical_gaps=0 max7=5 min_rest=57600 changed=1720
+14: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_28" classname="f04.valhalla_28" time="12.2971" status="run">
+		<properties/>
+		<system-out>METRICS days=28 shifts=32460 critical=672/672 quota_missing=720 critical_gaps=0 max7=5 min_rest=57600 changed=1791
+28: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_specialists" classname="f04.valhalla_specialists" time="0.438175" status="run">
+		<properties/>
+		<system-out>specialists: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_civilians" classname="f04.valhalla_civilians" time="0.423599" status="run">
+		<properties/>
+		<system-out>civilians: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_authority" classname="f04.valhalla_authority" time="0.656085" status="run">
+		<properties/>
+		<system-out>authority: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_absence" classname="f04.valhalla_absence" time="0.631138" status="run">
+		<properties/>
+		<system-out>absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_deficit" classname="f04.valhalla_deficit" time="2.16215" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=7957 critical=147/168 quota_missing=338 critical_gaps=21 max7=5 min_rest=57600 changed=1359
+deficit: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_rest" classname="f04.valhalla_rest" time="1.47651" status="run">
+		<properties/>
+		<system-out>METRICS days=7 shifts=8175 critical=168/168 quota_missing=120 critical_gaps=0 max7=5 min_rest=57600 changed=1434
+rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_partial" classname="f04.valhalla_partial" time="0.222696" status="run">
+		<properties/>
+		<system-out>partial: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_roundtrip" classname="f04.valhalla_roundtrip" time="3.13014" status="run">
+		<properties/>
+		<system-out>roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_corrupt" classname="f04.valhalla_corrupt" time="0.543735" status="run">
+		<properties/>
+		<system-out>corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_limits" classname="f04.valhalla_limits" time="21.69" status="run">
+		<properties/>
+		<system-out>CAPACITY entities28=37554 archive_bytes28=11805987 duties=32460 after_rejection_bytes=11806157
+limits: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_buffers" classname="f04.valhalla_buffers" time="0.283147" status="run">
+		<properties/>
+		<system-out>buffers: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_process_save" classname="f04.valhalla_process_save" time="1.6416" status="run">
+		<properties/>
+		<system-out>process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_process_load" classname="f04.valhalla_process_load" time="1.20416" status="run">
+		<properties/>
+		<system-out>process_load: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.valhalla_contracts" classname="f04.valhalla_contracts" time="0.0607174" status="run">
+		<properties/>
+		<system-out>..
+----------------------------------------------------------------------
+Ran 2 tests in 0.008s
+
+OK
+</system-out>
+	</testcase>
+	<testcase name="f04.history_reference_contract" classname="f04.history_reference_contract" time="1.58894" status="run">
+		<properties/>
+		<system-out>test_all_six_registered_references (__main__.ReferenceTests.test_all_six_registered_references) ... ok
+test_bad_sha256 (__main__.ReferenceTests.test_bad_sha256) ... ok
+test_changed_contract (__main__.ReferenceTests.test_changed_contract) ... ok
+test_changed_provenance (__main__.ReferenceTests.test_changed_provenance) ... ok
+test_copy_and_original_are_unchanged (__main__.ReferenceTests.test_copy_and_original_are_unchanged) ... ok
+test_incompatible_core (__main__.ReferenceTests.test_incompatible_core) ... ok
+test_missing (__main__.ReferenceTests.test_missing) ... ok
+test_never_overwrites_original_or_existing_file (__main__.ReferenceTests.test_never_overwrites_original_or_existing_file) ... ok
+test_other_duration (__main__.ReferenceTests.test_other_duration) ... ok
+test_other_profile (__main__.ReferenceTests.test_other_profile) ... ok
+test_real_campaign_detects_divergence (__main__.ReferenceTests.test_real_campaign_detects_divergence) ... ok
+test_rejects_without_modifying_original (__main__.ReferenceTests.test_r...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_reference" classname="f04.guardias_1_reference" time="0.0207192" status="run">
+		<properties/>
+		<system-out>1 reference: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_7" classname="f04.guardias_1_7" time="0.0529004" status="run">
+		<properties/>
+		<system-out>1 7: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_14" classname="f04.guardias_1_14" time="0.127038" status="run">
+		<properties/>
+		<system-out>1 14: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_28" classname="f04.guardias_1_28" time="0.388549" status="run">
+		<properties/>
+		<system-out>1 28: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_unseeded" classname="f04.guardias_1_unseeded" time="0.408815" status="run">
+		<properties/>
+		<system-out>1 unseeded: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_authority" classname="f04.guardias_1_authority" time="0.0241916" status="run">
+		<properties/>
+		<system-out>1 authority: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_absence" classname="f04.guardias_1_absence" time="0.0495221" status="run">
+		<properties/>
+		<system-out>1 absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_cancel" classname="f04.guardias_1_cancel" time="0.0497816" status="run">
+		<properties/>
+		<system-out>1 cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_mid_cancel" classname="f04.guardias_1_mid_cancel" time="0.0473906" status="run">
+		<properties/>
+		<system-out>1 mid_cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_revoked_cancel" classname="f04.guardias_1_revoked_cancel" time="0.0543432" status="run">
+		<properties/>
+		<system-out>1 revoked_cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_cover" classname="f04.guardias_1_cover" time="0.0460081" status="run">
+		<properties/>
+		<system-out>1 cover: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_deficit" classname="f04.guardias_1_deficit" time="0.0443261" status="run">
+		<properties/>
+		<system-out>1 deficit: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_command_rest" classname="f04.guardias_1_command_rest" time="3.7096" status="run">
+		<properties/>
+		<system-out>1 command_rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_command_shortage" classname="f04.guardias_1_command_shortage" time="0.0329321" status="run">
+		<properties/>
+		<system-out>1 command_shortage: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_medical" classname="f04.guardias_1_medical" time="0.0340223" status="run">
+		<properties/>
+		<system-out>1 medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_rest" classname="f04.guardias_1_rest" time="0.0386335" status="run">
+		<properties/>
+		<system-out>1 rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_leave" classname="f04.guardias_1_leave" time="0.0518502" status="run">
+		<properties/>
+		<system-out>1 leave: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_debt" classname="f04.guardias_1_debt" time="0.0453423" status="run">
+		<properties/>
+		<system-out>1 debt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_partial" classname="f04.guardias_1_partial" time="0.0123057" status="run">
+		<properties/>
+		<system-out>1 partial: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_expiry" classname="f04.guardias_1_expiry" time="0.0276054" status="run">
+		<properties/>
+		<system-out>1 expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_migration" classname="f04.guardias_1_migration" time="1.93849" status="run">
+		<properties/>
+		<system-out>1 migration: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_roundtrip" classname="f04.guardias_1_roundtrip" time="1.86216" status="run">
+		<properties/>
+		<system-out>1 roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_legacy_alpha" classname="f04.guardias_1_legacy_alpha" time="0.124688" status="run">
+		<properties/>
+		<system-out>1 legacy_alpha: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_continuation" classname="f04.guardias_1_continuation" time="0.209232" status="run">
+		<properties/>
+		<system-out>1 continuation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_corrupt" classname="f04.guardias_1_corrupt" time="0.0337527" status="run">
+		<properties/>
+		<system-out>1 corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_invalid" classname="f04.guardias_1_invalid" time="0.0206896" status="run">
+		<properties/>
+		<system-out>1 invalid: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_process_save" classname="f04.guardias_1_process_save" time="0.115321" status="run">
+		<properties/>
+		<system-out>1 process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_1_process_load" classname="f04.guardias_1_process_load" time="0.0984723" status="run">
+		<properties/>
+		<system-out>1 process_load: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_reference" classname="f04.guardias_2_reference" time="0.0282494" status="run">
+		<properties/>
+		<system-out>2 reference: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_7" classname="f04.guardias_2_7" time="0.0677033" status="run">
+		<properties/>
+		<system-out>2 7: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_14" classname="f04.guardias_2_14" time="0.173724" status="run">
+		<properties/>
+		<system-out>2 14: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_28" classname="f04.guardias_2_28" time="0.511906" status="run">
+		<properties/>
+		<system-out>2 28: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_unseeded" classname="f04.guardias_2_unseeded" time="0.503495" status="run">
+		<properties/>
+		<system-out>2 unseeded: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_authority" classname="f04.guardias_2_authority" time="0.0326367" status="run">
+		<properties/>
+		<system-out>2 authority: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_absence" classname="f04.guardias_2_absence" time="0.0659999" status="run">
+		<properties/>
+		<system-out>2 absence: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_cancel" classname="f04.guardias_2_cancel" time="0.0544452" status="run">
+		<properties/>
+		<system-out>2 cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_mid_cancel" classname="f04.guardias_2_mid_cancel" time="0.0618375" status="run">
+		<properties/>
+		<system-out>2 mid_cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_revoked_cancel" classname="f04.guardias_2_revoked_cancel" time="0.0631438" status="run">
+		<properties/>
+		<system-out>2 revoked_cancel: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_cover" classname="f04.guardias_2_cover" time="0.053409" status="run">
+		<properties/>
+		<system-out>2 cover: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_deficit" classname="f04.guardias_2_deficit" time="0.0502106" status="run">
+		<properties/>
+		<system-out>2 deficit: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_command_rest" classname="f04.guardias_2_command_rest" time="6.99222" status="run">
+		<properties/>
+		<system-out>2 command_rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_command_shortage" classname="f04.guardias_2_command_shortage" time="0.0360359" status="run">
+		<properties/>
+		<system-out>2 command_shortage: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_medical" classname="f04.guardias_2_medical" time="0.043744" status="run">
+		<properties/>
+		<system-out>2 medical: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_rest" classname="f04.guardias_2_rest" time="0.0635446" status="run">
+		<properties/>
+		<system-out>2 rest: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_leave" classname="f04.guardias_2_leave" time="0.057719" status="run">
+		<properties/>
+		<system-out>2 leave: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_debt" classname="f04.guardias_2_debt" time="0.051811" status="run">
+		<properties/>
+		<system-out>2 debt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_partial" classname="f04.guardias_2_partial" time="0.0164199" status="run">
+		<properties/>
+		<system-out>2 partial: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_expiry" classname="f04.guardias_2_expiry" time="0.038599" status="run">
+		<properties/>
+		<system-out>2 expiry: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_migration" classname="f04.guardias_2_migration" time="2.6059" status="run">
+		<properties/>
+		<system-out>2 migration: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_roundtrip" classname="f04.guardias_2_roundtrip" time="2.69894" status="run">
+		<properties/>
+		<system-out>2 roundtrip: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_legacy_alpha" classname="f04.guardias_2_legacy_alpha" time="0.15099" status="run">
+		<properties/>
+		<system-out>2 legacy_alpha: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_continuation" classname="f04.guardias_2_continuation" time="0.255089" status="run">
+		<properties/>
+		<system-out>2 continuation: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_corrupt" classname="f04.guardias_2_corrupt" time="0.0386217" status="run">
+		<properties/>
+		<system-out>2 corrupt: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_invalid" classname="f04.guardias_2_invalid" time="0.0255157" status="run">
+		<properties/>
+		<system-out>2 invalid: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_process_save" classname="f04.guardias_2_process_save" time="0.12947" status="run">
+		<properties/>
+		<system-out>2 process_save: PASS
+</system-out>
+	</testcase>
+	<testcase name="f04.guardias_2_process_load" classname="f04.guardias_2_process_load" time="0.127114" status="run">
+		<properties/>
+		<system-out>2 process_load: PASS
+</system-out>
+	</testcase>
+</testsuite>

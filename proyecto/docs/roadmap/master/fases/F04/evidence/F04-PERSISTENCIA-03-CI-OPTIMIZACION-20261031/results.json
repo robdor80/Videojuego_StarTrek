@@ -1,0 +1,96 @@
+{
+  "run_id": 41207950499,
+  "head": "f2dcb907f3518020dbcfe3bc55eff226ebbef8f4",
+  "conclusion": "success",
+  "campaigns": [
+    {
+      "profile": 1,
+      "days": 365,
+      "test_seconds": 46.6712,
+      "phase_seconds": {
+        "oracle": 30.202319100000068,
+        "campaign": 13.53331209999999,
+        "resume": 0.2796485000000075,
+        "audit": 2.0211574999999584
+      },
+      "oracle_sha256": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c",
+      "verified_original_facts": 41123,
+      "maximum_resident": 1926
+    },
+    {
+      "profile": 2,
+      "days": 365,
+      "test_seconds": 69.0639,
+      "phase_seconds": {
+        "oracle": 48.55991799999998,
+        "campaign": 17.314457500000003,
+        "resume": 0.36925189999999475,
+        "audit": 2.256782199999975
+      },
+      "oracle_sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+      "verified_original_facts": 47500,
+      "maximum_resident": 2234
+    },
+    {
+      "profile": 3,
+      "days": 365,
+      "test_seconds": 380.127,
+      "phase_seconds": {
+        "oracle": 275.577545,
+        "campaign": 80.69670359999998,
+        "resume": 1.6926107999998976,
+        "audit": 20.924680999999964
+      },
+      "oracle_sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+      "verified_original_facts": 177697,
+      "maximum_resident": 8492
+    },
+    {
+      "profile": 4,
+      "days": 365,
+      "test_seconds": 1172.7,
+      "phase_seconds": {
+        "oracle": 904.1762822000001,
+        "campaign": 186.16407920000006,
+        "resume": 3.874686200000042,
+        "audit": 77.56039059999989
+      },
+      "oracle_sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+      "verified_original_facts": 382087,
+      "maximum_resident": 18348
+    },
+    {
+      "profile": 5,
+      "days": 365,
+      "test_seconds": 1553.92,
+      "phase_seconds": {
+        "oracle": 1177.6914224000002,
+        "campaign": 256.9922718999999,
+        "resume": 5.547426400000177,
+        "audit": 113.0706768
+      },
+      "oracle_sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+      "verified_original_facts": 433616,
+      "maximum_resident": 21218
+    },
+    {
+      "profile": 5,
+      "days": 730,
+      "test_seconds": 966.631,
+      "phase_seconds": {
+        "campaign": 729.4539248000001,
+        "resume": 9.247411499999998,
+        "audit": 227.7264229
+      },
+      "oracle_sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204",
+      "verified_original_facts": 866849,
+      "maximum_resident": 21218
+    }
+  ],
+  "baseline_run_id": 41199067055,
+  "note": "Baseline 730 failed generating an oracle; no productive campaign ran there.",
+  "sum_test_seconds": 4189.1131000000005,
+  "baseline_sum_test_seconds_including_failed_730": 6609.8201,
+  "difference_seconds_vs_failed_baseline": 2420.7069999999994,
+  "skippable_measured_365_oracle_seconds": 2436.2074867
+}

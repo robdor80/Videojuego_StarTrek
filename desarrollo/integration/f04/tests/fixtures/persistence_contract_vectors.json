@@ -1,0 +1,45 @@
+{
+  "contract": "generic-segmented-campaign-1",
+  "status": "IMPLEMENTED_ACCEPTANCE_PASSED_PENDING_INDEPENDENT_REVIEW",
+  "requires": "authorization granted in PR #76 comment 6536894218; Core PR #13 and F04 PR #76 remain Draft",
+  "reference": "F04-PERSISTENCIA-03_CAMPANAS_LARGAS.md and desarrollo/integration/f04/HISTORY.md",
+  "execution_evidence": {
+    "core": "CoreRPG 89a0e4f: HistoryTest, HistoryHash, HistoryBoundary and HistoryProcess (18 + 14 cases); full Core and Content JSON suite",
+    "f04": "f04.history_faults: six publication boundaries, actual Win32 replacement IO failure, torn orphan, corrupt segment/root, recovery, old-load boundary, debt/absence and archived revocation",
+    "legacy": "check_guardias_compatibility.py and tests/check_legacy_history.py: all five classes, non-destructive migration, old-reader rejection, fresh-process identical future",
+    "continuity": "f04.history_campaign_* and f04_history_audit: every original post-bootstrap fact reconstructed and hashed against complete-history reference",
+    "allocation_scope": "Pre-publication staging preserves allocation-exception semantics; new archive-specific exhaustive bad_alloc injection is not claimed",
+    "terminal_medical_scope": "Departed identities remain resident; terminal medical/death model is not present in this phase and is not claimed as tested",
+    "remaining": "Implementation acceptance passed, including five real 365-day campaigns and Valhalla 730; both Draft PRs await independent audit, no merge"
+  },
+  "common_invariants": [
+    "Exactly one complete authoritative generation is published",
+    "Entity identities are never reissued and facts are never regenerated",
+    "World, clock, random streams and manifest refer to the same generation",
+    "Previous valid generation remains readable after every failed operation",
+    "Archived records remain queryable by original identity and causal reference"
+  ],
+  "vectors": [
+    {"id": "ARCHIVE_01", "inject": "before prepare", "expect": "previous generation unchanged"},
+    {"id": "ARCHIVE_02", "inject": "allocation or IO failure while preparing a segment", "expect": "previous generation unchanged; temporary fragment ignored"},
+    {"id": "ARCHIVE_03", "inject": "after segment write before manifest publication", "expect": "previous generation selected; unreferenced prepared segment is not authority"},
+    {"id": "ARCHIVE_04", "inject": "after preparing manifest before commit", "expect": "previous generation selected after process restart"},
+    {"id": "ARCHIVE_05", "inject": "during recovery of interrupted publication", "expect": "retry does not duplicate segments or facts; no mixed generations"},
+    {"id": "LOAD_01", "inject": "referenced segment missing", "expect": "reject candidate; preserve live campaign"},
+    {"id": "LOAD_02", "inject": "truncated segment or incomplete manifest", "expect": "reject candidate; preserve previous durable generation"},
+    {"id": "LOAD_03", "inject": "segment byte changed without updating hash", "expect": "integrity failure; no partial state publication"},
+    {"id": "LOAD_04", "inject": "unknown manifest or record version", "expect": "explicit unsupported version; original files unmodified"},
+    {"id": "LOAD_05", "inject": "broken descriptor chain, duplicate ID ownership or inconsistent declared record interval with recomputed manifest hash", "expect": "chain, identity or interval validation failure; bounding time overlap alone is allowed for previously pinned late-closing facts"},
+    {"id": "LOAD_06", "inject": "duplicate entity identity between active checkpoint and archive", "expect": "identity validation failure; no duplicate person or duty"},
+    {"id": "LOAD_07", "inject": "unresolved causal reference to another segment", "expect": "reference validation failure"},
+    {"id": "LOAD_08", "inject": "revoked appointment included in historical segment", "expect": "queryable historical revocation; never restored as active authority"},
+    {"id": "CONTINUITY_01", "fixture": "REST debt plus ABSENCE crossing consolidation boundary", "expect": "same legal next duty as monolithic reference; debt retained"},
+    {"id": "CONTINUITY_02", "fixture": "cancelled duty with replacement and independently revoked function", "expect": "original and replacement queryable; revoked function not revived"},
+    {"id": "CONTINUITY_03", "fixture": "departed person and dead-person state when available", "expect": "identity queryable; membership and terminal state not reversed"},
+    {"id": "CONTINUITY_04", "fixture": "Valhalla census plus Defiant naval and Odin Marines", "expect": "same 2200 identities and residences; 40 naval and 60 Marines preserve distinct competencies"},
+    {"id": "DETERMINISM_01", "fixture": "same real-duty campaign uninterrupted, periodically saved, separately restarted and consolidated", "expect": "same facts, next assignments, authority, clock and random streams; lifetime work score preserved"},
+    {"id": "HISTORY_01", "fixture": "named incident with known duty providers and substitutions before consolidation", "expect": "years later query returns original providers, issuer, times and causal facts from preserved payload"},
+    {"id": "MIGRATION_01", "fixture": "legacy SCHEMA 3 and SCHEMA 4 saves for all five profiles", "expect": "explicit deterministic conversion to a separate output; original bytes retained and old reader rejects new container explicitly"},
+    {"id": "SCALE_01", "fixture": "365 actual duty days for each class plus 730 actual duty days on Valhalla", "expect": "bounded operational residency, measured historical growth and identical deterministic future"}
+  ]
+}

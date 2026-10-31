@@ -1,0 +1,101 @@
+name: F04 proposed historical persistence
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F04/**'
+      - '.github/workflows/f04-history-persistence.yml'
+  workflow_dispatch:
+    inputs:
+      regenerate_oracles:
+        description: 'Deep audit: regenerate all complete-history oracles (slow; use a suitably provisioned runner for 730 days)'
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  real-campaign:
+    runs-on: windows-latest
+    timeout-minutes: ${{ inputs.regenerate_oracles && 360 || 120 }}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {profile: 1, days: 365, case: '1_365'}
+          - {profile: 2, days: 365, case: '2_365'}
+          - {profile: 3, days: 365, case: '3_365'}
+          - {profile: 4, days: 365, case: '4_365'}
+          - {profile: 5, days: 365, case: '5_365'}
+          - {profile: 5, days: 730, case: 'valhalla_730'}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Initialize disposable runner output root
+        shell: pwsh
+        run: |
+          $workRoot = Join-Path $env:RUNNER_TEMP 'Videojuego_StarTrek/f04-history-${{ matrix.case }}'
+          $systemTemp = Join-Path $workRoot 'system-temp'
+          New-Item -ItemType Directory -Force -Path $systemTemp | Out-Null
+          "F04_WORK_ROOT=$workRoot" >> $env:GITHUB_ENV
+          "F04_TEST_TEMP_ROOT=$workRoot/reference-tests" >> $env:GITHUB_ENV
+          "TEMP=$systemTemp" >> $env:GITHUB_ENV
+          "TMP=$systemTemp" >> $env:GITHUB_ENV
+          "TMPDIR=$systemTemp" >> $env:GITHUB_ENV
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read explicit proposed revision; stable pin remains unchanged
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f04/core-history-revision.txt -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid proposed SHA'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: external/CoreRPG
+      - name: Verify and stage the audited complete-history oracle
+        if: inputs.regenerate_oracles != true
+        shell: pwsh
+        run: >-
+          python desarrollo/integration/f04/tests/history_reference.py
+          --profile ${{ matrix.profile }} --days ${{ matrix.days }}
+          --directory "${{ env.F04_WORK_ROOT }}/reference-fixtures"
+      - name: Configure proposed integration and separate complete-history oracle
+        shell: pwsh
+        run: |
+          $options = @()
+          if ('${{ inputs.regenerate_oracles }}' -ne 'true') {
+            $options += "-DF04_HISTORY_REFERENCE_FIXTURES=$env:F04_WORK_ROOT/reference-fixtures"
+          }
+          if ('${{ inputs.regenerate_oracles }}' -eq 'true') {
+            $options += '-DF04_HISTORY_ORACLE_TIMEOUT_SECONDS=18000'
+          }
+          cmake -S desarrollo/integration/f04 -B "$env:F04_WORK_ROOT/build" -A x64 -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG" -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON @options
+      - name: Build
+        shell: pwsh
+        run: |
+          $targets = @()
+          if ('${{ matrix.profile }}' -ne '1' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
+            $targets = @('--target', 'f04_history_campaign', 'f04_history_audit')
+          }
+          cmake --build "$env:F04_WORK_ROOT/build" --config Release --parallel 4 @targets
+      - name: Proposed-Core regressions and injected faults
+        if: matrix.profile == 1
+        run: ctest --test-dir "${{ env.F04_WORK_ROOT }}/build" -C Release -E history_campaign_ --output-on-failure --output-junit "${{ env.F04_WORK_ROOT }}/build/regressions.xml" -j 2
+      - name: Actual watches, consolidation, complete-history equivalence, process recovery and all-payload audit
+        run: ctest --test-dir "${{ env.F04_WORK_ROOT }}/build" -C Release -R "^f04.history_campaign_${{ matrix.case }}$" --no-tests=error --output-on-failure --output-junit "${{ env.F04_WORK_ROOT }}/build/campaign.xml"
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f04-history-${{ matrix.profile }}-${{ matrix.days }}
+          path: |
+            ${{ env.F04_WORK_ROOT }}/build/campaign.xml
+            ${{ env.F04_WORK_ROOT }}/build/regressions.xml
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.json
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.log
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.oracle
+            ${{ env.F04_WORK_ROOT }}/build/history-runs/**/*.resume

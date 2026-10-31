@@ -173,6 +173,12 @@ exige mando/delegación y cobertura durante el siguiente ciclo completo.
 
 ## Límites del corte
 
+La auditoría [F04-PERSISTENCIA-03](../../../proyecto/docs/roadmap/master/fases/F04/F04-PERSISTENCIA-03_CAMPANAS_LARGAS.md)
+documenta el bloqueo de campañas largas y propone una ampliación genérica de
+CoreRPG pendiente de autorización. `f04_persistence_audit` reproduce crecimiento,
+continuidad y rechazo atómico sin implementar archivo. Sus diagnósticos no
+certifican que se hayan alcanzado 365/730 días en las naves grandes.
+
 La ampliación de dotaciones está descrita en [DOTACIONES.md](DOTACIONES.md).
 La creación general, altas/bajas, plazas y consulta individual/paginada sustituyen
 la limitación de nueve personas para campañas nuevas. La muestra ABI 1 sigue

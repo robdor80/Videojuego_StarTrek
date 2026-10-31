@@ -5,6 +5,8 @@ param(
  [Parameter(Mandatory=$true)][string]$F02NativeBuild,
  [Parameter(Mandatory=$true)][string]$F03NativeBuild,
  [Parameter(Mandatory=$true)][string]$F02CoreSource,
+ [switch]$History,
+ [string]$F04NativeBuild,
  [string]$EngineRoot='C:/Program Files/Epic Games/UE_5.8'
 )
 $ErrorActionPreference='Stop'
@@ -22,8 +24,10 @@ function Logged([string]$Name,[string]$Exe,[string[]]$Arguments){
  if($LASTEXITCODE -ne 0){throw "$Name failed: $LASTEXITCODE"}
 }
 $Native=Join-Path $BuildRoot 'native'
+if($F04NativeBuild){$Native=[IO.Path]::GetFullPath($F04NativeBuild)}
 if($Stage -in @('Native','All')){
- Logged 'configure' 'cmake' @('-S',$PSScriptRoot,'-B',$Native,'-G','Visual Studio 18 2026','-A','x64',"-DCORERPG_SOURCE_DIR=$CoreSource")
+ $HistoryOption=if($History){'ON'}else{'OFF'}
+ Logged 'configure' 'cmake' @('-S',$PSScriptRoot,'-B',$Native,'-G','Visual Studio 18 2026','-A','x64',"-DCORERPG_SOURCE_DIR=$CoreSource","-DF04_ENABLE_HISTORY=$HistoryOption")
  Logged 'build' 'cmake' @('--build',$Native,'--config','Release','--parallel','4')
  Logged 'tests' 'ctest' @('--test-dir',$Native,'-C','Release','--no-tests=error','--output-on-failure','--output-junit',(Join-Path $BuildRoot ($Run+'-native.xml')))
 }
@@ -42,7 +46,9 @@ if($Stage -in @('Stage','All')){
   $Source=Join-Path $Repo "desarrollo/integration/$Phase"
   Copy-Item -LiteralPath (Join-Path $Source "include/${Phase}_bridge.h") -Destination (Join-Path $Lab 'ThirdParty/include') -Force
   $Pin=(Get-Content -LiteralPath (Join-Path $Source 'core-revision.txt') -Raw).Trim()
+  if($Phase -eq 'f04' -and $History){$Pin=(Get-Content -LiteralPath (Join-Path $Source 'core-history-revision.txt') -Raw).Trim()}
   Set-Content -LiteralPath (Join-Path $Lab "ThirdParty/include/${Phase}_core_revision.h") -Encoding ascii -Value ('#define '+$Phase.ToUpper()+'_EXPECTED_CORE_SHA "'+$Pin+'"')
+  if($Phase -eq 'f04'){$Enabled=if($History){1}else{0};Add-Content -LiteralPath (Join-Path $Lab 'ThirdParty/include/f04_core_revision.h') -Encoding ascii -Value "#define F04_HISTORY_ENABLED $Enabled"}
   $Binary=if($Phase -eq 'f03'){$F03NativeBuild}else{$Native}
   $Bridge=if($Phase -eq 'f03'){'TrekF03Bridge'}else{'TrekF04Bridge'}
   foreach($Ext in @('lib','dll')){Copy-Item -LiteralPath (Join-Path $Binary "Release/$Bridge.$Ext") -Destination (Join-Path $Lab 'ThirdParty/Win64') -Force}
@@ -55,5 +61,6 @@ if($Stage -in @('TestUnreal','All')){
  $Report=Join-Path $BuildRoot ($Run+'-ue-report')
  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') @($Project,'-unattended','-nop4','-nosplash','-NullRHI','-nosound','-NoLiveCoding','-ExecCmds=Automation RunTests F0','-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')
  $Result=Get-Content -LiteralPath (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
- if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne 25){throw 'Expected 25 passing F02/F03/F04 Actor and UWorld tests'}
+ $Expected=if($History){26}else{25}
+ if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne $Expected){throw "Expected $Expected passing F02/F03/F04 Actor and UWorld tests"}
 }

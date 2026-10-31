@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="1"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="583"
+	timestamp="2026-10-31T14:55:17"
+	>
+	<testcase name="f04.history_campaign_valhalla_730" classname="f04.history_campaign_valhalla_730" time="583.766" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=5 days=730 evidence=C:\F04\Persistencia03\laboratorios\PruebasTecnicas\f04-ci-history\build\history-runs\20261031-145517-694cc9ec
+resume: profile=5 days=730 evidence=C:\F04\Persistencia03\laboratorios\PruebasTecnicas\f04-ci-history\build\history-runs\20261031-145517-694cc9ec
+audit: profile=5 days=730 evidence=C:\F04\Persistencia03\laboratorios\PruebasTecnicas\f04-ci-history\build\history-runs\20261031-145517-694cc9ec
+{"kind": "acceptance", "profile": 5, "days": 730, "completed": 730, "maximum_resident": 21218, "maximum_active_bytes": 6662421, "elapsed_ms": 439474, "real_watches": true, "all_blocks_equal_complete_history": true, "working_set": 24211456, "peak_working_set": 65413120, "storage_bytes_retaining_previous_generations": 719423208, "phases_elapsed_seconds": 583.6847850999911, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204", "reference_core_revision": "63d2401edaf85960b4baaf6b53...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

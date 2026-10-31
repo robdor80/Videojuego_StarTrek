@@ -1,0 +1,76 @@
+{
+  "base": "45f7816c9aa996bfd678b11b4f9fa1a4b9632021",
+  "branch": "codex/f04-persistencia-03-campanas-largas",
+  "cores": {
+    "C:\\F04\\CoreRPG": {
+      "head": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+      "status": ""
+    },
+    "C:\\F04\\core-f02": {
+      "head": "4f282863737bcd8f5add401202a9e1064c133672",
+      "status": ""
+    },
+    "C:\\F04\\core-f03": {
+      "head": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+      "status": ""
+    }
+  },
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "native_dll_sha256": "e467afc64144a1878cad9be452f5da9953b05be7e966bb774ae91328da6afcf8",
+  "staged_dll_sha256": "e467afc64144a1878cad9be452f5da9953b05be7e966bb774ae91328da6afcf8",
+  "source_sha256": {
+    "desarrollo/integration/f02/include/f02_bridge.h": "773ef20fbacefcec925e35777519a13114d4f45124582942ed53261733f4255f",
+    "desarrollo/integration/f02/src/f02_bridge.cpp": "a74ac7db828257165132c55d850621a14c19c43dadf8d0e683b007a8890cb02e",
+    "desarrollo/integration/f02/tests/f02_tests.cpp": "86450696316aa10f1b7d5cd0a72d8e5641ce08302d102768c8733ebe8a0d3f3d",
+    "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02Automation.cpp": "6ac3fded4d3bbc2cf372094457d764e238687fd52e098f900a10eff875c3a835",
+    "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CampaignSubsystem.cpp": "3c2ae886d9e8ec88a7f59b8aa6fce98ad4c4e1ac8a818e175ee10d92f8e975ba",
+    "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02CoreLab.cpp": "c16230f880c5296600fe09332afacd2d97318fc20679cda1eca49f78b4e67708",
+    "desarrollo/integration/f02/unreal/Source/F02CoreLab/Private/F02DemoGameMode.cpp": "7b9da630ac7d4f41e6cd30219cfd162bfe524d6e9baf58dcc72349a9d4119d39",
+    "desarrollo/integration/f02/unreal/Source/F02CoreLab/Public/F02CampaignSubsystem.h": "852fd07938701bf37db89f023f5dff4fc3d59c8bb106481f30a182f9f4e26db1",
+    "desarrollo/integration/f03/include/f03_bridge.h": "e592f85633aaaea443d7950cc68a9d82397915c66c8f14d0182750c633b6e6e6",
+    "desarrollo/integration/f03/src/f03_bridge.cpp": "b03a554f9ec9d83cf47288837bf151b23be42348ae5fbb6292d7463b52351ae8",
+    "desarrollo/integration/f03/tests/f03_tests.cpp": "a98e7a646629d88c4e681d5432b598d7f06c2daf21e7c7e555f1ee02d254fe85",
+    "desarrollo/integration/f03/unreal/Private/F02CoreLab.cpp": "e8f7a25e778f11335cdc107e45aaf83f7badcb1e6a87880405c8c1508f528632",
+    "desarrollo/integration/f03/unreal/Private/F03Automation.cpp": "eeb4ac7f1b66cb7fa3d891489e8939fea7bc8ed3ae8c5f8867682197d68bf84b",
+    "desarrollo/integration/f03/unreal/Private/F03CampaignSubsystem.cpp": "aed9e9ab037af0b526cb92a0bbe57d31a76babdf9547a61d90fb56d392c90802",
+    "desarrollo/integration/f03/unreal/Public/F03CampaignSubsystem.h": "cd29d0b275acb063b08768bb636d9d89d2dd9750fa719fe4f1139fb2b034c250",
+    "desarrollo/integration/f04/include/f04_bridge.h": "f24a2520dd435b651ddef55ba2ed2f88a338a6d98991c94a44f310901c282f45",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "9f8254cbdfcfd6200eb6f19a45c5e177df019d83d1b2cea5ca5fb2397dafe415",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "8ffcf0df93d70a5cf8b5f8de18799742d772a2e1b882d200e6e7e36b13c63047",
+    "desarrollo/integration/f04/src/f04_organization.inc": "48ff03e75ff2e2af8f47a148dca1154b67fcb5f45df6d71c99cf180251fce48b",
+    "desarrollo/integration/f04/src/f04_roster.inc": "83fe7ceb0d5b5398f7108a223a5c8252ed0b998e1f6481d19ebb78a6e61e19a2",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "5a350afb008c867f24180e58ff0f9669a042fbbe2e2dc608c6ee3d9bbb3573ae",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "1a05ff3d3c410117ff73d02b49067a4780cb3d120f22790f1a2d43d9dc4f3abe",
+    "desarrollo/integration/f04/src/f04_templates.h": "43c48d26bafa5c0ce5719060fcddd817c13f543914d4a6f5909eb65fad9b82e2",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "1573f84bcebf87cd4c933abd472d6d9681f0b4ea1e6ee8cc9626afa8e71bef33",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "bcaf326344a5bcc1c113b6c4ba437abdbbf9f9cf2dd6768029f0b9cceddb1029",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "d49912e78b6d772a9cbc6bb116f64f4724f454111fbf7aa1f4d9e0678aa388e5",
+    "desarrollo/integration/f04/tests/f04_tests.cpp": "b8be7a35ecf7dce2fce07e1e4cc3fd1819d32ed71d96c0158d2b6c5fa8dc8314",
+    "desarrollo/integration/f04/tests/guardias_tests.cpp": "43ef052c7f73e367cd10967d1f8bb0e2a3803e9b94f14c563a249097908ff046",
+    "desarrollo/integration/f04/tests/intrepid_tests.cpp": "7c050ae207abe3e2ea671046d94ac380e1b4744f7b542dc95496e3890a90c1c3",
+    "desarrollo/integration/f04/tests/odyssey_tests.cpp": "9f803a96f7ecf4d268c5f8d9069c3b11df8bfbf58a80c369968943df9cad2074",
+    "desarrollo/integration/f04/tests/organization_lab.h": "af3d387b3957a8515970ee73f0745166e4d4a1915bf321140dca86bf1d9f7ceb",
+    "desarrollo/integration/f04/tests/organization_tests.cpp": "009fcee876b2efdd8db0202e3450b5c36a385690c4fcc9cfca8bf34298df87eb",
+    "desarrollo/integration/f04/tests/persistence_audit.cpp": "4f875b17fcac6767b3acf51e58e30cbf5dca823d44e44abeb9d2c6c7e1692b15",
+    "desarrollo/integration/f04/tests/population_tests.cpp": "2336a3385884843e1cf5cd435b637b0b2b1c9ae34e1c489810f48c6df3a014ac",
+    "desarrollo/integration/f04/tests/sovereign_tests.cpp": "ce642cd4cab760e86406f1778df68071998fbc462af52864ff2553a9f0336ef3",
+    "desarrollo/integration/f04/tests/valhalla_tests.cpp": "8fc88bb0866ee2898bd108fe4ea30508194763410177b4e51b63bc80bd8ca00b",
+    "desarrollo/integration/f04/unreal/F02CoreLab.cpp": "1d5cad0dfb0603907ca8427c0545b5bfd99287053994adc93f2577252ea1b69d",
+    "desarrollo/integration/f04/unreal/F04Automation.cpp": "7d072bc9a8a87eba2f29fdcc50fdedfaa9fe6571bb4b67642836a6c83542f765",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.cpp": "157c512c866f98cfa355af51ffa46bf43a5df448ba1dffc0e8abb7b6618b6092",
+    "desarrollo/integration/f04/unreal/F04CampaignSubsystem.h": "e7bf08f8550c78d23728c6dc4b1ad3a5c1cbfe563a8292f75a58a8ac67574a09"
+  },
+  "production_sources_equal_to_base": true,
+  "main_status": "D assets/interiores/shipboard/ten_forward_tng/README.md\n D assets/interiores/shipboard/ten_forward_tng/metadata.json\n?? assets/interiores/ten_forward_tng/",
+  "timing_scope": "single MSI run; other build/test processes may overlap; process working set, not isolated Core allocation",
+  "archival_implemented": false
+}
