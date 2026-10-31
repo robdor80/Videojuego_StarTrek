@@ -44,18 +44,18 @@ jobs:
           repository: robdor80/CoreRPG
           ref: ${{ steps.core.outputs.sha }}
           path: external/CoreRPG
-      - name: Verify and stage the audited Valhalla 730 oracle
-        if: matrix.days == 730 && inputs.regenerate_oracles != true
+      - name: Verify and stage the audited complete-history oracle
+        if: inputs.regenerate_oracles != true
         shell: pwsh
         run: >-
           python desarrollo/integration/f04/tests/history_reference.py
-          --profile 5 --days 730
+          --profile ${{ matrix.profile }} --days ${{ matrix.days }}
           --directory "${{ github.workspace }}/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
       - name: Configure proposed integration and separate complete-history oracle
         shell: pwsh
         run: |
           $options = @()
-          if ('${{ matrix.days }}' -eq '730' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
+          if ('${{ inputs.regenerate_oracles }}' -ne 'true') {
             $options += "-DF04_HISTORY_REFERENCE_FIXTURES=$env:GITHUB_WORKSPACE/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
           }
           if ('${{ inputs.regenerate_oracles }}' -eq 'true') {
@@ -66,7 +66,7 @@ jobs:
         shell: pwsh
         run: |
           $targets = @()
-          if ('${{ matrix.days }}' -eq '730' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
+          if ('${{ matrix.profile }}' -ne '1' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
             $targets = @('--target', 'f04_history_campaign', 'f04_history_audit')
           }
           cmake --build build/history --config Release --parallel 4 @targets

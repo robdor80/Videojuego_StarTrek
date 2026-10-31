@@ -126,11 +126,16 @@ Run `41199067055` exhausted the 3,300-second **oracle-generation** limit for
 Valhalla 730. Its real consolidated campaign had not started. This failure is
 not a successful CI acceptance or evidence of a deterministic divergence.
 
-The normal CI now reuses only the audited 730-day oracle from evidence commit
+The first corrected CI reused only the audited 730-day oracle from evidence commit
 `19aaf9746927cac1e0596f7f828497a8b39eac3f`. Its raw-byte SHA-256 is
 `4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204`.
-The five 365-day jobs still generate their independent complete-history oracles.
-All six jobs remain isolated, with `fail-fast: false`.
+The five 365-day jobs initially retained independent oracle generation. Run
+`41207950499` passed all six campaigns and all four workflows on commit `f2dcb907`.
+Every newly generated 365-day oracle was byte-identical to its audited original.
+Only after that full comparison, the normal path also reuses those five references
+through the same verifier and runner. Their regeneration consumed 2,436.2 seconds
+of aggregate runner time, with no different expected bytes. All productive phases
+and gates remain identical. All six jobs remain isolated, with `fail-fast: false`.
 
 `tests/fixtures/history_reference_v1.json` binds all six historical references to
 their profiles, durations, producer Core revision, acceptance records and original
@@ -158,8 +163,9 @@ consolidates originals, checks each block, enforces residency and immutable peop
 skills, recovers in another process, continues deterministically and reconstructs
 all persisted original payloads. A reference contains expected hashes, no state.
 Acceptance additionally records the verified manifest digest and phase timings.
-The 730 fast job does not build the unused reference DLL/executable or regressions
-already run in the first matrix job. Productive phase timeouts remain 3,300s.
+Fast jobs other than the first do not build the unused reference DLL/executable
+or regressions already run in the first matrix job. Productive phase timeouts
+remain 3,300s. The first job still compiles all targets and runs all regressions.
 
 Reproduce locally from the repository root using a **new** laboratory directory:
 
@@ -189,7 +195,15 @@ wrong expected digest. CTest runs this mandatory native case in the proposed-Cor
 regression job. A Python-only invocation explicitly skips that one native case.
 
 New CI measurements and raw evidence are added separately from the original
-acceptance package; see the CI optimization section in the F04 persistence roadmap.
+acceptance package. The first correction's actual 730-day pipeline took 966.6s
+(729.5s simulation, 9.2s continuation/recovery, 227.7s audit), against an earlier
+3,300.6s failed oracle-only attempt. Six test pipelines totalled 4,189.1s instead
+of the failed baseline's 6,609.8s: 2,420.7s less aggregate runner time, 36.6%.
+This compares a completed acceptance against a failed attempt; it does not measure
+the unknown time of a completed baseline 730-day oracle. Runner variability is
+separate from the 2,436.2s of newly measured redundant 365-day generation.
+See the committed `F04-PERSISTENCIA-03-CI-OPTIMIZACION-20261031` evidence package
+and the PR's latest Actions results for the final all-reference fast-path timings.
 
 For old-save migration and prior phases, see `tests/check_legacy_history.py`,
 `check_guardias_compatibility.py` and `tests/verify_history_regressions.py`. The

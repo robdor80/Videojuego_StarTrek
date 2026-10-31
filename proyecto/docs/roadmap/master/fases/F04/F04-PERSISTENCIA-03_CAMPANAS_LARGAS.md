@@ -193,7 +193,8 @@ para compararlos. Cualquier ausencia, alteración o incompatibilidad falla; no s
 regenera silenciosamente un patrón rechazado. Se mantienen simulación auténtica,
 2.200 ocupantes de Valhalla, consolidación, comparación de cada bloque, límites,
 identidades, recuperación en proceso independiente, continuación y auditoría de
-todos los hechos originales. Las otras cinco campañas conservan su procedimiento.
+todos los hechos originales. Las otras cinco campañas conservaron inicialmente
+su generación independiente hasta demostrar su equivalencia exacta.
 
 El modo de auditoría profunda regenera referencias desde cero sin fixtures, con
 un presupuesto explícito para esa generación lenta. Los límites de las fases
@@ -201,6 +202,22 @@ productivas permanecen en 3.300 segundos. Los seis trabajos siguen independiente
 Las pruebas de integridad incluyen una divergencia real detectada por el ejecutable
 nativo. [Contratos, comandos y modos de ejecución](../../../../../../desarrollo/integration/f04/HISTORY.md).
 
-Los resultados de esta corrección se documentarán en evidencias nuevas, sin
-sobrescribir las evidencias históricas. La aceptación de CI requiere las seis
-campañas verdes en la ejecución publicada; no se deduce de los resultados locales.
+La [primera corrección, ejecución 41207950499](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41207950499),
+superó las seis campañas en el HEAD `f2dcb907f3518020dbcfe3bc55eff226ebbef8f4`.
+Sus cuatro workflows finalizaron en verde. Valhalla 730 pasó en **966,6 segundos**,
+incluidos recuperación y auditoría completa. Las cinco referencias de 365 días
+recién generadas son idénticas byte por byte a las originales auditadas; su
+generación consumió **2.436,2 segundos** acumulados de runner. Tras esa prueba,
+el camino rápido utiliza también esas referencias mediante el mismo verificador.
+Cada trabajo sigue generando su campaña real, recuperando y auditando sin
+omitir ninguna comparación. El modo profundo conserva la generación independiente.
+
+Las seis pruebas pasaron de 6.609,8 segundos acumulados (incluido el intento
+fallido de 730) a 4.189,1: **2.420,7 segundos menos, 36,6%**, con mayor aceptación
+completada. No se conoce el tiempo de una regeneración completa de 730 en el
+runner anterior: el ahorro frente a esa ejecución completa no se inventa.
+
+[Resultados, fases, hashes y evidencias nuevas](evidence/F04-PERSISTENCIA-03-CI-OPTIMIZACION-20261031/RESULTADOS.md).
+La evidencia anterior permanece intacta. La última ejecución enlazada desde la
+PR #76 debe confirmar nuevamente las seis campañas sobre el HEAD final que
+incorpora la reutilización de las cinco referencias adicionales y esta documentación.

@@ -1,0 +1,32 @@
+[
+  {
+    "case": "f04.history_campaign_1_365",
+    "seconds": 66.3825,
+    "status": "run"
+  },
+  {
+    "case": "f04.history_campaign_2_365",
+    "seconds": 72.8656,
+    "status": "run"
+  },
+  {
+    "case": "f04.history_campaign_3_365",
+    "seconds": 417.022,
+    "status": "run"
+  },
+  {
+    "case": "f04.history_campaign_4_365",
+    "seconds": 1270.45,
+    "status": "run"
+  },
+  {
+    "case": "f04.history_campaign_5_365",
+    "seconds": 1482.47,
+    "status": "run"
+  },
+  {
+    "case": "f04.history_campaign_valhalla_730",
+    "seconds": 3300.63,
+    "status": "fail"
+  }
+]

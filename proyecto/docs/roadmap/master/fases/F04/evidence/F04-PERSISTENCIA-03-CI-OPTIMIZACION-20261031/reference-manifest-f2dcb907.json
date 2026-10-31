@@ -1,0 +1,87 @@
+{
+  "schema": 1,
+  "evidence_commit": "19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "compatible_core_revisions": [
+    "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98"
+  ],
+  "origin": "Audited complete-original-world oracle, original per-block canonical CRPGTIME hashes and final 7-day future; MSI acceptance at 19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "contract_files": {
+    "desarrollo/integration/f04/core-history-revision.txt": "1e9fef879e886087b2977543d308075afd06aa355ee4649cbf1e6a980da046d6",
+    "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
+    "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
+    "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "9b7e44e6582a889501916b2bbcb8baae8cf153f8a23108969cfd1ee1337f0cd8",
+    "desarrollo/integration/f04/src/f04_history.inc": "ba4d502b8c8363d227e1d2f493ac31be15de1508720b351670ab7c9c8b136055",
+    "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
+    "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
+    "desarrollo/integration/f04/src/f04_roster.inc": "5c2ca6a1eb3af6cc7a47cf3d004ba301ab09ac8ac4897a9415eb73e48eead118",
+    "desarrollo/integration/f04/src/f04_roster_queries.inc": "faa1b67265b1f7aa36157a160c86239a9e84898e147f5c902046c12aa454e36a",
+    "desarrollo/integration/f04/src/f04_sovereign.h": "42b2498992a72f092f9e60193ca5f750c8f4b6dda457efcd2fd27f4e8426353e",
+    "desarrollo/integration/f04/src/f04_templates.h": "7ea94aba17aee2c5b55ccc2b147dc1d776d4b89e668d182db925aba05bd30393",
+    "desarrollo/integration/f04/src/f04_valhalla.h": "4cc6d52cd5b6f9da830f2955e26c4f177d56f09a97cd7a5ca0fc71d8128ab821",
+    "desarrollo/integration/f04/src/f04_valhalla_queries.inc": "50e218a4b42e058dde7235e86d40833535fbcae5ea69745ae0babedb55cdfc19",
+    "desarrollo/integration/f04/src/f04_valhalla_state.inc": "0a80ddd12f0595156cf243e08470622995cff002e0c163c584f761bafc0ff898",
+    "desarrollo/integration/f04/tests/history_audit.cpp": "9775b533e36fa243f9b81fb08359d0792b7db794d91895539488654e79610fc2",
+    "desarrollo/integration/f04/tests/history_campaign.cpp": "7fadda51a12a182f89c07c39b027afb68b049a6c928236e1b0350cef56c2fc18",
+    "desarrollo/integration/f04/tests/organization_lab.h": "e5a0c3acbf847d2ccdcf9f078d0e7c16d26e72c68c9dcbc795c138601d9f9c85",
+    "mundo/lore/starships/classes/core_starship_classes.json": "9aae07144d8707d1a87e839fd9507e4f8c29bce3905f33b713b0ea716fe7f9aa",
+    "sistemas/gameplay/ship_operations/class_definition_contract.json": "ffd2be980fd600f5381b7ddf7358bb48da754484e8970dd633e5c22fd614a07a",
+    "desarrollo/integration/f04/CMakeLists.txt": "93b364e487b79cd79bfbabf1863353d235cb78334b7cba6fdc643899be77f2d3"
+  },
+  "provenance_files": {
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json": "a984beff263a81551bddb3c0f483932416648e6918fa8ec8ae82a5d526be07fe",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/reference-fixtures/SHA256.json": "c7b5952a12b7c43a35c3031aec824fb6070c7f98612c243f04d6388ca8f36553",
+    "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/evidence-sha256.json": "f67d018d452fe162c8bebbad8b8559be641823e8e70e324be550387f9791c9d6"
+  },
+  "campaigns": {
+    "1-365": {
+      "profile": 1,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/campaign-1-365.oracle",
+      "sha256": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/1-365/acceptance.json",
+      "acceptance_sha256": "7a8422f5a6dd5335944a634828b25f250bdd343e9c977d69bfb42770c7f506e3"
+    },
+    "2-365": {
+      "profile": 2,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/campaign-2-365.oracle",
+      "sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/2-365/acceptance.json",
+      "acceptance_sha256": "a968aab184dfa3f1170c54ef8d3cce71ea8390b4f7af292d75279cdba0244d62"
+    },
+    "3-365": {
+      "profile": 3,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/campaign-3-365.oracle",
+      "sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/3-365/acceptance.json",
+      "acceptance_sha256": "63f1c54678884fb1265123e98b2cf018d1c03a5163de699cc2d5956f3be04b9e"
+    },
+    "4-365": {
+      "profile": 4,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/campaign-4-365.oracle",
+      "sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/4-365/acceptance.json",
+      "acceptance_sha256": "dbe15b905253ce05492def18cb066a377ce78ebdfae190b1e13e624b97750e11"
+    },
+    "5-365": {
+      "profile": 5,
+      "days": 365,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/campaign-5-365.oracle",
+      "sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-365/acceptance.json",
+      "acceptance_sha256": "d06616a2c55125a9b8ee6bf0efb63aff47ce12a8867bb2ed7b71c8d036c89ee5"
+    },
+    "5-730": {
+      "profile": 5,
+      "days": 730,
+      "oracle": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/campaign-5-730.oracle",
+      "sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204",
+      "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/acceptance.json",
+      "acceptance_sha256": "2075fb7cfd262eda89106a66df14c4f2e55867b171af9e34407d61894cbeb8c6"
+    }
+  }
+}

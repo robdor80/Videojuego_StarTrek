@@ -1,0 +1,23 @@
+{
+  "kind": "acceptance",
+  "profile": 4,
+  "days": 365,
+  "completed": 365,
+  "maximum_resident": 18348,
+  "maximum_active_bytes": 5649296,
+  "elapsed_ms": 185986,
+  "real_watches": true,
+  "all_blocks_equal_complete_history": true,
+  "working_set": 17940480,
+  "peak_working_set": 55103488,
+  "storage_bytes_retaining_previous_generations": 306161850,
+  "phases_elapsed_seconds": 1171.7891793,
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "reference_mode": "regenerated",
+  "phase_seconds": {
+    "oracle": 904.1762822000001,
+    "campaign": 186.16407920000006,
+    "resume": 3.874686200000042,
+    "audit": 77.56039059999989
+  }
+}
