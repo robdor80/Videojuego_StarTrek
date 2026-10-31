@@ -173,3 +173,34 @@ La referencia optimizada difiere las comprobaciones globales de tipos/referencia
 **Aceptación completa de PERSISTENCIA-03 demostrada.** Ambas PR permanecen Draft para auditoría independiente. No se fusionan, no se actualiza el pin estable y no se inicia INTEGRACION-04 ni CIERRE-05.
 
 Los oráculos completos se generaron con Core `63d2401`. La validación final vuelve a ejecutar las seis campañas consolidadas sobre `89a0e4f` contra esos fixtures de hashes congelados: ningún estado de campaña se carga desde ellos. Cada aceptación registra la revisión ejecutada y el SHA-256 de la referencia. La CI puede regenerar los oráculos omitiendo la opción de fixtures.
+
+## 7. Corrección de timeout y optimización de CI — 31/10/2026
+
+La [ejecución 41199067055](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41199067055)
+superó las cinco campañas de 365 días. Valhalla 730 agotó 3.300 segundos en
+`f04_reference_campaign.exe run 5 730`; la campaña productiva aún no había
+comenzado. No se interpreta ese timeout como aceptación ni como corrupción.
+
+El camino normal reutiliza exclusivamente el oráculo original de Valhalla 730,
+obtenido y aceptado en el MSI, sin modificar sus bytes:
+
+`4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204`.
+
+Un manifiesto de pruebas versionado verifica procedencia, aceptación, perfil,
+duración, revisión Core, contratos y formato antes de preparar una copia temporal.
+La ejecución vuelve a verificar la referencia y genera todos los resultados reales
+para compararlos. Cualquier ausencia, alteración o incompatibilidad falla; no se
+regenera silenciosamente un patrón rechazado. Se mantienen simulación auténtica,
+2.200 ocupantes de Valhalla, consolidación, comparación de cada bloque, límites,
+identidades, recuperación en proceso independiente, continuación y auditoría de
+todos los hechos originales. Las otras cinco campañas conservan su procedimiento.
+
+El modo de auditoría profunda regenera referencias desde cero sin fixtures, con
+un presupuesto explícito para esa generación lenta. Los límites de las fases
+productivas permanecen en 3.300 segundos. Los seis trabajos siguen independientes.
+Las pruebas de integridad incluyen una divergencia real detectada por el ejecutable
+nativo. [Contratos, comandos y modos de ejecución](../../../../../../desarrollo/integration/f04/HISTORY.md).
+
+Los resultados de esta corrección se documentarán en evidencias nuevas, sin
+sobrescribir las evidencias históricas. La aceptación de CI requiere las seis
+campañas verdes en la ejecución publicada; no se deduce de los resultados locales.

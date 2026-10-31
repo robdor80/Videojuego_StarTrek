@@ -6,12 +6,17 @@ on:
       - 'proyecto/docs/roadmap/master/fases/F04/**'
       - '.github/workflows/f04-history-persistence.yml'
   workflow_dispatch:
+    inputs:
+      regenerate_oracles:
+        description: 'Deep audit: regenerate all complete-history oracles (slow; use a suitably provisioned runner for 730 days)'
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   real-campaign:
     runs-on: windows-latest
-    timeout-minutes: 120
+    timeout-minutes: ${{ inputs.regenerate_oracles && 360 || 120 }}
     strategy:
       fail-fast: false
       matrix:
@@ -39,14 +44,32 @@ jobs:
           repository: robdor80/CoreRPG
           ref: ${{ steps.core.outputs.sha }}
           path: external/CoreRPG
-      - name: Configure proposed integration and separate complete-history oracle
+      - name: Verify and stage the audited Valhalla 730 oracle
+        if: matrix.days == 730 && inputs.regenerate_oracles != true
         shell: pwsh
         run: >-
-          cmake -S desarrollo/integration/f04 -B build/history -A x64
-          -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG"
-          -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON
+          python desarrollo/integration/f04/tests/history_reference.py
+          --profile 5 --days 730
+          --directory "${{ github.workspace }}/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
+      - name: Configure proposed integration and separate complete-history oracle
+        shell: pwsh
+        run: |
+          $options = @()
+          if ('${{ matrix.days }}' -eq '730' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
+            $options += "-DF04_HISTORY_REFERENCE_FIXTURES=$env:GITHUB_WORKSPACE/laboratorios/PruebasTecnicas/f04-ci-history/reference-fixtures"
+          }
+          if ('${{ inputs.regenerate_oracles }}' -eq 'true') {
+            $options += '-DF04_HISTORY_ORACLE_TIMEOUT_SECONDS=18000'
+          }
+          cmake -S desarrollo/integration/f04 -B build/history -A x64 -DCORERPG_SOURCE_DIR="$env:GITHUB_WORKSPACE/external/CoreRPG" -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON @options
       - name: Build
-        run: cmake --build build/history --config Release --parallel 4
+        shell: pwsh
+        run: |
+          $targets = @()
+          if ('${{ matrix.days }}' -eq '730' -and '${{ inputs.regenerate_oracles }}' -ne 'true') {
+            $targets = @('--target', 'f04_history_campaign', 'f04_history_audit')
+          }
+          cmake --build build/history --config Release --parallel 4 @targets
       - name: Proposed-Core regressions and injected faults
         if: matrix.profile == 1
         run: ctest --test-dir build/history -C Release -E history_campaign_ --output-on-failure --output-junit "${{ github.workspace }}/build/history/regressions.xml" -j 2

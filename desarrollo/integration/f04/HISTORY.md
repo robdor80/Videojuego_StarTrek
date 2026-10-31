@@ -117,8 +117,79 @@ continues in another process and audits all persisted payload. No campaign state
 is loaded from those hash fixtures. Their original producer used Core `63d2401`;
 the final campaigns run Core `89a0e4f`, whose additional change rejects uninitialized
 history operations before I/O. Both exact revisions and fixture checksums are
-recorded in each acceptance file. With the fixtures option omitted, CI regenerates
-the full complete-history oracle before running the consolidated campaign.
+recorded in each acceptance file. With the fixtures option omitted, the runner
+regenerates the full complete-history oracle before the consolidated campaign.
+
+### Verified CI reference and deep audit (2026-10-31)
+
+Run `41199067055` exhausted the 3,300-second **oracle-generation** limit for
+Valhalla 730. Its real consolidated campaign had not started. This failure is
+not a successful CI acceptance or evidence of a deterministic divergence.
+
+The normal CI now reuses only the audited 730-day oracle from evidence commit
+`19aaf9746927cac1e0596f7f828497a8b39eac3f`. Its raw-byte SHA-256 is
+`4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204`.
+The five 365-day jobs still generate their independent complete-history oracles.
+All six jobs remain isolated, with `fail-fast: false`.
+
+`tests/fixtures/history_reference_v1.json` binds all six historical references to
+their profiles, durations, producer Core revision, acceptance records and original
+evidence checksums. It also fingerprints the unchanged product, native campaign,
+auditor, population catalog, schema inputs and test build contract. Source
+fingerprints normalize CRLF to LF; oracle/evidence hashes always cover raw bytes.
+The new CMake test/timeout wiring is fingerprinted at the current revision; the
+simulation sources and inputs match the audited evidence commit. A deliberate
+source/contract or Core change fails verification and requires regeneration and
+independent review before registering a compatible reference. The manifest is
+reviewed repository provenance, not a cryptographic signature from a third party.
+
+`history_reference.py` verifies those bindings and every oracle row (block days,
+strictly growing identity watermarks, 64-digit digests and final seven-day future).
+It stages an exclusive-created copy under the existing ignored laboratory tree.
+The existing `F04_HISTORY_REFERENCE_FIXTURES` / `--reference-fixtures` path verifies
+again before use and after the run. Missing, corrupt or incompatible fixtures fail
+explicitly; no fallback hides a bad fixture by generating another reference.
+Original evidence files are never written. A default run with no fixture option
+continues to regenerate its independent reference.
+
+The fast path removes only reference generation. The native product still creates
+all 730 days for 1,800 crew plus 400 civilians, every watch/incident/rest/relief,
+consolidates originals, checks each block, enforces residency and immutable people/
+skills, recovers in another process, continues deterministically and reconstructs
+all persisted original payloads. A reference contains expected hashes, no state.
+Acceptance additionally records the verified manifest digest and phase timings.
+The 730 fast job does not build the unused reference DLL/executable or regressions
+already run in the first matrix job. Productive phase timeouts remain 3,300s.
+
+Reproduce locally from the repository root using a **new** laboratory directory:
+
+```powershell
+$lab = "laboratorios/PruebasTecnicas/f04-ci-history/replay-$([guid]::NewGuid().ToString('N'))"
+python desarrollo/integration/f04/tests/history_reference.py --profile 5 --days 730 --directory "$lab/references"
+cmake -S desarrollo/integration/f04 -B "$lab/build" -A x64 -DCORERPG_SOURCE_DIR=C:/F04/CoreHistory -DF04_ENABLE_HISTORY=ON -DF04_FAST_HISTORY_ORACLE=ON "-DF04_HISTORY_REFERENCE_FIXTURES=$((Get-Location).Path)/$lab/references"
+cmake --build "$lab/build" --config Release --parallel 4
+ctest --test-dir "$lab/build" -C Release -R '^f04.history_reference_contract$' --no-tests=error --output-on-failure
+ctest --test-dir "$lab/build" -C Release -R '^f04.history_campaign_valhalla_730$' --no-tests=error --output-on-failure
+```
+
+For a deep independent audit, configure a **separate fresh build** without
+`F04_HISTORY_REFERENCE_FIXTURES` and with
+`-DF04_HISTORY_ORACLE_TIMEOUT_SECONDS=18000`. Build all targets and run the same
+six `history_acceptance` tests. This explicitly grants the slow independent oracle
+up to five hours; it does not relax productive phase or equivalence requirements.
+Alternatively dispatch this workflow on the PR branch with `regenerate_oracles`
+set to true (six-hour job ceiling). New reference outputs stay in the laboratory;
+never overwrite audited originals or edit expected hashes to accept a divergence.
+
+`history_reference_tests.py --bin <Release-directory>` covers valid references,
+all six registrations, bad/missing/truncated bytes, wrong profile/duration,
+incompatible revisions/contracts/schema, provenance tampering, original and backup
+preservation, and a genuine seven-day native campaign that fails on an intentionally
+wrong expected digest. CTest runs this mandatory native case in the proposed-Core
+regression job. A Python-only invocation explicitly skips that one native case.
+
+New CI measurements and raw evidence are added separately from the original
+acceptance package; see the CI optimization section in the F04 persistence roadmap.
 
 For old-save migration and prior phases, see `tests/check_legacy_history.py`,
 `check_guardias_compatibility.py` and `tests/verify_history_regressions.py`. The
