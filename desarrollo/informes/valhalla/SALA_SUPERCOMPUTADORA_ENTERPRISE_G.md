@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Fecha: 1 de noviembre de 2026. **Estado: PARCIAL.** Entrega de construcción conservadora para revisión independiente, pendiente de resolver contactos con la estructura y de validar colisiones y navegación en Unreal Engine 5.
+Fecha: 1 de noviembre de 2026. **Estado V04: PARCIAL.** Ocho montantes ajustados y verificados; quedan 128 interpenetraciones superficiales, la funcionalidad de las puertas y la validación en Unreal Engine 5. Véase la continuación V04 al final. Los apartados anteriores a esa continuación conservan el registro de la entrega V03.
 
 ## Resumen ejecutivo
 
@@ -302,3 +302,125 @@ La publicación incluye exclusivamente este informe, `.gitignore` y el script re
 La siguiente intervención debe resolver primero los encuentros panel/estructura y tapa/techo de forma localizada, revisar los 23 contactos no explicados por la comparación de fuente a Z=1,50 m y medir cada puerta con su envolvente de apertura. Después procede validar colisión simplificada, cápsula de personaje, navegación y rendimiento en UE5. Los 15.392 objetos nuevos favorecen la edición y las mallas compartidas ahorran memoria; todavía requieren una estrategia de instancias/agrupación para su uso eficiente en el motor.
 
 **Estado final: PARCIAL.** Se dispone de los dos conjuntos integrados y de una recuperación verificable de los materiales, con originales conservados y evidencia de las limitaciones. La prioridad pendiente es geométrica y funcional; los acabados PBR podrán desarrollarse en una fase independiente.
+
+## Continuación V04 — ajuste local y validación del 1 de noviembre de 2026
+
+**Resultado: mejora geométrica parcial, sin aprobación de toda la sala.** Se entrega un archivo nuevo, `Sala_Supercomputadora_Valhalla_Geometria_V04.blend`, en el mismo directorio local de la sala indicado en «Fuentes y protección». La V03, el hito `FINAL`, los otros entregables, los cuatro originales y el blueprint conservan sus hashes anteriores. La PR #79 permanece en borrador y no se fusiona.
+
+### Revisión de las incidencias y corrección del plan
+
+Se leyeron los siete JSON existentes y los cinco scripts de diagnóstico. Se reutilizaron las 16.312 colocaciones y las 174 mallas utilizadas en el diagnóstico; no se reconstruyeron los bancos. Las 434 incidencias iniciales tienen una decisión individual registrada: ocho ajustes, 128 cruces pendientes, 271 contactos límite conservados, 15 coincidencias conservadas para revisión y 12 falsos positivos que no requieren intervención.
+
+Las 136 incidencias de cruce corresponden a **28 colocaciones de origen, repetidas cuatro veces** mediante los dos recintos y sus mitades reflejadas; algunas piezas cruzan dos instancias arquitectónicas. La equivalencia se comprobó con todos los vértices de las cuatro colocaciones de cada grupo: discrepancia máxima **0,000003541 m**, sin deducir equivalencia únicamente del nombre.
+
+Para investigar la herencia se abrió el semicírculo original y se comprobaron los cruces de las mismas piezas contra sus superficies arquitectónicas originales. En los 136 casos ya existe un cruce correspondiente en la fuente. Se transformaron además los puntos medios de cada cruce triangular al sistema original y se midió su distancia a la arquitectura de la fuente: máximo **0,001750 m**, dentro del umbral declarado de 2 mm. Esta correspondencia próxima no significa identidad exacta de ambas arquitecturas ni convierte las penetraciones heredadas en uniones admisibles.
+
+El plan anterior omitía 96 de las 136 incidencias de cruce. Sus 16 traslaciones de consola a cero metros procedían de un error del planificador: el filtro `normal · radial > 0,5` descartaba todos los planos útiles; `max(..., default=0)` devolvía cero ante la lista vacía. **No se ejecutó ninguna como corrección.**
+
+Se evaluaron también restricciones de separación por planos para identificar límites de esa alternativa. Las consolas requerirían traslaciones candidatas de aproximadamente 0,219–0,239 m y algunas tapas producirían soluciones de más de 8 m o restricciones inviables. Estos resultados describen el problema de utilizar planos infinitos para superficies finitas; **se rechazaron**, no se interpretaron como movimientos válidos.
+
+Los contactos límite sin cruce propio se conservan como contactos superficiales compatibles con apoyos y juntas; no se declara positivo el volumen libre por ello. Las 15 coincidencias siguen necesitando interpretación constructiva. No se cerraron superficies abiertas ni se eliminaron caras originales para reducir el contador.
+
+### Correcciones aplicadas en dos grupos
+
+Se ajustaron exclusivamente los ocho montantes `Component#34` con índices de origen `0477` y `3480`: cada índice aparece en `C01/C02` y en `A_Original/B_Espejo`.
+
+| Grupo | Objetos | Ajuste medido |
+| --- | ---: | --- |
+| `0477` | 4 | Dos planos originales de pared por montante; recortes de aproximadamente 0,516–0,520 mm y 2,409–2,411 mm |
+| `3480` | 4 | Un plano original de pared por montante; recorte de aproximadamente 2,309–2,311 mm |
+
+La holgura nominal de corte es **0,100 mm** respecto a los planos medidos, por encima de la tolerancia de clasificación de 0,010 mm. Cada montante utiliza una copia privada de su malla. Se conserva su transformación y su material; se recorta la porción posterior/lateral que atraviesa la pared y se cierra solamente ese sólido originalmente cerrado. La fracción de volumen retirada es del **2,44–2,97 %** por montante. Las costuras de vértices se soldaron únicamente en estas ocho copias para permitir el corte; las mallas originales permanecen conservadas.
+
+No se deformaron pantallas, consolas ni detalles decorativos. Las UV de las caras supervivientes se interpolan al cortar; las caras nuevas de cierre reciben proyección plana y el mismo material del montante. No se alteraron la arquitectura, los círculos completos, sus escalas ni los demás objetos de banco.
+
+Después del primer grupo se comprobaron los cuatro montantes frente a arquitectura y bancos próximos; después del segundo, los ocho. Ambos controles terminaron sin nuevos pares de cruce ni cruces restantes entre los montantes ajustados y la arquitectura. No fue necesario revertir un grupo.
+
+### Auditoría tridimensional antes y después
+
+Se repitió la clasificación de todas las parejas banco/arquitectura con el mismo criterio superficial del diagnóstico inicial. Las parejas se compararon por objeto de banco e instancia arquitectónica, porque los identificadores secuenciales posteriores cambian.
+
+| Clasificación | V03 / inicio V04 | V04 entregada |
+| --- | ---: | ---: |
+| Interpenetraciones superficiales | 136 | **128** |
+| Contactos límite | 271 | 275 |
+| Superficies coincidentes | 15 | 15 |
+| Falsos positivos por tolerancia | 12 | 12 |
+| Total de incidencias | 434 | 430 |
+| Nuevas parejas de contacto | — | **0** |
+
+Cuatro incidencias dejan de existir (`I00026`, `I00141`, `I00286`, `I00359` del diagnóstico inicial). Otras cuatro pasan de cruce a contacto límite (`I00118`, `I00258`, `I00337`, `I00414`); los apoyos superficiales restantes se conservan. **Ocho cruces corregidos, cero cruces nuevos.** La reducción del total no es el criterio de aceptación: se mantienen los contactos de ensamblaje y las dudas documentadas.
+
+| Familia pendiente | Incidencias | Motivo de conservación y siguiente trabajo |
+| --- | ---: | --- |
+| `Component#206` | 32 | Consolas abiertas entre dos superficies; falta una solución conjunta de implantación y apoyos. No ejecutar desplazamientos radiales nulos ni candidatos de 22–24 cm. |
+| `Component#50` | 20 | Tapas superiores con cruces heredados contra paredes `#200/#202`; requieren resolver el encuentro finito por sector conservando el diseño. No aplicar recortes globales sobre mallas abiertas/no manifold. |
+| `Component#41` | 4 | Laterales estructurales del bastidor con topología heredada; mover una pieza aisladamente unos 38,76 mm puede romper la unión del conjunto. Revisar el bastidor completo. |
+| `Component#29` | 8 | Paneles inferiores: una traslación candidata de 2,31–2,68 mm no acredita por sí sola que todos los apoyos y detalles asociados sigan ensamblados. |
+| `Component#13` | 32 | Travesaños finos: resolver con el bastidor y sus apoyos, sin recortar ni separar detalles individualmente. |
+| `Component#7` | 32 | Módulos repetidos de panel: pendiente ajuste rígido del subconjunto completo, sin deformar su geometría. |
+| **Total abierto** | **128** | **No se acredita ausencia total de interpenetraciones.** |
+
+### Puerta exterior, blueprint y recorridos continuos
+
+`Component#130`, instancia `Component_435035`, es una **hoja de puerta modelada con espesor y borde superior redondeado**. La hoja complementaria es `Component#131`, instancia `Component_435936`. Su forma se revisó en vistas frontal e isométrica junto con los marcos; no son superficies auxiliares. La hoja `#130` tiene espesor aproximado **0,046029 m** y altura **2,035446 m**. Ambas existen en la sala original y se conservan sin cambios; no tienen animación configurada.
+
+La separación actual entre hojas es **0,330000 m**, insuficiente para la cápsula provisional de 0,70 m de diámetro. Existe un hueco arquitectónico de puerta, y el corredor conecta topológicamente con el bloque central. El blueprint de la cubierta 11 se volvió a consultar para esa organización de recintos, vestíbulos y corredores. No se calibraron medidas sobre la lámina ni se identificó un símbolo concreto como prueba de la cinemática de esta puerta de Valhalla.
+
+La cápsula **sigue siendo una referencia provisional para Valhalla**: diámetro 0,70 m, altura 1,80 m, vertical, base a Z=0,37 m. Su eje central ocupa Z=0,72–1,82 m. Las pruebas se refieren a superficies trianguladas estáticas, no a colisiones cocinadas de UE5.
+
+El nuevo control cubre cada tramo completo mediante distancia segmento/triángulo en su punto medio y una cota conservadora: el desplazamiento máximo del eje hasta un extremo es la mitad de la longitud del tramo. Solo se certifica el tramo libre si la distancia supera el radio más esa semilongitud y la tolerancia; los candidatos geométricos se buscan con esa misma expansión. Se subdividen los intervalos que no admiten esa conclusión. Así se comprueban intervalos completos, no solo posiciones aisladas.
+
+El cálculo de distancia utiliza semiespacios de arista para evitar falsos interiores al invertir una matriz de Gram casi degenerada. Se verificaron seis casos analíticos: pared, techo, cruce del eje, punto degenerado, arista degenerada y tangencia de apoyo al suelo. Se excluyen de bloqueo las caras enteramente por debajo de la base, con 0,010 mm de tolerancia numérica, incluidas las caras laterales inferiores de las losas. Un ensayo preliminar produjo un falso bloqueo en `R2_este`; se descartó tras identificar el problema numérico, sin modificar la arquitectura.
+
+| Recorrido en la V04 | Resultado continuo |
+| --- | --- |
+| Ocho salidas radiales de los dos recintos | Libres de intersección de cápsula en los tramos definidos |
+| Dos conexiones de centro a vestíbulo | Libres |
+| Conexión entre vestíbulos y bloque central | Libre |
+| Bloque central hacia corredor exterior, estado actual | **Bloqueado por las hojas originales** |
+| Mismo recorrido, omitiendo solo ambas hojas en el diagnóstico | Libre; demuestra continuidad del hueco, no apertura animada |
+
+Las once rutas interiores tienen certificación geométrica continua según este criterio, sin intervalos indeterminados; no están bloqueadas por bancos o soportes. El recorrido exterior tiene posiciones de colisión confirmada con `Component#130`. El diagnóstico de puerta abierta omite temporalmente ambas hojas en el cálculo, **sin borrarlas, moverlas ni guardar ese estado en el modelo**. Quedan pendientes la cinemática, los alojamientos laterales, los barridos de las hojas, los controles y la implementación de UE5. Tampoco se certifican aquí el soporte continuo de toda la huella del personaje, peldaños, pendientes ni navegación del motor.
+
+### Encuentro superior y conservación
+
+Las 16 tapas `Component#50` se compararon con las dos instancias del techo `Component#194`. No hay cruces triangulares entre esos elementos. Se comprobó también la proyección XY de sus triángulos para no confundir ausencia de cruce superficial con ausencia de inclusión: **cero pares con área proyectada común**, separación XY mínima **0,104170 m**. La coincidencia de sus rangos de Z, por sí sola, no implica que ocupen el mismo lugar. Este resultado resuelve la duda de esas tapas frente a `#194`; no elimina los 20 cruces de tapa contra paredes `#200/#202`.
+
+La reapertura del archivo final verificó:
+
+- Los **16.799 objetos** conservan sus transformaciones, parentesco y pertenencia a colecciones. Solo ocho referencias a datos de malla cambian a las copias ajustadas.
+- Los **1.407 objetos y las 136 mallas de la sala original** coinciden con el original en geometría, índices, asignación material y UV incluidos en las firmas.
+- Los **220 bloques de malla de la V03**, incluidos los no utilizados por las colocaciones auditadas, permanecen conservados; se añaden ocho bloques privados. Las 174 mallas del inventario inicial son las utilizadas por sus 16.312 colocaciones, no el total de bloques del archivo.
+- Los **101 materiales** de la V03 conservan colores, alpha, entradas y conexiones de nodos; las **tres imágenes de archivo** conservan tamaño y bytes empaquetados. Cero bibliotecas externas y ninguna ruta de imagen hacia el área experimental.
+- La geometría y los objetos del archivo final coinciden exactamente con la segunda etapa auditada. Las ocultaciones y cámaras del render de diagnóstico no se guardaron.
+- Los diez archivos protegidos del manifiesto inicial y el blueprint conservan sus SHA-256. No se sobrescribieron ni eliminaron originales, entregas anteriores o respaldos.
+
+### Entregable y reproducción
+
+| Archivo local nuevo | Tamaño | SHA-256 |
+| --- | ---: | --- |
+| `Sala_Supercomputadora_Valhalla_Geometria_V04.blend` | 3.892.491 bytes | `e4dbf7a0b835fe0ad2f51500ca801b5a3c914069816885a2e8f551466fe27568` |
+
+El [script V04](../../tools/blender/valhalla_supercomputadora_v04.py) y su [plan revisado](../../tools/blender/valhalla_supercomputadora_v04.plan.json) permiten reproducir los ocho ajustes a partir de la V03 con hash conocido. Ambos son pequeños archivos versionables; no requieren scripts ni datos temporales para generar el modelo. El plan contiene solo los ocho ajustes seguros, no instrucciones para ejecutar las 128 incidencias abiertas.
+
+```text
+blender --background --factory-startup --python-exit-code 1 --python desarrollo/tools/blender/valhalla_supercomputadora_v04.py -- --input V03.blend --plan desarrollo/tools/blender/valhalla_supercomputadora_v04.plan.json --output NUEVO_V04.blend --evidence-dir EVIDENCIA_TEMPORAL_AUTORIZADA
+```
+
+El script rechaza un hash de entrada distinto, una salida existente, operaciones repetidas, piezas ajenas a los montantes revisados, superficies originalmente abiertas y recortes fuera del límite de 3 mm. Conserva los datos originales y verifica la integridad antes y después de guardar. Las pruebas de contactos y accesos descritas arriba son validaciones adicionales de esta entrega, no funcionalidades que el script de ajuste afirme sustituir.
+
+Las evidencias locales se identifican por nombre y hash para localizar la ejecución correcta sin introducir dependencias de rutas experimentales en el proyecto permanente:
+
+| Evidencia local | Contenido | SHA-256 |
+| --- | --- | --- |
+| `plan_ejecutable_y_pendientes.json` | Decisiones de las 434 incidencias y equivalencias de simetría | `8c67252bfaba68014bdec593ea7e8747003a6268952f6281bce58c3c44f39830` |
+| `herencia_136.json` | Comparación individual con el semicírculo original | `5e727f1796e7248fb3e2193e1075bd5d260a2734200665079619dce05ff69c43` |
+| `contactos_3d.json`, segunda etapa | Auditoría de 430 incidencias posteriores | `7f5c2c4452e800d5e2af4e9b3c26b9ff1a382db00cdfaa94ba0e6c32c448abc9` |
+| `accesos_continuos_robustos_v04.json` | Intervalos y obstáculos de las rutas de la V04 | `567d16779716db5c90f8c635ad0cf8f8f19250e64e59e8189996f181d3c64bd0` |
+| `techo_regresiones_y_puerta.json` | Proyecciones de techo, casos analíticos y medidas de puerta | `90970dac211e2732d31ce5b42ddb8e76c402179388554acbadc65cde38702213` |
+| `integridad_entrega.json` | Reapertura, firmas y conservación de originales | `f2224eeeb51294e63c7158558fa34718adee19046aad523ccd9edf31366ce9cc` |
+
+Se conservan además las dos etapas de modelo, sus controles locales, registros de aplicación, pruebas descartadas, renders y `resumen_v04.json`. El área experimental completa es prescindible para abrir el archivo V04 y reproducir sus ajustes con los archivos versionados; no se ha eliminado. Git publica exclusivamente este informe, el script V04 y su plan revisado. Los modelos y las evidencias voluminosas continúan solo en disco local.
+
+**La V04 sigue PARCIAL:** ocho conflictos locales resueltos y accesos interiores comprobados con referencia provisional; 128 cruces heredados, la funcionalidad de las puertas y la validación de colisiones/navegación en UE5 permanecen abiertos.
