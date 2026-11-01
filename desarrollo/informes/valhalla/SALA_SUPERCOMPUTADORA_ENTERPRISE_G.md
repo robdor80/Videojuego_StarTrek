@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Fecha: 1 de noviembre de 2026. **Estado V04D: prototipos locales PARCIALES; último modelo válido V04B.** Se entregan candidatos de unión para P01 y T01, sin extenderlos al resto de sectores. Se recomienda A adaptado y tapa continua para revisión, con holguras reales y límites explícitos. V04B conserva sus archivos y su estado anterior. No existe una V04D definitiva; faltan aprobación de diseño y pruebas en UE5. Los apartados V03, V04, V04B y V04C conservan el registro histórico.
+Actualizado el **2 de noviembre de 2026**. **V04E: integración geométrica validada en el alcance aprobado. V05: puerta exterior D01 funcional en UE 5.8.2, con dos hojas y pruebas de colisión en mundo de juego. V06: pendiente de prueba personal con Quinn.** La sala todavía no se declara terminada. V04B, las fuentes y los prototipos anteriores permanecen intactos. La continuación V04E/V05 al final de este informe es el estado vigente; los apartados anteriores conservan su carácter histórico.
 
 ## Resumen ejecutivo
 
@@ -814,3 +814,107 @@ Los nombres y hashes identifican la ejecución sin insertar rutas experimentales
 **Pendiente en UE5:** colisiones simples, soporte y controlador de personaje, navegación, puertas y enclavamientos, materiales de dos caras, iluminación, estabilidad temporal y rendimiento. No se implementa movimiento de #206 ni se declara terminada la sala.
 
 **La sala sigue PARCIAL. V04B permanece como última base válida; PR #79 abierta, en Draft y sin fusionar.**
+
+
+## Cierre V04E y funcionamiento V05 — 2 de noviembre de 2026
+
+**Resultado: V04E validada y V05 funcional. V06 no completada. PR #79 en Draft, sin fusionar.** La autorización de esta continuación fija P01 A adaptado y T01 CONTINUA. Se han medido y tratado por separado las ocho parejas de módulos y los veinte encuentros superiores, que pertenecen a dieciséis tapas físicas. P01 B y TERMINA no se emplean como solución general.
+
+### V04E: integración y verificación
+
+Se parte exclusivamente de la V04B cuyo SHA-256 es `bb18697813040754122f5595f1d13d7eb93705828438e75a497cf460b251babd`. Los módulos originales quedan conservados en una colección de referencia no activa; se retiran de la escena activa las ocho redundancias y se añaden ocho paneles adaptados, dieciséis tapas y dieciséis apoyos privados. Cada apoyo acumula únicamente los recortes que le corresponden, incluidos los casos donde dos tapas afectan al mismo apoyo.
+
+| Unión | Separación mínima física frente a las facetas reales | Ajuste máximo del marco |
+| --- | ---: | ---: |
+| P01 | 1,320526 mm | 10,230276 mm |
+| P02 | 1,999946 mm | 11,961057 mm |
+| P03 | 1,999953 mm | 10,231807 mm |
+| P04 | 1,999958 mm | 11,960814 mm |
+| P05 | 1,999970 mm | 10,229001 mm |
+| P06 | 1,999963 mm | 11,963579 mm |
+| P07 | 1,999948 mm | 10,230239 mm |
+| P08 | 1,999984 mm | 11,962430 mm |
+
+P01 conserva la colocación A y reproduce el mínimo aprobado de aproximadamente 1,321 mm; la diferencia submicrométrica respecto al prototipo procede de la serialización y del tratamiento de vértices inmóviles. En P02–P08 se miden todos los biseles próximos, incluidos los que no cruzaban inicialmente el marco: no se extiende a ellos la excepción de P01. Los laterales verticales del dintel situados por encima del marco se excluyen como semiplanos globales del hueco, pero **se incluyen en la comprobación final de distancia real**. Los cristales conservan exactamente sus coordenadas locales y UV; los remates opacos de cabecera pueden adaptarse con el marco.
+
+Los veinte encuentros tapa/apoyo quedan sin cruce y con **0 m² de superficie superior común**. Las caras superiores originales continúan visual y geométricamente; la diferencia por tapa en la proyección de su acabado es aproximadamente **0,148 mm²**. Se conservan los rebajes inclinados y la procedencia de los fragmentos retenidos. No se rellenan aberturas heredadas ni se declara una topología global estanca.
+
+La auditoría conjunta cubre las cuarenta piezas modificadas frente a todo su entorno candidato, también entre piezas modificadas. Resultado: **cero relaciones nuevas de cruce**, cero inversiones y cero triángulos degenerados en las mallas privadas. Conserva las 76 relaciones banco/arquitectura previamente clasificadas: 72 solapes ocultos condicionales y cuatro encuentros #41 provisionales. Conserva también 656 relaciones heredadas de las tapas con elementos del banco, incluidas ocho entre tapas; no se presentan como correcciones ni como aprobación estructural nueva. Las relaciones arquitectura/arquitectura se comparan igualmente con la base.
+
+Se revisan las superficies opuestas: las tapas serializadas contienen 1.154 parejas coincidentes de normales contrarias, con los materiales originales #27/#28. Su representación en UE usa materiales de una cara para cada lado; la colisión estática puede atender ambos lados. No se activa un material de dos caras sobre ambas superficies coincidentes. Esta política conserva las superficies y evita duplicar su representación visible por una configuración de material inadecuada.
+
+La primera integración detectó dos cruces nuevos del apoyo de T11 con una cubierta vecina. El diagnóstico identificó un resto estrecho cuya normal se desviaba 0,0773° al cuantizar coordenadas locales lejanas al origen. Se compensó el origen **solo de esa copia privada**, manteniendo su posición mundial y verificando la transformación evaluada por Blender. La auditoría completa posterior y la reapertura del archivo no reproducen esos cruces. La distancia máxima de los fragmentos retenidos a sus superficies fuente es **1,3155 micrómetros**. Como en V04D, se omiten restos de altura menor de una micra al serializar; el área omitida acumulada en las cuarenta piezas es **404,744 mm²**, desglosada en la evidencia. No se trata de un recorte de superficies visibles de esa anchura.
+
+Conservación y regresiones:
+
+- Los **16.800 objetos originales y las 229 mallas originales** se mantienen; sus datos y matrices se comparan contra V04B. Solo cambian los vínculos de colección previstos para las sustituciones reversibles.
+- **101 materiales y dos imágenes FILE empaquetadas** idénticos; imágenes, nodos, valores, asignaciones y UV originales conservados. Ninguna biblioteca externa necesaria.
+- Poses y curvas de las puertas **1/20/60 iguales a V04B**. El barrido continuo completo de las hojas mantiene cero parejas potencialmente solapadas; no se sustituye por unas pocas poses.
+- **Doce rutas geométricas conservadas**, con la cápsula provisional de 70 × 180 cm. Esta verificación no acredita todas las rutas en UE ni la cápsula real de Quinn.
+- **570 archivos protegidos** de fuentes, versiones anteriores y evidencia previa conservan tamaño y SHA-256 tras finalizar ambas fases. No se borra ni sobrescribe ningún original o prototipo anterior.
+- Once pruebas analíticas de geometría aprobadas y 24 vistas locales revisadas: ocho paneles y dieciséis tapas. Las vistas recortadas son diagnósticas y no cambian el modelo guardado.
+
+Nueva base local, en `PROYECTO VALHALLA/Salas construidas/Sala computadora Enterprise Valhalla/`:
+
+| Modelo | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `Sala_Supercomputadora_Valhalla_Geometria_V04E.blend` | 4.944.698 | `e55df3cf537365ac8e145b9a7cd96605f5b0edaa5537473a734f090f931a8670` |
+
+El archivo se guarda después de superar la auditoría, se reabre y se compara con la escena auditada antes de copiarse a su ubicación definitiva. Imágenes empaquetadas, cero bibliotecas enlazadas y ninguna dependencia de ejecución de los experimentos.
+
+### V05: integración real en UE 5.8.2
+
+La fase comienza una vez validada V04E. Se integra la **sala completa** con 16.302 colocaciones estáticas, 297 recursos de malla —incluidas las dos hojas y las variantes necesarias para reflexiones— y 101 materiales derivados de los originales. Los ocho módulos #206 permanecen estáticos: no se inventan puertas funcionales a partir de esos paneles.
+
+La puerta funcional es **`VALHALLA_SC_EXTERIOR_D01`**, actor `AVHAutomaticDoor`, con dos `UStaticMeshComponent` móviles, sensores de aproximación y ocupación y colisión convexa en las hojas. La arquitectura usa colisión triangular estática; no se declara completada una optimización global mediante colisiones simples o navegación. El mecanismo deriva del controlador interno Sutherland en una copia independiente, sin modificar aquel proyecto ni CoreRPG.
+
+Conversión explícita: `UE cm = (100·Blender.X, −100·Blender.Y, 100·Blender.Z)`. Las reflexiones se hornean en variantes privadas y se adaptan las normales y el orden triangular. La raíz de D01 está aproximadamente en `(3121,5833; 248,1314; 37,0000)` cm. Sus posiciones cerradas y recorridos proceden de los fotogramas V04B 20 y 60: desplazamiento lateral de unos **90,7618 cm por hoja**. Apertura configurada a 0,8 s y espera de cierre a 1,5 s. La comprobación de vuelta de las 297 mallas y las 16.302 transformaciones mide:
+
+| Dato importado | Error máximo |
+| --- | ---: |
+| Posición local de vértice | 0,000108786 cm, aproximadamente 1,088 µm |
+| Transformación mundial, sobre envolventes completas | 0,000344624 cm, aproximadamente 3,446 µm |
+| UV | 0 |
+| Normales explícitas | 0 |
+| Recuentos y ranuras de material | Coinciden |
+
+Estados identificables: `Closed`, `Opening`, `Open`, `Closing`, `Blocked`. La aproximación funciona por ambos lados, el ocupante mantiene libre el paso y una aproximación nueva o una obstrucción revierte el cierre. Las hojas se desplazan con barridos de colisión reales; no se usa una animación como sustitución de la seguridad.
+
+Las órdenes `RequestOpen`, `RequestClose`, `SetSecurityLocked`, `SetDestinationConstructed` y `SetExternalAccessAllowed` permiten el control posterior mediante un adaptador. `CanActorUseDoor` puede especializarse en Blueprint y se emiten cambios de estado. La orden explícita `SetEmergencyHoldOpen(true)` permite evacuar, abre y mantiene abierto por encima de las restricciones de acceso; solo se abre hacia un destino construido y al liberarla se recuperan esas restricciones. La ocupación conserva prioridad frente a cierre y bloqueo. `ResetClosed` queda reservado a preparación y arranque, no a órdenes de cierre durante el juego.
+
+#### Incidencia de suelo detectada y resuelta
+
+Las primeras consultas tras la autoría fallaron y una reapertura de editor llegó a pasar 14 casos. **Eso no se tomó como validación funcional suficiente**: la ejecución nativa posterior detectó penetración inicial contra el suelo, normal +Z y profundidad de aproximadamente `0,0000305 cm`. La base visual de la hoja coincide con el suelo, pero esa coincidencia no es un margen de funcionamiento robusto para el colisionador de Chaos.
+
+Se reconstruye exclusivamente el colisionador convexo con su base **2 mm por encima del suelo**. No se desactiva la colisión con las paredes ni se mueven las hojas visibles. Las firmas de superficies, normales y UV antes/después son idénticas: `7BCFD8662E97F87C13B612BB6E10A339F4179465` y `E18A6D496E6499D832477FAE5B48497EA11C5CE8` para las hojas izquierda y derecha, respectivamente. Los registros fallidos se conservan como diagnóstico; los resultados válidos son los posteriores a esta corrección.
+
+#### Pruebas finales
+
+- **22/22 comprobaciones de editor con Chaos**, sobre el mapa reabierto y con la sala completa: bloqueo del paso cerrado, paso abierto libre, aproximación desde ambos lados, ocupación mantenida, cierre demorado, interrupción, bloqueo de seguridad, doce ciclos alternados, obstáculo sólido durante apertura y cierre, ausencia de penetración de ese obstáculo y órdenes de emergencia.
+- **31/31 comprobaciones en mundo de juego**, con el `Tick` nativo de la puerta, cápsulas físicas y la sala completa: aproximación por ambos lados, ocupación, seguridad, reapertura, ocho ciclos alternados y emergencia. No se llaman manualmente las posiciones para simular el funcionamiento.
+- **31/31 repetidas desde la ubicación definitiva del proyecto**, cargando sus propios recursos y binarios. No necesita el proyecto de pruebas. Se comprueban los hashes de los 405 recursos y archivos binarios entregados contra los validados.
+- Dos capturas diagnósticas de color base en UE, cerrada y abierta, revisadas. No son una aprobación de iluminación ni acabado artístico.
+
+Entrega local independiente:
+
+`PROYECTO VALHALLA/Salas construidas/Sala computadora Enterprise Valhalla/UE5_Supercomputadora_V05/ValhallaComputer.uproject`
+
+El proyecto contiene sus propios `Content`, código, configuración, plugin y binarios. Los directorios regenerables producidos al probarlo se trasladaron al área temporal autorizada; no se tocaron temporales anteriores. Los símbolos de depuración se conservan con la evidencia, no son necesarios para ejecutarlo. Los recursos 3D y todos los datos brutos continúan excluidos de Git. La [plantilla y las instrucciones permanentes](../../integration/valhalla_supercomputadora/unreal/README.md) no contienen rutas de experimentos ni requieren esos archivos para jugar a la entrega local.
+
+### Evidencia identificada y límites de cierre
+
+| Archivo de evidencia local | SHA-256 |
+| --- | --- |
+| `auditoria_integrada.json` | `068f27807ab20d6140b0e74df2d69b1cd088f159fcc8acd4dee53198aa2493b4` |
+| `paneles_revision.json` | `a7a5b613b30b24293d8b039fc260ea1a1ea9f1d6fcf38ae51bdcc29f583cc9fa` |
+| `catalogo_revision_visual.json` | `596a9bccc883fcb9b1fa5d89d771b18d684767d5bc26c7a176344f4810a715f6` |
+| `auditoria_importacion.json` | `e01e371a473e0973eea269a8ebc739dbe2825f0bb48f2fb38b2b39de4e22afad` |
+| `revision_unreal.json` | `de0ac205028e170680050ee197addc3669de2e47afccb4c510bd2e022155aaca` |
+| `correccion_suelo.json` | `6791b5ad6fc2c81eef5d87a8ea1f986d675505bbfcdf479732dcec46e8e12e73` |
+| `prueba_entrega_independiente.json` | `fdfc35de84673ddb98a2aa1a70475354e73b2efab5d3da5cba424b3316079f25` |
+| `entrega_independiente_manifest.json` | `94edf8f163d277ff4f808eb6c5698ee1ec0057800ad0af06c29eadfd22726f36` |
+| `integridad_originales_cierre.json` | `9dea1a983eeb663881411159313fc9347e6cec371c4c1370752732a9c7ca2c8c` |
+
+Las unidades temporales son autocontenidas y se pueden retirar completas sin afectar al modelo V04E, al proyecto local V05 ni al código permanente. **No se ha autorizado ni efectuado su borrado.** Las trazas nativas de caché de UnrealBuildTool pueden conservarse en el perfil del usuario; no son una entrega ni una dependencia del juego y no se limpian retrospectivamente.
+
+**Pendiente V06:** incorporar Quinn, comprobar su cápsula real, movimiento, suelo, cámara, animaciones y pasos mediante prueba personal. La cápsula provisional de 70 × 180 cm no acredita automáticamente a Quinn. El proyecto permite una primera prueba con personaje provisional WASD/ratón y deja un PlayerStart junto a D01; las instrucciones permanentes explican cómo asignar un GameMode con Quinn. Siguen pendientes el acabado PBR, iluminación artística, revisión de rendimiento, navegación y la validación personal de la sala completa. No se declara terminada la sala ni se amplía la aprobación de los contactos heredados a una certificación estructural.
