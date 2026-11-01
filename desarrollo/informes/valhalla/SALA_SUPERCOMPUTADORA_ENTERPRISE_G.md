@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Fecha: 1 de noviembre de 2026. **Estado V04C: diagnóstico PARCIAL; último modelo válido V04B.** Se investiga el origen de ocho parejas acristaladas, se comparan tres alternativas reversibles y se revisan los 20 encuentros superiores. Ninguna alternativa está aprobada: V04B conserva sus 128 cruces banco/arquitectura y las ocho parejas internas pendientes. Puerta exterior y recorridos sin regresiones. Véanse las continuaciones V04, V04B y V04C al final; los apartados anteriores conservan el registro histórico de V03.
+Fecha: 1 de noviembre de 2026. **Estado V04D: prototipos locales PARCIALES; último modelo válido V04B.** Se entregan candidatos de unión para P01 y T01, sin extenderlos al resto de sectores. Se recomienda A adaptado y tapa continua para revisión, con holguras reales y límites explícitos. V04B conserva sus archivos y su estado anterior. No existe una V04D definitiva; faltan aprobación de diseño y pruebas en UE5. Los apartados V03, V04, V04B y V04C conservan el registro histórico.
 
 ## Resumen ejecutivo
 
@@ -684,3 +684,133 @@ Las evidencias se identifican por nombre y hash sin crear vínculos permanentes 
 **Pendiente en Unreal Engine 5:** colisiones simples y soporte del personaje, funcionamiento y seguridad de puertas, controladores, navegación, materiales y estabilidad temporal, iluminación y rendimiento. La evidencia Blender no demuestra estas prestaciones.
 
 **La sala continúa PARCIAL. PR #79 en borrador y sin fusionar. V04B se conserva como último estado válido.**
+
+
+## Continuación V04D — Prototipos constructivos de P01 y T01
+
+**Resultado: cuatro prototipos reversibles, todavía sin aprobar.** Se recomienda para revisión **P01 A adaptado** y **T01 continua sobre el apoyo**. La preferencia combina conservación de la colocación, menor intervención, distancia física y continuidad del acabado; no se basa solo en la vista frontal ni en un contador de cruces. No se genera una sala definitiva V04D y no se modifica el último modelo válido, `Sala_Supercomputadora_Valhalla_Puertas_V04B.blend`, SHA-256 `bb18697813040754122f5595f1d13d7eb93705828438e75a497cf460b251babd`.
+
+### P01: propiedad de la unión y procedencia
+
+P01 corresponde a `C01_Banco_A_0840_1921`, las dos colocaciones completas `C01_Banco_A_Original_0840_Component#206` y `C01_Banco_A_Original_1921_Component#206`. Sus jambas pertenecen a las instancias `Component_464607.001` y `Component_464607.004` de `Component#200`. Se conserva la continuidad de ambas arquitecturas y de sus sectores vecinos.
+
+La cadena de SketchUp estudiada en V04C contiene la misma definición `Component#206`, recurso `mesh_20`, repetida con transformaciones de sector y reflexión. No hay capas ni atributos que demuestren funciones distintas. La separación de unos 8,17 mm y el giro de 2,89545° son heredados. Esto es compatible con redundancia al compartir una frontera; **no demuestra documentalmente que su creación fuese accidental**.
+
+La propuesta asigna la unión a **un único módulo compartido P01, en una colección bajo la raíz**, en vez de conservar un módulo activo por cada sector. La arquitectura conserva la propiedad y posición del hueco; el marco del módulo se adapta a sus retornos y cabecera. El candidato A conserva exactamente la colocación 0840; B conserva la 1921. No se utiliza una pose intermedia ni se desplazan las jambas.
+
+### P01: adaptación del marco y medida real
+
+Conservar solo A o B sin adaptar su geometría deja dos cruces con arquitectura. Los prototipos ajustan su contorno a **45 planos medidos de los retornos y la cabecera**, incluidos contactos que no eran cruces propios. Se mantiene el apoyo inferior y se conserva la matriz de la colocación. La banda de ajuste conserva el borde y se desvanece entre **20 y 45 mm** desde el contorno. No cambia la escala general ni se estiran los paños acristalados.
+
+| Propuesta P01 | Fuente retenida | Vértices de fuente adaptados | Ajuste máximo | Mínimo físico frente a las jambas | Cruces propios del módulo con arquitectura |
+| --- | --- | ---: | ---: | ---: | ---: |
+| A, preferente para revisión | 0840 | 184 | 10,230285 mm | **1,320705 mm** | 0 |
+| B, alternativa con menor margen | 1921 | 178 | 12,807166 mm | **0,888805 mm** | 0 |
+
+Los vidrios con material `openskp_material_25.001` no reciben deformación del ajuste. El marco y pequeños remates superiores con materiales 15/26 acompañan la adaptación, estos últimos hasta unos 2 mm, conservando sus asignaciones y UV. Los dos objetos completos originales permanecen archivados dentro de cada archivo; sus mallas no se editan.
+
+La adaptación requiere cambiar diagonales de triangulación de **tres pares de caras en A y dos en B**. Se limita a vecinos coplanares con el mismo material, suavizado y UV continuas. Se conservan los vértices del contorno y sus coordenadas UV; el error máximo de la comprobación afín es inferior a **0,0000231 unidades UV**. Las mallas reabiertas tienen cero inversiones respecto a sus caras de procedencia, cero triángulos degenerados y cero triángulos coincidentes exactos de superficie positiva dentro del módulo privado.
+
+**Los 2 mm de diseño no son una holgura mínima uniforme.** Son el desplazamiento nominal respecto de los planos de ajuste. La medida final recorre **148 facetas próximas de las dos arquitecturas**, incluidos sus biseles, usando distancias vértice/cara, arista/arista e intersección segmento/cara. Excluye únicamente las superficies enteramente bajo la base Z=0,37 m, con 0,1 mm de tolerancia de selección. La búsqueda de parejas utiliza cajas de triángulos ampliadas 15 mm, que cubren cualquier pareja más próxima que esa distancia.
+
+| Testigo de distancia mínima | Triángulo del módulo privado | Arquitectura | Triángulo de arquitectura |
+| --- | ---: | --- | ---: |
+| A, 1,320705 mm | 155 | `Component_464607.001` | 730 |
+| B, 0,888805 mm | 154 | `Component_464607.004` | 728 |
+
+Los cortes de puntos críticos pasan por los segmentos de distancia mínima y muestran sus extremos 3D. Los cortes horizontales a Z=1,50 m son otra medida: su cota tangencial no se sustituye por el mínimo espacial. Si el plano de cota no atraviesa el borde inclinado de B se indica **sin cruce de cota**, sin inferir una distancia de centenares de milímetros a partir de otro punto del panel.
+
+**Se recomienda A** porque requiere menos cambio y mantiene más separación real. La junta es variable; si se exige un mínimo de 2 mm en todas las facetas, ambos prototipos necesitan todavía un ajuste localizado de los biseles correspondientes. Esta decisión queda visible para aprobación del diseño. Los módulos permanecen estáticos y cerrados: no se inventa un mecanismo de apertura ni se acredita un paso funcional por #206.
+
+En el subsistema P01, las cuatro relaciones de cruce banco/arquitectura `I00045`, `I00046`, `I00097`, `I00098` y la pareja banco/banco superpuesta dejan de estar activas en cualquiera de las copias. No aparecen relaciones nuevas frente a arquitectura o vecinos. Esto no cambia el contador de la V04B intacta ni resuelve las otras siete parejas.
+
+### T01: dos soluciones reales de remate
+
+T01 es `C01_Banco_A_Original_3844_Component#50`, incidencia `I00133` con `Component_466088.001`, definición `Component#202`. Se estudian tapa, pared, revestimiento y soportes, incluidas las caras inferiores inclinadas que impiden interpretar toda proyección de cubierta como una columna maciza.
+
+| Solución T01 | Propietario constructivo | Ejecución en copia | Resultado medido |
+| --- | --- | --- | --- |
+| TERMINA contra revestimiento | La arquitectura define el límite del remate | Tapa separada 2 mm en planta; 38 retornos locales explícitos, triangulados en 76 caras, con material blanco original | Mínimo en planta **1,999850 mm**; superficie superior común con el apoyo **0 m²**; arquitectura intacta |
+| CONTINUA sobre apoyo, preferente para revisión | La tapa aporta el acabado superior sobre el apoyo | Se sustraen superficies interiores de tapa y de una copia privada del revestimiento; se conservan sus rebajes inclinados | Superficie superior común entre componentes **0 m²**; no se añaden caras al apoyo ni posiciones artificiales |
+
+Antes del ajuste, la intersección de las proyecciones de las superficies superiores era **0,029532510 m²**. Esta es un área de unión de huellas, distinta de la suma de áreas triangulares con dobles caras de V04C. TERMINA reduce la superficie superior de tapa de 28,925917005 a **28,866036649 m²**, una pérdida local de **0,059880357 m²** incluyendo la junta. Solo se construye el retorno de ese nuevo corte; no se cierran otras aberturas originales.
+
+CONTINUA conserva **28,925916857 m²** frente a 28,925917005 m² de referencia: diferencia numérica de aproximadamente **0,148 mm²**. La distancia mínima entre proyecciones de las superficies superiores adyacentes es **1,536 micras**, un residuo numérico del encuentro y no una junta funcional diseñada. La propiedad del acabado evita dos superficies superiores activas solapadas. Las caras verticales internas se retiran hasta la cubierta; la exención se limita a sus caras superiores horizontales.
+
+El reparto de superficies usa huellas y prismas locales, con condiciones adicionales para las caras inferiores inclinadas del apoyo. Después se comprueba la geometría 3D real. No se interpreta el clasificador de cruces como una prueba de volumen de sólidos cerrados. Para la continuidad, las caras retenidas de tapa y apoyo son **fragmentos de superficies originales**, con UV interpoladas: se verificaron 5.070 vértices de superficie en TERMINA y 4.551 + 6.495 en CONTINUA. Error de pertenencia al triángulo fuente inferior a 9 × 10⁻¹⁵ m y de interpolación UV inferior a 4 × 10⁻¹³ antes de serializar.
+
+CONTINUA cambia solo la referencia de colección de **una instancia** de #202 hacia una copia privada. La definición compartida por otros sectores permanece intacta. La tapa continua respeta mejor el acabado superior de referencia; TERMINA sigue siendo una opción si se prefiere una junta visible. **Se recomienda CONTINUA para revisión**, sin aprobarla ni extenderla al resto de tapas.
+
+### Contactos heredados que no se ocultan con el resultado
+
+Las dos soluciones eliminan el cruce de T01 con arquitectura sin nuevas relaciones de cruce. Se conservan **42 relaciones ya presentes entre tapa y componentes del banco**, principalmente 19 con #34, nueve con #30 y cinco con #36, además de #41 y otros detalles. No se presentan como 42 correcciones ni se mezclan con las 128 incidencias banco/arquitectura. No se emite una aprobación nueva de todos esos encuentros.
+
+La tapa fuente también contiene **75 parejas de triángulos coincidentes con normales opuestas**, siempre con los materiales `openskp_material_27.001` y `openskp_material_28.001`. Sus centros están como mínimo a 0,271 m de la huella del revestimiento. Ambas propuestas conservan esas caras de anverso/reverso. Son una cuestión de representación heredada y separada de la superposición tapa/pared resuelta aquí; su tratamiento de material y colisión en UE5 sigue pendiente. Los contadores triangulares de coincidencia pueden variar al fragmentar la malla del apoyo y no equivalen a nuevos encuentros geométricos.
+
+### Conservación, regresiones y tolerancia numérica
+
+Las cuatro copias seleccionadas se reabrieron desde disco y se compararon con V04B:
+
+- **229 mallas originales y 16.800 objetos previos conservados.** Las modificaciones geométricas están en mallas privadas; los originales de banco se archivan con sus vínculos anteriores. A/B y TERMINA añaden una malla y un objeto; CONTINUA añade dos de cada uno. Las matrices originales se conservan; los cambios de colección son únicamente los necesarios para esas sustituciones reversibles.
+- **101 materiales y dos imágenes `FILE` empaquetadas idénticos**, incluidos valores de entrada, nodos, conexiones, colores, rutas y hashes. Se conservan todas las UV de los bloques originales. Las caras retenidas privadas mantienen material y suavizado; el error máximo de serialización UV es inferior a 0,0000153 y de posición respecto al plan es inferior a 0,477 micras. Cero bibliotecas externas.
+- **18 archivos protegidos sin cambios de tamaño y SHA-256**, incluyendo fuentes, V04B, entregables anteriores, variantes y PDF de V04C. No se sobrescribe ni borra ninguno de ellos.
+- Poses y curvas de las puertas **1/20/60 idénticas**, con interpolación lineal. El barrido continuo se vuelve a comprobar en cada copia, con cero parejas potencialmente solapadas de cajas de triángulos barridos.
+- **Doce rutas libres preservadas** para la cápsula provisional de diámetro 0,70 m y altura 1,80 m, base Z=0,37 m. Las regiones de geometría nueva de banco quedan fuera de sus cajas ampliadas; el apoyo privado solo pierde superficies. Se conserva el certificado exterior V04B de 329 intervalos libres con hojas reales. No se afirma una nueva simulación completa de personaje ni soporte de la planta del pie.
+- Los componentes de los **72 solapes ocultos condicionales** no se editan. Se vuelven a clasificar las nueve relaciones de esas familias que usan el apoyo privado: **todas conservan su cruce**. Las demás arquitecturas no cambian. Las otras siete parejas #206 y otros 19 encuentros de tapa quedan fuera de la intervención.
+- Las mallas privadas serializadas tienen **cero caras invertidas y cero triángulos de área nula** en la auditoría. Se registran y omiten fragmentos con altura menor de **1 micra tras convertir a float32**, para no conservar restos numéricamente inestables. Las áreas omitidas suman aproximadamente 0,257 mm² en A, 0,425 mm² en B, 2,603 mm² en TERMINA y 10,974 mm² entre las dos piezas de CONTINUA. No es un recorte global del modelo ni una pérdida de los originales archivados; tampoco certifica estanqueidad de la topología importada.
+- **Once pruebas analíticas aprobadas**: sustracción interior/exterior, área y UV de cortes, propiedad de caras coplanares, altura, invariancia por movimiento rígido, tratamiento de líneas sin volumen, borde interior inmóvil y distancias reales entre triángulos, incluido un cruce por el interior de una cara.
+
+### Comparativa visual y archivos locales
+
+La entrega visual de referencia es **`Enterprise_G_V04D_Comparativa_Constructiva_r02.pdf`**, con **12 láminas A3, 43 imágenes y 11 cortes vectoriales**. Incluye planta con localizadores P01/T01; frontal, lateral, superior, posición de personaje, detalle de junta, nodos originales en EEVEE y sección de cada estado; cortes a escala y puntos críticos con las distancias físicas reales.
+
+Las vistas no se limitan a módulos aislados: las seis cámaras de cada estado utilizan la **escena arquitectónica completa**. Las secciones cortan temporalmente a Z=1,50 o 3,65 m y conservan el contexto próximo. Las cubiertas y paredes ocultan el detalle desde algunas cámaras reales; esa oclusión se señala y se complementa con cortes, sin fingir que una vista frontal demuestra el encaje. Los renders son de 2.400 × 1.800 píxeles; los cortes del PDF son vectoriales. Se renderizaron y revisaron las páginas con Poppler.
+
+| Modelo experimental seleccionado | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `V04D_PROTO_P01_A_r07.blend` | 3.921.081 | `dcae1df9d539b3209c793014a820114d7f40933288534e7ab73802cc2503df87` |
+| `V04D_PROTO_P01_B_r07.blend` | 3.919.134 | `e4a4ac72895b094e142dd22ddfadeb358d8e9ea38a4f47c27a4ff89f05b56b60` |
+| `V04D_PROTO_T01_TERMINA_r03.blend` | 3.970.922 | `d193952b6c3f86da8ee05597f03460bf80a7043286db3f8850a7a72983ce6685` |
+| `V04D_PROTO_T01_CONTINUA_r06.blend` | 4.032.368 | `25947162031439e3815c2725f52f62012d3dfa968b3a73143518dbb72c2b2063` |
+
+Todos mantienen el estado de **prototipo no aprobado**. Los originales de banco están en `V04D_ORIGINALES_REFERENCIA_NO_ACTIVA`; `V04D_colecciones_previas` registra sus vínculos para restaurarlos. En CONTINUA, la propiedad `V04D_coleccion_original` de la instancia del apoyo permite recuperar su definición anterior. También se conserva una copia exacta de V04B. Las iteraciones y borradores anteriores permanecen como historial local; el índice identifica exclusivamente los archivos seleccionados y la revisión visual `_r02`.
+
+### Código reutilizable y evidencia
+
+La [biblioteca de geometría constructiva](../../tools/blender/valhalla_constructive_geometry.py) proporciona adaptación de borde, reparación de diagonales con UV continuas, prismas por huella, sustracción de superficies con atributos y distancias reales entre triángulos. Lee datos explícitos y no modifica escenas, rutas, visibilidad o archivos. La selección de propietarios, el alcance y la auditoría siguen siendo responsabilidad del llamador; no es un reparador automático de sólidos arbitrarios.
+
+Las [pruebas analíticas reutilizables](../../tools/blender/tests/test_valhalla_constructive_geometry.py) se ejecutan con NumPy y Shapely ≥2.1; se utilizó Shapely 2.1.2 con Blender 5.2.2. Estos módulos permanentes no dependen de archivos experimentales. Los modelos pueden abrirse sin esos paquetes: contienen sus mallas e imágenes empaquetadas. La separación por huellas emplea las operaciones documentadas de [buffer de Shapely](https://shapely.readthedocs.io/en/2.1.2/reference/shapely.buffer.html); las cotas físicas se calculan sobre las superficies, sin reemplazarlas por los planos de ajuste.
+
+```python
+fitted = fit_border(vertices, basis, center, planes,
+                    gap=0.002, full_band=0.020, zero_band=0.045)
+actual_gaps = triangle_surface_gaps(triangle, neighbouring_triangles)
+```
+
+```text
+python -B desarrollo/tools/blender/tests/test_valhalla_constructive_geometry.py
+```
+
+| Evidencia local | Contenido | SHA-256 |
+| --- | --- | --- |
+| `prototipos_finales.json` | Selección explícita de cuatro prototipos, archivos y hashes | `f63d329451b7e0a2392400a2135784321ea2e4fb0815b66359d1db497cba2b7e` |
+| `auditoria_final.json` | Reapertura de las cuatro soluciones; datos, contactos y regresiones | `3e0810195fc942075c7e58aee3a3d430d8606f590ba6ff9fd552cf0dedb6b646` |
+| `holguras_jambas_completas_r07.json` | Distancia física frente a 148 facetas, con testigos | `7c10d8a31a5de7461ee5dd5374d6d1067e40246f1eb70a01ed97b8b61b1384a3` |
+| `cortes_criticos.json` | Puntos 3D y planos de los dos cortes de mínima separación | `32d51986bea6609e8f78bd8f9281745031dd3632b248665fda9ba61b699186e4` |
+| `conservacion_superficies.json` | Procedencia de superficies/UV y 75 parejas de anverso/reverso | `c5eb1b29b125e9ef20242cc50e8a02a51dd2f23f303559924399c55fb4175e8f` |
+| `integridad_final.json` | 18 archivos protegidos sin cambios | `3e42cfab902c3d7a34c6440ef5ee54c667b4314b36552ee16cd5cdae46ccebc5` |
+| `pruebas_11_geometria.log` | Once comprobaciones analíticas aprobadas | `35f97ba38d738fc0bc90ee00bd2b233895c6412cebf0f8dd00a56ea72f0e3017` |
+| `catalogo_imagenes.json` | Cámaras, motores y resolución de 63 renders de proceso | `e1bca453cc0f82b3e2f90378f8ce10c7d952a73843e23611cb97f8fb4d9e0451` |
+| `Enterprise_G_V04D_Comparativa_Constructiva_r02.pdf` | 12 láminas A3, 43 imágenes y 11 cortes vectoriales | `60c1d47b7890af0aea135888ad25256194776a87067addc7c9b10d733a69c974` |
+
+Los nombres y hashes identifican la ejecución sin insertar rutas experimentales como dependencias permanentes. Modelos, PNG, PDF, datos, registros y dependencias de cálculo permanecen ignorados por Git. Se publican únicamente este informe, la biblioteca y sus pruebas. No se ha eliminado material anterior ni se ha creado otro árbol de proyecto.
+
+### Decisiones restantes y separación de Blender / UE5
+
+**Para aprobar una solución de diseño:** elegir lateralidad de P01 y aceptar su junta variable, o exigir una adaptación adicional de los biseles para un mínimo uniforme; elegir tapa continua o remate con junta; revisar la representación de las caras opuestas heredadas antes de exportar. La preferencia A/CONTINUA queda documentada como candidatura, no como aprobación del usuario.
+
+**Comprobado en Blender:** encaje localizado, fuente y propiedad de las uniones, conservación de poses, geometría reversible, vistas con entorno, medidas sobre facetas reales, contactos y regresiones geométricas de puertas y rutas.
+
+**Pendiente en UE5:** colisiones simples, soporte y controlador de personaje, navegación, puertas y enclavamientos, materiales de dos caras, iluminación, estabilidad temporal y rendimiento. No se implementa movimiento de #206 ni se declara terminada la sala.
+
+**La sala sigue PARCIAL. V04B permanece como última base válida; PR #79 abierta, en Draft y sin fusionar.**
