@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Fecha: 1 de noviembre de 2026. **Estado V04: PARCIAL.** Ocho montantes ajustados y verificados; quedan 128 interpenetraciones superficiales, la funcionalidad de las puertas y la validación en Unreal Engine 5. Véase la continuación V04 al final. Los apartados anteriores a esa continuación conservan el registro de la entrega V03.
+Fecha: 1 de noviembre de 2026. **Estado V04B: PARCIAL.** Puerta exterior preparada con ranuras locales y apertura lateral comprobada en Blender. Se conservan 128 cruces de bancos clasificados por impacto y se documentan ocho parejas internas de paneles superpuestos. Faltan su revisión priorizada y la implementación funcional en Unreal Engine 5. Véanse las continuaciones V04 y V04B al final; los apartados anteriores conservan el registro de la V03.
 
 ## Resumen ejecutivo
 
@@ -392,7 +392,7 @@ La reapertura del archivo final verificó:
 - Los **16.799 objetos** conservan sus transformaciones, parentesco y pertenencia a colecciones. Solo ocho referencias a datos de malla cambian a las copias ajustadas.
 - Los **1.407 objetos y las 136 mallas de la sala original** coinciden con el original en geometría, índices, asignación material y UV incluidos en las firmas.
 - Los **220 bloques de malla de la V03**, incluidos los no utilizados por las colocaciones auditadas, permanecen conservados; se añaden ocho bloques privados. Las 174 mallas del inventario inicial son las utilizadas por sus 16.312 colocaciones, no el total de bloques del archivo.
-- Los **101 materiales** de la V03 conservan colores, alpha, entradas y conexiones de nodos; las **tres imágenes de archivo** conservan tamaño y bytes empaquetados. Cero bibliotecas externas y ninguna ruta de imagen hacia el área experimental.
+- Los **101 materiales** de la V03 conservan colores, alpha, entradas y conexiones de nodos; los **dos bloques de imagen de archivo** presentes conservan tamaño y bytes empaquetados. El recuento anterior de tres bloques se corrige tras la inspección V04B, descrita más adelante. Cero bibliotecas externas y ninguna ruta de imagen hacia el área experimental.
 - La geometría y los objetos del archivo final coinciden exactamente con la segunda etapa auditada. Las ocultaciones y cámaras del render de diagnóstico no se guardaron.
 - Los diez archivos protegidos del manifiesto inicial y el blueprint conservan sus SHA-256. No se sobrescribieron ni eliminaron originales, entregas anteriores o respaldos.
 
@@ -424,3 +424,133 @@ Las evidencias locales se identifican por nombre y hash para localizar la ejecuc
 Se conservan además las dos etapas de modelo, sus controles locales, registros de aplicación, pruebas descartadas, renders y `resumen_v04.json`. El área experimental completa es prescindible para abrir el archivo V04 y reproducir sus ajustes con los archivos versionados; no se ha eliminado. Git publica exclusivamente este informe, el script V04 y su plan revisado. Los modelos y las evidencias voluminosas continúan solo en disco local.
 
 **La V04 sigue PARCIAL:** ocho conflictos locales resueltos y accesos interiores comprobados con referencia provisional; 128 cruces heredados, la funcionalidad de las puertas y la validación de colisiones/navegación en UE5 permanecen abiertos.
+
+## V04B — puertas, encuentros constructivos y preparación funcional
+
+**Entrega local nueva: `Sala_Supercomputadora_Valhalla_Puertas_V04B.blend`. Estado: PARCIAL.** Se parte exactamente de la V04 verificada. Se conservan los archivos originales y todos los entregables existentes. La modificación válida de esta fase es una preparación geométrica y animada de la puerta exterior; no se declara terminada la sala ni implementado su funcionamiento en UE5.
+
+### Puerta exterior: impedimento original y mecanismo elegido
+
+Las hojas son `Component#130` y `Component#131`, instanciadas por `Component_435035` y `Component_435936`. Los revestimientos del hueco son dos instancias de `Component#120`, `Component_431089` y `Component_431089.001`. Se inspeccionaron las posiciones originales, los materiales, las secciones y poses intermedias de apertura.
+
+La posición original **ya tiene 0,330000 m entre las hojas**, por lo que es una referencia parcialmente abierta, no un cierre estanco. Cada hoja tiene aproximadamente 46,029 mm de espesor. Entre los planos exteriores del revestimiento hay 401,181 mm de profundidad y espacio lateral modelado para alojar las hojas. Sin embargo, las caras del revestimiento cierran el acceso a ese espacio atravesando la trayectoria de las hojas. Se detectan cruces con `#120` en la propia posición original y durante el desplazamiento; una pose final sin cruces no demuestra un barrido libre.
+
+Se eligió **deslizamiento lateral opuesto, paralelo al eje Y del modelo**, por la forma de las dos hojas, el hueco y la cavidad existente. Para hacerlo compatible con las superficies modeladas se introdujo una ranura medida únicamente en una **copia privada del revestimiento**. No se ensanchó el hueco de paso del personaje ni se retiraron las hojas, paredes, marcos exteriores o detalles.
+
+| Medida | Resultado |
+| --- | ---: |
+| Hueco entre jambas | 1,799236 m |
+| Altura central del hueco sobre Z=0,37 m | 2,035446 m |
+| Espesor máximo de las hojas | 0,046029 m |
+| Ranura local en X | 31,190818–31,240846 m |
+| Ancho de ranura | 0,050029 m |
+| Holguras laterales medidas tras guardar | 2,000809 mm y 2,000306 mm |
+| Retirada completa detrás de cada jamba | 10 mm |
+| Carrera de cada hoja, cierre de diagnóstico → apertura | 0,907618 m |
+| Separación central en el cierre de diagnóstico | 4,000 mm |
+
+El nuevo bloque `V04B_Revestimiento_Puerta_Ranura` conserva materiales y orientación de las caras supervivientes. La ranura retira el 12,4707 % del área superficial del revestimiento, manteniendo las dos bandas exteriores. Es una abertura para una hoja de 46 mm dentro de un revestimiento de 401 mm de profundidad; no es una abertura de 0,70 m para forzar el paso del personaje. El objeto y la malla originales `Component#120` permanecen conservados. Solo las dos instancias del revestimiento utilizan la colección privada nueva `V04B_Revestimiento_Ranurado`.
+
+Sin esta corrección local, el deslizamiento atraviesa el revestimiento original y no se acepta como cinemática libre. Como alternativas, una puerta elevada necesitaría un alojamiento vertical adicional no modelado; una separación perpendicular seguida de deslizamiento requeriría revisar los recubrimientos y un mecanismo nuevo; una articulación o plegado exige bisagras y cambios de diseño que no están justificados por la fuente. No se ejecutaron esas alternativas ni se las presenta como movimientos certificados.
+
+La cavidad comprobada es el espacio libre de las superficies del modelo. No se han diseñado carriles, actuadores, rodamientos, soportes o refuerzos ni se realiza aquí una aprobación estructural del revestimiento ranurado.
+
+### Estados conservados y apertura realmente modelada
+
+La V04B se guarda en el fotograma 1. Las instancias de las dos hojas reciben claves lineales de posición y marcadores explícitos:
+
+| Fotograma | Estado | Desplazamiento Y de `#130` desde la referencia | Desplazamiento Y de `#131` |
+| --- | --- | ---: | ---: |
+| 1 | Referencia original, separación 0,33 m | 0 | 0 |
+| 20 | Cierre de diagnóstico, junta central 4 mm | -0,128955 m | +0,197045 m |
+| 60 | Apertura completa de diagnóstico | +0,778663 m | -0,710573 m |
+
+Las carreras desde el cierre son simétricas, ±0,907618 m. Todas las matrices originales se conservan exactamente en el fotograma 1; los datos de malla de ambas hojas no cambian. Las claves usan interpolación lineal, sin sobrepasar los extremos. El cierre deja una junta deliberada de 4 mm: no se declara sellado hermético ni se añaden juntas ficticias.
+
+Se guardaron además copias locales independientes de los estados cerrado y abierto. Las vistas comparan la referencia original, el cierre y la apertura, en frontal, isométrica y secciones a Z=1,50 m. Las hojas permanecen presentes, dentro de las cavidades laterales, en el estado abierto. No se ocultan ni se excluyen del cálculo de paso.
+
+### Barrido continuo y cápsula provisional
+
+Se comprobó el movimiento completo, no solo varios fotogramas. Un control continuo por ejes separadores calculó intervalos de posible contacto para cada pareja candidata de triángulos bajo traslación. En la geometría original confirma cruces con `Component#120`; con la copia ranurada no quedan parejas candidatas ni triángulos degenerados pendientes en el subsistema móvil.
+
+El script reutilizable incorpora además una condición conservadora suficiente: las cajas de cada triángulo barrido durante toda la carrera no solapan las de los triángulos fijos. En la entrega resulta **cero parejas potencialmente solapadas**; si hubiera una, el script rechazaría guardar para pedir revisión geométrica. Las dos hojas se separan monótonamente y su distancia mínima entre extremos en Y es la junta de 4 mm del cierre. Las caras enteramente bajo la base, con tolerancia de 0,010 mm, se tratan como apoyo al suelo.
+
+Se verificaron seis casos analíticos del control continuo, incluido un cruce transitorio con ambos extremos libres, un cruce de planos en mitad del movimiento, separación de planos y conservación del resultado tras giro y traslación. El barrido cubre las posiciones intermedias de la animación: la referencia original también está dentro de la carrera entre cierre y apertura.
+
+Se repitió la comprobación continua del recorrido completo desde el bloque central hasta el extremo del corredor exterior, de X=22,684833 a X=55,5 m, a Y=-2,473749 m. Se utiliza la misma cápsula **provisional para Valhalla**, de diámetro 0,70 m y altura 1,80 m, con base Z=0,37 m, y la cota de distancia por intervalos utilizada en V04.
+
+| Estado real de la V04B | Resultado del recorrido |
+| --- | --- |
+| Fotograma 1, referencia original | Bloqueado por las hojas |
+| Fotograma 20, cierre de diagnóstico | Bloqueado por las hojas |
+| Fotograma 60, apertura completa | **Libre en los 329 intervalos certificados**, sin intervalos indeterminados |
+
+Las hojas y el revestimiento modificado intervienen en las tres pruebas; no se utiliza la omisión de hojas de la V04. Las once rutas interiores ya verificadas quedan fuera de la región de barrido y no reciben geometría nueva. Se acredita separación geométrica de superficies en el movimiento y el recorrido abierto, no el comportamiento de un controlador ni la seguridad de cierre con un personaje en el hueco.
+
+### Clasificación de las 128 incidencias: significado e impacto
+
+Se conservaron los 128 cruces banco/arquitectura y se revisaron individualmente por familia, materiales afectados, cotas y visibilidad. Se trazaron **7.680 rayos**: cinco puntos de cruce por incidencia desde doce posiciones de observación a Z=1,65 m, elegidas sobre rutas interiores previamente comprobadas. Es una prueba de ocultación desde esas posiciones, no una garantía desde cualquier cámara ni con todos los materiales posibles de UE5.
+
+| Familia | Incidencias | Clasificación de impacto | Decisión |
+| --- | ---: | --- | --- |
+| `Component#206` | 32 | Interferencia visual o funcional que necesita corrección | Prioridad de revisión de implantación: son módulos completos de paneles/hojas acristalados casi superpuestos, no consolas identificadas. No mover ni eliminar una variante sin resolver su función. |
+| `Component#50` | 20 | Requiere revisión manual del remate superior | Cruces desde Z=2,994498 m, por encima de la cápsula, ocultos en 1.200/1.200 rayos interiores. Falta validar vistas altas, unión con paredes y acabado del remate. No se recortan tapas globalmente. |
+| `Component#41` | 4 | Encuentro constructivo admisible provisionalmente | Solape del bastidor con pared, excursión superficial máxima ~1,635 mm, oculto en 240/240 rayos. Se conserva como unión local; no es aprobación estructural ni prueba de volumen. |
+| `Component#29` | 8 | Interpenetración oculta compatible condicionalmente con futura colisión simplificada | Solape posterior ~2,21–2,58 mm; oculto en 480/480 rayos. Conservar el panel y usar una envolvente de colisión coherente de pared/bastidor. |
+| `Component#13` | 32 | Misma compatibilidad condicional | Travesaños posteriores, ~2,21–2,57 mm; ocultos en 1.920/1.920 rayos. No separar los detalles de su soporte. |
+| `Component#7` | 32 | Misma compatibilidad condicional | Módulos de panel, ~2,21–2,60 mm; ocultos en 1.920/1.920 rayos. Conservar detalles y revisar la envolvente en UE5. |
+
+El reparto es **32 incidencias prioritarias de interferencia, 20 de revisión manual, cuatro encuentros constructivos provisionales y 72 solapes ocultos de compatibilidad condicional**. Ninguno se registra como cruce geométricamente eliminado por esta clasificación. Las «excursiones» son la medida del clasificador triangular anterior; no se reinterpretan como una profundidad volumétrica exacta de penetración.
+
+Para `#206`, 48 de los 1.920 rayos no encontraron una ocultación previa de al menos 2 mm. Además, las vistas de cada objeto aislado muestran que **cada colocación ya contiene el módulo de dos paneles acristalados**. Por tanto, el aspecto de dos hojas en conjunto no justifica considerar dos colocaciones superpuestas como hojas complementarias.
+
+Se comprobaron ocho parejas de módulos `#206`: índices de fuente `0840/1921` y `3002/3843`, repetidos en las cuatro mitades de los dos recintos. Sus centros están separados aproximadamente **8,171–8,172 mm** y sus planos difieren **2,89545–2,89547°**. Presentan 628–632 parejas de triángulos con cruce propio por pareja de módulos. Los dos casos de fuente también se cruzan al abrir el semicírculo original: el problema es heredado. Estas **ocho parejas banco/banco son adicionales** al contador de 128 banco/arquitectura; no se mezclan ambos universos.
+
+Resolverlas exige decidir la implantación y el papel de esos módulos: una copia única compartida, un acceso de mantenimiento u otra composición deben justificarse contra los marcos y el diseño. No se elige arbitrariamente un ángulo, no se desplazan 22–24 cm y no se borran módulos para bajar el contador. Las tapas tampoco se deforman: sus cruces altos no bloquean las rutas ensayadas, pero permanecen pendientes como remate visual/constructivo.
+
+### Auditoría de regresiones y conservación
+
+Se realizó una auditoría incremental completa del subsistema modificado. Las firmas de todas las mallas y matrices de bancos permanecen iguales a la V04. Ninguna de las 15.392 colocaciones de banco tiene siquiera solape de cajas con la región completa de movimiento de las hojas y los revestimientos modificados. Por ello, las **430 incidencias banco/arquitectura** de referencia conservan exactamente su clasificación: **128 cruces, 275 contactos límite, 15 coincidencias y 12 falsos positivos**. No se declara una nueva ejecución integral innecesaria del clasificador sobre bancos que no han cambiado; el barrido continuo y la comprobación de regiones cubren los cambios locales.
+
+La entrega final fue reabierta desde la carpeta local de la sala y comparada con la candidata validada:
+
+- Se conservan los **228 bloques de malla** de la V04 y se añade uno privado para el revestimiento. Se conservan los **16.799 objetos** previos y se añade un objeto de revestimiento. Las 16.312 colocaciones geométricas evaluadas no cambian en número.
+- Todas las matrices originales coinciden en el fotograma 1. Los únicos vínculos originales modificados son las dos referencias de colección de los revestimientos; las únicas animaciones añadidas afectan a las dos instancias de hoja.
+- Los **101 materiales** conservan colores, alpha, nodos y conexiones. No se sustituyen materiales o texturas para esconder encuentros.
+- Se corrige expresamente el recuento anterior de imágenes: la **V04 ya contiene dos bloques `FILE` empaquetados**, `Fencing_Diamond_Mesh.png` y `Wood_Cherry_Original.jpg`. Ambos conservan exactamente tamaño, rutas relativas y SHA-256 en la V04B. No se ha eliminado una tercera imagen durante esta fase; el anterior recuento de tres bloques no era correcto.
+- Todas las UV originales permanecen en sus bloques originales. En el revestimiento privado se comprobaron **224 coordenadas de bucle UV** contra interpolaciones de aristas originales, con error máximo **0,000013755 unidades UV**; sus 64 caras conservan material y orientación de una cara original correspondiente. No se añaden caras de cierre para fingir una topología estanca.
+- Las claves de las dos hojas se reabren en los fotogramas 1, 20 y 60 y conservan interpolación lineal. Cero bibliotecas externas, imágenes empaquetadas y ninguna dependencia de rutas experimentales.
+- Los **12 archivos protegidos** al inicio, incluidos la V04, los diez archivos anteriores y el blueprint, conservan sus hashes. No se sobrescribió ni eliminó ningún entregable existente.
+
+### Archivo, reproducción y evidencias locales
+
+| Archivo local nuevo | Tamaño | SHA-256 |
+| --- | ---: | --- |
+| `Sala_Supercomputadora_Valhalla_Puertas_V04B.blend` | 3.895.466 bytes | `bb18697813040754122f5595f1d13d7eb93705828438e75a497cf460b251babd` |
+
+El [script reutilizable V04B](../../tools/blender/valhalla_supercomputadora_v04b.py) exige el hash de la V04 revisada, rechaza salidas existentes, crea el revestimiento privado, conserva datos originales y comprueba el barrido conservador antes de guardar. Utiliza el módulo de firmas del script V04 situado a su lado; ambos son archivos permanentes versionados. No depende de los datos ni scripts desechables del diagnóstico.
+
+```text
+blender --background --factory-startup --python-exit-code 1 --python desarrollo/tools/blender/valhalla_supercomputadora_v04b.py -- --input V04.blend --output NUEVA_V04B.blend --evidence-dir EVIDENCIA_TEMPORAL_AUTORIZADA
+```
+
+Las evidencias brutas y los modelos de diagnóstico se conservan localmente. Sus referencias por nombre y hash permiten identificar la ejecución sin crear dependencias permanentes de rutas experimentales:
+
+| Evidencia | Resultado registrado | SHA-256 |
+| --- | --- | --- |
+| `integridad_v04b.json` | Reapertura, datos originales, UV, materiales, claves y hashes protegidos | `eb05100c7225dfcd935ccee412f114a12fd5b7df99f111d40383cb4259ed4768` |
+| `clasificacion_128_v04b_final.json` | Decisión individual por impacto de las 128 incidencias | `032fe0013baf096167a0b89132d5a77d17d5426139afe8910c3916d7027fe249` |
+| `visibilidad_128_v04b.json` | 7.680 rayos de visibilidad con puntos, obstáculos y márgenes | `48f17aebf5f83cc40ed176352f3f62e93d07460987213e7077448ecb22fa3527` |
+| `barridos_puertas.json` | Comparación continua antes/después del revestimiento | `30844b0cffaf524cbc184936d0915a2e934991650e8e9c2002cf9fe51a862150` |
+| `paso_capsula_v04b.json` | Ruta exterior con hojas realmente presentes, estados 1/20/60 | `8127575e52d37098b14a64ae88dfc0357c244d0b1858b38ad965a2dfe230b0eb` |
+| `auditoria_incremental_v04b.json` | Ausencia de regiones de banco afectadas, contador conservado y holguras | `a370adc6f6e428ecf68edc2f94e7cb3d846c5c25433c4fa9089e1b23a4e9fdd4` |
+
+Se conservan también `familias_detalle.json`, `paneles_fuente_original.json`, los seis casos analíticos de `regresiones_barrido.json`, `resumen_v04b.json`, las copias de puerta cerrada/abierta y las vistas comparativas de puerta, módulos acristalados, tapas y bastidores. Los renders y secciones de diagnóstico no alteran las cámaras, visibilidad ni materiales guardados en la entrega. El área experimental es prescindible para abrir o reproducir la V04B y no se ha eliminado.
+
+### Separación de Blender y UE5
+
+**Realizado en Blender:** modificación local medida del revestimiento, poses lineales conservando la referencia, barridos geométricos continuos, hueco útil, recorrido exterior abierto con cápsula provisional, clasificación de encuentros, vistas y comprobación de integridad.
+
+**Pendiente en Unreal Engine 5:** separación funcional de actores/componentes y pivotes, colisiones simples de paredes/bancos/hojas, controlador y tiempos de apertura, enclavamientos y detección de personaje durante el cierre, navegación actualizable, soporte y movilidad del personaje, validación de materiales e iluminación, rendimiento y revisión de las incidencias priorizadas. Los fotogramas de diagnóstico no equivalen a tiempos de una puerta implementada.
+
+**La sala sigue PARCIAL.** La puerta exterior dispone de una solución geométrica local y verificable en copia; no se declara un sistema funcional completo ni se aprueban automáticamente los solapes conservados. La PR #79 continúa como borrador y no se fusiona.
