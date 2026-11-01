@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Fecha: 1 de noviembre de 2026. **Estado V04B: PARCIAL.** Puerta exterior preparada con ranuras locales y apertura lateral comprobada en Blender. Se conservan 128 cruces de bancos clasificados por impacto y se documentan ocho parejas internas de paneles superpuestos. Faltan su revisión priorizada y la implementación funcional en Unreal Engine 5. Véanse las continuaciones V04 y V04B al final; los apartados anteriores conservan el registro de la V03.
+Fecha: 1 de noviembre de 2026. **Estado V04C: diagnóstico PARCIAL; último modelo válido V04B.** Se investiga el origen de ocho parejas acristaladas, se comparan tres alternativas reversibles y se revisan los 20 encuentros superiores. Ninguna alternativa está aprobada: V04B conserva sus 128 cruces banco/arquitectura y las ocho parejas internas pendientes. Puerta exterior y recorridos sin regresiones. Véanse las continuaciones V04, V04B y V04C al final; los apartados anteriores conservan el registro histórico de V03.
 
 ## Resumen ejecutivo
 
@@ -554,3 +554,133 @@ Se conservan también `familias_detalle.json`, `paneles_fuente_original.json`, l
 **Pendiente en Unreal Engine 5:** separación funcional de actores/componentes y pivotes, colisiones simples de paredes/bancos/hojas, controlador y tiempos de apertura, enclavamientos y detección de personaje durante el cierre, navegación actualizable, soporte y movilidad del personaje, validación de materiales e iluminación, rendimiento y revisión de las incidencias priorizadas. Los fotogramas de diagnóstico no equivalen a tiempos de una puerta implementada.
 
 **La sala sigue PARCIAL.** La puerta exterior dispone de una solución geométrica local y verificable en copia; no se declara un sistema funcional completo ni se aprueban automáticamente los solapes conservados. La PR #79 continúa como borrador y no se fusiona.
+
+
+## Continuación V04C — Módulos acristalados y remates superiores
+
+**Resultado: diagnóstico entregado; ninguna corrección geométrica aprobada.** La base de esta fase es `Sala_Supercomputadora_Valhalla_Puertas_V04B.blend`, SHA-256 `bb18697813040754122f5595f1d13d7eb93705828438e75a497cf460b251babd`. Permanece intacta y sigue siendo el último estado válido, todavía PARCIAL. No se ha creado `Sala_Supercomputadora_Valhalla_Modulos_V04C.blend`: escoger una lateralidad o recortar los encuentros actuales sin resolver su referencia constructiva sería una decisión de diseño no demostrada.
+
+### Origen y función de Component#206
+
+Se compararon las ocho parejas de la entrega y las cuatro colocaciones del semicírculo fuente, incluyendo su árbol original de SketchUp:
+
+- Las cuatro proceden del mismo nodo `Component_20769`, definición `Component#206`, recurso geométrico `mesh_20`. Cada uno contiene el módulo completo con sus dos paneles acristalados, **1.130 vértices y 728 polígonos**. No son dos hojas complementarias ni consolas identificadas.
+- Las matrices locales de hijo son iguales; cambian las transformaciones de los sectores `Component_1442`, instancias de `Component#51`. Al componer la cadena original y convertir Y vertical a Z vertical se reproducen las cuatro matrices Blender con error máximo **4,322 × 10⁻⁷** por coeficiente. La separación y el giro ya existen en SketchUp; no se introdujeron en V03/V04 ni en la animación de puerta.
+- La separación entre centros es **8,171–8,172 mm** y el ángulo entre planos **2,89545–2,89547°**. Una colocación tiene lateralidad reflejada respecto a su pareja. Tras reflejar el eje tangencial, la discrepancia máxima de las nubes canónicas en los dos casos de fuente ensayados es **1,193 × 10⁻⁷ m**. Las diferencias de hash de una canonización sin esta reflexión no prueban que sean diseños distintos.
+- Se conservan el recurso original, los materiales y las UV. La escala local X=1,15 de la definición ya está en la cadena SKP y no es un estiramiento añadido en esta revisión. La integración general continúa a escala 1:1.
+- Las cuatro fuentes están en `Layer0`; sus propiedades y diccionarios de atributos leídos están vacíos. No aparece metadato que justifique capas constructivas o funciones diferentes. **La evidencia es compatible con redundancia de un módulo compartido al repetir sectores; la intención de diseño no queda demostrada por la geometría.**
+
+Las anclas de los objetos caen hacia extremos opuestos del mismo encuentro. En el primer caso, la cuerda entre anclas mide 1,013813 m frente a un ancho proyectado del módulo de 1,006614 m. Sus vértices de arquitectura más cercanos están a unos 15,6–18 mm: no se puede usar el origen del objeto como si fuera una cara exacta de jamba. Las ocho parejas banco/banco se relacionan así con las 32 incidencias banco/arquitectura de V04B:
+
+| Pareja visual | Colocación y fuentes | Incidencias banco/arquitectura de referencia |
+| --- | --- | --- |
+| P01 | `C01_Banco_A_0840_1921` | `I00045`, `I00046`, `I00097`, `I00098` |
+| P02 | `C01_Banco_A_3002_3843` | `I00113`, `I00114`, `I00131`, `I00132` |
+| P03 | `C01_Banco_B_0840_1921` | `I00155`, `I00156`, `I00178`, `I00179` |
+| P04 | `C01_Banco_B_3002_3843` | `I00229`, `I00230`, `I00276`, `I00277` |
+| P05 | `C02_Banco_A_0840_1921` | `I00297`, `I00298`, `I00314`, `I00315` |
+| P06 | `C02_Banco_A_3002_3843` | `I00330`, `I00331`, `I00348`, `I00349` |
+| P07 | `C02_Banco_B_0840_1921` | `I00369`, `I00370`, `I00390`, `I00391` |
+| P08 | `C02_Banco_B_3002_3843` | `I00406`, `I00407`, `I00424`, `I00425` |
+
+Cada pareja reúne cuatro incidencias de referencia, dos por cada módulo completo. Las ocho parejas banco/banco son un segundo universo y siguen separadas del contador de 128.
+
+### Alternativas independientes y reversibles
+
+Se generaron tres archivos **de diagnóstico, no aprobados** desde lecturas independientes de la V04B intacta:
+
+| Variante | Implantación activa en cada pareja | Resultado |
+| --- | --- | --- |
+| A | Mantener 0840/3002 exactamente en su posición original | Ocho módulos activos; 16 cruces con arquitectura; no quedan parejas activas #206/#206 |
+| B | Mantener 1921/3843 exactamente en su posición original | Ocho módulos activos; 16 cruces con arquitectura; no quedan parejas activas #206/#206 |
+| C | Un módulo con la lateralidad de A, centro geométrico y normal medios de la pareja | Giro de ~1,4477° y traslación del centro de ~4,086 mm respecto a A; siguen 16 cruces con arquitectura |
+
+En A/B se conservan los ocho objetos no activos; en C se conservan los 16 originales y se añaden ocho propuestas que comparten sus mallas. Los originales pasan a `V04C_REFERENCIA_206_NO_ACTIVA`, desactivada en vista y render, **sin borrar ni modificar sus mallas, matrices o UV**. La propiedad `V04C_colecciones_previas` conserva las colecciones de origen. Para revertir la variante basta restituir esos vínculos y desactivar la colección de propuestas C; también se mantiene la V04B intacta como referencia independiente.
+
+Las tres alternativas tienen **112 cruces activos banco/arquitectura: 16 de #206 y los otros 96 exactamente conservados**. Es el contador de una alternativa que desactiva colocaciones, no un nuevo resultado aprobado de la sala. V04B sigue teniendo 128. No hay nuevas relaciones de cruce con arquitectura ni cruces propios entre los módulos activos y otros bancos. Las excursiones máximas del clasificador para #206 son 9,816 mm en A, 10,791 mm en B y 6,839 mm en C; son medidas entre triángulos, no profundidades volumétricas exactas. Ninguna de estas cifras acredita un encaje resuelto.
+
+También se ensayaron **328 poses restringidas** en dos casos representativos: dos lateralidades, dos referencias de orientación (media de centros o cuerda de jambas cercanas) y 41 desplazamientos normales entre −40 y +40 mm. Ninguna quedó libre de cruces en ese conjunto de pruebas. Los mejores casos todavía cruzan un objeto y desplazan el centro unos 66–68 mm; **no se han trasladado al modelo ni se consideran soluciones justificadas**. El ensayo acota estas alternativas, no demuestra la imposibilidad de cualquier rediseño.
+
+Las vistas aisladas y las secciones permiten leer bordes desdoblados, diferencias de junta y lateralidad. Se comparó además P01 con EEVEE y nodos originales. La apariencia más limpia de un módulo aislado no resuelve la unión con bastidores, paredes y remates. Falta fijar una referencia común de jambas y elegir la lateralidad conforme al diseño, o justificar una revisión local del marco. No se ha supuesto que #206 sea otra puerta funcional ni se le ha inventado una apertura.
+
+### Las 20 incidencias de Component#50
+
+Se revisaron **16 tapas físicas que agrupan 20 encuentros**, con vista superior y lateral de cada una y cuatro muestras adicionales en EEVEE. El catálogo siguiente enlaza los identificadores de lámina con cada incidencia:
+
+| Lámina | Objeto de tapa | Incidencias |
+| --- | --- | --- |
+| T01 | `C01_Banco_A_Original_3844_Component#50` | `I00133` |
+| T02 | `C01_Banco_A_Original_3845_Component#50` | `I00134` |
+| T03 | `C01_Banco_A_Original_3846_Component#50` | `I00135` |
+| T04 | `C01_Banco_A_Original_3847_Component#50` | `I00136`, `I00137` |
+| T05 | `C01_Banco_B_Espejo_3844_Component#50` | `I00278` |
+| T06 | `C01_Banco_B_Espejo_3845_Component#50` | `I00279` |
+| T07 | `C01_Banco_B_Espejo_3846_Component#50` | `I00280` |
+| T08 | `C01_Banco_B_Espejo_3847_Component#50` | `I00281`, `I00282` |
+| T09 | `C02_Banco_A_Original_3844_Component#50` | `I00350` |
+| T10 | `C02_Banco_A_Original_3845_Component#50` | `I00351` |
+| T11 | `C02_Banco_A_Original_3846_Component#50` | `I00352` |
+| T12 | `C02_Banco_A_Original_3847_Component#50` | `I00353`, `I00354` |
+| T13 | `C02_Banco_B_Espejo_3844_Component#50` | `I00426` |
+| T14 | `C02_Banco_B_Espejo_3845_Component#50` | `I00427` |
+| T15 | `C02_Banco_B_Espejo_3846_Component#50` | `I00428` |
+| T16 | `C02_Banco_B_Espejo_3847_Component#50` | `I00429`, `I00430` |
+
+Se trazaron 300 rayos elevados, cinco puntos por incidencia desde tres vistas. **68 rayos no tienen una ocultación previa de al menos 2 mm y las 20 incidencias tienen algún punto potencialmente expuesto.** El resultado complementa los rayos a altura de personaje de V04B; no los contradice. Los encuentros empiezan aproximadamente en Z=2,994498 m, por encima de la cápsula ensayada.
+
+Se detectan además solapes proyectados de triángulos casi horizontales cuya separación vertical local es inferior a **0,1 mm**. Su suma de áreas proyectadas es 0,346969 m², con máximo por incidencia de 0,034149 m². Esa suma incluye dobles caras y solapes entre triángulos: **no es un área de unión ni una cantidad de material que deba eliminarse**. Las imágenes muestran encuentros y transparencias de referencia; no se ha probado parpadeo temporal ni se interpreta la transparencia de Workbench como el acabado final de UE5.
+
+Las 20 incidencias continúan como **revisión manual de remate con posible interferencia visual desde arriba**. Propuesta local: decidir primero si la tapa pasa por encima de la pared o termina en el revestimiento y qué pieza aporta la cara visible; después ajustar únicamente el borde o la cara interior redundante de ese encuentro en una copia. No se ha ejecutado un recorte porque falta esa decisión constructiva. No se cierran globalmente mallas abiertas ni se retiran tapas para despejar un contador.
+
+### Conservación y ausencia de regresiones en las alternativas
+
+Las tres variantes se reabrieron desde disco y se compararon independientemente con V04B:
+
+- **229 bloques de malla idénticos**, incluyendo vértices, aristas, polígonos, suavizado, asignación material y UV. Se mantienen los **16.800 objetos** de V04B; A/B no añaden objetos y C añade ocho propuestas. Todos los objetos originales conservan matrices, parentesco y datos; solo cambian los vínculos a colecciones de los #206 archivados.
+- **101 materiales** iguales en colores, alpha, nodos, valores de entrada, enlaces e imágenes. Los dos bloques `FILE` empaquetados, sus rutas, dimensiones y hashes son iguales. Cero bibliotecas externas y ninguna referencia a rutas experimentales para abrir los modelos.
+- Las matrices de las dos hojas y los revestimientos coinciden en **1, 20 y 60**; las seis curvas conservan claves y valores con interpolación lineal. Se repitió en cada variante el barrido conservador continuo del movimiento completo, con **cero parejas potencialmente solapadas de cajas de triángulos**.
+- Se mantienen **once rutas interiores y la ruta exterior abierta** para la cápsula provisional de diámetro 0,70 m y altura 1,80 m, base Z=0,37 m. La prueba de regresión utiliza la igualdad exacta del entorno restante: A/B solo desactivan módulos; en C los ocho módulos nuevos ni siquiera solapan las cajas de las 12 rutas ampliadas por la cápsula. Por tanto se conserva, sin omitir hojas, el certificado V04B de los 329 intervalos exteriores abiertos. No se declara una nueva simulación completa de personaje ni se presenta un muestreo de poses como prueba continua.
+- La auditoría de contactos recalcula los ocho módulos activos frente a **toda la arquitectura y los vecinos de banco candidatos** de cada variante, incluidos cruces banco/banco. Se preservan por igualdad de geometría las restantes 96 relaciones de cruce; no se ha fingido una nueva ejecución integral sobre componentes sin cambios. No se detectan nuevas relaciones de cruce propias en el subsistema estudiado.
+- Los **72 solapes ocultos condicionales**, los cuatro encuentros #41 y las 20 incidencias #50 conservan exactamente geometría y colocación. No se amplía su aprobación ni se modifica su clasificación silenciosamente.
+- **13 archivos protegidos** al inicio conservan tamaño y SHA-256: fuentes, entregables anteriores incluida V04B y blueprint. No se sobrescribe ni elimina material anterior.
+
+### Láminas, archivos y reproducción
+
+El cuaderno local `Revision_visual_Enterprise_G_V04C_02.pdf` contiene **14 láminas A3 apaisadas y 90 imágenes seleccionadas**: sala completa y planta completa de ambos círculos; perfiles de las ocho parejas; comparación base/A/B/C para cada una; vistas superiores y laterales de las 16 tapas con sus 20 IDs; muestras EEVEE; puerta cerrada y abierta; interiores y secciones técnicas. Los PNG de detalle son de 2.400 × 1.800 píxeles, los generales de 3.200 × 2.400 y las muestras EEVEE de 1.800 × 1.350. El PDF se renderizó con Poppler y sus páginas se revisaron visualmente.
+
+Las secciones Z=2,80 m, el azul/naranja de los perfiles y las cámaras o luces de diagnóstico solo existen en escenas transitorias de render. No se guardan como sustituciones de materiales o arquitectura en V04B ni en las alternativas. Workbench muestra materiales de referencia; las ocho muestras EEVEE usan los nodos originales. Se conserva el primer montaje PDF como borrador y se identifica la revisión `_02` como entrega visual por incluir la planta sin recortar. Los ensayos de encuadre sin información útil no se incluyen en la selección.
+
+| Modelo local de diagnóstico | Bytes | SHA-256 |
+| --- | ---: | --- |
+| `V04C_DIAG_A.blend` | 3898972 | `4636bedd3780ba979c30921b4f2f1ef7961607b51d9eeb1b926274174d92ae12` |
+| `V04C_DIAG_B.blend` | 3898031 | `f4cfe48dd24a747ea2607b3dc53d3552374c36433ee203bafa25ce45108ec652` |
+| `V04C_DIAG_C.blend` | 3897101 | `de70c845101378e08cf9cffb4913916fd09685673b9a95dc4bbd07679ddc13fe` |
+
+El [generador reutilizable de variantes V04C](../../tools/blender/valhalla_supercomputadora_v04c_variantes.py) valida el hash de entrada, exige directorios nuevos o vacíos, conserva originales, verifica sus estados y firmas y escribe archivos con el prefijo explícito `DIAG`. Usa únicamente el módulo permanente V04 situado a su lado; no depende de scripts ni datos experimentales. No produce una V04C aprobada.
+
+```text
+blender --background --factory-startup --python-exit-code 1 --python desarrollo/tools/blender/valhalla_supercomputadora_v04c_variantes.py -- --input V04B.blend --output-dir NUEVO_DIRECTORIO_LOCAL --evidence-dir NUEVA_EVIDENCIA_TEMPORAL_AUTORIZADA
+```
+
+| Evidencia local | Contenido | SHA-256 |
+| --- | --- | --- |
+| `cadena_skp_206.json` | Origen SKP y correspondencia de matrices | `90b0c8f8c99767dc971cd1b64555e7a6ead53d0b43cf52dea79cbfd1eacd88e6` |
+| `parejas_206_estudio.json` | Geometría, implantación y vínculo con las 32 incidencias | `827fa23676933560a5d3c7bc545334a00cb1a98988396b905cea6758e4f67a6d` |
+| `ajustes_206_diagnostico.json` | 328 poses restringidas ensayadas, ninguna aprobada | `2ff1de575d7cc0dafb0482f8b09ce658b87886b701f92f9aa4f572f9fb6a7fc9` |
+| `remates_20_revision.json` | 20 encuentros, rayos elevados y solapes proyectados | `4487f02aeaf182150c82079e2bdfba476750a98b315cc8f3d3900cf1a0460a34` |
+| `auditoria_variantes_v04c.json` | Reapertura, conservación, barridos, rutas y cruces activos | `91adf3d3456ef7c68e00cae85ce60dd6bc086ae065844749b13fc81b4f020f6c` |
+| `integridad_originales_final.json` | 13 archivos originales protegidos sin cambios | `bfca7dff9e0c5257fac88e6c54be7253e8782ad926783f54bfacb83dd4edd33a` |
+| `catalogo_imagenes.json` | Catálogo de renders, motores, cortes y resolución | `a481b63632cdd69af4d191e4ea2d63a7fe8bca5c5b0a1807315946b680416c42` |
+| `Revision_visual_Enterprise_G_V04C_02.pdf` | 14 láminas A3, 90 imágenes seleccionadas | `74df230887ef02938e4b554294c25504560e3f664782ab24121d55ddfc4944a5` |
+
+Las evidencias se identifican por nombre y hash sin crear vínculos permanentes a rutas experimentales. Modelos, imágenes, PDF, dependencias del lector y datos brutos permanecen excluidos de Git. La publicación comprende únicamente este informe y el generador reutilizable. El juego y los archivos definitivos no dependen del área de diagnóstico, que no se ha borrado.
+
+### Pendientes y límites
+
+**Para revisión visual del diseño:** elegir lateralidad y referencia de jambas de #206; resolver sus encuentros con arquitectura sin movimientos arbitrarios; definir la continuidad y propiedad de las caras de #50; aprobar cualquier intervención local antes de considerarla la nueva base válida. Las tres alternativas son útiles para esa comparación, no una elección realizada en nombre del usuario.
+
+**Realizado en Blender:** procedencia SKP/Blender, medidas, variantes reversibles, comparación visual, conservación, contactos triangulares y continuidad geométrica de las pruebas de puerta y rutas.
+
+**Pendiente en Unreal Engine 5:** colisiones simples y soporte del personaje, funcionamiento y seguridad de puertas, controladores, navegación, materiales y estabilidad temporal, iluminación y rendimiento. La evidencia Blender no demuestra estas prestaciones.
+
+**La sala continúa PARCIAL. PR #79 en borrador y sin fusionar. V04B se conserva como último estado válido.**
