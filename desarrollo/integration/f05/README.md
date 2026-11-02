@@ -1,6 +1,7 @@
 # F05-P01 — Órdenes sobre la sesión autoritativa F04
 
-Incremento nativo para auditoría. No cierra F05 ni desarrolla P02–P05.
+P01 conserva su contrato. P02 añade [delegación real y cadena de mando](DELEGATION.md).
+Incremento nativo para auditoría; no cierra F05 ni desarrolla P03–P05.
 CoreRPG **main `76a7b7b485616d8c4994f384a90f123bf333591d`**, sin modificaciones.
 La [API C](include/f05_orders.h) amplía `TrekF04Bridge`; recibe el mismo
 `F04Session*`. No crea otro mundo, reloj, historial ni almacén de órdenes.
@@ -58,8 +59,8 @@ un modelo de sensores F06. No se admiten parámetros/objetivos ocultos.
 Cualquier otra operación da `F05_UNSUPPORTED`, sin ejecutarla.
 
 Las comprobaciones de autoridad son las de F04: mando efectivo o jefatura
-vigente de Sensores; el rango aislado no basta. No se añaden delegaciones,
-iniciativa NPC, interpretación de lenguaje ni proveedor IA.
+vigente de Sensores; el rango aislado no basta. La API P02 añade delegaciones acotadas descritas en DELEGATION.md.
+No se añade iniciativa NPC, interpretación de lenguaje ni proveedor IA.
 
 ## Persistencia, causalidad e idempotencia
 
