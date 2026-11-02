@@ -119,6 +119,7 @@ def main():
     exports['summary.json'] = (json.dumps(summary, indent=2) + '\n').encode()
     # Preserve exported checksums on Windows checkouts with core.autocrlf.
     exports['.gitattributes'] = b'* -text\n'
+    exports['.gitignore'] = b'!*.log\n'
     args.output.mkdir(parents=True)
     for name, data in exports.items():
         (args.output / name).write_bytes(data)
