@@ -113,7 +113,8 @@ void run_initiative(const std::string& name,const std::string& file) {
   check(origin!=0,"actual captain appointment");l.op(l.h.captain,F04_REVOKE,origin);
   auto d=l.step(l.h.captain,n);check(d.decision==F05_ESCALATE && !d.order && orders(decode(l.save())).empty(),"former captain re-evaluated before issuance");
  } else if(name=="selection") {
-  const U n=l.ready_need();l.op(l.h.ensign,F04_MOVE,l.h.engineering);auto d=l.step(l.h.captain,n);
+  l.op(l.h.head,F04_ASSIGN,l.h.sensors,l.h.ensign.id);l.service=l.op(l.h.head,F04_DUTY,l.h.ensign.id,l.h.sensors,0,28800).record;
+  l.bind(l.h.doctor);const U n=l.requirement().id;l.brief(n,l.h.captain);auto d=l.step(l.h.captain,n);
   check(d.decision==F05_REPORT && d.code==F04_UNAVAILABLE && !d.order,"logical location required even without Actor");
   l.op(l.h.ensign,F04_MOVE,l.h.sensors);l.op(l.h.head,F04_ABSENCE,l.h.ensign.id,0,0,60,F04_SICK);d=l.step(l.h.captain,n);
   check(d.decision==F05_ESCALATE && !d.order && decode(l.save()).campaign.streams.empty(),"unavailable qualified recipient never selected");
