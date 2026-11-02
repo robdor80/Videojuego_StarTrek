@@ -1,4 +1,6 @@
-# Supercomputadora Valhalla — V05
+# Supercomputadora Valhalla — V05 y V06
+
+**Entrega actual V06:** [Quinn, correcciones de escaleras y límites, instrucciones y reproducción](README_V06.md). Pendiente de aprobación personal; PR #79 en Draft. Los apartados V05 siguientes documentan la entrega histórica conservada.
 
 Código permanente para UE 5.8.2. El proyecto local entregado con sus recursos está en `PROYECTO VALHALLA/Salas construidas/Sala computadora Enterprise Valhalla/UE5_Supercomputadora_V05/`. Esta plantilla versionada contiene código y configuración; los recursos privados se restauran desde la entrega local y no se publican en Git.
 

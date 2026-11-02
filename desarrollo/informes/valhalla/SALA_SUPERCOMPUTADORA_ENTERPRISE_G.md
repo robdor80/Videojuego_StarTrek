@@ -1,6 +1,6 @@
 # Sala de la supercomputadora — Enterprise-G, clase Valhalla
 
-Actualizado el **2 de noviembre de 2026**. **V04E: integración geométrica validada en el alcance aprobado. V05: puerta exterior D01 funcional en UE 5.8.2, con dos hojas y pruebas de colisión en mundo de juego. V06: pendiente de prueba personal con Quinn.** La sala todavía no se declara terminada. V04B, las fuentes y los prototipos anteriores permanecen intactos. La continuación V04E/V05 al final de este informe es el estado vigente; los apartados anteriores conservan su carácter histórico.
+Actualizado el **2 de noviembre de 2026**. **V04E: integración geométrica validada en el alcance aprobado. V05: puerta exterior D01 funcional en UE 5.8.2. V06: Quinn incorporada, 43/43 pruebas jugables aprobadas y entrega independiente comprobada; pendiente de aprobación personal. PR #79 en Draft y sin fusionar.** La sala todavía no se declara terminada. V04B, las fuentes y los prototipos anteriores permanecen intactos. La continuación V06 al final de este informe es el estado vigente; los apartados anteriores conservan su carácter histórico.
 
 ## Resumen ejecutivo
 
@@ -918,3 +918,95 @@ El proyecto contiene sus propios `Content`, código, configuración, plugin y bi
 Las unidades temporales son autocontenidas y se pueden retirar completas sin afectar al modelo V04E, al proyecto local V05 ni al código permanente. **No se ha autorizado ni efectuado su borrado.** Las trazas nativas de caché de UnrealBuildTool pueden conservarse en el perfil del usuario; no son una entrega ni una dependencia del juego y no se limpian retrospectivamente.
 
 **Pendiente V06:** incorporar Quinn, comprobar su cápsula real, movimiento, suelo, cámara, animaciones y pasos mediante prueba personal. La cápsula provisional de 70 × 180 cm no acredita automáticamente a Quinn. El proyecto permite una primera prueba con personaje provisional WASD/ratón y deja un PlayerStart junto a D01; las instrucciones permanentes explican cómo asignar un GameMode con Quinn. Siguen pendientes el acabado PBR, iluminación artística, revisión de rendimiento, navegación y la validación personal de la sala completa. No se declara terminada la sala ni se amplía la aprobación de los contactos heredados a una certificación estructural.
+
+## Continuación V06 — Quinn y entrega independiente (2 de noviembre de 2026)
+
+**Estado vigente: V06 disponible para prueba personal, con 43/43 casos automáticos aprobados. Proyecto independiente comprobado. PR #79 en Draft, sin fusionar.** Esta fase incorpora Quinn y verifica su movimiento real; no sustituye la aprobación personal ni declara terminada la sala. Las conclusiones V04E/V05 anteriores conservan su alcance histórico. Los 76 contactos banco/arquitectura y las 656 relaciones heredadas de tapas siguen condicionados; no se convierten en una certificación estructural.
+
+### Personaje y alcance de los cambios
+
+Se utiliza el personaje oficial de la plantilla Third Person de UE **5.8.2**, con `SKM_Quinn_Simple`, `ABP_Unarmed` y Enhanced Input. Su cápsula real mantiene **35 cm de radio y 90 cm de semialtura**, escala 1, movimiento de 600 cm/s, escalón máximo de 45 cm y ángulo transitable de 44,765°. El GameMode propio posee a Quinn al iniciar Play. No se añaden armas, ataques ni un sistema de combate. El brazo de cámara conserva longitud de 400 cm, sonda de 12 cm y prueba de colisión.
+
+La fase corrige problemas observados al recorrer y renderizar la sala, mediante copias privadas y sin sobrescribir V04E, V05 ni las fuentes:
+
+- **Materiales:** los 101 materiales guardan el indicador requerido por ISM. Sus firmas de nodos permanecen iguales; conservan colores, transparencias, imágenes, UV, asignaciones y representación de una cara. La reapertura comprueba recursos RHI válidos, sin sustitución por el material predeterminado ni trabajos de shader pendientes.
+- **Orientación importada:** se adapta el orden triangular a la convención verificada contra `Cube` del propio motor en 284 recursos afectados. La operación conserva posiciones, normales explícitas, UV y ranuras. Se documenta como corrección de la importación V05; aquella comprobación de atributos por sí sola no acreditaba la orientación visible del rasterizado.
+- **Suelo principal:** una corrección posterior y separada crea 77 mallas privadas y orienta hacia arriba normal y cara visible de **2.803 triángulos** invertidos. Mantiene posiciones, UV y materiales, sin añadir superficies transitables ni prolongar suelos hacia destinos inexistentes.
+- **Escaleras:** dos variantes de malla reciben diez convexos por recurso, siguiendo los peldaños existentes y reutilizados en seis tramos. Las firmas de la malla visible permanecen iguales; no se reduce la cápsula de Quinn. Las dos figuras Nancy, formadas por ocho colocaciones, se conservan ocultas y sin colisión durante el juego para que no bloqueen los desembarcos.
+- **Límites:** siete paneles azules visibles y siete remates claros protegen cuatro salidas sin continuidad y tres bocas de escalera hacia cubiertas sin construir. Los ocho módulos acristalados #206 continúan estáticos. D01 sigue siendo la puerta funcional; su profundidad de aproximación se fija en 240 cm para el recorrido con Quinn.
+- **Luz de prueba:** 36 luces puntuales sin sombras, relleno direccional y exposición fija; se desactivan las sombras direccionales de ensayo y el desenfoque de movimiento. Los actores son identificables por `V06_PROVISIONAL_LIGHT` y `V06_VISIBLE_BOUNDARY`. Es iluminación técnica sustituible, con zonas sobreexpuestas visibles en las capturas; no es aprobación artística ni PBR.
+
+Se conservan **16.302 colocaciones estáticas**. No se elimina estructura para mejorar los FPS. El contenido oficial necesario se obtiene de la instalación legítima mediante una lista de recursos: la entrega conserva 56 paquetes oficiales y puede ejecutarse sin la carpeta de plantillas; la reconstrucción sí necesita esas fuentes instaladas.
+
+### Validación jugable y revisión visual
+
+La sonda `AVH06Probe` solo se activa con los argumentos explícitos de plan e informe. Posee al Quinn del GameMode y lo mueve mediante Enhanced Input y CharacterMovement, con gravedad y colisión. Teletransporta únicamente al inicio de cada caso. Las pruebas WASD y ratón inyectan los eventos de entrada; no sustituyen el movimiento por cambios de posición. La autoría y el registro están separados del juego normal.
+
+Resultado desde la entrega local: **43/43 casos aprobados**, con suelo estable y tolerancia horizontal de llegada de 20 cm:
+
+| Grupo | Casos | Comprobación |
+| --- | ---: | --- |
+| Rutas principales | 12 | Pasos radiales de ambos recintos, vestíbulos, bloque central y corredor exterior |
+| Escaleras | 3 | Ida y vuelta por los recorridos sur, norte e inferior, incluidos sus tramos existentes |
+| D01 | 7 | Entrada, salida, ocupación con bloqueo, cierre parcial y reapertura, seguridad y emergencia hacia destino construido o inexistente |
+| Límites visibles | 11 | Siete cierres físicos y cuatro intentos con salto contra los límites exteriores |
+| Entrada | 5 | W, A, S, D y movimiento de ratón mediante Enhanced Input |
+| Bancos | 2 | Bloqueo físico ante un banco de cada recinto |
+| Corredores curvos | 2 | Recorridos norte y sur de ida y vuelta |
+| Extremo histórico | 1 | X=5.550 cm protegido por B03; la ruta transitable termina en X=5.500 cm |
+
+El plan versionado coincide exactamente con el de esta ejecución. Se registran **1.039 muestras** de recorrido, sin solape bloqueante de cámara en las consultas muestreadas. Se observa cambio de pose durante el desplazamiento. Estos registros no acreditan ausencia de defectos entre muestras ni calidad artística de las animaciones. Se revisan seis capturas de la entrega: entrada, ambos recintos, cierre exterior, escalera sur y cruce de D01 con Quinn en movimiento.
+
+**Límite de cámara pendiente de valoración personal:** la colisión reduce el brazo hasta aproximadamente **34,55 cm** en el recorrido; en las vistas de escaleras Quinn ocupa gran parte de la pantalla. Se conserva el comportamiento oficial de la cámara y se señala expresamente esta posible incomodidad. No se presenta la ausencia de solape físico como una aprobación de encuadre o comodidad.
+
+### Rendimiento medido de la entrega
+
+Equipo: **Intel Core i9-14900HX, NVIDIA GeForce RTX 4070 Laptop GPU**, Windows 11. Proyecto Development con D3D12 real, renderizado fuera de pantalla a **1920×1080**, porcentaje de resolución 100, VSync desactivado y sin límite de FPS. Cada vista espera seis segundos y registra ocho. Se miden 8.446 fotogramas en total; los FPS son el inverso del intervalo medio, no una media de inversos.
+
+| Vista | Fotogramas | Intervalo medio | P95 del intervalo | FPS medios | GPU media | Draw calls medios |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: |
+| Entrada | 1.477 | 5,419 ms | 6,140 ms | 184,5 | 5,211 ms | 732 |
+| Recinto 01 | 1.222 | 6,551 ms | 9,092 ms | 152,6 | 6,306 ms | 709 |
+| Recinto 02 | 1.281 | 6,248 ms | 7,015 ms | 160,0 | 6,022 ms | 719 |
+| Pasillo exterior | 1.613 | 4,961 ms | 5,505 ms | 201,6 | 4,787 ms | 148 |
+| Escalera sur | 1.431 | 5,592 ms | 6,586 ms | 178,8 | 5,412 ms | 387 |
+| Escalera inferior | 1.422 | 5,628 ms | 6,361 ms | 177,7 | 5,439 ms | 241 |
+
+Memoria local de GPU registrada por RHI: máximo aproximado **929,8 MiB**, con presupuesto de unos 7.180 MiB. Los tiempos medios del hilo de juego están entre 1,21 y 1,58 ms. Son mediciones puntuales de seis vistas con iluminación técnica sin sombras, no una garantía de FPS mínimos, de rendimiento en otros equipos ni del futuro acabado artístico. No se ejecuta ni se acredita aquí una distribución empaquetada. NullRHI solo se utiliza en los recorridos físicos y no sustenta estas medidas.
+
+### Independencia, conservación y reproducción
+
+Proyecto local que debe abrirse con UE 5.8.2:
+
+`PROYECTO VALHALLA/Salas construidas/Sala computadora Enterprise Valhalla/UE5_Supercomputadora_V06/ValhallaComputer.uproject`
+
+Mapa inicial: **`L_Supercomputadora_V06_Quinn`**. Pulsar Play, moverse con WASD, orientar con ratón y saltar con Espacio. D01 funciona por aproximación. Las [instrucciones permanentes](../../integration/valhalla_supercomputadora/unreal/README_V06.md) explican la reconstrucción en una copia nueva y la repetición de las verificaciones. Los modelos, paquetes oficiales, recursos UE, imágenes y binarios permanecen locales y excluidos de Git; se publica únicamente código, planes, instrucciones e informe.
+
+La compilación completa de la copia de reproducción registra `Result: Succeeded`. Los archivos de código y planes publicados coinciden con los incluidos en la entrega. La comprobación final confirma:
+
+- **573/573 archivos entregados** coincidentes en tamaño y SHA-256 con el manifiesto anterior a la prueba; la entrega no se modifica durante este cierre.
+- **999/999 archivos protegidos** de fuentes, versiones anteriores y evidencia previa intactos en tamaño y SHA-256.
+- Sin enlaces de sistema de archivos en la entrega ni referencias de ejecución a directorios temporales en código y configuración permanente.
+- Reapertura adicional de una copia nueva de los archivos entregados, **sin copiar Saved, Intermediate ni cachés**, con caché nueva y RHI real. El informe `audit_v06.json` declara `ok: true`; la última ejecución finaliza con código **0**. Conserva 16.302 instancias y catorce elementos de cierre visibles; Map Check tiene **cero errores y cero advertencias**, y los 101 materiales son válidos para renderizar.
+- **534 paquetes `/Game/`** en el cierre de dependencias examinadas, ninguno ausente. UE y sus recursos `/Engine/` siguen siendo requisitos normales del proyecto; no se presenta como un ejecutable autónomo del motor.
+
+En la copia limpia, el motor añade su sección predeterminada de Android File Server a `DefaultEngine.ini`: el contenido original queda como prefijo exacto, y los otros 572 archivos del manifiesto permanecen idénticos. Ese cambio generado se registra exclusivamente en la copia de comprobación. No se publica su token ni se copia a la entrega.
+
+Se conservan los intentos de diagnóstico: uno se detuvo antes de Python por superar el límite de **119 caracteres** de la ruta de caché; otro no encontró el script de auditoría, que no pertenece al manifiesto de archivos de ejecución. Una auditoría posterior produjo resultado válido pero devolvió `0xC0000005` al finalizar; la repetición con los mismos recursos y el script permanente volvió a aprobar y terminó con código 0. La causa del cierre anómalo aislado no queda determinada y no se oculta tras el resultado JSON. Los registros completos permanecen locales.
+
+Las cachés y salidas de comprobación son prescindibles; el juego y el código permanente no dependen de ellas. No se borra ni se traslada material anterior. Algunas trazas nativas de UnrealBuildTool y la instalación compartida de Zen permanecen en el perfil del usuario por comportamiento del motor; no contienen la entrega ni son ubicaciones de desarrollo o dependencias del juego. No se realiza limpieza retrospectiva.
+
+### Evidencia V06 identificada
+
+Los siguientes nombres y firmas identifican evidencia local; no son rutas requeridas por el juego ni archivos publicados:
+
+| Evidencia | SHA-256 |
+| --- | --- |
+| `author_v06.json` de la reproducción | `8b10649489cb4fa7be913ebb8b0a3d327ef86a99ab226e7435244ad3c72c00bb` |
+| `validacion_entrega_v06.json` | `415d82a790e8147b464e853a8dfd0cbe2f9d48272f2418581b2b06763f165b81` |
+| `rendimiento_entrega_v06.json` | `a7323f7dda1638dc24298ad3b959248fb2546ac694b40a9e363f105d41c2a0ad` |
+| `manifest_entrega_inicial.json` | `f24abfd64d6ece6ec22fa9b0fdec4b6b868704bbf4007f8ea8d9573075b6b226` |
+| `audit_v06.json` de la última reapertura | `d3e59f4a0b9709f70f278ba1f6fc2e0f47765ba2aff03458fa2ca62ad06bbf0c` |
+| `integridad_final.json` | `82054a628fbe9608136aa813f033512e06825784f16839531517019450f92309` |
+
+**Pendiente del usuario:** prueba personal y aprobación de recorridos, cámara y animaciones, especialmente en escaleras, y claridad de los cierres. Siguen pendientes PBR, iluminación artística, navegación y rendimiento con el acabado final. La incorporación y comprobación automática de Quinn están realizadas; la aceptación personal de V06 y la terminación de la sala siguen abiertas. **PR #79 permanece en Draft y no se fusiona.**
