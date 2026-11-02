@@ -1,0 +1,134 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-02",
+  "scope": "F05-P01 only; Draft audit; no merges",
+  "pull_request": "https://github.com/robdor80/Videojuego_StarTrek/pull/81",
+  "code_commit": "855bb6e1eb3a5e225f2279b7bef5bc85c2901dbf",
+  "branch": "codex/f05-p01-orders",
+  "base_main": "142f852e5a1abfa373413002be928fd4f437b3bc",
+  "core_p01_main": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "core_modified": false,
+  "pr78_merged": false,
+  "platform": {
+    "os": "Linux x86_64",
+    "compiler": "GCC 14.2.0",
+    "cmake": "4.4.4",
+    "python": "3.12.14"
+  },
+  "source_sha256": {
+    "desarrollo/integration/f04/CMakeLists.txt": "8215e9bdb7e5ade15ed95eb6c0c3c6bac2e3bb3430d8b5c186fa0d03969b1a79",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "b478b6ce64b897b161651809a1946e8c02216aaa4b9aba6da7b88a37aff68b59",
+    "desarrollo/integration/f05/CMakeLists.txt": "58cf4683fe27d50e1cd4471f226e6e986c81b26907a2f902c6672dbfe1fb35a8",
+    "desarrollo/integration/f05/README.md": "a0fef80edb913145dfe061a3ca2bc4aa45fa657a927e7aeb01ab4caee05a5bd8",
+    "desarrollo/integration/f05/core-revision.txt": "985ea54f4abc04546edfbef0404cb70d4b653e0f59b3c1bbb5edb430a60a9fde",
+    "desarrollo/integration/f05/include/f05_orders.h": "a5adf6ec78a80e3d2b1ddfb7b3bd8d1d3ab6687a4376335fcdc0ff09812f92bb",
+    "desarrollo/integration/f05/run_f05.ps1": "36c103744e8f17e8a90e0f474756fa5b60ec8340e5f8f03050f954ddd37d5a50",
+    "desarrollo/integration/f05/src/f05_orders.inc": "e8a986112450c13a1d7c5debd165e19f7595746afab65eabc02ec6e1433f824a",
+    "desarrollo/integration/f05/src/f05_schema.inc": "a7f3532381ce02477457892efe58cb9f62f97c8da96ca05c8eba28487237ddbe",
+    "desarrollo/integration/f05/tests/f05_tests.cpp": "42d99ada6bc754a25c136df4877c341ff5f550640b71a88e090c0e7b2cfd2e50",
+    "desarrollo/integration/f05/unreal/F05OrdersLab.uproject": "cb7878aaa038a28c3df3f1b46b4099fc154b96ac51a545685b843966cf02b170",
+    "desarrollo/integration/f05/unreal/Source/F05OrdersLab/F05OrdersLab.Build.cs": "887b2349a3f4bc4d5373e2db380aa0777876a0d32f45eb48c60a0ce39710e00a",
+    "desarrollo/integration/f05/unreal/Source/F05OrdersLab/Private/F05Automation.cpp": "d0e7f2c592ef95c63f7394eec07da70b9c0f1e1035c7edba48ae19a53ea51393",
+    "desarrollo/integration/f05/unreal/Source/F05OrdersLab/Private/F05OrdersLab.cpp": "e96c3a072182324277e983392d57923ac5415e0f3700e024ec66ff663bece5d3",
+    "desarrollo/integration/f05/unreal/Source/F05OrdersLab.Target.cs": "e2ae0b5a00ee5ca67e8ec1a419b8e5cb0c32aee74651a3d29d37e4c925045df2",
+    "desarrollo/integration/f05/unreal/Source/F05OrdersLabEditor.Target.cs": "2e5400f0d59e33577c8c841b0595eaa7c58936daaed39ac8532967cc772a647f"
+  },
+  "native_cloud": {
+    "core-linux.xml": {
+      "tests": 483,
+      "failures": 0,
+      "skipped": 0
+    },
+    "f02-linux.xml": {
+      "tests": 15,
+      "failures": 0,
+      "skipped": 0
+    },
+    "f03-linux.xml": {
+      "tests": 25,
+      "failures": 0,
+      "skipped": 0
+    },
+    "f04-original-linux.xml": {
+      "tests": 270,
+      "failures": 0,
+      "skipped": 0
+    },
+    "f04-f05-linux.xml": {
+      "tests": 280,
+      "failures": 0,
+      "skipped": 0
+    },
+    "f05-final-linux.xml": {
+      "tests": 20,
+      "failures": 0,
+      "skipped": 0
+    },
+    "notes": [
+      "F04 original uses c147d81ed069da2e09149613ab02cbc3ebe95a4a; its baseline campaign cases are diagnostics, not real-watch historical acceptance.",
+      "Combined XML has 261 F04 regressions and 19 P01 cases before the additional publication-fault case. Final P01 XML has 20 cases, including cross-process history and publication fault; do not add overlapping totals.",
+      "F02 Core pin 4f282863737bcd8f5add401202a9e1064c133672; F03 Core pin 9c53a33787de13d91eb2abe4da07033ee0fa1dc1."
+    ]
+  },
+  "documentary_cloud": {
+    "f05_unit": 22,
+    "f05_fixture": 48,
+    "cross_phase_unit": 3,
+    "f04_unit": 22,
+    "f04_fixture": 39,
+    "f04_miranda_unit": 4,
+    "f03_unit": 26,
+    "f02_contract_unit": 9,
+    "roadmap_governance": "PASS",
+    "python_compile": "PASS"
+  },
+  "actions_at_evidence_publication": {
+    "status": "See live PR checks and final PR description for final HEAD conclusions; this file does not claim unfinished jobs passed",
+    "f05_62f0c7b": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41451295860",
+    "f04_native_62f0c7b": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41451295978",
+    "f04_history_62f0c7b": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41451295851",
+    "f05_reference_62f0c7b": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41451295802",
+    "governance_62f0c7b": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41451295875"
+  },
+  "true_core_scenario": {
+    "issuer": 3,
+    "recipient": 5,
+    "request": 25,
+    "order": 26,
+    "task": 28,
+    "attempt": 30,
+    "result": 32,
+    "event": 33,
+    "operation": "F04_SCAN",
+    "stream": 984065,
+    "value": 99,
+    "verified_against": [
+      "existing f04_execute(F04_SCAN)",
+      "independent Core ActionEngine::process after CampaignPersistence restore"
+    ],
+    "sensor_contacts_produced": false
+  },
+  "not_executed": [
+    "UE 5.8.2 on MSI",
+    "UBT/UHT/editor harness",
+    "real RHI gameplay/UI"
+  ],
+  "limitations": [
+    "512 orders/campaign; resident idempotency tombstones",
+    "one synchronous attempt; F04_SCAN only",
+    "trusted Host authenticates logical refs",
+    "no F05 scheduler, delegation, NPC initiative or AI",
+    "explicit Host save/publish required"
+  ],
+  "evidence_sha256": {
+    "VALIDACION_CLOUD.md": "6e70a43e45e61f867e28395007945d80d3a539ee28ca4526b4a6f05d615cb7b1",
+    "core-linux.xml": "6294029118707cf038d02a7eb26b650de11ad158300f6d6e248f9d79b4df46df",
+    "documentales-linux.txt": "6f64f2681e8153bd471d4361b5adead1416e52e7049414f58fb4c631aaeb7aa7",
+    "escenario-linux.txt": "a1590670021debf93b2568e9392281acc563649e90e546ececa2fe36d83436c0",
+    "f02-linux.xml": "5b9f22cb81c35d6f577d6f7de881de534ca3f53fa4592ce6499b54fae9f7ed9e",
+    "f03-linux.xml": "ecf222ccc5552986ace0042310406cb42801dc3215c665e6df3c65a11f89a94d",
+    "f04-f05-linux.xml": "43a306a4561c858bb3a4fe19e3e56e04cce2964cd147baa042dff54d1d5a4fd5",
+    "f04-original-linux.xml": "9b96bd691bb0f2e4b0cd1dcff78d3a77fc5b32f855ff3d4933eeee397601bd98",
+    "f05-final-linux.xml": "b2782db6e8baeb04b8e1e586b63426afdf0f1acfe506a9432747a78ade4b6ad7"
+  }
+}

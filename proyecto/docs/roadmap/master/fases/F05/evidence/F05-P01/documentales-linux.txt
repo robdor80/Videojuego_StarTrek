@@ -1,0 +1,118 @@
+test_ai_is_only_proposal (test_f05_reference.TestF05Reference.test_ai_is_only_proposal) ... ok
+test_binding_actor_station_revision_and_expiry (test_f05_reference.TestF05Reference.test_binding_actor_station_revision_and_expiry) ... ok
+test_captain_can_decide_lawful_policy (test_f05_reference.TestF05Reference.test_captain_can_decide_lawful_policy) ... ok
+test_contract_reference_exists_and_is_proposed (test_f05_reference.TestF05Reference.test_contract_reference_exists_and_is_proposed) ... ok
+test_coverage_routes (test_f05_reference.TestF05Reference.test_coverage_routes) ... ok
+test_explicit_execution_evidence_required (test_f05_reference.TestF05Reference.test_explicit_execution_evidence_required) ... ok
+test_first_directive_not_universal_hard_block (test_f05_reference.TestF05Reference.test_first_directive_not_universal_hard_block) ... ok
+test_fixture (test_f05_reference.TestF05Reference.test_fixture) ... ok
+test_idempotent_replay (test_f05_reference.TestF05Reference.test_idempotent_replay) ... ok
+test_invalid_enums_and_unknown_phase (test_f05_reference.TestF05Reference.test_invalid_enums_and_unknown_phase) ... ok
+test_legacy_canonical_sources_unmodified (test_f05_reference.TestF05Reference.test_legacy_canonical_sources_unmodified) ... ok
+test_missing_authority_is_never_allowed (test_f05_reference.TestF05Reference.test_missing_authority_is_never_allowed) ... ok
+test_no_captain_autoapproval (test_f05_reference.TestF05Reference.test_no_captain_autoapproval) ... ok
+test_no_ranking_grants_command (test_f05_reference.TestF05Reference.test_no_ranking_grants_command) ... ok
+test_no_world_mutation_ever (test_f05_reference.TestF05Reference.test_no_world_mutation_ever) ... ok
+test_offscreen_does_not_disable_logic (test_f05_reference.TestF05Reference.test_offscreen_does_not_disable_logic) ... ok
+test_provider_timeout_has_safe_outcome (test_f05_reference.TestF05Reference.test_provider_timeout_has_safe_outcome) ... ok
+test_reference_binding_rejects_boolean_revision_as_one (test_f05_reference.TestF05Reference.test_reference_binding_rejects_boolean_revision_as_one) ... ok
+test_revalidation_blocks_late_proposal (test_f05_reference.TestF05Reference.test_revalidation_blocks_late_proposal) ... ok
+test_revoke_blocks_reexecution (test_f05_reference.TestF05Reference.test_revoke_blocks_reexecution) ... ok
+test_textual_approval_does_not_override_captain (test_f05_reference.TestF05Reference.test_textual_approval_does_not_override_captain) ... ok
+test_textual_delegation_scope_does_not_grant_authority (test_f05_reference.TestF05Reference.test_textual_delegation_scope_does_not_grant_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.006s
+
+OK
+F05 reference: 48 cases; 0 failures; Core and UE5 NOT tested
+test_denied_watch_cannot_become_sensor_permission (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_denied_watch_cannot_become_sensor_permission) ... ok
+test_positive_reference_only (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_positive_reference_only) ... ok
+test_stale_grant_cannot_run_scan (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_stale_grant_cannot_run_scan) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.009s
+
+OK
+test_all_39_fixture_cases (test_f04_reference.F04ReferenceTests.test_all_39_fixture_cases) ... ok
+test_bound_f04_evidence_requires_actual_allow (test_f04_reference.F04ReferenceTests.test_bound_f04_evidence_requires_actual_allow) ... ok
+test_captain_can_reject_engine_preference (test_f04_reference.F04ReferenceTests.test_captain_can_reject_engine_preference) ... ok
+test_captain_must_have_appointment (test_f04_reference.F04ReferenceTests.test_captain_must_have_appointment) ... ok
+test_command_requires_literal_boolean_evidence (test_f04_reference.F04ReferenceTests.test_command_requires_literal_boolean_evidence) ... ok
+test_contiguous_half_open_windows (test_f04_reference.F04ReferenceTests.test_contiguous_half_open_windows) ... ok
+test_delegate_cannot_extend_origin_permission (test_f04_reference.F04ReferenceTests.test_delegate_cannot_extend_origin_permission) ... ok
+test_delegate_domain_confined (test_f04_reference.F04ReferenceTests.test_delegate_domain_confined) ... ok
+test_delegation_rejects_boolean_tick_as_integer (test_f04_reference.F04ReferenceTests.test_delegation_rejects_boolean_tick_as_integer) ... ok
+test_invalid_boolean_window_is_error_not_valid_time (test_f04_reference.F04ReferenceTests.test_invalid_boolean_window_is_error_not_valid_time) ... ok
+test_medical_removal_does_not_grant_command (test_f04_reference.F04ReferenceTests.test_medical_removal_does_not_grant_command) ... ok
+test_no_unqualified_fallback_spawn (test_f04_reference.F04ReferenceTests.test_no_unqualified_fallback_spawn) ... ok
+test_preemption_requires_finite_numeric_fatigue_not_boolean (test_f04_reference.F04ReferenceTests.test_preemption_requires_finite_numeric_fatigue_not_boolean) ... ok
+test_prime_directive_review_not_automatic_hard_block (test_f04_reference.F04ReferenceTests.test_prime_directive_review_not_automatic_hard_block) ... ok
+test_rank_cannot_confer_command (test_f04_reference.F04ReferenceTests.test_rank_cannot_confer_command) ... ok
+test_reference_binding_rejects_boolean_world_revision (test_f04_reference.F04ReferenceTests.test_reference_binding_rejects_boolean_world_revision) ... ok
+test_repository_inputs_match_canonical_semantics (test_f04_reference.F04ReferenceTests.test_repository_inputs_match_canonical_semantics) ... ok
+test_technical_capability_required_for_sensor (test_f04_reference.F04ReferenceTests.test_technical_capability_required_for_sensor) ... ok
+test_two_characters_can_cover_two_slots (test_f04_reference.F04ReferenceTests.test_two_characters_can_cover_two_slots) ... ok
+test_unknown_action_fails_closed (test_f04_reference.F04ReferenceTests.test_unknown_action_fails_closed) ... ok
+test_untraced_override_rejected (test_f04_reference.F04ReferenceTests.test_untraced_override_rejected) ... ok
+test_worse_choice_cannot_break_hard_safety (test_f04_reference.F04ReferenceTests.test_worse_choice_cannot_break_hard_safety) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.002s
+
+OK
+test_extended_absence_not_magically_covered (test_f04_miranda_example.MirandaExampleTests.test_extended_absence_not_magically_covered) ... ok
+test_nonoperational_boundaries (test_f04_miranda_example.MirandaExampleTests.test_nonoperational_boundaries) ... ok
+test_population_and_crew_breakdown (test_f04_miranda_example.MirandaExampleTests.test_population_and_crew_breakdown) ... ok
+test_seven_day_coverage_and_5_plus_2 (test_f04_miranda_example.MirandaExampleTests.test_seven_day_coverage_and_5_plus_2) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.005s
+
+OK
+test_01_valid_reference (test_f03_reference.F03ReferenceTests.test_01_valid_reference) ... ok
+test_02_canonical_json_roundtrip_only (test_f03_reference.F03ReferenceTests.test_02_canonical_json_roundtrip_only) ... ok
+test_03_duplicate_entity_blocked (test_f03_reference.F03ReferenceTests.test_03_duplicate_entity_blocked) ... ok
+test_04_new_entity_after_observation_blocked (test_f03_reference.F03ReferenceTests.test_04_new_entity_after_observation_blocked) ... ok
+test_05_duplicate_slot_blocked (test_f03_reference.F03ReferenceTests.test_05_duplicate_slot_blocked) ... ok
+test_06_population_inflation_blocked (test_f03_reference.F03ReferenceTests.test_06_population_inflation_blocked) ... ok
+test_07_promotion_without_slot_identity_blocked (test_f03_reference.F03ReferenceTests.test_07_promotion_without_slot_identity_blocked) ... ok
+test_08_player_truth_leak_blocked (test_f03_reference.F03ReferenceTests.test_08_player_truth_leak_blocked) ... ok
+test_09_player_entity_id_leak_nested_blocked (test_f03_reference.F03ReferenceTests.test_09_player_entity_id_leak_nested_blocked) ... ok
+test_10_premature_classification_blocked (test_f03_reference.F03ReferenceTests.test_10_premature_classification_blocked) ... ok
+test_11_premature_properties_blocked (test_f03_reference.F03ReferenceTests.test_11_premature_properties_blocked) ... ok
+test_12_hidden_property_without_evidence_blocked (test_f03_reference.F03ReferenceTests.test_12_hidden_property_without_evidence_blocked) ... ok
+test_13_unknown_truth_entity_blocked (test_f03_reference.F03ReferenceTests.test_13_unknown_truth_entity_blocked) ... ok
+test_14_missing_observer_mapping_blocked (test_f03_reference.F03ReferenceTests.test_14_missing_observer_mapping_blocked) ... ok
+test_15_duplicate_contact_per_observer_blocked (test_f03_reference.F03ReferenceTests.test_15_duplicate_contact_per_observer_blocked) ... ok
+test_16_invalid_confidence_blocked (test_f03_reference.F03ReferenceTests.test_16_invalid_confidence_blocked) ... ok
+test_17_future_observation_blocked (test_f03_reference.F03ReferenceTests.test_17_future_observation_blocked) ... ok
+test_18_wrong_causal_parent_blocked (test_f03_reference.F03ReferenceTests.test_18_wrong_causal_parent_blocked) ... ok
+test_19_event_order_regression_blocked (test_f03_reference.F03ReferenceTests.test_19_event_order_regression_blocked) ... ok
+test_20_duplicate_idempotency_key_blocked (test_f03_reference.F03ReferenceTests.test_20_duplicate_idempotency_key_blocked) ... ok
+test_21_completed_order_without_result_blocked (test_f03_reference.F03ReferenceTests.test_21_completed_order_without_result_blocked) ... ok
+test_22_overlapping_exclusive_shifts_blocked (test_f03_reference.F03ReferenceTests.test_22_overlapping_exclusive_shifts_blocked) ... ok
+test_23_foreign_contact_in_knowledge_blocked (test_f03_reference.F03ReferenceTests.test_23_foreign_contact_in_knowledge_blocked) ... ok
+test_24_future_schema_is_rejected_without_mutating_original (test_f03_reference.F03ReferenceTests.test_24_future_schema_is_rejected_without_mutating_original) ... ok
+test_25_clock_cannot_reverse (test_f03_reference.F03ReferenceTests.test_25_clock_cannot_reverse) ... ok
+test_26_13_original_invariants_and_source_contracts (test_f03_reference.F03ReferenceTests.test_26_13_original_invariants_and_source_contracts) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.052s
+
+OK
+test_blob_sha_drift (test_validate_f02_contracts.ValidatorTests.test_blob_sha_drift) ... ok
+test_broken_test_ref (test_validate_f02_contracts.ValidatorTests.test_broken_test_ref) ... ok
+test_duplicate_adapter (test_validate_f02_contracts.ValidatorTests.test_duplicate_adapter) ... ok
+test_leaked_sensor_field_requirement (test_validate_f02_contracts.ValidatorTests.test_leaked_sensor_field_requirement) ... ok
+test_missing_gap (test_validate_f02_contracts.ValidatorTests.test_missing_gap) ... ok
+test_missing_p02_selector (test_validate_f02_contracts.ValidatorTests.test_missing_p02_selector) ... ok
+test_missing_source (test_validate_f02_contracts.ValidatorTests.test_missing_source) ... ok
+test_valid_fixture (test_validate_f02_contracts.ValidatorTests.test_valid_fixture) ... ok
+test_windows_crlf_checkout (test_validate_f02_contracts.ValidatorTests.test_windows_crlf_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.232s
+
+OK
+PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de diseño, F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO y F04 principal; plan sincronizado. Esto NO valida Core RPG ni UE5.
