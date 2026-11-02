@@ -48,6 +48,7 @@ jobs:
       - name: Build single F04 session with P01 enabled
         shell: pwsh
         run: |
+          $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/build/f05-reference-temp"
           cmake -S desarrollo/integration/f05 -B build/f05 -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/external/CoreRPG"
           if($LASTEXITCODE){exit $LASTEXITCODE}
           cmake --build build/f05 --config Release --parallel 4

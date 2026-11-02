@@ -16,6 +16,8 @@ if(Test-Path $BuildRoot){if(!(Test-Path (Join-Path $BuildRoot '.f05-p01-generate
 New-Item -ItemType Directory -Force $BuildRoot,(Join-Path $BuildRoot 'logs'),(Join-Path $BuildRoot 'system-temp') | Out-Null
 Set-Content (Join-Path $BuildRoot '.f05-p01-generated') 'F05-P01 disposable generated files only'
 $PreviousTemp=$env:TEMP;$PreviousTmp=$env:TMP
+$PreviousReferenceTemp=$env:F04_TEST_TEMP_ROOT
+$env:F04_TEST_TEMP_ROOT=Join-Path $BuildRoot 'reference-tests'
 $env:TEMP=Join-Path $BuildRoot 'system-temp';$env:TMP=$env:TEMP
 $Run=Get-Date -Format 'yyyyMMdd-HHmmss-fff'
 function Logged([string]$Name,[string]$Exe,[string[]]$Arguments){
@@ -56,4 +58,4 @@ try {
   $Result=Get-Content (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
   if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne 3){throw 'Expected exactly three passing F05.P01 Unreal tests'}
  }
-} finally {$env:TEMP=$PreviousTemp;$env:TMP=$PreviousTmp}
+} finally {$env:TEMP=$PreviousTemp;$env:TMP=$PreviousTmp;$env:F04_TEST_TEMP_ROOT=$PreviousReferenceTemp}

@@ -145,7 +145,8 @@ class ReferenceTests(unittest.TestCase):
         fields[2] = '0' * 64
         rows[0] = ' '.join(fields)
         Path(str(save) + '.oracle').write_text('\n'.join(rows) + '\n')
-        result = subprocess.run([str(BIN / 'f04_history_campaign.exe'), 'run', '5', '7', str(save)],
+        executable = 'f04_history_campaign' + ('.exe' if os.name == 'nt' else '')
+        result = subprocess.run([str(BIN / executable), 'run', '5', '7', str(save)],
                                 capture_output=True, text=True, timeout=120)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn('future assignments, events, original facts, RNG and time equal complete-history oracle',

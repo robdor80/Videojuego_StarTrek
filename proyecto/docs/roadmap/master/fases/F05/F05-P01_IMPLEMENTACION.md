@@ -72,6 +72,15 @@ esta entrega las antiguas 48 propuestas de referencia como acciones reales.
 El workflow nuevo prueba Linux y Windows nativos; los workflows F04 existentes
 mantienen sus campañas de 365/730 días y pins anteriores.
 
+La ampliación de `f04_bridge.cpp` y su CMake exige actualizar sus dos huellas
+en el manifiesto de compatibilidad de las referencias F04. Se conservan allí
+las huellas anteriores y el commit del cambio. **No se cambian los seis
+oráculos, sus acceptance.json ni sus archivos de procedencia históricos.**
+Su reutilización queda condicionada a que las seis campañas reales actuales
+coincidan de nuevo con todos sus bloques y futuro final. Se corrige además la
+selección de extensión `.exe` en dos drivers de pruebas para Linux y se declara
+el directorio temporal requerido por la suite de referencias históricas.
+
 ## Deuda y continuación
 
 El contrato nativo es para un Host autenticado y un único hilo. No hay UI
