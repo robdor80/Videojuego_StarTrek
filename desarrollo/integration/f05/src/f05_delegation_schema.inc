@@ -8,7 +8,10 @@ bool f05_delegations_schema(const Campaign& c) {
    !type(w,holder,"appointment") || ref(w,holder,PERSON)!=person || !type(w,executor,"person") ||
    !type(w,ref(w,d,SLOT),"slot") || val(w,ref(w,d,SLOT),DEPT)!=F04_SENSORS ||
    val(w,d,D_DOMAIN)!=F04_SENSORS || val(w,d,OP)!=F04_SCAN || !val(w,d,F05_KEY) || !val(w,d,CAUSE) ||
-   val(w,d,TICK)>val(w,d,START) || val(w,d,END)>val(w,origin,END) || val(w,d,END)>val(w,holder,END))return false;
+   val(w,d,TICK)>val(w,d,START))return false;
+  // F04 can shorten appointment.END on relief. The grant creation API checks
+  // original ceilings; restored history must retain the original grant interval.
+  // Effective authority always rechecks the current appointment window.
   const auto role=[](U r){return r==F04_CAPTAIN || r==F04_FIRST || r==F04_SECOND || r==F04_SUCCESSOR || r==F04_WATCH;};
   if(!role(val(w,origin,ROLE)) || !(role(val(w,holder,ROLE)) || (val(w,holder,ROLE)==F04_HEAD && val(w,holder,DEPT)==F04_SENSORS)))return false;
   U previous=0,state=0,mode=0,tick=val(w,d,TICK);

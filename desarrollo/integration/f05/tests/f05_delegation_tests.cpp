@@ -100,6 +100,17 @@ void delegation_run(const std::string& name,const std::string& file){
   auto r=l.accept(d);F05Receipt out{};eq(f05_cancel(l.s,l.h.watch,l.stats().revision,r.order,&out),F04_OK,"delegated issuer can cancel own pending order");
   F04Request revoke{l.h.captain,l.stats().revision,F04_REVOKE,0,d,0,0,0,50203};F04Result result{};eq(f04_execute(l.s,&revoke,&result),F04_REVIEW,"legacy revoke cannot bypass P02 lifecycle log");
   auto pending=l.accept(d,2);l.op(l.h.captain,F04_REVOKE,l.dv(d).holder);l.execute(pending.order,F04_REVOKED);check(!l.result(pending.order).performed,"lost recipient appointment rechecked");
+ } else if(name=="roster_relief") {
+  f04_destroy(l.s);l.s=nullptr;F04PopulationConfig cfg{50201,404,130,0,0,0};eq(f04_create_population(1,"miranda",&cfg,&l.s),F04_OK,"population");l.handles();
+  l.op(l.h.captain,F04_INSTALL_TEMPLATE,0,F04_SUTHERLAND_EQUIPMENT,0,0,F04_SUTHERLAND_SCIENCE);l.op(l.h.captain,F04_BOOTSTRAP_TEMPLATE);
+  l.op(l.h.captain,F04_PLAN_WATCHES,0,0,0,86400,F04_REFERENCE);l.advance(28801);
+  std::vector<F04Position> positions(130);U n=0,total=0;eq(f04_positions_page(l.s,l.h.captain,0,positions.data(),130,&n,&total),F04_OK,"roster positions");
+  bool sensor=false,watch=false;for(auto slot:positions)if(slot.person && slot.on_duty){if(slot.qualification==F04_SENSORS && !sensor){l.h.ensign=l.person(slot.person);l.h.sensors=slot.id;sensor=true;}if(slot.section==3 && slot.ordinal==1){l.h.watch=l.person(slot.person);watch=true;l.command_duty=slot.duty_record;}}
+  check(sensor && watch && l.command_duty,"real watch officer with a current duty");l.op(l.h.ensign,F04_MOVE,l.h.sensors);
+  auto q=l.grant(F05_DELEGATED_AUTONOMOUS,28900);auto d=l.create(q);l.change(d.id,F05_ACTIVE);auto r=l.accept(d.id);
+  l.op(l.h.captain,F04_CANCEL_DUTY,l.command_duty); // Shortens WATCH.END, preserving its historical interval.
+  l.execute(r.order,F04_REVOKED);check(!l.result(r.order).performed,"stopped SCHEMA4 watch loses authority before scan");
+  auto saved=l.save();l.load(saved);check(l.save()==saved && l.dv(d.id).effective_code==F04_REVOKED,"shortened appointment and original delegation history load together");
  } else if(name=="population") {
   f04_destroy(l.s);l.s=nullptr;F04PopulationConfig cfg{50201,404,130,0,0,0};eq(f04_create_population(1,"miranda",&cfg,&l.s),F04_OK,"population");l.handles();
   l.op(l.h.captain,F04_INSTALL_TEMPLATE,0,F04_SUTHERLAND_EQUIPMENT,0,0,F04_SUTHERLAND_SCIENCE);l.op(l.h.captain,F04_BOOTSTRAP_TEMPLATE);
@@ -116,6 +127,8 @@ void delegation_run(const std::string& name,const std::string& file){
   l.load(read(file+".pending"));auto ids=orders(decode(l.save()));auto ds=grants(decode(l.save()));check(ids.size()==2 && ds.size()==1,"cross-process delegation/order identities");U d=ds[0];auto before=l.save();l.replay_delegated(d,ids[1]);l.execute(ids[1]);check(l.save()==before,"completed idempotency across process");
   l.next_key=1002;l.change(d,F05_REVOKED);l.execute(ids[0],F04_REVOKED);check(l.save()==read(file+".future"),"exact revoked future across process");
   std::ifstream path(file+".history-path");std::string dir;std::getline(path,dir);check(bool(path),"history directory");DelegationLab other;eq(f04_history_open(other.s,dir.c_str()),F04_OK,"cross-process Core history recover");other.handles();auto checkpoint=other.Lab::active();check(checkpoint==l.save(),"exact historical future");
+  auto event=other.de(d).back();F05DelegationChange replay_change{other.h.captain,d,event.key,event.input_revision,event.cause,event.state,event.mode};F05DelegationView view{};
+  eq(f05_change_delegation(other.s,&replay_change,&view),F04_OK,"delegation transition replay after process restart");
   other.replay_delegated(d,ids[1]);other.execute(ids[1]);other.replay_delegated(d,ids[0],F04_REVOKED);check(other.Lab::active()==checkpoint,"cross-process historical idempotency");
  } else throw std::runtime_error("unknown delegation case");
 }

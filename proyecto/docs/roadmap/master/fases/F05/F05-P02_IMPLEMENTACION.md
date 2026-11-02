@@ -60,18 +60,37 @@ No hay compensación automática ni eliminación retroactiva de efectos.
 
 ## Validación y evidencia
 
-Primera comprobación P02/P01 final local: **39/39** (19 P02 + 20 P01).
-F02 original: **15/15**; F03 original: **25/25**. Las regresiones combinadas,
-Core completo con JSON, F04 original y seis campañas históricas se publican en
-Actions y se verificarán antes de entregar el incremento para auditoría.
-La descripción final de la PR y los artefactos XML/logs identifican el HEAD probado,
-los resultados finales y las URLs de cada run. No se equiparan tests documentales
-con efectos reales. Los mismos seis oráculos F04 permanecen intactos.
+Corte local corregido, con XML permanentes en [evidence/F05-P02](evidence/F05-P02):
+
+| Suite Linux | Resultado |
+| --- | --- |
+| P02 específico | 20/20 |
+| P01 compatible | 20/20 |
+| F04/P01/P02 combinada | 301/301 (261 F04 + 20 P01 + 20 P02) |
+| CoreRPG completo, incluido JSON | 483/483 |
+| F02 con su pin original | 15/15 |
+| F03 con su pin original | 25/25 |
+| F04 original con su pin | 270/270 |
+
+Las suites se solapan; no sumar sus recuentos como pruebas independientes.
+Los baselines de capacidad de F04 son diagnósticos y no certifican campañas
+completas. La aceptación de seis campañas históricas es un workflow separado,
+con sus mismos oráculos congelados. XML, hashes de fuentes, traza real y la
+reproducción del defecto corregido quedan publicados. La descripción final de
+la PR enlaza las conclusiones de CI y el HEAD exacto verificado, sin atribuir
+validación UE/MSI a los tests nativos. Los tests documentales F05, cross-phase
+y gobierno también pasan; no se presentan como efectos autoritativos Core.
 
 Durante desarrollo se corrigieron errores de compilación de las nuevas fixtures
 y una consulta del test con el excapitán que había perdido acceso al resultado.
 La consulta se realiza ahora con el destinatario autorizado; se conserva la
-restricción de acceso efectiva. Las ejecuciones finales deben pasar completas.
+restricción de acceso efectiva. Se reprodujo además un defecto P02: cancelar una guardia SCHEMA4 acorta
+`appointment.END`, pero el validador comparaba retrospectivamente el plazo
+histórico del mandato con ese final acortado, bloqueando F04 con F04_INTERNAL.
+Se corrige conservando el intervalo histórico del mandato; el límite se comprueba
+al crear y la autoridad efectiva siempre revalida el nombramiento actual. La
+prueba `f05.p02_roster_relief` demuestra cancelación F04, rechazo previo al efecto
+y recuperación exacta del historial. Las ejecuciones finales deben pasar completas.
 
 ## Límites y deuda local
 

@@ -1,206 +1,211 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="(empty)"
-	tests="39"
+	tests="40"
 	failures="0"
 	disabled="0"
 	skipped="0"
 	hostname=""
-	time="1"
-	timestamp="2026-11-02T14:25:39"
+	time="0"
+	timestamp="2026-11-02T14:32:56"
 	>
-	<testcase name="f05.scenario" classname="f05.scenario" time="0.0261126" status="run">
+	<testcase name="f05.scenario" classname="f05.scenario" time="0.00598014" status="run">
 		<properties/>
 		<system-out>issuer=3 recipient=5 request=25 order=26 task=28 attempt=30 result=32 event=33 Core stream=984065 value=99
 scenario: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.authority" classname="f05.authority" time="0.0102083" status="run">
+	<testcase name="f05.authority" classname="f05.authority" time="0.00411472" status="run">
 		<properties/>
 		<system-out>authority: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.recipient" classname="f05.recipient" time="0.0119666" status="run">
+	<testcase name="f05.recipient" classname="f05.recipient" time="0.00367451" status="run">
 		<properties/>
 		<system-out>recipient: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.unsupported" classname="f05.unsupported" time="0.0067119" status="run">
+	<testcase name="f05.unsupported" classname="f05.unsupported" time="0.00279675" status="run">
 		<properties/>
 		<system-out>unsupported: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.scope" classname="f05.scope" time="0.0491448" status="run">
+	<testcase name="f05.scope" classname="f05.scope" time="0.00380295" status="run">
 		<properties/>
 		<system-out>scope: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.stale" classname="f05.stale" time="0.0116369" status="run">
+	<testcase name="f05.stale" classname="f05.stale" time="0.00351838" status="run">
 		<properties/>
 		<system-out>stale: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.reception" classname="f05.reception" time="0.00778135" status="run">
+	<testcase name="f05.reception" classname="f05.reception" time="0.0035585" status="run">
 		<properties/>
 		<system-out>reception: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.duplicate" classname="f05.duplicate" time="0.0159033" status="run">
+	<testcase name="f05.duplicate" classname="f05.duplicate" time="0.00652987" status="run">
 		<properties/>
 		<system-out>duplicate: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.revalidate" classname="f05.revalidate" time="0.0130019" status="run">
+	<testcase name="f05.revalidate" classname="f05.revalidate" time="0.00532769" status="run">
 		<properties/>
 		<system-out>revalidate: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.expired" classname="f05.expired" time="0.0472069" status="run">
+	<testcase name="f05.expired" classname="f05.expired" time="0.00367752" status="run">
 		<properties/>
 		<system-out>expired: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.cancel" classname="f05.cancel" time="0.011218" status="run">
+	<testcase name="f05.cancel" classname="f05.cancel" time="0.00326947" status="run">
 		<properties/>
 		<system-out>cancel: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.transition" classname="f05.transition" time="0.011964" status="run">
+	<testcase name="f05.transition" classname="f05.transition" time="0.00329287" status="run">
 		<properties/>
 		<system-out>transition: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.determinism" classname="f05.determinism" time="0.0123517" status="run">
+	<testcase name="f05.determinism" classname="f05.determinism" time="0.00453587" status="run">
 		<properties/>
 		<system-out>determinism: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.corrupt" classname="f05.corrupt" time="0.0132263" status="run">
+	<testcase name="f05.corrupt" classname="f05.corrupt" time="0.00504173" status="run">
 		<properties/>
 		<system-out>corrupt: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.buffers" classname="f05.buffers" time="0.0451184" status="run">
+	<testcase name="f05.buffers" classname="f05.buffers" time="0.00359355" status="run">
 		<properties/>
 		<system-out>buffers: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.population" classname="f05.population" time="0.104509" status="run">
+	<testcase name="f05.population" classname="f05.population" time="0.0169005" status="run">
 		<properties/>
 		<system-out>population: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.history" classname="f05.history" time="0.037491" status="run">
+	<testcase name="f05.history" classname="f05.history" time="0.0177304" status="run">
 		<properties/>
 		<system-out>history: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.history_fault" classname="f05.history_fault" time="0.0915379" status="run">
+	<testcase name="f05.history_fault" classname="f05.history_fault" time="0.0133971" status="run">
 		<properties/>
 		<system-out>history_fault: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.process_save" classname="f05.process_save" time="0.0277429" status="run">
+	<testcase name="f05.process_save" classname="f05.process_save" time="0.0103689" status="run">
 		<properties/>
 		<system-out>process_save: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.process_load" classname="f05.process_load" time="0.0592479" status="run">
+	<testcase name="f05.process_load" classname="f05.process_load" time="0.00711318" status="run">
 		<properties/>
 		<system-out>process_load: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_valid" classname="f05.p02_valid" time="0.023077" status="run">
+	<testcase name="f05.p02_valid" classname="f05.p02_valid" time="0.00594178" status="run">
 		<properties/>
 		<system-out>delegation=28 origin=15 holder=17 order=36 stream=984065 value=99
 valid: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_scope" classname="f05.p02_scope" time="0.0554431" status="run">
+	<testcase name="f05.p02_scope" classname="f05.p02_scope" time="0.00446051" status="run">
 		<properties/>
 		<system-out>scope: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_authority" classname="f05.p02_authority" time="0.0122226" status="run">
+	<testcase name="f05.p02_authority" classname="f05.p02_authority" time="0.00300114" status="run">
 		<properties/>
 		<system-out>authority: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_revoke" classname="f05.p02_revoke" time="0.0224276" status="run">
+	<testcase name="f05.p02_revoke" classname="f05.p02_revoke" time="0.00649785" status="run">
 		<properties/>
 		<system-out>revoke: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_suspend" classname="f05.p02_suspend" time="0.0131874" status="run">
+	<testcase name="f05.p02_suspend" classname="f05.p02_suspend" time="0.00447216" status="run">
 		<properties/>
 		<system-out>suspend: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_expiry" classname="f05.p02_expiry" time="0.0117563" status="run">
+	<testcase name="f05.p02_expiry" classname="f05.p02_expiry" time="0.00407671" status="run">
 		<properties/>
 		<system-out>expiry: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_relief" classname="f05.p02_relief" time="0.0436983" status="run">
+	<testcase name="f05.p02_relief" classname="f05.p02_relief" time="0.00374234" status="run">
 		<properties/>
 		<system-out>relief: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_origin" classname="f05.p02_origin" time="0.0218261" status="run">
+	<testcase name="f05.p02_origin" classname="f05.p02_origin" time="0.00377322" status="run">
 		<properties/>
 		<system-out>origin: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_medical" classname="f05.p02_medical" time="0.0119774" status="run">
+	<testcase name="f05.p02_medical" classname="f05.p02_medical" time="0.00382972" status="run">
 		<properties/>
 		<system-out>medical: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_subdelegate" classname="f05.p02_subdelegate" time="0.0121985" status="run">
+	<testcase name="f05.p02_subdelegate" classname="f05.p02_subdelegate" time="0.00369243" status="run">
 		<properties/>
 		<system-out>subdelegate: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_modes" classname="f05.p02_modes" time="0.0572247" status="run">
+	<testcase name="f05.p02_modes" classname="f05.p02_modes" time="0.00818715" status="run">
 		<properties/>
 		<system-out>modes: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_mode_change" classname="f05.p02_mode_change" time="0.0115242" status="run">
+	<testcase name="f05.p02_mode_change" classname="f05.p02_mode_change" time="0.00412122" status="run">
 		<properties/>
 		<system-out>mode_change: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_idempotency" classname="f05.p02_idempotency" time="0.0131848" status="run">
+	<testcase name="f05.p02_idempotency" classname="f05.p02_idempotency" time="0.00460772" status="run">
 		<properties/>
 		<system-out>idempotency: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_causal" classname="f05.p02_causal" time="0.0185515" status="run">
+	<testcase name="f05.p02_causal" classname="f05.p02_causal" time="0.00502408" status="run">
 		<properties/>
 		<system-out>causal: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_history" classname="f05.p02_history" time="0.0798335" status="run">
+	<testcase name="f05.p02_history" classname="f05.p02_history" time="0.0207132" status="run">
 		<properties/>
 		<system-out>history: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_population" classname="f05.p02_population" time="0.0801196" status="run">
+	<testcase name="f05.p02_population" classname="f05.p02_population" time="0.0219407" status="run">
 		<properties/>
 		<system-out>population: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_restore_and_access" classname="f05.p02_restore_and_access" time="0.00889481" status="run">
+	<testcase name="f05.p02_restore_and_access" classname="f05.p02_restore_and_access" time="0.00503227" status="run">
 		<properties/>
 		<system-out>restore_and_access: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_process_save" classname="f05.p02_process_save" time="0.0238556" status="run">
+	<testcase name="f05.p02_roster_relief" classname="f05.p02_roster_relief" time="0.0374203" status="run">
+		<properties/>
+		<system-out>roster_relief: PASS
+</system-out>
+	</testcase>
+	<testcase name="f05.p02_process_save" classname="f05.p02_process_save" time="0.011229" status="run">
 		<properties/>
 		<system-out>process_save: PASS
 </system-out>
 	</testcase>
-	<testcase name="f05.p02_process_load" classname="f05.p02_process_load" time="0.0188998" status="run">
+	<testcase name="f05.p02_process_load" classname="f05.p02_process_load" time="0.00726874" status="run">
 		<properties/>
 		<system-out>process_load: PASS
 </system-out>

@@ -27,7 +27,7 @@ un nombramiento admitido vigente (mando/XO/sucesión/guardia o jefatura Sensores
 Se fija ese nombramiento concreto. Un oficial de guardia requiere además
 servicio real; en SCHEMA4 también se comprueba servicio del receptor.
 
-La duración no puede exceder ninguno de los dos nombramientos de origen ni
+Al crear el mandato, la duración no puede exceder ninguno de los dos nombramientos de origen ni
 las credenciales actuales de mando. La pertenencia, disponibilidad, cualificación,
 nombramientos y mando del delegante se vuelven a comprobar al usar el mandato.
 El plazo de cada orden tampoco puede exceder el de la delegación.
@@ -50,6 +50,9 @@ mandatos propios o accesibles al mando actual.
 un mandato activo puede estar inhabilitado por tiempo, relevo, ausencia médica,
 baja de la nave o pérdida de autoridad. La caducidad es efectiva exactamente
 en `end`, aunque el Host todavía no haya solicitado el evento `expired`.
+Si F04 acorta el final de un nombramiento al cancelar una guardia, el mandato
+conserva su intervalo histórico original y pierde habilitación al revalidar el
+nombramiento acortado. Esa historia no bloquea la operación F04 ni la carga.
 La pérdida de autoridad conserva el evento causal F04 y el resultado fallido
 de la orden; no fabrica una revocación administrativa automática.
 La API F04_REVOKE devuelve `F04_REVIEW` para mandatos enriquecidos: usar la

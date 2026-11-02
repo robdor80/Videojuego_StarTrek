@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-02",
+  "pull_request": "https://github.com/robdor80/Videojuego_StarTrek/pull/82",
+  "branch": "codex/f05-p02-delegation",
+  "base": "854aa5720ec8681d6e5eccc7fe4ed80ac0c65d9b",
+  "core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "f04_original_core": "c147d81ed069da2e09149613ab02cbc3ebe95a4a",
+  "f02_core": "4f282863737bcd8f5add401202a9e1064c133672",
+  "f03_core": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+  "results": {
+    "p01-p02-linux.xml": {
+      "tests": "40",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:32:56"
+    },
+    "core-linux.xml": {
+      "tests": "483",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:26:01"
+    },
+    "f02-linux.xml": {
+      "tests": "15",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:21:44"
+    },
+    "f03-linux.xml": {
+      "tests": "25",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:22:59"
+    },
+    "f04-original-linux.xml": {
+      "tests": "270",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:25:10"
+    },
+    "f04-p01-p02-linux.xml": {
+      "tests": "301",
+      "failures": "0",
+      "skipped": "0",
+      "timestamp": "2026-11-02T14:32:57"
+    }
+  },
+  "source_manifest": "source-files.json",
+  "note": "Suites overlap. Original F04 capacity baselines do not certify complete historical acceptance. Six frozen-oracle campaigns are verified separately in GitHub Actions. UE/MSI not executed."
+}
