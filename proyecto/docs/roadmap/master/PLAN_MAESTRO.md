@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01 abierto para implementación real sobre CoreRPG.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
+**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01 y P02 ya integradas y auditadas en alcance nativo (PR #81 y #82), pendientes de pruebas UE5.8.2/MSI; P03 y P04 sin implementar.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
 
 ## Decisión autoral transversal 2026-10-30 — cronología y propulsión
 
@@ -25,7 +25,7 @@
 | [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** (PR #60; laboratorio CoreRPG/UE5 validado) | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** (CoreRPG PR #12 + Trek PR #62; corte vertical integrado y auditado) | CORE_INTEGRADO |
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | **CERRADA** (corte operativo auditado; deuda avanzada explícita en acta) | REFERENCIA_PROBADA |
-| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01 apertura; integración Core pendiente de implementación) | CORE_INTEGRADO |
+| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01/P02 nativas integradas; pruebas MSI pendientes; P03/P04 no implementadas) | CORE_INTEGRADO |
 | [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
 | [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
 | [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | PLANIFICADA | ACEPTACION_SUPERADA |
