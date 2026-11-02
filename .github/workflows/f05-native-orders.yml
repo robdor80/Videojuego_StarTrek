@@ -1,0 +1,75 @@
+name: F05 P01 authoritative orders
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f05/**'
+      - 'desarrollo/integration/f04/**'
+      - 'proyecto/docs/roadmap/master/fases/F05/**'
+      - '.github/workflows/f05-native-orders.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 30
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read audited Core main pin
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid Core SHA'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: external/CoreRPG
+      - name: Compile full Core suite and JSON integration
+        shell: pwsh
+        run: |
+          cmake -S external/CoreRPG -B build/core -DCMAKE_BUILD_TYPE=Release -DCORERPG_BUILD_CONTENT_JSON=ON -DBUILD_TESTING=ON
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          cmake --build build/core --config Release --parallel 4
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          ctest --test-dir build/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+      - name: Build single F04 session with P01 enabled
+        shell: pwsh
+        run: |
+          cmake -S desarrollo/integration/f05 -B build/f05 -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/external/CoreRPG"
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          cmake --build build/f05 --config Release --parallel 4
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          ctest --test-dir build/f05 -C Release --no-tests=error --output-on-failure --output-junit f05-and-f04.xml -E 'history_campaign_|persistence_baseline_|persistence_resume_' -j 2
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+      - name: Existing F05 documentation and cross-phase references
+        shell: pwsh
+        run: |
+          python -m unittest discover -s desarrollo/tools/validation -p test_f05_reference.py -v
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          python desarrollo/tools/validation/f05_reference.py --fixture desarrollo/validation/fixtures/f05/order_initiative_reference_v0.1.json
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          python -m unittest discover -s desarrollo/tools/simulation -p test_f04_f05_f06_cross_phase.py -v
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          python desarrollo/tools/validation/validate_roadmap_state.py
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f05-p01-${{ matrix.os }}
+          path: |
+            build/core/core.xml
+            build/f05/f05-and-f04.xml
+            build/**/Testing/Temporary/LastTest.log

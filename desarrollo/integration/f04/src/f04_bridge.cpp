@@ -1,4 +1,7 @@
 #include "f04_bridge.h"
+#ifdef F05_ENABLE_ORDERS
+#include "f05_orders.h"
+#endif
 #include "f04_catalog.h"
 #include "f04_templates.h"
 #include <corerpg/campaign_persistence.hpp>
@@ -24,13 +27,15 @@ using U=uint64_t;
 constexpr U FOREVER=(1ULL<<48)-1;
 // Versioned Trek relation-label vocabulary. Scalar values are self-edges;
 // references use fixed kinds. Core owns both, without interpreting domain data.
-enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN };
+enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN,
+ F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
  TEMPLATE,EQUIPMENT,SECTION_KEY,STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,
  STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP,
- SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END };
+ SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END,
+ F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -135,6 +140,10 @@ CatalogBuildResult catalog() {
  for(const char* t:{"population","person","slot","activity","appointment","delegation","event","task","order","mandate","review","department","section","function","roster_plan","roster_gap","auxiliary_defiant"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
  for(const char* t:class_ids) defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:class_")+t),*ResourceKind::parse("structural")});
+#ifdef F05_ENABLE_ORDERS
+ for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event"})
+  defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
+#endif
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
 }
 U make(Campaign& c,const ContentCatalog& cat,const char* name) {
@@ -296,6 +305,9 @@ void initialize_population(Campaign& c,const ContentCatalog& cat,const char* cls
 #include "f04_valhalla_state.inc"
 #include "f04_organization.inc"
 bool roster_schema(const WorldState& w);
+#ifdef F05_ENABLE_ORDERS
+#include "f05_schema.inc"
+#endif
 // Strict relational schema. It rejects undeclared labels/fields and duplicate
 // scalar/reference fields before any restored graph becomes live.
 bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
@@ -338,6 +350,9 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
   else if(type(w,id,"mandate")) { allowed={START,END,STATE,D_DOMAIN,CAUSE};required=allowed;ar={SHIP,PERSON};rr=ar; }
   else if(type(w,id,"review")) { allowed={START,END,STATE,VALUE,CAUSE,CODE};required=allowed;ar={SHIP,ISSUER};rr=ar; }
   else if(type(w,id,"event")) { allowed={OP,CODE,CAUSE,TICK};required=allowed;ar={SHIP,PERSON,TARGET};rr={SHIP}; }
+#ifdef F05_ENABLE_ORDERS
+  else if(f05_shape(w,id,allowed,required,ar,rr)) {}
+#endif
   else return false;
   for(const auto& r:w.relations_from(EntityId{id})) {
    const U k=r.kind.value();
@@ -397,10 +412,23 @@ bool schema(const Campaign& c,U retiring=0,bool exhaustive=false) {
 #ifdef F04_HISTORY_CORE
  if(c.history && HistoryPersistence::validate_active(*c.history,CampaignPersistence::capture(c.world,c.random,c.time))!=HistoryStatus::success)return false;
 #endif
- return organization_schema(w) && roster_schema(w) && valhalla_schema(w);
+ return organization_schema(w) && roster_schema(w) && valhalla_schema(w)
+#ifdef F05_ENABLE_ORDERS
+  && f05_schema(c)
+#endif
+ ;
 }
 #include "f04_roster.inc"
-U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=false) {
+// Shared F04/F05 operation contract. Validation consumes no RNG or world state.
+U scan_station(const Campaign& c,U p) {
+ const auto& w=c.world;const U t=c.time.now();U slot=val(w,1,SCHEMA)==1?12:0;
+ if(!slot)for(U id:all(w,"slot"))if(ref(w,id,PERSON)==p && val(w,id,QUAL)==F04_SENSORS){slot=id;break;}
+ need(qualified(w,p,F04_SENSORS,t),F04_QUALIFICATION);
+ need(duty(w,p,slot,t),F04_DENIED);
+ need(w.container_of(EntityId{p}).container==EntityId{slot},F04_UNAVAILABLE);
+ return slot;
+}
+U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=false,ActionResult* actual=nullptr) {
  const U p=r.actor.id,t=c.time.now(),target=r.target;
  need(type(c.world,p,"person"),F04_DENIED);
  need(r.cause<=FOREVER && r.start<=FOREVER && r.end<=FOREVER,F04_ARGUMENT);
@@ -619,13 +647,12 @@ U perform(Campaign& c,const ContentCatalog& cat,const F04Request& r,bool queued=
   set(c,1,PATTERN,r.value);return 1;
  }
  case F04_SCAN: {
-  U slot=val(c.world,1,SCHEMA)==1?12:0;
-  if(!slot)for(U id:all(c.world,"slot"))if(ref(c.world,id,PERSON)==p && val(c.world,id,QUAL)==F04_SENSORS){slot=id;break;}
-  need(qualified(c.world,p,F04_SENSORS,t),F04_QUALIFICATION);
-  need(duty(c.world,p,slot,t),F04_DENIED);
-  need(c.world.container_of(EntityId{p}).container==EntityId{slot},F04_UNAVAILABLE);
+  (void)scan_station(c,p);
   // A real authoritative consequence, separate from the illustrative F06 sensor model.
-  action(c,p,StreamRollAction{0xF0401,1,100});return 0;
+  invalidate_index();
+  const auto result=ActionEngine::process(c.world,c.random,{EntityId{p},StreamRollAction{0xF0401,1,100},c.world.revision()});
+  if(actual)*actual=result;
+  need(result.outcome!=ActionOutcome::rejected,F04_INTERNAL);return 0;
  }
  case F04_MOVE: {
   need(type(c.world,target,"slot") && duty(c.world,p,target,t),F04_DENIED);
@@ -901,3 +928,6 @@ uint32_t f04_organization_stats(F04Session* s,F04Ref who,F04OrganizationStats* o
 #include "f04_roster_queries.inc"
 #include "f04_valhalla_queries.inc"
 #include "f04_history.inc"
+#ifdef F05_ENABLE_ORDERS
+#include "f05_orders.inc"
+#endif
