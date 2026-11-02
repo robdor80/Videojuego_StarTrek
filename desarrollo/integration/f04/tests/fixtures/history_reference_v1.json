@@ -11,7 +11,7 @@
     "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
     "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
     "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
-    "desarrollo/integration/f04/src/f04_bridge.cpp": "9b7e44e6582a889501916b2bbcb8baae8cf153f8a23108969cfd1ee1337f0cd8",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "b478b6ce64b897b161651809a1946e8c02216aaa4b9aba6da7b88a37aff68b59",
     "desarrollo/integration/f04/src/f04_history.inc": "ba4d502b8c8363d227e1d2f493ac31be15de1508720b351670ab7c9c8b136055",
     "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
     "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
@@ -27,7 +27,7 @@
     "desarrollo/integration/f04/tests/organization_lab.h": "e5a0c3acbf847d2ccdcf9f078d0e7c16d26e72c68c9dcbc795c138601d9f9c85",
     "mundo/lore/starships/classes/core_starship_classes.json": "9aae07144d8707d1a87e839fd9507e4f8c29bce3905f33b713b0ea716fe7f9aa",
     "sistemas/gameplay/ship_operations/class_definition_contract.json": "ffd2be980fd600f5381b7ddf7358bb48da754484e8970dd633e5c22fd614a07a",
-    "desarrollo/integration/f04/CMakeLists.txt": "340bf2d3c01b63b8a793b98fb031bc943da05bb51d8374b8f675bf3521bd2a37"
+    "desarrollo/integration/f04/CMakeLists.txt": "8215e9bdb7e5ade15ed95eb6c0c3c6bac2e3bb3430d8b5c186fa0d03969b1a79"
   },
   "provenance_files": {
     "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/source-files.json": "a984beff263a81551bddb3c0f483932416648e6918fa8ec8ae82a5d526be07fe",
@@ -83,5 +83,14 @@
       "acceptance": "proyecto/docs/roadmap/master/fases/F04/evidence/F04-PERSISTENCIA-03-HISTORY/campaigns/5-730/acceptance.json",
       "acceptance_sha256": "2075fb7cfd262eda89106a66df14c4f2e55867b171af9e34407d61894cbeb8c6"
     }
+  },
+  "source_contract_update_f05_p01": {
+    "date": "2026-11-02",
+    "implementation_commit": "370adf7938446f4c9e47ed1615413306b4eb82af",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "9b7e44e6582a889501916b2bbcb8baae8cf153f8a23108969cfd1ee1337f0cd8",
+      "desarrollo/integration/f04/CMakeLists.txt": "340bf2d3c01b63b8a793b98fb031bc943da05bb51d8374b8f675bf3521bd2a37"
+    },
+    "scope": "Additive F05 compile option and shared F04_SCAN ActionResult capture. No oracle, acceptance or provenance bytes changed. All six actual F04 campaigns must again match the frozen complete-history oracle before acceptance of this source update. Core F04 pins unchanged."
   }
 }

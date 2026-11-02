@@ -1,0 +1,59 @@
+#include "CoreMinimal.h"
+#include "Misc/AutomationTest.h"
+#include "Engine/World.h"
+#include "GameFramework/Actor.h"
+#include "f05_orders.h"
+bool F05BridgeReady();
+#if WITH_DEV_AUTOMATION_TESTS
+namespace {
+constexpr auto Flags=EAutomationTestFlags::EditorContext|EAutomationTestFlags::EngineFilter;
+struct Campaign {
+ F04Session* Session=nullptr;F04Handles H{};
+ ~Campaign(){if(Session)f04_destroy(Session);}
+ bool Open(){return IsInGameThread() && F05BridgeReady() && f04_create(1,"miranda",&Session)==F04_OK && f04_handles(Session,&H)==F04_OK;}
+ uint64 Revision(){F04Stats S{};return f04_stats(Session,&S)==F04_OK?S.revision:MAX_uint64;}
+ uint32 Op(F04Ref Actor,uint32 Kind,uint64 Target=0,uint64 Aux=0,uint64 End=0){
+  F04Request Q{Actor,Revision(),Kind,0,Target,Aux,0,End,50501};F04Result R{};return f04_execute(Session,&Q,&R);
+ }
+ bool Ready(){return Op(H.head,F04_ASSIGN,H.sensors,H.ensign.id)==F04_OK && Op(H.head,F04_DUTY,H.ensign.id,H.sensors,28800)==F04_OK && Op(H.ensign,F04_MOVE,H.sensors)==F04_OK;}
+ F05OrderRequest Request(){return {H.captain,H.ensign,H.ship,{H.ship.scope,H.sensors},1,Revision(),100,50501,F04_SCAN,0};}
+ bool Save(TArray<uint8>& Out){uint64 N=0;if(f04_save(Session,nullptr,0,&N)!=F04_CAPACITY || N>MAX_int32)return false;Out.SetNumUninitialized(int32(N));return f04_save(Session,Out.GetData(),N,&N)==F04_OK;}
+ bool Load(const TArray<uint8>& In){return f04_load(Session,In.GetData(),In.Num())==F04_OK && f04_handles(Session,&H)==F04_OK;}
+};
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05Lifecycle,"F05.P01.LifecycleAndRecovery",Flags)
+bool FF05Lifecycle::RunTest(const FString&) {
+ Campaign C;if(!TestTrue(TEXT("Audited DLL and existing F04 campaign"),C.Open() && C.Ready()))return false;
+ auto Q=C.Request();F05Receipt R{};
+ TestEqual(TEXT("Issue"),f05_submit(C.Session,&Q,&R),uint32(F04_OK));TestEqual(TEXT("Issued"),R.state,uint32(F05_ISSUED));
+ TestEqual(TEXT("Receive"),f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));
+ TArray<uint8> Pending,Future,Restored;TestTrue(TEXT("Save accepted task"),C.Save(Pending));
+ TestEqual(TEXT("Execute real F04_SCAN"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));
+ F05ResultView Result{};TestEqual(TEXT("True Core result"),f05_result(C.Session,C.H.captain,R.order,&Result),uint32(F04_OK));
+ TestTrue(TEXT("Roll, not a fabricated sensor contact"),Result.performed==1 && Result.consumed_random==1 && Result.value>=1 && Result.value<=100);
+ TestTrue(TEXT("Save future"),C.Save(Future));TestTrue(TEXT("Restore pending"),C.Load(Pending));
+ TestEqual(TEXT("Resume"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));C.Save(Restored);
+ TestTrue(TEXT("Identical future and RNG"),Restored==Future);
+ f05_execute_order(C.Session,C.H.ensign,0,R.order,&R);C.Save(Restored);TestTrue(TEXT("Replay has no second effect"),Restored==Future);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05Negative,"F05.P01.Negatives",Flags)
+bool FF05Negative::RunTest(const FString&) {
+ Campaign C;if(!TestTrue(TEXT("Ready"),C.Open() && C.Ready()))return false;
+ auto Q=C.Request();Q.issuer=C.H.ensign;F05Receipt R{};TestEqual(TEXT("No command by skill"),f05_submit(C.Session,&Q,&R),uint32(F04_DENIED));
+ Q=C.Request();Q.key=2;Q.recipient=C.H.doctor;TestEqual(TEXT("Wrong qualification"),f05_submit(C.Session,&Q,&R),uint32(F04_QUALIFICATION));
+ Q=C.Request();Q.key=3;Q.operation=F04_BRIDGE;TestEqual(TEXT("Unsupported explicit refusal"),f05_submit(C.Session,&Q,&R),uint32(F05_UNSUPPORTED));
+ TArray<uint8> A,B;C.Save(A);++Q.cause;TestEqual(TEXT("Key conflict"),f05_submit(C.Session,&Q,&R),uint32(F05_IDEMPOTENCY_CONFLICT));C.Save(B);TestTrue(TEXT("Conflict unchanged"),A==B);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05Visual,"F05.P01.WorldAndActorIndependence",Flags)
+bool FF05Visual::RunTest(const FString&) {
+ Campaign C;if(!TestTrue(TEXT("Ready"),C.Open() && C.Ready()))return false;
+ auto Q=C.Request();F05Receipt R{};f05_submit(C.Session,&Q,&R);f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R);
+ TArray<uint8> A,B;C.Save(A);
+ UWorld* World=UWorld::CreateWorld(EWorldType::Game,false);
+ if(!TestNotNull(TEXT("Disposable UWorld"),World))return false;
+ World->InitializeNewWorld(UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false));
+ AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Presentation marker"),Marker);
+ if(Marker)Marker->Destroy();World->DestroyWorld(false);C.Save(B);TestTrue(TEXT("Actor and world removal preserve order"),A==B);
+ TestEqual(TEXT("Execute offscreen"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));TestEqual(TEXT("Completed"),R.state,uint32(F05_COMPLETED));return true;
+}
+#endif

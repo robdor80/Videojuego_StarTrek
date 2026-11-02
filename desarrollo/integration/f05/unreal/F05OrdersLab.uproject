@@ -1,0 +1,7 @@
+{
+ "FileVersion": 3,
+ "EngineAssociation": "5.8",
+ "Category": "Integration",
+ "Description": "F05 P01 native Core orders automation harness",
+ "Modules": [{"Name":"F05OrdersLab","Type":"Runtime","LoadingPhase":"Default"}]
+}

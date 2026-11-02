@@ -2,6 +2,7 @@
 import argparse
 import datetime
 import json
+import os
 from pathlib import Path
 import subprocess
 import time
@@ -21,15 +22,16 @@ root = Path(args.root) / (datetime.datetime.now().strftime('%Y%m%d-%H%M%S') + '-
 root.mkdir(parents=True)
 save = root / f'campaign-{args.profile}-{args.days}'
 exe = Path(args.bin)
+suffix = '.exe' if os.name == 'nt' else ''
 start = time.perf_counter()
-actual_core = subprocess.check_output([str(exe / 'f04_history_campaign.exe'),'sha'],text=True).strip()
+actual_core = subprocess.check_output([str(exe / ('f04_history_campaign' + suffix)),'sha'],text=True).strip()
 require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
         'Executed Core does not match proposed pin')
 phases = [
-    ('oracle', [str(exe / 'f04_reference_campaign.exe'), 'run', str(args.profile), str(args.days), str(save)]),
-    ('campaign', [str(exe / 'f04_history_campaign.exe'), 'run', str(args.profile), str(args.days), str(save)]),
-    ('resume', [str(exe / 'f04_history_campaign.exe'), 'resume', str(save)]),
-    ('audit', [str(exe / 'f04_history_audit.exe'), str(save)]),
+    ('oracle', [str(exe / ('f04_reference_campaign' + suffix)), 'run', str(args.profile), str(args.days), str(save)]),
+    ('campaign', [str(exe / ('f04_history_campaign' + suffix)), 'run', str(args.profile), str(args.days), str(save)]),
+    ('resume', [str(exe / ('f04_history_campaign' + suffix)), 'resume', str(save)]),
+    ('audit', [str(exe / ('f04_history_audit' + suffix)), str(save)]),
 ]
 reference_fixture = None
 reference_metadata = {}
