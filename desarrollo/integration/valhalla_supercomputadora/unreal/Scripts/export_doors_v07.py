@@ -63,5 +63,3 @@ for id,parent,yaw in [('D02','Component_437343',0),('D03','Component_381616',90)
  record['surface_area_error_cm2']=abs(source_area-partition_area);assert record['surface_area_error_cm2']<.01,(id,source_area,partition_area,record['surface_area_error_cm2'])
  out['doors'].append(record)
 a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(out,separators=(',',':')));print('PARTITION',[(r['id'],r['partition_triangles'],r['width'],r['height']) for r in out['doors']])
-
-
