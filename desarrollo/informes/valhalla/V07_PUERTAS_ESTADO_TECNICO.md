@@ -126,7 +126,7 @@ Mapa principal: `/Game/ValhallaV07/Maps/L_Supercomputadora_V07`. Mapa auxiliar: 
 
 Rama: `codex/valhalla-v07-puertas`. Base verificada: `fd2d40785f1c06cd43763585d2a769721994474b`, rama V06 `codex/valhalla-supercomputadora`. La PR Draft V07 se revisa contra esa rama, sin volver a presentar V06 como trabajo nuevo. PR #79 y `main` se conservan intactas; no se fusiona ni se elimina ninguna rama. El SHA publicado se confirma en la PR y en el mensaje de entrega.
 
-[Comparación V07 contra V06](https://github.com/robdor80/Videojuego_StarTrek/compare/codex%2Fvalhalla-supercomputadora...codex%2Fvalhalla-v07-puertas). La PR correspondiente se mantiene en Draft.
+[PR #80 — V07 parcial, Draft y dependiente de V06](https://github.com/robdor80/Videojuego_StarTrek/pull/80). Implementación y pruebas: `2a4d38803312452b1d384bb3fbc563612210d156`.
 
 Git publica cÃ³digo, planes, inventario e informe; los recursos UE, modelos, imÃ¡genes y binarios permanecen locales conforme a la polÃ­tica existente. **No se ejecuta el apagado del MSI:** la condiciÃ³n del encargo exige V07 integral terminada, validada y publicada, y no se ha alcanzado.
 
@@ -145,5 +145,5 @@ Los nombres y firmas siguientes identifican resultados locales; no son dependenc
 | recinto permanente (`portable_validation_report.json`) | `56883d6acb880a5f2dbf445e2c094a877ec6a948a15692480bcfcc0d5e2cc3c3` |
 | comparaciÃ³n de rendimiento (`performance_comparison.json`) | `b97d54ba963e3008607cb204948f764830d7420f6b6b1142f48dd3b93aa97e79` |
 | reapertura limpia final (`audit_v07.json`) | `333683a91bc7dcd5ac5a946aa243f3c76e0d03e48e6dfa133af15942aad70720` |
-| manifiesto de entrega (`delivery_manifest.json`) | `8cbd785eeed8a0f094e8949098aab8955b779ee9cce973bde8424060099a693b` |
+| manifiesto de entrega (`delivery_manifest.json`) | `74ddf7ff36bbd9cf0203ea280c1f88c7e5053f1de91c0212489086d374267169` |
 | conservaciÃ³n de firmas (`protected_verification.json`) | `ab75f5d6e2cee1b9061fcbc9b6a20998e334c5b07129983be386e0834ff40d62` |
