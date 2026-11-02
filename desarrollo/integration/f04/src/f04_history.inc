@@ -20,6 +20,10 @@ HistoryCountRule workload_rule() {
 std::vector<HistorySelection> closed_records(const Campaign& c,U cutoff) {
  const auto& w=c.world;std::map<U,HistorySelection> candidates;
  for(auto entity:projected_ids(w)) {const U id=entity.value();
+#ifdef F05_ENABLE_ORDERS
+  // P03 obligations retain their idempotency tombstones and source service.
+  if(type(w,id,"f05_scan_need"))continue;
+#endif
   if(type(w,id,"event")){const U tick=val(w,id,TICK);if(tick<cutoff)candidates.emplace(id,HistorySelection{entity,tick,tick+1});continue;}
   if(has(w,id,START) && has(w,id,END) && val(w,id,END)<=cutoff && !val(w,id,DEBT) &&
     !(type(w,id,"task") && val(w,id,STATE)==ACTIVE))

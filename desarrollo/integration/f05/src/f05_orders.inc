@@ -186,3 +186,4 @@ uint32_t f05_events_page(F04Session* s,F04Ref who,U order,U after,F05EventView* 
 }
 
 #include "f05_delegation_api.inc"
+#include "f05_initiative.inc"

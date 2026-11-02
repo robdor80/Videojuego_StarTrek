@@ -1,4 +1,4 @@
-name: F05 P01 and P02 authoritative orders
+name: F05 P01 P02 P03 native integration
 on:
   pull_request:
     paths:
@@ -45,7 +45,7 @@ jobs:
           if($LASTEXITCODE){exit $LASTEXITCODE}
           ctest --test-dir build/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
           if($LASTEXITCODE){exit $LASTEXITCODE}
-      - name: Build single F04 session with P01 and P02 enabled
+      - name: Build single F04 session with P01 P02 P03 enabled
         shell: pwsh
         run: |
           $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/build/f05-reference-temp"
@@ -69,8 +69,43 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p02-${{ matrix.os }}
+          name: f05-p03-${{ matrix.os }}
           path: |
             build/core/core.xml
             build/f05/f05-and-f04.xml
             build/**/Testing/Temporary/LastTest.log
+  earlier-native:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        phase: [f02, f03]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve original integration pins
+        id: pin
+        shell: pwsh
+        run: |
+          $sha=if('${{ matrix.phase }}' -eq 'f02'){'4f282863737bcd8f5add401202a9e1064c133672'}else{(Get-Content desarrollo/integration/f03/core-revision.txt -Raw).Trim()}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.pin.outputs.sha }}
+          path: external/CoreRPG
+      - name: Native regression against the phase's original Core
+        shell: pwsh
+        run: |
+          cmake -S desarrollo/integration/${{ matrix.phase }} -B build/earlier -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/external/CoreRPG"
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          cmake --build build/earlier --config Release --parallel 4
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+          ctest --test-dir build/earlier -C Release --no-tests=error --output-on-failure --output-junit earlier.xml -j 2
+          if($LASTEXITCODE){exit $LASTEXITCODE}
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f05-p03-regression-${{ matrix.phase }}-${{ matrix.os }}
+          path: build/earlier/earlier.xml

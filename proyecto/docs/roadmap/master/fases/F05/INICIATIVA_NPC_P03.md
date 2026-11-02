@@ -1,5 +1,13 @@
 # F05-P03 — Iniciativa de capitán NPC, oficiales y coordinación fuera de escena
-Fecha: 2026-10-11 · **Diseño de referencia; no motor ejecutado**.
+Fecha de diseño: 2026-10-11 · **Diseño de referencia histórico**.
+
+**Entrega nativa P03 (02-11-2026), en revisión independiente:**
+[implementación y evidencias](F05-P03_IMPLEMENTACION.md),
+[contrato ejecutable](../../../../../../desarrollo/integration/f05/INITIATIVE.md).
+El runtime inicial cubre obligaciones de escaneo ligadas a servicio F04 y
+comunicadas explícitamente. No implementa contactos, averías, reparaciones ni
+el scheduler general descrito como diseño abajo. UE 5.8.2/MSI sigue pendiente;
+F05 abierta y F06 bloqueada. El diseño no demuestra capacidades ejecutadas.
 
 ## Principio central
 La tripulación **vive y decide sin esperar al jugador**, pero solo a partir del estado y el conocimiento propio. El capitán NPC conserva iniciativa y autoridad legal incluso cuando el jugador es un alférez de guardia en Sensores. Si el jugador es capitán, conserva la última palabra dentro de sus atribuciones reales; su XO puede preparar soluciones, no imponerlas cuando el control es manual o requiere aprobación.
