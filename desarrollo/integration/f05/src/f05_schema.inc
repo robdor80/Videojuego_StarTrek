@@ -1,9 +1,10 @@
 // Included inside F04's domain namespace. The Core graph is the only storage.
 bool f05_shape(const WorldState& w,U id,std::set<U>& a,std::set<U>& q,std::set<U>& ar,std::set<U>& rr) {
  if(type(w,id,"f05_request")) {
-  a={F05_KEY,F05_REVISION,END,OP,CAUSE,TICK};ar={SHIP,ISSUER,PERSON,SLOT};q=a;rr=ar;
+  a={F05_KEY,F05_REVISION,END,OP,CAUSE,TICK};ar={SHIP,ISSUER,PERSON,SLOT};q=a;rr=ar;ar.insert(F05_DELEGATION_REF);
  } else if(type(w,id,"f05_order")) {
   a={F05_STATUS,CODE,TICK};q=a;ar={SHIP,ISSUER,PERSON,SLOT,F05_REQUEST_REF,ORIGIN,F05_TASK_REF,F05_RESULT_REF,F05_PREVIOUS_REF};
+  ar.insert(F05_APPROVAL_REF);
   rr={SHIP,ISSUER,PERSON,SLOT,F05_REQUEST_REF,F05_PREVIOUS_REF};
  } else if(type(w,id,"f05_task")) {
   a={F05_STATUS,TICK};ar={SHIP,PERSON,F05_ORDER_REF};q=a;rr=ar;
@@ -15,6 +16,11 @@ bool f05_shape(const WorldState& w,U id,std::set<U>& a,std::set<U>& q,std::set<U
  } else if(type(w,id,"f05_event")) {
   a={F05_STATUS,CODE,TICK};q=a;ar={SHIP,PERSON,F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF};
   rr={SHIP,PERSON,F05_REQUEST_REF,F05_ORDER_REF};
+ } else if(type(w,id,"f05_delegation_event")) {
+  a={F05_KEY,F05_REVISION,CAUSE,TICK,F05_STATUS,F05_MODE,OP};q=a;
+  ar={SHIP,PERSON,F05_DELEGATION_REF,F05_PREVIOUS_REF};rr={SHIP,PERSON,F05_DELEGATION_REF};
+ } else if(type(w,id,"f05_approval")) {
+  a={F05_REVISION,CAUSE,TICK};q=a;ar={SHIP,PERSON,F05_ORDER_REF,F05_DELEGATION_REF};rr=ar;
  } else return false;
  return true;
 }
@@ -25,7 +31,14 @@ bool f05_step(U from,U to) {
   (from==F05_ACCEPTED && (to==F05_EXECUTING || to==F05_CANCELLED)) ||
   (from==F05_EXECUTING && (to==F05_COMPLETED || to==F05_FAILED));
 }
+bool f05_delegation_step(U from,U to) {
+ return (!from && to==F05_DRAFT) || (from==F05_DRAFT && (to==F05_ACTIVE || to==F05_REVOKED || to==F05_EXPIRED)) ||
+  ((from==F05_ACTIVE || from==F05_SUSPENDED) && (to==F05_ACTIVE || to==F05_SUSPENDED || to==F05_REVOKED || to==F05_EXPIRED));
+}
+
+#include "f05_delegation_schema.inc"
 bool f05_schema(const Campaign& c) {
+ if(!f05_delegations_schema(c))return false;
  const auto& w=c.world;std::set<U> keys,requests,tasks,attempts,results,events;
  const auto orders=all(w,"f05_order");if(orders.size()>512)return false;
  for(U o:orders) {
@@ -35,8 +48,9 @@ bool f05_schema(const Campaign& c) {
    state<F05_ISSUED || state>F05_CANCELLED || val(w,o,CODE)>F05_TRANSITION || val(w,o,TICK)>c.time.now())return false;
   for(Ref f:{SHIP,ISSUER,PERSON,SLOT})if(ref(w,o,f)!=ref(w,r,f))return false;
   if(!type(w,ref(w,o,SLOT),"slot"))return false;
-  const U origin=ref(w,o,ORIGIN);
-  if((!origin && state!=F05_REFUSED) || (origin && (!type(w,origin,"appointment") || ref(w,origin,PERSON)!=ref(w,o,ISSUER))))return false;
+  const U origin=ref(w,o,ORIGIN),delegation=ref(w,r,F05_DELEGATION_REF);
+  if(delegation && (!type(w,delegation,"delegation") || !has(w,delegation,F05_MODE) || origin!=ref(w,delegation,ORIGIN)))return false;
+  if((!origin && state!=F05_REFUSED) || (origin && (!type(w,origin,"appointment") || ref(w,origin,PERSON)!=(delegation?ref(w,delegation,ISSUER):ref(w,o,ISSUER)))))return false;
   if(val(w,o,TICK)!=val(w,r,TICK))return false;
   if((state==F05_ISSUED || state==F05_REFUSED) && task)return false;
   if((state==F05_ACCEPTED || state==F05_COMPLETED || state==F05_FAILED) && !task)return false;

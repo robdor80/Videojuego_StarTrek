@@ -12,11 +12,16 @@ U f05_origin(const Campaign& c,U issuer) {
  }
  need(false,F04_DENIED);return 0;
 }
+#include "f05_delegation.inc"
 void f05_validate(const Campaign& c,U request,U origin) {
  const auto& w=c.world;const U issuer=ref(w,request,ISSUER),recipient=ref(w,request,PERSON),t=c.time.now();
  need(t<val(w,request,END),F04_EXPIRED);
+ const U delegation=ref(w,request,F05_DELEGATION_REF);
+ if(delegation)f05_delegated_authority(c,delegation,request);
+ else {
  need(!origin || (window(w,origin,t) && ref(w,origin,PERSON)==issuer),F04_REVOKED);
  (void)f05_origin(c,issuer);
+ }
  need(val(w,request,OP)==F04_SCAN,F05_UNSUPPORTED);
  need(type(w,recipient,"person") && member(w,recipient) && val(w,recipient,CATEGORY)==1,F04_DENIED);
  need(available(w,recipient,t),F04_UNAVAILABLE);
@@ -44,8 +49,8 @@ void f05_event(Campaign& c,const ContentCatalog& cat,U order,U actor,U state,U c
  set(c,e,F05_STATUS,state);set(c,e,CODE,code);
  set(c,order,F05_STATUS,state);set(c,order,CODE,code);link(c,order,F05_PREVIOUS_REF,e);
 }
-bool f05_same(const WorldState& w,U r,const F05OrderRequest& q) {
- return ref(w,r,ISSUER)==q.issuer.id && ref(w,r,PERSON)==q.recipient.id && ref(w,r,SHIP)==q.ship.id &&
+bool f05_same(const WorldState& w,U r,const F05OrderRequest& q,U delegation) {
+ return ref(w,r,F05_DELEGATION_REF)==delegation && ref(w,r,ISSUER)==q.issuer.id && ref(w,r,PERSON)==q.recipient.id && ref(w,r,SHIP)==q.ship.id &&
   ref(w,r,SLOT)==q.station.id && val(w,r,F05_KEY)==q.key && val(w,r,F05_REVISION)==q.expected_revision &&
   val(w,r,END)==q.deadline && val(w,r,CAUSE)==q.cause && val(w,r,OP)==q.operation;
 }
@@ -53,7 +58,7 @@ void f05_commit(F04Session* s,std::unique_ptr<Campaign>& next,U order,F05Receipt
  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;*out=f05_receipt(*s->c,order);
 }
 }
-uint32_t f05_submit(F04Session* s,const F05OrderRequest* q,F05Receipt* out) {
+static uint32_t f05_submit_impl(F04Session* s,const F05OrderRequest* q,U delegation,F05Receipt* out) {
  if(!q || !out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {
   need(!q->reserved && q->key && q->key<=FOREVER && q->cause && q->cause<=FOREVER &&
@@ -64,13 +69,15 @@ uint32_t f05_submit(F04Session* s,const F05OrderRequest* q,F05Receipt* out) {
   // Campaign-wide tombstone: lookup precedes revision, authority and deadline.
   for(U o:all(w,"f05_order")) {
    const U r=ref(w,o,F05_REQUEST_REF);if(val(w,r,F05_KEY)!=q->key)continue;
-   if(!f05_same(w,r,*q))return F05_IDEMPOTENCY_CONFLICT;
+   if(!f05_same(w,r,*q,delegation))return F05_IDEMPOTENCY_CONFLICT;
    *out=f05_receipt(*s->c,o);return out->code;
   }
+  need(!delegation || (type(w,delegation,"delegation") && has(w,delegation,F05_MODE)),F04_ARGUMENT);
   need(q->deadline>s->c->time.now(),F04_ARGUMENT);
   need(all(w,"f05_order").size()<512,F04_CAPACITY);
   auto next=std::make_unique<Campaign>(*s->c);const auto& cat=*s->content.catalog();
   const U r=f05_record(*next,cat,"f05_request",q->recipient.id);
+  link(*next,r,F05_DELEGATION_REF,delegation);
   link(*next,r,ISSUER,q->issuer.id);link(*next,r,SLOT,q->station.id);
   set(*next,r,F05_KEY,q->key);set(*next,r,F05_REVISION,q->expected_revision);set(*next,r,END,q->deadline);
   set(*next,r,CAUSE,q->cause);set(*next,r,OP,q->operation);
@@ -80,10 +87,14 @@ uint32_t f05_submit(F04Session* s,const F05OrderRequest* q,F05Receipt* out) {
   uint32_t code=F04_OK;
   try {
    need(q->expected_revision==w.revision(),F04_STALE);
-   const U origin=f05_origin(*next,q->issuer.id);link(*next,o,ORIGIN,origin);f05_validate(*next,r,origin);
+   const U origin=delegation?ref(w,delegation,ORIGIN):f05_origin(*next,q->issuer.id);link(*next,o,ORIGIN,origin);f05_validate(*next,r,origin);
   } catch(const Denial& d) {code=d.code;f05_event(*next,cat,o,q->issuer.id,F05_REFUSED,code);}
   f05_commit(s,next,o,out);return code;
  });
+}
+uint32_t f05_submit(F04Session* s,const F05OrderRequest* q,F05Receipt* out) {return f05_submit_impl(s,q,0,out);}
+uint32_t f05_submit_delegated(F04Session* s,const F05OrderRequest* q,U delegation,F05Receipt* out) {
+ if(!delegation)return F04_ARGUMENT;return f05_submit_impl(s,q,delegation,out);
 }
 uint32_t f05_receive(F04Session* s,F04Ref who,U revision,U order,F05Receipt* out) {
  if(!out)return F04_ARGUMENT;*out={};return call(s,[&]()->uint32_t {
@@ -92,8 +103,9 @@ uint32_t f05_receive(F04Session* s,F04Ref who,U revision,U order,F05Receipt* out
   if(out->state==F05_ACCEPTED || f05_terminal(out->state))return out->code;
   need(out->state==F05_ISSUED,F05_TRANSITION);need(revision==w.revision(),F04_STALE);
   auto next=std::make_unique<Campaign>(*s->c);const auto& cat=*s->content.catalog();uint32_t code=F04_OK;
-  try {f05_validate(*next,out->request,ref(w,order,ORIGIN));}
+  try {f05_validate(*next,out->request,ref(w,order,ORIGIN));f05_approval_required(*next,order);}
   catch(const Denial& d){code=d.code;}
+  if(code==F04_REVIEW)return code;
   if(code==F04_OK) {
    const U task=f05_record(*next,cat,"f05_task",who.id);link(*next,task,F05_ORDER_REF,order);
    set(*next,task,F05_STATUS,F05_TASK_ACKNOWLEDGED);link(*next,order,F05_TASK_REF,task);
@@ -113,7 +125,7 @@ uint32_t f05_execute_order(F04Session* s,F04Ref who,U revision,U order,F05Receip
   set(*next,task,F05_STATUS,F05_TASK_IN_PROGRESS);f05_event(*next,cat,order,who.id,F05_EXECUTING,F04_OK,attempt);
   uint32_t code=F04_OK;bool performed=false;ActionResult actual{};
   try {
-   f05_validate(*next,request,ref(w,order,ORIGIN));
+   f05_validate(*next,request,ref(w,order,ORIGIN));f05_approval_required(*next,order);
    const F04Request op{who,next->world.revision(),F04_SCAN,0,0,0,0,0,val(w,request,CAUSE)};
    performed=true;(void)perform(*next,cat,op,false,&actual);
   } catch(const Denial& d){code=d.code;}
@@ -136,7 +148,8 @@ uint32_t f05_cancel(F04Session* s,F04Ref who,U revision,U order,F05Receipt* out)
   need(who.id==ref(w,order,ISSUER) || who.id==commander(w,s->c->time.now()),F04_DENIED);
   *out=f05_receipt(*s->c,order);if(out->state==F05_CANCELLED)return F04_OK;
   need(!f05_terminal(out->state),F05_TRANSITION);need(revision==w.revision(),F04_STALE);
-  (void)f05_origin(*s->c,who.id);
+  const U d=ref(w,ref(w,order,F05_REQUEST_REF),F05_DELEGATION_REF);
+  if(d && who.id==ref(w,order,ISSUER))f05_grant_live(*s->c,d);else (void)f05_origin(*s->c,who.id);
   auto next=std::make_unique<Campaign>(*s->c);
   if(out->task)set(*next,out->task,F05_STATUS,F05_TASK_CANCELLED);
   f05_event(*next,*s->content.catalog(),order,who.id,F05_CANCELLED,F04_OK);f05_commit(s,next,order,out);return F04_OK;
@@ -171,3 +184,5 @@ uint32_t f05_events_page(F04Session* s,F04Ref who,U order,U after,F05EventView* 
   }return F04_OK;
  });
 }
+
+#include "f05_delegation_api.inc"

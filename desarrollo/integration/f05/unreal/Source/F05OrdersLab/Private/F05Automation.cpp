@@ -3,6 +3,7 @@
 #include "Engine/World.h"
 #include "GameFramework/Actor.h"
 #include "f05_orders.h"
+#include "f05_delegation.h"
 bool F05BridgeReady();
 #if WITH_DEV_AUTOMATION_TESTS
 namespace {
@@ -55,5 +56,45 @@ bool FF05Visual::RunTest(const FString&) {
  AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Presentation marker"),Marker);
  if(Marker)Marker->Destroy();World->DestroyWorld(false);C.Save(B);TestTrue(TEXT("Actor and world removal preserve order"),A==B);
  TestEqual(TEXT("Execute offscreen"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));TestEqual(TEXT("Completed"),R.state,uint32(F05_COMPLETED));return true;
+}
+
+namespace {
+bool DelegationReady(Campaign& C){return C.Open() && C.Ready() && C.Op(C.H.captain,F04_ASSIGN,C.H.bridge,C.H.watch.id)==F04_OK && C.Op(C.H.captain,F04_DUTY,C.H.watch.id,C.H.bridge,28800)==F04_OK;}
+uint32 Grant(Campaign& C,F05DelegationView& D,uint32 Mode=F05_DELEGATED_AUTONOMOUS){
+ F05DelegationRequest Q{C.H.captain,C.H.watch,C.H.ship,{C.H.ship.scope,C.H.sensors},C.H.ensign,1000,C.Revision(),0,80,50201,0,F04_SENSORS,F04_SCAN,Mode,0};
+ uint32 Code=f05_delegate(C.Session,&Q,&D);if(Code)return Code;
+ F05DelegationChange Change{C.H.captain,D.id,1001,C.Revision(),50202,F05_ACTIVE,Mode};return f05_change_delegation(C.Session,&Change,&D);
+}
+uint32 DelegatedOrder(Campaign& C,uint64 D,F05Receipt& R){auto Q=C.Request();Q.issuer=C.H.watch;Q.deadline=80;return f05_submit_delegated(C.Session,&Q,D,&R);}
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05DelegationRevocation,"F05.P02.DelegationRevocationRecovery",Flags)
+bool FF05DelegationRevocation::RunTest(const FString&){
+ Campaign C;if(!TestTrue(TEXT("Real F04 campaign"),DelegationReady(C)))return false;
+ F05DelegationView D{};F05Receipt R{};TestEqual(TEXT("Grant"),Grant(C,D),uint32(F04_OK));TestEqual(TEXT("Issue"),DelegatedOrder(C,D.id,R),uint32(F04_OK));
+ TestEqual(TEXT("Accept without effect"),f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));
+ TArray<uint8> Pending,Future,Restored;TestTrue(TEXT("Save pending delegation and task"),C.Save(Pending));
+ F05DelegationChange Change{C.H.captain,D.id,1002,C.Revision(),50203,F05_REVOKED,F05_DELEGATED_AUTONOMOUS};TestEqual(TEXT("Revoke"),f05_change_delegation(C.Session,&Change,&D),uint32(F04_OK));
+ TestEqual(TEXT("Reject pending effect"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_REVOKED));
+ F05ResultView Result{};TestEqual(TEXT("Result"),f05_result(C.Session,C.H.captain,R.order,&Result),uint32(F04_OK));TestEqual(TEXT("No Core scan"),Result.performed,uint32(0));C.Save(Future);
+ TestTrue(TEXT("Restore"),C.Load(Pending));Change.actor=C.H.captain;Change.expected_revision=C.Revision();f05_change_delegation(C.Session,&Change,&D);f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R);C.Save(Restored);TestTrue(TEXT("Exact revoked future"),Future==Restored);
+ f05_execute_order(C.Session,C.H.ensign,0,R.order,&R);C.Save(Restored);TestTrue(TEXT("Retry unchanged"),Future==Restored);return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05DelegationModes,"F05.P02.ModesAndLimits",Flags)
+bool FF05DelegationModes::RunTest(const FString&){
+ Campaign C;if(!TestTrue(TEXT("Ready"),DelegationReady(C)))return false;F05DelegationView D{};F05Receipt R{};
+ TestEqual(TEXT("Proposal grant"),Grant(C,D,F05_PROPOSAL_REQUIRES_APPROVAL),uint32(F04_OK));TestEqual(TEXT("Propose order"),DelegatedOrder(C,D.id,R),uint32(F04_OK));TArray<uint8> A,B;C.Save(A);
+ TestEqual(TEXT("Requires approval"),f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_REVIEW));C.Save(B);TestTrue(TEXT("Proposal has no effect"),A==B);
+ const uint64 Order=R.order;
+ TestEqual(TEXT("No self approval"),f05_approve_order(C.Session,C.H.watch,C.Revision(),R.order,1,&R),uint32(F04_DENIED));
+ TestEqual(TEXT("Captain approval"),f05_approve_order(C.Session,C.H.captain,C.Revision(),Order,1,&R),uint32(F04_OK));
+ TestEqual(TEXT("Accept approved"),f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));TestEqual(TEXT("Actual Core scan"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));
+ F05DelegationRequest Q{C.H.watch,C.H.head,C.H.ship,{C.H.ship.scope,C.H.sensors},C.H.ensign,1003,C.Revision(),0,80,50201,D.id,F04_SENSORS,F04_SCAN,F05_DELEGATED_AUTONOMOUS,0};
+ TestEqual(TEXT("Explicit subdelegation rejection"),f05_delegate(C.Session,&Q,&D),uint32(F05_UNSUPPORTED));return true;
+}
+IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05DelegationChain,"F05.P02.ExpiryAndChainOfCommand",Flags)
+bool FF05DelegationChain::RunTest(const FString&){
+ Campaign C;if(!TestTrue(TEXT("Ready"),DelegationReady(C)))return false;F05DelegationView D{};F05Receipt R{};TestEqual(TEXT("Grant"),Grant(C,D),uint32(F04_OK));TestEqual(TEXT("Issue"),DelegatedOrder(C,D.id,R),uint32(F04_OK));f05_receive(C.Session,C.H.ensign,C.Revision(),R.order,&R);
+ TestEqual(TEXT("Revoke original command appointment"),C.Op(C.H.captain,F04_REVOKE,D.origin),uint32(F04_OK));TestEqual(TEXT("F04 succession cannot rescue revoked origin"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_REVOKED));
+ Campaign E;if(!TestTrue(TEXT("Independent expiry campaign"),DelegationReady(E)))return false;Grant(E,D);DelegatedOrder(E,D.id,R);f05_receive(E.Session,E.H.ensign,E.Revision(),R.order,&R);uint64 N=0;TestEqual(TEXT("Core clock"),f04_advance(E.Session,80,4096,&N),uint32(F04_OK));TestEqual(TEXT("Exact expiry"),f05_execute_order(E.Session,E.H.ensign,E.Revision(),R.order,&R),uint32(F04_EXPIRED));return true;
 }
 #endif

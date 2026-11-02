@@ -3,6 +3,7 @@ param(
  [Parameter(Mandatory=$true)][string]$CoreSource,
  [Parameter(Mandatory=$true)][string]$BuildRoot,
  [string]$Generator='Visual Studio 18 2026',
+ [ValidateSet('P01','P02','All')][string]$Suite='All',
  [string]$EngineRoot='C:/Program Files/Epic Games/UE_5.8'
 )
 $ErrorActionPreference='Stop'
@@ -41,6 +42,7 @@ try {
   Copy-Item (Join-Path $PSScriptRoot 'unreal/*') $Lab -Recurse -Force
   foreach($Dir in @('ThirdParty/include','ThirdParty/Win64','Binaries/Win64')){New-Item -ItemType Directory -Force (Join-Path $Lab $Dir) | Out-Null}
   Copy-Item (Join-Path $PSScriptRoot '../f04/include/f04_bridge.h') (Join-Path $Lab 'ThirdParty/include') -Force
+  Copy-Item (Join-Path $PSScriptRoot 'include/f05_delegation.h') (Join-Path $Lab 'ThirdParty/include') -Force
   Copy-Item (Join-Path $PSScriptRoot 'include/f05_orders.h') (Join-Path $Lab 'ThirdParty/include') -Force
   Set-Content (Join-Path $Lab 'ThirdParty/include/f05_core_revision.h') -Encoding ascii ('#define F05_EXPECTED_CORE_SHA "'+$Pin+'"')
   foreach($Ext in @('lib','dll')){Copy-Item (Join-Path $Native "f04/Release/TrekF04Bridge.$Ext") (Join-Path $Lab 'ThirdParty/Win64') -Force}
@@ -53,9 +55,11 @@ try {
  }
  if($Stage -in @('Unreal','All')){Logged 'ue-build' (Join-Path $EngineRoot 'Engine/Build/BatchFiles/Build.bat') @('F05OrdersLabEditor','Win64','Development',"-Project=$Project",'-WaitMutex','-NoHotReload','-MaxParallelActions=4')}
  if($Stage -in @('TestUnreal','All')){
+  $Prefix=if($Suite -eq 'All'){'F05.'}else{"F05.$Suite"}
+  $Expected=if($Suite -eq 'All'){6}else{3}
   $Report=Join-Path $BuildRoot "$Run-ue-report"
-  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') @($Project,'-unattended','-nop4','-nosplash','-NullRHI','-nosound','-NoLiveCoding','-ExecCmds=Automation RunTests F05.P01','-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')
+  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') @($Project,'-unattended','-nop4','-nosplash','-NullRHI','-nosound','-NoLiveCoding',"-ExecCmds=Automation RunTests $Prefix",'-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')
   $Result=Get-Content (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
-  if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne 3){throw 'Expected exactly three passing F05.P01 Unreal tests'}
+  if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne $Expected){throw "Expected $Expected passing $Prefix Unreal tests"}
  }
 } finally {$env:TEMP=$PreviousTemp;$env:TMP=$PreviousTmp;$env:F04_TEST_TEMP_ROOT=$PreviousReferenceTemp}

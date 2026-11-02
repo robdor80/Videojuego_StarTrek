@@ -1,4 +1,4 @@
-name: F05 P01 authoritative orders
+name: F05 P01 and P02 authoritative orders
 on:
   pull_request:
     paths:
@@ -45,7 +45,7 @@ jobs:
           if($LASTEXITCODE){exit $LASTEXITCODE}
           ctest --test-dir build/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
           if($LASTEXITCODE){exit $LASTEXITCODE}
-      - name: Build single F04 session with P01 enabled
+      - name: Build single F04 session with P01 and P02 enabled
         shell: pwsh
         run: |
           $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/build/f05-reference-temp"
@@ -69,7 +69,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p01-${{ matrix.os }}
+          name: f05-p02-${{ matrix.os }}
           path: |
             build/core/core.xml
             build/f05/f05-and-f04.xml
