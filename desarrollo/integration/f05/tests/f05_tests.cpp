@@ -105,7 +105,7 @@ void run(const std::string& name,const std::string& file) {
   l.ready();auto q=l.request();auto r=l.submit(q);auto b=l.save();check(l.submit(q).order==r.order && l.save()==b,"duplicate issued");
   r=l.receive(r.order);b=l.save();l.receive(r.order);l.submit(q);check(l.save()==b,"duplicate accepted");
   r=l.execute(r.order);b=l.save();l.execute(r.order);l.submit(q);check(l.save()==b,"duplicate complete has no second effect/event");
-  for(int i=0;i<5;++i){auto bad=q;if(i==0)bad.operation=F04_BRIDGE;if(i==1)bad.recipient=l.h.doctor;if(i==2)bad.cause++;if(i==3)bad.deadline++;if(i==4)bad.expected_revision++;l.submit(bad,F05_IDEMPOTENCY_CONFLICT);check(l.save()==b,"conflicting payload rejected unchanged");}
+  for(int i=0;i<6;++i){auto bad=q;if(i==0)bad.operation=F04_BRIDGE;if(i==1)bad.recipient=l.h.doctor;if(i==2)bad.cause++;if(i==3)bad.deadline++;if(i==4)bad.expected_revision++;if(i==5)bad.issuer=l.h.doctor;auto conflict=l.submit(bad,F05_IDEMPOTENCY_CONFLICT);check(!conflict.order && !conflict.result,"conflict never discloses another order");check(l.save()==b,"conflicting payload rejected unchanged");}
   l.load(b);q=l.replay(r.order);l.submit(q);l.execute(r.order);check(l.save()==b,"idempotency survives reload/scopes");
  } else if(name=="revalidate") {
   l.ready();auto a=l.accepted();l.op(l.h.head,F04_ABSENCE,l.h.ensign.id,0,0,50,F04_SICK);auto r=l.execute(a.order,F04_UNAVAILABLE);check(r.state==F05_FAILED && !l.result(r.order).performed,"medical change stops Core action");

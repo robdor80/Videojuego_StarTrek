@@ -64,7 +64,8 @@ uint32_t f05_submit(F04Session* s,const F05OrderRequest* q,F05Receipt* out) {
   // Campaign-wide tombstone: lookup precedes revision, authority and deadline.
   for(U o:all(w,"f05_order")) {
    const U r=ref(w,o,F05_REQUEST_REF);if(val(w,r,F05_KEY)!=q->key)continue;
-   *out=f05_receipt(*s->c,o);return f05_same(w,r,*q)?out->code:uint32_t(F05_IDEMPOTENCY_CONFLICT);
+   if(!f05_same(w,r,*q))return F05_IDEMPOTENCY_CONFLICT;
+   *out=f05_receipt(*s->c,o);return out->code;
   }
   need(q->deadline>s->c->time.now(),F04_ARGUMENT);
   need(all(w,"f05_order").size()<512,F04_CAPACITY);
