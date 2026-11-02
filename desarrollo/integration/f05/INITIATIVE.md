@@ -64,6 +64,9 @@ disponibilidad, guardia, puesto y presencia lógica. No busca reemplazos secreto
 no mueve personas y no reasigna guardias. Si no es elegible informa o escala.
 El rango y la proximidad al jugador no conceden autoridad. F04 determina el mando
 efectivo; ser XO por sí mismo no permite ordenar mientras otro conserva el mando.
+El dominio `service_scan_obligation` queda registrado en
+`sistemas/gameplay/chain_of_command/automatic_command_decision_registry_v0.1.json`
+con propietario, cancelación/revisión, delegación y restricciones explícitas.
 
 La recepción y ejecución pasan por `f05_receive` y `f05_execute_order` originales.
 P01/P02 revalidan origen, cualificación, disponibilidad, guardia, ubicación, revisión,
@@ -99,6 +102,9 @@ La transacción por copia abarca la llamada P01 y el registro P03, preservando
 WorldState, RNG y Timeline ante un fallo. No hay almacén lateral. Se reutilizan
 CampaignPersistence e HistoryPersistence. Se retienen las obligaciones y sus
 dependencias históricas para no perder tombstones al consolidar.
+El build P03 carga los guardados F04/P01/P02 anteriores; los builds antiguos
+rechazan las nuevas definiciones o relaciones. No se modifica el formato binario
+Core ni se ofrece una migración inversa que elimine hechos.
 
 Límites explícitos: una necesidad, un proveedor, **una transición P01 máxima por
 evaluación**, de 1 a 32 hechos examinados; selección completa requiere los siete
@@ -125,6 +131,19 @@ los escenarios nativos; `ctest -R '^f05\.'` incluye P01/P02. La selección corta
 README incluye regresión F04. F02/F03 y las campañas largas conservan sus pins
 originales; las campañas usan sus seis oráculos congelados, sin cambiar expectativas.
 La suite completa Core se compila aparte con JSON y BUILD_TESTING activados.
+
+`collect_initiative_evidence.py` exporta JUnit ejecutados, aceptaciones de las seis
+campañas, huellas de fuentes y pruebas documentales a un directorio de evidencia
+nuevo. Rechaza tests fallidos/omitidos o campañas sin aceptación real; no genera
+un PASS de sustitución. Las rutas temporales se normalizan sin alterar resultados.
+Después de ejecutar las suites, puede reproducirse con rutas elegidas por el operador:
+
+```sh
+python desarrollo/integration/f05/collect_initiative_evidence.py \
+  --native "$NATIVE_JUNIT" --core "$CORE_JUNIT" --f02 "$F02_JUNIT" --f03 "$F03_JUNIT" \
+  --historical "$HISTORY_JUNIT" --history-runs "$HISTORY_RUNS" \
+  --temp-root "$TEMP_OUTPUT_ROOT" --output "$NEW_EVIDENCE_DIRECTORY"
+```
 
 No existe dependencia de Actor, UWorld, animación, UI, puente o proveedor IA en
 el controlador. Las pruebas nativas comparan bytes de campaña, decisiones, reloj

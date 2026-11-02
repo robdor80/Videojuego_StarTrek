@@ -39,7 +39,12 @@ def main():
     summary = {'utc': datetime.datetime.now(datetime.timezone.utc).isoformat(),
                'platform': platform.platform(), 'python': platform.python_version(),
                'source_base': 'aff01c31c386fe0813320b82a828e2e6c5ab23d8',
+               'source_commit_before_evidence': subprocess.check_output(['git', 'rev-parse', 'HEAD'], cwd=REPO, text=True).strip(),
                'core_p03': (REPO / 'desarrollo/integration/f05/core-revision.txt').read_text().strip(),
+               'core_f02': '4f282863737bcd8f5add401202a9e1064c133672',
+               'core_f03': (REPO / 'desarrollo/integration/f03/core-revision.txt').read_text().strip(),
+               'core_f04_history': (REPO / 'desarrollo/integration/f04/core-history-revision.txt').read_text().strip(),
+               'oracle_origin_core': json.loads((REPO / 'desarrollo/integration/f04/tests/fixtures/history_reference_v1.json').read_text())['reference_core_revision'],
                'suites': {}, 'unreal': 'PENDIENTE', 'msi': 'PENDIENTE'}
 
     def scrub(value):
@@ -61,8 +66,10 @@ def main():
         exports[name + '.xml'] = scrub(raw.decode()).encode()
 
     native = summary['suites']['native']['cases']
-    for prefix, count in (('f05.p03_', 26), ('f05.p02_', 19)):
+    for prefix, count in (('f05.p03_', 26), ('f05.p02_', 20)):
         require(sum(name.startswith(prefix) for name in native) == count, f'Missing {prefix} cases')
+    require(sum(name.startswith('f05.') and not name.startswith(('f05.p02_', 'f05.p03_'))
+                for name in native) == 20, 'Missing P01 cases')
     require(summary['suites']['historical']['tests'] == 6, 'All six historical campaigns required')
     acceptance = {}
     for path in sorted(args.history_runs.glob('*/acceptance.json')):
@@ -74,6 +81,10 @@ def main():
                 'Historical run did not match original oracle')
         acceptance[key] = data
         exports['campaign-' + key + '.json'] = scrub(json.dumps(data, indent=2) + '\n').encode()
+        for phase in ('campaign', 'resume', 'audit'):
+            log = path.parent / (phase + '.log')
+            require(log.is_file(), 'Missing actual historical phase log')
+            exports[key + '-' + phase + '.log'] = scrub(log.read_text()).encode()
     require(set(acceptance) == {'1-365', '2-365', '3-365', '4-365', '5-365', '5-730'},
             'Missing actual historical acceptance')
 
@@ -100,10 +111,14 @@ def main():
         'desarrollo/integration/f04/src/f04_bridge.cpp', 'desarrollo/integration/f04/src/f04_history.inc',
         'desarrollo/integration/f04/tests/fixtures/history_reference_v1.json',
         'desarrollo/integration/f05/CMakeLists.txt', 'desarrollo/integration/f05/core-revision.txt',
+        'desarrollo/integration/f05/collect_initiative_evidence.py',
+        'sistemas/gameplay/chain_of_command/automatic_command_decision_registry_v0.1.json',
         'desarrollo/integration/f05/run_f05.ps1', '.github/workflows/f05-native-orders.yml'))
-    exports['source-sha256.json'] = (json.dumps({str(p.relative_to(REPO)): digest(p.read_bytes().replace(b'\r\n', b'\n')))
+    exports['source-sha256.json'] = (json.dumps({str(p.relative_to(REPO)): digest(p.read_bytes().replace(b'\r\n', b'\n'))
                                                for p in sorted(sources)}, indent=2) + '\n').encode()
     exports['summary.json'] = (json.dumps(summary, indent=2) + '\n').encode()
+    # Preserve exported checksums on Windows checkouts with core.autocrlf.
+    exports['.gitattributes'] = b'* -text\n'
     args.output.mkdir(parents=True)
     for name, data in exports.items():
         (args.output / name).write_bytes(data)

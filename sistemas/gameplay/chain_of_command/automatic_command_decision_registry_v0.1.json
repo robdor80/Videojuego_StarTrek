@@ -165,6 +165,27 @@
         "communication_capability",
         "known_representation_scope"
       ]
+    },
+    "service_scan_obligation": {
+      "authority_owner": "effective_F04_command_or_current_sensors_department_head",
+      "engine_default": "evaluate_explicitly_briefed_authorized_scan_obligation_for_existing_F04_service",
+      "override_policy": "authorized_P01_cancellation_before_terminal_effect; player_recipient_requires_explicit_input; player_captain_approval_required_in_manual_or_proposal_mode",
+      "delegation_policy": "P02_F04_SCAN_only_with_pinned_source_appointment_station_executor_interval_and_control_mode",
+      "hard_constraints": [
+        "actor_scoped_Core_knowledge",
+        "actual_F04_service",
+        "qualification",
+        "availability_and_medical_fitness",
+        "logical_station_presence",
+        "current_command_and_appointments",
+        "active_delegation_limits_and_revocation",
+        "current_Core_revision_and_time",
+        "no_implicit_player_consent",
+        "one_P01_transition_per_evaluation",
+        "one_order_per_obligation"
+      ],
+      "implementation_scope": "F05-P03_native_Draft_for_independent_audit; no_contacts_or_sensor_discoveries; UE_5.8.2_MSI_pending",
+      "implementation_ref": "desarrollo/integration/f05/INITIATIVE.md"
     }
   },
   "future_domain_rule": [

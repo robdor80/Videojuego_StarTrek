@@ -62,21 +62,57 @@ futuros, decisiones, RNG y recuperación histórica.
 
 ## Validación de entrega
 
-La ejecución final sobre las últimas fuentes está en curso mientras se prepara
-esta PR Draft. Este párrafo será sustituido por los recuentos y las evidencias
-exportadas cuando finalice. No certifica PASS del HEAD publicado.
+Ejecutado en Cloud Linux, GCC **14.2.0**, CMake **4.4.4**, Release/C++20:
 
-Ya se han ejecutado satisfactoriamente Core completo (483), F02 (15), F03 (25),
-una primera regresión nativa de 322 casos, 22 tests documentales F05, 48 fixtures
-documentales, 3 referencias transversales y gobierno del Plan Maestro. Después se
-amplió la suite P03 y se reforzó el validador; requieren nueva ejecución final.
-Las seis campañas históricas F04 están en ejecución con sus oráculos originales.
+| Suite | Recuento verificado | Resultado |
+|---|---:|---|
+| P03 | 26 | PASS |
+| P01 íntegra | 20 | PASS |
+| P02 íntegra | 20 | PASS |
+| F04 cortas, organización, persistencia e historial | 261 | PASS |
+| Total de la integración F05/F04 | **327** | **327/327 PASS**, sin omitidas |
+| CoreRPG completo, JSON y BUILD_TESTING activados | 483 | PASS |
+| F02 con su pin original | 15 | PASS |
+| F03 con su pin original | 25 | PASS |
+| Campañas históricas F04 con oráculos originales | 6 | **6/6 PASS**, incluidos 730 días |
+| Tests documentales F05 | 22 | PASS; no acredita runtime |
+| Fixtures documentales F05 | 48 | Sin fallos; no acredita runtime |
+| Referencias transversales | 3 | PASS; no implementa F06 |
+| Gobierno del Plan Maestro | 16 fases / 80 pasos | PASS documental |
+
+La evidencia permanente se exporta en [evidence/F05-P03](evidence/F05-P03/summary.json):
+JUnit por suite, logs documentales, aceptaciones/logs de las seis campañas, huellas
+de fuentes y SHA256 de los archivos publicados. Los reportes normalizan únicamente
+las rutas temporales a `$OUTPUT` y la raíz a `$REPO`; se conservan resultados,
+recuentos y nombres. Las huellas de fuentes permiten comprobar que el código
+nativo validado coincide con el del commit publicado aunque la evidencia se añada
+en un commit posterior. El exportador rechaza resultados fallidos/omitidos.
+
+Muestra real en `native.xml`, `f05.p03_scenario`: necesidad **26**, capitán **3**,
+operador **5**, petición **29**, orden **30**, tarea **34**, intento **38**, resultado
+**40**, evento terminal **41**. Core devolvió stream **984065 (`0xF0401`)**, valor
+**99**, `performed=1`, `consumed_random=1`; los cuatro eventos P01 conservan su
+cadena. `population` usa una dotación real de **130**, servicio **357**, operador
+**47**, puesto **196** y orden **440**. No son resultados documentales inventados.
+
+`determinism` compara bytes del futuro lógico con/sin representación auxiliar;
+`process_save`/`process_load` terminan y recuperan en procesos separados;
+`history_fault` verifica recuperación tras publicación incierta, con bloqueo hasta
+recuperar disco; `revoked` impide la tirada después de revocar P02. La restauración
+rechaza conocimiento no comunicado, causalidad rota y actor de decisión falsificado.
+La campaña histórica de 730 días verifica **866.849 hechos originales**, **105
+bloques** y recuperación en proceso nuevo; su auditoría confirma todos los hashes
+de bloques originales. Las seis aceptaciones conservan `reference_contract_verified`
+y `all_blocks_equal_complete_history`, sin cambiar las expectativas originales.
 
 La CI [F05 nativa](https://github.com/robdor80/Videojuego_StarTrek/actions/workflows/f05-native-orders.yml)
 ejecuta Core completo, P01/P02/P03/F04 y F02/F03 en **Linux y Windows**.
 La CI [histórica F04](https://github.com/robdor80/Videojuego_StarTrek/actions/workflows/f04-history-persistence.yml)
 conserva las seis campañas en Windows. Los resultados del SHA de entrega están
-en Checks de la PR; runs de otro SHA no acreditan el HEAD final.
+en Checks de la [PR Draft #84](https://github.com/robdor80/Videojuego_StarTrek/pull/84);
+su descripción conserva enlaces a los runs exactos del HEAD final. Runs de otro
+SHA no acreditan el HEAD final. Las pruebas nativas Linux/Windows no sustituyen
+ninguna comprobación local MSI.
 
 ## MSI y límites
 
