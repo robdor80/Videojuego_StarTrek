@@ -2,7 +2,7 @@
 
 ## Apertura operativa — 31-10-2026
 
-**Estado vigente:** F05 **EN_CURSO**, con **P01 EN_CURSO solo como apertura administrativa** para desarrollar el primer flujo real de órdenes en CoreRPG y Star Trek. F04 se cierra en su corte probado mediante el [acta administrativa](../F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md); CoreRPG PR #13 ya está fusionada. La meta F05 **CORE_INTEGRADO continúa NO ALCANZADA**. P02–P04 requieren implementación posterior; las 19 pruebas y 48 escenarios de P05 acreditan únicamente la referencia histórica.
+**Estado vigente (02-11-2026):** F05 **EN_CURSO**. F05-P01 y P02 tienen implementación nativa auditada y fusionada en `main` (PR #81 y #82). **P01 y P02 EN_REVISION**, pendientes de pruebas con MSVC y Unreal Engine 5.8.2 en el MSI, incluida repetición en entorno limpio. P03 (iniciativa NPC) y P04 (IA) permanecen sin implementar. P05 solo cierra su suite histórica de referencia, no la integración global. **F06 bloqueada** hasta superar todas las validaciones obligatorias de F05. [Registro centralizado de pruebas MSI](REGISTRO_VALIDACIONES_MSI.md). La meta global `CORE_INTEGRADO` aún no está certificada.
 
 **Nota histórica:** las descripciones `EN_REVISION`, `BLOQUEADA` y `Core pendiente` que siguen reflejan el corte del 11–13/10/2026, antes de las nuevas integraciones, y no sustituyen al estado vigente del Plan Maestro. Las APIs y gates se deben volver a comprobar en el HEAD concreto de ambos repositorios.
 
