@@ -10,7 +10,7 @@ target_compile_features(f05_tests PRIVATE cxx_std_20)
 # On Windows the test executable must share the existing bridge DLL directory.
 set_target_properties(f05_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f04")
 foreach(case IN ITEMS scenario authority recipient unsupported scope stale reception
- duplicate revalidate expired cancel transition determinism corrupt buffers population history)
+ duplicate revalidate expired cancel transition determinism corrupt buffers population history history_fault)
  add_test(NAME f05.${case} COMMAND f05_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/${case}")
 endforeach()
 add_test(NAME f05.process_save COMMAND f05_tests process_save "${CMAKE_CURRENT_BINARY_DIR}/orders")

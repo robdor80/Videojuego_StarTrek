@@ -29,6 +29,7 @@ struct Lab {
  void ready(){op(h.head,F04_ASSIGN,h.sensors,h.ensign.id);op(h.head,F04_DUTY,h.ensign.id,h.sensors,0,28800);op(h.ensign,F04_MOVE,h.sensors);}
  void advance(U t){U n=0;eq(f04_advance(s,t,4096,&n),F04_OK,"Core advance");}
  std::vector<uint8_t> save(){U n=0;eq(f04_save(s,nullptr,0,&n),F04_CAPACITY,"save size");std::vector<uint8_t>b(n);eq(f04_save(s,b.data(),n,&n),F04_OK,"save");return b;}
+ std::vector<uint8_t> active(){U n=0;eq(f04_history_export_active(s,nullptr,0,&n),F04_CAPACITY,"active size");std::vector<uint8_t>b(n);eq(f04_history_export_active(s,b.data(),n,&n),F04_OK,"active checkpoint");return b;}
  void load(const std::vector<uint8_t>& b){eq(f04_load(s,b.data(),b.size()),F04_OK,"load");handles();}
  F05OrderRequest request(U key=1){return {h.captain,h.ensign,h.ship,{h.ship.scope,h.sensors},key,stats().revision,100,50501,F04_SCAN,0};}
  F05Receipt submit(const F05OrderRequest& q,uint32_t code=F04_OK){F05Receipt r{};eq(f05_submit(s,&q,&r),code,"submit");return r;}
@@ -134,6 +135,14 @@ void run(const std::string& name,const std::string& file) {
   std::vector<F04Position> p(130);U n=0,total=0;eq(f04_positions_page(l.s,l.h.captain,0,p.data(),130,&n,&total),F04_OK,"real positions");
   bool found=false;for(auto slot:p)if(slot.person && slot.qualification==F04_SENSORS && slot.on_duty){l.h.ensign=l.person(slot.person);l.h.sensors=slot.id;found=true;break;}check(found,"existing qualified roster operator");
   l.op(l.h.ensign,F04_MOVE,l.h.sensors);auto q=l.request();q.deadline=28900;auto a=l.receive(l.submit(q).order);l.execute(a.order);check(l.result(a.order).performed,"same API on F04 populated organization");
+ } else if(name=="history_fault") {
+  l.ready();auto a=l.accepted();auto dir=std::filesystem::path(file);for(unsigned i=0;std::filesystem::exists(dir);++i)dir=file+"-"+std::to_string(i);
+  std::array<uint8_t,16> uuid{5,5,2};eq(f04_history_migrate(l.s,dir.string().c_str(),uuid.data(),uuid.size()),F04_OK,"migrate accepted task");
+  a=l.execute(a.order);const auto completed=l.active();
+  eq(f04_history_publish(l.s,6),F04_SAVE,"fault after durable publication");
+  F05Receipt r{};eq(f05_execute_order(l.s,l.h.ensign,0,a.order,&r),F04_SAVE,"uncertain storage blocks replay");
+  eq(f04_history_open(l.s,dir.string().c_str()),F04_OK,"recover durable completed generation");l.handles();check(l.active()==completed,"durable action and audit recovered together");
+  l.execute(a.order);l.submit(l.replay(a.order));check(l.active()==completed,"retry after storage failure never rolls twice");
  } else if(name=="history") {
   l.ready();auto a=l.accepted();l.execute(a.order);l.advance(8*86400);
   auto dir=std::filesystem::path(file);for(unsigned i=0;std::filesystem::exists(dir);++i)dir=file+"-"+std::to_string(i);
@@ -145,9 +154,15 @@ void run(const std::string& name,const std::string& file) {
   l.ready();auto issued=l.submit(l.request());auto accepted=l.accepted(2);auto done=l.accepted(3);l.execute(done.order);
   auto q=l.request(4);q.operation=F04_BRIDGE;l.submit(q,F05_UNSUPPORTED);
   write(file+".pending",l.save());l.receive(issued.order);l.execute(issued.order);l.execute(accepted.order);write(file+".future",l.save());
+  auto dir=std::filesystem::path(file+".history");for(unsigned i=0;std::filesystem::exists(dir);++i)dir=file+".history-"+std::to_string(i);
+  std::array<uint8_t,16> uuid{5,5,3};eq(f04_history_migrate(l.s,dir.string().c_str(),uuid.data(),uuid.size()),F04_OK,"publish cross-process history");
+  std::ofstream pathfile(file+".history-path");pathfile<<dir.string();check(bool(pathfile),"history path fixture");
  } else if(name=="process_load") {
   l.load(read(file+".pending"));auto ids=orders(decode(l.save()));check(ids.size()==4,"cross-process four orders");auto b=l.save();l.submit(l.replay(ids[2]));l.execute(ids[2]);l.submit(l.replay(ids[3]),F05_UNSUPPORTED);check(l.save()==b,"cross-process completed/rejected idempotency");
   l.receive(ids[0]);l.execute(ids[0]);l.execute(ids[1]);check(l.save()==read(file+".future"),"different OS process exact future and RNG");
+  const auto future=l.save();std::ifstream pathfile(file+".history-path");std::string directory;std::getline(pathfile,directory);check(bool(pathfile) && !directory.empty(),"read durable directory");
+  Lab other;eq(f04_history_open(other.s,directory.c_str()),F04_OK,"different process Core history recover");other.handles();check(other.active()==future,"history cross-process exact Core state");
+  other.execute(ids[2]);other.submit(other.replay(ids[2]));check(other.active()==future,"history cross-process idempotency");
  } else throw std::runtime_error("unknown test");
 }
 int main(int argc,char** argv){try{check(argc>=2,"case required");run(argv[1],argc>2?argv[2]:"");std::cout<<argv[1]<<": PASS\n";return 0;}catch(const std::exception& e){std::cerr<<"FAIL: "<<e.what()<<"\n";return 1;}}
