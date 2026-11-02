@@ -97,10 +97,10 @@ FString UVHAutomaticDoorTools::BuildScene(const FString& File,const FString& Roo
 
 FString UVHAutomaticDoorTools::RunChecks(AVHAutomaticDoor* Door){
  auto Report=MakeShared<FJsonObject>();TArray<TSharedPtr<FJsonValue>> Cases;if(!Door){Report->SetStringField(TEXT("error"),TEXT("Missing door"));return Json(Report);}auto* World=Door->GetWorld();FActorSpawnParameters P;P.ObjectFlags|=RF_Transient;P.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
- auto* Pawn=World->SpawnActor<ACharacter>(ACharacter::StaticClass(),Door->GetActorLocation()+FVector(-160,0,90),FRotator::ZeroRotator,P);Pawn->GetCapsuleComponent()->SetCapsuleSize(35,90);Pawn->GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));Pawn->GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
+ auto* Pawn=World->SpawnActor<ACharacter>(ACharacter::StaticClass(),Door->GetActorTransform().TransformPosition(FVector(-160,0,90)),FRotator::ZeroRotator,P);Pawn->GetCapsuleComponent()->SetCapsuleSize(35,90);Pawn->GetCapsuleComponent()->SetCollisionProfileName(TEXT("Pawn"));Pawn->GetCapsuleComponent()->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);
  auto Move=[&](FVector Local){Pawn->SetActorLocation(Door->GetActorTransform().TransformPosition(Local));};auto Advance=[&](float Seconds){for(int32 I=0;I<FMath::CeilToInt(Seconds*60);I++)Door->AdvanceDoor(1.f/60);};
  auto Check=[&](const TCHAR* Name,bool Pass){auto O=MakeShared<FJsonObject>();O->SetStringField(TEXT("name"),Name);O->SetBoolField(TEXT("pass"),Pass);O->SetNumberField(TEXT("fraction"),Door->OpenFraction);O->SetStringField(TEXT("state"),StaticEnum<EVHDoorState>()->GetNameStringByValue((int64)Door->DoorState));O->SetStringField(TEXT("blocking_mesh"),Door->LastBlockingMesh);O->SetStringField(TEXT("blocking_normal"),Door->LastBlockingNormal.ToString());O->SetNumberField(TEXT("penetration_depth_cm"),Door->LastPenetrationDepth);O->SetBoolField(TEXT("starts_penetrating"),Door->bLastStartPenetrating);Cases.Add(MakeShared<FJsonValueObject>(O));};
- auto Blocked=[&](){FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(VHPassage),false);Q.AddIgnoredActor(Pawn);FVector C=Door->GetActorLocation()+FVector(0,0,95);return World->SweepSingleByChannel(H,C+FVector(-100,0,0),C+FVector(100,0,0),FQuat::Identity,ECC_Pawn,FCollisionShape::MakeCapsule(35,90),Q);};
+ auto Blocked=[&](){FHitResult H;FCollisionQueryParams Q(SCENE_QUERY_STAT(VHPassage),false);Q.AddIgnoredActor(Pawn);FVector C=Door->GetActorTransform().TransformPosition(FVector(0,0,95));return World->SweepSingleByChannel(H,C+Door->GetActorTransform().TransformVectorNoScale(FVector(-100,0,0)),C+Door->GetActorTransform().TransformVectorNoScale(FVector(100,0,0)),Door->GetActorQuat(),ECC_Pawn,FCollisionShape::MakeCapsule(35,90),Q);};
  Check(TEXT("closed_blocks_capsule"),Blocked());Advance(1.2f);Check(TEXT("approach_side_A_opens"),Door->OpenFraction>.999f);Check(TEXT("open_passage_is_clear"),!Blocked());
  Move(FVector(-500,0,90));Advance(3);Check(TEXT("automatic_close"),Door->OpenFraction<.001f&&Blocked());Move(FVector(160,0,90));Advance(1.2f);Check(TEXT("approach_side_B_opens"),Door->OpenFraction>.999f);
  Move(FVector(0,0,90));Advance(3);Check(TEXT("occupation_holds_open"),Door->IsDoorwayOccupied()&&Door->OpenFraction>.999f);Door->RequestClose();Advance(2);Check(TEXT("close_command_cannot_crush_occupant"),Door->OpenFraction>.999f);
@@ -109,9 +109,9 @@ FString UVHAutomaticDoorTools::RunChecks(AVHAutomaticDoor* Door){
  bool Repeated=true;for(int I=0;I<12;I++){Move(FVector(500,0,90));Advance(3);Repeated&=Door->OpenFraction<.001f;Move(FVector(I%2?160:-160,0,90));Advance(1.2f);Repeated&=Door->OpenFraction>.999f;}Check(TEXT("twelve_repeated_cycles_both_sides"),Repeated);
  Move(FVector(500,0,90));Advance(3);
  auto* Obstacle=World->SpawnActor<AActor>(AActor::StaticClass(),FTransform::Identity,P);auto* Box=NewObject<UBoxComponent>(Obstacle);Obstacle->SetRootComponent(Box);Obstacle->AddInstanceComponent(Box);Box->SetBoxExtent(FVector(.5,1,1));Box->SetCollisionProfileName(TEXT("BlockAll"));Box->RegisterComponent();
- Box->SetWorldLocation(Door->GetActorLocation()+Door->LeftClosedLocation+FVector(0,-Door->TravelDistance*.95f,0));Move(FVector(-160,0,90));Advance(1.2f);Check(TEXT("opening_obstacle_reports_blocked"),Door->DoorState==EVHDoorState::Blocked&&Door->OpenFraction<.99f);
+ Box->SetWorldLocation(Door->GetActorTransform().TransformPosition(Door->LeafLocationAtFraction(true,.95f)));Move(FVector(-160,0,90));Advance(1.2f);Check(TEXT("opening_obstacle_reports_blocked"),Door->DoorState==EVHDoorState::Blocked&&Door->OpenFraction<.99f);
  Box->SetCollisionEnabled(ECollisionEnabled::NoCollision);Advance(1.2f);Check(TEXT("removing_opening_obstacle_recovers"),Door->OpenFraction>.999f);
- Box->SetWorldLocation(Door->GetActorLocation()+Door->LeftClosedLocation+FVector(0,-Door->TravelDistance*.15f,0));Box->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);Move(FVector(500,0,90));Before=Door->ClosingReversalCount;Advance(2.5f);Check(TEXT("solid_obstacle_reverses_closing"),Door->ClosingReversalCount>Before);
+ Box->SetWorldLocation(Door->GetActorTransform().TransformPosition(Door->LeafLocationAtFraction(true,.15f)));Box->SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics);Move(FVector(500,0,90));Before=Door->ClosingReversalCount;Advance(2.5f);Check(TEXT("solid_obstacle_reverses_closing"),Door->ClosingReversalCount>Before);
  FCollisionQueryParams OverlapQuery(SCENE_QUERY_STAT(VHCrushCheck),false);Check(TEXT("solid_obstacle_not_penetrated"),!Door->LeftLeaf->ComponentOverlapComponent(Box,Box->GetComponentLocation(),Box->GetComponentQuat(),OverlapQuery));Box->SetCollisionEnabled(ECollisionEnabled::NoCollision);Obstacle->Destroy();Advance(3);
  Door->SetSecurityLocked(true);Door->SetDestinationConstructed(false);Door->SetEmergencyHoldOpen(true);Advance(2.f);Check(TEXT("emergency_cannot_open_unbuilt_destination"),Door->OpenFraction<.001f&&Door->DoorState==EVHDoorState::Blocked);Door->SetDestinationConstructed(true);Advance(1.2f);Check(TEXT("emergency_hold_open_command"),Door->OpenFraction>.999f);Advance(3);Check(TEXT("emergency_hold_open_persists_without_pawns"),Door->OpenFraction>.999f);Door->SetEmergencyHoldOpen(false);Advance(3);Check(TEXT("emergency_release_closes_under_lock"),Door->OpenFraction<.001f&&Door->DoorState==EVHDoorState::Blocked);Door->SetSecurityLocked(false);
  Pawn->Destroy();Door->ResetClosed();int32 Passed=0;for(auto V:Cases)if(V->AsObject()->GetBoolField(TEXT("pass")))Passed++;Report->SetArrayField(TEXT("cases"),Cases);Report->SetNumberField(TEXT("passed"),Passed);Report->SetNumberField(TEXT("total"),Cases.Num());Report->SetBoolField(TEXT("all_pass"),Passed==Cases.Num());Report->SetStringField(TEXT("method"),TEXT("Real Chaos queries, complete room, convex moving leaf collision; editor world calling the runtime AdvanceDoor. Separate game-world Tick probe required."));return Json(Report);
@@ -145,4 +145,62 @@ FString UVHAutomaticDoorTools::AuditImportedScene(const FString& SourceFile,cons
  for(const auto& Value:Data->GetArrayField(TEXT("instances"))){auto R=Value->AsObject();auto* Mesh=Meshes.FindRef(R->GetStringField(TEXT("mesh")));auto* Batch=Batches.FindRef(Mesh);if(!Batch){TransformsMatch=false;continue;}int32 Instance=Next.FindOrAdd(Mesh)++;FTransform Actual;if(!Batch->GetInstanceTransform(Instance,Actual,true)){TransformsMatch=false;continue;}auto Q=R->GetArrayField(TEXT("rotation"));FTransform Expected(FQuat(Q[0]->AsNumber(),Q[1]->AsNumber(),Q[2]->AsNumber(),Q[3]->AsNumber()),Vec(R->GetArrayField(TEXT("location"))),Vec(R->GetArrayField(TEXT("scale"))));FBox Box=Mesh->GetBoundingBox();for(int I=0;I<8;I++){FVector P(I&1?Box.Max.X:Box.Min.X,I&2?Box.Max.Y:Box.Min.Y,I&4?Box.Max.Z:Box.Min.Z);WorldError=FMath::Max(WorldError,FVector::Distance(Actual.TransformPosition(P),Expected.TransformPosition(P)));}Placements++;}
  for(auto& Entry:Batches)CountsMatch&=Next.FindRef(Entry.Key)==Entry.Value->GetInstanceCount();
  Report->SetBoolField(TEXT("ok"),CountsMatch&&MaterialsMatch&&TransformsMatch&&MeshCount==Data->GetObjectField(TEXT("meshes"))->Values.Num()&&PositionError<.002&&WorldError<.005&&UVError<.0001&&NormalError<.0001);Report->SetBoolField(TEXT("counts_match"),CountsMatch);Report->SetBoolField(TEXT("material_slots_match"),MaterialsMatch);Report->SetNumberField(TEXT("mesh_assets_checked"),MeshCount);Report->SetNumberField(TEXT("static_placements_checked"),Placements);Report->SetNumberField(TEXT("maximum_local_position_error_cm"),PositionError);Report->SetNumberField(TEXT("maximum_world_transform_error_cm"),WorldError);Report->SetNumberField(TEXT("maximum_uv_error"),UVError);Report->SetNumberField(TEXT("maximum_normal_error"),NormalError);return Json(Report);
+}
+
+FString UVHAutomaticDoorTools::BuildDoorExtensions(const FString& File){
+ FString Text;TSharedPtr<FJsonObject> Data;
+ if(!FFileHelper::LoadFileToString(Text,*File)||!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Text),Data))return TEXT("{\"ok\":false,\"error\":\"Invalid manifest\"}");
+ auto Result=MakeShared<FJsonObject>();auto* World=GEditor->GetEditorWorldContext().World();
+ if(!World||!World->GetOutermost()->GetName().Contains(TEXT("V07")))return TEXT("{\"ok\":false,\"error\":\"Author only a NEW V07 map\"}");
+ for(TActorIterator<AVHAutomaticDoor> I(World);I;++I)if(I->DoorId.ToString().StartsWith(TEXT("V07_")))return TEXT("{\"ok\":false,\"error\":\"V07 already authored\"}");
+ TMap<FString,UMaterial*> Materials;
+ for(const auto& E:Data->GetObjectField(TEXT("materials"))->Values){auto* M=LoadObject<UMaterial>(nullptr,*E.Value->AsString());if(!M)return TEXT("{\"ok\":false,\"error\":\"Missing source material\"}");Materials.Add(FString(E.Key.ToView()),M);}
+ struct FRemove { UInstancedStaticMeshComponent* Component;int32 Index; };
+ TArray<FRemove> Remove;TArray<TSharedPtr<FJsonValue>> Rows;
+ // Resolve every source placement before creating assets or removing an instance.
+ for(const auto& V:Data->GetArrayField(TEXT("doors"))){auto R=V->AsObject();TArray<FRemove> Found;FVector Location=Vec(R->GetArrayField(TEXT("original_location")));auto* Source=LoadObject<UStaticMesh>(nullptr,*R->GetStringField(TEXT("original_asset")));
+  for(TActorIterator<AActor> A(World);A;++A){TArray<UInstancedStaticMeshComponent*> Cs;A->GetComponents(Cs);for(auto* C:Cs)if(C->GetStaticMesh()==Source)for(int32 J=0;J<C->GetInstanceCount();J++){FTransform T;C->GetInstanceTransform(J,T,true);if(T.GetLocation().Equals(Location,.005))Found.Add({C,J});}}
+  if(Found.Num()!=1)return TEXT("{\"ok\":false,\"error\":\"Ambiguous source placement; no instances removed\"}");Remove.Add(Found[0]);
+ }
+ auto BuildPart=[&](const TSharedPtr<FJsonObject>& Part,const FString& Path,bool Leaf){
+  auto Old=Part->GetArrayField(TEXT("materials"));TArray<TSharedPtr<FJsonValue>> Used;TMap<int32,int32> Slots;
+  for(const auto& Value:Part->GetArrayField(TEXT("triangles"))){auto Tri=Value->AsObject();int32 Index=Tri->GetIntegerField(TEXT("material"));if(!Slots.Contains(Index)){Slots.Add(Index,Used.Num());Used.Add(Old[Index]);}Tri->SetNumberField(TEXT("material"),Slots[Index]);}
+  Part->SetArrayField(TEXT("materials"),Used);return MakeMesh(Part,Path,Materials,Leaf);
+ };
+ int32 DoorIndex=0;
+ for(const auto& V:Data->GetArrayField(TEXT("doors"))){auto R=V->AsObject();FString Id=R->GetStringField(TEXT("id"));FString Root=TEXT("/Game/ValhallaV07/Meshes/")+Id;
+  FVector P=Vec(R->GetArrayField(TEXT("root")));FRotator Rot(0,R->GetNumberField(TEXT("yaw")),0);auto* Door=World->SpawnActor<AVHAutomaticDoor>(P,Rot);Door->DoorId=FName(*(TEXT("V07_")+Id));Door->SetActorLabel(Id+TEXT(" - automatica - destino no construido"));Door->Tags.Add(TEXT("V07_AUTOMATIC_DOOR"));
+  auto Leaves=R->GetArrayField(TEXT("leaves"));int32 J=0;for(auto* C:{Door->LeftLeaf.Get(),Door->RightLeaf.Get()}){auto Leaf=Leaves[J]->AsObject();auto* M=BuildPart(Leaf->GetObjectField(TEXT("mesh")),Root+FString::Printf(TEXT("_Leaf%d"),J),true);C->SetStaticMesh(M);
+   // A few source surfaces are open skins. Give the convex collision a small
+   // thickness without changing any rendered vertex, UV, normal or material.
+   auto* B=M->GetBodySetup();auto& Hull=B->AggGeom.ConvexElems[0];TArray<FVector> Points=Hull.VertexData;FBox Box=M->GetBoundingBox();Hull.VertexData.Reset();
+   for(FVector Point:Points){Point.Z=FMath::Max(Point.Z,Box.Min.Z+.2);if(Box.GetSize().X<.2){auto Other=Point;Point.X-=.1;Other.X+=.1;Hull.VertexData.Add(Other);}Hull.VertexData.Add(Point);}Hull.UpdateElemBox();B->InvalidatePhysicsData();B->CreatePhysicsMeshes();C->RecreatePhysicsState();check(Save(M));
+   if(J==0)Door->LeftClosedLocation=Vec(Leaf->GetArrayField(TEXT("closed")));else Door->RightClosedLocation=Vec(Leaf->GetArrayField(TEXT("closed")));J++;
+  }
+  Door->OpeningWidth=R->GetNumberField(TEXT("width"));Door->OpeningHeight=R->GetNumberField(TEXT("height"));Door->TravelDistance=R->GetNumberField(TEXT("travel"));Door->bUseConfiguredTravel=true;Door->LeftTravel=FVector(0,-Door->TravelDistance,0);Door->RightTravel=FVector(0,Door->TravelDistance,0);Door->LeftClearanceOffset=Door->RightClearanceOffset=FVector(Id==TEXT("D04")?20:-20,0,0);Door->ProximityDepth=240;Door->MovementDuration=.8f;Door->bUsePassageIntent=false;Door->SetSecurityLocked(true);Door->SetDestinationConstructed(false);Door->SetExternalAccessAllowed(true);Door->ResetClosed();
+  if(R->HasField(TEXT("frame"))){auto* M=BuildPart(R->GetObjectField(TEXT("frame")),Root+TEXT("_OriginalFrame"),false);auto* A=World->SpawnActor<AStaticMeshActor>(P,Rot);A->SetActorLabel(Id+TEXT(" - marco original particionado"));A->GetStaticMeshComponent()->SetStaticMesh(M);A->GetStaticMeshComponent()->SetCollisionProfileName(TEXT("BlockAll"));A->Tags.Add(TEXT("V07_ORIGINAL_FRAME"));}
+  auto O=MakeShared<FJsonObject>();O->SetStringField(TEXT("id"),Door->DoorId.ToString());O->SetNumberField(TEXT("width_cm"),Door->OpeningWidth);O->SetNumberField(TEXT("height_cm"),Door->OpeningHeight);O->SetBoolField(TEXT("locked_unbuilt_destination"),true);O->SetNumberField(TEXT("source_surface_area_error_cm2"),R->GetNumberField(TEXT("surface_area_error_cm2")));Rows.Add(MakeShared<FJsonValueObject>(O));DoorIndex++;
+ }
+ Remove.Sort([](const FRemove& A,const FRemove& B){return A.Component==B.Component?A.Index>B.Index:UPTRINT(A.Component)<UPTRINT(B.Component);});
+ for(const auto& E:Remove)check(E.Component->RemoveInstance(E.Index));
+ Result->SetBoolField(TEXT("ok"),true);Result->SetNumberField(TEXT("new_doors"),DoorIndex);Result->SetNumberField(TEXT("source_instances_partitioned"),Remove.Num());Result->SetArrayField(TEXT("doors"),Rows);return Json(Result);
+}
+
+FString UVHAutomaticDoorTools::SetV07LeafCollisionInset(AVHAutomaticDoor* Door,float InsetCm){
+ if(!Door||InsetCm<0||InsetCm>4)return TEXT("{\"ok\":false,\"error\":\"Inset must be within 0..4 cm\"}");
+ auto Result=MakeShared<FJsonObject>();TArray<TSharedPtr<FJsonValue>> Rows;
+ for(auto* Leaf:{Door->LeftLeaf.Get(),Door->RightLeaf.Get()}){
+  UStaticMesh* Mesh=Leaf->GetStaticMesh();if(!Mesh||!Mesh->GetPathName().StartsWith(TEXT("/Game/ValhallaV07/Meshes/")))return TEXT("{\"ok\":false,\"error\":\"Only private V07 leaves may be changed\"}");
+  FString Before=SurfaceDigest(Mesh);auto* Body=Mesh->GetBodySetup();auto Box=Mesh->GetBoundingBox();auto Center=Box.GetCenter();auto Size=Box.GetSize();FKConvexElem Hull;
+  for(auto ID:Mesh->GetMeshDescription(0)->Vertices().GetElementIDs()){
+   FVector P(FStaticMeshAttributes(*Mesh->GetMeshDescription(0)).GetVertexPositions()[ID]);
+   P.Y=Center.Y+(P.Y-Center.Y)*FMath::Max(.1,1-2*InsetCm/FMath::Max(Size.Y,1.));
+   P.Z=Center.Z+(P.Z-Center.Z)*FMath::Max(.1,1-2*InsetCm/FMath::Max(Size.Z,1.));
+   P.Z=FMath::Max(P.Z,Box.Min.Z+.2);
+   if(Size.X<.2){auto Q=P;P.X-=.1;Q.X+=.1;Hull.VertexData.Add(Q);}Hull.VertexData.Add(P);
+  }
+  Hull.UpdateElemBox();Body->AggGeom.EmptyElements();Body->AggGeom.ConvexElems.Add(MoveTemp(Hull));Body->CollisionTraceFlag=CTF_UseSimpleAndComplex;Body->InvalidatePhysicsData();Body->CreatePhysicsMeshes();Leaf->RecreatePhysicsState();check(Before==SurfaceDigest(Mesh));check(Save(Mesh));
+  auto Row=MakeShared<FJsonObject>();Row->SetStringField(TEXT("mesh"),Mesh->GetPathName());Row->SetStringField(TEXT("surface_digest"),Before);Row->SetNumberField(TEXT("collision_inset_cm"),InsetCm);Row->SetBoolField(TEXT("visual_geometry_unchanged"),true);Rows.Add(MakeShared<FJsonValueObject>(Row));
+ }
+ Result->SetBoolField(TEXT("ok"),true);Result->SetArrayField(TEXT("leaves"),Rows);return Json(Result);
 }

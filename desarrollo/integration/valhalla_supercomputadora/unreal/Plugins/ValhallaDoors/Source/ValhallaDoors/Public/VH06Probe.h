@@ -7,6 +7,7 @@ class APlayerController;
 class UInputAction;
 class FJsonObject;
 class FJsonValue;
+class AVHAutomaticDoor;
 /** Opt-in real-player traversal recorder; never runs in ordinary Play. */
 UCLASS()
 class VALHALLADOORS_API AVH06Probe : public AActor
@@ -37,4 +38,6 @@ class VALHALLADOORS_API AVH06Probe : public AActor
     void EndCase(bool Passed, const FString &Reason);
     void Finish();
     TSharedPtr<FJsonObject> Snapshot();
+    bool MatchesTargetDoor(const AVHAutomaticDoor* Door) const;
+    TMap<TWeakObjectPtr<AVHAutomaticDoor>, FIntVector> AuthoredDoorPolicies;
 };

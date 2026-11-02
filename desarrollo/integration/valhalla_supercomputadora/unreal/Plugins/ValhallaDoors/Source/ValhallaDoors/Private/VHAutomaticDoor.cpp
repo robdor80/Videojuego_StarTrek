@@ -69,6 +69,26 @@ void AVHAutomaticDoor::SetExternalAccessAllowed(bool Allowed){bExternalAccessAll
 void AVHAutomaticDoor::SetEmergencyHoldOpen(bool Hold){bEmergencyHoldOpen=Hold;TimeWithoutDemand=0;}
 void AVHAutomaticDoor::ChangeState(EVHDoorState State){if(State!=DoorState){EVHDoorState Old=DoorState;DoorState=State;OnDoorStateChanged.Broadcast(Old,State);}}
 void AVHAutomaticDoor::Tick(float Dt){Super::Tick(Dt);AdvanceDoor(Dt);DrawIntentDebug();}
+FVector AVHAutomaticDoor::LeafLocationAtFraction(bool Left,float Fraction) const {
+ const float F=FMath::Clamp(Fraction,0.f,1.f);
+ const FVector Closed=Left?LeftClosedLocation:RightClosedLocation;
+ const FVector Travel=bUseConfiguredTravel?(Left?LeftTravel:RightTravel):FVector(0,Left?-TravelDistance:TravelDistance,0);
+ const FVector Offset=bUseConfiguredTravel?(Left?LeftClearanceOffset:RightClearanceOffset):FVector::ZeroVector;
+ if(Offset.IsNearlyZero())return Closed+Travel*F;
+ const float C=FMath::Clamp(ClearanceFraction,.05f,.95f);
+ return Closed+Offset*FMath::Min(F/C,1.f)+Travel*FMath::Max((F-C)/(1-C),0.f);
+}
+float AVHAutomaticDoor::FractionAtLeafLocation(bool Left) const {
+ const FVector Closed=Left?LeftClosedLocation:RightClosedLocation;
+ const FVector P=(Left?LeftLeaf:RightLeaf)->GetRelativeLocation()-Closed;
+ const FVector Travel=bUseConfiguredTravel?(Left?LeftTravel:RightTravel):FVector(0,Left?-TravelDistance:TravelDistance,0);
+ const FVector Offset=bUseConfiguredTravel?(Left?LeftClearanceOffset:RightClearanceOffset):FVector::ZeroVector;
+ if(Offset.IsNearlyZero())return Travel.IsNearlyZero()?OpenFraction:FMath::Clamp(FVector::DotProduct(P,Travel)/Travel.SizeSquared(),0.f,1.f);
+ const float C=FMath::Clamp(ClearanceFraction,.05f,.95f);
+ const float Sliding=Travel.IsNearlyZero()?0:FVector::DotProduct(P-Offset,Travel)/Travel.SizeSquared();
+ if(Sliding>0)return C+(1-C)*FMath::Clamp(Sliding,0.f,1.f);
+ return C*FMath::Clamp(FVector::DotProduct(P,Offset)/Offset.SizeSquared(),0.f,1.f);
+}
 void AVHAutomaticDoor::AdvanceDoor(float Dt) {
  if(Dt<=0||!GetWorld())return;
  const auto Nearby=QueryPawns(ApproachSensor);TSet<TWeakObjectPtr<AActor>> Now;
@@ -98,16 +118,20 @@ void AVHAutomaticDoor::AdvanceDoor(float Dt) {
   const bool CompleteOpening=DoorState==EVHDoorState::Opening&&OpeningRequester.IsValid()&&EvaluateAccess(OpeningRequester.Get(),ContinuationReason);
   if(TimeWithoutDemand<CloseDelay){if(!CompleteOpening)return;Opening=true;}
  }
- const float Target=FMath::Clamp(OpenFraction+(Opening?1.f:-1.f)*Dt/FMath::Max(MovementDuration,.05f),0.f,1.f);
+ float Target=FMath::Clamp(OpenFraction+(Opening?1.f:-1.f)*Dt/FMath::Max(MovementDuration,.05f),0.f,1.f);
+ if(bUseConfiguredTravel&&(!LeftClearanceOffset.IsNearlyZero()||!RightClearanceOffset.IsNearlyZero())){
+  const float C=FMath::Clamp(ClearanceFraction,.05f,.95f);
+  if((OpenFraction<C&&Target>C)||(OpenFraction>C&&Target<C))Target=C;
+ }
  if(FMath::IsNearlyEqual(Target,OpenFraction)) {ChangeState(Target>.999f?EVHDoorState::Open:((bSecurityLocked||!bDestinationConstructed||!bExternalAccessAllowed)?EVHDoorState::Blocked:EVHDoorState::Closed));return;}
  ChangeState(Opening?EVHDoorState::Opening:EVHDoorState::Closing);
  FHitResult LHit,RHit;
- LeftLeaf->SetRelativeLocation(LeftClosedLocation+FVector(0,-TravelDistance*Target,0),true,&LHit);
- RightLeaf->SetRelativeLocation(RightClosedLocation+FVector(0,TravelDistance*Target,0),true,&RHit);
+ LeftLeaf->SetRelativeLocation(LeafLocationAtFraction(true,Target),true,&LHit);
+ RightLeaf->SetRelativeLocation(LeafLocationAtFraction(false,Target),true,&RHit);
  if(LHit.bBlockingHit||RHit.bBlockingHit) {
   const FHitResult& H=LHit.bBlockingHit?LHit:RHit;auto* HitMesh=Cast<UStaticMeshComponent>(H.GetComponent());LastBlockingMesh=HitMesh&&HitMesh->GetStaticMesh()?HitMesh->GetStaticMesh()->GetPathName():(H.GetComponent()?H.GetComponent()->GetName():TEXT("Unknown"));LastBlockingNormal=H.ImpactNormal;LastPenetrationDepth=H.PenetrationDepth;bLastStartPenetrating=H.bStartPenetrating;
-  const float LF=FMath::Clamp((LeftClosedLocation.Y-LeftLeaf->GetRelativeLocation().Y)/FMath::Max(TravelDistance,.01f),0.f,1.f);
-  const float RF=FMath::Clamp((RightLeaf->GetRelativeLocation().Y-RightClosedLocation.Y)/FMath::Max(TravelDistance,.01f),0.f,1.f);
+  const float LF=LeftLeaf->GetStaticMesh()?FractionAtLeafLocation(true):Target;
+  const float RF=RightLeaf->GetStaticMesh()?FractionAtLeafLocation(false):Target;
   OpenFraction=Opening?FMath::Min(LF,RF):FMath::Max(LF,RF);
   if(!Opening){ClosingReversalCount++;bSafetyReopen=true;TimeWithoutDemand=0;ChangeState(EVHDoorState::Opening);}
   else ChangeState(EVHDoorState::Blocked);
