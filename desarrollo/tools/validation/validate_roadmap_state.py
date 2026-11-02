@@ -22,8 +22,8 @@ ALLOWED_MATURITY = {
 }
 EXPECTED_STATUS = {
     "F00": "CERRADA", "F01": "CERRADA", "F02": "CERRADA",
-    "F03": "CERRADA", "F04": "EN_CURSO",
-    "F05": "EN_REVISION", "F06": "EN_REVISION",
+    "F03": "CERRADA", "F04": "CERRADA",
+    "F05": "EN_CURSO", "F06": "EN_REVISION",
 }
 EXPECTED_MATURITY = {
     "F00": "DOCUMENTACION_AUDITADA", "F01": "DISENO_VALIDADO",
@@ -53,8 +53,8 @@ def check() -> list[str]:
     current = state.get("current_global_phase")
     if active != [current]:
         errors.append(f"única fase principal: actual {current!r}, EN_CURSO={active!r}")
-    if state.get("completed_management_phase") != "F03":
-        errors.append("completed_management_phase != F03")
+    if state.get("completed_management_phase") != "F04":
+        errors.append("completed_management_phase != F04")
 
     pr = state.get("governance_review", {})
     if pr.get("merged_prs") != [2, 3, 4, 5, 6, 7]:
@@ -123,5 +123,6 @@ if __name__ == "__main__":
             print(f"ERROR: {problem}", file=sys.stderr)
         raise SystemExit(1)
     print("PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de diseño, "
-          "F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO y F04 principal; plan sincronizado. "
+          "F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO, "
+          "F04 cerrada en REFERENCIA_PROBADA y F05 principal; plan sincronizado. "
           "Esto NO valida Core RPG ni UE5.")
