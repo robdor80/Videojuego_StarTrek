@@ -1,0 +1,8 @@
+test_denied_watch_cannot_become_sensor_permission (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_denied_watch_cannot_become_sensor_permission) ... ok
+test_positive_reference_only (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_positive_reference_only) ... ok
+test_stale_grant_cannot_run_scan (test_f04_f05_f06_cross_phase.CrossPhaseContractTests.test_stale_grant_cannot_run_scan) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.005s
+
+OK

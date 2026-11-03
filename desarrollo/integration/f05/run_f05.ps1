@@ -3,7 +3,8 @@ param(
  [Parameter(Mandatory=$true)][string]$CoreSource,
  [Parameter(Mandatory=$true)][string]$BuildRoot,
  [string]$Generator='Visual Studio 18 2026',
- [ValidateSet('P01','P02','All')][string]$Suite='All',
+ [ValidateSet('P01','P02','P03','All')][string]$Suite='All',
+ [switch]$RealRHI,
  [string]$EngineRoot='C:/Program Files/Epic Games/UE_5.8'
 )
 $ErrorActionPreference='Stop'
@@ -33,7 +34,11 @@ try {
  if($Stage -in @('Native','All')){
   Logged 'configure' 'cmake' @('-S',$PSScriptRoot,'-B',$Native,'-G',$Generator,'-A','x64',"-DCORERPG_SOURCE_DIR=$CoreSource")
   Logged 'build' 'cmake' @('--build',$Native,'--config','Release','--parallel','4')
-  Logged 'native-tests' 'ctest' @('--test-dir',$Native,'-C','Release','--no-tests=error','--output-on-failure','-E','history_campaign_|persistence_baseline_|persistence_resume_','--output-junit',(Join-Path $BuildRoot "$Run-native.xml"),'-j','2')
+  $Exclude='history_campaign_|persistence_baseline_|persistence_resume_'
+  $Select=@()
+  if($Suite -eq 'P01'){$Exclude+='|f04[.]|f05[.]p0[23]_'}
+  if($Suite -in @('P02','P03')){$Select=@('-R',('^f05[.]'+$Suite.ToLower()+'_'))}
+  Logged 'native-tests' 'ctest' (@('--test-dir',$Native,'-C','Release','--no-tests=error','--output-on-failure','-E',$Exclude,'--output-junit',(Join-Path $BuildRoot "$Run-native.xml"),'-j','2')+$Select)
  }
  if($Stage -in @('Stage','All')){
   if((Test-Path $Lab) -and !(Test-Path (Join-Path $Lab '.f05-p01-ue'))){throw 'Unrelated UE project rejected'}
@@ -44,6 +49,7 @@ try {
   Copy-Item (Join-Path $PSScriptRoot '../f04/include/f04_bridge.h') (Join-Path $Lab 'ThirdParty/include') -Force
   Copy-Item (Join-Path $PSScriptRoot 'include/f05_delegation.h') (Join-Path $Lab 'ThirdParty/include') -Force
   Copy-Item (Join-Path $PSScriptRoot 'include/f05_orders.h') (Join-Path $Lab 'ThirdParty/include') -Force
+  Copy-Item (Join-Path $PSScriptRoot 'include/f05_initiative.h') (Join-Path $Lab 'ThirdParty/include') -Force
   Set-Content (Join-Path $Lab 'ThirdParty/include/f05_core_revision.h') -Encoding ascii ('#define F05_EXPECTED_CORE_SHA "'+$Pin+'"')
   foreach($Ext in @('lib','dll')){Copy-Item (Join-Path $Native "f04/Release/TrekF04Bridge.$Ext") (Join-Path $Lab 'ThirdParty/Win64') -Force}
   Copy-Item (Join-Path $Native 'f04/Release/TrekF04Bridge.dll') (Join-Path $Lab 'Binaries/Win64') -Force
@@ -56,9 +62,10 @@ try {
  if($Stage -in @('Unreal','All')){Logged 'ue-build' (Join-Path $EngineRoot 'Engine/Build/BatchFiles/Build.bat') @('F05OrdersLabEditor','Win64','Development',"-Project=$Project",'-WaitMutex','-NoHotReload','-MaxParallelActions=4')}
  if($Stage -in @('TestUnreal','All')){
   $Prefix=if($Suite -eq 'All'){'F05.'}else{"F05.$Suite"}
-  $Expected=if($Suite -eq 'All'){6}else{3}
+  $Expected=if($Suite -eq 'All'){9}else{3}
   $Report=Join-Path $BuildRoot "$Run-ue-report"
-  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') @($Project,'-unattended','-nop4','-nosplash','-NullRHI','-nosound','-NoLiveCoding',"-ExecCmds=Automation RunTests $Prefix",'-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')
+  $RHI=if($RealRHI){@()}else{@('-NullRHI')}
+  Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') (@($Project,'-unattended','-nop4','-nosplash','-nosound','-NoLiveCoding',"-ExecCmds=Automation RunTests $Prefix",'-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')+$RHI)
   $Result=Get-Content (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
   if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne $Expected){throw "Expected $Expected passing $Prefix Unreal tests"}
  }

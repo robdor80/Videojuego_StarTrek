@@ -1,0 +1,27 @@
+test_ai_is_only_proposal (test_f05_reference.TestF05Reference.test_ai_is_only_proposal) ... ok
+test_binding_actor_station_revision_and_expiry (test_f05_reference.TestF05Reference.test_binding_actor_station_revision_and_expiry) ... ok
+test_captain_can_decide_lawful_policy (test_f05_reference.TestF05Reference.test_captain_can_decide_lawful_policy) ... ok
+test_contract_reference_exists_and_is_proposed (test_f05_reference.TestF05Reference.test_contract_reference_exists_and_is_proposed) ... ok
+test_coverage_routes (test_f05_reference.TestF05Reference.test_coverage_routes) ... ok
+test_explicit_execution_evidence_required (test_f05_reference.TestF05Reference.test_explicit_execution_evidence_required) ... ok
+test_first_directive_not_universal_hard_block (test_f05_reference.TestF05Reference.test_first_directive_not_universal_hard_block) ... ok
+test_fixture (test_f05_reference.TestF05Reference.test_fixture) ... ok
+test_idempotent_replay (test_f05_reference.TestF05Reference.test_idempotent_replay) ... ok
+test_invalid_enums_and_unknown_phase (test_f05_reference.TestF05Reference.test_invalid_enums_and_unknown_phase) ... ok
+test_legacy_canonical_sources_unmodified (test_f05_reference.TestF05Reference.test_legacy_canonical_sources_unmodified) ... ok
+test_missing_authority_is_never_allowed (test_f05_reference.TestF05Reference.test_missing_authority_is_never_allowed) ... ok
+test_no_captain_autoapproval (test_f05_reference.TestF05Reference.test_no_captain_autoapproval) ... ok
+test_no_ranking_grants_command (test_f05_reference.TestF05Reference.test_no_ranking_grants_command) ... ok
+test_no_world_mutation_ever (test_f05_reference.TestF05Reference.test_no_world_mutation_ever) ... ok
+test_offscreen_does_not_disable_logic (test_f05_reference.TestF05Reference.test_offscreen_does_not_disable_logic) ... ok
+test_provider_timeout_has_safe_outcome (test_f05_reference.TestF05Reference.test_provider_timeout_has_safe_outcome) ... ok
+test_reference_binding_rejects_boolean_revision_as_one (test_f05_reference.TestF05Reference.test_reference_binding_rejects_boolean_revision_as_one) ... ok
+test_revalidation_blocks_late_proposal (test_f05_reference.TestF05Reference.test_revalidation_blocks_late_proposal) ... ok
+test_revoke_blocks_reexecution (test_f05_reference.TestF05Reference.test_revoke_blocks_reexecution) ... ok
+test_textual_approval_does_not_override_captain (test_f05_reference.TestF05Reference.test_textual_approval_does_not_override_captain) ... ok
+test_textual_delegation_scope_does_not_grant_authority (test_f05_reference.TestF05Reference.test_textual_delegation_scope_does_not_grant_authority) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.003s
+
+OK

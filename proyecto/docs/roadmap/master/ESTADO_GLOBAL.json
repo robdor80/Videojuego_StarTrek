@@ -164,17 +164,17 @@
       "steps": {
         "P01": "EN_REVISION",
         "P02": "EN_REVISION",
-        "P03": "BLOQUEADA",
+        "P03": "EN_REVISION",
         "P04": "BLOQUEADA",
         "P05": "CERRADA"
       },
-      "note": "F05 EN_CURSO. F05-P01 órdenes y F05-P02 delegaciones integradas en el mismo CoreRPG/F04 y auditadas favorablemente en alcance nativo/Cloud: PR Star Trek #81 y #82 fusionadas el 02-11-2026, CI Linux/Windows, Core y campañas F04 satisfactorias. P01/P02 EN_REVISION: pruebas MSVC, UE 5.8.2 y repetición limpia en el MSI pendientes, registradas en F05/REGISTRO_VALIDACIONES_MSI.md. P03 iniciativa NPC y P04 IA NO implementadas. P05 CERRADA únicamente por la suite histórica de referencia; integración/auditoría global P05 pendiente. Meta CORE_INTEGRADO global NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05.",
+      "note": "F05 EN_CURSO. F05-P01 órdenes y F05-P02 delegaciones integradas en el mismo CoreRPG/F04 y auditadas favorablemente en alcance nativo/Cloud: PR Star Trek #81 y #82 fusionadas el 02-11-2026, CI Linux/Windows, Core y campañas F04 satisfactorias. P01/P02 EN_REVISION: pruebas MSVC, UE 5.8.2 y repetición limpia en el MSI pendientes, registradas en F05/REGISTRO_VALIDACIONES_MSI.md. P03 iniciativa NPC implementada nativamente en rama codex/f05-p03-npc-initiative, entrega Draft para auditoría independiente, UE/MSI pendientes. No constituye aprobación final ni cierre de F05. P04 IA NO implementada. P05 CERRADA únicamente por la suite histórica de referencia; integración/auditoría global P05 pendiente. Meta CORE_INTEGRADO global NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05.",
       "file": "fases/F05/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
         "P01": "REFERENCIA_PROBADA",
         "P02": "REFERENCIA_PROBADA",
-        "P03": "DISENO_VALIDADO",
+        "P03": "REFERENCIA_PROBADA",
         "P04": "DISENO_VALIDADO",
         "P05": "REFERENCIA_PROBADA"
       },
@@ -185,7 +185,9 @@
         "Star Trek PR #82 (merge 7ade26ceb62b4c88b6d7a9e3761addfbaa1d4b7e; F05-P02 auditada nativamente, Unreal pendiente)",
         "fases/F05/VALIDACIONES_PENDIENTES_MSI.md",
         "fases/F05/VALIDACIONES_PENDIENTES_MSI_P02.md",
-        "fases/F05/REGISTRO_VALIDACIONES_MSI.md"
+        "fases/F05/REGISTRO_VALIDACIONES_MSI.md",
+        "fases/F05/F05-P03_IMPLEMENTACION.md",
+        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P03.md"
       ]
     },
     {

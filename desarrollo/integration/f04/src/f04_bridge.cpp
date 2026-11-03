@@ -2,6 +2,8 @@
 #ifdef F05_ENABLE_ORDERS
 #include "f05_orders.h"
 #include "f05_delegation.h"
+#include "f05_initiative.h"
+#include <corerpg/context_builder.hpp>
 #endif
 #include "f04_catalog.h"
 #include "f04_templates.h"
@@ -29,14 +31,16 @@ constexpr U FOREVER=(1ULL<<48)-1;
 // Versioned Trek relation-label vocabulary. Scalar values are self-edges;
 // references use fixed kinds. Core owns both, without interpreting domain data.
 enum Ref:U { SHIP=1,PERSON,SLOT,ISSUER,TARGET,ORIGIN,ACTIVITY,DEPARTMENT,SECTION,PLAN,OPERATING_SHIP,SUPERIOR,KIN,
- F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF,F05_DELEGATION_REF,F05_HOLDER_REF,F05_EXECUTOR_REF,F05_APPROVAL_REF };
+ F05_REQUEST_REF,F05_ORDER_REF,F05_TASK_REF,F05_ATTEMPT_REF,F05_RESULT_REF,F05_PREVIOUS_REF,F05_DELEGATION_REF,F05_HOLDER_REF,F05_EXECUTOR_REF,F05_APPROVAL_REF,
+ F05_NEED_REF,F05_DETECTION_REF };
 enum Field:U { START=1,END,VALUE,DEPT,QUAL,UNTIL,RANK,CATEGORY,REQUIRED,STATE,
  ROLE,D_DOMAIN,CAUSE,DEBT,OP,CODE,TICK,PATTERN,SCHEMA,SEQUENCE,ALERT,
  MEMBER,SHIP_ID,NOMINAL_CREW,NOMINAL_RESIDENTS,MAXIMUM,INITIAL,
  TEMPLATE,EQUIPMENT,SECTION_KEY,STABLE_ID,ORDINAL,QUAL_MASK,RESPONSIBILITY,
  STATIONS,COVERAGE,ALPHA,SEEDED,ALPHA_START,ALPHA_END,ORDINARY,TEMPORARY,STOP,
  SERVICE_GROUP,CIVIL_CATEGORY,RESIDENCE,AREA,AWAY,AGENDA_KIND,AGENDA_START,AGENDA_END,
- F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM,F05_MODE };
+ F05_KEY,F05_REVISION,F05_STATUS,F05_OUTCOME,F05_REJECTION,F05_BEFORE,F05_AFTER,F05_ROLL,F05_CONSUMED,F05_STREAM,F05_MODE,
+ F05_INPUT,F05_BUDGET,F05_EXAMINED };
 enum State:U { ACTIVE=0,CANCELLED=1,DONE=2 };
 struct Denial { uint32_t code; };
 void need(bool yes,uint32_t code=F04_ARGUMENT) { if(!yes) throw Denial{code}; }
@@ -142,7 +146,8 @@ CatalogBuildResult catalog() {
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
  for(const char* t:class_ids) defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:class_")+t),*ResourceKind::parse("structural")});
 #ifdef F05_ENABLE_ORDERS
- for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event","f05_delegation_event","f05_approval"})
+ for(const char* t:{"f05_request","f05_order","f05_task","f05_attempt","f05_result","f05_event","f05_delegation_event","f05_approval",
+   "f05_player","f05_scan_need","f05_brief","f05_detection","f05_decision"})
   defs.emplace_back(ResourceDefinition{*DefinitionId::parse(std::string("trek.f04:")+t),*ResourceKind::parse("structural")});
 #endif
  return ContentCatalog::create({ContentPackInput{ContentManifest{p,v,v,v},std::move(defs)}});
