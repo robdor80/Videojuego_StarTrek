@@ -179,6 +179,21 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** aprueba expresamente las tres propuestas (general, sala de reuniones y Picard eterno) el 29-10-2026.
 - **Ejecución:** NO INICIADA por este registro; no se confunde documentación con elemento jugable ya implementado.
 
+### IDEA-0014 — Intercomunicadores inteligentes en puertas de camarotes
+- **Fecha de aprobación expresa y registro:** 2026-11-04.
+- **Estado:** APROBADA CONCEPTUALMENTE; planificación, implementación UE5/IA y pruebas pendientes.
+- **Propuesta:** botón de intercomunicador junto a **cada puerta de camarote**, con aviso sonoro de estilo Star Trek en el interior y respuesta creíble según presencia, disponibilidad, privacidad y personalidad de los ocupantes.
+- **Bidireccional:** **jugador→NPC** (llama y espera respuesta del residente) y **NPC→jugador** (aviso en el camarote del jugador, quien responde libremente por voz o texto).
+- **IA:** interpreta respuestas coloquiales («¿Quién es?», «Adelante», «Espere un momento», «Ahora no», «¿Qué necesita?» y frases compuestas) y propone **intenciones estructuradas**, sin ejecutar directamente ni modificar el World State.
+- **Autoridad:** el motor valida identidad, permisos, ocupación, estado de puerta, seguridad, alerta y solicitudes vigentes; únicamente entonces abre, mantiene cerrada, solicita identificación, registra espera o deniega entrada.
+- **Experiencia:** sonido y botón interactivos, diálogo natural, transiciones de interior compatibles con escenarios modulares, subtítulos y alternativa escrita a micrófono.
+- **Reglas sociales:** sin teletransportar NPC desde otros lugares, conceder acceso por rango/amistad ni inventar disponibilidad o confianza; las emergencias autorizadas siguen procedimientos específicos.
+- **Ficha detallada:** [IDEA-0014_intercomunicadores_inteligentes_camarotes.md](IDEA-0014_intercomunicadores_inteligentes_camarotes.md).
+- **Vínculos técnicos:** `sistemas/ai/command_interpretation/starship_command_contract.md`, `sistemas/gameplay/ship_operations/shipboard_life_state_contract.json`, `sistemas/gameplay/ship_operations/interior_location_model.json`, agendas de NPC, reglas sociales, F10 y F12.
+- **Desarrollo candidato:** ICOM-01–ICOM-08; primero contratos, botón/sonido, máquina de estados, después ambas direcciones de llamada, IA, persistencia y QA.
+- **Decisión del autor:** aprobada expresamente tras debatir el funcionamiento del sistema.
+- **Ejecución:** NO INICIADA por el registro; no implica que las puertas o intercomunicadores ya funcionen en UE5.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
