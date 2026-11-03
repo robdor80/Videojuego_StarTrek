@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="(empty)"
+	tests="6"
+	failures="0"
+	disabled="0"
+	skipped="0"
+	hostname=""
+	time="1424"
+	timestamp="2026-11-03T20:15:00"
+	>
+	<testcase name="f04.history_campaign_1_365" classname="f04.history_campaign_1_365" time="23.4348" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=1 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-58e1f388
+resume: profile=1 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-58e1f388
+audit: profile=1 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-58e1f388
+{"kind": "acceptance", "profile": 1, "days": 365, "completed": 365, "maximum_resident": 1926, "maximum_active_bytes": 551836, "elapsed_ms": 20866.6, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 30208059, "phases_elapsed_seconds": 23.39183904800001, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "34a44c16e952e2fae17ecee11a6306ec30c6d9ba47a3c691f580e215725a395c", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-original...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.history_campaign_2_365" classname="f04.history_campaign_2_365" time="26.1463" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=2 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-fb028c7d
+resume: profile=2 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-fb028c7d
+audit: profile=2 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201500-fb028c7d
+{"kind": "acceptance", "profile": 2, "days": 365, "completed": 365, "maximum_resident": 2234, "maximum_active_bytes": 646257, "elapsed_ms": 23387, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 35381483, "phases_elapsed_seconds": 26.10302746499997, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "8685f8d7d14720baab626f849c62b0bc14bf3b99412e9ec35222c4def319b66d", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-original-w...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.history_campaign_3_365" classname="f04.history_campaign_3_365" time="121.417" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=3 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201524-ce149bfe
+resume: profile=3 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201524-ce149bfe
+audit: profile=3 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201524-ce149bfe
+{"kind": "acceptance", "profile": 3, "days": 365, "completed": 365, "maximum_resident": 8492, "maximum_active_bytes": 2587327, "elapsed_ms": 90849.9, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 140155276, "phases_elapsed_seconds": 121.33410637899999, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-origi...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.history_campaign_4_365" classname="f04.history_campaign_4_365" time="471.443" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=4 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201526-c0786cc9
+resume: profile=4 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201526-c0786cc9
+audit: profile=4 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201526-c0786cc9
+{"kind": "acceptance", "profile": 4, "days": 365, "completed": 365, "maximum_resident": 18348, "maximum_active_bytes": 5649296, "elapsed_ms": 286117, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 306161850, "phases_elapsed_seconds": 471.36145588, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "d6eebd51656986858908dc08a5d55562b48989240223094e75ce88d12055487e", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-original-wo...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.history_campaign_5_365" classname="f04.history_campaign_5_365" time="673.925" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=5 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201725-1ebb7c8d
+resume: profile=5 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201725-1ebb7c8d
+audit: profile=5 days=365 evidence=$OUTPUT/historical/build/history-runs/20261103-201725-1ebb7c8d
+{"kind": "acceptance", "profile": 5, "days": 365, "completed": 365, "maximum_resident": 21218, "maximum_active_bytes": 6662421, "elapsed_ms": 504096, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 360642331, "phases_elapsed_seconds": 673.8648220770001, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "1bfa6650632c31f4e235fdad06a25402f5d698050cb1fc199b9cd9ff03480d65", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-origin...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+	<testcase name="f04.history_campaign_valhalla_730" classname="f04.history_campaign_valhalla_730" time="927.011" status="run">
+		<properties>
+			<property name="cmake_labels" value="history_acceptance"/>
+		</properties>
+		<system-out>campaign: profile=5 days=730 evidence=$OUTPUT/historical/build/history-runs/20261103-202318-647f1cbd
+resume: profile=5 days=730 evidence=$OUTPUT/historical/build/history-runs/20261103-202318-647f1cbd
+audit: profile=5 days=730 evidence=$OUTPUT/historical/build/history-runs/20261103-202318-647f1cbd
+{"kind": "acceptance", "profile": 5, "days": 730, "completed": 730, "maximum_resident": 21218, "maximum_active_bytes": 6662421, "elapsed_ms": 746187, "real_watches": true, "all_blocks_equal_complete_history": true, "storage_bytes_retaining_previous_generations": 719423208, "phases_elapsed_seconds": 926.849726371, "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98", "reference_fixture_sha256": "4f5b5b096e07e4e9fc2b504cb8b4e86d898655d60e99a678b567ded58140f204", "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439", "reference_origin": "Audited complete-original-w...
+[This part of the test output was removed since it exceeds the threshold of 1024 bytes.]
+</system-out>
+	</testcase>
+</testsuite>

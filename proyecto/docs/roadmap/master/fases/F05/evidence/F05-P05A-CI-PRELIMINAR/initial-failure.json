@@ -1,0 +1,12 @@
+{
+  "run": 41712799571,
+  "job": 126184946166,
+  "head_sha": "aafb44188d2aee75866ce9c5f48f320134eabfba",
+  "conclusion": "failure",
+  "counted_as_pass": false,
+  "reason": "CTest returned 0; the newly strict JUnit collector rejected a conditional platform SKIP; original Core tests remain unchanged. Final Windows CI must explicitly report passed and skipped separately.",
+  "original_artifact_id": 13270280235,
+  "original_artifact_zip_sha256": "5752809fd84939110e2ec43d00be7ed22f65f75037eb44ae8be41aca68e3db7f",
+  "artifact_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41712799571/artifacts/13270280235",
+  "expires_at": "2027-02-01T20:27:55Z"
+}

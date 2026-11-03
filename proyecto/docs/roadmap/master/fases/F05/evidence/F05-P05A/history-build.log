@@ -1,0 +1,91 @@
+[  3%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/timeline.cpp.o
+[  6%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/history.cpp.o
+[ 10%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/campaign_persistence.cpp.o
+$OUTPUT/CoreHistory/src/history.cpp: In static member function ‘static corerpg::HistoryStatus corerpg::HistoryPersistence::decode_manifest(std::span<const unsigned char>, corerpg::HistoryArchive&, corerpg::HistoryLimits)’:
+$OUTPUT/CoreHistory/src/history.cpp:192:13: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  192 |             for(auto r:s.ids)all.push_back(r);a.segments_.push_back(std::move(s));}
+      |             ^~~
+$OUTPUT/CoreHistory/src/history.cpp:192:47: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  192 |             for(auto r:s.ids)all.push_back(r);a.segments_.push_back(std::move(s));}
+      |                                               ^
+$OUTPUT/CoreHistory/src/history.cpp: In static member function ‘static corerpg::HistoryPage corerpg::HistoryPersistence::query(const corerpg::HistoryArchive&, corerpg::EntityId, corerpg::{anonymous}::U, corerpg::HistoryLimits, corerpg::HistoryFault)’:
+$OUTPUT/CoreHistory/src/history.cpp:369:17: warning: this ‘for’ clause does not guard... [-Wmisleading-indentation]
+  369 |                 for(const auto& k:s.facts.knowledge)if(k.observer.value()==id)fact.knowledge.push_back(k);page.facts.push_back(std::move(fact));}}
+      |                 ^~~
+$OUTPUT/CoreHistory/src/history.cpp:369:107: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘for’
+  369 |                 for(const auto& k:s.facts.knowledge)if(k.observer.value()==id)fact.knowledge.push_back(k);page.facts.push_back(std::move(fact));}}
+      |                                                                                                           ^~~~
+[ 13%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/action.cpp.o
+[ 16%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_compatibility.cpp.o
+[ 20%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_catalog.cpp.o
+[ 23%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_diagnostic.cpp.o
+[ 26%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_id.cpp.o
+[ 30%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/entity_structure.cpp.o
+[ 33%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/inspector.cpp.o
+[ 36%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/knowledge.cpp.o
+In file included from $OUTPUT/CoreHistory/src/world_validation_internal.hpp:3,
+                 from $OUTPUT/CoreHistory/src/inspector.cpp:4:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+In file included from $OUTPUT/CoreHistory/src/knowledge.cpp:3:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 40%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/visibility.cpp.o
+In file included from $OUTPUT/CoreHistory/src/visibility.cpp:1:
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp: In member function ‘bool corerpg::ObserverView::knows(corerpg::EntityId) const’:
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   66 |     [[nodiscard]] bool knows(EntityId entity) const noexcept { return find({entity}) != nullptr; }
+      |                                                                       ~~~~^~~~~~~~~~
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 43%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/context_builder.cpp.o
+In file included from $OUTPUT/CoreHistory/src/visibility.cpp:4:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+In file included from $OUTPUT/CoreHistory/include/corerpg/context_builder.hpp:3,
+                 from $OUTPUT/CoreHistory/src/context_builder.cpp:1:
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp: In member function ‘bool corerpg::ObserverView::knows(corerpg::EntityId) const’:
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   66 |     [[nodiscard]] bool knows(EntityId entity) const noexcept { return find({entity}) != nullptr; }
+      |                                                                       ~~~~^~~~~~~~~~
+$OUTPUT/CoreHistory/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 46%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/population.cpp.o
+[ 50%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/semantic_version.cpp.o
+[ 53%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/simulation.cpp.o
+[ 56%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/version_requirement.cpp.o
+[ 60%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/random.cpp.o
+[ 63%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/random_streams.cpp.o
+[ 66%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/persistence.cpp.o
+[ 70%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/rule_check.cpp.o
+In file included from $OUTPUT/CoreHistory/src/world_validation_internal.hpp:3,
+                 from $OUTPUT/CoreHistory/src/persistence.cpp:5:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreHistory/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 73%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/resource_kind.cpp.o
+[ 76%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/roll_action.cpp.o
+[ 80%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/version.cpp.o
+[ 83%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/world_state.cpp.o
+[ 86%] Linking CXX static library libCoreRPG.a
+[ 86%] Built target CoreRPG
+[ 90%] Building CXX object CMakeFiles/TrekF04Bridge.dir/src/f04_bridge.cpp.o
+[ 93%] Linking CXX shared library libTrekF04Bridge.so
+[ 93%] Built target TrekF04Bridge
+[ 96%] Building CXX object CMakeFiles/f04_history_campaign.dir/tests/history_campaign.cpp.o
+[100%] Linking CXX executable f04_history_campaign
+[100%] Built target f04_history_campaign
+[ 86%] Built target CoreRPG
+[ 93%] Built target TrekF04Bridge
+[ 96%] Building CXX object CMakeFiles/f04_history_audit.dir/tests/history_audit.cpp.o
+[100%] Linking CXX executable f04_history_audit
+[100%] Built target f04_history_audit

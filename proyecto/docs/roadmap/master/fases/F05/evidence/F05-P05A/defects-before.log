@@ -1,0 +1,20 @@
+Test project $OUTPUT/native
+    Start 107: f05.p05a_B_cancel_successor
+1/2 Test #107: f05.p05a_B_cancel_successor ......***Failed    0.00 sec
+current commander cancels own former delegated order got=9 expected=0
+FAIL: current commander cancels own former delegated order
+
+    Start 126: f05.p05a_archive_ttl
+2/2 Test #126: f05.p05a_archive_ttl .............***Failed    0.00 sec
+incoherent archive rejected got=0 expected=14
+FAIL: incoherent archive rejected
+
+
+0% tests passed, 2 tests failed out of 2
+
+Total Test time (real) =   0.02 sec
+
+The following tests FAILED:
+	107 - f05.p05a_B_cancel_successor (Failed)
+	126 - f05.p05a_archive_ttl (Failed)
+Errors while running CTest

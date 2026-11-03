@@ -1,0 +1,9 @@
+A_captain: PASS
+G_timeout: PASS
+G_quota: PASS
+G_corrupt: PASS
+G_injection: PASS
+G_exception: PASS
+H_offscreen: PASS
+J_time: PASS
+8 integration cases PASS with IPv4/IPv6 socket/connect blocked; zero attempted product Internet sockets

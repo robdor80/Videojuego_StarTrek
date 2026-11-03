@@ -81,11 +81,10 @@ Las nuevas pruebas P04 se añaden sin borrar ni marcar automáticamente las ante
 
 ## P05A Cloud / P05B MSI — auditoría integral, 03-11-2026
 
-P05A **EN CURSO**, entrega Draft para auditoría independiente. Las dos incidencias
+P05A **LISTA PARA VALIDACIÓN MSI** en alcance Cloud, entrega Draft [#87](https://github.com/robdor80/Videojuego_StarTrek/pull/87) para auditoría independiente y comprobación de CI del HEAD final. Las dos incidencias
 reproducidas P05A-01 (cancelación por sucesor que era emisor delegado) y P05A-02
 (plazo P04 manipulado >300 en restauración) están corregidas y sus regresiones
-pasan. Las suites extensas y CI se registrarán al finalizar: todavía no se
-acreditan aquí. Ver [auditoría y matriz](F05-P05A_AUDITORIA_INTEGRAL.md).
+pasan. Evidencia local ejecutada: F04/F05 **395/395** (30 P05A), Core **483/483**, F02 **15/15**, F03 **25/25**, F04 original **259/259**, campañas **6/6** con pins/oráculos congelados; documentación **22 tests +48 fixtures +3 transversales** y gobierno PASS. Ocho repeticiones con red bloqueada PASS. CI final Linux/Windows y sus artefactos se publican en PR #87; no contar un SKIP condicional POSIX Core/Windows como PASS. Ver [auditoría y matriz](F05-P05A_AUDITORIA_INTEGRAL.md).
 No hay ejecución MSI ni Unreal en Cloud, ni validaciones anteriores canceladas.
 
 Pendientes adicionales agrupados, sin duplicar P01–P04:

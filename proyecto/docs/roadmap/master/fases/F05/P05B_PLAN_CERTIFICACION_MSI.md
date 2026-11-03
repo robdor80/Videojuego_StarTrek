@@ -57,8 +57,14 @@ para Native → Stage → Unreal → TestUnreal → TestUnreal con RealRHI,
 
 En cada repetición se espera:
 
-1. Core completo: **483 tests**, sin fallos/omisiones; fijar el número real a
-   partir del XML del HEAD auditado si el informe demuestra otro inventario.
+1. Core completo: inventario **483 tests**. La auditoría Linux exige 483 PASS.
+   En Windows, Core puede omitir explícitamente
+   `ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt`
+   porque `std::filesystem::permissions` no impide la lectura con semántica POSIX.
+   Conservar mensaje y JUnit original: si ocurre, son **482 PASS + 1 SKIP**, nunca
+   483 PASS. El runner solo admite ese SKIP condicional en Core/Windows, informa
+   `PASS_COMPATIBLE_WITH_PLATFORM_SKIP` y rechaza cualquier otra omisión o fallo.
+   No se modifica Core ni su oráculo; no acredita pruebas de ACL Windows.
 2. Suite F04/F05: **395 tests**, incluidos P01=20, P02=20, P03=26, P04=38 y
    P05A=30. Incluye los productores/consumidores separados de monolítico e
    historial, RNG futuro exacto, revocación, permisos, privacidad e idempotencia.
