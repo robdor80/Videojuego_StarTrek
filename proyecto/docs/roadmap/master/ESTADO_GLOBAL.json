@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0.0",
-  "date": "2026-10-31",
+  "date": "2026-11-03",
   "repo": "robdor80/Videojuego_StarTrek",
   "baseline_commit": "0800322d4321cc781f0d9603f9a900dcb2f2bc27",
   "source_inventory": "INVENTARIO_BASELINE_2026-10-11.json",
@@ -168,7 +168,7 @@
         "P04": "EN_REVISION",
         "P05": "CERRADA"
       },
-      "note": "F05 EN_CURSO. P01 órdenes, P02 delegaciones, P03 iniciativa NPC y P04 capa opcional de propuestas IA están fusionadas y auditadas favorablemente en alcance nativo/Cloud (Star Trek PR #81/#82/#84/#85; CI Linux/Windows, CoreRPG y seis campañas históricas correctas). P01-P04 EN_REVISION hasta validación obligatoria MSVC y Unreal Engine 5.8.2 en MSI, guardado/recuperación, 12 automatizaciones UE, RHI real y repetición limpia según REGISTRO_VALIDACIONES_MSI.md. IA P04 no ejecuta acciones sin Host/P03/P01/P02/Core, no requiere red para autonomía NPC y no incluye cliente HTTP de producción ni conexión comercial acreditada. P05 CERRADA únicamente como suite de referencia histórica; auditoría final real pendiente. Meta global CORE_INTEGRADO NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05 y el cierre integral P05.",
+      "note": "F05 EN_CURSO. P01 órdenes, P02 delegaciones, P03 iniciativa NPC y P04 capa opcional de propuestas IA están fusionadas y auditadas favorablemente en alcance nativo/Cloud (Star Trek PR #81/#82/#84/#85; CI Linux/Windows, CoreRPG y seis campañas históricas correctas). P01-P04 EN_REVISION hasta validación obligatoria MSVC y Unreal Engine 5.8.2 en MSI, guardado/recuperación, 12 automatizaciones UE, RHI real y repetición limpia según REGISTRO_VALIDACIONES_MSI.md. IA P04 no ejecuta acciones sin Host/P03/P01/P02/Core, no requiere red para autonomía NPC y no incluye cliente HTTP de producción ni conexión comercial acreditada. P05 CERRADA únicamente como suite de referencia histórica; auditoría final real pendiente. Meta global CORE_INTEGRADO NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05 y el cierre integral P05. F05-P05A: auditoría integral Cloud sobre main 1ff057456a135f00b5c665f753fd7577f866c155, PR Draft #87, dos defectos medios corregidos, 30 casos integrales nuevos y suites locales favorables; LISTA PARA VALIDACIÓN MSI sin cierre global y sujeta a CI final/auditoría independiente; F05-P05B será la certificación MSI posterior. P05 CERRADA conserva exclusivamente el significado documental histórico.",
       "file": "fases/F05/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
@@ -191,7 +191,9 @@
         "Star Trek PR #84 (merge f1ab2f33cccdd861077e59069addb8a12ff573d7; P03 auditada nativamente, Unreal pendiente)",
         "Star Trek PR #85 (merge f58507aa50593a2024ed4d30514dad4a48c02669; P04 auditada nativamente, Unreal pendiente)",
         "fases/F05/F05-P04_IMPLEMENTACION.md",
-        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P04.md"
+        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P04.md",
+        "fases/F05/F05-P05A_AUDITORIA_INTEGRAL.md",
+        "fases/F05/P05B_PLAN_CERTIFICACION_MSI.md"
       ]
     },
     {

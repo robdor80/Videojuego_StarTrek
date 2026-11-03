@@ -1,0 +1,71 @@
+[  3%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/timeline.cpp.o
+[  6%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/campaign_persistence.cpp.o
+[ 10%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/action.cpp.o
+[ 13%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_compatibility.cpp.o
+[ 17%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_catalog.cpp.o
+[ 20%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_diagnostic.cpp.o
+[ 24%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/content_id.cpp.o
+[ 27%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/entity_structure.cpp.o
+[ 31%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/inspector.cpp.o
+In file included from $OUTPUT/CoreF03/src/world_validation_internal.hpp:3,
+                 from $OUTPUT/CoreF03/src/inspector.cpp:4:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 34%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/knowledge.cpp.o
+In file included from $OUTPUT/CoreF03/src/knowledge.cpp:3:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 37%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/visibility.cpp.o
+In file included from $OUTPUT/CoreF03/src/visibility.cpp:1:
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp: In member function ‘bool corerpg::ObserverView::knows(corerpg::EntityId) const’:
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   66 |     [[nodiscard]] bool knows(EntityId entity) const noexcept { return find({entity}) != nullptr; }
+      |                                                                       ~~~~^~~~~~~~~~
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+In file included from $OUTPUT/CoreF03/src/visibility.cpp:4:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 41%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/context_builder.cpp.o
+In file included from $OUTPUT/CoreF03/include/corerpg/context_builder.hpp:3,
+                 from $OUTPUT/CoreF03/src/context_builder.cpp:1:
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp: In member function ‘bool corerpg::ObserverView::knows(corerpg::EntityId) const’:
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   66 |     [[nodiscard]] bool knows(EntityId entity) const noexcept { return find({entity}) != nullptr; }
+      |                                                                       ~~~~^~~~~~~~~~
+$OUTPUT/CoreF03/include/corerpg/visibility.hpp:66:75: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 44%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/population.cpp.o
+[ 48%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/semantic_version.cpp.o
+[ 51%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/simulation.cpp.o
+[ 55%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/version_requirement.cpp.o
+[ 58%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/random.cpp.o
+[ 62%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/random_streams.cpp.o
+[ 65%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/persistence.cpp.o
+In file included from $OUTPUT/CoreF03/src/world_validation_internal.hpp:3,
+                 from $OUTPUT/CoreF03/src/persistence.cpp:5:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp: In function ‘bool corerpg::detail::known_entity(std::span<const corerpg::KnowledgeRecord>, corerpg::EntityId)’:
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::relation_kind’ [-Wmissing-field-initializers]
+   36 |     return find_fact(records, {entity}) != nullptr;
+      |            ~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+$OUTPUT/CoreF03/src/knowledge_internal.hpp:36:21: warning: missing initializer for member ‘corerpg::FactKey::target’ [-Wmissing-field-initializers]
+[ 68%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/rule_check.cpp.o
+[ 72%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/resource_kind.cpp.o
+[ 75%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/roll_action.cpp.o
+[ 79%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/version.cpp.o
+[ 82%] Building CXX object corerpg/CMakeFiles/CoreRPG.dir/src/world_state.cpp.o
+[ 86%] Linking CXX static library libCoreRPG.a
+[ 86%] Built target CoreRPG
+[ 89%] Building CXX object CMakeFiles/TrekF03Bridge.dir/src/f03_bridge.cpp.o
+[ 93%] Linking CXX shared library libTrekF03Bridge.so
+[ 93%] Built target TrekF03Bridge
+[ 96%] Building CXX object CMakeFiles/f03_tests.dir/tests/f03_tests.cpp.o
+[100%] Linking CXX executable f03_tests
+[100%] Built target f03_tests

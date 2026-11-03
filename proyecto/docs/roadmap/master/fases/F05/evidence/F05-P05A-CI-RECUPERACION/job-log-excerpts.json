@@ -1,0 +1,157 @@
+{
+  "126192745275": {
+    "name": "earlier-native (ubuntu-latest, f02)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745275",
+    "normalized_log_sha256": "7ff045a09fe5737536f730ff52d0f40682b997753b5e66ae76c7d8aa9cb816d3",
+    "lines": [
+      "2026-11-03T20:42:39.4967304Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:43:34.8909751Z {\"suite\": \"f02\", \"tests\": 15, \"result\": \"PASS\"}",
+      "2026-11-03T20:43:35.5300539Z SHA256 digest of uploaded artifact zip is 5a2f8ef5f6cf585928252ad386759e7664348d186a1e040cea2a286a5d04d596",
+      "2026-11-03T20:43:35.9774067Z Artifact f05-p05a-regression-f02-ubuntu-latest.zip successfully finalized. Artifact ID 13268733376",
+      "2026-11-03T20:43:35.9775083Z Artifact f05-p05a-regression-f02-ubuntu-latest has been successfully uploaded! Final size is 6737 bytes. Artifact ID is 13268733376"
+    ]
+  },
+  "126192745425": {
+    "name": "earlier-native (ubuntu-latest, f03)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745425",
+    "normalized_log_sha256": "50b559229573ab7e92b3f277f51f68134fc51306ea92bc3aa2951914f24f8209",
+    "lines": [
+      "2026-11-03T20:42:40.2124214Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:43:07.5827794Z {\"suite\": \"f03\", \"tests\": 25, \"result\": \"PASS\"}",
+      "2026-11-03T20:43:08.5277356Z SHA256 digest of uploaded artifact zip is 108e03b6791ce7ab68e5402df31cd3985bc544df43c1db0e209a472fc57e87b8",
+      "2026-11-03T20:43:09.0548998Z Artifact f05-p05a-regression-f03-ubuntu-latest.zip successfully finalized. Artifact ID 13268788732",
+      "2026-11-03T20:43:09.0550453Z Artifact f05-p05a-regression-f03-ubuntu-latest has been successfully uploaded! Final size is 7777 bytes. Artifact ID is 13268788732"
+    ]
+  },
+  "126192745130": {
+    "name": "earlier-native (ubuntu-latest, f04)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745130",
+    "normalized_log_sha256": "fcb8f62f022f7c2fbd320e245f3418d8b0f1e762c74ff27449870faabf5e058b",
+    "lines": [
+      "2026-11-03T20:42:39.0676505Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:44:26.7420782Z {\"suite\": \"f04\", \"tests\": 259, \"result\": \"PASS\"}",
+      "2026-11-03T20:44:27.4508027Z SHA256 digest of uploaded artifact zip is 25c432f73b3131d28a6ea54fac965854d70e68bc69e8fa8625423986c3026fc5",
+      "2026-11-03T20:44:27.8901361Z Artifact f05-p05a-regression-f04-ubuntu-latest.zip successfully finalized. Artifact ID 13269911820",
+      "2026-11-03T20:44:27.8902182Z Artifact f05-p05a-regression-f04-ubuntu-latest has been successfully uploaded! Final size is 31783 bytes. Artifact ID is 13269911820"
+    ]
+  },
+  "126192745374": {
+    "name": "earlier-native (windows-latest, f02)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745374",
+    "normalized_log_sha256": "aef6f194ea299252896b9a6b3c787567d4355fdbeb1e08ccd294a2f24fec8cc6",
+    "lines": [
+      "2026-11-03T20:42:41.3885801Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:44:48.4053400Z {\"suite\": \"f02\", \"tests\": 15, \"result\": \"PASS\"}",
+      "2026-11-03T20:44:49.4499081Z SHA256 digest of uploaded artifact zip is 5bd820402ff1e11825d93eceb3dc3f61dc15d9f90ffb1ed944a158a27fd4c98c",
+      "2026-11-03T20:44:49.9319245Z Artifact f05-p05a-regression-f02-windows-latest.zip successfully finalized. Artifact ID 13268194942",
+      "2026-11-03T20:44:49.9320451Z Artifact f05-p05a-regression-f02-windows-latest has been successfully uploaded! Final size is 6402 bytes. Artifact ID is 13268194942"
+    ]
+  },
+  "126192745389": {
+    "name": "earlier-native (windows-latest, f03)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745389",
+    "normalized_log_sha256": "e58cc6bf7d4d9115170a1bb8ba8f5bea6036f0ea88feb88ba70590050aa7fe38",
+    "lines": [
+      "2026-11-03T20:42:39.4802726Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:44:06.0539967Z {\"suite\": \"f03\", \"tests\": 25, \"result\": \"PASS\"}",
+      "2026-11-03T20:44:06.8356355Z SHA256 digest of uploaded artifact zip is f624f6a41199402e2fd3886a0a02ffcd0510dcca4823b6494b2147f6d827acdb",
+      "2026-11-03T20:44:07.2946678Z Artifact f05-p05a-regression-f03-windows-latest.zip successfully finalized. Artifact ID 13269158531",
+      "2026-11-03T20:44:07.2947627Z Artifact f05-p05a-regression-f03-windows-latest has been successfully uploaded! Final size is 7461 bytes. Artifact ID is 13269158531"
+    ]
+  },
+  "126192745433": {
+    "name": "earlier-native (windows-latest, f04)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745433",
+    "normalized_log_sha256": "408fea53982b363fe6af402828bd5e7c9c4220777e5bc0ae081165b2e2a7eb26",
+    "lines": [
+      "2026-11-03T20:42:39.5593208Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:45:45.6175497Z {\"suite\": \"f04\", \"tests\": 259, \"result\": \"PASS\"}",
+      "2026-11-03T20:45:46.5156875Z SHA256 digest of uploaded artifact zip is a8cd698bb375018161d1690a0d73631bf7ba6b9318d4a223f042a20313f8a3c6",
+      "2026-11-03T20:45:47.1265071Z Artifact f05-p05a-regression-f04-windows-latest.zip successfully finalized. Artifact ID 13269083685",
+      "2026-11-03T20:45:47.1266019Z Artifact f05-p05a-regression-f04-windows-latest has been successfully uploaded! Final size is 32499 bytes. Artifact ID is 13269083685"
+    ]
+  },
+  "126192744860": {
+    "name": "historical (ubuntu-latest)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192744860",
+    "normalized_log_sha256": "70f7ee7beb0d9bd167211c6a02f18bf9d9e9df30da4a93c38e6f1b7e795a34ef",
+    "lines": [
+      "2026-11-03T20:42:38.9278055Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:59:00.9049728Z {\"suite\": \"history\", \"tests\": 6, \"result\": \"PASS\"}",
+      "2026-11-03T20:59:01.6386462Z SHA256 digest of uploaded artifact zip is 60c4bfb250ef4949910af1aa8019f31a08fcfa14f8208eb93a53c1e94cf56834",
+      "2026-11-03T20:59:02.1014827Z Artifact f05-p05a-historical-ubuntu-latest.zip successfully finalized. Artifact ID 13271021193",
+      "2026-11-03T20:59:02.1016496Z Artifact f05-p05a-historical-ubuntu-latest has been successfully uploaded! Final size is 39015 bytes. Artifact ID is 13271021193"
+    ]
+  },
+  "126192745157": {
+    "name": "historical (windows-latest)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745157",
+    "normalized_log_sha256": "06d93f8eaad72d32a9d372ec325df904f0a785eae9696376fdc63dd2d878bc63",
+    "lines": [
+      "2026-11-03T20:42:42.1179339Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T21:04:22.0313779Z {\"suite\": \"history\", \"tests\": 6, \"result\": \"PASS\"}",
+      "2026-11-03T21:04:22.8682371Z SHA256 digest of uploaded artifact zip is 1e581863984f841190b8f8d0449d2458fe843d36711ba86061957357144d3c2e",
+      "2026-11-03T21:04:23.3316548Z Artifact f05-p05a-historical-windows-latest.zip successfully finalized. Artifact ID 13271296761",
+      "2026-11-03T21:04:23.3317508Z Artifact f05-p05a-historical-windows-latest has been successfully uploaded! Final size is 41641 bytes. Artifact ID is 13271296761"
+    ]
+  },
+  "126192745147": {
+    "name": "native (ubuntu-latest)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745147",
+    "normalized_log_sha256": "6338a709637adcfa916ce2cfa89a02db9f6f06df624fca1a8a108df2b80c9f57",
+    "lines": [
+      "2026-11-03T20:42:39.7625997Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:45:39.6828128Z {\"suite\": \"core\", \"tests\": 483, \"result\": \"PASS\"}",
+      "2026-11-03T20:47:21.4823481Z {\"suite\": \"f05\", \"tests\": 395, \"result\": \"PASS\"}",
+      "2026-11-03T20:47:21.6166184Z   \"result\": \"PASS_STATIC_ONLY\",",
+      "2026-11-03T20:47:22.2294601Z Ran 22 tests in 0.002s",
+      "2026-11-03T20:47:22.2576230Z F05 reference: 48 cases; 0 failures; Core and UE5 NOT tested",
+      "2026-11-03T20:47:22.3276125Z Ran 3 tests in 0.003s",
+      "2026-11-03T20:47:22.3506105Z PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de diseño, F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO, F04 cerrada en REFERENCIA_PROBADA y F05 principal; plan sincronizado. Esto NO valida Core RPG ni UE5.",
+      "2026-11-03T20:47:23.7114793Z SHA256 digest of uploaded artifact zip is 20b4211352e1f2c407c025f10f709c4daeb0fb6957f6494660e4cc7d5eebe60b",
+      "2026-11-03T20:47:24.1637493Z Artifact f05-p05a-native-ubuntu-latest.zip successfully finalized. Artifact ID 13268299951",
+      "2026-11-03T20:47:24.1637966Z Artifact f05-p05a-native-ubuntu-latest has been successfully uploaded! Final size is 146500 bytes. Artifact ID is 13268299951"
+    ]
+  },
+  "126192745131": {
+    "name": "native (windows-latest)",
+    "url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745131",
+    "normalized_log_sha256": "b0f6e7231a7ac57507d085ae9c59e68009d359b613459f7e975512b71b619ed4",
+    "lines": [
+      "2026-11-03T20:42:39.5697326Z   ref: c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "2026-11-03T20:46:17.4562773Z PLATFORM SKIP: ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt <testcase name=\"ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt\" classname=\"ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt\" time=\"0.0067493\" status=\"notrun\">",
+      "2026-11-03T20:46:17.4564193Z \t\t<skipped message=\"SKIP_REGULAR_EXPRESSION_MATCHED\" />",
+      "2026-11-03T20:46:17.4564540Z \t\t<properties />",
+      "2026-11-03T20:46:17.4565304Z \t\t<system-out>Running main() from D:\\a\\Videojuego_StarTrek\\Videojuego_StarTrek\\laboratorios\\f05\\p05a\\ci\\core\\build\\_deps\\googletest-src\\googletest\\src\\gtest_main.cc",
+      "2026-11-03T20:46:17.4566164Z Note: Google Test filter = ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "2026-11-03T20:46:17.4566695Z [==========] Running 1 test from 1 test suite.",
+      "2026-11-03T20:46:17.4567038Z [----------] Global test environment set-up.",
+      "2026-11-03T20:46:17.4567370Z [----------] 1 test from ContentPackLoaderFilesystemTest",
+      "2026-11-03T20:46:17.4567854Z [ RUN      ] ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "2026-11-03T20:46:17.4568560Z D:\\a\\Videojuego_StarTrek\\Videojuego_StarTrek\\laboratorios\\f05\\p05a\\ci\\CoreRPG\\tests\\content_pack_loader_test.cpp(194): Skipped",
+      "2026-11-03T20:46:17.4569097Z Platform/user can still read a permissionless file",
+      "2026-11-03T20:46:17.4569320Z ",
+      "2026-11-03T20:46:17.4569625Z [  SKIPPED ] ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt (1 ms)",
+      "2026-11-03T20:46:17.4570207Z [----------] 1 test from ContentPackLoaderFilesystemTest (1 ms total)",
+      "2026-11-03T20:46:17.4570493Z ",
+      "2026-11-03T20:46:17.4570626Z [----------] Global test environment tear-down",
+      "2026-11-03T20:46:17.4570932Z [==========] 1 test from 1 test suite ran. (1 ms total)",
+      "2026-11-03T20:46:17.4571229Z [  PASSED  ] 0 tests.",
+      "2026-11-03T20:46:17.4571482Z [  SKIPPED ] 1 test, listed below:",
+      "2026-11-03T20:46:17.4571965Z [  SKIPPED ] ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "2026-11-03T20:46:17.4572444Z </system-out>",
+      "2026-11-03T20:46:17.4572986Z \t</testcase>",
+      "2026-11-03T20:46:17.4573200Z \t",
+      "2026-11-03T20:46:17.4575029Z {\"suite\": \"core\", \"tests\": 482, \"result\": \"PASS_COMPATIBLE_WITH_PLATFORM_SKIP\"}",
+      "2026-11-03T20:49:22.6318558Z {\"suite\": \"f05\", \"tests\": 395, \"result\": \"PASS\"}",
+      "2026-11-03T20:49:22.9610385Z   \"result\": \"PASS_STATIC_ONLY\",",
+      "2026-11-03T20:49:23.3639989Z Ran 22 tests in 0.002s",
+      "2026-11-03T20:49:23.4083148Z F05 reference: 48 cases; 0 failures; Core and UE5 NOT tested",
+      "2026-11-03T20:49:23.5091245Z Ran 3 tests in 0.004s",
+      "2026-11-03T20:49:23.5473331Z PASS: F00-F15 (16 fases, 80 pasos), F01 cierre de dise�o, F02 cerrada en CONTRATO_VALIDADO, F03 cerrada en CORE_INTEGRADO, F04 cerrada en REFERENCIA_PROBADA y F05 principal; plan sincronizado. Esto NO valida Core RPG ni UE5.",
+      "2026-11-03T20:49:24.7097096Z SHA256 digest of uploaded artifact zip is 4a9b5d2781c4281d9a809b8bcfe04ce0c0498278de02aaa0dbf0420eb95f5fab",
+      "2026-11-03T20:49:25.2341267Z Artifact f05-p05a-native-windows-latest.zip successfully finalized. Artifact ID 13268819779",
+      "2026-11-03T20:49:25.2341948Z Artifact f05-p05a-native-windows-latest has been successfully uploaded! Final size is 137919 bytes. Artifact ID is 13268819779"
+    ]
+  }
+}

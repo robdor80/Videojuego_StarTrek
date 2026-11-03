@@ -1,0 +1,20 @@
+Test project $OUTPUT/historical/build
+    Start 217: f04.history_campaign_1_365
+    Start 218: f04.history_campaign_2_365
+1/6 Test #217: f04.history_campaign_1_365 ..........   Passed   23.43 sec
+    Start 219: f04.history_campaign_3_365
+2/6 Test #218: f04.history_campaign_2_365 ..........   Passed   26.15 sec
+    Start 220: f04.history_campaign_4_365
+3/6 Test #219: f04.history_campaign_3_365 ..........   Passed  121.42 sec
+    Start 221: f04.history_campaign_5_365
+4/6 Test #220: f04.history_campaign_4_365 ..........   Passed  471.44 sec
+    Start 222: f04.history_campaign_valhalla_730
+5/6 Test #221: f04.history_campaign_5_365 ..........   Passed  673.92 sec
+6/6 Test #222: f04.history_campaign_valhalla_730 ...   Passed  927.01 sec
+
+100% tests passed out of 6
+
+Label Time Summary:
+history_acceptance    = 2243.38 sec*proc (6 tests)
+
+Total Test time (real) = 1424.61 sec

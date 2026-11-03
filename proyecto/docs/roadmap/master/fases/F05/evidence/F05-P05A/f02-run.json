@@ -1,0 +1,76 @@
+{
+  "suite": "f02",
+  "utc": "2026-11-03T20:18:15.101487+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "trek_head": "1ff057456a135f00b5c665f753fd7577f866c155",
+  "trek_dirty": true,
+  "core": "4f282863737bcd8f5add401202a9e1064c133672",
+  "commands": [
+    [
+      "cmake",
+      "--version"
+    ],
+    [
+      "ctest",
+      "--version"
+    ],
+    [
+      "git",
+      "--version"
+    ],
+    [
+      "cmake",
+      "-S",
+      "$REPO/desarrollo/integration/f02",
+      "-B",
+      "$OUTPUT/f02/build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCORERPG_SOURCE_DIR=$OUTPUT/CoreF02"
+    ],
+    [
+      "cmake",
+      "--build",
+      "$OUTPUT/f02/build",
+      "--config",
+      "Release",
+      "--parallel",
+      "1"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "$OUTPUT/f02/build",
+      "-C",
+      "Release",
+      "--no-tests=error",
+      "--output-on-failure",
+      "--output-junit",
+      "$OUTPUT/f02/tests.xml",
+      "-j",
+      "1"
+    ]
+  ],
+  "result": "PASS",
+  "compiler_files": [
+    "build/CMakeFiles/4.4.4/CMakeCXXCompiler.cmake"
+  ],
+  "tests": 15,
+  "cases": [
+    "f02.identity",
+    "f02.placement",
+    "f02.invalid",
+    "f02.stale",
+    "f02.denied",
+    "f02.visibility",
+    "f02.context",
+    "f02.roundtrip",
+    "f02.rng",
+    "f02.corrupt",
+    "f02.incompatible",
+    "f02.scope",
+    "f02.thread",
+    "f02.buffers",
+    "f02.host_failure"
+  ]
+}

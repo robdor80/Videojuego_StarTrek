@@ -1,0 +1,21 @@
+{
+  "result": "PASS_STATIC_ONLY",
+  "automation_names": [
+    "F05.P01.LifecycleAndRecovery",
+    "F05.P01.Negatives",
+    "F05.P01.WorldAndActorIndependence",
+    "F05.P02.DelegationRevocationRecovery",
+    "F05.P02.ExpiryAndChainOfCommand",
+    "F05.P02.ModesAndLimits",
+    "F05.P03.AuthorityAndKnowledge",
+    "F05.P03.NPCInitiativeAndOrders",
+    "F05.P03.OffscreenPersistenceAndRecovery",
+    "F05.P04.AIProposalValidation",
+    "F05.P04.OffscreenRecoveryAndSafety",
+    "F05.P04.StaleAuthorityAndFallback"
+  ],
+  "declared_abi_calls_checked": 25,
+  "ubt_uht": "NO_EJECUTADO",
+  "unreal_execution": "NO_EJECUTADO",
+  "real_rhi": "NO_EJECUTADO"
+}

@@ -78,3 +78,43 @@ Guardar en un commit posterior, sin alterar registros históricos: fecha/hora, e
 Las nuevas pruebas P04 se añaden sin borrar ni marcar automáticamente las anteriores. Antes de comenzar F06, realizar la auditoría integral P05 sobre el HEAD definitivo, comprobar regresiones y dejar acta explícita de cierre. La fusión P04 no certifica pruebas UE ni autoriza cerrar F05 o comenzar F06; la auditoría integral P05 sigue pendiente.
 
 **Prohibido limpiar, borrar o reutilizar laboratorios previos sin autorización.** Directorios nuevos bajo `laboratorios/f05/` excluidos de Git; preservar fuentes y recursos artísticos.
+
+## P05A Cloud / P05B MSI — auditoría integral, 03-11-2026
+
+P05A **LISTA PARA VALIDACIÓN MSI** en alcance Cloud, entrega Draft [#87](https://github.com/robdor80/Videojuego_StarTrek/pull/87) para auditoría independiente y comprobación de CI del HEAD final. Las dos incidencias
+reproducidas P05A-01 (cancelación por sucesor que era emisor delegado) y P05A-02
+(plazo P04 manipulado >300 en restauración) están corregidas y sus regresiones
+pasan. Evidencia local ejecutada: F04/F05 **395/395** (30 P05A), Core **483/483**, F02 **15/15**, F03 **25/25**, F04 original **259/259**, campañas **6/6** con pins/oráculos congelados; documentación **22 tests +48 fixtures +3 transversales** y gobierno PASS. Ocho repeticiones con red bloqueada PASS. CI final Linux/Windows y sus artefactos se publican en PR #87; no contar un SKIP condicional POSIX Core/Windows como PASS. Ver [auditoría y matriz](F05-P05A_AUDITORIA_INTEGRAL.md).
+No hay ejecución MSI ni Unreal en Cloud, ni validaciones anteriores canceladas.
+
+Pendientes adicionales agrupados, sin duplicar P01–P04:
+
+- [ ] **P05B-01. PENDIENTE.** Repetir íntegramente los 30 casos nuevos P05A y la selección nativa F04/F05, Core completo, recuperación entre procesos e historia, con MSVC real en MSI. Incluye cancelación del sucesor y rechazo de plazo manipulado; no basta CI Windows.
+- [ ] **P05B-02. PENDIENTE.** Acreditar tiempo autoritativo y ausencia de progreso offline con `p05a_J_time` y recuperación; el Host pausa dejando de avanzar Core. Sin daemon ni reloj real de simulación.
+- [ ] **P05B-03. PENDIENTE.** Aplicar el procedimiento integral P05B, dos laboratorios limpios nuevos, verificación real de DLL/exports/SHA, las 12 pruebas UE exactas y RHI hardware. Reutiliza/acumula P01-01…P04-07; una evidencia integral puede acreditar requisitos equivalentes, conservando cada resultado.
+- [ ] **P05B-04. PENDIENTE.** Revisar reportes, advertencias y hashes, publicar evidencia permanente y acta de aceptación posterior; no convertir PASS automatizado en cierre de fase.
+
+[Procedimiento PowerShell, comandos, logs y diagnóstico](P05B_PLAN_CERTIFICACION_MSI.md).
+P05A no cierra F05 ni desbloquea F06. `P05=CERRADA` en la referencia documental
+histórica es independiente de P05A/P05B. Bloquean el cierre los fallos graves,
+CI final incompleta, cualquier pendiente MSI obligatorio y la falta de acta P05B.
+
+### Conciliación de recuperación Cloud — 03-11-2026
+
+Comprobado en GitHub sobre `c3ede747225cc009da54a5d2c4732f4760c63c2e`:
+[CI integral 41715049830](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830)
+SUCCESS, **10/10 jobs**, intento 1. Linux y Windows: F04/F05 **395/395**, F02
+**15/15**, F03 **25/25**, F04 original **259/259**, campañas **6/6 por sistema**.
+Core Linux **483 PASS**; Core Windows **482 PASS + 1 SKIP** exclusivamente de
+`ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt`.
+Referencia F05, gobierno y referencia F15 SUCCESS en ese mismo commit.
+No quedan campañas pendientes de ese HEAD; las del último commit documental,
+si las activa Actions, se identifican por separado en PR #87.
+
+La conciliación contrasta metadatos/logs CI y hashes/JUnit/aceptaciones locales
+publicados. Conserva enlaces, hashes y el límite de acceso a ZIP CI en la
+[evidencia de recuperación](evidence/F05-P05A-CI-RECUPERACION/summary.json).
+No añade ejecución MSI, no acredita ACL Windows ni Unreal, y no marca ninguna
+casilla P01–P04/P05B como superada. Plan P05B revisado: dos builds limpios, DLL
+real, 12 nombres UE exactos y RHI hardware; **PENDIENTE / NO EJECUTADO**.
+No hay cambios nuevos de producto, Core, arte o laboratorios anteriores.

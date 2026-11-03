@@ -1,0 +1,29 @@
+{
+  "kind": "acceptance",
+  "profile": 3,
+  "days": 365,
+  "completed": 365,
+  "maximum_resident": 8492,
+  "maximum_active_bytes": 2587327,
+  "elapsed_ms": 90849.9,
+  "real_watches": true,
+  "all_blocks_equal_complete_history": true,
+  "storage_bytes_retaining_previous_generations": 140155276,
+  "phases_elapsed_seconds": 121.33410637899999,
+  "core_revision": "89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98",
+  "reference_fixture_sha256": "9aa4997e13ff8150096f51ea6e7d89d21091c1705496241d68e93361a3e2e9c5",
+  "reference_core_revision": "63d2401edaf85960b4baaf6b537ae571ba52a439",
+  "reference_origin": "Audited complete-original-world oracle, original per-block canonical CRPGTIME hashes and final 7-day future; MSI acceptance at 19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "reference_evidence_commit": "19aaf9746927cac1e0596f7f828497a8b39eac3f",
+  "reference_manifest_schema": 1,
+  "reference_manifest_sha256": "3a065ade86c2d2b6a97e9ec50eaa39387aaf6060b5126ee5f65768a87e022f85",
+  "reference_profile": 3,
+  "reference_days": 365,
+  "reference_contract_verified": true,
+  "reference_mode": "verified_fixture",
+  "phase_seconds": {
+    "campaign": 90.92566762800004,
+    "resume": 2.3983020290000923,
+    "audit": 28.003648043999988
+  }
+}

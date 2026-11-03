@@ -1,0 +1,393 @@
+{
+  "schema": 1,
+  "verified_utc": "2026-11-03T21:45:46.120520+00:00",
+  "repository": "robdor80/Videojuego_StarTrek",
+  "pr": 87,
+  "tested_head": "c3ede747225cc009da54a5d2c4732f4760c63c2e",
+  "branch": "codex/f05-p05a-integration-audit",
+  "compatible_core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "verification_basis": "GitHub workflow/job API and decoded job logs; local published JUnit, campaign acceptances and SHA256 manifests independently checked. CI ZIP contents were not extracted in this recovery.",
+  "artifact_access_limit": "CLI artifact download redirect denied by cloud HTTP policy; GitHub connector exposed a reusable file reference but no local ZIP. No network bypass or rerun performed.",
+  "jobs": [
+    {
+      "id": 126192745275,
+      "name": "earlier-native (ubuntu-latest, f02)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745275",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:38Z",
+      "completed_at": "2026-11-03T20:43:38Z",
+      "suites": [
+        {
+          "suite": "f02",
+          "tests": 15,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 15
+        }
+      ]
+    },
+    {
+      "id": 126192745425,
+      "name": "earlier-native (ubuntu-latest, f03)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745425",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:38Z",
+      "completed_at": "2026-11-03T20:43:12Z",
+      "suites": [
+        {
+          "suite": "f03",
+          "tests": 25,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 25
+        }
+      ]
+    },
+    {
+      "id": 126192745130,
+      "name": "earlier-native (ubuntu-latest, f04)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745130",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T20:44:30Z",
+      "suites": [
+        {
+          "suite": "f04",
+          "tests": 259,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 259
+        }
+      ]
+    },
+    {
+      "id": 126192745374,
+      "name": "earlier-native (windows-latest, f02)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745374",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:39Z",
+      "completed_at": "2026-11-03T20:44:56Z",
+      "suites": [
+        {
+          "suite": "f02",
+          "tests": 15,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 15
+        }
+      ]
+    },
+    {
+      "id": 126192745389,
+      "name": "earlier-native (windows-latest, f03)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745389",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T20:44:12Z",
+      "suites": [
+        {
+          "suite": "f03",
+          "tests": 25,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 25
+        }
+      ]
+    },
+    {
+      "id": 126192745433,
+      "name": "earlier-native (windows-latest, f04)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745433",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T20:45:52Z",
+      "suites": [
+        {
+          "suite": "f04",
+          "tests": 259,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 259
+        }
+      ]
+    },
+    {
+      "id": 126192744860,
+      "name": "historical (ubuntu-latest)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192744860",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T20:59:04Z",
+      "suites": [
+        {
+          "suite": "history",
+          "tests": 6,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 6
+        }
+      ]
+    },
+    {
+      "id": 126192745157,
+      "name": "historical (windows-latest)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745157",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T21:04:29Z",
+      "suites": [
+        {
+          "suite": "history",
+          "tests": 6,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 6
+        }
+      ]
+    },
+    {
+      "id": 126192745147,
+      "name": "native (ubuntu-latest)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745147",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:38Z",
+      "completed_at": "2026-11-03T20:47:26Z",
+      "suites": [
+        {
+          "suite": "core",
+          "tests": 483,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 483
+        },
+        {
+          "suite": "f05",
+          "tests": 395,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 395
+        }
+      ]
+    },
+    {
+      "id": 126192745131,
+      "name": "native (windows-latest)",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830/job/126192745131",
+      "status": "completed",
+      "conclusion": "success",
+      "started_at": "2026-11-03T20:42:37Z",
+      "completed_at": "2026-11-03T20:49:30Z",
+      "suites": [
+        {
+          "suite": "core",
+          "tests": 482,
+          "result": "PASS_COMPATIBLE_WITH_PLATFORM_SKIP",
+          "skipped_cases": [
+            "ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt"
+          ],
+          "discovered_tests": 483
+        },
+        {
+          "suite": "f05",
+          "tests": 395,
+          "result": "PASS",
+          "skipped_cases": [],
+          "discovered_tests": 395
+        }
+      ]
+    }
+  ],
+  "workflows": [
+    {
+      "id": 41715049830,
+      "name": "F05 P05A integration audit",
+      "head_sha": "c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "head_branch": "codex/f05-p05a-integration-audit",
+      "run_attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830",
+      "created_at": "2026-11-03T20:42:35Z",
+      "updated_at": "2026-11-03T21:04:30Z"
+    },
+    {
+      "id": 41715049776,
+      "name": "F05 Reference Orders and NPC Initiative",
+      "head_sha": "c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "head_branch": "codex/f05-p05a-integration-audit",
+      "run_attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049776",
+      "created_at": "2026-11-03T20:42:35Z",
+      "updated_at": "2026-11-03T20:43:20Z"
+    },
+    {
+      "id": 41715049860,
+      "name": "F15 — Release readiness reference (NO beta/runtime certification)",
+      "head_sha": "c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "head_branch": "codex/f05-p05a-integration-audit",
+      "run_attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049860",
+      "created_at": "2026-11-03T20:42:35Z",
+      "updated_at": "2026-11-03T20:43:14Z"
+    },
+    {
+      "id": 41715049869,
+      "name": "Roadmap governance — F00-F15",
+      "head_sha": "c3ede747225cc009da54a5d2c4732f4760c63c2e",
+      "head_branch": "codex/f05-p05a-integration-audit",
+      "run_attempt": 1,
+      "event": "pull_request",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049869",
+      "created_at": "2026-11-03T20:42:35Z",
+      "updated_at": "2026-11-03T20:43:08Z"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": 13271021193,
+      "name": "f05-p05a-historical-ubuntu-latest",
+      "size_in_bytes": 39015,
+      "expired": false,
+      "digest": "sha256:60c4bfb250ef4949910af1aa8019f31a08fcfa14f8208eb93a53c1e94cf56834",
+      "created_at": "2026-11-03T20:59:01Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13271296761,
+      "name": "f05-p05a-historical-windows-latest",
+      "size_in_bytes": 41641,
+      "expired": false,
+      "digest": "sha256:1e581863984f841190b8f8d0449d2458fe843d36711ba86061957357144d3c2e",
+      "created_at": "2026-11-03T21:04:23Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13268299951,
+      "name": "f05-p05a-native-ubuntu-latest",
+      "size_in_bytes": 146500,
+      "expired": false,
+      "digest": "sha256:20b4211352e1f2c407c025f10f709c4daeb0fb6957f6494660e4cc7d5eebe60b",
+      "created_at": "2026-11-03T20:47:23Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13268819779,
+      "name": "f05-p05a-native-windows-latest",
+      "size_in_bytes": 137919,
+      "expired": false,
+      "digest": "sha256:4a9b5d2781c4281d9a809b8bcfe04ce0c0498278de02aaa0dbf0420eb95f5fab",
+      "created_at": "2026-11-03T20:49:24Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13268733376,
+      "name": "f05-p05a-regression-f02-ubuntu-latest",
+      "size_in_bytes": 6737,
+      "expired": false,
+      "digest": "sha256:5a2f8ef5f6cf585928252ad386759e7664348d186a1e040cea2a286a5d04d596",
+      "created_at": "2026-11-03T20:43:35Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13268194942,
+      "name": "f05-p05a-regression-f02-windows-latest",
+      "size_in_bytes": 6402,
+      "expired": false,
+      "digest": "sha256:5bd820402ff1e11825d93eceb3dc3f61dc15d9f90ffb1ed944a158a27fd4c98c",
+      "created_at": "2026-11-03T20:44:49Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13268788732,
+      "name": "f05-p05a-regression-f03-ubuntu-latest",
+      "size_in_bytes": 7777,
+      "expired": false,
+      "digest": "sha256:108e03b6791ce7ab68e5402df31cd3985bc544df43c1db0e209a472fc57e87b8",
+      "created_at": "2026-11-03T20:43:08Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13269158531,
+      "name": "f05-p05a-regression-f03-windows-latest",
+      "size_in_bytes": 7461,
+      "expired": false,
+      "digest": "sha256:f624f6a41199402e2fd3886a0a02ffcd0510dcca4823b6494b2147f6d827acdb",
+      "created_at": "2026-11-03T20:44:06Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13269911820,
+      "name": "f05-p05a-regression-f04-ubuntu-latest",
+      "size_in_bytes": 31783,
+      "expired": false,
+      "digest": "sha256:25c432f73b3131d28a6ea54fac965854d70e68bc69e8fa8625423986c3026fc5",
+      "created_at": "2026-11-03T20:44:27Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    },
+    {
+      "id": 13269083685,
+      "name": "f05-p05a-regression-f04-windows-latest",
+      "size_in_bytes": 32499,
+      "expired": false,
+      "digest": "sha256:a8cd698bb375018161d1690a0d73631bf7ba6b9318d4a223f042a20313f8a3c6",
+      "created_at": "2026-11-03T20:45:46Z",
+      "expires_at": "2027-02-01T20:42:35Z"
+    }
+  ],
+  "published_evidence_verification": {
+    "manifest_entries": 98,
+    "all_hashes_match": true,
+    "junit_pass": {
+      "core": 483,
+      "f05": 395,
+      "f02": 15,
+      "f03": 25,
+      "f04": 259,
+      "history": 6
+    },
+    "campaigns_verified": [
+      "1-365",
+      "2-365",
+      "3-365",
+      "4-365",
+      "5-365",
+      "5-730"
+    ],
+    "source_entries": 133,
+    "source_mismatches": [
+      ".github/workflows/f05-native-orders.yml"
+    ],
+    "explanation": "Only workflow hash predates c3ede74 explicit head checkout; matches cc97eae. All integration source hashes match tested c3ede74. Historical evidence kept unchanged."
+  },
+  "scope": {
+    "product_changes_in_recovery": false,
+    "reruns_or_dispatches": 0,
+    "cancellations": 0,
+    "new_prs": 0,
+    "core_modified": false,
+    "unreal": "NO_EJECUTADO",
+    "msi": "PENDIENTE",
+    "f05": "EN_CURSO",
+    "f06": "BLOQUEADA"
+  },
+  "pending_at_verified_head": [],
+  "delivery_head_policy": "This evidence certifies tested_head only. A later documentary commit retains this provenance; its automatic workflows must be reported separately in PR #87, never inferred PASS."
+}

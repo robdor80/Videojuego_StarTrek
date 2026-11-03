@@ -69,3 +69,17 @@ add_test(NAME f05.p04_process_save COMMAND f05_ai_tests process_save "${CMAKE_CU
 set_tests_properties(f05.p04_process_save PROPERTIES FIXTURES_SETUP ai)
 add_test(NAME f05.p04_process_load COMMAND f05_ai_tests process_load "${CMAKE_CURRENT_BINARY_DIR}/p04-process")
 set_tests_properties(f05.p04_process_load PROPERTIES FIXTURES_REQUIRED ai)
+
+add_executable(f05_integration_audit_tests tests/f05_integration_audit_tests.cpp)
+target_link_libraries(f05_integration_audit_tests PRIVATE TrekF04Bridge TrekF05Language CoreRPG::CoreRPG jsoncons)
+set_target_properties(f05_integration_audit_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f04")
+foreach(case IN ITEMS A_captain B_command B_cancel_successor C_revoked C_suspended C_expired C_mode
+ D_player E_player_captain F_officers F_contradictions G_timeout G_quota G_corrupt G_injection G_exception
+ H_offscreen J_time limits capacity_ai capacity_orders capacity_delegations capacity_decisions
+ cancel_revoked_issuer availability key_collision archive_ttl archive_causality)
+ add_test(NAME f05.p05a_${case} COMMAND f05_integration_audit_tests ${case} "${CMAKE_CURRENT_BINARY_DIR}/p05a-${case}")
+endforeach()
+add_test(NAME f05.p05a_I_process_save COMMAND f05_integration_audit_tests I_process_save "${CMAKE_CURRENT_BINARY_DIR}/p05a-process")
+set_tests_properties(f05.p05a_I_process_save PROPERTIES FIXTURES_SETUP integration_audit)
+add_test(NAME f05.p05a_I_process_load COMMAND f05_integration_audit_tests I_process_load "${CMAKE_CURRENT_BINARY_DIR}/p05a-process")
+set_tests_properties(f05.p05a_I_process_load PROPERTIES FIXTURES_REQUIRED integration_audit)

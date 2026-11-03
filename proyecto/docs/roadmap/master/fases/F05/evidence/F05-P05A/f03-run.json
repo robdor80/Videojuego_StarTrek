@@ -1,0 +1,86 @@
+{
+  "suite": "f03",
+  "utc": "2026-11-03T20:18:49.203780+00:00",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "python": "3.12.14",
+  "trek_head": "1ff057456a135f00b5c665f753fd7577f866c155",
+  "trek_dirty": true,
+  "core": "9c53a33787de13d91eb2abe4da07033ee0fa1dc1",
+  "commands": [
+    [
+      "cmake",
+      "--version"
+    ],
+    [
+      "ctest",
+      "--version"
+    ],
+    [
+      "git",
+      "--version"
+    ],
+    [
+      "cmake",
+      "-S",
+      "$REPO/desarrollo/integration/f03",
+      "-B",
+      "$OUTPUT/f03/build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-DCORERPG_SOURCE_DIR=$OUTPUT/CoreF03"
+    ],
+    [
+      "cmake",
+      "--build",
+      "$OUTPUT/f03/build",
+      "--config",
+      "Release",
+      "--parallel",
+      "1"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "$OUTPUT/f03/build",
+      "-C",
+      "Release",
+      "--no-tests=error",
+      "--output-on-failure",
+      "--output-junit",
+      "$OUTPUT/f03/tests.xml",
+      "-j",
+      "1"
+    ]
+  ],
+  "result": "PASS",
+  "compiler_files": [
+    "build/CMakeFiles/4.4.4/CMakeCXXCompiler.cmake"
+  ],
+  "tests": 25,
+  "cases": [
+    "f03.identity",
+    "f03.determinism",
+    "f03.observers",
+    "f03.hidden",
+    "f03.acquire",
+    "f03.report",
+    "f03.denied",
+    "f03.readonly",
+    "f03.offscreen",
+    "f03.order",
+    "f03.bounded",
+    "f03.duplicate",
+    "f03.backwards",
+    "f03.roundtrip",
+    "f03.rng",
+    "f03.corrupt",
+    "f03.incompatible",
+    "f03.scope",
+    "f03.thread",
+    "f03.buffers",
+    "f03.stale",
+    "f03.calendar",
+    "f03.tampered",
+    "f03.process_save",
+    "f03.process_load"
+  ]
+}

@@ -1,0 +1,393 @@
+﻿2026-11-03T20:27:58.9426136Z Current runner version: '2.338.2'
+2026-11-03T20:27:58.9464351Z ##[group]Runner Image Provisioner
+2026-11-03T20:27:58.9465506Z Hosted Compute Agent
+2026-11-03T20:27:58.9466265Z Version: 20261021.618
+2026-11-03T20:27:58.9467205Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-03T20:27:58.9468279Z Build Date: 2026-10-21T00:45:21Z
+2026-11-03T20:27:58.9469157Z Worker ID: {724dc415-3f66-4b16-9b46-48dddcb742e2}
+2026-11-03T20:27:58.9470096Z Region: centralus
+2026-11-03T20:27:58.9470794Z Cloud: Azure
+2026-11-03T20:27:58.9471541Z ##[endgroup]
+2026-11-03T20:27:58.9473629Z ##[group]Operating System
+2026-11-03T20:27:58.9474526Z Microsoft Windows Server 2025
+2026-11-03T20:27:58.9475345Z 10.0.26100
+2026-11-03T20:27:58.9476585Z Datacenter
+2026-11-03T20:27:58.9477285Z ##[endgroup]
+2026-11-03T20:27:58.9478157Z ##[group]Runner Image
+2026-11-03T20:27:58.9479017Z Image: windows-2025-vs2026
+2026-11-03T20:27:58.9479769Z Version: 20261030.294.1
+2026-11-03T20:27:58.9482113Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20261030.294/images/windows/Windows2025-VS2026-Readme.md
+2026-11-03T20:27:58.9485228Z Image Release: https://github.com/actions/runner-images/releases/tag/win25-vs2026%2F20261030.294
+2026-11-03T20:27:58.9486598Z ##[endgroup]
+2026-11-03T20:27:58.9488148Z ##[group]GITHUB_TOKEN Permissions
+2026-11-03T20:27:58.9491536Z Contents: read
+2026-11-03T20:27:58.9492408Z Metadata: read
+2026-11-03T20:27:58.9493144Z ##[endgroup]
+2026-11-03T20:27:58.9496596Z Secret source: Actions
+2026-11-03T20:27:58.9497924Z Cache mode: write
+2026-11-03T20:27:58.9499022Z Prepare workflow directory
+2026-11-03T20:27:58.9902597Z Prepare all required actions
+2026-11-03T20:27:58.9967082Z Getting action download info
+2026-11-03T20:27:59.2262636Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-03T20:27:59.3345982Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-03T20:27:59.4662451Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-11-03T20:27:59.7869985Z Complete job name: native (windows-latest)
+2026-11-03T20:27:59.9889742Z ##[group]Run actions/checkout@v4
+2026-11-03T20:27:59.9891336Z with:
+2026-11-03T20:27:59.9892270Z   repository: robdor80/Videojuego_StarTrek
+2026-11-03T20:27:59.9899054Z   token: ***
+2026-11-03T20:27:59.9899750Z   ssh-strict: true
+2026-11-03T20:27:59.9900441Z   ssh-user: git
+2026-11-03T20:27:59.9901147Z   persist-credentials: true
+2026-11-03T20:27:59.9901851Z   clean: true
+2026-11-03T20:27:59.9902538Z   sparse-checkout-cone-mode: true
+2026-11-03T20:27:59.9903310Z   fetch-depth: 1
+2026-11-03T20:27:59.9903913Z   fetch-tags: false
+2026-11-03T20:27:59.9904626Z   show-progress: true
+2026-11-03T20:27:59.9905282Z   lfs: false
+2026-11-03T20:27:59.9906452Z   submodules: false
+2026-11-03T20:27:59.9907172Z   set-safe-directory: true
+2026-11-03T20:27:59.9907944Z   allow-unsafe-pr-checkout: false
+2026-11-03T20:27:59.9909398Z env:
+2026-11-03T20:27:59.9909990Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:27:59.9910713Z ##[endgroup]
+2026-11-03T20:28:00.1615579Z Syncing repository: robdor80/Videojuego_StarTrek
+2026-11-03T20:28:00.1617428Z ##[group]Getting Git version info
+2026-11-03T20:28:00.1618567Z Working directory is '$CI_REPO'
+2026-11-03T20:28:00.2511919Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-03T20:28:00.6675546Z git version 2.56.0.windows.4
+2026-11-03T20:28:00.6743857Z ##[endgroup]
+2026-11-03T20:28:00.6768235Z Temporarily overriding HOME='D:\a\_temp\98383ccb-5299-4bfc-aa10-72c33971acb0' before making global git config changes
+2026-11-03T20:28:00.6770619Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T20:28:00.6781436Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory $CI_REPO
+2026-11-03T20:28:00.7587999Z Deleting the contents of '$CI_REPO'
+2026-11-03T20:28:00.7596188Z ##[group]Initializing the repository
+2026-11-03T20:28:00.7605713Z [command]"C:\Program Files\Git\bin\git.exe" init $CI_REPO
+2026-11-03T20:28:00.8625427Z Initialized empty Git repository in D:/a/Videojuego_StarTrek/Videojuego_StarTrek/.git/
+2026-11-03T20:28:00.8683353Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/robdor80/Videojuego_StarTrek
+2026-11-03T20:28:00.9528007Z ##[endgroup]
+2026-11-03T20:28:00.9529887Z ##[group]Disabling automatic garbage collection
+2026-11-03T20:28:00.9537272Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-03T20:28:00.9942278Z ##[endgroup]
+2026-11-03T20:28:00.9944009Z ##[group]Setting up auth
+2026-11-03T20:28:00.9954312Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T20:28:01.0385003Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-03T20:28:02.8502840Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T20:28:02.8910496Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-03T20:28:03.4920982Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T20:28:03.5353276Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-03T20:28:04.1384116Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-03T20:28:04.1816715Z ##[endgroup]
+2026-11-03T20:28:04.1817616Z ##[group]Fetching the repository
+2026-11-03T20:28:04.1832379Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +2b998b0f68251aa38ebef5cbee6506267ba212de:refs/remotes/pull/87/merge
+2026-11-03T20:28:27.8356019Z From https://github.com/robdor80/Videojuego_StarTrek
+2026-11-03T20:28:27.8357128Z  * [new ref]         2b998b0f68251aa38ebef5cbee6506267ba212de -> pull/87/merge
+2026-11-03T20:28:27.8404659Z ##[endgroup]
+2026-11-03T20:28:27.8405378Z ##[group]Determining the checkout info
+2026-11-03T20:28:27.8407501Z ##[endgroup]
+2026-11-03T20:28:27.8423256Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-03T20:28:27.8990158Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-03T20:28:27.9399918Z ##[group]Checking out the ref
+2026-11-03T20:28:27.9409905Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/remotes/pull/87/merge
+2026-11-03T20:28:29.2450721Z Updating files:  27% (968/3543)
+2026-11-03T20:28:29.2520118Z Updating files:  28% (993/3543)
+2026-11-03T20:28:29.2624957Z Updating files:  29% (1028/3543)
+2026-11-03T20:28:29.2749188Z Updating files:  30% (1063/3543)
+2026-11-03T20:28:29.2828141Z Updating files:  31% (1099/3543)
+2026-11-03T20:28:29.2913372Z Updating files:  32% (1134/3543)
+2026-11-03T20:28:29.2992142Z Updating files:  33% (1170/3543)
+2026-11-03T20:28:29.3067111Z Updating files:  34% (1205/3543)
+2026-11-03T20:28:29.3124973Z Updating files:  35% (1241/3543)
+2026-11-03T20:28:29.3185133Z Updating files:  36% (1276/3543)
+2026-11-03T20:28:29.3248133Z Updating files:  37% (1311/3543)
+2026-11-03T20:28:29.3307956Z Updating files:  38% (1347/3543)
+2026-11-03T20:28:29.3396805Z Updating files:  39% (1382/3543)
+2026-11-03T20:28:29.3466196Z Updating files:  40% (1418/3543)
+2026-11-03T20:28:29.3527092Z Updating files:  41% (1453/3543)
+2026-11-03T20:28:29.3602849Z Updating files:  42% (1489/3543)
+2026-11-03T20:28:29.3676686Z Updating files:  43% (1524/3543)
+2026-11-03T20:28:29.3746453Z Updating files:  44% (1559/3543)
+2026-11-03T20:28:29.3815334Z Updating files:  45% (1595/3543)
+2026-11-03T20:28:29.3879459Z Updating files:  46% (1630/3543)
+2026-11-03T20:28:29.3953542Z Updating files:  47% (1666/3543)
+2026-11-03T20:28:29.4076475Z Updating files:  48% (1701/3543)
+2026-11-03T20:28:29.4148486Z Updating files:  49% (1737/3543)
+2026-11-03T20:28:29.4216662Z Updating files:  50% (1772/3543)
+2026-11-03T20:28:29.4278687Z Updating files:  51% (1807/3543)
+2026-11-03T20:28:29.4377970Z Updating files:  52% (1843/3543)
+2026-11-03T20:28:29.4489132Z Updating files:  53% (1878/3543)
+2026-11-03T20:28:29.4597411Z Updating files:  54% (1914/3543)
+2026-11-03T20:28:29.4751871Z Updating files:  55% (1949/3543)
+2026-11-03T20:28:29.4904557Z Updating files:  56% (1985/3543)
+2026-11-03T20:28:29.5023899Z Updating files:  57% (2020/3543)
+2026-11-03T20:28:29.5222951Z Updating files:  58% (2055/3543)
+2026-11-03T20:28:29.5286804Z Updating files:  59% (2091/3543)
+2026-11-03T20:28:29.5354661Z Updating files:  60% (2126/3543)
+2026-11-03T20:28:29.5424053Z Updating files:  61% (2162/3543)
+2026-11-03T20:28:29.5505620Z Updating files:  62% (2197/3543)
+2026-11-03T20:28:29.5589892Z Updating files:  63% (2233/3543)
+2026-11-03T20:28:29.5746441Z Updating files:  64% (2268/3543)
+2026-11-03T20:28:29.5916619Z Updating files:  65% (2303/3543)
+2026-11-03T20:28:29.6027075Z Updating files:  66% (2339/3543)
+2026-11-03T20:28:29.6089324Z Updating files:  67% (2374/3543)
+2026-11-03T20:28:29.6144395Z Updating files:  68% (2410/3543)
+2026-11-03T20:28:29.6219953Z Updating files:  69% (2445/3543)
+2026-11-03T20:28:29.6292615Z Updating files:  70% (2481/3543)
+2026-11-03T20:28:29.6373932Z Updating files:  71% (2516/3543)
+2026-11-03T20:28:29.6431946Z Updating files:  72% (2551/3543)
+2026-11-03T20:28:29.6556289Z Updating files:  73% (2587/3543)
+2026-11-03T20:28:29.6666899Z Updating files:  74% (2622/3543)
+2026-11-03T20:28:29.6778934Z Updating files:  75% (2658/3543)
+2026-11-03T20:28:29.6872534Z Updating files:  76% (2693/3543)
+2026-11-03T20:28:29.6960089Z Updating files:  77% (2729/3543)
+2026-11-03T20:28:29.7038072Z Updating files:  78% (2764/3543)
+2026-11-03T20:28:29.7112352Z Updating files:  79% (2799/3543)
+2026-11-03T20:28:29.7192609Z Updating files:  80% (2835/3543)
+2026-11-03T20:28:29.7270421Z Updating files:  81% (2870/3543)
+2026-11-03T20:28:29.7321612Z Updating files:  82% (2906/3543)
+2026-11-03T20:28:29.7390155Z Updating files:  83% (2941/3543)
+2026-11-03T20:28:29.7489507Z Updating files:  84% (2977/3543)
+2026-11-03T20:28:29.7591359Z Updating files:  85% (3012/3543)
+2026-11-03T20:28:29.7657091Z Updating files:  86% (3047/3543)
+2026-11-03T20:28:29.7712624Z Updating files:  87% (3083/3543)
+2026-11-03T20:28:29.7770223Z Updating files:  88% (3118/3543)
+2026-11-03T20:28:29.7823539Z Updating files:  89% (3154/3543)
+2026-11-03T20:28:29.7880243Z Updating files:  90% (3189/3543)
+2026-11-03T20:28:29.7936005Z Updating files:  91% (3225/3543)
+2026-11-03T20:28:29.8000266Z Updating files:  92% (3260/3543)
+2026-11-03T20:28:29.8066133Z Updating files:  93% (3295/3543)
+2026-11-03T20:28:29.8134034Z Updating files:  94% (3331/3543)
+2026-11-03T20:28:29.8211000Z Updating files:  95% (3366/3543)
+2026-11-03T20:28:29.8261738Z Updating files:  96% (3402/3543)
+2026-11-03T20:28:29.8323039Z Updating files:  97% (3437/3543)
+2026-11-03T20:28:29.8381169Z Updating files:  98% (3473/3543)
+2026-11-03T20:28:29.8438680Z Updating files:  99% (3508/3543)
+2026-11-03T20:28:29.8439383Z Updating files: 100% (3543/3543)
+2026-11-03T20:28:29.8439856Z Updating files: 100% (3543/3543), done.
+2026-11-03T20:28:29.9228810Z Note: switching to 'refs/remotes/pull/87/merge'.
+2026-11-03T20:28:29.9229552Z 
+2026-11-03T20:28:29.9229866Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-03T20:28:29.9230492Z changes and commit them, and you can discard any commits you make in this
+2026-11-03T20:28:29.9231519Z state without impacting any branches by switching back to a branch.
+2026-11-03T20:28:29.9231834Z 
+2026-11-03T20:28:29.9232121Z If you want to create a new branch to retain commits you create, you may
+2026-11-03T20:28:29.9232691Z do so (now or later) by using -c with the switch command. Example:
+2026-11-03T20:28:29.9233052Z 
+2026-11-03T20:28:29.9233251Z   git switch -c <new-branch-name>
+2026-11-03T20:28:29.9233497Z 
+2026-11-03T20:28:29.9233627Z Or undo this operation with:
+2026-11-03T20:28:29.9233840Z 
+2026-11-03T20:28:29.9234005Z   git switch -
+2026-11-03T20:28:29.9234155Z 
+2026-11-03T20:28:29.9234430Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-03T20:28:29.9234757Z 
+2026-11-03T20:28:29.9294441Z HEAD is now at 2b998b0 Merge aafb44188d2aee75866ce9c5f48f320134eabfba into 1ff057456a135f00b5c665f753fd7577f866c155
+2026-11-03T20:28:29.9862080Z ##[endgroup]
+2026-11-03T20:28:30.1356603Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-03T20:28:30.1909790Z 2b998b0f68251aa38ebef5cbee6506267ba212de
+2026-11-03T20:28:30.2485392Z ##[group]Run actions/setup-python@v5
+2026-11-03T20:28:30.2485860Z with:
+2026-11-03T20:28:30.2489162Z   python-version: 3.12
+2026-11-03T20:28:30.2491700Z   check-latest: false
+2026-11-03T20:28:30.2499021Z   token: ***
+2026-11-03T20:28:30.2499387Z   update-environment: true
+2026-11-03T20:28:30.2499832Z   allow-prereleases: false
+2026-11-03T20:28:30.2500148Z   freethreaded: false
+2026-11-03T20:28:30.2500462Z env:
+2026-11-03T20:28:30.2500758Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:28:30.2501065Z ##[endgroup]
+2026-11-03T20:28:30.4384145Z ##[group]Installed versions
+2026-11-03T20:28:30.4598316Z (node:3708) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-03T20:28:30.4599080Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-03T20:28:30.4599860Z Successfully set up CPython (3.12.10)
+2026-11-03T20:28:30.4601095Z ##[endgroup]
+2026-11-03T20:28:30.4912820Z ##[group]Run $sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()
+2026-11-03T20:28:30.4913738Z [36;1m$sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()[0m
+2026-11-03T20:28:30.4914393Z [36;1mif($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid Core SHA'}[0m
+2026-11-03T20:28:30.4914838Z [36;1m"sha=$sha" >> $env:GITHUB_OUTPUT[0m
+2026-11-03T20:28:30.5621237Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-03T20:28:30.5621750Z env:
+2026-11-03T20:28:30.5622073Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:28:30.5622505Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:30.5623095Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-03T20:28:30.5623617Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:30.5624121Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:30.5624742Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:30.5625144Z ##[endgroup]
+2026-11-03T20:28:31.1078604Z ##[group]Run actions/checkout@v4
+2026-11-03T20:28:31.1079522Z with:
+2026-11-03T20:28:31.1079847Z   repository: robdor80/CoreRPG
+2026-11-03T20:28:31.1080278Z   ref: 76a7b7b485616d8c4994f384a90f123bf333591d
+2026-11-03T20:28:31.1080649Z   path: laboratorios/f05/p05a/ci/CoreRPG
+2026-11-03T20:28:31.1083328Z   token: ***
+2026-11-03T20:28:31.1083614Z   ssh-strict: true
+2026-11-03T20:28:31.1083894Z   ssh-user: git
+2026-11-03T20:28:31.1084264Z   persist-credentials: true
+2026-11-03T20:28:31.1084566Z   clean: true
+2026-11-03T20:28:31.1084893Z   sparse-checkout-cone-mode: true
+2026-11-03T20:28:31.1085228Z   fetch-depth: 1
+2026-11-03T20:28:31.1085500Z   fetch-tags: false
+2026-11-03T20:28:31.1085807Z   show-progress: true
+2026-11-03T20:28:31.1086092Z   lfs: false
+2026-11-03T20:28:31.1086580Z   submodules: false
+2026-11-03T20:28:31.1086877Z   set-safe-directory: true
+2026-11-03T20:28:31.1087193Z   allow-unsafe-pr-checkout: false
+2026-11-03T20:28:31.1087592Z env:
+2026-11-03T20:28:31.1087942Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:28:31.1088407Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:31.1088932Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-03T20:28:31.1089453Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:31.1089929Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:31.1090384Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:31.1090806Z ##[endgroup]
+2026-11-03T20:28:31.2252038Z Syncing repository: robdor80/CoreRPG
+2026-11-03T20:28:31.2264763Z ##[group]Getting Git version info
+2026-11-03T20:28:31.2266334Z Working directory is '$CI_REPO\laboratorios\f05\p05a\ci\CoreRPG'
+2026-11-03T20:28:31.2953939Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-03T20:28:31.3315151Z git version 2.56.0.windows.4
+2026-11-03T20:28:31.3366166Z ##[endgroup]
+2026-11-03T20:28:31.3383790Z Temporarily overriding HOME='D:\a\_temp\689305c4-dffd-4239-9f15-bca13bd0762b' before making global git config changes
+2026-11-03T20:28:31.3384560Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T20:28:31.3394545Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory $CI_REPO\laboratorios\f05\p05a\ci\CoreRPG
+2026-11-03T20:28:31.3795593Z ##[group]Initializing the repository
+2026-11-03T20:28:31.3806535Z [command]"C:\Program Files\Git\bin\git.exe" init $CI_REPO\laboratorios\f05\p05a\ci\CoreRPG
+2026-11-03T20:28:31.4226416Z Initialized empty Git repository in D:/a/Videojuego_StarTrek/Videojuego_StarTrek/laboratorios/f05/p05a/ci/CoreRPG/.git/
+2026-11-03T20:28:31.4288531Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/robdor80/CoreRPG
+2026-11-03T20:28:31.4722357Z ##[endgroup]
+2026-11-03T20:28:31.4723291Z ##[group]Disabling automatic garbage collection
+2026-11-03T20:28:31.4735955Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2026-11-03T20:28:31.5202259Z ##[endgroup]
+2026-11-03T20:28:31.5202784Z ##[group]Setting up auth
+2026-11-03T20:28:31.5223587Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T20:28:31.5654160Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-03T20:28:32.1672663Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T20:28:32.2078030Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-03T20:28:32.8167293Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T20:28:32.8569868Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-03T20:28:33.4258304Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2026-11-03T20:28:33.4658261Z ##[endgroup]
+2026-11-03T20:28:33.4659249Z ##[group]Fetching the repository
+2026-11-03T20:28:33.4672184Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin 76a7b7b485616d8c4994f384a90f123bf333591d
+2026-11-03T20:28:43.5959793Z From https://github.com/robdor80/CoreRPG
+2026-11-03T20:28:43.5960641Z  * branch            76a7b7b485616d8c4994f384a90f123bf333591d -> FETCH_HEAD
+2026-11-03T20:28:43.6004216Z ##[endgroup]
+2026-11-03T20:28:43.6005027Z ##[group]Determining the checkout info
+2026-11-03T20:28:43.6006677Z ##[endgroup]
+2026-11-03T20:28:43.6017066Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2026-11-03T20:28:43.6440455Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2026-11-03T20:28:43.6839786Z ##[group]Checking out the ref
+2026-11-03T20:28:43.6850049Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force 76a7b7b485616d8c4994f384a90f123bf333591d
+2026-11-03T20:28:43.7701639Z Note: switching to '76a7b7b485616d8c4994f384a90f123bf333591d'.
+2026-11-03T20:28:43.7702280Z 
+2026-11-03T20:28:43.7702646Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-11-03T20:28:43.7703610Z changes and commit them, and you can discard any commits you make in this
+2026-11-03T20:28:43.7704447Z state without impacting any branches by switching back to a branch.
+2026-11-03T20:28:43.7704837Z 
+2026-11-03T20:28:43.7705359Z If you want to create a new branch to retain commits you create, you may
+2026-11-03T20:28:43.7706594Z do so (now or later) by using -c with the switch command. Example:
+2026-11-03T20:28:43.7707011Z 
+2026-11-03T20:28:43.7707138Z   git switch -c <new-branch-name>
+2026-11-03T20:28:43.7707421Z 
+2026-11-03T20:28:43.7707553Z Or undo this operation with:
+2026-11-03T20:28:43.7707777Z 
+2026-11-03T20:28:43.7707926Z   git switch -
+2026-11-03T20:28:43.7708051Z 
+2026-11-03T20:28:43.7708344Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-11-03T20:28:43.7708642Z 
+2026-11-03T20:28:43.7708948Z HEAD is now at 76a7b7b Merge pull request #13: CoreRPG authoritative history persistence
+2026-11-03T20:28:43.7769064Z ##[endgroup]
+2026-11-03T20:28:43.8184655Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2026-11-03T20:28:43.8539752Z 76a7b7b485616d8c4994f384a90f123bf333591d
+2026-11-03T20:28:43.8884145Z ##[group]Run python desarrollo/integration/f05/run_integration_audit.py --suite core --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/core --parallel 3
+2026-11-03T20:28:43.8885506Z [36;1mpython desarrollo/integration/f05/run_integration_audit.py --suite core --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/core --parallel 3[0m
+2026-11-03T20:28:43.8955164Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-11-03T20:28:43.8955617Z env:
+2026-11-03T20:28:43.8956399Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:28:43.8956890Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:43.8957408Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-03T20:28:43.8957964Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:43.8958460Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:43.8959082Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:28:43.8959483Z ##[endgroup]
+2026-11-03T20:28:46.2040329Z cmake-version
+2026-11-03T20:28:46.9503890Z ctest-version
+2026-11-03T20:28:47.4519457Z git-version
+2026-11-03T20:28:47.4890434Z configure
+2026-11-03T20:29:57.3409721Z build
+2026-11-03T20:32:59.3687109Z tests
+2026-11-03T20:33:02.0644852Z Traceback (most recent call last):
+2026-11-03T20:33:02.0652073Z   File "$CI_REPO\desarrollo\integration\f05\run_integration_audit.py", line 122, in <module>
+2026-11-03T20:33:02.0652783Z     main()
+2026-11-03T20:33:02.0696888Z   File "$CI_REPO\desarrollo\integration\f05\run_integration_audit.py", line 102, in main
+2026-11-03T20:33:02.0728391Z ##[error]    raise RuntimeError('No complete passing JUnit')
+2026-11-03T20:33:02.0736466Z RuntimeError: No complete passing JUnit
+2026-11-03T20:33:02.1842850Z ##[error]Process completed with exit code 1.
+2026-11-03T20:33:02.2091008Z ##[group]Run actions/upload-artifact@v4
+2026-11-03T20:33:02.2091458Z with:
+2026-11-03T20:33:02.2091810Z   name: f05-p05a-native-windows-latest
+2026-11-03T20:33:02.2092868Z   path: laboratorios/f05/p05a/ci/*/tests.xml
+laboratorios/f05/p05a/ci/*/run.json
+laboratorios/f05/p05a/ci/*/*.log
+laboratorios/f05/p05a/ci/*/build/Testing/Temporary/LastTest.log
+laboratorios/f05/p05a/ci/*/build/CMakeFiles/*/CMakeCXXCompiler.cmake
+
+2026-11-03T20:33:02.2093879Z   if-no-files-found: warn
+2026-11-03T20:33:02.2094198Z   compression-level: 6
+2026-11-03T20:33:02.2094483Z   overwrite: false
+2026-11-03T20:33:02.2094810Z   include-hidden-files: false
+2026-11-03T20:33:02.2095141Z env:
+2026-11-03T20:33:02.2095417Z   PYTHONDONTWRITEBYTECODE: 1
+2026-11-03T20:33:02.2095832Z   pythonLocation: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:33:02.2096353Z   PKG_CONFIG_PATH: C:\hostedtoolcache\windows\Python\3.12.10\x64/lib/pkgconfig
+2026-11-03T20:33:02.2097033Z   Python_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:33:02.2097515Z   Python2_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:33:02.2098014Z   Python3_ROOT_DIR: C:\hostedtoolcache\windows\Python\3.12.10\x64
+2026-11-03T20:33:02.2098409Z ##[endgroup]
+2026-11-03T20:33:02.4140495Z (node:5476) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-03T20:33:02.4141852Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-03T20:33:02.4473786Z With the provided path, there will be 10 files uploaded
+2026-11-03T20:33:02.4479480Z Artifact name is valid!
+2026-11-03T20:33:02.4481518Z Root directory input is valid!
+2026-11-03T20:33:02.7659825Z Beginning upload of artifact content to blob storage
+2026-11-03T20:33:02.8205167Z (node:5476) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-03T20:33:03.0313966Z Uploaded bytes 84031
+2026-11-03T20:33:03.0763730Z Finished uploading artifact content to blob storage!
+2026-11-03T20:33:03.0765208Z SHA256 digest of uploaded artifact zip is 5752809fd84939110e2ec43d00be7ed22f65f75037eb44ae8be41aca68e3db7f
+2026-11-03T20:33:03.0774268Z Finalizing artifact upload
+2026-11-03T20:33:03.5719913Z Artifact f05-p05a-native-windows-latest.zip successfully finalized. Artifact ID 13270280235
+2026-11-03T20:33:03.5721274Z Artifact f05-p05a-native-windows-latest has been successfully uploaded! Final size is 84031 bytes. Artifact ID is 13270280235
+2026-11-03T20:33:03.5731227Z Artifact download URL: https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41712799571/artifacts/13270280235
+2026-11-03T20:33:03.6149865Z Post job cleanup.
+2026-11-03T20:33:03.7938606Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-03T20:33:03.8349252Z git version 2.56.0.windows.4
+2026-11-03T20:33:03.8432029Z Temporarily overriding HOME='D:\a\_temp\8a833733-b907-4a86-918d-489ba5bcd563' before making global git config changes
+2026-11-03T20:33:03.8433234Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T20:33:03.8445398Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory $CI_REPO\laboratorios\f05\p05a\ci\CoreRPG
+2026-11-03T20:33:03.8909036Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T20:33:03.9317946Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-03T20:33:04.5187780Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T20:33:04.5557586Z http.https://github.com/.extraheader
+2026-11-03T20:33:04.5609832Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-03T20:33:04.6020916Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-03T20:33:05.1582381Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T20:33:05.1984688Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-03T20:33:05.8010813Z Post job cleanup.
+2026-11-03T20:33:05.9845046Z [command]"C:\Program Files\Git\bin\git.exe" version
+2026-11-03T20:33:06.0213527Z git version 2.56.0.windows.4
+2026-11-03T20:33:06.0283857Z Temporarily overriding HOME='D:\a\_temp\314293fc-a798-4c92-bbb8-6670b633cb9a' before making global git config changes
+2026-11-03T20:33:06.0285099Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-03T20:33:06.0295524Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory $CI_REPO
+2026-11-03T20:33:06.0714349Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2026-11-03T20:33:06.1119862Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2026-11-03T20:33:06.6934731Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-03T20:33:06.7293110Z http.https://github.com/.extraheader
+2026-11-03T20:33:06.7346192Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2026-11-03T20:33:06.7748672Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2026-11-03T20:33:07.3430420Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-03T20:33:07.3824572Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2026-11-03T20:33:07.9755489Z Cleaning up orphan processes
+2026-11-03T20:33:08.0437484Z Terminate orphan process: pid (8772) (vctip)
+2026-11-03T20:33:08.0487625Z Terminate orphan process: pid (8600) (MSBuild)
+2026-11-03T20:33:08.0577772Z Terminate orphan process: pid (7864) (MSBuild)
+2026-11-03T20:33:08.0900346Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+

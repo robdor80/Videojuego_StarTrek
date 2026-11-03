@@ -36,7 +36,7 @@ try {
   Logged 'build' 'cmake' @('--build',$Native,'--config','Release','--parallel','4')
   $Exclude='history_campaign_|persistence_baseline_|persistence_resume_'
   $Select=@()
-  if($Suite -eq 'P01'){$Exclude+='|f04[.]|f05[.]p0[234]_'}
+  if($Suite -eq 'P01'){$Exclude+='|f04[.]|f05[.]p0[234]_|f05[.]p05a_'}
   if($Suite -in @('P02','P03','P04')){$Select=@('-R',('^f05[.]'+$Suite.ToLower()+'_'))}
   Logged 'native-tests' 'ctest' (@('--test-dir',$Native,'-C','Release','--no-tests=error','--output-on-failure','-E',$Exclude,'--output-junit',(Join-Path $BuildRoot "$Run-native.xml"),'-j','2')+$Select)
  }
@@ -69,5 +69,8 @@ try {
   Logged 'ue-tests' (Join-Path $EngineRoot 'Engine/Binaries/Win64/UnrealEditor-Cmd.exe') (@($Project,'-unattended','-nop4','-nosplash','-nosound','-NoLiveCoding',"-ExecCmds=Automation RunTests $Prefix",'-TestExit=Automation Test Queue Empty',"-ReportExportPath=$Report",'-stdout','-FullStdOutLogOutput')+$RHI)
   $Result=Get-Content (Join-Path $Report 'index.json') -Raw | ConvertFrom-Json
   if($Result.failed -gt 0 -or $Result.notRun -gt 0 -or ($Result.succeeded+$Result.succeededWithWarnings) -ne $Expected){throw "Expected $Expected passing $Prefix Unreal tests"}
+  $Names=@(Get-Content (Join-Path $PSScriptRoot 'unreal/expected-tests.json') -Raw | ConvertFrom-Json | Where-Object {$Suite -eq 'All' -or $_.StartsWith("F05.$Suite.")} | Sort-Object)
+  $ActualNames=@($Result.tests | ForEach-Object fullTestPath | Sort-Object)
+  if($Names.Count -ne $Expected -or (Compare-Object $Names $ActualNames) -or @($Result.tests | Where-Object {$_.state -ne 'Success'}).Count){throw 'Unreal report must contain exactly the expected successful tests; count alone is insufficient'}
  }
 } finally {$env:TEMP=$PreviousTemp;$env:TMP=$PreviousTmp;$env:F04_TEST_TEMP_ROOT=$PreviousReferenceTemp}

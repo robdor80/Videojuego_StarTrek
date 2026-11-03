@@ -1,4 +1,4 @@
-name: F05 P01 P02 P03 P04 native integration
+name: F05 P05A integration audit
 on:
   pull_request:
     paths:
@@ -16,23 +16,17 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 30
+    timeout-minutes: 40
     env:
       PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
-      - name: Task temporary outputs
-        shell: pwsh
-        run: |
-          $dir="$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/system-temp"
-          New-Item -ItemType Directory -Force $dir | Out-Null
-          "TEMP=$dir" >> $env:GITHUB_ENV
-          "TMP=$dir" >> $env:GITHUB_ENV
-          "TMPDIR=$dir" >> $env:GITHUB_ENV
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Read audited Core main pin
+      - name: Read compatible Core pin
         id: core
         shell: pwsh
         run: |
@@ -43,33 +37,22 @@ jobs:
         with:
           repository: robdor80/CoreRPG
           ref: ${{ steps.core.outputs.sha }}
-          path: laboratorios/f05/p04/ci/CoreRPG
-      - name: Compile full Core suite and JSON integration
+          path: laboratorios/f05/p05a/ci/CoreRPG
+      - name: Full compatible Core suite including JSON
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite core --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/core --parallel 3
+      - name: All P01-P04, P05A and F04 integration
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite f05 --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/native --parallel 3
+      - name: Static preparation and PowerShell syntax (not Unreal execution)
         shell: pwsh
         run: |
-          cmake -S laboratorios/f05/p04/ci/CoreRPG -B laboratorios/f05/p04/ci/core -DCMAKE_BUILD_TYPE=Release -DCORERPG_BUILD_CONTENT_JSON=ON -DBUILD_TESTING=ON
+          python desarrollo/integration/f05/check_unreal_preparation.py
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build laboratorios/f05/p04/ci/core --config Release --parallel 4
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir laboratorios/f05/p04/ci/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-      - name: Build single F04 session with P01 P02 P03 P04 enabled
-        shell: pwsh
-        run: |
-          $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/reference-temp"
-          cmake -S desarrollo/integration/f05 -B laboratorios/f05/p04/ci/f05 -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG"
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build laboratorios/f05/p04/ci/f05 --config Release --parallel 4
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir laboratorios/f05/p04/ci/f05 -C Release --no-tests=error --output-on-failure --output-junit f05-and-f04.xml -E 'history_campaign_|persistence_baseline_|persistence_resume_' -j 2
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-      - name: Auditable source revision
-        shell: pwsh
-        run: |
-          git rev-parse HEAD | Set-Content laboratorios/f05/p04/ci/head.txt
-          git diff --exit-code
-          Get-FileHash desarrollo/integration/f05/src/* -Algorithm SHA256 | Format-Table -AutoSize | Out-String -Width 4096 | Set-Content laboratorios/f05/p04/ci/source-sha256.txt
-      - name: Existing F05 documentation and cross-phase references
+          foreach($file in @('run_f05.ps1','run_p05b_msi.ps1')){
+            $tokens=$null;$errors=$null
+            [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD "desarrollo/integration/f05/$file"),[ref]$tokens,[ref]$errors) | Out-Null
+            if($errors){$errors | Format-List;throw "PowerShell syntax: $file"}
+          }
+      - name: Documentation and governance
         shell: pwsh
         run: |
           python -m unittest discover -s desarrollo/tools/validation -p test_f05_reference.py -v
@@ -83,95 +66,91 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p04-${{ matrix.os }}
+          name: f05-p05a-native-${{ matrix.os }}
           path: |
-            laboratorios/f05/p04/ci/head.txt
-            laboratorios/f05/p04/ci/source-sha256.txt
-            laboratorios/f05/p04/ci/core/core.xml
-            laboratorios/f05/p04/ci/f05/f05-and-f04.xml
-            laboratorios/f05/p04/ci/**/Testing/Temporary/LastTest.log
+            laboratorios/f05/p05a/ci/*/tests.xml
+            laboratorios/f05/p05a/ci/*/run.json
+            laboratorios/f05/p05a/ci/*/*.log
+            laboratorios/f05/p05a/ci/*/build/Testing/Temporary/LastTest.log
+            laboratorios/f05/p05a/ci/*/build/CMakeFiles/*/CMakeCXXCompiler.cmake
   earlier-native:
     strategy:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, windows-latest]
-        phase: [f02, f03]
+        phase: [f02, f03, f04]
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 15
+    timeout-minutes: 25
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
-      - name: Preserve original integration pins
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Preserve original phase pin
         id: pin
         shell: pwsh
         run: |
-          $sha=if('${{ matrix.phase }}' -eq 'f02'){'4f282863737bcd8f5add401202a9e1064c133672'}else{(Get-Content desarrollo/integration/f03/core-revision.txt -Raw).Trim()}
+          $sha=if('${{ matrix.phase }}' -eq 'f02'){'4f282863737bcd8f5add401202a9e1064c133672'}else{(Get-Content desarrollo/integration/${{ matrix.phase }}/core-revision.txt -Raw).Trim()}
           "sha=$sha" >> $env:GITHUB_OUTPUT
       - uses: actions/checkout@v4
         with:
           repository: robdor80/CoreRPG
           ref: ${{ steps.pin.outputs.sha }}
-          path: laboratorios/f05/p04/ci/CoreRPG
-      - name: Native regression against the phase's original Core
-        shell: pwsh
-        run: |
-          cmake -S desarrollo/integration/${{ matrix.phase }} -B laboratorios/f05/p04/ci/earlier -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG"
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build laboratorios/f05/p04/ci/earlier --config Release --parallel 4
-          if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir laboratorios/f05/p04/ci/earlier -C Release --no-tests=error --output-on-failure --output-junit earlier.xml -j 2
-          if($LASTEXITCODE){exit $LASTEXITCODE}
+          path: laboratorios/f05/p05a/ci/CoreRPG
+      - name: Full original native regression selection
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite ${{ matrix.phase }} --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/earlier --parallel 3
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p04-regression-${{ matrix.phase }}-${{ matrix.os }}
-          path: laboratorios/f05/p04/ci/earlier/earlier.xml
-
+          name: f05-p05a-regression-${{ matrix.phase }}-${{ matrix.os }}
+          path: |
+            laboratorios/f05/p05a/ci/earlier/tests.xml
+            laboratorios/f05/p05a/ci/earlier/run.json
+            laboratorios/f05/p05a/ci/earlier/*.log
+            laboratorios/f05/p05a/ci/earlier/build/Testing/Temporary/LastTest.log
+            laboratorios/f05/p05a/ci/earlier/build/CMakeFiles/*/CMakeCXXCompiler.cmake
   historical:
-    runs-on: ubuntu-latest
-    timeout-minutes: 120
     strategy:
       fail-fast: false
       matrix:
-        include:
-          - {profile: 1, days: 365, case: '1_365'}
-          - {profile: 2, days: 365, case: '2_365'}
-          - {profile: 3, days: 365, case: '3_365'}
-          - {profile: 4, days: 365, case: '4_365'}
-          - {profile: 5, days: 365, case: '5_365'}
-          - {profile: 5, days: 730, case: 'valhalla_730'}
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 120
     env:
       PYTHONDONTWRITEBYTECODE: '1'
-      OUTPUT: laboratorios/f05/p04/ci/history
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Pin audited Core
+      - name: Preserve historical Core pin
         id: core
-        run: echo "sha=$(cat desarrollo/integration/f04/core-history-revision.txt)" >> "$GITHUB_OUTPUT"
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f04/core-history-revision.txt -Raw).Trim()
+          "sha=$sha" >> $env:GITHUB_OUTPUT
       - uses: actions/checkout@v4
         with:
           repository: robdor80/CoreRPG
           ref: ${{ steps.core.outputs.sha }}
-          path: laboratorios/f05/p04/ci/CoreRPG
-      - name: Configure and run frozen-oracle campaign with its original F04/Core pin
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p "$OUTPUT/system-temp"
-          export TMPDIR="$GITHUB_WORKSPACE/$OUTPUT/system-temp"
-          export F04_TEST_TEMP_ROOT="$GITHUB_WORKSPACE/$OUTPUT/reference-temp"
-          python desarrollo/integration/f04/tests/history_reference.py --profile ${{ matrix.profile }} --days ${{ matrix.days }} --directory "$GITHUB_WORKSPACE/$OUTPUT/oracles"
-          cmake -S desarrollo/integration/f04 -B "$OUTPUT/build" -DCMAKE_BUILD_TYPE=Release -DF04_ENABLE_HISTORY=ON -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG" -DF04_HISTORY_REFERENCE_FIXTURES="$GITHUB_WORKSPACE/$OUTPUT/oracles"
-          cmake --build "$OUTPUT/build" --target f04_history_campaign f04_history_audit --parallel 4
-          ctest --test-dir "$OUTPUT/build" -R '^f04.history_campaign_${{ matrix.case }}$' --no-tests=error --output-on-failure --output-junit historical.xml
+          path: laboratorios/f05/p05a/ci/CoreRPG
+      - name: Six real campaigns, frozen oracles and fresh-process continuity
+        run: python desarrollo/integration/f05/run_integration_audit.py --suite history --core-source laboratorios/f05/p05a/ci/CoreRPG --output laboratorios/f05/p05a/ci/history --parallel 2
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p04-historical-${{ matrix.case }}
+          name: f05-p05a-historical-${{ matrix.os }}
           path: |
-            laboratorios/f05/p04/ci/history/build/historical.xml
-            laboratorios/f05/p04/ci/history/build/history-runs/**/*.json
-            laboratorios/f05/p04/ci/history/build/history-runs/**/*.log
-            laboratorios/f05/p04/ci/history/build/Testing/Temporary/LastTest.log
+            laboratorios/f05/p05a/ci/history/tests.xml
+            laboratorios/f05/p05a/ci/history/run.json
+            laboratorios/f05/p05a/ci/history/*.log
+            laboratorios/f05/p05a/ci/history/build/history-runs/**/*.json
+            laboratorios/f05/p05a/ci/history/build/history-runs/**/*.log
+            laboratorios/f05/p05a/ci/history/build/Testing/Temporary/LastTest.log
+            laboratorios/f05/p05a/ci/history/build/CMakeFiles/*/CMakeCXXCompiler.cmake
