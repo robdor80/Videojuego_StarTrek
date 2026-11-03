@@ -1,7 +1,8 @@
 namespace {
 void f05_ai_access(F04Session* s,F04Ref actor,U r) {
- need(observer(s,actor),F04_DENIED);need(type(s->c->world,r,"f05_ai_request"),F04_ARGUMENT);
- need(ref(s->c->world,r,PERSON)==actor.id,F04_DENIED);
+ need(observer(s,actor),F04_DENIED);
+ // Do not expose even the existence of another actor's private proposal.
+ need(type(s->c->world,r,"f05_ai_request") && ref(s->c->world,r,PERSON)==actor.id,F04_DENIED);
 }
 F05AiView f05_ai_state(const WorldState& w,U r) {
  const U d=ref(w,r,F05_AI_DECISION_REF);

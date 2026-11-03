@@ -137,6 +137,8 @@ void run(const std::string& name,const std::string& file) {
  } else if(name=="scope") {
   auto n=l.ready_need();auto c=l.begin(l.h.captain,n);auto before=l.save();F05AiView v{};
   eq(f05_ai_view(l.s,l.h.ensign,c.request,&v),F04_DENIED,"another NPC cannot inspect proposal");
+  eq(f05_ai_view(l.s,l.h.ensign,99999,&v),F04_DENIED,"private and absent proposal indistinguishable");
+  eq(f05_ai_finish(l.s,l.h.ensign,99999,nullptr,0,F05_AI_NETWORK,&v),F04_DENIED,"no existence oracle through completion");
   auto a=l.h.captain;++a.scope;eq(f05_ai_finish(l.s,a,c.request,nullptr,0,F05_AI_NETWORK,&v),F04_DENIED,"foreign scope");
   uint32_t code=0;std::thread t([&]{code=f05_ai_apply(l.s,l.h.captain,c.request,&v);});t.join();eq(code,F04_THREAD,"owner thread");check(l.save()==before,"scope/thread failures atomic");
  } else throw std::runtime_error("unknown P04 case");
