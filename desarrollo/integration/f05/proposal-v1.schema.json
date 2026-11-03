@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "F05-P04 proposal v1",
+  "description": "Runtime also rejects duplicate keys, non-integer numeric encodings, nesting >8, >8192 UTF-8 bytes, controls, explanation >512 UTF-8 bytes and mismatched Host bindings. Prose is never a fact or execution result.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 1
+    },
+    "actor": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 281474976710655
+    },
+    "request": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 281474976710655
+    },
+    "projection": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 281474976710655
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 281474976710655
+    },
+    "expires": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 281474976710655
+    },
+    "issued_at": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 281474976710655
+    },
+    "intent": {
+      "enum": [
+        "scan",
+        "advise",
+        "clarify",
+        "insufficient"
+      ]
+    },
+    "actions": {
+      "type": "array",
+      "maxItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "operation",
+          "parameters"
+        ],
+        "properties": {
+          "operation": {
+            "const": "F04_SCAN"
+          },
+          "parameters": {
+            "type": "object",
+            "maxProperties": 0
+          }
+        }
+      }
+    },
+    "needs_clarification": {
+      "type": "boolean"
+    },
+    "insufficient_data": {
+      "type": "boolean"
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 512
+    },
+    "trace": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 64,
+      "pattern": "^[a-zA-Z0-9_-]+$"
+    }
+  },
+  "required": [
+    "version",
+    "actor",
+    "request",
+    "projection",
+    "revision",
+    "expires",
+    "issued_at",
+    "intent",
+    "actions",
+    "needs_clarification",
+    "insufficient_data",
+    "explanation",
+    "trace"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "const": "scan"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "needs_clarification": {
+            "const": false
+          },
+          "insufficient_data": {
+            "const": false
+          },
+          "actions": {
+            "minItems": 1,
+            "maxItems": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "const": "advise"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "needs_clarification": {
+            "const": false
+          },
+          "insufficient_data": {
+            "const": false
+          },
+          "actions": {
+            "minItems": 0,
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "const": "clarify"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "needs_clarification": {
+            "const": true
+          },
+          "insufficient_data": {
+            "const": false
+          },
+          "actions": {
+            "minItems": 0,
+            "maxItems": 0
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "intent": {
+            "const": "insufficient"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "needs_clarification": {
+            "const": false
+          },
+          "insufficient_data": {
+            "const": true
+          },
+          "actions": {
+            "minItems": 0,
+            "maxItems": 0
+          }
+        }
+      }
+    }
+  ]
+}

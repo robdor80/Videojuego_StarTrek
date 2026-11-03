@@ -1,6 +1,13 @@
 # F05-P04 — IA remota: propuesta, contexto, caducidad y fallback
 Fecha: 2026-10-11 · Contrato de integración **propuesto**, no endpoint Core vigente.
 
+Entrega nativa P04 (2026-11-03), para auditoría independiente:
+[contrato implementado](../../../../../../desarrollo/integration/f05/AI.md),
+[informe y evidencia](F05-P04_IMPLEMENTACION.md).
+La autonomía operativa P03 es determinista y funciona sin IA/API/Internet.
+P04 añade solo lenguaje/propuestas opcionales. El diseño histórico siguiente no
+acredita capacidades futuras ni conexión comercial. Unreal/MSI permanece pendiente.
+
 ## Frontera irreversible
 **LLM = diálogo/intención/explicación/propuesta. Host/Star Trek = reglas de dominio. Core = validación/efecto.** Ningún modelo ni proveedor escribe entidades, cambia rangos, inventa conocimiento, crea órdenes válidas o confirma resultados por texto. El proveedor no recibe secretos de mundo, fichas ajenas ni capturas del estado autoritativo completo.
 

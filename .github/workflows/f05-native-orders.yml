@@ -1,4 +1,4 @@
-name: F05 P01 P02 P03 native integration
+name: F05 P01 P02 P03 P04 native integration
 on:
   pull_request:
     paths:
@@ -21,6 +21,14 @@ jobs:
       PYTHONDONTWRITEBYTECODE: '1'
     steps:
       - uses: actions/checkout@v4
+      - name: Task temporary outputs
+        shell: pwsh
+        run: |
+          $dir="$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/system-temp"
+          New-Item -ItemType Directory -Force $dir | Out-Null
+          "TEMP=$dir" >> $env:GITHUB_ENV
+          "TMP=$dir" >> $env:GITHUB_ENV
+          "TMPDIR=$dir" >> $env:GITHUB_ENV
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
@@ -35,26 +43,32 @@ jobs:
         with:
           repository: robdor80/CoreRPG
           ref: ${{ steps.core.outputs.sha }}
-          path: external/CoreRPG
+          path: laboratorios/f05/p04/ci/CoreRPG
       - name: Compile full Core suite and JSON integration
         shell: pwsh
         run: |
-          cmake -S external/CoreRPG -B build/core -DCMAKE_BUILD_TYPE=Release -DCORERPG_BUILD_CONTENT_JSON=ON -DBUILD_TESTING=ON
+          cmake -S laboratorios/f05/p04/ci/CoreRPG -B laboratorios/f05/p04/ci/core -DCMAKE_BUILD_TYPE=Release -DCORERPG_BUILD_CONTENT_JSON=ON -DBUILD_TESTING=ON
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build build/core --config Release --parallel 4
+          cmake --build laboratorios/f05/p04/ci/core --config Release --parallel 4
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir build/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
+          ctest --test-dir laboratorios/f05/p04/ci/core -C Release --no-tests=error --output-on-failure --output-junit core.xml -j 2
           if($LASTEXITCODE){exit $LASTEXITCODE}
-      - name: Build single F04 session with P01 P02 P03 enabled
+      - name: Build single F04 session with P01 P02 P03 P04 enabled
         shell: pwsh
         run: |
-          $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/build/f05-reference-temp"
-          cmake -S desarrollo/integration/f05 -B build/f05 -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/external/CoreRPG"
+          $env:F04_TEST_TEMP_ROOT="$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/reference-temp"
+          cmake -S desarrollo/integration/f05 -B laboratorios/f05/p04/ci/f05 -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG"
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build build/f05 --config Release --parallel 4
+          cmake --build laboratorios/f05/p04/ci/f05 --config Release --parallel 4
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir build/f05 -C Release --no-tests=error --output-on-failure --output-junit f05-and-f04.xml -E 'history_campaign_|persistence_baseline_|persistence_resume_' -j 2
+          ctest --test-dir laboratorios/f05/p04/ci/f05 -C Release --no-tests=error --output-on-failure --output-junit f05-and-f04.xml -E 'history_campaign_|persistence_baseline_|persistence_resume_' -j 2
           if($LASTEXITCODE){exit $LASTEXITCODE}
+      - name: Auditable source revision
+        shell: pwsh
+        run: |
+          git rev-parse HEAD | Set-Content laboratorios/f05/p04/ci/head.txt
+          git diff --exit-code
+          Get-FileHash desarrollo/integration/f05/src/* -Algorithm SHA256 | Format-Table -AutoSize | Out-String -Width 4096 | Set-Content laboratorios/f05/p04/ci/source-sha256.txt
       - name: Existing F05 documentation and cross-phase references
         shell: pwsh
         run: |
@@ -69,11 +83,13 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p03-${{ matrix.os }}
+          name: f05-p04-${{ matrix.os }}
           path: |
-            build/core/core.xml
-            build/f05/f05-and-f04.xml
-            build/**/Testing/Temporary/LastTest.log
+            laboratorios/f05/p04/ci/head.txt
+            laboratorios/f05/p04/ci/source-sha256.txt
+            laboratorios/f05/p04/ci/core/core.xml
+            laboratorios/f05/p04/ci/f05/f05-and-f04.xml
+            laboratorios/f05/p04/ci/**/Testing/Temporary/LastTest.log
   earlier-native:
     strategy:
       fail-fast: false
@@ -94,18 +110,68 @@ jobs:
         with:
           repository: robdor80/CoreRPG
           ref: ${{ steps.pin.outputs.sha }}
-          path: external/CoreRPG
+          path: laboratorios/f05/p04/ci/CoreRPG
       - name: Native regression against the phase's original Core
         shell: pwsh
         run: |
-          cmake -S desarrollo/integration/${{ matrix.phase }} -B build/earlier -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/external/CoreRPG"
+          cmake -S desarrollo/integration/${{ matrix.phase }} -B laboratorios/f05/p04/ci/earlier -DCMAKE_BUILD_TYPE=Release "-DCORERPG_SOURCE_DIR=$env:GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG"
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          cmake --build build/earlier --config Release --parallel 4
+          cmake --build laboratorios/f05/p04/ci/earlier --config Release --parallel 4
           if($LASTEXITCODE){exit $LASTEXITCODE}
-          ctest --test-dir build/earlier -C Release --no-tests=error --output-on-failure --output-junit earlier.xml -j 2
+          ctest --test-dir laboratorios/f05/p04/ci/earlier -C Release --no-tests=error --output-on-failure --output-junit earlier.xml -j 2
           if($LASTEXITCODE){exit $LASTEXITCODE}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p03-regression-${{ matrix.phase }}-${{ matrix.os }}
-          path: build/earlier/earlier.xml
+          name: f05-p04-regression-${{ matrix.phase }}-${{ matrix.os }}
+          path: laboratorios/f05/p04/ci/earlier/earlier.xml
+
+  historical:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {profile: 1, days: 365, case: '1_365'}
+          - {profile: 2, days: 365, case: '2_365'}
+          - {profile: 3, days: 365, case: '3_365'}
+          - {profile: 4, days: 365, case: '4_365'}
+          - {profile: 5, days: 365, case: '5_365'}
+          - {profile: 5, days: 730, case: 'valhalla_730'}
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OUTPUT: laboratorios/f05/p04/ci/history
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Pin audited Core
+        id: core
+        run: echo "sha=$(cat desarrollo/integration/f04/core-history-revision.txt)" >> "$GITHUB_OUTPUT"
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: laboratorios/f05/p04/ci/CoreRPG
+      - name: Configure and run frozen-oracle campaign with its original F04/Core pin
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p "$OUTPUT/system-temp"
+          export TMPDIR="$GITHUB_WORKSPACE/$OUTPUT/system-temp"
+          export F04_TEST_TEMP_ROOT="$GITHUB_WORKSPACE/$OUTPUT/reference-temp"
+          python desarrollo/integration/f04/tests/history_reference.py --profile ${{ matrix.profile }} --days ${{ matrix.days }} --directory "$GITHUB_WORKSPACE/$OUTPUT/oracles"
+          cmake -S desarrollo/integration/f04 -B "$OUTPUT/build" -DCMAKE_BUILD_TYPE=Release -DF04_ENABLE_HISTORY=ON -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/laboratorios/f05/p04/ci/CoreRPG" -DF04_HISTORY_REFERENCE_FIXTURES="$GITHUB_WORKSPACE/$OUTPUT/oracles"
+          cmake --build "$OUTPUT/build" --target f04_history_campaign f04_history_audit --parallel 4
+          ctest --test-dir "$OUTPUT/build" -R '^f04.history_campaign_${{ matrix.case }}$' --no-tests=error --output-on-failure --output-junit historical.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f05-p04-historical-${{ matrix.case }}
+          path: |
+            laboratorios/f05/p04/ci/history/build/historical.xml
+            laboratorios/f05/p04/ci/history/build/history-runs/**/*.json
+            laboratorios/f05/p04/ci/history/build/history-runs/**/*.log
+            laboratorios/f05/p04/ci/history/build/Testing/Temporary/LastTest.log
