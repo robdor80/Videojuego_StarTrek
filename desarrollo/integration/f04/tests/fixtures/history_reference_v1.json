@@ -11,8 +11,8 @@
     "desarrollo/integration/f04/core-revision.txt": "e38f61bae1557ef2066f7d0505d3e068098740afac2fc3cd2776538b592ed7da",
     "desarrollo/integration/f04/generate_catalog.py": "1d86d4ca058023509d31b0b0a6044daf1bf87b8e47dbb05e532f8aad0adddcfd",
     "desarrollo/integration/f04/include/f04_bridge.h": "78d013e42628996d3be3aca89bdf5af1c6c28b30c91395795adb4efde013473a",
-    "desarrollo/integration/f04/src/f04_bridge.cpp": "ff77e4749a29d9c5fa2f9e8823b186ee1879d6227333014e6f6b9c3b9ed69903",
-    "desarrollo/integration/f04/src/f04_history.inc": "5d3ce1d25ffcc7e6665ba2fc2d0a754371ea1f7a9e78d6e557bb14f768e39502",
+    "desarrollo/integration/f04/src/f04_bridge.cpp": "ab30ecd6fcba4642574523d62cb74762704e759d18121ba22f8111bdaa135a63",
+    "desarrollo/integration/f04/src/f04_history.inc": "0d87e388c7c834f93b2603aa22a801ac7d85822cb7f71bf1ac368cb9f57114ee",
     "desarrollo/integration/f04/src/f04_odyssey.h": "b50d51bde3e76075802af46759eba6086ac5bfa2eb695519d988babb966a723a",
     "desarrollo/integration/f04/src/f04_organization.inc": "964a3170f5e828d5296b2ea3b607526d8ee27238b571603e23404130de026d0f",
     "desarrollo/integration/f04/src/f04_roster.inc": "5c2ca6a1eb3af6cc7a47cf3d004ba301ab09ac8ac4897a9415eb73e48eead118",
@@ -107,5 +107,13 @@
       "desarrollo/integration/f04/src/f04_history.inc": "ba4d502b8c8363d227e1d2f493ac31be15de1508720b351670ab7c9c8b136055"
     },
     "scope": "Additive P03 vocabulary under F05_ENABLE_ORDERS and retention of obligation tombstones. F04 historical builds keep F05 disabled. Frozen oracle, acceptance, pins and provenance bytes unchanged; all six original campaigns must match before acceptance."
+  },
+  "p04_compatibility": {
+    "base_star_trek": "f1ab2f33cccdd861077e59069addb8a12ff573d7",
+    "reason": "P04 optional language boundary. F04 reference target excludes F05; existing Core scan/roster/history semantics and all six frozen oracles preserved.",
+    "previous_contract_sha256": {
+      "desarrollo/integration/f04/src/f04_bridge.cpp": "ff77e4749a29d9c5fa2f9e8823b186ee1879d6227333014e6f6b9c3b9ed69903",
+      "desarrollo/integration/f04/src/f04_history.inc": "5d3ce1d25ffcc7e6665ba2fc2d0a754371ea1f7a9e78d6e557bb14f768e39502"
+    }
   }
 }

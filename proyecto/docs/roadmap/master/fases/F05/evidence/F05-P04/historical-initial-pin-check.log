@@ -1,0 +1,71 @@
+Test project $OUTPUT/historical-selection
+    Start 217: f04.history_campaign_1_365
+    Start 218: f04.history_campaign_2_365
+1/6 Test #218: f04.history_campaign_2_365 ..........***Failed    0.07 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+    Start 219: f04.history_campaign_3_365
+2/6 Test #217: f04.history_campaign_1_365 ..........***Failed    0.16 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+    Start 220: f04.history_campaign_4_365
+3/6 Test #219: f04.history_campaign_3_365 ..........***Failed    0.21 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+    Start 221: f04.history_campaign_5_365
+4/6 Test #220: f04.history_campaign_4_365 ..........***Failed    0.23 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+    Start 222: f04.history_campaign_valhalla_730
+5/6 Test #221: f04.history_campaign_5_365 ..........***Failed    0.21 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+6/6 Test #222: f04.history_campaign_valhalla_730 ...***Failed    0.17 sec
+Traceback (most recent call last):
+  File "$REPO/desarrollo/integration/f04/tests/run_history_campaign.py", line 28, in <module>
+    require(actual_core == Path(__file__).parents[1].joinpath('core-history-revision.txt').read_text().strip(),
+  File "$REPO/desarrollo/integration/f04/tests/history_reference.py", line 18, in require
+    raise ReferenceError(message)
+history_reference.ReferenceError: Executed Core does not match proposed pin
+
+
+0% tests passed, 6 tests failed out of 6
+
+Label Time Summary:
+history_acceptance    =   1.06 sec*proc (6 tests)
+
+Total Test time (real) =   0.57 sec
+
+The following tests FAILED:
+	217 - f04.history_campaign_1_365 (Failed)               history_acceptance
+	218 - f04.history_campaign_2_365 (Failed)               history_acceptance
+	219 - f04.history_campaign_3_365 (Failed)               history_acceptance
+	220 - f04.history_campaign_4_365 (Failed)               history_acceptance
+	221 - f04.history_campaign_5_365 (Failed)               history_acceptance
+	222 - f04.history_campaign_valhalla_730 (Failed)        history_acceptance
+Errors while running CTest

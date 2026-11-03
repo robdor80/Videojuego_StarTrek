@@ -2,7 +2,8 @@
 
 P01 conserva su contrato. P02 añade [delegación real y cadena de mando](DELEGATION.md).
 P03 añade [iniciativa NPC determinista y conocimiento limitado](INITIATIVE.md).
-Incremento nativo para auditoría; no cierra F05 ni desarrolla P04/P05/F06.
+P04 añade [lenguaje y propuestas opcionales](AI.md), con P03 operativo sin IA/API/red.
+Incremento nativo para auditoría; no cierra F05 ni desarrolla P05/F06.
 CoreRPG **main `76a7b7b485616d8c4994f384a90f123bf333591d`**, sin modificaciones.
 La [API C](include/f05_orders.h) amplía `TrekF04Bridge`; recibe el mismo
 `F04Session*`. No crea otro mundo, reloj, historial ni almacén de órdenes.

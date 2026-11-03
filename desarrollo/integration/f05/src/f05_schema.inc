@@ -1,5 +1,6 @@
 // Included inside F04's domain namespace. The Core graph is the only storage.
 #include "f05_initiative_schema.inc"
+#include "f05_ai_schema.inc"
 bool f05_shape(const WorldState& w,U id,std::set<U>& a,std::set<U>& q,std::set<U>& ar,std::set<U>& rr) {
  if(type(w,id,"f05_request")) {
   a={F05_KEY,F05_REVISION,END,OP,CAUSE,TICK};ar={SHIP,ISSUER,PERSON,SLOT};q=a;rr=ar;ar.insert({F05_DELEGATION_REF,F05_NEED_REF});
@@ -22,7 +23,7 @@ bool f05_shape(const WorldState& w,U id,std::set<U>& a,std::set<U>& q,std::set<U
   ar={SHIP,PERSON,F05_DELEGATION_REF,F05_PREVIOUS_REF};rr={SHIP,PERSON,F05_DELEGATION_REF};
  } else if(type(w,id,"f05_approval")) {
   a={F05_REVISION,CAUSE,TICK};q=a;ar={SHIP,PERSON,F05_ORDER_REF,F05_DELEGATION_REF};rr=ar;
- } else if(f05_initiative_shape(w,id,a,q,ar,rr)) {} else return false;
+ } else if(f05_ai_shape(w,id,a,q,ar,rr)) {} else if(f05_initiative_shape(w,id,a,q,ar,rr)) {} else return false;
  return true;
 }
 bool f05_terminal(U state) {return state>=F05_COMPLETED && state<=F05_CANCELLED;}
@@ -39,7 +40,7 @@ bool f05_delegation_step(U from,U to) {
 
 #include "f05_delegation_schema.inc"
 bool f05_schema(const Campaign& c) {
- if(!f05_delegations_schema(c) || !f05_initiative_schema(c))return false;
+ if(!f05_delegations_schema(c) || !f05_initiative_schema(c) || !f05_ai_schema(c))return false;
  const auto& w=c.world;std::set<U> keys,requests,tasks,attempts,results,events;
  const auto orders=all(w,"f05_order");if(orders.size()>512)return false;
  for(U o:orders) {

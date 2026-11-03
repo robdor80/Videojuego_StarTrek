@@ -1,6 +1,6 @@
 # F05 — Registro centralizado de validaciones pendientes (MSI)
 
-Fecha de conciliación: **2026-11-02**. Responsable de seguimiento: auditoría técnica ChatGPT; ejecución local por el propietario/Codex local. **Este documento no certifica resultados que no se han ejecutado.**
+Fecha de conciliación: **2026-11-03**. Responsable de seguimiento: auditoría técnica ChatGPT; ejecución local por el propietario/Codex local. **Este documento no certifica resultados que no se han ejecutado.**
 
 ## Regla de salida
 
@@ -12,8 +12,8 @@ Fecha de conciliación: **2026-11-02**. Responsable de seguimiento: auditoría t
 |---|---|---|---|
 | F05-P01 — Órdenes | PR #81 fusionada | Auditadas, CI Linux/Windows verde | **PENDIENTES** |
 | F05-P02 — Delegación | PR #82 fusionada | Auditadas, CI Linux/Windows verde | **PENDIENTES** |
-| F05-P03 — Iniciativa NPC | Implementada nativamente; entrega Draft para auditoría independiente | Evidencia en [informe P03](F05-P03_IMPLEMENTACION.md) | **PENDIENTES** |
-| F05-P04 — IA | No implementada | No realizadas | Por definir |
+| F05-P03 — Iniciativa NPC | PR #84 fusionada | Evidencia en [informe P03](F05-P03_IMPLEMENTACION.md) | **PENDIENTES** |
+| F05-P04 — IA opcional | Implementación nativa para auditoría Draft; autonomía P03 independiente de IA | Véase [informe P04](F05-P04_IMPLEMENTACION.md) | **PENDIENTES** |
 | F05-P05 — Cierre global | Solo suite documental histórica de referencia | No certifica F05 completa | Auditoría integral futura |
 
 ## P01: verificaciones obligatorias aún pendientes
@@ -54,12 +54,27 @@ Comandos, rutas, prerrequisitos, criterios y resultados esperados:
 Ningún test Unreal P03 ha sido ejecutado en Cloud. Se conservan todas las
 validaciones P01 y P02 anteriores, sin marcar ninguna como superada.
 
+## P04: verificaciones adicionales pendientes
+
+- [ ] **P04-01. PENDIENTE.** MSVC/DLL, ABI y exports IA, SHA Core y dependencias reales en MSI.
+- [ ] **P04-02. PENDIENTE.** UBT/UHT y carga del módulo aislado en UE **5.8.2**, `ready=1`.
+- [ ] **P04-03. PENDIENTE.** `F05.P04.AIProposalValidation`.
+- [ ] **P04-04. PENDIENTE.** `F05.P04.StaleAuthorityAndFallback`.
+- [ ] **P04-05. PENDIENTE.** `F05.P04.OffscreenRecoveryAndSafety`.
+- [ ] **P04-06. PENDIENTE.** Las **12 pruebas P01/P02/P03/P04**, incluidas las nueve anteriores intactas, y repetición en directorio nuevo/limpio.
+- [ ] **P04-07. PENDIENTE.** RHI real, recuperación de partida y fallback con proveedor simulado sin conexión remota.
+
+Comandos y criterios: [VALIDACIONES_PENDIENTES_MSI_P04.md](VALIDACIONES_PENDIENTES_MSI_P04.md).
+No se ha ejecutado ninguna prueba Unreal P04 en Cloud. Ningún pendiente previo
+queda acreditado por esta ampliación. P03 figura fusionada en PR #84; sus pruebas
+MSI siguen pendientes.
+
 ## Criterios de aceptación y registro de resultados
 
-Los pasos comunes de compilación/carga pueden acreditarse con **una sola ejecución integral** si los reportes demuestran explícitamente la compatibilidad de P01, P02 y P03. Se mantienen las **seis pruebas P01/P02** obligatorias y se añaden **tres P03**: deben pasar las **nueve pruebas de automatización UE**; ausencia de pruebas, tests omitidos o falta de logs no equivale a PASS.
+Los pasos comunes de compilación/carga pueden acreditarse con **una sola ejecución integral** si los reportes demuestran explícitamente la compatibilidad de P01, P02, P03 y P04. Se mantienen las **seis pruebas P01/P02** obligatorias y se añaden **tres P03**: se añaden tres P04 y deben pasar las **12 pruebas de automatización UE**; ausencia de pruebas, tests omitidos o falta de logs no equivale a PASS.
 
 Guardar en un commit posterior, sin alterar registros históricos: fecha/hora, equipo, versión UE exacta, compilador, SHA Star Trek y Core, comandos ejecutados, `index.json` de Automation, XML/logs relevantes, número de pruebas y resultado por test. La ejecución local no queda acreditada por la CI Windows de GitHub.
 
-Tras P04, añadir aquí sus nuevas pruebas sin borrar ni marcar automáticamente las anteriores. Antes de comenzar F06, realizar la auditoría integral P05 sobre el HEAD definitivo, comprobar regresiones y dejar acta explícita de cierre. P03 no autoriza comenzar P04/P05 ni F06.
+Las nuevas pruebas P04 se añaden sin borrar ni marcar automáticamente las anteriores. Antes de comenzar F06, realizar la auditoría integral P05 sobre el HEAD definitivo, comprobar regresiones y dejar acta explícita de cierre. La autorización P04 no autoriza comenzar P05 ni F06.
 
 **Prohibido limpiar, borrar o reutilizar laboratorios previos sin autorización.** Directorios nuevos bajo `laboratorios/f05/` excluidos de Git; preservar fuentes y recursos artísticos.

@@ -49,6 +49,55 @@ F05KnownNeed f05_known_need(const WorldState& w,U actor,U input,U budget) {
  n.complete=exists && definition && due && end && n.slot && n.person && n.duty;
  if(n.complete)n.id=input;return n;
 }
+struct F05Plan {
+ U order=0,delegation=0,target=0;uint32_t decision=F05_CLARIFY,code=F04_REVIEW;
+ bool detected=false,issue=false,receive=false,execute=false;
+};
+F05Plan f05_plan(const Campaign& c,U actor_id,const F05KnownNeed& known) {
+ const auto& w=c.world;
+  const U t=c.time.now(),actor=actor_id;U order=0,delegation=0,target=0;
+  uint32_t decision=F05_CLARIFY,code=F04_REVIEW;bool detected=false,issue=false,receive=false,execute=false;
+  if(actor==f05_player(w)){decision=F05_WAIT_PLAYER;code=F04_REVIEW;}
+  else if(known.complete) {
+   if(t<known.due){decision=F05_NO_ACTION;code=F04_OK;}
+   else {
+    detected=true;
+    // Actual world reads below are authorization/physical checks, never new
+    // operational facts supplied to the decision context.
+    if(t>=known.end){decision=F05_REPORT;code=F04_EXPIRED;}
+    else if(!available(w,actor,t)){decision=F05_NO_ACTION;code=F04_UNAVAILABLE;}
+    else {
+     for(U o:all(w,"f05_order"))if(ref(w,ref(w,o,F05_REQUEST_REF),F05_NEED_REF)==known.id){order=o;break;}
+     if(order) {
+      if(actor!=ref(w,order,PERSON) && actor!=ref(w,order,ISSUER) && actor!=commander(w,t)) {
+       order=0;decision=F05_REPORT;code=F04_REVIEW;
+      } else if(f05_terminal(val(w,order,F05_STATUS))){decision=F05_NO_ACTION;code=uint32_t(val(w,order,CODE));}
+      else if(ref(w,order,PERSON)==f05_player(w)){decision=F05_WAIT_PLAYER;code=F04_REVIEW;}
+      else if(actor!=ref(w,order,PERSON)){decision=F05_NO_ACTION;code=F04_OK;}
+      else {decision=F05_CONTINUE_TASK;code=F04_OK;receive=val(w,order,F05_STATUS)==F05_ISSUED;execute=!receive;}
+     } else {
+      bool authorized=false;
+      try{(void)f05_origin(c,actor);authorized=true;}catch(const Denial& d){code=d.code;}
+      // Explicit mandates take precedence, including modes requiring approval.
+      // A matching revoked/suspended grant is never used as authority.
+      for(U d:all(w,"delegation"))if(has(w,d,F05_MODE) && ref(w,d,PERSON)==actor &&
+       ref(w,d,SLOT)==known.slot && ref(w,d,F05_EXECUTOR_REF)==known.person) {
+       try{f05_grant_live(c,d);delegation=d;authorized=true;break;}catch(const Denial& d0){if(!authorized)code=d0.code;}
+      }
+      if(!authorized){decision=active_role(w,actor,F04_FIRST,t)?F05_PROPOSE:F05_ESCALATE;target=commander(w,t);}
+      else if(!f05_service(c,known.duty,known.person,known.slot)){decision=F05_ESCALATE;code=F04_UNAVAILABLE;target=commander(w,t);}
+      else {
+       try {need(scan_station(c,known.person)==known.slot,F04_SCOPE);issue=true;code=F04_OK;
+        decision=delegation && val(w,delegation,F05_MODE)!=F05_DELEGATED_AUTONOMOUS?F05_PROPOSE:F05_ISSUE_ORDER;
+       } catch(const Denial& d){decision=F05_REPORT;code=d.code;target=commander(w,t);}
+      }
+     }
+    }
+   }
+  }
+ return {order,delegation,target,decision,code,detected,issue,receive,execute};
+}
+
 }
 uint32_t f05_bind_player(F04Session* s,F04Ref p,U revision) {
  return call(s,[&]()->uint32_t {
@@ -112,46 +161,8 @@ uint32_t f05_evaluate(F04Session* s,const F05Evaluation* q,F05DecisionView* out)
   need(f05_player(w),F04_REVIEW);need(q->expected_revision==w.revision(),F04_STALE);
   need(all(w,"f05_decision").size()<2048,F04_CAPACITY);
   const auto known=f05_known_need(w,q->actor.id,q->need,q->max_facts);
-  const U t=s->c->time.now(),actor=q->actor.id;U order=0,delegation=0,target=0;
-  uint32_t decision=F05_CLARIFY,code=F04_REVIEW;bool detected=false,issue=false,receive=false,execute=false;
-  if(actor==f05_player(w)){decision=F05_WAIT_PLAYER;code=F04_REVIEW;}
-  else if(known.complete) {
-   if(t<known.due){decision=F05_NO_ACTION;code=F04_OK;}
-   else {
-    detected=true;
-    // Actual world reads below are authorization/physical checks, never new
-    // operational facts supplied to the decision context.
-    if(t>=known.end){decision=F05_REPORT;code=F04_EXPIRED;}
-    else if(!available(w,actor,t)){decision=F05_NO_ACTION;code=F04_UNAVAILABLE;}
-    else {
-     for(U o:all(w,"f05_order"))if(ref(w,ref(w,o,F05_REQUEST_REF),F05_NEED_REF)==known.id){order=o;break;}
-     if(order) {
-      if(actor!=ref(w,order,PERSON) && actor!=ref(w,order,ISSUER) && actor!=commander(w,t)) {
-       order=0;decision=F05_REPORT;code=F04_REVIEW;
-      } else if(f05_terminal(val(w,order,F05_STATUS))){decision=F05_NO_ACTION;code=uint32_t(val(w,order,CODE));}
-      else if(ref(w,order,PERSON)==f05_player(w)){decision=F05_WAIT_PLAYER;code=F04_REVIEW;}
-      else if(actor!=ref(w,order,PERSON)){decision=F05_NO_ACTION;code=F04_OK;}
-      else {decision=F05_CONTINUE_TASK;code=F04_OK;receive=val(w,order,F05_STATUS)==F05_ISSUED;execute=!receive;}
-     } else {
-      bool authorized=false;
-      try{(void)f05_origin(*s->c,actor);authorized=true;}catch(const Denial& d){code=d.code;}
-      // Explicit mandates take precedence, including modes requiring approval.
-      // A matching revoked/suspended grant is never used as authority.
-      for(U d:all(w,"delegation"))if(has(w,d,F05_MODE) && ref(w,d,PERSON)==actor &&
-       ref(w,d,SLOT)==known.slot && ref(w,d,F05_EXECUTOR_REF)==known.person) {
-       try{f05_grant_live(*s->c,d);delegation=d;authorized=true;break;}catch(const Denial& d0){if(!authorized)code=d0.code;}
-      }
-      if(!authorized){decision=active_role(w,actor,F04_FIRST,t)?F05_PROPOSE:F05_ESCALATE;target=commander(w,t);}
-      else if(!f05_service(*s->c,known.duty,known.person,known.slot)){decision=F05_ESCALATE;code=F04_UNAVAILABLE;target=commander(w,t);}
-      else {
-       try {need(scan_station(*s->c,known.person)==known.slot,F04_SCOPE);issue=true;code=F04_OK;
-        decision=delegation && val(w,delegation,F05_MODE)!=F05_DELEGATED_AUTONOMOUS?F05_PROPOSE:F05_ISSUE_ORDER;
-       } catch(const Denial& d){decision=F05_REPORT;code=d.code;target=commander(w,t);}
-      }
-     }
-    }
-   }
-  }
+  const U t=s->c->time.now(),actor=q->actor.id;
+  auto [order,delegation,target,decision,code,detected,issue,receive,execute]=f05_plan(*s->c,actor,known);
   U id=0;
   f05_atomic(s,[&] {
    const auto& cat=*s->content.catalog();const U revision=s->c->world.revision();
