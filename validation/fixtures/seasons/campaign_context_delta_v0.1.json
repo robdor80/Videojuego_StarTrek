@@ -1,0 +1,103 @@
+{
+  "schema_version": "0.1.0",
+  "export_mode": "delta",
+  "knowledge_scope": "full_authoring",
+  "provenance": {
+    "source_kind": "offline_fixture",
+    "evidence_ref": null,
+    "is_runtime_verified": false
+  },
+  "campaign": {
+    "campaign_id": "campaign_test_001",
+    "snapshot_revision": 7,
+    "catalog_revision": 2,
+    "world_time": "2374-05-07T12:00:00",
+    "foreground_main_season_id": "stnar.reference.season"
+  },
+  "coverage": {
+    "complete": true,
+    "from_event_cursor": 2,
+    "to_event_cursor": 3,
+    "event_total": 3,
+    "base_snapshot_revision": 6
+  },
+  "history": [
+    {
+      "sequence": 3,
+      "event_id": "event.003",
+      "occurred_at": "2374-05-07T11:00:00",
+      "kind": "ship_assignment",
+      "fact_ids": [
+        "history.new_assignment"
+      ],
+      "summary_es": "Asignación operativa confirmada a otra unidad.",
+      "visibility": "player_known"
+    }
+  ],
+  "current": {
+    "historical_fact_ids": [
+      "history.borg_assimilation",
+      "history.borg_recovered",
+      "history.new_assignment"
+    ],
+    "current_fact_ids": [
+      "current.recovered",
+      "current.on_duty"
+    ],
+    "active_world_event_ids": [],
+    "open_operational_need_ids": [],
+    "entity_state_refs": [
+      "character.test",
+      "ship.test"
+    ],
+    "world_summary_es": "Campaña de referencia: incidente Borg superado clínicamente; nuevo destino operativo activo; hechos del universo pendientes de evaluación.",
+    "relevant_entities": [
+      {
+        "entity_id": "character.test",
+        "state_summary_es": "Oficial recuperado y de servicio. Antecedente histórico de asimilación Borg.",
+        "known_to_player": true
+      },
+      {
+        "entity_id": "ship.test",
+        "state_summary_es": "Unidad del nuevo destino profesional del oficial.",
+        "known_to_player": true
+      }
+    ]
+  },
+  "installed_seasons": [
+    {
+      "season_id": "stnar.reference.season",
+      "pack_id": "stnar.reference.technical",
+      "pack_version": "0.1.0",
+      "state": "in_progress",
+      "confirmed_outcome_ids": [
+        "resolution_a"
+      ],
+      "actual_summary_es": "Primer capítulo resuelto; participación y resultado de investigación confirmados por la historia sintética."
+    }
+  ],
+  "pending_season_plans": [
+    {
+      "season_id": "stnar.reference.season",
+      "pack_id": "stnar.reference.technical",
+      "pack_version": "0.1.0",
+      "planned_chapter_ids": [
+        "chapter_demo_02"
+      ],
+      "is_future_proposal": true,
+      "premise_es": "Premisa únicamente técnica: posible investigación de una anomalía existente en el mundo.",
+      "planned_outline_es": "Capítulo técnico pendiente con variantes de cierre; su resultado no ha ocurrido todavía.",
+      "possible_outcomes_es": [
+        "Resolución por la unidad del jugador",
+        "Resolución por unidad NPC",
+        "Fracaso y continuidad causal"
+      ],
+      "key_character_refs": [
+        "character.test"
+      ]
+    }
+  ],
+  "capability_ids": [
+    "world_event_observation_v1"
+  ]
+}
