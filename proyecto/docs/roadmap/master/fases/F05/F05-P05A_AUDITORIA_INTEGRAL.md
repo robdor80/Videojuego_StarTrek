@@ -59,8 +59,9 @@ Core declara condicional la prueba
 `ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt`: las
 permisiones POSIX no equivalen a ACL Windows. El runner conserva el test y el
 JUnit, permite únicamente ese SKIP en Core/Windows, lo separa de PASS y exige
-483 casos descubiertos. La nueva CI debe confirmar el resultado exacto; no se
-modifican pruebas ni fuentes Core para obtener PASS. Linux ejecutó los 483.
+483 casos descubiertos. La CI de `c3ede747225cc009da54a5d2c4732f4760c63c2e`
+confirma **482 PASS + 1 SKIP nominal en Windows** y **483 PASS en Linux**;
+no se modifican pruebas ni fuentes Core para obtener PASS.
 Cualquier otra omisión sigue siendo fallo, incluidos todos los casos F04/F05.
 
 ## Matriz de trazabilidad y aceptación
@@ -154,6 +155,63 @@ En Core/Windows se debe distinguir el posible SKIP POSIX nominal del PASS;
 Linux acredita la suite completa sin omisiones. Las pruebas F04/F05 y campañas
 no admiten SKIP. Los workflows de referencia F05, gobierno y release documental
 se comprueban también, sin atribuirles certificación runtime.
+
+### Conciliación tras recuperar la sesión Cloud — 03-11-2026
+
+Se recuperó expresamente la rama P05A desde GitHub, con árbol limpio y los
+cuatro commits existentes intactos. La PR #87 continúa abierta, Draft, contra
+`main`, sin revisiones independientes registradas al comprobarla. No se
+reinició el desarrollo ni se despacharon, cancelaron o reintentaron workflows.
+No se ha identificado otro defecto de producto que justifique cambiar código.
+
+El HEAD ejecutable acreditado es
+`c3ede747225cc009da54a5d2c4732f4760c63c2e`.
+La ejecución [41715049830](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830),
+intento **1**, terminó **SUCCESS con 10/10 jobs**. La última campaña Windows
+terminó el 03-11-2026 a las **21:04:27 UTC**. No quedan campañas pendientes en
+ese commit.
+
+| Resultado CI comprobado | Linux | Windows |
+|---|---|---|
+| F04/F05 integrada | 395 PASS, 0 SKIP; incluye los 30 P05A | 395 PASS, 0 SKIP; incluye los 30 P05A |
+| Core compatible, JSON ON | 483 PASS, 0 SKIP | 482 PASS + 1 SKIP POSIX nominal, inventario 483 |
+| F02 / F03 / F04 originales | 15 / 25 / 259 PASS, 0 SKIP | 15 / 25 / 259 PASS, 0 SKIP |
+| Campañas históricas, pins/oráculos preservados | 6/6 PASS | 6/6 PASS |
+| Documentación / fixtures / transversal | 22 / 48 / 3 PASS | 22 / 48 / 3 PASS |
+| Gobierno / preparación Unreal / sintaxis PowerShell | PASS / PASS_STATIC_ONLY / PASS | PASS / PASS_STATIC_ONLY / PASS |
+
+También finalizaron SUCCESS los workflows
+[referencia F05](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049776),
+[gobierno](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049869) y
+[referencia F15](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049860),
+todos sobre el mismo SHA. F15 no acredita beta ni runtime.
+
+La [evidencia de recuperación](evidence/F05-P05A-CI-RECUPERACION/summary.json)
+conserva IDs/enlaces de los diez jobs y artefactos, digest ZIP informado por
+GitHub, resultados exactos, fechas y procedencia. Los
+[extractos de logs](evidence/F05-P05A-CI-RECUPERACION/job-log-excerpts.json)
+incluyen los resúmenes reales y el XML del SKIP impreso por el runner. En esta
+recuperación se contrastaron API y logs de CI; no se extrajeron sus ZIP porque
+la política HTTP del entorno denegó el destino de redirección de la descarga
+CLI. El conector proporcionó una referencia de archivo; no se presenta como
+inspección local de sus JUnit. Los originales permanecen en los artefactos de
+Actions hasta su caducidad registrada.
+
+Sí se verificaron directamente los **98 hashes** de la evidencia local ya
+publicada, sus seis JUnit completos y seis aceptaciones de campañas. Todos
+coinciden y no se sobrescriben. De las 133 entradas del inventario de fuentes,
+solo el workflow conserva el hash anterior a la selección explícita del HEAD
+añadida en `c3ede74`; coincide con `cc97eae`. Las fuentes de integración
+coinciden íntegramente con `c3ede74`. Esa diferencia de procedencia queda
+explicada, sin reescribir el inventario histórico.
+
+Trabajo P05A completado: correcciones P05A-01/02, 30 escenarios, regresiones,
+campañas, conciliación de evidencias y preparación P05B. La recuperación añade
+solo documentación/evidencia, sin cambios ejecutables. El HEAD definitivo se
+consulta en PR #87: las ejecuciones automáticas de cualquier commit documental
+posterior se informan allí por su SHA, separadas de los resultados anteriores,
+y nunca se dan por superadas antes de terminar. La auditoría independiente y
+todas las verificaciones MSI/UE 5.8.2 continúan pendientes.
 
 Runner reproducible (Python, Linux/Windows):
 

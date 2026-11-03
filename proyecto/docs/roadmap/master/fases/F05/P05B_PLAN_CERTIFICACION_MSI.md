@@ -6,6 +6,16 @@ EN_REVISION y F06 bloqueada. La suite documental histórica P05 no certifica
 P05A/P05B. Solo un acta posterior, después de auditar las evidencias reales,
 podrá proponer el cierre; este runner no cambia el estado del proyecto.
 
+Conciliación Cloud del 03-11-2026: la CI de la PR #87 en
+`c3ede747225cc009da54a5d2c4732f4760c63c2e` terminó con 10/10 jobs SUCCESS,
+incluidas las seis campañas por sistema. Core Windows confirmó 482 PASS +
+1 SKIP POSIX nominal, según el criterio inferior. Véase la
+[evidencia](evidence/F05-P05A-CI-RECUPERACION/summary.json). Esta conciliación
+documental no modifica el runner ni sustituye ninguna aceptación MSI.
+Para ejecutar P05B, resolver `$Expected` al HEAD definitivo auditado de PR #87,
+incluidos sus commits documentales posteriores; no usar automáticamente el SHA
+de esta ejecución CI anterior como si fuera el último HEAD.
+
 ## Requisitos e identidades
 
 - MSI del propietario, Windows x64, PowerShell **7**, Developer PowerShell de

@@ -98,3 +98,23 @@ Pendientes adicionales agrupados, sin duplicar P01–P04:
 P05A no cierra F05 ni desbloquea F06. `P05=CERRADA` en la referencia documental
 histórica es independiente de P05A/P05B. Bloquean el cierre los fallos graves,
 CI final incompleta, cualquier pendiente MSI obligatorio y la falta de acta P05B.
+
+### Conciliación de recuperación Cloud — 03-11-2026
+
+Comprobado en GitHub sobre `c3ede747225cc009da54a5d2c4732f4760c63c2e`:
+[CI integral 41715049830](https://github.com/robdor80/Videojuego_StarTrek/actions/runs/41715049830)
+SUCCESS, **10/10 jobs**, intento 1. Linux y Windows: F04/F05 **395/395**, F02
+**15/15**, F03 **25/25**, F04 original **259/259**, campañas **6/6 por sistema**.
+Core Linux **483 PASS**; Core Windows **482 PASS + 1 SKIP** exclusivamente de
+`ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt`.
+Referencia F05, gobierno y referencia F15 SUCCESS en ese mismo commit.
+No quedan campañas pendientes de ese HEAD; las del último commit documental,
+si las activa Actions, se identifican por separado en PR #87.
+
+La conciliación contrasta metadatos/logs CI y hashes/JUnit/aceptaciones locales
+publicados. Conserva enlaces, hashes y el límite de acceso a ZIP CI en la
+[evidencia de recuperación](evidence/F05-P05A-CI-RECUPERACION/summary.json).
+No añade ejecución MSI, no acredita ACL Windows ni Unreal, y no marca ninguna
+casilla P01–P04/P05B como superada. Plan P05B revisado: dos builds limpios, DLL
+real, 12 nombres UE exactos y RHI hardware; **PENDIENTE / NO EJECUTADO**.
+No hay cambios nuevos de producto, Core, arte o laboratorios anteriores.
