@@ -122,7 +122,7 @@ F04 estable `c147d81ed069da2e09149613ab02cbc3ebe95a4a`;
 F04 histórico `89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98`.
 Los seis oráculos congelados proceden de Core
 `63d2401edaf85960b4baaf6b537ae571ba52a439` y conservan sus hashes y procedencia.
-No se recalculan expectativas para conseguir PASS. Los 11 diagnósticos
+No se recalculan expectativas para conseguir PASS. Se repitieron además ocho escenarios en Linux con socket/connect IPv4/IPv6 bloqueados mediante LD_PRELOAD y una autocomprobación del bloqueo: ocho PASS y cero intentos de conexión del producto. Es una comprobación de ese binario y llamadas libc, no una garantía universal contra syscalls directas; no añade dependencias de ejecución al producto. Código del bloqueo y logs se conservan en la evidencia, sin versionar el laboratorio. Los 11 diagnósticos
 monolíticos históricos de 365/730 días y recuperación asociada permanecen
 **EXCLUIDOS / NO EJECUTADOS**, no se suman a las pruebas superadas.
 

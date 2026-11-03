@@ -91,6 +91,17 @@ def main():
         exports[name + '.log'] = scrub(result.stdout)
         summary['documentation'][name] = {'command': ['python', *command], 'exit_code': result.returncode}
     exports['defects-before.log'] = scrub((args.logs / 'defects-before.log').read_bytes())
+    for name in ('network-disabled.log', 'network-probe.log'):
+        exports[name] = scrub((args.logs / name).read_bytes())
+    attempts = args.logs / 'network-product-attempts.log'
+    require(not attempts.exists() or attempts.stat().st_size == 0, 'Product attempted Internet sockets')
+    network = (args.logs / 'network-disabled.log').read_text()
+    require(network.count(': PASS') == 8 and 'zero attempted product Internet sockets' in network, 'Eight executed network-blocked checks required')
+    exports['network-guard.c'] = (args.temp_root / 'network_guard.c').read_bytes()
+    summary['network_disabled'] = {'repeated_cases': 8, 'product_socket_attempts': 0,
+                                   'method': 'Linux LD_PRELOAD denies AF_INET/AF_INET6 socket/connect; self-check executed',
+                                   'compile': 'cc -shared -fPIC network-guard.c -o network_guard.so -ldl',
+                                   'not_a_general_network_sandbox': True}
     before = args.temp_root / 'native/defects-before.xml'
     failed = ET.fromstring(before.read_bytes())
     require(len(failed.findall('.//failure')) == 2 and len(failed.findall('.//testcase')) == 2, 'Two actual pre-fix reproductions required')

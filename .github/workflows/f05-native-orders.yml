@@ -110,7 +110,11 @@ jobs:
             laboratorios/f05/p05a/ci/earlier/build/Testing/Temporary/LastTest.log
             laboratorios/f05/p05a/ci/earlier/build/CMakeFiles/*/CMakeCXXCompiler.cmake
   historical:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     timeout-minutes: 120
     env:
       PYTHONDONTWRITEBYTECODE: '1'
@@ -121,7 +125,10 @@ jobs:
           python-version: '3.12'
       - name: Preserve historical Core pin
         id: core
-        run: echo "sha=$(cat desarrollo/integration/f04/core-history-revision.txt)" >> "$GITHUB_OUTPUT"
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f04/core-history-revision.txt -Raw).Trim()
+          "sha=$sha" >> $env:GITHUB_OUTPUT
       - uses: actions/checkout@v4
         with:
           repository: robdor80/CoreRPG
@@ -132,7 +139,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: f05-p05a-historical
+          name: f05-p05a-historical-${{ matrix.os }}
           path: |
             laboratorios/f05/p05a/ci/history/tests.xml
             laboratorios/f05/p05a/ci/history/run.json

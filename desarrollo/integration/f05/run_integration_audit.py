@@ -102,6 +102,9 @@ def main():
             raise RuntimeError('No complete passing JUnit')
         if any(c.get('status') != 'run' for c in cases):
             raise RuntimeError('JUnit contains unexecuted tests')
+        expected_counts = {'core': 483, 'f02': 15, 'f03': 25, 'f04': 259, 'f05': 395, 'history': 6}
+        if len(cases) != expected_counts[args.suite]:
+            raise RuntimeError(f'Expected {expected_counts[args.suite]} tests for {args.suite}, got {len(cases)}')
         if args.suite == 'f05':
             names = [c.get('name') for c in cases]
             counts = {'f05.p02_': 20, 'f05.p03_': 26, 'f05.p04_': 38, 'f05.p05a_': 30}

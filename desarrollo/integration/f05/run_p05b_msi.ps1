@@ -30,8 +30,12 @@ New-Item -ItemType Directory $BuildRoot | Out-Null
 $Record=[ordered]@{result='INCOMPLETE';hardware_rhi_acceptance='PENDIENTE_REVISION_LOGS';final_certification='PENDIENTE_ACTA';utc=[DateTime]::UtcNow.ToString('o');computer=$env:COMPUTERNAME;trek=$Head;core=$Pin;engine=$Version;runs=@()}
 $Record | ConvertTo-Json -Depth 10 | Set-Content (Join-Path $BuildRoot 'acceptance.json')
 Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber | ConvertTo-Json | Set-Content (Join-Path $BuildRoot 'windows.json')
+$PreviousTemp=$env:TEMP;$PreviousTmp=$env:TMP;$PreviousTmpDir=$env:TMPDIR
+New-Item -ItemType Directory (Join-Path $BuildRoot 'system-temp') | Out-Null
+$env:TEMP=Join-Path $BuildRoot 'system-temp';$env:TMP=$env:TEMP;$env:TMPDIR=$env:TEMP
 
 # Actually load the DLL and resolve all public ABI exports, without UE or model API.
+try {
 if(!('F05DllProbe' -as [type])){
  Add-Type -TypeDefinition @'
 using System;
@@ -53,7 +57,6 @@ public static class F05DllProbe {
 }
 '@
 }
-try {
  foreach($Iteration in 1..2){
   $Output=Join-Path $BuildRoot "clean-$Iteration"
   & python (Join-Path $PSScriptRoot 'run_integration_audit.py') --suite core --core-source $CoreSource --output (Join-Path $BuildRoot "core-$Iteration") --generator $Generator
@@ -84,6 +87,7 @@ try {
  }
  $Record.result='PASS_AUTOMATED'
 } finally {
+ $env:TEMP=$PreviousTemp;$env:TMP=$PreviousTmp;$env:TMPDIR=$PreviousTmpDir
  $Record | ConvertTo-Json -Depth 10 | Set-Content (Join-Path $BuildRoot 'acceptance.json')
  Get-ChildItem $BuildRoot -Recurse -File | Where-Object {$_.Extension -in @('.log','.xml','.json','.txt') -and $_.FullName -notmatch '[\\/](_deps|CMakeFiles)[\\/]'} |
   Get-FileHash -Algorithm SHA256 | Select-Object Path,Hash | ConvertTo-Json -Depth 5 | Set-Content (Join-Path $BuildRoot 'evidence-sha256.json')
