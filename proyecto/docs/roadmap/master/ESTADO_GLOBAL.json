@@ -165,17 +165,17 @@
         "P01": "EN_REVISION",
         "P02": "EN_REVISION",
         "P03": "EN_REVISION",
-        "P04": "BLOQUEADA",
+        "P04": "EN_REVISION",
         "P05": "CERRADA"
       },
-      "note": "F05 EN_CURSO. F05-P01 órdenes y F05-P02 delegaciones integradas en el mismo CoreRPG/F04 y auditadas favorablemente en alcance nativo/Cloud: PR Star Trek #81 y #82 fusionadas el 02-11-2026, CI Linux/Windows, Core y campañas F04 satisfactorias. P01/P02 EN_REVISION: pruebas MSVC, UE 5.8.2 y repetición limpia en el MSI pendientes, registradas en F05/REGISTRO_VALIDACIONES_MSI.md. P03 iniciativa NPC implementada nativamente en rama codex/f05-p03-npc-initiative, entrega Draft para auditoría independiente, UE/MSI pendientes. No constituye aprobación final ni cierre de F05. P04 IA NO implementada. P05 CERRADA únicamente por la suite histórica de referencia; integración/auditoría global P05 pendiente. Meta CORE_INTEGRADO global NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05.",
+      "note": "F05 EN_CURSO. P01 órdenes, P02 delegaciones, P03 iniciativa NPC y P04 capa opcional de propuestas IA están fusionadas y auditadas favorablemente en alcance nativo/Cloud (Star Trek PR #81/#82/#84/#85; CI Linux/Windows, CoreRPG y seis campañas históricas correctas). P01-P04 EN_REVISION hasta validación obligatoria MSVC y Unreal Engine 5.8.2 en MSI, guardado/recuperación, 12 automatizaciones UE, RHI real y repetición limpia según REGISTRO_VALIDACIONES_MSI.md. IA P04 no ejecuta acciones sin Host/P03/P01/P02/Core, no requiere red para autonomía NPC y no incluye cliente HTTP de producción ni conexión comercial acreditada. P05 CERRADA únicamente como suite de referencia histórica; auditoría final real pendiente. Meta global CORE_INTEGRADO NO alcanzada. F06 BLOQUEADA hasta superar todas las pruebas obligatorias de F05 y el cierre integral P05.",
       "file": "fases/F05/README.md",
       "achieved_maturity": "REFERENCIA_PROBADA",
       "step_evidence_maturity": {
         "P01": "REFERENCIA_PROBADA",
         "P02": "REFERENCIA_PROBADA",
         "P03": "REFERENCIA_PROBADA",
-        "P04": "DISENO_VALIDADO",
+        "P04": "REFERENCIA_PROBADA",
         "P05": "REFERENCIA_PROBADA"
       },
       "evidence_refs": [
@@ -187,7 +187,11 @@
         "fases/F05/VALIDACIONES_PENDIENTES_MSI_P02.md",
         "fases/F05/REGISTRO_VALIDACIONES_MSI.md",
         "fases/F05/F05-P03_IMPLEMENTACION.md",
-        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P03.md"
+        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P03.md",
+        "Star Trek PR #84 (merge f1ab2f33cccdd861077e59069addb8a12ff573d7; P03 auditada nativamente, Unreal pendiente)",
+        "Star Trek PR #85 (merge f58507aa50593a2024ed4d30514dad4a48c02669; P04 auditada nativamente, Unreal pendiente)",
+        "fases/F05/F05-P04_IMPLEMENTACION.md",
+        "fases/F05/VALIDACIONES_PENDIENTES_MSI_P04.md"
       ]
     },
     {

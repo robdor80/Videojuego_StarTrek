@@ -1,6 +1,6 @@
 # PLAN MAESTRO — Videojuego Star Trek RPG 3D
 
-**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01 y P02 ya integradas y auditadas en alcance nativo (PR #81 y #82), pendientes de pruebas UE5.8.2/MSI; P03 implementada nativamente en entrega Draft para auditoría independiente, con pruebas MSI pendientes; P04 sin implementar.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
+**Versión organizativa:** 1.0 / 11-10-2026; **reconciliación administrativa:** 31-10-2026. **F00–F03 cerradas en sus cortes verificados; F04 CERRADA en REFERENCIA_PROBADA conforme al [acta de 31-10-2026](fases/F04/ACTA_CIERRE_ADMINISTRATIVO_2026-10-31.md), sin certificar UE5 jugable ni las operaciones avanzadas pendientes. F05 EN_CURSO; P01–P04 integradas y auditadas favorablemente en alcance nativo (PR #81, #82, #84 y #85), todas pendientes de pruebas UE5.8.2/MSI; P04 es una capa generativa opcional, sin cliente HTTP comercial ejecutado.** La reconciliación histórica del 13-10 permanece como antecedente; la meta de F05 CORE_INTEGRADO no está alcanzada.
 
 ## Decisión autoral transversal 2026-10-30 — cronología y propulsión
 
@@ -25,7 +25,7 @@
 | [F02](fases/F02/README.md) | Arquitectura e integración | **CERRADA** (PR #60; laboratorio CoreRPG/UE5 validado) | CONTRATO_VALIDADO |
 | [F03](fases/F03/README.md) | Mundo autoritativo y persistencia | **CERRADA** (CoreRPG PR #12 + Trek PR #62; corte vertical integrado y auditado) | CORE_INTEGRADO |
 | [F04](fases/F04/README.md) | Naves, dotación y autoridad | **CERRADA** (corte operativo auditado; deuda avanzada explícita en acta) | REFERENCIA_PROBADA |
-| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01/P02 nativas integradas; pruebas MSI pendientes; P03 nativa en revisión independiente; P04 no implementada) | CORE_INTEGRADO |
+| [F05](fases/F05/README.md) | Órdenes, delegación e iniciativa NPC | **EN_CURSO** (P01–P04 integradas nativamente; 12 pruebas UE y MSI pendientes; P05 cierre real pendiente) | CORE_INTEGRADO |
 | [F06](fases/F06/README.md) | Sensores funcionales | **EN_REVISION** (referencia probada; PDF/UE5/Core pendientes) | REFERENCIA_PROBADA |
 | [F07](fases/F07/README.md) | Pipeline 3D y puente piloto Sutherland | **EN_REVISION** (preparación paralela, no UE5) | UE5_JUGABLE |
 | [F08](fases/F08/README.md) | Primera guardia jugable v0.0.1 | PLANIFICADA | ACEPTACION_SUPERADA |
@@ -83,6 +83,6 @@ Este diagrama es el **camino crítico orientativo**, no una prohibición de dise
 - F00 manda el control global; cada fase mantiene sus enlaces a **ubicaciones existentes**. Prohibido trasladar cientos de rutas para adaptarse al plan.
 - Idea `IDEA-xxxx` → decisión `DEC-xxxx` cuando haga falta → fase/paso `Fnn-Pnn` → evidencia/prueba → cierre.
 - Todo `COMPLETE` previo se registra con **alcance declarado** (lore, contrato, simulador, CI o UE5), no como prueba de implementación general.
-- Una única fase principal EN_CURSO en el estado global (**F04** desde el cierre F03 del 30-10-2026). **F03 está CERRADA únicamente a CORE_INTEGRADO**; F05–F06 conservan **EN_REVISION** como preparación documental, sin convertirse en fases principales activas. **F07** entra EN_REVISION en preparación técnica paralela por autorización del autor (13-10-2026), pero NO alcanza UE5_JUGABLE. **F08** sigue PLANIFICADA/PAUSADA hasta pruebas de puente y Core integrados.
+- **Criterio vigente de gobierno (03-11-2026):** la única fase principal `EN_CURSO` es **F05**; F04 permanece `CERRADA` a su madurez demostrada. P01–P04 han pasado auditorías nativas, pero la meta `CORE_INTEGRADO` global no está certificada mientras falten pruebas UE/MSI y el cierre P05. **F06 bloqueada** por ese gate. F07 conserva preparación técnica independiente permitida, sin certificar todavía `UE5_JUGABLE`.
 - Para modificaciones que cambian la continuidad del juego, el alcance jugable o la arquitectura del Core, respetar las decisiones creativas expresamente aprobadas por el autor. **La cronología de pantalla puede alterarse para este juego personal**, con anotación GAME_ADDITION, sin habilitar por defecto tecnologías futuras en todas las eras.
 - **Acta vigente de la nueva Clase Valhalla:** [ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md](fases/F01/ACTA_DECISIONES_CLASE_VALHALLA_2026-10-13.md). Blindaje ablativo y torpedos transfásicos aprobados como diseño; Blender/UE5 y Core pendientes de implementar y validar.
