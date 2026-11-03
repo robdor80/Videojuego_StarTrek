@@ -98,9 +98,18 @@ def main():
         run('tests', test)
         root = ET.parse(out / 'tests.xml').getroot()
         cases = root.findall('.//testcase')
-        if not cases or any(root.findall('.//' + tag) for tag in ('failure', 'error', 'skipped')):
+        skipped = [c for c in cases if c.find('skipped') is not None]
+        for case in skipped:
+            print('PLATFORM SKIP:', case.get('name'), ET.tostring(case, encoding='unicode'), flush=True)
+        if not cases or any(root.findall('.//' + tag) for tag in ('failure', 'error')):
             raise RuntimeError('No complete passing JUnit')
-        if any(c.get('status') != 'run' for c in cases):
+        # Core itself conditionally skips POSIX permission semantics on Windows.
+        # Keep the original test/oracle and raw JUnit; never count it as passed.
+        allowed = {'ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt'} if os.name == 'nt' and args.suite == 'core' else set()
+        if any(c.get('name') not in allowed for c in skipped):
+            raise RuntimeError('Unexpected skipped test; inspect the original JUnit')
+        executed = [c for c in cases if c.find('skipped') is None]
+        if any(c.get('status') != 'run' for c in executed):
             raise RuntimeError('JUnit contains unexecuted tests')
         expected_counts = {'core': 483, 'f02': 15, 'f03': 25, 'f04': 259, 'f05': 395, 'history': 6}
         if len(cases) != expected_counts[args.suite]:
@@ -115,7 +124,9 @@ def main():
                 raise RuntimeError('Missing P01 cases')
         if args.suite == 'history' and len(cases) != 6:
             raise RuntimeError('All six historical campaigns are required')
-        record.update(result='PASS', tests=len(cases), cases=[c.get('name') for c in cases])
+        record.update(result='PASS_COMPATIBLE_WITH_PLATFORM_SKIP' if skipped else 'PASS', tests=len(executed),
+                      discovered_tests=len(cases), skipped_cases=[c.get('name') for c in skipped],
+                      cases=[c.get('name') for c in executed])
     finally:
         (out / 'run.json').write_text(json.dumps(record, indent=2) + '\n', encoding='utf-8')
     print(json.dumps({'suite': args.suite, 'tests': record['tests'], 'result': record['result']}))
