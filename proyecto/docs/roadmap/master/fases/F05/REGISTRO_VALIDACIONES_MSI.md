@@ -13,7 +13,7 @@ Fecha de conciliación: **2026-11-03**. Responsable de seguimiento: auditoría t
 | F05-P01 — Órdenes | PR #81 fusionada | Auditadas, CI Linux/Windows verde | **PENDIENTES** |
 | F05-P02 — Delegación | PR #82 fusionada | Auditadas, CI Linux/Windows verde | **PENDIENTES** |
 | F05-P03 — Iniciativa NPC | PR #84 fusionada | Evidencia en [informe P03](F05-P03_IMPLEMENTACION.md) | **PENDIENTES** |
-| F05-P04 — IA opcional | Implementación nativa para auditoría Draft; autonomía P03 independiente de IA | Véase [informe P04](F05-P04_IMPLEMENTACION.md) | **PENDIENTES** |
+| F05-P04 — IA opcional | PR #85 fusionada; autonomía P03 independiente de IA | Nativa auditada; véase [informe P04](F05-P04_IMPLEMENTACION.md) | **PENDIENTES** |
 | F05-P05 — Cierre global | Solo suite documental histórica de referencia | No certifica F05 completa | Auditoría integral futura |
 
 ## P01: verificaciones obligatorias aún pendientes
@@ -75,6 +75,6 @@ Los pasos comunes de compilación/carga pueden acreditarse con **una sola ejecuc
 
 Guardar en un commit posterior, sin alterar registros históricos: fecha/hora, equipo, versión UE exacta, compilador, SHA Star Trek y Core, comandos ejecutados, `index.json` de Automation, XML/logs relevantes, número de pruebas y resultado por test. La ejecución local no queda acreditada por la CI Windows de GitHub.
 
-Las nuevas pruebas P04 se añaden sin borrar ni marcar automáticamente las anteriores. Antes de comenzar F06, realizar la auditoría integral P05 sobre el HEAD definitivo, comprobar regresiones y dejar acta explícita de cierre. La autorización P04 no autoriza comenzar P05 ni F06.
+Las nuevas pruebas P04 se añaden sin borrar ni marcar automáticamente las anteriores. Antes de comenzar F06, realizar la auditoría integral P05 sobre el HEAD definitivo, comprobar regresiones y dejar acta explícita de cierre. La fusión P04 no certifica pruebas UE ni autoriza cerrar F05 o comenzar F06; la auditoría integral P05 sigue pendiente.
 
 **Prohibido limpiar, borrar o reutilizar laboratorios previos sin autorización.** Directorios nuevos bajo `laboratorios/f05/` excluidos de Git; preservar fuentes y recursos artísticos.
