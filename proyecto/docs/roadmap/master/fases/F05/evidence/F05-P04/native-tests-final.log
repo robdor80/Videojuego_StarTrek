@@ -1,0 +1,735 @@
+Test project $OUTPUT/native
+        Start 306: f04.valhalla_process_save
+        Start 287: f04.odyssey_process_save
+  1/365 Test #287: f04.odyssey_process_save ..............   Passed    3.25 sec
+        Start 256: f04.sovereign_process_save
+  2/365 Test #306: f04.valhalla_process_save .............   Passed    4.27 sec
+        Start 173: f04.population_valhalla
+  3/365 Test #256: f04.sovereign_process_save ............   Passed    1.37 sec
+        Start 336: f04.guardias_1_process_save
+  4/365 Test #173: f04.population_valhalla ...............   Passed    0.41 sec
+        Start 171: f04.population_odyssey
+  5/365 Test #336: f04.guardias_1_process_save ...........   Passed    0.25 sec
+        Start 364: f04.guardias_2_process_save
+  6/365 Test #171: f04.population_odyssey ................   Passed    0.29 sec
+        Start 140: f04.intrepid_process_save
+  7/365 Test #140: f04.intrepid_process_save .............   Passed    0.11 sec
+        Start 169: f04.population_sovereign
+  8/365 Test #364: f04.guardias_2_process_save ...........   Passed    0.31 sec
+        Start 163: f04.organization_process_save
+  9/365 Test #169: f04.population_sovereign ..............   Passed    0.15 sec
+        Start 167: f04.population_intrepid
+ 10/365 Test #167: f04.population_intrepid ...............   Passed    0.02 sec
+        Start 165: f04.population_miranda
+ 11/365 Test #165: f04.population_miranda ................   Passed    0.02 sec
+        Start  39: f05.p02_process_save
+ 12/365 Test #163: f04.organization_process_save .........   Passed    0.10 sec
+        Start 103: f05.p04_process_save
+ 13/365 Test  #39: f05.p02_process_save ..................   Passed    0.02 sec
+        Start  65: f05.p03_process_save
+ 14/365 Test #103: f05.p04_process_save ..................   Passed    0.04 sec
+        Start  19: f05.process_save
+ 15/365 Test  #65: f05.p03_process_save ..................   Passed    0.04 sec
+        Start 227: f04.process_save
+ 16/365 Test #227: f04.process_save ......................   Passed    0.01 sec
+        Start 304: f04.valhalla_limits
+ 17/365 Test  #19: f05.process_save ......................   Passed    0.02 sec
+        Start 294: f04.valhalla_28
+ 18/365 Test #294: f04.valhalla_28 .......................   Passed   37.63 sec
+        Start 262: f04.odyssey_28
+ 19/365 Test #304: f04.valhalla_limits ...................   Passed   52.41 sec
+        Start 285: f04.odyssey_limits
+ 20/365 Test #262: f04.odyssey_28 ........................   Passed   18.97 sec
+        Start 350: f04.guardias_2_command_rest
+ 21/365 Test #285: f04.odyssey_limits ....................   Passed   18.90 sec
+        Start 286: f04.odyssey_benchmark
+ 22/365 Test #350: f04.guardias_2_command_rest ...........   Passed   18.40 sec
+        Start 139: f04.persistence_measure_5_28
+ 23/365 Test #286: f04.odyssey_benchmark .................   Passed    8.80 sec
+        Start 293: f04.valhalla_14
+ 24/365 Test #139: f04.persistence_measure_5_28 ..........   Passed    8.11 sec
+        Start 322: f04.guardias_1_command_rest
+ 25/365 Test #293: f04.valhalla_14 .......................   Passed   10.01 sec
+        Start 302: f04.valhalla_roundtrip
+ 26/365 Test #322: f04.guardias_1_command_rest ...........   Passed   11.79 sec
+        Start 276: f04.odyssey_migration
+ 27/365 Test #302: f04.valhalla_roundtrip ................   Passed    6.70 sec
+        Start 268: f04.odyssey_deficit
+ 28/365 Test #276: f04.odyssey_migration .................   Passed    6.03 sec
+        Start 136: f04.persistence_measure_4_28
+ 29/365 Test #268: f04.odyssey_deficit ...................   Passed    5.87 sec
+        Start 277: f04.odyssey_roundtrip
+ 30/365 Test #136: f04.persistence_measure_4_28 ..........   Passed    6.26 sec
+        Start 261: f04.odyssey_14
+ 31/365 Test #277: f04.odyssey_roundtrip .................   Passed    6.10 sec
+        Start 233: f04.sovereign_28
+ 32/365 Test #261: f04.odyssey_14 ........................   Passed    6.26 sec
+        Start 300: f04.valhalla_rest
+ 33/365 Test #233: f04.sovereign_28 ......................   Passed    6.09 sec
+        Start 299: f04.valhalla_deficit
+ 34/365 Test #300: f04.valhalla_rest .....................   Passed    4.44 sec
+        Start 359: f04.guardias_2_roundtrip
+ 35/365 Test #299: f04.valhalla_deficit ..................   Passed    6.33 sec
+        Start 331: f04.guardias_1_roundtrip
+ 36/365 Test #359: f04.guardias_2_roundtrip ..............   Passed    5.90 sec
+        Start 358: f04.guardias_2_migration
+ 37/365 Test #331: f04.guardias_1_roundtrip ..............   Passed    4.92 sec
+        Start 330: f04.guardias_1_migration
+ 38/365 Test #358: f04.guardias_2_migration ..............   Passed    5.91 sec
+        Start 255: f04.sovereign_benchmark
+ 39/365 Test #330: f04.guardias_1_migration ..............   Passed    5.01 sec
+        Start 105: f04.history_faults
+ 40/365 Test #255: f04.sovereign_benchmark ...............   Passed    3.61 sec
+        Start 133: f04.persistence_measure_3_28
+ 41/365 Test #105: f04.history_faults ....................   Passed    3.47 sec
+        Start 247: f04.sovereign_roundtrip
+ 42/365 Test #133: f04.persistence_measure_3_28 ..........   Passed    2.60 sec
+        Start 292: f04.valhalla_7
+ 43/365 Test #247: f04.sovereign_roundtrip ...............   Passed    2.72 sec
+        Start 260: f04.odyssey_7
+ 44/365 Test #292: f04.valhalla_7 ........................   Passed    4.02 sec
+        Start 246: f04.sovereign_migration
+ 45/365 Test #260: f04.odyssey_7 .........................   Passed    2.77 sec
+        Start 271: f04.odyssey_rest
+ 46/365 Test #271: f04.odyssey_rest ......................   Passed    2.10 sec
+        Start 138: f04.persistence_measure_5_7
+ 47/365 Test #246: f04.sovereign_migration ...............   Passed    2.61 sec
+        Start 272: f04.odyssey_fatigue
+ 48/365 Test #138: f04.persistence_measure_5_7 ...........   Passed    2.42 sec
+        Start 309: f04.history_reference_contract
+ 49/365 Test #272: f04.odyssey_fatigue ...................   Passed    2.10 sec
+        Start 291: f04.valhalla_reference
+ 50/365 Test #291: f04.valhalla_reference ................   Passed    1.60 sec
+        Start 307: f04.valhalla_process_load
+ 51/365 Test #309: f04.history_reference_contract ........   Passed    2.89 sec
+        Start 264: f04.odyssey_authority
+ 52/365 Test #307: f04.valhalla_process_load .............   Passed    2.69 sec
+        Start 239: f04.sovereign_deficit
+ 53/365 Test #264: f04.odyssey_authority .................   Passed    2.12 sec
+        Start 297: f04.valhalla_authority
+ 54/365 Test #239: f04.sovereign_deficit .................   Passed    1.53 sec
+        Start 135: f04.persistence_measure_4_7
+ 55/365 Test #297: f04.valhalla_authority ................   Passed    2.05 sec
+        Start 288: f04.odyssey_process_load
+ 56/365 Test #135: f04.persistence_measure_4_7 ...........   Passed    1.75 sec
+        Start 265: f04.odyssey_absence
+ 57/365 Test #265: f04.odyssey_absence ...................   Passed    1.39 sec
+        Start 137: f04.persistence_measure_5_1
+ 58/365 Test #288: f04.odyssey_process_load ..............   Passed    2.05 sec
+        Start 303: f04.valhalla_corrupt
+ 59/365 Test #137: f04.persistence_measure_5_1 ...........   Passed    1.52 sec
+        Start 298: f04.valhalla_absence
+ 60/365 Test #303: f04.valhalla_corrupt ..................   Passed    1.59 sec
+        Start 267: f04.odyssey_cover
+ 61/365 Test #267: f04.odyssey_cover .....................   Passed    1.51 sec
+        Start 282: f04.odyssey_debt
+ 62/365 Test #298: f04.valhalla_absence ..................   Passed    1.73 sec
+        Start 280: f04.odyssey_transfer
+ 63/365 Test #280: f04.odyssey_transfer ..................   Passed    1.45 sec
+        Start 266: f04.odyssey_leave
+ 64/365 Test #282: f04.odyssey_debt ......................   Passed    1.72 sec
+        Start 342: f04.guardias_2_unseeded
+ 65/365 Test #266: f04.odyssey_leave .....................   Passed    1.31 sec
+        Start 341: f04.guardias_2_28
+ 66/365 Test #342: f04.guardias_2_unseeded ...............   Passed    1.45 sec
+        Start 232: f04.sovereign_14
+ 67/365 Test #341: f04.guardias_2_28 .....................   Passed    1.41 sec
+        Start 263: f04.odyssey_temporal
+ 68/365 Test #263: f04.odyssey_temporal ..................   Passed    1.01 sec
+        Start 259: f04.odyssey_reference
+ 69/365 Test #232: f04.sovereign_14 ......................   Passed    2.05 sec
+        Start 296: f04.valhalla_civilians
+ 70/365 Test #259: f04.odyssey_reference .................   Passed    1.07 sec
+        Start 130: f04.persistence_measure_2_28
+ 71/365 Test #296: f04.valhalla_civilians ................   Passed    1.16 sec
+        Start 295: f04.valhalla_specialists
+ 72/365 Test #130: f04.persistence_measure_2_28 ..........   Passed    0.60 sec
+        Start 313: f04.guardias_1_28
+ 73/365 Test #295: f04.valhalla_specialists ..............   Passed    0.99 sec
+        Start 269: f04.odyssey_engineering
+ 74/365 Test #313: f04.guardias_1_28 .....................   Passed    1.20 sec
+        Start 314: f04.guardias_1_unseeded
+ 75/365 Test #269: f04.odyssey_engineering ...............   Passed    0.70 sec
+        Start 274: f04.odyssey_lifecycle
+ 76/365 Test #274: f04.odyssey_lifecycle .................   Passed    0.62 sec
+        Start 279: f04.odyssey_buffers
+ 77/365 Test #279: f04.odyssey_buffers ...................   Passed    0.50 sec
+        Start 242: f04.sovereign_fatigue
+ 78/365 Test #314: f04.guardias_1_unseeded ...............   Passed    1.20 sec
+        Start 134: f04.persistence_measure_4_1
+ 79/365 Test #242: f04.sovereign_fatigue .................   Passed    0.77 sec
+        Start 278: f04.odyssey_corrupt
+ 80/365 Test #134: f04.persistence_measure_4_1 ...........   Passed    0.74 sec
+        Start 252: f04.sovereign_debt
+ 81/365 Test #278: f04.odyssey_corrupt ...................   Passed    0.70 sec
+        Start 305: f04.valhalla_buffers
+ 82/365 Test #252: f04.sovereign_debt ....................   Passed    0.70 sec
+        Start 257: f04.sovereign_process_load
+ 83/365 Test #305: f04.valhalla_buffers ..................   Passed    0.71 sec
+        Start 127: f04.persistence_measure_1_28
+ 84/365 Test #257: f04.sovereign_process_load ............   Passed    0.89 sec
+        Start 241: f04.sovereign_rest
+ 85/365 Test #127: f04.persistence_measure_1_28 ..........   Passed    0.52 sec
+        Start 132: f04.persistence_measure_3_7
+ 86/365 Test #241: f04.sovereign_rest ....................   Passed    0.71 sec
+        Start 290: f04.valhalla_structure
+ 87/365 Test #132: f04.persistence_measure_3_7 ...........   Passed    0.69 sec
+        Start 301: f04.valhalla_partial
+ 88/365 Test #290: f04.valhalla_structure ................   Passed    0.85 sec
+        Start 281: f04.odyssey_cancel
+ 89/365 Test #301: f04.valhalla_partial ..................   Passed    0.82 sec
+        Start 284: f04.odyssey_invalid
+ 90/365 Test #281: f04.odyssey_cancel ....................   Passed    0.63 sec
+        Start 275: f04.odyssey_mid_absence
+ 91/365 Test #275: f04.odyssey_mid_absence ...............   Passed    0.47 sec
+        Start 231: f04.sovereign_7
+ 92/365 Test #284: f04.odyssey_invalid ...................   Passed    0.86 sec
+        Start 131: f04.persistence_measure_3_1
+ 93/365 Test #131: f04.persistence_measure_3_1 ...........   Passed    0.30 sec
+        Start 273: f04.odyssey_medical
+ 94/365 Test #273: f04.odyssey_medical ...................   Passed    0.41 sec
+        Start 238: f04.sovereign_cover
+ 95/365 Test #231: f04.sovereign_7 .......................   Passed    0.85 sec
+        Start 250: f04.sovereign_transfer
+ 96/365 Test #238: f04.sovereign_cover ...................   Passed    0.33 sec
+        Start 258: f04.odyssey_structure
+ 97/365 Test #250: f04.sovereign_transfer ................   Passed    0.41 sec
+        Start 248: f04.sovereign_corrupt
+ 98/365 Test #258: f04.odyssey_structure .................   Passed    0.39 sec
+        Start 236: f04.sovereign_absence
+ 99/365 Test #248: f04.sovereign_corrupt .................   Passed    0.28 sec
+        Start 361: f04.guardias_2_continuation
+100/365 Test #236: f04.sovereign_absence .................   Passed    0.32 sec
+        Start 235: f04.sovereign_authority
+101/365 Test #361: f04.guardias_2_continuation ...........   Passed    0.53 sec
+        Start 283: f04.odyssey_expiry
+102/365 Test #235: f04.sovereign_authority ...............   Passed    0.48 sec
+        Start 333: f04.guardias_1_continuation
+103/365 Test #283: f04.odyssey_expiry ....................   Passed    0.48 sec
+        Start 340: f04.guardias_2_14
+104/365 Test #333: f04.guardias_1_continuation ...........   Passed    0.48 sec
+        Start 270: f04.odyssey_partial
+105/365 Test #340: f04.guardias_2_14 .....................   Passed    0.47 sec
+        Start 234: f04.sovereign_temporal
+106/365 Test #270: f04.odyssey_partial ...................   Passed    0.33 sec
+        Start 237: f04.sovereign_leave
+107/365 Test #237: f04.sovereign_leave ...................   Passed    0.33 sec
+        Start 254: f04.sovereign_invalid
+108/365 Test #234: f04.sovereign_temporal ................   Passed    0.40 sec
+        Start 312: f04.guardias_1_14
+109/365 Test #254: f04.sovereign_invalid .................   Passed    0.30 sec
+        Start 120: f04.intrepid_beta_gamma
+110/365 Test #312: f04.guardias_1_14 .....................   Passed    0.41 sec
+        Start 244: f04.sovereign_lifecycle
+111/365 Test #120: f04.intrepid_beta_gamma ...............   Passed    0.19 sec
+        Start 289: f04.odyssey_contracts
+112/365 Test #244: f04.sovereign_lifecycle ...............   Passed    0.22 sec
+        Start 230: f04.sovereign_reference
+113/365 Test #289: f04.odyssey_contracts .................   Passed    0.21 sec
+        Start 360: f04.guardias_2_legacy_alpha
+114/365 Test #230: f04.sovereign_reference ...............   Passed    0.29 sec
+        Start 249: f04.sovereign_buffers
+115/365 Test #360: f04.guardias_2_legacy_alpha ...........   Passed    0.28 sec
+        Start 253: f04.sovereign_expiry
+116/365 Test #253: f04.sovereign_expiry ..................   Passed    0.19 sec
+        Start 176: f04.population_budget
+117/365 Test #249: f04.sovereign_buffers .................   Passed    0.20 sec
+        Start 121: f04.intrepid_patterns
+118/365 Test #176: f04.population_budget .................   Passed    0.19 sec
+        Start 129: f04.persistence_measure_2_7
+119/365 Test #121: f04.intrepid_patterns .................   Passed    0.19 sec
+        Start 160: f04.organization_corrupt
+120/365 Test #129: f04.persistence_measure_2_7 ...........   Passed    0.19 sec
+        Start 123: f04.intrepid_corrupt
+121/365 Test #160: f04.organization_corrupt ..............   Passed    0.19 sec
+        Start 251: f04.sovereign_cancel
+122/365 Test #123: f04.intrepid_corrupt ..................   Passed    0.12 sec
+        Start 243: f04.sovereign_medical
+123/365 Test #251: f04.sovereign_cancel ..................   Passed    0.20 sec
+        Start 308: f04.valhalla_contracts
+124/365 Test #243: f04.sovereign_medical .................   Passed    0.17 sec
+        Start 245: f04.sovereign_mid_absence
+125/365 Test #308: f04.valhalla_contracts ................   Passed    0.20 sec
+        Start 332: f04.guardias_1_legacy_alpha
+126/365 Test #245: f04.sovereign_mid_absence .............   Passed    0.13 sec
+        Start  58: f05.p03_population_relief
+127/365 Test  #58: f05.p03_population_relief .............   Passed    0.10 sec
+        Start 126: f04.persistence_measure_1_7
+128/365 Test #332: f04.guardias_1_legacy_alpha ...........   Passed    0.22 sec
+        Start 365: f04.guardias_2_process_load
+129/365 Test #126: f04.persistence_measure_1_7 ...........   Passed    0.13 sec
+        Start 337: f04.guardias_1_process_load
+130/365 Test #365: f04.guardias_2_process_load ...........   Passed    0.21 sec
+        Start 311: f04.guardias_1_7
+131/365 Test #337: f04.guardias_1_process_load ...........   Passed    0.18 sec
+        Start 174: f04.population_process_valhalla
+132/365 Test #174: f04.population_process_valhalla .......   Passed    0.16 sec
+        Start 118: f04.intrepid_lifecycle
+133/365 Test #311: f04.guardias_1_7 ......................   Passed    0.17 sec
+        Start 339: f04.guardias_2_7
+134/365 Test #118: f04.intrepid_lifecycle ................   Passed    0.05 sec
+        Start 141: f04.intrepid_process_load
+135/365 Test #141: f04.intrepid_process_load .............   Passed    0.10 sec
+        Start 153: f04.organization_beta_gamma
+136/365 Test #339: f04.guardias_2_7 ......................   Passed    0.15 sec
+        Start 116: f04.intrepid_deficit_relief
+137/365 Test #116: f04.intrepid_deficit_relief ...........   Passed    0.09 sec
+        Start  38: f05.p02_roster_relief
+138/365 Test #153: f04.organization_beta_gamma ...........   Passed    0.15 sec
+        Start 240: f04.sovereign_partial
+139/365 Test  #38: f05.p02_roster_relief .................   Passed    0.09 sec
+        Start 122: f04.intrepid_roundtrip
+140/365 Test #240: f04.sovereign_partial .................   Passed    0.10 sec
+        Start 347: f04.guardias_2_revoked_cancel
+141/365 Test #122: f04.intrepid_roundtrip ................   Passed    0.11 sec
+        Start 172: f04.population_process_odyssey
+142/365 Test #347: f04.guardias_2_revoked_cancel .........   Passed    0.11 sec
+        Start 117: f04.intrepid_transfer
+143/365 Test #172: f04.population_process_odyssey ........   Passed    0.10 sec
+        Start 229: f04.sovereign_structure
+144/365 Test #117: f04.intrepid_transfer .................   Passed    0.05 sec
+        Start 355: f04.guardias_2_debt
+145/365 Test #229: f04.sovereign_structure ...............   Passed    0.10 sec
+        Start 113: f04.intrepid_authority
+146/365 Test #355: f04.guardias_2_debt ...................   Passed    0.15 sec
+        Start 128: f04.persistence_measure_2_1
+147/365 Test #113: f04.intrepid_authority ................   Passed    0.07 sec
+        Start 319: f04.guardias_1_revoked_cancel
+148/365 Test #128: f04.persistence_measure_2_1 ...........   Passed    0.04 sec
+        Start 344: f04.guardias_2_absence
+149/365 Test #319: f04.guardias_1_revoked_cancel .........   Passed    0.10 sec
+        Start 148: f04.organization_authority
+150/365 Test #344: f04.guardias_2_absence ................   Passed    0.10 sec
+        Start 349: f04.guardias_2_deficit
+151/365 Test #148: f04.organization_authority ............   Passed    0.07 sec
+        Start 346: f04.guardias_2_mid_cancel
+152/365 Test #346: f04.guardias_2_mid_cancel .............   Passed    0.11 sec
+        Start 354: f04.guardias_2_leave
+153/365 Test #349: f04.guardias_2_deficit ................   Passed    0.16 sec
+        Start 149: f04.organization_authority_boundary
+154/365 Test #149: f04.organization_authority_boundary ...   Passed    0.04 sec
+        Start 321: f04.guardias_1_deficit
+155/365 Test #354: f04.guardias_2_leave ..................   Passed    0.12 sec
+        Start  57: f05.p03_population
+156/365 Test #321: f04.guardias_1_deficit ................   Passed    0.14 sec
+        Start 164: f04.organization_process_load
+157/365 Test  #57: f05.p03_population ....................   Passed    0.08 sec
+        Start 318: f04.guardias_1_mid_cancel
+158/365 Test #164: f04.organization_process_load .........   Passed    0.05 sec
+        Start 325: f04.guardias_1_rest
+159/365 Test #318: f04.guardias_1_mid_cancel .............   Passed    0.10 sec
+        Start 352: f04.guardias_2_medical
+160/365 Test #325: f04.guardias_1_rest ...................   Passed    0.10 sec
+        Start 353: f04.guardias_2_rest
+161/365 Test #352: f04.guardias_2_medical ................   Passed    0.10 sec
+        Start 345: f04.guardias_2_cancel
+162/365 Test #353: f04.guardias_2_rest ...................   Passed    0.15 sec
+        Start 159: f04.organization_determinism
+163/365 Test #345: f04.guardias_2_cancel .................   Passed    0.10 sec
+        Start 320: f04.guardias_1_cover
+164/365 Test #159: f04.organization_determinism ..........   Passed    0.09 sec
+        Start 348: f04.guardias_2_cover
+165/365 Test #320: f04.guardias_1_cover ..................   Passed    0.10 sec
+        Start 158: f04.organization_roundtrip
+166/365 Test #348: f04.guardias_2_cover ..................   Passed    0.10 sec
+        Start 327: f04.guardias_1_debt
+167/365 Test #158: f04.organization_roundtrip ............   Passed    0.10 sec
+        Start 351: f04.guardias_2_command_shortage
+168/365 Test #351: f04.guardias_2_command_shortage .......   Passed    0.10 sec
+        Start 316: f04.guardias_1_absence
+169/365 Test #327: f04.guardias_1_debt ...................   Passed    0.10 sec
+        Start 326: f04.guardias_1_leave
+170/365 Test #316: f04.guardias_1_absence ................   Passed    0.06 sec
+        Start 156: f04.organization_lifecycle
+171/365 Test #326: f04.guardias_1_leave ..................   Passed    0.10 sec
+        Start 317: f04.guardias_1_cancel
+172/365 Test #156: f04.organization_lifecycle ............   Passed    0.08 sec
+        Start 125: f04.persistence_measure_1_1
+173/365 Test #317: f04.guardias_1_cancel .................   Passed    0.09 sec
+        Start 115: f04.intrepid_functions
+174/365 Test #125: f04.persistence_measure_1_1 ...........   Passed    0.07 sec
+        Start 154: f04.organization_transfer
+175/365 Test #115: f04.intrepid_functions ................   Passed    0.04 sec
+        Start 155: f04.organization_relief
+176/365 Test #154: f04.organization_transfer .............   Passed    0.05 sec
+        Start 112: f04.intrepid_alpha
+177/365 Test #155: f04.organization_relief ...............   Passed    0.08 sec
+        Start  36: f05.p02_population
+178/365 Test #112: f04.intrepid_alpha ....................   Passed    0.06 sec
+        Start 114: f04.intrepid_watch_fallback
+179/365 Test  #36: f05.p02_population ....................   Passed    0.04 sec
+        Start 324: f04.guardias_1_medical
+180/365 Test #114: f04.intrepid_watch_fallback ...........   Passed    0.04 sec
+        Start 150: f04.organization_alpha
+181/365 Test #150: f04.organization_alpha ................   Passed    0.05 sec
+        Start  16: f05.population
+182/365 Test  #16: f05.population ........................   Passed    0.03 sec
+        Start  96: f05.p04_history
+183/365 Test #324: f04.guardias_1_medical ................   Passed    0.09 sec
+        Start 315: f04.guardias_1_authority
+184/365 Test  #96: f05.p04_history .......................   Passed    0.03 sec
+        Start  56: f05.p03_history_fault
+185/365 Test #315: f04.guardias_1_authority ..............   Passed    0.08 sec
+        Start 310: f04.guardias_1_reference
+186/365 Test  #56: f05.p03_history_fault .................   Passed    0.06 sec
+        Start 109: f04.intrepid_partial
+187/365 Test #109: f04.intrepid_partial ..................   Passed    0.02 sec
+        Start 151: f04.organization_alpha_deficit
+188/365 Test #310: f04.guardias_1_reference ..............   Passed    0.03 sec
+        Start 343: f04.guardias_2_authority
+189/365 Test #151: f04.organization_alpha_deficit ........   Passed    0.06 sec
+        Start 119: f04.intrepid_rest
+190/365 Test #343: f04.guardias_2_authority ..............   Passed    0.07 sec
+        Start  17: f05.history
+191/365 Test #119: f04.intrepid_rest .....................   Passed    0.02 sec
+        Start 170: f04.population_process_sovereign
+192/365 Test  #17: f05.history ...........................   Passed    0.02 sec
+        Start  35: f05.p02_history
+193/365 Test #170: f04.population_process_sovereign ......   Passed    0.04 sec
+        Start 357: f04.guardias_2_expiry
+194/365 Test  #35: f05.p02_history .......................   Passed    0.05 sec
+        Start  55: f05.p03_history
+195/365 Test  #55: f05.p03_history .......................   Passed    0.03 sec
+        Start  74: f05.p04_malformed
+196/365 Test #357: f04.guardias_2_expiry .................   Passed    0.07 sec
+        Start 363: f04.guardias_2_invalid
+197/365 Test  #74: f05.p04_malformed .....................   Passed    0.02 sec
+        Start 323: f04.guardias_1_command_shortage
+198/365 Test #363: f04.guardias_2_invalid ................   Passed    0.07 sec
+        Start 329: f04.guardias_1_expiry
+199/365 Test #323: f04.guardias_1_command_shortage .......   Passed    0.06 sec
+        Start 175: f04.population_dynamic
+200/365 Test #329: f04.guardias_1_expiry .................   Passed    0.03 sec
+        Start 110: f04.intrepid_assignment
+201/365 Test #175: f04.population_dynamic ................   Passed    0.03 sec
+        Start 362: f04.guardias_2_corrupt
+202/365 Test #110: f04.intrepid_assignment ...............   Passed    0.02 sec
+        Start 146: f04.organization_assignment
+203/365 Test #146: f04.organization_assignment ...........   Passed    0.06 sec
+        Start 108: f04.intrepid_vacant
+204/365 Test #362: f04.guardias_2_corrupt ................   Passed    0.08 sec
+        Start  73: f05.p04_binding
+205/365 Test #108: f04.intrepid_vacant ...................   Passed    0.02 sec
+        Start  18: f05.history_fault
+206/365 Test  #73: f05.p04_binding .......................   Passed    0.01 sec
+        Start 111: f04.intrepid_qualifications
+207/365 Test  #18: f05.history_fault .....................   Passed    0.02 sec
+        Start 152: f04.organization_functions
+208/365 Test #111: f04.intrepid_qualifications ...........   Passed    0.06 sec
+        Start  41: f05.p03_scenario
+209/365 Test  #41: f05.p03_scenario ......................   Passed    0.01 sec
+        Start 338: f04.guardias_2_reference
+210/365 Test #152: f04.organization_functions ............   Passed    0.05 sec
+        Start 334: f04.guardias_1_corrupt
+211/365 Test #334: f04.guardias_1_corrupt ................   Passed    0.03 sec
+        Start 106: f04.intrepid_structure
+212/365 Test #338: f04.guardias_2_reference ..............   Passed    0.04 sec
+        Start   9: f05.revalidate
+213/365 Test   #9: f05.revalidate ........................   Passed    0.01 sec
+        Start  85: f05.p04_accept_stale
+214/365 Test #106: f04.intrepid_structure ................   Passed    0.01 sec
+        Start 335: f04.guardias_1_invalid
+215/365 Test  #85: f05.p04_accept_stale ..................   Passed    0.04 sec
+        Start 145: f04.organization_bootstrap
+216/365 Test #335: f04.guardias_1_invalid ................   Passed    0.06 sec
+        Start 142: f04.organization_structure
+217/365 Test #145: f04.organization_bootstrap ............   Passed    0.02 sec
+        Start 143: f04.organization_vacant
+218/365 Test #142: f04.organization_structure ............   Passed    0.01 sec
+        Start 328: f04.guardias_1_partial
+219/365 Test #143: f04.organization_vacant ...............   Passed    0.02 sec
+        Start  52: f05.p03_determinism
+220/365 Test #328: f04.guardias_1_partial ................   Passed    0.02 sec
+        Start 157: f04.organization_rest
+221/365 Test  #52: f05.p03_determinism ...................   Passed    0.01 sec
+        Start   1: f05.scenario
+222/365 Test   #1: f05.scenario ..........................   Passed    0.01 sec
+        Start 147: f04.organization_qualifications
+223/365 Test #157: f04.organization_rest .................   Passed    0.02 sec
+        Start  78: f05.p04_delegation
+224/365 Test  #78: f05.p04_delegation ....................   Passed    0.04 sec
+        Start  33: f05.p02_idempotency
+225/365 Test #147: f04.organization_qualifications .......   Passed    0.05 sec
+        Start  49: f05.p03_player_captain
+226/365 Test  #33: f05.p02_idempotency ...................   Passed    0.01 sec
+        Start  81: f05.p04_player
+227/365 Test  #49: f05.p03_player_captain ................   Passed    0.01 sec
+        Start  75: f05.p04_parameters
+228/365 Test  #81: f05.p04_player ........................   Passed    0.01 sec
+        Start  86: f05.p04_offline
+229/365 Test  #75: f05.p04_parameters ....................   Passed    0.01 sec
+        Start 107: f04.intrepid_profile
+230/365 Test  #86: f05.p04_offline .......................   Passed    0.01 sec
+        Start 209: f04.determinism
+231/365 Test #209: f04.determinism .......................   Passed    0.01 sec
+        Start  29: f05.p02_medical
+232/365 Test #107: f04.intrepid_profile ..................   Passed    0.01 sec
+        Start 356: f04.guardias_2_partial
+233/365 Test  #29: f05.p02_medical .......................   Passed    0.01 sec
+        Start  20: f05.process_load
+234/365 Test  #20: f05.process_load ......................   Passed    0.01 sec
+        Start  54: f05.p03_corrupt
+235/365 Test #356: f04.guardias_2_partial ................   Passed    0.02 sec
+        Start  88: f05.p04_quota
+236/365 Test  #88: f05.p04_quota .........................   Passed    0.01 sec
+        Start  31: f05.p02_modes
+237/365 Test  #54: f05.p03_corrupt .......................   Passed    0.01 sec
+        Start  67: f05.p04_valid
+238/365 Test  #67: f05.p04_valid .........................   Passed    0.04 sec
+        Start  92: f05.p04_deterministic
+239/365 Test  #31: f05.p02_modes .........................   Passed    0.05 sec
+        Start  24: f05.p02_revoke
+240/365 Test  #92: f05.p04_deterministic .................   Passed    0.01 sec
+        Start  15: f05.buffers
+241/365 Test  #15: f05.buffers ...........................   Passed    0.01 sec
+        Start  70: f05.p04_advice
+242/365 Test  #24: f05.p02_revoke ........................   Passed    0.01 sec
+        Start  14: f05.corrupt
+243/365 Test  #14: f05.corrupt ...........................   Passed    0.01 sec
+        Start  44: f05.p03_revoked
+244/365 Test  #70: f05.p04_advice ........................   Passed    0.01 sec
+        Start  21: f05.p02_valid
+245/365 Test  #44: f05.p03_revoked .......................   Passed    0.01 sec
+        Start   5: f05.scope
+246/365 Test  #21: f05.p02_valid .........................   Passed    0.01 sec
+        Start  50: f05.p03_knowledge
+247/365 Test   #5: f05.scope .............................   Passed    0.00 sec
+        Start  97: f05.p04_corrupt
+248/365 Test  #50: f05.p03_knowledge .....................   Passed    0.01 sec
+        Start  79: f05.p04_revoked
+249/365 Test  #97: f05.p04_corrupt .......................   Passed    0.01 sec
+        Start 166: f04.population_process_miranda
+250/365 Test  #79: f05.p04_revoked .......................   Passed    0.01 sec
+        Start  99: f05.p04_provider_valid
+251/365 Test  #99: f05.p04_provider_valid ................   Passed    0.01 sec
+        Start  87: f05.p04_timeout
+252/365 Test #166: f04.population_process_miranda ........   Passed    0.01 sec
+        Start  64: f05.p03_atomic
+253/365 Test  #64: f05.p03_atomic ........................   Passed    0.01 sec
+        Start  93: f05.p04_pending
+254/365 Test  #87: f05.p04_timeout .......................   Passed    0.01 sec
+        Start  89: f05.p04_http
+255/365 Test  #89: f05.p04_http ..........................   Passed    0.01 sec
+        Start  62: f05.p03_communication
+256/365 Test  #93: f05.p04_pending .......................   Passed    0.04 sec
+        Start 168: f04.population_process_intrepid
+257/365 Test  #62: f05.p03_communication .................   Passed    0.04 sec
+        Start  22: f05.p02_scope
+258/365 Test  #22: f05.p02_scope .........................   Passed    0.01 sec
+        Start 162: f04.organization_buffers
+259/365 Test #168: f04.population_process_intrepid .......   Passed    0.01 sec
+        Start  63: f05.p03_scope
+260/365 Test  #63: f05.p03_scope .........................   Passed    0.01 sec
+        Start   6: f05.stale
+261/365 Test   #6: f05.stale .............................   Passed    0.00 sec
+        Start  83: f05.p04_late
+262/365 Test #162: f04.organization_buffers ..............   Passed    0.02 sec
+        Start  98: f05.p04_scope
+263/365 Test  #83: f05.p04_late ..........................   Passed    0.01 sec
+        Start  72: f05.p04_hidden
+264/365 Test  #98: f05.p04_scope .........................   Passed    0.00 sec
+        Start 217: f04.integrated
+265/365 Test  #72: f05.p04_hidden ........................   Passed    0.01 sec
+        Start  48: f05.p03_player
+266/365 Test #217: f04.integrated ........................   Passed    0.01 sec
+        Start  32: f05.p02_mode_change
+267/365 Test  #48: f05.p03_player ........................   Passed    0.01 sec
+        Start  30: f05.p02_subdelegate
+268/365 Test  #32: f05.p02_mode_change ...................   Passed    0.01 sec
+269/365 Test  #30: f05.p02_subdelegate ...................   Passed    0.00 sec
+        Start  76: f05.p04_injection
+        Start  77: f05.p04_authority
+270/365 Test  #77: f05.p04_authority .....................   Passed    0.01 sec
+        Start  68: f05.p04_ambiguous
+271/365 Test  #76: f05.p04_injection .....................   Passed    0.01 sec
+        Start  80: f05.p04_approval
+272/365 Test  #68: f05.p04_ambiguous .....................   Passed    0.01 sec
+        Start   3: f05.recipient
+273/365 Test  #80: f05.p04_approval ......................   Passed    0.05 sec
+        Start 190: f04.policy
+274/365 Test   #3: f05.recipient .........................   Passed    0.05 sec
+        Start  40: f05.p02_process_load
+275/365 Test #190: f04.policy ............................   Passed    0.01 sec
+        Start  94: f05.p04_duplicate
+276/365 Test  #40: f05.p02_process_load ..................   Passed    0.02 sec
+        Start 193: f04.appointment
+277/365 Test #193: f04.appointment .......................   Passed    0.00 sec
+        Start  69: f05.p04_insufficient
+278/365 Test  #94: f05.p04_duplicate .....................   Passed    0.01 sec
+        Start 225: f04.pending_credential
+279/365 Test #225: f04.pending_credential ................   Passed    0.01 sec
+        Start 226: f04.authorized_posts
+280/365 Test  #69: f05.p04_insufficient ..................   Passed    0.01 sec
+        Start 199: f04.origin
+281/365 Test #226: f04.authorized_posts ..................   Passed    0.00 sec
+        Start  71: f05.p04_privacy
+282/365 Test #199: f04.origin ............................   Passed    0.00 sec
+        Start 104: f05.p04_process_load
+283/365 Test #104: f05.p04_process_load ..................   Passed    0.01 sec
+        Start 194: f04.succession
+284/365 Test  #71: f05.p04_privacy .......................   Passed    0.01 sec
+        Start 180: f04.manifest
+285/365 Test #194: f04.succession ........................   Passed    0.01 sec
+        Start 201: f04.safety
+286/365 Test #180: f04.manifest ..........................   Passed    0.04 sec
+        Start 144: f04.organization_profile
+287/365 Test #201: f04.safety ............................   Passed    0.04 sec
+        Start 205: f04.stale
+288/365 Test #205: f04.stale .............................   Passed    0.00 sec
+        Start 182: f04.assignment
+289/365 Test #144: f04.organization_profile ..............   Passed    0.01 sec
+        Start  66: f05.p03_process_load
+290/365 Test #182: f04.assignment ........................   Passed    0.01 sec
+        Start  53: f05.p03_idempotency
+291/365 Test  #66: f05.p03_process_load ..................   Passed    0.01 sec
+        Start 204: f04.ai
+292/365 Test #204: f04.ai ................................   Passed    0.00 sec
+        Start   8: f05.duplicate
+293/365 Test  #53: f05.p03_idempotency ...................   Passed    0.01 sec
+        Start 161: f04.organization_legacy
+294/365 Test   #8: f05.duplicate .........................   Passed    0.01 sec
+        Start  42: f05.p03_authority
+295/365 Test #161: f04.organization_legacy ...............   Passed    0.01 sec
+        Start  90: f05.p04_network
+296/365 Test  #42: f05.p03_authority .....................   Passed    0.01 sec
+        Start  84: f05.p04_out_of_order
+297/365 Test  #90: f05.p04_network .......................   Passed    0.01 sec
+        Start  43: f05.p03_delegation
+298/365 Test  #84: f05.p04_out_of_order ..................   Passed    0.01 sec
+        Start  34: f05.p02_causal
+299/365 Test  #43: f05.p03_delegation ....................   Passed    0.01 sec
+        Start  91: f05.p04_empty
+300/365 Test  #34: f05.p02_causal ........................   Passed    0.01 sec
+        Start  95: f05.p04_recovery
+301/365 Test  #91: f05.p04_empty .........................   Passed    0.01 sec
+        Start  51: f05.p03_bounded
+302/365 Test  #95: f05.p04_recovery ......................   Passed    0.01 sec
+        Start  13: f05.determinism
+303/365 Test  #51: f05.p03_bounded .......................   Passed    0.04 sec
+        Start  82: f05.p04_stale
+304/365 Test  #13: f05.determinism .......................   Passed    0.05 sec
+        Start  47: f05.p03_watch_end
+305/365 Test  #82: f05.p04_stale .........................   Passed    0.01 sec
+        Start  37: f05.p02_restore_and_access
+306/365 Test  #47: f05.p03_watch_end .....................   Passed    0.01 sec
+        Start   7: f05.reception
+307/365 Test  #37: f05.p02_restore_and_access ............   Passed    0.01 sec
+        Start  25: f05.p02_suspend
+308/365 Test   #7: f05.reception .........................   Passed    0.01 sec
+        Start  45: f05.p03_relief
+309/365 Test  #25: f05.p02_suspend .......................   Passed    0.01 sec
+        Start 219: f04.rotation
+310/365 Test  #45: f05.p03_relief ........................   Passed    0.01 sec
+        Start  11: f05.cancel
+311/365 Test #219: f04.rotation ..........................   Passed    0.01 sec
+        Start   2: f05.authority
+312/365 Test   #2: f05.authority .........................   Passed    0.01 sec
+        Start 215: f04.bounded
+313/365 Test  #11: f05.cancel ............................   Passed    0.01 sec
+        Start  10: f05.expired
+314/365 Test #215: f04.bounded ...........................   Passed    0.01 sec
+        Start  12: f05.transition
+315/365 Test  #10: f05.expired ...........................   Passed    0.01 sec
+        Start  59: f05.p03_preissue_relief
+316/365 Test  #12: f05.transition ........................   Passed    0.04 sec
+        Start  61: f05.p03_requirement
+317/365 Test  #59: f05.p03_preissue_relief ...............   Passed    0.04 sec
+        Start  46: f05.p03_medical
+318/365 Test  #61: f05.p03_requirement ...................   Passed    0.00 sec
+        Start  28: f05.p02_origin
+319/365 Test  #46: f05.p03_medical .......................   Passed    0.01 sec
+        Start  26: f05.p02_expiry
+320/365 Test  #28: f05.p02_origin ........................   Passed    0.01 sec
+        Start 211: f04.schema
+321/365 Test  #26: f05.p02_expiry ........................   Passed    0.01 sec
+322/365 Test #211: f04.schema ............................   Passed    0.01 sec
+        Start  60: f05.p03_selection
+        Start 212: f04.thread
+323/365 Test #212: f04.thread ............................   Passed    0.00 sec
+        Start 228: f04.process_load
+324/365 Test  #60: f05.p03_selection .....................   Passed    0.01 sec
+        Start  23: f05.p02_authority
+325/365 Test #228: f04.process_load ......................   Passed    0.00 sec
+        Start  27: f05.p02_relief
+326/365 Test  #23: f05.p02_authority .....................   Passed    0.01 sec
+        Start 224: f04.origin_reappointment
+327/365 Test  #27: f05.p02_relief ........................   Passed    0.01 sec
+        Start 208: f04.roundtrip
+328/365 Test #224: f04.origin_reappointment ..............   Passed    0.01 sec
+        Start 206: f04.queued
+329/365 Test #208: f04.roundtrip .........................   Passed    0.01 sec
+        Start 187: f04.absence
+330/365 Test #206: f04.queued ............................   Passed    0.01 sec
+        Start 185: f04.rest
+331/365 Test #187: f04.absence ...........................   Passed    0.00 sec
+        Start 101: f05.p04_provider_exception
+332/365 Test #185: f04.rest ..............................   Passed    0.00 sec
+        Start 184: f04.adjacent
+333/365 Test #101: f05.p04_provider_exception ............   Passed    0.01 sec
+        Start 207: f04.offscreen
+334/365 Test #184: f04.adjacent ..........................   Passed    0.01 sec
+        Start 189: f04.coverage
+335/365 Test #207: f04.offscreen .........................   Passed    0.00 sec
+        Start 191: f04.roles
+336/365 Test #189: f04.coverage ..........................   Passed    0.01 sec
+        Start 197: f04.revoke
+337/365 Test #191: f04.roles .............................   Passed    0.00 sec
+        Start 196: f04.delegation
+338/365 Test #197: f04.revoke ............................   Passed    0.04 sec
+        Start 203: f04.superior
+339/365 Test #196: f04.delegation ........................   Passed    0.04 sec
+        Start 221: f04.succession_boundaries
+340/365 Test #203: f04.superior ..........................   Passed    0.01 sec
+        Start 198: f04.expiry
+341/365 Test #221: f04.succession_boundaries .............   Passed    0.01 sec
+        Start 188: f04.relief
+342/365 Test #198: f04.expiry ............................   Passed    0.01 sec
+        Start 214: f04.buffers
+343/365 Test #188: f04.relief ............................   Passed    0.01 sec
+        Start 220: f04.credential_expiry
+344/365 Test #214: f04.buffers ...........................   Passed    0.00 sec
+        Start 102: f05.p04_routing
+345/365 Test #220: f04.credential_expiry .................   Passed    0.00 sec
+        Start 213: f04.scope
+346/365 Test #102: f05.p04_routing .......................   Passed    0.01 sec
+        Start 218: f04.recall
+347/365 Test #213: f04.scope .............................   Passed    0.00 sec
+        Start 186: f04.oncall
+348/365 Test #218: f04.recall ............................   Passed    0.00 sec
+        Start 181: f04.qualification
+349/365 Test #186: f04.oncall ............................   Passed    0.00 sec
+        Start 223: f04.order_expiry
+350/365 Test #181: f04.qualification .....................   Passed    0.00 sec
+        Start 177: f04.identity
+351/365 Test #223: f04.order_expiry ......................   Passed    0.00 sec
+        Start 100: f05.p04_provider_malformed
+352/365 Test #177: f04.identity ..........................   Passed    0.00 sec
+        Start   4: f05.unsupported
+353/365 Test   #4: f05.unsupported .......................   Passed    0.00 sec
+        Start 200: f04.technical
+354/365 Test #100: f05.p04_provider_malformed ............   Passed    0.01 sec
+        Start 124: f04.persistence_core_boundary
+355/365 Test #200: f04.technical .........................   Passed    0.00 sec
+        Start 192: f04.watch
+356/365 Test #124: f04.persistence_core_boundary .........   Passed    0.00 sec
+        Start 216: f04.backwards
+357/365 Test #192: f04.watch .............................   Passed    0.00 sec
+        Start 210: f04.corrupt
+358/365 Test #216: f04.backwards .........................   Passed    0.00 sec
+        Start 202: f04.contact
+359/365 Test #210: f04.corrupt ...........................   Passed    0.00 sec
+        Start 183: f04.overlap
+360/365 Test #202: f04.contact ...........................   Passed    0.00 sec
+        Start 179: f04.vacancy
+361/365 Test #183: f04.overlap ...........................   Passed    0.00 sec
+        Start 195: f04.medical
+362/365 Test #179: f04.vacancy ...........................   Passed    0.00 sec
+        Start 178: f04.class
+363/365 Test #195: f04.medical ...........................   Passed    0.00 sec
+        Start 222: f04.context_review
+364/365 Test #178: f04.class .............................   Passed    0.00 sec
+365/365 Test #222: f04.context_review ....................   Passed    0.00 sec
+
+100% tests passed out of 365
+
+Total Test time (real) = 186.09 sec
