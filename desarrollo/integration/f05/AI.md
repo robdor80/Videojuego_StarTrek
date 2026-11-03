@@ -153,3 +153,16 @@ La tabla de cobertura y evidencia ejecutada está en
 Las tres automatizaciones Unreal nuevas y las nueve anteriores se mantienen
 pendientes en el [registro MSI](../../../proyecto/docs/roadmap/master/fases/F05/REGISTRO_VALIDACIONES_MSI.md).
 F05 abierta, F06 bloqueada, P05 no iniciada; entrega para auditoría independiente.
+
+El exportador de evidencia acepta rutas de resultados ejecutados, sin fabricar PASS:
+
+```sh
+python desarrollo/integration/f05/collect_ai_evidence.py \
+  --native "$NATIVE_JUNIT" --core "$CORE_JUNIT" --f02 "$F02_JUNIT" --f03 "$F03_JUNIT" \
+  --historical "$HISTORY_JUNIT" --history-runs "$HISTORY_RUNS" \
+  --run-logs "$RUN_LOGS" --temp-root "$TEMP_OUTPUT_ROOT" --output "$NEW_EVIDENCE_DIRECTORY"
+```
+
+`RUN_LOGS` conserva configure-final.log, build-verified.log, native-tests-final.log,
+core-tests.log, f02-tests.log, f03-tests.log, historical-final-tests.log y toolchain.txt.
+El intento inicial de pin, si existe, se exporta aparte sin contarlo como PASS.

@@ -18,6 +18,11 @@ $CoreSource = '<checkout Core fijado>'
 $Output = Join-Path (Get-Location) 'laboratorios/f05/p04/msi-run-01'
 ./desarrollo/integration/f05/run_f05.ps1 -Stage All -Suite All -CoreSource $CoreSource -BuildRoot $Output -EngineRoot '<UE 5.8.2>'
 
+# Inspección de la DLL recién compilada, desde Developer PowerShell de MSVC:
+dumpbin /EXPORTS "$Output/native/f04/Release/TrekF04Bridge.dll"
+dumpbin /DEPENDENTS "$Output/native/f04/Release/TrekF04Bridge.dll"
+Get-FileHash "$Output/native/f04/Release/TrekF04Bridge.dll" -Algorithm SHA256
+
 # Selección individual aditiva, tres tests P04:
 ./desarrollo/integration/f05/run_f05.ps1 -Stage TestUnreal -Suite P04 -CoreSource $CoreSource -BuildRoot $Output -EngineRoot '<UE 5.8.2>'
 # Repetición con el RHI real del MSI:

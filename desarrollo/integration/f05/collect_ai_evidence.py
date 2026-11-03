@@ -110,6 +110,12 @@ def main():
         require(path.is_file(), f'Missing actual log: {name}')
         exports[name] = scrub(path.read_text()).encode()
 
+    initial = args.run_logs / 'historical-tests.log'
+    if initial.is_file():
+        # Optional audit of the initial pin mismatch, never counted as a PASS.
+        exports['historical-initial-pin-check.log'] = scrub(initial.read_text()).encode()
+        summary['initial_historical_attempt'] = 'Pin mismatch rejected before simulation; final results are in historical.xml'
+
     sources = set()
     for pattern in ('desarrollo/integration/f05/include/*.h', 'desarrollo/integration/f05/src/*.inc', 'desarrollo/integration/f05/src/*.cpp',
                     'desarrollo/integration/f05/tests/*.h', 'desarrollo/integration/f05/tests/*.cpp',

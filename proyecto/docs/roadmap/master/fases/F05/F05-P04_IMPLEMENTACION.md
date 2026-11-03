@@ -7,7 +7,7 @@ Repositorio: `robdor80/Videojuego_StarTrek`; rama `codex/f05-p04-ai-integration`
 Base main real comprobada: `f1ab2f33cccdd861077e59069addb8a12ff573d7`.
 Core main real: `76a7b7b485616d8c4994f384a90f123bf333591d`, fijado en P04,
 sin cambios ni PR Core. P01–P03 se reutilizan desde main, no se reconstruyen.
-La PR Draft y sus Actions identifican el SHA final; el manifiesto de evidencia
+La [PR Draft #85](https://github.com/robdor80/Videojuego_StarTrek/pull/85) y sus Actions identifican el SHA final; el manifiesto de evidencia
 identifica el commit de fuentes y las huellas exactas de archivos comprobados.
 
 ## Arquitectura y comportamiento entregados
@@ -76,15 +76,36 @@ una explicación maliciosa no enseña secretos, concede permisos o certifica éx
 
 ## Validación y evidencia
 
-La evidencia de ejecución definitiva se publica en `evidence/F05-P04/`, con JUnit,
+La evidencia de ejecución definitiva se publica en [evidence/F05-P04](evidence/F05-P04/summary.json), con JUnit,
 logs, resumen, huellas de fuentes y SHA256 de entregables. No son fixtures PASS
 sintéticos. `collect_ai_evidence.py` rechaza tests fallidos/omitidos o campañas
 sin aceptación y equivalencia real con los seis oráculos originales.
 
-Estado de verificación al preparar la entrega: Core **483/483**, F02 **15/15**,
-F03 **25/25** y primera regresión F04/F05 **361/361** ya ejecutadas. La ejecución
-final ampliada de **365** y las **seis campañas históricas** están en curso;
-esta sección se actualiza con su resultado real antes del informe final.
+Resultados Cloud verificados, sin fallos ni omisiones en las selecciones ejecutadas:
+
+| Suite | Resultado |
+|---|---|
+| P01 | 20/20 |
+| P02 | 20/20 |
+| P03 | 26/26 |
+| P04 | 38/38 |
+| F04, integración y persistencia de corto plazo | 261/261 |
+| Total nativo F04/F05 | 365/365 |
+| Core completo con JSON y BUILD_TESTING | 483/483 |
+| F02, pin original | 15/15 |
+| F03, pin original; conocimiento y persistencia | 25/25 |
+| Campañas históricas F04, oráculos originales | 6/6 |
+| Referencias documentales F05 | 22 unit tests + 48 casos, sin fallos |
+| Referencia documental entre fases | 3/3, no certifica runtime F06 |
+| Gobierno de roadmap | PASS, no cierra F05 |
+
+Total: **894 pruebas nativas/campañas**, cero fallos y cero omisiones en las selecciones.
+Último cambio de runtime probado: `6eb69320640dfdc0dc9548205813d8aef9ab38c4`.
+La repetición final tras uniformar la denegación de propuestas privadas se conserva
+en el JUnit definitivo. Las selecciones siguen el protocolo P03: se excluyen los
+11 diagnósticos monolíticos antiguos `persistence_baseline_/persistence_resume_`;
+**no se declaran ejecutados**. Las seis campañas obligatorias de aceptación usan
+HistoryPersistence y oráculos congelados, no esa ruta diagnóstica antigua.
 
 Se conservan los pins originales de F02/F03 y F04 histórico
 (`89a0e4fe4c10fb86a03086f09f034fdd0b3d3d98`). El primer intento de ejecutar campañas
