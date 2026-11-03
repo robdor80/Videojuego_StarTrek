@@ -24,7 +24,7 @@ def main():
         shutil.copytree(template/folder, target/folder,
                         ignore=shutil.ignore_patterns('Binaries', 'Intermediate', '__pycache__'))
     project = json.loads(args.source_project.read_text(encoding='utf8'))
-    project['Description'] = 'V07 PARCIAL - mecanismos identificados; inventario de memoria pendiente'
+    project['Description'] = 'USS Enterprise NCC-1701-D - V07 cierre practico; auditoria final pendiente'
     (target/'ValhallaComputer.uproject').write_text(json.dumps(project, indent=2)+'\n', encoding='utf8')
     engine_config = target/'Config/DefaultEngine.ini'
     config = engine_config.read_text(encoding='utf8').split('[/Script/AndroidFileServerEditor.')[0]

@@ -1,5 +1,5 @@
-"""Reopen the PARTIAL V07 map with a real RHI. Results are technical checks,
-not certification that the still-open architectural inventory is complete.
+"""Reopen the V07 practical delivery with a real RHI. Technical checks do not
+replace the independent final review or the user's personal play acceptance.
 VH_EVIDENCE_DIR must be a new authorized temporary directory.
 """
 import collections
@@ -13,7 +13,7 @@ outdir = Path(os.environ['VH_EVIDENCE_DIR']).resolve()
 if outdir.exists() and any(outdir.iterdir()):
     raise RuntimeError('Use a new empty evidence directory')
 outdir.mkdir(parents=True, exist_ok=True)
-out = {'ok': False, 'v07_complete': False, 'inventory_exhaustive': False}
+out = {'ok': False, 'formal_closure_pending': True}
 try:
     map_name = '/Game/ValhallaV07/Maps/L_Supercomputadora_V07'
     world = u.EditorLoadingAndSavingUtils.load_map(map_name)
@@ -23,6 +23,24 @@ try:
     out['material_resources'] = json.loads(u.VH06Tools.material_resource_snapshot())
     out['static_instances'] = sum(c.get_instance_count() for a in actors for c in a.get_components_by_class(u.InstancedStaticMeshComponent))
     out['boundaries'] = [a.get_actor_label() for a in actors if 'V06_VISIBLE_BOUNDARY' in [str(t) for t in a.tags]]
+    out['closure_boundaries'] = [a.get_actor_label() for a in actors if 'V07_CLOSURE_VISIBLE_BOUNDARY' in [str(t) for t in a.tags]]
+    out['closure_geometry'] = []
+    closure_ok = True
+    for row in json.loads(Path(__file__).with_name('v07_closures.json').read_text(encoding='utf8')):
+        matches = [a for a in actors if a.get_actor_label() == 'V07_' + row['id']]
+        valid = len(matches) == 1
+        if valid:
+            actor = matches[0]; pos = actor.get_actor_location(); scale = actor.get_actor_scale3d()
+            valid = (abs(pos.x-row['center_xy'][0]) < .01 and abs(pos.y-row['center_xy'][1]) < .01
+                     and abs(pos.z-row['bottom_cm']-row['height_cm']/2) < .01
+                     and abs(scale.x-row['thickness_cm']/100) < .001
+                     and abs(scale.y-row['width_cm']/100) < .001
+                     and abs(scale.z-row['height_cm']/100) < .001
+                     and abs(actor.get_actor_rotation().yaw-row['yaw_deg']) < .01
+                     and str(actor.static_mesh_component.get_collision_profile_name()) == 'BlockAll'
+                     and actor.static_mesh_component.static_mesh.get_path_name() == '/Engine/BasicShapes/Cube.Cube')
+        out['closure_geometry'].append({'id': row['id'], 'valid': valid})
+        closure_ok &= valid
     out['doors'] = []
     for a in actors:
         if isinstance(a, u.VHAutomaticDoor):
@@ -54,7 +72,10 @@ try:
     out['game_mode']=world.get_world_settings().get_editor_property('default_game_mode').get_path_name()
     ids = {r['id'] for r in out['doors']}
     safe = all(not r['constructed'] and r['locked'] and r['fraction'] == 0 for r in out['doors'] if r['id'].startswith('V07_'))
-    out['ok'] = ids == {'VALHALLA_SC_EXTERIOR_D01','V07_D02','V07_D03','V07_D04'} and safe and out['static_instances'] == 16299 and len(out['boundaries']) == 14 and not missing and out['validation_map_exists'] and not out['unexpected_test_dependencies'] and '/Game/ValhallaV06/Blueprints/BP_Valhalla_V06_GameMode' in out['game_mode'] and out['map_check']['errors'] == 0 and out['map_check']['warnings'] == 0 and out['material_resources'].get('ok',False)
+    expected_closures = {'V07_' + r['id'] + suffix
+                         for r in json.loads(Path(__file__).with_name('v07_closures.json').read_text(encoding='utf8'))
+                         for suffix in ('', '_Remate')}
+    out['ok'] = ids == {'VALHALLA_SC_EXTERIOR_D01','V07_D02','V07_D03','V07_D04'} and safe and out['static_instances'] == 16299 and len(out['boundaries']) == 14 and set(out['closure_boundaries']) == expected_closures and closure_ok and not missing and out['validation_map_exists'] and not out['unexpected_test_dependencies'] and '/Game/ValhallaV06/Blueprints/BP_Valhalla_V06_GameMode' in out['game_mode'] and out['map_check']['errors'] == 0 and out['map_check']['warnings'] == 0 and out['material_resources'].get('ok',False)
 except Exception:
     out['error'] = traceback.format_exc()
     u.log_error(out['error'])
