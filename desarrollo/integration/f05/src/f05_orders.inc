@@ -149,7 +149,10 @@ uint32_t f05_cancel(F04Session* s,F04Ref who,U revision,U order,F05Receipt* out)
   *out=f05_receipt(*s->c,order);if(out->state==F05_CANCELLED)return F04_OK;
   need(!f05_terminal(out->state),F05_TRANSITION);need(revision==w.revision(),F04_STALE);
   const U d=ref(w,ref(w,order,F05_REQUEST_REF),F05_DELEGATION_REF);
-  if(d && who.id==ref(w,order,ISSUER))f05_grant_live(*s->c,d);else (void)f05_origin(*s->c,who.id);
+  // Effective command may cancel even when this person originally issued the
+  // order under a now-invalid mandate. Cancellation never executes that order.
+  if(who.id==commander(w,s->c->time.now()))(void)f05_origin(*s->c,who.id);
+  else if(d)f05_grant_live(*s->c,d);else (void)f05_origin(*s->c,who.id);
   auto next=std::make_unique<Campaign>(*s->c);
   if(out->task)set(*next,out->task,F05_STATUS,F05_TASK_CANCELLED);
   f05_event(*next,*s->content.catalog(),order,who.id,F05_CANCELLED,F04_OK);f05_commit(s,next,order,out);return F04_OK;

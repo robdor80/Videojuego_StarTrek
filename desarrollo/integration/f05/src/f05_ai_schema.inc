@@ -13,7 +13,7 @@ bool f05_ai_schema(const Campaign& c) {
   if(!val(w,r,F05_KEY) || !keys.insert(val(w,r,F05_KEY)).second || !val(w,r,F05_INPUT) ||
    val(w,r,F05_REVISION)>=val(w,r,F05_BEFORE) || val(w,r,F05_BEFORE)>w.revision() ||
    val(w,r,F05_AFTER)<val(w,r,F05_BEFORE) || val(w,r,F05_AFTER)>w.revision() ||
-   val(w,r,TICK)>c.time.now() || val(w,r,END)<=val(w,r,TICK) ||
+   val(w,r,TICK)>c.time.now() || val(w,r,END)<=val(w,r,TICK) || val(w,r,END)-val(w,r,TICK)>300 ||
    val(w,r,F05_AI_ROUTE)<F05_AI_DETERMINISTIC || val(w,r,F05_AI_ROUTE)>F05_AI_REASONING ||
    status>F05_AI_APPROVAL || val(w,r,F05_AI_ERROR)>F05_AI_RECOVERED || val(w,r,F05_AI_INTENT)>F05_AI_UNKNOWN ||
    val(w,actor,CATEGORY)!=1 || all(w,"f05_player").empty())return false;
