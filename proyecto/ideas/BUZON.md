@@ -209,6 +209,22 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** aprobación expresa de la propuesta y de las dos mejoras técnicas (JSON fuente principal y resolución local+IA).
 - **Ejecución:** NO INICIADA por este registro; no representa mapa completo, red de turboascensores jugable ni pruebas UE5 superadas.
 
+### IDEA-0016 — Insignias Starfleet y sistema universal de comunicaciones inteligentes
+- **Fecha de aprobación conceptual:** 2026-11-04.
+- **Estado:** APROBADA CONCEPTUALMENTE; **respuesta progresiva y enmascaramiento de latencia aprobados expresamente**; implementación y pruebas pendientes.
+- **Idea central:** jugador y NPC de Flota Estelar llevan insignias 3D personales en el pecho con símbolo de rama inspirado en **Star Trek: Strange New Worlds** y función de comunicador de la era Picard; civiles y otros NPC conservan su identidad y equipamiento legítimo.
+- **Activación:** tocar insignia mediante tecla o botón del mando, tono de comunicación, solicitud libre por voz o texto, opción de cerrar el canal o pulsar para hablar. Llamadas entrantes y salientes.
+- **Peticiones:** hablar con computadora, nave, un NPC/departamento, consultar lugares y tripulantes, preguntar datos autorizados y emitir instrucciones/órdenes validadas. Respuesta natural, aclaración de destinatarios y continuidad de conversación.
+- **Arquitectura:** resoluciones sencillas **locales**, intérprete IA para lenguaje complejo, distribuidor de **intenciones estructuradas** y ejecución exclusivamente autoritativa en juego/CoreRPG. Reutilizar `sistemas/ai/command_interpretation/starship_computer_system.md` y `sistemas/gameplay/communications/README.md`, no crear una IA por dispositivo.
+- **Comunicaciones reales:** disponibilidad, horarios, privacidad, rango, canales, interferencias, distancia, subespacio, imposibilidad técnica y autonomía NPC; no se inventan respuestas, conocimiento ni éxito de órdenes.
+- **Mejora aprobada expresamente — latencia:** **respuestas progresivas**. La computadora comienza a pronunciar una introducción con **hechos ya comprobados** mientras consulta la información pendiente; añade el resultado tras validarlo. Para órdenes rápidas evita relleno, y ante demoras informa de que sigue consultando, sin fingir datos o acciones.
+- **Rendimiento:** objetivos orientativos de respuesta local casi inmediata y respuesta inicial por IA con mínima espera; medir de verdad en MSI `fin de voz → primer audio` y `fin de voz → resultado validado`; sin prometer segundos fijos.
+- **Ficha completa:** [IDEA-0016_insignias_starfleet_comunicaciones_universales.md](IDEA-0016_insignias_starfleet_comunicaciones_universales.md).
+- **Vínculos:** [IDEA-0014 — Intercomunicadores](IDEA-0014_intercomunicadores_inteligentes_camarotes.md), [IDEA-0015 — Turboascensores](IDEA-0015_turboascensores_inteligentes_lenguaje_natural.md), contratos actuales de computadora, comunicaciones, identidad NPC, permisos y vida a bordo.
+- **Etapas candidatas:** BADGE-01–BADGE-09: insignias/ramas, controles, enrutador, computadora, llamadas NPC, órdenes, respuestas progresivas y QA en MSI/UE5.
+- **Decisión del autor:** propone expresamente este sistema universal de insignias, desarrolla la optimización para ganar tiempo mediante locución y la aprueba («Aprobado»).
+- **Ejecución:** **NO INICIADA** por el registro; los objetos 3D, las llamadas y la voz progresiva aún no son funcionalidades jugables.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
