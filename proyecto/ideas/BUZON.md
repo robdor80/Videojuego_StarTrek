@@ -225,6 +225,21 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** propone expresamente este sistema universal de insignias, desarrolla la optimización para ganar tiempo mediante locución y la aprueba («Aprobado»).
 - **Ejecución:** **NO INICIADA** por el registro; los objetos 3D, las llamadas y la voz progresiva aún no son funcionalidades jugables.
 
+### IDEA-0017 — Vida personal, relaciones sentimentales, matrimonio y familia
+- **Fecha de aprobación expresa:** 2026-11-04.
+- **Estado:** APROBADA CONCEPTUALMENTE; implementación y QA pendientes.
+- **Nave protagonista vigente:** **Proyecto Valhalla = USS Enterprise NCC-1701-D (Galaxy) restaurada y modernizada por Geordi La Forge**. Preservar la identidad Enterprise-D y los espacios civiles/familiares reales de esta configuración; **la antigua Enterprise-G/clase Valhalla se ha descartado**.
+- **Vida personal opcional:** puedes permanecer soltero sin restricciones, ser un **soltero picaflor y mujeriego**, coquetear y tener citas/relaciones informales consentidas o iniciar una pareja estable. No imponer progreso ni boda/hijos como condición de juego.
+- **Compromiso:** pareja consolidada, convivencia, matrimonio y ceremonias persistentes, con aceptación mutua, memoria causal, acuerdos y autonomía de NPC.
+- **Familia:** posibilidad de tener hijos, gestación/nacimiento cuando proceda, parentesco, crianza, crecimiento infantil, educación y vida doméstica; nuevos niños como **personajes persistentes reales**.
+- **Consecuencias de vida y carrera:** guardias, tiempo familiar, cambios de nave, permisos, residencias, traslados, comunicaciones a distancia y restricciones de alojamiento; sin teleportar familiares ni inventar servicios.
+- **Reglas sociales:** reutilizar `sistemas/gameplay/social/social_event_rules.json`, `sistemas/gameplay/social/README.md` y los contratos de vida a bordo; **respetar el canon autoral adulto vigente**. Consentimiento, reciprocidad y ausencia de coerción; ser soltero o vivir relaciones consensuadas informales no causa penalización moral automática.
+- **IA/Core:** diálogo, emociones y memoria narrativa sí; IA no inventa matrimonio, embarazos, hijos, decisiones de voluntad ni cambios de World State. Core/Star Trek validan y persisten.
+- **Ficha detallada:** [IDEA-0017_vida_personal_pareja_matrimonio_familia.md](IDEA-0017_vida_personal_pareja_matrimonio_familia.md).
+- **Etapas candidatas:** LIFE-01–LIFE-09, desde ampliación de relaciones hasta vida familiar y continuidad durante años de campaña.
+- **Decisión del autor:** aprobado expresamente tras ampliar la propuesta para incluir soltería y vida de picaflor/mujeriego.
+- **Ejecución:** NO INICIADA por registrar la idea; ni matrimonios ni hijos jugables declarados implementados.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
