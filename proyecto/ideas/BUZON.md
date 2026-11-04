@@ -194,6 +194,21 @@ Formato para añadir una propuesta:
 - **Decisión del autor:** aprobada expresamente tras debatir el funcionamiento del sistema.
 - **Ejecución:** NO INICIADA por el registro; no implica que las puertas o intercomunicadores ya funcionen en UE5.
 
+### IDEA-0015 — Turboascensores inteligentes con lenguaje natural y navegación interior
+- **Fecha de aprobación expresa:** 2026-11-04.
+- **Estado:** APROBADA CONCEPTUALMENTE; planificación, implementación y pruebas pendientes.
+- **Propuesta:** al **entrar en un turboascensor**, se activa automáticamente la petición de destino. El jugador puede expresarse libremente («Ingeniería», «al bar», «a mi camarote», «cubierta H» y frases coloquiales) por voz o texto, sin aprender comandos.
+- **Cartografía:** distribución interior de cada nave/instancia documentada en **JSON estructurado**, con cubiertas, habitaciones, nombres y alias, ascensores, puntos de acceso, conexiones y restricciones. Markdown opcional solo como documentación.
+- **Resolución híbrida:** consulta **local** de nombres claros; la **IA interpreta** expresiones complejas usando solo un contexto autorizado/filtrado, devuelve destino candidato estructurado y solicita aclaraciones cuando existen varios destinos posibles.
+- **Autoridad del motor:** valida existencia, permisos, estado de la red y rutas; elige **el turboascensor de salida accesible más cercano**, ejecuta el desplazamiento y carga la cubierta/escena UE5 correspondiente. La IA nunca teletransporta personajes ni inventa salas.
+- **Casos especiales:** «mi camarote» consulta la asignación vigente; varios bares requieren elección/preferencia válida; una cubierta inexistente no se inventa; daños, alertas y separación de platillo/cuerpo impiden rutas incompatibles.
+- **Persistencia:** el viaje consume tiempo razonable y conserva identidad, ubicación, agendas y World State, incluyendo NPC fuera de cámara; cabina/transición visual sin necesidad de modelar todos los ejes físicos.
+- **Ficha detallada:** [IDEA-0015_turboascensores_inteligentes_lenguaje_natural.md](IDEA-0015_turboascensores_inteligentes_lenguaje_natural.md).
+- **Integración:** `sistemas/gameplay/ship_operations/interior_location_model.json`, `sistemas/ai/command_interpretation/starship_command_contract.md`, [IDEA-0014 — Intercomunicadores](IDEA-0014_intercomunicadores_inteligentes_camarotes.md), [IDEA-0010 — Nave auxiliar](IDEA-0010_nave_auxiliar_tactica_furtiva_valhalla.md), CoreRPG, F10/F12 y UE5.
+- **Hitos candidatos:** TL-01–TL-08: auditoría de mapa, catálogo, cabina, interpretación local/IA, rutas/permisos, streaming, pruebas de destinos y QA.
+- **Decisión del autor:** aprobación expresa de la propuesta y de las dos mejoras técnicas (JSON fuente principal y resolución local+IA).
+- **Ejecución:** NO INICIADA por este registro; no representa mapa completo, red de turboascensores jugable ni pruebas UE5 superadas.
+
 ## Ideas planificadas
 
 *Todavía ninguna: pendiente de acordar el plan maestro.*
