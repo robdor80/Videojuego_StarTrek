@@ -7,6 +7,14 @@
 
 Simular tripulación persistente sin necesidad de cargar simultáneamente todos los actores 3D.
 
+## Reserva de planificación aprobada — IDEA-0017 (05-11-2026)
+
+La [IDEA-0017 — Vida personal, sentimental y familiar](../../../../../ideas/IDEA-0017_vida_personal_pareja_matrimonio_familia.md) es una **capacidad aprobada por el autor y pendiente de implementación**, para la que **F12 es la fase propietaria propuesta**: soltería y relaciones opcionales, compromiso y convivencia, matrimonio, descendencia y crianza, con NPC y familias persistentes.
+
+**[Anexo de arquitectura y ubicación de IDEA-0017](ANEXO_IDEA-0017_VIDA_PERSONAL_Y_FAMILIAR.md):** identifica los contratos ya disponibles, la carpeta coordinadora futura `sistemas/gameplay/family/`, el subprograma LIFE-01–LIFE-09 y las dependencias F03/F04/F05/F10/F11/F14/F15. Distingue diseño de runtime y señala la deuda documental de Enterprise-D modernizada frente a la antigua clase Valhalla.
+
+**Esta reserva no modifica los cinco pasos F12-P01–P05, sus criterios de cierre, los 80 pasos oficiales, ni el estado de F05/F12.** Antes de cerrar F12 deberá acordarse qué alcance LIFE forma parte de su aceptación y qué capacidades pueden aplazarse expresamente. La opción de no formar familia pertenece al jugador, no elimina por sí sola el requisito de diseñar el sistema.
+
 ## Pasos y entregables
 
 - [ ] **F12-P01** — Reutilizar identidad, horarios, bienestar, hábitos, personalidad, memoria y relaciones.
