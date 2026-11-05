@@ -118,3 +118,15 @@ No añade ejecución MSI, no acredita ACL Windows ni Unreal, y no marca ninguna
 casilla P01–P04/P05B como superada. Plan P05B revisado: dos builds limpios, DLL
 real, 12 nombres UE exactos y RHI hardware; **PENDIENTE / NO EJECUTADO**.
 No hay cambios nuevos de producto, Core, arte o laboratorios anteriores.
+
+## Ejecución real P05B MSI — 05-11-2026 — BLOQUEADA
+
+Se ejecutó el runner oficial sobre main `486099abd36c18c5ee69c38cd43a95b95910cc5f`, con Core fijado intacto, MSVC real y UE 5.8.2 CL 56702186. Core: **479 PASS, 4 SKIP, 0 FAIL** de 483; tres SKIP symlink no admitidos por falta de privilegio Windows. El runner detuvo la primera repetición y conservó INCOMPLETE. Segunda repetición no iniciada; **0/2 repeticiones completas aceptadas**.
+
+Comprobaciones independientes: F04/F05 **395 PASS, 0 SKIP, 0 FAIL**, incluidos 30 P05A; carga real de DLL, 62 exports y SHA Core correctos. UBT detectó rutas largas; el diagnóstico en ruta corta reprodujo un fatal por doble inicialización UWorld. Se corrigió únicamente el montaje de tres automatizaciones, registrando además contexto del mundo y exigiendo destrucción efectiva del Actor. Sobre `5dcb1d47e26815258fd0c9693758411deccd1a77`: **12/12 Success sin advertencias de prueba en NullRHI y otras 12/12 en D3D12 / NVIDIA RTX 4070 Laptop**, módulo `ready=1`.
+
+Estos diagnósticos reutilizan la DLL nativa recién verificada y **no acreditan la doble ejecución limpia**. No se marca ningún requisito integral como terminado. Pendientes: privilegio efectivo para los tres casos symlink, dos ejecuciones oficiales completas en salidas nuevas sobre el SHA definitivo auditado y auditoría independiente final. No se amplió la lista de SKIP, no se modificó Core, no se instaló software ni se cambió UE.
+
+[Acta, incidencias y continuación](F05-P05B_CERTIFICACION_MSI_20261105.md) · [Resumen y evidencias originales](evidence/F05-P05B/20261105-MSI/summary.json).
+
+**F05 EN_CURSO; F06 BLOQUEADA. No preparada para cierre.** Se conserva el historial anterior y las casillas pendientes; la evidencia parcial no sustituye el procedimiento integral.

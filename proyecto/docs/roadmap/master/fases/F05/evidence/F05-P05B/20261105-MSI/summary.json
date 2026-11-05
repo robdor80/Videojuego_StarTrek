@@ -1,0 +1,233 @@
+{
+  "status": "BLOQUEADA",
+  "trek_base": "486099abd36c18c5ee69c38cd43a95b95910cc5f",
+  "harness_fix": "5dcb1d47e26815258fd0c9693758411deccd1a77",
+  "core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "core_1": {
+    "discovered": 483,
+    "passed": 479,
+    "skipped": [
+      "ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt",
+      "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+      "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported"
+    ],
+    "failed": []
+  },
+  "native_1": {
+    "discovered": 395,
+    "passed": 395,
+    "skipped": [],
+    "failed": []
+  },
+  "complete_clean_repetitions": 0,
+  "second_clean_repetition": "NOT_RUN: unavailable symlink privileges prevent certification",
+  "unreal_reports": [
+    {
+      "report": "u3/20261105-210029-542-ue-report/index.json",
+      "succeeded": 12,
+      "succeededWithWarnings": 0,
+      "failed": 0,
+      "notRun": 0,
+      "tests": [
+        {
+          "name": "F05.P01.LifecycleAndRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P01.Negatives",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P01.WorldAndActorIndependence",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.DelegationRevocationRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.ExpiryAndChainOfCommand",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.ModesAndLimits",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.AuthorityAndKnowledge",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.NPCInitiativeAndOrders",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.OffscreenPersistenceAndRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.AIProposalValidation",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.OffscreenRecoveryAndSafety",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.StaleAuthorityAndFallback",
+          "state": "Success"
+        }
+      ],
+      "backend": "NullRHI"
+    },
+    {
+      "report": "u3/20261105-210046-371-ue-report/index.json",
+      "succeeded": 12,
+      "succeededWithWarnings": 0,
+      "failed": 0,
+      "notRun": 0,
+      "tests": [
+        {
+          "name": "F05.P01.LifecycleAndRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P01.Negatives",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P01.WorldAndActorIndependence",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.DelegationRevocationRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.ExpiryAndChainOfCommand",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P02.ModesAndLimits",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.AuthorityAndKnowledge",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.NPCInitiativeAndOrders",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P03.OffscreenPersistenceAndRecovery",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.AIProposalValidation",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.OffscreenRecoveryAndSafety",
+          "state": "Success"
+        },
+        {
+          "name": "F05.P04.StaleAuthorityAndFallback",
+          "state": "Success"
+        }
+      ],
+      "backend": "D3D12"
+    }
+  ],
+  "hardware_rhi": {
+    "backend": "D3D12",
+    "feature_level": "SM5",
+    "adapter_index": 0,
+    "adapter": "NVIDIA GeForce RTX 4070 Laptop GPU",
+    "dedicated_vram_mb": 7948,
+    "driver": "617.14 / 32.0.16.1714"
+  },
+  "dll": {
+    "dll_sha256": "8A0320089B8E8A77417E3AF0B15B8F44673A514EE7BAB90B792AF8BF84B8533C",
+    "core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+    "exports": [
+      "f04_advance",
+      "f04_auxiliary",
+      "f04_core_sha",
+      "f04_create",
+      "f04_create_population",
+      "f04_destroy",
+      "f04_duties_page",
+      "f04_execute",
+      "f04_functions",
+      "f04_handles",
+      "f04_history_consolidate",
+      "f04_history_count",
+      "f04_history_export_active",
+      "f04_history_migrate",
+      "f04_history_open",
+      "f04_history_page",
+      "f04_history_publish",
+      "f04_history_relations",
+      "f04_history_stats",
+      "f04_load",
+      "f04_manifest",
+      "f04_manifest_page",
+      "f04_organization_stats",
+      "f04_person",
+      "f04_person_credentials",
+      "f04_population_stats",
+      "f04_positions_page",
+      "f04_relief_candidates_page",
+      "f04_residents_page",
+      "f04_roster_gaps_page",
+      "f04_save",
+      "f04_service_coverage",
+      "f04_slots",
+      "f04_specialists_page",
+      "f04_stats",
+      "f04_template_sections",
+      "f04_template_spec",
+      "f04_template_watch_demands",
+      "f04_watch_window",
+      "f05_ai_apply",
+      "f05_ai_begin",
+      "f05_ai_finish",
+      "f05_ai_view",
+      "f05_approve_order",
+      "f05_bind_player",
+      "f05_brief_need",
+      "f05_cancel",
+      "f05_change_delegation",
+      "f05_decisions_page",
+      "f05_delegate",
+      "f05_delegation",
+      "f05_delegation_events",
+      "f05_delegations_page",
+      "f05_evaluate",
+      "f05_events_page",
+      "f05_execute_order",
+      "f05_order",
+      "f05_receive",
+      "f05_result",
+      "f05_scan_need",
+      "f05_submit",
+      "f05_submit_delegated"
+    ]
+  },
+  "initial_unreal_attempt": {
+    "completed_success": 2,
+    "crashed_during": "F05.P01.WorldAndActorIndependence",
+    "remaining_not_completed": 10,
+    "complete_report_available": false,
+    "editor_exit_code": 3
+  },
+  "intermediate_unreal_attempt": {
+    "harness_commit": "924876b9674b14bd7effccb46a9e3366eccba2f5",
+    "nullrhi_success_states": 12,
+    "hardware_success_states": 12,
+    "warnings_per_backend": 3,
+    "note": "World had no context at Actor destruction; corrected in final harness, original reports retained"
+  }
+}

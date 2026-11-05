@@ -1,0 +1,28 @@
+Using bundled DotNet SDK version: 10.0 win-x64
+Running UnrealBuildTool: dotnet "..\..\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.dll" F05OrdersLabEditor Win64 Development -Project=C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\F05OrdersLab.uproject -WaitMutex -NoHotReload -MaxParallelActions=4
+Log file: C:\Users\andro\AppData\Local\UnrealBuildTool\Log.txt
+Executing up to 4 actions based on MaxProcessorCount override
+Creating makefile for F05OrdersLabEditor (no existing makefile)
+UbaServer - Listening on 0.0.0.0:1345
+Available x64 toolchains (1):
+ * C:\Program Files\Microsoft Visual Studio\18\Community\VC\Tools\MSVC\14.51.36231
+    (Family=14.51.36231, FamilyRank=2, Version=14.51.36256, HostArchitecture=x64, ReleaseChannel=Latest, Architecture=x64)
+Visual Studio compiler version 14.51.36256 is newer than latest preferred version 14.50.35717. Please use caution as this compiler has not been heavily tested
+UHT compiled-in object format Default
+The following action paths are longer than 260 characters. Please move the engine to a directory with a shorter path.
+[265 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\Engine\SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.dep.json
+[260 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\Engine\SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.obj
+[264 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\Engine\SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.obj.rsp
+[260 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\Engine\SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.pch
+[262 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\Engine\SharedPCH.Engine.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.sarif
+[262 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.cpp
+[260 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h
+[269 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.dep.json
+[264 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.obj
+[268 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.obj.rsp
+[264 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.pch
+[266 characters] C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\ue\Intermediate\Build\Win64\x64\F05OrdersLabEditor\Development\UnrealEd\SharedPCH.UnrealEd.Project.ValApi.ValExpApi.Cpp20.InclOrderUnreal5_6.h.sarif
+
+Result: Failed (OtherCompilationError)
+Total execution time: 4.50 seconds
+Trace written to file C:\Users\andro\AppData\Local\UnrealBuildTool\Trace.uba with size 2.4kb

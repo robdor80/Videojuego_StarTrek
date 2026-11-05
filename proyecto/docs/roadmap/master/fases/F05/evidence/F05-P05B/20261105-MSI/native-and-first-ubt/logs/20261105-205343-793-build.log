@@ -1,0 +1,103 @@
+Versión de MSBuild 18.9.1+a81b43525 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/c/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  timeline.cpp
+  f05_ai_json.cpp
+  history.cpp
+  f05_ai_provider.cpp
+  campaign_persistence.cpp
+  action.cpp
+  content_compatibility.cpp
+  content_catalog.cpp
+  Generando código...
+  content_diagnostic.cpp
+  content_id.cpp
+  entity_structure.cpp
+  TrekF05Language.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\Release\TrekF05Language.lib
+  inspector.cpp
+  knowledge.cpp
+  visibility.cpp
+  context_builder.cpp
+  population.cpp
+  semantic_version.cpp
+  simulation.cpp
+  version_requirement.cpp
+  random.cpp
+  random_streams.cpp
+  persistence.cpp
+  Generando código...
+  Compilando...
+  rule_check.cpp
+  resource_kind.cpp
+  roll_action.cpp
+  version.cpp
+  world_state.cpp
+  Generando código...
+  CoreRPG.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\corerpg\Release\CoreRPG.lib
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  f04_bridge.cpp
+  f04_bridge.cpp
+     Creando biblioteca C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/laboratorios/f05/p05b/r1/clean-1/native/f04/Release/TrekF04HistoryReference.lib y objeto C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/laboratorios/f05/p05b/r1/clean-1/native/f04/Release/TrekF04HistoryReference.exp
+  TrekF04HistoryReference.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\TrekF04HistoryReference.dll
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  history_campaign.cpp
+     Creando biblioteca C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/laboratorios/f05/p05b/r1/clean-1/native/f04/Release/TrekF04Bridge.lib y objeto C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/laboratorios/f05/p05b/r1/clean-1/native/f04/Release/TrekF04Bridge.exp
+  TrekF04Bridge.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\TrekF04Bridge.dll
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt
+  f05_tests.cpp
+  f05_integration_audit_tests.cpp
+  f05_initiative_tests.cpp
+  f05_delegation_tests.cpp
+  f05_ai_tests.cpp
+C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\desarrollo\integration\f05\tests\f05_initiative_tests.cpp(26,27): warning C4805: '==': combinación no segura de tipo 'uint32_t' y tipo 'bool' en la operación [C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f05_initiative_tests.vcxproj]
+  valhalla_tests.cpp
+C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\desarrollo\integration\f05\tests\f05_ai_tests.cpp(98,84): warning C4838: la conversión de 'F05AiRoute' en 'uint32_t' requiere una conversión de restricción [C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f05_ai_tests.vcxproj]
+  f04_tests.cpp
+  f05_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f05_tests.exe
+  f05_initiative_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f05_initiative_tests.exe
+  f05_delegation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f05_delegation_tests.exe
+  population_tests.cpp
+  organization_tests.cpp
+  f04_valhalla_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_valhalla_tests.exe
+  intrepid_tests.cpp
+  history_campaign.cpp
+  guardias_tests.cpp
+  f04_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_tests.exe
+  f05_ai_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f05_ai_tests.exe
+  f04_organization_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_organization_tests.exe
+  f04_reference_campaign.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_reference_campaign.exe
+  sovereign_tests.cpp
+  f04_population_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_population_tests.exe
+  persistence_audit.cpp
+  odyssey_tests.cpp
+  f04_intrepid_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_intrepid_tests.exe
+  history_faults.cpp
+  f04_guardias_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_guardias_tests.exe
+  history_audit.cpp
+  f04_history_campaign.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_history_campaign.exe
+  f05_integration_audit_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f05_integration_audit_tests.exe
+  f04_persistence_audit.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_persistence_audit.exe
+  f04_sovereign_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_sovereign_tests.exe
+  f04_odyssey_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_odyssey_tests.exe
+  f04_history_audit.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_history_audit.exe
+  f04_history_faults.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\clean-1\native\f04\Release\f04_history_faults.exe
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/20261105/w/desarrollo/integration/f05/CMakeLists.txt

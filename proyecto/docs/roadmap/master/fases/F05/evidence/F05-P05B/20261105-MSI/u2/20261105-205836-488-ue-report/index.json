@@ -1,0 +1,248 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "FATIROBERMSI",
+			"instance": "2F0CDFC549F87AF83EBFF08CBD0B5451",
+			"instanceName": "FATIROBERMSI-42032",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "Intel(R) Core(TM) i9-14900HX",
+			"rAMInGB": 32,
+			"renderMode": "SM6",
+			"rHI": "",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.11.05-19.58.51",
+	"succeeded": 9,
+	"succeededWithWarnings": 3,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.19539110362529755,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "LifecycleAndRecovery",
+			"fullTestPath": "F05.P01.LifecycleAndRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.0056015998125076294,
+			"dateTime": "2026.11.05-19.58.50",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Negatives",
+			"fullTestPath": "F05.P01.Negatives",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.01584320142865181,
+			"dateTime": "2026.11.05-19.58.50",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WorldAndActorIndependence",
+			"fullTestPath": "F05.P01.WorldAndActorIndependence",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.019692301750183105,
+			"dateTime": "2026.11.05-19.58.50",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Warning",
+						"message": "LogSpawn: UWorld::DestroyActor: World has no context! World: Untitled, Actor: /Temp/Untitled_2.Untitled:PersistentLevel.Actor_0",
+						"context": "log",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.11.05-19.58.50"
+				}
+			],
+			"warnings": 1,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DelegationRevocationRecovery",
+			"fullTestPath": "F05.P02.DelegationRevocationRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016465499997138977,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ExpiryAndChainOfCommand",
+			"fullTestPath": "F05.P02.ExpiryAndChainOfCommand",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016456201672554016,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ModesAndLimits",
+			"fullTestPath": "F05.P02.ModesAndLimits",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016550600528717041,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuthorityAndKnowledge",
+			"fullTestPath": "F05.P03.AuthorityAndKnowledge",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016494300216436386,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NPCInitiativeAndOrders",
+			"fullTestPath": "F05.P03.NPCInitiativeAndOrders",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.0162649005651474,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OffscreenPersistenceAndRecovery",
+			"fullTestPath": "F05.P03.OffscreenPersistenceAndRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.019232600927352905,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Warning",
+						"message": "LogSpawn: UWorld::DestroyActor: World has no context! World: Untitled, Actor: /Temp/Untitled_3.Untitled:PersistentLevel.Actor_0",
+						"context": "log",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.11.05-19.58.51"
+				}
+			],
+			"warnings": 1,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AIProposalValidation",
+			"fullTestPath": "F05.P04.AIProposalValidation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016560100018978119,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OffscreenRecoveryAndSafety",
+			"fullTestPath": "F05.P04.OffscreenRecoveryAndSafety",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.019448801875114441,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [
+				{
+					"event":
+					{
+						"type": "Warning",
+						"message": "LogSpawn: UWorld::DestroyActor: World has no context! World: Untitled, Actor: /Temp/Untitled_4.Untitled:PersistentLevel.Actor_0",
+						"context": "log",
+						"artifact": "00000000000000000000000000000000"
+					},
+					"filename": "",
+					"lineNumber": -1,
+					"timestamp": "2026.11.05-19.58.51"
+				}
+			],
+			"warnings": 1,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StaleAuthorityAndFallback",
+			"fullTestPath": "F05.P04.StaleAuthorityAndFallback",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"2F0CDFC549F87AF83EBFF08CBD0B5451"
+			],
+			"duration": 0.016781002283096313,
+			"dateTime": "2026.11.05-19.58.51",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}
