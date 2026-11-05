@@ -1,0 +1,23 @@
+{
+  "status": "PASS_AUTOMATED_PENDING_INDEPENDENT_AUDIT",
+  "stage": "completed",
+  "startedUtc": "2026-11-05T21:06:01.5707541Z",
+  "expectedHead": "027bb1d680da1f3317dac00d23ef06e0640c14ba",
+  "elevated": true,
+  "control": [
+    {
+      "conditionFailed": 14,
+      "log": "P:\\laboratorios\\control-v2\\NullRHI-engine.log",
+      "exitCode": 0,
+      "backend": "NullRHI"
+    },
+    {
+      "conditionFailed": 14,
+      "log": "P:\\laboratorios\\control-v2\\Hardware-engine.log",
+      "exitCode": 0,
+      "backend": "Hardware"
+    }
+  ],
+  "error": null,
+  "endedUtc": "2026-11-05T21:16:03.7634116Z"
+}

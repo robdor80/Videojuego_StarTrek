@@ -1,0 +1,17 @@
+{
+  "status": "INCOMPLETE",
+  "stage": "engine-only-controls",
+  "startedUtc": "2026-11-05T21:01:26.5428442Z",
+  "expectedHead": "027bb1d680da1f3317dac00d23ef06e0640c14ba",
+  "elevated": true,
+  "control": [
+    {
+      "log": "P:\\laboratorios\\control\\NullRHI-engine.log",
+      "backend": "NullRHI",
+      "exitCode": -1,
+      "conditionFailed": 14
+    }
+  ],
+  "error": "System.Management.Automation.RuntimeException: Engine-only control NullRHI failed with -1; no retries",
+  "endedUtc": "2026-11-05T21:02:40.3781450Z"
+}

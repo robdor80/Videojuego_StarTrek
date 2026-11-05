@@ -1,0 +1,13 @@
+[
+  "P:\\laboratorios\\control\\EngineControl.uproject",
+  "-unattended",
+  "-nop4",
+  "-nosplash",
+  "-nosound",
+  "-NoLiveCoding",
+  "-ExecCmds=Quit",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-abslog=P:\\laboratorios\\control\\NullRHI-engine.log",
+  "-NullRHI"
+]

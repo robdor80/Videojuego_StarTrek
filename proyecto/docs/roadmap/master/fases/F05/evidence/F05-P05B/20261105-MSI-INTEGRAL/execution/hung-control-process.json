@@ -1,0 +1,6 @@
+{
+  "ProcessId": 40164,
+  "ParentProcessId": 42808,
+  "Name": "UnrealEditor-Cmd.exe",
+  "CommandLine": "\"C:\\Program Files\\Epic Games\\UE_5.8\\Engine\\Binaries\\Win64\\UnrealEditor-Cmd.exe\" P:\\laboratorios\\control\\EngineControl.uproject -unattended -nop4 -nosplash -nosound -NoLiveCoding -ExecCmds=Quit -stdout -FullStdOutLogOutput -abslog=P:\\laboratorios\\control\\NullRHI-engine.log -NullRHI"
+}

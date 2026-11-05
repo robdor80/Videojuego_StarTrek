@@ -1,0 +1,123 @@
+Versión de MSBuild 18.9.1+a81b43525 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/w/laboratorios/p/core-2/build/_deps/googletest-src/googletest/CMakeLists.txt
+  gtest-all.cc
+  timeline.cpp
+  history.cpp
+  gtest.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\lib\Release\gtest.lib
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/w/laboratorios/p/core-2/build/_deps/googletest-src/googletest/CMakeLists.txt
+  gtest_main.cc
+  campaign_persistence.cpp
+  gtest_main.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\lib\Release\gtest_main.lib
+  action.cpp
+  content_compatibility.cpp
+  content_catalog.cpp
+  content_diagnostic.cpp
+  content_id.cpp
+  entity_structure.cpp
+  inspector.cpp
+  knowledge.cpp
+  visibility.cpp
+  context_builder.cpp
+  population.cpp
+  semantic_version.cpp
+  simulation.cpp
+  version_requirement.cpp
+  random.cpp
+  random_streams.cpp
+  persistence.cpp
+  Generando código...
+  Compilando...
+  rule_check.cpp
+  resource_kind.cpp
+  roll_action.cpp
+  version.cpp
+  world_state.cpp
+  Generando código...
+  CoreRPG.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\Release\CoreRPG.lib
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Embedding Content Contract 0.1.0 JSON schemas
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  content_catalog_loader.cpp
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  authorized_context_host.cpp
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  history_process.cpp
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  timeline_allocation_test.cpp
+  timeline_test.cpp
+  knowledge_allocation_test.cpp
+  content_json_backend.cpp
+  history_test.cpp
+  corerpg_timeline_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_timeline_allocation_tests.exe
+  action_allocation_test.cpp
+  inspector_allocation_test.cpp
+  corerpg_knowledge_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_knowledge_allocation_tests.exe
+  entity_structure_allocation_test.cpp
+  content_json_document_decoder.cpp
+  action_test.cpp
+  context_allocation_test.cpp
+  corerpg_inspector_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_inspector_allocation_tests.exe
+  corerpg_action_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_action_allocation_tests.exe
+  persistence_allocation_test.cpp
+  corerpg_entity_structure_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_entity_structure_allocation_tests.exe
+  world_state_allocation_test.cpp
+  action_persistence_test.cpp
+  corerpg_context_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_context_allocation_tests.exe
+  corerpg_context_host_example.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_context_host_example.exe
+  corerpg_history_process.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_history_process.exe
+  corerpg_persistence_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_persistence_allocation_tests.exe
+  content_json_schema_validator.cpp
+  corerpg_world_state_allocation_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_world_state_allocation_tests.exe
+  action_determinism_test.cpp
+  content_compatibility_test.cpp
+  content_catalog_test.cpp
+  content_pack_validation_test.cpp
+  content_pack_loader.cpp
+  content_manifest_test.cpp
+  Generando código...
+  content_id_test.cpp
+  entity_structure_test.cpp
+  external_content_restore_test.cpp
+  inspector_diagnostic_test.cpp
+  CoreRPGContentJson.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\Release\CoreRPGContentJson.lib
+  inspector_integration_test.cpp
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/tests/CMakeLists.txt
+  content_catalog_loader_test.cpp
+  inspector_test.cpp
+  content_json_document_decoder_test.cpp
+  knowledge_test.cpp
+  content_json_document_reader_test.cpp
+  knowledge_persistence_test.cpp
+  content_json_schema_validator_test.cpp
+  visibility_test.cpp
+  content_pack_loader_test.cpp
+  context_builder_test.cpp
+  Generando código...
+  context_security_test.cpp
+  Generando código...
+  corerpg_content_json_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_content_json_tests.exe
+  Compilando...
+  population_test.cpp
+  population_persistence_test.cpp
+  persistence_test.cpp
+  random_test.cpp
+  random_streams_test.cpp
+  rule_check_test.cpp
+  roll_action_test.cpp
+  smoke_test.cpp
+  simulation_test.cpp
+  world_state_integration_test.cpp
+  world_state_test.cpp
+  Generando código...
+  corerpg_tests.vcxproj -> C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\official-20261105\w\laboratorios\p\core-2\build\tests\Release\corerpg_tests.exe
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/CMakeLists.txt

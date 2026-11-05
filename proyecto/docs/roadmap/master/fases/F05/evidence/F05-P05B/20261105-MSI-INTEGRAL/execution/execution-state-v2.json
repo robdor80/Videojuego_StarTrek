@@ -1,0 +1,23 @@
+{
+  "status": "INCOMPLETE",
+  "stage": "official-two-clean-repetitions",
+  "startedUtc": "2026-11-05T21:02:40.5855847Z",
+  "expectedHead": "027bb1d680da1f3317dac00d23ef06e0640c14ba",
+  "elevated": true,
+  "control": [
+    {
+      "conditionFailed": 14,
+      "log": "P:\\laboratorios\\control-v2\\NullRHI-engine.log",
+      "exitCode": 0,
+      "backend": "NullRHI"
+    },
+    {
+      "conditionFailed": 14,
+      "log": "P:\\laboratorios\\control-v2\\Hardware-engine.log",
+      "exitCode": 0,
+      "backend": "Hardware"
+    }
+  ],
+  "error": "System.Management.Automation.RuntimeException: configure failed: 1",
+  "endedUtc": "2026-11-05T21:05:00.7043050Z"
+}

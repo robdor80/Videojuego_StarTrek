@@ -1,0 +1,92 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36256.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file P:\laboratorios\p\clean-2\native\f04\Release\TrekF04Bridge.dll
+
+File Type: DLL
+
+  Section contains the following exports for TrekF04Bridge.dll
+
+    00000000 characteristics
+    FFFFFFFF time date stamp
+        0.00 version
+           1 ordinal base
+          64 number of functions
+          64 number of names
+
+    ordinal hint RVA      name
+
+          1    0 00050440 f04_advance
+          2    1 000504B0 f04_auxiliary
+          3    2 00050510 f04_core_sha
+          4    3 00050520 f04_create
+          5    4 000506C0 f04_create_population
+          6    5 00050860 f04_destroy
+          7    6 000509A0 f04_duties_page
+          8    7 00050A60 f04_execute
+          9    8 00050AD0 f04_functions
+         10    9 00050B60 f04_handles
+         11    A 00050BB0 f04_history_consolidate
+         12    B 00050BF0 f04_history_count
+         13    C 00050C60 f04_history_export_active
+         14    D 00050CE0 f04_history_migrate
+         15    E 00050D40 f04_history_open
+         16    F 00050D90 f04_history_page
+         17   10 00050E40 f04_history_publish
+         18   11 00050E80 f04_history_relations
+         19   12 00050F50 f04_history_stats
+         20   13 00050FB0 f04_history_test_delta
+         21   14 00051040 f04_history_test_validate_full
+         22   15 00051070 f04_load
+         23   16 000510D0 f04_manifest
+         24   17 00051160 f04_manifest_page
+         25   18 00051220 f04_organization_stats
+         26   19 000512A0 f04_person
+         27   1A 00051310 f04_person_credentials
+         28   1B 00051390 f04_population_stats
+         29   1C 000513F0 f04_positions_page
+         30   1D 000514B0 f04_relief_candidates_page
+         31   1E 00051580 f04_residents_page
+         32   1F 00051640 f04_roster_gaps_page
+         33   20 00051700 f04_save
+         34   21 00051780 f04_service_coverage
+         35   22 00051830 f04_slots
+         36   23 000518C0 f04_specialists_page
+         37   24 00051980 f04_stats
+         38   25 000519F0 f04_template_sections
+         39   26 00051A90 f04_template_spec
+         40   27 00051B00 f04_template_watch_demands
+         41   28 00051BA0 f04_watch_window
+         42   29 00051C10 f05_ai_apply
+         43   2A 00051C90 f05_ai_begin
+         44   2B 00051D10 f05_ai_finish
+         45   2C 00051DE0 f05_ai_view
+         46   2D 00051E60 f05_approve_order
+         47   2E 00051F00 f05_bind_player
+         48   2F 00051F40 f05_brief_need
+         49   30 00051FE0 f05_cancel
+         50   31 00052070 f05_change_delegation
+         51   32 00052100 f05_decisions_page
+         52   33 000521B0 f05_delegate
+         53   34 00052240 f05_delegation
+         54   35 000522D0 f05_delegation_events
+         55   36 00052380 f05_delegations_page
+         56   37 00052430 f05_evaluate
+         57   38 000524B0 f05_events_page
+         58   39 00052560 f05_execute_order
+         59   3A 000525F0 f05_order
+         60   3B 00052690 f05_receive
+         61   3C 00052720 f05_result
+         62   3D 000527B0 f05_scan_need
+         63   3E 00052830 f05_submit
+         64   3F 000528B0 f05_submit_delegated
+
+  Summary
+
+        2000 .data
+        7000 .pdata
+       27000 .rdata
+        1000 .reloc
+        1000 .rsrc
+       AF000 .text

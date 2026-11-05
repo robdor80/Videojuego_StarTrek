@@ -1,0 +1,54 @@
+{
+  "utc": "2026-11-05T21:02:42.0256146Z",
+  "powershell": "7.6.5",
+  "computer": "FATIROBERMSI",
+  "repoPhysical": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\official-20261105\\w",
+  "repoShort": "P:\\",
+  "core": "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\official-20261105\\c",
+  "head": "027bb1d680da1f3317dac00d23ef06e0640c14ba",
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "msvc": "14.51.36231",
+  "sdk": "10.0.26100.0\\",
+  "gpu": [
+    {
+      "Name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "DriverVersion": "32.0.16.1714",
+      "Status": "OK"
+    }
+  ],
+  "tools": [
+    {
+      "Name": "cmake.exe",
+      "Source": "C:\\Program Files\\CMake\\bin\\cmake.exe"
+    },
+    {
+      "Name": "ctest.exe",
+      "Source": "C:\\Program Files\\CMake\\bin\\ctest.exe"
+    },
+    {
+      "Name": "python.exe",
+      "Source": "C:\\Users\\andro\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
+    },
+    {
+      "Name": "cl.exe",
+      "Source": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.exe"
+    },
+    {
+      "Name": "dumpbin.exe",
+      "Source": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\dumpbin.exe"
+    },
+    {
+      "Name": "git.exe",
+      "Source": "C:\\Program Files\\Git\\cmd\\git.exe"
+    }
+  ]
+}
