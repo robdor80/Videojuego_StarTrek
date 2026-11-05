@@ -25,6 +25,13 @@
 #include "Serialization/JsonSerializer.h"
 #include "UnrealClient.h"
 #include "VHAutomaticDoor.h"
+#include "Components/StaticMeshComponent.h"
+bool AVH06Probe::MatchesTargetDoor(const AVHAutomaticDoor* Door) const
+{
+    FString Id=TEXT("VALHALLA_SC_EXTERIOR_D01");
+    if (Current) Current->TryGetStringField(TEXT("door_id"),Id);
+    return Door && Door->DoorId.ToString()==Id;
+}
 static TArray<TSharedPtr<FJsonValue>> VJ(FVector V)
 {
     return {MakeShared<FJsonValueNumber>(V.X), MakeShared<FJsonValueNumber>(V.Y), MakeShared<FJsonValueNumber>(V.Z)};
@@ -110,6 +117,17 @@ TSharedPtr<FJsonObject> AVH06Probe::Snapshot()
     }
     for (TActorIterator<AVHAutomaticDoor> I(GetWorld()); I; ++I)
     {
+        if (!MatchesTargetDoor(*I)) continue;
+        O->SetStringField(TEXT("door_id"), I->DoorId.ToString());
+        O->SetStringField(TEXT("door_blocking_mesh"),I->LastBlockingMesh);
+        O->SetArrayField(TEXT("door_blocking_normal"),VJ(I->LastBlockingNormal));
+        O->SetBoolField(TEXT("door_start_penetrating"),I->bLastStartPenetrating);
+        O->SetNumberField(TEXT("left_path_error_cm"), FVector::Distance(I->LeftLeaf->GetRelativeLocation(),I->LeafLocationAtFraction(true,I->OpenFraction)));
+        O->SetNumberField(TEXT("right_path_error_cm"), FVector::Distance(I->RightLeaf->GetRelativeLocation(),I->LeafLocationAtFraction(false,I->OpenFraction)));
+        O->SetBoolField(TEXT("destination_constructed"), I->bDestinationConstructed);
+        O->SetBoolField(TEXT("security_locked"), I->bSecurityLocked);
+        O->SetArrayField(TEXT("left_leaf_local_cm"), VJ(I->LeftLeaf->GetRelativeLocation()));
+        O->SetArrayField(TEXT("right_leaf_local_cm"), VJ(I->RightLeaf->GetRelativeLocation()));
         O->SetNumberField(TEXT("door_fraction"), I->OpenFraction);
         O->SetNumberField(TEXT("door_state"), (int32)I->DoorState);
         O->SetBoolField(TEXT("door_occupied"), I->IsDoorwayOccupied());
@@ -167,11 +185,16 @@ void AVH06Probe::Next()
     UE_LOG(LogTemp, Display, TEXT("VH06 CASE %s"), *Current->GetStringField(TEXT("name")));
     for (TActorIterator<AVHAutomaticDoor> I(GetWorld()); I; ++I)
     {
+        auto Key=TWeakObjectPtr<AVHAutomaticDoor>(*I);
+        if (!AuthoredDoorPolicies.Contains(Key))
+            AuthoredDoorPolicies.Add(Key,FIntVector(I->bDestinationConstructed,I->bSecurityLocked,I->bExternalAccessAllowed));
+        const FIntVector Policy=AuthoredDoorPolicies[Key];
         I->SetEmergencyHoldOpen(false);
-        I->SetDestinationConstructed(true);
-        I->SetSecurityLocked(false);
-        I->SetExternalAccessAllowed(true);
+        I->SetDestinationConstructed(Policy.X!=0);
+        I->SetSecurityLocked(Policy.Y!=0);
+        I->SetExternalAccessAllowed(Policy.Z!=0);
         I->ResetClosed();
+        if (!MatchesTargetDoor(*I)) continue;
         if (Current->HasField(TEXT("locked")))
             I->SetSecurityLocked(Current->GetBoolField(TEXT("locked")));
         if (Current->HasField(TEXT("constructed")))
@@ -186,14 +209,16 @@ void AVH06Probe::EndCase(bool Passed, const FString &Reason)
         PC->InputKey(FInputKeyParams(FKey(*Current->GetStringField(TEXT("key"))), IE_Released, 0.0));
     if (Current->HasField(TEXT("door_min")))
         for (TActorIterator<AVHAutomaticDoor> I(GetWorld()); I; ++I)
-            Passed &= I->OpenFraction >= Current->GetNumberField(TEXT("door_min"));
+            if (MatchesTargetDoor(*I)) Passed &= I->OpenFraction >= Current->GetNumberField(TEXT("door_min"));
     if (Current->HasField(TEXT("door_max")))
         for (TActorIterator<AVHAutomaticDoor> I(GetWorld()); I; ++I)
-            Passed &= I->OpenFraction <= Current->GetNumberField(TEXT("door_max"));
+            if (MatchesTargetDoor(*I)) Passed &= I->OpenFraction <= Current->GetNumberField(TEXT("door_max"));
     if (Current->HasField(TEXT("min_waypoints")))
         Passed &= PointIndex >= Current->GetNumberField(TEXT("min_waypoints"));
     Passed &= !Pawn->GetCharacterMovement()->IsFalling();
     auto O = Snapshot();
+    if (Current->HasField(TEXT("door_id")) || Current->HasField(TEXT("door_min")) || Current->HasField(TEXT("door_max")))
+        Passed &= O->HasField(TEXT("door_id"));
     if (Current->HasField(TEXT("require_close_reopen")))
     {
         bool Closing = false, Reopened = false;
@@ -222,6 +247,13 @@ void AVH06Probe::EndCase(bool Passed, const FString &Reason)
         O->TryGetStringField(TEXT("ahead_actor"), Hit);
         Passed &= Hit.StartsWith(Current->GetStringField(TEXT("expect_actor_prefix")));
     }
+    if (Current->HasField(TEXT("min_closed_cycles")))
+    {
+        bool Opened=false;int32 ClosedCycles=0;
+        for(auto V:Trace){auto T=V->AsObject();double F=0;if(!T->TryGetNumberField(TEXT("door_fraction"),F))continue;if(F>=.99)Opened=true;if(Opened&&F<=.001){ClosedCycles++;Opened=false;}}
+        O->SetNumberField(TEXT("completed_close_cycles"),ClosedCycles);
+        Passed &= ClosedCycles>=Current->GetIntegerField(TEXT("min_closed_cycles"));
+    }
     O->SetStringField(TEXT("name"), Current->GetStringField(TEXT("name")));
     O->SetBoolField(TEXT("passed"), Passed);
     O->SetStringField(TEXT("reason"), Reason);
@@ -235,6 +267,7 @@ void AVH06Probe::EndCase(bool Passed, const FString &Reason)
     O->SetNumberField(TEXT("viewport_width"), VX);
     O->SetNumberField(TEXT("viewport_height"), VY);
     O->SetArrayField(TEXT("frames"), Frames);
+    UE_LOG(LogTemp,Display,TEXT("VH CASE RESULT %s %s %s"),*Current->GetStringField(TEXT("name")),Passed?TEXT("PASS"):TEXT("FAIL"),*Reason);
     Results.Add(MakeShared<FJsonValueObject>(O));
     Next();
 }
@@ -345,6 +378,7 @@ void AVH06Probe::Tick(float Dt)
             if (Elapsed - Dt < T && Elapsed >= T)
                 for (TActorIterator<AVHAutomaticDoor> I(GetWorld()); I; ++I)
                 {
+                    if (!MatchesTargetDoor(*I)) continue;
                     if (C->HasField(TEXT("lock")))
                         I->SetSecurityLocked(C->GetBoolField(TEXT("lock")));
                     if (C->HasField(TEXT("emergency")))

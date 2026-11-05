@@ -43,6 +43,16 @@ public:
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector LeftClosedLocation=FVector(0,-41,196);
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector RightClosedLocation=FVector(0,41,196);
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry",meta=(ClampMin="0")) float TravelDistance=87;
+ /** Keep legacy D01 defaults; enable only for an audited, per-leaf mechanism. */
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") bool bUseConfiguredTravel=false;
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector LeftTravel=FVector(0,-87,0);
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector RightTravel=FVector(0,87,0);
+ /** Optional plug-and-slide path: withdraw from the frame, then slide.
+  * Collision is swept on both segments; zero offsets retain the D01 path. */
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector LeftClearanceOffset=FVector::ZeroVector;
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry") FVector RightClearanceOffset=FVector::ZeroVector;
+ UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry",meta=(ClampMin="0.05",ClampMax="0.95")) float ClearanceFraction=.2f;
+ UFUNCTION(BlueprintPure,Category="Door|Geometry") FVector LeafLocationAtFraction(bool Left,float Fraction) const;
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry",meta=(ClampMin="1")) float OpeningWidth=164;
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Geometry",meta=(ClampMin="1")) float OpeningHeight=392;
  UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Door|Timing",meta=(ClampMin="0.05")) float MovementDuration=0.7f;
@@ -93,6 +103,7 @@ public:
 protected:
  virtual void BeginPlay() override;
  void AdvanceDoor(float DeltaSeconds);
+ float FractionAtLeafLocation(bool Left) const;
  void ConfigureSensors();
  TArray<AActor*> QueryPawns(const UBoxComponent* Sensor) const;
  bool EvaluateAccess(AActor* Requester,FName& Reason) const;
