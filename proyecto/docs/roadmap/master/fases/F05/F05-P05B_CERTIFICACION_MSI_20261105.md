@@ -46,6 +46,10 @@ La DLL recién compilada con MSVC se inspeccionó con `dumpbin /EXPORTS` y `/DEP
 
 RHI hardware observado: **D3D12, SM5, adaptador 0 NVIDIA GeForce RTX 4070 Laptop GPU**, 7948 MB VRAM, driver **617.14 / 32.0.16.1714**. El adaptador software también se enumera, pero el log elige explícitamente el adaptador 0. En ambos backends el módulo debe mostrar `ready=1`; ver logs y matriz final.
 
+## Incidencia global de arranque pendiente de atribución
+
+Los dos logs de la ejecución final contienen cada uno **14 mensajes `LogAutomationTest: Error: Condition failed` durante el arranque del editor**, antes de iniciar la cola F05. No aparecen como errores de las doce pruebas en `index.json`; el editor sale con código 0 y los doce estados son Success. Se conserva el log íntegro y **no se declara arranque sin errores globales**. Su origen no está aislado: queda pendiente de atribuir mediante diagnóstico específico del arranque del motor/harness en la auditoría posterior. No se desactivan plugins ni se filtran mensajes para conseguir PASS. Esta limitación se añade al bloqueo por privilegios y a la doble ejecución integral pendiente.
+
 ## Evidencias, límites y continuación
 
 [Paquete permanente](evidence/F05-P05B/20261105-MSI/summary.json): XML originales, logs Core/nativo/UBT/Unreal, reportes Automation originales, error y contexto del crash, sonda DLL, versiones y comandos. `SHA256SUMS.json` permite verificar cada archivo del paquete. No se publican DLL, import libraries, minidumps, cachés ni laboratorios completos. Los reportes incompletos o ausentes no se convierten en PASS.

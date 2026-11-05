@@ -229,5 +229,16 @@
     "hardware_success_states": 12,
     "warnings_per_backend": 3,
     "note": "World had no context at Actor destruction; corrected in final harness, original reports retained"
+  },
+  "startup_incident": {
+    "per_final_editor_run_global_condition_failed_errors": 14,
+    "phase": "editor startup before F05 automation queue",
+    "attribution": "UNRESOLVED",
+    "automation_report_errors": 0,
+    "editor_exit_codes": [
+      0,
+      0
+    ],
+    "complete_logs_retained": true
   }
 }
