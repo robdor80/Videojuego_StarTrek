@@ -1,0 +1,101 @@
+{
+  "date_context": "21/10/2026 Europe/Madrid",
+  "timestamp_utc": "2026-10-21T12:07:13.921068+00:00",
+  "laboratory": "%USERPROFILE%\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio",
+  "status": "VOY-02 evaluation complete; production approval and future systems not claimed",
+  "reports": [
+    "00_RESUMEN_EJECUTIVO.md",
+    "01_ESCALAS_ERGONOMIA.md",
+    "02_MODULARIDAD_PASILLOS.md",
+    "03_CONEXION_PUENTE_PASILLOS.md",
+    "04_CAMAROTE_JUGADOR.md",
+    "05_PUERTAS_SILLAS_CONSOLAS.md",
+    "06_MATERIALES_RENDIMIENTO.md",
+    "07_HOJA_DE_RUTA_RECOMENDADA.md",
+    "08_PRUEBAS_Y_LIMITACIONES.md"
+  ],
+  "blend": {
+    "path": "%USERPROFILE%\\Documents\\Auditorias_3D\\Voyager_VOY02_Laboratorio\\ESCENAS\\VOY02_Laboratorio.blend",
+    "sha256": "15a1f59850ccca78dc371bae6035bd785e7a36bf852b48943ab4f6a897d10eba",
+    "scenes": 8,
+    "packed_images": 49,
+    "prototype_components_compared": 645,
+    "all_match": true,
+    "tolerance_m": 2e-05,
+    "max_error_m": 1.1444091796875e-05
+  },
+  "captures": 33,
+  "analytical_plates": 4,
+  "contact_sheets": 4,
+  "csv_tables": 20,
+  "json_data_files": 40,
+  "sources_originals": 115,
+  "sources_copies": 106,
+  "all_sources_match": true,
+  "scene_review": "Eight scenes reopened and inventoried; G surfaces exhaustively compared to tested prototype. Other scenes share corrected OBJ datablocks; no claim of independent full physical testing of every scene.",
+  "routes": [
+    {
+      "id": "PUENTE_AL_TURBOLIFT",
+      "tests": [
+        {
+          "height": 1.6,
+          "samples": 948,
+          "clear": true
+        },
+        {
+          "height": 1.75,
+          "samples": 948,
+          "clear": true
+        },
+        {
+          "height": 1.9,
+          "samples": 948,
+          "clear": true
+        }
+      ],
+      "support": true
+    },
+    {
+      "id": "PUENTE_AL_CAMAROTE",
+      "tests": [
+        {
+          "height": 1.6,
+          "samples": 1110,
+          "clear": true
+        },
+        {
+          "height": 1.75,
+          "samples": 1110,
+          "clear": true
+        },
+        {
+          "height": 1.9,
+          "samples": 1110,
+          "clear": true
+        }
+      ],
+      "support": true
+    }
+  ],
+  "adapter_revision": {
+    "id": "R1_RETRANQUEO_140MM",
+    "reason": "Transverse contacts between flared AD_PUENTE and full rear leaves at static open pose.",
+    "previous": "TRASPASO/ANTES_RETRANQUEO_prototipo_conjunto.json",
+    "scope": "Only walls/roof of new AD_PUENTE; source bridge, leaf transforms, modules, floor and furniture unchanged."
+  },
+  "final_adapter_transverse_contacts": 0,
+  "format_files_checked": 77,
+  "python_scripts_parsed": 31,
+  "broken_report_links": [],
+  "not_certified": [
+    "continuous central/navigation bridge access",
+    "door pockets and continuous motion",
+    "human rig/posture/sit-stand/controls",
+    "continuous disability access",
+    "UE CharacterMovement/NavMesh/physics/FPS/Lumen",
+    "artistic restoration/production integration"
+  ],
+  "no_original_models_modified": true,
+  "no_sutherland_or_ue_project_modified": true,
+  "no_publication_or_git_mutation": true
+}

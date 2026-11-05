@@ -15,9 +15,12 @@ MODELS = {'.blend', '.fbx', '.glb', '.gltf', '.obj', '.mtl', '.dae', '.usd',
 LIGHT = {'.md', '.txt', '.json', '.yaml', '.yml', '.csv', '.tsv', '.xml',
          '.toml', '.ini', '.cfg', '.license', '.spdx', '.url', '.gitkeep'}
 POLICY = 'desarrollo/manifests/git_storage_exceptions.json'
-LOCAL_ROOTS = ('laboratorios/', 'archivo_historico/', '3d star trek/',
-               'auditorias_3d_voyager/', 'sutherland_pbr_lab/',
-               'tabula rasa copia seguridad/', '_st/')
+LOCAL_ROOTS = ('laboratorios/', 'archivo_historico/', 'sutherland_pbr_lab/',
+               'tabula rasa copia seguridad/')
+SOURCE = {'.py', '.ps1', '.sh', '.bat', '.cmd', '.cpp', '.c', '.h', '.hpp',
+          '.cs', '.inc', '.cmake', '.js', '.ts', '.tsx', '.jsx', '.html', '.css',
+          '.uproject', '.uplugin'}
+RESOURCE_ROOTS = ('assets/', '3d star trek/', 'auditorias_3d_voyager/', '_st/')
 
 def git(*args, data=None):
     return subprocess.check_output(['git', *args], input=data)
@@ -33,13 +36,13 @@ def prohibited(path):
     for root in LOCAL_ROOTS:
         if low.startswith(root) and low != root + 'readme.md':
             return 'recurso local / laboratorio / respaldo'
-    if low.startswith('assets/') and suffix not in LIGHT and p.name.casefold() not in {'.gitkeep', 'license', 'licence', 'copying', 'notice', 'authors', 'copyright'}:
-        return 'binario de biblioteca assets'
+    if low.startswith(RESOURCE_ROOTS) and suffix not in LIGHT | SOURCE and p.name.casefold() not in {'.gitkeep', 'license', 'licence', 'copying', 'notice', 'authors', 'copyright'}:
+        return 'binario de biblioteca local'
     if any(part.casefold() in {'intermediate', 'saved', 'deriveddatacache', '__pycache__', '.vs'} for part in p.parts):
         return 'cache regenerable'
     if low.startswith('juego/ue5/startrekrpg/binaries/'):
         return 'binario Unreal regenerable del proyecto principal'
-    if any(part.casefold() in {'textures', 'texturas_pbr', 'materiales_pbr'} for part in p.parts) and suffix not in LIGHT and p.name.casefold() not in {'.gitkeep', 'license', 'licence', 'copying', 'notice', 'authors', 'copyright'}:
+    if any(part.casefold() in {'textures', 'texturas_pbr', 'materiales_pbr'} for part in p.parts) and suffix not in LIGHT | SOURCE and p.name.casefold() not in {'.gitkeep', 'license', 'licence', 'copying', 'notice', 'authors', 'copyright'}:
         return 'recurso de texturas local'
     return None
 

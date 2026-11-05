@@ -1,0 +1,11 @@
+[/Script/EngineSettings.GameMapsSettings]
+EditorStartupMap=/Game/ValhallaV07/Maps/L_Supercomputadora_V07_Funcional
+GameDefaultMap=/Game/ValhallaV07/Maps/L_Supercomputadora_V07_Funcional
+
+[/Script/Engine.RendererSettings]
+r.DynamicGlobalIlluminationMethod=0
+r.ReflectionMethod=0
+r.AllowStaticLighting=False
+
+[/Script/UnrealEd.EditorLoadingSavingSettings]
+bAutoSaveEnable=False

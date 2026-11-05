@@ -36,4 +36,12 @@ class GuardTests(unittest.TestCase):
  def test_deletion_does_not_scan_working_tree(self):
   self.write('juego/model.fbx',b'model');self.git('add','.');self.git('rm','--cached','juego/model.fbx')
   self.assertFalse(self.check()['errors']);self.assertTrue((self.r/'juego/model.fbx').exists())
+ def test_knowledge_in_resource_trees_and_texture_folders(self):
+  for root in ['assets/naves', '3D Star Trek/Enterprise-D', '_ST/Valhalla', 'Auditorias_3D_VOYAGER/informes', 'juego/textures']:
+   self.write(root+'/informe.md', '# informe');self.write(root+'/inventario.json', '{}')
+   self.write(root+'/analisis.py', 'print(1)');self.write(root+'/config.toml', 'shared = true')
+  self.git('add', '.');self.assertFalse(self.check()['errors'])
+  for p in ['assets/naves/textura.png', '3D Star Trek/Enterprise-D/modelo.GLB', '_ST/Valhalla/recurso.bin', 'Auditorias_3D_VOYAGER/escena.blend1', 'juego/textures/albedo.png']:
+   self.write(p, b'binary');self.git('add', p)
+  self.assertEqual(len(self.check()['errors']), 5)
 if __name__=='__main__':unittest.main()

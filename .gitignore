@@ -1,43 +1,21 @@
-# Recursos privados locales ST-ORG-01 (reglas anteriores conservadas)
-/_ST/
-/3D Star Trek/
+# Compartir documentación, inventarios, configuración y código en cualquier proyecto.
+# No ignorar directorios de proyectos completos. Revisar contenido antes de git add.
+# El hook git_binary_guard.py mantiene el límite de 25 MiB y valida el índice.
 
-# Biblioteca: únicamente metadatos, índices y licencias ligeras.
-/assets/**
-!/assets/**/
-!/assets/**/*.md
-!/assets/**/*.txt
-!/assets/**/*.json
-!/assets/**/*.yaml
-!/assets/**/*.yml
-!/assets/**/*.csv
-!/assets/**/*.tsv
-!/assets/**/*.xml
-!/assets/**/*.toml
-!/assets/**/*.ini
-!/assets/**/*.cfg
-!/assets/**/*.license
-!/assets/**/*.spdx
-!/assets/**/*.url
-!/assets/**/LICENSE*
-!/assets/**/LICENCE*
-!/assets/**/COPYING*
-!/assets/**/NOTICE*
-!/assets/**/AUTHORS*
-!/assets/**/COPYRIGHT*
-!/assets/**/.gitkeep
-# Auditorías JSON voluminosas: metadatos locales, sujetos también al límite.
-/assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/docs/auditorias/enterprise_bpy_v1/AUDITORIA_ENTERPRISE_DATOS.json
-/assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/docs/auditorias/enterprise_bpy_v2/AUDITORIA_ENTERPRISE_DATOS.json
-
-# Históricos y experimentos existentes conservados físicamente.
-/Auditorias_3D_VOYAGER/
-/Sutherland_PBR_Lab/
-/TABULA RASA COPIA SEGURIDAD/
-/archivo_historico/**
-!/archivo_historico/README.md
+# Unidades locales prescindibles, históricos y copias deliberadas (no proyectos).
 /laboratorios/**
 !/laboratorios/README.md
+/archivo_historico/**
+!/archivo_historico/README.md
+/TABULA RASA COPIA SEGURIDAD/
+/Sutherland_PBR_Lab/
+**/[Bb]ackups/
+**/[Bb]ackup_*/
+*.bak
+*.old
+*.orig
+*.save
+*~
 
 # Modelos y fuentes 3D locales en CUALQUIER ruta, incluido juego/.
 *.[bB][lL][eE][nN][dD]*
@@ -50,18 +28,9 @@
 *.[uU][sS][dD]
 *.[uU][sS][dD][aAcCzZ]
 *.[aA][bB][cC]
-*.3ds
 *.[mM][aA][xX]
-*.ma
-*.mb
-*.c4d
 *.[sS][tT][lL]
 *.[pP][lL][yY]
-*.skp
-*.lwo
-*.lws
-*.spp
-*.sbsar
 *.3[dD][sS]
 *.[mM][aA]
 *.[mM][bB]
@@ -72,35 +41,167 @@
 *.[sS][pP][pP]
 *.[sS][bB][sS][aA][rR]
 
-# Paquetes originales y texturas PBR: restaurar desde respaldo.
+
+# Paquetes, exportaciones y recursos binarios locales; no usar Git LFS.
 *.[zZ][iI][pP]
 *.7[zZ]
 *.[rR][aA][rR]
-*.tar
-*.gz
-**/textures/**
-!**/textures/**/
-!**/textures/**/*.md
-!**/textures/**/*.json
-!**/textures/**/LICENSE*
-**/texturas_PBR/**
-!**/texturas_PBR/**/
-!**/texturas_PBR/**/*.md
-!**/texturas_PBR/**/*.json
-**/materiales_PBR/**
-!**/materiales_PBR/**/
-!**/materiales_PBR/**/*.md
-!**/materiales_PBR/**/*.json
-!**/materiales_PBR/**/*.txt
-!**/materiales_PBR/**/LICENSE*
+*.[tT][aA][rR]
+*.[gG][zZ]
+*.uasset
+*.umap
+*.ubulk
+*.uexp
+*.pak
+*.utoc
+*.ucas
+*.pdb
+*.dll
+*.exe
+*.lib
+*.a
+*.so
+*.dylib
+*.pyd
+*.o
+*.pch
+*.psd
+*.psb
+*.exr
+*.hdr
+*.dds
+*.tga
+*.tif
+*.tiff
 
-# Unreal: datos regenerables. Content, Source, Config y Plugins conservables.
+# Imágenes de bibliotecas 3D, texturas y capturas de auditorías: locales.
+# Documentos y scripts dentro de estas carpetas siguen siendo versionables.
+/assets/**/*.png
+/assets/**/*.jpg
+/assets/**/*.jpeg
+/assets/**/*.webp
+/assets/**/*.bmp
+/assets/**/*.gif
+/assets/**/*.mp4
+/assets/**/*.mov
+/_ST/**/*.png
+/_ST/**/*.jpg
+/_ST/**/*.jpeg
+/_ST/**/*.webp
+/_ST/**/*.bmp
+/_ST/**/*.gif
+/_ST/**/*.mp4
+/_ST/**/*.mov
+/3D Star Trek/**/*.png
+/3D Star Trek/**/*.jpg
+/3D Star Trek/**/*.jpeg
+/3D Star Trek/**/*.webp
+/3D Star Trek/**/*.bmp
+/3D Star Trek/**/*.gif
+/3D Star Trek/**/*.mp4
+/3D Star Trek/**/*.mov
+/Auditorias_3D_VOYAGER/**/*.png
+/Auditorias_3D_VOYAGER/**/*.jpg
+/Auditorias_3D_VOYAGER/**/*.jpeg
+/Auditorias_3D_VOYAGER/**/*.webp
+/Auditorias_3D_VOYAGER/**/*.bmp
+/Auditorias_3D_VOYAGER/**/*.gif
+/Auditorias_3D_VOYAGER/**/*.mp4
+/Auditorias_3D_VOYAGER/**/*.mov
+**/textures/**/*.png
+**/textures/**/*.jpg
+**/textures/**/*.jpeg
+**/textures/**/*.webp
+**/textures/**/*.bmp
+**/textures/**/*.gif
+**/textures/**/*.mp4
+**/textures/**/*.mov
+**/texturas_PBR/**/*.png
+**/texturas_PBR/**/*.jpg
+**/texturas_PBR/**/*.jpeg
+**/texturas_PBR/**/*.webp
+**/texturas_PBR/**/*.bmp
+**/texturas_PBR/**/*.gif
+**/texturas_PBR/**/*.mp4
+**/texturas_PBR/**/*.mov
+**/materiales_PBR/**/*.png
+**/materiales_PBR/**/*.jpg
+**/materiales_PBR/**/*.jpeg
+**/materiales_PBR/**/*.webp
+**/materiales_PBR/**/*.bmp
+**/materiales_PBR/**/*.gif
+**/materiales_PBR/**/*.mp4
+**/materiales_PBR/**/*.mov
+
+# Geometría numérica, materiales exportados y binarios de biblioteca.
+*.npz
+*.npy
+*.mtlx
+*.tres
+*.mc6
+/assets/**/*.pdf
+/assets/**/*.bin
+
+# Volcados numéricos extensos detectados: conservar resúmenes e inventarios.
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/blender_glb.json
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/blender_obj_split.json
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/blender_recovery.json
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/deep_obj_split.json
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/deep_obj_work.json
+/Auditorias_3D_VOYAGER/Voyager_Puente_2026-10-21/DATOS/deep_recovery.json
+/Auditorias_3D_VOYAGER/Voyager_VOY02_Laboratorio/DATOS/acceso_central_revision.json
+/Auditorias_3D_VOYAGER/Voyager_VOY02_Laboratorio/DATOS/interfaces_modulos.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/acceso_central_revision.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/barridos_A0_errores_numericos.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/barridos_A1_sin_apoyo_continuo.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/barridos_resultados.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/barridos_resultados_parcial.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/busqueda_original.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/integridad_final.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/planos_soporte_plot.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/rutas_A2_atajo_esquina.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/rutas_originales_candidatas.json
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/rutas_puntos.csv
+/Auditorias_3D_VOYAGER/Voyager_VOY03_Laboratorio/DATOS/soportes_finales_plot.json
+/Auditorias_3D_VOYAGER/Voyager_VOY04_Laboratorio/DATOS/baseline.json
+/Auditorias_3D_VOYAGER/Voyager_VOY04_Laboratorio/DATOS/integridad_final.json
+/Auditorias_3D_VOYAGER/Voyager_VOY04_Laboratorio/DATOS/trayectorias.json
+/Auditorias_3D_VOYAGER/Voyager_VOY04_Laboratorio/DATOS/trayectorias_A1_FALLO_GUIA.json
+/Auditorias_3D_VOYAGER/Voyager_VOY04_Laboratorio/DATOS/trayectorias_A3_FALLO_MANOS.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/bordes_abiertos.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/bordes_puente_obj.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/inventario_puertas_accesos.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/puente_max_auditoria.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/puente_max_desktop_auditoria.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05A_Laboratorio/DATOS/puente_obj_auditoria.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05B_Laboratorio/DATOS/espacios_medidos.json
+/Auditorias_3D_VOYAGER/Voyager_VOY05B_Laboratorio/DATOS/puente_medicion_repetida.json
+
+# Planos gráficos y documentos ofimáticos originales: pendientes de revisión editorial.
+/PROYECTO VALHALLA/Blueprints/**/*.jpg
+/PROYECTO VALHALLA/Clase Valhalla.docx
+/PROYECTO VALHALLA/Clase Valhalla.pdf
+
+# Volcados de auditoría masivos y copias de entradas; conservar informes y scripts propios.
+/assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/docs/auditorias/enterprise_bpy_v1/AUDITORIA_ENTERPRISE_DATOS.json
+/assets/puentes/starfleet/uss_ascendant/puente_uss_ascendant/docs/auditorias/enterprise_bpy_v2/AUDITORIA_ENTERPRISE_DATOS.json
+/Auditorias_3D_VOYAGER/**/FUENTES/
+/Auditorias_3D_VOYAGER/**/REFERENCIAS/
+/Auditorias_3D_VOYAGER/**/HERRAMIENTAS/
+/Auditorias_3D_VOYAGER/**/VERIFICACION/
+/Auditorias_3D_VOYAGER/Voyager_Bridge_Recovery/informes/auditoria_voyager.json
+
+# Unreal y compilaciones: mantener Source, Config, Plugins y descriptores.
 **/Intermediate/
 **/Saved/
 **/DerivedDataCache/
+**/Binaries/
+**/Build/Receipts/
 **/.vs/
-/juego/UE5/StarTrekRPG/Binaries/
-/juego/UE5/StarTrekRPG/Build/Receipts/
+**/CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
 *.sln
 *.suo
 *.VC.db
@@ -108,17 +209,54 @@
 *.opensdf
 *.sdf
 
-# Herramientas locales
+# Python, Node, temporales y estado de herramientas locales.
 **/__pycache__/
 *.py[cod]
 .pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .venv/
 venv/
 node_modules/
+.codex-remote-attachments/
 *.tmp
-*.log
+*.temp
+*.swp
+*.swo
+*.[lL][oO][gG]
 .DS_Store
 Thumbs.db
+
+# Configuración Unreal local con token Android File Server (plantilla .example publicable).
+/PROYECTO VALHALLA/Salas construidas/Sala computadora Enterprise Valhalla/UE5_*/Config/DefaultEngine.ini
+
+# Secretos y configuración privada: estas reglas prevalecen sobre cualquier excepción.
+.env
+.env.*
+!.env.example
+!.env.sample
+*.local.json
+*.local.yaml
+*.local.yml
+*.local.toml
+*.local.ini
+*.local.cfg
+*.private.*
+credentials.json
+credentials.*.json
+credentials.yaml
+credentials.yml
+credentials.toml
+secrets.toml
+secrets.json
+secrets.yaml
+secrets.yml
+*.pem
+*.key
+*.p12
+*.pfx
+.ssh/
+.aws/
 
 # USS Sutherland: evidencias y resultados experimentales conservados solo localmente.
 /juego/Clase Miranda/puente/analisis_dimensional/capturas/seis_sillas/
@@ -128,18 +266,5 @@ Thumbs.db
 /juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion.json
 /juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion_primera_lectura.json
 /juego/Clase Miranda/puente/analisis_dimensional/hueco_superior_01/inspeccion_modo_edicion.json
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Backups/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Backup_F07_Sutherland/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Intermediate/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Saved/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/DerivedDataCache/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Binaries/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Content/**/*.uasset
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/Content/**/*.umap
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/**/*.pdb
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/Unreal/**/*.dll
 /juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Exports/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Backups/
 /juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/Capturas/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/__pycache__/
-/juego/Clase Miranda/puente/unreal/Sutherland_Ergonomia03_ParteA/PBR_SeisSillas_01/*.log
