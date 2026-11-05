@@ -31,3 +31,5 @@ Repositorio de **diseño, canon, contratos específicos, recursos de referencia,
 
 Instalar la comprobación de commits en cada clon: `python desarrollo/tools/install_git_guard.py`.
 Reconstruir las carpetas vacías: `python desarrollo/tools/restore_structure.py`.
+
+Política de publicación: [compartir conocimiento sin recursos pesados](desarrollo/GITIGNORE_CONOCIMIENTO.md).
