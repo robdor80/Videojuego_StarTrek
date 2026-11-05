@@ -1,10 +1,6 @@
 # F05-P05B — certificación integral en MSI
 
-**PENDIENTE / NO EJECUTADA.** P05A es una auditoría Cloud; CI Windows no
-acredita este procedimiento. MSI apagado. F05 permanece EN_CURSO, P01–P04
-EN_REVISION y F06 bloqueada. La suite documental histórica P05 no certifica
-P05A/P05B. Solo un acta posterior, después de auditar las evidencias reales,
-podrá proponer el cierre; este runner no cambia el estado del proyecto.
+**EJECUCIÓN AUTOMATIZADA COMPLETADA, 05-11-2026: 2/2 repeticiones oficiales.** Véanse el [informe para auditoría independiente](F05-P05B_CERTIFICACION_INTEGRAL_MSI_20261105.md) y los [resultados reales](evidence/F05-P05B/20261105-MSI-INTEGRAL/summary.json). Se conserva un SKIP POSIX Core/Windows permitido por repetición y los 14 errores globales de arranque se reproducen en controles del motor sin F05. No se ocultan ni se declara arranque sin errores. La auditoría independiente de ChatGPT y el acta del propietario siguen pendientes. F05 permanece EN_CURSO, P01–P04 EN_REVISION y F06 BLOQUEADA; PR #89 Draft, sin fusionar. Este procedimiento no cierra la fase ni cambia su estado de aceptación formal. Las referencias de preparación Cloud que siguen son históricas y no sustituyen el informe MSI del HEAD probado.
 
 Conciliación Cloud del 03-11-2026: la CI de la PR #87 en
 `c3ede747225cc009da54a5d2c4732f4760c63c2e` terminó con 10/10 jobs SUCCESS,

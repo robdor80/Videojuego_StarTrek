@@ -1,0 +1,12 @@
+
+INFORMACIÓN DE PRIVILEGIOS
+--------------------------
+
+Nombre de privilegio          Descripción                                  Estado       
+============================= ============================================ =============
+SeLockMemoryPrivilege         Bloquear páginas en la memoria               Deshabilitado
+SeShutdownPrivilege           Apagar el sistema                            Deshabilitado
+SeChangeNotifyPrivilege       Omitir comprobación de recorrido             Habilitada   
+SeUndockPrivilege             Quitar equipo de la estación de acoplamiento Deshabilitado
+SeIncreaseWorkingSetPrivilege Aumentar el espacio de trabajo de un proceso Deshabilitado
+SeTimeZonePrivilege           Cambiar la zona horaria                      Deshabilitado

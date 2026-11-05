@@ -1,0 +1,2 @@
+# Preserve raw runtime evidence bytes; do not rewrite log whitespace.
+* -text -whitespace

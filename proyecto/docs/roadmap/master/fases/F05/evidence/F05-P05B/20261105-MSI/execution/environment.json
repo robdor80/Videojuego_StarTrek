@@ -1,0 +1,53 @@
+{
+  "utc": "2026-11-05T19:51:40.3904534Z",
+  "powershell": "7.6.5",
+  "computer": "FATIROBERMSI",
+  "gpu": [
+    {
+      "Name": "NVIDIA GeForce RTX 4070 Laptop GPU",
+      "DriverVersion": "32.0.16.1714",
+      "Status": "OK"
+    }
+  ],
+  "disks": [
+    {
+      "Name": "C",
+      "Free": 420798971904,
+      "Used": 602236858368
+    },
+    {
+      "Name": "R",
+      "Free": null,
+      "Used": null
+    },
+    {
+      "Name": "Temp",
+      "Free": 420798971904,
+      "Used": 602236858368
+    }
+  ],
+  "tools": [
+    {
+      "Name": "cmake.exe",
+      "Source": "C:\\Program Files\\CMake\\bin\\cmake.exe"
+    },
+    {
+      "Name": "ctest.exe",
+      "Source": "C:\\Program Files\\CMake\\bin\\ctest.exe"
+    },
+    {
+      "Name": "python.exe",
+      "Source": "C:\\Users\\andro\\AppData\\Local\\Programs\\Python\\Python310\\python.exe"
+    },
+    {
+      "Name": "cl.exe",
+      "Source": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\cl.exe"
+    },
+    {
+      "Name": "dumpbin.exe",
+      "Source": "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.51.36231\\bin\\HostX64\\x64\\dumpbin.exe"
+    }
+  ],
+  "sdk": "10.0.26100.0\\",
+  "msvc": "14.51.36231"
+}

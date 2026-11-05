@@ -1,0 +1,20 @@
+{
+  "result": "INCOMPLETE",
+  "hardware_rhi_acceptance": "PENDIENTE_REVISION_LOGS",
+  "final_certification": "PENDIENTE_ACTA",
+  "utc": "2026-11-05T21:03:14.5929020Z",
+  "computer": "FATIROBERMSI",
+  "trek": "027bb1d680da1f3317dac00d23ef06e0640c14ba",
+  "core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "engine": {
+    "MajorVersion": 5,
+    "MinorVersion": 8,
+    "PatchVersion": 2,
+    "Changelist": 56702186,
+    "CompatibleChangelist": 55116800,
+    "IsLicenseeVersion": 0,
+    "IsPromotedBuild": 1,
+    "BranchName": "++UE5+Release-5.8"
+  },
+  "runs": []
+}

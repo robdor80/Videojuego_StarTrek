@@ -1,6 +1,7 @@
 #include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Engine/World.h"
+#include "Engine/Engine.h"
 #include "GameFramework/Actor.h"
 #include "f05_ai.h"
 bool F05BridgeReady();
@@ -55,9 +56,10 @@ bool FF05AIStale::RunTest(const FString&){
 IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05AIRecovery,"F05.P04.OffscreenRecoveryAndSafety",AiFlags)
 bool FF05AIRecovery::RunTest(const FString&){
  AiCampaign C;if(!TestTrue(TEXT("Ready"),C.Open()))return false;F05AiContext Context{};F05AiView V{};C.Begin(Context);C.Reply(Context,V);
- UWorld* World=UWorld::CreateWorld(EWorldType::Game,false);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
- World->InitializeNewWorld(UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false));
- AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Disposable Actor"),Marker);if(Marker)Marker->Destroy();World->DestroyWorld(false);
+ const auto WorldValues=UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false);
+ UWorld* World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,ERHIFeatureLevel::Num,&WorldValues);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
+ GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
+ AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Disposable Actor"),Marker);if(Marker)TestTrue(TEXT("Destroy disposable Actor"),Marker->Destroy());World->DestroyWorld(false);GEngine->DestroyWorldContext(World);
  TestEqual(TEXT("Apply offscreen"),f05_ai_apply(C.S,C.H.captain,Context.request,&V),uint32(F04_OK));uint64 Order=V.order;
  F05DecisionView D{};C.Evaluate(C.H.ensign,D);C.Evaluate(C.H.ensign,D);TArray<uint8> Future,Replay;C.Save(Future);
  TestTrue(TEXT("Recover"),C.Load(Future));TestEqual(TEXT("Replay accepted intent"),f05_ai_apply(C.S,C.H.captain,Context.request,&V),uint32(F04_OK));C.Reply(Context,V);C.Save(Replay);

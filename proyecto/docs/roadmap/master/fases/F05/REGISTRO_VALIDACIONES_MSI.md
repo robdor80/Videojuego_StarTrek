@@ -118,3 +118,29 @@ No añade ejecución MSI, no acredita ACL Windows ni Unreal, y no marca ninguna
 casilla P01–P04/P05B como superada. Plan P05B revisado: dos builds limpios, DLL
 real, 12 nombres UE exactos y RHI hardware; **PENDIENTE / NO EJECUTADO**.
 No hay cambios nuevos de producto, Core, arte o laboratorios anteriores.
+
+## Ejecución real P05B MSI — 05-11-2026 — BLOQUEADA
+
+Se ejecutó el runner oficial sobre main `486099abd36c18c5ee69c38cd43a95b95910cc5f`, con Core fijado intacto, MSVC real y UE 5.8.2 CL 56702186. Core: **479 PASS, 4 SKIP, 0 FAIL** de 483; tres SKIP symlink no admitidos por falta de privilegio Windows. El runner detuvo la primera repetición y conservó INCOMPLETE. Segunda repetición no iniciada; **0/2 repeticiones completas aceptadas**.
+
+Comprobaciones independientes: F04/F05 **395 PASS, 0 SKIP, 0 FAIL**, incluidos 30 P05A; carga real de DLL, 62 exports y SHA Core correctos. UBT detectó rutas largas; el diagnóstico en ruta corta reprodujo un fatal por doble inicialización UWorld. Se corrigió únicamente el montaje de tres automatizaciones, registrando además contexto del mundo y exigiendo destrucción efectiva del Actor. Sobre `5dcb1d47e26815258fd0c9693758411deccd1a77`: **12/12 Success sin advertencias de prueba en NullRHI y otras 12/12 en D3D12 / NVIDIA RTX 4070 Laptop**, módulo `ready=1`.
+
+Estos diagnósticos reutilizan la DLL nativa recién verificada y **no acreditan la doble ejecución limpia**. No se marca ningún requisito integral como terminado. Pendientes: privilegio efectivo para los tres casos symlink, dos ejecuciones oficiales completas en salidas nuevas sobre el SHA definitivo auditado y auditoría independiente final. No se amplió la lista de SKIP, no se modificó Core, no se instaló software ni se cambió UE.
+
+[Acta, incidencias y continuación](F05-P05B_CERTIFICACION_MSI_20261105.md) · [Resumen y evidencias originales](evidence/F05-P05B/20261105-MSI/summary.json).
+
+**F05 EN_CURSO; F06 BLOQUEADA. No preparada para cierre.** Se conserva el historial anterior y las casillas pendientes; la evidencia parcial no sustituye el procedimiento integral.
+
+## Continuación oficial P05B MSI — 05-11-2026 — 2/2 COMPLETAS
+
+Sobre el HEAD verificado `027bb1d680da1f3317dac00d23ef06e0640c14ba` de `codex/f05-p05b-msi-20261105`, el runner oficial sin modificaciones completó **dos repeticiones nuevas y limpias** con PowerShell 7 elevado por UAC, MSVC real y UE 5.8.2 CL 56702186. Se conservaron los laboratorios y resultados anteriores. Cada repetición: **Core 482 PASS + 1 SKIP POSIX permitido, 0 FAIL; symlink 3/3 PASS; F04/F05 395/395 PASS, sin SKIP; DLL nueva cargada, 62 exports y SHA Core correcto; UBT Succeeded; 12/12 Success en NullRHI y 12/12 Success en D3D12 hardware**, sin advertencias dentro de las pruebas.
+
+El SKIP nominal es `ContentPackLoaderFilesystemTest.ReportsUnreadableManifestWhenPlatformEnforcesIt`. No se cuenta como PASS ni acredita ACL Windows. Los 30 casos P05A, `p05a_J_time`, historia y fixtures productor/consumidor constan ejecutados en ambos JUnit. La selección gráfica efectiva es D3D12/SM5, adaptador 0 NVIDIA GeForce RTX 4070 Laptop GPU. Las DLL nativas y staged de cada repetición tienen el mismo hash. No se acreditan las campañas/diagnósticos históricos excluidos por el procedimiento ni una interfaz artística jugable.
+
+La incidencia de **14 errores globales `LogAutomationTest: Error: Condition failed` por arranque** se reproduce en dos controles de Unreal sin módulos de proyecto ni automatizaciones F05, tanto NullRHI como hardware, antes de inicializar el motor. Ambos controles salen con código 0. El origen está aislado al arranque de la instalación del motor; la aserción concreta sigue sin identificar. Los errores y demás advertencias permanecen visibles en los logs y no se declara arranque sin incidencias.
+
+**P05B-01, P05B-02 y la ejecución técnica P05B-03: evidencia integral obtenida. P05B-04: evidencia y revisión técnica publicadas, pendientes auditoría independiente de ChatGPT y acta del propietario.** Las casillas históricas anteriores se conservan como registro de su fecha, sin convertir esta continuación en un cierre de fase ni una aceptación formal de P01–P04. El resultado bruto del runner es `PASS_AUTOMATED`, 2/2; sus campos de acta/revisión reservados permanecen intactos. La revisión posterior de los logs hardware figura en el nuevo resumen.
+
+[Informe para auditoría independiente](F05-P05B_CERTIFICACION_INTEGRAL_MSI_20261105.md) · [Resultados por repetición y controles](evidence/F05-P05B/20261105-MSI-INTEGRAL/summary.json) · [Hashes del paquete](evidence/F05-P05B/20261105-MSI-INTEGRAL/SHA256SUMS.json). Los incidentes de preparación y su salida INCOMPLETE se conservan separados y no cuentan entre las dos repeticiones aceptadas.
+
+**F05 EN_CURSO; F06 BLOQUEADA. PR #89 Draft, sin fusionar. Auditoría independiente y acta final pendientes.**

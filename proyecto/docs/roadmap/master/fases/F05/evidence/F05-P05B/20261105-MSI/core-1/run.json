@@ -1,0 +1,63 @@
+{
+  "suite": "core",
+  "utc": "2026-11-05T19:51:42.362631+00:00",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python": "3.10.11",
+  "trek_head": "486099abd36c18c5ee69c38cd43a95b95910cc5f",
+  "trek_dirty": false,
+  "core": "76a7b7b485616d8c4994f384a90f123bf333591d",
+  "commands": [
+    [
+      "cmake",
+      "--version"
+    ],
+    [
+      "ctest",
+      "--version"
+    ],
+    [
+      "git",
+      "--version"
+    ],
+    [
+      "cmake",
+      "-S",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\c",
+      "-B",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\w\\laboratorios\\f05\\p05b\\r1\\core-1\\build",
+      "-DCMAKE_BUILD_TYPE=Release",
+      "-G",
+      "Visual Studio 18 2026",
+      "-A",
+      "x64",
+      "-DBUILD_TESTING=ON",
+      "-DCORERPG_BUILD_CONTENT_JSON=ON"
+    ],
+    [
+      "cmake",
+      "--build",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\w\\laboratorios\\f05\\p05b\\r1\\core-1\\build",
+      "--config",
+      "Release",
+      "--parallel",
+      "3"
+    ],
+    [
+      "ctest",
+      "--test-dir",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\w\\laboratorios\\f05\\p05b\\r1\\core-1\\build",
+      "-C",
+      "Release",
+      "--no-tests=error",
+      "--output-on-failure",
+      "--output-junit",
+      "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\w\\laboratorios\\f05\\p05b\\r1\\core-1\\tests.xml",
+      "-j",
+      "3"
+    ]
+  ],
+  "result": "INCOMPLETE",
+  "compiler_files": [
+    "build\\CMakeFiles\\4.4.3\\CMakeCXXCompiler.cmake"
+  ]
+}

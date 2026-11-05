@@ -1,0 +1,12 @@
+[
+  "P:\\laboratorios\\control-v2\\EngineControl.uproject",
+  "-unattended",
+  "-nop4",
+  "-nosplash",
+  "-nosound",
+  "-NoLiveCoding",
+  "-ExecCmds=QUIT_EDITOR",
+  "-stdout",
+  "-FullStdOutLogOutput",
+  "-abslog=P:\\laboratorios\\control-v2\\Hardware-engine.log"
+]

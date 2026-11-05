@@ -1,0 +1,44 @@
+﻿{
+    "status":  "PASS",
+    "startedUtc":  "2026-11-05T20:56:57.2529375Z",
+    "elevated":  true,
+    "computer":  "FATIROBERMSI",
+    "tests":  [
+                  "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+                  "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+                  "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported"
+              ],
+    "binary":  "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\w\\laboratorios\\f05\\p05b\\r1\\core-1\\build\\tests\\Release\\corerpg_content_json_tests.exe",
+    "core":  "C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\20261105\\c",
+    "coreSha":  "76a7b7b485616d8c4994f384a90f123bf333591d",
+    "binarySha256":  "08447B7814E98415C05B13C328D920932949B3E0A9F424169CC0A967EAC44CFE",
+    "testExitCode":  0,
+    "results":  [
+                    {
+                        "name":  "ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported",
+                        "status":  "run",
+                        "result":  "completed",
+                        "failures":  0,
+                        "skipped":  0,
+                        "seconds":  "0.007"
+                    },
+                    {
+                        "name":  "ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported",
+                        "status":  "run",
+                        "result":  "completed",
+                        "failures":  0,
+                        "skipped":  0,
+                        "seconds":  "0.002"
+                    },
+                    {
+                        "name":  "ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported",
+                        "status":  "run",
+                        "result":  "completed",
+                        "failures":  0,
+                        "skipped":  0,
+                        "seconds":  "0.002"
+                    }
+                ],
+    "error":  null,
+    "endedUtc":  "2026-11-05T20:56:57.7875871Z"
+}

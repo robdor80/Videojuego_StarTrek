@@ -1,0 +1,39 @@
+﻿**********************
+Inicio de la transcripción de Windows PowerShell
+Hora de inicio: 20261105215657
+Nombre de usuario: FatiRoberMSI\Fati&Rober
+Usuario RunAs: FatiRoberMSI\Fati&Rober
+Nombre de la configuración: 
+Máquina: FATIROBERMSI (Microsoft Windows NT 10.0.26200.0)
+Aplicación host: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -NonInteractive -File C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\symlink-uac-20261105\run-three-tests.ps1
+Id. de proceso: 28560
+PSVersion: 5.1.26100.9711
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.9711
+BuildVersion: 10.0.26100.9711
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Running main() from C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\w\laboratorios\f05\p05b\r1\core-1\build\_deps\googletest-src\googletest\src\gtest_main.cc
+Note: Google Test filter = ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported:ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported:ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported
+[==========] Running 3 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 3 tests from ContentPackLoaderSymlinkTest
+[ RUN      ] ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported
+[       OK ] ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported (7 ms)
+[ RUN      ] ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported
+[       OK ] ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported (2 ms)
+[ RUN      ] ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported
+[       OK ] ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported (2 ms)
+[----------] 3 tests from ContentPackLoaderSymlinkTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 3 tests from 1 test suite ran. (13 ms total)
+[  PASSED  ] 3 tests.
+RESULT: PASS; logs: C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\symlink-uac-20261105\results-20261105-215657-28560
+**********************
+Fin de la transcripción de Windows PowerShell
+Hora de finalización: 20261105215657
+**********************

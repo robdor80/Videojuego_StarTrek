@@ -1,0 +1,31 @@
+
+INFORMACIÓN DE PRIVILEGIOS
+--------------------------
+
+Nombre de privilegio                      Descripción                                                         Estado       
+========================================= =================================================================== =============
+SeLockMemoryPrivilege                     Bloquear páginas en la memoria                                      Deshabilitado
+SeIncreaseQuotaPrivilege                  Ajustar las cuotas de la memoria para un proceso                    Deshabilitado
+SeSecurityPrivilege                       Administrar registro de seguridad y auditoría                       Deshabilitado
+SeTakeOwnershipPrivilege                  Tomar posesión de archivos y otros objetos                          Deshabilitado
+SeLoadDriverPrivilege                     Cargar y descargar controladores de dispositivo                     Deshabilitado
+SeSystemProfilePrivilege                  Generar perfiles del rendimiento del sistema                        Deshabilitado
+SeSystemtimePrivilege                     Cambiar la hora del sistema                                         Deshabilitado
+SeProfileSingleProcessPrivilege           Generar perfiles de un solo proceso                                 Deshabilitado
+SeIncreaseBasePriorityPrivilege           Aumentar prioridad de programación                                  Deshabilitado
+SeCreatePagefilePrivilege                 Crear un archivo de paginación                                      Deshabilitado
+SeBackupPrivilege                         Hacer copias de seguridad de archivos y directorios                 Deshabilitado
+SeRestorePrivilege                        Restaurar archivos y directorios                                    Deshabilitado
+SeShutdownPrivilege                       Apagar el sistema                                                   Deshabilitado
+SeDebugPrivilege                          Depurar programas                                                   Habilitada   
+SeSystemEnvironmentPrivilege              Modificar valores de entorno firmware                               Deshabilitado
+SeChangeNotifyPrivilege                   Omitir comprobación de recorrido                                    Habilitada   
+SeRemoteShutdownPrivilege                 Forzar cierre desde un sistema remoto                               Deshabilitado
+SeUndockPrivilege                         Quitar equipo de la estación de acoplamiento                        Deshabilitado
+SeManageVolumePrivilege                   Realizar tareas de mantenimiento del volumen                        Deshabilitado
+SeImpersonatePrivilege                    Suplantar a un cliente tras la autenticación                        Habilitada   
+SeCreateGlobalPrivilege                   Crear objetos globales                                              Habilitada   
+SeIncreaseWorkingSetPrivilege             Aumentar el espacio de trabajo de un proceso                        Deshabilitado
+SeTimeZonePrivilege                       Cambiar la zona horaria                                             Deshabilitado
+SeCreateSymbolicLinkPrivilege             Crear vínculos simbólicos                                           Deshabilitado
+SeDelegateSessionUserImpersonatePrivilege Obtén un token de suplantación para otro usuario en la misma sesión Deshabilitado

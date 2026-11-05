@@ -1,6 +1,7 @@
 #include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Engine/World.h"
+#include "Engine/Engine.h"
 #include "GameFramework/Actor.h"
 #include "f05_initiative.h"
 bool F05BridgeReady();
@@ -53,11 +54,12 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05NPCOffscreen,"F05.P03.OffscreenPersistenceA
 bool FF05NPCOffscreen::RunTest(const FString&) {
  InitiativeCampaign C;if(!TestTrue(TEXT("Ready"),C.Open() && C.Brief(C.H.captain,10001) && C.Brief(C.H.ensign,10002)))return false;
  TArray<uint8> Initial,WithWorld,Offscreen,Replay;TestTrue(TEXT("Save initial"),C.Save(Initial));
- UWorld* World=UWorld::CreateWorld(EWorldType::Game,false);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
- World->InitializeNewWorld(UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false));
+ const auto WorldValues=UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false);
+ UWorld* World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,ERHIFeatureLevel::Num,&WorldValues);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
+ GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
  AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Disposable presentation only"),Marker);
  F05DecisionView D{};C.Evaluate(C.H.captain,20001,D);const uint64 Order=D.order;C.Evaluate(C.H.ensign,20002,D);C.Evaluate(C.H.ensign,20003,D);C.Save(WithWorld);
- if(Marker)Marker->Destroy();World->DestroyWorld(false);
+ if(Marker)TestTrue(TEXT("Destroy disposable Actor"),Marker->Destroy());World->DestroyWorld(false);GEngine->DestroyWorldContext(World);
  TestTrue(TEXT("Restore without world or Actors"),C.Load(Initial));C.Evaluate(C.H.captain,20001,D);TestEqual(TEXT("Stable order ID"),D.order,Order);
  C.Evaluate(C.H.ensign,20002,D);F05Evaluation Execute{C.H.ensign,C.Need,20003,C.Revision(),32,0};
  TestEqual(TEXT("Native offscreen execution"),f05_evaluate(C.Session,&Execute,&D),uint32(F04_OK));C.Save(Offscreen);

@@ -1,0 +1,103 @@
+Versi├│n de MSBuild 18.9.1+a81b43525 para .NET Framework
+
+  1>Checking Build System
+  Building Custom Rule C:/Users/andro/Documents/GitHub/Videojuego_StarTrek/laboratorios/f05/p05b/official-20261105/c/CMakeLists.txt
+  timeline.cpp
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  f05_ai_json.cpp
+  history.cpp
+  f05_ai_provider.cpp
+  campaign_persistence.cpp
+  action.cpp
+  content_compatibility.cpp
+  content_catalog.cpp
+  Generando c├│digo...
+  content_diagnostic.cpp
+  content_id.cpp
+  entity_structure.cpp
+  TrekF05Language.vcxproj -> P:\laboratorios\p\clean-1\native\Release\TrekF05Language.lib
+  inspector.cpp
+  knowledge.cpp
+  visibility.cpp
+  context_builder.cpp
+  population.cpp
+  semantic_version.cpp
+  simulation.cpp
+  version_requirement.cpp
+  random.cpp
+  random_streams.cpp
+  persistence.cpp
+  Generando c├│digo...
+  Compilando...
+  rule_check.cpp
+  resource_kind.cpp
+  roll_action.cpp
+  version.cpp
+  world_state.cpp
+  Generando c├│digo...
+  CoreRPG.vcxproj -> P:\laboratorios\p\clean-1\native\f04\corerpg\Release\CoreRPG.lib
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  f04_bridge.cpp
+  f04_bridge.cpp
+     Creando biblioteca P:/laboratorios/p/clean-1/native/f04/Release/TrekF04HistoryReference.lib y objeto P:/laboratorios/p/clean-1/native/f04/Release/TrekF04HistoryReference.exp
+  TrekF04HistoryReference.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\TrekF04HistoryReference.dll
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  history_campaign.cpp
+     Creando biblioteca P:/laboratorios/p/clean-1/native/f04/Release/TrekF04Bridge.lib y objeto P:/laboratorios/p/clean-1/native/f04/Release/TrekF04Bridge.exp
+  TrekF04Bridge.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\TrekF04Bridge.dll
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f04/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt
+  f05_integration_audit_tests.cpp
+  f05_tests.cpp
+  f05_initiative_tests.cpp
+  f05_delegation_tests.cpp
+  f05_ai_tests.cpp
+P:\desarrollo\integration\f05\tests\f05_initiative_tests.cpp(26,27): warning C4805: '==': combinaci├│n no segura de tipo 'uint32_t' y tipo 'bool' en la operaci├│n [P:\laboratorios\p\clean-1\native\f05_initiative_tests.vcxproj]
+  f04_reference_campaign.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_reference_campaign.exe
+  valhalla_tests.cpp
+P:\desarrollo\integration\f05\tests\f05_ai_tests.cpp(98,84): warning C4838: la conversi├│n de 'F05AiRoute' en 'uint32_t' requiere una conversi├│n de restricci├│n [P:\laboratorios\p\clean-1\native\f05_ai_tests.vcxproj]
+  f05_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f05_tests.exe
+  f05_delegation_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f05_delegation_tests.exe
+  sovereign_tests.cpp
+  f04_tests.cpp
+  persistence_audit.cpp
+  f04_valhalla_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_valhalla_tests.exe
+  odyssey_tests.cpp
+  f05_ai_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f05_ai_tests.exe
+  history_faults.cpp
+  guardias_tests.cpp
+  f05_integration_audit_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f05_integration_audit_tests.exe
+  f04_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_tests.exe
+  f04_persistence_audit.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_persistence_audit.exe
+  f05_initiative_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f05_initiative_tests.exe
+  population_tests.cpp
+  organization_tests.cpp
+  f04_sovereign_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_sovereign_tests.exe
+  intrepid_tests.cpp
+  f04_guardias_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_guardias_tests.exe
+  history_campaign.cpp
+  f04_odyssey_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_odyssey_tests.exe
+  f04_organization_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_organization_tests.exe
+  f04_population_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_population_tests.exe
+  history_audit.cpp
+  f04_history_faults.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_history_faults.exe
+  f04_intrepid_tests.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_intrepid_tests.exe
+  f04_history_campaign.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_history_campaign.exe
+  f04_history_audit.vcxproj -> P:\laboratorios\p\clean-1\native\f04\Release\f04_history_audit.exe
+  Building Custom Rule P:/desarrollo/integration/f05/CMakeLists.txt

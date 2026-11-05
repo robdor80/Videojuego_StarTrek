@@ -1,0 +1,25 @@
+-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.
+-- The CXX compiler identification is MSVC 19.51.36256.0
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- F04 history uses an explicit PROPOSED Core revision, not the stable pin
+-- Found Python3: C:/Users/andro/AppData/Local/Programs/Python/Python310/python.exe (found version "3.10.11") found components: Interpreter
+Traceback (most recent call last):
+  File "P:\desarrollo\integration\f04\generate_catalog.py", line 4, in <module>
+    classes=json.loads(source.read_text(encoding='utf-8'))['classes']
+  File "C:\Users\andro\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1134, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+  File "C:\Users\andro\AppData\Local\Programs\Python\Python310\lib\pathlib.py", line 1119, in open
+    return self._accessor.open(self, mode, buffering, encoding, errors,
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\official-20261105\\w\\mundo\\lore\\starships\\classes\\core_starship_classes.json'
+CMake Error at P:/desarrollo/integration/f04/CMakeLists.txt:45 (execute_process):
+  execute_process failed command indexes:
+
+    1: "Child return code: 1"
+
+
+
+-- Configuring incomplete, errors occurred!

@@ -1,0 +1,37 @@
+**********************
+PowerShell transcript start
+Start time: 20261105205138
+Username: FatiRoberMSI\Fati&Rober
+RunAs User: FatiRoberMSI\Fati&Rober
+Configuration Name: 
+Machine: FATIROBERMSI (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Users\andro\.cache\codex-runtimes\codex-primary-runtime\dependencies\native\powershell\pwsh.dll -NoProfile -File C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\execute.ps1
+Process ID: 31260
+PSVersion: 7.6.5
+PSEdition: Core
+GitCommitId: 7.6.5
+OS: Microsoft Windows 10.0.26200
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.4
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is C:\Users\andro\Documents\GitHub\Videojuego_StarTrek\laboratorios\f05\p05b\20261105\execution.log
+**********************************************************************
+** Visual Studio 2026 Developer PowerShell v18.9.1
+** Copyright (c) 2026 Microsoft Corporation
+**********************************************************************
+Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36256 for x64
+(C) Microsoft Corporation. Todos los derechos reservados.
+
+uso : cl [ opción... ] nombre de archivo... [ /link opción de vínculo... ]
+
+
+
+
+PS>TerminatingError(): "Full Core suite failed on run 1"
+**********************
+PowerShell transcript end
+End time: 20261105205310
+**********************

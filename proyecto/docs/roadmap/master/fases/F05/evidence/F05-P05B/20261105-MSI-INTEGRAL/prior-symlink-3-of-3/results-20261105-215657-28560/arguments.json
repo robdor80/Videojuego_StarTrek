@@ -1,0 +1,5 @@
+﻿[
+    "--gtest_filter=ContentPackLoaderSymlinkTest.RejectsResourceSymlinkEscapingPackRootWhenSupported:ContentPackLoaderSymlinkTest.RejectsManifestSymlinkEscapingPackRootWhenSupported:ContentPackLoaderSymlinkTest.AllowsPackRootSymlinkWhenSupported",
+    "--gtest_output=xml:C:\\Users\\andro\\Documents\\GitHub\\Videojuego_StarTrek\\laboratorios\\f05\\p05b\\symlink-uac-20261105\\results-20261105-215657-28560\\gtest.xml",
+    "--gtest_color=no"
+]

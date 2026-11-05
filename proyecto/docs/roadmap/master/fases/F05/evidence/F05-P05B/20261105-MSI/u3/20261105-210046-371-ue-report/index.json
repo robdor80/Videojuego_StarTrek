@@ -1,0 +1,209 @@
+﻿{
+	"devices": [
+		{
+			"deviceName": "FATIROBERMSI",
+			"instance": "3079840349410AB6F420DF801DF62EB8",
+			"instanceName": "FATIROBERMSI-28616",
+			"platform": "WindowsEditor",
+			"oSVersion": "Windows 11 (25H2) [10.0.26200.9711] ",
+			"model": "Default",
+			"gPU": "NVIDIA GeForce RTX 4070 Laptop GPU",
+			"cPUModel": "Intel(R) Core(TM) i9-14900HX",
+			"rAMInGB": 32,
+			"renderMode": "D3D12_SM5",
+			"rHI": "D3D12 (SM5)",
+			"appInstanceLog": ""
+		}
+	],
+	"reportCreatedOn": "2026.11.05-20.01.06",
+	"succeeded": 12,
+	"succeededWithWarnings": 0,
+	"failed": 0,
+	"notRun": 0,
+	"inProcess": 0,
+	"totalDuration": 0.18629562854766846,
+	"comparisonExported": false,
+	"comparisonExportDirectory": "",
+	"tests": [
+		{
+			"testDisplayName": "LifecycleAndRecovery",
+			"fullTestPath": "F05.P01.LifecycleAndRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.0058260001242160797,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "Negatives",
+			"fullTestPath": "F05.P01.Negatives",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.015494000166654587,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "WorldAndActorIndependence",
+			"fullTestPath": "F05.P01.WorldAndActorIndependence",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.021197900176048279,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "DelegationRevocationRecovery",
+			"fullTestPath": "F05.P02.DelegationRevocationRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.012480299919843674,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ExpiryAndChainOfCommand",
+			"fullTestPath": "F05.P02.ExpiryAndChainOfCommand",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.016437500715255737,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "ModesAndLimits",
+			"fullTestPath": "F05.P02.ModesAndLimits",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.016789298504590988,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AuthorityAndKnowledge",
+			"fullTestPath": "F05.P03.AuthorityAndKnowledge",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.016351599246263504,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "NPCInitiativeAndOrders",
+			"fullTestPath": "F05.P03.NPCInitiativeAndOrders",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.015886198729276657,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OffscreenPersistenceAndRecovery",
+			"fullTestPath": "F05.P03.OffscreenPersistenceAndRecovery",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.018147401511669159,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "AIProposalValidation",
+			"fullTestPath": "F05.P04.AIProposalValidation",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.01509460061788559,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "OffscreenRecoveryAndSafety",
+			"fullTestPath": "F05.P04.OffscreenRecoveryAndSafety",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.019283801317214966,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		},
+		{
+			"testDisplayName": "StaleAuthorityAndFallback",
+			"fullTestPath": "F05.P04.StaleAuthorityAndFallback",
+			"tags": [],
+			"state": "Success",
+			"deviceInstance": [
+				"3079840349410AB6F420DF801DF62EB8"
+			],
+			"duration": 0.013306997716426849,
+			"dateTime": "2026.11.05-20.01.06",
+			"entries": [],
+			"warnings": 0,
+			"errors": 0,
+			"artifacts": []
+		}
+	]
+}
