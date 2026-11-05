@@ -1,3 +1,5 @@
+> Actualización del 5 de noviembre de 2026: [finalización funcional de los seis accesos](V07_FUNCIONAL_FINALIZACION.md). El cierre estático descrito a continuación corresponde a la entrega del 3 de noviembre y queda conservado como historial.
+
 # USS Enterprise NCC-1701-D — V07, cierre práctico
 
 **3 de noviembre de 2026. Proyecto Galaxia. Recomendación: B — V07 funcional, con limitaciones documentadas.**

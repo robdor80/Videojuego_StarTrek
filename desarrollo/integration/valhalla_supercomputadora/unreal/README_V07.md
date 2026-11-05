@@ -1,3 +1,5 @@
+> Estado actual: [V07 funcional, seis puertas de memoria](README_V07_FUNCIONAL.md). El texto siguiente documenta la entrega histÃ³rica anterior.
+
 # USS Enterprise NCC-1701-D — V07, cierre práctico
 
 Proyecto Galaxia. Se conservan los nombres históricos de carpetas `Valhalla`.

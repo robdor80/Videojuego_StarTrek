@@ -62,7 +62,14 @@ UStaticMesh* MakeMesh(const TSharedPtr<FJsonObject>& R,const FString& Path,const
  TArray<FPolygonGroupID> Groups;
  for(const auto& Name:R->GetArrayField(TEXT("materials"))){auto G=MD.CreatePolygonGroup();FName MaterialName(*Name->AsString());Slot[G]=MaterialName;Groups.Add(G);Mesh->GetStaticMaterials().Add(FStaticMaterial(Mats.FindRef(Name->AsString()),MaterialName,MaterialName));}
  for(const auto& Value:R->GetArrayField(TEXT("triangles"))){auto T=Value->AsObject();auto VI=T->GetArrayField(TEXT("v"));TArray<FVertexInstanceID> Corners;auto N=T->GetArrayField(TEXT("n"));auto U=T->GetArrayField(TEXT("uv"));
-  for(int32 I=0;I<3;I++){auto C=MD.CreateVertexInstance(IDs[(int32)VI[I]->AsNumber()]);Normals[C]=FVector3f(Vec(N[I]->AsArray()));auto Tex=U[I]->AsArray();UV.Set(C,0,FVector2f(Tex[0]->AsNumber(),Tex[1]->AsNumber()));Corners.Add(C);}MD.CreateTriangle(Groups[(int32)T->GetNumberField(TEXT("material"))],Corners);
+  for(int32 I=0;I<3;I++){auto C=MD.CreateVertexInstance(IDs[(int32)VI[I]->AsNumber()]);Normals[C]=FVector3f(Vec(N[I]->AsArray()));auto Tex=U[I]->AsArray();UV.Set(C,0,FVector2f(Tex[0]->AsNumber(),Tex[1]->AsNumber()));Corners.Add(C);}
+  // New construction uses Unreal front faces. Recheck after float conversion:
+  // tiny triangulation slivers can change orientation when baked in world space.
+  if(Path.Contains(TEXT("/Completion/"))&&!Path.Contains(TEXT("_Architecture"))){
+   auto X=Position[MD.GetVertexInstanceVertex(Corners[0])];auto Y=Position[MD.GetVertexInstanceVertex(Corners[1])];auto Z=Position[MD.GetVertexInstanceVertex(Corners[2])];
+   if(FVector3f::DotProduct(FVector3f::CrossProduct(Y-X,Z-X),Normals[Corners[0]]+Normals[Corners[1]]+Normals[Corners[2]])>0)Swap(Corners[1],Corners[2]);
+  }
+  MD.CreateTriangle(Groups[(int32)T->GetNumberField(TEXT("material"))],Corners);
  }
  auto& Source=Mesh->AddSourceModel();Source.BuildSettings.bRecomputeNormals=false;Source.BuildSettings.bRecomputeTangents=true;Source.BuildSettings.bUseFullPrecisionUVs=true;Source.BuildSettings.bGenerateLightmapUVs=false;
  UStaticMesh::FBuildMeshDescriptionsParams Params;Params.bAllowCpuAccess=true;Params.bBuildSimpleCollision=false;Params.bFastBuild=false;
@@ -145,6 +152,45 @@ FString UVHAutomaticDoorTools::AuditImportedScene(const FString& SourceFile,cons
  for(const auto& Value:Data->GetArrayField(TEXT("instances"))){auto R=Value->AsObject();auto* Mesh=Meshes.FindRef(R->GetStringField(TEXT("mesh")));auto* Batch=Batches.FindRef(Mesh);if(!Batch){TransformsMatch=false;continue;}int32 Instance=Next.FindOrAdd(Mesh)++;FTransform Actual;if(!Batch->GetInstanceTransform(Instance,Actual,true)){TransformsMatch=false;continue;}auto Q=R->GetArrayField(TEXT("rotation"));FTransform Expected(FQuat(Q[0]->AsNumber(),Q[1]->AsNumber(),Q[2]->AsNumber(),Q[3]->AsNumber()),Vec(R->GetArrayField(TEXT("location"))),Vec(R->GetArrayField(TEXT("scale"))));FBox Box=Mesh->GetBoundingBox();for(int I=0;I<8;I++){FVector P(I&1?Box.Max.X:Box.Min.X,I&2?Box.Max.Y:Box.Min.Y,I&4?Box.Max.Z:Box.Min.Z);WorldError=FMath::Max(WorldError,FVector::Distance(Actual.TransformPosition(P),Expected.TransformPosition(P)));}Placements++;}
  for(auto& Entry:Batches)CountsMatch&=Next.FindRef(Entry.Key)==Entry.Value->GetInstanceCount();
  Report->SetBoolField(TEXT("ok"),CountsMatch&&MaterialsMatch&&TransformsMatch&&MeshCount==Data->GetObjectField(TEXT("meshes"))->Values.Num()&&PositionError<.002&&WorldError<.005&&UVError<.0001&&NormalError<.0001);Report->SetBoolField(TEXT("counts_match"),CountsMatch);Report->SetBoolField(TEXT("material_slots_match"),MaterialsMatch);Report->SetNumberField(TEXT("mesh_assets_checked"),MeshCount);Report->SetNumberField(TEXT("static_placements_checked"),Placements);Report->SetNumberField(TEXT("maximum_local_position_error_cm"),PositionError);Report->SetNumberField(TEXT("maximum_world_transform_error_cm"),WorldError);Report->SetNumberField(TEXT("maximum_uv_error"),UVError);Report->SetNumberField(TEXT("maximum_normal_error"),NormalError);return Json(Report);
+}
+
+FString UVHAutomaticDoorTools::TraceV07Surfaces(const FString& Input){
+ TSharedPtr<FJsonObject> Data;if(!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Input),Data))return TEXT("{}");
+ auto* W=GEditor->GetEditorWorldContext().World();TArray<TSharedPtr<FJsonValue>> Rows;
+ for(auto V:Data->GetArrayField(TEXT("rays"))){auto R=V->AsObject();FHitResult H;FCollisionQueryParams Q;Q.bTraceComplex=true;bool Hit=W->LineTraceSingleByChannel(H,Vec(R->GetArrayField(TEXT("start"))),Vec(R->GetArrayField(TEXT("end"))),ECC_Visibility,Q);auto O=MakeShared<FJsonObject>();O->SetStringField(TEXT("id"),R->GetStringField(TEXT("id")));O->SetBoolField(TEXT("hit"),Hit);O->SetNumberField(TEXT("z"),H.ImpactPoint.Z);O->SetNumberField(TEXT("normal_z"),H.ImpactNormal.Z);O->SetStringField(TEXT("actor"),GetNameSafe(H.GetActor()));Rows.Add(MakeShared<FJsonValueObject>(O));}
+ auto O=MakeShared<FJsonObject>();O->SetArrayField(TEXT("rays"),Rows);return Json(O);
+}
+
+bool UVHAutomaticDoorTools::ExportV07Geometry(const FString& File){
+ auto* World=GEditor->GetEditorWorldContext().World();
+ if(!World||!World->GetOutermost()->GetName().Contains(TEXT("V07"))||FPaths::FileExists(File))return false;
+ auto Out=MakeShared<FJsonObject>();auto Meshes=MakeShared<FJsonObject>();TArray<TSharedPtr<FJsonValue>> Instances;
+ auto Array=[](FVector V){return TArray<TSharedPtr<FJsonValue>>{MakeShared<FJsonValueNumber>(V.X),MakeShared<FJsonValueNumber>(V.Y),MakeShared<FJsonValueNumber>(V.Z)};};
+ for(TActorIterator<AActor> It(World);It;++It){TArray<UStaticMeshComponent*> Cs;It->GetComponents(Cs);for(auto* C:Cs){UStaticMesh* M=C->GetStaticMesh();if(!M||!M->GetMeshDescription(0))continue;FString Key=M->GetPathName();
+  if(!Meshes->HasField(Key)){auto R=MakeShared<FJsonObject>();const auto& MD=*M->GetMeshDescription(0);FStaticMeshConstAttributes A(MD);TArray<TSharedPtr<FJsonValue>> Verts,Tris,Mats;TMap<FVertexID,int32> VertexIndex;TMap<FPolygonGroupID,int32> GroupIndex;
+   for(auto V:MD.Vertices().GetElementIDs()){VertexIndex.Add(V,Verts.Num());Verts.Add(MakeShared<FJsonValueArray>(Array(FVector(A.GetVertexPositions()[V]))));}
+   for(auto G:MD.PolygonGroups().GetElementIDs()){GroupIndex.Add(G,Mats.Num());auto Slot=A.GetPolygonGroupMaterialSlotNames()[G];auto Index=M->GetMaterialIndex(Slot);auto* Mat=M->GetMaterial(Index);if(!Mat)return false;Mats.Add(MakeShared<FJsonValueString>(Mat->GetPathName()));}
+   for(auto T:MD.Triangles().GetElementIDs()){auto R2=MakeShared<FJsonObject>();TArray<TSharedPtr<FJsonValue>> VI,UVs,Ns;for(auto I:MD.GetTriangleVertexInstances(T)){VI.Add(MakeShared<FJsonValueNumber>(VertexIndex[MD.GetVertexInstanceVertex(I)]));auto UV=A.GetVertexInstanceUVs().Get(I,0);UVs.Add(MakeShared<FJsonValueArray>(TArray<TSharedPtr<FJsonValue>>{MakeShared<FJsonValueNumber>(UV.X),MakeShared<FJsonValueNumber>(UV.Y)}));Ns.Add(MakeShared<FJsonValueArray>(Array(FVector(A.GetVertexInstanceNormals()[I]))));}R2->SetArrayField(TEXT("v"),VI);R2->SetArrayField(TEXT("uv"),UVs);R2->SetArrayField(TEXT("n"),Ns);R2->SetNumberField(TEXT("material"),GroupIndex[MD.GetTrianglePolygonGroup(T)]);Tris.Add(MakeShared<FJsonValueObject>(R2));}
+   R->SetArrayField(TEXT("vertices"),Verts);R->SetArrayField(TEXT("triangles"),Tris);R->SetArrayField(TEXT("materials"),Mats);Meshes->SetObjectField(Key,R);
+  }
+  auto* Batch=Cast<UInstancedStaticMeshComponent>(C);for(int32 I=0;I<(Batch?Batch->GetInstanceCount():1);++I){FTransform T=C->GetComponentTransform();if(Batch)Batch->GetInstanceTransform(I,T,true);auto R=MakeShared<FJsonObject>();R->SetStringField(TEXT("actor"),It->GetName());R->SetStringField(TEXT("component"),C->GetName());R->SetStringField(TEXT("mesh"),Key);R->SetNumberField(TEXT("index"),Batch?I:-1);TArray<TSharedPtr<FJsonValue>> Overrides;for(auto* Material:C->GetMaterials())Overrides.Add(MakeShared<FJsonValueString>(Material?Material->GetPathName():TEXT("")));R->SetArrayField(TEXT("overrides"),Overrides);R->SetArrayField(TEXT("location"),Array(T.GetLocation()));R->SetArrayField(TEXT("scale"),Array(T.GetScale3D()));auto Q=T.GetRotation();R->SetArrayField(TEXT("rotation"),{MakeShared<FJsonValueNumber>(Q.X),MakeShared<FJsonValueNumber>(Q.Y),MakeShared<FJsonValueNumber>(Q.Z),MakeShared<FJsonValueNumber>(Q.W)});Instances.Add(MakeShared<FJsonValueObject>(R));}
+ }}Out->SetObjectField(TEXT("meshes"),Meshes);Out->SetArrayField(TEXT("instances"),Instances);return FFileHelper::SaveStringToFile(Json(Out),*File);
+}
+
+FString UVHAutomaticDoorTools::BuildV07Completion(const FString& File){
+ auto* World=GEditor->GetEditorWorldContext().World();FString Text;TSharedPtr<FJsonObject> Data;
+ if(!World||!World->GetOutermost()->GetName().Contains(TEXT("V07"))||!FFileHelper::LoadFileToString(Text,*File)||!FJsonSerializer::Deserialize(TJsonReaderFactory<>::Create(Text),Data))return TEXT("{\"ok\":false,\"error\":\"Invalid V07 world or manifest\"}");
+ for(TActorIterator<AActor> A(World);A;++A)if(A->ActorHasTag(TEXT("V07_COMPLETION")))return TEXT("{\"ok\":false,\"error\":\"Completion already exists\"}");
+ struct FRemoval{UInstancedStaticMeshComponent* C;int32 I;};TArray<FRemoval> Remove;TSet<FString> Seen;
+ for(auto V:Data->GetArrayField(TEXT("remove"))){auto R=V->AsObject();FString Actor=R->GetStringField(TEXT("actor")),Comp=R->GetStringField(TEXT("component"));int32 Index=R->GetIntegerField(TEXT("index"));FString Identity=Actor+TEXT("/")+Comp+FString::FromInt(Index);if(Seen.Contains(Identity))return TEXT("{\"ok\":false,\"error\":\"Duplicate removal\"}");Seen.Add(Identity);UInstancedStaticMeshComponent* Found=nullptr;
+  for(TActorIterator<AActor> A(World);A;++A)if(A->GetName()==Actor){TArray<UInstancedStaticMeshComponent*> Cs;A->GetComponents(Cs);for(auto* C:Cs)if(C->GetName()==Comp)Found=C;}
+  FTransform T;if(!Found||!Found->GetStaticMesh()||Found->GetStaticMesh()->GetPathName()!=R->GetStringField(TEXT("mesh"))||!Found->GetInstanceTransform(Index,T,true)||(!T.GetLocation().Equals(Vec(R->GetArrayField(TEXT("location"))),.005)||!T.GetScale3D().Equals(Vec(R->GetArrayField(TEXT("scale"))),.00001)||!T.GetRotation().Equals(FQuat(R->GetArrayField(TEXT("rotation"))[0]->AsNumber(),R->GetArrayField(TEXT("rotation"))[1]->AsNumber(),R->GetArrayField(TEXT("rotation"))[2]->AsNumber(),R->GetArrayField(TEXT("rotation"))[3]->AsNumber()),.00001)))return TEXT("{\"ok\":false,\"error\":\"Source identity changed\"}");Remove.Add({Found,Index});
+ }
+ TMap<FString,UMaterial*> Mats;for(auto V:Data->GetArrayField(TEXT("materials"))){FString Path=V->AsString();auto* M=LoadObject<UMaterial>(nullptr,*Path);if(!M)return TEXT("{\"ok\":false,\"error\":\"Missing material\"}");Mats.Add(Path,M);}
+ for(auto V:Data->GetArrayField(TEXT("parts"))){auto R=V->AsObject();FString Path=TEXT("/Game/ValhallaV07/Completion/")+R->GetStringField(TEXT("name"));if(FPackageName::DoesPackageExist(Path))return TEXT("{\"ok\":false,\"error\":\"Target asset exists\"}");}
+ for(auto V:Data->GetArrayField(TEXT("parts"))){auto R=V->AsObject();FString Name=R->GetStringField(TEXT("name"));auto* M=MakeMesh(R,TEXT("/Game/ValhallaV07/Completion/")+Name,Mats,false);auto* A=World->SpawnActor<AStaticMeshActor>();A->SetActorLabel(Name);A->Tags.Add(TEXT("V07_COMPLETION"));A->GetStaticMeshComponent()->SetStaticMesh(M);A->GetStaticMeshComponent()->SetCollisionProfileName(TEXT("BlockAll"));}
+ Remove.Sort([](const FRemoval& A,const FRemoval& B){return A.C==B.C?A.I>B.I:UPTRINT(A.C)<UPTRINT(B.C);});for(auto R:Remove)check(R.C->RemoveInstance(R.I));
+ auto Out=MakeShared<FJsonObject>();Out->SetBoolField(TEXT("ok"),true);Out->SetNumberField(TEXT("replaced_instances"),Remove.Num());Out->SetNumberField(TEXT("parts"),Data->GetArrayField(TEXT("parts")).Num());return Json(Out);
 }
 
 FString UVHAutomaticDoorTools::BuildDoorExtensions(const FString& File){

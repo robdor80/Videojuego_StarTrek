@@ -1,10 +1,10 @@
 {
-  "schema": 2,
-  "status": "FUNCTIONAL_WITH_DOCUMENTED_LIMITATIONS",
+  "schema": 3,
+  "status": "FUNCTIONAL_V07_READY_FOR_MANUAL_INSPECTION",
   "inventory_exhaustive": true,
   "total_real_doors": null,
-  "confirmed_with_identified_leaves": 4,
-  "implemented_mechanisms": 4,
+  "confirmed_with_identified_leaves": 10,
+  "implemented_mechanisms": 10,
   "unresolved_signposted_memory_accesses": 0,
   "stair_frame_instances_reviewed": 12,
   "stair_frame_definition": "Component#10",
@@ -142,6 +142,102 @@
       "static_frame_components": [
         "#51: marco original conservado"
       ]
+    },
+    {
+      "id": "MEM_C01",
+      "actor_id": "MEM_C01",
+      "position_cm": [
+        3111.0613119121417,
+        -872.1512866340959,
+        37
+      ],
+      "yaw_deg": 33.70920049811862,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
+    },
+    {
+      "id": "MEM_C02",
+      "actor_id": "MEM_C02",
+      "position_cm": [
+        1275.967540515512,
+        -1630.138379679137,
+        37
+      ],
+      "yaw_deg": -168.53883546691551,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
+    },
+    {
+      "id": "MEM_C03",
+      "actor_id": "MEM_C03",
+      "position_cm": [
+        3260.9989735134554,
+        -1630.1385254846346,
+        37
+      ],
+      "yaw_deg": -11.461156481909006,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
+    },
+    {
+      "id": "MEM_C04",
+      "actor_id": "MEM_C04",
+      "position_cm": [
+        3111.0613115449764,
+        1366.900474506903,
+        37
+      ],
+      "yaw_deg": -33.7091986028163,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
+    },
+    {
+      "id": "MEM_C05",
+      "actor_id": "MEM_C05",
+      "position_cm": [
+        1275.9674961760234,
+        2124.8875607550917,
+        37
+      ],
+      "yaw_deg": 168.53888368204895,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
+    },
+    {
+      "id": "MEM_C06",
+      "actor_id": "MEM_C06",
+      "position_cm": [
+        3260.99897407189,
+        2124.887448893004,
+        37
+      ],
+      "yaw_deg": 11.4611645330845,
+      "type": "memory_service",
+      "leaves": 2,
+      "mechanism": "AVHAutomaticDoor: retraccion 35 cm y deslizamiento 100 cm",
+      "final": "automatica habilitada",
+      "blocked_unbuilt": false,
+      "validated": true
     }
   ],
   "memory_candidates": [
@@ -154,17 +250,20 @@
         -773.6140489578247,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        3111.0613119121417,
+        -872.1512866340959,
+        37
+      ],
+      "door_yaw_deg": 33.70920049811862,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Recinto de servicio acotado con suelo, techo, laterales y fondo.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627",
@@ -184,12 +283,11 @@
         -761.1556839942932,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_182",
-      "blocking_instance": 24,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 400,
+      "connects_existing_corridor": false
     },
     {
       "id": "MEM_C02",
@@ -200,17 +298,20 @@
         -1631.39009475708,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        1275.967540515512,
+        -1630.138379679137,
+        37
+      ],
+      "door_yaw_deg": -168.53883546691551,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Recinto de servicio acotado con suelo, techo, laterales y fondo.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627.002",
@@ -230,12 +331,11 @@
         -1669.8791179060936,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_191",
-      "blocking_instance": 1322,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 400,
+      "connects_existing_corridor": false
     },
     {
       "id": "MEM_C03",
@@ -246,17 +346,20 @@
         -1631.39009475708,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        3260.9989735134554,
+        -1630.1385254846346,
+        37
+      ],
+      "door_yaw_deg": -11.461156481909006,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Conexion al corredor exterior construido.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627.003",
@@ -276,12 +379,11 @@
         -1669.879239499569,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_184",
-      "blocking_instance": 114,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 180,
+      "connects_existing_corridor": true
     },
     {
       "id": "MEM_C04",
@@ -292,17 +394,20 @@
         1268.3632850646973,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        3111.0613115449764,
+        1366.900474506903,
+        37
+      ],
+      "door_yaw_deg": -33.7091986028163,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Recinto de servicio acotado con suelo, techo, laterales y fondo.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627.004",
@@ -322,12 +427,11 @@
         1255.90487241745,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_224",
-      "blocking_instance": 24,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 400,
+      "connects_existing_corridor": false
     },
     {
       "id": "MEM_C05",
@@ -338,17 +442,20 @@
         2126.1391639709473,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        1275.9674961760234,
+        2124.8875607550917,
+        37
+      ],
+      "door_yaw_deg": 168.53888368204895,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Recinto de servicio acotado con suelo, techo, laterales y fondo.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627.006",
@@ -368,12 +475,11 @@
         2164.6281322836876,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_233",
-      "blocking_instance": 1322,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 400,
+      "connects_existing_corridor": false
     },
     {
       "id": "MEM_C06",
@@ -384,17 +490,20 @@
         2126.1391639709473,
         152.12385058403015
       ],
-      "door_position_cm": null,
-      "door_yaw_deg": null,
-      "leaf_count": null,
-      "type": "static_closed_memory_candidate",
-      "status": "resolved_D_keep_original_static_closure",
-      "automated": false,
+      "door_position_cm": [
+        3260.99897407189,
+        2124.887448893004,
+        37
+      ],
+      "door_yaw_deg": 11.4611645330845,
+      "leaf_count": 2,
+      "type": "new_automatic_memory_service_access",
+      "status": "functional_runtime_validated",
+      "automated": true,
       "validated": true,
-      "note": "Rotulo y controles de servicio exteriores (Component#190/#191/#192), separados de la cara perimetral. Sin umbral transitable ni pareja de hojas independiente atribuida de forma sencilla. Se conserva integro el cierre estatico original; no es necesario abrirlo para recorrer las zonas terminadas. Destino exterior sin continuidad jugable validada.",
-      "practical_option": "D",
+      "note": "Dos hojas nuevas, mecanismo AVHAutomaticDoor. Conexion al corredor exterior construido.",
       "required_for_finished_internal_route": false,
-      "leaf_count_definition": "Atribucion artistica de superficies integradas aplazada. No hay hojas independientes identificadas para reutilizacion sencilla; cierre practico resuelto sin recortar arquitectura.",
+      "leaf_count_definition": "Dos hojas nuevas expresamente construidas; no atribucion retrospectiva de superficies artisticas originales.",
       "wall_reference": {
         "source_definition": "Component#197",
         "parent": "Component_457627.007",
@@ -414,12 +523,11 @@
         2164.628187119961,
         37
       ],
-      "blocking_component": "InstancedStaticMeshComponent_226",
-      "blocking_instance": 114,
-      "blocking_actor": "Sala V04E - geometria original y uniones validadas",
-      "collision_validation": "Aproximacion interior y salto con Quinn; colision estatica original. El barrido de editor puede detectar otra pieza original coincidente antes del mismo cierre.",
-      "independent_leaf_identified": false,
-      "easy_adaptation_confirmed": false
+      "collision_validation": "Quinn cruza en ambos sentidos; barrido fisico libre al abrir, bloqueo de seguridad, ocupacion, seis ciclos completos y limites exteriores comprobados.",
+      "independent_leaf_identified": true,
+      "original_independent_leaf_identified": false,
+      "depth_cm": 180,
+      "connects_existing_corridor": true
     }
   ],
   "exclusions_and_open_questions": [
@@ -442,7 +550,7 @@
       "components": [
         "V04E_APOYO_*"
       ],
-      "classification": "variantes de arquitectura #200/#202; contienen superficies integradas y no se recortan para inventar puertas"
+      "classification": "Arquitectura conservada fuera de los seis volumenes autorizados de acceso; las hojas de memoria son nuevas."
     },
     {
       "components": [
@@ -451,20 +559,20 @@
       "classification": "ocho modulos de banco; no son una pareja de hojas de paso demostrada"
     }
   ],
-  "validated_identified_doors": 4,
-  "inventory_scope": "22 puntos de control de la sala V07: 4 puertas, 6 candidatas senalizadas de memoria, 8 bocas de escalera y 4 extremos de corredor. No inventario de toda la nave.",
+  "validated_identified_doors": 10,
+  "inventory_scope": "22 puntos de control: diez mecanismos de puerta, ocho bocas de escalera y cuatro extremos de corredor. No inventario artistico exhaustivo de la nave.",
   "total_control_points": 22,
-  "total_real_doors_definition": "No se afirma el total artistico de hojas integradas. Se cierra el inventario practico de 22 puntos de control; cuatro puertas con hojas independientes estan identificadas.",
+  "total_real_doors_definition": "Diez mecanismos conocidos en estos puntos de control; no se certifica el total artistico de otras hojas integradas.",
   "practical_resolution_complete": true,
   "formal_closure_pending": true,
-  "automatic_mechanisms": 4,
-  "automatic_enabled_in_main_map": 1,
+  "automatic_mechanisms": 10,
+  "automatic_enabled_in_main_map": 7,
   "open_without_door": 3,
-  "intentionally_closed_control_points": 18,
+  "intentionally_closed_control_points": 12,
   "count_breakdown": {
-    "automatic_enabled": 1,
+    "automatic_enabled": 7,
     "automatic_security_locked": 3,
-    "memory_original_static_closures": 6,
+    "memory_original_static_closures": 0,
     "stair_open_entries": 3,
     "stair_closed_unbuilt": 5,
     "corridor_end_closures": 4
@@ -650,28 +758,18 @@
   "requires_memory_leaf_reconstruction_for_current_play": false,
   "stair_leaf_mapping_note": "Las doce colocaciones de Component#10 se emparejan en seis marcos; no se les atribuyen hojas artisticas ficticias. Tres entradas quedan abiertas y las otras bocas permanecen cerradas. La clasificacion practica esta completa.",
   "regression_results": {
-    "map_runtime": {
-      "passed": 49,
-      "total": 49
-    },
-    "rig_runtime": {
-      "passed": 27,
-      "total": 27
-    },
-    "new_closure_runtime": {
-      "passed": 18,
-      "total": 18
-    },
-    "door_physics": {
-      "passed": 88,
-      "total": 88
-    },
-    "closure_physics": {
-      "passed": 12,
-      "total": 12
-    },
-    "map_check_errors": 0,
-    "map_check_warnings": 0,
-    "manual_personal_playtest": "pending"
-  }
+    "date": "2026-11-05",
+    "main_runtime_cases": 49,
+    "main_runtime_passed": 49,
+    "memory_and_B08_cases": 54,
+    "memory_and_B08_passed": 54,
+    "door_physics_passed": 220,
+    "safety_barrier_physics_passed": 12,
+    "manual_acceptance_pending": true
+  },
+  "map": "/Game/ValhallaV07/Maps/L_Supercomputadora_V07_Funcional",
+  "historical_static_closure_map": "/Game/ValhallaV07/Maps/L_Supercomputadora_V07",
+  "current_final_blender_objects": 15707,
+  "preserved_static_instances": 15634,
+  "source_inspection_note": "Los campos blender_objects_inspected y evaluated_mesh_placements describen el V04E original, identificado por source_sha256."
 }
