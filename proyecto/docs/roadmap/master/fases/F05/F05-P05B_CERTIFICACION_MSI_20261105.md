@@ -55,4 +55,3 @@ Los originales y los worktrees permanecen en el laboratorio local de esta tarea,
 **Pendiente obligatorio:** una sesión con privilegios efectivos para ejecutar los tres casos symlink y dos ejecuciones íntegras del runner oficial sobre el SHA definitivo que se audite, cada una con Core, 395 nativos, DLL nueva, UBT y las 12 pruebas en NullRHI y RHI hardware. Usar worktree/salidas más cortos dentro de la raíz autorizada. No repetir Core en la sesión actual sin resolver primero ese requisito: reproduciría la misma carencia de permisos.
 
 **Recomendación: F05 no está preparada para cierre.** La PR es Draft para revisión del diagnóstico y de las correcciones mínimas. Auditoría independiente ChatGPT y acta final siguen pendientes. No se fusiona la PR, no se cierra F05 y no se desbloquea F06.
-

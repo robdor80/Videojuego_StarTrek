@@ -1,2 +1,2 @@
-# Preserve original evidence bytes for SHA256 verification.
-* -text
+# Preserve raw evidence bytes and exclude them from whitespace lint.
+* -text -whitespace
