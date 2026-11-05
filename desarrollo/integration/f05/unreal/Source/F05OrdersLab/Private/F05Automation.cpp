@@ -1,6 +1,7 @@
 #include "CoreMinimal.h"
 #include "Misc/AutomationTest.h"
 #include "Engine/World.h"
+#include "Engine/Engine.h"
 #include "GameFramework/Actor.h"
 #include "f05_orders.h"
 #include "f05_delegation.h"
@@ -53,8 +54,9 @@ bool FF05Visual::RunTest(const FString&) {
  const auto WorldValues=UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false);
  UWorld* World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,ERHIFeatureLevel::Num,&WorldValues);
  if(!TestNotNull(TEXT("Disposable UWorld"),World))return false;
+ GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
  AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Presentation marker"),Marker);
- if(Marker)Marker->Destroy();World->DestroyWorld(false);C.Save(B);TestTrue(TEXT("Actor and world removal preserve order"),A==B);
+ if(Marker)TestTrue(TEXT("Destroy disposable Actor"),Marker->Destroy());World->DestroyWorld(false);GEngine->DestroyWorldContext(World);C.Save(B);TestTrue(TEXT("Actor and world removal preserve order"),A==B);
  TestEqual(TEXT("Execute offscreen"),f05_execute_order(C.Session,C.H.ensign,C.Revision(),R.order,&R),uint32(F04_OK));TestEqual(TEXT("Completed"),R.state,uint32(F05_COMPLETED));return true;
 }
 
