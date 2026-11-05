@@ -53,8 +53,8 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FF05NPCOffscreen,"F05.P03.OffscreenPersistenceA
 bool FF05NPCOffscreen::RunTest(const FString&) {
  InitiativeCampaign C;if(!TestTrue(TEXT("Ready"),C.Open() && C.Brief(C.H.captain,10001) && C.Brief(C.H.ensign,10002)))return false;
  TArray<uint8> Initial,WithWorld,Offscreen,Replay;TestTrue(TEXT("Save initial"),C.Save(Initial));
- UWorld* World=UWorld::CreateWorld(EWorldType::Game,false);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
- World->InitializeNewWorld(UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false));
+ const auto WorldValues=UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).CreateNavigation(false).CreateAISystem(false);
+ UWorld* World=UWorld::CreateWorld(EWorldType::Game,false,NAME_None,nullptr,true,ERHIFeatureLevel::Num,&WorldValues);if(!TestNotNull(TEXT("Isolated UWorld"),World))return false;
  AActor* Marker=World->SpawnActor<AActor>();TestNotNull(TEXT("Disposable presentation only"),Marker);
  F05DecisionView D{};C.Evaluate(C.H.captain,20001,D);const uint64 Order=D.order;C.Evaluate(C.H.ensign,20002,D);C.Evaluate(C.H.ensign,20003,D);C.Save(WithWorld);
  if(Marker)Marker->Destroy();World->DestroyWorld(false);
