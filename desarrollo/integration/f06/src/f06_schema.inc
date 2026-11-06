@@ -2,6 +2,11 @@
 namespace {
 bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  std::set<U>& required,std::set<U>& ar,std::set<U>& rr) {
+ if(type(w,id,"f06_array")) {
+  allowed={F06_ARRAY_CAPABILITY,F06_ARRAY_POWER,F06_ARRAY_INTEGRITY,
+   F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS};
+  required=allowed;ar={SHIP};rr=ar;return true;
+ }
  if(type(w,id,"f06_signal")) {
   allowed={F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,
    F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT};
@@ -17,11 +22,20 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
 bool f06_schema(const Campaign& c) {
  const auto& w=c.world;
  std::set<U> signals,public_ids;
+ const auto arrays=all(w,"f06_array");
+ if(arrays.size()>1)return false;
+ for(U id:arrays) {
+  if(val(w,id,F06_ARRAY_CAPABILITY)>1000 ||
+   val(w,id,F06_ARRAY_POWER)>1000 ||
+   val(w,id,F06_ARRAY_INTEGRITY)>1000 ||
+   val(w,id,F06_ARRAY_SHORT)>1 || val(w,id,F06_ARRAY_LONG)>1 ||
+   val(w,id,F06_ARRAY_FOCUS)>1)return false;
+ }
  const auto source=all(w,"f06_signal");
  if(source.size()>2048 || all(w,"f06_contact").size()>2048)return false;
  for(U id:source) {
   if(val(w,id,F06_STRENGTH)>1000 || val(w,id,F06_INTERFERENCE)>550 ||
-   val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_OBSERVED_OUT_OF_RANGE)return false;
+   val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_SENSOR_OFFLINE)return false;
  }
  for(U id:all(w,"f06_contact")) {
   const U s=ref(w,id,F06_SIGNAL_REF);
@@ -31,7 +45,7 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_LAST)>c.time.now() ||
    val(w,id,F06_STATUS)<F06_ACTIVE || val(w,id,F06_STATUS)>F06_LOST ||
    val(w,id,F06_CONFIDENCE)>1000 ||
-   val(w,id,F06_LOSS_REASON)>F06_EXIT_OBSERVED_OUT_OF_RANGE ||
+   val(w,id,F06_LOSS_REASON)>F06_EXIT_SENSOR_OFFLINE ||
    val(w,id,F06_DISTANCE)>50000)return false; // classification remains historical even if the source changes
  }
  return true;
