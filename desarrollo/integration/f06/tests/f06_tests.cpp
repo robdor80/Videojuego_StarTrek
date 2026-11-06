@@ -259,6 +259,38 @@ void run(const std::string& scenario){
   const auto saved=l.save();
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
+ } else if(scenario=="results_compare") {
+  l.ready();l.upsert(l.signal(550,5000,4,999));
+  const U id=l.contacts()[0].contact_id;
+  F06ContactView inspected{};
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&inspected)==F04_OK,
+    "first focused readout");
+  F06ResultView results[4]{};U n=0,total=0;
+  ok(f06_results_page(l.s,l.h.captain,id,0,results,4,&n,&total)==F04_OK &&
+     n==1 && total==1 && !results[0].class_id,
+     "first observed snapshot has no invented Defiant identity");
+  const U first=results[0].result_id;
+  auto world=l.signal(960,5000,4,999);
+  auto current=l.contacts();
+  // Existing signal was materialized by first Host upsert; find its ID from
+  // a new independent trusted update, without exposing it in the public API.
+  // Use a dedicated second Lab when class labels cannot be recovered via UI.
+  // Here a new brighter world source may be independently seen.
+  auto receipt=l.upsert(world);
+  (void)receipt;
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,id,&inspected)==F04_OK,
+    "second focused readout");
+  n=total=0;
+  ok(f06_results_page(l.s,l.h.captain,id,0,results,4,&n,&total)==F04_OK &&
+    n==2 && total==2,"two immutable results recorded");
+  F06ComparisonView comparison{};
+  ok(f06_compare_results(l.s,l.h.captain,first,results[1].result_id,&comparison)==F04_OK &&
+     comparison.contact_id==id,"comparative readout uses public IDs");
+  auto saved=l.save();l.load(saved);
+  ok(f06_compare_results(l.s,l.h.captain,first,results[1].result_id,&comparison)==F04_OK,
+    "comparison persists through Core save/load");
+  ok(f06_compare_results(l.s,l.h.captain,first,UINT64_MAX,&comparison)==F04_UNAVAILABLE,
+    "unknown result id cannot address Core internals");
  } else if(scenario=="configuration") {
   l.ready();
   F06ConfigView current{};

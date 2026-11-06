@@ -721,6 +721,76 @@ uint32_t f06_notices_page(F04Session* s,F04Ref who,U after,
   return F04_OK;
  });
 }
+namespace {
+F06ResultView f06_result_view(const WorldState& w,U id) {
+ const U contact=ref(w,id,F06_CONTACT_REF);
+ return {val(w,id,F06_O_PUBLIC),val(w,contact,F06_PUBLIC_ID),
+   val(w,id,F06_O_TICK),
+   f06_unzigzag(val(w,id,F06_O_X)),
+   f06_unzigzag(val(w,id,F06_O_Y)),
+   f06_unzigzag(val(w,id,F06_O_Z)),
+   static_cast<uint32_t>(val(w,id,F06_O_CONF)),
+   static_cast<uint32_t>(val(w,id,F06_O_DISTANCE)),
+   static_cast<uint32_t>(val(w,id,F06_O_CLASS))};
+}
+U f06_result_by_public(const WorldState& w,U id) {
+ for(U entity:all(w,"f06_observation"))if(val(w,entity,F06_O_PUBLIC)==id)return entity;
+ return 0;
+}
+void f06_record_focus(Campaign& c,const ContentCatalog& cat,U contact,U actor) {
+ need(all(c.world,"f06_observation").size()<1024,F04_CAPACITY);
+ const U id=make(c,cat,"f06_observation");
+ link(c,id,SHIP,1);link(c,id,PERSON,actor);link(c,id,F06_CONTACT_REF,contact);
+ const auto view=f06_view(c.world,contact);
+ const U pub=f06_public(id^UINT64_C(0x205c0de),val(c.world,1,SHIP_ID));
+ need(!f06_result_by_public(c.world,pub),F04_CAPACITY);
+ f06_set(c,id,F06_O_PUBLIC,pub);
+ f06_set(c,id,F06_O_TICK,c.time.now());
+ f06_set(c,id,F06_O_CONF,view.confidence_permille);
+ f06_set(c,id,F06_O_DISTANCE,view.distance_milli_au);
+ f06_set(c,id,F06_O_CLASS,view.class_id);
+ f06_set(c,id,F06_O_X,f06_zigzag(view.observed_x_milli_au));
+ f06_set(c,id,F06_O_Y,f06_zigzag(view.observed_y_milli_au));
+ f06_set(c,id,F06_O_Z,f06_zigzag(view.observed_z_milli_au));
+ (void)event(c,cat,actor,6050,F04_OK,0,id);
+}
+}
+uint32_t f06_results_page(F04Session* s,F04Ref who,U public_contact,U offset,
+ F06ResultView* out,U capacity,U* written,U* total) {
+ if(!written || !total || (!out && capacity))return F04_ARGUMENT;*written=*total=0;
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  if(public_contact)need(f06_contact_for_public(s->c->world,public_contact),F04_UNAVAILABLE);
+  std::vector<U> ids;
+  for(U id:all(s->c->world,"f06_observation")) {
+   if(public_contact && val(s->c->world,ref(s->c->world,id,F06_CONTACT_REF),
+      F06_PUBLIC_ID)!=public_contact)continue;
+   ids.push_back(id);
+  }
+  *total=ids.size();need(offset<=*total,F04_ARGUMENT);
+  *written=std::min<U>(capacity,*total-offset);
+  for(U i=0;i<*written;++i)out[i]=f06_result_view(s->c->world,ids[static_cast<size_t>(offset+i)]);
+  return F04_OK;
+ });
+}
+uint32_t f06_compare_results(F04Session* s,F04Ref who,U a,U b,F06ComparisonView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  const U older=f06_result_by_public(s->c->world,a),newer=f06_result_by_public(s->c->world,b);
+  need(older && newer,F04_UNAVAILABLE);
+  need(ref(s->c->world,older,F06_CONTACT_REF)==ref(s->c->world,newer,F06_CONTACT_REF),
+    F04_ARGUMENT);
+  need(val(s->c->world,older,F06_O_TICK)<=val(s->c->world,newer,F06_O_TICK),
+    F04_ARGUMENT);
+  const auto x=f06_result_view(s->c->world,older),y=f06_result_view(s->c->world,newer);
+  *out={a,b,x.contact_id,
+    int64_t(y.confidence_permille)-int64_t(x.confidence_permille),
+    int64_t(y.distance_milli_au)-int64_t(x.distance_milli_au),
+    static_cast<uint32_t>(x.class_id!=y.class_id)};
+  return F04_OK;
+ });
+}
 uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView* out) {
  if(!out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {
@@ -732,6 +802,7 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   const U internal=f06_contact_for_public(next->world,contact);
   need(internal,F04_UNAVAILABLE);
   f06_poll(*next,*s->content.catalog(),internal,true);
+  f06_record_focus(*next,*s->content.catalog(),internal,who.id);
   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
   *out=f06_view(s->c->world,internal);return F04_OK;
  });

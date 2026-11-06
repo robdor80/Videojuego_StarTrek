@@ -20,6 +20,11 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
   required=allowed;required.erase(F06_ARRAY_PROFILE);
   ar={SHIP};rr=ar;return true;
  }
+ if(type(w,id,"f06_observation")) {
+  allowed={F06_O_PUBLIC,F06_O_TICK,F06_O_CONF,F06_O_DISTANCE,
+    F06_O_CLASS,F06_O_X,F06_O_Y,F06_O_Z};
+  required=allowed;ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
+ }
  if(type(w,id,"f06_configuration")) {
   allowed={F06_CONFIG_SENS,F06_CONFIG_RES,F06_CONFIG_COMP,
    F06_CONFIG_PRESET,F06_CONFIG_INTERVAL};
@@ -49,6 +54,17 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
 bool f06_schema(const Campaign& c) {
  const auto& w=c.world;
  std::set<U> signals,public_ids;
+ std::set<U> observation_ids;
+ const auto observations=all(w,"f06_observation");
+ if(observations.size()>1024)return false;
+ for(U id:observations){
+  if(!val(w,id,F06_O_PUBLIC) ||
+   !observation_ids.insert(val(w,id,F06_O_PUBLIC)).second ||
+   !type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") ||
+   val(w,id,F06_O_TICK)>c.time.now() ||
+   val(w,id,F06_O_CONF)>1000 ||
+   val(w,id,F06_O_DISTANCE)>50000)return false;
+ }
  std::set<U> power_keys,power_ids;
  const auto power=all(w,"f06_power_request");
  if(power.size()>256)return false;

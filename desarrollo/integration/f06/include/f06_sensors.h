@@ -151,6 +151,24 @@ F04_API uint32_t f06_diagnostics(F04Session*,F04Ref observer,F06DiagnosticView*)
 F04_API uint32_t f06_run_self_test(F04Session*,F04Ref operator_ref,
  uint64_t expected_revision,F06DiagnosticView*);
 
+/* Snapshots from EXPLICIT focused scans. Passive watch is deliberately not
+ * written as hundreds of observations per hour. Immutable observed data, not
+ * concealed world truth, is indexed for comparison and export to Science. */
+typedef struct {
+ uint64_t result_id,contact_id,tick;
+ int64_t observed_x_milli_au,observed_y_milli_au,observed_z_milli_au;
+ uint32_t confidence_permille,distance_milli_au,class_id;
+} F06ResultView;
+typedef struct {
+ uint64_t older_result_id,newer_result_id,contact_id;
+ int64_t confidence_delta,distance_delta_milli_au;
+ uint32_t class_changed;
+} F06ComparisonView;
+F04_API uint32_t f06_results_page(F04Session*,F04Ref observer,uint64_t contact_id,
+ uint64_t offset,F06ResultView*,uint64_t capacity,uint64_t* written,uint64_t* total);
+F04_API uint32_t f06_compare_results(F04Session*,F04Ref observer,
+ uint64_t older_result_id,uint64_t newer_result_id,F06ComparisonView*);
+
 /* A power request never changes the actual ship power allocation.
  * Only Command / Operations can approve or reject. The trusted power host
  * must separately implement a physical grant before Sensors uses it. */
