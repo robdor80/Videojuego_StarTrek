@@ -123,7 +123,7 @@ bool f06_schema(const Campaign& c) {
  for(U id:source) {
   if(val(w,id,F06_STRENGTH)>1000 || val(w,id,F06_INTERFERENCE)>550 ||
    val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_SENSOR_OFFLINE ||
-   val(w,id,F06_CATEGORY)>F06_CATEGORY_ANOMALY ||
+   val(w,id,F06_CATEGORY)>F06_CATEGORY_ASTEROID ||
    (has(w,id,F06_WORLD_ID) &&
     (!val(w,id,F06_WORLD_ID) || feeds.size()!=1 ||
       !has(w,id,F06_WORLD_TICK) || val(w,id,F06_WORLD_TICK)>c.time.now() ||
@@ -140,7 +140,7 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_LOSS_REASON)>F06_EXIT_SENSOR_OFFLINE ||
    val(w,id,F06_DISTANCE)>50000 ||
    val(w,id,F06_TRACK_MODE)>F06_TRACK_PRIORITY ||
-   val(w,id,F06_SEEN_CATEGORY)>F06_CATEGORY_ANOMALY ||
+   val(w,id,F06_SEEN_CATEGORY)>F06_CATEGORY_ASTEROID ||
    (has(w,id,F06_TRACK_UPDATED) && val(w,id,F06_TRACK_UPDATED)>c.time.now()))return false; // classification remains historical even if the source changes
  }
  return true;

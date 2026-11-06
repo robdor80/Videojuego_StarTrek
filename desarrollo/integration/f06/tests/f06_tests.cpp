@@ -1,5 +1,7 @@
 #include "f06_sensors.h"
 #include "f05_orders.h"
+#include "f06_demo_system_generated.h"
+#include <algorithm>
 #include <array>
 #include <cstdint>
 #include <iostream>
@@ -528,6 +530,68 @@ void run(const std::string& scenario){
   n=total=0;
   ok(f06_science_queue_page(l.s,l.h.captain,0,&read,1,&n,&total)==F04_OK &&
      n==1 && read.class_id==0,"snapshot survives Core save/load without invented class");
+ } else if(scenario=="mini_system") {
+  // Genuine native Core campaign fed by independent, bounded spatial-world
+  // fixtures. Planetary science truth is deliberately absent from this ABI.
+  F06ProfileInstall installed{l.stats().revision,5,0};
+  F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&installed,&profile)==F04_OK &&
+    profile.profile_id==5,"install experimental Enterprise-D sensor profile");
+  auto publish=[&](const F06DemoFrame& frame) {
+    l.advance(frame.tick);
+    F06WorldSnapshot snapshot{l.stats().revision,frame.source_revision,frame.tick,
+      F06_DEMO_OBSERVER_X,F06_DEMO_OBSERVER_Y,F06_DEMO_OBSERVER_Z,
+      frame.count,frame.entities};
+    F06WorldReceipt receipt{};
+    ok(f06_host_world_snapshot(l.s,&snapshot,&receipt)==F04_OK,
+      "full authoritative frame enters same Core campaign");
+    ok(receipt.source_revision==frame.source_revision,"monotonic world source");
+  };
+  publish(F06_DEMO_FRAMES[0]);
+  auto start=l.contacts(F06_ACTIVE);
+  auto contains=[&](const std::vector<F06ContactView>& contacts,uint32_t category){
+    return std::any_of(contacts.begin(),contacts.end(),
+      [&](const F06ContactView& c){return c.observed_category==category;});
+  };
+  auto hasClass=[&](const std::vector<F06ContactView>& contacts,uint32_t cls){
+    return std::find_if(contacts.begin(),contacts.end(),
+      [&](const F06ContactView& c){return c.class_id==cls;});
+  };
+  ok(start.size()>=16,"star system yields many genuine sensor contacts");
+  for(auto category:{F06_CATEGORY_STAR,F06_CATEGORY_PLANET,F06_CATEGORY_MOON,
+       F06_CATEGORY_NEBULA,F06_CATEGORY_STATION,F06_CATEGORY_ASTEROID,
+       F06_CATEGORY_STARSHIP,F06_CATEGORY_SHUTTLE,F06_CATEGORY_PROBE})
+    ok(contains(start,static_cast<uint32_t>(category)),"different classes of objects are genuinely observed");
+  for(const auto& c:start)if(c.observed_category==F06_CATEGORY_PLANET)
+    ok(c.class_id==0 && c.transponder_id==0,
+      "planetary class M/Y/J remains hidden until a future scientific analysis");
+  ok(hasClass(start,16)==start.end() && hasClass(start,8)==start.end(),
+    "out-of-range Klingon and non-emitting Romulan do not leak host truth");
+  const auto firstCheckpoint=l.save();l.load(firstCheckpoint);
+  ok(l.save()==firstCheckpoint,"first frame persists in Core with no extra state");
+  publish(F06_DEMO_FRAMES[1]);
+  auto afterEntry=l.contacts(F06_ACTIVE);
+  auto klingon=hasClass(afterEntry,16);
+  ok(klingon!=afterEntry.end(),"approaching Klingon cruiser detected");
+  const U klingonId=klingon->contact_id;
+  publish(F06_DEMO_FRAMES[2]);
+  auto afterReveal=l.contacts(F06_ACTIVE);
+  ok(hasClass(afterReveal,8)!=afterReveal.end(),
+    "Romulan becomes observable only after its real signal is active");
+  publish(F06_DEMO_FRAMES[3]);
+  auto lost=l.contacts(F06_LOST);
+  auto lostKlingon=hasClass(lost,16);
+  ok(lostKlingon!=lost.end() && lostKlingon->contact_id==klingonId &&
+    lostKlingon->loss_cause==F06_EXIT_OBSERVED_OUT_OF_RANGE,
+    "Klingon signal loss preserves identity and observed exit evidence");
+  publish(F06_DEMO_FRAMES[4]);
+  auto finalContacts=l.contacts(F06_ACTIVE);
+  auto returned=hasClass(finalContacts,16);
+  ok(returned!=finalContacts.end() && returned->contact_id==klingonId &&
+    l.stats().now==28800,"eight-hour watch reacquires returning cruiser with stable ID");
+  const auto saved=l.save();l.load(saved);
+  ok(l.save()==saved && hasClass(l.contacts(F06_ACTIVE),16)!=l.contacts(F06_ACTIVE).end(),
+    "eight-hour final state survives Core save/load");
  } else if(scenario=="eight_hours") {
   l.upsert(l.signal());auto checkpoint=l.save();
   l.advance(28800);auto after=l.save();auto current=l.contacts()[0];

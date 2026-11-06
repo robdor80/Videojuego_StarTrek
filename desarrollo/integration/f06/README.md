@@ -23,6 +23,10 @@
 
 La primera integración nativa usa **puntuaciones enteras normalizadas y milésimas de UA** a modo de prueba determinista, sin presentarlas como potencia o alcance canon del universo. El Host debe aportar posición relativa, firma, camuflaje/interferencia y transpondedor provenientes de su World State y de las reglas físicas disponibles.
 
+## Escenario acotado de aceptación F06
+
+Se incluye [Sistema Aster](SISTEMA_ASTER_QA.md), una fixture espacial con cuerpos celestes, naves y fenómenos para una guardia determinista de 8 horas conectada al mismo CoreRPG. Es **solo QA, no canon**. Los datos de atmósferas y clases planetarias permanecen privados al Host; la identificación científica real no está implementada.
+
 ## P01 — Auditoría y experiencia
 
 El árbol, manual Markdown, protocolos de guardia, contratos y suite de referencia han sido revisados para construir el corte nativo. La revisión visual del manual PDF anterior sigue pendiente y **no puede darse por aprobada por una lectura de texto**.

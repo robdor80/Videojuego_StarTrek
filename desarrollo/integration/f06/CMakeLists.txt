@@ -21,6 +21,12 @@ execute_process(
   --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_profiles_generated.h"
  COMMAND_ERROR_IS_FATAL ANY
 )
+execute_process(
+ COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/build_validation_system.py"
+  --source "${CMAKE_CURRENT_SOURCE_DIR}/fixtures/aster_f06_qa.json"
+  --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_demo_system_generated.h"
+ COMMAND_ERROR_IS_FATAL ANY
+)
 target_include_directories(TrekF04Bridge PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
  PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src" "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src"
   "${CMAKE_CURRENT_BINARY_DIR}/generated")
@@ -29,8 +35,9 @@ enable_testing()
 add_executable(f06_tests tests/f06_tests.cpp)
 target_link_libraries(f06_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
 target_compile_features(f06_tests PRIVATE cxx_std_20)
+target_include_directories(f06_tests PRIVATE "${CMAKE_CURRENT_BINARY_DIR}/generated")
 # Windows needs the F04 DLL beside the test executable.
 set_target_properties(f06_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
-foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking tracking_capacity_recovery area_scan notices_cursor power_queue f05_order world_feed profiles configuration config_live search diagnostics results_compare categories)
+foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking tracking_capacity_recovery area_scan notices_cursor power_queue f05_order world_feed profiles configuration config_live search diagnostics results_compare categories mini_system)
  add_test(NAME f06.${scenario} COMMAND f06_tests ${scenario})
 endforeach()
