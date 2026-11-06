@@ -52,6 +52,12 @@ jobs:
         run: |
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f06\.' --no-tests=error --output-on-failure --output-junit f06.xml
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f05\.(scenario|determinism|duplicate|stale|corrupt)$' --no-tests=error --output-on-failure --output-junit f05-regression.xml
+      - name: Validate MSI acceptance script syntax (not Unreal execution)
+        shell: pwsh
+        run: |
+          $tokens=$null;$errors=$null
+          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'desarrollo/integration/f06/run_f06_msi.ps1'),[ref]$tokens,[ref]$errors) | Out-Null
+          if($errors){$errors | Format-List;throw 'Invalid PowerShell F06 MSI script'}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
