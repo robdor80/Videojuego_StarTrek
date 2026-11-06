@@ -69,6 +69,18 @@ F04_API uint32_t f06_notices_page(F04Session*,F04Ref observer,uint64_t after_eve
  * known contact may be targeted. No operator booleans or raw entity IDs. */
 F04_API uint32_t f06_focus(F04Session*,F04Ref operator_ref,uint64_t revision,
  uint64_t contact_id,F06ContactView*);
+/* F06 dedicated tracking is a finite resource; passive monitoring remains ON.
+ * Modes: 0 passive automatic; 1 explicit normal tracking; 2 priority tracking.
+ * Power/damage may reduce capacity, but never creates or deletes real contacts. */
+enum F06TrackMode { F06_TRACK_PASSIVE=0, F06_TRACK_NORMAL=1, F06_TRACK_PRIORITY=2 };
+typedef struct {
+ uint64_t contact_id,updated_at;
+ uint32_t mode,used_slots,available_slots,overloaded;
+} F06TrackView;
+F04_API uint32_t f06_tracking_status(F04Session*,F04Ref observer,F06TrackView*);
+F04_API uint32_t f06_set_tracking(F04Session*,F04Ref operator_ref,
+ uint64_t expected_revision,uint64_t contact_id,uint32_t mode,F06TrackView*);
+
 /* Real persistent SENSOR -> SCIENCE queue on the same Core campaign.
  * Analysis is a request, not a fabricated scientific conclusion.
  * F06 science kinds: 1 classify contact; 2 investigate anomaly;
