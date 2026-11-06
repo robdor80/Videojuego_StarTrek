@@ -1,4 +1,6 @@
 #include "f06_sensors.h"
+#include "f06_bis.h"
+#include "f06_aster_science_generated.h"
 #include "f05_orders.h"
 #include "f06_demo_system_generated.h"
 #include <algorithm>
@@ -530,6 +532,179 @@ void run(const std::string& scenario){
   n=total=0;
   ok(f06_science_queue_page(l.s,l.h.captain,0,&read,1,&n,&total)==F04_OK &&
      n==1 && read.class_id==0,"snapshot survives Core save/load without invented class");
+ } else if(scenario=="bis_science") {
+  // True F06 contact from the existing Host spatial-world fixture; no class M
+  // provided to sensors. The test-only instrument then reads Host science.
+  l.ready();
+  F06ProfileInstall install{l.stats().revision,5,0};
+  F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,"instrument ship profile");
+  const auto& frame=F06_DEMO_FRAMES[0];
+  F06WorldSnapshot feed{l.stats().revision,frame.source_revision,frame.tick,
+    F06_DEMO_OBSERVER_X,F06_DEMO_OBSERVER_Y,F06_DEMO_OBSERVER_Z,frame.count,frame.entities};
+  F06WorldReceipt receipt{};
+  ok(f06_host_world_snapshot(l.s,&feed,&receipt)==F04_OK,"physical world snapshot");
+  const auto contacts=l.contacts(F06_ACTIVE);
+  const auto planet=std::find_if(contacts.begin(),contacts.end(),[](const F06ContactView& c) {
+   return c.observed_category==F06_CATEGORY_PLANET && c.observed_x_milli_au==300;
+  });
+  ok(planet!=contacts.end() && planet->class_id==0,"planet exists but its Star Trek class remains secret");
+  F06ContactView focused{};
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,planet->contact_id,&focused)==F04_OK,
+    "a real focused scan is required to issue a science report");
+  std::array<F06ResultView,16> observed{};U written=0,total=0;
+  ok(f06_results_page(l.s,l.h.captain,planet->contact_id,0,observed.data(),
+    observed.size(),&written,&total)==F04_OK && written>0,"recorded scan result exists");
+  F06ScienceRequest request{l.stats().revision,77001,planet->contact_id,2,1};
+  F06ScienceView handoff{};
+  ok(f06_science_handoff(l.s,l.h.ensign,&request,&handoff)==F04_OK &&
+    handoff.status==F06_SCIENCE_QUEUED,"Sensors enqueue an immutable real science handoff");
+  const auto reading=std::find_if(std::begin(F06_ASTER_INSTRUMENTS),
+    std::end(F06_ASTER_INSTRUMENTS),
+    [](const F06AsterInstrument& row){return row.key==202;});
+  ok(reading!=std::end(F06_ASTER_INSTRUMENTS),"Aster II scientific fixture exists");
+  F06ScienceSample sample{l.stats().revision,88001,handoff.handoff_id,
+   observed[0].result_id,1,reading->temp_k,reading->pressure_mbar,
+   reading->water_permille,reading->n2_permille,reading->o2_permille,
+   reading->co2_permille,reading->solid,0,920,0};
+  F06ScienceReportView report{};
+  ok(f06_host_complete_science(l.s,&sample,&report)==F04_OK &&
+    report.planet_class==F06_PLANET_M && report.provisional==1 &&
+    report.focused_result_id==observed[0].result_id,
+    "Science independently derives provisional class M from actual instrument measurements");
+  const auto reportId=report.report_id;
+  const auto checkpoint=l.save();
+  l.load(checkpoint);
+  std::array<F06ScienceReportView,5> published{};written=total=0;
+  ok(f06_science_reports_page(l.s,l.h.captain,0,published.data(),published.size(),
+   &written,&total)==F04_OK && total==1 &&
+   published[0].report_id==reportId && published[0].planet_class==F06_PLANET_M,
+   "scientific report persists with observation and provenance after Core save/load");
+  sample.expected_revision=l.stats().revision;
+  F06ScienceReportView replay{};
+  ok(f06_host_complete_science(l.s,&sample,&replay)==F04_OK &&
+    replay.report_id==reportId && l.save()==checkpoint,"idempotent science replay never rerolls");
+  std::array<F06ScienceView,5> queue{};written=total=0;
+  ok(f06_science_queue_page(l.s,l.h.captain,0,queue.data(),queue.size(),
+    &written,&total)==F04_OK && total==1 &&
+    queue[0].status==F06_SCIENCE_COMPLETED,"Science receipt closes an actual Core handoff");
+  ok(l.contacts()[0].class_id==0,"no scientific classification is leaked into ship class IDs");
+ } else if(scenario=="bis_timed") {
+  l.ready();l.upsert(l.signal(940,100));
+  const U contact=l.contacts()[0].contact_id;
+  F06TimedScanRequest req{l.stats().revision,88001,contact,120,0};
+  F06TimedScanView scan{};
+  ok(f06_begin_timed_scan(l.s,l.h.ensign,&req,&scan)==F04_OK &&
+    scan.status==F06_TIMED_QUEUED && scan.finishes_at>=120 &&
+    !scan.result_id,"scan queued and has no premature result");
+  std::array<F06ResultView,3> results{};U written=0,total=0;
+  ok(f06_results_page(l.s,l.h.captain,contact,0,results.data(),results.size(),
+   &written,&total)==F04_OK && !total,"no observation before clock advances");
+  const auto initial=l.save();l.load(initial);
+  l.advance(scan.finishes_at-1);
+  std::array<F06TimedScanView,5> jobs{};written=total=0;
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),&written,&total)==F04_OK &&
+    jobs[0].status==F06_TIMED_QUEUED,"not completed one second early");
+  l.advance(scan.finishes_at);
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),&written,&total)==F04_OK &&
+    jobs[0].status==F06_TIMED_FINISHED && jobs[0].result_id,
+    "real F04 clock finishes scan with a persisted focused observation");
+  const auto done=l.save();l.load(done);
+  ok(l.save()==done,"no scan reroll after restoring the finished job");
+  // Cancellation is an authorized and durable operation.
+  req={l.stats().revision,88002,contact,180,0};
+  ok(f06_begin_timed_scan(l.s,l.h.ensign,&req,&scan)==F04_OK,"second scan");
+  ok(f06_cancel_timed_scan(l.s,l.h.captain,l.stats().revision,scan.scan_id,&scan)==F04_OK &&
+    scan.status==F06_TIMED_CANCELLED,"captain cancels scheduled scan");
+  l.advance(28800);
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),&written,&total)==F04_OK &&
+    jobs[1].status==F06_TIMED_CANCELLED,"cancelled scan does not execute later");
+ } else if(scenario=="bis_environment") {
+  auto ship=l.signal(820,1000,1,99);ship.signature_category=F06_CATEGORY_STARSHIP;
+  l.upsert(ship);
+  auto planet=l.signal(960,300,0,0);planet.signature_category=F06_CATEGORY_PLANET;
+  l.upsert(planet);
+  auto original=l.contacts(F06_ACTIVE);
+  ok(original.size()==2,"both signatures detectable before interference");
+  F06EnvironmentInput field{l.stats().revision,11,550,0,0,0,0,0};
+  F06EnvironmentView view{};
+  ok(f06_host_environment(l.s,&field,&view)==F04_OK && view.em_permille==550,
+   "trusted environmental EM interference accepted");
+  auto active=l.contacts(F06_ACTIVE);
+  ok(active.size()==1 && active[0].observed_category==F06_CATEGORY_PLANET,
+   "EM interference attenuates ship contact but not gravitational planet");
+  field={l.stats().revision,12,0,0,0,0,0,0};
+  ok(f06_host_environment(l.s,&field,&view)==F04_OK &&
+    l.contacts(F06_ACTIVE).size()==2,"removing interference reacquires original ship");
+  field.expected_revision=l.stats().revision;
+  ok(f06_host_environment(l.s,&field,&view)==F04_STALE,
+   "stale environmental source revision rejected");
+  const auto saved=l.save();l.load(saved);
+  ok(f06_environment_status(l.s,l.h.captain,&view)==F04_OK &&
+    view.source_revision==12,"environmental state persisted in Core");
+ } else if(scenario=="bis_power") {
+  l.ready();
+  F06ArrayInput lower{l.stats().revision,1000,600,1000,1,1,1,0};
+  F06ArrayView hw{};
+  ok(f06_host_array_state(l.s,&lower,&hw)==F04_OK && hw.power_permille==600,
+   "trusted Engineering establishes real reduced power");
+  F06PowerRequest request{l.stats().revision,110001,250,1800};
+  F06PowerView ticket{};
+  ok(f06_request_power(l.s,l.h.ensign,&request,&ticket)==F04_OK &&
+    ticket.state==F06_POWER_QUEUED,"sensor operator requests extra power");
+  F06PowerApplication proposed{l.stats().revision,ticket.request_id,1001,800,0};
+  F06PowerApplicationView grant{};
+  ok(f06_host_apply_power(l.s,&proposed,&grant)==F04_EXPIRED,
+    "pending approval never changes physical power");
+  ok(f06_decide_power(l.s,l.h.captain,l.stats().revision,ticket.request_id,
+    F06_POWER_APPROVED,&ticket)==F04_OK,"captain approves request, without applying watts");
+  proposed.expected_revision=l.stats().revision;
+  proposed.new_total_power_permille=900;
+  ok(f06_host_apply_power(l.s,&proposed,&grant)==F04_ARGUMENT,"cannot exceed approved power increment");
+  proposed.new_total_power_permille=800;
+  ok(f06_host_apply_power(l.s,&proposed,&grant)==F04_OK &&
+    grant.applied && grant.new_total_power_permille==800,
+   "trusted allocator applies authorized budget once");
+  ok(f06_array_status(l.s,l.h.captain,&hw)==F04_OK && hw.power_permille==800,
+   "measured effective hardware power changes only on host materialization");
+  const auto checkpoint=l.save();l.load(checkpoint);
+  ok(f06_power_application_status(l.s,l.h.captain,ticket.request_id,&grant)==F04_OK &&
+    grant.applied && grant.allocator_revision==1001,
+   "allocation provenance survives save/load");
+  proposed.expected_revision=l.stats().revision;
+  ok(f06_host_apply_power(l.s,&proposed,&grant)==F04_OK &&
+    l.save()==checkpoint,"duplicate allocator receipt is idempotent");
+ } else if(scenario=="bis_sections") {
+  F06SectionInput section{l.stats().revision,1,1,1000,1000,1000,1,1,1};
+  F06SectionView view{};
+  ok(f06_host_section_array(l.s,&section,&view)==F04_SCOPE,
+   "two-matrix hardware cannot be installed on baseline Miranda");
+  F06ProfileInstall install{l.stats().revision,5,0};
+  F06ProfileView profile{};
+  ok(f06_host_install_profile(l.s,&install,&profile)==F04_OK,
+   "install Enterprise-D modernized ship-specific profile");
+  section.expected_revision=l.stats().revision;
+  ok(f06_host_section_array(l.s,&section,&view)==F04_OK && view.configured &&
+    view.section_id==F06_SECTION_SAUCER,"saucer sensor array installed");
+  F06SectionInput battle{l.stats().revision,2,1,900,900,1000,1,1,1};
+  ok(f06_host_section_array(l.s,&battle,&view)==F04_OK,
+   "battle section array independently installed");
+  F06ArrayView combined{};
+  ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
+    combined.power_permille==1000,"higher performance saucer array supplies linked ship");
+  section.expected_revision=l.stats().revision;
+  section.linked=0;
+  ok(f06_host_section_array(l.s,&section,&view)==F04_OK,"saucer physically disconnected by Host");
+  ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
+    combined.power_permille==900,"observer falls back to battle matrix, no magical saucer link");
+  const auto save=l.save();l.load(save);
+  ok(f06_section_status(l.s,l.h.captain,1,&view)==F04_OK &&
+    view.configured && !view.linked,"detached saucer remains independent and persistent");
+  battle.expected_revision=l.stats().revision;
+  battle.integrity_permille=0;
+  ok(f06_host_section_array(l.s,&battle,&view)==F04_OK,"battle array damaged");
+  ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
+    !combined.integrity_permille,"both ship-linked sensor capabilities are unavailable");
  } else if(scenario=="mini_system") {
   // Genuine native Core campaign fed by independent, bounded spatial-world
   // fixtures. Planetary science truth is deliberately absent from this ABI.

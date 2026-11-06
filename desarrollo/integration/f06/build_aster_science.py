@@ -34,7 +34,7 @@ def render(path: Path) -> str:
         if sum(vals[4:7])>1000 or any(v<0 for v in vals):
             raise ValueError("invalid test scientific instrument calibration")
         out.append(" {" + ", ".join(map(str,vals)) + "},")
-    if len(out)!=12:  # 6 planets plus 6 lines
+    if len(out)!=11:  # six planets and five header lines
         raise ValueError("expected six distinct planets")
     out.append("};")
     return "\n".join(out)+"\n"
