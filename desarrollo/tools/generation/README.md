@@ -1,5 +1,8 @@
 # Generation tools
 
+## Generador físico v1 de sistemas y Aster F06
+
+El motor `astro_physics_v1.py` genera física estructurada en dos perfiles (`game` y `f06`) y objetos compactos independientes; `enrich_aster_f06_v1.py` calcula una ficha física privada del Host para los seis planetas de prueba Aster. Véase `sistemas/universe/generation/ASTRO_PHYSICAL_GENERATOR_V1.md`. El antiguo v0.0.1 queda intacto. Prueba: `python desarrollo/tools/generation/test_astro_physics_v1.py`.
 ## v0.0.1 observable-system generator
 
 `generate_v0_0_1_system.py` is the reference deterministic generator for the first sensor vertical slice.
