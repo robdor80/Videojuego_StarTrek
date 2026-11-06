@@ -566,7 +566,7 @@ void run(const std::string& scenario){
   F06ScienceSample sample{l.stats().revision,88001,handoff.handoff_id,
    observed[0].result_id,1,reading->temp_k,reading->pressure_mbar,
    reading->water_permille,reading->n2_permille,reading->o2_permille,
-   reading->co2_permille,reading->solid,0,920,0};
+   reading->co2_permille,reading->solid,reading->bio,920,0};
   F06ScienceReportView report{};
   ok(f06_host_complete_science(l.s,&sample,&report)==F04_OK &&
     report.planet_class==F06_PLANET_M && report.provisional==1 &&
@@ -705,6 +705,74 @@ void run(const std::string& scenario){
   ok(f06_host_section_array(l.s,&battle,&view)==F04_OK,"battle array damaged");
   ok(f06_array_status(l.s,l.h.captain,&combined)==F04_OK &&
     !combined.integrity_permille,"both ship-linked sensor capabilities are unavailable");
+ } else if(scenario=="bis_science_corrob") {
+  l.ready();
+  auto source=l.signal(990,100,0,0);source.signature_category=F06_CATEGORY_PLANET;
+  l.upsert(source);
+  const U contact=l.contacts()[0].contact_id;
+  F06ScienceReportView published{};
+  F06ScienceSample sample{};
+  sample={l.stats().revision,40001,90001,0,2,290,1000,650,
+    780,190,12,1,2,950,0};
+  ok(f06_host_complete_science(l.s,&sample,&published)==F04_UNAVAILABLE,
+    "no report without a real handoff/scan");
+  F06ContactView observed{};
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,contact,&observed)==F04_OK,
+    "first actual scan");
+  std::array<F06ResultView,6> records{};U written=0,total=0;
+  ok(f06_results_page(l.s,l.h.captain,contact,0,records.data(),records.size(),
+     &written,&total)==F04_OK && total==1,"one genuine first observation");
+  F06ScienceRequest handoffReq{l.stats().revision,41001,contact,3,1};
+  F06ScienceView h{};
+  ok(f06_science_handoff(l.s,l.h.ensign,&handoffReq,&h)==F04_OK,"first science handoff");
+  sample.expected_revision=l.stats().revision;
+  sample.handoff_id=h.handoff_id;sample.focused_result_id=records[0].result_id;
+  sample.biological_evidence=3;
+  ok(f06_host_complete_science(l.s,&sample,&published)==F04_ARGUMENT,
+    "life cannot be confirmed from a single observation");
+  sample.biological_evidence=2;
+  sample.expected_revision=l.stats().revision;
+  ok(f06_host_complete_science(l.s,&sample,&published)==F04_OK &&
+    published.biological_evidence==2,"possible biosignature recorded, not confirmed");
+  const auto first=l.save();
+  l.load(first);
+  ok(f06_focus(l.s,l.h.ensign,l.stats().revision,contact,&observed)==F04_OK,
+    "second independent focused observation");
+  ok(f06_results_page(l.s,l.h.captain,contact,0,records.data(),records.size(),
+     &written,&total)==F04_OK && total==2,"two separate observations");
+  handoffReq={l.stats().revision,41002,contact,3,3};
+  ok(f06_science_handoff(l.s,l.h.ensign,&handoffReq,&h)==F04_OK,
+    "new handoff, not reuse of the old science ticket");
+  sample={l.stats().revision,40002,h.handoff_id,records[1].result_id,3,
+    290,1000,650,780,190,12,1,3,960,0};
+  ok(f06_host_complete_science(l.s,&sample,&published)==F04_OK &&
+    published.biological_evidence==3 && published.planet_class==F06_PLANET_M,
+    "corroborated biological evidence requires independent observation");
+  const auto saved=l.save();l.load(saved);
+  std::array<F06ScienceReportView,4> page{};written=total=0;
+  ok(f06_science_reports_page(l.s,l.h.captain,0,page.data(),page.size(),
+    &written,&total)==F04_OK && total==2 &&
+    page[0].biological_evidence==2 && page[1].biological_evidence==3,
+    "persistent history preserves both hypotheses and corroboration");
+ } else if(scenario=="bis_timed_interrupt") {
+  l.ready();
+  auto in=l.signal(920,500,0,0);in.signature_category=F06_CATEGORY_PLANET;
+  l.upsert(in);
+  const U contact=l.contacts()[0].contact_id;
+  F06TimedScanRequest req{l.stats().revision,45001,contact,120,0};
+  F06TimedScanView scan{};
+  ok(f06_begin_timed_scan(l.s,l.h.ensign,&req,&scan)==F04_OK &&
+    scan.status==F06_TIMED_QUEUED,"scientific scan scheduled");
+  F06ArrayInput offline{l.stats().revision,1000,0,1000,1,1,1,0};
+  F06ArrayView hw{};
+  ok(f06_host_array_state(l.s,&offline,&hw)==F04_OK,"real array damage during scan");
+  l.advance(scan.finishes_at);
+  std::array<F06TimedScanView,3> jobs{};U written=0,total=0;
+  ok(f06_timed_scans_page(l.s,l.h.captain,0,jobs.data(),jobs.size(),&written,&total)==F04_OK &&
+    jobs[0].status==F06_TIMED_FAILED && !jobs[0].result_id,
+    "a broken matrix cannot fabricate delayed science results");
+  const auto saved=l.save();l.load(saved);
+  ok(l.save()==saved,"failed scan persists and does not retry magically");
  } else if(scenario=="mini_system") {
   // Genuine native Core campaign fed by independent, bounded spatial-world
   // fixtures. Planetary science truth is deliberately absent from this ABI.
