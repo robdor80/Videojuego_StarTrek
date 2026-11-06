@@ -53,12 +53,16 @@ jobs:
         run: |
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f06\.' --no-tests=error --output-on-failure --output-junit f06.xml
           ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f05\.(scenario|determinism|duplicate|stale|corrupt)$' --no-tests=error --output-on-failure --output-junit f05-regression.xml
-      - name: Validate MSI acceptance script syntax (not Unreal execution)
+      - name: Validate QA Python and Windows launch scripts
         shell: pwsh
         run: |
-          $tokens=$null;$errors=$null
-          [System.Management.Automation.Language.Parser]::ParseFile((Join-Path $PWD 'desarrollo/integration/f06/run_f06_msi.ps1'),[ref]$tokens,[ref]$errors) | Out-Null
-          if($errors){$errors | Format-List;throw 'Invalid PowerShell F06 MSI script'}
+          python -m py_compile desarrollo/integration/f06/qa/aster_gui.py desarrollo/integration/f06/qa/test_aster_runner.py
+          foreach($script in @('run_f06_msi.ps1','INICIAR_PRUEBA_ASTER.ps1')){
+            $tokens=$null;$errors=$null
+            $path=Join-Path $PWD "desarrollo/integration/f06/$script"
+            [System.Management.Automation.Language.Parser]::ParseFile($path,[ref]$tokens,[ref]$errors) | Out-Null
+            if($errors){$errors | Format-List;throw "Invalid PowerShell $script"}
+          }
       - uses: actions/upload-artifact@v4
         if: always()
         with:

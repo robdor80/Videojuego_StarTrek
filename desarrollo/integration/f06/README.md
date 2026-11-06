@@ -35,6 +35,21 @@ y la lectura científica no se filtra por la API básica de Sensores.
 **F06 continúa sin cerrar**: faltan la fuente viva F13, una consola de Ciencia
 completa y la prueba real UE5/MSI.
 
+## F06 AUTO — computadora que lleva la iniciativa
+
+El supervisor de Sensores observa continuamente el mundo Core real, elige
+contactos ya detectados, inicia automáticamente análisis focalizados
+temporalizados según prioridad, conserva sus resultados y produce avisos
+mínimos para el oficial. No crea objetos invisibles ni necesita un NPC ficticio
+para ejecutar tareas internas. Reacciona a interferencias, fallos y contactos
+readquiridos con recursos limitados.
+
+La primera prueba interactiva de ocho horas está documentada en
+[Guía de Aster](qa/GUIA_PRUEBA_ASTER.md).
+El lanzamiento desde Windows se prepara con
+`INICIAR_PRUEBA_ASTER.ps1` y una interfaz Tkinter provisional. **No implica
+consolas LCARS/UE5 probadas**, ni sustituye el proveedor espacial F13.
+
 ## Perfiles físicos Aster — generador v1
 El paso de CMake `enrich_aster_f06_v1.py` calcula en el árbol ignorado las propiedades físicas de seis planetas antes de generar los snapshots nativos F06. No cambia la fixture histórica ni expone atmósferas, vida o clases al puerto de sensores. Las antiguas etiquetas manuales Y/L de mundos muy distantes no superaban una comprobación térmica; ahora se clasifican provisionalmente desde la física, no por decoración. La luna de cada planeta se aproxima a una distancia acotada por la esfera de Hill. No existe aún dinámica orbital ni ciencia interactiva completa.
 
