@@ -361,6 +361,21 @@ void run(const std::string& scenario){
   const auto invalid=F06ProfileInstall{l.stats().revision,6,0};
   ok(f06_host_install_profile(l.s,&invalid,&read)==F04_ARGUMENT &&
      saved==l.save(),"invalid refit denied without modifying campaign");
+  // Same real signal, same Core configuration and MSI-ready numeric test scale:
+  // the individual Galaxy refit must outperform Odyssey in detection evidence.
+  Lab odyssey,refit;
+  F06ProfileView pOld{},pNew{};
+  F06ProfileInstall installOld{odyssey.stats().revision,4,0};
+  F06ProfileInstall installNew{refit.stats().revision,5,0};
+  ok(f06_host_install_profile(odyssey.s,&installOld,&pOld)==F04_OK &&
+     f06_host_install_profile(refit.s,&installNew,&pNew)==F04_OK,
+     "separate test hulls with authorized experimental sensor loads");
+  odyssey.upsert(odyssey.signal(800,5000,4,999));
+  refit.upsert(refit.signal(800,5000,4,999));
+  const auto older=odyssey.contacts(),newer=refit.contacts();
+  ok(older.size()==1 && newer.size()==1 &&
+     newer[0].confidence_permille>older[0].confidence_permille,
+     "Enterprise-D individual sensor score exceeds Odyssey for identical observation");
  } else if(scenario=="world_feed") {
   const auto ship=l.stats();
   F06WorldEntity fleet[2]{
