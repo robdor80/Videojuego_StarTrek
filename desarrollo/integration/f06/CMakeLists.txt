@@ -16,8 +16,14 @@ execute_process(
 )
 set_property(TARGET TrekF04Bridge PROPERTY SOURCES "${F06_BRIDGE_SOURCE}")
 target_compile_definitions(TrekF04Bridge PRIVATE F06_ENABLE_SENSORS=1)
+execute_process(
+ COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_sensor_profiles.py"
+  --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_profiles_generated.h"
+ COMMAND_ERROR_IS_FATAL ANY
+)
 target_include_directories(TrekF04Bridge PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/include"
- PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src" "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src")
+ PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}/src" "${CMAKE_CURRENT_SOURCE_DIR}/../f04/src"
+  "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
 enable_testing()
 add_executable(f06_tests tests/f06_tests.cpp)
@@ -25,6 +31,6 @@ target_link_libraries(f06_tests PRIVATE TrekF04Bridge CoreRPG::CoreRPG)
 target_compile_features(f06_tests PRIVATE cxx_std_20)
 # Windows needs the F04 DLL beside the test executable.
 set_target_properties(f06_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/f05/f04")
-foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking area_scan notices_cursor power_queue f05_order world_feed)
+foreach(scenario IN ITEMS quiet detection partial loss reacquire focused stale unauthorized save_load eight_hours degraded science_queue tracking area_scan notices_cursor power_queue f05_order world_feed profiles)
  add_test(NAME f06.${scenario} COMMAND f06_tests ${scenario})
 endforeach()

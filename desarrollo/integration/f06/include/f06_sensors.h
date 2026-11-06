@@ -40,6 +40,21 @@ typedef struct {
  uint64_t event_id,contact_id,tick;
  uint32_t kind;
 } F06NoticeView;
+/* Individual-ship installed hardware profile, Host-only.
+ * 0 = legacy unconfigured (unchanged baseline). 1..5 = Star Trek profiles.
+ * Profile 5 is exclusively the rebuilt USS Enterprise-D, not Galaxy class.
+ * Numerical coefficients are experimental normalized BALANCE, never canon. */
+typedef struct {
+ uint64_t expected_revision;
+ uint32_t profile_id,reserved;
+} F06ProfileInstall;
+typedef struct {
+ uint32_t profile_id,tier,short_permille,long_permille,focus_permille,
+   interference_resistance_permille,tracking_slots;
+} F06ProfileView;
+F04_API uint32_t f06_host_install_profile(F04Session*,const F06ProfileInstall*,F06ProfileView*);
+F04_API uint32_t f06_installed_profile(F04Session*,F04Ref observer,F06ProfileView*);
+
 /* TRUSTED SPATIAL WORLD FEED (NOT a sensor-facing/UI API).
  * Domain World Host publishes a full *authoritative* snapshot of spatial
  * entities in one shared coordinate frame. Never infer entities from scans,

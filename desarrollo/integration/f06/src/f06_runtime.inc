@@ -1,5 +1,6 @@
 // F06 runtime over the EXISTING F04Session's Core WorldState.
 // Include at the tail of f04_bridge.cpp; declarations precede f04_advance.
+#include "f06_profiles_generated.h"
 namespace {
 U f06_zigzag(int64_t x) {return x<0?U(-(x+1))*2+1:U(x)*2;}
 U f06_public(U source,U ship_identity) {
@@ -30,10 +31,21 @@ F06ArrayView f06_array_state(const WorldState& w) {
   static_cast<uint32_t>(val(w,id,F06_ARRAY_FOCUS))};
 }
 
+F06ProfileNumbers f06_profile_numbers(const WorldState& w) {
+ const auto arrays=all(w,"f06_array");
+ const U id=arrays.empty()?0:val(w,arrays[0],F06_ARRAY_PROFILE);
+ for(const auto& row:F06_PROFILE_NUMBERS)if(row.id==id)return row;
+ return {0,0,1000,1000,1000,0,16}; // unchanged F06 baseline
+}
+F06ProfileView f06_profile_view(const WorldState& w) {
+ const auto row=f06_profile_numbers(w);
+ return {row.id,row.tier,row.short_permille,row.long_permille,row.focus_permille,
+   row.interference_resistance_permille,row.tracking_slots};
+}
 U f06_tracking_capacity(const WorldState& w) {
  const auto hw=f06_array_state(w);
  // Ship-specific equipment can replace this normalized nominal ceiling later.
- return (U(16)*hw.capability_permille*hw.power_permille*hw.integrity_permille)/
+ return (U(f06_profile_numbers(w).tracking_slots)*hw.capability_permille*hw.power_permille*hw.integrity_permille)/
    U(1000000000);
 }
 U f06_track_cost(U mode) {return mode==F06_TRACK_PRIORITY?3:mode==F06_TRACK_NORMAL?1:0;}
@@ -51,7 +63,10 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  if(!val(w,s,F06_ACTIVE_FLAG))return 0;
  const U limit=focused?50000:30000;
  if(distance>limit)return 0;
- const U strength=val(w,s,F06_STRENGTH),mask=val(w,s,F06_INTERFERENCE);
+ const auto profile=f06_profile_numbers(w);
+ const U strength=val(w,s,F06_STRENGTH);
+ const U mask=U(val(w,s,F06_INTERFERENCE))*
+  (1000-profile.interference_resistance_permille)/1000;
  auto measure=[&](U range,bool near_bonus)->U {
   if(distance>range)return 0;
   // Fixed-point gameplay abstraction. Distances are milli-AU.
@@ -61,8 +76,10 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
   if(focused)score=std::min<U>(1000,score+160);
   return score>mask?score-mask:0;
  };
- U score=(focused || array.long_enabled)?measure(limit,false):0;
- if(!focused && array.short_enabled)score=std::max(score,measure(2000,true));
+ U score=focused?measure(limit,false)*profile.focus_permille/1000:
+   (array.long_enabled?measure(limit,false)*profile.long_permille/1000:0);
+ if(!focused && array.short_enabled)
+  score=std::max(score,measure(2000,true)*profile.short_permille/1000);
  score=score*array.capability_permille/1000;
  score=score*array.power_permille/1000;
  score=score*array.integrity_permille/1000;
@@ -418,6 +435,36 @@ uint32_t f06_array_status(F04Session* s,F04Ref who,F06ArrayView* out) {
 }
 /* The spatial feed never exposes world keys or signal EntityIds to operator
  * APIs. All writes and resulting detections commit with one Core revision. */
+uint32_t f06_host_install_profile(F04Session* s,const F06ProfileInstall* in,F06ProfileView* out) {
+ if(!in || !out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(!in->reserved && in->profile_id<=5,F04_ARGUMENT);
+  need(in->expected_revision==s->c->world.revision(),F04_STALE);
+  auto next=std::make_unique<Campaign>(*s->c);
+  auto arrays=all(next->world,"f06_array");
+  U id=arrays.empty()?0:arrays[0];
+  if(!id) {
+   id=make(*next,*s->content.catalog(),"f06_array");link(*next,id,SHIP,1);
+   f06_set(*next,id,F06_ARRAY_CAPABILITY,1000);
+   f06_set(*next,id,F06_ARRAY_POWER,1000);
+   f06_set(*next,id,F06_ARRAY_INTEGRITY,1000);
+   f06_set(*next,id,F06_ARRAY_SHORT,1);
+   f06_set(*next,id,F06_ARRAY_LONG,1);
+   f06_set(*next,id,F06_ARRAY_FOCUS,1);
+  }
+  f06_set(*next,id,F06_ARRAY_PROFILE,in->profile_id);
+  f06_poll(*next,*s->content.catalog(),0,false);
+  need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out=f06_profile_view(s->c->world);return F04_OK;
+ });
+}
+uint32_t f06_installed_profile(F04Session* s,F04Ref who,F06ProfileView* out) {
+ if(!out)return F04_ARGUMENT;*out={};
+ return call(s,[&]()->uint32_t{
+  need(observer(s,who),F04_DENIED);
+  *out=f06_profile_view(s->c->world);return F04_OK;
+ });
+}
 uint32_t f06_host_world_snapshot(F04Session* s,const F06WorldSnapshot* in,F06WorldReceipt* out) {
  if(!in || !out || (in->entity_count && !in->entities))return F04_ARGUMENT;
  *out={};

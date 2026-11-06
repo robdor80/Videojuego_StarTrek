@@ -259,6 +259,30 @@ void run(const std::string& scenario){
   const auto saved=l.save();
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
+ } else if(scenario=="profiles") {
+  F06ProfileView previous{};U last_short=0,last_long=0,last_focus=0,last_slots=0;
+  for(uint32_t id=1;id<=5;++id) {
+   F06ProfileInstall in{l.stats().revision,id,0};
+   F06ProfileView profile{};
+   ok(f06_host_install_profile(l.s,&in,&profile)==F04_OK &&
+      profile.profile_id==id && profile.tier==id,"trusted installed ship profile");
+   ok(profile.short_permille>last_short && profile.long_permille>last_long &&
+      profile.focus_permille>last_focus && profile.tracking_slots>last_slots,
+      "ordered sensor capability tiers");
+   last_short=profile.short_permille;last_long=profile.long_permille;
+   last_focus=profile.focus_permille;last_slots=profile.tracking_slots;
+   previous=profile;
+  }
+  ok(previous.profile_id==5 && previous.long_permille==1000 &&
+    previous.interference_resistance_permille>0,
+    "Enterprise-D individual Geordi refit top tier, no canon figures");
+  const auto saved=l.save();l.load(saved);
+  F06ProfileView read{};
+  ok(f06_installed_profile(l.s,l.h.captain,&read)==F04_OK &&
+     read.profile_id==5,"installed hardware profile persists through Core save/load");
+  const auto invalid=F06ProfileInstall{l.stats().revision,6,0};
+  ok(f06_host_install_profile(l.s,&invalid,&read)==F04_ARGUMENT &&
+     saved==l.save(),"invalid refit denied without modifying campaign");
  } else if(scenario=="world_feed") {
   const auto ship=l.stats();
   F06WorldEntity fleet[2]{

@@ -16,7 +16,7 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  }
  if(type(w,id,"f06_array")) {
   allowed={F06_ARRAY_CAPABILITY,F06_ARRAY_POWER,F06_ARRAY_INTEGRITY,
-   F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS};
+   F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS,F06_ARRAY_PROFILE};
   required=allowed;ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_world_feed")) {
@@ -75,7 +75,7 @@ bool f06_schema(const Campaign& c) {
  const auto arrays=all(w,"f06_array");
  if(arrays.size()>1)return false;
  for(U id:arrays) {
-  if(val(w,id,F06_ARRAY_CAPABILITY)>1000 ||
+  if(val(w,id,F06_ARRAY_PROFILE)>5 || val(w,id,F06_ARRAY_CAPABILITY)>1000 ||
    val(w,id,F06_ARRAY_POWER)>1000 ||
    val(w,id,F06_ARRAY_INTEGRITY)>1000 ||
    val(w,id,F06_ARRAY_SHORT)>1 || val(w,id,F06_ARRAY_LONG)>1 ||
