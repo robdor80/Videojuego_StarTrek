@@ -8,6 +8,10 @@
 - **Aster `f06`**: adaptación de los **seis planetas y cuatro lunas** de la fixture F06 existente. Deriva sus perfiles sin escribir nada en la fuente original: el archivo enriquecido queda en el árbol de compilación ignorado. El compilador C++ recibe únicamente posiciones/firma/tipo general, nunca secretos científicos.
 - Funciones especializadas de verdad del Host: `compact_object(seed, kind)` admite agujero negro, enana blanca, estrella de neutrones, púlsar y enana marrón como objetos individuales **sin inventar superficies ni planetas habitados**. `environmental_region(seed, kind)` admite nebulosa, remanente de supernova, disco protoplanetario y región de radiación; agujero de gusano y subespacio requieren procedencia explícita Star Trek.
 
+## Catálogo de sector
+
+`astro_sector_v1.py` agrupa 1–25 sistemas completos en una vecindad espacial, con posiciones 3D separadas en años luz, IDs estables y aparición ocasional (no obligatoria) de remanentes compactos o nebulosas. No simula una galaxia completa ni movimientos interestelares. CLI: `python desarrollo/tools/generation/astro_sector_v1.py --seed partida_001 --sector 041 --systems 4 --output laboratorios/astro/sector.json`. Pruebas: `python desarrollo/tools/generation/test_astro_sector_v1.py`.
+
 ## Orden causal innegociable
 
 1. Semilla+sector+era+fecha y veto de reserva canónica. No se vuelve a inventar un planeta del canon.
@@ -30,6 +34,8 @@
 | Roca helada | Sí | Superficie congelada, no bosque | P/L |
 | Mini-Neptuno, gigante helado | No superficie abierta | No biomas de suelo ni árboles | J candidata, no clasificación definitiva |
 | Gigante gaseoso | No superficie abierta | No suelos ni bosques | J |
+
+El modelo incluye además rotación, oblicuidad, bloqueo por marea estimado, posible magnetosfera, recursos químicos genéricos y sistemas de anillos. Son semillas físicas de configuración, no resultados de evolución geológica avanzada.
 
 El simulador comprueba gravedad, Kepler, flujo/temperatura, suma de gases, límites de órbitas y lunas, prohibición de vida en mundos inadecuados y separación de secretos científicos.
 
