@@ -136,6 +136,24 @@ def compact_object(seed: str, kind: str = "black_hole") -> dict:
                 "nuclear_hydrogen_fusion": False, "ordinary_habitable_zone": None, "planets": []}
     raise ValueError("unknown compact/brown-dwarf kind")
 
+def trek_class_candidate(family: str, surface_temp: float | None,
+                         liquid_water: float, pressure: float | None) -> str:
+    """Science-derived provisional gameplay nomenclature, NEVER a canon fact."""
+    if family in ENVELOPED_FAMILIES:
+        return "J" if family=="gas_giant" else "J_candidate"
+    if surface_temp is None or pressure is None:
+        raise ValueError("rocky world missing basic physics")
+    if surface_temp>450 or pressure>30:
+        return "Y_candidate"
+    if 270<=surface_temp<=325 and liquid_water>=.08 and .45<=pressure<=6:
+        return "M_candidate"
+    if surface_temp<245:
+        return "P_candidate"
+    if liquid_water==0 and surface_temp>=275:
+        return "H_candidate"
+    return "L_candidate"
+
+
 def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
                    orbit_au: float, family: str, seed: str,
                    recipe: dict | None = None) -> dict:
@@ -257,18 +275,7 @@ def planet_physics(star_mass: float, luminosity: float, age_gyr: float,
             biological_features.append("oxygenic_photosynthesis")
             if .25<=liquid_water<=.85 and 275<=surface_temp<=310:
                 biological_features.append("vegetation_like")
-    if family in ENVELOPED_FAMILIES:
-        trek="J" if family=="gas_giant" else "J_candidate"
-    elif surface_temp>450 or pressure>30:
-        trek="Y_candidate"
-    elif 270<=surface_temp<=325 and liquid_water>=.08 and .45<=pressure<=6:
-        trek="M_candidate"
-    elif surface_temp<245:
-        trek="P_candidate"
-    elif liquid_water==0 and surface_temp>=275:
-        trek="H_candidate"
-    else:
-        trek="L_candidate"
+    trek=trek_class_candidate(family,surface_temp,liquid_water,pressure)
     orbital_period=math.sqrt(orbit_au**3/star_mass)
     hill=orbit_au*(mass/(3*star_mass*M_EARTH_PER_SUN))**(1/3)
     # These attributes are broad, explicitly approximate feature seeds.
@@ -574,6 +581,10 @@ def validate_planet(p: dict, star_mass: float, luminosity: float, age_gyr: float
         errors.append("high oxygen without modeled biological source")
     if p["visual"]["surface_mesh_allowed"]!=surface:
         errors.append("visual representation contradicts physical structure")
+    expected_trek=trek_class_candidate(fam,p["climate"]["surface_temperature_k"],
+        water["surface_liquid_fraction"],atm["surface_pressure_bar"])
+    if p["star_trek"]["class_candidate"]!=expected_trek:
+        errors.append("Star Trek class contradicts derived physics")
     return errors
 
 def validate_system(world: dict) -> list[str]:
