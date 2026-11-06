@@ -2,6 +2,7 @@
 // Include at the tail of f04_bridge.cpp; declarations precede f04_advance.
 #include "f06_profiles_generated.h"
 namespace {
+void f06_bis_tick(Campaign&,const ContentCatalog&);
 U f06_zigzag(int64_t x) {return x<0?U(-(x+1))*2+1:U(x)*2;}
 U f06_public(U source,U ship_identity) {
  U z=source+UINT64_C(0x9e3779b97f4a7c15)+(ship_identity<<1);
@@ -20,6 +21,32 @@ U f06_distance(const WorldState& w,U s) {
  return static_cast<U>(std::sqrt(x*x+y*y+z*z));
 }
 F06ArrayView f06_array_state(const WorldState& w) {
+ // On the modernized Enterprise the two physical arrays stay independent.
+ // A detached array never helps the current observer's ship.
+ const auto sections=all(w,"f06_section_array");
+ if(!sections.empty()) {
+  U best=0,quality=0;
+  for(U id:sections)if(val(w,id,F06_SEC_LINK)){
+   const U q=val(w,id,F06_SEC_CAP)*val(w,id,F06_SEC_PWR)*
+     val(w,id,F06_SEC_INT)/U(1000000);
+   if(!best || q>quality){best=id;quality=q;}
+  }
+  if(!best)return {0,0,0,0,0,0};
+  F06ArrayView effective{
+   static_cast<uint32_t>(val(w,best,F06_SEC_CAP)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_PWR)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_INT)),0,0,0};
+  // Flags represent modes available SOMEWHERE on the linked ship. Actual
+  // strength is always computed independently for each hardware array.
+  for(U id:sections)if(val(w,id,F06_SEC_LINK) &&
+    val(w,id,F06_SEC_CAP) && val(w,id,F06_SEC_PWR) &&
+    val(w,id,F06_SEC_INT)){
+    effective.short_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_SHORT));
+    effective.long_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_LONG));
+    effective.focused_enabled|=static_cast<uint32_t>(val(w,id,F06_SEC_FOCUS));
+  }
+  return effective;
+ }
  const auto rows=all(w,"f06_array");
  if(rows.empty())return {1000,1000,1000,1,1,1}; // nominal installed profile
  const U id=rows[0];
@@ -79,8 +106,8 @@ U f06_tracking_used(const WorldState& w) {
   used+=f06_track_cost(val(w,id,F06_TRACK_MODE));
  return used;
 }
-U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
- const auto array=f06_array_state(w);
+U f06_score_from_array(const WorldState& w,U s,U distance,bool active,bool focused,
+ const F06ArrayView& array) {
  if(!array.capability_permille || !array.power_permille || !array.integrity_permille)return 0;
  if(focused && !array.focused_enabled)return 0;
  if(!focused && !array.long_enabled && !array.short_enabled)return 0;
@@ -93,6 +120,23 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  U mask=U(val(w,s,F06_INTERFERENCE))*
   (1000-profile.interference_resistance_permille)/1000;
  mask=mask*(1000-config.compensation_permille)/1000;
+ // Local band interference is authoritative Host-supplied state.
+ const auto environments=all(w,"f06_environment");
+ if(!environments.empty()) {
+  Field field=F06_ENV_EM;
+  switch(val(w,s,F06_CATEGORY)){
+   case F06_CATEGORY_STAR:case F06_CATEGORY_ENERGY:case F06_CATEGORY_PARTICLES:
+      field=F06_ENV_THERM;break;
+   case F06_CATEGORY_PLANET:case F06_CATEGORY_MOON:case F06_CATEGORY_ASTEROID:
+      field=F06_ENV_GRAV;break;
+   case F06_CATEGORY_SUBSPACE:case F06_CATEGORY_WARP:case F06_CATEGORY_ANOMALY:
+      field=F06_ENV_SUB;break;
+   case F06_CATEGORY_LIFEFORM:field=F06_ENV_BIO;break;
+   default:field=F06_ENV_EM;break;
+  }
+  mask=std::min<U>(850,mask+
+    val(w,environments[0],field)*(1000-config.compensation_permille)/1000);
+ }
  auto measure=[&](U range,bool near_bonus)->U {
   if(distance>range)return 0;
   // Fixed-point gameplay abstraction. Distances are milli-AU.
@@ -112,6 +156,28 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  score=score*config.sensitivity_permille/1000;
  return std::min<U>(1000,score);
 }
+
+U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
+ const auto sections=all(w,"f06_section_array");
+ if(sections.empty())
+  return f06_score_from_array(w,s,distance,active,focused,f06_array_state(w));
+ U strongest=0;
+ for(U id:sections){
+  if(!val(w,id,F06_SEC_LINK))continue;
+  const F06ArrayView hw{
+   static_cast<uint32_t>(val(w,id,F06_SEC_CAP)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_PWR)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_INT)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_SHORT)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_LONG)),
+   static_cast<uint32_t>(val(w,id,F06_SEC_FOCUS))
+  };
+  strongest=std::max<U>(strongest,
+   f06_score_from_array(w,s,distance,active,focused,hw));
+ }
+ return strongest;
+}
+
 U f06_rank(U score) {
  if(score>=720)return 4;if(score>=540)return 3;
  if(score>=380)return 2;if(score>=240)return 1;return 0;
@@ -244,6 +310,7 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
    (void)event(c,cat,0,6032,F04_OK,0,id);
   }
  }
+ f06_bis_tick(c,cat);
 }
 } // namespace
 namespace {
@@ -460,6 +527,9 @@ uint32_t f06_host_array_state(F04Session* s,const F06ArrayInput* in,F06ArrayView
    in->power_permille<=1000 && in->integrity_permille<=1000 &&
    in->short_enabled<=1 && in->long_enabled<=1 && in->focused_enabled<=1,
    F04_ARGUMENT);
+  // Once individual physical arrays are installed, their Host is the only
+  // authority. A legacy aggregate write must not silently be ignored.
+  need(all(s->c->world,"f06_section_array").empty(),F04_SCOPE);
   auto next=std::make_unique<Campaign>(*s->c);
   const auto rows=all(next->world,"f06_array");
   U id=rows.empty()?0:rows[0];
@@ -576,6 +646,7 @@ uint32_t f06_host_install_profile(F04Session* s,const F06ProfileInstall* in,F06P
  return call(s,[&]()->uint32_t{
   need(!in->reserved && in->profile_id<=5,F04_ARGUMENT);
   need(in->expected_revision==s->c->world.revision(),F04_STALE);
+  need(all(s->c->world,"f06_section_array").empty() || in->profile_id==5,F04_SCOPE);
   auto next=std::make_unique<Campaign>(*s->c);
   auto arrays=all(next->world,"f06_array");
   U id=arrays.empty()?0:arrays[0];
@@ -832,7 +903,11 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   const auto hw=f06_array_state(next->world);
   need(hw.focused_enabled && hw.capability_permille && hw.power_permille && hw.integrity_permille,F04_UNAVAILABLE);
   const U internal=f06_contact_for_public(next->world,contact);
-  need(internal,F04_UNAVAILABLE);
+  need(internal && val(next->world,internal,F06_STATUS)==F06_ACTIVE,F04_UNAVAILABLE);
+  const U signal=ref(next->world,internal,F06_SIGNAL_REF);
+  const U quality=f06_score(next->world,signal,f06_distance(next->world,signal),true,true)*
+    f06_current_config(next->world).resolution_permille/1000;
+  need(f06_rank(quality)>0,F04_UNAVAILABLE);
   f06_poll(*next,*s->content.catalog(),internal,true);
   f06_record_focus(*next,*s->content.catalog(),internal,who.id);
   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
@@ -880,3 +955,6 @@ uint32_t f06_scan_area(F04Session* s,F04Ref who,
   *out={s->c->world.revision(),observed,created};return F04_OK;
  });
 }
+
+// Additive F06-BIS runtime within the exact same Core campaign.
+#include "f06_bis.inc"
