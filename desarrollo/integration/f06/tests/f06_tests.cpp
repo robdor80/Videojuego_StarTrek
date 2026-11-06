@@ -131,6 +131,40 @@ void run(const std::string& scenario){
   ok(f06_host_array_state(l.s,&disabled,&affected)==F04_OK,"restore power");
   ok(l.contacts(F06_ACTIVE).size()==1 && l.contacts()[0].contact_id==id,
      "reacquisition after actual repair preserves contact identity");
+ } else if(scenario=="tracking") {
+  l.ready();auto first=l.upsert(l.signal());
+  const auto id=l.contacts()[0].contact_id;
+  F06TrackView before{};
+  ok(f06_tracking_status(l.s,l.h.ensign,&before)==F04_OK &&
+     before.mode==0 && before.used_slots==0 && before.available_slots>=15,"nominal finite capacity");
+  F06TrackView view{};
+  ok(f06_set_tracking(l.s,l.h.captain,l.stats().revision,id,F06_TRACK_PRIORITY,&view)==F04_QUALIFICATION,
+     "captain cannot control sensor tracking without post");
+  ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,id,F06_TRACK_NORMAL,&view)==F04_OK &&
+     view.mode==F06_TRACK_NORMAL && view.used_slots==1,"normal tracking allocated");
+  auto checkpoint=l.save();
+  ok(f06_set_tracking(l.s,l.h.ensign,0,id,F06_TRACK_NORMAL,&view)==F04_OK &&
+     checkpoint==l.save(),"idempotent already-allocated tracking does not mutate");
+  ok(f06_set_tracking(l.s,l.h.ensign,l.stats().revision,id,F06_TRACK_PRIORITY,&view)==F04_OK &&
+     view.used_slots==3,"priority tracking costs 3 slots");
+  for(int i=0;i<5;++i) {
+   auto world=l.signal(960,100+static_cast<int64_t>(i+1)*20,1,128+i);
+   l.upsert(world);
+   const auto candidates=l.contacts();
+   const U latest=candidates.back().contact_id;
+   F06TrackView quota{};
+   const auto code=f06_set_tracking(l.s,l.h.ensign,l.stats().revision,latest,F06_TRACK_PRIORITY,&quota);
+   if(i<4)ok(code==F04_OK,"priority within budget");
+   else ok(code==F04_CAPACITY,"priority overload denied atomically");
+  }
+  auto snapshot=l.save();l.load(snapshot);
+  F06TrackView stats{};
+  ok(f06_tracking_status(l.s,l.h.captain,&stats)==F04_OK &&
+     stats.used_slots==15 && !stats.overloaded,"persistent tracking survives Core save/load");
+  auto world=l.signal();world.signal_id=first.signal_id;world.expected_revision=l.stats().revision;world.active=0;
+  l.upsert(world);ok(l.contacts(F06_LOST).size()==1,"old target lost");
+  ok(f06_tracking_status(l.s,l.h.captain,&stats)==F04_OK && stats.used_slots==12,
+     "lost contact releases dedicated tracking budget automatically");
  } else if(scenario=="science_queue") {
   l.ready();l.upsert(l.signal(580,5000,4,999));
   const U id=l.contacts()[0].contact_id;
