@@ -1,0 +1,61 @@
+name: F06 native sensor watch (CoreRPG campaign)
+on:
+  pull_request:
+    paths:
+      - 'desarrollo/integration/f06/**'
+      - 'desarrollo/integration/f04/**'
+      - 'desarrollo/integration/f05/**'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/ship_class_registry.json'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/ships_visual_catalog.json'
+      - '.github/workflows/f06-sensors-native.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  native:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Read exact compatible CoreRPG revision
+        id: core
+        shell: pwsh
+        run: |
+          $sha=(Get-Content desarrollo/integration/f05/core-revision.txt -Raw).Trim()
+          if($sha -notmatch '^[0-9a-f]{40}$'){throw 'Invalid Core SHA'}
+          "sha=$sha" >> $env:GITHUB_OUTPUT
+      - uses: actions/checkout@v4
+        with:
+          repository: robdor80/CoreRPG
+          ref: ${{ steps.core.outputs.sha }}
+          path: laboratorios/f06/ci/CoreRPG
+      - name: Verify and generate ship model catalogue from metadata
+        shell: bash
+        run: |
+          python3 desarrollo/integration/f06/build_ship_visual_catalog.py --output "${RUNNER_TEMP:-$TEMP}/f06_ship_catalog.json"
+          python3 -c "import json,sys; c=json.load(open(sys.argv[1],encoding='utf-8')); assert c['models_count']>=20; assert all(not x['ready_for_sensor_viewer'] for x in c['assets']); print('metadata candidates:',c['models_count'])" "${RUNNER_TEMP:-$TEMP}/f06_ship_catalog.json"
+      - name: Build F06 on the same F04/F05 Core library
+        shell: bash
+        run: |
+          cmake -S desarrollo/integration/f06 -B laboratorios/f06/ci/build -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/laboratorios/f06/ci/CoreRPG"
+          cmake --build laboratorios/f06/ci/build --parallel 3
+      - name: Native F06 behavior and selected F05 regressions
+        shell: bash
+        run: |
+          ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f06\.' --no-tests=error --output-on-failure --output-junit f06.xml
+          ctest --test-dir laboratorios/f06/ci/build -C Release -R '^f05\.(scenario|determinism|duplicate|stale|corrupt)$' --no-tests=error --output-on-failure --output-junit f05-regression.xml
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: f06-core-native-${{ matrix.os }}
+          path: |
+            laboratorios/f06/ci/build/f06.xml
+            laboratorios/f06/ci/build/f05-regression.xml
+            laboratorios/f06/ci/build/Testing/Temporary/LastTest.log
