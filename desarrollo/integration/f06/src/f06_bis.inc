@@ -106,8 +106,11 @@ void f06_bis_tick(Campaign& c,const ContentCatalog& cat) {
   }
   if(permitted){
    const U signal=ref(c.world,contact,F06_SIGNAL_REF);
-   f06_apply(c,cat,signal,true,true);
-   permitted=val(c.world,contact,F06_STATUS)==F06_ACTIVE;
+   const U dist=f06_distance(c.world,signal);
+   const U quality=f06_score(c.world,signal,dist,true,true)*
+      f06_current_config(c.world).resolution_permille/1000;
+   permitted=f06_rank(quality)>0;
+   if(permitted)f06_apply(c,cat,signal,true,true);
   }
   if(permitted){
    f06_record_focus(c,cat,contact,actor);

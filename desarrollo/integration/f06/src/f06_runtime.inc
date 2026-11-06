@@ -903,7 +903,11 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   const auto hw=f06_array_state(next->world);
   need(hw.focused_enabled && hw.capability_permille && hw.power_permille && hw.integrity_permille,F04_UNAVAILABLE);
   const U internal=f06_contact_for_public(next->world,contact);
-  need(internal,F04_UNAVAILABLE);
+  need(internal && val(next->world,internal,F06_STATUS)==F06_ACTIVE,F04_UNAVAILABLE);
+  const U signal=ref(next->world,internal,F06_SIGNAL_REF);
+  const U quality=f06_score(next->world,signal,f06_distance(next->world,signal),true,true)*
+    f06_current_config(next->world).resolution_permille/1000;
+  need(f06_rank(quality)>0,F04_UNAVAILABLE);
   f06_poll(*next,*s->content.catalog(),internal,true);
   f06_record_focus(*next,*s->content.catalog(),internal,who.id);
   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
