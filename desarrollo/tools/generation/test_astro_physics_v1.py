@@ -107,6 +107,10 @@ class AstroV1Tests(unittest.TestCase):
                                {"mass_earth":1.0,"pressure_bar":1,"greenhouse_k":33,
                                 "water_inventory":.7})
         self.assertEqual(astro.validate_planet(p,1.0,1.0,4.6),[])
+        tampered=copy.deepcopy(p)
+        tampered["star_trek"]["class_candidate"]="J"
+        self.assertIn("Star Trek class contradicts derived physics",
+                      astro.validate_planet(tampered,1.0,1.0,4.6))
         self.assertAlmostEqual(p["gravity_earth"],1,places=7)
         self.assertAlmostEqual(p["orbit"]["period_years"],1,places=7)
         self.assertAlmostEqual(p["radiation"]["stellar_flux_earth"],1,places=7)
