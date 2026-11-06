@@ -2,6 +2,12 @@
 // Include at the tail of f04_bridge.cpp; declarations precede f04_advance.
 namespace {
 U f06_zigzag(int64_t x) {return x<0?U(-(x+1))*2+1:U(x)*2;}
+U f06_public(U source,U ship_identity) {
+ U z=source+UINT64_C(0x9e3779b97f4a7c15)+(ship_identity<<1);
+ z=(z^(z>>30))*UINT64_C(0xbf58476d1ce4e5b9);
+ z=(z^(z>>27))*UINT64_C(0x94d049bb133111eb);
+ return ((z^(z>>31))&FOREVER)?:1;
+}
 int64_t f06_unzigzag(U x) {return (x&1)?-int64_t(x/2)-1:int64_t(x/2);}
 void f06_set(Campaign& c,U id,Field field,U v) {
  if(!has(c.world,id,field) || val(c.world,id,field)!=v)set(c,id,field,v);
@@ -34,6 +40,10 @@ U f06_rank(U score) {
  if(score>=720)return 4;if(score>=540)return 3;
  if(score>=380)return 2;if(score>=240)return 1;return 0;
 }
+U f06_contact_for_public(const WorldState& w,U public_id) {
+ for(U c:all(w,"f06_contact"))if(val(w,c,F06_PUBLIC_ID)==public_id)return c;
+ return 0;
+}
 U f06_contact_for(const WorldState& w,U source) {
  for(U c:all(w,"f06_contact"))if(ref(w,c,F06_SIGNAL_REF)==source)return c;
  return 0;
@@ -43,7 +53,7 @@ void f06_notice(Campaign& c,const ContentCatalog& cat,U contact,U kind) {
  (void)event(c,cat,0,6000+kind,F04_OK,0,contact);
 }
 F06ContactView f06_view(const WorldState& w,U id) {
- return {id,val(w,id,F06_FIRST),val(w,id,F06_LAST),
+ return {val(w,id,F06_PUBLIC_ID),val(w,id,F06_FIRST),val(w,id,F06_LAST),
    f06_unzigzag(val(w,id,F06_VISIBLE_X)),f06_unzigzag(val(w,id,F06_VISIBLE_Y)),
    f06_unzigzag(val(w,id,F06_VISIBLE_Z)),val(w,id,F06_SEEN_TRANSPONDER),
    static_cast<uint32_t>(val(w,id,F06_STATUS)),
@@ -76,6 +86,9 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
   need(all(c.world,"f06_contact").size()<2048,F04_CAPACITY);
   contact=make(c,cat,"f06_contact");
   link(c,contact,SHIP,1);link(c,contact,F06_SIGNAL_REF,sig);
+  const U public_id=f06_public(sig,val(c.world,1,SHIP_ID));
+  need(!f06_contact_for_public(c.world,public_id),F04_CAPACITY);
+  f06_set(c,contact,F06_PUBLIC_ID,public_id);
   f06_set(c,contact,F06_FIRST,current_time);
  }
  const U previous_class=val(c.world,contact,F06_SEEN_CLASS);
@@ -172,7 +185,7 @@ uint32_t f06_notices_page(F04Session* s,F04Ref who,U after,
    const U op=val(s->c->world,id,OP);
    if(id<=after || op<6001 || op>6005)continue;
    if(*written>=capacity){*more=1;break;}
-   out[(*written)++]={id,ref(s->c->world,id,TARGET),val(s->c->world,id,TICK),
+   out[(*written)++]={id,val(s->c->world,ref(s->c->world,id,TARGET),F06_PUBLIC_ID),val(s->c->world,id,TICK),
      static_cast<uint32_t>(op-6000)};
   }
   return F04_OK;
@@ -184,8 +197,10 @@ uint32_t f06_focus(F04Session* s,F04Ref who,U revision,U contact,F06ContactView*
   need(observer(s,who),F04_DENIED);need(revision==s->c->world.revision(),F04_STALE);
   auto next=std::make_unique<Campaign>(*s->c);
   (void)scan_station(*next,who.id); // F04 present, qualified and on duty
-  f06_poll(*next,*s->content.catalog(),contact,true);
+  const U internal=f06_contact_for_public(next->world,contact);
+  need(internal,F04_UNAVAILABLE);
+  f06_poll(*next,*s->content.catalog(),internal,true);
   need(schema(*next),F04_INTERNAL);s->c.swap(next);s->index_revision=UINT64_MAX;
-  *out=f06_view(s->c->world,contact);return F04_OK;
+  *out=f06_view(s->c->world,internal);return F04_OK;
  });
 }
