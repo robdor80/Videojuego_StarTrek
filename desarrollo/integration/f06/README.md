@@ -23,6 +23,9 @@
 
 La primera integración nativa usa **puntuaciones enteras normalizadas y milésimas de UA** a modo de prueba determinista, sin presentarlas como potencia o alcance canon del universo. El Host debe aportar posición relativa, firma, camuflaje/interferencia y transpondedor provenientes de su World State y de las reglas físicas disponibles.
 
+## Perfiles físicos Aster — generador v1
+El paso de CMake `enrich_aster_f06_v1.py` calcula en el árbol ignorado las propiedades físicas de seis planetas antes de generar los snapshots nativos F06. No cambia la fixture histórica ni expone atmósferas, vida o clases al puerto de sensores. Las antiguas etiquetas manuales Y/L de mundos muy distantes no superaban una comprobación térmica; ahora se clasifican provisionalmente desde la física, no por decoración. La luna de cada planeta se aproxima a una distancia acotada por la esfera de Hill. No existe aún dinámica orbital ni ciencia interactiva completa.
+
 ## Escenario acotado de aceptación F06
 
 Se incluye [Sistema Aster](SISTEMA_ASTER_QA.md), una fixture espacial con cuerpos celestes, naves y fenómenos para una guardia determinista de 8 horas conectada al mismo CoreRPG. Es **solo QA, no canon**. Los datos de atmósferas y clases planetarias permanecen privados al Host; la identificación científica real no está implementada.

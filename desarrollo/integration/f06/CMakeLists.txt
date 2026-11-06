@@ -21,9 +21,16 @@ execute_process(
   --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_profiles_generated.h"
  COMMAND_ERROR_IS_FATAL ANY
 )
+set(F06_QA_PHYSICAL "${CMAKE_CURRENT_BINARY_DIR}/generated/aster_f06_physical.json")
+execute_process(
+ COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/../../tools/generation/enrich_aster_f06_v1.py"
+  --source "${CMAKE_CURRENT_SOURCE_DIR}/fixtures/aster_f06_qa.json"
+  --output "${F06_QA_PHYSICAL}"
+ COMMAND_ERROR_IS_FATAL ANY
+)
 execute_process(
  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/build_validation_system.py"
-  --source "${CMAKE_CURRENT_SOURCE_DIR}/fixtures/aster_f06_qa.json"
+  --source "${F06_QA_PHYSICAL}"
   --out "${CMAKE_CURRENT_BINARY_DIR}/generated/f06_demo_system_generated.h"
  COMMAND_ERROR_IS_FATAL ANY
 )
