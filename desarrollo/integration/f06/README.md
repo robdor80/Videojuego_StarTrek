@@ -1,6 +1,6 @@
 # F06 — Sensores nativos Star Trek sobre CoreRPG
 
-**Estado:** incremento en PR Draft, pendiente de CI y verificación local; NO fase cerrada.
+**Estado:** implementación nativa ampliada en PR Draft; última CI y MSI por verificar. F06 NO cerrada. Véase [auditoría P02–P04 y Enterprise-D](INTEGRACION_UNIVERSO_OPERACIONES_GALAXY_2026-11-06.md).
 
 ## Arquitectura real
 
@@ -51,7 +51,7 @@ El objetivo de los diez menús permanece: Estado; Barridos; Búsqueda/localizaci
 
 - F05 revalida las órdenes escaneadas antes de que el motor F06 realice detección activa.
 - F06 focal exige ocupación real de Sensores y rechaza un contacto perdido.
-- **Pendiente:** configuración completa de matrices, reservas de potencia, seguimiento dedicado con cuotas, reconfiguración, búsqueda sectorizada y demás operaciones definidas en los diez menús. No atribuir autorización a parámetros booleanos suministrados por la UI.
+- **Implementación nueva:** seguimiento con cupos, zonas de búsqueda, configuración con intercambios de sensibilidad/resolución/compensación, búsqueda por tipo y clase realmente observados, autodiagnósticos y resultados focalizados persistentes y comparables. **Pendiente:** asignación física de potencia, bandas espectrales específicas, cuotas temporales completas y rutinas de separación por secciones. No atribuir autorización a parámetros booleanos suministrados por la UI.
 
 ## P05 — Pruebas, rendimiento y cierre
 

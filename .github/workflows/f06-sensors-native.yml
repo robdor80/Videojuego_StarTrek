@@ -7,6 +7,7 @@ on:
       - 'desarrollo/integration/f05/**'
       - 'sistemas/gameplay/ship_operations/consoles/sensors/ship_class_registry.json'
       - 'sistemas/gameplay/ship_operations/consoles/sensors/ships_visual_catalog.json'
+      - 'sistemas/gameplay/ship_operations/consoles/sensors/sensor_capability_profiles_f06.json'
       - '.github/workflows/f06-sensors-native.yml'
   workflow_dispatch:
 permissions:
