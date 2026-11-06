@@ -139,14 +139,16 @@ F06ContactView f06_view(const WorldState& w,U id) {
    static_cast<uint32_t>(val(w,id,F06_LOSS_REASON)),
    static_cast<uint32_t>(val(w,id,F06_SEEN_CATEGORY))};
 }
-void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focused) {
- U contact=f06_contact_for(c.world,sig);
+void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focused,
+ U known_contact=0,bool indexed=false,U* allocated_cache=nullptr) {
+ U contact=indexed?known_contact:f06_contact_for(c.world,sig);
  U d=f06_distance(c.world,sig);
  
  U score=f06_score(c.world,sig,d,active,focused);
  // Dedicated tracking gives a modest evidence improvement ONLY when an actual
  // sensor signal already passed the passive minimum, and no array overload exists.
- if(contact && score>=240 && f06_tracking_used(c.world)<=f06_tracking_capacity(c.world))
+ if(contact && score>=240 &&
+  (allocated_cache?*allocated_cache:f06_tracking_used(c.world))<=f06_tracking_capacity(c.world))
   score=std::min<U>(1000,score+(val(c.world,contact,F06_TRACK_MODE)==F06_TRACK_PRIORITY?60:0));
  U rank=f06_rank(score*f06_current_config(c.world).resolution_permille/1000);
  // An active focused request must never create a contact out of hidden truth.
@@ -160,6 +162,11 @@ void f06_apply(Campaign& c,const ContentCatalog& cat,U sig,bool active,bool focu
    const U cause=unavailable?F06_EXIT_SENSOR_OFFLINE:val(c.world,sig,F06_EXIT);
    
    f06_set(c,contact,F06_STATUS,F06_LOST);
+   if(allocated_cache) {
+    const U slots=f06_track_cost(val(c.world,contact,F06_TRACK_MODE));
+    need(*allocated_cache>=slots,F04_INTERNAL);
+    *allocated_cache-=slots;
+   }
    // An unavailable contact may not consume finite dedicated-tracking slots.
    f06_set(c,contact,F06_TRACK_MODE,F06_TRACK_PASSIVE);
    f06_set(c,contact,F06_LOSS_REASON,cause);
@@ -219,7 +226,17 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
   need(type(c.world,source,"f06_signal"),F04_SCOPE);
   f06_apply(c,cat,source,true,true);return;
  }
- for(U signal:signals)f06_apply(c,cat,signal,active,false);
+ // Build once per polling window; otherwise every signal re-enumerates every
+ // dossier and its tracking allocation, giving quadratic CPU/memory churn.
+ std::map<U,U> known_contacts;
+ for(U id:all(c.world,"f06_contact"))
+  known_contacts.emplace(ref(c.world,id,F06_SIGNAL_REF),id);
+ U allocated=f06_tracking_used(c.world);
+ for(U signal:signals){
+  const auto it=known_contacts.find(signal);
+  f06_apply(c,cat,signal,active,false,
+    it==known_contacts.end()?0:it->second,true,&allocated);
+ }
  for(U id:all(c.world,"f06_power_request")) {
   if(val(c.world,id,F06_PWR_STATE)==F06_POWER_QUEUED &&
      val(c.world,id,F06_PWR_EXPIRY)<=c.time.now()) {
