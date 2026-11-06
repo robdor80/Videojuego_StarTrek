@@ -2,6 +2,11 @@
 namespace {
 bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
  std::set<U>& required,std::set<U>& ar,std::set<U>& rr) {
+ if(type(w,id,"f06_handoff")) {
+  allowed={F06_H_KEY,F06_H_PUBLIC,F06_H_TIME,F06_H_OBSERVED,F06_H_PRIORITY,F06_H_KIND,
+   F06_H_STATUS,F06_H_CLASS,F06_H_CONFIDENCE,F06_H_TRANSPONDER,F06_H_X,F06_H_Y,F06_H_Z};
+  required=allowed;ar={SHIP,PERSON,F06_CONTACT_REF};rr=ar;return true;
+ }
  if(type(w,id,"f06_array")) {
   allowed={F06_ARRAY_CAPABILITY,F06_ARRAY_POWER,F06_ARRAY_INTEGRITY,
    F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS};
@@ -22,6 +27,19 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
 bool f06_schema(const Campaign& c) {
  const auto& w=c.world;
  std::set<U> signals,public_ids;
+ std::set<U> handoff_keys,handoff_ids;
+ if(all(w,"f06_handoff").size()>512)return false;
+ for(U id:all(w,"f06_handoff")) {
+  if(!type(w,ref(w,id,F06_CONTACT_REF),"f06_contact") ||
+   !val(w,id,F06_H_KEY) || !handoff_keys.insert(val(w,id,F06_H_KEY)).second ||
+   !val(w,id,F06_H_PUBLIC) || !handoff_ids.insert(val(w,id,F06_H_PUBLIC)).second ||
+   val(w,id,F06_H_TIME)>c.time.now() ||
+   val(w,id,F06_H_OBSERVED)>val(w,id,F06_H_TIME) ||
+   val(w,id,F06_H_PRIORITY)<1 || val(w,id,F06_H_PRIORITY)>4 ||
+   val(w,id,F06_H_KIND)<1 || val(w,id,F06_H_KIND)>4 ||
+   val(w,id,F06_H_STATUS)!=1 ||
+   val(w,id,F06_H_CONFIDENCE)>1000)return false;
+ }
  const auto arrays=all(w,"f06_array");
  if(arrays.size()>1)return false;
  for(U id:arrays) {
