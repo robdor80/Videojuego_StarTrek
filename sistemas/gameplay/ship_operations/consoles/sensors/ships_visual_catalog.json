@@ -1,0 +1,467 @@
+{
+  "schema_version": "0.1.0",
+  "catalog_id": "f06_ship_visual_catalog",
+  "status": "METADATA_INVENTORY_ONLY",
+  "source": "assets/naves/**/metadata.json",
+  "models_count": 25,
+  "note": "25 fichas de metadatos ya existentes; los GLB no están en este commit ni su presencia local, licencia, geometría o importación en Unreal se ha validado. Los IDs no conceden conocimiento a Sensores.",
+  "reveal_policy": {
+    "unknown": "no exact model",
+    "partial": "generic silhouette",
+    "class_probable": "unconfirmed label only",
+    "class_confirmed": "only validated class asset in F07",
+    "identity_confirmed": "vessel-specific model only with observed identity"
+  },
+  "assets": [
+    {
+      "visual_asset_id": "asset_491da023c02e",
+      "display_name": "andorian cruiser",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Andorian/crucero_andoriano/andorian_cruiser/metadata.json",
+      "local_assets_directory": "assets/naves/Andorian/crucero_andoriano/andorian_cruiser",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_andorian_cruiser_e03144851b704fa7ba2dd9eb3d431599.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_ce5c884253fb",
+      "display_name": "arkonian military vessel",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Arkonian/nave_militar_arkoniana/arkonian_military_vessel/metadata.json",
+      "local_assets_directory": "assets/naves/Arkonian/nave_militar_arkoniana/arkonian_military_vessel",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_arkonian_military_vessel_55f1e5386c0f4246ba95c8b0a27970cb.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_7735bde75cca",
+      "display_name": "bajoran freighter",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Bajorian/carguero_bajorano/bajoran_freighter/metadata.json",
+      "local_assets_directory": "assets/naves/Bajorian/carguero_bajorano/bajoran_freighter",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_bajoran_freighter_8267a75b43ae480091f0b7ff638afe98.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_2c8fef161820",
+      "display_name": "borg cube",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Borg/cubo_borg/borg_cube/metadata.json",
+      "local_assets_directory": "assets/naves/Borg/cubo_borg/borg_cube",
+      "geometry_inventory": [
+        {
+          "name": "borg_cube_ec8e1dca683b4ba0ba589907666faed6.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_f8ac487e585d",
+      "display_name": "b 1 blas rika bird of prey",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Klingon/mixed/b_1_blas_rika_bird_of_prey/metadata.json",
+      "local_assets_directory": "assets/naves/Klingon/mixed/b_1_blas_rika_bird_of_prey",
+      "geometry_inventory": [
+        {
+          "name": "b-1_blas_rika_bird_of_prey_6713529c122a482d95470dbf065fea37.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_8122a5344fba",
+      "display_name": "bird of prey enterprise",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Klingon/mixed/bird_of_prey_enterprise/metadata.json",
+      "local_assets_directory": "assets/naves/Klingon/mixed/bird_of_prey_enterprise",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_bird_of_prey_enterprise_615bb97eafd24be180d91aff724508ac.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_bb295e0d16b2",
+      "display_name": "klingon d5 class",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Klingon/mixed/klingon_d5_class/metadata.json",
+      "local_assets_directory": "assets/naves/Klingon/mixed/klingon_d5_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_klingon_d5_class_88cc858cf5a24ed1955d4018af84b3a9.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_17de213938ac",
+      "display_name": "klingon freighter",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Klingon/mixed/klingon_freighter/metadata.json",
+      "local_assets_directory": "assets/naves/Klingon/mixed/klingon_freighter",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_klingon_freighter_e527cd420ad646a096f30725dd90fd95.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_58f45b94ec1e",
+      "display_name": "dderidex class warbird",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/Romulan/ave_de_guerra_dderidex/dderidex_class_warbird/metadata.json",
+      "local_assets_directory": "assets/naves/Romulan/ave_de_guerra_dderidex/dderidex_class_warbird",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_dderidex_class_warbird_4d0e1763674a40d49bdeceed8031c757.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_595e261e910f",
+      "display_name": "species 8472 bioship",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/species_8472/bionave_especie_8472/species_8472_bioship/metadata.json",
+      "local_assets_directory": "assets/naves/species_8472/bionave_especie_8472/species_8472_bioship",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_species_8472_bioship_e2d28641e48241d4a58981e898908e1f.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_3154f6646296",
+      "display_name": "akira class",
+      "class_code_candidate": "akira",
+      "class_id_candidate": 7,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/akira/akira_class/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/akira/akira_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_akira_class_44f8933ea0114764bbebadc00871624e.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_56b005e0ac1d",
+      "display_name": "dsc enterprise",
+      "class_code_candidate": "constitution",
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/constitution/dsc_enterprise/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/constitution/dsc_enterprise",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_dsc_enterprise_fe9d76277d56488ea3d3236dfb52b9aa.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_22ff264313a0",
+      "display_name": "danube class",
+      "class_code_candidate": "danube",
+      "class_id_candidate": 11,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/danube/danube_class/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/danube/danube_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_danube_class_4fea694a0d804f8aa0b5117a8cffe5df.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_3e917a32aa61",
+      "display_name": "defiant",
+      "class_code_candidate": "defiant",
+      "class_id_candidate": 4,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/defiant/defiant_001/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/defiant/defiant_001",
+      "geometry_inventory": [
+        {
+          "name": "defiant_42239f2b45f24650b1900bd98c71f93c.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_c9ff4e2982ec",
+      "display_name": "defiant",
+      "class_code_candidate": "defiant",
+      "class_id_candidate": 4,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/defiant/defiant_002/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/defiant/defiant_002",
+      "geometry_inventory": [
+        {
+          "name": "defiant_1d21c0c29f25458a9044344645f36a2c.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_6b8402420c56",
+      "display_name": "galaxy class",
+      "class_code_candidate": "galaxy",
+      "class_id_candidate": 1,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/galaxy/galaxy_class/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/galaxy/galaxy_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_galaxy_class_2b45cb2241694848b1250df739ede732.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_bfc5425c225a",
+      "display_name": "tng galaxy class model",
+      "class_code_candidate": "galaxy",
+      "class_id_candidate": 1,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/galaxy/tng_galaxy_class_model/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/galaxy/tng_galaxy_class_model",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_tng_galaxy_class_model_a80180911d944d9d9322e400287e9f4f.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_e08be45ce937",
+      "display_name": "miranda class (1)",
+      "class_code_candidate": "miranda",
+      "class_id_candidate": 5,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/miranda/miranda_class_1/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/miranda/miranda_class_1",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_miranda_class (1).glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_bc0caa2b3275",
+      "display_name": "online odessey class enterprise f",
+      "class_code_candidate": "odyssey",
+      "class_id_candidate": 3,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/odyssey/online_odessey_class_enterprise_f/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/odyssey/online_odessey_class_enterprise_f",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_online__odessey_class__enterprise_f.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_6528f7300ca3",
+      "display_name": "olympic class",
+      "class_code_candidate": "olympic",
+      "class_id_candidate": 12,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/olympic/olympic_class/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/olympic/olympic_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_olympic_class_ac868ef2149640d3946c004a9ff0b829.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_8324cfa91f64",
+      "display_name": "type 6 shuttle",
+      "class_code_candidate": "shuttle",
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/shuttle/type_6_shuttle/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/shuttle/type_6_shuttle",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_type_6_shuttle_e986bb89f0004d2eadcd19e383d5c5a6.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_6369439e50e4",
+      "display_name": "sovereign class",
+      "class_code_candidate": "sovereign",
+      "class_id_candidate": 2,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/sovereign/sovereign_class/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/sovereign/sovereign_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_sovereign_class_fb41cc1936ef408e97606abf0a1f4826.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_4afb2c9ac62a",
+      "display_name": "Sovereign - versión con fuente FBX",
+      "class_code_candidate": "sovereign",
+      "class_id_candidate": 2,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/sovereign/sovereign_version_con_fuente_fbx/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/sovereign/sovereign_version_con_fuente_fbx",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_sovereign_class (1).glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_2d482406d5f9",
+      "display_name": "Sovereign - versión con hangar",
+      "class_code_candidate": "sovereign",
+      "class_id_candidate": 2,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/starfleet/sovereign/sovereign_version_con_hangar/metadata.json",
+      "local_assets_directory": "assets/naves/starfleet/sovereign/sovereign_version_con_hangar",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_sovereign_class_with_shuttlebay.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    },
+    {
+      "visual_asset_id": "asset_b2b248c5efdd",
+      "display_name": "dkyr class",
+      "class_code_candidate": null,
+      "class_id_candidate": null,
+      "taxonomy_verified": false,
+      "metadata_path": "assets/naves/vulcan/dkyr_vulcana/dkyr_class/metadata.json",
+      "local_assets_directory": "assets/naves/vulcan/dkyr_vulcana/dkyr_class",
+      "geometry_inventory": [
+        {
+          "name": "star_trek_-_dkyr_class_ff0f0bfa3f684146be3d132d93363b1d.glb",
+          "format": ".glb"
+        }
+      ],
+      "license_verified": false,
+      "ue5_imported": false,
+      "ready_for_sensor_viewer": false
+    }
+  ]
+}
