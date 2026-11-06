@@ -35,6 +35,7 @@ El objetivo de los diez menús permanece: Estado; Barridos; Búsqueda/localizaci
 - Evaluación de dos alcances pasivos y focalización activa de contacto conocido.
 - Identificación solo al alcanzar resolución suficiente.
 - Interferencia/rango y pérdidas distinguidas sin atribuir automáticamente destrucción, camuflaje ni salto warp.
+- Estado real de matrices, potencia e integridad incorporado como entidad opcional en Core mediante un puerto privilegiado del Host. Una pérdida por matriz sin alimentación se señala como avería conocida, no como anomalía misteriosa.
 - No se crea nada cuando no existen firmas en Core.
 
 ## P03 — Memoria y catálogo 3D
@@ -44,7 +45,7 @@ El objetivo de los diez menús permanece: Estado; Barridos; Búsqueda/localizaci
 - `sistemas/gameplay/ship_operations/consoles/sensors/ship_class_registry.json` fija el vocabulario numérico para vincular clases.
 - `ships_visual_catalog.json` conserva los **25 modelos** incluidos en las fichas de metadatos del repositorio, como candidatos NO validados; `build_ship_visual_catalog.py --check <catalog.json>` detecta desajustes.
 - Los archivos `.glb` no se han descargado, importado ni subido; ningún modelo está certificado para Unreal.
-- **Pendiente:** registrar observaciones científicas separadas, transferencia autorizada efectiva a Ciencia y correlaciones históricas profundas. Un paquete candidato no equivale a entrega real.
+- **En la PR:** existe una cola real `f06_handoff` de solicitudes a Ciencia en Core; cada solicitud incorpora una instantánea inmutable de los datos observados, prioridad, clase de análisis, emisor F04 autorizado y clave idempotente. Una solicitud en estado `queued` es un hecho persistente, **no** implica que Ciencia la haya aceptado, estudiado o emitido hallazgos. **Pendiente:** registros individuales de observación con procedencia detallada, aceptación/procesamiento por consola Ciencia y correlaciones históricas profundas.
 
 ## P04 — Operación y delegación
 
