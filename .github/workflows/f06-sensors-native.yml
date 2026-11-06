@@ -46,7 +46,7 @@ jobs:
         shell: bash
         run: |
           cmake -S desarrollo/integration/f06 -B laboratorios/f06/ci/build -DCMAKE_BUILD_TYPE=Release -DCORERPG_SOURCE_DIR="$GITHUB_WORKSPACE/laboratorios/f06/ci/CoreRPG"
-          cmake --build laboratorios/f06/ci/build --parallel 3
+          cmake --build laboratorios/f06/ci/build --config Release --parallel 3
       - name: Native F06 behavior and selected F05 regressions
         shell: bash
         run: |
