@@ -2,6 +2,7 @@
 // Include at the tail of f04_bridge.cpp; declarations precede f04_advance.
 #include "f06_profiles_generated.h"
 namespace {
+void f06_bis_tick(Campaign&,const ContentCatalog&);
 U f06_zigzag(int64_t x) {return x<0?U(-(x+1))*2+1:U(x)*2;}
 U f06_public(U source,U ship_identity) {
  U z=source+UINT64_C(0x9e3779b97f4a7c15)+(ship_identity<<1);
@@ -20,6 +21,24 @@ U f06_distance(const WorldState& w,U s) {
  return static_cast<U>(std::sqrt(x*x+y*y+z*z));
 }
 F06ArrayView f06_array_state(const WorldState& w) {
+ // On the modernized Enterprise the two physical arrays stay independent.
+ // A detached array never helps the current observer's ship.
+ const auto sections=all(w,"f06_section_array");
+ if(!sections.empty()) {
+  U best=0,quality=0;
+  for(U id:sections)if(val(w,id,F06_SEC_LINK)){
+   const U q=val(w,id,F06_SEC_CAP)*val(w,id,F06_SEC_PWR)*
+     val(w,id,F06_SEC_INT)/U(1000000);
+   if(!best || q>quality){best=id;quality=q;}
+  }
+  if(!best)return {0,0,0,0,0,0};
+  return {static_cast<uint32_t>(val(w,best,F06_SEC_CAP)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_PWR)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_INT)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_SHORT)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_LONG)),
+   static_cast<uint32_t>(val(w,best,F06_SEC_FOCUS))};
+ }
  const auto rows=all(w,"f06_array");
  if(rows.empty())return {1000,1000,1000,1,1,1}; // nominal installed profile
  const U id=rows[0];
@@ -93,6 +112,23 @@ U f06_score(const WorldState& w,U s,U distance,bool active,bool focused) {
  U mask=U(val(w,s,F06_INTERFERENCE))*
   (1000-profile.interference_resistance_permille)/1000;
  mask=mask*(1000-config.compensation_permille)/1000;
+ // Local band interference is authoritative Host-supplied state.
+ const auto environments=all(w,"f06_environment");
+ if(!environments.empty()) {
+  Field field=F06_ENV_EM;
+  switch(val(w,s,F06_CATEGORY)){
+   case F06_CATEGORY_STAR:case F06_CATEGORY_ENERGY:case F06_CATEGORY_PARTICLES:
+      field=F06_ENV_THERM;break;
+   case F06_CATEGORY_PLANET:case F06_CATEGORY_MOON:case F06_CATEGORY_ASTEROID:
+      field=F06_ENV_GRAV;break;
+   case F06_CATEGORY_SUBSPACE:case F06_CATEGORY_WARP:case F06_CATEGORY_ANOMALY:
+      field=F06_ENV_SUB;break;
+   case F06_CATEGORY_LIFEFORM:field=F06_ENV_BIO;break;
+   default:field=F06_ENV_EM;break;
+  }
+  mask=std::min<U>(850,mask+
+    val(w,environments[0],field)*(1000-config.compensation_permille)/1000);
+ }
  auto measure=[&](U range,bool near_bonus)->U {
   if(distance>range)return 0;
   // Fixed-point gameplay abstraction. Distances are milli-AU.
@@ -244,6 +280,7 @@ void f06_poll(Campaign& c,const ContentCatalog& cat,U focus,bool active) {
    (void)event(c,cat,0,6032,F04_OK,0,id);
   }
  }
+ f06_bis_tick(c,cat);
 }
 } // namespace
 namespace {
@@ -880,3 +917,6 @@ uint32_t f06_scan_area(F04Session* s,F04Ref who,
   *out={s->c->world.revision(),observed,created};return F04_OK;
  });
 }
+
+// Additive F06-BIS runtime within the exact same Core campaign.
+#include "f06_bis.inc"
