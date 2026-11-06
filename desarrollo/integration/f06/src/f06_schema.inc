@@ -19,9 +19,14 @@ bool f06_shape(const WorldState& w,U id,std::set<U>& allowed,
    F06_ARRAY_SHORT,F06_ARRAY_LONG,F06_ARRAY_FOCUS};
   required=allowed;ar={SHIP};rr=ar;return true;
  }
+ if(type(w,id,"f06_world_feed")) {
+  allowed={F06_WORLD_REV,F06_WORLD_TICK,F06_WORLD_ORIGIN_X,
+   F06_WORLD_ORIGIN_Y,F06_WORLD_ORIGIN_Z};
+  required=allowed;ar={SHIP};rr=ar;return true;
+ }
  if(type(w,id,"f06_signal")) {
   allowed={F06_X,F06_Y,F06_Z,F06_STRENGTH,F06_INTERFERENCE,
-   F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT};
+   F06_CLASS,F06_TRANSPONDER,F06_ACTIVE_FLAG,F06_EXIT,F06_WORLD_ID,F06_WORLD_TICK};
   required=allowed;ar={SHIP};rr=ar;return true;
  }
  if(type(w,id,"f06_contact")) {
@@ -76,11 +81,20 @@ bool f06_schema(const Campaign& c) {
    val(w,id,F06_ARRAY_SHORT)>1 || val(w,id,F06_ARRAY_LONG)>1 ||
    val(w,id,F06_ARRAY_FOCUS)>1)return false;
  }
+ const auto feeds=all(w,"f06_world_feed");
+ if(feeds.size()>1)return false;
+ for(U feed:feeds)
+  if(!val(w,feed,F06_WORLD_REV) || val(w,feed,F06_WORLD_TICK)>c.time.now())return false;
+ std::set<U> world_keys;
  const auto source=all(w,"f06_signal");
  if(source.size()>2048 || all(w,"f06_contact").size()>2048)return false;
  for(U id:source) {
   if(val(w,id,F06_STRENGTH)>1000 || val(w,id,F06_INTERFERENCE)>550 ||
-   val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_SENSOR_OFFLINE)return false;
+   val(w,id,F06_ACTIVE_FLAG)>1 || val(w,id,F06_EXIT)>F06_EXIT_SENSOR_OFFLINE ||
+   (has(w,id,F06_WORLD_ID) &&
+    (!val(w,id,F06_WORLD_ID) || feeds.size()!=1 ||
+      !has(w,id,F06_WORLD_TICK) || val(w,id,F06_WORLD_TICK)>c.time.now() ||
+      !world_keys.insert(val(w,id,F06_WORLD_ID)).second)))return false;
  }
  for(U id:all(w,"f06_contact")) {
   const U s=ref(w,id,F06_SIGNAL_REF);

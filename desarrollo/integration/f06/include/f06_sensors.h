@@ -40,6 +40,37 @@ typedef struct {
  uint64_t event_id,contact_id,tick;
  uint32_t kind;
 } F06NoticeView;
+/* TRUSTED SPATIAL WORLD FEED (NOT a sensor-facing/UI API).
+ * Domain World Host publishes a full *authoritative* snapshot of spatial
+ * entities in one shared coordinate frame. Never infer entities from scans,
+ * JSON visual assets, encounter prompts or LLM narration.
+ * Ingesting an entity is a materialization of existing world truth only.
+ * Snapshot must cover all materialized entities for this observer, including
+ * a zero-entity frame. Omitted old keys are marked inactive, NOT destroyed.
+ * The ship origin must be supplied from real navigation state in the same
+ * fixed coordinate frame. Position updates require new snapshots from Host.
+ */
+typedef struct {
+ uint64_t world_entity_key; /* stable nonzero external ID, opaque and Host-only */
+ int64_t absolute_x_milli_au,absolute_y_milli_au,absolute_z_milli_au;
+ uint64_t transponder_id;
+ uint32_t class_id,strength_permille,interference_permille;
+ uint32_t active,observed_exit_evidence; /* 0..1; 0..F06_EXIT_OBSERVED_OUT_OF_RANGE */
+} F06WorldEntity;
+typedef struct {
+ uint64_t expected_revision; /* current Core World revision */
+ uint64_t source_revision; /* monotonic, durable spatial-world authority revision */
+ uint64_t snapshot_tick; /* MUST equal Core campaign clock tick */
+ int64_t observer_x_milli_au,observer_y_milli_au,observer_z_milli_au;
+ uint64_t entity_count;
+ const F06WorldEntity* entities;
+} F06WorldSnapshot;
+typedef struct {
+ uint64_t core_revision,source_revision;
+ uint32_t created,updated,retired;
+} F06WorldReceipt;
+F04_API uint32_t f06_host_world_snapshot(F04Session*,const F06WorldSnapshot*,F06WorldReceipt*);
+
 /* Actual sensor hardware state, supplied ONLY by the trusted engineering/
  * operations host. No UI/AI claims repairs or power assignments directly.
  * Missing explicit override means the ship's installed nominal configuration. */

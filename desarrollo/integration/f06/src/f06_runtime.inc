@@ -416,6 +416,90 @@ uint32_t f06_array_status(F04Session* s,F04Ref who,F06ArrayView* out) {
   return F04_OK;
  });
 }
+/* The spatial feed never exposes world keys or signal EntityIds to operator
+ * APIs. All writes and resulting detections commit with one Core revision. */
+uint32_t f06_host_world_snapshot(F04Session* s,const F06WorldSnapshot* in,F06WorldReceipt* out) {
+ if(!in || !out || (in->entity_count && !in->entities))return F04_ARGUMENT;
+ *out={};
+ return call(s,[&]()->uint32_t{
+  need(in->expected_revision==s->c->world.revision(),F04_STALE);
+  need(in->snapshot_tick==s->c->time.now() && in->source_revision &&
+    in->source_revision<=FOREVER && in->entity_count<=2048,F04_ARGUMENT);
+  const auto valid=[](int64_t n){return n>=-100000000 && n<=100000000;};
+  need(valid(in->observer_x_milli_au) && valid(in->observer_y_milli_au) &&
+    valid(in->observer_z_milli_au),F04_ARGUMENT);
+  const auto prior=all(s->c->world,"f06_world_feed");
+  if(!prior.empty())need(in->source_revision>val(s->c->world,prior[0],F06_WORLD_REV),F04_STALE);
+  std::vector<const F06WorldEntity*> rows;
+  rows.reserve(static_cast<size_t>(in->entity_count));
+  for(U n=0;n<in->entity_count;++n) {
+   const auto& e=in->entities[n];
+   need(e.world_entity_key && e.world_entity_key<=FOREVER &&
+     e.transponder_id<=FOREVER && e.strength_permille<=1000 &&
+     e.interference_permille<=550 && e.active<=1 &&
+     e.observed_exit_evidence<=F06_EXIT_OBSERVED_OUT_OF_RANGE &&
+     valid(e.absolute_x_milli_au) && valid(e.absolute_y_milli_au) &&
+     valid(e.absolute_z_milli_au) &&
+     valid(e.absolute_x_milli_au-in->observer_x_milli_au) &&
+     valid(e.absolute_y_milli_au-in->observer_y_milli_au) &&
+     valid(e.absolute_z_milli_au-in->observer_z_milli_au),F04_ARGUMENT);
+   rows.push_back(&e);
+  }
+  std::sort(rows.begin(),rows.end(),[](const auto* a,const auto* b){
+    return a->world_entity_key<b->world_entity_key;
+  });
+  for(size_t i=1;i<rows.size();++i)
+   need(rows[i-1]->world_entity_key!=rows[i]->world_entity_key,F04_ARGUMENT);
+  auto next=std::make_unique<Campaign>(*s->c);
+  U feed=prior.empty()?0:prior[0];
+  if(!feed){feed=make(*next,*s->content.catalog(),"f06_world_feed");link(*next,feed,SHIP,1);}
+  f06_set(*next,feed,F06_WORLD_REV,in->source_revision);
+  f06_set(*next,feed,F06_WORLD_TICK,in->snapshot_tick);
+  f06_set(*next,feed,F06_WORLD_ORIGIN_X,f06_zigzag(in->observer_x_milli_au));
+  f06_set(*next,feed,F06_WORLD_ORIGIN_Y,f06_zigzag(in->observer_y_milli_au));
+  f06_set(*next,feed,F06_WORLD_ORIGIN_Z,f06_zigzag(in->observer_z_milli_au));
+  std::map<U,U> existing;
+  for(U id:all(next->world,"f06_signal"))
+   if(has(next->world,id,F06_WORLD_ID))
+    existing.emplace(val(next->world,id,F06_WORLD_ID),id);
+  std::set<U> incoming;
+  U created=0,updated=0,retired=0;
+  for(const F06WorldEntity* source:rows){
+   incoming.insert(source->world_entity_key);
+   const auto it=existing.find(source->world_entity_key);
+   U id=it==existing.end()?0:it->second;
+   if(!id){
+    need(all(next->world,"f06_signal").size()<2048,F04_CAPACITY);
+    id=make(*next,*s->content.catalog(),"f06_signal");link(*next,id,SHIP,1);
+    f06_set(*next,id,F06_WORLD_ID,source->world_entity_key);++created;
+   }else ++updated;
+   f06_set(*next,id,F06_WORLD_TICK,in->snapshot_tick);
+   f06_set(*next,id,F06_X,f06_zigzag(source->absolute_x_milli_au-in->observer_x_milli_au));
+   f06_set(*next,id,F06_Y,f06_zigzag(source->absolute_y_milli_au-in->observer_y_milli_au));
+   f06_set(*next,id,F06_Z,f06_zigzag(source->absolute_z_milli_au-in->observer_z_milli_au));
+   f06_set(*next,id,F06_STRENGTH,source->strength_permille);
+   f06_set(*next,id,F06_INTERFERENCE,source->interference_permille);
+   f06_set(*next,id,F06_CLASS,source->class_id);
+   f06_set(*next,id,F06_TRANSPONDER,source->transponder_id);
+   f06_set(*next,id,F06_ACTIVE_FLAG,source->active);
+   f06_set(*next,id,F06_EXIT,source->observed_exit_evidence);
+  }
+  for(const auto& [world_id,id]:existing)if(!incoming.contains(world_id)){
+   if(val(next->world,id,F06_ACTIVE_FLAG)){++retired;
+    f06_set(*next,id,F06_ACTIVE_FLAG,0);
+    f06_set(*next,id,F06_EXIT,F06_EXIT_UNKNOWN);
+    f06_set(*next,id,F06_WORLD_TICK,in->snapshot_tick);
+   }
+  }
+  f06_poll(*next,*s->content.catalog(),0,false);
+  need(schema(*next),F04_INTERNAL);
+  s->c.swap(next);s->index_revision=UINT64_MAX;
+  *out={s->c->world.revision(),in->source_revision,
+    static_cast<uint32_t>(created),static_cast<uint32_t>(updated),
+    static_cast<uint32_t>(retired)};
+  return F04_OK;
+ });
+}
 uint32_t f06_host_signal(F04Session* s,const F06SignalInput* in,F06SignalReceipt* out) {
  if(!in || !out)return F04_ARGUMENT;*out={};
  return call(s,[&]()->uint32_t {

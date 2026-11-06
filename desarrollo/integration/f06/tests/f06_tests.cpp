@@ -259,6 +259,53 @@ void run(const std::string& scenario){
   const auto saved=l.save();
   ok(f05_execute_order(l.s,l.h.ensign,0,r.order,&r)==F04_OK &&
      saved==l.save(),"replayed F05 order does not scan twice");
+ } else if(scenario=="world_feed") {
+  const auto ship=l.stats();
+  F06WorldEntity fleet[2]{
+   {200,6500,0,0,700,4,1000,0,1,F06_EXIT_UNKNOWN},
+   {100,5200,0,0,600,2,950,0,1,F06_EXIT_UNKNOWN}
+  };
+  F06WorldSnapshot snap{ship.revision,1001,0,5000,0,0,2,fleet};
+  F06WorldReceipt receipt{};
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_OK &&
+    receipt.created==2 && receipt.retired==0,"trusted full world materialization");
+  const auto observed=l.contacts();
+  ok(observed.size()==2,"both existing spatial entities observable");
+  const U first=observed[0].contact_id,second=observed[1].contact_id;
+  auto stable=l.save();
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_STALE &&
+    l.save()==stable,"stale spatial source revision cannot reappear");
+  snap.expected_revision=l.stats().revision;snap.source_revision=1002;
+  F06WorldEntity duplicate[2]{fleet[0],fleet[0]};snap.entities=duplicate;
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_ARGUMENT &&
+    l.save()==stable,"duplicate persistent world IDs rejected atomically");
+  snap.entities=fleet;snap.entity_count=2;
+  snap.observer_x_milli_au=6000;
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_OK &&
+    receipt.updated==2 && !receipt.created,"observer motion recomputes positions");
+  const auto moved=l.contacts();
+  ok(moved.size()==2 && moved[0].contact_id==first &&
+    moved[1].contact_id==second,"movement preserves persistent contact identities");
+  snap.expected_revision=l.stats().revision;snap.source_revision=1003;
+  snap.entities=&fleet[0];snap.entity_count=1;
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_OK &&
+    receipt.retired==1 && l.contacts(F06_LOST).size()==1,
+    "omitted spatial entity becomes lost, not destroyed");
+  auto persist=l.save();l.load(persist);
+  ok(l.contacts(F06_LOST).size()==1,"world source retirement survives save/load");
+  snap.expected_revision=l.stats().revision;snap.source_revision=1004;
+  snap.entities=fleet;snap.entity_count=2;
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_OK &&
+    !receipt.created && l.contacts(F06_ACTIVE).size()==2,
+    "reappearing real entity reuses previous materialized Core identity");
+  const auto reunited=l.contacts();
+  ok(reunited[0].contact_id==first && reunited[1].contact_id==second,
+    "reacquisition IDs stable through world snapshots");
+  snap.expected_revision=l.stats().revision;snap.source_revision=1005;
+  snap.entities=nullptr;snap.entity_count=0;
+  ok(f06_host_world_snapshot(l.s,&snap,&receipt)==F04_OK &&
+    receipt.retired==2 && l.contacts(F06_ACTIVE).empty(),
+    "full empty universe snapshot retires all spatial signals");
  } else if(scenario=="science_queue") {
   l.ready();l.upsert(l.signal(580,5000,4,999));
   const U id=l.contacts()[0].contact_id;
