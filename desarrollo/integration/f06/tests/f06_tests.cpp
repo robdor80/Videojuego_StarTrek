@@ -590,7 +590,8 @@ void run(const std::string& scenario){
   ok(returned!=finalContacts.end() && returned->contact_id==klingonId &&
     l.stats().now==28800,"eight-hour watch reacquires returning cruiser with stable ID");
   const auto saved=l.save();l.load(saved);
-  ok(l.save()==saved && hasClass(l.contacts(F06_ACTIVE),16)!=l.contacts(F06_ACTIVE).end(),
+  const auto persisted=l.contacts(F06_ACTIVE);
+  ok(l.save()==saved && hasClass(persisted,16)!=persisted.end(),
     "eight-hour final state survives Core save/load");
  } else if(scenario=="eight_hours") {
   l.upsert(l.signal());auto checkpoint=l.save();

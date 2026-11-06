@@ -2,7 +2,7 @@
 
 **Estado:** fixture determinista para pruebas del motor CoreRPG + F06; no es una localización aprobada del lore ni sustituye a F13.
 
-**Composición en el fichero JSON:** 1 estrella, 6 planetas (H, M, Y, J, P, L), 4 lunas, 1 nebulosa, 1 cinturón de asteroides representativo, 1 estación, 1 carguero civil, 1 nave científica de la Federación (Intrepid), 1 crucero klingon (Vor'cha), 1 nave romulana (D'deridex), 1 lanzadera y 1 sonda. Total **21 entidades**. Todos los nombres son provisionales.
+**Composición en el fichero JSON:** 1 estrella, 6 planetas (H, M, Y, J, P, L), 4 lunas, 1 nebulosa, 1 cinturón de asteroides representativo, 1 estación, 1 carguero civil, 1 nave científica de la Federación (Intrepid), 1 crucero klingon (Vor'cha), 1 nave romulana (D'deridex), 1 lanzadera y 1 sonda. Total **20 entidades**. Todos los nombres son provisionales.
 
 ## Las ocho horas de guardia
 
