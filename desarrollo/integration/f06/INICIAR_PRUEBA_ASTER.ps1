@@ -2,7 +2,7 @@
 # Safe: never touches 3D assets or modifies an existing CoreRPG checkout.
 param(
  [string]$CoreSource = "",
- [string]$Generator = "Visual Studio 18 2026"
+ [string]$Generator = ""
 )
 $ErrorActionPreference = "Stop"
 $Repo = [IO.Path]::GetFullPath((Join-Path $PSScriptRoot "../../.."))
@@ -43,10 +43,21 @@ if (-not $FoundCore) {
   if ($LASTEXITCODE) { throw "No existe la revision CoreRPG aprobada" }
 }
 New-Item -ItemType Directory -Path $Lab -Force | Out-Null
-Write-Host "Compilando el banco de pruebas real F06/Aster..."
+if (-not $Generator) {
+  $ProgramFilesX86 = [Environment]::GetFolderPath("ProgramFilesX86")
+  $Vswhere = Join-Path $ProgramFilesX86 "Microsoft Visual Studio/Installer/vswhere.exe"
+  if (Test-Path -LiteralPath $Vswhere) {
+    $Installed = (& $Vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -property installationVersion | Select-Object -First 1)
+    if ($Installed -match '^18[.]') { $Generator = "Visual Studio 18 2026" }
+    elseif ($Installed -match '^17[.]') { $Generator = "Visual Studio 17 2022" }
+  }
+}
+if (-not $Generator) {
+  throw "No se detecta Visual Studio con herramientas C++ x64. Comprueba la instalacion C++ de Visual Studio."
+}
+Write-Host "Compilando el banco F06 con $Generator..."
 $Configure = @("-S",$PSScriptRoot,"-B",$Build,
-   "-DCORERPG_SOURCE_DIR=$FoundCore")
-if ($Generator) { $Configure += @("-G",$Generator,"-A","x64") }
+   "-DCORERPG_SOURCE_DIR=$FoundCore","-G",$Generator,"-A","x64")
 & cmake @Configure
 if ($LASTEXITCODE) { throw "No se pudo configurar CMake; verifica Visual Studio C++ o el generador seleccionado" }
 & cmake --build $Build --config Release --target f06_aster_runner --parallel 4

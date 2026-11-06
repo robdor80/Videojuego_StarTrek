@@ -15,7 +15,7 @@ No hay nave enemiga improvisada, planetas engendrados por una consola ni resulta
 
 3. Se compila el ejecutable nativo y se abre la ventana. El script usa CoreRPG en la **revisión exacta aprobada**; si no hay una copia compatible, descarga otra dentro de `laboratorios/f06/qa/deps`. Todo lo descargado y compilado queda bajo `laboratorios`, fuera del control de versiones y sin modificar los assets 3D.
 
-El generador CMake por defecto es `Visual Studio 18 2026`, el mismo previsto por el script F06 existente. Si el MSI tiene Visual Studio 2022, indicar `-Generator 'Visual Studio 17 2022'`. Requiere Python 3 con Tkinter, CMake, Git, compilador C++ y acceso a GitHub para la descarga inicial de dependencias. Una compilación previa se reutiliza en siguientes aperturas; no se realizan comprobaciones interminables en cada uso.
+El lanzador detecta automáticamente Visual Studio 2022 o 2026 con el componente C++ x64. Si es necesario, se puede elegir manualmente con `-Generator 'Visual Studio 17 2022'`. Requiere Python 3 con Tkinter, CMake, Git, compilador C++ y acceso a GitHub para la descarga inicial de dependencias. Una compilación previa se reutiliza en siguientes aperturas; no se realizan comprobaciones interminables en cada uso.
 
 ## Lo único que debe hacer el jugador
 
